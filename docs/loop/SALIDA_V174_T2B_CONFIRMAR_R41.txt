@@ -1,0 +1,53 @@
+==============================================================================
+LA CONFIRMACION MEDIDA DEL `R.41`, ANEXADA POR ADICION
+==============================================================================
+
+A) LA FUENTE DE LOS ESTADOS, MEDIDA ANTES DE LEERLA
+   (LA RUTA QUE PROMETE PRUEBA ES CIFRA, EJECUTOR.md 1, 5 sep 2026:
+    este instrumento no puede leer de otro vacio)
+   docs/loop/reportes/REPORTE_V172.md -> 48851 bytes
+   CIFRA filas de tarea leidas de su tabla: 5
+      TAREA 1   **CERRADA**
+      TAREA 2   **CERRADA**
+      TAREA 3   **CERRADA**
+      TAREA 4   **ABIERTA, SIN CERRAR**
+      TAREA 5   ~~**CERRADA**~~ **ABIERTA, SIN CERRAR EN LA 172** (correccion declarada del 5 sep 2026, debajo d
+
+B) EL `R.41`, ACOTADO Y CON SUS GLOSAS LEIDAS
+   docs/PENDIENTES.md -> 841275 bytes
+   el R.41 ocupa los bytes 809108 a 824493 (15385 bytes, 120 lineas)
+   CIFRA glosas leidas: 12
+      6.1   VIA PREVISTA EJECUTADA       tarea nombrada: 2.a    (docs/loop/ACTA_AUDITOR.md:58157)
+      6.2   VIA PREVISTA EJECUTADA       tarea nombrada: 3      (docs/loop/ACTA_AUDITOR.md:58170)
+      6.3   VIA PREVISTA EJECUTADA       tarea nombrada: 2.b    (docs/loop/ACTA_AUDITOR.md:58195)
+      6.4   VIA PREVISTA EJECUTADA       tarea nombrada: 4.a    (docs/loop/ACTA_AUDITOR.md:58202)
+      6.5   VIA PREVISTA EJECUTADA       tarea nombrada: 4.b    (docs/loop/ACTA_AUDITOR.md:58209)
+      6.6   VIA PREVISTA EJECUTADA       tarea nombrada: 5      (docs/loop/ACTA_AUDITOR.md:58214)
+      6.7   VIA PREVISTA SIN TOCAR NADA  tarea nombrada: (ninguna) (docs/loop/ACTA_AUDITOR.md:58225)
+      6.8   VIA PREVISTA SIN TOCAR NADA  tarea nombrada: (ninguna) (docs/loop/ACTA_AUDITOR.md:58231)
+      6.9   VIA PREVISTA SIN TOCAR NADA  tarea nombrada: (ninguna) (docs/loop/ACTA_AUDITOR.md:58239)
+      6.10  VIA PREVISTA EJECUTADA       tarea nombrada: 3      (docs/loop/ACTA_AUDITOR.md:58243)
+      6.11  VIA PREVISTA SIN TOCAR NADA  tarea nombrada: (ninguna) (docs/loop/ACTA_AUDITOR.md:58250)
+      6.12  VIA PREVISTA SIN TOCAR NADA  tarea nombrada: (ninguna) (docs/loop/ACTA_AUDITOR.md:58256)
+
+C) LA SIMULACION, SOBRE COPIA EN MEMORIA Y SIN TOCAR EL DISCO
+   bloque compuesto: 2687 bytes, 44 lineas
+   texto simulado: 843961 bytes (+2686 contra el original)
+
+D) SE ESCRIBE
+   ESCRITO: docs/PENDIENTES.md (843961 bytes)
+
+E) LA RELECTURA DEL DISCO, QUE ES LA QUE VALE
+   el bloque de confirmacion esta escrito                     SI
+   y esta DENTRO del R.41                                     SI
+   el texto de ARRIBA del R.41 no se toco                     SI
+   el R.41 viejo sigue entero dentro del nuevo                SI
+   es adicion pura: el fichero crecio                         SI
+   la promesa de arriba sigue nombrando este fichero          SI
+   y ese fichero ya EXISTE y no mide cero                     SI
+   el R.42 de al lado no se toco                              SI
+   cero guiones largos y cero guiones medios que no estuvieran ya SI
+   CIFRA comprobaciones: 9 | fallan: 0
+
+VERDE: el `R.41` queda con su confirmacion medida anexada, y la ruta que
+       llevaba dos vueltas prometiendo prueba sobre un vacio ya no lo hace.

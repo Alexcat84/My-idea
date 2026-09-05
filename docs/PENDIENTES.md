@@ -12545,3 +12545,178 @@ jubilado como historico y la vara del trabajo pendiente sigue siendo
 `scripts/loop/vuelta150_3_relectura_expediente.py`. **Y las dos `OP-M-02`
 siguen sin ejecutarse**, por la `6.6` del acta 168. **Y `OP-L-03` queda abierta
 y leida y NO se ejecuta en esta vuelta**, por el tope de cinco tareas.
+
+---
+
+**LA CONFIRMACION MEDIDA DE LAS DOCE GLOSAS, ANEXADA POR ADICION** (vuelta 174, TAREA 2.b, con
+`scripts/loop/vuelta172_tarea1b_confirmar_r41.py`, que es el fichero que el
+recuadro de arriba nombra). **NI UNA LETRA DE LO ESCRITO ARRIBA SE TOCA:** esto
+va detras, por adicion, exactamente como la entrada prometio.
+
+**LAS DOS COLUMNAS SE MIDEN, NO SE TECLEAN.** La tarea que cada glosa nombra se
+extrae del texto de arriba con una expresion regular; el estado sale de la tabla
+de tareas de `docs/loop/reportes/REPORTE_V172.md` (**48851 bytes**, medidos con
+`os.path.getsize` en esta corrida).
+
+| adjudicacion del acta 171 | VIA PREVISTA que se escribio | tarea que la glosa nombra | estado de esa tarea, medido hoy |
+|---|---|---|---|
+| `6.1` | EJECUTADA | TAREA 2.a | **CERRADA** |
+| `6.2` | EJECUTADA | TAREA 3 | **CERRADA** |
+| `6.3` | EJECUTADA | TAREA 2.b | **CERRADA** |
+| `6.4` | EJECUTADA | TAREA 4.a | **ABIERTA, SIN CERRAR** |
+| `6.5` | EJECUTADA | TAREA 4.b | **ABIERTA, SIN CERRAR** |
+| `6.6` | EJECUTADA | TAREA 5 | ~~**CERRADA**~~ **ABIERTA, SIN CERRAR EN LA 172** (correccion declarada del 5 sep 2026, debajo de la tabla) |
+| `6.7` | SIN TOCAR NADA | (ninguna: se acata) | (no aplica) |
+| `6.8` | SIN TOCAR NADA | (ninguna: se acata) | (no aplica) |
+| `6.9` | SIN TOCAR NADA | (ninguna: se acata) | (no aplica) |
+| `6.10` | EJECUTADA | TAREA 3 | **CERRADA** |
+| `6.11` | SIN TOCAR NADA | (ninguna: se acata) | (no aplica) |
+| `6.12` | SIN TOCAR NADA | (ninguna: se acata) | (no aplica) |
+
+**CIFRA glosas: 12 | reparto por VIA PREVISTA: EJECUTADA: 7; SIN TOCAR NADA: 5.**
+**CIFRA glosas con tarea nombrada y estado hallado: 7.**
+
+**POR QUE ESTO NO PUDO ESCRIBIRSE ANTES DE HOY, Y NO ES UNA EXCUSA SINO LA
+CAUSA MEDIDA.** La fuente de la ultima columna es el reporte de la vuelta 172
+**cerrado y archivado**, y ese fichero no existio hasta la TAREA 1.a de la
+vuelta 174: la 172 murio sin cerrarlo y la 173 tampoco lo cerro. **Eso no
+excusa las dos vueltas en que esta entrada nombro un fichero inexistente**
+(clausula `4.5` del acta del auditor de la vuelta 172), que desde el 5 sep 2026
+es CAIDA DE CIFRA por la regla LA RUTA QUE PROMETE PRUEBA ES CIFRA.
+
+**Y UN CONTRASTE QUE NO SE RESUELVE COPIANDO, PORQUE LAS DOS COSAS SON
+CIERTAS.** Las filas que apuntan a la TAREA 4 leen el estado de la fila entera,
+que es el que el reporte publica. La clausula `4.6` del acta del auditor de la
+vuelta 172 midio aparte que **la 4.a y la 4.b si estan hechas y verificadas** y
+que lo unico que falta es la `4.c`. **La tabla de arriba dice lo que dice la
+fila; la clausula dice lo que midio el auditor. La discrepancia se declara en
+vez de resolverse eligiendo una** (`EJECUTOR.md` 2).
+## R.42. Registro de las once adjudicaciones y las dos caidas propias del acta de la vuelta 172
+
+(Acta del auditor, vuelta 172, secciones 3 y 6; escrito en la vuelta 174,
+TAREA 2.a.)
+
+Por adicion, como `R.21` a `R.41`. **Corte de todas las cifras de esta entrada:
+5 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy
+en `docs/loop/ACTA_AUDITOR.md:53933`. Salida:
+`docs/loop/SALIDA_V174_T2A_REGISTRO_ACTA_172.txt`.
+
+> **ESTA ENTRADA SE ESCRIBE LA PENULTIMA DE LA VUELTA, CON LA TAREA 1 ENTERA YA
+> CERRADA Y MEDIDA, Y POR ESO SUS GLOSAS SI AFIRMAN EN PASADO.** Es la
+> diferencia de fondo con el `R.41`, y no es un capricho de forma: el `R.41` se
+> escribio **la primera** de su vuelta, cuando ninguna tarea habia corrido, asi
+> que su campo se llamaba **VIA PREVISTA** y sus glosas decian *"VA A
+> EJECUTARSE ... Y TODAVIA NO HA CORRIDO"*. La `6.4` del acta 172 adjudico esa
+> forma como correcta y **probada por la realidad**, porque la vuelta 172 se
+> corto de verdad antes de su anexion y la entrada siguio siendo cierta.
+> 
+> **AQUI EL CAMPO SE LLAMA `VIA` A SECAS Y CADA GLOSA LLEVA AL LADO LA LINEA O
+> LA SALIDA QUE LA MIDE**, que es `EJECUTOR.md` 1 al pie de la letra: *"toda
+> afirmacion sobre el estado del registro se escribe CON LA MEDICION DEL DIA AL
+> LADO; si no hay linea que citar, la afirmacion no se escribe"*. **Y por eso
+> esta entrada NO necesita ningun fichero de confirmacion posterior**: no hay
+> nada que confirmar despues, porque nada se afirmo antes de tiempo. **La que
+> si lo necesitaba era el `R.41`, y ese fichero nace en la TAREA 2.b de esta
+> misma vuelta.**
+
+**Y LAS DOS CIFRAS DEL TITULO TAMPOCO ESTAN TECLEADAS:** se cuentan del acta
+(11 adjudicaciones `6.n` y 2 negritas `CAIDA n` dentro del cuerpo acotado,
+lineas 58375 a 58940) y de ahi sale el numeral en palabra, **incluida la
+concordancia**. **EL `R.41` REGISTRO DOCE Y TRES; ESTE REGISTRA 11 Y 2.**
+
+**Y EL PATRON DE CAIDA TAMPOCO SE TOCA ESTA VEZ.** El acta 172 usa la MISMA
+forma de vineta con comillas inversas que la 170 y la 171, asi que el patron se
+hereda TAL CUAL, sin ensancharlo ni una letra, y ademas **se importa** de
+`scripts/loop/vuelta172_tarea1_registrar_acta171.py` en vez de copiarse. Las dos
+cifras se siguen publicando al lado para que se vea que no se afloja: el patron
+VIEJO, el de la vuelta 170, corrido sobre el acta 172, cuenta **0**; el
+heredado cuenta **2**.
+
+**LA MAQUINA NO SE CLONA, SE IMPORTA, Y ESO ES LO UNICO NUEVO DE ESTE
+INSTRUMENTO.** Los dos registradores anteriores copiaban el mecanismo entero
+cada vuelta. `PAT_CAIDA`, `PALABRA`, `titulo_de_la_negrita`,
+`claves_de_adjudicacion` y `_cuenta_caidas` se importan aqui de su ultima sede,
+que es la que la bateria ya vigila con `vuelta172_tarea1b_mutacion_registro.py`.
+**Lo unico propio de este fichero es el acote de SU acta y sus tablas de
+glosas.** Es la regla de la casa sobre fuentes unicas, la misma que la `6.6` de
+esta acta adjudica como correcta y obligatoria.
+
+**LAS ONCE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 172, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:58720`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.2` (LA DISCREPANCIA DE CLAUSULA CON MI ACTA) ES CORRECTO, Y LO REPRODUJE ENTERO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La adjudicacion da por correcto el `D.2` de la vuelta 172 y aclara que las dos lecturas de la guarda eran ciertas y de preguntas distintas. Y ESTA VUELTA HA IDO UN PASO MAS ALLA POR SU CUENTA, cosa que la `6.1` no encarga y que por eso sube como discutible: el paso 0 del esqueleto de la 174 deja de preguntar por `VUELTA - 1` y pregunta por el reporte que de verdad va a pisar, con el numero LEIDO de la cabecera de ese fichero. La vuelta 173 no escribio ningun reporte, asi que el sujeto tecleado ya no servia. MEDIDO HOY en `docs/loop/SALIDA_V174_T1B_ESQUELETO.txt`: sobre la 173 la guarda da ROJO por su clausula (b) y se publica igual; sobre la 172 da VERDE con los dos sha256 calzando en `d29e45527ea302a0`.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:58731`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"LA PIEZA (4) DE `cerrar_reporte.py` ADMITE EL HUECO DECLARADO Y MEDIDO, Y NO ES DOCTRINA NUEVA SINO UN CHOQUE ENTRE DOS REGLAS ESCRITAS QUE ME TOCA RESOLVER."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, Y NO POR ESTA VUELTA: la construyo la vuelta 173 en su TAREA 1.b, commit `c5b69ad9`, con los 17 casos viejos intactos y un arnes nuevo de 24. LO QUE ESTA VUELTA APORTA ES SU ESTRENO, que es la unica forma de saber si sirve: el reporte de la vuelta 172 se cerro con ella en la TAREA 1.a de hoy, con la seccion 9 en HUECO DECLARADO Y MEDIDO y sus tres piezas juntas (nombre del fichero, bytes medidos y atribucion). MEDIDO en `docs/loop/SALIDA_V174_T1A_CERRAR_REPORTE_172.txt`: `CIFRA piezas que faltan: 0`. Sin este carril, el reporte de la 172 no se podia cerrar.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:58753`, leida hoy). VIA: NO SE CORRIO.** Titulo
+    literal del acta: *"Y LA BATERIA SE MUEVE AL PRINCIPIO DE LA VUELTA. ES ADJUDICACION DE ORDEN Y ME CORRESPONDE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** NO SE CORRIO, Y EL MOTIVO NO ES DESCUIDO SINO QUE UNA DECISION POSTERIOR LA DEJO SIN OBJETO. La adjudicacion movia la bateria al PRINCIPIO de la vuelta. La vuelta 173 aplico ese remedio entero y su bateria siguio saliendo en CERO BYTES, y sobre esa medicion el fundador decidio el 5 sep 2026 que la bateria SALE del ciclo por vuelta y corre CADA CINCO, en una vuelta propia que no lleva nada mas (`docs/loop/AUDITOR.md` seccion 6.1, citada en `EJECUTOR.md` 1, y la parada entera en `docs/loop/paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`). Mover al principio algo que ya no corre cada vuelta no significa nada. NINGUNA DE LAS TRES ETIQUETAS DE VIA ESCRITAS DICE 'SUPERADA POR DECISION DEL FUNDADOR', asi que se usa la mas cercana y el hueco de doctrina se declara en el reporte en vez de rellenarse con una etiqueta inventada.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:58762`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"EL `D.1` (LAS GLOSAS DEL `R.41` NO AFIRMAN EN PASADO) ES CORRECTO Y ADEMAS QUEDO PROBADO POR LA REALIDAD."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 2.b DE ESTA VUELTA, Y LA MEDICION VA AL LADO. La adjudicacion da por correcto el `D.1` (que las glosas del `R.41` no afirmen en pasado) y dice que lo unico que falta es el fichero que la entrada nombra. Ese fichero, `scripts/loop/vuelta172_tarea1b_confirmar_r41.py`, NACE HOY: llevaba dos vueltas prometido y sin existir, y por la regla del 5 sep 2026 (LA RUTA QUE PROMETE PRUEBA ES CIFRA) el `R.41` estaba publicando una ruta sobre un vacio. Su corrida vive en `docs/loop/SALIDA_V174_T2B_CONFIRMAR_R41.txt`.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:58769`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.3` (NACE `anexar_tarea_al_reporte.py`) ES CORRECTO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El `D.3` (que naciera `scripts/loop/anexar_tarea_al_reporte.py`, de nombre estable y sin numero de vuelta) queda adjudicado como correcto. Esta vuelta no lo reabre: LO USA, y es la primera que lo usa para las dos filas de su propio reporte.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:58775`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.4` (EL CRITERIO DE EXCLUSION SALE A `motivo_de_exclusion`) ES CORRECTO Y ERA OBLIGATORIO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El `D.4` (sacar el criterio de exclusion a una funcion pura llamable) queda adjudicado como correcto y obligatorio, con la frase que esta vuelta se lleva entera: UNA GUARDA QUE NO SE PUEDE LLAMAR NO SE PUEDE PROBAR. Los dos instrumentos nuevos de hoy nacen con esa forma: `corregir()` en la TAREA 1.a y `vuelta_del_reporte_del_arbol()` en la 1.b son puras y sus arneses las tumban sin tocar el repo.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:58783`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.5` (LA ETIQUETA DE VIA `NO SE CORRIO`) ES CORRECTA Y SE QUEDA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La etiqueta de VIA `NO SE CORRIO` queda adjudicada como correcta y se queda. Esta entrada la usa dos veces, en la `6.3` y en la `6.11`, que es la unica forma de acatarla que significa algo, y declara aparte que la etiqueta no alcanza para el caso de la `6.3`.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:58789`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.6` (EL CORTE PASA A PARAMETRO) ES CORRECTO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El `D.6` (que el corte de una guarda pase a parametro en vez de quedar clavado) queda adjudicado como correcto. Esta vuelta no toca esa guarda y no reabre nada.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:58795`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.7` (LA SEGUNDA FILA DEL `00_INDICE`) ES CORRECTO Y ERA NECESARIO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El `D.7` (la segunda fila del `00_INDICE`) queda adjudicado como correcto y necesario. Esta vuelta no toca `docs/plan/00_INDICE.md` en ninguna linea.
+  - **6.10 (`docs/loop/ACTA_AUDITOR.md:58803`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"LAS TRES CAIDAS DEL EJECUTOR ESTAN BIEN DECLARADAS Y NINGUNA MUEVE UNA CIFRA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Las tres caidas propias del ejecutor de la vuelta 172 quedan adjudicadas como bien declaradas y sin mover ninguna cifra. Estan escritas con su nombre en la seccion 8 del reporte de la 172, que esta vuelta acaba de cerrar y archivar en `docs/loop/reportes/REPORTE_V172.md`, y no se reabren ni se suavizan.
+  - **6.11 (`docs/loop/ACTA_AUDITOR.md:58811`, leida hoy). VIA: NO SE CORRIO.** Titulo
+    literal del acta: *"LA TAREA 4 NO SE REHACE ENTERA: SOLO LE FALTA LA 4.c."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** NO SE CORRIO, Y SE DICE CON SU MOTIVO. La adjudicacion dice que a la TAREA 4 de la vuelta 172 solo le falta la `4.c`, que es la bateria corrida entera y sola. ESTA VUELTA NO LA CORRE, y no por descuido: el regimen del fundador del 5 sep 2026 la manda a una VUELTA DE BATERIA propia, y el encargo de hoy dice con esas palabras que la proxima es la 175. La 4.a y la 4.b siguen pagadas y verificadas por el auditor (4.6 de su acta), y la nomina, RECOMPUTADA HOY por su funcion pura en el bloque H.5 de la apertura, da 82 entradas con ultima vuelta 172.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EJECUTADA: 2 (6.2, 6.4); NO SE CORRIO: 2 (6.3, 6.11); SIN TOCAR NADA: 7 (6.1, 6.5, 6.6, 6.7, 6.8, 6.9, 6.10).
+**Ninguna de las once sube al fundador.**
+
+**Y UNA ETIQUETA QUE NO ALCANZA, DECLARADA EN VEZ DE INVENTADA.** La `6.3` no
+es un descuido: **una decision posterior del fundador la dejo sin objeto**, y
+ninguna de las tres etiquetas escritas (`EJECUTADA`, `SIN TOCAR NADA`,
+`NO SE CORRIO`) dice *"superada por decision del fundador"*. Se usa la mas
+cercana, `NO SE CORRIO`, la glosa dice el motivo entero con su cita, y **el
+hueco queda como PENDIENTE DE DOCTRINA en el reporte de la vuelta 174 en vez de
+rellenarse con una etiqueta estrenada por la mano del ejecutor** (`EJECUTOR.md`
+5).
+
+**LAS DOS CAIDAS PROPIAS DEL AUDITOR, REGISTRADAS IGUAL QUE LAS DEL EJECUTOR**
+(precedente del `R.36`, escrito en la vuelta 167 por letra de su encargo, y
+heredado aqui sin reabrirlo). No son del ejecutor y no acumulan para sus
+rachas; se escriben aqui porque el registro de la casa no distingue de quien es
+la mano que cae. En el acta 172 viven en la **seccion 3**.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:58573`, leida hoy).** Titulo literal del
+    acta: *"`CAIDA 1`. AISLE LA CIEGA TARDE, OTRA VEZ, Y LA REGLA ES DE ORDEN, NO DE RESULTADO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. El auditor aislo la ciega DESPUES de correr Gate 0, la vara, los cinco arneses y las verificaciones de las cuatro tareas, cuando la regla escrita en `aislador_de_ciega.py` dice que el sujeto se aisla ANTES del primer comando de verificacion, y el propio acta dice que van DOS SEGUIDAS con esta misma caida. El auditor da la consecuencia entera y acotada: ninguno de sus comandos imprimio la clase ni la razon de ningun par, y ninguno de los 17 pares que si asomaron toca ninguno de sus ocho nodos. LO QUE ESTA VUELTA SE LLEVA: una regla de ORDEN no se cumple midiendo despues si te quemaste, y por eso el bloque de apertura de hoy corrio ENTERO antes de la primera operacion en vez de despues.
+  - **CAIDA 2 (`docs/loop/ACTA_AUDITOR.md:58585`, leida hoy).** Titulo literal del
+    acta: *"`CAIDA 2`. TECLEE UNA RUTA DE MEMORIA Y EL CONTEO MURIO A MEDIAS."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. El auditor tecleo de memoria una ruta que en esta maquina no es la que python entiende y su conteo de la nomina murio a medias; rehizo por otra ruta y de ahi salio el 75 que publico, y ninguna cifra salio de la corrida rota. El propio acta dice que van TRES ACTAS SEGUIDAS con el mismo vicio de teclear en vez de mirar. ES EL VICIO QUE ESTA CAMPANA PERSIGUE, mire quien mire, y es literalmente el mismo del que sale la regla nueva del 5 sep 2026, LA RUTA QUE PROMETE PRUEBA ES CIFRA.
+
+**LO QUE ESTE REGISTRO NO CIERRA, Y SE DICE ANTES DE QUE NADIE LO SUPONGA.**
+La vara `P.5.1` sigue CONGELADA y ninguna de estas once la estrecha ni la
+ensancha. **Ninguna clase del cribado se mueve por esta entrada** y
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` no se toca. **Ningun `estado` de
+`docs/plan/OPERACIONES.jsonl` se mueve por esta entrada**: el campo sigue
+jubilado como historico y la vara del trabajo pendiente sigue siendo
+`scripts/loop/vuelta150_3_relectura_expediente.py`. **Y las dos `OP-M-02`
+siguen sin ejecutarse**, por la `6.6` del acta 168. **`OP-L-03` queda abierta y
+leida y NO se ejecuta en esta vuelta**, y esta vez no por ningun tope sino
+porque el encargo de la 174 la aplaza EXPRESAMENTE a la 175, detras de la
+recuperacion del cierre del reporte. **Y la bateria tampoco corre aqui**: por
+el regimen del fundador del 5 sep 2026 corre cada cinco vueltas, en vuelta
+propia, y la proxima es la 175.
