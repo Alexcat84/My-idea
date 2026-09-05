@@ -1,0 +1,122 @@
+==============================================================================
+VUELTA 169, TAREA 3: OP-I-01 CLAUSULA 4, CON SU ALCANCE ADJUDICADO
+==============================================================================
+
+A) EL DISPARADOR SE LEE DE SU SEDE ANTES DE APLICARLO, Y SI NO ESTA, PARA
+   sede: docs/plan/08_VERIFICACION.md
+   la frase 'LAS NOMINAS Y LOS ACTOS' aparece en la(s) linea(s): [397]
+   texto del paso 4, leido hoy:
+      | **4** | **LAS NOMINAS Y LOS ACTOS** | cada racimo y cada acto se re-mide **con su cobertura al lado** (banco 9.26), usando las componentes del paso 3 |
+      contiene racimo    : True
+      contiene acto      : True
+      contiene cobertura : True
+      contiene 9.26      : True
+      contiene paso 3    : True
+
+B) EL INVENTARIO, CONTADO POR TIPO, Y EL ALCANCE PARTIDO EN DOS
+   CIFRA entradas del inventario: 672
+   | tipo | entradas | dentro del disparador |
+   |---|---:|---|
+   | `acto` | 556 | SI |
+   | `familia_de_ids` | 54 | NO |
+   | `figura` | 20 | NO |
+   | `defecto` | 19 | NO |
+   | `racimo` | 13 | SI |
+   | `dominio` | 10 | NO |
+   CIFRA DENTRO del disparador (acto mas racimo): 569 de 672
+   CIFRA FUERA del disparador: 103 de 672
+
+C) LAS VIGENTES CONTRA LAS SUPERADAS, POR fecha_corte
+   acto     corte 2026-08-11 -> 221
+   acto     corte 2026-08-13 -> 335
+   racimo   corte 2026-08-11 -> 11
+   racimo   corte 2026-08-13 -> 2
+   corte mas reciente, computado y no tecleado: 2026-08-13
+   LA VARA DE VIGENCIA ES LA MARCA `SUPERADA`, NO LA `fecha_corte`.
+   CIFRA entradas VIGENTES (sin marca SUPERADA): 348
+   CIFRA entradas marcadas SUPERADA (no se borran, no se re-miden): 221
+   reparto de las vigentes: {'acto': 335, 'racimo': 13}
+   reparto de las superadas: {'acto': 221}
+   y las vigentes NO son todas del corte nuevo: {'2026-08-11': 11, '2026-08-13': 337}
+
+D) EL FICHERO SELLADO DE COMPONENTES, CONTADO Y NO REGENERADO
+   fichero: docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl
+   CIFRA lineas del fichero: 332
+   CIFRA ABIERTO  : 54
+   CIFRA CERRADO  : 278
+
+E) EL INSTRUMENTO SE CORRE HOY, A SALIDA PROPIA, Y SE COTEJA
+   exit de scripts/plan/recomputo_3388.py: 0
+   CIFRA lineas de la corrida de HOY: 47
+   CIFRA ABIERTO   de HOY: 21
+   CIFRA CERRADO   de HOY: 26
+   la corrida de hoy REPRODUCE el fichero sellado en linea y estado: False
+   DISCREPANCIA DECLARADA, no resuelta copiando:
+      sellado: 332 lineas, {'ABIERTO': 54, 'CERRADO': 278}
+      hoy    : 47 lineas, {'ABIERTO': 21, 'CERRADO': 26}
+   paso 1: A crudas en el archivo (clase == 'A'): 551
+   paso 1: de esas, colapsan a auto-arista tras resolver (mismo nodo vivo en los dos lados): 398
+   paso 1: PARES DISTINTOS EN EL RETRATO (tras resolver y deduplicar): 149
+   paso 1: de esos, con mas de un veredicto crudo apuntando al mismo par resuelto: 4
+
+F) (3.a) CADA ACTO Y CADA RACIMO VIGENTE, RE MEDIDO SOBRE LAS COMPONENTES
+   DEL PASO 3, CON SU COBERTURA AL LADO Y EL RESOLUTOR DELANTE (P.1)
+   CIFRA entradas vigentes re medidas: 348
+   CIFRA cuyas CIFRAS de cobertura calzan con su componente de hoy: 333
+   CIFRA cuyas CIFRAS de cobertura DIFIEREN de las de hoy: 8
+   CIFRA sin componente en el fichero sellado: 7
+      DIFIERE la ecuacion de valor
+         ficha: 10 de 10
+         hoy  : 5 de 10 pares leidos; 0 en cola; 5 fuera de cola
+      DIFIERE el sales roadmap
+         ficha: 15 de 15 (LD-66 a LD-70, 14 ago 2026, vuelta 20). El texto viejo de este campo, sin tocar: 10 de 15
+         hoy  : 10 de 15 pares leidos; 0 en cola; 5 fuera de cola
+      DIFIERE la junta asesora
+         ficha: 6 de 6
+         hoy  : 5 de 6 pares leidos; 0 en cola; 1 fuera de cola
+      DIFIERE los cuadrantes de mercado
+         ficha: 15 de 15
+         hoy  : 7 de 15 pares leidos; 0 en cola; 8 fuera de cola
+      DIFIERE la seleccion de canal
+         ficha: 10 de 10
+         hoy  : 8 de 10 pares leidos; 0 en cola; 2 fuera de cola
+      DIFIERE brainstorming_divergente
+         ficha: 8 de 21 pares leidos; 0 en cola; 13 fuera de cola
+         hoy  : 2 de 3 pares leidos; 0 en cola; 1 fuera de cola
+      DIFIERE customer_validation_sales_roadmap
+         ficha: 15 de 15 pares leidos; 0 en cola; 0 fuera de cola (LD-66 a LD-70, 14 ago 2026). El texto viejo de este campo, sin tocar: 10 de 15 pares leidos; 0 en cola; 5 fuera de cola
+         hoy  : 10 de 15 pares leidos; 0 en cola; 5 fuera de cola
+      DIFIERE enfoque_mercado_voc
+         ficha: 3 de 6 pares leidos; 0 en cola; 3 fuera de cola
+         hoy  : 2 de 3 pares leidos; 0 en cola; 1 fuera de cola
+      SIN COMPONENTE: la supervision de la IA (tamano 10)
+      SIN COMPONENTE: la mesa unida de puertas y portafolio (tamano 17)
+      SIN COMPONENTE: el racimo del pivote (tamano 7)
+      SIN COMPONENTE: la serie de Coleman (tamano 28)
+      SIN COMPONENTE: ab_testing_optimizacion (tamano 6)
+      SIN COMPONENTE: asignacion_de_titulos_ejecutivos (tamano 3)
+      SIN COMPONENTE: principio_calidad_mvp (tamano 2)
+
+G) (3.b) LO QUE EL DISPARADOR NO ALCANZA: SE DECLARA CON SU CIFRA DE HOY
+   El paso 4 del disparador nombra 'cada racimo y cada acto' y NADA MAS.
+   Estas entradas NO se recomputan y NO se inventan:
+   | tipo | entradas hoy |
+   |---|---:|
+   | `familia_de_ids` | 54 |
+   | `figura` | 20 |
+   | `defecto` | 19 |
+   | `dominio` | 10 |
+   CIFRA total FUERA del disparador: 103 de 672
+
+H) (3.c) LA DISCREPANCIA DE LA NOTA DE LA FICHA, MEDIDA Y NO RESUELTA AQUI
+   la nota de OP-I-01 declara: 335 actos (280 CERRADOS, 55 ABIERTOS)
+   CIFRA entradas de tipo acto vigentes (sin marca SUPERADA) hoy: 335
+   CIFRA lineas del fichero de componentes hoy: 332
+   CIFRA componentes ABIERTO   hoy: 54
+   CIFRA componentes CERRADO   hoy: 278
+   LA CIFRA VIEJA NO SE BORRA Y LA NUEVA NO SE COPIA ENCIMA:
+      la correccion entra por el carril del banco 9.10 en el instrumento
+      scripts/loop/vuelta169_tarea3_corregir_ficha.py, con la cifra vieja
+      tachada y entera y el contador cuadrado en el mismo acto.
+
+FIN

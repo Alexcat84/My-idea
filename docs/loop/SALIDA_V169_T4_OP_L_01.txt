@@ -1,0 +1,73 @@
+==============================================================================
+VUELTA 169, TAREA 4: OP-L-01 CLAUSULA 3, RE MEDIDA CON COBERTURA AL LADO
+==============================================================================
+
+A) LA CLAUSULA SE LEE DE SU FICHA ANTES DE EJECUTARLA, Y SI NO ESTA, PARA
+   OP-L-01, linea 41 de docs/plan/OPERACIONES.jsonl
+   CIFRA clausulas en `verificacion`: 5
+   la clausula 3 aparece EXACTAMENTE una vez: True
+   texto leido hoy: 'cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)'
+
+B) EL UNIVERSO QUE LA 6.5 NOMBRA, Y LA PARADA QUE TRAE
+   CIFRA entradas de tipo acto mas racimo: 569  (lo que la 6.5 llama 569)
+   CIFRA de esas, marcadas SUPERADA una a una por la vuelta 17: 221
+   CIFRA re-medibles (nominas VIVAS): 348
+   reparto de las re-medibles: {'acto': 335, 'racimo': 13}
+   PARADA QUE SE TRAE: el encargo supone 569 re-medibles y el instrumento
+   mide 348. Las 221 superadas no se re-miden porque su propia marca lo dice.
+
+C) LA RE MEDICION, CON EL RESOLUTOR DELANTE (P.1) Y LA COBERTURA AL LADO
+   CIFRA nominas re-medidas: 348
+   CIFRA cuya cobertura CALZA con la componente sellada: 333
+   CIFRA cuya cobertura DIFIERE: 8
+   CIFRA sin componente en el fichero sellado: 7
+   las tres partes suman el total: True
+
+D) CADA DIFERENCIA, CLASIFICADA POR SU MOTIVO MEDIDO Y NO POR SUPOSICION
+
+   | nomina | la ficha dice | la componente sellada dice | motivo medido |
+   |---|---|---|---|
+   | `la ecuacion de valor` | 10 de 10 | 5 de 10 | mismo universo de pares y la ficha trae MAS leidos: cobertura cerrada fuera de la cola |
+   | `el sales roadmap` | 15 de 15 | 10 de 15 | la ficha cuenta LECTURAS DIRIGIDAS, citadas por su numero, que el fichero de componentes NO PUEDE VER |
+   | `la junta asesora` | 6 de 6 | 5 de 6 | mismo universo de pares y la ficha trae MAS leidos: cobertura cerrada fuera de la cola |
+   | `los cuadrantes de mercado` | 15 de 15 | 7 de 15 | mismo universo de pares y la ficha trae MAS leidos: cobertura cerrada fuera de la cola |
+   | `la seleccion de canal` | 10 de 10 | 8 de 10 | mismo universo de pares y la ficha trae MAS leidos: cobertura cerrada fuera de la cola |
+   | `brainstorming_divergente` | 8 de 21 | 2 de 3 | la componente ENCOGIO: la campana fundio y los pares internos colapsaron a auto-arista |
+   | `customer_validation_sales_roadmap` | 15 de 15 | 10 de 15 | la ficha cuenta LECTURAS DIRIGIDAS, citadas por su numero, que el fichero de componentes NO PUEDE VER |
+   | `enfoque_mercado_voc` | 3 de 6 | 2 de 3 | la componente ENCOGIO: la campana fundio y los pares internos colapsaron a auto-arista |
+
+   CIFRA 4   mismo universo de pares y la ficha trae MAS leidos: cobertura cerrada fuera de la cola
+   CIFRA 2   la ficha cuenta LECTURAS DIRIGIDAS, citadas por su numero, que el fichero de componentes NO PUEDE VER
+   CIFRA 2   la componente ENCOGIO: la campana fundio y los pares internos colapsaron a auto-arista
+
+E) LAS QUE NO TIENEN COMPONENTE, NOMBRADAS Y NO CONTADAS COMO CERO
+
+   | nomina | tamano | la ficha dice |
+   |---|---:|---|
+   | `la supervision de la IA` | 10 | 18 de 45 |
+   | `la mesa unida de puertas y portafolio` | 17 | 54 de 136 |
+   | `el racimo del pivote` | 7 | 13 de 21 |
+   | `la serie de Coleman` | 28 | 45 de 378 |
+   | `ab_testing_optimizacion` | 6 | 8 de 15 |
+   | `asignacion_de_titulos_ejecutivos` | 3 | 3 de 3 |
+   | `principio_calidad_mvp` | 2 | 1 de 1 |
+
+   NO SE RELLENAN Y NO SE INVENTAN: un acto o racimo cuyo conjunto de
+   miembros resueltos ya no forma componente en el fichero sellado es un
+   HUECO NOMBRADO, que es lo que la clausula 3 de OP-I-01 manda.
+
+F) LA COBERTURA AL LADO, QUE ES LO QUE EL 9.26 PIDE, AGREGADA
+   de las 333 que calzan: 280 con cobertura COMPLETA y 53 INCOMPLETA
+   y mientras falte un par la forma es PROVISIONAL, que es la letra del 9.26
+
+G) LO QUE SE ESCRIBE, COMPROBADO ANTES DE ESCRIBIRLO
+   CIFRA clausulas antes: 5 | despues: 6
+   la clausula 3 vieja sigue ENTERA en su sitio: True
+   CIFRA claves de la ficha antes: 18 | despues: 18
+   CIFRA campos movidos ademas de `verificacion`: 0 []
+H) ESCRITO Y RECONTADO
+   CIFRA fichas antes: 71 | despues: 71
+   CIFRA clausulas de OP-L-01 en disco: 6
+   estado de la ficha, sin mover: 'LISTA'
+
+VERDE: la clausula 3 de OP-L-01 queda ejecutada y declarada por adicion.

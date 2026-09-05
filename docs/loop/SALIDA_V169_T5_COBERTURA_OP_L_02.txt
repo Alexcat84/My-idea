@@ -1,0 +1,110 @@
+==============================================================================
+VUELTA 169, TAREA 5: COBERTURA DE LAS SEIS NOMINAS DE OP-L-02
+==============================================================================
+
+A) LAS SEDES, Y SUS TAMANOS LEIDOS HOY
+   grafo: 3853 nodos, 761 entradas de alias
+   veredictos de cola: 3388 filas, corte 3388
+   nominas parseadas de NOMINAS_OP_L_02: 6
+
+B) LAS LECTURAS DIRIGIDAS, DE SU PROPIA SEDE Y CONTADAS APARTE
+   EXPEDIENTE_MESA_JUNTA_ASESORA.md   1 cabeceras LD | 0 filas de tabla
+   LD_ADOPT_ADVOCATE.md               4 cabeceras LD | 0 filas de tabla
+   LD_SALES_ROADMAP.md                5 cabeceras LD | 0 filas de tabla
+   LECTURAS_DIRIGIDAS.md              11 cabeceras LD | 16 filas de tabla
+   CIFRA lecturas dirigidas CON NUMERO (cabecera): 20
+   CIFRA lecturas dirigidas SIN NUMERO (fila de tabla): 16
+
+C) NOMINA POR NOMINA, CON EL RESOLUTOR DELANTE (P.1)
+
+   NOMINA 1: customer_validation_sales_roadmap ...
+      miembros escritos: 6 | vivos tras resolver: 6 | colapsados por alias: 0
+      CIFRA pares posibles: 15
+      CIFRA con veredicto DE COLA: 10
+      CIFRA con LECTURA DIRIGIDA: 5
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 15 de 15
+      reparto de clases: A 7, D 8
+      P.10 PUENTES (A con dos que entre si dan D): 5
+         puente hoja_de_ruta_de_ventas sobre (estrategia_de_ventas , refinar_sales_roadmap)
+         puente refinar_sales_roadmap sobre (hoja_de_ruta_de_ventas , sales_roadmap_vs_sales_force)
+         puente refinar_sales_roadmap sobre (sales_roadmap , sales_roadmap_vs_sales_force)
+         puente sales_roadmap sobre (estrategia_de_ventas , refinar_sales_roadmap)
+         puente sales_roadmap_vs_sales_force sobre (customer_validation_sales_roadmap , refinar_sales_roadmap)
+
+   NOMINA 2: clasificacion_mercados_cadena_suministro ...
+      miembros escritos: 6 | vivos tras resolver: 1 | colapsados por alias: 5
+      CIFRA pares posibles: 0
+      CIFRA con veredicto DE COLA: 0
+      CIFRA con LECTURA DIRIGIDA: 0
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 0 de 0
+      reparto de clases: 
+      P.10 PUENTES: 0
+
+   NOMINA 3: alineacion_etica_ia_negocio ...
+      miembros escritos: 5 | vivos tras resolver: 5 | colapsados por alias: 0
+      CIFRA pares posibles: 10
+      CIFRA con veredicto DE COLA: 7
+      CIFRA con LECTURA DIRIGIDA: 3
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 10 de 10
+      reparto de clases: A 5, D 5
+      P.10 PUENTES (A con dos que entre si dan D): 3
+         puente human_in_the_loop_ia sobre (alineacion_etica_ia_negocio , mitigar_falling_asleep_wheel)
+         puente human_in_the_loop_ia sobre (mitigar_falling_asleep_wheel , principio_humano_en_el_loop)
+         puente mitigar_falling_asleep_wheel sobre (human_in_the_loop_ia , riesgo_sobredependencia_ia)
+
+   NOMINA 4: construccion_de_valor_percibido ...
+      miembros escritos: 5 | vivos tras resolver: 5 | colapsados por alias: 0
+      CIFRA pares posibles: 10
+      CIFRA con veredicto DE COLA: 5
+      CIFRA con LECTURA DIRIGIDA: 5
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 10 de 10
+      reparto de clases: A 6, D 4
+      P.10 PUENTES (A con dos que entre si dan D): 4
+         puente ecuacion_de_valor sobre (construccion_de_valor_percibido , ecuacion_de_valor_cliente)
+         puente ecuacion_de_valor_cliente sobre (ecuacion_de_valor , prevencion_objeciones_vs_manejo)
+         puente ecuacion_de_valor_cliente sobre (ecuacion_de_valor_venta , prevencion_objeciones_vs_manejo)
+         puente ecuacion_de_valor_venta sobre (construccion_de_valor_percibido , ecuacion_de_valor_cliente)
+
+   NOMINA 5: channels_hypothesis_physical ...
+      miembros escritos: 5 | vivos tras resolver: 5 | colapsados por alias: 0
+      CIFRA pares posibles: 10
+      CIFRA con veredicto DE COLA: 8
+      CIFRA con LECTURA DIRIGIDA: 2
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 10 de 10
+      reparto de clases: A 9, D 1
+      P.10 PUENTES (A con dos que entre si dan D): 3
+         puente hipotesis_de_canales sobre (channels_hypothesis_physical , channels_hypothesis_web_mobile)
+         puente seleccion_canal_distribucion sobre (channels_hypothesis_physical , channels_hypothesis_web_mobile)
+         puente seleccion_canal_fisico sobre (channels_hypothesis_physical , channels_hypothesis_web_mobile)
+
+   NOMINA 6: formalizar_junta_asesora ...
+      miembros escritos: 4 | vivos tras resolver: 2 | colapsados por alias: 2
+      CIFRA pares posibles: 1
+      CIFRA con veredicto DE COLA: 1
+      CIFRA con LECTURA DIRIGIDA: 0
+      CIFRA SIN veredicto de ninguna sede: 0
+      cobertura total: 1 de 1
+      reparto de clases: D 1
+      P.10 PUENTES: 0
+
+D) EL RESUMEN, TALLADO DE LO DE ARRIBA Y NO TECLEADO
+
+| # | nomina | posibles | cola | dirigidas | SIN | cobertura |
+|---:|---|---:|---:|---:|---:|---|
+| 1 | `customer_validation_sales_roadmap` | 15 | 10 | 5 | 0 | 15 de 15 |
+| 2 | `clasificacion_mercados_cadena_suministro` | 0 | 0 | 0 | 0 | 0 de 0 |
+| 3 | `alineacion_etica_ia_negocio` | 10 | 7 | 3 | 0 | 10 de 10 |
+| 4 | `construccion_de_valor_percibido` | 10 | 5 | 5 | 0 | 10 de 10 |
+| 5 | `channels_hypothesis_physical` | 10 | 8 | 2 | 0 | 10 de 10 |
+| 6 | `formalizar_junta_asesora` | 1 | 1 | 0 | 0 | 1 de 1 |
+
+   CIFRA pares posibles en las seis: 46
+   CIFRA pares SIN veredicto en las seis: 0
+   CIFRA nominas con cobertura COMPLETA: 6 de 6
+
+FIN

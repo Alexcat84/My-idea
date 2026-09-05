@@ -1,0 +1,55 @@
+==============================================================================
+VUELTA 169, TAREA 3.b y 3.c: LA NOTA DE OP-I-01, CORREGIDA POR EL 9.10
+==============================================================================
+
+A) EL SUJETO, MEDIDO ANTES DE TOCARLO
+   fichas en docs/plan/OPERACIONES.jsonl: 71
+   OP-I-01 vive en la linea 44
+   CIFRA claves de la ficha: 18
+   CIFRA caracteres de la nota: 7437
+   la frase vieja aparece EXACTAMENTE una vez: True
+
+B) LAS CIFRAS DE HOY, CONTADAS DE SUS FICHEROS
+   docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl: 332 lineas, 278 CERRADO, 54 ABIERTO
+   docs/plan/INVENTARIO.jsonl: 672 entradas, 335 actos vigentes al corte 2026-08-13
+   fuera del disparador: familia_de_ids  54
+   fuera del disparador: figura          20
+   fuera del disparador: defecto         19
+   fuera del disparador: dominio         10
+   CIFRA total fuera del disparador: 103 de 672
+   corrida de HOY (v169_recomputo.jsonl): 47 componentes, 26 CERRADO, 21 ABIERTO
+   la 3.a, contada de v169_t3_sellada.txt: 348 vigentes, 333 calzan, 8 difieren, 7 sin componente
+   y las tres partes SUMAN el total: 333 + 8 + 7 = 348
+
+C) EL ORDINAL, CONTADO DE LAS MARCAS QUE LA NOTA YA TRAE
+   CORRECCION DECLARADA           2
+   ETIQUETA CORREGIDA             1
+   CORREGIDO EN LA VUELTA         1
+   RECOMPUTO EJECUTADO            1
+   REGENERACION APROBADA          1
+   HUECO NOMBRADO Y REGISTRADO    1
+   CIFRA marcas de correccion contadas: 7
+   ORDINAL de la que se escribe hoy, computado y no tecleado: OCTAVA
+
+D) LA NOTA SOLO CRECE, Y LO VIEJO SIGUE DENTRO
+   CIFRA caracteres antes: 7437
+   CIFRA caracteres despues: 10928
+   crece y no encoge: True
+   la frase vieja sigue dentro, TACHADA: True
+   sigue dentro '323 ENTRADAS: 221 actos'                     : True
+   sigue dentro 'EL TOTAL REAL NO ES 450: es 671'             : True
+   sigue dentro 'construccion_de_leverage'                    : True
+   sigue dentro 'HUECO NOMBRADO Y REGISTRADO EN LA VUELTA 1'  : True
+
+E) EL ESQUEMA NO CRECE Y NADA MAS SE MUEVE
+   CIFRA claves antes: 18 | despues: 18
+   estado antes: 'LISTA' | despues: 'LISTA'
+   depende_de antes: [] | despues: []
+   CIFRA campos movidos ademas de `nota`: 0 []
+
+F) ESCRITO, Y RECONTADO DESPUES DE ESCRIBIR
+   CIFRA fichas antes: 71 | despues: 71
+   la ficha OP-I-01 sigue en la linea 44: True
+   CIFRA caracteres de la nota en disco: 10928
+
+VERDE: la nota de OP-I-01 corregida por adicion, cero palabras viejas borradas.
