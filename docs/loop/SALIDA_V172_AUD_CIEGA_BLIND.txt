@@ -1,0 +1,102 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   AUDITORIA DE LA VUELTA 171: muestra de 6 pares de la BANDA 0.78-0.80 sobre el archivo entero, semilla 172. Se elige la banda porque es donde la clave no decide y la clase se juega en la lectura; y se elige tramo abierto (sin --dominio) para no repetir el quality 2412-3189 que el acta 170 ya releyo.
+
+CIFRA pares elegidos: 6
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 1086
+nodo_a: decision_pivotar_o_proceder
+nodo_b: filosofia_customer_validation
+  pasos de A (decision_pivotar_o_proceder): 6
+     paso 1: Revisa honestamente si la validación convirtió opiniones en hechos, y no que moviste las metas para que coincidieran con el resultado
+     paso 2: Confirma que el producto se vendió bien y fácilmente, que la llegada de clientes es predecible, escalable y rentable, y que existe un proceso de ventas repetible
+     paso 3: Verifica que los tiempos de entrega del producto sean realistas con tu equipo de desarrollo
+     paso 4: Toma un Business Model Canvas nuevo y busca game changers revisando propuesta de valor, precios, canales y relaciones con clientes, no solo mejoras incrementales
+     paso 5: Presenta tu canvas a tu consejo asesor para que lo cuestione activamente
+     paso 6: Actualiza el canvas con lo aprendido y decide formalmente si pivotar volviendo a descubrimiento o proceder avanzando a creación de clientes
+  pasos de B (filosofia_customer_validation): 5
+     paso 1: Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+     paso 2: Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+     paso 3: Sal a pedir pedidos reales, no solo opiniones
+     paso 4: Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+     paso 5: Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+------------------------------------------------------------------------------
+puesto_intra: 1382
+nodo_a: get_out_building_test_sell
+nodo_b: sales_roadmap_vs_sales_force
+  pasos de A (get_out_building_test_sell): 6
+     paso 1: Define pruebas claras de si funciona o no basadas en tus hipótesis de negocio (por ejemplo, cuantas ventas cierras)
+     paso 2: Vende a tus primeros clientes convencidos (earlyvangelists) a un precio cercano al completo, evitando descuentos excesivos
+     paso 3: Cuando te pidan personalizaciones, evalua si son caracteristicas reales que necesitas agregar o si te arrastran a convertir tu negocio en algo hecho a medida para un solo cliente
+     paso 4: Evita comprometerte sin pensarlo bien con exclusividades o con clausulas que te obliguen a darle siempre las mejores condiciones a un cliente
+     paso 5: Registra de forma consistente lo que aprendes en cada llamada de venta, usando el mismo formato cada vez
+     paso 6: Decide junto con quien te acompana en decisiones importantes cuantos pedidos necesitas para considerar validado tu modelo
+  pasos de B (sales_roadmap_vs_sales_force): 4
+     paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+     paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+     paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+     paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+------------------------------------------------------------------------------
+puesto_intra: 1424
+nodo_a: customer_discovery_cuatro_fases
+nodo_b: sintesis_hipotesis_modelo_negocio
+  pasos de A (customer_discovery_cuatro_fases): 4
+     paso 1: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+     paso 2: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+     paso 3: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+     paso 4: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+  pasos de B (sintesis_hipotesis_modelo_negocio): 5
+     paso 1: Pega una copia grande de tu Lienzo de Modelo de Negocio y todas tus notas de hipótesis en una pared
+     paso 2: Lee cada una con la persona o personas con las que trabajas
+     paso 3: Busca contradicciones entre ellas: canal, precio, costo, etc.
+     paso 4: Vuelve a revisar tus supuestos de costos con quien te ayude en producto, desarrollo u operaciones
+     paso 5: Actualiza tu Lienzo de Modelo de Negocio con la versión final que acordaste
+------------------------------------------------------------------------------
+puesto_intra: 1599
+nodo_a: protective_provisions_alineacion
+nodo_b: right_of_first_refusal_pro_rata
+  pasos de A (protective_provisions_alineacion): 3
+     paso 1: Negociar desde la primera ronda VC que las provisiones protectoras se voten en conjunto entre todas las series
+     paso 2: Evaluar cuántas rondas de financiamiento se esperan realistamente antes de decidir el nivel de sincronización necesario
+     paso 3: Evitar comprometerse a votos separados por clase que generen bloqueos futuros
+  pasos de B (right_of_first_refusal_pro_rata): 4
+     paso 1: Define con claridad qué monto de inversión hace que alguien cuente como inversionista principal, y limita este derecho solo a quienes califiquen
+     paso 2: Establece el múltiplo de pro rata que vas a permitir (por ejemplo, 1x su porcentaje actual) y verifica que no incluya un pro rata super excesivo
+     paso 3: Acuerda cómo vas a reasignar entre otros inversionistas elegibles las acciones que alguien no suscriba
+     paso 4: Negocia que el derecho aplique solo a quienes participen en rondas siguientes, y que termine automáticamente si llegas a una oferta pública inicial calificada
+------------------------------------------------------------------------------
+puesto_intra: 1937
+nodo_a: activacion_lista_positiva
+nodo_b: cradle_to_cradle_concepto
+  pasos de A (activacion_lista_positiva): 4
+     paso 1: Rediseñar el producto utilizando únicamente materiales de la Lista Positiva (P), asegurando compatibilidad biológica o técnica.
+     paso 2: Diseñar el producto para desensamblaje, facilitando la recuperación de nutrientes técnicos o biológicos al final de su vida útil.
+     paso 3: Crear un sistema de documentación ('pasaporte de materiales') que registre todos los ingredientes del producto y su ciclo de reutilización.
+     paso 4: Validar que el producto cumple funciones equivalentes o superiores al modelo anterior antes de su lanzamiento.
+  pasos de B (cradle_to_cradle_concepto): 4
+     paso 1: Reconoce si lo que haces hoy reduce el daño o si de verdad elimina la existencia del residuo
+     paso 2: Decide a cuál de los dos ciclos, el biológico o el técnico, pertenece lo principal de lo que vendes
+     paso 3: Decide si este cambio de marco va a atravesar tu negocio entero o si por ahora se queda como una prueba aislada
+     paso 4: Escribe esa decisión en una frase clara que puedas usar para orientar cualquier rediseño futuro
+------------------------------------------------------------------------------
+puesto_intra: 2184
+nodo_a: entrenar_franquiciados_validacion
+nodo_b: evaluacion_competencia_franquiciados
+  pasos de A (entrenar_franquiciados_validacion): 4
+     paso 1: Explicar a los franquiciados los beneficios de que la marca crezca (poder de compra, publicidad, valorización)
+     paso 2: Comunicar que son parte del equipo de ventas de la franquicia
+     paso 3: Reforzar continuamente los beneficios únicos de la marca para que sea un discurso natural
+     paso 4: Fomentar referidos de amigos y conocidos como fuente de leads gratuitos y de calidad
+  pasos de B (evaluacion_competencia_franquiciados): 4
+     paso 1: Diseña pruebas escritas y prácticas para cada módulo de tu entrenamiento
+     paso 2: Incluye un examen final que cubra los temas amplios de tu sistema
+     paso 3: Dale a la persona que entrena la autoridad para detectar y corregir deficiencias
+     paso 4: Define en el contrato de franquicia qué pasa con quienes no aprueban el entrenamiento
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

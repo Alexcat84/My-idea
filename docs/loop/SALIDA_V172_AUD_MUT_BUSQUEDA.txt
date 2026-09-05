@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 171: CASO POSITIVO POR MUTACION DE LA BUSQUEDA DEL COMMIT DEL ACTA
+==============================================================================
+
+A) LA PASADA ESTRICTA MANDA, Y LA SUELTA NI SE CORRE
+   filas: 1 anclada y 1 suelta -> aciertos 1, anclado=True
+   el hash elegido: aaaa1111
+
+B) SIN NINGUNA ANCLADA, ENTRA LA SUELTA
+   aciertos 1, anclado=False, hash cccc3333
+
+C) LA EXIGENCIA DE UN SOLO ACIERTO NO SE AFLOJO
+   dos sueltas -> aciertos 2 (el llamante lo llama AMBIGUO)
+
+D) CERO SIGUE SIENDO CERO: NO SE INVENTA NINGUN HASH
+   aciertos 0
+
+E) LA SEGUNDA FORMA DEL TITULO (vuelta 106) SIGUE CASANDO ANCLADA
+   aciertos 1, anclado=True
+
+F) EL CASO REAL, LEIDO DE GIT HOY Y NO SUPUESTO
+   asuntos leidos de git log: 400
+   los que EMPIEZAN por el titulo: 0
+   los que buscar_acta encuentra: 1 (anclado=False)
+   hash: d7b18370
+   asunto: @ ACTA DE LA VUELTA 170 DEL AUDITOR: LAS CINCO TAREAS REPRODUCEN AL DIGITO, PERO LA VUELTA NO CERRO SU REPORTE
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_la_estricta_gana                                   PASA   (real=True esperado=True)
+   A_y_devuelve_UNA_sola                                PASA   (real=1 esperado=1)
+   A_y_es_la_anclada_no_la_ruidosa                      PASA   (real='aaaa1111' esperado='aaaa1111')
+   B_la_suelta_entra                                    PASA   (real=False esperado=False)
+   B_y_encuentra_UNA                                    PASA   (real=1 esperado=1)
+   B_y_es_la_ruidosa                                    PASA   (real='cccc3333' esperado='cccc3333')
+   C_dos_sueltas_siguen_siendo_dos                      PASA   (real=2 esperado=2)
+   C_y_no_se_elige_ninguna                              PASA   (real=False esperado=False)
+   D_sin_titulo_no_hay_acierto                          PASA   (real=0 esperado=0)
+   E_la_forma_de_la_106_sigue_anclada                   PASA   (real=True esperado=True)
+   E_y_acierta_una                                      PASA   (real=1 esperado=1)
+   F_en_git_hoy_NINGUNO_empieza_por_el_titulo           PASA   (real=0 esperado=0)
+   F_pero_buscar_acta_encuentra_exactamente_uno         PASA   (real=1 esperado=1)
+   F_y_lo_encuentra_por_la_pasada_suelta                PASA   (real=False esperado=False)
+   F_y_es_el_commit_d7b18370                            PASA   (real='d7b18370' esperado='d7b18370')
+   F_cuyo_asunto_lleva_ruido_delante                    PASA   (real=False esperado=False)
+   CIFRA casos: 16 | pasan: 16 | fallan: 0
+
+H) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_estricta_gana                                   CAE   (esperado mutado=False)
+   A_y_devuelve_UNA_sola                                CAE   (esperado mutado=2)
+   A_y_es_la_anclada_no_la_ruidosa                      CAE   (esperado mutado='aaaa1111_mutado')
+   B_la_suelta_entra                                    CAE   (esperado mutado=True)
+   B_y_encuentra_UNA                                    CAE   (esperado mutado=2)
+   B_y_es_la_ruidosa                                    CAE   (esperado mutado='cccc3333_mutado')
+   C_dos_sueltas_siguen_siendo_dos                      CAE   (esperado mutado=3)
+   C_y_no_se_elige_ninguna                              CAE   (esperado mutado=True)
+   D_sin_titulo_no_hay_acierto                          CAE   (esperado mutado=1)
+   E_la_forma_de_la_106_sigue_anclada                   CAE   (esperado mutado=False)
+   E_y_acierta_una                                      CAE   (esperado mutado=2)
+   F_en_git_hoy_NINGUNO_empieza_por_el_titulo           CAE   (esperado mutado=1)
+   F_pero_buscar_acta_encuentra_exactamente_uno         CAE   (esperado mutado=2)
+   F_y_lo_encuentra_por_la_pasada_suelta                CAE   (esperado mutado=True)
+   F_y_es_el_commit_d7b18370                            CAE   (esperado mutado='d7b18370_mutado')
+   F_cuyo_asunto_lleva_ruido_delante                    CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 16 de 16
+
+VERDE: los 16 casos pasan tal cual y los 16 caen al mutar el esperado.
