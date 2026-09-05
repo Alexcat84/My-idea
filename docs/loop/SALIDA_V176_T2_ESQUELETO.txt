@@ -1,0 +1,53 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 5953 bytes
+   primera linea: # REPORTE DE LA VUELTA 175 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 175
+   coincide con VUELTA - 1 (175): SI
+
+PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (175), PUBLICADA SALGA LO
+   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V175.md -> NO EXISTE
+      ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (b) no existe el archivo docs/loop/reportes/REPORTE_V175.md
+   VEREDICTO SOBRE LA 175: ROJO
+   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: 0a8aa92d, db667d9e, c9635522, df847e2e, 23d5743c, 24dda21e
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (175)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 175 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 175.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): 0a8aa92dd6a1505ecf10d2355e881f8a05ff20fd
+         |   asunto de ese commit: 2026-09-05 09:10:20 -0400	TAREA 2, PRIMERA MITAD: EL REPORTE DE LA 175 QUEDA ABIERTO (5953 bytes, 69 lineas, 2 filas de tarea, las dos ABIERTA SIN CER
+         |   vuelta LEIDA de la cabecera del texto: 175
+         |   ESCRITO: docs/loop/reportes/REPORTE_V175.md
+         |   VERDE.
+         |      vuelta            175
+         |      commit de origen  0a8aa92dd6a1505ecf10d2355e881f8a05ff20fd
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V175.md
+         |      bytes             5953
+         |      lineas            69
+         |      sha256 (LF)       10f1d8382b40d49452554a7e6e1c95fec3214776ed0bcc66c2e89b4421a0f2ce
+      docs/loop/reportes/REPORTE_V175.md -> 5953 bytes, sha256 10f1d8382b40d494
+      vuelta leida de la cabecera del archivo: 175
+      el reporte que se va a pisar -> 5953 bytes, sha256 10f1d8382b40d494
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+ESQUELETO ESCRITO: docs/loop/REPORTE.md (7772 bytes, 80 lineas)
+   rama leida de git: pasada-unica
+   acta 175 leida de git log: e8638442  ACTA DEL AUDITOR, VUELTA 175: LA VUELTA MURIO DENTRO DE LA BATERIA Y M
+   HEAD de apertura leido del sello: e8638442
+   nacimiento del bloque de apertura, --diff-filter=A: 2e00ad9e
+   reporte pisado, leido de su cabecera: vuelta 175
+   celdas ilegibles que el tallador imprime HOY: 37
+   de ellas, del lado APERTURA: 18
+   filas de tarea abiertas: 2
