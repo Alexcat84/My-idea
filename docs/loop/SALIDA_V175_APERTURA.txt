@@ -1,0 +1,254 @@
+SELLO DE APERTURA DE LA VUELTA 175, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta175_apertura.py
+regimen: VUELTA DE BATERIA (AUDITOR.md 6.1). Dos sub-tareas (AUDITOR.md 6.2).
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+1eacb3b595e09fd71b9639e5ed98a7b49963cff2
+1eacb3b595e09fd71b9639e5ed98a7b49963cff2	2026-09-05 08:58:50 -0400	ACTA DEL AUDITOR, VUELTA 174: LA VUELTA ABRIO Y CERRO SU PROPIO REPORTE, QUE LLEVABA CUATRO VUELTAS SIN PASAR, Y NO PUBLICO NI UNA CIFRA FALSA. LAS DOS RACHAS BAJAN A CERO Y NO HAY PARADA. EL ACTA ABRE CON EL REMEDIO BLOQUEANTE DE MI PROPIA CAIDA REPETIDA: AISLE LA CIEGA ANTES DE GATE 0, DE LA VARA, DE LOS ARNESES Y DEL RECOMPUTO, 
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? scripts/loop/vuelta175_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Hallazgo 4.1 del
+ acta 174: divergen en el numero de finales de linea y NO HAY CONVENCION FIJADA)
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 32568 bytes | git 32568 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4005539 bytes | git 4005539 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 6359 bytes | git 6359 bytes
+docs/loop/reportes/REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+docs/loop/SALIDA_V175_BATERIA.txt -> disco NO EXISTE | git NO ESTA EN HEAD
+docs/loop/SALIDA_V175_TALLADOR_CABECERA.txt -> disco NO EXISTE | git NO ESTA EN HEAD
+scripts/loop/_v175_cierre_texto.md -> disco NO EXISTE | git NO ESTA EN HEAD
+scripts/loop/verificar_mutaciones_viejas.py -> disco 72663 bytes | git 72663 bytes
+scripts/loop/cerrar_reporte.py -> disco 20841 bytes | git 20841 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/paso0_archivar_anterior.py -> disco 7112 bytes | git 7112 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 96677 bytes | git 96677 bytes
+scripts/loop/serie_de_registros.py -> disco 6595 bytes | git 6595 bytes
+scripts/loop/vuelta173_tarea1b_mutacion_hueco.py -> disco 10438 bytes | git 10438 bytes
+scripts/loop/vuelta174_tarea1a_mutacion_44.py -> disco 8275 bytes | git 8275 bytes
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> disco 9988 bytes | git 9988 bytes
+scripts/loop/vuelta174_tarea1b_mutacion_sellar.py -> disco 6819 bytes | git 6819 bytes
+scripts/loop/vuelta174_tarea2b_mutacion_confirmar.py -> disco 10396 bytes | git 10396 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> git diff --numstat: 0 filas
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+scripts/loop/vuelta175_apertura.py -> 15216 bytes
+CIFRA ficheros no seguidos: 1
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 1a2e3a3cb9132bdd2b42d4d8cf9776fc5ab38523	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob a35fa5d319e24e8bcfe772867cdd6f24467caefb	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob e17962da0238c9f9fd6e25faa2ed5abea23699cc	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/reportes/REPORTE_V174.md -> 100644 blob 1a2e3a3cb9132bdd2b42d4d8cf9776fc5ab38523	docs/loop/reportes/REPORTE_V174.md
+docs/loop/SALIDA_V175_BATERIA.txt -> NO ESTA EN EL ARBOL DE HEAD
+docs/loop/SALIDA_V175_TALLADOR_CABECERA.txt -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/_v175_cierre_texto.md -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 0bd55a8afc4f240bd7691ecef1b32ccd73450126	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 34cf0d86740d685087de0a367a662c3486d5f0cf	scripts/loop/cerrar_reporte.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/paso0_archivar_anterior.py -> 100644 blob 71dc36b3ea3c4cf1a2f180741519aa7f9cf8aead	scripts/loop/paso0_archivar_anterior.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob b34332d5f339fcc0135799e6c805dbb725e39e9f	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta173_tarea1b_mutacion_hueco.py -> 100644 blob 9eb10c8ce6469a6c92fc5acb04d3f00524f7108d	scripts/loop/vuelta173_tarea1b_mutacion_hueco.py
+scripts/loop/vuelta174_tarea1a_mutacion_44.py -> 100644 blob 6eb5b2d2b2703655bc199008d7a8723c89b0e81c	scripts/loop/vuelta174_tarea1a_mutacion_44.py
+scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py -> 100644 blob 1b9a9b4798cc54616d8ef6e1dc97e9e8819e05fd	scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py
+scripts/loop/vuelta174_tarea1b_mutacion_sellar.py -> 100644 blob 846045093970b1b393df551e2ed88a67c8dba14e	scripts/loop/vuelta174_tarea1b_mutacion_sellar.py
+scripts/loop/vuelta174_tarea2b_mutacion_confirmar.py -> 100644 blob c5e357d24562a9a654ecd2790e2049a54fd7d18b	scripts/loop/vuelta174_tarea2b_mutacion_confirmar.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 174 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 486
+bytes en git: 32568
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA 175 PISARA ===
+primera linea: # REPORTE DE LA VUELTA 174 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes en disco (normalizado a LF): 32568 | saltos de linea: 486
+bytes en disco (crudos, os.path.getsize): 32568
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'             -> NO
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> NO
+   contiene 'ABIERTA, SIN CERRAR'              -> SI
+   contiene 'HUECO DECLARADO Y MEDIDO'         -> SI
+   contiene '\n## 3.'                          -> SI
+   contiene '\n## 4.'                          -> SI
+   contiene '\n## 5.'                          -> SI
+   contiene '\n## 6.'                          -> SI
+   contiene '\n## 7.'                          -> SI
+   contiene '\n## 8.'                          -> SI
+   contiene '\n## 9.'                          -> SI
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los seis ultimos commits:
+   1eacb3b5	ACTA DEL AUDITOR, VUELTA 174: LA VUELTA ABRIO Y CERRO SU PROPIO REPORTE, QUE LLEVABA CUATRO VUELTAS SIN PASAR, Y NO PUBLICO NI UNA CIFRA FALS
+   59d2ea87	LA VUELTA 174 ARCHIVA TAMBIEN SU PROPIO REPORTE, SIN ESPERAR A LA SIGUIENTE: docs/loop/reportes/REPORTE_V174.md (32568 bytes, 486 lineas, sha
+   db667d9e	TAREA 1.b CERRADA Y LA VUELTA 174 CIERRA SU PROPIO REPORTE, QUE ES LO QUE LLEVABA CUATRO VUELTAS SIN PASAR: 32568 bytes, LAS CUATRO PIEZAS Y 
+   c9635522	TAREA 2 CERRADA, LAS DOS SUB-TAREAS QUE LA 173 NO EJECUTO: EL ACTA 172 ENTERA QUEDA EN EL R.42 (11 adjudicaciones y 2 caidas CONTADAS del cue
+   df847e2e	TAREA 1.b, PRIMERA MITAD: EL REPORTE DE LA 174 QUEDA ABIERTO (4547 bytes, 65 lineas, 2 filas) Y LA FILA DE LA TAREA 1 YA ESTA ANEXADA CON SU 
+   e0eb1a62	TAREA 1.a CERRADA: EL REPORTE DE LA 172 ARCHIVADO EN docs/loop/reportes/REPORTE_V172.md (48851 bytes, 761 lineas, sha256 d29e4552, leido de g
+ultimo commit que TOCA docs/loop/REPORTE.md: db667d9e
+   su asunto: TAREA 1.b CERRADA Y LA VUELTA 174 CIERRA SU PROPIO REPORTE, QUE ES LO QUE LLEVABA CUATRO VUELTAS SIN PASAR: 32568 bytes, LAS CUATRO PIEZAS Y CIFRA PIE
+
+=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA 175 ===
+(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta)
+docs/loop/SALIDA_V175_TALLADOR_CABECERA.txt -> NO EXISTE
+scripts/loop/_v175_cierre_texto.md -> NO EXISTE
+docs/loop/SALIDA_V175_BATERIA.txt -> NO EXISTE
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> disco 31263 bytes | git 31263 bytes
+   REPORTE_V169.md -> disco 43586 bytes | git 43586 bytes
+   REPORTE_V170.md -> disco 45706 bytes | git 45706 bytes
+   REPORTE_V171.md -> disco 43956 bytes | git 43956 bytes
+   REPORTE_V172.md -> disco 48851 bytes | git 48851 bytes
+   REPORTE_V174.md -> disco 32568 bytes | git 32568 bytes
+CIFRA reportes archivados: 6
+REPORTE_V174.md archivado: SI
+
+=== H.5 LA NOMINA Y LOS QUE FALTAN, POR SU PROPIA FUNCION PURA ===
+(esta es LA CIFRA DE LA TAREA 1. NO se copia del acta: se recomputa aqui)
+entradas de la nomina VIEJAS: 82
+arneses que el censo reconoce en scripts/loop/: 149
+ficheros .py en scripts/loop/: 1129
+ultima vuelta representada en la nomina: 172
+arneses_que_faltan(): 5
+   FUERA DE LA NOMINA: vuelta173_tarea1b_mutacion_hueco.py
+   FUERA DE LA NOMINA: vuelta174_tarea1a_mutacion_44.py
+   FUERA DE LA NOMINA: vuelta174_tarea1b_mutacion_esqueleto.py
+   FUERA DE LA NOMINA: vuelta174_tarea1b_mutacion_sellar.py
+   FUERA DE LA NOMINA: vuelta174_tarea2b_mutacion_confirmar.py
+nomina_invisible_al_censo(): 0
+familias que el censo reconoce: mutacion, caso_positivo, simular
+
+=== H.6 LOS CINCO QUE EL ACTA 174 NOMBRA, UNO A UNO ===
+(el acta los nombra; aqui se comprueba que existen, cuanto miden, si admiten
+ --sujeto y si la funcion pura de arriba los devuelve DE VERDAD)
+vuelta173_tarea1b_mutacion_hueco.py
+   existe: True | disco 10438 bytes | admite --sujeto: NO | lo devuelve arneses_que_faltan(): SI
+vuelta174_tarea1a_mutacion_44.py
+   existe: True | disco 8275 bytes | admite --sujeto: NO | lo devuelve arneses_que_faltan(): SI
+vuelta174_tarea1b_mutacion_esqueleto.py
+   existe: True | disco 9988 bytes | admite --sujeto: NO | lo devuelve arneses_que_faltan(): SI
+vuelta174_tarea1b_mutacion_sellar.py
+   existe: True | disco 6819 bytes | admite --sujeto: NO | lo devuelve arneses_que_faltan(): SI
+vuelta174_tarea2b_mutacion_confirmar.py
+   existe: True | disco 10396 bytes | admite --sujeto: NO | lo devuelve arneses_que_faltan(): SI
+CIFRA de los cinco del acta que la funcion pura confirma: 5 de 5
+CIFRA que la funcion pura devuelve y el acta NO nombra: 0
+
+=== H.7 LAS CORRIDAS DE BATERIA DE docs/loop/, CON SUS BYTES ===
+(regla del 5 sep 2026: LA RUTA QUE PROMETE PRUEBA ES CIFRA, y CERO BYTES es
+ CAIDA DE CIFRA. El encargo dice que llevan CUATRO vueltas en cero: se mide)
+   SALIDA_V124_BATERIAS_CMP.txt                   -> 136 bytes
+   SALIDA_V125_BATERIAS_CMP.txt                   -> 573 bytes
+   SALIDA_V126_BATERIAS_CMP.txt                   -> 799 bytes
+   SALIDA_V128_BATERIAS_CMP.txt                   -> 2336 bytes
+   SALIDA_V130_BATERIAS_CMP.txt                   -> 2256 bytes
+   SALIDA_V131_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V132_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V133_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V134_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V135_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V136_BATERIAS_CMP.txt                   -> 785 bytes
+   SALIDA_V139_BATERIAS_CMP.txt                   -> 789 bytes
+   SALIDA_V139_BATERIAS_CMP_RUN.txt               -> 835 bytes
+   SALIDA_V142_2D_BATERIA_VIEJAS.txt              -> 3356 bytes
+   SALIDA_V142_2D_MUTACION_BATERIA.txt            -> 1421 bytes
+   SALIDA_V143_2B_BATERIA_VIEJA.txt               -> 3286 bytes
+   SALIDA_V143_2B_MUTACION_BATERIA.txt            -> 1659 bytes
+   SALIDA_V144_2C_BATERIA_VIEJA.txt               -> 4122 bytes
+   SALIDA_V157_T5_BATERIA.txt                     -> 5549 bytes
+   SALIDA_V157_T9_BATERIA_FINAL.txt               -> 5549 bytes
+   SALIDA_V159_T9_BATERIA.txt                     -> 5561 bytes
+   SALIDA_V160_T3B_BATERIA_DESPUES.txt            -> 5561 bytes
+   SALIDA_V160_T3_BATERIA.txt                     -> 5561 bytes
+   SALIDA_V160_T3_FUERA_DE_BATERIA.txt            -> 5142 bytes
+   SALIDA_V160_T7_BATERIA.txt                     -> 5561 bytes
+   SALIDA_V161_BATERIAS_CMP.txt                   -> 702 bytes
+   SALIDA_V161_T4_BATERIAS.txt                    -> 746 bytes
+   SALIDA_V161_T4_BATERIAS_DIFF.txt               -> 1068 bytes
+   SALIDA_V162_BATERIAS_CMP.txt                   -> 702 bytes
+   SALIDA_V162_T6_BATERIAS.txt                    -> 746 bytes
+   SALIDA_V162_T6_BATERIAS_DIFF.txt               -> 742 bytes
+   SALIDA_V163_AUD_BATERIA_INCOMPLETA.txt         -> 1600 bytes
+   SALIDA_V163_T2_BATERIA_NUEVA.txt               -> 0 bytes   CERO BYTES
+   SALIDA_V164_T2A_BATERIA.txt                    -> 12197 bytes
+   SALIDA_V164_T2A_BATERIA_SEGUNDA.txt            -> 12052 bytes
+   SALIDA_V165_BATERIA.txt                        -> 13979 bytes
+   SALIDA_V166_BATERIA.txt                        -> 0 bytes   CERO BYTES
+   SALIDA_V167_BATERIA.txt                        -> 0 bytes   CERO BYTES
+   SALIDA_V168_BATERIA.txt                        -> 15045 bytes
+   SALIDA_V168_T3_BATERIA_CIERRE.txt              -> 15212 bytes
+   SALIDA_V169_T2_BATERIA_2.txt                   -> 15721 bytes
+   SALIDA_V169_T2_BATERIA_3_VERDE.txt             -> 15622 bytes
+   SALIDA_V169_T2_CERRAR_BATERIA.txt              -> 1405 bytes
+   SALIDA_V170_BATERIA.txt                        -> 0 bytes   CERO BYTES
+   SALIDA_V171_AUDITOR_BATERIA.txt                -> 17036 bytes
+   SALIDA_V171_BATERIA.txt                        -> 0 bytes   CERO BYTES
+   SALIDA_V172_AUDITOR_BATERIA.txt                -> 0 bytes   CERO BYTES
+   SALIDA_V172_BATERIA.txt                        -> 0 bytes   CERO BYTES
+   SALIDA_V173_AUDITOR_BATERIA.txt                -> 0 bytes   CERO BYTES
+   SALIDA_V173_AUDITOR_BATERIA_RELOJ.txt          -> 28 bytes
+   SALIDA_V173_BATERIA.txt                        -> 0 bytes   CERO BYTES
+CIFRA ficheros de bateria en docs/loop/: 51
+CIFRA de ellos con CERO BYTES: 9
+
+=== H.8 EL RELOJ DE LAS BATERIAS QUE SI TIENEN CUERPO, COMO CONTRASTE ===
+(contraste, NO fuente: EJECUTOR.md 2. La cifra de ESTA vuelta la dara su
+ propia corrida y ninguna otra)
+   SALIDA_V142_2D_BATERIA_VIEJAS.txt :: LAS 7 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V143_2B_BATERIA_VIEJA.txt :: LAS 7 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V144_2C_BATERIA_VIEJA.txt :: LAS 13 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V157_T5_BATERIA.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V157_T9_BATERIA_FINAL.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V159_T9_BATERIA.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V160_T3B_BATERIA_DESPUES.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V160_T3_BATERIA.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V160_T7_BATERIA.txt :: LAS 23 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V163_AUD_BATERIA_INCOMPLETA.txt :: LAS 51 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V164_T2A_BATERIA.txt :: LAS 53 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V164_T2A_BATERIA.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 16.1
+   SALIDA_V164_T2A_BATERIA_SEGUNDA.txt :: LAS 53 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V164_T2A_BATERIA_SEGUNDA.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 16.3
+   SALIDA_V165_BATERIA.txt :: LAS 62 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V165_BATERIA.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 19.3
+   SALIDA_V168_BATERIA.txt :: LAS 71 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V168_BATERIA.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 18.9
+   SALIDA_V168_T3_BATERIA_CIERRE.txt :: LAS 72 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V168_T3_BATERIA_CIERRE.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 25.8
+   SALIDA_V169_T2_BATERIA_2.txt :: LAS 72 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V169_T2_BATERIA_2.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 19.6
+   SALIDA_V169_T2_BATERIA_3_VERDE.txt :: LAS 73 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V169_T2_BATERIA_3_VERDE.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 26.2
+   SALIDA_V171_AUDITOR_BATERIA.txt :: LAS 75 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+   SALIDA_V171_AUDITOR_BATERIA.txt :: CIFRA TIEMPO TOTAL de la bateria, en minutos: 32.5
+
+FIN DEL SELLO DE APERTURA
