@@ -58,6 +58,13 @@ ultima clase; y sobre el texto SIN TACHAR los dos leen exactamente lo mismo.
 
 EL FICHERO DEL REPO SIGUE SIN TOCARSE: todo pasa en memoria.
 
+SUJETO CONGELADO (vuelta 180, TAREA 2.b): el texto de `docs/plan/LECTURAS_DIRIGIDAS.md`
+ya NO se lee del fichero vivo. Se lee de un BLOB DE GIT CLAVADO por su commit y
+se comprueba por su `sha256` declarado, con `sujeto_congelado_de_git.py`. Lo que
+habia antes queda escrito aqui y no se borra: `io.open(LD).read()` sobre la ruta
+viva, que es lo que hacia que este arnes se moviera con el fichero. El delta que
+prueba es el mismo; lo que cambia es que ahora no puede cambiar solo.
+
 USO:  python scripts/loop/vuelta157_tarea4b_mutacion_tachado.py
       python scripts/loop/vuelta157_tarea4b_mutacion_tachado.py --mutar
 """
@@ -69,8 +76,19 @@ import re
 import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sujeto_congelado_de_git as SC   # noqa: E402
+
 LECTOR = os.path.join(RAIZ, "scripts", "loop", "vuelta152_registro_de_citas_opc05.py")
-LD = os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md")
+
+# EL SUJETO, CONGELADO EN LA VUELTA 180 (TAREA 2.b; adjudicacion 7.8 del acta
+# 179). Hasta hoy este arnes leia el fichero VIVO, y por eso su resultado se
+# movia con el: la guarda del sujeto congelado lo cazaba como SUJETO VIVO. Ahora
+# lee un BLOB DE GIT CLAVADO por su commit y comprobado por su sha256, asi que su
+# resultado no depende de lo que el fichero vivo diga hoy.
+RUTA_LD = "docs/plan/LECTURAS_DIRIGIDAS.md"
+COMMIT_LD = "24bd395b0cde6f81780454bb110d4a4fbb7f3d6f"
+SHA_LD = "dda1cdd67042c733765d801d9745a1ed3b653aca7afc38b8a872c056dd524813"
 
 # LA FILA DE LA QUE NACIO ESTE ARNES, CONSERVADA COMO CONTRASTE Y NO COMO VARA.
 # No se borra (EJECUTOR.md 8: una correccion que tapa lo que corrige no se puede
@@ -119,7 +137,12 @@ def main():
     print("  patron NUEVO: %s" % mod.PATRON_FILA_LD.pattern[-64:])
     print("")
 
-    texto = io.open(LD, encoding="utf-8").read()
+    texto = SC.texto_del_blob(COMMIT_LD, RUTA_LD, SHA_LD)
+    print("  EL SUJETO VA CONGELADO Y SE COMPRUEBA, NO SE PROMETE")
+    print("    blob clavado: %s:%s" % (COMMIT_LD[:12], RUTA_LD))
+    print("    sha256 declarado y comprobado: %s" % SHA_LD)
+    print("    bytes del blob (normalizado a LF): %d" % len(texto.encode("utf-8")))
+    print("")
     celdas = [(m, m.group(2), m.group(3), m.group(4).strip(), m.group(5))
               for m in PATRON_CELDA.finditer(texto)]
     tachadas = [c for c in celdas if c[3]]

@@ -1,0 +1,32 @@
+==============================================================================
+LA GUARDA DEL SUJETO CONGELADO (vuelta 178, TAREA 1.e)
+==============================================================================
+
+LA REGLA, CITADA Y NO PARAFRASEADA, del docstring de este mismo fichero:
+   'UNA MUTACION ENTRA EN LA VUELTA SIGUIENTE A LA QUE NACE, Y SOLO SI SU
+   SUJETO ESTA CONGELADO' (vuelta 145), y desde la 148 'LO QUE ESTA REGLA
+   EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL
+   FIN'. Existe desde la 145 y hasta hoy era una frase.
+
+COMO SE MIDE: por la huella que el sujeto deja EN EL CODIGO del arnes.
+   huellas de CONGELADO (en el texto entero): SUJETO_FIJO, tempfile, mkdtemp, deepcopy, git show, cat-file, sha256, SUJETO CONGELADO
+   huellas de VIVO (SOLO en la maquina, sin el docstring de modulo): REPORTE.md, INTRA_DOMINIO_VEREDICTOS.jsonl, OPERACIONES.jsonl, master_graph.json, ACTA_AUDITOR.md, LECTURAS_DIRIGIDAS.md
+   y si trae LAS DOS, la guarda NO ADIVINA: pide que el propio arnes lo
+   declare con el literal 'SUJETO CONGELADO', y sin esa declaracion sale NO DECIDIBLE.
+
+EL REPARTO, CONTADO DE LA NOMINA VIVA
+| veredicto | entradas |
+|---|---|
+| CONGELADO | 102 |
+| CASO DECLARADO | 2 |
+| SUJETO VIVO | 0 |
+| NO DECIDIBLE | 0 |
+| **total** | **104 (corte: HEAD 7aacaa474fcc, nomina contada en esta corrida)** |
+
+LAS QUE NO CUMPLEN, UNA A UNA
+   (ninguna)
+   CIFRA entradas que no cumplen la regla: 0
+
+VERDE DE LA GUARDA DEL SUJETO CONGELADO: las 104 (corte: HEAD 7aacaa474fcc, nomina contada en esta corrida) entradas de la nomina
+demuestran sujeto congelado o son caso declarado.
+FIN

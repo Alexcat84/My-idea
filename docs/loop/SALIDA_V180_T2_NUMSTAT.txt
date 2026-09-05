@@ -1,0 +1,28 @@
+GIT DIFF --numstat SOBRE scripts/loop/ DESDE EL COMMIT DE CIERRE DE LA TAREA 1
+corte: HEAD 7aacaa474fcc, y el comando va entero al lado:
+  git diff HEAD --numstat -- scripts/loop/
+
+71	4	scripts/loop/verificar_mutaciones_viejas.py
+1	0	scripts/loop/vuelta135_2e_mutacion_1.py
+1	0	scripts/loop/vuelta135_2e_mutacion_2.py
+1	0	scripts/loop/vuelta145_2a_mutacion_ancla_unica.py
+1	0	scripts/loop/vuelta148_2d_mutacion_exencion.py
+26	2	scripts/loop/vuelta150_2d_simular_op_c_05.py
+1	0	scripts/loop/vuelta150_5c_mutacion_ciclo.py
+25	2	scripts/loop/vuelta157_tarea4b_mutacion_tachado.py
+43	7	scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py
+1	0	scripts/loop/vuelta162_tarea2a_mutacion_puerta.py
+1	0	scripts/loop/vuelta162_tarea2b_mutacion_excepcion.py
+1	0	scripts/loop/vuelta163_tarea4b_mutacion_re_sellado.py
+1	0	scripts/loop/vuelta165_tarea6_mutacion_op_l_01.py
+1	0	scripts/loop/vuelta166_tarea2_mutacion_correccion.py
+1	0	scripts/loop/vuelta166_tarea6_mutacion_guarda.py
+18	0	scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py
+1	0	scripts/loop/vuelta177_tarea1b_mutacion_esperado_vivo.py
+1	0	scripts/loop/vuelta179_tarea3_mutacion_triangulos.py
+
+LOS NO SEGUIDOS POR GIT (ficheros nuevos de esta vuelta):
+?? scripts/loop/sujeto_congelado_de_git.py
+?? scripts/loop/vuelta180_tarea2a_declarar_sujeto.py
+?? scripts/loop/vuelta180_tarea2b_prueba_de_congelacion.py
+?? scripts/loop/vuelta180_tarea2c_mutacion_cableado.py

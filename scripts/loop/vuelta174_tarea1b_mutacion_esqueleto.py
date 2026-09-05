@@ -25,6 +25,24 @@ LO QUE ESTE ARNES NO TOCA: el repo. Los ficheros de mentira viven en un
 directorio temporal que se crea y se borra aqui dentro; `docs/loop/REPORTE.md` y
 `docs/loop/reportes/` no se leen ni se escriben en ningun caso.
 
+SUJETO CONGELADO (vuelta 180, TAREA 2.b), Y AQUI HAY QUE DECIR ALGO MAS QUE EN
+LOS OTROS TRES, PORQUE LA MEDICION NO DIO LO QUE EL ENCARGO SUPONIA. El encargo
+de la 180 pone este arnes entre "LOS CUATRO QUE SI ABREN" un fichero vivo,
+nombrando `REPORTE.md`. MEDIDO, NO ABRE NINGUNO: la unica lectura que la 179
+registro es su propia evidencia, `vivo -> os.path.join(tmp, "REPORTE.md") |
+io.open(vivo).read()`, y `tmp` es el `tempfile.mkdtemp(prefix="v174_mut_")` que
+este mismo fichero crea y borra. O sea que el fichero que abre lo FABRICA EL, se
+llama igual que el vivo y vive en un temporal. `docs/loop/REPORTE.md` y
+`docs/loop/reportes/` no se leen ni se escriben en ninguna rama de este arnes, y
+esa frase ya estaba escrita arriba antes de esta vuelta.
+
+POR ESO AQUI NO HAY NADA QUE CONGELAR, Y LO QUE FALTABA ERA DECLARARLO: la
+guarda del sujeto congelado buscaba la huella `REPORTE.md` en la maquina, la
+encontraba en el nombre del fichero fabricado y no podia distinguir un sujeto
+fabricado de uno vivo. La prueba de que su resultado no se mueve es que corre
+DOS VECES y da lo mismo, y eso se mide en
+`scripts/loop/vuelta180_tarea2b_prueba_de_congelacion.py`.
+
 USO:
   python scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py
 """

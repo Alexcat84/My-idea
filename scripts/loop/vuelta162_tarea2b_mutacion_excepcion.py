@@ -26,6 +26,7 @@ LOS CINCO CASOS, DICHOS ANTES DE CORRERLOS:
      que ya no vive en el campo `nodos`, la entrada esta rancia y no se aplica.
 
 USO:  python scripts/loop/vuelta162_tarea2b_mutacion_excepcion.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `OPERACIONES.jsonl` en su texto pero NO LO ABRE (3 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import copy
 import os

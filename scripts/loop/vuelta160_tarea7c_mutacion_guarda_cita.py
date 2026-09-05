@@ -31,6 +31,17 @@ al final se comprueba por sha256 que los tres originales estan intactos.
   que ENTONCES YA NO CAE sobre el escenario del caso 1. Esto es lo que separa
   una guarda que mide de un `assert` que se aprueba solo.
 
+SUJETO CONGELADO (vuelta 180, TAREA 2.b): LOS TRES SUJETOS YA NO SALEN DEL
+FICHERO VIVO. Lo que este arnes hacia antes queda escrito aqui y no se borra:
+`shutil.copy` de `docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl`, de
+`docs/plan/LECTURAS_DIRIGIDAS.md` y de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` a un
+temporal, EN CADA CORRIDA. Copiar a un temporal PARECE congelar y no congela:
+lo que se copia cambia cada vuelta, y por eso este era el ejemplar del problema.
+Ahora los tres se vuelcan de BLOBS DE GIT CLAVADOS por su commit y comprobados
+por su `sha256`, con `sujeto_congelado_de_git.py`. Los sha256 de los tres
+ORIGINALES VIVOS se siguen midiendo antes y despues, porque esa comprobacion no
+es sobre el sujeto sino sobre el arbol: dice que este arnes no toco nada.
+
 USO:  python scripts/loop/vuelta160_tarea7c_mutacion_guarda_cita.py
 """
 import hashlib
@@ -45,6 +56,25 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import vuelta159_motor_veredictos as motor  # noqa: E402
+import sujeto_congelado_de_git as SC  # noqa: E402
+
+# LOS TRES SUJETOS, CONGELADOS EN LA VUELTA 180 (TAREA 2.b; adjudicacion 7.8 del
+# acta 179). ESTE ARNES ERA EL EJEMPLAR DEL PROBLEMA: copiaba los ficheros VIVOS
+# a un temporal en cada corrida, asi que PARECIA congelado y no lo estaba, porque
+# lo que copiaba cambiaba cada vuelta. Ahora vuelca BLOBS DE GIT CLAVADOS por su
+# commit y comprobados por su sha256. Lo que hacia antes queda escrito en el
+# docstring y no se borra.
+PINES = (
+    ("docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl",
+     "7dff83ab6a17a75202042d018f288c7d845e7cac",
+     "55dc321d25c3a03af3ca837bb6298eaf92d84ace9368cd3343ae1a10688d6ee8"),
+    ("docs/plan/LECTURAS_DIRIGIDAS.md",
+     "24bd395b0cde6f81780454bb110d4a4fbb7f3d6f",
+     "dda1cdd67042c733765d801d9745a1ed3b653aca7afc38b8a872c056dd524813"),
+    ("docs/INTRA_DOMINIO_VEREDICTOS.jsonl",
+     "2743bd88faed00dfe9e576785ebfde6da38a13fb",
+     "ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be"),
+)
 
 MARCA = "PRUEBA DE MUTACION DE LA GUARDA DE LA CITA, VUELTA 160"
 
@@ -115,12 +145,14 @@ def correr(v, tmp):
 
 
 def preparar(tmp):
-    shutil.copy(os.path.join(RAIZ, "docs", "plan", "REGISTRO_DE_CITAS_OPC05.jsonl"),
-                os.path.join(tmp, "REGISTRO_DE_CITAS_OPC05.jsonl"))
-    shutil.copy(os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md"),
-                os.path.join(tmp, "LECTURAS_DIRIGIDAS.md"))
-    shutil.copy(os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl"),
-                os.path.join(tmp, "INTRA_DOMINIO_VEREDICTOS.jsonl"))
+    """VUELCA LOS TRES SUJETOS CONGELADOS EN EL TEMPORAL, y devuelve sus sha256
+    medidos. Ya no copia ningun fichero vivo: cada uno sale de su blob clavado y
+    se comprueba contra el sha256 que este fichero declara."""
+    medidos = []
+    for ruta, commit, sha_esperado in PINES:
+        destino = os.path.join(tmp, os.path.basename(ruta))
+        medidos.append((ruta, commit, SC.volcar_blob(commit, ruta, destino, sha_esperado)))
+    return medidos
 
 
 def main():
@@ -146,7 +178,11 @@ def main():
     resultados = []
     tmp = tempfile.mkdtemp()
     try:
-        preparar(tmp)
+        pines = preparar(tmp)
+        print("LOS TRES SUJETOS, CONGELADOS Y COMPROBADOS, NO COPIADOS DEL VIVO:")
+        for ruta, commit, medido in pines:
+            print("   %-45s blob %s sha256 %s" % (ruta, commit[:12], medido[:16]))
+        print("")
         ld, vigente, contraria = sujeto(os.path.join(tmp, "REGISTRO_DE_CITAS_OPC05.jsonl"))
         print("SUJETO COMPUTADO (no tecleado): %s, clase vigente %s, su cita la declara"
               % (ld, vigente))

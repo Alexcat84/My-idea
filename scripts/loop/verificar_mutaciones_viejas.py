@@ -739,6 +739,25 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 98 A 103.
     ("vuelta179_tarea1d_mutacion_corte.py", False),
+    # VUELTA 180, TAREA 1.b. LA ETIQUETA DE FUENTE QUE LEE LA VUELTA DE LA
+    # FILA (adjudicacion 7.7 del acta 179). El literal clavado en la vuelta
+    # 177 atribuia a la 177 cinco lecturas de la 179, contra `EJECUTOR.md` 8.
+    # Su sujeto es un registro FABRICADO en un temporal con DOS vueltas
+    # distintas: un registro de una sola vuelta no puede cazar esto, porque
+    # con una sola vuelta el literal acierta por casualidad. No admite
+    # --sujeto: fabrica el suyo.
+    #
+    # LA NOMINA CRECE DE 103 A 104.
+    ("vuelta180_tarea1b_mutacion_etiqueta.py", False),
+    # VUELTA 180, TAREA 2.c. EL CABLEADO DE LA GUARDA DEL SUJETO CONGELADO
+    # AL ROJO GLOBAL (adjudicacion 7.8 del acta 179). Prueba por mutacion que
+    # la pieza esta ENCHUFADA: su pieza sola enciende el rojo, y la condicion
+    # VIEJA sobre el mismo escenario NO lo enciende. Su sujeto es un
+    # directorio de arneses de mentira fabricado en un temporal y una nomina
+    # fabricada, las dos por parametro. No admite --sujeto.
+    #
+    # LA NOMINA CRECE DE 104 A 105.
+    ("vuelta180_tarea2c_mutacion_cableado.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -1572,6 +1591,20 @@ def reparto_en_tramos(nomina, tamano, reloj=None,
     return [list(nomina[i:i + tamano]) for i in range(0, len(nomina), tamano)]
 
 
+def hay_rojo_al_cierre(perdidas, no_mordio, no_reprod, faltan, invisibles, malas):
+    """SI LA BATERIA CIERRA EN ROJO, DECIDIDO EN UN SOLO SITIO. PURA.
+
+    POR QUE ES UNA FUNCION Y NO UN `if` suelto (vuelta 180, TAREA 2.c). La
+    condicion del rojo global vivia dentro de `main()`, o sea que la unica forma
+    de probar que una guarda nueva ESTA CABLEADA era correr la bateria entera y
+    ver el color. Con la condicion aqui, su caso positivo por mutacion puede
+    quitarle una pieza a la vez y comprobar que EL ROJO SE APAGA, que es la
+    unica forma de demostrar que esa pieza estaba enchufada.
+
+    Las seis piezas son listas: si alguna no esta vacia, hay rojo."""
+    return bool(perdidas or no_mordio or no_reprod or faltan or invisibles or malas)
+
+
 def informe_del_sujeto_congelado():
     """LA GUARDA DEL SUJETO CONGELADO, CORRIDA Y PUBLICADA (vuelta 178, TAREA
     1.e). NO corre ningun arnes, NO toca la nomina y NO reescribe nada:
@@ -1916,6 +1949,20 @@ def main():
     # cabecera: el estado al cierre se mide al cierre.
     _ultima, faltan_al_cierre = arneses_que_faltan()
     invisibles_al_cierre = nomina_invisible_al_censo()
+    # LA GUARDA DEL SUJETO CONGELADO ENTRA AL ROJO GLOBAL (vuelta 180, TAREA 2.c;
+    # adjudicacion 7.8 del acta 179). NACIO EN LA VUELTA 178 CORRIENDO SOLA, con
+    # --sujeto-congelado, y por eso nadie la miraba en el ciclo de cierre.
+    #
+    # Y NO SE CABLEO ANTES A PROPOSITO, que es la parte que importa: al abrir la
+    # 180 esta guarda daba 17 de 103. Cablearla ese dia habria puesto la bateria
+    # de la 181 en un ROJO PERMANENTE, y un rojo permanente es un rojo que todo
+    # el mundo aprende a ignorar, o sea degradacion silenciosa del `banco 9`. EL
+    # ORDEN FUE: los trece declararon (TAREA 2.a), los cuatro se congelaron
+    # (TAREA 2.b), la guarda dio 0, Y SOLO ENTONCES se cablea.
+    #
+    # SE RECOMPUTA AQUI, AL CIERRE, y no se hereda de ninguna cifra de arriba:
+    # el estado al cierre se mide al cierre.
+    malas_al_cierre = guarda_del_sujeto_congelado()
     print("  CIFRA arneses DEL CENSO, no anteriores a la vara %d, que se quedan "
           "FUERA de la nomina (recomputado al cierre): %d"
           % (VARA_DEL_CENSO, len(faltan_al_cierre)))
@@ -1926,8 +1973,17 @@ def main():
           % (len(invisibles_al_cierre), sello_de_corte(len(VIEJAS), corte_de_git())))
     for n in invisibles_al_cierre:
         print("      INVISIBLE AL CENSO: %s" % n)
+    print("  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): "
+          "%d, de %s"
+          % (len(malas_al_cierre), sello_de_corte(len(VIEJAS), corte_de_git())))
+    for nombre, veredicto, vive in malas_al_cierre:
+        print("      SUJETO SIN CONGELAR: %-42s %-14s abre %s"
+              % (nombre, veredicto, ", ".join(vive) or "(ninguno)"))
+    if not malas_al_cierre:
+        print("      (ninguna)")
 
-    if perdidas or no_mordio or no_reprod or faltan_al_cierre or invisibles_al_cierre:
+    if hay_rojo_al_cierre(perdidas, no_mordio, no_reprod, faltan_al_cierre,
+                          invisibles_al_cierre, malas_al_cierre):
         print("")
         if invisibles_al_cierre:
             print("ROJO: %d entrada(s) de esta nomina tienen un nombre que el censo de "
@@ -1943,6 +1999,15 @@ def main():
                   "entre EN SU MISMA VUELTA. La lista entera: %s"
                   % (len(faltan_al_cierre), VARA_DEL_CENSO,
                      ", ".join(faltan_al_cierre)))
+        if malas_al_cierre:
+            print("ROJO: %d entrada(s) de la nomina NO tienen su sujeto congelado. La "
+                  "regla es de la vuelta 145 y su condicion la fijo la 148: una "
+                  "mutacion entra en la nomina SOLO SI SU SUJETO ESTA CONGELADO, y "
+                  "la que no pueda tenerlo entra como CASO DECLARADO. Un arnes "
+                  "anclado a un fichero que la campana mueve cada vuelta no mide su "
+                  "maquina, mide el dia. La lista entera: %s"
+                  % (len(malas_al_cierre),
+                     ", ".join(n for n, _v, _vv in malas_al_cierre)))
         if perdidas or no_mordio or no_reprod:
             print("ROJO: %d con el ancla perdida, %d que no mordieron y %d cuya salida "
                   "sellada NO SE REPITE." % (len(perdidas), len(no_mordio), len(no_reprod)))
@@ -1960,7 +2025,8 @@ def main():
               "seguidas. LAS OTRAS %d ENTRADAS DE LA NOMINA NO SE HAN CORRIDO AQUI, y "
               "este verde NO dice nada de ellas: lo dira la composicion de los %d "
               "tramos. Lo que SI cubre entero este tramo es la mirada de la nomina "
-              "sobre si misma: sus %d entradas son TODAS visibles al censo y NINGUN "
+              "sobre si misma: sus %d entradas son TODAS visibles al censo, TODAS "
+              "tienen su sujeto congelado y NINGUN "
               "fichero de scripts/loop/ con nombre `vuelta<N>...<familia>...py` "
               "(familias: %s) de la vuelta %d o posterior se queda fuera de la nomina."
               % (a.tramo, len(tramos), len(filas), len(VIEJAS) - len(filas),
@@ -1977,7 +2043,8 @@ def main():
     # que impide que este verde vuelva a ser un verde que no mira.
     print("VERDE: las %d mutaciones viejas corren, muerden, sus salidas selladas "
           "salen IDENTICAS en dos corridas seguidas, las %d entradas de la nomina "
-          "son TODAS visibles al censo, y NINGUN fichero de scripts/loop/ con nombre "
+          "son TODAS visibles al censo, TODAS tienen su SUJETO CONGELADO desde la "
+          "vuelta 180, y NINGUN fichero de scripts/loop/ con nombre "
           "`vuelta<N>...<familia>...py` (familias: %s) de la vuelta %d o posterior se "
           "queda fuera de la nomina. Un arnes con un nombre de OTRA familia seguiria "
           "sin verse, y por eso la comprobacion de visibilidad de la nomina es ROJO. "

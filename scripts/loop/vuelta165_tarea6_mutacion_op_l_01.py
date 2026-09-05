@@ -19,6 +19,7 @@ SUJETO: mapas y filas fabricados en memoria, mas la ficha real de `OP-L-01`
 leida hoy. CERO escrituras.
 
 USO:  python scripts/loop/vuelta165_tarea6_mutacion_op_l_01.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `OPERACIONES.jsonl` en su texto pero NO LO ABRE (1 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import os
 import sys

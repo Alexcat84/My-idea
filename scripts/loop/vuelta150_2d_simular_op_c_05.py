@@ -15,6 +15,16 @@ ROJO SE PRUEBA POR MUTACION"): la variable del veredicto es `medido`, que sale
 de contar la salida de la guarda, nunca un literal comparado consigo mismo. La
 mutacion cambia EL VALOR ESPERADO y comprueba que el assert CAE.
 
+SUJETO CONGELADO (vuelta 180, TAREA 2.b): EL GRAFO SOBRE EL QUE SE SIMULA YA NO
+SE LEE DEL FICHERO VIVO. Lo que hacia antes queda escrito aqui y no se borra:
+`json.load(open("dataset/metadata/master_graph.json"))`, o sea el grafo del dia,
+lo que hacia que el CASO NEGATIVO de mas abajo (el grafo saneado pasa en verde)
+dependiera de lo que el catalogo dijera esa manana. Ahora el grafo sale de un
+BLOB DE GIT CLAVADO por su commit y comprobado por su `sha256`, con
+`sujeto_congelado_de_git.py`. El `sha256` del `dataset/` VIVO se sigue midiendo
+al empezar y al acabar, porque esa comprobacion no es sobre el sujeto sino sobre
+el arbol: dice que este arnes no toco nada.
+
 USO:
   python scripts/loop/vuelta150_2d_simular_op_c_05.py
 """
@@ -22,9 +32,18 @@ import copy
 import hashlib
 import json
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import sujeto_congelado_de_git as SC   # noqa: E402
 
 RUTA_GRAFO = "dataset/metadata/master_graph.json"
 RUTA_NODOS = "dataset/nodos"
+
+# EL SUJETO, CONGELADO EN LA VUELTA 180 (TAREA 2.b; adjudicacion 7.8 del acta
+# 179). El grafo de la simulacion sale de este blob y no del fichero vivo.
+COMMIT_GRAFO = "a34328b23a7d1f1c67fc1f6942c34bc0e3e269bf"
+SHA_GRAFO = "627cc662296f7f00ba121e7ca2efca205820f74131603ead20e2d27fe00f4c55"
 
 
 def sha_dir():
@@ -116,8 +135,13 @@ def main():
     print("dataset/ ANTES: master_graph sha256=%s | dataset/nodos sha256=%s"
           % (sha_grafo_antes[:12], sha_nodos_antes[:12]))
 
-    with open(RUTA_GRAFO, encoding="utf-8") as fh:
-        N = json.load(fh)["nodos"]
+    texto_congelado = SC.texto_del_blob(COMMIT_GRAFO, RUTA_GRAFO, SHA_GRAFO)
+    N = json.loads(texto_congelado)["nodos"]
+    print("")
+    print("EL SUJETO VA CONGELADO Y COMPROBADO, NO PROMETIDO")
+    print("  blob clavado: %s:%s" % (COMMIT_GRAFO[:12], RUTA_GRAFO))
+    print("  sha256 declarado y comprobado: %s" % SHA_GRAFO)
+    print("  CIFRA nodos del grafo congelado: %d" % len(N))
 
     print("")
     print("CASO NEGATIVO (verificacion 2 de la ficha): el grafo saneado por OP-S-12,")

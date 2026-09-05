@@ -27,6 +27,7 @@ LEIDA del vocabulario vivo de la guarda.
 
 USO:
   python scripts/loop/vuelta148_2d_mutacion_exencion.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `REPORTE.md` en su texto pero NO LO ABRE (1 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import os
 import sys

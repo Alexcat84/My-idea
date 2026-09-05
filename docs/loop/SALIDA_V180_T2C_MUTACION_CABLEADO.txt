@@ -1,0 +1,37 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL CABLEADO DE LA GUARDA (vuelta 180, 2.c)
+==============================================================================
+
+(A) LA GUARDA, SOBRE UN DIRECTORIO Y UNA NOMINA FABRICADOS
+   directorio de mentira: C:\Users\AlexDesk\AppData\Local\Temp\v180_t2c_45l9xouy
+   nomina de mentira: ['vuelta999_tarea1_mutacion_de_mentira.py']
+   A1, sin declarar -> la guarda senala 1 entrada(s): vuelta999_tarea1_mutacion_de_mentira.py (SUJETO VIVO)
+   A1: un arnes que abre un fichero vivo y no lo declara SALE senalado    SI
+   A2, ya declarado -> la guarda senala 0 entrada(s)
+   A2: el MISMO arnes, con la linea de declaracion, DEJA de salir         SI
+
+(B) hay_rojo_al_cierre() CON LAS SEIS PIEZAS VACIAS
+   devuelve: False
+   B: sin ninguna pieza llena NO hay rojo                                 SI
+
+(C) hay_rojo_al_cierre() CON SOLO LA PIEZA DEL SUJETO CONGELADO LLENA
+   pieza: [('vuelta999_tarea1_mutacion_de_mentira.py', 'SUJETO VIVO', ['REPORTE.md'])]
+   devuelve: True
+   C: la pieza del sujeto congelado SOLA enciende el rojo                 SI
+
+(D) LA MUTACION: LA CONDICION VIEJA, LA DE ANTES DE ESTA VUELTA
+   sobre el MISMO escenario del caso (C), devuelve: False
+   D: con la pieza desenchufada el rojo NO se enciende, o sea que CAE     SI
+
+(E) LAS OTRAS CINCO PIEZAS SIGUEN ENCENDIENDO EL ROJO, UNA POR UNA
+   E: la pieza ANCLA PERDIDA        sola enciende el rojo -> True         SI
+   E: la pieza NO MORDIO            sola enciende el rojo -> True         SI
+   E: la pieza NO REPRODUCIBLE      sola enciende el rojo -> True         SI
+   E: la pieza FUERA DE LA NOMINA   sola enciende el rojo -> True         SI
+   E: la pieza INVISIBLE AL CENSO   sola enciende el rojo -> True         SI
+
+EL TEMPORAL, RETIRADO (P.16): existe todavia: NO
+
+CIFRA comprobaciones: 10 | fallan: 0
+VERDE: la guarda del sujeto congelado esta ENCHUFADA al rojo global y se demuestra por mutacion, no por afirmacion: su pieza sola enciende el rojo, la condicion vieja sobre el mismo escenario NO lo enciende, y las otras cinco piezas siguen encendiendolo cada una por su cuenta.
+FIN

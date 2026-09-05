@@ -15,6 +15,7 @@ mutacion que deberia rechazar no es un guardian.
 CERO ESCRITURAS: todo se hace en memoria sobre copias de las lineas leidas.
 
 USO:  python scripts/loop/vuelta166_tarea2_mutacion_correccion.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `OPERACIONES.jsonl` en su texto pero NO LO ABRE (1 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import json
 import os

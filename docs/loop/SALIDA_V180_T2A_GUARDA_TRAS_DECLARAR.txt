@@ -1,0 +1,37 @@
+==============================================================================
+LA GUARDA DEL SUJETO CONGELADO (vuelta 178, TAREA 1.e)
+==============================================================================
+
+LA REGLA, CITADA Y NO PARAFRASEADA, del docstring de este mismo fichero:
+   'UNA MUTACION ENTRA EN LA VUELTA SIGUIENTE A LA QUE NACE, Y SOLO SI SU
+   SUJETO ESTA CONGELADO' (vuelta 145), y desde la 148 'LO QUE ESTA REGLA
+   EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL
+   FIN'. Existe desde la 145 y hasta hoy era una frase.
+
+COMO SE MIDE: por la huella que el sujeto deja EN EL CODIGO del arnes.
+   huellas de CONGELADO (en el texto entero): SUJETO_FIJO, tempfile, mkdtemp, deepcopy, git show, cat-file, sha256, SUJETO CONGELADO
+   huellas de VIVO (SOLO en la maquina, sin el docstring de modulo): REPORTE.md, INTRA_DOMINIO_VEREDICTOS.jsonl, OPERACIONES.jsonl, master_graph.json, ACTA_AUDITOR.md, LECTURAS_DIRIGIDAS.md
+   y si trae LAS DOS, la guarda NO ADIVINA: pide que el propio arnes lo
+   declare con el literal 'SUJETO CONGELADO', y sin esa declaracion sale NO DECIDIBLE.
+
+EL REPARTO, CONTADO DE LA NOMINA VIVA
+| veredicto | entradas |
+|---|---|
+| CONGELADO | 97 |
+| CASO DECLARADO | 2 |
+| SUJETO VIVO | 1 |
+| NO DECIDIBLE | 3 |
+| **total** | **103 (corte: HEAD 7aacaa474fcc, nomina contada en esta corrida)** |
+
+LAS QUE NO CUMPLEN, UNA A UNA
+   SUJETO VIVO    vuelta157_tarea4b_mutacion_tachado.py                abre: LECTURAS_DIRIGIDAS.md
+   NO DECIDIBLE   vuelta160_tarea7c_mutacion_guarda_cita.py            abre: INTRA_DOMINIO_VEREDICTOS.jsonl, LECTURAS_DIRIGIDAS.md
+   NO DECIDIBLE   vuelta174_tarea1b_mutacion_esqueleto.py              abre: REPORTE.md
+   NO DECIDIBLE   vuelta150_2d_simular_op_c_05.py                      abre: master_graph.json
+   CIFRA entradas que no cumplen la regla: 4
+
+ROJO DE LA GUARDA DEL SUJETO CONGELADO: 4 entrada(s) de 103 (corte: HEAD 7aacaa474fcc, nomina contada en esta corrida) no
+demuestran tener sujeto congelado. La regla existe desde la vuelta
+145 y esta es la primera vez que se mide, asi que este rojo NO es una
+regresion: es el estado que la frase tapaba.
+FIN

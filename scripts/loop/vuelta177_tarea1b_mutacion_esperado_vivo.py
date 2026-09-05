@@ -37,6 +37,7 @@ funciones puras del sujeto. Al terminar se comprueba que el fichero de veredicto
 sigue byte a byte como estaba.
 
 USO:  python scripts/loop/vuelta177_tarea1b_mutacion_esperado_vivo.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `INTRA_DOMINIO_VEREDICTOS.jsonl` en su texto pero NO LO ABRE (2 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import io
 import os

@@ -77,6 +77,7 @@ LA GUARDA `verificar_re_sellado.py` NO SE TOCA en esta correccion: esta bien y
 muerde de verdad. Lo que estaba roto era el arnes.
 
 USO:  python scripts/loop/vuelta163_tarea4b_mutacion_re_sellado.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `REPORTE.md` en su texto pero NO LO ABRE (3 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import os
 import re

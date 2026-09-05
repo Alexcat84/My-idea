@@ -36,6 +36,7 @@ comprobacion de identidad NO corre, y se dice.
 
 USO:
   python scripts/loop/vuelta135_2e_mutacion_2.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes lee `REPORTE.md` de un BLOB DE GIT CLAVADO por su sha, no del fichero vivo (1 lectura(s) de blob clavado y 0 del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import argparse
 import hashlib

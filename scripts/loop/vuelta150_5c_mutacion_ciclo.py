@@ -27,6 +27,7 @@ arnes sale en rojo diciendolo.
 
 USO:
   python scripts/loop/vuelta150_5c_mutacion_ciclo.py
+SUJETO CONGELADO (declarado en la vuelta 180, TAREA 2.a): este arnes NOMBRA `master_graph.json` en su texto pero NO LO ABRE (2 apariciones en el texto, 0 llamadas que lo lean y 0 lecturas del fichero vivo, medidas fila a fila en docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl), asi que su resultado no depende de lo que ese fichero diga hoy.
 """
 import copy
 import hashlib

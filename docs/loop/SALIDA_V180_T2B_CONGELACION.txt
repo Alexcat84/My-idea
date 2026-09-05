@@ -1,0 +1,64 @@
+==============================================================================
+LA PRUEBA DE QUE EL RESULTADO DE LOS CUATRO YA NO SE MUEVE (vuelta 180, 2.b)
+==============================================================================
+
+A) EL sha256 DE LOS FICHEROS VIVOS ATRIBUIDOS, ANTES DE LA PRIMERA CORRIDA
+   dataset/metadata/master_graph.json            627cc662296f7f00ba121e7ca2efca20
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl           ea6e850d331d14f01db1186a54f4913f
+   docs/loop/REPORTE.md                          f8dfd0004e01d00e94f7ba7a6f1d626b
+   docs/plan/LECTURAS_DIRIGIDAS.md               dda1cdd67042c733765d801d9745a1ed
+   docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl       55dc321d25c3a03af3ca837bb6298eaf
+
+B) CADA UNO, CORRIDO DOS VECES, Y SUS DOS SALIDAS COTEJADAS
+
+   vuelta157_tarea4b_mutacion_tachado.py
+      exit 1a corrida: 0 | exit 2a corrida: 0
+      bytes de la salida enmascarada: 2303 y 2303
+      sha256 de la salida enmascarada: 231f53052759b502f34bfe88c361b4fd
+                                       231f53052759b502f34bfe88c361b4fd
+      LAS DOS CORRIDAS DAN LO MISMO: SI
+
+   vuelta160_tarea7c_mutacion_guarda_cita.py
+      exit 1a corrida: 0 | exit 2a corrida: 0
+      bytes de la salida enmascarada: 3116 y 3116
+      sha256 de la salida enmascarada: 558a488b8793407f3e47a8e3860a85c3
+                                       558a488b8793407f3e47a8e3860a85c3
+      LAS DOS CORRIDAS DAN LO MISMO: SI
+
+   vuelta174_tarea1b_mutacion_esqueleto.py
+      exit 1a corrida: 0 | exit 2a corrida: 0
+      bytes de la salida enmascarada: 2990 y 2990
+      sha256 de la salida enmascarada: 09f85ae25297d0ec6046645217e7fed6
+                                       09f85ae25297d0ec6046645217e7fed6
+      LAS DOS CORRIDAS DAN LO MISMO: SI
+
+   vuelta150_2d_simular_op_c_05.py
+      exit 1a corrida: 0 | exit 2a corrida: 0
+      bytes de la salida enmascarada: 2062 y 2062
+      sha256 de la salida enmascarada: c2951c5e99c94698d85faf500b85a2bd
+                                       c2951c5e99c94698d85faf500b85a2bd
+      LAS DOS CORRIDAS DAN LO MISMO: SI
+
+C) EL sha256 DE LOS MISMOS FICHEROS VIVOS, DESPUES DE LAS OCHO CORRIDAS
+   dataset/metadata/master_graph.json            627cc662296f7f00ba121e7ca2efca20  identico: SI
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl           ea6e850d331d14f01db1186a54f4913f  identico: SI
+   docs/loop/REPORTE.md                          f8dfd0004e01d00e94f7ba7a6f1d626b  identico: SI
+   docs/plan/LECTURAS_DIRIGIDAS.md               dda1cdd67042c733765d801d9745a1ed  identico: SI
+   docs/plan/REGISTRO_DE_CITAS_OPC05.jsonl       55dc321d25c3a03af3ca837bb6298eaf  identico: SI
+
+D) LA TABLA, CONTADA DE LO DE ARRIBA
+
+| arnes | exit 1a | exit 2a | sha de la salida 1a | sha de la salida 2a | estable |
+|---|---:|---:|---|---|---|
+| `vuelta157_tarea4b_mutacion_tachado.py` | 0 | 0 | `231f53052759b502` | `231f53052759b502` | **SI** |
+| `vuelta160_tarea7c_mutacion_guarda_cita.py` | 0 | 0 | `558a488b8793407f` | `558a488b8793407f` | **SI** |
+| `vuelta174_tarea1b_mutacion_esqueleto.py` | 0 | 0 | `09f85ae25297d0ec` | `09f85ae25297d0ec` | **SI** |
+| `vuelta150_2d_simular_op_c_05.py` | 0 | 0 | `c2951c5e99c94698` | `c2951c5e99c94698` | **SI** |
+
+   CIFRA arneses medidos: 4
+   CIFRA estables: 4
+   CIFRA ficheros vivos vigilados: 5
+   CIFRA de esos que se movieron: 0
+
+VERDE: los 4 arneses dan EXACTAMENTE lo mismo en dos corridas seguidas, con el mismo exit code y el mismo sha256 de salida enmascarada, y los 5 ficheros vivos que tenian atribuidos no se movieron ni un byte.
+FIN
