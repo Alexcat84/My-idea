@@ -1,0 +1,707 @@
+==============================================================================
+DOSSIER DE LOS ACTOS GRANDES DE OP-L-03 (vuelta 177, TAREA 2)
+==============================================================================
+
+A) EL UNIVERSO, LEIDO DEL INSTRUMENTO Y NO TECLEADO
+   instrumento: scripts/loop/backlog_l03_vuelta14.py
+   CIFRA actos del backlog al corte 3.388: 40
+   CIFRA pares por leer en total: 73
+   CIFRA actos de 5 miembros o mas: 6
+   CIFRA pares por leer en esos actos: 29
+   reparto de los grandes, por tamano:
+      tamano 6: 2 actos, 14 pares por leer
+      tamano 5: 4 actos, 15 pares por leer
+
+B) EL RESOLUTOR, PUESTO ANTES DE CONTAR NINGUN PAR (P.1)
+   CIFRA alias del mapa: 761
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA pares distintos tras resolver: 3009
+
+##############################################################################
+# ACTO 1 DE 6: 6 MIEMBROS, 8 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      breakthrough_desempeno_actual
+         titulo:  Ruptura en el Desempeño Actual (Breakthrough in Current Performance)
+         dominio: quality | fase: ejecucion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+      secuencia_universal_breakthrough
+         titulo:  Secuencia Universal para el Breakthrough
+         dominio: quality | fase: planificacion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+      secuencia_universal_para_el_breakthrough
+         titulo:  Secuencia Universal de Juran para el Breakthrough (Mejora Radical)
+         dominio: quality | fase: ejecucion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+      seis_sigma_servicios
+         titulo:  Aplicación de Six Sigma en Industrias de Servicio
+         dominio: quality | fase: ejecucion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+      six_sigma_dmaic
+         titulo:  Modelo Six Sigma DMAIC
+         dominio: quality | fase: ejecucion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+      six_sigma_dmaic_2
+         titulo:  Six Sigma - Metodología DMAIC
+         dominio: quality | fase: ejecucion | fuente: Juran's Quality Handbook_ The C - Joseph A. Defeo
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 6 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 1
+      EL ACTO SE ENCOGIO DEBAJO: 6 miembros son hoy 1 nodo(s).
+         six_sigma_dmaic  <-  breakthrough_desempeno_actual, secuencia_universal_breakthrough, secuencia_universal_para_el_breakthrough, seis_sigma_servicios, six_sigma_dmaic, six_sigma_dmaic_2
+      CIFRA pares posibles sobre los miembros escritos: 15
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 15
+      CIFRA pares CON veredicto en la cola: 0
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 0
+      el instrumento dice que hay 8 por leer, y yo cuento 0: NO CALZA
+      LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO (EJECUTOR.md 2). El instrumento lee el archivo de componentes
+      del corte 3.388; este dossier resuelve los ids HOY (P.1). Si el acto se fundio despues del corte, el archivo lo sigue
+      viendo abierto y el resolutor ya no.
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         (ninguno)
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         breakthrough_desempeno_actual + secuencia_universal_breakthrough  ->  los dos son six_sigma_dmaic
+         breakthrough_desempeno_actual + secuencia_universal_para_el_breakthrough  ->  los dos son six_sigma_dmaic
+         breakthrough_desempeno_actual + seis_sigma_servicios  ->  los dos son six_sigma_dmaic
+         breakthrough_desempeno_actual + six_sigma_dmaic  ->  los dos son six_sigma_dmaic
+         breakthrough_desempeno_actual + six_sigma_dmaic_2  ->  los dos son six_sigma_dmaic
+         secuencia_universal_breakthrough + secuencia_universal_para_el_breakthrough  ->  los dos son six_sigma_dmaic
+         secuencia_universal_breakthrough + seis_sigma_servicios  ->  los dos son six_sigma_dmaic
+         secuencia_universal_breakthrough + six_sigma_dmaic  ->  los dos son six_sigma_dmaic
+         secuencia_universal_breakthrough + six_sigma_dmaic_2  ->  los dos son six_sigma_dmaic
+         secuencia_universal_para_el_breakthrough + seis_sigma_servicios  ->  los dos son six_sigma_dmaic
+         secuencia_universal_para_el_breakthrough + six_sigma_dmaic  ->  los dos son six_sigma_dmaic
+         secuencia_universal_para_el_breakthrough + six_sigma_dmaic_2  ->  los dos son six_sigma_dmaic
+         seis_sigma_servicios + six_sigma_dmaic  ->  los dos son six_sigma_dmaic
+         seis_sigma_servicios + six_sigma_dmaic_2  ->  los dos son six_sigma_dmaic
+         six_sigma_dmaic + six_sigma_dmaic_2  ->  los dos son six_sigma_dmaic
+
+      LOS QUE NO ESTAN EN LA COLA
+         (ninguno)
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      breakthrough_desempeno_actual . Ruptura en el Desempeño Actual (Breakthrough in Current Performance)
+      RESUMEN: Sistema de mejora proyecto por proyecto que identifica causas raíz de problemas crónicos (defectos, retrasos, tiempos de ciclo largos, costos innecesarios) e implementa soluciones para eliminarlos, instalando controles para prevenir su retorno. Se apoya en métodos como Lean, Six Sigma y Root Cause Corrective Action, siguiendo el ciclo Definir-Medir-Analizar-Mejorar-Controlar (DMAIC).
+      PASOS (5):
+         1. Define el problema con apoyo de quien te asesore
+         2. Mide el desempeño actual del proceso
+         3. Analiza las causas raíz de los problemas crónicos
+         4. Diseña e implementa mejoras (Improve)
+         5. Establece controles para sostener la mejora (Control)
+      ENTREGABLE: Proyecto DMAIC completo con causas raíz eliminadas y controles implementados
+      --------------------------------------------------------------------
+      secuencia_universal_breakthrough . Secuencia Universal para el Breakthrough
+      RESUMEN: Modelo desarrollado por Juran que describe la secuencia invariable de pasos necesarios para lograr un avance significativo (breakthrough) en el desempeño de una organización. Parte de la creencia de que el cambio es deseable y factible, sigue con un estudio de factibilidad (análisis de Pareto), la organización de un 'brazo directivo' y un 'brazo diagnóstico', el logro de un breakthrough en el conocimiento, la gestión de la resistencia cultural al cambio, y finalmente el breakthrough en el desempeño sostenido mediante controles.
+      PASOS (6):
+         1. Establecer la creencia de que el cambio es deseable y factible
+         2. Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+         3. Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+         4. Recolectar y analizar hechos para lograr un breakthrough en el conocimiento
+         5. Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+         6. Implementar controles para sostener el nuevo nivel de desempeño
+      ENTREGABLE: Un plan estructurado de breakthrough con roles definidos (steering/diagnostic arm) y un análisis de factibilidad basado en Pareto
+      --------------------------------------------------------------------
+      secuencia_universal_para_el_breakthrough . Secuencia Universal de Juran para el Breakthrough (Mejora Radical)
+      RESUMEN: La secuencia universal de Juran es un modelo de seis pasos para lograr mejoras radicales (breakthrough) en el desempeño: nominar e identificar problemas, establecer un proyecto y equipo, diagnosticar causas, remediar las causas, mantener las ganancias, y replicar resultados nominando nuevos proyectos. Se apoya en dos 'viajes': el diagnóstico (de problema a causa raíz) y el remedial (de causa raíz a control sostenido).
+      PASOS (6):
+         1. Nominar e identificar problemas prioritarios a nivel de gerencia.
+         2. Establecer un proyecto formal con equipo asignado.
+         3. Diagnosticar la(s) causa(s) raíz mediante el viaje diagnóstico (síntomas, teorías, pruebas, causa raíz).
+         4. Diseñar y probar remedios bajo condiciones operativas reales (viaje remedial).
+         5. Establecer controles nuevos para mantener las ganancias logradas.
+         6. Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+      ENTREGABLE: Proyecto de mejora (breakthrough) completado con causa raíz identificada, remedio implementado y controles establecidos para sostener el resultado.
+      --------------------------------------------------------------------
+      seis_sigma_servicios . Aplicación de Six Sigma en Industrias de Servicio
+      RESUMEN: El enfoque Six Sigma (definir, medir, analizar, mejorar, controlar) se aplica cada vez más en el sector servicios para reducir tiempos de ciclo, errores de codificación, pérdidas por morosidad y otros problemas operativos. Casos como American Express, GE Capital y Telefónica de España muestran su implementación como parte de programas de cambio cultural corporativo enfocados en satisfacción del cliente.
+      PASOS (5):
+         1. Definir el proyecto y el problema específico a resolver (ej. reducir ciclo de emisión de crédito)
+         2. Medir el estado actual del proceso con datos cuantitativos
+         3. Analizar causas raíz de la variación o defectos
+         4. Mejorar el proceso implementando cambios basados en el análisis
+         5. Controlar el proceso mejorado para sostener las ganancias en el tiempo
+      ENTREGABLE: Proyecto Six Sigma documentado con las fases DMAIC completas y resultados medibles de mejora
+      --------------------------------------------------------------------
+      six_sigma_dmaic . Modelo Six Sigma DMAIC
+      RESUMEN: DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.
+      PASOS (12):
+         1. Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.
+         2. Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.
+         3. Mide la magnitud real de los síntomas con datos, no con impresiones.
+         4. Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.
+         5. Implementa un remedio dirigido específicamente a esa causa raíz.
+         6. Controla los resultados periódicamente para asegurar que la mejora se mantenga.
+         7. Establecer la creencia de que el cambio es deseable y factible
+         8. Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+         9. Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+         10. Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+         11. Establecer un proyecto formal con equipo asignado.
+         12. Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+      ENTREGABLE: Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.
+      --------------------------------------------------------------------
+      six_sigma_dmaic_2 . Six Sigma - Metodología DMAIC
+      RESUMEN: DMAIC (Define, Measure, Analyze, Improve, Control) es la metodología central de Six Sigma para mejorar procesos y productos existentes reduciendo defectos a niveles de partes por millón. Está orientada al cliente y busca traducir sus necesidades en términos operacionales accionables. El objetivo de Six Sigma es lograr no más de 3.4 defectos por millón de oportunidades (DPMO), lo que representa un nivel de variación mínimo respecto a los límites de especificación. Se aplica tanto en procesos de manufactura como transaccionales/servicios.
+      PASOS (5):
+         1. Define: Definir claramente el problema y los objetivos del proyecto mediante un charter
+         2. Measure: Medir el desempeño actual del proceso y recopilar la voz del cliente (VOC)
+         3. Analyze: Analizar los datos recolectados para determinar las causas raíz del problema
+         4. Improve: Seleccionar e implementar las soluciones adecuadas para resolver el problema
+         5. Control: Establecer mecanismos de control para sostener las mejoras logradas en el tiempo
+      ENTREGABLE: Un proyecto Six Sigma DMAIC completado con métricas de sigma level, causas raíz identificadas, soluciones implementadas y un plan de control documentado
+
+##############################################################################
+# ACTO 2 DE 6: 6 MIEMBROS, 6 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      cierre_segun_complejidad_venta
+         titulo:  Efectividad del Cierre según la Complejidad de la Venta
+         dominio: core | fase: ejecucion | fuente: SPIN Selling - Neil Rackham
+      cierre_segun_tamano_decision
+         titulo:  Relación entre Presión de Cierre y Tamaño de la Decisión
+         dominio: core | fase: ejecucion | fuente: SPIN Selling - Neil Rackham
+      cierre_sofisticacion_comprador
+         titulo:  Rechazo de Compradores Sofisticados a las Técnicas de Cierre
+         dominio: core | fase: ejecucion | fuente: SPIN Selling - Neil Rackham
+      diferencias_venta_pequena_venta_grande
+         titulo:  Diferencias psicológicas entre venta pequeña y venta grande
+         dominio: core | fase: planificacion | fuente: SPIN Selling - Neil Rackham
+      ineficacia_cierre_ventas_grandes
+         titulo:  Ineficacia de las Técnicas de Cierre en Ventas Grandes
+         dominio: core | fase: ejecucion | fuente: SPIN Selling - Neil Rackham
+      riesgo_tecnicas_cierre_venta_compleja
+         titulo:  Riesgo de las Técnicas de Cierre en Ventas Complejas
+         dominio: core | fase: ejecucion | fuente: SPIN Selling - Neil Rackham
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 6 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 1
+      EL ACTO SE ENCOGIO DEBAJO: 6 miembros son hoy 1 nodo(s).
+         cierre_segun_complejidad_venta  <-  cierre_segun_complejidad_venta, cierre_segun_tamano_decision, cierre_sofisticacion_comprador, diferencias_venta_pequena_venta_grande, ineficacia_cierre_ventas_grandes, riesgo_tecnicas_cierre_venta_compleja
+      CIFRA pares posibles sobre los miembros escritos: 15
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 15
+      CIFRA pares CON veredicto en la cola: 0
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 0
+      el instrumento dice que hay 6 por leer, y yo cuento 0: NO CALZA
+      LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO (EJECUTOR.md 2). El instrumento lee el archivo de componentes
+      del corte 3.388; este dossier resuelve los ids HOY (P.1). Si el acto se fundio despues del corte, el archivo lo sigue
+      viendo abierto y el resolutor ya no.
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         (ninguno)
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         cierre_segun_complejidad_venta + cierre_segun_tamano_decision  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_complejidad_venta + cierre_sofisticacion_comprador  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_complejidad_venta + diferencias_venta_pequena_venta_grande  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_complejidad_venta + ineficacia_cierre_ventas_grandes  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_complejidad_venta + riesgo_tecnicas_cierre_venta_compleja  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_tamano_decision + cierre_sofisticacion_comprador  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_tamano_decision + diferencias_venta_pequena_venta_grande  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_tamano_decision + ineficacia_cierre_ventas_grandes  ->  los dos son cierre_segun_complejidad_venta
+         cierre_segun_tamano_decision + riesgo_tecnicas_cierre_venta_compleja  ->  los dos son cierre_segun_complejidad_venta
+         cierre_sofisticacion_comprador + diferencias_venta_pequena_venta_grande  ->  los dos son cierre_segun_complejidad_venta
+         cierre_sofisticacion_comprador + ineficacia_cierre_ventas_grandes  ->  los dos son cierre_segun_complejidad_venta
+         cierre_sofisticacion_comprador + riesgo_tecnicas_cierre_venta_compleja  ->  los dos son cierre_segun_complejidad_venta
+         diferencias_venta_pequena_venta_grande + ineficacia_cierre_ventas_grandes  ->  los dos son cierre_segun_complejidad_venta
+         diferencias_venta_pequena_venta_grande + riesgo_tecnicas_cierre_venta_compleja  ->  los dos son cierre_segun_complejidad_venta
+         ineficacia_cierre_ventas_grandes + riesgo_tecnicas_cierre_venta_compleja  ->  los dos son cierre_segun_complejidad_venta
+
+      LOS QUE NO ESTAN EN LA COLA
+         (ninguno)
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      cierre_segun_complejidad_venta . Efectividad del Cierre según la Complejidad de la Venta
+      RESUMEN: Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.
+      PASOS (12):
+         1. Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+         2. Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+         3. Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+         4. Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+         5. Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+         6. Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+         7. Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+         8. Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+         9. Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+         10. Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+         11. Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+         12. Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+      ENTREGABLE: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+      --------------------------------------------------------------------
+      cierre_segun_tamano_decision . Relación entre Presión de Cierre y Tamaño de la Decisión
+      RESUMEN: Existe una regla psicológica fundamental: la presión (como las técnicas de cierre) es efectiva para decisiones pequeñas pero contraproducente para decisiones grandes. El estudio del 'Photo-Store' confirmó esto empíricamente: en productos de bajo valor, el entrenamiento en cierre aumentó las ventas de 72% a 76%; en productos de alto valor, las mismas técnicas redujeron el éxito de 42% a 33%. Cuanto mayor es la decisión, más negativamente reacciona el cliente ante la presión.
+      PASOS (4):
+         1. Clasificar tu portafolio de productos/servicios por tamaño de decisión (precio, riesgo, impacto organizacional)
+         2. Aplicar técnicas de cierre directo solo en transacciones de bajo valor o decisión rápida
+         3. Para ventas de alto valor, sustituir el cierre por técnicas de indagación y construcción de valor (ej. SPIN)
+         4. Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+      ENTREGABLE: Matriz de segmentación de productos por tamaño de decisión con estrategia de venta diferenciada
+      --------------------------------------------------------------------
+      cierre_sofisticacion_comprador . Rechazo de Compradores Sofisticados a las Técnicas de Cierre
+      RESUMEN: Los compradores profesionales y ejecutivos senior (que negocian frecuentemente y conocen las tácticas de venta) reaccionan negativamente al detectar técnicas de cierre manipulativas. En una encuesta a 54 compradores profesionales, 34 afirmaron que el uso de cierres los hacía MENOS propensos a comprar, y solo 2 dijeron que los hacía más propensos. El uso de cierre transmite una 'asunción de que el comprador puede ser manipulado', lo cual destruye la relación profesional.
+      PASOS (4):
+         1. Identificar el nivel de sofisticación del comprador (comprador profesional vs. consumidor ocasional)
+         2. Evitar tácticas de presión con compradores corporativos, procurement o ejecutivos experimentados
+         3. Reemplazar el cierre por preguntas que exploren necesidades reales (enfoque consultivo)
+         4. Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+      ENTREGABLE: Perfil de sofisticación del comprador tipo y ajuste del guion de venta según ese perfil
+      --------------------------------------------------------------------
+      diferencias_venta_pequena_venta_grande . Diferencias psicológicas entre venta pequeña y venta grande
+      RESUMEN: Las ventas grandes (major sales) difieren fundamentalmente de las pequeñas en cuatro dimensiones: duración del ciclo de venta (múltiples llamadas vs una sola), tamaño del compromiso del cliente (mayor necesidad de valor percibido), existencia de una relación continua post-venta, y el riesgo de la decisión (más visible y pública). Estas diferencias explican por qué técnicas efectivas en ventas pequeñas (presión, cierre agresivo, pitch de producto) fracasan o incluso perjudican en ventas grandes.
+      PASOS (4):
+         1. Clasificar cada oportunidad de venta según su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión para el cliente
+         2. Si es venta grande, evitar presión y cierre agresivo entre llamadas, ya que reduce la probabilidad de éxito final
+         3. Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+         4. Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+      ENTREGABLE: Matriz de clasificación de oportunidades de venta (pequeña/grande) con estrategia diferenciada para cada tipo
+      --------------------------------------------------------------------
+      ineficacia_cierre_ventas_grandes . Ineficacia de las Técnicas de Cierre en Ventas Grandes
+      RESUMEN: La investigación de Huthwaite demostró, mediante múltiples estudios de campo, que las técnicas clásicas de cierre (Assumptive Close, Alternative Close, Standing-room-only Close, etc.) tienen una correlación negativa con el éxito de venta cuando el tamaño de la decisión es grande. Contrario a la creencia popular de que 'cerrar más' genera más ventas, los datos mostraron que las llamadas con menos cierres tenían casi el doble de éxito que las de alto número de cierres. Esto contradice décadas de entrenamiento tradicional en ventas basado en el cierre agresivo.
+      PASOS (4):
+         1. Evaluar si tu ciclo de venta es una venta pequeña (transaccional) o una venta grande/compleja (relacional)
+         2. Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+         3. Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+         4. Eliminar el uso de técnicas de presión de cierre en ventas de alto valor o ciclo largo
+      ENTREGABLE: Diagnóstico del estilo de cierre actual del equipo de ventas y su correlación con tasas de éxito
+      --------------------------------------------------------------------
+      riesgo_tecnicas_cierre_venta_compleja . Riesgo de las Técnicas de Cierre en Ventas Complejas
+      RESUMEN: Las técnicas tradicionales de cierre (frases o tácticas para forzar una decisión de compra) pueden funcionar en ventas pequeñas y de bajo valor, pero resultan contraproducentes en ventas grandes, con compradores profesionales y relaciones de largo plazo. La investigación muestra que compradores sofisticados reaccionan negativamente al cierre forzado, y que vendedores entrenados en técnicas de cierre generan menor satisfacción post-venta, lo que reduce la probabilidad de recompra. El cierre funciona como un refuerzo inmediato (el vendedor obtiene un 'sí' justo después de usarlo), lo que crea una falsa asociación causal entre la técnica y el resultado, cuando en realidad el éxito depende de haber desarrollado bien las necesidades del cliente antes del cierre.
+      PASOS (4):
+         1. Evaluar si tu venta es de bajo valor/simple o de alto valor/compleja antes de decidir tu estrategia de cierre.
+         2. Si vendes a compradores profesionales o buscas relaciones de largo plazo, evita presionar con técnicas de cierre agresivas.
+         3. Enfoca el esfuerzo en las etapas previas de investigación y desarrollo de necesidades, no en frases de cierre.
+         4. Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+      ENTREGABLE: Diagnóstico del tipo de venta (simple vs compleja) y una política de cierre alineada a la relación deseada con el cliente.
+
+##############################################################################
+# ACTO 3 DE 6: 5 MIEMBROS, 4 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      cash_burn_calculation
+         titulo:  Cuánto dinero quemas cada trimestre (Cash Burn)
+         dominio: core | fase: validacion | fuente: The Startup Owner's Manual - Blank, Steve
+      metrics_that_matter_framework
+         titulo:  Metrics That Matter (Métricas que Importan)
+         dominio: core | fase: validacion | fuente: The Startup Owner's Manual - Blank, Steve
+      validacion_hipotesis_ingresos
+         titulo:  Comprobar si tus ingresos aguantan el negocio
+         dominio: core | fase: validacion | fuente: The Startup Owner's Manual - Blank, Steve
+      validar_modelo_financiero
+         titulo:  Validar el Modelo Financiero
+         dominio: core | fase: validacion | fuente: The Startup Owner's Manual - Blank, Steve
+      verificar_modelo_ingresos
+         titulo:  Verificar si se Puede Generar Ingresos y Crecer (Revenue Model Data)
+         dominio: core | fase: validacion | fuente: The Startup Owner's Manual - Blank, Steve
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 5 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 5
+      CIFRA pares posibles sobre los miembros escritos: 10
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 0
+      CIFRA pares CON veredicto en la cola: 6
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 4
+      el instrumento dice que hay 4 por leer, y yo cuento 4: CALZA
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         puesto 404   clase A   cash_burn_calculation + metrics_that_matter_framework
+            razon: REPITE con metrics_that_matter_framework. Los cuatro pasos del primero son los pasos 3, 4 y 5 del segundo dichos igual: ingreso neto restando los cost
+         puesto 1374  clase D   cash_burn_calculation + validacion_hipotesis_ingresos
+            razon: El efectivo que queda contra lo que vale un cliente, del mismo libro y sin arista entre ellos. cash_burn_calculation termina en UNA CIFRA DE CAJA: cal
+         puesto 371   clase A   metrics_that_matter_framework + validar_modelo_financiero
+            razon: REPITE con validar_modelo_financiero. Los dos mandan armar el mismo modelo financiero en el mismo momento, al terminar la validacion con clientes: pre
+         puesto 791   clase A   metrics_that_matter_framework + verificar_modelo_ingresos
+            razon: El mismo calculo de supervivencia contado dos veces y del mismo libro, sin arista entre ellos. Lo comun es la cuenta entera: partir de precios y unida
+         puesto 451   clase A   validacion_hipotesis_ingresos + verificar_modelo_ingresos
+            razon: REPITE con verificar_modelo_ingresos. Los dos hacen el mismo calculo y en el mismo orden: ingreso bruto de unidades por precio, ingreso neto descontan
+         puesto 807   clase A   validar_modelo_financiero + verificar_modelo_ingresos
+            razon: La misma validacion financiera contada dos veces y del mismo libro, sin arista entre ellos. Lo comun es la cuenta entera: reunir precios, costos de ad
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         (ninguno)
+
+      LOS QUE NO ESTAN EN LA COLA
+         cash_burn_calculation + validar_modelo_financiero
+         cash_burn_calculation + verificar_modelo_ingresos
+         metrics_that_matter_framework + validacion_hipotesis_ingresos
+         validacion_hipotesis_ingresos + validar_modelo_financiero
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      cash_burn_calculation . Cuánto dinero quemas cada trimestre (Cash Burn)
+      RESUMEN: Es la forma de calcular cuánto dinero pierdes o ganas en tu negocio cada trimestre: restas todos los costos (ventas, producto, operativos) de tus ingresos netos. Con ese número sabes cuánto tiempo de vida (runway) te queda antes de quedarte sin efectivo, y puedes decidir con calma cuándo escalar o buscar más dinero.
+      PASOS (4):
+         1. Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+         2. Resta tus costos de ventas, de producto y los operativos corrientes
+         3. El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+         4. Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+      ENTREGABLE: Tu cálculo trimestral de cuánto dinero quemas y cuánto efectivo te queda, durante al menos el primer año
+      --------------------------------------------------------------------
+      metrics_that_matter_framework . Metrics That Matter (Métricas que Importan)
+      RESUMEN: Enfoque radical para evaluar la viabilidad financiera de tu startup usando un puñado de métricas clave organizadas según el Business Model Canvas (propuesta de valor, relaciones con clientes, tipo de mercado, estructura de costos, canal y flujos de ingresos), en lugar de hojas de cálculo de cinco años con cientos de líneas. Las dos métricas más importantes son los meses de efectivo que quedan en el banco y la velocidad con que se está quemando ese dinero, el burn rate. Adaptas las métricas al tipo de canal de venta, físico, digital directo o mercado multi-lado, para calcular ingresos netos, costos y cash burn trimestral, proyectando cuánto efectivo quedará antes de agotar los fondos y así decidir si conviene pivotar o seguir adelante.
+      PASOS (6):
+         1. Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+         2. Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+         3. Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+         4. Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+         5. Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+         6. Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+      ENTREGABLE: Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.
+      --------------------------------------------------------------------
+      validacion_hipotesis_ingresos . Comprobar si tus ingresos aguantan el negocio
+      RESUMEN: Antes de crecer, haz un cálculo aproximado, a mano y sin ser contador, para ver si lo que vas a ganar cubre tus costos, si eso mejora con el tiempo y si te conviene más entre más grande te pones. También revisa cómo el canal por el que vendes afecta cuánto ingreso te queda realmente, y ten en cuenta cuánto vale un cliente durante todo el tiempo que te compra (su valor de vida, o Customer Lifetime Value) porque eso debería guiar tu precio.
+      PASOS (5):
+         1. Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+         2. Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+         3. Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+         4. Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+         5. Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+      ENTREGABLE: Un cálculo preliminar, hecho a mano, de si tu modelo de ingresos es viable
+      --------------------------------------------------------------------
+      validar_modelo_financiero . Validar el Modelo Financiero
+      RESUMEN: Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, pero deben estar respaldados por el aprendizaje extensivo de customer discovery y validation.
+      PASOS (6):
+         1. Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+         2. Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+         3. Determinar costos operativos básicos, costos de canal y márgenes
+         4. Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+         5. Verificar el balance de caja disponible (runway)
+         6. Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+      ENTREGABLE: Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable
+      --------------------------------------------------------------------
+      verificar_modelo_ingresos . Verificar si se Puede Generar Ingresos y Crecer (Revenue Model Data)
+      RESUMEN: Consolida en tu teléfono todos los datos duros que ya recopilaste: precios, ingresos, costos de adquisición, tamaño de mercado y costos de canal. Con eso arma un pronóstico de ingresos netos realista para los próximos 4 a 8 trimestres. No busques precisión exacta, se trata de un chequeo de sensatez que te diga si tu negocio sobrevivirá y crecerá de forma rentable antes de invertir más tiempo en validar clientes. Trabaja siempre con tres escenarios, optimista, esperado y pesimista, para no depender de un único número. Este ejercicio te permite ver con claridad si el modelo aguanta o si necesitas ajustar precios, costos o velocidad de crecimiento antes de comprometer más recursos.
+      PASOS (6):
+         1. Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+         2. Calcula el ingreso bruto directo estimado por trimestre
+         3. Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+         4. Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+         5. Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+         6. Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+      ENTREGABLE: Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis de cash burn y Business Model Canvas actualizado.
+
+##############################################################################
+# ACTO 4 DE 6: 5 MIEMBROS, 3 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      construccion_de_leverage
+         titulo:  Construcción de Leverage en Negociaciones de Financiamiento
+         dominio: core | fase: ejecucion | fuente: Venture Deals - Brad Feld
+      estrategia_competencia_vcs
+         titulo:  Haz que varios inversores compitan por invertir (VCs)
+         dominio: core | fase: planificacion | fuente: Venture Deals - Brad Feld
+      gestion_multiples_term_sheets
+         titulo:  Gestión de Múltiples Term Sheets Simultáneos
+         dominio: core | fase: ejecucion | fuente: Venture Deals - Brad Feld
+      leverage_en_negociacion_con_vcs
+         titulo:  Cómo ganar poder de negociación (leverage) frente a los inversionistas
+         dominio: core | fase: planificacion | fuente: The Founder's Dilemmas - Wasserman, Noam
+      tecnica_anclaje_negociacion
+         titulo:  Anclaje en Negociación de Términos
+         dominio: core | fase: ejecucion | fuente: Venture Deals - Brad Feld
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 5 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 5
+      CIFRA pares posibles sobre los miembros escritos: 10
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 0
+      CIFRA pares CON veredicto en la cola: 7
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 3
+      el instrumento dice que hay 3 por leer, y yo cuento 3: CALZA
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         puesto 787   clase A   construccion_de_leverage + estrategia_competencia_vcs
+            razon: El mismo juego de hacer competir a los inversores, contado dos veces y del mismo libro, sin arista entre ellos. Lo comun es el nucleo: buscar interes 
+         puesto 394   clase A   construccion_de_leverage + gestion_multiples_term_sheets
+            razon: REPITE con gestion_multiples_term_sheets. Los dos mandan la misma maniobra: hablar con varios inversionistas en paralelo y no en serie, coordinar el r
+         puesto 334   clase A   construccion_de_leverage + leverage_en_negociacion_con_vcs
+            razon: REPITE con leverage_en_negociacion_con_vcs. Los dos mandan la misma palanca y con el mismo mecanismo: no depender de un solo inversionista, buscar var
+         puesto 878   clase A   construccion_de_leverage + tecnica_anclaje_negociacion
+            razon: El paso cuatro contado como nodo, y no trae procedimiento propio. El paso 4 de construccion_de_leverage dice anclar en dos o tres terminos prioritario
+         puesto 413   clase A   estrategia_competencia_vcs + gestion_multiples_term_sheets
+            razon: REPITE con gestion_multiples_term_sheets. Los dos mandan la misma maniobra: coordinar las conversaciones con varios inversionistas para que los term s
+         puesto 257   clase A   estrategia_competencia_vcs + leverage_en_negociacion_con_vcs
+            razon: REPITE con leverage_en_negociacion_con_vcs. Los dos mandan lo mismo para ganar poder frente al inversor: empezar la ronda con anticipacion y sincroniz
+         puesto 1030  clase A   gestion_multiples_term_sheets + leverage_en_negociacion_con_vcs
+            razon: LA MISMA PALANCA, libros distintos y sin arista entre ellos, Y CON ESTE PAR NACE EL PRIMER PURO DE CUATRO. Lo comun es la maniobra: buscar varias prop
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         (ninguno)
+
+      LOS QUE NO ESTAN EN LA COLA
+         estrategia_competencia_vcs + tecnica_anclaje_negociacion
+         gestion_multiples_term_sheets + tecnica_anclaje_negociacion
+         leverage_en_negociacion_con_vcs + tecnica_anclaje_negociacion
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      construccion_de_leverage . Construcción de Leverage en Negociaciones de Financiamiento
+      RESUMEN: La forma más efectiva de ganar poder de negociación en una ronda de financiamiento es tener múltiples term sheets compitiendo simultáneamente. Esto requiere manejar cuidadosamente el timing (sincronizar a varios VCs para que entreguen ofertas en el mismo periodo) y la transparencia (informar que hay interés de otros sin revelar identidades ni términos específicos). La técnica de 'anclaje' —fijar y mantener posiciones claras en pocos puntos clave— también genera leverage.
+      PASOS (5):
+         1. Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+         2. Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+         3. Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+         4. Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+         5. Nunca ser el primero en ofrecer un term sheet con precio a un VC
+      ENTREGABLE: Múltiples conversaciones activas con inversionistas gestionadas estratégicamente en el tiempo, y una lista de términos ancla definidos
+      --------------------------------------------------------------------
+      estrategia_competencia_vcs . Haz que varios inversores compitan por invertir (VCs)
+      RESUMEN: Cuando varios inversores de capital de riesgo (VCs) quieren entrar en tu ronda, tienes más poder para negociar. Planea el proceso de levantar capital con 3 a 6 meses de anticipación para que los tiempos de decisión de las distintas firmas coincidan, así evitas quedarte sin urgencia o, al contrario, verte apurado por falta de tiempo.
+      PASOS (4):
+         1. Planea tu ronda con una ventana de 3 a 6 meses.
+         2. Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.
+         3. No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos.
+         4. Pide feedback concreto si un inversor decide no invertir.
+      ENTREGABLE: Un calendario de tu ronda con varios inversores avanzando en etapas de negociación sincronizadas.
+      --------------------------------------------------------------------
+      gestion_multiples_term_sheets . Gestión de Múltiples Term Sheets Simultáneos
+      RESUMEN: Al negociar una ronda de financiamiento, es estratégicamente ventajoso lograr que varios VCs entreguen sus term sheets en el mismo marco temporal, generando competencia genuina. Esto requiere pacing cuidadoso (acelerar a unos, ralentizar a otros) sin nunca revelar con quién más se está hablando ni mostrar los term sheets reales de otros inversores, ya que esto puede provocar que los VCs se coordinen entre sí y se elimine la competencia.
+      PASOS (5):
+         1. Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+         2. Coordinar el ritmo de las conversaciones para que avancen en paralelo
+         3. Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+         4. Nunca compartir el contenido de un term sheet con otro inversor
+         5. Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+      ENTREGABLE: Múltiples term sheets competitivos recibidos en ventana temporal similar
+      --------------------------------------------------------------------
+      leverage_en_negociacion_con_vcs . Cómo ganar poder de negociación (leverage) frente a los inversionistas
+      RESUMEN: Puedes aumentar tu poder de negociación frente a los inversionistas con unas pocas tácticas: espera a tener tracción (producto, ingresos, clientes) antes de salir a buscar capital, consigue varias propuestas de inversión (term sheets) en paralelo, busca ofertas de compra alternativas, y negocia con tiempo antes de quedarte sin efectivo.
+      PASOS (4):
+         1. Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+         2. Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+         3. Explora ofertas de compra como palanca de negociación
+         4. Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+      ENTREGABLE: Una estrategia clara de cuándo y cómo negociar tu ronda de financiamiento para tener el mayor poder de negociación posible
+      --------------------------------------------------------------------
+      tecnica_anclaje_negociacion . Anclaje en Negociación de Términos
+      RESUMEN: El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, dejando cierta flexibilidad para negociar en los puntos menos importantes. Es una técnica efectiva para conseguir lo que realmente importa al emprendedor sin perder credibilidad en la negociación.
+      PASOS (4):
+         1. Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio
+         2. Definir posiciones razonables pero con margen de flexibilidad en esos puntos
+         3. Comunicar estas posiciones de forma clara y consistente
+         4. Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados
+      ENTREGABLE: Lista priorizada de términos no negociables vs. negociables antes de sentarse a la mesa
+
+##############################################################################
+# ACTO 5 DE 6: 5 MIEMBROS, 6 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      encuadre_desafio_diseno
+         titulo:  Encuadre del Desafío de Diseño (Frame Your Design Challenge)
+         dominio: core | fase: ideacion | fuente: The field guide to human-centered design
+      how_might_we_brief_social
+         titulo:  Traducir Metas Globales en Briefs de Diseño Accionables (How Might We)
+         dominio: core | fase: ideacion | fuente: Change by Design
+      how_might_we_briefs
+         titulo:  Diseño de Briefs mediante 'How Might We'
+         dominio: core | fase: ideacion | fuente: Change by Design
+      how_might_we_framing
+         titulo:  El Marco 'How Might We?' (HMW)
+         dominio: core | fase: ideacion | fuente: Change by Design, Revised and U - Tim Brown
+      how_might_we_hmw
+         titulo:  El Reto '¿Cómo Podríamos...?' (How Might We)
+         dominio: core | fase: ideacion | fuente: Change by Design
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 5 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 1
+      EL ACTO SE ENCOGIO DEBAJO: 5 miembros son hoy 1 nodo(s).
+         encuadre_desafio_diseno  <-  encuadre_desafio_diseno, how_might_we_brief_social, how_might_we_briefs, how_might_we_framing, how_might_we_hmw
+      CIFRA pares posibles sobre los miembros escritos: 10
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 10
+      CIFRA pares CON veredicto en la cola: 0
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 0
+      el instrumento dice que hay 6 por leer, y yo cuento 0: NO CALZA
+      LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO (EJECUTOR.md 2). El instrumento lee el archivo de componentes
+      del corte 3.388; este dossier resuelve los ids HOY (P.1). Si el acto se fundio despues del corte, el archivo lo sigue
+      viendo abierto y el resolutor ya no.
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         (ninguno)
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         encuadre_desafio_diseno + how_might_we_brief_social  ->  los dos son encuadre_desafio_diseno
+         encuadre_desafio_diseno + how_might_we_briefs  ->  los dos son encuadre_desafio_diseno
+         encuadre_desafio_diseno + how_might_we_framing  ->  los dos son encuadre_desafio_diseno
+         encuadre_desafio_diseno + how_might_we_hmw  ->  los dos son encuadre_desafio_diseno
+         how_might_we_brief_social + how_might_we_briefs  ->  los dos son encuadre_desafio_diseno
+         how_might_we_brief_social + how_might_we_framing  ->  los dos son encuadre_desafio_diseno
+         how_might_we_brief_social + how_might_we_hmw  ->  los dos son encuadre_desafio_diseno
+         how_might_we_briefs + how_might_we_framing  ->  los dos son encuadre_desafio_diseno
+         how_might_we_briefs + how_might_we_hmw  ->  los dos son encuadre_desafio_diseno
+         how_might_we_framing + how_might_we_hmw  ->  los dos son encuadre_desafio_diseno
+
+      LOS QUE NO ESTAN EN LA COLA
+         (ninguno)
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      encuadre_desafio_diseno . Encuadre del Desafío de Diseño (Frame Your Design Challenge)
+      RESUMEN: Herramienta inicial para estructurar un proyecto de diseño centrado en humanos. Consiste en formular el problema como una pregunta de diseño, definir el impacto final deseado, explorar posibles soluciones de manera amplia sin cerrarse prematuramente, y documentar el contexto y las restricciones (geográficas, tecnológicas, temporales o poblacionales) que afectan el proyecto.
+      PASOS (10):
+         1. Formular el problema como una pregunta de diseño abierta, utilizando la fórmula '¿Cómo podríamos...?'
+         2. Definir el impacto último que se busca lograr
+         3. Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes
+         4. Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)
+         5. Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto
+         6. Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+         7. Identificar el objetivo macro o problema social/de negocio a resolver.
+         8. Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+         9. Usa la pregunta como brújula durante todo el proceso de diseño
+         10. Usar esta pregunta como titular para las sesiones de brainstorming.
+      ENTREGABLE: Un documento de encuadre con la pregunta de diseño, el impacto deseado, soluciones potenciales y restricciones identificadas
+      --------------------------------------------------------------------
+      how_might_we_brief_social . Traducir Metas Globales en Briefs de Diseño Accionables (How Might We)
+      RESUMEN: Objetivos amplios como los Millennium Development Goals de la ONU (erradicar la pobreza, promover igualdad de género) son demasiado generales para servir como brief de diseño. El design thinker debe traducir estas metas en preguntas específicas del tipo '¿Cómo podríamos...?' que sean lo suficientemente flexibles para liberar la imaginación del equipo, pero lo suficientemente específicas para anclar las ideas en la vida real de los beneficiarios.
+      PASOS (4):
+         1. Tomar la meta u objetivo amplio y descomponerlo en preguntas específicas tipo '¿Cómo podríamos...?'
+         2. Verificar que cada pregunta tenga suficiente especificidad (contexto, población, restricción) para ser accionable
+         3. Verificar que cada pregunta tenga suficiente flexibilidad para permitir múltiples soluciones creativas
+         4. Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar
+      ENTREGABLE: Un brief de diseño formulado como pregunta 'How Might We' específica y accionable, validado con conocimiento local
+      --------------------------------------------------------------------
+      how_might_we_briefs . Diseño de Briefs mediante 'How Might We'
+      RESUMEN: Los grandes objetivos sociales o corporativos (como 'erradicar la pobreza') son demasiado amplios para actuar como briefs de diseño efectivos. La clave está en traducirlos en preguntas específicas del tipo '¿Cómo podríamos...?' que reconozcan restricciones reales y establezcan métricas de éxito, liberando la imaginación del equipo sin perder especificidad respecto a los beneficiarios.
+      PASOS (4):
+         1. Identificar el objetivo macro o problema social/de negocio a resolver.
+         2. Reformular el objetivo como una pregunta 'How Might We' (Cómo podríamos...).
+         3. Asegurar que la pregunta sea lo suficientemente flexible para permitir múltiples soluciones creativas.
+         4. Asegurar que la pregunta sea lo suficientemente específica para conectar con la vida real de los beneficiarios.
+      ENTREGABLE: Un documento de 'Design Brief' con 3-5 preguntas 'How Might We' que guiarán la fase de ideación.
+      --------------------------------------------------------------------
+      how_might_we_framing . El Marco 'How Might We?' (HMW)
+      RESUMEN: Toda gran innovación de diseño comienza con una pregunta bien calibrada: ni tan amplia que resulte inabordable ('¿cómo mejorar la condición humana?') ni tan específica que limite la creatividad ('¿cómo ajustar la tensión de un mecanismo?'). El marco HMW ayuda a los equipos a navegar entre estos extremos para encontrar un desafío de diseño accionable.
+      PASOS (4):
+         1. Redacta el problema como una pregunta que comience con 'How Might We...'
+         2. Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)
+         3. Itera la formulación de la pregunta con el equipo hasta encontrar el nivel de abstracción correcto
+         4. Usa la pregunta como brújula durante todo el proceso de diseño
+      ENTREGABLE: Una pregunta HMW clara y accionable que enmarca el desafío de diseño del proyecto
+      --------------------------------------------------------------------
+      how_might_we_hmw . El Reto '¿Cómo Podríamos...?' (How Might We)
+      RESUMEN: Es una técnica de reformulación de problemas que sirve como punto de partida para cualquier reto de diseño. Busca un punto medio entre la generalidad excesiva (imposible de resolver, ej. 'mejorar la condición humana') y la especificidad excesiva (limita la creatividad, ej. 'ajustar un tornillo'). Sirve para abrir el espacio de soluciones sin perder el foco.
+      PASOS (4):
+         1. Tomar el problema central identificado.
+         2. Reformularlo utilizando la fórmula '¿Cómo podríamos...?'
+         3. Verificar que el alcance no sea demasiado amplio (imposible de resolver) ni demasiado estrecho (limita la innovación).
+         4. Usar esta pregunta como titular para las sesiones de brainstorming.
+      ENTREGABLE: Una declaración de problema (Problem Statement) formulada como pregunta abierta y accionable.
+
+##############################################################################
+# ACTO 6 DE 6: 5 MIEMBROS, 2 PARES POR LEER
+##############################################################################
+
+   MIEMBROS, CON SU FUENTE Y SU DOMINIO
+      estrategia_de_innovacion_arenas
+         titulo:  Estrategia de Innovación y Arenas Estratégicas
+         dominio: core | fase: planificacion | fuente: Winning at New Products - Robert G. Cooper
+      estrategia_de_innovacion_de_producto
+         titulo:  Estrategia de Innovación de Producto y Tecnología
+         dominio: core | fase: ideacion | fuente: Winning at New Products - Robert G. Cooper
+      estrategia_de_innovacion_y_tecnologia
+         titulo:  Estrategia de Innovación y Tecnología de Producto (Arenas Estratégicas)
+         dominio: core | fase: ideacion | fuente: Winning at New Products - Robert G. Cooper
+      estrategia_innovacion_producto
+         titulo:  Estrategia de Innovación de Producto
+         dominio: core | fase: planificacion | fuente: Winning at New Products - Robert G. Cooper
+      seleccion_arenas_estrategicas
+         titulo:  Selección de Arenas Estratégicas (Pick Your Battlefields)
+         dominio: core | fase: ideacion | fuente: Winning at New Products - Robert G. Cooper
+
+   LOS PARES DEL ACTO, RESUELTOS Y CONTADOS (P.1)
+      CIFRA miembros: 5 | CIFRA NODOS VIVOS DISTINTOS TRAS RESOLVER: 4
+      EL ACTO SE ENCOGIO DEBAJO: 5 miembros son hoy 4 nodo(s).
+         estrategia_de_innovacion_arenas  <-  estrategia_de_innovacion_arenas
+         estrategia_de_innovacion_y_tecnologia  <-  estrategia_de_innovacion_y_tecnologia
+         estrategia_innovacion_producto  <-  estrategia_de_innovacion_de_producto, estrategia_innovacion_producto
+         seleccion_arenas_estrategicas  <-  seleccion_arenas_estrategicas
+      CIFRA pares posibles sobre los miembros escritos: 10
+      CIFRA pares QUE YA NO EXISTEN (los dos extremos son el mismo nodo hoy): 1
+      CIFRA pares CON veredicto en la cola: 7
+      CIFRA pares FUERA de la cola (los que esta operacion lee): 2
+      el instrumento dice que hay 2 por leer, y yo cuento 2: CALZA
+
+      LOS QUE YA TIENEN VEREDICTO, QUE ES LO QUE EL PAR DIJO POR SEPARADO
+         puesto 460   clase A   estrategia_de_innovacion_arenas + estrategia_de_innovacion_de_producto
+            razon: REPITE con estrategia_de_innovacion_de_producto. Los dos mandan lo mismo: fijar los objetivos de innovacion de la unidad y amarrarlos a las metas del 
+         puesto 1121  clase A   estrategia_de_innovacion_arenas + estrategia_de_innovacion_de_producto
+            razon: LA MISMA ESTRATEGIA DE ARENAS DOS VECES, del mismo libro y sin arista entre ellos. Lo comun son los tres primeros pasos de cada uno y en el mismo orde
+         puesto 207   clase A   estrategia_de_innovacion_arenas + estrategia_de_innovacion_y_tecnologia
+            razon: REPITE con estrategia_de_innovacion_y_tecnologia. Los dos mandan mapear las arenas de mercado y tecnologia, elegir las que cruzan atractivo con compet
+         puesto 460   clase A   estrategia_de_innovacion_arenas + estrategia_innovacion_producto
+            razon: REPITE con estrategia_de_innovacion_de_producto. Los dos mandan lo mismo: fijar los objetivos de innovacion de la unidad y amarrarlos a las metas del 
+         puesto 1121  clase A   estrategia_de_innovacion_arenas + estrategia_innovacion_producto
+            razon: LA MISMA ESTRATEGIA DE ARENAS DOS VECES, del mismo libro y sin arista entre ellos. Lo comun son los tres primeros pasos de cada uno y en el mismo orde
+         puesto 280   clase A   estrategia_de_innovacion_arenas + seleccion_arenas_estrategicas
+            razon: REPITE con seleccion_arenas_estrategicas. Los dos mandan la misma sesion estrategica: mapear las arenas potenciales de mercado y tecnologia donde comp
+         puesto 530   clase D   estrategia_de_innovacion_de_producto + estrategia_de_innovacion_y_tecnologia
+            razon: CORRECCION DECLARADA el 13 ago 2026, RELECTURA CONJUNTA encargada por el auditor tras el puesto 863. ANTES: A, con una razon que afirmaba que los dos 
+         puesto 863   clase D   estrategia_de_innovacion_de_producto + estrategia_de_innovacion_y_tecnologia
+            razon: LA MADRE Y SU PIEZA DE ARENAS, y la vara las separa. estrategia_innovacion_producto es la estrategia ENTERA: definir metas y objetivos del esfuerzo to
+         puesto 530   clase D   estrategia_de_innovacion_y_tecnologia + estrategia_innovacion_producto
+            razon: CORRECCION DECLARADA el 13 ago 2026, RELECTURA CONJUNTA encargada por el auditor tras el puesto 863. ANTES: A, con una razon que afirmaba que los dos 
+         puesto 863   clase D   estrategia_de_innovacion_y_tecnologia + estrategia_innovacion_producto
+            razon: LA MADRE Y SU PIEZA DE ARENAS, y la vara las separa. estrategia_innovacion_producto es la estrategia ENTERA: definir metas y objetivos del esfuerzo to
+         puesto 235   clase A   estrategia_de_innovacion_y_tecnologia + seleccion_arenas_estrategicas
+            razon: REPITE con seleccion_arenas_estrategicas. Los dos mandan generar la lista de arenas potenciales, evaluarlas cruzando atractivo de mercado con competen
+
+      LOS PARES QUE YA NO EXISTEN, UNO A UNO
+         estrategia_de_innovacion_de_producto + estrategia_innovacion_producto  ->  los dos son estrategia_innovacion_producto
+
+      LOS QUE NO ESTAN EN LA COLA
+         estrategia_de_innovacion_de_producto + seleccion_arenas_estrategicas
+         estrategia_innovacion_producto + seleccion_arenas_estrategicas
+
+   EL TEXTO DEL ACTO, ENTERO, QUE ES LO QUE P.5 MANDA LEER
+      --------------------------------------------------------------------
+      estrategia_de_innovacion_arenas . Estrategia de Innovación y Arenas Estratégicas
+      RESUMEN: Antes de generar ideas específicas, la alta gerencia debe definir un rumbo claro (dónde jugar). Esto implica identificar 'Arenas Estratégicas': mercados, tecnologías o segmentos de productos donde la empresa enfocará su inversión en I+D, priorizando aquellos que están creciendo y donde los clientes muestran insatisfacción, permitiendo apalancar las fortalezas actuales de la empresa.
+      PASOS (4):
+         1. Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+         2. Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+         3. Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+         4. Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+      ENTREGABLE: Un documento de Estrategia de Innovación que defina las arenas estratégicas seleccionadas y los objetivos de inversión para el portafolio de nuevos productos.
+      --------------------------------------------------------------------
+      estrategia_de_innovacion_de_producto . Estrategia de Innovación de Producto y Tecnología
+      RESUMEN: Las empresas con desempeño superior en innovación cuentan con una estrategia clara de producto-innovación y tecnología que define objetivos de largo plazo, el rol de la innovación en las metas del negocio, las 'arenas estratégicas' de enfoque, buckets estratégicos de recursos, y un roadmap de producto a 3-5 años. Sin esta estrategia, la empresa cae en un enfoque disperso ('scattergun') o en mercados poco atractivos.
+      PASOS (6):
+         1. Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+         2. Vincular explícitamente las metas de innovación con las metas generales del negocio
+         3. Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+         4. Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+         5. Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+         6. Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+      ENTREGABLE: Un documento de estrategia de innovación que incluya objetivos, arenas estratégicas, buckets de recursos y roadmap de producto
+      --------------------------------------------------------------------
+      estrategia_de_innovacion_y_tecnologia . Estrategia de Innovación y Tecnología de Producto (Arenas Estratégicas)
+      RESUMEN: Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.
+      PASOS (5):
+         1. Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+         2. Evaluar las competencias core de la empresa en tecnología, marketing y producción
+         3. Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+         4. Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+         5. Usar esta estrategia como primer filtro de validación en las reuniones de gate
+      ENTREGABLE: Documento de estrategia de innovación con arenas estratégicas claramente definidas y priorizadas
+      --------------------------------------------------------------------
+      estrategia_innovacion_producto . Estrategia de Innovación de Producto
+      RESUMEN: Es el plan maestro que guía todos los esfuerzos de nuevos productos de un negocio. Es el vínculo esencial entre el desarrollo de productos y la estrategia general del negocio. Sin ella, las decisiones sobre nuevos productos se toman de manera ad hoc, generando dispersión de esfuerzos, portafolios inconexos y bajo desempeño. Incluye 5 componentes clave: metas y objetivos, el rol de la innovación, arenas estratégicas de enfoque, despliegue de recursos, y planes de ataque.
+      PASOS (6):
+         1. Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+         2. Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+         3. Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+         4. Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+         5. Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+         6. Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+      ENTREGABLE: Un documento de estrategia de innovación de producto que contenga metas medibles, arenas estratégicas priorizadas, asignación de recursos y planes de ataque claros.
+      --------------------------------------------------------------------
+      seleccion_arenas_estrategicas . Selección de Arenas Estratégicas (Pick Your Battlefields)
+      RESUMEN: Antes de generar ideas de nuevos productos, define tus arenas estratégicas: los mercados, sectores, tecnologías o tipos de producto donde concentrarás tu esfuerzo de innovación. Sin arenas claras, la búsqueda de ideas se dispersa y tu cartera de proyectos termina llena de iniciativas no relacionadas y poco rentables. El principio de concentración de fuerzas indica que es mejor enfocarse en pocas áreas bien elegidas que dispersarse en muchas. El proceso implica primero divergir, identificando muchas arenas potenciales, y luego converger, eligiendo las mejores apuestas. Evita definiciones demasiado amplias y opta por segmentos específicos. Revisa si tus arenas actuales son solo áreas familiares y maduras, o si representan verdaderas oportunidades de crecimiento.
+      PASOS (6):
+         1. Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación
+         2. Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales
+         3. Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias
+         4. Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura
+         5. Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver
+         6. Selecciona y prioriza de 2 a 4 arenas específicas como foco final
+      ENTREGABLE: Una lista corta (2 a 4) de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.
+
+FIN DEL DOSSIER

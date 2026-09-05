@@ -1,0 +1,57 @@
+==============================================================================
+VUELTA 177, TAREA 2: EL REGISTRO DE LAS LECTURAS POR ACTO DE OP-L-03
+==============================================================================
+
+A) EL UNIVERSO Y EL TRAMO, LEIDOS DEL INSTRUMENTO
+   CIFRA actos del backlog al corte 3.388: 40
+   CIFRA pares que el instrumento da por leer, en total: 73
+   CIFRA actos grandes (5 miembros o mas): 6
+   CIFRA pares que el instrumento da por leer en los grandes: 29
+
+B) LAS FILAS, UNA POR ACTO
+   breakthrough_desempeno_actual              miembros 6 | vivos 1 (resolutor) / 1 (grafo) CALZAN
+      pares: posibles 15 | ya no existen 15 | con veredicto 0 | por leer 0
+      el instrumento dice 8 por leer y yo mido 0: NO CALZA
+      LEIDO: False
+   cierre_segun_complejidad_venta             miembros 6 | vivos 1 (resolutor) / 1 (grafo) CALZAN
+      pares: posibles 15 | ya no existen 15 | con veredicto 0 | por leer 0
+      el instrumento dice 6 por leer y yo mido 0: NO CALZA
+      LEIDO: False
+   cash_burn_calculation                      miembros 5 | vivos 5 (resolutor) / 5 (grafo) CALZAN
+      pares: posibles 10 | ya no existen 0 | con veredicto 6 | por leer 4
+      el instrumento dice 4 por leer y yo mido 4: CALZA
+      LEIDO: True  | clases: {'A': 3, 'D': 1}
+   construccion_de_leverage                   miembros 5 | vivos 5 (resolutor) / 5 (grafo) CALZAN
+      pares: posibles 10 | ya no existen 0 | con veredicto 7 | por leer 3
+      el instrumento dice 3 por leer y yo mido 3: CALZA
+      LEIDO: True  | clases: {'D': 3}
+   encuadre_desafio_diseno                    miembros 5 | vivos 1 (resolutor) / 1 (grafo) CALZAN
+      pares: posibles 10 | ya no existen 10 | con veredicto 0 | por leer 0
+      el instrumento dice 6 por leer y yo mido 0: NO CALZA
+      LEIDO: False
+   estrategia_de_innovacion_arenas            miembros 5 | vivos 4 (resolutor) / 4 (grafo) CALZAN
+      pares: posibles 10 | ya no existen 1 | con veredicto 7 | por leer 2
+      el instrumento dice 2 por leer y yo mido 2: CALZA
+      LEIDO: True  | clases: {'D': 2}
+
+C) LAS CUENTAS DE LA TAREA, SUMADAS DE LAS FILAS Y NO TECLEADAS
+   CIFRA actos del tramo: 6
+   CIFRA actos LEIDOS: 3
+   CIFRA actos SIN NADA QUE LEER (ya fundidos): 3
+   CIFRA pares que el instrumento daba por leer en el tramo: 29
+   CIFRA pares por leer REALES, medidos hoy: 9
+   CIFRA pares LEIDOS en esta vuelta: 9
+   CIFRA pares del tramo SIN LECTURA: 0
+   CIFRA veredictos movidos: 0
+   REPARTO DE CLASES DE LO LEIDO: {'A': 3, 'D': 6}
+   CIFRA actos donde la forma CAMBIA respecto de lo que el par decia: 3
+
+D) ESCRITO
+   docs/plan/OP_L_03_LECTURAS.jsonl
+   CIFRA bytes: 24158 | CIFRA filas: 6
+   RELEIDO DEL DISCO: 6 filas, y calzan con lo escrito: True
+
+E) LO QUE ESTA TAREA NO TOCO, COMPROBADO Y NO PROMETIDO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 4051967 bytes (sin abrir en escritura en toda la corrida)
+   docs/plan/OPERACIONES.jsonl -> 498085 bytes (sin abrir en escritura en toda la corrida)
+FIN
