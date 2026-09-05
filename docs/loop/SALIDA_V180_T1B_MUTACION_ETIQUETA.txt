@@ -1,0 +1,36 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA ETIQUETA DE FUENTE (vuelta 180, 1.b)
+==============================================================================
+
+EL SUJETO FABRICADO, Y NO HAY NINGUN FICHERO VIVO EN ESTE ARNES
+   registro fabricado: C:\Users\AlexDesk\AppData\Local\Temp\v180_t1b_uxn3v_f3\REGISTRO_FABRICADO.jsonl
+   CIFRA filas: 2
+      vuelta 177 -> nodo_viejo_a|nodo_viejo_b
+      vuelta 180 -> nodo_nuevo_a|nodo_nuevo_b
+
+CASO 1, EL CODIGO DE HOY. LAS DOS ETIQUETAS TIENEN QUE SER DISTINTAS
+   nodo_nuevo_a|nodo_nuevo_b            -> docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 180)
+   nodo_viejo_a|nodo_viejo_b            -> docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
+   CIFRA etiquetas distintas: 2 (se esperan 2)
+   la del lado de la 177 dice 'docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)'
+   la del lado de la 180 dice 'docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 180)'
+   el lado de la 177 lleva su etiqueta: SI
+   el lado de la 180 lleva su etiqueta: SI
+   VEREDICTO CASO 1: VERDE
+
+CASO 2, LA MUTACION: LA ETIQUETA VUELVE A QUEDARSE CLAVADA EN UN LITERAL
+   (es literalmente el codigo que habia antes de la vuelta 180)
+   nodo_nuevo_a|nodo_nuevo_b            -> docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
+   nodo_viejo_a|nodo_viejo_b            -> docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
+   CIFRA etiquetas distintas con la mutacion puesta: 1 (se espera 1)
+   EL CASO CAE CON LA MUTACION PUESTA: SI
+   VEREDICTO CASO 2: VERDE
+
+LA MUTACION QUEDA DESHECHA, COMPROBADO Y NO PROMETIDO
+   etiqueta_del_registro(177) tras deshacer: 'docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)'
+   etiqueta_del_registro(180) tras deshacer: 'docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 180)'
+
+EL TEMPORAL, RETIRADO (P.16): C:\Users\AlexDesk\AppData\Local\Temp\v180_t1b_uxn3v_f3 -> existe: NO
+
+VERDE: los DOS casos pasan. Con el codigo de hoy cada lado lleva la vuelta que de verdad lo escribio, y con la etiqueta clavada en un literal el caso CAE. La prueba de mutacion esta corrida, no prometida.
+FIN

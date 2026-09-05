@@ -33,9 +33,13 @@ LO QUE ESTE FICHERO HACE, Y LO QUE NO:
 DE DONDE SALE LA CLASE DE CADA LADO, Y SON DOS FUENTES QUE SE DECLARAN:
   (1) `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, indexado POR EL PAR RESUELTO
       (`P.1`, sin excepcion);
-  (2) `docs/plan/OP_L_03_LECTURAS.jsonl`, el registro de la vuelta 177, para los
-      lados que la 177 leyo como LECTURA DIRIGIDA y que por la clausula de
-      `OP-L-03` NO entran en la cola.
+  (2) `docs/plan/OP_L_03_LECTURAS.jsonl`, el registro de lecturas de `OP-L-03`,
+      para los lados leidos como LECTURA DIRIGIDA que por la clausula de
+      `OP-L-03` NO entran en la cola. DESDE LA VUELTA 180 LA ETIQUETA DE ESA
+      FUENTE DICE LA VUELTA QUE DE VERDAD ESCRIBIO LA FILA, leida de la propia
+      fila, y no un literal clavado en 177: ese literal atribuia a la 177 cinco
+      lecturas de la 179, medido por
+      `scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py`.
   Cada lado publica de cual de las dos viene. Un lado sin clase en ninguna de las
   dos no forma triangulo y se dice.
 
@@ -125,13 +129,42 @@ def regla_que_gobierna(razon):
     return "SIN MARCA DE NINGUNA DE LAS DOS", m1, m2
 
 
-def clases_por_par(mapa):
+def etiqueta_del_registro(vuelta):
+    """LA ETIQUETA DE FUENTE DE UNA CLASE QUE VIENE DEL REGISTRO DE LECTURAS,
+    CON LA VUELTA QUE DE VERDAD LA ESCRIBIO. PURA: recibe la vuelta de la fila y
+    devuelve el texto de la etiqueta.
+
+    POR QUE EXISTE, Y EL MOTIVO ESTA MEDIDO (vuelta 180, TAREA 1.b; adjudicacion
+    7.7 del acta 179). Hasta la vuelta 179 esta etiqueta era un LITERAL CLAVADO,
+    `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)`, escrito cuando la 177 era la
+    unica vuelta que habia escrito en ese registro. La TAREA 2 de la 179 escribio
+    ocho filas mas, de la vuelta 179, y sus clases salian etiquetadas como si
+    fueran de la 177: `vuelta179_tarea3_etiqueta_de_fuente.py` lo midio y dio 15
+    lados etiquetados como de la 177, de los cuales 10 verdaderos y **5 falsos**.
+
+    UN LITERAL QUE ATRIBUYE A UNA VUELTA EL TRABAJO DE OTRA ROMPE `EJECUTOR.md`
+    8, toda cifra de un autor con su atribucion. Por eso la etiqueta se computa
+    de la fila y no se teclea.
+
+    Si la fila no trae `vuelta`, la etiqueta lo DICE en vez de inventar un
+    numero: `(vuelta desconocida)`. Fallar ruidoso, `banco 9`."""
+    return "docs/plan/OP_L_03_LECTURAS.jsonl (vuelta %s)" % (
+        vuelta if vuelta is not None else "desconocida")
+
+
+def clases_por_par(mapa, lecturas=None, filas=None):
     """{frozenset(par resuelto): dict con clase, fuente, puestos y razon}.
 
     Las dos fuentes van declaradas en cada entrada. Si un par tiene clase en las
-    dos, gana la del archivo y se dice que la otra existe."""
+    dos, gana la del archivo y se dice que la otra existe.
+
+    `lecturas` y `filas` van POR PARAMETRO desde la vuelta 180 para que su caso
+    positivo por mutacion pueda pasarle un registro FABRICADO en un temporal y
+    unos veredictos fabricados, sin tocar ni el archivo vivo ni este fichero.
+    Por defecto son el registro y el archivo de siempre."""
+    reg = LECTURAS if lecturas is None else lecturas
     idx = {}
-    for fila in T.veredictos():
+    for fila in (T.veredictos() if filas is None else filas):
         a, b = T.resolver(mapa, fila["nodo_a"]), T.resolver(mapa, fila["nodo_b"])
         if a == b:
             continue
@@ -142,11 +175,14 @@ def clases_por_par(mapa):
         e["puestos"].append(fila.get("puesto_intra"))
         if not e["razon"]:
             e["razon"] = fila.get("razon") or ""
-    if os.path.exists(LECTURAS):
-        for linea in io.open(LECTURAS, encoding="utf-8"):
+    if os.path.exists(reg):
+        for linea in io.open(reg, encoding="utf-8"):
             if not linea.strip():
                 continue
             d = json.loads(linea)
+            # LA VUELTA SE LEE DE LA FILA Y NO SE TECLEA (vuelta 180, TAREA 1.b).
+            # Cada lado dice la vuelta que de verdad escribio esa clase.
+            vuelta_de_la_fila = d.get("vuelta")
             for clave, valor in (d.get("clases_de_los_pares_por_leer") or {}).items():
                 x, y = clave.split("|", 1)
                 a, b = T.resolver(mapa, x), T.resolver(mapa, y)
@@ -154,10 +190,12 @@ def clases_por_par(mapa):
                     continue
                 k = frozenset((a, b))
                 if k in idx:
-                    idx[k]["tambien_en_el_registro_177"] = True
+                    idx[k]["tambien_en_el_registro_de_lecturas"] = True
+                    idx[k]["vuelta_que_lo_escribio_en_el_registro"] = vuelta_de_la_fila
                     continue
                 idx[k] = {"clase": valor[0],
-                          "fuente": "docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)",
+                          "fuente": etiqueta_del_registro(vuelta_de_la_fila),
+                          "vuelta_del_registro": vuelta_de_la_fila,
                           "puestos": [], "razon": valor[1] if len(valor) > 1 else ""}
     return idx
 
@@ -252,12 +290,23 @@ def main():
     p("")
 
     sha_antes = sha(VEREDICTOS)
-    p("A) EL SELLO DE LOS VEREDICTOS, ANTES DE TOCAR NADA")
+    sha_lec_antes = sha(LECTURAS) if os.path.exists(LECTURAS) else "(no existe)"
+    p("A) EL SELLO DE LOS DOS REGISTROS, ANTES DE TOCAR NADA")
+    p("   (vuelta 180, TAREA 1.b: el encargo pide los CUATRO sha256, los dos de")
+    p("    antes y los dos de despues, DENTRO DEL PROPIO INSTRUMENTO. Hasta la 179")
+    p("    solo se sellaba el archivo de veredictos; el registro de lecturas, que")
+    p("    es la otra fuente de clases, no se sellaba y esta tarea lo toca)")
     p("   docs/INTRA_DOMINIO_VEREDICTOS.jsonl")
-    p("      sha256 (normalizado a LF): %s" % sha_antes)
+    p("      sha256 ANTES (normalizado a LF): %s" % sha_antes)
     p("      bytes en disco: %d | bytes normalizados a LF: %d"
       % (os.path.getsize(VEREDICTOS),
          len(io.open(VEREDICTOS, "rb").read().replace(chr(13).encode(), b""))))
+    p("   docs/plan/OP_L_03_LECTURAS.jsonl")
+    p("      sha256 ANTES (normalizado a LF): %s" % sha_lec_antes)
+    if os.path.exists(LECTURAS):
+        p("      bytes en disco: %d | bytes normalizados a LF: %d"
+          % (os.path.getsize(LECTURAS),
+             len(io.open(LECTURAS, "rb").read().replace(chr(13).encode(), b""))))
     p("")
 
     mapa, _n = T.mapa_de_alias()
@@ -268,7 +317,14 @@ def main():
     p("   CIFRA pares con clase, de las DOS fuentes: %d" % len(idx))
     de_archivo = sum(1 for e in idx.values() if e["puestos"])
     p("      de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: %d" % de_archivo)
-    p("      del registro de la vuelta 177: %d" % (len(idx) - de_archivo))
+    p("      del registro de lecturas de OP-L-03: %d" % (len(idx) - de_archivo))
+    por_vuelta = {}
+    for e in idx.values():
+        if not e["puestos"]:
+            k = e.get("vuelta_del_registro")
+            por_vuelta[k] = por_vuelta.get(k, 0) + 1
+    for k in sorted(por_vuelta, key=lambda x: (x is None, x)):
+        p("         escritas por la vuelta %s: %d" % (k, por_vuelta[k]))
     p("")
 
     actos, _salida, _c = B.actos_del_instrumento()
@@ -317,7 +373,7 @@ def main():
                 p("      lado %s + %s -> clase %s | puestos %s | fuente %s"
                   % (x, y, e["clase"],
                      ", ".join(str(q) for q in e["puestos"] if q is not None) or "(sin puesto)",
-                     "archivo" if e["puestos"] else "registro 177"))
+                     e["fuente"]))
                 p("         GOBIERNA: %s" % regla)
                 p("         marcas 9.6.1 en su razon: %s" % (", ".join(m1) or "(ninguna)"))
                 p("         marcas 13 ago en su razon: %s" % (", ".join(m2) or "(ninguna)"))
@@ -456,14 +512,20 @@ def main():
         p("")
 
     sha_despues = sha(VEREDICTOS)
-    p("H) CERO VEREDICTOS MOVIDOS, COMPROBADO Y NO PROMETIDO")
-    p("   sha256 ANTES:   %s" % sha_antes)
-    p("   sha256 DESPUES: %s" % sha_despues)
-    p("   IDENTICOS: %s" % ("SI" if sha_antes == sha_despues else "NO"))
+    sha_lec_despues = sha(LECTURAS) if os.path.exists(LECTURAS) else "(no existe)"
+    p("H) CERO CLASES MOVIDAS, COMPROBADO Y NO PROMETIDO. LOS CUATRO sha256")
+    p("   docs/INTRA_DOMINIO_VEREDICTOS.jsonl")
+    p("      sha256 ANTES:   %s" % sha_antes)
+    p("      sha256 DESPUES: %s" % sha_despues)
+    p("      IDENTICOS: %s" % ("SI" if sha_antes == sha_despues else "NO"))
+    p("   docs/plan/OP_L_03_LECTURAS.jsonl")
+    p("      sha256 ANTES:   %s" % sha_lec_antes)
+    p("      sha256 DESPUES: %s" % sha_lec_despues)
+    p("      IDENTICOS: %s" % ("SI" if sha_lec_antes == sha_lec_despues else "NO"))
     p("")
-    if sha_antes != sha_despues:
-        p("ROJO: el archivo de veredictos cambio durante esta tarea, y esta tarea")
-        p("      tiene prohibido moverlos. Cero es cero.")
+    if sha_antes != sha_despues or sha_lec_antes != sha_lec_despues:
+        p("ROJO: alguna de las DOS fuentes de clases cambio durante esta tarea, y")
+        p("      esta tarea tiene prohibido moverlas. Cero es cero.")
         p("FIN")
         return 1
     if not filas:
