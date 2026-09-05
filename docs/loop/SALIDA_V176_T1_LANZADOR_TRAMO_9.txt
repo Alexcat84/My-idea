@@ -1,0 +1,50 @@
+==============================================================================
+TRAMO 9 DE 9, DE LA BATERIA DE LA VUELTA 176
+==============================================================================
+  CIFRA nomina entera (leida del modulo, no tecleada): 88
+  CIFRA tamano de tramo: 10
+  CIFRA tramos del reparto (computada): 9
+  CIFRA entradas de ESTE tramo: 8
+      vuelta172_tarea3_mutacion_numeracion.py
+      vuelta172_tarea5_mutacion_cierre.py
+      vuelta173_tarea1b_mutacion_hueco.py
+      vuelta174_tarea1a_mutacion_44.py
+      vuelta174_tarea1b_mutacion_esqueleto.py
+      vuelta174_tarea1b_mutacion_sellar.py
+      vuelta174_tarea2b_mutacion_confirmar.py
+      vuelta176_tarea1c_mutacion_tramos.py
+
+******************************************************************************
+PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 9
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+******************************************************************************
+PASO 3. LA CORRIDA DEL TRAMO 9
+******************************************************************************
+  inicio (UTC): 2026-09-05T14:58:30Z
+  comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 9 --tamano-tramo 10
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v176_tramo9_pb190jzu\tramo_en_curso.txt
+  destino final: docs/loop/SALIDA_V176_BATERIA_TRAMO_9.txt
+
+******************************************************************************
+PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
+        (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+******************************************************************************
+  docs/loop/SALIDA_V176_BATERIA_TRAMO_9.txt
+  CIFRA bytes en disco: 5616
+  CIFRA bytes normalizado a LF: 5616
+  CIFRA lineas: 94
+  CIFRA sha256 (LF): 8554150fa59c8c7e
+  CIFRA exitcode del tramo: 0
+  CIFRA duracion en minutos: 1.1
+  inicio (UTC): 2026-09-05T14:58:30Z | fin (UTC): 2026-09-05T14:59:33Z
+
+******************************************************************************
+PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 9
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+TRAMO 9 VERDE. Su salida esta sellada, medida y se puede commitear.
