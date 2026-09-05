@@ -2,14 +2,18 @@ TODA RUTA QUE EL REPORTE PUBLICA COMO PRUEBA ES UNA CIFRA PUBLICADA
 (AUDITOR.md 4, letra del 5 sep 2026). Si apunta a un fichero inexistente o
 de CERO BYTES es CAIDA DE CIFRA. Se comprueban TODAS antes de commitear.
 
-fichero contado: docs/loop/REPORTE.md
-CIFRA rutas distintas que el reporte nombra entre acentos graves: 54
+fichero contado: docs/loop/REPORTE.md (el reporte YA CERRADO)
+CIFRA rutas distintas que el reporte nombra entre acentos graves: 63
 
     4051967 B  docs/INTRA_DOMINIO_VEREDICTOS.jsonl
     4149203 B  docs/loop/ACTA_AUDITOR.md
-      48065 B  docs/loop/REPORTE.md
+      63677 B  docs/loop/REPORTE.md
       26912 B  docs/loop/SALIDA_V180_APERTURA.txt
          41 B  docs/loop/SALIDA_V180_HEAD_APERTURA.txt
+         41 B  docs/loop/SALIDA_V180_HEAD_CIERRE.txt
+       1484 B  docs/loop/SALIDA_V180_HUECO_BATERIA.txt
+       1185 B  docs/loop/SALIDA_V180_IDENTIDAD_CIERRE.txt
+        526 B  docs/loop/SALIDA_V180_RECOMPUTO_ARCHIVO_CIERRE.txt
        1299 B  docs/loop/SALIDA_V180_T1B_ETIQUETA_DESPUES.txt
        2111 B  docs/loop/SALIDA_V180_T1B_MUTACION_ETIQUETA.txt
       31080 B  docs/loop/SALIDA_V180_T1B_TRIANGULOS.txt
@@ -31,7 +35,10 @@ CIFRA rutas distintas que el reporte nombra entre acentos graves: 54
        8831 B  docs/loop/SALIDA_V180_T5_BACKLOG_L02.txt
        7749 B  docs/loop/SALIDA_V180_T5_BACKLOG_L02_ANTES.txt
        3181 B  docs/loop/SALIDA_V180_T5_MUTACION.txt
-  NO EXISTE      docs/loop/reportes/REPORTE_V180.md
+       2417 B  docs/loop/SALIDA_V180_TALLADOR_CABECERA.txt
+        921 B  docs/loop/SALIDA_V180_TALLADOR_RECHAZO.txt
+      43956 B  docs/loop/reportes/REPORTE_V171.md
+      63677 B  docs/loop/reportes/REPORTE_V180.md
       20563 B  docs/plan/LD_SALES_ROADMAP.md
      214916 B  docs/plan/LECTURAS_DIRIGIDAS.md
       51368 B  docs/plan/OP_L_03_LECTURAS.jsonl
@@ -40,10 +47,12 @@ CIFRA rutas distintas que el reporte nombra entre acentos graves: 54
       19473 B  scripts/loop/backlog_l02_resuelto.py
       20671 B  scripts/loop/backlog_l03_resuelto.py
       38947 B  scripts/loop/cerrar_reporte.py
+      14928 B  scripts/loop/guarda_commit_dataset.py
        5680 B  scripts/loop/guarda_de_la_fuente_del_clon.py
        8928 B  scripts/loop/paso0_archivar_anterior.py
        4648 B  scripts/loop/sujeto_congelado_de_git.py
        9310 B  scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py
+       9127 B  scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py
       13918 B  scripts/loop/vuelta174_esqueleto_reporte.py
       25254 B  scripts/loop/vuelta178_tarea3_anotar_triangulos.py
        5140 B  scripts/loop/vuelta179_tarea1d_mutacion_corte.py
@@ -60,7 +69,8 @@ CIFRA rutas distintas que el reporte nombra entre acentos graves: 54
        9046 B  scripts/loop/vuelta180_tarea5_mutacion_backlog_l02.py
        5158 B  scripts/vuelta16_generar_actos.mjs
 
-CIFRA rutas que NO EXISTEN: 1
+CIFRA rutas que NO EXISTEN: 0
 CIFRA rutas de CERO BYTES: 0
 
-ROJO: hay rutas publicadas como prueba que no se pueden abrir.
+VERDE: las 63 rutas que el reporte publica como prueba EXISTEN y NINGUNA
+mide cero bytes.

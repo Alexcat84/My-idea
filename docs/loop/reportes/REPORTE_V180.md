@@ -1,0 +1,941 @@
+# REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+> **ESTE REPORTE SE ABRIO AL EMPEZAR LA VUELTA Y CRECE POR ANEXION** (`EJECUTOR.md`
+> 1, "EL REPORTE ABRE CON LA VUELTA"). El esqueleto lo tallo
+> `scripts/loop/vuelta180_esqueleto_reporte.py`; cada tarea ANEXA SU FILA AL
+> CERRARSE, no al final; y el cierre lo talla entero `scripts/loop/cerrar_reporte.py`.
+> **Si esta vuelta se corta, lo que quede aqui es lo que de verdad se hizo, y las
+> filas que sigan diciendo ABIERTA, SIN CERRAR son las que no se hicieron.**
+>
+> **ESTA VUELTA NO ES DE BATERIA Y LA SIGUIENTE SI, Y LA CADENCIA NO SE ELIGE
+> AQUI: ESTA ADJUDICADA Y RECONFIRMADA TRES VECES.** El acta 176, punto 7.8,
+> reanclo el contador a la vuelta que de verdad corrio la bateria y no a la que la
+> tenia encargada; **el acta 178, punto 11, y el acta 179, punto 11, lo
+> reconfirmaron**; y el encargo de esta vuelta lo repite con todas las letras:
+> **la proxima vuelta de bateria es la 181**. Esta es **LA ULTIMA VUELTA QUE
+> DECLARA EL HUECO**: la seccion 9 cierra con el **HUECO DECLARADO Y MEDIDO** y
+> sus TRES piezas juntas, el nombre del fichero, sus bytes por las dos
+> convenciones y la atribucion. Un hueco declarado no es un hueco escondido, y
+> **la 181 lo corre**.
+>
+> **EL TOPE SIGUE EN CINCO, Y NO LO DECIDE NADIE: LO DISPARO LA 177 Y LA 178 Y LA
+> 179 LO CONFIRMARON ENTREGANDO CINCO.** `AUDITOR.md` 6.2 dice que el regimen
+> temporal de dos sub-tareas dura **hasta que DOS vueltas seguidas cierren su
+> propio reporte** con `cerrar_reporte.py`, y eso se cumplio. **El regimen
+> temporal queda CUMPLIDO Y CITABLE, no borrado**, y los cuatro commits que lo
+> sostienen se localizan EN GIT en el bloque B.1 de
+> `scripts/loop/vuelta180_apertura.py`, no se teclean.
+>
+> **Y ESTA VUELTA MIDE SU DESFASE DE CALIBRADO EN LA APERTURA, DENTRO DEL BLOQUE
+> DE APERTURA Y ANTES DE LA PRIMERA OPERACION.** El remedio se cableo en
+> `vuelta177_apertura.py`, la 178 lo estreno, la 179 lo repitio y aqui vuelve a
+> correr en su sitio. **Desde la 178, una columna de apertura medida al cierre es
+> caida que ACUMULA**, y eso lo dice el encargo, no este reporte.
+>
+> **Y EL PASO 0 DE ESTE ESQUELETO PREGUNTA POR EL REPORTE QUE VA A PISAR, NO POR
+> LA VUELTA ANTERIOR.** Esta vez las dos preguntas vuelven a coincidir, porque la
+> 179 escribio su reporte, lo cerro y lo archivo EN SU MISMA VUELTA; el
+> fichero corre LAS DOS igualmente y publica lo que salga de cada una, porque una
+> guarda que solo se mira cuando difiere no se puede auditar el dia que difiera.
+> **Y LA TAREA 4.a DE ESTA VUELTA FABRICA EL DIA EN QUE DIFIEREN**, que es lo que
+> a esta guarda le faltaba desde la 174: hasta hoy nadie la habia visto responder
+> a la pregunta buena cuando las dos preguntas dan cosas distintas.
+
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 180 DEJA LA PISTA LIMPIA PARA LA 181: LA GUARDA DEL SUJETO CONGELADO PASA DE 17 DE 103 A 0 DE 108 Y QUEDA CABLEADA AL ROJO GLOBAL CON SU PRUEBA DE MUTACION, LA ETIQUETA DE FUENTE BAJA DE CINCO LADOS FALSOS A CERO, EL CORTE QUEDA CABLEADO DONDE SE GENERA Y UN BARRIDO NUEVO CAZO TRECE CIFRAS QUE NO LO LLEVABAN, LAS DOS PENDIENTES BARATAS TIENEN INSTRUMENTO, Y OP-L-02 QUEDA MEDIDO SIN LEER NI UN PAR CON 15 REALES CONTRA EL ARCHIVO Y 0 CONTRA LAS DOS SEDES. TRES CAIDAS MIAS DECLARADAS, LAS TRES DE PREDECIR EN VEZ DE MEDIR, Y LAS TRES CAZADAS POR UN INSTRUMENTO.**
+## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
+
+**LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
+`scripts/loop/vuelta180_esqueleto_reporte.py`, con
+`git rev-parse --abbrev-ref HEAD`, `git log` y `git log --diff-filter=A`, y CAE
+EN ROJO si algo no se encuentra o es ambiguo:
+
+- rama: `pasada-unica`
+- commit del acta de la vuelta 179: `d3240915`, asunto real leido de git log:
+  'ACTA DEL AUDITOR, VUELTA 179: NI UNA CAIDA CONTRA EL EJECUTOR, LA ESCALADA QUE ENCARGUE CAZA LA CAIDA DE LA 178 BAJO MI MANO, Y LA RACHA DE REPORTE VUELVE A CERO.'
+- HEAD real de apertura, sellado ANTES de la primera operacion en
+  `docs/loop/SALIDA_V180_HEAD_APERTURA.txt`: `d3240915`
+- commit de nacimiento del bloque de apertura, leido con
+  `git log --diff-filter=A`: `122ca81f`
+- reporte que este esqueleto pisa, leido de la cabecera de ese mismo fichero:
+  la vuelta **179**, ya archivada byte a byte antes de escribir aqui
+- commit de cierre: se talla al cierre. **Un reporte no puede nombrar el commit
+  que lo lleva**, porque ese commit se crea despues de escribirlo.
+
+<!-- CABECERA TALLADA -->
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 180`, y su salida
+cruda vive en `docs/loop/SALIDA_V180_TALLADOR_CABECERA.txt` (2417 bytes en disco y 2397 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `d3240915` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 179: NI UNA CAIDA CONTRA EL EJECUTOR, LA ESCALADA QUE ENCARGUE CAZA LA CAIDA DE LA 178 BAJO MI MANO, Y LA RACHA DE REPORTE VUELVE A CERO.'), HEAD real de apertura `d3240915` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `e4f5248e` (leido de `SALIDA_V180_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+<!-- FIN CABECERA TALLADA -->
+
+## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
+
+<!-- TABLA DE TAREAS -->
+| tarea | que encarga | estado | donde vive la prueba |
+|---|---|---|---|
+| **TAREA 1** | LOS REGISTROS Y LA ETIQUETA DE FUENTE, Y ES BLOQUEANTE. (a) El acta del auditor de la vuelta 179 vive en `docs/loop/ACTA_AUDITOR.md` y NO levanta ninguna caida contra la 179: la racha de reporte vuelve a CERO, la de cifra publicada sigue en CERO y no hay correccion declarada que arrastrar. (b) LA ETIQUETA DE FUENTE, ARREGLADA, y eso LEVANTA LA PARADA DE LA 3.f DE LA 179: `clases_por_par()` LEE LA VUELTA DE LA FILA DEL REGISTRO en vez del literal `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` clavado, con `sha256` de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y de `docs/plan/OP_L_03_LECTURAS.jsonl` ANTES y DESPUES dentro del propio instrumento y los CUATRO publicados, con `vuelta179_tarea3_etiqueta_de_fuente.py` re-corrido y las DOS mediciones al lado (la de antes y la de despues, y la de despues en CERO falsos o se para), con `vuelta178_tarea3_anotar_triangulos.py` re-corrido y el total de triangulos y de lados sin moverse, y con su caso positivo por mutacion sobre un registro fabricado de dos vueltas distintas | **CERRADA** | `SALIDA_V180_T1B_TRIANGULOS.txt`, `SALIDA_V180_T1B_ETIQUETA_DESPUES.txt`, `SALIDA_V180_T1B_MUTACION_ETIQUETA.txt`, `SALIDA_V180_APERTURA.txt` H.6 |
+| **TAREA 2** | EL SUJETO CONGELADO, RESUELTO Y CABLEADO, Y ES LA QUE LIMPIA LA PISTA DE LA 181. El orden es: los trece declaran, los cuatro congelan, y SOLO ENTONCES se cablea. (a) LOS TRECE QUE NO ABREN NADA VIVO DECLARAN SU SUJETO, once `LO NOMBRA SIN ABRIRLO` y dos `ABRE UN SUJETO YA CLAVADO`, una linea por arnes con el literal que la guarda busca y NINGUNA otra linea tocada, comprobado con `git diff --numstat` sobre `scripts/loop/` publicando las lineas anadidas por fichero. (b) LOS CUATRO QUE SI ABREN, CONGELADOS DE VERDAD, cada uno con que abria, que abre ahora y la prueba de que su resultado ya no se mueve. (c) Y SOLO ENTONCES EL CABLEADO al rojo global de la bateria, con la cifra de antes y su corte pegado y la de despues, que TIENE QUE DAR 0 o no se cablea. (d) NADA SE PODA DE LA NOMINA: todo arnes que esta vuelta escriba entra en `verificar_mutaciones_viejas.py` con la cuenta entera y la resta comprobada, antes de la 181 | **CERRADA** | `SALIDA_V180_T2A_DECLARAR.txt`, `SALIDA_V180_T2A_GUARDA_TRAS_DECLARAR.txt`, `SALIDA_V180_T2B_CONGELACION.txt`, `SALIDA_V180_T2B_RELECTURA.txt`, `SALIDA_V180_T2C_GUARDA_DESPUES.txt`, `SALIDA_V180_T2C_TRAMO_CABLEADO.txt`, `SALIDA_V180_T2C_MUTACION_CABLEADO.txt`, `SALIDA_V180_T2_NUMSTAT.txt` |
+| **TAREA 3** | EL CORTE, CABLEADO DONDE TODAVIA FALTA. El hallazgo es del fundador y esta medido en la seccion 6 del acta 179: la tabla de tramos de la 2.a de la 179 esta contada de su fichero y sus cifras eran verdad, pero LE FALTA EL CORTE, y sin corte no hay manera de saber cual mira que. Se cablea el sello de `sello_de_corte()` DONDE SE GENERA LA TABLA DE TRAMOS de `backlog_l03_resuelto.py`, no en una frase del reporte, por `banco 9.21` y el punto 7.2 del acta 178. Y SE BARRE EL RESTO: la lista de toda cifra de ese instrumento y de `vuelta179_tarea2_cobertura_final.py` que pueda moverse dentro de una vuelta, diciendo cuales llevan corte y cuales no, y las que no lo lleven lo llevan al terminar. Con su caso positivo por mutacion: dos cortes distintos con la misma cifra no se confunden, y la misma cifra con dos cortes distintos tampoco | **CERRADA** | `SALIDA_V180_T3_BACKLOG.txt`, `SALIDA_V180_T3_COBERTURA.txt`, `SALIDA_V180_T3_BARRIDO_ANTES.txt` (rojo, 13 fallos), `SALIDA_V180_T3_BARRIDO.txt`, `SALIDA_V180_T3_MUTACION_CORTE.txt` |
+| **TAREA 4** | LAS DOS PENDIENTES BARATAS QUE YA LLEVAN VUELTAS SUBIENDO, LAS DOS TEXTO QUE MIENTE SOBRE SU PROPIA MAQUINA. (a) EL DOCSTRING DE `scripts/loop/paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina ya pregunta por EL REPORTE QUE VA A PISAR: se arregla, se publican la linea vieja y la nueva sin borrar la vieja del reporte, y SE ESCRIBE LA GUARDA QUE HACE VISIBLE LA DIFERENCIA, un caso fabricado donde las dos preguntas NO coinciden y que demuestra que la maquina responde a la buena. (b) LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL `D.4` DE LA 174: el esqueleto CLONA `vuelta_del_reporte_del_arbol()` en vez de importarla y nada avisa si el fichero del que se clono desaparece; la guarda CAE EN ROJO nombrandolo, con su caso positivo por mutacion sobre una ruta fabricada que no existe | **CERRADA, CON UNA CAIDA MIA DECLARADA** | `SALIDA_V180_T4_MUTACION.txt`, `SALIDA_V180_T4B_ARCHIVO_PREMATURO.txt`, `SALIDA_V180_T4B_ESQUELETO_CON_GUARDA.txt` |
+| **TAREA 5** | EL BACKLOG DE `OP-L-02`, MEDIDO Y NO LEIDO, CON LA MISMA VARA RESUELTA QUE CERRO `OP-L-03`. Se corre el instrumento viejo de `OP-L-02` por dentro y sin citarlo de memoria y se publican LOS PARES QUE DA; se le pone encima el resolutor de `P.1` y se publican LOS PARES REALES, o sea los que no estan ya en el archivo tras resolver a nodo vivo; LAS DOS COLUMNAS VAN LAS DOS Y LA VIEJA NO SE BORRA (`banco 9.10`); el reparto por tramo va CON SU CORTE PEGADO por la TAREA 3 de este mismo encargo; y LOS DOS CAMINOS TIENEN QUE CALZAR en todos los actos medidos o se publica donde y se para. LO QUE NO SE HACE: no se lee ningun par, no se escribe ningun veredicto, no se toca el marcador, no se toca el estado de ninguna ficha (`EJECUTOR.md` 4, modo de cierre) y NO SE TOCAN LOS CINCO PARES DE SALES ROADMAP, que `docs/plan/LECTURAS_DIRIGIDAS.md` deja como decision revocable del fundador: se nombran y se dejan | **CERRADA** | `SALIDA_V180_T5_BACKLOG_L02.txt`, `SALIDA_V180_T5_BACKLOG_L02_ANTES.txt` (rojo de la primera corrida), `SALIDA_V180_T5_MUTACION.txt`, `SALIDA_V180_T5_VARA.txt` |
+<!-- FIN TABLA DE TAREAS -->
+
+## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
+
+<!-- ANEXO DE TAREAS -->
+
+### TAREA 1 (BLOQUEANTE). LOS REGISTROS Y LA ETIQUETA DE FUENTE, ARREGLADA
+
+**1.a. LOS REGISTROS, LEIDOS HOY Y CITADOS CON SU LINEA.** El acta del auditor de
+la vuelta 179 esta escrita en `docs/loop/ACTA_AUDITOR.md`, cabecera en la
+**linea 62019**, y **no levanta ninguna caida contra la 179**:
+
+| lo que dice el acta 179 | linea leida hoy | literal |
+|---|---:|---|
+| caidas del ejecutor | `62232` | "CAIDAS DEL EJECUTOR: NINGUNA, Y LO DIGO CON LA LISTA DE LO QUE BUSQUE" |
+| racha de reporte | `62238` | "La racha de reporte, que mi acta 178 dejo en DOS, vuelve a CERO" |
+| racha de cifra publicada | `62406` | "caidas del ejecutor que ACUMULAN **0** / racha de cifra publicada **0**" |
+| racha de reporte en la metrica | `62407` | "caidas del ejecutor de reporte **0** / racha de reporte **0**" |
+| parada | `62437` | "## 12. PARADA: NO" |
+
+**NO HAY NINGUNA CORRECCION DECLARADA QUE ARRASTRAR DE LA 179.** El acta declara
+UNA caida propia del auditor (`C.1`, seccion 2, linea `62031`), que es suya y no
+mia, y **seis caidas que el propio ejecutor se levanto** y que el acta declara
+expresamente **NO caidas de esa acta** (linea `62240`).
+
+**1.b. LA ETIQUETA DE FUENTE, ARREGLADA, Y ESO LEVANTA MI PARADA DE LA 3.f DE LA
+179.** La adjudicacion **7.7 del acta 179** estrecha la instruccion que me hacia
+parar: lo que aquel encargo protegia era que ninguna clase ni su procedencia se
+movieran, y un literal que atribuye a la 177 cinco lecturas de la 179 no protege
+eso, lo rompe, contra `EJECUTOR.md` 8.
+
+**LO QUE CAMBIA EN LA MAQUINA, Y NADA MAS QUE ESO.** En
+`scripts/loop/vuelta178_tarea3_anotar_triangulos.py`:
+
+- nace `etiqueta_del_registro(vuelta)`, **PURA**, que compone la etiqueta con la
+  vuelta que se le pasa y dice `(vuelta desconocida)` si la fila no la trae, en
+  vez de inventar un numero;
+- `clases_por_par()` **lee `d.get("vuelta")` de la fila del registro** y llama a
+  esa funcion, en vez del literal `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)`
+  que estaba clavado en la **linea 160** del fichero de apertura;
+- `clases_por_par()` gana los parametros `lecturas` y `filas`, para que su caso
+  positivo por mutacion pueda apuntarla a un registro fabricado sin tocar nada
+  vivo;
+- el sello de `sha256` pasa de UN registro a **LOS DOS**, antes y despues, dentro
+  del propio instrumento, y el ROJO cubre a los dos.
+
+**LOS CUATRO `sha256`, IMPRESOS POR EL PROPIO INSTRUMENTO** (bloques `A)` y `H)`
+de `docs/loop/SALIDA_V180_T1B_TRIANGULOS.txt`):
+
+| registro | sha256 ANTES | sha256 DESPUES | identicos |
+|---|---|---|---|
+| `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | `ea6e850d331d14f0...` | `ea6e850d331d14f0...` | **SI** |
+| `docs/plan/OP_L_03_LECTURAS.jsonl` | `d93c59a86372cf50...` | `d93c59a86372cf50...` | **SI** |
+
+Los cuatro completos: `ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be`
+dos veces, y `d93c59a86372cf501f407a82cc79d649d02fd73c404429489ec6c07b4272719f`
+dos veces. **NINGUNA CLASE SE MOVIO.** Bytes de los dos, por las dos
+convenciones: `4.051.967` en disco y `4.051.967` normalizado a LF el primero;
+`51.368` y `51.368` el segundo.
+
+**LAS DOS MEDICIONES DE LA ETIQUETA, CADA UNA CON SU CORTE, Y LA VIEJA NO SE
+BORRA** (`banco 9.10`). Las dos salen del mismo instrumento,
+`scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py`, corrido dos veces:
+
+| medicion | corte | fichero contado | etiquetados como de la 177 | verdaderos | **falsos** |
+|---|---|---|---:|---:|---:|
+| ANTES del arreglo | HEAD `d3240915e994`, apertura de la 180 | `docs/loop/SALIDA_V180_APERTURA.txt`, bloque `H.6` | 15 | 10 | **5** |
+| DESPUES del arreglo | HEAD `122ca81fb96e`, tras la 1.b de la 180 | `docs/loop/SALIDA_V180_T1B_ETIQUETA_DESPUES.txt`, bloque `C)` | 10 | 10 | **0** |
+
+**DA CERO FALSOS Y POR ESO NO PARO.** Los cinco que antes salian falsos, nombrados
+uno a uno por el instrumento de apertura, eran dos lados de
+`colaboracion_cadena_suministro`, uno de `creacion_option_pool` y dos de
+`fase_diseno_prototipado_modelos`, **los cinco escritos por la vuelta 179**.
+
+**EL REPARTO DE LADOS POR FUENTE CON LAS ETIQUETAS NUEVAS**, contado del bloque
+`D.1)` de `docs/loop/SALIDA_V180_T1B_TRIANGULOS.txt`:
+
+| que se cuenta | cuantos |
+|---|---:|
+| lados con clase leida de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **42** |
+| lados con clase leida de `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` | **10** |
+| lados con clase leida de `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 179)` | **5** |
+| **total de lados** | **57** |
+| **total de triangulos** | **19** |
+
+**EL TOTAL NO SE MOVIO: 19 triangulos y 57 lados**, que es lo que el encargo
+exige, y `42 + 10 + 5 = 57` calza. Antes del arreglo el mismo reparto daba **42 y
+15** en dos filas; ahora son tres filas y la de la 179 sale a la luz. La particion
+de triangulos tampoco se movio: **8 enteros del archivo, 11 apoyados en un lado de
+fuera, 9 de ellos con el `D` fuera**.
+
+**EL CASO POSITIVO POR MUTACION, CORRIDO Y NO PROMETIDO**
+(`scripts/loop/vuelta180_tarea1b_mutacion_etiqueta.py`, salida en
+`docs/loop/SALIDA_V180_T1B_MUTACION_ETIQUETA.txt`, exit **0**). Registro
+**fabricado en un temporal**, dos filas de **dos vueltas distintas** (177 y 180),
+mapa de alias vacio y veredictos vacios: **ni un fichero vivo**.
+
+| caso | que hace | etiquetas distintas | veredicto |
+|---|---|---:|---|
+| 1, el codigo de hoy | cada lado con su vuelta | **2** | **VERDE** |
+| 2, la mutacion: etiqueta clavada en el literal de la 177 | los dos lados iguales | **1** | **CAE, VERDE** |
+
+**UN REGISTRO DE UNA SOLA VUELTA NO PODRIA CAZAR ESTO**, porque con una sola
+vuelta el literal acierta por casualidad; por eso el registro fabricado tiene dos.
+La mutacion se deshace en `finally` y el temporal se retira (`P.16`), las dos
+cosas comprobadas y publicadas por el propio arnes.
+
+**LO QUE ESTA TAREA MOVIO EN EL ARBOL, contado con `git diff --numstat`:**
+`docs/plan/OP_L_03_TRIANGULOS.jsonl` **3 lineas mas 3 menos** (las tres filas cuyos
+lados cambian de etiqueta) y
+`scripts/loop/vuelta178_tarea3_anotar_triangulos.py` **83 mas 21**. La guarda de
+`dataset/` sale **VERDE con 0 filas, 0 ficheros y 0 blobs divergentes**.
+
+### TAREA 2 (BLOQUEANTE). EL SUJETO CONGELADO, RESUELTO Y CABLEADO
+
+**EL ORDEN SE RESPETO Y ES LA MITAD DE LA TAREA:** primero declararon los trece,
+despues se congelaron los cuatro, la guarda dio **0**, **y solo entonces se
+cablea**. Cablear con 17 habria dejado la 181 en un rojo permanente, que es
+degradacion silenciosa del `banco 9`.
+
+**2.a. LOS TRECE QUE NO ABREN NADA VIVO DECLARAN SU SUJETO.** Instrumento:
+`scripts/loop/vuelta180_tarea2a_declarar_sujeto.py`, salida
+`docs/loop/SALIDA_V180_T2A_DECLARAR.txt`, exit **0**. **A quien le toca NO SE
+TECLEA**: sale del registro `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, contado
+en la corrida, **17 filas**, de las cuales `LO NOMBRA SIN ABRIRLO` **11**, `ABRE
+UN SUJETO YA CLAVADO` **2** y `ABRE FICHERO VIVO` **4**. Los `11 + 2 = 13`
+declaran aqui.
+
+**LA LINEA DE CADA UNO SE COMPONE DE SU PROPIA FILA**, no de una lista tecleada:
+el fichero vivo que nombra y sus tres cifras (apariciones, llamadas que leen,
+lecturas del fichero vivo) salen del registro. Va **dentro del docstring de
+modulo**, y eso no es capricho: `anclaje_de()` busca las huellas de congelado en
+el texto entero y las de sujeto vivo **solo en la maquina**, asi que declarar en
+el docstring garantiza que **la maquina no cambia**. El propio instrumento lo
+comprueba con `sin_docstring_de_modulo()` antes y despues de escribir, fichero a
+fichero: **13 de 13 con la maquina identica**, y **13 de 13 parsean**.
+
+**LAS LINEAS ANADIDAS POR FICHERO**, contadas de
+`docs/loop/SALIDA_V180_T2_NUMSTAT.txt` con `git diff HEAD --numstat -- scripts/loop/`:
+los trece salen **`1 0`** exactos, o sea **una linea anadida y CERO borradas** en
+cada uno. Son `vuelta135_2e_mutacion_1.py`, `vuelta135_2e_mutacion_2.py`,
+`vuelta145_2a_mutacion_ancla_unica.py`, `vuelta148_2d_mutacion_exencion.py`,
+`vuelta150_5c_mutacion_ciclo.py`, `vuelta162_tarea2a_mutacion_puerta.py`,
+`vuelta162_tarea2b_mutacion_excepcion.py`, `vuelta163_tarea4b_mutacion_re_sellado.py`,
+`vuelta165_tarea6_mutacion_op_l_01.py`, `vuelta166_tarea2_mutacion_correccion.py`,
+`vuelta166_tarea6_mutacion_guarda.py`, `vuelta177_tarea1b_mutacion_esperado_vivo.py`
+y `vuelta179_tarea3_mutacion_triangulos.py`. **NINGUNA otra linea de esos trece se
+toco.**
+
+**2.b. LOS CUATRO QUE SI ABREN. Y AQUI LEVANTO UNA CORRECCION AL ENCARGO, MEDIDA
+Y NO OPINADA.** El instrumento nuevo `scripts/loop/sujeto_congelado_de_git.py`
+(nombre estable, sin numero de vuelta) lee un blob de git clavado por su commit y
+**comprueba su `sha256` contra el que el arnes declara**, con dos candados en vez
+de uno.
+
+| arnes | que abria | que abre ahora | prueba de que ya no se mueve |
+|---|---|---|---|
+| `vuelta157_tarea4b_mutacion_tachado.py` | `io.open(LD).read()` sobre `docs/plan/LECTURAS_DIRIGIDAS.md` **VIVO** | blob `24bd395b0cde:docs/plan/LECTURAS_DIRIGIDAS.md`, `sha256 dda1cdd67042c733...` comprobado dentro | dos corridas, salida enmascarada identica, `sha 231f53052759b502` las dos, exit 0 y 0 |
+| `vuelta160_tarea7c_mutacion_guarda_cita.py` | `shutil.copy` de **TRES ficheros VIVOS** a un temporal, en cada corrida | `volcar_blob` de los tres blobs clavados (`7dff83ab6a17`, `24bd395b0cde`, `2743bd88faed`), los tres con su `sha256` comprobado | dos corridas, `sha 558a488b8793407f` las dos, exit 0 y 0 |
+| `vuelta150_2d_simular_op_c_05.py` | `json.load(open("dataset/metadata/master_graph.json"))` **VIVO** | blob `a34328b23a7d:dataset/metadata/master_graph.json`, `sha256 627cc662296f7f00...` comprobado | dos corridas, `sha c2951c5e99c94698` las dos, exit 0 y 0 |
+| `vuelta174_tarea1b_mutacion_esqueleto.py` | **NADA VIVO, y esto es la correccion** | lo mismo que antes: un `REPORTE.md` **fabricado por el en un `tempfile.mkdtemp`** | dos corridas, `sha 09f85ae25297d0ec` y `sha 09f85ae25297d0ec`, exit 0 y 0 |
+
+**LA CORRECCION, DECLARADA SIN BORRAR LO QUE CORRIGE** (`EJECUTOR.md` 8). El
+encargo pone `vuelta174_tarea1b_mutacion_esqueleto.py` entre los cuatro que **si
+abren**, nombrando `REPORTE.md`. **Medido, no abre ninguno vivo**, y la prueba la
+da el propio registro de la 179 en su campo `evidencia.codigo`, linea 182:
+`vivo -> os.path.join(tmp, "REPORTE.md") | io.open(vivo).read()`, donde `tmp` es
+el `tempfile.mkdtemp(prefix="v174_mut_")` que el mismo fichero crea y borra. **Lo
+que le faltaba era declararlo**, no congelarlo: la guarda buscaba la huella
+`REPORTE.md` en la maquina, la encontraba en el nombre del fichero fabricado y no
+podia distinguir un sujeto fabricado de uno vivo. **NO PARO POR ESTO**, porque no
+hace falta decidir nada que el encargo no diga: el criterio del propio encargo es
+*"un sujeto que no dependa de lo que el fichero vivo diga hoy"*, y este ya lo
+cumplia; lo unico pendiente era la declaracion y la prueba, y las dos estan.
+
+**LA PRUEBA DE ESTABILIDAD, CORRIDA:**
+`scripts/loop/vuelta180_tarea2b_prueba_de_congelacion.py`, salida
+`docs/loop/SALIDA_V180_T2B_CONGELACION.txt`, exit **0**. **4 arneses medidos, 4
+estables**, y los **5 ficheros vivos** que tenian atribuidos **no se movieron ni
+un byte** en las ocho corridas. **EL PRECIO VA DECLARADO Y NO ESCONDIDO:** la
+comparacion enmascara toda ruta absoluta, porque tres de los cuatro imprimen su
+temporal de sufijo aleatorio; el enmascarado tapa tambien las rutas del repo, asi
+que esta prueba **no cazaria un cambio que solo afectara a una ruta impresa**. Lo
+que si compara sin tapar es toda cifra, todo `sha256`, todo veredicto y el exit.
+
+**Y UNA SEGUNDA MEDIDA INDEPENDIENTE:**
+`scripts/loop/vuelta179_tarea4_juzgar_sujeto.py --solo-mirar`, corrido hoy sin
+escribir el registro (`docs/loop/SALIDA_V180_T2B_RELECTURA.txt`), dice **"CIFRA
+entradas que la guarda senala: 0"** al corte `HEAD 7aacaa474fcc`. El juez de la
+179 reconoce `git cat-file` sobre un blob como sujeto clavado, asi que **los tres
+congelados ya no son lecturas vivas para su propio metodo**, y el cuarto tampoco.
+
+**2.c. EL CABLEADO, Y SOLO ENTONCES.** Las dos mediciones, cada una con su corte:
+
+| medicion | corte | fichero contado | entradas que no cumplen | denominador |
+|---|---|---|---:|---:|
+| ANTES de la 2.a y la 2.b | HEAD `d3240915e994`, apertura de la 180 | `docs/loop/SALIDA_V180_APERTURA.txt`, bloque `H.7` | **17** | 103 |
+| DESPUES de la 2.a | HEAD `7aacaa474fcc` | `docs/loop/SALIDA_V180_T2A_GUARDA_TRAS_DECLARAR.txt` | **4** | 103 |
+| DESPUES de la 2.b | HEAD `7aacaa474fcc` | `docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt` | **0** | 104 |
+
+**DA 0, ASI QUE SE CABLEA.** El cableado vive en `verificar_mutaciones_viejas.py`,
+al cierre de la corrida y **recomputado ahi**, no heredado de la cabecera: nace
+`hay_rojo_al_cierre()`, **PURA**, que decide el rojo global con sus **seis
+piezas** en un solo sitio, y `main()` la llama. La cifra se imprime con su sello
+de corte al lado. **La guarda entra al rojo tambien en modo `--tramo`**, como ya
+hacia la mirada de la nomina sobre si misma, y esta comprobado corriendo
+`--tramo 1 --tamano-tramo 2` (`docs/loop/SALIDA_V180_T2C_TRAMO_CABLEADO.txt`,
+exit **0**): imprime **"CIFRA entradas cuyo SUJETO NO ESTA CONGELADO
+(recomputado al cierre): 0, de 104"**.
+
+**LA CONDICION SE EXTRAJO A UNA FUNCION PURA POR UN MOTIVO, Y NO ES DE ESTILO:**
+mientras vivio dentro de un `if` de `main()`, la unica forma de probar que una
+guarda estaba enchufada era correr la bateria entera y mirar el color. Ahora se le
+quita una pieza a la vez.
+
+**EL CASO POSITIVO POR MUTACION DEL CABLEADO**
+(`scripts/loop/vuelta180_tarea2c_mutacion_cableado.py`, salida
+`docs/loop/SALIDA_V180_T2C_MUTACION_CABLEADO.txt`, exit **0**), sobre un
+directorio de arneses de mentira fabricado en un temporal y una nomina fabricada,
+**sin leer ni un fichero de la campana**: **10 comprobaciones, 0 fallan.**
+
+| caso | que prueba | resultado |
+|---|---|---|
+| A1 | un arnes que abre un fichero vivo y no lo declara **sale senalado** | 1 senalado |
+| A2 | el MISMO con la linea de declaracion **deja de salir** | 0 senalados |
+| B | las seis piezas vacias: **no hay rojo** | `False` |
+| C | **solo** la pieza del sujeto congelado: **hay rojo** | `True` |
+| **D, LA MUTACION** | la condicion **VIEJA** sobre el mismo escenario de C | `False`, **el caso CAE** |
+| E, cinco veces | cada una de las otras cinco piezas **sola** enciende el rojo | `True` las cinco |
+
+**2.d. NADA SE PODA DE LA NOMINA, Y LA RESTA VA COMPROBADA.** La nomina crece de
+**103 a 105** con los dos arneses que esta vuelta escribe, y la cuenta se recompone
+al cierre de la tarea:
+
+| cifra | valor | corte |
+|---|---:|---|
+| arneses que el censo ve | **165** | HEAD `7aacaa474fcc` |
+| entradas de la nomina | **105** | HEAD `7aacaa474fcc` |
+| censo menos nomina | **60** | HEAD `7aacaa474fcc` |
+| los que estan FUERA de la nomina | **60** | HEAD `7aacaa474fcc` |
+| `arneses_que_faltan()` | **0** | HEAD `7aacaa474fcc` |
+| entradas invisibles al censo | **0** | HEAD `7aacaa474fcc` |
+| entradas con el sujeto sin congelar | **0** | HEAD `7aacaa474fcc` |
+
+**LA RESTA CALZA: `165 - 105 = 60`, y fuera de la nomina son 60.** Los dos que
+entran son `vuelta180_tarea1b_mutacion_etiqueta.py` (103 a 104) y
+`vuelta180_tarea2c_mutacion_cableado.py` (104 a 105), cada uno con su motivo
+escrito en la propia nomina. **Los otros dos ficheros nuevos de esta tarea NO son
+arneses y por eso no entran**, y se dice cual es la vara y no una opinion: el
+patron del censo es `vuelta<N>...<familia>...py` con familia en `mutacion`,
+`caso_positivo` o `simular`, y ni `sujeto_congelado_de_git.py` (sin numero de
+vuelta, es instrumento estable) ni `vuelta180_tarea2a_declarar_sujeto.py` ni
+`vuelta180_tarea2b_prueba_de_congelacion.py` traen ninguna de las tres familias.
+**Ninguno de los tres se publica como caso positivo por mutacion**: el primero es
+un lector, el segundo una operacion de una sola corrida y el tercero una MEDICION
+de estabilidad, y asi esta escrito en sus docstrings.
+
+### TAREA 3. EL CORTE, CABLEADO DONDE TODAVIA FALTABA
+
+**EL HALLAZGO ES DEL FUNDADOR Y ESTA MEDIDO EN LA SECCION 6 DEL ACTA 179**
+(`docs/loop/ACTA_AUDITOR.md:62247`), y su propia acta dice con esas palabras
+**"NO ES UNA CAIDA Y NO LA REGISTRO COMO TAL"**: las cifras de la 2.a de la 179
+estaban contadas de su fichero y eran verdad. **Lo que faltaba es el corte.**
+
+**EL SELLO GANA UN TERCER PARAMETRO, Y NO ES UN CAPRICHO.**
+`sello_de_corte(denominador, head)` tenia la palabra `nomina` **clavada en su
+texto**: cablearlo tal cual en la tabla de tramos habria escrito `nomina` encima
+de una cifra que no es la nomina, o sea una etiqueta falsa. Ahora es
+`sello_de_corte(cifra, head, que="nomina contada en esta corrida")`, y **el valor
+por defecto conserva a sus llamadores viejos byte a byte**: lo prueba
+`scripts/loop/vuelta179_tarea1d_mutacion_corte.py`, sin tocarle una linea, que
+sigue dando **10 casos, los 10 pasan y los 10 CAEN** al mutarles el esperado.
+
+**CABLEADO DONDE SE GENERA LA TABLA, NO EN UNA FRASE.** En
+`scripts/loop/backlog_l03_resuelto.py` el corte se compone en el bloque `A)` con
+`VMV.corte_de_git()` y baja a los bloques `B)`, `D)`, `E)` y `F)`. La tabla de
+tramos, que es **la que se movio dentro de la 179**, sale hoy asi
+(`docs/loop/SALIDA_V180_T3_BACKLOG.txt`, bloque `F)`, exit **0**):
+
+| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran | corte |
+|---|---|---|---|---|---|---|
+| YA LEIDOS (la 177) | **14** | **39** | **18** | **41** | **21** | HEAD `cbe0feb94087` |
+| SIN LEER | **26** | **34** | **0** | **93** | **34** | HEAD `cbe0feb94087` |
+| **todos** | **40** | **73** | **18** | **134** | **55** | HEAD `cbe0feb94087` |
+
+**LAS TRES MEDICIONES DE LA MISMA TABLA, LAS TRES VERDADERAS, CADA UNA CON SU
+CORTE**, y la vieja no se borra (`banco 9.10`):
+
+| quien la midio | corte | actos ya leidos | pares sin leer | reales sin leer |
+|---|---|---|---|---|
+| la 2.a de la 179 (`SALIDA_V179_T2_LOS_DIEZ.txt`) | **sin corte, y eso es lo que se arregla** | 6 actos, 29 pares, 8 reales | 34 actos, 44 pares | 10 |
+| el fundador, seccion 6 del acta 179 | el de su corrida, que su acta no fija | 14 / 39 / 18 | 26 / 34 | 0 |
+| esta vuelta, bloque `H.8` de la apertura | HEAD `d3240915e994` | 14 / 39 / 18 | 26 / 34 | 0 |
+| esta vuelta, tras el cableado | HEAD `cbe0feb94087` | 14 / 39 / 18 | 26 / 34 | 0 |
+
+**EL BARRIDO DEL RESTO, Y ENCONTRO TRECE.** Instrumento nuevo:
+`scripts/loop/vuelta180_tarea3_barrido_de_cortes.py`. Corre los dos instrumentos
+que el encargo nombra, recoge **toda** linea que publique una cifra y la cruza
+con una tabla declarada. **Su primera corrida salio en ROJO con 13 cifras que se
+mueven y no llevaban su corte**, y esa corrida esta guardada sin retocar en
+`docs/loop/SALIDA_V180_T3_BARRIDO_ANTES.txt` (exit **1**). Las trece se
+cablearon, y la corrida de despues
+(`docs/loop/SALIDA_V180_T3_BARRIDO.txt`, exit **0**) da:
+
+| cifra del barrido | valor | corte |
+|---|---:|---|
+| filas declaradas | **32** | HEAD `cbe0feb94087` |
+| de esas, las que SE MUEVEN dentro de una vuelta | **25** | HEAD `cbe0feb94087` |
+| de esas, las que NO se mueven | **7** | HEAD `cbe0feb94087` |
+| lineas de cifra en las dos salidas | **34** | HEAD `cbe0feb94087` |
+| lineas de cifra **sin cubrir** por la tabla | **0** | HEAD `cbe0feb94087` |
+| fallos | **0** | HEAD `cbe0feb94087` |
+
+**LAS TRECE QUE NO LLEVABAN CORTE Y AHORA LO LLEVAN**, nombradas del fichero rojo:
+en `backlog_l03_resuelto.py`, `ficheros de dataset/nodos/ leidos`, `alias del
+mapa`, `nodos del grafo`, `nodos VIVOS`, `filas de
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, `pares distintos tras resolver`, `actos
+donde los dos caminos CALZAN`, `actos donde NO calzan`, `actos que el registro
+dice leidos` y `de esos que el instrumento sigue dando`, mas las tres que **no se
+mueven y no lo decian**: `actos que su LISTA DECLARADA trae`, `pares que el
+instrumento da` y `actos medidos`, que ahora dicen en su propia linea que salen
+del corte sellado en la vuelta 15.
+
+**Y EL SEGUNDO INSTRUMENTO, `vuelta179_tarea2_cobertura_final.py`, ENTERO:** sus
+**once** lineas de cifra llevan corte hoy
+(`docs/loop/SALIDA_V180_T3_COBERTURA.txt`, exit **0**), menos la de `actos que el
+instrumento da`, que dice en su linea que no se mueve. De paso, su reparto por
+vuelta **deja de estar tecleado en dos vueltas** (`177` y `179` a mano) y se
+cuenta del propio registro, para que el dia que escriba una tercera no se quede
+muda.
+
+**LA DECLARACION QUE `EJECUTOR.md` 1 EXIGE, Y VA DELANTE:** la columna **"se
+mueve dentro de una vuelta" es una clasificacion A MANO**, porque no hay forma de
+medir en una sola corrida si una cifra se movera en la siguiente. **NO HAY CASO
+ROJO AUTOMATICO PARA ESA COLUMNA**, y no se fabrica uno que se apruebe solo. Lo
+que **si** es mecanico y **si** cae en rojo son las cuatro comprobaciones del
+barrido: que cada cifra declarada se publique hoy, que cada movible lleve su
+corte, que cada no movible lo diga, y que **ninguna linea de cifra se escape de la
+tabla**. Esa cuarta es la que impide que la tabla se quede corta en silencio.
+
+**EL CASO POSITIVO POR MUTACION**
+(`scripts/loop/vuelta180_tarea3_mutacion_corte_de_tramos.py`, salida
+`docs/loop/SALIDA_V180_T3_MUTACION_CORTE.txt`, exit **0**): **16 casos, los 16
+pasan y los 16 CAEN** al mutarles el valor esperado.
+
+| lo que prueba | resultado |
+|---|---|
+| B, **el caso del acta 179**: la misma tabla en dos cortes (`8` y `18`) no se confunde | pasa y CAE al mutar |
+| C, **la misma cifra con dos cortes distintos** tampoco se confunde | pasa y CAE al mutar |
+| D, **dos cosas distintas del mismo tamano y del mismo corte** tampoco | pasa y CAE al mutar |
+| E, el valor por defecto conserva a los llamadores viejos | pasa y CAE al mutar |
+| G, H, I, las tres funciones puras del barrido | pasan y CAEN al mutar |
+| C del informe, **la guarda del barrido tumbada**: una linea sin corte pasaria | `True` tumbada, `False` de verdad |
+
+**LA D MERECE UNA LINEA APARTE Y ES HALLAZGO DE ESTA TAREA:** en la corrida de hoy
+hay un **18** que son pares reales y otro **18** que son pares con clase escrita.
+Con la palabra `nomina` clavada, los dos sellos habrian salido **identicos**. Esa
+confusion solo aparece al sacar el sello fuera de la nomina, y es exactamente por
+lo que el tercer parametro no es cosmetico.
+
+**LA NOMINA CRECE DE 105 A 106** con
+`vuelta180_tarea3_mutacion_corte_de_tramos.py`. Recontada al cerrar esta tarea:
+censo **166**, nomina **106**, `166 - 106 = 60` y fuera de la nomina **60**;
+`arneses_que_faltan()` **0**, invisibles al censo **0**, sujetos sin congelar
+**0**. **`vuelta180_tarea3_barrido_de_cortes.py` NO entra**, y la vara es la
+misma que en la TAREA 2: su nombre no trae ninguna de las tres familias del
+censo, y no se publica como caso positivo por mutacion.
+
+### TAREA 4. LAS DOS PENDIENTES BARATAS, Y UNA CAIDA MIA QUE DECLARO DELANTE
+
+**LA CAIDA VA PRIMERA, PORQUE ES MIA Y PORQUE LA CAUSE PROBANDO LA 4.b.** Corri
+`scripts/loop/vuelta180_esqueleto_reporte.py` **entero** para ver la guarda nueva
+en su sitio, **prediciendo que el paso 0 lo pararia**. No lo paro, y tenia razon
+en no pararlo: el paso 0 pregunta por el reporte que va a pisar, leyo **180** de
+la cabecera, lanzo el archivador, el archivador saco el texto **de git**, lo
+guardo en `docs/loop/reportes/REPORTE_V180.md`, la guarda salio **VERDE con
+razon**, y el esqueleto reescribio `docs/loop/REPORTE.md` con sus cinco filas
+vacias, borrando del arbol las secciones de las TAREAS 1, 2 y 3.
+
+**EL DANO, MEDIDO: CERO**, y la medicion esta en
+`docs/loop/SALIDA_V180_T4B_ARCHIVO_PREMATURO.txt`. `docs/loop/REPORTE.md` se
+restauro con `git checkout HEAD -- docs/loop/REPORTE.md` desde el commit de cierre
+de la TAREA 3, y los dos `sha256` cotejados **calzan byte a byte**:
+`4836dc51e19092efd56d164d945eaeac4605a96ce95ca6195971c6949a9c9563` el del arbol y
+el de `HEAD`, con **3 filas que dicen CERRADA** dentro, contadas del texto. El
+archivo prematuro `docs/loop/reportes/REPORTE_V180.md`,
+32.854 bytes en disco y 32.854 bytes normalizados a LF, **no seguido por git**,
+salia como `??`, **se retiro**, y se dice por que: era el
+archivo de un reporte a medias, y dejarlo haria que el
+`archivar_reporte.py --vuelta 180` del cierre encontrara su destino **ya
+existente con contenido distinto**, o sea rojo.
+
+**LO QUE ESTO ENSENA Y NO SE TAPA:** la guarda del paso 0 protege **el reporte
+anterior**, no el de la vuelta en curso. Corriendo el esqueleto a mitad de vuelta,
+lo que se pierde del arbol es el trabajo de esa misma vuelta, y **el paso 0 lo
+deja pasar en verde porque el archivador lo guarda antes**. La costumbre de
+commitear por tarea es lo que hizo que aqui no se perdiera nada.
+
+**4.a. EL DOCSTRING DE `scripts/loop/paso0_archivar_anterior.py`.** La linea vieja
+y la nueva, las dos, y **la vieja no se borra de este reporte** ni del propio
+fichero, que la conserva escrita dentro de una CORRECCION DECLARADA
+(`EJECUTOR.md` 8):
+
+| | texto |
+|---|---|
+| **la linea vieja** (`git show HEAD:...`, lineas 2 y 3) | `ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI EL REPORTE ANTERIOR NO ESTA ARCHIVADO.` |
+| **la linea nueva** (lineas 2 y 3 de hoy) | `ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI **EL REPORTE QUE SE VA A PISAR** NO ESTA ARCHIVADO.` |
+
+**Y NO ES LA UNICA FRASE QUE MENTIA.** Tambien decian la pregunta vieja la
+clausula `(a)` (*"para la vuelta anterior"*), el bloque `USO` (*"exigir_archivado(N
+- 1)"*) y **el nombre del parametro**, que era `vuelta_anterior` y hoy es
+`vuelta_del_reporte_a_pisar`. **Un nombre de parametro es texto que describe la
+maquina**, y ese mentia igual. `git diff --numstat`: **44 lineas mas y 12 menos**
+en ese fichero. **LA MAQUINA NO CAMBIA**: todos los llamadores pasan el numero en
+posicion, ninguno por nombre, comprobado con `grep` sobre `scripts/`.
+
+**LA GUARDA QUE HACE VISIBLE LA DIFERENCIA, FABRICADA.** Hoy las dos preguntas
+coinciden y por eso en corrida no se ve nada. El caso fabricado pone el arbol en
+la **172** con `VUELTA - 1` en **173**:
+
+| pregunta | resultado | clausula |
+|---|---|---|
+| la BUENA, el reporte que se va a pisar (172) | **VERDE**, deja escribir | ninguna |
+| la VIEJA, la vuelta anterior (173) | **ROJO**, lo impide | `(b) no existe` |
+
+**Y LA CONTRAPRUEBA VA AL LADO, QUE ES LO QUE IMPIDE UN ROJO PERMANENTE:** con las
+dos preguntas coincidiendo, **las dos dan VERDE**. Sin eso, el caso de arriba no
+distinguiria una guarda que mira de una que dice ROJO siempre.
+
+**UNA MEDICION QUE NO ES UN CASO Y SE DECLARA COMO TAL:** preguntar por el numero
+equivocado produce un **FALSO ROJO, nunca un falso verde**, porque la clausula
+`(d)` coteja siempre contra el fichero del arbol. O sea que la mentira del texto
+**nunca pudo destruir un reporte**; lo que podia era bloquear una escritura
+legitima. Va medido en el caso `A5`.
+
+**4.b. LA GUARDA QUE FALTABA EN LA DEPENDENCIA DEL `D.4` DE LA 174.** Nace
+`scripts/loop/guarda_de_la_fuente_del_clon.py`, **nombre estable y sin numero de
+vuelta**, que es la unica forma de que no se pierda en el proximo clon. Comprueba
+tres cosas y **CAE EN ROJO nombrando la ruta y la funcion**: `(a)` que la fuente
+exista, `(b)` que **defina** la funcion, buscada en su **arbol de sintaxis** y no
+con un `in` sobre el texto, y `(c)` que el fichero parsee. **Lo que NO hace, dicho
+en vez de insinuado:** no compara los dos cuerpos, que es otra pregunta y tiene
+otro instrumento, `cotejar_clon_declarado.py`.
+
+Va **enchufada** en `scripts/loop/vuelta180_esqueleto_reporte.py` como **PASO
+0.0**, antes del paso 0, con la fuente y la funcion declaradas en dos constantes
+del propio esqueleto. Corrida contra la fuente de verdad
+(`scripts/loop/vuelta174_esqueleto_reporte.py`,
+**13.918 bytes en disco y 13.918 bytes normalizados a LF**, 273 lineas y 2
+funciones definidas) sale **VERDE**.
+
+**EL CASO POSITIVO POR MUTACION DE LAS DOS LETRAS**
+(`scripts/loop/vuelta180_tarea4_mutacion_texto_y_clon.py`, salida
+`docs/loop/SALIDA_V180_T4_MUTACION.txt`, exit **0**): **17 comprobaciones, 0
+fallan**, todas sobre ficheros fabricados en un temporal que se retira.
+
+| caso | que prueba | resultado |
+|---|---|---|
+| A1 | el dia en que las dos preguntas difieren, la maquina responde a la buena | VERDE / ROJO `(b)` |
+| A2 | el parametro se llama por lo que la maquina hace, leido con `inspect.signature` | pasa |
+| A3 | el docstring dice la frase nueva, **declara** la correccion y **conserva la vieja** | pasa, las tres |
+| A4 | la contraprueba: coincidiendo, las dos dan VERDE | pasa |
+| A5 | el numero equivocado da falso ROJO, nunca falso verde | pasa |
+| B1 a B6 | fuente presente, **borrada**, sin la funcion, rota, solo mencionada en un comentario, y la vuelta al verde | pasan las seis |
+| C | la guarda apuntada a la fuente de verdad del esqueleto de hoy | VERDE |
+
+**LA B5 MERECE UNA LINEA:** una **mencion** de la funcion en un comentario **no
+cuenta** como definirla. Un `in` sobre el texto la habria dado por buena, y esa es
+justo la forma en que esta guarda podria haber dejado de mirar sin que nadie lo
+notara.
+
+**LA NOMINA CRECE DE 106 A 107** con
+`vuelta180_tarea4_mutacion_texto_y_clon.py`. Recontada al cerrar esta tarea: censo
+**167**, nomina **107**, `167 - 107 = 60` y fuera de la nomina **60**;
+`arneses_que_faltan()` **0**, invisibles **0**, sujetos sin congelar **0**.
+`guarda_de_la_fuente_del_clon.py` **no entra**, por la misma vara de siempre: su
+nombre no trae ninguna de las tres familias del censo.
+
+### TAREA 5. EL BACKLOG DE `OP-L-02`, MEDIDO Y NO LEIDO
+
+**NI UN PAR LEIDO, Y VA MEDIDO Y NO PROMETIDO.** El bloque `H)` del instrumento
+publica lo que esta corrida NO hizo: **pares leidos 0, veredictos escritos 0,
+filas anadidas al archivo 0, marcador tocado no, estado de fichas tocado no,
+nodos tocados 0.**
+
+**LA VARA DEL FUNDADOR, CORRIDA HOY**
+(`scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD>`) sigue dando
+**cuatro fichas de trabajo real**: `OP-L-01`, `OP-L-02`, `OP-L-03` y `OP-I-01`,
+mas dos CONSUMIDAS (`OP-M-02-MEDIOS` y `OP-M-02-ADMIT`, por `OP-U-01`). Publica
+las dos cifras, **6 en LISTA sin prueba, de las cuales 4 son trabajo real**, y
+**la cifra vieja no se poda**. Y se repite lo que el encargo manda: **la vara es
+esa salida y nunca el campo `estado`**, que para `OP-L-02` dice `LISTA` con
+`fecha_corte 2026-08-11`.
+
+**EL INSTRUMENTO NUEVO ES HERMANO DEL QUE CERRO `OP-L-03`:**
+`scripts/loop/backlog_l02_resuelto.py`, **nombre estable y sin numero de vuelta**,
+solo lectura. Corre el instrumento viejo **por dentro** importando `leer_nominas()`
+de `scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py`, que parsea la constante
+`NOMINAS_OP_L_02` de `scripts/vuelta16_generar_actos.mjs`. **Ninguno de los dos se
+toca.**
+
+**LOS PARES QUE DA EL INSTRUMENTO, Y LOS PARES REALES, LAS DOS COLUMNAS Y LA
+VIEJA NO SE BORRA** (`banco 9.10`). Salida:
+`docs/loop/SALIDA_V180_T5_BACKLOG_L02.txt`, exit **0**, corte
+**HEAD `0d3073204d57`**:
+
+| cifra | valor | se mueve dentro de una vuelta |
+|---|---:|---|
+| nominas que el instrumento da | **6** | no, sale de una constante sellada |
+| **PARES QUE EL INSTRUMENTO DA** (la cifra vieja) | **66** | no, sale de la misma constante |
+| pares DISUELTOS tras resolver | **17** | SI, con su corte |
+| pares DISTINTOS tras resolver | **46** | SI, con su corte |
+| pares que YA TIENEN VEREDICTO, por el par RESUELTO | **31** | SI, con su corte |
+| pares con LECTURA DIRIGIDA escrita | **16** | SI, con su corte |
+| **PARES REALES contra el archivo** (la definicion literal del encargo) | **15** | SI, con su corte |
+| **PARES REALES contra las DOS sedes** (lo que queda de verdad) | **0** | SI, con su corte |
+
+**POR QUE HAY DOS COLUMNAS DE REALES Y NO UNA, dicho antes de contar:**
+`OP-L-03` tenia UNA sede de clase y `OP-L-02` tiene **DOS**. La definicion literal
+del encargo (*"los que no estan ya en el archivo tras resolver a nodo vivo"*) da
+**15**; esos quince **estan leidos**, pero como **LECTURA DIRIGIDA**, que por su
+propia definicion no entra en la cola y no mueve el marcador. Contarlos como
+trabajo pendiente seria mandar a releer lo ya leido; no contarlos escondería que
+no estan en el archivo. **Van las dos, y sin las dos al lado la cifra enganaria en
+un sentido o en el otro.**
+
+**LOS DOS CAMINOS CALZAN EN LAS SEIS NOMINAS.** `6 de 6`, y `0` donde no calzan,
+las dos cifras con su corte pegado. El instrumento cae en **exit 1** si alguna no
+calza, nombrandola.
+
+| nomina | miembros | vivos resolutor | vivos grafo | calzan | del instrumento | disueltos | con veredicto | con dirigida | REALES archivo | REALES dos sedes |
+|---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|
+| `customer_validation_sales_roadmap` | 6 | 6 | 6 | SI | 15 | 0 | 10 | 5 | **5** | **0** |
+| `clasificacion_mercados_cadena_suministro` | 6 | 1 | 1 | SI | 15 | 15 | 0 | 0 | **0** | **0** |
+| `alineacion_etica_ia_negocio` | 5 | 5 | 5 | SI | 10 | 0 | 7 | 3 | **3** | **0** |
+| `construccion_de_valor_percibido` | 5 | 5 | 5 | SI | 10 | 0 | 5 | 5 | **5** | **0** |
+| `channels_hypothesis_physical` | 5 | 5 | 5 | SI | 10 | 0 | 8 | 2 | **2** | **0** |
+| `formalizar_junta_asesora` | 4 | 2 | 2 | SI | 6 | 2 | 1 | 1 | **0** | **0** |
+
+**EL REPARTO POR TRAMO, CON SU CORTE PEGADO**, y **el criterio se dice antes de
+repartir**: una nomina esta YA MIRADA si alguno de sus pares tiene lectura
+dirigida escrita, y SIN MIRAR si ninguno. No se teclea ninguna lista.
+
+| tramo | nominas | pares del instrumento | reales contra el archivo | reales contra las dos sedes | corte |
+|---|---:|---:|---:|---:|---|
+| YA MIRADAS | **5** | **51** | **15** | **0** | HEAD `0d3073204d57` |
+| SIN MIRAR | **1** | **15** | **0** | **0** | HEAD `0d3073204d57` |
+| **todas** | **6** | **66** | **15** | **0** | HEAD `0d3073204d57` |
+
+**LA UNICA NOMINA SIN MIRAR ES `clasificacion_mercados_cadena_suministro`, Y NO
+HAY NADA QUE MIRAR EN ELLA:** sus **6 miembros escritos resuelven a UN SOLO nodo
+vivo**, o sea que el acto **ya se fundio**, y sus 15 pares salen los quince como
+disueltos. **Cero reales por las dos definiciones.**
+
+**LA CIFRA VIEJA DE LA FICHA, CITADA COMO CONTRASTE Y NUNCA COMO FUENTE**
+(`EJECUTOR.md` 2), leida de la propia ficha en la corrida: *"MEDIDO el 11 ago
+2026: 205 pares fuera de cola, 11 leidos, 194 pendientes"*, `fecha_corte
+2026-08-11`. **LA DISCREPANCIA SE DECLARA EN VEZ DE RESOLVERSE COPIANDO: son
+universos distintos.** La ficha mide los pares **fuera de cola de todo el
+dominio**; esta corrida mide **las seis nominas que la constante declara**. Las
+dos son verdaderas y **no responden la misma pregunta**.
+
+**EL INSTRUMENTO CAYO EN ROJO EN SU PRIMERA CORRIDA, Y LO CAZO SU PROPIA GUARDA
+DE RESTAS.** La corrida roja queda guardada sin retocar en
+`docs/loop/SALIDA_V180_T5_BACKLOG_L02_ANTES.txt` (exit **1**): decia
+`LA RESTA: del instrumento 66, menos 17 disueltos, menos 31 con veredicto, quedan
+18. Y los REALES contra el archivo medidos son 15. CALZA: NO`. **La causa es
+exactamente la que `backlog_l03_resuelto.py` declara en su `medir_acto()`:** dos
+parejas de miembros ESCRITAS distintas pueden resolver AL MISMO par, y entonces
+hay UNA lectura que hacer y no dos. Aqui son **3 duplicados** que colapsan. La
+resta pasa a **cuatro pasos** y cada uno se publica:
+
+| paso | cuenta | calza |
+|---|---|---|
+| 1 | del instrumento **66**, menos **17** disueltos, quedan **49** escritos | |
+| 2 | de esos 49 escritos, los **DISTINTOS** tras resolver son **46**, o sea **3** duplicados | |
+| 3 | de los 46 distintos, **31** ya tienen veredicto y quedan **15** | **SI** |
+| 4 | de esos 15 reales, **15** tienen ademas lectura dirigida y quedan **0** | **SI** |
+
+**LOS CINCO PARES DE SALES ROADMAP, NOMBRADOS Y DEJADOS.**
+`docs/plan/LECTURAS_DIRIGIDAS.md` los deja expresamente como decision revocable
+del fundador y el punto 8 del acta 179 los sube. **Aqui no se tocan**, y se dice
+de que fichero salen, `docs/plan/LD_SALES_ROADMAP.md`:
+
+| par | clase | sede |
+|---|---|---|
+| `customer_validation_sales_roadmap` contra `estrategia_de_ventas` | D | `LD_SALES_ROADMAP.md` |
+| `customer_validation_sales_roadmap` contra `sales_roadmap` | D | `LD_SALES_ROADMAP.md` |
+| `estrategia_de_ventas` contra `hoja_de_ruta_de_ventas` | A | `LD_SALES_ROADMAP.md` |
+| `estrategia_de_ventas` contra `refinar_sales_roadmap` | D | `LD_SALES_ROADMAP.md` |
+| `estrategia_de_ventas` contra `sales_roadmap_vs_sales_force` | D | `LD_SALES_ROADMAP.md` |
+
+**EL CASO POSITIVO POR MUTACION**
+(`scripts/loop/vuelta180_tarea5_mutacion_backlog_l02.py`, salida
+`docs/loop/SALIDA_V180_T5_MUTACION.txt`, exit **0**): **16 comprobaciones, 0
+fallan**, todo el material fabricado (mapa de alias, grafo, veredictos y lecturas
+dirigidas), **sin leer el archivo, ni el grafo, ni `docs/plan/`, ni `dataset/`**.
+
+| caso | que prueba | resultado |
+|---|---|---|
+| A | una nomina que colapsa a un nodo da **cero** reales y seis disueltos | pasa |
+| B | **la contraprueba**: quitando el alias, los seis pares vuelven | pasa |
+| **C** | **el caso que mordio hoy**: dos parejas escritas que son un solo par se cuentan **una vez**, y `distintos = con veredicto + reales` | pasa |
+| C, la mutacion | contar escritos da **5** donde los distintos son **3**: **CAE** | pasa |
+| D | un par con veredicto no es real; sin el veredicto vuelve a serlo | pasa |
+| E | un par con lectura dirigida es real **contra el archivo** y no **contra las dos sedes** | pasa |
+| F | si el grafo y el resolutor discrepan, `calzan` sale `False`, y con los dos de acuerdo sale `True` | pasa |
+
+**LA NOMINA CRECE DE 107 A 108** con
+`vuelta180_tarea5_mutacion_backlog_l02.py`. Recontada al cerrar esta tarea: censo
+**168**, nomina **108**, `168 - 108 = 60` y fuera de la nomina **60**;
+`arneses_que_faltan()` **0**, invisibles **0**, sujetos sin congelar **0**. El
+sello entero: **`108 (corte: HEAD 0d3073204d57, nomina contada en esta
+corrida)`**. `backlog_l02_resuelto.py` **no entra**, por la vara de siempre: su
+nombre no trae ninguna de las tres familias del censo.
+
+<!-- FIN ANEXO DE TAREAS -->
+
+## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+
+**NINGUN HASH SE TECLEA** (`EJECUTOR.md` 1, LA IDENTIDAD SE LEE DE GIT). Todo lo
+de esta seccion sale de `docs/loop/SALIDA_V180_IDENTIDAD_CIERRE.txt`, que lo
+compone con `git rev-list`, `git log` y `git diff` en esta misma vuelta.
+
+| pieza | valor | de donde sale |
+|---|---|---|
+| sello de APERTURA | `d3240915e9943016d026302cad437c4567e45653` | `docs/loop/SALIDA_V180_HEAD_APERTURA.txt`, sellado antes de la primera operacion |
+| sello de CIERRE | `e4f5248e2681630e2f88a8239d15f72384e9afe1` | `docs/loop/SALIDA_V180_HEAD_CIERRE.txt`, sellado tras la ultima operacion |
+| commits entre los dos sellos | **7** | `git rev-list --count` |
+| rutas tocadas entre los dos sellos | **81** | `git diff --name-only` |
+| de esas, en `scripts/loop/` | **41** | contado de la misma salida |
+| de esas, en `docs/loop/` | **39** | contado de la misma salida |
+| de esas, en `docs/plan/` | **1** | contado de la misma salida |
+| `git diff --numstat` sobre `dataset/`, `web/`, `engine/` entre sellos | **0 filas** | `git diff --numstat` |
+
+**LOS SIETE COMMITS, UNO A UNO, leidos de `git log`:** `122ca81f` la apertura,
+`27b39975` el esqueleto, `7aacaa47` la TAREA 1, `cbe0feb9` la TAREA 2, `7b0a1ef1`
+la TAREA 3, `0d307320` la TAREA 4 y `e4f5248e` la TAREA 5. **El commit que lleva
+este cierre no se puede nombrar aqui**, porque se crea despues de escribirlo.
+
+**LA UNICA RUTA DE `docs/plan/` QUE SE TOCO ES `OP_L_03_TRIANGULOS.jsonl`**, con
+`3` lineas mas y `3` menos, que son las tres filas cuyos lados cambian de etiqueta
+en la TAREA 1. **Ninguna clase se movio**, comprobado por `sha256` dentro del
+propio instrumento.
+
+### 3.1 EL MARCADOR, RECOMPUTADO DEL ARCHIVO AL CIERRE
+
+Contado de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en esta corrida
+(`docs/loop/SALIDA_V180_RECOMPUTO_ARCHIVO_CIERRE.txt`; **el fichero NO se llama
+`SALIDA_V180_MARCADOR_CIERRE.txt` a proposito**, porque ese nombre lo reserva
+`tallar_cabecera_reporte.py` para las salidas del cribado y ocuparlo con otro
+formato le rompe cinco celdas, medido en
+`docs/loop/SALIDA_V180_TALLADOR_RECHAZO.txt`):
+
+| total | A | B | C | D | huecos | duplicados |
+|---:|---:|---:|---:|---:|---:|---:|
+| **3.388** | **551** | **72** | **5** | **2.760** | **0** | **0** |
+
+Puestos de **1 a 3.388**. El `sha256`, medido por las DOS convenciones y
+identico en las dos: en disco `ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be` y normalizado a LF `ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be`.
+Y sus bytes, tambien por las dos: `4.051.967` bytes en disco y `4.051.967` bytes
+normalizados a LF. **Es el mismo `sha256` que el acta 179 publica en su 3.2**, y
+esa identidad es la prueba independiente de que **esta vuelta no movio ni un
+veredicto**: no era su trabajo y no lo hizo.
+
+### 3.2 EL ESTADO DE LA NOMINA AL CIERRE, RECOMPUTADO AL CIERRE
+
+**Se recomputa aqui y no se hereda de ninguna cifra de arriba**, que es lo que
+`EJECUTOR.md` 1 manda desde la caida de la vuelta 28:
+
+| cifra | apertura (HEAD `d3240915e994`) | **cierre (HEAD `e4f5248e2681`)** |
+|---|---:|---:|
+| arneses que el censo ve | 163 | **168** |
+| entradas de la nomina | 103 | **108** |
+| censo menos nomina | 60 | **60** |
+| los que estan FUERA de la nomina | 60 | **60** |
+| `arneses_que_faltan()` | 0 | **0** |
+| entradas invisibles al censo | 0 | **0** |
+| entradas con el sujeto SIN CONGELAR | **17** | **0** |
+
+**El sello entero, tallado y no tecleado: `108 (corte: HEAD e4f5248e2681, nomina
+contada en esta corrida)`.** La nomina crece en **cinco**: los cinco arneses que
+esta vuelta escribe. **La resta calza en las dos puntas.**
+
+### 3.3 LO QUE ESTA VUELTA DEJA CORRIENDO, Y ES LO QUE LA 181 VA A ENCONTRAR
+
+| guarda | antes | despues |
+|---|---|---|
+| sujeto congelado, contra la nomina | **17 de 103**, ROJO | **0 de 108**, VERDE |
+| sujeto congelado, en el rojo global de la bateria | **no estaba cableada** | **cableada, y probada por mutacion** |
+| etiqueta de fuente falsa | **5 de 15** | **0 de 10** |
+| cifras del backlog sin corte | **13** | **0** |
+| barrido de cortes | **no existia** | **32 filas, 0 fallos** |
+
+## 4. LA GUARDA DEL COMMIT, CORRIDA EN CADA COMMIT DE ESTA VUELTA
+
+`scripts/loop/guarda_commit_dataset.py` se corrio **antes de cada uno de los
+siete commits** y salio **VERDE las siete veces**, con **0 filas de
+`git diff --numstat -- dataset/`, 0 ficheros nombrados por
+`git status --porcelain -- dataset/` y 0 blobs de arbol divergentes del de HEAD**.
+
+**`dataset/` no se toca en ninguna de las cinco tareas**, y el ciclo de Gate 0 lo
+confirma en las dos puntas: `git diff HEAD --numstat -- dataset/ web/ engine/`
+da **0 filas** en la apertura y **0 filas** en el cierre.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**Los marco ANTES de saber si acierto, que es la condicion entera de que sirvan
+para la relectura ciega.** Ninguno de los cinco es una clase de par: esta vuelta
+**no leyo ni un par y no escribio ni un veredicto**, asi que la adjudicacion 7.1
+del acta 179 (un discutible cuya clase va en una tabla queda quemado como sujeto
+ciego) **no se activa en ninguno**.
+
+**`D.1`. QUE `vuelta174_tarea1b_mutacion_esqueleto.py` NO ABRE NINGUN FICHERO
+VIVO, contra lo que el encargo supone.** Mi lectura dice que su `REPORTE.md` es
+un fichero que **el mismo fabrica** en un `tempfile.mkdtemp`, y que por eso le
+faltaba **declararlo** y no **congelarlo**. La base de evidencia es el campo
+`evidencia.codigo` del propio registro de la 179, linea 182. **Es discutible
+porque contradice la letra del encargo**, que lo pone entre los cuatro que si
+abren.
+
+**`D.2`. QUE LA SEGUNDA COLUMNA DE REALES DE `OP-L-02` HACIA FALTA.** El encargo
+pide **una** definicion de par real, la del archivo, que da **15**. Yo publico
+**dos**, y la segunda da **0**. Sostengo que sin las dos la cifra engana en un
+sentido o en el otro, porque los quince **estan leidos** como lectura dirigida.
+**Es discutible porque anade una columna que el encargo no pidio.**
+
+**`D.3`. QUE LA COLUMNA "SE MUEVE DENTRO DE UNA VUELTA" DEL BARRIDO NO PUEDE
+TENER CASO ROJO AUTOMATICO.** Lo declaro en el propio instrumento y aqui. Alguien
+podria sostener que si se puede, corriendo el instrumento en dos cortes distintos
+de la misma vuelta y viendo cual cifra se movio. **No lo hice**, y la razon es que
+eso mediria **lo que se movio hoy**, no **lo que puede moverse**, y una cifra que
+hoy no se movio por casualidad quedaria clasificada como fija. **Es discutible.**
+
+**`D.4`. QUE RETIRAR `docs/loop/reportes/REPORTE_V180.md` ERA LO CORRECTO.**
+Decidi borrarlo por mi cuenta. Sostengo que un archivo de un reporte a medias
+habria puesto en rojo al archivador del cierre. **Es discutible porque es una
+destruccion de fichero que nadie me pidio**, aunque el fichero llevaba dos minutos
+existiendo, no estaba seguido por git y su contenido esta entero en el commit
+`7b0a1ef1`.
+
+**`D.5`. QUE `sujeto_congelado_de_git.py` DEBIA NACER CON NOMBRE ESTABLE Y NO
+COMO TRES BLOQUES DENTRO DE LOS TRES ARNESES.** Lo hice compartido porque tres
+copias de la misma lectura envejecerian por separado. **Es discutible porque crea
+una dependencia nueva** que tres arneses de mutacion ahora comparten, y si ese
+fichero se rompe caen los tres a la vez.
+
+## 6. LAS PREGUNTAS
+
+**`P.1`. `scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py` ESTA EN ROJO Y
+NACIO CADUCADO EN SU PROPIO COMMIT. NO LO ARREGLO PORQUE NADIE ME LO ENCARGO, Y
+LO TRAIGO.** Lo destape corriendolo para comprobar que mi cambio del parametro de
+`paso0` no rompia a sus llamadores. **Falla por una causa que no tiene nada que
+ver con mi cambio**: su comprobacion `("el reporte de entonces NO estaba en el
+archivo", "REPORTE_V171.md" not in archivados)` exige que ese archivo **no
+exista**, y **existe**. Medido con git: el arnes **nace** en el commit `45fb75f5`
+y `docs/loop/reportes/REPORTE_V171.md` **se anade en ese mismo commit `45fb75f5`**.
+Es exactamente la especie que el arnes de la 157 declara de si mismo, *"NACIO
+CADUCADO DENTRO DE SU PROPIO COMMIT"*. **Y no lo ve nadie**: su nombre no trae
+ninguna de las tres familias del censo (`mutacion`, `caso_positivo`, `simular`),
+asi que **no esta en el censo ni en la nomina y la bateria nunca lo corre**. Es la
+frontera que el propio verde de la bateria declara con esas palabras: *"Un arnes
+con un nombre de OTRA familia seguiria sin verse"*. **La pregunta: se le arregla
+el esperado, se le cambia el nombre para que el censo lo vea, o se declara fuera?**
+
+**`P.2`. LA CONVENCION DE BYTES SIGUE SIN FIJAR, Y ES DEL FUNDADOR.** Van siete
+actas subiendo. **Sube como PENDIENTE y no como problema**, porque el remedio
+provisional (publicar siempre las dos, disco y normalizado a LF) ya es
+instrumento y esta cableado en `cerrar_reporte.py`.
+
+## 7. PENDIENTES DE DOCTRINA
+
+**NINGUNO NUEVO.** Las cinco tareas se resolvieron con regla escrita: la
+adjudicacion `7.7` del acta 179 para la TAREA 1, la `7.8` para la TAREA 2, el
+`banco 9.21` mas el punto `7.2` del acta 178 para la TAREA 3, `EJECUTOR.md` 8 y
+el `banco 9` para la TAREA 4, y `P.1` mas `banco 9.10` para la TAREA 5.
+
+**LO QUE SIGUE SUBIENDO Y NO ES DOCTRINA NUEVA:** el grano del tope de 10 minutos
+de la bateria, que **se mide EN LA 181 con el reloj de esa corrida** y no se
+re-elige a ojo antes.
+
+## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+
+**`C.1`. CORRI EL ESQUELETO ENTERO A MITAD DE VUELTA Y ME BORRE EL REPORTE DEL
+ARBOL.** Esta contada entera en la seccion de la TAREA 4, con su medicion. En una
+linea: prediciendo que el paso 0 lo pararia, corri
+`scripts/loop/vuelta180_esqueleto_reporte.py` completo; **no lo paro, y con
+razon**; archivo el reporte de la 180 a medias y lo reescribio con cinco filas
+vacias. **DANO MEDIDO: CERO.** Restaurado con `git checkout HEAD`, `sha256`
+`4836dc51e19092efd56d164d945eaeac4605a96ce95ca6195971c6949a9c9563` a los dos
+lados, tres filas `CERRADA` dentro. **Lo que me salvo fue commitear por tarea**, y
+eso no es merito de esta vuelta sino de la regla 6 de `EJECUTOR.md`.
+
+**`C.2`. `backlog_l02_resuelto.py` NACIO CON LA RESTA MAL Y SALIO EN ROJO EN SU
+PRIMERA CORRIDA.** Contaba pares **escritos** donde debia contar **distintos tras
+resolver**, que es la trampa que `backlog_l03_resuelto.py` **ya tiene declarada en
+su propio codigo** y que yo no lei antes de escribir. **La cazo su propia guarda
+de restas**, la corrida roja esta guardada sin retocar en
+`docs/loop/SALIDA_V180_T5_BACKLOG_L02_ANTES.txt`, y el arreglo trae su arnes.
+**No se publico ninguna cifra falsa**: el instrumento se nego a dar el verde.
+
+**`C.3`. EN LA PRIMERA VERSION DEL BARRIDO DECLARE 32 CIFRAS Y TRECE NO LLEVABAN
+CORTE.** No es una caida de publicacion, porque no publique nada antes de mirar,
+pero **si es una prediccion mia que salio mal**: escribi la tabla del barrido
+esperando que faltaran pocas. **Faltaban trece de veinticinco movibles.** La
+corrida roja esta guardada en `docs/loop/SALIDA_V180_T3_BARRIDO_ANTES.txt`.
+
+**NINGUNA DE LAS TRES SE TAPA, Y LAS TRES TIENEN SU FICHERO.** Y las tres son de
+la misma especie, que es la que esta vuelta vino a perseguir: **predije en vez de
+medir**, tres veces, y las tres veces el instrumento me corrigio.
+
+## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE
+
+**CORRIDA ENTERA Y SOLA, Y SU SALIDA VA AQUI COMPLETA Y SIN RECORTAR.**
+Fichero: `docs/loop/SALIDA_V180_HUECO_BATERIA.txt` (**1484 bytes en disco y 1459 normalizado a LF**, **21 lineas
+no vacias**, contadas
+por `scripts/loop/cerrar_reporte.py`). **Este instrumento CAE EN ROJO si esta
+seccion se queda sin ella**, que es la cuarta de sus cuatro piezas.
+
+```
+EL HUECO DE LA BATERIA DE LA VUELTA 180, DECLARADO Y MEDIDO, CON SUS TRES
+PIEZAS JUNTAS (AUDITOR.md 6.1, y es la ULTIMA vuelta que lo declara).
+
+1. EL NOMBRE DEL FICHERO: docs/loop/SALIDA_V180_BATERIA.txt
+
+2. SUS BYTES, MEDIDOS POR LAS DOS CONVENCIONES:
+   existe en disco: NO
+   bytes en disco (os.path.getsize): NO EXISTE, o sea 0 bytes por no haber fichero
+   bytes en git (git cat-file -s HEAD:<ruta>): NO ESTA EN HEAD
+
+3. LA ATRIBUCION: NADIE LA CORRIO EN LA VUELTA 180, y no es un olvido.
+   La cadencia esta adjudicada en el acta 176 punto 7.8 y reconfirmada en
+   el acta 178 punto 11 y en el acta 179 punto 11: LA BATERIA CORRE CADA
+   CINCO, EN VUELTA PROPIA, Y LA PROXIMA ES LA 181. El encargo de esta
+   vuelta lo repite con todas las letras y anade que ESTA ES LA ULTIMA QUE
+   LO DECLARA. Ni el ejecutor ni el auditor la corrieron en la 180.
+
+Y LO QUE SI CORRIO DE LA BATERIA EN ESTA VUELTA, DICHO PARA NO CONFUNDIR:
+   la GUARDA DEL SUJETO CONGELADO, que corre sola con --sujeto-congelado y
+   no es la bateria. Su salida es docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt
+   docs/loop/SALIDA_V180_T2C_GUARDA_DESPUES.txt -> existe: SI | bytes en disco: 1665
+   y UN TRAMO de la bateria, corrido SOLO para ver el cableado en vivo:
+   docs/loop/SALIDA_V180_T2C_TRAMO_CABLEADO.txt -> existe: SI | bytes en disco: 4128
+   ESO NO ES LA BATERIA Y NO SE PUBLICA COMO TAL: son 2 entradas de 104,
+   y su propio verde dice VERDE PARCIAL DEL TRAMO 1 DE 52.
+```

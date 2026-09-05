@@ -1,0 +1,54 @@
+==============================================================================
+LAS TRES COPIAS DEL REPORTE DE LA VUELTA 180, COTEJADAS BYTE A BYTE
+==============================================================================
+
+FICHERO PROPIO Y FUERA DEL REPORTE, que es donde el encargo lo manda: un
+reporte que se coteja a si mismo dentro de si mismo no prueba nada.
+
+1. EL ARBOL DE TRABAJO
+   ruta o ref: docs/loop/REPORTE.md
+   bytes en disco (crudos): 63677
+   bytes normalizados a LF: 63677
+   sha256 crudo:            bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   sha256 normalizado a LF: bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   saltos de linea: 941
+   primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+2. GIT, en el commit que lo lleva
+   ruta o ref: 51976fbf9ca3:docs/loop/REPORTE.md
+   bytes en disco (crudos): 63677
+   bytes normalizados a LF: 63677
+   sha256 crudo:            bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   sha256 normalizado a LF: bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   saltos de linea: 941
+   primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+3. EL ARCHIVO
+   ruta o ref: docs/loop/reportes/REPORTE_V180.md
+   bytes en disco (crudos): 63677
+   bytes normalizados a LF: 63677
+   sha256 crudo:            bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   sha256 normalizado a LF: bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+   saltos de linea: 941
+   primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+EL COTEJO, POR LA CONVENCION NORMALIZADA A LF, QUE ES LA UNICA QUE PUEDE
+COMPARAR UN BLOB DE GIT CON UN FICHERO DE DISCO EN UN REPO CON autocrlf:
+   1 contra 2: IDENTICAS
+   2 contra 3: IDENTICAS
+   1 contra 3: IDENTICAS
+
+CIFRA copias cotejadas: 3
+CIFRA sha256 distintos entre las tres: 1
+
+VERDE: LAS TRES COPIAS CALZAN BYTE A BYTE. sha256 (LF) bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+SERIAN CINCO VUELTAS SEGUIDAS: 176, 177, 178, 179 y 180. Esa racha NO se
+afirma aqui de memoria, se comprueba abajo contando el directorio.
+
+LA RACHA, CONTADA DEL DIRECTORIO Y NO AFIRMADA:
+   CIFRA reportes archivados en docs/loop/reportes: 12
+   REPORTE_V176.md      existe: SI  | bytes en disco: 95231
+   REPORTE_V177.md      existe: SI  | bytes en disco: 53201
+   REPORTE_V178.md      existe: SI  | bytes en disco: 59617
+   REPORTE_V179.md      existe: SI  | bytes en disco: 54466
+   REPORTE_V180.md      existe: SI  | bytes en disco: 63677
