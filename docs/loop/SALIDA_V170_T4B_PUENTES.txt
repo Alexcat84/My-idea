@@ -1,0 +1,82 @@
+==============================================================================
+VUELTA 170, TAREA 4.b: LOS PUENTES DEL SALES ROADMAP, REGISTRADOS Y NO
+EJECUTADOS
+==============================================================================
+
+A) LA NOMINA, PARSEADA DE SU FICHERO Y NO TECLEADA
+   scripts/vuelta16_generar_actos.mjs: 6 nominas
+   la PRIMERA, el lote del sales roadmap: 6 miembros escritos
+      customer_validation_sales_roadmap
+      estrategia_de_ventas
+      hoja_de_ruta_de_ventas
+      refinar_sales_roadmap
+      sales_roadmap
+      sales_roadmap_vs_sales_force
+
+B) LOS PARES, CON EL RESOLUTOR DELANTE (P.1)
+   miembros escritos 6 | vivos tras resolver 6 | colapsados 0
+   CIFRA pares posibles entre los vivos: 15
+
+C) LAS CLASES, DE SUS DOS SEDES
+   sede 1, docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 10 pares
+   sede 2, docs/plan/LD_SALES_ROADMAP.md: 5 cabeceras LD
+   CIFRA pares con clase: 15 de 15
+   CIFRA pares SIN clase: 0
+      D   LD-66                   customer_validation_sales_roadmap contra estrategia_de_ventas
+      D   cola, puesto 872        customer_validation_sales_roadmap contra hoja_de_ruta_de_ventas
+      D   cola, puesto 1023       customer_validation_sales_roadmap contra refinar_sales_roadmap
+      D   LD-67                   customer_validation_sales_roadmap contra sales_roadmap
+      A   cola, puesto 319        customer_validation_sales_roadmap contra sales_roadmap_vs_sales_force
+      A   LD-68                   estrategia_de_ventas contra hoja_de_ruta_de_ventas
+      D   LD-69                   estrategia_de_ventas contra refinar_sales_roadmap
+      A   cola, puesto 966        estrategia_de_ventas contra sales_roadmap
+      D   LD-70                   estrategia_de_ventas contra sales_roadmap_vs_sales_force
+      A   cola, puesto 200        hoja_de_ruta_de_ventas contra refinar_sales_roadmap
+      A   cola, puesto 255        hoja_de_ruta_de_ventas contra sales_roadmap
+      D   cola, puesto 1330       hoja_de_ruta_de_ventas contra sales_roadmap_vs_sales_force
+      A   cola, puesto 192        refinar_sales_roadmap contra sales_roadmap
+      A   cola, puesto 918        refinar_sales_roadmap contra sales_roadmap_vs_sales_force
+      D   cola, puesto 1306       sales_roadmap contra sales_roadmap_vs_sales_force
+
+D) LOS PUENTES DE P.10, COMPUTADOS DE ESAS CLASES
+   P.10: un nodo con A hacia dos nodos que entre si dan D.
+   CIFRA puentes: 5
+      puente `hoja_de_ruta_de_ventas` sobre (`estrategia_de_ventas` , `refinar_sales_roadmap`)
+      puente `refinar_sales_roadmap` sobre (`hoja_de_ruta_de_ventas` , `sales_roadmap_vs_sales_force`)
+      puente `refinar_sales_roadmap` sobre (`sales_roadmap` , `sales_roadmap_vs_sales_force`)
+      puente `sales_roadmap` sobre (`estrategia_de_ventas` , `refinar_sales_roadmap`)
+      puente `sales_roadmap_vs_sales_force` sobre (`customer_validation_sales_roadmap` , `refinar_sales_roadmap`)
+   CONTRASTE, y es contraste y no fuente: el reporte de la 169 y el acta
+   169 dicen CINCO. Yo computo 5, CALZA
+   CIFRA pares con MAS DE UN puente encima (costura, por P.10): 1
+      sobre (`estrategia_de_ventas` , `refinar_sales_roadmap`) hacen de puente: hoja_de_ruta_de_ventas, sales_roadmap
+
+E) LA BUSQUEDA NEGATIVA, CON SU COMANDO (EJECUTOR.md 9)
+   'una busqueda negativa no se puede citar', asi que se barre y se nombra
+   lo que salga. Se buscan los 6 nodos vivos en los campos `nodos`,
+   `preservar`, `eliminar` y `superviviente` de TODAS las fichas.
+   CIFRA fichas barridas: 71
+   CIFRA fichas que NOMBRAN alguno de estos nodos como sujeto de fusion: 0
+
+F) LO QUE SE VA A REGISTRAR, Y LO QUE NO SE VA A HACER
+   SE REGISTRA: los 5 puentes con su medicion y con la salida de P.10
+   nombrada (su TERCERA fila: fundir solo el subconjunto CERRADO y
+   enlazar el resto).
+   NO SE EJECUTA: ninguna fusion, ningun nodo, ninguna arista.
+   MOTIVO, y es de AUDITOR.md seccion 3: ninguna operacion escrita ordena esta fusion
+
+G) LA GUARDA DE ADICION
+   la nota pasa de 3106 a 5578 caracteres, y SOLO CRECE: True
+   la nota vieja sigue entera dentro: True
+
+H) EL ESQUEMA NO CRECE Y NADA MAS SE MUEVE
+   claves antes 18, despues 18 | campos movidos de mas: 0 []
+   estado antes 'LISTA', despues 'LISTA'
+
+I) ESCRITO, Y RECONTADO DESPUES DE ESCRIBIR
+   CIFRA fichas antes 71, despues 71
+   OP-L-02 sigue en la linea 42: True
+   CIFRA caracteres de la nota en disco: 5578
+   los 5 puentes se nombran en la nota de disco: 5 de 5
+
+VERDE: los 5 puentes quedan REGISTRADOS y SIN EJECUTAR.

@@ -1,0 +1,76 @@
+==============================================================================
+VUELTA 170, TAREA 4.a: LAS LECTURAS DE LA SEGUNDA TANDA SIN NUMERO LD
+==============================================================================
+
+A) LA SEGUNDA TANDA, ACOTADA ANTES DE CONTAR NADA
+   docs/plan/LECTURAS_DIRIGIDAS.md: 2079 lineas
+   segunda tanda: lineas 327 a 518
+
+B) SUS TABLAS DE LECTURA, LOCALIZADAS POR SU CABECERA `| par | clase |`
+   CIFRA tablas de lectura halladas: 3
+      linea 400, bajo 'LOS CUADRANTES DE MERCADO: 15 de 15, y cae'
+      linea 435, bajo 'LA ECUACION DE VALOR: 10 de 10, y cae'
+      linea 467, bajo 'LA SUPERVISION DE LA IA, bloque humano: 10 de 10, y cae'
+
+C) LAS FILAS, UNA A UNA, CONTADAS DEL FICHERO
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 402   D   SIN NUMERO  `clasificacion_mercados_cadena_suministro` contra `cuatro_capacidades_
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 403   D   SIN NUMERO  `clasificacion_mercados_cadena_suministro` contra `cuatro_categorias_d
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 404   D   SIN NUMERO  `cuatro_capacidades_mercado` contra `modelo_cuadrantes_mercado`
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 405   D   SIN NUMERO  `cuatro_categorias_desempeno_cadena_suministro` contra `estrategia_cua
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 406   D   SIN NUMERO  `cuatro_categorias_desempeno_cadena_suministro` contra `marco_analisis
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 407   D   SIN NUMERO  `cuatro_categorias_desempeno_cadena_suministro` contra `modelo_cuadran
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 408   D   SIN NUMERO  `estrategia_cuatro_capacidades_mercado` contra `marco_analisis_mercado
+   LOS CUADRANTES DE MERCADO: 15 de 1 linea 409   A   SIN NUMERO  **`marco_analisis_mercado_cadena_suministro` contra `modelo_cuadrantes
+   LA ECUACION DE VALOR: 10 de 10, y  linea 437   D   SIN NUMERO  `construccion_de_valor_percibido` contra `ecuacion_de_valor_cliente`
+   LA ECUACION DE VALOR: 10 de 10, y  linea 438   A   SIN NUMERO  **`construccion_de_valor_percibido` contra `ecuacion_de_valor_venta`**
+   LA ECUACION DE VALOR: 10 de 10, y  linea 439   D   SIN NUMERO  `construccion_de_valor_percibido` contra `prevencion_objeciones_vs_man
+   LA ECUACION DE VALOR: 10 de 10, y  linea 440   D   SIN NUMERO  `ecuacion_de_valor` contra `prevencion_objeciones_vs_manejo`
+   LA ECUACION DE VALOR: 10 de 10, y  linea 441   D   SIN NUMERO  `ecuacion_de_valor_venta` contra `prevencion_objeciones_vs_manejo`
+   LA SUPERVISION DE LA IA, bloque hu linea 469   D   SIN NUMERO  `alineacion_etica_ia_negocio` contra `mitigar_falling_asleep_wheel`
+   LA SUPERVISION DE LA IA, bloque hu linea 470   D   SIN NUMERO  `alineacion_etica_ia_negocio` contra `riesgo_sobredependencia_ia`
+   LA SUPERVISION DE LA IA, bloque hu linea 471   D   SIN NUMERO  `principio_humano_en_el_loop` contra `riesgo_sobredependencia_ia`
+   CIFRA filas de lectura en la segunda tanda: 16
+   CIFRA de ellas SIN numero LD: 16
+      LA ECUACION DE VALOR: 10 de 10, y cae    5
+      LA SUPERVISION DE LA IA, bloque humano:  3
+      LOS CUADRANTES DE MERCADO: 15 de 15, y c 8
+
+   CONTRASTE CON LA PROSA DE LA PROPIA TANDA, Y ES CONTRASTE Y NO FUENTE:
+      la tanda dice literalmente: **SE LEEN DIECISEIS.** Los cinco de sales roadmap **no**, y el motivo se escribe
+      yo cuento 16 filas sin numero, CALZA
+
+D) LA SERIE LD ENTERA, CON EL INSTRUMENTO DE LA CASA CORRIDO HOY
+   comando: python scripts/loop/vuelta48_contar_ld.py
+   CIFRA lecturas dirigidas HECHAS (con seccion propia): 82
+   rango del universo: LD-01 a LD-138
+   CIFRA huecos en el rango: 54
+   CIFRA tramos corridos de huecos: 2
+      LD-12 a LD-27, 16 numeros
+      LD-100 a LD-137, 38 numeros
+
+E) LOS DOS CAMINOS, MEDIDOS LOS DOS, Y NINGUNO ELEGIDO AQUI
+   CAMINO 1, LA VARA LITERAL DEL ENCARGO (la de serie_de_registros.py,
+   'el siguiente libre' = el mayor mas uno):
+      LD-139 a LD-154
+      LO QUE TIENE A FAVOR: es la vara que el encargo nombra por su
+      nombre, y no inventa ninguna regla.
+      LO QUE TIENE EN CONTRA: pone lecturas del 11 ago 2026 DESPUES de
+      LD-138, que es de una tanda muy posterior, y deja los 54 huecos
+      donde estan.
+
+   CAMINO 2, RELLENAR EL TRAMO QUE ENCAJA:
+      LD-12 a LD-27, que son EXACTAMENTE 16 numeros, los mismos que filas sin numero.
+      LO QUE TIENE A FAVOR: el tramo empieza donde acaba la primera
+      tanda (LD-11) y acaba donde empieza la tercera (LD-28), o sea
+      que es el sitio cronologico exacto de estas lecturas, y el
+      tamano coincide al numero.
+      LO QUE TIENE EN CONTRA: 'rellenar huecos' NO es lo que
+      serie_de_registros.py hace, y adoptarlo seria REGLA NUEVA.
+
+F) EL VEREDICTO DE ESTE INSTRUMENTO
+   NO SE ESCRIBE NINGUNA NUMERACION. Los dos caminos dan numeros
+   DISTINTOS para las mismas 16 lecturas, la diferencia es visible
+   (LD-139..LD-154 contra LD-12..LD-27) y elegir entre ellos es
+   escribir una regla que no existe. EJECUTOR.md 5: no se inventan
+   reglas; y el propio encargo dice PARAS Y LO TRAES si el instrumento
+   dice algo distinto de lo que el supone. Se trae como PARADA.
