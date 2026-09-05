@@ -1,0 +1,66 @@
+MIS OCHO CLASES, ESCRITAS ANTES DE ABRIR EL DESTAPE
+auditor de la vuelta 173. Sujeto aislado por scripts/loop/aislador_de_ciega.py
+con semilla 174 sobre el tramo 1 a 1085.
+
+puesto 10   decide_criterio_eleccion_proveedor vs domina_lo_que_compras
+  MI CLASE: D
+  uno FIJA EL CRITERIO de eleccion (riesgo, tres a cinco criterios, razon del
+  proveedor unico); el otro REUNE INFORMACION de mercado (precios de
+  referencia, condiciones normales del rubro, competidores del proveedor).
+  Mismo momento, accion distinta.
+
+puesto 50   usa_preguntas_de_como_para_negociar_precio vs usa_silencio_no_partas_diferencia
+  MI CLASE: D
+  EL MAS DISCUTIBLE DE LOS OCHO. Los dos son tacticas de la misma escuela y el
+  silencio aparece en los dos: paso 3 de A y paso 2 de B. Pero el nucleo de A
+  es la pregunta calibrada de 'como' y el de B es el minimo escrito, el silencio
+  tras la oferta y el no partir la diferencia. El silencio es apoyo en A y
+  nucleo en B; ningun nodo es el paso del otro.
+
+puesto 140  decide_criterio_eleccion_proveedor vs prepara_posicion_agenda_antes_negociar
+  MI CLASE: D
+  EL SEGUNDO MAS DISCUTIBLE. Solapan de verdad en un paso: 'anota tres a cinco
+  criterios ademas del precio' contra 'escribe todos tus objetivos, no solo el
+  precio'. Pero A decide A QUIEN COMPRAR y B prepara LA REUNION (quien decide
+  del otro lado, como le va a su negocio, la agenda enviada, abrir tu la
+  reunion). Momentos distintos con un paso comun.
+
+puesto 462  crowdfunding_legal_exemptions_jobs_act vs equity_crowdfunding
+  MI CLASE: A
+  REPITE. Acreditado o no acreditado, no publicitar salvo excepcion, elegir la
+  excepcion de registro ante la SEC y consultar abogado de valores estan en los
+  dos, en el mismo orden. Lo que sobra en cada uno (el Titulo III y su portal en
+  A, los syndicates de AngelList en B) es detalle sobre la misma instruccion.
+
+puesto 496  customer_discovery_cuatro_fases vs customer_discovery_phase2_problem_test
+  MI CLASE: B
+  DUDOSO, Y ES DISCUTIBLE. Es el entero contra su parte: el paso 2 de A ('sal a
+  probar tus hipotesis de problema hablando con clientes reales') es el nodo B
+  completo. No lo llamo A porque B desarrolla la fase con cinco pasos propios
+  que A no tiene, ni D porque la contencion es literal.
+
+puesto 737  pivotar_o_perseverar vs pivote_startup
+  MI CLASE: A
+  REPITE. La misma decision con los mismos pasos: mirar la evidencia de las
+  metricas o de las pruebas, decidir pivote o perseverar, y volver a probar el
+  modelo ajustado. Los nombres son sinonimos y ninguno de los dos añade un
+  momento que el otro no tenga.
+
+puesto 906  decision_consciente_de_crecimiento vs eleccion_ritmo_crecimiento
+  MI CLASE: D
+  La misma pregunta con insumos opuestos: A mira HACIA DENTRO (capacidad,
+  flujo de caja, burn rate, plan de contratacion) y B mira HACIA FUERA
+  (competencia, momento del ciclo, financiamiento que calce). Las acciones no
+  se pisan.
+
+puesto 1017 funnel_get_customers_optimizacion vs herramientas_de_activacion_web
+  MI CLASE: D
+  Etapas distintas del mismo embudo: A OPTIMIZA la captacion (escalar el
+  programa productivo, tests pass/fail, LTV, las 10 a 12 metricas) y B lista
+  HERRAMIENTAS de activacion (demo de un minuto, prueba gratuita, chat,
+  landing por fuente). No comparten ni un paso.
+
+EXPOSICION QUE DECLARO ANTES DE DESTAPAR: al buscar la taxonomia de clases en
+docs/BANCO_DE_TEXTOS.md vi una linea de grep que nombra el puesto 1077 y la
+clase C para herramientas_de_activacion_web contra otro nodo. Es OTRO puesto,
+no el 1017, y no abri la seccion. Lo digo por si alguien cree que me ayudo.
