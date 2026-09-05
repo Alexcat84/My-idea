@@ -1,0 +1,104 @@
+=== CASO POSITIVO POR MUTACION DEL ARCHIVADOR (EJECUTOR.md 1, 'EL CASO ROJO SE PRUEBA POR MUTACION') ===
+
+--- MUTACION 1: pedir la vuelta 168 apuntando al commit que lleva el reporte de la 169.
+--- El instrumento tiene que CAER y no escribir nada. Si saliera verde, archivaria
+--- un reporte bajo un numero que no es el suyo, que es justo lo que la guarda existe para impedir.
+==============================================================================
+ARCHIVADOR DE REPORTES. Vuelta 168.
+El texto se lee de git, no del arbol de trabajo.
+==============================================================================
+  commit nombrado a mano: a77b206fe035cd1b4355f4f6a88e91e3352bdb75
+  asunto de ese commit: 2026-09-04 20:58:10 -0400	VUELTA 169 CERRADA: LAS CINCO TAREAS ENTREGADAS, LA BATERIA EN VERDE TRAS TRES CORRIDAS, Y EL LOTE QUE EL ENCARGO MANDA LEER
+  vuelta LEIDA de la cabecera del texto: 169
+
+  ROJO, 2 motivo(s), y NO se escribe nada:
+     el reporte que lleva a77b206f es el de la VUELTA 169, no el de la 168: no se archiva bajo un numero que no es el suyo
+     el destino docs/loop/reportes/REPORTE_V168.md ya existe con contenido DISTINTO (en disco sha256 068fe39fb36a, recuperado sha256 262f8409de09). Se necesita --forzar para pisarlo.
+EXIT=1
+
+--- MUTACION 2: pedir la vuelta 169 apuntando al commit que lleva el reporte de la 168.
+==============================================================================
+ARCHIVADOR DE REPORTES. Vuelta 169.
+El texto se lee de git, no del arbol de trabajo.
+==============================================================================
+  commit nombrado a mano: 1eec382faf5685976fe7f69fa4c0feca25337784
+  asunto de ese commit: 2026-09-04 19:55:29 -0400	TAREA 1.b y 1.c (adjudicaciones 6.1, 6.3 y 6.9): EL REPORTE DE LA 168 QUEDA ANOTADO POR ADICION, Y ESTE COMMIT ES SU SEDE DU
+  vuelta LEIDA de la cabecera del texto: 168
+
+  ROJO, 2 motivo(s), y NO se escribe nada:
+     el reporte que lleva 1eec382f es el de la VUELTA 168, no el de la 169: no se archiva bajo un numero que no es el suyo
+     el destino docs/loop/reportes/REPORTE_V169.md ya existe con contenido DISTINTO (en disco sha256 262f8409de09, recuperado sha256 068fe39fb36a). Se necesita --forzar para pisarlo.
+EXIT=1
+
+--- MUTACION 3: destino ya existente con contenido DISTINTO (se corrompe la copia de la 168 y se re archiva sin --forzar).
+==============================================================================
+ARCHIVADOR DE REPORTES. Vuelta 168.
+El texto se lee de git, no del arbol de trabajo.
+==============================================================================
+  commit nombrado a mano: 1eec382faf5685976fe7f69fa4c0feca25337784
+  asunto de ese commit: 2026-09-04 19:55:29 -0400	TAREA 1.b y 1.c (adjudicaciones 6.1, 6.3 y 6.9): EL REPORTE DE LA 168 QUEDA ANOTADO POR ADICION, Y ESTE COMMIT ES SU SEDE DU
+  vuelta LEIDA de la cabecera del texto: 168
+
+  ROJO, 1 motivo(s), y NO se escribe nada:
+     el destino docs/loop/reportes/REPORTE_V168.md ya existe con contenido DISTINTO (en disco sha256 f24273e39319, recuperado sha256 068fe39fb36a). Se necesita --forzar para pisarlo.
+EXIT=1
+
+--- MUTACION 4: la misma, ahora CON --forzar. Tiene que salir verde y dejar el fichero como estaba.
+==============================================================================
+ARCHIVADOR DE REPORTES. Vuelta 168.
+El texto se lee de git, no del arbol de trabajo.
+==============================================================================
+  commit nombrado a mano: 1eec382faf5685976fe7f69fa4c0feca25337784
+  asunto de ese commit: 2026-09-04 19:55:29 -0400	TAREA 1.b y 1.c (adjudicaciones 6.1, 6.3 y 6.9): EL REPORTE DE LA 168 QUEDA ANOTADO POR ADICION, Y ESTE COMMIT ES SU SEDE DU
+  vuelta LEIDA de la cabecera del texto: 168
+  ESCRITO: docs/loop/reportes/REPORTE_V168.md
+
+  VERDE.
+     vuelta            168
+     commit de origen  1eec382faf5685976fe7f69fa4c0feca25337784
+     ruta de origen    docs/loop/REPORTE.md
+     destino           docs/loop/reportes/REPORTE_V168.md
+     bytes             31263
+     lineas            530
+     sha256 (LF)       068fe39fb36a4209cc6cba5893d1e4150bc468c92d3dde205c2bf405cb01a2cb
+EXIT=0
+
+--- COMPROBACION FINAL: el fichero restaurado es identico byte a byte al de antes de la mutacion.
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/_v168_intacto.md'
+
+--- CONTROL VERDE (para que la prueba no sea solo de rojos): el par correcto sigue saliendo verde.
+==============================================================================
+ARCHIVADOR DE REPORTES. Vuelta 169.
+El texto se lee de git, no del arbol de trabajo.
+==============================================================================
+  commit nombrado a mano: a77b206fe035cd1b4355f4f6a88e91e3352bdb75
+  asunto de ese commit: 2026-09-04 20:58:10 -0400	VUELTA 169 CERRADA: LAS CINCO TAREAS ENTREGADAS, LA BATERIA EN VERDE TRAS TRES CORRIDAS, Y EL LOTE QUE EL ENCARGO MANDA LEER
+  vuelta LEIDA de la cabecera del texto: 169
+  el destino docs/loop/reportes/REPORTE_V169.md YA EXISTE con contenido IDENTICO (sha256 262f8409de09)
+
+  VERDE.
+     vuelta            169
+     commit de origen  a77b206fe035cd1b4355f4f6a88e91e3352bdb75
+     ruta de origen    docs/loop/REPORTE.md
+     destino           docs/loop/reportes/REPORTE_V169.md
+     bytes             43586
+     lineas            724
+     sha256 (LF)       262f8409de097e600d005dc2a003b22facf3d2adfbcbb37d1e29ce1c740a7fdc
+EXIT=0
+
+--- CORRECCION DECLARADA POR ADICION: la COMPROBACION FINAL de arriba murio por una ruta
+--- /tmp que python no ve en Windows. El parrafo de arriba NO se borra. Se rehace aqui con
+--- sha256sum, y ademas el dato ya estaba probado: la MUTACION 4 imprime sha256 068fe39fb36a,
+--- que es el mismo que imprimio el archivado original de la 168 antes de corromperlo.
+
+sha256 del blob de 1eec382f (la vara, leida de git):
+068fe39fb36a4209cc6cba5893d1e4150bc468c92d3dde205c2bf405cb01a2cb *-
+sha256 del fichero archivado en disco (normalizado a LF):
+068fe39fb36a4209cc6cba5893d1e4150bc468c92d3dde205c2bf405cb01a2cb
+
+sha256 del blob de a77b206f (la vara de la 169):
+262f8409de097e600d005dc2a003b22facf3d2adfbcbb37d1e29ce1c740a7fdc *-
+sha256 del fichero archivado en disco (normalizado a LF):
+262f8409de097e600d005dc2a003b22facf3d2adfbcbb37d1e29ce1c740a7fdc
