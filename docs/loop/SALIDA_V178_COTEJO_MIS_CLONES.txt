@@ -1,0 +1,121 @@
+################################################################
+# COTEJO: scripts/loop/vuelta177_apertura.py  contra  scripts/loop/vuelta178_apertura.py
+################################################################
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta177_apertura.py
+  B: scripts/loop/vuelta178_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 177, 178
+  CIFRA lineas de docstring: A 59 | B 56
+  CIFRA lineas de maquina:   A 386 | B 391
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 3336 | B 3577
+     CIFRA tipos de nodo que NO empatan: 31
+        Load                   A   803 | B   863 | diferencia +60
+        Constant               A   409 | B   452 | diferencia +43
+        Name                   A   697 | B   738 | diferencia +41
+        Call                   A   334 | B   370 | diferencia +36
+        Attribute              A   178 | B   191 | diferencia +13
+        BinOp                  A    99 | B   112 | diferencia +13
+        Tuple                  A    56 | B    69 | diferencia +13
+        Expr                   A   143 | B   152 | diferencia +9
+        In                     A    25 | B    16 | diferencia -9
+        Store                  A   174 | B   183 | diferencia +9
+        Compare                A    34 | B    26 | diferencia -8
+        Mod                    A    69 | B    76 | diferencia +7
+        Assign                 A    80 | B    84 | diferencia +4
+        Sub                    A     0 | B     4 | diferencia +4
+        Add                    A    31 | B    34 | diferencia +3
+        IfExp                  A    23 | B    26 | diferencia +3
+        For                    A    18 | B    20 | diferencia +2
+        If                     A    10 | B     8 | diferencia -2
+        List                   A    33 | B    35 | diferencia +2
+        Or                     A     4 | B     2 | diferencia -2
+   exit del instrumento: 0
+
+################################################################
+# COTEJO: scripts/loop/vuelta177_esqueleto_reporte.py  contra  scripts/loop/vuelta178_esqueleto_reporte.py
+################################################################
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta177_esqueleto_reporte.py
+  B: scripts/loop/vuelta178_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 177, 178
+  CIFRA lineas de docstring: A 52 | B 56
+  CIFRA lineas de maquina:   A 255 | B 260
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1368 | B 1380
+     CIFRA tipos de nodo que NO empatan: 3
+        Constant               A   158 | B   164 | diferencia +6
+        Load                   A   328 | B   331 | diferencia +3
+        Tuple                  A    22 | B    25 | diferencia +3
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 49
+  CIFRA tokens de maquina: A 1260 | B 1278
+  CIFRA tokens que difieren con el texto normalizado: 18
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 3
+  CIFRA LITERALES DE TEXTO:   46
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     B:79  ("1", "LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE. Cinco letras: (a) LA RELECTURA AL DOBLE DEL TRAMO DE
+     B:80  ("2", "`OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`
+     B:81  ("3", "LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la NNN qued
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+   exit del instrumento: 0
+
+################################################################
+# COTEJO: scripts/loop/vuelta177_cierre.py  contra  scripts/loop/vuelta178_cierre.py
+################################################################
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta177_cierre.py
+  B: scripts/loop/vuelta178_cierre.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 177, 178
+  CIFRA lineas de docstring: A 51 | B 50
+  CIFRA lineas de maquina:   A 68 | B 68
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : IDENTICO
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : IDENTICO
+     CIFRA nodos del arbol sin docstring: A 540 | B 540
+     LOS DOS ARBOLES SON EL MISMO ARBOL. Lo que difiera en lineas o
+     en tokens NO CAMBIA LO QUE EL PROGRAMA HACE.
+
+LA MAQUINA NO CAMBIA EN NADA, Y ESTA MEDIDO Y NO AFIRMADO.
+  CIFRA lineas de maquina que difieren: 0
+
+FIN
+   exit del instrumento: 0
+

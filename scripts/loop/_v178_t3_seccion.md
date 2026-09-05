@@ -25,8 +25,8 @@ es el aviso.
 
 Instrumento: `scripts/loop/vuelta178_tarea3_anotar_triangulos.py`. Salida:
 `docs/loop/SALIDA_V178_T3_TRIANGULOS.txt`. Registro:
-`docs/plan/OP_L_03_TRIANGULOS.jsonl`, **16 filas, 45.168 bytes en disco y 45.168
-normalizados a LF**, sha256 en disco y sha256 en LF los dos
+`docs/plan/OP_L_03_TRIANGULOS.jsonl`, **16 filas, 45.168 bytes en disco y 45.168 bytes normalizados a LF**,
+sha256 en disco y sha256 en LF los dos
 `28d4dd9d709046675d1b404bdce4fdf62a2d98c9e38085e9604f2a8f1414aca9`.
 
 **LOS TRIANGULOS NO SE TECLEAN: SE ENCUENTRAN.** El instrumento enumera las ternas

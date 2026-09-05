@@ -284,7 +284,7 @@ CAEN**, y **no lee `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en ningun caso**: fabri
 sus cinco filas.
 
 **Y LA MULETA SE BORRA, QUE ES `P.16`.** `scripts/loop/_auditor_v178_ciega.py`
-(3.479 bytes en disco y 3.479 en git, medidos en el bloque H.7 de la apertura) **ya
+(3.479 bytes en disco y 3.479 bytes en git, medidos en el bloque H.7) **ya
 no existe en el arbol**: el lanzador hace su trabajo.
 
 #### 1.e. LAS DOS DE HIGIENE, LAS DOS CON GUARDA Y NO CON FRASE
@@ -302,9 +302,9 @@ no confundir un hash corto de commit, que es identidad, con el sha de un conteni
 publican ahora las dos cifras, disco y LF.
 
 **Esto es la mitad de mi propia falta de la 177**, que declaraba publicar las dos y
-luego no lo hizo en dos celdas: un tallador en "5.001 bytes" cuando el disco decia
-5.021, y un sha `7d683eea4700f18b` que era el de LF. **Las dos cifras eran
-verdaderas y las dos hubo que ir a buscarlas.**
+luego no lo hizo en dos celdas: un tallador publicado en 5.001 bytes cuando su medicion de disco decia 5.021 bytes,
+y un sha `7d683eea4700f18b`, que es el normalizado a LF y no el de disco. **Las
+dos cifras eran verdaderas y las dos hubo que ir a buscarlas.**
 
 **(2) LA GUARDA DEL SUJETO CONGELADO, QUE LLEVA DESDE LA VUELTA 145 SIENDO UNA
 FRASE.** Ahora es un instrumento: `verificar_mutaciones_viejas.py
@@ -488,8 +488,8 @@ es el aviso.
 
 Instrumento: `scripts/loop/vuelta178_tarea3_anotar_triangulos.py`. Salida:
 `docs/loop/SALIDA_V178_T3_TRIANGULOS.txt`. Registro:
-`docs/plan/OP_L_03_TRIANGULOS.jsonl`, **16 filas, 45.168 bytes en disco y 45.168
-normalizados a LF**, sha256 en disco y sha256 en LF los dos
+`docs/plan/OP_L_03_TRIANGULOS.jsonl`, **16 filas, 45.168 bytes en disco y 45.168 bytes normalizados a LF**,
+sha256 en disco y sha256 en LF los dos
 `28d4dd9d709046675d1b404bdce4fdf62a2d98c9e38085e9604f2a8f1414aca9`.
 
 **LOS TRIANGULOS NO SE TECLEAN: SE ENCUENTRAN.** El instrumento enumera las ternas
