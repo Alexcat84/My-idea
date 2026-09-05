@@ -1,0 +1,103 @@
+CORRIDA DEL TRAMO 6 DE 9, BATERIA DE LA VUELTA 176
+lanzada por scripts/loop/vuelta176_bateria_por_tramos.py
+INICIO (reloj de pared, UTC): 2026-09-05T14:44:30Z
+RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
+==============================================================================
+==============================================================================
+LAS 88 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
+  CIFRA entradas en la nomina: 88
+  CIFRA arneses en scripts/loop/ que el censo reconoce: 150
+  EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
+  `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
+  CIFRA entradas de la nomina que el censo NO VE: 0
+  CIFRA ultima vuelta representada en la nomina: 176
+  CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: 0
+      (ninguno)
+
+  EL REPARTO EN TRAMOS (vuelta 176, TAREA 1.c). LO QUE SE PARTE ES EL
+  BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
+  DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
+  corre ENTERA en este tramo y sigue encendiendo el rojo.
+  CIFRA nomina entera: 88
+  CIFRA tamano de tramo: 10
+  CIFRA tramos del reparto (computada, no tecleada): 9
+  CIFRA TRAMO QUE SE CORRE: 6 de 9
+  CIFRA entradas de ESTE tramo: 10
+  CIFRA suma de las entradas de TODOS los tramos: 88
+      ENTRADA DEL TRAMO: vuelta163_tarea5a_mutacion_contador.py
+      ENTRADA DEL TRAMO: vuelta164_tarea1_mutacion_registro.py
+      ENTRADA DEL TRAMO: vuelta164_tarea4_mutacion_005.py
+      ENTRADA DEL TRAMO: vuelta165_tarea1_mutacion_registro.py
+      ENTRADA DEL TRAMO: vuelta165_tarea2_mutacion_censo.py
+      ENTRADA DEL TRAMO: vuelta165_tarea4_mutacion_sujeto.py
+      ENTRADA DEL TRAMO: vuelta165_tarea6_mutacion_op_l_01.py
+      ENTRADA DEL TRAMO: vuelta166_tarea1_mutacion_registro.py
+      ENTRADA DEL TRAMO: vuelta166_tarea2_mutacion_correccion.py
+      ENTRADA DEL TRAMO: vuelta166_tarea3_mutacion_retrato.py
+
+
+  vuelta163_tarea5a_mutacion_contador.py exit 0  OK                   9.0s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta164_tarea1_mutacion_registro.py  exit 0  OK                   8.9s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta164_tarea4_mutacion_005.py       exit 0  OK                   9.2s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta165_tarea1_mutacion_registro.py  exit 0  OK                   8.3s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta165_tarea2_mutacion_censo.py     exit 0  OK                   9.3s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta165_tarea4_mutacion_sujeto.py    exit 0  OK                   8.6s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta165_tarea6_mutacion_op_l_01.py   exit 0  OK                   8.3s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta166_tarea1_mutacion_registro.py  exit 0  OK                   8.0s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta166_tarea2_mutacion_correccion.py exit 1  NO MORDIO            9.6s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+      ==============================================================================
+  vuelta166_tarea3_mutacion_retrato.py   exit 0  OK                  14.1s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+
+  EL CRONOMETRO (adjudicacion 6.8 del acta 163)
+  CIFRA arneses cronometrados: 10
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 93.4
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 1.6
+  CIFRA arnes MAS LENTO: vuelta166_tarea3_mutacion_retrato.py con 14.1s
+  CIFRA arnes MAS RAPIDO: vuelta166_tarea1_mutacion_registro.py con 8.0s
+  CIFRA mediana por arnes, en segundos: 9.0
+  CIFRA arneses que pasan de 30 segundos: 0
+  LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta166_tarea3_mutacion_retrato.py          14.1s
+      vuelta166_tarea2_mutacion_correccion.py        9.6s
+      vuelta165_tarea2_mutacion_censo.py             9.3s
+      vuelta164_tarea4_mutacion_005.py               9.2s
+      vuelta163_tarea5a_mutacion_contador.py         9.0s
+      vuelta164_tarea1_mutacion_registro.py          8.9s
+      vuelta165_tarea4_mutacion_sujeto.py            8.6s
+      vuelta165_tarea1_mutacion_registro.py          8.3s
+      vuelta165_tarea6_mutacion_op_l_01.py           8.3s
+      vuelta166_tarea1_mutacion_registro.py          8.0s
+  AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
+  reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
+  de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
+  darle al menos este total con holgura: matarla antes NO es un rojo,
+  es no haberla medido.
+
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 1 (vuelta166_tarea2_mutacion_correccion.py)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 0 (ninguna)
+  RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
+  CIFRA arneses POSTERIORES a la nomina que se quedan FUERA (recomputado al cierre): 0
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0
+
+ROJO: 0 con el ancla perdida, 1 que no mordieron y 0 cuya salida sellada NO SE REPITE.
+FIN
+==============================================================================
+EXITCODE DEL TRAMO 6: 1
+FIN (reloj de pared, UTC): 2026-09-05T14:46:04Z
+DURACION DEL TRAMO (monotona, segundos): 93.5
+DURACION DEL TRAMO (monotona, minutos): 1.6
