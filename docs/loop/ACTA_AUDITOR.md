@@ -60396,3 +60396,469 @@ sesion muerta, que no es lo mismo y no se cuenta como si lo fuera.**
 
 **NO HAY PARADA. NO ESCRIBO `docs/loop/PARA_ALEXIS.md` Y ESCRIBO
 `docs/loop/PROMPT_SIGUIENTE.md` COMPLETO.** El bucle sigue.
+
+---
+
+# ACTA DEL AUDITOR, VUELTA 176 (5 sep 2026, auditor Opus 5)
+
+**LA CABECERA DE UNA LINEA: LA VUELTA 176 PAGO LA DEUDA DE LA 175 Y LA PAGO
+ENTERA. LA BATERIA CORRIO 88 DE 88 CON SU DOBLE CORRIDA, SU SALIDA TIENE CUERPO
+POR PRIMERA VEZ DESDE LA 171, Y EL REPORTE SE ABRIO Y SE CERRO EN SU MISMA
+VUELTA. RECOMPUTE TODA CIFRA QUE PUBLICA Y REPRODUCEN TODAS SALVO UNA: EL
+"DIFF SALE VACIO" DE LOS CLONES DECLARADOS, QUE NO SALE VACIO. ES CAIDA DE
+REPORTE, VIVE EN PROSA DEL CUERPO Y POR LA LETRA DEL 27 AGO NO ACUMULA. LAS DOS
+RACHAS SIGUEN EN CERO. CIEGA 7 DE 8, Y EL QUE FALLO LO FALLE YO. HAY UNA PARADA
+DEL EJECUTOR Y LA ADJUDICO SIN SUBIRLA: EL ARNES DEL ROJO SE RE-COMPUTA, NO SE
+JUBILA. NO SE CUMPLE NINGUNA CONDICION DE PARADA DE `AUDITOR.md` 4.**
+
+## 1. HUECO DE ACTA: NO
+
+La ultima cabecera escrita antes de esta es la **175**
+(`docs/loop/ACTA_AUDITOR.md:59995`) y audito la **176**, la inmediatamente
+siguiente. **Cubro una sola vuelta.** El austero sigue suspendido por su punto 5:
+**regimen completo**.
+
+## 2. LO PRIMERO, ANTES DE TOCAR NADA: EL ARBOL LLEGO CON UNA `M` Y NO ERA MUTACION
+
+`git status` me dio `M dataset/metadata/master_graph.json`, que es exactamente la
+foto con la que empezo el acta 175. **No la di por buena ni por mala: la medi.**
+
+| medicion | resultado |
+|---|---|
+| `git diff --numstat -- dataset/` | **0 filas** |
+| bytes en disco contra `git show HEAD:` | **8.375.817 = 8.375.817** |
+| sha256 disco / HEAD | **`627cc662296f7f00` / `627cc662296f7f00`** |
+| sha256 normalizado a LF, las dos puntas | **`627cc662296f7f00`** |
+
+**IDENTICOS BYTE A BYTE. La `M` es cache de `stat` por el CRLF de Windows, no una
+mutacion.** No restaure nada porque no habia nada que restaurar, y **es el mismo
+caso que la guarda nueva del ejecutor describe en su `D.4`**: `--numstat` calla,
+`git status` nombra, y solo el cotejo de blobs adjudica. **La guarda habria
+acertado sobre mi arbol de hoy**, y eso pesa en la adjudicacion del `D.4`.
+
+## 3. LA RELECTURA CIEGA, AISLADA ANTES QUE NADA Y DE UN SOLO TIRO
+
+**SE CORRIO ANTES DE GATE 0, ANTES DE LA VARA, ANTES DE LOS ARNESES, ANTES DEL
+TALLADOR Y ANTES DEL RECOMPUTO**, con `scripts/loop/aislador_de_ciega.py`, **un
+solo tiro y me quede con lo que salio**. Criterio escrito: `--desde 1 --hasta
+1085 --muestra 8 --semilla 17600`, el tramo que sigue **en relectura al doble**.
+Ciega en `docs/loop/SALIDA_V176_AUD_CIEGA.txt` (10.833 bytes), **mis clases
+selladas antes de destapar** en `docs/loop/SALIDA_V176_AUD_MIS_CLASES.txt` (4.432
+bytes), destape en `docs/loop/SALIDA_V176_AUD_DESTAPE.txt`. **Fugas del destape
+en la ciega: 0.**
+
+| puesto | mi clase | el archivo | calza |
+|---:|:-:|:-:|:-:|
+| 72 | D | D | SI |
+| 283 | D | D | SI |
+| 387 | **A** | **A** | SI |
+| 428 | D | D | SI |
+| 458 | D | D | SI |
+| 491 | **A** | **D** | **NO** |
+| 607 | D | D | SI |
+| 988 | D | D | SI |
+
+**SIETE DE OCHO. LA DISCREPANCIA ES MIA Y EL ARCHIVO TIENE RAZON.**
+
+**EL `491`, SIN EXCUSA.** `clausula_no_shop_adquisicion` contra
+`no_shop_agreement`. Dije **A** porque los dos nombran la misma clausula, los dos
+abren fijando el plazo y los dos cierran con que pasa si la operacion no llega.
+**El archivo dice D y su razon es mejor que la mia: es la misma clausula en DOS
+TRANSACCIONES DISTINTAS**, la venta de la empresa contra la ronda de
+financiamiento. **Y lo peor es que la prueba estaba dentro de la ciega, en los
+pasos que yo tenia delante:** el paso 4 de A ofrece como excepcion *"rondas de
+financiamiento durante el periodo de no-shop"*, que solo tiene sentido si el
+comprador NO es el inversor; y el paso 2 de B ata el suyo a la firma del *term
+sheet*. **Los dos consejos no son intercambiables y yo los di por
+intercambiables leyendo el titulo.** Es la caida de superficie que el acta 175 se
+felicitaba por haber evitado; hoy la comete el que la escribio.
+
+**EL ARCHIVO NO FALLO NINGUNA DE LAS OCHO.**
+
+## 4. LA VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**LA IDENTIDAD.** Rama `pasada-unica`. Sellos leidos de sus ficheros: apertura
+`e8638442` (que es el commit del acta 175, cotejado con `git log -1`), cierre
+`fd1ea61d`. `git rev-list --count e8638442..fd1ea61d` = **13**, y los trece salen
+en el mismo orden que la tabla de la seccion 3 del reporte, hash por hash.
+
+**LA CABECERA, COTEJADA CONTRA SU INSTRUMENTO Y NO LEIDA.** Corri
+`scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 176`
+(`docs/loop/SALIDA_V176_AUD_TALLADOR.txt`) y compare fila a fila contra el bloque
+`<!-- CABECERA TALLADA -->` del reporte: **11 filas cotejadas, 0 distintas, 0
+ausentes. CABECERA IDENTICA AL TALLADOR.**
+
+**GATE 0, EL CICLO ENTERO Y EN SU ORDEN, CORRIDO POR MI**, nunca `run_phase1`
+suelto:
+
+| paso | mi resultado | el reporte |
+|---|---|---|
+| `run_phase1.py --reaplico-curaduria` | **GATE 0: OK** | OK |
+| `etiquetas_de_cara.py --aplicar` | 71 etiquetas, escrito | (paso 2) |
+| `sync_assets_web.py` | 6 assets sincronizados | (paso 3) |
+| `git diff HEAD --numstat -- dataset/ web/ engine/` | **0 filas** | 0 filas |
+| `engine/run_all_tests.py` | **25/25** | 25/25 |
+| `npx tsc --noEmit` | **EXITCODE 0, cero lineas** | EXITCODE 0 |
+| `npx vitest run` | **82 passed (82) / 1040 passed (1040)** | 82 / 1.040 |
+
+**EL MARCADOR, RECOMPUTADO DEL ARCHIVO CON MI PROPIO CONTEO:** total **3.388**,
+**A 551, B 72, C 5, D 2.760**. Puestos de **1 a 3.388**, **cero huecos y cero
+duplicados**. Calza con la cabecera del reporte.
+
+**LA BATERIA, RECONTADA DE SUS NUEVE FICHEROS DE TRAMO Y NO DEL REPARTO:**
+
+| lo que verifique | mi medicion | el reporte |
+|---|---|---|
+| bytes de `SALIDA_V176_BATERIA.txt` (disco / LF) | **60.197 / 60.197** | 60197 |
+| lineas / sha256 | **995 / `2f86d9e075d4e5ce`** | 995 / `2f86d9e075d4e5ce` |
+| entradas corridas / distintas / repetidas | **88 / 88 / 0** | 88, 0 repetidas |
+| de la nomina sin correr / ajenas | **0 / 0** | 0 / 0 |
+| ANCLA PERDIDA / NO REPRODUCIBLE / RUIDO | **0 / 0 / 0** | 0 / 0 / 0 |
+| CASO DECLARADO / NO MORDIO | **2 / 1** | 2 / 1 |
+| bytes y lineas de los 9 tramos | **los 18 numeros calzan uno a uno** | tabla de la seccion 2 |
+| suma del reloj de los tramos | **31,9 minutos** | 31.9 |
+
+**LOS SEIS NOMBRES QUE MI CONTEO VIO EN LA NOMINA Y NO SE CORRIERON NO SON UN
+HUECO**, y lo compruebo en vez de suponerlo: `vuelta100_tarea1_mutacion_vieja.py`,
+`vuelta110_tarea2_mutacion_dentro.py`, `vuelta115_tarea9_un_script_cualquiera.py`,
+`vuelta120_tarea3_mutacion_fuera.py`, `vuelta121_tarea4_mutacion_tambien_fuera.py`
+y `vuelta999_de_mentira_mutacion.py`. **Ninguno de los seis existe como fichero:
+son literales de prueba de dentro del propio arnes.** La nomina real es 88 y
+corrieron las 88.
+
+**LA RUTA QUE PROMETE PRUEBA ES CIFRA, APLICADA A LAS 55 RUTAS DEL REPORTE.**
+Saque las 55 rutas nombradas y las resolvi una a una: **55 existen, 0 miden cero
+bytes, 0 no existen.** (Las cinco que mi primer barrido dio por ausentes eran
+basenames sin directorio y un patron `_1..9`; resueltas: `scripts/run_phase1.py`,
+`scripts/sync_assets_web.py`, `dataset/metadata/master_graph.json`,
+`docs/plan/PASO_NODO_CALIBRADO.jsonl` y los nueve ficheros de tramo.)
+
+**LOS DOS ARCHIVADOS, MEDIDOS DE DISCO:** `reportes/REPORTE_V175.md` **5.953
+bytes, 69 lineas, sha256 `10f1d838`**; `reportes/REPORTE_V176.md` **95.231 bytes,
+1.447 lineas, sha256 `25cd5fe4f65e8786`**, e **identico byte a byte al
+`REPORTE.md` vivo**. Las dos ternas calzan con lo publicado. Cadena de
+archivados: **168, 169, 170, 171, 172, 174, 175, 176**; el hueco de la 173 sigue
+siendo un reporte que nunca se escribio y no es archivable.
+
+**LA SECCION 9 LLEVA LA BATERIA ENTERA Y SIN RECORTAR:** de las **903 lineas no
+vacias** de la salida unica, **las 903 estan dentro de la seccion 9**. No es un
+hueco declarado: es la corrida.
+
+**LA PARADA, REPRODUCIDA BAJO MI MANO Y NO CREIDA.** Corri
+`scripts/loop/vuelta166_tarea2_mutacion_correccion.py`: **exit 1**,
+`H_el_texto_nombra_las_tres FALLA (real=11 esperado=3)`, **19 casos, 18 pasan, 1
+falla**. El `3` es literal en la **linea 175** del arnes. Y el contraste tambien
+calza: en `docs/loop/SALIDA_V171_AUDITOR_BATERIA.txt` **la linea 134** dice
+`vuelta166_tarea2_mutacion_correccion.py exit 0 OK 4.5s`. **Lo que se movio
+debajo fue el registro, no el arnes.**
+
+**EL GRAFO NO SE MOVIO EN LA VUELTA:** `git diff --numstat e8638442..fd1ea61d --
+dataset/ web/ engine/` = **0 filas**. Rutas tocadas: **`docs/loop/` 29,
+`docs/loop/reportes/` 1, `scripts/loop/` 9, TOTAL 39.** Calza con el reporte.
+
+## 5. LA CAIDA DEL EJECUTOR, CON SU NOMBRE
+
+**CAIDA DE REPORTE 1: "EL DIFF SALE VACIO", Y NO SALE VACIO.** El reporte, en el
+cuerpo de la TAREA 2, publica el esqueleto como *"clon declarado y COMPROBADO: el
+`diff` con el de la 175, con todo `175` y `176` sustituido por `NNN`, sale
+VACIO"*. **Lo corri y no sale vacio: 58 lineas de diff.** Y no es solo el
+docstring: **33 lineas de la maquina difieren.**
+
+**PERO LO MEDI HASTA EL FONDO ANTES DE NOMBRARLO, PORQUE LA CIFRA CAMBIA DE
+GRAVEDAD SEGUN QUE SEA:**
+
+| fichero, con `NNN` sustituido | fichero entero | solo docstring | **solo la maquina** |
+|---|:-:|:-:|:-:|
+| `vuelta175_esqueleto_reporte.py` vs `vuelta176_...` | DIFIERE | DIFIERE | **DIFIERE (33 lineas)** |
+| `vuelta175_cierre.py` vs `vuelta176_cierre.py` | DIFIERE | DIFIERE | **VACIO** |
+
+**Y CLASIFIQUE LAS 33: SENTENCIAS DE CODIGO (flujo, llamadas, imports) = 0.
+LITERALES DE TEXTO (las dos filas de tarea y la prosa que el esqueleto escribe) =
+33.** O sea: **lo sustantivo que la frase quiere decir, "la maquina no cambia en
+nada", ES VERDAD en los dos ficheros. Lo que es falso es la comprobacion tal como
+se publica.** Y el propio `vuelta176_esqueleto_reporte.py` es **mas honesto que
+el reporte**: su docstring declara que las dos filas y los parrafos de prosa se
+tocan a mano despues del `sed`.
+
+**SU SEDE Y LO QUE ARRASTRA.** Vive en **prosa del cuerpo de la TAREA 2**, no en
+una tabla, ni en la cabecera, ni en una conclusion. Por la **letra afinada del 27
+ago 2026** (`paradas/2026-08-27-racha-parentesis-DECISION.md`): **se registra con
+su nombre, dispara la relectura al doble del tramo, y NO acumula.**
+
+**Y NO ES CAIDA DE CIFRA PUBLICADA, y digo por que en vez de dejarlo en blanco.**
+Las cuatro sedes son el veredicto, el marcador, `docs/plan/` o el banco, y los
+comentarios y docstrings de las guardas en `scripts/`. **La cuarta sede roza este
+caso**, porque la misma frase esta en los dos docstrings. **No la aplico, y el
+motivo es que aplicarla exigiria doctrina nueva**: la sede del 2 sep habla de una
+**cifra** falsa y el 5 sep la extendio a una **ruta** que promete prueba; **un
+resultado de `diff` no es ninguna de las dos, y estirarlo hasta ahi seria escribir
+doctrina, que es PARADA y no adjudicacion.** Lo trato como el fundador trato el
+*"307 nodos vivos"* de `run_phase1.py`: **se corrige por declaracion y no
+acumula**, y va encargado en la TAREA 1 de la 177.
+
+**LO QUE NO ENCONTRE, DICHO PORQUE VALE TANTO COMO LO QUE ENCONTRE:** ninguna
+otra afirmacion del reporte falla. **Reprodujeron las 55 rutas, los 18 numeros de
+los nueve tramos, las tres medidas de la salida unica, las cinco cuentas de
+veredicto, los 13 commits, las 39 rutas, el marcador entero, las siete filas de
+Gate 0, las 11 filas del tallador, las dos ternas de archivado, el reloj, la
+parada y la linea 134 de la 171.**
+
+## 6. MIS PROPIAS CAIDAS Y MIS AMAGOS
+
+**MI DISCREPANCIA DEL `491` (seccion 3) es lo mas grave que escribo hoy contra
+mi**, y baja el credito de mi tanda por la regla mecanica.
+
+**AMAGO 1, DECLARADO Y CORTADO A TIEMPO.** Empece a escribir **mi propia
+definicion de la union de aristas** en un script de una linea, que es exactamente
+la `CAIDA 1` del acta 175. **El script se rompio antes de imprimir nada y no
+publique ni una cifra de el: corri el tallador, que es el instrumento.** Lo cuento
+porque la racha de esa especie esta abierta en su primer punto y quiero que se vea
+que **no avanza por suerte, sino porque se corto**.
+
+**AMAGO 2, Y AQUI FIJO LA LINEA EN VEZ DE DEJARLA A MI JUICIO.** Antes de aislar
+la ciega corri `git log`, `git status` y la medicion de blobs de la seccion 2, y
+lei el reporte entero. **Digo la linea que aplico, para que se me pueda
+contradecir con ella delante:** la especie que el acta 173 levanto contra si misma
+es *aislar el sujeto despues de correr comandos que verifican las cifras del
+reporte*, porque el dano es **elegir el sujeto sabiendo la respuesta**. **Ni la
+identidad, ni la higiene del arbol, ni la lectura del reporte tocan el sujeto de
+la ciega**, que son pares de nodos del registro de veredictos. **No corri un solo
+comando sobre el registro, el grafo ni el marcador antes de aislar.** Cumplo la
+vara que el acta 175 fijo con sus palabras (antes de Gate 0, de la vara, de los
+arneses y del recomputo) y anoto la precision para que la proxima no dependa de mi
+criterio.
+
+**CAIDAS PROPIAS DE DICTADO ESTA VUELTA: 0.** Ninguna cifra mia sin su comando.
+
+## 7. LAS ADJUDICACIONES
+
+**7.1 `D.1`, LA COLUMNA DE APERTURA MEDIDA AL CIERRE: ACEPTADA, Y LA LECTURA QUE
+LA CAUSO QUEDA CORREGIDA.** El ejecutor leyo que el bloque de apertura entraba en
+el *"la vuelta de bateria no lleva nada mas"* de `AUDITOR.md` 6.1. **Esa lectura
+es incorrecta y la corrijo con la regla delante:** la 6.1 saca de la vuelta de
+bateria **el trabajo de plan**, no el aparato de abrir y cerrar la propia vuelta;
+si lo sacara, sacaria tambien el reporte, y la 6.1 y la 6.2 se contradirian entre
+si. **Lo hecho se acepta porque la prueba que lo sostiene es una medicion y no una
+promesa:** `git diff --numstat` entre los dos sellos da **0 filas** sobre
+`dataset/`, `web/` y `engine/`, o sea que los tres arboles que esos seis
+instrumentos leen son identicos en las dos puntas, y lo verifique yo. **Y porque
+el fichero lleva la verdad en el nombre y la declara en su primera linea**, que es
+lo contrario de esconderla. **No se repite:** la 177 corre su bloque de apertura.
+
+**7.2 `D.2`, LA NOMINA DE 87 A 88 CON EL ARNES DE SU MISMA VUELTA: ACEPTADA POR
+REGLA ESCRITA.** La regla del propio fichero desde la vuelta 148 (adjudicacion 3.5
+del acta 147) dice *"LO QUE ESTA REGLA EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA
+VUELTA ERA EL MEDIO, NO EL FIN"*, y el sujeto de
+`vuelta176_tarea1c_mutacion_tramos.py` son nominas fabricadas en memoria: **no se
+le puede mover debajo.** Verifique que la entrada esta en el diff de la nomina y
+que el fichero existe. **Y la diferencia 87 contra 88 esta bien resuelta:**
+`EJECUTOR.md` 2 manda la medicion del instrumento sobre el numero de un texto, y
+**la diferencia se declara en vez de esconderse dentro de un total**.
+
+**7.3 `D.3`, EL TAMANO DE TRAMO ELEGIDO A OJO: ACEPTADO HOY, INSTRUMENTADO
+MANANA**, y contesta la `P.3` de paso. Se acepta porque **la estimacion se publico
+ANTES de correr** y se puede contrastar (3,3 a 4,3 minutos por tramo estimados; el
+mayor real fue 15,9 y el resto entre 1,1 y 3,9). **Ese 15,9 contra los 4,3 es
+justamente por que el numero de entradas no es la vara buena.** Encargo el tope
+**por minutos**, computado del reloj medido, no elegido.
+
+**7.4 `D.4`, EL SEGUNDO MOTIVO DE ROJO DE LA GUARDA: ACEPTADO SIN RESERVA**, y
+citando la adjudicacion **5.6 del acta 175**: *anadir un control nunca ha
+necesitado permiso en esta casa*. Ensanchar una guarda **hacia mas rojo** no es
+aflojarla. **Y hoy me ha servido a mi**: mi arbol llego con la `M` de `git status`
+y cero filas de `--numstat`, y **solo el cotejo de blobs adjudica ese caso**
+(seccion 2). Su arnes prueba los tres estados por mutacion sobre un repo de git de
+verdad, **3 de 3**.
+
+**7.5 `D.5`, LA SALIDA DEL LANZADOR DENTRO DE `docs/loop/`: ACEPTADA HOY,
+CORREGIDA EN LA 177.** El ejecutor tiene razon en las dos mitades: **RUIDO DE
+CONCURRENCIA 0 en los nueve tramos, medido**, y **eso es suerte de buffer**. Un
+control que funciona por una propiedad que nadie garantiza no es un control, y eso
+es canon del banco (§9, fallar ruidoso). **Sacarla fuera es aditivo y no necesita
+doctrina.**
+
+**7.6 `D.6`, CORRER 7, 8 Y 9 DESPUES DEL ROJO DEL 6: ADJUDICO A FAVOR DEL
+EJECUTOR, Y LA AMBIGUEDAD ES MIA.** La letra (f) que yo escribi dice *"SI UN TRAMO
+SALE EN ROJO, PARA AHI Y TRAELO. No lo re-corras hasta que salga verde: la guarda
+que muerde es informacion, no un estorbo."* **Su motivo escrito es que no se
+enmascare un rojo re-corriendolo**, y el ejecutor cumplio esa garantia entera:
+**el tramo 6 esta commiteado en rojo (`cd5aa065`), sin re-correr, sin tocar ni el
+arnes ni su sujeto, y traido.** Verifique el exitcode 1 en su fichero y el commit
+en la historia. Enfrente estaba la letra del fundador de `AUDITOR.md` 6.1, **la
+bateria entera y con su doble corrida**, que es de rango superior a la redaccion
+de un encargo mio. **Pararse del todo habria dejado 28 entradas sin correr en la
+unica vuelta cuyo encargo entero es correrlas, y no habria enmascarado nada:
+habria ocultado 28 resultados.** El ejecutor eligio la lectura que cumple la letra
+del fundador conservando el motivo escrito de la mia, **y la marco como discutible
+en vez de dejar que se descubriera. Es lo correcto.** **La (f) queda reescrita en
+el encargo de la 177** para que no vuelva a tirar en dos sentidos.
+
+**7.7 `P.1`, EL ARNES DEL ROJO: ADJUDICADO, Y ES LA TERCERA SALIDA.** De las tres
+que el ejecutor plantea sin elegir, **adjudico COMPUTAR EL ESPERADO**, y las otras
+dos quedan descartadas con motivo:
+- **CASO DECLARADO queda descartado**: convertir en "declarado" un rojo que mide
+  mal es apagar la guarda, y eso es lo contrario de fallar ruidoso (banco §9).
+- **RE-ANCLAR A SUJETO CONGELADO es valido pero peor**: congela el arnes contra un
+  registro que ya no es el vivo, y el caso `H` existe para comprobar que **el
+  texto nombra TODOS los hallazgos**, cosa que solo se comprueba contra el vivo.
+- **COMPUTAR EL ESPERADO es lo que la doctrina del propio fichero pide desde la
+  vuelta 145, correccion 22**: *"Un sujeto vivo hace que el verde de una vuelta no
+  sobreviva a la vuelta"*. **Regla escrita, aplicada por extension natural: no es
+  doctrina nueva y por eso no sube al fundador.**
+- **Y NO ES PODA DE LA NOMINA**, que es lo unico que la 6.1 reserva: la entrada se
+  queda, se arregla su medicion.
+
+**Va como tarea BLOQUEANTE de la 177**: la bateria de la 181 no puede volver a
+correr con un rojo cuya causa esta adjudicada y sin remediar.
+
+**7.8 `P.2`, LA CADENCIA: TOCA LA 181, NO LA 180.** La 6.1 dice que la bateria
+corre **CADA CINCO, en una VUELTA DE BATERIA propia que no lleva nada mas**. **La
+175 no fue una vuelta de bateria: murio sin producir una linea**, y su propia
+salida quedo sin escribir. **La que la corrio fue la 176, y desde ella se cuentan
+los cinco.** Adjudico con la letra delante y sin inventar rejilla: **la proxima
+vuelta de bateria es la 181.** En las intermedias, la seccion 9 cierra con el
+**hueco declarado y medido** por el carril de la TAREA 1.b de la 173.
+
+**7.9 `PD.2`, LA REGLA DEL SUJETO CONGELADO SIN GUARDA: EL EJECUTOR TIENE RAZON Y
+LO ENCARGO.** El rojo del tramo 6 es la prueba: **la regla existe desde la vuelta
+145 y sigue siendo una frase.** Instrumentarla es aditivo y esta cubierto por el
+canon del banco §9. **Pero no cabe en el tope de dos sub-tareas de la 177 junto a
+lo demas**, asi que **queda anotado con su vuelta de destino** y no desaparece:
+entra en el encargo de la **178**.
+
+**7.10 `PD.1`, LA CONVENCION DE BYTES: SIGUE SIN FIJAR Y NO LA FIJO YO.** El
+ejecutor hace lo unico que puede sin doctrina, **publicar LAS DOS** (disco y
+normalizado a LF), y en esta vuelta coinciden porque escribe con `newline=LF`.
+**Verifique las dos en la salida unica: 60.197 y 60.197.** Sube al fundador
+(seccion 8), no lo adjudico.
+
+## 8. LO QUE SUBE AL FUNDADOR, SIN DECIDIRLO YO
+
+1. **LA CONVENCION DE BYTES.** Lleva tres actas anotada. La pregunta es de una
+   linea: **cuando esta casa publica "N bytes", ¿es el byte de disco o el
+   normalizado a LF?** Hoy coinciden porque los ficheros se escriben con LF, **o
+   sea que el dia que dejen de coincidir nadie lo va a notar**, que es la peor
+   forma de que una convencion falte.
+2. **LA BATERIA, MEDIDA POR FIN Y NO ESTIMADA.** Su decision del 5 sep se tomo
+   sobre una estimacion de **57 a 75 minutos**. **La corrida real, con la nomina
+   en 88 y la doble corrida entera, fue de 31,9 minutos en nueve tramos.** La
+   particion funciono: la vuelta no se murio. **Lo digo porque el numero que
+   motivo la decision era el doble del real, y usted decide con numeros.**
+3. **LA NOMINA SIGUE CRECIENDO Y NADIE LA PODA.** 87 a **88** esta vuelta. No
+   reabro su opcion (c), que quedo RECHAZADA; lo anoto para que el punto anterior
+   se lea con lo que viene detras.
+4. **EL REGIMEN TEMPORAL DE 6.2 NO SE LEVANTA TODAVIA, Y ESTA A UNA VUELTA.** La
+   176 cerro su propio reporte con `cerrar_reporte.py` y lo archivo en su misma
+   vuelta: **es la PRIMERA de las dos seguidas. Si la 177 tambien cierra, el tope
+   vuelve a CINCO por su propia letra**, sin que usted tenga que hacer nada.
+5. **`OP-L-03` LLEVA SIETE VUELTAS APLAZADA Y LA DESAPLAZO YO EN ESTA ACTA.** Va
+   como TAREA 2 de la 177. Lo subo para que conste que el aplazamiento se acabo
+   por decision del auditor y no por olvido.
+
+## 9. LA METRICA DE CREDITO
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | **311** |
+| puestos | 8 | **554** |
+| discrepancias DENTRO del marcado | 0 | **22** |
+| discrepancias y hallazgos FUERA del marcado | 4 | **82** |
+| caidas propias del auditor | 0 (dos amagos declarados) | (la racha de la especie SI cuenta desde el 5 sep) |
+
+**LOS OCHO PUESTOS SON 72, 283, 387, 428, 458, 491, 607 y 988.** **DENTRO DEL
+MARCADO: NINGUNA**, y el marcado de esta vuelta era **procedimental entero** (los
+seis discutibles son de metodo, ninguno de clase). **LOS CUATRO DE FUERA SON:**
+
+1. el **`491`** de la ciega, que falle yo;
+2. el **"el diff sale VACIO"** que no sale vacio, en el reporte y en los dos
+   docstrings (seccion 5);
+3. **la vara imprime SEIS fichas en LISTA sin prueba y el acta 175 publico CUATRO
+   atribuyendolo a ella.** **Lo medi antes de acusar y la conclusion se me dio la
+   vuelta:** con el mismo corte, la vara de hoy imprime **6**, y las dos de mas
+   son `OP-M-02-MEDIOS` y `OP-M-02-ADMIT`. **Enumere las 16 fichas de
+   `03_FUSIONES` y las dos son de las CINCO CONSUMIDAS por los tramos de
+   `OP-U-01`** segun el peso del acta 74 citado en
+   `docs/plan/03_FUSIONES.md:9243`, o sea **cosa juzgada por el cierre con
+   remision que el fundador firmo el 26 ago**. **El "cuatro" es correcto en el
+   fondo; lo flojo fue decir "medidas hoy por la vara" de un numero que la vara
+   no imprime.** **EL HALLAZGO REAL ES DEL INSTRUMENTO:** la vara **no distingue
+   una ficha CONSUMIDA por otra de una ficha PENDIENTE**, y por eso imprime dos
+   de mas cada vez que se corre. Anotado para la 178;
+4. **el tallador no sella su propio rechazo:** el reporte publica *"37 celdas que
+   no se pudieron leer, 18 del lado APERTURA"* y su fichero de declaracion dice
+   *"18 celdas ilegibles, las 18 del lado APERTURA"*. **No son contradictorios**
+   (37 en las dos columnas, 18 en la de apertura) **pero no puedo re-verificar el
+   37**, porque los ficheros de cierre ya existen y el tallador no dejo salida de
+   aquel rechazo. **No lo cuento como caida: lo cuento como que una cifra se
+   publico sin dejar rastro auditable**, y encargo que el rechazo se selle.
+
+**EL CREDITO DE LA TANDA BAJA, Y ES POR LO MIO.** `AUDITOR.md` 1.2 es mecanico:
+hay discrepancia fuera del marcado, luego **el tramo se relee al doble**. **SIGUEN
+DOS TRAMOS EN RELECTURA AL DOBLE:** el **1 a 1085** de la ciega (que no sale de
+ahi: hoy falle dentro de el) y el de **las cifras de bytes de `docs/loop/`** por
+el hallazgo 4.1 del acta 174. **Y se anade un tercero por la caida de la seccion
+5: las AFIRMACIONES DE CLON DECLARADO**, que a partir de hoy se releen al doble
+hasta que las compruebe un instrumento.
+
+**LAS DOS RACHAS, CON SU NOMBRE, Y LAS DOS SIGUEN EN CERO:**
+
+- **RACHA DE CIFRA PUBLICADA: CERO.** Ninguna de las cuatro sedes recibio una
+  cifra falsa: el marcador recomputa, ningun veredicto se movio, `docs/plan/` no
+  se toco en la vuelta (39 rutas, ninguna suya), y **las 55 rutas del reporte
+  existen y ninguna mide cero bytes**. La caida de la seccion 5 **no es de esta
+  especie y el motivo esta escrito** en la propia seccion 5.
+- **RACHA DE REPORTE: CERO.** La unica caida de reporte de la vuelta **vive en
+  prosa del cuerpo** y por la letra del 27 ago **no acumula**.
+- **LA ESCALADA DE `AUDITOR.md` 1.2 NO SE DISPARA**, y lo digo con la regla
+  delante y no por omision: manda encargar la operacion de codigo **cuando la
+  racha de reporte llegue a DOS**, y esta en **CERO**. Aun asi encargo el
+  instrumento del clon declarado, **no por escalada sino por adjudicacion**.
+- **LA RACHA DE MI PROPIA CAIDA.** La de **aislar tarde** sigue rota (hoy, un solo
+  tiro y antes de todo lo que toca al sujeto). La de **teclear de memoria** sigue
+  rota. La de **inventarme una definicion en vez de correr el instrumento** sigue
+  **en su primer punto**, el del acta 175: **hoy no avanza, y el amago 1 de la
+  seccion 6 cuenta como se corto.**
+- **CREDITO DE TANDA ROTO POR LA REGLA DE LAS DOS TANDAS: NO.**
+
+## 10. LAS CONDICIONES DE PARADA, RECORRIDAS UNA A UNA
+
+**DOCTRINA NUEVA NECESARIA: NO**, y con una raya declarada: **estuve a punto de
+necesitarla** para meter el `diff` falso en la cuarta sede de cifra publicada, y
+**no la escribi**, porque estirar "cifra" y "ruta" hasta "resultado de un `diff`"
+es legislar y no adjudicar (seccion 5). Las siete adjudicaciones de la seccion 7
+citan regla escrita: la 6.1 contra la 6.2 para el `D.1`, la regla del propio
+fichero desde la 148 para el `D.2`, la 5.6 del acta 175 para el `D.4`, el banco §9
+para el `D.5` y la `P.1`, la letra del 5 sep para el `D.6` y la `P.2`, y la
+correccion 22 de la vuelta 145 para el arnes del rojo.
+
+**CONTRADICCION CON REGLA VIGENTE O CIFRA PUBLICADA: NO.** Todas las cifras
+publicadas reproducen bajo mi mano salvo la de la seccion 5, que es de reporte, no
+mueve dato, y se corrige por declaracion.
+
+**DECISION DE FUNDADOR: NO.** Todo lo que encargo es **aditivo**: computar un
+esperado que hoy esta tecleado, sacar una salida de un directorio, sellar un
+rechazo, corregir dos docstrings y leer pares que llevan siete vueltas esperando.
+**No borro contenido que ninguna regla ordene borrar, no cambio el alcance, no
+gasto fuera del repo y no toco produccion. LA NOMINA NO SE PODA**, y el remedio de
+la `P.1` lo dice expresamente.
+
+**FALLO TECNICO REPETIDO: NO.** Gate 0 **verde en su ciclo entero, en su orden y
+corrido por mi**: numstat 0 filas, motor 25/25, tsc exit 0, web 82 y 1.040. **El
+rojo de la bateria no es Gate 0 en rojo**: es una guarda que mordio, que es lo que
+las guardas hacen, y su causa esta adjudicada.
+
+**CREDITO DE TANDA ROTO: NO** (seccion 9). Las dos rachas en cero.
+
+**CAMPANA CONSUMADA: NO.** **La vara de hoy imprime SEIS fichas en LISTA sin
+prueba de ejecucion; de ellas, DOS son cosa juzgada por el cierre con remision de
+la fase 03, luego el trabajo real pendiente son CUATRO:** `OP-L-01`, `OP-L-02`,
+`OP-L-03` y `OP-I-01`. Corrida esta vuelta con `--corte 8c176390`: **71 fichas, 37
+que no calzan, 24 congeladas declaradas, 12 congeladas en silencio, 1 HECHA sin
+prueba.**
+
+**CREDENCIALES AUSENTES: NO.** Ninguna suite del Gate 0 las pidio.
+
+**CIERRE DE LA FASE 03 Y DE LA FASE 05: CUMPLIDAS Y CITABLES**, no aplican aqui.
+
+**NO HAY PARADA. NO ESCRIBO `docs/loop/PARA_ALEXIS.md` Y ESCRIBO
+`docs/loop/PROMPT_SIGUIENTE.md` COMPLETO.** El bucle sigue.
