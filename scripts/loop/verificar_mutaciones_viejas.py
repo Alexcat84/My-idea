@@ -431,6 +431,12 @@ VIEJAS = [
     #     que crece despues de la corrida que la mide deja la corrida coja, y eso
     #     es justo el agujero que esta TAREA 3 cerro.
     ("vuelta168_tarea4_mutacion_op_v_01.py", False),
+    # ANADIDO EN LA VUELTA 169 (TAREA 2). Su sujeto son celdas FABRICADAS EN
+    # MEMORIA y el fichero del arnes hermano ya commiteado: CONGELADO, que es la
+    # condicion de entrada desde la letra de la vuelta 148. La propia guarda de
+    # abajo lo reclamo en la corrida 2 de esta vuelta, con estas palabras: "1
+    # arnes(es) de mutacion nacidos despues de la vuelta 168 se quedan FUERA".
+    ("vuelta169_tarea2_mutacion_reanclaje.py", False),
     # --- LOS CINCO PRE 148 QUE ENTRAN, Y ENTRAN MEDIDOS (vuelta 165, TAREA 4;
     #     adjudicaciones 6.5 y 6.6 del acta 164) --------------------------------
     #

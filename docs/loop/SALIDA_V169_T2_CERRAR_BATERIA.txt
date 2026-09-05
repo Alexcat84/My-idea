@@ -1,0 +1,30 @@
+==============================================================================
+VUELTA 169, TAREA 2: LOS DOS ROJOS QUE ESTA VUELTA SE CAUSO A SI MISMA
+==============================================================================
+
+A) LA CIFRA REAL DE LA FICHA, LEIDA HOY Y NO SUPUESTA
+   CIFRA clausulas de OP-L-01 hoy: 6
+   CIFRA que son CORRECCION DECLARADA: 3
+   CIFRA viejas que siguen enteras: 3
+
+B) LA NOMINA DE LA BATERIA: SE BUSCA EL ANCLA Y SE COMPRUEBA QUE NO ESTA YA
+   el arnes nuevo ya esta en la nomina: False
+   el ancla aparece 1 veces
+
+C) EL ARNES DE LA 165: SE BUSCAN SUS DOS SUSTITUCIONES
+   el ancla del numero de clausulas, de 5 a 6     apariciones: 1
+   el ancla de las correcciones declaradas, de 2 a 3 apariciones: 1
+
+D) LOS DOS FICHEROS SOLO CRECEN, Y LO VIEJO SIGUE CITADO
+   bateria: 67615 -> 68065 bytes
+   arnes 165: 7690 -> 8736 bytes
+   sigue citado el rotulo viejo del numero      : False
+   sigue citado el motivo viejo escrito         : True
+   sigue citado el motivo de la 168             : True
+   compile() de verificar_mutaciones_viejas.py: OK
+   compile() de vuelta165_tarea6_mutacion_op_l_01.py: OK
+
+ESCRITO: scripts/loop/verificar_mutaciones_viejas.py
+ESCRITO: scripts/loop/vuelta165_tarea6_mutacion_op_l_01.py
+VERDE: nomina ampliada y ancla de clausulas re anclada, cero comprobaciones
+       quitadas y cero CASOS_DECLARADOS nuevos.

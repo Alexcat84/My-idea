@@ -92,11 +92,25 @@ def prueba():
     # nuevas son CORRECCIONES DECLARADAS, y eso se comprueba, no se supone. Si
     # alguien reescribiera la ficha borrando el texto viejo en vez de anadir,
     # este caso caeria aunque el conteo siguiera dando cinco.
-    casos.append(("C_tiene_cinco_clausulas", len(d.get("verificacion") or []), 5))
+    # RE ANCLADO OTRA VEZ EN LA VUELTA 169 (TAREA 2), Y EL MOTIVO NO SE BORRA:
+    # este caso esperaba CINCO clausulas y hoy la ficha trae SEIS. La TAREA 4 de
+    # la vuelta 169 anadio la sexta POR ADICION, por el carril del banco 9.10 y
+    # con el texto viejo entero encima, ejecutando la clausula 3 por la
+    # adjudicacion 6.5 del acta 168. ES LA MISMA ESPECIE QUE EL RE ANCLAJE DE LA
+    # VUELTA 168, Y LA DIFERENCIA SE DICE: aquella caida tardo dos vueltas en
+    # verse porque la bateria no se corrio; esta se vio EN LA MISMA SESION que la
+    # causo, corriendo la bateria despues de escribir. EL CASO NO SE AFLOJA:
+    # sigue siendo una IGUALDAD EXACTA contra el conteo real de la ficha.
+    casos.append(("C_tiene_seis_clausulas", len(d.get("verificacion") or []), 6))
     declaradas = [c for c in (d.get("verificacion") or [])
                   if c.startswith("CORRECCION DECLARADA")]
     print("   CIFRA clausulas que son CORRECCION DECLARADA: %d" % len(declaradas))
-    casos.append(("C_dos_de_las_cinco_son_correccion_declarada", len(declaradas), 2))
+    # MISMO RE ANCLAJE (vuelta 169): la sexta clausula tambien es una CORRECCION
+    # DECLARADA, asi que este invariante pasa de DOS a TRES. Sigue siendo el
+    # invariante que el numero solo no da: si alguien reescribiera la ficha
+    # borrando el texto viejo en vez de anadir, este caso caeria aunque el
+    # conteo siguiera dando seis.
+    casos.append(("C_tres_de_las_seis_son_correccion_declarada", len(declaradas), 3))
     casos.append(("C_las_tres_viejas_siguen_enteras",
                   len([c for c in (d.get("verificacion") or [])
                        if not c.startswith("CORRECCION DECLARADA")]), 3))
