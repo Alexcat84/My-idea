@@ -1,0 +1,52 @@
+==============================================================================
+TRAMO 5 DE 9, DE LA BATERIA DE LA VUELTA 176
+==============================================================================
+  CIFRA nomina entera (leida del modulo, no tecleada): 88
+  CIFRA tamano de tramo: 10
+  CIFRA tramos del reparto (computada): 9
+  CIFRA entradas de ESTE tramo: 10
+      vuelta161_tarea1a_mutacion_alcance.py
+      vuelta162_tarea1a_mutacion_serie.py
+      vuelta162_tarea2a_mutacion_puerta.py
+      vuelta162_tarea2b_mutacion_excepcion.py
+      vuelta162_tarea3_mutacion_fila.py
+      vuelta163_tarea1b_mutacion_relectura.py
+      vuelta163_tarea1c_mutacion_tramo.py
+      vuelta163_tarea2_mutacion_nomina.py
+      vuelta163_tarea4a_mutacion_cobertura.py
+      vuelta163_tarea4b_mutacion_re_sellado.py
+
+******************************************************************************
+PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 5
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+******************************************************************************
+PASO 3. LA CORRIDA DEL TRAMO 5
+******************************************************************************
+  inicio (UTC): 2026-09-05T14:41:58Z
+  comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 5 --tamano-tramo 10
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v176_tramo5_i2cuajcg\tramo_en_curso.txt
+  destino final: docs/loop/SALIDA_V176_BATERIA_TRAMO_5.txt
+
+******************************************************************************
+PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
+        (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+******************************************************************************
+  docs/loop/SALIDA_V176_BATERIA_TRAMO_5.txt
+  CIFRA bytes en disco: 6166
+  CIFRA bytes normalizado a LF: 6166
+  CIFRA lineas: 102
+  CIFRA sha256 (LF): 90f5d8d3d7f136ba
+  CIFRA exitcode del tramo: 0
+  CIFRA duracion en minutos: 2.0
+  inicio (UTC): 2026-09-05T14:41:58Z | fin (UTC): 2026-09-05T14:43:58Z
+
+******************************************************************************
+PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 5
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+TRAMO 5 VERDE. Su salida esta sellada, medida y se puede commitear.
