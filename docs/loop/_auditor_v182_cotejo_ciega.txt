@@ -1,0 +1,60 @@
+puesto  mia    archivo  dominio
+100     D      D        compras            COINCIDE
+236     A      A        core               COINCIDE
+278     A      A        core               COINCIDE
+432     A      A        core               COINCIDE
+787     A      A        core               COINCIDE
+926     D      D        core               COINCIDE
+949     D      D        core               COINCIDE
+1012    A      D        core               <<< DISCREPA
+1126    D      D        core               COINCIDE
+1151    D      D        core               COINCIDE
+1161    D      D        core               COINCIDE
+1251    D      D        core               COINCIDE
+1274    D      D        core               COINCIDE
+1361    D      D        core               COINCIDE
+1372    D      D        core               COINCIDE
+1390    D      D        core               COINCIDE
+1487    D      D        core               COINCIDE
+1493    D      D        core               COINCIDE
+1599    D      D        core               COINCIDE
+1612    A      D        entrega            <<< DISCREPA
+1842    A      D        environmental      <<< DISCREPA
+1870    D      D        environmental      COINCIDE
+2380    D      D        health_safety      COINCIDE
+2464    A      D        quality            <<< DISCREPA
+2582    D      D        quality            COINCIDE
+2863    D      D        quality            COINCIDE
+3063    B      D        quality            <<< DISCREPA
+3081    D      D        quality            COINCIDE
+3087    A      D        quality            <<< DISCREPA
+3158    D      D        quality            COINCIDE
+
+CIFRA puestos leidos a ciegas : 30
+CIFRA COINCIDEN               : 24
+CIFRA DISCREPAN               : 6
+
+--- DISCREPANCIA puesto 1012 | mia A | archivo D | core
+    seis_canales_comunicacion_assess  vs  seis_medios_comunicacion_cliente
+    razon del archivo: La serie de los seis medios contra su instancia en la fase Assess, del mismo libro y sin arista entre ellos. seis_medios_comunicacion_cliente es la doctrina general y dice en UNA LINEA seleccionar deliberadamente que medio usar segun la fase del cliente y el efecto emocional deseado. seis_canales_comunicacion_assess trae el procedimiento de esa linea para una fase concreta: elegir dos o tres canales que tengan sentido segun el negocio y cuanto tarda alguien en decidir comprarte, preparar contenido que ENSENE algo y no solo que promocione, probar la idea primero con un grupo pequeno de prospectos, medir si mejora la conversion y como perciben la marca, y quedarse con el que mejor funcione. Po
+
+--- DISCREPANCIA puesto 1612 | mia A | archivo D | entrega
+    elegir_caja_correcta  vs  elegir_resistencia_caja_peso
+    razon del archivo: La caja correcta contra el procedimiento de su resistencia, dos fuentes del mismo dominio y sin arista entre ellas. elegir_caja_correcta dice en DOS LINEAS, usar caja de doble pared cuando el contenido sea pesado o fragil y revisar el limite de peso impreso antes de sellar; y trae lo suyo, descartar la caja gastada, aplastada o perforada; elegir el tamano que deje espacio para el relleno, y preguntar la formula de peso por volumen. elegir_resistencia_caja_peso trae el procedimiento de esas dos lineas: PESAR EL CONTENIDO COMPLETO INCLUYENDO EL RELLENO que se va a usar, BUSCAR EL SELLO DEL FABRICANTE en la caja que dice su resistencia y tipo de pared, SUBIR A PARED DOBLE SI EL CONTENIDO PESA C
+
+--- DISCREPANCIA puesto 1842 | mia A | archivo D | environmental
+    productos_de_servicio  vs  servicizacion_producto
+    razon del archivo: El producto que se recupera contra el producto que se ofrece como servicio, libros distintos y sin arista entre ellos. Lo compartido son dos ideas: cambiar la venta por renta o acceso, y explicarle al cliente que gana con eso. productos_de_servicio CIERRA EL CICLO DEL MATERIAL: ESTABLECER LA LOGISTICA DE RECUPERACION del producto al final del periodo de servicio, y disenarlo para desensamble facil y recuperacion de materiales de alta calidad. servicizacion_producto DECIDE EL NEGOCIO: IDENTIFICAR SI EL PRODUCTO PUEDE OFRECERSE COMO SERVICIO en lugar de venta directa, y CALCULAR EL BENEFICIO AMBIENTAL ESPERADO por reduccion de unidades fabricadas y transportadas. Ni la logistica de retorno ni 
+
+--- DISCREPANCIA puesto 2464 | mia A | archivo D | quality
+    cero_defectos  vs  zero_defects_concepto
+    razon del archivo: El programa completo contra el arranque a escala minima, MISMA FUENTE, Crosby, y sin arista entre ellos. cero_defectos trae EL DESPLIEGUE: comunicarlo CASO POR CASO EN VEZ DE CON MENSAJES MASIVOS, RECONOCER EL DESEMPENO DE FORMA GENUINA EVITANDO EL EFECTIVO COMO UNICO MECANISMO, y EXTENDER EL ESTANDAR A TODAS LAS AREAS Y NO SOLO A PRODUCCION. zero_defects_concepto trae DOS COSAS QUE EL OTRO NO TIENE: ELIMINAR EXPLICITAMENTE EL USO DE NIVELES DE CALIDAD ACEPTABLES como estandar, que es contra lo que Cero Defectos se define; y el arranque a escala minima, MARCAR EL DIA AUNQUE SEA CONTIGO MISMO y PONER POR ESCRITO UN COMPROMISO ENTRE TU Y LA PERSONA QUE TE AYUDA. SOLAPE DECLARADO en la fecha de
+
+--- DISCREPANCIA puesto 3063 | mia B | archivo D | quality
+    accion_correctiva_2  vs  accion_correctiva_5
+    razon del archivo: accion_correctiva_2 (Crosby, De la Deteccion a la Prevencion: observar rechazos reales como evidencia directa, ANALISIS DE TENDENCIAS PARA DETECTAR PROBLEMAS MENOS OBVIOS, determinar causa raiz sistemica no culpar individuos, implementar cambios que prevengan la recurrencia) contra accion_correctiva_5 (Crosby: documentar formalmente cada problema, revisar con frecuencia diaria, crear un chart de accion por item con problema/gravedad/causa/responsable, definir acciones de causa raiz, escalar los problemas sutiles a nivel superior, dar seguimiento hasta el cierre). MISMA FUENTE Crosby, sim_tit 52,3, sin arista. accion_correctiva_5 es identidad de gemelos con accion_correctiva_6 (2418, 'REPITE.
+
+--- DISCREPANCIA puesto 3087 | mia A | archivo D | quality
+    analisis_pareto_de_proveedores  vs  principio_pareto
+    razon del archivo: analisis_pareto_de_proveedores (Juran: recopilar datos de defectos y rechazos por proveedor/parte/proceso, clasificar perdidas con el principio 80/20, identificar los pocos proveedores que concentran los problemas, enfocar recursos en los elementos vitales, repetir el analisis por distintas dimensiones costo/modo de falla) contra principio_pareto (Juran: recopilar datos de todas las fuentes de problemas o costos de mala calidad, construir un diagrama de Pareto, priorizar los proyectos que atacan los vitales pocos antes que los utiles muchos). MISMA FUENTE Juran, sim_tit 49,5, sin arista. Ambos ya son gemelos identicos de analisis_pareto por separado (2546, 2551), pero eso no los funde entre 
+

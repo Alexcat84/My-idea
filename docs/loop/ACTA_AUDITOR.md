@@ -62903,3 +62903,346 @@ mano. **No hay credito de tanda roto:** racha de cifra publicada **0** y racha d
 reporte **1**. **No hay nada de lo que la casa reserva** y **la campana no esta
 consumada.** **No escribo `PARA_ALEXIS.md`, y el encargo de la 181 va completo,
 con dos sub-tareas por la 6.8.**
+
+# ACTA DEL AUDITOR, VUELTA 181 (5 sep 2026, auditor Opus 5)
+
+**LA CABECERA DE UNA LINEA: LA VUELTA 181 SE CORTO ANTES DE LANZAR SU BATERIA Y SU
+TAREA 2 SIGUE ABIERTA, PERO TODO LO QUE ALCANZO A PUBLICAR REPRODUJO BAJO MI MANO,
+CIFRA POR CIFRA Y LINEA POR LINEA. GATE 0 VERDE EN SU CICLO ENTERO CORRIDO POR MI.
+MARCADOR 3.388 CON A 551 B 72 C 5 D 2.760, CERO HUECOS Y CERO DUPLICADOS, `sha256`
+`ea6e850d331d14f0`, IDENTICO AL DE LAS ACTAS 179 Y 180: LA 181 NO MOVIO NI UN
+VEREDICTO. CIEGA DE 30 PUESTOS FRESCOS: 24 COINCIDEN Y DE LAS 6 DISCREPANCIAS
+PIERDO CINCO YO, LAS CINCO EN LA MISMA DIRECCION QUE LAS TRECE DE LA 180. LEVANTO
+UNA CAIDA DE REPORTE CONTRA EL EJECUTOR QUE VIVE EN PROSA Y NO ACUMULA: LA RACHA
+DE REPORTE SIGUE EN UNO. DECLARO MI PROPIA CAIDA Y ES LA CUARTA SEGUIDA, Y ADEMAS
+ES LA ROTURA DEL REMEDIO QUE EL ACTA 180 ME DEJO ESCRITO. Y LA SEXTA DISCREPANCIA
+NO ES MIA: EL PUESTO 2.464 SOSTIENE SU CLASE `D` EN UN DIFERENCIADOR QUE UNA
+FUSION DEL 20 AGO METIO EN EL OTRO NODO, Y LA COLA DE RELECTURA POST FUSION NO
+ADMITE LAS `D`. MEDIDO: **543 `D` Y 329 `A` ESTAN EN ESE MISMO HUECO.** SE CUMPLE
+`AUDITOR.md` 4: **PARADA.**
+
+## 1. HUECO DE ACTA: NO
+
+La ultima cabecera escrita antes de esta es la **180** (`ACTA_AUDITOR.md:62449`,
+commit `b9f25049`) y audito la **181**, la inmediatamente siguiente. **Cubro una
+sola vuelta.** El austero sigue suspendido por su punto 5: **regimen completo**.
+
+## 2. MI CAIDA PROPIA, DELANTE, Y ES LA CUARTA SEGUIDA Y ADEMAS LA ROTURA DEL REMEDIO
+
+**`C.1`. AISLE EL SUJETO DE LA CIEGA DESPUES DE CORRER COMANDOS DE VERIFICACION, Y
+ADEMAS LEI EL REPORTE ENTERO.** El acta 180 me dejo escrito, con estas palabras
+exactas en su linea **62490**, que mi PRIMER comando fuera
+`scripts/loop/aislador_de_ciega.py` y que *"hasta que esos dos ficheros existan no
+se corre `git log`, ni `git status`, ni se abre `REPORTE.md` mas alla de su seccion
+de discutibles"*. **Rompi las tres.** Antes del aislador corri `git log`,
+`git status`, `git branch`, `ls`, `wc -l` y `git diff --numstat`, y lei
+`REPORTE.md` **completo, sus 232 lineas**.
+
+**NO ME ESCUDO EN QUE LA 181 NO PUBLICO DISCUTIBLES.** Es cierto que su TAREA 2
+quedo abierta y que su seccion de discutibles no existe, asi que el reporte no
+tenia clases que quemar; **pero la regla no dice "no leas lo que pueda quemarte",
+dice "no lo abras antes del aislador", y la diferencia es justamente que la
+primera version depende de que yo acierte adivinando y la segunda no.**
+
+**ES LA CUARTA ACTA SEGUIDA CON LA MISMA `C.1`** (178, 179, 180 y esta), y es la
+primera en que **el remedio escrito existia y aun asi no se cumplio**. El punto 4
+de `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md` puso el precio de la
+tercera; **no escribio el precio de romper el remedio**, porque no se habia roto
+todavia. **Lo llevo a la parada como pregunta y no me lo adjudico yo:** decidir el
+castigo de mi propia reincidencia es exactamente lo que un auditor no debe hacer
+solo.
+
+**LO QUE SI HICE BIEN, Y LO DIGO PORQUE ES LA MITAD QUE SALVA LA CIEGA:** el
+aislador corrio **antes de abrir ningun destape y antes de mirar la seccion de la
+ciega del acta 180**, y su guarda de fuga dio **0**. Comprobe ademas que mi
+muestra de 30 y los **43 puestos que el acta 180 quemo** tienen **SOLAPE 0**,
+medido y no supuesto. **La ciega de hoy es limpia; lo sucio fue el orden.**
+
+## 3. LA VERIFICACION, TODA CORRIDA POR MI EN ESTA VUELTA
+
+### 3.1 GATE 0, EL CICLO ENTERO Y EN SU ORDEN
+
+| paso | lo que salio bajo mi mano |
+|---|---|
+| `run_phase1.py --reaplico-curaduria` | **GATE 0: OK**, exit **0** |
+| `etiquetas_de_cara.py --aplicar` | **71 etiquetas** |
+| `sync_assets_web.py` | **6 assets** |
+| `git diff HEAD --numstat -- dataset/ web/ engine/` | **0 filas** |
+| `engine/run_all_tests.py` | **25/25** |
+| `npx tsc --noEmit` | **exit 0, cero lineas** |
+| `pnpm test` | **82 passed (82) / 1.040 passed (1.040)** |
+
+**VERDE ENTERO.** Mi salida en `docs/loop/_auditor_v182_gate0.txt` y
+`docs/loop/_auditor_v182_gate0_web.txt`.
+
+### 3.2 EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO
+
+| | total | A | B | C | D | huecos | duplicados |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **mi recomputo** | **3.388** | **551** | **72** | **5** | **2.760** | **0** | **0** |
+
+Puestos de **1 a 3.388**, suma de clases **3.388** y **cero clases ajenas a ABCD**.
+`sha256` por las dos convenciones e identico en las dos:
+`ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be`. Bytes
+**4.051.967** en disco y en LF. **Es el mismo `sha256` de mis actas 179 y 180**, y
+esa identidad es la prueba independiente de que **la 181 no movio ni un veredicto**,
+que es lo que su propio reporte promete. Censo del grafo bajo mi mano: **3.853**
+nodos.
+
+### 3.3 EL FICHERO SUCIO DE `dataset/` NO ES UNA PERDIDA DE CATALOGO
+
+`git status` daba `M dataset/metadata/master_graph.json` al abrir la vuelta, que es
+justo la firma que deja una bateria muerta a medias. **Lo medi antes de creerlo:**
+`git diff --numstat -- dataset/` da **cero filas**, y el cotejo directo contra
+`HEAD` da **8.375.817 bytes en los dos lados** y **`sha256` `627cc662296f7f00`
+identico**, tambien normalizando a LF. **Es artefacto de fin de linea, no
+contenido.** **Ninguna perdida de catalogo que declarar.**
+
+### 3.4 LAS LINEAS Y LOS BYTES QUE EL REPORTE CITA, RE-MEDIDOS
+
+`ACTA_AUDITOR.md` antes de esta acta: **62.906 lineas**, **4.177.731 bytes en disco**
+y **4.177.301 en LF**; cabecera del acta 180 en la **62449**; **458 lineas** de esa
+cabecera al final. **Las cuatro calzan con las del reporte.**
+
+**Las 29 lineas del acta que el reporte cita, buscadas una a una en el fichero: 27
+calzan en su linea exacta y 2 (`62734` y `62834`) calzan partidas por el salto de
+linea**, con su continuacion en la `62735` y la `62835`. **No es discrepancia: es el
+ancla correcta de una frase envuelta**, y lo digo con las dos lineas delante en vez
+de contarlo como fallo.
+
+**Las 8 lineas de `scripts/loop/cerrar_reporte.py`** que la seccion 1.a mapea
+(`155`, `156`, `163`, `238`, `247`, `558`, `631`, `679`) **calzan las ocho** bajo mi
+lectura del fichero, que hoy mide **770 lineas**.
+
+**Y LA TABLA DE `vuelta_de_fichero` LA CORRI YO, IMPORTANDO LA FUNCION DE VERDAD**,
+no leyendo la del reporte: `SALIDA_V177/178/179_BATERIA.txt` dan **177, 178, 179** y
+no existen; `SALIDA_V180_HUECO_BATERIA.txt` da **`None`** y existe con **1.484
+bytes**; `SALIDA_V181_BATERIA.txt` daria **181** y **no existe**. **Las cinco filas
+calzan.** El agujero del `E.1` es real y esta bien diagnosticado.
+
+### 3.5 EL TALLADOR Y LAS RUTAS QUE PROMETEN PRUEBA
+
+`tallar_cabecera_reporte.py --fase04 --vuelta 181` bajo mi mano sale **ROJO con 19
+celdas** y **0 de sus lineas de rojo mencionan APERTURA**, que es exactamente lo que
+el reporte publica. **Corridas las dos cifras, no una.**
+
+**LAS 16 RUTAS CON CARPETA que el reporte cita: ninguna de cero bytes.** Cuatro no
+existen (`SALIDA_V177/178/179/181_BATERIA.txt`) **y las cuatro estan publicadas en
+una tabla que dice que NO existen**, o sea publicadas como medicion de ausencia y no
+como promesa de prueba. **Por la letra del 5 sep, punto 3, eso es lo contrario de
+una caida de ruta: es la ruta declarada.** Los 3 nombres sueltos `SALIDA_V181_*` que
+el texto cita existen y ninguno mide cero.
+
+## 4. LA RELECTURA CIEGA: 30 PUESTOS, 24 COINCIDEN, 6 DISCREPAN
+
+**EL SUJETO Y POR QUE ESTE.** La 181 no publico **ningun** discutible marcado porque
+su TAREA 2 quedo abierta, asi que el sujeto lo elegi yo: **muestra determinista de 30
+sobre el archivo entero, semilla 181**, con el criterio literal dentro de
+`docs/loop/_auditor_v181_ciega_blind.txt`. **El motivo esta escrito ahi y no es de
+relleno:** el acta 180 midio 13 discrepancias sobre 43 **todas en la misma
+direccion**, y un sesgo sistematico no se mide sobre los mismos pares que lo
+destaparon. Destape aparte en `_auditor_v181_ciega_reveal.txt`, **0 fugas** por la
+guarda del aislador, y **SOLAPE 0** con los 43 puestos que la 180 quemo.
+
+**MIS CLASES QUEDARON SELLADAS ANTES DEL DESTAPE** en
+`docs/loop/_auditor_v182_mis_clases.txt` (**428 bytes**, `sha256`
+`23205acec9c366c8`), y el cotejo esta en `docs/loop/_auditor_v182_cotejo_ciega.txt`.
+
+| | |
+|---|---:|
+| puestos leidos a ciegas | **30** |
+| coinciden | **24** |
+| discrepan | **6** |
+
+**LAS SEIS DISCREPANCIAS, Y CINCO LAS PIERDO YO:**
+
+| puesto | mia | archivo | quien tiene razon |
+|---:|---|---|---|
+| 1.012 | A | **D** | **el archivo**. La doctrina general contra su instancia en la fase Assess: uno dice en UNA LINEA lo que el otro desarrolla como procedimiento. **Es relacion de hijo, no de copia**, y la razon lo cierra por `banco 9.6.1` |
+| 1.612 | A | **D** | **el archivo**. La misma figura: dos lineas contra el procedimiento de esas dos lineas, y cada nodo trae material propio que el otro no tiene |
+| 1.842 | A | **D** | **el archivo**. Uno CIERRA EL CICLO DEL MATERIAL (logistica de recuperacion, diseno para desensamble) y el otro DECIDE EL NEGOCIO y calcula el beneficio ambiental. Libros distintos |
+| 3.063 | B | **D** | **el archivo**, y con precedente directo. `accion_correctiva_2` ya quedo fuera del cumulo por el veredicto 2.808, por el mismo paso de analisis de tendencias. **Su razon predijo mi error palabra por palabra:** *"quien pese ese nucleo sin ver el precedente directo dira A"*. Lo dijo y lo dije |
+| 3.087 | A | **D** | **el archivo**, por `banco 9.24`, el gemelo no es la familia: los dos ya son gemelos identicos de `analisis_pareto` por separado, y eso no los funde entre si |
+| **2.464** | **A** | D | **NO LO CONCEDO, Y NO POR TERQUEDAD: LA EVIDENCIA DE SU RAZON YA NO ESTA EN EL GRAFO.** Va a la seccion 6 |
+
+**LA DIRECCION DEL SESGO, MEDIDA Y NO INTUIDA: LAS CINCO QUE PIERDO VAN EN LA MISMA
+DIRECCION, YO DIGO `A` O `B` Y EL ARCHIVO DICE `D`.** Es la **misma direccion** de
+las 13 del acta 180. **Dos auditores seguidos sobre-llaman `A`, y el archivo aguanta
+las dos veces.** Eso no es una nota amable al ejecutor: es la medida de que **las `D`
+del cribado resisten la relectura adversaria**, que es justo lo que una ciega sirve
+para saber. **Y me obliga a la vara doble:** por `AUDITOR.md` 1.2, con discrepancias
+fuera del marcado **este tramo se relee al doble**, y lo dejo encargado en la parada.
+
+## 5. LA CAIDA DEL EJECUTOR, UNA, Y NO ACUMULA
+
+**`E.2`. LA CUENTA DE QUIEN NOMBRA `SALIDA_V180_HUECO_BATERIA` EN `scripts/` ERA 1
+CUANDO SE MIDIO Y ERA 3 CUANDO SE PUBLICO.** La seccion 1.a dice *"busque el nombre
+`SALIDA_V180_HUECO_BATERIA` en todo `scripts/` y **hoy** lo nombra **1** fichero"*.
+**Lo corri yo y da 3:** `scripts/loop/vuelta181_apertura.py`,
+`scripts/loop/vuelta181_tarea1_registros.py` y `scripts/loop/_v181_t1_seccion.md`.
+
+**LA MECANICA, MEDIDA EN LAS MARCAS DE TIEMPO Y NO SUPUESTA:** el bloque de apertura
+que produjo la cifra corrio a las **17:51:35**, y en ese momento **la cuenta de 1 era
+verdad**. Los otros dos ficheros nacieron a las **17:57:25** y **17:58:51**, o sea
+**el propio instrumento de la TAREA 1 y su fragmento**, antes de que el reporte se
+escribiera. **La cifra se midio bien y se publico tarde.**
+
+**LO QUE NO SE CAE ES LA CONCLUSION, Y LO COMPROBE EN VEZ DE SUPONERLO:** ninguno de
+los tres **escribe** ese fichero; los tres solo lo **nombran** para medirlo. La frase
+que de verdad sostiene el `E.1` de la 180, *"ningun instrumento del repo escribia ese
+fichero"*, **sigue siendo cierta bajo mi mano**.
+
+**NO ACUMULA, Y CITO LA LETRA QUE LO DECIDE.** Por la decision del **27 ago 2026**
+(`paradas/2026-08-27-racha-parentesis-DECISION.md`), la caida de reporte cuenta para
+la racha **solo si la cifra vive en una TABLA, una CABECERA o una CONCLUSION**. Esta
+**vive en prosa de acompanamiento** dentro de la seccion 1.a, **no en la tabla de
+tareas, ni en la cabecera, ni en el veredicto de una linea**. **Se registra con su
+nombre, dispara la relectura al doble del tramo, y NO acumula.** **La racha de
+reporte se queda en UNO** y la escalada de `AUDITOR.md` 1.2 **no se dispara**.
+
+## 6. EL HALLAZGO, Y ES EL QUE PARA EL BUCLE: EL PUESTO 2.464
+
+**LO QUE LA CIEGA DESTAPO.** Lei a ciegas `cero_defectos` contra
+`zero_defects_concepto` y dije **A**, porque **los cuatro pasos de
+`zero_defects_concepto` estan dentro de los siete del otro**. El archivo dice **D**,
+y su razon lo sostiene asi, literal:
+
+> *"`zero_defects_concepto` trae DOS COSAS QUE EL OTRO NO TIENE: ELIMINAR
+> EXPLICITAMENTE EL USO DE NIVELES DE CALIDAD ACEPTABLES como estandar, que es contra
+> lo que Cero Defectos se define; y el arranque a escala minima"*
+
+**FUI AL GRAFO DE HOY Y LA PRIMERA DE LAS DOS ES FALSA:** el paso **7** de
+`cero_defectos` dice *"Eliminar el lenguaje que normaliza niveles aceptables de error
+(AQL)"*. **El otro SI lo tiene.**
+
+**Y AQUI VIENE LO QUE CAMBIA TODO, PORQUE NO ES UNA CAIDA DE NADIE.** Lo feche en git
+en vez de acusar:
+
+| medicion | resultado |
+|---|---|
+| commit que escribio el veredicto 2.464 | **`de20c078`, 12 ago 2026** |
+| `cero_defectos` en ese commit | **6 pasos, SIN el paso del AQL** |
+| commit que le metio el paso del AQL | **`02384c6a`, 20 ago 2026**, *"VUELTA 60, LOTE B DEL TRAMO 5: QUINCE ACTOS FUNDIDOS"* |
+| `cero_defectos` hoy | **7 pasos, CON el paso del AQL** |
+
+**LA RAZON ERA VERDAD EL DIA QUE SE ESCRIBIO. UNA FUSION DE LA FASE III LE MOVIO LA
+EVIDENCIA DEBAJO OCHO DIAS DESPUES, Y NADIE VOLVIO A LEER EL PAR.**
+
+**POR QUE NADIE VOLVIO: PORQUE LA REGLA ESCRITA NO LO MANDA.**
+`docs/plan/08_VERIFICACION.md:485`, LA COLA DE RELECTURA POST FUSION, dispara asi:
+
+> *"UN PAR VUELVE A LA COLA CUANDO UNO DE SUS DOS NODOS **MUERE EN UNA FUSION O CAMBIA
+> DE TEXTO**"*
+
+y acto seguido, en su linea **494**, filtra:
+
+> *"POR QUE SOLO LOS B Y LOS C, y no todos: un **D** dice que los dos nodos son sanos,
+> y fundir uno de ellos con un tercero **no lo vuelve gemelo del otro**"*
+
+**EL FILTRO RAZONA SOBRE LA MUERTE Y SE APLICA TAMBIEN AL CAMBIO DE TEXTO, Y AHI ESTA
+EL HUECO.** Es verdad que fundir un nodo con un tercero no lo vuelve gemelo del otro.
+**Pero absorber el paso que era el diferenciador declarado SI lo acerca**, y eso es
+literalmente lo que le paso al 2.464. **La justificacion escrita no alcanza al caso
+que tengo medido delante.**
+
+**Y NO ES UN CASO SUELTO. LO MEDI, CON FECHAS, PAR POR PAR** (mi salida en
+`docs/loop/_auditor_v182_alcance_exacto.txt`): recorri los **194 commits** del archivo
+de veredictos para fechar **los 3.388 puestos**, y los **119 commits** del grafo desde
+el `de20c078` para fechar el ultimo cambio de pasos de cada nodo. **Un par cuenta solo
+si el texto de uno de sus nodos cambio DESPUES de escribirse su veredicto:**
+
+| clase | total | **con texto movido despues de su veredicto** | la cola los admite |
+|---|---:|---:|---|
+| A | 551 | **329** | **NO** (*"un A ya esta resuelto por definicion"*) |
+| B | 72 | **26** | SI |
+| C | 5 | **1** | SI |
+| **D** | **2.760** | **543** | **NO** |
+
+**LA COLA ESCRITA TIENE SIETE FILAS, BARRIDAS UNA VEZ EL 12 AGO 2026 SOBRE LAS
+DIECISIETE FUSIONES DEL PLAN. LA FUSION QUE ROMPIO EL 2.464 ES DEL 20 AGO.** No hay
+barrido posterior, y **nodos que mueren entre el 12 ago y hoy: CERO**, asi que la
+unica puerta que podia haber mordido es justamente la que el filtro cierra.
+
+## 7. LAS ADJUDICACIONES
+
+**7.1 EL `E.2` SE REGISTRA Y NO ACUMULA.** Decision del **27 ago 2026**, letra
+afinada: prosa de acompanamiento no cuenta para la racha. **Cita, no invencion.**
+
+**7.2 LAS CINCO DISCREPANCIAS DE LA CIEGA SON MIAS, Y LAS ADJUDICO A FAVOR DEL
+ARCHIVO SIN REGATEAR.** Las cinco razones citan regla escrita o precedente directo
+(`banco 9.6.1`, `banco 9.24`, el veredicto 2.808), y **ninguna necesito que yo se la
+buscara**. **El tramo se relee al doble igualmente**, por `AUDITOR.md` 1.2, porque
+salieron fuera del marcado.
+
+**7.3 LA `C.1` DE LA CIEGA NO CONTAMINO EL SUJETO, Y LO DIGO CON LA MEDICION.**
+Solape cero con los 43 de la 180, guarda de fuga en 0, clases selladas antes del
+destape. **El orden fue malo; la ciega es valida.** No la anulo ni me la perdono: la
+declaro entera en el punto 2.
+
+**7.4 EL 2.464 NO LO ADJUDICO YO, Y ESA ES LA ADJUDICACION.** Podria enrutarlo solo
+por extension citada, y hay precedente de que esta cola se ha extendido asi (el
+registro del **14 ago 2026, vuelta 28**, le metio las costuras de un reparto *"POR
+EXTENSION CITADA y sin doctrina nueva"*). **Pero aquella extension entro con once
+filas nombradas y esta entraria con 543 mas 329.** Eso ya no es una extension: **es el
+alcance de una fase del plan**, y el alcance de la campana **es de lo que la casa
+reserva** (`AUDITOR.md` 4). **Adjudicar aqui seria decidir por el fundador con la
+excusa de una cita.**
+
+**7.5 LA BATERIA DE LA 181 NO CORRIO, Y NO ES CAIDA DE REPORTE.** El reporte dice
+**ABIERTA, SIN CERRAR** en la fila de su TAREA 2 y **no publica ninguna cifra de una
+corrida que no hubo**: `SALIDA_V181_BATERIA.txt` no existe y **el reporte no lo cita
+como prueba de nada**. **El esqueleto por anexion hizo exactamente lo que se le pidio:
+la vuelta se corto y lo que quedo escrito es lo que de verdad se hizo.** Eso lo
+registro a favor, no en contra.
+
+## 8. LA METRICA DE CREDITO
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | **316** |
+| puestos | 30 aislados, **30 limpios** | **706** |
+| discrepancias DENTRO del marcado | **0** (la 181 no marco ninguno) | **26** |
+| discrepancias y hallazgos FUERA del marcado | **6** (5 discrepancias **que fallo yo** y **un hallazgo**, el 2.464) | **109** |
+| caidas propias del auditor | **1** (`C.1`, **cuarta seguida**, y rompiendo su remedio) | **a la parada, punto 3** |
+| caidas del ejecutor que ACUMULAN por cifra publicada | **0** | racha de cifra publicada **0** |
+| caidas del ejecutor de reporte | **1** (`E.2`, **en prosa: NO acumula**) | **racha de reporte 1** |
+
+**LOS 30 PUESTOS SON:** 100, 236, 278, 432, 787, 926, 949, 1012, 1126, 1151, 1161,
+1251, 1274, 1361, 1372, 1390, 1487, 1493, 1599, 1612, 1842, 1870, 2380, 2464, 2582,
+2863, 3063, 3081, 3087 y 3158.
+
+**LA ESCALADA NO SE DISPARA, CON LA CUENTA DELANTE:** la racha de reporte esta en
+**UNO**, no en dos, porque el `E.2` vive en prosa. `AUDITOR.md` 1.2 no me obliga a
+encargar operacion de codigo, **y el remedio del `E.1` que la 180 dejo escrito para la
+182 sigue en pie y va en la parada**.
+
+## 9. LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA
+
+`7.1` (decision del 27 ago 2026, letra afinada de la caida de reporte), `7.2`
+(`AUDITOR.md` 1.2 mas `banco 9.6.1`, `banco 9.24` y el veredicto 2.808), `7.3` (la
+cabecera del propio `aislador_de_ciega.py` y su guarda de fuga), `7.4` (`AUDITOR.md`
+4, lo que la casa reserva, contra el precedente de extension del 14 ago 2026), `7.5`
+(`EJECUTOR.md` 1, el reporte que abre con la vuelta y crece por anexion), y el punto 2
+(`paradas/2026-09-05-la-bateria-sin-techo-DECISION.md` punto 4). **Seis, y ninguna
+inventa doctrina.**
+
+## 10. LA CADENCIA Y EL TOPE
+
+**LA BATERIA: SIGUE SIN CORRER, Y LA 181 ERA SU VUELTA.** Ultima corrida entera medida
+en su directorio: la **176** (`SALIDA_V176_BATERIA.txt`, **60.197 bytes**, en nueve
+tramos). Desde entonces **cinco vueltas sin bateria**. **No adjudico la cadencia
+nueva: va en la parada**, porque el regimen 6.1 es del fundador y su primera
+aplicacion fallo.
+
+**EL TOPE: la 6.2 devolveria el tope a cinco sub-tareas en la 182. Tambien va a la
+parada**, porque la 181 murio con dos y el diagnostico de por que importa mas que el
+numero.
+
+## 11. PARADA: SI
+
+**`docs/loop/PARA_ALEXIS.md` escrito y `docs/loop/PROMPT_SIGUIENTE.md` VACIO.**
+Motivo principal: **doctrina nueva necesaria y cambio de alcance de la campana**
+(`AUDITOR.md` 4), por el hueco de la cola de relectura post fusion medido en el punto
+6. Van con el, para que el fundador decida de una vez y no de tres: **mi `C.1`
+cuadruple rompiendo su propio remedio**, y **la cadencia de la bateria, que lleva
+cinco vueltas sin correr y cuya regla nueva fallo en su estreno**.

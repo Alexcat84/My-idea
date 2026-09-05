@@ -1,0 +1,19 @@
+BASE  : de20c078 (12 ago 2026, durante el cribado)
+nodos en BASE: 3835 | nodos en HEAD: 3853
+nodos que MUEREN entre BASE y HEAD      : 0
+nodos que CAMBIAN DE TEXTO (pasos)      : 379
+
+COTA SUPERIOR de pares tocados por CAMBIO DE TEXTO entre BASE y HEAD
+(cota, no cuenta exacta: incluye pares cuyo veredicto se escribio DESPUES del cambio)
+clase  total    texto      muere     
+A      551      328        0         
+B      72       26         0         
+C      5        1          0         
+D      2760     541        0         
+
+LOS D TOCADOS POR CAMBIO DE TEXTO, primeros 40 puestos:
+   [163, 204, 208, 218, 231, 233, 243, 250, 259, 266, 267, 272, 277, 287, 316, 323, 332, 333, 362, 374, 407, 420, 427, 433, 445, 452, 459, 461, 464, 470, 471, 478, 490, 497, 509, 516, 522, 534, 543, 545]
+   CIFRA D tocados: 541
+LOS B Y C TOCADOS (los que la cola SI admite):
+   B: [170, 180, 181, 196, 224, 253, 286, 369, 405, 422, 591, 648, 668, 690, 718, 737, 767, 771, 775, 798, 831, 843, 851, 957, 968, 1298]
+   C: [494]
