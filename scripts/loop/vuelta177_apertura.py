@@ -408,6 +408,30 @@ escribir("CICLO_NUMSTAT", o + "\nEXITCODE: %d\n" % c)
 c, o = correr([PY, "scripts/loop/vuelta83_conteo_aristas.py", "WORK"])
 escribir("CONTEO", o + "\nEXITCODE: %d\n" % c)
 
+# EL DESFASE DEL CALIBRADO, QUE ESTE BLOQUE NO MEDIA Y EL DE CIERRE SI.
+#
+# ANADIDO EN LA VUELTA 177, Y ES UN DEFECTO HEREDADO QUE SE ARREGLA AQUI EN VEZ
+# DE VOLVER A PAGARLO. El bloque de apertura del que este desciende
+# (`vuelta175_apertura.py`) NO corria este paso y el de cierre SI: la palabra
+# "desfase" sale 0 veces en aquel y 2 veces en el de cierre. Consecuencia
+# medida: `tallar_cabecera_reporte.py --fase04` exige LAS DOS columnas, asi que
+# con la apertura coja el tallador NO PODIA SALIR VERDE NUNCA por el lado
+# izquierdo, dijera lo que dijera el resto. En la 177 salio ROJO por exactamente
+# esas 2 celdas, las 2 del lado APERTURA, y quedo sellado en
+# `docs/loop/SALIDA_V177_T1E_RECHAZO_REAL.txt` por la guarda que la TAREA 1.e de
+# esta misma vuelta acababa de poner. La guarda se estreno cazando a su autor.
+#
+# LO QUE ESTO NO ARREGLA, Y SE DICE: en la 177 la medicion se tomo TARDE, al
+# cierre, porque el rechazo se descubrio al cierre. Va declarada como tal en el
+# reporte, con la prueba que la sostiene: `git diff --numstat` entre los dos
+# sellos da 0 filas sobre `dataset/`, `web/` y `engine/`, y la salida de
+# apertura resulta IDENTICA byte a byte a la de cierre (sha256 `7d683eea4700f18b`
+# las dos), o sea que el arbol que este instrumento lee es el mismo en las dos
+# puntas. DESDE LA 178 SE TOMA AQUI, EN SU SITIO, y esta linea es lo que lo
+# garantiza.
+c, o = correr([PY, "scripts/loop/vuelta85_medir_desfase_calibrado.py", "WORK"])
+escribir("DESFASE_CALIBRADO", o + "\nEXITCODE: %d\n" % c)
+
 c, o = correr([PY, "engine/run_all_tests.py"])
 escribir("MOTOR", o + "\nEXITCODE: %d\n" % c)
 
