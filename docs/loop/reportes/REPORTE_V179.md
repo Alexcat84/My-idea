@@ -643,6 +643,25 @@ vuelta** (`EJECUTOR.md` 1, LA IDENTIDAD SE LEE DE GIT).
 | rutas tocadas | **57** (`docs/loop/` 32, `scripts/loop/` 22, `docs/plan/` 3) |
 | **el grafo entre los dos sellos** | **`git diff --numstat` sobre `dataset/`, `web/` y `engine/`: 0 filas** |
 
+### 3.2 EL ARCHIVO DE ESTE MISMO REPORTE, EN SU MISMA VUELTA, Y SU COTEJO
+
+**Serian cuatro seguidas.** `scripts/loop/archivar_reporte.py --vuelta 179` lee el
+texto **de git y no del arbol** y escribe `docs/loop/reportes/REPORTE_V179.md`.
+
+**Y AQUI HAY UNA CIRCULARIDAD QUE ME COMI EN EL PRIMER INTENTO Y QUE ESCRIBO EN
+VEZ DE ESCONDER.** Archive primero y despues anadi esta seccion, con la tabla de
+bytes y de `sha256` dentro. **Al anadirla, el arbol dejo de calzar con lo que
+acababa de archivar**, y el cotejo, corrido otra vez, dio **dos `sha256` distintos
+de tres**. No es un fallo del archivador: **es que un reporte no puede publicar
+dentro de si su propia huella final**, porque escribirla la cambia.
+
+**POR ESO ESTA TABLA NO VA AQUI.** El cotejo byte a byte de las tres copias (el
+arbol, el archivo y lo que git guarda en el commit del cierre), por las dos
+convenciones, vive en **`docs/loop/SALIDA_V179_COTEJO_ARCHIVO.txt`**, que se
+escribe **DESPUES** del archivo definitivo y **fuera** del reporte. La secuencia
+que si cierra es: se cierra el reporte, se commitea, se archiva de git, se cotejan
+las tres copias, y **el resultado del cotejo se publica en su propio fichero**.
+
 **LOS SEIS COMMITS, EN SU ORDEN:**
 
 | hash | que cierra |
