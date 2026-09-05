@@ -1,0 +1,488 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   VUELTA 179. Los discutibles marcados D.3 y D.4 son clases de par que el propio reporte publica en su tabla 2.d, asi que estan QUEMADOS como sujeto ciego y lo declaro. En su lugar tomo (a) los 17 puestos del archivo que tocan alguno de los 20 nodos de los diez pares de la TAREA 2, que son la base de evidencia de D.3 y D.4, mas 1436, el unico puesto nuevo que el registro de triangulos gano esta vuelta; y (b) una muestra de 12 con random.Random(179).sample sobre el archivo entero menos los quemados y menos el vecindario. Excluidos por quemados: los 33 puestos que mi acta 178 destapo en su tabla y los 9 cuya clase publica el reporte de la 179.
+
+CIFRA pares elegidos: 30
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 197
+nodo_a: obtencion_compromiso_venta
+nodo_b: obtencion_de_compromiso
+  pasos de A (obtencion_compromiso_venta): 4
+     paso 1: Antes de cerrar, revisa en voz alta las preocupaciones principales del comprador y confirma que han sido atendidas.
+     paso 2: Resume los beneficios que el propio cliente reconoció durante las Preguntas de Necesidad-beneficio.
+     paso 3: Propón un siguiente paso concreto y proporcional al nivel de avance de la conversación (no siempre el cierre final).
+     paso 4: Evita técnicas de presión o manipulación típicas de ventas pequeñas.
+  pasos de B (obtencion_de_compromiso): 5
+     paso 1: Dedica la mayor parte de la reunión a investigar y entender las necesidades del cliente antes de presentar tu solución
+     paso 2: Antes de cerrar, pregunta explícitamente si hay algo más que el cliente necesite aclarar
+     paso 3: Resume los beneficios y puntos clave discutidos en la conversación
+     paso 4: Propón el siguiente paso concreto y realista, en lugar de simplemente 'pedir la venta'
+     paso 5: Asegúrate de que el compromiso propuesto sea el más alto que el cliente pueda dar de forma realista en ese momento
+------------------------------------------------------------------------------
+puesto_intra: 242
+nodo_a: board_control_etapas_tardias
+nodo_b: perdida_control_junta_directiva
+  pasos de A (board_control_etapas_tardias): 4
+     paso 1: Desde las primeras rondas, pon un límite al número o porcentaje de directores que puedan poner los inversionistas.
+     paso 2: Negocia derechos de observador para los directores que pierdan su asiento.
+     paso 3: Considera armar un grupo pequeño dentro de la junta para tomar decisiones ágiles.
+     paso 4: Evalúa el equilibrio entre conseguir una valoración alta y mantener una estructura de control simple.
+  pasos de B (perdida_control_junta_directiva): 3
+     paso 1: Negocia que tu asiento en la junta esté ligado a ser fundador (founder seat) y no solo a ser director general (CEO seat), para asegurar tu lugar aunque cambien los roles.
+     paso 2: Establece con claridad qué decisiones estratégicas críticas necesitan mayorías especiales antes de aprobarse.
+     paso 3: Anticipa que perder algo de control es parte del costo de recibir capital, y piensa desde ahora qué papel quieres jugar cuando eso pase.
+------------------------------------------------------------------------------
+puesto_intra: 268
+nodo_a: pivotar_o_proceder
+nodo_b: pivote_o_proceder
+  pasos de A (pivotar_o_proceder): 5
+     paso 1: Siéntate con quien te acompañe en esto, sea socio o inversor, a evaluar con calma en qué punto estás
+     paso 2: Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+     paso 3: Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+     paso 4: Decide con claridad: cambias de rumbo y vuelves al inicio, o sigues adelante hacia la validación con clientes
+     paso 5: Documenta tu decisión y los criterios que usaste para tomarla
+  pasos de B (pivote_o_proceder): 9
+     paso 1: Siéntate con quien te acompaña en esto, no lo decidas solo en tu cabeza, y si tienes inversores, súmalos también
+     paso 2: Dibuja cómo trabaja realmente tu cliente típico, basándote en datos reales que hayas recogido
+     paso 3: Compara ese mapa real con lo que habías supuesto al armar tu modelo de negocio
+     paso 4: Pregúntate qué tan bien lo que estás construyendo resuelve el problema real de tu cliente
+     paso 5: Si la respuesta es 'no del todo', decide si el problema está en que elegiste el cliente equivocado o en las funciones de tu producto
+     paso 6: Reduce tu lista de funciones a algo que puedas contar en un párrafo y vender a miles de personas, no a una lista larguísima pensada para diez clientes
+     paso 7: Anota tu decisión final: cambias de rumbo (pivotas) o sigues adelante hacia la validación con clientes
+     paso 8: Revisa evidencia real, no opiniones, sobre qué tan entusiasmados están tus clientes
+     paso 9: Clasifica las respuestas de tus clientes según su nivel de entusiasmo, desde amor total hasta indiferencia
+------------------------------------------------------------------------------
+puesto_intra: 395
+nodo_a: proceso_diseno_modelo_negocio_5_fases
+nodo_b: proceso_ideacion_modelo_negocio
+  pasos de A (proceso_diseno_modelo_negocio_5_fases): 5
+     paso 1: Fase 1 Movilizar: prepara el proyecto, forma equipo y establece lenguaje común (Canvas)
+     paso 2: Fase 2 Entender: investiga clientes, mercado, tecnología y contexto
+     paso 3: Fase 3 Diseñar: genera y prueba prototipos de modelo de negocio, selecciona el mejor
+     paso 4: Fase 4 Implementar: ejecuta el modelo seleccionado en campo
+     paso 5: Fase 5 Gestionar: monitorea, evalúa y adapta continuamente el modelo
+  pasos de B (proceso_ideacion_modelo_negocio): 5
+     paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+     paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+     paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+     paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+     paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+------------------------------------------------------------------------------
+puesto_intra: 500
+nodo_a: colaboracion_cadena_suministro
+nodo_b: collaboration_roadblocks
+  pasos de A (colaboracion_cadena_suministro): 5
+     paso 1: Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+     paso 2: Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+     paso 3: Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+     paso 4: Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+     paso 5: Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+  pasos de B (collaboration_roadblocks): 5
+     paso 1: Auditar qué información propietaria se compartirá y qué protecciones existen
+     paso 2: Definir reglas claras sobre propiedad intelectual y control de datos
+     paso 3: Evaluar la madurez de integración de sistemas entre las partes
+     paso 4: Establecer métricas conjuntas antes de iniciar la colaboración
+     paso 5: Documentar estándares y estructura de la relación colaborativa
+------------------------------------------------------------------------------
+puesto_intra: 529
+nodo_a: customer_discovery_overview
+nodo_b: filosofia_validacion_clientes
+  pasos de A (customer_discovery_overview): 4
+     paso 1: Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+     paso 2: Sal a comprobar si el problema es real y le duele a tus clientes
+     paso 3: Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+     paso 4: Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+  pasos de B (filosofia_validacion_clientes): 4
+     paso 1: Tratar cada intento de venta como una prueba de hipótesis, no como ejecución de un plan fijo
+     paso 2: Evitar contratar y estructurar un equipo de ventas tradicional en esta etapa
+     paso 3: Enfocarse en conseguir pedidos reales o compromisos de usuarios como evidencia dura
+     paso 4: Aceptar que las reglas de venta corporativa tradicional no aplican en startups
+------------------------------------------------------------------------------
+puesto_intra: 633
+nodo_a: fase_diseno_prototipado_modelos
+nodo_b: proceso_diseno_modelo_negocio_5_fases
+  pasos de A (fase_diseno_prototipado_modelos): 5
+     paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+     paso 2: Prototipar cada variante usando el Business Model Canvas
+     paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+     paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+     paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+  pasos de B (proceso_diseno_modelo_negocio_5_fases): 5
+     paso 1: Fase 1 Movilizar: prepara el proyecto, forma equipo y establece lenguaje común (Canvas)
+     paso 2: Fase 2 Entender: investiga clientes, mercado, tecnología y contexto
+     paso 3: Fase 3 Diseñar: genera y prueba prototipos de modelo de negocio, selecciona el mejor
+     paso 4: Fase 4 Implementar: ejecuta el modelo seleccionado en campo
+     paso 5: Fase 5 Gestionar: monitorea, evalúa y adapta continuamente el modelo
+------------------------------------------------------------------------------
+puesto_intra: 684
+nodo_a: fase_diseno_prototipado_modelos
+nodo_b: fase_entendimiento_investigacion_mercado
+  pasos de A (fase_diseno_prototipado_modelos): 5
+     paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+     paso 2: Prototipar cada variante usando el Business Model Canvas
+     paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+     paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+     paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+  pasos de B (fase_entendimiento_investigacion_mercado): 6
+     paso 1: Escanea el entorno de tu negocio: mercado, competidores y tendencias
+     paso 2: Estudia a tus clientes potenciales usando el Mapa de Empatía
+     paso 3: Entrevista a expertos del dominio
+     paso 4: Investiga intentos previos similares y sus causas de fracaso
+     paso 5: Cuestiona los supuestos establecidos de la industria y los patrones de modelo de negocio
+     paso 6: Empieza a prototipar modelos de negocio temprano para obtener retroalimentación rápida y evitar la parálisis por análisis
+------------------------------------------------------------------------------
+puesto_intra: 740
+nodo_a: fase_diseno_prototipado_modelos
+nodo_b: fase_mobilizar_modelo_negocio
+  pasos de A (fase_diseno_prototipado_modelos): 5
+     paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+     paso 2: Prototipar cada variante usando el Business Model Canvas
+     paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+     paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+     paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+  pasos de B (fase_mobilizar_modelo_negocio): 6
+     paso 1: Define con claridad el objetivo, el alcance y el porqué de tu proyecto
+     paso 2: Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise
+     paso 3: Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto
+     paso 4: Haz un ejercicio para poner a prueba tu idea (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar
+     paso 5: Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados
+     paso 6: Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría
+------------------------------------------------------------------------------
+puesto_intra: 842
+nodo_a: conversion_venta_empresa
+nodo_b: mecanica_conversion_deuda
+  pasos de A (conversion_venta_empresa): 4
+     paso 1: Definir explícitamente en el contrato qué ocurre con la deuda en caso de una venta antes de la conversión.
+     paso 2: Negociar si se pagará solo principal + interés, o un múltiplo adicional (usualmente 2x-3x).
+     paso 3: Considerar la posibilidad de conversión en acciones del adquirente si es una transacción de stock.
+     paso 4: Anticipar situaciones donde el precio de adquisición sea bajo y los tenedores de deuda prefieran pago en efectivo.
+  pasos de B (mecanica_conversion_deuda): 4
+     paso 1: Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada.
+     paso 2: Establecer el monto mínimo de la ronda futura que activa la conversión automática (Qualified Financing).
+     paso 3: Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos.
+     paso 4: Anticipar qué sucede si no se cumplen las condiciones de conversión (deuda permanece vigente).
+------------------------------------------------------------------------------
+puesto_intra: 865
+nodo_a: fase_mobilizar_modelo_negocio
+nodo_b: proceso_ideacion_modelo_negocio
+  pasos de A (fase_mobilizar_modelo_negocio): 6
+     paso 1: Define con claridad el objetivo, el alcance y el porqué de tu proyecto
+     paso 2: Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise
+     paso 3: Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto
+     paso 4: Haz un ejercicio para poner a prueba tu idea (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar
+     paso 5: Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados
+     paso 6: Educar a los tomadores de decisiones sobre modelos de negocio usando historias e imágenes, no teoría
+  pasos de B (proceso_ideacion_modelo_negocio): 5
+     paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+     paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+     paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+     paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+     paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+------------------------------------------------------------------------------
+puesto_intra: 923
+nodo_a: prototipado_rapido
+nodo_b: prototyping_possibilities
+  pasos de A (prototipado_rapido): 5
+     paso 1: Seleccionar materiales baratos y accesibles (cartón, cinta, objetos cotidianos)
+     paso 2: Construir una representación física mínima de la idea en minutos u horas, no semanas
+     paso 3: Usar el prototipo como herramienta de discusión con el equipo o usuarios
+     paso 4: Evitar invertir en acabados o detalles antes de validar la idea funcional
+     paso 5: Iterar rápidamente basándose en la retroalimentación obtenida
+  pasos de B (prototyping_possibilities): 5
+     paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+     paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+     paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+     paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+     paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+------------------------------------------------------------------------------
+puesto_intra: 981
+nodo_a: mvp_catalogo_tecnicas
+nodo_b: prototyping_possibilities
+  pasos de A (mvp_catalogo_tecnicas): 4
+     paso 1: Identifica la hipótesis específica que necesitas validar antes de elegir el tipo de MVP.
+     paso 2: Comienza con el MVP más barato posible (data sheet, brochure, storyboard).
+     paso 3: Escala la sofisticación del MVP solo si los resultados iniciales son prometedores.
+     paso 4: Usa herramientas accesibles (ej. smartphone) antes de invertir en producción profesional.
+  pasos de B (prototyping_possibilities): 5
+     paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+     paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+     paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+     paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+     paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+------------------------------------------------------------------------------
+puesto_intra: 1080
+nodo_a: automatic_conversion
+nodo_b: pay_to_play
+  pasos de A (automatic_conversion): 4
+     paso 1: Negociar umbrales de conversión automática lo más bajos posible como fundador para mayor flexibilidad.
+     paso 2: Asegurar que todos los inversionistas de diferentes rondas tengan el mismo umbral de conversión automática.
+     paso 3: Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.
+     paso 4: Evitar conceder distintos umbrales a distintas series de preferentes para prevenir vetos en el IPO.
+  pasos de B (pay_to_play): 4
+     paso 1: Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.
+     paso 2: Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.
+     paso 3: Negociar si la conversión a común es total o parcial según el nivel de participación.
+     paso 4: Permitir la asignación de derechos a fondos afiliados del inversionista.
+------------------------------------------------------------------------------
+puesto_intra: 1105
+nodo_a: diseno_experimentos_hipotesis
+nodo_b: extraer_priorizar_hipotesis
+  pasos de A (diseno_experimentos_hipotesis): 4
+     paso 1: Pregúntate qué necesitas saber para poder avanzar
+     paso 2: Define la prueba más simple posible para conseguir esa respuesta
+     paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+     paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+  pasos de B (extraer_priorizar_hipotesis): 5
+     paso 1: Lista todo lo que tiene que ser cierto sobre tu modelo de negocio, tu propuesta de valor y tu cliente
+     paso 2: Escribe cada hipótesis por separado, una por nota
+     paso 3: Elimina las que estén repetidas
+     paso 4: Identifica cuáles son capaces de acabar con tu proyecto si fallan
+     paso 5: Ordena todas tus hipótesis según qué tan crítica es cada una para que tu proyecto funcione
+------------------------------------------------------------------------------
+puesto_intra: 1111
+nodo_a: diez_principios_testing
+nodo_b: disenar_tests_pass_fail
+  pasos de A (diez_principios_testing): 5
+     paso 1: Priorizar evidencia de mercado sobre opiniones internas
+     paso 2: Diseñar experimentos baratos y rápidos al inicio
+     paso 3: Identificar y testear primero las hipótesis que podrían matar la idea
+     paso 4: Testear jobs, pains y gains del cliente antes de testear la oferta
+     paso 5: Diseñar tests con resultados medibles y accionables
+  pasos de B (disenar_tests_pass_fail): 5
+     paso 1: Preguntarse qué se quiere aprender
+     paso 2: Diseñar el test pass/fail más simple posible
+     paso 3: Definir criterios numéricos claros de éxito o fracaso
+     paso 4: Ejecutar el test y evitar detenerlo antes de tiempo
+     paso 5: Registrar aprendizajes e insights, no solo datos
+------------------------------------------------------------------------------
+puesto_intra: 1134
+nodo_a: construir_mvp_baja_fidelidad
+nodo_b: prototyping_possibilities
+  pasos de A (construir_mvp_baja_fidelidad): 5
+     paso 1: Crea una pagina simple con tu propuesta de valor y sus beneficios
+     paso 2: Incluye una accion clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden
+     paso 3: Suma videos, encuestas o un blog si te ayudan a mostrar la idea
+     paso 4: Prueba varias versiones si quieres testear distintas formas de contar el problema
+     paso 5: Publica lo antes posible sin preocuparte por que se vea perfecto
+  pasos de B (prototyping_possibilities): 5
+     paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+     paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+     paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+     paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+     paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+------------------------------------------------------------------------------
+puesto_intra: 1246
+nodo_a: biblioteca_experimentos_validacion
+nodo_b: diseno_experimentos_hipotesis
+  pasos de A (biblioteca_experimentos_validacion): 6
+     paso 1: Formula una hipótesis clara y específica para cada prueba (por ejemplo, 'los padres menos preocupados adoptarán un rastreador sin alarma')
+     paso 2: Define una métrica de éxito medible antes de hacer la prueba
+     paso 3: Diseña el experimento más barato y rápido que puedas: una página de aterrizaje, un video que muestre el producto, una entrevista en el punto de venta
+     paso 4: Recoge datos concretos: vistas, veces que se comparte, porcentaje de gente que lo adopta, comentarios positivos
+     paso 5: Decide si tu hipótesis se confirmó o se cayó según el umbral que definiste antes
+     paso 6: Anota el tiempo y el costo de cada prueba para aprovechar mejor tus recursos la próxima vez
+  pasos de B (diseno_experimentos_hipotesis): 4
+     paso 1: Pregúntate qué necesitas saber para poder avanzar
+     paso 2: Define la prueba más simple posible para conseguir esa respuesta
+     paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+     paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+------------------------------------------------------------------------------
+puesto_intra: 1293
+nodo_a: customer_development_modelo
+nodo_b: producto_minimo_viable
+  pasos de A (customer_development_modelo): 5
+     paso 1: Identifica las hipótesis centrales de tu negocio: quién es tu cliente, cuál es su problema y qué solución le propones
+     paso 2: Sal a hablar directamente con clientes potenciales, no te quedes esperando que lleguen
+     paso 3: Recoge lo que te dicen sobre el producto, el canal para llegar a ellos, el precio y cómo lo entienden
+     paso 4: Ajusta tu modelo de negocio según lo que aprendes de verdad, no según lo que supones
+     paso 5: Combina estas conversaciones con ir desarrollando tu producto de forma ágil, en paralelo
+  pasos de B (producto_minimo_viable): 6
+     paso 1: Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.
+     paso 2: Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.
+     paso 3: Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.
+     paso 4: Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.
+     paso 5: Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.
+     paso 6: Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.
+------------------------------------------------------------------------------
+puesto_intra: 1321
+nodo_a: colaboracion_cadena_suministro
+nodo_b: mitigacion_efecto_latigo
+  pasos de A (colaboracion_cadena_suministro): 5
+     paso 1: Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+     paso 2: Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+     paso 3: Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+     paso 4: Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+     paso 5: Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+  pasos de B (mitigacion_efecto_latigo): 5
+     paso 1: Sustituir pronósticos basados en pedidos por datos de punto de venta (POS) compartidos
+     paso 2: Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes
+     paso 3: Basar el racionamiento de producto en patrones históricos de pedido, no en el pedido actual, y avisar con anticipación de posibles escaseces
+     paso 4: Implementar políticas de precios estables ('everyday low price') para evitar compras anticipadas
+     paso 5: Rediseñar incentivos de ventas e internos usando costeo ABC para eliminar el impulso a vender por cuota a fin de periodo
+------------------------------------------------------------------------------
+puesto_intra: 1436
+nodo_a: creacion_option_pool
+nodo_b: pool_opciones_empleados
+  pasos de A (creacion_option_pool): 3
+     paso 1: Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.
+     paso 2: Negociar el tamaño del option pool con los inversores antes del cierre de la ronda (afecta la valuación pre-money).
+     paso 3: Revisar y refrescar el pool en cada ronda subsecuente según necesidades de contratación.
+  pasos de B (pool_opciones_empleados): 4
+     paso 1: Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.
+     paso 2: Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.
+     paso 3: Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.
+     paso 4: Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool).
+------------------------------------------------------------------------------
+puesto_intra: 1461
+nodo_a: customer_discovery_cuatro_fases
+nodo_b: proceso_ideacion_modelo_negocio
+  pasos de A (customer_discovery_cuatro_fases): 4
+     paso 1: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+     paso 2: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+     paso 3: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+     paso 4: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+  pasos de B (proceso_ideacion_modelo_negocio): 5
+     paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+     paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+     paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+     paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+     paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+------------------------------------------------------------------------------
+puesto_intra: 1553
+nodo_a: diez_principios_prototipado
+nodo_b: prototyping_possibilities
+  pasos de A (diez_principios_prototipado): 4
+     paso 1: Mantener los prototipos visuales, tangibles y de baja fidelidad al inicio.
+     paso 2: Exponer el trabajo pronto para buscar críticas antes de refinar.
+     paso 3: Crear al menos un 'Shrek model' (prototipo extremo) para generar debate.
+     paso 4: Registrar todos los aprendizajes e insights de cada prototipo alternativo.
+  pasos de B (prototyping_possibilities): 5
+     paso 1: Generar múltiples direcciones alternativas para la misma idea (no solo una).
+     paso 2: Usar napkin sketches (bocetos rápidos de 5-15 min) para hacer tangibles las ideas.
+     paso 3: Rellenar ad-libs para precisar cómo cada alternativa crea valor.
+     paso 4: Desarrollar Value Proposition Canvases para las direcciones más prometedoras.
+     paso 5: Construir un MVP para llevar la propuesta a la vida y testearla.
+------------------------------------------------------------------------------
+puesto_intra: 1872
+nodo_a: incentivos_reconocimiento_sostenibilidad
+nodo_b: involucramiento_empleados_sostenibilidad
+  pasos de A (incentivos_reconocimiento_sostenibilidad): 7
+     paso 1: Establece un sistema de reconocimiento público regular para quienes logren avances en sostenibilidad, por ejemplo premios de reconocimiento anual
+     paso 2: Organiza concursos o competencias con premios tangibles ligados a metas ambientales concretas
+     paso 3: Publica datos de desempeño ambiental de forma transparente y accesible, en tiempo real si es posible, en reuniones de staff y sitios web corporativos
+     paso 4: Ofrece beneficios ecológicos concretos como incentivos para vehículos híbridos o eficiencia energética
+     paso 5: Vincula el desempeño ambiental a la compensación o al presupuesto que asignas, incluidos bonos y promociones
+     paso 6: Comparte comparativas o rankings de desempeño ambiental entre equipos, sedes o periodos
+     paso 7: Incorporar KPIs de sostenibilidad en las evaluaciones de desempeño de gerentes
+  pasos de B (involucramiento_empleados_sostenibilidad): 4
+     paso 1: Da tu el ejemplo adoptando practicas verdes de forma visible
+     paso 2: Disena incentivos y reconocimientos para quienes se suman (bonos verdes, menciones, premios)
+     paso 3: Organiza competencias internas de ahorro energetico entre equipos o areas de tu negocio
+     paso 4: Haz visibles y rutinarias las practicas sostenibles (senaletica, recordatorios en tus reuniones)
+------------------------------------------------------------------------------
+puesto_intra: 2170
+nodo_a: propuesta_valor_franquicia
+nodo_b: vender_concepto_franquicia
+  pasos de A (propuesta_valor_franquicia): 4
+     paso 1: Listar todos los elementos del sistema que constituyen valor entregado al franquiciado
+     paso 2: Seleccionar factores de diferenciación (inversión, territorio, soporte, tecnología, tarifas)
+     paso 3: Articular por qué el sistema garantiza consistencia y replicabilidad del éxito
+     paso 4: Validar que la propuesta de valor justifique las regalías y fees exigidos
+  pasos de B (vender_concepto_franquicia): 3
+     paso 1: Diseñar mensajes que expliquen qué es y qué no es una relación de franquicia
+     paso 2: Aclarar desde el primer contacto las expectativas sobre autonomía operativa
+     paso 3: Comunicar que el éxito depende de seguir el sistema, no de la libertad individual
+------------------------------------------------------------------------------
+puesto_intra: 2449
+nodo_a: benchmarking_7_pasos_juran
+nodo_b: proceso_benchmarking_juran_7pasos
+  pasos de A (benchmarking_7_pasos_juran): 7
+     paso 1: Definir áreas, KPIs y métricas a comparar (Paso 1: Preparación y planificación)
+     paso 2: Recolectar y validar datos de las unidades a comparar (Paso 2)
+     paso 3: Normalizar y analizar los datos usando factores de complejidad (Paso 3)
+     paso 4: Elaborar el informe de benchmarking con hallazgos y brechas (Paso 4)
+     paso 5: Realizar talleres de transferencia de mejores prácticas (Paso 5)
+     paso 6: Desarrollar plan de acción de mejora e implementarlo (Paso 6)
+     paso 7: Institucionalizar el aprendizaje mediante capacitación continua (Paso 7)
+  pasos de B (proceso_benchmarking_juran_7pasos): 7
+     paso 1: Determinar objetivos y alcance del estudio de benchmarking (planificación).
+     paso 2: Identificar y definir todas las métricas (KPIs) a utilizar con definiciones claras.
+     paso 3: Acordar cronograma, hitos y plazos con los participantes.
+     paso 4: Diseñar y distribuir el instrumento de recolección de datos con validaciones incorporadas.
+     paso 5: Validar y normalizar los datos recibidos antes del análisis.
+     paso 6: Reportar los hallazgos de forma clara y efectiva a todos los participantes.
+     paso 7: Facilitar el intercambio de mejores prácticas y desarrollar programas de mejora basados en los hallazgos.
+------------------------------------------------------------------------------
+puesto_intra: 3065
+nodo_a: compra_por_precio_mas_bajo_como_error
+nodo_b: insuficiencia_especificaciones
+  pasos de A (compra_por_precio_mas_bajo_como_error): 3
+     paso 1: Deja de usar el precio más bajo como el único criterio para decidir a quién le compras
+     paso 2: Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas
+     paso 3: Revisa cómo funcionan juntos los materiales en todo tu proceso, no solo si cumplen la ficha técnica por separado
+  pasos de B (insuficiencia_especificaciones): 4
+     paso 1: Comunicar a proveedores el uso final específico del material o componente, no solo las especificaciones técnicas
+     paso 2: Evaluar la compatibilidad e integración de componentes en el sistema completo, no solo su cumplimiento individual
+     paso 3: Diseñar y probar subsistemas de manera conjunta, no de forma aislada
+     paso 4: Solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales
+------------------------------------------------------------------------------
+puesto_intra: 3168
+nodo_a: relacion_largo_plazo_proveedor_unico
+nodo_b: seleccion_fuente_unica_multiple
+  pasos de A (relacion_largo_plazo_proveedor_unico): 4
+     paso 1: Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo
+     paso 2: Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas
+     paso 3: Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')
+     paso 4: Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)
+  pasos de B (seleccion_fuente_unica_multiple): 4
+     paso 1: Evaluar ventajas de competencia (múltiples proveedores) versus profundidad de relación (fuente única)
+     paso 2: Analizar reputación, pruebas de calificación de diseño y encuestas de instalaciones del proveedor
+     paso 3: Decidir estrategia de reducción de base de proveedores si se busca partnership
+     paso 4: Documentar la decisión según criticidad del componente/commodity
+------------------------------------------------------------------------------
+puesto_intra: 3370
+nodo_a: csf_funcion_govern
+nodo_b: csf_funcion_identify
+  pasos de A (csf_funcion_govern): 7
+     paso 1: Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla
+     paso 2: Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables
+     paso 3: Asignar formalmente quién será responsable de desarrollar y ejecutar la estrategia de ciberseguridad
+     paso 4: Evaluar el impacto potencial de perder activos o operaciones críticas
+     paso 5: Evaluar si un seguro de ciberseguridad es apropiado para el negocio
+     paso 6: Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales
+     paso 7: Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización
+  pasos de B (csf_funcion_identify): 5
+     paso 1: Crear y mantener un inventario de hardware, software, sistemas y servicios que el negocio utiliza
+     paso 2: Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales
+     paso 3: Clasificar y priorizar los datos del negocio según su sensibilidad
+     paso 4: Documentar amenazas internas y externas y sus respuestas asociadas en un registro de riesgos
+     paso 5: Comunicar planes y políticas de ciberseguridad a todo el personal y terceros relevantes
+------------------------------------------------------------------------------
+puesto_intra: 3376
+nodo_a: csf_funcion_protect
+nodo_b: funcion_protect_politica_seguridad
+  pasos de A (csf_funcion_protect): 7
+     paso 1: Restringir el acceso a información sensible solo a empleados que la necesiten para su trabajo
+     paso 2: Requerir autenticación multifactor (MFA) en todas las cuentas que lo permitan, comenzando por las más sensibles (banca, cuentas de correo, gestores de contraseñas)
+     paso 3: Cambiar las contraseñas predeterminadas de fábrica en todos los dispositivos
+     paso 4: Actualizar y parchear regularmente software y sistemas operativos, habilitando actualizaciones automáticas
+     paso 5: Realizar copias de seguridad periódicas de los datos y probar su restauración
+     paso 6: Configurar cifrado de disco completo en laptops y tablets
+     paso 7: Capacitar al personal para reconocer ataques comunes y realizar higiene cibernética básica
+  pasos de B (funcion_protect_politica_seguridad): 8
+     paso 1: Redactar una política de ciberseguridad con roles y responsabilidades claros
+     paso 2: Implementar control de acceso a la red y dispositivos
+     paso 3: Instalar y mantener software de seguridad actualizado
+     paso 4: Cifrar datos sensibles en reposo y en tránsito
+     paso 5: Configurar respaldos regulares de datos
+     paso 6: Automatizar actualizaciones de seguridad cuando sea posible
+     paso 7: Establecer procedimientos formales para disposición segura de archivos y dispositivos antiguos
+     paso 8: Capacitar a todo el personal sobre ciberseguridad y riesgos personales
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

@@ -62015,3 +62015,433 @@ escalada encargada en este mismo acta**, que es lo que la regla manda hacer, no
 una parada. **No hay nada de lo que la casa reserva** y **la campana no esta
 consumada.** **No escribo `PARA_ALEXIS.md` y el encargo de la 179 va completo, con
 cinco sub-tareas.**
+
+# ACTA DEL AUDITOR, VUELTA 179 (5 sep 2026, auditor Opus 5)
+
+**LA CABECERA DE UNA LINEA: LA VUELTA 179 ENTREGA SUS CINCO TAREAS Y NO LE
+ENCUENTRO NI UNA CAIDA. TODO LO QUE PUBLICA REPRODUJO BAJO MI MANO, CIFRA POR
+CIFRA. LA ESCALADA QUE ENCARGUE EN EL ACTA 178 ES CODIGO Y FUNCIONA: LA CORRI YO
+SOBRE `REPORTE_V178.md` Y CAZA LA CAIDA DE LA 178 EN LA LINEA 349, Y SOBRE EL
+REPORTE DE LA 179 DA CERO ROJOS Y UNA SOLA CITA `SIN COTEJO` POR `CORRECCION
+DECLARADA`. LA RACHA DE REPORTE VUELVE A CERO. GATE 0 VERDE EN SU CICLO ENTERO Y
+EN SU ORDEN, CORRIDO POR MI. MARCADOR 3.388 CON A 551 B 72 C 5 D 2.760, CERO
+HUECOS Y CERO DUPLICADOS, `sha256` `ea6e850d331d14f0`, IDENTICO AL DE MI ACTA
+178. CABECERA COTEJADA: 11 FILAS, 0 DISTINTAS, 0 AUSENTES. LAS 94 RUTAS QUE
+PROMETEN PRUEBA EXISTEN Y NINGUNA MIDE CERO BYTES. LAS TRES COPIAS DEL REPORTE
+CALZAN BYTE A BYTE Y ES LA CUARTA VUELTA SEGUIDA. CIEGA 24 DE 27 LIMPIOS, Y LAS
+TRES QUE FALLARON LAS FALLE YO: EL ARCHIVO GANO LAS TRES CON EVIDENCIA ESCRITA.
+DECLARO UNA CAIDA PROPIA Y ES LA MISMA DE MI ACTA 178, ASI QUE SU RACHA LLEGA A
+DOS. LEVANTO UN HALLAZGO PROPIO MEDIDO: LA TABLA DE TRAMOS DEL BACKLOG SE MUEVE
+DENTRO DE LA VUELTA Y NO LLEVA SU CORTE. ADJUDICO LA PARADA DE LA 3.f Y NO ES
+PARADA. NO SE CUMPLE NINGUNA CONDICION DE `AUDITOR.md` 4.**
+
+## 1. HUECO DE ACTA: NO
+
+La ultima cabecera escrita antes de esta es la **178**
+(`docs/loop/ACTA_AUDITOR.md:61491`, commit `74cad47d`) y audito la **179**, la
+inmediatamente siguiente. **Cubro una sola vuelta.** El austero sigue suspendido
+por su punto 5: regimen completo.
+
+## 2. MI CAIDA PROPIA, DELANTE, Y ES LA SEGUNDA SEGUIDA DE LA MISMA ESPECIE
+
+**`C.1`. AISLE EL SUJETO DE LA CIEGA DESPUES DE CORRER COMANDOS DE
+VERIFICACION, Y NO ANTES.** Antes del aislador corri `git log`, `git status`,
+`git branch`, `ls` y `wc -l`, y lei `AUDITOR.md`, `REPORTE.md` y el acta 178.
+Leer el reporte para saber cuales son sus discutibles lo permite la doctrina;
+`git log` no. **Es exactamente la caida `C.1` de mi acta 178, o sea la SEGUNDA
+SEGUIDA de la misma especie.** Por el punto 4 de
+`paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`, **una tercera obliga a que
+el acta 180 abra con su remedio como tarea bloqueante mia.** No espero a la
+tercera y me ato por escrito: **desde la 180 mi PRIMER comando es
+`aislador_de_ciega.py`, y la lectura del reporte se limita a su seccion de
+discutibles.**
+
+**Y EL PRECIO DE ESA CAIDA SE PUEDE MEDIR, ASI QUE LO MIDO:** al leer mi acta 178
+antes de aislar me quede sin **33 puestos** (su tabla de la ciega publica su
+clase) y al leer el reporte sin **9 mas**. **42 puestos quemados**, y son
+justamente los que sostienen los discutibles de esta vuelta.
+
+**NO ME INFLO LA CUENTA CON UNA SEGUNDA:** que `D.3` y `D.4` no se puedan leer a
+ciegas **no es culpa mia ni del ejecutor**, es que el reporte publica su clase en
+la tabla 2.d. Lo adjudico en el punto 7.1.
+
+## 3. LA VERIFICACION, TODA CORRIDA POR MI EN ESTA VUELTA
+
+### 3.1 GATE 0, EL CICLO ENTERO Y EN SU ORDEN, NUNCA `run_phase1` SUELTO
+
+| paso | lo que salio bajo mi mano | lo que el reporte publica |
+|---|---|---|
+| `run_phase1.py --reaplico-curaduria` | **GATE 0: OK**, exit **0** | OK |
+| `etiquetas_de_cara.py --aplicar` | corrido, **71 etiquetas** | corrido |
+| `sync_assets_web.py` | corrido, **6 assets** | corrido |
+| `git diff HEAD --numstat -- dataset/ web/ engine/` | **0 filas** | 0 filas |
+| `engine/run_all_tests.py` | **25/25**, exit 0 | 25/25 |
+| `npx tsc --noEmit` | **exit 0, cero lineas** | EXITCODE 0, cero lineas |
+| `pnpm test` | **82 passed (82) / 1.040 passed (1.040)** | 82 (82) / 1.040 (1.040) |
+
+**VERDE ENTERO Y CALZA CELDA POR CELDA.**
+
+### 3.2 EL MARCADOR, RECOMPUTADO POR MI DESDE EL ARCHIVO
+
+| | total | A | B | C | D |
+|---|---:|---:|---:|---:|---:|
+| **mi recomputo** | **3.388** | **551** | **72** | **5** | **2.760** |
+
+Puestos de **1 a 3.388**, **0 huecos**, **0 duplicados**, `sha256`
+`ea6e850d331d14f0`. **Identico al de mi acta 178 y al que el reporte publica en
+su 2.b**, y esa identidad es mi prueba independiente de los **CERO VEREDICTOS
+MOVIDOS** de las TAREAS 2 y 3.
+
+### 3.3 LA CABECERA NO LA LEI, LA COTEJE
+
+`tallar_cabecera_reporte.py --fase04 --vuelta 179` contra lo pegado entre
+`<!-- CABECERA TALLADA -->` y su cierre: **11 filas cotejadas, 0 DISTINTAS, 0
+AUSENTES**. Mi salida en `docs/loop/_auditor_v180_tallador.txt`, **2.424 bytes en
+disco**, que es la cifra que el reporte publica.
+
+### 3.4 LA IDENTIDAD, LOS COMMITS Y EL GRAFO
+
+| lo que medi | mi cifra | la del reporte |
+|---|---|---|
+| sello de apertura | `74cad47d` | `74cad47d` |
+| sello de cierre | `2037f785` | `2037f785` |
+| commits entre los dos sellos | **6** | 6 |
+| rutas tocadas | **57** (`docs/loop/` **32**, `scripts/loop/` **22**, `docs/plan/` **3**) | 57 (32, 22, 3) |
+| `git diff --numstat` sobre `dataset/`, `web/`, `engine/` entre sellos | **0 filas** | 0 filas |
+| `git diff --numstat` sobre `dataset/` en CADA UNO de los seis commits | **0 filas en los seis** | VERDE en los seis |
+
+### 3.5 LAS RUTAS QUE PROMETEN PRUEBA (`AUDITOR.md` 4, letra del 5 sep)
+
+Barri las **94 rutas distintas** que el reporte nombra entre comillas invertidas.
+**Ninguna mide cero bytes y ninguna es un letrero sobre un vacio.**
+
+| | cuantas |
+|---|---:|
+| existen tal cual, o resolviendo el prefijo `SALIDA_V179_` que el reporte abrevia | **65** |
+| existen resolviendo su carpeta (`scripts/loop/`, `docs/`, `docs/plan/`, `dataset/metadata/`) | **26** |
+| `_2.py`, abreviatura de `vuelta135_2e_mutacion_2.py`, que existe y mide **6.250 bytes** | **1** |
+| `SALIDA_V*.txt`, un patron en prosa que no promete ningun fichero | **1** |
+| `docs/loop/SALIDA_V179_BATERIA.txt`, **el HUECO DECLARADO** con sus tres piezas | **1** |
+| **total** | **94** |
+
+### 3.6 LOS ARNESES DE LA 179, CORRIDOS POR MI, Y CALZAN LOS TRES
+
+| arnes | mi corrida | su fichero citado | lo que el reporte publica |
+|---|---|---|---|
+| `vuelta179_tarea1b_mutacion_citas.py` | exit 0, **25 de 25** | 25 de 25 | 25 de 25 |
+| `vuelta179_tarea1d_mutacion_corte.py` | exit 0, **10 de 10** | 10 de 10 | 10 de 10 |
+| `vuelta179_tarea3_mutacion_triangulos.py` | exit 0, **20 de 20** | 20 de 20 | 20 de 20 |
+
+### 3.7 LA ESCALADA QUE ENCARGUE, CORRIDA POR MI SOBRE LOS DOS SUJETOS
+
+Importe las funciones puras de `cerrar_reporte.py` y las corri yo:
+
+| sujeto | lo que salio bajo mi mano |
+|---|---|
+| `docs/loop/reportes/REPORTE_V178.md` | **1 cita que NO calza: linea 349, `SALIDA_V178_T1E_MUTACION.txt`, publicada 16, del fichero 18** |
+| `docs/loop/REPORTE.md` (el de la 179, cerrado) | **1 cita, y es `SIN COTEJO por CORRECCION DECLARADA`; citas ROJAS: 0** |
+| `cifras_sin_pareja()` sobre el reporte de la 179 | **0** |
+| `hueco_declarado_que_falta(texto, 179)` | **lista vacia** |
+
+**LA EXENCION NO ES UNA PUERTA TRASERA Y LO COMPROBE EN EL CODIGO, NO EN LA
+PROSA:** `cerrar_reporte.py:731` filtra por `SIN COTEJO` y solo entonces cuenta
+rojos. **La escalada que la racha de dos obligaba a encargar existe, corre y caza
+la caida que la motivo.**
+
+### 3.8 LO DEMAS, CORRIDO POR MI, Y REPRODUCE AL DIGITO
+
+| instrumento | lo que salio bajo mi mano | el reporte |
+|---|---|---|
+| `vuelta179_tarea1c_cuenta_nomina.py` | censo **163**, nomina **103** (corte `HEAD c348de45f70f`), fuera **60**, invisibles **0**; la resta cierra | 163 / 103 / 60 / 0 |
+| `backlog_l03_resuelto.py` | **VERDE**, 40 actos calzan, **73** pares del instrumento, **18** reales, sobran 55 = **75,3 por ciento** | 73 y 18 |
+| `vuelta179_tarea2_cobertura_final.py` | registro con **14** filas (6 de la 177, 8 de la 179), **18** pares con lectura, **0** sin lectura | 14 filas, 18 y 0 |
+| `vuelta178_tarea3_anotar_triangulos.py` | **19** triangulos, lados **42** del archivo y **15** del registro, **8** enteros, **11** apoyados, **9** con el `D` fuera, **2** sin el `D`; `sha256` del archivo **identico** antes y despues | idem, celda por celda |
+| `OP_L_03_TRIANGULOS.jsonl` | **19** filas y **19** con `recomputable_entero_del_archivo`, `el_lado_de_fuera_es_el_D` y `vuelta_que_anota_la_fuente` | las 19 sin excepcion |
+| `vuelta179_tarea3_etiqueta_de_fuente.py` | **15** etiquetados como de la 177, **10** verdaderos, **5** falsos, **0** sin cotejar; los cinco nombrados | 15 / 10 / 5 / 0 |
+| `SUJETO_CONGELADO_VEREDICTOS.jsonl` | **17** filas: **4** `ABRE FICHERO VIVO`, **2** `ABRE UN SUJETO YA CLAVADO`, **11** `LO NOMBRA SIN ABRIRLO`; cruce 3/2/4/1/7 | idem |
+| `verificar_mutaciones_viejas.py --sujeto-congelado` | **ROJO exit 1, 17 de 103** y **el corte pegado al denominador** | 17 de 103 con su corte |
+| `vuelta179_tarea5_no_entra.py` | **5** sedes existen, **0** de cero bytes, **0** agujas ausentes | idem |
+| `vuelta150_3_relectura_expediente.py --corte c348de45` | **6** fichas en LISTA sin prueba, **4** trabajo real y **2** CONSUMIDAS; 71 fichas, 37 que no calzan | sin cambio desde la 178 |
+
+### 3.9 EL REPORTE ARCHIVADO, COTEJADO BYTE A BYTE POR MI
+
+`docs/loop/reportes/REPORTE_V179.md`, el arbol y `git show c348de45` son **los
+tres identicos**: **54.466 bytes en disco y 54.466 normalizados a LF**, **848
+lineas**, `sha256` `04243dcbac39c160` bajo las dos convenciones. **CUARTA VUELTA
+SEGUIDA** que cierra y archiva su propio reporte en su misma vuelta.
+
+## 4. LA RELECTURA CIEGA: 24 DE 27 LIMPIOS, Y LAS TRES LAS FALLE YO
+
+**EL SUJETO, Y POR QUE NO ES EL QUE LA DOCTRINA PIDE PRIMERO.** `AUDITOR.md` 1.2
+manda empezar por los discutibles marcados. **Los de esta vuelta, `D.3` y `D.4`,
+son CLASES DE PAR QUE EL PROPIO REPORTE PUBLICA en su tabla 2.d**, asi que leerlos
+a ciegas es imposible. **Tome en su lugar su BASE DE EVIDENCIA:** los **17**
+puestos del archivo que tocan alguno de los 20 nodos de los diez pares, mas
+**1436**, el unico puesto nuevo que el registro de triangulos gano esta vuelta, y
+**12** de muestra con `random.Random(179).sample` sobre el archivo entero menos
+los quemados. **30 en total**, criterio literal dentro de
+`docs/loop/_auditor_v180_ciega.txt`, destape aparte en
+`docs/loop/_auditor_v180_destape.txt`, **0 fugas** medidas por la guarda del
+lanzador. Mis clases selladas ANTES de destapar en
+`docs/loop/_auditor_v180_mis_clases.txt` (**664 bytes por las dos convenciones**,
+`sha256` `7d676968ff346e7c`).
+
+**TRES CONTAMINADOS, DECLARADOS EN EL PROPIO FICHERO DE MIS CLASES Y NO DESPUES:**
+**395** (el banco 9.6.1 lo nombra entre las cuatro que se sostienen), **1436** (la
+`P.4` del reporte publica que `pool_opciones_empleados` sale `A`) y **633** (la
+2.e del reporte dice del acto que el de arriba no se funde). **No cuentan.**
+
+| puesto | mi clase | el archivo | veredicto |
+|---:|:-:|:-:|---|
+| 197, 242, 268, 500, 529, 684, 740, 842, 865, 923, 981, 1080, 1105, 1111, 1134, 1293, 1321, 1461, 1553, 1872, 2170, 3065, 3168, 3370 | | | **COINCIDE**, las 24 |
+| **1246** | **A** | **D** | **DISCREPA** |
+| **2449** | **A** | **D** | **DISCREPA** |
+| **3376** | **A** | **D** | **DISCREPA** |
+| 395, 633, 1436 | | | CONTAMINADOS, fuera del marcador |
+
+**EL ARCHIVO NO FALLO NINGUNA DE LAS VEINTISIETE. LAS TRES SON MIAS Y LAS PIERDO
+LAS TRES:**
+
+- **1246** (yo `A`). Lei `biblioteca_experimentos_validacion` como version larga
+  de `diseno_experimentos_hipotesis`. **El archivo aplica la misma frontera que el
+  puesto 636 ya dejo escrita en esta misma familia**, uno disena la prueba y el
+  otro fija el umbral que la decide, y nombra lo exclusivo de cada lado: la
+  restriccion de no programar nada es de uno y **el registro de tiempo y costo por
+  prueba no esta en ningun nodo de la familia**. Yo no pese el resto, pese el
+  solape, que es justo lo que `banco 9.6.3` prohibe.
+- **2449** (yo `A`). Me llevaron los ids casi identicos y los dos ciclos de siete
+  pasos. **El archivo parte el ciclo en dos mitades y las nombra**: normalizar con
+  factores de complejidad e institucionalizar el aprendizaje de un lado; acordar
+  cronograma con los participantes y **disenar el instrumento de recoleccion con
+  validaciones incorporadas**, que es lo unico del par que evita que los datos
+  lleguen sucios, del otro. **Procedimiento en los dos lados: sano.**
+- **3376** (yo `A`). Vi seis controles solapados de siete y conclui duplicacion.
+  **El archivo mide el resto**: MFA exigido, contrasenas de fabrica y prueba de
+  restauracion de un lado; politica formal con roles y disposicion segura del
+  otro. **Y trae el contraste que lo cierra**, el puesto 3.367, donde
+  `protect_medidas_tecnicas` SI cabia entero dentro de este mismo nodo. **Ahi era
+  `A` y aqui no, y la diferencia esta medida.**
+
+**LA REGLA DEL CREDITO NO SE DISPARA, Y CITO LA ADJUDICACION QUE YA EXISTE.** Las
+tres caen fuera del marcado, pero mi acta 177 seccion 4 y mi acta 178 seccion 4 ya
+adjudicaron este mismo caso: **esa regla castiga el trabajo flojo que asoma donde
+el ejecutor no aviso, y usarla cuando el que fallo fuera del marcado fue el
+auditor seria usarla al reves.** **El credito no baja y no hay relectura al doble
+por esta via.**
+
+## 5. CAIDAS DEL EJECUTOR: NINGUNA, Y LO DIGO CON LA LISTA DE LO QUE BUSQUE
+
+**No es que no haya mirado.** Recompute el marcador, la cabecera, los seis
+commits, las 94 rutas, los tres arneses contra sus ficheros, las dos guardas
+nuevas contra los dos reportes, el backlog, la cobertura, los triangulos, la
+etiqueta, los 17 del sujeto congelado, las cinco sedes y la vara del fundador.
+**Todo reproduce.** **La racha de reporte, que mi acta 178 dejo en DOS, vuelve a
+CERO**, y la operacion de codigo que la cerraba esta entregada y corriendo.
+
+**Y LAS SEIS CAIDAS QUE EL PROPIO EJECUTOR SE LEVANTA (`C.1` a `C.6`) NO SON
+CAIDAS DE ESTA ACTA, Y DIGO POR QUE:** las seis las cazo el, ninguna sobrevivio a
+la vuelta, y las seis salen con su medicion al lado. **Un arnes que tumba dos
+esperados suyos y un patron muerto que el mismo destapa son la guarda
+funcionando**, no una caida que yo tenga que registrar contra el.
+
+## 6. MI HALLAZGO PROPIO, MEDIDO: LA TABLA DE TRAMOS SE MUEVE Y NO LLEVA CORTE
+
+**LA MEDICION, MIA Y CON SU COMANDO** (`backlog_l03_resuelto.py`, corrido hoy):
+
+| tramo | lo que el reporte publica en su 2.a | lo que el mismo instrumento da HOY |
+|---|---|---|
+| actos ya leidos | 6 actos, 29 pares, **8** reales | **14** actos, **39** pares, **18** reales |
+| actos sin leer | 34 actos, 44 pares, **10** reales | **26** actos, **34** pares, **0** reales |
+| todo el backlog | 40, 73, **18** | 40, 73, **18** |
+
+**NO ES UNA CAIDA Y NO LA REGISTRO COMO TAL.** Las cifras del reporte son
+verdaderas y **estan contadas de su fichero**,
+`docs/loop/SALIDA_V179_T2_LOS_DIEZ.txt`, que dice 6/29/8 y 34/44/10 con esas
+mismas palabras: eso es lo que `EJECUTOR.md` 1 manda. **Lo que falta es el
+corte.** La propia TAREA 2 movio el reparto, y quien corra el instrumento manana
+vera otra tabla sin manera de saber cual mira que.
+
+**ADJUDICO POR `banco 9.21` Y POR MI PROPIA 7.2 DEL ACTA 178, sin doctrina
+nueva.** El ejecutor ya hizo esto bien dos veces en esta misma vuelta: la 3.b
+publica las DOS tablas de triangulos, cada una con su corte, y la 1.d cablo el
+sello en el denominador de la nomina. **Lo que falta es que el mismo sello llegue
+a la tabla de tramos.** Encargado en la 180.
+
+## 7. LAS ADJUDICACIONES
+
+**7.1 EL SUJETO DE LA CIEGA CUANDO EL DISCUTIBLE MARCADO ES UNA CLASE PUBLICADA:
+SE LEE SU BASE DE EVIDENCIA, Y SE DECLARA.** `AUDITOR.md` 1.2 manda empezar por
+los discutibles marcados; cuando el discutible **es** una clase que el reporte
+publica en una tabla, esa ciega **no existe**, y fingirla seria peor que no
+hacerla. **Adjudico, por el proposito escrito de la propia 1.2** (clasificar antes
+de ver la razon), **que en ese caso el sujeto es la base de evidencia del
+discutible**, o sea los puestos del archivo sobre los que la lectura se apoya, y
+que **el criterio se escribe literal en el fichero del aislador**, que es donde ya
+se guarda. **No es doctrina nueva: es la 1.2 aplicada al caso en que su sujeto
+natural esta quemado.**
+
+**7.2 `D.3`, EL `D` DEL PAR 4 (`creacion_option_pool` contra `employee_pool_esop`):
+ADJUDICO `D`, Y LE QUITO LA MULETA.** El ejecutor lo resolvio eligiendo entre dos
+cadenas contrarias, y marco esa eleccion como suya. **No hace falta elegir cadena:
+el par se sostiene solo por contenido.** `employee_pool_esop` trae **CALCULAR COMO
+LA DILUCION AFECTA EL PRECIO POR ACCION DEL FUNDADOR** y la definicion de si la
+reserva incluye lo ya entregado; `creacion_option_pool` no tiene ninguna cuenta, y
+lo unico suyo, refrescar el pool en cada ronda, **cabe en una linea**. **Vara del
+`banco 9.6.1`, rama contenido manda: el hijo trae un procedimiento que la madre no
+tiene, CONTINUA.** El `D` queda, con mejor apoyo del que traia.
+
+**7.3 `D.4`, EL `A` DEL PAR 10 (`evaluacion_` contra
+`explotacion_tecnologias_disruptivas`): ADJUDICO `A`, Y EL ARCHIVO YA HABIA PESADO
+ESE MISMO RESTO.** El ejecutor pregunta si el analisis IOTA es un procedimiento
+propio. **Lo verifique en el puesto 513, que es el que decide:** el archivo ya peso
+el resto de `explotacion_` contra un tercero de la misma familia (las industrias
+vecinas, el grupo pequeno de clientes y el trabajo de campo con adoptantes
+tempranos) y **lo llamo ADITIVO**, con `A`, y el 505 hace lo mismo con el otro
+extremo declarando **una familia de TRES nodos del nucleo**. Llamar `D` a este par
+seria **aplicar al mismo resto una vara mas estricta que la que el archivo aplico
+500 puestos antes**, y eso es lo que `banco 9.3` prohibe. Ademas, por
+`banco 9.6.3`, **el tamano del solape no decide**: IOTA es el instrumento nombrado
+del paso que los dos ya traen.
+
+**7.4 `PD.1`, LA CADENA DE REPITE: NO ES DOCTRINA NUEVA, PORQUE LA TRANSITIVIDAD
+AQUI NO DECIDIO NADA.** Lei **las diez razones** en
+`docs/plan/OP_L_03_LECTURAS.jsonl` y **las diez nombran su contenido primero** y
+citan la familia despues. **Adjudico la regla en una linea: la transitividad es
+EVIDENCIA, no VEREDICTO.** La clase la decide la vara del `9.6.1` sobre el
+contenido; la familia se mira porque `banco 9.3` obliga a mirarla, y **cuando la
+familia da cadenas contrarias, la contradiccion se DECLARA, no se lava eligiendo
+cadena**, que es exactamente lo que el ejecutor hizo en su `P.4`. **Las diez
+lecturas quedan como estan.**
+
+**7.5 `P.4`, EL ARCHIVO SE CONTRADICE EN LA FAMILIA DEL OPTION POOL: CIERTO,
+MEDIDO POR MI, Y NO SE TOCA.** Lo recompute solo: **219 `A`**
+(`option_pool_negociacion` con `pool_opciones_empleados`), **1371 `A`**
+(`employee_pool_esop` con `pool_opciones_empleados`) y **1193 `D`** entre los dos
+primeros. **`pool_opciones_empleados` sale `A` con los DOS lados de una frontera
+que el propio archivo declaro.** **Adjudico que se anota y no se resuelve en esta
+campana**: mover cualquiera de los tres es cirugia sobre veredictos cerrados, la
+campana esta en modo de cierre, y **`banco 9.3` obliga a mirar la familia, no a
+repararla**. Queda nombrado aqui y en el reporte, con sus tres puestos, para quien
+abra la fase de fusiones.
+
+**7.6 `P.3`, LA CONDICION `EL PAR TIENE PUESTO` NUNCA PUEDE DAR QUE SI: CORRECTA Y
+SE QUEDA.** El ejecutor lo midio y tiene razon: un par real esta definido como el
+que no esta en el archivo, y el archivo tiene **3.388 puestos del 1 al 3.388 sin
+un solo hueco**, cosa que recompute yo. **La rama del `SI` es inalcanzable
+mientras el archivo este lleno.** **Adjudico que la comprobacion NO se poda**, y el
+motivo lo escribio el propio ejecutor con la frase de la casa: **una guarda que
+solo se mira cuando difiere no se puede auditar el dia que difiera.** Es `banco 9`,
+fallar ruidoso.
+
+**7.7 `P.2` Y LA PARADA DE LA 3.f, LA ETIQUETA `(vuelta 177)`: NO ES PARADA, Y
+AUTORIZO TOCARLA.** El ejecutor la declaro parada porque **mi propio encargo**
+decia que `fuente_de_la_clase` no se toca, y `EJECUTOR.md` 5 le manda parar en vez
+de improvisar. **Hizo lo correcto y lo digo antes de corregirme.** **La
+contradiccion es entre `EJECUTOR.md` 8 y una instruccion MIA, no entre dos reglas
+de la casa, asi que la resuelvo yo estrechando la mia:** lo que aquel encargo
+protegia era **que ninguna clase ni su procedencia se movieran**, para que la cifra
+partida siguiera siendo auditable. **Un literal que atribuye a la vuelta 177 cinco
+lecturas de la 179 no protege eso: lo rompe**, porque `EJECUTOR.md` 8 exige toda
+cifra con su atribucion. **Adjudico que `clases_por_par()` lea la vuelta de la fila
+del registro en vez de traerla clavada**, que **ninguna clase se mueva** y que se
+compruebe por `sha256` antes y despues. Encargado en la 180.
+
+**7.8 `P.1`, EL CABLEADO DE LA GUARDA DEL SUJETO CONGELADO: SE CABLEA, PERO
+DESPUES DE LOS TRECE, Y ANTES DE LA 181.** Mi acta 178 punto 7.3 adjudico el orden
+**primero juzgar, despues cablear**; los 17 estan juzgados y verifique el registro
+fila por fila. **Adjudico ahora la segunda mitad, y sigo la recomendacion del
+ejecutor porque su motivo es de la casa:** cablear hoy pondria la bateria de la 181
+en rojo por **17** cuando **13 no abren nada vivo**, y un rojo permanente que todo
+el mundo aprende a ignorar es **degradacion silenciosa** (`banco 9`), que es lo
+mismo que argumente en la 7.3. **El orden: los 13 declaran su sujeto, los 4 que
+abren de verdad lo congelan, y SOLO ENTONCES la guarda entra al rojo global.**
+**Nada se poda de la nomina** (`AUDITOR.md` 6.1). **Y va con fecha: antes de la
+181**, porque la 181 es la vuelta de bateria.
+
+**7.9 `PD.2`, EL SUJETO CLAVADO POR `sha`, Y LA TERCERA CASILLA DEL `D.6`: LAS DOS
+SE QUEDAN.** `ABRE UN SUJETO YA CLAVADO` no estaba en el encargo y el ejecutor la
+anadio para no acusar en falso a dos arneses que hacen lo que la regla pide.
+**Adjudico que hizo bien**, por el mismo criterio de la 7.5 de mi acta 178: **una
+guarda que declara lo que no puede decidir esta midiendo, no legislando**, y
+**inventar un rojo es la caida que el propio docstring de la guarda condena.** La
+casilla se queda y **entra en el trabajo de la 180 como el estado que los dos de la
+135 deben declarar**.
+
+**7.10 `D.1` Y `D.2`, LA VENTANA DE 120 Y EL EMPAREJAMIENTO POR CERCANIA: BIEN
+ELEGIDAS, Y POR EL MOTIVO QUE EL EJECUTOR ESCRIBIO.** La ventana salio de contar
+las siete distancias reales (32, 34, 36, 45, 51, 51 y 54) y no de ojo, y la
+preferencia declarada es **que se escape antes que acusar en falso**. **Adjudico
+que esa preferencia es la correcta AQUI, y digo por que no contradice fallar
+ruidoso:** una guarda que acusa en falso **se desactiva sola**, porque el que la lee
+aprende a ignorarla, y entonces deja de cazar tambien lo verdadero. **Sobre el
+sujeto real acierta las siete**, medido por mi. Adjudicadas sin reserva.
+
+**7.11 `D.5`, EL TECHO DEL METODO DE LA TAREA 4: DECLARARLO FUE LO CORRECTO.** El
+metodo no sigue la huella por funciones auxiliares ni por modulos importados, y el
+ejecutor **publica todas las lineas de cada arnes** para que el ojo llegue donde la
+maquina no. **Adjudico por `AUDITOR.md` 2, disciplina del dictado:** un limite
+declarado con su remedio no es una debilidad del instrumento, es su honestidad.
+
+**7.12 LA CONVENCION DE BYTES, SEPTIMA ACTA: SIGUE SIENDO DEL FUNDADOR Y SIGUE SIN
+COSTAR NADA.** `cifras_sin_pareja()` da **0** sobre el reporte cerrado, medido por
+mi. **Sube como pendiente, no como problema.**
+
+## 8. LO QUE SUBE AL FUNDADOR (y no detiene el bucle)
+
+1. **LA CONVENCION DE BYTES.** Septima acta. Sin coste desde que es instrumento.
+2. **LA CONTRADICCION DE LA FAMILIA DEL OPTION POOL** (puestos 219, 1193 y 1371).
+   Anotada por la 7.5, no tocada, y esperando a quien abra las fusiones.
+3. **LOS CINCO PARES DE SALES ROADMAP** de `OP-L-02`, que `LECTURAS_DIRIGIDAS.md`
+   deja expresamente revocables por el fundador. **No los encargo.**
+
+## 9. LA METRICA DE CREDITO
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | **314** |
+| puestos | 30 aislados, **27 limpios** | **633** |
+| discrepancias DENTRO del marcado | **0** (el marcado estaba quemado, punto 7.1) | **26** |
+| discrepancias y hallazgos FUERA del marcado | **4** (3 discrepancias **que falle yo** y **un hallazgo mio**, la seccion 6) | **89** |
+| caidas propias del auditor | **1**, puesta la primera | racha de la especie en **2**: una mas y el acta 180 abre con su remedio |
+| caidas del ejecutor que ACUMULAN | **0** | racha de cifra publicada **0** |
+| caidas del ejecutor de reporte | **0** | racha de reporte **0**, y su escalada quedo entregada y corriendo |
+
+**LOS TREINTA PUESTOS SON** 197, 242, 268, 395, 500, 529, 633, 684, 740, 842, 865,
+923, 981, 1080, 1105, 1111, 1134, 1246, 1293, 1321, 1436, 1461, 1553, 1872, 2170,
+2449, 3065, 3168, 3370 y 3376. **Los tres contaminados (395, 633, 1436) van en la
+lista y fuera del marcador.**
+
+## 10. LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA, EN UNA LISTA
+
+`7.1` (`AUDITOR.md` 1.2 por su proposito escrito), `7.2` (`banco 9.6.1`, rama
+contenido manda), `7.3` (`banco 9.3` mas `9.6.3`, y el propio puesto 513), `7.4`
+(`banco 9.3` mas `9.6.1`), `7.5` (`banco 9.3` y el modo de cierre de
+`EJECUTOR.md` 4), `7.6` (`banco 9`, fallar ruidoso), `7.7` (`EJECUTOR.md` 8 mas el
+alcance escrito de mi propio encargo), `7.8` (mi acta 178 punto 7.3 mas `banco 9` y
+`AUDITOR.md` 6.1), `7.9` (mi acta 178 punto 7.5), `7.10` (`banco 9` por su
+racional), `7.11` (`AUDITOR.md` 2), `7.12` (mi acta 177 punto 7.11), y la seccion 6
+(`banco 9.21` mas mi acta 178 punto 7.2). **Trece, y ninguna inventa doctrina.**
+
+## 11. LA CADENCIA Y EL TOPE
+
+**LA BATERIA: LA PROXIMA ES LA 181**, adjudicada en mi acta 176 punto 7.8,
+reconfirmada en la 178 punto 11 y ahora por tercera vez. **La 179 cerro su seccion
+9 con el hueco declarado y medido, y lo comprobe corriendo
+`hueco_declarado_que_falta()` yo mismo: lista vacia.** **La 180 hace lo mismo, y es
+la ULTIMA que lo hace.**
+
+**EL TOPE: CINCO.** El regimen temporal de `AUDITOR.md` 6.2 quedo cumplido en la
+177, confirmado en la 178, y **hoy van cuatro vueltas seguidas archivando su propio
+reporte**. El encargo de la 180 lleva cinco.
+
+## 12. PARADA: NO
+
+Ninguna condicion de `AUDITOR.md` 4 se cumple. **No hay doctrina nueva necesaria:**
+las trece adjudicaciones citan regla escrita, incluida la que el ejecutor declaro
+PARADA en su 3.f, que se resuelve **estrechando una instruccion mia y no una regla
+de la casa** (punto 7.7). **No hay contradiccion sin resolver:** la del option pool
+se anota por `banco 9.3` y no exige tocar nada. **No hay fallo tecnico repetido:**
+Gate 0 verde entero por mi mano. **No hay credito de tanda roto:** racha de cifra
+publicada **0** y racha de reporte **0**. **No hay nada de lo que la casa reserva**
+y **la campana no esta consumada.** **No escribo `PARA_ALEXIS.md` y el encargo de
+la 180 va completo, con cinco sub-tareas.**
