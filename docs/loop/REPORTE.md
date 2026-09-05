@@ -78,7 +78,7 @@ vuelta cierre.
 | **TAREA 1** | LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE. Cinco letras: (a) LA RELECTURA AL DOBLE DEL TRAMO DE LA CAIDA de conteo del acta 177, la cuenta de la nomina y del censo, publicada ENTERA en tabla y con la resta comprobada, porque una cuenta que no cierra consigo misma se caza sola si alguien la escribe entera; (b) `arneses_que_faltan()` SE ARREGLA en la funcion y no en la llamada, con la vara del censo EXPLICITA y con su motivo, sin podar la nomina, y con el caso positivo por mutacion que hoy CAE con la funcion vieja: dos arneses de la MISMA vuelta que la ultima de la nomina, uno dentro y otro fuera, y la funcion tiene que VER al de fuera; (c) EL CUARTO VEREDICTO de `cotejar_clon_declarado.py`, EL ARBOL DE SINTAXIS, sin tocar la clasificacion vieja, en rojo si un fichero no parsea, y con el caso que lo decide todo: dos ficheros que solo difieren en una coma final dan maquina DIFIERE y AST IDENTICO; (d) EL `--puestos` Y EL `--excluir` DEL AISLADOR DE CIEGA, componibles con los selectores que ya tiene, en rojo si un puesto pedido no existe, con la guarda de fuga intacta, y borrando despues la muleta `_auditor_v178_ciega.py` por `P.16`; (e) LAS DOS DE HIGIENE: que `cerrar_reporte.py` CAIGA EN ROJO si el reporte publica una cifra de bytes o un sha sin su pareja, y LA GUARDA DEL SUJETO CONGELADO, que lleva desde la vuelta 145 siendo una frase y no un instrumento | **CERRADA. Las cinco letras entregadas, las cuatro que tocan codigo con arnes propio, y los cuatro arneses DENTRO de la nomina en su misma vuelta** | `SALIDA_V178_T1A_CUENTA.txt`, `_T1B_MUTACION.txt`, `_T1B_NOMINA.txt`, `_T1B_LOS_DOS_DESTAPADOS.txt`, `_T1C_MUTACION.txt`, `_T1C_ARNES_VIEJO.txt`, `_T1C_COTEJO_176.txt`, `_T1D_MUTACION.txt`, `_T1D_DEMO.txt`, `_T1D_ROJO_DEMO.txt`, `_T1E_MUTACION.txt`, `_T1E_CONGELADO.txt` |
 | **TAREA 2** | `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`, que sostiene una cifra adjudicada en la vuelta 15; se escribe el filtro DELANTE, en `scripts/loop/backlog_l03_resuelto.py`, de nombre estable y sin numero de vuelta, que corre el instrumento viejo y le pasa el resolutor de `P.1` por encima publicando LAS DOS COLUMNAS AL LADO. Por acto y en total: miembros escritos, vivos por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS CAMINOS CALZAN, pares que el instrumento da, pares reales y pares disueltos. CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo. Con su caso positivo por mutacion sobre un mapa de alias FABRICADO. Y publica la cifra que la 177 no pudo publicar: cuanto sobra en los 34 actos que no miro. EL ESTADO DE LA FICHA NO SE TOCA | **CERRADA. El backlog re-medido entero: de 73 pares del instrumento quedan 18 reales, y en los 34 actos sin leer quedan 10** | `SALIDA_V178_T2_BACKLOG_RESUELTO.txt`, `SALIDA_V178_T2_MUTACION.txt` |
 | **TAREA 3** | LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la 177 queda adjudicada como COSA JUZGADA en el acta 177 punto 7.9: las dos reglas que lo deciden ya estan escritas y RESULTAN COMPATIBLES. La `9.6.1` del banco dice que un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE; la correccion declarada del 13 ago 2026 sobre los puestos 530 y 863 dice que la madre y su pieza de arenas se separan. La condicion que las concilia es la que la propia `9.6.1` escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA, SI ES EL PASO DICHO OTRA VEZ, REPITE. Por cada uno de los cinco se anota EN EL JSONL cual de las dos reglas gobierna cada lado y CON QUE PRUEBA. CERO VEREDICTOS MOVIDOS | **CERRADA. Los triangulos anotados con su regla y su prueba en registro propio, CERO veredictos movidos comprobado por sha256** | `SALIDA_V178_T3_TRIANGULOS.txt`, `docs/plan/OP_L_03_TRIANGULOS.jsonl` |
-| **TAREA 4** | LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA. `vuelta150_3_relectura_expediente.py` imprime SEIS fichas en LISTA sin prueba y dos de las seis estan CONSUMIDAS por otras, asi que el trabajo real son CUATRO. La vara es del fundador y su veredicto NO SE TOCA: lo que se anade es una COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de cada una si esta CONSUMIDA por otra ficha y por cual. La cuenta final publica LAS DOS, nunca solo el cuatro. Con su caso positivo por mutacion sobre un expediente fabricado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA. `vuelta150_3_relectura_expediente.py` imprime SEIS fichas en LISTA sin prueba y dos de las seis estan CONSUMIDAS por otras, asi que el trabajo real son CUATRO. La vara es del fundador y su veredicto NO SE TOCA: lo que se anade es una COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de cada una si esta CONSUMIDA por otra ficha y por cual. La cuenta final publica LAS DOS, nunca solo el cuatro. Con su caso positivo por mutacion sobre un expediente fabricado | **CERRADA. La vara sigue imprimiendo las SEIS y publica las dos cifras: 4 de trabajo real y 2 consumidas por OP-U-01** | `SALIDA_V178_T4_VARA.txt`, `SALIDA_V178_T4_COTEJO_VARA.txt`, `SALIDA_V178_T4_MUTACION.txt` |
 | **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4` de la 174; y la medicion del grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se toca aqui, y las cuatro se nombran para que no se caigan | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -557,5 +557,106 @@ la razon entera por la que `P.5` existe.
 **NINGUNO SE TOCA AQUI.** No hay encargo para moverlos y esta tarea prohibe
 expresamente mover veredictos. Quedan anotados, con su regla y su prueba, en el
 registro propio.
+
+### TAREA 4. LA CEGUERA DE LA VARA: SE ANADE UNA COLUMNA, NO UNA EXCLUSION
+
+**LA VARA ES DEL FUNDADOR Y SU VEREDICTO NO SE TOCA.** Sigue imprimiendo **LAS
+SEIS** fichas en LISTA sin prueba, y la cifra vieja sigue publicandose entera. Lo
+que se anade es **una columna** y **una segunda cifra al lado de la primera**.
+
+#### 4.a. LA COLUMNA, Y COMO SE MIDE CADA MITAD
+
+Instrumento: `scripts/loop/vuelta150_3_relectura_expediente.py`, corrido con
+`--corte HEAD` en esta vuelta. Salida: `docs/loop/SALIDA_V178_T4_VARA.txt`.
+
+| id_op | fase | tipo | depende_de medido | consumida por |
+|---|---|---|---|---|
+| `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) | no |
+| `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA | no |
+| `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA a OP-D-06=LISTA | no |
+| `OP-I-01` | 10_INVENTARIO | MESA | (vacio) | no |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA | **SI, por `OP-U-01`** |
+| `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA | **SI, por `OP-U-01`** |
+
+**LAS DOS MITADES DE LA COLUMNA SE MIDEN DE SITIOS DISTINTOS, y eso se dice en la
+propia salida:**
+
+- **SI ESTA CONSUMIDA sale del GRAFO**, por el resolutor de `P.1` y no leyendo un
+  acta: una ficha esta consumida cuando tiene **dos o mas nodos** y **todos
+  resuelven a UN SOLO NODO VIVO**, o sea que la fusion que la ficha describe **ya
+  ocurrio**. `OP-M-02-MEDIOS` resuelve a `estrategia_multicanal_bienvenida` y
+  `OP-M-02-ADMIT` a `fase_admit_celebracion`, y los dos destinos viven.
+- **POR CUAL se lee de la propia ficha**, y **se declara que viene de ahi**,
+  porque **el grafo guarda el resultado y no quien lo hizo**. Si la ficha no
+  nombra a nadie, la columna dice **CONSUMIDA SIN DECIR POR QUIEN** en vez de
+  inventar un culpable.
+
+#### 4.b. LA CUENTA PUBLICA LAS DOS, NUNCA SOLO EL CUATRO
+
+La vara imprime ahora, con estas palabras: **"6 en LISTA sin prueba, de las cuales
+4 son TRABAJO REAL y 2 estan CONSUMIDAS por otras fichas"**, con las dos nombradas
+y con su destino vivo al lado. Y en el bloque de cifras finales:
+
+| cifra | valor |
+|---|---|
+| fichas en LISTA sin ninguna prueba (la de siempre, **intacta**) | **6** |
+| de esas, CONSUMIDAS por otra ficha (nueva) | **2** |
+| de esas, TRABAJO REAL (nueva) | **4** |
+
+**PODAR LA CIFRA DE LA VARA SIN EL FUNDADOR ES LO QUE LA CASA RESERVA**, y por eso
+el **6** sigue ahi y las seis filas se siguen imprimiendo enteras.
+
+#### 4.c. EL COTEJO DE ANTES Y DESPUES, PARA QUE NADIE TENGA QUE CREERME
+
+`docs/loop/SALIDA_V178_T4_COTEJO_VARA.txt`. **La version vieja se saca de git**
+(`git show 77621a68:scripts/loop/vuelta150_3_relectura_expediente.py` a
+`scripts/loop/_v178_vara_vieja_copia.py`), **no de una copia a mano**, y las dos se
+corren con `--corte HEAD` en esta misma vuelta.
+
+| medicion | valor |
+|---|---|
+| lineas de la salida VIEJA | **234** |
+| lineas de la salida NUEVA | **248** |
+| lineas que la vieja tiene y la nueva NO | **8** |
+| lineas que la nueva anade | **22** |
+
+**Y LAS OCHO QUE "SE PIERDEN" SON LAS MISMAS OCHO QUE VUELVEN CON LA COLUMNA
+PUESTA**: la cabecera de la tabla, su separador y las seis filas. **NI UN
+VEREDICTO, NI UNA CLASIFICACION Y NI UNA CIFRA VIEJA CAMBIAN.** Las 37 filas de
+"las que no calzan", las 24 congeladas declaradas, las 12 en silencio, la 1 HECHA
+sin prueba y el 6 de LISTA sin prueba salen **identicas**.
+
+**Y UN CAMBIO ADITIVO QUE DECLARO EN VOZ ALTA:** la vara llamaba a `main()` a
+nivel de modulo, asi que **importarla la corria**, y su caso positivo por mutacion
+no podia llamar a sus funciones puras sin arrastrar la vara entera detras. Se le
+puso la guarda `if __name__ == "__main__"`. **Corrida como programa hace
+exactamente lo mismo que antes**, y el cotejo de arriba lo demuestra.
+
+#### 4.d. EL CASO POSITIVO POR MUTACION, SOBRE UN EXPEDIENTE FABRICADO
+
+`scripts/loop/vuelta178_tarea4_mutacion_consumidas.py`,
+`docs/loop/SALIDA_V178_T4_MUTACION.txt`. **11 casos, los 11 pasan y los 11 CAEN**
+al mutarles el esperado. **Nada sale del repo**: ni `docs/plan/OPERACIONES.jsonl`,
+ni `dataset/nodos/`, ni el grafo.
+
+| el caso | resultado |
+|---|---|
+| dos nodos que resuelven a un solo VIVO, con su atribucion escrita | CONSUMIDA, y nombra `OP-Z-99` |
+| **la misma ficha SIN el alias** | **NO consumida** |
+| una ficha de un solo nodo, aunque su nota lo afirme | no consumida |
+| consumida pero sin nombrar a nadie | consumida, y lo declara sin inventar culpable |
+| dos nodos que colapsan a un destino DEPRECADO | no consumida |
+
+**LA MUTACION QUE MANDA ES LA DEL ALIAS**: si quitarlo no cambiara la respuesta,
+la columna no estaria midiendo contra el grafo, estaria leyendo un acta.
+
+**Y ESTE ARNES TAMBIEN TUMBO UN DEFECTO REAL EN SU PRIMERA CORRIDA**, igual que el
+de la TAREA 2: la atribucion se buscaba en **la primera ventana** de la nota y
+devolvia lista vacia **teniendo la respuesta escrita unos cientos de caracteres
+mas abajo**, en la misma nota. La primera corrida de la columna sobre el
+expediente real decia *"SI, PERO LA FICHA NO DICE POR QUIEN"* en las dos, y la
+ficha si lo decia: `OP-U-01`. Se arreglo la funcion, y el caso del arnes pone la
+atribucion **a 400 caracteres de la marca a proposito** para que no pueda volver a
+pasar.
 
 <!-- FIN ANEXO DE TAREAS -->

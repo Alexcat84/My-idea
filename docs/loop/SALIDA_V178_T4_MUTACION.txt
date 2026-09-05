@@ -1,0 +1,66 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA COLUMNA CONSUMIDA (vuelta 178, TAREA 4.c)
+==============================================================================
+
+EL EXPEDIENTE FABRICADO, que NO es docs/plan/OPERACIONES.jsonl:
+   OP-X-01    nodos ['nodo_que_muere', 'nodo_que_vive']
+   OP-X-02    nodos ['nodo_que_muere', 'nodo_que_vive']
+   OP-X-03    nodos ['nodo_que_vive']
+   OP-X-04    nodos ['nodo_que_muere', 'nodo_tambien_muerto']
+   mapa de alias fabricado: {'nodo_que_muere': 'nodo_que_vive', 'nodo_tambien_muerto': 'nodo_muerto_destino'}
+   vivos fabricados: {'nodo_que_vive': True, 'nodo_que_muere': False, 'nodo_tambien_muerto': False, 'nodo_muerto_destino': False}
+
+1) LOS DOS NODOS RESUELVEN A UN SOLO VIVO: ESTA CONSUMIDA, Y DICE POR CUAL
+   consumida: True | por: OP-Z-99 | destino vivo: nodo_que_vive
+   Y LA ATRIBUCION ESTA A 400 CARACTERES DE LA MARCA a proposito: la
+   primera version de esta columna solo miraba la primera ventana y
+   devolvia lista vacia teniendo la respuesta escrita mas abajo.
+
+2) LA MUTACION QUE MANDA: SE QUITA EL ALIAS Y DEJA DE ESTAR CONSUMIDA
+   consumida sin el alias: False
+   Si quitar el alias no cambiara la respuesta, la columna no estaria
+   midiendo contra el grafo: estaria leyendo un acta.
+
+3) UNA FICHA DE UN SOLO NODO NUNCA ESTA CONSUMIDA
+   consumida: False (y su nota lo AFIRMA, que es lo que hace util el caso)
+
+4) CONSUMIDA PERO SIN NOMBRAR A NADIE: SE DECLARA, NO SE INVENTA
+   consumida: True | nombra: (nadie)
+
+5) SI EL DESTINO NO VIVE, NO ESTA CONSUMIDA
+   consumida: False | destino: None (vivo: None)
+
+6) LAS FUNCIONES DE LA COLUMNA SON PURAS Y SE LES PUEDE PASAR TODO
+   mapa_de_alias() sobre un directorio que no existe: {}
+   vivos_del_grafo() sobre una ruta que no existe: {}
+
+7) PASADA 1, LOS CASOS TAL CUAL
+   1_esta_consumida                               PASA   (real=True esperado=True)
+   1_nombra_a_quien_la_consumio                   PASA   (real=['OP-Z-99'] esperado=['OP-Z-99'])
+   1_el_destino_es_el_nodo_vivo                   PASA   (real='nodo_que_vive' esperado='nodo_que_vive')
+   2_sin_alias_NO_esta_consumida                  PASA   (real=False esperado=False)
+   2_sin_alias_no_nombra_a_nadie                  PASA   (real=[] esperado=[])
+   3_una_ficha_de_un_nodo_no_esta_consumida       PASA   (real=False esperado=False)
+   4_muda_esta_consumida                          PASA   (real=True esperado=True)
+   4_muda_no_nombra_a_nadie                       PASA   (real=[] esperado=[])
+   5_destino_deprecado_no_esta_consumida          PASA   (real=False esperado=False)
+   6_mapa_de_alias_sin_directorio_es_vacio        PASA   (real={} esperado={})
+   6_vivos_sin_grafo_es_vacio                     PASA   (real={} esperado={})
+   CIFRA casos: 11 | pasan: 11 | fallan: 0
+
+8) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   1_esta_consumida                               CAE
+   1_nombra_a_quien_la_consumio                   CAE
+   1_el_destino_es_el_nodo_vivo                   CAE
+   2_sin_alias_NO_esta_consumida                  CAE
+   2_sin_alias_no_nombra_a_nadie                  CAE
+   3_una_ficha_de_un_nodo_no_esta_consumida       CAE
+   4_muda_esta_consumida                          CAE
+   4_muda_no_nombra_a_nadie                       CAE
+   5_destino_deprecado_no_esta_consumida          CAE
+   6_mapa_de_alias_sin_directorio_es_vacio        CAE
+   6_vivos_sin_grafo_es_vacio                     CAE
+   CIFRA casos que CAEN: 11 de 11
+
+VERDE DE LA MUTACION: 11 casos, los 11 pasan y los 11 CAEN al mutarles el valor esperado. La columna mide CONTRA EL GRAFO (quitar el alias cambia la respuesta), lee la atribucion DE LA PROPIA FICHA y en todas sus ventanas, no consume una ficha de un solo nodo, no inventa culpable cuando la ficha calla, y no llama consumida a una que colapso a un nodo deprecado.
+FIN

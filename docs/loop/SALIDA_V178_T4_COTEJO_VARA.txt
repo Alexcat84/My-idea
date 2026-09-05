@@ -1,0 +1,45 @@
+COTEJO DE LA VARA, ANTES Y DESPUES DE LA COLUMNA (vuelta 178, TAREA 4)
+==================================================================
+la VIEJA se saca de git y no de una copia a mano:
+   git show 77621a68:scripts/loop/vuelta150_3_relectura_expediente.py
+   > scripts/loop/_v178_vara_vieja_copia.py
+las dos se corren con --corte HEAD en esta misma vuelta.
+
+lineas de la salida VIEJA: 234
+lineas de la salida NUEVA: 248
+
+LINEAS QUE LA VIEJA TIENE Y LA NUEVA NO (lo que se habria perdido):
+   < | id_op | fase | tipo | depende_de medido |
+   < |---|---|---|---|
+   < | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) |
+   < | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA |
+   < | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA |
+   < | `OP-I-01` | 10_INVENTARIO | MESA | (vacio) |
+   < | `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA |
+   < | `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA |
+   CIFRA: 8
+
+LINEAS QUE LA NUEVA ANADE:
+   > | id_op | fase | tipo | depende_de medido | consumida por |
+   > |---|---|---|---|---|
+   > | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) | no |
+   > | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA | no |
+   > | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA | no |
+   > | `OP-I-01` | 10_INVENTARIO | MESA | (vacio) | no |
+   > | `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA | SI, por `OP-U-01` |
+   > | `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA | SI, por `OP-U-01` |
+   > Y LA CUENTA PUBLICA LAS DOS, NUNCA SOLO LA SEGUNDA (vuelta 178, TAREA 4):
+   >   6 en LISTA sin prueba, de las cuales 4 son TRABAJO REAL y 2 estan
+   >   CONSUMIDAS por otras fichas.
+   >      CONSUMIDA: OP-M-02-MEDIOS       por OP-U-01                      (sus nodos resuelven al VIVO estrategia_multicanal_bienvenida)
+   >      CONSUMIDA: OP-M-02-ADMIT        por OP-U-01                      (sus nodos resuelven al VIVO fase_admit_celebracion)
+   >   COMO SE MIDE: si esta consumida sale del GRAFO por el resolutor de P.1
+   >   (dos o mas nodos que resuelven a UN SOLO nodo VIVO, o sea que la fusion
+   >   que la ficha describe ya ocurrio); por CUAL sale de la propia ficha, y
+   >   se dice, porque el grafo guarda el resultado y no quien lo hizo.
+   >   PODAR LA CIFRA DE LA VARA SIN EL FUNDADOR ES LO QUE LA CASA RESERVA:
+   >   las 6 se siguen imprimiendo enteras y la cifra vieja no se toca.
+   > 
+   > CIFRA de esas que estan CONSUMIDAS por otra ficha: 2 operaciones
+   > CIFRA de esas que son TRABAJO REAL: 4 operaciones
+   CIFRA: 22

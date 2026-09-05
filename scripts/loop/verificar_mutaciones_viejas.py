@@ -668,6 +668,16 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 96 A 97.
     ("vuelta178_tarea2_mutacion_resolutor.py", False),
+    # VUELTA 178, TAREA 4.c. La columna CONSUMIDA de la vara del fundador,
+    # probada sobre un EXPEDIENTE FABRICADO: ni `docs/plan/OPERACIONES.jsonl` ni
+    # `dataset/nodos/` ni el grafo se leen para decidir ningun caso. Su caso que
+    # manda es el del alias en los dos sentidos, igual que el de la 2.e, y su
+    # primera corrida tambien tumbo un defecto real: la atribucion se buscaba en
+    # la PRIMERA ventana y devolvia lista vacia teniendo la respuesta escrita
+    # unos cientos de caracteres mas abajo en la misma nota.
+    #
+    # LA NOMINA CRECE DE 97 A 98.
+    ("vuelta178_tarea4_mutacion_consumidas.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
