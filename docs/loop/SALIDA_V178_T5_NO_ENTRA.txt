@@ -1,0 +1,52 @@
+LO QUE NO ENTRA Y NO SE PIERDE, CONTADO CON SU MEDICION (vuelta 178, TAREA 5)
+============================================================================
+EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA: una ruta publicada como
+evidencia cuenta como CIFRA PUBLICADA, y si apunta a un fichero inexistente o
+de CERO BYTES es CAIDA DE CIFRA. Las cuatro se comprueban aqui ANTES de
+escribirlas en el reporte, y las cuatro van con sus DOS convenciones de bytes.
+
+1) LA SEGUNDA SEDE DE LA CLAUSULA 4.4
+   sede: docs/loop/reportes/REPORTE_V172.md
+   existe: SI | disco 48851 bytes | normalizado a LF 48851 bytes | git 48851 bytes
+   lineas del fichero: 762
+   CIFRA lineas que nombran la 4.4: 2, en las lineas 20, 80
+      linea 20: **EL VEREDICTO DE UNA LINEA: LA VUELTA 172 ENTREGO CUATRO DE SUS CINCO TAREAS Y NO PUDO CERRAR SU PROPIO REPORTE, Y SE CIERRA AQUI, DOS VUELTAS DESPUE
+      linea 80: > **LO QUE DE VERDAD PASO, Y ES LO QUE DICE LA `4.4` DEL ACTA DEL AUDITOR DE
+   NO SE TOCA: es un reporte ARCHIVADO Y COMMITEADO, o sea un sujeto congelado,
+   y retocarlo seria peor que el defecto (acta 143 sobre la misma especie).
+
+2) EL DOCSTRING DE paso0_archivar_anterior.py
+   sede: scripts/loop/paso0_archivar_anterior.py
+   existe: SI | disco 7112 bytes | normalizado a LF 7112 bytes | git 7112 bytes
+   lineas: 162
+   CIFRA veces que el fichero dice 'vuelta anterior': 1
+   CIFRA veces que dice 'VUELTA - 1' o 'vuelta - 1': 0
+   lo pendiente: el docstring sigue hablando de LA VUELTA ANTERIOR cuando la
+   maquina, desde la 174, pregunta por EL REPORTE QUE VA A PISAR. Es una
+   divergencia de TEXTO, no de maquina, y no se toca aqui.
+
+3) LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL D.4 DE LA 174
+   sede: docs/loop/reportes/REPORTE_V174.md
+   existe: SI | disco 32568 bytes | normalizado a LF 32568 bytes | git 32568 bytes
+   CIFRA lineas que nombran el D.4: 1, en la linea 366
+      linea 366: **`D.4` LA MAQUINA DEL REGISTRADOR SE IMPORTO EN VEZ DE CLONARSE, ROMPIENDO DOS
+   Y LA DEPENDENCIA SIGUE VIVA HOY, medida y no recordada: el esqueleto de esta
+   vuelta, scripts/loop/vuelta178_esqueleto_reporte.py,
+   clona vuelta_del_reporte_del_arbol() de vuelta174_esqueleto_reporte.py en vez
+   de importarla, y lo declara: SI
+   nada avisa si el fichero del que se clono desaparece: sigue sin guarda.
+
+4) EL GRANO DEL TOPE DE 10 MINUTOS, QUE SE MIDE EN LA 181 Y NO ANTES
+   sede: scripts/loop/verificar_mutaciones_viejas.py, funcion reparto_en_tramos()
+   existe: SI | disco 108097 bytes | normalizado a LF 108097 bytes | git 108097 bytes
+   TOPE_DE_MINUTOS_POR_TRAMO, leido del fichero: 10.0
+   CIFRA entradas de la nomina HOY: 98
+   CIFRA tramos con tamano 10, computada hoy: 10
+   LO QUE SE MIDE EN LA 181, Y NO SE RE-ELIGE A OJO ANTES: si 10 tramos para
+   98 entradas es demasiado grano. La medicion necesita EL RELOJ DE ESA
+   CORRIDA, que es lo unico que dice cuanto cuesta de verdad cada tramo, y esa
+   corrida es la de la 181. Elegir el numero antes seria justo lo que el D.3 de
+   la 176 levanto contra el tamano elegido a ojo.
+
+LAS CUATRO EXISTEN, NINGUNA MIDE CERO BYTES, Y NINGUNA SE TOCA EN ESTA VUELTA.
+FIN

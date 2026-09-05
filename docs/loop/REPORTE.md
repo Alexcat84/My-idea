@@ -79,7 +79,7 @@ vuelta cierre.
 | **TAREA 2** | `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`, que sostiene una cifra adjudicada en la vuelta 15; se escribe el filtro DELANTE, en `scripts/loop/backlog_l03_resuelto.py`, de nombre estable y sin numero de vuelta, que corre el instrumento viejo y le pasa el resolutor de `P.1` por encima publicando LAS DOS COLUMNAS AL LADO. Por acto y en total: miembros escritos, vivos por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS CAMINOS CALZAN, pares que el instrumento da, pares reales y pares disueltos. CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo. Con su caso positivo por mutacion sobre un mapa de alias FABRICADO. Y publica la cifra que la 177 no pudo publicar: cuanto sobra en los 34 actos que no miro. EL ESTADO DE LA FICHA NO SE TOCA | **CERRADA. El backlog re-medido entero: de 73 pares del instrumento quedan 18 reales, y en los 34 actos sin leer quedan 10** | `SALIDA_V178_T2_BACKLOG_RESUELTO.txt`, `SALIDA_V178_T2_MUTACION.txt` |
 | **TAREA 3** | LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la 177 queda adjudicada como COSA JUZGADA en el acta 177 punto 7.9: las dos reglas que lo deciden ya estan escritas y RESULTAN COMPATIBLES. La `9.6.1` del banco dice que un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE; la correccion declarada del 13 ago 2026 sobre los puestos 530 y 863 dice que la madre y su pieza de arenas se separan. La condicion que las concilia es la que la propia `9.6.1` escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA, SI ES EL PASO DICHO OTRA VEZ, REPITE. Por cada uno de los cinco se anota EN EL JSONL cual de las dos reglas gobierna cada lado y CON QUE PRUEBA. CERO VEREDICTOS MOVIDOS | **CERRADA. Los triangulos anotados con su regla y su prueba en registro propio, CERO veredictos movidos comprobado por sha256** | `SALIDA_V178_T3_TRIANGULOS.txt`, `docs/plan/OP_L_03_TRIANGULOS.jsonl` |
 | **TAREA 4** | LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA. `vuelta150_3_relectura_expediente.py` imprime SEIS fichas en LISTA sin prueba y dos de las seis estan CONSUMIDAS por otras, asi que el trabajo real son CUATRO. La vara es del fundador y su veredicto NO SE TOCA: lo que se anade es una COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de cada una si esta CONSUMIDA por otra ficha y por cual. La cuenta final publica LAS DOS, nunca solo el cuatro. Con su caso positivo por mutacion sobre un expediente fabricado | **CERRADA. La vara sigue imprimiendo las SEIS y publica las dos cifras: 4 de trabajo real y 2 consumidas por OP-U-01** | `SALIDA_V178_T4_VARA.txt`, `SALIDA_V178_T4_COTEJO_VARA.txt`, `SALIDA_V178_T4_MUTACION.txt` |
-| **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4` de la 174; y la medicion del grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se toca aqui, y las cuatro se nombran para que no se caigan | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4` de la 174; y la medicion del grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se toca aqui, y las cuatro se nombran para que no se caigan | **CERRADA. Las cuatro nombradas y MEDIDAS (existen y ninguna mide cero bytes), mas dos nuevas que nacen en esta vuelta** | `SALIDA_V178_T5_NO_ENTRA.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -658,5 +658,48 @@ expediente real decia *"SI, PERO LA FICHA NO DICE POR QUIEN"* en las dos, y la
 ficha si lo decia: `OP-U-01`. Se arreglo la funcion, y el caso del arnes pone la
 atribucion **a 400 caracteres de la marca a proposito** para que no pueda volver a
 pasar.
+
+### TAREA 5. LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA
+
+**LAS CUATRO EXISTEN, NINGUNA MIDE CERO BYTES Y NINGUNA SE TOCA AQUI.** Se
+comprueban ANTES de escribirlas, porque `EJECUTOR.md` 1 dice que **una ruta
+publicada como evidencia CUENTA COMO CIFRA**, y una ruta a un fichero inexistente
+o vacio es CAIDA DE CIFRA. Salida:
+`docs/loop/SALIDA_V178_T5_NO_ENTRA.txt`.
+
+| que queda pendiente | sede | disco | LF | git | por que no entra aqui |
+|---|---|---|---|---|---|
+| la segunda sede de la clausula `4.4` | `docs/loop/reportes/REPORTE_V172.md`, lineas 20 y 80 | 48.851 | 48.851 | 48.851 | es un reporte ARCHIVADO Y COMMITEADO, o sea un sujeto congelado |
+| el docstring de `paso0_archivar_anterior.py` | `scripts/loop/paso0_archivar_anterior.py`, 162 lineas | 7.112 | 7.112 | 7.112 | divergencia de TEXTO y no de maquina, y el encargo no la manda |
+| la guarda que falta en la dependencia del `D.4` de la 174 | `docs/loop/reportes/REPORTE_V174.md`, linea 366 | 32.568 | 32.568 | 32.568 | pide instrumento nuevo y el encargo no lo pide |
+| el grano del tope de 10 minutos (mi `D.2`) | `scripts/loop/verificar_mutaciones_viejas.py`, `reparto_en_tramos()` | 108.097 | 108.097 | 108.097 | **se mide EN LA 181 con el reloj de esa corrida**, no antes |
+
+**Y CADA UNA CON LO QUE HOY SE PUEDE MEDIR DE ELLA, que es lo que impide que se
+caiga por olvido:**
+
+1. **LA CLAUSULA `4.4`.** El fichero la nombra en **2 lineas**, la 20 y la 80. **No
+   se retoca**: un reporte archivado es un sujeto congelado, y retocarlo es peor
+   que el defecto.
+2. **EL DOCSTRING DE `paso0_archivar_anterior.py`.** Dice **1 vez** "vuelta
+   anterior" y **0 veces** "VUELTA menos 1". Lo pendiente es que sigue hablando de
+   LA VUELTA ANTERIOR cuando la maquina, desde la 174, pregunta por **el reporte
+   que va a pisar**.
+3. **LA GUARDA DEL `D.4`, Y LA DEPENDENCIA SIGUE VIVA HOY, MEDIDA Y NO
+   RECORDADA:** el esqueleto de ESTA vuelta clona
+   `vuelta_del_reporte_del_arbol()` de `vuelta174_esqueleto_reporte.py` en vez de
+   importarla, **y lo declara** (comprobado en el fichero, sale SI). **Nada avisa
+   si el fichero del que se clono desaparece.**
+4. **EL GRANO DEL TOPE.** `TOPE_DE_MINUTOS_POR_TRAMO` vale **10.0**, la nomina de
+   hoy tiene **98 entradas** y el reparto con tamano 10 da **10 tramos**. **La
+   medicion de si eso es demasiado grano necesita EL RELOJ DE LA CORRIDA DE LA
+   181**, que es lo unico que dice cuanto cuesta de verdad cada tramo. **Elegir el
+   numero antes seria justo lo que el `D.3` de la 176 levanto contra el tamano
+   elegido a ojo.**
+
+**Y SE ANADEN DOS QUE NACEN EN ESTA VUELTA Y TAMPOCO ENTRAN**, para que no se
+caigan tampoco: **los DOS arneses que la vara del censo destapa** y que decidiran
+si la bateria de la 181 sale en rojo (`P.1` de la seccion de preguntas), y **el
+cableado de la guarda del sujeto congelado al rojo global de la bateria** (`P.2`).
+Las dos van con su cifra medida en la TAREA 1 y ninguna se decide aqui.
 
 <!-- FIN ANEXO DE TAREAS -->
