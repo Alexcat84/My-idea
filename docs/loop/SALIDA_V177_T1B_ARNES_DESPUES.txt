@@ -1,0 +1,94 @@
+==============================================================================
+VUELTA 166, TAREA 2: CASO POSITIVO POR MUTACION DE LOS CINCO INVARIANTES
+==============================================================================
+
+A) EL SUJETO, LEIDO DEL FICHERO DE VERDAD Y NO FABRICADO
+   docs/plan/OPERACIONES.jsonl:41, ficha OP-L-01
+   CIFRA lineas del fichero: 71
+   CIFRA clausulas de verificacion hoy: 6
+
+B) EL CASO SANO: LA ADICION LIMPIA TIENE QUE PASAR LOS CINCO
+   1_las_clausulas_viejas_siguen_byte_a_byte_y_en_su_orden PASA
+   2_el_esquema_no_gana_ni_pierde_una_clave             PASA
+   3_verificacion_crece_en_exactamente_dos              PASA
+   4_el_resto_de_la_ficha_no_se_toca_ni_en_estado       PASA
+   5_las_otras_lineas_del_fichero_no_se_tocan           PASA
+
+C) MUTACION 1: SE BORRA UNA LETRA DE LA CLAUSULA VIEJA
+   se le quita el ultimo caracter a la clausula 1
+   invariante 1 (byte a byte): CAE
+C bis: SE BORRA UNA CLAUSULA ENTERA Y SE SUSTITUYE
+C ter: SE REORDENAN LAS VIEJAS SIN BORRAR NINGUNA
+   ninguna se borra, pero cambian de orden
+
+D) MUTACION 2: SE CREA UNA CLAVE NUEVA DE ESQUEMA
+   se anade la clave 'correccion_declarada'
+D bis: SE QUITA UNA CLAVE DEL ESQUEMA
+
+E) MUTACION 3: LA LISTA CRECE EN OTRA COSA QUE DOS
+   crece en 0 -> invariante 3: CAE
+   crece en 1 -> invariante 3: CAE
+   crece en 3 -> invariante 3: CAE
+
+F) MUTACION 4: SE TOCA EL RESTO DE LA FICHA (Y EL ESTADO ES EL CASO GORDO)
+   se cambia estado de LISTA a HECHA de tapadillo dentro de la correccion
+   se le inventa una dependencia
+
+G) MUTACION 5: SE TOCA OTRA LINEA DEL FICHERO
+   se le cambia el estado a la ficha de la linea 1
+   se le cuela una ficha nueva al final del fichero
+
+H) EL TEXTO DE LAS DOS CORRECCIONES SIGUE A LA MEDICION Y NO A UNA CONSTANTE
+   CIFRA hallazgos medidos hoy: 11
+
+I) PASADA 1, LOS CASOS TAL CUAL
+   B_la_adicion_limpia_pasa_los_cinco                   PASA   (real=5 esperado=5)
+   C_borrar_una_letra_tumba_el_invariante_1             PASA   (real=False esperado=False)
+   Cbis_borrar_la_clausula_2_tumba_el_invariante_1      PASA   (real=False esperado=False)
+   Cter_reordenar_las_viejas_tumba_el_invariante_1      PASA   (real=False esperado=False)
+   D_clave_nueva_tumba_el_invariante_2                  PASA   (real=False esperado=False)
+   Dbis_quitar_una_clave_tumba_el_invariante_2          PASA   (real=False esperado=False)
+   E_crecer_en_0_tumba_el_invariante_3                  PASA   (real=False esperado=False)
+   E_crecer_en_1_tumba_el_invariante_3                  PASA   (real=False esperado=False)
+   E_crecer_en_3_tumba_el_invariante_3                  PASA   (real=False esperado=False)
+   F_mover_el_estado_tumba_el_invariante_4              PASA   (real=False esperado=False)
+   Fbis_inventar_dependencia_tumba_el_invariante_4      PASA   (real=False esperado=False)
+   G_tocar_otra_linea_tumba_el_invariante_5             PASA   (real=False esperado=False)
+   Gbis_colar_una_ficha_nueva_tumba_el_invariante_5     PASA   (real=False esperado=False)
+   H_el_texto_nombra_TODOS_los_hallazgos                PASA   (real=11 esperado=11)
+   H_la_medicion_viva_trae_hallazgos                    PASA   (real=True esperado=True)
+   H_con_un_hallazgo_solo_nombra_una                    PASA   (real=1 esperado=1)
+   H_los_dos_textos_no_son_iguales                      PASA   (real=False esperado=False)
+   H_el_texto_lleva_los_cinco_puestos                   PASA   (real=5 esperado=5)
+   H_la_correccion_2_lleva_el_marcador_de_hoy           PASA   (real=True esperado=True)
+   H_y_cambia_si_el_marcador_cambia                     PASA   (real=False esperado=False)
+   CIFRA casos: 20 | pasan: 20 | fallan: 0
+
+J) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   B_la_adicion_limpia_pasa_los_cinco                   CAE   (esperado mutado=6)
+   C_borrar_una_letra_tumba_el_invariante_1             CAE   (esperado mutado=True)
+   Cbis_borrar_la_clausula_2_tumba_el_invariante_1      CAE   (esperado mutado=True)
+   Cter_reordenar_las_viejas_tumba_el_invariante_1      CAE   (esperado mutado=True)
+   D_clave_nueva_tumba_el_invariante_2                  CAE   (esperado mutado=True)
+   Dbis_quitar_una_clave_tumba_el_invariante_2          CAE   (esperado mutado=True)
+   E_crecer_en_0_tumba_el_invariante_3                  CAE   (esperado mutado=True)
+   E_crecer_en_1_tumba_el_invariante_3                  CAE   (esperado mutado=True)
+   E_crecer_en_3_tumba_el_invariante_3                  CAE   (esperado mutado=True)
+   F_mover_el_estado_tumba_el_invariante_4              CAE   (esperado mutado=True)
+   Fbis_inventar_dependencia_tumba_el_invariante_4      CAE   (esperado mutado=True)
+   G_tocar_otra_linea_tumba_el_invariante_5             CAE   (esperado mutado=True)
+   Gbis_colar_una_ficha_nueva_tumba_el_invariante_5     CAE   (esperado mutado=True)
+   H_el_texto_nombra_TODOS_los_hallazgos                CAE   (esperado mutado=12)
+   H_la_medicion_viva_trae_hallazgos                    CAE   (esperado mutado=False)
+   H_con_un_hallazgo_solo_nombra_una                    CAE   (esperado mutado=2)
+   H_los_dos_textos_no_son_iguales                      CAE   (esperado mutado=True)
+   H_el_texto_lleva_los_cinco_puestos                   CAE   (esperado mutado=6)
+   H_la_correccion_2_lleva_el_marcador_de_hoy           CAE   (esperado mutado=False)
+   H_y_cambia_si_el_marcador_cambia                     CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 20 de 20
+
+K) Y SE COMPRUEBA QUE ESTA PRUEBA NO ESCRIBIO NADA
+   el fichero es identico byte a byte al de antes de la prueba: True
+
+VERDE: los 20 casos pasan tal cual y los 20 caen al mutar el esperado.
+EXIT=0

@@ -172,7 +172,40 @@ def main():
     real = T.texto_correccion_1(hall, n_lit, n_res, n_pl, n_pr, len(mapa), len(V))
     falso = T.texto_correccion_1(hall[:1], n_lit, 1, n_pl, n_pr, len(mapa), len(V))
     print("   CIFRA hallazgos medidos hoy: %d" % len(hall))
-    casos.append(("H_el_texto_nombra_las_tres", real.count("cae sobre"), 3))
+    # CORRECCION DECLARADA (2026-09-05, vuelta 177, TAREA 1.b del encargo), POR
+    # ADJUDICACION 7.7 DEL ACTA 176 Y SIN BORRAR DE QUE IBA. LO QUE DECIA ESTA
+    # LINEA, VERBATIM, Y NO SE TACHA:
+    #     casos.append(("H_el_texto_nombra_las_tres", real.count("cae sobre"), 3))
+    # EL `3` ERA UN LITERAL TECLEADO CONTRA UN SUJETO VIVO. `real` sale de
+    # T.medir_clausula_1() sobre el registro de veredictos VIVO, que cuando esta
+    # linea se escribio (vuelta 166) daba TRES hallazgos y hoy da ONCE. El
+    # registro se movio debajo y el arnes se quedo quieto: exit 1, 19 casos, 18
+    # pasan, 1 falla, real=11 esperado=3. Reproducido en la vuelta 177 antes de
+    # tocarlo, en docs/loop/SALIDA_V177_T1B_ROJO_ANTES.txt.
+    # QUE SE HACE: EL ESPERADO SE COMPUTA DE LA MISMA FUENTE VIVA, que es la
+    # tercera de las tres salidas y la unica que el acta 176 punto 7.7 adjudica.
+    # Es la doctrina del propio fichero desde la vuelta 145, correccion 22: "un
+    # sujeto vivo hace que el verde de una vuelta no sobreviva a la vuelta".
+    # QUE NO SE HACE, y las tres estan descartadas con motivo en esa misma
+    # adjudicacion: NO se pasa a CASO DECLARADO (apagar una guarda que mide mal
+    # es lo contrario de fallar ruidoso, banco 9), NO se re-ancla a un sujeto
+    # congelado (dejaria de medir contra el vivo, que es lo unico que este caso
+    # existe para comprobar) y NO SE PODA LA NOMINA (la entrada se queda; lo que
+    # se arregla es su medicion).
+    # Y EL NOMBRE CAMBIA PORQUE LA CIFRA YA NO ES TRES: el caso no comprueba que
+    # sean tres, comprueba que el texto los nombre TODOS, sean tres u once.
+    casos.append(("H_el_texto_nombra_TODOS_los_hallazgos",
+                  real.count("cae sobre"), len(hall)))
+    # LA GUARDA QUE IMPIDE QUE EL ESPERADO COMPUTADO SEA UN ADORNO. Con el
+    # esperado computado, `0 == 0` pasaria si la medicion viva se quedase sin
+    # hallazgos, y un caso que no puede fallar nunca no es una guarda. Asi que
+    # el que la medicion viva TRAIGA hallazgos se comprueba aparte y en voz alta.
+    casos.append(("H_la_medicion_viva_trae_hallazgos", len(hall) > 0, True))
+    # ESTE `1` NO SE TOCA Y SE DICE POR QUE, en vez de arrastrarlo por parecido:
+    # no mide un sujeto vivo. Mide `hall[:1]`, una rebanada que ESTE fichero
+    # construye de un elemento, asi que el 1 es la longitud de una entrada
+    # fabricada aqui y no una cifra del registro. Computarlo de `len(hall[:1])`
+    # ademas lo debilitaria: con la medicion viva vacia daria 0 == 0 y pasaria.
     casos.append(("H_con_un_hallazgo_solo_nombra_una", falso.count("cae sobre"), 1))
     casos.append(("H_los_dos_textos_no_son_iguales", real == falso, False))
     casos.append(("H_el_texto_lleva_los_cinco_puestos",

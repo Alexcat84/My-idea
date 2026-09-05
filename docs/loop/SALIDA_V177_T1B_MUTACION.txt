@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 177, TAREA 1.b: EL ESPERADO COMPUTADO TIENE QUE SEGUIR MORDIENDO
+==============================================================================
+
+A) EL SUJETO, LEIDO DE SU FICHERO Y NO DESCRITO DE MEMORIA
+   scripts/loop/vuelta166_tarea2_mutacion_correccion.py (267 lineas)
+   LINEA 178: #     casos.append(("H_el_texto_nombra_las_tres", real.count("cae sobre"), 3))
+   LINEA 197: casos.append(("H_el_texto_nombra_TODOS_los_hallazgos",
+   LINEA 203: casos.append(("H_la_medicion_viva_trae_hallazgos", len(hall) > 0, True))
+
+B) LA MEDICION VIVA, RECOMPUTADA AQUI Y NO COPIADA DE NINGUN SITIO
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA hallazgos que la medicion viva da hoy: 11
+   CIFRA veces que el texto entero dice 'cae sobre': 11
+
+C) EL CASO SANO: EL TEXTO ENTERO CONTRA EL ESPERADO COMPUTADO, PASA
+   (una prueba que solo sabe tumbar no distingue una guarda de una piedra)
+   la comparacion con el texto entero: PASA
+
+D) MUTACION 1: EL TEXTO DEJA DE NOMBRAR UN HALLAZGO Y EL CASO TIENE QUE CAER
+   (EL ESPERADO NO SE TOCA: sigue siendo len(hall) de la medicion viva
+    ENTERA. Lo que se rompe es el PRODUCTO, que es lo que el caso mide)
+   CIFRA hallazgos con los que se fabrica el texto mutado: 10
+   CIFRA veces que el texto mutado dice 'cae sobre': 10
+   CIFRA esperado, sin tocar: 11
+   el caso con un hallazgo de menos: CAE
+
+E) MUTACION 2: EL TEXTO NOMBRA UNO DE MAS Y EL CASO TIENE QUE CAER IGUAL
+   (el caso dice TODOS, no AL MENOS TODOS: nombrar de mas tambien es
+    que el texto y la medicion dejaron de calzar)
+   CIFRA veces que el texto mutado dice 'cae sobre': 12
+   el caso con un hallazgo de mas: CAE
+
+F) MUTACION 3: EL TEXTO NO NOMBRA NINGUNO Y EL CASO TIENE QUE CAER
+   CIFRA veces que el texto vacio de hallazgos dice 'cae sobre': 0
+   el caso sin ningun hallazgo en el texto: CAE
+
+G) Y LA GUARDA DEL ADORNO, QUE ES LO QUE IMPIDE EL 0 == 0
+   (con el esperado computado, una medicion viva vacia daria 0 == 0 y
+    pasaria. El arnes corregido lleva un caso aparte que lo impide, y
+    aqui se comprueba QUE LO LLEVA, leyendolo de su fichero)
+   el arnes lleva el caso H_la_medicion_viva_trae_hallazgos: True
+   y lo que ese caso comprueba, simulado aqui: len(hall) > 0 con la
+   medicion viva de hoy da True, y con una lista vacia daria False
+
+H) Y QUE LA LINEA VIEJA NO SE BORRO, QUE ES EL CARRIL DEL BANCO 9.10
+   (una correccion que tapa lo que corrige no se puede auditar)
+   el texto viejo sigue entero dentro del fichero: True
+   y sigue ACTIVA como sentencia (que seria el error contrario): False
+
+I) PASADA 1, LOS CASOS TAL CUAL
+   C_el_texto_entero_pasa                               PASA   (real=True esperado=True)
+   D_quitar_un_hallazgo_del_texto_tumba_el_caso         PASA   (real=True esperado=True)
+   E_anadir_un_hallazgo_al_texto_tumba_el_caso          PASA   (real=True esperado=True)
+   F_vaciar_el_texto_de_hallazgos_tumba_el_caso         PASA   (real=True esperado=True)
+   G_el_arnes_lleva_la_guarda_del_cero                  PASA   (real=True esperado=True)
+   G_la_guarda_del_cero_caeria_con_medicion_vacia       PASA   (real=False esperado=False)
+   H_la_linea_vieja_sigue_declarada_y_sin_tachar        PASA   (real=True esperado=True)
+   H_la_linea_vieja_ya_no_es_sentencia_activa           PASA   (real=False esperado=False)
+   CIFRA casos: 8 | pasan: 8 | fallan: 0
+
+J) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   C_el_texto_entero_pasa                               CAE   (esperado mutado=False)
+   D_quitar_un_hallazgo_del_texto_tumba_el_caso         CAE   (esperado mutado=False)
+   E_anadir_un_hallazgo_al_texto_tumba_el_caso          CAE   (esperado mutado=False)
+   F_vaciar_el_texto_de_hallazgos_tumba_el_caso         CAE   (esperado mutado=False)
+   G_el_arnes_lleva_la_guarda_del_cero                  CAE   (esperado mutado=False)
+   G_la_guarda_del_cero_caeria_con_medicion_vacia       CAE   (esperado mutado=True)
+   H_la_linea_vieja_sigue_declarada_y_sin_tachar        CAE   (esperado mutado=False)
+   H_la_linea_vieja_ya_no_es_sentencia_activa           CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 8 de 8
+
+K) Y SE COMPRUEBA QUE ESTA PRUEBA NO ESCRIBIO NADA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl identico al de antes: True
+
+VERDE: los 8 casos pasan tal cual y los 8 caen al mutar el esperado.
+EL ESPERADO COMPUTADO SIGUE MORDIENDO: se le rompio el texto por tres
+sitios distintos SIN TOCARLE EL ESPERADO y cayo las tres veces.
+EXIT=0

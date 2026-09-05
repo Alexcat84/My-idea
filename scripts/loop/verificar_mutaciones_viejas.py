@@ -597,6 +597,27 @@ VIEJAS = [
     # LA NOMINA NO SE PODA, CRECE (AUDITOR.md 6.1, opcion c RECHAZADA): con esta
     # entrada pasa de 87 a 88, y el reloj que eso suma se cuenta y se publica.
     ("vuelta176_tarea1c_mutacion_tramos.py", False),
+    # VUELTA 177, TAREA 1.b. EL CASO POSITIVO POR MUTACION DEL ESPERADO
+    # COMPUTADO. Su sujeto es el caso `H_el_texto_nombra_TODOS_los_hallazgos`
+    # del arnes que salio EN ROJO en la bateria de la 176, y que la adjudicacion
+    # 7.7 del acta 176 mando arreglar COMPUTANDO EL ESPERADO. Lo que este arnes
+    # prueba es lo que un esperado computado puede perder: que siga MORDIENDO.
+    # Le rompe el TEXTO por tres sitios (un hallazgo de menos, uno de mas y
+    # ninguno) SIN TOCARLE EL ESPERADO, y exige que caiga las tres veces.
+    #
+    # SUJETO CONGELADO POR LA REGLA DEL PROPIO FICHERO DESDE LA VUELTA 148
+    # (adjudicacion 3.5 del acta 147: "LO QUE ESTA REGLA EXIGE ES SUJETO
+    # CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL FIN"), y aqui hay que
+    # decirlo con cuidado porque el sujeto de este arnes SI se mueve: el texto
+    # sale de la medicion viva. Lo que NO se mueve es LA FORMA de la comparacion,
+    # que es lo que este arnes fija, y por eso sus tres mutaciones se computan de
+    # la medicion de cada dia en vez de contra un numero. El dia que el registro
+    # crezca de 11 a 12, este arnes sigue valiendo sin tocarlo. Es la misma
+    # doctrina que obligo a corregir a su sujeto.
+    #
+    # LA NOMINA NO SE PODA, CRECE (AUDITOR.md 6.1, opcion c RECHAZADA): con esta
+    # entrada pasa de 88 a 89, y el reloj que eso suma se cuenta y se publica.
+    ("vuelta177_tarea1b_mutacion_esperado_vivo.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
