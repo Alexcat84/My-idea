@@ -57457,6 +57457,14 @@ primera ciega en tres vueltas que no empieza confesando que no lo fue.
   verde se sostiene por `NO REPRODUCIBLE` en cero sobre 75 entradas (seccion 5),
   **pero eso es un argumento, no una excusa**: la que hace falta es una corrida
   limpia, y la proxima la hare esperando.
+- **`CAIDA 4`, ANADIDA DESPUES DE COMMITEAR ESTA ACTA Y POR ESO VA AQUI.** El
+  asunto del commit que lleva esta acta (`d7b18370`) salio con una **arroba
+  suelta al principio y otra al final**: colé sintaxis de here-string de
+  PowerShell dentro de un comando de bash. **El texto del asunto es correcto y
+  no afirma nada falso**, asi que no lo reescribo a la fuerza sobre una rama ya
+  empujada; **pero lo digo, y tiene su gracia amarga**: esta misma acta abre una
+  pregunta al fundador sobre si el asunto de un commit es una sede, y yo he
+  ensuciado el mio en la vuelta en que la hago.
 
 ## 4. LOS HALLAZGOS Y LAS CAIDAS DEL EJECUTOR, CADA UNA CON SU SEDE
 
