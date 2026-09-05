@@ -9,7 +9,7 @@ en su **linea 349** lo que se publico.
 
 | cifra | cuanto dice | de donde sale |
 |---|---:|---|
-| la PUBLICADA por la 178 | **16** | `docs/loop/reportes/REPORTE_V178.md:349`, localizada por el bloque H.6 de `scripts/loop/vuelta179_apertura.py` |
+| la PUBLICADA por la 178 (**CORRECCION DECLARADA**: es la que se corrige, no la que se afirma) | **16** | `docs/loop/reportes/REPORTE_V178.md:349`, localizada por el bloque H.6 de `scripts/loop/vuelta179_apertura.py` |
 | la DEL FICHERO que esa frase cita | **18** | `docs/loop/SALIDA_V178_T1E_MUTACION.txt`, su linea que empieza por `CIFRA casos` |
 | la DE MI RE-CORRIDA DE HOY | **18** | `docs/loop/SALIDA_V179_T1A_RECORRIDA_178.txt`, corrido en esta vuelta |
 
@@ -68,7 +68,7 @@ caracteres, elegida contando las siete parejas reales (32, 34, 36, 45, 51, 51 y
 
 **EL CASO POSITIVO POR MUTACION**
 (`scripts/loop/vuelta179_tarea1b_mutacion_citas.py`,
-`docs/loop/SALIDA_V179_T1B_MUTACION.txt`). **21 casos, los 21 pasan y los 21
+`docs/loop/SALIDA_V179_T1B_MUTACION.txt`). **25 casos, los 25 pasan y los 25
 CAEN** al mutarles el valor esperado. **El caso que lo decide todo es el del
 encargo y esta puesto:** un reporte fabricado que publica 16 junto a un fichero
 fabricado que dice 18 sale **ROJO nombrando las dos cifras**; el mismo con 18 y
@@ -76,6 +76,18 @@ fabricado que dice 18 sale **ROJO nombrando las dos cifras**; el mismo con 18 y
 parrafo con dos cifras y un solo fichero, la forma que no repite la palabra
 `casos`, el bloque cercado y la ventana. **Nada sale del repo**: el lector es un
 diccionario.
+
+**Y LA GUARDA CAZO ESTE MISMO REPORTE AL CERRARLO, QUE ES COMO NACIO SU UNICA
+EXENCION.** La tabla de la 1.a de aqui arriba publica **16** al lado de
+`SALIDA_V178_T1E_MUTACION.txt`, y la guarda la acuso, con razon en su forma: la
+cifra no calza. Pero la casa **OBLIGA** a escribirla, porque `EJECUTOR.md` 8 dice
+que una correccion se declara **sin borrar el texto viejo**, ya que una
+correccion que tapa lo que corrige no se puede auditar. Sin exencion, la guarda
+acusaba al reporte por hacer exactamente lo que la doctrina manda. **La exencion
+es de una sola palabra y hay que pedirla por escrito:** el parrafo tiene que
+decir el literal **CORRECCION DECLARADA**, y entonces la cita se publica igual,
+con sus dos cifras, pero no cuenta como rojo. **Sin esas palabras vuelve a ser
+rojo**, y ese caso esta en el arnes.
 
 #### 1.c. LOS DOS ARNESES DESTAPADOS ENTRAN EN LA NOMINA, Y LOS TRES DE HOY CON ELLOS
 

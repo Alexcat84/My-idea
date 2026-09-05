@@ -90,6 +90,19 @@ REP_SIN_CIFRA = ("# REPORTE DE LA VUELTA 900" + NL + NL +
                  "La salida cruda vive en `docs/loop/SALIDA_V900_MUTACION.txt` y no se" + NL +
                  "publica aqui ninguna cifra de casos." + NL)
 
+# EL MISMO 16 CONTRA 18, PERO DENTRO DE UNA CORRECCION DECLARADA. La casa OBLIGA
+# a escribir la cifra equivocada al lado de su fichero (`EJECUTOR.md` 8, una
+# correccion que tapa lo que corrige no se puede auditar), y sin la exencion la
+# guarda acusaria al reporte por hacer lo que la doctrina manda. LO DESTAPO LA
+# PROPIA GUARDA al cerrar el reporte de la vuelta 179, que es el que la estrena.
+REP_CORRECCION = ("# REPORTE DE LA VUELTA 900" + NL + NL +
+                  "CORRECCION DECLARADA. La vuelta 899 publico **16 casos** citando" + NL +
+                  "`docs/loop/SALIDA_V900_MUTACION.txt`, y ese fichero, contado, dice 18." + NL)
+
+# Y EL MISMO SIN DECIR LAS PALABRAS: tiene que seguir siendo ROJO. Una exencion
+# que se coge sin declararla seria un agujero.
+REP_CORRECCION_MUDA = REP_CORRECCION.replace("CORRECCION DECLARADA. ", "")
+
 MAPA = {"SALIDA_V900_MUTACION.txt": FICH_18}
 MAPA_16 = {"SALIDA_V900_MUTACION.txt": FICH_16}
 MAPA_8 = {"SALIDA_V900_MUTACION.txt": "   CIFRA casos: 8 | pasan: 8 | fallan: 0" + NL}
@@ -123,6 +136,15 @@ CASOS = [
      lambda: len(rojas(REP_16, MAPA_VACIO)), 1),
     ("D_y_el_motivo_lo_dice",
      lambda: "CERO BYTES" in rojas(REP_16, MAPA_VACIO)[0][4], True),
+    ("L_la_CORRECCION_DECLARADA_no_es_rojo",
+     lambda: len(rojas(REP_CORRECCION, MAPA)), 0),
+    ("L_pero_SI_se_publica_como_SIN_COTEJO",
+     lambda: len(sin_cotejo(REP_CORRECCION, MAPA)), 1),
+    ("L_y_nombra_LAS_DOS_cifras_igual",
+     lambda: (sin_cotejo(REP_CORRECCION, MAPA)[0][2],
+              sin_cotejo(REP_CORRECCION, MAPA)[0][3]), (16, 18)),
+    ("L_SIN_DECIR_LAS_PALABRAS_VUELVE_A_SER_ROJO",
+     lambda: len(rojas(REP_CORRECCION_MUDA, MAPA)), 1),
     ("E_el_fichero_mudo_NO_es_rojo_sino_SIN_COTEJO",
      lambda: (len(rojas(REP_16, MAPA_MUDO)), len(sin_cotejo(REP_16, MAPA_MUDO))), (0, 1)),
     ("F_dos_cifras_y_un_fichero_se_empareja_con_la_SUYA",

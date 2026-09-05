@@ -88,8 +88,8 @@ la guarda busca, para dejar de salir `NO DECIDIBLE`.
 
 `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, **17 filas**, una por arnes, con el
 nombre, los dos veredictos, el fichero que abre, **la linea del codigo** como
-evidencia, y **que haria falta** para arreglarlo. **20.939 bytes en disco y 20.939
-normalizados a LF.**
+evidencia, y **que haria falta** para arreglarlo.
+**20.939 bytes en disco y 20.939 bytes normalizados a LF.**
 
 **Y LO QUE NO SE HIZO ES TAN PARTE DEL ENCARGO COMO LO QUE SI:**
 

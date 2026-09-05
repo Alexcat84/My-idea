@@ -194,6 +194,20 @@ PATRON_PROPIA_CAEN = re.compile(r"CIFRA casos que CAEN:\s*(\d+)\s+de\s+(\d+)")
 # parrafo, que es lo que evita emparejar un fichero con la cifra de otro.
 VENTANA_CITA = 120
 
+# LA UNICA EXENCION, Y ES ESTRECHA A PROPOSITO (vuelta 179, TAREA 1.b, y la
+# destapo la propia guarda al cerrar el reporte que la estrena). LA CASA OBLIGA A
+# CITAR LA CIFRA EQUIVOCADA: `EJECUTOR.md` 8 dice que toda correccion se declara
+# SIN BORRAR EL TEXTO VIEJO, porque "una correccion que tapa lo que corrige no se
+# puede auditar". Un reporte que corrige un 16 por un 18 TIENE que escribir el 16
+# al lado de su fichero, y sin esta exencion la guarda lo acusaria por hacer
+# exactamente lo que la doctrina manda.
+#
+# SE PAGA CON UNA PALABRA Y NO CON UN SILENCIO: el parrafo tiene que DECIR el
+# literal, y entonces la cita se publica igual, con su motivo, pero no cuenta como
+# rojo. Una exencion que se coge sin declararla seria un agujero; esta hay que
+# pedirla por escrito y queda escrita en el reporte.
+MARCA_CORRECCION = "CORRECCION DECLARADA"
+
 
 def sha(t):
     return hashlib.sha256(t.replace(chr(13) + NL, NL).encode("utf-8")).hexdigest()
@@ -443,6 +457,13 @@ def citas_de_arnes_que_no_calzan(texto, leer_fichero):
                                "lo que no se puede cotejar"))
                 continue
             if propia != publicada:
+                if MARCA_CORRECCION in parrafo:
+                    fallos.append((n, ruta, publicada, propia,
+                                   "SIN COTEJO por %s: el parrafo declara que la "
+                                   "cifra publicada (%d) es LA QUE SE CORRIGE y no "
+                                   "la que se afirma; la del fichero es %d"
+                                   % (MARCA_CORRECCION, publicada, propia)))
+                    continue
                 fallos.append((n, ruta, publicada, propia,
                                "LA CIFRA PUBLICADA NO ES LA DEL FICHERO: el reporte "
                                "dice %d y su propio fichero, contado, dice %d (%s)"

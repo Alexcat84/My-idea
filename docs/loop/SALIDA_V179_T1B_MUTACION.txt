@@ -16,6 +16,10 @@ A) LOS CASOS, CORRIDOS
    C_y_el_motivo_lo_dice                                pasa   visto=True esperado=True
    D_el_fichero_de_CERO_BYTES_es_ROJO                   pasa   visto=1 esperado=1
    D_y_el_motivo_lo_dice                                pasa   visto=True esperado=True
+   L_la_CORRECCION_DECLARADA_no_es_rojo                 pasa   visto=0 esperado=0
+   L_pero_SI_se_publica_como_SIN_COTEJO                 pasa   visto=1 esperado=1
+   L_y_nombra_LAS_DOS_cifras_igual                      pasa   visto=(16, 18) esperado=(16, 18)
+   L_SIN_DECIR_LAS_PALABRAS_VUELVE_A_SER_ROJO           pasa   visto=1 esperado=1
    E_el_fichero_mudo_NO_es_rojo_sino_SIN_COTEJO         pasa   visto=(0, 1) esperado=(0, 1)
    F_dos_cifras_y_un_fichero_se_empareja_con_la_SUYA    pasa   visto=0 esperado=0
    F_y_si_el_fichero_dijera_20_ese_mismo_parrafo_CAE    pasa   visto=1 esperado=1
@@ -27,7 +31,7 @@ A) LOS CASOS, CORRIDOS
    K_la_cifra_propia_sale_de_CIFRA_casos                pasa   visto=18 esperado=18
    K_y_de_CIFRA_casos_que_CAEN_sale_el_TOTAL_y_no_los_q pasa   visto=9 esperado=9
    K_y_de_un_fichero_mudo_sale_None                     pasa   visto=None esperado=None
-   CIFRA casos: 21 | pasan: 21 | fallan: 0
+   CIFRA casos: 25 | pasan: 25 | fallan: 0
 
 B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
    A_el_caso_que_lo_decide_16_contra_18_es_ROJO         CAE
@@ -40,6 +44,10 @@ B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
    C_y_el_motivo_lo_dice                                CAE
    D_el_fichero_de_CERO_BYTES_es_ROJO                   CAE
    D_y_el_motivo_lo_dice                                CAE
+   L_la_CORRECCION_DECLARADA_no_es_rojo                 CAE
+   L_pero_SI_se_publica_como_SIN_COTEJO                 CAE
+   L_y_nombra_LAS_DOS_cifras_igual                      CAE
+   L_SIN_DECIR_LAS_PALABRAS_VUELVE_A_SER_ROJO           CAE
    E_el_fichero_mudo_NO_es_rojo_sino_SIN_COTEJO         CAE
    F_dos_cifras_y_un_fichero_se_empareja_con_la_SUYA    CAE
    F_y_si_el_fichero_dijera_20_ese_mismo_parrafo_CAE    CAE
@@ -51,6 +59,6 @@ B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
    K_la_cifra_propia_sale_de_CIFRA_casos                CAE
    K_y_de_CIFRA_casos_que_CAEN_sale_el_TOTAL_y_no_los_q CAE
    K_y_de_un_fichero_mudo_sale_None                     CAE
-   CIFRA casos que CAEN: 21 de 21
+   CIFRA casos que CAEN: 25 de 25
 
-VERDE DE LA MUTACION: 21 casos, los 21 pasan y los 21 CAEN al mutarles el valor esperado. La guarda caza el 16 contra 18 nombrando las dos cifras, deja pasar el 18 contra 18, cae en rojo con el fichero que no existe y con el de cero bytes, NO inventa un rojo cuando el parrafo trae dos cifras y un solo fichero, caza la forma que no repite la palabra casos, no entra en los bloques cercados y no empareja mas alla de su ventana.
+VERDE DE LA MUTACION: 25 casos, los 25 pasan y los 25 CAEN al mutarles el valor esperado. La guarda caza el 16 contra 18 nombrando las dos cifras, deja pasar el 18 contra 18, cae en rojo con el fichero que no existe y con el de cero bytes, NO inventa un rojo cuando el parrafo trae dos cifras y un solo fichero, caza la forma que no repite la palabra casos, no entra en los bloques cercados y no empareja mas alla de su ventana.

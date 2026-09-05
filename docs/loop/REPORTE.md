@@ -35,9 +35,7 @@
 > fichero corre LAS DOS igualmente y publica lo que salga de cada una, porque una
 > guarda que solo se mira cuando difiere no se puede auditar el dia que difiera.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre, cuando
-haya de que hablar.
-
+**EL VEREDICTO DE UNA LINEA: LA ESCALADA DEJA DE SER UNA ORDEN PENDIENTE Y ES CODIGO QUE CAZO, EN SU PRIMERA CORRIDA, LA CAIDA QUE LA MOTIVO Y DESPUES ESTE MISMO REPORTE; LOS DIEZ PARES REALES DE OP-L-03 QUEDAN LEIDOS Y EL BACKLOG EN CERO SIN LECTURA; Y DE LAS 17 DEL SUJETO CONGELADO SOLO CUATRO ABREN DE VERDAD UN FICHERO VIVO.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -58,13 +56,25 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva**, porque ese commit se crea despues de escribirlo.
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 179`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO,
-19 celdas no se pudieron leer"** y de esas lineas de rojo, **0
-mencionan APERTURA**. Este hueco se rellena con la tabla tallada entera cuando la
-vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 179`, y su salida
+cruda vive en `docs/loop/SALIDA_V179_TALLADOR_CABECERA.txt` (2424 bytes en disco y 2404 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `74cad47d` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 178: 29 DE 33 A CIEGAS Y LAS CUATRO QUE FALLARON LAS FALLE YO, PERO LA RACHA DE REPORTE LLEGA A DOS Y LA ESCALADA SE ENCARGA EN ESTE MISMO ACTA.'), HEAD real de apertura `74cad47d` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `2037f785` (leido de `SALIDA_V179_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -94,7 +104,7 @@ en su **linea 349** lo que se publico.
 
 | cifra | cuanto dice | de donde sale |
 |---|---:|---|
-| la PUBLICADA por la 178 | **16** | `docs/loop/reportes/REPORTE_V178.md:349`, localizada por el bloque H.6 de `scripts/loop/vuelta179_apertura.py` |
+| la PUBLICADA por la 178 (**CORRECCION DECLARADA**: es la que se corrige, no la que se afirma) | **16** | `docs/loop/reportes/REPORTE_V178.md:349`, localizada por el bloque H.6 de `scripts/loop/vuelta179_apertura.py` |
 | la DEL FICHERO que esa frase cita | **18** | `docs/loop/SALIDA_V178_T1E_MUTACION.txt`, su linea que empieza por `CIFRA casos` |
 | la DE MI RE-CORRIDA DE HOY | **18** | `docs/loop/SALIDA_V179_T1A_RECORRIDA_178.txt`, corrido en esta vuelta |
 
@@ -153,7 +163,7 @@ caracteres, elegida contando las siete parejas reales (32, 34, 36, 45, 51, 51 y
 
 **EL CASO POSITIVO POR MUTACION**
 (`scripts/loop/vuelta179_tarea1b_mutacion_citas.py`,
-`docs/loop/SALIDA_V179_T1B_MUTACION.txt`). **21 casos, los 21 pasan y los 21
+`docs/loop/SALIDA_V179_T1B_MUTACION.txt`). **25 casos, los 25 pasan y los 25
 CAEN** al mutarles el valor esperado. **El caso que lo decide todo es el del
 encargo y esta puesto:** un reporte fabricado que publica 16 junto a un fichero
 fabricado que dice 18 sale **ROJO nombrando las dos cifras**; el mismo con 18 y
@@ -161,6 +171,18 @@ fabricado que dice 18 sale **ROJO nombrando las dos cifras**; el mismo con 18 y
 parrafo con dos cifras y un solo fichero, la forma que no repite la palabra
 `casos`, el bloque cercado y la ventana. **Nada sale del repo**: el lector es un
 diccionario.
+
+**Y LA GUARDA CAZO ESTE MISMO REPORTE AL CERRARLO, QUE ES COMO NACIO SU UNICA
+EXENCION.** La tabla de la 1.a de aqui arriba publica **16** al lado de
+`SALIDA_V178_T1E_MUTACION.txt`, y la guarda la acuso, con razon en su forma: la
+cifra no calza. Pero la casa **OBLIGA** a escribirla, porque `EJECUTOR.md` 8 dice
+que una correccion se declara **sin borrar el texto viejo**, ya que una
+correccion que tapa lo que corrige no se puede auditar. Sin exencion, la guarda
+acusaba al reporte por hacer exactamente lo que la doctrina manda. **La exencion
+es de una sola palabra y hay que pedirla por escrito:** el parrafo tiene que
+decir el literal **CORRECCION DECLARADA**, y entonces la cita se publica igual,
+con sus dos cifras, pero no cuenta como rojo. **Sin esas palabras vuelve a ser
+rojo**, y ese caso esta en el arnes.
 
 #### 1.c. LOS DOS ARNESES DESTAPADOS ENTRAN EN LA NOMINA, Y LOS TRES DE HOY CON ELLOS
 
@@ -537,8 +559,8 @@ la guarda busca, para dejar de salir `NO DECIDIBLE`.
 
 `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, **17 filas**, una por arnes, con el
 nombre, los dos veredictos, el fichero que abre, **la linea del codigo** como
-evidencia, y **que haria falta** para arreglarlo. **20.939 bytes en disco y 20.939
-normalizados a LF.**
+evidencia, y **que haria falta** para arreglarlo.
+**20.939 bytes en disco y 20.939 bytes normalizados a LF.**
 
 **Y LO QUE NO SE HIZO ES TAN PARTE DEL ENCARGO COMO LO QUE SI:**
 
@@ -606,3 +628,201 @@ correr. Una guarda que no puede salir en rojo no prueba nada.
    reporte va por las dos convenciones**, incluidas las cinco filas de arriba.
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+
+**Todo hash de esta seccion sale de `git log` o `git rev-parse` corrido en esta
+vuelta** (`EJECUTOR.md` 1, LA IDENTIDAD SE LEE DE GIT).
+
+| | |
+|---|---|
+| rama | `pasada-unica` |
+| sello de apertura, escrito ANTES de la 1.a operacion | `74cad47d` (`SALIDA_V179_HEAD_APERTURA.txt`) |
+| sello de cierre, escrito TRAS la ultima operacion | `2037f785` (`SALIDA_V179_HEAD_CIERRE.txt`) |
+| commits entre los dos sellos | **6** |
+| rutas tocadas | **57** (`docs/loop/` 32, `scripts/loop/` 22, `docs/plan/` 3) |
+| **el grafo entre los dos sellos** | **`git diff --numstat` sobre `dataset/`, `web/` y `engine/`: 0 filas** |
+
+**LOS SEIS COMMITS, EN SU ORDEN:**
+
+| hash | que cierra |
+|---|---|
+| `02af60ee` | el bloque de apertura, corrido entero antes de la primera operacion, con el desfase del calibrado DENTRO de el |
+| `047b10b1` | el esqueleto del reporte, abierto al empezar con sus CINCO filas vacias |
+| `d4a1028c` | la TAREA 1: la correccion declarada, la guarda de la escalada, la nomina y el corte del denominador |
+| `8bd3bd3e` | la TAREA 2: los diez pares reales de `OP-L-03`, leidos |
+| `09e0d2df` | las TAREAS 3 y 4: los triangulos partidos por su fuente y las del sujeto congelado juzgadas |
+| `2037f785` | la TAREA 5: las cinco que no entran, nombradas y medidas |
+
+**EL CICLO DE GATE 0 CORRIO ENTERO Y EN SU ORDEN EN LAS DOS PUNTAS**, nunca
+`run_phase1` suelto: `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py
+--aplicar`, `sync_assets_web.py`, `git diff HEAD --numstat`,
+`engine/run_all_tests.py`, `npx tsc --noEmit` y `pnpm test`. **Las siete piezas
+salieron verdes en las dos puntas**, y la tabla de la cabecera de arriba lo
+publica columna a columna.
+
+**LA GUARDA DE `dataset/` CORRIO ANTES DE CADA COMMIT** y salio **VERDE** en los
+seis, con **0 filas de numstat y 0 blobs divergentes**. **`dataset/` no se toco en
+ninguna de las cinco tareas.**
+
+### 3.1 EL COTEJO DE MIS CLONES, PEGADO Y NO AFIRMADO
+
+Desde la vuelta 178 **ningun reporte escribe CLON DECLARADO sin pegar la salida
+del instrumento**. La mia vive en `docs/loop/SALIDA_V179_COTEJO_MIS_CLONES.txt` y
+esto es lo que dice, contado de ese fichero:
+
+| clon | fichero entero | solo la maquina | AST sin docstring | sentencias de codigo | literales de texto |
+|---|---|---|---|---:|---:|
+| `vuelta178_cierre.py` contra `vuelta179_cierre.py` | DIFIERE | **IDENTICO** | **IDENTICO** | 0 | 0 |
+| `vuelta178_esqueleto_reporte.py` contra `vuelta179_esqueleto_reporte.py` | DIFIERE | DIFIERE | DIFIERE | **0** | **57** |
+| `vuelta178_apertura.py` contra `vuelta179_apertura.py` | DIFIERE | DIFIERE | DIFIERE | **174** | **104** |
+
+**LO QUE ESA TABLA DICE, Y NO LO SUAVIZO:** el clon del cierre es un clon de
+verdad, con la maquina y el arbol de sintaxis identicos. El del esqueleto tambien:
+**cero sentencias de codigo** y 57 literales de texto, que son las cinco filas de
+tarea y la prosa. **El de la apertura NO es un clon en el sentido estrecho: cambia
+174 sentencias de codigo**, porque su bloque H se reescribio entero para medir los
+sujetos de ESTE encargo. **Eso estaba declarado en su docstring antes de correr el
+cotejo**, y el cotejo lo confirma en vez de desmentirlo.
+
+## 4. LA GUARDA DEL COMMIT, CORRIDA EN CADA COMMIT DE ESTA VUELTA
+
+`scripts/loop/guarda_commit_dataset.py` corrio antes de cada uno de los seis
+commits y salio **VERDE** en los seis: **0 filas de `git diff --numstat` sobre
+`dataset/` y 0 ficheros con blob distinto del de HEAD**. El guardian del hook
+(`motor` y `web`) tambien salio verde en los seis, y su salida esta en la consola
+de cada commit.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**D.1. LA VENTANA DE 120 CARACTERES DE LA GUARDA NUEVA.** La elegi contando las
+siete distancias reales de `REPORTE_V178.md` (32, 34, 36, 45, 51, 51 y 54) y
+poniendo el doble largo de la mayor. **Es una vara que yo fije, no una que el
+banco tenga escrita.** Una frase legitima mas larga que 120 caracteres entre su
+cifra y su fichero se escaparia sin decir nada. **Prefiero que se escape a que
+acuse en falso**, y esa preferencia tambien es mia y no del banco.
+
+**D.2. EL EMPAREJAMIENTO POR CERCANIA.** Cada fichero se casa con la cifra que
+tiene mas cerca en su parrafo, y cada cifra se gasta una sola vez. **Sobre el
+sujeto real acierta las siete**, pero es una heuristica: un parrafo escrito al
+reves la engana.
+
+**D.3. EL `D` DEL PAR 4 DE `OP-L-03`** (`creacion_option_pool` contra
+`employee_pool_esop`). El archivo da **dos senales contrarias** por dos terceros
+distintos, y resuelvo a favor de la frontera del puesto 1193 declarando que el
+otro tercero esta a caballo. **Es la unica de las diez lecturas donde tuve que
+elegir entre dos cosas escritas**, y la elijo yo.
+
+**D.4. EL `A` DEL PAR 10** (`evaluacion_` contra `explotacion_tecnologias_
+disruptivas`). Los dos repiten con el mismo tercero, pero **el analisis IOTA de
+`explotacion_` es lo mas cerca que hay en las diez de un procedimiento propio**.
+Si el auditor lo lee como procedimiento, esto es `D`.
+
+**D.5. EL METODO DE LA TAREA 4 NO SIGUE LA HUELLA A TRAVES DE FUNCIONES.** Un
+arnes que salga `LO NOMBRA SIN ABRIRLO` y que llame a un tercero que si abre se
+me escaparia. **Publico todas las lineas de cada arnes para que el ojo llegue
+donde la maquina no**, pero la clasificacion mecanica tiene ese techo.
+
+**D.6. LA TERCERA CASILLA QUE ME INVENTE EN LA TAREA 4**, `ABRE UN SUJETO YA
+CLAVADO`, **no estaba en el encargo**, que pedia tres. La anadi porque sin ella
+acusaba en falso a dos arneses que hacen exactamente lo que la regla pide.
+**Anadir una casilla que el encargo no pide es una decision mia.**
+
+## 6. LAS PREGUNTAS
+
+**P.1. EL CABLEADO DE LA GUARDA DEL SUJETO CONGELADO.** Con los 17 veredictos
+delante: cablearla hoy al rojo global pondria la bateria de la 181 en rojo por
+**17**, de los cuales **13 no abren nada vivo**. Lo barato parece ser al reves,
+que los 13 declaren su sujeto primero y despues se cablee con 4 pendientes de
+verdad. **No lo decido yo.**
+
+**P.2. LA ETIQUETA `(vuelta 177)` DE `clases_por_par()`.** Esta rota, esta medida
+(5 lados mal de 15) y **el encargo prohibe tocar ese campo**. Queda como PARADA en
+la seccion 3.f de la TAREA 3. **Hace falta que alguien autorice cambiarla para que
+lea la vuelta del registro en vez del literal.**
+
+**P.3. LA CONDICION `EL PAR TIENE PUESTO` NO PUEDE DAR QUE SI.** Medida en la
+TAREA 2: un par real esta definido como el que no esta en el archivo, asi que
+nunca trae puesto. **La distincion del punto 7.8 del acta 178 es correcta y su
+rama del `SI` es inalcanzable mientras el archivo no tenga huecos.** Vale la pena
+saber si eso es lo que se queria.
+
+**P.4. EL ARCHIVO SE CONTRADICE CONSIGO MISMO EN LA FAMILIA DEL OPTION POOL.**
+`pool_opciones_empleados` sale `A` con los dos lados de una frontera que el propio
+archivo declaro. **No lo toco** (modo de cierre), pero queda nombrado.
+
+## 7. PENDIENTES DE DOCTRINA
+
+**PD.1. NO HAY REGLA ESCRITA PARA LA CADENA DE REPITE.** Use la transitividad
+(`a` REPITE con `t` y `b` REPITE con `t`, luego `a` REPITE con `b`) en cinco de
+las diez lecturas, apoyandome en `banco 9.3`, que dice que una direccion de fusion
+no sobrevive a su familia. **Pero `9.3` dice que hay que MIRAR la familia, no que
+la transitividad decida.** Registro lo mejor sostenido y lo marco.
+
+**PD.2. NO HAY REGLA PARA EL SUJETO CLAVADO POR SHA.** `HUELLAS_DE_CONGELADO` ya
+incluye `git show` y `cat-file`, pero la guarda los mira **en el texto entero** y
+no **en la llamada**, y por eso los dos de la 135 salen `NO DECIDIBLE`. La casilla
+que invente en la TAREA 4 no existe en ninguna doctrina escrita.
+
+## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+
+**C.1. LA GUARDA DE LA ESCALADA INVENTABA UN ROJO EN SU PRIMERA CORRIDA.** Sobre
+`REPORTE_V178.md` cazaba **dos** y solo una era real: acusaba a la linea 189, donde
+la cifra que va con el fichero es la **8** y mi patron solo veia la palabra
+`casos`, que ahi acompana a la **5**. **La cazo su propia corrida contra el sujeto
+real, no un arnes.** Arreglada antes de seguir.
+
+**C.2. DOS ESPERADOS MIOS MAL PUESTOS EN EL ARNES DE LOS TRIANGULOS.** Esperaba 6
+y 6 lados por fuente sobre el registro fabricado y son **7 y 5**. **El codigo
+estaba bien y mis dos numeros estaban mal**, y la prueba de mutacion los cazo
+porque el esperado equivocado coincidia con el valor mutado.
+
+**C.3. UNA COMPROBACION MUERTA QUE PARECIA VIVA.** El patron del sujeto clavado
+de la TAREA 4 se escribio con dos `\b` que quedaron guardados como **caracteres de
+retroceso**, y **no podia dar verdadero nunca**. Lo destape al preguntarme por que
+salian cero clavados teniendo el `sha` delante en la propia linea de la prueba.
+**Es exactamente la especie que el banco 9 llama degradacion silenciosa.**
+
+**C.4. LA AGUJA DE LA TAREA 5 ESTABA EN MAYUSCULAS.** El instrumento salio en ROJO
+nombrandola. **Eso no es una caida del instrumento sino de mi aguja**, y lo cuento
+aqui porque la primera version del fichero prometia cinco medidas y solo podia dar
+cuatro.
+
+**C.5. MI PRIMER CRITERIO DE `TIENE PUESTO` MEDIA OTRA COSA.** Preguntaba si algun
+EXTREMO aparece en algun puesto, no si el PAR lo tiene, y con esa vara los diez
+salian `SI` cuando la respuesta es `NO`. **Habria mandado los diez veredictos al
+fichero equivocado.**
+
+**C.6. LA GUARDA NUEVA CAZO ESTE MISMO REPORTE AL CERRARLO, Y NO ERA UN FALSO
+ROJO NI ERA CORRECTO DEJARLO.** La tabla de la TAREA 1.a publica **16** al lado
+de `SALIDA_V178_T1E_MUTACION.txt`, porque `EJECUTOR.md` 8 obliga a declarar la
+correccion **sin borrar el texto viejo**. La guarda acusaba al reporte por hacer
+lo que la doctrina manda. **Se le anadio su unica exencion**, que hay que pedir
+por escrito diciendo el literal **CORRECCION DECLARADA** en el parrafo, con sus
+cuatro casos nuevos por mutacion, incluido el que comprueba que **sin esas
+palabras vuelve a ser rojo**. **La cazo la propia guarda contra su propio
+reporte, no un arnes**, que es la segunda vez en esta vuelta que eso pasa.
+
+**C.7. LA QUE VIENE DE LA VUELTA PASADA Y ES LA QUE ABRE ESTE REPORTE:** la 178
+publico **16** donde su fichero decia **18**. Corregida en la TAREA 1.a con las
+tres cifras al lado y sin retocar el reporte archivado.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 179 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V179_BATERIA.txt`.
+**SUS BYTES, MEDIDOS EN ESTA CORRIDA** con `os.path.getsize` por
+`scripts/loop/cerrar_reporte.py`, no tecleados, y POR LAS DOS
+CONVENCIONES mientras la del fundador no este fijada:
+**0 bytes en disco y 0 bytes normalizados a LF**.
+
+ATRIBUCION: NADIE la corrio, y no es un olvido: esta vuelta NO ES DE BATERIA. La cadencia esta adjudicada en el acta 176 punto 7.8, reconfirmada en el acta 178 punto 11 y repetida por el encargo de esta vuelta: LA PROXIMA VUELTA DE BATERIA ES LA 181, y la 179 y la 180 cierran su seccion 9 con el hueco declarado y medido. Lo que SI corrio esta vuelta de la propia bateria es su guarda del sujeto congelado, en su carril y sin cablear al rojo global (docs/loop/SALIDA_V179_T4_GUARDA.txt), que sale en ROJO con 17 de 103 al corte 8bd3bd3e8864.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.
