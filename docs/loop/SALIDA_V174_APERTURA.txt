@@ -1,0 +1,156 @@
+SELLO DE APERTURA DE LA VUELTA 174, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta174_apertura.py
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+9445cd2105427290b8ea0a6fc347a6b61acdf88d
+9445cd2105427290b8ea0a6fc347a6b61acdf88d	2026-09-05 07:50:42 -0400	Decision del fundador: la bateria corre cada cinco, la ruta que promete prueba es cifra, y la caida del auditor gana dientes
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? docs/loop/SALIDA_V174_APERTURA_CONSOLA.txt
+?? scripts/loop/vuelta174_apertura.py
+CIFRA lineas de status: 3
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA ===
+dataset/metadata/master_graph.json -> 8375817 bytes
+docs/loop/REPORTE.md -> 31828 bytes
+docs/loop/ACTA_AUDITOR.md -> 3974343 bytes
+docs/loop/SALIDA_V172_BATERIA.txt -> 0 bytes
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 2446 bytes
+docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt -> NO EXISTE
+docs/loop/reportes/REPORTE_V172.md -> NO EXISTE
+scripts/loop/_v172_cierre_texto.md -> 12042 bytes
+scripts/loop/cerrar_reporte.py -> 20841 bytes
+scripts/loop/archivar_reporte.py -> 7181 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> 6243 bytes
+scripts/loop/paso0_archivar_anterior.py -> 7112 bytes
+scripts/loop/tallar_cabecera_reporte.py -> 96677 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> 72663 bytes
+scripts/loop/serie_de_registros.py -> 6595 bytes
+scripts/loop/vuelta172_tarea1b_confirmar_r41.py -> NO EXISTE
+docs/PENDIENTES.md -> 826158 bytes
+docs/plan/CORRECCIONES_A_APLICAR.md -> 147103 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> diff ignorando CR de fin de linea: 0 bytes
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V174_APERTURA_CONSOLA.txt -> 0 bytes
+scripts/loop/vuelta174_apertura.py -> 13199 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 46081e9f473c665f05eaab755ad46065a28d08a6	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 079c1bdbfd24ba4a0e51fc5651e99b9b8411c04c	docs/loop/ACTA_AUDITOR.md
+docs/loop/SALIDA_V172_BATERIA.txt -> 100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	docs/loop/SALIDA_V172_BATERIA.txt
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 100644 blob 88d0cee075e8ba2a91a7e2c3aa77db5f593baefb	docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt
+docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt -> NO ESTA EN EL ARBOL DE HEAD
+docs/loop/reportes/REPORTE_V172.md -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/_v172_cierre_texto.md -> 100644 blob 8984b2f2f2c31aa5477fb1c7f67b438e480778af	scripts/loop/_v172_cierre_texto.md
+scripts/loop/cerrar_reporte.py -> 100644 blob 34cf0d86740d685087de0a367a662c3486d5f0cf	scripts/loop/cerrar_reporte.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/paso0_archivar_anterior.py -> 100644 blob 71dc36b3ea3c4cf1a2f180741519aa7f9cf8aead	scripts/loop/paso0_archivar_anterior.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob b34332d5f339fcc0135799e6c805dbb725e39e9f	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 0bd55a8afc4f240bd7691ecef1b32ccd73450126	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta172_tarea1b_confirmar_r41.py -> NO ESTA EN EL ARBOL DE HEAD
+docs/PENDIENTES.md -> 100644 blob 0037e267503569fad2620d3be2725706cd605745	docs/PENDIENTES.md
+docs/plan/CORRECCIONES_A_APLICAR.md -> 100644 blob 684e1f42121969522e9670717aa96eca03ab3066	docs/plan/CORRECCIONES_A_APLICAR.md
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 172 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 511
+bytes: 31828
+   contiene 'SIN ESCRIBIR TODAVIA'             -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> SI
+   contiene '\n## 3.'                          -> NO
+   contiene '\n## 4.'                          -> NO
+   contiene '\n## 5.'                          -> NO
+   contiene '\n## 6.'                          -> NO
+   contiene '\n## 7.'                          -> NO
+   contiene '\n## 8.'                          -> NO
+   contiene '\n## 9.'                          -> NO
+
+=== H.1 EL REPORTE DEL ARBOL, QUE ES EL SUJETO DE LA TAREA 1.a ===
+primera linea: # REPORTE DE LA VUELTA 172 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+bytes: 31828 | saltos de linea: 511
+identico byte a byte al de HEAD: SI
+   contiene 'SIN ESCRIBIR TODAVIA'             -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> SI
+   contiene '\n## 3.'                          -> NO
+   contiene '\n## 4.'                          -> NO
+   contiene '\n## 5.'                          -> NO
+   contiene '\n## 6.'                          -> NO
+   contiene '\n## 7.'                          -> NO
+   contiene '\n## 8.'                          -> NO
+   contiene '\n## 9.'                          -> NO
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los ocho ultimos commits:
+   9445cd21	Decision del fundador: la bateria corre cada cinco, la ruta que promete prueba es cifra, y la caida del auditor gana dientes
+   ee3be26a	@ ACTA DEL AUDITOR, VUELTA 173, Y PARADA: DOS TAREAS SIN UNA SOLA CIFRA FALSA, PERO LA VUELTA NO ESCRIBIO REPORTE NI SIQUIERA EL ESQUELETO Y LA DEUDA YA ES DE DOS. EL REMEDIO DE ORDEN SE APLICO ENTERO Y LA VUELTA MURIO ANTES QUE LAS TRES ANTERIORES: LOS TRES REMEDIOS DEL AUDITOR ESTAN AGOTADOS Y LO QUE QUEDA ES ALCANCE, QUE ES DEL FUNDADOR. PROMPT_SIGUIENTE.md VACIO EN CERO BYTES @
+   c5b69ad9	TAREA 1.a Y 1.b: LOS CUATRO ARNESES DE LA 172 ENTRAN EN LA NOMINA (82 ENTRADAS, ULTIMA VUELTA 172, ADICION PURA DE 29 LINEAS Y CERO BORRADAS) Y LA PIEZA (4) DE cerrar_reporte.py ADMITE EL HUECO DECLARADO Y MEDIDO, CON LOS 17 CASOS VIEJOS INTACTOS Y VERDES Y UN ARNES NUEVO DE 24 QUE CAE SI PASA UN HUECO SIN MEDICION, SIN ATRIBUCION O CON UNA CORRIDA DE OTRA VUELTA
+   07b28f7a	APERTURA DE LA VUELTA 173, MEDIDA ANTES DE LA PRIMERA OPERACION: NOMINA 78 CON ULTIMA VUELTA 171 Y CUATRO ARNESES FUERA, SERIE EN R.41 CON R.42 LIBRE, BATERIA DE LA 172 EN CERO BYTES Y EL REPORTE EN HEAD TODAVIA EL ESQUELETO DE LA 172
+   0c287793	ACTA DEL AUDITOR, VUELTA 172: CUATRO TAREAS SIN UNA SOLA CIFRA FALSA Y LA CIEGA 8 DE 8, PERO EL CIERRE MUERE POR TERCERA VEZ Y LA CAUSA ES QUE EL REMEDIO QUEDO DETRAS DEL OBSTACULO
+   24dda21e	TAREA 5 CERRADA: NACE cerrar_reporte.py, DE NOMBRE ESTABLE, Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE LAS CUATRO PIEZAS
+   680f74ab	TAREA 4.a Y 4.b: EL CASO F REFUNDADO SOBRE SUJETO CONGELADO Y LOS TRES ARNESES DE LA 171 DENTRO DE LA NOMINA. LA 4.c VA SOLA AL CIERRE
+   24bd395b	TAREA 3 CERRADA: LAS 16 LECTURAS DE LA SEGUNDA TANDA GANAN LD-139 A LD-154 POR ADICION PURA, Y LAS DOS VARAS CONVERGEN EN LD-154
+ultimo commit que TOCA docs/loop/REPORTE.md: 24dda21e
+   su asunto: TAREA 5 CERRADA: NACE cerrar_reporte.py, DE NOMBRE ESTABLE, Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE L
+
+=== H.3 LAS TRES PIEZAS QUE cerrar_reporte.py PIDE PARA CERRAR LA 172 ===
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 2446 bytes, 17 lineas no vacias, 11 filas de tabla
+scripts/loop/_v172_cierre_texto.md -> 12042 bytes, 173 lineas no vacias, 14 filas de tabla
+docs/loop/SALIDA_V172_BATERIA.txt -> 0 bytes, 0 lineas no vacias, 0 filas de tabla
+docs/loop/SALIDA_V172_AUDITOR_BATERIA.txt -> 0 bytes, 0 lineas no vacias, 0 filas de tabla
+
+=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V168.md -> 31263 bytes
+   REPORTE_V169.md -> 43586 bytes
+   REPORTE_V170.md -> 45706 bytes
+   REPORTE_V171.md -> 43956 bytes
+CIFRA reportes archivados: 4
+REPORTE_V172.md archivado: NO
+
+=== H.5 LA NOMINA Y LOS QUE FALTAN, POR SU PROPIA FUNCION PURA ===
+entradas de la nomina VIEJAS: 82
+ultima vuelta representada en la nomina: 172
+arneses_que_faltan(): 1
+   vuelta173_tarea1b_mutacion_hueco.py
+nomina_invisible_al_censo(): 0
+
+=== H.6 LA SERIE R.N, RECOMPUTADA (no tecleada) ===
+entradas de la serie: 33
+mayor: R.41
+siguiente libre: R.42
+las cinco ultimas, con su sede y su linea:
+   R.37 -> docs/PENDIENTES.md:11990
+   R.38 -> docs/PENDIENTES.md:12081
+   R.39 -> docs/PENDIENTES.md:12194
+   R.40 -> docs/PENDIENTES.md:12289
+   R.41 -> docs/PENDIENTES.md:12431
+
+=== H.7 LAS DOS RUTAS QUE PROMETEN PRUEBA SOBRE UN VACIO ===
+(regla nueva del 5 sep 2026: LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+la fila de la TAREA 5 del reporte de la 172 (clausula 4.4)
+   -> docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt -> NO EXISTE
+el recuadro de apertura del R.41 (clausula 4.5)
+   -> scripts/loop/vuelta172_tarea1b_confirmar_r41.py -> NO EXISTE
+
+=== H.8 LA PROMESA DEL R.41, LEIDA DE SU SEDE Y NO DE MEMORIA ===
+docs/PENDIENTES.md:12431: ## R.41. Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 171
+docs/PENDIENTES.md:12455: > de arriba, con `scripts/loop/vuelta172_tarea1b_confirmar_r41.py`. **Si esta
+
+=== H.9 LA FILA DE LA TAREA 5 DEL REPORTE DEL ARBOL, ENTERA ===
+REPORTE.md:59: | **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **CERRADA** | `SALIDA_V172_T5_MUTACION_CIERRE.txt`, `_T5_CERRAR_REPORTE` (la corrida de esta misma vuelta) |
+
+FIN DEL SELLO DE APERTURA
