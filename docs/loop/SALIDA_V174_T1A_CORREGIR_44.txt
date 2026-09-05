@@ -1,0 +1,41 @@
+==============================================================================
+VUELTA 174, TAREA 1.a: LA CLAUSULA DE LA 4.4, CORREGIDA POR EL `9.10`
+==============================================================================
+
+A) EL SUJETO, ACOTADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md -> 31828 bytes, 511 saltos de linea
+   primera linea: # REPORTE DE LA VUELTA 172 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   la fila de la TAREA 5 esta en REPORTE.md:59 (470 bytes)
+
+B) LAS DOS RUTAS QUE LA FILA NOMBRA, MEDIDAS EN EL DISCO DE HOY
+   (LA RUTA QUE PROMETE PRUEBA ES CIFRA, EJECUTOR.md 1, 5 sep 2026)
+   docs/loop/SALIDA_V172_T5_MUTACION_CIERRE.txt         4921 bytes
+   docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt          NO EXISTE
+   CIFRA rutas de la fila que apuntan a un vacio: 1
+
+C) LA SIMULACION, SOBRE COPIA EN MEMORIA Y SIN TOCAR EL DISCO
+   corregir() devuelve 0 motivo(s)
+   texto simulado: 33434 bytes (+1606 contra el original)
+   lineas: 511 -> 536 (adicion pura: SI)
+
+D) SE ESCRIBE
+   ESCRITO: docs/loop/REPORTE.md (33434 bytes)
+
+E) LA RELECTURA DEL DISCO, QUE ES LA QUE VALE
+   el CERRADA viejo sigue ENTERO en la fila                   SI
+   y ahora esta TACHADO                                       SI
+   el estado corregido esta escrito al lado                   SI
+   la prueba falsa sigue ENTERA                               SI
+   y ahora esta TACHADA                                       SI
+   la prueba que SI existe sigue sin tachar                   SI
+   el bloque de correccion esta escrito                       SI
+   y esta DEBAJO de la tabla                                  SI
+   la medicion de hoy esta dentro del bloque                  SI
+   las otras cuatro filas de tareas siguen intactas           SI
+   ninguna otra fila quedo tachada                            SI
+   el reporte sigue SIN CERRAR (el hueco y el veredicto viejo siguen) SI
+   cero guiones largos y cero guiones medios                  SI
+   CIFRA comprobaciones: 13 | fallan: 0
+
+VERDE: la clausula de la 4.4 queda corregida por el carril del `9.10`,
+       con el texto viejo entero y tachado y la correccion fechada debajo.

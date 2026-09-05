@@ -1,0 +1,79 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE corregir(), VUELTA 174 TAREA 1.a
+==============================================================================
+SUJETO CONGELADO: cero lecturas de disco, cero escrituras.
+
+1. la correccion YA ESTA escrita (idempotencia)      CAE, y por su motivo
+      espera 'YA ESTA escrita' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la correccion YA ESTA escrita en este texto: este instrumento no la escribe dos veces
+
+2. la marca de fin de tabla NO esta                  CAE, y por su motivo
+      espera 'aparece 0 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la marca '<!-- FIN TABLA DE TAREAS -->' aparece 0 veces y tiene que aparecer UNA
+
+3. la marca de fin de tabla esta DOS veces           CAE, y por su motivo
+      espera 'aparece 2 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la marca '<!-- FIN TABLA DE TAREAS -->' aparece 2 veces y tiene que aparecer UNA
+
+4. la fila de la TAREA 5 NO esta                     CAE, y por su motivo
+      espera 'aparece 0 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila '| **TAREA 5** |' aparece 0 veces y tiene que aparecer UNA
+
+5. la fila de la TAREA 5 esta DOS veces              CAE, y por su motivo
+      espera 'aparece 2 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila '| **TAREA 5** |' aparece 2 veces y tiene que aparecer UNA
+
+6. no se pasa ninguna medicion                       CAE, y por su motivo
+      espera 'sin la medicion que la sostiene' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> no se paso ninguna medicion: una correccion sin la medicion que la sostiene no se escribe
+
+7. la fila no trae la celda `| **CERRADA** |`        CAE, y por su motivo
+      espera 'no trae la celda' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la celda '| **CERRADA** |' exactamente una vez (trae 0)
+
+8. la fila no trae la prueba falsa                   CAE, y por su motivo
+      espera 'no trae la prueba falsa' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la prueba falsa '`_T5_CERRAR_REPORTE` (la corrida de esta misma vu
+
+9. la fila trae la prueba falsa DOS veces            CAE, y por su motivo
+      espera 'exactamente una vez (trae 2)' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la prueba falsa '`_T5_CERRAR_REPORTE` (la corrida de esta misma vu
+
+10. el reporte YA trae un guion largo de antes       CAE, y por su motivo
+      espera 'guiones largos o medios' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> se colaron guiones largos o medios
+
+11. el reporte YA trae un guion medio de antes       CAE, y por su motivo
+      espera 'guiones largos o medios' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> se colaron guiones largos o medios
+
+------------------------------------------------------------------------------
+EL CASO VERDE, QUE ES EL QUE PRUEBA QUE LOS ROJOS NO SON ROJOS SIEMPRE
+------------------------------------------------------------------------------
+   no devuelve ningun motivo                            SI
+   el texto SI cambia                                   SI
+   el CERRADA viejo sigue entero                        SI
+   y esta tachado                                       SI
+   solo se tacha UNO de los cinco CERRADA               SI
+   la prueba falsa sigue entera                         SI
+   y esta tachada                                       SI
+   la prueba que si existe NO se toca                   SI
+   el bloque de correccion esta                         SI
+   y esta DEBAJO de la tabla                            SI
+   la medicion viaja dentro del bloque                  SI
+   las otras cuatro filas siguen una vez cada una       SI
+   es adicion: el texto nuevo es mas largo              SI
+   cero guiones largos y medios                         SI
+
+------------------------------------------------------------------------------
+LA MUTACION DEL PROPIO ARNES (la prueba de que estos casos pueden caer)
+------------------------------------------------------------------------------
+Se le pide a la funcion un motivo que NO existe y se comprueba que el
+arnes lo detecta como NO CAE, en vez de aprobarlo por parecido:
+   un motivo inventado aparece entre los devueltos: NO, como debe ser
+
+==============================================================================
+CIFRA casos: 26 | verdes: 26 | rojos: 0
+==============================================================================
+VERDE: las 26 comprobaciones se comportan, y cada guarda de corregir()
+       cae por su propio motivo cuando se le quita su pieza.

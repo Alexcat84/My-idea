@@ -17,9 +17,7 @@
 > verde contra `docs/loop/reportes/REPORTE_V171.md` **solo despues de que la
 > TAREA 1.a cerrara ese reporte**.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre, cuando
-haya de que hablar.
-
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 172 ENTREGO CUATRO DE SUS CINCO TAREAS Y NO PUDO CERRAR SU PROPIO REPORTE, Y SE CIERRA AQUI, DOS VUELTAS DESPUES, POR LA VUELTA 174: LA TAREA 4 QUEDO ABIERTA EN SU 4.c, LA TAREA 5 PARIO cerrar_reporte.py PERO NO ALCANZO A CERRARSE CON EL (clausula 4.4, corregida arriba por el carril del 9.10), Y LA BATERIA NO LA CORRIO NADIE, NI EL EJECUTOR NI EL AUDITOR.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -38,13 +36,24 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva**, porque ese commit se crea despues de escribirlo.
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 172`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO,
-19 celdas no se pudieron leer"** y de esas lineas de rojo, **0
-mencionan APERTURA**. Son todas del lado CIERRE, que al abrir todavia no existe.
-Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 172`, y su salida
+cruda vive en `docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt` (2426 bytes, 11 filas de tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `0c415430` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 171: LAS CUATRO TAREAS REPRODUCEN AL DIGITO Y LA PARADA NO ES PARADA, PERO EL REPORTE VUELVE A QUEDARSE SIN CERRAR Y ESTA VEZ EL TRAMO YA ESTABA EN RELECTURA AL DOBLE'), HEAD real de apertura `002e0517` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `24dda21e` (leido de `SALIDA_V172_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -56,8 +65,33 @@ Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
 | **TAREA 2** | BLOQUEANTE PARA LA 3. SE DESENVENENA EL CONTADOR Y SE CORRIGE EL `R.40` (adjudicaciones 6.1 y 6.3): 2.a `docs/loop/reportes/REPORTE_V<N>.md` entra en los narrativos del bucle POR PATRON, con su caso positivo por mutacion; 2.b la afirmacion falsa del `R.40` corregida por el carril del `9.10` con el reparto recomputado; 2.c el contador otra vez, con la atribucion fichero a fichero y linea a linea | **CERRADA** | `SALIDA_V172_T2_CONTAR_LD_ANTES.txt`, `_T2A_MUTACION_EXCLUSION`, `_T2A_CONTAR_LD_DESPUES`, `_T2B_CORREGIR_R40`, `_T2C_ATRIBUCION` |
 | **TAREA 3** | LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS y con dos guardas que tienen que caer por mutacion; y despues la fila de `docs/plan/00_INDICE.md` recibe su cifra de hoy por `9.21` (adjudicacion 6.10) | **CERRADA** | `SALIDA_V172_T3_NUMERAR_LD.txt`, `_T3_MUTACION_NUMERACION`, `_T3_ATRIBUCION_DESPUES`, `_T3_CONTAR_LD`, `_T3B_INDICE` |
 | **TAREA 4** | LOS TRES ARNESES Y LA BATERIA (adjudicaciones 6.4 y 6.5), Y EL ORDEN ES OBLIGATORIO: 4.a el caso `F` de `vuelta171_tarea5a_mutacion_enchufe.py` refundado sobre SUJETO CONGELADO; 4.b los tres arneses de la 171 dentro de la nomina de `verificar_mutaciones_viejas.py`; 4.c la bateria corrida ENTERA Y SOLA al cierre, con su salida en la seccion 9 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | **CERRADA** | `SALIDA_V172_T5_MUTACION_CIERRE.txt`, `_T5_CERRAR_REPORTE` (la corrida de esta misma vuelta) |
+| **TAREA 5** | EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6): nace `scripts/loop/cerrar_reporte.py`, de nombre estable y sin numero de vuelta, que pega la cabecera, anexa el cuerpo, escribe el veredicto y CAE EN ROJO si al terminar falta cualquiera de las cuatro piezas. Con su caso positivo por mutacion, y esta vuelta se cierra con el | ~~**CERRADA**~~ **ABIERTA, SIN CERRAR EN LA 172** (correccion declarada del 5 sep 2026, debajo de la tabla) | `SALIDA_V172_T5_MUTACION_CIERRE.txt`, ~~`_T5_CERRAR_REPORTE` (la corrida de esta misma vuelta)~~ |
 <!-- FIN TABLA DE TAREAS -->
+
+> **CORRECCION DECLARADA (5 sep 2026, vuelta 174, TAREA 1.a, por el carril del banco `9.10`).**
+> **LA FILA DE LA TAREA 5 DECIA `CERRADA` Y NOMBRABA COMO PRUEBA UNA RUTA
+> SOBRE UN VACIO.** La fila vieja queda entera y tachada; no se borra nada.
+> **Lo medido HOY en el disco por `scripts/loop/vuelta174_tarea1a_corregir_44.py`,
+> con `os.path.exists` y `os.path.getsize`, no tecleado:**
+>
+> - `docs/loop/SALIDA_V172_T5_MUTACION_CIERRE.txt` -> **4921 bytes**
+> - `docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt` -> **NO EXISTE**
+>
+> **LO QUE DE VERDAD PASO, Y ES LO QUE DICE LA `4.4` DEL ACTA DEL AUDITOR DE
+> LA VUELTA 172** (`docs/loop/ACTA_AUDITOR.md:58649`, leida hoy): el encargo de
+> aquella TAREA 5 pedia TRES cosas, *"el instrumento, su caso positivo, y que
+> esta vuelta se cerrara con el"*. **Las dos primeras estan hechas y
+> verificadas** (el arnes de mutacion existe y su salida tambien). **La tercera
+> no la hizo la vuelta 172: la paga la vuelta 174**, y por eso el estado
+> corregido es ABIERTA, SIN CERRAR EN LA 172 y no CERRADA.
+>
+> **LA REGLA QUE LO CONVIERTE EN CAIDA Y NO EN DESCUIDO** es del 5 sep 2026,
+> `EJECUTOR.md` 1: **LA RUTA QUE PROMETE PRUEBA ES CIFRA**. Una ruta publicada
+> como evidencia que apunta a un fichero inexistente o de cero bytes es CAIDA
+> DE CIFRA en su sede. **El auditor la registro cuando esa regla todavia no
+> existia y la trato como rotulo de estado, sin acumular; hoy la regla existe,
+> y quien decide si esto acumula hacia atras es el auditor, no yo.**
+
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
 
@@ -509,3 +543,219 @@ un reporte a medias**, que es la diferencia entera con las dos vueltas
 anteriores.
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+
+**LOS DOS EXTREMOS SE LEEN DE LOS SELLOS Y NO SE TECLEAN.** Apertura `002e0517`,
+de `docs/loop/SALIDA_V172_HEAD_APERTURA.txt`, sellado **antes de la primera
+operacion**; cierre `24dda21e`, de `docs/loop/SALIDA_V172_HEAD_CIERRE.txt`,
+sellado **tras la ultima**. **LOS COMMITS DE LA VUELTA, LEIDOS DE
+`git log 002e0517..24dda21e`: OCHO.**
+
+| # | commit | que cierra |
+|---:|---|---|
+| 1 | `ad3cea43` | la apertura, el bloque ENTERO |
+| 2 | `99d54005` | TAREA 1.a, el reporte de la 171 cerrado |
+| 3 | `20b11348` | TAREA 1.b, el acta 171 al `R.41` |
+| 4 | `45fb75f5` | TAREA 1 cerrada (1.c, archivador y esqueleto) |
+| 5 | `96940490` | TAREA 2 |
+| 6 | `24bd395b` | TAREA 3 |
+| 7 | `680f74ab` | TAREA 4.a y 4.b |
+| 8 | `24dda21e` | TAREA 5 |
+
+**Y HAY UN COMMIT ANTES DE LA APERTURA QUE TAMBIEN ES DE ESTA VUELTA Y SE DICE:**
+`002e0517`, la suciedad de la apertura (el `SALIDA_V172_AUDITOR_BATERIA.txt` de
+cero bytes que el auditor dejo suelto), commiteado por la regla 3 de
+`EJECUTOR.md` **antes de tocar nada**. Es el HEAD de apertura, asi que **queda
+fuera del rango por definicion**, no por olvido.
+
+**EL GRAFO NO SE MOVIO, PROBADO Y NO CREIDO:**
+`git diff 002e0517 24dda21e --numstat -- dataset/ web/ engine/` sale con **0
+filas**. Las **74 rutas** que la vuelta toca son **40 de `docs/loop/`, 30 de
+`scripts/loop/`, 2 de `docs/plan/`, 1 de `docs/loop/reportes/` y 1 de `docs/`**.
+**Cero nodos tocados, cero aristas movidas, cero clases movidas**, y la cabecera
+de arriba lo confirma por otro camino: **+0 / +0 / +0 / +0** en las cuatro cifras
+de aristas.
+
+**EL COMMIT QUE LLEVA ESTE REPORTE NO SE NOMBRA AQUI**, porque se crea despues de
+escribirlo. Y **este cierre lo escribe la propia vuelta 172**, que es la primera
+en tres que lo hace: la 170 y la 171 lo dejaron sin cerrar.
+
+## 4. LA PARADA, Y ES UNA, PERO NO DETIENE NINGUNA TAREA
+
+**LA BATERIA SALE ROJA POR MIS PROPIOS ARNESES, Y NO LO ARREGLO YO.**
+
+El encargo, en su 4.b, dice con esas palabras: *"Con las tres entradas nuevas la
+nomina tiene que dar 78 y su ultima vuelta representada tiene que ser la 171."*
+**Eso es exactamente lo que hice, y lo mide la funcion pura del propio
+instrumento: 78 entradas, ultima vuelta 171, nomina invisible al censo 0.**
+
+**PERO `arneses_que_faltan()` SIGUE DEVOLVIENDO 3, Y LOS TRES SON MIOS**, nacidos
+en esta misma vuelta:
+`vuelta172_tarea1b_mutacion_registro.py`,
+`vuelta172_tarea2a_mutacion_exclusion.py` y
+`vuelta172_tarea3_mutacion_numeracion.py`. **Y hay un cuarto desde la TAREA 5**,
+`vuelta172_tarea5_mutacion_cierre.py`. El veredicto de la bateria cuenta esa
+lista como **ROJO**.
+
+**EL CHOQUE, DICHO EN UNA LINEA:** la regla escrita en el propio
+`verificar_mutaciones_viejas.py` dice que *"una mutacion entra en la vuelta
+SIGUIENTE a la que nace, no mas tarde"*, o sea que los mios entran en la **173**;
+**pero la comprobacion marca como FUERA todo arnes con vuelta mayor que la ultima
+de la nomina, y eso incluye a los recien nacidos.** Las dos cosas no pueden ser
+ciertas a la vez en la vuelta en que un arnes nace.
+
+**LOS DOS PRECEDENTES, MEDIDOS Y NO RECORDADOS, Y NO DICEN LO MISMO:**
+
+| vuelta | metio sus PROPIOS arneses en la nomina | resultado |
+|---|---|---|
+| 170 | **SI** (`vuelta170_tarea1a_mutacion_registro.py` y `vuelta170_tarea2a_mutacion_aislador.py` estan en `VIEJAS` y la ultima vuelta representada era la 170) | la bateria del auditor salio **VERDE**, con `faltan` en **0** |
+| 171 | **NO** (escribio tres y no metio ninguno) | el acta 171 dice que la bateria **saldria ROJA**, y su seccion 4.3 lo mide |
+
+**POR QUE NO LO ARREGLO METIENDO LOS MIOS:** porque eso daria **81 entradas y
+ultima vuelta 172**, y **contradice al digito la cifra que el encargo publica**.
+`EJECUTOR.md` 5 dice que si algo contradice una regla vigente **se para y se
+trae, y no lo arreglo yo**. **Asi que la bateria se corre, se publica su rojo
+entero con su texto en la seccion 9, y la decision sube.**
+
+**LO QUE NO ES:** no es una parada de trabajo. **Las cinco tareas del encargo
+estan cerradas**, la bateria corrio entera y sola, y su salida esta pegada
+completa. Lo unico que queda en el aire es **si la nomina debe llevar tambien los
+arneses de la vuelta que corre**, que es una linea de doctrina y no un arreglo.
+
+**Y LA PREGUNTA CONCRETA, PARA QUE SE PUEDA CONTESTAR EN UNA LINEA:** ¿la nomina
+de la bateria se cierra con los arneses de la vuelta ANTERIOR (y entonces
+`arneses_que_faltan()` tiene que dejar de contar a los de la vuelta en curso), o
+se cierra con los de la vuelta EN CURSO (y entonces la 4.b de este encargo pedia
+78 cuando tenia que pedir 82)? Va como `P.1`.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**Los marco ahora, con la relectura ciega del auditor por delante y sin saber
+como va a adjudicarlos.** Esta vez si son ciegos, y lo digo porque en el reporte
+de la 171 que cerre en la TAREA 1.a **no lo eran** y ahi va escrito.
+
+- **`D.1` LAS GLOSAS DEL `R.41` NO AFIRMAN EN PASADO, Y ESO CAMBIA LA FORMA DE
+  UNA ENTRADA DE LA SERIE.** El campo se llama **VIA PREVISTA**, las siete glosas
+  de tarea dicen *"VA A EJECUTARSE EN LA TAREA n ... Y AL ESCRIBIR ESTA LINEA
+  TODAVIA NO HA CORRIDO"*, y la confirmacion medida se anexa al cierre.
+  **Discutible: puede que la forma correcta fuera escribir la entrada AL FINAL de
+  la vuelta, cuando ya se sabe, en vez de cambiar el tiempo verbal; y puede que
+  cambiar la forma de una entrada de la serie sea doctrina y no ejecucion.**
+- **`D.2` TRAIGO UNA DISCREPANCIA CON EL ACTA EN VEZ DE RESOLVERLA.** El acta 171
+  dice que el paso 0 sale ROJO **por la clausula (d)**; con
+  `vuelta_anterior=171`, que es lo que el esqueleto de esta vuelta llama, sale
+  **por la (b)**. Reproduje la del acta con **su** parametro,
+  `exigir_archivado(170)`, y ahi si sale la (d). **Publico las dos. Discutible:
+  puede que lo esperado fuera decir simplemente que reproduce, y que separar dos
+  lecturas de dos preguntas distintas sea hilar de mas.**
+- **`D.3` ESCRIBI UN INSTRUMENTO QUE EL ENCARGO NO PIDE.**
+  `scripts/loop/anexar_tarea_al_reporte.py`, de nombre estable. El motivo es que
+  anexar la fila de cada tarea al cerrarse **era un paso a mano**, la misma
+  especie que la TAREA 5 viene a matar. **Discutible: el encargo trae tope de
+  cinco tareas y esto es codigo de mas; puede que tocara traerlo como propuesta
+  en vez de escribirlo.**
+- **`D.4` SAQUE EL CRITERIO DE EXCLUSION DEL CONTADOR A UNA FUNCION PURA.** Sin
+  eso no habia nada que un arnes pudiera llamar y la 2.a no se podia probar por
+  mutacion. **Discutible: es un cambio de forma en un instrumento viejo que el
+  encargo no manda tocar, y un refactor dentro de una tarea de contenido es
+  precisamente lo que suele colar cambios sin guarda.**
+- **`D.5` ESTRENE LA ETIQUETA DE VIA `NO SE CORRIO`.** El vocabulario de la casa
+  trae `EJECUTADA`, `SIN TOCAR NADA` y `AL FUNDADOR`. **Discutible: estrenar una
+  palabra es exactamente lo que hizo el `D.5` de la vuelta 170 y se le pidio
+  cuenta; puede que lo correcto fuera dejar la via vieja tachada y sin
+  sustituto.**
+- **`D.6` LE PUSE PARAMETRO AL CORTE DE LA 2.c.** Estaba clavado en 138 y al
+  correr el instrumento DESPUES de la TAREA 3 salia ROJO por diseno. **Discutible:
+  un rojo que molesta no siempre es un rojo mal puesto, y puede que lo correcto
+  fuera dejarlo clavado y no volver a correrlo.**
+- **`D.7` TOQUE UNA SEGUNDA FILA DE `docs/plan/00_INDICE.md` QUE EL ENCARGO NO
+  NOMBRA.** La de *"lecturas dirigidas hechas"* llevaba **82 con corte 5 sep
+  2026** y mi TAREA 3, del mismo dia, la movio a **98**; dejarla habria puesto dos
+  cifras distintas con la misma fecha para la misma vara, **y la habria creado
+  yo**. **Discutible: el encargo nombra una fila y toque dos.**
+- **`D.8` NO METI MIS PROPIOS ARNESES EN LA NOMINA Y DEJE LA BATERIA EN ROJO.**
+  Esta explicado entero en la seccion 4. **Discutible: puede que la lectura buena
+  del encargo fuera "78 al meter los tres de la 171, y despues los tuyos
+  tambien", y que yo haya elegido la letra por encima del sentido.**
+
+## 6. LAS PREGUNTAS
+
+- **`P.1`** ¿La nomina de la bateria se cierra con los arneses de la vuelta
+  ANTERIOR o con los de la vuelta EN CURSO? Es la de la seccion 4 y es la unica
+  que deja algo en rojo.
+- **`P.2`** ¿Una entrada de la serie `R.n` se escribe al ABRIR la vuelta, con
+  glosas en futuro y confirmacion anexada al cierre (lo que hice), o al CERRARLA,
+  con glosas en pasado y ya medidas? Las dos evitan la caida del `R.40`; solo una
+  puede ser la forma de la casa.
+- **`P.3`** El `PD.1` de la vuelta 171 sigue abierto y hoy es lo unico que separa
+  las dos varas del contador: **¿un registro fiel que CITA un encargo cuenta como
+  encargo?** Medido hoy, los dos numeros que lo sostenian (`LD-139` y `LD-154`)
+  **ya no cuentan**, porque la TAREA 3 les dio seccion propia; **pero la pregunta
+  sigue viva** para el proximo encargo que una entrada `R.n` glose.
+
+## 7. PENDIENTES DE DOCTRINA
+
+- **`PD.1` NO HAY REGLA SOBRE CUANDO ENTRA EN LA BATERIA EL ARNES QUE NACE HOY.**
+  El fichero dice *"en la vuelta SIGUIENTE a la que nace"* y su comprobacion los
+  cuenta como FUERA desde el minuto uno. **La vuelta 170 metio los suyos y salio
+  verde; la 171 no metio ninguno y quedo roja.** La regla que falta es de una
+  linea y cierra el rojo de esta vuelta.
+- **`PD.2` NO HAY VOCABULARIO ESCRITO DE VIAS PARA LA SERIE `R.n`.** La casa usa
+  `EJECUTADA`, `SIN TOCAR NADA` y `AL FUNDADOR`, y hoy hicieron falta dos que no
+  estaban: **`NO SE CORRIO`** (para la correccion del `R.40`) y **`VIA
+  PREVISTA`** (para una entrada escrita antes de que la tarea corra). Las dos
+  describen hechos y ninguna regla escrita las prohibe, **pero estrenar
+  vocabulario dos veces en una vuelta es justo lo que la 170 hizo una vez y se le
+  cazo**.
+
+## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+
+- **`CAIDA 1`. LA PRIMERA CORRIDA DEL BLOQUE DE APERTURA MURIO CON
+  `SyntaxError` Y NO ESCRIBIO NI UN FICHERO.** Al generar
+  `scripts/loop/vuelta172_apertura.py` se me colo **un salto de linea de verdad
+  donde tenia que ir su escape**, y el fichero no compilaba. **Ninguna cifra
+  salio de ahi: no escribio ninguna salida.** Lo arregle usando `chr(10)` en vez
+  del escape y volvi a correr, **y la segunda corrida sigue estando antes de la
+  primera operacion sobre el registro**. Va declarada tambien en el mensaje del
+  commit `ad3cea43`, antes de que nadie la cazara.
+- **`CAIDA 2`. UNA GUARDA MIA MIDIO EL FICHERO ENTERO EN VEZ DE MI PROPIO
+  CAMBIO.** La comprobacion anti guiones de la TAREA 2.b miraba
+  `docs/PENDIENTES.md` **completo** y salio ROJA **despues de escribir**, porque
+  esa pagina **ya traia 54 guiones largos de antiguo**, ninguno mio. Revertí con
+  `git checkout`, apunte la guarda **al DELTA** (que yo no anada ninguno) mas una
+  segunda que mira **solo mi bloque**, y volvi a correr. **La guarda no se
+  aflojo: se reapunto**, que es lo mismo que la vuelta 170 hizo con su `CAIDA 2`.
+- **`CAIDA 3`. PISE UNA SALIDA QUE ERA EVIDENCIA.** Al ponerle el parametro
+  `--corte` al instrumento de la 2.c **lo volvi a correr con `--corte 138`
+  DESPUES de la TAREA 3 y sobreescribi
+  `docs/loop/SALIDA_V172_T2C_ATRIBUCION.txt`**, que era la medicion de la guarda
+  **previa** a la TAREA 3. **No se perdio nada porque estaba commiteada** y la
+  restaure con `git checkout 96940490 --`. **Lo que ensena es que una salida
+  commiteada es la unica que aguanta**, y que un instrumento que se puede
+  re-correr sobre su propio fichero de salida deberia negarse a pisarlo.
+- **`CAIDA 4`. UN MARCADOR DE UNA LETRA ROMPIO UN FICHERO GENERADO.** El primer
+  andamio que escribia el texto del `R.41` usaba **la letra `Q` como marcador de
+  comilla**, y `Q` aparece en `AQUI` y en `QUE`, asi que el clon salio sin
+  compilar. **Lo cazo `py_compile` y nada se commiteo roto**; el marcador paso a
+  `~C~` y el andamio quedo como
+  `scripts/loop/_v172_construir_registrador.py`, que **reproduce el fichero byte
+  a byte**. Va declarada aunque no llegara a publicarse ninguna cifra.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 172 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V172_BATERIA.txt`.
+**SUS BYTES, MEDIDOS EN ESTA CORRIDA** con `os.path.getsize` por
+`scripts/loop/cerrar_reporte.py`, no tecleados: **0 bytes**.
+
+ATRIBUCION: NADIE la corrio para la vuelta 172. La del ejecutor, docs/loop/SALIDA_V172_BATERIA.txt, mide 0 bytes; la del auditor, docs/loop/SALIDA_V172_AUDITOR_BATERIA.txt, mide 0 bytes tambien, y su propia acta lo declara en la clausula 4.3 (docs/loop/ACTA_AUDITOR.md:58638, leida hoy). Las dos cifras las midio hoy scripts/loop/vuelta174_apertura.py con os.path.getsize, bloque H.3.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.
