@@ -1,0 +1,59 @@
+==============================================================================
+VUELTA 171, TAREA 2: LOS CINCO BORRADORES SALEN DE docs/, Y LAS TRES LECTURAS
+==============================================================================
+
+A) LOS CINCO FICHEROS, ANTES DE TOCARLOS
+   docs/loop/_v170_t1_seccion.md            7340 bytes  sha256 b44971c4746f1c40  seguido por git: SI
+   docs/loop/_v170_t2_seccion.md            5109 bytes  sha256 9777e8eb4f574c9e  seguido por git: SI
+   docs/loop/_v170_t3_seccion.md            3983 bytes  sha256 345f04062b33f6fe  seguido por git: SI
+   docs/loop/_v170_t4_seccion.md            5699 bytes  sha256 ec793a3b86ce1a08  seguido por git: SI
+   docs/loop/_v170_t5_seccion.md            6003 bytes  sha256 c80a74537774f85f  seguido por git: SI
+   CIFRA ficheros: 5
+   numeros LD que estos cinco nombran: LD-1, LD-11, LD-12, LD-27, LD-28, LD-66, LD-70, LD-100, LD-137, LD-138, LD-139, LD-154
+   el mayor que nombran: LD-154
+
+B) LECTURA 1: EL CORTE 222ca6a7, SOBRE UN WORKTREE LIMPIO DE ESE COMMIT
+   git worktree add --detach ... 222ca6a7 -> exit 0
+   HEAD del worktree: 222ca6a7d85589d6688bc586adf618f1b3d07952
+   borradores _v170_t*_seccion.md presentes en ese corte: 3
+   (1) 222ca6a7, worktree limpio      hechas  82 (LD-01 a LD-138) | universo  84 distintos (LD-01 a LD-138) | sin seccion  2 | huecos 54
+                                      nombradas sin seccion: LD-71, LD-99
+
+C) LECTURA 2: HEAD, ANTES DE MOVER
+   (2) HEAD, antes de mover           hechas  82 (LD-01 a LD-138) | universo  90 distintos (LD-01 a LD-154) | sin seccion  8 | huecos 64
+                                      nombradas sin seccion: LD-12, LD-27, LD-71, LD-99, LD-100, LD-137, LD-139, LD-154
+
+D) EL MOVIMIENTO, CON git mv Y SIN BORRAR NI EDITAR NADA
+   git mv docs/loop/_v170_t1_seccion.md scripts/loop/_v170_t1_seccion.md -> exit 0 
+   git mv docs/loop/_v170_t2_seccion.md scripts/loop/_v170_t2_seccion.md -> exit 0 
+   git mv docs/loop/_v170_t3_seccion.md scripts/loop/_v170_t3_seccion.md -> exit 0 
+   git mv docs/loop/_v170_t4_seccion.md scripts/loop/_v170_t4_seccion.md -> exit 0 
+   git mv docs/loop/_v170_t5_seccion.md scripts/loop/_v170_t5_seccion.md -> exit 0 
+
+E) NADA SE PERDIO Y NADA SE EDITO, COMPROBADO POR sha256
+   _v170_t1_seccion.md        en el destino: SI | sha256 identico: SI | queda en docs/: NO
+   _v170_t2_seccion.md        en el destino: SI | sha256 identico: SI | queda en docs/: NO
+   _v170_t3_seccion.md        en el destino: SI | sha256 identico: SI | queda en docs/: NO
+   _v170_t4_seccion.md        en el destino: SI | sha256 identico: SI | queda en docs/: NO
+   _v170_t5_seccion.md        en el destino: SI | sha256 identico: SI | queda en docs/: NO
+   CIFRA ficheros movidos con sha256 identico: 5 de 5
+
+F) LECTURA 3: HEAD, DESPUES DE MOVER
+
+G) LAS TRES LECTURAS, UNA DEBAJO DE OTRA
+   (1) 222ca6a7, worktree limpio      hechas  82 (LD-01 a LD-138) | universo  84 distintos (LD-01 a LD-138) | sin seccion  2 | huecos 54
+                                      nombradas sin seccion: LD-71, LD-99
+   (2) HEAD, antes de mover           hechas  82 (LD-01 a LD-138) | universo  90 distintos (LD-01 a LD-154) | sin seccion  8 | huecos 64
+                                      nombradas sin seccion: LD-12, LD-27, LD-71, LD-99, LD-100, LD-137, LD-139, LD-154
+   (3) HEAD, despues de mover         hechas  82 (LD-01 a LD-138) | universo  90 distintos (LD-01 a LD-154) | sin seccion  8 | huecos 64
+                                      nombradas sin seccion: LD-12, LD-27, LD-71, LD-99, LD-100, LD-137, LD-139, LD-154
+
+H) LA GUARDA DE LA 6.2: LAS DOS VARAS TIENEN QUE CONVERGER EN LD-138
+   el mayor de las HECHAS   -> LD-138
+   el mayor del UNIVERSO    -> LD-154
+   convergen: NO
+   y dan LD-138: NO
+
+ROJO, 1 motivo(s):
+   PARADA: las dos varas NO convergen (hechas LD-138, universo LD-154)
+LA TAREA 3 NO SE CORRE.

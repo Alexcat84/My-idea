@@ -1,0 +1,21 @@
+=== LAS DOS FUENTES NUEVAS, MEDIDAS UNA POR UNA CONTRA EL CORTE DE APERTURA 0caca89f ===
+
+--- 1. docs/loop/reportes/REPORTE_V170.md ---
+   existia en 0caca89f: NO (nace en esta vuelta, TAREA 1.d)
+   commit que lo ANADE (git log --diff-filter=A): dd34047a (sin commitear todavia si sale vacio)
+   numeros LD que nombra: LD-01 LD-100 LD-11 LD-12 LD-137 LD-138 LD-139 LD-154 LD-27 LD-28 LD-66 LD-70 
+   sha256 de REPORTE_V170.md: 0b85f30e9c78e2b4d59e19deb9aa30d61d3724800bd54e7309246fb405bd1e16
+   sha256 de docs/loop/REPORTE.md en ca55afd8 (el fichero YA EXCLUIDO del que es copia):
+   0b85f30e9c78e2b4d59e19deb9aa30d61d3724800bd54e7309246fb405bd1e16
+
+--- 2. docs/PENDIENTES.md ---
+   veces que nombra LD-12  en 0caca89f: 0 | hoy: 1
+   veces que nombra LD-27  en 0caca89f: 0 | hoy: 1
+   veces que nombra LD-139 en 0caca89f: 0 | hoy: 1
+   veces que nombra LD-154 en 0caca89f: 0 | hoy: 1
+   lineas de docs/PENDIENTES.md que los nombran HOY, con su numero de linea:
+      12296:    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 3 de esta vuelta. La 'parada' de la numeracion `LD` queda cerrada por donde el acta dice: la regla estaba escrita en el codigo del instrumento que el encargo nombraba, `serie_de_registros.py:97-102`, `return (max(nums) + 1) if nums else 1`, sin condicional de huecos. EL SIGUIENTE LIBRE ES EL MAYOR MAS UNO, y las 16 filas de la segunda tanda ganan `LD-139` a `LD-154` por ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO y sin tocar una palabra de su texto. El `D.6` (la adyacencia del tramo `LD-12` a `LD-27`) se publica como CONTRASTE MEDIDO y no como fundamento: una adyacencia no es una asignacion.
+
+--- 3. los otros dos reportes archivados, para no acusar de mas ---
+   docs/loop/reportes/REPORTE_V168.md -> numeros LD que nombra: (ninguno si sale vacio)
+   docs/loop/reportes/REPORTE_V169.md -> numeros LD que nombra: LD- LD-66 LD-67 LD-68 LD-69 LD-70 (ninguno si sale vacio)
