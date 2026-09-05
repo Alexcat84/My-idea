@@ -1,0 +1,60 @@
+==============================================================================
+LO QUE NO ENTRA Y NO SE PIERDE (vuelta 179, TAREA 5)
+==============================================================================
+
+NINGUNA DE LAS CINCO SE TOCA AQUI. Se mide su sede para que la promesa de
+prueba no sea una ruta que no existe.
+
+1. LA SEGUNDA SEDE DE LA CLAUSULA 4.4
+   sede: docs/loop/reportes/REPORTE_V172.md
+   existe: SI
+   CIFRA bytes en disco: 48851 | bytes normalizados a LF: 48851 | bytes en git: 48851
+   aguja: '4.4' | CIFRA lineas de la sede que la traen: 2
+      LINEA 20: **EL VEREDICTO DE UNA LINEA: LA VUELTA 172 ENTREGO CUATRO DE SUS CINCO TAREAS Y NO PUDO CERRAR SU PROPIO REPOR
+      LINEA 80: > **LO QUE DE VERDAD PASO, Y ES LO QUE DICE LA `4.4` DEL ACTA DEL AUDITOR DE
+
+2. EL DOCSTRING DEL PASO 0, QUE HABLA DE LA VUELTA ANTERIOR
+   sede: scripts/loop/paso0_archivar_anterior.py
+   existe: SI
+   CIFRA bytes en disco: 7112 | bytes normalizados a LF: 7112 | bytes en git: 7112
+   aguja: 'vuelta anterior' | CIFRA lineas de la sede que la traen: 1
+      LINEA 25: (a) el archivador no sale VERDE para la vuelta anterior; o
+
+3. LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL D.4 DE LA 174
+   sede: scripts/loop/vuelta179_esqueleto_reporte.py
+   existe: SI
+   CIFRA bytes en disco: 19911 | bytes normalizados a LF: 19911 | bytes en git: 19911
+   aguja: 'CLON DECLARADO' | CIFRA lineas de la sede que la traen: 2
+      LINEA 5: CLON DECLARADO de scripts/loop/vuelta178_esqueleto_reporte.py. Lo que se toca a
+      LINEA 96: CLON DECLARADO de la funcion del mismo nombre de
+
+4. EL GRANO DEL TOPE DE 10 MINUTOS
+   sede: scripts/loop/verificar_mutaciones_viejas.py
+   existe: SI
+   CIFRA bytes en disco: 111914 | bytes normalizados a LF: 111914 | bytes en git: 111914
+   aguja: '10 minutos' | CIFRA lineas de la sede que la traen: 1
+      LINEA 1508: entrada; con la media, un tope de 10 minutos daria tramos de 27 entradas y
+
+5. LA CONVENCION DE BYTES, QUE ES DEL FUNDADOR
+   sede: docs/loop/AUDITOR.md
+   existe: SI
+   CIFRA bytes en disco: 22612 | bytes normalizados a LF: 22612 | bytes en git: 22612
+   aguja: 'bytes' | CIFRA lineas de la sede que la traen: 1
+      LINEA 171: SU SEDE.** Si apunta a un fichero **inexistente** o de **cero bytes**, es
+
+LA TABLA, PARA PEGARLA ENTERA
+| que no entra | sede | existe | bytes en disco | bytes en LF | lineas que la traen |
+|---|---|---|---:|---:|---:|
+| 1. LA SEGUNDA SEDE DE LA CLAUSULA 4.4 | `docs/loop/reportes/REPORTE_V172.md` | SI | 48851 | 48851 | 2 |
+| 2. EL DOCSTRING DEL PASO 0 | `scripts/loop/paso0_archivar_anterior.py` | SI | 7112 | 7112 | 1 |
+| 3. LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL D.4 DE LA  | `scripts/loop/vuelta179_esqueleto_reporte.py` | SI | 19911 | 19911 | 2 |
+| 4. EL GRANO DEL TOPE DE 10 MINUTOS | `scripts/loop/verificar_mutaciones_viejas.py` | SI | 111914 | 111914 | 1 |
+| 5. LA CONVENCION DE BYTES | `docs/loop/AUDITOR.md` | SI | 22612 | 22612 | 1 |
+
+CIFRA de las cinco cuya sede EXISTE: 5
+CIFRA de las cinco cuya sede mide CERO BYTES: 0
+CIFRA de las cinco cuya aguja NO aparece en su sede: 0
+
+VERDE: las cinco tienen sede, ninguna mide cero bytes y las cinco agujas
+aparecen. Ninguna se toco.
+FIN

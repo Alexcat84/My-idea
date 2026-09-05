@@ -76,7 +76,7 @@ vuelta cierre.
 | **TAREA 2** | `OP-L-03`: SE LEEN LOS DIEZ PARES REALES DE LOS ACTOS SIN LEER. El backlog ya esta re-medido y `backlog_l03_resuelto.py` sale VERDE con los dos caminos calzando en los 40 actos: de los 73 pares que el instrumento da quedan 18 reales, 8 los leyo la 177 y quedan 10 en los 34 actos que nadie ha mirado. Los diez se leen con la vara del banco, par por par, y cada uno con su veredicto y su razon en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` SOLO SI EL PAR TIENE PUESTO EN LA COLA; si no lo tiene NO SE INVENTA UN PUESTO y su clase y su razon van al registro de `OP-L-03` en el campo `clases_de_los_pares_por_leer`, que es donde la 177 las puso y donde son trazables. El marcador no se toca si no hay puesto, y si lo hay se recomputa del archivo con sus cuatro clases. Cada acto cierra con su forma escrita: la figura, su cobertura y lo que queda. Y la cifra va al lado, siempre las dos: pares del instrumento y pares reales | **CERRADA** | `SALIDA_V179_T2_LOS_DIEZ.txt`, `_T2_VECINOS.txt`, `_T2_ESCRIBIR.txt`, `_T2_COBERTURA.txt` |
 | **TAREA 3** | LOS DIECISEIS TRIANGULOS SE PUBLICAN PARTIDOS POR SU FUENTE, y NINGUNA CLASE SE MUEVE. `vuelta178_tarea3_anotar_triangulos.py` publica la cifra PARTIDA y no solo el 16: cuantos descansan enteros en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y cuantos se apoyan en un lado de fuera, y NOMBRA aquellos en que el lado de fuera es el `D`, que es el lado que hace que el triangulo sea un triangulo. `docs/plan/OP_L_03_TRIANGULOS.jsonl` gana un campo por fila que diga si el triangulo es recomputable entero del archivo, y el campo `fuente_de_la_clase` por lado NO se toca. CERO VEREDICTOS MOVIDOS, comprobado por `sha256` antes y despues. Con su caso positivo por mutacion sobre un registro fabricado, donde un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en casillas distintas | **CERRADA, con una PARADA declarada** | `SALIDA_V179_T3_TRIANGULOS_ANTES_DE_T2.txt`, `_T3_TRIANGULOS.txt`, `_T3_MUTACION.txt`, `_T3_ETIQUETA.txt` |
 | **TAREA 4** | LAS QUINCE DEL SUJETO CONGELADO SE JUZGAN, UNA A UNA, Y NO SE CABLEA NADA TODAVIA. Primero se juzgan, despues se cablea, y no al reves. Por cada una de las quince, un veredicto escrito con su prueba: o el arnes de verdad ABRE un fichero vivo de la campana y hay que congelarle el sujeto, o LO NOMBRA SIN ABRIRLO y basta con que lo declare, o es un CASO DECLARADO legitimo y se anota por que. Registro propio y no prosa: `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, una fila por arnes, con el nombre, el veredicto, el fichero que abre y la evidencia (la linea del codigo). NO se arregla ningun arnes en esta vuelta y NO se cablea la guarda al rojo global de la bateria: el cableado se decide con los quince veredictos delante. NADA se borra de la nomina | **CERRADA** | `SALIDA_V179_T4_GUARDA.txt`, `_T4_VEREDICTOS.txt`, `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl` |
-| **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA. Ninguna de estas cinco se toca aqui, y las cinco se nombran CON SU MEDICION (existe, bytes en disco y normalizados a LF) para que no se caigan: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina pregunta por EL REPORTE QUE VA A PISAR; la guarda que falta en la dependencia del `D.4` de la 174, donde el esqueleto clona en vez de importar y nada avisa si el fichero del que se clono desaparece; el grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes; y la convencion de bytes, que es del fundador, lleva seis actas subiendo y sube como PENDIENTE y no como problema, porque el remedio provisional de publicar siempre las dos ya es instrumento | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA. Ninguna de estas cinco se toca aqui, y las cinco se nombran CON SU MEDICION (existe, bytes en disco y normalizados a LF) para que no se caigan: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina pregunta por EL REPORTE QUE VA A PISAR; la guarda que falta en la dependencia del `D.4` de la 174, donde el esqueleto clona en vez de importar y nada avisa si el fichero del que se clono desaparece; el grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes; y la convencion de bytes, que es del fundador, lleva seis actas subiendo y sube como PENDIENTE y no como problema, porque el remedio provisional de publicar siempre las dos ya es instrumento | **CERRADA** | `SALIDA_V179_T5_NO_ENTRA.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -555,5 +555,54 @@ es lo que el encargo pedia dejar preparado: cablearla hoy pondria la bateria de 
 reves**: primero que los **13** declaren su sujeto, que no cuesta codigo nuevo
 sino una linea por arnes, y despues cablear con **4** pendientes de verdad. **No
 lo decido yo**, y va como pregunta.
+
+### TAREA 5. LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA
+
+**Ninguna de las cinco se toca**, y las cinco se nombran **con su medicion**, que
+es lo que `EJECUTOR.md` 1 exige desde el 5 sep 2026: **una ruta publicada como
+prueba es una cifra publicada**, y si apunta a un fichero inexistente o de cero
+bytes es caida de cifra. Nombrar cinco pendientes sin comprobar sus sedes es
+prometer cinco pruebas sin mirar ninguna.
+
+**LA TABLA SALE DE `docs/loop/SALIDA_V179_T5_NO_ENTRA.txt`** y se pega entera:
+
+| que no entra | sede | existe | bytes en disco | bytes en LF | lineas que la traen |
+|---|---|---|---:|---:|---:|
+| 1. LA SEGUNDA SEDE DE LA CLAUSULA 4.4 | `docs/loop/reportes/REPORTE_V172.md` | SI | 48851 | 48851 | 2 |
+| 2. EL DOCSTRING DEL PASO 0 | `scripts/loop/paso0_archivar_anterior.py` | SI | 7112 | 7112 | 1 |
+| 3. LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL `D.4` DE LA 174 | `scripts/loop/vuelta179_esqueleto_reporte.py` | SI | 19911 | 19911 | 2 |
+| 4. EL GRANO DEL TOPE DE 10 MINUTOS | `scripts/loop/verificar_mutaciones_viejas.py` | SI | 111914 | 111914 | 1 |
+| 5. LA CONVENCION DE BYTES | `docs/loop/AUDITOR.md` | SI | 22612 | 22612 | 1 |
+
+**Las cinco sedes existen, ninguna mide cero bytes y las cinco agujas aparecen.**
+
+**Y EL INSTRUMENTO SALIO EN ROJO EN SU PRIMERA CORRIDA, QUE ES LO QUE SE LE
+PIDE.** La aguja de la **2** estaba escrita en mayusculas y el docstring lo dice
+en minusculas, `"la vuelta anterior"`, en su linea 25. **Cayo nombrando la aguja
+que fallaba**, se corrigio la aguja (no el fichero, que no se toca) y volvio a
+correr. Una guarda que no puede salir en rojo no prueba nada.
+
+**LO QUE CADA UNA ES, EN UNA LINEA:**
+
+1. **La segunda sede de la clausula 4.4** vive en `REPORTE_V172.md:535`, y sigue
+   ahi, con dos lineas del fichero que la nombran.
+2. **El docstring de `paso0_archivar_anterior.py`** sigue hablando de **la vuelta
+   anterior** cuando la maquina ya pregunta por **el reporte que va a pisar**. La
+   maquina esta bien; el texto que la describe, no. **Esta vuelta lo volvio a
+   usar** y las dos preguntas volvieron a coincidir, asi que la divergencia sigue
+   sin poderse ver en corrida.
+3. **La guarda que falta en la dependencia del `D.4` de la 174**: el esqueleto
+   **clona** `vuelta_del_reporte_del_arbol()` en vez de importarla, y **nada avisa
+   si el fichero del que se clono desaparece**. El de esta vuelta lo declara en su
+   docstring, con dos lineas que lo dicen, y sigue sin instrumento.
+4. **El grano del tope de 10 minutos** se mide **EN LA 181**, con el reloj de esa
+   corrida, y **no se re-elige a ojo antes**. Esta vuelta no es de bateria y
+   medirlo aqui seria medirlo sobre una corrida que no existe.
+5. **La convencion de bytes** es del fundador y **lleva seis actas subiendo**, y esa cifra es del encargo de esta vuelta y no
+   la recomputo yo.
+   **Sube como pendiente, no como problema:** el remedio provisional, publicar
+   siempre las dos, ya es instrumento dentro de `cerrar_reporte.py` desde la 178,
+   y esta vuelta volvio a salir a coste cero. **Toda cifra de bytes de este
+   reporte va por las dos convenciones**, incluidas las cinco filas de arriba.
 
 <!-- FIN ANEXO DE TAREAS -->
