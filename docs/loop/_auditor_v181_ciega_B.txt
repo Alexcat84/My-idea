@@ -1,0 +1,204 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   AUDITORIA DE LA VUELTA 180, segunda mano: muestra ciega de 12 sobre el archivo entero con semilla 181, para que la ciega no se agote en la base de evidencia de un solo discutible. Se excluyen los 30 puestos del acta 179 (los tres destapados 1246, 2449 y 3376, los tres contaminados 395, 633 y 1436, y los 24 restantes de aquella tanda) y los 31 del carril A.
+
+CIFRA pares elegidos: 12
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 245
+nodo_a: customer_validation_sell_phase
+nodo_b: filosofia_customer_validation
+  pasos de A (customer_validation_sell_phase): 5
+     paso 1: Define pruebas concretas de pasa o no pasa según lo que crees de tu negocio (por ejemplo, cuántas ventas cierras o cuántos usuarios se activan)
+     paso 2: Sal a vender de verdad en tu canal físico, o lleva tráfico real si vendes por internet o por una aplicación
+     paso 3: Fíjate si a los clientes de verdad les entusiasma lo que les ofreces
+     paso 4: Confirma cómo es el proceso real de compra y de aprobación dentro del negocio de tu cliente
+     paso 5: Comprueba si hay suficientes clientes como para que este negocio se sostenga
+  pasos de B (filosofia_customer_validation): 5
+     paso 1: Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+     paso 2: Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+     paso 3: Sal a pedir pedidos reales, no solo opiniones
+     paso 4: Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+     paso 5: Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+------------------------------------------------------------------------------
+puesto_intra: 448
+nodo_a: riesgo_cofundadores_relacion_previa
+nodo_b: riesgo_contratar_amigos_familia
+  pasos de A (riesgo_cofundadores_relacion_previa): 4
+     paso 1: Identifica qué tipo de relación tienes con cada persona que consideras como socio: familiar, amigo, excompañero de trabajo, conocido o desconocido.
+     paso 2: Reconoce que llevarte bien con alguien en lo personal no significa que vayan a funcionar bien trabajando juntos.
+     paso 3: Revisa si ya trabajaste de verdad con esa persona antes, no solo si se conocen socialmente.
+     paso 4: Si puedes elegir, considera que sumar a alguien con quien ya trabajaste antes reduce el riesgo, más que sumar a un amigo o familiar sin ese antecedente.
+  pasos de B (riesgo_contratar_amigos_familia): 3
+     paso 1: Establecer criterios objetivos de desempeño antes de contratar a un conocido.
+     paso 2: Definir de antemano el proceso a seguir si el desempeño no es adecuado.
+     paso 3: Considerar la opinión de un tercero neutral antes de tomar la decisión de contratación.
+------------------------------------------------------------------------------
+puesto_intra: 814
+nodo_a: fase_activate
+nodo_b: fase_admit
+  pasos de A (fase_activate): 4
+     paso 1: Diseñar una experiencia de 'primer uso' o 'kickoff' memorable y bien estructurada.
+     paso 2: Establecer expectativas claras sobre los próximos pasos del proceso.
+     paso 3: Generar momentum temprano mostrando avances o entregables rápidos.
+     paso 4: Evitar fallos en la primera impresión operativa, ya que son difíciles de revertir.
+  pasos de B (fase_admit): 4
+     paso 1: Diseñar un momento de celebración o reconocimiento inmediato tras la compra.
+     paso 2: Reforzar la decisión del cliente con un mensaje de bienvenida personalizado.
+     paso 3: Evitar caer en el silencio post-venta; mantener el contacto activo justo después del cierre.
+     paso 4: Capturar y asociar la emoción positiva del momento de compra con la marca.
+------------------------------------------------------------------------------
+puesto_intra: 985
+nodo_a: catalogo_pivotes
+nodo_b: pivotes_e_iteraciones
+  pasos de A (catalogo_pivotes): 6
+     paso 1: Identificar cuál hipótesis del modelo de negocio no se está validando (cliente, problema, canal, monetización, tecnología, etc.)
+     paso 2: Analizar el feedback recurrente de tus clientes para detectar qué parte del producto genera valor real
+     paso 3: Clasificar el tipo de pivote necesario según el catálogo (zoom-in, zoom-out, segmento, necesidad, plataforma, arquitectura, captura de valor, motor de crecimiento, canal, tecnología)
+     paso 4: Determinar qué elementos de tu producto y aprendizaje actual puedes reutilizar, sin descartar todo
+     paso 5: Redefinir las hipótesis de salto de fe para tu nuevo producto o modelo
+     paso 6: Diseñar un nuevo MVP que pruebe la nueva hipótesis estratégica y establece métricas de línea base
+  pasos de B (pivotes_e_iteraciones): 6
+     paso 1: Distingue con claridad entre un ajuste menor y un cambio sustancial
+     paso 2: Corre pruebas pasa/no pasa constantes sobre las hipótesis de tu modelo de negocio
+     paso 3: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+     paso 4: Cuando los datos contradigan una hipótesis, admite el error y decide sin demora si ajustas o cambias de rumbo
+     paso 5: Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+     paso 6: No te aferres a tu idea original si los datos indican lo contrario
+------------------------------------------------------------------------------
+puesto_intra: 1320
+nodo_a: pivotar_o_perseverar
+nodo_b: pivotes_e_iteraciones
+  pasos de A (pivotar_o_perseverar): 6
+     paso 1: Compara el progreso de tus metricas actuales con el modelo ideal de tu plan de negocio y con las expectativas cuantitativas definidas al inicio
+     paso 2: Si las metricas se acercan a ese ideal, sigue con tu estrategia actual (perseveras)
+     paso 3: Si las metricas no mejoran después de varios intentos, reconoce que no esta funcionando y considera un cambio de rumbo (pivote), con datos concretos en la sala, no solo con intuición
+     paso 4: Si pivotas, establece una nueva línea base y vuelve a empezar el ciclo de ajuste de tu negocio
+     paso 5: Comprueba que, después del cambio, tus nuevas acciones den mejores resultados que las anteriores
+     paso 6: Evaluar si el equipo puede racionalizar el fracaso en lugar de aceptarlo
+  pasos de B (pivotes_e_iteraciones): 6
+     paso 1: Distingue con claridad entre un ajuste menor y un cambio sustancial
+     paso 2: Corre pruebas pasa/no pasa constantes sobre las hipótesis de tu modelo de negocio
+     paso 3: Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio
+     paso 4: Cuando los datos contradigan una hipótesis, admite el error y decide sin demora si ajustas o cambias de rumbo
+     paso 5: Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio
+     paso 6: No te aferres a tu idea original si los datos indican lo contrario
+------------------------------------------------------------------------------
+puesto_intra: 1409
+nodo_a: identificacion_necesidad_sucesion_ceo
+nodo_b: transicion_post_sucesion
+  pasos de A (identificacion_necesidad_sucesion_ceo): 4
+     paso 1: Desde tu primera ronda de inversión, habla abierto sobre las condiciones que podrían llevar a un cambio de liderazgo en el futuro
+     paso 2: Vigila si los retos de tu negocio, como pasar del arranque inicial a conquistar el mercado masivo, piden nuevas capacidades de liderazgo
+     paso 3: Sigue el proceso: deja que quien dirige opere, identifica los problemas y trabaja junto a esa persona para resolverlos, y si no hay mejora, decide el reemplazo
+     paso 4: Comunica de forma clara y repetida qué esperas sobre un posible cambio de liderazgo, porque quienes fundan suelen ignorar o minimizar estas señales
+  pasos de B (transicion_post_sucesion): 4
+     paso 1: Define con claridad tu nuevo rol (por ejemplo, responsable técnico, un puesto directivo o presidencia del consejo) y evita quedarte en un cargo simbólico sin responsabilidades reales.
+     paso 2: Deja explícito quién tiene la última palabra frente a tu equipo, para que nadie tenga que preguntar '¿puedo hacer esto, fundador?' en lugar de acudir a quien ahora lidera.
+     paso 3: Evalúa si también debes dejar la presidencia del consejo, para que quede clara la señal de que el mando cambió de manos.
+     paso 4: Anticipa qué pasaría si la persona que asumió el mando no funciona, y considera si tú te quedas como respaldo por si hace falta retomar el liderazgo.
+------------------------------------------------------------------------------
+puesto_intra: 1420
+nodo_a: fundadores_en_junta_directiva
+nodo_b: seleccion_ceo_fundador
+  pasos de A (fundadores_en_junta_directiva): 4
+     paso 1: Antes de formar la junta oficial, decidir qué fundador(es) ocuparán los asientos disponibles
+     paso 2: Evitar poner en la junta a un fundador que reporta directamente al CEO fundador
+     paso 3: Considerar roles alternativos para cofundadores no directores: sesiones separadas, términos de un año, rol de 'observador'
+     paso 4: Negociar la reducción de asientos de fundadores en rondas sucesivas de forma anticipada, no reactiva
+  pasos de B (seleccion_ceo_fundador): 6
+     paso 1: Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos
+     paso 2: Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO
+     paso 3: Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador
+     paso 4: Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+     paso 5: Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+     paso 6: Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia
+------------------------------------------------------------------------------
+puesto_intra: 1439
+nodo_a: customer_activation_tactics
+nodo_b: plan_de_activacion
+  pasos de A (customer_activation_tactics): 5
+     paso 1: Capturar el email del cliente y obtener permiso de seguimiento
+     paso 2: Ofrecer incentivos de activación: prueba gratuita, descuento, whitepaper
+     paso 3: Llamar a prospectos que no se activaron inmediatamente y medir mejora en respuesta
+     paso 4: Probar conversión de gratis a pago con periodos de prueba de 7-14 días
+     paso 5: Medir tasa de respuesta de al menos 5% en las ofertas probadas
+  pasos de B (plan_de_activacion): 5
+     paso 1: Diseñar la landing page respondiendo a las preguntas mentales del visitante: por qué estoy aquí, qué lo hace especial, cómo sé que es bueno, dónde obtengo más información, qué hago después
+     paso 2: Crear al menos dos pruebas A/B para cada elemento de activación (color, copy, botones, ofertas)
+     paso 3: Definir métricas de éxito pass/fail antes de cada prueba
+     paso 4: Diseñar acciones de activación tanto dentro como fuera de la home page (ej. emails de seguimiento)
+     paso 5: Iterar rápidamente basado en respuestas medidas de los clientes
+------------------------------------------------------------------------------
+puesto_intra: 2436
+nodo_a: enfermedades_mortales_gestion
+nodo_b: las_siete_enfermedades_mortales
+  pasos de A (enfermedades_mortales_gestion): 4
+     paso 1: Revisar tu negocio e identificar cuáles de las siete enfermedades reconoces en él
+     paso 2: Pensar qué impacto tiene cada una en tus números y en cómo trabajas día a día, y en la cultura de tu negocio
+     paso 3: Elegir cuál de esas enfermedades te urge resolver primero según tu situación, empezando por la que genera mayor dano de fondo
+     paso 4: Comprometerte tú, quien decide, con un cambio de fondo a largo plazo en vez de buscar un arreglo rápido
+  pasos de B (las_siete_enfermedades_mortales): 4
+     paso 1: Identificar cuales de las siete enfermedades estan presentes en tu negocio
+     paso 2: Evaluar el impacto de cada enfermedad en la cultura de tu negocio
+     paso 3: Priorizar cual erradicar primero, empezando por la que genera mayor dano de fondo
+     paso 4: Tener claro que necesitas una transformación profunda, no parches superficiales, antes de decidir el siguiente paso
+------------------------------------------------------------------------------
+puesto_intra: 2920
+nodo_a: ejecucion_auditoria
+nodo_b: reporte_auditoria
+  pasos de A (ejecucion_auditoria): 4
+     paso 1: Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte
+     paso 2: Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio
+     paso 3: Propón mejoras, pero evita diseñar tú mismo la solución final
+     paso 4: Mantén al cliente clave al tanto de cómo va avanzando la revisión
+  pasos de B (reporte_auditoria): 5
+     paso 1: Redacta el reporte incluyendo resumen ejecutivo, alcance, hallazgos y recomendaciones
+     paso 2: Revisa el borrador con la persona responsable del área auditada antes de compartirlo, en una reunión de cierre
+     paso 3: Clasifica cada hallazgo según su gravedad (crítica, mayor, menor)
+     paso 4: Define junto con la persona auditada a quién se le va a entregar el reporte
+     paso 5: Empieza el reporte con lo que sí funciona bien, para mantener el equilibrio
+------------------------------------------------------------------------------
+puesto_intra: 3139
+nodo_a: juran_rcca_metodo
+nodo_b: six_sigma_dmaic
+  pasos de A (juran_rcca_metodo): 4
+     paso 1: Definir el problema: identificar si es esporádico o crónico y preparar un enunciado del problema
+     paso 2: Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz
+     paso 3: Mejorar: diseñar e implementar el remedio
+     paso 4: Controlar: ajustar los controles para mantener las ganancias
+  pasos de B (six_sigma_dmaic): 12
+     paso 1: Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.
+     paso 2: Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.
+     paso 3: Mide la magnitud real de los síntomas con datos, no con impresiones.
+     paso 4: Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.
+     paso 5: Implementa un remedio dirigido específicamente a esa causa raíz.
+     paso 6: Controla los resultados periódicamente para asegurar que la mejora se mantenga.
+     paso 7: Establecer la creencia de que el cambio es deseable y factible
+     paso 8: Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales
+     paso 9: Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)
+     paso 10: Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia
+     paso 11: Establecer un proyecto formal con equipo asignado.
+     paso 12: Replicar los resultados exitosos y nominar nuevos proyectos de mejora.
+------------------------------------------------------------------------------
+puesto_intra: 3145
+nodo_a: clasificacion_seriedad_defectos
+nodo_b: definiciones_operacionales
+  pasos de A (clasificacion_seriedad_defectos): 5
+     paso 1: Elabora una lista de características de calidad a partir de tus especificaciones
+     paso 2: Elabora una lista aparte de defectos o síntomas de no conformidad
+     paso 3: Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas
+     paso 4: Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección
+     paso 5: Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio
+  pasos de B (definiciones_operacionales): 4
+     paso 1: Reunir a supervisores, inspectores y trabajadores para identificar ambigüedades en los criterios de aceptación actuales.
+     paso 2: Desarrollar mediante prueba y error definiciones operacionales claras, con ejemplos físicos o visuales de productos conformes y no conformes.
+     paso 3: Publicar y difundir estas definiciones en el área de trabajo para que todos las conozcan.
+     paso 4: Medir la proporción de defectos antes y después para cuantificar la mejora.
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

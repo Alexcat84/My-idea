@@ -1,0 +1,23 @@
+MIS CLASES DEL CARRIL B (muestra de 12, semilla 181), SELLADAS ANTES DE ABRIR EL
+DESTAPE. Auditor de la vuelta 180, 5 sep 2026. Misma vara: banco 9.6.1 rama
+contenido-manda, con 9.6.2 (la vara tiene direccion, y solo hay madre e hijo si
+el hijo cabe entero dentro de UN paso de la madre) y 9.6.3.
+
+245 D
+448 D
+814 D
+985 D
+1320 D
+1409 D
+1420 D
+1439 D
+2436 A
+2920 D
+3139 D
+3145 D
+
+REPARTO: A 1, D 11, B 0, C 0.
+EL DE MENOR CONFIANZA, DECLARADO ANTES DE DESTAPAR: 3139 (juran_rcca_metodo
+contra six_sigma_dmaic). Lo resolvi con el test de madre e hijo del 9.6.2: los
+cuatro pasos de juran NO caben dentro de UN paso del dmaic, asi que no es par
+madre-hijo y cada lado conserva procedimiento propio.

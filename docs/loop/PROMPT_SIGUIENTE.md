@@ -1,215 +1,141 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Eres el ejecutor de la vuelta 180 de la campana My Idea. FASE III, EJECUCION,
+Eres el ejecutor de la vuelta 181 de la campana My Idea. FASE III, EJECUCION,
 rama `pasada-unica`. Lee `docs/loop/EJECUTOR.md` entero antes de empezar y sigue
 su ciclo: bloque de apertura corrido ENTERO y ANTES de la primera operacion (con
 el desfase del calibrado DENTRO de el), esqueleto del reporte abierto al empezar
-con sus cinco filas vacias, cada tarea ANEXA su fila al cerrarse, y el cierre lo
-talla `scripts/loop/cerrar_reporte.py`.
+con sus filas vacias, cada tarea ANEXA su fila al cerrarse, y el cierre lo talla
+`scripts/loop/cerrar_reporte.py`.
 
-**ESTA VUELTA NO ES DE BATERIA Y LA SIGUIENTE SI.** `AUDITOR.md` 6.1: la bateria
-corre CADA CINCO en vuelta propia, y **la proxima es la 181**, adjudicada en el
-acta 176 punto 7.8 y reconfirmada en las actas 178 punto 11 y 179 punto 11. La
-seccion 9 de tu reporte cierra con el **HUECO DECLARADO Y MEDIDO** y sus TRES
-piezas juntas: el nombre del fichero, sus bytes medidos por las dos convenciones,
-y la atribucion. **Y esta es la ULTIMA vuelta que lo declara: la 181 lo corre.**
+**ESTA ES LA VUELTA DE BATERIA, Y NO LLEVA NADA MAS.** `AUDITOR.md` 6.1: la
+bateria corre CADA CINCO, en VUELTA PROPIA, y **la propia es esta**, adjudicada en
+el acta 176 punto 7.8 y reconfirmada en las actas 178, 179 y 180. La 180 fue la
+ULTIMA que declaro el hueco. **AQUI SE CORRE.**
 
-**EL TOPE SIGUE EN CINCO** (`AUDITOR.md` 6.2, cumplido en la 177 y confirmado en
-la 178 y la 179). Este encargo lleva cinco.
+**EL TOPE DE ESTA VUELTA ES DOS SUB-TAREAS, Y NO ES UN DESCUIDO: ES LA
+ADJUDICACION 6.8 DE MI ACTA 180.** `AUDITOR.md` 6.2 devolvio el tope a cinco, pero
+la 6.1 y la 6.2 salen de la MISMA parada del 5 sep 2026 y la 6.2 se concedio
+*"combinada con la (a)"*, o sea subordinada a ella. **La vuelta de bateria no
+lleva trabajo de plan al lado.** El tope vuelve a cinco en la 182.
 
-**LO QUE MANDA ESTA VUELTA, EN UNA LINEA: DEJAR LA PISTA LIMPIA PARA LA 181.** La
-guarda del sujeto congelado sale hoy en ROJO con 17 entradas y la 181 la va a
-correr. Las TAREAS 1 y 2 son BLOQUEANTES y van en ese orden.
-
----
-
-## TAREA 1 (BLOQUEANTE). LOS REGISTROS, Y LA ETIQUETA DE FUENTE QUE YO AUTORIZO TOCAR
-
-**1.a. LOS REGISTROS.** Anota en tu reporte que el acta del auditor de la vuelta
-179 esta escrita en `docs/loop/ACTA_AUDITOR.md` y que **no levanta ninguna caida
-contra la 179**: la racha de reporte vuelve a CERO y la racha de cifra publicada
-sigue en CERO. **No hay ninguna correccion declarada que arrastres de la 179.**
-
-**1.b. LA ETIQUETA DE FUENTE, ARREGLADA, Y ESTO LEVANTA TU PARADA DE LA 3.f.**
-Hiciste bien en pararte: mi encargo de la 179 decia que `fuente_de_la_clase` no se
-toca, y `EJECUTOR.md` 5 te manda parar en vez de improvisar. **La adjudicacion
-7.7 del acta 179 estrecha esa instruccion mia, que es lo unico que estaba en
-conflicto.** Lo que aquel encargo protegia era que **ninguna clase ni su
-procedencia se movieran**; un literal que atribuye a la vuelta 177 cinco lecturas
-de la 179 **no protege eso, lo rompe**, contra `EJECUTOR.md` 8, toda cifra de un
-autor con su atribucion.
-
-Arreglalo asi y no de otra manera:
-
-- `clases_por_par()` **lee la vuelta de la fila del registro** en vez de traer el
-  literal `"docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)"` clavado. La etiqueta
-  de cada lado dice la vuelta que de verdad escribio esa clase.
-- **NINGUNA CLASE SE MUEVE.** Comprueba `sha256` de
-  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y de `docs/plan/OP_L_03_LECTURAS.jsonl`
-  **antes y despues**, dentro del propio instrumento, y publica los cuatro.
-- **VUELVE A CORRER** `vuelta179_tarea3_etiqueta_de_fuente.py` despues del
-  arreglo. Antes daba 15 etiquetados como de la 177, de los cuales 10 verdaderos
-  y **5 falsos**. Publica las DOS mediciones, la de antes y la de despues, cada
-  una con su corte, y **la de despues tiene que dar 0 falsos**. Si no da 0, paras
-  y lo traes.
-- Vuelve a correr tambien `vuelta178_tarea3_anotar_triangulos.py` y publica el
-  reparto de lados por fuente con las etiquetas nuevas. **El total de lados y el
-  total de triangulos no pueden cambiar: 19 triangulos y 57 lados con clase.** Si
-  cambian, paras.
-- **Caso positivo por mutacion** sobre un registro fabricado, con al menos un
-  lado escrito por una vuelta y otro por otra, que CAE si la etiqueta vuelve a
-  quedarse clavada en un literal.
+**LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE COUELE:** no se lee ningun
+par, no se escribe ningun veredicto, no se toca el marcador, no se toca el estado
+de ninguna ficha, no se toca `docs/plan/`, no se arregla la `P.1` de tu reporte y
+no se toca `cerrar_reporte.py`. **Las dos van a la 182 y estan escritas en los
+puntos 6.6 y 6.8 de mi acta 180.**
 
 ---
 
-## TAREA 2 (BLOQUEANTE, Y ES LA QUE LIMPIA LA PISTA DE LA 181). EL SUJETO CONGELADO, RESUELTO Y CABLEADO
+## TAREA 1 (BLOQUEANTE). LOS REGISTROS, Y LO QUE HEREDAS DE MI ACTA 180
 
-**LA ADJUDICACION QUE LA ORDENA ES LA 7.8 DEL ACTA 179, y sigue tu propia
-recomendacion:** cablear hoy con 17 pondria la bateria de la 181 en un rojo
-permanente que todo el mundo aprende a ignorar, y eso es degradacion silenciosa
-(`banco 9`). **El orden es: los trece declaran, los cuatro congelan, y SOLO
-ENTONCES se cablea.** Los diecisiete estan juzgados en
-`docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, que verifique fila por fila.
+**1.a. LO QUE MI ACTA LEVANTA CONTRA LA 180, Y ES UNA SOLA COSA.** Anota en tu
+reporte, leyendolo de `docs/loop/ACTA_AUDITOR.md` (cabecera en la linea `62449`) y
+citando la linea de cada cosa que copies:
 
-**2.a. LOS TRECE QUE NO ABREN NADA VIVO DECLARAN SU SUJETO.** Son los **11** que
-tu lectura clasifico `LO NOMBRA SIN ABRIRLO` y los **2** que salieron `ABRE UN
-SUJETO YA CLAVADO` (`vuelta135_2e_mutacion_1.py` y `_2.py`, los dos por
-`git show e12e4c362fe734ff:docs/loop/REPORTE.md`). **A los trece les falta
-declararlo, no arreglarlo**, y eso lo dice tu propio registro en su campo
-`que_haria_falta`. Una linea por arnes con el literal que la guarda busca.
-**NINGUNA otra linea de esos ficheros se toca**, y lo compruebas con
-`git diff --numstat` sobre `scripts/loop/` publicando las lineas anadidas por
-fichero.
+- **UNA CAIDA DE REPORTE, LA `E.1`, Y ACUMULA.** La cabecera de tu seccion 9 salio
+  `## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE` **y la bateria
+  no corrio**. La causa esta medida en la seccion 5 de mi acta: pasaste a
+  `--bateria` el fichero `docs/loop/SALIDA_V180_HUECO_BATERIA.txt`, que **si
+  existe y trae 21 lineas**, asi que `cerrar_reporte.py` entro por la rama del
+  `if lineas_bat:` en vez de la del hueco, y con eso **`hueco_declarado_que_falta()`
+  no corrio sobre tu seccion 9**. Las 177, 178 y 179 pasaron
+  `SALIDA_V<N>_BATERIA.txt`, un fichero que NO existe, y por eso entraron por la
+  rama buena. **La racha de reporte pasa de CERO a UNO.**
+- **NO HAY NINGUNA CAIDA DE CIFRA PUBLICADA.** Racha de cifra publicada **0**.
+  Verifique una a una las cifras del bloque del hueco y **las tres son ciertas**.
+- **NO HAY NINGUNA CORRECCION DECLARADA QUE ARRASTRES.**
+- **TUS CINCO DISCUTIBLES QUEDAN ADJUDICADOS A TU FAVOR LOS CINCO**, puntos 6.1 a
+  6.5 de mi acta. El `D.1` ademas **corrige mi propio encargo**, y lo registro como
+  caida mia: `vuelta174_tarea1b_mutacion_esqueleto.py` no abria ningun fichero
+  vivo y tenias razon.
+- **MI CAIDA PROPIA, LA TERCERA SEGUIDA**, esta en la seccion 2 de mi acta con el
+  remedio que ata al auditor de esta vuelta. **No es trabajo tuyo**, pero **lo
+  citas en tu reporte** para que quede en el carril de lectura.
 
-**2.b. LOS CUATRO QUE SI ABREN, CONGELADOS DE VERDAD.** Son
-`vuelta157_tarea4b_mutacion_tachado.py` (`LECTURAS_DIRIGIDAS.md`),
-`vuelta160_tarea7c_mutacion_guarda_cita.py` (`LECTURAS_DIRIGIDAS.md` e
-`INTRA_DOMINIO_VEREDICTOS.jsonl`), `vuelta174_tarea1b_mutacion_esqueleto.py`
-(`REPORTE.md`) y `vuelta150_2d_simular_op_c_05.py` (`master_graph.json`). **El
-de la 160 merece cuidado y tu ya escribiste por que:** copia el fichero vivo a un
-temporal en cada corrida, asi que parece congelado y no lo es. **Cada uno pasa a
-un sujeto que no dependa de lo que el fichero vivo diga hoy**, y por cada uno
-publicas: que abria, que abre ahora, y **la prueba de que su resultado ya no se
-mueve** (correrlo dos veces, o contra dos cortes del fichero vivo, y que de lo
-mismo). Si alguno no se puede congelar sin decidir algo que el encargo no dice,
-**paras y lo traes**: eso es `AUDITOR.md` 3, una operacion cuyo texto no alcanza.
-
-**2.c. Y SOLO ENTONCES, EL CABLEADO.** La guarda del sujeto congelado entra al
-**rojo global de la bateria**. Antes de cablear, la corres y publicas su cifra con
-su corte pegado (hoy da **17 de 103 al corte `c348de45f70f`**, medido por mi).
-Despues de cablear, la vuelves a correr: **tiene que dar 0**. Si no da 0, **NO
-CABLEAS**, publicas cuantas quedan y por que, y paras. **Un cableado que deja la
-181 en rojo es peor que no cablear**, y ese es el motivo entero de esta tarea.
-
-**2.d. NADA SE PODA DE LA NOMINA** (`AUDITOR.md` 6.1). Los arneses que esta
-vuelta escriba entran en `verificar_mutaciones_viejas.py` con la cuenta entera y
-la resta comprobada, **antes de la 181**, y el denominador va con su corte por la
-1.d de la 179.
+**1.b. Y ANOTAS LO QUE NO SE HACE AQUI Y CUANDO SE HACE**, con su punto de acta:
+la `P.1` (`vuelta172_tarea1c_guarda_que_mordio.py`, en rojo y fuera del censo)
+queda adjudicada en el **6.6**, y el remedio del `E.1` en el **6.8**. **Las dos en
+la 182, no aqui.**
 
 ---
 
-## TAREA 3. EL CORTE, CABLEADO DONDE TODAVIA FALTA
+## TAREA 2. LA BATERIA DE MUTACIONES, ENTERA, SOLA, Y CON SU RELOJ
 
-**EL HALLAZGO ES MIO Y ESTA MEDIDO EN LA SECCION 6 DEL ACTA 179.** No es una
-caida tuya: tu tabla de tramos de la 2.a esta contada de su fichero, que es lo
-que `EJECUTOR.md` 1 manda, y sus cifras eran verdad. **Lo que le falta es el
-corte.** Tu 2.a publica 6 actos / 29 pares / 8 reales y 34 / 44 / 10; el mismo
-instrumento corrido hoy da **14 / 39 / 18** y **26 / 34 / 0**, porque tu propia
-TAREA 2 lo movio. Las dos son verdaderas y **sin corte no hay manera de saber
-cual mira que**.
+**ESTA ES LA TAREA. NO HAY OTRA.**
 
-- Cablea el sello de `sello_de_corte()` **donde se genera la tabla de tramos** de
-  `backlog_l03_resuelto.py`, no en una frase del reporte. Adjudicado por
-  `banco 9.21` y por el punto 7.2 del acta 178, la misma extension que ya usaste
-  para el denominador de la nomina.
-- **Barre el resto:** publica la lista de toda cifra de ese instrumento y de
-  `vuelta179_tarea2_cobertura_final.py` **que pueda moverse dentro de una vuelta**
-  y di cuales llevan corte y cuales no. **Las que no lo lleven, lo llevan al
-  terminar esta tarea.**
-- Caso positivo por mutacion: dos cortes distintos con la misma cifra no se
-  confunden, y la misma cifra con dos cortes distintos tampoco.
+**2.a. LA CORRIDA, ENTERA Y SIN TRAMOS.** `scripts/loop/verificar_mutaciones_viejas.py`
+**sin `--tramo`**, sobre la nomina entera, que al cierre de la 180 tiene **108
+entradas** (censo 168, fuera de la nomina 60), medido por mi. **Cada entrada se
+corre DOS VECES**, que es el cotejo de reproducibilidad de la vuelta 141, y ese
+cotejo **no se afloja**. La salida va a `docs/loop/SALIDA_V181_BATERIA.txt`, con
+**ese nombre exacto y sin ninguna palabra en medio**, y se publica en tu seccion 9
+**completa y sin recortar**.
 
----
+**Y AQUI VA LA UNICA GUARDA NUEVA QUE ESTA VUELTA LLEVA, QUE ES DE UNA LINEA Y
+NACE DE LA `E.1`:** publica en tu reporte, leido de la salida del propio
+`cerrar_reporte.py`, el valor de **`vuelta que lleva dentro el nombre del fichero`**.
+**Tiene que decir 181.** Si dice `None` o dice otro numero, **paras**: significa
+que el fichero que le pasaste no es la bateria de esta vuelta, y ese es exactamente
+el agujero por el que la 180 se colo.
 
-## TAREA 4. LAS DOS PENDIENTES BARATAS DE TU TAREA 5, QUE YA LLEVAN VUELTAS SUBIENDO
+**2.b. EL RELOJ, MEDIDO EN ESTA CORRIDA Y NO ELEGIDO A OJO.** Tu propia seccion 7
+subio el grano del tope de 10 minutos como pendiente, y dijo que **se mide EN LA
+181 con el reloj de esa corrida**. Publica:
 
-Las mediste tu en la 179 y las dos siguen sin instrumento. **Ninguna es de
-opinion: las dos son texto que miente sobre su propia maquina.**
+- el **tiempo total** de la corrida entera,
+- el **tiempo por entrada**, con su **maximo, su minimo y su mediana**, y **el
+  nombre del arnes mas lento**,
+- y **si el tope de 10 minutos se toco o no**, con la cifra al lado y no con un
+  adjetivo.
 
-**4.a. EL DOCSTRING DE `scripts/loop/paso0_archivar_anterior.py`.** Sigue
-hablando de **la vuelta anterior** cuando la maquina ya pregunta por **el reporte
-que va a pisar**. **La maquina esta bien; el texto que la describe, no.** Lo
-arreglas y publicas la linea vieja y la nueva, sin borrar la vieja del reporte.
-**Y de paso escribes la guarda que hace visible la diferencia**: hoy las dos
-preguntas coinciden y por eso la divergencia no se ve en corrida. Un caso
-fabricado donde NO coinciden, que demuestre que la maquina responde a la pregunta
-buena.
+**Se mide, se publica y no se cambia nada:** el grano del tope es decision del
+fundador y aqui solo se le pone la medida delante.
 
-**4.b. LA GUARDA QUE FALTA EN LA DEPENDENCIA DEL `D.4` DE LA 174.** El esqueleto
-del reporte **clona** `vuelta_del_reporte_del_arbol()` en vez de importarla, y
-**nada avisa si el fichero del que se clono desaparece**. Lo declaraste en su
-docstring y sigue sin instrumento. Escribe la guarda: si la fuente del clon no
-existe, **CAE EN ROJO nombrandola**, y no sigue en silencio. Con su caso positivo
-por mutacion sobre una ruta fabricada que no existe.
+**2.c. EL VEREDICTO DE LAS SEIS PIEZAS, UNA A UNA.** `hay_rojo_al_cierre()` decide
+el rojo global con seis piezas y esta vuelta es la primera que las corre todas
+juntas desde que la 180 cablo la sexta. **Publica el estado de cada una por
+separado** (perdidas, no mordio, no reproducible, faltan de la nomina, invisibles
+al censo, sujeto sin congelar), **cada una con su cifra**, y no solo el color
+final. Al cierre de la 180 las seis daban cero bajo mi mano; **si alguna sale
+distinta, la nombras con su arnes y su cifra**.
 
----
+**2.d. LA DOBLE CORRIDA SE COTEJA Y SE PUBLICA COMO TAL.** Cuantos arneses dieron
+salida identica en sus dos corridas y cuantos no. **Si alguno no reproduce, se
+nombra**: esa es la mitad entera del cotejo de la 141.
 
-## TAREA 5. EL BACKLOG DE `OP-L-02`, MEDIDO Y NO LEIDO
-
-`OP-L-03` queda con **18 pares reales y 0 sin lectura**, verificado por mi. La
-vara del fundador (`vuelta150_3_relectura_expediente.py --corte <HEAD>`) dice que
-**quedan cuatro fichas de trabajo real**: `OP-L-01`, `OP-L-02`, `OP-L-03` y
-`OP-I-01`. **La vara es esa salida y nunca el campo `estado`.**
-
-**MIDE `OP-L-02` CON LA MISMA VARA RESUELTA QUE CERRO `OP-L-03`, Y NO LEAS NI UN
-PAR.** Lo que se pide es exactamente lo que la 177 y la 179 hicieron para
-`OP-L-03`:
-
-- Corre el instrumento viejo de `OP-L-02` por dentro, sin citarlo de memoria, y
-  publica **los pares que da**.
-- Pasa el resolutor de `P.1` y publica **los pares REALES**, o sea los que no
-  estan ya en el archivo tras resolver a nodo vivo. **Las dos columnas van las
-  dos y la vieja no se borra** (`banco 9.10`).
-- Publica el reparto por tramo (actos ya leidos contra actos sin mirar) **con su
-  corte pegado**, por la TAREA 3 de este mismo encargo.
-- **Los dos caminos tienen que calzar** en todos los actos medidos, como en
-  `backlog_l03_resuelto.py`. Si no calzan, publicas donde y paras.
-
-**LO QUE NO HACES EN ESTA TAREA:** no lees ningun par, no escribes ningun
-veredicto, no tocas el marcador y **no tocas el estado de ninguna ficha**
-(`EJECUTOR.md` 4, modo de cierre). **Y NO TOCAS LOS CINCO PARES DE SALES
-ROADMAP:** `docs/plan/LECTURAS_DIRIGIDAS.md` los deja expresamente como decision
-revocable del fundador, y esta subida en el punto 8 del acta 179. Nombralos y
-dejalos.
+**2.e. NADA SE PODA DE LA NOMINA** (`AUDITOR.md` 6.1, y no es discutible). Si esta
+vuelta no escribe ningun arnes, la nomina sigue en **108** y lo dices con su corte
+pegado. **Y si la bateria destapa un arnes roto, NO lo borras ni lo sacas de la
+nomina: lo dejas en rojo, lo nombras y lo traes.** Borrar guardas es lo que la
+casa reserva.
 
 ---
 
-## LO QUE VALE PARA LAS CINCO
+## LO QUE VALE PARA LAS DOS
 
-- **CADA TABLA SE CUENTA DE SU FICHERO** y cada cifra sale del instrumento
-  corrido en esta vuelta. Una cifra tecleada al lado del fichero que la desmiente
-  es la caida que `cerrar_reporte.py` ya caza sola desde la 179.
+- **CADA TABLA SE CUENTA DE SU FICHERO** y cada cifra sale del instrumento corrido
+  en esta vuelta. Una cifra tecleada al lado del fichero que la desmiente es la
+  caida que `cerrar_reporte.py` ya caza sola desde la 179.
+- **NINGUNA CIFRA QUE PUBLIQUES SALE DE UN FICHERO QUE NO ESCRIBA UN INSTRUMENTO
+  DEL REPO.** Es la mitad agravante de la `E.1`: el bloque del hueco de la 180
+  entro tecleado, salio cierto, y nadie lo comprobo.
 - **TODA RUTA QUE PUBLIQUES COMO PRUEBA ES UNA CIFRA PUBLICADA** (`AUDITOR.md` 4,
   letra del 5 sep). Si apunta a un fichero inexistente o de cero bytes, es caida
   de cifra.
 - **TODA CIFRA DE BYTES O `sha` VA POR LAS DOS CONVENCIONES** mientras la del
-  fundador no este fijada.
+  fundador no este fijada. Va por octava acta.
 - **CICLO DE GATE 0 ENTERO Y EN SU ORDEN EN LAS DOS PUNTAS**, nunca `run_phase1`
   suelto: `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar`,
   `sync_assets_web.py`, `git diff HEAD --numstat`, `engine/run_all_tests.py`,
   `npx tsc --noEmit` y `pnpm test`.
 - **LA GUARDA DE `dataset/` ANTES DE CADA COMMIT.** `dataset/` no se toca en
-  ninguna de las cinco tareas.
-- **CASO POSITIVO POR MUTACION** en cada instrumento nuevo, y **todo arnes que
-  escribas entra en la nomina en esta misma vuelta**, antes de la 181.
-- **MARCA TUS DISCUTIBLES** y, cuando el discutible sea una clase, **marcalo sin
-  publicar la clase en una tabla si quieres que se pueda leer a ciegas**: por la
-  adjudicacion 7.1 del acta 179, un discutible cuya clase va en una tabla del
-  reporte queda quemado como sujeto ciego y el auditor tiene que leer su base de
-  evidencia en su lugar.
+  ninguna de las dos tareas.
+- **MARCA TUS DISCUTIBLES** antes de saber si aciertas, y si alguno es una clase,
+  **no publiques esa clase en una tabla** o lo quemas como sujeto ciego
+  (adjudicacion 7.1 del acta 179).
 - **CIERRA Y ARCHIVA TU PROPIO REPORTE EN ESTA MISMA VUELTA**, con
-  `cerrar_reporte.py` y `archivar_reporte.py --vuelta 180`, y coteja las tres
-  copias en su fichero propio y fuera del reporte. **Van cuatro seguidas.**
+  `cerrar_reporte.py` y `archivar_reporte.py --vuelta 181`, y coteja las tres
+  copias en su fichero propio y fuera del reporte. **Van cinco seguidas.**
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes. No adivines.
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
+una regla vigente, paras y lo traes. No adivines.

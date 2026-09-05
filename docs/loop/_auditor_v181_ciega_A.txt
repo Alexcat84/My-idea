@@ -1,0 +1,474 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   AUDITORIA DE LA VUELTA 180. La vuelta no leyo ni un par, asi que sus cinco discutibles no son clases: por la adjudicacion 7.1 del acta 179 el sujeto es la BASE DE EVIDENCIA del unico discutible que se apoya en el archivo, D.2 (la segunda columna de reales de OP-L-02). Son los 31 puestos del archivo que corresponden a pares de las SEIS nominas de NOMINAS_OP_L_02 tras resolver por el mapa de alias de P.1: si alguna de esas 31 clases estuviera mal, la conclusion 'PARES REALES contra las dos sedes 0' seria falsa. Ninguno de los 31 aparece en el reporte de la 180 ni en la lista de 30 puestos del acta 179.
+
+CIFRA pares elegidos: 31
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 165
+nodo_a: seleccion_canal_distribucion
+nodo_b: seleccion_canal_fisico
+  pasos de A (seleccion_canal_distribucion): 5
+     paso 1: Identificar los hábitos de compra establecidos en la categoría de tu producto
+     paso 2: Evaluar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar la complejidad y precio del producto respecto al canal elegido
+     paso 4: Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+     paso 5: Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+  pasos de B (seleccion_canal_fisico): 4
+     paso 1: Listar las opciones de canal físico relevantes para la industria
+     paso 2: Evaluar fortalezas y debilidades de cada canal (costo, control, velocidad)
+     paso 3: Analizar hábitos de compra establecidos en la categoría de producto
+     paso 4: Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente
+------------------------------------------------------------------------------
+puesto_intra: 166
+nodo_a: human_in_the_loop_ia
+nodo_b: principio_humano_en_el_loop
+  pasos de A (human_in_the_loop_ia): 4
+     paso 1: Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+     paso 2: Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+     paso 3: Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+     paso 4: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+  pasos de B (principio_humano_en_el_loop): 4
+     paso 1: Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción
+     paso 2: Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad
+     paso 3: Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio
+     paso 4: Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes
+------------------------------------------------------------------------------
+puesto_intra: 185
+nodo_a: ecuacion_de_valor_cliente
+nodo_b: ecuacion_de_valor_venta
+  pasos de A (ecuacion_de_valor_cliente): 4
+     paso 1: Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+     paso 2: Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+     paso 3: Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+     paso 4: Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+  pasos de B (ecuacion_de_valor_venta): 3
+     paso 1: Antes de mencionar precio o solución, evalúa qué tan grande percibe el cliente su problema actual.
+     paso 2: Si el problema percibido es pequeño en relación al costo de tu solución, invierte más tiempo en preguntas de implicación antes de hablar de precio.
+     paso 3: Solo presenta la solución y el precio cuando el cliente ya perciba el problema como suficientemente grave para justificar la inversión.
+------------------------------------------------------------------------------
+puesto_intra: 192
+nodo_a: refinar_sales_roadmap
+nodo_b: sales_roadmap
+  pasos de A (refinar_sales_roadmap): 6
+     paso 1: Identificar el tipo de organización del cliente (por producto, función, matriz o franquicia)
+     paso 2: Construir un mapa de estrategia de acceso (Access Strategy Map) determinando por dónde entrar
+     paso 3: Detectar patrones de 'peligro' como RFPs, requisitos de demo o negativa a comprar de startups
+     paso 4: Documentar cada paso del proceso de venta en un flowchart
+     paso 5: Validar el roadmap haciendo que se repita con éxito en múltiples cuentas
+     paso 6: Usar el roadmap como prueba de competencia al contratar un VP de ventas
+  pasos de B (sales_roadmap): 3
+     paso 1: Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.
+     paso 2: Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.
+     paso 3: Escribe el proceso paso a paso para poder repetirlo cada vez que vendas.
+------------------------------------------------------------------------------
+puesto_intra: 200
+nodo_a: hoja_de_ruta_de_ventas
+nodo_b: refinar_sales_roadmap
+  pasos de A (hoja_de_ruta_de_ventas): 5
+     paso 1: Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales
+     paso 2: Identifica cuántas personas deben decir 'sí' para cerrar una venta
+     paso 3: Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)
+     paso 4: Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión
+     paso 5: Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo
+  pasos de B (refinar_sales_roadmap): 6
+     paso 1: Identificar el tipo de organización del cliente (por producto, función, matriz o franquicia)
+     paso 2: Construir un mapa de estrategia de acceso (Access Strategy Map) determinando por dónde entrar
+     paso 3: Detectar patrones de 'peligro' como RFPs, requisitos de demo o negativa a comprar de startups
+     paso 4: Documentar cada paso del proceso de venta en un flowchart
+     paso 5: Validar el roadmap haciendo que se repita con éxito en múltiples cuentas
+     paso 6: Usar el roadmap como prueba de competencia al contratar un VP de ventas
+------------------------------------------------------------------------------
+puesto_intra: 214
+nodo_a: channels_hypothesis_physical
+nodo_b: hipotesis_de_canales
+  pasos de A (channels_hypothesis_physical): 5
+     paso 1: Evaluar si existen hábitos de compra establecidos para la categoría de producto
+     paso 2: Determinar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar precio y complejidad del producto frente al canal elegido
+     paso 4: Elegir un solo canal con mayor potencial hasta completar la validación de clientes
+     paso 5: Revisar el modelo de ingresos según los costos de ese canal
+  pasos de B (hipotesis_de_canales): 5
+     paso 1: Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+     paso 2: Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+     paso 3: Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+     paso 4: Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+     paso 5: Recalcular el modelo de ingresos neto tras costos de canal
+------------------------------------------------------------------------------
+puesto_intra: 217
+nodo_a: ecuacion_de_valor
+nodo_b: ecuacion_de_valor_cliente
+  pasos de A (ecuacion_de_valor): 4
+     paso 1: Identifica el costo total percibido por el cliente (dinero, riesgo, esfuerzo, riesgo laboral/reputacional)
+     paso 2: Evalúa si el problema detectado es lo suficientemente grande como para justificar ese costo
+     paso 3: Si no lo es, usa preguntas para ayudar al cliente a percibir mayor magnitud o urgencia del problema
+     paso 4: No avances a la propuesta de solución hasta que la balanza problema-costo favorezca claramente la compra
+  pasos de B (ecuacion_de_valor_cliente): 4
+     paso 1: Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+     paso 2: Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+     paso 3: Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+     paso 4: Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+------------------------------------------------------------------------------
+puesto_intra: 255
+nodo_a: hoja_de_ruta_de_ventas
+nodo_b: sales_roadmap
+  pasos de A (hoja_de_ruta_de_ventas): 5
+     paso 1: Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales
+     paso 2: Identifica cuántas personas deben decir 'sí' para cerrar una venta
+     paso 3: Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)
+     paso 4: Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión
+     paso 5: Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo
+  pasos de B (sales_roadmap): 3
+     paso 1: Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.
+     paso 2: Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.
+     paso 3: Escribe el proceso paso a paso para poder repetirlo cada vez que vendas.
+------------------------------------------------------------------------------
+puesto_intra: 258
+nodo_a: ecuacion_de_valor
+nodo_b: ecuacion_de_valor_venta
+  pasos de A (ecuacion_de_valor): 4
+     paso 1: Identifica el costo total percibido por el cliente (dinero, riesgo, esfuerzo, riesgo laboral/reputacional)
+     paso 2: Evalúa si el problema detectado es lo suficientemente grande como para justificar ese costo
+     paso 3: Si no lo es, usa preguntas para ayudar al cliente a percibir mayor magnitud o urgencia del problema
+     paso 4: No avances a la propuesta de solución hasta que la balanza problema-costo favorezca claramente la compra
+  pasos de B (ecuacion_de_valor_venta): 3
+     paso 1: Antes de mencionar precio o solución, evalúa qué tan grande percibe el cliente su problema actual.
+     paso 2: Si el problema percibido es pequeño en relación al costo de tu solución, invierte más tiempo en preguntas de implicación antes de hablar de precio.
+     paso 3: Solo presenta la solución y el precio cuando el cliente ya perciba el problema como suficientemente grave para justificar la inversión.
+------------------------------------------------------------------------------
+puesto_intra: 293
+nodo_a: mitigar_falling_asleep_wheel
+nodo_b: riesgo_sobredependencia_ia
+  pasos de A (mitigar_falling_asleep_wheel): 4
+     paso 1: Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable
+     paso 2: Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente
+     paso 3: Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error
+     paso 4: Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio
+  pasos de B (riesgo_sobredependencia_ia): 4
+     paso 1: Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.
+     paso 2: Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.
+     paso 3: Capacitar al equipo en 'pensamiento crítico aplicado a IA': identificar cuándo desconfiar de una respuesta plausible.
+     paso 4: Medir periódicamente la calidad de las decisiones tomadas con y sin apoyo de IA.
+------------------------------------------------------------------------------
+puesto_intra: 319
+nodo_a: customer_validation_sales_roadmap
+nodo_b: sales_roadmap_vs_sales_force
+  pasos de A (customer_validation_sales_roadmap): 4
+     paso 1: Definir quién influye, recomienda y decide la compra
+     paso 2: Identificar dónde está el presupuesto disponible
+     paso 3: Determinar cuántas llamadas de venta y cuánto tiempo toma cerrar una venta
+     paso 4: Probar el proceso de venta completo con órdenes reales a precio completo antes de escalar
+  pasos de B (sales_roadmap_vs_sales_force): 4
+     paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+     paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+     paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+     paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+------------------------------------------------------------------------------
+puesto_intra: 400
+nodo_a: hipotesis_de_canales
+nodo_b: seleccion_canal_distribucion
+  pasos de A (hipotesis_de_canales): 5
+     paso 1: Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+     paso 2: Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+     paso 3: Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+     paso 4: Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+     paso 5: Recalcular el modelo de ingresos neto tras costos de canal
+  pasos de B (seleccion_canal_distribucion): 5
+     paso 1: Identificar los hábitos de compra establecidos en la categoría de tu producto
+     paso 2: Evaluar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar la complejidad y precio del producto respecto al canal elegido
+     paso 4: Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+     paso 5: Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+------------------------------------------------------------------------------
+puesto_intra: 537
+nodo_a: channels_hypothesis_web_mobile
+nodo_b: seleccion_canal_distribucion
+  pasos de A (channels_hypothesis_web_mobile): 5
+     paso 1: Haz una lista de los canales digitales que tengan sentido para tu producto
+     paso 2: Evalúa las fortalezas y debilidades de cada canal: cuánto control tienes, cuánto cuesta, a cuánta gente llegas
+     paso 3: Elige un único canal principal para enfocar ahí tus recursos al inicio
+     paso 4: Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente
+     paso 5: Calcula el ingreso que te queda después de descontar el costo del canal
+  pasos de B (seleccion_canal_distribucion): 5
+     paso 1: Identificar los hábitos de compra establecidos en la categoría de tu producto
+     paso 2: Evaluar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar la complejidad y precio del producto respecto al canal elegido
+     paso 4: Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+     paso 5: Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+------------------------------------------------------------------------------
+puesto_intra: 609
+nodo_a: channels_hypothesis_physical
+nodo_b: seleccion_canal_distribucion
+  pasos de A (channels_hypothesis_physical): 5
+     paso 1: Evaluar si existen hábitos de compra establecidos para la categoría de producto
+     paso 2: Determinar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar precio y complejidad del producto frente al canal elegido
+     paso 4: Elegir un solo canal con mayor potencial hasta completar la validación de clientes
+     paso 5: Revisar el modelo de ingresos según los costos de ese canal
+  pasos de B (seleccion_canal_distribucion): 5
+     paso 1: Identificar los hábitos de compra establecidos en la categoría de tu producto
+     paso 2: Evaluar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar la complejidad y precio del producto respecto al canal elegido
+     paso 4: Recalcular la hipótesis de ingresos netos considerando costos del canal (distribución, promoción, devoluciones)
+     paso 5: Enfocarse en UN canal principal durante el customer discovery, evitando lanzar por múltiples canales a la vez
+------------------------------------------------------------------------------
+puesto_intra: 692
+nodo_a: alineacion_etica_ia_negocio
+nodo_b: principio_humano_en_el_loop
+  pasos de A (alineacion_etica_ia_negocio): 5
+     paso 1: Define con claridad qué objetivos y qué límites éticos tiene el sistema de IA que usas en tu negocio
+     paso 2: Revisa tú mismo, o la persona que te ayuda, las decisiones importantes que tome la IA antes de que se ejecuten
+     paso 3: Crea una forma simple de detectar y corregir sesgos o errores del sistema
+     paso 4: Avisa con transparencia a tus clientes cuando están hablando con una IA
+     paso 5: Revisa cada tanto si el comportamiento de la IA sigue respetando los valores que definiste
+  pasos de B (principio_humano_en_el_loop): 4
+     paso 1: Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción
+     paso 2: Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad
+     paso 3: Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio
+     paso 4: Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes
+------------------------------------------------------------------------------
+puesto_intra: 712
+nodo_a: formalizar_junta_asesora
+nodo_b: identificar_junta_asesores
+  pasos de A (formalizar_junta_asesora): 8
+     paso 1: Identificar clientes potenciales clave descubiertos en customer discovery para invitarlos a la junta asesora
+     paso 2: Reclutar expertos de industria (domain experts) que aporten credibilidad al mercado o tecnología
+     paso 3: Buscar un asesor tipo CEO experimentado ('been there, done that') para consejo práctico
+     paso 4: Definir esquema de compensación (stock común con vesting mensual), o la posibilidad de invertir en acciones preferentes
+     paso 5: Decidir si habrá reuniones formales o consultas individuales
+     paso 6: Documentar el tamaño, composición y operación de la junta asesora
+     paso 7: Haz un mapa de qué asesores necesitas por área: técnico, negocio, cliente, industria, marketing
+     paso 8: Recluta solo a quienes puedan tener impacto estratégico real, priorizando calidad sobre cantidad
+  pasos de B (identificar_junta_asesores): 4
+     paso 1: Identificar clientes o expertos que destaquen por su conocimiento o entusiasmo
+     paso 2: Invitarlos a compartir su opinión mediante almuerzos o reuniones informales
+     paso 3: Evaluar su interés en convertirse en asesores formales
+     paso 4: Buscar asesores para problemas técnicos, introducciones a clientes clave, conocimiento de dominio y desarrollo de producto
+------------------------------------------------------------------------------
+puesto_intra: 762
+nodo_a: channels_hypothesis_web_mobile
+nodo_b: hipotesis_de_canales
+  pasos de A (channels_hypothesis_web_mobile): 5
+     paso 1: Haz una lista de los canales digitales que tengan sentido para tu producto
+     paso 2: Evalúa las fortalezas y debilidades de cada canal: cuánto control tienes, cuánto cuesta, a cuánta gente llegas
+     paso 3: Elige un único canal principal para enfocar ahí tus recursos al inicio
+     paso 4: Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente
+     paso 5: Calcula el ingreso que te queda después de descontar el costo del canal
+  pasos de B (hipotesis_de_canales): 5
+     paso 1: Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+     paso 2: Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+     paso 3: Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+     paso 4: Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+     paso 5: Recalcular el modelo de ingresos neto tras costos de canal
+------------------------------------------------------------------------------
+puesto_intra: 792
+nodo_a: alineacion_etica_ia_negocio
+nodo_b: human_in_the_loop_ia
+  pasos de A (alineacion_etica_ia_negocio): 5
+     paso 1: Define con claridad qué objetivos y qué límites éticos tiene el sistema de IA que usas en tu negocio
+     paso 2: Revisa tú mismo, o la persona que te ayuda, las decisiones importantes que tome la IA antes de que se ejecuten
+     paso 3: Crea una forma simple de detectar y corregir sesgos o errores del sistema
+     paso 4: Avisa con transparencia a tus clientes cuando están hablando con una IA
+     paso 5: Revisa cada tanto si el comportamiento de la IA sigue respetando los valores que definiste
+  pasos de B (human_in_the_loop_ia): 4
+     paso 1: Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+     paso 2: Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+     paso 3: Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+     paso 4: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+------------------------------------------------------------------------------
+puesto_intra: 872
+nodo_a: customer_validation_sales_roadmap
+nodo_b: hoja_de_ruta_de_ventas
+  pasos de A (customer_validation_sales_roadmap): 4
+     paso 1: Definir quién influye, recomienda y decide la compra
+     paso 2: Identificar dónde está el presupuesto disponible
+     paso 3: Determinar cuántas llamadas de venta y cuánto tiempo toma cerrar una venta
+     paso 4: Probar el proceso de venta completo con órdenes reales a precio completo antes de escalar
+  pasos de B (hoja_de_ruta_de_ventas): 5
+     paso 1: Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales
+     paso 2: Identifica cuántas personas deben decir 'sí' para cerrar una venta
+     paso 3: Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)
+     paso 4: Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión
+     paso 5: Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo
+------------------------------------------------------------------------------
+puesto_intra: 918
+nodo_a: refinar_sales_roadmap
+nodo_b: sales_roadmap_vs_sales_force
+  pasos de A (refinar_sales_roadmap): 6
+     paso 1: Identificar el tipo de organización del cliente (por producto, función, matriz o franquicia)
+     paso 2: Construir un mapa de estrategia de acceso (Access Strategy Map) determinando por dónde entrar
+     paso 3: Detectar patrones de 'peligro' como RFPs, requisitos de demo o negativa a comprar de startups
+     paso 4: Documentar cada paso del proceso de venta en un flowchart
+     paso 5: Validar el roadmap haciendo que se repita con éxito en múltiples cuentas
+     paso 6: Usar el roadmap como prueba de competencia al contratar un VP de ventas
+  pasos de B (sales_roadmap_vs_sales_force): 4
+     paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+     paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+     paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+     paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+------------------------------------------------------------------------------
+puesto_intra: 945
+nodo_a: channels_hypothesis_physical
+nodo_b: seleccion_canal_fisico
+  pasos de A (channels_hypothesis_physical): 5
+     paso 1: Evaluar si existen hábitos de compra establecidos para la categoría de producto
+     paso 2: Determinar si el canal fortalece el proceso de venta y a qué costo
+     paso 3: Analizar precio y complejidad del producto frente al canal elegido
+     paso 4: Elegir un solo canal con mayor potencial hasta completar la validación de clientes
+     paso 5: Revisar el modelo de ingresos según los costos de ese canal
+  pasos de B (seleccion_canal_fisico): 4
+     paso 1: Listar las opciones de canal físico relevantes para la industria
+     paso 2: Evaluar fortalezas y debilidades de cada canal (costo, control, velocidad)
+     paso 3: Analizar hábitos de compra establecidos en la categoría de producto
+     paso 4: Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente
+------------------------------------------------------------------------------
+puesto_intra: 950
+nodo_a: construccion_de_valor_percibido
+nodo_b: ecuacion_de_valor
+  pasos de A (construccion_de_valor_percibido): 4
+     paso 1: Identificar el problema real que el cliente percibe antes de hablar de características del producto
+     paso 2: Cuantificar el costo del problema actual del cliente para justificar la inversión
+     paso 3: Evitar la sobrecarga de detalles técnicos como estrategia principal de venta
+     paso 4: Usar preguntas de implicación para amplificar la percepción del problema y su urgencia (desarrollado en SPIN)
+  pasos de B (ecuacion_de_valor): 4
+     paso 1: Identifica el costo total percibido por el cliente (dinero, riesgo, esfuerzo, riesgo laboral/reputacional)
+     paso 2: Evalúa si el problema detectado es lo suficientemente grande como para justificar ese costo
+     paso 3: Si no lo es, usa preguntas para ayudar al cliente a percibir mayor magnitud o urgencia del problema
+     paso 4: No avances a la propuesta de solución hasta que la balanza problema-costo favorezca claramente la compra
+------------------------------------------------------------------------------
+puesto_intra: 966
+nodo_a: estrategia_de_ventas
+nodo_b: sales_roadmap
+  pasos de A (estrategia_de_ventas): 4
+     paso 1: Define en qué nivel de la organización entrarás (ejecutivo o staff operativo)
+     paso 2: Determina cuántas personas del mapa organizacional deben decir 'sí'
+     paso 3: Establece el orden de contacto y el guion para cada persona
+     paso 4: Identifica qué paso podría hacer fracasar toda la venta y quiénes son los posibles saboteadores
+  pasos de B (sales_roadmap): 3
+     paso 1: Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.
+     paso 2: Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.
+     paso 3: Escribe el proceso paso a paso para poder repetirlo cada vez que vendas.
+------------------------------------------------------------------------------
+puesto_intra: 1023
+nodo_a: customer_validation_sales_roadmap
+nodo_b: refinar_sales_roadmap
+  pasos de A (customer_validation_sales_roadmap): 4
+     paso 1: Definir quién influye, recomienda y decide la compra
+     paso 2: Identificar dónde está el presupuesto disponible
+     paso 3: Determinar cuántas llamadas de venta y cuánto tiempo toma cerrar una venta
+     paso 4: Probar el proceso de venta completo con órdenes reales a precio completo antes de escalar
+  pasos de B (refinar_sales_roadmap): 6
+     paso 1: Identificar el tipo de organización del cliente (por producto, función, matriz o franquicia)
+     paso 2: Construir un mapa de estrategia de acceso (Access Strategy Map) determinando por dónde entrar
+     paso 3: Detectar patrones de 'peligro' como RFPs, requisitos de demo o negativa a comprar de startups
+     paso 4: Documentar cada paso del proceso de venta en un flowchart
+     paso 5: Validar el roadmap haciendo que se repita con éxito en múltiples cuentas
+     paso 6: Usar el roadmap como prueba de competencia al contratar un VP de ventas
+------------------------------------------------------------------------------
+puesto_intra: 1041
+nodo_a: human_in_the_loop_ia
+nodo_b: mitigar_falling_asleep_wheel
+  pasos de A (human_in_the_loop_ia): 4
+     paso 1: Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+     paso 2: Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+     paso 3: Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+     paso 4: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+  pasos de B (mitigar_falling_asleep_wheel): 4
+     paso 1: Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable
+     paso 2: Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente
+     paso 3: Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error
+     paso 4: Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio
+------------------------------------------------------------------------------
+puesto_intra: 1146
+nodo_a: ecuacion_de_valor_cliente
+nodo_b: prevencion_objeciones_vs_manejo
+  pasos de A (ecuacion_de_valor_cliente): 4
+     paso 1: Antes de presentar precio o solución, mapear qué tan grande percibe el cliente su problema
+     paso 2: Usar preguntas de Implicación para amplificar las consecuencias no vistas del problema
+     paso 3: Usar preguntas de Necesidad-Beneficio para que el cliente articule el valor de resolverlo
+     paso 4: Solo entonces presentar la solución y su costo, cuando la balanza de valor ya se inclinó a favor
+  pasos de B (prevencion_objeciones_vs_manejo): 6
+     paso 1: Registra en cuántas llamadas recibes objeciones y en qué punto exacto de la conversación aparecen.
+     paso 2: Identifica si las objeciones surgen justo después de ofrecer una ventaja o solución sin haber establecido antes una necesidad explícita.
+     paso 3: Identifica si las objeciones son sobre precio o valor, señal de que la necesidad quedó insuficientemente desarrollada.
+     paso 4: Retrasa la presentación de beneficios o soluciones hasta confirmar una necesidad explícita clara del cliente.
+     paso 5: Refuerza el uso de preguntas de implicación y necesidad beneficio antes de mencionar cualquier ventaja.
+     paso 6: Sustituye tu práctica de respuestas a objeciones típicas por práctica en desarrollo de necesidades mediante preguntas.
+------------------------------------------------------------------------------
+puesto_intra: 1306
+nodo_a: sales_roadmap
+nodo_b: sales_roadmap_vs_sales_force
+  pasos de A (sales_roadmap): 3
+     paso 1: Identifica los roles clave dentro de la empresa a la que le vendes: quién usa el producto, quién lo compra y quién decide el gasto.
+     paso 2: Define el orden en que vas a contactar a cada uno y el mensaje específico para cada rol.
+     paso 3: Escribe el proceso paso a paso para poder repetirlo cada vez que vendas.
+  pasos de B (sales_roadmap_vs_sales_force): 4
+     paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+     paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+     paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+     paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+------------------------------------------------------------------------------
+puesto_intra: 1330
+nodo_a: hoja_de_ruta_de_ventas
+nodo_b: sales_roadmap_vs_sales_force
+  pasos de A (hoja_de_ruta_de_ventas): 5
+     paso 1: Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales
+     paso 2: Identifica cuántas personas deben decir 'sí' para cerrar una venta
+     paso 3: Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)
+     paso 4: Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión
+     paso 5: Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo
+  pasos de B (sales_roadmap_vs_sales_force): 4
+     paso 1: Escribe paso a paso el camino que te lleva a una venta que se repite
+     paso 2: Pon a prueba ese mapa de ventas con clientes reales antes de crecer tu equipo
+     paso 3: No contrates vendedores en cantidad hasta que hayas validado el modelo
+     paso 4: Recién cuando el mapa esté validado, arma tu equipo de ventas
+------------------------------------------------------------------------------
+puesto_intra: 1488
+nodo_a: hipotesis_de_canales
+nodo_b: seleccion_canal_fisico
+  pasos de A (hipotesis_de_canales): 5
+     paso 1: Determinar si el producto se ajusta mejor a canal físico, digital o híbrido
+     paso 2: Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)
+     paso 3: Calcular todos los costos del canal (descuentos, promoción, devoluciones)
+     paso 4: Seleccionar UN canal principal para enfocar los esfuerzos iniciales
+     paso 5: Recalcular el modelo de ingresos neto tras costos de canal
+  pasos de B (seleccion_canal_fisico): 4
+     paso 1: Listar las opciones de canal físico relevantes para la industria
+     paso 2: Evaluar fortalezas y debilidades de cada canal (costo, control, velocidad)
+     paso 3: Analizar hábitos de compra establecidos en la categoría de producto
+     paso 4: Seleccionar un único canal dominante y evitar lanzar por múltiples canales simultáneamente
+------------------------------------------------------------------------------
+puesto_intra: 1496
+nodo_a: human_in_the_loop_ia
+nodo_b: riesgo_sobredependencia_ia
+  pasos de A (human_in_the_loop_ia): 4
+     paso 1: Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti
+     paso 2: Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real
+     paso 3: Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez
+     paso 4: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto
+  pasos de B (riesgo_sobredependencia_ia): 4
+     paso 1: Establecer como norma editar y cuestionar siempre las salidas de la IA antes de usarlas.
+     paso 2: Rotar tareas críticas entre revisión humana pura y asistida por IA para mantener el criterio del equipo.
+     paso 3: Capacitar al equipo en 'pensamiento crítico aplicado a IA': identificar cuándo desconfiar de una respuesta plausible.
+     paso 4: Medir periódicamente la calidad de las decisiones tomadas con y sin apoyo de IA.
+------------------------------------------------------------------------------
+puesto_intra: 1541
+nodo_a: mitigar_falling_asleep_wheel
+nodo_b: principio_humano_en_el_loop
+  pasos de A (mitigar_falling_asleep_wheel): 4
+     paso 1: Establecer puntos de revisión humana obligatoria en tareas de alto riesgo, incluso si la IA parece confiable
+     paso 2: Entrenar al equipo para cuestionar activamente las respuestas de la IA en vez de aceptarlas automáticamente
+     paso 3: Realizar pruebas periódicas con casos diseñados para que la IA falle, y medir si el equipo detecta el error
+     paso 4: Rotar responsabilidades para que nadie dependa exclusivamente de la IA sin ejercitar su propio criterio
+  pasos de B (principio_humano_en_el_loop): 4
+     paso 1: Antes de que algo generado por IA llegue a un cliente o se ejecute, revísalo tú mismo, sin excepción
+     paso 2: Aprende a reconocer cuándo la IA está inventando: citas que no existen, datos que no puedes comprobar, respuestas dadas con demasiada seguridad
+     paso 3: Nunca tomes una respuesta de la IA como la única verdad cuando la decisión es importante para tu negocio
+     paso 4: Decide de antemano en qué casos la IA puede actuar sola y en qué casos necesitas revisarlo tú antes
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
