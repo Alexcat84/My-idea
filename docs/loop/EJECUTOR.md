@@ -97,6 +97,26 @@ lo que diga el encargo.
    PARCIAL, NUNCA VACIO, y el parcial dice hasta donde se llego. TOPE DE CINCO
    TAREAS POR VUELTA: si el encargo trae mas, se entregan cinco y las demas se
    declaran como cola, en vez de empezar seis y no cerrar ninguna.
+   LA BATERIA CORRE CADA CINCO VUELTAS, NO CADA UNA (5 sep 2026, decision del
+   fundador; el regimen entero vive en AUDITOR.md seccion 6.1 y es citable
+   desde paradas/2026-09-05-la-bateria-sin-techo-DECISION.md). La bateria de
+   mutaciones deja de ser obligatoria en cada vuelta: corre CADA CINCO, en una
+   VUELTA DE BATERIA propia que NO LLEVA NADA MAS. En las vueltas intermedias
+   la seccion 9 del reporte SE CIERRA IGUAL, con el HUECO DECLARADO Y MEDIDO
+   por el carril de cerrar_reporte.py, que lleva su medicion, su atribucion y
+   su corrida o no vale. Motivo medido: la nomina paso de 23 a 82 entradas,
+   cada una se corre DOS veces, y la salida de la bateria del ejecutor salio en
+   CERO BYTES tres vueltas seguidas (171, 172 y 173) mientras cuatro vueltas
+   seguidas dejaban de cerrar su propio reporte. NO SE AFLOJA NINGUNA GUARDA:
+   la bateria sigue entera y sola, y LA NOMINA SIGUE CRECIENDO porque nadie la
+   poda sin el fundador.
+   Y MIENTRAS DURE EL REGIMEN TEMPORAL (AUDITOR.md 6.2): los encargos traen
+   MAXIMO DOS SUB-TAREAS hasta que DOS vueltas seguidas cierren su propio
+   reporte con cerrar_reporte.py. Logrado eso, vuelve el tope de cinco.
+   LA RUTA QUE PROMETE PRUEBA ES CIFRA (5 sep 2026): una ruta publicada como
+   evidencia de una corrida cuenta como CIFRA PUBLICADA en su sede, y si apunta
+   a un fichero inexistente o de CERO BYTES es CAIDA DE CIFRA. Antes de escribir
+   una ruta como prueba, se comprueba que el fichero existe y que no esta vacio.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una

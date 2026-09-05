@@ -65,6 +65,17 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    siguiente, sin esperar parada ni decision nueva del fundador.
    DECLARARLA SIN ENCARGARLA ES UNA CAIDA PROPIA DEL AUDITOR y se registra
    con su nombre en el acta.
+   LA CAIDA DEL AUDITOR GANA DIENTES (decision del fundador, 5 sep 2026, punto
+   4 de `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`). Hasta hoy las
+   caidas propias del auditor **se declaraban pero no acumulaban para ninguna
+   racha**, asi que la misma podia repetirse sin consecuencia escrita. **TRES
+   ACTAS SEGUIDAS CON LA MISMA CAIDA PROPIA OBLIGAN A QUE EL ACTA SIGUIENTE
+   ABRA CON SU REMEDIO, COMO TAREA BLOQUEANTE DEL PROPIO AUDITOR**, antes de
+   verificar nada. **DECLARARSE SIN REMEDIAR DEJA DE SER GRATIS.**
+   **EL CASO QUE LA TRAE, y lo levanto el auditor contra si mismo:** tres actas
+   seguidas aislando el sujeto de la relectura ciega DESPUES de haber corrido
+   comandos de verificacion, y no antes. Su acta 173 lo dice con estas palabras:
+   *"es un agujero de la doctrina y lo digo yo, que soy el beneficiado"*.
 3. ADJUDICA: discrepancias van a relectura conjunta (tu caso escrito con
    evidencia; el ejecutor verifica contra el grafo y decide con la vara; las
    correcciones con correccion declarada y recomputo). Pendientes de doctrina:
@@ -154,6 +165,23 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
     2026, asi que el "307 nodos vivos" del comentario de
     `scripts/run_phase1.py` (que son 307 DESTINOS sobre 255 nodos, medido en
     el acta 151) SE CORRIGE POR DECLARACION Y NO ACUMULA.
+    LA RUTA QUE PROMETE PRUEBA ES CIFRA (decision del fundador, 5 sep 2026,
+    punto 3 de `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`). **UNA
+    RUTA PUBLICADA COMO EVIDENCIA DE UNA CORRIDA CUENTA COMO CIFRA PUBLICADA EN
+    SU SEDE.** Si apunta a un fichero **inexistente** o de **cero bytes**, es
+    **CAIDA DE CIFRA**, con todo lo que eso arrastra: cuenta para el credito y
+    dos tandas seguidas son PARADA.
+    **EL MOTIVO, EN UNA LINEA:** un letrero que dice *"aqui esta la prueba"*
+    puesto sobre un vacio **engana igual que un numero falso**, y hasta hoy
+    salia gratis porque era una ruta y no una cifra.
+    **LOS DOS CASOS MEDIDOS QUE LA TRAEN**, los dos del acta 173 y en sedes
+    distintas: en la vuelta 172, la fila *TAREA 5: CERRADA* nombraba un fichero
+    **inexistente**; en la 173, un comentario de guarda decia que cuatro arneses
+    corren *"dentro de la bateria despues
+    (`docs/loop/SALIDA_V173_BATERIA.txt`)"*, y ese fichero **mide CERO BYTES**.
+    **Ninguno de los dos acumulaba** por la letra del 27 ago, y por eso se
+    escribe esta.
+
   - ~~**Caida de REPORTE** (una afirmacion equivocada que vive solo en
     `REPORTE.md` y no mueve ningun dato): se registra con nombre en el acta
     y dispara la relectura al doble del tramo, pero **NO** acumula para la
@@ -269,3 +297,55 @@ proxima vuelta y hasta la apertura de la fase 06:
    recorta tinta, no control.
 5. Al abrir la fase 06 (cirugia), el modo austero SE SUSPENDE solo y vuelve el
    regimen completo.
+
+### 6.1 EL REGIMEN DE LA BATERIA: CADA CINCO VUELTAS, Y EN VUELTA PROPIA (decision del fundador, 5 sep 2026)
+
+**Opcion (a) de la parada `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`.**
+
+> **LA BATERIA DE MUTACIONES SALE DEL CICLO POR VUELTA.** Deja de ser obligatoria
+> cada vuelta y corre **CADA CINCO**, en una **VUELTA DE BATERIA** propia que **no
+> lleva nada mas**: la bateria entera, su **doble corrida**, su **reloj** y su
+> **salida sellada**. Nada de trabajo de plan al lado.
+
+**EN LAS VUELTAS INTERMEDIAS** la seccion 9 del reporte **cierra igual**, con el
+**HUECO DECLARADO Y MEDIDO** por el carril que la TAREA 1.b de la vuelta 173
+construyo y que esta **probado con 24 casos**. **Un hueco declarado no es un
+hueco escondido:** lleva su medicion, su atribucion y su corrida, o no vale.
+
+**EL MOTIVO, MEDIDO Y NO NARRADO:**
+
+- La nomina **paso de 23 a 51 entradas en la vuelta 163** y **hoy tiene 82**.
+  Cada vuelta escribe entre tres y cinco arneses y **cada uno entra en la nomina
+  a la vuelta siguiente**, por regla del propio fichero. **Es una guarda
+  obligatoria que crece sin techo.**
+- **Cada entrada se corre DOS VECES** (cotejo de reproducibilidad, vuelta 141).
+- **Salida de la bateria del ejecutor: CERO BYTES en la 171, la 172 y la 173.**
+  Tres vueltas seguidas.
+- **Cuatro vueltas seguidas sin que nadie cierre su propio reporte**, medido en
+  git sobre `docs/loop/reportes/`: la 170 archivo los de la 168 y la 169, la 171
+  el de la 170, la 172 el de la 171, y **el de la 172 no lo archivo nadie**.
+- **El remedio de orden ya se probo:** el acta 172 movio la bateria al PRINCIPIO
+  de la vuelta y **siguio en cero**.
+
+**LO QUE NO CAMBIA, Y ES LA MITAD QUE IMPORTA:** la bateria **sigue entera y
+sigue sola**, con su doble corrida. **NO se afloja ninguna guarda: solo cambia la
+cadencia.** Y **LA NOMINA SIGUE CRECIENDO: NADIE LA PODA SIN EL FUNDADOR.** La
+opcion (c) de la parada, jubilar los arneses viejos, **queda RECHAZADA**: borrar
+guardas que ninguna regla ordena borrar es lo que la casa reserva, y va contra
+fallar ruidoso.
+
+### 6.2 REGIMEN TEMPORAL DE DOS SUB-TAREAS (decision del fundador, 5 sep 2026)
+
+**Opcion (b) de la misma parada, como TEMPORAL y con su disparador de salida
+escrito, para que no se quede puesto por inercia:**
+
+> **HASTA QUE DOS VUELTAS SEGUIDAS CIERREN SU PROPIO REPORTE con
+> `scripts/loop/cerrar_reporte.py`, los encargos llevan MAXIMO DOS SUB-TAREAS.**
+> **Logrado eso, vuelve el tope de CINCO** de la seccion 6.
+
+**El auditor dijo que la (b) estaba en su mano y que no la habia probado, y lo
+dijo para que no se la concedieran por creer que no tenia salida.** Se le concede
+igualmente, pero **combinada con la (a)**, que es lo que ataca la causa: sola,
+la (b) retrasaria el problema sin resolverlo, porque la bateria seguiria siendo
+obligatoria en esa vuelta unica y seguiria creciendo.
+
