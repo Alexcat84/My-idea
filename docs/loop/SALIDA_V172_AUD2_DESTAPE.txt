@@ -1,0 +1,44 @@
+==============================================================================
+DESTAPE DEL SUJETO DE CIEGA. NO SE ABRE HASTA TENER LAS CLASES ESCRITAS.
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (el mismo que la salida ciega lleva):
+   TRAMO DE COLA NUNCA LEIDO A CIEGAS: puestos 3190 a 3388, o sea el cierre de quality mas risk_management entero mas seguridad_digital entero. El acta 170 leyo quality 2412 a 3189 y el acta 171 leyo una muestra de 1086 a 2184; este tramo queda fuera de las dos. Muestra de 8 con semilla 173.
+
+CIFRA pares: 8
+
+------------------------------------------------------------------------------
+puesto_intra: 3252
+clase: D
+razon: reinicio_programa_calidad (Crosby Paso 14, Hazlo de Nuevo: al alcanzar las metas formar un nuevo equipo con nuevo lider, programar la repeticion del programa en un ano completo con nuevas iniciativas, rotar a los miembros veteranos como asesores, otorgar reconocimiento formal a los lideres salientes, repetir el ciclo cada dieciocho meses) contra sostener_las_ganancias (Juran, Hold the Gains: disenar controles formales documentados, aplicar mistake-proofing, establecer un programa de entrenamiento para nuevos empleados, auditar periodicamente el cumplimiento, documentar el plan de control por escrito). DISTINTA FUENTE Crosby/Juran, sim_tit 46.9, sin arista. El primero es la RENOVACION CICLICA DEL PROGRAMA (rotacion de equipo, ritual organizacional cada 18 meses); el segundo es el SISTEMA DE CONTROL TECNICO para sostener las ganancias ya logradas (mistake-proofing, auditoria, documentacion). Objetos distintos (ciclo del programa contra sistema de control), pasos enteros propios en ambos lados. D.
+------------------------------------------------------------------------------
+puesto_intra: 3272
+clase: D
+razon: caza_las_oportunidades_no_solo_amenazas (Edwards: lista de oportunidades con probabilidad/premio/senal, reservar capacidad) contra que_hacer_con_un_riesgo_nuevo (Edwards: procesar un riesgo nuevo cualquiera con probabilidad/impacto/respuesta/dueno). MISMA FUENTE Edwards, sim_tit 43.5, sin arista. El primero es el SISTEMA ESPECIFICO DE OPORTUNIDADES (una pista paralela con su propia mecanica de premio y senal de gatillo); el segundo es el PROCEDIMIENTO GENERICO para cualquier riesgo nuevo, sin distinguir amenaza de oportunidad. Objetos distintos, pasos enteros propios en ambos lados. D.
+------------------------------------------------------------------------------
+puesto_intra: 3283
+clase: D
+razon: como_sabes_que_tu_metodo_sirve (Hubbard: validar el metodo con predicciones fechadas y prueba de calibracion) contra vuelve_a_medir_despues_del_susto (Edwards: reevaluar un riesgo individual ya tratado tras aplicar una respuesta o un susto). DISTINTA FUENTE, sim_tit 47.1, sin arista. El primero valida EL METODO EN SU CONJUNTO; el segundo reevalua UN RIESGO PUNTUAL YA TRATADO. Escalas distintas, pasos enteros propios en ambos lados. D.
+------------------------------------------------------------------------------
+puesto_intra: 3314
+clase: D
+razon: haz_tu_lista_de_lo_que_puede_fallar (censo con triage completo: nombrar sin evaluar, incluir lo penoso, triage, registrar, marcar observadas) contra tecnicas_para_sacar_riesgos_a_la_luz (tecnicas puntuales de generacion: lluvia de ideas, checklist del rubro, estudio de proyectos fracasados, reescritura causa-efecto). Sim_tit 46.4, sin arista. haz_tu_lista trae el PROCESO ENTERO de censo y triage (sus pasos 3 a 5, evaluar y registrar, no estan en tecnicas_para_sacar_riesgos); tecnicas_para_sacar_riesgos trae METODOS CONCRETOS DE GENERACION (checklist, estudio de fracasos ajenos, reescritura formal) que haz_tu_lista no especifica en su propio paso 1. Ninguno nombra literalmente al otro dentro de un paso: son complementarios sin ser el mismo acto. D.
+------------------------------------------------------------------------------
+puesto_intra: 3320
+clase: D
+razon: busca_el_riesgo_antes_de_que_te_busque (el CUANDO de la busqueda de riesgos) contra correr_hacia_el_riesgo (DeMarco-Lister Cap. 1: escribir la version mas ambiciosa de la idea, anotar que la haria valiosa, listar lo que asusta, comparar segura contra arriesgada por recompensa, decidir cuanto riesgo correr). Sim_tit 43.6, sin arista. Momento de buscar amenazas contra ejercicio de eleccion deliberada entre version segura y ambiciosa de una idea; objetos distintos, sin paso compartido. D.
+------------------------------------------------------------------------------
+puesto_intra: 3342
+clase: D
+razon: caza_las_oportunidades_no_solo_amenazas (sistema de gestion de oportunidad) contra correr_hacia_el_riesgo (comparar version segura contra ambiciosa de la idea, decidir cuanto riesgo correr). Sim_tit 51.7, sin arista. Gestion continua de oportunidades detectadas contra eleccion puntual de apetito de riesgo al definir una idea; pasos enteros propios, sin solape. D.
+------------------------------------------------------------------------------
+puesto_intra: 3361
+clase: D
+razon: haz_tu_lista_de_lo_que_puede_fallar (censo con triage: nombrar sin evaluar, incluir lo penoso, triage, registrar, marcar observadas) contra riesgo_no_es_mala_suerte (escribir como causa-efecto, filtrar ruido, quedarse con lo que afecta la meta). Sim_tit 49.1, sin arista. ULTIMO PAR DE risk_management. El procedimiento completo de generacion-triage-registro contra el ejercicio de reformular y filtrar una preocupacion puntual; pasos enteros propios en ambos lados, sin solape. D.
+------------------------------------------------------------------------------
+puesto_intra: 3374
+clase: D
+razon: getting_started_media_protection (NIST SP1318: inventariar medios con CUI, procedimientos de prestamo/devolucion, almacenamiento seguro, marcar restricciones de distribucion, sanitizar antes de reutilizar/disponer, restringir/revisar acceso a medios, trazabilidad en transporte) contra getting_started_physical_protection (NIST SP1318: lista de personas autorizadas a instalaciones, credenciales de identificacion, revision periodica de acceso, sitios de trabajo alternativos aprobados, monitoreo de acceso fisico con guardias/camaras, dispositivos de salida en areas seguras, control de puntos de entrada/salida). MISMA FUENTE, sim_tit 54.8, sim_sem 0.825, sin arista. Dos familias DISTINTAS de controles NIST 800-171 (Media Protection sobre los MEDIOS/dispositivos de almacenamiento con CUI, Physical Protection sobre el ACCESO A INSTALACIONES): cero solape literal entre los siete pasos de cada uno. D.
+------------------------------------------------------------------------------
+FIN DEL DESTAPE.

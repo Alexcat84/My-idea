@@ -1,38 +1,42 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada. Mira
 `git status` antes de nada. Lo que vas a encontrar y como se trata, uno por uno:
 `dataset/metadata/master_graph.json` modificado con diff de cero bytes es
-suciedad de indice y NO se commitea, como la 169, la 170 y la 171 midieron;
-`node_modules/` NO se toca y NO entra en `.gitignore` (sigue siendo decision del
-fundador, adjudicacion 6.5 de mi acta 170); **y los TRECE ficheros que tu vuelta
-anterior dejo sueltos YA LOS COMMITEE YO CON MI ACTA Y NO SE BORRA NINGUNO**:
-los doce `docs/loop/SALIDA_V171_*` del bloque de cierre (incluido el
-`SALIDA_V171_BATERIA.txt` de cero bytes, que es la prueba medida de que la
-bateria no corrio, y el `SALIDA_V171_TALLADOR_CABECERA.txt`, que esta VERDE y lo
-vas a necesitar) y `scripts/loop/vuelta171_cierre.py`. Dejarlos sueltos era
-arriesgarse a perder los objetos que este encargo te manda usar, que es
-exactamente lo que la vuelta 171 recibio de mi por el mismo motivo.
+suciedad de indice y NO se commitea, como la 169, la 170, la 171 y la 172
+midieron; `node_modules/` NO se toca y NO entra en `.gitignore` (sigue siendo
+decision del fundador, adjudicacion 6.5 de mi acta 170); **y los TRECE ficheros
+que tu vuelta anterior dejo sueltos YA LOS COMMITEE YO CON MI ACTA Y NO SE BORRA
+NINGUNO**: los doce `docs/loop/SALIDA_V172_*` del bloque de cierre (incluido el
+`SALIDA_V172_BATERIA.txt` de cero bytes, que es la prueba medida de que la
+bateria no corrio, y el `SALIDA_V172_TALLADOR_CABECERA.txt`, que esta VERDE, que
+lo corri yo y sale identico byte a byte, y que vas a necesitar) y
+`scripts/loop/_v172_cierre_texto.md`. Dejarlos sueltos era arriesgarse a perder
+los objetos que este encargo te manda usar. Van tambien mis propias salidas de
+auditoria, las `docs/loop/SALIDA_V172_AUD2_*`.
 
 SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE EJECUCION
 CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias por operacion.
 REGIMEN COMPLETO: el modo austero sigue suspendido por su punto 5. El acta que
-manda es la de la vuelta 171 (docs/loop/ACTA_AUDITOR.md, cabecera en la linea
-57.847); sus adjudicaciones 6.1 a 6.12 son la letra de este encargo.
+manda es la de la vuelta 172 (docs/loop/ACTA_AUDITOR.md, cabecera en la linea
+58.375); sus adjudicaciones 6.1 a 6.11 son la letra de este encargo.
 
-LO QUE YA ESTA VERIFICADO Y NO HAY QUE VOLVER A HACER: las cuatro tareas que
-corriste reproducen bajo mis instrumentos, digito a digito. Marcador 3.388 con
-A 551, B 72, C 5, D 2.760 y cero huecos. Gate 0 con su ciclo entero VERDE por mi
-mano, numstat de cero filas, motor 25/25, tsc exit 0, web 82 ficheros y 1.040
-pasadas. Censo 3.853 / 3.169 / 684 y aristas 8.780 / 8.740 / 17.520 / 9.914 con
-cero auto-aristas. Inventario 672 entradas y 71 fichas. Las cuatro lecturas del
-contador `LD` las reproduje exactas, dos de ellas en worktrees limpios que cree
-yo, y tu atribucion de los dos ficheros envenenadores es correcta. El censo del
-campo `forma` lo recompute con codigo mio y sale igual entero, `REPITE` incluido
-en cero. Los 8 pares y su cero de aciertos los recompute con mi propio resolutor
-y salen igual, con los 251 ids del universo. Y la cifra de la CUARTA SEDE que
-escribiste en el docstring del tallador (400 asuntos, 0 empiezan, 1 contiene) la
-recompute sobre `git log -400` y da eso mismo. TU PARADA ESTABA BIEN TRAIDA Y LA
-ADJUDICO EN LA 6.1 Y LA 6.2: la guarda que te pusieron era insatisfacible y no
-podias saberlo sin medirlo. Mediste bien y no inventaste nada.
+LO QUE YA ESTA VERIFICADO Y NO HAY QUE VOLVER A HACER, PORQUE LO MEDI YO CON MIS
+INSTRUMENTOS Y NO LO LEI DE TU SALIDA. Las cuatro tareas que cerraste reproducen
+digito a digito y NO HAY NI UNA CIFRA FALSA EN TODA LA VUELTA, ni en el reporte
+ni en la CUARTA SEDE. Marcador 3.388 con A 551, B 72, C 5, D 2.760 y cero
+huecos. Gate 0 con su ciclo entero VERDE por mi mano, numstat de cero filas,
+motor 25/25, tsc exit 0, web 82 ficheros y 1.040 pasadas. Censo 3.853 / 3.169 /
+684 y aristas 8.780 / 8.740 / 17.520 / 9.914 con cero auto-aristas y cero
+duplicadas. El reporte de la 171 archivado calza byte a byte con el blob de
+`99d54005`, mismo sha256 `d4f6fe05f93aa832`, 43.956 bytes y 688 saltos, y trae
+sus diez secciones, sus cuatro discutibles, su caida y una seccion 9 que dice la
+verdad. Los CINCO arneses salen verdes por mi mano: 43 de 43, 27 de 27, 24 de
+24, 17 de 17 y 15 de 15 el del enchufe ya refundado. La nomina da 78 entradas
+con ultima vuelta 171. Las dos lecturas del contador `LD` las reproduje, una de
+ellas en un worktree limpio que cree yo en `45fb75f5`, y hoy las dos varas
+convergen en `LD-154` con 98 hechas y 4 nombrados sin seccion. La numeracion es
+ADICION PURA y lo medi en git, no en tu palabra: 152 lineas anadidas y CERO
+borradas. Y TUS TRES CAIDAS ESTAN BIEN DECLARADAS Y NINGUNA MUEVE UNA CIFRA: la
+tercera, la de la salida pisada, no dejo rastro y nadie la habria cazado.
 
 LA VARA DEL TRABAJO PENDIENTE SIGUE SIENDO EL INSTRUMENTO,
 scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD, NUNCA EL CAMPO
@@ -40,155 +44,148 @@ scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD, NUNCA EL CAMPO
 ninguna prueba, y de esas seis las dos OP-M-02 siguen CUMPLIDAS POR CONSUNCION
 por la 6.6 del acta 168. El trabajo real son cuatro fichas.
 
-Y LO PRIMERO QUE TIENES QUE SABER, PORQUE ES LA RAZON DE QUE ESTE ENCARGO SEA EL
-QUE ES: LA VUELTA 171 TAMPOCO CERRO SU REPORTE, Y ES LA SEGUNDA SEGUIDA. Tu
-bloque de cierre corrio entero a las 00:09 y su tallador salio VERDE, pero
-`docs/loop/REPORTE.md` sigue en 454 lineas, sigue diciendo "SIN ESCRIBIR
-TODAVIA" y "PENDIENTE DE TALLAR AL CIERRE", y sus secciones 3 a 9 no existen.
-NO ES UNA CAIDA DE CIFRA PUBLICADA NI DE REPORTE, porque el reporte dice la
-verdad y dice que le falta el cierre. PERO LA CAUSA LA MEDI Y NO ES PRISA:
-`scripts/loop/vuelta171_cierre.py` SOLO MIDE, escribe once ficheros `SALIDA_*` y
-no toca `REPORTE.md` en ninguna linea. Cerrar el reporte no es un paso del
-instrumento: es un paso a mano que viene despues, y las dos vueltas que han
-caido han caido justo ahi. Por eso la TAREA 5 de este encargo es codigo.
+Y AHORA LO QUE IMPORTA, PORQUE ES LA RAZON DE QUE ESTE ENCARGO ESTE ORDENADO
+COMO ESTA. LA VUELTA 172 TAMPOCO CERRO SU REPORTE Y SON TRES SEGUIDAS. Tu bloque
+de cierre corrio entero y tu tallador salio VERDE, pero `docs/loop/REPORTE.md`
+sigue en 511 lineas, sigue diciendo "SIN ESCRIBIR TODAVIA" y "PENDIENTE DE
+TALLAR AL CIERRE", sus secciones 3 a 9 no existen, la fila de la TAREA 4 dice
+ABIERTA y `docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt` NO EXISTE, o sea que
+`cerrar_reporte.py`, que nacio en tu TAREA 5 para arreglar exactamente esto, no
+llego a correr ni una vez.
 
-Y HAY UNA LECCION QUE VA CON TU NOMBRE Y CON EL MIO: EL REMEDIO SE APLICO HACIA
-ATRAS. El encargo anterior te mando releer al doble las cuatro piezas del cierre
-y lo hiciste, y lo hiciste bien, sobre el cierre de la 170, con once
-comprobaciones desde `git show` y cero fallos. Lo que falto fue aplicartelo a ti
-mismo. LA RELECTURA AL DOBLE DE ESTA VUELTA SE APLICA AL CIERRE PROPIO: cada una
-de las cuatro piezas (reporte cerrado, cabecera pegada, bateria corrida, arbol
-limpio) se comprueba dos veces, una al hacerla y otra DESPUES DE COMMITEAR,
-leyendo del arbol y de `git show` lo que acabas de escribir, Y ESTA VEZ SOBRE LO
-TUYO.
+PERO NO TE VOY A REPETIR "OTRA VEZ", PORQUE LA CAUSA LA MEDI Y NO ES TUYA: EL
+REMEDIO QUEDO DETRAS DEL OBSTACULO QUE TENIA QUE QUITAR. La pieza (4) de
+`cerrar_reporte.py` exige la salida de la bateria dentro de la seccion 9; la
+bateria es el paso mas caro del bucle; y el encargo anterior, el mio, la puso
+sola y AL FINAL. Encadenado: sin bateria no hay cierre, y la bateria es lo
+ultimo. Y TU YA HABIAS ESCRITO EL DIAGNOSTICO SIN SABERLO, en tu propia 1.a:
+"El reporte de la 171 no se puede cerrar con el instrumento que exige justo lo
+que a la 171 le falta". Te paso lo mismo a ti unas horas despues con tu propio
+reporte. Esta vuelta la bateria VA PRIMERA y la pieza (4) admite el hueco
+declarado y medido, por las adjudicaciones 6.2 y 6.3 de mi acta.
 
-TOPE DE CINCO TAREAS POR VUELTA, y este encargo trae exactamente cinco.
+LA RELECTURA AL DOBLE DE ESTA VUELTA SE APLICA AL CIERRE PROPIO, NO AL AJENO:
+cada pieza (reporte cerrado, cabecera pegada, bateria corrida, arbol limpio) se
+comprueba dos veces, una al hacerla y otra DESPUES DE COMMITEAR, leyendo del
+arbol y de `git show` lo que acabas de escribir, Y SOBRE LO TUYO.
 
-- TAREA 1, BLOQUEANTE Y VA PRIMERA: EL CIERRE QUE FALTA Y LOS REGISTROS.
-  (1.a) CIERRAS EL REPORTE DE LA VUELTA 171. El cuerpo lo escribes tu, que eres
-  quien corrio la vuelta, y va con sus secciones 3 a 9. NO SE SUAVIZA NADA: los
-  cuatro discutibles `D.1` a `D.4` que declaraste en la prosa de tus tareas van
-  a la seccion 5 con su pregunta, y tu `CAIDA 1` (los "345 nodos") va a la
-  seccion 8 con su nombre. Encima va la cabecera tallada, que YA ESTA VERDE en
-  `docs/loop/SALIDA_V171_TALLADOR_CABECERA.txt`: SE PEGA ENTERA, no se teclea, y
-  la corri yo hoy y sale identica. Y la seccion 9, LA BATERIA, DICE LA VERDAD:
-  la de la vuelta 171 NO CORRIO, su fichero mide cero bytes, y ademas HOY ESTA
-  ROJA por letra de su propio codigo (tres arneses tuyos fuera de la nomina).
-  Remite a la seccion 5 de mi acta 171 con mi atribucion delante. ESCRIBIR AHI
-  UNA CORRIDA DE LA 172 COMO SI FUERA DE LA 171 ES LA ESPECIE QUE ESTA CAMPANA
-  PERSIGUE.
-  (1.b) EL ACTA 171 Y SUS ADJUDICACIONES 6.1 A 6.12 AL `R.41`, por el mismo
-  carril de siempre, con el numero computado por
-  `scripts/loop/serie_de_registros.py` y NO tecleado (hoy da 32 entradas, mayor
-  `R.40`, siguiente libre `R.41`; recomputalo tu). Con su arnes de mutacion del
-  registro, como las vueltas 164 a 168, 170 y 171. Mi acta trae TRES caidas
-  propias y las tres van registradas, como el `R.40` hizo con las cuatro de la
-  170.
-  (1.c) Y SOLO ENTONCES, el archivador para la 171 y el esqueleto de la 172. NO
-  te vas a poder saltar el orden aunque quieras: corri el paso 0 en modo solo
-  comprobacion contra el repo real y dice ROJO por su clausula (d). TU PROPIA
-  GUARDA DE LA 5.a ESTA MORDIENDO EN LA VUELTA SIGUIENTE A LA QUE NACIO, y eso
-  hay que decirlo en el reporte.
+TOPE DE CINCO TAREAS POR VUELTA. ESTE ENCARGO TRAE TRES, Y TE DIGO POR QUE DEJO
+DOS DE HOLGURA EN VEZ DE LLENARLAS: tres vueltas seguidas se han quedado sin
+recorrido en el mismo sitio, y una vuelta que cierra vale mas que una vuelta que
+avanza y no cierra.
 
-- TAREA 2, BLOQUEANTE PARA LA 3: SE DESENVENENA EL CONTADOR Y SE CORRIGE EL
-  `R.40` (adjudicaciones 6.1 y 6.3).
-  (2.a) `docs/loop/reportes/REPORTE_V<N>.md` ENTRA EN LA LISTA DE NARRATIVOS DEL
-  BUCLE de `scripts/loop/vuelta48_contar_ld.py`. No es doctrina nueva y no es la
-  guarda general que el acta 170 reservo al fundador: es la exclusion que el
-  instrumento YA TIENE para `REPORTE.md`, aplicada a un fichero que no se le
-  parece sino que ES EL MISMO, y lo prueba el sha256 que tu mismo publicaste,
-  `0b85f30e9c78e2b4...` identico al blob de `ca55afd8`. La exclusion va POR
-  PATRON de la carpeta de archivo, no por el nombre de una vuelta, o dentro de
-  tres vueltas hay que volver a tocarla. Con su caso positivo por mutacion, que
-  tiene que CAER si alguien la estrecha o si el archivo vuelve a contar.
-  (2.b) EL `R.40` TRAE UNA AFIRMACION FALSA Y SE CORRIGE, que es tu propia
-  doctrina de la TAREA 4.a aplicada a ti: `docs/PENDIENTES.md:12323` dice de la
-  adjudicacion 6.1 "VIA: EJECUTADA" y "EJECUTADA, TAREA 3 de esta vuelta ... las
-  16 filas ganan LD-139 a LD-154", Y LA TAREA 3 NO SE CORRIO, cosa que tu propio
-  reporte dice tres veces. Carril del banco `9.10`: la frase vieja ENTERA Y
-  TACHADA, la correccion fechada debajo con la medicion pegada, y EL REPARTO POR
-  VIA RECOMPUTADO POR INSTRUMENTO, no tecleado, porque el "EJECUTADA: 8" de esa
-  entrada cuenta esa entre las ocho. NO se toca la glosa de la 6.2, que describe
-  bien lo que paso, parada incluida.
-  (2.c) Vuelves a correr el contador y publicas la lectura nueva al lado de la
-  vieja, Y CON LA ATRIBUCION DELANTE: cada numero por encima de `LD-138` que
-  siga en el universo, con SU FICHERO Y SU LINEA. Esa lista es la guarda de la
-  TAREA 3 y sin ella la 3 no se corre.
-
-- TAREA 3, LA NUMERACION `LD`, QUE AHORA SI SE ESCRIBE (adjudicacion 6.2, que
-  refina la 6.2 de mi acta 170 con el codigo delante). La convergencia en
-  `LD-138` que aquella adjudicacion pedia es INALCANZABLE, y la culpa no es
-  tuya: el residuo es la glosa del `R.40` citando la orden del acta, y
-  `docs/PENDIENTES.md` no se puede excluir porque SI es sitio donde cabe un
-  encargo, como tu razonaste bien. LA SALIDA ESTABA EN EL MISMO SITIO DONDE
-  ESTABA LA REGLA DE LA 6.1: `serie_de_registros.py` computa el siguiente libre
-  sobre `^##\s+R\.(\d+)\.`, o sea sobre ENTRADAS ESCRITAS CON SU CABECERA, y su
-  docstring se cuida expresamente de no confundir una serie con menciones de
-  otra forma. UNA MENCION EN PROSA NO ASIGNA UN NUMERO; UNA ENTRADA ESCRITA SI.
-  Asi que la vara que asigna es la de las HECHAS, las que tienen seccion propia,
-  que hoy dan `LD-138`, y el siguiente libre es `LD-139`. Las 16 filas de la
-  segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` (lineas 327 a 518) GANAN
-  `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS POR
-  INSTRUMENTO y SIN TOCAR UNA PALABRA de su texto. CON DOS GUARDAS, y las dos
-  tienen que caer por mutacion: (i) que el numero se compute y no se teclee, y
-  (ii) que NINGUN numero por encima de `LD-138` tenga seccion propia en la
-  lectura de la 2.c; si alguno la tuviera, entonces si hay una asignacion ajena
-  y PARAS Y LO TRAES. Al terminar, el contador tiene que dar 98 hechas y
-  `LD-154` de mayor en las dos varas. Y DESPUES, la fila "lecturas dirigidas
-  encargadas y sin hacer" de `docs/plan/00_INDICE.md` recibe su cifra de hoy por
-  `9.21`, por adicion y sin tocar la letra vieja (adjudicacion 6.10): tu `D.4`
-  era correcto, y con la 2.a esa cifra deja de estar contaminada.
-
-- TAREA 4, LOS TRES ARNESES Y LA BATERIA (adjudicaciones 6.4 y 6.5). EL ORDEN
-  ES OBLIGATORIO Y NO ES CAPRICHO: si metes el arnes roto en la nomina, metes un
-  rojo dentro de la bateria.
-  (4.a) PRIMERO SE REFUNDA EL CASO `F` DE `vuelta171_tarea5a_mutacion_enchufe.py`
-  SOBRE SUJETO CONGELADO. Lo corri hoy y da EXIT 1: nueve casos pasan y
-  `F_el_reporte_170_del_repo_esta_archivado_y_calza` FALLA, real=False
-  esperado=True. La causa es de diseno, no de azar: ese caso mira EL ARBOL VIVO,
-  y solo fue cierto durante los minutos entre archivar la 170 y pisar
-  `REPORTE.md` con el esqueleto. Hoy es falso y lo sera para siempre. Contra la
-  condicion de la vuelta 148, SUJETO CONGELADO, que la 6.10 del acta 170
-  confirmo con esas palabras. Se fabrica el escenario en un temporal, como hacen
-  sus otros nueve casos, y el arnes tiene que salir verde HOY y seguir verde
-  dentro de diez vueltas. La cifra que publicaste, "10 casos, 10 pasan, 10
-  caen", era cierta cuando la corriste y NO la cuento como caida; lo que no se
-  sostiene es el arnes.
-  (4.b) LOS TRES ARNESES DE LA 171 ENTRAN EN LA NOMINA de
+- TAREA 1, BLOQUEANTE Y VA PRIMERA: LOS REGISTROS Y LA BATERIA, QUE ESTA VEZ VA
+  AL PRINCIPIO.
+  (1.a) LOS CUATRO ARNESES DE LA 172 ENTRAN EN LA NOMINA de
   `scripts/loop/verificar_mutaciones_viejas.py`:
-  `vuelta171_mutacion_busqueda_acta.py`, `vuelta171_tarea1a_mutacion_registro.py`
-  y `vuelta171_tarea5a_mutacion_enchufe.py`. Medido por mi con la funcion pura
-  del propio instrumento: `arneses_que_faltan()` da 3, la nomina tiene 75
-  entradas y su ultima vuelta representada es la 170. El propio codigo dice que
-  eso es ROJO. Los otros dos los corri y salen verdes, 43 de 43 y 16 de 16.
-  (4.c) LA BATERIA SE CORRE ENTERA Y SOLA AL CIERRE, sin nada al lado, y su
-  salida entera va en la seccion 9 del reporte de esta vuelta. Con las tres
-  entradas nuevas la nomina tiene que dar 78 y su ultima vuelta representada
-  tiene que ser la 171.
+  `vuelta172_tarea1b_mutacion_registro.py`,
+  `vuelta172_tarea2a_mutacion_exclusion.py`,
+  `vuelta172_tarea3_mutacion_numeracion.py` y
+  `vuelta172_tarea5_mutacion_cierre.py`. Es la regla escrita en ese mismo
+  fichero, una mutacion entra en la vuelta SIGUIENTE a la que nace. Medido por mi
+  con su funcion pura: `arneses_que_faltan()` devuelve hoy la 171 y esos cuatro
+  nombres, y la nomina tiene 78 entradas. LOS CUATRO SALEN VERDES POR MI MANO
+  HOY (43 de 43, 27 de 27, 24 de 24 y 17 de 17), asi que meterlos no mete ningun
+  rojo. Al terminar la nomina tiene que dar 82 y su ultima vuelta representada
+  tiene que ser la 172.
+  (1.b) LA PIEZA (4) DE `cerrar_reporte.py` ADMITE EL HUECO DECLARADO Y MEDIDO
+  (adjudicacion 6.2). Hoy esa pieza solo se satisface con la salida de la bateria
+  dentro de la seccion 9, y por eso el instrumento SOLO PUEDE CERRAR LOS REPORTES
+  QUE NO LO NECESITAN: no puede cerrar ninguno de los tres que han fallado. No es
+  doctrina nueva, es un choque entre mi propia 6.6 del acta 171 y la regla de la
+  casa que tu reporte de la 171 aplico al pie de la letra, "el hueco se declara y
+  no se rellena", que sale de `EJECUTOR.md` 1 y del carril `9.10`. LA LETRA ES
+  ESTRECHA A PROPOSITO: la (4) se satisface con la salida de la bateria dentro de
+  la 9, COMO HASTA AHORA, o con un HUECO DECLARADO que traiga las tres cosas
+  JUNTAS, el nombre del fichero, sus bytes medidos en la corrida, y la atribucion
+  de quien si la corrio o la declaracion de que nadie la corrio. LA AUSENCIA MUDA
+  NO LA SATISFACE, y UNA CORRIDA DE OTRA VUELTA PEGADA AHI TAMPOCO. Con su caso
+  positivo por mutacion, en un ARNES NUEVO, que tiene que CAER si un hueco sin
+  medicion pasa, si un hueco sin atribucion pasa, y si una corrida de otra vuelta
+  pasa. Y UNA CONDICION QUE NO ES NEGOCIABLE: LOS 17 CASOS DEL ARNES DE LA 172 SE
+  QUEDAN COMO ESTAN Y TIENEN QUE SEGUIR VERDES. Si alguno de los 17 contradice
+  esto, PARAS Y LO TRAES, porque entonces lo que yo llamo refinamiento seria un
+  cambio de criterio disfrazado y eso no lo decido yo solo.
+  (1.c) LA BATERIA SE CORRE ENTERA Y SOLA, SIN NADA AL LADO, Y SE CORRE AQUI, AL
+  PRINCIPIO DE LA VUELTA (adjudicacion 6.3). Ni una guarda se afloja: sigue
+  entera, sigue sola, y su salida sigue yendo a la seccion 9 del reporte de SU
+  vuelta, o sea de la 173. Lo unico que cambia es CUANDO. Su salida se commitea
+  en cuanto termine, antes de seguir. Si sale ROJO, lo dices con su lista entera
+  y NO lo arreglas aflojando nada: si el rojo es de un arnes cuyo sujeto cambio
+  en la 1.b, eso es la guarda funcionando y se trata como tal.
+  (1.d) EL ACTA 172 Y SUS ADJUDICACIONES 6.1 A 6.11 AL `R.42`, por el mismo
+  carril de siempre, con el numero computado por
+  `scripts/loop/serie_de_registros.py` y NO tecleado (hoy da 33 entradas, mayor
+  `R.41`, siguiente libre `R.42`; recomputalo tu). Con su arnes de mutacion del
+  registro, como las vueltas 164 a 168 y 170 a 172. Mi acta trae DOS caidas
+  propias y las dos van registradas. Y LAS GLOSAS SIGUEN SIN AFIRMAR EN PASADO,
+  que es tu propio `D.1` y funciono de verdad: la vuelta se corto y el `R.41`
+  siguio siendo cierto.
+  (1.e) Y SE PAGA LA DEUDA DEL `R.41`, QUE ES TUYA Y LA TRAIGO ENTERA. El
+  recuadro de apertura del `R.41` promete que la confirmacion medida se anexa al
+  cierre "con `scripts/loop/vuelta172_tarea1b_confirmar_r41.py`", Y ESE FICHERO
+  NO EXISTE: lo busque y no hay ningun `confirmar` en `scripts/loop/`. Nace con
+  ese nombre exacto, para que la promesa se cumpla al pie de la letra, y anexa la
+  confirmacion MEDIDA por adicion y sin tocar una letra de arriba: las siete vias
+  previstas de la 6.1, 6.2, 6.3, 6.4, 6.5, 6.6 y 6.10 SE EJECUTARON TODAS, con
+  su commit al lado, medido por instrumento y no tecleado.
 
-- TAREA 5, EL CIERRE DEL REPORTE DEJA DE SER UN PASO A MANO (adjudicacion 6.6).
-  Nace `scripts/loop/cerrar_reporte.py`, DE NOMBRE ESTABLE Y SIN NUMERO DE
-  VUELTA, como sus hermanos `paso0_archivar_anterior.py`,
-  `tallar_cabecera_reporte.py`, `archivar_reporte.py`, `serie_de_registros.py` y
-  `aislador_de_ciega.py`, para que el proximo clon no lo pierda. Hace en UN SOLO
-  ACTO lo que `vuelta171_tarea1b_cerrar_reporte_170.py` ya sabe hacer, y que ese
-  fichero te sirva de plano: pega la cabecera tallada leyendola del fichero del
-  tallador, anexa el cuerpo del cierre, escribe el veredicto de una linea, y
-  RELEE DEL DISCO lo que acaba de escribir. Y CAE EN ROJO si al terminar falta
-  cualquiera de las cuatro piezas: veredicto escrito, cabecera pegada, secciones
-  3 a 9 presentes, y la salida de la bateria dentro de la seccion 9. Con su caso
-  positivo por mutacion, que tiene que CAER si el instrumento da verde con
-  cualquiera de las cuatro ausente. ESTA VUELTA SE CIERRA CON EL, que es la
-  unica forma de saber si sirve. NO es la escalada de la racha de reporte, que
-  sigue en UNO y no se dispara; es la operacion de codigo que pide una especie
-  que ya mordio dos vueltas seguidas.
+- TAREA 2, BLOQUEANTE PARA LA 3: SE CIERRA Y SE ARCHIVA LA VUELTA 172, Y SE ABRE
+  LA 173. Y ESTA TAREA SE COMMITEA Y SE PUSHEA ANTES DE EMPEZAR LA 3, sin
+  excepcion.
+  (2.a) CIERRAS EL REPORTE DE LA VUELTA 172 CON `cerrar_reporte.py`, NO A MANO.
+  Es la unica forma de saber si el instrumento sirve, y es la tercera vez que se
+  pide. El cuerpo lo escribes tu, que eres quien corrio la vuelta, con sus
+  secciones 3 a 9. NO SE SUAVIZA NADA: los SIETE discutibles `D.1` a `D.7` que
+  declaraste en la prosa de tus tareas van a la seccion 5 con su pregunta, y tus
+  TRES `CAIDA` van a la seccion 8 con su nombre. Encima va la cabecera tallada,
+  que YA ESTA VERDE en `docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt`, con sus 11
+  filas: SE PEGA ENTERA, no se teclea, y la corri yo y sale identica byte a byte.
+  Y LA SECCION 9 DICE LA VERDAD POR EL CARRIL QUE LA 1.b ACABA DE ABRIR: la
+  bateria de la 172 NO CORRIO, su fichero mide 0 bytes, y la atribucion va
+  delante, quien si la corrio fue el auditor, en la seccion 5 de mi acta 172.
+  ESCRIBIR AHI LA CORRIDA DE LA 1.c COMO SI FUERA DE LA 172 ES LA ESPECIE QUE
+  ESTA CAMPANA PERSIGUE.
+  (2.b) Y DOS FILAS DE LA TABLA DE TAREAS DICEN LA VERDAD ANTES DE CERRAR, LAS
+  DOS CON SU MEDICION. La de la TAREA 4 dice ABIERTA y eso deja fuera que dos
+  tercios estan pagados: la 4.a y la 4.b entraron en `680f74ab` y las verifique
+  yo (15 de 15 el arnes del enchufe con sujeto congelado, 78 entradas y ultima
+  vuelta 171 la nomina); lo unico que falto fue la 4.c. Y LA DE LA TAREA 5 DICE
+  "CERRADA" Y NOMBRA COMO PRUEBA `_T5_CERRAR_REPORTE`, QUE NO EXISTE: eso es una
+  CAIDA DE REPORTE y la registro con su nombre en mi seccion 4.4. NO ACUMULA para
+  la racha, por la letra del 27 ago 2026, porque lo equivocado es una ruta y un
+  rotulo de estado y no una cifra en tabla, cabecera o conclusion; PERO SE
+  CORRIGE. Las dos filas se sustituyen por su estado medido, y LA SUSTITUCION SE
+  DECLARA en la seccion de la tarea con el commit al lado: no se reescribe la
+  historia en silencio.
+  (2.c) Y SOLO ENTONCES, el archivador para la 172 y el esqueleto de la 173. El
+  paso 0 tiene que morder si te saltas el orden, y esta vez mide contra la 172.
+  (2.d) LA RELECTURA AL DOBLE, SOBRE LO TUYO Y DESPUES DE COMMITEAR: `git show`
+  tiene que decir que `docs/loop/REPORTE.md` esta entre los ficheros del commit,
+  y sobre el fichero commiteado se comprueban las cuatro piezas otra vez, leidas
+  del blob y no del arbol.
 
-LO QUE ESTE ENCARGO NO TRAE, DICHO PARA QUE NO LO BUSQUES: `OP-L-03` sigue
-abierta y leida y NO se ejecuta esta vuelta tampoco, y el motivo lo digo entero
-en vez de esconderlo en el tope de cinco tareas: dos vueltas seguidas se han
-cortado antes de cerrar su reporte, y una vuelta entera dedicada a pagar esa
-deuda y a ponerle codigo vale mas que media ficha ejecutada sobre un mecanismo
-de cierre que no aguanta. La 173 abre con `OP-L-03`.
+- TAREA 3, EL TRABAJO: `OP-L-03`, que lleva tres vueltas aplazada y esta vez se
+  ejecuta. Ficha en 09_LECTURAS_DIRIGIDAS, MESA, en LISTA sin ninguna prueba
+  segun la vara corrida por mi hoy. Se ejecuta TAL COMO ESTA ESCRITA, con su
+  simulacion previa sobre copia en memoria, su caso positivo, sus perdidas
+  repartidas con la tabla de seis motivos, y Gate 0 y las suites en verde
+  despues. SI SU TEXTO NO ALCANZA PARA EJECUTARLA SIN DECIDIR, ES PARADA Y NO
+  UNA IMPROVISACION: paras y lo traes.
+  Y AQUI VA LO QUE CAMBIA RESPECTO DE LAS TRES VUELTAS ANTERIORES, DICHO PARA
+  QUE NO TE QUEDE DUDA: SI ESTA TAREA SE QUEDA SIN RECORRIDO, SU FILA DICE
+  ABIERTA Y LA VUELTA CIERRA IGUAL. Con la 172 ya cerrada y la bateria ya
+  corrida en la TAREA 1, cerrar el reporte de la 173 cuesta segundos, no media
+  hora. Una tarea abierta y declarada es una vuelta honesta; un reporte sin
+  cerrar es una vuelta que nadie puede auditar. NO VUELVAS A CAMBIAR LO SEGUNDO
+  POR LO PRIMERO.
+
+LO QUE ESTE ENCARGO NO TRAE, DICHO PARA QUE NO LO BUSQUES: `OP-I-01`, `OP-L-01`
+y `OP-L-02` siguen abiertas y no se tocan esta vuelta. Y no encargo ninguna
+escalada de racha: la de reporte esta en UNO y la de cifra publicada esta en
+UNO, y lo verifique pieza a pieza en vez de darlo por bueno. El codigo de las
+tareas 1.b y 1.c va por otro motivo, el de mi seccion 4.2, y lo separo para que
+nadie los confunda.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
