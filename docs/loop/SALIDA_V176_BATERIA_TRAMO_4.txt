@@ -1,0 +1,102 @@
+CORRIDA DEL TRAMO 4 DE 9, BATERIA DE LA VUELTA 176
+lanzada por scripts/loop/vuelta176_bateria_por_tramos.py
+INICIO (reloj de pared, UTC): 2026-09-05T14:25:29Z
+RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
+==============================================================================
+==============================================================================
+LAS 88 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
+  CIFRA entradas en la nomina: 88
+  CIFRA arneses en scripts/loop/ que el censo reconoce: 150
+  EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
+  `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
+  CIFRA entradas de la nomina que el censo NO VE: 0
+  CIFRA ultima vuelta representada en la nomina: 176
+  CIFRA arneses POSTERIORES a esa vuelta que se quedan FUERA: 0
+      (ninguno)
+
+  EL REPARTO EN TRAMOS (vuelta 176, TAREA 1.c). LO QUE SE PARTE ES EL
+  BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
+  DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
+  corre ENTERA en este tramo y sigue encendiendo el rojo.
+  CIFRA nomina entera: 88
+  CIFRA tamano de tramo: 10
+  CIFRA tramos del reparto (computada, no tecleada): 9
+  CIFRA TRAMO QUE SE CORRE: 4 de 9
+  CIFRA entradas de ESTE tramo: 10
+  CIFRA suma de las entradas de TODOS los tramos: 88
+      ENTRADA DEL TRAMO: vuelta154_tarea2d_mutacion_guarda.py
+      ENTRADA DEL TRAMO: vuelta154_tarea6_mutacion_corredor.py
+      ENTRADA DEL TRAMO: vuelta156_tarea4b_mutacion_tallador.py
+      ENTRADA DEL TRAMO: vuelta156_tarea5d_mutacion_corredor.py
+      ENTRADA DEL TRAMO: vuelta157_tarea4b_mutacion_tachado.py
+      ENTRADA DEL TRAMO: vuelta157_tarea5c_mutacion_ruido.py
+      ENTRADA DEL TRAMO: vuelta157_tarea6b_mutacion_re_sellado.py
+      ENTRADA DEL TRAMO: vuelta159_tarea6c_mutacion_exencion.py
+      ENTRADA DEL TRAMO: vuelta160_tarea6b_mutacion_puerta.py
+      ENTRADA DEL TRAMO: vuelta160_tarea7c_mutacion_guarda_cita.py
+
+
+  vuelta154_tarea2d_mutacion_guarda.py   exit 0  OK                 178.8s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta154_tarea6_mutacion_corredor.py  exit 0  OK                  12.0s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta156_tarea4b_mutacion_tallador.py exit 0  OK                   9.9s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta156_tarea5d_mutacion_corredor.py exit 0  OK                  63.7s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta157_tarea4b_mutacion_tachado.py  exit 0  OK                   9.0s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta157_tarea5c_mutacion_ruido.py    exit 0  OK                   9.8s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta157_tarea6b_mutacion_re_sellado.py exit 0  OK                  14.4s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta159_tarea6c_mutacion_exencion.py exit 0  OK                 533.2s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta160_tarea6b_mutacion_puerta.py   exit 0  OK                 111.6s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+  vuelta160_tarea7c_mutacion_guarda_cita.py exit 0  OK                  13.7s
+      salidas selladas que escribe (computadas, no tecleadas): ninguna
+
+  EL CRONOMETRO (adjudicacion 6.8 del acta 163)
+  CIFRA arneses cronometrados: 10
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 956.0
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 15.9
+  CIFRA arnes MAS LENTO: vuelta159_tarea6c_mutacion_exencion.py con 533.2s
+  CIFRA arnes MAS RAPIDO: vuelta157_tarea4b_mutacion_tachado.py con 9.0s
+  CIFRA mediana por arnes, en segundos: 14.4
+  CIFRA arneses que pasan de 30 segundos: 4
+  LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta159_tarea6c_mutacion_exencion.py       533.2s
+      vuelta154_tarea2d_mutacion_guarda.py         178.8s
+      vuelta160_tarea6b_mutacion_puerta.py         111.6s
+      vuelta156_tarea5d_mutacion_corredor.py        63.7s
+      vuelta157_tarea6b_mutacion_re_sellado.py      14.4s
+      vuelta160_tarea7c_mutacion_guarda_cita.py     13.7s
+      vuelta154_tarea6_mutacion_corredor.py         12.0s
+      vuelta156_tarea4b_mutacion_tallador.py         9.9s
+      vuelta157_tarea5c_mutacion_ruido.py            9.8s
+      vuelta157_tarea4b_mutacion_tachado.py          9.0s
+  AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
+  reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
+  de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
+  darle al menos este total con holgura: matarla antes NO es un rojo,
+  es no haberla medido.
+
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 0 (ninguna)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 0 (ninguna)
+  RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
+  CIFRA arneses POSTERIORES a la nomina que se quedan FUERA (recomputado al cierre): 0
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0
+
+VERDE PARCIAL DEL TRAMO 4 DE 9: las 10 entradas DE ESTE TRAMO corren, muerden y sus salidas selladas salen IDENTICAS en dos corridas seguidas. LAS OTRAS 78 ENTRADAS DE LA NOMINA NO SE HAN CORRIDO AQUI, y este verde NO dice nada de ellas: lo dira la composicion de los 9 tramos. Lo que SI cubre entero este tramo es la mirada de la nomina sobre si misma: sus 88 entradas son TODAS visibles al censo y NINGUN fichero de scripts/loop/ con nombre `vuelta<N>...<familia>...py` (familias: mutacion, caso_positivo, simular) posterior a la vuelta 176 se queda fuera de la nomina.
+FIN
+==============================================================================
+EXITCODE DEL TRAMO 4: 0
+FIN (reloj de pared, UTC): 2026-09-05T14:41:25Z
+DURACION DEL TRAMO (monotona, segundos): 956.1
+DURACION DEL TRAMO (monotona, minutos): 15.9
