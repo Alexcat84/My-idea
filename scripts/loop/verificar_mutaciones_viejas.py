@@ -618,6 +618,28 @@ VIEJAS = [
     # LA NOMINA NO SE PODA, CRECE (AUDITOR.md 6.1, opcion c RECHAZADA): con esta
     # entrada pasa de 88 a 89, y el reloj que eso suma se cuenta y se publica.
     ("vuelta177_tarea1b_mutacion_esperado_vivo.py", False),
+    # VUELTA 177, TAREAS 1.d Y 1.e. Los otros dos arneses de esta misma vuelta.
+    #
+    # Y SE ANADEN A MANO PORQUE `arneses_que_faltan()` NO LOS VE, QUE ES UN
+    # HALLAZGO Y NO UN TRAMITE. Medido en la vuelta 177: con la entrada de la
+    # 1.b ya dentro, la ultima vuelta representada en la nomina pasa a ser 177,
+    # y esa funcion solo mira los arneses de vuelta ESTRICTAMENTE POSTERIOR a la
+    # ultima representada. Resultado: los dos ficheros de abajo existian, el
+    # censo los veia, y `arneses_que_faltan()` devolvia LISTA VACIA. O sea que
+    # EL PRIMER ARNES DE UNA VUELTA CIEGA A LOS DEMAS ARNESES DE SU MISMA
+    # VUELTA. No se toca aqui: se mide, se declara y se sube en el reporte, que
+    # es lo que EJECUTOR.md 5 manda cuando algo no tiene regla escrita.
+    ("vuelta177_tarea1d_mutacion_cotejo.py", False),
+    ("vuelta177_tarea1e_mutacion_correcciones_chicas.py", False),
+    # VUELTA 177, TAREA 1.f. El tope de tramo POR MINUTOS, computado del reloj
+    # medido de la corrida anterior en vez de elegido a ojo (acta 176, 7.3).
+    # Su caso mas duro es el del RELOJ DESIGUAL: se le da un tramo carisimo
+    # entre varios baratos, que es la forma exacta del reloj de la 176, y se
+    # exige que el tamano salga del CARO y no del promedio. Con el promedio, el
+    # tramo de 15,9 minutos volveria a pasar y mas gordo.
+    #
+    # LA NOMINA CRECE DE 91 A 92 con esta entrada.
+    ("vuelta177_tarea1f_mutacion_tope_minutos.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -1121,7 +1143,82 @@ def prueba_de_reproducibilidad():
     return 1
 
 
-def reparto_en_tramos(nomina, tamano):
+# EL TOPE DE MINUTOS POR TRAMO (vuelta 177, TAREA 1.f; adjudicacion 7.3 del acta
+# 176, que contesta el `D.3` y la `P.3` a la vez). ESTA ESCRITO AQUI Y NO SE
+# ELIGE EN CADA VUELTA, que es lo que el auditor encargo con estas palabras: "el
+# reparto se hara por TOPE DE MINUTOS, no por tope de entradas, y el tamano se
+# computara del reloj medido de la corrida anterior".
+#
+# POR QUE 10 Y NO OTRO, DICHO PARA QUE SE PUEDA DISCUTIR CON LOS NUMEROS
+# DELANTE, QUE SON LOS DE LA CORRIDA DE LA 176: nueve tramos, 31,9 minutos en
+# total, el mas corto 1,1 y EL MAS LARGO 15,9. Un tope de 10 deja fuera ese
+# 15,9, que es el unico tramo que de verdad dolio, y no parte en pedazos los
+# ocho que ya cabian. Es un numero de juicio y va MARCADO COMO DISCUTIBLE en el
+# reporte de la 177: lo que NO es de juicio es que el tamano se compute en vez
+# de elegirse.
+TOPE_DE_MINUTOS_POR_TRAMO = 10.0
+
+PATRON_DURACION = re.compile(r"DURACION DEL TRAMO \(monotona, minutos\):\s*([\d.]+)")
+PATRON_ENTRADAS = re.compile(r"CIFRA entradas de ESTE tramo:\s*(\d+)")
+
+
+def reloj_de_la_corrida(texto):
+    """EL RELOJ MEDIDO DE UNA CORRIDA ANTERIOR, LEIDO DE SU SALIDA. PURA.
+
+    Recibe el TEXTO de un `SALIDA_V<N>_BATERIA.txt` y devuelve la lista de
+    (entradas_del_tramo, minutos_del_tramo), en el orden en que aparecen. Lista
+    vacia si el texto no trae ninguno de los dos marcadores, y eso ES el
+    resultado: no se inventa un reloj.
+
+    LOS DOS MARCADORES VIENEN DE SITIOS DISTINTOS Y SE EMPAREJAN POR ORDEN: las
+    entradas las imprime esta misma bateria al abrir cada tramo y la duracion la
+    imprime el lanzador al cerrarlo. Si no salen los mismos de cada uno, se
+    devuelve lo que se pueda emparejar y se declara: emparejar de mas seria
+    inventar un tramo."""
+    entradas = [int(x) for x in PATRON_ENTRADAS.findall(texto)]
+    minutos = [float(x) for x in PATRON_DURACION.findall(texto)]
+    return list(zip(entradas, minutos))
+
+
+def minutos_por_entrada(reloj):
+    """EL COSTE POR ENTRADA, EN MINUTOS, Y ES EL MAXIMO Y NO LA MEDIA. PURA.
+    Devuelve None si el reloj esta vacio o no tiene ningun tramo con entradas.
+
+    POR QUE EL MAXIMO, QUE ES LA MITAD ENTERA DE ESTA CORRECCION. La media de la
+    corrida de la 176 es 31,9 minutos entre 89 entradas, o sea 0,36 minutos por
+    entrada; con la media, un tope de 10 minutos daria tramos de 27 entradas y
+    EL TRAMO QUE TARDO 15,9 MINUTOS VOLVERIA A PASAR, mas gordo. El coste por
+    entrada NO es uniforme: en esa misma corrida va de 0,11 a 1,59 minutos por
+    entrada, catorce veces mas caro el peor que el mejor. LA VARA QUE SIRVE PARA
+    NO PASARSE DE UN TOPE ES LA DEL PEOR CASO OBSERVADO, no la del caso medio.
+    Es exactamente el argumento del auditor en el 7.3: "ese 15,9 contra los 4,3
+    es justamente por que el numero de entradas no es la vara buena"."""
+    costes = [m / e for e, m in reloj if e > 0]
+    return max(costes) if costes else None
+
+
+def tamano_por_minutos(reloj, tope=TOPE_DE_MINUTOS_POR_TRAMO, por_defecto=10):
+    """EL TAMANO DE TRAMO, COMPUTADO DEL RELOJ MEDIDO Y NO ELEGIDO A OJO. PURA.
+
+    Devuelve (tamano, motivo). Si no hay reloj del que computarlo devuelve el
+    `por_defecto` CON SU MOTIVO ESCRITO, en vez de fingir que lo computo: una
+    cifra por defecto que se disfraza de medicion es peor que una cifra elegida.
+
+    NUNCA DEVUELVE MENOS DE 1: un tramo de cero entradas no reparte nada y
+    dejaria la nomina sin correr, que es la unica cosa que la letra del fundador
+    del 5 sep no permite tocar."""
+    coste = minutos_por_entrada(reloj)
+    if coste is None or coste <= 0:
+        return por_defecto, ("SIN RELOJ QUE LEER: no se computo nada y se usa el "
+                             "por defecto %d, dicho en voz alta" % por_defecto)
+    tamano = max(1, int(tope / coste))
+    return tamano, ("COMPUTADO: tope %.1f minutos / %.4f minutos por entrada "
+                    "(el MAXIMO de %d tramo(s) medidos, no la media) = %d entradas"
+                    % (tope, coste, len(reloj), tamano))
+
+
+def reparto_en_tramos(nomina, tamano, reloj=None,
+                      tope=TOPE_DE_MINUTOS_POR_TRAMO):
     """LA NOMINA REPARTIDA EN TRAMOS DE A LO SUMO `tamano` ENTRADAS.
 
     PURA: recibe la lista y el tamano, y no lee ni escribe nada. Devuelve una
@@ -1144,6 +1241,12 @@ def reparto_en_tramos(nomina, tamano):
     Lo unico que el tramo recorta es CUANTAS ENTRADAS SE EJECUTAN en esta
     corrida, y por eso el verde de un tramo se publica como VERDE PARCIAL y dice
     a que entradas se refiere, una por una."""
+    if tamano is None:
+        # EL CARRIL DEL TOPE DE MINUTOS (vuelta 177, TAREA 1.f). Con `tamano` a
+        # None el tamano NO SE ELIGE: se computa del reloj que se le pase. Es
+        # opcional a proposito, para que las 89 llamadas viejas que pasan un
+        # numero sigan llamandolo igual y sus arneses no se muevan.
+        tamano, _motivo = tamano_por_minutos(reloj or [], tope)
     if tamano < 1:
         raise ValueError("el tamano de tramo tiene que ser 1 o mas, y llego %r"
                          % tamano)

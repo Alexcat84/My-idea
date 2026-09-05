@@ -87,6 +87,49 @@ TAMANO = 10
 MARCA_ENTRADA = "ENTRADA DEL TRAMO: "
 
 
+class Desdoble(object):
+    """STDOUT DESDOBLADO A UN FICHERO DE TRABAJO **FUERA DE `docs/loop/`**.
+
+    CORRECCION DECLARADA (2026-09-05, vuelta 177, TAREA 1.e; adjudicacion 7.5
+    del acta 176, `D.5`). LO QUE PASABA ANTES NO SE BORRA, SE CUENTA: este
+    lanzador no escribia su propia transcripcion a ningun sitio, asi que acababa
+    donde la metiera quien lo llamaba, y en la vuelta 176 quien lo llamaba la
+    metio en `docs/loop/SALIDA_V176_T1_LANZADOR_TRAMO_<N>.txt`, o sea DENTRO del
+    mismo directorio que la bateria esta mirando mientras corre. Se midio y NO
+    fabrico ruido: los nueve tramos publicaron RUIDO DE CONCURRENCIA 0 ficheros.
+    PERO ESO ES SUERTE DE BUFFER, no una garantia: la salida del lanzador se
+    quedaba en el buffer hasta que el proceso terminaba, o sea despues de la
+    bateria. UN CONTROL QUE FUNCIONA POR UNA PROPIEDAD QUE NADIE GARANTIZA NO ES
+    UN CONTROL (banco 9, fallar ruidoso).
+
+    LA CORRECCION ES LA MISMA PRECAUCION QUE EL FICHERO DE TRABAJO DEL TRAMO YA
+    TENIA, APLICADA AL SEGUNDO FICHERO: se escribe fuera de `docs/loop/`, en el
+    directorio temporal del tramo, y SE COPIA DENTRO AL FINAL, cuando la bateria
+    ya no esta mirando. Asi la evidencia no se pierde y la concurrencia no
+    depende de un buffer."""
+
+    def __init__(self, destino, original):
+        self.f = io.open(destino, "w", encoding="utf-8", newline=NL)
+        self.original = original
+
+    def write(self, s):
+        self.original.write(s)
+        self.f.write(s)
+        self.f.flush()
+        return len(s)
+
+    def flush(self):
+        self.original.flush()
+        self.f.flush()
+
+    def cerrar(self):
+        self.f.close()
+
+
+def nombre_transcripcion(n):
+    return "SALIDA_V176_LANZADOR_TRAMO_%d.txt" % n
+
+
 def ahora_utc():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -432,7 +475,32 @@ def main():
         print("ROJO: se pidio el tramo %d y el reparto solo tiene %d."
               % (a.tramo, len(tramos)))
         return 1
-    return correr_tramo(a.tramo, tramos)
+
+    # LA TRANSCRIPCION DEL PROPIO LANZADOR SE ESCRIBE FUERA DE `docs/loop/` Y SE
+    # COPIA DENTRO AL FINAL (vuelta 177, TAREA 1.e; `D.5` del acta 176, punto
+    # 7.5). Se instala AQUI y no dentro de `correr_tramo` para que envuelva la
+    # salida ENTERA del tramo, incluida la de la guarda del commit y la de la
+    # restauracion al entrar, que son las que corren antes de que exista ningun
+    # directorio temporal. Ver la clase `Desdoble` para el motivo.
+    tmpdir = tempfile.mkdtemp(prefix="v176_lanzador%d_" % a.tramo)
+    fuera = os.path.join(tmpdir, "lanzador_en_curso.txt")
+    original = sys.stdout
+    doble = Desdoble(fuera, original)
+    sys.stdout = doble
+    try:
+        print("LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE")
+        print("docs/loop/, y se copiara dentro AL TERMINAR: %s" % fuera)
+        codigo = correr_tramo(a.tramo, tramos)
+    finally:
+        sys.stdout = original
+        doble.cerrar()
+        dentro = os.path.join(LOOP, nombre_transcripcion(a.tramo))
+        datos = io.open(fuera, "rb").read()
+        io.open(dentro, "wb").write(datos)
+        print("TRANSCRIPCION DEL LANZADOR COPIADA A docs/loop/%s (%d bytes), "
+              "ESCRITA FUERA MIENTRAS LA BATERIA CORRIA"
+              % (nombre_transcripcion(a.tramo), len(datos)))
+    return codigo
 
 
 if __name__ == "__main__":

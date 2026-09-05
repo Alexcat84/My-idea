@@ -1,0 +1,116 @@
+==============================================================================
+VUELTA 177, TAREA 1.f: EL TAMANO DE TRAMO SE COMPUTA Y NO SE ELIGE
+==============================================================================
+
+A) EL TOPE, LEIDO DE SU CONSTANTE Y NO TECLEADO AQUI
+   TOPE_DE_MINUTOS_POR_TRAMO = 10.0
+
+B) EL RELOJ DE LA CORRIDA DE VERDAD, LEIDO DE SU SALIDA
+   fichero: docs/loop/SALIDA_V176_BATERIA.txt
+   existe: True | bytes: 60197
+   CIFRA tramos que el reloj trae: 9
+   el reloj: [(10, 1.5), (10, 2.6), (10, 3.9), (10, 15.9), (10, 2.0), (10, 1.6), (10, 1.5), (10, 1.8), (8, 1.1)]
+   CIFRA suma de los minutos: 31.9
+
+C) EL COSTE POR ENTRADA ES EL MAXIMO Y NO LA MEDIA, SOBRE ESE RELOJ
+   coste por entrada, MAXIMO: 1.5900
+   coste por entrada, media (que es lo que NO se usa): 0.3625
+   el maximo es 4.4 veces la media
+
+D) EL TAMANO, COMPUTADO DE ESE RELOJ
+   tamano: 6
+   motivo: COMPUTADO: tope 10.0 minutos / 1.5900 minutos por entrada (el MAXIMO de 9 tramo(s) medidos, no la media) = 6 entradas
+   y NINGUN tramo de ese tamano se pasaria del tope, al coste medido:
+      6 entradas x 1.5900 min = 9.5 min, tope 10.0
+   Y EL DE LA 176 NO CABIA, que es todo el motivo de esta tarea:
+      10 entradas x 1.5900 min = 15.9 min, tope 10.0
+
+E) MUTACION 1: UN RELOJ DESIGUAL. EL TAMANO SALE DEL CARO, NO DEL PROMEDIO
+   (ES EL CASO QUE IMPORTA: si esto se cae, la correccion no sirve)
+   reloj: [(10, 1.0), (10, 1.0), (10, 1.0), (10, 20.0)]
+   coste MAXIMO 2.00 | coste MEDIO 0.5750
+   tamano computado: 5
+   si usara la media daria: 17
+
+F) MUTACION 2: SI LA CORRIDA ES MAS LENTA, EL TAMANO BAJA
+   con el mismo reloj x4 de lento, tamano: 1 (antes 6)
+
+G) MUTACION 3: SI LA CORRIDA ES MAS RAPIDA, EL TAMANO SUBE
+   con el mismo reloj 4 veces mas rapido, tamano: 25 (antes 6)
+
+H) MUTACION 4: SIN RELOJ, NO FINGE QUE COMPUTO NADA
+   tamano: 10 | motivo: SIN RELOJ QUE LEER: no se computo nada y se usa el por defecto 10, dicho en voz alta
+   y un texto sin marcadores da reloj vacio en vez de reventar:
+      reloj_de_la_corrida('hola'): []
+
+I) MUTACION 5: UN RELOJ ABSURDO NUNCA DA UN TRAMO DE CERO
+   con 10000 minutos por entrada, tamano: 1
+   (un tramo de cero entradas dejaria la nomina sin correr, que es la
+    unica cosa que la letra del fundador del 5 sep no permite tocar)
+
+J) EL CARRIL NUEVO DE reparto_en_tramos(), Y QUE EL VIEJO NO SE MOVIO
+   con tamano=None y reloj: 16 tramos
+   con tamano=10, como siempre: 10 tramos
+   LA UNION SIGUE SIENDO LA NOMINA ENTERA, que es lo que este reparto
+   no puede romper nunca:
+      con reloj    -> 91 entradas, identicas y en orden a la nomina: True
+      con numero   -> 91 entradas, identicas y en orden a la nomina: True
+
+K) PASADA 1, LOS CASOS TAL CUAL
+   A_el_tope_esta_escrito_en_el_fichero                   PASA   (real=True esperado=True)
+   A_el_tope_es_mayor_que_cero                            PASA   (real=True esperado=True)
+   B_la_salida_de_la_176_existe                           PASA   (real=True esperado=True)
+   B_el_reloj_trae_nueve_tramos                           PASA   (real=9 esperado=9)
+   B_la_suma_del_reloj_es_la_publicada                    PASA   (real=31.9 esperado=31.9)
+   B_la_suma_de_entradas_es_la_nomina_de_la_176           PASA   (real=88 esperado=88)
+   C_el_coste_es_el_maximo                                PASA   (real=1.59 esperado=1.59)
+   C_el_maximo_no_es_la_media                             PASA   (real=False esperado=False)
+   D_el_motivo_dice_COMPUTADO                             PASA   (real=True esperado=True)
+   D_el_tamano_es_el_del_tope_entre_el_coste              PASA   (real=6 esperado=6)
+   D_el_tramo_computado_cabe_en_el_tope                   PASA   (real=True esperado=True)
+   D_el_tramo_de_la_176_NO_cabia_en_el_tope               PASA   (real=False esperado=False)
+   E_desigual_sale_del_caro                               PASA   (real=5 esperado=5)
+   E_desigual_NO_sale_del_promedio                        PASA   (real=False esperado=False)
+   F_mas_lento_da_tramo_mas_chico                         PASA   (real=True esperado=True)
+   G_mas_rapido_da_tramo_mas_grande                       PASA   (real=True esperado=True)
+   H_sin_reloj_devuelve_el_por_defecto                    PASA   (real=10 esperado=10)
+   H_sin_reloj_lo_dice_en_voz_alta                        PASA   (real=True esperado=True)
+   H_sin_reloj_NO_dice_COMPUTADO                          PASA   (real=False esperado=False)
+   H_texto_sin_marcadores_da_reloj_vacio                  PASA   (real=0 esperado=0)
+   I_nunca_devuelve_menos_de_uno                          PASA   (real=1 esperado=1)
+   J_el_carril_nuevo_reparte_por_el_computado             PASA   (real=6 esperado=6)
+   J_el_carril_viejo_sigue_repartiendo_de_diez            PASA   (real=10 esperado=10)
+   J_con_reloj_la_union_es_la_nomina                      PASA   (real=True esperado=True)
+   J_con_numero_la_union_es_la_nomina                     PASA   (real=True esperado=True)
+   CIFRA casos: 25 | pasan: 25 | fallan: 0
+
+L) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_el_tope_esta_escrito_en_el_fichero                   CAE   (esperado mutado=False)
+   A_el_tope_es_mayor_que_cero                            CAE   (esperado mutado=False)
+   B_la_salida_de_la_176_existe                           CAE   (esperado mutado=False)
+   B_el_reloj_trae_nueve_tramos                           CAE   (esperado mutado=10)
+   B_la_suma_del_reloj_es_la_publicada                    CAE   (esperado mutado=32.9)
+   B_la_suma_de_entradas_es_la_nomina_de_la_176           CAE   (esperado mutado=89)
+   C_el_coste_es_el_maximo                                CAE   (esperado mutado=2.59)
+   C_el_maximo_no_es_la_media                             CAE   (esperado mutado=True)
+   D_el_motivo_dice_COMPUTADO                             CAE   (esperado mutado=False)
+   D_el_tamano_es_el_del_tope_entre_el_coste              CAE   (esperado mutado=7)
+   D_el_tramo_computado_cabe_en_el_tope                   CAE   (esperado mutado=False)
+   D_el_tramo_de_la_176_NO_cabia_en_el_tope               CAE   (esperado mutado=True)
+   E_desigual_sale_del_caro                               CAE   (esperado mutado=6)
+   E_desigual_NO_sale_del_promedio                        CAE   (esperado mutado=True)
+   F_mas_lento_da_tramo_mas_chico                         CAE   (esperado mutado=False)
+   G_mas_rapido_da_tramo_mas_grande                       CAE   (esperado mutado=False)
+   H_sin_reloj_devuelve_el_por_defecto                    CAE   (esperado mutado=11)
+   H_sin_reloj_lo_dice_en_voz_alta                        CAE   (esperado mutado=False)
+   H_sin_reloj_NO_dice_COMPUTADO                          CAE   (esperado mutado=True)
+   H_texto_sin_marcadores_da_reloj_vacio                  CAE   (esperado mutado=1)
+   I_nunca_devuelve_menos_de_uno                          CAE   (esperado mutado=2)
+   J_el_carril_nuevo_reparte_por_el_computado             CAE   (esperado mutado=7)
+   J_el_carril_viejo_sigue_repartiendo_de_diez            CAE   (esperado mutado=11)
+   J_con_reloj_la_union_es_la_nomina                      CAE   (esperado mutado=False)
+   J_con_numero_la_union_es_la_nomina                     CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 25 de 25
+
+VERDE: los 25 casos pasan tal cual y los 25 caen al mutar el esperado.
+EXIT=0

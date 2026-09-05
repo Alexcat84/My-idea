@@ -473,6 +473,7 @@ import sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
+NL = chr(10)
 
 
 def leer(nombre, fallos):
@@ -1688,6 +1689,75 @@ def modo_tramo_cadena(vuelta, tramo, comparar_ruta, registro_ruta=None):
     return 0
 
 
+def sellar_rechazo(vuelta, fallos):
+    """EL RECHAZO DEL TALLADOR DEJA RASTRO EN DISCO, Y NO SOLO EN LA CONSOLA.
+
+    Escribe `docs/loop/SALIDA_V<N>_TALLADOR_RECHAZO.txt` con las celdas que no se
+    pudieron leer y de que lado esta cada una. Devuelve la ruta escrita, o None
+    si no se pudo escribir (y entonces lo dice, en vez de callarse).
+
+    POR QUE NACE (2026-09-05, vuelta 177, TAREA 1.e; acta 176, seccion 9, punto
+    4). El reporte de la 176 publico *"37 celdas que no se pudieron leer, 18 del
+    lado APERTURA"* y el auditor NO PUDO RE-VERIFICAR EL 37: para cuando fue a
+    mirar, los ficheros de cierre ya existian y el tallador no habia dejado
+    salida de aquel rechazo. No lo conto como caida, lo conto como QUE UNA CIFRA
+    SE PUBLICO SIN DEJAR RASTRO AUDITABLE, y encargo que el rechazo se selle.
+
+    UNA CIFRA QUE SOLO VIVE EN LA CONSOLA DE QUIEN CORRIO EL COMANDO NO ES UNA
+    CIFRA PUBLICADA, ES UN RECUERDO. Y este tallador existe precisamente porque
+    en esta casa los recuerdos no valen (`EJECUTOR.md` 1, LA CABECERA DEL REPORTE
+    SE TALLA, NO SE TECLEA). Que el instrumento que impide teclear cifras dejara
+    su propia cifra sin sellar era el ultimo agujero de esa regla.
+
+    EL LADO SE DECIDE POR LO QUE DICE EL FALLO Y NO POR SU ORDEN, y las tres
+    respuestas posibles se escriben: APERTURA, CIERRE o SIN LADO. Un fallo que
+    no nombra ningun lado NO se reparte a ojo entre los dos: se cuenta aparte."""
+    ruta = os.path.join(LOOP, "SALIDA_V%d_TALLADOR_RECHAZO.txt" % vuelta)
+    filas = []
+    for f in fallos:
+        ap, ci = ("APERTURA" in f), ("CIERRE" in f)
+        if ap and not ci:
+            lado = "APERTURA"
+        elif ci and not ap:
+            lado = "CIERRE"
+        elif ap and ci:
+            lado = "LOS DOS"
+        else:
+            lado = "SIN LADO"
+        filas.append((lado, f))
+    cuenta = {}
+    for lado, _f in filas:
+        cuenta[lado] = cuenta.get(lado, 0) + 1
+
+    ls = []
+    ls.append("EL RECHAZO DEL TALLADOR DE CABECERA, SELLADO EN DISCO")
+    ls.append("instrumento: scripts/loop/tallar_cabecera_reporte.py")
+    ls.append("vuelta: %d" % vuelta)
+    ls.append("")
+    ls.append("CIFRA celdas que no se pudieron leer: %d" % len(fallos))
+    for lado in ("APERTURA", "CIERRE", "LOS DOS", "SIN LADO"):
+        ls.append("CIFRA de ellas del lado %-8s: %d" % (lado, cuenta.get(lado, 0)))
+    ls.append("")
+    ls.append("LAS CELDAS, UNA A UNA, CON SU LADO")
+    for lado, f in filas:
+        ls.append("   [%-8s] %s" % (lado, f))
+    ls.append("")
+    ls.append("QUE ES ESTE FICHERO Y QUE NO ES: es la prueba de que el tallador se")
+    ls.append("NEGO A TALLAR y por que. NO es una cabecera, no se pega en ningun")
+    ls.append("reporte y no sustituye a la tabla: la tabla solo existe cuando el")
+    ls.append("tallador sale VERDE. Esto es lo que queda cuando sale ROJO, para que")
+    ls.append("la cifra del rojo se pueda re-verificar despues (acta 176, punto 9.4).")
+    texto = NL.join(ls) + NL
+    try:
+        io.open(ruta, "w", encoding="utf-8", newline=NL).write(texto)
+    except OSError as e:
+        print("     NO SE PUDO SELLAR EL RECHAZO EN DISCO: %s" % e)
+        return None
+    print("     RECHAZO SELLADO EN docs/loop/%s (%d bytes, %d celdas)"
+          % (os.path.basename(ruta), len(texto.encode("utf-8")), len(fallos)))
+    return ruta
+
+
 def main():
     ap_arg = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -1761,6 +1831,7 @@ def main():
         print("  ROJO, %d celdas no se pudieron leer y NO se talla nada:" % len(fallos))
         for fallo in fallos:
             print("     %s" % fallo)
+        sellar_rechazo(a.vuelta, fallos)
         return 1
 
     f = filas_fase04(apertura, cierre, con_miles) if a.fase04 else filas(apertura, cierre, con_miles)

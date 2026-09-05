@@ -1,0 +1,110 @@
+==============================================================================
+VUELTA 177, TAREA 1.e: LAS DOS CORRECCIONES CHICAS, PROBADAS
+==============================================================================
+
+A) SUJETO 1, `D.5`: LA TRANSCRIPCION DEL LANZADOR FUERA DE docs/loop/
+   sujeto: scripts/loop/vuelta176_bateria_por_tramos.py
+
+A.1 LO QUE EL FICHERO DICE DE SI MISMO, LEIDO Y NO RECORDADO
+   contiene 'class Desdoble'                 -> True
+   contiene 'def nombre_transcripcion'       -> True
+   contiene 'lanzador_en_curso.txt'          -> True
+
+A.2 EL CAMINO REAL, EJERCITADO CON UN DOBLE DE `correr_tramo`
+   (NO se corre ni una entrada de la nomina: esta vuelta no es de
+    bateria y ademas la bateria muta dataset/)
+   docs/loop/SALIDA_V176_LANZADOR_TRAMO_1.txt existia ANTES: False
+LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v176_lanzador1_r6i8wqm6\lanzador_en_curso.txt
+   (desde dentro del tramo) esto se esta escribiendo al doble
+TRANSCRIPCION DEL LANZADOR COPIADA A docs/loop/SALIDA_V176_LANZADOR_TRAMO_1.txt (253 bytes), ESCRITA FUERA MIENTRAS LA BATERIA CORRIA
+   codigo que devuelve main(): 0
+   MIENTRAS EL TRAMO CORRIA, docs/loop/SALIDA_V176_LANZADOR_TRAMO_1.txt existia: False
+   MIENTRAS EL TRAMO CORRIA, sys.stdout era el Desdoble: True
+   la ruta a la que escribia: C:\Users\AlexDesk\AppData\Local\Temp\v176_lanzador1_r6i8wqm6\lanzador_en_curso.txt
+   esa ruta esta FUERA de docs/loop/: True
+   AL TERMINAR, docs/loop/SALIDA_V176_LANZADOR_TRAMO_1.txt existe: True
+   y trae lo que se imprimio durante el tramo: True
+   LIMPIEZA: docs/loop/SALIDA_V176_LANZADOR_TRAMO_1.txt borrado: True
+
+B) SUJETO 2: EL TALLADOR SELLA SU PROPIO RECHAZO
+   sujeto: scripts/loop/tallar_cabecera_reporte.py, sellar_rechazo()
+
+B.1 CINCO CELDAS FABRICADAS: 2 de APERTURA, 2 de CIERRE, 1 SIN LADO
+     RECHAZO SELLADO EN docs/loop/SALIDA_V800_TALLADOR_RECHAZO.txt (972 bytes, 5 celdas)
+   ruta escrita: C:\Users\AlexDesk\AppData\Local\Temp\v177_tallador_jrmr880o\SALIDA_V800_TALLADOR_RECHAZO.txt
+   se llama SALIDA_V800_TALLADOR_RECHAZO.txt: True
+   CIFRA bytes del sello: 972
+B.2 LAS CIFRAS DEL SELLO, LEIDAS DE SU PROPIO TEXTO
+   'CIFRA celdas que no se pudieron leer: 5'            -> True
+   'CIFRA de ellas del lado APERTURA: 2'                -> True
+   'CIFRA de ellas del lado CIERRE  : 2'                -> True
+   'CIFRA de ellas del lado SIN LADO: 1'                -> True
+B.3 LAS CINCO CELDAS ESTAN UNA A UNA, CON SU LADO
+   las 5 celdas aparecen en el sello: True
+   los tres lados aparecen etiquetados: True
+B.4 EL SELLO NO REPARTE A OJO LO QUE NO NOMBRA NINGUN LADO
+   (una celda que no dice de que lado es NO se cuenta como apertura
+    ni como cierre: se cuenta aparte, que es lo unico honesto)
+B.5 MUTACION: SI LAS CELDAS CAMBIAN, EL SELLO CAMBIA
+     RECHAZO SELLADO EN docs/loop/SALIDA_V801_TALLADOR_RECHAZO.txt (803 bytes, 2 celdas)
+   con 2 celdas en vez de 5, dice 2: True
+   el directorio temporal se borro: True
+   y TALL.LOOP volvio a su sitio: True
+
+C) PASADA 1, LOS CASOS TAL CUAL
+   1_el_lanzador_lleva_Desdoble                           PASA   (real=True esperado=True)
+   1_el_lanzador_lleva_nombre_transcripcion               PASA   (real=True esperado=True)
+   1_el_lanzador_lleva_lanzador_en_curso.txt              PASA   (real=True esperado=True)
+   1_no_existia_antes                                     PASA   (real=False esperado=False)
+   1_main_devuelve_lo_del_tramo                           PASA   (real=0 esperado=0)
+   1_NO_existe_dentro_mientras_corre                      PASA   (real=False esperado=False)
+   1_stdout_desdoblado_durante_el_tramo                   PASA   (real=True esperado=True)
+   1_la_ruta_de_trabajo_esta_fuera_de_loop                PASA   (real=True esperado=True)
+   1_SI_existe_al_terminar                                PASA   (real=True esperado=True)
+   1_la_transcripcion_trae_lo_impreso                     PASA   (real=True esperado=True)
+   1_limpieza_del_arnes                                   PASA   (real=False esperado=False)
+   2_devuelve_una_ruta                                    PASA   (real=True esperado=True)
+   2_el_fichero_existe                                    PASA   (real=True esperado=True)
+   2_el_nombre_es_el_que_el_acta_pide                     PASA   (real=True esperado=True)
+   2_no_mide_cero_bytes                                   PASA   (real=True esperado=True)
+   2_sello_dice_CIFRA_celdas_que_no_se_pudieron_le        PASA   (real=True esperado=True)
+   2_sello_dice_CIFRA_de_ellas_del_lado_APERTURA          PASA   (real=True esperado=True)
+   2_sello_dice_CIFRA_de_ellas_del_lado_CIERRE__          PASA   (real=True esperado=True)
+   2_sello_dice_CIFRA_de_ellas_del_lado_SIN_LADO          PASA   (real=True esperado=True)
+   2_las_celdas_estan_una_a_una                           PASA   (real=True esperado=True)
+   2_cada_celda_lleva_su_lado                             PASA   (real=True esperado=True)
+   2_sin_lado_no_se_reparte                               PASA   (real=True esperado=True)
+   2_con_dos_celdas_dice_dos                              PASA   (real=True esperado=True)
+   2_los_dos_sellos_no_son_iguales                        PASA   (real=False esperado=False)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+D) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   1_el_lanzador_lleva_Desdoble                           CAE   (esperado mutado=False)
+   1_el_lanzador_lleva_nombre_transcripcion               CAE   (esperado mutado=False)
+   1_el_lanzador_lleva_lanzador_en_curso.txt              CAE   (esperado mutado=False)
+   1_no_existia_antes                                     CAE   (esperado mutado=True)
+   1_main_devuelve_lo_del_tramo                           CAE   (esperado mutado=1)
+   1_NO_existe_dentro_mientras_corre                      CAE   (esperado mutado=True)
+   1_stdout_desdoblado_durante_el_tramo                   CAE   (esperado mutado=False)
+   1_la_ruta_de_trabajo_esta_fuera_de_loop                CAE   (esperado mutado=False)
+   1_SI_existe_al_terminar                                CAE   (esperado mutado=False)
+   1_la_transcripcion_trae_lo_impreso                     CAE   (esperado mutado=False)
+   1_limpieza_del_arnes                                   CAE   (esperado mutado=True)
+   2_devuelve_una_ruta                                    CAE   (esperado mutado=False)
+   2_el_fichero_existe                                    CAE   (esperado mutado=False)
+   2_el_nombre_es_el_que_el_acta_pide                     CAE   (esperado mutado=False)
+   2_no_mide_cero_bytes                                   CAE   (esperado mutado=False)
+   2_sello_dice_CIFRA_celdas_que_no_se_pudieron_le        CAE   (esperado mutado=False)
+   2_sello_dice_CIFRA_de_ellas_del_lado_APERTURA          CAE   (esperado mutado=False)
+   2_sello_dice_CIFRA_de_ellas_del_lado_CIERRE__          CAE   (esperado mutado=False)
+   2_sello_dice_CIFRA_de_ellas_del_lado_SIN_LADO          CAE   (esperado mutado=False)
+   2_las_celdas_estan_una_a_una                           CAE   (esperado mutado=False)
+   2_cada_celda_lleva_su_lado                             CAE   (esperado mutado=False)
+   2_sin_lado_no_se_reparte                               CAE   (esperado mutado=False)
+   2_con_dos_celdas_dice_dos                              CAE   (esperado mutado=False)
+   2_los_dos_sellos_no_son_iguales                        CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.
+EXIT=0

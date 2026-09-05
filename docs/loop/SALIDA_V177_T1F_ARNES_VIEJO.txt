@@ -1,0 +1,38 @@
+==============================================================================
+PRUEBA DE MUTACION DEL REPARTO EN TRAMOS (vuelta 176, TAREA 1.c)
+==============================================================================
+Sujeto: reparto_en_tramos() de verificar_mutaciones_viejas.py
+Todo sobre nominas FABRICADAS en memoria. No se escribe nada.
+
+(a) EL REPARTO DE VERDAD, SOBRE NOMINAS FABRICADAS DE VARIOS TAMANOS
+    Ninguna cifra esperada se teclea: todas se computan de la nomina.
+    CIFRA casos buenos corridos: 35
+    CIFRA casos buenos que fallan: 0
+
+(b) LA NOMINA DE VERDAD, LEIDA DEL MODULO Y NO TECLEADA
+    CIFRA entradas de la nomina real: 91
+    tamano   5 -> 19 tramos, el ultimo con  1 entradas, invariante: INTACTO
+    tamano  10 -> 10 tramos, el ultimo con  1 entradas, invariante: INTACTO
+    tamano  15 ->  7 tramos, el ultimo con  1 entradas, invariante: INTACTO
+    tamano  20 ->  5 tramos, el ultimo con 11 entradas, invariante: INTACTO
+
+(c) LOS TRES REPARTOS ROTOS. EL INVARIANTE TIENE QUE CAZAR LOS TRES.
+    Si aprobara uno solo, `lo_que_rompe()` seria un invariante vacio
+    y los casos de arriba no probarian nada.
+    reparto que PIERDE entradas        cazado en 4 de 4 escenarios
+        primer motivo: (a) la concatenacion de los tramos NO es la nomina en su orden: 80 entradas concatenadas contra 
+    reparto que REPITE entradas        cazado en 4 de 4 escenarios
+        primer motivo: (a) la concatenacion de los tramos NO es la nomina en su orden: 96 entradas concatenadas contra 
+    reparto que DESORDENA los tramos   cazado en 4 de 4 escenarios
+        primer motivo: (a) la concatenacion de los tramos NO es la nomina en su orden: 87 entradas concatenadas contra 
+
+(d) UN TAMANO DE TRAMO ILEGAL SE NIEGA, NO SE APANA
+    tamano  0 -> ValueError, como tiene que ser: el tamano de tramo tiene que ser 1 o mas, y llego 0
+    tamano -1 -> ValueError, como tiene que ser: el tamano de tramo tiene que ser 1 o mas, y llego -1
+
+==============================================================================
+VERDE: el reparto conserva la nomina entera, en su orden, sin perder ni
+repetir ni una entrada, en los 35 casos fabricados y en la nomina real;
+se niega a repartir con un tamano ilegal; y el invariante que lo dice
+CAZA los tres repartos rotos, o sea que no es un invariante vacio.
+EXIT=0

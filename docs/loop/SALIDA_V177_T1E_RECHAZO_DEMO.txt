@@ -1,0 +1,66 @@
+DEMOSTRACION DE LA TAREA 1.e DE LA VUELTA 177: EL TALLADOR SELLA SU RECHAZO.
+Este fichero lo escribio scripts/loop/tallar_cabecera_reporte.py corrido con
+--fase04 --vuelta 999, una vuelta que NO EXISTE y que por eso no tiene ni una
+sola de sus salidas: es la forma de provocar un rechazo entero sin falsear nada.
+El fichero que el tallador escribio se llamaba SALIDA_V999_TALLADOR_RECHAZO.txt
+y se renombro a este nombre para no dejar en docs/loop/ una salida con numero de
+una vuelta inventada. Su contenido, debajo, es byte a byte el que salio.
+==============================================================================
+
+EL RECHAZO DEL TALLADOR DE CABECERA, SELLADO EN DISCO
+instrumento: scripts/loop/tallar_cabecera_reporte.py
+vuelta: 999
+
+CIFRA celdas que no se pudieron leer: 40
+CIFRA de ellas del lado APERTURA: 19
+CIFRA de ellas del lado CIERRE  : 19
+CIFRA de ellas del lado LOS DOS : 0
+CIFRA de ellas del lado SIN LADO: 2
+
+LAS CELDAS, UNA A UNA, CON SU LADO
+   [APERTURA] no existe la salida SALIDA_V999_GATE0_CMD1_APERTURA.txt
+   [APERTURA] sin texto para censo (nodos) APERTURA
+   [APERTURA] sin texto para censo (vivos) APERTURA
+   [APERTURA] sin texto para censo (deprecados) APERTURA
+   [APERTURA] sin texto para Gate 0 auto-aristas APERTURA
+   [APERTURA] sin texto para Gate 0 duplicadas de titulo APERTURA
+   [APERTURA] sin texto para Gate 0 nodos divergentes APERTURA
+   [APERTURA] sin texto para veredicto Gate 0 APERTURA
+   [APERTURA] no existe la salida SALIDA_V999_CONTEO_APERTURA.txt
+   [APERTURA] no se pudo leer las cifras de aristas APERTURA
+   [APERTURA] no existe la salida SALIDA_V999_MOTOR_APERTURA.txt
+   [APERTURA] sin texto para motor APERTURA
+   [APERTURA] no existe la salida SALIDA_V999_WEB_APERTURA.txt
+   [APERTURA] no se pudo leer web ficheros APERTURA
+   [APERTURA] no se pudo leer web tests APERTURA
+   [APERTURA] no existe la salida SALIDA_V999_TSC_APERTURA.txt
+   [APERTURA] no existe la salida SALIDA_V999_DESFASE_CALIBRADO_APERTURA.txt
+   [APERTURA] sin texto para desfase APERTURA
+   [CIERRE  ] no existe la salida SALIDA_V999_GATE0_CMD1_CIERRE.txt
+   [CIERRE  ] sin texto para censo (nodos) CIERRE
+   [CIERRE  ] sin texto para censo (vivos) CIERRE
+   [CIERRE  ] sin texto para censo (deprecados) CIERRE
+   [CIERRE  ] sin texto para Gate 0 auto-aristas CIERRE
+   [CIERRE  ] sin texto para Gate 0 duplicadas de titulo CIERRE
+   [CIERRE  ] sin texto para Gate 0 nodos divergentes CIERRE
+   [CIERRE  ] sin texto para veredicto Gate 0 CIERRE
+   [CIERRE  ] no existe la salida SALIDA_V999_CONTEO_CIERRE.txt
+   [CIERRE  ] no se pudo leer las cifras de aristas CIERRE
+   [CIERRE  ] no existe la salida SALIDA_V999_MOTOR_CIERRE.txt
+   [CIERRE  ] sin texto para motor CIERRE
+   [CIERRE  ] no existe la salida SALIDA_V999_WEB_CIERRE.txt
+   [CIERRE  ] no se pudo leer web ficheros CIERRE
+   [CIERRE  ] no se pudo leer web tests CIERRE
+   [CIERRE  ] no existe la salida SALIDA_V999_TSC_CIERRE.txt
+   [CIERRE  ] no existe la salida SALIDA_V999_DESFASE_CALIBRADO_CIERRE.txt
+   [CIERRE  ] sin texto para desfase CIERRE
+   [SIN LADO] git log de la rama pasada-unica no trae ningun commit 'ACTA DE LA VUELTA 998 DEL AUDITOR' ni 'ACTA DEL AUDITOR, VUELTA 998', ni anclado ni suelto: no se talla el commit de apertura
+   [APERTURA] no existe el sello SALIDA_V999_HEAD_APERTURA.txt (el ejecutor debe correr `git rev-parse HEAD` antes de la 1.a operacion y guardarlo ahi)
+   [SIN LADO] sin rama o sin sello de apertura, no se puede leer la procedencia del sello
+   [CIERRE  ] no existe el sello SALIDA_V999_HEAD_CIERRE.txt (el ejecutor debe correr `git rev-parse HEAD` tras la ultima operacion, antes de escribir el reporte, y guardarlo ahi)
+
+QUE ES ESTE FICHERO Y QUE NO ES: es la prueba de que el tallador se
+NEGO A TALLAR y por que. NO es una cabecera, no se pega en ningun
+reporte y no sustituye a la tabla: la tabla solo existe cuando el
+tallador sale VERDE. Esto es lo que queda cuando sale ROJO, para que
+la cifra del rojo se pueda re-verificar despues (acta 176, punto 9.4).
