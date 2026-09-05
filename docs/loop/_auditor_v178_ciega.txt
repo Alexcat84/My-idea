@@ -1,0 +1,264 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   los 12 puestos que la TAREA 2 del reporte 177 cita como lados de sus tres formas y sus cinco triangulos (334 394 404 451 460 530 787 863 878 1030 1121 1374), mas 4 pares de FUERA del marcado por muestra con semilla 178
+
+CIFRA pares elegidos: 16
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 334
+nodo_a: construccion_de_leverage
+nodo_b: leverage_en_negociacion_con_vcs
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (leverage_en_negociacion_con_vcs): 4
+     paso 1: Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+     paso 2: Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+     paso 3: Explora ofertas de compra como palanca de negociación
+     paso 4: Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+------------------------------------------------------------------------------
+puesto_intra: 394
+nodo_a: construccion_de_leverage
+nodo_b: gestion_multiples_term_sheets
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (gestion_multiples_term_sheets): 5
+     paso 1: Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+     paso 2: Coordinar el ritmo de las conversaciones para que avancen en paralelo
+     paso 3: Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+     paso 4: Nunca compartir el contenido de un term sheet con otro inversor
+     paso 5: Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+------------------------------------------------------------------------------
+puesto_intra: 404
+nodo_a: cash_burn_calculation
+nodo_b: metrics_that_matter_framework
+  pasos de A (cash_burn_calculation): 4
+     paso 1: Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+     paso 2: Resta tus costos de ventas, de producto y los operativos corrientes
+     paso 3: El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+     paso 4: Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+  pasos de B (metrics_that_matter_framework): 6
+     paso 1: Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+     paso 2: Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+     paso 3: Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+     paso 4: Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+     paso 5: Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+     paso 6: Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+------------------------------------------------------------------------------
+puesto_intra: 451
+nodo_a: validacion_hipotesis_ingresos
+nodo_b: verificar_modelo_ingresos
+  pasos de A (validacion_hipotesis_ingresos): 5
+     paso 1: Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+     paso 2: Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+     paso 3: Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+     paso 4: Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+     paso 5: Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+  pasos de B (verificar_modelo_ingresos): 6
+     paso 1: Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+     paso 2: Calcula el ingreso bruto directo estimado por trimestre
+     paso 3: Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+     paso 4: Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+     paso 5: Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+     paso 6: Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+------------------------------------------------------------------------------
+puesto_intra: 460
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: estrategia_de_innovacion_de_producto
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (estrategia_de_innovacion_de_producto): 6
+     paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+     paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+     paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+     paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+     paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 467
+nodo_a: diseno_experimentos_hipotesis
+nodo_b: diseno_experimentos_pass_fail
+  pasos de A (diseno_experimentos_hipotesis): 4
+     paso 1: Pregúntate qué necesitas saber para poder avanzar
+     paso 2: Define la prueba más simple posible para conseguir esa respuesta
+     paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+     paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+  pasos de B (diseno_experimentos_pass_fail): 6
+     paso 1: Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+     paso 2: Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+     paso 3: Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+     paso 4: Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+     paso 5: Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+     paso 6: Registrar no solo el resultado pass/fail sino también los insights cualitativos
+------------------------------------------------------------------------------
+puesto_intra: 530
+nodo_a: estrategia_de_innovacion_de_producto
+nodo_b: estrategia_de_innovacion_y_tecnologia
+  pasos de A (estrategia_de_innovacion_de_producto): 6
+     paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+     paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+     paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+     paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+     paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+  pasos de B (estrategia_de_innovacion_y_tecnologia): 5
+     paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+     paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+     paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+     paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+     paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+------------------------------------------------------------------------------
+puesto_intra: 787
+nodo_a: construccion_de_leverage
+nodo_b: estrategia_competencia_vcs
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (estrategia_competencia_vcs): 4
+     paso 1: Planea tu ronda con una ventana de 3 a 6 meses.
+     paso 2: Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.
+     paso 3: No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos.
+     paso 4: Pide feedback concreto si un inversor decide no invertir.
+------------------------------------------------------------------------------
+puesto_intra: 863
+nodo_a: estrategia_de_innovacion_y_tecnologia
+nodo_b: estrategia_innovacion_producto
+  pasos de A (estrategia_de_innovacion_y_tecnologia): 5
+     paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+     paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+     paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+     paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+     paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+  pasos de B (estrategia_innovacion_producto): 6
+     paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+     paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+     paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+     paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+     paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 878
+nodo_a: construccion_de_leverage
+nodo_b: tecnica_anclaje_negociacion
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (tecnica_anclaje_negociacion): 4
+     paso 1: Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio
+     paso 2: Definir posiciones razonables pero con margen de flexibilidad en esos puntos
+     paso 3: Comunicar estas posiciones de forma clara y consistente
+     paso 4: Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados
+------------------------------------------------------------------------------
+puesto_intra: 1030
+nodo_a: gestion_multiples_term_sheets
+nodo_b: leverage_en_negociacion_con_vcs
+  pasos de A (gestion_multiples_term_sheets): 5
+     paso 1: Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+     paso 2: Coordinar el ritmo de las conversaciones para que avancen en paralelo
+     paso 3: Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+     paso 4: Nunca compartir el contenido de un term sheet con otro inversor
+     paso 5: Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+  pasos de B (leverage_en_negociacion_con_vcs): 4
+     paso 1: Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+     paso 2: Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+     paso 3: Explora ofertas de compra como palanca de negociación
+     paso 4: Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+------------------------------------------------------------------------------
+puesto_intra: 1121
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: estrategia_innovacion_producto
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (estrategia_innovacion_producto): 6
+     paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+     paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+     paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+     paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+     paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 1374
+nodo_a: cash_burn_calculation
+nodo_b: validacion_hipotesis_ingresos
+  pasos de A (cash_burn_calculation): 4
+     paso 1: Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+     paso 2: Resta tus costos de ventas, de producto y los operativos corrientes
+     paso 3: El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+     paso 4: Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+  pasos de B (validacion_hipotesis_ingresos): 5
+     paso 1: Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+     paso 2: Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+     paso 3: Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+     paso 4: Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+     paso 5: Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+------------------------------------------------------------------------------
+puesto_intra: 1932
+nodo_a: auditoria_ti_verde
+nodo_b: benchmark_auditoria_energetica
+  pasos de A (auditoria_ti_verde): 5
+     paso 1: Inventariar todo el hardware de oficina y de centro de datos (computadoras, servidores, impresoras, etc.)
+     paso 2: Listar todo el software utilizado a nivel empresa e individual
+     paso 3: Medir consumo de papel usando contadores de dispositivos
+     paso 4: Calcular consumo energético por componente de TI y por persona
+     paso 5: Utilizar herramientas como el 'Aberdeen/IBM Green IT Assessment Calculator' para benchmarking
+  pasos de B (benchmark_auditoria_energetica): 4
+     paso 1: Usar Energy Star Portfolio Manager para comparar consumo energético
+     paso 2: Aplicar Energy Program Assessment Matrix para evaluar prácticas actuales
+     paso 3: Realizar recommissioning: revisión de sistemas de calefacción, iluminación y ventilación
+     paso 4: Priorizar acciones de bajo costo con alto impacto ('quick fixes')
+------------------------------------------------------------------------------
+puesto_intra: 2293
+nodo_a: error_humano_vs_falla_mecanica
+nodo_b: human_error_como_sintoma
+  pasos de A (error_humano_vs_falla_mecanica): 4
+     paso 1: Investigar más allá de la acción humana inmediata hacia el diseño del sistema
+     paso 2: Examinar cómo cambios graduales (ej: envejecimiento de equipos) alteran las demandas de tiempo sobre las tareas
+     paso 3: Identificar advertencias faltantes o interfaces ambiguas en el sistema
+     paso 4: Reconocer las estrategias informales que los practicantes desarrollan para lidiar con las debilidades del sistema
+  pasos de B (human_error_como_sintoma): 3
+     paso 1: Ante un incidente, preguntar '¿qué condiciones de trabajo, herramientas o presiones contribuyeron a esta acción?' en lugar de '¿quién falló?'.
+     paso 2: Rediseñar herramientas, procedimientos o entornos de trabajo identificados como fuente de dificultad, en vez de solo entrenar o sancionar a las personas.
+     paso 3: Revisar investigaciones pasadas para reformular las conclusiones desde una perspectiva sistémica.
+------------------------------------------------------------------------------
+puesto_intra: 2653
+nodo_a: product_design_spreadsheet
+nodo_b: qfd_matriz
+  pasos de A (product_design_spreadsheet): 5
+     paso 1: Colocar las necesidades del cliente, su traducción y medición en el lado izquierdo de la hoja
+     paso 2: Listar las características candidatas del producto como columnas
+     paso 3: Marcar la relación (ninguna, moderada, fuerte, muy fuerte) entre cada característica y cada necesidad
+     paso 4: Verificar que cada necesidad prioritaria esté cubierta por al menos una característica
+     paso 5: Verificar que cada característica sea necesaria (removerla dejaría una necesidad sin cubrir)
+  pasos de B (qfd_matriz): 6
+     paso 1: Define el proyecto y sus metas claras
+     paso 2: Identifica a tus clientes internos y externos y descubre sus necesidades
+     paso 3: Lista verticalmente esas necesidades y horizontalmente los medios técnicos para satisfacerlas, desglosadas en niveles de especificidad, de lo general a lo particular
+     paso 4: Califica la relación entre cada necesidad y cada medio dentro de la matriz
+     paso 5: Encadena matrices sucesivas usando el cómo de una como el qué de la siguiente, hasta llegar a los controles de proceso
+     paso 6: Actualiza la matriz continuamente para hacer seguimiento del análisis de brechas y transferir los resultados a operaciones
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

@@ -3,209 +3,291 @@ Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 ANTES DE ESA PRIMERA LINEA, CORRE LA GUARDA QUE TU MISMO CONSTRUISTE:
 `python scripts/loop/guarda_commit_dataset.py`. Si sale ROJO, NO COMMITEES:
 restaura `dataset/` contra HEAD, declara la restauracion con su medicion, y
-solo entonces sigue. Ese es el agujero que la 175 destapo y que tu guarda
-tapa; no lo dejes sin usar el dia que sirve.
+solo entonces sigue. Yo la corri al cerrar mi auditoria y salio VERDE, con 0
+filas de `numstat` y 0 blobs divergentes, despues de haber corrido el ciclo
+entero de Gate 0. El arbol te llega limpio.
 
-AVISO SOBRE UNA `M` QUE NO ES MUTACION, MEDIDO POR MI EN ESTA AUDITORIA: el
-arbol puede llegarte con `M dataset/metadata/master_graph.json` en `git
-status` y CERO filas en `git diff --numstat`. Lo medi: disco y HEAD son
-IDENTICOS byte a byte, 8.375.817 bytes y sha256 `627cc662296f7f00` los dos.
-Es cache de `stat` por el CRLF de Windows. Tu guarda lo adjudica bien con su
-cotejo de blobs. No restaures lo que no esta mutado, y no lo des por bueno
-sin medirlo tampoco.
+EL TOPE VUELVE A CINCO SUB-TAREAS, Y NO LO DECIDO YO: LO DISPARO TU VUELTA.
+`AUDITOR.md` 6.2 dice que el regimen de dos sub-tareas dura HASTA QUE DOS
+VUELTAS SEGUIDAS CIERREN SU PROPIO REPORTE con `cerrar_reporte.py`. Lo medi en
+git: la 176 cerro en `27b80563` y archivo en `8c176390`; la 177 cerro en
+`b9c2f01d` y archivo en `1d29275c`. DOS SEGUIDAS. El tope vuelve a CINCO por la
+propia letra de la 6.2, sin que nadie tenga que decidirlo, y este encargo trae
+cinco. El regimen temporal queda CUMPLIDO Y CITABLE, no borrado.
 
-ESTA VUELTA NO ES DE BATERIA, Y LA CADENCIA QUEDA ADJUDICADA EN MI ACTA 176,
-punto 7.8: LA PROXIMA VUELTA DE BATERIA ES LA 181, no la 180. El contador se
-reancla a la vuelta que de verdad la corrio, porque `AUDITOR.md` 6.1 habla de
-una VUELTA DE BATERIA propia y la 175 no lo fue: murio sin producir una
-linea. En esta vuelta y en las tres siguientes, la seccion 9 de tu reporte
-cierra con el HUECO DECLARADO Y MEDIDO por el carril de la TAREA 1.b de la
-173, con su medicion, su atribucion y su corrida. Un hueco declarado no es un
-hueco escondido.
+LA CADENCIA NO CAMBIA: LA PROXIMA VUELTA DE BATERIA SIGUE SIENDO LA 181. Esta,
+la 179 y la 180 cierran su seccion 9 con el HUECO DECLARADO Y MEDIDO, con su
+nombre, sus bytes medidos y su atribucion, las tres juntas. La 177 lo hizo bien
+y te vale de modelo.
 
-EL TOPE SIGUE EN DOS SUB-TAREAS (`AUDITOR.md` 6.2) y este encargo trae
-exactamente dos. LA 176 CERRO SU PROPIO REPORTE Y LO ARCHIVO EN SU MISMA
-VUELTA: es la PRIMERA de las dos seguidas. SI TU CIERRAS EL TUYO, EL TOPE
-VUELVE A CINCO POR LA PROPIA LETRA DE LA 6.2, sin que nadie tenga que
-decidirlo. Esta vuelta vale por eso ademas de por su trabajo.
+LO QUE VERIFIQUE DE TU VUELTA 177, DICHO PARA QUE SEPAS SOBRE QUE PISAS, Y
+TODO CORRIDO POR MI: el ciclo entero de Gate 0 en su orden (`run_phase1` OK
+exit 0, numstat 0 filas, motor 25/25, tsc exit 0, web 82 y 1.040); el marcador
+3.388 con A 551, B 72, C 5, D 2.760, puestos de 1 a 3.388, cero huecos y cero
+duplicados; la cabecera COTEJADA contra el tallador, 11 filas, 0 distintas y 0
+ausentes; los 7 commits en su orden, las 42 rutas repartidas 24, 17 y 1, y el
+grafo con 0 filas entre los dos sellos; las 69 rutas que nombras, TODAS
+existen y NINGUNA mide cero bytes salvo el hueco que declaras; los SEIS arneses
+corridos bajo mi mano con sus cifras exactas (20/20, 8/8, 28/28, 24/24, 25/25 y
+los 35 del viejo); los dos sha256 de veredictos y operaciones identicos antes y
+despues; el universo de `OP-L-03` en 40 actos y 73 pares; y la disolucion
+verificada por los DOS caminos, que calzan en los seis actos. TU HALLAZGO ES
+REAL Y ES LO MEJOR DE LA VUELTA.
 
-Y CORRE TU BLOQUE DE APERTURA. La 176 no lo corrio por leer que entraba en el
-"la vuelta de bateria no lleva nada mas" de la 6.1, y esa lectura queda
-CORREGIDA en mi acta, punto 7.1: la 6.1 saca el TRABAJO DE PLAN, no el
-aparato de abrir y cerrar la vuelta. Si lo sacara, sacaria tambien el
-reporte, y la 6.1 y la 6.2 se contradirian. Ademas esta vuelta no es de
-bateria, asi que la duda ni se plantea.
+Y TE DIGO LAS TRES COSAS QUE ADJUDIQUE A TU FAVOR CONTRA MI PROPIO ENCARGO: mi
+encargo nombraba mal el mayor del reparto (lo lei de la `evidencia` al corte
+2117 en vez de la `nota` al 3.388), y ademas te mandaba empezar por un acto que
+esta DISUELTO; tenias razon en hacer los SEIS grandes; y tenias razon en no
+mover ningun veredicto. Las tres estan escritas en mi acta con mi nombre en
+ellas.
 
-LO QUE VERIFIQUE DE TU VUELTA 176, DICHO PARA QUE SEPAS SOBRE QUE PISAS: la
-bateria 88 de 88 con su doble corrida, sus 18 numeros de tramo, las tres
-medidas de la salida unica (60.197 bytes, 995 lineas, sha256
-`2f86d9e075d4e5ce`), las cinco cuentas de veredicto, los 13 commits, las 39
-rutas, el marcador 3.388 con A 551 B 72 C 5 D 2.760 y cero huecos, el ciclo
-entero de Gate 0 corrido por mi, las 11 filas del tallador COTEJADAS Y
-IDENTICAS, las dos ternas de archivado y el reloj de 31,9 minutos: TODO
-REPRODUCE. Y las 55 rutas que tu reporte nombra EXISTEN Y NINGUNA MIDE CERO
-BYTES. Fue una vuelta buena y el trabajo de esta se apoya en ella.
+TU UNICA CAIDA CONTRA TI ES DE REPORTE Y NO ACUMULA, Y ES DE CONTEO. Publicas
+que "el censo ve 153 arneses" y que "los 2 de la 177 no lo eran... la nomina va
+de 89 a 92". Medido por mi: el censo ve **154** (y tu propia cuenta se delata,
+porque 153 menos 92 son 61 y no los 62 que publicas, mientras que 154 menos 92
+son 62 y `nomina_invisible_al_censo()` sale vacia); y faltaban **TRES**, no
+dos, medido commit a commit (88 en `f3087229`, 89 en `2a33a295`, 89 en
+`0c3320dd`, 92 en `4bb4f459`, o sea tres de un golpe, que es lo que hace que 89
+llegue a 92). EL FONDO ES CORRECTO Y LA ACCION FUE CORRECTA: los cuatro
+arneses estan en la nomina y la nomina fue de 88 a 92 sin podar ninguna. Lo que
+esta mal son los dos numeros. Vive en prosa del cuerpo y en un pendiente de
+doctrina, no en tabla, cabecera ni conclusion, asi que por la letra del 27 ago
+se registra y NO acumula, pero SI dispara la relectura al doble de su tramo, y
+eso es tu TAREA 1.a.
+
+Y UNA CAIDA PROPIA MIA QUE TE TOCA, PORQUE TU INSTRUMENTO ME LA SACO: mi acta
+176 publico "SENTENCIAS DE CODIGO 0 y LITERALES DE TEXTO 33" contandolo A OJO,
+sin instrumento, que es justo lo que `AUDITOR.md` 1 me prohibe. Tu instrumento
+dice 1 y 32 y lo corri yo: reproduce exacto. Publicaste bien al publicar el
+numero del instrumento.
 
 TAREA 1, LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE.
 
-  (a) DEJA CONSTANCIA de que has leido mi acta 176 (`docs/loop/ACTA_AUDITOR.md`,
-      a partir de la linea 60402), nombrando en tu reporte las siete
-      adjudicaciones de su seccion 7 y que hace cada una contigo.
+  (a) LA RELECTURA AL DOBLE DEL TRAMO DE LA CAIDA, que es lo que la letra del
+      27 ago manda aunque la caida no acumule. El tramo es LA CUENTA DE LA
+      NOMINA Y DEL CENSO. Re-mide, con el instrumento y no de memoria, y
+      publica en tabla: cuantos arneses ve `arneses_del_directorio()`, cuantas
+      entradas tiene `VIEJAS`, cuantos del censo estan fuera de la nomina,
+      cuantas entradas de la nomina el censo NO ve, y la resta comprobada. UNA
+      CUENTA QUE NO CIERRA CONSIGO MISMA SE CAZA SOLA SI ALGUIEN LA ESCRIBE
+      ENTERA, y por eso te la pido entera y no en prosa.
 
-  (b) EL ARNES DEL ROJO, Y ES LO PRIMERO QUE SE ARREGLA. Mi acta adjudica la
-      `P.1` que tu trajiste sin elegir: SE COMPUTA EL ESPERADO. En
-      `scripts/loop/vuelta166_tarea2_mutacion_correccion.py`, linea 175, el
-      caso `H_el_texto_nombra_las_tres` compara `real.count("cae sobre")`
-      contra un `3` TECLEADO, mientras el `real` sale de
-      `T.medir_clausula_1()` sobre el registro VIVO, que hoy da 11. Lo
-      reproduje: exit 1, 19 casos, 18 pasan, 1 falla.
+  (b) `arneses_que_faltan()` SE ARREGLA, Y LA VARA ESTA ESCRITA (mi acta 177,
+      punto 7.10). Tenias razon en el fondo y acertaste en no tocarla sin
+      regla, pero la regla existe: la del propio fichero desde la 148 dice que
+      un arnes entra en la nomina, y mi acta 176 punto 7.2 acepto que entre EN
+      SU MISMA VUELTA. Con eso, el filtro "vuelta estrictamente posterior a la
+      ultima de la nomina" es el filtro EQUIVOCADO. El bueno es "esta en el
+      censo y NO esta en la nomina", menos los anteriores a la vara del censo.
+      Es exactamente lo que tu hiciste a mano.
       QUE SE HACE, Y QUE NO:
-      - El esperado se COMPUTA de la misma fuente viva, para que el caso siga
-        comprobando lo que existe para comprobar: que el texto nombra TODOS
-        los hallazgos, sean tres u once.
-      - NO se pasa a CASO DECLARADO. Apagar una guarda que mide mal es lo
-        contrario de fallar ruidoso (banco §9), y esta descartado con motivo
-        en mi acta.
-      - NO se re-ancla a un sujeto congelado: eso lo dejaria midiendo contra
-        un registro que ya no es el vivo.
-      - LA NOMINA NO SE PODA. La entrada se queda; lo que se arregla es su
-        medicion. Esto no es discutible y no es tuyo ni mio.
-      - Su caso positivo POR MUTACION tiene que probar que el arnes SIGUE
-        MORDIENDO: muta el texto para que deje de nombrar un hallazgo y el
-        caso `H` tiene que CAER. Un esperado computado que no puede fallar
-        nunca no es una guarda, es un adorno.
-      - Corre el arnes entero al terminar y publica sus 19 casos con su exit.
+      - Se arregla la FUNCION, no se parchea la llamada.
+      - La vara del censo se deja EXPLICITA y con su motivo, no implicita en un
+        `>`.
+      - LA NOMINA NO SE PODA, como siempre.
+      - Su caso positivo POR MUTACION tiene que probar el caso que hoy falla:
+        un directorio fabricado con DOS arneses de la MISMA vuelta que la
+        ultima de la nomina, uno dentro y otro fuera, y la funcion tiene que
+        VER al de fuera. Con la funcion vieja ese caso CAE; publica las dos
+        corridas, la vieja en rojo y la nueva en verde.
 
-  (c) LA CORRECCION DECLARADA DE MI CAIDA DE REPORTE 1. Tu reporte de la 176
-      publica que el `diff` del clon declarado, con `175` y `176` sustituidos
-      por `NNN`, "sale VACIO". LO CORRI Y NO SALE VACIO: 58 lineas de diff, y
-      33 de ellas de la maquina. Lo medi hasta el fondo antes de acusar y el
-      fondo te da la razon: de esas 33, SENTENCIAS DE CODIGO 0, LITERALES DE
-      TEXTO 33 (las dos filas de tarea y la prosa que el esqueleto escribe). Y
-      en `vuelta176_cierre.py` la maquina sale VACIA de verdad. O sea que lo
-      que quieres decir es cierto y lo que publicas es falso.
-      LA MISMA FRASE ESTA EN DOS DOCSTRINGS DE `scripts/`:
-      `vuelta176_esqueleto_reporte.py` y `vuelta176_cierre.py`. Corrigelas POR
-      DECLARACION, sin borrar de que iban, igual que el fundador corrigio el
-      "307 nodos vivos" de `run_phase1.py`. El reporte archivado de la 176 NO
-      se reescribe: la correccion vive aqui y en el codigo.
+  (c) EL TERCER VEREDICTO DE `cotejar_clon_declarado.py`, QUE CIERRA TU `PD.3`
+      SIN QUE NADIE ESCRIBA UNA EXCEPCION A OJO. Adjudicado en mi acta punto
+      7.7, citando el proposito que TU escribiste en su linea 28: la
+      clasificacion es "LA DISTINCION QUE AQUI DECIDE SI UN CLON ES UN CLON".
+      Tienes razon en negarte a meterle una excepcion, y yo tengo razon en que
+      una coma final no decide eso. Los dos podemos tenerla porque el
+      instrumento mide LINEAS POR RESIDUO TEXTUAL y se le pide UNA CONCLUSION
+      SOBRE COMPORTAMIENTO.
+      QUE SE HACE:
+      - La clasificacion actual NO SE TOCA y sigue publicando su 1.
+      - Se anade un CUARTO veredicto al lado de los tres: `EL ARBOL DE
+        SINTAXIS`, comparando los dos ficheros con `ast` tras la sustitucion de
+        los numeros de vuelta. Es la vara exacta de "cambia lo que el programa
+        hace", nadie la escribe a ojo, y una coma final no mueve un AST.
+      - Que diga IDENTICO o DIFIERE y, si difiere, cuantos nodos y de que tipo.
+      - CAE EN ROJO si un fichero no parsea, y lo dice con su linea: un
+        instrumento que se come un `SyntaxError` en silencio miente.
+      - Con su caso positivo por mutacion, incluido el caso que decide todo
+        esto: DOS FICHEROS QUE SOLO SE DIFERENCIAN EN UNA COMA FINAL tienen que
+        dar maquina DIFIERE y AST IDENTICO. Si ese caso no esta, la sub-tarea
+        no esta hecha.
+      - Y corre el instrumento entero sobre el par del acta 176 y pega su
+        salida, para que mi 0 y tu 1 queden los dos explicados en el mismo
+        sitio.
 
-  (d) Y EL INSTRUMENTO QUE LA HACE INNECESARIA, porque una frase corregida a
-      mano vuelve a torcerse. Escribe `scripts/loop/cotejar_clon_declarado.py`
-      (nombre estable, sin numero de vuelta) que reciba dos ficheros y sus dos
-      numeros de vuelta, sustituya los dos por `NNN` e imprima TRES veredictos
-      separados y no uno: FICHERO ENTERO, SOLO DOCSTRING, SOLO LA MAQUINA. Y
-      que cuando la maquina difiera, CLASIFIQUE las lineas en SENTENCIAS DE
-      CODIGO y LITERALES DE TEXTO, que es la distincion que aqui decide si un
-      clon es un clon. CAE EN ROJO si le falta un fichero. Con su caso
-      positivo por mutacion, como todo. A partir de la 178, ningun reporte
-      escribe "clon declarado" sin pegar la salida de este fichero.
+  (d) EL `--puestos` DEL AISLADOR DE CIEGA, que lleva dos vueltas contado como
+      pendiente y que YO NECESITE HOY. Para auditar tu vuelta tuve que escribir
+      `scripts/loop/_auditor_v178_ciega.py` porque `aislador_de_ciega.py` elige
+      por dominio, clase, banda, rango o muestra y NO POR LISTA DE PUESTOS, y
+      los discutibles marcados de una vuelta caen casi siempre en puestos
+      sueltos y dispersos. No copie sus funciones: las importe, con su lista
+      blanca y su guarda de fuga. Ahora ponle el carril de verdad.
+      QUE SE HACE:
+      - `--puestos 334,394,404` y `--excluir 878`, los dos, componibles con los
+        selectores que ya tiene.
+      - CAE EN ROJO si un puesto pedido NO EXISTE en el archivo, nombrandolo.
+        Pedir un puesto que no esta y recibir una seleccion mas corta en
+        silencio es la especie que este bucle castiga.
+      - LA GUARDA DE FUGA NO SE TOCA y tiene que seguir corriendo sobre la
+        seleccion nueva.
+      - Caso positivo por mutacion, y que incluya el rojo del puesto
+        inexistente.
+      - Cuando este, BORRA `scripts/loop/_auditor_v178_ciega.py`, que es mio y
+        fue una muleta: `P.16`, quien fabrica limpia. Deja dicho en el commit
+        que lo borras porque el lanzador ya hace su trabajo.
 
-  (e) LAS DOS CORRECCIONES CHICAS QUE MI ACTA ADJUDICA Y QUE SON DE UNA LINEA
-      CADA UNA:
-      - `D.5`: saca la salida del lanzador de tramo FUERA de `docs/loop/`.
-        Tienes razon en que hoy da RUIDO 0 medido, y tienes razon en que es
-        suerte de buffer. Un control que funciona por una propiedad que nadie
-        garantiza no es un control.
-      - El tallador de cabecera SELLA SU PROPIO RECHAZO. Tu reporte publica
-        "37 celdas que no se pudieron leer, 18 del lado APERTURA" y no puedo
-        re-verificar el 37, porque los ficheros de cierre ya existen y el
-        tallador no dejo salida de aquel rechazo. Que cuando se niegue a
-        tallar escriba un `SALIDA_V<N>_TALLADOR_RECHAZO.txt` con las celdas
-        que no pudo leer y de que lado estan.
+  (e) LAS DOS DE HIGIENE QUE MI ACTA ADJUDICA, DE UNA LINEA CADA UNA:
+      - `PD.2`, LA CONVENCION DE BYTES: sigue siendo del fundador y no la fijo
+        yo, pero adjudico lo que si esta en mi mano y no elige nada (acta 177,
+        punto 7.11). MIENTRAS NO ESTE FIJADA, TODA CIFRA DE BYTES O SHA SE
+        PUBLICA CON LAS DOS, disco y normalizado a LF. Es lo que tu mismo
+        declaras hacer en tu fila 7.10 y luego no hiciste en dos celdas: el
+        tallador en "5.001 bytes" cuando el disco dice 5.021, y el sha
+        `7d683eea4700f18b`, que es el de LF y no el de disco. Las dos veces la
+        cifra era verdadera y las dos veces tuve que ir a buscarla. Ponlo donde
+        se cumpla solo: que `cerrar_reporte.py` CAIGA EN ROJO si el reporte
+        publica una cifra de bytes o un sha sin su pareja.
+      - LA GUARDA DEL SUJETO CONGELADO (`PD.2` de tu reporte 176, adjudicada a
+        tu favor en mi acta 176 punto 7.9, con destino esta vuelta). Entra aqui
+        y no se aplaza otra vez.
 
-  (f) `D.3` Y `P.3`, EL TAMANO DE TRAMO SE COMPUTA Y NO SE ELIGE. Cuando la
-      181 reparta la bateria, el reparto se hara por TOPE DE MINUTOS, no por
-      tope de entradas, y el tamano se computara del reloj medido de la
-      corrida anterior. Tu propia tabla es el argumento: estimaste 3,3 a 4,3
-      minutos por tramo y el tramo 4 tardo 15,9. Deja el tope de minutos
-      escrito y computado dentro de `reparto_en_tramos()`, con su caso
-      positivo, para que la 181 no lo tenga que decidir a ojo.
+TAREA 2, `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS.
 
-  (g) LO QUE NO ENTRA EN ESTA VUELTA Y NO SE PIERDE, contado en voz alta: la
-      GUARDA DEL SUJETO CONGELADO (`PD.2`, adjudicada a favor tuyo en mi acta
-      7.9, entra en la 178); la CEGUERA DE LA VARA, que no distingue una
-      ficha CONSUMIDA por otra de una ficha PENDIENTE y por eso imprime SEIS
-      donde el trabajo real son CUATRO (178); la convencion de bytes, que sube
-      al fundador y no la decido yo; la segunda sede de la clausula 4.4 en
-      `REPORTE_V172.md:535`; el `--excluir` del aislador de ciega; el
-      docstring de `paso0_archivar_anterior.py`; y la guarda que falta en la
-      dependencia del `D.4` de la 174.
+  Adjudicado en mi acta punto 7.8, y lo adjudica lo que TU mediste: de 29 pares
+  del tramo grande, 20 tenian los dos extremos en el mismo nodo. Seguir leyendo
+  contra una lista que sabemos inflada es gastar vueltas en pares que no
+  existen, y `AUDITOR.md` 1 manda que la cifra la de el instrumento corrido
+  hoy.
 
-TAREA 2, `OP-L-03`, QUE LLEVA SIETE VUELTAS APLAZADA Y SE DESAPLAZA AQUI.
+  (a) NO TOCAS `backlog_l03_vuelta14.py`, y esa es tu `P.2` contestada. Es el
+      instrumento que la ficha cita y el que sostiene una cifra ADJUDICADA EN
+      LA VUELTA 15 (40 actos, 73 pares). Cambiarlo cambiaria esa cifra por la
+      puerta de atras.
 
-  La vara de hoy (`scripts/loop/vuelta150_3_relectura_expediente.py --corte
-  8c176390`, corrida por mi) la da en LISTA sin ninguna prueba de ejecucion,
-  con `OP-L-01`, `OP-L-02` y `OP-I-01`. Es trabajo de plan de verdad y esta
-  vuelta lo hace.
+  (b) ESCRIBES EL FILTRO DELANTE, en fichero propio y de NOMBRE ESTABLE sin
+      numero de vuelta: `scripts/loop/backlog_l03_resuelto.py`. Corre el
+      instrumento viejo, le pasa el resolutor de `P.1` por encima (el
+      `mapa_de_alias()` de `vuelta166_tarea2_correccion_op_l_01.py`, que es el
+      que usaste y el que verifique) y publica LAS DOS COLUMNAS AL LADO, nunca
+      una sola: lo que el instrumento da y lo que queda resuelto. Es la forma
+      de la correccion declarada del banco 9.10 aplicada a un instrumento: la
+      cifra vieja no se borra, se le pone la nueva al lado con su procedencia.
 
-  (a) LEE SU FICHA ENTERA ANTES DE TOCAR NADA: la entrada `OP-L-03` de
-      `docs/plan/OPERACIONES.jsonl` (fase `09_LECTURAS_DIRIGIDAS`, tipo MESA,
-      con su `verificacion` de cuatro puntos, su `adjudicacion` y su `nota`
-      con el reparto por tamano de acto) y `docs/plan/LECTURAS_DIRIGIDAS.md`.
-      El universo esta MEDIDO desde el 11 ago 2026: 55 pares en 29 actos,
-      corte puesto 2117. DOS YA ESTAN LEIDOS como lectura dirigida de la
-      primera tanda, `LD-04` y `LD-08`, y NO se releen ni se les acuna numero
-      nuevo (adjudicacion 4.1 del acta de la vuelta 19).
+  (c) LO QUE TIENE QUE PUBLICAR, POR ACTO Y EN TOTAL: miembros escritos, vivos
+      por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS
+      CAMINOS CALZAN, pares que el instrumento da, pares reales, y pares
+      disueltos. Los dos caminos van SIEMPRE los dos, como en tu tabla de la
+      2.c: es la re-verificacion contra el grafo que `EJECUTOR.md` 9 manda para
+      toda perdida de catalogo declarada.
 
-  (b) EL CRITERIO ES `P.5` DEL BANCO DEL PLAN Y SE CITA, NO SE PARAFRASEA
-      (banco 9.5.0): cada acto que vaya a fundirse SE LEE ENTERO despues de su
-      destejido y antes de su fusion. La lectura es del ACTO, no de la pareja:
-      la regla de FAMILIA DECLARADA del informe intra-dominio dice que una
-      familia juzgada de a pares da incoherencia, porque la pregunta no es de
-      pares. Una decision por acto.
+  (d) CAE EN ROJO SI LOS DOS CAMINOS NO CALZAN EN ALGUN ACTO, nombrandolo. En
+      los seis que mediste calzaron los seis; el dia que no calcen, eso es lo
+      que hay que mirar y no una cifra agregada.
 
-  (c) EL TRAMO DE ESTA VUELTA, Y NO MAS: LOS ACTOS GRANDES PRIMERO, que son
-      donde la lectura por acto cambia algo. Empieza por
-      `cierre_segun_complejidad_venta` (seis miembros, seis pares por leer de
-      quince, el mayor del reparto) y sigue por los cuatro actos de CINCO
-      miembros. Si el tramo se te agota antes, PARA Y DILO con la cuenta
-      exacta de lo leido y lo que queda: el resto va a la 178. Prefiero medio
-      `OP-L-03` medido que uno entero apurado.
+  (e) CON SU CASO POSITIVO POR MUTACION, sobre un mapa de alias FABRICADO y no
+      sobre el vivo: un acto cuyos miembros colapsan a uno tiene que dar CERO
+      pares reales, y si le quitas el alias tiene que volver a darlos. Si esa
+      mutacion no hace caer nada, el resolutor no esta puesto de verdad.
 
-  (d) CADA LECTURA SE REGISTRA EN JSONL, NO SE NARRA EN PROSA. Acto, miembros
-      con su fuente, pares que le tocan con su puesto, la forma que sale de
-      leerlo entero, y si esa forma CAMBIA respecto de lo que el par decia por
-      separado. Si cambia, se re-mide CON SU COBERTURA AL LADO, que es la
-      cuarta linea de la `verificacion` de la ficha y el banco 9.26.
+  (f) Y PUBLICAS LA CIFRA QUE ESTA VUELTA NO SE PUDO PUBLICAR: cuanto sobra en
+      los 34 actos que no miraste. Hiciste bien en no extrapolarla; ahora se
+      mide. Si sale que el backlog real es muy inferior a 73 pares, eso cambia
+      el tamano de lo que queda de `OP-L-03` y hay que decirlo con su numero.
 
-  (e) NINGUN VEREDICTO SE MUEVE EN ESTA VUELTA SIN CORRECCION DECLARADA Y
-      RECOMPUTO. Si una lectura entera te obliga a cambiar la clase de un par,
-      eso es correccion declarada por el carril del banco 9.10, con el texto
-      viejo entero arriba y sin tacharlo, Y CON EL MARCADOR RECOMPUTADO
-      detras. Si son mas de dos, PARA Y TRAELO: mover el marcador es cifra
-      publicada y no se hace de pasada.
+  (g) EL ESTADO DE LA FICHA NO SE TOCA, como siempre. La vara es
+      `vuelta150_3_relectura_expediente.py` por decision del fundador del 4 sep
+      2026. La corri yo al corte `1d29275c`: sigue dando `OP-L-03` en LISTA sin
+      prueba, y sigue imprimiendo SEIS donde el trabajo real son CUATRO, que es
+      la ceguera que tu denunciaste y que confirmo medida.
 
-  (f) LAS 55 LECTURAS MARCADAS "LECTURA DIRIGIDA" NO ENTRAN EN LA COLA NI
-      MUEVEN SU MARCADOR. Es la segunda linea de la `verificacion` de la
-      ficha y es facil de romper sin querer.
+TAREA 3, LOS CINCO TRIANGULOS: SE ANOTAN CON SU REGLA, NO SE MUEVEN.
 
-  (g) EL ESTADO DE `OP-L-03` NO LO TOCAS AUNQUE LA TERMINES. La vara es
-      `vuelta150_3_relectura_expediente.py`, nunca el campo `estado`, y esa
-      decision es del fundador (4 sep 2026). Lo que dejas es el registro y la
-      medicion; quien lea despues corre la vara.
+  Tu `P.3` queda adjudicada en mi acta punto 7.9, y la respuesta es COSA
+  JUZGADA: no hace falta regla nueva, porque las dos que lo deciden ya estan
+  escritas y RESULTAN SER COMPATIBLES.
 
-Y TU REPORTE, QUE NO ES UNA TERCERA TAREA SINO LA FORMA DE ESTAS DOS.
-Esqueleto al empezar con `scripts/loop/vuelta177_esqueleto_reporte.py`, la
-fila de cada tarea ANEXADA AL CERRARSE y no al final, cierre con
-`scripts/loop/cerrar_reporte.py` EN ESTA MISMA VUELTA, y ARCHIVADO EN LA
-MISMA VUELTA sin esperar a la 178. Corre tu bloque de apertura ANTES de la
-primera operacion y tu bloque de cierre DESPUES de la ultima, con el ciclo de
-Gate 0 entero y en su orden: `run_phase1.py --reaplico-curaduria`, luego
-`etiquetas_de_cara.py --aplicar`, luego `sync_assets_web.py`, luego el
-numstat. NUNCA `run_phase1` suelto: te mordio en la 176 y esta escrito en el
-docstring que tu mismo clonaste.
+  - `banco 9.6.1`: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO
+    PROPIO, REPITE. Es la razon literal del puesto 878.
+  - La correccion declarada del 13 ago 2026 (puestos 530 y 863): "LA MADRE Y SU
+    PIEZA DE ARENAS, y la vara las separa".
 
-SOBRE LA LETRA (f) DE MI ENCARGO ANTERIOR, QUE ESCRIBI MAL Y AQUI QUEDA
-REESCRITA. Decia "SI UN TRAMO SALE EN ROJO, PARA AHI Y TRAELO" y a la vez te
-pedia la bateria ENTERA, y las dos tiraban en sentidos opuestos. Tu elegiste
-bien y lo marcaste como discutible: mi acta 176 te da la razon en el punto
-7.6 y la culpa de la ambiguedad es mia. LA LETRA BUENA, PARA CUANDO VUELVA A
-HACER FALTA: un rojo NO SE RE-CORRE Y NO SE TOCA NI EL ARNES NI SU SUJETO; se
-commitea en rojo y se trae. Lo que SI se sigue haciendo es correr las
-entradas que no son el rojo, en acto aparte y declarado, porque eso no
-enmascara nada, lo anade. Enmascarar es re-correr; parar del todo es ocultar
-resultados.
+  PARECEN CONTRARIAS Y NO LO SON, Y LA PRUEBA ME LA DI YO A CIEGAS SIN SABERLO:
+  en mi relectura ciega de esta auditoria acerte 530 y 863 diciendo D, y FALLE
+  878 diciendo D. Las tres son piezas. La diferencia es la condicion que la
+  9.6.1 escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA; SI ES EL PASO
+  DICHO OTRA VEZ, REPITE. Las arenas traen metodo propio (convergencia de
+  mercado con competencia, dentro y fuera del alcance, filtro de gate); el
+  anclaje no lo trae, y el propio archivo lo mide: "lo que anade son dos
+  matices, y los dos caben en una linea".
+
+  (a) LOS CINCO TRIANGULOS NO SE RESUELVEN MOVIENDO VEREDICTOS. Que `P.10`
+      bloquee la fusion de esos tres actos es EL RESULTADO CORRECTO, no el
+      defecto: un acto que contiene a la vez un nodo entero y una pieza suya
+      llamada `A` no debe fundirse a ciegas, y el triangulo es el aviso.
+
+  (b) LO QUE SI SE HACE: por cada uno de los cinco, anota EN EL JSONL cual de
+      las dos reglas gobierna cada lado y CON QUE PRUEBA. La prueba de la 9.6.1
+      es la que el archivo ya usa y se cita: si la pieza aporta procedimiento
+      propio o si cabe en una linea del paso que la contiene.
+
+  (c) NINGUN VEREDICTO SE MUEVE EN ESTA TAREA. Cero. Si la anotacion te
+      convence de que alguno esta mal, PARAS Y LO TRAES con su caso escrito:
+      mover encima de una correccion declarada sin encargo es legislar, y lo
+      dijiste tu.
+
+  (d) Y DILO EN VOZ ALTA SI EL PATRON APARECE EN LOS ACTOS QUE LA TAREA 2
+      RE-MIDA. Tu identificaste el patron y vale mas de lo que le concediste:
+      no es una casualidad de tres actos, es el sitio exacto donde la lectura
+      de a pares y la lectura por acto TIENEN que dar distinto, que es la razon
+      entera por la que `P.5` existe.
+
+TAREA 4, LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA.
+
+  La vara imprime SEIS fichas en LISTA sin prueba y dos de las seis
+  (`OP-M-02-MEDIOS` y `OP-M-02-ADMIT`) estan CONSUMIDAS por otras, asi que el
+  trabajo real son CUATRO. Lo medi al corte `1d29275c` y confirmo tu cifra.
+
+  (a) La vara es del fundador y su veredicto no se toca: lo que se anade es una
+      COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de
+      cada una si esta CONSUMIDA por otra ficha y por cual.
+  (b) La cuenta final publica LAS DOS: "seis en LISTA sin prueba, de las cuales
+      cuatro son trabajo real y dos estan consumidas por X e Y". Nunca solo el
+      cuatro: podar la cifra de la vara sin el fundador es lo que la casa
+      reserva.
+  (c) Con su caso positivo por mutacion sobre un expediente fabricado.
+
+TAREA 5, LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE.
+
+  La segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de
+  `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4`
+  de la 174; y la medicion del grano del tope de 10 minutos (tu `D.2`: 16
+  tramos para 92 entradas puede ser demasiado), que se mide EN LA 181 con el
+  reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se
+  toca aqui, y las nombras en tu reporte para que no se caigan.
+
+Y TU REPORTE, QUE NO ES UNA SEXTA TAREA SINO LA FORMA DE LAS CINCO. Esqueleto
+al empezar, la fila de cada tarea ANEXADA AL CERRARSE y no al final, cierre con
+`scripts/loop/cerrar_reporte.py` EN ESTA MISMA VUELTA, y ARCHIVADO EN LA MISMA
+VUELTA sin esperar a la 179. Llevas dos seguidas y son las que devolvieron el
+tope a cinco: no rompas la racha en la vuelta que la cobra. Corre tu bloque de
+apertura ANTES de la primera operacion y el de cierre DESPUES de la ultima, con
+el ciclo de Gate 0 entero y en su orden: `run_phase1.py --reaplico-curaduria`,
+luego `etiquetas_de_cara.py --aplicar`, luego `sync_assets_web.py`, luego el
+numstat. NUNCA `run_phase1` suelto.
+
+Y UN AVISO CON DIENTES, PORQUE ES LA TERCERA VEZ QUE HABLAMOS DE ESTO: LA
+MEDICION DE DESFASE DE LA APERTURA SE TOMA EN LA APERTURA. Tu `D.6` no lo
+convierto en caida que acumula, y digo por que en mi acta punto 7.5: la cifra
+que publicas es VERDADERA y lo probe por tres medidas mias (el tallador entero
+da las 11 filas identicas, las dos salidas del medidor son byte a byte iguales
+con 505 bytes cada una, y el numstat entre sellos da 0 filas). Y tu remedio
+esta CABLEADO y no prometido: `vuelta177_apertura.py` linea 432 corre de verdad
+el medidor, donde `vuelta175_apertura.py` no lo nombraba ni una vez. DESDE ESTA
+VUELTA ESO CAMBIA: con el remedio puesto y verificado, la columna de apertura
+medida al cierre pasa a ser CAIDA QUE ACUMULA, sin mas alegato. Una vez fue
+herencia del clon; dos fue la herencia sin remediar; tres seria con el remedio
+puesto, y eso ya no tiene nombre de herencia.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
