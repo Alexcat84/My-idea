@@ -437,6 +437,21 @@ VIEJAS = [
     # abajo lo reclamo en la corrida 2 de esta vuelta, con estas palabras: "1
     # arnes(es) de mutacion nacidos despues de la vuelta 168 se quedan FUERA".
     ("vuelta169_tarea2_mutacion_reanclaje.py", False),
+    # ANADIDOS EN LA VUELTA 170 (TAREAS 1.a y 2.a). LOS DOS ENTRAN EL MISMO DIA
+    # QUE NACEN Y NO ES UN ATAJO: la condicion de entrada desde la vuelta 148 es
+    # SUJETO CONGELADO, no el plazo, y los dos lo cumplen.
+    #   - `170_tarea1a_mutacion_registro`: actas de mentira fabricadas EN MEMORIA
+    #     mas el acta 169, que ya esta cerrada y firmada. Cuando el auditor
+    #     escriba el acta 170, el acotado de este instrumento seguira delimitando
+    #     la 169 por su cabecera siguiente y sus dos conteos (12 y 3) no se
+    #     mueven. Y NACE PORQUE FALTABA: la vuelta 169 no escribio el suyo, medido
+    #     con `ls scripts/loop/ | grep mutacion_registro` (existen los de las
+    #     vueltas 164, 165, 166, 167 y 168; no existe el de la 169).
+    #   - `170_tarea2a_mutacion_aislador`: filas y mapa de pasos fabricados EN
+    #     MEMORIA. No lee ni el archivo de veredictos ni el grafo, asi que no hay
+    #     nada que se le pueda mover debajo. CERO escrituras.
+    ("vuelta170_tarea1a_mutacion_registro.py", False),
+    ("vuelta170_tarea2a_mutacion_aislador.py", False),
     # --- LOS CINCO PRE 148 QUE ENTRAN, Y ENTRAN MEDIDOS (vuelta 165, TAREA 4;
     #     adjudicaciones 6.5 y 6.6 del acta 164) --------------------------------
     #

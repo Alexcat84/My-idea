@@ -1,0 +1,81 @@
+==============================================================================
+VUELTA 170, TAREA 2.a: CASO POSITIVO POR MUTACION DEL AISLADOR DE CIEGA
+==============================================================================
+
+A) LA SALIDA CIEGA LLEVA LO QUE TIENE QUE LLEVAR
+   CIFRA bytes del texto ciego: 1356
+
+B) Y NO LLEVA EL DESTAPE: NINGUNA RAZON, NINGUNA CLASE
+   CIFRA fugas con la lista blanca de verdad: 0
+
+C) EL CASO QUE EL ACTA PIDE: SI EL DESTAPE SE CUELA, ESTO CAE
+   se ENSANCHA la lista blanca con 'razon' y se vuelve a construir
+   CIFRA fugas con la lista blanca ensanchada: 3
+      puesto 11, campo razon
+      puesto 22, campo razon
+      puesto 33, campo razon
+   se ENSANCHA con 'clase' en vez de 'razon'
+   CIFRA fugas: 3
+   se ENSANCHA con LOS DOS a la vez
+
+D) EL DESTAPE VIVE APARTE Y SI LLEVA LO QUE LE TOCA
+   CIFRA bytes del destape: 1052
+
+E) LA ELECCION ES DETERMINISTA Y REPRODUCIBLE
+   misma semilla, dos corridas: [22, 33] y [22, 33]
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_lleva_el_puesto_de_cada_par                        PASA   (real=3 esperado=3)
+   A_lleva_los_dos_nodos_de_cada_par                    PASA   (real=6 esperado=6)
+   A_lleva_los_pasos_de_los_nodos                       PASA   (real=5 esperado=5)
+   A_dice_cuando_un_nodo_no_tiene_pasos                 PASA   (real=True esperado=True)
+   A_lleva_el_criterio_escrito                          PASA   (real=True esperado=True)
+   B_con_la_lista_blanca_de_verdad_no_hay_fugas         PASA   (real=0 esperado=0)
+   B_ninguna_razon_esta_en_el_texto_ciego               PASA   (real=0 esperado=0)
+   B_ni_la_forma_en_que_el_destape_escribe_la_clase     PASA   (real=0 esperado=0)
+   C_la_guarda_MUERDE_las_tres_razones                  PASA   (real=3 esperado=3)
+   C_y_todas_las_fugas_son_de_razon                     PASA   (real=['razon'] esperado=['razon'])
+   C_la_guarda_MUERDE_las_tres_clases                   PASA   (real=3 esperado=3)
+   C_y_todas_las_fugas_son_de_clase                     PASA   (real=['clase'] esperado=['clase'])
+   C_con_los_dos_la_guarda_muerde_seis                  PASA   (real=6 esperado=6)
+   D_el_destape_lleva_las_tres_razones                  PASA   (real=3 esperado=3)
+   D_y_las_tres_clases                                  PASA   (real=3 esperado=3)
+   D_y_el_mismo_criterio_para_poder_casarlos            PASA   (real=True esperado=True)
+   D_el_ciego_y_el_destape_no_son_el_mismo_texto        PASA   (real=False esperado=False)
+   E_el_filtro_de_dominio_deja_dos                      PASA   (real=2 esperado=2)
+   E_el_filtro_de_clase_deja_uno                        PASA   (real=1 esperado=1)
+   E_el_filtro_de_banda_deja_dos                        PASA   (real=2 esperado=2)
+   E_el_rango_de_puestos_deja_uno                       PASA   (real=1 esperado=1)
+   E_la_misma_semilla_da_la_misma_muestra               PASA   (real=True esperado=True)
+   E_la_muestra_sale_ordenada_por_puesto                PASA   (real=True esperado=True)
+   E_sin_filtros_estan_los_tres                         PASA   (real=3 esperado=3)
+   CIFRA casos: 24 | pasan: 24 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_lleva_el_puesto_de_cada_par                        CAE   (esperado mutado=4)
+   A_lleva_los_dos_nodos_de_cada_par                    CAE   (esperado mutado=7)
+   A_lleva_los_pasos_de_los_nodos                       CAE   (esperado mutado=6)
+   A_dice_cuando_un_nodo_no_tiene_pasos                 CAE   (esperado mutado=False)
+   A_lleva_el_criterio_escrito                          CAE   (esperado mutado=False)
+   B_con_la_lista_blanca_de_verdad_no_hay_fugas         CAE   (esperado mutado=1)
+   B_ninguna_razon_esta_en_el_texto_ciego               CAE   (esperado mutado=1)
+   B_ni_la_forma_en_que_el_destape_escribe_la_clase     CAE   (esperado mutado=1)
+   C_la_guarda_MUERDE_las_tres_razones                  CAE   (esperado mutado=4)
+   C_y_todas_las_fugas_son_de_razon                     CAE   (esperado mutado=['razon', '_mutado'])
+   C_la_guarda_MUERDE_las_tres_clases                   CAE   (esperado mutado=4)
+   C_y_todas_las_fugas_son_de_clase                     CAE   (esperado mutado=['clase', '_mutado'])
+   C_con_los_dos_la_guarda_muerde_seis                  CAE   (esperado mutado=7)
+   D_el_destape_lleva_las_tres_razones                  CAE   (esperado mutado=4)
+   D_y_las_tres_clases                                  CAE   (esperado mutado=4)
+   D_y_el_mismo_criterio_para_poder_casarlos            CAE   (esperado mutado=False)
+   D_el_ciego_y_el_destape_no_son_el_mismo_texto        CAE   (esperado mutado=True)
+   E_el_filtro_de_dominio_deja_dos                      CAE   (esperado mutado=3)
+   E_el_filtro_de_clase_deja_uno                        CAE   (esperado mutado=2)
+   E_el_filtro_de_banda_deja_dos                        CAE   (esperado mutado=3)
+   E_el_rango_de_puestos_deja_uno                       CAE   (esperado mutado=2)
+   E_la_misma_semilla_da_la_misma_muestra               CAE   (esperado mutado=False)
+   E_la_muestra_sale_ordenada_por_puesto                CAE   (esperado mutado=False)
+   E_sin_filtros_estan_los_tres                         CAE   (esperado mutado=4)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.

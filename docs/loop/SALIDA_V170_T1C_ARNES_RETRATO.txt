@@ -1,0 +1,128 @@
+==============================================================================
+VUELTA 166, TAREA 3: CASO POSITIVO POR MUTACION DEL CARRIL DEL 9.10
+==============================================================================
+
+A) EL SUJETO, LEIDO DEL DOCUMENTO DE VERDAD
+   docs/plan/RECOMPUTO_3388.md, 1922 lineas
+   CIFRA filas del PASO 1 localizadas: 4 | errores: 0
+
+B) EL CONTADOR SE COMPUTA DE LA CADENA Y NO DE LA PALABRA ESCRITA
+   la fila de los colapsos trae 13 tachadas y la palabra TRECE
+   se MUTA la palabra viva 'TRECE VECES' a 'DOS VECES' sin tocar la cadena
+   la palabra escrita pasa a 'DOS VECES' y el computo sigue dando 'CATORCE VECES'
+   y la guarda de que todos cuadran, sobre el documento MUTADO:
+      CAE
+
+C) LA CIFRA VIEJA NO SE BORRA: SE TACHA Y SE QUEDA
+   cifra viva antes: 398
+   la fila nueva contiene ~~**398**~~: True
+   de las 13 tachadas viejas sobreviven 13
+
+D) LA CELDA QUE NO SALE DE UN INSTRUMENTO NO SE ESCRIBE
+   salida completa -> 4 cifras, 0 faltan
+   sin la linea de crudas     -> faltan 1 (crudas)
+   sin la linea de distintos  -> faltan 1 (distintos)
+   sin la linea de multiples  -> faltan 1 (multiples)
+
+E) EL TEXTO DE LA NOTA SIGUE A LA MEDICION Y NO A UNA CONSTANTE
+   con 398 la nota dice 'de 207 a 398': True
+   con 300 la nota dice 'de 207 a 300': True
+   la nota de los multiples nombra los pares uno por uno: True
+
+F) EL NACIMIENTO DE LA DECIMOTERCERA TACHADA, ANCLADO POR MEDICION
+   CONTRA GIT (vuelta 170, TAREA 1.c, adjudicacion 6.3 del acta 169)
+
+   POR QUE ESTE CASO EXISTE. La caida 4.1 del acta 169 fue una HISTORIA
+   FALSA escrita en el comentario de arriba: decia que la vuelta 167
+   anadio una tachada. Una historia escrita en un comentario se pudre
+   porque nada la comprueba; una anclada en un caso CAE. Aqui la misma
+   afirmacion deja de ser prosa y se lee de git en cada corrida.
+   LAS FUNCIONES SE IMPORTAN, NO SE COPIAN: una sola fuente.
+   CIFRA commits de la serie: 38
+   el primer commit cuya fila llega a 13 tachadas: 33fe1380
+   su vuelta, COMPUTADA de las actas: 166
+   el commit inmediatamente anterior: 3ffc2091 con 12 tachadas
+   CIFRA commits que SUBEN el conteo y son de la vuelta 167: 0
+   ultimo commit que toca el fichero: c6ac70f6, vuelta computada 167
+   tachadas en el nacimiento: 13 | en el ultimo: 13 | hoy en disco: 13
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_las_cuatro_filas_se_localizan                      PASA   (real=4 esperado=4)
+   A_sin_errores_de_localizacion                        PASA   (real=0 esperado=0)
+   B_con_13_tachadas_el_siguiente_es_CATORCE            PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   B_la_mutacion_MUERDE_el_texto_vivo                   PASA   (real=True esperado=True)
+   B_mutar_la_palabra_no_mueve_el_computo               PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   B_la_cadena_sigue_teniendo_las_mismas_tachadas       PASA   (real=13 esperado=13)
+   B_la_guarda_CAE_con_el_contador_desincronizado       PASA   (real=False esperado=False)
+   B_y_PASA_sobre_el_documento_sin_mutar                PASA   (real=True esperado=True)
+   C_la_vieja_queda_tachada_y_entera                    PASA   (real=True esperado=True)
+   C_la_nueva_esta_viva                                 PASA   (real=True esperado=True)
+   C_las_13_tachadas_viejas_sobreviven                  PASA   (real=13 esperado=13)
+   C_la_fila_solo_crece                                 PASA   (real=True esperado=True)
+   D_la_salida_completa_da_las_cuatro                   PASA   (real=0 esperado=0)
+   D_y_las_lee_bien                                     PASA   (real=[551, 398, 149, 4] esperado=[551, 398, 149, 4])
+   D_sin_crudas_el_lector_lo_dice                       PASA   (real=['crudas'] esperado=['crudas'])
+   D_sin_distintos_el_lector_lo_dice                    PASA   (real=['distintos'] esperado=['distintos'])
+   D_sin_multiples_el_lector_lo_dice                    PASA   (real=['multiples'] esperado=['multiples'])
+   E_la_nota_lleva_la_cifra_medida                      PASA   (real=True esperado=True)
+   E_y_cambia_si_la_medicion_cambia                     PASA   (real=False esperado=False)
+   E_el_ordinal_sale_del_conteo                         PASA   (real=True esperado=True)
+   E_con_cinco_tachadas_el_ordinal_es_SEXTA             PASA   (real=True esperado=True)
+   E_la_nota_de_multiples_nombra_sus_pares              PASA   (real=2 esperado=2)
+   E_y_dice_que_no_adjudica_clase                       PASA   (real=True esperado=True)
+   E_la_nota_de_distintos_avisa_de_la_resta_rota        PASA   (real=True esperado=True)
+   F_la_serie_de_git_no_esta_vacia                      PASA   (real=True esperado=True)
+   F_la_13a_nace_en_33fe1380                            PASA   (real='33fe1380' esperado='33fe1380')
+   F_y_su_vuelta_computada_es_166                       PASA   (real=166 esperado=166)
+   F_el_commit_anterior_es_3ffc2091                     PASA   (real='3ffc2091' esperado='3ffc2091')
+   F_y_traia_DOCE_tachadas                              PASA   (real=12 esperado=12)
+   F_la_167_no_sube_el_conteo_ni_una_vez                PASA   (real=0 esperado=0)
+   F_el_ultimo_que_toca_el_fichero_es_c6ac70f6          PASA   (real='c6ac70f6' esperado='c6ac70f6')
+   F_y_ES_de_la_vuelta_167                              PASA   (real=167 esperado=167)
+   F_pero_NO_movio_esta_fila                            PASA   (real=13 esperado=13)
+   F_y_hoy_en_disco_siguen_siendo_las_mismas            PASA   (real=13 esperado=13)
+   F_trece_tachadas_hacen_que_la_siguiente_sea_CATORCE  PASA   (real='CATORCE VECES' esperado='CATORCE VECES')
+   CIFRA casos: 35 | pasan: 35 | fallan: 0
+
+H) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_las_cuatro_filas_se_localizan                      CAE   (esperado mutado=5)
+   A_sin_errores_de_localizacion                        CAE   (esperado mutado=1)
+   B_con_13_tachadas_el_siguiente_es_CATORCE            CAE   (esperado mutado='CATORCE VECES_mutado')
+   B_la_mutacion_MUERDE_el_texto_vivo                   CAE   (esperado mutado=False)
+   B_mutar_la_palabra_no_mueve_el_computo               CAE   (esperado mutado='CATORCE VECES_mutado')
+   B_la_cadena_sigue_teniendo_las_mismas_tachadas       CAE   (esperado mutado=14)
+   B_la_guarda_CAE_con_el_contador_desincronizado       CAE   (esperado mutado=True)
+   B_y_PASA_sobre_el_documento_sin_mutar                CAE   (esperado mutado=False)
+   C_la_vieja_queda_tachada_y_entera                    CAE   (esperado mutado=False)
+   C_la_nueva_esta_viva                                 CAE   (esperado mutado=False)
+   C_las_13_tachadas_viejas_sobreviven                  CAE   (esperado mutado=14)
+   C_la_fila_solo_crece                                 CAE   (esperado mutado=False)
+   D_la_salida_completa_da_las_cuatro                   CAE   (esperado mutado=1)
+   D_y_las_lee_bien                                     CAE   (esperado mutado=[551, 398, 149, 4, '_mutado'])
+   D_sin_crudas_el_lector_lo_dice                       CAE   (esperado mutado=['crudas', '_mutado'])
+   D_sin_distintos_el_lector_lo_dice                    CAE   (esperado mutado=['distintos', '_mutado'])
+   D_sin_multiples_el_lector_lo_dice                    CAE   (esperado mutado=['multiples', '_mutado'])
+   E_la_nota_lleva_la_cifra_medida                      CAE   (esperado mutado=False)
+   E_y_cambia_si_la_medicion_cambia                     CAE   (esperado mutado=True)
+   E_el_ordinal_sale_del_conteo                         CAE   (esperado mutado=False)
+   E_con_cinco_tachadas_el_ordinal_es_SEXTA             CAE   (esperado mutado=False)
+   E_la_nota_de_multiples_nombra_sus_pares              CAE   (esperado mutado=3)
+   E_y_dice_que_no_adjudica_clase                       CAE   (esperado mutado=False)
+   E_la_nota_de_distintos_avisa_de_la_resta_rota        CAE   (esperado mutado=False)
+   F_la_serie_de_git_no_esta_vacia                      CAE   (esperado mutado=False)
+   F_la_13a_nace_en_33fe1380                            CAE   (esperado mutado='33fe1380_mutado')
+   F_y_su_vuelta_computada_es_166                       CAE   (esperado mutado=167)
+   F_el_commit_anterior_es_3ffc2091                     CAE   (esperado mutado='3ffc2091_mutado')
+   F_y_traia_DOCE_tachadas                              CAE   (esperado mutado=13)
+   F_la_167_no_sube_el_conteo_ni_una_vez                CAE   (esperado mutado=1)
+   F_el_ultimo_que_toca_el_fichero_es_c6ac70f6          CAE   (esperado mutado='c6ac70f6_mutado')
+   F_y_ES_de_la_vuelta_167                              CAE   (esperado mutado=168)
+   F_pero_NO_movio_esta_fila                            CAE   (esperado mutado=14)
+   F_y_hoy_en_disco_siguen_siendo_las_mismas            CAE   (esperado mutado=14)
+   F_trece_tachadas_hacen_que_la_siguiente_sea_CATORCE  CAE   (esperado mutado='CATORCE VECES_mutado')
+   CIFRA casos que caen al mutar el esperado: 35 de 35
+
+I) Y SE COMPRUEBA QUE ESTA PRUEBA NO ESCRIBIO NADA
+   el documento es identico byte a byte al de antes: True
+
+VERDE: los 35 casos pasan tal cual y los 35 caen al mutar el esperado.

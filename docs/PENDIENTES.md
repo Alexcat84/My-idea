@@ -12161,3 +12161,98 @@ reserva. **Ningun `estado` de `docs/plan/OPERACIONES.jsonl` se mueve por esta
 entrada**: el campo sigue jubilado como historico y la vara del trabajo
 pendiente sigue siendo `scripts/loop/vuelta150_3_relectura_expediente.py`.
 **Y las dos `OP-M-02` siguen sin ejecutarse**, por la `6.6`.
+
+---
+
+## R.39. Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 169
+
+(Acta del auditor, vuelta 169, secciones 3 y 6; escrito en la vuelta 170,
+TAREA 1.a.)
+
+Por adicion, como `R.21` a `R.38`. **Corte de todas las cifras de esta entrada:
+4 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, leida hoy
+en `docs/loop/ACTA_AUDITOR.md:53933`. Salida:
+`docs/loop/SALIDA_V170_T1_REGISTRO_ACTA_169.txt`.
+
+**Y LAS DOS CIFRAS DEL TITULO TAMPOCO ESTAN TECLEADAS:** se cuentan del acta
+(12 adjudicaciones `6.n` y 3 negritas `CAIDA n` dentro del cuerpo acotado,
+lineas 56702 a 57287) y de ahi sale el numeral en palabra, **incluida la
+concordancia**. **EL `R.38` REGISTRO DIEZ Y DOS; ESTE REGISTRA 12 Y 3**, y los
+dos numerales subieron solos. **Y ESTA ENTRADA ESTIRA DOS NUMEROS MAS EL BORDE
+QUE LA ANTERIOR ESTRENO:** el acta 168 fue la primera en llegar a `6.10` y el
+acta 169 llega a `6.12`, asi que el barrido tiene que contar tres claves de dos
+digitos sin confundir ninguna con `6.1`. Lo que lo impide sigue siendo el
+espacio final del patron `^\s*\*\*6\.1 `, y el arnes hermano lo prueba por
+mutacion en vez de afirmarlo.
+
+**LAS DOCE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 169, no
+de cualquier acta); la glosa que sigue es prosa del ejecutor y va marcada como
+tal.
+
+  - **6.1 (`docs/loop/ACTA_AUDITOR.md:57058`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"MI PROPIA CAIDA SE ENCARGA, NO SOLO SE DECLARA, Y ES TAREA BLOQUEANTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 2.a de esta vuelta. Nace `scripts/loop/aislador_de_ciega.py`, con nombre estable y sin numero de vuelta. Recibe un CRITERIO ESCRITO, elige los pares con el, imprime en la salida ciega SOLO `puesto_intra`, `nodo_a`, `nodo_b` y los pasos de los dos nodos, y escribe el destape (clase y razon) EN UN FICHERO APARTE que no hace falta abrir hasta tener las clases escritas. La regla que el acta pide (EL SUJETO DE LA CIEGA SE ELIGE Y SE AISLA ANTES DEL PRIMER COMANDO DE VERIFICACION) deja de depender de que alguien se acuerde: el instrumento no puede imprimir la clase en la salida ciega porque la construye campo a campo desde una lista blanca, y su caso positivo por mutacion CAE si el destape se cuela.
+  - **6.2 (`docs/loop/ACTA_AUDITOR.md:57068`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"LA CAIDA `4.1` SE CORRIGE POR EL CARRIL DEL BANCO `9.10`, Y NINGUNA PALABRA SE BORRA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 1.b de esta vuelta, POR EL CARRIL DEL BANCO 9.10 Y SIN BORRAR UNA PALABRA. El comentario de `scripts/loop/vuelta166_tarea3_mutacion_retrato.py` que dice que la vuelta 167 anadio una tachada QUEDA ENTERO Y TACHADO, con la correccion fechada adosada debajo y la tabla de commits MEDIDA POR MI EN ESTA VUELTA pegada al lado. La correccion dice las dos cosas que el acta pide: quien anadio la decimotercera tachada, y por que el computo dice CATORCE. La tabla no se copio del acta: se midio con el localizador del propio instrumento sobre los commits que tocan el retrato.
+  - **6.3 (`docs/loop/ACTA_AUDITOR.md:57078`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"Y EL REMEDIO, QUE ES LO QUE IMPIDE QUE LA HISTORIA VUELVA A DERIVAR:"*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 1.c de esta vuelta. El arnes gana un caso que ANCLA POR MEDICION el commit de nacimiento de la decimotercera tachada, leyendolo de `git log` en vez de contarlo en prosa: recorre los commits que tocan el retrato, cuenta las tachadas en el blob de cada uno y comprueba que el primero que llega a trece es el que el arnes nombra. Con su caso positivo por mutacion. Una historia escrita en un comentario se pudre; una anclada en un caso cae.
+  - **6.4 (`docs/loop/ACTA_AUDITOR.md:57083`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"EL `D.1` Y LA PREGUNTA `P.1`, ADJUDICADOS: LA SEDE DEL REPORTE ANOTADO ES SU COMMIT, Y ADEMAS GANA FICHERO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 2.b de esta vuelta. Nace `scripts/loop/archivar_reporte.py`, con nombre estable y sin numero de vuelta, que copia el reporte de la vuelta que cierra a `docs/loop/reportes/REPORTE_V<N>.md`. NO borra nada, no cambia ninguna regla y no crea sede nueva: le da nombre de fichero a la que ya existia. Lee el texto DE GIT y no del arbol de trabajo, y por eso puede archivar HACIA ATRAS: el de la 168, que hoy solo vivia en `1eec382f`, queda en `docs/loop/reportes/REPORTE_V168.md` con sus 31.263 bytes y 530 lineas, cifras que coinciden con las que el propio mensaje de `1eec382f` publica.
+  - **6.5 (`docs/loop/ACTA_AUDITOR.md:57094`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.6` Y LA PREGUNTA `P.2` (EL 332 O EL 47), ADJUDICADOS POR `9.21`: SE PUBLICAN LAS DOS, CADA UNA CON SU CORTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La adjudicacion ratifica lo que el ejecutor ya hizo: el 332 del fichero sellado y el 47 de hoy sobre el grafo vivo se publican LOS DOS, cada uno con su corte, por `9.21`. Esta vuelta no recomputa ninguno de los dos ni borra el otro, y `RECOMPUTO_3388_COMPONENTES.jsonl` sigue siendo la foto del cierre transitivo al corte 3.388.
+  - **6.6 (`docs/loop/ACTA_AUDITOR.md:57103`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.7`, EL `PD.1` Y LA "PARADA" DE LA TAREA 4, ADJUDICADOS: VIGENTE ES NO LLEVAR LA MARCA `SUPERADA`, Y POR TANTO SON 348. NO ES PARADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La 'parada' que la TAREA 4 de la 169 trajo queda adjudicada: NO es parada, y el universo re-medible de la clausula 3 son las 348 vivas, no las 569. Esta vuelta no la reabre ni re-mide las 221 entradas que llevan escrita su marca `SUPERADA`, porque contradecir una marca escrita no es ejecutar una clausula.
+  - **6.7 (`docs/loop/ACTA_AUDITOR.md:57118`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.2` Y EL `PD.3`, ADJUDICADOS: EL EJECUTOR NO SE PASO, Y LA REGLA QUEDA ESCRITA PARA QUE DEJE DE SER PENDIENTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La regla de la SEDE DEL ROJO queda escrita y esta vuelta la obedece tal cual: un rojo que causo OTRA vuelta se trae sin tocarlo; un rojo que causaron las escrituras de ESTA misma sesion se arregla en ESTA misma sesion. La bateria abre esta vuelta EN VERDE por medicion del auditor, asi que no hay ningun rojo heredado que clasificar.
+  - **6.8 (`docs/loop/ACTA_AUDITOR.md:57137`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"EL `D.3`, ADJUDICADO, Y AL REVES DE COMO EL EJECUTOR TEMIA: EL RETOQUE DEL ROTULO NO SOLO ESTABA PERMITIDO, ERA OBLIGATORIO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El retoque del rotulo `las_doce_tachadas` queda adjudicado a favor del ejecutor y al reves de como lo temia: no solo estaba permitido, era obligatorio, porque un rotulo que teclea una cifra que su propio computo desmiente es una cifra falsa en el texto de una guarda. Esta vuelta no lo reabre.
+  - **6.9 (`docs/loop/ACTA_AUDITOR.md:57144`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"EL `D.8` Y EL `PD.2` (LA LECTURA DIRIGIDA SIN NUMERO), ADJUDICADOS POR EXTENSION, Y NO HACE FALTA DOCTRINA NUEVA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 4.a de esta vuelta, POR ADICION PURA. Las filas de tabla de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan numero `LD` sin perder una palabra de su texto, con el siguiente libre COMPUTADO POR INSTRUMENTO igual que `serie_de_registros.py` computa los `R.n`. Numerar no es reescribir. El instrumento PARA si el conteo no cuadra con lo que el encargo supone, en vez de ajustar la cifra al encargo.
+  - **6.10 (`docs/loop/ACTA_AUDITOR.md:57155`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"LA PREGUNTA `P.4` Y LOS CINCO PUENTES, ADJUDICADOS: SE REGISTRAN MEDIDOS Y NO SE EJECUTAN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 4.b de esta vuelta, Y LA FORMA DE EJECUTARLA ES NO EJECUTAR LA FUSION. Los cinco nodos puente del sales roadmap quedan REGISTRADOS CON SU MEDICION y con la salida de `P.10` nombrada, y NO se funden: ninguna operacion escrita recoge esta fusion, y ejecutar una fusion que ninguna ficha ordena es la improvisacion que `AUDITOR.md` seccion 3 prohibe con esas palabras. Su ejecucion espera a la operacion que abra este acto por `P.5` y `P.8`.
+  - **6.11 (`docs/loop/ACTA_AUDITOR.md:57169`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"LAS DOS DEUDAS DE CORTE (`4.2` Y `4.3`) ENTRAN POR `9.21` MAS `9.10`."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, TAREA 3 de esta vuelta, POR ADICION Y CON LA CIFRA VIEJA ENTERA. Las apariciones de '53 familias' en la nota de `OP-I-01`, la aritmetica de 671 que una de ellas sostiene, y el 'el marcador sigue en 2.117' de la clausula 2 de `OP-L-01` y de `OP-L-02` ganan su fecha de corte al lado por `9.21`, sin que ninguna letra vieja se sustituya. Ninguna de las tres era una mentira: las tres son ciertas en su corte y les faltaba el corte escrito. Las apariciones se CUENTAN con instrumento en esta vuelta y no se copian del acta.
+  - **6.12 (`docs/loop/ACTA_AUDITOR.md:57176`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"NINGUNA CLASE SE MUEVE POR ESTA ACTA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y ESTA VUELTA LA MANTIENE. Ninguna clase se movio por el acta 169 y ninguna se mueve por esta vuelta: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` NO se toca, ni al cerrar la forma de las nominas de `OP-L-02` ni al registrar los cinco puentes, porque una lectura dirigida no entra en la cola y no mueve su marcador.
+
+**EL REPARTO POR VIA, CONTADO Y NO TECLEADO:** EJECUTADA: 7 (6.1, 6.2, 6.3, 6.4, 6.9, 6.10, 6.11); SIN TOCAR NADA: 5 (6.5, 6.6, 6.7, 6.8, 6.12).
+**Ninguna de las doce sube al fundador.**
+
+**LAS TRES CAIDAS PROPIAS DEL AUDITOR, REGISTRADAS IGUAL QUE LAS DEL EJECUTOR**
+(precedente del `R.36`, escrito en la vuelta 167 por letra de su encargo, y
+heredado aqui sin reabrirlo). No son del ejecutor y no acumulan para sus
+rachas; se escriben aqui porque el registro de la casa no distingue de quien es
+la mano que cae. En el acta 169 viven en la **seccion 3**.
+
+  - **CAIDA 1 (`docs/loop/ACTA_AUDITOR.md:56931`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 1. QUEME MI SUJETO DE CIEGA ANTES DE ADJUDICARLO, Y ES LA SEGUNDA VUELTA SEGUIDA QUE UN AUDITOR HACE ESTO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Y ES LA UNICA DE LAS TRES QUE VIENE CON REMEDIO DE CODIGO ENCARGADO: dos turnos de auditor seguidos quemando el sujeto de ciega dejaron de ser un descuido, y por eso la `6.1` manda construir el aislador en vez de limitarse a escribir la regla. Esta vuelta lo construye (TAREA 2.a). Lo que ensena, con las palabras del acta: mirar es irreversible, y por eso se mira en el orden que deja opciones; lo que el remedio anade es que el orden deje de depender de que alguien se acuerde.
+  - **CAIDA 2 (`docs/loop/ACTA_AUDITOR.md:56941`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 2. CASI ACUSO AL EJECUTOR CON MI PROPIO INSTRUMENTO CRUDO, DOS VECES."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Y SE REGISTRA AUNQUE NO LLEGARA A PUBLICARSE: el auditor casi acusa al ejecutor dos veces con un resolutor casero (0 colapsos y 334 componentes contra 398 y 47; 6 y 9 contra 8 y 7), y en los dos casos el equivocado era el. NO HAY CIFRA PUBLICADA QUE CORREGIR POR ELLA. Lo que ensena, en sus palabras: un auditor que mide con un instrumento peor que el del ejecutor no esta verificando, esta adivinando con ceremonia. La regla que lo cierra ya existe y es `P.1`: todo conteo que toque ids pasa por el resolutor antes de contar.
+  - **CAIDA 3 (`docs/loop/ACTA_AUDITOR.md:56950`, leida hoy).** Titulo literal del
+    acta: *"CAIDA 3. UNA CLASE MIA EQUIVOCADA EN LA CIEGA, el puesto 788."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE REGISTRA CON SU NOMBRE Y NO ACUMULA PARA NINGUNA RACHA DEL EJECUTOR, porque no es suya. Una clase equivocada del auditor en su relectura ciega, el puesto 788, resuelta a favor del archivo tras releer la regla. NO MUEVE NINGUN DATO y por eso la `6.12` puede decir que ninguna clase se mueve por el acta 169; cuenta como discrepancia en la metrica de credito del propio auditor y esta vuelta no la reabre.
+
+**LO QUE ESTE REGISTRO NO CIERRA, Y SE DICE ANTES DE QUE NADIE LO SUPONGA.**
+La vara `P.5.1` sigue CONGELADA y ninguna de estas doce la estrecha ni la
+ensancha. **Ninguna clase del cribado se mueve por esta entrada** y
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` no se toca, que es lo que la `6.12`
+reserva. **Ningun `estado` de `docs/plan/OPERACIONES.jsonl` se mueve por esta
+entrada**: el campo sigue jubilado como historico y la vara del trabajo
+pendiente sigue siendo `scripts/loop/vuelta150_3_relectura_expediente.py`.
+**Y las dos `OP-M-02` siguen sin ejecutarse**, por la `6.6` del acta 168.

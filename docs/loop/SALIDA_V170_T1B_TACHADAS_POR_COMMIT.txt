@@ -1,0 +1,100 @@
+==============================================================================
+VUELTA 170, TAREA 1.b: LAS TACHADAS DE LA FILA DE LOS COLAPSOS,
+MEDIDAS COMMIT A COMMIT CON EL LOCALIZADOR DEL PROPIO INSTRUMENTO
+==============================================================================
+
+A) LA SERIE DE COMMITS QUE TOCAN EL FICHERO
+   comando: git log --reverse --diff-filter=AM --format=%H|%ad|%s --date=short -- docs/plan/RECOMPUTO_3388.md
+   CIFRA commits con la fila de los colapsos localizada: 38
+
+B) LA TABLA, CONTADA DEL BLOB DE CADA COMMIT
+   commit     vuelta fecha       tachadas  viva    asunto
+   7f4ec6d9   11     2026-08-13  0         0       TAREA 2 vuelta 11: EL RECOMPUTO DE LA FASE II,
+   ec57d14b   12     2026-08-13  0         0       TAREA 1 vuelta 12: dos preguntas imposibles qu
+   f1f267d4   12     2026-08-13  0         0       TAREA 2.B vuelta 12: el paso 2 del recomputo, 
+   d67ee481   13     2026-08-13  0         0       TAREA 1 y 2.A vuelta 13: la nomina de las 46 S
+   645ab6b0   14     2026-08-13  0         0       Vuelta 14 TAREA 2: tres correcciones adjudicad
+   3bf9c5f9   15     2026-08-13  0         0       Vuelta 15 TAREA 1: OP-L-03 adjudicado, cobertu
+   8f919610   15     2026-08-13  0         0       Vuelta 15 TAREA 2: recomputo del inventario de
+   8053c63f   15     2026-08-13  0         0       REPORTE.md vuelta 15: registro TAREA 1 y recom
+   b81919e9   16     2026-08-13  0         0       Vuelta 16 TAREA 1 puntos 1 a 3: mesa unida cor
+   afeb4933   16     2026-08-14  0         0       Vuelta 16 TAREA 1 punto 4 y TAREA 2: registro 
+   87d453c6   17     2026-08-14  0         0       Vuelta 17 TAREA 1 puntos 1 a 4: la caida remed
+   2d5b3932   17     2026-08-14  0         0       Vuelta 17 TAREA 2: las dos costuras sin dueno 
+   0ac78fc9   17     2026-08-14  0         0       Vuelta 17 TAREA 1 punto 5: la FASE II medida b
+   7b21a8d0   19     2026-08-14  0         0       Vuelta 19 TAREA 2.B: las tres figuras que falt
+   0342e6d5   20     2026-08-14  0         0       Vuelta 20 TAREA 1: los cinco registros, y Horo
+   1bfab1c4   20     2026-08-14  0         0       Vuelta 20 TAREA 2: la FASE II medida al cierre
+   8fe604ef   21     2026-08-14  0         0       Vuelta 21 TAREA 1: los cinco registros del act
+   7cec9ecc   (sin)  2026-08-15  0         0       TAREA 1.3: las tres clases VOLCADAS y el barri
+   78ea7799   (sin)  2026-08-15  0         0       TAREA 2.4: 724, 755 y 827 RELEIDOS contra el s
+   801c59f9   (sin)  2026-08-15  0         0       PASO 3 DEL ORDEN INTERNO DE OP-D-03 HECHO Y VO
+   c8c4e0b3   (sin)  2026-08-18  1         1       TAREA 1 HECHA: LAS CINCO RELECTURAS DE P.5 VOL
+   97552714   (sin)  2026-08-18  1         1       TAREA 2 HECHA: EL 643 LEIDO COMO LD-82, DA D, 
+   19a61a7d   49     2026-08-19  2         41      VUELTA 49, TAREA 1.3: LAS TRES COLISIONES DE C
+   d485284a   50     2026-08-20  3         48      VUELTA 50, TAREA 1 ENTERA: EL BARRIDO QUE LA V
+   f723f244   50     2026-08-20  4         49      VUELTA 50 CERRADA: EL BARRIDO CORRIDO AL CIERR
+   67bc64c3   51     2026-08-20  4         49      VUELTA 51, TAREA 1 ENTERA: LAS TRES CORRECCION
+   5b7caac0   51     2026-08-20  5         57      VUELTA 51 CERRADA: EL REGISTRO DEL TRAMO GENER
+   ee10eee1   52     2026-08-20  5         57      VUELTA 52, TAREA 1: LAS TRES CORRECCIONES DE C
+   5c485cb2   52     2026-08-20  6         60      VUELTA 52 CERRADA: LA TAREA 1 ENTERA CON SUS C
+   49ae6eef   53     2026-08-20  6         60      VUELTA 53, TAREA 1: LAS CUATRO CORRECCIONES Y 
+   be5d152b   53     2026-08-20  7         72      VUELTA 53 CERRADA: EL TRAMO 1 DE OP-U-01 QUEDA
+   29ac3675   54     2026-08-20  8         93      VUELTA 54 CERRADA: EL TRAMO 2 DE OP-U-01 QUEDA
+   b908d5b4   55     2026-08-20  9         117     VUELTA 55 CERRADA: EL TRAMO 2 DE OP-U-01 QUEDA
+   051c0396   56     2026-08-20  10        164     VUELTA 56 CERRADA: EL TRAMO 3 DE OP-U-01 SE AB
+   66c36215   57     2026-08-20  11        208     VUELTA 57 CERRADA: EL TRAMO 4 DE OP-U-01 SE AB
+   3ffc2091   58     2026-08-20  12        207     VUELTA 58 CERRADA: LA TAREA 1 ENTERA EN SUS CU
+   33fe1380   (sin)  2026-09-04  13        398     TAREA 3: el retrato de las A vuelve a estar vi
+   c6ac70f6   (sin)  2026-09-04  13        398     TAREA 4: el rotulo ancho dice ahora de que pob
+
+C) EL COMMIT EN QUE ENTRA LA DECIMOTERCERA TACHADA, COMPUTADO
+   el primer commit cuya fila llega a 13 tachadas: 33fe1380
+   su vuelta LEIDA de su asunto: (el asunto no la nombra)
+   fecha: 2026-09-04
+   asunto: TAREA 3: el retrato de las A vuelve a estar vivo, y la fila que valia CERO es la que rompe la resta
+   el commit inmediatamente anterior de la serie: 3ffc2091 (vuelta 58), con 12
+   CIFRA tachadas en el ultimo commit de la serie: 13
+
+D) LA VUELTA 167, BUSCADA Y NO SUPUESTA
+   (una busqueda negativa no se puede citar sin el comando que la produce)
+   CIFRA commits de la serie cuyo asunto nombra la VUELTA 167: 0
+   CIFRA valores distintos de tachadas en toda la serie: 14 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+   CIFRA puntos en que el conteo CAMBIA: 13
+      801c59f9 (0) -> c8c4e0b3 (1), vuelta (sin) del asunto, None computada
+      97552714 (1) -> 19a61a7d (2), vuelta 49 del asunto, 49 computada
+      19a61a7d (2) -> d485284a (3), vuelta 50 del asunto, 50 computada
+      d485284a (3) -> f723f244 (4), vuelta 50 del asunto, 50 computada
+      67bc64c3 (4) -> 5b7caac0 (5), vuelta 51 del asunto, 51 computada
+      ee10eee1 (5) -> 5c485cb2 (6), vuelta 52 del asunto, 52 computada
+      49ae6eef (6) -> be5d152b (7), vuelta 53 del asunto, 53 computada
+      be5d152b (7) -> 29ac3675 (8), vuelta 54 del asunto, 54 computada
+      29ac3675 (8) -> b908d5b4 (9), vuelta 55 del asunto, 55 computada
+      b908d5b4 (9) -> 051c0396 (10), vuelta 56 del asunto, 56 computada
+      051c0396 (10) -> 66c36215 (11), vuelta 57 del asunto, 57 computada
+      66c36215 (11) -> 3ffc2091 (12), vuelta 58 del asunto, 58 computada
+      3ffc2091 (12) -> 33fe1380 (13), vuelta (sin) del asunto, 166 computada
+
+E) LA VUELTA DE UN COMMIT CUYO ASUNTO NO LA NOMBRA, COMPUTADA DE LAS ACTAS
+   REGLA, del invariante de la casa y no de una corazonada: los commits
+   posteriores al del ACTA DE LA VUELTA N pertenecen a la vuelta N mas 1.
+   33fe1380 pertenece a la VUELTA 166
+   CONTRASTE, y es contraste y no fuente: el acta 169 dice que la
+   decimotercera entro en 33fe1380, que es la vuelta 166.
+   yo computo: 166, CALZA
+
+F) LA TABLA PARA PEGAR EN LA CORRECCION
+   7f4ec6d9 (vuelta 11, 2026-08-13): 0 tachadas, la primera de la serie
+   3ffc2091 (vuelta 58, 2026-08-20): 12 tachadas
+   33fe1380 (vuelta 166, 2026-09-04): 13 tachadas, LA DECIMOTERCERA ENTRA AQUI
+   c6ac70f6 (vuelta 167, 2026-09-04): 13 tachadas, ultimo commit que toca el fichero
+   el fichero de HOY en el arbol de trabajo: 13 tachadas
+
+G) EL CONTRASTE CON EL ACTA, Y ES CONTRASTE Y NO FUENTE
+   el acta 169 dice: 12 tachadas en 3ffc2091, 13 en 33fe1380,
+   y 13 desde entonces hasta HEAD.
+   3ffc2091 -> el acta dice 12, yo mido 12, CALZA
+   33fe1380 -> el acta dice 13, yo mido 13, CALZA
+   el ultimo de la serie -> el acta dice 13, yo mido 13, CALZA
+
+VERDE: la tabla queda medida. La cifra que se publique sale de aqui.

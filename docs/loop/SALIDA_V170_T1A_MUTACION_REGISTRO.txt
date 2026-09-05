@@ -1,0 +1,122 @@
+==============================================================================
+VUELTA 170, TAREA 1.a: CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 169
+==============================================================================
+
+A) LA CIFRA DE ADJUDICACIONES SIGUE AL ACTA Y NO A UNA CONSTANTE
+   acta fabricada con 1 adjudicaciones -> el barrido ve 1
+   acta fabricada con 5 adjudicaciones -> el barrido ve 5
+   acta fabricada con 9 adjudicaciones -> el barrido ve 9
+   acta fabricada con 12 adjudicaciones -> el barrido ve 12
+   acta fabricada con 14 adjudicaciones -> el barrido ve 14
+   acta fabricada con 17 adjudicaciones -> el barrido ve 17
+
+B) EL BARRIDO NO CONFUNDE 6.1 CON 6.10, 6.11, 6.12 NI 6.13 A 6.14
+   6.1 acierta 1 vez dentro del cuerpo con 6.10 a 6.14 presentes
+
+C) EL BARRIDO PARA EN EL PRIMER HUECO Y NO SALTA POR ENCIMA
+   acta de 14 con la 6.7 ausente -> el barrido ve 6 (para en el hueco)
+   acta con la 6.5 duplicada -> claves con conteo distinto de 1: 6.5
+   negrita sin cierre: PARADA: la negrita de 6.9 no cierra dentro de su parrafo.
+
+D) EL ACOTADO DEJA FUERA EL RUIDO DE OTRAS ACTAS
+   sin acotar: 5 negritas CAIDA | acotado: 3
+
+E) EL TITULO SIGUE A LOS DOS CONTEOS Y NO A UNA CONSTANTE,
+   Y CONCUERDA EN NUMERO EN SUS DOS RAMAS
+   (6, 2) -> Registro de las seis adjudicaciones y las dos caidas propias del acta de la vuelta 169
+   (9, 1) -> Registro de las nueve adjudicaciones y la caida propia del acta de la vuelta 169
+   (12, 3) -> Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 169
+   (14, 3) -> Registro de las catorce adjudicaciones y las tres caidas propias del acta de la vuelta 169
+
+F) UNA ADJUDICACION O UNA CAIDA SIN GLOSA TIENE QUE PARAR
+   claves del acta de 17: sin glosa escrita -> 6.13, 6.14, 6.15, 6.16, 6.17
+
+G) EL ACTA DE VERDAD, LEIDA HOY
+   cuerpo del acta 169: lineas 56702 a 57287
+   CIFRA adjudicaciones 6.n que trae la seccion 6: 12
+   CIFRA caidas que trae la seccion 3: 3
+   CIFRA negritas que se leen sin error: 15 de 15
+
+H) PASADA 1, LOS CASOS TAL CUAL
+   A_con_1_adjudicaciones_ve_1                          PASA   (real=1 esperado=1)
+   A_con_5_adjudicaciones_ve_5                          PASA   (real=5 esperado=5)
+   A_con_9_adjudicaciones_ve_9                          PASA   (real=9 esperado=9)
+   A_con_12_adjudicaciones_ve_12                        PASA   (real=12 esperado=12)
+   A_con_14_adjudicaciones_ve_14                        PASA   (real=14 esperado=14)
+   A_con_17_adjudicaciones_ve_17                        PASA   (real=17 esperado=17)
+   B_el_patron_de_6_1_acierta_una_sola_vez              PASA   (real=1 esperado=1)
+   B_y_su_titulo_se_lee_sin_error                       PASA   (real=True esperado=True)
+   C_para_en_el_hueco_y_ve_6                            PASA   (real=6 esperado=6)
+   C_la_duplicada_se_detecta                            PASA   (real=1 esperado=1)
+   C_duplicada_para                                     PASA   (real=True esperado=True)
+   C_negrita_sin_cierre_para                            PASA   (real=True esperado=True)
+   D_sin_acotar_hay_ruido_de_caidas                     PASA   (real=5 esperado=5)
+   D_acotado_no_lo_ve                                   PASA   (real=3 esperado=3)
+   D_sin_acotar_la_6_1_esta_tres_veces                  PASA   (real=3 esperado=3)
+   E_titulo_6_2_dice_seis                               PASA   (real='seis' esperado='seis')
+   E_titulo_9_1_dice_nueve                              PASA   (real='nueve' esperado='nueve')
+   E_titulo_12_3_dice_doce                              PASA   (real='doce' esperado='doce')
+   E_titulo_14_3_dice_catorce                           PASA   (real='catorce' esperado='catorce')
+   E_la_rama_de_UNA_caida_va_en_singular                PASA   (real=True esperado=True)
+   E_la_rama_de_DOS_caidas_va_en_plural                 PASA   (real=True esperado=True)
+   E_titulo_6_2_no_es_igual_al_de_6_1                   PASA   (real=False esperado=False)
+   E_titulo_6_2_no_es_igual_al_de_9_2                   PASA   (real=False esperado=False)
+   F_las_adjudicaciones_sin_glosa_se_detectan           PASA   (real=5 esperado=5)
+   F_las_caidas_sin_glosa_se_detectan                   PASA   (real=1 esperado=1)
+   F_las_doce_de_hoy_SI_tienen_glosa                    PASA   (real=0 esperado=0)
+   G_el_acta_169_trae_DOCE_adjudicaciones               PASA   (real=12 esperado=12)
+   G_cada_una_aparece_una_sola_vez                      PASA   (real=0 esperado=0)
+   G_el_acta_169_trae_TRES_caidas                       PASA   (real=3 esperado=3)
+   G_la_frase_de_la_sede_esta_una_vez_en_el_fichero     PASA   (real=1 esperado=1)
+   G_y_cero_veces_dentro_del_acta_169                   PASA   (real=0 esperado=0)
+   G_las_quince_negritas_se_leen_sin_error              PASA   (real=15 esperado=15)
+   G_el_titulo_que_saldra_dice_doce_y_tres_en_plural    PASA   (real='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 169' esperado='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 169')
+   G_las_vias_reales_no_suben_NINGUNA_al_fundador       PASA   (real=0 esperado=0)
+   G_el_reparto_real_da_SIETE_ejecutadas                PASA   (real=7 esperado=7)
+   G_y_CINCO_sin_tocar_nada                             PASA   (real=5 esperado=5)
+   G_y_las_dos_vias_suman_las_doce                      PASA   (real=12 esperado=12)
+   G_sin_via_de_fundador_no_sube_ninguna                PASA   (real=0 esperado=0)
+   CIFRA casos: 38 | pasan: 38 | fallan: 0
+
+I) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_con_1_adjudicaciones_ve_1                          CAE   (esperado mutado=2)
+   A_con_5_adjudicaciones_ve_5                          CAE   (esperado mutado=6)
+   A_con_9_adjudicaciones_ve_9                          CAE   (esperado mutado=10)
+   A_con_12_adjudicaciones_ve_12                        CAE   (esperado mutado=13)
+   A_con_14_adjudicaciones_ve_14                        CAE   (esperado mutado=15)
+   A_con_17_adjudicaciones_ve_17                        CAE   (esperado mutado=18)
+   B_el_patron_de_6_1_acierta_una_sola_vez              CAE   (esperado mutado=2)
+   B_y_su_titulo_se_lee_sin_error                       CAE   (esperado mutado=False)
+   C_para_en_el_hueco_y_ve_6                            CAE   (esperado mutado=7)
+   C_la_duplicada_se_detecta                            CAE   (esperado mutado=2)
+   C_duplicada_para                                     CAE   (esperado mutado=False)
+   C_negrita_sin_cierre_para                            CAE   (esperado mutado=False)
+   D_sin_acotar_hay_ruido_de_caidas                     CAE   (esperado mutado=6)
+   D_acotado_no_lo_ve                                   CAE   (esperado mutado=4)
+   D_sin_acotar_la_6_1_esta_tres_veces                  CAE   (esperado mutado=4)
+   E_titulo_6_2_dice_seis                               CAE   (esperado mutado='seis_mutado')
+   E_titulo_9_1_dice_nueve                              CAE   (esperado mutado='nueve_mutado')
+   E_titulo_12_3_dice_doce                              CAE   (esperado mutado='doce_mutado')
+   E_titulo_14_3_dice_catorce                           CAE   (esperado mutado='catorce_mutado')
+   E_la_rama_de_UNA_caida_va_en_singular                CAE   (esperado mutado=False)
+   E_la_rama_de_DOS_caidas_va_en_plural                 CAE   (esperado mutado=False)
+   E_titulo_6_2_no_es_igual_al_de_6_1                   CAE   (esperado mutado=True)
+   E_titulo_6_2_no_es_igual_al_de_9_2                   CAE   (esperado mutado=True)
+   F_las_adjudicaciones_sin_glosa_se_detectan           CAE   (esperado mutado=6)
+   F_las_caidas_sin_glosa_se_detectan                   CAE   (esperado mutado=2)
+   F_las_doce_de_hoy_SI_tienen_glosa                    CAE   (esperado mutado=1)
+   G_el_acta_169_trae_DOCE_adjudicaciones               CAE   (esperado mutado=13)
+   G_cada_una_aparece_una_sola_vez                      CAE   (esperado mutado=1)
+   G_el_acta_169_trae_TRES_caidas                       CAE   (esperado mutado=4)
+   G_la_frase_de_la_sede_esta_una_vez_en_el_fichero     CAE   (esperado mutado=2)
+   G_y_cero_veces_dentro_del_acta_169                   CAE   (esperado mutado=1)
+   G_las_quince_negritas_se_leen_sin_error              CAE   (esperado mutado=16)
+   G_el_titulo_que_saldra_dice_doce_y_tres_en_plural    CAE   (esperado mutado='Registro de las doce adjudicaciones y las tres caidas propias del acta de la vuelta 169_mutado')
+   G_las_vias_reales_no_suben_NINGUNA_al_fundador       CAE   (esperado mutado=1)
+   G_el_reparto_real_da_SIETE_ejecutadas                CAE   (esperado mutado=8)
+   G_y_CINCO_sin_tocar_nada                             CAE   (esperado mutado=6)
+   G_y_las_dos_vias_suman_las_doce                      CAE   (esperado mutado=13)
+   G_sin_via_de_fundador_no_sube_ninguna                CAE   (esperado mutado=1)
+   CIFRA casos que caen al mutar el esperado: 38 de 38
+
+VERDE: los 38 casos pasan tal cual y los 38 caen al mutar el esperado.
