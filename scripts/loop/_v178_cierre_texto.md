@@ -175,6 +175,14 @@ abajo. **En los dos se arreglo el instrumento y no el esperado del arnes.** Lo
 cuento como caida mia porque los dos defectos salieron de mi mano, y lo cuento con
 alegria porque los dos casos rojos funcionaron.
 
-**`C.4` CUATRO CIFRAS SIN PAREJA EN ESTE MISMO REPORTE.** La guarda de la TAREA 1.e
-las encontro antes del cierre. Estan corregidas y la correccion esta commiteada
-como fichero propio, no aplicada a mano.
+**`C.4` CINCO CIFRAS SIN PAREJA EN ESTE MISMO REPORTE, Y LA QUINTA LA ESCRIBIA LA
+PROPIA GUARDA.** La guarda de la TAREA 1.e encontro CUATRO en el cuerpo, todas
+mias, antes del cierre; estan corregidas en
+`scripts/loop/_v178_arreglo_parejas.py`, que arregla el borrador y el reporte a la
+vez para que no diverjan. **Y en la primera corrida de `cerrar_reporte.py` la
+guarda cazo una QUINTA que no era del cuerpo: la escribia el generador de la
+seccion 9 de ese mismo fichero**, que partia "N bytes en disco" y "N bytes
+normalizados a LF" en dos lineas. **Una guarda que se estrena cazando a su autor
+DOS VECES, la segunda dentro del instrumento que la lleva**, y por eso el cierre
+de esta vuelta salio ROJO la primera vez y hubo que arreglar el generador antes de
+volver a correrlo. Se arreglo el generador, no la guarda.

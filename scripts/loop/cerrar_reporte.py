@@ -438,9 +438,9 @@ def main():
             "**EL NOMBRE DEL FICHERO:** `%s`." % a.bateria + NL +
             "**SUS BYTES, MEDIDOS EN ESTA CORRIDA** con `os.path.getsize` por" + NL +
             "`scripts/loop/cerrar_reporte.py`, no tecleados, y POR LAS DOS" + NL +
-            "CONVENCIONES mientras la del fundador no este fijada: **%d bytes en disco"
-            % max(tam, 0) + NL +
-            "y %d bytes normalizados a LF**." % max(tam_lf, 0) + NL + NL +
+            "CONVENCIONES mientras la del fundador no este fijada:" + NL +
+            "**%d bytes en disco y %d bytes normalizados a LF**."
+            % (max(tam, 0), max(tam_lf, 0)) + NL + NL +
             "%s %s" % (MARCA_ATRIBUCION, atribucion) + NL + NL +
             "**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este" + NL +
             "instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b" + NL +
