@@ -1,0 +1,42 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 176, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 176 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 13167 | saltos de linea: 166
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V176_TALLADOR_CABECERA.txt             4524 bytes, 11 filas de tabla
+   scripts/loop/_v176_cierre_texto.md                     16939 bytes, sha256 e58050f76f314e6a
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. LA PARADA, Y ES UNA. LA BATERIA MORDIO
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+   docs/loop/SALIDA_V176_BATERIA.txt                    60197 bytes
+   CIFRA lineas no vacias de la bateria: 903
+   vuelta que lleva dentro el nombre del fichero: 176
+
+C) SE ESCRIBE
+   cabecera: 534 bytes de hueco -> 4583 bytes de tabla pegada
+   veredicto escrito: 591 bytes
+   ESCRITO: docs/loop/REPORTE.md (95231 bytes, 1447 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+
+VERDE: el reporte de la vuelta 176 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

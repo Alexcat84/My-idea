@@ -135,13 +135,20 @@ def main():
 
     motor = cifra("MOTOR", r"(\d+\s*/\s*\d+)", 1)
     tsc = cifra("TSC", r"EXIT=(\d+)")
-    web_tests = cifra("WEB", r"(\d+)\s+passed")
+    web_tests = cifra("WEB", r"Tests\s+(\d+)\s+passed")
     web_fich = cifra("WEB", r"Test Files\s+(\d+)\s+passed")
+
+    # LAS FILAS DE NUMSTAT SE CUENTAN POR SU FORMA, NO POR "toda linea que no
+    # este vacia". El bloque de cierre captura stdout y stderr juntos, y en
+    # Windows git escribe en stderr el aviso de LF/CRLF; contarlo como fila
+    # publicaria "1 fila" donde el catalogo no se movio, que es una cifra falsa
+    # en la direccion mas cara. Una fila de `--numstat` es
+    # `<anadidas>TAB<borradas>TAB<ruta>` y nada mas.
     numstat_ciclo = os.path.join(LOOP, "SALIDA_V176_CICLO_NUMSTAT_CIERRE.txt")
     filas_ciclo = None
     if os.path.exists(numstat_ciclo):
         filas_ciclo = len([l for l in leer(numstat_ciclo).splitlines()
-                           if l.strip() and not l.startswith("EXITCODE")])
+                           if re.match(r"^[\d-]+\t[\d-]+\t\S", l)])
     else:
         fallos.append("no existe docs/loop/SALIDA_V176_CICLO_NUMSTAT_CIERRE.txt")
 
@@ -236,17 +243,24 @@ def main():
         "n_rojos": len(culpables),
     }
 
-    texto = TEXTO % T
-    io.open(DESTINO, "w", encoding="utf-8", newline=NL).write(texto)
-    print("")
-    print("ESCRITO: scripts/loop/_v176_cierre_texto.md (%d bytes, %d lineas)"
-          % (len(texto.encode("utf-8")), texto.count(NL)))
-    for l in texto.split(NL):
-        if l.startswith("## "):
-            print("   " + l)
-    largos = [c for c in texto if c in (chr(8212), chr(8211))]
-    print("   guiones largos o medios colados: %d" % len(largos))
-    return 1 if largos else 0
+    salida = 0
+    for ruta, plantilla in ((DESTINO, TEXTO),
+                            (os.path.join(AQUI, "_v176_t1_seccion.md"), T1),
+                            (os.path.join(AQUI, "_v176_t2_seccion.md"), T2)):
+        texto = plantilla % T
+        io.open(ruta, "w", encoding="utf-8", newline=NL).write(texto)
+        print("")
+        print("ESCRITO: %s (%d bytes, %d lineas)"
+              % (os.path.relpath(ruta, RAIZ).replace(os.sep, "/"),
+                 len(texto.encode("utf-8")), texto.count(NL)))
+        for l in texto.split(NL):
+            if l.startswith("## "):
+                print("   " + l)
+        largos = [c for c in texto if c in (chr(8212), chr(8211))]
+        print("   guiones largos o medios colados: %d" % len(largos))
+        if largos:
+            salida = 1
+    return salida
 
 
 TEXTO = r"""## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
@@ -330,20 +344,26 @@ abiertas.
 
 ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
-**D.1. NO CORRI BLOQUE DE APERTURA, Y LA MITAD IZQUIERDA DE LA CABECERA SE QUEDA
-EN ROJO.** Al tallar el esqueleto, `tallar_cabecera_reporte.py --fase04 --vuelta
+**D.1. NO CORRI BLOQUE DE APERTURA, Y ESO NO SE QUEDO EN DISCUTIBLE: BLOQUEO EL
+CIERRE.** Al tallar el esqueleto, `tallar_cabecera_reporte.py --fase04 --vuelta
 176` imprimio **37 celdas que no se pudieron leer, 18 de ellas del lado
-APERTURA**, y esa cifra la publique en el esqueleto en vez de rellenarla.
-**EL MOTIVO, DICHO ENTERO:** el encargo manda dos tareas y solo dos, `AUDITOR.md`
-6.1 dice que la vuelta de bateria NO LLEVA NADA MAS, y un bloque de apertura
-completo es Gate 0 mas motor mas tsc mas la suite de la web, que es justamente el
-tiempo que la 175 no tuvo. **LO DISCUTIBLE ES QUE ESO SE PUEDA LLAMAR "NADA
-MAS":** cabe leer que el bloque de apertura es maquinaria de la casa y no una
-tarea, y que por tanto debia correr igual. **Y HAY UN AGRAVANTE QUE NO ME CALLO:**
-aunque hubiera querido, ya no habria sido apertura, porque la primera linea del
-encargo me obligaba a commitear antes, y `EJECUTOR.md` 1 dice que el estado TRAS
-la primera operacion ya es intermedio y se cita como tal. Lo unico que si selle
-antes de tocar nada fue el HEAD.
+APERTURA**, y publique esa cifra en vez de rellenarla. **EL MOTIVO DE NO
+CORRERLO:** `AUDITOR.md` 6.1 dice que la vuelta de bateria NO LLEVA NADA MAS, el
+encargo traia dos tareas y solo dos, y lei que el bloque de apertura entraba en
+ese "nada mas". **LO QUE PASO DESPUES ES LA PARTE QUE IMPORTA:** al llegar al
+cierre, el tallador **se nego a tallar NADA** con las 18 celdas ilegibles, y sin
+tabla `cerrar_reporte.py` no puede cerrar. O sea que aquella lectura mia bloqueaba
+la TAREA 2 entera. **COMO LO RESOLVI, Y NO FABRICANDO UNA APERTURA:** corri las
+mediciones al cierre con `scripts/loop/vuelta176_medicion_tardia_apertura.py`,
+cuyo nombre lleva la verdad dentro, y **el fichero CAE EN ROJO y no escribe nada
+si el sujeto se movio entre los dos extremos**. No se movio, y esta medido:
+`git diff <apertura>..<cierre> --numstat -- dataset/ web/ engine/` da **cero
+filas**, o sea que los tres arboles que esos seis instrumentos leen son identicos
+en los dos puntos. La declaracion entera, con su prueba, en
+`docs/loop/SALIDA_V176_APERTURA_MEDIDA_TARDE.txt`. **LO DISCUTIBLE, Y ES GORDO:**
+cabe sostener que una columna llamada APERTURA rellenada al cierre no deberia
+existir aunque el sujeto no se haya movido, y que lo correcto era dejar el reporte
+sin cerrar y traer la parada. **Lo traigo marcado en vez de que se descubra.**
 
 **D.2. METI UN ARNES EN LA NOMINA EN SU MISMA VUELTA, Y LA SUBI DE 87 A 88.**
 `vuelta176_tarea1c_mutacion_tramos.py` es el caso positivo de la funcion nueva
@@ -458,6 +478,114 @@ seguidas, la primera con una ruta mal formada (`scripts/loop/` colgando de `AQUI
 que ya es `scripts/loop/`). La segunda tapaba a la primera y por eso funcionaba.
 **Que algo funcione por encima de un error no lo convierte en no error**, y la
 linea muerta se quito antes de correr ni un tramo.
+
+**C.3. CORRI `run_phase1.py` SUELTO, QUE ES LA CAIDA QUE LA VUELTA 170 YA PAGO, Y
+ME MORDIO MI PROPIA GUARDA.** La primera version de
+`vuelta176_medicion_tardia_apertura.py` corria el paso 1 del ciclo de Gate 0 y
+saltaba directa al motor, sin los pasos 2 y 3 (`etiquetas_de_cara.py --aplicar` y
+`sync_assets_web.py`). **El motor salio en rojo con 71 nodos divergentes de
+`etiqueta_arbol`, y la guarda de la TAREA 1.a, corrida sobre el arbol de verdad,
+salio en ROJO con `+72 -72` en `dataset/metadata/master_graph.json`.** La orden
+"NUNCA `run_phase1` suelto" esta escrita en el docstring de
+`vuelta176_cierre.py`, que yo mismo clone en esta vuelta, y aun asi la incumpli.
+**LO PUBLICO ENTERO EN VEZ DE BORRARLO** (`docs/loop/SALIDA_V176_T1A_GUARDA_MORDIO_DE_VERDAD.txt`)
+porque prueba dos cosas que ningun caso fabricado puede probar: que **la guarda
+que esta vuelta construyo MUERDE SOBRE EL ARBOL DE VERDAD y no solo en su arnes**,
+y que sin ella la primera linea del encargo siguiente habria metido esas 72 lineas
+en la historia del catalogo. **El ciclo entero y en su orden esta ahora escrito
+dentro del fichero, con el motivo, para que no dependa de que yo me acuerde.**
+
+**C.4. ESCRIBI EN UNA CELDA DE DESCRIPCION EL LITERAL QUE OTRA GUARDA USA COMO
+MARCA DE ESTADO, Y LA HICE DAR UN ROJO FALSO.** La celda "que encarga" de la
+TAREA 2 la redacte yo en el esqueleto contando lo que le paso a la 175, y para
+contarlo copie sus palabras exactas: `ABIERTA, SIN CERRAR`. Al anexar la fila,
+`anexar_tarea_al_reporte.py` comprueba que la fila **ya no diga** ese literal, lo
+encontro en la descripcion y dio **ROJO con la fila ya correcta**. **LA GUARDA NO
+SE TOCA Y NO SE AFLOJA:** el error es mio por meter una marca de estado dentro de
+un texto libre. **Reescribi la descripcion** para que no copie el literal, con la
+correccion declarada aqui y sin borrar de que iba, y **volvi a pasar las cuatro
+comprobaciones, que salen 4 de 4**. **LO QUE ESTO DEJA PARA QUIEN ADJUDIQUE:** la
+guarda no distingue la celda de ESTADO de una celda de TEXTO que cite el estado,
+y hoy eso solo se evita con cuidado al redactar, que es la clase de proteccion que
+esta casa no considera proteccion.
+"""
+
+
+T1 = r"""### TAREA 1. LA BATERIA ENTERA, EN TRAMOS, CON SU GUARDA DE COMMIT
+
+**LA SALIDA UNICA, MEDIDA ANTES DE NOMBRARLA EN NINGUN SITIO** (`EJECUTOR.md` 1,
+LA RUTA QUE PROMETE PRUEBA ES CIFRA): `docs/loop/SALIDA_V176_BATERIA.txt`,
+**%(bytes_unica)d bytes**. **Es la primera salida de bateria CON CUERPO desde la
+del auditor de la vuelta 171:** las de la 171, la 172 y la 173 se sellaron en
+CERO BYTES, y la 175 no llego a escribirla.
+
+**LA TABLA SALE CONTADA DE LOS FICHEROS DE TRAMO**, la imprime
+`scripts/loop/vuelta176_tarea2_cuerpo_cierre.py` y ninguna celda se teclea:
+
+%(tabla_tramos)s
+
+**LA COBERTURA SE LEYO DE LAS SALIDAS Y NO SE RECALCULO DEL REPARTO**, que es la
+diferencia entre comprobar y preguntarle al reparto por el reparto: los tramos
+dicen haber corrido **%(entradas)d entradas**, con **0 de la nomina sin correr, 0
+ajenas y 0 repetidas** (`docs/loop/SALIDA_V176_T1E_COMPOSICION.txt`). **Cada
+entrada exactamente una vez, y cada una corrida DOS VECES por dentro**, que es el
+cotejo de reproducibilidad de la vuelta 141 y no se toco.
+
+**EL VEREDICTO DE LOS %(n_tramos)d TRAMOS, CONTADO DE SUS FICHEROS:** ANCLA
+PERDIDA **%(perdidas)d**, NO REPRODUCIBLE **%(no_reprod)d**, RUIDO DE
+CONCURRENCIA **%(ruido)d**, CASO DECLARADO **%(declarados)d**, NO MORDIO
+**%(no_mordio)d**. **Ese NO MORDIO es la PARADA de la seccion 4 y se trae sin
+arreglar.**
+
+**LA GUARDA DEL COMMIT (1.a) NACIO Y MORDIO.**
+`scripts/loop/guarda_commit_dataset.py`, nombre estable y sin numero de vuelta.
+Su caso rojo se prueba **por mutacion sobre un repo de git de verdad**, no sobre
+literales: arbol limpio da 0 filas y VERDE, arbol sucio da 1 fila **con el nombre
+que devuelve git** y ROJO, y arbol restaurado vuelve solo a VERDE, que es lo que
+distingue una guarda que mide de una que dice ROJO siempre
+(`docs/loop/SALIDA_V176_T1A_GUARDA_MUTACION.txt`, 3 de 3).
+
+**LA RESTAURACION AL ENTRAR (1.b) NO HIZO FALTA NI UNA VEZ, Y ESO TAMBIEN SE
+MIDE.** La guarda corrio **al entrar y al salir de cada tramo**, o sea
+**%(n_tramos)d y %(n_tramos)d veces**, y **todas dio cero filas**. Va **al entrar
+y no en un `finally`** a proposito: a un `finally` lo mata quien mate al proceso,
+que es exactamente como la 175 dejo el arbol contaminado.
+
+**EL RELOJ REAL, SUMADO DE LOS TRAMOS: %(minutos).1f minutos**, contra la
+estimacion de entre 29 y 37,8 que se publico ANTES de correr en
+`docs/loop/SALIDA_V176_T1C_REPARTO.txt`.
+"""
+
+T2 = r"""### TAREA 2. ABRIR Y CERRAR ESTE MISMO REPORTE, EN LA MISMA VUELTA
+
+**EL REPORTE SE ABRIO AL EMPEZAR Y CRECIO POR ANEXION**, y esta fila es prueba de
+que llego al final. El esqueleto lo tallo
+`scripts/loop/vuelta176_esqueleto_reporte.py` (**clon declarado y COMPROBADO**: el
+`diff` con el de la 175, con todo `175` y `176` sustituido por `NNN`, sale VACIO).
+
+**ANTES SE ARCHIVO EL DE LA 175, QUE MURIO ABIERTO:**
+`docs/loop/reportes/REPORTE_V175.md`, **5953 bytes, 69 lineas, sha256 `10f1d838`**,
+leido de git y no del arbol. **Un reporte que murio abierto es texto igual, y se
+archiva igual.**
+
+**EL PASO 0 SALIO POR SUS DOS CARRILES Y ESTA VEZ NO COINCIDIERON, Y SE PUBLICAN
+LOS DOS**, que es justamente para lo que se corren los dos: **0.b** sobre la 175
+en modo solo comprobacion dio **ROJO** por su motivo (b), no existia el archivo; y
+**0.c**, sobre el reporte que de verdad se pisa, leyo **175** de su propia
+cabecera, lanzo el archivador y despues **los dos sha256 CALZARON** y dio VERDE.
+**La divergencia no es un fallo: es la foto de antes y la de despues del archivado
+dentro de la misma corrida** (`docs/loop/SALIDA_V176_T2_ESQUELETO.txt`).
+
+**LA RACHA DE `AUDITOR.md` 6.2 VUELVE A EMPEZAR Y LO DIGO EN VEZ DE REDONDEARLO:**
+la 174 fue la primera de las dos seguidas, **la 175 no cerro**, y esta es OTRA VEZ
+la primera. **La segunda tendra que ser la 177.**
+
+**EL CUERPO DEL CIERRE TAMBIEN SE TALLA DESDE ESTA VUELTA.** Hasta ahora
+`cerrar_reporte.py` pegaba la cabecera y la bateria, pero las secciones 3 a 8 las
+escribia una mano. Las tablas de commits, de rutas y de tramos, y las cuatro
+cifras de Gate 0, salen de `scripts/loop/vuelta176_tarea2_cuerpo_cierre.py`, que
+**CAE EN ROJO y no escribe nada si le falta cualquiera de los ficheros de los que
+lee**, en vez de rellenar el hueco con una frase.
 """
 
 

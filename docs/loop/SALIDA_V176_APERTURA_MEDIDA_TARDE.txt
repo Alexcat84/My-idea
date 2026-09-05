@@ -1,0 +1,30 @@
+LA COLUMNA IZQUIERDA DE LA CABECERA DE LA VUELTA 176 SE MIDIO TARDE
+==============================================================================
+
+NO HUBO BLOQUE DE APERTURA EN ESTA VUELTA. No se corrio, y por eso el
+tallador se nego a tallar nada con 18 celdas ilegibles, las 18 del lado
+APERTURA. Estas seis mediciones se corrieron AL CIERRE, DESPUES de todas
+las operaciones de la vuelta, y se dice aqui en vez de dejar que el
+sufijo _APERTURA del nombre del fichero lo diga por mi.
+
+LOS DOS EXTREMOS, LEIDOS DE SUS SELLOS:
+   apertura: e86384423ed5dae65fe9950a03587b33f4e66d5a
+   cierre  : fd1ea61dd29a26ae3f7b8da7b7a8eaf34428a406
+
+LA PRUEBA DE QUE ESTAS CIFRAS SIRVEN IGUAL, Y ES UNA MEDICION Y NO UNA
+SUPOSICION. Los seis instrumentos leen dataset/, web/ y engine/. Si esos
+tres arboles no se movieron entre los dos extremos, lo que se mide hoy es
+lo mismo que se habria medido en la apertura.
+
+   git diff --numstat e8638442..fd1ea61d -- dataset/ web/ engine/
+   CIFRA filas: 0
+      (ninguna fila)
+
+CERO FILAS: dataset/, web/ y engine/ son IDENTICOS en los dos extremos. Lo
+que esta vuelta toco fue scripts/loop/ y docs/loop/, y ninguno de estos seis
+instrumentos los lee. Por eso estas cifras valen para la columna izquierda,
+Y AUN ASI SE DECLARA QUE SE MIDIERON TARDE, porque la regla de EJECUTOR.md 1
+sobre la apertura no se cumple diciendo que da igual: se cumple diciendo la
+verdad y poniendo la prueba al lado.
+
+LA CAIDA ES MIA Y VA CONTADA EN LA SECCION 8 DEL REPORTE DE LA VUELTA.

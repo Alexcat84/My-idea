@@ -1,0 +1,45 @@
+LA GUARDA DEL COMMIT MORDIO SOBRE EL ARBOL DE VERDAD, Y NO ERA UN CASO FABRICADO
+==============================================================================
+
+QUE PASO. Al cierre de la vuelta 176, scripts/loop/vuelta176_medicion_tardia_apertura.py
+corrio run_phase1.py SUELTO, sin los pasos 2 y 3 de su ciclo (etiquetas_de_cara
+--aplicar y sync_assets_web). Es EXACTAMENTE la caida que la vuelta 170 pago y que
+vuelta176_cierre.py lleva escrita en su docstring: NUNCA run_phase1 suelto.
+
+QUIEN LO CAZO: la guarda de la TAREA 1.a de esta misma vuelta, corrida sobre el arbol
+de verdad, ANTES de commitear nada.
+
+==============================================================================
+LA GUARDA DEL COMMIT, ANTES DE COMMITEAR NADA DE `dataset/`
+==============================================================================
+------------------------------------------------------------------------------
+EL ARBOL DE TRABAJO DE ESTE REPO, AHORA MISMO
+------------------------------------------------------------------------------
+  CIFRA filas de `git diff --numstat -- dataset/`: 1
+      FILA: +72 -72  dataset/metadata/master_graph.json
+  CIFRA ficheros que `git status --porcelain -- dataset/` nombra: 1
+      STATUS ' M' dataset/metadata/master_graph.json
+  CIFRA ficheros con blob de arbol DISTINTO del de HEAD: 1
+      dataset/metadata/master_graph.json
+         blob del arbol: 0f0ed60a576e5dfb
+         blob de HEAD  : cb33552aedddab4d
+         CONTENIDO IDENTICO: NO
+
+  ROJO, 1 motivo(s). NO SE COMMITEA `dataset/`:
+      (1) `git diff --numstat -- dataset/` devuelve 1 fila(s), y la letra del encargo dice que UNA SOLA FILA YA ES PARADA: commitear esto meteria una mutacion de bateria en el catalogo. Los ficheros: dataset/metadata/master_graph.json
+      REMEDIO: `git checkout -- <fichero>` sobre los que salgan, y
+      volver a correr esta guarda hasta que de CERO FILAS.
+
+FIN
+
+EL DIAGNOSTICO DEL MOTOR, que salio en rojo por el mismo motivo:
+12:  FALLO test_gate_alias.py (0.2s) -- exit code 1
+48:    assert not dif, (f"{len(dif)} nodos divergentes entre las dos copias: "
+50:AssertionError: 71 nodos divergentes entre las dos copias: ['actualizar_business_model_canvas_discovery', 'actualizar_business_model_canvas_tuneup', 'actualizar_modelo_de_negocio_pivot_o_proceed']
+55:  nodos divergentes: 71 | campos que divergen: etiqueta_arbol
+
+ESTO NO SE TAPA Y NO SE BORRA. Va contado como caida propia en la seccion 8 del
+reporte. Y prueba dos cosas que un caso fabricado no puede probar:
+  (1) la guarda de la 1.a MUERDE SOBRE EL ARBOL DE VERDAD, no solo en su arnes;
+  (2) sin ella, la primera linea del encargo siguiente habria metido 72 lineas
+      cambiadas de dataset/metadata/master_graph.json en la historia del catalogo.
