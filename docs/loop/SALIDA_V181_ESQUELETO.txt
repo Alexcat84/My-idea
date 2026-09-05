@@ -1,0 +1,64 @@
+GUARDA DE LA FUENTE DEL CLON (vuelta 180, TAREA 4.b)
+   este fichero CLONA 'vuelta_del_reporte_del_arbol' de scripts/loop/vuelta174_esqueleto_reporte.py
+   scripts/loop/vuelta174_esqueleto_reporte.py -> 13918 bytes, 273 lineas
+   CIFRA funciones que define: 2
+   define 'vuelta_del_reporte_del_arbol': SI
+   VERDE: la fuente del clon existe, parsea y sigue definiendo
+   la funcion clonada. El arnes de la original puede correr.
+
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 63677 bytes
+   primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 180
+   coincide con VUELTA - 1 (180): SI
+
+PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (180), PUBLICADA SALGA LO
+   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V180.md -> 63677 bytes, sha256 bf3f139727bb2cb5
+      vuelta leida de la cabecera del archivo: 180
+      el reporte que se va a pisar -> 63677 bytes, sha256 bf3f139727bb2cb5
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+   VEREDICTO SOBRE LA 180: VERDE
+   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: 51976fbf, e4f5248e, 0d307320, 7b0a1ef1, cbe0feb9, 7aacaa47
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (180)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 180 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 180.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): 51976fbf9ca33f6eae82f7da4cef0484045c45f5
+         |   asunto de ese commit: 2026-09-05 17:16:55 -0400	EL REPORTE DE LA 180 QUEDA CERRADO EN SU MISMA VUELTA, CON LAS CUATRO PIEZAS Y LA CABECERA IDENTICA AL TALLADOR.
+         |   vuelta LEIDA de la cabecera del texto: 180
+         |   el destino docs/loop/reportes/REPORTE_V180.md YA EXISTE con contenido IDENTICO (sha256 bf3f139727bb)
+         |   VERDE.
+         |      vuelta            180
+         |      commit de origen  51976fbf9ca33f6eae82f7da4cef0484045c45f5
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V180.md
+         |      bytes             63677
+         |      lineas            941
+         |      sha256 (LF)       bf3f139727bb2cb5e1e72a539f81e27097d488cbb94e8569a39ae370d4f61736
+      docs/loop/reportes/REPORTE_V180.md -> 63677 bytes, sha256 bf3f139727bb2cb5
+      vuelta leida de la cabecera del archivo: 180
+      el reporte que se va a pisar -> 63677 bytes, sha256 bf3f139727bb2cb5
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+ESQUELETO ESCRITO: docs/loop/REPORTE.md (6981 bytes, 86 lineas)
+   rama leida de git: pasada-unica
+   acta 180 leida de git log: b9f25049  ACTA DEL AUDITOR, VUELTA 180: LEVANTO UNA CAIDA DE REPORTE EN CABECERA
+   HEAD de apertura leido del sello: b9f25049
+   nacimiento del bloque de apertura, --diff-filter=A: 8052c9ab
+   reporte pisado, leido de su cabecera: vuelta 180
+   celdas ilegibles que el tallador imprime HOY: 19
+   de ellas, del lado APERTURA: 0
+   filas de tarea abiertas: 2

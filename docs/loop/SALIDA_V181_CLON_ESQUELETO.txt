@@ -1,0 +1,104 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta180_esqueleto_reporte.py
+  B: scripts/loop/vuelta181_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 180, 181
+  CIFRA lineas de docstring: A 59 | B 46
+  CIFRA lineas de maquina:   A 281 | B 273
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1439 | B 1427
+     CIFRA tipos de nodo que NO empatan: 3
+        Constant               A   169 | B   163 | diferencia -6
+        Load                   A   343 | B   340 | diferencia -3
+        Tuple                  A    26 | B    23 | diferencia -3
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 64
+  CIFRA tokens de maquina: A 1334 | B 1312
+  CIFRA tokens que difieren con el texto normalizado: 22
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 6
+  CIFRA LITERALES DE TEXTO:   58
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:88  ("3", 'EL CORTE, CABLEADO DONDE TODAVIA FALTA. El hallazgo es del fundador y esta medido en la seccion 6 del a
+     A:89  ("4", 'LAS DOS PENDIENTES BARATAS QUE YA LLEVAN VUELTAS SUBIENDO, LAS DOS TEXTO QUE MIENTE SOBRE SU PROPIA MAQ
+     A:90  ("5", 'EL BACKLOG DE `OP-L-02`, MEDIDO Y NO LEIDO, CON LA MISMA VARA RESUELTA QUE CERRO `OP-L-03`. Se corre el
+     A:122  # LA GUARDA QUE FALTABA DESDE LA 174 (vuelta NNN, TAREA 4.b). Este fichero
+     A:123  # CLONA vuelta_del_reporte_del_arbol() de vuelta174_esqueleto_reporte.py, y
+     A:124  # hasta hoy NADA avisaba si ese fichero desaparecia. Va ANTES del paso 0
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:75  # DE LA 4.b PUEDA MIRARLO (vuelta NNN, TAREA 4.b).
+     A:86  ("1", 'LOS REGISTROS Y LA ETIQUETA DE FUENTE, Y ES BLOQUEANTE. (a) El acta del auditor de la vuelta 179 vive e
+     A:87  ("2", 'EL SUJETO CONGELADO, RESUELTO Y CABLEADO, Y ES LA QUE LIMPIA LA PISTA DE LA NNN. El orden es: los trece
+     A:125  # porque, si la fuente no esta, lo que hay que arreglar no es el reporte.
+     A:201  fallos.append("el sello %s no trae un hash de 40 caracteres" % os.path.basename(ruta_head))
+     A:207  fallos.append("commits que ANADEN el sello de apertura: %d (se necesita exactamente 1)" % len(nacs))
+     A:246  > **ESTA VUELTA NO ES DE BATERIA Y LA SIGUIENTE SI, Y LA CADENCIA NO SE ELIGE
+     A:247  > AQUI: ESTA ADJUDICADA Y RECONFIRMADA TRES VECES.** El acta 176, punto 7.8,
+     A:248  > reanclo el contador a la vuelta que de verdad corrio la bateria y no a la que la
+     A:249  > tenia encargada; **el acta 178, punto 11, y el acta 179, punto 11, lo
+     A:250  > reconfirmaron**; y el encargo de esta vuelta lo repite con todas las letras:
+     A:251  > **la proxima vuelta de bateria es la NNN**. Esta es **LA ULTIMA VUELTA QUE
+     A:252  > DECLARA EL HUECO**: la seccion 9 cierra con el **HUECO DECLARADO Y MEDIDO** y
+     A:253  > sus TRES piezas juntas, el nombre del fichero, sus bytes por las dos
+     A:254  > convenciones y la atribucion. Un hueco declarado no es un hueco escondido, y
+     A:255  > **la NNN lo corre**.
+     A:257  > **EL TOPE SIGUE EN CINCO, Y NO LO DECIDE NADIE: LO DISPARO LA 177 Y LA 178 Y LA
+     A:258  > 179 LO CONFIRMARON ENTREGANDO CINCO.** `AUDITOR.md` 6.2 dice que el regimen
+     A:259  > temporal de dos sub-tareas dura **hasta que DOS vueltas seguidas cierren su
+     A:260  > propio reporte** con `cerrar_reporte.py`, y eso se cumplio. **El regimen
+     A:261  > temporal queda CUMPLIDO Y CITABLE, no borrado**, y los cuatro commits que lo
+     A:262  > sostienen se localizan EN GIT en el bloque B.1 de
+     A:263  > `scripts/loop/vueltaNNN_apertura.py`, no se teclean.
+     A:267  > `vuelta177_apertura.py`, la 178 lo estreno, la 179 lo repitio y aqui vuelve a
+     A:268  > correr en su sitio. **Desde la 178, una columna de apertura medida al cierre es
+     A:269  > caida que ACUMULA**, y eso lo dice el encargo, no este reporte.
+     A:276  > **Y LA TAREA 4.a DE ESTA VUELTA FABRICA EL DIA EN QUE DIFIEREN**, que es lo que
+     A:277  > a esta guarda le faltaba desde la 174: hasta hoy nadie la habia visto responder
+     A:278  > a la pregunta buena cuando las dos preguntas dan cosas distintas.
+     A:312  ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
+     B:62  # DE LA 4.b DE LA VUELTA NNN PUEDA MIRARLO.
+     B:73  ("1", 'LOS REGISTROS, Y LO QUE SE HEREDA DEL ACTA NNN, Y ES BLOQUEANTE. (a) El acta del auditor de la vuelta N
+     B:74  ("2", 'LA BATERIA DE MUTACIONES, ENTERA, SOLA, Y CON SU RELOJ, Y ES LA UNICA TAREA DE TRABAJO DE ESTA VUELTA. 
+     B:181  fallos.append("el sello %s no trae un hash de 40 caracteres"
+     B:182  % os.path.basename(ruta_head))
+     B:188  fallos.append("commits que ANADEN el sello de apertura: %d (se necesita exactamente 1)"
+     B:189  % len(nacs))
+     B:228  > **ESTA ES LA VUELTA DE BATERIA, Y NO LLEVA NADA MAS.** `AUDITOR.md` 6.1: la
+     B:229  > bateria corre CADA CINCO, en VUELTA PROPIA. La cadencia se adjudico en el acta
+     B:230  > 176 punto 7.8, se reconfirmo en las actas 178 y 179, y el acta NNN la clava por
+     B:231  > cuarta vez en su punto 10 con estas palabras: *"LA BATERIA: LA PROXIMA ES LA
+     B:232  > NNN, Y ES LA VUELTA QUE VIENE"*. **La NNN fue la ULTIMA que declaro el hueco.
+     B:233  > Aqui se corre.**
+     B:235  > **EL TOPE DE ESTA VUELTA ES DOS SUB-TAREAS, Y NO ES UN DESCUIDO: ES LA
+     B:236  > ADJUDICACION 6.8 DEL ACTA NNN.** `AUDITOR.md` 6.2 devolvio el tope a cinco, pero
+     B:237  > la 6.1 y la 6.2 salen de la MISMA parada del 5 sep 2026 y la 6.2 se concedio
+     B:238  > *"combinada con la (a)"*, o sea subordinada a ella. **La vuelta de bateria no
+     B:239  > lleva trabajo de plan al lado.** El tope vuelve a cinco en la 182.
+     B:240  >
+     B:241  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** no se lee ningun
+     B:242  > par, no se escribe ningun veredicto, no se toca el marcador, no se toca el estado
+     B:243  > de ninguna ficha, no se toca `docs/plan/`, no se arregla la `P.1` y no se toca
+     B:244  > `cerrar_reporte.py`. **Las dos ultimas van a la 182 y estan escritas en los
+     B:245  > puntos 6.6 y 6.8 del acta NNN.**
+     B:249  > `vuelta177_apertura.py`, la 178 lo estreno, la 179 y la NNN lo repitieron y aqui
+     B:250  > vuelve a correr en su sitio. **Desde la 178, una columna de apertura medida al
+     B:251  > cierre es caida que ACUMULA.**
+     B:291  ## 1. LAS DOS TAREAS DEL ENCARGO, Y SU ESTADO
+
+
+FIN
