@@ -1,7 +1,34 @@
 # -*- coding: utf-8 -*-
 r"""paso0_archivar_anterior.py . EL PASO 0 DEL ESQUELETO DEL REPORTE: EL
-ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI EL REPORTE ANTERIOR NO ESTA
-ARCHIVADO.
+ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI **EL REPORTE QUE SE VA A
+PISAR** NO ESTA ARCHIVADO.
+
+--- CORRECCION DECLARADA (vuelta 180, TAREA 4.a). EL TEXTO MENTIA SOBRE SU
+    PROPIA MAQUINA, Y LA MAQUINA ESTABA BIEN ---
+
+LO QUE ESTE DOCSTRING DECIA, ESCRITO AQUI Y NO BORRADO (`EJECUTOR.md` 8, una
+correccion que tapa lo que corrige no se puede auditar):
+
+    "EL ARCHIVADOR ENCHUFADO, Y LA NEGATIVA A ESCRIBIR SI EL REPORTE ANTERIOR
+     NO ESTA ARCHIVADO."
+    "(a) el archivador no sale VERDE para la vuelta anterior; o"
+    "    ok, informe = PASO0.exigir_archivado(N - 1)"
+
+POR QUE ESTABA MAL. Desde la vuelta 174 el esqueleto **no pregunta por
+`VUELTA - 1`**: lee el numero de la cabecera del `REPORTE.md` que hay en el
+arbol, con `vuelta_del_reporte_del_arbol()`, y le pasa **ese** numero a esta
+funcion. O sea que esta guarda responde por **el reporte que se va a pisar**, que
+es lo unico que importa, y su texto seguia describiendo la pregunta vieja. Las
+dos coinciden **casi siempre** y por eso la mentira no molestaba a nadie: solo
+difieren el dia en que una vuelta se corta sin archivar, que es exactamente el
+dia en que esta guarda tiene que servir.
+
+EL PARAMETRO SE LLAMA HOY `vuelta_del_reporte_a_pisar`, y antes se llamaba
+`vuelta_anterior`. Un nombre de parametro es texto que describe la maquina, y
+ese tambien mentia.
+
+QUE NO CAMBIA: **la maquina, ni un byte**. Todos los llamadores pasan el numero
+en posicion, no por nombre, y siguen pasando lo mismo.
 
 NOMBRE ESTABLE Y SIN NUMERO DE VUELTA, como `archivar_reporte.py`,
 `serie_de_registros.py` y `tallar_cabecera_reporte.py`: el esqueleto de cada
@@ -22,7 +49,7 @@ ningun sitio**.
 LA GUARDA, Y ES LA QUE PUEDE CAER, escrita como canon de fallar ruidoso del
 banco (seccion 9): el esqueleto NO ESCRIBE si
 
-  (a) el archivador no sale VERDE para la vuelta anterior; o
+  (a) el archivador no sale VERDE para la vuelta que se le pide; o
   (b) el fichero archivado `docs/loop/reportes/REPORTE_V<N>.md` no existe; o
   (c) su primera linea no es la cabecera `# REPORTE DE LA VUELTA <N>`; o
   (d) EL QUE DE VERDAD IMPORTA: el `docs/loop/REPORTE.md` que se va a PISAR no
@@ -38,9 +65,10 @@ PURO SALVO POR LEER: todos los caminos son parametros, para que el caso positivo
 por mutacion pueda apuntar la guarda a copias de trabajo sin tocar el repo y sin
 escribir nada.
 
-USO (desde el esqueleto de la vuelta N):
+USO (desde el esqueleto de la vuelta N). SE LE PASA EL NUMERO DEL REPORTE QUE SE
+VA A PISAR, LEIDO DE SU PROPIA CABECERA, Y NO `N - 1`:
     import paso0_archivar_anterior as PASO0
-    ok, informe = PASO0.exigir_archivado(N - 1)
+    ok, informe = PASO0.exigir_archivado(vuelta_del_reporte_del_arbol(texto))
     for l in informe:
         print(l)
     if not ok:
@@ -73,9 +101,13 @@ def correr_archivador(vuelta):
                           + r.stderr.decode("utf-8", errors="replace"))
 
 
-def exigir_archivado(vuelta_anterior, ruta_reporte=None, dir_archivo=None,
-                     ejecutar_archivador=True):
+def exigir_archivado(vuelta_del_reporte_a_pisar, ruta_reporte=None,
+                     dir_archivo=None, ejecutar_archivador=True):
     """EL PASO 0. Devuelve (ok, informe), donde informe es una lista de lineas.
+
+    EL PRIMER PARAMETRO ES EL NUMERO DEL REPORTE QUE SE VA A PISAR, no el de la
+    vuelta anterior. Se llamo `vuelta_del_reporte_a_pisar` hasta la vuelta 180 y ese nombre
+    describia mal lo que la maquina hace desde la 174.
 
     NO ESCRIBE NADA por si mismo: lo unico que escribe es el archivador, y solo
     cuando `ejecutar_archivador` es cierto. Con `ejecutar_archivador=False` la
@@ -91,18 +123,18 @@ def exigir_archivado(vuelta_anterior, ruta_reporte=None, dir_archivo=None,
       % os.path.relpath(ruta_reporte, RAIZ).replace(os.sep, "/"))
 
     if ejecutar_archivador:
-        c, sal = correr_archivador(vuelta_anterior)
-        w("   archivar_reporte.py --vuelta %d -> EXIT %d" % (vuelta_anterior, c))
+        c, sal = correr_archivador(vuelta_del_reporte_a_pisar)
+        w("   archivar_reporte.py --vuelta %d -> EXIT %d" % (vuelta_del_reporte_a_pisar, c))
         for l in sal.splitlines():
             if l.strip():
                 w("      | " + l.rstrip())
         if c != 0:
             motivos.append("(a) el archivador NO sale verde para la vuelta %d"
-                           % vuelta_anterior)
+                           % vuelta_del_reporte_a_pisar)
     else:
         w("   archivar_reporte.py NO se lanza (modo solo comprobacion)")
 
-    destino = os.path.join(dir_archivo, "REPORTE_V%d.md" % vuelta_anterior)
+    destino = os.path.join(dir_archivo, "REPORTE_V%d.md" % vuelta_del_reporte_a_pisar)
     rel_destino = os.path.relpath(destino, RAIZ).replace(os.sep, "/")
     if not os.path.exists(destino):
         motivos.append("(b) no existe el archivo %s" % rel_destino)
@@ -117,7 +149,7 @@ def exigir_archivado(vuelta_anterior, ruta_reporte=None, dir_archivo=None,
     m = re.match(r"^#\s*REPORTE DE LA VUELTA\s+(\d+)\b", primera)
     if not m:
         motivos.append("(c) la primera linea del archivo no es una cabecera de reporte")
-    elif int(m.group(1)) != vuelta_anterior:
+    elif int(m.group(1)) != vuelta_del_reporte_a_pisar:
         motivos.append("(c) el archivo %s lleva el reporte de la VUELTA %s"
                        % (rel_destino, m.group(1)))
     w("   vuelta leida de la cabecera del archivo: %s"

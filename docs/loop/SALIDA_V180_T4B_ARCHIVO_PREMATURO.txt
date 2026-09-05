@@ -1,0 +1,30 @@
+EL ARCHIVO PREMATURO QUE MI PROPIA CORRIDA CREO Y QUE RETIRE, MEDIDO DE SU
+FUENTE, QUE ES GIT Y NO EL FICHERO (ya no existe en disco).
+
+QUE PASO, DICHO SIN ADORNO: corri scripts/loop/vuelta180_esqueleto_reporte.py
+ENTERO para probar la guarda de la 4.b, prediciendo que el paso 0 lo pararia.
+NO LO PARO. El paso 0 pregunta por EL REPORTE QUE VA A PISAR, leyo 180 de la
+cabecera, lanzo el archivador, el archivador saco el texto de git, lo guardo
+en docs/loop/reportes/REPORTE_V180.md, la guarda salio VERDE con razon, y el
+esqueleto reescribio docs/loop/REPORTE.md con sus cinco filas vacias.
+
+EL TEXTO QUE EL ARCHIVADOR GUARDO, QUE ES HEAD:docs/loop/REPORTE.md:
+  bytes en git: 32854
+  bytes normalizados a LF: 32854
+  sha256 LF: 4836dc51e19092efd56d164d945eaeac4605a96ce95ca6195971c6949a9c9563
+  primera linea: # REPORTE DE LA VUELTA 180 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+  CIFRA filas de tarea que dicen CERRADA: 3
+
+EL FICHERO QUE SE CREO Y SE RETIRO:
+  ruta: docs/loop/reportes/REPORTE_V180.md
+  bytes en disco cuando existia: 32854 (medidos con ls antes de retirarlo)
+  estaba SEGUIDO POR GIT: NO, salia como ?? en git status
+
+POR QUE SE RETIRA Y NO SE DEJA: es el archivo de un reporte A MEDIAS, con
+tres tareas de cinco. Dejarlo haria que archivar_reporte.py --vuelta 180 del
+cierre encontrara un destino YA EXISTENTE con contenido DISTINTO, y eso es
+rojo. El archivo bueno lo escribe el cierre de esta misma vuelta.
+
+EL DANO, MEDIDO: CERO. docs/loop/REPORTE.md se restauro con
+git checkout HEAD -- docs/loop/REPORTE.md, byte a byte desde el commit de
+cierre de la TAREA 3, y sus tres secciones siguen dentro.

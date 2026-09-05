@@ -785,6 +785,17 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 105 A 106.
     ("vuelta180_tarea3_mutacion_corte_de_tramos.py", False),
+    # VUELTA 180, TAREA 4. LAS DOS PENDIENTES BARATAS, que son la misma
+    # especie: texto que describe una maquina. (a) El dia FABRICADO en que
+    # las dos preguntas del paso 0 no coinciden, que en corrida no se ve
+    # nunca porque casi siempre coinciden; (b) el dia FABRICADO en que la
+    # fuente del clon desaparece, que estaba declarado en el docstring del
+    # esqueleto desde la 174 y seguia sin instrumento. Todo sobre ficheros
+    # fabricados en un temporal: no toca ningun fichero de la campana. No
+    # admite --sujeto.
+    #
+    # LA NOMINA CRECE DE 106 A 107.
+    ("vuelta180_tarea4_mutacion_texto_y_clon.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

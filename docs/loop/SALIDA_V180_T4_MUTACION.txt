@@ -1,0 +1,49 @@
+==============================================================================
+LOS DOS CASOS POR MUTACION DE LA TAREA 4 (vuelta 180)
+==============================================================================
+
+(A) LA 4.a: EL DIA FABRICADO EN QUE LAS DOS PREGUNTAS NO COINCIDEN
+   escenario: el arbol trae el reporte de la 172 y VUELTA - 1 seria 173.
+              REPORTE_V172.md existe e igual; REPORTE_V173.md NO existe.
+      pregunta BUENA  (el reporte que se va a pisar, 172) -> VERDE
+      pregunta VIEJA  (la vuelta anterior, 173)           -> ROJO
+   A1: con la pregunta BUENA la guarda deja escribir                        SI
+   A1: con la pregunta VIEJA la guarda lo impide                            SI
+   A1: y la vieja cae por su clausula (b), nombrada                         SI
+      firma de exigir_archivado: (vuelta_del_reporte_a_pisar, ruta_reporte=None, dir_archivo=None, ejecutar_archivador=True)
+   A2: el primer parametro se llama por lo que la maquina hace              SI
+   A2: y ya NO se llama vuelta_anterior                                     SI
+   A3: el docstring dice EL REPORTE QUE SE VA A PISAR                       SI
+   A3: y declara la correccion en vez de borrar lo que decia                SI
+   A3: y conserva escrita la frase vieja, sin borrarla                      SI
+   A4, LA CONTRAPRUEBA: con las dos preguntas COINCIDIENDO, las dos dan VERDE SI
+      con el arbol en 172 y preguntando 173, con REPORTE_V173.md ya
+      existente y con OTRO texto -> ROJO
+   A5: preguntar el numero equivocado da FALSO ROJO, nunca falso verde: la (d) coteja contra el arbol SI
+
+(B) LA 4.b: EL DIA FABRICADO EN QUE LA FUENTE DEL CLON DESAPARECE
+   B1: con la fuente presente y definiendo la funcion, VERDE                SI
+   B2: con la fuente BORRADA, ROJO                                          SI
+   B2: y el informe NOMBRA la ruta que falta                                SI
+   B2: y NOMBRA la funcion que se queda sin prueba                          SI
+      el motivo, entero: (a) LA FUENTE DEL CLON NO EXISTE: scripts/loop/fuente_de_mentira.py. La funcion 'vuelta_del_reporte_del_arbol' se clono de ahi y ese fichero ya no esta, asi que
+   B3: con la fuente presente pero SIN la funcion, ROJO por la (b)          SI
+   B4: con la fuente ROTA, ROJO por la (c)                                  SI
+   B5: una MENCION en un comentario no cuenta como definirla                SI
+   B6, LA VUELTA AL VERDE: al restaurar la fuente vuelve a pasar, o sea que no es un rojo permanente SI
+
+(C) Y LA GUARDA, APUNTADA A LA FUENTE DE VERDAD DEL ESQUELETO DE HOY
+      GUARDA DE LA FUENTE DEL CLON (vuelta 180, TAREA 4.b)
+         este fichero CLONA 'vuelta_del_reporte_del_arbol' de scripts/loop/vuelta174_esqueleto_reporte.py
+         scripts/loop/vuelta174_esqueleto_reporte.py -> 13918 bytes, 273 lineas
+         CIFRA funciones que define: 2
+         define 'vuelta_del_reporte_del_arbol': SI
+         VERDE: la fuente del clon existe, parsea y sigue definiendo
+         la funcion clonada. El arnes de la original puede correr.
+   C: la fuente del clon del esqueleto de la 180 esta en su sitio           SI
+
+EL TEMPORAL, RETIRADO (P.16): existe todavia: NO
+
+CIFRA comprobaciones: 17 | fallan: 0
+VERDE: el dia en que las dos preguntas del paso 0 no coinciden esta fabricado y la maquina responde a la buena; su parametro y su docstring dicen ya lo que hace; y la guarda de la fuente del clon CAE nombrando la ruta y la funcion cuando la fuente desaparece, cuando pierde la funcion y cuando se rompe, y vuelve al verde al restaurarla.
+FIN

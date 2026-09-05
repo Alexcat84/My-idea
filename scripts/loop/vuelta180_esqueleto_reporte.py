@@ -65,11 +65,16 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paso0_archivar_anterior as PASO0   # noqa: E402
+import guarda_de_la_fuente_del_clon as CLON   # noqa: E402
 import tallar_cabecera_reporte as TALLADOR   # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
 VUELTA = 180
+# DE DONDE SE CLONO LA FUNCION PURA DE ABAJO, DECLARADO AQUI PARA QUE LA GUARDA
+# DE LA 4.b PUEDA MIRARLO (vuelta 180, TAREA 4.b).
+FUENTE_DEL_CLON = "scripts/loop/vuelta174_esqueleto_reporte.py"
+FUNCION_CLONADA = "vuelta_del_reporte_del_arbol"
 PATRONES_ACTA = [
     re.compile(r"^ACTA DE LA VUELTA %d DEL AUDITOR" % (VUELTA - 1)),
     re.compile(r"^ACTA DEL AUDITOR,\s*VUELTA %d" % (VUELTA - 1)),
@@ -112,6 +117,20 @@ if __name__ != "__main__":
     pass
 else:
     sys.stdout.reconfigure(encoding="utf-8")
+
+    # ---------------------------------------------- PASO 0.0, LA FUENTE DEL CLON
+    # LA GUARDA QUE FALTABA DESDE LA 174 (vuelta 180, TAREA 4.b). Este fichero
+    # CLONA vuelta_del_reporte_del_arbol() de vuelta174_esqueleto_reporte.py, y
+    # hasta hoy NADA avisaba si ese fichero desaparecia. Va ANTES del paso 0
+    # porque, si la fuente no esta, lo que hay que arreglar no es el reporte.
+    ok_clon, informe_clon = CLON.exigir_fuente_del_clon(
+        FUENTE_DEL_CLON, FUNCION_CLONADA)
+    for l in informe_clon:
+        print(l)
+    print("")
+    if not ok_clon:
+        print("ROJO: el esqueleto NO escribe. La fuente del clon no esta en su sitio.")
+        sys.exit(1)
 
     # ------------------------------------------------------------- PASO 0
     ruta = os.path.join(LOOP, "REPORTE.md")
