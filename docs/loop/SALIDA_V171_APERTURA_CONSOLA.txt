@@ -1,0 +1,84 @@
+SELLO DE APERTURA DE LA VUELTA 171, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta171_apertura.py
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+0caca89fcc61da9e5fe68ca98648e2a87a9b0834
+0caca89fcc61da9e5fe68ca98648e2a87a9b0834	2026-09-04 23:24:34 -0400	CAIDA 4 DEL AUDITOR, DECLARADA DESPUES DE COMMITEAR: el asunto del commit del acta 170 salio con dos arrobas sueltas por sintaxis de PowerShell colada en bash. El texto es correcto y no se reescribe la rama; la caida se registra
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? docs/loop/SALIDA_V171_APERTURA_CONSOLA.txt
+?? node_modules/
+?? scripts/loop/vuelta171_apertura.py
+CIFRA lineas de status: 4
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA ===
+dataset/metadata/master_graph.json -> 8375817 bytes
+docs/loop/REPORTE.md -> 32473 bytes
+docs/loop/ACTA_AUDITOR.md -> 3877308 bytes
+scripts/loop/_v170_cierre_texto.md -> 9010 bytes
+docs/loop/SALIDA_V170_BATERIA.txt -> 0 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> diff ignorando CR de fin de linea: 0 bytes
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V171_APERTURA_CONSOLA.txt -> 0 bytes
+node_modules/.vite/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json -> 12460 bytes
+scripts/loop/vuelta171_apertura.py -> 7928 bytes
+CIFRA ficheros no seguidos: 3
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob dfb7a4974a7dec0b55913456fb93f092f0cf3a10	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 69c196a997e1ca7e3374cd8e091f5a6e5613e790	docs/loop/ACTA_AUDITOR.md
+scripts/loop/_v170_cierre_texto.md -> 100644 blob e74a934d3f23a3859760f012a01040dd0c4683e2	scripts/loop/_v170_cierre_texto.md
+docs/loop/SALIDA_V170_BATERIA.txt -> 100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	docs/loop/SALIDA_V170_BATERIA.txt
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 170 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas: 530
+   contiene 'SIN ESCRIBIR TODAVIA'             -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> SI
+   contiene '## 3.'                            -> NO
+   contiene '## 4.'                            -> NO
+   contiene '## 5.'                            -> NO
+   contiene '## 6.'                            -> NO
+   contiene '## 7.'                            -> NO
+   contiene '## 8.'                            -> NO
+   contiene '## 9.'                            -> NO
+ficheros que toca el commit 29f04e86 (el que dice llevar el bloque de cierre):
+   docs/loop/SALIDA_V170_CICLO_ETIQUETAS_CIERRE.txt   | 224 +++++++++++++++++++++
+   docs/loop/SALIDA_V170_CICLO_NUMSTAT_CIERRE.txt     |   3 +
+   docs/loop/SALIDA_V170_CICLO_SYNC_CIERRE.txt        |  11 +
+   docs/loop/SALIDA_V170_CONTEO_CIERRE.txt            |   3 +
+   docs/loop/SALIDA_V170_DESFASE_CALIBRADO_CIERRE.txt |   9 +
+   docs/loop/SALIDA_V170_GATE0_CMD1_CIERRE.txt        |  71 +++++++
+   docs/loop/SALIDA_V170_HEAD_CIERRE.txt              |   1 +
+   docs/loop/SALIDA_V170_MOTOR_CIERRE.txt             |  31 +++
+   docs/loop/SALIDA_V170_TALLADOR_CABECERA.txt        |  20 ++
+   docs/loop/SALIDA_V170_TSC_CIERRE.txt               |   1 +
+   docs/loop/SALIDA_V170_WEB_CIERRE.txt               |  15 ++
+   scripts/loop/vuelta170_cierre.py                   |  92 +++++++++
+   12 files changed, 481 insertions(+)
+   REPORTE.md entre ellos: NO
+
+FIN DEL SELLO DE APERTURA
+
+ESCRITO: SALIDA_V171_HEAD_APERTURA.txt (41 bytes)
+ESCRITO: SALIDA_V171_GATE0_CMD1_APERTURA.txt (4859 bytes)
+ESCRITO: SALIDA_V171_CICLO_ETIQUETAS_APERTURA.txt (8106 bytes)
+ESCRITO: SALIDA_V171_CICLO_SYNC_APERTURA.txt (583 bytes)
+ESCRITO: SALIDA_V171_CICLO_NUMSTAT_APERTURA.txt (140 bytes)
+ESCRITO: SALIDA_V171_CONTEO_APERTURA.txt (169 bytes)
+ESCRITO: SALIDA_V171_DESFASE_CALIBRADO_APERTURA.txt (505 bytes)
+ESCRITO: SALIDA_V171_MOTOR_APERTURA.txt (1160 bytes)
+ESCRITO: SALIDA_V171_TSC_APERTURA.txt (7 bytes)
+ESCRITO: SALIDA_V171_WEB_APERTURA.txt (337 bytes)
+BLOQUE DE APERTURA COMPLETO
