@@ -1,0 +1,36 @@
+==============================================================================
+LA ETIQUETA DE FUENTE QUE YA NO ES VERDAD (vuelta 179, TAREA 3)
+==============================================================================
+
+A) QUE VUELTA ESCRIBIO CADA CLASE, CONTADO DEL REGISTRO
+   CIFRA pares con clase escrita por la vuelta 177: 9
+   CIFRA pares con clase escrita por la vuelta 179: 10
+   CIFRA pares con clase en el registro, en total: 19
+
+B) QUE DICE LA ETIQUETA DE CADA LADO, CONTADO DEL REGISTRO DE TRIANGULOS
+   CIFRA filas de docs/plan/OP_L_03_TRIANGULOS.jsonl: 19
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            42 lados
+   docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)                  15 lados
+
+C) CUANTOS DE ESOS LADOS SON DE VERDAD DE LA 177 Y CUANTOS NO
+   CIFRA lados etiquetados como de la vuelta 177: 15
+   CIFRA de esos que SI son de la vuelta 177: 10
+   CIFRA de esos que NO lo son: 5
+   CIFRA de esos cuyo par no se encontro en el registro: 0
+   LA RESTA: 10 mas 5 mas 0 = 15, y los etiquetados son 15. CALZA: SI
+
+   LOS MAL ETIQUETADOS, UNO A UNO:
+      acto `colaboracion_cadena_suministro` | colaboracion_cadena_suministro + diagnostico_efecto_latigo | lo escribio la vuelta 179 y la etiqueta dice 177
+      acto `colaboracion_cadena_suministro` | compartir_datos_cadena_suministro + diagnostico_efecto_latigo | lo escribio la vuelta 179 y la etiqueta dice 177
+      acto `creacion_option_pool` | creacion_option_pool + employee_pool_esop | lo escribio la vuelta 179 y la etiqueta dice 177
+      acto `fase_diseno_prototipado_modelos` | fase_diseno_prototipado_modelos + prototyping_possibilities | lo escribio la vuelta 179 y la etiqueta dice 177
+      acto `fase_diseno_prototipado_modelos` | proceso_ideacion_modelo_negocio + prototyping_possibilities | lo escribio la vuelta 179 y la etiqueta dice 177
+
+D) EL VEREDICTO, Y ES UNA PARADA Y NO UN ARREGLO
+   HAY 5 LADO(S) CON LA ATRIBUCION EQUIVOCADA.
+   NO SE ARREGLA AQUI: el encargo de esta vuelta dice que
+   `fuente_de_la_clase` NO SE TOCA, y `EJECUTOR.md` 5 manda escribirlo
+   como PARADA en el reporte en vez de arreglarlo por cuenta propia.
+   LO QUE CONTRADICE: `EJECUTOR.md` 8, toda cifra de un autor con su
+   atribucion.
+FIN

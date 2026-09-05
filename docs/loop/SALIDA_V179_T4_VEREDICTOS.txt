@@ -1,0 +1,195 @@
+==============================================================================
+LAS DEL SUJETO CONGELADO, JUZGADAS UNA A UNA (vuelta 179, TAREA 4)
+==============================================================================
+
+A) LO QUE LA GUARDA SENALA HOY, CON SU CORTE
+   CORTE: HEAD 8bd3bd3e8864
+   CIFRA entradas de la nomina: 103 (corte: HEAD 8bd3bd3e8864, nomina contada en esta corrida)
+   CIFRA entradas que la guarda senala: 17
+   CIFRA NO DECIDIBLE  : 9
+   CIFRA SUJETO VIVO   : 8
+
+   Y HAY QUE DECIR QUE ESTA CIFRA SE MOVIO DENTRO DE ESTA MISMA VUELTA.
+   El encargo habla de QUINCE, y quince eran al abrir. La TAREA 1.c metio
+   cinco arneses en la nomina y por eso el denominador y el numerador son
+   otros. LAS DOS CIFRAS SON VERDADERAS Y CADA UNA LLEVA SU CORTE, que es
+   exactamente para lo que la TAREA 1.d cableo el sello.
+
+B) CADA UNA, JUZGADA CON SU PRUEBA MECANICA
+
+   vuelta135_2e_mutacion_1.py                     guarda: NO DECIDIBLE   -> ABRE UN SUJETO YA CLAVADO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 5
+      CIFRA llamadas que LEEN de disco con una huella dentro: 1
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 1
+         CLAVADA linea 76 | REPORTE.md | BLOB_DEL_SUJETO -> "e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md" | subprocess.run(["git", "show", BLOB_DEL_SUJETO], cwd=RAIZ, capture_output=T
+
+   vuelta135_2e_mutacion_2.py                     guarda: NO DECIDIBLE   -> ABRE UN SUJETO YA CLAVADO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 4
+      CIFRA llamadas que LEEN de disco con una huella dentro: 1
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 1
+         CLAVADA linea 73 | REPORTE.md | BLOB_DEL_SUJETO -> "e12e4c362fe734ff2aae0177fa47a3047b485b01:docs/loop/REPORTE.md" | subprocess.run(["git", "show", BLOB_DEL_SUJETO], cwd=RAIZ, capture_output=T
+
+   vuelta145_2a_mutacion_ancla_unica.py           guarda: NO DECIDIBLE   -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 3
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 11 | REPORTE.md | `git show b7f07648:docs/loop/REPORTE.md`, que es el REPORTE.md de la vuelta 144
+         SOLO LA NOMBRA, linea 54 | REPORTE.md | "b7f07648:docs/loop/REPORTE.md",
+         SOLO LA NOMBRA, linea 55 | REPORTE.md | "c02b9fad:docs/loop/REPORTE.md",
+
+   vuelta148_2d_mutacion_exencion.py              guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 72 | REPORTE.md | frase_con_repo = frase + " Ver docs/loop/REPORTE.md."
+
+   vuelta150_5c_mutacion_ciclo.py                 guarda: NO DECIDIBLE   -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: master_graph.json
+      CIFRA apariciones de esas huellas en el texto: 2
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 43 | master_graph.json | RUTA_DATASET = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
+         SOLO LA NOMBRA, linea 44 | master_graph.json | RUTA_WEB = os.path.join(RAIZ, "web", "lib", "assets", "master_graph.json")
+
+   vuelta157_tarea4b_mutacion_tachado.py          guarda: SUJETO VIVO    -> ABRE FICHERO VIVO
+      ficheros vivos que la guarda le atribuye: LECTURAS_DIRIGIDAS.md
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 1
+      CIFRA de esas que leen el fichero VIVO: 1
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         PRUEBA  linea 122 | LECTURAS_DIRIGIDAS.md | LD -> os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md") | io.open(LD, encoding="utf-8").read()
+
+   vuelta160_tarea7c_mutacion_guarda_cita.py      guarda: NO DECIDIBLE   -> ABRE FICHERO VIVO
+      ficheros vivos que la guarda le atribuye: INTRA_DOMINIO_VEREDICTOS.jsonl, LECTURAS_DIRIGIDAS.md
+      CIFRA apariciones de esas huellas en el texto: 10
+      CIFRA llamadas que LEEN de disco con una huella dentro: 2
+      CIFRA de esas que leen el fichero VIVO: 2
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         PRUEBA  linea 120 | LECTURAS_DIRIGIDAS.md | shutil.copy(os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md"),                 os.path.join(tmp, "LECTURAS_DIRIGIDAS.md"))
+         PRUEBA  linea 122 | INTRA_DOMINIO_VEREDICTOS.jsonl | shutil.copy(os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl"),                 os.path.join(tmp, "INTRA_DOMINIO_VEREDICTOS.jsonl"))
+
+   vuelta162_tarea2a_mutacion_puerta.py           guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: master_graph.json
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 60 | master_graph.json | ["dataset/metadata/master_graph.json"])
+
+   vuelta162_tarea2b_mutacion_excepcion.py        guarda: NO DECIDIBLE   -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: OPERACIONES.jsonl
+      CIFRA apariciones de esas huellas en el texto: 3
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 13 | OPERACIONES.jsonl | que `docs/plan/OPERACIONES.jsonl` no cambio de tamano.
+         SOLO LA NOMBRA, linea 70 | OPERACIONES.jsonl | ruta_ops = os.path.join(T.RAIZ, "docs", "plan", "OPERACIONES.jsonl")
+         SOLO LA NOMBRA, linea 162 | OPERACIONES.jsonl | print("   docs/plan/OPERACIONES.jsonl: %d bytes antes, %d despues" % (tam_antes, tam_despues))
+
+   vuelta163_tarea4b_mutacion_re_sellado.py       guarda: NO DECIDIBLE   -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 3
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 21 | REPORTE.md | vuelta, leido de git con `git show 78d10690:docs/loop/REPORTE.md`.
+         SOLO LA NOMBRA, linea 157 | REPORTE.md | codigo, reporte_162 = git("show", "%s:docs/loop/REPORTE.md" % APERTURA_162)
+         SOLO LA NOMBRA, linea 158 | REPORTE.md | print("   reporte de la 162 leido de git show %s:docs/loop/REPORTE.md: %d caracteres"
+
+   vuelta165_tarea6_mutacion_op_l_01.py           guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: OPERACIONES.jsonl
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 70 | OPERACIONES.jsonl | print("   docs/plan/OPERACIONES.jsonl:%d" % linea)
+
+   vuelta166_tarea2_mutacion_correccion.py        guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: OPERACIONES.jsonl
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 49 | OPERACIONES.jsonl | print("   docs/plan/OPERACIONES.jsonl:%d, ficha %s" % (n, d["id_op"]))
+
+   vuelta166_tarea6_mutacion_guarda.py            guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 1
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 35 | REPORTE.md | R_165 = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
+
+   vuelta174_tarea1b_mutacion_esqueleto.py        guarda: NO DECIDIBLE   -> ABRE FICHERO VIVO
+      ficheros vivos que la guarda le atribuye: REPORTE.md
+      CIFRA apariciones de esas huellas en el texto: 3
+      CIFRA llamadas que LEEN de disco con una huella dentro: 1
+      CIFRA de esas que leen el fichero VIVO: 1
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         PRUEBA  linea 182 | REPORTE.md | vivo -> os.path.join(tmp, "REPORTE.md") | io.open(vivo, encoding="utf-8").read()
+
+   vuelta177_tarea1b_mutacion_esperado_vivo.py    guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: INTRA_DOMINIO_VEREDICTOS.jsonl
+      CIFRA apariciones de esas huellas en el texto: 2
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 89 | INTRA_DOMINIO_VEREDICTOS.jsonl | print("   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: %d" % len(V))
+         SOLO LA NOMBRA, linea 184 | INTRA_DOMINIO_VEREDICTOS.jsonl | print("   docs/INTRA_DOMINIO_VEREDICTOS.jsonl identico al de antes: %s" % igual)
+
+   vuelta150_2d_simular_op_c_05.py                guarda: NO DECIDIBLE   -> ABRE FICHERO VIVO
+      ficheros vivos que la guarda le atribuye: master_graph.json
+      CIFRA apariciones de esas huellas en el texto: 3
+      CIFRA llamadas que LEEN de disco con una huella dentro: 1
+      CIFRA de esas que leen el fichero VIVO: 1
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         PRUEBA  linea 119 | master_graph.json | RUTA_GRAFO -> "dataset/metadata/master_graph.json" | open(RUTA_GRAFO, encoding="utf-8")
+
+   vuelta179_tarea3_mutacion_triangulos.py        guarda: SUJETO VIVO    -> LO NOMBRA SIN ABRIRLO
+      ficheros vivos que la guarda le atribuye: INTRA_DOMINIO_VEREDICTOS.jsonl
+      CIFRA apariciones de esas huellas en el texto: 2
+      CIFRA llamadas que LEEN de disco con una huella dentro: 0
+      CIFRA de esas que leen el fichero VIVO: 0
+      CIFRA de esas que leen un blob CLAVADO por su sha: 0
+         SOLO LA NOMBRA, linea 11 | INTRA_DOMINIO_VEREDICTOS.jsonl | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, ni `docs/plan/OP_L_03_TRIANGULOS.jsonl`,
+         SOLO LA NOMBRA, linea 34 | INTRA_DOMINIO_VEREDICTOS.jsonl | ARCHIVO = "docs/INTRA_DOMINIO_VEREDICTOS.jsonl"
+
+C) EL REPARTO DE MI LECTURA, CONTRA EL DE LA GUARDA
+| veredicto de la lectura | arneses |
+|---|---:|
+| ABRE FICHERO VIVO | **4** |
+| ABRE UN SUJETO YA CLAVADO | **2** |
+| LO NOMBRA SIN ABRIRLO | **11** |
+| **total** | **17** |
+   LA RESTA: 17 = 17, y las que la guarda senala son 17. CALZA: SI
+
+D) EL CRUCE, QUE ES LO QUE DICE SI LA GUARDA ACIERTA
+| la guarda dice | la lectura dice | arneses |
+|---|---|---:|
+| NO DECIDIBLE | ABRE FICHERO VIVO | **3** |
+| NO DECIDIBLE | ABRE UN SUJETO YA CLAVADO | **2** |
+| NO DECIDIBLE | LO NOMBRA SIN ABRIRLO | **4** |
+| SUJETO VIVO | ABRE FICHERO VIVO | **1** |
+| SUJETO VIVO | LO NOMBRA SIN ABRIRLO | **7** |
+
+E) EL REGISTRO PROPIO, ESCRITO
+   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+   CIFRA filas: 17
+   CIFRA bytes en disco: 20939 | bytes normalizados a LF: 20939
+
+F) LO QUE **NO** SE HIZO, Y ES TAN PARTE DEL ENCARGO COMO LO QUE SI
+   NINGUN ARNES SE ARREGLO en esta vuelta: 0 ficheros de scripts/loop/
+   tocados por este instrumento.
+   LA GUARDA NO SE CABLEO al rojo global de la bateria: sigue corriendo
+   sola en su carril con --sujeto-congelado.
+   NADA SE BORRO DE LA NOMINA: sigue teniendo 103 (corte: HEAD 8bd3bd3e8864, nomina contada en esta corrida) entradas.
+FIN

@@ -74,8 +74,8 @@ vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS, LAS CORRECCIONES Y LA OPERACION DE CODIGO DE LA ESCALADA, Y ES BLOQUEANTE. Cuatro letras: (a) LA CORRECCION DECLARADA DE LA CAIDA DE LA 178, que publico en su 1.e `16 casos` donde su propio fichero `docs/loop/SALIDA_V178_T1E_MUTACION.txt` dice 18, con las TRES cifras al lado (la publicada, la del fichero y la de la re-corrida de hoy) y SIN retocar el reporte archivado, que dice lo que se publico; (b) LA OPERACION DE CODIGO DE LA ESCALADA, que es la pieza que manda: la guarda de LA PROSA QUE CITA UN FICHERO, dentro de `cerrar_reporte.py` y como funcion PURA junto a sus hermanas, que caza toda frase que publique una cifra de casos de un arnes Y nombre un `SALIDA_V*.txt` en la misma linea, lee la cifra propia de ese fichero y CAE EN ROJO nombrando la linea, la cifra publicada y la del fichero, con los bloques cercados fuera y con el fichero inexistente o de cero bytes tambien en ROJO; con su caso positivo por mutacion y CORRIDA SOBRE `REPORTE_V178.md` publicando lo que salga; (c) LOS DOS ARNESES DESTAPADOS ENTRAN EN LA NOMINA de `verificar_mutaciones_viejas.py`, mas todo arnes que esta vuelta escriba, con la cuenta entera y la resta comprobada, ANTES de la 181 para que el rojo que la 178 anuncio no llegue a existir; (d) EL CORTE DEL DENOMINADOR CABLEADO DONDE SE GENERA LA CIFRA y no en una frase, porque la 178 publico 15 de 92 siendo verdad y al cerrar eran 15 de 98 | **CERRADA** | `SALIDA_V179_T1A_RECORRIDA_178.txt`, `_T1B_SOBRE_178.txt`, `_T1B_MUTACION.txt`, `_T1C_CUENTA.txt`, `_T1D_MUTACION.txt` |
 | **TAREA 2** | `OP-L-03`: SE LEEN LOS DIEZ PARES REALES DE LOS ACTOS SIN LEER. El backlog ya esta re-medido y `backlog_l03_resuelto.py` sale VERDE con los dos caminos calzando en los 40 actos: de los 73 pares que el instrumento da quedan 18 reales, 8 los leyo la 177 y quedan 10 en los 34 actos que nadie ha mirado. Los diez se leen con la vara del banco, par por par, y cada uno con su veredicto y su razon en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` SOLO SI EL PAR TIENE PUESTO EN LA COLA; si no lo tiene NO SE INVENTA UN PUESTO y su clase y su razon van al registro de `OP-L-03` en el campo `clases_de_los_pares_por_leer`, que es donde la 177 las puso y donde son trazables. El marcador no se toca si no hay puesto, y si lo hay se recomputa del archivo con sus cuatro clases. Cada acto cierra con su forma escrita: la figura, su cobertura y lo que queda. Y la cifra va al lado, siempre las dos: pares del instrumento y pares reales | **CERRADA** | `SALIDA_V179_T2_LOS_DIEZ.txt`, `_T2_VECINOS.txt`, `_T2_ESCRIBIR.txt`, `_T2_COBERTURA.txt` |
-| **TAREA 3** | LOS DIECISEIS TRIANGULOS SE PUBLICAN PARTIDOS POR SU FUENTE, y NINGUNA CLASE SE MUEVE. `vuelta178_tarea3_anotar_triangulos.py` publica la cifra PARTIDA y no solo el 16: cuantos descansan enteros en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y cuantos se apoyan en un lado de fuera, y NOMBRA aquellos en que el lado de fuera es el `D`, que es el lado que hace que el triangulo sea un triangulo. `docs/plan/OP_L_03_TRIANGULOS.jsonl` gana un campo por fila que diga si el triangulo es recomputable entero del archivo, y el campo `fuente_de_la_clase` por lado NO se toca. CERO VEREDICTOS MOVIDOS, comprobado por `sha256` antes y despues. Con su caso positivo por mutacion sobre un registro fabricado, donde un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en casillas distintas | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 4** | LAS QUINCE DEL SUJETO CONGELADO SE JUZGAN, UNA A UNA, Y NO SE CABLEA NADA TODAVIA. Primero se juzgan, despues se cablea, y no al reves. Por cada una de las quince, un veredicto escrito con su prueba: o el arnes de verdad ABRE un fichero vivo de la campana y hay que congelarle el sujeto, o LO NOMBRA SIN ABRIRLO y basta con que lo declare, o es un CASO DECLARADO legitimo y se anota por que. Registro propio y no prosa: `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, una fila por arnes, con el nombre, el veredicto, el fichero que abre y la evidencia (la linea del codigo). NO se arregla ningun arnes en esta vuelta y NO se cablea la guarda al rojo global de la bateria: el cableado se decide con los quince veredictos delante. NADA se borra de la nomina | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LOS DIECISEIS TRIANGULOS SE PUBLICAN PARTIDOS POR SU FUENTE, y NINGUNA CLASE SE MUEVE. `vuelta178_tarea3_anotar_triangulos.py` publica la cifra PARTIDA y no solo el 16: cuantos descansan enteros en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` y cuantos se apoyan en un lado de fuera, y NOMBRA aquellos en que el lado de fuera es el `D`, que es el lado que hace que el triangulo sea un triangulo. `docs/plan/OP_L_03_TRIANGULOS.jsonl` gana un campo por fila que diga si el triangulo es recomputable entero del archivo, y el campo `fuente_de_la_clase` por lado NO se toca. CERO VEREDICTOS MOVIDOS, comprobado por `sha256` antes y despues. Con su caso positivo por mutacion sobre un registro fabricado, donde un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en casillas distintas | **CERRADA, con una PARADA declarada** | `SALIDA_V179_T3_TRIANGULOS_ANTES_DE_T2.txt`, `_T3_TRIANGULOS.txt`, `_T3_MUTACION.txt`, `_T3_ETIQUETA.txt` |
+| **TAREA 4** | LAS QUINCE DEL SUJETO CONGELADO SE JUZGAN, UNA A UNA, Y NO SE CABLEA NADA TODAVIA. Primero se juzgan, despues se cablea, y no al reves. Por cada una de las quince, un veredicto escrito con su prueba: o el arnes de verdad ABRE un fichero vivo de la campana y hay que congelarle el sujeto, o LO NOMBRA SIN ABRIRLO y basta con que lo declare, o es un CASO DECLARADO legitimo y se anota por que. Registro propio y no prosa: `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, una fila por arnes, con el nombre, el veredicto, el fichero que abre y la evidencia (la linea del codigo). NO se arregla ningun arnes en esta vuelta y NO se cablea la guarda al rojo global de la bateria: el cableado se decide con los quince veredictos delante. NADA se borra de la nomina | **CERRADA** | `SALIDA_V179_T4_GUARDA.txt`, `_T4_VEREDICTOS.txt`, `docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl` |
 | **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA. Ninguna de estas cinco se toca aqui, y las cinco se nombran CON SU MEDICION (existe, bytes en disco y normalizados a LF) para que no se caigan: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`, que sigue hablando de LA VUELTA ANTERIOR cuando la maquina pregunta por EL REPORTE QUE VA A PISAR; la guarda que falta en la dependencia del `D.4` de la 174, donde el esqueleto clona en vez de importar y nada avisa si el fichero del que se clono desaparece; el grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes; y la convencion de bytes, que es del fundador, lleva seis actas subiendo y sube como PENDIENTE y no como problema, porque el remedio provisional de publicar siempre las dos ya es instrumento | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -340,5 +340,220 @@ esta vuelta, **18 con lectura y 0 sin lectura**, y la resta cierra. **Cero pares
 reales sin lectura en todo el backlog de `OP-L-03`.** El
 estado de la ficha **NO se toca**, que es lo que `EJECUTOR.md` 4 manda mientras la
 campana este en modo de cierre.
+
+### TAREA 3. LOS TRIANGULOS SE PUBLICAN PARTIDOS POR SU FUENTE
+
+#### 3.a. LA MEDICION DEL ENCARGO, REPRODUCIDA ANTES DE ESCRIBIR NADA
+
+El encargo pide reproducirla primero, y sale identica. Contada de
+`docs/loop/SALIDA_V179_T3_TRIANGULOS_ANTES_DE_T2.txt`, **al corte del commit de
+apertura de esta vuelta y ANTES de que la TAREA 2 escribiera una sola linea**:
+
+| que se cuenta | cuantos |
+|---|---:|
+| lados con clase leida de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **38** |
+| lados con clase leida de `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` | **10** |
+| triangulos con los TRES lados con veredicto en el archivo | **8** |
+| triangulos con al menos un lado SIN veredicto en el archivo | **8** |
+| de esos, aquellos en que el lado de fuera es el `D` | **6** |
+| **total de triangulos** | **16** |
+
+**Las cinco cifras del encargo, las cinco.**
+
+#### 3.b. Y LA DEL CIERRE, QUE ES OTRA, PORQUE LA TAREA 2 LA MOVIO
+
+`EJECUTOR.md` 1 dice que **el estado al cierre se mide al cierre si algo de la
+propia vuelta pudo haberlo movido**, y lo movio: la TAREA 2 escribio diez
+lecturas nuevas en el mismo registro del que este instrumento saca la clase de
+los lados de fuera. Contada de `docs/loop/SALIDA_V179_T3_TRIANGULOS.txt`, **al
+cierre de la TAREA 2**:
+
+| que se cuenta | cuantos |
+|---|---:|
+| lados con clase leida de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **42** |
+| lados con clase leida del registro de `OP-L-03` | **15** |
+| triangulos con los TRES lados con veredicto en el archivo | **8** |
+| triangulos con al menos un lado SIN veredicto en el archivo | **11** |
+| de esos, aquellos en que el lado de fuera es el `D` | **9** |
+| de esos, aquellos en que el lado de fuera NO es el `D` | **2** |
+| **total de triangulos** | **19** |
+
+**LA RESTA CIERRA DOS VECES:** enteros **8** mas apoyados **11** son **19**, y de
+los apoyados, **9** con el `D` fuera mas **2** sin el `D` fuera son **11**.
+
+**LAS DOS TABLAS SON VERDADERAS Y NINGUNA SUSTITUYE A LA OTRA.** La de arriba es
+la apertura, la de abajo el cierre, y cada una lleva su corte. **Los que no se
+mueven son los ocho enteros:** los que descansan en el archivo siguen siendo
+ocho, porque nada de esta vuelta anadio un veredicto al archivo.
+
+#### 3.c. LOS NUEVE CON EL `D` FUERA, NOMBRADOS
+
+Van uno a uno en `docs/loop/SALIDA_V179_T3_TRIANGULOS.txt`, con su acto, su terna
+y el lado `D` que viene de fuera. **El `D` es el lado que hace que el triangulo
+sea un triangulo**: dos `A` sin un `D` entre ellos no son esta figura, y por eso
+se cuentan aparte de los otros **2**, cuyo lado de fuera es un `A`.
+
+#### 3.d. EL CAMPO NUEVO Y LOS VEREDICTOS QUIETOS
+
+`docs/plan/OP_L_03_TRIANGULOS.jsonl` gana **`recomputable_entero_del_archivo`** en
+**las 19 filas, sin excepcion**, mas `el_lado_de_fuera_es_el_D` y
+`vuelta_que_anota_la_fuente`. **El campo `fuente_de_la_clase` por lado no se
+toca**, que es lo que el encargo manda.
+
+**CERO VEREDICTOS MOVIDOS**, comprobado por `sha256` de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` antes y despues dentro del propio
+instrumento, y los dos salen **IDENTICOS**.
+
+#### 3.e. EL CASO POSITIVO POR MUTACION
+
+`scripts/loop/vuelta179_tarea3_mutacion_triangulos.py`
+(`docs/loop/SALIDA_V179_T3_MUTACION.txt`). **20 casos, los 20 pasan y los 20
+CAEN** al mutarles el valor esperado. **El caso que lo decide todo esta puesto:**
+un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en
+casillas distintas. **Y esta la mitad que se olvida:** los DOS apoyados, el del
+`D` fuera y el de un `A` fuera, tambien caen en casillas distintas. **Nada sale
+del repo**: los cuatro triangulos son fabricados.
+
+**Y EL ARNES TUMBO DOS ESPERADOS MIOS EN SU PRIMERA CORRIDA**, y lo escribo en vez
+de callarlo: yo esperaba 6 y 6 lados por fuente sobre el registro fabricado, y
+son **7 y 5**. **El codigo estaba bien y mis dos numeros estaban mal.** La
+mutacion los cazo porque el esperado equivocado coincidia con el valor mutado.
+
+#### 3.f. PARADA: UNA ETIQUETA DE FUENTE QUE YA NO ES VERDAD
+
+**LA DESTAPO ESTA MISMA VUELTA Y LA CAUSA ES MIA.** `clases_por_par()` etiqueta
+con el literal `"docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)"` **toda** clase
+que venga de ese registro, porque cuando se escribio la 177 era la unica que
+habia escrito ahi. **La TAREA 2 de esta misma vuelta escribio diez lecturas mas,
+de la vuelta 179, y salen etiquetadas como si fueran de la 177.**
+
+Contado por `scripts/loop/vuelta179_tarea3_etiqueta_de_fuente.py`
+(`docs/loop/SALIDA_V179_T3_ETIQUETA.txt`):
+
+| que se cuenta | cuantos |
+|---|---:|
+| lados etiquetados como del registro de la vuelta 177 | **15** |
+| de esos, los que SI son de la vuelta 177 | **10** |
+| de esos, los que NO lo son | **5** |
+| de esos, los que no se pudieron cotejar | **0** |
+
+**LA RESTA CIERRA:** 10 mas 5 mas 0 son 15. **Los cinco mal etiquetados van
+nombrados uno a uno** en ese fichero.
+
+**NO LO ARREGLO, Y DIGO POR QUE.** El encargo de esta vuelta dice con estas
+palabras: *"El campo `fuente_de_la_clase` por lado NO se toca"*. Y lo que la
+etiqueta rota contradice es `EJECUTOR.md` 8, **toda cifra de un autor con su
+atribucion**. Cuando algo contradice una regla vigente, `EJECUTOR.md` 5 manda
+**escribirlo como PARADA en el reporte y no arreglarlo por cuenta propia**. Asi
+queda: **medido, nombrado y sin tocar**.
+
+### TAREA 4. LAS DEL SUJETO CONGELADO, JUZGADAS UNA A UNA, Y NADA CABLEADO
+
+#### 4.a. NO SON QUINCE AL CERRAR, Y LA CULPA ES MIA, Y ESTA MEDIDA
+
+El encargo habla de **quince** (7 `SUJETO VIVO` y 8 `NO DECIDIBLE`), y **quince
+eran al abrir**: el bloque H.10 de `scripts/loop/vuelta179_apertura.py` lo midio
+antes de la primera operacion y dio **15 de 98**. **Al juzgarlas son 17 de 103**,
+y el motivo es la TAREA 1.c de esta misma vuelta, que metio cinco arneses en la
+nomina: dos de ellos salen senalados
+(`vuelta150_2d_simular_op_c_05.py` y `vuelta179_tarea3_mutacion_triangulos.py`).
+
+**LAS DOS CIFRAS SON VERDADERAS Y CADA UNA LLEVA SU CORTE**, que es exactamente
+para lo que la TAREA 1.d cableo el sello: **15 de 98 al corte de apertura,
+`74cad47d42e7`**, y **17 de 103 al corte de la corrida de esta tarea,
+`8bd3bd3e8864`**. Sin el corte, las dos cifras se contradirian sin manera de
+saber cual mira que.
+
+#### 4.b. COMO SE JUZGO, Y ES MECANICO Y NO A OJO
+
+`scripts/loop/vuelta179_tarea4_juzgar_sujeto.py` parsea cada arnes con `ast`,
+busca las llamadas que **leen de disco** y mira si dentro aparece la huella de un
+fichero vivo, **resolviendo tambien las asignaciones simples** (si el arnes hace
+`RUTA = os.path.join(...)` y despues `io.open(RUTA)`, eso cuenta como abrir).
+
+**Y HAY UNA TERCERA CASILLA QUE NO ESTABA EN EL ENCARGO Y QUE HUBO QUE ANADIR
+PORQUE MI PRIMERA VERSION ACUSABA EN FALSO.** Leer `git show
+<sha de 40>:docs/loop/REPORTE.md` **no es leer el `REPORTE.md` vivo**: es leer un
+blob clavado por su huella, que no se mueve nunca mas. Mi primera corrida
+clasificaba `vuelta135_2e_mutacion_1.py` y `_2.py` como **ABRE FICHERO VIVO**
+teniendo el `sha` delante en la propia linea de la prueba. **Se arreglo antes de
+escribir el registro**, y de paso destapo un defecto propio: el patron se habia
+escrito con dos `\b` que quedaron guardados como caracteres de retroceso y **la
+comprobacion no podia dar verdadero nunca**. Estaba muerta y parecia viva.
+
+**LO QUE ESTE METODO NO PUEDE, Y SE DICE EN VEZ DE PRESUMIR:** no sigue la huella
+a traves de funciones auxiliares ni de modulos importados. Por eso cada fila del
+registro publica **todas las lineas** donde la huella aparece, abra o no, para
+que el ojo pueda mirar donde la maquina no llega. **Marcado DISCUTIBLE.**
+
+#### 4.c. LOS DIECISIETE, REPARTIDOS
+
+| veredicto de la lectura | arneses |
+|---|---:|
+| `ABRE FICHERO VIVO` | **4** |
+| `ABRE UN SUJETO YA CLAVADO` | **2** |
+| `LO NOMBRA SIN ABRIRLO` | **11** |
+| **total** | **17** |
+
+**Y EL CRUCE CONTRA LO QUE LA GUARDA DICE, QUE ES LO QUE MIDE SI LA GUARDA
+ACIERTA:**
+
+| la guarda dice | la lectura dice | arneses |
+|---|---|---:|
+| `NO DECIDIBLE` | `ABRE FICHERO VIVO` | **3** |
+| `NO DECIDIBLE` | `ABRE UN SUJETO YA CLAVADO` | **2** |
+| `NO DECIDIBLE` | `LO NOMBRA SIN ABRIRLO` | **4** |
+| `SUJETO VIVO` | `ABRE FICHERO VIVO` | **1** |
+| `SUJETO VIVO` | `LO NOMBRA SIN ABRIRLO` | **7** |
+
+**LO QUE ESE CRUCE DICE, Y ES LA CIFRA QUE IMPORTA PARA DECIDIR EL CABLEADO: de
+17 senalados, solo 4 abren de verdad un fichero vivo.** Los otros **13** o leen
+un sujeto ya clavado (**2**) o solo nombran el fichero sin abrirlo (**11**). **La
+guarda no se equivoca en su carril**, porque `NO DECIDIBLE` significa
+literalmente que el arnes no deja claro cual es su sujeto, y eso es cierto en los
+nueve; **pero 7 de los 8 que llama `SUJETO VIVO` no abren nada vivo.**
+
+#### 4.d. LOS CUATRO QUE SI ABREN, NOMBRADOS
+
+| arnes | que abre | la guarda decia |
+|---|---|---|
+| `vuelta157_tarea4b_mutacion_tachado.py` | `LECTURAS_DIRIGIDAS.md`, con `io.open` sobre la ruta viva | `SUJETO VIVO` |
+| `vuelta160_tarea7c_mutacion_guarda_cita.py` | copia `LECTURAS_DIRIGIDAS.md` e `INTRA_DOMINIO_VEREDICTOS.jsonl` vivos a un temporal | `NO DECIDIBLE` |
+| `vuelta174_tarea1b_mutacion_esqueleto.py` | `REPORTE.md` | `NO DECIDIBLE` |
+| `vuelta150_2d_simular_op_c_05.py` | `master_graph.json` | `NO DECIDIBLE` |
+
+**El caso de `vuelta160_tarea7c` merece su linea**: copia el fichero vivo a un
+temporal y trabaja sobre la copia, lo cual parece congelado y no lo es. **El
+resultado sigue dependiendo de lo que el fichero vivo diga hoy**, porque la copia
+se hace en cada corrida. Por eso `tmp` y `tempfile` **no** cuentan como marca de
+clavado en este instrumento, y eso va escrito en su codigo con su motivo.
+
+**LOS DOS QUE LEEN UN SUJETO YA CLAVADO** son `vuelta135_2e_mutacion_1.py` y
+`_2.py`, los dos por `git show e12e4c362fe734ff:docs/loop/REPORTE.md`. **No les
+falta nada de fondo:** lo unico que les falta es **declararlo** con el literal que
+la guarda busca, para dejar de salir `NO DECIDIBLE`.
+
+#### 4.e. EL REGISTRO, Y LO QUE NO SE HIZO
+
+`docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl`, **17 filas**, una por arnes, con el
+nombre, los dos veredictos, el fichero que abre, **la linea del codigo** como
+evidencia, y **que haria falta** para arreglarlo. **20.939 bytes en disco y 20.939
+normalizados a LF.**
+
+**Y LO QUE NO SE HIZO ES TAN PARTE DEL ENCARGO COMO LO QUE SI:**
+
+- **NINGUN ARNES SE ARREGLO.** Cero ficheros de `scripts/loop/` tocados por este
+  instrumento.
+- **LA GUARDA NO SE CABLEO** al rojo global de la bateria. Sigue corriendo sola en
+  su carril con `--sujeto-congelado`.
+- **NADA SE BORRO DE LA NOMINA** (`AUDITOR.md` 6.1): sigue en **103** al corte
+  `8bd3bd3e8864`.
+
+**LA RECOMENDACION PARA EL CABLEADO, CON LOS VEREDICTOS DELANTE Y NO ANTES**, que
+es lo que el encargo pedia dejar preparado: cablearla hoy pondria la bateria de la
+181 en rojo por **17**, de los cuales **13 no abren nada vivo**. **Lo barato es al
+reves**: primero que los **13** declaren su sujeto, que no cuesta codigo nuevo
+sino una linea por arnes, y despues cablear con **4** pendientes de verdad. **No
+lo decido yo**, y va como pregunta.
 
 <!-- FIN ANEXO DE TAREAS -->

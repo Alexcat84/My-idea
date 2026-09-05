@@ -9,9 +9,9 @@ A) EL SELLO DE LOS VEREDICTOS, ANTES DE TOCAR NADA
 
 B) EL MATERIAL, CONTADO Y NO SUPUESTO
    CIFRA alias del resolutor: 761
-   CIFRA pares con clase, de las DOS fuentes: 2730
+   CIFRA pares con clase, de las DOS fuentes: 2720
       de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 2712
-      del registro de la vuelta 177: 18
+      del registro de la vuelta 177: 8
 
 C) LOS ACTOS DONDE SE BUSCA, Y NO SE ELIGE NINGUNO A MANO
    se miran TODOS los actos del backlog que tienen 3 o mas nodos VIVOS
@@ -167,21 +167,6 @@ D) LOS TRIANGULOS ENCONTRADOS, UNO A UNO Y CON SU REGLA POR LADO
          marcas 13 ago en su razon: Madre contra pieza
 
    TRIANGULO en el acto `colaboracion_cadena_suministro`
-      terna: colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo
-      lado colaboracion_cadena_suministro + compartir_datos_cadena_suministro -> clase A | puestos 573 | fuente archivo
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-      lado colaboracion_cadena_suministro + diagnostico_efecto_latigo -> clase A | puestos (sin puesto) | fuente registro 177
-         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
-         marcas 9.6.1 en su razon: REPITE
-         marcas 13 ago en su razon: (ninguna)
-      lado compartir_datos_cadena_suministro + diagnostico_efecto_latigo -> clase D | puestos (sin puesto) | fuente registro 177
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-
-   TRIANGULO en el acto `colaboracion_cadena_suministro`
       terna: colaboracion_cadena_suministro, compartir_datos_cadena_suministro, efecto_bullwhip
       lado colaboracion_cadena_suministro + compartir_datos_cadena_suministro -> clase A | puestos 573 | fuente archivo
          GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
@@ -224,21 +209,6 @@ D) LOS TRIANGULOS ENCONTRADOS, UNO A UNO Y CON SU REGLA POR LADO
       lado relacion_largo_plazo_proveedor_unico + relaciones_largo_plazo_con_proveedores -> clase A | puestos 2421 | fuente archivo
          GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
          marcas 9.6.1 en su razon: REPITE
-         marcas 13 ago en su razon: (ninguna)
-
-   TRIANGULO en el acto `creacion_option_pool`
-      terna: creacion_option_pool, employee_pool_esop, pool_opciones_empleados
-      lado creacion_option_pool + employee_pool_esop -> clase D | puestos (sin puesto) | fuente registro 177
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-      lado creacion_option_pool + pool_opciones_empleados -> clase A | puestos 1436 | fuente archivo
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-      lado employee_pool_esop + pool_opciones_empleados -> clase A | puestos 1371 | fuente archivo
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
          marcas 13 ago en su razon: (ninguna)
 
    TRIANGULO en el acto `creacion_option_pool`
@@ -301,28 +271,13 @@ D) LOS TRIANGULOS ENCONTRADOS, UNO A UNO Y CON SU REGLA POR LADO
          marcas 9.6.1 en su razon: (ninguna)
          marcas 13 ago en su razon: (ninguna)
 
-   TRIANGULO en el acto `fase_diseno_prototipado_modelos`
-      terna: fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototyping_possibilities
-      lado fase_diseno_prototipado_modelos + proceso_ideacion_modelo_negocio -> clase A | puestos 507 | fuente archivo
-         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
-         marcas 9.6.1 en su razon: REPITE
-         marcas 13 ago en su razon: (ninguna)
-      lado fase_diseno_prototipado_modelos + prototyping_possibilities -> clase A | puestos (sin puesto) | fuente registro 177
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-      lado proceso_ideacion_modelo_negocio + prototyping_possibilities -> clase D | puestos (sin puesto) | fuente registro 177
-         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
-         marcas 9.6.1 en su razon: (ninguna)
-         marcas 13 ago en su razon: (ninguna)
-
-   CIFRA triangulos A mas A mas D encontrados EN TODO EL BACKLOG: 19
+   CIFRA triangulos A mas A mas D encontrados EN TODO EL BACKLOG: 16
 
 | tramo | actos | triangulos |
 |---|---|---|
-| en los actos QUE LA 177 LEYO | 8 | **19** |
-| en los actos QUE LA 177 NO MIRO | 0 | **0** |
-| **todo el backlog** | 8 | **19** |
+| en los actos QUE LA 177 LEYO | 3 | **9** |
+| en los actos QUE LA 177 NO MIRO | 5 | **7** |
+| **todo el backlog** | 8 | **16** |
 
    LOS DE LA PRIMERA FILA SON LOS CINCO QUE EL ENCARGO NOMBRA, y la cifra
    sale del instrumento y no se ajusta a la anterior. LOS DE LA SEGUNDA SON
@@ -334,12 +289,12 @@ D.1) LA CIFRA PARTIDA POR SU FUENTE, QUE ES LO QUE EL TOTAL NO DICE
 
 | que se cuenta | cuantos |
 |---|---:|
-| lados con clase leida de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **42** |
-| lados con clase leida de `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` | **15** |
+| lados con clase leida de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | **38** |
+| lados con clase leida de `docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)` | **10** |
 | triangulos con los TRES lados con veredicto en el archivo | **8** |
-| triangulos con al menos un lado SIN veredicto en el archivo | **11** |
-| de esos, aquellos en que el lado de fuera es el `D` | **9** |
-| **total de triangulos** | **19** |
+| triangulos con al menos un lado SIN veredicto en el archivo | **8** |
+| de esos, aquellos en que el lado de fuera es el `D` | **6** |
+| **total de triangulos** | **16** |
 
    LOS QUE TIENEN EL `D` FUERA DEL ARCHIVO, NOMBRADOS UNO A UNO. El `D` es
    el lado que hace que el triangulo sea un triangulo: dos `A` sin un `D`
@@ -356,26 +311,20 @@ D.1) LA CIFRA PARTIDA POR SU FUENTE, QUE ES LO QUE EL TOTAL NO DICE
          lado `D` de fuera: leverage_en_negociacion_con_vcs + tecnica_anclaje_negociacion | fuente: docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
       acto `estrategia_de_innovacion_arenas` | terna estrategia_de_innovacion_arenas, estrategia_innovacion_producto, seleccion_arenas_estrategicas
          lado `D` de fuera: estrategia_innovacion_producto + seleccion_arenas_estrategicas | fuente: docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
-      acto `colaboracion_cadena_suministro` | terna colaboracion_cadena_suministro, compartir_datos_cadena_suministro, diagnostico_efecto_latigo
-         lado `D` de fuera: compartir_datos_cadena_suministro + diagnostico_efecto_latigo | fuente: docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
-      acto `creacion_option_pool` | terna creacion_option_pool, employee_pool_esop, pool_opciones_empleados
-         lado `D` de fuera: creacion_option_pool + employee_pool_esop | fuente: docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
-      acto `fase_diseno_prototipado_modelos` | terna fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototyping_possibilities
-         lado `D` de fuera: proceso_ideacion_modelo_negocio + prototyping_possibilities | fuente: docs/plan/OP_L_03_LECTURAS.jsonl (vuelta 177)
-   CIFRA triangulos con el `D` fuera del archivo: 9
+   CIFRA triangulos con el `D` fuera del archivo: 6
 
    LOS QUE SE APOYAN EN UN LADO DE FUERA QUE **NO** ES EL `D`:
       acto `cash_burn_calculation` | terna cash_burn_calculation, validacion_hipotesis_ingresos, validar_modelo_financiero | lados de fuera: cash_burn_calculation+validar_modelo_financiero (A), validacion_hipotesis_ingresos+validar_modelo_financiero (A)
       acto `cash_burn_calculation` | terna cash_burn_calculation, validacion_hipotesis_ingresos, verificar_modelo_ingresos | lados de fuera: cash_burn_calculation+verificar_modelo_ingresos (A)
    CIFRA triangulos apoyados cuyo lado de fuera NO es el `D`: 2
 
-   LA RESTA, COMPROBADA: enteros 8 mas apoyados 11 = 19, y el total es 19.
+   LA RESTA, COMPROBADA: enteros 8 mas apoyados 8 = 16, y el total es 16.
    CALZA: SI
-   Y de los apoyados, con el `D` fuera 9 mas sin el `D` fuera 2 = 11.
+   Y de los apoyados, con el `D` fuera 6 mas sin el `D` fuera 2 = 8.
    CALZA: SI
 
 E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON
-   CIFRA nodos implicados en algun triangulo: 34
+   CIFRA nodos implicados en algun triangulo: 31
 
 | nodo | pasos_accionables |
 |---|---|
@@ -384,8 +333,6 @@ E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON
 | `compartir_datos_cadena_suministro` | 4 |
 | `compra_por_precio_mas_bajo_como_error` | 3 |
 | `construccion_de_leverage` | 5 |
-| `creacion_option_pool` | 3 |
-| `diagnostico_efecto_latigo` | 4 |
 | `disenar_tests_pass_fail` | 5 |
 | `diseno_experimentos_hipotesis` | 4 |
 | `diseno_experimentos_pass_fail` | 6 |
@@ -404,7 +351,6 @@ E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON
 | `pool_opciones_empleados` | 4 |
 | `proceso_ideacion_modelo_negocio` | 5 |
 | `prototipado_modelos_negocio` | 6 |
-| `prototyping_possibilities` | 5 |
 | `realizar_pruebas_pasa_no_pasa` | 4 |
 | `relacion_largo_plazo_proveedor_unico` | 4 |
 | `relaciones_largo_plazo_con_proveedores` | 4 |
@@ -417,22 +363,22 @@ E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON
 F) EL REPARTO DE REGLAS, CONTADO DE LO DE ARRIBA
 | regla que gobierna el lado | lados |
 |---|---|
-| SIN MARCA DE NINGUNA DE LAS DOS | **31** |
-| banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, RE | **24** |
+| SIN MARCA DE NINGUNA DE LAS DOS | **24** |
+| banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, RE | **22** |
 | correccion declarada del 13 ago 2026 (puestos 530 y 863): LA MADRE Y SU PIEZA, | **2** |
-| **total de lados** | **57** |
+| **total de lados** | **48** |
 
 G) EL REGISTRO PROPIO, ESCRITO
    docs/plan/OP_L_03_TRIANGULOS.jsonl
-      filas: 19
-      bytes en disco: 55705 | bytes normalizados a LF: 55705
-      sha256 en disco: 6b3fce70a787f14e7ff2504dea7c888dd040fc366971c6fccb2be0d4789700eb
-      sha256 normalizado a LF: 6b3fce70a787f14e7ff2504dea7c888dd040fc366971c6fccb2be0d4789700eb
+      filas: 16
+      bytes en disco: 46946 | bytes normalizados a LF: 46946
+      sha256 en disco: 9e38a5d2c7e52204763ae52d515761764484ffc2c8230da6530a3e62a9be2907
+      sha256 normalizado a LF: 9e38a5d2c7e52204763ae52d515761764484ffc2c8230da6530a3e62a9be2907
 
 H) CERO VEREDICTOS MOVIDOS, COMPROBADO Y NO PROMETIDO
    sha256 ANTES:   ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
    sha256 DESPUES: ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
    IDENTICOS: SI
 
-VERDE: 19 triangulos anotados con la regla que gobierna cada uno de sus 57 lados, la clase de cada lado leida de su fuente y la prueba de `pasos_accionables` medida del grafo. CERO VEREDICTOS MOVIDOS, comprobado por sha256 antes y despues.
+VERDE: 16 triangulos anotados con la regla que gobierna cada uno de sus 48 lados, la clase de cada lado leida de su fuente y la prueba de `pasos_accionables` medida del grafo. CERO VEREDICTOS MOVIDOS, comprobado por sha256 antes y despues.
 FIN
