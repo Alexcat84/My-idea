@@ -1,0 +1,34 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: EL CORTE DEL DENOMINADOR (179, 1.d)
+==============================================================================
+
+NADA SALE DEL REPO: no se llama a git, no se lee ningun fichero y no se
+corre ningun otro arnes. El sujeto es una funcion PURA.
+
+A) LOS CASOS, CORRIDOS
+   A_el_sello_lleva_el_denominador                          pasa   visto=True esperado=True
+   A_y_lleva_el_head_que_se_le_da                           pasa   visto=True esperado=True
+   A_y_dice_la_palabra_corte                                pasa   visto=True esperado=True
+   B_dos_denominadores_distintos_dan_sellos_distintos       pasa   visto=False esperado=False
+   B_ES_EL_CASO_DE_LA_178_el_92_y_el_98_no_se_confunden     pasa   visto=('92', '98') esperado=('92', '98')
+   C_dos_cortes_distintos_dan_sellos_distintos_con_el_mismo pasa   visto=False esperado=False
+   D_el_head_no_medible_se_dice_y_no_se_inventa             pasa   visto=True esperado=True
+   E_es_PURA_no_llama_a_git_y_por_eso_no_cambia_entre_corri pasa   visto=True esperado=True
+   F_corte_de_git_es_OTRA_funcion_y_esta_separada           pasa   visto=(True, True) esperado=(True, True)
+   G_la_nomina_crece_dentro_de_la_vuelta_y_por_eso_el_corte pasa   visto='103' esperado='103'
+   CIFRA casos: 10 | pasan: 10 | fallan: 0
+
+B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
+   A_el_sello_lleva_el_denominador                          CAE
+   A_y_lleva_el_head_que_se_le_da                           CAE
+   A_y_dice_la_palabra_corte                                CAE
+   B_dos_denominadores_distintos_dan_sellos_distintos       CAE
+   B_ES_EL_CASO_DE_LA_178_el_92_y_el_98_no_se_confunden     CAE
+   C_dos_cortes_distintos_dan_sellos_distintos_con_el_mismo CAE
+   D_el_head_no_medible_se_dice_y_no_se_inventa             CAE
+   E_es_PURA_no_llama_a_git_y_por_eso_no_cambia_entre_corri CAE
+   F_corte_de_git_es_OTRA_funcion_y_esta_separada           CAE
+   G_la_nomina_crece_dentro_de_la_vuelta_y_por_eso_el_corte CAE
+   CIFRA casos que CAEN: 10 de 10
+
+VERDE DE LA MUTACION: 10 casos, los 10 pasan y los 10 CAEN al mutarles el valor esperado. El sello lleva el denominador y el corte pegados, dos denominadores distintos no se confunden aunque el corte sea el mismo, dos cortes distintos no se confunden aunque el numero sea el mismo, el head que no se pudo leer se dice en vez de inventarse, y la funcion que juzga esta separada de la que toca git.

@@ -1,0 +1,55 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA CIFRA PARTIDA POR SU FUENTE (179, T3)
+==============================================================================
+
+NADA SALE DEL REPO: los cuatro triangulos son fabricados y las funciones
+juzgadas son PURAS. No se lee el archivo de veredictos, ni el registro de
+OP-L-03, ni el registro de triangulos, ni el grafo.
+
+A) LOS CASOS, CORRIDOS
+   A_el_entero_ES_recomputable                            pasa   visto=True esperado=True
+   A_el_del_D_fuera_NO_es_recomputable                    pasa   visto=False esperado=False
+   A_Y_CAEN_EN_CASILLAS_DISTINTAS                         pasa   visto=(True, False) esperado=(True, False)
+   B_el_del_D_fuera_tiene_el_D_fuera                      pasa   visto=True esperado=True
+   B_el_del_A_fuera_NO_tiene_el_D_fuera                   pasa   visto=False esperado=False
+   B_Y_LOS_DOS_APOYADOS_CAEN_EN_CASILLAS_DISTINTAS        pasa   visto=(True, False) esperado=(True, False)
+   C_el_entero_no_tiene_ningun_lado_de_fuera              pasa   visto=0 esperado=0
+   C_el_del_D_fuera_tiene_UNO                             pasa   visto=1 esperado=1
+   C_el_de_todo_fuera_tiene_TRES                          pasa   visto=3 esperado=3
+   C_y_el_lado_de_fuera_se_nombra_con_su_clase            pasa   visto='D' esperado='D'
+   D_el_reparto_cuenta_el_total                           pasa   visto=4 esperado=4
+   D_el_reparto_cuenta_los_enteros                        pasa   visto=1 esperado=1
+   D_el_reparto_cuenta_los_apoyados                       pasa   visto=3 esperado=3
+   D_el_reparto_cuenta_los_del_D_fuera                    pasa   visto=2 esperado=2
+   D_LA_RESTA_CIERRA_enteros_mas_apoyados_es_el_total     pasa   visto=True esperado=True
+   E_los_lados_del_archivo_se_cuentan                     pasa   visto=7 esperado=7
+   E_los_lados_del_registro_177_se_cuentan                pasa   visto=5 esperado=5
+   E_y_los_dos_suman_los_lados_de_los_cuatro_triangulos   pasa   visto=12 esperado=12
+   F_un_lado_SIN_fuente_no_cuenta_como_del_archivo        pasa   visto=False esperado=False
+   G_una_lista_vacia_de_triangulos_no_revienta            pasa   visto=0 esperado=0
+   CIFRA casos: 20 | pasan: 20 | fallan: 0
+
+B) LA MUTACION: A CADA CASO SE LE MUEVE EL VALOR ESPERADO Y TIENE QUE CAER
+   A_el_entero_ES_recomputable                            CAE
+   A_el_del_D_fuera_NO_es_recomputable                    CAE
+   A_Y_CAEN_EN_CASILLAS_DISTINTAS                         CAE
+   B_el_del_D_fuera_tiene_el_D_fuera                      CAE
+   B_el_del_A_fuera_NO_tiene_el_D_fuera                   CAE
+   B_Y_LOS_DOS_APOYADOS_CAEN_EN_CASILLAS_DISTINTAS        CAE
+   C_el_entero_no_tiene_ningun_lado_de_fuera              CAE
+   C_el_del_D_fuera_tiene_UNO                             CAE
+   C_el_de_todo_fuera_tiene_TRES                          CAE
+   C_y_el_lado_de_fuera_se_nombra_con_su_clase            CAE
+   D_el_reparto_cuenta_el_total                           CAE
+   D_el_reparto_cuenta_los_enteros                        CAE
+   D_el_reparto_cuenta_los_apoyados                       CAE
+   D_el_reparto_cuenta_los_del_D_fuera                    CAE
+   D_LA_RESTA_CIERRA_enteros_mas_apoyados_es_el_total     CAE
+   E_los_lados_del_archivo_se_cuentan                     CAE
+   E_los_lados_del_registro_177_se_cuentan                CAE
+   E_y_los_dos_suman_los_lados_de_los_cuatro_triangulos   CAE
+   F_un_lado_SIN_fuente_no_cuenta_como_del_archivo        CAE
+   G_una_lista_vacia_de_triangulos_no_revienta            CAE
+   CIFRA casos que CAEN: 20 de 20
+
+VERDE DE LA MUTACION: 20 casos, los 20 pasan y los 20 CAEN al mutarles el valor esperado. Un triangulo con sus tres lados en el archivo y otro con el `D` fuera caen en casillas distintas; los dos apoyados, el del `D` fuera y el de un `A` fuera, tambien caen en casillas distintas; la resta de enteros mas apoyados cierra contra el total; los lados se cuentan por fuente; y un lado sin fuente NO cuenta como del archivo.

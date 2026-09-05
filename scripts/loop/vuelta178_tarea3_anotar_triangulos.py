@@ -162,6 +162,62 @@ def clases_por_par(mapa):
     return idx
 
 
+FUENTE_ARCHIVO = "docs/INTRA_DOMINIO_VEREDICTOS.jsonl"
+
+
+def lados_de_fuera_del_archivo(fila):
+    """LOS LADOS DE UN TRIANGULO CUYA CLASE NO SALE DEL ARCHIVO.
+
+    Devuelve [(lado, clase, fuente)], VACIA si los tres descansan en el archivo.
+    PURA: recibe la fila ya anotada y no lee nada."""
+    return [(l["lado"], l["clase"], l.get("fuente_de_la_clase"))
+            for l in fila["lados"]
+            if l.get("fuente_de_la_clase") != FUENTE_ARCHIVO]
+
+
+def recomputable_entero_del_archivo(fila):
+    """SI EL TRIANGULO SE PUEDE RECOMPUTAR ENTERO DE
+    `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`. PURA.
+
+    POR QUE IMPORTA, Y NO ES UNA CURIOSIDAD (vuelta 179, TAREA 3; adjudicado en
+    el acta 178 punto 7.8 por `banco 9.10` por extension natural). Un triangulo
+    que se apoya en un lado de fuera del archivo NO se puede volver a computar
+    contando el archivo: si manana alguien recuenta, ese lado no esta. Publicar
+    el 16 a secas dice que hay dieciseis; no dice cuantos sobreviven al
+    recuento."""
+    return not lados_de_fuera_del_archivo(fila)
+
+
+def el_lado_de_fuera_es_el_D(fila):
+    """SI ALGUNO DE LOS LADOS QUE VIENEN DE FUERA DEL ARCHIVO ES EL LADO `D`.
+    PURA.
+
+    EL `D` NO ES UN LADO CUALQUIERA: es el que hace que el triangulo sea un
+    triangulo. Dos lados `A` sin un `D` entre ellos no son esta figura. Que el
+    lado de fuera sea el `D` no es lo mismo que sea uno de los `A`, y por eso se
+    cuenta aparte y se nombra."""
+    return any(c == "D" for _l, c, _f in lados_de_fuera_del_archivo(fila))
+
+
+def reparto_por_fuente(filas):
+    """LA CIFRA PARTIDA POR SU FUENTE. PURA: recibe las filas y devuelve un dict.
+
+    Es lo que el encargo de la 179 pide en vez del 16 a secas: cuantos descansan
+    enteros en el archivo, cuantos se apoyan en un lado de fuera, y de esos
+    cuantos tienen el `D` fuera. Y los lados contados por fuente, que es la
+    cifra de la que salen las otras."""
+    enteros = [f for f in filas if recomputable_entero_del_archivo(f)]
+    apoyados = [f for f in filas if not recomputable_entero_del_archivo(f)]
+    con_d_fuera = [f for f in apoyados if el_lado_de_fuera_es_el_D(f)]
+    lados = {}
+    for f in filas:
+        for l in f["lados"]:
+            k = l.get("fuente_de_la_clase") or "(sin fuente)"
+            lados[k] = lados.get(k, 0) + 1
+    return {"total": len(filas), "enteros": enteros, "apoyados": apoyados,
+            "con_d_fuera": con_d_fuera, "lados_por_fuente": lados}
+
+
 def triangulos_del_acto(vivos, idx):
     """LAS TERNAS CON DOS LADOS `A` Y UNO `D`. PURA: recibe los nodos vivos y el
     indice de clases. Devuelve [(terna, [(par, entrada), x3])]."""
@@ -290,6 +346,67 @@ def main():
     p("   sale del instrumento y no se ajusta a la anterior. LOS DE LA SEGUNDA SON")
     p("   LA RESPUESTA A LA LETRA (d): el patron NO es una casualidad de tres")
     p("   actos, y esto lo dice midiendo y no opinando.")
+    p("")
+
+    # ------------------------------------------------------------ VUELTA 179
+    # LA CIFRA PARTIDA POR SU FUENTE (TAREA 3 de la vuelta 179; adjudicado en el
+    # acta 178 punto 7.8 por `banco 9.10` por extension natural). El total a
+    # secas dice cuantos hay; no dice cuantos sobreviven a un recuento del
+    # archivo. NINGUNA CLASE SE MUEVE aqui: esto solo cuenta lo ya anotado.
+    for f in filas:
+        f["recomputable_entero_del_archivo"] = recomputable_entero_del_archivo(f)
+        f["el_lado_de_fuera_es_el_D"] = el_lado_de_fuera_es_el_D(f)
+        f["vuelta_que_anota_la_fuente"] = 179
+    rep = reparto_por_fuente(filas)
+    p("D.1) LA CIFRA PARTIDA POR SU FUENTE, QUE ES LO QUE EL TOTAL NO DICE")
+    p("   (vuelta 179, TAREA 3. NINGUNA CLASE SE MUEVE: esto solo cuenta)")
+    p("")
+    p("| que se cuenta | cuantos |")
+    p("|---|---:|")
+    for k in sorted(rep["lados_por_fuente"]):
+        p("| lados con clase leida de `%s` | **%d** |" % (k, rep["lados_por_fuente"][k]))
+    p("| triangulos con los TRES lados con veredicto en el archivo | **%d** |"
+      % len(rep["enteros"]))
+    p("| triangulos con al menos un lado SIN veredicto en el archivo | **%d** |"
+      % len(rep["apoyados"]))
+    p("| de esos, aquellos en que el lado de fuera es el `D` | **%d** |"
+      % len(rep["con_d_fuera"]))
+    p("| **total de triangulos** | **%d** |" % rep["total"])
+    p("")
+    p("   LOS QUE TIENEN EL `D` FUERA DEL ARCHIVO, NOMBRADOS UNO A UNO. El `D` es")
+    p("   el lado que hace que el triangulo sea un triangulo: dos `A` sin un `D`")
+    p("   entre ellos no son esta figura.")
+    if not rep["con_d_fuera"]:
+        p("      (ninguno)")
+    for f in rep["con_d_fuera"]:
+        for lado, clase, fuente in lados_de_fuera_del_archivo(f):
+            if clase != "D":
+                continue
+            p("      acto `%s` | terna %s" % (f["acto"], ", ".join(f["terna"])))
+            p("         lado `D` de fuera: %s + %s | fuente: %s"
+              % (lado[0], lado[1], fuente))
+    p("   CIFRA triangulos con el `D` fuera del archivo: %d" % len(rep["con_d_fuera"]))
+    p("")
+    p("   LOS QUE SE APOYAN EN UN LADO DE FUERA QUE **NO** ES EL `D`:")
+    otros = [f for f in rep["apoyados"] if not el_lado_de_fuera_es_el_D(f)]
+    if not otros:
+        p("      (ninguno)")
+    for f in otros:
+        p("      acto `%s` | terna %s | lados de fuera: %s"
+          % (f["acto"], ", ".join(f["terna"]),
+             ", ".join("%s+%s (%s)" % (l[0], l[1], c)
+                       for l, c, _fu in lados_de_fuera_del_archivo(f))))
+    p("   CIFRA triangulos apoyados cuyo lado de fuera NO es el `D`: %d" % len(otros))
+    p("")
+    p("   LA RESTA, COMPROBADA: enteros %d mas apoyados %d = %d, y el total es %d."
+      % (len(rep["enteros"]), len(rep["apoyados"]),
+         len(rep["enteros"]) + len(rep["apoyados"]), rep["total"]))
+    p("   CALZA: %s"
+      % ("SI" if len(rep["enteros"]) + len(rep["apoyados"]) == rep["total"] else "NO"))
+    p("   Y de los apoyados, con el `D` fuera %d mas sin el `D` fuera %d = %d."
+      % (len(rep["con_d_fuera"]), len(otros), len(rep["con_d_fuera"]) + len(otros)))
+    p("   CALZA: %s"
+      % ("SI" if len(rep["con_d_fuera"]) + len(otros) == len(rep["apoyados"]) else "NO"))
     p("")
 
     p("E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON")

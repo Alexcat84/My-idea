@@ -1,0 +1,44 @@
+==============================================================================
+LA CUENTA DE LA NOMINA Y DEL CENSO (vuelta 179, TAREA 1.c)
+==============================================================================
+
+A) EL CORTE, LEIDO DE GIT EN ESTA CORRIDA Y NO TECLEADO
+   HEAD: 047b10b15c64
+   LA VARA DEL CENSO, que es la que decide: 148
+   LAS FAMILIAS DEL CENSO: mutacion, caso_positivo, simular
+
+B) LAS CUATRO CIFRAS, CADA UNA CON SU CORTE PEGADO
+| que se cuenta | cuantos |
+|---|---:|
+| arneses que ve el censo | 163 |
+| entradas de la nomina | 103 (corte: HEAD 047b10b15c64, nomina contada en esta corrida) |
+| del censo, FUERA de la nomina | 60 |
+| de la nomina, INVISIBLES al censo | 0 |
+
+C) LA RESTA, COMPROBADA Y NO AFIRMADA
+   censo 163 menos nomina 103 = 60
+   y los que estan fuera de la nomina son 60
+   CALZAN: SI
+   (la resta cierra solo si NINGUNA entrada de la nomina es invisible al
+    censo; hoy las invisibles son 0)
+
+D) LOS QUE ESTA VUELTA METE, UNO A UNO Y COMPROBADOS
+   vuelta150_2d_simular_op_c_05.py                disco: SI  nomina: SI  censo: SI
+   vuelta160_tarea3b_caso_positivo.py             disco: SI  nomina: SI  censo: SI
+   vuelta179_tarea1b_mutacion_citas.py            disco: SI  nomina: SI  censo: SI
+   vuelta179_tarea3_mutacion_triangulos.py        disco: SI  nomina: SI  censo: SI
+   vuelta179_tarea1d_mutacion_corte.py            disco: SI  nomina: SI  censo: SI
+   CIFRA que esta vuelta mete: 5
+   CIFRA de esos que NO estan en disco: 0
+   CIFRA de esos que NO estan en la nomina: 0
+
+E) LO QUE arneses_que_faltan() DICE HOY, QUE ES LA VARA DEL ROJO DE LA 181
+   ultima vuelta representada en la nomina: 179 (INFORMATIVA)
+   CIFRA arneses del censo, no anteriores a la vara, FUERA de la nomina: 0
+      (ninguno)
+
+F) EL VEREDICTO
+   VERDE: la resta cierra, los 5 que esta vuelta mete estan en disco y en
+   la nomina, y arneses_que_faltan() no nombra a nadie. El rojo que la 178
+   anuncio para la 181 NO llega a existir.
+FIN

@@ -1,0 +1,83 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LAS DOS GUARDAS DE HIGIENE (vuelta 178, 1.e)
+==============================================================================
+
+A) LA GUARDA DE LA PAREJA DE CIFRAS (cerrar_reporte.cifras_sin_pareja)
+   una cifra de bytes SOLA                              -> 1
+        linea 1, bytes, '5.001'
+   las dos cifras de bytes                              -> 0
+   una cifra que dice que las dos coinciden             -> 0
+   un sha SOLO                                          -> 1
+        linea 1, sha, '7d683eea4700f18b'
+   los dos sha                                          -> 0
+   un hash corto de commit, que no es un sha de contenido -> 0
+   una cifra dentro de un bloque cercado                -> 0
+
+B) LA GUARDA DEL SUJETO CONGELADO (verificar_mutaciones_viejas.anclaje_de)
+   fabrica su sujeto en un temporal           -> CONGELADO      congela=['tempfile', 'mkdtemp'] vive=[]
+   abre el REPORTE.md vivo                    -> SUJETO VIVO    congela=[] vive=['REPORTE.md']
+   hace las dos cosas y no declara            -> NO DECIDIBLE   congela=['tempfile', 'mkdtemp'] vive=['REPORTE.md']
+   hace las dos y DECLARA                     -> CONGELADO      congela=['tempfile', 'mkdtemp'] vive=['REPORTE.md']
+   esta en CASOS_DECLARADOS                   -> CASO DECLARADO congela=[] vive=['REPORTE.md']
+   solo lo NOMBRA en el docstring             -> CONGELADO      congela=['tempfile', 'mkdtemp'] vive=[]
+
+   EL CASO DEL DOCSTRING ES EL QUE IMPIDE EL FALSO ROJO: el texto de
+   arriba NOMBRA docs/loop/REPORTE.md en su prosa y NO lo abre. Si la
+   huella de sujeto vivo se buscara en el fichero entero, este arnes
+   saldria acusado por hablar.
+
+C) LA GUARDA SOBRE UNA NOMINA FABRICADA Y UN DIRECTORIO FABRICADO
+   vuelta300_a_mutacion_congelada.py      CONGELADO      abre: (nada)
+   vuelta300_b_mutacion_viva.py           SUJETO VIVO    abre: REPORTE.md
+   vuelta300_c_mutacion_mixta.py          NO DECIDIBLE   abre: REPORTE.md
+   vuelta300_d_mutacion_exenta.py         CASO DECLARADO abre: REPORTE.md
+   CIFRA entradas que no cumplen: 2
+   Y SI LA EXENCION SE QUITA, LA GUARDA LA CAZA (o sea que la exencion
+   esta haciendo trabajo y no es decorativa):
+   CIFRA entradas que no cumplen sin la exencion: 3
+   P.16: el temporal se retira. Existe todavia: False
+
+D) PASADA 1, LOS CASOS TAL CUAL
+   A_una_cifra_de_bytes_SOLA                      PASA   (real=1 esperado=1)
+   A_las_dos_cifras_de_bytes                      PASA   (real=0 esperado=0)
+   A_una_cifra_que_dice_que_las_dos_coincid       PASA   (real=0 esperado=0)
+   A_un_sha_SOLO                                  PASA   (real=1 esperado=1)
+   A_los_dos_sha                                  PASA   (real=0 esperado=0)
+   A_un_hash_corto_de_commit,_que_no_es_un_       PASA   (real=0 esperado=0)
+   A_una_cifra_dentro_de_un_bloque_cercado        PASA   (real=0 esperado=0)
+   B_fabrica_su_sujeto_en_un_temporal             PASA   (real='CONGELADO' esperado='CONGELADO')
+   B_abre_el_REPORTE.md_vivo                      PASA   (real='SUJETO VIVO' esperado='SUJETO VIVO')
+   B_hace_las_dos_cosas_y_no_declara              PASA   (real='NO DECIDIBLE' esperado='NO DECIDIBLE')
+   B_hace_las_dos_y_DECLARA                       PASA   (real='CONGELADO' esperado='CONGELADO')
+   B_esta_en_CASOS_DECLARADOS                     PASA   (real='CASO DECLARADO' esperado='CASO DECLARADO')
+   B_solo_lo_NOMBRA_en_el_docstring               PASA   (real='CONGELADO' esperado='CONGELADO')
+   C_la_guarda_caza_DOS                           PASA   (real=2 esperado=2)
+   C_la_exenta_no_se_cuenta                       PASA   (real=False esperado=False)
+   C_la_congelada_no_se_cuenta                    PASA   (real=False esperado=False)
+   C_clasifica_las_CUATRO                         PASA   (real=4 esperado=4)
+   C_sin_la_exencion_caza_TRES                    PASA   (real=3 esperado=3)
+   CIFRA casos: 18 | pasan: 18 | fallan: 0
+
+E) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_una_cifra_de_bytes_SOLA                      CAE
+   A_las_dos_cifras_de_bytes                      CAE
+   A_una_cifra_que_dice_que_las_dos_coincid       CAE
+   A_un_sha_SOLO                                  CAE
+   A_los_dos_sha                                  CAE
+   A_un_hash_corto_de_commit,_que_no_es_un_       CAE
+   A_una_cifra_dentro_de_un_bloque_cercado        CAE
+   B_fabrica_su_sujeto_en_un_temporal             CAE
+   B_abre_el_REPORTE.md_vivo                      CAE
+   B_hace_las_dos_cosas_y_no_declara              CAE
+   B_hace_las_dos_y_DECLARA                       CAE
+   B_esta_en_CASOS_DECLARADOS                     CAE
+   B_solo_lo_NOMBRA_en_el_docstring               CAE
+   C_la_guarda_caza_DOS                           CAE
+   C_la_exenta_no_se_cuenta                       CAE
+   C_la_congelada_no_se_cuenta                    CAE
+   C_clasifica_las_CUATRO                         CAE
+   C_sin_la_exencion_caza_TRES                    CAE
+   CIFRA casos que CAEN: 18 de 18
+
+VERDE DE LA MUTACION: 18 casos, los 18 pasan y los 18 CAEN al mutarles el valor esperado. La guarda de la pareja caza una cifra de bytes sola y un sha solo, deja pasar las que traen su pareja o declaran que las dos convenciones coinciden, NO confunde un hash corto de commit con un sha de contenido y NO entra en los bloques cercados. La guarda del sujeto congelado separa CONGELADO, SUJETO VIVO, NO DECIDIBLE y CASO DECLARADO, y no acusa a un arnes por NOMBRAR un fichero vivo en su docstring.
+FIN

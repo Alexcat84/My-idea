@@ -188,6 +188,38 @@ LOOP = os.path.join(RAIZ, "scripts", "loop")
 DOCS_LOOP = os.path.join(RAIZ, "docs", "loop")
 SUJETO_FIJO = os.path.join(DOCS_LOOP, "SUJETO_FIJO_V135_2E_REPORTE_134.md")
 
+
+def corte_de_git():
+    """EL COMMIT EN QUE SE ESTA MIDIENDO, LEIDO DE GIT EN ESTA CORRIDA.
+
+    Devuelve los doce primeros caracteres del HEAD, o `(no medible)` si git no
+    responde. NO ES PURA: es la unica pieza del corte que toca git, y por eso va
+    separada de `sello_de_corte()`, que si lo es y por eso se puede tumbar en un
+    arnes sin llamar a ningun proceso."""
+    try:
+        r = subprocess.run(["git", "rev-parse", "HEAD"], cwd=RAIZ, capture_output=True)
+        h = r.stdout.decode("utf-8", errors="replace").strip()
+        return h[:12] if len(h) == 40 else "(no medible)"
+    except Exception:
+        return "(no medible)"
+
+
+def sello_de_corte(denominador, head):
+    """LA CIFRA DE LA NOMINA, SIEMPRE CON SU CORTE PEGADO. PURA: recibe el
+    denominador y el head, y devuelve el texto que se imprime.
+
+    POR QUE EXISTE, Y EL MOTIVO ESTA MEDIDO (vuelta 179, TAREA 1.d; adjudicacion
+    7.2 del acta del auditor de la vuelta 178, por `banco 9.21`). La 178 publico
+    `15 de 92` **siendo verdad cuando lo midio**, y al cerrar esa misma vuelta el
+    denominador era 98, porque LA NOMINA CRECE DENTRO DE LA PROPIA VUELTA que la
+    esta contando. Una cifra de la nomina sin corte no se puede cotejar con
+    nada: no se sabe contra que denominador se midio.
+
+    CABLEADO DONDE SE GENERA LA CIFRA, NO EN UNA FRASE, que es la letra exacta
+    del encargo. Quien imprima un denominador de la nomina llama a esto y no
+    teclea el numero suelto."""
+    return "%d (corte: HEAD %s, nomina contada en esta corrida)" % (denominador, head)
+
 # Las CUATRO. La primera fabrica su propio reporte y nunca estuvo anclada a
 # REPORTE.md, por eso no admite --sujeto y no entra en la prueba del ancla.
 VIEJAS = [
@@ -678,6 +710,35 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 97 A 98.
     ("vuelta178_tarea4_mutacion_consumidas.py", False),
+    # ------------------------------------------------------------- VUELTA 179
+    # LOS DOS QUE LA VARA ARREGLADA DE LA 178 DESTAPO, Y ENTRAN AQUI PORQUE LA
+    # REGLA DE ESTE MISMO FICHERO LO MANDA DESDE LA VUELTA 148 y porque la
+    # nomina NO SE PODA (`AUDITOR.md` 6.1). Los dos existen en disco, los dos
+    # son del censo, ninguno es anterior a la vara, y `arneses_que_faltan()` los
+    # nombra desde que la 178 le quito la ceguera de los hermanos. Entran ANTES
+    # de la 181 para que el rojo que la 178 anuncio no llegue a existir.
+    ("vuelta150_2d_simular_op_c_05.py", False),
+    ("vuelta160_tarea3b_caso_positivo.py", False),
+    # VUELTA 179, TAREA 1.b. EL CASO POSITIVO DE LA GUARDA DE LA CITA DE ARNES,
+    # que es la operacion de codigo de la escalada de `AUDITOR.md` 1.2. Prueba
+    # `citas_de_arnes_que_no_calzan()`, `emparejar_citas()` y
+    # `cifra_propia_del_arnes()`, todas PURAS y con un lector fabricado: NADA
+    # SALE DEL REPO en ningun caso. Su caso que manda es el del encargo, 16
+    # contra 18 en ROJO y 18 contra 18 en VERDE, y su primera corrida sobre el
+    # sujeto real tumbo un defecto propio: la guarda inventaba un rojo en la
+    # linea 189 de `REPORTE_V178.md` porque solo veia la palabra `casos`.
+    ("vuelta179_tarea1b_mutacion_citas.py", False),
+    # VUELTA 179, TAREA 3. LOS TRIANGULOS PARTIDOS POR SU FUENTE, sobre un
+    # REGISTRO FABRICADO: ni `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` ni
+    # `docs/plan/OP_L_03_TRIANGULOS.jsonl` se leen para decidir ningun caso.
+    ("vuelta179_tarea3_mutacion_triangulos.py", False),
+    # VUELTA 179, TAREA 1.d. EL CORTE DEL DENOMINADOR, cableado donde se genera
+    # la cifra y no en una frase (adjudicacion 7.2 del acta 178, por `banco
+    # 9.21`). `sello_de_corte()` es PURA y recibe el head, para que este arnes
+    # pueda tumbarla sin llamar a git.
+    #
+    # LA NOMINA CRECE DE 98 A 103.
+    ("vuelta179_tarea1d_mutacion_corte.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -1550,7 +1611,7 @@ def informe_del_sujeto_congelado():
     print("|---|---|")
     for v in ("CONGELADO", "CASO DECLARADO", "SUJETO VIVO", "NO DECIDIBLE"):
         print("| %s | %d |" % (v, cuenta.get(v, 0)))
-    print("| **total** | **%d** |" % len(filas))
+    print("| **total** | **%s** |" % sello_de_corte(len(filas), corte_de_git()))
     print("")
 
     malas = guarda_del_sujeto_congelado()
@@ -1564,15 +1625,15 @@ def informe_del_sujeto_congelado():
     print("")
 
     if malas:
-        print("ROJO DE LA GUARDA DEL SUJETO CONGELADO: %d entrada(s) de %d no"
-              % (len(malas), len(filas)))
+        print("ROJO DE LA GUARDA DEL SUJETO CONGELADO: %d entrada(s) de %s no"
+              % (len(malas), sello_de_corte(len(filas), corte_de_git())))
         print("demuestran tener sujeto congelado. La regla existe desde la vuelta")
         print("145 y esta es la primera vez que se mide, asi que este rojo NO es una")
         print("regresion: es el estado que la frase tapaba.")
         print("FIN")
         return 1
-    print("VERDE DE LA GUARDA DEL SUJETO CONGELADO: las %d entradas de la nomina"
-          % len(filas))
+    print("VERDE DE LA GUARDA DEL SUJETO CONGELADO: las %s entradas de la nomina"
+          % sello_de_corte(len(filas), corte_de_git()))
     print("demuestran sujeto congelado o son caso declarado.")
     print("FIN")
     return 0
@@ -1636,13 +1697,15 @@ def main():
     invisibles_al_abrir = nomina_invisible_al_censo()
     print("")
     print("  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)")
-    print("  CIFRA entradas en la nomina: %d" % len(VIEJAS))
+    print("  CIFRA entradas en la nomina: %s"
+          % sello_de_corte(len(VIEJAS), corte_de_git()))
     print("  CIFRA arneses en scripts/loop/ que el censo reconoce: %d"
           % len(arneses_del_directorio()))
     print("  EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros")
     print("  `vuelta<N>...<familia>...py` de scripts/loop/, con familia en %s."
           % ", ".join(FAMILIAS_DE_ARNES))
-    print("  CIFRA entradas de la nomina que el censo NO VE: %d" % len(invisibles_al_abrir))
+    print("  CIFRA entradas de la nomina que el censo NO VE: %d, de %s"
+          % (len(invisibles_al_abrir), sello_de_corte(len(VIEJAS), corte_de_git())))
     for n in invisibles_al_abrir:
         print("      INVISIBLE AL CENSO: %s" % n)
     print("  CIFRA ultima vuelta representada en la nomina: %s (INFORMATIVA desde la"
@@ -1678,7 +1741,8 @@ def main():
         print("  BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo")
         print("  DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba")
         print("  corre ENTERA en este tramo y sigue encendiendo el rojo.")
-        print("  CIFRA nomina entera: %d" % len(VIEJAS))
+        print("  CIFRA nomina entera: %s"
+              % sello_de_corte(len(VIEJAS), corte_de_git()))
         print("  CIFRA tamano de tramo: %d" % a.tamano_tramo)
         print("  CIFRA tramos del reparto (computada, no tecleada): %d" % len(tramos))
         print("  CIFRA TRAMO QUE SE CORRE: %d de %d" % (a.tramo, len(tramos)))
@@ -1858,7 +1922,8 @@ def main():
     for n in faltan_al_cierre:
         print("      FUERA DE LA NOMINA: %s" % n)
     print("  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): "
-          "%d" % len(invisibles_al_cierre))
+          "%d, de %s"
+          % (len(invisibles_al_cierre), sello_de_corte(len(VIEJAS), corte_de_git())))
     for n in invisibles_al_cierre:
         print("      INVISIBLE AL CENSO: %s" % n)
 

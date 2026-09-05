@@ -51,6 +51,29 @@ instrumento citado, y una cita que se retoca deja de ser una cita. Los sha solo
 se buscan en lineas que digan `sha`, para no confundir un hash de commit (que es
 identidad y no contenido) con el sha de un fichero.
 
+LA SEXTA COMPROBACION, Y ES LA OPERACION DE CODIGO DE LA ESCALADA (vuelta 179,
+TAREA 1.b). `AUDITOR.md` 1.2 obliga a encargar la extension del tallador a las
+fases mecanicas cuando la racha de caidas de reporte llega a dos, y llego (acta
+178, seccion 6). El alcance lo autorizo el fundador el 29 ago 2026
+(`paradas/2026-08-29-racha-y-escalada-omitida-DECISION.md`), literal: *"toda
+tabla y toda cifra del reporte en fases mecanicas se genera contando su fichero
+de salida"*. La cabecera se talla desde la vuelta 56 y las tablas desde la 76; LO
+QUE FALTABA ERA LA PROSA QUE CITA UN FICHERO, que es por donde entraron las dos
+ultimas caidas.
+
+EL EJEMPLAR, MEDIDO Y NO SUPUESTO: la linea 349 de
+`docs/loop/reportes/REPORTE_V178.md` publica *"16 casos, los 16 pasan y los 16
+CAEN"* citando `docs/loop/SALIDA_V178_T1E_MUTACION.txt`, y ese fichero, contado,
+dice `CIFRA casos: 18 | pasan: 18 | fallan: 0`. La frase empieza en la linea 348
+y termina en la 352, y por eso la unidad que se juzga es EL PARRAFO y no la
+linea.
+
+LA CONDUCTA, en `citas_de_arnes_que_no_calzan()`, que es PURA y recibe un lector:
+toda frase que publique una cifra de casos Y nombre un `SALIDA_V*.txt` se cuenta
+contra ese fichero, y CAE EN ROJO nombrando la linea, la cifra publicada y la del
+fichero si no calzan, si el fichero no existe o si mide cero bytes. Los bloques
+cercados quedan fuera, por el mismo motivo que la guarda de la pareja.
+
 Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE LAS CUATRO PIEZAS:
 
   (1) EL VEREDICTO ESCRITO      . el "SIN ESCRIBIR TODAVIA" ya no esta y hay un
@@ -148,6 +171,29 @@ PATRON_SHA = re.compile(r"\b[0-9a-f]{12,64}\b")
 MARCAS_CONVENCION = ("disco", "LF", "normalizado", "cat-file", "getsize")
 CERCA = "```"
 
+# LA CITA DE ARNES (vuelta 179, TAREA 1.b; operacion de codigo de la escalada de
+# AUDITOR.md 1.2, con el alcance que el fundador autorizo el 29 ago 2026). Se
+# caza la prosa que publica una cifra de casos Y nombra el fichero de salida de
+# donde deberia salir. La ventana esta en caracteres y no en lineas porque el
+# markdown parte las frases donde le cabe el ancho: la frase de la caida de la
+# 178 empieza en la linea 348 y termina en la 352.
+PATRON_SALIDA_TXT = re.compile(r"SALIDA_V\d+_[A-Za-z0-9_]+\.txt")
+# DOS FORMAS DE PUBLICAR LA MISMA CIFRA, y las dos se cazan (vuelta 179, y el
+# motivo esta MEDIDO, no supuesto). La primera version de esta guarda solo veia
+# `N casos`, y sobre `REPORTE_V178.md` invento un rojo en su linea 189: ahi la
+# prosa dice *"pasa de 5 casos a 8, los 8 pasan y los 8 caen"*, la cifra que va
+# con el fichero es la 8 y la palabra `casos` solo acompana a la 5. Una guarda
+# que inventa un rojo no sirve para cazar los de verdad, que es justo lo que su
+# propio docstring dice, asi que se caza tambien `los N pasan`.
+PATRON_CASOS = re.compile(r"(?:(\d+)\s+casos\b|los\s+(\d+)\s+pasan\b)")
+PATRON_PROPIA_CASOS = re.compile(r"CIFRA casos:\s*(\d+)\s*\|\s*pasan:\s*(\d+)")
+PATRON_PROPIA_CAEN = re.compile(r"CIFRA casos que CAEN:\s*(\d+)\s+de\s+(\d+)")
+# LA VENTANA, ELEGIDA CONTANDO Y NO A OJO. Las siete parejas reales de
+# `REPORTE_V178.md` estan a 32, 34, 36, 45, 51, 51 y 54 caracteres; 120 deja
+# holgura de mas del doble sobre la mayor y sigue siendo mucho menos que un
+# parrafo, que es lo que evita emparejar un fichero con la cifra de otro.
+VENTANA_CITA = 120
+
 
 def sha(t):
     return hashlib.sha256(t.replace(chr(13) + NL, NL).encode("utf-8")).hexdigest()
@@ -159,6 +205,20 @@ def leer(ruta):
 
 def rel(ruta):
     return os.path.relpath(ruta, RAIZ).replace(os.sep, "/")
+
+
+def lector_de_docs_loop(nombre):
+    """EL LECTOR DE VERDAD que `citas_de_arnes_que_no_calzan()` usa cuando la
+    llama `main()`. Devuelve el texto del fichero, la cadena vacia si mide cero
+    bytes, o None si no existe. NO ES PURO a proposito: es la unica pieza de
+    esta guarda que toca el disco, y por eso va separada de la funcion que
+    juzga, que si lo es y por eso se puede tumbar en un arnes."""
+    ruta = os.path.join(RAIZ, "docs", "loop", nombre)
+    if not os.path.exists(ruta):
+        return None
+    if os.path.getsize(ruta) == 0:
+        return ""
+    return leer(ruta)
 
 
 def vuelta_de_fichero(nombre):
@@ -210,6 +270,184 @@ def hueco_declarado_que_falta(seccion9, vuelta):
         motivos.append("el hueco no trae atribucion de quien si la corrio ni "
                        "declaracion de que no la corrio nadie")
     return motivos
+
+
+def parrafos_fuera_de_cerca(texto):
+    """LOS PARRAFOS DEL REPORTE QUE NO SON CITA, con la linea en que empieza
+    cada uno y el mapa de sus saltos.
+
+    Devuelve [(linea_de_inicio, texto_del_parrafo, [(numero, renglon), ...])].
+    Un parrafo es una racha de renglones no vacios; el texto va unido con un
+    espacio, porque el markdown parte las frases donde le cabe el ancho y la
+    frase es la unidad que este fichero juzga. PURA."""
+    parrafos = []
+    dentro = False
+    actual = []
+
+    def cerrar():
+        if actual:
+            parrafos.append((actual[0][0],
+                             " ".join(r for _n, r in actual),
+                             list(actual)))
+            del actual[:]
+
+    for n, linea in enumerate(texto.split(NL), 1):
+        if linea.lstrip().startswith(CERCA):
+            dentro = not dentro
+            cerrar()
+            continue
+        if dentro:
+            continue
+        if not linea.strip():
+            cerrar()
+            continue
+        actual.append((n, linea.strip()))
+    cerrar()
+    return parrafos
+
+
+def cifra_propia_del_arnes(texto_del_fichero):
+    """LA CIFRA DE CASOS QUE UN FICHERO DE SALIDA DE ARNES DICE DE SI MISMO.
+
+    Devuelve (total, forma), o (None, "") si el fichero no publica ninguna de
+    las dos formas que la casa escribe. PURA: recibe el texto.
+
+    LAS DOS FORMAS, Y DE DONDE SALE EL TOTAL EN CADA UNA:
+      . `CIFRA casos: X | pasan: Y`        -> el total es X.
+      . `CIFRA casos que CAEN: X de Y`     -> el total es Y, porque X son los
+                                              que caen y Y los que hay.
+    Se mira primero la primera, que es la que nombra el total sin rodeos."""
+    if not texto_del_fichero:
+        return None, ""
+    m = PATRON_PROPIA_CASOS.search(texto_del_fichero)
+    if m:
+        return int(m.group(1)), m.group(0).strip()
+    m = PATRON_PROPIA_CAEN.search(texto_del_fichero)
+    if m:
+        return int(m.group(2)), m.group(0).strip()
+    return None, ""
+
+
+def emparejar_citas(parrafo):
+    """QUE CIFRA DE CASOS VA CON QUE FICHERO DENTRO DE UN PARRAFO.
+
+    Devuelve [(publicada, ruta, distancia_en_caracteres)]. PURA.
+
+    LA REGLA, ESCRITA AQUI PARA QUE NO HAYA QUE DEDUCIRLA DE LA SALIDA, y es la
+    que el encargo pide ("en la misma frase o en la misma linea") sin depender
+    de partir frases, que en markdown no se puede hacer sin equivocarse: CADA
+    FICHERO SE EMPAREJA CON LA CIFRA DE CASOS QUE TIENE MAS CERCA EN SU MISMO
+    PARRAFO, y cada cifra se gasta una sola vez. Se recorren todas las parejas
+    posibles de menor a mayor distancia y se van tomando las que no pisan a
+    ninguna ya tomada.
+
+    POR QUE ASI Y NO POR PARRAFO ENTERO, y el ejemplar esta medido en
+    `docs/loop/reportes/REPORTE_V178.md`: sus lineas 239 y 241 viven en el MISMO
+    parrafo, publican DOS cifras (20 y 28) y nombran UN SOLO fichero, que es el
+    de la de 28. Emparejar por parrafo acusaria a la de 20 de no calzar con un
+    fichero que no es el suyo, y una guarda que inventa un rojo no sirve para
+    cazar los de verdad.
+
+    Y LA VENTANA: si la mas cercana esta a mas de VENTANA_CITA caracteres, no se
+    empareja. Un fichero y una cifra separados por medio parrafo no estan en la
+    misma frase, y este fichero prefiere callarse a acusar."""
+    cifras = [(m.start(), int(m.group(1) or m.group(2)))
+              for m in PATRON_CASOS.finditer(parrafo)]
+    ficheros = [(m.start(), m.group(0)) for m in PATRON_SALIDA_TXT.finditer(parrafo)]
+    if not cifras or not ficheros:
+        return []
+    posibles = []
+    for pf, ruta in ficheros:
+        for pc, valor in cifras:
+            posibles.append((abs(pf - pc), pf, pc, ruta, valor))
+    posibles.sort()
+    usados_f, usados_c, salida = set(), set(), []
+    for dist, pf, pc, ruta, valor in posibles:
+        if pf in usados_f or pc in usados_c or dist > VENTANA_CITA:
+            continue
+        usados_f.add(pf)
+        usados_c.add(pc)
+        salida.append((valor, ruta, dist))
+    return salida
+
+
+def citas_de_arnes_que_no_calzan(texto, leer_fichero):
+    """LA PROSA QUE PUBLICA UNA CIFRA DE CASOS Y NOMBRA EL FICHERO DE DONDE
+    DEBERIA SALIR, COTEJADA CONTRA ESE FICHERO.
+
+    Devuelve [(linea, ruta, publicada, propia, motivo)], VACIA si todas las
+    citas calzan. PURA A PROPOSITO, como sus hermanas de este fichero: recibe el
+    texto del reporte y UN LECTOR, `leer_fichero(nombre) -> texto o None`, para
+    que su caso positivo por mutacion pueda tumbarla sin tocar el repo ni leer
+    nada de disco. El lector devuelve None si el fichero no existe y la cadena
+    vacia si mide cero bytes.
+
+    POR QUE NACE, Y NO ES UNA IDEA NUEVA SINO UNA ORDEN PENDIENTE. `AUDITOR.md`
+    1.2 obliga a encargar la extension del tallador a las fases mecanicas cuando
+    la racha de caidas de reporte llega a dos, y llego (acta 178, seccion 6). El
+    alcance lo autorizo el fundador el 29 ago 2026
+    (`paradas/2026-08-29-racha-y-escalada-omitida-DECISION.md`): *"toda tabla y
+    toda cifra del reporte en fases mecanicas se genera contando su fichero de
+    salida"*. La cabecera y las tablas ya se tallan; LO QUE FALTABA ERA LA PROSA
+    QUE CITA UN FICHERO, que es por donde entraron las dos ultimas caidas.
+
+    EL EJEMPLAR QUE LA MOTIVA, MEDIDO Y NO SUPUESTO: la linea 349 de
+    `docs/loop/reportes/REPORTE_V178.md` publica *"16 casos, los 16 pasan y los
+    16 CAEN"* citando `docs/loop/SALIDA_V178_T1E_MUTACION.txt`, y ese fichero,
+    contado, dice `CIFRA casos: 18 | pasan: 18 | fallan: 0`.
+
+    LOS TRES MOTIVOS DE ROJO, y son los del encargo:
+      (1) LA CIFRA NO CALZA con la que el fichero publica de si mismo;
+      (2) EL FICHERO CITADO NO EXISTE;
+      (3) EL FICHERO CITADO MIDE CERO BYTES.
+    Los dos ultimos por la letra del 5 sep 2026 de `EJECUTOR.md` 1, LA RUTA QUE
+    PROMETE PRUEBA ES CIFRA: una ruta publicada como evidencia cuenta como cifra
+    publicada en su sede.
+
+    LO QUE NO ES ROJO, Y SE DICE EN VEZ DE CALLARLO: un fichero que existe, no
+    esta vacio y NO publica ninguna de las dos formas de cifra propia. Ahi no
+    hay nada que no calce, y fabricar un rojo sobre lo que no se puede cotejar
+    seria lo mismo que la casa condena en el otro sentido. Ese caso sale con
+    motivo SIN COTEJO y el que llama decide; `main()` lo imprime y NO lo suma a
+    los rojos.
+
+    QUEDA FUERA lo cercado con tres comillas invertidas, por el mismo motivo que
+    la guarda de la pareja: ahi va pegada la salida cruda del instrumento, que
+    es una CITA, y una cita que se retoca deja de ser una cita."""
+    fallos = []
+    for linea0, parrafo, renglones in parrafos_fuera_de_cerca(texto):
+        for publicada, ruta, _dist in emparejar_citas(parrafo):
+            # LA LINEA QUE SE NOMBRA es aquella en que aparece la ruta citada,
+            # buscada renglon a renglon; si no se encuentra, la del parrafo.
+            n = linea0
+            for num, renglon in renglones:
+                if ruta in renglon:
+                    n = num
+                    break
+            contenido = leer_fichero(ruta)
+            if contenido is None:
+                fallos.append((n, ruta, publicada, None,
+                               "EL FICHERO CITADO NO EXISTE, y una ruta publicada "
+                               "como prueba es una cifra publicada"))
+                continue
+            if not contenido.strip():
+                fallos.append((n, ruta, publicada, None,
+                               "EL FICHERO CITADO MIDE CERO BYTES, y una ruta que "
+                               "promete prueba y no la trae es caida de cifra"))
+                continue
+            propia, forma = cifra_propia_del_arnes(contenido)
+            if propia is None:
+                fallos.append((n, ruta, publicada, None,
+                               "SIN COTEJO: el fichero no publica ninguna de las dos "
+                               "formas de cifra propia, y no se fabrica un rojo sobre "
+                               "lo que no se puede cotejar"))
+                continue
+            if propia != publicada:
+                fallos.append((n, ruta, publicada, propia,
+                               "LA CIFRA PUBLICADA NO ES LA DEL FICHERO: el reporte "
+                               "dice %d y su propio fichero, contado, dice %d (%s)"
+                               % (publicada, propia, forma)))
+    return fallos
 
 
 def cifras_sin_pareja(texto):
@@ -468,11 +706,14 @@ def main():
     print("   CIFRA piezas que faltan: %d" % len(faltan))
     extra = 0
     huerfanas = cifras_sin_pareja(de_nuevo)
+    citas = citas_de_arnes_que_no_calzan(de_nuevo, lector_de_docs_loop)
+    citas_rojas = [c for c in citas if not c[4].startswith("SIN COTEJO")]
     for etiqueta, cond in (
             ("el cuerpo del cierre esta byte a byte", cuerpo.rstrip(NL) in de_nuevo),
             ("cero guiones largos y cero guiones medios",
              chr(8212) not in de_nuevo and chr(8211) not in de_nuevo),
-            ("toda cifra de bytes y todo sha con su pareja", not huerfanas)):
+            ("toda cifra de bytes y todo sha con su pareja", not huerfanas),
+            ("toda cita de arnes calza con su fichero", not citas_rojas)):
         print("   %-34s %s" % (etiqueta, "SI" if cond else "NO"))
         if not cond:
             extra += 1
@@ -481,6 +722,14 @@ def main():
         for n, especie, muestra, linea in huerfanas:
             print("      linea %-5d %-5s %-20s | %s" % (n, especie, muestra, linea))
     print("   CIFRA cifras publicadas sin su pareja: %d" % len(huerfanas))
+    if citas:
+        print("   LAS CITAS DE ARNES, UNA A UNA (vuelta 179, TAREA 1.b):")
+        for n, ruta, publicada, propia, motivo in citas:
+            print("      linea %-5d %-38s publicada %s | del fichero %s"
+                  % (n, ruta, publicada, propia if propia is not None else "(no medible)"))
+            print("         %s" % motivo)
+    print("   CIFRA citas de arnes cotejadas que NO calzan: %d" % len(citas_rojas))
+    print("   CIFRA citas de arnes SIN COTEJO posible: %d" % (len(citas) - len(citas_rojas)))
     print("")
     if faltan or extra:
         print("ROJO: al reporte de la vuelta %d le faltan %d de sus cuatro piezas."
