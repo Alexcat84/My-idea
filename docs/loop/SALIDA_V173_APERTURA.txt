@@ -1,0 +1,124 @@
+SELLO DE APERTURA DE LA VUELTA 173, escrito ANTES de la primera operacion
+instrumento: scripts/loop/vuelta173_apertura.py
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+0c287793670b8ee52558c705d3cf05dae194aa42
+0c287793670b8ee52558c705d3cf05dae194aa42	2026-09-05 03:02:03 -0400	ACTA DEL AUDITOR, VUELTA 172: CUATRO TAREAS SIN UNA SOLA CIFRA FALSA Y LA CIEGA 8 DE 8, PERO EL CIERRE MUERE POR TERCERA VEZ Y LA CAUSA ES QUE EL REMEDIO QUEDO DETRAS DEL OBSTACULO
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. git status --porcelain ENTERO ===
+ M dataset/metadata/master_graph.json
+?? docs/loop/SALIDA_V173_APERTURA_CONSOLA.txt
+?? node_modules/
+?? scripts/loop/vuelta173_apertura.py
+CIFRA lineas de status: 4
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA ===
+dataset/metadata/master_graph.json -> 8375817 bytes
+docs/loop/REPORTE.md -> 31828 bytes
+docs/loop/ACTA_AUDITOR.md -> 3944591 bytes
+docs/loop/SALIDA_V172_BATERIA.txt -> 0 bytes
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 2446 bytes
+docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt -> NO EXISTE
+scripts/loop/_v172_cierre_texto.md -> 12042 bytes
+scripts/loop/cerrar_reporte.py -> 12765 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> 70829 bytes
+scripts/loop/serie_de_registros.py -> 6595 bytes
+scripts/loop/vuelta150_3_relectura_expediente.py -> 45369 bytes
+scripts/loop/vuelta172_tarea1b_confirmar_r41.py -> NO EXISTE
+docs/plan/LECTURAS_DIRIGIDAS.md -> 214916 bytes
+docs/PENDIENTES.md -> 826158 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+dataset/metadata/master_graph.json -> diff de 0 bytes
+   dataset/metadata/master_graph.json -> diff ignorando CR de fin de linea: 0 bytes
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+docs/loop/SALIDA_V173_APERTURA_CONSOLA.txt -> 0 bytes
+node_modules/.vite/vitest/da39a3ee5e6b4b0d3255bfef95601890afd80709/results.json -> 12460 bytes
+scripts/loop/vuelta173_apertura.py -> 10665 bytes
+CIFRA ficheros no seguidos: 3
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 46081e9f473c665f05eaab755ad46065a28d08a6	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 911e5ba0571a730e88940b7c01634c7dc2e99622	docs/loop/ACTA_AUDITOR.md
+docs/loop/SALIDA_V172_BATERIA.txt -> 100644 blob e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	docs/loop/SALIDA_V172_BATERIA.txt
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 100644 blob 88d0cee075e8ba2a91a7e2c3aa77db5f593baefb	docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt
+docs/loop/SALIDA_V172_T5_CERRAR_REPORTE.txt -> NO ESTA EN EL ARBOL DE HEAD
+scripts/loop/_v172_cierre_texto.md -> 100644 blob 8984b2f2f2c31aa5477fb1c7f67b438e480778af	scripts/loop/_v172_cierre_texto.md
+scripts/loop/cerrar_reporte.py -> 100644 blob 5d8121e8a061fea801829191c0a8b6f45ff92130	scripts/loop/cerrar_reporte.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 4cec30a9ed6c3f83e1b708e186e04721d623d750	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta150_3_relectura_expediente.py -> 100644 blob 70c21ed9e4c0e2fcf84be419284418084c1b518f	scripts/loop/vuelta150_3_relectura_expediente.py
+scripts/loop/vuelta172_tarea1b_confirmar_r41.py -> NO ESTA EN EL ARBOL DE HEAD
+docs/plan/LECTURAS_DIRIGIDAS.md -> 100644 blob 97e42644132e628f97dfc4661fd9ee6a616e87b7	docs/plan/LECTURAS_DIRIGIDAS.md
+docs/PENDIENTES.md -> 100644 blob 0037e267503569fad2620d3be2725706cd605745	docs/PENDIENTES.md
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+primera linea: # REPORTE DE LA VUELTA 172 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 511
+bytes: 31828
+   contiene 'SIN ESCRIBIR TODAVIA'             -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'    -> SI
+   contiene '\n## 3.'                          -> NO
+   contiene '\n## 4.'                          -> NO
+   contiene '\n## 5.'                          -> NO
+   contiene '\n## 6.'                          -> NO
+   contiene '\n## 7.'                          -> NO
+   contiene '\n## 8.'                          -> NO
+   contiene '\n## 9.'                          -> NO
+
+=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===
+(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)
+los doce ultimos commits:
+   0c287793	ACTA DEL AUDITOR, VUELTA 172: CUATRO TAREAS SIN UNA SOLA CIFRA FALSA Y LA CIEGA 8 DE 8, PERO EL CIERRE MUERE POR TERCERA VEZ Y LA CAUSA ES QUE EL REMEDIO QUEDO DETRAS DEL OBSTACULO
+   24dda21e	TAREA 5 CERRADA: NACE cerrar_reporte.py, DE NOMBRE ESTABLE, Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE LAS CUATRO PIEZAS
+   680f74ab	TAREA 4.a Y 4.b: EL CASO F REFUNDADO SOBRE SUJETO CONGELADO Y LOS TRES ARNESES DE LA 171 DENTRO DE LA NOMINA. LA 4.c VA SOLA AL CIERRE
+   24bd395b	TAREA 3 CERRADA: LAS 16 LECTURAS DE LA SEGUNDA TANDA GANAN LD-139 A LD-154 POR ADICION PURA, Y LAS DOS VARAS CONVERGEN EN LD-154
+   96940490	TAREA 2 CERRADA: EL CONTADOR DEJA DE CONTAR SU PROPIO ARCHIVO, EL R.40 QUEDA CORREGIDO Y LAS DOS VARAS SE PUBLICAN CON FICHERO Y LINEA
+   45fb75f5	TAREA 1 CERRADA: EL REPORTE DE LA 171 CERRADO Y ARCHIVADO, EL ACTA 171 AL R.41 CON GLOSAS QUE NO AFIRMAN EN PASADO, Y EL ESQUELETO DE LA 172
+   20b11348	TAREA 1.b: EL ACTA 171 ENTERA QUEDA EN EL R.41, Y SUS GLOSAS NO AFIRMAN EN PASADO
+   99d54005	TAREA 1.a: EL REPORTE DE LA VUELTA 171 QUEDA CERRADO, Y ESTE COMMIT SI TOCA REPORTE.md
+   ad3cea43	APERTURA DE LA VUELTA 172, EL BLOQUE ENTERO Y MEDIDO ANTES DE LA PRIMERA OPERACION
+   002e0517	SUCIEDAD DE LA APERTURA DE LA VUELTA 172: EL FICHERO DE BATERIA DEL AUDITOR QUE QUEDO SUELTO, COMMITEADO TAL CUAL Y MEDIDO EN CERO BYTES
+   0c415430	ACTA DEL AUDITOR, VUELTA 171: LAS CUATRO TAREAS REPRODUCEN AL DIGITO Y LA PARADA NO ES PARADA, PERO EL REPORTE VUELVE A QUEDARSE SIN CERRAR Y ESTA VEZ EL TRAMO YA ESTABA EN RELECTURA AL DOBLE
+   cae2731d	TAREAS 4 Y 5 CERRADAS: LAS DOS DEUDAS PAGADAS POR ADICION, Y LAS DOS BUSQUEDAS QUE NADIE HABIA CORRIDO DICEN QUE NO HAY VOCABULARIO Y QUE NINGUNA OPERACION RECOGE LOS 8 PARES
+ultimo commit que TOCA docs/loop/REPORTE.md: 24dda21e
+   su asunto: TAREA 5 CERRADA: NACE cerrar_reporte.py, DE NOMBRE ESTABLE, Y CAE EN ROJO SI AL TERMINAR FALTA CUALQUIERA DE L
+
+=== H.3 LA BATERIA DE LA 172 Y LOS CUATRO ARNESES, MEDIDOS ===
+docs/loop/SALIDA_V172_BATERIA.txt -> 0 bytes
+docs/loop/SALIDA_V172_AUDITOR_BATERIA.txt -> 0 bytes
+docs/loop/SALIDA_V172_TALLADOR_CABECERA.txt -> 2446 bytes
+vuelta172_tarea1b_mutacion_registro.py -> existe: SI | nombrado en la nomina: NO
+vuelta172_tarea2a_mutacion_exclusion.py -> existe: SI | nombrado en la nomina: NO
+vuelta172_tarea3_mutacion_numeracion.py -> existe: SI | nombrado en la nomina: NO
+vuelta172_tarea5_mutacion_cierre.py -> existe: SI | nombrado en la nomina: NO
+
+=== H.4 LA NOMINA Y LOS QUE FALTAN, POR SU PROPIA FUNCION PURA ===
+entradas de la nomina VIEJAS: 78
+ultima vuelta representada en la nomina: 171
+arneses_que_faltan(): 4
+   vuelta172_tarea1b_mutacion_registro.py
+   vuelta172_tarea2a_mutacion_exclusion.py
+   vuelta172_tarea3_mutacion_numeracion.py
+   vuelta172_tarea5_mutacion_cierre.py
+nomina_invisible_al_censo(): 0
+
+=== H.5 LA SERIE R.N, RECOMPUTADA (no tecleada) ===
+entradas de la serie: 33
+mayor: R.41
+siguiente libre: R.42
+
+=== H.6 LA PIEZA (4) DE cerrar_reporte.py, ANTES DE TOCARLA ===
+cerrar_reporte.py -> 12765 bytes
+   contiene 'HUECO DECLARADO'                        -> NO
+   contiene 'def piezas_que_faltan'                  -> SI
+   contiene 'la salida de la bateria esta vacia'     -> SI
+
+FIN DEL SELLO DE APERTURA
