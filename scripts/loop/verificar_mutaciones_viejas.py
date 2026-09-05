@@ -658,6 +658,16 @@ VIEJAS = [
     ("vuelta178_tarea1c_mutacion_ast.py", False),
     ("vuelta178_tarea1d_mutacion_puestos.py", False),
     ("vuelta178_tarea1e_mutacion_higiene.py", False),
+    # VUELTA 178, TAREA 2.e. El resolutor de `P.1` puesto por encima del backlog
+    # de OP-L-03, probado sobre un MAPA DE ALIAS FABRICADO y no sobre el vivo:
+    # contra el vivo, cualquier fusion nueva moveria sus cifras y el arnes
+    # saldria rojo sin que nada estuviera roto. Su caso que manda es el del
+    # alias en los dos sentidos, y en su PRIMERA corrida tumbo un defecto real
+    # del instrumento que probaba: contaba los pares ESCRITOS y no los
+    # RESUELTOS, y por eso contaba dos veces el mismo par.
+    #
+    # LA NOMINA CRECE DE 96 A 97.
+    ("vuelta178_tarea2_mutacion_resolutor.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

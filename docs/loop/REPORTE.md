@@ -76,7 +76,7 @@ vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE. Cinco letras: (a) LA RELECTURA AL DOBLE DEL TRAMO DE LA CAIDA de conteo del acta 177, la cuenta de la nomina y del censo, publicada ENTERA en tabla y con la resta comprobada, porque una cuenta que no cierra consigo misma se caza sola si alguien la escribe entera; (b) `arneses_que_faltan()` SE ARREGLA en la funcion y no en la llamada, con la vara del censo EXPLICITA y con su motivo, sin podar la nomina, y con el caso positivo por mutacion que hoy CAE con la funcion vieja: dos arneses de la MISMA vuelta que la ultima de la nomina, uno dentro y otro fuera, y la funcion tiene que VER al de fuera; (c) EL CUARTO VEREDICTO de `cotejar_clon_declarado.py`, EL ARBOL DE SINTAXIS, sin tocar la clasificacion vieja, en rojo si un fichero no parsea, y con el caso que lo decide todo: dos ficheros que solo difieren en una coma final dan maquina DIFIERE y AST IDENTICO; (d) EL `--puestos` Y EL `--excluir` DEL AISLADOR DE CIEGA, componibles con los selectores que ya tiene, en rojo si un puesto pedido no existe, con la guarda de fuga intacta, y borrando despues la muleta `_auditor_v178_ciega.py` por `P.16`; (e) LAS DOS DE HIGIENE: que `cerrar_reporte.py` CAIGA EN ROJO si el reporte publica una cifra de bytes o un sha sin su pareja, y LA GUARDA DEL SUJETO CONGELADO, que lleva desde la vuelta 145 siendo una frase y no un instrumento | **CERRADA. Las cinco letras entregadas, las cuatro que tocan codigo con arnes propio, y los cuatro arneses DENTRO de la nomina en su misma vuelta** | `SALIDA_V178_T1A_CUENTA.txt`, `_T1B_MUTACION.txt`, `_T1B_NOMINA.txt`, `_T1B_LOS_DOS_DESTAPADOS.txt`, `_T1C_MUTACION.txt`, `_T1C_ARNES_VIEJO.txt`, `_T1C_COTEJO_176.txt`, `_T1D_MUTACION.txt`, `_T1D_DEMO.txt`, `_T1D_ROJO_DEMO.txt`, `_T1E_MUTACION.txt`, `_T1E_CONGELADO.txt` |
-| **TAREA 2** | `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`, que sostiene una cifra adjudicada en la vuelta 15; se escribe el filtro DELANTE, en `scripts/loop/backlog_l03_resuelto.py`, de nombre estable y sin numero de vuelta, que corre el instrumento viejo y le pasa el resolutor de `P.1` por encima publicando LAS DOS COLUMNAS AL LADO. Por acto y en total: miembros escritos, vivos por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS CAMINOS CALZAN, pares que el instrumento da, pares reales y pares disueltos. CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo. Con su caso positivo por mutacion sobre un mapa de alias FABRICADO. Y publica la cifra que la 177 no pudo publicar: cuanto sobra en los 34 actos que no miro. EL ESTADO DE LA FICHA NO SE TOCA | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`, que sostiene una cifra adjudicada en la vuelta 15; se escribe el filtro DELANTE, en `scripts/loop/backlog_l03_resuelto.py`, de nombre estable y sin numero de vuelta, que corre el instrumento viejo y le pasa el resolutor de `P.1` por encima publicando LAS DOS COLUMNAS AL LADO. Por acto y en total: miembros escritos, vivos por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS CAMINOS CALZAN, pares que el instrumento da, pares reales y pares disueltos. CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo. Con su caso positivo por mutacion sobre un mapa de alias FABRICADO. Y publica la cifra que la 177 no pudo publicar: cuanto sobra en los 34 actos que no miro. EL ESTADO DE LA FICHA NO SE TOCA | **CERRADA. El backlog re-medido entero: de 73 pares del instrumento quedan 18 reales, y en los 34 actos sin leer quedan 10** | `SALIDA_V178_T2_BACKLOG_RESUELTO.txt`, `SALIDA_V178_T2_MUTACION.txt` |
 | **TAREA 3** | LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la 177 queda adjudicada como COSA JUZGADA en el acta 177 punto 7.9: las dos reglas que lo deciden ya estan escritas y RESULTAN COMPATIBLES. La `9.6.1` del banco dice que un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE; la correccion declarada del 13 ago 2026 sobre los puestos 530 y 863 dice que la madre y su pieza de arenas se separan. La condicion que las concilia es la que la propia `9.6.1` escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA, SI ES EL PASO DICHO OTRA VEZ, REPITE. Por cada uno de los cinco se anota EN EL JSONL cual de las dos reglas gobierna cada lado y CON QUE PRUEBA. CERO VEREDICTOS MOVIDOS | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA. `vuelta150_3_relectura_expediente.py` imprime SEIS fichas en LISTA sin prueba y dos de las seis estan CONSUMIDAS por otras, asi que el trabajo real son CUATRO. La vara es del fundador y su veredicto NO SE TOCA: lo que se anade es una COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de cada una si esta CONSUMIDA por otra ficha y por cual. La cuenta final publica LAS DOS, nunca solo el cuatro. Con su caso positivo por mutacion sobre un expediente fabricado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4` de la 174; y la medicion del grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se toca aqui, y las cuatro se nombran para que no se caigan | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -342,5 +342,123 @@ sha solo, deja pasar las emparejadas, no se equivoca con un hash corto ni entra 
 los bloques cercados; la del sujeto congelado separa los cuatro estados **y no acusa
 a un arnes por NOMBRAR un fichero vivo en su docstring**, que es el falso rojo que
 la primera version si tenia.
+
+### TAREA 2. `OP-L-03`: EL BACKLOG SE RE-MIDE ENTERO ANTES DE LEER UN ACTO MAS
+
+**LO QUE SALE, DICHO PRIMERO PORQUE CAMBIA EL TAMANO DE LO QUE QUEDA: DE LOS 73
+PARES QUE EL INSTRUMENTO DA, SOLO 18 SON REALES. SOBRAN 55, QUE ES EL 75,3 POR
+CIENTO.** Y de los **34 actos que la 177 no miro, quedan 10 pares reales**, no 44.
+
+#### 2.a. EL INSTRUMENTO VIEJO NO SE TOCA, Y ESO CONTESTA MI `P.2`
+
+`scripts/loop/backlog_l03_vuelta14.py` **no se modifico en esta vuelta**, y esta
+comprobado y no afirmado: `git diff --stat` sobre esa ruta sale **vacio**. Es el
+instrumento que la nota de la ficha cita y el que sostiene la cifra ADJUDICADA EN
+LA VUELTA 15. **Cambiarlo cambiaria esa cifra por la puerta de atras.**
+
+#### 2.b. EL FILTRO VA DELANTE, EN FICHERO PROPIO Y DE NOMBRE ESTABLE
+
+Nace `scripts/loop/backlog_l03_resuelto.py`, **sin numero de vuelta**, como sus
+hermanos de nombre estable. Corre el instrumento viejo **como subproceso** y le
+pone encima el resolutor de `P.1`, el `mapa_de_alias()` de
+`scripts/loop/vuelta166_tarea2_correccion_op_l_01.py`. **PUBLICA LAS DOS COLUMNAS
+AL LADO, NUNCA UNA SOLA**, que es la forma de la correccion declarada del banco
+9.10 aplicada a un instrumento: la cifra vieja no se borra, se le pone la nueva al
+lado con su procedencia.
+
+#### 2.c. LO QUE PUBLICA, POR ACTO Y EN TOTAL
+
+**Contado de `docs/loop/SALIDA_V178_T2_BACKLOG_RESUELTO.txt` y pegado de ahi.**
+
+| cifra | valor |
+|---|---|
+| actos que el instrumento da | **40** |
+| pares POSIBLES entre los miembros escritos | **202** |
+| PARES QUE EL INSTRUMENTO DA (la cifra vieja, que NO se borra) | **73** |
+| pares DISUELTOS (los dos extremos en el mismo nodo tras resolver) | **134** |
+| pares que YA TIENEN VEREDICTO, buscados por el par RESUELTO | **47** |
+| PARES REALES (la cifra nueva, al lado de la vieja) | **18** |
+| actos SIN NINGUN PAR REAL | **29 de 40** |
+
+**Los dos caminos van SIEMPRE los dos** (`EJECUTOR.md` 9): el resolutor de `P.1`
+(761 alias sobre 3.853 ficheros de `dataset/nodos/`) y el campo `deprecado` del
+grafo (3.853 nodos, 3.169 vivos). La tabla por acto trae las dos columnas para los
+**40** actos, y esta entera en el fichero de salida.
+
+**LOS SEIS ACTOS GRANDES, que son los que la 177 leyo:**
+
+| acto | miembros | vivos por resolutor | vivos por grafo | calzan | pares del instrumento | pares reales | disueltos |
+|---|---|---|---|---|---|---|---|
+| `breakthrough_desempeno_actual` | 6 | 1 | 1 | SI | 8 | **0** | 15 |
+| `cierre_segun_complejidad_venta` | 6 | 1 | 1 | SI | 6 | **0** | 15 |
+| `cash_burn_calculation` | 5 | 5 | 5 | SI | 4 | 4 | 0 |
+| `construccion_de_leverage` | 5 | 5 | 5 | SI | 3 | 3 | 0 |
+| `encuadre_desafio_diseno` | 5 | 1 | 1 | SI | 6 | **0** | 10 |
+| `estrategia_de_innovacion_arenas` | 5 | 4 | 4 | SI | 2 | **1** | 1 |
+
+#### 2.d. EL ROJO DE LOS DOS CAMINOS, Y QUE DIO HOY
+
+**CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo.** Hoy:
+**40 actos medidos, 40 calzan, 0 no calzan.** Y el rojo **no es decorativo**: su
+arnes le da un grafo fabricado que MIENTE (un alias marcado como vivo) y la fila
+sale **NO CALZAN**, o sea que la comprobacion muerde.
+
+#### 2.e. EL CASO POSITIVO POR MUTACION, SOBRE UN MAPA FABRICADO
+
+`scripts/loop/vuelta178_tarea2_mutacion_resolutor.py`,
+`docs/loop/SALIDA_V178_T2_MUTACION.txt`. **12 casos, los 12 pasan y los 12 CAEN**
+al mutarles el esperado. **Nada sale del repo**: ni `dataset/nodos/`, ni el grafo,
+ni `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`. La mutacion que manda va en los dos
+sentidos:
+
+| el caso | pares reales |
+|---|---|
+| acto de 3 miembros CON el alias puesto (colapsan a uno) | **0**, y los 3 disueltos |
+| el MISMO acto SIN el alias | **3**, y 0 disueltos |
+
+**Si quitar el alias no cambiara la cifra, el resolutor no estaria puesto** y este
+instrumento seria un `combinations()` con adornos.
+
+**Y EL ARNES TUMBO UN DEFECTO REAL DEL INSTRUMENTO EN SU PRIMERA CORRIDA, que es
+para lo que sirve.** El caso `C`, el del colapso parcial, salio **2 donde tenia que
+salir 1**: el instrumento contaba los pares **ESCRITOS** y no los **RESUELTOS**, asi
+que cuando `b` es alias de `a`, las parejas `(a, c)` y `(b, c)` se contaban DOS
+VECES siendo la misma lectura. **Inflaba exactamente por el mecanismo que venia a
+desinflar.** Se arreglo el instrumento, no el esperado del arnes.
+
+**Y ESO MUEVE UNA CIFRA MIA DE LA 177, QUE DECLARO EN VEZ DE TAPAR** (`EJECUTOR.md`
+2 y 8). La 177 publico **9 pares reales** en los seis actos; este instrumento, que
+cuenta pares RESUELTOS distintos, dice **8**. **Las dos son verdaderas y miden
+cosas distintas**: la 177 conto parejas escritas y leyo las nueve, y una de ellas,
+en `estrategia_de_innovacion_arenas`, era **la misma pareja una vez resuelta**. La
+cifra que vale para "cuantas lecturas quedan" es la de pares resueltos distintos.
+El registro `docs/plan/OP_L_03_LECTURAS.jsonl` **no se retoca**: dice 2 en ese acto
+y esa era su medicion, y una correccion que tapa lo que corrige no se puede
+auditar.
+
+#### 2.f. LA CIFRA QUE LA 177 NO PUDO PUBLICAR: CUANTO SOBRA EN LOS 34
+
+**Los actos ya leidos NO se teclean: se cuentan del registro
+`docs/plan/OP_L_03_LECTURAS.jsonl`**, que da 6, y los 6 siguen apareciendo en la
+lista del instrumento.
+
+| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran |
+|---|---|---|---|---|---|
+| YA LEIDOS (la 177) | **6** | **29** | **8** | **41** | **21** |
+| SIN LEER | **34** | **44** | **10** | **93** | **34** |
+| **todos** | **40** | **73** | **18** | **134** | **55** |
+
+**LO QUE ESTO CAMBIA, DICHO CON SU NUMERO:** lo que queda de `OP-L-03` no son 44
+pares en 34 actos, son **10 pares reales**, repartidos en los pocos actos que
+todavia tienen mas de un nodo vivo. **De los 34 sin leer, 24 no tienen ningun par
+real**: sus miembros ya colapsaron. La 177 hizo bien en no extrapolar la cifra; hoy
+esta medida.
+
+#### 2.g. EL ESTADO DE LA FICHA NO SE TOCA
+
+`docs/plan/OPERACIONES.jsonl` **no se modifico**: `git diff --stat` sobre esa ruta
+sale **vacio**. La vara sigue siendo `scripts/loop/vuelta150_3_relectura_expediente.py`
+por decision del fundador del 4 sep 2026, y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+tampoco se toco: **cero veredictos movidos en esta tarea**.
 
 <!-- FIN ANEXO DE TAREAS -->

@@ -1,0 +1,100 @@
+==============================================================================
+EL BACKLOG DE OP-L-03, CON EL RESOLUTOR DE P.1 POR ENCIMA
+==============================================================================
+
+A) EL INSTRUMENTO VIEJO, CORRIDO Y NO CITADO DE MEMORIA
+   instrumento: scripts/loop/backlog_l03_vuelta14.py (NO SE TOCA)
+   exit del instrumento: 0
+   CIFRA actos que su LISTA DECLARADA trae: 40
+   CIFRA pares que el instrumento da, sumados de su lista: 73
+
+B) EL RESOLUTOR Y EL GRAFO, PUESTOS ANTES DE CONTAR NINGUN PAR
+   CAMINO 1, resolutor P.1: mapa_de_alias() de scripts/loop/vuelta166_tarea2_correccion_op_l_01.py
+      CIFRA ficheros de dataset/nodos/ leidos: 3853
+      CIFRA alias del mapa: 761
+   CAMINO 2, campo deprecado del grafo: dataset/metadata/master_graph.json
+      CIFRA nodos del grafo: 3853
+      CIFRA nodos VIVOS (deprecado falso): 3169
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA pares distintos tras resolver: 3009
+
+C) LA MEDICION, ACTO POR ACTO Y CON LAS DOS COLUMNAS AL LADO
+   --minimo 0, o sea 40 actos de los 40 que da el instrumento
+
+| acto (primer miembro) | miembros | vivos por resolutor | vivos por grafo | calzan | pares del instrumento | pares reales | pares disueltos |
+|---|---|---|---|---|---|---|---|
+| `breakthrough_desempeno_actual` | 6 | 1 | 1 | SI | 8 | 0 | 15 |
+| `cierre_segun_complejidad_venta` | 6 | 1 | 1 | SI | 6 | 0 | 15 |
+| `cash_burn_calculation` | 5 | 5 | 5 | SI | 4 | 4 | 0 |
+| `construccion_de_leverage` | 5 | 5 | 5 | SI | 3 | 3 | 0 |
+| `encuadre_desafio_diseno` | 5 | 1 | 1 | SI | 6 | 0 | 10 |
+| `estrategia_de_innovacion_arenas` | 5 | 4 | 4 | SI | 2 | 1 | 1 |
+| `alianzas_cross_industry` | 4 | 1 | 1 | SI | 3 | 0 | 6 |
+| `automatizacion_tareas_aburridas` | 4 | 1 | 1 | SI | 3 | 0 | 6 |
+| `colaboracion_cadena_suministro` | 4 | 4 | 4 | SI | 2 | 2 | 0 |
+| `compra_por_precio_mas_bajo_como_error` | 4 | 4 | 4 | SI | 1 | 1 | 0 |
+| `comprension_capacidades_limitaciones_ia` | 4 | 1 | 1 | SI | 3 | 0 | 6 |
+| `creacion_option_pool` | 4 | 4 | 4 | SI | 1 | 1 | 0 |
+| `disenar_tests_pass_fail` | 4 | 4 | 4 | SI | 1 | 1 | 0 |
+| `enfoque_etapa_investigacion` | 4 | 1 | 1 | SI | 1 | 0 | 6 |
+| `etnografia_aplicada_en_equipos_multidisciplinarios` | 4 | 1 | 1 | SI | 3 | 0 | 6 |
+| `fase_diseno_prototipado_modelos` | 4 | 4 | 4 | SI | 2 | 2 | 0 |
+| `advances_vs_continuations` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `analisis_causa_raiz_diagnostico` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `analisis_trafico_competitivo` | 3 | 3 | 3 | SI | 1 | 1 | 0 |
+| `atacar_mercados_establecidos_con_problema` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `atencion_focal_y_periferica` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `ciclo_de_culpa` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `comunidad_tribu_marca` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `control_mantener_ganancias` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `crowdfunding_legal_exemptions_jobs_act` | 3 | 3 | 3 | SI | 1 | 1 | 0 |
+| `customer_segments_hypothesis` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `defensas_en_profundidad` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `definir_meta_de_traccion` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `design_for_six_sigma_dfss` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `diseno_organizacional_equipos_innovacion` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `escalamiento_prematuro` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `evaluacion_tecnologias_disruptivas` | 3 | 3 | 3 | SI | 1 | 1 | 0 |
+| `evitar_sesgo_retrospectivo_hindsight` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `gestion_eco_riesgos` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `gestion_terminacion_franquiciado` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `incentivos_transparencia_ia` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `investigacion_new_view` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `metodo_valor_presente_neto` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `pivote_estrategico` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+| `reconocimiento` | 3 | 1 | 1 | SI | 1 | 0 | 3 |
+
+D) LOS DOS CAMINOS, COTEJADOS ACTO POR ACTO
+   CIFRA actos medidos: 40
+   CIFRA actos donde los dos caminos CALZAN: 40
+   CIFRA actos donde NO calzan: 0
+
+E) EL TOTAL, CON LAS DOS COLUMNAS Y SIN BORRAR LA VIEJA
+
+| cifra | valor |
+|---|---|
+| actos que el instrumento da | **40** |
+| pares POSIBLES entre los miembros escritos | **202** |
+| PARES QUE EL INSTRUMENTO DA (la cifra vieja, que no se borra) | **73** |
+| pares DISUELTOS (los dos extremos en el mismo nodo tras resolver) | **134** |
+| pares que YA TIENEN VEREDICTO buscados por el par RESUELTO | **47** |
+| PARES REALES (la cifra nueva, al lado de la vieja) | **18** |
+| actos SIN NINGUN PAR REAL | **29** |
+
+   LO QUE SOBRA, EN CRUDO: de los 73 pares que el instrumento da, quedan
+   18 reales. SOBRAN 55, que es el 75.3 por ciento.
+
+F) LO QUE SOBRA EN LOS ACTOS QUE TODAVIA NO SE HAN LEIDO
+   (los leidos NO se teclean: se cuentan del registro
+   docs/plan/OP_L_03_LECTURAS.jsonl, que es donde OP-L-03 escribe)
+   CIFRA actos que el registro dice leidos: 6
+   CIFRA de esos que el instrumento sigue dando: 6
+
+| tramo | actos | pares del instrumento | pares reales | pares disueltos | sobran |
+|---|---|---|---|---|---|
+| YA LEIDOS (la 177) | **6** | **29** | **8** | **41** | **21** |
+| SIN LEER | **34** | **44** | **10** | **93** | **34** |
+| **todos** | **40** | **73** | **18** | **134** | **55** |
+
+VERDE: los dos caminos calzan en los 40 actos medidos. El instrumento viejo da 73 pares y quedan 18 reales, con 134 disueltos y 47 ya con veredicto. LAS DOS COLUMNAS VAN LAS DOS Y LA VIEJA NO SE BORRA.
+FIN

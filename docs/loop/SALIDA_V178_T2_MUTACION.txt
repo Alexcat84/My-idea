@@ -1,0 +1,70 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL RESOLUTOR (vuelta 178, TAREA 2.e)
+==============================================================================
+
+EL MATERIAL, TODO FABRICADO Y NADA LEIDO DEL REPO:
+   acto 1:      nodo_madre, nodo_alias_uno, nodo_alias_dos
+   mapa CON alias: {'nodo_alias_uno': 'nodo_madre', 'nodo_alias_dos': 'nodo_madre'}
+   acto 2:      otra_madre, otra_alias, tercero_vivo
+   mapa parcial:   {'otra_alias': 'otra_madre'}
+
+A) CON EL ALIAS PUESTO, EL ACTO COLAPSA A UNO Y NO QUEDA NINGUN PAR REAL
+   vivos por resolutor: 1 (nodo_madre)
+   vivos por grafo:     1 (nodo_madre)
+   los dos caminos calzan: True
+   pares del instrumento: 3 | reales: 0 | disueltos: 3
+
+B) LA MUTACION QUE MANDA: SE QUITA EL ALIAS Y LOS PARES TIENEN QUE VOLVER
+   vivos por resolutor: 3
+   pares reales: 3 | disueltos: 0
+   LO QUE ESTA MUTACION PRUEBA: quitar el alias cambia la cifra de 0 a 3.
+   Si no la cambiara, el resolutor no estaria puesto y este instrumento
+   seria un combinations() con adornos.
+
+C) UN ACTO DONDE SOLO DOS DE TRES COLAPSAN, PARA QUE NO SEA TODO O NADA
+   vivos por resolutor: 2 (otra_madre, tercero_vivo)
+   pares reales: 1 | disueltos: 1
+
+D) EL VEREDICTO SE BUSCA POR EL PAR RESUELTO, QUE ES P.1 SIN EXCEPCION
+   el veredicto fabricado esta escrito con `otra_alias`, que resuelve a
+   `otra_madre`. Si se buscara por el id ESCRITO, el par saldria como real.
+   pares reales con el veredicto puesto: 0
+   pares con veredicto: 1
+
+E) EL ROJO DE LOS DOS CAMINOS MUERDE: SE LE DA UN GRAFO QUE MIENTE
+   vivos por resolutor: 1 | vivos por grafo: 2 | calzan: False
+   Si esta fila saliera SI, la comprobacion de los dos caminos seria un
+   adorno: diria que calzan pase lo que pase.
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   A_con_alias_CERO_pares_reales                  PASA   (real=0 esperado=0)
+   A_con_alias_los_TRES_disueltos                 PASA   (real=3 esperado=3)
+   A_con_alias_UN_solo_vivo                       PASA   (real=1 esperado=1)
+   A_con_alias_los_dos_caminos_calzan             PASA   (real=True esperado=True)
+   B_sin_alias_VUELVEN_los_tres_pares             PASA   (real=3 esperado=3)
+   B_sin_alias_CERO_disueltos                     PASA   (real=0 esperado=0)
+   B_sin_alias_TRES_vivos                         PASA   (real=3 esperado=3)
+   C_parcial_UN_par_real                          PASA   (real=1 esperado=1)
+   C_parcial_UN_par_disuelto                      PASA   (real=1 esperado=1)
+   D_el_veredicto_resuelto_baja_el_par_real       PASA   (real=0 esperado=0)
+   D_lo_cuenta_como_par_con_veredicto             PASA   (real=1 esperado=1)
+   E_con_el_grafo_que_miente_NO_calzan            PASA   (real=False esperado=False)
+   CIFRA casos: 12 | pasan: 12 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_con_alias_CERO_pares_reales                  CAE
+   A_con_alias_los_TRES_disueltos                 CAE
+   A_con_alias_UN_solo_vivo                       CAE
+   A_con_alias_los_dos_caminos_calzan             CAE
+   B_sin_alias_VUELVEN_los_tres_pares             CAE
+   B_sin_alias_CERO_disueltos                     CAE
+   B_sin_alias_TRES_vivos                         CAE
+   C_parcial_UN_par_real                          CAE
+   C_parcial_UN_par_disuelto                      CAE
+   D_el_veredicto_resuelto_baja_el_par_real       CAE
+   D_lo_cuenta_como_par_con_veredicto             CAE
+   E_con_el_grafo_que_miente_NO_calzan            CAE
+   CIFRA casos que CAEN: 12 de 12
+
+VERDE DE LA MUTACION: 12 casos, los 12 pasan y los 12 CAEN al mutarles el valor esperado. CON el alias el acto colapsa a uno y da CERO pares reales; QUITADO el alias los tres pares VUELVEN; un colapso parcial deja exactamente uno; el veredicto se busca por el par RESUELTO y no por el id escrito; y la comprobacion de los dos caminos MUERDE cuando el grafo contradice al resolutor.
+FIN
