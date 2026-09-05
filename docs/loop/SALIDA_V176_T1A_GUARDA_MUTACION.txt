@@ -1,0 +1,58 @@
+==============================================================================
+PRUEBA DE MUTACION DE LA GUARDA DEL COMMIT
+==============================================================================
+NO SE COMPARAN LITERALES: se fabrica un repo de git de verdad en un
+temporal, con su `dataset/` y su commit, y se corre LA MISMA funcion
+`filas_sucias()` sobre el arbol limpio, sobre el sucio y sobre el
+restaurado.
+
+  repo fabricado en un temporal, con dataset/metadata/master_graph.json dentro
+
+------------------------------------------------------------------------------
+CASO A. EL ARBOL LIMPIO. TIENE QUE DAR VERDE.
+------------------------------------------------------------------------------
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+      (ninguna fila)
+  CIFRA ficheros que `git status --porcelain -- dataset/` nombra: 0
+      (ninguno)
+  CIFRA ficheros con blob de arbol DISTINTO del de HEAD: 0
+
+  VERDE: cero filas y cero blobs divergentes. `dataset/` se puede
+  commitear sin meter ninguna mutacion en el catalogo.
+
+------------------------------------------------------------------------------
+CASO B. EL ARBOL CON LA MUTACION SIN RESTAURAR. TIENE QUE DAR ROJO.
+------------------------------------------------------------------------------
+  CIFRA filas de `git diff --numstat -- dataset/`: 1
+      FILA: +1 -1  dataset/metadata/master_graph.json
+  CIFRA ficheros que `git status --porcelain -- dataset/` nombra: 1
+      STATUS ' M' dataset/metadata/master_graph.json
+  CIFRA ficheros con blob de arbol DISTINTO del de HEAD: 1
+      dataset/metadata/master_graph.json
+         blob del arbol: e6d5894e84c3cc49
+         blob de HEAD  : 7ca2506546c09ddf
+         CONTENIDO IDENTICO: NO
+
+  ROJO, 1 motivo(s). NO SE COMMITEA `dataset/`:
+      (1) `git diff --numstat -- dataset/` devuelve 1 fila(s), y la letra del encargo dice que UNA SOLA FILA YA ES PARADA: commitear esto meteria una mutacion de bateria en el catalogo. Los ficheros: dataset/metadata/master_graph.json
+      REMEDIO: `git checkout -- <fichero>` sobre los que salgan, y
+      volver a correr esta guarda hasta que de CERO FILAS.
+
+------------------------------------------------------------------------------
+CASO C. RESTAURADO CON `git checkout --`. TIENE QUE VOLVER SOLO A VERDE.
+------------------------------------------------------------------------------
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+      (ninguna fila)
+  CIFRA ficheros que `git status --porcelain -- dataset/` nombra: 0
+      (ninguno)
+  CIFRA ficheros con blob de arbol DISTINTO del de HEAD: 0
+
+  VERDE: cero filas y cero blobs divergentes. `dataset/` se puede
+  commitear sin meter ninguna mutacion en el catalogo.
+
+  P.16: el temporal se retira. Existe todavia: False
+
+==============================================================================
+VERDE DE LA MUTACION: los TRES casos se comportan. El limpio da cero
+filas, el sucio da UNA fila con el nombre que git devuelve, y el
+restaurado vuelve solo a cero. La guarda muerde y se puede apagar.

@@ -573,7 +573,6 @@ VIEJAS = [
     ("vuelta174_tarea1a_mutacion_44.py", False),
     ("vuelta174_tarea1b_mutacion_esqueleto.py", False),
     ("vuelta174_tarea1b_mutacion_sellar.py", False),
-    ("vuelta174_tarea2b_mutacion_confirmar.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

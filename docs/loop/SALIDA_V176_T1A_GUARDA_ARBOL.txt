@@ -1,0 +1,22 @@
+==============================================================================
+LA GUARDA DEL COMMIT, ANTES DE COMMITEAR NADA DE `dataset/`
+==============================================================================
+------------------------------------------------------------------------------
+EL ARBOL DE TRABAJO DE ESTE REPO, AHORA MISMO
+------------------------------------------------------------------------------
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+      (ninguna fila)
+  CIFRA ficheros que `git status --porcelain -- dataset/` nombra: 1
+      STATUS ' M' dataset/metadata/master_graph.json
+  CIFRA ficheros con blob de arbol DISTINTO del de HEAD: 0
+      dataset/metadata/master_graph.json
+         blob del arbol: cb33552aedddab4d
+         blob de HEAD  : cb33552aedddab4d
+         CONTENIDO IDENTICO: SI
+      LOS BLOBS CALZAN: la `M` de `git status` es de ESTADO (mtime o
+      final de linea normalizado por core.autocrlf), no de CONTENIDO.
+
+  VERDE: cero filas y cero blobs divergentes. `dataset/` se puede
+  commitear sin meter ninguna mutacion en el catalogo.
+
+FIN
