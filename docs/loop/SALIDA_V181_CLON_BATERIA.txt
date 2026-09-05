@@ -1,0 +1,69 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta175_correr_bateria.py
+  B: scripts/loop/vuelta181_correr_bateria.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 175, 181
+  CIFRA lineas de docstring: A 48 | B 53
+  CIFRA lineas de maquina:   A 104 | B 110
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 823 | B 873
+     CIFRA tipos de nodo que NO empatan: 14
+        Load                   A   210 | B   223 | diferencia +13
+        Name                   A   160 | B   172 | diferencia +12
+        BinOp                  A    38 | B    43 | diferencia +5
+        Call                   A    77 | B    82 | diferencia +5
+        Constant               A    77 | B    81 | diferencia +4
+        Mod                    A    19 | B    23 | diferencia +4
+        Expr                   A    39 | B    42 | diferencia +3
+        Attribute              A    70 | B    72 | diferencia +2
+        Add                    A    14 | B    15 | diferencia +1
+        Assign                 A    25 | B    26 | diferencia +1
+        Slice                  A     2 | B     1 | diferencia -1
+        Store                  A    27 | B    28 | diferencia +1
+        Subscript              A     3 | B     2 | diferencia -1
+        Tuple                  A     1 | B     2 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 18
+  CIFRA tokens de maquina: A 733 | B 768
+  CIFRA tokens que difieren con el texto normalizado: 43
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 8
+  CIFRA LITERALES DE TEXTO:   10
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:133  print("   CIFRA sha256 (normalizado a LF): %s" % sha[:16])
+     B:69  VUELTA = NNN
+     B:85  nombre = "SALIDA_V%d_BATERIA%s.txt" % (VUELTA, ("_" + a.sufijo) if a.sufijo else "")
+     B:88  tmpdir = tempfile.mkdtemp(prefix="v%d_bateria_" % VUELTA)
+     B:99  print("   SIN --tramo: la nomina ENTERA, de un solo bocado.")
+     B:106  f.write("CORRIDA DE LA BATERIA DE LA VUELTA %d" % VUELTA + NL)
+     B:107  f.write("lanzada por scripts/loop/vuelta%d_correr_bateria.py" % VUELTA + NL)
+     B:142  % len(datos.replace(b"\r\n", b"\n")))
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:79  nombre = "SALIDA_VNNN_BATERIA%s.txt" % (("_" + a.sufijo) if a.sufijo else "")
+     A:82  tmpdir = tempfile.mkdtemp(prefix="vNNN_bateria_")
+     A:99  f.write("CORRIDA DE LA BATERIA DE LA VUELTA NNN" + NL)
+     A:100  f.write("lanzada por scripts/loop/vueltaNNN_correr_bateria.py" + NL)
+     A:116  f.write("DURACION MEDIDA POR EL LANZADOR (monotona, minutos): %.1f" % (segundos / 60.0) + NL)
+     B:108  f.write("SIN --tramo: LA NOMINA ENTERA, DE UN SOLO BOCADO" + NL)
+     B:124  f.write("DURACION MEDIDA POR EL LANZADOR (monotona, minutos): %.1f"
+     B:125  % (segundos / 60.0) + NL)
+     B:141  print("   CIFRA bytes normalizados a LF: %d"
+     B:144  print("   CIFRA sha256 (normalizado a LF): %s" % sha)
+
+
+FIN
