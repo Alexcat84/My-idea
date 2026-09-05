@@ -1,0 +1,56 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 32568 bytes
+   primera linea: # REPORTE DE LA VUELTA 174 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 174
+   coincide con VUELTA - 1 (174): SI
+
+PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (174), PUBLICADA SALGA LO
+   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V174.md -> 32568 bytes, sha256 d199ec669254c85d
+      vuelta leida de la cabecera del archivo: 174
+      el reporte que se va a pisar -> 32568 bytes, sha256 d199ec669254c85d
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+   VEREDICTO SOBRE LA 174: VERDE
+   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: db667d9e, c9635522, df847e2e, 23d5743c, 24dda21e, 24bd395b
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (174)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 174 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 174.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): db667d9e3e6da458fcd08112448e06ee97688d6c
+         |   asunto de ese commit: 2026-09-05 08:33:03 -0400	TAREA 1.b CERRADA Y LA VUELTA 174 CIERRA SU PROPIO REPORTE, QUE ES LO QUE LLEVABA CUATRO VUELTAS SIN PASAR: 32568 bytes, LAS
+         |   vuelta LEIDA de la cabecera del texto: 174
+         |   el destino docs/loop/reportes/REPORTE_V174.md YA EXISTE con contenido IDENTICO (sha256 d199ec669254)
+         |   VERDE.
+         |      vuelta            174
+         |      commit de origen  db667d9e3e6da458fcd08112448e06ee97688d6c
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V174.md
+         |      bytes             32568
+         |      lineas            486
+         |      sha256 (LF)       d199ec669254c85dd29c11a0153a37c2feb772b9b0ef5642774ea4fce5b55a37
+      docs/loop/reportes/REPORTE_V174.md -> 32568 bytes, sha256 d199ec669254c85d
+      vuelta leida de la cabecera del archivo: 174
+      el reporte que se va a pisar -> 32568 bytes, sha256 d199ec669254c85d
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+ESQUELETO ESCRITO: docs/loop/REPORTE.md (5953 bytes, 69 lineas)
+   rama leida de git: pasada-unica
+   acta 174 leida de git log: 1eacb3b5  ACTA DEL AUDITOR, VUELTA 174: LA VUELTA ABRIO Y CERRO SU PROPIO REPORT
+   HEAD de apertura leido del sello: 1eacb3b5
+   nacimiento del bloque de apertura, --diff-filter=A: 032a03c7
+   reporte pisado, leido de su cabecera: vuelta 174
+   celdas ilegibles que el tallador imprime HOY: 21
+   de ellas, del lado APERTURA: 2
+   filas de tarea abiertas: 2

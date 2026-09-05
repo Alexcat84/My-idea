@@ -1,0 +1,38 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 5953 bytes
+   primera linea: # REPORTE DE LA VUELTA 175 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 175
+   coincide con VUELTA - 1 (174): NO
+
+PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (174), PUBLICADA SALGA LO
+   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V174.md -> 32568 bytes, sha256 d199ec669254c85d
+      vuelta leida de la cabecera del archivo: 174
+      el reporte que se va a pisar -> 5953 bytes, sha256 10f1d8382b40d494
+      ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (d) EL TEXTO QUE SE VA A PISAR NO ESTA GUARDADO: el REPORTE.md del arbol (sha256 10f1d8382b40d494) NO ES el archivado en docs/loop/reportes/REPORTE_V174.md (sha256 d199ec669254c85d). Escribir el esqueleto encima perderia ese texto.
+   VEREDICTO SOBRE LA 174: ROJO
+   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: db667d9e, c9635522, df847e2e, 23d5743c, 24dda21e, 24bd395b
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (175)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 175 -> EXIT 1
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 175.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): db667d9e3e6da458fcd08112448e06ee97688d6c
+         |   asunto de ese commit: 2026-09-05 08:33:03 -0400	TAREA 1.b CERRADA Y LA VUELTA 174 CIERRA SU PROPIO REPORTE, QUE ES LO QUE LLEVABA CUATRO VUELTAS SIN PASAR: 32568 bytes, LAS
+         |   vuelta LEIDA de la cabecera del texto: 174
+         |   ROJO, 1 motivo(s), y NO se escribe nada:
+         |      el reporte que lleva db667d9e es el de la VUELTA 174, no el de la 175: no se archiva bajo un numero que no es el suyo
+      docs/loop/reportes/REPORTE_V175.md -> NO EXISTE
+      ROJO, 2 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (a) el archivador NO sale verde para la vuelta 175
+         (b) no existe el archivo docs/loop/reportes/REPORTE_V175.md
+
+ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.
