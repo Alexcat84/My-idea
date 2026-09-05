@@ -1,0 +1,185 @@
+==============================================================================
+VUELTA 171, TAREA 5.b y 5.c: EL CENSO DEL CAMPO forma Y EL BARRIDO DE
+LOS 8 PARES, LAS DOS BUSQUEDAS CORRIDAS EN VEZ DE AFIRMADAS
+==============================================================================
+
+A) EL UNIVERSO DEL CENSO, CONTADO
+   CIFRA entradas de docs/plan/INVENTARIO.jsonl: 672
+   CIFRA entradas con campo `forma` no vacio: 672
+   CIFRA entradas con `forma` vacio o ausente: 0
+
+B) 5.b VARA (i): LA CABEZA DE CADA `forma`, o sea con que palabra abre
+   CIFRA cabezas distintas: 22
+      (abre en minusculas: componente)                556 entrada(s)   ej.: domina_lo_que_compras
+      (abre en minusculas: ids)                        53 entrada(s)   ej.: accion_correctiva
+      (abre en minusculas: defecto)                    14 entrada(s)   ej.: auto-aristas via alias
+      (abre en minusculas: figura)                     13 entrada(s)   ej.: SUBCONJUNTO ESTRICTO
+      (abre en minusculas: cribado)                    10 entrada(s)   ej.: compras
+      MEZCLADO                                          5 entrada(s)   ej.: la ecuacion de valor
+      MEDIDO                                            3 entrada(s)   ej.: aristas duplicadas tras resolucion
+      DOS                                               2 entrada(s)   ej.: formalizar_junta_asesora
+      PURO                                              2 entrada(s)   ej.: el efectivo contra la ganancia
+      SUB-PURO                                          2 entrada(s)   ej.: la competencia entre inversores
+      FUNDIDA                                           1 entrada(s)   ej.: los cuadrantes de mercado
+      PROVISIONAL                                       1 entrada(s)   ej.: la supervision de la IA
+      SIETE                                             1 entrada(s)   ej.: el racimo del pivote
+      (abre en minusculas: proyectado,)                 1 entrada(s)   ej.: gemelos que el cribado no ve
+      (abre en minusculas: registro)                    1 entrada(s)   ej.: frontera de disposicion
+      (abre en minusculas: modo)                        1 entrada(s)   ej.: el nombre que esconde
+      (abre en minusculas: cola)                        1 entrada(s)   ej.: pares que una fusion reabre
+      (abre en minusculas: efecto)                      1 entrada(s)   ej.: la perdida que cambia de dueno
+      (abre en minusculas: enlace)                      1 entrada(s)   ej.: cobrar una A sin fundir
+      (abre en minusculas: corolario)                   1 entrada(s)   ej.: el superviviente es de la nomina, 
+      (abre en minusculas: en)                          1 entrada(s)   ej.: el forastero por cableado
+      (abre en minusculas: familia)                     1 entrada(s)   ej.: HUGOS-SISTEMAS
+
+C) 5.b VARA (ii): TODO TOKEN EN MAYUSCULAS DE 4 LETRAS O MAS, EN
+   CUALQUIER SITIO DEL CAMPO, CON CUANTAS ENTRADAS LO USAN
+   CIFRA tokens distintos: 43
+      MEZCLADO                    6 entrada(s)
+      SUB-PURO                    4 entrada(s)
+      VIVOS                       3 entrada(s)
+      MEDIDO                      3 entrada(s)
+      PURO                        2 entrada(s)
+      RESULTADO                   2 entrada(s)
+      NODO                        2 entrada(s)
+      PROMESA                     2 entrada(s)
+      SOLO                        2 entrada(s)
+      UNIDAS                      1 entrada(s)
+      GEMELOS                     1 entrada(s)
+      ESCALERA                    1 entrada(s)
+      PAREJAS                     1 entrada(s)
+      FUNDE                       1 entrada(s)
+      BANCO                       1 entrada(s)
+      TODAVIA                     1 entrada(s)
+      COMPLETA                    1 entrada(s)
+      PUENTE                      1 entrada(s)
+      TIENE                       1 entrada(s)
+      FORMA                       1 entrada(s)
+      VIVO                        1 entrada(s)
+      FUNDIDA                     1 entrada(s)
+      OP-L-                       1 entrada(s)
+      PROVISIONAL                 1 entrada(s)
+      CERRO                       1 entrada(s)
+      ESTE                        1 entrada(s)
+      DISTINTOS                   1 entrada(s)
+      PARTIDO                     1 entrada(s)
+      SUBCONJUNTO                 1 entrada(s)
+      CIERTAS                     1 entrada(s)
+      MISMA                       1 entrada(s)
+      NOMINA                      1 entrada(s)
+      UNIVERSOS                   1 entrada(s)
+      RACIMO                      1 entrada(s)
+      HABLAN                      1 entrada(s)
+      CIFRAS                      1 entrada(s)
+      MITADES                     1 entrada(s)
+      NODOS                       1 entrada(s)
+      SIETE                       1 entrada(s)
+      TRES                        1 entrada(s)
+      TODOS                       1 entrada(s)
+      UNICA                       1 entrada(s)
+      SISTEMAS                    1 entrada(s)
+
+D) 5.b VARA (iii): ¿HAY UNA NOMINA ESCRITA EN LAS PAGINAS DE DOCTRINA?
+   La busqueda se CORRE y se publica su salida; no se dice 'no encontre'.
+   docs/BANCO_DE_TEXTOS.md -> 182228 bytes
+      contiene 'vocabulario'          -> 8 vez(veces)
+      contiene 'nomina de formas'     -> 0 vez(veces)
+      contiene 'el campo `forma`'     -> 0 vez(veces)
+      contiene 'campo forma'          -> 0 vez(veces)
+      contiene 'formas posibles'      -> 0 vez(veces)
+      contiene 'valores de `forma`'   -> 0 vez(veces)
+      tokens del censo que aparecen en esta pagina: 27 de 43 -> MEZCLADO, SUB-PURO, MEDIDO, PURO, RESULTADO, NODO, PROMESA, SOLO, ESCALERA, FUNDE, BANCO, COMPLETA, TIENE, FORMA, VIVO, PROVISIONAL, ESTE, DISTINTOS, PARTIDO, MISMA, NOMINA, RACIMO, CIFRAS, NODOS, SIETE, TRES, TODOS
+   docs/plan/BANCO_DEL_PLAN.md -> 61554 bytes
+      contiene 'vocabulario'          -> 0 vez(veces)
+      contiene 'nomina de formas'     -> 0 vez(veces)
+      contiene 'el campo `forma`'     -> 0 vez(veces)
+      contiene 'campo forma'          -> 0 vez(veces)
+      contiene 'formas posibles'      -> 0 vez(veces)
+      contiene 'valores de `forma`'   -> 0 vez(veces)
+      tokens del censo que aparecen en esta pagina: 23 de 43 -> MEZCLADO, SUB-PURO, MEDIDO, PURO, NODO, SOLO, FUNDE, BANCO, COMPLETA, PUENTE, TIENE, FORMA, VIVO, ESTE, DISTINTOS, MISMA, NOMINA, RACIMO, CIFRAS, NODOS, TRES, TODOS, SISTEMAS
+
+E) 5.b LA PALABRA `FUNDIDA`, LOCALIZADA UNA POR UNA
+   CIFRA entradas del inventario cuyo `forma` la usa: 1
+      los cuadrantes de mercado
+   paginas de doctrina donde aparece la palabra: 0 (ninguna)
+
+F) 5.c EL RESOLUTOR Y LAS SEDES DE LECTURA, LEIDOS HOY (P.1)
+   grafo: 3853 nodos, 761 entradas de alias
+   cola: 3388 filas, 3009 pares distintos tras resolver
+   pares dirigidos distintos tras resolver: 27
+
+G) 5.c LOS 8 PARES, COMPUTADOS Y NO TECLEADOS
+   miembros escritos: 10
+   vivos tras resolver: 7
+   colapsos: 3 invitar_ia_a_todo -> comprension_capacidades_limitaciones_ia; jagged_frontier_ia -> comprension_capacidades_limitaciones_ia; principio_invitar_ia_siempre -> comprension_capacidades_limitaciones_ia
+   pares posibles entre los vivos: 21
+   leidos (cola mas dirigidas): 13
+   SIN VEREDICTO: 8
+      1. alineacion_etica_ia_negocio  contra  comprension_capacidades_limitaciones_ia
+      2. comprender_alineacion_etica_ia  contra  comprension_capacidades_limitaciones_ia
+      3. comprender_alineacion_etica_ia  contra  human_in_the_loop_ia
+      4. comprender_alineacion_etica_ia  contra  mitigar_falling_asleep_wheel
+      5. comprender_alineacion_etica_ia  contra  principio_humano_en_el_loop
+      6. comprender_alineacion_etica_ia  contra  riesgo_sobredependencia_ia
+      7. comprension_capacidades_limitaciones_ia  contra  mitigar_falling_asleep_wheel
+      8. comprension_capacidades_limitaciones_ia  contra  riesgo_sobredependencia_ia
+
+H) 5.c EL BARRIDO SOBRE LAS FICHAS, EN SUS CUATRO CAMPOS
+   comando equivalente, escrito al lado como manda el encargo:
+   python - <<  for ficha in OPERACIONES.jsonl:
+                    universo = res(nodos) + res(preservar) + res(eliminar)
+                               + res(superviviente)
+                    si los DOS nodos del par estan en universo -> ACIERTO
+   CIFRA fichas de docs/plan/OPERACIONES.jsonl: 71
+   CIFRA nodos distintos que esos cuatro campos nombran, tras resolver: 345
+
+   PAR A PAR, Y NINGUNO SE OMITE:
+   1. alineacion_etica_ia_negocio  contra  comprension_capacidades_limitaciones_ia
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   2. comprender_alineacion_etica_ia  contra  comprension_capacidades_limitaciones_ia
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   3. comprender_alineacion_etica_ia  contra  human_in_the_loop_ia
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   4. comprender_alineacion_etica_ia  contra  mitigar_falling_asleep_wheel
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   5. comprender_alineacion_etica_ia  contra  principio_humano_en_el_loop
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   6. comprender_alineacion_etica_ia  contra  riesgo_sobredependencia_ia
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   7. comprension_capacidades_limitaciones_ia  contra  mitigar_falling_asleep_wheel
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+   8. comprension_capacidades_limitaciones_ia  contra  riesgo_sobredependencia_ia
+        fichas que nombran el PRIMERO:  0 (ninguna)
+        fichas que nombran el SEGUNDO:  0 (ninguna)
+        fichas que nombran LOS DOS:     0 (ninguna)
+
+I) EL RESULTADO DEL BARRIDO, CONTADO
+   CIFRA pares de los 8 recogidos ENTEROS por alguna ficha: 0
+   CIFRA nodos distintos que aparecen en los 8 pares: 7
+   CIFRA de esos nodos que alguna ficha nombra: 0
+      alineacion_etica_ia_negocio                  0 ficha(s) (ninguna)
+      comprender_alineacion_etica_ia               0 ficha(s) (ninguna)
+      comprension_capacidades_limitaciones_ia      0 ficha(s) (ninguna)
+      human_in_the_loop_ia                         0 ficha(s) (ninguna)
+      mitigar_falling_asleep_wheel                 0 ficha(s) (ninguna)
+      principio_humano_en_el_loop                  0 ficha(s) (ninguna)
+      riesgo_sobredependencia_ia                   0 ficha(s) (ninguna)
+
+   LA CONCLUSION QUE LA MEDICION SOSTIENE, Y NI UNA MAS: de los 8 pares,
+   0 aparecen ENTEROS en alguna ficha de las 71.
+

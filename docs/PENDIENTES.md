@@ -12098,8 +12098,35 @@ concordancia**. **EL `R.37` REGISTRO SEIS Y DOS; ESTE REGISTRA 10 Y 2**, y el
 numeral de las adjudicaciones subio solo. **Y ESTA VUELTA PRUEBA ADEMAS EL
 BORDE QUE NINGUNA ANTERIOR TOCO:** el acta 168 es la primera que llega a
 `6.10`, y el barrido tiene que contarla SIN confundirla con `6.1`. Lo que lo
-impide es el espacio final del patron `^\s*\*\*6\.1 `, y el arnes hermano lo
-prueba por mutacion en vez de afirmarlo.
+impide es el espacio final del patron `^\s*\*\*6\.1 `, ~~y el arnes hermano lo
+prueba por mutacion en vez de afirmarlo.~~
+
+**CORRECCION DECLARADA (vuelta 171, TAREA 4.a, 5 sep 2026), POR EL CARRIL DEL BANCO
+`9.10` Y SIN BORRAR LA FRASE DE ARRIBA, que se queda entera y tachada porque
+una correccion que tapa lo que corrige no se puede auditar.** La primera mitad
+de esa oracion es CIERTA y se deja en pie: lo que impide que `6.1` se coma a
+`6.10` es, en efecto, el espacio final del patron. **LO FALSO ES LA CLAUSULA
+TACHADA: cuando esta entrada se escribio, EL ARNES HERMANO NO EXISTIA.** La
+vuelta 169 escribio su registrador (`vuelta169_tarea1_registrar_acta168.py`)
+**sin `prueba_de_mutacion`**, asi que no habia nada que la bateria pudiera
+correr y la afirmacion no tenia respaldo.
+
+**LA MEDICION, CORRIDA EN LA VUELTA 171 Y PEGADA AQUI**
+(`ls scripts/loop/ | grep mutacion_registro`, 7 ficheros): existen los de las
+vueltas 164, 165, 166, 167, 168, 170, 171. **NO EXISTE NINGUNO DE LA VUELTA 169**, y el hueco entre el 168 y
+el 170 se ve a simple vista en la propia nomina.
+
+**QUIEN LO TRAJO Y QUIEN LO CORRIGE, PORQUE LAS DOS COSAS CUENTAN:** lo hallo
+el ejecutor de la vuelta 170 y lo trajo como su discutible `D.8` **sin
+corregirlo**, con el argumento de que no era suyo; la adjudicacion `6.4` del
+acta 170 dice que *"no es mio y el encargo no me manda tocarlo" no vale para
+una afirmacion falsa en la serie de registros*, porque **la serie es una sola y
+la lee todo el que venga detras**. Traerlo estuvo bien; dejarlo, no.
+
+**Y LO QUE ESTA CORRECCION NO HACE:** no toca el `R.39` ni el `R.40`, que usan
+la misma frase y en los que **si** es cierta (`vuelta170_tarea1a_mutacion_registro.py` y `vuelta171_tarea1a_mutacion_registro.py` existen y salen en
+verde); y no mueve ninguna cifra de ninguna otra entrada de la serie.
+
 
 **LAS DIEZ ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
 cada una es LITERAL del fichero (localizado dentro del cuerpo del acta 168, no

@@ -1,0 +1,63 @@
+VUELTA 171, 5.c: EL BARRIDO CON LA VARA CORREGIDA, Y LA CORRECCION DECLARADA
+
+CORRECCION DECLARADA SOBRE MI PROPIO INSTRUMENTO, y el texto viejo se queda
+en docs/loop/SALIDA_V171_T5BC_CENSO_Y_BARRIDO.txt sin tocar. Mi primera
+version conto '345 nodos distintos que los cuatro campos nombran'. ESA CIFRA
+NO ES DE NODOS: los campos preservar y eliminar guardan PROSA, no ids, y mi
+control lo destapo imprimiendo como 'nodo' una frase entera. La cifra de
+aciertos (0 de 8) NO cambia, porque una prosa nunca iba a ser igual a un id;
+lo que cambia es lo que se puede DECIR del universo barrido. Aqui va bien.
+
+A) QUE HAY DE VERDAD EN CADA UNO DE LOS CUATRO CAMPOS
+   CIFRA valores en los cuatro campos, sumados: 510
+   CIFRA que resuelven a un id REAL del grafo: 416
+   CIFRA que NO son ids (prosa): 94
+   CIFRA ids distintos del grafo, tras resolver: 251
+      nodos            ids reales distintos: 251
+      preservar        ids reales distintos: 0
+      eliminar         ids reales distintos: 16
+      superviviente    ids reales distintos: 17
+
+B) LOS 8 PARES, CONTRA ESE UNIVERSO DE IDS REALES
+   1. alineacion_etica_ia_negocio              contra comprension_capacidades_limitaciones_ia  -> fichas con LOS DOS: 0 (ninguna)
+   2. comprender_alineacion_etica_ia           contra comprension_capacidades_limitaciones_ia  -> fichas con LOS DOS: 0 (ninguna)
+   3. comprender_alineacion_etica_ia           contra human_in_the_loop_ia                     -> fichas con LOS DOS: 0 (ninguna)
+   4. comprender_alineacion_etica_ia           contra mitigar_falling_asleep_wheel             -> fichas con LOS DOS: 0 (ninguna)
+   5. comprender_alineacion_etica_ia           contra principio_humano_en_el_loop              -> fichas con LOS DOS: 0 (ninguna)
+   6. comprender_alineacion_etica_ia           contra riesgo_sobredependencia_ia               -> fichas con LOS DOS: 0 (ninguna)
+   7. comprension_capacidades_limitaciones_ia  contra mitigar_falling_asleep_wheel             -> fichas con LOS DOS: 0 (ninguna)
+   8. comprension_capacidades_limitaciones_ia  contra riesgo_sobredependencia_ia               -> fichas con LOS DOS: 0 (ninguna)
+   CIFRA pares recogidos ENTEROS por alguna ficha: 0 de 8
+
+C) LOS SIETE NODOS, UNO A UNO, EN LOS CUATRO CAMPOS
+   alineacion_etica_ia_negocio                  0 ficha(s) (ninguna)
+   comprender_alineacion_etica_ia               0 ficha(s) (ninguna)
+   comprension_capacidades_limitaciones_ia      0 ficha(s) (ninguna)
+   human_in_the_loop_ia                         0 ficha(s) (ninguna)
+   mitigar_falling_asleep_wheel                 0 ficha(s) (ninguna)
+   principio_humano_en_el_loop                  0 ficha(s) (ninguna)
+   riesgo_sobredependencia_ia                   0 ficha(s) (ninguna)
+
+D) Y AHORA EL BARRIDO ANCHO, QUE ES LO QUE EL CONTROL ME OBLIGO A MIRAR:
+   LOS SIETE IDS EN CUALQUIER CAMPO DE LA FICHA, INCLUIDOS nota, evidencia,
+   verificacion, adjudicacion y pregunta_pendiente
+   alineacion_etica_ia_negocio                  0 sitio(s) (ninguno)
+   comprender_alineacion_etica_ia               1 sitio(s) OP-E-02.nota
+   comprension_capacidades_limitaciones_ia      0 sitio(s) (ninguno)
+   human_in_the_loop_ia                         0 sitio(s) (ninguno)
+   mitigar_falling_asleep_wheel                 0 sitio(s) (ninguno)
+   principio_humano_en_el_loop                  0 sitio(s) (ninguno)
+   riesgo_sobredependencia_ia                   0 sitio(s) (ninguno)
+
+E) Y EL RACIMO POR SU NOMBRE, PORQUE UN CERO DE IDS NO ES UN CERO DE MENCIONES
+   OP-F-02.evidencia
+      ...INTRA_DOMINIO_INFORME.md seccion 11 y 11.bis.3: el racimo de la supervision de la IA, nomina vigente de DIEZ miembros al puesto 1517, particion provisional 5 mas 4 mas 1...
+   OP-E-02.nota
+      ...acimo no tiene centro, va a MESA. EL EJEMPLAR MEDIDO: comprender_alineacion_etica_ia, el SUELTO del racimo de la supervision de la IA, cuya particion provisional es 5 mas 4 mas 1. ESE CASO CAE EN EL TERCER SUPU...
+   OP-L-01.verificacion
+      ...los pares internos colapsaron a auto-arista. LAS QUE NO TIENEN COMPONENTE QUEDAN NOMBRADAS Y NO RELLENADAS: `la supervision de la IA`, `la mesa unida de puertas y portafolio`, `el racimo del pivote`, `la serie ...
+   OP-L-02.nota
+      ...55 son resto sin mesa. SE LEYERON 16: cuadrantes de mercado (8), ecuacion de valor (5) y el bloque humano de la supervision de la IA (3). ~~NO se leyeron los 5 de sales roadmap, y el motivo se escribe~~ CORRECC...
+   OP-I-01.nota
+      ...dominios). De los trece racimos, DOCE verifican identicos a su cobertura ya declarada; el unico que cambio es la supervision de la IA (corregido en TAREA 1 de esta vuelta, 18 de 45). Los ejemplares internos de ...
+

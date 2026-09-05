@@ -51,8 +51,8 @@ Este hueco se rellena con la tabla tallada entera cuando la vuelta cierre.
 | **TAREA 1** | BLOQUEANTE. LOS REGISTROS Y EL CIERRE QUE FALTO (1.a el acta 170 al `R.40` con su arnes de mutacion del registro, 1.b el reporte de la 170 CERRADO con la cabecera tallada pegada y sus ocho discutibles y cinco caidas sin suavizar, 1.c la seccion 9 dice que la bateria NO corrio y no se rellena con una corrida de hoy, 1.d el archivador para la 170 y este esqueleto) | **CERRADA** | `SALIDA_V171_T1A_REGISTRO_ACTA_170.txt`, `_T1A_MUTACION_REGISTRO`, `_T1B_CERRAR_REPORTE_170`, `_T1B_COMPARAR_CABECERA_170`, `_T1B_RELECTURA_DESDE_GIT`, `_T1D_ARCHIVADOR_170`, `_T1D_ESQUELETO` |
 | **TAREA 2** | BLOQUEANTE PARA LA 3. EL BORRADOR QUE ENVENENO UN INSTRUMENTO (adjudicacion 6.3): los cinco `docs/loop/_v170_t*_seccion.md` salen de `docs/` con `git mv`, sin borrar ni editar ninguno, y las dos varas del contador `LD` tienen que converger en `LD-138` o se para | **CERRADA, Y TRAE UNA PARADA** | `SALIDA_V171_T2_SACAR_BORRADORES.txt`, `_T2_ATRIBUCION`, `_T2_LAS_DOS_FUENTES`, `_T2_CONTAR_LD_222ca6a7`, `_T2_CONTAR_LD_0caca89f`, `_T2_CONTAR_LD_ANTES`, `_T2_CONTAR_LD_DESPUES` |
 | **TAREA 3** | LA NUMERACION `LD`, QUE YA NO ES PARADA (adjudicacion 6.1): las 16 filas de la segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` ganan `LD-139` a `LD-154` POR ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO y sin tocar una palabra de su texto | **NO SE CORRE: PARADA DECLARADA EN LA TAREA 2** | (la 2 es bloqueante para la 3 y su guarda cayo: `SALIDA_V171_T2_SACAR_BORRADORES.txt` bloque H) |
-| **TAREA 4** | LAS DOS DEUDAS DE REGISTRO (adjudicaciones 6.4 y 6.11): 4.a el agujero del `R.38` corregido por el carril del `9.10` con la frase vieja entera y tachada, 4.b el `81` de `docs/plan/00_INDICE.md:644` con la cifra de hoy adosada por `9.21` y sin tocar la letra vieja | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | LOS TRES INSTRUMENTOS QUE FALTAN (adjudicaciones 6.6, 6.9 y 6.12): 5.a el archivador ENCHUFADO como paso 0 del esqueleto, 5.b el CENSO del campo `forma` sobre las 672 entradas del inventario, 5.c el barrido MEDIDO de los 8 pares sin leer de `la supervision de la IA` sobre las 71 fichas | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LAS DOS DEUDAS DE REGISTRO (adjudicaciones 6.4 y 6.11): 4.a el agujero del `R.38` corregido por el carril del `9.10` con la frase vieja entera y tachada, 4.b el `81` de `docs/plan/00_INDICE.md:644` con la cifra de hoy adosada por `9.21` y sin tocar la letra vieja | **CERRADA** | `SALIDA_V171_T4_DEUDAS_DE_REGISTRO.txt`, `_T4B_CONTAR_LD` |
+| **TAREA 5** | LOS TRES INSTRUMENTOS QUE FALTAN (adjudicaciones 6.6, 6.9 y 6.12): 5.a el archivador ENCHUFADO como paso 0 del esqueleto, 5.b el CENSO del campo `forma` sobre las 672 entradas del inventario, 5.c el barrido MEDIDO de los 8 pares sin leer de `la supervision de la IA` sobre las 71 fichas | **CERRADA**: 5.a enchufada con su mutacion, 5.b y 5.c MEDIDAS | `SALIDA_V171_T5A_MUTACION_ENCHUFE.txt`, `_T5BC_CENSO_Y_BARRIDO`, `_T5C_CONTRAPRUEBA`, `_T5C_BARRIDO_CORREGIDO` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -264,5 +264,190 @@ del contador con la misma vara que los tres narrativos del bucle, y que hacer co
 los `LD` que una entrada de la serie `R.n` nombra al glosar una adjudicacion que
 habla de ellos. **Con eso resuelto, la TAREA 3 es una corrida y cabe entera en la
 vuelta siguiente.**
+
+### TAREA 4. LAS DOS DEUDAS DE REGISTRO (adjudicaciones 6.4 y 6.11)
+
+Instrumento `scripts/loop/vuelta171_tarea4_deudas_de_registro.py`, salida
+`docs/loop/SALIDA_V171_T4_DEUDAS_DE_REGISTRO.txt`, **exit 0**. **La fecha de
+corte tampoco se teclea:** la lee del reloj del sistema y da **5 sep 2026**.
+
+**4.a EL AGUJERO DEL `R.38`, PAGADO POR EL CARRIL DEL BANCO `9.10`.**
+
+| celda | de donde sale | valor |
+|---|---|---:|
+| `R.38` acotado | cabecera y siguiente `## R.n.` | `docs/PENDIENTES.md`, lineas 12.081 a 12.166 |
+| veces que la clausula falsa aparece DENTRO de `R.38` | barrido | **1** |
+| veces que aparece en el fichero ENTERO | barrido | **1** |
+| arneses de mutacion de registro que existen hoy | `ls scripts/loop/ \| grep mutacion_registro` | **7** |
+| vueltas representadas | del nombre de cada fichero | 164, 165, 166, 167, 168, 170, **171** |
+| ¿existe el de la vuelta 169? | del mismo barrido | **NO** |
+
+**QUE SE TACHA Y QUE NO, Y ES UNA DECISION QUE DECLARO.** La oracion empieza
+diciendo *"Lo que lo impide es el espacio final del patron"*, **y eso es
+CIERTO**. Lo falso es la clausula que viene detras. **Tache la clausula falsa
+entera y deje en pie la parte cierta**: enterrar una afirmacion buena para tapar
+una mala no es corregir. Va como `D.3`.
+
+La correccion adosada dice las tres cosas que hacen falta: que **cuando esa
+entrada se escribio el arnes no existia** (el registrador de la 169 se quedo sin
+`prueba_de_mutacion`), **la nomina medida hoy pegada entera**, y **quien lo trajo
+y quien lo corrige**, porque las dos cosas cuentan: lo hallo el ejecutor de la
+170 como su `D.8` y no lo corrigio; la `6.4` dice que *"no es mio"* no vale para
+una afirmacion falsa en la serie. **Y dice lo que la correccion NO hace:** no
+toca el `R.39` ni el `R.40`, donde la misma frase **si** es cierta.
+
+**4.b EL `81` DE `docs/plan/00_INDICE.md:644`, ADOSADO POR `9.21`.**
+
+| celda | de donde sale | valor |
+|---|---|---:|
+| filas que casan con el ancla de la celda | barrido del fichero | **1**, la 644 |
+| la cifra vieja que la celda publica | leida de la propia celda | **81** |
+| el corte que la celda declara | leido de la propia celda | **19 ago 2026** |
+| lecturas dirigidas HECHAS hoy | `vuelta48_contar_ld.py` corrido en esta vuelta, exit 0 | **82** |
+| la diferencia | computada | **1** |
+
+**LA LETRA VIEJA NO SE TOCA** y la comprobacion lo mide: `exit 0): 81**` sigue
+entero en el fichero despues de escribir.
+
+**Y LA FILA DE AL LADO NO RECIBE SU CIFRA DE HOY, Y ESO ES UNA DECISION MIA QUE
+DECLARO.** *"Lecturas dirigidas encargadas y sin hacer"* publica **CERO** con su
+corte, y el barrido de hoy da **8**. **Ese 8 esta contaminado**: la TAREA 2 midio
+que seis de esos ocho salen de dos ficheros que ha escrito esta misma vuelta.
+**Adosarlo seria meter una cifra envenenada en una pagina del plan**, que es peor
+que dejar la celda vieja con su corte escrito. El instrumento tiene una guarda
+que comprueba que esa fila no se toco y que el 8 no se colo. Va como `D.4`.
+
+**LAS DIEZ COMPROBACIONES DE RELECTURA DEL DISCO PASAN, 0 FALLAN**, incluidas
+*"la frase falsa sigue ENTERA en el fichero"*, *"y ahora esta TACHADA"* y *"y no
+se le colo la cifra contaminada"*.
+
+### TAREA 5. LOS TRES INSTRUMENTOS QUE FALTAN (adjudicaciones 6.6, 6.9 y 6.12)
+
+**5.a EL ARCHIVADOR SE ENCHUFA, Y SE ENTREGO ANTES QUE EL RESTO PORQUE VIVE
+DENTRO DEL ESQUELETO.** Nace `scripts/loop/paso0_archivar_anterior.py`, **con
+nombre estable y sin numero de vuelta** para que el enchufe no se pierda en el
+proximo clon, y `vuelta171_esqueleto_reporte.py` lo llama como **PASO 0**. **El
+esqueleto se niega a escribir** si el reporte anterior no esta a salvo, y la
+guarda tiene cuatro clausulas:
+
+| clausula | que mira |
+|---|---|
+| (a) | el archivador no sale VERDE para la vuelta anterior |
+| (b) | no existe `docs/loop/reportes/REPORTE_V<N>.md` |
+| (c) | ese fichero existe pero lleva el reporte de OTRA vuelta |
+| **(d)** | **el `REPORTE.md` que se va a PISAR no esta guardado byte a byte en el archivo**, cotejando los dos sha256 |
+
+**LA (d) ES LA QUE CONVIERTE ESTO EN UNA GUARDA Y NO EN UN RECORDATORIO:** las
+tres primeras se cumplen con un archivo VIEJO, y solo la cuarta mira lo que se va
+a destruir.
+
+**CASO POSITIVO POR MUTACION:**
+`scripts/loop/vuelta171_tarea5a_mutacion_enchufe.py`, salida
+`docs/loop/SALIDA_V171_T5A_MUTACION_ENCHUFE.txt`, **exit 0**: **10 casos, 10
+pasan, 10 caen al mutar el esperado**. Tumba la guarda en sus modos (b), (c) y
+(d), comprueba que **un solo byte de diferencia ya la tumba**, y corre el caso
+verde contra el repo real en modo solo comprobacion, sin escribir. **Y la corrida
+real lo confirmo en la 1.d**: los dos sha256 dieron `0b85f30e9c78e2b4` y el
+esqueleto escribio.
+
+**5.b EL CENSO DEL CAMPO `forma`, Y LA RESPUESTA ES QUE NO HAY VOCABULARIO.**
+Instrumento `scripts/loop/vuelta171_tarea5_censo_y_barrido.py`, salida
+`docs/loop/SALIDA_V171_T5BC_CENSO_Y_BARRIDO.txt`, **exit 0**. **672 entradas,
+672 con `forma` no vacio, 0 sin el.** Tres varas, para no depender de una sola
+forma de mirar:
+
+**Vara (i), la CABEZA del campo: 22 cabezas distintas, y solo OCHO abren en
+mayusculas.**
+
+| cabeza | entradas |
+|---|---:|
+| `MEZCLADO` | 5 |
+| `MEDIDO` | 3 |
+| `DOS` | 2 |
+| `PURO` | 2 |
+| `SUB-PURO` | 2 |
+| `FUNDIDA` | **1** |
+| `PROVISIONAL` | 1 |
+| `SIETE` | 1 |
+| las otras 14 cabezas abren en minusculas | **655** (`componente` 556, `ids` 53, `defecto` 14, `figura` 13, `cribado` 10, y nueve mas con 1 cada una) |
+
+**Vara (ii), todo token en mayusculas de 4 letras o mas en CUALQUIER sitio del
+campo: 43 tokens distintos**, y la lista incluye palabras que no son formas
+(`VIVOS`, `SOLO`, `TIENE`, `MISMA`, `HABLAN`).
+
+**Vara (iii), la nomina escrita en las paginas de doctrina: NO EXISTE, y esta vez
+la busqueda esta corrida y se publica.** En `docs/BANCO_DE_TEXTOS.md` y
+`docs/plan/BANCO_DEL_PLAN.md`, las frases *"nomina de formas"*, *"el campo
+`forma`"*, *"campo forma"*, *"formas posibles"* y *"valores de `forma`"* dan
+**0 apariciones cada una en las dos paginas**.
+
+**LO QUE EL CENSO SOSTIENE, Y NI UNA PALABRA MAS: NO HAY VOCABULARIO CERRADO
+PARA EL CAMPO `forma`.** No es que `FUNDIDA` este fuera de una nomina: **es que
+no hay nomina**. El campo es prosa libre en el **97,5 por ciento** de las
+entradas (655 de 672 abren en minusculas). **Sube al fundador como hallazgo, que
+es la rama que la `6.9` deja abierta**, y **la palabra se queda** como la propia
+adjudicacion manda: describe un hecho verificado y ninguna regla escrita la
+prohibe.
+
+**Y UNA CORRECCION QUE EL CENSO OBLIGA A HACERLE AL `D.5` DE LA VUELTA 170**,
+que decia que el vocabulario de la casa era *"`MEZCLADO`, `SUB-PURO`, `PARTIDO`,
+`PROVISIONAL`, `REPITE`"*: medido, **`REPITE` no aparece en NINGUNA de las 672
+entradas**, ni como cabeza ni como token. **La lista que se cito como vocabulario
+de la casa traia una palabra que la casa no usa.** No mueve ninguna cifra
+publicada; se declara y ya.
+
+**5.c LOS 8 PARES SIN LEER: NINGUNA OPERACION LOS RECOGE, Y AHORA ESTA MEDIDO.**
+Los 8 pares **no se teclean**: se computan con el resolutor delante (`P.1`) desde
+los 10 miembros escritos del racimo, que colapsan a **7 vivos** (3 colapsos,
+todos a `comprension_capacidades_limitaciones_ia`), **21 pares posibles, 13
+leidos, 8 sin veredicto**. Los ocho, uno a uno:
+
+| # | par |
+|---:|---|
+| 1 | `alineacion_etica_ia_negocio` contra `comprension_capacidades_limitaciones_ia` |
+| 2 | `comprender_alineacion_etica_ia` contra `comprension_capacidades_limitaciones_ia` |
+| 3 | `comprender_alineacion_etica_ia` contra `human_in_the_loop_ia` |
+| 4 | `comprender_alineacion_etica_ia` contra `mitigar_falling_asleep_wheel` |
+| 5 | `comprender_alineacion_etica_ia` contra `principio_humano_en_el_loop` |
+| 6 | `comprender_alineacion_etica_ia` contra `riesgo_sobredependencia_ia` |
+| 7 | `comprension_capacidades_limitaciones_ia` contra `mitigar_falling_asleep_wheel` |
+| 8 | `comprension_capacidades_limitaciones_ia` contra `riesgo_sobredependencia_ia` |
+
+**EL RESULTADO: 0 de los 8 pares aparece ENTERO en ninguna de las 71 fichas**, y
+mas fuerte todavia, **ninguno de los 7 nodos aparece en `nodos`, `preservar`,
+`eliminar` ni `superviviente` de ninguna ficha**.
+
+**Y UN CERO SOLO VALE SI EL BARRIDO SABIA BUSCAR** (`EJECUTOR.md` 9), asi que va
+con contraprueba (`docs/loop/SALIDA_V171_T5C_CONTRAPRUEBA.txt` y
+`docs/loop/SALIDA_V171_T5C_BARRIDO_CORREGIDO.txt`): **los 7 ids existen en el
+grafo, 7 de 7, y ninguno esta deprecado**; el barrido si encuentra fichas cuando
+las hay; y el universo real de los cuatro campos son **251 ids distintos tras
+resolver** de **416 valores** que resuelven a id.
+
+**LA CONTRAPRUEBA DESTAPO ADEMAS DOS COSAS QUE MI PRIMERA PASADA NO DECIA, Y LAS
+DOS SE PUBLICAN:**
+
+1. **`comprender_alineacion_etica_ia` SI esta nombrado en una ficha**, aunque no
+   en los cuatro campos operativos: en `OP-E-02.nota`, como *"el SUELTO del
+   racimo de la supervision de la IA"*. O sea que **el nodo esta visto, pero no
+   recogido por ninguna operacion**.
+2. **El racimo, por su nombre, aparece en CINCO fichas**: `OP-F-02.evidencia`,
+   `OP-E-02.nota`, `OP-L-01.verificacion`, `OP-L-02.nota` y `OP-I-01.nota`.
+   **Un cero de ids no es un cero de menciones**, y decir solo lo primero habria
+   sido cierto y engañoso a la vez.
+
+**LO QUE NO DIGO, PORQUE NO LO HE MEDIDO: si son backlog nuevo.** Lo medido es
+que **ninguna operacion escrita los recoge en sus campos operativos**. Ponerles
+la etiqueta *backlog* es una decision de doctrina y va en `P.3`.
+
+**Y UNA CAIDA MIA, DECLARADA CON SU NOMBRE Y CON EL TEXTO VIEJO SIN TOCAR** (va
+como `CAIDA 1` de la seccion 8): mi primera version del barrido publico *"345
+nodos distintos que esos cuatro campos nombran"*. **Esa cifra no es de nodos**:
+`preservar` y `eliminar` guardan **prosa** ademas de ids (94 de 510 valores no
+resuelven a ningun id, y `preservar` no trae **ni uno** real), y mi propio caso
+de control lo destapo al imprimir como *nodo* una frase entera. **La cifra de
+aciertos, 0 de 8, no se mueve** (una prosa nunca iba a ser igual a un id); lo que
+cambia es lo que se puede DECIR del universo. La salida vieja se queda entera y
+sin tocar.
 
 <!-- FIN ANEXO DE TAREAS -->

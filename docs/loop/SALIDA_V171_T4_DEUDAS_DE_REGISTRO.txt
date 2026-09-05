@@ -1,0 +1,53 @@
+==============================================================================
+VUELTA 171, TAREA 4: LAS DOS DEUDAS DE REGISTRO
+==============================================================================
+
+   fecha de corte de todo lo que esta vuelta escribe aqui, leida del
+   reloj del sistema y no tecleada: 5 sep 2026
+
+A) 4.a EL AGUJERO DEL R.38, MEDIDO ANTES DE ESCRIBIR
+   R.38 acotado: docs/PENDIENTES.md, lineas 12081 a 12166
+   CIFRA veces que la clausula falsa aparece DENTRO de R.38: 1
+   CIFRA veces que aparece en el fichero ENTERO: 1
+   LA MEDICION QUE SOSTIENE LA CORRECCION, corrida en esta vuelta:
+      ls scripts/loop/ | grep mutacion_registro -> 7 ficheros
+         vuelta164_tarea1_mutacion_registro.py
+         vuelta165_tarea1_mutacion_registro.py
+         vuelta166_tarea1_mutacion_registro.py
+         vuelta167_tarea1_mutacion_registro.py
+         vuelta168_tarea1_mutacion_registro.py
+         vuelta170_tarea1a_mutacion_registro.py
+         vuelta171_tarea1a_mutacion_registro.py
+      vueltas representadas: 164, 165, 166, 167, 168, 170, 171
+      ¿existe el de la vuelta 169?: NO
+
+B) 4.b LA CELDA DEL 00_INDICE, MEDIDA ANTES DE ESCRIBIR
+   CIFRA filas que empiezan por el ancla de la celda: 1
+   docs/plan/00_INDICE.md:644
+   la cifra vieja que la celda publica: 81
+   el corte que la celda declara: 19 ago 2026
+   el contador, corrido en esta vuelta (exit 0):
+      lecturas dirigidas HECHAS hoy: 82
+      nombradas sin seccion hoy:     8 (CONTAMINADA, ver TAREA 2)
+
+C) SE ESCRIBE 4.a
+   escrito en docs/PENDIENTES.md: 806528 bytes -> 808243 bytes
+
+D) SE ESCRIBE 4.b
+   escrito en docs/plan/00_INDICE.md:644
+   42818 bytes -> 43520 bytes
+
+E) SE RELEE DEL DISCO, QUE ES LA PRIMERA DE LAS DOS COMPROBACIONES
+   la frase falsa sigue ENTERA en el fichero            PASA   (real=True esperado=True)
+   y sigue apareciendo una sola vez                     PASA   (real=1 esperado=1)
+   y ahora esta TACHADA                                 PASA   (real=True esperado=True)
+   la correccion lleva su fecha                         PASA   (real=True esperado=True)
+   la correccion dice que el arnes de la 169 no existe  PASA   (real=True esperado=True)
+   la nomina de arneses esta pegada                     PASA   (real=True esperado=True)
+   la cifra vieja del indice sigue entera               PASA   (real=True esperado=True)
+   y ahora lleva la de hoy al lado                      PASA   (real=True esperado=True)
+   la fila de encargadas sin hacer NO se toco           PASA   (real=1 esperado=1)
+   y no se le colo la cifra contaminada                 PASA   (real=False esperado=False)
+   CIFRA comprobaciones: 10 | fallan: 0
+
+VERDE: las dos deudas quedan pagadas por adicion, sin borrar una letra.
