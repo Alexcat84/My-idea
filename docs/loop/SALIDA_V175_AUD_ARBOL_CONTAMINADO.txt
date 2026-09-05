@@ -1,0 +1,118 @@
+==============================================================================
+VUELTA 175, AUDITOR. EL ARBOL DE TRABAJO LLEGA CONTAMINADO Y ESTO LO SELLA
+ANTES DE TOCAR NADA. Medido con mis comandos, no narrado.
+==============================================================================
+
+--- git rev-parse --abbrev-ref HEAD / git rev-parse HEAD
+pasada-unica
+0a8aa92dd6a1505ecf10d2355e881f8a05ff20fd
+
+--- git status --porcelain
+ M dataset/metadata/master_graph.json
+ M dataset/metadata/phase1_run_log.json
+ M dataset/nodos/ab_testing_optimizacion.json
+ M dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json
+ M scripts/loop/verificar_mutaciones_viejas.py
+?? docs/loop/SALIDA_V175_AUD_ARBOL_CONTAMINADO.txt
+?? docs/loop/SALIDA_V175_AUD_CIEGA.txt
+?? docs/loop/SALIDA_V175_AUD_DESTAPE.txt
+?? docs/loop/SALIDA_V175_AUD_MIS_CLASES.txt
+?? docs/loop/SALIDA_V175_T1A_ANTES.txt
+?? docs/loop/SALIDA_V175_T1A_GUARDAS_NOMINA.txt
+?? docs/loop/SALIDA_V175_T1A_NOMINA_DESPUES.txt
+?? scripts/loop/_prueba_v142_2d_bateria.py
+?? scripts/loop/vuelta175_cierre.py
+?? scripts/loop/vuelta175_correr_bateria.py
+
+--- git diff --numstat -- dataset/
+81	77	dataset/metadata/master_graph.json
+12	1	dataset/metadata/phase1_run_log.json
+5	3	dataset/nodos/ab_testing_optimizacion.json
+4	2	dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json
+
+--- LA MUTACION, ENTERA, EN LOS DOS FICHEROS DE NODO Y EN EL LOG
+diff --git a/dataset/metadata/phase1_run_log.json b/dataset/metadata/phase1_run_log.json
+index 32b0bddd..8ecd5a94 100644
+--- a/dataset/metadata/phase1_run_log.json
++++ b/dataset/metadata/phase1_run_log.json
+@@ -5,5 +5,16 @@
+   "alias_redirects": [],
+   "alias_unresolved_removed": [],
+   "final_cleanup_removed": [],
+-  "symmetrize_added": []
++  "symmetrize_added": [
++    {
++      "node": "abandonar_la_falacia_del_arreglo_rapido",
++      "key": "nodos_siguientes",
++      "added": "ab_testing_optimizacion"
++    },
++    {
++      "node": "abandonar_la_falacia_del_arreglo_rapido",
++      "key": "nodos_previos",
++      "added": "ab_testing_optimizacion"
++    }
++  ]
+ }
+\ No newline at end of file
+diff --git a/dataset/nodos/ab_testing_optimizacion.json b/dataset/nodos/ab_testing_optimizacion.json
+index c1180341..7caf8528 100644
+--- a/dataset/nodos/ab_testing_optimizacion.json
++++ b/dataset/nodos/ab_testing_optimizacion.json
+@@ -18,16 +18,18 @@
+     "customer_jobs",
+     "copy_testing",
+     "heat_maps_eye_tracking",
+-    "usability_testing_producto"
++    "usability_testing_producto",
++    "abandonar_la_falacia_del_arreglo_rapido"
+   ],
+   "nodos_siguientes": [
+     "analisis_de_cohortes",
+     "optimizacion_metricas_crecimiento",
+-    "funnel_get_customers_optimizacion"
++    "funnel_get_customers_optimizacion",
++    "abandonar_la_falacia_del_arreglo_rapido"
+   ],
+   "condiciones_activacion": [
+     "Cuando el startup ya tiene tráfico web/mobile pero necesita mejorar tasas de conversión",
+     "Cuando se busca optimizar continuamente cualquier paso del funnel de adquisición"
+   ],
+   "etiqueta_arbol": "Compara Versiones, Mejora Resultados"
+-}
+\ No newline at end of file
++}
+diff --git a/dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json b/dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json
+index b3526646..7f5eb306 100644
+--- a/dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json
++++ b/dataset/nodos/abandonar_la_falacia_del_arreglo_rapido.json
+@@ -13,11 +13,13 @@
+   "entregable_esperado": "Informe que evite soluciones superficiales y proponga un análisis de causas organizacionales profundas del incidente",
+   "nodos_previos": [
+     "responsabilizacion_del_trabajador",
+-    "diseno_imperfeccion_intencional"
++    "diseno_imperfeccion_intencional",
++    "ab_testing_optimizacion"
+   ],
+   "nodos_siguientes": [
+     "hard_fixes_organizacionales",
+-    "investigacion_new_view"
++    "investigacion_new_view",
++    "ab_testing_optimizacion"
+   ],
+   "condiciones_activacion": [
+     "Inmediatamente después de un incidente o accidente, cuando hay presión por cerrar el caso rápidamente",
+
+--- QUIEN LA ESCRIBE: scripts/loop/vuelta154_tarea2d_mutacion_guarda.py
+    elegir_por_computo() recorre 'for A in sorted(vivos)', o sea el PRIMER
+    nodo vivo por orden alfabetico, y mutar(A, alias) mete el alias en LAS
+    DOS listas de A. Lo que hay en el arbol calza exacto: A =
+    ab_testing_optimizacion y el alias en nodos_siguientes Y nodos_previos.
+    Su restauracion vive en un finally, y un finally no corre si al proceso
+    lo matan.
+
+--- ESTA EN LA NOMINA DE LA BATERIA:
+309:    # `vuelta154_tarea2d_mutacion_guarda.py` SALIO ROJO UNA VEZ y no se ha
+322:    ("vuelta154_tarea2d_mutacion_guarda.py", False),
+
+--- SALIDA_V175_BATERIA.txt (la ruta que el encargo pide sellar):
+   existe: False | bytes: n/a

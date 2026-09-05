@@ -1,0 +1,167 @@
+==================== verificar_mutaciones_viejas.py --mutar-nomina
+==============================================================================
+PRUEBA DE MUTACION DE LA MIRADA DE LA NOMINA SOBRE SI MISMA
+(vuelta 163, TAREA 2; adjudicacion 6.8 del acta 162)
+==============================================================================
+
+A) EL DIRECTORIO FABRICADO Y LA NOMINA FABRICADA
+   ficheros: vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py, vuelta115_tarea9_un_script_cualquiera.py, vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py
+   nomina:   vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py
+   CIFRA arneses que el censo reconoce: 4 (vuelta100_tarea1_mutacion_vieja.py, vuelta110_tarea2_mutacion_dentro.py, vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py)
+
+B) LA MIRADA, CON DOS FUERA DE LA NOMINA
+   ultima vuelta de la nomina: 110
+   CIFRA que faltan: 2 (vuelta120_tarea3_mutacion_fuera.py, vuelta121_tarea4_mutacion_tambien_fuera.py)
+
+C) SI ENTRAN EN LA NOMINA, DEJA DE FALTAR NADIE
+   CIFRA que faltan tras meterlos: 0
+
+D) LOS ANTERIORES A LA ULTIMA VUELTA NO SE RECLAMAN, Y SE DICE POR QUE
+   (la regla de esta bateria nace en la vuelta 144 y no dice si
+   alcanza a lo anterior: ensancharla sin adjudicacion seria
+   moverle la vara a nadie)
+   con la nomina en la vuelta 121, faltan: 0 (ninguno)
+
+E) Y SOBRE EL REPO DE VERDAD, HOY
+   ultima vuelta de la nomina real: 174
+   CIFRA que faltan de verdad: 0 (ninguno)
+
+   P.16: el temporal se retira. Existe todavia: False
+
+F) PASADA 1, LOS CASOS TAL CUAL
+   el_censo_no_cuenta_lo_que_no_es_arnes          PASA   (real=4 esperado=4)
+   la_ultima_vuelta_se_computa_de_la_nomina       PASA   (real=110 esperado=110)
+   y_ve_LOS_DOS_que_faltan                        PASA   (real=['vuelta120_tarea3_mutacion_fuera.py', 'vuelta121_tarea4_mutacion_tambien_fuera.py'] esperado=['vuelta120_tarea3_mutacion_fuera.py', 'vuelta121_tarea4_mutacion_tambien_fuera.py'])
+   metidos_en_la_nomina_ya_no_faltan              PASA   (real=0 esperado=0)
+   los_anteriores_no_se_reclaman                  PASA   (real=0 esperado=0)
+   en_el_repo_de_hoy_no_falta_ninguno             PASA   (real=0 esperado=0)
+   CIFRA casos: 6 | pasan: 6 | fallan: 0
+
+G) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   el_censo_no_cuenta_lo_que_no_es_arnes          CAE
+   la_ultima_vuelta_se_computa_de_la_nomina       CAE
+   y_ve_LOS_DOS_que_faltan                        CAE
+   metidos_en_la_nomina_ya_no_faltan              CAE
+   los_anteriores_no_se_reclaman                  CAE
+   en_el_repo_de_hoy_no_falta_ninguno             CAE
+   CIFRA casos que CAEN: 6 de 6
+
+VERDE DE LA MUTACION: 6 casos, los 6 pasan y los 6 CAEN al mutarles el valor esperado. La mirada VE los que faltan, deja de verlos cuando entran, no reclama los anteriores a su vara, y sobre el repo de hoy no falta ninguno.
+FIN
+EXITCODE: 0
+==================== verificar_mutaciones_viejas.py --mutar-reproducibilidad
+==============================================================================
+PRUEBA DE MUTACION DEL COTEJO DE REPRODUCIBILIDAD (TAREA 2.f, vuelta 141)
+==============================================================================
+  script_inestable.py    escribe SALIDA_DE_MENTIRA.txt | inestable=True (esperado True)  VERDE
+       SALIDA_DE_MENTIRA.txt, linea 2
+          corrida 1: sufijo aleatorio: 4f8784c48799418b98016d24985831fb
+          corrida 2: sufijo aleatorio: cf32b76c52aa45f492afa0b9e4d02aff
+  script_estable.py      escribe SALIDA_DE_MENTIRA.txt | inestable=False (esperado False)  VERDE
+  P.16: el directorio temporal se retira. Existe todavia: False
+
+  Y AHORA SE MUTA EL ESPERADO DE CADA UNA y se re-evalua contra el MISMO
+  valor obtenido: la que siga verde no puede fallar nunca.
+  comprobaciones: 2 | verdes: 2 | caen con el esperado mutado: 2
+
+VERDE DE LA MUTACION: el cotejo marca la salida aleatoria como NO
+REPRODUCIBLE y deja pasar la fija, y las dos comprobaciones caen al
+mutarles el esperado.
+FIN
+EXITCODE: 0
+==================== vuelta142_2d_mutacion_bateria.py
+==============================================================================
+MUTACION DE LA TAREA 2.d | vuelta 142
+VIEJAS leida del modulo: 87 script(s)
+   vuelta133_tarea2e_mutacion_cifras.py     admite --sujeto: False
+   vuelta135_2e_mutacion_1.py               admite --sujeto: True
+   vuelta135_2e_mutacion_2.py               admite --sujeto: True
+   vuelta135_2e_mutacion_3.py               admite --sujeto: True
+   vuelta139_2b_mutaciones.py               admite --sujeto: False
+   vuelta140_2a_mutaciones.py               admite --sujeto: False
+   vuelta141_2_mutaciones.py                admite --sujeto: False
+   vuelta143_2a_mutaciones.py               admite --sujeto: False
+   vuelta143_2b_mutacion_bateria.py         admite --sujeto: False
+   vuelta143_2c_mutacion_positivo.py        admite --sujeto: False
+   vuelta144_2a_mutaciones.py               admite --sujeto: False
+   vuelta144_2b_mutacion_giro.py            admite --sujeto: False
+   vuelta144_2d_mutacion_cobertura.py       admite --sujeto: False
+   vuelta144_3a_mutaciones.py               admite --sujeto: False
+   vuelta144_3b_mutacion_negativa.py        admite --sujeto: False
+   vuelta144_3c_caso_positivo_1190.py       admite --sujeto: False
+   vuelta145_2a_mutacion_ancla_unica.py     admite --sujeto: False
+   vuelta145_2b_mutacion_arneses.py         admite --sujeto: False
+   vuelta145_2c_mutacion_censo.py           admite --sujeto: False
+   vuelta146_2b_mutacion_ausencias.py       admite --sujeto: False
+   vuelta147_2c_mutacion_vitalidad.py       admite --sujeto: False
+   vuelta147_3d_mutacion_nomina.py          admite --sujeto: False
+   vuelta147_3e_simular_a26.py              admite --sujeto: False
+   vuelta148_0d_mutacion_corredor.py        admite --sujeto: False
+   vuelta148_1a_mutacion_embebido.py        admite --sujeto: False
+   vuelta148_2a_mutacion_nomina_commiteada.py admite --sujeto: False
+   vuelta148_2b_mutacion_cifras_conjunto.py admite --sujeto: False
+   vuelta148_2c_mutacion_vara_parada.py     admite --sujeto: False
+   vuelta148_2d_mutacion_exencion.py        admite --sujeto: False
+   vuelta150_5c_mutacion_ciclo.py           admite --sujeto: False
+   vuelta154_tarea2d_mutacion_guarda.py     admite --sujeto: False
+   vuelta154_tarea6_mutacion_corredor.py    admite --sujeto: False
+   vuelta156_tarea4b_mutacion_tallador.py   admite --sujeto: False
+   vuelta156_tarea5d_mutacion_corredor.py   admite --sujeto: False
+   vuelta157_tarea4b_mutacion_tachado.py    admite --sujeto: False
+   vuelta157_tarea5c_mutacion_ruido.py      admite --sujeto: False
+   vuelta157_tarea6b_mutacion_re_sellado.py admite --sujeto: False
+   vuelta159_tarea6c_mutacion_exencion.py   admite --sujeto: False
+   vuelta160_tarea6b_mutacion_puerta.py     admite --sujeto: False
+   vuelta160_tarea7c_mutacion_guarda_cita.py admite --sujeto: False
+   vuelta161_tarea1a_mutacion_alcance.py    admite --sujeto: False
+   vuelta162_tarea1a_mutacion_serie.py      admite --sujeto: False
+   vuelta162_tarea2a_mutacion_puerta.py     admite --sujeto: False
+   vuelta162_tarea2b_mutacion_excepcion.py  admite --sujeto: False
+   vuelta162_tarea3_mutacion_fila.py        admite --sujeto: False
+   vuelta163_tarea1b_mutacion_relectura.py  admite --sujeto: False
+   vuelta163_tarea1c_mutacion_tramo.py      admite --sujeto: False
+   vuelta163_tarea2_mutacion_nomina.py      admite --sujeto: False
+   vuelta163_tarea4a_mutacion_cobertura.py  admite --sujeto: False
+   vuelta163_tarea4b_mutacion_re_sellado.py admite --sujeto: False
+   vuelta163_tarea5a_mutacion_contador.py   admite --sujeto: False
+   vuelta164_tarea1_mutacion_registro.py    admite --sujeto: False
+   vuelta164_tarea4_mutacion_005.py         admite --sujeto: False
+   vuelta165_tarea1_mutacion_registro.py    admite --sujeto: False
+   vuelta165_tarea2_mutacion_censo.py       admite --sujeto: False
+   vuelta165_tarea4_mutacion_sujeto.py      admite --sujeto: False
+   vuelta165_tarea6_mutacion_op_l_01.py     admite --sujeto: False
+   vuelta166_tarea1_mutacion_registro.py    admite --sujeto: False
+   vuelta166_tarea2_mutacion_correccion.py  admite --sujeto: False
+   vuelta166_tarea3_mutacion_retrato.py     admite --sujeto: False
+   vuelta166_tarea6_mutacion_guarda.py      admite --sujeto: False
+   vuelta167_tarea1_mutacion_registro.py    admite --sujeto: False
+   vuelta167_tarea3_mutacion_ii.py          admite --sujeto: False
+   vuelta168_tarea1_mutacion_registro.py    admite --sujeto: False
+   vuelta168_tarea1_mutacion_nota.py        admite --sujeto: False
+   vuelta168_tarea2_mutacion_reconstructor.py admite --sujeto: False
+   vuelta168_tarea4_mutacion_op_v_01.py     admite --sujeto: False
+   vuelta169_tarea2_mutacion_reanclaje.py   admite --sujeto: False
+   vuelta170_tarea1a_mutacion_registro.py   admite --sujeto: False
+   vuelta170_tarea2a_mutacion_aislador.py   admite --sujeto: False
+   vuelta98_tarea4_prueba_mutacion.py       admite --sujeto: False
+   vuelta99_tarea3_prueba_mutacion.py       admite --sujeto: False
+   vuelta109_tarea2_4_prueba_mutacion.py    admite --sujeto: False
+   vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py admite --sujeto: False
+   vuelta113_tarea2_mutacion_tsc.py         admite --sujeto: False
+   vuelta171_mutacion_busqueda_acta.py      admite --sujeto: False
+   vuelta171_tarea1a_mutacion_registro.py   admite --sujeto: False
+   vuelta171_tarea5a_mutacion_enchufe.py    admite --sujeto: False
+   vuelta172_tarea1b_mutacion_registro.py   admite --sujeto: False
+   vuelta172_tarea2a_mutacion_exclusion.py  admite --sujeto: False
+   vuelta172_tarea3_mutacion_numeracion.py  admite --sujeto: False
+   vuelta172_tarea5_mutacion_cierre.py      admite --sujeto: False
+   vuelta173_tarea1b_mutacion_hueco.py      admite --sujeto: False
+   vuelta174_tarea1a_mutacion_44.py         admite --sujeto: False
+   vuelta174_tarea1b_mutacion_esqueleto.py  admite --sujeto: False
+   vuelta174_tarea1b_mutacion_sellar.py     admite --sujeto: False
+   vuelta174_tarea2b_mutacion_confirmar.py  admite --sujeto: False
+==============================================================================
+
+(a) cifra del rotulo 87 | len(VIEJAS) 87
+
+(b) quitado vuelta174_tarea2b_mutacion_confirmar.py -> cifra 86 (antes 87)

@@ -1,0 +1,369 @@
+==================== vuelta173_tarea1b_mutacion_hueco.py
+==============================================================================
+VUELTA 173, TAREA 1.b: CASO POSITIVO POR MUTACION DEL HUECO DECLARADO
+Y MEDIDO de cerrar_reporte.py
+==============================================================================
+
+A) EL HUECO COMPLETO SI CIERRA (si esto no pasara, la 1.b no serviria)
+   hueco completo -> le faltan 0 motivo(s): []
+   reporte con hueco completo y bateria vacia -> faltan 0, codigos []
+
+B) LOS TRES QUE EL ENCARGO EXIGE QUE CAIGAN
+   un hueco SIN MEDICION                motivos 1, codigos ['(4)']
+      el hueco no trae sus bytes medidos
+   un hueco SIN ATRIBUCION              motivos 1, codigos ['(4)']
+      el hueco no trae atribucion de quien si la corrio ni declaracion de que no la corrio nadie
+   un hueco con la ATRIBUCION VACIA     motivos 1, codigos ['(4)']
+      el hueco no trae atribucion de quien si la corrio ni declaracion de que no la corrio nadie
+   una CORRIDA DE OTRA VUELTA           motivos 2, codigos ['(4)']
+      el hueco no nombra la bateria de la vuelta 172
+
+C) LA AUSENCIA MUDA NO ES UN HUECO DECLARADO
+   seccion 9 muda -> motivos 1, codigos ['(4)']
+
+D) UNA CORRIDA DE OTRA VUELTA PEGADA COMO BATERIA TAMPOCO PASA
+   la bateria de SU vuelta   -> faltan 0, codigos []
+   la bateria de la 171      -> faltan 1, codigos ['(4)']
+
+E) SIN SABER DE QUE VUELTA ES EL REPORTE, UN HUECO NO SE PUEDE JUZGAR
+   vuelta=None -> motivos 1, codigos ['(4)']
+
+F) LOS 17 CASOS VIEJOS LLAMAN CON TRES ARGUMENTOS Y NO SE ROMPEN
+   piezas_que_faltan(texto, filas, bateria) -> faltan 0, codigos []
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_al_hueco_completo_no_le_falta_nada                     PASA
+   A_el_reporte_con_hueco_completo_no_falla                 PASA
+   A_y_no_nombra_la_pieza_4                                 PASA
+   B_un_hueco_SIN_MEDICION_da_al_menos_un_motivo            PASA
+   B_un_hueco_SIN_MEDICION_nombra_su_causa                  PASA
+   B_un_hueco_SIN_MEDICION_hace_fallar_la_pieza_4           PASA
+   B_un_hueco_SIN_ATRIBUCION_da_al_menos_un_motivo          PASA
+   B_un_hueco_SIN_ATRIBUCION_nombra_su_causa                PASA
+   B_un_hueco_SIN_ATRIBUCION_hace_fallar_la_pieza_4         PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_da_al_menos_un_motivo PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_nombra_su_causa       PASA
+   B_un_hueco_con_la_ATRIBUCION_VACIA_hace_fallar_la_pieza_4 PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_da_al_menos_un_motivo       PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_nombra_su_causa             PASA
+   B_una_CORRIDA_DE_OTRA_VUELTA_hace_fallar_la_pieza_4      PASA
+   C_la_ausencia_muda_da_motivo                             PASA
+   C_y_la_nombra_como_muda                                  PASA
+   C_y_hace_fallar_la_pieza_4                               PASA
+   D_la_bateria_de_su_vuelta_cierra                         PASA
+   D_una_bateria_ajena_hace_fallar_la_4                     PASA
+   D_y_dice_de_que_vuelta_es                                PASA
+   E_sin_vuelta_el_hueco_no_se_juzga                        PASA
+   E_y_la_pieza_4_falla                                     PASA
+   F_la_llamada_de_tres_argumentos_sigue_cerrando           PASA
+   CIFRA casos que pasan: 24 de 24
+
+H) PASADA 2, SE MUTA EL ESPERADO Y CADA CASO TIENE QUE CAER
+   A_al_hueco_completo_no_le_falta_nada                     CAE  (esperado mutado=1)
+   A_el_reporte_con_hueco_completo_no_falla                 CAE  (esperado mutado=1)
+   A_y_no_nombra_la_pieza_4                                 CAE  (esperado mutado=True)
+   B_un_hueco_SIN_MEDICION_da_al_menos_un_motivo            CAE  (esperado mutado=False)
+   B_un_hueco_SIN_MEDICION_nombra_su_causa                  CAE  (esperado mutado=False)
+   B_un_hueco_SIN_MEDICION_hace_fallar_la_pieza_4           CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_da_al_menos_un_motivo          CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_nombra_su_causa                CAE  (esperado mutado=False)
+   B_un_hueco_SIN_ATRIBUCION_hace_fallar_la_pieza_4         CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_da_al_menos_un_motivo CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_nombra_su_causa       CAE  (esperado mutado=False)
+   B_un_hueco_con_la_ATRIBUCION_VACIA_hace_fallar_la_pieza_4 CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_da_al_menos_un_motivo       CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_nombra_su_causa             CAE  (esperado mutado=False)
+   B_una_CORRIDA_DE_OTRA_VUELTA_hace_fallar_la_pieza_4      CAE  (esperado mutado=False)
+   C_la_ausencia_muda_da_motivo                             CAE  (esperado mutado=False)
+   C_y_la_nombra_como_muda                                  CAE  (esperado mutado=False)
+   C_y_hace_fallar_la_pieza_4                               CAE  (esperado mutado=False)
+   D_la_bateria_de_su_vuelta_cierra                         CAE  (esperado mutado=1)
+   D_una_bateria_ajena_hace_fallar_la_4                     CAE  (esperado mutado=False)
+   D_y_dice_de_que_vuelta_es                                CAE  (esperado mutado=False)
+   E_sin_vuelta_el_hueco_no_se_juzga                        CAE  (esperado mutado=2)
+   E_y_la_pieza_4_falla                                     CAE  (esperado mutado=False)
+   F_la_llamada_de_tres_argumentos_sigue_cerrando           CAE  (esperado mutado=1)
+   CIFRA casos que caen al mutar el esperado: 24 de 24
+
+VERDE: los 24 casos pasan tal cual y los 24 caen al mutar el esperado.
+EXITCODE de vuelta173_tarea1b_mutacion_hueco.py: 0
+==================== vuelta174_tarea1a_mutacion_44.py
+==============================================================================
+CASO POSITIVO POR MUTACION DE corregir(), VUELTA 174 TAREA 1.a
+==============================================================================
+SUJETO CONGELADO: cero lecturas de disco, cero escrituras.
+
+1. la correccion YA ESTA escrita (idempotencia)      CAE, y por su motivo
+      espera 'YA ESTA escrita' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la correccion YA ESTA escrita en este texto: este instrumento no la escribe dos veces
+
+2. la marca de fin de tabla NO esta                  CAE, y por su motivo
+      espera 'aparece 0 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la marca '<!-- FIN TABLA DE TAREAS -->' aparece 0 veces y tiene que aparecer UNA
+
+3. la marca de fin de tabla esta DOS veces           CAE, y por su motivo
+      espera 'aparece 2 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la marca '<!-- FIN TABLA DE TAREAS -->' aparece 2 veces y tiene que aparecer UNA
+
+4. la fila de la TAREA 5 NO esta                     CAE, y por su motivo
+      espera 'aparece 0 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila '| **TAREA 5** |' aparece 0 veces y tiene que aparecer UNA
+
+5. la fila de la TAREA 5 esta DOS veces              CAE, y por su motivo
+      espera 'aparece 2 veces' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila '| **TAREA 5** |' aparece 2 veces y tiene que aparecer UNA
+
+6. no se pasa ninguna medicion                       CAE, y por su motivo
+      espera 'sin la medicion que la sostiene' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> no se paso ninguna medicion: una correccion sin la medicion que la sostiene no se escribe
+
+7. la fila no trae la celda `| **CERRADA** |`        CAE, y por su motivo
+      espera 'no trae la celda' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la celda '| **CERRADA** |' exactamente una vez (trae 0)
+
+8. la fila no trae la prueba falsa                   CAE, y por su motivo
+      espera 'no trae la prueba falsa' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la prueba falsa '`_T5_CERRAR_REPORTE` (la corrida de esta misma vu
+
+9. la fila trae la prueba falsa DOS veces            CAE, y por su motivo
+      espera 'exactamente una vez (trae 2)' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> la fila de la TAREA 5 no trae la prueba falsa '`_T5_CERRAR_REPORTE` (la corrida de esta misma vu
+
+10. el reporte YA trae un guion largo de antes       CAE, y por su motivo
+      espera 'guiones largos o medios' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> se colaron guiones largos o medios
+
+11. el reporte YA trae un guion medio de antes       CAE, y por su motivo
+      espera 'guiones largos o medios' | motivos: 1 | nombrado: SI | texto intacto: SI
+      -> se colaron guiones largos o medios
+
+------------------------------------------------------------------------------
+EL CASO VERDE, QUE ES EL QUE PRUEBA QUE LOS ROJOS NO SON ROJOS SIEMPRE
+------------------------------------------------------------------------------
+   no devuelve ningun motivo                            SI
+   el texto SI cambia                                   SI
+   el CERRADA viejo sigue entero                        SI
+   y esta tachado                                       SI
+   solo se tacha UNO de los cinco CERRADA               SI
+   la prueba falsa sigue entera                         SI
+   y esta tachada                                       SI
+   la prueba que si existe NO se toca                   SI
+   el bloque de correccion esta                         SI
+   y esta DEBAJO de la tabla                            SI
+   la medicion viaja dentro del bloque                  SI
+   las otras cuatro filas siguen una vez cada una       SI
+   es adicion: el texto nuevo es mas largo              SI
+   cero guiones largos y medios                         SI
+
+------------------------------------------------------------------------------
+LA MUTACION DEL PROPIO ARNES (la prueba de que estos casos pueden caer)
+------------------------------------------------------------------------------
+Se le pide a la funcion un motivo que NO existe y se comprueba que el
+arnes lo detecta como NO CAE, en vez de aprobarlo por parecido:
+   un motivo inventado aparece entre los devueltos: NO, como debe ser
+
+==============================================================================
+CIFRA casos: 26 | verdes: 26 | rojos: 0
+==============================================================================
+VERDE: las 26 comprobaciones se comportan, y cada guarda de corregir()
+       cae por su propio motivo cuando se le quita su pieza.
+EXITCODE de vuelta174_tarea1a_mutacion_44.py: 0
+==================== vuelta174_tarea1b_mutacion_esqueleto.py
+==============================================================================
+CASO POSITIVO POR MUTACION DEL PASO 0 DEL ESQUELETO DE LA 174
+==============================================================================
+Los ficheros de mentira viven en un temporal. El repo NO se toca.
+
+------------------------------------------------------------------------------
+(A) vuelta_del_reporte_del_arbol(), PURA: ni lee ni escribe
+------------------------------------------------------------------------------
+   una cabecera normal devuelve su numero -> 172                  SI
+   otra cabecera devuelve OTRO numero (no hay constante escondida) -> 168 SI
+   un numero de tres cifras se lee entero -> 1740                 SI
+   sin almohadilla NO es cabecera -> None                         SI
+   si la cabecera no esta en la PRIMERA linea, no vale -> None    SI
+   otro titulo cualquiera devuelve None -> None                   SI
+   sin numero devuelve None -> None                               SI
+   el texto vacio devuelve None -> None                           SI
+
+------------------------------------------------------------------------------
+(B) exigir_archivado(), SOLO COMPROBACION, sobre el temporal
+------------------------------------------------------------------------------
+   VERDE cuando el archivado calza byte a byte con el que se pisa SI
+   (b) cae si se pregunta por una vuelta SIN reporte archivado    SI
+       y nombra su clausula (b), no otra                          SI
+   (c) cae si el fichero archivado lleva el reporte de OTRA vuelta SI
+   (c) cae si la primera linea del archivado no es cabecera       SI
+   (d) cae si el REPORTE.md del arbol NO esta guardado byte a byte SI
+       y publica los DOS sha256 para que se puedan cotejar        SI
+   (d) cae tambien por UN SOLO byte de diferencia                 SI
+   y VUELVE al verde al restaurar el texto: no es un rojo permanente SI
+
+------------------------------------------------------------------------------
+(C) LA MUTACION QUE PRUEBA EL CAMBIO DE ESTA VUELTA
+------------------------------------------------------------------------------
+   El arbol tiene el reporte de la 172 y la vuelta anterior es la 173.
+   Se corre la guarda con LOS DOS SUJETOS y se comparan:
+      sujeto TECLEADO (VUELTA - 1 = 173) -> ROJO
+      sujeto LEIDO del fichero      (= 172) -> VERDE
+   el sujeto tecleado da ROJO y el leido da VERDE: el cambio hace algo SI
+   y el leido NO es un numero tecleado aqui: sale de la cabecera  SI
+
+   temporal borrado: C:\Users\AlexDesk\AppData\Local\Temp\v174_mut_w_3caieh -> existe: NO
+
+==============================================================================
+CIFRA casos: 19 | verdes: 19 | rojos: 0
+==============================================================================
+VERDE: las 19 comprobaciones se comportan. La guarda del paso 0 cae por
+       cada una de sus clausulas cuando se le quita su pieza, y el sujeto
+       leido del fichero pasa donde el tecleado se caeria.
+EXITCODE de vuelta174_tarea1b_mutacion_esqueleto.py: 0
+==================== vuelta174_tarea1b_mutacion_sellar.py
+==============================================================================
+CASO POSITIVO POR MUTACION DE sellar(), VUELTA 174
+==============================================================================
+
+------------------------------------------------------------------------------
+(A) LOS ROJOS DE sellar(), Y EL TEXTO VUELVE INTACTO
+------------------------------------------------------------------------------
+   cae sin ninguna ruta medida                                    SI
+      -> no se paso ninguna ruta medida: sin prueba no se sella
+   cae si la fila de la tarea no esta                             SI
+      -> la fila '| **TAREA 9** |' aparece 0 veces y tiene que aparecer UNA
+   cae si la fila esta DOS veces                                  SI
+      -> la fila '| **TAREA 1** |' aparece 2 veces y tiene que aparecer UNA
+   cae si la fila no tiene cuatro celdas                          SI
+      -> la fila de la tarea 1 tiene 3 celdas y tiene que tener 4
+   cae si la celda YA estaba sellada                              SI
+      -> la celda de estado YA esta sellada: no se sella dos veces
+
+------------------------------------------------------------------------------
+(B) EL CASO VERDE
+------------------------------------------------------------------------------
+   no devuelve ningun motivo                                      SI
+   el estado viejo sigue ENTERO                                   SI
+   y esta TACHADO                                                 SI
+   el estado nuevo esta al lado                                   SI
+   la ruta de la prueba esta nombrada                             SI
+   y sus bytes MEDIDOS van al lado                                SI
+   la fila de la TAREA 2 no se toco                               SI
+   solo se tacha UNA celda                                        SI
+   es adicion: el texto crecio                                    SI
+   la fila sigue teniendo cuatro celdas                           SI
+
+------------------------------------------------------------------------------
+(C) LOS BYTES NO SON UNA CONSTANTE: OTRA MEDIDA DA OTRO TEXTO
+------------------------------------------------------------------------------
+   con otra medida escribe otros bytes                            SI
+   y NO escribe los de la otra corrida                            SI
+   y nombra la otra ruta                                          SI
+
+------------------------------------------------------------------------------
+(D) medir(), CONTRA FICHEROS DE VERDAD EN UN TEMPORAL
+------------------------------------------------------------------------------
+   mide un fichero que existe y no esta vacio (5 bytes exactos)   SI
+      -> [('../../AppData/Local/Temp/v174_sellar_u8_zfkiu/lleno.txt', 5)]
+   CAE si el fichero mide CERO BYTES                              SI
+      -> la ruta ../../AppData/Local/Temp/v174_sellar_u8_zfkiu/vacio.txt existe pero mide CERO BYTES
+   CAE si el fichero NO EXISTE                                    SI
+      -> la ruta ../../AppData/Local/Temp/v174_sellar_u8_zfkiu/no_existe.txt NO EXISTE, y una ruta que promet
+   y CAE aunque solo UNA de varias falte                          SI
+   temporal borrado: existe -> NO
+
+==============================================================================
+CIFRA casos: 22 | verdes: 22 | rojos: 0
+==============================================================================
+VERDE: las 22 comprobaciones se comportan. Una celda no se puede sellar
+       contra un fichero inexistente ni contra uno de cero bytes.
+EXITCODE de vuelta174_tarea1b_mutacion_sellar.py: 0
+==================== vuelta174_tarea2b_mutacion_confirmar.py
+==============================================================================
+CASO POSITIVO POR MUTACION DE vuelta172_tarea1b_confirmar_r41.py
+==============================================================================
+SUJETO CONGELADO: cero lecturas de disco, cero escrituras.
+
+------------------------------------------------------------------------------
+(A) acotar_r41(): la cabecera aparece UNA vez o no hay acote
+------------------------------------------------------------------------------
+   acota cuando la cabecera aparece una vez                       SI
+   y el acote PARA en la cabecera de la R.42, no se la come       SI
+   cae si la cabecera del R.41 no esta                            SI
+      -> la cabecera '## R.41.' aparece 0 veces y tiene que aparecer UNA
+   cae si la cabecera del R.41 esta DOS veces                     SI
+      -> la cabecera '## R.41.' aparece 2 veces y tiene que aparecer UNA
+
+------------------------------------------------------------------------------
+(B) glosas_del_r41() y estados_del_reporte(): se leen, no se teclean
+------------------------------------------------------------------------------
+   lee las dos glosas del sujeto                                  SI
+      -> [('6.1', 'EJECUTADA', '2.a', 'docs/loop/ACTA_AUDITOR.md:99999'), ('6.2', 'SIN TOCAR NADA', None, 'do
+   de la primera extrae su tarea '2.a' del texto                  SI
+   de la segunda extrae None porque se acata                      SI
+   con OTRA tarea escrita devuelve OTRA: no hay constante escondida SI
+      -> ('6.1', 'EJECUTADA', '4.b', 'docs/loop/ACTA_AUDITOR.md:99999')
+   lee los tres estados de la tabla del reporte                   SI
+      -> {'1': '**CERRADA**', '2': '**CERRADA**', '4': '**ABIERTA, SIN CERRAR**'}
+   y lee el de la TAREA 4 tal cual, sin suavizarlo                SI
+   de un reporte sin tabla no inventa ninguno                     SI
+
+------------------------------------------------------------------------------
+(C) bloque_de_confirmacion(): los rojos
+------------------------------------------------------------------------------
+   cae sin ninguna glosa                                          SI
+      -> no se leyo ninguna glosa del R.41
+   cae sin ninguna fila de tabla                                  SI
+      -> no se leyo ninguna fila de la tabla de tareas del reporte
+   cae con una glosa que no dice ni tarea ni que se acate         SI
+      -> estas glosas no dicen ni su tarea ni que se acaten: 6.9
+
+------------------------------------------------------------------------------
+(D) anexar_al_r41(): los rojos, y el texto vuelve INTACTO
+------------------------------------------------------------------------------
+   cae si la confirmacion YA estaba anexada                       SI
+      -> la confirmacion YA ESTA anexada: no se escribe dos veces
+   cae si el R.41 no se puede acotar                              SI
+      -> la cabecera '## R.41.' aparece 0 veces y tiene que aparecer UNA
+   cae si el bloque que se le pasa esta vacio                     SI
+      -> el bloque de confirmacion esta vacio
+   cae si el bloque mete un guion largo                           SI
+      -> se colaron guiones largos: el fichero tenia 0 y quedaria con 1
+   cae si el bloque mete un guion medio                           SI
+      -> se colaron guiones medios: el fichero tenia 0 y quedaria con 1
+
+------------------------------------------------------------------------------
+(E) LA GUARDA DE GUIONES MIRA EL DELTA Y NO EL TOTAL
+------------------------------------------------------------------------------
+   El motivo esta medido y es de la casa: la sede real es historica y
+   YA trae guiones largos de 2026. Una guarda sobre el TOTAL se caeria
+   por culpa de texto que nadie escribio hoy.
+   PASA sobre una sede que ya traia un guion largo de antes       SI
+   y el guion viejo sigue ahi, ni se borra ni se cuenta como nuevo SI
+   y CAE igualmente si el bloque anade UNO nuevo sobre esa misma sede SI
+      -> se colaron guiones largos: el fichero tenia 1 y quedaria con 2
+
+------------------------------------------------------------------------------
+(F) EL CASO VERDE, QUE PRUEBA QUE LOS ROJOS NO SON ROJOS SIEMPRE
+------------------------------------------------------------------------------
+   no devuelve ningun motivo                                      SI
+   el texto crece: es adicion                                     SI
+   el texto de ANTES del R.41 no se toca                          SI
+   el R.41 viejo sigue entero dentro del nuevo                    SI
+   el bloque queda DENTRO del R.41 y no detras del R.42           SI
+   el R.42 de al lado sigue una sola vez                          SI
+   la tabla del bloque trae una fila por glosa                    SI
+   la fila de la 6.1 lleva el estado MEDIDO de su tarea           SI
+   la de la 6.2, que se acata, no inventa ninguna tarea           SI
+   los bytes de la fuente viajan medidos dentro del bloque        SI
+   cero guiones largos y medios nuevos                            SI
+
+------------------------------------------------------------------------------
+(G) LA MUTACION DEL PROPIO ARNES
+------------------------------------------------------------------------------
+   un motivo inventado NO aparece entre los devueltos             SI
+
+==============================================================================
+CIFRA casos: 34 | verdes: 34 | rojos: 0
+==============================================================================
+VERDE: las 34 comprobaciones se comportan, y cada guarda cae por su
+       propio motivo devolviendo el texto INTACTO.
+EXITCODE de vuelta174_tarea2b_mutacion_confirmar.py: 0
