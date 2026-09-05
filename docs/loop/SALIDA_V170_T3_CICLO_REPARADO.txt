@@ -1,0 +1,30 @@
+=== EL CICLO ENTERO Y EN SU ORDEN, CORRIDO DOS VECES SEGUIDAS PARA PROBAR QUE CIERRA ===
+MOTIVO: corri run_phase1 SUELTO (paso 1 sin los pasos 2, 3 y 4) y el guardian del
+commit lo cazo con 71 nodos divergentes de etiqueta_arbol. Es MI CAIDA, y el remedio
+no es saltarse el guardian: es correr el ciclo entero, que es lo que EJECUTOR y el
+encargo dicen con esas palabras.
+
+############ PASADA 1 ############
+--- 1) run_phase1 --reaplico-curaduria
+GATE 0: OK
+--- 2) etiquetas_de_cara --aplicar
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+--- 3) sync_assets_web
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+--- 4) numstat de dataset/ web/ engine/
+CIFRA filas: 0
+
+############ PASADA 2 ############
+--- 1) run_phase1 --reaplico-curaduria
+GATE 0: OK
+--- 2) etiquetas_de_cara --aplicar
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+--- 3) sync_assets_web
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+--- 4) numstat de dataset/ web/ engine/
+CIFRA filas: 0
+

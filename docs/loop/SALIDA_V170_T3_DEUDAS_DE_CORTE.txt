@@ -1,0 +1,99 @@
+==============================================================================
+VUELTA 170, TAREA 3: LAS DOS DEUDAS DE CORTE, POR 9.21 MAS 9.10
+==============================================================================
+
+A) EL SUJETO, MEDIDO ANTES DE TOCARLO
+   fichas en docs/plan/OPERACIONES.jsonl: 71
+   OP-I-01 vive en la linea 44, con 18 claves
+   OP-L-01 vive en la linea 41, con 18 claves
+   OP-L-02 vive en la linea 42, con 18 claves
+
+B) 3.a LAS APARICIONES DEL 53 EN LA NOTA DE OP-I-01, CONTADAS AQUI
+   CIFRA caracteres de la nota: 10928
+   CIFRA apariciones del literal 53: 7
+   CIFRA de ellas escritas '53 familias': 6
+   CIFRA de ellas escritas '53 familia_de_ids': 1
+      ...323 ENTRADAS: 221 actos, 53 familias de ids, 14 defectos, 13 racimos, 12 figuras...
+      ...SOLO la cifra de actos. Los otros cinco sumandos de las 323 entradas (53 familias de ids, 14 defectos, 13 racimos, 12 figuras...
+      ...ENTARIO.jsonl mide HOY 336 entradas (10 dominio, 221 acto, 13 racimo, 53 familia_de_ids, 20 figura, 19 defecto), no las 323 q...
+      ...que no depende del corte es el CONTEO DE FILAS de los cinco sumandos (53 familias, 19 defectos, 13 racimos, 20 figuras, 10 do...
+      ...te, los ejemplares de las veinte figuras y el estado de fusion de las 53 familias, tal como el propio punto 2d de RECOMPUTO_3...
+      ... seccion TAREA vuelta 15 punto 2d), EL TOTAL NUEVO ES 450 (335 actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 do...
+      ...actas, corte 2026-08-11). EL TOTAL REAL NO ES 450: es 671 (556 actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 do...
+   CONTRASTE, y es contraste y no fuente: el encargo dice SIETE.
+   yo cuento 7, CALZA
+
+C) 3.a LAS ARITMETICAS, SUMADAS Y NO CREIDAS
+   CIFRA aritmeticas halladas que llevan un 53: 3
+      total escrito 450 | sumandos [335, 53, 19, 13, 20, 10] | suma real 450 | CUADRA
+         335 actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 dominios
+      total escrito 671 | sumandos [556, 53, 19, 13, 20, 10] | suma real 671 | CUADRA
+         556 actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 dominios
+      total escrito 323 | sumandos [221, 53, 14, 13, 12, 10] | suma real 323 | CUADRA
+         221 actos, 53 familias de ids, 14 defectos, 13 racimos, 12 figuras y 10 dominios
+   CIFRA aritmeticas que no cuadran consigo mismas: 0
+
+D) 3.a EL INVENTARIO DE HOY, CONTADO DE SU FICHERO
+   docs/plan/INVENTARIO.jsonl: 672 entradas
+      acto             556
+      familia_de_ids   54
+      figura           20
+      defecto          19
+      racimo           13
+      dominio          10
+   CIFRA suma de los tipos: 672 (CUADRA)
+   CIFRA familia_de_ids HOY: 54
+
+E) 3.b EL MARCADOR DE HOY, RECOMPUTADO DEL ARCHIVO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388 filas
+      clase A: 551
+      clase B: 72
+      clase C: 5
+      clase D: 2760
+   puestos distintos 3388 | maximo 3388 | huecos 0
+
+F) 3.b LA CLAUSULA 2, Y SI YA TIENE CORRECCION FECHADA
+   OP-L-01: 6 elementos en `verificacion`
+      la clausula LITERAL esta en los indices [1]
+      elementos que la citan DENTRO de una CORRECCION DECLARADA: [4]
+         [4] CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR EL MISMO CARRIL DEL BANCO 9.10, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN CLAVE N...
+      -> YA TIENE CORRECCION FECHADA PARA ESTA CLAUSULA: SI
+   OP-L-02: 3 elementos en `verificacion`
+      la clausula LITERAL esta en los indices [1]
+      elementos que la citan DENTRO de una CORRECCION DECLARADA: []
+      -> YA TIENE CORRECCION FECHADA PARA ESTA CLAUSULA: NO
+
+   LO QUE ESTO CAMBIA RESPECTO DE LO QUE EL ENCARGO SUPONE, Y SE DICE:
+   el encargo da por hecho que a las DOS les falta el corte. Medido
+   aqui, a OP-L-01 ya se lo pusieron y a OP-L-02 no.
+   NO SE ESCRIBE UNA SEGUNDA CORRECCION QUE DIGA LO MISMO: dos versiones
+   de la misma cosa es justo lo que la casa no quiere. Se declara.
+
+G) LO QUE SE VA A ESCRIBIR, Y QUE NADA VIEJO SE PIERDE
+   CIFRA trozos viejos de la nota comprobados: 7
+   CIFRA perdidos: 0
+   la nota pasa de 10928 a 12772 caracteres, y SOLO CRECE: True
+   la verificacion de OP-L-02 pasa de 3 a 4 elementos
+   la clausula literal sigue en la lista: True
+
+H) EL ESQUEMA NO CRECE Y NADA MAS SE MUEVE
+   OP-I-01: claves antes 18, despues 18 | campos movidos de mas: 0 []
+      estado antes 'LISTA', despues 'LISTA'
+   OP-L-02: claves antes 18, despues 18 | campos movidos de mas: 0 []
+      estado antes 'LISTA', despues 'LISTA'
+   OP-L-01: NO SE TOCA. Su clausula 2 ya tiene correccion fechada desde
+            la vuelta 166, y escribir otra igual seria dejar dos
+            versiones de la misma cosa.
+
+I) ESCRITO, Y RECONTADO DESPUES DE ESCRIBIR
+   CIFRA fichas antes: 71 | despues: 71
+   OP-I-01 sigue en la linea 44: True
+   OP-L-02 sigue en la linea 42: True
+   CIFRA caracteres de la nota de OP-I-01 en disco: 12772
+   CIFRA apariciones del 53 en la nota de disco (sube a proposito): 12
+   CIFRA de las SIETE VIEJAS que sobreviven ENTERAS: 7 de 7
+   CIFRA elementos de verificacion de OP-L-02 en disco: 4
+   la clausula literal del 2.117 sigue en disco: True
+   OP-L-01 en disco tiene 6 elementos de verificacion (sin tocar): True
+
+VERDE: las dos deudas de corte quedan pagadas por adicion.
