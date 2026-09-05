@@ -1,0 +1,48 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL PASO 0 DEL ESQUELETO DE LA 174
+==============================================================================
+Los ficheros de mentira viven en un temporal. El repo NO se toca.
+
+------------------------------------------------------------------------------
+(A) vuelta_del_reporte_del_arbol(), PURA: ni lee ni escribe
+------------------------------------------------------------------------------
+   una cabecera normal devuelve su numero -> 172                  SI
+   otra cabecera devuelve OTRO numero (no hay constante escondida) -> 168 SI
+   un numero de tres cifras se lee entero -> 1740                 SI
+   sin almohadilla NO es cabecera -> None                         SI
+   si la cabecera no esta en la PRIMERA linea, no vale -> None    SI
+   otro titulo cualquiera devuelve None -> None                   SI
+   sin numero devuelve None -> None                               SI
+   el texto vacio devuelve None -> None                           SI
+
+------------------------------------------------------------------------------
+(B) exigir_archivado(), SOLO COMPROBACION, sobre el temporal
+------------------------------------------------------------------------------
+   VERDE cuando el archivado calza byte a byte con el que se pisa SI
+   (b) cae si se pregunta por una vuelta SIN reporte archivado    SI
+       y nombra su clausula (b), no otra                          SI
+   (c) cae si el fichero archivado lleva el reporte de OTRA vuelta SI
+   (c) cae si la primera linea del archivado no es cabecera       SI
+   (d) cae si el REPORTE.md del arbol NO esta guardado byte a byte SI
+       y publica los DOS sha256 para que se puedan cotejar        SI
+   (d) cae tambien por UN SOLO byte de diferencia                 SI
+   y VUELVE al verde al restaurar el texto: no es un rojo permanente SI
+
+------------------------------------------------------------------------------
+(C) LA MUTACION QUE PRUEBA EL CAMBIO DE ESTA VUELTA
+------------------------------------------------------------------------------
+   El arbol tiene el reporte de la 172 y la vuelta anterior es la 173.
+   Se corre la guarda con LOS DOS SUJETOS y se comparan:
+      sujeto TECLEADO (VUELTA - 1 = 173) -> ROJO
+      sujeto LEIDO del fichero      (= 172) -> VERDE
+   el sujeto tecleado da ROJO y el leido da VERDE: el cambio hace algo SI
+   y el leido NO es un numero tecleado aqui: sale de la cabecera  SI
+
+   temporal borrado: C:\Users\AlexDesk\AppData\Local\Temp\v174_mut_p4vujkb1 -> existe: NO
+
+==============================================================================
+CIFRA casos: 19 | verdes: 19 | rojos: 0
+==============================================================================
+VERDE: las 19 comprobaciones se comportan. La guarda del paso 0 cae por
+       cada una de sus clausulas cuando se le quita su pieza, y el sujeto
+       leido del fichero pasa donde el tecleado se caeria.
