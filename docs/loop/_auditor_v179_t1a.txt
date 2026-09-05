@@ -1,0 +1,95 @@
+==============================================================================
+LA CUENTA DE LA NOMINA Y DEL CENSO, ESCRITA ENTERA (vuelta 178, TAREA 1.a)
+==============================================================================
+
+A) DE DONDE SALE CADA CIFRA, NOMBRADO ANTES DE IMPRIMIRLA
+   (1) arneses_del_directorio()  sobre scripts/loop
+   (2) len(VIEJAS), la nomina de scripts/loop/verificar_mutaciones_viejas.py
+   (3) censo menos nomina, computado aqui con conjuntos
+   (4) nomina_invisible_al_censo(), la funcion pura de la propia bateria
+   el universo del censo, nombrado: ficheros `vuelta<N>...<familia>...py`
+   con familia en mutacion, caso_positivo, simular
+
+B) LA TABLA, ENTERA Y NO EN PROSA
+
+| que se cuenta | instrumento | cifra |
+|---|---|---|
+| arneses que ve el censo | `arneses_del_directorio()` | **160** |
+| entradas de la nomina | `len(VIEJAS)` | **98** |
+| del censo, FUERA de la nomina | conjuntos, aqui | **62** |
+| de la nomina, que el censo NO VE | `nomina_invisible_al_censo()` | **0** |
+| del censo y de la nomina a la vez | conjuntos, aqui | **98** |
+
+C) LA RESTA COMPROBADA, QUE ES LO QUE CAZA UNA CIFRA SUELTA
+   IDENTIDAD GENERAL, valida siempre:
+      censo - nomina = (fuera de la nomina) - (invisibles al censo)
+      160 - 98 = 62   contra   62 - 0 = 62
+      CALZAN: SI
+   IDENTIDAD SIMPLE, valida SOLO si los invisibles son cero:
+      censo - nomina = fuera de la nomina
+      160 - 98 = 62   contra   62
+      gobierna hoy: SI (invisibles = 0)
+      CALZAN: SI
+
+D) LAS CIFRAS QUE OTRAS SEDES PUBLICARON, AL LADO Y NO EN VEZ DE
+   (banco 9.10: una correccion que tapa lo que corrige no se puede auditar)
+
+| sede | censo | nomina | faltaban | su resta | cuadra consigo misma |
+|---|---|---|---|---|---|
+| reporte de la vuelta 177 (mio, prosa del cuerpo) | 153 | 92 | 2 | 61 | NO: su resta da 61 y fuera de la nomina hay 62 |
+| acta del auditor de la vuelta 178, medido commit a commit | 154 | 92 | 3 | 62 | SI |
+| medicion de HOY, este instrumento | 160 | 98 | (lo dice la 1.b) | 62 | SI |
+
+E) LOS QUE ESTAN FUERA DE LA NOMINA, UNO A UNO Y POR VUELTA
+   vuelta 24    1: vuelta24_opc04_caso_positivo.py
+   vuelta 27    1: vuelta27_caso_positivo.py
+   vuelta 28    1: vuelta28_caso_positivo.py
+   vuelta 29    1: vuelta29_caso_positivo.py
+   vuelta 30    1: vuelta30_caso_positivo.py
+   vuelta 32    1: vuelta32_caso_positivo.py
+   vuelta 33    1: vuelta33_caso_positivo.py
+   vuelta 39    1: vuelta39_caso_positivo.py
+   vuelta 52    1: vuelta52_caso_positivo.py
+   vuelta 53    1: vuelta53_caso_positivo.py
+   vuelta 54    1: vuelta54_caso_positivo.py
+   vuelta 55    1: vuelta55_caso_positivo.py
+   vuelta 56    1: vuelta56_caso_positivo.py
+   vuelta 57    1: vuelta57_caso_positivo.py
+   vuelta 65    2: vuelta65_caso_positivo_generador.py, vuelta65_caso_positivo_promesas.py
+   vuelta 66    1: vuelta66_caso_positivo_varas.py
+   vuelta 79    1: vuelta79_tarea2_caso_positivo.py
+   vuelta 90    1: vuelta90_tarea3_prueba_mutacion_tallador.py
+   vuelta 91    2: vuelta91_tarea3_prueba_mutacion_composicion.py, vuelta91_tarea4_prueba_mutacion_direccion.py
+   vuelta 95    1: vuelta95_tarea2a_prueba_mutacion_barrido.py
+   vuelta 96    3: vuelta96_tarea1c_prueba_mutacion.py, vuelta96_tarea2_prueba_mutacion.py, vuelta96_tarea3_prueba_mutacion.py
+   vuelta 97    1: vuelta97_tarea2_prueba_mutacion.py
+   vuelta 98    2: vuelta98_tarea1_prueba_mutacion.py, vuelta98_tarea3_prueba_mutacion.py
+   vuelta 102   1: vuelta102_tarea1_prueba_mutacion_apertura.py
+   vuelta 110   1: vuelta110_tarea2_prueba_mutacion.py
+   vuelta 115   1: vuelta115_tarea2_4_mutacion_z.py
+   vuelta 116   1: vuelta116_tarea2_3_mutacion_aa.py
+   vuelta 117   1: vuelta117_tarea2_3_mutacion_bb.py
+   vuelta 118   2: vuelta118_tarea2_5_mutacion_cc.py, vuelta118_tarea2_6_mutacion_dd.py
+   vuelta 122   1: vuelta122_tarea1e_mutacion_citas.py
+   vuelta 123   2: vuelta123_tarea1e_mutacion_fila_tabla.py, vuelta123_tarea1f_caso_positivo.py
+   vuelta 124   1: vuelta124_tarea1f_caso_positivo_ventana.py
+   vuelta 133   1: vuelta133_tarea2c_mutaciones_identidad.py
+   vuelta 134   3: vuelta134_2d_mutacion_1.py, vuelta134_2d_mutacion_2.py, vuelta134_2f_mutacion.py
+   vuelta 135   1: vuelta135_4c_mutacion.py
+   vuelta 136   1: vuelta136_simular_ops11.py
+   vuelta 137   2: vuelta137_1a_mutacion.py, vuelta137_1c_mutacion.py
+   vuelta 138   2: vuelta138_2a_caso_positivo_63_64.py, vuelta138_2a_mutaciones.py
+   vuelta 139   1: vuelta139_2a_mutaciones.py
+   vuelta 140   2: vuelta140_2b_mutaciones.py, vuelta140_2c_mutacion_ancla.py
+   vuelta 141   2: vuelta141_2d_mutacion_commits.py, vuelta141_2e_caso_positivo_fase03.py
+   vuelta 142   4: vuelta142_2a_mutaciones.py, vuelta142_2b_mutacion_commits.py, vuelta142_2c_mutaciones.py, vuelta142_2d_mutacion_bateria.py
+   vuelta 146   2: vuelta146_3b_simular_op_a_01.py, vuelta146_3c_mutacion_aduana.py
+   vuelta 150   1: vuelta150_2d_simular_op_c_05.py
+   vuelta 160   1: vuelta160_tarea3b_caso_positivo.py
+   CIFRA vueltas distintas representadas fuera de la nomina: 45
+
+F) LAS ENTRADAS DE LA NOMINA QUE EL CENSO NO VE
+   (ninguna)
+
+VERDE: la cuenta cierra consigo misma. Censo 160, nomina 98, fuera de la nomina 62, invisibles al censo 0, y las dos identidades se cumplen.
+FIN

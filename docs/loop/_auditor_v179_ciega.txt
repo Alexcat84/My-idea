@@ -1,0 +1,525 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   AUDITORIA VUELTA 178: los 33 puestos que los 48 lados de OP_L_03_TRIANGULOS.jsonl nombran en el archivo. 15 de ellos son los del discutible marcado D.6 (lados SIN MARCA DE NINGUNA DE LAS DOS) y 18 son de lados CON MARCA, o sea FUERA del marcado.
+
+CIFRA pares elegidos: 33
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 207
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: estrategia_de_innovacion_y_tecnologia
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (estrategia_de_innovacion_y_tecnologia): 5
+     paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+     paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+     paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+     paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+     paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+------------------------------------------------------------------------------
+puesto_intra: 219
+nodo_a: option_pool_negociacion
+nodo_b: pool_opciones_empleados
+  pasos de A (option_pool_negociacion): 4
+     paso 1: Elaborar un 'option budget' detallado: listar todas las contrataciones planeadas hasta la siguiente ronda de financiamiento y el tamaño aproximado de opciones necesario para cada una.
+     paso 2: Presentar este presupuesto como evidencia objetiva durante la negociación del tamaño del pool.
+     paso 3: Si el VC insiste en un pool mayor al necesario, proponer aceptar el tamaño propuesto por el fundador a cambio de otorgar protección anti-dilución completa si el pool debe expandirse antes de la próxima ronda.
+     paso 4: Evitar aceptar un pool desproporcionadamente grande solo para complacer al inversionista.
+  pasos de B (pool_opciones_empleados): 4
+     paso 1: Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.
+     paso 2: Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.
+     paso 3: Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.
+     paso 4: Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool).
+------------------------------------------------------------------------------
+puesto_intra: 280
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: seleccion_arenas_estrategicas
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (seleccion_arenas_estrategicas): 6
+     paso 1: Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación
+     paso 2: Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales
+     paso 3: Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias
+     paso 4: Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura
+     paso 5: Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver
+     paso 6: Selecciona y prioriza de 2 a 4 arenas específicas como foco final
+------------------------------------------------------------------------------
+puesto_intra: 334
+nodo_a: construccion_de_leverage
+nodo_b: leverage_en_negociacion_con_vcs
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (leverage_en_negociacion_con_vcs): 4
+     paso 1: Desarrolla tracción (producto, ingresos, contratos) antes de acercarte a los inversionistas
+     paso 2: Busca varias propuestas de inversión (term sheets) al mismo tiempo, de distintos inversionistas
+     paso 3: Explora ofertas de compra como palanca de negociación
+     paso 4: Empieza las negociaciones con suficiente anticipación, antes de que se te acabe el efectivo disponible (runway)
+------------------------------------------------------------------------------
+puesto_intra: 371
+nodo_a: metrics_that_matter_framework
+nodo_b: validar_modelo_financiero
+  pasos de A (metrics_that_matter_framework): 6
+     paso 1: Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+     paso 2: Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+     paso 3: Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+     paso 4: Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+     paso 5: Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+     paso 6: Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+  pasos de B (validar_modelo_financiero): 6
+     paso 1: Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable
+     paso 2: Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)
+     paso 3: Determinar costos operativos básicos, costos de canal y márgenes
+     paso 4: Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año
+     paso 5: Verificar el balance de caja disponible (runway)
+     paso 6: Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas
+------------------------------------------------------------------------------
+puesto_intra: 394
+nodo_a: construccion_de_leverage
+nodo_b: gestion_multiples_term_sheets
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (gestion_multiples_term_sheets): 5
+     paso 1: Identificar a todos los VCs objetivo antes de iniciar conversaciones formales
+     paso 2: Coordinar el ritmo de las conversaciones para que avancen en paralelo
+     paso 3: Comunicar a cada VC que existen otras conversaciones en curso sin revelar identidades
+     paso 4: Nunca compartir el contenido de un term sheet con otro inversor
+     paso 5: Usar el primer term sheet recibido como palanca para acelerar a otros interesados
+------------------------------------------------------------------------------
+puesto_intra: 451
+nodo_a: validacion_hipotesis_ingresos
+nodo_b: verificar_modelo_ingresos
+  pasos de A (validacion_hipotesis_ingresos): 5
+     paso 1: Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+     paso 2: Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+     paso 3: Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+     paso 4: Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+     paso 5: Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+  pasos de B (verificar_modelo_ingresos): 6
+     paso 1: Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+     paso 2: Calcula el ingreso bruto directo estimado por trimestre
+     paso 3: Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+     paso 4: Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+     paso 5: Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+     paso 6: Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+------------------------------------------------------------------------------
+puesto_intra: 460
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: estrategia_de_innovacion_de_producto
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (estrategia_de_innovacion_de_producto): 6
+     paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+     paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+     paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+     paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+     paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 467
+nodo_a: diseno_experimentos_hipotesis
+nodo_b: diseno_experimentos_pass_fail
+  pasos de A (diseno_experimentos_hipotesis): 4
+     paso 1: Pregúntate qué necesitas saber para poder avanzar
+     paso 2: Define la prueba más simple posible para conseguir esa respuesta
+     paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+     paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+  pasos de B (diseno_experimentos_pass_fail): 6
+     paso 1: Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+     paso 2: Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+     paso 3: Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+     paso 4: Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+     paso 5: Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+     paso 6: Registrar no solo el resultado pass/fail sino también los insights cualitativos
+------------------------------------------------------------------------------
+puesto_intra: 507
+nodo_a: fase_diseno_prototipado_modelos
+nodo_b: proceso_ideacion_modelo_negocio
+  pasos de A (fase_diseno_prototipado_modelos): 5
+     paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+     paso 2: Prototipar cada variante usando el Business Model Canvas
+     paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+     paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+     paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+  pasos de B (proceso_ideacion_modelo_negocio): 5
+     paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+     paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+     paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+     paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+     paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+------------------------------------------------------------------------------
+puesto_intra: 511
+nodo_a: disenar_tests_pass_fail
+nodo_b: diseno_experimentos_pass_fail
+  pasos de A (disenar_tests_pass_fail): 5
+     paso 1: Preguntarse qué se quiere aprender
+     paso 2: Diseñar el test pass/fail más simple posible
+     paso 3: Definir criterios numéricos claros de éxito o fracaso
+     paso 4: Ejecutar el test y evitar detenerlo antes de tiempo
+     paso 5: Registrar aprendizajes e insights, no solo datos
+  pasos de B (diseno_experimentos_pass_fail): 6
+     paso 1: Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+     paso 2: Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+     paso 3: Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+     paso 4: Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+     paso 5: Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+     paso 6: Registrar no solo el resultado pass/fail sino también los insights cualitativos
+------------------------------------------------------------------------------
+puesto_intra: 530
+nodo_a: estrategia_de_innovacion_de_producto
+nodo_b: estrategia_de_innovacion_y_tecnologia
+  pasos de A (estrategia_de_innovacion_de_producto): 6
+     paso 1: Definir objetivos claros de innovación de producto (% de ventas/ganancias de nuevos productos a 3-5 años)
+     paso 2: Vincular explícitamente las metas de innovación con las metas generales del negocio
+     paso 3: Definir arenas estratégicas (mercados, tecnologías, sectores) donde enfocar los esfuerzos de innovación
+     paso 4: Asignar 'buckets estratégicos' de recursos a diferentes tipos de proyectos o arenas
+     paso 5: Crear un roadmap de producto que proyecte iniciativas de desarrollo a 3-5 años
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+  pasos de B (estrategia_de_innovacion_y_tecnologia): 5
+     paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+     paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+     paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+     paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+     paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+------------------------------------------------------------------------------
+puesto_intra: 572
+nodo_a: proceso_ideacion_modelo_negocio
+nodo_b: prototipado_modelos_negocio
+  pasos de A (proceso_ideacion_modelo_negocio): 5
+     paso 1: Ensamblar un equipo diverso en antigüedad, experiencia, área funcional y conocimiento del cliente
+     paso 2: Realizar una fase de inmersión: investigar clientes, tecnologías y modelos de negocio existentes
+     paso 3: Expandir generando la mayor cantidad de ideas posible por cada bloque del lienzo de modelo de negocio, sin criticar todavía y priorizando cantidad sobre calidad
+     paso 4: Definir criterios de selección (tiempo de implementación, potencial de ingresos, resistencia del cliente, etc.)
+     paso 5: Reducir a entre tres y cinco ideas y prototiparlas usando el lienzo de modelo de negocio
+  pasos de B (prototipado_modelos_negocio): 6
+     paso 1: Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso
+     paso 2: Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, con una verificación básica de los hechos
+     paso 3: Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios
+     paso 4: Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos
+     paso 5: Realizar una prueba de campo con clientes reales para validar la propuesta de valor, los canales y los mecanismos de precio
+     paso 6: Construir al menos tres prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano
+------------------------------------------------------------------------------
+puesto_intra: 573
+nodo_a: colaboracion_cadena_suministro
+nodo_b: compartir_datos_cadena_suministro
+  pasos de A (colaboracion_cadena_suministro): 5
+     paso 1: Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+     paso 2: Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+     paso 3: Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+     paso 4: Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+     paso 5: Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+  pasos de B (compartir_datos_cadena_suministro): 4
+     paso 1: Definir qué datos de demanda, decisiones y desempeño se pueden compartir de forma segura
+     paso 2: Establecer mecanismos electrónicos (reportes vía web) para compartir información con socios
+     paso 3: Compartir decisiones internas con impacto en demanda (ej. promociones) con proveedores clave
+     paso 4: Evaluar cuantitativamente los beneficios de la colaboración frente a los riesgos de exposición
+------------------------------------------------------------------------------
+puesto_intra: 636
+nodo_a: diseno_experimentos_hipotesis
+nodo_b: realizar_pruebas_pasa_no_pasa
+  pasos de A (diseno_experimentos_hipotesis): 4
+     paso 1: Pregúntate qué necesitas saber para poder avanzar
+     paso 2: Define la prueba más simple posible para conseguir esa respuesta
+     paso 3: Diseña el experimento (una maqueta, una demo, un prototipo físico) sin necesidad de programar nada real
+     paso 4: Haz la prueba con un número mínimo de clientes y mide la señal que obtienes
+  pasos de B (realizar_pruebas_pasa_no_pasa): 4
+     paso 1: Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó
+     paso 2: Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto
+     paso 3: Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje
+     paso 4: Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc.
+------------------------------------------------------------------------------
+puesto_intra: 639
+nodo_a: diseno_experimentos_pass_fail
+nodo_b: realizar_pruebas_pasa_no_pasa
+  pasos de A (diseno_experimentos_pass_fail): 6
+     paso 1: Preguntarte '¿qué quiero aprender?' para cada hipótesis antes de diseñar el test
+     paso 2: Diseñar el test pass/fail más simple posible, usando landing pages, presentaciones o mockups según convenga
+     paso 3: Definir de antemano el criterio numérico de éxito (ej. 9 de 30 pedidos)
+     paso 4: Ejecutar el test con un grupo pequeño de clientes reales (ej. 10 a 30 prospectos), con rapidez y bajo costo
+     paso 5: Extender la duración del test lo suficiente para evitar confundir un máximo local con el máximo global
+     paso 6: Registrar no solo el resultado pass/fail sino también los insights cualitativos
+  pasos de B (realizar_pruebas_pasa_no_pasa): 4
+     paso 1: Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó
+     paso 2: Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto
+     paso 3: Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje
+     paso 4: Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc.
+------------------------------------------------------------------------------
+puesto_intra: 641
+nodo_a: fase_diseno_prototipado_modelos
+nodo_b: prototipado_modelos_negocio
+  pasos de A (fase_diseno_prototipado_modelos): 5
+     paso 1: Hacer brainstorming de múltiples variantes de modelo de negocio
+     paso 2: Prototipar cada variante usando el Business Model Canvas
+     paso 3: Desarrollar una narrativa/historia para cada modelo y buscar retroalimentación externa
+     paso 4: Evitar descartar ideas solo porque expertos digan 'no funcionará'
+     paso 5: Seleccionar el modelo con mayor potencial tras explorar alternativas
+  pasos de B (prototipado_modelos_negocio): 6
+     paso 1: Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso
+     paso 2: Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, con una verificación básica de los hechos
+     paso 3: Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios
+     paso 4: Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos
+     paso 5: Realizar una prueba de campo con clientes reales para validar la propuesta de valor, los canales y los mecanismos de precio
+     paso 6: Construir al menos tres prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano
+------------------------------------------------------------------------------
+puesto_intra: 730
+nodo_a: colaboracion_cadena_suministro
+nodo_b: efecto_bullwhip
+  pasos de A (colaboracion_cadena_suministro): 5
+     paso 1: Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+     paso 2: Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+     paso 3: Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+     paso 4: Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+     paso 5: Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+  pasos de B (efecto_bullwhip): 6
+     paso 1: Mide qué tan grande es el efecto látigo en tu negocio comparando cómo varía la demanda en distintos puntos de tu cadena
+     paso 2: Calcula cuánto te está costando en producción y en programar tu operación
+     paso 3: Calcula cuánto te está costando en transporte, envíos y recepción de mercadería
+     paso 4: Averigua cuánto inventario necesitas para no quedarte sin producto y cuánto te cuesta mantenerlo
+     paso 5: Revisa cuánto estás perdiendo en ventas por no tener producto disponible cuando lo necesitas
+     paso 6: Usa estos números para decidir si vale la pena invertir en compartir datos o coordinarte mejor con tus proveedores
+------------------------------------------------------------------------------
+puesto_intra: 787
+nodo_a: construccion_de_leverage
+nodo_b: estrategia_competencia_vcs
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (estrategia_competencia_vcs): 4
+     paso 1: Planea tu ronda con una ventana de 3 a 6 meses.
+     paso 2: Sincroniza tus conversaciones con varios inversores para que las ofertas (term sheets) te lleguen en fechas cercanas.
+     paso 3: No reveles con qué otros inversores estás hablando, salvo que sean colaboradores conocidos entre ellos.
+     paso 4: Pide feedback concreto si un inversor decide no invertir.
+------------------------------------------------------------------------------
+puesto_intra: 791
+nodo_a: metrics_that_matter_framework
+nodo_b: verificar_modelo_ingresos
+  pasos de A (metrics_that_matter_framework): 6
+     paso 1: Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado
+     paso 2: Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes
+     paso 3: Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto
+     paso 4: Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo
+     paso 5: Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo
+     paso 6: Define cuál burn rate es aceptable para ti y cuántos pivotes más puedes costear antes de quedarte sin fondos
+  pasos de B (verificar_modelo_ingresos): 6
+     paso 1: Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+     paso 2: Calcula el ingreso bruto directo estimado por trimestre
+     paso 3: Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+     paso 4: Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+     paso 5: Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+     paso 6: Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+------------------------------------------------------------------------------
+puesto_intra: 863
+nodo_a: estrategia_de_innovacion_y_tecnologia
+nodo_b: estrategia_innovacion_producto
+  pasos de A (estrategia_de_innovacion_y_tecnologia): 5
+     paso 1: Identificar mercados atractivos: grandes, en crecimiento, con competencia débil
+     paso 2: Evaluar las competencias core de la empresa en tecnología, marketing y producción
+     paso 3: Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen
+     paso 4: Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas
+     paso 5: Usar esta estrategia como primer filtro de validación en las reuniones de gate
+  pasos de B (estrategia_innovacion_producto): 6
+     paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+     paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+     paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+     paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+     paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 878
+nodo_a: construccion_de_leverage
+nodo_b: tecnica_anclaje_negociacion
+  pasos de A (construccion_de_leverage): 5
+     paso 1: Buscar generar interés de múltiples inversionistas en paralelo, no de forma secuencial
+     paso 2: Sincronizar los tiempos de respuesta de los distintos VCs para recibir term sheets en ventanas similares
+     paso 3: Comunicar que existe interés de otras firmas sin revelar nombres ni compartir term sheets reales
+     paso 4: Anclar en 2-3 términos prioritarios y mantener flexibilidad en el resto
+     paso 5: Nunca ser el primero en ofrecer un term sheet con precio a un VC
+  pasos de B (tecnica_anclaje_negociacion): 4
+     paso 1: Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio
+     paso 2: Definir posiciones razonables pero con margen de flexibilidad en esos puntos
+     paso 3: Comunicar estas posiciones de forma clara y consistente
+     paso 4: Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados
+------------------------------------------------------------------------------
+puesto_intra: 994
+nodo_a: compartir_datos_cadena_suministro
+nodo_b: efecto_bullwhip
+  pasos de A (compartir_datos_cadena_suministro): 4
+     paso 1: Definir qué datos de demanda, decisiones y desempeño se pueden compartir de forma segura
+     paso 2: Establecer mecanismos electrónicos (reportes vía web) para compartir información con socios
+     paso 3: Compartir decisiones internas con impacto en demanda (ej. promociones) con proveedores clave
+     paso 4: Evaluar cuantitativamente los beneficios de la colaboración frente a los riesgos de exposición
+  pasos de B (efecto_bullwhip): 6
+     paso 1: Mide qué tan grande es el efecto látigo en tu negocio comparando cómo varía la demanda en distintos puntos de tu cadena
+     paso 2: Calcula cuánto te está costando en producción y en programar tu operación
+     paso 3: Calcula cuánto te está costando en transporte, envíos y recepción de mercadería
+     paso 4: Averigua cuánto inventario necesitas para no quedarte sin producto y cuánto te cuesta mantenerlo
+     paso 5: Revisa cuánto estás perdiendo en ventas por no tener producto disponible cuando lo necesitas
+     paso 6: Usa estos números para decidir si vale la pena invertir en compartir datos o coordinarte mejor con tus proveedores
+------------------------------------------------------------------------------
+puesto_intra: 1121
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: estrategia_innovacion_producto
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (estrategia_innovacion_producto): 6
+     paso 1: Definir las metas y objetivos generales para el esfuerzo total de innovación del negocio
+     paso 2: Establecer el rol que jugarán los nuevos productos en el logro de las metas generales del negocio
+     paso 3: Identificar y priorizar las arenas estratégicas (mercados, tecnologías, categorías de producto) en las que se enfocará el esfuerzo de I+D
+     paso 4: Decidir la asignación de recursos (personas, presupuesto de I+D, marketing) entre las arenas seleccionadas
+     paso 5: Definir los planes de ataque para ganar en cada arena (ser innovador, seguidor rápido, proveedor de bajo costo)
+     paso 6: Comprometerse con una visión de largo plazo más allá de los proyectos del año en curso
+------------------------------------------------------------------------------
+puesto_intra: 1193
+nodo_a: employee_pool_esop
+nodo_b: option_pool_negociacion
+  pasos de A (employee_pool_esop): 4
+     paso 1: Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.
+     paso 2: Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.
+     paso 3: Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.
+     paso 4: Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante.
+  pasos de B (option_pool_negociacion): 4
+     paso 1: Elaborar un 'option budget' detallado: listar todas las contrataciones planeadas hasta la siguiente ronda de financiamiento y el tamaño aproximado de opciones necesario para cada una.
+     paso 2: Presentar este presupuesto como evidencia objetiva durante la negociación del tamaño del pool.
+     paso 3: Si el VC insiste en un pool mayor al necesario, proponer aceptar el tamaño propuesto por el fundador a cambio de otorgar protección anti-dilución completa si el pool debe expandirse antes de la próxima ronda.
+     paso 4: Evitar aceptar un pool desproporcionadamente grande solo para complacer al inversionista.
+------------------------------------------------------------------------------
+puesto_intra: 1346
+nodo_a: disenar_tests_pass_fail
+nodo_b: realizar_pruebas_pasa_no_pasa
+  pasos de A (disenar_tests_pass_fail): 5
+     paso 1: Preguntarse qué se quiere aprender
+     paso 2: Diseñar el test pass/fail más simple posible
+     paso 3: Definir criterios numéricos claros de éxito o fracaso
+     paso 4: Ejecutar el test y evitar detenerlo antes de tiempo
+     paso 5: Registrar aprendizajes e insights, no solo datos
+  pasos de B (realizar_pruebas_pasa_no_pasa): 4
+     paso 1: Define de antemano el número o porcentaje de clientes que consideras suficiente para decir que la prueba funcionó
+     paso 2: Compara cuánto te cuesta conseguir un cliente contra el precio de tu producto
+     paso 3: Manda invitaciones múltiples (por correo, anuncios) y mide cuántos responden, en números absolutos y en porcentaje
+     paso 4: Clasifica las reacciones de tus clientes en categorías: los que aman el producto, los que piden funciones nuevas, los que no ven la necesidad, etc.
+------------------------------------------------------------------------------
+puesto_intra: 1371
+nodo_a: employee_pool_esop
+nodo_b: pool_opciones_empleados
+  pasos de A (employee_pool_esop): 4
+     paso 1: Negocia el tamaño de la reserva de acciones para empleados como porcentaje de tu tabla de capital después de la inversión.
+     paso 2: Define si la reserva incluye opciones que ya entregaste o solo lo que vas a repartir a futuro.
+     paso 3: Calcula cómo esa dilución afecta el precio por acción que te queda a ti como fundador.
+     paso 4: Planea cómo vas a repartir esa reserva según a quién piensas contratar más adelante.
+  pasos de B (pool_opciones_empleados): 4
+     paso 1: Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.
+     paso 2: Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC.
+     paso 3: Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.
+     paso 4: Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool).
+------------------------------------------------------------------------------
+puesto_intra: 1374
+nodo_a: cash_burn_calculation
+nodo_b: validacion_hipotesis_ingresos
+  pasos de A (cash_burn_calculation): 4
+     paso 1: Calcula tus ingresos netos por trimestre (ingresos brutos menos costos de canal)
+     paso 2: Resta tus costos de ventas, de producto y los operativos corrientes
+     paso 3: El resultado es cuánto dinero quemaste o generaste (cash burn) en ese periodo
+     paso 4: Resta ese número del efectivo que tenías al inicio del trimestre para saber cuánto efectivo te queda
+  pasos de B (validacion_hipotesis_ingresos): 5
+     paso 1: Calcula tus ingresos brutos aproximados multiplicando cuánto vendes por tu precio promedio
+     paso 2: Revisa si ese ingreso te alcanza para cubrir tus costos fijos y variables en el corto plazo
+     paso 3: Evalúa si tu rentabilidad mejora a medida que crecen tus ingresos
+     paso 4: Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda
+     paso 5: Calcula cuánto vale un cliente durante todo el tiempo que te compra (LTV) y usa eso para definir tu precio
+------------------------------------------------------------------------------
+puesto_intra: 2421
+nodo_a: relacion_largo_plazo_proveedor_unico
+nodo_b: relaciones_largo_plazo_con_proveedores
+  pasos de A (relacion_largo_plazo_proveedor_unico): 4
+     paso 1: Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo
+     paso 2: Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas
+     paso 3: Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')
+     paso 4: Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)
+  pasos de B (relaciones_largo_plazo_con_proveedores): 4
+     paso 1: Revisar cuántos proveedores tienes hoy para cada artículo clave que compras
+     paso 2: Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio
+     paso 3: Reducir poco a poco el número de proveedores por artículo hasta quedarte con uno o muy pocos
+     paso 4: Formalizar acuerdos de largo plazo con los proveedores que elijas
+------------------------------------------------------------------------------
+puesto_intra: 2424
+nodo_a: compra_por_precio_mas_bajo_como_error
+nodo_b: fin_precio_como_criterio_unico
+  pasos de A (compra_por_precio_mas_bajo_como_error): 3
+     paso 1: Deja de usar el precio más bajo como el único criterio para decidir a quién le compras
+     paso 2: Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas
+     paso 3: Revisa cómo funcionan juntos los materiales en todo tu proceso, no solo si cumplen la ficha técnica por separado
+  pasos de B (fin_precio_como_criterio_unico): 4
+     paso 1: Calcula el costo total de tener ese material o equipo, no solo el precio que pagas al comprarlo
+     paso 2: Cuando compres, evalúa la calidad y el desempeño en tu producción, no solo el precio
+     paso 3: Construye relaciones de largo plazo con un proveedor único para cada insumo crítico, basadas en confianza
+     paso 4: Sigue una muestra de materiales durante todo tu proceso de producción para comprobar que funcionan bien en conjunto
+------------------------------------------------------------------------------
+puesto_intra: 2438
+nodo_a: fin_precio_como_criterio_unico
+nodo_b: relaciones_largo_plazo_con_proveedores
+  pasos de A (fin_precio_como_criterio_unico): 4
+     paso 1: Calcula el costo total de tener ese material o equipo, no solo el precio que pagas al comprarlo
+     paso 2: Cuando compres, evalúa la calidad y el desempeño en tu producción, no solo el precio
+     paso 3: Construye relaciones de largo plazo con un proveedor único para cada insumo crítico, basadas en confianza
+     paso 4: Sigue una muestra de materiales durante todo tu proceso de producción para comprobar que funcionan bien en conjunto
+  pasos de B (relaciones_largo_plazo_con_proveedores): 4
+     paso 1: Revisar cuántos proveedores tienes hoy para cada artículo clave que compras
+     paso 2: Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio
+     paso 3: Reducir poco a poco el número de proveedores por artículo hasta quedarte con uno o muy pocos
+     paso 4: Formalizar acuerdos de largo plazo con los proveedores que elijas
+------------------------------------------------------------------------------
+puesto_intra: 2927
+nodo_a: compra_por_precio_mas_bajo_como_error
+nodo_b: relaciones_largo_plazo_con_proveedores
+  pasos de A (compra_por_precio_mas_bajo_como_error): 3
+     paso 1: Deja de usar el precio más bajo como el único criterio para decidir a quién le compras
+     paso 2: Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas
+     paso 3: Revisa cómo funcionan juntos los materiales en todo tu proceso, no solo si cumplen la ficha técnica por separado
+  pasos de B (relaciones_largo_plazo_con_proveedores): 4
+     paso 1: Revisar cuántos proveedores tienes hoy para cada artículo clave que compras
+     paso 2: Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio
+     paso 3: Reducir poco a poco el número de proveedores por artículo hasta quedarte con uno o muy pocos
+     paso 4: Formalizar acuerdos de largo plazo con los proveedores que elijas
+------------------------------------------------------------------------------
+puesto_intra: 3102
+nodo_a: fin_precio_como_criterio_unico
+nodo_b: relacion_largo_plazo_proveedor_unico
+  pasos de A (fin_precio_como_criterio_unico): 4
+     paso 1: Calcula el costo total de tener ese material o equipo, no solo el precio que pagas al comprarlo
+     paso 2: Cuando compres, evalúa la calidad y el desempeño en tu producción, no solo el precio
+     paso 3: Construye relaciones de largo plazo con un proveedor único para cada insumo crítico, basadas en confianza
+     paso 4: Sigue una muestra de materiales durante todo tu proceso de producción para comprobar que funcionan bien en conjunto
+  pasos de B (relacion_largo_plazo_proveedor_unico): 4
+     paso 1: Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo
+     paso 2: Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas
+     paso 3: Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')
+     paso 4: Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
