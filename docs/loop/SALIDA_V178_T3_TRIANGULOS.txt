@@ -1,0 +1,345 @@
+==============================================================================
+LOS TRIANGULOS A MAS A MAS D, ANOTADOS CON SU REGLA (vuelta 178, TAREA 3)
+==============================================================================
+
+A) EL SELLO DE LOS VEREDICTOS, ANTES DE TOCAR NADA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      sha256 (normalizado a LF): ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+      bytes en disco: 4051967 | bytes normalizados a LF: 4051967
+
+B) EL MATERIAL, CONTADO Y NO SUPUESTO
+   CIFRA alias del resolutor: 761
+   CIFRA pares con clase, de las DOS fuentes: 2720
+      de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 2712
+      del registro de la vuelta 177: 8
+
+C) LOS ACTOS DONDE SE BUSCA, Y NO SE ELIGE NINGUNO A MANO
+   se miran TODOS los actos del backlog que tienen 3 o mas nodos VIVOS
+   CIFRA actos del backlog: 40
+   CIFRA actos con 3 o mas nodos vivos: 11
+      `cash_burn_calculation`: 5 vivos
+      `construccion_de_leverage`: 5 vivos
+      `estrategia_de_innovacion_arenas`: 4 vivos
+      `colaboracion_cadena_suministro`: 4 vivos
+      `compra_por_precio_mas_bajo_como_error`: 4 vivos
+      `creacion_option_pool`: 4 vivos
+      `disenar_tests_pass_fail`: 4 vivos
+      `fase_diseno_prototipado_modelos`: 4 vivos
+      `analisis_trafico_competitivo`: 3 vivos
+      `crowdfunding_legal_exemptions_jobs_act`: 3 vivos
+      `evaluacion_tecnologias_disruptivas`: 3 vivos
+
+D) LOS TRIANGULOS ENCONTRADOS, UNO A UNO Y CON SU REGLA POR LADO
+
+   TRIANGULO en el acto `cash_burn_calculation`
+      terna: cash_burn_calculation, validacion_hipotesis_ingresos, validar_modelo_financiero
+      lado cash_burn_calculation + validacion_hipotesis_ingresos -> clase D | puestos 1374 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado cash_burn_calculation + validar_modelo_financiero -> clase A | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: dicho como nodo
+         marcas 13 ago en su razon: (ninguna)
+      lado validacion_hipotesis_ingresos + validar_modelo_financiero -> clase A | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `cash_burn_calculation`
+      terna: cash_burn_calculation, validacion_hipotesis_ingresos, verificar_modelo_ingresos
+      lado cash_burn_calculation + validacion_hipotesis_ingresos -> clase D | puestos 1374 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado cash_burn_calculation + verificar_modelo_ingresos -> clase A | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: dicho como nodo
+         marcas 13 ago en su razon: (ninguna)
+      lado validacion_hipotesis_ingresos + verificar_modelo_ingresos -> clase A | puestos 451 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `cash_burn_calculation`
+      terna: metrics_that_matter_framework, validacion_hipotesis_ingresos, validar_modelo_financiero
+      lado metrics_that_matter_framework + validacion_hipotesis_ingresos -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado metrics_that_matter_framework + validar_modelo_financiero -> clase A | puestos 371 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado validacion_hipotesis_ingresos + validar_modelo_financiero -> clase A | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `cash_burn_calculation`
+      terna: metrics_that_matter_framework, validacion_hipotesis_ingresos, verificar_modelo_ingresos
+      lado metrics_that_matter_framework + validacion_hipotesis_ingresos -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado metrics_that_matter_framework + verificar_modelo_ingresos -> clase A | puestos 791 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado validacion_hipotesis_ingresos + verificar_modelo_ingresos -> clase A | puestos 451 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `construccion_de_leverage`
+      terna: construccion_de_leverage, estrategia_competencia_vcs, tecnica_anclaje_negociacion
+      lado construccion_de_leverage + estrategia_competencia_vcs -> clase A | puestos 787 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado construccion_de_leverage + tecnica_anclaje_negociacion -> clase A | puestos 878 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: no trae procedimiento propio, contado como nodo, REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado estrategia_competencia_vcs + tecnica_anclaje_negociacion -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `construccion_de_leverage`
+      terna: construccion_de_leverage, gestion_multiples_term_sheets, tecnica_anclaje_negociacion
+      lado construccion_de_leverage + gestion_multiples_term_sheets -> clase A | puestos 394 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado construccion_de_leverage + tecnica_anclaje_negociacion -> clase A | puestos 878 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: no trae procedimiento propio, contado como nodo, REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado gestion_multiples_term_sheets + tecnica_anclaje_negociacion -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `construccion_de_leverage`
+      terna: construccion_de_leverage, leverage_en_negociacion_con_vcs, tecnica_anclaje_negociacion
+      lado construccion_de_leverage + leverage_en_negociacion_con_vcs -> clase A | puestos 334 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado construccion_de_leverage + tecnica_anclaje_negociacion -> clase A | puestos 878 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: no trae procedimiento propio, contado como nodo, REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado leverage_en_negociacion_con_vcs + tecnica_anclaje_negociacion -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `estrategia_de_innovacion_arenas`
+      terna: estrategia_de_innovacion_arenas, estrategia_de_innovacion_y_tecnologia, estrategia_innovacion_producto
+      lado estrategia_de_innovacion_arenas + estrategia_de_innovacion_y_tecnologia -> clase A | puestos 207 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado estrategia_de_innovacion_arenas + estrategia_innovacion_producto -> clase A | puestos 460, 1121 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado estrategia_de_innovacion_y_tecnologia + estrategia_innovacion_producto -> clase D | puestos 530, 863 | fuente archivo
+         GOBIERNA: correccion declarada del 13 ago 2026 (puestos 530 y 863): LA MADRE Y SU PIEZA, y la vara las separa porque la pieza TRAE procedimiento propio
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: CORRECCION DECLARADA el 13 ago 2026
+
+   TRIANGULO en el acto `estrategia_de_innovacion_arenas`
+      terna: estrategia_de_innovacion_arenas, estrategia_innovacion_producto, seleccion_arenas_estrategicas
+      lado estrategia_de_innovacion_arenas + estrategia_innovacion_producto -> clase A | puestos 460, 1121 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado estrategia_de_innovacion_arenas + seleccion_arenas_estrategicas -> clase A | puestos 280 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado estrategia_innovacion_producto + seleccion_arenas_estrategicas -> clase D | puestos (sin puesto) | fuente registro 177
+         GOBIERNA: correccion declarada del 13 ago 2026 (puestos 530 y 863): LA MADRE Y SU PIEZA, y la vara las separa porque la pieza TRAE procedimiento propio
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: Madre contra pieza
+
+   TRIANGULO en el acto `colaboracion_cadena_suministro`
+      terna: colaboracion_cadena_suministro, compartir_datos_cadena_suministro, efecto_bullwhip
+      lado colaboracion_cadena_suministro + compartir_datos_cadena_suministro -> clase A | puestos 573 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado colaboracion_cadena_suministro + efecto_bullwhip -> clase A | puestos 730 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado compartir_datos_cadena_suministro + efecto_bullwhip -> clase D | puestos 994 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `compra_por_precio_mas_bajo_como_error`
+      terna: compra_por_precio_mas_bajo_como_error, fin_precio_como_criterio_unico, relaciones_largo_plazo_con_proveedores
+      lado compra_por_precio_mas_bajo_como_error + fin_precio_como_criterio_unico -> clase A | puestos 2424 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado compra_por_precio_mas_bajo_como_error + relaciones_largo_plazo_con_proveedores -> clase D | puestos 2927 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado fin_precio_como_criterio_unico + relaciones_largo_plazo_con_proveedores -> clase A | puestos 2438 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `compra_por_precio_mas_bajo_como_error`
+      terna: fin_precio_como_criterio_unico, relacion_largo_plazo_proveedor_unico, relaciones_largo_plazo_con_proveedores
+      lado fin_precio_como_criterio_unico + relacion_largo_plazo_proveedor_unico -> clase D | puestos 3102 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado fin_precio_como_criterio_unico + relaciones_largo_plazo_con_proveedores -> clase A | puestos 2438 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado relacion_largo_plazo_proveedor_unico + relaciones_largo_plazo_con_proveedores -> clase A | puestos 2421 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `creacion_option_pool`
+      terna: employee_pool_esop, option_pool_negociacion, pool_opciones_empleados
+      lado employee_pool_esop + option_pool_negociacion -> clase D | puestos 1193 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado employee_pool_esop + pool_opciones_empleados -> clase A | puestos 1371 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado option_pool_negociacion + pool_opciones_empleados -> clase A | puestos 219 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `disenar_tests_pass_fail`
+      terna: disenar_tests_pass_fail, diseno_experimentos_pass_fail, realizar_pruebas_pasa_no_pasa
+      lado disenar_tests_pass_fail + diseno_experimentos_pass_fail -> clase A | puestos 511 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado disenar_tests_pass_fail + realizar_pruebas_pasa_no_pasa -> clase D | puestos 1346 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado diseno_experimentos_pass_fail + realizar_pruebas_pasa_no_pasa -> clase A | puestos 639 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `disenar_tests_pass_fail`
+      terna: diseno_experimentos_hipotesis, diseno_experimentos_pass_fail, realizar_pruebas_pasa_no_pasa
+      lado diseno_experimentos_hipotesis + diseno_experimentos_pass_fail -> clase A | puestos 467 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado diseno_experimentos_hipotesis + realizar_pruebas_pasa_no_pasa -> clase D | puestos 636 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado diseno_experimentos_pass_fail + realizar_pruebas_pasa_no_pasa -> clase A | puestos 639 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   TRIANGULO en el acto `fase_diseno_prototipado_modelos`
+      terna: fase_diseno_prototipado_modelos, proceso_ideacion_modelo_negocio, prototipado_modelos_negocio
+      lado fase_diseno_prototipado_modelos + proceso_ideacion_modelo_negocio -> clase A | puestos 507 | fuente archivo
+         GOBIERNA: banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE
+         marcas 9.6.1 en su razon: REPITE
+         marcas 13 ago en su razon: (ninguna)
+      lado fase_diseno_prototipado_modelos + prototipado_modelos_negocio -> clase A | puestos 641 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+      lado proceso_ideacion_modelo_negocio + prototipado_modelos_negocio -> clase D | puestos 572 | fuente archivo
+         GOBIERNA: SIN MARCA DE NINGUNA DE LAS DOS
+         marcas 9.6.1 en su razon: (ninguna)
+         marcas 13 ago en su razon: (ninguna)
+
+   CIFRA triangulos A mas A mas D encontrados EN TODO EL BACKLOG: 16
+
+| tramo | actos | triangulos |
+|---|---|---|
+| en los actos QUE LA 177 LEYO | 3 | **9** |
+| en los actos QUE LA 177 NO MIRO | 5 | **7** |
+| **todo el backlog** | 8 | **16** |
+
+   LOS DE LA PRIMERA FILA SON LOS CINCO QUE EL ENCARGO NOMBRA, y la cifra
+   sale del instrumento y no se ajusta a la anterior. LOS DE LA SEGUNDA SON
+   LA RESPUESTA A LA LETRA (d): el patron NO es una casualidad de tres
+   actos, y esto lo dice midiendo y no opinando.
+
+E) LA PRUEBA MEDIDA DEL GRAFO, QUE NO SALE DE NINGUNA RAZON
+   CIFRA nodos implicados en algun triangulo: 31
+
+| nodo | pasos_accionables |
+|---|---|
+| `cash_burn_calculation` | 4 |
+| `colaboracion_cadena_suministro` | 5 |
+| `compartir_datos_cadena_suministro` | 4 |
+| `compra_por_precio_mas_bajo_como_error` | 3 |
+| `construccion_de_leverage` | 5 |
+| `disenar_tests_pass_fail` | 5 |
+| `diseno_experimentos_hipotesis` | 4 |
+| `diseno_experimentos_pass_fail` | 6 |
+| `efecto_bullwhip` | 6 |
+| `employee_pool_esop` | 4 |
+| `estrategia_competencia_vcs` | 4 |
+| `estrategia_de_innovacion_arenas` | 4 |
+| `estrategia_de_innovacion_y_tecnologia` | 5 |
+| `estrategia_innovacion_producto` | 6 |
+| `fase_diseno_prototipado_modelos` | 5 |
+| `fin_precio_como_criterio_unico` | 4 |
+| `gestion_multiples_term_sheets` | 5 |
+| `leverage_en_negociacion_con_vcs` | 4 |
+| `metrics_that_matter_framework` | 6 |
+| `option_pool_negociacion` | 4 |
+| `pool_opciones_empleados` | 4 |
+| `proceso_ideacion_modelo_negocio` | 5 |
+| `prototipado_modelos_negocio` | 6 |
+| `realizar_pruebas_pasa_no_pasa` | 4 |
+| `relacion_largo_plazo_proveedor_unico` | 4 |
+| `relaciones_largo_plazo_con_proveedores` | 4 |
+| `seleccion_arenas_estrategicas` | 6 |
+| `tecnica_anclaje_negociacion` | 4 |
+| `validacion_hipotesis_ingresos` | 5 |
+| `validar_modelo_financiero` | 6 |
+| `verificar_modelo_ingresos` | 6 |
+
+F) EL REPARTO DE REGLAS, CONTADO DE LO DE ARRIBA
+| regla que gobierna el lado | lados |
+|---|---|
+| SIN MARCA DE NINGUNA DE LAS DOS | **24** |
+| banco 9.6.1: un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, RE | **22** |
+| correccion declarada del 13 ago 2026 (puestos 530 y 863): LA MADRE Y SU PIEZA, | **2** |
+| **total de lados** | **48** |
+
+G) EL REGISTRO PROPIO, ESCRITO
+   docs/plan/OP_L_03_TRIANGULOS.jsonl
+      filas: 16
+      bytes en disco: 45168 | bytes normalizados a LF: 45168
+      sha256 en disco: 28d4dd9d709046675d1b404bdce4fdf62a2d98c9e38085e9604f2a8f1414aca9
+      sha256 normalizado a LF: 28d4dd9d709046675d1b404bdce4fdf62a2d98c9e38085e9604f2a8f1414aca9
+
+H) CERO VEREDICTOS MOVIDOS, COMPROBADO Y NO PROMETIDO
+   sha256 ANTES:   ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   sha256 DESPUES: ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   IDENTICOS: SI
+
+VERDE: 16 triangulos anotados con la regla que gobierna cada uno de sus 48 lados, la clase de cada lado leida de su fuente y la prueba de `pasos_accionables` medida del grafo. CERO VEREDICTOS MOVIDOS, comprobado por sha256 antes y despues.
+FIN

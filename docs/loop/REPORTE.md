@@ -77,7 +77,7 @@ vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS Y LAS CORRECCIONES, Y ES BLOQUEANTE. Cinco letras: (a) LA RELECTURA AL DOBLE DEL TRAMO DE LA CAIDA de conteo del acta 177, la cuenta de la nomina y del censo, publicada ENTERA en tabla y con la resta comprobada, porque una cuenta que no cierra consigo misma se caza sola si alguien la escribe entera; (b) `arneses_que_faltan()` SE ARREGLA en la funcion y no en la llamada, con la vara del censo EXPLICITA y con su motivo, sin podar la nomina, y con el caso positivo por mutacion que hoy CAE con la funcion vieja: dos arneses de la MISMA vuelta que la ultima de la nomina, uno dentro y otro fuera, y la funcion tiene que VER al de fuera; (c) EL CUARTO VEREDICTO de `cotejar_clon_declarado.py`, EL ARBOL DE SINTAXIS, sin tocar la clasificacion vieja, en rojo si un fichero no parsea, y con el caso que lo decide todo: dos ficheros que solo difieren en una coma final dan maquina DIFIERE y AST IDENTICO; (d) EL `--puestos` Y EL `--excluir` DEL AISLADOR DE CIEGA, componibles con los selectores que ya tiene, en rojo si un puesto pedido no existe, con la guarda de fuga intacta, y borrando despues la muleta `_auditor_v178_ciega.py` por `P.16`; (e) LAS DOS DE HIGIENE: que `cerrar_reporte.py` CAIGA EN ROJO si el reporte publica una cifra de bytes o un sha sin su pareja, y LA GUARDA DEL SUJETO CONGELADO, que lleva desde la vuelta 145 siendo una frase y no un instrumento | **CERRADA. Las cinco letras entregadas, las cuatro que tocan codigo con arnes propio, y los cuatro arneses DENTRO de la nomina en su misma vuelta** | `SALIDA_V178_T1A_CUENTA.txt`, `_T1B_MUTACION.txt`, `_T1B_NOMINA.txt`, `_T1B_LOS_DOS_DESTAPADOS.txt`, `_T1C_MUTACION.txt`, `_T1C_ARNES_VIEJO.txt`, `_T1C_COTEJO_176.txt`, `_T1D_MUTACION.txt`, `_T1D_DEMO.txt`, `_T1D_ROJO_DEMO.txt`, `_T1E_MUTACION.txt`, `_T1E_CONGELADO.txt` |
 | **TAREA 2** | `OP-L-03`: SE RE-MIDE EL BACKLOG ENTERO ANTES DE LEER UN ACTO MAS. No se toca `backlog_l03_vuelta14.py`, que sostiene una cifra adjudicada en la vuelta 15; se escribe el filtro DELANTE, en `scripts/loop/backlog_l03_resuelto.py`, de nombre estable y sin numero de vuelta, que corre el instrumento viejo y le pasa el resolutor de `P.1` por encima publicando LAS DOS COLUMNAS AL LADO. Por acto y en total: miembros escritos, vivos por el resolutor, vivos por el campo `deprecado` del grafo, SI LOS DOS CAMINOS CALZAN, pares que el instrumento da, pares reales y pares disueltos. CAE EN ROJO si los dos caminos no calzan en algun acto, nombrandolo. Con su caso positivo por mutacion sobre un mapa de alias FABRICADO. Y publica la cifra que la 177 no pudo publicar: cuanto sobra en los 34 actos que no miro. EL ESTADO DE LA FICHA NO SE TOCA | **CERRADA. El backlog re-medido entero: de 73 pares del instrumento quedan 18 reales, y en los 34 actos sin leer quedan 10** | `SALIDA_V178_T2_BACKLOG_RESUELTO.txt`, `SALIDA_V178_T2_MUTACION.txt` |
-| **TAREA 3** | LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la 177 queda adjudicada como COSA JUZGADA en el acta 177 punto 7.9: las dos reglas que lo deciden ya estan escritas y RESULTAN COMPATIBLES. La `9.6.1` del banco dice que un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE; la correccion declarada del 13 ago 2026 sobre los puestos 530 y 863 dice que la madre y su pieza de arenas se separan. La condicion que las concilia es la que la propia `9.6.1` escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA, SI ES EL PASO DICHO OTRA VEZ, REPITE. Por cada uno de los cinco se anota EN EL JSONL cual de las dos reglas gobierna cada lado y CON QUE PRUEBA. CERO VEREDICTOS MOVIDOS | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LOS CINCO TRIANGULOS `A` MAS `A` MAS `D`: SE ANOTAN CON SU REGLA, NO SE MUEVEN. La `P.3` de la 177 queda adjudicada como COSA JUZGADA en el acta 177 punto 7.9: las dos reglas que lo deciden ya estan escritas y RESULTAN COMPATIBLES. La `9.6.1` del banco dice que un nodo que es un paso de otro y NO TRAE PROCEDIMIENTO PROPIO, REPITE; la correccion declarada del 13 ago 2026 sobre los puestos 530 y 863 dice que la madre y su pieza de arenas se separan. La condicion que las concilia es la que la propia `9.6.1` escribe: SI LA PIEZA TRAE PROCEDIMIENTO PROPIO SE SEPARA, SI ES EL PASO DICHO OTRA VEZ, REPITE. Por cada uno de los cinco se anota EN EL JSONL cual de las dos reglas gobierna cada lado y CON QUE PRUEBA. CERO VEREDICTOS MOVIDOS | **CERRADA. Los triangulos anotados con su regla y su prueba en registro propio, CERO veredictos movidos comprobado por sha256** | `SALIDA_V178_T3_TRIANGULOS.txt`, `docs/plan/OP_L_03_TRIANGULOS.jsonl` |
 | **TAREA 4** | LA CEGUERA DE LA VARA, QUE LLEVA DOS VUELTAS CONTADA. `vuelta150_3_relectura_expediente.py` imprime SEIS fichas en LISTA sin prueba y dos de las seis estan CONSUMIDAS por otras, asi que el trabajo real son CUATRO. La vara es del fundador y su veredicto NO SE TOCA: lo que se anade es una COLUMNA, no una exclusion. Que siga imprimiendo las seis y que diga de cada una si esta CONSUMIDA por otra ficha y por cual. La cuenta final publica LAS DOS, nunca solo el cuatro. Con su caso positivo por mutacion sobre un expediente fabricado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | LO QUE NO ENTRA Y NO SE PIERDE, CONTADO EN VOZ ALTA COMO SIEMPRE: la segunda sede de la clausula 4.4 en `REPORTE_V172.md:535`; el docstring de `paso0_archivar_anterior.py`; la guarda que falta en la dependencia del `D.4` de la 174; y la medicion del grano del tope de 10 minutos, que se mide EN LA 181 con el reloj de esa corrida y no se re-elige a ojo antes. Ninguna de las cuatro se toca aqui, y las cuatro se nombran para que no se caigan | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -460,5 +460,102 @@ esta medida.
 sale **vacio**. La vara sigue siendo `scripts/loop/vuelta150_3_relectura_expediente.py`
 por decision del fundador del 4 sep 2026, y `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
 tampoco se toco: **cero veredictos movidos en esta tarea**.
+
+### TAREA 3. LOS TRIANGULOS SE ANOTAN CON SU REGLA, NO SE MUEVEN
+
+**CERO VEREDICTOS MOVIDOS, Y ESTA COMPROBADO Y NO PROMETIDO.** El sha256 de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` normalizado a LF sale
+`ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be` **antes y
+despues** de esta tarea, y el instrumento **cae en rojo si difieren**. El unico
+fichero que se escribe es un registro PROPIO,
+`docs/plan/OP_L_03_TRIANGULOS.jsonl`.
+
+#### 3.a. LAS DOS REGLAS SON COMPATIBLES, Y ESO ES COSA JUZGADA
+
+La `P.3` del reporte 177 queda adjudicada en el acta 177 punto 7.9. No hace falta
+regla nueva: **la `9.6.1` del banco** (un nodo que es un paso de otro y NO TRAE
+PROCEDIMIENTO PROPIO, REPITE) y **la correccion declarada del 13 ago 2026** (la
+madre y su pieza de arenas, y la vara las separa) **parecen contrarias y no lo
+son**. La condicion que las concilia la escribe la propia `9.6.1`: **si la pieza
+trae procedimiento propio SE SEPARA; si es el paso dicho otra vez, REPITE.**
+
+**Y NO SE RESUELVE MOVIENDO VEREDICTOS.** Que `P.10` bloquee la fusion de esos
+actos es **el resultado correcto, no el defecto**: un acto que contiene a la vez un
+nodo entero y una pieza suya llamada `A` no debe fundirse a ciegas, y el triangulo
+es el aviso.
+
+#### 3.b. LA ANOTACION, EN EL JSONL Y CON SU PRUEBA
+
+Instrumento: `scripts/loop/vuelta178_tarea3_anotar_triangulos.py`. Salida:
+`docs/loop/SALIDA_V178_T3_TRIANGULOS.txt`. Registro:
+`docs/plan/OP_L_03_TRIANGULOS.jsonl`, **16 filas, 45.168 bytes en disco y 45.168
+normalizados a LF**, sha256 en disco y sha256 en LF los dos
+`28d4dd9d709046675d1b404bdce4fdf62a2d98c9e38085e9604f2a8f1414aca9`.
+
+**LOS TRIANGULOS NO SE TECLEAN: SE ENCUENTRAN.** El instrumento enumera las ternas
+de nodos VIVOS de cada acto del backlog y se queda con las que tienen dos lados `A`
+y uno `D`. **La clase de cada lado sale de una de dos fuentes declaradas**: el
+archivo de veredictos indexado POR EL PAR RESUELTO (`P.1`), o el registro de
+lecturas de la 177 para los lados que aquella leyo como LECTURA DIRIGIDA y que por
+la clausula de `OP-L-03` no entran en la cola.
+
+**QUE REGLA GOBIERNA CADA LADO SE LEE DE SU RAZON ESCRITA, y es mecanico:** se
+buscan en la razon las marcas literales de cada regla (`no trae procedimiento
+propio`, `contado como nodo`, `REPITE` para la `9.6.1`; `LA MADRE Y SU PIEZA`, `la
+vara las separa`, `CORRECCION DECLARADA el 13 ago 2026` para la del 13 ago).
+**Ninguna razon se interpreta a ojo:** si un lado no trae marcas de ninguna de las
+dos, se anota **SIN MARCA** y se dice.
+
+**Y LA PRUEBA VA AL LADO, MEDIDA DEL GRAFO Y NO DE LA RAZON:** los
+`pasos_accionables` de cada extremo, contados. Es la corroboracion independiente
+de "trae procedimiento propio", y **la unica cifra de esta tarea que no sale de un
+texto**.
+
+| regla que gobierna el lado | lados |
+|---|---|
+| `banco 9.6.1`, la pieza NO trae procedimiento propio: REPITE | **22** |
+| correccion declarada del 13 ago 2026, la pieza TRAE procedimiento propio: SE SEPARA | **2** |
+| SIN MARCA DE NINGUNA DE LAS DOS | **24** |
+| **total de lados** | **48** |
+
+**El caso ejemplar sigue siendo el puesto 878**, cuya razon dice literalmente *"El
+paso cuatro contado como nodo, y no trae procedimiento propio"*, contra los
+puestos 530 y 863, cuya razon dice *"LA MADRE Y SU PIEZA DE ARENAS, y la vara las
+separa"*. **Las dos varas, la misma condicion, resultados distintos porque los
+sujetos son distintos.**
+
+#### 3.c. NINGUN VEREDICTO SE MOVIO, Y LA CIFRA DE TRIANGULOS NO CUADRA CON LA MIA
+
+**DISCREPANCIA DECLARADA, Y NO LA RESUELVO COPIANDO** (`EJECUTOR.md` 2). La 177
+publico **CINCO** triangulos; este instrumento, corrido hoy sobre los MISMOS TRES
+ACTOS, encuentra **NUEVE**. **Los cinco que nombre estan entre los nueve**: los
+tres de `construccion_de_leverage`, el de `cash_burn` con
+`validacion_hipotesis_ingresos` y `verificar_modelo_ingresos`, y el de las arenas.
+**Los cuatro de mas son reales y yo no los vi**: tres mas en
+`cash_burn_calculation` (los que entran `validar_modelo_financiero` y
+`metrics_that_matter_framework`) y uno mas en `estrategia_de_innovacion_arenas`
+(el que entra `seleccion_arenas_estrategicas`). **La causa es de metodo:** yo mire
+los triangulos que tocaban los pares que estaba leyendo, y el instrumento enumera
+TODAS las ternas del acto. **La cifra que vale es la del instrumento corrido hoy.**
+
+#### 3.d. Y EL PATRON APARECE EN LOS ACTOS QUE LA TAREA 2 RE-MIDE, DICHO EN VOZ ALTA
+
+| tramo | actos con triangulo | triangulos |
+|---|---|---|
+| en los actos QUE LA 177 LEYO | **3** | **9** |
+| en los actos QUE LA 177 NO MIRO | **5** | **7** |
+| **todo el backlog** | **8** | **16** |
+
+**NO ES UNA CASUALIDAD DE TRES ACTOS, Y AHORA ESTA MEDIDO Y NO OPINADO.** En los
+actos que la 177 nunca miro hay **SIETE triangulos mas**, en **cinco actos
+distintos**: `colaboracion_cadena_suministro`,
+`compra_por_precio_mas_bajo_como_error`, `creacion_option_pool`,
+`disenar_tests_pass_fail` y `fase_diseno_prototipado_modelos`. **Es el sitio exacto
+donde la lectura de a pares y la lectura por acto TIENEN que dar distinto**, que es
+la razon entera por la que `P.5` existe.
+
+**NINGUNO SE TOCA AQUI.** No hay encargo para moverlos y esta tarea prohibe
+expresamente mover veredictos. Quedan anotados, con su regla y su prueba, en el
+registro propio.
 
 <!-- FIN ANEXO DE TAREAS -->
