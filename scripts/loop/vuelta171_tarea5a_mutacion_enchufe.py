@@ -58,12 +58,58 @@ def _reporte_falso(vuelta, cola=""):
             "mutacion). Rama `de-mentira`.\n\ncuerpo cualquiera\n%s" % (vuelta, cola))
 
 
+def _reporte_grande(vuelta):
+    """UN SUJETO CON FORMA DE REPORTE DE VERDAD, FABRICADO EN MEMORIA (vuelta
+    172, TAREA 4.a).
+
+    POR QUE HACE FALTA: los casos A a E usan una cadena de tres lineas, y el
+    caso `F` cubria, sin decirlo, la dimension de un fichero GRANDE y con
+    estructura. Al refundar `F` sobre sujeto congelado esa dimension se conserva
+    aqui en vez de perderse.
+
+    ES DETERMINISTA Y NO LEE NADA: mismo texto en cada corrida, hoy y dentro de
+    diez vueltas."""
+    L = ["# REPORTE DE LA VUELTA %d (de mentira, fabricado por la prueba de "
+         "mutacion). Rama `de-mentira`." % vuelta, ""]
+    L.append("**EL VEREDICTO DE UNA LINEA: fabricado.**")
+    L.append("")
+    for k in range(10):
+        L.append("## %d. SECCION FABRICADA NUMERO %d" % (k, k))
+        L.append("")
+        L.append("| celda | de donde sale | valor |")
+        L.append("|---|---|---:|")
+        for j in range(12):
+            L.append("| fila %02d de la seccion %d | fabricada | %d |" % (j, k, j * k))
+        L.append("")
+        for j in range(6):
+            L.append("Parrafo %d de la seccion %d, con texto suficiente para que el "
+                     "fichero pase de los pocos bytes de los casos A a E y se parezca "
+                     "a un reporte de verdad." % (j, k))
+        L.append("")
+    return chr(10).join(L)
+
+
 def _motivos(informe):
     """Los codigos de motivo que la guarda imprime, leidos de su informe."""
     return sorted(set(l.strip()[1] for l in informe
                       if l.strip().startswith("(") and l.strip()[2:3] == ")"))
 
 
+# --------------------------------------------------------------------------
+# EL CASO `F` SE REFUNDO EN LA VUELTA 172, TAREA 4.a (adjudicacion 6.4 del acta
+# 171). ANTES ERA: `F_el_reporte_170_del_repo_esta_archivado_y_calza`, que
+# llamaba a `PASO0.exigir_archivado(170, ejecutar_archivador=False)` CONTRA EL
+# ARBOL VIVO y esperaba True. Eso solo fue cierto durante los minutos entre
+# archivar la 170 y pisar REPORTE.md con el esqueleto de la 171; despues es
+# falso para siempre, y el arnes salia EXIT 1 con 9 de 10.
+#
+# CONTRA QUE REGLA IBA: la condicion de la vuelta 148, SUJETO CONGELADO, que la
+# 6.10 del acta 170 confirmo con esas palabras. LA FRASE VIEJA NO SE BORRA DE LA
+# HISTORIA: queda escrita aqui, que es donde se puede auditar.
+#
+# LA CIFRA QUE EL REPORTE DE LA 171 PUBLICO ("10 casos, 10 pasan, 10 caen") ERA
+# CIERTA CUANDO SE CORRIO y no se retira. Lo que no se sostenia era el arnes.
+# --------------------------------------------------------------------------
 def prueba_de_mutacion():
     sys.stdout.reconfigure(encoding="utf-8")
     print("=" * 78)
@@ -124,12 +170,38 @@ def prueba_de_mutacion():
         casos.append(("E_un_byte_de_mas_ya_la_tumba", ok, False))
         print("")
 
-        print("F) EL REPO DE VERDAD, EN MODO SOLO COMPROBACION (cero escrituras)")
-        ok, inf = PASO0.exigir_archivado(170, ejecutar_archivador=False)
-        print("   ok=%r motivos=%s" % (ok, _motivos(inf)))
-        for l in inf:
-            print("   " + l)
-        casos.append(("F_el_reporte_170_del_repo_esta_archivado_y_calza", ok, True))
+        print("F) EL CASO VERDE SOBRE UN SUJETO GRANDE Y CON FORMA DE REPORTE DE")
+        print("   VERDAD, FABRICADO EN EL TEMPORAL. REFUNDADO EN LA VUELTA 172,")
+        print("   TAREA 4.a: antes miraba EL ARBOL VIVO y por eso caducaba solo.")
+        grande = _reporte_grande(170)
+        print("   sujeto fabricado: %d bytes, %d saltos de linea"
+              % (len(grande.encode("utf-8")), grande.count(chr(10))))
+        _escribir(os.path.join(arch, "REPORTE_V170.md"), grande)
+        _escribir(vivo, grande)
+        ok, inf = PASO0.exigir_archivado(170, ruta_reporte=vivo, dir_archivo=arch,
+                                         ejecutar_archivador=False)
+        print("   F.1 los dos identicos -> ok=%r motivos=%s" % (ok, _motivos(inf)))
+        casos.append(("F1_sujeto_grande_identico_deja_escribir", ok, True))
+        casos.append(("F1_y_no_hay_ningun_motivo", _motivos(inf), []))
+
+        medio = len(grande) // 2
+        picado = grande[:medio] + ("X" if grande[medio] != "X" else "Y") + grande[medio + 1:]
+        _escribir(vivo, picado)
+        ok, inf = PASO0.exigir_archivado(170, ruta_reporte=vivo, dir_archivo=arch,
+                                         ejecutar_archivador=False)
+        print("   F.2 un byte cambiado EN MEDIO (posicion %d de %d) -> ok=%r motivos=%s"
+              % (medio, len(grande), ok, _motivos(inf)))
+        casos.append(("F2_un_byte_en_medio_tambien_la_tumba", ok, False))
+        casos.append(("F2_y_el_motivo_es_la_d", _motivos(inf), ["d"]))
+        casos.append(("F2_el_picado_mide_lo_mismo_que_el_bueno",
+                      len(picado) == len(grande), True))
+
+        _escribir(vivo, grande.replace(chr(10), chr(13) + chr(10)))
+        ok, inf = PASO0.exigir_archivado(170, ruta_reporte=vivo, dir_archivo=arch,
+                                         ejecutar_archivador=False)
+        print("   F.3 el mismo texto con fin de linea de Windows -> ok=%r motivos=%s"
+              % (ok, _motivos(inf)))
+        casos.append(("F3_el_CRLF_no_la_tumba_porque_la_guarda_normaliza", ok, True))
         print("")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)

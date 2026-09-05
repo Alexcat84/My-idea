@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 171, TAREA 5.a: CASO POSITIVO POR MUTACION DEL PASO 0 DEL ESQUELETO
+==============================================================================
+
+A) (b) SIN ARCHIVO DEL REPORTE ANTERIOR, LA GUARDA TIENE QUE CAER
+   ok=False motivos=['b']
+
+B) (c) EL ARCHIVO EXISTE PERO ES DE OTRA VUELTA: TIENE QUE CAER
+   ok=False motivos=['c', 'd']
+
+C) (d) LA CLAUSULA QUE DE VERDAD MIRA LO QUE SE VA A DESTRUIR.
+   El archivo es de la vuelta BUENA, pero al arbol le han crecido
+   lineas despues de archivarlo: eso es texto que se perderia.
+   ok=False motivos=['d']
+
+D) EL CASO VERDE: LOS DOS CALZAN Y LA GUARDA DEJA ESCRIBIR
+   ok=True motivos=[]
+
+E) UN BYTE DE DIFERENCIA BASTA: LA GUARDA NO ES UN 'PARECIDO'
+   ok=False motivos=['d'] (un solo byte de mas en el arbol)
+
+F) EL CASO VERDE SOBRE UN SUJETO GRANDE Y CON FORMA DE REPORTE DE
+   VERDAD, FABRICADO EN EL TEMPORAL. REFUNDADO EN LA VUELTA 172,
+   TAREA 4.a: antes miraba EL ARBOL VIVO y por eso caducaba solo.
+   sujeto fabricado: 15226 bytes, 243 saltos de linea
+   F.1 los dos identicos -> ok=True motivos=[]
+   F.2 un byte cambiado EN MEDIO (posicion 7613 de 15226) -> ok=False motivos=['d']
+   F.3 el mismo texto con fin de linea de Windows -> ok=True motivos=[]
+
+G) PASADA 1, LOS CASOS TAL CUAL
+   A_sin_archivo_la_guarda_NO_deja_escribir             PASA   (real=False esperado=False)
+   A_y_el_motivo_es_la_b                                PASA   (real=['b'] esperado=['b'])
+   B_archivo_de_otra_vuelta_NO_deja_escribir            PASA   (real=False esperado=False)
+   B_y_los_motivos_son_c_y_d                            PASA   (real=['c', 'd'] esperado=['c', 'd'])
+   C_arbol_con_texto_sin_archivar_NO_deja_escribir      PASA   (real=False esperado=False)
+   C_y_el_motivo_es_la_d                                PASA   (real=['d'] esperado=['d'])
+   D_cuando_calzan_la_guarda_deja_escribir              PASA   (real=True esperado=True)
+   D_y_no_hay_ningun_motivo                             PASA   (real=[] esperado=[])
+   E_un_byte_de_mas_ya_la_tumba                         PASA   (real=False esperado=False)
+   F1_sujeto_grande_identico_deja_escribir              PASA   (real=True esperado=True)
+   F1_y_no_hay_ningun_motivo                            PASA   (real=[] esperado=[])
+   F2_un_byte_en_medio_tambien_la_tumba                 PASA   (real=False esperado=False)
+   F2_y_el_motivo_es_la_d                               PASA   (real=['d'] esperado=['d'])
+   F2_el_picado_mide_lo_mismo_que_el_bueno              PASA   (real=True esperado=True)
+   F3_el_CRLF_no_la_tumba_porque_la_guarda_normaliza    PASA   (real=True esperado=True)
+   CIFRA casos: 15 | pasan: 15 | fallan: 0
+
+H) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_sin_archivo_la_guarda_NO_deja_escribir             CAE   (esperado mutado=True)
+   A_y_el_motivo_es_la_b                                CAE   (esperado mutado=['b', 'mutado'])
+   B_archivo_de_otra_vuelta_NO_deja_escribir            CAE   (esperado mutado=True)
+   B_y_los_motivos_son_c_y_d                            CAE   (esperado mutado=['c', 'd', 'mutado'])
+   C_arbol_con_texto_sin_archivar_NO_deja_escribir      CAE   (esperado mutado=True)
+   C_y_el_motivo_es_la_d                                CAE   (esperado mutado=['d', 'mutado'])
+   D_cuando_calzan_la_guarda_deja_escribir              CAE   (esperado mutado=False)
+   D_y_no_hay_ningun_motivo                             CAE   (esperado mutado=['mutado'])
+   E_un_byte_de_mas_ya_la_tumba                         CAE   (esperado mutado=True)
+   F1_sujeto_grande_identico_deja_escribir              CAE   (esperado mutado=False)
+   F1_y_no_hay_ningun_motivo                            CAE   (esperado mutado=['mutado'])
+   F2_un_byte_en_medio_tambien_la_tumba                 CAE   (esperado mutado=True)
+   F2_y_el_motivo_es_la_d                               CAE   (esperado mutado=['d', 'mutado'])
+   F2_el_picado_mide_lo_mismo_que_el_bueno              CAE   (esperado mutado=False)
+   F3_el_CRLF_no_la_tumba_porque_la_guarda_normaliza    CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 15 de 15
+
+VERDE: los 15 casos pasan tal cual y los 15 caen al mutar el esperado.

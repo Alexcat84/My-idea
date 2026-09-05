@@ -475,6 +475,33 @@ VIEJAS = [
     ("vuelta109_tarea2_4_prueba_mutacion.py", False),
     ("vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py", False),
     ("vuelta113_tarea2_mutacion_tsc.py", False),
+    # --- LOS TRES DE LA VUELTA 171, QUE ENTRAN EN LA 172 (TAREA 4.b;
+    #     adjudicacion 6.5 del acta 171) -----------------------------------------
+    #
+    # POR QUE ENTRAN AHORA Y NO ANTES: la regla escrita mas arriba en este mismo
+    # fichero dice que una mutacion entra en la vuelta SIGUIENTE a la que nace, no
+    # mas tarde. La vuelta 171 escribio TRES arneses y no metio ninguno; su propia
+    # funcion pura `arneses_que_faltan()` devolvia 3, la nomina tenia 75 entradas y
+    # su ultima vuelta representada era la 170. El propio codigo dice que eso es
+    # ROJO.
+    #
+    # EL ORDEN FUE OBLIGATORIO Y NO ES CAPRICHO: el tercero de los tres,
+    # `vuelta171_tarea5a_mutacion_enchufe.py`, salia EXIT 1 hasta la TAREA 4.a de
+    # esta vuelta, porque su caso `F` miraba EL ARBOL VIVO. Meterlo antes de
+    # refundarlo habria sido meter un rojo DENTRO de la bateria. Refundado sobre
+    # sujeto congelado da 15 casos, 15 pasan y 15 caen
+    # (`docs/loop/SALIDA_V172_T4A_ENCHUFE_DESPUES.txt`).
+    #
+    # LOS TRES CON SUJETO CONGELADO, que es la condicion desde la vuelta 148:
+    #   . `vuelta171_mutacion_busqueda_acta.py`: filas de `git log` fabricadas.
+    #   . `vuelta171_tarea1a_mutacion_registro.py`: actas de mentira en memoria mas
+    #     el acta 170, que ya esta cerrada y firmada.
+    #   . `vuelta171_tarea5a_mutacion_enchufe.py`: reportes fabricados en un
+    #     temporal, ya sin el arbol vivo dentro.
+    # Ninguno admite `--sujeto`: los tres fabrican los suyos.
+    ("vuelta171_mutacion_busqueda_acta.py", False),
+    ("vuelta171_tarea1a_mutacion_registro.py", False),
+    ("vuelta171_tarea5a_mutacion_enchufe.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
