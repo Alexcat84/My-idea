@@ -1,0 +1,109 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   CIEGA DEL AUDITOR DE LA VUELTA 171. La vuelta 170 no escribio ni un veredicto nuevo (marcador 3.388 identico, numstat 0 filas sobre INTRA_DOMINIO_VEREDICTOS.jsonl), y sus ocho discutibles marcados son todos de PROCESO: ninguno lleva clase. Asi que el sujeto no puede ser una tanda nueva. Lo fijo ANTES de mirar nada, y estreno el aislador que la 2.a de esta misma vuelta acaba de escribir: muestra determinista de 6 pares del dominio quality, semilla 171, en el tramo 2412 a 3255 (el que la vuelta 170 declara intacto), EXCLUIDOS los seis puestos de la demo del aislador (1174, 1482, 1757, 1768, 1922, 3190) por estar fuera de rango salvo el 3190. Si el archivo aguanta hoy una relectura ciega, la vuelta 170 no lo movio; si no aguanta, lo digo.
+
+CIFRA pares elegidos: 6
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 2532
+nodo_a: distincion_causas_comunes_especiales_2
+nodo_b: distincion_causas_especiales_comunes
+  pasos de A (distincion_causas_comunes_especiales_2): 4
+     paso 1: Antes de investigar un defecto puntual, revisa si tu proceso esta en control estadistico usando una carta de control
+     paso 2: Si el proceso esta en control, reconoce que las variaciones, incluidos los defectos, vienen de causas comunes del sistema
+     paso 3: Evita investigar cada caso como si fuera una causa especial cuando el proceso es estable
+     paso 4: Dirige tu esfuerzo de mejora hacia un cambio estructural del sistema, no hacia rastrear caso por caso
+  pasos de B (distincion_causas_especiales_comunes): 4
+     paso 1: Antes de ajustar un proceso, verificar si está en control estadístico
+     paso 2: Rastrear causas periódicas o recurrentes de fallas mediante estudio de registros
+     paso 3: Evitar tratar cada defecto individual como causa especial si el sistema es estable
+     paso 4: Usar métodos estadísticos (Cap. 11) para decidir si una intervención es necesaria
+------------------------------------------------------------------------------
+puesto_intra: 2808
+nodo_a: accion_correctiva_2
+nodo_b: accion_correctiva_6
+  pasos de A (accion_correctiva_2): 4
+     paso 1: Observar rechazos reales y analizarlos como evidencia directa de fallas
+     paso 2: Realizar análisis de tendencias para detectar problemas menos obvios
+     paso 3: Determinar la causa raíz sistémica, no solo culpar a individuos
+     paso 4: Implementar cambios que prevengan la recurrencia del problema, no solo su corrección puntual
+  pasos de B (accion_correctiva_6): 4
+     paso 1: Documentar los problemas detectados mediante auditorías de calidad
+     paso 2: Investigar la causa raíz de cada problema de forma sistemática
+     paso 3: Asignar responsables y plazos para la resolución definitiva
+     paso 4: Dar seguimiento y verificar que la acción implementada haya eliminado el problema
+------------------------------------------------------------------------------
+puesto_intra: 2835
+nodo_a: abolir_inspeccion_masiva
+nodo_b: reporte_gerencial_diagnostico_calidad
+  pasos de A (abolir_inspeccion_masiva): 6
+     paso 1: Identifica los puntos donde hoy inspeccionas al 100% o 200% y mide su costo junto con el retrabajo asociado
+     paso 2: Analiza la causa raíz de los defectos que detectas en inspección, no te limites a separarlos
+     paso 3: Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva
+     paso 4: Rediseña tu proceso de producción para construir calidad desde el origen
+     paso 5: Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico
+     paso 6: Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico
+  pasos de B (reporte_gerencial_diagnostico_calidad): 5
+     paso 1: Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles
+     paso 2: Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que
+     paso 3: Revisar si pagas por pieza producida y evaluar que impacto tiene eso en la calidad
+     paso 4: Escribir un diagnostico claro para ti mismo con los hallazgos, las causas raiz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema
+     paso 5: Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de que cuenta como defecto
+------------------------------------------------------------------------------
+puesto_intra: 2885
+nodo_a: definicion_calidad_conformidad
+nodo_b: definicion_calidad_fitness_for_purpose
+  pasos de A (definicion_calidad_conformidad): 6
+     paso 1: Define de forma clara y medible los requisitos de tu producto o servicio antes de producirlo o entregarlo.
+     paso 2: Elimina de tu lenguaje términos subjetivos como alta calidad, elegancia o buena calidad al describir tu trabajo.
+     paso 3: Comunica esos requisitos con precisión a cualquiera que dependa de ti para cumplirlos.
+     paso 4: Evalúa tu trabajo solo por si cumple o no cumple el requisito, documentando cualquier desviación como no conformidad.
+     paso 5: Si detectas que un requisito es poco realista, corrígelo formalmente en el momento de definirlo, no lo justifiques después en la entrega.
+     paso 6: Cuando alguien mencione calidad de forma vaga, pregunta qué requisito específico está evaluando.
+  pasos de B (definicion_calidad_fitness_for_purpose): 6
+     paso 1: Identifica quién es tu cliente final del bien o servicio
+     paso 2: Determina las necesidades explícitas e implícitas de ese cliente
+     paso 3: Traduce esas necesidades en características concretas de tu producto o servicio
+     paso 4: Documenta los tipos de fallas o deficiencias que afectan la percepción de calidad del cliente
+     paso 5: Verifica que tu diseño esté libre de fuentes de falla conocidas
+     paso 6: Comunica esta definición de calidad a proveedores y colaboradores con los que trabajas
+------------------------------------------------------------------------------
+puesto_intra: 2987
+nodo_a: control_estadistico_de_procesos_2
+nodo_b: graficos_control_tiradas_cortas
+  pasos de A (control_estadistico_de_procesos_2): 5
+     paso 1: Recolectar datos de desempeño en muestras (por ejemplo, n=4 o n=5)
+     paso 2: Calcular el promedio y rango de cada muestra
+     paso 3: Establecer límites de control superior e inferior (típicamente 3 sigma) a partir del rango promedio
+     paso 4: Graficar los puntos en el tiempo y observar si permanecen dentro de los límites
+     paso 5: Investigar cualquier punto fuera de los límites como posible causa especial
+  pasos de B (graficos_control_tiradas_cortas): 5
+     paso 1: Identificar si el proceso tiene corridas cortas por cambios frecuentes de producto
+     paso 2: Seleccionar el método de construcción del gráfico (estratificación, regresión, estandarización)
+     paso 3: Aplicar la transformación Z si se elige el método de estandarización
+     paso 4: Graficar los datos transformados en un gráfico de control único
+     paso 5: Interpretar señales de fuera de control sobre la escala estandarizada
+------------------------------------------------------------------------------
+puesto_intra: 3016
+nodo_a: desarrollar_metas_anuales
+nodo_b: establecer_vision_organizacional
+  pasos de A (desarrollar_metas_anuales): 5
+     paso 1: Revisa las siete areas clave de metas: producto, competitividad, mejora, costo de mala calidad, procesos, satisfaccion y lealtad del cliente
+     paso 2: Reune propuestas de metas de todas las personas que trabajan contigo, no solo las tuyas
+     paso 3: Filtra y prioriza las metas que entraran en tu plan de negocio
+     paso 4: Basa cada meta en tu desempeño historico, en la comparacion con la competencia o en el desempeño del mercado, según corresponda
+     paso 5: Asegurate de que cada meta sea especifica, medible y tenga un plazo definido
+  pasos de B (establecer_vision_organizacional): 6
+     paso 1: Escribe una visión simple, directa e inspiradora, centrada en tu cliente
+     paso 2: Define tu misión: qué haces y a quién le sirves
+     paso 3: Establece tus estrategias como los pocos factores clave para tener éxito (precio, valor, tecnología, cultura)
+     paso 4: Define metas anuales de corto plazo (1 a 2 años) y de largo plazo (2 a 3 años)
+     paso 5: Establece criterios que guíen tus decisiones diarias en temas como calidad, cuidado del entorno y seguridad
+     paso 6: Crea un plan que baje tu visión a estrategias, metas y proyectos concretos
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

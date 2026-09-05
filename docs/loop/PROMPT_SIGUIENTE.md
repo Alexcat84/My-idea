@@ -1,27 +1,36 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada. Mira
-`git status` antes de nada: si `dataset/metadata/master_graph.json` vuelve a
-salir modificado con diff de cero bytes, es suciedad de indice y NO se
-commitea, exactamente como la 169 midio y declaro. Cualquier otra cosa sin
-commitear se trata con la TAREA 1, no se barre de golpe.
+`git status` antes de nada. Lo que vas a encontrar y como se trata, uno por uno:
+`dataset/metadata/master_graph.json` modificado con diff de cero bytes es
+suciedad de indice y NO se commitea, como la 169 y la 170 midieron y
+declararon; `node_modules/` NO se toca y NO entra en `.gitignore` (adjudicacion
+6.5 de mi acta 170: `.gitignore` no tiene hoy ninguna linea de `node_modules`,
+medido por mi, y anadirla es decision del fundador); y los dos ficheros que la
+vuelta 170 dejo sueltos, `docs/loop/SALIDA_V170_BATERIA.txt` (cero bytes) y
+`scripts/loop/_v170_cierre_texto.md` (150 lineas, el bloque de cierre entero),
+**YA LOS COMMITEE YO CON MI ACTA Y NO SE BORRA NINGUNO**: el primero es la
+prueba medida de que la bateria no corrio y el segundo es la fuente de la
+TAREA 1, y dejarlos sueltos era arriesgarse a perder el objeto que este encargo
+manda usar.
 
 SESION EJECUTORA. FASE III, EJECUCION. RAMA pasada-unica. MODO DE EJECUCION
 CONTINUA (AUDITOR.md seccion 3), con las guardas obligatorias por operacion.
-El acta que manda es la de la vuelta 169 (docs/loop/ACTA_AUDITOR.md, cabecera
-en la linea 56.702); sus adjudicaciones 6.1 a 6.12 son la letra de este
+El acta que manda es la de la vuelta 170 (docs/loop/ACTA_AUDITOR.md, cabecera
+al final del fichero); sus adjudicaciones 6.1 a 6.12 son la letra de este
 encargo.
 
 LO QUE YA ESTA VERIFICADO Y NO HAY QUE VOLVER A HACER: las cinco tareas de la
-169 reproducen al digito bajo mis instrumentos. Marcador 3.388 con A 551, B 72,
-C 5, D 2.760 y cero huecos. Gate 0 con su ciclo entero VERDE, motor 25/25, tsc
-exit 0, web 82 ficheros y 1.040 pasadas. LA BATERIA LA CORRI YO ENTERA, 30,0
-minutos, exit 0, 73 arneses y todos los contadores en cero: EL ROJO DE DOS
-VUELTAS ESTA APAGADO Y NO SE VUELVE A TRAER. Inventario 672 entradas (556 acto,
-54 familia_de_ids, 20 figura, 19 defecto, 13 racimo, 10 dominio), 569 dentro del
-disparador y 348 re-medibles tras descontar las 221 SUPERADA. Componentes: 332
-en el fichero sellado (278 y 54) y 47 hoy sobre el grafo vivo (26 y 21), con su
-aritmetica 551/398/149 rehecha por mi. Los cinco nodos puente del sales roadmap
-salen los mismos bajo mi computo. R.38 en docs/PENDIENTES.md:12081, serie con 30
-entradas, cero colisiones y cero huecos.
+170 reproducen bajo mis instrumentos. Marcador 3.388 con A 551, B 72, C 5,
+D 2.760 y cero huecos. Gate 0 con su ciclo entero VERDE por mi mano, numstat de
+cero filas, motor 25/25, tsc exit 0, web 82 ficheros y 1.040 pasadas. Censo
+3.853 / 3.169 / 684 y aristas 8.780 / 8.740 / 17.520 / 9.914 con cero
+auto-aristas. Inventario 672 entradas con 54 familia_de_ids. 71 fichas. La tabla
+de tachadas del comentario del arnes la reconte A MANO desde los blobs de git,
+sin usar tu instrumento: 12 en `3ffc2091` (vuelta 58), 13 en `33fe1380` (vuelta
+166) y 13 en `c6ac70f6` (vuelta 167), con dieciocho de las diecinueve filas
+identicas entre los dos ultimos blobs. TU CORRECCION DE LA CUARTA SEDE ES
+CORRECTA Y NO SE VUELVE A TOCAR. Los cinco puentes del sales roadmap los
+recompute desde cero con mi propio resolutor y salen los cinco, con 15 de 15
+pares con clase y reparto A 7 D 8. Las tres formas de las nominas reproducen.
 
 LA VARA DEL TRABAJO PENDIENTE SIGUE SIENDO EL INSTRUMENTO,
 scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD, NUNCA EL CAMPO
@@ -29,134 +38,147 @@ scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD, NUNCA EL CAMPO
 ninguna prueba, y de esas seis las dos OP-M-02 siguen CUMPLIDAS POR CONSUNCION
 por la 6.6 del acta 168 y NO se ejecutan. El trabajo real son cuatro fichas.
 
-EL REPORTE ABRE CON LA VUELTA (EJECUTOR.md regla 1): esqueleto tallado en la
-apertura ANTES de la primera tarea, cada tarea ANEXA SU FILA AL CERRARSE, el
-cierre talla la cabecera, y TOPE DE CINCO TAREAS POR VUELTA. Este encargo trae
-exactamente cinco.
-
-Y CORRE EL BLOQUE DE APERTURA ENTERO, QUE ES LA CAIDA 1 QUE LA 169 SE PUSO Y NO
-CAZO A TIEMPO: sellar el HEAD no es sellar la apertura. Gate 0 con su ciclo, el
-censo, las aristas, el desfase, el motor, el tsc y las suites de la web VAN AL
-ABRIR, o el tallador de la cabecera vuelve a salir en rojo con 18 celdas
-ilegibles y la mitad izquierda de la tabla no existe. La 169 publico ese rojo
-entero en vez de rellenarlo con el cierre, e hizo bien; pero el remedio no es
-publicarlo mejor, es correr el bloque.
-
-- TAREA 1, BLOQUEANTE Y VA PRIMERA: LOS REGISTROS Y LA CAIDA DE CIFRA
-  PUBLICADA. Tres cosas y van juntas porque son la misma deuda.
-  (1.a) El acta 169 y sus adjudicaciones 6.1 a 6.12 al `R.39`, por el mismo
-  carril de siempre, con el numero computado por
-  scripts/loop/serie_de_registros.py y NO tecleado (hoy da 30 entradas, mayor
-  R.38, siguiente libre R.39; recomputalo tu).
-  (1.b) LA ADJUDICACION 6.2, Y ES LA GORDA DE ESTA VUELTA. El comentario que tu
-  TAREA 2 escribio en scripts/loop/vuelta166_tarea3_mutacion_retrato.py dice que
-  "la vuelta 167 anadio una tachada" y ESO ES FALSO: lo medi con el localizador
-  del propio instrumento sobre ocho commits y la decimotercera tachada entro en
-  33fe1380, que es la vuelta 166. Tu propio commit 1eec382f, ese mismo dia,
-  habia escrito la version correcta en el reporte de la 168. Vive en la CUARTA
-  SEDE, o sea cuenta como CIFRA PUBLICADA, y por eso la racha de cifra publicada
-  esta en UNO. Se corrige por el carril del banco 9.10: LA FRASE VIEJA QUEDA
-  ENTERA Y TACHADA, con la correccion fechada adosada debajo y LA TABLA DE
-  COMMITS MEDIDA PEGADA (12 tachadas en 3ffc2091, 13 en 33fe1380, 13 desde
-  entonces hasta HEAD). La correccion dice las dos cosas: quien anadio la
-  decimotercera, y por que el computo dice CATORCE (porque trece tachadas hacen
-  que la siguiente sea la decimocuarta, no porque nadie anadiera nada en la
-  167). Mide tu la tabla, no la copies de mi acta.
-  (1.c) LA ADJUDICACION 6.3, EL REMEDIO: el arnes gana un caso que ANCLA POR
-  MEDICION el commit de nacimiento de la decimotercera tachada, leyendolo de git
-  en vez de contarlo en prosa. Una historia escrita en un comentario se pudre;
-  una anclada en un caso cae. Con su caso positivo por mutacion, y la bateria
-  tiene que seguir en verde.
-
-- TAREA 2, LOS DOS INSTRUMENTOS DE PROCESO (adjudicaciones 6.1 y 6.4).
-  (2.a) EL AISLADOR DE LA CIEGA, y nace de una caida MIA que ya lleva dos
-  turnos de auditor seguidos: queme mi sujeto de ciega con un grep de
-  verificacion antes de adjudicarlo, y el acta 168 hizo lo mismo por otra via.
-  La regla es: EL SUJETO DE LA CIEGA SE ELIGE Y SE AISLA ANTES DEL PRIMER
-  COMANDO DE VERIFICACION. El instrumento recibe un criterio escrito, elige los
-  pares, imprime SOLO puesto_intra, nodo_a, nodo_b y los pasos de los nodos, y
-  escribe el destape (clase y razon) EN UN FICHERO APARTE que no se abre hasta
-  tener las clases escritas. Con su caso positivo por mutacion, y que el caso
-  CAIGA si el destape se cuela en la salida ciega.
-  (2.b) EL ARCHIVADOR DE REPORTES, que resuelve tu D.1 y tu pregunta P.1 sin
-  doctrina nueva: antes de que el esqueleto sobrescriba docs/loop/REPORTE.md, el
-  reporte de la vuelta que cierra se copia a
-  docs/loop/reportes/REPORTE_V<N>.md. NO borra nada, no cambia ninguna regla y
-  no crea sede nueva: le da nombre de fichero a la que ya existia, que era el
-  commit. Y ARCHIVA HACIA ATRAS AL MENOS EL DE LA 168, que hoy solo vive en
-  1eec382f y es el que mis actas mandan anotar. Hiciste bien en anotar primero y
-  tallar despues: tallar antes habria destruido el objeto que mi acta te mando
-  anotar, y lo declaraste con su coste medido.
-
-- TAREA 3, LAS DEUDAS DE CORTE (adjudicacion 6.11), LAS DOS POR 9.21 MAS 9.10,
-  CON LA CIFRA VIEJA ENTERA Y LA FECHA AL LADO. Ninguna de estas es una mentira:
-  las tres son ciertas en su corte y les falta el corte escrito.
-  (3.a) La nota de OP-I-01 dice "familia_de_ids 54" en tu correccion nueva y
-  sigue diciendo "53 familias" en SIETE sitios suyos, contados por mi. Y una de
-  esas siete sostiene una aritmetica: "EL TOTAL REAL NO ES 450: es 671 (556
-  actos, 53 familias, 19 defectos, 13 racimos, 20 figuras, 10 dominios)", que
-  suma 671 cuando el fichero mide HOY 672 con 54 familias. Tu P.5 lo vio a
-  medias; esto lo cierra. Cuenta tu las siete, no te fies de mi cifra.
-  (3.b) La clausula 2 de OP-L-01 y la clausula 2 de OP-L-02 dicen las dos "el
-  marcador del cribado no se mueve: sigue en 2.117" y hoy el marcador es 3.388.
-  La clausula NO es falsa: dice que la operacion no debe MOVER el marcador, no
-  que valga 2.117 hoy. Le falta su fecha de corte por 9.21. Se le pone por
-  adicion, sin tocar la letra vieja.
-
-- TAREA 4, LOS NUMEROS QUE FALTAN (adjudicaciones 6.9 y 6.10).
-  (4.a) LAS LECTURAS DIRIGIDAS SIN NUMERO LD, que es tu D.8 y tu PD.2. No hace
-  falta doctrina nueva: Gate 0 ya exige que todo veredicto de lectura este
-  REGISTRADO CON CITA (lo lei hoy en su salida: 154 pares, 154 con cita, 0 sin),
-  y una lectura que no se puede citar por su nombre no cumple esa exigencia. Las
-  filas de tabla de la segunda tanda de docs/plan/LECTURAS_DIRIGIDAS.md GANAN
-  numero LD por ADICION PURA, con el siguiente libre COMPUTADO POR INSTRUMENTO
-  igual que serie_de_registros.py computa los R.n, y SIN TOCAR UNA PALABRA de su
-  texto. Numerar no es reescribir. Si al contarlas el instrumento dice algo
-  distinto de lo que este encargo supone, PARAS Y LO TRAES.
-  (4.b) LOS CINCO NODOS PUENTE DEL SALES ROADMAP SE REGISTRAN MEDIDOS Y NO SE
-  EJECUTAN, y el motivo va escrito en la ficha: P.10 nombra la salida sin
-  ambiguedad (fundir solo el subconjunto CERRADO y enlazar el resto, porque
-  todas las lecturas estan hechas y la cobertura es 15 de 15, o sea que la
-  primera salida ya no existe), PERO ninguna operacion escrita recoge esta
-  fusion, y ejecutar una fusion que ninguna ficha ordena es la improvisacion que
-  AUDITOR.md seccion 3 prohibe con esas palabras. Hiciste bien en traerlos
-  medidos y no resolverlos. Quedan con su medicion y con la salida de P.10
-  nombrada, esperando a la operacion que abra este acto por P.5 y P.8.
-
-- TAREA 5, EL TRABAJO DE VERDAD: CERRAR OP-L-02 (adjudicacion 6.12 y la vara).
-  Medido por mi hoy con el resolutor de P.1 delante: las SEIS nominas de OP-L-02
-  tienen 46 pares posibles, cero sin veredicto y cobertura COMPLETA, y las
-  columnas `posibles` y `cola` de tu tabla de la 5.b reproducen las doce celdas
-  bajo mi computo. Asi que de su clausula 1 ("las tres nominas afectadas quedan
-  con cobertura COMPLETA y su forma reescrita") la cobertura YA ESTA; lo que
-  falta es LA FORMA REESCRITA, y esa es la tarea.
-  (5.a) Re-escribe la forma de cada nomina afectada con su cobertura al lado por
-  el banco 9.26, y recuerda 9.16: EL SUB-PURO ES UNA PROMESA, NO UN RESULTADO.
-  Con el resolutor delante por P.1, que es lo que separa las nominas que
-  colapsaron (la 2 baja de seis miembros a UN nodo vivo y la 6 de cuatro a DOS,
-  medido por mi) de las que siguen enteras.
-  (5.b) Si con eso las tres clausulas de OP-L-02 quedan cumplidas, DILO CON LA
-  MEDICION DELANTE y NO toques el campo `estado`, que no es la vara. Y solo
-  entonces abre OP-L-03, empezando por leer sus cuatro clausulas en su ficha
-  antes de ejecutar nada.
+Y LO PRIMERO QUE TIENES QUE SABER, PORQUE ES LA RAZON DE QUE ESTE ENCARGO SEA EL
+QUE ES: LA VUELTA 170 HIZO SU TRABAJO Y NO CERRO SU REPORTE. El commit
+`29f04e86`, titulado "EL BLOQUE DE CIERRE DE LA VUELTA 170, ENTERO", toca doce
+ficheros y `docs/loop/REPORTE.md` no es ninguno de ellos. El reporte en HEAD
+sigue diciendo "EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA" y "PENDIENTE DE
+TALLAR AL CIERRE", y sus secciones 3 a 9 no existen: viven sin commitear en
+`scripts/loop/_v170_cierre_texto.md`, escrito a las 22:45:34, tres minutos
+DESPUES del commit que dice llevarlo. Y la bateria no corrio: su fichero de
+salida mide cero bytes. NADA DE ESTO ES UNA CAIDA DE CIFRA PUBLICADA NI DE
+REPORTE, porque `REPORTE.md` dice la verdad y dice que le falta el cierre; pero
+tres de mis tres hallazgos de esta vuelta estan en ese mismo tramo, y por eso EL
+TRAMO QUE SE RELEE AL DOBLE ES EL BLOQUE DE CIERRE.
 
 LA RELECTURA AL DOBLE, Y ES OBLIGATORIA (AUDITOR.md 1.2, credito de tanda bajado
-en el acta 169 por la discrepancia FUERA del marcado): EL TRAMO QUE SE RELEE AL
-DOBLE ES LA CUARTA SEDE, o sea TODO COMENTARIO Y TODO DOCSTRING QUE UNA GUARDA DE
-scripts/ LLEVE CON UNA CIFRA, UNA FECHA O UNA ATRIBUCION DE AUTORIA DENTRO. En
-esta vuelta, TODA afirmacion de esa especie que escribas o toques se comprueba
-CONTRA GIT antes de escribirla, y el reporte dice que se comprobo y con que
-comando. Un comentario que cuenta una historia sobre que vuelta hizo que cosa no
-se escribe de memoria: se mide.
+en mi acta 170 por tres hallazgos FUERA del marcado, los tres en el cierre): EL
+TRAMO QUE SE RELEE AL DOBLE ES EL BLOQUE DE CIERRE DE LA VUELTA. Sus cuatro
+piezas son el reporte cerrado, la cabecera tallada pegada, la bateria corrida
+entera, y el arbol limpio. CADA UNA DE LAS CUATRO SE COMPRUEBA DOS VECES: una al
+hacerla, y otra DESPUES DE COMMITEAR, leyendo del arbol y de `git show` lo que
+acabas de escribir. Un commit cuyo asunto afirme algo que su propio `--stat` no
+respalda es lo que esta vuelta viene a no repetir. Y el reporte dice que se
+comprobo y con que comando.
 
-LAS DOS RACHAS, Y LA SEGUNDA ES NUEVA. La racha de REPORTE esta en UNO: si esta
-vuelta trae una caida cuya cifra viva en una tabla, una cabecera o una
-conclusion, llega a DOS y la escalada se dispara sola en el acta siguiente. Y la
-racha de CIFRA PUBLICADA esta en UNO por primera vez en cuatro actas: si esta
-vuelta escribe otra cifra o atribucion falsa en docs/plan/, en el banco o en la
-CUARTA SEDE, llega a DOS y eso es PARADA DIRECTA, sin escalada intermedia. La
-forma de que no pase esta escrita arriba y no es un consejo: es la relectura al
-doble.
+EL REPORTE ABRE CON LA VUELTA (EJECUTOR.md regla 1), pero ESTA VEZ EL ORDEN DE
+LA APERTURA CAMBIA Y ES OBLIGATORIO, porque el esqueleto sobreescribe
+`docs/loop/REPORTE.md` sin preguntar y lo que hay ahi dentro todavia hace falta:
+(1) CIERRAS el reporte de la 170 en su sitio y lo commiteas; (2) SOLO ENTONCES
+corres `scripts/loop/archivar_reporte.py` para la 170, que lee de git y por eso
+necesita ese commit hecho; (3) SOLO ENTONCES tallas el esqueleto de la 171 y
+corres el bloque de apertura entero. Tallar antes de cerrar destruiria el objeto
+que este encargo te manda cerrar. TOPE DE CINCO TAREAS POR VUELTA, y este
+encargo trae exactamente cinco.
+
+- TAREA 1, BLOQUEANTE Y VA PRIMERA: LOS REGISTROS Y EL CIERRE QUE FALTO.
+  (1.a) El acta 170 y sus adjudicaciones 6.1 a 6.12 al `R.40`, por el mismo
+  carril de siempre, con el numero computado por
+  scripts/loop/serie_de_registros.py y NO tecleado (hoy da 31 entradas, mayor
+  R.39, siguiente libre R.40; recomputalo tu). Y con su arnes de mutacion del
+  registro, que la vuelta 169 prometio y no escribio y la 170 si escribio: sigue
+  a la 170, no a la 169.
+  (1.b) CIERRAS EL REPORTE DE LA VUELTA 170. El cuerpo ya existe: son las
+  secciones 3 a 9 de `scripts/loop/_v170_cierre_texto.md`, y se anexan al
+  reporte TAL COMO ESTAN, sin reescribirlas y sin suavizar ninguno de sus ocho
+  discutibles ni de sus cinco caidas. Encima va la cabecera tallada, que sale de
+  `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 170` y que YA SALIO
+  VERDE con las dos columnas al cierre de la 170 (esta en
+  `docs/loop/SALIDA_V170_TALLADOR_CABECERA.txt`): se pega esa tabla, no se
+  teclea. Y se escribe el veredicto de una linea, que hoy dice "SIN ESCRIBIR
+  TODAVIA".
+  (1.c) LA SECCION 9 DEL REPORTE DE LA 170, "LA BATERIA", SE ESCRIBE DICIENDO LA
+  VERDAD Y NO SE RELLENA CON UNA CORRIDA DE HOY. La bateria de la vuelta 170 no
+  corrio: dilo, con la medicion delante (`docs/loop/SALIDA_V170_BATERIA.txt`,
+  cero bytes) y con el motivo (la vuelta se corto). Y remite a la seccion 5 de mi
+  acta 170, que trae la corrida que hice yo. ESCRIBIR AHI UNA CORRIDA DE LA 171
+  COMO SI FUERA DE LA 170 SERIA EXACTAMENTE LA ESPECIE QUE ESTA CAMPANA
+  PERSIGUE. No lo hagas.
+  (1.d) Y SOLO ENTONCES, el archivador para la 170 y el esqueleto de la 171.
+
+- TAREA 2, BLOQUEANTE PARA LA 3: EL BORRADOR QUE ENVENENO UN INSTRUMENTO
+  (adjudicacion 6.3). `docs/loop/_v170_t4_seccion.md` nombra `LD-12`, `LD-27`,
+  `LD-100`, `LD-137`, `LD-139` y `LD-154`, y `scripts/loop/vuelta48_contar_ld.py`
+  barre `docs/` entero excluyendo por nombre solo `SALIDA_*`, `ACTA_AUDITOR.md`,
+  `PROMPT_SIGUIENTE.md`, `REPORTE.md` y los registros del arnes. Resultado
+  medido por mi en los dos cortes, con un worktree limpio para el primero: en
+  `222ca6a7` el instrumento da 82 hechas, universo hasta `LD-138`, 54 huecos y 2
+  nombradas sin seccion; en HEAD da 82 hechas, universo hasta `LD-154`, 64
+  huecos y 8 nombradas sin seccion. TU CIFRA DE 54 ERA CIERTA CUANDO LA MEDISTE
+  Y LA REPRODUJE EXACTA; lo que pasa es que el commit que la trajo la convirtio
+  en 64. Los CINCO `docs/loop/_v170_t*_seccion.md` se MUEVEN a `scripts/loop/`
+  con `git mv`, que es donde tu misma vuelta aparco el borrador del cierre. NO SE
+  BORRA NADA Y NO SE EDITA NINGUNO. Despues vuelves a correr el contador y
+  publicas las tres lecturas al lado (la de `222ca6a7`, la de HEAD antes de
+  mover, y la de despues de mover), y compruebas que las dos varas convergen: el
+  mayor de las HECHAS y el mayor del UNIVERSO tienen que dar los dos `LD-138`.
+  SI NO CONVERGEN, PARAS Y LO TRAES.
+
+- TAREA 3, LA NUMERACION `LD`, QUE YA NO ES PARADA (adjudicacion 6.1). Traiste
+  la pregunta como doctrina nueva y no lo es: tu propio encargo nombraba
+  `serie_de_registros.py` por su nombre, y ese instrumento LLEVA LA DEFINICION
+  ESCRITA EN SU CODIGO, en las lineas 97 a 102, con docstring: "EL NUMERO QUE NO
+  SE TECLEA. Uno mas que el mayor escrito en CUALQUIERA de...", y
+  `return (max(nums) + 1) if nums else 1`. Sin condicional de huecos y sin
+  excepcion. EL SIGUIENTE LIBRE ES EL MAYOR MAS UNO, y el camino es el 1.
+  Hiciste bien en parar antes que inventar; lo que te falto fue abrir el fichero
+  del instrumento que el encargo te nombraba. Asi que las 16 filas de tabla de la
+  segunda tanda de `docs/plan/LECTURAS_DIRIGIDAS.md` (lineas 327 a 518, tres
+  tablas de 8, 5 y 3 filas, las 16 sin numero, contadas por mi) GANAN `LD-139` a
+  `LD-154` POR ADICION PURA, con los numeros COMPUTADOS POR INSTRUMENTO despues
+  de la TAREA 2 y SIN TOCAR UNA PALABRA de su texto. Numerar no es reescribir.
+  Con su caso positivo por mutacion, que tiene que CAER si el instrumento teclea
+  un numero en vez de computarlo. El `D.6` (que el tramo `LD-12` a `LD-27` mida
+  exactamente 16 y caiga justo entre la primera tanda y la tercera) queda
+  DECLARADO EN EL REPORTE COMO CONTRASTE MEDIDO Y NO COMO FUNDAMENTO: el propio
+  instrumento dice que esos numeros nunca fueron nombrados, o sea que nadie los
+  asigno, y una adyacencia no es una asignacion.
+
+- TAREA 4, LAS DOS DEUDAS DE REGISTRO (adjudicaciones 6.4 y 6.11).
+  (4.a) EL AGUJERO DEL `R.38`, QUE ES TU HALLAZGO Y LO VERIFIQUE: la entrada
+  `R.38` de `docs/PENDIENTES.md`, escrita por la vuelta 169, afirma que "el arnes
+  hermano lo prueba por mutacion en vez de afirmarlo", y ese arnes no existe
+  (`ls scripts/loop/ | grep mutacion_registro` da 164, 165, 166, 167, 168 y 170,
+  y ninguno de la 169; corrido por mi hoy). "No es mio y el encargo no me manda
+  tocarlo" no vale para una afirmacion falsa en la serie de registros: la serie
+  es una sola y la lee todo el que venga detras. Se corrige por el carril del
+  banco 9.10, con la frase vieja ENTERA Y TACHADA y la correccion fechada debajo
+  con su medicion pegada. Traerlo estuvo bien; dejarlo, no.
+  (4.b) EL `81` DE `docs/plan/00_INDICE.md:644`, que es tu `P.2`: publica 81
+  lecturas dirigidas hechas con corte 19 ago 2026 y el instrumento mide 82 hoy.
+  No es una mentira, lleva su corte. Se le adosa la cifra de hoy por 9.21, POR
+  ADICION Y SIN TOCAR LA LETRA VIEJA, y se hace DESPUES de la TAREA 2, porque el
+  contador es el mismo instrumento que la TAREA 2 limpia.
+
+- TAREA 5, LOS TRES INSTRUMENTOS QUE FALTAN (adjudicaciones 6.6, 6.9 y 6.12).
+  (5.a) EL ARCHIVADOR SE ENCHUFA, que es tu `D.2`. Un archivador que hay que
+  acordarse de correr no cierra el agujero de la 6.4 del acta 169, lo aplaza; y
+  esta vuelta acaba de demostrar de que va, porque el esqueleto sobreescribe
+  `REPORTE.md` sin preguntar. Se llama como paso 0 del esqueleto, y EL ESQUELETO
+  SE NIEGA A ESCRIBIR SI EL REPORTE ANTERIOR NO ESTA ARCHIVADO, que es el canon
+  de fallar ruidoso del banco. Con su caso positivo por mutacion, y que el caso
+  CAIGA si el esqueleto escribe con el archivo ausente.
+  (5.b) EL CENSO DEL CAMPO `forma`, que es tu `D.5`, tu `P.4` y tu `PD.2`. Dices
+  que no encontraste vocabulario cerrado, y eso es una busqueda negativa que no
+  se puede citar (EJECUTOR.md 9), asi que se mide: barrido de las 672 entradas de
+  `docs/plan/INVENTARIO.jsonl` con la nomina de palabras de `forma` y su cuenta,
+  cada una con cuantas entradas la usan. Con el censo delante o hay vocabulario y
+  se dice si `FUNDIDA` cabe, o no lo hay y sube al fundador como hallazgo.
+  MIENTRAS TANTO LA PALABRA SE QUEDA: describe un hecho que verifique (6
+  miembros, un solo nodo vivo, cero pares) y ninguna regla escrita la prohibe.
+  MEDIR ANTES DE LEGISLAR.
+  (5.c) LOS 8 PARES SIN LEER de `la supervision de la IA`, que es tu `P.5`. No
+  afirmo que sean backlog nuevo porque no lo he medido, y tu tampoco. Barrido
+  MEDIDO sobre las 71 fichas de `docs/plan/OPERACIONES.jsonl` buscando esos 8
+  pares en `nodos`, `preservar`, `eliminar` y `superviviente`, con los 8
+  nombrados uno a uno y con el comando escrito al lado, porque una busqueda
+  negativa no se puede citar.
+
+LO QUE ESTE ENCARGO NO TRAE, DICHO PARA QUE NO LO BUSQUES: `OP-L-03` queda
+abierta y leida y NO se ejecuta esta vuelta. Sus tres clausulas y su adjudicacion
+las dejaste leidas en el reporte de la 170 y ahi siguen. El motivo es el tope de
+cinco tareas y el hecho de que la vuelta 170 dejo su cierre a medias: primero se
+paga eso, y la ficha empieza la vuelta 172 abierta y no por abrir.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
