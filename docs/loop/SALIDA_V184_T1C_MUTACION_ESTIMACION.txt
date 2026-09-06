@@ -21,14 +21,14 @@ C) EL --plan DE VERDAD, CORRIDO EN UN PROCESO, Y SUS LINEAS DE ESTIMACION
    (las dos mitades de arriba son puras y se pueden cumplir sin que el
     lanzador las use. Este bloque mira la salida REAL)
    EXITCODE de --plan: 0
-   CIFRA entradas de la nomina que ESA MISMA CORRIDA imprime: 125
-   CIFRA entradas de la nomina contada aqui, en este proceso: 125
+   CIFRA entradas de la nomina que ESA MISMA CORRIDA imprime: 113
+   CIFRA entradas de la nomina contada aqui, en este proceso: 113
    CIFRA lineas de ESTIMACION halladas en la salida real: 2
-      |   ESTIMACION minutos por tramo de 13 entradas: entre 4.3 y 5.6 (corte: HEAD 6864bf8c0866, nomina de 125 entradas contada en esta corrida)
-      |   ESTIMACION minutos de la nomina entera: entre 41.2 y 53.8 (corte: HEAD 6864bf8c0866, nomina de 125 entradas contada en esta corrida)
+      |   ESTIMACION minutos por tramo de 13 entradas: entre 4.3 y 5.6 (corte: HEAD e91a307fe315, nomina de 113 entradas contada en esta corrida)
+      |   ESTIMACION minutos de la nomina entera: entre 37.3 y 48.6 (corte: HEAD e91a307fe315, nomina de 113 entradas contada en esta corrida)
    de esas, LAS QUE LLEVAN CORTE: 2
    de esas, LAS QUE ADEMAS LO LLEVAN BIEN (calza con la nomina de la corrida): 2
-   HEAD que declaran las lineas con corte: 6864bf8c0866
+   HEAD que declaran las lineas con corte: e91a307fe315
 
 D) LA CIFRA VENCIDA DE LA 183, RECONSTRUIDA PARA QUE SE VEA DE DONDE SALIO
    Con la linea nueva, una nomina de 111 y una de 112 producen DOS TEXTOS
@@ -45,7 +45,7 @@ E) PASADA 1, LOS CASOS TAL CUAL
    B_un_corte_de_otra_nomina_NO_calza                       PASA   (real=False esperado=False)
    B_una_linea_sin_corte_NO_calza                           PASA   (real=False esperado=False)
    C_el_plan_sale_verde                                     PASA   (real=0 esperado=0)
-   C_la_nomina_del_plan_es_la_nomina_de_hoy                 PASA   (real=125 esperado=125)
+   C_la_nomina_del_plan_es_la_nomina_de_hoy                 PASA   (real=113 esperado=113)
    C_hay_dos_lineas_de_estimacion                           PASA   (real=2 esperado=2)
    C_TODAS_llevan_su_corte                                  PASA   (real=2 esperado=2)
    C_y_el_corte_de_TODAS_calza_con_la_nomina_de_la_corrida  PASA   (real=2 esperado=2)
@@ -62,7 +62,7 @@ F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
    B_un_corte_de_otra_nomina_NO_calza                       CAE   (esperado mutado=True)
    B_una_linea_sin_corte_NO_calza                           CAE   (esperado mutado=True)
    C_el_plan_sale_verde                                     CAE   (esperado mutado=1)
-   C_la_nomina_del_plan_es_la_nomina_de_hoy                 CAE   (esperado mutado=126)
+   C_la_nomina_del_plan_es_la_nomina_de_hoy                 CAE   (esperado mutado=114)
    C_hay_dos_lineas_de_estimacion                           CAE   (esperado mutado=3)
    C_TODAS_llevan_su_corte                                  CAE   (esperado mutado=3)
    C_y_el_corte_de_TODAS_calza_con_la_nomina_de_la_corrida  CAE   (esperado mutado=3)
