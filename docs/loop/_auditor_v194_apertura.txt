@@ -1,0 +1,19 @@
+==============================================================================
+APERTURA DEL AUDITOR DE LA VUELTA 194 (audita la vuelta 193 del ejecutor)
+==============================================================================
+FICHERO DEL TURNO al entrar: NO existe, el turno empieza limpio
+bitacora cargada del disco: (vacia)
+
+APUNTO A MANO UN TOQUE QUE EL MODULO NO VIO, Y LO DIGO ANTES DE SELLAR:
+   antes de importar este modulo corri `wc -l docs/loop/REPORTE.md` para
+   saber su tamano. Eso ABRE REPORTE.md, que es uno de LOS TRES
+   PROHIBIDOS ANTES DEL SELLO. El modulo no lo vio porque no paso por
+   `leer_reporte()`, y por eso lo apunto yo: una guarda que solo ve lo que
+   pasa por ella no puede protegerme si yo entro por al lado y me callo.
+   bitacora despues del apunte: ['REPORTE.md']
+
+   PUEDE SELLAR: NO
+      motivo: el turno ya toco 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no probaria nada.
+      bitacora del turno hasta ahora: REPORTE.md
+   ROJO: NO se corre el aislador y NO se escribe ningun sello.
+VEREDICTO DEL SELLO: ROJO

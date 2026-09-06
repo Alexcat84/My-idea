@@ -1,0 +1,209 @@
+==============================================================================
+MIS TREINTA CLASES, ESCRITAS ANTES DE ABRIR EL DESTAPE. AUDITOR, VUELTA 194.
+==============================================================================
+
+LA VARA, CITADA POR NUMERO Y NO PARAFRASEADA (AUDITOR.md 0: el banco es la
+primera fuente de verdad; 9.5.0: la regla se cita, no se parafrasea):
+
+  docs/BANCO_DE_TEXTOS.md 9.6.1, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O
+  EL PROCEDIMIENTO. Literal:
+
+    "Si lo que el hijo anade a lo que la madre ya dice CABE EN UNA LINEA,
+     REPITE. Si trae un PROCEDIMIENTO que la madre no tiene, CONTINUA."
+
+  Y LA REGLA PRACTICA QUE LA HACE CONTABLE, del mismo banco 9.22 (informe 67.6),
+  literal:
+
+    "es LINEA un puntero, una advertencia, un criterio suelto o una accion
+     unica; es PROCEDIMIENTO un paso que obliga a varias decisiones dentro de si
+     o que se repite en el tiempo."
+
+  APLICADA EN LAS DOS DIRECCIONES, por 9.22 LA VARA EN LOS DOS SENTIDOS:
+    LINEA en los dos sentidos           -> A, fusion
+    PROCEDIMIENTO en los dos sentidos,
+      sobre DOS LINEAS DISTINTAS        -> C, sano con figura, enlace mutuo
+    PROCEDIMIENTO en UN solo sentido    -> madre e hijo, el par CONTINUA -> D
+
+LA LEYENDA DE LAS CLASES, leida del archivo SIN destapar ninguno de mis 30
+(consulta acotada a puestos que NO son los mios, comando en el acta):
+    A = duplicado, se funde. B = DUDOSO. C = sano CON FIGURA (9.22).
+    D = sano o arista que falta; no se funde.
+
+------------------------------------------------------------------------------
+DECLARACION QUE VA DELANTE PORQUE MANCHA LA CIEGA: ONCE DE MIS TREINTA VIENEN
+QUEMADOS, Y NO POR UN COMANDO MIO
+------------------------------------------------------------------------------
+
+EL CONTEXTO DE APERTURA DE MI SESION TRAE LOS CINCO ULTIMOS MENSAJES DE COMMIT
+DE LA RAMA, y el ejecutor de la vuelta 193 publico EN SU MENSAJE DE COMMIT sus
+clases a ciegas. Literal de ese mensaje: "Ocho dudosos NOMBRADOS DELANTE (203,
+718, 967, 2426 donde digo A; 132, 972, 1069, 3171 donde digo D)" y "Reparto: 8 A,
+22 D, cero B, cero C"; y el de las tareas 3 y 5: "TRES discrepancias fuera de mi
+marcado (158, 612, 651)".
+
+O SEA QUE ANTES DE MI PRIMER COMANDO YO YA SABIA:
+  - la clase del ejecutor en OCHO puestos: 203, 718, 967, 2426 (A) y 132, 972,
+    1069, 3171 (D);
+  - que TRES puestos mas (158, 612, 651) discrepan del archivo, aunque no en que
+    direccion;
+  - y el reparto entero de su tanda, 8 A y 22 D, que acota lo que puede salir.
+
+LOS ONCE QUEDAN MARCADOS QUEMADO UNO A UNO ABAJO Y NO CUENTAN PARA EL CREDITO.
+El cotejo se publica dos veces: sobre los 30 y sobre los 19 limpios.
+
+NO LO DESCUBRI DESPUES: lo escribo aqui, ANTES de abrir el destape, porque es la
+unica forma de que valga. Y no lo puede impedir ninguna de las cuatro puertas de
+apertura_del_auditor.py: las cuatro vigilan comandos MIOS, y esto llego en el
+contexto de apertura de la sesion, antes de que yo pudiera correr nada.
+
+------------------------------------------------------------------------------
+MIS DUDOSOS, NOMBRADOS DELANTE Y CON EL MOTIVO DE CADA DUDA (son OCHO)
+------------------------------------------------------------------------------
+
+  158 (digo A): lo que A anade, "precio, duracion y alcance del contrato como
+       ingreso recurrente", se puede leer como paso que obliga a varias
+       decisiones dentro de si, y entonces seria PROCEDIMIENTO y el par caeria
+       a D.
+  203 (digo A, QUEMADO): "definir una politica de pagos" de B roza la frontera
+       linea/procedimiento. Si es procedimiento, el par cae a D.
+  651 (digo D, QUEMADO): es mi candidato mas serio a C. B expande la linea 4 de
+       A (metricas por capacidad) con un procedimiento entero; lo que dudo es si
+       A expande a su vez la linea 2 de B (que categoria es critica segun el
+       cuadrante) o si solo la roza con otro criterio, el de la ventaja frente a
+       competidores. Digo que la roza, y por eso D y no C.
+  718 (digo D, QUEMADO): A expande la linea 2 de B, "disenar condiciones
+       favorables". Si se lee que lo que A anade son lineas sueltas y no un
+       procedimiento, el par seria A.
+  879 (digo D): segundo candidato a C, y lo descarto por la comprobacion que la
+       propia 9.22 pone: "Si las dos direcciones apuntan a la misma linea, no es
+       esta figura". Aqui las dos apuntan a la misma linea, probar con clientes
+       reales.
+  972 (digo D, QUEMADO): la clasificacion en tres cubos por tres criterios de B
+       esta justo en la frontera. La cuento PROCEDIMIENTO por la regla contable
+       ("obliga a varias decisiones dentro de si"), y por eso D y no A.
+ 2157 (digo D): el solape es flojo por los dos lados; se puede leer como madre e
+       hijo sobre la linea 1 de B.
+ 3089 (digo D): A es la especializacion sindical de la linea 1 de B. Si esa
+       especializacion se cuenta como linea y no como procedimiento, seria A.
+
+------------------------------------------------------------------------------
+LAS TREINTA CLASES
+------------------------------------------------------------------------------
+
+puesto | clase | quemado | por que, con la vara
+
+    9  | D |       | A es anclaje: quien dice el precio primero. B es un
+       |   |       | procedimiento de preparacion que expande la linea 1 de A
+       |   |       | (buscar el rango habitual). PROCEDIMIENTO en un solo
+       |   |       | sentido: madre e hijo, el par CONTINUA.
+   23  | D |       | Dos tecnicas distintas: el permiso para decir que no contra
+       |   |       | usar las propias reglas del proveedor y la palabra justo.
+       |   |       | Ninguna expande linea de la otra.
+   70  | D |       | El plazo limite propio contra el silencio y no partir la
+       |   |       | diferencia. Sin solape de linea.
+  132  | D | SI    | A enumera la preparacion y su paso 3 pide saber quien
+       |   |       | decide; B es ese paso entero con su procedimiento propio
+       |   |       | (yo contra nosotros, el veto, el acta escrita).
+       |   |       | PROCEDIMIENTO en un sentido: D, arista que falta.
+  158  | A | SI    | Coinciden en el orden: terminos separados y claros, y no
+       |   |       | anular garantias implicitas. Lo que anade cada uno cabe en
+       |   |       | una linea: A el precio, duracion y alcance; B quien
+       |   |       | responde, vendedor o fabricante. LINEA en los dos sentidos.
+  203  | A | SI    | Coinciden en calcular DPO, cotejarlo con el DSO y balancear
+       |   |       | efectivo contra relacion con proveedores. A anade la
+       |   |       | formula del DSO y sus causas; B anade el impacto
+       |   |       | reputacional y crediticio. LINEA en los dos sentidos.
+  396  | D |       | La linea 1 de B, la descripcion de uno a tres parrafos, es
+       |   |       | el nodo A entero, que trae ademas su procedimiento de
+       |   |       | correo. Y el banco 9.6.1 ya nombra este nodo:
+       |   |       | preparacion_materiales_fundraising es su segundo ejemplar,
+       |   |       | "sigue siendo arista que falta". D con cita.
+  612  | D | SI    | Dos sujetos distintos: la junta que ve venir el relevo
+       |   |       | contra el fundador que lo inicia. Espejo, no madre e hijo.
+  651  | D | SI    | B expande la linea 4 de A, las metricas por capacidad, con
+       |   |       | diez pasos y sus calculos. En el sentido contrario A no
+       |   |       | expande una linea de B: la roza con otro criterio.
+       |   |       | PROCEDIMIENTO en un solo sentido: D. Ver mis dudosos.
+  718  | D | SI    | A expande la linea 2 de B, disenar condiciones favorables,
+       |   |       | con rituales, bloques y la distincion aprender contra
+       |   |       | dominar. Lo que B anade cabe en dos lineas. Un sentido: D.
+  879  | D |       | Dos marcos distintos sobre el mismo momento: Customer
+       |   |       | Validation por ventas contra la etapa de pruebas alfa y
+       |   |       | piloto. Las dos direcciones apuntan a LA MISMA linea, y la
+       |   |       | 9.22 dice que entonces no es figura. D.
+  907  | D |       | La veracidad del texto de la garantia contra el mecanismo
+       |   |       | de resolucion de disputas. Solo comparten la sede.
+  967  | A | SI    | Coinciden en el balance del portafolio, las decisiones
+       |   |       | Go/Kill y matar los debiles. A anade los seis criterios y
+       |   |       | el embudo; B anade el tercio y la reasignacion. Lineas por
+       |   |       | los dos lados: fusion.
+  972  | D | SI    | B trae la clasificacion en Just Me, Delegada y Automatizada
+       |   |       | por tres criterios, que obliga a varias decisiones dentro
+       |   |       | de si, y la revision periodica, que se repite en el tiempo:
+       |   |       | PROCEDIMIENTO por la regla contable. A solo anade una
+       |   |       | linea, redisenar el rol. Un sentido: D.
+ 1069  | D | SI    | Misma taxonomia de tres capitales, verbo opuesto: A dice
+       |   |       | como acumularlos, B como inventariarlos y cotejarlos contra
+       |   |       | la oportunidad. Ninguno es madre del otro.
+ 1205  | A |       | Los CUATRO pasos de B estan dentro de A, y TRES de ellos
+       |   |       | palabra por palabra: el paso 1 de B dentro del paso 1 de A,
+       |   |       | y los pasos 3 y 4 de B son los pasos 8 y 9 de A literales.
+       |   |       | B no anade nada. Fusion, y sobrevive A.
+ 1371  | A |       | Coinciden en negociar el tamano del pool, si incluye lo ya
+       |   |       | otorgado, y repartirlo por las contrataciones planeadas. A
+       |   |       | anade la dilucion sobre el precio por accion del fundador;
+       |   |       | B anade las tres alternativas de negociacion. Lineas.
+ 1805  | A |       | El paso 1 de B contiene el paso 1 de A, y los pasos 6 y 7
+       |   |       | de B son los pasos 4 y 5 de A LITERALES. Lo unico propio de
+       |   |       | B es una linea: si toca reportar al CDP o cumplir la
+       |   |       | divulgacion del mercado. Fusion.
+ 1817  | D |       | B trae el sistema de rendicion de cuentas (indicadores en
+       |   |       | la evaluacion, incentivos, sistema de gestion ambiental),
+       |   |       | que es procedimiento y A no tiene. A solo anade lineas.
+       |   |       | Un sentido: D.
+ 2030  | D |       | Excluyentes por construccion: el paso 1 de B pide confirmar
+       |   |       | que el producto NO califica para un tratado, que es la
+       |   |       | condicion de A. Procedimientos distintos.
+ 2157  | D |       | El marco de las cuatro ventas contra el proceso comercial
+       |   |       | entero (FDD, abogado, Discovery Day). Solape flojo y sin
+       |   |       | linea que uno expanda del otro.
+ 2426  | A | SI    | El mismo cuarteto: auditoria, causa raiz, documentacion y
+       |   |       | plan por responsable. B anade el como (consultar al
+       |   |       | personal, por departamento, reporte formal); A anade la
+       |   |       | verificacion de que el problema se elimino. Lineas.
+ 2660  | D |       | B es el procedimiento del estudio de benchmarking que A
+       |   |       | consume en sus lineas 1 y 2. En el sentido contrario A no
+       |   |       | trae procedimiento propio sobre una linea de B. Un sentido.
+ 2836  | D |       | A es el mecanismo del bucle (sensor, unidad, arbitro,
+       |   |       | actuador) que expande la linea 3 de B, establecer nuevos
+       |   |       | controles. Un sentido: D.
+ 2913  | D |       | Benchmarking dentro de la trilogia contra la definicion de
+       |   |       | control. Se tocan en una linea y ninguno expande al otro.
+ 3070  | D |       | A es el procedimiento de formar y correr el equipo de
+       |   |       | mejora, que expande la linea 2 de B, formar equipos de
+       |   |       | calidad. Un sentido: D.
+ 3089  | D |       | A es la version sindical de la linea 1 de B, comunicar a
+       |   |       | todos, con su procedimiento propio (reunion temprana,
+       |   |       | contrato, horas extra). Un sentido: D.
+ 3171  | D | SI    | B es el procedimiento del triangulo (laboratorio, campo,
+       |   |       | uso real, instrucciones y servicio) que expande la linea 2
+       |   |       | de A, los factores post venta. Un sentido: D.
+ 3185  | D |       | Como se LEE la carta contra cuando y para que USARLA y
+       |   |       | quien actua. Se cruzan en el punto fuera de limites y nada
+       |   |       | mas.
+ 3329  | D |       | Buscar el riesgo contra responder al riesgo: dos actos
+       |   |       | consecutivos del mismo ciclo, no madre e hijo.
+
+------------------------------------------------------------------------------
+MI REPARTO: 7 A (158, 203, 967, 1205, 1371, 1805, 2426), 23 D, CERO B, CERO C.
+El recuento sobre los 19 NO quemados lo hace el instrumento en el acta, no yo
+aqui.
+------------------------------------------------------------------------------
+
+Y UNA COSA QUE DIGO YO ANTES DE VER NADA, PORQUE ES DEL METODO Y NO DEL
+RESULTADO: emito CERO B, igual que el ejecutor de la 193. La vara 9.6.1 con la
+9.22 delante tiene TRES salidas (A, C, D) y ninguna es B, porque B es DUDOSO y
+un dudoso no es lo que devuelve una vara: es lo que devuelve un lector que no la
+aplico hasta el final. Mis ocho dudosos van NOMBRADOS ARRIBA en vez de emitidos
+como B. Si el archivo trae B en este tramo, la discrepancia sera mia por
+construccion y lo dire asi.
