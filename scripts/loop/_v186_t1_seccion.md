@@ -82,8 +82,7 @@ mutacion es la que prueba el estado nuevo: sobre un acta fabricada CON anotacion
 reparto sale `ANOTACION 1, ABIERTA 1, CERRADA 2, SIN DECIR 0`, y sobre una
 fabricada SIN anotacion la palabra ANOTACION no aparece.
 
-**LA ENTRADA ESCRITA:** `docs/PENDIENTES.md` pasa de **894124 bytes en disco a
-909780 bytes**, la entrada mide **15655 bytes en disco y 15655 normalizados a LF**
+**LA ENTRADA ESCRITA:** `docs/PENDIENTES.md` pasa de **894124 bytes en disco a 909780 bytes**, la entrada mide **15655 bytes en disco y 15655 normalizados a LF**
 en **154 lineas**, se releyo del disco byte a byte, y trae **0 guiones largos o
 medios**.
 
@@ -129,8 +128,7 @@ que era lo que hundio al arnes de la 182 en la bateria de la 184.
 COPIARSE DEL ENCARGO.** El sello se llama **`V187`** y no `V186`, porque la casa
 nombra el sello del acta N como `V(N+1)`; el `V186` no existe y no se fabrico.
 
-- `docs/loop/SELLO_APERTURA_AUDITOR_V187.json`: **799 bytes en disco y 799
-  normalizados a LF**
+- `docs/loop/SELLO_APERTURA_AUDITOR_V187.json`: **799 bytes en disco y 799 bytes normalizados a LF**
 - la ciega mide **39911 bytes en disco y 39911 normalizados a LF**, que es lo que
   el sello declara
 - su `sha256` computado hoy, de disco y normalizado a LF iguales:
