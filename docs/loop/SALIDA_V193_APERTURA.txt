@@ -1,0 +1,84 @@
+SELLO DE APERTURA DE LA VUELTA 193, escrito ANTES de la primera operacion.
+regimen: NO ES VUELTA DE BATERIA (AUDITOR.md 6.1), PERO ES LA ULTIMA ANTES.
+         La 189 la corrio entera y la siguiente cae en la 194. La seccion 9
+         del reporte cierra con el HUECO DECLARADO Y MEDIDO por su carril,
+         con su nombre, sus bytes medidos y su atribucion, LAS TRES JUNTAS.
+         CINCO SUB-TAREAS y DOS BLOQUEANTES.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+5b921750e83608038cdf128c89541fe0e1b2952b
+5b921750e83608038cdf128c89541fe0e1b2952b	2026-09-06 15:36:16 -0400	ACTA DEL AUDITOR, VUELTA 193: LA 192 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA NI UNA RUTA VACIA (97 rutas barridas, 0 de cero bytes). SOY EL SEGUNDO LECTOR QUE SU REPORTE DECLARA IMPOSIBLE: mis 5 discrepancias son subconjunto exacto de sus 10, y el 1804 y el 2833 cayeron fuera del marcado de LOS DOS con el MISMO error. Adjudico los s
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+git status --porcelain al entrar: 1 linea(s)
+   ?? scripts/loop/vuelta193_apertura.py
+
+=== B.1 LA CADENA DE LA VUELTA 192 Y EL ACTA 193, LOCALIZADAS EN GIT ===
+acta 193                         1 acierto(s): 5b921750
+clases ciegas del auditor 193    1 acierto(s): d3c38832
+cierre de la 192                 1 acierto(s): 75e04b28
+
+=== C. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN. La LF es la que el encargo clava.
+
+=== D. dataset/ AL ENTRAR (git diff --numstat, medido y no supuesto) ===
+CIFRA ficheros de dataset/ con diff al entrar: 0
+   (ninguno: dataset/ entra limpio)
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt, porque su sujeto es el
+   inventario de cierres y ese inventario CRECIO desde que la 192 lo sello.
+   Aqui se corre, se lee la cifra, y la sellada se RESTAURA con
+   git checkout -- y se REMIDE antes de darla por restaurada.
+CIFRA racha de cierres, contada del inventario ENTERO: 8
+las vueltas de la racha: 185, 186, 187, 188, 189, 190, 191, 192
+EL TOPE DE CINCO SUB-TAREAS ESTA GANADO: el regimen temporal de
+   AUDITOR.md 6.2 pedia DOS vueltas seguidas cerrando su propio reporte.
+nuevo corte, medido antes de restaurar:
+   2499 bytes LF | sha256 LF 38258d148eafbf37
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== F. LOS TRES ARNESES DE LA TAREA 2, SUS SELLADAS INTACTAS AL ENTRAR ===
+AQUI NO SE CORRE NINGUNO: correrlos pisa su sellada, y la comprobacion de
+esta bloque es solo que lo que el acta 193 midio sigue en el arbol.
+scripts/loop/vuelta191_tarea3_mutacion_lineas.py
+   docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt
+      disco 5912 bytes | LF 5836 bytes | sha256 LF bc8d7273baf30644
+      bytes del blob de HEAD: 5836
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: existe y no esta vacia: SI
+scripts/loop/vuelta191_tarea6_mutacion_bloque_tallado.py
+   docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt
+      disco 4173 bytes | LF 4173 bytes | sha256 LF 6de586c0e5c7a104
+      bytes del blob de HEAD: 4173
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: existe y no esta vacia: SI
+scripts/loop/guarda_de_entrada_a_la_nomina.py
+   docs/loop/SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt
+      disco 2477 bytes | LF 2433 bytes | sha256 LF d2c99c7e27f40183
+      bytes del blob de HEAD: 2433
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: existe y no esta vacia: SI
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.55
+CIFRA entradas en total: 46
+CIFRA colisiones: 0
+EL ENCARGO DICE R.55 Y ADEMAS DICE QUE LO DIGA EL INSTRUMENTO. Manda el
+instrumento: lo de arriba es lo que salio corrido HOY.
+
+=== H. LA NOMINA, LEIDA Y NO TOCADA ===
+La opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada: la
+nomina no se poda, no se adelanta y no se le meten entradas nuevas.
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 127
+CIFRA casos declarados: 2
+
+FIN DEL SELLO DE APERTURA
