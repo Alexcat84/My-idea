@@ -1,0 +1,84 @@
+==============================================================================
+VUELTA 195, TAREA 2.e: EL COTEJO DE LOS SESENTA, CON SUS CIFRAS
+==============================================================================
+
+A) EL ORDEN, LEIDO DE GIT Y NO AFIRMADO
+   Lo unico que hace que este cotejo valga es que mis clases se sellaran
+   ANTES de que el destape se abriera. Eso no se dice: se lee de git.
+   docs/loop/SALIDA_V195_T2_MIS_CLASES.txt
+      nacio en: 296b9e1f 2026-09-06 19:35:11 -0400 VUELTA 195, TAREA 2: MIS SESENTA CLASES SELLADAS ANTES DE ABRIR EL DESTAPE. El ficher
+      disco 23363 bytes | LF 23363 bytes | sha256 LF 9622d2ce8904f326
+   docs/loop/SALIDA_V195_T2_DESTAPE.txt
+      nacio en: 386e5a20 2026-09-06 19:27:31 -0400 VUELTA 195, TAREA 2, SUJETO AISLADO ANTES DE MIRAR NADA: LOS SESENTA, TRAMO Y DOBLE, 
+      disco 64898 bytes | LF 64898 bytes | sha256 LF 596d1166c601c6c2
+   docs/loop/SALIDA_V195_T2_CIEGA.txt
+      nacio en: 386e5a20 2026-09-06 19:27:31 -0400 VUELTA 195, TAREA 2, SUJETO AISLADO ANTES DE MIRAR NADA: LOS SESENTA, TRAMO Y DOBLE, 
+      disco 81838 bytes | LF 81838 bytes | sha256 LF 359b504313dec5df
+
+B) LAS TRES LISTAS, CONTADAS DE SUS FICHEROS Y NO TECLEADAS
+   CIFRA filas de clase en docs/loop/SALIDA_V195_T2_MIS_CLASES.txt: 60
+   CIFRA puestos y clases en el destape: 60 y 60
+   CIFRA filas del destape: 60
+   CIFRA puestos del tramo, contados de docs/loop/_auditor_v195_ciega_blind.txt: 30
+   puestos del destape que YO NO CLASIFIQUE: (ninguno)
+   puestos que YO CLASIFIQUE y el destape no trae: (ninguno)
+   CIFRA de mis 60 que son del tramo: 30 | vecinos: 30
+   CIFRA filas con la columna T/D mal rotulada: 0
+
+C) MI REPARTO Y EL DEL ARCHIVO, LOS DOS CONTADOS
+   MIO          A 9 | B 4 | C 0 | D 47 (total 60)
+   DEL ARCHIVO  A 8 | B 1 | C 0 | D 51 (total 60)
+
+D) EL COTEJO SOBRE LOS 60
+   CIFRA coinciden: 54 de 60
+   CIFRA discrepan: 6 de 60
+   LAS DISCREPANCIAS, UNA A UNA, CON MI CLASE Y LA DEL ARCHIVO:
+      puesto 976    yo D | archivo A | vecino | DENTRO de mi marcado
+      puesto 1807   yo B | archivo D | TRAMO | DENTRO de mi marcado
+      puesto 1808   yo B | archivo D | vecino | DENTRO de mi marcado
+      puesto 2428   yo A | archivo D | vecino | FUERA de mi marcado
+      puesto 2662   yo A | archivo D | vecino | FUERA de mi marcado
+      puesto 3173   yo B | archivo D | vecino | DENTRO de mi marcado
+
+E) MIS DISCUTIBLES, LEIDOS DE LA TABLA Y NO DE LA LISTA DEL FINAL
+   CIFRA discutibles marcados en la tabla: 7
+   LOS PUESTOS: 655, 976, 1206, 1807, 1808, 2427, 3173
+   CIFRA discutibles en la lista del final del fichero: 7
+   LAS DOS LISTAS SON LA MISMA: SI
+   de mis discutibles, ACERTE 3 y FALLE 4
+      acertados: 655, 1206, 2427
+      fallados:  976, 1807, 1808, 3173
+   DISCREPANCIAS FUERA DE MI MARCADO: 2
+      2428, 2662
+   AUDITOR.md 1.2: una discrepancia FUERA del marcado baja el credito de
+   la tanda y su tramo se relee al doble. LA CIFRA DE ARRIBA ES LA QUE
+   DECIDE ESO, y se publica salga lo que salga.
+
+F) EL SEGUNDO COTEJO, SOBRE LOS 58 QUE LLEGARON LIMPIOS
+   LOS DOS QUE SE QUITAN Y POR QUE: el encargo de esta vuelta publica en
+   el cuerpo de su TAREA 2 la clase del archivo de estos dos puestos, asi
+   que yo la lei antes de leer el par. UN ACIERTO SOBRE UN PAR CUYA
+   RESPUESTA VENIA ESCRITA EN EL ENCARGO NO ES UN ACIERTO DE LECTURA.
+      puesto 654    yo B | archivo B | CALZA
+      puesto 719    yo D | archivo D | CALZA
+   CIFRA puestos limpios: 58
+   CIFRA coinciden: 52 de 58
+   CIFRA discrepan: 6 de 58
+   discrepancias FUERA de mi marcado, sobre los limpios: 2
+      2428, 2662
+
+G) LA CLASE `B`, QUE ES LO QUE EL ENCARGO PEDIA QUE NO SE PERDIERA
+   CIFRA `B` que YO emito: 4 -> 654, 1807, 1808, 3173
+   CIFRA `B` que el ARCHIVO tiene en estos 60: 1 -> 654
+   `B` que acierto (mia y suya): 654
+   `B` que el archivo tiene y yo NO vi: (ninguna)
+   `B` que yo emito y el archivo NO tiene: 1807, 1808, 3173
+   EL CONTRASTE MEDIDO, Y NO ES UN ADORNO: el auditor emitio CERO `B` en
+   sus 30 y el archivo tenia una. Lo de arriba es lo que yo emiti.
+
+H) EL ARCHIVO NO SE TOCA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 | LF 4054129 | sha256 LF 0a77b5a35a962621
+   ESTE COTEJO NO MUEVE NINGUNA CLASE. Si de aqui sale una correccion,
+   se declara y se trae, y quien la aplica es el RECOMPUTO.
+
+FIN
