@@ -1,0 +1,357 @@
+SELLO DE APERTURA DE LA VUELTA 185, escrito ANTES de la primera operacion.
+Sufijo de salidas: 185 (computado de vuelta185_apertura.py, no tecleado)
+regimen: NO ES VUELTA DE BATERIA. AUDITOR.md 6.1: la bateria corre CADA CINCO
+         vueltas y cerro entera en la 184, asi que la siguiente es la 189. La
+         seccion 9 del reporte de la 185 cierra CON EL HUECO DECLARADO Y
+         MEDIDO por el carril de cerrar_reporte.py: nombre, bytes y
+         atribucion, las tres juntas o no vale.
+         DOS sub-tareas, que es el tope del regimen temporal 6.2: la 184 NO
+         cerro su propio reporte (exitcode 1), asi que la cuenta de vueltas
+         que cierran su reporte SIGUE EN CERO.
+         ESTE FICHERO NO ARCHIVA NADA: el reporte de la 184 se cierra en la
+         TAREA 2.a, ANTES del esqueleto de la 185, y por eso el PASO 0 del
+         esqueleto no tendra reporte ajeno que archivar.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+5834632bb240835cd479b150da0d4b38b9e3ce3f
+5834632bb240835cd479b150da0d4b38b9e3ce3f	2026-09-06 02:01:43 -0400	ACTA DEL AUDITOR, VUELTA 185: LA 184 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA, ADJUDICO LOS SIETE DISCUTIBLES A FAVOR, CIERRO PD.2, PD.3 Y PD.4 POR CITA, Y EL ROJO QUE IMPIDE CERRAR EL REPORTE QUEDA DECLARADO FALSO ROJO CON SU REPARACION ENCARGADA.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LA CADENA DE LA VUELTA 183, LOCALIZADA EN GIT Y NO TECLEADA ===
+(no se teclea ningun hash: se busca en el log el commit de cada pieza de la
+ 183 y se imprime lo que salga)
+   acta 182           -> 0ef74748	ACTA DEL AUDITOR, VUELTA 182: LA APERTURA SELLADA CUMPLIO EN SU ESTRENO, Y EL VEREDICTO DE UNA LINEA SE CONTRADICE CON SU PROPIA SECCION 8.
+   acta 183           -> d5862dcc	ACTA DEL AUDITOR, VUELTA 183: LA VUELTA SE CORTO EN EL TRAMO 2 DE 9 Y LO PUBLICADO REPRODUJO ENTERO, PERO LAS CUATRO SALIDAS SELLADAS DE ESA 
+   tramo 1            -> aac1c84e	VUELTA 183, BATERIA TRAMO 1 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 9116 bytes en disco y 9116 normalizados a LF, 
+   tramo 2            -> c2fc89c2	VUELTA 183, BATERIA TRAMO 2 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 7352 bytes en disco, 114 lineas, sha256 LF eb9
+   tarea 1 de la 183  -> 7a7b9c20	VUELTA 183, TAREA 1 CERRADA Y ANEXADA: R.44 CON SUS DOCE ADJUDICACIONES, LA ESCALADA EN CODIGO, EL HUECO QUE DISTINGUE, Y UN ARNES QUE HABRIA
+
+=== C. git status --porcelain ENTERO ===
+?? scripts/loop/_v185_parche_apertura.py
+?? scripts/loop/vuelta185_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 33608 bytes | git 33608 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4297793 bytes | git 4297793 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 27000 bytes | git 27000 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 20064 bytes | git 20064 bytes
+docs/loop/SELLO_APERTURA_AUDITOR_V185b.json -> disco 735 bytes | git 735 bytes
+docs/loop/_auditor_v185b_ciega_blind.txt -> disco 39740 bytes | git 39740 bytes
+docs/loop/_auditor_v185b_ciega_reveal.txt -> disco 33733 bytes | git 33733 bytes
+docs/loop/_auditor_v185_ciega_blind.txt -> disco 38747 bytes | git 38747 bytes
+docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt -> disco 2435 bytes | git 2415 bytes
+scripts/loop/_v184_cierre_texto.md -> disco 13982 bytes | git 13982 bytes
+docs/loop/SALIDA_V183_BATERIA.txt -> disco 71753 bytes | git 71753 bytes
+docs/loop/SALIDA_V184_CERRAR_REPORTE.txt -> disco 2380 bytes | git 2341 bytes
+docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt -> disco 5156 bytes | git 5078 bytes
+docs/loop/reportes/REPORTE_V183.md -> disco 44346 bytes | git 44346 bytes
+docs/PENDIENTES.md -> disco 881856 bytes | git 881856 bytes
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> disco 20939 bytes | git 20939 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/cerrar_reporte.py -> disco 54697 bytes | git 54697 bytes
+scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py -> disco 9381 bytes | git 9381 bytes
+scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py -> disco 8811 bytes | git 8811 bytes
+scripts/loop/_v184_tallar_t2.py -> disco 21083 bytes | git 21083 bytes
+scripts/loop/serie_de_registros.py -> disco 6595 bytes | git 6595 bytes
+scripts/loop/vuelta184_tarea1a_registrar_acta184.py -> disco 38780 bytes | git 38780 bytes
+scripts/loop/vuelta184_tarea1d_relectura_al_doble.py -> disco 14082 bytes | git 14082 bytes
+scripts/loop/vuelta182_tarea1c_relectura_al_doble.py -> disco 8476 bytes | git 8476 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco 25949 bytes | git 25949 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | git 100077 bytes
+scripts/loop/vuelta184_esqueleto_reporte.py -> disco 18065 bytes | git 18065 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+CIFRA ficheros modificados: 0
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+scripts/loop/_v185_parche_apertura.py -> 23627 bytes
+scripts/loop/vuelta185_apertura.py -> 29221 bytes
+CIFRA ficheros no seguidos: 2
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob 17ad8591c8d90863442e8ffead06c37d9640c289	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob 332c44e38288817316657b086c39b216e267a0f8	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/AUDITOR.md -> 100644 blob 7ce025da60215b6a1701a0f287c262b9507ecf9c	docs/loop/AUDITOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob d205cbf418627ba4f991eb5b4a5f7a41601d7a46	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/SELLO_APERTURA_AUDITOR_V185b.json -> 100644 blob 394f965853e49ca2f255c41ae3956e984f084efe	docs/loop/SELLO_APERTURA_AUDITOR_V185b.json
+docs/loop/_auditor_v185b_ciega_blind.txt -> 100644 blob 779c8a0d9671fe8eec58ff9c354a961e57a6fbcf	docs/loop/_auditor_v185b_ciega_blind.txt
+docs/loop/_auditor_v185b_ciega_reveal.txt -> 100644 blob 4a22a6bd2b2494327aa080a87f4e2dc26c1248c3	docs/loop/_auditor_v185b_ciega_reveal.txt
+docs/loop/_auditor_v185_ciega_blind.txt -> 100644 blob 7dae89278a95689efa5a1bceb75be1b13626fa3e	docs/loop/_auditor_v185_ciega_blind.txt
+docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt -> 100644 blob a610bebdc3b31d04b9b2e45abba861ef07a4e57b	docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt
+scripts/loop/_v184_cierre_texto.md -> 100644 blob 64c04fe1b2c67b2d42be885366b5060529a36074	scripts/loop/_v184_cierre_texto.md
+docs/loop/SALIDA_V183_BATERIA.txt -> 100644 blob ba8cdcab0bcdef7187c6da1e36231d5d2a669485	docs/loop/SALIDA_V183_BATERIA.txt
+docs/loop/SALIDA_V184_CERRAR_REPORTE.txt -> 100644 blob 7df010d1ac4fc1cdce66e86ae3a8b0b0b7eff6b9	docs/loop/SALIDA_V184_CERRAR_REPORTE.txt
+docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt -> 100644 blob bfa6fd318e5e8f61d9a9bf2db1de8ebb1b5ab937	docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt
+docs/loop/reportes/REPORTE_V183.md -> 100644 blob f087d7503f96c4617be42f7988e1a0a6f0952342	docs/loop/reportes/REPORTE_V183.md
+docs/PENDIENTES.md -> 100644 blob 04f19352b100f23c19f346cd6f858e0197b1bc6f	docs/PENDIENTES.md
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 100644 blob 128d4a9f27aeb759ce541f4f09db1c857e4b17c0	docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/cerrar_reporte.py -> 100644 blob 245819d3e0dd678c212268b0fbd636f3825d95e4	scripts/loop/cerrar_reporte.py
+scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py -> 100644 blob bdc78499c5b3a60482b13cb916959d4f1782f4fb	scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
+scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py -> 100644 blob c74b69e450a6f007bf03eb3d607aeada6213e00e	scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py
+scripts/loop/_v184_tallar_t2.py -> 100644 blob 5bb0180126923b2eee225ef1ce0e2a80d185b55e	scripts/loop/_v184_tallar_t2.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta184_tarea1a_registrar_acta184.py -> 100644 blob d6631db31c2fbd869e1cc80a992bf272b6324c9f	scripts/loop/vuelta184_tarea1a_registrar_acta184.py
+scripts/loop/vuelta184_tarea1d_relectura_al_doble.py -> 100644 blob 73a3895b2b516c25cf8e7b555cc28bdd362f5b1d	scripts/loop/vuelta184_tarea1d_relectura_al_doble.py
+scripts/loop/vuelta182_tarea1c_relectura_al_doble.py -> 100644 blob 426784039c2600e371c40e45aa857ca8789be480	scripts/loop/vuelta182_tarea1c_relectura_al_doble.py
+scripts/loop/cotejar_clon_declarado.py -> 100644 blob f064a8b673348434f53ccaca750c1ef5bdeb7406	scripts/loop/cotejar_clon_declarado.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob 9dfb962267aea81f703e2de4eba05cd584a17762	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/vuelta184_esqueleto_reporte.py -> 100644 blob de1c38cbe38638695c3948d655b119c3527d0b6d	scripts/loop/vuelta184_esqueleto_reporte.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+(el encargo dice que el de la 184 sigue SIN CERRAR y SIN ARCHIVAR, y que ESTA
+ vuelta lo cierra en su TAREA 2.a ANTES de tallar el esqueleto propio. Aqui se
+ mide que es y en que estado esta, sin tocarlo y sin archivar nada)
+primera linea: # REPORTE DE LA VUELTA 184 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 517
+bytes en git: 33608
+   contiene 'SIN ESCRIBIR TODAVIA'                   -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'          -> SI
+   contiene 'ABIERTA, SIN CERRAR'                    -> SI
+   contiene 'CERRADA'                                -> SI
+   contiene '<!-- TABLA DE TAREAS -->'               -> SI
+   contiene '<!-- FIN TABLA DE TAREAS -->'           -> SI
+   contiene '<!-- ANEXO DE TAREAS -->'               -> SI
+   contiene '<!-- FIN ANEXO DE TAREAS -->'           -> SI
+   contiene '<!-- CABECERA TALLADA -->'              -> SI
+   contiene '\n## 3.'                                -> NO
+   contiene '\n## 4.'                                -> NO
+   contiene '\n## 5.'                                -> NO
+   contiene '\n## 6.'                                -> NO
+   contiene '\n## 7.'                                -> NO
+   contiene '\n## 8.'                                -> NO
+   contiene '\n## 9.'                                -> NO
+EL DEL ARBOL: bytes LF 33608 | saltos de linea 517 | disco crudo 33608
+identico byte a byte al de HEAD: SI
+FILAS DE LA TABLA DE TAREAS, CONTADAS DE SU TABLA Y NO RECORDADAS:
+   LINEA 86: | **TAREA 1** | LOS REGISTROS Y LAS DOS REPARACIONES DE CODIGO, BLOQUEANTE Y ANTES DE TOCAR LA BATERIA. (a) El
+   LINEA 87: | **TAREA 2** | LA BATERIA, DEL TRAMO 5 AL 9, Y EL CIERRE DEL REPORTE. El TRAMO 5 se re-corre primero, ya con 
+CIFRA filas de tarea en la tabla: 2
+
+=== H.1 LAS TRES PIEZAS CON LAS QUE SE CERRARA EL REPORTE DE LA 184 ===
+(TAREA 2.a. El encargo da tres cifras y aqui NO SE COPIA NINGUNA: se mide
+ cada pieza por las dos convenciones y con su sha256, y la comparacion con lo
+ que la 184 midio se hace despues, en el reporte, con las dos al lado)
+   docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt
+      disco 2435 bytes | LF 2415 bytes
+      sha256 (disco): 12dea7645ff36d2b7f0a171775be063599b7f124fced544e2693097a29345da9
+      sha256 (LF)   : 8af3e148f0035b976fb94bf432a5743e3f05442731abafe608723c0981f428b0
+      git cat-file -s HEAD: 2415 bytes
+   scripts/loop/_v184_cierre_texto.md
+      disco 13982 bytes | LF 13982 bytes
+      sha256 (disco): 050cdbb4ea99e11c76ad365f33fe5dc98d14f73e23416e71c44e404c60aa10a5
+      sha256 (LF)   : 050cdbb4ea99e11c76ad365f33fe5dc98d14f73e23416e71c44e404c60aa10a5
+      git cat-file -s HEAD: 13982 bytes
+   docs/loop/SALIDA_V183_BATERIA.txt
+      disco 71753 bytes | LF 71753 bytes
+      sha256 (disco): 422a909ad6ffb1679f3b60fb12b420474a1023983ac26750451b32a350a706a6
+      sha256 (LF)   : 422a909ad6ffb1679f3b60fb12b420474a1023983ac26750451b32a350a706a6
+      git cat-file -s HEAD: 71753 bytes
+
+=== H.2 LA GUARDA QUE HAY QUE REPARAR, MEDIDA ANTES DE TOCARLA (TAREA 1.c) ===
+(no se teclea ninguna linea: se localiza en el fichero vivo y se pega)
+   scripts/loop/cerrar_reporte.py -> 1058 lineas | disco 54697 bytes
+   'def rama_de_la_seccion9'                -> 1 aparicion(es), lineas 306
+   'def vuelta_de_fichero'                  -> 1 aparicion(es), lineas 297
+   'def vuelta_que_sello'                   -> 0 aparicion(es), lineas (ninguna)
+   'def tramos_por_vuelta'                  -> 0 aparicion(es), lineas (ninguna)
+   'PATRON_NOMBRE_DE_CORRIDA'               -> 2 aparicion(es), lineas 178, 350
+   'NO CIERRA ESTE REPORTE'                 -> 0 aparicion(es), lineas (ninguna)
+   'tramos_sellados_en_esta_vuelta'         -> 0 aparicion(es), lineas (ninguna)
+   EL TEXTO DEL ROJO DE LA VUELTA AJENA, TAL COMO ESTA HOY:
+      LINEA 347:         return "ROJO", ("el fichero de bateria que se pasa es el de la vuelta %d y "
+   EL ARNES VIEJO QUE SIGUE MANDANDO, CORRIDO HOY ANTES DE TOCAR NADA:
+      EXITCODE: 0
+      |    CIFRA casos: 9
+      |    CIFRA que CALZAN: 9
+      |    CIFRA que NO CALZAN: 0
+      |    CIFRA casos en que la logica vieja y la viva DIFIEREN: 4
+      | CIFRA fallos: 0
+      | VEREDICTO: VERDE
+
+=== H.3 EL ARNES QUE PARO LA BATERIA, MEDIDO ANTES DE TOCARLO (TAREA 1.b) ===
+(el diagnostico esta medido dos veces, por el ejecutor de la 184 y por el
+ auditor de la 185. Aqui se localizan las tres lineas que el encargo nombra,
+ 124, 134 y 154, SIN creerle al encargo: se buscan por su contenido)
+   scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py -> 213 lineas | disco 9381 bytes
+      LINEA 39: huellas: las de congelado (`tempfile`, `mkdtemp`) y una de sujeto vivo
+      LINEA 45: fabrica en un `mkdtemp` y lo retira (`P.16`). El sujeto, por tanto, esta
+      LINEA 124:     tmp = tempfile.mkdtemp(prefix="v182_apertura_")
+      LINEA 134:             w("      | " + l[:130])
+      LINEA 154:             w("      | " + l[:130])
+   CIFRA lineas que contienen 'mkdtemp': 3
+   CIFRA lineas que contienen 'l[:130]': 2
+   docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt
+      disco 5156 bytes | LF 5078 bytes | sha256 LF ae3a63d9cb97607ffcdaa6733f1351b74efc81768af90b151b130ecfca27db4d
+      lineas: 79
+      LAS LINEAS 53, 54 Y 55, QUE SON LAS QUE CAMBIAN SOLAS, PEGADAS:
+         LINEA 53:       | SELLO ESCRITO: ../../AppData/Local/Temp/v182_apertura_5ixwb87k/SELLO_APERTURA_AUDITOR_VARNES_LIMPIO.json (582 bytes)
+         LINEA 54:       |    ciega   ../../AppData/Local/Temp/v182_apertura_5ixwb87k/_auditor_vARNES_LIMPIO_ciega_blind.txt -> 3823 bytes | sha256 3b6a63b5e
+         LINEA 55:       |    destape ../../AppData/Local/Temp/v182_apertura_5ixwb87k/_auditor_vARNES_LIMPIO_ciega_reveal.txt -> 2273 bytes | sha256 f0748431
+      CIFRA lineas que contienen 'v182_apertura_': 3
+      CIFRA lineas que contienen '<TEMPORAL>': 0
+
+=== H.4 LA COLUMNA TECLEADA DE LA ESCALADA (TAREA 1.d) ===
+(la caida R.1 del acta 185 nombra la linea 128 de _v184_tallar_t2.py. Aqui se
+ busca por contenido y se publica la linea que salga, sea la 128 o no)
+   scripts/loop/_v184_tallar_t2.py -> 381 lineas | disco 21083 bytes
+      LINEA 122:     w("| tramo | bytes disco | bytes LF | lineas | entradas | nomina del sello | exitcode | minutos | quien lo sello |")
+      LINEA 128:             quien = "vuelta 183" if n <= 4 else "**vuelta 184**"
+      LINEA 130:               % (n, d, l, li, ent, nom or "?", ex, du, quien))
+      LINEA 322:     w("**es una sede que ninguna regla nombra**, y quien busque la seccion 5 no los va")
+   LOS NUEVE TRAMOS Y EL ASUNTO DE SU ULTIMO COMMIT, LEIDOS DE GIT HOY:
+      tramo 1 -> aac1c84e VUELTA 183, BATERIA TRAMO 1 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 9116 bytes en disco y 9116 normalizados a LF, 
+      tramo 2 -> c2fc89c2 VUELTA 183, BATERIA TRAMO 2 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 7352 bytes en disco, 114 lineas, sha256 LF eb9
+      tramo 3 -> 5db9a541 VUELTA 183, BATERIA TRAMO 3 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7406 bytes en disco y 7406 normalizados a LF, 114 lineas, sha256 LF cc
+      tramo 4 -> 36e715b9 VUELTA 183, BATERIA TRAMO 4 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7421 bytes en disco y 7421 normalizados a LF, 114 lineas, sha256 LF 2c
+      tramo 5 -> d0058b86 VUELTA 184, BATERIA TRAMO 5 DE 9 RE CORRIDO CON LA REPARACION DE LA 1.b PUESTA: VERDE, exitcode 0, 7385 bytes en disco y 7385 normalizados a 
+      tramo 6 -> 5042d91d VUELTA 184, BATERIA TRAMO 6 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7428 bytes en disco y 7428 normalizados a LF, 114 lineas, sha256 LF 12
+      tramo 7 -> cda30e1c VUELTA 184, BATERIA TRAMO 7 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7456 bytes en disco y 7456 normalizados a LF, 114 lineas, sha256 LF 91
+      tramo 8 -> e91a307f VUELTA 184, BATERIA TRAMO 8 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7407 bytes en disco y 7407 normalizados a LF, 114 lineas, sha256 LF 8a
+      tramo 9 -> 3500db9d VUELTA 184, BATERIA TRAMO 9 DE 9 EN ROJO, exitcode 1, Y AQUI SE PARA SIN RE-CORRERLO: vuelta182_tarea2_mutacion_apertura_auditor.py NO REPROD
+
+=== H.5 EL SELLO DEL AUDITOR V185b Y SU CIEGA (TAREA 1.e) ===
+(el encargo manda cotejar el sha256 del fichero ciego contra el sello ANTES
+ de releer nada. AQUI NO SE COPIA EL DEL ENCARGO: se computa y se compara.
+ Y el nombre del sello NO se deduce del numero de vuelta: el auditor declaro
+ su caida propia A.1 y el encargo da las tres rutas exactas)
+   docs/loop/SELLO_APERTURA_AUDITOR_V185b.json -> disco 735 bytes
+   CLAVES DEL SELLO: bitacora_antes_del_sello, bytes_ciega, bytes_destape, ciega, criterio, destape, prohibidos_antes_del_sello, sha256_ciega, sha256_destape, vuelta
+   EL SELLO ENTERO, PEGADO Y NO RESUMIDO:
+      | {
+      |   "vuelta": "185b",
+      |   "criterio": "muestra de 30 pares frescos sobre el archivo entero de veredictos, semilla 1852, excluyendo los 90 puestos de las ciegas de las actas 1
+      |   "ciega": "docs/loop/_auditor_v185b_ciega_blind.txt",
+      |   "destape": "docs/loop/_auditor_v185b_ciega_reveal.txt",
+      |   "bytes_ciega": 39740,
+      |   "bytes_destape": 33733,
+      |   "sha256_ciega": "94bd6198ab5ad2770f3b514897d63561222886ffdb63f3d1eeaaf74e3af913db",
+      |   "sha256_destape": "8e9e6d1566cd34f90f9452db8a324468fea0a4bb82b797ad62eaa07f41532437",
+      |   "bitacora_antes_del_sello": [],
+      |   "prohibidos_antes_del_sello": []
+      | }
+   docs/loop/_auditor_v185b_ciega_blind.txt
+      disco 39740 bytes | LF 39740 bytes | lineas 486
+      sha256 (disco): 94bd6198ab5ad2770f3b514897d63561222886ffdb63f3d1eeaaf74e3af913db
+      sha256 (LF)   : 94bd6198ab5ad2770f3b514897d63561222886ffdb63f3d1eeaaf74e3af913db
+      CIFRA puestos con el patron 'PUESTO <n>': 0
+      LOS PUESTOS: 
+   docs/loop/_auditor_v185b_ciega_reveal.txt
+      disco 33733 bytes | LF 33733 bytes | lineas 132
+      sha256 (disco): 8e9e6d1566cd34f90f9452db8a324468fea0a4bb82b797ad62eaa07f41532437
+      sha256 (LF)   : 8e9e6d1566cd34f90f9452db8a324468fea0a4bb82b797ad62eaa07f41532437
+      CIFRA puestos con el patron 'PUESTO <n>': 0
+      LOS PUESTOS: 
+   docs/loop/_auditor_v185_ciega_blind.txt
+      disco 38747 bytes | LF 38747 bytes | lineas 483
+      sha256 (disco): f81f1b32594221f10141f83b29a2b71990ef78c61f3ab64a4e835eba8dfa975a
+      sha256 (LF)   : f81f1b32594221f10141f83b29a2b71990ef78c61f3ab64a4e835eba8dfa975a
+      CIFRA puestos con el patron 'PUESTO <n>': 0
+      LOS PUESTOS: 
+   LAS SIETE DISCREPANCIAS QUE EL ACTA 185 NOMBRA, BUSCADAS EN LOS DOS
+   FICHEROS CIEGOS PARA SABER SI ESTAN DENTRO DEL UNIVERSO:
+      _auditor_v185b_ciega_blind.txt -> de los siete estan dentro: (ninguno)
+      _auditor_v185_ciega_blind.txt -> de los siete estan dentro: (ninguno)
+
+=== H.6 LA SERIE DE REGISTROS Y EL ACTA 185 (TAREA 1.a) ===
+(no se teclea ningun numero de registro: se llama a serie_de_registros.py y
+ se imprime lo que devuelva. R.47 NO se da por bueno porque lo diga el encargo)
+docs/loop/ACTA_AUDITOR.md -> 64906 lineas | disco 4297793 bytes | LF 4297793 bytes
+CIFRA cabeceras del acta 185 encontradas: 1
+   CABECERA del acta 185 en la LINEA 64434
+   lineas del acta 185, de su cabecera al final del fichero: 473
+   '## 1. '   -> lineas 64454
+   '## 2. '   -> lineas 64463
+   '## 3. '   -> lineas 64512
+   '## 4. '   -> lineas 64630
+   '## 5. '   -> lineas 64675
+   '## 6. '   -> lineas 64744
+   '## 7. '   -> lineas 64805
+   '## 8. '   -> lineas 64845
+   '## 9. '   -> lineas 64858
+   '## 10. '  -> lineas 64873
+   '## 11. '  -> lineas 64888
+   LOS NUMERALES DEL ACTA 185, CONTADOS CON EL PATRON DE COMILLAS
+   INVERSAS QUE LA 184 ESTRENO, Y NO DE MEMORIA:
+      \*\*`5\.(\d)`    -> 7 aparicion(es), numerales distintos 1, 2, 3, 4, 5, 6, 7
+      \*\*`6\.(\d)`    -> 4 aparicion(es), numerales distintos 1, 2, 3, 4
+      `PD\.(\d)`       -> 12 aparicion(es), numerales distintos 1, 2, 3, 4
+      `A\.(\d)`        -> 3 aparicion(es), numerales distintos 1
+      `R\.(\d)`        -> 4 aparicion(es), numerales distintos 1
+   LAS CABECERAS 5.n Y 6.n DEL ACTA 185, PEGADAS ENTERAS:
+      LINEA 64677: **`5.1` `D.1`, COMPUSO LA BATERIA CON EL TRAMO 9 EN ROJO DENTRO: A FAVOR.**
+      LINEA 64686: **`5.2` `D.2`, EL ESQUELETO Y EL TALLADOR NOMBRAN EL ACTA DE `VUELTA - 1`: A
+      LINEA 64694: **`5.3` `D.3`, RENOMBRO UN CASO QUE EL ACTA 184 NOMBRA POR SU NOMBRE: A FAVOR.**
+      LINEA 64701: **`5.4` `D.4`, EL ESPERADO COMPUTADO RECOMPONE EL FILTRO DE LA FUNCION BAJO
+      LINEA 64712: **`5.5` `D.5`, LA LESION EXACTA DEL PUESTO 3.141: A FAVOR, Y NO SE PERDIO
+      LINEA 64725: **`5.6` `D.6`, EL ARNES DE LA 1.c ENTRO EN LA NOMINA DE LA BATERIA QUE LO
+      LINEA 64732: **`5.7` `D.7`, ANEXO LOS DISCUTIBLES A LA TAREA 2 EN VEZ DE A LA SECCION 5: A
+      LINEA 64746: **`6.1` `PD.2`, EL CALIBRE DE UN TRAMO EN ROJO: ADJUDICADO, NO ES DOCTRINA
+      LINEA 64753: **`6.2` `PD.3`, UNA BATERIA QUE CRUZA DOS VUELTAS: ADJUDICADO, Y EL ROJO DE
+      LINEA 64784: **`6.3` `PD.4`, UN ARNES QUE SE ESTRENA DENTRO DE LA BATERIA QUE LO ESTRENA:
+      LINEA 64796: **`6.4` `PD.1` SIGUE ABIERTA, Y AHORA CON SUS CINCO NOMBRES.** Las cinco `D` con
+serie_de_registros.entradas() -> 38 entradas en 2 sedes
+   SEDE: docs/PENDIENTES.md
+   SEDE: docs/plan/CORRECCIONES_A_APLICAR.md
+CIFRA colisiones: 0 | CIFRA huecos: 0
+SIGUIENTE LIBRE, LLAMADO Y NO TECLEADO: R.47
+   ULTIMOS: R.43 en docs/PENDIENTES.md:12724 -> ## R.43. Registro de las cinco adjudicaciones, la caida propia del auditor y la caida del ejecutor d
+   ULTIMOS: R.44 en docs/PENDIENTES.md:12805 -> ## R.44. Registro de las doce adjudicaciones, la caida propia del auditor y las dos caidas del ejecu
+   ULTIMOS: R.45 en docs/PENDIENTES.md:12930 -> ## R.45. Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida del ej
+   ULTIMOS: R.46 en docs/PENDIENTES.md:13029 -> ## R.46. Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero caida
+
+=== H.7 LA BATERIA, QUE ESTA VUELTA NO CORRE, Y SU HUECO ===
+(AUDITOR.md 6.1: corre cada cinco vueltas y la siguiente es la 189. Aqui se
+ mide QUE HAY en disco para poder declarar el hueco con su nombre, sus bytes
+ y su atribucion, que son las tres piezas juntas o no vale)
+   docs/loop/SALIDA_V185_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V184_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V183_BATERIA.txt -> disco 71753 bytes | LF 71753 bytes | sha256 LF 422a909ad6ffb1679f3b60fb12b420474a1023983ac26750451b32a350a706a6
+   CIFRA censo: 173 | CIFRA nomina: 113 | VARA_DEL_CENSO: 148
+   arneses_que_faltan() HOY: ultima vuelta 184, faltan 0
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 0 entradas sin congelar
+   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 17 filas, disco 20939 bytes
+
+=== H.8 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V176.md -> disco 95231 bytes | git 95231 bytes
+   REPORTE_V177.md -> disco 53201 bytes | git 53201 bytes
+   REPORTE_V178.md -> disco 59617 bytes | git 59617 bytes
+   REPORTE_V179.md -> disco 54466 bytes | git 54466 bytes
+   REPORTE_V180.md -> disco 63677 bytes | git 63677 bytes
+   REPORTE_V181.md -> disco 15883 bytes | git 15883 bytes
+   REPORTE_V182.md -> disco 40726 bytes | git 40726 bytes
+   REPORTE_V183.md -> disco 44346 bytes | git 44346 bytes
+CIFRA reportes archivados: 15
+REPORTE_V183.md archivado: SI
+REPORTE_V184.md archivado: NO
+REPORTE_V185.md archivado: NO
+
+=== H.9 EL ARCHIVO DE VEREDICTOS, QUE ESTA VUELTA NO PUEDE MOVER ===
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | LF 4051967 bytes
+   sha256 (disco): ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   sha256 (LF)   : ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   CIFRA filas: 3388
+   CIFRA clase 'A'   : 551
+   CIFRA clase 'B'   : 72
+   CIFRA clase 'C'   : 5
+   CIFRA clase 'D'   : 2760
+   MIN puesto 1 | MAX puesto 3388 | HUECOS 0 | DUPLICADOS 0
+
+FIN DEL SELLO DE APERTURA
