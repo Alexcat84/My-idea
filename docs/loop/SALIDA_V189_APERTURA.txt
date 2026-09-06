@@ -1,0 +1,254 @@
+SELLO DE APERTURA DE LA VUELTA 189, escrito ANTES de la primera operacion.
+Sufijo de salidas: 189 (computado de vuelta189_apertura.py, no tecleado)
+regimen: ES VUELTA DE BATERIA (AUDITOR.md 6.1). La bateria corre cada cinco
+         vueltas, en una vuelta propia que NO LLEVA NADA MAS. La ultima cerro
+         entera en la 184, asi que la siguiente es esta. DOS TAREAS y la
+         segunda es la bateria.
+         Sello del auditor por la regla V(N+1): V189
+         Sello que el acta 189 DECLARA en su cabecera: V189b
+         Los dos se miden abajo; no se elige uno a ojo.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+bbeea7138ea37766a8882fd69bff3cdb444d1e27
+bbeea7138ea37766a8882fd69bff3cdb444d1e27	2026-09-06 08:26:00 -0400	ACTA DEL AUDITOR, VUELTA 189: LA 188 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA, ADJUDICO LOS SEIS DISCUTIBLES A FAVOR Y CONTESTO LAS TRES PREGUNTAS, DECLARO DOS CAIDAS PROPIAS MIAS Y CERO DEL EJECUTOR, Y CAZO QUE EL LANZADOR DE LA BATERIA YA REPARTE EN DIEZ TRAMOS Y SU --siguiente HABRIA CORRIDO OCHO ARNESES DE 125 DECLARANDOSE CORRID
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LA CADENA DE LA VUELTA 188, LOCALIZADA EN GIT Y NO TECLEADA ===
+   acta 188             -> 5aa9305d	ACTA DEL AUDITOR, VUELTA 188: LA 187 REPRODUJO ENTERA, EL PLAN SE MOVIO DE VERDAD (UNA FILA DE 3.388, EL PUESTO 2.464), ADJUDICO LOS SEIS DIS
+   acta 189             -> bbeea713	ACTA DEL AUDITOR, VUELTA 189: LA 188 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA, ADJUDICO LOS SEIS DISCUTIBLES A FAVOR Y CONTESTO LAS TRES PREGUN
+   tarea 1 de la 188    -> 31f716b5	VUELTA 188, TAREA 1 CERRADA Y ANEXADA: LA R.50 ENTRA CON SUS 6 ADJUDICACIONES, 3 NUMERALES, 3 PREGUNTAS, 0 CAIDAS PROPIAS DEL AUDITOR Y 4 DEL
+   tarea 5 de la 188    -> 3aceb323	VUELTA 188, TAREA 5 ANEXADA: 60 PUESTOS RELEIDOS CON LOS TRES SOLAPES DEL UNIVERSO EN CERO POR CONSTRUCCION, Y UNA PARADA DE VERDAD CAZADA EN
+   cierre de la 188     -> 564a82f9	VUELTA 188 CERRADA: EL REPORTE DE LA 188 ARCHIVADO EN VERDE (77653 bytes, 1180 lineas, sha256 LF fa10335f2b4a76bd), IDENTICO BYTE A BYTE AL Q
+
+=== C. git status --porcelain ENTERO ===
+ M docs/PENDIENTES.md
+?? scripts/loop/vuelta189_apertura.py
+CIFRA lineas de status: 2
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+dataset/metadata/master_graph.json -> disco 8375817 bytes | LF 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 77653 bytes | LF 77653 bytes | git 77653 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4432559 bytes | LF 4432559 bytes | git 4432559 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | LF 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 27000 bytes | LF 27000 bytes | git 27000 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 8564 bytes | LF 8564 bytes | git 8564 bytes
+docs/loop/SELLO_APERTURA_AUDITOR_V189.json -> disco 651 bytes | LF 651 bytes | git 651 bytes
+docs/loop/SELLO_APERTURA_AUDITOR_V189b.json -> disco 862 bytes | LF 862 bytes | git 862 bytes
+docs/loop/_auditor_v189b_ciega_blind.txt -> disco 40517 bytes | LF 40517 bytes | git 40517 bytes
+docs/loop/_auditor_v189b_ciega_reveal.txt -> disco 29681 bytes | LF 29681 bytes | git 29681 bytes
+docs/loop/_auditor_v189b_mis_clases.txt -> disco 463 bytes | LF 463 bytes | git 463 bytes
+docs/loop/_auditor_v189b_exclusion.txt -> disco 1792 bytes | LF 1792 bytes | git 1792 bytes
+docs/loop/SALIDA_V188_APERTURA.txt -> disco 60433 bytes | LF 60433 bytes | git 60433 bytes
+docs/loop/SALIDA_V188_CERRAR_REPORTE.txt -> disco 6202 bytes | LF 6102 bytes | git 6102 bytes
+docs/loop/SALIDA_V188_TALLADOR_CABECERA.txt -> disco 2476 bytes | LF 2456 bytes | git 2456 bytes
+docs/loop/SALIDA_V183_BATERIA.txt -> disco 71753 bytes | LF 71753 bytes | git 71753 bytes
+docs/loop/reportes/REPORTE_V186.md -> disco 48357 bytes | LF 48357 bytes | git 48357 bytes
+docs/loop/reportes/REPORTE_V187.md -> disco 60463 bytes | LF 60463 bytes | git 60463 bytes
+docs/loop/reportes/REPORTE_V188.md -> disco 77653 bytes | LF 77653 bytes | git 77653 bytes
+docs/PENDIENTES.md -> disco 943276 bytes | LF 943276 bytes | git 943276 bytes
+docs/plan/CORRECCIONES_A_APLICAR.md -> disco 147103 bytes | LF 147103 bytes | git 147103 bytes
+docs/plan/OPERACIONES.jsonl -> disco 498085 bytes | LF 498085 bytes | git 498085 bytes
+docs/plan/BANCO_DEL_PLAN.md -> disco 61554 bytes | LF 61554 bytes | git 61554 bytes
+docs/BANCO_DE_TEXTOS.md -> disco 182228 bytes | LF 182228 bytes | git 182228 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes | git 4054129 bytes
+scripts/loop/vuelta183_bateria_por_tramos.py -> disco 35327 bytes | LF 35327 bytes | git 35327 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 131802 bytes | LF 131802 bytes | git 131802 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco 25949 bytes | LF 25949 bytes | git 25949 bytes
+scripts/loop/serie_de_registros.py -> disco 6595 bytes | LF 6595 bytes | git 6595 bytes
+scripts/loop/cerrar_reporte.py -> disco 108128 bytes | LF 108128 bytes | git 108128 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | LF 7181 bytes | git 7181 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | LF 100077 bytes | git 100077 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | LF 6243 bytes | git 6243 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | LF 14928 bytes | git 14928 bytes
+scripts/loop/vuelta188_tarea1a_registrar_acta188.py -> disco 74402 bytes | LF 74402 bytes | git 74402 bytes
+scripts/loop/vuelta187_tarea1a_registrar_acta187.py -> disco 62104 bytes | LF 62104 bytes | git 62104 bytes
+scripts/loop/vuelta188_esqueleto_reporte.py -> disco 21291 bytes | LF 21291 bytes | git 21291 bytes
+scripts/loop/vuelta150_3_relectura_expediente.py -> disco 60262 bytes | LF 60262 bytes | git 60262 bytes
+
+=== E. EL NUMSTAT DE dataset/ AL ENTRAR, QUE ES LA VARA Y NO EL git status ===
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+   scripts/loop/vuelta189_apertura.py -> 22327 bytes
+CIFRA ficheros no seguidos: 1
+
+=== G. LOS DOS SELLOS DEL AUDITOR, MEDIDOS Y NO ELEGIDOS A OJO ===
+(el acta 189 publica 862 / 40517 / 29681 y 381 puestos excluidos. AQUI NO SE
+ COPIA NINGUNA: se computan y se comparan, y se publican LAS DOS)
+   SELLO V189 (por la regla V(N+1)):
+      docs/loop/SELLO_APERTURA_AUDITOR_V189.json -> disco 651 bytes | LF 651 bytes
+      | {
+      |  "vuelta": "189",
+      |  "criterio": "muestra fresca de 30 puestos con semilla 1892 sobre todo el archivo, excluyendo los 351 puestos que las ciegas de las actas 183 a 187 y sus vecinos deterministas ya consumieron (docs/loop/_auditor_v189_exclusion.txt)",
+      |  "ciega": "docs/loop/_auditor_v189_ciega_blind.txt",
+      |  "destape": "docs/loop/_auditor_v189_ciega_reveal.txt",
+      |  "bytes_ciega": 41098,
+      |  "bytes_destape": 34030,
+      |  "sha256_ciega": "4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c",
+      |  "sha256_destape": "9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5",
+      |  "bitacora_antes_del_sello": [],
+      |  "prohibidos_antes_del_sello": []
+      | }
+      | 
+      ciega    docs/loop/_auditor_v189_ciega_blind.txt
+         bytes: sello 41098 | disco medido 41098 -> CALZA
+         sha256 sello 4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c
+         sha256 LF    4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c -> CALZA
+      destape  docs/loop/_auditor_v189_ciega_reveal.txt
+         bytes: sello 34030 | disco medido 34030 -> CALZA
+         sha256 sello 9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5
+         sha256 LF    9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5 -> CALZA
+   SELLO V189b (declarado por el acta):
+      docs/loop/SELLO_APERTURA_AUDITOR_V189b.json -> disco 862 bytes | LF 862 bytes
+      | {
+      |  "vuelta": "189b",
+      |  "criterio": "ACTA 189b (cubre la VUELTA 188): muestra fresca de 30 puestos con semilla 18922 sobre todo el archivo de veredictos, EXCLUYENDO los 381 puestos que ya consumieron las ciegas de las actas 183 a 188, sus vecinos deterministas de relectura al doble (351, docs/loop/_auditor_v189_exclusion.txt) y los 30 del turno de auditor 189 que sello y murio sin escribir acta (docs/loop/_auditor_v189b_exclusion.txt). Solape exigido: CERO.",
+      |  "ciega": "docs/loop/_auditor_v189b_ciega_blind.txt",
+      |  "destape": "docs/loop/_auditor_v189b_ciega_reveal.txt",
+      |  "bytes_ciega": 40517,
+      |  "bytes_destape": 29681,
+      |  "sha256_ciega": "49d4ac5512edde5584d846dac5ef86a00a82fc4d477e99e05cc0a3811ea3aafd",
+      |  "sha256_destape": "1107e98db09572bced49b8633c130ef703ff8ab35d47b0e46b8a0cce6774f4c3",
+      |  "bitacora_antes_del_sello": [],
+      |  "prohibidos_antes_del_sello": []
+      | }
+      | 
+      ciega    docs/loop/_auditor_v189b_ciega_blind.txt
+         bytes: sello 40517 | disco medido 40517 -> CALZA
+         sha256 sello 49d4ac5512edde5584d846dac5ef86a00a82fc4d477e99e05cc0a3811ea3aafd
+         sha256 LF    49d4ac5512edde5584d846dac5ef86a00a82fc4d477e99e05cc0a3811ea3aafd -> CALZA
+      destape  docs/loop/_auditor_v189b_ciega_reveal.txt
+         bytes: sello 29681 | disco medido 29681 -> CALZA
+         sha256 sello 1107e98db09572bced49b8633c130ef703ff8ab35d47b0e46b8a0cce6774f4c3
+         sha256 LF    1107e98db09572bced49b8633c130ef703ff8ab35d47b0e46b8a0cce6774f4c3 -> CALZA
+
+=== G.1 LOS PUESTOS DE LA CIEGA Y DE LA EXCLUSION, CONTADOS DE SU FICHERO ===
+   ciega del acta 189 (_auditor_v189b_ciega_blind.txt): 30 puestos distintos
+      2, 19, 66, 128, 154, 199, 388, 608, 645, 714, 871, 903, 962, 968, 1065, 1200, 1365, 1801, 1811, 2026, 2153, 2422, 2656, 2830, 2909, 3066, 3085, 3167, 3181, 3325
+   destape del acta 189: 30 puestos distintos
+   ciega del acta 188 (_auditor_v189_ciega_blind.txt): 30 puestos
+   exclusion: 381 puestos distintos (el acta dice 381 -> CALZA)
+   SOLAPE ciega del acta 189 con la exclusion: 0
+   SOLAPE ciega del acta 189 con la del acta 188: 0
+   EL PUESTO 2422, QUE EL ACTA NOMBRA: DENTRO de la ciega del acta 189
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+   primera linea: # REPORTE DE LA VUELTA 188 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   disco 77653 bytes | LF 77653 bytes | saltos de linea 1180 | sha256 LF fa10335f2b4a76bd7c55553cb34dac3d7807d1dabdf109fabf391dc6a1147bc5
+   CIFRA secciones `## 9.`: 1, en las lineas 1157
+
+=== H.0 LAS VUELTAS QUE CIERRAN SU PROPIO REPORTE, MEDIDAS ===
+   docs/loop/SALIDA_V186_CERRAR_REPORTE.txt -> disco 5303 bytes | LF 5214 bytes | sha256 LF 4449064cb6421354739190f6cf7838379ef75e1ae41fad73ffbe04ce0ae120da
+      LINEA 64: CIFRA piezas que faltan: 0
+   docs/loop/SALIDA_V187_CERRAR_REPORTE.txt -> disco 5190 bytes | LF 5099 bytes | sha256 LF 38dc5a3b6ae63887aac9bb6b3293fc98e86d38302e58887781ac790396133fa4
+      LINEA 64: CIFRA piezas que faltan: 0
+   docs/loop/SALIDA_V188_CERRAR_REPORTE.txt -> disco 6202 bytes | LF 6102 bytes | sha256 LF 214f8158a1383cea1f4f5b679116c8dde30dd445631ea4089b877e5b2f471c81
+      LINEA 64: CIFRA piezas que faltan: 0
+
+=== H.1 LA SERIE DE REGISTROS, LLAMADA Y NO TECLEADA (TAREA 1) ===
+   CIFRA entradas de la serie: 42
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE, LLAMADO Y NO TECLEADO: R.51
+   ULTIMOS: R.48 en docs/PENDIENTES.md:13266 -> ## R.48. Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, las tres pregun
+   ULTIMOS: R.49 en docs/PENDIENTES.md:13421 -> ## R.49. Registro de las seis adjudicaciones numeradas, los dos numerales de la seccion 6, las tres preguntas 
+   ULTIMOS: R.50 en docs/PENDIENTES.md:13583 -> ## R.50. Registro de las seis adjudicaciones numeradas, los tres numerales de la seccion 6, las tres preguntas
+
+=== H.2 EL ACTA 189, ACOTADA, Y SUS SECCIONES ===
+   docs/loop/ACTA_AUDITOR.md -> 67091 lineas | disco 4432559 bytes
+   CIFRA cabeceras '# ACTA DEL AUDITOR, VUELTA 189': 1 (lineas 66826)
+   el acta 189 va de la linea 66826 a la 67091 (266 lineas)
+      LINEA 66846  ## 0. HUECO DE ACTA: NO LO HAY, Y LO MIDO EN VEZ DE SUPONERLO
+      LINEA 66854  ## 1. LA APERTURA, SELLADA ANTES DE MI PRIMER COMANDO DE VERIFICACION
+      LINEA 66866  ## 2. LO QUE VERIFIQUE, CON MI COMANDO Y NO CON SU PALABRA
+      LINEA 66897  ## 3. LA RELECTURA CIEGA, Y ME SALE PEOR QUE A LA TANDA ANTERIOR
+      LINEA 66923  ## 4. LAS ADJUDICACIONES
+      LINEA 66997  ## 5. EL HALLAZGO QUE TRAIGO, Y ES EL QUE MAS IMPORTA
+      LINEA 67025  ## 6. LAS CAIDAS. DOS SON MIAS Y CERO SON DEL EJECUTOR
+      LINEA 67061  ## 7. LA METRICA DE CREDITO
+      LINEA 67081  ## 8. LO QUE ENCARGO A LA VUELTA 189
+   LAS CLAVES `4.n` DE LA SECCION 4, CONTADAS CON LOS DOS PATRONES:
+      CON comillas inversas -> 0 ()
+      SIN comillas inversas -> 10 (4.1@66925, 4.2@66939, 4.3@66944, 4.4@66951, 4.5@66957, 4.6@66961, 4.7@66965, 4.8@66973, 4.9@66980, 4.10@66988)
+   LAS CAIDAS `C.n`, CON LA CABECERA DE SU SECCION:
+      LINEA 67027  C.1 bajo '## 6. LAS CAIDAS. DOS SON MIAS Y CERO SON DEL EJECUTOR'
+         **`C.1`, MIA: EL CRITERIO DE MI PROPIO SELLO AFIRMA UN HECHO FALSO.** Escribi en
+      LINEA 67039  C.2 bajo '## 6. LAS CAIDAS. DOS SON MIAS Y CERO SON DEL EJECUTOR'
+         **`C.2`, MIA: RE CORRI UN INSTRUMENTO QUE MUTA EL REPO Y ME DEJO EL ARBOL
+
+=== H.3 EL REGISTRADOR DE LA 188 Y SU IDEMPOTENCIA, MEDIDA SIN CORRERLO ===
+(la `C.2` del acta 189 dice que re correrlo escribe una entrada duplicada.
+ AQUI NO SE CORRE: se mide su codigo, que es lo que se puede medir sin mutar)
+   scripts/loop/vuelta188_tarea1a_registrar_acta188.py -> disco 74402 bytes | LF 74402 bytes | lineas 1400
+   sha256 LF: a1eaed2d9f935c02a0eaf411cc43d5e93b41c504200916219ee5ad0b06d8c345
+      LINEA 1348  ya = ("## R.%d. %s" % (numero, titulo)) in texto_sede
+      LINEA 1349  w("K) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR")
+      LINEA 1350  w("   la marca %r ya esta en la sede: %s"
+   Y LA ENTRADA QUE YA REGISTRA EL ACTA 188, BUSCADA EN LAS DOS SEDES:
+      docs/PENDIENTES.md | 'del acta de la vuelta 188' -> 1 linea(s) 13583
+      docs/PENDIENTES.md | 'del acta de la vuelta 189' -> 0 linea(s) 
+      docs/plan/CORRECCIONES_A_APLICAR.md | 'del acta de la vuelta 188' -> 0 linea(s) 
+      docs/plan/CORRECCIONES_A_APLICAR.md | 'del acta de la vuelta 189' -> 0 linea(s) 
+
+=== H.4 LA NOMINA Y EL REPARTO DE LA BATERIA, COMPUTADOS HOY ===
+(el acta 189 publica 125 entradas y 10 tramos. AQUI NO SE COPIA)
+   CIFRA nomina (len(VM.VIEJAS)) leida del modulo: 125
+   VARA_DEL_CENSO: 148
+   arneses_que_faltan() HOY: (188, [])
+   CIFRA literales de vuelta clavados en lineas que escriben: 0
+   CIFRA entradas de la nomina: 125
+   CIFRA tamano de tramo: 13
+   CIFRA tramos: 10
+   CIFRA suma de las entradas de todos los tramos: 125
+   TRAMO 1: 13 entradas
+   TRAMO 2: 13 entradas
+   TRAMO 3: 13 entradas
+   TRAMO 4: 13 entradas
+   TRAMO 5: 13 entradas
+   TRAMO 6: 13 entradas
+   TRAMO 7: 13 entradas
+   TRAMO 8: 13 entradas
+   TRAMO 9: 13 entradas
+   TRAMO 10: 8 entradas
+   ESTIMACION Y NO COMO MEDICION: la ultima bateria con cuerpo (la del
+   ESTIMACION minutos por tramo de 13 entradas: entre 4.3 y 5.6 (corte: HEAD bbeea7138ea3, nomina de 125 entradas contada en esta corrida)
+   ESTIMACION minutos de la nomina entera: entre 41.2 y 53.8 (corte: HEAD bbeea7138ea3, nomina de 125 entradas contada en esta corrida)
+   exitcode de --plan del lanzador de la 183: 0
+   CIFRA literales de vuelta clavados en lineas que escriben: 0
+   CIFRA tramos del reparto: 10
+   CIFRA tramos CON salida sellada no vacia: 9
+   CIFRA tramos que FALTAN: 1
+   LOS QUE FALTAN: 10
+   EL SIGUIENTE ES EL TRAMO 10.
+   exitcode de --siguiente del lanzador de la 183: 0
+
+=== H.5 LAS SALIDAS SELLADAS DE LA CORRIDA 183/184, QUE NO SE BORRAN ===
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_1.txt -> disco 9116 bytes | LF 9116 bytes | sha256 LF 96bec3628ebc63c6
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_2.txt -> disco 7352 bytes | LF 7352 bytes | sha256 LF eb9f0fc446152400
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_3.txt -> disco 7406 bytes | LF 7406 bytes | sha256 LF cc356b7e22ccb987
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_4.txt -> disco 7421 bytes | LF 7421 bytes | sha256 LF 2c606409febaed94
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_5.txt -> disco 7385 bytes | LF 7385 bytes | sha256 LF 27ee315fa70438d2
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_6.txt -> disco 7428 bytes | LF 7428 bytes | sha256 LF 129099fc24499b72
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_7.txt -> disco 7456 bytes | LF 7456 bytes | sha256 LF 91f313782bb0bb44
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_8.txt -> disco 7407 bytes | LF 7407 bytes | sha256 LF 8a50d540b539717e
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_9.txt -> disco 6769 bytes | LF 6769 bytes | sha256 LF ae1017415f8f0cdd
+   CIFRA salidas SALIDA_V183_BATERIA_TRAMO_n.txt en disco: 9
+   CIFRA salidas SALIDA_V189_BATERIA_TRAMO_n.txt en disco AL ENTRAR: 0
+
+=== H.6 EL ARCHIVO DE VEREDICTOS, QUE ESTA VUELTA NO MUEVE ===
+(el acta 189 da 0a77b5a35a962621 como sha256 LF. NO SE COPIA)
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 (disco): 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   sha256 (LF)   : 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   los 16 primeros del sha256 LF: 0a77b5a35a962621 -> el acta dice 0a77b5a35a962621: CALZA
+   CIFRA filas: 3388
+   CIFRA clase 'A'   : 551
+   CIFRA clase 'B'   : 72
+   CIFRA clase 'C'   : 5
+   CIFRA clase 'D'   : 2760
+   MIN puesto 1 | MAX puesto 3388 | HUECOS 0 | DUPLICADOS 0
+
+FIN DEL SELLO DE APERTURA
