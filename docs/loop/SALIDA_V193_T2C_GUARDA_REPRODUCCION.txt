@@ -4,7 +4,7 @@ LOS QUE EL CENSO RECLAMA PARA LA NOMINA: 4
       huellas de congelado: tempfile, mkdtemp, git show, sha256, SUJETO CONGELADO
    vuelta191_tarea4_mutacion_veredicto.py         CONGELADO      motivo escrito: no 
       huellas de vivo:      (ninguna)
-      huellas de congelado: tempfile, mkdtemp
+      huellas de congelado: tempfile, mkdtemp, sha256
    vuelta191_tarea6_mutacion_bloque_tallado.py    CONGELADO      motivo escrito: SI 
       huellas de vivo:      REPORTE.md
       huellas de congelado: git show, sha256, SUJETO CONGELADO
@@ -53,11 +53,11 @@ publican y ninguna se resuelve copiando.
       restaurada tras la corrida:       True
    vuelta191_tarea4_mutacion_veredicto.py
       salida: docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt
-      sellada    -> LF 6072 bytes | sha256 6de697dc9c91cd7e
-      corrida 1  -> exit 0 | LF 6072 bytes | sha256 fbdb9a383f5468dd
-      corrida 2  -> exit 0 | LF 6072 bytes | sha256 fbdb9a383f5468dd
+      sellada    -> LF 6426 bytes | sha256 c7893936f11c7023
+      corrida 1  -> exit 0 | LF 6426 bytes | sha256 c7893936f11c7023
+      corrida 2  -> exit 0 | LF 6426 bytes | sha256 c7893936f11c7023
       REPRODUCE ENTRE SUS DOS CORRIDAS: True
-      REPRODUCE CONTRA SU SELLADA:      False
+      REPRODUCE CONTRA SU SELLADA:      True
       restaurada tras la corrida:       True
    vuelta191_tarea6_mutacion_bloque_tallado.py
       salida: docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt
@@ -78,7 +78,7 @@ publican y ninguna se resuelve copiando.
 
 CIFRA arneses medidos: 4
 CIFRA NO MEDIBLES (declarados, no supuestos): 0 (ninguno)
-CIFRA QUE NO REPRODUCEN: 1 (vuelta191_tarea4_mutacion_veredicto.py)
+CIFRA QUE NO REPRODUCEN: 0 (ninguno)
 CIFRA SIN RESTAURAR: 0 (ninguno)
 
-VEREDICTO DE REPRODUCCION: ROJO
+VEREDICTO DE REPRODUCCION: VERDE
