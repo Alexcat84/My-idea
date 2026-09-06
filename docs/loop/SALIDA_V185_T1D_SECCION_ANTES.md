@@ -8,11 +8,6 @@ QUE SE TRAE SIN TOCAR.** La tabla sale de contar
 saltos, las entradas contando sus lineas `ENTRADA DEL TRAMO:`, el exitcode y
 los minutos de las lineas que el propio tramo escribe al sellarse, y la nomina
 de la linea `LAS <n> MUTACIONES VIEJAS` que cada tramo imprime.
-**Y LA NOVENA COLUMNA TAMPOCO SE RECUERDA DESDE LA VUELTA 185:** `quien lo
-sello` sale de `git log -1 --format=%s` sobre cada uno de los nueve ficheros,
-leyendo del asunto la vuelta que lo nombra, con `tramos_por_vuelta()` y
-`vuelta_que_sello()` **importadas de `scripts/loop/cerrar_reporte.py` y no
-copiadas**.
 
 | tramo | bytes disco | bytes LF | lineas | entradas | nomina del sello | exitcode | minutos | quien lo sello |
 |---:|---:|---:|---:|---:|---:|---:|---:|---|
@@ -78,7 +73,7 @@ con **113 entradas corridas**, **0 sin correr**, **0 repetidas** y **0
 ajenas**, leido de `docs/loop/SALIDA_V184_COMPONER.txt` (**2539 bytes en disco y 2503 bytes normalizados a LF**).
 
 **LA MIRADA DE LA BATERIA SOBRE SI MISMA, RECOMPUTADA AL CIERRE:** nomina
-**113 entradas**, `arneses_que_faltan()` **2**, `nomina_invisible_al_censo()`
+**113 entradas**, `arneses_que_faltan()` **0**, `nomina_invisible_al_censo()`
 **0**, `guarda_del_sujeto_congelado()` **0**.
 
 #### PARADA. EL CIERRE DEL REPORTE CAE EN ROJO Y NO LO ARREGLO YO

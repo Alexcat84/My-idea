@@ -30,6 +30,17 @@ LOOP = os.path.join(RAIZ, "docs", "loop")
 NL = chr(10)
 DEST = os.path.join(RAIZ, "scripts", "loop", "_v184_t2_seccion.md")
 
+# LA VUELTA QUE SELLO CADA TRAMO SE IMPORTA, NO SE COPIA (vuelta 185, TAREA 1.d;
+# es la OPERACION DE CODIGO DE LA ESCALADA de AUDITOR.md 1.2, levantada por la
+# caida de reporte `R.1` del acta 185, no una mejora). Las dos funciones viven en
+# `cerrar_reporte.py` porque la 1.c las necesitaba primero, y duplicarlas aqui
+# seria fabricar la segunda sede de la misma regla, que es justo la especie que
+# esta vuelta acaba de levantar como PARADA.
+sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
+from cerrar_reporte import tramos_por_vuelta, vuelta_que_sello   # noqa: E402,F401
+
+VUELTA_DE_LOS_TRAMOS = 183
+
 
 def git(args):
     r = subprocess.run(["git"] + args, cwd=RAIZ, capture_output=True)
@@ -81,6 +92,12 @@ def main():
                        m_ex[-1] if m_ex else None,
                        m_du[-1] if m_du else None,
                        m_nom[-1] if m_nom else None))
+    # LA COLUMNA `quien lo sello` SE COMPUTA Y DEJA DE TECLEARSE. Lo que habia
+    # aqui era `quien = "vuelta 183" if n <= 4 else "**vuelta 184**"`, con la
+    # frontera y las dos etiquetas TECLEADAS debajo de una frase que dice que la
+    # tabla no recuerda nada. Los valores eran correctos HOY y caducaban solos.
+    quien_sello = tramos_por_vuelta(VUELTA_DE_LOS_TRAMOS)
+
     hechos = [x for x in tramos if x[1]]
     minutos = [float(x[6]) for x in hechos if x[6]]
     entradas = sum(x[4] or 0 for x in hechos)
@@ -118,6 +135,17 @@ def main():
     w("saltos, las entradas contando sus lineas `ENTRADA DEL TRAMO:`, el exitcode y")
     w("los minutos de las lineas que el propio tramo escribe al sellarse, y la nomina")
     w("de la linea `LAS <n> MUTACIONES VIEJAS` que cada tramo imprime.")
+    # LA NOVENA COLUMNA, ANADIDA A LA ENUMERACION EN LA VUELTA 185, TAREA 1.d.
+    # LO QUE PASABA ANTES NO SE BORRA, SE CUENTA: la enumeracion de arriba NO
+    # incluia esta columna, y la columna NO se computaba. Esa es exactamente la
+    # caida de reporte `R.1` del acta 185. ES UN CAMBIO MAS DE LOS TRES QUE EL
+    # ENCARGO NOMBRA, Y SE DECLARA EN VEZ DE COLARSE: no mueve ninguna celda de
+    # la tabla, solo dice de donde sale la novena.
+    w("**Y LA NOVENA COLUMNA TAMPOCO SE RECUERDA DESDE LA VUELTA 185:** `quien lo")
+    w("sello` sale de `git log -1 --format=%s` sobre cada uno de los nueve ficheros,")
+    w("leyendo del asunto la vuelta que lo nombra, con `tramos_por_vuelta()` y")
+    w("`vuelta_que_sello()` **importadas de `scripts/loop/cerrar_reporte.py` y no")
+    w("copiadas**.")
     w("")
     w("| tramo | bytes disco | bytes LF | lineas | entradas | nomina del sello | exitcode | minutos | quien lo sello |")
     w("|---:|---:|---:|---:|---:|---:|---:|---:|---|")
@@ -125,7 +153,11 @@ def main():
         if d is None:
             w("| **%d** | **NO EXISTE** | | | | | | | |" % n)
         else:
-            quien = "vuelta 183" if n <= 4 else "**vuelta 184**"
+            v_sello = quien_sello.get(n)
+            quien = ("vuelta %d" % v_sello) if v_sello is not None else "(sin decir)"
+            if v_sello is not None and v_sello == max(
+                    [x for x in quien_sello.values() if x is not None] or [0]):
+                quien = "**%s**" % quien
             w("| **%d** | %d | %d | %d | %d | %s | **%s** | %s | %s |"
               % (n, d, l, li, ent, nom or "?", ex, du, quien))
     w("")

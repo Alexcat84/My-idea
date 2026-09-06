@@ -1,0 +1,53 @@
+COTEJO DE LA COLUMNA `quien lo sello`: LA COMPUTADA CONTRA LA TECLEADA
+(vuelta 185, TAREA 1.d, operacion de codigo de la escalada de AUDITOR.md 1.2)
+
+A) LA LINEA TECLEADA YA NO ESTA EN EL INSTRUMENTO, Y SE COMPRUEBA
+   scripts/loop/_v184_tallar_t2.py -> 412 lineas | disco 23118 bytes
+   CIFRA apariciones de la linea tecleada COMO CODIGO VIVO: 0, lineas (ninguna)
+   CIFRA apariciones COMO CITA DENTRO DE UN COMENTARIO: 1, lineas [96]
+      LINEA 96: # aqui era `quien = "vuelta 183" if n <= 4 else "**vuelta 184**"`, con la
+   CIFRA apariciones totales del texto en el fichero: 1
+   CIFRA apariciones de 'tramos_por_vuelta': 3
+   CIFRA apariciones de 'from cerrar_reporte import': 1
+
+B) LAS NUEVE CELDAS, LEIDAS DE SUS DOS SITIOS
+   docs/loop/REPORTE.md        -> disco 33608 bytes | columna en el indice 8
+   scripts/loop/_v184_t2_seccion.md -> disco 17487 bytes | columna en el indice 8
+   CIFRA filas de tramo leidas del REPORTE:  9
+   CIFRA filas de tramo leidas de la SECCION: 9
+
+   | tramo | TECLEADA (del REPORTE) | COMPUTADA (del tallador) | calza |
+   |---:|---|---|---|
+   | 1 | vuelta 183 | vuelta 183 | SI |
+   | 2 | vuelta 183 | vuelta 183 | SI |
+   | 3 | vuelta 183 | vuelta 183 | SI |
+   | 4 | vuelta 183 | vuelta 183 | SI |
+   | 5 | **vuelta 184** | **vuelta 184** | SI |
+   | 6 | **vuelta 184** | **vuelta 184** | SI |
+   | 7 | **vuelta 184** | **vuelta 184** | SI |
+   | 8 | **vuelta 184** | **vuelta 184** | SI |
+   | 9 | **vuelta 184** | **vuelta 184** | SI |
+
+   CIFRA celdas que CALZAN: 9 de 9
+   CIFRA celdas que NO CALZAN: 0
+
+C) LA MUTACION DEL ESPERADO, QUE ES LO QUE PRUEBA QUE ESTE COTEJO PUEDE
+   CAER. Se muta UNA celda de la tecleada y se comprueba que el cotejo la
+   caza. No se toca ningun fichero: la mutacion vive en memoria.
+   con la celda del tramo 1 mutada, CALZAN 8 de 9
+   EL COTEJO CAE AL MUTAR UNA CELDA: SI
+
+   Y LA SEGUNDA MUTACION: SI LA FRONTERA TECLEADA SIGUIERA VIVA, LA COLUMNA
+   DIRIA `vuelta 183` PARA LOS TRAMOS 1 A 4 PASE LO QUE PASE. La computada
+   se compara con lo que esa frontera diria, para que se vea que HOY
+   coinciden y que la coincidencia es una MEDICION y no una copia.
+   la frontera tecleada y la computada coinciden en 9 de 9 celdas HOY
+   (y esa es toda la gracia: la computada REPRODUCE la tecleada, y desde
+    hoy seguira siendo cierta cuando la bateria de la 189 se corte en otro
+    sitio, cosa que la frontera tecleada no puede prometer)
+
+D) LO QUE ESTE FICHERO NO HACE: no re-pega nada en docs/loop/REPORTE.md.
+   El reporte de la 184 se cierra en la TAREA 2 con el texto que ya tiene.
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
