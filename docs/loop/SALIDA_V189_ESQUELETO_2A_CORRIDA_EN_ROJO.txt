@@ -44,3 +44,18 @@ PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (189)
          (b) no existe el archivo docs/loop/reportes/REPORTE_V189.md
 
 ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.
+
+==============================================================================
+NOTA DEL EJECUTOR, ESCRITA AL SELLAR Y NO DESPUES:
+ESTA ES LA SEGUNDA CORRIDA DEL ESQUELETO, Y SALE EN ROJO A PROPOSITO.
+La PRIMERA corrida fue la que escribio docs/loop/REPORTE.md (8150 bytes, 99
+lineas) y salio VERDE, pero su transcripcion NO quedo sellada en disco: se
+imprimio en consola. Al re correrlo para sellarla, el arbol ya tenia el reporte
+de la 189 encima, la guarda PASO 0.c pidio docs/loop/reportes/REPORTE_V189.md,
+no lo encontro y se nego a escribir. ESO ES LA GUARDA HACIENDO SU TRABAJO.
+SE DECLARA COMO CAIDA PROPIA DEL EJECUTOR, DE METODO, en el reporte de esta
+vuelta: la salida sellada del tallado verde no existe, y la que existe es esta.
+Lo que SI se puede cotejar del tallado verde esta en el propio REPORTE.md y en
+docs/loop/SALIDA_V189_TALLADOR_RECHAZO.txt (19 celdas ilegibles, 0 del lado
+APERTURA), que es la cifra que el esqueleto publica en su seccion 0.
+==============================================================================
