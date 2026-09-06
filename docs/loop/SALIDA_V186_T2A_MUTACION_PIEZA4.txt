@@ -45,10 +45,10 @@ CASO D. EL PARAMETRO EN SU VALOR POR DEFECTO SE COMPORTA EXACTAMENTE COMO
 
 CASO E. LA SEGUNDA COPIA DE LA COMPARACION: SE CUENTA Y SE EXIGE 1
    fichero: scripts/loop/cerrar_reporte.py
-   CIFRA apariciones CRUDAS: 2, lineas 438, 961
-   CIFRA apariciones en lineas de CODIGO: 1, lineas 438
-      LINEA 438 (CODIGO): if ajena != vuelta:
-      LINEA 961 (comentario): # comparacion `ajena != vuelta`, asi que la reparacion que la
+   CIFRA apariciones CRUDAS: 2, lineas 531, 1054
+   CIFRA apariciones en lineas de CODIGO: 1, lineas 531
+      LINEA 531 (CODIGO): if ajena != vuelta:
+      LINEA 1054 (comentario): # comparacion `ajena != vuelta`, asi que la reparacion que la
    ESPERADO: exactamente 1 en codigo -> CALZA
    MUTACION del esperado (exigir 2 en codigo): CAE
    Y LA PRUEBA DE QUE ESTE CASO SABE CONTAR: sobre un texto FABRICADO con

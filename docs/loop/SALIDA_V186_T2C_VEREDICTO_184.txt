@@ -1,0 +1,46 @@
+EL VEREDICTO DE UNA LINEA DE LA 184, TALLADO (vuelta 186, TAREA 2.c)
+
+A) LAS TRES PIEZAS, COTEJADAS CONTRA LO QUE LA 184 MIDIO
+   (las cifras de la 184 van como CONTRASTE, nunca como fuente: la de hoy
+    se computa, y si discrepan se declara en vez de resolverse copiando)
+   docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt
+      HOY   -> disco 2435 bytes | LF 2415 bytes | sha256 LF 8af3e148f0035b97
+      LA 184 -> disco 2435 bytes | LF 2415 bytes | sha256 LF (no publicado)
+      CALZA.
+   scripts/loop/_v184_cierre_texto.md
+      HOY   -> disco 13982 bytes | LF 13982 bytes | sha256 LF 050cdbb4ea99e11c
+      LA 184 -> disco 13982 bytes | LF 13982 bytes | sha256 LF 050cdbb4ea99e11c
+      CALZA.
+   docs/loop/SALIDA_V183_BATERIA.txt
+      HOY   -> disco 71753 bytes | LF 71753 bytes | sha256 LF 422a909ad6ffb167
+      LA 184 -> disco 71753 bytes | LF 71753 bytes | sha256 LF 422a909ad6ffb167
+      CALZA.
+
+B) LAS DOS CIFRAS DEL CUERPO, CONTADAS CON LAS FUNCIONES PURAS DE
+   cerrar_reporte.py SOBRE LAS DOS MITADES QUE LA GUARDA B.1 JUZGA
+   docs/loop/REPORTE.md -> 33608 bytes | scripts/loop/_v184_cierre_texto.md -> 13982 bytes
+   caidas_propias_del_cuerpo() -> [1, 2]
+   tareas_de_la_tabla()        -> 2
+
+C) LA FRASE, ARMADA CON ESAS CIFRAS EN PALABRA Y NINGUNA TECLEADA
+   LA BATERIA CERRO ENTERA CON SUS NUEVE TRAMOS SELLADOS, OCHO VERDES Y EL NOVENO EN ROJO TRAIDO SIN TOCAR, Y LAS DOS TAREAS DEL ENCARGO CIERRAN; EL CIERRE DEL REPORTE NO PUDO PEGARSE EN SU DIA POR UNA GUARDA QUE EL ACTA 185 DECLARO FALSO ROJO, Y SE PEGA AHORA CON LA REPARACION DE LA VUELTA 185 PUESTA; LAS DOS CAIDAS PROPIAS VAN NOMBRADAS Y NINGUNA TAPADA.
+
+D) LA GUARDA B.1, CORRIDA SOBRE LA FRASE ANTES DE PASARLA
+   CIFRA numerales hallados en el veredicto: 2
+      'DOS'      -> 2 tareas
+      'DOS'      -> 2 caidas
+   LAS CUENTAS DEL CUERPO:
+      caidas   -> 2
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+   LA MUTACION, QUE ES LO QUE PRUEBA QUE ESTA GUARDA MUERDE: se cambia
+   un numeral de la frase por otro y se comprueba que CAE.
+      con el numeral mutado a SIETE -> 1 numeral(es) que no calzan
+      LA GUARDA CAE AL MUTAR: SI
+
+CIFRA motivos en rojo: 0
+VEREDICTO DEL TALLADOR: VERDE
+
+LA FRASE QUEDA EN docs/loop/SALIDA_V186_T2C_VEREDICTO_184_FRASE.txt
+para que quien cierre la pase tal cual y no la vuelva a teclear.

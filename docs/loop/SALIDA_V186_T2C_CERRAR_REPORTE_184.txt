@@ -1,0 +1,98 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 184, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 184 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 33608 | saltos de linea: 517
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt             2415 bytes, 11 filas de tabla
+   scripts/loop/_v184_cierre_texto.md                     13982 bytes, sha256 050cdbb4ea99e11c
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. LA GUARDA DEL COMMIT DE `dataset/`, CORRIDA EL DIA QUE SERVIA
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+   docs/loop/SALIDA_V183_BATERIA.txt                    71753 bytes
+   CIFRA lineas no vacias de la bateria: 1009
+   vuelta que lleva dentro el nombre del fichero: 183
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+      tramo 1   -> vuelta 183
+      tramo 2   -> vuelta 183
+      tramo 3   -> vuelta 183
+      tramo 4   -> vuelta 183
+      tramo 5   -> vuelta 184
+      tramo 6   -> vuelta 184
+      tramo 7   -> vuelta 184
+      tramo 8   -> vuelta 184
+      tramo 9   -> vuelta 184
+   CIFRA tramos de esa bateria con fichero en disco: 9
+   CIFRA tramos sellados EN LA VUELTA 184: 5 [5, 6, 7, 8, 9]
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): CORRIDA
+      motivo: la bateria del fichero es de la vuelta 183 y se esta cerrando la 184, pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La vuelta 184 sello 5 de sus tramos (los tramos 5, 6, 7, 8, 9), leido del asunto de su ultimo commit con git log y no tecleado, que es lo que AUDITOR.md 6.1 manda cuando dice que una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE. Trae 1009 linea(s) no vacias.
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 184
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 186
+   CARRIL: CIERRE TARDIO
+   en este carril las cifras sin pareja NO bloquean, pero SE DECLARAN
+   una a una dentro del propio reporte cerrado. NINGUNA OTRA GUARDA SE
+   AFLOJA: las cuatro piezas, el cuerpo byte a byte, los guiones y las
+   citas de arnes siguen mandando igual.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LA BATERIA CERRO ENTERA CON SUS NUEVE TRAMOS SELLADOS, OCHO VERDES Y EL NOVENO EN ROJO TRAIDO SIN TOCAR, Y LAS DOS TAREA'
+   CIFRA numerales hallados en el veredicto: 2
+      'DOS'      -> 2 tareas
+      'DOS'      -> 2 caidas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 2
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 533 bytes de hueco -> 2507 bytes de tabla pegada
+   veredicto escrito: 386 bytes
+   CARRIL TARDIO: se anexa la declaracion de las cifras sin pareja
+      CIFRA cifras sin pareja declaradas: 10
+      la declaracion mide 2218 bytes
+   ESCRITO: docs/loop/REPORTE.md (124249 bytes, 1902 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja NO   (no bloquea: CARRIL DE CIERRE TARDIO, y va DECLARADA en la seccion 10)
+   toda cita de arnes calza con su fichero SI
+   LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):
+      linea 119   bytes 3.916                | (cifras contadas de `docs/loop/SALIDA_V184_T1A_REGISTRO_R46.txt`, **3.916 bytes**,
+      linea 143   bytes 3.976                | (**3.976 bytes**, 60 lineas). **CIFRA fallos: 0.** Siete mutaciones sobre variable
+      linea 171   bytes 7.314                | `docs/loop/SALIDA_V184_T1B_ARNES_REPARADO.txt` (**7.314 bytes**, 85 lineas),
+      linea 186   bytes 5.564                | salida en `docs/loop/SALIDA_V184_T1C_MUTACION_ESTIMACION.txt` (**5.564 bytes**, 78
+      linea 197   bytes 12.381               | `docs/loop/SALIDA_V184_T1D_RELECTURA_AL_DOBLE.txt` (**12.381 bytes**, 147 lineas).
+      linea 200   bytes 674                  | `docs/loop/SELLO_APERTURA_AUDITOR_V185.json` (**674 bytes**) declara **38.747
+      linea 201   bytes 38.747               | bytes** y `sha256` `f81f1b32594221f1...`; el fichero de hoy mide **38.747 bytes**
+      linea 201   sha   f81f1b32594221f1     | bytes** y `sha256` `f81f1b32594221f1...`; el fichero de hoy mide **38.747 bytes**
+      linea 227   bytes 1.443                | `docs/loop/SALIDA_V184_T1_REPARTO_ANTES_Y_DESPUES.txt` (**1.443 bytes**, 27
+      linea 234   bytes 24.487               | `docs/loop/SALIDA_V184_COTEJO_DE_CLONES.txt` (**24.487 bytes**, 381 lineas). **No
+   CIFRA cifras publicadas sin su pareja: 10
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+VERDE: el reporte de la vuelta 184 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

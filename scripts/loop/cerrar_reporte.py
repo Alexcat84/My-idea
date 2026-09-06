@@ -161,6 +161,12 @@ CAB_9_HUECO = "## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO"
 # marca, o no hay hueco declarado y la ausencia sigue siendo muda.
 MARCA_HUECO = "HUECO DECLARADO Y MEDIDO"
 MARCA_ATRIBUCION = "ATRIBUCION:"
+# EL CARRIL DE CIERRE TARDIO (vuelta 186, TAREA 2.c; respuesta del acta 186 a la
+# `P.2`). La cabecera y la marca van aqui arriba, con las demas, para que un
+# arnes pueda nombrarlas sin teclearlas.
+CAB_10_TARDIO = ("## 10. LAS CIFRAS SIN PAREJA, DECLARADAS UNA A UNA POR EL "
+                 "CARRIL DE CIERRE TARDIO")
+MARCA_TARDIO = "CIFRAS SIN PAREJA DECLARADAS Y MEDIDAS:"
 # EL PATRON, ENSANCHADO EN LA VUELTA 182 POR EL REMEDIO DEL `E.1` DEL ACTA 180.
 # ANTES ERA r"SALIDA_V(\d+)_BATERIA" Y ESA ERA LA PRIMERA DE LAS TRES CAUSAS: el
 # fichero que la vuelta 180 paso se llamaba `SALIDA_V180_HUECO_BATERIA.txt`, con
@@ -351,6 +357,93 @@ def tramos_por_vuelta(vuelta_del_fichero):
         asunto = r.stdout.decode("utf-8", errors="replace").strip()
         reparto[n] = vuelta_que_sello(asunto)
     return reparto
+
+
+def vuelta_en_curso():
+    """LA VUELTA QUE ESTA CORRIENDO AHORA MISMO, LEIDA DEL ASUNTO DEL ULTIMO
+    COMMIT. Devuelve un entero o None si el asunto no nombra ninguna vuelta.
+
+    NO ES PURA a proposito, como sus hermanas `tramos_por_vuelta()` y
+    `lector_de_docs_loop()`: es la unica pieza de este carril que toca `git log`,
+    y por eso va separada de la funcion que decide, que si es pura y por eso se
+    puede tumbar en un arnes.
+
+    LA EVIDENCIA SE LEE DE GIT Y NO SE PUEDE TECLEAR (vuelta 186, TAREA 2.c;
+    respuesta del acta 186 a la `P.2`). `main()` la computa con esta funcion y NO
+    la recibe por bandera: no hay ninguna opcion de linea de ordenes para esto, y
+    no la hay a proposito, porque una evidencia que se puede teclear no es una
+    evidencia. El asunto de esta casa empieza por `VUELTA <N>,`, y
+    `vuelta_que_sello()` ya sabe leerlo: se REUSA en vez de escribir otro."""
+    r = subprocess.run(["git", "log", "-1", "--format=%s"],
+                       cwd=RAIZ, capture_output=True)
+    if r.returncode != 0:
+        return None
+    return vuelta_que_sello(r.stdout.decode("utf-8", errors="replace").strip())
+
+
+def es_cierre_tardio(vuelta_del_reporte, curso):
+    """SI ESTE CIERRE ES UN CIERRE TARDIO. PURA.
+
+    QUE ES UN CIERRE TARDIO, Y ES LITERALMENTE LO QUE EL CASO ES: un reporte que
+    se cierra en una vuelta POSTERIOR A LA SUYA. El acta 186, punto `7.2`,
+    contestando la `P.2`: las cifras sin pareja del reporte de la 184 *"ni se
+    eximen ni se reescriben. SE DECLARAN"*, y el carril donde eso pasa es este.
+
+    LA CONDICION SE COMPUTA Y NO SE PASA POR BANDERA: `curso` sale de
+    `vuelta_en_curso()`, que lo lee del asunto del ultimo commit con `git log`.
+    Si no se puede leer la vuelta en curso, ESTO NO ES UN CIERRE TARDIO: la falta
+    de evidencia no abre el carril, lo cierra.
+
+    LA LETRA ES LA DEL ENCARGO, PALABRA POR PALABRA: *"se activa solo cuando la
+    vuelta que se cierra NO es la vuelta en curso"*. No se estrecha ni se ensancha
+    aqui; si algun dia hiciera falta distinguir un cierre tardio de un cierre
+    adelantado, esa seria doctrina nueva y no se inventa en una guarda."""
+    if vuelta_del_reporte is None or curso is None:
+        return False
+    return curso != vuelta_del_reporte
+
+
+def declaracion_de_cifras_sin_pareja(huerfanas, vuelta, curso):
+    """EL BLOQUE QUE DECLARA LAS CIFRAS SIN PAREJA DENTRO DEL PROPIO REPORTE
+    CERRADO, UNA A UNA Y CON SU CUENTA TOTAL. PURA: devuelve texto.
+
+    UN DEFECTO DECLARADO Y MEDIDO NO ES UN DEFECTO EXENTO, y esa es toda la
+    diferencia entre este carril y una exencion muda, que banco 9 prohibe.
+
+    EL CERO SE DICE Y NO SE OMITE: si no hay ninguna cifra sin pareja, este bloque
+    se escribe igual y dice cero. Un campo ausente y un cero contado no son lo
+    mismo, que es la misma letra que la casa aplica a las caidas propias.
+
+    LA LISTA VA DENTRO DE UN BLOQUE CERCADO a proposito: es la salida cruda de una
+    guarda, y `cifras_sin_pareja()` no mira dentro de las cercas. Si fuera prosa,
+    esta declaracion se acusaria a si misma en la siguiente pasada, que es
+    exactamente el falso positivo que la `PD.5` acaba de cerrar."""
+    p = [CAB_10_TARDIO, "",
+         "**CARRIL DE CIERRE TARDIO.** Este reporte es el de la vuelta %d y se"
+         % vuelta,
+         "cierra en la vuelta %s, leida del asunto del ultimo commit con `git log`"
+         % curso,
+         "y no tecleada. En este carril **las cifras sin pareja NO bloquean el",
+         "cierre, pero SE DECLARAN una a una con su linea y su cuenta total**, que",
+         "es la respuesta del acta 186 a la `P.2`: *ni se eximen ni se reescriben,",
+         "se declaran*. **Un defecto declarado y medido no es un defecto exento**, y",
+         "reescribir el texto de una vuelta pasada seria escribir en pasado lo que",
+         "no paso.",
+         "",
+         "**NINGUNA OTRA GUARDA SE AFLOJA EN ESTE CARRIL.** Las cuatro piezas, el",
+         "cuerpo byte a byte, los guiones y las citas de arnes siguen mandando",
+         "igual, y en el carril normal las cifras sin pareja siguen siendo ROJO.",
+         "",
+         "%s **%d** cifra(s) publicada(s) sin su pareja." % (MARCA_TARDIO,
+                                                             len(huerfanas)),
+         "", CERCA,
+         "CIFRA cifras publicadas sin su pareja: %d" % len(huerfanas)]
+    if not huerfanas:
+        p.append("(ninguna: la cuenta es CERO, y se escribe en vez de omitirse)")
+    for n, especie, muestra, linea in huerfanas:
+        p.append("linea %-6d %-5s %-24s | %s" % (n, especie, muestra, linea))
+    p += [CERCA, ""]
+    return NL.join(p) + NL
 
 
 def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta,
@@ -1085,6 +1178,24 @@ def main():
                          "HUECO DECLARADO Y MEDIDO con --hueco-atribucion." % V)
     print("")
 
+    print("B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR")
+    print("     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)")
+    curso = vuelta_en_curso()
+    tardio = es_cierre_tardio(V, curso)
+    print("   vuelta que se cierra: %d" % V)
+    print("   vuelta EN CURSO, leida del asunto del ultimo commit con git log y")
+    print("   NO tecleada: %s" % curso)
+    print("   CARRIL: %s" % ("CIERRE TARDIO" if tardio else "NORMAL"))
+    if tardio:
+        print("   en este carril las cifras sin pareja NO bloquean, pero SE DECLARAN")
+        print("   una a una dentro del propio reporte cerrado. NINGUNA OTRA GUARDA SE")
+        print("   AFLOJA: las cuatro piezas, el cuerpo byte a byte, los guiones y las")
+        print("   citas de arnes siguen mandando igual.")
+    else:
+        print("   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen")
+        print("   siendo ROJO.")
+    print("")
+
     print("B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO")
     print("     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)")
     # EL CUERPO QUE EL VEREDICTO DESCRIBE SON LAS DOS MITADES JUNTAS: la tabla de
@@ -1174,6 +1285,18 @@ def main():
             "**una corrida de otra vuelta pegada aqui tampoco vale**." + NL)
 
     texto = texto.rstrip(NL) + NL + NL + cuerpo.rstrip(NL) + NL + NL + seccion9
+    if tardio:
+        # LA DECLARACION SE ANEXA AL FINAL Y VA DENTRO DE UNA CERCA, asi que no
+        # se acusa a si misma en la relectura del bloque D ni mueve el numero de
+        # linea de nada de lo que va antes. Se computa sobre el texto YA armado,
+        # que es el que se va a escribir.
+        huerfanas_previo = cifras_sin_pareja(texto)
+        declaracion = declaracion_de_cifras_sin_pareja(huerfanas_previo, V, curso)
+        texto = texto.rstrip(NL) + NL + NL + declaracion
+        print("   CARRIL TARDIO: se anexa la declaracion de las cifras sin pareja")
+        print("      CIFRA cifras sin pareja declaradas: %d" % len(huerfanas_previo))
+        print("      la declaracion mide %d bytes"
+              % len(declaracion.encode("utf-8")))
     io.open(REPORTE, "w", encoding="utf-8", newline=NL).write(texto)
     print("   ESCRITO: %s (%d bytes, %d saltos de linea)"
           % (rel(REPORTE), len(texto.encode("utf-8")), texto.count(NL)))
@@ -1199,14 +1322,23 @@ def main():
     huerfanas = cifras_sin_pareja(de_nuevo)
     citas = citas_de_arnes_que_no_calzan(de_nuevo, lector_de_docs_loop)
     citas_rojas = [c for c in citas if not c[4].startswith("SIN COTEJO")]
-    for etiqueta, cond in (
-            ("el cuerpo del cierre esta byte a byte", cuerpo.rstrip(NL) in de_nuevo),
+    # EN EL CARRIL TARDIO LAS CIFRAS SIN PAREJA NO BLOQUEAN, PERO SE SIGUEN
+    # MIDIENDO Y SE SIGUEN IMPRIMIENDO, y ademas quedan DECLARADAS dentro del
+    # propio reporte por el bloque C. Las otras TRES comprobaciones de esta lista
+    # NO SE AFLOJAN en ningun carril.
+    for etiqueta, cond, bloquea in (
+            ("el cuerpo del cierre esta byte a byte",
+             cuerpo.rstrip(NL) in de_nuevo, True),
             ("cero guiones largos y cero guiones medios",
-             chr(8212) not in de_nuevo and chr(8211) not in de_nuevo),
-            ("toda cifra de bytes y todo sha con su pareja", not huerfanas),
-            ("toda cita de arnes calza con su fichero", not citas_rojas)):
-        print("   %-34s %s" % (etiqueta, "SI" if cond else "NO"))
-        if not cond:
+             chr(8212) not in de_nuevo and chr(8211) not in de_nuevo, True),
+            ("toda cifra de bytes y todo sha con su pareja",
+             not huerfanas, not tardio),
+            ("toda cita de arnes calza con su fichero", not citas_rojas, True)):
+        print("   %-34s %s%s"
+              % (etiqueta, "SI" if cond else "NO",
+                 "" if bloquea else "   (no bloquea: CARRIL DE CIERRE TARDIO,"
+                                    " y va DECLARADA en la seccion 10)"))
+        if not cond and bloquea:
             extra += 1
     if huerfanas:
         print("   LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):")
