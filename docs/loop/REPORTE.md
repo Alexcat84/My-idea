@@ -81,10 +81,10 @@ vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS Y LA DEUDA DE LECTURA. (a) El acta 181 y sus adjudicaciones entran en la serie de registros, con el numero que devuelve `scripts/loop/serie_de_registros.py` y no tecleado. (b) LOS DOS PENDIENTES DEL ACTA 180, que llevan una vuelta esperando y estan escritos en sus puntos `6.8` y `6.6`: el remedio del `E.1` sobre `scripts/loop/cerrar_reporte.py`, que es la rama que escribe la cabecera CORRIDA ENTERA Y SOLA sobre una seccion 9 cuyo cuerpo dice que nadie la corrio, y la `P.1`, el arnes `vuelta172_tarea1c_guarda_que_mordio.py`, que cae con exit 1 fallando 1 de 6 y esta fuera del censo: primero el esperado y despues el nombre, en ese orden, que es parte de la adjudicacion. (c) LA RELECTURA AL DOBLE del tramo de la ciega que el acta 181 encarga en su `7.2` por `AUDITOR.md` 1.2, sobre los 30 puestos que su seccion 8 lista | **CERRADA** | `SALIDA_V182_T1A_REGISTRO_ACTA_181.txt`, `_T1A_REGISTRO_R43.txt`, `_T1A_MUTACION_REGISTRO.txt`, `_T1B_REMEDIO_E1.txt`, `_T1B_ARNES_RAMA_SECCION9.txt`, `_T1B_REMEDIO_P1.txt`, `_T1B_REMEDIO_P1_MITAD_C.txt`, `_T1B_DECLARAR_CONGELADO_P1.txt`, `_T1C_RELECTURA_AL_DOBLE.txt` |
-| **TAREA 2** | LA APERTURA DEL AUDITOR COMO CODIGO (decision del fundador del 5 sep 2026, PREGUNTA 3, opcion c, la mitad que quita el problema de raiz; la otra mitad, que ROMPER UN REMEDIO ESCRITO ACUMULE, ya esta escrita en `AUDITOR.md`). Fichero GEMELO del bloque de apertura del ejecutor: corre `scripts/loop/aislador_de_ciega.py` y SELLA SU SALIDA ANTES de que el turno pueda tocar `git log`, `git status` o `docs/loop/REPORTE.md`. Con CASO POR MUTACION SOBRE VARIABLE COMPUTADA, no sobre constante literal (`EJECUTOR.md` 1, EL CASO ROJO SE PRUEBA POR MUTACION): si el sello se intenta DESPUES de tocar cualquiera de los tres, TIENE QUE CAER, y la prueba se corre cambiando el valor esperado para comprobar que el caso cae de verdad | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | LA APERTURA DEL AUDITOR COMO CODIGO (decision del fundador del 5 sep 2026, PREGUNTA 3, opcion c, la mitad que quita el problema de raiz; la otra mitad, que ROMPER UN REMEDIO ESCRITO ACUMULE, ya esta escrita en `AUDITOR.md`). Fichero GEMELO del bloque de apertura del ejecutor: corre `scripts/loop/aislador_de_ciega.py` y SELLA SU SALIDA ANTES de que el turno pueda tocar `git log`, `git status` o `docs/loop/REPORTE.md`. Con CASO POR MUTACION SOBRE VARIABLE COMPUTADA, no sobre constante literal (`EJECUTOR.md` 1, EL CASO ROJO SE PRUEBA POR MUTACION): si el sello se intenta DESPUES de tocar cualquiera de los tres, TIENE QUE CAER, y la prueba se corre cambiando el valor esperado para comprobar que el caso cae de verdad | **CERRADA** | `scripts/loop/apertura_del_auditor.py`, `SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`, y el parrafo nuevo de `docs/loop/AUDITOR.md` |
 | **TAREA 3** | EL INSTRUMENTO DEL DIFERENCIADOR MOVIDO (decision del fundador del 5 sep 2026, PREGUNTA 1, la `b`). Cruza LA RAZON ESCRITA de cada `D` contra LOS PASOS DE HOY del otro nodo, y SOLO las `D` con la lesion exacta vuelven a la cola. CASO POSITIVO OBLIGATORIO: EL PUESTO 2.464 TIENE QUE SALIR NOMBRADO; si no sale, el instrumento no sirve y se dice. Y EL CENSO POR ESTADO DE LAS `A` en el mismo instrumento: ejecutadas contra pendientes, con LAS PENDIENTES DE TEXTO MOVIDO MARCADAS RANCIAS POR `P.5`. Las `A` NO ganan cola nueva: la ejecutada es cosa consumada y la pendiente ya la cubre `P.5` | **CERRADA** | `SALIDA_V182_T3_DIFERENCIADOR.txt`, `SALIDA_V182_T3_COLA.json`, `SALIDA_V182_T3_MUTACION.txt`, `SALIDA_V182_T3_DIFERENCIADOR_FECHADO_MALO.txt` |
 | **TAREA 4** | LAS `D` QUE EL INSTRUMENTO NOMBRE ENTRAN A LA COLA de relectura post fusion de `docs/plan/08_VERIFICACION.md`, y se releen POR TRAMOS en las vueltas siguientes. En esta vuelta SE ENTRA A LA COLA Y SE DECLARA EL TRAMO; no se releen 543 pares, que es justo lo que la decision del fundador evita al conceder la `b` y no la `c` | **CERRADA** | `SALIDA_V182_T4_COLA.txt`, y la seccion nueva en `docs/plan/08_VERIFICACION.md` |
-| **TAREA 5** | LA VUELTA DE BATERIA VA EN LA 183, POR TRAMOS RESUMIBLES (decision del fundador del 5 sep 2026, PREGUNTA 4, opcion `a`, con el precedente de los nueve tramos de la vuelta 176). Aqui SOLO se deja preparada y declarada: nueve tramos, cada uno se commitea CON SU SALIDA SELLADA al terminar, una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE, y la bateria se declara corrida cuando LOS NUEVE tienen salida sellada DEL MISMO CALIBRE. En esta vuelta la seccion 9 del reporte cierra con su HUECO DECLARADO Y MEDIDO, como el regimen `6.1` manda | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | LA VUELTA DE BATERIA VA EN LA 183, POR TRAMOS RESUMIBLES (decision del fundador del 5 sep 2026, PREGUNTA 4, opcion `a`, con el precedente de los nueve tramos de la vuelta 176). Aqui SOLO se deja preparada y declarada: nueve tramos, cada uno se commitea CON SU SALIDA SELLADA al terminar, una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE, y la bateria se declara corrida cuando LOS NUEVE tienen salida sellada DEL MISMO CALIBRE. En esta vuelta la seccion 9 del reporte cierra con su HUECO DECLARADO Y MEDIDO, como el regimen `6.1` manda | **CERRADA. PREPARADA Y DECLARADA, NO CORRIDA** | `scripts/loop/vuelta183_bateria_por_tramos.py`, `SALIDA_V182_T5_PLAN_BATERIA_183.txt`, `SALIDA_V182_T5_SIGUIENTE_TRAMO.txt`, `SALIDA_V182_T5_COTEJO_CLON_BATERIA.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -270,5 +270,97 @@ propio tramo con su fecha**.
 > operacion`, no hay destino ni origenes y no reparte nada. **Se dice, en vez de
 > correr un instrumento sobre una tabla que no es la suya y publicar un verde que
 > no significa nada.**
+
+### TAREA 2. LA APERTURA DEL AUDITOR COMO CODIGO
+
+**`scripts/loop/apertura_del_auditor.py`** (**11.444 bytes en disco**), con nombre
+estable y sin numero de vuelta, como `aislador_de_ciega.py` y `cerrar_reporte.py`,
+y **no se clona**. Decision del fundador del 5 sep 2026, PREGUNTA 3, opcion `c`,
+la mitad que quita el problema de raiz; la otra mitad, que romper un remedio
+escrito ACUMULE, ya estaba escrita en `AUDITOR.md`.
+
+**COMO LO IMPIDE, Y ES LO UNICO QUE HACE.** Lleva una **bitacora de toques**: las
+tres cosas prohibidas solo se hacen llamando a `git_log()`, `git_status()` y
+`leer_reporte()`, y cada una **apunta su toque antes de hacerlo**. `sellar()`
+**cae en rojo si la bitacora ya trae alguno de los tres, y no escribe nada**: no
+avisa ni recomienda, **no sella**. La decision vive en `puede_sellar()`, separada
+a proposito, para que el arnes la pueda tumbar **sin escribir un solo fichero**.
+
+**EL CASO POR MUTACION, SOBRE VARIABLE COMPUTADA Y NO SOBRE CONSTANTE LITERAL**
+(`EJECUTOR.md` 1, letra del 29 ago 2026). Instrumento
+`scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py`, salida
+`docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt` (**5.078 bytes**).
+**VERDE, 0 fallos**, con todo el material fabricado en un temporal que se borra:
+
+- **6 escenarios** de `puede_sellar()`, los tres prohibidos uno a uno, los tres
+  juntos, la bitacora limpia y un toque **no** prohibido. Los seis calzan.
+- **Los tres prohibidos por su funcion de verdad**, no apuntados a mano:
+  `puede_sellar()` pasa de `True` a `False` en los tres.
+- **`sellar()` tras tocar: devuelve `False` y escribe CERO ficheros en el
+  temporal.** No es que avise: es que no hay sello.
+- **Y con la bitacora limpia SI sella**, con su ciega, su destape y su sello,
+  para que se vea que no esta simplemente roto: *un guardia que no deja pasar a
+  nadie no es un guardia, es una pared*.
+- **LA MUTACION:** el veredicto computado tras `git_log()` es `False`; con el
+  esperado `False` **PASA** y con el esperado `True` **CAE**. Y la segunda
+  mutacion quita `git log` de la constante de prohibidos y el mismo escenario
+  **cambia a `True`**, con la constante devuelta a su sitio despues.
+
+`docs/loop/AUDITOR.md` gana el parrafo que nombra el fichero y **escribe el orden
+obligatorio del turno como una linea de codigo y no como un recuerdo**.
+
+> **LO QUE ESTE FICHERO NO PUEDE HACER, Y SE DICE EN VEZ DE VENDERLO DE MAS:** no
+> puede impedir que alguien corra `git status` en su terminal por su cuenta.
+> **Ninguna guarda de este repo puede.** Lo que si hace es que **el sello, que es
+> lo que el acta cita como prueba, no se pueda escribir despues**; y con eso
+> saltarse el remedio deja de ser un descuido y pasa a ser **una decision a
+> sabiendas y sin sello**.
+
+### TAREA 5. LA BATERIA DE LA 183, PREPARADA Y DECLARADA, Y NO CORRIDA
+
+**`scripts/loop/vuelta183_bateria_por_tramos.py`** (**23.847 bytes en disco**),
+**clon declarado** de `scripts/loop/vuelta176_bateria_por_tramos.py`, que es **el
+precedente que la propia decision del fundador cita**. Cotejo del clon en
+`docs/loop/SALIDA_V182_T5_COTEJO_CLON_BATERIA.txt` (**7.017 bytes**): **52
+sentencias de codigo y 4 literales de texto**. **No sale vacio y no se dice que
+salga**: el docstring entero cambia, el `TAMANO` cambia y el carril `--siguiente`
+es nuevo.
+
+**EL REPARTO, COMPUTADO Y NO TECLEADO** (`--plan`, salida en
+`docs/loop/SALIDA_V182_T5_PLAN_BATERIA_183.txt`, **5.820 bytes**): **109 entradas
+de nomina**, **tramo de 13**, **9 tramos**, y **la suma de las entradas de todos
+los tramos es 109**, o sea que no se cae ni se repite ninguna. **Los nueve no son
+un numero elegido: son los del precedente de la 176**, y el `TAMANO` es lo que se
+ajusta para que salgan nueve, no al reves.
+
+**LA ESTIMACION DEL RELOJ, DICHA COMO ESTIMACION Y NO COMO MEDICION**, con las
+cifras del propio archivo: **entre 4,3 y 5,6 minutos por tramo** y **entre 36,0 y
+46,9 minutos la nomina entera**. **La medicion de verdad la da cada tramo al
+cerrarse.**
+
+**EL CARRIL NUEVO `--siguiente` ES LA MITAD EN CODIGO DE "RETOMA EN EL TRAMO
+SIGUIENTE".** El lanzador de la 176 ya era resumible de hecho, porque cada tramo
+se corre con `--tramo N`; pero **saber cual tocaba era cosa de acordarse**, y
+acordarse es lo que esta casa lleva vueltas demostrando que no funciona. Corrido
+hoy (`docs/loop/SALIDA_V182_T5_SIGUIENTE_TRAMO.txt`, **1.178 bytes**): **9 tramos
+del reparto, 0 con salida sellada, 9 faltan, EL SIGUIENTE ES EL TRAMO 1.**
+
+> **Y UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA.** No es
+> severidad: la bateria del ejecutor salio en **cero bytes tres vueltas seguidas**
+> (171, 172 y 173) y esa es media causa del regimen entero de `AUDITOR.md` 6.1.
+> Por la letra del 5 sep 2026, **una ruta que promete prueba y mide cero bytes es
+> caida de cifra**.
+
+**LO QUE ESTA VUELTA NO HACE CON ESTO, Y ES LO QUE SU ENCARGO MANDA:** *"Aqui solo
+se deja preparada y declarada"*. Lo unico que se corrio de este fichero es
+`--plan` y `--siguiente`, que **no tocan la nomina, no corren ningun arnes y no
+escriben ninguna salida de bateria**. **No hay ninguna corrida de bateria en esta
+vuelta**, y por eso la seccion 9 de este reporte cierra con su **hueco declarado y
+medido**, que es lo que el regimen 6.1 manda para las vueltas intermedias.
+
+**Y LA NOMINA CRECIO DENTRO DE ESTA MISMA VUELTA, con su corte al lado:** de
+**108** a **109** entradas, por el arnes de la `P.1` que la TAREA 1.b remedio y
+renombro. **La cifra de 109 es la de esta corrida de `--plan`, tomada al cierre y
+no en la apertura**, porque la propia vuelta la movio.
 
 <!-- FIN ANEXO DE TAREAS -->

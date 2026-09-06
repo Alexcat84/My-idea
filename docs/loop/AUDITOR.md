@@ -89,6 +89,24 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    `aislador_de_ciega.py` y SELLA su salida ANTES de que el turno pueda tocar
    `git log`, `git status` o `REPORTE.md`**. Con eso, aislar el sujeto deja de
    depender de que alguien se acuerde.
+   Y ESE FICHERO YA EXISTE, ESCRITO EN LA VUELTA 182, TAREA 2:
+   **`scripts/loop/apertura_del_auditor.py`**, con nombre estable y sin numero de
+   vuelta, como sus hermanos `aislador_de_ciega.py` y `cerrar_reporte.py`, y **NO
+   SE CLONA**. Su caso positivo por mutacion es
+   `scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py`, salida en
+   `docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`.
+   **EL ORDEN OBLIGATORIO DE TU TURNO, Y ES UNA LINEA DE CODIGO, NO UN RECUERDO:**
+   `sellar(criterio=..., vuelta=N, muestra=..., semilla=...)` **PRIMERO Y SOLO
+   ESO**; y a partir de ahi, `git log`, `git status` y abrir `REPORTE.md` se hacen
+   llamando a `git_log()`, `git_status()` y `leer_reporte()` de ese mismo fichero,
+   que **apuntan su toque**. **Si tocas cualquiera de los tres antes de sellar,
+   `sellar()` CAE EN ROJO y NO ESCRIBE EL SELLO**: no avisa, no recomienda, no
+   sella. Y **sin sello no hay ciega que citar**, porque el acta cita el sello.
+   **LO QUE ESTE FICHERO NO PUEDE HACER, Y SE DICE EN VEZ DE VENDERLO DE MAS:** no
+   puede impedir que corras `git status` en tu terminal por tu cuenta. Ninguna
+   guarda de este repo puede. Lo que si hace es que **el sello no se pueda
+   escribir despues**, y con eso saltarse el remedio deja de ser un descuido y
+   pasa a ser una decision tuya, a sabiendas y sin sello.
 3. ADJUDICA: discrepancias van a relectura conjunta (tu caso escrito con
    evidencia; el ejecutor verifica contra el grafo y decide con la vara; las
    correcciones con correccion declarada y recomputo). Pendientes de doctrina:
@@ -358,6 +376,15 @@ sin conseguirse:
 > SALIDA SELLADA AL TERMINAR. UNA VUELTA CORTADA RETOMA EN EL TRAMO SIGUIENTE**,
 > no desde el principio. **Y LA BATERIA SE DECLARA CORRIDA CUANDO LOS NUEVE
 > TRAMOS TIENEN SALIDA SELLADA DEL MISMO CALIBRE.**
+
+**Y EL LANZADOR YA ESTA ESCRITO, EN LA VUELTA 182, TAREA 5, Y SIN CORRER:**
+`scripts/loop/vuelta183_bateria_por_tramos.py`, clon declarado del de la vuelta
+176. Su reparto, computado y no tecleado, da **NUEVE tramos** sobre la nomina de
+hoy. Trae ademas el carril **`--siguiente`**, que es **la mitad en codigo de
+"retoma en el tramo siguiente"**: mira que salidas selladas existen y dice cual
+toca, en vez de dejarlo a que alguien se acuerde. **Y una salida sellada que mide
+CERO BYTES no cuenta como hecha**, porque la del ejecutor salio en cero bytes tres
+vueltas seguidas y esa es media causa de este regimen.
 
 **POR QUE ESTO SI TERMINA Y LO ANTERIOR NO:** una bateria que solo cuenta cuando
 acaba entera **pierde todo lo hecho cada vez que la vuelta se corta**, y llevaba

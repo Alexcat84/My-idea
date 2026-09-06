@@ -1,0 +1,126 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta176_bateria_por_tramos.py
+  B: scripts/loop/vuelta183_bateria_por_tramos.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 176, 183
+  CIFRA lineas de docstring: A 64 | B 41
+  CIFRA lineas de maquina:   A 444 | B 498
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 3104 | B 3431
+     CIFRA tipos de nodo que NO empatan: 33
+        Load                   A   793 | B   870 | diferencia +77
+        Name                   A   663 | B   732 | diferencia +69
+        Constant               A   290 | B   330 | diferencia +40
+        Call                   A   304 | B   340 | diferencia +36
+        Expr                   A   173 | B   195 | diferencia +22
+        BinOp                  A   133 | B   146 | diferencia +13
+        Attribute              A   168 | B   178 | diferencia +10
+        Mod                    A    83 | B    93 | diferencia +10
+        Store                  A   110 | B   119 | diferencia +9
+        Assign                 A    60 | B    65 | diferencia +5
+        IfExp                  A     0 | B     4 | diferencia +4
+        Compare                A    11 | B    14 | diferencia +3
+        Tuple                  A    35 | B    38 | diferencia +3
+        If                     A    20 | B    22 | diferencia +2
+        List                   A     9 | B    11 | diferencia +2
+        Mult                   A    21 | B    23 | diferencia +2
+        Return                 A    23 | B    25 | diferencia +2
+        Subscript              A    28 | B    30 | diferencia +2
+        keyword                A    26 | B    28 | diferencia +2
+        Add                    A    24 | B    25 | diferencia +1
+        BoolOp                 A     0 | B     1 | diferencia +1
+        Eq                     A     4 | B     5 | diferencia +1
+        For                    A    15 | B    16 | diferencia +1
+        FunctionDef            A    14 | B    15 | diferencia +1
+        GeneratorExp           A     1 | B     2 | diferencia +1
+        Gt                     A     1 | B     2 | diferencia +1
+        Lt                     A     0 | B     1 | diferencia +1
+        Or                     A     0 | B     1 | diferencia +1
+        USub                   A     0 | B     1 | diferencia +1
+        UnaryOp                A     5 | B     6 | diferencia +1
+        arg                    A    16 | B    17 | diferencia +1
+        arguments              A    14 | B    15 | diferencia +1
+        comprehension          A     5 | B     6 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 56
+  CIFRA tokens de maquina: A 2691 | B 2978
+  CIFRA tokens que difieren con el texto normalizado: 289
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 52
+  CIFRA LITERALES DE TEXTO:   4
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:86  TAMANO = 10
+     B:63  # EL TAMANO DEL TRAMO. No se elige por gusto: es el que hace que
+     B:64  # reparto_en_tramos() sobre la nomina de HOY devuelva NUEVE tramos, que es el
+     B:65  # numero del precedente de la vuelta NNN que la decision del fundador cita. Si la
+     B:66  # nomina crece, --plan lo dira en su primera linea y el numero se recalcula: lo
+     B:67  # que manda es que sean NUEVE, no que el tamano sea este.
+     B:68  TAMANO = 13
+     B:69  TRAMOS_QUE_MANDA_LA_DECISION = 9
+     B:438  def siguiente(tramos):
+     B:439  """QUE TRAMO TOCA, MIRANDO QUE SALIDAS SELLADAS HAY. Es la mitad en codigo de
+     B:440  "una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE": el lanzador de la NNN ya
+     B:441  era resumible de hecho, pero saber cual tocaba era cosa de acordarse.
+     B:442  
+     B:443  UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA, y eso no es
+     B:444  severidad: la bateria del ejecutor salio en CERO BYTES tres vueltas seguidas
+     B:445  (171, 172 y 173) y esa es media causa del regimen entero de AUDITOR.md 6.1.
+     B:446  Por la letra del 5 sep 2026, una ruta que promete prueba y mide cero bytes es
+     B:447  CAIDA DE CIFRA."""
+     B:448  print("=" * 78)
+     B:449  print("QUE TRAMO TOCA, CONTADO DE docs/loop/ Y NO RECORDADO")
+     B:450  print("=" * 78)
+     B:451  hechos, faltan = [], []
+     B:452  for i in range(1, len(tramos) + 1):
+     B:453  ruta = os.path.join(LOOP, nombre_tramo(i))
+     B:454  tam = os.path.getsize(ruta) if os.path.exists(ruta) else -1
+     B:455  estado = ("NO EXISTE" if tam < 0 else
+     B:456  ("CERO BYTES: NO CUENTA" if tam == 0 else "%d bytes" % tam))
+     B:457  print("  TRAMO %d: %-24s %s" % (i, nombre_tramo(i), estado))
+     B:458  (hechos if tam > 0 else faltan).append(i)
+     B:459  print("")
+     B:460  print("  CIFRA tramos del reparto: %d" % len(tramos))
+     B:461  print("  CIFRA tramos CON salida sellada no vacia: %d" % len(hechos))
+     B:462  print("  CIFRA tramos que FALTAN: %d" % len(faltan))
+     B:463  print("  LOS QUE FALTAN: %s"
+     B:464  % (", ".join(str(x) for x in faltan) or "(ninguno)"))
+     B:465  if faltan:
+     B:466  print("")
+     B:467  print("  EL SIGUIENTE ES EL TRAMO %d." % faltan[0])
+     B:468  print("  Se corre con: python scripts/loop/vueltaNNN_bateria_por_tramos.py "
+     B:469  "--tramo %d" % faltan[0])
+     B:470  print("  Y SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, antes de seguir.")
+     B:471  else:
+     B:472  print("")
+     B:473  print("  LOS %d TRAMOS TIENEN SALIDA SELLADA." % len(tramos))
+     B:474  print("  Ahora, y solo ahora, --componer arma la salida unica.")
+     B:475  print("")
+     B:476  print("  LA BATERIA SE DECLARA CORRIDA CUANDO LOS %d TIENEN SALIDA SELLADA DEL"
+     B:477  % len(tramos))
+     B:478  print("  MISMO CALIBRE, y el calibre lo coteja --componer, no esta orden.")
+     B:479  return 0
+     B:496  if a.siguiente:
+     B:497  return siguiente(tramos)
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     B:480  
+     B:481  
+     B:489  ap.add_argument("--siguiente", action="store_true",
+     B:490  help="dice que tramo toca, mirando que salidas selladas hay")
+
+
+FIN

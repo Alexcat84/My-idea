@@ -1,0 +1,78 @@
+CASO POSITIVO POR MUTACION de scripts/loop/apertura_del_auditor.py
+todo el material va FABRICADO: el sello de prueba se escribe en un temporal
+
+LOS TRES PROHIBIDOS, LEIDOS DE LA CONSTANTE Y NO TECLEADOS AQUI:
+   'git log', 'git status', 'REPORTE.md'
+
+A) LOS ESCENARIOS DE puede_sellar(), CON EL VEREDICTO COMPUTADO
+   bitacora limpia                        toques (ninguno)                          -> puede_sellar True  | esperado True  | CALZA
+      motivo: la bitacora esta limpia de los tres prohibidos
+      toques_prohibidos(): (ninguno)
+   tras git log                           toques git log                            -> puede_sellar False | esperado False | CALZA
+      motivo: el turno ya toco 'git log' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no probaria
+      toques_prohibidos(): git log
+   tras git status                        toques git status                         -> puede_sellar False | esperado False | CALZA
+      motivo: el turno ya toco 'git status' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no proba
+      toques_prohibidos(): git status
+   tras abrir REPORTE.md                  toques REPORTE.md                         -> puede_sellar False | esperado False | CALZA
+      motivo: el turno ya toco 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no proba
+      toques_prohibidos(): REPORTE.md
+   tras los tres                          toques git log,git status,REPORTE.md      -> puede_sellar False | esperado False | CALZA
+      motivo: el turno ya toco 'git log', 'git status', 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sel
+      toques_prohibidos(): git log, git status, REPORTE.md
+   tras algo que NO esta prohibido        toques git rev-parse                      -> puede_sellar True  | esperado True  | CALZA
+      motivo: la bitacora esta limpia de los tres prohibidos
+      toques_prohibidos(): (ninguno)
+
+B) UNO POR UNO, CADA PROHIBIDO POR SU FUNCION DE VERDAD
+   (no se apunta a mano: se llaman git_log(), git_status() y leer_reporte(),
+    que es como el auditor los usaria, y se mira si el sello se cierra)
+   git_log()        puede_sellar antes True  -> despues False | CALZA
+      motivo: el turno ya toco 'git log' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no probaria
+   git_status()     puede_sellar antes True  -> despues False | CALZA
+      motivo: el turno ya toco 'git status' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no proba
+   leer_reporte()   puede_sellar antes True  -> despues False | CALZA
+      motivo: el turno ya toco 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no proba
+
+C) EL SELLO DE VERDAD: TRAS TOCAR, NI SIQUIERA SE ESCRIBE EL FICHERO
+   tras git_status(), sellar() devuelve: False
+      | PUEDE SELLAR: NO
+      |    motivo: el turno ya toco 'git status' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahora no prob
+      |    bitacora del turno hasta ahora: git status
+      | ROJO: NO se corre el aislador y NO se escribe ningun sello.
+   ficheros escritos en el temporal: 0 []
+   VERDE: no escribio NADA, que es lo que se le pide.
+
+D) Y CON LA BITACORA LIMPIA SI SELLA, para que se vea que no esta
+   simplemente roto (un guardia que no deja pasar a nadie no es un
+   guardia, es una pared)
+      | PUEDE SELLAR: SI
+      |    motivo: la bitacora esta limpia de los tres prohibidos
+      |    bitacora del turno hasta ahora: (vacia)
+      | AISLADOR CORRIDO -> EXITCODE 0
+      | SELLO ESCRITO: ../../AppData/Local/Temp/v182_apertura_slga169o/SELLO_APERTURA_AUDITOR_VARNES_LIMPIO.json (582 bytes)
+      |    ciega   ../../AppData/Local/Temp/v182_apertura_slga169o/_auditor_vARNES_LIMPIO_ciega_blind.txt -> 3823 bytes | sha256 3b6a63b5e
+      |    destape ../../AppData/Local/Temp/v182_apertura_slga169o/_auditor_vARNES_LIMPIO_ciega_reveal.txt -> 2273 bytes | sha256 f0748431
+      |    prohibidos tocados antes del sello: 0
+   sellar() devuelve: True
+   ficheros en el temporal ahora: 3 ['SELLO_APERTURA_AUDITOR_VARNES_LIMPIO.json', '_auditor_vARNES_LIMPIO_ciega_blind.txt', '_auditor_vARNES_LIMPIO_ciega_reveal.txt']
+   hay fichero de sello: SI
+   temporal borrado: True
+
+E) LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE ESTO CAE
+   escenario: se llamo a git_log() y despues se pregunta si puede sellar
+   el veredicto COMPUTADO (no escrito) es: False
+   con el esperado False -> PASA
+   con el esperado True  -> CAE
+   EL CASO CAE AL MUTAR EL ESPERADO A True: SI
+
+   LA SEGUNDA MUTACION: SE LE QUITA UN PROHIBIDO A LA LISTA.
+   (si `git log` dejara de estar en PROHIBIDOS_ANTES_DEL_SELLO, este mismo
+    escenario tendria que PODER sellar. Se comprueba sobre una copia de la
+    constante y se deja como estaba)
+   con la lista mutada, puede_sellar computa: True
+   TENIA QUE CAMBIAR A True: SI
+   la constante se deja como estaba: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
