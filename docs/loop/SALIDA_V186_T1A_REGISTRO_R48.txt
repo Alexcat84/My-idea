@@ -1,0 +1,103 @@
+==============================================================================
+VUELTA 186, TAREA 1.a: EL ACTA 186 ENTERA, REGISTRADA
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 186: docs/loop/ACTA_AUDITOR.md, lineas 64908 a 65440 (533 lineas)
+   docs/loop/ACTA_AUDITOR.md -> disco 4330537 bytes
+
+B) LAS ADJUDICACIONES NUMERADAS DE LA SECCION 5, CONTADAS Y NO TECLEADAS
+   prefijo: '5.', con el numeral ENTRE COMILLAS INVERSAS
+   CIFRA adjudicaciones numeradas halladas: 7
+      5.1 -> 1 aparicion(es)
+      5.2 -> 1 aparicion(es)
+      5.3 -> 1 aparicion(es)
+      5.4 -> 1 aparicion(es)
+      5.5 -> 1 aparicion(es)
+      5.6 -> 1 aparicion(es)
+      5.7 -> 1 aparicion(es)
+   EL CONTRASTE QUE PRUEBA QUE HACIA FALTA EL PATRON ENTRECOMILLADO:
+      el patron SIN comillas, el del acta 183 -> 0 sobre esta acta
+
+C) LOS NUMERALES DE LA SECCION 6 Y LAS PREGUNTAS DE LA 7, CON EL MISMO PATRON
+   prefijo de la seccion 6: '6.' -> 4 numerales
+      6.1 -> 1 aparicion(es)
+      6.2 -> 1 aparicion(es)
+      6.3 -> 1 aparicion(es)
+      6.4 -> 1 aparicion(es)
+   prefijo de la seccion 7: '7.' -> 3 preguntas
+      7.1 -> 1 aparicion(es)
+      7.2 -> 1 aparicion(es)
+      7.3 -> 1 aparicion(es)
+
+D) LAS CAIDAS, POR SUS FAMILIAS, Y LOS PATRONES VIEJOS AL LADO
+   CAIDAS PROPIAS DEL AUDITOR (patron `A.n`, cabecera de tercer nivel): 0, lineas (ninguna)
+   EL PATRON `C.n` DE LINEA (actas 178 a 182): 0
+   EL PATRON `C.n` DE NEGRITA DE FRASE (acta 184): 0
+   CAIDAS DE REPORTE DEL EJECUTOR (patron `R.n`): 1, lineas 65301
+      LINEA 65301: **`R.1`. EL REPORTE DICE QUE `git status --porcelain` DIO CERO LINEAS EN LA
+   EL PATRON `E.n` DE LAS ACTAS 182 Y 184: 0
+   LINEAS CON LA FRASE DEL ACTA 186 ('CERO CAIDAS PROPIAS'): 64925
+      LINEA 64925: CAIDA DE REPORTE, EN PROSA Y NO ACUMULA. CERO CAIDAS PROPIAS MIAS. PARADA: NO.**
+   LINEAS CON LA FRASE DEL ACTA 185 ('NINGUNA CAIDA PROPIA'): (ninguna)
+
+E) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, las tres preguntas contestadas, las cero caidas propias del auditor y la caida de reporte del ejecutor del acta de la vuelta 186
+
+F) LOS TITULOS LITERALES, LEIDOS DEL ACTA
+   5.1 (linea 65138): `5.1` `D.1`, ANADIO UN CAMBIO MAS DE LOS TRES QUE LA `1.d` NOMBRA: A FAVOR.
+   5.2 (linea 65146): `5.2` `D.2`, SU ARNES CAYO EN ROJO EN LA PRIMERA CORRIDA Y LO REPARO EN VEZ DE TRAERLO: A FAVOR, Y LO CONVIERTO EN REGLA POR EXTEN
+   5.3 (linea 65160): `5.3` `D.3`, PUBLICO LA COLUMNA CON UNA NEGRITA COMPUTADA: A FAVOR, CON LA CONVENCION ESCRITA.
+   5.4 (linea 65168): `5.4` `D.4`, NO METIO LOS DOS ARNESES NUEVOS EN LA NOMINA: A FAVOR, Y LA CONSECUENCIA ME TOCA A MI.
+   5.5 (linea 65177): `5.5` `D.5`, GUARDO EL REPORTE QUE EL INSTRUMENTO SI LLEGO A ESCRIBIR Y RESTAURO EL ARBOL: A FAVOR.
+   5.6 (linea 65187): `5.6` `D.6`, NO PEGO ENTERA LA SALIDA ROJA DEL CIERRE DE LA 184: A FAVOR, Y LA DESVIACION ESTA FORZADA POR UN DEFECTO REAL.
+   5.7 (linea 65198): `5.7` `D.7`, CERRO EL REPORTE DE LA 185 SABIENDO QUE EL DE LA 184 NO CERRO: A FAVOR, Y NO ES DUDOSO.
+   6.1 (linea 65210): `6.1` `PD.6`, UNA REGLA ESCRITA DOS VECES EN EL MISMO FICHERO: ADJUDICADA, NO ES DOCTRINA NUEVA.
+   6.2 (linea 65226): `6.2` `PD.5`, UNA MARCA DE MAQUINA CITADA DENTRO DE UN BLOQUE CERCADO: ADJUDICADA POR CITA, Y NO POR GUSTO.
+   6.3 (linea 65244): `6.3` `PD.1` SIGUE ABIERTA, CUARTA VUELTA, Y NO LA ENCARGO.
+   6.4 (linea 65250): `6.4` Y ANOTO UN PENDIENTE QUE NO ES MIO Y NO LO CONVIERTO EN UNO:
+   7.1 (linea 65258): `7.1` `P.1`, LA PIEZA (4) Y LA PIEZA (2), ¿JUNTAS O POR SEPARADO? JUNTAS, EN LA MISMA TAREA Y CON UN ARNES CADA UNA.
+   7.2 (linea 65265): `7.2` `P.2`, LAS 10 CIFRAS SIN PAREJA DEL REPORTE DE LA 184: NI SE EXIMEN NI SE REESCRIBEN. SE DECLARAN.
+   7.3 (linea 65289): `7.3` `P.3`, ¿QUIEN METE LOS DOS ARNESES EN LA NOMINA? LA VUELTA 186, Y VA BLOQUEANTE.
+
+G) EL ESTADO DE CADA NUMERAL DE LA SECCION 6, LEIDO DE SU TITULO
+   6.1 nombra PD.6 -> CERRADA (linea 65210)
+   6.2 nombra PD.5 -> CERRADA (linea 65226)
+   6.3 nombra PD.1 -> ABIERTA (linea 65244)
+   6.4 nombra (sin PD en el titulo) -> ANOTACION (linea 65250)
+   REPARTO: CERRADAS 2 | ABIERTAS 1 | ANOTACIONES 1
+   LOS PUESTOS DEL NUMERAL ABIERTO, LEIDOS DEL ACTA: 1778, 2530, 2540, 3141, 3232
+
+H) LAS PREGUNTAS DE LA SECCION 7, CON SU ESTADO LEIDO DE LA CABECERA
+   cabecera de la seccion 7 (linea 65256): ## 7. LAS TRES PREGUNTAS, QUE ERAN MIAS Y LAS CONTESTO
+   estado que esa cabecera declara: CONTESTADA
+   7.1 nombra P.1 -> CONTESTADA (linea 65258)
+   7.2 nombra P.2 -> CONTESTADA (linea 65265)
+   7.3 nombra P.3 -> CONTESTADA (linea 65289)
+
+I) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 39 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.48
+
+J) LA DEUDA DE LA SERIE, REMEDIDA EN ESTA VUELTA Y NO HEREDADA DEL R.47
+   tramo mirado: actas 173 a 185
+   CIFRA actas SIN entrada propia en la serie: 8
+   LAS QUE FALTAN: 173, 174, 175, 176, 177, 178, 179, 180
+   EXTREMO BAJO (ultimo registro que cubre un acta anterior al salto): R.42 cubre el acta 172
+   EXTREMO ALTO (primer registro que cubre un acta posterior): R.43 cubre el acta 181
+
+K) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR
+   la marca '## R.48.' ya esta en la sede: NO
+   la entrada entera ya esta: NO
+
+L) LA ENTRADA ARMADA
+   15655 bytes | 154 lineas
+
+M) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 894124 a 909780 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+   guiones largos o medios en la entrada: 0
+   SERIE RECOMPUTADA DESPUES DE ESCRIBIR: 40 entradas, siguiente libre R.49
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+

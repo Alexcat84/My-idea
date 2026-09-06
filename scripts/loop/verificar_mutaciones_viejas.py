@@ -911,6 +911,40 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 112 A 113.
     ("vuelta184_tarea1c_mutacion_estimacion.py", False),
+    # ------------------------------------------------- VUELTA 185 (dos arneses)
+    # ENTRAN EN LA VUELTA 186, TAREA 1.b, Y NO EN LA SUYA. Es la respuesta del
+    # acta 186 a la `P.3` del reporte de la 185 (punto `7.3`): el reporte de la
+    # 185 MIDIO que faltaban, NOMBRO a los dos y DECLARO que la bateria de la 189
+    # abriria en rojo por esa via si nadie los metia antes; lo que no tenia era
+    # sitio, porque el regimen `AUDITOR.md` 6.2 dejaba su encargo en dos
+    # sub-tareas. La `5.4` del acta 186 adjudico esa conducta a favor y se quedo
+    # con la consecuencia: meterlos es trabajo de encargo y va BLOQUEANTE.
+    #
+    # MEDIDO Y NO SUPUESTO, TRES VECES: el reporte de la 185 lo declaro en su
+    # `D.4`, el auditor lo reprodujo en el acta 186, y el bloque de apertura de
+    # la 186 lo volvio a medir antes de tocar nada: `arneses_que_faltan()`
+    # devolvia `ultima vuelta 184, faltan 2` y sus dos nombres son estos.
+    #
+    # LA NOMINA NO SE PODA: CRECE. La opcion `c` de la parada del 5 sep 2026
+    # (jubilar arneses viejos) quedo RECHAZADA por el fundador, y esta entrada
+    # hace lo contrario, que es completarla.
+    #
+    # NINGUNO ADMITE --sujeto: los dos fabrican los suyos. El primero se clava
+    # sobre `scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py` y el
+    # segundo sobre `scripts/loop/cerrar_reporte.py`, y los dos leen esos
+    # ficheros para probar que la reparacion sigue puesta.
+    #
+    # QUE PRUEBA CADA UNO:
+    #   . el `1b`: que la salida sellada del arnes que paro la bateria DEJA DE
+    #     CAMBIAR SOLA, con la funcion pura `sin_temporal(linea, tmp)` aplicada
+    #     ANTES del recorte. Sus dos mitades fallan por separado.
+    #   . el `1c`: que la rama de la BATERIA CONTINUADA de
+    #     `rama_de_la_seccion9()` exige LAS CUATRO condiciones a la vez y que su
+    #     cuarto parametro por defecto se comporta EXACTAMENTE como antes.
+    #
+    # LA NOMINA CRECE DE 113 A 115.
+    ("vuelta185_tarea1b_mutacion_sin_temporal.py", False),
+    ("vuelta185_tarea1c_mutacion_bateria_continuada.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

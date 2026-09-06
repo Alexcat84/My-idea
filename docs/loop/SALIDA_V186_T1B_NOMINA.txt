@@ -1,0 +1,70 @@
+==============================================================================
+VUELTA 186, TAREA 1.b: LOS DOS ARNESES DE LA 185 EN LA NOMINA
+(acta 186, punto 7.3, contestando la P.3 del reporte de la 185)
+==============================================================================
+
+A) EL TAMANO DE LA NOMINA, CONTADO DE `VIEJAS` Y NO TECLEADO
+   CIFRA nomina DESPUES (len(VIEJAS) en este proceso): 115
+   CIFRA nomina ANTES, leida del bloque de apertura sellado de esta vuelta:
+      | CIFRA censo: 175 | CIFRA nomina ANTES: 113 | VARA_DEL_CENSO: 148
+   CRECIMIENTO: de 113 a 115, o sea +2
+   LOS DOS ULTIMOS NOMBRES DE LA NOMINA, LEIDOS DE `VIEJAS`:
+      vuelta185_tarea1b_mutacion_sin_temporal.py
+      vuelta185_tarea1c_mutacion_bateria_continuada.py
+   CIFRA entradas duplicadas en la nomina: 0
+
+B) LA PRUEBA QUE EL ACTA PIDE: arneses_que_faltan() TIENE QUE DAR 0
+   arneses_que_faltan() -> ultima vuelta 185, faltan 0
+   VERDE: no falta ninguno. Es la prueba que el acta 186 pide en su 7.3.
+
+C) LOS OTROS DOS INVARIANTES DE LA NOMINA, CORRIDOS IGUAL
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 0 entradas sin congelar
+   (esta guarda NO esta cableada al rojo global de la bateria: el encargo
+    de la vuelta 179 lo prohibe expresamente, y aqui se mide y se publica)
+   CIFRA censo: 175 | VARA_DEL_CENSO: 148
+
+D) ESTE FICHERO NO ENTRA EN LA NOMINA, Y NO SE AFIRMA: SE MIDE
+   nombre de este fichero: vuelta186_tarea1b_nomina.py
+   casa con el patron de arneses del censo: NO
+   esta en el censo: NO
+
+E) LA DOBLE CORRIDA, EN PROCESOS APARTE, QUE ES LO QUE LA 189 VA A HACER
+   (cada arnes se corre DOS VECES y se exige que su salida sellada tenga el
+    MISMO sha256 las dos veces. El arnes de la 182 fallo exactamente aqui en
+    la 184, por llevar dentro el nombre de un temporal que cambia solo)
+
+   ARNES: scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py
+   SALIDA SELLADA: docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt
+      ANTES DE CORRER: 6100 bytes en disco | sha256 LF 4de055338ac9412b43ef17832fed78cb94fdebcc8497ed1aa6c4d2e182a46d78
+      PASADA 1: EXITCODE 0 | 6100 bytes | sha256 LF 4de055338ac9412b43ef17832fed78cb94fdebcc8497ed1aa6c4d2e182a46d78
+         | CIFRA casos de la mitad A: 7
+         | CIFRA casos que CAEN al mutar su esperado: 7 de 7
+         | CIFRA fallos: 0
+         | VEREDICTO: VERDE
+      PASADA 2: EXITCODE 0 | 6100 bytes | sha256 LF 4de055338ac9412b43ef17832fed78cb94fdebcc8497ed1aa6c4d2e182a46d78
+         | CIFRA casos de la mitad A: 7
+         | CIFRA casos que CAEN al mutar su esperado: 7 de 7
+         | CIFRA fallos: 0
+         | VEREDICTO: VERDE
+      LAS DOS PASADAS DAN EL MISMO sha256: SI
+      Y ES EL MISMO QUE ESTABA COMMITEADO ANTES DE CORRER: SI
+
+   ARNES: scripts/loop/vuelta185_tarea1c_mutacion_bateria_continuada.py
+   SALIDA SELLADA: docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt
+      ANTES DE CORRER: 7937 bytes en disco | sha256 LF 6a2d8721c1a1b75d6c0350c4697b1ebb692c510d580917ed1d201e9162e2e9dc
+      PASADA 1: EXITCODE 0 | 7937 bytes | sha256 LF 6a2d8721c1a1b75d6c0350c4697b1ebb692c510d580917ed1d201e9162e2e9dc
+         | CIFRA casos: 6
+         | CIFRA casos que CAEN al mutar su esperado: 6 de 6
+         | CIFRA fallos del caso G: 0
+         | CIFRA fallos: 0
+      PASADA 2: EXITCODE 0 | 7937 bytes | sha256 LF 6a2d8721c1a1b75d6c0350c4697b1ebb692c510d580917ed1d201e9162e2e9dc
+         | CIFRA casos: 6
+         | CIFRA casos que CAEN al mutar su esperado: 6 de 6
+         | CIFRA fallos del caso G: 0
+         | CIFRA fallos: 0
+      LAS DOS PASADAS DAN EL MISMO sha256: SI
+      Y ES EL MISMO QUE ESTABA COMMITEADO ANTES DE CORRER: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

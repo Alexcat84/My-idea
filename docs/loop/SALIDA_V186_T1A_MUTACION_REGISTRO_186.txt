@@ -1,0 +1,89 @@
+CASO POSITIVO POR MUTACION de vuelta186_tarea1a_registrar_acta186.py
+EL SUJETO ES UN ACTA FABRICADA, NUNCA LA REAL.
+
+   acta fabricada con adj=7 pd=4 preg=3 aud=0 rep=1
+      los contadores dicen adj=7 pd=4 preg=3 aud=0 rep=1 -> CALZA
+      titulo computado: Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, las tres preguntas contestadas, las cero caidas propias del auditor y la caida de reporte del ejecutor del acta de la vuelta 186
+   acta fabricada con adj=1 pd=2 preg=1 aud=0 rep=0
+      los contadores dicen adj=1 pd=2 preg=1 aud=0 rep=0 -> CALZA
+      titulo computado: Registro de la adjudicacion numerada, los dos numerales de la seccion 6, la pregunta contestada, las cero caidas propias del auditor y las cero caidas de reporte del ejecutor del acta de la vuelta 186
+   acta fabricada con adj=12 pd=3 preg=5 aud=3 rep=2
+      los contadores dicen adj=12 pd=3 preg=5 aud=3 rep=2 -> CALZA
+      titulo computado: Registro de las doce adjudicaciones numeradas, los tres numerales de la seccion 6, las cinco preguntas contestadas, las tres caidas propias del auditor y las dos caidas de reporte del ejecutor del acta de la vuelta 186
+   acta fabricada con adj=4 pd=2 preg=2 aud=1 rep=0
+      los contadores dicen adj=4 pd=2 preg=2 aud=1 rep=0 -> CALZA
+      titulo computado: Registro de las cuatro adjudicaciones numeradas, los dos numerales de la seccion 6, las dos preguntas contestadas, la caida propia del auditor y las cero caidas de reporte del ejecutor del acta de la vuelta 186
+
+LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE EL CASO PUEDE CAER:
+   con el esperado 7: PASA
+   con el esperado 8: CAE
+   medido sobre el acta fabricada (variable computada): 7
+   EL CASO CAE AL MUTAR EL ESPERADO A 8: SI
+
+LA SEGUNDA MUTACION: LAS PREGUNTAS DE LA SECCION 7, QUE NINGUN REGISTRADOR
+ANTERIOR CUENTA. Si el contador del prefijo 7. no contara de verdad, este
+caso no podria cambiar con el acta.
+   con el esperado 3: PASA
+   con el esperado 4: CAE
+   medido: 3 | EL CASO CAE AL MUTAR EL ESPERADO A 4: SI
+
+LA TERCERA MUTACION: EL PATRON SIN COMILLAS, EL DEL ACTA 183. Sobre un acta
+que numera con comillas inversas tiene que dar CERO.
+   patron sin comillas sobre acta en forma 186 -> 0 adjudicaciones
+   EL CASO CAE CON EL PATRON VIEJO: SI
+
+LA CUARTA MUTACION: EL TERCER ESTADO. El ULTIMO numeral de la seccion 6 del
+acta fabricada es una ANOTACION y NO un pendiente. Con el registrador de la
+185, que solo sabia ABIERTA y CERRADA, ese titulo habria salido SIN DECIR y
+el instrumento habria hecho PARADA. Aqui tiene que salir ANOTACION.
+   estados computados: [('6.1', 'PD.5', 'CERRADA'), ('6.2', 'PD.6', 'CERRADA'), ('6.3', 'PD.1', 'ABIERTA'), ('6.4', '(sin PD en el titulo)', 'ANOTACION')]
+   ANOTACION 1 | ABIERTA 1 | CERRADA 2 | SIN DECIR 0 | esperado 1, 1, 2, 0 -> CALZA
+   con el esperado MUTADO (0 anotaciones): CAE
+   y sobre un acta SIN anotacion, para que se vea que el estado no esta
+   clavado: ['CERRADA', 'CERRADA', 'CERRADA', 'ABIERTA']
+
+LA QUINTA MUTACION: EL PATRON `C.n` DE LAS ACTAS ANTERIORES Y EL `A.n` SOBRE
+UN ACTA CON CERO CAIDAS PROPIAS. LOS DOS tienen que dar CERO, y el acta tiene
+que DECLARARLO con su frase para que el cero sea evidencia y no ausencia.
+   patron `A.n` -> 0 | patron `C.n` -> 0
+   frase del acta 186 ('CERO CAIDAS PROPIAS') -> 1 linea(s) | frase del acta 185 ('NINGUNA CAIDA PROPIA') -> 0
+   EL CERO VA CONTADO Y DECLARADO: SI
+   con el esperado MUTADO (1 caida propia): CAE
+   y sobre un acta CON dos caidas propias, para que se vea que el contador
+   no esta clavado en cero: patron `A.n` -> 2
+
+LA SEXTA MUTACION: EL PATRON `E.n` SOBRE UNA CAIDA ESCRITA COMO `R.n`.
+   patron `R.n` -> 1 | patron `E.n` -> 0
+   EL NUEVO MUERDE Y EL VIEJO NO: SI
+
+LA SEPTIMA MUTACION: EL ESTADO DE LAS PREGUNTAS, LEIDO DE LA CABECERA DE SU
+SECCION Y NO SUPUESTO. Un acta que pregunta y NO dice que contesta tiene que
+salir SIN DECIR, y el instrumento hace PARADA con ella.
+   cabecera que SI contesta (linea 36): '## 7. LAS PREGUNTAS, QUE ERAN MIAS Y LAS CONTESTO' -> CONTESTADA
+   cabecera que NO lo dice: '## 7. LAS PREGUNTAS, QUE ERAN MIAS Y NO DIGO NADA' -> SIN DECIR
+   EL ESTADO SIGUE A LA CABECERA: SI
+   con el esperado MUTADO (la muda tambien CONTESTADA): CAE
+
+LA OCTAVA MUTACION: LOS PUESTOS DE LA `PD.1`, LEIDOS DEL ACTA. Se fabrica un
+acta con OTROS puestos y se exige que salgan LOS DEL ACTA y no los del
+encargo. Si estuvieran tecleados, este caso no podria cambiar.
+   acta con puestos [11, 22, 33] -> leidos [11, 22, 33] -> CALZA
+   acta con puestos [7, 8, 9, 10] -> leidos [7, 8, 9, 10] -> CALZA
+   y con los cinco que el encargo nombra -> leidos [1778, 2530, 2540, 3141, 3232]
+   con el esperado MUTADO [1778, 2530, 2540, 3141, 9999]: CAE
+
+LA NOVENA MUTACION: EL SALTO. actas_sin_entrada() es PURA y se importa del
+registrador de la 183; se le pasa una serie fabricada y se comprueba que el
+salto y sus DOS extremos salen de los titulos y no de ninguna constante.
+   faltan (computado): [102, 103, 104]
+   extremo bajo: (11, 101) | extremo alto: (12, 105)
+   EL SALTO Y SUS EXTREMOS CALZAN: SI
+
+LA DECIMA MUTACION: EL TITULO Y SU CONCORDANCIA, INCLUIDO EL CERO.
+   Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, las tres preguntas contestadas, las cero caidas propias del auditor y la caida de reporte del ejecutor del acta de la vuelta 186
+   DICE LAS CINCO COSAS Y CONCUERDA: SI
+   y con otras cifras, para que se vea que no esta clavada: Registro de las tres adjudicaciones numeradas, el numeral de la seccion 6, la pregunta contestada, las dos caidas propias del auditor y las dos caidas de reporte del ejecutor del acta de la vuelta 186
+   LA CONCORDANCIA SIGUE A LAS CIFRAS: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
