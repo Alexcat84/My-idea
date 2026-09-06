@@ -16,6 +16,45 @@ Y EL EJEMPLAR NO ES INVENTADO: el bloque `F` corre las dos convenciones sobre
 `docs/plan/LECTURAS_DIRIGIDAS.md`, que es el fichero donde el reporte de la 190
 publico **2231** donde `wc -l` dice **2230**, y coteja contra `wc -l` de verdad.
 
+--- SUJETO CONGELADO (vuelta 193, TAREA 2.a; adjudicacion 4.10 del acta 193) ---
+
+**HASTA LA VUELTA 193 ESTE ARNES TENIA EL SUJETO VIVO Y SU SALIDA NO REPRODUCIA.**
+No es una sospecha: esta medido en `docs/loop/_auditor_v193_reproducibilidad.txt`
+y el ejecutor de la 193 lo volvio a medir. Su sellada de la 191 daba **5836
+bytes**, `sha256` LF `bc8d7273baf30644`, y el mismo fichero corrido en la 193
+daba **6559 bytes**, `9834acf0418c527e`. **Reproducia entre dos corridas del
+mismo dia y no contra su sellada**, porque los bloques `D`, `E` y `F` leian el
+ARBOL DE TRABAJO: el censo de `scripts/loop` crece cada vuelta, la lista de
+`vuelta191_*` se completo DESPUES de que este arnes corriera, y
+`LECTURAS_DIRIGIDAS.md` se mueve.
+
+**LA `4.4` DEL ACTA 191 DICE QUE `SUJETO VIVO` ES FALLO Y NO DEUDA, Y LA `4.10`
+DEL ACTA 193 CIERRA LA SALIDA QUE QUEDABA: una salida que no reproduce NO ES DEL
+MISMO CALIBRE, tenga o no tenga motivo escrito. El motivo es contabilidad; la
+reproduccion es la guarda.**
+
+**COMO QUEDA CONGELADO, Y ES POR `git show` SOBRE UN COMMIT CLAVADO.** Los tres
+bloques leen su sujeto del arbol del commit `COMMIT_CLAVADO`, que es el commit
+que ANADIO la salida sellada de este arnes (localizado con
+`git log --diff-filter=A` y clavado aqui como literal). **Un commit no se mueve**,
+asi que el censo de hoy y el de la vuelta 300 miran exactamente los mismos
+ficheros. La huella `git show` es una de las que
+`verificar_mutaciones_viejas.py` reconoce como congelado, y aqui NO es una huella
+de texto: es lo que la maquina hace de verdad.
+
+**LO QUE ESTO CUESTA, DICHO EN VEZ DE CALLADO: el censo del ARBOL VIVO deja de
+correr aqui.** No se pierde, y se dice con su nombre:
+`scripts/loop/vuelta191_tarea3_censo.py` es el instrumento del censo vivo, corre
+sobre `--commit HEAD` y **no esta en la nomina de la bateria**, que es justo
+donde tiene que vivir un sujeto que se mueve. **Un arnes de la bateria mide una
+cosa que no cambia; un censo mide una cosa que cambia. Mezclarlos es lo que
+rompio esta salida.**
+
+**Y LA SELLADA SE VUELVE A SELLAR, CON LA VIEJA GUARDADA AL LADO Y NO BORRADA:**
+el corte de la 191 queda en
+`docs/loop/SALIDA_V191_T3_MUTACION_LINEAS_CORTE_191.txt` con su nombre y su
+vuelta. Una correccion que tapa lo que corrige no se puede auditar.
+
 USO:
   python scripts/loop/vuelta191_tarea3_mutacion_lineas.py
 """
@@ -33,6 +72,43 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 LOOP = os.path.join(RAIZ, "docs", "loop")
 NL = chr(10)
 SALIDA = os.path.join(LOOP, "SALIDA_V191_T3_MUTACION_LINEAS.txt")
+
+# EL SUJETO CONGELADO (vuelta 193, TAREA 2.a). El commit que ANADIO la salida
+# sellada de este arnes, localizado en la 193 con
+#   git log --diff-filter=A --format=%H -- docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt
+# y clavado aqui como literal. NO SE PONE `HEAD`: `HEAD` es lo que estaba vivo.
+COMMIT_CLAVADO = "21ffca0cfe2f065ec917c2620a4b2a28e8027fe1"
+RUTA_CENSO = "scripts/loop"
+RUTA_EJEMPLAR = "docs/plan/LECTURAS_DIRIGIDAS.md"
+
+
+def _git(args):
+    r = subprocess.run(["git"] + args, cwd=RAIZ, capture_output=True)
+    return r.returncode, r.stdout.decode("utf-8", errors="replace")
+
+
+def sujeto_congelado(destino):
+    """LOS `.py` DE `scripts/loop` DEL COMMIT CLAVADO, MATERIALIZADOS EN
+    `destino`. Devuelve la lista de nombres escritos, ordenada.
+
+    SEMI-PURA: escribe SOLO dentro del directorio que se le pasa, que quien
+    llama fabrica con `mkdtemp` y retira (`P.16`). No toca el arbol de trabajo:
+    todo sale de `git show`, que es de donde sale un sujeto que no se mueve."""
+    c, lista = _git(["ls-tree", "--name-only",
+                     "%s:%s" % (COMMIT_CLAVADO, RUTA_CENSO)])
+    if c != 0:
+        return []
+    nombres = sorted(l.strip() for l in lista.splitlines()
+                     if l.strip().endswith(".py"))
+    escritos = []
+    for n in nombres:
+        c2, blob = _git(["show", "%s:%s/%s" % (COMMIT_CLAVADO, RUTA_CENSO, n)])
+        if c2 != 0:
+            continue
+        io.open(os.path.join(destino, n), "w", encoding="utf-8",
+                newline=NL).write(blob)
+        escritos.append(n)
+    return escritos
 
 # LOS CUATRO FUENTES FABRICADOS. Son texto, no ficheros del repo: el arnes no
 # toca nada de la casa para probar.
@@ -166,72 +242,107 @@ def main():
         shutil.rmtree(tmp, ignore_errors=True)
     w("")
 
-    # ------------------------------------------------------------- BLOQUE D
-    w("D) EL CENSO SOBRE EL REPO DE VERDAD, QUE ES LO QUE ESTA VUELTA ARREGLO")
-    filas = DC.censo(os.path.join(RAIZ, "scripts", "loop"))
-    rojos = [n for n, v, _s in filas if v == DC.ROJO]
-    w("   CIFRA ficheros .py censados: %d" % len(filas))
-    fallos += _caso(w, "ficheros en ROJO en scripts/loop", len(rojos), 0)
-    for n in rojos:
-        w("      %s" % n)
-    reparto = {}
-    for _n, v, _s in filas:
-        reparto[v] = reparto.get(v, 0) + 1
-    for v in (DC.ROJO, DC.VERDE_PAREJA, DC.VERDE_CALZA, DC.NO_APLICA):
-        w("   %-64s %d" % (v, reparto.get(v, 0)))
-    w("")
+    # --------------------------------------------- BLOQUES D, E Y F, CONGELADOS
+    # SUJETO CONGELADO (vuelta 193, TAREA 2.a): los tres leen el arbol del COMMIT
+    # CLAVADO, no el arbol de trabajo. Hasta la 193 estos tres bloques miraban
+    # `scripts/loop` y `docs/plan/` VIVOS, y por eso la salida de este arnes
+    # cambiaba sola de vuelta en vuelta. Ver la seccion del docstring.
+    tmpc = tempfile.mkdtemp(prefix="v191_lineas_congelado_")
+    try:
+        nombres_congelados = sujeto_congelado(tmpc)
 
-    # ------------------------------------------------------------- BLOQUE E
-    w("E) LOS INSTRUMENTOS PROPIOS DE ESTA VUELTA, UNO A UNO")
-    w("   (una guarda que no se aplica a quien la escribio no es una guarda)")
-    mios = [n for n in sorted(os.listdir(os.path.join(RAIZ, "scripts", "loop")))
-            if n.startswith("vuelta191_") or n == "dos_convenciones_de_lineas.py"]
-    malos = []
-    for n in mios:
-        codigo = io.open(os.path.join(RAIZ, "scripts", "loop", n),
-                         encoding="utf-8", errors="replace").read()
-        v, _s = DC.veredicto_de_fuente(codigo)
-        w("   %-46s %s" % (n, v))
-        if v == DC.ROJO:
-            malos.append(n)
-    fallos += _caso(w, "instrumentos de la 191 en ROJO", len(malos), 0)
-    w("")
-
-    # ------------------------------------------------------------- BLOQUE F
-    w("F) EL EJEMPLAR DEL ACTA 190, COTEJADO CONTRA `wc -l` DE VERDAD")
-    w("   (el reporte de la 190 publico 2231 lineas de este fichero. NO SE COPIA:")
-    w("    se cuentan las dos convenciones y se corre `wc -l`)")
-    ruta = os.path.join(RAIZ, "docs", "plan", "LECTURAS_DIRIGIDAS.md")
-    if not os.path.isfile(ruta):
-        w("   NO EXISTE %s" % ruta)
-        fallos += 1
-    else:
-        texto = io.open(ruta, encoding="utf-8", errors="replace").read()
-        c, s = DC.lineas(texto)
-        w("   por `count(NL)`      : %d" % c)
-        w("   por `len(split(NL))` : %d" % s)
-        r = subprocess.run(["wc", "-l", "docs/plan/LECTURAS_DIRIGIDAS.md"],
-                           cwd=RAIZ, capture_output=True)
-        crudo = (r.stdout.decode("utf-8", errors="replace")
-                 + r.stderr.decode("utf-8", errors="replace")).strip()
-        w("   `wc -l` dice         : %r (exitcode %d)" % (crudo, r.returncode))
-        wcn = None
-        for tok in crudo.split():
-            if tok.isdigit():
-                wcn = int(tok)
-                break
-        if wcn is None:
-            w("   `wc -l` NO ESTA DISPONIBLE AQUI, y eso se DECLARA en vez de")
-            w("   fabricar un numero. El cotejo de este bloque queda SIN CORRER.")
+        # --------------------------------------------------------- BLOQUE D
+        w("D) EL CENSO SOBRE EL SUJETO CONGELADO (git show del commit clavado)")
+        w("   commit clavado: %s" % COMMIT_CLAVADO)
+        w("   (es el commit que ANADIO la salida sellada de este arnes. El censo")
+        w("    del arbol VIVO no se pierde: vive en vuelta191_tarea3_censo.py,")
+        w("    que corre con --commit HEAD y NO esta en la nomina)")
+        filas = DC.censo(tmpc)
+        rojos = [n for n, v, _s in filas if v == DC.ROJO]
+        w("   CIFRA ficheros .py sacados del commit: %d" % len(nombres_congelados))
+        w("   CIFRA ficheros .py censados: %d" % len(filas))
+        fallos += _caso(w, "el censo mira todos los que se sacaron",
+                        len(filas), len(nombres_congelados))
+        fallos += _caso(w, "ficheros en ROJO en el sujeto congelado", len(rojos), 0)
+        for n in rojos:
+            w("      %s" % n)
+        reparto = {}
+        for _n, v, _s in filas:
+            reparto[v] = reparto.get(v, 0) + 1
+        for v in (DC.ROJO, DC.VERDE_PAREJA, DC.VERDE_CALZA, DC.NO_APLICA):
+            w("   %-64s %d" % (v, reparto.get(v, 0)))
+        w("   LA MUTACION DEL CONGELADO: si el commit clavado no se pudiera leer,")
+        w("   el censo saldria vacio, y este arnes NO puede pasar en verde por")
+        w("   vacio")
+        if not filas:
+            w("      LA MUTACION NO CAYO: el sujeto congelado sale VACIO.")
+            no_cayeron += 1
         else:
-            fallos += _caso(w, "la convencion count CALZA con wc -l", c, wcn)
-            w("   LA MUTACION: la convencion split tiene que NO calzar, o el")
-            w("   arreglo entero sobraria")
-            if s == wcn:
-                w("      LA MUTACION NO CAYO: split tambien calza, %d." % s)
-                no_cayeron += 1
+            w("      LA MUTACION CAE: el sujeto trae %d ficheros y no cero."
+              % len(filas))
+        w("")
+
+        # --------------------------------------------------------- BLOQUE E
+        w("E) LOS INSTRUMENTOS PROPIOS DE LA 191, UNO A UNO, DEL MISMO COMMIT")
+        w("   (una guarda que no se aplica a quien la escribio no es una guarda)")
+        mios = [n for n in nombres_congelados
+                if n.startswith("vuelta191_")
+                or n == "dos_convenciones_de_lineas.py"]
+        malos = []
+        for n in mios:
+            codigo = io.open(os.path.join(tmpc, n),
+                             encoding="utf-8", errors="replace").read()
+            v, _s = DC.veredicto_de_fuente(codigo)
+            w("   %-46s %s" % (n, v))
+            if v == DC.ROJO:
+                malos.append(n)
+        fallos += _caso(w, "instrumentos de la 191 en ROJO", len(malos), 0)
+        w("   CIFRA instrumentos de la 191 mirados: %d" % len(mios))
+        w("")
+
+        # --------------------------------------------------------- BLOQUE F
+        w("F) EL EJEMPLAR DEL ACTA 190, COTEJADO CONTRA `wc -l` DE VERDAD")
+        w("   (el reporte de la 190 publico 2231 lineas de este fichero. NO SE")
+        w("    COPIA: se cuentan las dos convenciones y se corre `wc -l`)")
+        w("   Y SU SUJETO TAMBIEN VA CONGELADO: el blob del commit clavado se")
+        w("   materializa en el temporal y `wc -l` se corre SOBRE ESA COPIA, para")
+        w("   que la cifra no se mueva cuando el fichero vivo crezca.")
+        cg, blob = _git(["show", "%s:%s" % (COMMIT_CLAVADO, RUTA_EJEMPLAR)])
+        if cg != 0:
+            w("   NO SE PUDO LEER %s DEL COMMIT CLAVADO" % RUTA_EJEMPLAR)
+            fallos += 1
+        else:
+            copia = os.path.join(tmpc, "EJEMPLAR_CONGELADO.md")
+            io.open(copia, "w", encoding="utf-8", newline=NL).write(blob)
+            texto = io.open(copia, encoding="utf-8", errors="replace").read()
+            c1, s1 = DC.lineas(texto)
+            w("   por `count(NL)`      : %d" % c1)
+            w("   por `len(split(NL))` : %d" % s1)
+            r = subprocess.run(["wc", "-l", "EJEMPLAR_CONGELADO.md"],
+                               cwd=tmpc, capture_output=True)
+            crudo = (r.stdout.decode("utf-8", errors="replace")
+                     + r.stderr.decode("utf-8", errors="replace")).strip()
+            w("   `wc -l` dice         : %r (exitcode %d)" % (crudo, r.returncode))
+            wcn = None
+            for tok in crudo.split():
+                if tok.isdigit():
+                    wcn = int(tok)
+                    break
+            if wcn is None:
+                w("   `wc -l` NO ESTA DISPONIBLE AQUI, y eso se DECLARA en vez de")
+                w("   fabricar un numero. El cotejo queda SIN CORRER.")
             else:
-                w("      LA MUTACION CAE: split da %d y `wc -l` da %d." % (s, wcn))
+                fallos += _caso(w, "la convencion count CALZA con wc -l", c1, wcn)
+                w("   LA MUTACION: la convencion split tiene que NO calzar, o el")
+                w("   arreglo entero sobraria")
+                if s1 == wcn:
+                    w("      LA MUTACION NO CAYO: split tambien calza, %d." % s1)
+                    no_cayeron += 1
+                else:
+                    w("      LA MUTACION CAE: split da %d y `wc -l` da %d."
+                      % (s1, wcn))
+    finally:
+        shutil.rmtree(tmpc, ignore_errors=True)
     w("")
 
     w("=" * 78)

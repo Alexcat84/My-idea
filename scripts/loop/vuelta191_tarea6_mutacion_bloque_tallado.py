@@ -26,6 +26,46 @@ Y LO QUE NO SE PIERDE, DICHO CON SU NOMBRE: el contenido de ese bloque lo vigila
 `--comparar`, que exige que sea IDENTICO BYTE A BYTE al fichero del tallador. Este
 arnes lo corre tambien, sobre el reporte de verdad.
 
+--- SUJETO CONGELADO (vuelta 193, TAREA 2.a; adjudicacion 4.10 del acta 193) ---
+
+**HASTA LA VUELTA 193 ESTE ARNES TENIA EL SUJETO VIVO Y SU SALIDA NO REPRODUCIA.**
+Esta medido en `docs/loop/_auditor_v193_reproducibilidad.txt` y el ejecutor de la
+193 lo volvio a medir: su sellada de la 191 daba **4173 bytes**, `sha256` LF
+`6de586c0e5c7a104`, y el mismo fichero corrido en la 193 daba **4998 bytes**,
+`cd48a8a7071d6b89`. **Reproducia entre dos corridas del mismo dia y no contra su
+sellada**, porque los bloques `C` y `D` leian `docs/loop/REPORTE.md` VIVO, que es
+un fichero distinto en cada vuelta por construccion.
+
+**LA `4.4` DEL ACTA 191 DICE QUE `SUJETO VIVO` ES FALLO Y NO DEUDA, Y LA `4.10`
+DEL ACTA 193 CIERRA LA SALIDA QUE QUEDABA: una salida que no reproduce NO ES DEL
+MISMO CALIBRE.**
+
+**COMO QUEDA CONGELADO.** Los dos bloques leen `SUJETO_ARCHIVADO`, el reporte
+ARCHIVADO de la vuelta 191, sacado con `git show` del commit clavado
+`COMMIT_CLAVADO`. **Un reporte archivado no se reescribe** (esa es la regla del
+archivador) y **un commit no se mueve**, asi que las dos garantias se suman.
+
+**Y EL BLOQUE `D` DEJA DE LANZAR EL TALLADOR, Y SE DICE POR QUE.** El
+`--comparar` del tallador **RE TALLA la tabla leyendo git en cada corrida**, y su
+fila de identidad cita el asunto del commit del acta buscandolo en una ventana de
+`git log`. Eso es un sujeto vivo por dentro aunque el fichero comparado sea fijo:
+el dia que ese commit salga de la ventana, la comparacion cambia sola y da un
+rojo que nadie sabra leer, que es exactamente lo que la `4.10` quiere evitar
+antes de la bateria de la 194.
+
+**LO QUE NO SE PIERDE, DICHO CON EL NOMBRE DE SU CARRIL:** el `--comparar` sobre
+el reporte VIVO **sigue corriendo cada vuelta**, en `cerrar_reporte.py`, que es
+su sede y donde la casa ya exige `CABECERA IDENTICA AL TALLADOR` antes del
+commit. **Aqui no se afloja una guarda: se le quita a un arnes de bateria un
+trabajo que ya hace el cierre, y que un arnes de bateria no puede hacer sin
+dejar de reproducir.** Lo que este bloque prueba en su lugar es **mas estrecho y
+mas duro**: que la comparacion del bloque tallado es BYTE A BYTE de verdad, con
+una mutacion de UN SOLO BYTE dentro de una linea que **tiene que ser detectada**.
+
+**Y LA SELLADA SE VUELVE A SELLAR, CON LA VIEJA GUARDADA AL LADO Y NO BORRADA:**
+el corte de la 191 queda en
+`docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO_CORTE_191.txt`.
+
 USO:
   python scripts/loop/vuelta191_tarea6_mutacion_bloque_tallado.py
 """
@@ -41,6 +81,47 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 LOOP = os.path.join(RAIZ, "docs", "loop")
 NL = chr(10)
 SALIDA = os.path.join(LOOP, "SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt")
+
+# EL SUJETO CONGELADO (vuelta 193, TAREA 2.a). El commit que ANADIO el reporte
+# ARCHIVADO de la 191, localizado en la 193 con
+#   git log --diff-filter=A --format=%H -- docs/loop/reportes/REPORTE_V191.md
+# y clavado aqui como literal. NO SE PONE `HEAD`.
+#
+# Y NO ES EL COMMIT QUE ANADIO LA SALIDA SELLADA DE ESTE ARNES, Y SE DICE POR
+# QUE: aquel es `576fa467`, y en su arbol el reporte de la 191 TODAVIA NO ESTABA
+# ARCHIVADO, porque el archivado ocurre al cerrar la vuelta SIGUIENTE. Se probo
+# con `576fa467` primero y el arnes salio ROJO por sujeto vacio, que es la
+# conducta correcta de una guarda que no puede pasar en verde sobre un vacio.
+COMMIT_CLAVADO = "92a09bfa20a04ec4ea1cebbb4b8536c24f1fc071"
+SUJETO_ARCHIVADO = "docs/loop/reportes/REPORTE_V191.md"
+
+
+def _git(args):
+    r = subprocess.run(["git"] + args, cwd=RAIZ, capture_output=True)
+    return r.returncode, r.stdout.decode("utf-8", errors="replace")
+
+
+def texto_congelado():
+    """EL REPORTE ARCHIVADO DE LA 191, SACADO DEL COMMIT CLAVADO. Devuelve
+    (ok, texto). Semi-pura: lo unico que toca es `git show`, que lee un objeto
+    que no se mueve. NO abre el arbol de trabajo."""
+    c, blob = _git(["show", "%s:%s" % (COMMIT_CLAVADO, SUJETO_ARCHIVADO)])
+    if c != 0:
+        return False, ""
+    return True, blob.replace(chr(13) + NL, NL)
+
+
+def bloque_entre_marcas(texto):
+    """EL BLOQUE DE LA CABECERA TALLADA, DEVUELTO COMO TEXTO, marcas incluidas.
+    Cadena vacia si el bloque no se puede delimitar. PURA.
+
+    ES LA OTRA MITAD DE `CR.lineas_del_bloque_tallado()`: aquella devuelve los
+    NUMEROS de linea, y para comparar BYTE A BYTE hace falta el TEXTO."""
+    nums = CR.lineas_del_bloque_tallado(texto)
+    if not nums:
+        return ""
+    lineas = texto.replace(chr(13) + NL, NL).split(NL)
+    return NL.join(lineas[min(nums) - 1:max(nums)])
 
 # LA CIFRA FABRICADA. Va SIN pareja a proposito: una sola aparicion de `bytes` y
 # una sola marca de convencion.
@@ -135,40 +216,76 @@ def main():
         w("      contar: %d fallo(s)." % len(CR.cifras_sin_pareja(d_doble)))
     w("")
 
-    w("C) EL TAMANO DE LA EXENCION SOBRE EL REPORTE DE VERDAD, MEDIDO")
-    ruta = os.path.join(LOOP, "REPORTE.md")
-    if not os.path.isfile(ruta):
-        w("   NO EXISTE docs/loop/REPORTE.md. Este bloque queda SIN CORRER.")
+    w("C) EL TAMANO DE LA EXENCION SOBRE EL SUJETO CONGELADO, MEDIDO")
+    w("   sujeto: %s del commit %s" % (SUJETO_ARCHIVADO, COMMIT_CLAVADO))
+    w("   (hasta la vuelta 193 este bloque leia docs/loop/REPORTE.md VIVO, que es")
+    w("    un fichero distinto en cada vuelta, y por eso esta salida no")
+    w("    reproducia contra su sellada)")
+    ok_cong, tcong = texto_congelado()
+    if not ok_cong:
+        w("   NO SE PUDO LEER EL SUJETO CONGELADO DEL COMMIT CLAVADO.")
+        fallos += 1
+        tcong = ""
     else:
-        t = io.open(ruta, encoding="utf-8", errors="replace").read()
-        total = t.replace(chr(13) + NL, NL).count(NL)
-        eximidas = CR.lineas_del_bloque_tallado(t)
-        w("   docs/loop/REPORTE.md -> %d saltos de linea" % total)
+        total = tcong.count(NL)
+        eximidas = CR.lineas_del_bloque_tallado(tcong)
+        w("   %s -> %d saltos de linea" % (SUJETO_ARCHIVADO, total))
         w("   CIFRA lineas eximidas por el bloque tallado: %d" % len(eximidas))
         w("   o sea el %.2f por ciento del documento"
           % (100.0 * len(eximidas) / total if total else 0.0))
-        w("   CIFRA cifras sin pareja que quedan: %d" % len(CR.cifras_sin_pareja(t)))
-        for n, esp, muestra, linea in CR.cifras_sin_pareja(t):
+        w("   CIFRA cifras sin pareja que quedan: %d"
+          % len(CR.cifras_sin_pareja(tcong)))
+        for n, esp, muestra, linea in CR.cifras_sin_pareja(tcong):
             w("      linea %-5d %-6s %-14s | %s" % (n, esp, muestra, linea[:90]))
+        fallos += _caso(w, "   el sujeto congelado SI trae bloque delimitable",
+                        bool(eximidas), True)
     w("")
 
-    w("D) LA GUARDA QUE SI VIGILA ESE BLOQUE, CORRIDA SOBRE EL REPORTE DE VERDAD")
-    w("   (la exencion no pierde cobertura: `--comparar` exige que el bloque sea")
-    w("    IDENTICO BYTE A BYTE al fichero del tallador)")
-    env = dict(os.environ)
-    env["PYTHONIOENCODING"] = "utf-8"
-    r = subprocess.run([sys.executable, "scripts/loop/tallar_cabecera_reporte.py",
-                        "--comparar", "docs/loop/REPORTE.md",
-                        "--fase04", "--vuelta", "191"],
-                       cwd=RAIZ, capture_output=True, env=env)
-    sal = (r.stdout.decode("utf-8", errors="replace")
-           + r.stderr.decode("utf-8", errors="replace"))
-    for l in sal.replace(chr(13) + NL, NL).split(NL):
-        if l.strip():
-            w("      | " + l.rstrip()[:150])
-    w("   exitcode de --comparar: %d" % r.returncode)
-    w("   (si el reporte todavia no esta cerrado, este bloque dice lo que dice y")
-    w("    no se maquilla: la corrida buena es la del cierre)")
+    w("D) QUE LA COMPARACION DE ESE BLOQUE ES BYTE A BYTE, PROBADO POR MUTACION")
+    w("   DE UN SOLO BYTE SOBRE EL SUJETO CONGELADO")
+    w("   (este bloque YA NO LANZA `tallar_cabecera_reporte.py --comparar`, y el")
+    w("    docstring dice por que: aquel RE TALLA leyendo git en cada corrida, y")
+    w("    eso es sujeto vivo por dentro aunque el fichero comparado sea fijo.")
+    w("    LO QUE NO SE PIERDE: el `--comparar` sobre el reporte VIVO sigue")
+    w("    corriendo cada vuelta en `cerrar_reporte.py`, que es su sede)")
+    bloque = bloque_entre_marcas(tcong)
+    w("   CIFRA bytes del bloque tallado del sujeto congelado: %d"
+      % len(bloque.encode("utf-8")))
+    fallos += _caso(w, "   el bloque abre por su marca",
+                    bloque.split(NL)[0].strip() if bloque else "", CR.MARCA_ABRE)
+    fallos += _caso(w, "   y cierra por la suya",
+                    bloque.split(NL)[-1].strip() if bloque else "", CR.MARCA_CIERRA)
+    fallos += _caso(w, "   comparado consigo mismo: identico", bloque == bloque,
+                    True)
+    w("   LA MUTACION QUE PUEDE CAER: se cambia UN SOLO BYTE DENTRO de una linea")
+    w("   del bloque, sin tocar su largo ni su numero de lineas. Una comparacion")
+    w("   por lineas, por conteo o por texto normalizado NO lo veria; una")
+    w("   comparacion byte a byte SI.")
+    if not bloque:
+        w("      LA MUTACION NO SE PUDO CORRER: el bloque salio vacio.")
+        no_cayeron += 1
+    else:
+        i = max(bloque.find("*"), 1)
+        mutado = bloque[:i] + ("+" if bloque[i] != "+" else "-") + bloque[i + 1:]
+        mismo_largo = len(mutado) == len(bloque)
+        mismas_lineas = mutado.count(NL) == bloque.count(NL)
+        w("      el byte tocado esta en la posicion %d de %d" % (i, len(bloque)))
+        w("      largo igual: %s | numero de lineas igual: %s"
+          % (mismo_largo, mismas_lineas))
+        if mutado == bloque:
+            w("      LA MUTACION NO CAYO: el texto mutado sale igual al original.")
+            no_cayeron += 1
+        elif not (mismo_largo and mismas_lineas):
+            w("      LA MUTACION NO CAYO: la mutacion cambio el largo o las lineas,")
+            w("      asi que no prueba que la comparacion sea BYTE A BYTE.")
+            no_cayeron += 1
+        else:
+            w("      LA MUTACION CAE: mismo largo y mismas lineas, y la comparacion")
+            w("      byte a byte los separa igual.")
+        fallos += _caso(w, "   el mutado NO es igual al original",
+                        mutado == bloque, False)
+        fallos += _caso(w, "   y una comparacion por NUMERO DE LINEAS no los "
+                           "separaria", mutado.count(NL) == bloque.count(NL), True)
     w("")
 
     w("=" * 78)

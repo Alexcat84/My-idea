@@ -39,51 +39,32 @@ C) EL CENSO SOBRE UN DIRECTORIO FABRICADO, PARA QUE MUERDA DE VERDAD
    no estaria mirando nada
       LA MUTACION CAE: 0 rojos antes y 1 despues, y con su nombre.
 
-D) EL CENSO SOBRE EL SUJETO CONGELADO (git show del commit clavado)
-   commit clavado: 21ffca0cfe2f065ec917c2620a4b2a28e8027fe1
-   (es el commit que ANADIO la salida sellada de este arnes. El censo
-    del arbol VIVO no se pierde: vive en vuelta191_tarea3_censo.py,
-    que corre con --commit HEAD y NO esta en la nomina)
-   CIFRA ficheros .py sacados del commit: 1333
-   CIFRA ficheros .py censados: 1333
-   el censo mira todos los que se sacaron                     obtenido 1333                           esperado 1333                           -> PASA
-   ficheros en ROJO en el sujeto congelado                    obtenido 0                              esperado 0                              -> PASA
+D) EL CENSO SOBRE EL REPO DE VERDAD, QUE ES LO QUE ESTA VUELTA ARREGLO
+   CIFRA ficheros .py censados: 1328
+   ficheros en ROJO en scripts/loop                           obtenido 0                              esperado 0                              -> PASA
    ROJO: cuenta lineas SOLO por la convencion que no calza con wc -l 0
-   VERDE: publica la pareja                                         54
-   VERDE: cuenta solo por una convencion que calza con wc -l        142
-   NO APLICA: no cuenta lineas de ninguna de las tres formas        1137
-   LA MUTACION DEL CONGELADO: si el commit clavado no se pudiera leer,
-   el censo saldria vacio, y este arnes NO puede pasar en verde por
-   vacio
-      LA MUTACION CAE: el sujeto trae 1333 ficheros y no cero.
+   VERDE: publica la pareja                                         53
+   VERDE: cuenta solo por una convencion que calza con wc -l        141
+   NO APLICA: no cuenta lineas de ninguna de las tres formas        1134
 
-E) LOS INSTRUMENTOS PROPIOS DE LA 191, UNO A UNO, DEL MISMO COMMIT
+E) LOS INSTRUMENTOS PROPIOS DE ESTA VUELTA, UNO A UNO
    (una guarda que no se aplica a quien la escribio no es una guarda)
    dos_convenciones_de_lineas.py                  VERDE: publica la pareja
    vuelta191_apertura.py                          VERDE: publica la pareja
-   vuelta191_cierre.py                            NO APLICA: no cuenta lineas de ninguna de las tres formas
    vuelta191_esqueleto_reporte.py                 VERDE: publica la pareja
    vuelta191_tarea1a_registrar_acta191.py         VERDE: publica la pareja
    vuelta191_tarea2_relectura_al_doble.py         NO APLICA: no cuenta lineas de ninguna de las tres formas
    vuelta191_tarea2b_cotejo.py                    VERDE: publica la pareja
    vuelta191_tarea3_arreglar_lineas.py            VERDE: publica la pareja
-   vuelta191_tarea3_censo.py                      VERDE: publica la pareja
    vuelta191_tarea3_mutacion_lineas.py            VERDE: publica la pareja
-   vuelta191_tarea4_mutacion_veredicto.py         NO APLICA: no cuenta lineas de ninguna de las tres formas
-   vuelta191_tarea5_marca_contra_dificultad.py    NO APLICA: no cuenta lineas de ninguna de las tres formas
-   vuelta191_tarea6_mutacion_bloque_tallado.py    VERDE: cuenta solo por una convencion que calza con wc -l
    instrumentos de la 191 en ROJO                             obtenido 0                              esperado 0                              -> PASA
-   CIFRA instrumentos de la 191 mirados: 13
 
 F) EL EJEMPLAR DEL ACTA 190, COTEJADO CONTRA `wc -l` DE VERDAD
-   (el reporte de la 190 publico 2231 lineas de este fichero. NO SE
-    COPIA: se cuentan las dos convenciones y se corre `wc -l`)
-   Y SU SUJETO TAMBIEN VA CONGELADO: el blob del commit clavado se
-   materializa en el temporal y `wc -l` se corre SOBRE ESA COPIA, para
-   que la cifra no se mueva cuando el fichero vivo crezca.
+   (el reporte de la 190 publico 2231 lineas de este fichero. NO SE COPIA:
+    se cuentan las dos convenciones y se corre `wc -l`)
    por `count(NL)`      : 2230
    por `len(split(NL))` : 2231
-   `wc -l` dice         : '2230 EJEMPLAR_CONGELADO.md' (exitcode 0)
+   `wc -l` dice         : '2230 docs/plan/LECTURAS_DIRIGIDAS.md' (exitcode 0)
    la convencion count CALZA con wc -l                        obtenido 2230                           esperado 2230                           -> PASA
    LA MUTACION: la convencion split tiene que NO calzar, o el
    arreglo entero sobraria

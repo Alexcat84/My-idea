@@ -38,40 +38,7 @@ E) LA MUTACION DE LA VARA: SUBIENDOLA POR ENCIMA DE LA VUELTA
    y la guarda sale VERDE por vacio, no por limpio                VERDE
 
 F) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)
-   (el nombre del temporal NO se imprime: `mkdtemp` lo fabrica
-    aleatorio y esta salida se sella y se compara byte a byte)
-   el prefijo con el que se fabrico: 'guarda_entrada_'
+   C:\Users\AlexDesk\AppData\Local\Temp\guarda_entrada_wo7542zz existe todavia: False
    el temporal quedo retirado                                     VERDE
-
-G) LA HUELLA DE TEXTO NO PRUEBA REPRODUCCION, Y ESTE ES EL CASO QUE CAE
-   (vuelta 193, TAREA 2.d. Se fabrican DOS arneses que la huella de texto
-    ve EXACTAMENTE IGUAL, porque los dos nombran `mkdtemp`, y que se
-    comportan al reves: uno escribe siempre lo mismo y el otro escribe una
-    linea distinta en cada corrida. Si el veredicto de esta guarda
-    bastara, los dos pasarian)
-   LA HUELLA DE TEXTO, QUE ES LA QUE HOY DECIDE:
-      vuelta199_tarea5_mutacion_estable.py           CONGELADO
-      vuelta199_tarea6_mutacion_movedizo.py          CONGELADO
-   los DOS salen CONGELADO por su huella                          VERDE
-   y por eso esta guarda NO cae por ninguno                       VERDE
-
-   LA VARA QUE SI LOS SEPARA: CORRERLOS DOS VECES Y COMPARAR BYTES
-      estable  -> medible True | reproduce True | c1 17 bytes | c2 17 bytes
-      movedizo -> medible True | reproduce False | sus dos sha son distintos entre si: True
-   los dos son MEDIBLES                                           VERDE
-   EL ESTABLE REPRODUCE                                           VERDE
-   EL MOVEDIZO NO REPRODUCE, Y ESTE ES EL CASO QUE CAE            VERDE
-   LA MUTACION: si la huella de texto bastara, los dos veredictos
-   serian iguales y no habria nada que arreglar
-      LA MUTACION CAE: la huella dice 'CONGELADO' de LOS DOS, y la corrida
-      doble dice reproduce=True y reproduce=False. UNA HUELLA DE TEXTO
-      NO PRUEBA REPRODUCCION.
-   LA MUTACION 2: un arnes que NO nombre una sola salida sellada tiene
-   que salir NO MEDIBLE, y no colarse como reproducido
-   el mudo sale NO MEDIBLE                                        VERDE
-   y su veredicto de reproduccion NO es True                      VERDE
-   (el segundo temporal tambien se retira, P.16, y su nombre tampoco
-    se imprime)
-   el segundo temporal quedo retirado                             VERDE
 
 VEREDICTO: VERDE

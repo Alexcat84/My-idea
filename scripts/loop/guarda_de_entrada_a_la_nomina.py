@@ -41,6 +41,34 @@ eso cae ANTES y no DENTRO de la bateria.
            seria lo contrario de declararlo.
   LIMPIO . `CONGELADO`, `CASO DECLARADO`, y `NO DECIDIBLE` CON motivo escrito.
 
+--- LA HUELLA DE TEXTO NO PRUEBA REPRODUCCION (vuelta 193, TAREA 2.c) ---
+
+**ESTA GUARDA DIO `CONGELADO` A DOS ARNESES CUYA SALIDA CAMBIABA EN CADA
+CORRIDA, Y LA CAUSA ESTA MEDIDA.** `tempfile` y `mkdtemp` estan en
+`HUELLAS_DE_CONGELADO`, asi que un arnes que fabrica un temporal para UN bloque
+salia `CONGELADO` aunque OTRO de sus bloques leyera el arbol vivo. El acta 193 lo
+midio en `docs/loop/_auditor_v193_reproducibilidad.txt`:
+`vuelta191_tarea3_mutacion_lineas.py` pasaba de 5836 a 6559 bytes y
+`vuelta191_tarea6_mutacion_bloque_tallado.py` de 4173 a 4998, **los dos con
+veredicto `CONGELADO` de esta misma guarda**.
+
+**LA UNICA VARA QUE PRUEBA REPRODUCCION ES CORRER EL ARNES DOS VECES Y COMPARAR
+SUS BYTES.** Eso es lo que hace `reproduce_de_verdad()`, y por eso el veredicto
+de esta puerta deja de ser una sola palabra: ahora son DOS COLUMNAS, la huella y
+la reproduccion, **y la que manda es la segunda**.
+
+**Y ES CARO, Y SE DICE EN VEZ DE ESCONDERLO.** Correr cada arnes reclamado DOS
+veces cuesta tiempo real, y algunos escriben en `docs/loop/`. Por eso el carril
+caro **no corre por defecto**: va en `--reproduccion`, y la corrida sin bandera
+**declara en su propia salida que su columna de huella es UN INDICIO Y NO UN
+VEREDICTO DE REPRODUCCION**. Un instrumento que no puede medir algo lo dice; no
+publica un verde que no midio.
+
+**LO QUE `--reproduccion` HACE CON LAS SALIDAS SELLADAS AJENAS:** las mide antes,
+corre, mide, **y las RESTAURA con `git checkout --` remidiendolas** antes de
+darlas por restauradas. Si alguna no se puede restaurar, **CAE EN ROJO** y lo
+dice con su nombre.
+
 --- LO QUE ESTA GUARDA NO PUEDE HACER, DICHO EN VEZ DE CALLARLO ---
 
 **No decide si el sujeto esta vivo de verdad: decide si el TEXTO lo parece.** Las
@@ -56,11 +84,15 @@ no anade: la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada.
 
 USO:
   python scripts/loop/guarda_de_entrada_a_la_nomina.py
+  python scripts/loop/guarda_de_entrada_a_la_nomina.py --reproduccion
   python scripts/loop/guarda_de_entrada_a_la_nomina.py --mutacion
 """
 import argparse
+import hashlib
 import io
 import os
+import re
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -81,6 +113,97 @@ def reclamados_por_el_censo(nomina=None, directorio=None, vara=None):
     regla de entrada siga teniendo UNA sola fuente de verdad."""
     _ultima, faltan = VMV.arneses_que_faltan(nomina, directorio, vara)
     return list(faltan)
+
+
+def salida_sellada_de(nombre, directorio=None, base_salida=None):
+    """LA SALIDA QUE UN ARNES SELLA, LEIDA DE SU PROPIO CODIGO. Devuelve la ruta
+    relativa al repo, o cadena vacia si el arnes no nombra ninguna. PURA salvo
+    por leer el fichero del arnes.
+
+    LA VARA VA ESCRITA ANTES DE MEDIR, Y VA EN DOS PASADAS PORQUE LA PRIMERA SE
+    MIDIO Y NO ALCANZA. **Pasada 1, LA QUE MANDA:** la asignacion de modulo
+    `SALIDA = os.path.join(LOOP, "...")`, que es como los arneses de esta casa
+    declaran su salida sellada; tiene que aparecer EXACTAMENTE UNA VEZ.
+    **Pasada 2, solo si la primera no encuentra nada:** el literal
+    `SALIDA_..._.txt` suelto, y entonces tiene que ser UNO SOLO en todo el
+    fichero.
+
+    **POR QUE DOS Y NO UNA, Y LA CAUSA ESTA MEDIDA (vuelta 193):** con la pasada
+    2 sola, los CUATRO arneses que el censo reclama hoy salian `NO MEDIBLE`,
+    porque sus docstrings NOMBRAN otras salidas de las que hablan. Una vara que
+    declara no medible todo lo que hay no mide nada. **La pasada 1 mira LA
+    MAQUINA, no la prosa**, que es la misma leccion que
+    `sin_docstring_de_modulo()` ya habia aprendido en `verificar_mutaciones_viejas.py`.
+
+    **Y SI NINGUNA DE LAS DOS RESUELVE, SE DEVUELVE CADENA VACIA** y quien llama
+    lo declara NO MEDIBLE, en vez de elegir una a ojo."""
+    texto = VMV.texto_del_arnes(nombre, directorio)
+    por_constante = sorted(set(re.findall(
+        r"^SALIDA\s*=\s*os\.path\.join\(LOOP,\s*[\"']([A-Za-z0-9_]+\.txt)[\"']\)",
+        texto, re.M)))
+    if len(por_constante) == 1:
+        hallados = por_constante
+    else:
+        hallados = sorted(set(re.findall(r"SALIDA_[A-Z0-9_]+\.txt", texto)))
+    if len(hallados) != 1:
+        return ""
+    if base_salida is not None:
+        return os.path.join(base_salida, hallados[0])
+    return "docs/loop/" + hallados[0]
+
+
+def reproduce_de_verdad(nombre, directorio=None, base_salida=None,
+                        restaurar=True):
+    """CORRE UN ARNES DOS VECES Y COMPARA SU SALIDA SELLADA BYTE A BYTE.
+
+    Devuelve un dict con `medible`, `reproduce`, `contra_sellada`, los bytes y
+    los `sha256` LF de las tres mediciones, y `restaurada`.
+
+    NO ES PURA Y NO PUEDE SERLO: es justo lo que la huella de texto no puede
+    hacer. Toca disco, lanza procesos y RESTAURA lo que pisa con
+    `git checkout --`, REMIDIENDO antes de darlo por restaurado. Si el arnes no
+    nombra una sola salida, sale `medible: False` y NO se inventa un veredicto."""
+    salida = {"medible": False, "reproduce": None, "contra_sellada": None,
+              "ruta": "", "sellada": (None, ""), "c1": (None, ""),
+              "c2": (None, ""), "restaurada": None, "exit1": None, "exit2": None}
+    ruta_rel = salida_sellada_de(nombre, directorio, base_salida)
+    if not ruta_rel:
+        return salida
+    salida["ruta"] = ruta_rel
+    ruta_abs = (ruta_rel if base_salida is not None
+                else os.path.join(RAIZ, ruta_rel.replace("/", os.sep)))
+    arnes_abs = os.path.join(directorio or LOOP, nombre)
+    if not os.path.isfile(arnes_abs) or not os.path.isfile(ruta_abs):
+        return salida
+
+    def medir():
+        datos = io.open(ruta_abs, "rb").read().replace(b"\r\n", b"\n")
+        return len(datos), hashlib.sha256(datos).hexdigest()[:16]
+
+    def correr():
+        env = dict(os.environ)
+        env["PYTHONIOENCODING"] = "utf-8"
+        r = subprocess.run([sys.executable, arnes_abs], cwd=RAIZ,
+                           capture_output=True, env=env)
+        return r.returncode
+
+    salida["medible"] = True
+    salida["sellada"] = medir()
+    salida["exit1"] = correr()
+    salida["c1"] = medir()
+    salida["exit2"] = correr()
+    salida["c2"] = medir()
+    salida["reproduce"] = salida["c1"] == salida["c2"]
+    salida["contra_sellada"] = salida["c1"] == salida["sellada"]
+    if salida["contra_sellada"]:
+        salida["restaurada"] = True
+    elif restaurar:
+        subprocess.run(["git", "checkout", "--", ruta_rel], cwd=RAIZ,
+                       capture_output=True)
+        salida["restaurada"] = medir() == salida["sellada"]
+    else:
+        salida["restaurada"] = None
+    return salida
 
 
 def veredicto_de_entrada(nomina=None, directorio=None, vara=None,
@@ -135,7 +258,20 @@ def informe(v):
     for f in v["limpios"]:
         w("   %s   %s" % (f[0], f[1]))
     w("")
-    w("VEREDICTO DE LA PUERTA: %s" % ("ROJO" if v["rojo"] else "VERDE"))
+    w("")
+    w("LO QUE ESTA COLUMNA NO ES, Y SE DICE EN VEZ DE CALLARLO (vuelta 193,")
+    w("TAREA 2.c): EL VEREDICTO DE ARRIBA SALE DE UNA HUELLA DE TEXTO, Y UNA")
+    w("HUELLA DE TEXTO NO PRUEBA REPRODUCCION. `tempfile` y `mkdtemp` cuentan")
+    w("como huella de CONGELADO, y por eso esta misma guarda dio CONGELADO a dos")
+    w("arneses cuya salida cambiaba en cada corrida (acta 193, hallazgo 5.3 y")
+    w("adjudicacion 4.10, medido en docs/loop/_auditor_v193_reproducibilidad.txt).")
+    w("LA UNICA VARA QUE LA PRUEBA es correr el arnes dos veces y comparar sus")
+    w("bytes, y eso vive en el carril --reproduccion de este mismo fichero.")
+    w("SIN ESA BANDERA, LO DE ARRIBA ES UN INDICIO DECLARADO Y NO UN VEREDICTO")
+    w("DE REPRODUCCION.")
+    w("")
+    w("VEREDICTO DE LA PUERTA (por huella de texto): %s"
+      % ("ROJO" if v["rojo"] else "VERDE"))
     if not v["rojo"] and v["deuda"]:
         w("   VERDE CON DEUDA DECLARADA, que no es lo mismo que verde a secas: %d"
           % len(v["deuda"]))
@@ -252,9 +388,116 @@ def prueba_de_mutacion():
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
         w("F) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)")
-        w("   %s existe todavia: %s" % (tmp, os.path.exists(tmp)))
+        # EL NOMBRE DEL TEMPORAL NO SE IMPRIME (vuelta 193, TAREA 2.b; hallazgo
+        # 5.3 del acta 193). `mkdtemp` da un nombre ALEATORIO POR CONSTRUCCION,
+        # y esta salida se sella y se compara: imprimirlo hacia que cambiara
+        # EXACTAMENTE UNA LINEA en cada corrida. El directorio se sigue
+        # fabricando y se sigue retirando; lo unico que se calla es su nombre,
+        # que no prueba nada. Lo que SI prueba algo es que ya no exista, y eso
+        # se sigue comprobando abajo.
+        w("   (el nombre del temporal NO se imprime: `mkdtemp` lo fabrica")
+        w("    aleatorio y esta salida se sella y se compara byte a byte)")
+        w("   el prefijo con el que se fabrico: %r" % "guarda_entrada_")
         ok &= _caso(w, "el temporal quedo retirado", os.path.exists(tmp), False)
         w("")
+
+    w("G) LA HUELLA DE TEXTO NO PRUEBA REPRODUCCION, Y ESTE ES EL CASO QUE CAE")
+    w("   (vuelta 193, TAREA 2.d. Se fabrican DOS arneses que la huella de texto")
+    w("    ve EXACTAMENTE IGUAL, porque los dos nombran `mkdtemp`, y que se")
+    w("    comportan al reves: uno escribe siempre lo mismo y el otro escribe una")
+    w("    linea distinta en cada corrida. Si el veredicto de esta guarda")
+    w("    bastara, los dos pasarian)")
+    tmp2 = tempfile.mkdtemp(prefix="guarda_reproduccion_")
+    try:
+        ESTABLE = ("vuelta199_tarea5_mutacion_estable.py",
+                   "# -*- coding: utf-8 -*-\n"
+                   '"""un arnes que reproduce."""\n'
+                   "import io, os, sys, tempfile\n"
+                   "d = tempfile.mkdtemp(prefix='x_')\n"
+                   "os.rmdir(d)\n"
+                   "r = os.path.join(os.path.dirname(os.path.abspath(__file__)),\n"
+                   "                 'SALIDA_V199_ESTABLE.txt')\n"
+                   "io.open(r, 'w', encoding='utf-8', newline=chr(10)).write(\n"
+                   "    'siempre lo mismo' + chr(10))\n")
+        MOVEDIZO = ("vuelta199_tarea6_mutacion_movedizo.py",
+                    "# -*- coding: utf-8 -*-\n"
+                    '"""un arnes que NO reproduce, y su huella dice lo contrario."""\n'
+                    "import io, os, sys, tempfile\n"
+                    "d = tempfile.mkdtemp(prefix='x_')\n"
+                    "r = os.path.join(os.path.dirname(os.path.abspath(__file__)),\n"
+                    "                 'SALIDA_V199_MOVEDIZO.txt')\n"
+                    "io.open(r, 'w', encoding='utf-8', newline=chr(10)).write(\n"
+                    "    'el temporal fue ' + d + chr(10))\n"
+                    "os.rmdir(d)\n")
+        _fabricar(tmp2, dict([ESTABLE, MOVEDIZO]))
+        for _n, _c in (ESTABLE, MOVEDIZO):
+            io.open(os.path.join(tmp2, "SALIDA_V199_%s.txt"
+                                 % ("ESTABLE" if _n == ESTABLE[0] else "MOVEDIZO")),
+                    "w", encoding="utf-8", newline=NL).write("sellada de mentira" + NL)
+
+        w("   LA HUELLA DE TEXTO, QUE ES LA QUE HOY DECIDE:")
+        vh = veredicto_de_entrada(nomina=[], directorio=tmp2, vara=198)
+        por_nombre = dict((f[0], f[1]) for f in vh["reclamados"])
+        for n in sorted(por_nombre):
+            w("      %-46s %s" % (n, por_nombre[n]))
+        ok &= _caso(w, "los DOS salen CONGELADO por su huella",
+                    sorted(set(por_nombre.values())), ["CONGELADO"])
+        ok &= _caso(w, "y por eso esta guarda NO cae por ninguno", vh["rojo"], False)
+        w("")
+        w("   LA VARA QUE SI LOS SEPARA: CORRERLOS DOS VECES Y COMPARAR BYTES")
+        r_est = reproduce_de_verdad(ESTABLE[0], directorio=tmp2,
+                                    base_salida=tmp2, restaurar=False)
+        r_mov = reproduce_de_verdad(MOVEDIZO[0], directorio=tmp2,
+                                    base_salida=tmp2, restaurar=False)
+        w("      estable  -> medible %s | reproduce %s | c1 %s bytes | c2 %s bytes"
+          % (r_est["medible"], r_est["reproduce"], r_est["c1"][0], r_est["c2"][0]))
+        # LOS `sha256` DEL MOVEDIZO NO SE IMPRIMEN, Y ES LA MISMA LECCION DE LA
+        # PIEZA 2.b: son distintos EN CADA CORRIDA por construccion, y esta
+        # salida se sella y se compara byte a byte. Lo que prueba algo es que
+        # sean DISTINTOS ENTRE SI, y eso si se imprime.
+        w("      movedizo -> medible %s | reproduce %s | sus dos sha son "
+          "distintos entre si: %s"
+          % (r_mov["medible"], r_mov["reproduce"],
+             r_mov["c1"][1] != r_mov["c2"][1]))
+        ok &= _caso(w, "los dos son MEDIBLES",
+                    (r_est["medible"], r_mov["medible"]), (True, True))
+        ok &= _caso(w, "EL ESTABLE REPRODUCE", r_est["reproduce"], True)
+        ok &= _caso(w, "EL MOVEDIZO NO REPRODUCE, Y ESTE ES EL CASO QUE CAE",
+                    r_mov["reproduce"], False)
+        w("   LA MUTACION: si la huella de texto bastara, los dos veredictos")
+        w("   serian iguales y no habria nada que arreglar")
+        if por_nombre.get(ESTABLE[0]) != por_nombre.get(MOVEDIZO[0]):
+            w("      LA MUTACION NO CAYO: la huella ya los separaba.")
+            ok = False
+        elif r_est["reproduce"] == r_mov["reproduce"]:
+            w("      LA MUTACION NO CAYO: la corrida doble tampoco los separa.")
+            ok = False
+        else:
+            w("      LA MUTACION CAE: la huella dice %r de LOS DOS, y la corrida"
+              % por_nombre.get(ESTABLE[0]))
+            w("      doble dice reproduce=%s y reproduce=%s. UNA HUELLA DE TEXTO"
+              % (r_est["reproduce"], r_mov["reproduce"]))
+            w("      NO PRUEBA REPRODUCCION.")
+        w("   LA MUTACION 2: un arnes que NO nombre una sola salida sellada tiene")
+        w("   que salir NO MEDIBLE, y no colarse como reproducido")
+        MUDO = ("vuelta199_tarea7_mutacion_mudo.py",
+                "# -*- coding: utf-8 -*-\n"
+                '"""un arnes que no sella nada."""\n'
+                "import tempfile\n"
+                "d = tempfile.mkdtemp()\n")
+        _fabricar(tmp2, dict([MUDO]))
+        r_mudo = reproduce_de_verdad(MUDO[0], directorio=tmp2,
+                                     base_salida=tmp2, restaurar=False)
+        ok &= _caso(w, "el mudo sale NO MEDIBLE", r_mudo["medible"], False)
+        ok &= _caso(w, "y su veredicto de reproduccion NO es True",
+                    r_mudo["reproduce"], None)
+    finally:
+        shutil.rmtree(tmp2, ignore_errors=True)
+        w("   (el segundo temporal tambien se retira, P.16, y su nombre tampoco")
+        w("    se imprime)")
+        ok &= _caso(w, "el segundo temporal quedo retirado",
+                    os.path.exists(tmp2), False)
+    w("")
 
     w("VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
     t = NL.join(L) + NL
@@ -266,9 +509,60 @@ def prueba_de_mutacion():
     return 0 if ok else 1
 
 
+def informe_de_reproduccion(filas):
+    """LAS LINEAS DEL CARRIL CARO. PURA sobre la lista de (nombre, dict)."""
+    L = []
+    w = L.append
+    w("=" * 78)
+    w("LA REPRODUCCION, CORRIDA Y NO DEDUCIDA DE UNA HUELLA (vuelta 193, 2.c)")
+    w("=" * 78)
+    w("")
+    w("LA VARA: cada arnes reclamado se corre DOS VECES y su salida sellada se")
+    w("compara BYTE A BYTE. `reproduce` es entre las dos corridas de hoy;")
+    w("`contra_sellada` es contra lo que el repo lleva commiteado. Las dos se")
+    w("publican y ninguna se resuelve copiando.")
+    w("")
+    rotos, no_medibles, sin_restaurar = [], [], []
+    for nombre, r in filas:
+        if not r["medible"]:
+            w("   %-46s NO MEDIBLE (no nombra una sola salida sellada)" % nombre)
+            no_medibles.append(nombre)
+            continue
+        w("   %s" % nombre)
+        w("      salida: %s" % r["ruta"])
+        w("      sellada    -> LF %s bytes | sha256 %s" % r["sellada"])
+        w("      corrida 1  -> exit %s | LF %s bytes | sha256 %s"
+          % (r["exit1"], r["c1"][0], r["c1"][1]))
+        w("      corrida 2  -> exit %s | LF %s bytes | sha256 %s"
+          % (r["exit2"], r["c2"][0], r["c2"][1]))
+        w("      REPRODUCE ENTRE SUS DOS CORRIDAS: %s" % r["reproduce"])
+        w("      REPRODUCE CONTRA SU SELLADA:      %s" % r["contra_sellada"])
+        w("      restaurada tras la corrida:       %s" % r["restaurada"])
+        if not (r["reproduce"] and r["contra_sellada"]):
+            rotos.append(nombre)
+        if r["restaurada"] is False:
+            sin_restaurar.append(nombre)
+    w("")
+    w("CIFRA arneses medidos: %d" % len([1 for _n, r in filas if r["medible"]]))
+    w("CIFRA NO MEDIBLES (declarados, no supuestos): %d (%s)"
+      % (len(no_medibles), ", ".join(no_medibles) or "ninguno"))
+    w("CIFRA QUE NO REPRODUCEN: %d (%s)"
+      % (len(rotos), ", ".join(rotos) or "ninguno"))
+    w("CIFRA SIN RESTAURAR: %d (%s)"
+      % (len(sin_restaurar), ", ".join(sin_restaurar) or "ninguno"))
+    w("")
+    w("VEREDICTO DE REPRODUCCION: %s"
+      % ("ROJO" if (rotos or sin_restaurar) else "VERDE"))
+    return L, bool(rotos or sin_restaurar)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--mutacion", action="store_true")
+    ap.add_argument("--reproduccion", action="store_true",
+                    help="corre cada arnes reclamado DOS veces y compara sus "
+                         "bytes. Es el carril caro, y es el unico que prueba "
+                         "reproduccion de verdad")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     if a.mutacion:
@@ -277,9 +571,22 @@ def main():
     print("GUARDA DE ENTRADA A LA NOMINA. Corre ANTES de la bateria, no dentro.")
     print("=" * 78)
     v = veredicto_de_entrada()
-    for l in informe(v):
+    lineas = informe(v)
+    rojo_repro = False
+    if a.reproduccion:
+        filas = [(f[0], reproduce_de_verdad(f[0])) for f in v["reclamados"]]
+        extra, rojo_repro = informe_de_reproduccion(filas)
+        lineas = lineas + [""] + extra
+    for l in lineas:
         print(l)
-    return 1 if v["rojo"] else 0
+    ruta = os.path.join(LOOP, "SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt")
+    if a.reproduccion:
+        io.open(ruta, "w", encoding="utf-8", newline=NL).write(
+            NL.join(lineas) + NL)
+        print("")
+        print("ESCRITO: docs/loop/SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt (%d bytes)"
+              % len((NL.join(lineas) + NL).encode("utf-8")))
+    return 1 if (v["rojo"] or rojo_repro) else 0
 
 
 if __name__ == "__main__":

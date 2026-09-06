@@ -1,0 +1,56 @@
+LOS QUE EL CENSO RECLAMA PARA LA NOMINA: 4
+   vuelta191_tarea3_mutacion_lineas.py            CONGELADO      motivo escrito: SI 
+      huellas de vivo:      LECTURAS_DIRIGIDAS.md
+      huellas de congelado: tempfile, mkdtemp, git show, sha256, SUJETO CONGELADO
+   vuelta191_tarea4_mutacion_veredicto.py         CONGELADO      motivo escrito: no 
+      huellas de vivo:      (ninguna)
+      huellas de congelado: tempfile, mkdtemp
+   vuelta191_tarea6_mutacion_bloque_tallado.py    CONGELADO      motivo escrito: SI 
+      huellas de vivo:      REPORTE.md
+      huellas de congelado: git show, sha256, SUJETO CONGELADO
+   vuelta192_tarea4_mutacion_cuarta_puerta.py     CONGELADO      motivo escrito: no 
+      huellas de vivo:      (ninguna)
+      huellas de congelado: tempfile, mkdtemp, SUJETO CONGELADO
+
+FALLO (SUJETO VIVO y reclamado, y esto SI hace caer): 0
+DEUDA (NO DECIDIBLE sin motivo escrito, y esto NO hace caer): 0
+LIMPIOS (congelado, caso declarado, o no decidible CON motivo): 4
+   vuelta191_tarea3_mutacion_lineas.py   CONGELADO
+   vuelta191_tarea4_mutacion_veredicto.py   CONGELADO
+   vuelta191_tarea6_mutacion_bloque_tallado.py   CONGELADO
+   vuelta192_tarea4_mutacion_cuarta_puerta.py   CONGELADO
+
+
+LO QUE ESTA COLUMNA NO ES, Y SE DICE EN VEZ DE CALLARLO (vuelta 193,
+TAREA 2.c): EL VEREDICTO DE ARRIBA SALE DE UNA HUELLA DE TEXTO, Y UNA
+HUELLA DE TEXTO NO PRUEBA REPRODUCCION. `tempfile` y `mkdtemp` cuentan
+como huella de CONGELADO, y por eso esta misma guarda dio CONGELADO a dos
+arneses cuya salida cambiaba en cada corrida (acta 193, hallazgo 5.3 y
+adjudicacion 4.10, medido en docs/loop/_auditor_v193_reproducibilidad.txt).
+LA UNICA VARA QUE LA PRUEBA es correr el arnes dos veces y comparar sus
+bytes, y eso vive en el carril --reproduccion de este mismo fichero.
+SIN ESA BANDERA, LO DE ARRIBA ES UN INDICIO DECLARADO Y NO UN VEREDICTO
+DE REPRODUCCION.
+
+VEREDICTO DE LA PUERTA (por huella de texto): VERDE
+
+==============================================================================
+LA REPRODUCCION, CORRIDA Y NO DEDUCIDA DE UNA HUELLA (vuelta 193, 2.c)
+==============================================================================
+
+LA VARA: cada arnes reclamado se corre DOS VECES y su salida sellada se
+compara BYTE A BYTE. `reproduce` es entre las dos corridas de hoy;
+`contra_sellada` es contra lo que el repo lleva commiteado. Las dos se
+publican y ninguna se resuelve copiando.
+
+   vuelta191_tarea3_mutacion_lineas.py            NO MEDIBLE (no nombra una sola salida sellada)
+   vuelta191_tarea4_mutacion_veredicto.py         NO MEDIBLE (no nombra una sola salida sellada)
+   vuelta191_tarea6_mutacion_bloque_tallado.py    NO MEDIBLE (no nombra una sola salida sellada)
+   vuelta192_tarea4_mutacion_cuarta_puerta.py     NO MEDIBLE (no nombra una sola salida sellada)
+
+CIFRA arneses medidos: 0
+CIFRA NO MEDIBLES (declarados, no supuestos): 4 (vuelta191_tarea3_mutacion_lineas.py, vuelta191_tarea4_mutacion_veredicto.py, vuelta191_tarea6_mutacion_bloque_tallado.py, vuelta192_tarea4_mutacion_cuarta_puerta.py)
+CIFRA QUE NO REPRODUCEN: 0 (ninguno)
+CIFRA SIN RESTAURAR: 0 (ninguno)
+
+VEREDICTO DE REPRODUCCION: VERDE

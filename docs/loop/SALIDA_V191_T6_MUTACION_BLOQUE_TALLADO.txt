@@ -25,38 +25,38 @@ B) LAS MUTACIONES, CORRIDAS Y NO AFIRMADAS
       LA MUTACION CAE: 0 lineas eximidas, y la cifra de dentro vuelve a
       contar: 1 fallo(s).
 
-C) EL TAMANO DE LA EXENCION SOBRE EL REPORTE DE VERDAD, MEDIDO
-   docs/loop/REPORTE.md -> 910 saltos de linea
+C) EL TAMANO DE LA EXENCION SOBRE EL SUJETO CONGELADO, MEDIDO
+   sujeto: docs/loop/reportes/REPORTE_V191.md del commit 92a09bfa20a04ec4ea1cebbb4b8536c24f1fc071
+   (hasta la vuelta 193 este bloque leia docs/loop/REPORTE.md VIVO, que es
+    un fichero distinto en cada vuelta, y por eso esta salida no
+    reproducia contra su sellada)
+   docs/loop/reportes/REPORTE_V191.md -> 910 saltos de linea
    CIFRA lineas eximidas por el bloque tallado: 21
    o sea el 2.31 por ciento del documento
    CIFRA cifras sin pareja que quedan: 0
+      el sujeto congelado SI trae bloque delimitable        obtenido True       esperado True       -> PASA
 
-D) LA GUARDA QUE SI VIGILA ESE BLOQUE, CORRIDA SOBRE EL REPORTE DE VERDAD
-   (la exencion no pierde cobertura: `--comparar` exige que el bloque sea
-    IDENTICO BYTE A BYTE al fichero del tallador)
-      | ==============================================================================
-      | LA CABECERA DEL REPORTE, TALLADA. Vuelta 191. Modo fase04.
-      | Cada celda sale de la salida que la cita; ninguna esta tecleada.
-      | ==============================================================================
-      | --- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
-      | | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
-      | |---|---:|---:|
-      | | censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
-      | | Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplic
-      | | aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
-      | | motor | 25/25 | **25/25** |
-      | | web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
-      | | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
-      | | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la res
-      | | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `
-      | | identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `b393347f` (asunto real leido de git log: 
-      | --- COMPARACION CONTRA docs/loop/REPORTE.md ---
-      |   filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
-      |   CABECERA: IDENTICA AL TALLADOR
-      | FIN
-   exitcode de --comparar: 0
-   (si el reporte todavia no esta cerrado, este bloque dice lo que dice y
-    no se maquilla: la corrida buena es la del cierre)
+D) QUE LA COMPARACION DE ESE BLOQUE ES BYTE A BYTE, PROBADO POR MUTACION
+   DE UN SOLO BYTE SOBRE EL SUJETO CONGELADO
+   (este bloque YA NO LANZA `tallar_cabecera_reporte.py --comparar`, y el
+    docstring dice por que: aquel RE TALLA leyendo git en cada corrida, y
+    eso es sujeto vivo por dentro aunque el fichero comparado sea fijo.
+    LO QUE NO SE PIERDE: el `--comparar` sobre el reporte VIVO sigue
+    corriendo cada vuelta en `cerrar_reporte.py`, que es su sede)
+   CIFRA bytes del bloque tallado del sujeto congelado: 3117
+      el bloque abre por su marca                           obtenido '<!-- CABE esperado '<!-- CABE -> PASA
+      y cierra por la suya                                  obtenido '<!-- FIN  esperado '<!-- FIN  -> PASA
+      comparado consigo mismo: identico                     obtenido True       esperado True       -> PASA
+   LA MUTACION QUE PUEDE CAER: se cambia UN SOLO BYTE DENTRO de una linea
+   del bloque, sin tocar su largo ni su numero de lineas. Una comparacion
+   por lineas, por conteo o por texto normalizado NO lo veria; una
+   comparacion byte a byte SI.
+      el byte tocado esta en la posicion 26 de 3116
+      largo igual: True | numero de lineas igual: True
+      LA MUTACION CAE: mismo largo y mismas lineas, y la comparacion
+      byte a byte los separa igual.
+      el mutado NO es igual al original                     obtenido False      esperado False      -> PASA
+      y una comparacion por NUMERO DE LINEAS no los separaria obtenido True       esperado True       -> PASA
 
 ==============================================================================
 CIFRA casos que CAEN: 0
