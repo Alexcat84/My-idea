@@ -1,0 +1,36 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL LECTOR DE COTEJOS VIEJOS
+==============================================================================
+
+Los textos se FABRICAN con la cifra sabida por construccion. Ninguno sale
+del repo, asi que ningun fichero real se toca.
+
+A) CADA PARSEADOR SOBRE SU FORMATO, Y SOLO SOBRE EL SUYO
+   COLUMNAS saca las dos filas                                      VERDE
+   TUBERIA saca las dos filas                                       VERDE
+   TUBERIA lee el dudoso de la ultima celda                         VERDE
+   YO_ARCHIVO cubre las TRES escrituras de la casa                  VERDE
+   y lee sus clases bien                                            VERDE
+
+B) LA REGLA DE LA 191 SE CONSERVA Y RECUPERA MENOS, QUE ES EL PUNTO
+   DISCREPA saca la fila                                            VERDE
+   pero sin las clases                                              VERDE
+   y `mejor_parseador` NO la prefiere si hay una completa           VERDE
+
+C) EL DENOMINADOR, Y SUS CUATRO VIAS
+   via 2, una cabecera COTEJADOS                                    VERDE
+   via 2, COINCIDEN N de M                                          VERDE
+   via 2, mis clases | destape                                      VERDE
+   via 3, la suma de los dos declarados                             VERDE
+   via 4, el conteo de filas CON coincidencias                      VERDE
+
+D) LA MUTACION QUE IMPORTA: SIN CABECERA Y SOLO CON DISCREPANCIAS, EL
+   DENOMINADOR **NO SE PUEDE** RECUPERAR, Y SE DICE EN VEZ DE ESTIMARSE
+   el denominador sale None                                         VERDE
+   y el motivo lo explica                                           VERDE
+
+E) LA MUTACION QUE PRUEBA QUE `recuperado` EXIGE LAS DOS COSAS
+   (filas CON clases Y denominador), y no una sola
+   solo puesto, sin clases: no cuenta como recuperado               VERDE
+
+VEREDICTO: VERDE

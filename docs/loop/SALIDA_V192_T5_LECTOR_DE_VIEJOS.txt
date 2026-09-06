@@ -1,0 +1,107 @@
+==============================================================================
+VUELTA 192, TAREA 5.b: EL LECTOR DE LOS COTEJOS VIEJOS SOBRE LOS 43
+==============================================================================
+
+LOS SEIS PARSEADORES, DECLARADOS ANTES DE CONTAR (docstring del fichero):
+   UNICO
+   COLUMNAS
+   TUBERIA
+   YO_ARCHIVO
+   DISCREPA
+   y el denominador sale de CUATRO vias, publicando cual respondio.
+
+A) LOS CANDIDATOS, POR LA MISMA REGLA 1 DE LA VUELTA 191, SIN ENSANCHARLA
+   regla: ficheros .txt y .md de docs/loop/ con 'COTEJO' en el nombre
+   CIFRA candidatos HOY: 46 (la TAREA 5 de la 191 midio 43)
+
+B) CADA CANDIDATO, CON EL PARSEADOR QUE RESPONDIO Y SU DENOMINADOR
+   RECUPERA SALIDA_V190_T4_COTEJO.txt                            TUBERIA: 30 filas con clases, denominador 30 (el conteo de las filas, que SI traen coincidencias)
+   RECUPERA SALIDA_V191_T2_COTEJO.txt                            TUBERIA: 30 filas con clases, denominador 30 (la suma de COINCIDEN y DISCREPAN declarados)
+   RECUPERA SALIDA_V192_T2_COTEJO.txt                            UNICO: 30 filas con clases, denominador 30 (el formato unico)
+   RECUPERA _auditor_v182_cotejo_ciega.txt                       COLUMNAS: 30 filas con clases, denominador 30 (el conteo de las filas, que SI traen coincidencias)
+   RECUPERA _auditor_v183_cotejo_ciega.txt                       YO_ARCHIVO: 6 filas con clases, denominador 30 (una cabecera COTEJADOS)
+   RECUPERA _auditor_v184_cotejo_ciega.txt                       YO_ARCHIVO: 1 filas con clases, denominador 30 (una cabecera COINCIDEN N de M)
+   RECUPERA _auditor_v189b_cotejo.txt                            YO_ARCHIVO: 6 filas con clases, denominador 30 (una cabecera CIFRA puestos mios)
+   RECUPERA _auditor_v190_cotejo_ciega.txt                       YO_ARCHIVO: 2 filas con clases, denominador 30 (una cabecera mis clases | destape)
+   RECUPERA _auditor_v191_cotejo_ciega.txt                       YO_ARCHIVO: 30 filas con clases, denominador 30 (el conteo de las filas, que SI traen coincidencias)
+            (y 9 fila(s) repetida(s) quitada(s): el fichero lista 39 en total)
+
+C) LOS QUE SIGUEN FUERA, NOMBRADOS CON SU MOTIVO
+   FUERA    SALIDA_V162_T2A_COTEJO.txt                           ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V163_T5A_COTEJO.txt                           ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V164_T2A_COTEJO_CONTADOR.txt                  ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V177_T1C_COTEJO_176.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V177_T1D_COTEJO_MIS_CLONES.txt                ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V178_COTEJO_MIS_CLONES.txt                    ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V178_T1C_COTEJO_176.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V178_T4_COTEJO_VARA.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V179_COTEJO_ARCHIVO.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V179_COTEJO_MIS_CLONES.txt                    ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V182_COTEJO_CLON_APERTURA.txt                 ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V182_COTEJO_CLON_ESQUELETO.txt                ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V182_T5_COTEJO_CLON_BATERIA.txt               ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V183_T1B_COTEJO_CLON_APERTURA.txt             ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V183_T1F_COTEJO_CLON.txt                      ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V184_COTEJO_DE_CLONES.txt                     ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V185_COTEJO_DE_CLONES.txt                     ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V185_T1D_COTEJO_QUIEN_SELLO.txt               ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V186_COTEJO_DE_CLONES.txt                     ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V187_COTEJO_DE_CLONES.txt                     ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V188_COTEJO_DE_CLONES.txt                     ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V189_T2_COTEJO_CLON.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V190_T3_COTEJO_CLON.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt           ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V60_COTEJO_INSUMO.txt                         ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V62_COTEJO_INSUMO.txt                         ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V62_COTEJO_INSUMO_B.txt                       ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    SALIDA_V68_COTEJO_CITAS_REPORTE.txt                  ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v155_cotejo_t3.txt                          trae 1 fila(s) pero ninguna dice las dos clases (solo el parseador DISCREPA responde)
+   FUERA    _auditor_v190_cotejo.txt                             ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v192_cotejo_ciega.txt                       trae 3 fila(s) pero ninguna dice las dos clases (solo el parseador DISCREPA responde)
+   FUERA    _auditor_v62_cotejo_varas.txt                        ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v76_cotejos.txt                             ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v90_cotejo_escritura.txt                    ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v91_cotejo.txt                              ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v91_cotejo2.txt                             ningun parseador saca ni una fila: no es un cotejo de ciega
+   FUERA    _auditor_v92_cotejo_87.txt                           ningun parseador saca ni una fila: no es un cotejo de ciega
+
+D) EL COTEJO CONTRA LOS SEIS DE LA VUELTA 191, POR NOMBRE Y NO POR CIFRA
+   (se leen de docs/loop/SALIDA_V191_T5_MARCA_CONTRA_DIFICULTAD.txt, que
+    es su fichero, y no de la memoria)
+   CIFRA que entraban por la regla de la 191: 6
+      SALIDA_V190_T4_COTEJO.txt
+      SALIDA_V191_T2_COTEJO.txt
+      _auditor_v155_cotejo_t3.txt
+      _auditor_v182_cotejo_ciega.txt
+      _auditor_v189b_cotejo.txt
+      _auditor_v191_cotejo_ciega.txt
+   CIFRA candidatos que la 191 midio: 43
+   SIGUEN DENTRO: 5 (SALIDA_V190_T4_COTEJO.txt, SALIDA_V191_T2_COTEJO.txt, _auditor_v182_cotejo_ciega.txt, _auditor_v189b_cotejo.txt, _auditor_v191_cotejo_ciega.txt)
+   SALEN: 1 (_auditor_v155_cotejo_t3.txt)
+      y salen porque este lector es MAS ESTRECHO, no mas ancho: exige las
+      DOS clases Y el denominador, y la regla de la 191 se conformaba con
+      el puesto de una discrepancia.
+   ENTRAN QUE NO ESTABAN: 4 (SALIDA_V192_T2_COTEJO.txt, _auditor_v183_cotejo_ciega.txt, _auditor_v184_cotejo_ciega.txt, _auditor_v190_cotejo_ciega.txt)
+
+E) LAS DOS CIFRAS, PUBLICADAS JUNTAS, QUE ES LO QUE EL ENCARGO PIDE
+   ANTES  (regla de la TAREA 5 de la vuelta 191): 6 de 43
+   DESPUES (este lector):                         9 de 46
+   Y EL DENOMINADOR DE LAS DOS CIFRAS NO ES EL MISMO, Y ESO SE DICE EN VEZ
+   DE ESCONDERSE: la 191 midio sobre 43 candidatos y hoy hay 46, porque
+   ESTA MISMA VUELTA ha escrito ficheros con COTEJO en el nombre. De los
+   46 candidatos de hoy, 3 nacieron en esta vuelta: SALIDA_V192_T2_COTEJO.txt, SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt, _auditor_v192_cotejo_ciega.txt
+   SIN ELLOS, el lector recupera 8 de 43, que es la cifra comparable
+   Y LA DIFERENCIA DE LO QUE SE RECUPERA NO ES SOLO LA CIFRA: la regla de
+   la 191 sacaba PUESTOS QUE TUMBARON A UN LECTOR; este saca LAS DOS
+   CLASES y, cuando el fichero lo permite, EL DENOMINADOR.
+   CIFRA filas con las DOS clases recuperadas en total: 165
+   CIFRA pares del denominador sumado de los recuperados: 270
+
+F) LO QUE ESTA MEDICION NO HACE, Y ES EL RESTO DEL ENCARGO
+   NO SE RE MIDE LA MARCA CONTRA LA DIFICULTAD EN ESTA VUELTA. El encargo
+   lo prohibe con esas palabras: el universo nuevo se usa cuando este
+   medido y declarado, no en el mismo acto en que se construye. Elegir el
+   universo y sacar la conclusion a la vez es lo que la TAREA 5 de la 191
+   evito bien y la `4.4` del acta 192 adjudico A FAVOR.
+
+FIN
