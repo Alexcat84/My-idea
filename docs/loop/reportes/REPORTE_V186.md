@@ -49,7 +49,7 @@
 > de la 185. **El PASO 0 se corre igual y su salida se pega con lo que salga**,
 > diga lo que diga, en vez de dejar la fila muda.
 
-**EL VEREDICTO DE UNA LINEA: LAS DOS TAREAS DEL ENCARGO CIERRAN Y ESTA VUELTA CIERRA SU PROPIO REPORTE, QUE ES LA SEGUNDA SEGUIDA Y DEVUELVE EL TOPE A CINCO; LAS DOS ADJUDICACIONES DEL ACTA 186 QUEDAN APLICADAS CON UN ARNES CADA UNA, EL REPORTE DE LA 184 CIERRA EN VERDE POR EL CARRIL DE CIERRE TARDIO CON SUS DIEZ CIFRAS SIN PAREJA DECLARADAS, Y LA ESCALADA DE LA SECCION 4 CAZA LA CAIDA QUE LA TRAJO; CERO CAIDAS PROPIAS, Y EL CERO VA CONTADO Y NO OMITIDO.**
+**EL VEREDICTO DE UNA LINEA: LAS DOS TAREAS DEL ENCARGO CIERRAN Y ESTA VUELTA CIERRA SU PROPIO REPORTE, QUE ES LA SEGUNDA SEGUIDA Y DEVUELVE EL TOPE A CINCO; LAS DOS ADJUDICACIONES DEL ACTA 186 QUEDAN APLICADAS CON UN ARNES CADA UNA, EL REPORTE DE LA 184 CIERRA EN VERDE POR EL CARRIL DE CIERRE TARDIO CON SUS DIEZ CIFRAS SIN PAREJA DECLARADAS, Y LA ESCALADA DE LA SECCION 4 CAZA LA CAIDA QUE LA TRAJO; UNA CAIDA PROPIA, LEVANTADA POR MI ANTES DE QUE LA MIDA NADIE.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -303,13 +303,13 @@ siete a cuatro), el nombre de la salida y el bloque nuevo de la cuenta de `B`.
 
 #### LAS RUTAS DE PRUEBA DE ESTA TAREA, TODAS COMPROBADAS Y NINGUNA DE CERO BYTES
 
-| ruta | bytes en disco, iguales normalizados a LF |
+| ruta | bytes en disco, iguales normalizados a LF salvo donde se diga |
 |---|---:|
 | `docs/loop/SALIDA_V186_T1A_REGISTRO_R48.txt` | **5751** |
 | `docs/loop/SALIDA_V186_T1A_MUTACION_REGISTRO_186.txt` | **5760** |
 | `docs/loop/SALIDA_V186_T1B_NOMINA.txt` | **3693** |
 | `docs/loop/SALIDA_V186_T1C_RELECTURA_AL_DOBLE.txt` | **13632** |
-| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | **49804** |
+| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | **49804** en disco y **49036** en LF |
 
 ### TAREA 2. LAS TRES REPARACIONES, LA ESCALADA Y EL CIERRE DE DOS REPORTES. CERRADA
 
@@ -439,7 +439,7 @@ por otro, la guarda **CAE**.
 
 `scripts/loop/cerrar_reporte.py --vuelta 184` salio con **`EXITCODE 0`** y
 **VERDE con sus cuatro piezas**
-(`docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt`, **6128 bytes en disco y 6128 bytes normalizados a LF**). El carril salio **CIERRE TARDIO**, con la vuelta en curso
+(`docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt`, **6128 bytes en disco y 6030 bytes normalizados a LF**). El carril salio **CIERRE TARDIO**, con la vuelta en curso
 leida de git en **186** y la del reporte en **184**. Las **10** cifras sin pareja
 quedaron **declaradas una a una con su linea y su cuenta total** en una seccion
 10 nueva.
@@ -449,8 +449,8 @@ esconder la decision seria peor que tomarla:
 
 | corrida | exitcode | que dijo |
 |---|---:|---|
-| sin `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt`, **790 bytes en disco y 790 en LF**) | **1** | el destino ya existia con contenido DISTINTO, el reporte de la 184 **sin cerrar** |
-| con `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt`, **965 bytes en disco y 965 en LF**) | **0** | VERDE |
+| sin `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt`, **790 bytes en disco y 780 bytes en LF**) | **1** | el destino ya existia con contenido DISTINTO, el reporte de la 184 **sin cerrar** |
+| con `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt`, **965 bytes en disco y 948 bytes en LF**) | **0** | VERDE |
 
 **NADA SE PIERDE AL PISARLO, Y SE COMPROBO ANTES DE PISARLO:** el texto viejo de
 **33608 bytes en disco y 33608 normalizados a LF** sigue entero en
@@ -514,16 +514,16 @@ intacto.
 
 #### LAS RUTAS DE PRUEBA DE ESTA TAREA, TODAS COMPROBADAS Y NINGUNA DE CERO BYTES
 
-| ruta | bytes en disco, iguales normalizados a LF |
+| ruta | bytes en disco, iguales normalizados a LF salvo donde se diga |
 |---|---:|
 | `docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt` | **3601** |
 | `docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt` | **2607** |
 | `docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt` | **5040** |
 | `docs/loop/SALIDA_V186_T2C_VEREDICTO_184.txt` | **2322** |
 | `docs/loop/SALIDA_V186_T2C_VEREDICTO_184_FRASE.txt` | **356** |
-| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | **6128** |
-| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | **790** |
-| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | **965** |
+| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | **6128** en disco y **6030** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | **790** en disco y **780** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | **965** en disco y **948** en LF |
 | `docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt` | **5007** |
 | `docs/loop/SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt` | **5802** |
 | `docs/loop/reportes/REPORTE_V184.md` | **124249** |
@@ -668,13 +668,49 @@ despues de dos vueltas sin ninguno.
 
 ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
 
-**CERO CAIDAS PROPIAS EN ESTA VUELTA, Y EL CERO VA CONTADO Y NO OMITIDO.** No
-levanto ninguna `C.n`: los cuatro arneses nuevos salieron VERDES en su primera
-corrida, ningun arnes ya sellado cambio de color, ninguna cifra publicada se
-tecleo sin instrumento, y el bloque de apertura corrio entero antes de la primera
-operacion con su prediccion escrita antes de medir.
+**UNA CAIDA PROPIA, Y LA LEVANTO YO ANTES DE QUE LA MIDA NADIE.**
 
-**LO QUE SI DECLARO, Y NO ES UNA CAIDA SINO UNA LIMITACION MEDIDA:** el bloque de
+**`C.1`. PUBLIQUE CUATRO CIFRAS DE BYTES IGUALANDO LA CONVENCION DE LF A LA DE
+DISCO SIN HABERLA MEDIDO.** En la primera escritura de los anexos de las TAREAS 1
+y 2 escribi *"N bytes en disco y N normalizados a LF"* para cuatro ficheros cuya
+salida se redirigio por la consola y por tanto lleva `CRLF` en disco. **La cifra
+de disco era buena; la de LF estaba supuesta, no medida.** Es exactamente la
+especie que esta casa persigue: una cifra escrita en vez de leida de un
+instrumento.
+
+**COMO SALIO, Y NO POR CASUALIDAD:** el instrumento
+`scripts/loop/vuelta186_rutas_del_reporte.py`, escrito en esta misma vuelta para
+comprobar que ninguna ruta publicada apunta a un fichero inexistente o de cero
+bytes, publica las DOS convenciones de cada ruta, y ahi se vieron las cuatro.
+
+**LO VIEJO NO SE BORRA, QUE ES LA MITAD QUE IMPORTA.** Las cuatro cifras, con lo
+que publique y lo que el instrumento mide:
+
+| ruta | lo que publique | lo medido |
+|---|---:|---:|
+| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | 49804 en disco y **49804** en LF | 49804 en disco y **49036** en LF |
+| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | 6128 en disco y **6128** en LF | 6128 en disco y **6030** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | 790 en disco y **790** en LF | 790 en disco y **780** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | 965 en disco y **965** en LF | 965 en disco y **948** en LF |
+
+**QUE ESPECIE ES Y SI ACUMULA, DICHO SIN REGATEAR:** es **caida de cifra
+publicada**, y las cuatro viven en TABLAS y en prosa de anexo. **La declaro
+entera y no la disfrazo de correccion menor.** Lo que si separo, para no
+castigarme de mas ni de menos: **ninguna de las cuatro mueve una decision**, todas
+las rutas existen y ninguna mide cero bytes, y la cifra de disco, que es la que la
+casa usa para cotejar, era correcta en las cuatro.
+
+**Y LO QUE HAGO CON ELLA:** corrijo las cuatro celdas, **dejo esta tabla con lo
+viejo al lado**, y el reporte se **REGENERA desde el esqueleto commiteado** con
+`anexar_tarea_al_reporte.py` en vez de retocarse a mano. **El reporte sigue siendo
+producto de sus instrumentos.**
+
+**LO DEMAS DE ESTA VUELTA NO TIENE CAIDA PROPIA:** los cuatro arneses nuevos
+salieron VERDES en su primera corrida, ningun arnes ya sellado cambio de color, y
+el bloque de apertura corrio entero antes de la primera operacion con su
+prediccion escrita antes de medir.
+
+**Y ADEMAS DECLARO UNA LIMITACION MEDIDA, QUE NO ES UNA CAIDA:** el bloque de
 apertura de esta vuelta contaba los puestos de la ciega con el patron de la
 palabra PUESTO en mayusculas, y las ciegas del auditor los escriben con la clave
 `puesto_intra`, asi que su bloque H.5 publico **0 puestos** para los cuatro
