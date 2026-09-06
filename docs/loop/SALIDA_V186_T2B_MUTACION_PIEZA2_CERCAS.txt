@@ -1,0 +1,51 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA PIEZA (2) Y LAS CERCAS
+(vuelta 186, TAREA 2.b; adjudicacion 6.2 del acta 186, que cierra la PD.5)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
+La marca que se busca es 'PENDIENTE DE TALLAR AL CIERRE', leida del propio instrumento.
+
+   A. la marca FUERA de toda cerca                -> pieza (2) falta: SI  | esperado SI  | CALZA
+      motivo: (2) el hueco de la cabecera sigue sin rellenar
+      MUTACION del esperado (exigir no): CAE
+   B. la marca SOLO DENTRO de una cerca           -> pieza (2) falta: no  | esperado no  | CALZA
+      MUTACION del esperado (exigir SI): CAE
+   C. la marca EN LAS DOS                         -> pieza (2) falta: SI  | esperado SI  | CALZA
+      motivo: (2) el hueco de la cabecera sigue sin rellenar
+      MUTACION del esperado (exigir no): CAE
+   D. CERO marcas                                 -> pieza (2) falta: no  | esperado no  | CALZA
+      MUTACION del esperado (exigir SI): CAE
+   E. una cerca SIN CERRAR y la marca DETRAS      -> pieza (2) falta: no  | esperado no  | CALZA
+      MUTACION del esperado (exigir SI): CAE
+
+   EL CASO E LLEVA SU VALOR EXACTO AFIRMADO Y NO UN 'LO QUE SALGA':
+      CIFRA renglones FUERA de cerca que llevan la marca: 0
+      ESPERADO exactamente 0 -> CALZA
+      MUTACION del esperado (exigir 1): CAE
+      CIFRA renglones totales del texto: 46 | fuera de cerca: 5
+
+   F. EL TEXTO REAL DE SALIDA_V185_T2A_REPORTE_184_CERRADO_EN_ROJO.md
+      122030 bytes en disco y 122030 normalizados a LF
+      CIFRA apariciones de la marca DENTRO de cerca: 1
+      CIFRA apariciones de la marca FUERA de cerca: 0
+      pieza (2) falta sobre el texto real: NO
+      ESPERADO: NO falta -> CALZA
+      MUTACION del esperado (exigir que SI falte): CAE
+
+   G. EL TALLADOR SIN FILAS SIGUE SIENDO ROJO, CON SU TEXTO DE HOY
+      pieza (2) falta: SI
+      motivo publicado: '(2) el fichero del tallador no trae ninguna fila de tabla'
+      motivo exigido  : '(2) el fichero del tallador no trae ninguna fila de tabla'
+      ESPERADO: falta con ESE motivo -> CALZA
+      MUTACION del esperado (exigir que NO falte): CAE
+
+   H. UNA FILA DEL TALLADOR SIN PEGAR SIGUE SIENDO ROJO
+      pieza (2) falta: SI
+      motivo: (2) 1 fila(s) de la cabecera tallada no estan pegadas
+      MUTACION del esperado (exigir que NO falte): CAE
+
+CIFRA casos: 9 | pasan: 9
+CIFRA casos que CAEN al mutar su esperado: 9 de 9
+CIFRA fallos: 0
+VEREDICTO: VERDE

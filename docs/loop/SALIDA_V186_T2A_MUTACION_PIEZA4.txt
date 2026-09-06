@@ -1,0 +1,63 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA PIEZA (4) DE piezas_que_faltan()
+(vuelta 186, TAREA 2.a; adjudicacion 6.1 del acta 186, que cierra la PD.6)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
+Los reportes se FABRICAN en memoria: aqui no se escribe ningun reporte.
+
+CASO A. LA BATERIA DE LA 183 CERRANDO LA 184, CON TRAMOS SELLADOS EN LA 184
+   pieza (4) falta: NO
+   ESPERADO: NO falta -> CALZA
+   MUTACION del esperado (exigir que SI falte): CAE
+
+CASO B. LA MISMA, CON LA LISTA DE TRAMOS VACIA: FALTA, Y CON EL MOTIVO
+        LITERAL DE HOY, LETRA POR LETRA
+   pieza (4) falta: SI
+   motivo publicado : '(4) la salida pegada en la seccion 9 es la de la vuelta 183 y no la de la 184: UNA CORRIDA DE OTRA VUELTA NO SATISFACE ESTA PIEZA'
+   motivo exigido   : '(4) la salida pegada en la seccion 9 es la de la vuelta 183 y no la de la 184: UNA CORRIDA DE OTRA VUELTA NO SATISFACE ESTA PIEZA'
+   ESPERADO: falta con ESE motivo -> CALZA
+   MUTACION del esperado (motivo cambiado en dos palabras): CAE
+
+CASO C. LA BATERIA DE LA 185 CERRANDO LA 184: UNA VUELTA POSTERIOR SIEMPRE
+        ES ROJA, CON TRAMOS SELLADOS Y SIN ELLOS
+   con tramos sellados  -> pieza (4) falta: SI
+      motivo: (4) la salida pegada en la seccion 9 es la de la vuelta 185 y no la de la 184: UNA CORRIDA DE OTRA VUELTA NO SATISFACE ESTA PIEZA
+      MUTACION del esperado (exigir que NO falte): CAE
+   sin tramos sellados  -> pieza (4) falta: SI
+      motivo: (4) la salida pegada en la seccion 9 es la de la vuelta 185 y no la de la 184: UNA CORRIDA DE OTRA VUELTA NO SATISFACE ESTA PIEZA
+      MUTACION del esperado (exigir que NO falte): CAE
+
+CASO D. EL PARAMETRO EN SU VALOR POR DEFECTO SE COMPORTA EXACTAMENTE COMO
+        LA CONDUCTA DE HOY, Y NO SE AFIRMA: SE COMPARA ESCENARIO A ESCENARIO
+        CONTRA UNA COPIA DE LA LOGICA VIEJA QUE VIVE EN ESTE ARNES
+   misma vuelta, nombre de corrida  viva False | vieja False | IGUAL
+   vuelta anterior                  viva True  | vieja True  | IGUAL
+   vuelta posterior                 viva True  | vieja True  | IGUAL
+   nombre anonimo                   viva False | vieja False | IGUAL
+   vuelta None                      viva False | vieja False | IGUAL
+   nombre de HUECO, misma vuelta    viva False | vieja False | IGUAL
+   nombre de HUECO, otra vuelta     viva True  | vieja True  | IGUAL
+   sin lineas de bateria            viva False | vieja False | IGUAL
+   CIFRA escenarios en que la conducta por defecto DIFIERE de la vieja: 0
+   ESPERADO: 0 -> CALZA
+   MUTACION del esperado (exigir que difieran en 1): CAE
+
+CASO E. LA SEGUNDA COPIA DE LA COMPARACION: SE CUENTA Y SE EXIGE 1
+   fichero: scripts/loop/cerrar_reporte.py
+   CIFRA apariciones CRUDAS: 2, lineas 438, 961
+   CIFRA apariciones en lineas de CODIGO: 1, lineas 438
+      LINEA 438 (CODIGO): if ajena != vuelta:
+      LINEA 961 (comentario): # comparacion `ajena != vuelta`, asi que la reparacion que la
+   ESPERADO: exactamente 1 en codigo -> CALZA
+   MUTACION del esperado (exigir 2 en codigo): CAE
+   Y LA PRUEBA DE QUE ESTE CASO SABE CONTAR: sobre un texto FABRICADO con
+   DOS copias de la comparacion en codigo, el conteo tiene que dar 2.
+      conteo sobre el fabricado: 2 en codigo, 3 crudo
+      ESPERADO 2 en codigo y 3 crudo -> CALZA
+      MUTACION del esperado (exigir 1 en codigo sobre el fabricado): CAE
+
+CIFRA casos: 14 | pasan: 14
+CIFRA casos que CAEN al mutar su esperado: 7 de 7
+CIFRA fallos: 0
+VEREDICTO: VERDE

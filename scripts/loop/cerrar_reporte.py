@@ -823,6 +823,43 @@ def citas_de_arnes_que_no_calzan(texto, leer_fichero):
     return fallos
 
 
+def renglones_fuera_de_cerca(texto):
+    """LOS RENGLONES DEL TEXTO QUE NO VIVEN DENTRO DE UN BLOQUE CERCADO.
+
+    Devuelve [(numero_de_linea, renglon)] en numeracion de 1. PURA.
+
+    NACE EN LA VUELTA 186, TAREA 2.b (adjudicacion `6.2` del acta 186, que cierra
+    la `PD.5`), Y NO ES CODIGO NUEVO: ES EL DESBLOQUEADOR QUE `cifras_sin_pareja()`
+    YA TENIA DENTRO, SEPARADO A UNA SEDE PARA QUE LA PIEZA (2) LO LLAME. El encargo
+    lo dice con esas palabras: *"reusando el desbloqueador que `cifras_sin_pareja()`
+    ya tiene en este mismo fichero. No escribas un tercero."*
+
+    UNA SEDE, DOS LLAMADORES: `cifras_sin_pareja()` y la pieza (2) de
+    `piezas_que_faltan()`. La linea de la cerca NO se devuelve, igual que antes: no
+    es contenido, es frontera.
+
+    LA CERCA SIN CERRAR, DICHA EN VEZ DE DEJARLA AL AZAR: si el texto abre una cerca
+    y no la cierra, todo lo que va detras queda DENTRO y por tanto fuera de esta
+    lista. Es la conducta que `cifras_sin_pareja()` ya tenia desde que nacio, y se
+    conserva letra por letra: cambiarla aqui habria cambiado de paso la guarda de
+    las cifras sin pareja, que no es lo que esta vuelta viene a hacer.
+
+    Y QUEDA DECLARADO LO QUE NO SE TOCA: `parrafos_fuera_de_cerca()` lleva su propio
+    recorrido de cercas porque hace OTRO trabajo (agrupa renglones en parrafos y
+    corta el parrafo en la frontera). No se funde con esta, y esa decision se
+    escribe aqui para que no haya que volver a deducirla."""
+    fuera = []
+    dentro = False
+    for n, linea in enumerate(texto.split(NL), 1):
+        if linea.lstrip().startswith(CERCA):
+            dentro = not dentro
+            continue
+        if dentro:
+            continue
+        fuera.append((n, linea))
+    return fuera
+
+
 def cifras_sin_pareja(texto):
     """LAS CIFRAS DE BYTES Y LOS SHA QUE EL REPORTE PUBLICA SIN SU PAREJA.
 
@@ -836,13 +873,7 @@ def cifras_sin_pareja(texto):
     especie, o si la linea nombra al menos DOS marcas de convencion. Los bloques
     cercados quedan fuera porque son citas de la salida de un instrumento."""
     fallos = []
-    dentro_de_cerca = False
-    for n, linea in enumerate(texto.split(NL), 1):
-        if linea.lstrip().startswith(CERCA):
-            dentro_de_cerca = not dentro_de_cerca
-            continue
-        if dentro_de_cerca:
-            continue
+    for n, linea in renglones_fuera_de_cerca(texto):
         marcas = sum(1 for m in MARCAS_CONVENCION if m in linea)
         for especie, hits in (("bytes", PATRON_BYTES.findall(linea)),
                               ("sha", PATRON_SHA.findall(linea)
@@ -856,7 +887,8 @@ def cifras_sin_pareja(texto):
 
 
 def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
-                      vuelta=None, nombre_bateria=None):
+                      vuelta=None, nombre_bateria=None,
+                      tramos_sellados_en_esta_vuelta=None):
     """LAS CUATRO PIEZAS, COMPROBADAS SOBRE EL TEXTO YA ESCRITO. Devuelve la
     lista de las que FALTAN, vacia si estan las cuatro.
 
@@ -865,7 +897,16 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
     positivo por mutacion pueda tumbarla una a una **sin tocar el repo y sin
     escribir nada**. Si esto viviera dentro del cuerpo de una funcion que
     escribe, no habria nada que un arnes pudiera llamar, y una guarda que no se
-    puede llamar no se puede probar."""
+    puede llamar no se puede probar.
+
+    EL SEXTO PARAMETRO NACE EN LA VUELTA 186, TAREA 2.a (adjudicacion `6.1` del
+    acta 186, que cierra la `PD.6`), y SU VALOR POR DEFECTO `None` CONSERVA
+    EXACTAMENTE LA CONDUCTA DE HOY, igual que hizo `rama_de_la_seccion9()` con
+    el suyo en la 185: sin tramos sellados, la rama de la bateria continuada no
+    abre y la pieza (4) cae en los mismos casos en que caia antes. `main()` lo
+    COMPUTA con `tramos_por_vuelta()` y NO lo recibe por bandera: no hay opcion
+    de linea de ordenes para esto a proposito, porque UNA EVIDENCIA QUE SE PUEDE
+    TECLEAR NO ES UNA EVIDENCIA."""
     faltan = []
 
     # (1) EL VEREDICTO ESCRITO
@@ -874,7 +915,20 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
         faltan.append("(1) el veredicto de una linea no esta escrito")
 
     # (2) LA CABECERA PEGADA
-    if HUECO_CABECERA in texto:
+    # LA MARCA SE BUSCA FUERA DE LOS BLOQUES CERCADOS (vuelta 186, TAREA 2.b;
+    # adjudicacion `6.2` del acta 186, que cierra la `PD.5`). Hasta aqui esta
+    # pieza buscaba en TODO el texto y se encendia sobre una CITA: el reporte de
+    # la 185 pego la salida roja del cierre de la 184 dentro de una cerca, esa
+    # salida nombraba la marca, y la pieza (2) la conto como hueco sin rellenar.
+    # Un falso positivo no es fallar ruidoso, es ruido, y ademas hacia IMPOSIBLE
+    # que un reporte citara entera la salida roja de otro, que es lo que el
+    # encargo permanente manda hacer.
+    # SE REUSA EL DESBLOQUEADOR QUE `cifras_sin_pareja()` YA TENIA, separado a
+    # `renglones_fuera_de_cerca()`: una sede, dos llamadores, y NO un tercero.
+    # LO DEMAS DE LA PIEZA (2) NO SE TOCA: si el hueco esta fuera de una cerca
+    # sigue siendo rojo, si el tallador no trae filas sigue siendo rojo, y si
+    # alguna fila no esta pegada sigue siendo rojo, con sus textos de hoy.
+    if any(HUECO_CABECERA in l for _n, l in renglones_fuera_de_cerca(texto)):
         faltan.append("(2) el hueco de la cabecera sigue sin rellenar")
     elif not filas_tallador:
         faltan.append("(2) el fichero del tallador no trae ninguna fila de tabla")
@@ -901,8 +955,25 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
                 faltan.append("(4) %d linea(s) de la bateria no estan dentro de la "
                               "seccion 9" % len(fuera))
             else:
+                # LA REGLA VIVE EN UNA SOLA SEDE Y LA PIEZA (4) LA LLAMA (vuelta
+                # 186, TAREA 2.a; adjudicacion `6.1` del acta 186, que cierra la
+                # `PD.6`). Hasta aqui esta pieza llevaba SU PROPIA COPIA de la
+                # comparacion `ajena != vuelta`, asi que la reparacion que la
+                # vuelta 185 le hizo a `rama_de_la_seccion9()` no le llegaba: el
+                # instrumento decia dos cosas distintas del mismo caso.
+                #
+                # NO SE LE PONE UNA COPIA SINCRONIZADA DE LA RAMA NUEVA. Dos
+                # copias que hoy dicen lo mismo son dos copias que manana diran
+                # cosas distintas, y eso es lo que ha costado cinco vueltas.
+                #
+                # EL ROJO VIEJO NO SE REESCRIBE: si la rama sale `ROJO`, esta
+                # pieza sigue cayendo CON SU TEXTO DE HOY, palabra por palabra.
+                # Lo unico que cambia es QUIEN decide.
                 ajena = vuelta_de_fichero(nombre_bateria)
-                if vuelta is not None and ajena is not None and ajena != vuelta:
+                rama_p4, _motivo_p4 = rama_de_la_seccion9(
+                    lineas_bateria, nombre_bateria, vuelta,
+                    tramos_sellados_en_esta_vuelta)
+                if vuelta is not None and ajena is not None and rama_p4 == "ROJO":
                     faltan.append("(4) la salida pegada en la seccion 9 es la de la "
                                   "vuelta %d y no la de la %d: UNA CORRIDA DE OTRA "
                                   "VUELTA NO SATISFACE ESTA PIEZA" % (ajena, vuelta))
@@ -1110,8 +1181,13 @@ def main():
 
     print("D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS")
     de_nuevo = leer(REPORTE)
+    # LA EVIDENCIA DE LOS TRAMOS SE LE PASA TAMBIEN A LA PIEZA (4) (vuelta 186,
+    # TAREA 2.a). Es la MISMA lista que ya se computo arriba con
+    # `tramos_por_vuelta()` y que se le pasa a `rama_de_la_seccion9()`: una sede,
+    # dos llamadores, y ninguna bandera de linea de ordenes.
     faltan = piezas_que_faltan(de_nuevo, filas, lineas_bat,
-                               vuelta=V, nombre_bateria=a.bateria)
+                               vuelta=V, nombre_bateria=a.bateria,
+                               tramos_sellados_en_esta_vuelta=tramos_sellados)
     for etiqueta in ("(1) veredicto escrito", "(2) cabecera pegada",
                      "(3) secciones 3 a 9",
                      "(4) bateria dentro de la 9 o hueco declarado"):
