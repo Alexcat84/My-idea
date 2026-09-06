@@ -1,0 +1,101 @@
+==============================================================================
+VUELTA 191, TAREA 2: EL COTEJO, DESPUES DE ABRIR EL DESTAPE
+==============================================================================
+
+A) LOS TRES FICHEROS, MEDIDOS POR LAS DOS CONVENCIONES DE BYTES Y POR LAS
+   DOS DE LINEAS, QUE ES LA TAREA 3 DE ESTA MISMA VUELTA
+   docs/loop/SALIDA_V191_T2_CIEGA.txt             disco  41803 | LF  41803 | lineas count(NL)  488 | split  489 | sha256 LF 94b7fbfb243c1b51
+   docs/loop/SALIDA_V191_T2_MIS_CLASES.txt        disco   5648 | LF   5648 | lineas count(NL)   65 | split   66 | sha256 LF f3aa1e51a7e8eedb
+   docs/loop/SALIDA_V191_T2_DESTAPE.txt           disco  33735 | LF  33735 | lineas count(NL)  132 | split  133 | sha256 LF 8bdde63bb17cdf71
+
+B) EL ORDEN, LEIDO DE GIT Y NO PROMETIDO
+   aislamiento (paso 1)   -> 1 commit(s)
+      2a414476	VUELTA 191, TAREA 2, PASO 1: EL SUJETO DE LA RELECTURA AL DOBLE DEL 3182, AISLADO ANTES DE MIRAR NADA Y CON EL SOLAPE EN CERO POR C
+   mis clases (paso 2)    -> 1 commit(s)
+      5915621a	VUELTA 191, TAREA 2, PASO 2: MIS CLASES DE LA CIEGA DEL AL DOBLE, ESCRITAS Y COMMITEADAS ANTES DE ABRIR EL DESTAPE, con mis trece d
+   Y EL FICHERO DE CLASES ESTA EN GIT SIN CAMBIOS DESDE SU COMMIT:
+      git status de docs/loop/SALIDA_V191_T2_MIS_CLASES.txt: '(limpio)'
+
+C) LOS DOS REPARTOS, CONTADOS DE SUS FICHEROS
+   CIFRA puestos en mis clases: 30
+   CIFRA puestos en el destape: 30
+   CIFRA dudosos mios, leidos de mi propia cabecera: 13
+      201, 610, 716, 873, 1067, 1203, 1369, 1803, 1813, 2155, 3068, 3087, 3183
+   REPARTO MIO          A 7 B 3 D 20
+   REPARTO DEL ARCHIVO  A 4 B 1 C 1 D 24
+
+D) EL COTEJO, PUESTO A PUESTO
+   puesto | mia | archivo | veredicto | dudoso mio
+        4 |  D  |    D    | COINCIDE  | no
+       21 |  D  |    D    | COINCIDE  | no
+       68 |  D  |    D    | COINCIDE  | no
+      130 |  D  |    D    | COINCIDE  | no
+      156 |  A  |    A    | COINCIDE  | no
+      201 |  B  |    C    | DISCREPA  | SI
+      392 |  A  |    A    | COINCIDE  | no
+      610 |  D  |    D    | COINCIDE  | SI
+      649 |  D  |    D    | COINCIDE  | no
+      716 |  D  |    B    | DISCREPA  | SI
+      873 |  D  |    D    | COINCIDE  | SI
+      905 |  A  |    A    | COINCIDE  | no
+      964 |  D  |    D    | COINCIDE  | no
+      970 |  D  |    D    | COINCIDE  | no
+     1067 |  D  |    D    | COINCIDE  | SI
+     1203 |  D  |    D    | COINCIDE  | SI
+     1369 |  B  |    D    | DISCREPA  | SI
+     1803 |  D  |    D    | COINCIDE  | SI
+     1813 |  A  |    D    | DISCREPA  | SI
+     2028 |  D  |    D    | COINCIDE  | no
+     2155 |  D  |    D    | COINCIDE  | SI
+     2424 |  A  |    A    | COINCIDE  | no
+     2658 |  D  |    D    | COINCIDE  | no
+     2832 |  A  |    D    | DISCREPA  | no
+     2911 |  D  |    D    | COINCIDE  | no
+     3068 |  D  |    D    | COINCIDE  | SI
+     3087 |  A  |    D    | DISCREPA  | SI
+     3169 |  D  |    D    | COINCIDE  | no
+     3183 |  B  |    D    | DISCREPA  | SI
+     3327 |  D  |    D    | COINCIDE  | no
+
+E) LAS CIFRAS, CONTADAS Y NO TECLEADAS
+   CIFRA releidos: 30
+   CIFRA COINCIDEN: 23
+   CIFRA DISCREPAN: 7
+   CIFRA discrepancias DENTRO de mis dudosos: 6 (201, 716, 1369, 1813, 3087, 3183)
+   CIFRA discrepancias FUERA de mis dudosos: 1 (2832)
+   CIFRA dudosos que SI coincidieron: 7
+
+F) LAS DISCREPANCIAS, UNA A UNA, CON LA RAZON DEL ARCHIVO AL LADO
+   PUESTO 201  (dudoso mio: SI)
+      mi clase B, mi motivo: los dos mandan sobre el control de la junta y ningun paso se toca; ids casi gemelos. DUDOSO MIO
+      del archivo C, su razon: El control de la junta en etapas tardias contra el control de la junta desde la primera ronda: momentos distintos, sano. FIGURA: RACIMO NUEVO que no esta en RACIMOS_MIEMBROS.jsonl, con el puesto 168 s
+   PUESTO 716  (dudoso mio: SI)
+      mi clase D, mi motivo: cuantos cofundadores sumar contra decidir si vas solo o en equipo: la misma decision en dos actos distintos. DUDOSO MIO
+      del archivo B, su razon: Cuantos contra si alguno, con arista en los dos sentidos verificada resolviendo a nodo vivo, y con el paso final de uno metido dentro del otro. decision_fundador_solo_vs_equipo decide SI hay equipo: e
+   PUESTO 1369  (dudoso mio: SI)
+      mi clase B, mi motivo: la bateria de ratios incluye el ROE en su paso 1 y el corto casi cabe entero en el largo. DUDOSO MIO
+      del archivo D, su razon: La bateria entera contra uno de sus ratios, del mismo libro y sin arista entre ellos. analisis_de_ratios_financieros NOMBRA el retorno sobre capital dentro de su paso 1, en UNA LINEA, entre los ratios
+   PUESTO 1813  (dudoso mio: SI)
+      mi clase A, mi motivo: eco efectividad contra eco_efectividad_2, ids gemelos y el mismo paradigma: los ciclos biologicos y tecnicos en los dos. DUDOSO MIO
+      del archivo D, su razon: El producto piloto contra el cambio de pregunta, MISMA FUENTE y sin arista entre ellos, Y ES UNA TRAMPA DE IDENTIFICADOR QUE NO CONFIRMA: el segundo nodo es el primero con un dos al final y aun asi no
+   PUESTO 2832  (dudoso mio: NO)
+      mi clase A, mi motivo: ids gemelos del mismo punto de Deming y 3 de los 4 pasos de A estan en B: identificar barreras, plan con responsable, y cambiar carteles por acciones
+      del archivo D, su razon: eliminacion_barreras_orgullo_del_trabajo (Eliminacion de Barreras al Orgullo del Trabajo, Punto 12 de Deming: reunir los reportes repetidos, revisar la evaluacion y el pago por pieza, plan con respons
+   PUESTO 3087  (dudoso mio: SI)
+      mi clase A, mi motivo: los 3 pasos del principio de Pareto estan dentro de los 8 del analisis de proveedores. DUDOSO MIO
+      del archivo D, su razon: analisis_pareto_de_proveedores (Juran: recopilar datos de defectos y rechazos por proveedor/parte/proceso, clasificar perdidas con el principio 80/20, identificar los pocos proveedores que concentran 
+   PUESTO 3183  (dudoso mio: SI)
+      mi clase B, mi motivo: medicion de calidad general contra la de manufactura, ids casi gemelos y la mitad de los pasos del corto en el largo. DUDOSO MIO
+      del archivo D, su razon: medicion_calidad (Crosby Paso 3: identificar metricas por area incluyendo administrativas, revisar y crear metricas donde falten, involucrar a responsables en definir sus indicadores, registrar linea 
+
+G) LA MARCA `DISCUTIBLE MARCADO` EN LAS RAZONES DE ESTOS 30, CONTADA AQUI
+   (es la vara de la TAREA 5 aplicada al tramo de la TAREA 2, y se cuenta
+    del destape, que es el fichero que trae las razones)
+   CIFRA de los 30 con la marca: 3 (2832, 2911, 3327)
+   CIFRA de los que me tumbaron que llevan la marca: 1 de 7
+
+H) EL ARCHIVO NO SE TOCA, Y SE MIDE PARA DECIRLO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 | LF 4054129 | sha256 LF 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   CIFRA filas de `git diff --numstat -- dataset/`: 0
+
+FIN DEL COTEJO
