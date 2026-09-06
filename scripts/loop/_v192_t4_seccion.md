@@ -1,9 +1,17 @@
 ### TAREA 4. LA CUARTA PUERTA DEL SELLO DE LA APERTURA DEL AUDITOR. **CERRADA.** El fichero no se clona: se le anade, y su arnes de la nomina sigue reproduciendo byte a byte.
 
-**(a) LA CUARTA PUERTA, ANADIDA A `scripts/loop/apertura_del_auditor.py`.** El
-fichero pasa de **14724 bytes en disco y 14724 en LF** a **21223 bytes en disco y
-21223 en LF**, y **COMPILA**. Lo que se le anade son **cinco funciones y cuatro
-constantes**, y ni una linea de las tres puertas viejas se toca:
+**(a) LA CUARTA PUERTA, ANADIDA A `scripts/loop/apertura_del_auditor.py`.** **Lo
+que el fichero crecio va cercado abajo**, citado de la salida del parche, porque
+la primera de las dos cifras es de ANTES y una cifra de bytes suelta al lado de
+una ruta se lee como una afirmacion sobre esa ruta HOY:
+
+```
+   apertura_del_auditor.py pasa de 14724 a 21223 bytes en disco
+   COMPILA
+```
+
+Lo que se le anade son **cinco funciones y cuatro constantes**, y ni una linea de
+las tres puertas viejas se toca:
 
 - `puestos_sellados()`. **El sujeto lo define el sello y nadie mas:** lee el
   sello del turno, de ahi la ruta de la ciega, y de la ciega sus

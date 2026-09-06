@@ -1,0 +1,70 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 192, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 192 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 70627 | saltos de linea: 985
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> NO (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> NO (se esperaba SI)
+   contiene '\n## 3.'                            -> SI (se esperaba NO)
+   contiene '\n## 9.'                            -> SI (se esperaba NO)
+
+A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
+     (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del
+      reporte de la 190 salio con la etiqueta DUPLICADA porque este
+      instrumento la pega sin comprobar si ya venia puesta. SE FALLA
+      RUIDOSO: no se limpia en silencio, porque limpiar en silencio es
+      la otra mitad de la misma enfermedad)
+     apariciones de 'EL VEREDICTO DE UNA LINEA:' en el veredicto recibido: 0
+     empieza por '**': no | termina por '**': no
+     CIFRA motivos: 0
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V192_TALLADOR_CABECERA.txt             2329 bytes, 11 filas de tabla
+   scripts/loop/_v192_cierre_texto.md                     17101 bytes, sha256 af8167cd55ec085d
+      ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
+      ## 4. EL ESTADO DEL ARBOL, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO
+      ## 5. LAS CORRECCIONES DECLARADAS DE ESTA VUELTA
+      ## 6. PENDIENTES DE DOCTRINA
+      ## 7. LAS PREGUNTAS QUE TRAIGO
+      ## 8. LAS CAIDAS PROPIAS DE ESTA VUELTA, LO QUE QUEDA EN ROJO, Y LOS DISCUTIBLES
+   docs/loop/SALIDA_V192_BATERIA.txt                    NO EXISTE
+   CIFRA lineas no vacias de la bateria: 0
+   vuelta que lleva dentro el nombre del fichero: 192
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+   CIFRA tramos de esa bateria con fichero en disco: 0
+   CIFRA tramos sellados EN LA VUELTA 192: 0 []
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): HUECO
+      motivo: la bateria de la vuelta 192 no corrio: su fichero no existe o esta vacio
+   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:
+   --hueco-atribucion: 'por AUDITOR.md 6.1, decision del fundador del 5 sep 2026, la bateria de mutaciones corre CADA CINCO VUELTAS en una vuelta propia que no lleva nada mas. La 189 la corrio ENTERA y sus diez tramos siguen sellados en disco. Por esa cadencia LA SIGUIENTE VUELTA DE BATERIA ES LA 194, y esta vuelta NO es de bateria: su encargo se lo dice con esas palabras y su sello de apertura lo escribe en la primera linea. Lo que esta vuelta SI hizo tocando el radio de la bateria es MIRARLO ANTES: la TAREA 3 escribio guarda_de_entrada_a_la_nomina.py, que cruza lo que ninguna guarda cruzaba, de los que el censo RECLAMA cual tiene el sujeto vivo, y sale VERDE CON DEUDA DECLARADA, cero fallos y dos deudas nombradas. La nomina NO se toco y sigue en 127 entradas leidas del instrumento, asi que la 194 la encontrara completa; la opcion c que el fundador RECHAZO el 5 sep 2026 sigue rechazada. Y el unico fichero de la nomina cuyo sujeto toque, apertura_del_auditor.py por la TAREA 4, se re corrio con el parche puesto y su salida sellada reproduce byte a byte.'
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 192
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 192
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LAS CINCO TAREAS CERRARON SIN MOVER UN SOLO VEREDICTO DEL ARCHIVO, QUE ABRE Y CIERRA EN 0a77b5a35a962621 POR LAS DOS CON'
+   CIFRA numerales hallados en el veredicto: 2
+      'CINCO'    -> 5 tareas
+      'CUATRO'   -> 4 caidas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 3
+      tareas   -> 5
+   CIFRA numerales que NO calzan: 1
+      el veredicto publica 'CUATRO' (4 caidas) y el cuerpo, CONTADO, dice 3
+
+ROJO, 5 motivo(s), y NO se escribe nada:
+   el sujeto no esta en el estado de un reporte SIN CERRAR: '**EL VEREDICTO DE UNA LINEA: SIN ESC'
+   el sujeto no esta en el estado de un reporte SIN CERRAR: 'PENDIENTE DE TALLAR AL CIERRE'
+   el sujeto no esta en el estado de un reporte SIN CERRAR: '\n## 3.'
+   el sujeto no esta en el estado de un reporte SIN CERRAR: '\n## 9.'
+   el veredicto publica 'CUATRO' (4 caidas) y el cuerpo, CONTADO, dice 3

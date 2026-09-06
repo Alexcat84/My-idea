@@ -113,10 +113,19 @@ IDENTICO: True
 ```
 
 El re corrido escribe `docs/loop/SALIDA_V192_T1A_RECORRIDO_SIN_ESCRIBIR.txt` y
-dice con sus palabras que **NO consume el numero `R.55`**. La sede paso de
-**998216 bytes en disco y 998216 bytes normalizados a LF** a **1020758 bytes en
-disco y 1020758 bytes normalizados a LF** al escribir la entrada, y **no se movio
-un byte en el re corrido**.
+dice con sus palabras que **NO consume el numero `R.55`**. **Lo que la sede se
+movio AL ESCRIBIR la entrada va cercado abajo**, citado de la salida del propio
+registrador, porque son cifras de ANTES y una cifra de bytes suelta al lado de
+una ruta se lee como una afirmacion sobre esa ruta HOY:
+
+```
+L) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 998216 a 1020758 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+```
+
+**Y en el re corrido no se movio un byte**, que es lo que prueba el bloque de
+arriba.
 
 **EL CASO POSITIVO POR MUTACION DE LAS TRES COSAS NUEVAS: VERDE**, en
 `docs/loop/SALIDA_V192_T1A_MUTACION_REGISTRADOR.txt` (**disco 3568 bytes | LF 3568
