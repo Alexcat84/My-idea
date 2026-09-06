@@ -161,6 +161,12 @@ MARCA_ABRE = "<!-- CABECERA TALLADA -->"
 MARCA_CIERRA = "<!-- FIN CABECERA TALLADA -->"
 VEREDICTO_VIEJO = "**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**"
 HUECO_CABECERA = "PENDIENTE DE TALLAR AL CIERRE"
+# LA ETIQUETA DEL VEREDICTO, SACADA A CONSTANTE EN LA VUELTA 191 (TAREA 4).
+# Existia tecleada DOS veces, en la comprobacion del estado y en la composicion
+# final, y de ahi nace la guarda de mas abajo: la que compone y la que vigila
+# tienen que mirar EL MISMO literal o la vigilancia no vale.
+ETIQUETA_VEREDICTO = "EL VEREDICTO DE UNA LINEA:"
+ENVOLTURA_VEREDICTO = "**"
 CAB_9 = "## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE"
 CAB_9_HUECO = "## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO"
 
@@ -1544,7 +1550,7 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
 
     # (1) EL VEREDICTO ESCRITO
     if (VEREDICTO_VIEJO in texto
-            or "**EL VEREDICTO DE UNA LINEA:" not in texto):
+            or (ENVOLTURA_VEREDICTO + ETIQUETA_VEREDICTO) not in texto):
         faltan.append("(1) el veredicto de una linea no esta escrito")
 
     # (2) LA CABECERA PEGADA
@@ -1647,6 +1653,62 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
     return faltan
 
 
+def veredicto_ya_viene_vestido(veredicto):
+    """SI EL `--veredicto` QUE SE RECIBE YA TRAE LA ETIQUETA O LOS ASTERISCOS.
+    PURA. Devuelve `(motivos, hallazgos)`, las dos listas de cadenas.
+
+    --- POR QUE NACE (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191) ---
+
+    LA CAIDA, CON SU LINEA. La linea 50 del reporte de la vuelta 190 dice, literal:
+    `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO
+    TAREAS...`. La causa esta medida y no supuesta: este mismo fichero compone
+    `"**EL VEREDICTO DE UNA LINEA: %s**"` con lo que le pasan, y su propia salida
+    sellada (`SALIDA_V190_CERRAR_REPORTE.txt`, linea 45) prueba que **lo que le
+    pasaron ya traia la etiqueta y sus asteriscos**. Y no fue la primera vez:
+    medido fichero a fichero en el bloque `H.5` del sello de apertura de la 191,
+    **`REPORTE_V188.md` la trae DOS veces tambien**.
+
+    SE FALLA RUIDOSO Y NO SE LIMPIA EN SILENCIO. Quitarle la etiqueta al vuelo
+    seria la otra mitad de la misma enfermedad: el que la paso de mas no se
+    enteraria nunca, y la degradacion silenciosa es lo que el banco 9 persigue.
+    **Aqui se cae en ROJO diciendo QUE SE RECIBIO y QUE SE ESPERABA.**
+
+    LOS TRES MOTIVOS, CADA UNO CON SU LITERAL Y NINGUNO POR PARECIDO:
+      1. el veredicto trae dentro la etiqueta `EL VEREDICTO DE UNA LINEA:`;
+      2. empieza por `**`;
+      3. termina por `**`.
+    Un veredicto limpio no dispara ninguno de los tres."""
+    v = (veredicto or "").strip()
+    motivos = []
+    hallazgos = []
+    n = v.count(ETIQUETA_VEREDICTO)
+    hallazgos.append("apariciones de %r en el veredicto recibido: %d"
+                     % (ETIQUETA_VEREDICTO, n))
+    if n:
+        motivos.append(
+            "el --veredicto YA TRAE la etiqueta %r (%d vez/veces). RECIBIDO: %r. "
+            "ESPERADO: el texto del veredicto SIN la etiqueta, porque este "
+            "instrumento la pone el. Pegarla dos veces es lo que produjo la linea "
+            "50 del reporte de la vuelta 190."
+            % (ETIQUETA_VEREDICTO, n, v[:160]))
+    abre = v.startswith(ENVOLTURA_VEREDICTO)
+    cierra = v.endswith(ENVOLTURA_VEREDICTO)
+    hallazgos.append("empieza por %r: %s | termina por %r: %s"
+                     % (ENVOLTURA_VEREDICTO, "SI" if abre else "no",
+                        ENVOLTURA_VEREDICTO, "SI" if cierra else "no"))
+    if abre:
+        motivos.append(
+            "el --veredicto EMPIEZA por %r. RECIBIDO: %r. ESPERADO: sin los "
+            "asteriscos de apertura, porque este instrumento los pone el."
+            % (ENVOLTURA_VEREDICTO, v[:80]))
+    if cierra:
+        motivos.append(
+            "el --veredicto TERMINA por %r. RECIBIDO: %r. ESPERADO: sin los "
+            "asteriscos de cierre, porque este instrumento los pone el."
+            % (ENVOLTURA_VEREDICTO, v[-80:]))
+    return motivos, hallazgos
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--vuelta", type=int, required=True)
@@ -1685,6 +1747,21 @@ def main():
         if hay != esperado:
             rojos.append("el sujeto no esta en el estado de un reporte SIN CERRAR: %r"
                          % marca[:36])
+    print("")
+
+    print("A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA")
+    print("     (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del")
+    print("      reporte de la 190 salio con la etiqueta DUPLICADA porque este")
+    print("      instrumento la pega sin comprobar si ya venia puesta. SE FALLA")
+    print("      RUIDOSO: no se limpia en silencio, porque limpiar en silencio es")
+    print("      la otra mitad de la misma enfermedad)")
+    motivos_vestido, hallazgos_vestido = veredicto_ya_viene_vestido(a.veredicto)
+    for h in hallazgos_vestido:
+        print("     %s" % h)
+    print("     CIFRA motivos: %d" % len(motivos_vestido))
+    for m in motivos_vestido:
+        print("        " + m)
+    rojos.extend(motivos_vestido)
     print("")
 
     print("B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS")
@@ -1814,7 +1891,11 @@ def main():
     print("   cabecera: %d bytes de hueco -> %d bytes de tabla pegada"
           % (i1 - i0, len(bloque_cabecera.encode("utf-8"))))
 
-    veredicto = "**EL VEREDICTO DE UNA LINEA: %s**" % a.veredicto.strip()
+    # LA COMPOSICION MIRA EL MISMO LITERAL QUE LA GUARDA DE `A.1` (vuelta 191,
+    # TAREA 4). Antes estaba tecleado aqui suelto, y una guarda que vigila un
+    # literal distinto del que se compone no vigila nada.
+    veredicto = "%s%s %s%s" % (ENVOLTURA_VEREDICTO, ETIQUETA_VEREDICTO,
+                               a.veredicto.strip(), ENVOLTURA_VEREDICTO)
     i = texto.index(VEREDICTO_VIEJO)
     j = texto.index(NL + NL, i)
     texto = texto[:i] + veredicto + texto[j + 1:]

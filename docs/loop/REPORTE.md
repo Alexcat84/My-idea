@@ -92,7 +92,7 @@ vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 191 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, con sus NUEVE adjudicaciones `4.1` a `4.9`, QUE ESTA VEZ SI SON NUEVE A FAVOR: seis son los discutibles del ejecutor (`D.1` a `D.6`) y los seis van A FAVOR, y las tres restantes (`4.7`, `4.8`, `4.9`) son las tres preguntas contestadas. EL CERO DE `EN CONTRA` TIENE QUE SALIR SIN QUE LA MAQUINA SE ROMPA POR NO ENCONTRAR NINGUNA, y se prueba por mutacion con un acta fabricada que SI lleve una. Mas los TRES hallazgos de la seccion 5 que no salen de ningun discutible (la marca `DISCUTIBLE MARCADO` contra la dificultad medida en `5.1`, la etiqueta del veredicto duplicada en `5.2`, y `git checkout --` que no restaura byte a byte en `5.3`), UNA caida propia del auditor de metodo ESCRITA COMO UNA Y NO OMITIDA, CERO caidas del ejecutor que acumulen con las TRES de metodo que el reporte de la 190 declara, y LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos con su nota de SOLAPE TOTAL a proposito. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido, no escribe nada, y se prueba re corriendolo con la sede medida en bytes antes y despues | **CERRADA EN VERDE** | `SALIDA_V191_T1A_REGISTRO_R53.txt`, `SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V191_T1A_SIMULACION.txt` |
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DEL 3182. BLOQUEANTE. Es la deuda de credito que la TAREA 4 de la 190 dejo medida y que no se auto encargo, adjudicada A FAVOR en la `4.5` del acta 191 y encargada ahi mismo: quien encarga el doble es el auditor. EL TRAMO es la tanda de 30 puestos de `docs/loop/SALIDA_V190_T4_CIEGA.txt`, donde la discrepancia del `3182` cayo FUERA de los dudosos marcados. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **CERRADA, CON UNA DISCREPANCIA FUERA DEL MARCADO TRAIDA ENTERA** | `SALIDA_V191_T2_AISLAMIENTO.txt`, `SALIDA_V191_T2_CIEGA.txt`, `SALIDA_V191_T2_MIS_CLASES.txt`, `SALIDA_V191_T2_DESTAPE.txt`, `SALIDA_V191_T2_COTEJO.txt` |
 | **TAREA 3** | LAS DOS CONVENCIONES DE `lineas`, QUE LLEVAN DOS VUELTAS ESPERANDO. Es la `5.1` del acta 190 y no se ha tocado. Hay instrumentos de la cadena que cuentan lineas con `len(texto.split(NL))`, que suma un elemento vacio final que no es una linea, y otros que cuentan con `texto.count(NL)`, que si calza con `wc -l`. ES UNA MEDICION ANTES QUE UN ARREGLO: (a) MIDE PRIMERO cuantos ficheros de `scripts/loop/` cuentan lineas por cada una de las dos convenciones, nombralos y publica la cifra, porque sin esa cifra el arreglo no se sabe de que tamano es; (b) DESPUES ARREGLA con la vara de las dos convenciones de BYTES que esta casa ya construyo: o se publica la pareja, o se publica la que calza con `wc -l` diciendo cual es; (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un instrumento vuelve a publicar una sola cifra de lineas por la convencion que no calza. NO SE TOCAN LOS NUMEROS YA PUBLICADOS EN REPORTES CERRADOS | **CERRADA EN VERDE** | `SALIDA_V191_T3_CENSO_ANTES.txt`, `SALIDA_V191_T3_CENSO_DESPUES.txt`, `SALIDA_V191_T3_ARREGLO.txt`, `SALIDA_V191_T3_MUTACION_LINEAS.txt` |
-| **TAREA 4** | LA GUARDA DEL VEREDICTO DUPLICADO EN `cerrar_reporte.py`. Es el hallazgo `5.2` del acta 191. La linea 50 del reporte de la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS...`, y la causa esta medida: `cerrar_reporte.py` en su linea 1817 compone la etiqueta y su propia salida prueba que el veredicto que se le paso YA la traia. (a) QUE `cerrar_reporte.py` CAIGA EN ROJO si el `--veredicto` que recibe ya trae la etiqueta o los asteriscos, en vez de pegarla dos veces, y que diga QUE RECIBIO y QUE ESPERABA: fallar ruidoso, sin limpiarla en silencio, porque limpiar en silencio es la otra mitad de la misma enfermedad. (b) CASO POSITIVO POR MUTACION que CAIGA si la guarda se quita. (c) EL REPORTE DE LA 190 NO SE REESCRIBE: esta cerrado y archivado byte a byte, y su etiqueta doble se queda donde esta con la explicacion al lado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LA GUARDA DEL VEREDICTO DUPLICADO EN `cerrar_reporte.py`. Es el hallazgo `5.2` del acta 191. La linea 50 del reporte de la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS...`, y la causa esta medida: `cerrar_reporte.py` en su linea 1817 compone la etiqueta y su propia salida prueba que el veredicto que se le paso YA la traia. (a) QUE `cerrar_reporte.py` CAIGA EN ROJO si el `--veredicto` que recibe ya trae la etiqueta o los asteriscos, en vez de pegarla dos veces, y que diga QUE RECIBIO y QUE ESPERABA: fallar ruidoso, sin limpiarla en silencio, porque limpiar en silencio es la otra mitad de la misma enfermedad. (b) CASO POSITIVO POR MUTACION que CAIGA si la guarda se quita. (c) EL REPORTE DE LA 190 NO SE REESCRIBE: esta cerrado y archivado byte a byte, y su etiqueta doble se queda donde esta con la explicacion al lado | **CERRADA EN VERDE, CON UNA PARADA DECLARADA** | `SALIDA_V191_T4_MUTACION_VEREDICTO.txt`, `SALIDA_V191_APERTURA.txt` bloque `H.5` |
 | **TAREA 5** | LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD MEDIDA. SOLO MEDIR, Y NO TOCA NI UNA RAZON DEL ARCHIVO. Es el hallazgo `5.1` del acta 191: sobre su tanda de treinta, dos lectores independientes discrepan del archivo en los MISMOS OCHO puestos, `DISCUTIBLE MARCADO` aparece en 427 de las 3.388 filas y en CERO de esos ocho. TREINTA CASOS NO SON UNA LEY, y por eso esto es una medicion. (a) DI PRIMERO CUAL ES TU UNIVERSO Y COMO LO CONSTRUYES antes de contar nada: que ficheros de cotejo de ciega existen, de que vueltas, y cuales quedan fuera por no ser legibles con una regla unica, con la cifra de los que entran y de los que no y con sus nombres, porque un universo elegido despues de ver el resultado no sirve. (b) CUENTA sobre ese universo cuantos puestos han tumbado alguna vez a un lector, cuantos de esos llevan la marca, y cual es la tasa de la marca en el archivo entero: las tres cifras juntas o ninguna. (c) NO SAQUES LA CONCLUSION SI LA CUENTA NO LA SOSTIENE: si el universo sale pequeno, dilo y publica el tamano. (d) NO SE ESCRIBE NI UNA FILA DEL ARCHIVO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -401,5 +401,82 @@ sobre un texto fabricado. Los seis bloques:
 **Y LA GUARDA SE APLICA A QUIEN LA ESCRIBIO**, que es el bloque `E` del arnes:
 los **ocho** instrumentos de esta vuelta salen **0 en ROJO**. Una guarda que no se
 aplica a su autor no es una guarda.
+
+### TAREA 4. LA GUARDA DEL VEREDICTO DUPLICADO. CERRADA EN VERDE, Y CON UNA PARADA DECLARADA.
+
+**LA CAUSA ESTABA MEDIDA Y ESTA VUELTA LA CIERRA.** `cerrar_reporte.py` componia
+`"**EL VEREDICTO DE UNA LINEA: %s**"` con lo que le pasaran, **sin mirar si ya
+venia puesto**, y la salida sellada de la 190 prueba que le pasaron un veredicto
+que ya traia la etiqueta y sus asteriscos. Resultado: la linea 50 del reporte de
+la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO
+TAREAS...`.
+
+**(a) LA GUARDA, Y FALLA RUIDOSO.** `veredicto_ya_viene_vestido()` es PURA, mira
+tres cosas literales y ninguna por parecido: que el `--veredicto` traiga dentro la
+etiqueta, que empiece por `**`, y que termine por `**`. Corre en el bloque
+**`A.1`** de `main()`, **antes de tocar nada**, y sus motivos van a `rojos`, que es
+lo que impide que se escriba. **Cada motivo dice QUE RECIBIO y QUE ESPERABA**,
+comprobado por el arnes. **No se limpia en silencio**, y el porque va escrito en
+el propio docstring: limpiar en silencio es la otra mitad de la misma enfermedad,
+porque el que la paso de mas no se enteraria nunca.
+
+**Y SE ARREGLO LA MITAD QUE NADIE PEDIA PERO QUE HACE QUE LA GUARDA VALGA:** la
+etiqueta estaba **tecleada tres veces** en el fichero (la comprobacion de estado,
+la composicion final y ahora la guarda). Ahora hay **una constante**,
+`ETIQUETA_VEREDICTO`, y las tres la usan. **Una guarda que vigila un literal
+distinto del que se compone no vigila nada.**
+
+**(b) EL CASO POSITIVO POR MUTACION: VERDE, 0 casos que caen y 0 mutaciones que no
+cayeron** (`docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt`, 6072 bytes). **Dos
+carriles, y ninguno sustituye al otro:**
+
+- **EL CARRIL DE LA FUNCION PURA.** Un veredicto limpio dispara **0** motivos; con
+  la etiqueta dentro, **1**; con etiqueta y asteriscos como el de la 190, **3**;
+  solo con asteriscos, **2**. Y las dos mutaciones corridas: pedirle al limpio que
+  dispare **CAE**, y pedirle 0 al vestido **CAE**. **Una guarda que muerde a los
+  limpios no sirve, y eso se prueba en vez de decirse.**
+- **EL EJEMPLAR DE VERDAD, LEIDO Y NO TECLEADO.** El veredicto que la 190 le paso
+  se saca de `docs/loop/SALIDA_V190_CERRAR_REPORTE.txt` con un patron sobre su
+  propia linea `el veredicto, tal como se paso:`. **La guarda lo tumba con 2
+  motivos.** Si el fichero no estuviera, el bloque se declara SIN CORRER en vez de
+  fabricar un ejemplar que se apruebe solo.
+- **EL CARRIL DE LA MUTACION DE VERDAD, QUE ES EL QUE EL ENCARGO PIDE.** Se copia
+  `cerrar_reporte.py` a un temporal y **se le QUITA la guarda** con un reemplazo
+  literal, exigiendo que el trozo `rojos.extend(motivos_vestido)` aparezca
+  **exactamente una vez**. Medido: **1 en la de verdad y 0 en la mutada**, y la
+  mutada compila. **Lo que eso prueba y ni una palabra mas:** la version mutilada
+  seguiria midiendo el veredicto y publicando sus motivos, **pero no los sumaria a
+  `rojos`, o sea que cerraria el reporte igual**. Que es exactamente lo que hacia
+  antes de hoy.
+- **LA CAIDA REPRODUCIDA SIN TOCAR EL REPORTE:** componer con un veredicto que ya
+  traia la etiqueta da **2** apariciones, que es la linea 50 de la 190.
+
+**(c) EL REPORTE DE LA 190 NO SE REESCRIBE.** Esta cerrado y archivado byte a
+byte (68540 bytes, `sha256` LF `7a74fc3ccd11b769`), y **su etiqueta doble se queda
+donde esta con esta explicacion al lado**. Lo que se arregla es que no vuelva a
+pasar.
+
+**PARADA. Y VA AQUI PORQUE ES UNA CIFRA PUBLICADA CON SU CORTE QUE MI MEDICION DE
+HOY CONTRADICE.** El acta 191 dice en su `5.2`, literal: *"Los cinco reportes
+anteriores (186 a 189) la traen UNA sola vez, o sea que no es herencia"*. **Medido
+hoy fichero a fichero**, en el bloque `H.5` del sello de apertura y otra vez en el
+bloque `E` del arnes de esta tarea:
+
+| fichero | apariciones de `EL VEREDICTO DE UNA LINEA:` |
+|---|---:|
+| `REPORTE_V185.md` | 1 |
+| `REPORTE_V186.md` | 1 |
+| `REPORTE_V187.md` | 1 |
+| **`REPORTE_V188.md`** | **2** |
+| `REPORTE_V189.md` | 1 |
+| `REPORTE_V190.md` | 2 |
+
+**`REPORTE_V188.md` la trae DOS veces, en su linea 56.** O sea que **NO es nueva
+de la vuelta 190 y SI hay herencia**: paso al menos dos veces y el cerrador la
+dejo pasar las dos. **Lo declaro y no lo arreglo yo** (`EJECUTOR.md` 5), y no
+reescribo el reporte de la 188, que esta cerrado. **La adjudicacion de la `5.2` no
+cambia por esto**, porque el defecto y su remedio son los mismos; lo que cambia es
+**cuantas veces mordio antes de que se cazara**, y eso le importa a quien lleve la
+cuenta de las rachas.
 
 <!-- FIN ANEXO DE TAREAS -->
