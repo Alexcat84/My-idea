@@ -1,0 +1,73 @@
+MIS CLASES DE LA RELECTURA AL DOBLE DEL TRAMO DE LA VUELTA 191, ESCRITAS ANTES DE
+ABRIR EL DESTAPE (vuelta 192, TAREA 2, ejecutor).
+
+EL SUJETO: docs/loop/SALIDA_V192_T2_CIEGA.txt (39850 bytes en disco y 39850
+normalizado a LF, sha256 LF da9b03300a305fbd), 30 puestos, los vecinos
+deterministas de la tanda de 30 de la vuelta 191. El destape vive en
+docs/loop/SALIDA_V192_T2_DESTAPE.txt (32066 bytes en disco y 32066 normalizado a
+LF, sha256 LF 5070b61b743c1094) y NO SE HA ABIERTO al escribir esto: el
+aislamiento y los dos ficheros quedaron commiteados en 0eb8f5ce y este fichero va
+en su propio commit ANTES de destapar. EL ORDEN ES LA PRUEBA, Y ESTA EN GIT.
+
+EL CRITERIO CON EL QUE CLASIFICO, ESCRITO ANTES DE LA PRIMERA CLASE. Es el MISMO
+LITERAL que use en la vuelta 190 y en la 191, y no lo cambio a mitad de camino ni
+lo ensancho para que me convenga:
+   A  REPITE. Los dos mandan lo mismo. La mayoria de los pasos del nodo mas corto
+      estan en el mas largo, y el acto que ordenan es el mismo.
+   B  DUDOSO. El objeto es el mismo pero los mandatos son discutiblemente
+      distintos, o los ids son casi gemelos y la lectura admite las dos.
+   D  SANO. Los objetos son distintos: momentos distintos, actos distintos, o uno
+      es el marco y el otro una tecnica que no lo cubre.
+   C  no la uso: en este archivo es la clase de las correcciones declaradas y de
+      las figuras, y aqui no estoy corrigiendo ninguna fila.
+
+MIS DUDOSOS, NOMBRADOS DELANTE Y NO DESPUES (15 de 30):
+   157, 202, 395, 874, 906, 965, 971, 1068, 2029, 2425, 2659, 3069, 3088, 3170,
+   3184
+
+MI REPARTO, DECLARADO ANTES DE DESTAPAR: A 4, B 6, D 20.
+
+Y UNA COSA QUE DIGO ANTES DE VER NADA, PORQUE DESPUES NO VALDRIA: ESTA TANDA ME
+SALE MAS DUDOSA QUE LA DE LA 191 (15 dudosos de 30 contra 13 de 30). El motivo
+que le veo es que muchos pares de aqui son MARCO CONTRA UNA DE SUS PIEZAS, y ese
+es justo el sitio donde mi criterio de la D ("uno es el marco y el otro una
+tecnica que no lo cubre") se apoya en una palabra, "cubre", que la ciega no me
+deja medir: la ciega da pasos, no familias.
+
+puesto | mi clase | mi motivo en una linea
+     5 | D | negociar por intereses durante la mesa contra preparar objetivos y agenda antes: dos momentos distintos
+    22 | D | ofrecer valor no economico contra preguntar abierto por su motivacion: dos tacticas distintas de la misma mesa
+    69 | D | ofrecer valor no economico contra revelar tu propio plazo limite: dos tacticas distintas y sin pasos compartidos
+   131 | D | punto unico de contacto contra invitar al no del proveedor: uno es gobierno interno y el otro tactica de mesa
+   157 | D | cumplir Magnuson Moss entero contra la regla de disponibilidad previa; el paso 2 de A NOMBRA esa regla como uno de sus tres requisitos. DUDOSO MIO
+   202 | D | las cuatro etapas de la llamada contra la etapa de investigacion: marco contra una de sus etapas, y A ya manda dos cosas que B manda. DUDOSO MIO
+   395 | D | las cinco fases del diseno de modelo de negocio contra el proceso de ideacion: marco contra sus fases 1 a 3. DUDOSO MIO
+   611 | A | los mismos mandatos: salir del edificio a hablar con clientes y las cuatro preguntas clave; ids casi gemelos y dos de los tres pasos de B estan en A
+   650 | D | separar garantia de contrato de servicio contra prohibir la venta atada: dos clausulas distintas de la misma ley
+   717 | D | implementar el hibrido agile contra ELEGIR a que proyectos aplicarlo: decidir y hacer son actos distintos
+   874 | B | los dos mandan sobre el asiento del fundador en la junta y los mandatos son discutiblemente distintos: quien se sienta contra como proteger el asiento. DUDOSO MIO
+   906 | B | los dos mandan sobre la decision de crecer; A mira capacidad y caja y B mira mercado y financiamiento. Mismo objeto, mandatos discutibles. DUDOSO MIO
+   965 | B | ids casi gemelos (fase_adopt y fase_adopt_ciclo_cliente) y misma fase del ciclo, pero CERO pasos compartidos: comunidad contra medicion y canales. DUDOSO MIO
+   971 | B | los dos mandan sobre el cierre en venta compleja y solo dos de los cuatro pasos de B estan en A: la mitad, no la mayoria. DUDOSO MIO
+  1068 | D | las mismas seis herramientas aplicadas a DOS MOMENTOS distintos del recorrido, celebracion contra activate; ids casi gemelos. DUDOSO MIO
+  1204 | D | empate en la junta y director independiente contra proteger tu asiento: dos problemas distintos de la misma mesa
+  1370 | D | construir valor percibido en la conversacion contra armar al comprador para que venda dentro: dos actos distintos
+  1804 | A | tres de los cinco pasos de A estan en B (contencion de pasillos, rangos de temperatura, economizadores) y el acto es el mismo; ids casi gemelos
+  1814 | A | el paso 1 de A y el paso 1 de B son casi literales, y el 3 de A es el 2 de B; dos de tres del mas corto
+  2029 | D | autocertificacion del exportador contra certificado de origen: dos documentos distintos, aunque el paso 5 de B se parezca a tres de A. DUDOSO MIO
+  2156 | D | vender tu mismo en la etapa inicial contra como responder al primer franquiciado: dos actos distintos
+  2425 | B | ids casi gemelos y misma hoja de diseno, pero solo dos de los cuatro pasos de B estan en A: la mitad, no la mayoria. DUDOSO MIO
+  2659 | B | ids casi gemelos y misma auditoria; A manda sobre la corrida y B sobre el programa, mandatos discutiblemente distintos. DUDOSO MIO
+  2833 | A | cuatro de los cinco pasos de B estan en A: recolectar, limites, graficar, investigar el punto fuera; el acto es el mismo
+  2912 | D | el boxplot contra los graficos en general: marco contra una tecnica que el marco no desarrolla
+  3069 | D | clasificar la seriedad contra planificar la inspeccion; DOS pasos de B son casi literales de A, pero son dos de cinco. DUDOSO MIO
+  3088 | D | el equipo de mejora contra el programa de 14 pasos: marco contra su paso 2, desarrollado. DUDOSO MIO
+  3170 | D | la misma carta de control sobre DOS OBJETOS distintos: el proceso contra las personas del grupo. DUDOSO MIO
+  3184 | D | cambiar la cultura por las practicas de personas contra auditar creencias y publicar codigo: actos distintos. DUDOSO MIO
+  3328 | D | clasificar riesgos de negocio contra proyecto, contra filtrar que es riesgo y que es ruido: dos actos distintos
+
+LO QUE ESTAS CLASES NO PUEDEN VER, DICHO ANTES DE COTEJAR: la ciega da PASOS y no
+FAMILIAS. El acta 192 mide que el archivo resolvio el 2832 por transitividad de
+dos subcumulos que la ciega no muestra. Si alguna de mis quince dudosas cae por
+esa via, la discrepancia es de INFORMACION y no de criterio, y lo dire con esas
+palabras.
