@@ -1,0 +1,83 @@
+==============================================================================
+VUELTA 191, TAREA 4: MUTACION DE LA GUARDA DEL VEREDICTO DUPLICADO
+==============================================================================
+
+A) LA FUNCION PURA SOBRE VEREDICTOS FABRICADOS
+   un veredicto LIMPIO                                      obtenido 0              esperado 0              -> PASA
+   con la ETIQUETA dentro                                   obtenido 1              esperado 1              -> PASA
+   con etiqueta Y asteriscos, como el de la 190             obtenido 3              esperado 3              -> PASA
+   solo con los asteriscos                                  obtenido 2              esperado 2              -> PASA
+   LA MUTACION 1: al veredicto LIMPIO se le pide que dispare, y tiene que
+   CAER. Una guarda que muerde a los limpios no sirve
+      LA MUTACION CAE: el limpio dispara 0, o sea que la guarda
+      distingue y no muerde por gusto.
+   LA MUTACION 2: al VESTIDO se le pide 0, y tiene que CAER
+      LA MUTACION CAE: dispara 3 motivo(s).
+   Y LOS MOTIVOS DICEN QUE SE RECIBIO Y QUE SE ESPERABA, que es la mitad
+   del encargo:
+      el --veredicto YA TRAE la etiqueta 'EL VEREDICTO DE UNA LINEA:' (1 vez/veces). RECIBIDO: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y NO SE MOVIO NINGUN VEREDICTO.**'. ESPERADO: el texto 
+      el --veredicto EMPIEZA por '**'. RECIBIDO: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y NO SE MOVIO NINGUN VERE'. ESPERADO: sin los asteriscos de apertura, porque este instrumento los pon
+      el --veredicto TERMINA por '**'. RECIBIDO: 'EDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y NO SE MOVIO NINGUN VEREDICTO.**'. ESPERADO: sin los asteriscos de cierre, porque este instrumento los pone 
+   algun motivo dice RECIBIDO                               obtenido True           esperado True           -> PASA
+   algun motivo dice ESPERADO                               obtenido True           esperado True           -> PASA
+      hallazgo: apariciones de 'EL VEREDICTO DE UNA LINEA:' en el veredicto recibido: 1
+      hallazgo: empieza por '**': SI | termina por '**': SI
+
+B) EL EJEMPLAR DE VERDAD: EL VEREDICTO QUE LA VUELTA 190 LE PASO, LEIDO DE
+   SU PROPIA SALIDA SELLADA Y NO TECLEADO
+   leido: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y VOLVIO EL TOPE DE CINCO, LA GUARDA DEL SUJETO CONGELADO ESTA DE'
+   CIFRA motivos que dispara: 2
+      el --veredicto YA TRAE la etiqueta 'EL VEREDICTO DE UNA LINEA:' (1 vez/veces). RECIBIDO: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y VOLVIO EL TOPE DE CINCO, LA GUARD
+      el --veredicto EMPIEZA por '**'. RECIBIDO: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y VOLVIO EL TOPE DE CINCO'. ESPERADO: sin los asteriscos de apertura, porque este
+   la guarda lo tumba                                       obtenido True           esperado True           -> PASA
+   LA MUTACION: si la guarda NO lo tumbara, la linea 50 del reporte de
+   la 190 volveria a salir con la etiqueta duplicada
+      LA MUTACION CAE: lo tumba con 2 motivo(s).
+
+C) LA MUTACION DE VERDAD: SE LE QUITA LA GUARDA A UNA COPIA Y SE COMPRUEBA
+   QUE LA VERSION MUTILADA DEJA PASAR LO QUE LA DE VERDAD TUMBA
+   el trozo '    rojos.extend(motivos_vestido)' aparece 1 vez(ces) en cerrar_reporte.py
+   aparece exactamente una vez                              obtenido 1              esperado 1              -> PASA
+   copia mutada escrita: 114492 bytes (la de verdad tiene 114466)
+   la copia mutada compila                                  obtenido True           esperado True           -> PASA
+   Y LA DIFERENCIA SE MIDE, no se afirma:
+      `rojos.extend(motivos_vestido)` en la de verdad: 1
+      `rojos.extend(motivos_vestido)` en la mutada:    0
+   la mutada ya no lleva el trozo                           obtenido 0              esperado 0              -> PASA
+   LO QUE ESTO PRUEBA, Y NI UNA PALABRA MAS: que la linea que mete
+   los motivos en `rojos` EXISTE, es UNICA y se puede quitar. La
+   version mutilada seguiria MIDIENDO el veredicto y publicando sus
+   motivos, pero NO los sumaria a `rojos`, o sea que **cerraria el
+   reporte igual**. Eso es exactamente lo que hacia antes de hoy.
+
+D) LA COMPOSICION Y LA GUARDA MIRAN EL MISMO LITERAL, QUE ES LO QUE HACE
+   QUE LA VIGILANCIA VALGA
+   ETIQUETA_VEREDICTO  = 'EL VEREDICTO DE UNA LINEA:'
+   ENVOLTURA_VEREDICTO = '**'
+   compuesto con el limpio: '**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y NO SE MOVIO NINGUN VEREDICTO.**'
+   el compuesto trae la etiqueta UNA sola vez               obtenido 1              esperado 1              -> PASA
+   compuesto con uno que YA la traia: '**EL VEREDICTO DE UNA LINEA: EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON Y NO SE MOVIO NINGUN VEREDICTO.**'
+   ese trae la etiqueta DOS veces                           obtenido 2              esperado 2              -> PASA
+   LA MUTACION: si componer un veredicto que ya la traia NO diera dos, la
+   caida del reporte de la 190 no se podria reproducir
+      LA MUTACION CAE: da 2, que es la linea 50 del reporte de la 190
+      reproducida aqui sin tocar el reporte.
+
+E) LOS REPORTES ARCHIVADOS, CONTADOS UNO A UNO, PORQUE EL ACTA 191 DICE
+   QUE LOS 186 A 189 LA TRAEN UNA SOLA VEZ Y ESO SE MIDE, NO SE CREE
+   REPORTE_V185.md -> 1 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   REPORTE_V186.md -> 1 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   REPORTE_V187.md -> 1 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   REPORTE_V188.md -> 2 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   REPORTE_V189.md -> 1 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   REPORTE_V190.md -> 2 aparicion(es) de 'EL VEREDICTO DE UNA LINEA:'
+   ESTA CUENTA NO ES UN CASO DEL ARNES: es la medicion que sostiene la
+   PARADA que el reporte de esta vuelta declara. No se corrige aqui ningun
+   reporte cerrado.
+
+==============================================================================
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
+
+ESCRITO: docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt (6072 bytes)

@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 191, TAREA 6: MUTACION DE LA EXENCION DEL BLOQUE DE LA CABECERA
+TALLADA EN `cifras_sin_pareja()`
+==============================================================================
+
+A) LOS CUATRO CASOS, SOBRE DOCUMENTOS FABRICADOS
+   1. la cifra EN LA PROSA sigue siendo ROJO                obtenido 1          esperado 1          -> PASA
+   2. la misma cifra DENTRO del bloque ya no lo es          obtenido 0          esperado 0          -> PASA
+      y con las dos a la vez, solo cuenta la de la prosa    obtenido 1          esperado 1          -> PASA
+   3. sin la marca de cierre NO se exime nada               obtenido 1          esperado 1          -> PASA
+
+B) LAS MUTACIONES, CORRIDAS Y NO AFIRMADAS
+   MUTACION 1: si la exencion alcanzara a la prosa, este arnes no probaria
+   nada y la guarda seria un adorno
+      LA MUTACION CAE: la prosa sigue dando 1 fallo(s), o sea que la
+      exencion NO alcanza a lo que el ejecutor escribe.
+   MUTACION 2: si el bloque NO estuviera exento, la misma cifra daria rojo
+   dentro. Se comprueba corriendo la delimitacion sobre el mismo texto
+      lineas que la delimitacion exime: 3 (3, 4, 5)
+      LA MUTACION CAE: exime 3 linea(s) y son las del bloque, no el
+      documento entero.
+   MUTACION 3: un bloque con la marca de apertura DUPLICADA no se puede
+   delimitar, y entonces no se exime nada
+      con la marca duplicada: lineas eximidas               obtenido 0          esperado 0          -> PASA
+      LA MUTACION CAE: 0 lineas eximidas, y la cifra de dentro vuelve a
+      contar: 1 fallo(s).
+
+C) EL TAMANO DE LA EXENCION SOBRE EL REPORTE DE VERDAD, MEDIDO
+   docs/loop/REPORTE.md -> 910 saltos de linea
+   CIFRA lineas eximidas por el bloque tallado: 21
+   o sea el 2.31 por ciento del documento
+   CIFRA cifras sin pareja que quedan: 0
+
+D) LA GUARDA QUE SI VIGILA ESE BLOQUE, CORRIDA SOBRE EL REPORTE DE VERDAD
+   (la exencion no pierde cobertura: `--comparar` exige que el bloque sea
+    IDENTICO BYTE A BYTE al fichero del tallador)
+      | ==============================================================================
+      | LA CABECERA DEL REPORTE, TALLADA. Vuelta 191. Modo fase04.
+      | Cada celda sale de la salida que la cita; ninguna esta tecleada.
+      | ==============================================================================
+      | --- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+      | | | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+      | |---|---:|---:|
+      | | censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+      | | Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplic
+      | | aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+      | | motor | 25/25 | **25/25** |
+      | | web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+      | | tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+      | | aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la res
+      | | desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `
+      | | identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `b393347f` (asunto real leido de git log: 
+      | --- COMPARACION CONTRA docs/loop/REPORTE.md ---
+      |   filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+      |   CABECERA: IDENTICA AL TALLADOR
+      | FIN
+   exitcode de --comparar: 0
+   (si el reporte todavia no esta cerrado, este bloque dice lo que dice y
+    no se maquilla: la corrida buena es la del cierre)
+
+==============================================================================
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
+
+ESCRITO: docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt (4173 bytes)

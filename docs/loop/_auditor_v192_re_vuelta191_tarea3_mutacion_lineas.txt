@@ -1,0 +1,85 @@
+==============================================================================
+VUELTA 191, TAREA 3: CASO POSITIVO POR MUTACION DE LAS DOS CONVENCIONES
+==============================================================================
+
+A) LA GUARDA SOBRE LOS CINCO FUENTES FABRICADOS
+   SOLO SPLIT (el defecto que el acta 190 pillo)              obtenido 'ROJO: cuenta lineas SOLO por  esperado 'ROJO: cuenta lineas SOLO por  -> PASA
+   LA PAREJA                                                  obtenido 'VERDE: publica la pareja'     esperado 'VERDE: publica la pareja'     -> PASA
+   SOLO COUNT                                                 obtenido 'VERDE: cuenta solo por una co esperado 'VERDE: cuenta solo por una co -> PASA
+   SPLIT YA CORREGIDA CON -1                                  obtenido 'VERDE: cuenta solo por una co esperado 'VERDE: cuenta solo por una co -> PASA
+   NO CUENTA LINEAS                                           obtenido 'NO APLICA: no cuenta lineas d esperado 'NO APLICA: no cuenta lineas d -> PASA
+   LA MUTACION 1: al fuente SOLO SPLIT se le pide VERDE, y tiene que CAER
+      LA MUTACION CAE: sale ROJO y no VERDE, o sea que la guarda muerde
+      exactamente el caso que el encargo nombra.
+   LA MUTACION 2: `NO APLICA` NO es verde. Un fichero que no cuenta lineas
+   no ha aprobado nada, y confundirlos dejaria pasar cualquier cosa
+      LA MUTACION CAE: el mudo sale 'NO APLICA: no cuenta lineas de ninguna de las tres formas', que no es verde.
+   LA MUTACION 3: la SPLIT ya corregida con `- 1` NO se acusa. Acusarla
+   seria un falso positivo, y uno de los suyos vive en la nomina
+      LA MUTACION CAE: sale 'VERDE: cuenta solo por una convencion que calza con wc -l', con 0 sitio(s) SPLIT y 1 corregido(s).
+
+B) LA PAREJA DE CIFRAS, SOBRE TEXTOS FABRICADOS DE LARGO CONOCIDO
+   texto de 3 lineas QUE TERMINA en salto                     obtenido (3, 4)                         esperado (3, 4)                         -> PASA
+   texto de 3 lineas QUE NO TERMINA en salto                  obtenido (2, 3)                         esperado (2, 3)                         -> PASA
+   LA MUTACION: si las dos convenciones dieran lo mismo, no habria nada que
+   arreglar y este arnes no probaria nada
+      LA MUTACION CAE: 3 contra 4, uno de diferencia, que es la caida
+      entera del acta 190.
+   Y LA FRASE DE LA CASA NOMBRA A `wc -l` DENTRO, que es el punto:
+      pareja: fabricado: 3 lineas por `count(NL)`, que es la que calza con `wc -l`, y 4 por `len(split(NL))`
+      sola  : fabricado: 3 lineas, contadas por `count(NL)`, que es la que calza con `wc -l`
+   la frase de la pareja nombra wc -l                         obtenido True                           esperado True                           -> PASA
+   la frase de la sola nombra wc -l                           obtenido True                           esperado True                           -> PASA
+
+C) EL CENSO SOBRE UN DIRECTORIO FABRICADO, PARA QUE MUERDA DE VERDAD
+   directorio SIN ningun defecto: rojos                       obtenido 0                              esperado 0                              -> PASA
+   el mismo directorio CON el defecto metido: rojos           obtenido 1                              esperado 1                              -> PASA
+   y lo nombra                                                obtenido ['roto.py']                    esperado ['roto.py']                    -> PASA
+   LA MUTACION: si el censo diera lo mismo con y sin el defecto metido,
+   no estaria mirando nada
+      LA MUTACION CAE: 0 rojos antes y 1 despues, y con su nombre.
+
+D) EL CENSO SOBRE EL REPO DE VERDAD, QUE ES LO QUE ESTA VUELTA ARREGLO
+   CIFRA ficheros .py censados: 1333
+   ficheros en ROJO en scripts/loop                           obtenido 0                              esperado 0                              -> PASA
+   ROJO: cuenta lineas SOLO por la convencion que no calza con wc -l 0
+   VERDE: publica la pareja                                         54
+   VERDE: cuenta solo por una convencion que calza con wc -l        142
+   NO APLICA: no cuenta lineas de ninguna de las tres formas        1137
+
+E) LOS INSTRUMENTOS PROPIOS DE ESTA VUELTA, UNO A UNO
+   (una guarda que no se aplica a quien la escribio no es una guarda)
+   dos_convenciones_de_lineas.py                  VERDE: publica la pareja
+   vuelta191_apertura.py                          VERDE: publica la pareja
+   vuelta191_cerrar.sh                            NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_cierre.py                            NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_esqueleto_reporte.py                 VERDE: publica la pareja
+   vuelta191_rehacer.sh                           NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_tarea1a_registrar_acta191.py         VERDE: publica la pareja
+   vuelta191_tarea2_relectura_al_doble.py         NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_tarea2b_cotejo.py                    VERDE: publica la pareja
+   vuelta191_tarea3_arreglar_lineas.py            VERDE: publica la pareja
+   vuelta191_tarea3_censo.py                      VERDE: publica la pareja
+   vuelta191_tarea3_mutacion_lineas.py            VERDE: publica la pareja
+   vuelta191_tarea4_mutacion_veredicto.py         NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_tarea5_marca_contra_dificultad.py    NO APLICA: no cuenta lineas de ninguna de las tres formas
+   vuelta191_tarea6_mutacion_bloque_tallado.py    VERDE: cuenta solo por una convencion que calza con wc -l
+   instrumentos de la 191 en ROJO                             obtenido 0                              esperado 0                              -> PASA
+
+F) EL EJEMPLAR DEL ACTA 190, COTEJADO CONTRA `wc -l` DE VERDAD
+   (el reporte de la 190 publico 2231 lineas de este fichero. NO SE COPIA:
+    se cuentan las dos convenciones y se corre `wc -l`)
+   por `count(NL)`      : 2230
+   por `len(split(NL))` : 2231
+   `wc -l` dice         : '2230 docs/plan/LECTURAS_DIRIGIDAS.md' (exitcode 0)
+   la convencion count CALZA con wc -l                        obtenido 2230                           esperado 2230                           -> PASA
+   LA MUTACION: la convencion split tiene que NO calzar, o el
+   arreglo entero sobraria
+      LA MUTACION CAE: split da 2231 y `wc -l` da 2230.
+
+==============================================================================
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
+
+ESCRITO: docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt (6559 bytes)

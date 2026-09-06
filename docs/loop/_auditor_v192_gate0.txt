@@ -1,0 +1,37 @@
+=== 1. run_phase1 --reaplico-curaduria
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+EXITCODE=0
+=== 2. etiquetas_de_cara --aplicar
+
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+=== 3. sync_assets_web
+  semantic_index.json: 21854994 bytes, sha256=42223fccc725...
+
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+=== 4. numstat dataset/ web/ engine/
+warning: in the working copy of 'dataset/metadata/master_graph.json', LF will be replaced by CRLF the next time Git touches it
+(fin numstat)
+=== 5. engine/run_all_tests.py
+  OK    test_validador_esquema.py (0.3s)
+  OK    test_verificador_huerfanos.py (0.1s)
+
+TODOS LOS TESTS PASARON (25/25).
+=== 6. tsc
+EXITCODE_TSC=0
+=== 7. pnpm test
+ RUN  v4.1.10 C:/Users/AlexDesk/Documents/I have an idea/web
+
+
+ Test Files  82 passed (82)
+      Tests  1040 passed (1040)
+   Start at  13:28:58
+   Duration  23.48s (transform 58.80s, setup 0ms, import 271.08s, tests 10.16s, environment 12ms)
+

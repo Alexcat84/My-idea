@@ -1,0 +1,57 @@
+COTEJO DE LA CIEGA DEL AUDITOR 192 CONTRA EL ARCHIVO
+universo: 30 aislados, 2 QUEMADOS POR MI (156, 201), 28 cotejados
+==============================================================================
+    4  mia D  archivo D  COINCIDE
+   21  mia D  archivo D  COINCIDE
+   68  mia D  archivo D  COINCIDE
+  130  mia D  archivo D  COINCIDE
+  392  mia A  archivo A  COINCIDE
+  610  mia D  archivo D  COINCIDE
+  649  mia D  archivo D  COINCIDE
+  716  mia D  archivo B  DISCREPA  [DENTRO de mis dudosos]
+  873  mia D  archivo D  COINCIDE
+  905  mia A  archivo A  COINCIDE
+  964  mia D  archivo D  COINCIDE
+  970  mia D  archivo D  COINCIDE
+ 1067  mia D  archivo D  COINCIDE
+ 1203  mia D  archivo D  COINCIDE
+ 1369  mia D  archivo D  COINCIDE
+ 1803  mia D  archivo D  COINCIDE
+ 1813  mia B  archivo D  DISCREPA  [DENTRO de mis dudosos]
+ 2028  mia D  archivo D  COINCIDE
+ 2155  mia D  archivo D  COINCIDE
+ 2424  mia A  archivo A  COINCIDE
+ 2658  mia D  archivo D  COINCIDE
+ 2832  mia A  archivo D  DISCREPA  [FUERA de mis dudosos]
+ 2911  mia D  archivo D  COINCIDE
+ 3068  mia D  archivo D  COINCIDE
+ 3087  mia D  archivo D  COINCIDE
+ 3169  mia D  archivo D  COINCIDE
+ 3183  mia D  archivo D  COINCIDE
+ 3327  mia D  archivo D  COINCIDE
+==============================================================================
+COINCIDEN 25 de 28. DISCREPAN 3. DENTRO de mis dudosos 2, FUERA 1.
+reparto mio    : {'D': 23, 'A': 4, 'B': 1}
+reparto archivo: {'D': 24, 'A': 3, 'B': 1}
+
+LOS QUEMADOS, para que se vea que no los cuento:
+  156  archivo A  (yo no escribi clase)
+  201  archivo C  (yo no escribi clase)
+
+LAS RAZONES DEL ARCHIVO EN LAS QUE DISCREPO:
+------------------------------------------------------------------------------
+716  cuantos_cofundadores_agregar contra decision_fundador_solo_vs_equipo
+   archivo B | mia D
+   razon: Cuantos contra si alguno, con arista en los dos sentidos verificada resolviendo a nodo vivo, y con el paso final de uno metido dentro del otro. decision_fundador_solo_vs_equipo decide SI hay equipo: evaluar si ya tienes tu el rango completo de habilidades tecnicas y comerciales, pensar cuanto crecimiento esperas y si el negocio depende de efectos de red o de llegar primero, reflexionar sobre tu estilo y cuanto control necesitas, evaluar que tan compleja es la idea, y si decides formar equipo, identificar que te falta y buscar socios que lo cubran. cuantos_cofundadores_agregar arranca justo ahi y decide CUANTOS: que valor concreto y distinto aporta cada candidato, no sumar lo que ya esta cubi
+------------------------------------------------------------------------------
+1813  eco_efectividad contra eco_efectividad_2
+   archivo D | mia B
+   razon: El producto piloto contra el cambio de pregunta, MISMA FUENTE y sin arista entre ellos, Y ES UNA TRAMPA DE IDENTIFICADOR QUE NO CONFIRMA: el segundo nodo es el primero con un dos al final y aun asi no dicen lo mismo. Lo compartido es UNA LINEA, que los materiales vuelvan a un ciclo biologico o tecnico. eco_efectividad BAJA A UN CASO: SELECCIONAR UN PRODUCTO PILOTO para rediseñar bajo el paradigma, definir en que ciclos podria reintegrarse sin perdida de calidad, y buscar materiales o polimeros disenados para reciclaje infinito de alta calidad. eco_efectividad_2 CAMBIA LA PREGUNTA: analizar el ciclo de vida completo identificando todos los flujos de materiales, CUESTIONAR SI EL DISENO ACTUAL 
+------------------------------------------------------------------------------
+2832  eliminacion_barreras_orgullo_del_trabajo contra remover_barreras_orgullo_trabajo
+   archivo D | mia A
+   razon: eliminacion_barreras_orgullo_del_trabajo (Eliminacion de Barreras al Orgullo del Trabajo, Punto 12 de Deming: reunir los reportes repetidos, revisar la evaluacion y el pago por pieza, plan con responsables y plazos, cambiar los lemas por accion) contra remover_barreras_orgullo_trabajo (Remover Barreras al Orgullo por el Trabajo Bien Hecho: conversar para identificar barreras especificas, clasificarlas por origen material equipo supervision comunicacion, priorizar y asignar responsable, crear un canal de retroalimentacion continua). MISMA FUENTE Deming, sim_tit 68,7. D POR TRANSITIVIDAD DE DOS SUBCUMULOS: eliminacion =A= orgullo_por_el_trabajo (2816) pero remover =D= orgullo_por_el_trabajo (2
+
+MARCA 'DISCUTIBLE MARCADO' EN LOS 30 AISLADOS:
+   en mi tanda: 3 de 30 -> [2832, 2911, 3327]
+   en el archivo entero: 427 de 3388 (12.6 por ciento)
