@@ -1,0 +1,23 @@
+VUELTA 194, TAREA 3: EL TRAMO 3 SE CORTO A MITAD Y DEJO dataset/ TOCADO.
+Escrito al restaurarlo, con las dos mediciones y sin borrar la primera.
+
+QUE PASO: la corrida del tramo 3 se corto por tope de tiempo del turno,
+no por un fallo de la bateria. El lanzador restaura dataset/ en su PASO 5,
+y ese paso no llego a correr porque el proceso murio antes.
+
+MEDIDO ANTES DE RESTAURAR:
+   git status --porcelain -- dataset/  ->  ' M dataset/metadata/master_graph.json'
+   git diff --numstat -- dataset/      ->  CERO filas
+   LAS DOS SE PUBLICAN Y NO SE ELIGE LA COMODA: status lo da por tocado y
+   numstat dice que NO CAMBIA NI UNA LINEA. La diferencia es de FINALES DE
+   LINEA y no de contenido, que es lo que numstat mide.
+
+RESTAURADO CON: git checkout -- dataset/   (no se toco ningun final de
+linea a mano, que es lo que EJECUTOR.md prohibe expresamente)
+
+MEDIDO DESPUES DE RESTAURAR, EN ESTA MISMA CORRIDA:
+   git diff --numstat -- dataset/  -> 0 fila(s)
+   git status --porcelain -- dataset/ -> 0 linea(s)
+
+EL TRAMO 3 NO SE DA POR CORRIDO: no dejo salida sellada, y --siguiente
+dice TRAMO 3, que es lo que la 6.1 llama retomar en el tramo siguiente.
