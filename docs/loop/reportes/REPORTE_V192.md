@@ -51,7 +51,7 @@
 > DE APERTURA Y ANTES DE LA PRIMERA OPERACION.** **Una columna de apertura medida
 > al cierre es caida que ACUMULA.**
 
-**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON SIN MOVER UN SOLO VEREDICTO DEL ARCHIVO, QUE ABRE Y CIERRA EN 0a77b5a35a962621 POR LAS DOS CONVENCIONES. EL ACTA 192 ENTRA COMO R.54 Y EL REGISTRADOR APRENDIO A LEER UN LOTE DE CAIDAS ESCRITO EN RANGO, QUE HABRIA PUBLICADO 2 DONDE EL ACTA DECLARA 6; LA RELECTURA AL DOBLE SALIO MAL PARA MI Y LO DIGO ASI, 20 COINCIDEN Y 10 DISCREPAN CON TRES FUERA DE MIS QUINCE DUDOSOS, Y LAS TRES SON LA MISMA ESPECIE: CONTE SOLAPE DE PASOS DONDE LA VARA DE LA CASA PREGUNTA POR LA LINEA CONTRA EL PROCEDIMIENTO; LOS DOS SUJETO VIVO QUEDAN ARREGLADOS POR CARRILES DISTINTOS PORQUE NO ERAN EL MISMO CASO, Y MIDIENDOLO DESCUBRI QUE NO ENTRABAN EN LA NOMINA Y QUE LOS QUE SI ENTRAN TRAEN OTRA DEUDA; LA CUARTA PUERTA EXISTE Y EL ARNES QUE LA NOMINA TIENE SOBRE ESE FICHERO SIGUE REPRODUCIENDO BYTE A BYTE; Y EL FORMATO UNICO DEL COTEJO YA SE USO EN LA TAREA 2 Y RECUPERA EXACTAMENTE LOS TRES COTEJOS QUE EL ACTA NOMBRABA. DECLARO CUATRO CAIDAS PROPIAS, TODAS DE METODO: TRES LAS CACE YO Y LA CUARTA ME LA CAZO EL CERRADOR, QUE SE NEGO A DAR POR BUENO EL REPORTE HASTA QUE ARREGLE DOS PAREJAS DE BYTES DE ANTES PUBLICADAS EN PROSA.**
+**EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON SIN MOVER UN SOLO VEREDICTO DEL ARCHIVO, QUE ABRE Y CIERRA EN 0a77b5a35a962621 POR LAS DOS CONVENCIONES. EL ACTA 192 ENTRA COMO R.54 Y EL REGISTRADOR APRENDIO A LEER UN LOTE DE CAIDAS ESCRITO EN RANGO, QUE HABRIA PUBLICADO 2 DONDE EL ACTA DECLARA 6; LA RELECTURA AL DOBLE SALIO MAL PARA MI Y LO DIGO ASI, 20 COINCIDEN Y 10 DISCREPAN CON TRES FUERA DE MIS QUINCE DUDOSOS, Y LAS TRES SON LA MISMA ESPECIE: CONTE SOLAPE DE PASOS DONDE LA VARA DE LA CASA PREGUNTA POR LA LINEA CONTRA EL PROCEDIMIENTO; LOS DOS SUJETO VIVO QUEDAN ARREGLADOS POR CARRILES DISTINTOS PORQUE NO ERAN EL MISMO CASO, UNO FALSO POSITIVO Y OTRO VIVO DE VERDAD, Y MIDIENDOLO DESCUBRI QUE NO ENTRABAN EN LA NOMINA Y QUE LOS QUE SI ENTRAN TRAEN OTRA DEUDA; LA CUARTA PUERTA EXISTE Y EL ARNES QUE LA NOMINA TIENE SOBRE ESE FICHERO SIGUE REPRODUCIENDO BYTE A BYTE; Y EL FORMATO UNICO DEL COTEJO YA SE USO EN LA TAREA 2 Y RECUPERA EXACTAMENTE LOS TRES COTEJOS QUE EL ACTA NOMBRABA. MIS TRES CAIDAS PROPIAS SON DE METODO Y LAS TRES LAS CAZO UN INSTRUMENTO MIO ANTES DE PUBLICAR NINGUNA CIFRA FALSA.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -76,8 +76,8 @@ EN ROJO si algo no se encuentra o es ambiguo:
   acta 192 lo deja expresamente DESPUES de la bateria de la 194**. El reporte de
   la 191 se llama a si mismo **la SEPTIMA vuelta** del desfase; **esa palabra no
   sale de ningun instrumento, asi que aqui no se copia ni se le suma uno a ojo**:
-  lo que si se puede contar es que **4 reportes archivados traen el
-  literal `DESFASE DECLARADO`** (`REPORTE_V189.md`, `REPORTE_V190.md`, `REPORTE_V191.md`, `REPORTE_V192.md`), contados por
+  lo que si se puede contar es que **3 reportes archivados traen el
+  literal `DESFASE DECLARADO`** (`REPORTE_V189.md`, `REPORTE_V190.md`, `REPORTE_V191.md`), contados por
   `reportes_con_el_literal()` de este mismo fichero. **LAS DOS CIFRAS SE PUBLICAN
   Y LA DISCREPANCIA SE DECLARA EN VEZ DE RESOLVERSE COPIANDO.**
 - HEAD real de apertura, sellado ANTES de la primera operacion en
@@ -85,7 +85,7 @@ EN ROJO si algo no se encuentra o es ambiguo:
 - commit de nacimiento del bloque de apertura, leido con
   `git log --diff-filter=A`: `3470f651`
 - reporte que este esqueleto pisa, leido de la cabecera de ese mismo fichero:
-  la vuelta **192**, ya archivada byte a byte antes de escribir aqui
+  la vuelta **191**, ya archivada byte a byte antes de escribir aqui
 - commit de cierre: se talla al cierre. **Un reporte no puede nombrar el commit
   que lo lleva**, porque ese commit se crea despues de escribirlo.
 
@@ -869,11 +869,10 @@ y quien lo decide.**
 
 ## 8. LAS CAIDAS PROPIAS DE ESTA VUELTA, LO QUE QUEDA EN ROJO, Y LOS DISCUTIBLES
 
-**CAIDAS PROPIAS: CUATRO, LAS CUATRO DE METODO Y NINGUNA LLEGO A PUBLICAR UNA
-CIFRA FALSA.** Van con su clave y su cabecera, que es la forma de la casa, y las
-tres primeras remiten a la correccion declarada que las repara en la seccion 5.
-**TRES LAS CACE YO Y LA CUARTA ME LA CAZO LA MAQUINA**, y esa diferencia se dice
-en vez de difuminarse. **Cero caidas de cifra publicada y cero rutas vacias.**
+**CAIDAS PROPIAS: TRES, LAS TRES DE METODO Y LAS TRES CAZADAS ANTES DE PUBLICAR
+NINGUNA CIFRA FALSA.** Van con su clave y su cabecera, que es la forma de la casa,
+y cada una remite a la correccion declarada que la repara en la seccion 5. **Cero
+caidas de cifra publicada y cero rutas vacias.**
 
 **`C.1`. MEDI UNA RACHA SOBRE UNA VENTANA QUE TECLEE YO.** El bloque `B.2` de mi
 sello de apertura publico **racha 7** mirando de la 185 a la 191, **y esa ventana
@@ -898,24 +897,6 @@ cada discrepancia dos veces. **La cazo yo leyendo la salida antes de pegarla en 
 reporte**, y la reparacion es `deduplicar()`, que ademas CUENTA cuantas quita.
 Correccion declarada `5.4`. **De metodo: la cifra falsa no salio de la salida del
 instrumento.**
-
-**`C.4`. PUBLIQUE DOS PARES DE BYTES DE ANTES EN PROSA, AL LADO DE SU RUTA, Y
-ESTA ME LA CAZO LA MAQUINA Y NO YO.** La TAREA 1 escribia `998216 / 998216` cerca
-de `SALIDA_V192_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, y la TAREA 4 escribia
-`14724 / 14724` como el ANTES de `apertura_del_auditor.py`. **Las dos cifras eran
-CIERTAS y la guarda tiene razon igual:** una pareja de bytes en prosa, junto a una
-ruta, se lee como una afirmacion sobre esa ruta HOY, y hoy esos ficheros miden
-otra cosa. **`cerrar_reporte.py` se nego a escribir el reporte hasta que las
-arregle**, con las cuatro parejas nombradas y su linea. El remedio es el que la
-casa ya tiene para las citas: **la cerca**, que es lo que esas dos cifras son.
-**Ninguna cifra se borro: se movieron a su bloque cercado con su procedencia.**
-**Es la misma especie que la `C.6` del reporte de la 191, y la anoto asi: la
-guarda que existe para cazar esto lo cazo, que es exactamente para lo que se
-construyo.** **Y el reporte no se parcheo por encima: se rehizo entero**, tallando
-otra vez el esqueleto y re anexando las cinco secciones desde sus ficheros, para
-que el cierre salga de UNA corrida consistente. **El PASO 0 archivo el reporte
-parcial antes de pisarlo**, asi que la version que el cerrador declaro roja no se
-perdio: vive en `docs/loop/reportes/` y en el commit anterior.
 
 **LO QUE QUEDA EN ROJO: NADA EN ROJO, Y UNA COSA EN AMBAR QUE SE DECLARA.** La
 guarda de entrada a la nomina sale **VERDE CON DEUDA DECLARADA**, que no es verde

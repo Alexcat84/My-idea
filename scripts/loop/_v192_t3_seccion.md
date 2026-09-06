@@ -102,8 +102,8 @@ fichero.
 **(e) EL CASO POSITIVO POR MUTACION, EN SU PROPIO FICHERO DE NOMBRE ESTABLE:**
 `scripts/loop/guarda_de_entrada_a_la_nomina.py`, **VERDE** con **13 casos** y
 **cinco mutaciones que caen de verdad**
-(`docs/loop/SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`, **disco 2433 bytes | LF
-2433 bytes**). La guarda **cruza lo que ninguna de las dos guardas viejas
+(`docs/loop/SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`,
+**disco 2433 bytes | LF 2433 bytes**). La guarda **cruza lo que ninguna de las dos guardas viejas
 cruzaba**: `guarda_del_sujeto_congelado_separada()` mira **la nomina de hoy**, o
 sea los que ya entraron, y cuando muerde ya es tarde; `arneses_que_faltan()` mira
 **quien va a entrar** pero no mira su anclaje. **La pregunta nueva es el cruce: de

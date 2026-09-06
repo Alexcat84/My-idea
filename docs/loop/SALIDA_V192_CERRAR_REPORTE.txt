@@ -4,11 +4,11 @@ SE CIERRA EL REPORTE DE LA VUELTA 192, EN UN SOLO ACTO
 
 A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
    docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 192 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   CIFRA bytes: 70627 | saltos de linea: 985
-   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> NO (se esperaba SI)
-   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> NO (se esperaba SI)
-   contiene '\n## 3.'                            -> SI (se esperaba NO)
-   contiene '\n## 9.'                            -> SI (se esperaba NO)
+   CIFRA bytes: 49487 | saltos de linea: 703
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
 
 A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
      (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del
@@ -22,7 +22,7 @@ A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
 
 B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
    docs/loop/SALIDA_V192_TALLADOR_CABECERA.txt             2329 bytes, 11 filas de tabla
-   scripts/loop/_v192_cierre_texto.md                     17101 bytes, sha256 af8167cd55ec085d
+   scripts/loop/_v192_cierre_texto.md                     17476 bytes, sha256 b7af5648adc7d789
       ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
       ## 4. EL ESTADO DEL ARBOL, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO
       ## 5. LAS CORRECCIONES DECLARADAS DE ESTA VUELTA
@@ -57,14 +57,60 @@ B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
       'CINCO'    -> 5 tareas
       'CUATRO'   -> 4 caidas
    LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
-      caidas   -> 3
+      caidas   -> 4
       tareas   -> 5
-   CIFRA numerales que NO calzan: 1
-      el veredicto publica 'CUATRO' (4 caidas) y el cuerpo, CONTADO, dice 3
+   CIFRA numerales que NO calzan: 0
 
-ROJO, 5 motivo(s), y NO se escribe nada:
-   el sujeto no esta en el estado de un reporte SIN CERRAR: '**EL VEREDICTO DE UNA LINEA: SIN ESC'
-   el sujeto no esta en el estado de un reporte SIN CERRAR: 'PENDIENTE DE TALLAR AL CIERRE'
-   el sujeto no esta en el estado de un reporte SIN CERRAR: '\n## 3.'
-   el sujeto no esta en el estado de un reporte SIN CERRAR: '\n## 9.'
-   el veredicto publica 'CUATRO' (4 caidas) y el cuerpo, CONTADO, dice 3
+C) SE ESCRIBE
+   cabecera: 571 bytes de hueco -> 2421 bytes de tabla pegada
+   veredicto escrito: 1169 bytes
+   ESCRITO: docs/loop/REPORTE.md (72136 bytes, 1004 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja NO
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):
+      linea 190   sha   795c0ec740bdd5cc     | bytes**, `sha256` LF `795c0ec740bdd5cc`, veredicto leido del propio fichero
+      linea 483   bytes 2433                 | 2433 bytes**). La guarda **cruza lo que ninguna de las dos guardas viejas
+      linea 558   bytes 4282                 | 4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
+      linea 719   bytes 4054129              | `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **4054129 bytes en disco y
+   CIFRA cifras publicadas sin su pareja: 4
+   LAS CITAS DE ARNES, UNA A UNA (vuelta 179, TAREA 1.b):
+      linea 260   SALIDA_V192_T1A_MUTACION_REGISTRADOR.txt publicada 19 | del fichero (no medible)
+         SIN COTEJO: el fichero no publica ninguna de las dos formas de cifra propia, y no se fabrica un rojo sobre lo que no se puede cotejar
+      linea 482   SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt publicada 13 | del fichero (no medible)
+         SIN COTEJO: el fichero no publica ninguna de las dos formas de cifra propia, y no se fabrica un rojo sobre lo que no se puede cotejar
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 2
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 2
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 16
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 6
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 2
+         linea 272   22541 / 22541  SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA sola ruta que se le pueda atribuir
+         linea 739   4982 / 4982    SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA sola ruta que se le pueda atribuir
+   CIFRA citas de arnes SIN COTEJO posible: 2
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V192_APERTURA.txt -> 31294 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 1
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 1, en la linea 755: - El arbol abrio con **`git status --porcelain`** en **1** linea, y es
+      numstat  -> 0, en la linea 759: - **`git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** **AL SALIR: 0 filas**,
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+ROJO: al reporte de la vuelta 192 le faltan 0 de sus cuatro piezas.

@@ -1,9 +1,10 @@
 ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
 
 **LAS CINCO TAREAS CERRARON Y NINGUN VEREDICTO DEL ARCHIVO SE MOVIO.**
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **4054129 bytes en disco y
-4054129 bytes normalizados a LF**, `sha256` LF `0a77b5a35a962621`, medido en el
-bloque de apertura, en los dos instrumentos de la TAREA 2 y otra vez al cierre.
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+abre y cierra en **4054129 bytes en disco y 4054129 bytes normalizados a LF**,
+con el mismo `sha256` LF, medido en el bloque de apertura, en los dos
+instrumentos de la TAREA 2 y otra vez al cierre.
 
 **LO QUE SOSTENGO, UNO A UNO:**
 
@@ -196,7 +197,11 @@ casa ya tiene para las citas: **la cerca**, que es lo que esas dos cifras son.
 **Ninguna cifra se borro: se movieron a su bloque cercado con su procedencia.**
 **Es la misma especie que la `C.6` del reporte de la 191, y la anoto asi: la
 guarda que existe para cazar esto lo cazo, que es exactamente para lo que se
-construyo.**
+construyo.** **Y el reporte no se parcheo por encima: se rehizo entero**, tallando
+otra vez el esqueleto y re anexando las cinco secciones desde sus ficheros, para
+que el cierre salga de UNA corrida consistente. **El PASO 0 archivo el reporte
+parcial antes de pisarlo**, asi que la version que el cerrador declaro roja no se
+perdio: vive en `docs/loop/reportes/` y en el commit anterior.
 
 **LO QUE QUEDA EN ROJO: NADA EN ROJO, Y UNA COSA EN AMBAR QUE SE DECLARA.** La
 guarda de entrada a la nomina sale **VERDE CON DEUDA DECLARADA**, que no es verde

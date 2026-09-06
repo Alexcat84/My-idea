@@ -57,9 +57,17 @@ discutibles, **7 A FAVOR y 0 EN CONTRA**.
 **EL CERO DE `EN CONTRA` SE REPITE POR SEGUNDA ACTA SEGUIDA, Y ESTA VEZ NO SE
 VUELVE A PROBAR POR MUTACION: SE DICE CON SU FICHERO**, que es lo que el encargo
 manda con esas palabras. **Y el fichero se MIDE en vez de creerse:**
-`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`, **disco 6904 bytes | LF 6904
-bytes**, `sha256` LF `795c0ec740bdd5cc`, veredicto leido del propio fichero
-`VEREDICTO: VERDE`, y la aguja `EN CONTRA` aparece **13** veces dentro. **Si ese
+`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`,
+**disco 6904 bytes | LF 6904 bytes**, con su `sha256` LF y su veredicto leidos
+del propio fichero y no de la memoria:
+
+```
+   docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt -> disco 6904 bytes | LF 6904 bytes
+   sha256 LF: 795c0ec740bdd5cc1e1b821085c0815f899e92fddd33d3d477f375bb99dc223a
+   su veredicto, leido del propio fichero: 'VEREDICTO: VERDE'
+   la aguja `EN CONTRA` aparece 13 vez(ces) en el arnes
+```
+ **Si ese
 fichero no existiera o midiera cero bytes, este instrumento haria PARADA**: una
 ruta que promete prueba sobre un vacio es caida de cifra (`EJECUTOR.md` 1). La
 guarda vieja de la 190 (`if not en_contra: PARADA`) corrida sobre el acta 192

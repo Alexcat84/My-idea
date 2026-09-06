@@ -54,8 +54,8 @@ cosa que no puede, dicha porque es mas fina: **no sabe si lo que se leyo era del
 sujeto cuando el archivo se abre por fuera de estas funciones**.
 
 **(c) EL CASO POSITIVO POR MUTACION: VERDE, CON 30 CASOS Y CERO ROJOS**
-(`docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`, **disco 4282 bytes | LF
-4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
+(`docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`,
+**disco 4282 bytes | LF 4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
 su propio sello en un directorio temporal y los retira. **La mutacion que importa
 es la `E`:** se sustituye `leer_veredictos()` por **la version sin el apunte de
 destape, que es exactamente el codigo de antes de esta vuelta**, y se comprueba
