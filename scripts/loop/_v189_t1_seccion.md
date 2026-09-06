@@ -18,12 +18,16 @@ esta tarea, medidas en disco:
 | `docs/loop/SALIDA_V189_T1A_RECORRIDO_SIN_ESCRIBIR.txt` | 8026 |
 | `docs/loop/SALIDA_V189_T1A_SIMULACION.txt` | 26904 |
 
-**LA ENTRADA:** `R.51` en `docs/PENDIENTES.md`, **17971 bytes y 207 lineas**, con
-**0 guiones largos o medios**. El numero **no esta tecleado**: lo devuelve
+**LA ENTRADA:** `R.51` en `docs/PENDIENTES.md`, **207 lineas** y **0 guiones
+largos o medios**. **Su tamano no se publica como pareja de convenciones a
+proposito:** la entrada **no es un fichero**, es un fragmento dentro de su sede, y
+la unica cifra de bytes que se le puede cotejar contra el disco es **cuanto crece
+esa sede**. El numero **no esta tecleado**: lo devuelve
 `scripts/loop/serie_de_registros.py`, que recompone la serie de sus **dos** sedes
 y da **42 entradas, 0 colisiones, 0 huecos, siguiente libre R.51**. Despues de
 escribir, remedido: **43 entradas, 0 colisiones, 0 huecos, siguiente libre R.52**.
-La sede pasa de **943276 a 961248 bytes**.
+La sede crece: pasa de **943276 bytes** a **961248 bytes**, o sea **17972 bytes**
+mas, que son los **17971** de la entrada mas su salto de linea.
 
 **LO QUE LA ENTRADA REGISTRA, CONTADO Y NO TECLEADO** (bloques C a J de
 `SALIDA_V189_T1A_REGISTRO_R51.txt`):
@@ -87,7 +91,8 @@ declaracion, que da **0**.
 
 El acta 188 escribio *"de `LD-01` hasta `LD-98`"*. **Esa cifra no se corrige
 copiando la del acta 189: se vuelve a medir aqui** sobre
-`docs/plan/LECTURAS_DIRIGIDAS.md` (**214916 bytes en disco, 2231 lineas**):
+`docs/plan/LECTURAS_DIRIGIDAS.md` (**214916 bytes en disco y 214916 bytes
+normalizados a LF**, **2231 lineas**):
 
 - **CIFRA etiquetas `LD-nn` distintas: 68.**
 - **minima `LD-01`, maxima `LD-154`.**
@@ -138,13 +143,13 @@ Las dos marcas se computan de la vuelta y no se teclean:
 
 **Y NO SE AFIRMA QUE FUNCIONE: SE RE CORRIO, QUE ES LO QUE HIZO EL AUDITOR.**
 Segunda corrida entera, sellada en
-`docs/loop/SALIDA_V189_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (8026 bytes):
+`docs/loop/SALIDA_V189_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (**8026 bytes en disco y 8026 bytes normalizados a LF**):
 
 > `O) NO SE ESCRIBE NADA, Y ESTA ES LA IDEMPOTENCIA HACIENDO SU TRABAJO.`
 > `el acta 189 YA TIENE ENTRADA en la serie: 4 linea(s) la nombran.`
 > `NO se escribe una entrada nueva y NO se consume el numero R.52.`
 
-**Y LA SEDE NO SE MOVIO:** `docs/PENDIENTES.md` mide **961248 bytes** antes y
+**Y LA SEDE NO SE MOVIO:** `docs/PENDIENTES.md` mide **961248 bytes en disco y 961248 bytes normalizados a LF** antes y
 despues del re corrido, con **42** cabeceras `## R.` y **2** lineas que nombran
 `del acta de la vuelta 189` (el titulo y la cabecera del cuerpo). La primera
 salida, `SALIDA_V189_T1A_REGISTRO_R51.txt`, se comparo byte a byte contra la
@@ -161,7 +166,7 @@ regenero con el nombre honesto; queda dicho aqui en vez de callarse.**
 #### 1.g. EL CASO POSITIVO POR MUTACION, SOBRE ACTAS Y SEDES FABRICADAS
 
 `python scripts/loop/vuelta189_tarea1a_registrar_acta189.py --mutacion`, salida
-sellada en `docs/loop/SALIDA_V189_T1A_MUTACION_REGISTRADOR.txt` (5068 bytes):
+sellada en `docs/loop/SALIDA_V189_T1A_MUTACION_REGISTRADOR.txt` (**5068 bytes en disco y 5068 bytes normalizados a LF**):
 **`CIFRA casos que CAEN: 0`, `CIFRA mutaciones que NO cayeron (y deberian): 0`,
 `VEREDICTO: VERDE`**.
 

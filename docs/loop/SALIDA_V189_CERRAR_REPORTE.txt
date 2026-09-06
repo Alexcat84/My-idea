@@ -1,0 +1,106 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 189, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 189 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 31374 | saltos de linea: 490
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V189_TALLADOR_CABECERA.txt             2539 bytes, 11 filas de tabla
+   scripts/loop/_v189_cierre_texto.md                     16522 bytes, sha256 4499b24bbc07f1f1
+      ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
+      ## 4. EL ESTADO DEL ARBOL, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO
+      ## 5. LAS CORRECCIONES DECLARADAS DE ESTA VUELTA
+      ## 6. PENDIENTES DE DOCTRINA
+      ## 7. LAS PREGUNTAS QUE TRAIGO
+      ## 8. LAS CAIDAS PROPIAS DE ESTA VUELTA, LO QUE QUEDA EN ROJO, Y LOS DISCUTIBLES
+   docs/loop/SALIDA_V189_BATERIA.txt                    81968 bytes
+   CIFRA lineas no vacias de la bateria: 1134
+   vuelta que lleva dentro el nombre del fichero: 189
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+      tramo 1   -> vuelta 189
+      tramo 2   -> vuelta 189
+      tramo 3   -> vuelta 189
+      tramo 4   -> vuelta 189
+      tramo 5   -> vuelta 189
+      tramo 6   -> vuelta 189
+      tramo 7   -> vuelta 189
+      tramo 8   -> vuelta 189
+      tramo 9   -> vuelta 189
+      tramo 10  -> vuelta 189
+   CIFRA tramos de esa bateria con fichero en disco: 10
+   CIFRA tramos sellados EN LA VUELTA 189: 10 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): CORRIDA
+      motivo: la bateria de la vuelta 189 trae 1134 linea(s) no vacias
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 189
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 189
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LA BATERIA CORRIO ENTERA Y CAZO UN ROJO DE VERDAD. Los DIEZ tramos sellados sobre la nomina de hoy, 125 entradas cada un'
+   CIFRA numerales hallados en el veredicto: 2
+      'TRES'     -> 3 caidas
+      'DOS'      -> 2 tareas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 3
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 533 bytes de hueco -> 2631 bytes de tabla pegada
+   veredicto escrito: 1061 bytes
+   ESCRITO: docs/loop/REPORTE.md (133350 bytes, 2015 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja SI
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   CIFRA cifras publicadas sin su pareja: 0
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 8
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 8
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 15
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 11
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 0
+         (ninguna, y el cero va escrito)
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V189_APERTURA.txt -> 17717 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 2
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 2, en la linea 554: - El arbol abrio con **`git status --porcelain`** en **2** lineas, y son
+      numstat  -> 0, en la linea 563: - **`git diff --numstat -- dataset/`** en **0** filas **AL ENTRAR**.
+      numstat  -> 0, en la linea 565: bloque F: **`CIFRA filas de git diff --numstat -- dataset/`: 0**. **Las dos
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+VERDE: el reporte de la vuelta 189 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

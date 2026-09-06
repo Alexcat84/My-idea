@@ -6,7 +6,8 @@
 `vuelta183_bateria_por_tramos.py`. El cotejo lo corrio
 `scripts/loop/cotejar_clon_declarado.py --a ... --b ... --num-a 183 --num-b 189`
 y su salida entera vive en `docs/loop/SALIDA_V189_T2_COTEJO_CLON.txt` (**3022
-bytes en disco**). **Contado de ese fichero**:
+bytes en disco y 2968 bytes normalizados a LF**, y esa diferencia es real y por
+eso se dice). **Contado de ese fichero**:
 
 | lo que el cotejo dice | cifra |
 |---|---|
@@ -93,8 +94,8 @@ es la medida.**
 - **CIFRA entradas de la nomina que NINGUN tramo corrio: 0.**
 - **CIFRA entradas corridas que NO estan en la nomina: 0.**
 - **CIFRA entradas corridas MAS DE UNA VEZ: 0.**
-- La salida unica `docs/loop/SALIDA_V189_BATERIA.txt`: **81968 bytes, 1236
-  lineas, sha256 LF `f6b49dab8d357cb3bf4156d582c7fa88d1d3b3d86ea129cfcc128488d4212743`**.
+- La salida unica `docs/loop/SALIDA_V189_BATERIA.txt`: **81968 bytes en disco y 81968 bytes normalizados a LF**, **1236 lineas**.
+- Su `sha256` sale igual por las dos convenciones, porque el fichero no lleva ni un CRLF: en disco `f6b49dab8d357cb3bf4156d582c7fa88d1d3b3d86ea129cfcc128488d4212743` y normalizado a LF `f6b49dab8d357cb3bf4156d582c7fa88d1d3b3d86ea129cfcc128488d4212743`.
 
 **`--siguiente` CORRIDO DESPUES** (`docs/loop/SALIDA_V189_T2_SIGUIENTE_DESPUES.txt`):
 **`CIFRA tramos CON salida sellada no vacia: 10`**, **`CIFRA tramos que FALTAN:
@@ -128,12 +129,14 @@ daba **`exit 0 OK` en 2,2s**.
   acotada y no afirmada.**
 
 **LA EXCLUSION NO ES MUDA, Y HOY NO ESTA VACIA POR PRIMERA VEZ.**
-`docs/loop/ROJOS_DE_LA_VUELTA_189.txt` (**964 bytes, sha256 LF
-`aefae0656fe1612f`**) lleva su linea con **nombre, ruta de su salida en rojo y
+`docs/loop/ROJOS_DE_LA_VUELTA_189.txt` (**964 bytes en disco y 964 bytes
+normalizados a LF**, `sha256` LF `aefae0656fe1612f`) lleva su linea con
+**nombre, ruta de su salida en rojo y
 motivo**, y `scripts/loop/vuelta189_tarea2_nomina.py` la lee con
 `rojos_registrados()` y `particion_por_rojo()`, **importadas** del instrumento de
 la 188 y no clonadas. Su salida
-(`docs/loop/SALIDA_V189_T2_NOMINA.txt`, **4822 bytes**) publica
+(`docs/loop/SALIDA_V189_T2_NOMINA.txt`, **4822 bytes en disco y 4822 bytes
+normalizados a LF**) publica
 **`CIFRA arneses EXCLUIDOS de la doble corrida: 1`** con el excluido nombrado y
 **`CIFRA arneses que SI se corren dos veces: 1 de 2`**.
 
@@ -178,7 +181,8 @@ el 5 sep no se toco.
 
 **LA DOBLE CORRIDA DEL ARNES QUE NACE HOY**, que es el carril `--mutacion` del
 registrador: **corrida 1 y corrida 2, exitcode 0 las dos, y el mismo sha256 LF
-`ac68abfc3a17628f`** sobre 5068 bytes. Y el registrador **sin argumentos**,
+`ac68abfc3a17628f`** sobre **5068 bytes en disco y 5068 bytes normalizados a
+LF**. Y el registrador **sin argumentos**,
 corrido dos veces mas: **exitcode 0 las dos y el mismo sha256 LF
 `49cbe8bf0840e5d8`**, que es su idempotencia otra vez.
 
