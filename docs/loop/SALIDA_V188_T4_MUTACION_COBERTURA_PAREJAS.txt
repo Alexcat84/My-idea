@@ -1,0 +1,139 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA ESCALADA DE LA VUELTA 188
+(la guarda que veia la mitad, y la seccion que se duplicaba)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
+SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 108128 bytes | LF 108128 bytes |
+sha256 LF 745a15a8e693ec5c1ef65e9db0fcb2e94459954d280b2360a0c226a7c3452bce
+
+LINEAS DEL SUJETO QUE ESTE ARNES JUZGA, CON EL SELLO DE ARRIBA AL LADO:
+   def parejas_publicadas           -> lineas 1290
+   def cobertura_de_parejas         -> lineas 1410
+   def secciones_del_reporte        -> lineas 1489
+   def secciones_fuera_de_orden     -> lineas 1503
+   def piezas_que_faltan            -> lineas 1522
+   PATRON_PAREJA_COMA =             -> lineas 1268
+   VENTANA_RUTA_ARRIBA =            -> lineas 1274
+
+CASO A. LAS TRES FORMAS NUEVAS, LEIDAS DE REPORTES REALES Y NO INVENTADAS
+   (a1) `normalizado a LF` en SINGULAR y sin repetir bytes   
+      la guarda ve: [('docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt', 2444, 2424)]
+      esperado:     [('docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt', 2444, 2424)]  -> CALZA
+      MUTACION del esperado (exigir 2 parejas): CAE
+      Y CON LA FORMA ROTA, PARA QUE SE VEA QUE NO ESTA CLAVADA:
+         la guarda ve 0 -> CALZA
+   (a2) la pareja separada por COMA, en fila de tabla y en negrita
+      la guarda ve: [('docs/loop/SELLO_APERTURA_AUDITOR_V188.json', 802, 802)]
+      esperado:     [('docs/loop/SELLO_APERTURA_AUDITOR_V188.json', 802, 802)]  -> CALZA
+      MUTACION del esperado (exigir 2 parejas): CAE
+      Y CON LA FORMA ROTA, PARA QUE SE VEA QUE NO ESTA CLAVADA:
+         la guarda ve 0 -> CALZA
+   (a3) la ruta en una LINEA ANTERIOR y la pareja en la prosa de debajo
+      la guarda ve: [('docs/loop/_auditor_v188_exclusion.txt', 1372, 1372)]
+      esperado:     [('docs/loop/_auditor_v188_exclusion.txt', 1372, 1372)]  -> CALZA
+      MUTACION del esperado (exigir 2 parejas): CAE
+      Y CON LA FORMA ROTA, PARA QUE SE VEA QUE NO ESTA CLAVADA:
+         la guarda ve 0 -> CALZA
+
+CASO B. LA REGLA DE LA AMBIGUEDAD NO SE TOCA
+   (es la que impide el rojo inventado del 15655 del reporte de la 186:
+    si entre la ruta y la pareja hay OTRA cifra de bytes, NO se atribuye)
+   parejas atribuidas: 0 | descartadas: 1
+      linea 1 | 15655 / 15655 | AMBIGUA: entre la ruta `docs/PENDIENTES.md` y la pareja hay otra cifra de bytes, asi que el sujeto no esta claro y esta guarda NO atribuye nada
+   ESPERADO: 0 atribuidas y al menos 1 descartada POR AMBIGUA -> CALZA
+   MUTACION del esperado (exigir que SI la atribuya): CAE
+   Y LA MISMA LINEA SIN LA CIFRA DE EN MEDIO SI SE ATRIBUYE, para que se
+   vea que la regla discrimina y no bloquea todo:
+      atribuidas: 1 [('docs/PENDIENTES.md', 15655, 15655)]
+   Y LA RUTA DE ARRIBA TAMPOCO AFLOJA LA REGLA: si la linea anterior nombra
+   DOS rutas, el sujeto sigue siendo ambiguo y no se atribuye nada.
+      atribuidas: 0 | descartadas: 1 ['SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA so']
+
+CASO C. EL TEXTO REAL DE `git show 9a06b7c8:docs/loop/REPORTE.md`, QUE ES LA PRUEBA DE LA ESCALADA
+   el texto mide 60463 bytes normalizados a LF y 943 lineas
+   CIFRA parejas que la guarda VE: 6
+      linea 82    docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt          2444 / 2424   [prosa disco y LF]
+      linea 196   docs/PENDIENTES.md                                   924954 / 924954   [prosa disco y LF]
+      linea 338   docs/plan/08_VERIFICACION.md                         69068 / 69068   [prosa disco y LF]
+      linea 368   docs/loop/SELLO_APERTURA_AUDITOR_V188.json           802 / 802   [prosa disco coma LF]
+      linea 398   docs/loop/_auditor_v188_exclusion.txt                1372 / 1372   [prosa disco y LF]
+      linea 658   docs/loop/SALIDA_V184_APERTURA.txt                   34194 / 34194   [prosa disco y LF]
+   ESPERADO SEIS -> CALZA
+   MUTACION del esperado (exigir 3, que es lo que veia antes): CAE
+
+   Y LAS SEIS TIENEN QUE CALZAR CONTRA EL DISCO DE HOY, QUE ES LA MISMA
+   FUENTE QUE LA GUARDA USA EN PRODUCCION (`mediciones_de_las_rutas`), CON
+   UNA SOLA EXCEPCION MECANICA Y DECLARADA: las rutas que ESTA MISMA VUELTA
+   ha movido desde ese commit. Una ruta que otra vuelta movio despues no
+   convierte en falsa la cifra que el reporte publico el dia que se
+   escribio, y esa lista NO se teclea: sale de `git diff --name-only`.
+      docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt          disco de hoy (2444, 2424)   movida por esta vuelta: no
+      docs/PENDIENTES.md                                   disco de hoy (943276, 943276) movida por esta vuelta: SI
+      docs/plan/08_VERIFICACION.md                         disco de hoy (69068, 69068) movida por esta vuelta: no
+      docs/loop/SELLO_APERTURA_AUDITOR_V188.json           disco de hoy (802, 802)     movida por esta vuelta: no
+      docs/loop/_auditor_v188_exclusion.txt                disco de hoy (1372, 1372)   movida por esta vuelta: no
+      docs/loop/SALIDA_V184_APERTURA.txt                   disco de hoy (34194, 34194) movida por esta vuelta: no
+   CIFRA parejas que NO calzan contra el disco de hoy: 2
+      (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 943276, 'prosa disco y LF')
+      (196, 'docs/PENDIENTES.md', 'LF', 924954, 943276, 'prosa disco y LF')
+   CIFRA de esas que son de una ruta QUE ESTA VUELTA MOVIO: 2
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 943276, 'prosa disco y LF')
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'LF', 924954, 943276, 'prosa disco y LF')
+   CIFRA de esas que NO tienen esa excusa, que es el veredicto: 0
+   ESPERADO SEIS VISTAS Y CERO QUE NO CALCEN SIN EXCUSA -> CALZA
+   MUTACION del esperado (exigir alguna que no calce sin excusa): CAE
+
+   Y SE DECLARA POR QUE EL COTEJO NO SE HACE CONTRA EL ARBOL DEL COMMIT,
+   QUE SERIA LO PRIMERO QUE UNO PROBARIA: git guarda los ficheros con LF,
+   asi que **la convencion DISCO de un fichero con CRLF NO SE PUEDE
+   RECUPERAR DE GIT**. Medido y no supuesto:
+      docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt          en git (2424, 2424)   en disco hoy (2444, 2424)
+      docs/PENDIENTES.md                                   en git (924954, 924954) en disco hoy (943276, 943276)
+      docs/plan/08_VERIFICACION.md                         en git (69068, 69068) en disco hoy (69068, 69068)
+      docs/loop/SELLO_APERTURA_AUDITOR_V188.json           en git (802, 802)     en disco hoy (802, 802)
+      docs/loop/_auditor_v188_exclusion.txt                en git (1372, 1372)   en disco hoy (1372, 1372)
+      docs/loop/SALIDA_V184_APERTURA.txt                   en git (34194, 34194) en disco hoy (34194, 34194)
+      El caso lo comprueba: el cotejo contra el arbol del commit acusaria
+      a `docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt` de publicar 2444 en
+      disco cuando git dice 2424, y esa acusacion seria falsa: git nunca
+      tuvo la version con CRLF. **Elegir la fuente antes de contar.**
+
+CASO E. LA PIEZA (3) EXIGE SECCIONES UNICAS Y EN ORDEN, NO SOLO QUE ESTEN
+   LAS CABECERAS DEL REPORTE DE LA 187, CON TODAS SUS LINEAS:
+      `## 0.` -> 1 aparicion(es), lineas 60
+      `## 1.` -> 1 aparicion(es), lineas 101
+      `## 2.` -> 1 aparicion(es), lineas 113
+      `## 3.` -> 1 aparicion(es), lineas 732
+      `## 4.` -> 1 aparicion(es), lineas 762
+      `## 5.` -> 1 aparicion(es), lineas 783
+      `## 6.` -> 1 aparicion(es), lineas 796
+      `## 7.` -> 1 aparicion(es), lineas 815
+      `## 8.` -> 1 aparicion(es), lineas 841
+      `## 9.` -> 2 aparicion(es), lineas 870, 920
+      `## 10.` -> 1 aparicion(es), lineas 877
+   CIFRA duplicadas: 1 [9]
+   CIFRA fuera de orden: 1 [(9, 920, 10, 877)]
+   ESPERADO: la `## 9.` duplicada en las lineas 870 y 920, y la de la 920
+   detras de la `## 10.` de la 877 -> CALZA
+   LA PIEZA (3) SOBRE ESE TEXTO REAL:
+      (3) hay secciones DUPLICADAS: `## 9.` aparece 2 veces, en las lineas 870, 920
+      (3) hay secciones FUERA DE ORDEN: `## 9.` en la linea 920 va detras de `## 10.` en la linea 877
+   ESPERADO: ACUSA las dos, nombrando sus lineas -> CALZA
+   MUTACION del esperado (exigir que NO acuse la duplicada): CAE
+
+   Y LOS TRES REPORTES ARCHIVADOS ANTERIORES, QUE TIENEN UNA CADA UNO,
+   PARA QUE SE VEA QUE ESTO NO ACUSA A CUALQUIERA:
+      REPORTE_V184.md    secciones `## 9.`: 1 | duplicadas: ninguna | fuera de orden: ninguna
+      REPORTE_V185.md    secciones `## 9.`: 1 | duplicadas: ninguna | fuera de orden: ninguna
+      REPORTE_V186.md    secciones `## 9.`: 1 | duplicadas: ninguna | fuera de orden: ninguna
+
+   Y EL ROJO VIEJO NO SE REESCRIBE: una seccion que FALTA sigue cayendo con
+   su texto de hoy, palabra por palabra.
+      sobre un texto SIN la seccion 5: (3) faltan las secciones 5
+      MUTACION del esperado (exigir que NO la acuse): CAE
+
+CIFRA casos: 17 | pasan: 17
+CIFRA casos que CAEN al mutar su esperado: 16 de 16
+CIFRA fallos: 0
+VEREDICTO: VERDE

@@ -93,7 +93,7 @@ vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 188 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, con sus SEIS adjudicaciones `5.1` a `5.6` todas a favor, los TRES numerales de la seccion 6 (`PD.1` ABIERTA con sus cinco puestos leidos del acta, `PD.8` ABIERTA, y el `6.3` como ANOTACION), las TRES preguntas de la seccion 7 las tres CONTESTADAS, CERO caidas propias del auditor registradas COMO CERO Y NO OMITIDAS, y CUATRO caidas del ejecutor todas DE METODO y NINGUNA DE RACHA: `C.1` y `C.2` declaradas por el ejecutor y `C.3` y `C.4` levantadas por el auditor, LAS CUATRO ATRIBUIDAS AL EJECUTOR porque la atribucion la hace la cabecera de la seccion y no quien las encontro. Mas la deuda de la serie REMEDIDA en esta vuelta. Con caso positivo por mutacion sobre un acta FABRICADA y el esperado mutado cayendo, y con la PARADA conservada entera: un estado que el registrador no sepa leer sigue siendo PARADA | **CERRADA** | `SALIDA_V188_T1A_REGISTRO_R50.txt`, `SALIDA_V188_T1A_MUTACION_REGISTRO_188.txt` |
 | **TAREA 2** | EL PLAN: LAS CUATRO FICHAS QUE LA VARA NOMBRA, RESUELTAS CONTRA SU EVIDENCIA. `scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD de apertura>` corrida con corte propio y no copiada del acta; las cuatro fichas `OP-L-01`, `OP-L-02`, `OP-L-03` y `OP-I-01` LEIDAS ENTERAS Y CITADAS de `docs/plan/OPERACIONES.jsonl`; el producto de cada una MEDIDO contra la `evidencia` que la propia ficha nombra, con bytes por las dos convenciones y la cuenta prometida contra la cuenta que hay; LA VARA GANA SU PATA DOCUMENTAL EN CODIGO para las fichas de tipo `MESA`, con la cifra vieja publicada entera y al lado; el estado de cada una declarado en una de las tres formas (su producto la cubre, esta pero no la cubre, o no hay evidencia y es PARADA); y el desfase de sus cortes medido y publicado. NO se toca el campo `estado`, NO se reescriben las fichas y NINGUN VEREDICTO SE MUEVE | **CERRADA CON UNA PARADA DENTRO (la de OP-L-02)** | `SALIDA_V188_T2_VARA_APERTURA.txt`, `SALIDA_V188_T2_VARA_CON_PATA.txt`, `SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt`, `SALIDA_V188_T2_EVIDENCIA_DE_LAS_FICHAS.txt` |
 | **TAREA 3** | EL CASO E: EL INVENTARIO DE EXENCIONES EN VEZ DE UNA CUENTA TECLEADA. BLOQUEANTE PORQUE LA BATERIA ES LA 189. El caso E de `scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py` deja de contar un texto y pasa a COMPUTAR EL INVENTARIO de guardas eximidas en el carril tardio CON SUS NOMBRES, leido del fuente, y a cotejarlo contra una LISTA AUTORIZADA Y ESCRITA que hoy tiene DOS entradas con su vuelta y su decision al lado. Cae en rojo en TRES casos y los tres se prueban: una exencion fuera de la lista, una de la lista que desaparece, y una eximida que NO exige su declaracion. Los otros diecisiete casos no se tocan. Mas (b) el `sha256` del sujeto al lado de todo numero de linea que un arnes publique, y (c) la doble corrida de la nomina EXCLUYENDO explicitamente cualquier arnes que ya haya salido en rojo en esa misma vuelta, DICIENDOLO en su salida | **CERRADA EN VERDE** | `SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt`, `SALIDA_V186_T2A_MUTACION_PIEZA4.txt`, `SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt` |
-| **TAREA 4** | LA ESCALADA: LA GUARDA QUE VE LA MITAD, Y LA SECCION QUE SE DUPLICA. `AUDITOR.md` 1.2, mandatorio con la racha de reporte en dos. (a) `parejas_publicadas()` ensancha sus formas para cubrir las TRES que hoy se le escapan, leidas de reportes reales; LA REGLA DE LA AMBIGUEDAD NO SE TOCA; y la guarda PUBLICA SU COBERTURA, cuantas parejas ve contra cuantas rutas con cifra de bytes hay y cuantas quedan sin atribuir POR AMBIGUAS nombradas una a una. (b) `piezas_que_faltan()` exige que las secciones sean UNICAS Y ESTEN EN ORDEN, no solo que existan, que es la `C.4`. Con arnes obligatorio que incluye un caso por cada forma nueva con su mutacion cayendo, un caso de ambiguedad que exija NO atribuir, un caso sobre el texto real de `git show 9a06b7c8` exigiendo SEIS parejas vistas y SEIS que calzan, y un caso sobre ese mismo texto que ACUSE las dos secciones 9 nombrando sus dos lineas | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LA ESCALADA: LA GUARDA QUE VE LA MITAD, Y LA SECCION QUE SE DUPLICA. `AUDITOR.md` 1.2, mandatorio con la racha de reporte en dos. (a) `parejas_publicadas()` ensancha sus formas para cubrir las TRES que hoy se le escapan, leidas de reportes reales; LA REGLA DE LA AMBIGUEDAD NO SE TOCA; y la guarda PUBLICA SU COBERTURA, cuantas parejas ve contra cuantas rutas con cifra de bytes hay y cuantas quedan sin atribuir POR AMBIGUAS nombradas una a una. (b) `piezas_que_faltan()` exige que las secciones sean UNICAS Y ESTEN EN ORDEN, no solo que existan, que es la `C.4`. Con arnes obligatorio que incluye un caso por cada forma nueva con su mutacion cayendo, un caso de ambiguedad que exija NO atribuir, un caso sobre el texto real de `git show 9a06b7c8` exigiendo SEIS parejas vistas y SEIS que calzan, y un caso sobre ese mismo texto que ACUSE las dos secciones 9 nombrando sus dos lineas | **CERRADA EN VERDE** | `SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt` |
 | **TAREA 5** | LA RELECTURA AL DOBLE, LOS DOS REMEDIOS PEQUENOS Y EL CIERRE. (a) La relectura al doble del tramo de la ciega del acta 188, encargada por `AUDITOR.md` 1.2 porque la discrepancia del auditor (el puesto 1202) cayo FUERA del discutible de clase marcado: cotejo de `sha256` contra el sello `V189` ANTES de leer un solo puesto, 30 puestos mas 30 vecinos deterministas con `vecinos()` IMPORTADA y no copiada, 60 releidos que es el doble exacto, NINGUNA CLASE SE VUELVE A DECIDIR; mas el remedio del `D.2`, que es un conjunto `evitar` OPCIONAL para `vecinos()` que deja su conducta de hoy intacta sin el, y los TRES solapes del UNIVERSO publicados; mas el puesto 1202 mirado con la misma vara; mas la cuenta de cuantos de los 60 llevan en su razon evidencia DE FAMILIA y no del par. (b) `docs/loop/DISCUTIBLES_DE_CLASE_V188.txt` con los puestos de los discutibles DE CLASE y nada mas. (c) El esqueleto tallado en la apertura y en su propio commit, que es la `C.1`. (d) El reporte se abre, se llena por anexion y se cierra con `cerrar_reporte.py --vuelta 188` y `archivar_reporte.py --vuelta 188`, con UNA SOLA SECCION 9 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -562,5 +562,129 @@ igual pero lo dice**, `(sin motivo declarado)`, **sin inventarle uno**.
 existan todos los arneses que nacen hoy, y su salida es
 `docs/loop/SALIDA_V188_T3C_NOMINA.txt`. **Se dice para que nadie la busque en esta
 seccion.**
+
+### TAREA 4. LA ESCALADA: LA GUARDA QUE VEIA LA MITAD, Y LA SECCION QUE SE DUPLICA. CERRADA EN VERDE
+
+**LA RACHA DE REPORTE SIGUE EN DOS, ASI QUE `AUDITOR.md` 1.2 SIGUE SIENDO
+MANDATORIO.** La escalada de la 187 esta descargada; esta es la siguiente, y sale
+de una medicion del auditor.
+
+#### 4.a LA COBERTURA DE LA GUARDA DE LAS DOS CONVENCIONES
+
+**EL HUECO, MEDIDO Y REPRODUCIDO POR MI EN LA APERTURA ANTES DE TOCAR NADA:**
+corrida sobre el texto real de `git show 9a06b7c8:docs/loop/REPORTE.md`,
+`parejas_publicadas()` veia **TRES** parejas
+(`docs/PENDIENTES.md`, `docs/plan/08_VERIFICACION.md` y
+`docs/loop/SALIDA_V184_APERTURA.txt`). **Ahora ve SEIS**, y las tres nuevas son las
+que el acta nombra:
+
+| linea | ruta | pareja | forma que se le escapaba |
+|---:|---|---|---|
+| 82 | `docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt` | 2444 / 2424 | dice **"2424 normalizado a LF"**, en singular y sin repetir la palabra bytes |
+| 368 | `docs/loop/SELLO_APERTURA_AUDITOR_V188.json` | 802 / 802 | separa las dos convenciones **con una coma** y envuelve las cifras en negrita |
+| 398 | `docs/loop/_auditor_v188_exclusion.txt` | 1372 / 1372 | la ruta esta **dos lineas mas arriba**, en una fila de tabla |
+
+**LAS TRES FORMAS SON LITERALES DE ESE REPORTE Y NO INVENTADAS**, y las tres van
+en el arnes con su mutacion cayendo.
+
+**LA REGLA DE LA AMBIGUEDAD NO SE TOCO, Y ESA ES LA MITAD QUE IMPIDE CAMBIAR UN
+HUECO POR OTRO PEOR.** Si entre la ruta y la pareja hay **otra** cifra de bytes, el
+sujeto sigue siendo ambiguo y la guarda **no atribuye nada**. Lo mismo para la
+ruta de arriba: **solo se acepta la linea anterior mas cercana que nombre
+EXACTAMENTE UNA ruta**, y solo si entre ella y la pareja no hay otra cifra de
+bytes, contando el resto de aquella linea y todas las de en medio. El caso del
+`15655` del reporte de la 186 **sigue saliendo sin atribuir**, y ahora ademas sale
+**nombrado**.
+
+**LA COBERTURA, QUE ES LA MITAD QUE IMPORTA, Y AHORA LA PUBLICA LA PROPIA GUARDA.**
+Sobre el texto real del reporte de la 187:
+
+- **`CIFRA parejas que VE y atribuye: 6`**
+- **`CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el universo
+  donde una pareja podria estar: 6`** (lineas 82, 196, 338, 398, 515 y 536)
+- **`CIFRA de esas que ademas nombran una ruta en su misma linea: 5`**
+- **`CIFRA parejas vistas y NO atribuidas: 2`**, y van **nombradas una a una con su
+  motivo**:
+  - **linea 515**, `15655 / 15655`: *"AMBIGUA: entre la ruta `docs/PENDIENTES.md` y
+    la pareja hay otra cifra de bytes, asi que el sujeto no esta claro y esta
+    guarda NO atribuye nada"*.
+  - **linea 536**, `46086 / 46086`: *"SIN SUJETO: ni esta linea ni las 4 anteriores
+    nombran UNA sola ruta que se le pueda atribuir"*.
+
+**Y EL DENOMINADOR SE MIDIO ANTES DE ELEGIRLO:** no es "rutas con cifra de bytes en
+su misma linea", porque **eso dejaria la pareja de la linea 398 fuera de su propio
+universo**, que es precisamente la forma que esta vuelta viene a cubrir. El
+universo son **las lineas con cifra de bytes**, y la cuenta de las que ademas
+llevan ruta al lado se publica a su lado, no en su lugar.
+
+**Y AQUI VA UNA MEDICION QUE CAMBIO EL CASO DECISIVO, Y SE DECLARA EN VEZ DE
+DISIMULARSE.** Lo primero que probe fue cotejar las seis contra **el arbol de ese
+commit**, que parece lo correcto. **No lo es, y lo prueba una cifra:** git guarda
+los ficheros **con LF**, asi que **la convencion DISCO de un fichero con CRLF no se
+puede recuperar de git**. Ese cotejo acusaba a
+`docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt` de publicar **2444** en disco cuando
+git dice **2424**, **y la acusacion era falsa**: git nunca tuvo la version con
+CRLF. **Es la caida del recuadro de `AUDITOR.md` 0 otra vez: la fuente hay que
+elegirla antes de contarla.**
+
+**ASI QUE EL CASO DECISIVO COTEJA CONTRA EL DISCO DE HOY**, que es la **misma
+fuente que la guarda usa en produccion**, con **una sola excepcion mecanica y
+declarada**: las rutas que **esta misma vuelta** ha movido desde ese commit. **La
+lista no se teclea**: sale de `git diff --name-only 9a06b7c8 -- <ruta>`. Resultado:
+
+- **`CIFRA parejas que NO calzan contra el disco de hoy: 2`**, las dos de
+  `docs/PENDIENTES.md` (publicada 924954, hoy 943276).
+- **`CIFRA de esas que son de una ruta QUE ESTA VUELTA MOVIO: 2`**, y la movio la
+  TAREA 1 de esta vuelta al escribir la `R.50`.
+- **`CIFRA de esas que NO tienen esa excusa, que es el veredicto: 0`.**
+
+**SEIS VISTAS Y CERO QUE NO CALCEN SIN EXCUSA. Las dos cifras se publican, no
+solo la que conviene.**
+
+#### 4.b LA SECCION QUE SE DUPLICA. ES LA `C.4`
+
+**`piezas_que_faltan()` EXIGE AHORA QUE LAS SECCIONES SEAN UNICAS Y ESTEN EN
+ORDEN**, no solo que existan. **Es la misma especie que la escalada de al lado
+corrida un paso:** comprobar que algo **este** no es comprobar que este **bien**.
+
+**EL ROJO VIEJO NO SE REESCRIBE:** una seccion que falta sigue cayendo con su texto
+de hoy, palabra por palabra (`(3) faltan las secciones 5`), y el arnes lo exige.
+Lo que se **anade** son dos motivos, cada uno con **sus lineas nombradas**.
+
+**SOBRE EL TEXTO REAL DEL REPORTE DE LA 187, LA PIEZA (3) LO ACUSA:**
+
+```
+(3) hay secciones DUPLICADAS: `## 9.` aparece 2 veces, en las lineas 870, 920
+(3) hay secciones FUERA DE ORDEN: `## 9.` en la linea 920 va detras de `## 10.` en la linea 877
+```
+
+**Y EL ORDEN SE MIDE POR LA POSICION, NO POR LA PRIMERA APARICION, Y ESO ES LO QUE
+LO HACE FUNCIONAR:** mirando solo la primera aparicion de cada cabecera el reporte
+de la 187 sale `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10` y **parece ordenado**. Leyendolas
+en el orden en que estan escritas sale `..., 9, 10, 9`. **Medir el orden por la
+primera aparicion es no medirlo**, y esa frase esta escrita dentro de la funcion.
+
+**Y NO ACUSA A CUALQUIERA, MEDIDO SOBRE LOS TRES REPORTES ARCHIVADOS ANTERIORES:**
+`REPORTE_V184.md`, `REPORTE_V185.md` y `REPORTE_V186.md` tienen **1 seccion `## 9.`
+cada uno**, **0 duplicadas y 0 fuera de orden**.
+
+#### EL ARNES, QUE NACE EN ESTA VUELTA
+
+`scripts/loop/vuelta188_tarea4_mutacion_cobertura_parejas.py`. Salida:
+`docs/loop/SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt`, **`CIFRA casos: 17 |
+pasan: 17`**, **`CIFRA casos que CAEN al mutar su esperado: 16 de 16`**, **`CIFRA
+fallos: 0`**, **`VEREDICTO: VERDE`**, exitcode **0**.
+
+**Y ESTE ARNES NACIO EN ROJO Y SE PUBLICA QUE NACIO EN ROJO**, por la adjudicacion
+`5.2` del acta 186: su primera corrida dio **`CIFRA fallos: 3`** y **`VEREDICTO:
+ROJO`**, y los tres eran hallazgos de verdad, no fallos del sujeto: (1) el cotejo
+contra el arbol del commit acusaba en falso al tallador por la convencion de
+disco; (2) el denominador de la cobertura dejaba fuera la pareja de la linea 398;
+y (3) el caso C arrastraba a los dos. **Los tres se repararon en el arnes, ninguno
+aflojando el sujeto**, y el motivo esta escrito dentro del propio fichero.
+
+**Y ESTA VUELTA NO ESCRIBE DOS SECCIONES 9.** La unica seccion 9 de este reporte es
+la que talla `scripts/loop/cerrar_reporte.py` al cerrar, y lo que hubiera que decir
+de la bateria va ahi dentro.
 
 <!-- FIN ANEXO DE TAREAS -->

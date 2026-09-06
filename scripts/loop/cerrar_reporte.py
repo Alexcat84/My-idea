@@ -1239,11 +1239,39 @@ def cifras_sin_pareja(texto):
 #       cosas con un solo numero, y las dos se comprueban.
 PATRON_RUTA_PUBLICADA = re.compile(
     r"`((?:docs|scripts|dataset|engine|web|paradas)/[A-Za-z0-9_./-]+)`")
+# EL ENSANCHE DE LA VUELTA 188 (TAREA 4.a; escalada encargada por la seccion 9
+# del acta 188). EL HUECO, MEDIDO POR EL AUDITOR Y NO SOSPECHADO: corrida sobre
+# el reporte de la 187, esta guarda veia TRES parejas y el barrido del auditor
+# atribuia SEIS sin ambiguedad. Las tres que se le escapaban, leidas de ese
+# reporte real y no inventadas:
+#   - `SALIDA_V187_TALLADOR_CABECERA.txt` (2444 / 2424): dice "2424 normalizado a
+#     LF", **en singular y sin repetir la palabra bytes**;
+#   - `_auditor_v188_exclusion.txt` (1372 / 1372): la ruta esta en una **fila de
+#     tabla anterior** y la pareja en la prosa de debajo;
+#   - `SELLO_APERTURA_AUDITOR_V188.json` (802 / 802): separa las dos convenciones
+#     **con una coma**, no con una barra, y envuelve las cifras en negrita.
+# NO ERA CAIDA (las seis calzaban), pero la guarda publicaba `toda pareja de
+# convenciones es CIERTA` MIRANDO LA MITAD, que es el mismo hueco de la escalada
+# anterior corrido un paso.
+# LA REGLA DE LA AMBIGUEDAD NO SE TOCA, y es la que impide el rojo inventado del
+# 15655: si entre la ruta y la pareja hay OTRA cifra de bytes, el sujeto sigue
+# siendo ambiguo y no se atribuye nada. Quitarla para ganar cobertura seria
+# cambiar un hueco por otro peor.
 PATRON_PAREJA_PROSA = re.compile(
     r"(\d[\d.]*)\s*bytes\s+en\s+disco\s+y\s+(\d[\d.]*)\s*"
-    r"(?:bytes\s+)?(?:normalizados\s+a\s+)?(?:en\s+)?LF")
+    r"(?:bytes\s+)?(?:normalizad\w*\s+a\s+)?(?:en\s+)?LF")
 PATRON_PAREJA_BARRA = re.compile(
-    r"disco\s+(\d[\d.]*)\s*bytes\s*\|\s*LF\s+(\d[\d.]*)\s*bytes")
+    r"disco\s+\*{0,2}(\d[\d.]*)\*{0,2}\s*bytes\s*\|\s*LF\s+"
+    r"\*{0,2}(\d[\d.]*)\*{0,2}\s*bytes")
+# LA FORMA DE LA COMA, leida de la fila de tabla del reporte de la 187:
+# `disco **802** bytes, LF **802** bytes`.
+PATRON_PAREJA_COMA = re.compile(
+    r"disco\s+\*{0,2}(\d[\d.]*)\*{0,2}\s*bytes\s*,\s*LF\s+"
+    r"\*{0,2}(\d[\d.]*)\*{0,2}\s*bytes")
+# CUANTAS LINEAS SE MIRA HACIA ATRAS cuando la linea de la pareja NO nombra
+# ninguna ruta. Es corto a proposito: una ruta que quede a mas de esto de su
+# pareja ya no es "la de arriba", es otra cosa.
+VENTANA_RUTA_ARRIBA = 4
 PATRON_FILA_UNA_CIFRA = re.compile(
     r"^\|\s*`([^`]+)`\s*\|\s*\*{0,2}(\d[\d.]*)\*{0,2}\s*\|$")
 # LA CABECERA QUE CONVIERTE UNA SOLA CIFRA EN DOS AFIRMACIONES. Tiene que decir
@@ -1259,7 +1287,7 @@ def _entero(txt):
     return int(txt.replace(".", ""))
 
 
-def parejas_publicadas(texto):
+def parejas_publicadas(texto, con_descartes=False):
     """TODA PAREJA DE CIFRAS DE BYTES QUE EL REPORTE PUBLICA CONTRA UNA RUTA.
 
     Devuelve [(linea, ruta, publicada_disco, publicada_lf, forma)]. **PURA**:
@@ -1274,9 +1302,21 @@ def parejas_publicadas(texto):
     LA RUTA DE UNA PAREJA DE PROSA ES LA ULTIMA QUE APARECE ANTES DE LA CIFRA en
     su misma linea, y si no hay ninguna delante, la primera que aparezca detras.
     Es la regla mas estrecha que caza los casos reales: una linea que nombra dos
-    ficheros y una sola pareja atribuye la pareja al que la precede."""
+    ficheros y una sola pareja atribuye la pareja al que la precede.
+
+    `con_descartes=True` devuelve `(salida, descartes)`, donde `descartes` es
+    [(linea, motivo, muestra)] con TODA pareja que se vio y NO se pudo atribuir.
+    **Nace en la vuelta 188, TAREA 4.a, y su valor por defecto conserva
+    exactamente la conducta de hoy**: existe para que la guarda pueda PUBLICAR SU
+    COBERTURA, porque **una guarda que no dice a cuanto llega no se puede
+    auditar**. No cambia ni una atribucion: solo deja de tirar a la basura lo que
+    ya sabia."""
     salida = []
+    descartes = []
     cabecera_iguales = False
+    # LAS LINEAS CRUDAS, PARA PODER MIRAR HACIA ATRAS SIN VOLVER A PARTIR EL
+    # TEXTO EN CADA VUELTA DEL BUCLE. Se indexan por numero de linea real.
+    renglones = texto.replace(chr(13) + NL, NL).split(NL)
     for n, linea in renglones_fuera_de_cerca(texto):
         # (c) LA TABLA DE UNA SOLA CIFRA. El estado de la cabecera se lleva de
         # una linea a otra a proposito: una fila de tabla no dice de que columna
@@ -1298,7 +1338,8 @@ def parejas_publicadas(texto):
         rutas = [(mm.start(), mm.end(), mm.group(1))
                  for mm in PATRON_RUTA_PUBLICADA.finditer(linea)]
         for patron, forma in ((PATRON_PAREJA_PROSA, "prosa disco y LF"),
-                              (PATRON_PAREJA_BARRA, "prosa disco barra LF")):
+                              (PATRON_PAREJA_BARRA, "prosa disco barra LF"),
+                              (PATRON_PAREJA_COMA, "prosa disco coma LF")):
             for m in patron.finditer(linea):
                 antes = [(ini, fin, r) for ini, fin, r in rutas if ini < m.start()]
                 detras = [(ini, fin, r) for ini, fin, r in rutas if ini >= m.end()]
@@ -1309,7 +1350,38 @@ def parejas_publicadas(texto):
                     ini_r, _f, ruta = detras[0]
                     hueco = linea[m.end():ini_r]
                 else:
-                    continue
+                    # LA RUTA DE ARRIBA (vuelta 188, TAREA 4.a). Cuando la linea
+                    # de la pareja NO nombra ninguna ruta, se mira hacia atras,
+                    # y CON LA MISMA REGLA DE AMBIGUEDAD, no con una mas floja:
+                    #   - solo se acepta la linea anterior mas cercana que
+                    #     nombre EXACTAMENTE UNA ruta (dos rutas es ambiguo);
+                    #   - y solo si entre esa ruta y la pareja NO hay otra cifra
+                    #     de bytes, contando el resto de aquella linea y todas
+                    #     las de en medio.
+                    ruta, hueco = None, ""
+                    medio = []
+                    for atras in range(1, VENTANA_RUTA_ARRIBA + 1):
+                        idx = n - 1 - atras
+                        if idx < 0:
+                            break
+                        previa = renglones[idx]
+                        halladas = list(PATRON_RUTA_PUBLICADA.finditer(previa))
+                        if not halladas:
+                            medio.insert(0, previa)
+                            continue
+                        if len(halladas) != 1:
+                            break
+                        ruta = halladas[0].group(1)
+                        hueco = (previa[halladas[0].end():]
+                                 + " ".join(medio) + linea[:m.start()])
+                        break
+                    if ruta is None:
+                        descartes.append(
+                            (n, "SIN SUJETO: ni esta linea ni las %d anteriores "
+                                "nombran UNA sola ruta que se le pueda atribuir"
+                                % VENTANA_RUTA_ARRIBA,
+                             "%s / %s" % (m.group(1), m.group(2))))
+                        continue
                 # LA REGLA QUE IMPIDE ATRIBUIR UNA PAREJA AL FICHERO EQUIVOCADO,
                 # Y LA DESTAPO LA PROPIA GUARDA AL CORRERLA SOBRE `bb3aaad3`.
                 # Ahi, la linea 191 dice *"`docs/PENDIENTES.md` pasa de 894124
@@ -1324,10 +1396,50 @@ def parejas_publicadas(texto):
                 # mas estrecha que sigue cazando los cuatro casos de la `C.1`,
                 # donde entre la ruta y su pareja no hay mas que una coma.
                 if PATRON_BYTES.search(hueco):
+                    descartes.append(
+                        (n, "AMBIGUA: entre la ruta `%s` y la pareja hay otra "
+                            "cifra de bytes, asi que el sujeto no esta claro y "
+                            "esta guarda NO atribuye nada" % ruta,
+                         "%s / %s" % (m.group(1), m.group(2))))
                     continue
                 salida.append((n, ruta, _entero(m.group(1)),
                                _entero(m.group(2)), forma))
-    return salida
+    return (salida, descartes) if con_descartes else salida
+
+
+def cobertura_de_parejas(texto):
+    """A CUANTO LLEGA ESTA GUARDA, DICHO POR ELLA MISMA. PURA.
+
+    Devuelve un diccionario con:
+      `vistas`            las parejas atribuidas, tal como salen de arriba;
+      `lineas_con_bytes`  [(linea, texto)] de toda linea fuera de cerca con
+                          alguna cifra de bytes, que es el DENOMINADOR honesto:
+                          **el universo donde una pareja podria estar**. NO se
+                          exige que la ruta este en esa misma linea, y eso se
+                          midio antes de decidirlo: en el reporte de la 187 hay
+                          una pareja cuya ruta vive DOS lineas mas arriba, y un
+                          denominador que exigiera la ruta al lado la dejaria
+                          fuera de su propio universo;
+      `rutas_con_bytes`   [(linea, ruta)] de las que ademas nombran una ruta en
+                          esa misma linea. Se publica al lado, no en su lugar;
+      `descartes`         [(linea, motivo, muestra)] de toda pareja que se vio y
+                          NO se atribuyo, con su motivo escrito.
+
+    POR QUE NACE (vuelta 188, TAREA 4.a; escalada de la seccion 9 del acta 188):
+    la guarda publicaba `toda pareja de convenciones es CIERTA` **sin decir entre
+    cuantas**. Con esto dice las tres cifras, y **las ambiguas van nombradas una
+    a una** en vez de desaparecer en silencio. **Una guarda que no dice a cuanto
+    llega no se puede auditar.**"""
+    vistas, descartes = parejas_publicadas(texto, con_descartes=True)
+    lineas_con_bytes, rutas_con_bytes = [], []
+    for n, linea in renglones_fuera_de_cerca(texto):
+        if not PATRON_BYTES.search(linea):
+            continue
+        lineas_con_bytes.append((n, linea.strip()[:110]))
+        for mm in PATRON_RUTA_PUBLICADA.finditer(linea):
+            rutas_con_bytes.append((n, mm.group(1)))
+    return {"vistas": vistas, "lineas_con_bytes": lineas_con_bytes,
+            "rutas_con_bytes": rutas_con_bytes, "descartes": descartes}
 
 
 def convenciones_que_no_calzan(texto, mediciones):
@@ -1369,6 +1481,42 @@ def mediciones_de_las_rutas(texto, raiz=RAIZ):
     la sede que ya existia."""
     return {ruta: medir_en_disco(raiz, ruta)
             for _n, ruta, _d, _l, _f in parejas_publicadas(texto)}
+
+
+PATRON_SECCION = re.compile(r"^##\s+(\d+)\.")
+
+
+def secciones_del_reporte(texto):
+    """LAS CABECERAS `## N.` DEL REPORTE, CON TODAS SUS LINEAS. PURA.
+
+    Devuelve `{numero: [linea, ...]}`. **Todas las apariciones, no la primera**:
+    una seccion que aparece dos veces es exactamente lo que la `C.4` del acta 188
+    encontro y lo que la pieza (3) no sabia ver."""
+    salida = {}
+    for i, linea in enumerate(texto.replace(chr(13) + NL, NL).split(NL), 1):
+        m = PATRON_SECCION.match(linea)
+        if m:
+            salida.setdefault(int(m.group(1)), []).append(i)
+    return salida
+
+
+def secciones_fuera_de_orden(apariciones):
+    """LAS CABECERAS QUE APARECEN DETRAS DE OTRA MAYOR. PURA.
+
+    Devuelve [(numero, linea, numero_anterior, linea_anterior)]. Recorre las
+    cabeceras EN EL ORDEN EN QUE ESTAN ESCRITAS, no por su numero, que es la
+    unica forma de ver el desorden: el reporte de la 187 sale `0, 1, ..., 9, 10,
+    9`, y mirando solo la PRIMERA aparicion de cada una sale ordenado y no se ve
+    nada. **Medir el orden por la primera aparicion es no medirlo.**"""
+    seq = sorted(((ln, k) for k, v in apariciones.items() for ln in v))
+    fuera = []
+    mayor_k, mayor_ln = None, None
+    for ln, k in seq:
+        if mayor_k is not None and k < mayor_k:
+            fuera.append((k, ln, mayor_k, mayor_ln))
+        if mayor_k is None or k > mayor_k:
+            mayor_k, mayor_ln = k, ln
+    return fuera
 
 
 def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
@@ -1423,11 +1571,40 @@ def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
             faltan.append("(2) %d fila(s) de la cabecera tallada no estan pegadas"
                           % len(fuera))
 
-    # (3) LAS SECCIONES 3 A 9
-    ausentes = [k for k in range(3, 10) if (NL + "## %d." % k) not in texto]
+    # (3) LAS SECCIONES 3 A 9: QUE ESTEN, QUE SEAN UNICAS Y QUE ESTEN EN ORDEN
+    #
+    # EL ENSANCHE DE LA VUELTA 188 (TAREA 4.b), QUE ES LA `C.4` DEL ACTA 188. El
+    # reporte de la 187 tiene DOS secciones `## 9.`, en las lineas 870 y 920, con
+    # la `## 10.` en medio, en la 877; y la primera dice *"EL HUECO SE DECLARA CON
+    # SUS TRES PIEZAS JUNTAS"* SIN TRAER NINGUNA DE LAS TRES. `REPORTE_V184.md`,
+    # `REPORTE_V185.md` y `REPORTE_V186.md` tienen UNA cada uno: el 187 es el
+    # primero con dos, y es NUEVO.
+    #
+    # ES LA MISMA ESPECIE QUE LA ESCALADA DE AL LADO, CORRIDA UN PASO: comprobar
+    # que algo ESTE no es comprobar que este BIEN. La pieza (3) comprobaba que la
+    # seccion EXISTIERA, igual que la guarda vieja comprobaba que la pareja
+    # EXISTIERA y no que fuera CIERTA.
+    #
+    # EL ROJO VIEJO NO SE REESCRIBE: si falta una seccion, esta pieza sigue
+    # cayendo CON SU TEXTO DE HOY, palabra por palabra. Lo que se ANADE son dos
+    # motivos nuevos, cada uno con sus lineas nombradas.
+    apariciones = secciones_del_reporte(texto)
+    ausentes = [k for k in range(3, 10) if k not in apariciones]
     if ausentes:
         faltan.append("(3) faltan las secciones %s"
                       % ", ".join(str(k) for k in ausentes))
+    repetidas = sorted(k for k, v in apariciones.items() if len(v) > 1)
+    if repetidas:
+        faltan.append("(3) hay secciones DUPLICADAS: %s"
+                      % "; ".join("`## %d.` aparece %d veces, en las lineas %s"
+                                  % (k, len(apariciones[k]),
+                                     ", ".join(str(x) for x in apariciones[k]))
+                                  for k in repetidas))
+    desorden = secciones_fuera_de_orden(apariciones)
+    if desorden:
+        faltan.append("(3) hay secciones FUERA DE ORDEN: %s"
+                      % "; ".join("`## %d.` en la linea %d va detras de `## %d.` "
+                                  "en la linea %d" % x for x in desorden))
 
     # (4) LA BATERIA DENTRO DE LA SECCION 9, O EL HUECO DECLARADO Y MEDIDO
     if (NL + "## 9.") not in texto:
@@ -1777,6 +1954,23 @@ def main():
                   % (n, ruta, cual, pub, med, forma))
     print("   CIFRA parejas cuya cifra NO es la que el disco dice: %d"
           % len(convenciones_rojas))
+    # LA COBERTURA (vuelta 188, TAREA 4.a). UNA GUARDA QUE NO DICE A CUANTO LLEGA
+    # NO SE PUEDE AUDITAR, y hasta aqui esta publicaba `toda pareja de
+    # convenciones es CIERTA` sin decir entre cuantas.
+    cob = cobertura_de_parejas(de_nuevo)
+    print("   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):")
+    print("      CIFRA parejas que la guarda VE y atribuye: %d" % len(cob["vistas"]))
+    print("      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el")
+    print("      universo donde una pareja podria estar: %d"
+          % len(cob["lineas_con_bytes"]))
+    print("      CIFRA de esas que ademas nombran una ruta en su misma linea: %d"
+          % len(cob["rutas_con_bytes"]))
+    print("      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: %d"
+          % len(cob["descartes"]))
+    for n, motivo, muestra in cob["descartes"]:
+        print("         linea %-5d %-14s %s" % (n, muestra, motivo))
+    if not cob["descartes"]:
+        print("         (ninguna, y el cero va escrito)")
     print("   CIFRA citas de arnes SIN COTEJO posible: %d" % (len(citas) - len(citas_rojas)))
     print("")
 
