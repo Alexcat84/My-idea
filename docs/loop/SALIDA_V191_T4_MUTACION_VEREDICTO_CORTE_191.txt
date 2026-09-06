@@ -38,12 +38,7 @@ C) LA MUTACION DE VERDAD: SE LE QUITA LA GUARDA A UNA COPIA Y SE COMPRUEBA
    QUE LA VERSION MUTILADA DEJA PASAR LO QUE LA DE VERDAD TUMBA
    el trozo '    rojos.extend(motivos_vestido)' aparece 1 vez(ces) en cerrar_reporte.py
    aparece exactamente una vez                              obtenido 1              esperado 1              -> PASA
-   copia mutada escrita. Los bytes ABSOLUTOS de `cerrar_reporte.py`
-   no se imprimen: ese fichero crece cada vuelta y esta salida se
-   sella. Lo que se imprime es la DIFERENCIA, que solo depende del
-   trozo sustituido y no del tamano del fichero:
-      la mutada mide -26 bytes MENOS que la de verdad
-   la diferencia es la del trozo sustituido                 obtenido -26            esperado -26            -> PASA
+   copia mutada escrita: 112439 bytes (la de verdad tiene 112413)
    la copia mutada compila                                  obtenido True           esperado True           -> PASA
    Y LA DIFERENCIA SE MIDE, no se afirma:
       `rojos.extend(motivos_vestido)` en la de verdad: 1

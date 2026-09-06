@@ -43,14 +43,42 @@ compara BYTE A BYTE. `reproduce` es entre las dos corridas de hoy;
 `contra_sellada` es contra lo que el repo lleva commiteado. Las dos se
 publican y ninguna se resuelve copiando.
 
-   vuelta191_tarea3_mutacion_lineas.py            NO MEDIBLE (no nombra una sola salida sellada)
-   vuelta191_tarea4_mutacion_veredicto.py         NO MEDIBLE (no nombra una sola salida sellada)
-   vuelta191_tarea6_mutacion_bloque_tallado.py    NO MEDIBLE (no nombra una sola salida sellada)
-   vuelta192_tarea4_mutacion_cuarta_puerta.py     NO MEDIBLE (no nombra una sola salida sellada)
+   vuelta191_tarea3_mutacion_lineas.py
+      salida: docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt
+      sellada    -> LF 7246 bytes | sha256 c053d5ebeee3afd2
+      corrida 1  -> exit 0 | LF 7246 bytes | sha256 c053d5ebeee3afd2
+      corrida 2  -> exit 0 | LF 7246 bytes | sha256 c053d5ebeee3afd2
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta191_tarea4_mutacion_veredicto.py
+      salida: docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt
+      sellada    -> LF 6072 bytes | sha256 6de697dc9c91cd7e
+      corrida 1  -> exit 0 | LF 6072 bytes | sha256 fbdb9a383f5468dd
+      corrida 2  -> exit 0 | LF 6072 bytes | sha256 fbdb9a383f5468dd
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      False
+      restaurada tras la corrida:       True
+   vuelta191_tarea6_mutacion_bloque_tallado.py
+      salida: docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt
+      sellada    -> LF 3976 bytes | sha256 a5b846ea7deb3868
+      corrida 1  -> exit 0 | LF 3976 bytes | sha256 a5b846ea7deb3868
+      corrida 2  -> exit 0 | LF 3976 bytes | sha256 a5b846ea7deb3868
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta192_tarea4_mutacion_cuarta_puerta.py
+      salida: docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt
+      sellada    -> LF 4282 bytes | sha256 4779fcd04bc5b2da
+      corrida 1  -> exit 0 | LF 4282 bytes | sha256 4779fcd04bc5b2da
+      corrida 2  -> exit 0 | LF 4282 bytes | sha256 4779fcd04bc5b2da
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
 
-CIFRA arneses medidos: 0
-CIFRA NO MEDIBLES (declarados, no supuestos): 4 (vuelta191_tarea3_mutacion_lineas.py, vuelta191_tarea4_mutacion_veredicto.py, vuelta191_tarea6_mutacion_bloque_tallado.py, vuelta192_tarea4_mutacion_cuarta_puerta.py)
-CIFRA QUE NO REPRODUCEN: 0 (ninguno)
+CIFRA arneses medidos: 4
+CIFRA NO MEDIBLES (declarados, no supuestos): 0 (ninguno)
+CIFRA QUE NO REPRODUCEN: 1 (vuelta191_tarea4_mutacion_veredicto.py)
 CIFRA SIN RESTAURAR: 0 (ninguno)
 
-VEREDICTO DE REPRODUCCION: VERDE
+VEREDICTO DE REPRODUCCION: ROJO

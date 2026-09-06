@@ -172,7 +172,12 @@ def reproduce_de_verdad(nombre, directorio=None, base_salida=None,
     salida["ruta"] = ruta_rel
     ruta_abs = (ruta_rel if base_salida is not None
                 else os.path.join(RAIZ, ruta_rel.replace("/", os.sep)))
-    arnes_abs = os.path.join(directorio or LOOP, nombre)
+    # LA SEDE POR DEFECTO DE UN ARNES ES LA DE `verificar_mutaciones_viejas.py`
+    # Y NO EL `LOOP` DE ESTE FICHERO, Y LA CAUSA ESTA MEDIDA (vuelta 193): el
+    # `LOOP` de aqui es `docs/loop`, donde viven las SALIDAS, y los arneses viven
+    # donde VMV los busca. Con el `LOOP` de aqui, los cuatro reclamados salian
+    # `NO MEDIBLE` porque el fichero no estaba donde se le buscaba.
+    arnes_abs = os.path.join(directorio or VMV.LOOP, nombre)
     if not os.path.isfile(arnes_abs) or not os.path.isfile(ruta_abs):
         return salida
 

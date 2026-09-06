@@ -163,8 +163,31 @@ def main():
                 "    pass  # LA GUARDA QUITADA POR EL ARNES DE LA VUELTA 191")
             ruta = os.path.join(tmp, "cerrar_reporte_mutado.py")
             io.open(ruta, "w", encoding="utf-8", newline=NL).write(mutado)
-            w("   copia mutada escrita: %d bytes (la de verdad tiene %d)"
-              % (len(mutado.encode("utf-8")), len(codigo.encode("utf-8"))))
+            # LOS BYTES ABSOLUTOS NO SE IMPRIMEN (vuelta 193, TAREA 2; el
+            # ejecutor lo cazo con el carril --reproduccion nuevo de
+            # guarda_de_entrada_a_la_nomina.py, y NO estaba entre los tres que el
+            # acta 193 midio). `cerrar_reporte.py` CRECE cada vuelta, asi que
+            # imprimir su tamano hacia que esta salida sellada cambiara sola: da
+            # 6072 bytes las dos veces y `sha256` DISTINTO, porque las dos cifras
+            # tienen el mismo numero de digitos. LA MISMA ESPECIE QUE LOS TRES DE
+            # LA 4.10, y por eso se arregla igual.
+            #
+            # EL SUJETO SIGUE VIVO A PROPOSITO, Y ESO NO ES EL FALLO: lo que este
+            # bloque prueba es que LA GUARDA DE HOY se puede quitar de una copia
+            # y que la copia compila, y para eso hace falta el `cerrar_reporte.py`
+            # de hoy. **La reproduccion no se le exige al sujeto: se le exige a la
+            # SALIDA.** Lo que se imprime, entonces, es la DIFERENCIA, que es
+            # invariante porque solo depende del trozo sustituido.
+            delta = len(codigo.encode("utf-8")) - len(mutado.encode("utf-8"))
+            w("   copia mutada escrita. Los bytes ABSOLUTOS de `cerrar_reporte.py`")
+            w("   no se imprimen: ese fichero crece cada vuelta y esta salida se")
+            w("   sella. Lo que se imprime es la DIFERENCIA, que solo depende del")
+            w("   trozo sustituido y no del tamano del fichero:")
+            w("      la mutada mide %d bytes MENOS que la de verdad" % delta)
+            fallos += _caso(w, "la diferencia es la del trozo sustituido", delta,
+                            len(TROZO_DE_LA_GUARDA.encode("utf-8"))
+                            - len("    pass  # LA GUARDA QUITADA POR EL ARNES "
+                                  "DE LA VUELTA 191".encode("utf-8")))
             fallos += _caso(w, "la copia mutada compila",
                             bool(compile(mutado, ruta, "exec")) or True, True)
             w("   Y LA DIFERENCIA SE MIDE, no se afirma:")
