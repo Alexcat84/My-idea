@@ -1,0 +1,69 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 185, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 185 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 31091 | saltos de linea: 523
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V185_TALLADOR_CABECERA.txt             2399 bytes, 11 filas de tabla
+   scripts/loop/_v185_cierre_texto.md                      7774 bytes, sha256 3453e6e34a35e846
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. LA GUARDA DEL COMMIT DE `dataset/`, CORRIDA EL DIA QUE SERVIA
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+   docs/loop/SALIDA_V185_HUECO_BATERIA.txt              NO EXISTE
+   CIFRA lineas no vacias de la bateria: 0
+   vuelta que lleva dentro el nombre del fichero: 185
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+   CIFRA tramos de esa bateria con fichero en disco: 0
+   CIFRA tramos sellados EN LA VUELTA 185: 0 []
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): HUECO
+      motivo: el fichero 'SALIDA_V185_HUECO_BATERIA.txt' es de la vuelta 185 pero NO se llama como una corrida: una corrida se llama SALIDA_V<N>_BATERIA y esto no lo es, asi que no puede declararse corrida por mucho que traiga lineas
+   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:
+   --hueco-atribucion: 'NADIE la corrio, y no es un olvido: por AUDITOR.md 6.1, decision del fundador del 5 sep 2026, la bateria de mutaciones corre CADA CINCO VUELTAS en una vuelta propia que no lleva nada mas. Cerro entera en la VUELTA 184, con sus nueve tramos sellados y su composicion de 71753 bytes en disco y 71753 bytes normalizados a LF, y LA SIGUIENTE VUELTA DE BATERIA ES LA 189. La 185 es una vuelta intermedia y su seccion 9 cierra con este hueco declarado y medido, que es lo que esa misma decision manda.'
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LAS DOS TAREAS CIERRAN Y ESTE REPORTE SE CIERRA CON SU SECCION 9 EN HUECO DECLARADO Y MEDIDO, PORQUE LA BATERIA CORRE CA'
+   CIFRA numerales hallados en el veredicto: 2
+      'DOS'      -> 2 tareas
+      'DOS'      -> 2 caidas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 2
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 533 bytes de hueco -> 2491 bytes de tabla pegada
+   veredicto escrito: 455 bytes
+   ESCRITO: docs/loop/REPORTE.md (42888 bytes, 696 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja SI
+   toda cita de arnes calza con su fichero SI
+   CIFRA cifras publicadas sin su pareja: 0
+   LAS CITAS DE ARNES, UNA A UNA (vuelta 179, TAREA 1.b):
+      linea 201   SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt publicada 9 | del fichero (no medible)
+         SIN COTEJO: el fichero no publica ninguna de las dos formas de cifra propia, y no se fabrica un rojo sobre lo que no se puede cotejar
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   CIFRA citas de arnes SIN COTEJO posible: 1
+
+VERDE: el reporte de la vuelta 185 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.
