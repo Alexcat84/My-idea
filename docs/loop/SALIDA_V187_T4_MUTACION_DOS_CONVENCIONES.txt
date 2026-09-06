@@ -49,29 +49,39 @@ CASO 6. EL QUE DECIDE: EL TEXTO REAL DE `git show bb3aaad3:docs/loop/REPORTE.md`
    SE EXIGE QUE LA GUARDA HABRIA CAZADO LAS CUATRO CIFRAS DE LA `C.1`,
    NOMBRADAS UNA A UNA. Si no caza el caso que la trajo, no sirve.
    el texto mide 46086 bytes y 708 lineas
-   CIFRA parejas de convenciones publicadas: 33
-   CIFRA que NO calzan: 11
+   CIFRA parejas de convenciones publicadas: 37
+   CIFRA que NO calzan: 17
       linea 312   docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt               LF    publicada 49804    medida 49036    | tabla de una cifra
-      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 5043     | prosa disco y LF
-      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 5043     | prosa disco y LF
+      linea 342   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            DISCO publicada 3601     medida 3908     | prosa disco y LF
+      linea 342   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            LF    publicada 3601     medida 3908     | prosa disco y LF
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 7545     | prosa disco y LF
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 7545     | prosa disco y LF
       linea 442   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         LF    publicada 6128     medida 6030     | prosa disco y LF
       linea 452   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    LF    publicada 790      medida 780      | prosa disco y LF
       linea 453   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               LF    publicada 965      medida 948      | prosa disco y LF
-      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 5043     | tabla de una cifra
-      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 5043     | tabla de una cifra
+      linea 519   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            DISCO publicada 3601     medida 3908     | tabla de una cifra
+      linea 519   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            LF    publicada 3601     medida 3908     | tabla de una cifra
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 7545     | tabla de una cifra
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 7545     | tabla de una cifra
       linea 524   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         LF    publicada 6128     medida 6030     | tabla de una cifra
       linea 525   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    LF    publicada 790      medida 780      | tabla de una cifra
       linea 526   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               LF    publicada 965      medida 948      | tabla de una cifra
-   LAS RUTAS CAZADAS, DISTINTAS: 5
+      linea 564   docs/INTRA_DOMINIO_VEREDICTOS.jsonl                      DISCO publicada 4051967  medida 4054129  | prosa disco y LF
+      linea 564   docs/INTRA_DOMINIO_VEREDICTOS.jsonl                      LF    publicada 4051967  medida 4054129  | prosa disco y LF
+   LAS RUTAS CAZADAS, DISTINTAS: 7
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl
       docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt
+      docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
       docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt
       docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt
       docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt
       docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
    DE LAS CUATRO DE LA `C.1`, FALTAN POR CAZAR: (ninguna)
    LA CONVENCION QUE FALLA EN LAS CUATRO ES LF, Y NO DISCO: SI
-   CAZA ADEMAS: docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
-      docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt -> en bb3aaad3 5040 bytes | hoy 5043 bytes | HA CAMBIADO: SI
+   CAZA ADEMAS: docs/INTRA_DOMINIO_VEREDICTOS.jsonl, docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt, docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> en bb3aaad3 4051967 bytes | hoy 4054129 bytes | HA CAMBIADO: SI
+      docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt -> en bb3aaad3 3601 bytes | hoy 3908 bytes | HA CAMBIADO: SI
+      docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt -> en bb3aaad3 5040 bytes | hoy 7545 bytes | HA CAMBIADO: SI
    CIFRA rutas de mas que serian ROJO INVENTADO (mismo fichero que en
    bb3aaad3 y aun asi acusado): 0
    HABRIA CAZADO LAS CUATRO, POR LF, Y SIN INVENTAR NINGUNA: SI
@@ -82,17 +92,23 @@ CASO 6. EL QUE DECIDE: EL TEXTO REAL DE `git show bb3aaad3:docs/loop/REPORTE.md`
    ESTA ESCALADA CIERRA: cifras_sin_pareja() sobre las CUATRO lineas que
    la `C.1` publico da lo siguiente.
       linea 312   docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt               | la guarda VIEJA la acusa: NO
+      linea 342   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            | la guarda VIEJA la acusa: NO
+      linea 342   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            | la guarda VIEJA la acusa: NO
       linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
       linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
       linea 442   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         | la guarda VIEJA la acusa: NO
       linea 452   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    | la guarda VIEJA la acusa: NO
       linea 453   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               | la guarda VIEJA la acusa: NO
+      linea 519   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            | la guarda VIEJA la acusa: NO
+      linea 519   docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt            | la guarda VIEJA la acusa: NO
       linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
       linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
       linea 524   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         | la guarda VIEJA la acusa: NO
       linea 525   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    | la guarda VIEJA la acusa: NO
       linea 526   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               | la guarda VIEJA la acusa: NO
-   CIFRA de esas lineas que la guarda VIEJA acusaba: 0 de 9
+      linea 564   docs/INTRA_DOMINIO_VEREDICTOS.jsonl                      | la guarda VIEJA la acusa: NO
+      linea 564   docs/INTRA_DOMINIO_VEREDICTOS.jsonl                      | la guarda VIEJA la acusa: NO
+   CIFRA de esas lineas que la guarda VIEJA acusaba: 0 de 12
    (si esa cifra es 0, queda medido que las cuatro pasaron por delante
     de la linea `con su pareja SI` sin encender nada)
 

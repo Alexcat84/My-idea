@@ -1,0 +1,59 @@
+LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v194_lanzador10_1fb0mzve\lanzador_en_curso.txt
+==============================================================================
+TRAMO 10 DE 10, DE LA BATERIA DE LA VUELTA 194
+==============================================================================
+  lanzador (os.path.basename, no tecleado): vuelta194_bateria_por_tramos.py
+  vuelta (computada del nombre, no tecleada): 194
+  CIFRA literales de vuelta clavados en el fuente: 0
+  CIFRA nomina entera (leida del modulo, no tecleada): 127
+  CIFRA tamano de tramo: 13
+  CIFRA tramos del reparto (computada): 10
+  CIFRA entradas de ESTE tramo: 10
+      vuelta186_tarea2c_mutacion_cierre_tardio.py
+      vuelta186_tarea2d_mutacion_seccion4.py
+      vuelta187_tarea4_mutacion_dos_convenciones.py
+      vuelta187_tarea5b_mutacion_seccion4_tardio.py
+      vuelta188_tarea2_mutacion_pata_documental.py
+      vuelta188_tarea3c_mutacion_exclusion_por_rojo.py
+      vuelta188_tarea4_mutacion_cobertura_parejas.py
+      vuelta188_tarea5a_mutacion_vecinos_evitar.py
+      vuelta190_tarea2b_mutacion_deuda_y_fallo.py
+      vuelta190_tarea3b_mutacion_selladas_ajenas.py
+
+******************************************************************************
+PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 10
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+******************************************************************************
+PASO 3. LA CORRIDA DEL TRAMO 10
+******************************************************************************
+  inicio (UTC): 2026-09-06T22:31:36Z
+  comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 10 --tamano-tramo 13
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v194_tramo10_0lngxu3s\tramo_en_curso.txt
+  destino final: docs/loop/SALIDA_V194_BATERIA_TRAMO_10.txt
+
+******************************************************************************
+PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
+        (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+******************************************************************************
+  docs/loop/SALIDA_V194_BATERIA_TRAMO_10.txt
+  CIFRA bytes en disco: 9492
+  CIFRA bytes normalizado a LF: 9492
+  CIFRA lineas: 128
+  CIFRA sha256 (LF): 36e2d04ffc835786
+  CIFRA exitcode del tramo: 1
+  CIFRA duracion en minutos: 0.4
+  inicio (UTC): 2026-09-06T22:31:36Z | fin (UTC): 2026-09-06T22:32:03Z
+
+******************************************************************************
+PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 10
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+EL TRAMO 10 SALE EN ROJO, exitcode 1, Y AQUI SE PARA.
+No se re-corre: la guarda que muerde es informacion, no un estorbo
+(encargo de la vuelta 176, TAREA 1.f). La salida esta sellada y medida.
