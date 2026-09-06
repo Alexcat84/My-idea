@@ -359,6 +359,175 @@ def tramos_por_vuelta(vuelta_del_fichero):
     return reparto
 
 
+# LA ESCALADA DE `AUDITOR.md` 1.2 (vuelta 186, TAREA 2.d). LA RACHA DE REPORTE
+# ESTA EN DOS Y ESTO ES SU OPERACION DE CODIGO, NO UNA MEJORA. La `R.1` del acta
+# 186: el reporte de la 185 escribio en su seccion 4 que el arbol abrio *"con
+# `git status --porcelain` en cero lineas"*, y su propia apertura sellada,
+# `docs/loop/SALIDA_V185_APERTURA.txt` bloque C linea 36, dice `CIFRA lineas de
+# status: 2`. En la misma seccion vive un 15 tecleado que ya no se puede
+# reproducir. Es UNA sola enfermedad: cifras del estado del arbol TECLEADAS en la
+# prosa del cierre en vez de LEIDAS de la apertura sellada.
+MARCADOR_STATUS = "git status --porcelain"
+MARCADOR_NUMSTAT = "git diff --numstat -- dataset/"
+PATRON_CIFRA_STATUS = re.compile(r"CIFRA lineas de status:\s*(\d+)")
+PATRON_CIFRA_NUMSTAT = re.compile(
+    r"CIFRA filas de .{0,4}git diff --numstat -- dataset/.{0,4}\s*AL ENTRAR:\s*(\d+)")
+# LOS NUMERALES EN PALABRA QUE ESTA GUARDA SABE LEER, escritos aqui para que la
+# tabla se pueda mirar en vez de deducirse de la salida. La `R.1` entro por un
+# `cero` en palabra, asi que una guarda que solo leyera digitos no la cazaria.
+PALABRA_A_CIFRA = {
+    "cero": 0, "una": 1, "uno": 1, "un": 1, "dos": 2, "tres": 3, "cuatro": 4,
+    "cinco": 5, "seis": 6, "siete": 7, "ocho": 8, "nueve": 9, "diez": 10,
+    "once": 11, "doce": 12, "trece": 13, "catorce": 14, "quince": 15,
+    "dieciseis": 16, "diecisiete": 17, "dieciocho": 18, "diecinueve": 19,
+    "veinte": 20,
+}
+PATRON_NUMERO = re.compile(r"(\d[\d.]*)|\b(%s)\b"
+                           % "|".join(sorted(PALABRA_A_CIFRA, key=len, reverse=True)))
+
+
+def cifras_de_la_apertura(texto_apertura):
+    """LAS DOS CIFRAS DEL ESTADO DEL ARBOL QUE `SALIDA_V<N>_APERTURA.txt` YA
+    PUBLICA. Devuelve `{"status": int o None, "numstat": int o None}`. PURA.
+
+    NO INVENTA NINGUNA MEDICION Y NO CORRE NINGUN COMANDO: el fichero de apertura
+    las escribe con esas dos etiquetas exactas en sus bloques C y E, y esta
+    funcion solo las lee. Si el fichero no las trae, devuelve None en su sitio, y
+    quien llama decide; aqui un None NO se confunde con un cero."""
+    if not texto_apertura:
+        return {"status": None, "numstat": None}
+    t = texto_apertura.replace(chr(13) + NL, NL)
+    m1 = PATRON_CIFRA_STATUS.search(t)
+    m2 = PATRON_CIFRA_NUMSTAT.search(t)
+    return {"status": int(m1.group(1)) if m1 else None,
+            "numstat": int(m2.group(1)) if m2 else None}
+
+
+def primer_numero(fragmento):
+    """EL PRIMER NUMERO DE UN FRAGMENTO, EN DIGITOS O EN PALABRA. Devuelve
+    (valor, crudo) o (None, ""). PURA.
+
+    LOS PUNTOS DE MILLAR SE QUITAN, porque esta casa escribe `3.916` y `12.381`."""
+    m = PATRON_NUMERO.search(fragmento)
+    if not m:
+        return None, ""
+    if m.group(1):
+        return int(m.group(1).replace(".", "")), m.group(1)
+    return PALABRA_A_CIFRA[m.group(2)], m.group(2)
+
+
+def cifras_que_afirma_la_seccion4(texto_del_reporte):
+    """LO QUE LA SECCION 4 DEL REPORTE AFIRMA SOBRE EL ESTADO DEL ARBOL.
+
+    Devuelve `{"status": [(linea, valor, renglon)], "numstat": [...]}`. PURA.
+
+    DONDE MIRA, Y POR QUE AHI: solo dentro de la seccion 4, y solo en los
+    renglones que NO viven dentro de un bloque cercado, reusando
+    `renglones_fuera_de_cerca()`, que ya es la sede de esa decision en este
+    fichero. Lo cercado es la salida cruda de un instrumento, o sea una CITA, y
+    una cita no es una afirmacion del reporte. La enfermedad que esta guarda
+    persigue es la PROSA tecleada, no la evidencia pegada.
+
+    LA FRASE QUE EL MARKDOWN PARTE SE LEE CON SU RENGLON SIGUIENTE, y se dice en
+    vez de dejarlo al azar: si detras del marcador no queda numero en su propio
+    renglon, se mira el siguiente renglon de la seccion. La `R.1` esta escrita
+    exactamente asi, con el marcador al final de una linea y el `cero` al
+    principio de la otra, y una guarda que no cruzara ese salto no la cazaria."""
+    lineas = texto_del_reporte.replace(chr(13) + NL, NL).split(NL)
+    ini = None
+    fin = len(lineas)
+    for i, l in enumerate(lineas, 1):
+        if ini is None and l.startswith("## 4."):
+            ini = i
+            continue
+        if ini is not None and l.startswith("## "):
+            fin = i - 1
+            break
+    salida = {"status": [], "numstat": []}
+    if ini is None:
+        return salida
+    fuera = [(n, l) for n, l in renglones_fuera_de_cerca(texto_del_reporte)
+             if ini <= n <= fin]
+    por_numero = dict(fuera)
+    for especie, marcador in (("status", MARCADOR_STATUS),
+                              ("numstat", MARCADOR_NUMSTAT)):
+        for n, l in fuera:
+            if marcador not in l:
+                continue
+            cola = l.split(marcador, 1)[1]
+            valor, _crudo = primer_numero(cola)
+            renglon = l.strip()
+            if valor is None:
+                siguiente = por_numero.get(n + 1, "")
+                valor, _crudo = primer_numero(siguiente)
+                renglon = (l.strip() + " " + siguiente.strip()).strip()
+            if valor is not None:
+                salida[especie].append((n, valor, renglon[:150]))
+    return salida
+
+
+def seccion4_que_no_calza(texto_del_reporte, texto_apertura, nombre_apertura):
+    """LA SECCION 4 DEL REPORTE, COTEJADA CONTRA LA APERTURA SELLADA.
+
+    Devuelve la lista de motivos en ROJO, vacia si todo calza. PURA: recibe los
+    dos textos y no lee nada de disco, para que su arnes la pueda tumbar caso a
+    caso sin tocar el repo.
+
+    LAS TRES FORMAS DE CAER, Y LA TERCERA ES LA QUE MAS IMPORTA:
+      1. LA APERTURA NO EXISTE O NO PUBLICA UNA DE LAS DOS CIFRAS. Sin vara no
+         hay cotejo, y una guarda que se calla cuando le falta la vara no sirve.
+      2. LAS CIFRAS DISCREPAN. Se nombran LAS DOS y SUS DOS SEDES.
+      3. LA SECCION 4 NO AFIRMA UNA DE LAS DOS. Eso NO es verde: es su propio
+         rojo. UNA CIFRA AUSENTE Y UNA CIFRA QUE CALZA NO SON LO MISMO."""
+    motivos = []
+    if not texto_apertura:
+        return ["LA ESCALADA DE LA SECCION 4 NO PUEDE CORRER: no existe o esta "
+                "vacio %s, y sin la apertura sellada no hay vara contra la que "
+                "cotejar lo que el reporte afirma" % nombre_apertura]
+    vara = cifras_de_la_apertura(texto_apertura)
+    afirma = cifras_que_afirma_la_seccion4(texto_del_reporte)
+    for especie, etiqueta in (("status", "CIFRA lineas de status"),
+                              ("numstat", "CIFRA filas de git diff --numstat "
+                                          "-- dataset/ AL ENTRAR")):
+        esperado = vara[especie]
+        dichas = afirma[especie]
+        if esperado is None:
+            motivos.append("%s NO publica %r, asi que esa cifra no se puede "
+                           "cotejar y este reporte no cierra a ciegas"
+                           % (nombre_apertura, etiqueta))
+            continue
+        if not dichas:
+            motivos.append("LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre %r. La "
+                           "apertura sellada %s dice %d, y una cifra ausente y "
+                           "una cifra que calza NO son lo mismo"
+                           % (etiqueta, nombre_apertura, esperado))
+            continue
+        for n, valor, renglon in dichas:
+            if valor != esperado:
+                motivos.append(
+                    "LA SECCION 4 DEL REPORTE DICE %d y la apertura sellada dice "
+                    "%d para %r. SEDE DEL REPORTE: docs/loop/REPORTE.md linea %d, "
+                    "%r. SEDE DE LA APERTURA: %s. Las cifras del estado del arbol "
+                    "se LEEN de la apertura sellada, no se teclean en la prosa "
+                    "del cierre"
+                    % (valor, esperado, etiqueta, n, renglon, nombre_apertura))
+    return motivos
+
+
+def lector_de_la_apertura(vuelta):
+    """(nombre, texto) DE `docs/loop/SALIDA_V<N>_APERTURA.txt`, con texto None si
+    no existe.
+
+    NO ES PURA a proposito, como sus hermanas `lector_de_docs_loop()` y
+    `tramos_por_vuelta()`: es la unica pieza de esta guarda que toca el disco, y
+    por eso va separada de las funciones que juzgan, que si lo son."""
+    nombre = "docs/loop/SALIDA_V%d_APERTURA.txt" % vuelta
+    ruta = os.path.join(RAIZ, nombre.replace("/", os.sep))
+    if not os.path.exists(ruta):
+        return nombre, None
+    return nombre, leer(ruta)
+
+
 def vuelta_en_curso():
     """LA VUELTA QUE ESTA CORRIENDO AHORA MISMO, LEIDA DEL ASUNTO DEL ULTIMO
     COMMIT. Devuelve un entero o None si el asunto no nombra ninguna vuelta.
@@ -1353,6 +1522,34 @@ def main():
             print("         %s" % motivo)
     print("   CIFRA citas de arnes cotejadas que NO calzan: %d" % len(citas_rojas))
     print("   CIFRA citas de arnes SIN COTEJO posible: %d" % (len(citas) - len(citas_rojas)))
+    print("")
+
+    print("D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,")
+    print("     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)")
+    nombre_ap, texto_ap = lector_de_la_apertura(V)
+    print("   apertura sellada: %s -> %s"
+          % (nombre_ap, "%d bytes" % len(texto_ap.encode("utf-8"))
+             if texto_ap else "NO EXISTE"))
+    vara_ap = cifras_de_la_apertura(texto_ap)
+    print("   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:")
+    print("      CIFRA lineas de status: %s" % vara_ap["status"])
+    print("      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: %s"
+          % vara_ap["numstat"])
+    dice_ap = cifras_que_afirma_la_seccion4(de_nuevo)
+    print("   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:")
+    for especie in ("status", "numstat"):
+        if not dice_ap[especie]:
+            print("      %-8s -> (no afirma nada)" % especie)
+        for n, valor, renglon in dice_ap[especie]:
+            print("      %-8s -> %d, en la linea %d: %s"
+                  % (especie, valor, n, renglon[:96]))
+    motivos_s4 = seccion4_que_no_calza(de_nuevo, texto_ap, nombre_ap)
+    print("   CIFRA motivos por los que la seccion 4 NO calza: %d" % len(motivos_s4))
+    for m in motivos_s4:
+        print("      " + m)
+    # ESTA GUARDA NO SE AFLOJA EN NINGUN CARRIL, NI SIQUIERA EN EL TARDIO: es la
+    # operacion de codigo de una escalada que la racha de reporte ya disparo.
+    extra += len(motivos_s4)
     print("")
     if faltan or extra:
         print("ROJO: al reporte de la vuelta %d le faltan %d de sus cuatro piezas."

@@ -1,0 +1,67 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA GUARDA DE LA SECCION 4
+(vuelta 186, TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del
+acta 186, con la racha de reporte en dos)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
+
+   A. las dos cifras calzando                           -> 0 motivo(s) | esperado 0 | CALZA
+      MUTACION del esperado (exigir 1 motivos): CAE
+   B. la de status MUTADA (la apertura dice 7)          -> 1 motivo(s) | esperado 1 | CALZA
+      | LA SECCION 4 DEL REPORTE DICE 1 y la apertura sellada dice 7 para 'CIFRA lineas de status'. SEDE DEL REPORTE: docs/loop/REPORTE.md linea 9, '`git stat
+      el motivo NOMBRA 'CIFRA lineas de status': SI
+      MUTACION del esperado (exigir 2 motivos): CAE
+   C. la de numstat MUTADA (la apertura dice 4)         -> 1 motivo(s) | esperado 1 | CALZA
+      | LA SECCION 4 DEL REPORTE DICE 0 y la apertura sellada dice 4 para 'CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR'. SEDE DEL REPORTE: docs/lo
+      el motivo NOMBRA 'numstat': SI
+      MUTACION del esperado (exigir 2 motivos): CAE
+   D. la seccion 4 sin afirmar NINGUNA                  -> 2 motivo(s) | esperado 2 | CALZA
+      | LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA lineas de status'. La apertura sellada docs/loop/SALIDA_V999_APERTURA.txt dice 1, y una cifra aus
+      | LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR'. La apertura sellada docs/loop/SALIDA_V999_APE
+      el motivo NOMBRA 'NO AFIRMA NADA': SI
+      MUTACION del esperado (exigir 3 motivos): CAE
+   E. la apertura sin publicar la de status             -> 1 motivo(s) | esperado 1 | CALZA
+      | docs/loop/SALIDA_V999_APERTURA.txt NO publica 'CIFRA lineas de status', asi que esa cifra no se puede cotejar y este reporte no cierra a ciegas
+      el motivo NOMBRA 'NO publica': SI
+      MUTACION del esperado (exigir 2 motivos): CAE
+   G. la frase partida en dos renglones (la forma de la R.1) -> 0 motivo(s) | esperado 0 | CALZA
+      MUTACION del esperado (exigir 1 motivos): CAE
+   G.1 la misma frase partida, con la apertura en 9     -> 1 motivo(s) | esperado 1 | CALZA
+      | LA SECCION 4 DEL REPORTE DICE 1 y la apertura sellada dice 9 para 'CIFRA lineas de status'. SEDE DEL REPORTE: docs/loop/REPORTE.md linea 9, 'El arbol 
+      el motivo NOMBRA 'CIFRA lineas de status': SI
+      MUTACION del esperado (exigir 2 motivos): CAE
+   G.2 la cifra citada DENTRO de una cerca no cuenta    -> 0 motivo(s) | esperado 0 | CALZA
+      MUTACION del esperado (exigir 1 motivos): CAE
+
+   Y LAS DOS SEDES VAN NOMBRADAS EN EL MOTIVO DE LA DISCREPANCIA:
+      el motivo nombra las DOS sedes: SI
+      motivo entero: LA SECCION 4 DEL REPORTE DICE 1 y la apertura sellada dice 7 para 'CIFRA lineas de status'. SEDE DEL REPORTE: docs/loop/REPORTE.md linea 9, '`git status --porcelain` da **1 linea** al abrir, medida en el bloque de'. SEDE DE LA APERTURA: docs/loop/SALIDA_V999_APERTURA.txt. Las cifras del estado del arbol se LEEN de la apertura sellada, no se teclean en la prosa del cierre
+      MUTACION del esperado (exigir que NO las nombre): CAE
+
+   F. EL CASO REAL DE LA `R.1`, SOBRE LOS FICHEROS REALES DE LA 185
+      (si esta guarda no caza el caso que la trajo, no sirve)
+      reporte: docs/loop/reportes/REPORTE_V185.md, 42888 bytes en disco y 42888 normalizados a LF
+      apertura: docs/loop/SALIDA_V185_APERTURA.txt, 26084 bytes en disco y 26084 normalizados a LF
+      LO QUE LA APERTURA SELLADA DE LA 185 PUBLICA:
+         CIFRA lineas de status: 2
+         CIFRA filas de numstat AL ENTRAR: 0
+      LO QUE LA SECCION 4 DEL REPORTE DE LA 185 AFIRMA:
+         status   -> 15, linea 574: `git status --porcelain` da **15 lineas** al cerrar la vuelta, y
+         status   -> 0, linea 581: ANTERIORES TRAIAN.** El arbol abrio limpio, con `git status --porcelain` en cero lineas,
+         numstat  -> 0, linea 575: `git diff --numstat -- dataset/` da **0 filas**. **Al ENTRAR, medido en el
+      CIFRA motivos en rojo sobre el caso real: 2
+         | LA SECCION 4 DEL REPORTE DICE 15 y la apertura sellada dice 2 para 'CIFRA lineas de status'. SEDE DEL REPORTE: docs/loop/REPORTE.md linea 574, '`git status --po
+         | LA SECCION 4 DEL REPORTE DICE 0 y la apertura sellada dice 2 para 'CIFRA lineas de status'. SEDE DEL REPORTE: docs/loop/REPORTE.md linea 581, 'ANTERIORES TRAIAN
+      LA GUARDA HUBIERA CAZADO LA R.1: SI
+      MUTACION del esperado (exigir 0 motivos, o sea que NO la cazara): CAE
+      Y LA DE numstat DE ESE MISMO REPORTE SI CALZA, que es lo que hace
+      que este caso no sea un rojo indiscriminado:
+         motivos que nombran numstat: 0
+         ESPERADO 0 -> CALZA
+         MUTACION del esperado (exigir 1): CAE
+
+CIFRA casos: 11 | pasan: 11
+CIFRA casos que CAEN al mutar su esperado: 11 de 11
+CIFRA fallos: 0
+VEREDICTO: VERDE
