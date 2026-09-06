@@ -1,3 +1,18 @@
+DECLARADO ANTES DE NADA, PARA QUE ESTA RUTA NO PROMETA LO QUE NO TIENE:
+ESTE FICHERO GUARDA LA **SEGUNDA** CORRIDA DE vuelta188_esqueleto_reporte.py,
+NO LA QUE ESCRIBIO EL ESQUELETO.
+
+La PRIMERA corrida escribio docs/loop/REPORTE.md (10752 bytes, 104 saltos de
+linea) y su salida fue a la consola, no a fichero. La segunda, la que se ve
+abajo, salio en ROJO y NO escribio nada, porque la guarda del PASO 0.c hizo
+exactamente su trabajo: en el arbol ya estaba el reporte de la 188, que todavia
+no tiene commit ni archivo, asi que el archivador no puede salvarlo y el
+esqueleto no puede pisarlo. Es la idempotencia funcionando, no un fallo.
+
+Se declara en vez de disimularse (banco 9): una ruta publicada como evidencia de
+una corrida es CIFRA, y decir que esta es la corrida que escribio seria falso.
+
+==============================================================================
 GUARDA DE LA FUENTE DEL CLON (vuelta 180, TAREA 4.b)
    este fichero CLONA 'vuelta_del_reporte_del_arbol' de scripts/loop/vuelta174_esqueleto_reporte.py
    scripts/loop/vuelta174_esqueleto_reporte.py -> 13918 bytes, 273 lineas

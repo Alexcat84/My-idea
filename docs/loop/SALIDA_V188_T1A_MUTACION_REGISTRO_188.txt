@@ -1,0 +1,99 @@
+==============================================================================
+CASO POSITIVO POR MUTACION de vuelta188_tarea1a_registrar_acta188.py
+EL SUJETO ES UN ACTA FABRICADA, NUNCA LA REAL.
+==============================================================================
+
+PRIMERA MUTACION: LOS CONTADORES, SOBRE CUATRO ACTAS FABRICADAS.
+   fabricada adj=6 pd=3 preg=3 aud=0 eje=4 -> contadores adj=6 pd=3 preg=3 aud=0 eje=4 huerfanas=0 -> CALZA
+   fabricada adj=1 pd=3 preg=1 aud=0 eje=1 -> contadores adj=1 pd=3 preg=1 aud=0 eje=1 huerfanas=0 -> CALZA
+   fabricada adj=12 pd=4 preg=5 aud=3 eje=2 -> contadores adj=12 pd=4 preg=5 aud=3 eje=2 huerfanas=0 -> CALZA
+   fabricada adj=4 pd=3 preg=2 aud=1 eje=0 -> contadores adj=4 pd=3 preg=2 aud=1 eje=0 huerfanas=0 -> CALZA
+   titulo computado: Registro de las seis adjudicaciones numeradas, los tres numerales de la seccion 6, las tres preguntas contestadas, las cero caidas propias del auditor y las cuatro caidas de metodo del ejecutor del acta de la vuelta 188
+   con el esperado 6 de adjudicaciones: PASA
+   con el esperado 7 de adjudicaciones: CAE
+   el patron SIN comillas, el del acta 183, sobre esta forma -> 0
+
+SEGUNDA MUTACION: LOS DOS ESTADOS NUEVOS DE LA SECCION 6, Y LAS DOS CIFRAS.
+   con el vocabulario NUEVO: [('6.1', 'ABIERTA'), ('6.2', 'ABIERTA'), ('6.3', 'ANOTACION')]
+   con el vocabulario VIEJO, el de la 187: [('6.1', 'ABIERTA'), ('6.2', 'SIN DECIR'), ('6.3', 'SIN DECIR')]
+   SIN DECIR con el nuevo: 0 | con el viejo: 2 | esperado 0 y 2 -> CALZA
+   MUTACION del esperado (exigir 2 SIN DECIR con el vocabulario nuevo): CAE
+
+   Y LA PARADA SE CONSERVA ENTERA: un titulo que no diga NINGUNA de las seis
+   marcas tiene que seguir saliendo SIN DECIR.
+      estados sobre el acta del estado desconocido: ['SIN DECIR', 'ABIERTA', 'ANOTACION']
+      SALE `SIN DECIR`, QUE ES LA PARADA: SI
+      MUTACION del esperado (exigir que ninguno sea SIN DECIR): CAE
+
+   Y LOS PUESTOS NO SE PARAN EN EL PRIMER ABIERTO SIN PUESTOS. El acta
+   fabricada tiene DOS numerales abiertos y solo el primero los trae.
+      acta con puestos [11, 22, 33] -> leidos [11, 22, 33] -> CALZA
+      acta con puestos [7, 8, 9, 10] -> leidos [7, 8, 9, 10] -> CALZA
+      acta con puestos [1778, 2530, 2540, 3141, 3232] -> leidos [1778, 2530, 2540, 3141, 3232] -> CALZA
+      MUTACION del esperado [1778, 2530, 2540, 3141, 9999]: CAE
+
+TERCERA MUTACION: LA ATRIBUCION DE UNA SECCION DE CAIDAS MIXTA, QUE ES LO
+QUE ESTE REGISTRADOR ESTRENA. La cabecera decide, no quien la encontro.
+   cabecera con `LAS SUYAS`, la del acta 188      -> ejecutor 4 | auditor 0 | huerfanas 0 | esperado 4/0/0 -> CALZA
+      MUTACION del esperado (exigir ejecutor 5): CAE
+   cabecera con `EJECUTOR`, la del acta 187       -> ejecutor 4 | auditor 0 | huerfanas 0 | esperado 4/0/0 -> CALZA
+      MUTACION del esperado (exigir ejecutor 5): CAE
+   cabecera con `MI CAIDA`                        -> ejecutor 0 | auditor 4 | huerfanas 0 | esperado 0/4/0 -> CALZA
+      MUTACION del esperado (exigir ejecutor 1): CAE
+   cabecera que no dice de quien son              -> ejecutor 0 | auditor 0 | huerfanas 4 | esperado 0/0/4 -> CALZA
+      MUTACION del esperado (exigir ejecutor 1): CAE
+
+   Y EL VOCABULARIO VIEJO, EL DE LA 187, SOBRE LA CABECERA DEL ACTA 188:
+      ejecutor 0 | auditor 0 | HUERFANAS 4
+      esperado 0 del ejecutor y 4 huerfanas, que es la PARADA -> CALZA
+      MUTACION del esperado (exigir 4 del ejecutor con el vocabulario viejo): CAE
+
+CUARTA MUTACION: EL PATRON DE LA CAIDA `C.n`, Y LAS DOS CIFRAS.
+   El acta 187 escribia ``**`C.1`,`` (coma pegada) y la 188 escribe
+   ``**`C.1` DEL EJECUTOR`` (espacio). El patron heredado exige coma o punto.
+   acta en la forma de la 188 (espacio)     -> patron viejo 0 | patron nuevo 4 | esperado 0 y 4 -> CALZA
+      MUTACION del esperado (exigir 1 con el patron viejo): CAE
+   acta en la forma de la 187 (coma)        -> patron viejo 4 | patron nuevo 4 | esperado 4 y 4 -> CALZA
+      MUTACION del esperado (exigir 5 con el patron viejo): CAE
+   EL PATRON VIEJO SE CONSERVA INTACTO Y SU CERO SE PUBLICA: se ANADE un
+   patron, no se ensancha el viejo hasta que trague.
+
+QUINTA MUTACION: UNA CAIDA QUE NO ACUMULA NO ES UNA CAIDA QUE NO EXISTE.
+   cuatro que declaran NO ACUMULA en su primer parrafo  -> caidas 4 | acumulan 0 | no acumulan 4 | esperado 0 y 4 -> CALZA
+      MUTACION del esperado (exigir 1 que acumulan): CAE
+   cuatro que lo declaran DOS PARRAFOS MAS ABAJO        -> caidas 4 | acumulan 0 | no acumulan 4 | esperado 0 y 4 -> CALZA
+      MUTACION del esperado (exigir 1 que acumulan): CAE
+   cuatro que no dicen nada                             -> caidas 4 | acumulan 4 | no acumulan 0 | esperado 4 y 0 -> CALZA
+      MUTACION del esperado (exigir 5 que acumulan): CAE
+   EL BLOQUE SE LEE ENTERO Y NO SOLO EL PRIMER PARRAFO: con `parrafo_de()`
+   el segundo caso habria dado 4 que acumulan, que es una cifra falsa.
+   CONTRASTE, leyendo solo el primer parrafo: 4 de 4 saldrian ACUMULANDO
+   EL SILENCIO SE CUENTA COMO QUE ACUMULA, QUE ES EL LADO SEGURO: dar por
+   bueno un silencio seria aflojar una racha sin que nadie lo escribiera.
+
+SEXTA MUTACION: EL PATRON `A.n`, LA DECLARACION DEL CERO Y LOS DOS PATRONES
+VIEJOS DE CAIDA DEL EJECUTOR.
+   patron `A.n` -> 0 | frase del cero -> 1 linea(s) | frase de la 185 -> 0
+   patron `R.n` -> 0 | patron `E.n` -> 0
+   EL CERO VA CONTADO Y DECLARADO, Y LOS VIEJOS DAN CERO: SI
+   MUTACION del esperado (exigir 1 caida propia del auditor): CAE
+   y sobre un acta CON dos caidas propias, para que se vea que el contador
+   no esta clavado en cero: patron `A.n` -> 2
+
+SEPTIMA MUTACION: EL ESTADO DE LAS PREGUNTAS, LEIDO DE LA CABECERA.
+   cabecera que SI contesta (linea 34): '## 7. LAS PREGUNTAS, QUE ERAN MIAS Y LAS CONTESTO' -> CONTESTADA
+   cabecera que NO lo dice: '## 7. LAS PREGUNTAS, QUE ERAN MIAS Y NO DIGO NADA' -> SIN DECIR
+   EL ESTADO SIGUE A LA CABECERA: SI
+   MUTACION del esperado (la muda tambien CONTESTADA): CAE
+
+OCTAVA MUTACION: EL SALTO. actas_sin_entrada() es PURA y se importa.
+   faltan [102, 103, 104] | bajo (11, 101) | alto (12, 105) -> CALZA
+
+NOVENA MUTACION: EL TITULO Y SU CONCORDANCIA, INCLUIDO EL CERO.
+   Registro de las seis adjudicaciones numeradas, los tres numerales de la seccion 6, las tres preguntas contestadas, las cero caidas propias del auditor y las cuatro caidas de metodo del ejecutor del acta de la vuelta 188
+   DICE LAS CINCO COSAS Y CONCUERDA: SI
+   y con otras cifras: Registro de las tres adjudicaciones numeradas, el numeral de la seccion 6, la pregunta contestada, las dos caidas propias del auditor y la caida de metodo del ejecutor del acta de la vuelta 188
+   LA CONCORDANCIA SIGUE A LAS CIFRAS: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
