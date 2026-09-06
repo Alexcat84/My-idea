@@ -54,7 +54,7 @@ cayendo:
 | **5.1** | una **ruta que no existe**: sigue siendo el rojo que ya es, y esta guarda **no lo duplica** | **CAE** |
 | **6** | **EL QUE DECIDE**, sobre el texto real de `git show bb3aaad3:docs/loop/REPORTE.md` | **CAE** |
 
-**EL CASO 6, ENTERO.** Sobre los **46086 bytes** y **708 lineas** de ese texto, la
+**EL CASO 6, ENTERO.** Sobre ese texto, que mide **46086 bytes en disco y 46086 bytes normalizados a LF** porque el blob de git no lleva CRLF, y **708 lineas**, la
 guarda halla **33 parejas publicadas** y acusa **11**, sobre **5 rutas
 distintas**:
 

@@ -129,7 +129,14 @@ juntas.
 `scripts/loop/vuelta187_tarea2b_cerrar_tramo1_en_el_plan.py` anexa el registro
 `#### REGISTRO: EL TRAMO 1 SE RELEYO Y SE CIERRA` **por adicion y dentro de la
 seccion de la cola**, leyendo cada cifra del archivo de veredictos y de la salida
-de la TAREA 2. `docs/plan/08_VERIFICACION.md` pasa de **67121 a 69068 bytes**; el
+de la TAREA 2. `docs/plan/08_VERIFICACION.md` mide hoy **69068 bytes en disco y 69068 bytes normalizados a LF**,
+y lo que crecio lo dice su propio instrumento, citado y no tecleado:
+
+```
+   la sede pasa de 67121 a 69068 bytes
+```
+
+El
 registro se releyo del disco byte a byte; la seccion **sigue siendo una** y ahora
 va de la **485 a la 879**; el disparador, la declaracion del tramo y la marca del
 registro **siguen los tres dentro**; **0 guiones largos o medios en la sede

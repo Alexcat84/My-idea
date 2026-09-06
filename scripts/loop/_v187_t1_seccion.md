@@ -77,7 +77,13 @@ fallos: 0`, `VEREDICTO: VERDE`.** Las dos que importan hoy:
 | la **octava** | los patrones `R.n` y `E.n` dan **0** sobre una caida escrita como `C.n`, y ese cero es la medicion que prueba que hacia falta la atribucion por seccion | |
 
 **IDEMPOTENCIA COMPROBADA ANTES DE ESCRIBIR:** la marca `## R.49.` no estaba en
-la sede. Escrita, `docs/PENDIENTES.md` pasa de **909780 a 924954 bytes**, la
-entrada se releyo del disco byte a byte, **0 guiones largos o medios**, y la
+la sede. `docs/PENDIENTES.md` mide hoy **924954 bytes en disco y 924954 bytes normalizados a LF**,
+y lo que crecio lo dice su propio instrumento, citado y no tecleado:
+
+```
+   la sede pasa de 909780 a 924954 bytes
+```
+
+La entrada se releyo del disco byte a byte, **0 guiones largos o medios**, y la
 serie recomputada DESPUES da **41 entradas**, siguiente libre `R.50`, **0
 colisiones y 0 huecos**.

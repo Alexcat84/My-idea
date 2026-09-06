@@ -7,7 +7,7 @@ COPIARSE DEL ENCARGO.**
 |---|---|---|:-:|
 | `docs/loop/SELLO_APERTURA_AUDITOR_V188.json` | | disco **802** bytes, LF **802** bytes | |
 | bytes de la ciega | **42599** | **42599** | **CALZA** |
-| `sha256` de la ciega | `ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55` | identico | **CALZA** |
+| `sha256` de la ciega | `ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55` | `ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55` | **CALZA** |
 
 **`EL FICHERO ES EL QUE EL SELLO DICE: SI`.** El nombre del sello **no se dedujo
 del numero de vuelta**: siendo acta **187**, se llama **`V188`**. **El `V186` no
@@ -35,8 +35,8 @@ DECLARA EN VEZ DE ARREGLARSE.**
 | **F.3** | el **tramo** contra los puestos de `docs/loop/_auditor_v188_exclusion.txt` | **0** |
 | **F.3** | el **universo entero** contra esa misma exclusion | **2** |
 
-**La exclusion mide 1372 bytes y lista 293 puestos distintos, CONTADOS del
-fichero y no copiados del criterio.** Los dos que cruzan son **1287** (vecino
+**La exclusion mide 1372 bytes en disco y 1372 bytes normalizados a LF, y lista
+293 puestos distintos, CONTADOS del fichero y no copiados del criterio.** Los dos que cruzan son **1287** (vecino
 determinista del **1286**) y **2383** (vecino determinista del **2382**), **los
 dos VECINOS y ninguno del tramo**.
 
