@@ -1,0 +1,91 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: EL EXITCODE QUE SEPARA Y LA RESTAURACION DE
+LAS SALIDAS SELLADAS AJENAS (vuelta 190, TAREA 3)
+==============================================================================
+
+A) EL EXITCODE SEPARA, Y LOS NOMBRES SALEN DEL DICCIONARIO COMPARTIDO
+   CODIGO_DE_LA_CLASE, leido de verificar_mutaciones_viejas y no tecleado:
+      VERDE                      -> 0
+      ROJO POR FALLO             -> 1
+      ROJO POR DEUDA DECLARADA   -> 2
+   clase del exitcode 0                                     obtenido 'VERDE'                        esperado 'VERDE'                        -> PASA
+   clase del exitcode 1                                     obtenido 'ROJO POR FALLO'               esperado 'ROJO POR FALLO'               -> PASA
+   clase del exitcode 2                                     obtenido 'ROJO POR DEUDA DECLARADA'     esperado 'ROJO POR DEUDA DECLARADA'     -> PASA
+   clase de un codigo que nadie declaro (7)                 obtenido 'ROJO DE ESPECIE DESCONOCIDA'  esperado 'ROJO DE ESPECIE DESCONOCIDA'  -> PASA
+   LA MUTACION: si el 1 y el 2 dieran el mismo nombre, esto no separaria
+   nada y volveriamos a la degradacion que la 4.4 manda deshacer.
+      LA MUTACION CAE: el 1 dice 'ROJO POR FALLO' y el 2 dice 'ROJO POR DEUDA DECLARADA'.
+   Y LOS DOS ROJOS SIGUEN SIENDO DISTINTOS DE CERO, que es la condicion
+   de no aflojar nada:
+   el 1 y el 2 son distintos de cero                        obtenido [True, True]                   esperado [True, True]                   -> PASA
+
+B) QUE ES AJENA Y QUE ES PROPIA SALE DEL NOMBRE, NO DE UNA LISTA
+   SALIDA_V184_T1C_MUTACION_ESTIMACION.txt                  obtenido (True, 184, True)              esperado (True, 184, True)              -> PASA
+   SALIDA_V190_T2_NOMINA.txt                                obtenido (True, 190, False)             esperado (True, 190, False)             -> PASA
+   SALIDA_V189b_ALGO.txt                                    obtenido (True, 189, True)              esperado (True, 189, True)              -> PASA
+   ACTA_AUDITOR.md                                          obtenido (False, None, False)           esperado (False, None, False)           -> PASA
+   ROJOS_DE_LA_VUELTA_189.txt                               obtenido (False, None, False)           esperado (False, None, False)           -> PASA
+   LA MUTACION: la misma sellada mirada DESDE SU PROPIA VUELTA deja de
+   ser ajena. Si no cambiara, la vara no estaria mirando la vuelta.
+      LA MUTACION CAE: desde la 184 la misma ruta sale PROPIA.
+
+C) EL REPARTO NO SE COME NINGUNA
+   ajenas:  SALIDA_V184_T1C_MUTACION_ESTIMACION.txt(v184), SALIDA_V189b_ALGO.txt(v189)
+   propias: SALIDA_V190_T2_NOMINA.txt(v190)
+   otras:   ACTA_AUDITOR.md, ROJOS_DE_LA_VUELTA_189.txt
+   ajenas                                                   obtenido 2                              esperado 2                              -> PASA
+   propias                                                  obtenido 1                              esperado 1                              -> PASA
+   no selladas                                              obtenido 2                              esperado 2                              -> PASA
+   la suma es lo que se le paso                             obtenido 5                              esperado 5                              -> PASA
+
+D) EL CORTE NUEVO VA AL LADO Y NUNCA ENCIMA
+   nombre del corte nuevo                                   obtenido 'SALIDA_V184_T1C_MUTACION_ESTIMACION_CORTE_V190.txt' esperado 'SALIDA_V184_T1C_MUTACION_ESTIMACION_CORTE_V190.txt' -> PASA
+   no es el mismo nombre que el original                    obtenido False                          esperado False                          -> PASA
+   lleva dentro la vuelta que restaura                      obtenido True                           esperado True                           -> PASA
+   y conserva la vuelta del original                        obtenido True                           esperado True                           -> PASA
+   LA MUTACION: si el hermano se llamara igual que el original, esto
+   seria escribir encima con otro nombre, que es lo que la 4.9 prohibe.
+      LA MUTACION CAE: 'SALIDA_V184_T1C_MUTACION_ESTIMACION_CORTE_V190.txt' no es 'SALIDA_V184_T1C_MUTACION_ESTIMACION.txt'.
+
+E) EL CASO QUE EL ENCARGO PIDE: CAE SI UNA SELLADA AJENA SE QUEDA PISADA
+   (todo sobre un escenario FABRICADO: no se corre la bateria y no se
+    toca ningun fichero del repo)
+   restaurada del todo (no queda ninguna)                   obtenido 'VERDE'                        esperado 'VERDE'                        -> PASA
+   una se queda pisada                                      obtenido 'ROJO'                         esperado 'ROJO'                         -> PASA
+   las dos se quedan pisadas                                obtenido 'ROJO'                         esperado 'ROJO'                         -> PASA
+   LA MUTACION: si el veredicto no cambiara entre `restaurada` y
+   `pisada`, la guarda no estaria mirando nada.
+      LA MUTACION CAE: 'VERDE' restaurada y 'ROJO' pisada.
+   Y UNA SELLADA PROPIA PISADA NO ES ROJO, que es la otra mitad: lo que
+   esta corrida escribe es suyo y restaurarlo seria borrar el dia.
+   una sellada PROPIA pisada                                obtenido 'VERDE'                        esperado 'VERDE'                        -> PASA
+
+F) LA ESCRITURA DEL CORTE NUEVO VA EN LF, SOBRE UN FICHERO FABRICADO
+   el fabricado, medido: 23 bytes en disco, 2 retornos de carro
+   bytes del corte = bytes en disco menos los retornos      obtenido 21                             esperado 21                             -> PASA
+   el corte NO lleva ningun retorno de carro                obtenido 0                              esperado 0                              -> PASA
+   y el corte conserva todas sus lineas                     obtenido 2                              esperado 2                              -> PASA
+   LA MUTACION: si se escribiera tal cual, el corte llevaria 2 retorno(s)
+   de carro y no seria LF, que es la convencion de la casa en disco.
+      LA MUTACION CAE: 2 retornos antes y 0 despues.
+
+G) LAS TRES QUE LA CORRIDA DE LA 189 PISO, CLASIFICADAS SIN TOCARLAS
+   (el acta 190 las nombra en su 4.9. Aqui SOLO se clasifica su nombre:
+    no se abre ninguna y no se toca ninguna)
+      SALIDA_V184_T1C_MUTACION_ESTIMACION.txt              sellada True  vuelta 184   ajena True
+      SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt         sellada True  vuelta 187   ajena True
+      SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt        sellada True  vuelta 188   ajena True
+   las tres salen AJENAS respecto de esta vuelta            obtenido 3                              esperado 3                              -> PASA
+   O SEA: la restauracion automatica las habria cubierto a las tres, que
+   es lo que la 4.9 pide y lo que en la 189 tuvo que hacer una persona a
+   mano, en dos vueltas distintas y a dos personas distintas.
+
+LIMPIEZA (`P.16`, quien fabrica limpia): el temporal se retira.
+   prefijo del temporal (estable; el sufijo al azar NO se publica): v190_t3_
+   existia antes de retirarlo: True | existe despues: False
+
+==============================================================================
+CIFRA casos: los de arriba, uno por linea con PASA o CAE
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE

@@ -1014,6 +1014,17 @@ VIEJAS = [
     ("vuelta188_tarea3c_mutacion_exclusion_por_rojo.py", False),
     ("vuelta188_tarea4_mutacion_cobertura_parejas.py", False),
     ("vuelta188_tarea5a_mutacion_vecinos_evitar.py", False),
+    # LOS DOS QUE NACEN EN LA VUELTA 190, Y ENTRAN EN SU MISMA VUELTA, que es lo
+    # que el acta 176 punto 7.2 acepto y lo que `arneses_que_faltan()` exige desde
+    # la vara 148. NO SE PODA NADA: la nomina sigue creciendo (el fundador RECHAZO
+    # podarla el 5 sep 2026) y pasa de 125 a 127.
+    #   - `vuelta190_tarea2b_mutacion_deuda_y_fallo.py`: la separacion de la deuda
+    #     y el fallo, y la prueba de que la guarda esta ENCHUFADA al veredicto
+    #     (adjudicaciones 4.4 y 4.6 del acta 190).
+    #   - `vuelta190_tarea3b_mutacion_selladas_ajenas.py`: la restauracion de las
+    #     salidas selladas ajenas que la bateria pisa (adjudicacion 4.9).
+    ("vuelta190_tarea2b_mutacion_deuda_y_fallo.py", False),
+    ("vuelta190_tarea3b_mutacion_selladas_ajenas.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su
@@ -1221,6 +1232,43 @@ HUELLAS_DE_VIVO = (
 
 MARCA_DECLARA_CONGELADO = "SUJETO CONGELADO"
 
+# --- LA SEPARACION DE LA DEUDA Y EL FALLO (vuelta 190, TAREA 2.a; adjudicaciones
+#     4.4 y 4.6 del acta 190, contestando la `P.1` que el acta 189 dejo encargada
+#     en su 4.7) ---------------------------------------------------------------
+#
+# POR QUE NACE, Y LA CAUSA ESTA MEDIDA. Hasta hoy esta guarda decia
+# "3 entradas sin congelar" y punto: **una DEUDA (un arnes que EXPLICA por que
+# nombra el sujeto vivo) y una DECISION SIN EXPLICAR salian exactamente iguales**.
+# El acta 189 escribio en su 4.7 que `NO DECIDIBLE` se queda como esta porque deja
+# la deuda visible, y que el remedio era SEPARAR. Sin la separacion, el unico
+# remedio que quedaba a mano era sacar la guarda del veredicto, que es lo que el
+# `D.5` de la 189 hizo y lo que el acta 190 TUMBA en su 4.6: convertir una deuda
+# visible en una exencion.
+#
+# QUE ES `MOTIVO ESCRITO`, Y LA VARA VA ESCRITA ANTES DE MEDIR PARA QUE NO SE
+# AJUSTE A LO QUE CONVENGA. Un `NO DECIDIBLE` sale asi porque su texto trae
+# huellas de LAS DOS especies. La pregunta es si esa mezcla esta EXPLICADA. La
+# vara: **por CADA aparicion de una huella de vivo EN LA MAQUINA** (el fichero sin
+# su docstring de modulo, que es donde esta guarda ya mira), se abre una ventana
+# de +/- VENTANA_DE_MOTIVO lineas y se busca una de las marcas de abajo. **Si
+# TODAS las apariciones traen marca, hay MOTIVO ESCRITO; si ALGUNA no la trae, NO
+# lo hay.** El lado seguro es ese: una apertura del fichero vivo sin explicar es
+# deuda, no decision.
+#
+# LAS MARCAS SON LITERALES DE LA CASA Y NO INVENTADAS: las cinco primeras son
+# formas de nombrar un sujeto que no se mueve (un blob de git, un objeto por su
+# hash, un fichero congelado, una huella de contenido) y las dos ultimas son la
+# declaracion expresa de que el fichero vivo no se toca. Se comparan en
+# MAYUSCULAS contra la ventana en mayusculas.
+#
+# LO QUE ESTO NO HACE, DICHO PARA QUE NO SE LEA DE MAS: **no exime a nadie**. Una
+# entrada con motivo escrito **sigue siendo `NO DECIDIBLE` y sigue contando** para
+# la guarda y para el veredicto. Lo unico que cambia es que el rojo dice de que
+# especie es. La lista de `CASOS_DECLARADOS` NO se abre.
+MARCAS_DE_MOTIVO = ("GIT SHOW", "CAT-FILE", "COMMIT", "SUJETO_FIJO", "SHA256",
+                    "NO SE TOCA", "NO SE ESCRIBE")
+VENTANA_DE_MOTIVO = 3
+
 
 def texto_del_arnes(nombre, directorio=None):
     """EL TEXTO DE UN ARNES, o cadena vacia si no esta. Lo unico de esta familia
@@ -1311,6 +1359,72 @@ def guarda_del_sujeto_congelado(nomina=None, directorio=None, declarados=None):
     return [(n, v, vv)
             for n, v, _c, vv in anclaje_de_la_nomina(nomina, directorio, declarados)
             if v in ("SUJETO VIVO", "NO DECIDIBLE")]
+
+
+def motivo_del_sujeto_vivo(texto, marcas=None, ventana=None, huellas=None):
+    """SI UN ARNES EXPLICA POR QUE NOMBRA EL SUJETO VIVO. PURA (vuelta 190,
+    TAREA 2.a).
+
+    Devuelve `(tiene_motivo, evidencia)`, con `evidencia` como
+    `[(linea, huella, marcas_halladas)]` sobre LA MAQUINA, o sea el texto sin su
+    docstring de modulo, que es donde `anclaje_de()` ya busca las huellas de vivo.
+
+    `tiene_motivo` es True SOLO si TODAS las apariciones traen alguna marca en su
+    ventana. Si no hay ninguna aparicion devuelve `(False, [])`: sin apariciones
+    la pregunta no se plantea, y quien llama decide que hacer con eso.
+
+    LOS TRES VOCABULARIOS VAN POR PARAMETRO, no como constantes escondidas, para
+    que el caso positivo por mutacion pueda correrla con marcas fabricadas sobre
+    textos fabricados y probar que la vara distingue de verdad."""
+    m = tuple(marcas) if marcas is not None else MARCAS_DE_MOTIVO
+    v = VENTANA_DE_MOTIVO if ventana is None else ventana
+    hs = tuple(huellas) if huellas is not None else HUELLAS_DE_VIVO
+    maquina = sin_docstring_de_modulo(texto).split(chr(10))
+    evidencia = []
+    for i, linea in enumerate(maquina, 1):
+        for h in hs:
+            if h not in linea:
+                continue
+            a = max(1, i - v)
+            b = min(len(maquina), i + v)
+            ventana_texto = chr(10).join(maquina[a - 1:b]).upper()
+            evidencia.append((i, h, [x for x in m if x in ventana_texto]))
+    if not evidencia:
+        return False, []
+    return all(bool(x) for _l, _h, x in evidencia), evidencia
+
+
+def guarda_del_sujeto_congelado_separada(nomina=None, directorio=None,
+                                         declarados=None, marcas=None,
+                                         ventana=None):
+    """LA MISMA GUARDA, PERO SEPARANDO LA DEUDA DEL FALLO (vuelta 190, TAREA 2.a).
+
+    Devuelve un diccionario con TRES listas y sus nombres, y **la suma de las tres
+    es exactamente lo que devuelve `guarda_del_sujeto_congelado()`**, que no se
+    toca porque tres arneses viejos la llaman con su firma de siempre:
+
+      `sujeto_vivo`   . las que salen `SUJETO VIVO`. **Eso es FALLO**: el arnes
+                        abre el fichero de hoy y no hay nada que lo module.
+      `con_motivo`    . las `NO DECIDIBLE` que EXPLICAN por que nombran el sujeto
+                        vivo. **Eso es DEUDA DECLARADA.**
+      `sin_motivo`    . las `NO DECIDIBLE` que no lo explican. **Eso es DEUDA SIN
+                        DECLARAR**, y es lo peor de las tres especies de deuda.
+
+    Cada elemento es `(nombre, veredicto, vive, evidencia)`.
+
+    NO EXIME A NADIE: las tres listas siguen contando para el veredicto. Lo unico
+    que cambia es que el rojo puede decir de que especie es."""
+    salida = {"sujeto_vivo": [], "con_motivo": [], "sin_motivo": []}
+    for nombre, veredicto, vive in guarda_del_sujeto_congelado(
+            nomina, directorio, declarados):
+        texto = texto_del_arnes(nombre, directorio)
+        tiene, evidencia = motivo_del_sujeto_vivo(texto, marcas, ventana)
+        if veredicto == "SUJETO VIVO":
+            clave = "sujeto_vivo"
+        else:
+            clave = "con_motivo" if tiene else "sin_motivo"
+        salida[clave].append((nombre, veredicto, vive, evidencia))
+    return salida
 
 
 def vuelta_de(nombre):
@@ -1861,6 +1975,49 @@ def hay_rojo_al_cierre(perdidas, no_mordio, no_reprod, faltan, invisibles, malas
     return bool(perdidas or no_mordio or no_reprod or faltan or invisibles or malas)
 
 
+# LOS TRES NOMBRES DEL VEREDICTO, Y SUS TRES CODIGOS DE SALIDA (vuelta 190,
+# TAREA 2.b y TAREA 3.a; adjudicaciones 4.4 y 4.6 del acta 190).
+#
+# POR QUE HACEN FALTA TRES Y NO DOS. La 4.4 lo dice medido: los diez tramos de la
+# bateria de la 189 salieron con `exitcode 1` y **en nueve de ellos no cayo ni un
+# arnes**; la fuente era siempre la misma guarda de nomina en deuda. **Un unico
+# `1` para un arnes caido y para una deuda declarada es la degradacion silenciosa
+# que el banco 9 persigue**, y es lo que dio pie al `D.5` que el acta 190 tumbo.
+#
+# LOS DOS ROJOS SIGUEN SIENDO ROJOS Y LOS DOS SIGUEN SIENDO DISTINTOS DE CERO: no
+# se afloja nada. Nadie que compruebe `!= 0` cambia de comportamiento.
+VERDE = "VERDE"
+ROJO_POR_FALLO = "ROJO POR FALLO"
+ROJO_POR_DEUDA = "ROJO POR DEUDA DECLARADA"
+CODIGO_DE_LA_CLASE = {VERDE: 0, ROJO_POR_FALLO: 1, ROJO_POR_DEUDA: 2}
+
+
+def clase_del_rojo(perdidas, no_mordio, no_reprod, faltan, invisibles,
+                   separada):
+    """DE QUE ESPECIE ES EL ROJO, DECIDIDO EN UN SOLO SITIO. PURA (vuelta 190).
+
+    `separada` es lo que devuelve `guarda_del_sujeto_congelado_separada()`.
+
+    LA PRECEDENCIA VA ESCRITA Y NO ES DISCUTIBLE: **el fallo gana**. Si hay un
+    arnes caido, un ancla perdida, una salida que no se repite, un hueco de censo
+    o un `SUJETO VIVO`, la clase es `ROJO POR FALLO`, tenga o no deuda al lado.
+    Publicar `ROJO POR DEUDA DECLARADA` habiendo un arnes caido seria exactamente
+    la degradacion que esta separacion existe para impedir, pero al reves.
+
+    `SUJETO VIVO` CUENTA COMO FALLO Y NO COMO DEUDA, y se dice por que: un arnes
+    que abre el fichero de hoy sin nada que lo module **no mide su maquina, mide
+    el dia**, y eso no es una deuda que se pueda declarar: es la guarda rota.
+
+    Solo cuando NO hay ninguna pieza de fallo y SI hay `NO DECIDIBLE`, la clase es
+    `ROJO POR DEUDA DECLARADA`. **Sigue siendo rojo.**"""
+    if (perdidas or no_mordio or no_reprod or faltan or invisibles
+            or separada.get("sujeto_vivo")):
+        return ROJO_POR_FALLO
+    if separada.get("con_motivo") or separada.get("sin_motivo"):
+        return ROJO_POR_DEUDA
+    return VERDE
+
+
 def informe_del_sujeto_congelado():
     """LA GUARDA DEL SUJETO CONGELADO, CORRIDA Y PUBLICADA (vuelta 178, TAREA
     1.e). NO corre ningun arnes, NO toca la nomina y NO reescribe nada:
@@ -1913,14 +2070,46 @@ def informe_del_sujeto_congelado():
     print("   CIFRA entradas que no cumplen la regla: %d" % len(malas))
     print("")
 
+    # LA SEPARACION DE LA DEUDA Y EL FALLO, PUBLICADA CON SUS DOS CIFRAS Y SUS
+    # NOMBRES (vuelta 190, TAREA 2.a). Es la `P.1` que el acta 189 dejo encargada
+    # en su 4.7: "3 entradas sin congelar" no distingue una deuda de una decision.
+    sep = guarda_del_sujeto_congelado_separada()
+    print("Y AQUI VA LA SEPARACION, QUE ES LO QUE FALTABA: UNA DEUDA NO ES UN FALLO")
+    print("   la vara del MOTIVO ESCRITO, declarada antes de medir:")
+    print("      marcas literales (%d): %s"
+          % (len(MARCAS_DE_MOTIVO), ", ".join(MARCAS_DE_MOTIVO)))
+    print("      ventana: +/- %d lineas sobre LA MAQUINA (sin docstring de modulo)"
+          % VENTANA_DE_MOTIVO)
+    print("      regla: TODAS las apariciones con marca -> MOTIVO ESCRITO;")
+    print("             ALGUNA sin marca -> SIN MOTIVO ESCRITO. El lado seguro.")
+    for clave, etiqueta in (("sujeto_vivo", "SUJETO VIVO, que es FALLO y no deuda"),
+                            ("con_motivo", "NO DECIDIBLE CON MOTIVO ESCRITO (deuda declarada)"),
+                            ("sin_motivo", "NO DECIDIBLE SIN MOTIVO ESCRITO (deuda sin declarar)")):
+        print("   CIFRA %s: %d" % (etiqueta, len(sep[clave])))
+        for nombre, _v, _vv, evidencia in sep[clave]:
+            print("      %s" % nombre)
+            for ln, h, marcas in evidencia:
+                print("         linea %-5d huella %-32s marcas: %s"
+                      % (ln, h, ", ".join(marcas) or "(NINGUNA)"))
+        if not sep[clave]:
+            print("      (ninguna, y el cero va escrito)")
+    print("   LA SUMA DE LAS TRES ES %d, Y LA GUARDA SIN SEPARAR DA %d: %s"
+          % (sum(len(sep[k]) for k in sep), len(malas),
+             "CALZA" if sum(len(sep[k]) for k in sep) == len(malas) else "NO CALZA"))
+    print("   Y NO SE EXIME A NADIE: las tres listas siguen contando. Lo unico que")
+    print("   cambia es que el rojo dice de que especie es.")
+    print("")
+
     if malas:
-        print("ROJO DE LA GUARDA DEL SUJETO CONGELADO: %d entrada(s) de %s no"
-              % (len(malas), sello_de_corte(len(filas), corte_de_git())))
+        clase = clase_del_rojo([], [], [], [], [], sep)
+        print("%s DE LA GUARDA DEL SUJETO CONGELADO: %d entrada(s) de %s no"
+              % (clase, len(malas), sello_de_corte(len(filas), corte_de_git())))
         print("demuestran tener sujeto congelado. La regla existe desde la vuelta")
-        print("145 y esta es la primera vez que se mide, asi que este rojo NO es una")
-        print("regresion: es el estado que la frase tapaba.")
+        print("145. **SIGUE SIENDO ROJO**: lo que la vuelta 190 anade es que el rojo")
+        print("dice de que especie es, no que afloje.")
+        print("CIFRA exitcode de este carril: %d" % CODIGO_DE_LA_CLASE[clase])
         print("FIN")
-        return 1
+        return CODIGO_DE_LA_CLASE[clase]
     print("VERDE DE LA GUARDA DEL SUJETO CONGELADO: las %s entradas de la nomina"
           % sello_de_corte(len(filas), corte_de_git()))
     print("demuestran sujeto congelado o son caso declarado.")
@@ -2238,6 +2427,27 @@ def main():
     if not malas_al_cierre:
         print("      (ninguna)")
 
+    # LA SEPARACION DE LA DEUDA Y EL FALLO, RECOMPUTADA AQUI, AL CIERRE (vuelta
+    # 190, TAREA 2). El estado al cierre se mide al cierre y no se hereda de la
+    # cabecera.
+    sep_al_cierre = guarda_del_sujeto_congelado_separada()
+    clase = clase_del_rojo(perdidas, no_mordio, no_reprod, faltan_al_cierre,
+                           invisibles_al_cierre, sep_al_cierre)
+    print("  LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):")
+    print("      CIFRA de FALLO: %d con ancla perdida, %d que no mordieron, %d sin "
+          "reproducir, %d fuera de la nomina, %d invisibles al censo, %d SUJETO VIVO"
+          % (len(perdidas), len(no_mordio), len(no_reprod), len(faltan_al_cierre),
+             len(invisibles_al_cierre), len(sep_al_cierre["sujeto_vivo"])))
+    print("      CIFRA de DEUDA DECLARADA: %d NO DECIDIBLE con motivo escrito, %d sin"
+          % (len(sep_al_cierre["con_motivo"]), len(sep_al_cierre["sin_motivo"])))
+    for clave, etiqueta in (("con_motivo", "CON MOTIVO ESCRITO"),
+                            ("sin_motivo", "SIN MOTIVO ESCRITO"),
+                            ("sujeto_vivo", "SUJETO VIVO (fallo, no deuda)")):
+        for nombre, _v, _vv, _e in sep_al_cierre[clave]:
+            print("         %-22s %s" % (etiqueta, nombre))
+    print("      CLASE DEL VEREDICTO: %s | CIFRA exitcode: %d"
+          % (clase, CODIGO_DE_LA_CLASE[clase]))
+
     if hay_rojo_al_cierre(perdidas, no_mordio, no_reprod, faltan_al_cierre,
                           invisibles_al_cierre, malas_al_cierre):
         print("")
@@ -2267,8 +2477,15 @@ def main():
         if perdidas or no_mordio or no_reprod:
             print("ROJO: %d con el ancla perdida, %d que no mordieron y %d cuya salida "
                   "sellada NO SE REPITE." % (len(perdidas), len(no_mordio), len(no_reprod)))
+        # EL EXITCODE SEPARA (vuelta 190, TAREA 2.b y 3.a; adjudicacion 4.4 del
+        # acta 190). LOS DOS SIGUEN SIENDO ROJOS Y LOS DOS SIGUEN SIENDO DISTINTOS
+        # DE CERO: nadie que compruebe `!= 0` cambia de comportamiento. Lo unico
+        # que cambia es que un arnes caido y una deuda declarada dejan de salir
+        # con el mismo numero.
+        print("VEREDICTO DE ESTA CORRIDA: %s" % clase)
+        print("CIFRA exitcode: %d" % CODIGO_DE_LA_CLASE[clase])
         print("FIN")
-        return 1
+        return CODIGO_DE_LA_CLASE[clase]
     print("")
     # EL VERDE DE UN TRAMO ES UN VERDE PARCIAL Y LO DICE CON ESAS PALABRAS
     # (vuelta 176, TAREA 1.c). NO puede usar la frase de abajo, porque esa dice

@@ -1,0 +1,83 @@
+==============================================================================
+VUELTA 190, TAREA 2.a: SIMULACION PREVIA SOBRE COPIA EN MEMORIA
+==============================================================================
+
+ESTE FICHERO NO ESCRIBE EN scripts/loop/ Y NO TOCA LA NOMINA. Lee los
+textos de los arneses A MEMORIA y corre sobre ellos el PROTOTIPO de la
+separacion. El fuente sigue como estaba cuando esto corre.
+
+A) EL ESTADO DE HOY, MEDIDO Y NO RECORDADO
+   scripts/loop/verificar_mutaciones_viejas.py -> disco 131802 bytes | LF 131802 bytes
+   CIFRA nomina: 125 | VARA_DEL_CENSO: 148
+   guarda_del_sujeto_congelado() HOY: 3 entradas
+      NO DECIDIBLE   vuelta186_tarea2c_mutacion_cierre_tardio.py          abre: REPORTE.md
+      NO DECIDIBLE   vuelta187_tarea4_mutacion_dos_convenciones.py        abre: REPORTE.md
+      NO DECIDIBLE   vuelta188_tarea4_mutacion_cobertura_parejas.py       abre: REPORTE.md
+   SU FIRMA: tuplas de 3 campos. NO trae ninguna cifra de motivo escrito,
+   asi que una deuda y una decision salen exactamente iguales.
+   arneses_que_faltan(): (188, [])
+   nomina_invisible_al_censo(): []
+
+B) LA VARA DEL MOTIVO ESCRITO, DECLARADA ANTES DE MEDIR
+   marcas literales (7): 'GIT SHOW', 'CAT-FILE', 'COMMIT', 'SUJETO_FIJO', 'SHA256', 'NO SE TOCA', 'NO SE ESCRIBE'
+   ventana: +/- 3 lineas sobre LA MAQUINA (sin el docstring de modulo)
+   huellas de vivo que se buscan: REPORTE.md, INTRA_DOMINIO_VEREDICTOS.jsonl, OPERACIONES.jsonl, master_graph.json, ACTA_AUDITOR.md, LECTURAS_DIRIGIDAS.md
+   regla: TODAS las apariciones con marca -> MOTIVO ESCRITO. ALGUNA sin
+   marca -> SIN MOTIVO ESCRITO. El lado seguro es ese.
+
+C) LA SEPARACION, CORRIDA SOBRE LOS TEXTOS EN MEMORIA
+   vuelta186_tarea2c_mutacion_cierre_tardio.py
+      veredicto de la guarda: NO DECIDIBLE | abre: REPORTE.md
+      apariciones de una huella de vivo EN LA MAQUINA: 1
+         linea 486   huella REPORTE.md                         marcas en su ventana: NO SE TOCA, NO SE ESCRIBE
+      MOTIVO ESCRITO: SI
+   vuelta187_tarea4_mutacion_dos_convenciones.py
+      veredicto de la guarda: NO DECIDIBLE | abre: REPORTE.md
+      apariciones de una huella de vivo EN LA MAQUINA: 2
+         linea 140   huella REPORTE.md                         marcas en su ventana: GIT SHOW, COMMIT
+         linea 144   huella REPORTE.md                         marcas en su ventana: COMMIT
+      MOTIVO ESCRITO: SI
+   vuelta188_tarea4_mutacion_cobertura_parejas.py
+      veredicto de la guarda: NO DECIDIBLE | abre: REPORTE.md
+      apariciones de una huella de vivo EN LA MAQUINA: 1
+         linea 15    huella REPORTE.md                         marcas en su ventana: COMMIT
+      MOTIVO ESCRITO: SI
+
+   CIFRA `NO DECIDIBLE` CON MOTIVO ESCRITO: 3
+      vuelta186_tarea2c_mutacion_cierre_tardio.py
+      vuelta187_tarea4_mutacion_dos_convenciones.py
+      vuelta188_tarea4_mutacion_cobertura_parejas.py
+   CIFRA `NO DECIDIBLE` SIN MOTIVO ESCRITO: 0
+      (ninguna, y el cero va escrito)
+
+D) EL PROTOTIPO CAE SOBRE UN ARNES FABRICADO QUE NO EXPLICA NADA
+   (si la vara no distinguiera, no serviria de vara. Aqui se prueba antes
+    de meterla en el fuente)
+   fabricado SIN explicacion          -> MOTIVO ESCRITO NO  (esperado NO ) -> PASA
+      linea 2, huella REPORTE.md, marcas: (NINGUNA)
+   fabricado CON git show y COMMIT    -> MOTIVO ESCRITO SI  (esperado SI ) -> PASA
+      linea 3, huella REPORTE.md, marcas: COMMIT
+
+E) LOS TRES VEREDICTOS QUE SE PUEDEN ESCRIBIR, COMPUTADOS SOBRE LO MEDIDO
+   piezas de FALLO en este momento (censo y nomina): faltan 0, invisibles 0
+   piezas de DEUDA en este momento: 3 con motivo, 0 sin motivo
+
+   (1) CON LA GUARDA FUERA DEL VEREDICTO, que es lo que el `D.5` de la 189
+       hizo y el acta 190 TUMBA en su `4.6`:
+          VEREDICTO: VERDE
+          y las 3 entradas sin congelar quedan publicadas arriba y FUERA
+          del veredicto. Quien mire solo el veredicto NO TIENE SINTOMA.
+   (2) CON LA GUARDA DENTRO PERO SIN SEPARAR, que es como estaba antes:
+          VEREDICTO: ROJO
+          pero el rojo NO DICE DE QUE ES: un arnes caido y una deuda
+          declarada salen con el mismo color y el mismo exitcode.
+   (3) CON LA GUARDA DENTRO Y SEPARADA, que es lo que la TAREA 2 construye:
+          VEREDICTO: ROJO POR DEUDA DECLARADA
+          con 3 de deuda (3 con motivo escrito, 0 sin) y 0 de fallo.
+          SIGUE SIENDO ROJO. No se afloja nada: lo que cambia es que el
+          rojo dice de que especie es.
+
+F) EL ARBOL, DESPUES DE ESTA SIMULACION
+   git status sobre el fuente que se va a tocar: 0 fila(s) []
+   O SEA: la simulacion NO lo ha tocado, que es lo que tenia que probar.
+

@@ -1,0 +1,254 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta189_bateria_por_tramos.py
+  B: scripts/loop/vuelta190_bateria_por_tramos.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 189, 190
+  CIFRA lineas de docstring: A 43 | B 62
+  CIFRA lineas de maquina:   A 706 | B 888
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 4070 | B 5027
+     CIFRA tipos de nodo que NO empatan: 33
+        Load                   A  1035 | B  1277 | diferencia +242
+        Name                   A   874 | B  1091 | diferencia +217
+        Call                   A   401 | B   484 | diferencia +83
+        Constant               A   382 | B   459 | diferencia +77
+        Store                  A   141 | B   206 | diferencia +65
+        Attribute              A   210 | B   253 | diferencia +43
+        Expr                   A   221 | B   262 | diferencia +41
+        Tuple                  A    48 | B    82 | diferencia +34
+        BinOp                  A   162 | B   184 | diferencia +22
+        Assign                 A    79 | B   100 | diferencia +21
+        Mod                    A   108 | B   128 | diferencia +20
+        Return                 A    36 | B    49 | diferencia +13
+        List                   A    12 | B    24 | diferencia +12
+        arg                    A    33 | B    44 | diferencia +11
+        If                     A    26 | B    35 | diferencia +9
+        For                    A    19 | B    26 | diferencia +7
+        arguments              A    25 | B    32 | diferencia +7
+        FunctionDef            A    25 | B    31 | diferencia +6
+        Compare                A    18 | B    22 | diferencia +4
+        Not                    A     7 | B    11 | diferencia +4
+        UnaryOp                A     8 | B    12 | diferencia +4
+        Mult                   A    23 | B    25 | diferencia +2
+        NotEq                  A     1 | B     3 | diferencia +2
+        comprehension          A     6 | B     8 | diferencia +2
+        BoolOp                 A     3 | B     4 | diferencia +1
+        Eq                     A     6 | B     7 | diferencia +1
+        GeneratorExp           A     2 | B     3 | diferencia +1
+        Is                     A     1 | B     2 | diferencia +1
+        Lambda                 A     0 | B     1 | diferencia +1
+        ListComp               A     3 | B     4 | diferencia +1
+        Or                     A     2 | B     3 | diferencia +1
+        Subscript              A    32 | B    33 | diferencia +1
+        keyword                A    30 | B    31 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 184
+  CIFRA tokens de maquina: A 3636 | B 4484
+  CIFRA tokens que difieren con el texto normalizado: 848
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 165
+  CIFRA LITERALES DE TEXTO:   19
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     B:150  def clase_del_exitcode(codigo):
+     B:151  """DE QUE ESPECIE ES EL EXITCODE QUE DEVUELVE LA BATERIA. PURA (vuelta NNN,
+     B:152  TAREA 3.a; adjudicacion 4.4 del acta NNN).
+     B:153  
+     B:154  LOS TRES NOMBRES NO SE INVENTAN AQUI: se leen del diccionario
+     B:155  `CODIGO_DE_LA_CLASE` de `verificar_mutaciones_viejas.py`, que es donde la
+     B:156  TAREA 2 los escribio, para que las dos mitades no puedan discrepar. Un codigo
+     B:157  que no este en ese diccionario sale `ROJO DE ESPECIE DESCONOCIDA`, y **eso no
+     B:158  afloja nada**: sigue siendo rojo, y ademas dice que no se sabe de que es, que
+     B:159  es mas informacion que un `1` mudo."""
+     B:160  for nombre, valor in B.CODIGO_DE_LA_CLASE.items():
+     B:161  if valor == codigo:
+     B:162  return nombre
+     B:163  return "ROJO DE ESPECIE DESCONOCIDA"
+     B:166  _PATRON_SELLADA = re.compile(r"^SALIDA_V(\d+)[A-Za-z]?_.*\.txt$")
+     B:169  def es_salida_sellada_ajena(ruta, vuelta):
+     B:170  """SI UNA RUTA ES UNA SALIDA SELLADA DE OTRA VUELTA. PURA (vuelta NNN,
+     B:171  TAREA 3.b; adjudicacion 4.9 del acta NNN).
+     B:172  
+     B:173  Devuelve `(es_sellada, vuelta_que_lleva_dentro, es_ajena)`.
+     B:174  
+     B:175  QUE ES AJENA NO SE TECLEA: sale de que el NOMBRE del fichero lleve dentro un
+     B:176  numero de vuelta distinto del de este lanzador, que a su vez se computa de
+     B:177  `os.path.basename(__file__)`. Una lista tecleada de ficheros a proteger seria
+     B:178  proteger lo que uno se acuerda, no lo que hay."""
+     B:179  nombre = os.path.basename(ruta.replace("\\", "/"))
+     B:180  m = _PATRON_SELLADA.match(nombre)
+     B:181  if not m:
+     B:182  return False, None, False
+     B:183  suya = int(m.group(1))
+     B:184  return True, suya, suya != vuelta
+     B:187  def nombre_del_corte_nuevo(ruta, vuelta):
+     B:188  """EL NOMBRE HERMANO DONDE VA EL CORTE NUEVO. PURA.
+     B:189  
+     B:190  **SI EL CORTE NUEVO INTERESA, SE ESCRIBE AL LADO CON NOMBRE NUEVO Y SU
+     B:191  VUELTA, NUNCA ENCIMA.** Es la respuesta entera de la `4.9`, y aqui es una
+     B:192  funcion y no una costumbre. El nombre se construye del original y del numero
+     B:193  de vuelta, los dos computados: nada se teclea."""
+     B:194  nombre = os.path.basename(ruta.replace("\\", "/"))
+     B:195  raiz, ext = os.path.splitext(nombre)
+     B:196  return "%s_CORTE_V%d%s" % (raiz, vuelta, ext)
+     B:199  def reparto_de_selladas(rutas, vuelta):
+     B:200  """LAS RUTAS CAMBIADAS, REPARTIDAS EN AJENAS, PROPIAS Y NO SELLADAS. PURA.
+     B:201  
+     B:202  Devuelve `(ajenas, propias, no_selladas)`. Solo las AJENAS se restauran: una
+     B:203  salida sellada de ESTA vuelta es justamente lo que esta corrida esta
+     B:204  escribiendo, y restaurarla seria borrar el trabajo del dia."""
+     B:205  ajenas, propias, otras = [], [], []
+     B:206  for r in rutas:
+     B:207  sellada, suya, ajena = es_salida_sellada_ajena(r, vuelta)
+     B:208  if not sellada:
+     B:209  otras.append(r)
+     B:210  elif ajena:
+     B:211  ajenas.append((r, suya))
+     B:212  else:
+     B:213  propias.append((r, suya))
+     B:214  return ajenas, propias, otras
+     B:428  def rutas_cambiadas_en(carpeta):
+     B:429  """LAS RUTAS SEGUIDAS POR GIT QUE HAN CAMBIADO DENTRO DE `carpeta`. Lo unico
+     B:430  que toca git de esta mitad, y se aisla aqui para que el resto sea puro.
+     B:431  
+     B:432  LAS RUTAS NO SE TECLEAN NUNCA: salen de lo que `git diff --name-only`
+     B:433  devuelve. Restaurar una lista tecleada seria restaurar lo que uno cree que se
+     B:434  movio, no lo que se movio."""
+     B:435  c, salida = GUARDA.git(["diff", "--name-only", "--", carpeta], RAIZ)
+     B:436  if c != 0:
+     B:437  return None
+     B:438  return [l.strip().replace("\\", "/") for l in salida.splitlines() if l.strip()]
+     B:441  def guarda_de_selladas_ajenas(titulo, vuelta):
+     B:442  """LA GUARDA DE LAS SALIDAS SELLADAS AJENAS (vuelta NNN, TAREA 3.b;
+     B:443  adjudicacion 4.9 del acta NNN). Devuelve (ok, restauradas, cortes).
+     B:444  
+     B:445  LA DISCIPLINA ES LA MISMA QUE LA DE `dataset/`, PORQUE ES EL MISMO PROBLEMA:
+     B:446  se mide lo que se movio, se guarda el corte nuevo AL LADO con su nombre y su
+     B:447  vuelta, se restaura el original, **y se vuelve a medir**. Restaurar sin
+     B:448  remedir es prometer, no comprobar.
+     B:449  
+     B:450  UNA SALIDA SELLADA ES LA PRUEBA DE LA VUELTA QUE LA SELLO. En la NNN se
+     B:451  pisaron tres y las restauro una persona a mano, en dos vueltas distintas y a
+     B:452  dos personas distintas. Que dependa de que alguien se acuerde es lo que esta
+     B:453  funcion viene a quitar de en medio."""
+     B:454  print("")
+     B:455  print("*" * 78)
+     B:456  print("%s" % titulo)
+     B:457  print("*" * 78)
+     B:458  rutas = rutas_cambiadas_en("docs/loop/")
+     B:459  if rutas is None:
+     B:460  print("  ROJO: `git diff --name-only -- docs/loop/` no se pudo correr.")
+     B:461  return False, [], []
+     B:462  ajenas, propias, otras = reparto_de_selladas(rutas, vuelta)
+     B:463  print("  CIFRA rutas cambiadas dentro de docs/loop/: %d" % len(rutas))
+     B:464  print("  CIFRA salidas selladas AJENAS (otra vuelta en su nombre): %d" % len(ajenas))
+     B:465  for r, suya in ajenas:
+     B:466  print("      AJENA, de la vuelta %s: %s" % (suya, r))
+     B:467  print("  CIFRA salidas selladas PROPIAS (esta vuelta): %d" % len(propias))
+     B:468  for r, suya in propias:
+     B:469  print("      PROPIA, de la vuelta %s: %s" % (suya, r))
+     B:470  print("  CIFRA rutas cambiadas que NO son salida sellada: %d" % len(otras))
+     B:471  for r in otras:
+     B:472  print("      NO SELLADA: %s" % r)
+     B:473  if not ajenas:
+     B:474  print("  NINGUNA SALIDA SELLADA AJENA PISADA. El cero va escrito, no omitido.")
+     B:475  return True, [], []
+     B:477  restauradas, cortes = [], []
+     B:478  for r, suya in ajenas:
+     B:479  # PRIMERO EL CORTE NUEVO AL LADO, Y DESPUES LA RESTAURACION. En ese orden
+     B:480  # y no al reves: si se restaura primero, el corte nuevo ya no existe para
+     B:481  # guardarlo. LA ESCRITURA VA EN LF, que es la convencion de la casa en
+     B:482  # disco.
+     B:483  absoluta = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:484  hermano = os.path.join(os.path.dirname(absoluta),
+     B:485  nombre_del_corte_nuevo(r, vuelta))
+     B:486  datos = io.open(absoluta, "rb").read()
+     B:487  lf = datos.replace(b"\r\n", b"\n")
+     B:488  io.open(hermano, "wb").write(lf)
+     B:489  rel_h = os.path.relpath(hermano, RAIZ).replace("\\", "/")
+     B:490  print("  EL CORTE NUEVO, ESCRITO AL LADO Y NUNCA ENCIMA:")
+     B:491  print("      %s -> %d bytes en disco, %d normalizado a LF"
+     B:492  % (rel_h, len(datos), len(lf)))
+     B:493  cortes.append((rel_h, len(datos), len(lf)))
+     B:494  c, _s = GUARDA.git(["checkout", "--", r], RAIZ)
+     B:495  print("  `git checkout -- %s` -> exit %d" % (r, c))
+     B:496  restauradas.append(r)
+     B:498  # SE VUELVE A MEDIR, QUE ES LA MITAD QUE IMPORTA.
+     B:499  rutas2 = rutas_cambiadas_en("docs/loop/")
+     B:500  ajenas2, _p2, _o2 = reparto_de_selladas(rutas2 or [], vuelta)
+     B:501  print("  CIFRA salidas selladas ajenas DESPUES de restaurar (remedido, no "
+     B:502  "supuesto): %d" % len(ajenas2))
+     B:503  for r, suya in ajenas2:
+     B:504  print("      QUEDA PISADA: %s (vuelta %s)" % (r, suya))
+     B:505  if ajenas2:
+     B:506  print("  ROJO: la restauracion no devolvio alguna salida sellada ajena a su")
+     B:507  print("        sitio. Eso borra el registro de otra vuelta y es rojo.")
+     B:508  return False, restauradas, cortes
+     B:509  print("  RESTAURADO Y REMEDIDO: cero salidas selladas ajenas pisadas.")
+     B:510  return True, restauradas, cortes
+     B:602  # EL EXITCODE DICE DE QUE ESPECIE ES, Y ESO VA DENTRO DE LA SALIDA SELLADA Y
+     B:603  # NO SOLO EN LA CONSOLA (vuelta NNN, TAREA 3.a; adjudicacion 4.4 del acta
+     B:604  # NNN). Los diez tramos de la corrida anterior salieron con el mismo 1 y en
+     B:605  # NUEVE no cayo ni un arnes.
+     B:606  print("  CIFRA clase del exitcode del tramo: %s" % clase_del_exitcode(codigo))
+     B:607  print("  (los tres codigos que la bateria puede devolver, leidos de")
+     B:608  print("   verificar_mutaciones_viejas.CODIGO_DE_LA_CLASE y no tecleados: %s)"
+     B:609  % ", ".join("%s=%d" % (k, v)
+     B:610  for k, v in sorted(B.CODIGO_DE_LA_CLASE.items(),
+     B:611  key=lambda x: x[1])))
+     B:623  # PASO 6, QUE ES NUEVO EN ESTE CLON: LAS SALIDAS SELLADAS AJENAS QUE ESTE
+     B:624  # TRAMO HAYA PISADO SE RESTAURAN SOLAS, y su corte nuevo se guarda al lado con
+     B:625  # su nombre y su vuelta. Va DESPUES del sellado del tramo a proposito: si
+     B:626  # corriera antes, restauraria la salida de este mismo tramo, que es
+     B:627  # justamente lo que acaba de escribirse.
+     B:628  ok_selladas, restauradas, cortes = guarda_de_selladas_ajenas(
+     B:629  "PASO 6. LAS SALIDAS SELLADAS AJENAS, AL SALIR DEL TRAMO %d" % n, VUELTA)
+     B:632  if not ok_selladas:
+     B:633  print("EL TRAMO %d corrio y quedo sellado PERO DEJO PISADA alguna salida" % n)
+     B:634  print("sellada de otra vuelta y la restauracion no la devolvio a su sitio.")
+     B:635  print("Eso borra el registro de otra vuelta y es rojo del tramo.")
+     B:636  return 1
+     B:639  % (n, codigo, clase_del_exitcode(codigo)))
+     B:939  # EL CODIGO DE SALIDA DEL LANZADOR DICE DE QUE ESPECIE ES, Y SE PROPAGA TAL
+     B:940  # CUAL (vuelta NNN, TAREA 3.a). No se aplana a 1: aplanarlo seria volver a
+     B:941  # juntar el arnes caido y la deuda declarada en el mismo numero, que es la
+     B:942  # degradacion que la 4.4 manda deshacer.
+     B:943  print("CIFRA exitcode del lanzador: %d" % codigo)
+     B:944  print("CIFRA clase del exitcode del lanzador: %s" % clase_del_exitcode(codigo))
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:444  print("EL TRAMO %d SALE EN ROJO, exitcode %d, Y AQUI SE PARA." % (n, codigo))
+     B:148  
+     B:149  
+     B:164  
+     B:165  
+     B:167  
+     B:168  
+     B:185  
+     B:186  
+     B:197  
+     B:198  
+     B:439  
+     B:440  
+     B:476  
+     B:497  
+     B:511  
+     B:512  
+     B:630  
+     B:638  print("EL TRAMO %d SALE EN ROJO, exitcode %d (%s), Y AQUI SE PARA."
+
+
+FIN
