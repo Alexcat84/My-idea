@@ -1,0 +1,46 @@
+==============================================================================
+APERTURA DEL AUDITOR, VUELTA 195. SELLO PRIMERO Y SOLO ESO.
+==============================================================================
+   bitacora al arrancar: (vacia)
+   prohibidos tocados hasta aqui: 0
+
+A) EL TRAMO, LEIDO DE SU FICHERO Y NO TECLEADO
+   docs/loop/_auditor_v194_ciega_blind.txt -> 30 puestos
+   docs/loop/SALIDA_V193_T3_CIEGA.txt -> 30 puestos
+   SON EL MISMO CONJUNTO: SI
+   LOS 30 DEL TRAMO: 9, 23, 70, 132, 158, 203, 396, 612, 651, 718, 879, 907, 967, 972, 1069, 1205, 1371, 1805, 1817, 2030, 2157, 2426, 2660, 2836, 2913, 3070, 3089, 3171, 3185, 3329
+
+B) EL UNIVERSO CONSUMIDO, CONTADO DE SUS FICHEROS
+   docs/loop/_auditor_v189b_exclusion.txt                381 puestos (+381 nuevos)
+   docs/loop/_auditor_v190_exclusion.txt                 411 puestos (+30 nuevos)
+   docs/loop/_auditor_v189b_ciega_blind.txt               30 puestos (+0 nuevos)
+   docs/loop/_auditor_v190_ciega_blind.txt                30 puestos (+30 nuevos)
+   docs/loop/SALIDA_V190_T4_CIEGA.txt                     30 puestos (+30 nuevos)
+   docs/loop/SALIDA_V191_T2_CIEGA.txt                     30 puestos (+30 nuevos)
+   docs/loop/_auditor_v192_ciega_blind.txt                30 puestos (+0 nuevos)
+   docs/loop/SALIDA_V192_T2_CIEGA.txt                     30 puestos (+30 nuevos)
+   docs/loop/_auditor_v193_ciega_blind.txt                30 puestos (+0 nuevos)
+   docs/loop/SALIDA_V193_T3_CIEGA.txt                     30 puestos (+30 nuevos)
+   docs/loop/_auditor_v194_ciega_blind.txt                30 puestos (+0 nuevos)
+   CIFRA universo consumido: 561
+
+C) EL ARCHIVO, PARA EL TECHO. Solo se leen los puesto_intra, ni una clase.
+   CIFRA filas del archivo: 3388 | puesto maximo: 3388
+
+D) EL DOBLE, CON vecinos() IMPORTADA Y NO COPIADA
+   CIFRA vecinos: 30
+   LOS VECINOS: 10, 24, 71, 133, 159, 204, 397, 613, 654, 719, 880, 908, 973, 974, 1070, 1206, 1372, 1807, 1818, 2031, 2158, 2427, 2661, 2837, 2914, 3071, 3090, 3172, 3186, 3330
+   SOLAPE con el tramo:            0
+   SOLAPE con el universo consumido: 0
+   ES EL DOBLE: SI, 30 mas 30 son 60
+
+E) EL SELLO
+   PUEDE SELLAR: SI
+      motivo: la bitacora esta limpia de los tres prohibidos
+      bitacora del turno hasta ahora: (vacia)
+   AISLADOR CORRIDO -> EXITCODE 0
+   SELLO ESCRITO: docs/loop/SELLO_APERTURA_AUDITOR_V195.json (1474 bytes)
+      ciega   docs/loop/_auditor_v195_ciega_blind.txt -> 40551 bytes | sha256 2dcd47f81771ba71
+      destape docs/loop/_auditor_v195_ciega_reveal.txt -> 32278 bytes | sha256 c2b97d6fd04199ca
+      prohibidos tocados antes del sello: 0
+   VEREDICTO DE LA APERTURA: VERDE
