@@ -1,0 +1,116 @@
+==============================================================================
+ARNES DE LA CAIDA E.1: EL NUMERO DE VUELTA SE COMPUTA, NO SE CLAVA
+scripts/loop/vuelta183_tarea1b_mutacion_atribucion.py
+==============================================================================
+
+A) LOS DOS FICHEROS DEL REPO QUE ESTE ARNES LEE, CON SU HUELLA
+   scripts/loop/vuelta183_bateria_por_tramos.py -> 32134 bytes LF, sha256 1fd6c15e79f4406b
+   (es EL SUJETO BAJO PRUEBA: se mueve, y por eso su huella se imprime)
+   docs/loop/SALIDA_V183B_APERTURA.txt -> 30531 bytes LF, sha256 e0a2cdfccbeefb9b
+
+B) LA FUNCION PURA QUE LEE EL NUMERO DE UN NOMBRE DE FICHERO
+   numero de vuelta183_bateria_por_tramos.py                PASA  CAE
+   numero de vuelta176_bateria_por_tramos.py                PASA  CAE
+   numero de vuelta777_bateria_por_tramos.py                PASA  CAE
+   numero de vuelta9_lo_que_sea.py                          PASA  CAE
+   un nombre sin numero de vuelta da None ('bateria_por_tramos.py') PASA  CAE
+   un nombre sin numero de vuelta da None ('v183_bateria.py') PASA  CAE
+   un nombre sin numero de vuelta da None ('')              PASA  CAE
+
+C) EL MODULO REAL: SU NUMERO Y SU NOMBRE SALEN DE SU FICHERO
+   LANZADOR computado: vuelta183_bateria_por_tramos.py
+   VUELTA  computada : 183
+   LANZADOR es el basename del propio fichero               PASA  CAE
+   VUELTA calza con el numero que dice su nombre            PASA  CAE
+
+D) EL GUARDA SOBRE EL FUENTE REAL: CERO LITERALES CLAVADOS
+   literales de vuelta clavados en el fuente real           PASA  CAE
+
+E) LA MUTACION: SE CLAVA UN LITERAL Y EL GUARDA TIENE QUE MORDER
+   Se inyecta una linea que escribe, con el numero clavado dentro, y
+   se comprueba que el guarda la encuentra, con su numero y su sitio.
+   clavando 183: el guarda encuentra 1                      PASA  CAE
+   clavando 183: y dice que numero es                       PASA  CAE
+   clavando 183: y en que linea                             PASA  CAE
+   clavando 176: el guarda encuentra 1                      PASA  CAE
+   clavando 176: y dice que numero es                       PASA  CAE
+   clavando 176: y en que linea                             PASA  CAE
+   clavando 200: el guarda encuentra 1                      PASA  CAE
+   clavando 200: y dice que numero es                       PASA  CAE
+   clavando 200: y en que linea                             PASA  CAE
+   Y LAS OTRAS FORMAS DE CLAVARLO, QUE TAMBIEN TIENEN QUE MORDER:
+   un print con el numero clavado muerde                    PASA  CAE
+   un cab.append con el numero clavado muerde               PASA  CAE
+   un mkdtemp con el numero clavado muerde                  PASA  CAE
+   un nombre de salida con el numero clavado muerde         PASA  CAE
+   Y LO QUE NO TIENE QUE MORDER, PARA QUE EL GUARDA NO SEA UN CEPO:
+   una linea que no escribe NO muerde                       PASA  CAE
+   un comentario NO muerde                                  PASA  CAE
+   el nombre ya computado NO muerde                         PASA  CAE
+
+F) LA EXENCION DE LA CITA HISTORICA, QUE SE NOMBRA Y NO SE ENSANCHA
+   la misma linea SIN la marca muerde                       PASA  CAE
+   la misma linea CON la marca queda exenta                 PASA  CAE
+
+G) LAS CUATRO FRASES PURAS, SOBRE NUMEROS FABRICADOS
+   titulo_de_corrida(3, 9, 183)                             PASA  CAE
+   titulo_de_corrida(3, 9, 776)                             PASA  CAE
+   linea_de_lanzador de un nombre fabricado                 PASA  CAE
+   titulo_de_composicion(776)                               PASA  CAE
+   linea_de_composicion de un nombre fabricado              PASA  CAE
+
+H) EL CLON: EL MISMO FUENTE CON OTRO NOMBRE TIENE QUE DECIR OTRO NUMERO
+   Es la prueba de que la variable esta COMPUTADA: si el numero
+   estuviera clavado, el clon seguiria diciendo 183 y esto caeria.
+   clon llamado: vuelta777_bateria_por_tramos.py
+   VUELTA que el clon computa: 777
+   el clon computa su propio numero                         PASA  CAE
+   el clon computa su propio nombre                         PASA  CAE
+   nombre_tramo del clon                                    PASA  CAE
+   nombre_transcripcion del clon                            PASA  CAE
+   nombre_de_la_compuesta del clon                          PASA  CAE
+   la primera linea que el clon sellaria                    PASA  CAE
+   la segunda linea que el clon sellaria                    PASA  CAE
+
+I) LA MUTACION SOBRE LA VARIABLE COMPUTADA: SE CLAVA EL NUMERO EN EL
+   CLON Y EL ARNES TIENE QUE CAER. Es el caso que el encargo pide con
+   estas palabras: 'el arnes tiene que CAER si alguien vuelve a clavar
+   el numero de vuelta como literal'.
+   la linea que computa el numero esta en el fuente         PASA  CAE
+   clon llamado: vuelta778_bateria_por_tramos.py
+   VUELTA que el clon con el literal clavado dice: 183
+   VUELTA que su NOMBRE dice: 778
+   EL ARNES CAE: el clavado NO computa su numero            PASA  CAE
+   EL ARNES CAE: y sella con el numero de otra vuelta       PASA  CAE
+   EL ARNES CAE: y su primera linea sellada miente          PASA  CAE
+   Y EL CLON SANO, AL LADO, PARA QUE LA DIFERENCIA SE VEA:
+   el clon sano SI computa su numero                        PASA  CAE
+
+J) EL LANZADOR SE NIEGA A ARRANCAR CON UN LITERAL CLAVADO
+   No basta con que una funcion pura lo vea: el proceso tiene que
+   PARARSE. Se corre cada clon con --siguiente, que no escribe nada.
+   el clon sano arranca (exitcode 0)                        PASA  CAE
+   y su guarda dice cero clavados                           PASA  CAE
+   EL ARNES CAE: el clon con el literal clavado NO arranca  PASA  CAE
+   y lo dice en rojo y con su cuenta                        PASA  CAE
+   y nombra la linea que lo clava                           PASA  CAE
+   exitcode del clon sano: 0 | exitcode del clon clavado: 1
+
+K) UN NOMBRE QUE NO DICE SU VUELTA NO SE ADIVINA: EL MODULO SE NIEGA
+   importar un clon sin numero en el nombre levanta SystemExit PASA  CAE
+   y el mensaje dice que NO SE ADIVINA                      PASA  CAE
+
+L) LO QUE PASABA ANTES, CONTADO Y NO BORRADO
+   La cuenta la hizo el bloque de apertura de esta continuacion ANTES
+   de que nadie tocara el lanzador, y se lee de su fichero sellado.
+      | CIFRA total de lineas con '176' en las cuatro salidas selladas: 12
+   la apertura conto las menciones de 176 antes de tocar    PASA  CAE
+      por fichero: 3, 3, 3, 3
+   y son cuatro ficheros los que la traen                   PASA  CAE
+   y la suma de los cuatro calza con el total               PASA  CAE
+
+==============================================================================
+CIFRA casos con mutacion corridos: los de arriba, uno por linea
+CIFRA fallos: 0
+VEREDICTO: VERDE
+==============================================================================

@@ -857,6 +857,34 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 109 A 111.
     ("vuelta183_tarea1c_mutacion_veredicto.py", False),
+    # ------------------------------------ VUELTA 183, SU CONTINUACION (TAREA 1.b)
+    # EL ARNES DE LA CAIDA `E.1` DEL ACTA 183, y entra POR LA MISMA REGLA DE
+    # SIEMPRE, la del acta 176 punto 7.2: un arnes entra en la nomina y puede
+    # entrar EN SU MISMA VUELTA. La nomina NO SE PODA: crece.
+    #
+    # POR QUE TIENE QUE ESTAR AQUI Y NO EN LA VUELTA SIGUIENTE, MEDIDO Y NO
+    # SUPUESTO: corrido `arneses_que_faltan()` con el fichero ya escrito y antes
+    # de anadirlo, la respuesta fue `ultima vuelta 183, faltan 1` y su unico
+    # nombre era este. Con el fuera, `hay_rojo_al_cierre()` habria cerrado en
+    # ROJO los siete tramos que quedan de esta bateria, y un rojo que no senala
+    # ninguna guarda rota entrena a mirar los rojos con desgana (`D.4` del acta
+    # 182). Es la misma cuenta que la 183 ya hizo con los dos anteriores.
+    #
+    # QUE PRUEBA: que el numero de vuelta y el nombre del lanzador de la bateria
+    # se COMPUTAN de `os.path.basename(__file__)` y no se clavan. Su caso que
+    # manda es una MUTACION SOBRE VARIABLE COMPUTADA: clona el fuente real a un
+    # `vuelta777_bateria_por_tramos.py`, comprueba que todo lo que ese clon
+    # sellaria dice 777, y despues le CLAVA el numero y comprueba que el arnes
+    # CAE y que el proceso se NIEGA A ARRANCAR con exitcode 1.
+    #
+    # SU SUJETO ESTA CONGELADO: todos los clones se fabrican en un `mkdtemp` y
+    # se retiran. Lee dos ficheros del repo, `vuelta183_bateria_por_tramos.py`,
+    # que es el SUJETO BAJO PRUEBA de un arnes de mutacion, y
+    # `docs/loop/SALIDA_V183B_APERTURA.txt`, que es una salida sellada; de los
+    # dos imprime el `sha256` cada corrida.
+    #
+    # LA NOMINA CRECE DE 111 A 112.
+    ("vuelta183_tarea1b_mutacion_atribucion.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

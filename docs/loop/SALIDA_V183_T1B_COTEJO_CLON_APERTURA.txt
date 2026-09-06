@@ -1,0 +1,613 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta183_apertura.py
+  B: scripts/loop/vuelta183b_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 183, 183
+  CIFRA lineas de docstring: A 52 | B 58
+  CIFRA lineas de maquina:   A 605 | B 517
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 5535 | B 4852
+     CIFRA tipos de nodo que NO empatan: 42
+        Load                   A  1382 | B  1212 | diferencia -170
+        Name                   A  1205 | B  1040 | diferencia -165
+        Constant               A   601 | B   536 | diferencia -65
+        Call                   A   557 | B   493 | diferencia -64
+        Store                  A   301 | B   265 | diferencia -36
+        Expr                   A   202 | B   169 | diferencia -33
+        BinOp                  A   155 | B   137 | diferencia -18
+        Subscript              A    38 | B    23 | diferencia -15
+        For                    A    44 | B    30 | diferencia -14
+        If                     A    29 | B    15 | diferencia -14
+        Tuple                  A   114 | B   100 | diferencia -14
+        Mod                    A   106 | B    97 | diferencia -9
+        Return                 A    13 | B     4 | diferencia -9
+        IfExp                  A    27 | B    19 | diferencia -8
+        Assign                 A   121 | B   115 | diferencia -6
+        Attribute              A   287 | B   281 | diferencia -6
+        List                   A    39 | B    33 | diferencia -6
+        Add                    A    46 | B    41 | diferencia -5
+        keyword                A    26 | B    31 | diferencia +5
+        Compare                A    31 | B    27 | diferencia -4
+        Slice                  A    21 | B    17 | diferencia -4
+        Break                  A     3 | B     0 | diferencia -3
+        Continue               A     0 | B     3 | diferencia +3
+        Sub                    A     6 | B     3 | diferencia -3
+        And                    A     7 | B     5 | diferencia -2
+        BoolOp                 A    14 | B    12 | diferencia -2
+        Dict                   A     3 | B     1 | diferencia -2
+        DictComp               A     2 | B     0 | diferencia -2
+        FunctionDef            A     7 | B     5 | diferencia -2
+        IsNot                  A     6 | B     4 | diferencia -2
+        Not                    A     4 | B     2 | diferencia -2
+        UnaryOp                A     7 | B     5 | diferencia -2
+        arg                    A    11 | B     9 | diferencia -2
+        arguments              A     8 | B     6 | diferencia -2
+        AugAssign              A     3 | B     4 | diferencia +1
+        Eq                     A     5 | B     4 | diferencia -1
+        GeneratorExp           A     4 | B     5 | diferencia +1
+        GtE                    A     2 | B     3 | diferencia +1
+        In                     A    16 | B    15 | diferencia -1
+        Is                     A     2 | B     1 | diferencia -1
+        Raise                  A     0 | B     1 | diferencia +1
+        comprehension          A    25 | B    24 | diferencia -1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 534
+  CIFRA tokens de maquina: A 5088 | B 4486
+  CIFRA tokens que difieren con el texto normalizado: 3268
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 405
+  CIFRA LITERALES DE TEXTO:   129
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:65  VUELTA = NNN
+     A:67  # LOS SUJETOS DE CODIGO DE LAS DOS TAREAS, nombrados aqui para que el bloque H
+     A:68  # no los pueda elegir despues de ver el resultado.
+     A:117  """Los bytes que git guarda para esa ruta en HEAD, o None si no esta.
+     A:118  LA SEGUNDA CONVENCION del hallazgo 4.1 del acta 174, medida y no supuesta."""
+     A:124  def nodos_por_id(grafo):
+     A:132  if not isinstance(grafo, dict):
+     A:133  return {}
+     A:134  for clave in ("nodos", "nodes"):
+     A:135  v = grafo.get(clave)
+     A:136  if isinstance(v, dict) and v:
+     A:137  return {k: n for k, n in v.items() if isinstance(n, dict)}
+     A:138  if isinstance(v, list) and v:
+     A:139  return {n.get("id"): n for n in v
+     A:140  if isinstance(n, dict) and n.get("id")}
+     A:141  return {}
+     A:144  def clave_de_pasos(nodo):
+     A:145  """EL NOMBRE DE LA CLAVE QUE pasos_del_nodo() acabo usando, para que la
+     A:146  salida diga de donde saco los pasos y no haya que creerselo."""
+     A:147  if not isinstance(nodo, dict):
+     A:148  return "(no es dict)"
+     A:149  for clave in sorted(nodo.keys()):
+     A:150  nombre = clave.lower()
+     A:151  if ("paso" in nombre or "step" in nombre) and isinstance(nodo[clave], list):
+     A:152  return clave
+     A:153  return "(ninguna)"
+     A:156  def pasos_del_nodo(nodo):
+     A:157  """LOS PASOS DE UN NODO, BUSCADOS ENTRE SUS PROPIAS CLAVES Y NO TECLEADOS.
+     A:158  
+     A:159  CORRECCION 3 DECLARADA (vuelta 182). La version anterior probaba las claves
+     A:160  `pasos` y `steps`, y este repo las llama `pasos_accionables`: la segunda
+     A:161  corrida del bloque de apertura publico "cero_defectos -> 0 pasos", que es
+     A:162  falso, y queda entera en docs/loop/SALIDA_V182_APERTURA_SEGUNDA_CORRIDA.txt
+     A:163  sin borrar. La reparacion NO es teclear la clave buena: es recorrer las
+     A:164  claves DEL PROPIO NODO y quedarse con la primera cuyo nombre contenga `paso`
+     A:165  o `step` y cuyo valor sea una lista. Si no hay ninguna, devuelve [] y quien
+     A:166  llame publica el cero como medicion."""
+     A:167  if not isinstance(nodo, dict):
+     A:168  return []
+     A:169  for clave in sorted(nodo.keys()):
+     A:170  nombre = clave.lower()
+     A:171  if ("paso" in nombre or "step" in nombre) and isinstance(nodo[clave], list):
+     A:172  return nodo[clave]
+     A:173  return []
+     A:177  ruta = os.path.join(LOOP, "SALIDA_V%d_%s_APERTURA.txt" % (VUELTA, nombre))
+     A:183  # ---------------------------------------------------------------- A. EL SELLO
+     A:188  w("instrumento: scripts/loop/vuelta%d_apertura.py" % VUELTA)
+     A:218  w(" adjudica o la reconfirma, y se imprime lo que salga)")
+     A:227  c, n_bat = git(["log", "--format=%h", "-120", "--",
+     A:228  "scripts/loop/verificar_mutaciones_viejas.py"])
+     A:229  w("   commits que tocan verificar_mutaciones_viejas.py en los 120 ultimos: %d"
+     A:230  % len([l for l in n_bat.splitlines() if l.strip()]))
+     A:241  w("(disco = os.path.getsize; git = git cat-file -s HEAD:<ruta>. Acta 177 punto")
+     A:301  w("=== H.1 EL REPORTE DEL ARBOL, QUE ES EL QUE EL ESQUELETO DE LA NNN PISARA ===")
+     A:304  w("primera linea: %s" % arbol.split(NL, 1)[0].strip())
+     A:305  w("bytes en disco (normalizado a LF): %d | saltos de linea: %d"
+     A:306  % (len(arbol.encode("utf-8")), arbol.count(NL)))
+     A:307  w("bytes en disco (crudos, os.path.getsize): %d" % os.path.getsize(RUTA_REP))
+     A:310  for marca in MARCAS:
+     A:311  w("   contiene %-36s -> %s" % (repr(marca), "SI" if marca in arbol else "NO"))
+     A:314  w("=== H.2 EL COMMIT QUE DE VERDAD TOCA REPORTE.md POR ULTIMA VEZ ===")
+     A:315  w("(no se teclea ningun hash: se localiza con git log y se imprime lo que salga)")
+     A:316  c, cual = git(["log", "--format=%h%x09%s", "-8"])
+     A:317  w("los ocho ultimos commits:")
+     A:318  for l in cual.splitlines():
+     A:319  w("   " + l[:150])
+     A:320  c, ult = git(["log", "-1", "--format=%h", "--", "docs/loop/REPORTE.md"])
+     A:321  w("ultimo commit que TOCA docs/loop/REPORTE.md: %s" % ult.strip())
+     A:322  c, asu = git(["log", "-1", "--format=%s", ult.strip()])
+     A:323  w("   su asunto: %s" % asu.strip()[:150])
+     A:330  for r in ["docs/loop/SALIDA_VNNN_TALLADOR_CABECERA.txt",
+     A:333  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     A:335  w("%s -> %d bytes" % (r, os.path.getsize(p)))
+     A:336  else:
+     A:337  w("%s -> NO EXISTE" % r)
+     A:340  w("=== H.4 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===")
+     A:341  DIRA = os.path.join(LOOP, "reportes")
+     A:342  arch = sorted(os.listdir(DIRA)) if os.path.isdir(DIRA) else []
+     A:343  for n in arch:
+     A:344  g = bytes_de_git("docs/loop/reportes/" + n)
+     A:346  % (n, os.path.getsize(os.path.join(DIRA, n)),
+     A:347  ("%d bytes" % g) if g is not None else "NO ESTA EN HEAD"))
+     A:348  w("CIFRA reportes archivados: %d" % len(arch))
+     A:349  w("REPORTE_V182.md archivado: %s" % ("SI" if "REPORTE_V182.md" in arch else "NO"))
+     A:360  for i, l in enumerate(l_acta, 1):
+     A:361  if l.startswith("# ACTA DEL AUDITOR, VUELTA 18"):
+     A:362  w("   CABECERA en la LINEA %d: %s" % (i, l.strip()[:120]))
+     A:363  CAB182 = [i for i, l in enumerate(l_acta, 1)
+     A:365  w("CIFRA cabeceras del acta 182 encontradas: %d" % len(CAB182))
+     A:366  if CAB182:
+     A:367  base = CAB182[0]
+     A:389  for numero, rel, linea, titulo in halladas[-6:]:
+     A:395  cabeceras = []
+     A:396  for i, l in enumerate(l_acta, 1):
+     A:397  if l.startswith("# ACTA DEL AUDITOR, VUELTA ") or l.startswith("# ACTA DE LA VUELTA "):
+     A:398  m = re.search(r"VUELTA (\d+)", l)
+     A:399  if m:
+     A:400  cabeceras.append((int(m.group(1)), i))
+     A:401  w("   CIFRA cabeceras de acta en ACTA_AUDITOR.md: %d" % len(cabeceras))
+     A:402  w("   LAS ULTIMAS DOCE, POR NUMERO DE VUELTA Y LINEA:")
+     A:403  for n_v, li in sorted(cabeceras)[-12:]:
+     A:404  w("      acta %3d -> linea %d" % (n_v, li))
+     A:408  w("(el veredicto de una linea del reporte de la 182 contra su propia seccion 8.")
+     A:409  w(" NI EL VEREDICTO NI LAS CABECERAS SE TECLEAN: se leen del reporte archivado)")
+     A:410  R182 = os.path.join(LOOP, "reportes", "REPORTE_V182.md")
+     A:411  l182 = []
+     A:412  if not os.path.exists(R182):
+     A:413  w("   docs/loop/reportes/REPORTE_V182.md -> NO EXISTE. Sin el no hay caida que")
+     A:414  w("   medir, y eso se declara en vez de suponerla.")
+     A:416  t182 = io.open(R182, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:417  l182 = t182.split(NL)
+     A:418  g182 = bytes_de_git("docs/loop/reportes/REPORTE_V182.md")
+     A:420  % (len(l182), os.path.getsize(R182),
+     A:421  ("%d bytes" % g182) if g182 is not None else "NO ESTA EN HEAD"))
+     A:422  for i, l in enumerate(l182, 1):
+     A:423  if "EL VEREDICTO DE UNA LINEA" in l:
+     A:424  w("   VEREDICTO en la LINEA %d:" % i)
+     A:425  for k in range(i - 1, min(i + 6, len(l182))):
+     A:426  w("      | " + l182[k].strip()[:150])
+     A:427  w("   LAS CABECERAS C.n DE LA SECCION 8, CONTADAS Y NO RECORDADAS:")
+     A:428  cs = [(i, l) for i, l in enumerate(l182, 1)
+     A:429  if re.match(r"^\*{0,2}C\.\d+", l.strip())]
+     A:430  for i, l in cs:
+     A:431  w("      LINEA %d: %s" % (i, l.strip()[:130]))
+     A:432  w("   CIFRA cabeceras C.n localizadas: %d" % len(cs))
+     A:433  w("   CIFRA numerales distintos de C.n: %d"
+     A:434  % len({re.search(r"C\.(\d+)", l).group(1) for _i, l in cs}))
+     A:435  w("   LAS FILAS DE LA TABLA DE TAREAS, CONTADAS DE SU TABLA:")
+     A:436  filas_t = [(i, l) for i, l in enumerate(l182, 1)
+     A:437  if re.match(r"^\|\s*\*{0,2}\d+\*{0,2}\s*\|", l)]
+     A:438  for i, l in filas_t:
+     A:439  w("      LINEA %d: %s" % (i, l.strip()[:130]))
+     A:440  w("   CIFRA filas de tabla que empiezan por un numero: %d" % len(filas_t))
+     A:442  for l in [x for x in l182 if "EL VEREDICTO DE UNA LINEA" in x]:
+     A:443  for pal in ("una", "dos", "tres", "cuatro", "cinco", "seis", "siete",
+     A:444  "ocho", "nueve", "diez"):
+     A:445  if re.search(r"\b%s\b" % pal, l.lower()):
+     A:446  w("      %s -> SI aparece" % pal)
+     A:447  w("EL SUJETO DE LA OPERACION, MEDIDO ANTES DE TOCARLO:")
+     A:448  CER = os.path.join(RAIZ, "scripts", "loop", "cerrar_reporte.py")
+     A:449  t_cer = io.open(CER, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:450  l_cer = t_cer.split(NL)
+     A:451  g_cer = bytes_de_git("scripts/loop/cerrar_reporte.py")
+     A:452  w("   scripts/loop/cerrar_reporte.py -> %d lineas | disco %d bytes | git %s"
+     A:453  % (len(l_cer), os.path.getsize(CER),
+     A:454  ("%d bytes" % g_cer) if g_cer is not None else "NO ESTA EN HEAD"))
+     A:455  for aguja in ("def piezas_que_faltan", "def hueco_declarado_que_falta",
+     A:456  "def citas_de_arnes_que_no_calzan", "def rama_de_la_seccion9",
+     A:457  "def cifras_sin_pareja", "os.path.getsize(ruta_bat)",
+     A:458  "max(tam, 0)", "def main"):
+     A:459  hits = [(i, l) for i, l in enumerate(l_cer, 1) if aguja in l]
+     A:460  w("   %-42s -> %d aparicion(es)" % (repr(aguja), len(hits)))
+     A:461  for i, l in hits:
+     A:462  w("      LINEA %d: %s" % (i, l.strip()[:150]))
+     A:465  w("=== H.7 TAREA 1.d: EL HUECO DE LA SECCION 9, EN SU CODIGO DE HOY ===")
+     A:466  w("(no se copia la linea que el encargo nombra: se busca en el fichero y se")
+     A:467  w(" imprime con su numero, tal como esta hoy)")
+     A:468  for i, l in enumerate(l_cer, 1):
+     A:469  if "ruta_bat" in l or "NO EXISTE" in l:
+     A:470  w("   LINEA %d: %s" % (i, l.rstrip()[:160]))
+     A:471  w("LAS TRES PIEZAS QUE EL HUECO YA EXIGE, LOCALIZADAS EN EL CODIGO:")
+     A:472  for aguja in ("MARCA_HUECO", "MARCA_ATRIBUCION", "PATRON_BYTES"):
+     A:473  hits = [(i, l) for i, l in enumerate(l_cer, 1) if aguja in l]
+     A:474  w("   %-20s -> %d aparicion(es), lineas %s"
+     A:475  % (aguja, len(hits), ", ".join(str(i) for i, _l in hits[:12])))
+     A:476  w("")
+     A:478  w("=== H.8 TAREA 1.e: EL TRAMO DE LA CIEGA DE LA 182, LEIDO DEL ACTA ===")
+     A:479  w("(los 30 puestos NO se teclean: se sacan de la seccion 9 del acta 182 y se")
+     A:480  w(" parsean. Si el acta no los trae, se dice y no se inventa ninguno)")
+     A:481  puestos_ciega = []
+     A:482  if CAB182:
+     A:483  base = CAB182[0]
+     A:484  ini9 = None
+     A:485  fin9 = len(l_acta)
+     A:486  for i in range(base, len(l_acta)):
+     A:487  if l_acta[i].startswith("## 9. "):
+     A:488  ini9 = i
+     A:489  break
+     A:490  if ini9 is None:
+     A:491  w("   EL ACTA 182 NO TIENE SECCION 9. No se inventa ninguna.")
+     A:492  else:
+     A:493  for i in range(ini9 + 1, len(l_acta)):
+     A:494  if l_acta[i].startswith("## "):
+     A:495  fin9 = i
+     A:496  break
+     A:497  w("   SECCION 9 del acta 182: lineas %d a %d (%d lineas)"
+     A:498  % (ini9 + 1, fin9, fin9 - ini9))
+     A:499  for i in range(ini9, min(ini9 + 12, fin9)):
+     A:500  w("      | " + l_acta[i].strip()[:150])
+     A:501  for i in range(ini9, fin9):
+     A:502  if "PUESTOS SON" in l_acta[i].upper():
+     A:503  bloque = NL.join(l_acta[i:i + 4])
+     A:504  w("   LA LINEA QUE LOS LISTA es la %d, y sus tres siguientes:" % (i + 1))
+     A:505  for l in bloque.split(NL):
+     A:506  w("      | " + l.strip()[:150])
+     A:507  crudo = bloque.split(":", 1)[1] if ":" in bloque else ""
+     A:508  puestos_ciega = [int(x) for x in re.findall(r"\d+", crudo.replace(".", ""))]
+     A:509  break
+     A:510  w("   CIFRA puestos parseados de esa linea: %d" % len(puestos_ciega))
+     A:511  w("   LOS PUESTOS, ORDENADOS: %s" % ", ".join(str(x) for x in sorted(puestos_ciega)))
+     A:512  w("   MIN %s | MAX %s | REPETIDOS %d"
+     A:513  % (min(puestos_ciega) if puestos_ciega else "n/a",
+     A:514  max(puestos_ciega) if puestos_ciega else "n/a",
+     A:515  len(puestos_ciega) - len(set(puestos_ciega))))
+     A:516  w("LA MAQUINA DE LA 182 QUE SE IMPORTA Y NO SE COPIA:")
+     A:517  RREL = "scripts/loop/vuelta182_tarea1c_relectura_al_doble.py"
+     A:518  PREL = os.path.join(RAIZ, RREL.replace("/", os.sep))
+     A:519  w("   %s existe: %s | disco %s bytes"
+     A:520  % (RREL, "SI" if os.path.exists(PREL) else "NO",
+     A:521  os.path.getsize(PREL) if os.path.exists(PREL) else "n/a"))
+     A:522  if os.path.exists(PREL):
+     A:523  t_rel = io.open(PREL, encoding="utf-8", errors="replace").read().replace(chr(13) + NL, NL)
+     A:524  for i, l in enumerate(t_rel.split(NL), 1):
+     A:525  if l.startswith("def ") or l.startswith("VARA") or l.startswith("PUESTOS"):
+     A:526  w("      LINEA %d: %s" % (i, l.strip()[:130]))
+     A:529  w("=== H.9 TAREA 2: LA BATERIA, SU LANZADOR Y SUS TRAMOS, CONTADOS ===")
+     A:530  RBT = "scripts/loop/vueltaNNN_bateria_por_tramos.py"
+     A:531  BT = os.path.join(RAIZ, RBT.replace("/", os.sep))
+     A:532  g_bt = bytes_de_git(RBT)
+     A:533  w("   %s existe: %s | disco %s bytes | git %s"
+     A:534  % (RBT, "SI" if os.path.exists(BT) else "NO",
+     A:535  os.path.getsize(BT) if os.path.exists(BT) else "n/a",
+     A:536  ("%d bytes" % g_bt) if g_bt is not None else "NO ESTA EN HEAD"))
+     A:549  w("LAS BATERIAS VIVAS EN docs/loop/, CONTADAS DE SU DIRECTORIO:")
+     A:550  PAT_BAT = re.compile(r"^SALIDA_V(\d+)_BATERIA.*\.txt$")
+     A:551  vivas = sorted(n for n in os.listdir(LOOP) if PAT_BAT.match(n))
+     A:552  n_cero = 0
+     A:553  for n in vivas:
+     A:554  pth = os.path.join(LOOP, n)
+     A:555  tam = os.path.getsize(pth)
+     A:556  if tam == 0:
+     A:557  n_cero += 1
+     A:558  w("   %-50s disco %8d bytes" % (n, tam))
+     A:559  w("CIFRA ficheros SALIDA_V<N>_BATERIA*.txt en docs/loop/: %d" % len(vivas))
+     A:560  w("CIFRA de ellos que miden CERO BYTES: %d" % n_cero)
+     A:567  w("   FAMILIAS_DE_ARNES: %s" % ", ".join(VMV.FAMILIAS_DE_ARNES))
+     A:583  w("EL REGISTRO DEL SUJETO CONGELADO, CONTADO DE SU FICHERO:")
+     A:609  puestos = [f.get("puesto_intra") for f in filas]
+     A:611  % (min(puestos), max(puestos),
+     A:612  len(set(range(min(puestos), max(puestos) + 1)) - set(puestos)),
+     A:613  len(puestos) - len(set(puestos))))
+     A:619  io.open(os.path.join(LOOP, "SALIDA_V%d_APERTURA.txt" % VUELTA), "w",
+     B:72  # EL SUFIJO DE LAS SALIDAS, COMPUTADO DEL NOMBRE DEL FICHERO Y NO TECLEADO.
+     B:73  # vueltaNNNb_apertura.py -> "NNNB". Un clon llamado vuelta200_apertura.py
+     B:74  # escribiria SALIDA_V200_*.txt sin que nadie tenga que acordarse de cambiarlo.
+     B:75  LANZADOR = os.path.basename(os.path.abspath(__file__))
+     B:76  _m = re.match(r"^vuelta(\d+[a-z]?)_", LANZADOR)
+     B:77  if not _m:
+     B:78  raise SystemExit("ROJO: el nombre %r no dice de que vuelta es. No se adivina."
+     B:79  % LANZADOR)
+     B:80  SUFIJO = _m.group(1).upper()
+     B:81  VUELTA = int(re.match(r"^(\d+)", _m.group(1)).group(1))
+     B:84  "scripts/loop/vueltaNNN_bateria_por_tramos.py",
+     B:142  def sha_de(ruta):
+     B:144  datos = io.open(ruta, "rb").read()
+     B:145  lf = datos.replace(b"\r\n", b"\n")
+     B:146  return (hashlib.sha256(datos).hexdigest(), hashlib.sha256(lf).hexdigest(),
+     B:147  len(datos), len(lf))
+     B:151  ruta = os.path.join(LOOP, "SALIDA_V%s_%s_APERTURA.txt" % (SUFIJO, nombre))
+     B:162  % (SUFIJO, LANZADOR))
+     B:193  for etiqueta, aguja in (("acta 182", "ACTA DEL AUDITOR, VUELTA 182"),
+     B:234  c, dnd = git(["diff", "--numstat", "--", "dataset/"])
+     B:235  w("CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: %d"
+     B:236  % len([l for l in dnd.splitlines() if l.strip()]))
+     B:259  w("(el encargo dice que NO se archiva y que se sigue escribiendo en el. Aqui se")
+     B:260  w(" mide que es y en que estado esta, sin tocarlo)")
+     B:267  "<!-- TABLA DE TAREAS -->", "<!-- FIN TABLA DE TAREAS -->",
+     B:268  "<!-- ANEXO DE TAREAS -->", "<!-- FIN ANEXO DE TAREAS -->",
+     B:269  "<!-- CABECERA TALLADA -->"]
+     B:276  % (len(arbol.encode("utf-8")), arbol.count(NL), os.path.getsize(RUTA_REP)))
+     B:279  w("FILAS DE LA TABLA DE TAREAS, CONTADAS DE SU TABLA Y NO RECORDADAS:")
+     B:280  dentro = False
+     B:281  n_filas = 0
+     B:282  for i, l in enumerate(arbol.split(NL), 1):
+     B:283  if "<!-- TABLA DE TAREAS -->" in l:
+     B:284  dentro = True
+     B:285  continue
+     B:286  if "<!-- FIN TABLA DE TAREAS -->" in l:
+     B:287  dentro = False
+     B:288  continue
+     B:289  if dentro and re.search(r"TAREA\s+\d+", l) and l.strip().startswith("|"):
+     B:290  n_filas += 1
+     B:291  w("   LINEA %d: %s" % (i, l.strip()[:110]))
+     B:292  w("CIFRA filas de tarea en la tabla: %d" % n_filas)
+     B:298  for abrev in ["_T1A_MUTACION_REGISTRO.txt", "_T1C_MUTACION_VEREDICTO.txt",
+     B:300  apariciones = [i for i, l in enumerate(arbol.split(NL), 1) if abrev in l]
+     B:301  entera = "docs/loop/SALIDA_VNNN" + abrev
+     B:302  p = os.path.join(RAIZ, entera.replace("/", os.sep))
+     B:303  w("   %-32s -> aparece en lineas %s | entera %s -> %s"
+     B:304  % (abrev, ", ".join(str(x) for x in apariciones) or "(ninguna)", entera,
+     B:305  ("%d bytes" % os.path.getsize(p)) if os.path.exists(p) else "NO EXISTE"))
+     B:306  w("   CIFRA apariciones de la ruta ya entera 'docs/loop/SALIDA_VNNN' en el reporte: %d"
+     B:307  % arbol.count("docs/loop/SALIDA_VNNN"))
+     B:310  w("=== H.2 LA CAIDA E.1: LAS MENCIONES DE 176 EN LAS CUATRO SALIDAS SELLADAS ===")
+     B:311  w("(LO QUE PASABA ANTES NO SE BORRA, SE CUENTA. Se cuentan AQUI, antes de tocar")
+     B:312  w(" una sola linea del lanzador, y se dice cuantas de cada especie)")
+     B:313  SELLADAS = ["SALIDA_VNNN_BATERIA_TRAMO_1.txt", "SALIDA_VNNN_BATERIA_TRAMO_2.txt",
+     B:314  "SALIDA_VNNN_LANZADOR_TRAMO_1.txt", "SALIDA_VNNN_LANZADOR_TRAMO_2.txt"]
+     B:315  total_176 = 0
+     B:316  for n in SELLADAS:
+     B:317  p = os.path.join(LOOP, n)
+     B:318  if not os.path.exists(p):
+     B:319  w("   %-34s NO EXISTE" % n)
+     B:320  continue
+     B:321  t = io.open(p, encoding="utf-8", errors="replace").read().replace(chr(13) + NL, NL)
+     B:322  ls = t.split(NL)
+     B:323  hits = [(i, l) for i, l in enumerate(ls, 1) if "176" in l]
+     B:324  total_176 += len(hits)
+     B:326  % (n, os.path.getsize(p), len(hits)))
+     B:327  for i, l in hits:
+     B:328  w("      LINEA %d: %s" % (i, l.strip()[:140]))
+     B:329  w("   CIFRA total de lineas con '176' en las cuatro salidas selladas: %d" % total_176)
+     B:332  w("=== H.3 EL LANZADOR DE LA BATERIA, SUS LITERALES DE VUELTA, MEDIDOS ===")
+     B:333  RBT = "scripts/loop/vueltaNNN_bateria_por_tramos.py"
+     B:334  BT = os.path.join(RAIZ, RBT.replace("/", os.sep))
+     B:335  t_bt = io.open(BT, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:336  l_bt = t_bt.split(NL)
+     B:337  g_bt = bytes_de_git(RBT)
+     B:338  w("   %s -> %d lineas | disco %d bytes | git %s"
+     B:339  % (RBT, len(l_bt), os.path.getsize(BT),
+     B:340  ("%d bytes" % g_bt) if g_bt is not None else "NO ESTA EN HEAD"))
+     B:341  w("   LAS LINEAS QUE ESCRIBEN O IMPRIMEN UN '176', LOCALIZADAS Y NO TECLEADAS:")
+     B:342  for i, l in enumerate(l_bt, 1):
+     B:343  if "176" in l and (l.strip().startswith("print(") or l.strip().startswith("f.write(")
+     B:344  or l.strip().startswith("cab.append(") or "mkdtemp" in l):
+     B:345  w("      LINEA %d: %s" % (i, l.strip()[:140]))
+     B:347  % len([l for l in l_bt if "176" in l]))
+     B:348  w("   CIFRA lineas que contienen 'VNNN' o 'vueltaNNN': %d"
+     B:349  % len([l for l in l_bt if "VNNN" in l or "vueltaNNN" in l]))
+     B:350  for i, l in enumerate(l_bt, 1):
+     B:351  if "VNNN" in l or "vueltaNNN" in l:
+     B:352  w("      LINEA %d: %s" % (i, l.strip()[:140]))
+     B:363  CABNNN = [i for i, l in enumerate(l_acta, 1)
+     B:365  w("CIFRA cabeceras del acta NNN encontradas: %d" % len(CABNNN))
+     B:366  if CABNNN:
+     B:367  base = CABNNN[0]
+     B:368  w("   CABECERA del acta NNN en la LINEA %d" % base)
+     B:378  w("   LAS MARCAS DE CAIDA DEL EJECUTOR EN EL ACTA NNN, BUSCADAS Y NO SUPUESTAS:")
+     B:379  for pat in (r"`E\.\d+`", r"\*\*E\.\d+", r"`C\.\d+`", r"NINGUNA CAIDA PROPIA"):
+     B:380  hits = [i for i, l in enumerate(l_acta, 1)
+     B:381  if i >= base and re.search(pat, l)]
+     B:382  w("      %-24s -> %d aparicion(es), lineas %s"
+     B:383  % (pat, len(hits), ", ".join(str(x) for x in hits[:12]) or "(ninguna)"))
+     B:396  for numero, rel, linea, titulo in halladas[-4:]:
+     B:405  CIEGA = os.path.join(LOOP, "_auditor_v184_ciega_blind.txt")
+     B:406  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_V184.json")
+     B:407  if os.path.exists(SELLO):
+     B:408  w("   %s -> disco %d bytes" % ("docs/loop/SELLO_APERTURA_AUDITOR_V184.json",
+     B:409  os.path.getsize(SELLO)))
+     B:410  sello = json.loads(io.open(SELLO, encoding="utf-8").read())
+     B:411  w("   CLAVES DEL SELLO: %s" % ", ".join(sorted(sello.keys())))
+     B:413  for l in json.dumps(sello, indent=2, ensure_ascii=False).split(NL):
+     B:417  if os.path.exists(CIEGA):
+     B:418  sd, sl, bd, bl = sha_de(CIEGA)
+     B:419  w("   docs/loop/_auditor_v184_ciega_blind.txt -> disco %d bytes | LF %d bytes"
+     B:420  % (bd, bl))
+     B:421  w("   sha256 (disco): %s" % sd)
+     B:422  w("   sha256 (LF)   : %s" % sl)
+     B:423  t_c = io.open(CIEGA, encoding="utf-8", errors="replace").read().replace(chr(13) + NL, NL)
+     B:424  l_c = t_c.split(NL)
+     B:425  w("   lineas: %d" % len(l_c))
+     B:426  w("   LAS DOCE PRIMERAS, PEGADAS:")
+     B:427  for l in l_c[:12]:
+     B:428  w("      | " + l[:150])
+     B:429  puestos = sorted({int(x) for x in re.findall(r"PUESTO\s+(\d+)", t_c)})
+     B:430  w("   CIFRA puestos localizados con el patron 'PUESTO <n>': %d" % len(puestos))
+     B:431  w("   LOS PUESTOS: %s" % ", ".join(str(x) for x in puestos))
+     B:432  else:
+     B:433  w("   EL FICHERO CIEGO NO EXISTE. No se relee nada, y eso se dice.")
+     B:478  w("=== H.7 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA NNN ===")
+     B:479  for r in ["docs/loop/SALIDA_VNNN_TALLADOR_CABECERA.txt",
+     B:480  "scripts/loop/_vNNN_cierre_texto.md",
+     B:481  "docs/loop/SALIDA_VNNN_BATERIA.txt"]:
+     B:482  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:483  w("   %s -> %s" % (r, ("%d bytes" % os.path.getsize(p))
+     B:484  if os.path.exists(p) else "NO EXISTE"))
+     B:485  CER = os.path.join(RAIZ, "scripts", "loop", "cerrar_reporte.py")
+     B:486  t_cer = io.open(CER, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:487  l_cer = t_cer.split(NL)
+     B:488  w("   scripts/loop/cerrar_reporte.py -> %d lineas | disco %d bytes"
+     B:489  % (len(l_cer), os.path.getsize(CER)))
+     B:490  for aguja in ("--bateria", "SALIDA_V", "def numerales_del_veredicto",
+     B:491  "def caidas_propias_del_cuerpo", "def tareas_de_la_tabla",
+     B:492  "def numerales_del_veredicto_que_no_calzan",
+     B:493  "def frase_del_caso_del_hueco"):
+     B:494  hits = [(i, l) for i, l in enumerate(l_cer, 1) if aguja in l]
+     B:495  w("   %-44s -> %d aparicion(es), lineas %s"
+     B:496  % (repr(aguja), len(hits), ", ".join(str(i) for i, _l in hits[:10])))
+     B:497  w("")
+     B:499  w("=== H.8 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===")
+     B:500  DIRA = os.path.join(LOOP, "reportes")
+     B:501  arch = sorted(os.listdir(DIRA)) if os.path.isdir(DIRA) else []
+     B:502  for n in arch[-8:]:
+     B:503  g = bytes_de_git("docs/loop/reportes/" + n)
+     B:504  w("   %s -> disco %d bytes | git %s"
+     B:505  % (n, os.path.getsize(os.path.join(DIRA, n)),
+     B:506  ("%d bytes" % g) if g is not None else "NO ESTA EN HEAD"))
+     B:507  w("CIFRA reportes archivados: %d" % len(arch))
+     B:508  for n in ("REPORTE_V182.md", "REPORTE_VNNN.md"):
+     B:509  w("%s archivado: %s" % (n, "SI" if n in arch else "NO"))
+     B:527  puestos_v = [f.get("puesto_intra") for f in filas]
+     B:529  % (min(puestos_v), max(puestos_v),
+     B:530  len(set(range(min(puestos_v), max(puestos_v) + 1)) - set(puestos_v)),
+     B:531  len(puestos_v) - len(set(puestos_v))))
+     B:537  io.open(os.path.join(LOOP, "SALIDA_V%s_APERTURA.txt" % SUFIJO), "w",
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:73  "scripts/loop/vueltaNNN_bateria_por_tramos.py",
+     A:75  "scripts/loop/vuelta182_tarea1c_relectura_al_doble.py",
+     A:86  "docs/loop/reportes/REPORTE_V182.md",
+     A:87  "docs/plan/08_VERIFICACION.md",
+     A:89  "docs/plan/CORRECCIONES_A_APLICAR.md",
+     A:90  "docs/loop/paradas/2026-09-05-cola-post-fusion-DECISION.md",
+     A:97  "scripts/loop/cotejar_clon_declarado.py",
+     A:125  """LOS NODOS DEL GRAFO INDEXADOS POR ID, SIN ADIVINAR LA CLAVE DE LA RAIZ.
+     A:126  
+     A:127  Prueba las formas que el fichero puede tener y devuelve la primera que da
+     A:128  nodos: la clave `nodos` como diccionario id -> nodo (que es la que este
+     A:129  repo usa hoy), la misma clave como lista, y `nodes` en las dos formas por
+     A:130  si el fichero cambia de idioma. Si ninguna da nada, devuelve {} y quien
+     A:131  llame publica el cero, que es una medicion y no un adivinanza."""
+     A:142  
+     A:143  
+     A:154  
+     A:155  
+     A:187  w("SELLO DE APERTURA DE LA VUELTA %d, escrito ANTES de la primera operacion" % VUELTA)
+     A:189  w("regimen: VUELTA DE BATERIA. AUDITOR.md 6.1: la bateria corre CADA")
+     A:190  w("         CINCO, en vuelta propia, y esa vuelta no lleva trabajo de plan")
+     A:191  w("         al lado. La 181 era la suya y se corto antes de lanzarla. Su")
+     A:192  w("         lanzador por tramos esta escrito desde la 182 y sin correr.")
+     A:193  w("         DOS sub-tareas, que es el tope del regimen temporal 6.2 hasta")
+     A:194  w("         que DOS vueltas seguidas cierren su propio reporte.")
+     A:215  w("=== B.1 LA CADENCIA DE LA BATERIA, LOCALIZADA EN GIT Y NO TECLEADA ===")
+     A:216  w("(AUDITOR.md 6.1: la bateria corre CADA CINCO, en vuelta propia. Aqui NO se")
+     A:217  w(" teclea ningun hash: se busca en el log el commit de cada acta que la")
+     A:220  for etiqueta, aguja in (("acta 176", "ACTA DEL AUDITOR, VUELTA 176"),
+     A:221  ("acta 180", "ACTA DEL AUDITOR, VUELTA 180"),
+     A:222  ("acta 181", "ACTA DEL AUDITOR, VUELTA 181"),
+     A:223  ("acta 182", "ACTA DEL AUDITOR, VUELTA 182")):
+     A:225  w("   %-12s -> %s"
+     A:242  w(" 7.11 y acta 180 punto 6.7: mientras la convencion no este fijada, SE")
+     A:243  w(" PUBLICAN LAS DOS)")
+     A:294  "ABIERTA, SIN CERRAR", "HUECO DECLARADO Y MEDIDO",
+     A:295  "CORRIDA ENTERA Y SOLA AL CIERRE"]
+     A:298  w("   contiene %-36s -> %s" % (repr(marca), "SI" if marca in rep else "NO"))
+     A:302  RUTA_REP = os.path.join(LOOP, "REPORTE.md")
+     A:303  arbol = io.open(RUTA_REP, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:308  w("identico byte a byte al de HEAD: %s"
+     A:309  % ("SI" if arbol == rep.replace(chr(13) + NL, NL) else "NO"))
+     A:326  w("=== H.3 LAS PIEZAS QUE cerrar_reporte.py PEDIRA PARA CERRAR LA NNN ===")
+     A:327  w("(al abrir NO EXISTE NINGUNA, y eso es lo correcto: las produce esta vuelta.")
+     A:328  w(" LA DE BATERIA SI SE VA A PRODUCIR: esta vuelta ES la de bateria y su")
+     A:329  w(" seccion 9 lleva la salida entera dentro, compuesta de los nueve tramos)")
+     A:331  "scripts/loop/_vNNN_cierre_texto.md",
+     A:332  "docs/loop/SALIDA_VNNN_BATERIA.txt"]:
+     A:334  if os.path.exists(p):
+     A:345  w("   %s -> disco %d bytes | git %s"
+     A:350  w("")
+     A:351  
+     A:352  w("=== H.5 TAREA 1.a y 1.b: LA SERIE DE REGISTROS, EL ACTA 182 Y EL SALTO ===")
+     A:354  w(" se imprime lo que devuelva. La cabecera del acta se busca en su fichero)")
+     A:364  if l.startswith("# ACTA DEL AUDITOR, VUELTA 182")]
+     A:368  w("   lineas del acta 182, de su cabecera al final del fichero: %d"
+     A:371  "## 7. ", "## 8. ", "## 9. ", "## 10. ", "## 11. ",
+     A:372  "**5.D.", "**7.1 ", "**7.2 ", "**7.3 ", "**7.4 ", "**7.5 "):
+     A:393  w("EL SALTO DE LA 1.b, CONTADO Y NO TECLEADO: que actas tienen cabecera en el")
+     A:394  w("fichero del acta, para saber cuantas quedan sin entrada propia en la serie.")
+     A:407  w("=== H.6 TAREA 1.c: LA ESCALADA, Y LA CAIDA QUE LA TRAE, MEDIDA ===")
+     A:419  w("   docs/loop/reportes/REPORTE_V182.md -> %d lineas | disco %d bytes | git %s"
+     A:441  w("   LOS NUMERALES ESCRITOS CON LETRA QUE APARECEN EN EL VEREDICTO:")
+     A:477  
+     A:527  w("")
+     A:528  
+     A:592  w("=== H.10 EL ARCHIVO DE VEREDICTOS, QUE ESTA VUELTA NO PUEDE MOVER ===")
+     A:593  w("(el encargo dice que su sha256 tiene que seguir siendo el mismo al cerrar.")
+     A:594  w(" AQUI NO SE COPIA EL DEL ENCARGO: se computa y se imprime lo que salga)")
+     B:82  
+     B:89  "scripts/loop/vueltaNNN_tarea1e_relectura_al_doble.py",
+     B:90  "scripts/loop/vuelta182_tarea3_diferenciador_movido.py",
+     B:92  "scripts/loop/_vNNN_tallar_cierre.py",
+     B:102  "docs/loop/SALIDA_VNNN_BATERIA_TRAMO_1.txt",
+     B:103  "docs/loop/SALIDA_VNNN_BATERIA_TRAMO_2.txt",
+     B:104  "docs/loop/SALIDA_VNNN_LANZADOR_TRAMO_1.txt",
+     B:105  "docs/loop/SALIDA_VNNN_LANZADOR_TRAMO_2.txt",
+     B:106  "docs/loop/SALIDA_VNNN_T1A_MUTACION_REGISTRO.txt",
+     B:107  "docs/loop/SALIDA_VNNN_T1C_MUTACION_VEREDICTO.txt",
+     B:108  "docs/loop/SALIDA_VNNN_T1E_RELECTURA_AL_DOBLE.txt",
+     B:109  "docs/loop/_auditor_v184_ciega_blind.txt",
+     B:110  "docs/loop/SELLO_APERTURA_AUDITOR_V184.json",
+     B:143  """SHA256 POR LAS DOS CONVENCIONES: crudo de disco y normalizado a LF."""
+     B:160  w("SELLO DE APERTURA DE LA CONTINUACION DE LA VUELTA %d, escrito ANTES de la" % VUELTA)
+     B:161  w("primera operacion. Sufijo de salidas: %s (computado de %s, no tecleado)"
+     B:163  w("regimen: VUELTA DE BATERIA, CONTINUADA. AUDITOR.md 6.1: una vuelta cortada")
+     B:164  w("         RETOMA EN EL TRAMO SIGUIENTE y la bateria se declara corrida cuando")
+     B:165  w("         los NUEVE tramos tienen salida sellada del mismo calibre.")
+     B:166  w("         Adjudicacion 5.7 del acta NNN: la continuacion escribe SOBRE el")
+     B:167  w("         reporte de la NNN, no abre uno nuevo y no lo archiva.")
+     B:168  w("         DOS sub-tareas, que es el tope del regimen temporal 6.2.")
+     B:189  w("=== B.1 LA CADENA DE LA VUELTA NNN, LOCALIZADA EN GIT Y NO TECLEADA ===")
+     B:190  w("(no se teclea ningun hash: se busca en el log el commit de cada pieza de la")
+     B:191  w(" NNN y se imprime lo que salga)")
+     B:194  ("acta NNN", "ACTA DEL AUDITOR, VUELTA NNN"),
+     B:195  ("tramo 1", "BATERIA TRAMO 1 DE 9"),
+     B:196  ("tramo 2", "BATERIA TRAMO 2 DE 9"),
+     B:197  ("tarea 1 de la NNN", "VUELTA NNN, TAREA 1 CERRADA")):
+     B:199  w("   %-18s -> %s"
+     B:266  "ABIERTA, SIN CERRAR", "CERRADA",
+     B:272  w("   contiene %-40s -> %s" % (repr(marca), "SI" if marca in rep else "NO"))
+     B:273  RUTA_REP = os.path.join(LOOP, "REPORTE.md")
+     B:274  arbol = io.open(RUTA_REP, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:275  w("EL DEL ARBOL: bytes LF %d | saltos de linea %d | disco crudo %d"
+     B:277  w("identico byte a byte al de HEAD: %s"
+     B:278  % ("SI" if arbol == rep.replace(chr(13) + NL, NL) else "NO"))
+     B:295  w("=== H.1 LAS TRES RUTAS ABREVIADAS DE LA CELDA DE PRUEBA (TAREA 1.d) ===")
+     B:296  w("(adjudicacion 5.2 del acta NNN: NO son caida, y se escriben enteras. Aqui se")
+     B:297  w(" localizan tal como estan HOY y se mide si el fichero al que apuntan existe)")
+     B:299  "_T1E_RELECTURA_AL_DOBLE.txt"]:
+     B:325  w("   %-34s %6d bytes | lineas con '176': %d"
+     B:346  w("   CIFRA lineas del fichero que contienen '176': %d"
+     B:355  w("=== H.4 LA SERIE DE REGISTROS Y EL ACTA NNN, PARA LA TAREA 1.a ===")
+     B:357  w(" se imprime lo que devuelva)")
+     B:364  if l.startswith("# ACTA DEL AUDITOR, VUELTA NNN")]
+     B:369  w("   lineas del acta NNN, de su cabecera al final del fichero: %d"
+     B:372  "## 7. ", "## 8. ", "## 9. ", "**5.1 ", "**5.2 ", "**5.3 ",
+     B:373  "**5.4 ", "**5.5 ", "**5.6 ", "**5.7 "):
+     B:402  w("=== H.5 EL TRAMO DE LA CIEGA DEL AUDITOR Y SU SELLO (TAREA 1.f) ===")
+     B:403  w("(el encargo manda cotejar el sha256 del fichero ciego contra el sello ANTES")
+     B:404  w(" de releer nada. AQUI NO SE COPIA EL DEL ENCARGO: se computa y se compara)")
+     B:412  w("   EL SELLO ENTERO, PEGADO Y NO RESUMIDO:")
+     B:414  w("      | " + l[:150])
+     B:416  w("   EL SELLO NO EXISTE. Sin el no se relee nada, y eso se dice.")
+     B:436  w("=== H.6 LA BATERIA: SU REPARTO Y QUE TRAMO TOCA, CORRIDOS HOY ===")
+     B:498  
+     B:510  w("")
+     B:511  
+     B:512  w("=== H.9 EL ARCHIVO DE VEREDICTOS, QUE ESTA VUELTA NO PUEDE MOVER ===")
+
+
+FIN

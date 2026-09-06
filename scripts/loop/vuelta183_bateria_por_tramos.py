@@ -34,6 +34,17 @@ se deja preparada y declarada". Lo unico que la 182 corre de este fichero es
 --plan, que NO toca la nomina, NO corre ningun arnes y NO escribe ninguna salida
 de bateria: solo imprime el reparto.
 
+CORRECCION DECLARADA DE LA CONTINUACION DE LA 183 (TAREA 1.b), Y NO TAPA LO QUE
+CORRIGE. El parrafo de arriba dice "el numero de vuelta en los nombres de las
+salidas" entre lo que el clon cambia, y ESO ERA FALSO A MEDIAS: cambiaban los
+NOMBRES de los ficheros, pero NO el numero que las salidas escriben DENTRO. Sus
+dos primeras lineas decian "BATERIA DE LA VUELTA 176" y "lanzada por
+scripts/loop/vuelta176_bateria_por_tramos.py". Cuatro salidas selladas de esta
+misma vuelta salieron con tres menciones de 176 cada una, contadas antes de
+tocar nada. Hoy el numero y el nombre se COMPUTAN de os.path.basename(__file__)
+y un guarda propio, literales_de_vuelta_clavados(), impide que main() arranque
+si alguien vuelve a clavar uno. Ver el bloque de comentario sobre LANZADOR.
+
 USO:
   python scripts/loop/vuelta183_bateria_por_tramos.py --plan
   python scripts/loop/vuelta183_bateria_por_tramos.py --siguiente
@@ -45,6 +56,7 @@ import datetime
 import hashlib
 import io
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -55,6 +67,33 @@ RAIZ = os.path.dirname(os.path.dirname(AQUI))
 LOOP = os.path.join(RAIZ, "docs", "loop")
 BATERIA = os.path.join(AQUI, "verificar_mutaciones_viejas.py")
 NL = chr(10)
+
+# ---------------------------------------------------------------------------
+# EL NUMERO DE VUELTA Y EL NOMBRE DEL LANZADOR, COMPUTADOS DEL PROPIO FICHERO.
+#
+# CORRECCION DECLARADA (2026-09-05, continuacion de la vuelta 183, TAREA 1.b;
+# caida `E.1` del acta 183, adjudicacion 5.1). LO QUE PASABA ANTES NO SE BORRA,
+# SE CUENTA: este fichero es un CLON DECLARADO del de la vuelta 176 y HEREDO EL
+# NUMERO DE SU PADRE en los literales que escribe. Sus salidas selladas decian
+# "BATERIA DE LA VUELTA 176" y "lanzada por
+# scripts/loop/vuelta176_bateria_por_tramos.py", y eso salio impreso en CUATRO
+# ficheros sellados de esta misma vuelta, con TRES menciones de 176 en cada uno
+# contadas con grep -c (docs/loop/SALIDA_V183B_APERTURA.txt, bloque H.2, que las
+# conto ANTES de tocar este fichero). Las dos afirmaciones eran falsas: la
+# bateria es la de la 183 y la lanzo el fichero de la 183.
+#
+# LA REPARACION NO ES TECLEAR UN 183 ENCIMA DEL 176. Un 183 tecleado se hereda
+# igual que se heredo el 176: el clon siguiente volveria a mentir. El numero y
+# el nombre SE COMPUTAN de os.path.basename(__file__), de modo que un clon
+# llamado vuelta200_bateria_por_tramos.py diga 200 en todas sus salidas sin que
+# nadie tenga que acordarse de nada. Y el numero de tramos NO se teclea tampoco:
+# sale de len(tramos), o sea de la constante TAMANO que reparte la nomina.
+LANZADOR = os.path.basename(os.path.abspath(__file__))
+_M_VUELTA = re.match(r"^vuelta(\d+)_", LANZADOR)
+if not _M_VUELTA:
+    raise SystemExit("ROJO: el nombre %r no dice de que vuelta es este lanzador, "
+                     "y el numero NO SE ADIVINA." % LANZADOR)
+VUELTA = int(_M_VUELTA.group(1))
 
 sys.path.insert(0, AQUI)
 import guarda_commit_dataset as GUARDA   # noqa: E402
@@ -68,6 +107,77 @@ import verificar_mutaciones_viejas as B   # noqa: E402
 TAMANO = 13
 TRAMOS_QUE_MANDA_LA_DECISION = 9
 MARCA_ENTRADA = "ENTRADA DEL TRAMO: "
+
+# LA MARCA QUE EXIME A UNA CITA HISTORICA DEL GUARDA DE ABAJO. Una linea que
+# NOMBRA de donde salio una regla ("el encargo de la 176 fijo esto") NO es una
+# atribucion falsa: es una cita, y borrarla seria borrar la procedencia. Se exime
+# nombrandola, nunca ensanchando el patron hasta que trague.
+MARCA_CITA = "CITA HISTORICA"
+
+# LAS LINEAS QUE ESTE GUARDA MIRA: las que ESCRIBEN o IMPRIMEN texto, que son las
+# unicas que pueden meter una atribucion falsa en una salida sellada.
+_PREFIJOS_QUE_ESCRIBEN = ("print(", "f.write(", "cab.append(", "return \"SALIDA",
+                          "return 'SALIDA")
+# EL PATRON, ENSANCHADO POR LO QUE SU PROPIO ARNES LE ENCONTRO Y NO POR GUSTO.
+# La primera version pedia `V` mayuscula y no admitia separador en minuscula, y
+# su arnes la tumbo con dos casos que el defecto REAL de esta vuelta traia: el
+# prefijo `v176_tramo` de los `mkdtemp`, que va en minuscula, y la frase
+# "de la vuelta 176" con su espacio. Las dos salieron impresas en las salidas
+# selladas. Se ensancha una vez, con la medicion delante, y las citas legitimas
+# se eximen NOMBRANDOLAS con MARCA_CITA, que es lo que impide que ensanchar el
+# patron se convierta en un cepo.
+_PATRON_CLAVADO = re.compile(r"(?:vuelta|v)[ _]?(\d{3})", re.IGNORECASE)
+
+
+def numero_de_vuelta_del_nombre(nombre):
+    """EL NUMERO DE VUELTA QUE DICE UN NOMBRE DE FICHERO, o None si no lo dice.
+    PURA. Es la mitad computable de "el numero no se teclea"."""
+    m = re.match(r"^vuelta(\d+)_", os.path.basename(nombre))
+    return int(m.group(1)) if m else None
+
+
+def titulo_de_corrida(n, total, vuelta):
+    """LA PRIMERA LINEA DE LA SALIDA SELLADA DE UN TRAMO. PURA."""
+    return "CORRIDA DEL TRAMO %d DE %d, BATERIA DE LA VUELTA %d" % (n, total, vuelta)
+
+
+def linea_de_lanzador(lanzador):
+    """LA SEGUNDA LINEA DE LA SALIDA SELLADA DE UN TRAMO. PURA."""
+    return "lanzada por scripts/loop/%s" % lanzador
+
+
+def titulo_de_composicion(vuelta):
+    """LA PRIMERA LINEA DE LA CABECERA DE --componer. PURA."""
+    return ("LA BATERIA DE MUTACIONES DE LA VUELTA %d, CORRIDA ENTERA Y EN TRAMOS"
+            % vuelta)
+
+
+def linea_de_composicion(lanzador):
+    """LA SEGUNDA LINEA DE LA CABECERA DE --componer. PURA."""
+    return "compuesta por scripts/loop/%s --componer" % lanzador
+
+
+def literales_de_vuelta_clavados(texto):
+    """LAS LINEAS DE UN FUENTE QUE CLAVAN UN NUMERO DE VUELTA COMO LITERAL EN
+    ALGO QUE SE ESCRIBE O SE IMPRIME. PURA: recibe el texto y devuelve
+    [(numero_de_linea, linea, numero_clavado)].
+
+    ES EL GUARDA DE LA CAIDA `E.1`, Y MUERDE AL PROPIO FICHERO. Lo que dejo pasar
+    la atribucion falsa no fue un descuido de teclado: fue que NADIE MIRABA. Este
+    guarda corre en `main()` sobre el fuente de este mismo modulo y el lanzador NO
+    ARRANCA si encuentra uno, porque una salida sellada con la vuelta equivocada
+    vale menos que no tenerla: se publica como prueba de una corrida que no es la
+    suya. Las citas historicas se eximen marcandolas con MARCA_CITA."""
+    out = []
+    for i, linea in enumerate(texto.replace(chr(13) + NL, NL).split(NL), 1):
+        s = linea.strip()
+        if MARCA_CITA in linea:
+            continue
+        if not (s.startswith(_PREFIJOS_QUE_ESCRIBEN) or "mkdtemp(" in s):
+            continue
+        for m in _PATRON_CLAVADO.finditer(s):
+            out.append((i, s, m.group(1)))
+    return out
 
 
 class Desdoble(object):
@@ -110,7 +220,7 @@ class Desdoble(object):
 
 
 def nombre_transcripcion(n):
-    return "SALIDA_V183_LANZADOR_TRAMO_%d.txt" % n
+    return "SALIDA_V%d_LANZADOR_TRAMO_%d.txt" % (VUELTA, n)
 
 
 def ahora_utc():
@@ -118,7 +228,13 @@ def ahora_utc():
 
 
 def nombre_tramo(n):
-    return "SALIDA_V183_BATERIA_TRAMO_%d.txt" % n
+    return "SALIDA_V%d_BATERIA_TRAMO_%d.txt" % (VUELTA, n)
+
+
+def nombre_de_la_compuesta():
+    """EL NOMBRE DE LA SALIDA UNICA. Computado igual que los demas, para que la
+    pieza que `cerrar_reporte.py` pide con --bateria no dependa de un literal."""
+    return "SALIDA_V%d_BATERIA.txt" % VUELTA
 
 
 def medir(ruta):
@@ -178,8 +294,17 @@ def guarda_y_restauracion(titulo):
 def correr_tramo(n, tramos):
     """LOS CINCO PASOS DE UN TRAMO. Devuelve el exitcode."""
     print("=" * 78)
-    print("TRAMO %d DE %d, DE LA BATERIA DE LA VUELTA 176" % (n, len(tramos)))
+    print("TRAMO %d DE %d, DE LA BATERIA DE LA VUELTA %d"
+          % (n, len(tramos), VUELTA))
     print("=" * 78)
+    # LA ATRIBUCION, DENTRO DE LA TRANSCRIPCION SELLADA Y NO SOLO EN LA CONSOLA.
+    # El guarda de main() corre antes de que exista el desdoble, asi que su
+    # veredicto se vuelve a computar aqui, donde SI queda en el fichero sellado.
+    print("  lanzador (os.path.basename, no tecleado): %s" % LANZADOR)
+    print("  vuelta (computada del nombre, no tecleada): %d" % VUELTA)
+    print("  CIFRA literales de vuelta clavados en el fuente: %d"
+          % len(literales_de_vuelta_clavados(
+              io.open(os.path.abspath(__file__), encoding="utf-8").read())))
     print("  CIFRA nomina entera (leida del modulo, no tecleada): %d" % len(B.VIEJAS))
     print("  CIFRA tamano de tramo: %d" % TAMANO)
     print("  CIFRA tramos del reparto (computada): %d" % len(tramos))
@@ -195,7 +320,7 @@ def correr_tramo(n, tramos):
         return 1
 
     destino = os.path.join(LOOP, nombre_tramo(n))
-    tmpdir = tempfile.mkdtemp(prefix="v176_tramo%d_" % n)
+    tmpdir = tempfile.mkdtemp(prefix="v%d_tramo%d_" % (VUELTA, n))
     trabajo = os.path.join(tmpdir, "tramo_en_curso.txt")
     cmd = [sys.executable, "-u", BATERIA, "--tramo", str(n),
            "--tamano-tramo", str(TAMANO)]
@@ -214,8 +339,8 @@ def correr_tramo(n, tramos):
     print("  destino final: docs/loop/%s" % nombre_tramo(n))
 
     with io.open(trabajo, "w", encoding="utf-8", newline=NL) as f:
-        f.write("CORRIDA DEL TRAMO %d DE %d, BATERIA DE LA VUELTA 176" % (n, len(tramos)) + NL)
-        f.write("lanzada por scripts/loop/vuelta176_bateria_por_tramos.py" + NL)
+        f.write(titulo_de_corrida(n, len(tramos), VUELTA) + NL)
+        f.write(linea_de_lanzador(LANZADOR) + NL)
         f.write("INICIO (reloj de pared, UTC): %s" % inicio + NL)
         if restaurados:
             f.write("RESTAURACION AL ENTRAR: se hizo `git checkout --` sobre %d "
@@ -270,7 +395,11 @@ def correr_tramo(n, tramos):
     if codigo != 0:
         print("EL TRAMO %d SALE EN ROJO, exitcode %d, Y AQUI SE PARA." % (n, codigo))
         print("No se re-corre: la guarda que muerde es informacion, no un estorbo")
-        print("(encargo de la 176, TAREA 1.f). La salida esta sellada y medida.")
+        # CITA HISTORICA: la linea de abajo NOMBRA de donde salio la regla, no
+        # atribuye esta corrida a otra vuelta. Se exime por la marca, con su
+        # motivo escrito, que es como se eximen y no ensanchando el patron.
+        print("(encargo de la vuelta 176, TAREA 1.f). La salida esta sellada y "   # CITA HISTORICA
+              "medida.")
         return codigo
     if not ok_salida:
         print("EL TRAMO %d corrio verde PERO DEJO `dataset/` SUCIO AL SALIR y la" % n)
@@ -354,10 +483,10 @@ def componer(tramos):
             print("   " + f)
         return 1
 
-    destino = os.path.join(LOOP, "SALIDA_V183_BATERIA.txt")
+    destino = os.path.join(LOOP, nombre_de_la_compuesta())
     cab = []
-    cab.append("LA BATERIA DE MUTACIONES DE LA VUELTA 176, CORRIDA ENTERA Y EN TRAMOS")
-    cab.append("compuesta por scripts/loop/vuelta176_bateria_por_tramos.py --componer")
+    cab.append(titulo_de_composicion(VUELTA))
+    cab.append(linea_de_composicion(LANZADOR))
     cab.append("")
     cab.append("LO QUE SE PARTIO ES EL BOCADO, NO LA BATERIA. Las cuatro cosas que la")
     cab.append("letra del fundador del 5 sep 2026 fija siguen enteras: la cadencia (cada")
@@ -391,7 +520,7 @@ def componer(tramos):
 
     m = medir(destino)
     print("LA SALIDA UNICA, MEDIDA ANTES DE NOMBRARLA EN NINGUN SITIO")
-    print("   docs/loop/SALIDA_V183_BATERIA.txt")
+    print("   docs/loop/%s" % nombre_de_la_compuesta())
     print("   CIFRA bytes en disco: %d" % m["bytes_disco"])
     print("   CIFRA bytes normalizado a LF: %d" % m["bytes_lf"])
     print("   CIFRA lineas: %d" % m["lineas"])
@@ -465,8 +594,8 @@ def siguiente(tramos):
     if faltan:
         print("")
         print("  EL SIGUIENTE ES EL TRAMO %d." % faltan[0])
-        print("  Se corre con: python scripts/loop/vuelta183_bateria_por_tramos.py "
-              "--tramo %d" % faltan[0])
+        print("  Se corre con: python scripts/loop/%s --tramo %d"
+              % (LANZADOR, faltan[0]))
         print("  Y SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, antes de seguir.")
     else:
         print("")
@@ -491,6 +620,32 @@ def main():
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
 
+    # EL GUARDA DE LA CAIDA `E.1`, CORRIDO SOBRE EL PROPIO FUENTE Y ANTES DE
+    # ESCRIBIR NADA. Si alguien vuelve a clavar un numero de vuelta como literal
+    # en una linea que se escribe o se imprime, ESTE LANZADOR NO ARRANCA. No es
+    # severidad: una salida sellada que se atribuye otra corrida se publica luego
+    # como prueba de esa otra corrida, y eso ya paso cuatro veces en esta misma
+    # vuelta. Fallar ruidoso (banco 9) antes que sellar callado.
+    clavados = literales_de_vuelta_clavados(
+        io.open(os.path.abspath(__file__), encoding="utf-8").read())
+    print("GUARDA DE LA ATRIBUCION, CORRIDA SOBRE EL PROPIO FUENTE")
+    print("  lanzador (os.path.basename, no tecleado): %s" % LANZADOR)
+    print("  vuelta (computada del nombre, no tecleada): %d" % VUELTA)
+    print("  CIFRA literales de vuelta clavados en lineas que escriben: %d"
+          % len(clavados))
+    for i, linea, num in clavados:
+        print("      LINEA %d clava %s: %s" % (i, num, linea[:120]))
+    if clavados:
+        print("")
+        print("ROJO: hay %d literal(es) de vuelta clavados en lineas que escriben."
+              % len(clavados))
+        print("      El lanzador NO ARRANCA. El numero se computa del nombre del")
+        print("      fichero; si la linea es una cita historica, se exime con la")
+        print("      marca %r y no ensanchando el patron." % MARCA_CITA)
+        return 1
+    print("  VERDE: ninguna linea que escribe clava un numero de vuelta.")
+    print("")
+
     tramos = B.reparto_en_tramos(B.VIEJAS, TAMANO)
 
     if a.siguiente:
@@ -513,7 +668,7 @@ def main():
     # salida ENTERA del tramo, incluida la de la guarda del commit y la de la
     # restauracion al entrar, que son las que corren antes de que exista ningun
     # directorio temporal. Ver la clase `Desdoble` para el motivo.
-    tmpdir = tempfile.mkdtemp(prefix="v176_lanzador%d_" % a.tramo)
+    tmpdir = tempfile.mkdtemp(prefix="v%d_lanzador%d_" % (VUELTA, a.tramo))
     fuera = os.path.join(tmpdir, "lanzador_en_curso.txt")
     original = sys.stdout
     doble = Desdoble(fuera, original)
