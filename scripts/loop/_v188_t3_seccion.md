@@ -26,8 +26,21 @@ esa exencion exige su declaracion:
 **Anadir una tercera es ahora un acto visible y no un descuido.**
 
 **EL INVENTARIO, LEIDO DEL FUENTE Y NO TECLEADO**, con el sello del sujeto al lado
-(`scripts/loop/cerrar_reporte.py`, **97163 bytes normalizados a LF, 1844 lineas**,
-`sha256` LF `2e37089d0389e67e`):
+(`scripts/loop/cerrar_reporte.py`, que cuando la TAREA 3 corrio media
+**97163 por las dos convenciones** y **1844 lineas**, con su `sha256`
+normalizado a LF en `2e37089d0389e67e`.
+
+**CORRECCION DECLARADA DE ESTA MISMA VUELTA, Y LA CIFRA VIEJA DE ARRIBA NO SE
+TAPA:** al cerrar la vuelta, ese mismo `scripts/loop/cerrar_reporte.py` mide
+**108128 bytes en disco y 108128 bytes normalizados a LF**, con su `sha256`
+normalizado a LF en `745a15a8e693ec5c`, **porque la TAREA 4 lo cambio
+despues**. La historica se escribe **sin la palabra bytes al lado a
+proposito**, para que no se publique como una pareja de convenciones que el
+disco de hoy ya no sostiene. **Las dos mediciones se publican y ninguna se
+tapa, que es justo lo que el sello del sujeto de la 3.b existe para hacer
+legible.**
+
+El inventario de la TAREA 3, con el sujeto de aquel momento):
 
 - **linea 1748**, forma `columna`, nombre `toda cifra de bytes y todo sha con su
   pareja`
@@ -59,8 +72,9 @@ NO ES UNA CONSTANTE:** con la lista autorizada mutada a **una** entrada, el cote
 saca `intrusas 1 ['seccion4_que_no_calza']` y **CAE**.
 
 **LA CORRIDA ENTERA, PEGADA POR SUS CIFRAS.**
-`docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt` (**7544 bytes por las dos
-convenciones**, `sha256` LF `be4edc90f2889552`): **`CIFRA casos: 22 | pasan:
+`docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt`
+(**7545 bytes en disco y 7545 bytes normalizados a LF**, con su `sha256`
+normalizado a LF en `0efa4f8f7fc856c7`; **CORRECCION DECLARADA DE ESTA MISMA VUELTA:** esta seccion publico primero **7544** y **`be4edc90f2889552`**, medidos cuando la TAREA 3 cerro. **La cifra vieja se conserva aqui y no se tapa.** El fichero se movio despues, cuando la **doble corrida de la 5.d** volvio a correr el arnes ya con el sello del sujeto que la 3.b le anadio. **Lo cazo la guarda de las dos convenciones que esta misma vuelta ensancho en la TAREA 4.a**, al cerrar: acuso la pareja publicada contra el disco. **La escalada se caza a si misma en su primera corrida de verdad.**): **`CIFRA casos: 22 | pasan:
 22`**, **`CIFRA casos que CAEN al mutar su esperado: 21 de 21`**, **`CIFRA fallos:
 0`**, **`VEREDICTO: VERDE`**, **exitcode 0**.
 
@@ -103,8 +117,9 @@ nada**, y eso se dice en vez de hacerse callando.
 **Y LOS OTROS DOS DE LA 186 SALEN EN CERO FILAS**, medido y no supuesto:
 `git diff --numstat` sobre `vuelta186_tarea2b_mutacion_pieza2_cercas.py`,
 `vuelta186_tarea2d_mutacion_seccion4.py` y sus dos salidas devuelve **0 filas**.
-`SALIDA_V186_T2A_MUTACION_PIEZA4.txt` cierra en **3906 bytes por las dos
-convenciones**, `sha256` LF `2b444ffe193d27f9`, y su arnes sigue en
+`SALIDA_V186_T2A_MUTACION_PIEZA4.txt` cierra en
+**3908 bytes en disco y 3908 bytes normalizados a LF**, con su `sha256`
+normalizado a LF en `176eb049f8c898aa` (**CORRECCION DECLARADA DE ESTA MISMA VUELTA:** esta seccion publico primero **3906** y **`2b444ffe193d27f9`**, medidos cuando la TAREA 3 cerro. **La cifra vieja se conserva aqui y no se tapa.** El fichero se movio despues, cuando la **doble corrida de la 5.d** volvio a correr el arnes ya con el sello del sujeto que la 3.b le anadio. **Lo cazo la guarda de las dos convenciones que esta misma vuelta ensancho en la TAREA 4.a**, al cerrar: acuso la pareja publicada contra el disco. **La escalada se caza a si misma en su primera corrida de verdad.**), y su arnes sigue en
 **`CIFRA fallos: 0`, `VEREDICTO: VERDE`**, exitcode **0**.
 
 #### 3.c LA DOBLE CORRIDA NO RE CORRE UN ARNES QUE YA SALIO EN ROJO. ES LA `C.3`
@@ -133,8 +148,9 @@ se cierra con la parada declarada.
 
 **ARNES OBLIGATORIO, Y NACE EN ESTA VUELTA:**
 `scripts/loop/vuelta188_tarea3c_mutacion_exclusion_por_rojo.py`. Salida:
-`docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt` (**3565 bytes por las
-dos convenciones**, `sha256` LF `622b67673e6d75f4`), **`CIFRA casos: 11 | pasan:
+`docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt`
+(**3565 bytes en disco y 3565 bytes normalizados a LF**, con su `sha256`
+normalizado a LF en `4d052ee1f1fce39e`; **CORRECCION DECLARADA: esta seccion publico primero el `sha256` `622b67673e6d75f4`, y esa cifra vieja se conserva. El arnes crecio al anadirse el arnes de `vecinos()` a la lista que la doble corrida publica; los bytes no se movieron y el `sha256` si, que es exactamente por lo que se miden los dos**), **`CIFRA casos: 11 | pasan:
 11`**, **`CIFRA casos que CAEN al mutar su esperado: 11 de 11`**, **`CIFRA fallos:
 0`**, **`VEREDICTO: VERDE`**, exitcode **0**. Cinco casos: **(A)** un registro
 vacio no excluye a nadie, probado con tres formas de vacio; **(B)** un registro

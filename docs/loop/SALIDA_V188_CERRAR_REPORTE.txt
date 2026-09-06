@@ -1,0 +1,100 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 188, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 188 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 58848 | saltos de linea: 907
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V188_TALLADOR_CABECERA.txt             2456 bytes, 11 filas de tabla
+   scripts/loop/_v188_cierre_texto.md                     14322 bytes, sha256 474ca0ad71a9bf45
+      ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
+      ## 4. EL ESTADO DEL ARBOL, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO
+      ## 5. LAS CORRECCIONES DECLARADAS DE ESTA VUELTA
+      ## 6. PENDIENTES DE DOCTRINA
+      ## 7. LAS PREGUNTAS QUE TRAIGO
+      ## 8. LAS CAIDAS PROPIAS DE ESTA VUELTA, LO QUE QUEDA EN ROJO, Y LOS DISCUTIBLES
+   docs/loop/SALIDA_V188_BATERIA.txt                    NO EXISTE
+   CIFRA lineas no vacias de la bateria: 0
+   vuelta que lleva dentro el nombre del fichero: 188
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+   CIFRA tramos de esa bateria con fichero en disco: 0
+   CIFRA tramos sellados EN LA VUELTA 188: 0 []
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): HUECO
+      motivo: la bateria de la vuelta 188 no corrio: su fichero no existe o esta vacio
+   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:
+   --hueco-atribucion: 'por AUDITOR.md 6.1, decision del fundador del 5 sep 2026, la bateria de mutaciones corre CADA CINCO VUELTAS en una vuelta propia que no lleva nada mas. Cerro entera en la 184 con sus nueve tramos sellados, asi que LA SIGUIENTE VUELTA DE BATERIA ES LA 189, la que viene. Esta vuelta NO es de bateria y su encargo se lo dice con esas palabras. La nomina cierra en 125 entradas con arneses_que_faltan() en 0, o sea que la 189 la encontrara completa.'
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 188
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 188
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: '**EL VEREDICTO DE UNA LINEA: LA TAREA BLOQUEANTE ESTA HECHA Y LA 189 PUEDE SER UNA VUELTA DE BATERIA LIMPIA. Las CINCO t'
+   CIFRA numerales hallados en el veredicto: 2
+      'CINCO'    -> 5 tareas
+      'DOS'      -> 2 caidas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 2
+      tareas   -> 5
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 533 bytes de hueco -> 2548 bytes de tabla pegada
+   veredicto escrito: 912 bytes
+   ESCRITO: docs/loop/REPORTE.md (77653 bytes, 1180 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja SI
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   CIFRA cifras publicadas sin su pareja: 0
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 9
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 9
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 17
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 3
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 3
+         linea 130   18321 / 18321  SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA sola ruta que se le pueda atribuir
+         linea 411   584554 / 584554 SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA sola ruta que se le pueda atribuir
+         linea 549   3908 / 3908    SIN SUJETO: ni esta linea ni las 4 anteriores nombran UNA sola ruta que se le pueda atribuir
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V188_APERTURA.txt -> 60433 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 1
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 1, en la linea 972: - El arbol abrio con **`git status --porcelain`** en **1** linea, y esa linea era
+      numstat  -> 0, en la linea 975: - Y con **`git diff --numstat -- dataset/`** en **0** filas **AL ENTRAR**.
+      numstat  -> 0, en la linea 977: **`CIFRA filas de git diff --numstat -- dataset/`: 0**. **Las dos cifras se
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+VERDE: el reporte de la vuelta 188 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

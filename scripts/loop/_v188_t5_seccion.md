@@ -14,9 +14,9 @@ COPIADO:**
 | | el sello `V189` dice | medido hoy | |
 |---|---|---|:-:|
 | bytes de la ciega | **41098** | **41098** | **CALZA** |
-| `sha256` LF de la ciega | `4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c` | el mismo | **CALZA** |
+| `sha256`, normalizado a LF, de la ciega | `4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c` | el mismo | **CALZA** |
 | bytes del destape | **34030** | **34030** | **CALZA** |
-| `sha256` LF del destape | `9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5` | el mismo | **CALZA** |
+| `sha256`, normalizado a LF, del destape | `9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5` | el mismo | **CALZA** |
 
 **Los dos calzan, y solo entonces se leyo.**
 
@@ -24,8 +24,9 @@ COPIADO:**
 puestos distintos**. `vecinos()` se **importa** de
 `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`, **no se copia**. El
 archivo trae **3388 filas**, maximo puesto **3388**, y el grafo **3853 nodos**.
-`docs/loop/_auditor_v189_exclusion.txt` mide **1648 bytes por las dos
-convenciones** y lista **351 puestos distintos**, que es lo que el encargo dice.
+`docs/loop/_auditor_v189_exclusion.txt` mide
+**1648 bytes en disco y 1648 bytes normalizados a LF** y lista **351 puestos
+distintos**, que es lo que el encargo dice.
 **60 puestos releidos en total, que es el doble exacto.**
 
 **EL REMEDIO DEL `D.2`, ADJUDICADO A FAVOR Y AUN ASI ARREGLADO, Y SU CONTRASTE.**
@@ -83,8 +84,9 @@ la de antes, y eso no se afirma: se coteja.**
 
 #### 5.b LOS PUESTOS DEL DISCUTIBLE DE CLASE, PARA QUE EL AUDITOR PUEDA LEERLOS A CIEGAS
 
-**`docs/loop/DISCUTIBLES_DE_CLASE_V188.txt` esta escrito**, mide **10 bytes por
-las dos convenciones**, `sha256` LF `7f3c48b9b2a06c3c`, y **dentro dice
+**`docs/loop/DISCUTIBLES_DE_CLASE_V188.txt` esta escrito**, mide
+**10 bytes en disco y 10 bytes normalizados a LF**, su `sha256` normalizado a
+LF es `7f3c48b9b2a06c3c`, y **dentro dice
 `(ninguno)` y nada mas**: sin la clase, sin la razon, sin el nombre de los nodos y
 sin una palabra de contexto.
 
@@ -155,8 +157,8 @@ dentro de fichas fabricadas.
 **Y UNA PARADA DE VERDAD QUE ESTA VUELTA ENCONTRO EN SU PROPIO ARNES, CON SU
 CORRIDA EN ROJO PEGADA.** La primera doble corrida saco **`CIFRA paradas: 1`**:
 `vuelta188_tarea2_mutacion_pata_documental.py` **cambiaba sola** entre dos
-corridas del mismo dia sobre el mismo sujeto (`sha256` LF `6e056e2b9d049861` y
-luego `edd65316f5312cd4`). **Eso es PARADA por la respuesta del acta 188 a la
+corridas del mismo dia sobre el mismo sujeto: su `sha256` normalizado a LF fue
+`6e056e2b9d049861` y luego `edd65316f5312cd4`. **Eso es PARADA por la respuesta del acta 188 a la
 `P.2`.** La causa, medida: **imprimia el nombre del directorio temporal**, que
 `mkdtemp` fabrica distinto cada vez. **Es la misma enfermedad que tumbo a
 `vuelta182_tarea2_mutacion_apertura_auditor.py` en la vuelta 184.** Como es **un

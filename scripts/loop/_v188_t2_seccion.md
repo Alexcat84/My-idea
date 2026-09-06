@@ -87,8 +87,9 @@ suponen.
 
 - **`OP-L-01` describe once lecturas** (su `adjudicacion` dice literalmente
   *"TANDA DE ONCE LECTURAS DIRIGIDAS"* y su `nota` enumera **11** etiquetas,
-  `LD-01` a `LD-11`). `docs/plan/LECTURAS_DIRIGIDAS.md` mide **214916 bytes por
-  las dos convenciones**, `sha256` LF `dda1cdd67042c733` y **2230 lineas**. **Las
+  `LD-01` a `LD-11`). `docs/plan/LECTURAS_DIRIGIDAS.md` mide
+  **214916 bytes en disco y 214916 bytes normalizados a LF**, su `sha256`
+  normalizado a LF es `dda1cdd67042c733`, y tiene **2230 lineas**. **Las
   once estan en cabecera: 11 de 11.** Y el documento ha crecido muy por encima:
   **68 etiquetas distintas por toda aparicion** y **60 en cabecera**.
 - **`OP-I-01` promete 323 entradas**, leido de su propio texto. `INVENTARIO.jsonl`
@@ -132,8 +133,9 @@ plan, y si hace falta, se trae.**
 #### 2.d EL ESTADO DE CADA UNA, EN UNA DE LAS TRES FORMAS Y EN NINGUNA OTRA
 
 - **`OP-L-01` -> (a) SU PRODUCTO ESTA Y LA CUBRE.**
-  `docs/plan/LECTURAS_DIRIGIDAS.md` existe (**214916 bytes por las dos
-  convenciones**) y trae **en cabecera las 11 de 11** que la ficha describe.
+  `docs/plan/LECTURAS_DIRIGIDAS.md` existe
+  (**214916 bytes en disco y 214916 bytes normalizados a LF**) y trae **en
+  cabecera las 11 de 11** que la ficha describe.
 - **`OP-L-02` -> (c) NO HAY EVIDENCIA QUE LA DECIDA. ES PARADA Y SE TRAE.** Su
   `evidencia` entera es una sola linea de prosa (*"MEDIDO el 11 ago 2026: 205
   pares fuera de cola, 11 leidos, 194 pendientes"*) y **no nombra ningun
@@ -141,14 +143,16 @@ plan, y si hace falta, se trae.**
   *"las tres nominas afectadas"* y de *"cada grupo del backlog"*, y **ninguna de
   las dos cosas tiene sede declarada en la ficha**. **No se inventa una.**
 - **`OP-L-03` -> (b) SU PRODUCTO ESTA PERO NO LA CUBRE.** Sus dos ficheros existen
-  (`docs/plan/BANCO_DEL_PLAN.md`, **61554 bytes**, y
-  `docs/plan/LECTURAS_DIRIGIDAS.md`, **214916 bytes**), pero **lo que falta
+  (`docs/plan/BANCO_DEL_PLAN.md`, **61554 bytes en disco y 61554 bytes
+  normalizados a LF**, y `docs/plan/LECTURAS_DIRIGIDAS.md`, **214916 bytes en
+  disco y 214916 bytes normalizados a LF**), pero **lo que falta
   exactamente** es esto: la ficha describe **55 lecturas repartidas en 29 actos** y
   su `evidencia` dice *"LECTURAS_DIRIGIDAS.md, el reparto por acto"*, y **contar
   "el reparto por acto" no es contar un fichero**: no hay cifra que cotejar contra
   las 55.
 - **`OP-I-01` -> (a) SU PRODUCTO ESTA Y LA CUBRE.** `INVENTARIO.jsonl` existe
-  (**584554 bytes por las dos convenciones**) con **672 entradas, las 672 JSON
+  (**584554 bytes en disco y 584554 bytes normalizados a LF**) con **672
+  entradas, las 672 JSON
   valido**, contra las **323** que promete: **+349**. Y `10_INVENTARIO.md`, la
   vista humana, tambien esta (**34258 en disco y 33845 normalizados a LF**).
 

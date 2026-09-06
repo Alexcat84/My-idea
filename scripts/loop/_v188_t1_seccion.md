@@ -13,8 +13,9 @@ entradas, siguiente libre `R.51`, 0 colisiones y 0 huecos**. Salida:
 **LAS CIFRAS DEL TITULO, CONTADAS DEL ACTA Y NO TECLEADAS:** **6** adjudicaciones
 numeradas (`5.1` a `5.6`, una aparicion cada una), **3** numerales en la seccion
 6, **3** preguntas en la seccion 7, **0** caidas propias del auditor y **4**
-caidas de metodo del ejecutor. La sede pasa de **924954 a 943276 bytes**, la
-entrada mide **18321 bytes** y **195 lineas**, esta byte a byte tras releerla del
+caidas de metodo del ejecutor. La sede pasa de **924954 bytes a 943276 bytes**, la entrada mide
+**18321 bytes en disco y 18321 bytes normalizados a LF** y **195 lineas**,
+esta byte a byte tras releerla del
 disco, y lleva **0 guiones largos y 0 guiones medios**.
 
 **LAS SEIS ADJUDICACIONES, TODAS A FAVOR**, con su linea leida hoy: `5.1` en la
