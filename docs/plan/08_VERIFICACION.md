@@ -846,6 +846,37 @@ no resuelta, aunque la vuelta que la hallo tuviera el instrumento para cortarla.
 
 ---
 
+
+#### REGISTRO: **EL TRAMO 1 SE RELEYO Y SE CIERRA** (6 sep 2026, vuelta 187)
+
+**LA COMPROBACION QUE LA PROPIA SECCION EXIGE, CORRIDA:** *"al cerrar, ningun par
+de la lista sigue con su clase vieja apuntando a un nodo que ya no existe"*. Medido
+hoy sobre `dataset/metadata/master_graph.json` (**3853 nodos**): **los dos nodos del
+tramo siguen vivos**, asi que esa comprobacion **pasa**.
+
+| par | clase tras la relectura | nodos hoy | que se movio |
+|---:|:-:|---|---|
+| **2464** | **D** | `cero_defectos` vivo, `zero_defects_concepto` vivo | **la clase se sostiene**, y lo que se movio es la EVIDENCIA: de los DOS diferenciadores que la razon declaraba, hoy solo UNO es cierto |
+
+**LA RELECTURA NO CAMBIO LA CLASE, Y EL DESTINO ES EL QUE ESTA PAGINA YA ESCRIBE**
+unas lineas mas arriba, en *QUE PASA CON LO QUE SE RELEA*: **si sale `D` se queda**.
+Lo que si se movio es **la evidencia**, y por eso el veredicto lleva su **CORRECCION
+DECLARADA** anexada a su `razon`, **sin borrar ni una palabra del texto viejo**.
+
+**LAS CIFRAS DE ESTE REGISTRO NO ESTAN TECLEADAS:** las produce
+`scripts/loop/vuelta187_tarea2b_cerrar_tramo1_en_el_plan.py` leyendo el archivo de
+veredictos y la salida de la TAREA 2, que vive entera en
+`docs/loop/SALIDA_V187_T2_COLA_POST_FUSION.txt`. El archivo cierra con **3388 filas**,
+**551 `A`, 72 `B`, 5 `C` y 2760 `D`**, **0 huecos** y **0 duplicados**, y su `sha256` por la
+convencion de LF es **`0a77b5a35a962621`**, distinto del de apertura porque **esta
+vuelta si movio el archivo**.
+
+**Y LOS CINCO DE LA `PD.1` NO ENTRAN, POR SEXTA VUELTA Y CON SU MEDICION AL LADO.**
+La criba de las condiciones 1 y 2, re corrida hoy, nombra **seis** `D`; la que
+pasa tambien la condicion 3 es **solo el 2464**, y las otras cinco son exactamente
+los puestos de la `PD.1`, cuyo diferenciador **ya estaba el dia del veredicto**.
+**No pasan el disparador escrito y no se encolan**: darles cola seria doctrina
+nueva, que es del fundador.
 ## EL ERROR DE DEJAR PASAR, **YA TIENE TASA MEDIDA**
 
 **Era la linea que le faltaba a esta pagina.** Todo lo que se verifica aqui vigila **el

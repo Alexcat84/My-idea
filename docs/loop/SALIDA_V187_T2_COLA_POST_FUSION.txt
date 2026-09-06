@@ -1,0 +1,163 @@
+==============================================================================
+VUELTA 187, TAREA 2: EL TRAMO 1 DE LA COLA DE RELECTURA POST FUSION
+==============================================================================
+
+A) EL DISPARADOR ESCRITO, LEIDO ANTES DE TOCAR NADA Y CITADO CON SU LINEA
+   docs/plan/08_VERIFICACION.md -> disco 67121 bytes
+   seccion '## LA COLA DE RELECTURA POST FUSION': lineas 485 a 848 (364 lineas)
+   PIEZA disparador  -> docs/plan/08_VERIFICACION.md:491
+      | > **EL DISPARADOR, y es mecanico: UN PAR VUELVE A LA COLA CUANDO UNO DE SUS DOS NODOS
+   PIEZA tramo       -> docs/plan/08_VERIFICACION.md:585
+      | **EL TRAMO, DECLARADO AQUI Y NO IMPROVISADO DESPUES.** Esta unica `D` se relee
+   PIEZA destino     -> docs/plan/08_VERIFICACION.md:616
+      | ### QUE PASA CON LO QUE SE RELEA
+
+   EL DISPARADOR ENTERO, PEGADO CON SUS LINEAS Y NO PARAFRASEADO:
+      LINEA 491: > **EL DISPARADOR, y es mecanico: UN PAR VUELVE A LA COLA CUANDO UNO DE SUS DOS NODOS
+      LINEA 492: > MUERE EN UNA FUSION O CAMBIA DE TEXTO.**
+      LINEA 493: 
+
+   LA DECLARACION DEL TRAMO, ENTERA, QUE ES LA QUE FIJA EL TAMANO:
+      LINEA 585: **EL TRAMO, DECLARADO AQUI Y NO IMPROVISADO DESPUES.** Esta unica `D` se relee
+      LINEA 586: **por tramos en las vueltas siguientes**, no en la que las encola: la vuelta
+      LINEA 587: 182 **entra a la cola y declara el tramo**, que es literalmente lo que su
+      LINEA 588: encargo manda. **TRAMO 1 y unico con lo medido hoy: el unico par de arriba**,
+      LINEA 589: y se relee **entero o no cuenta**. Si el instrumento volviera a correr y
+      LINEA 590: nombrara mas, cada nuevo grupo abre **su propio tramo con su fecha**, para que
+      LINEA 591: un tramo cerrado no se pueda reabrir por la puerta de atras.
+      LINEA 592: 
+
+   LA TABLA DE DESTINOS, QUE DICE QUE HACER CON LO QUE SE RELEA:
+      LINEA 616: ### QUE PASA CON LO QUE SE RELEA
+      LINEA 617: 
+      LINEA 618: | si sale | |
+      LINEA 619: |---|---|
+      LINEA 620: | **A** | entra en la fusion que le corresponda, **y su perdida se nombra antes** |
+      LINEA 621: | **D** | se queda, y **si hay jerarquia se enlaza** |
+      LINEA 622: | **B otra vez** | **va a la lista de decisiones del inventario final**, y se dice que quedo dudoso dos veces |
+      LINEA 623: 
+
+A.1) EL BANCO DEL PLAN, MEDIDO Y NO SUPUESTO
+   (el encargo dice que el criterio esta escrito EN LOS DOS ficheros. Aqui
+    se mide el segundo y se publica lo que salga, sin resolverlo copiando)
+   docs/plan/BANCO_DEL_PLAN.md, 'post fusion'      -> 0 aparicion(es) 
+   docs/plan/BANCO_DEL_PLAN.md, 'POST FUSION'      -> 0 aparicion(es) 
+   docs/plan/BANCO_DEL_PLAN.md, 'cola post fusion' -> 0 aparicion(es) 
+   docs/plan/BANCO_DEL_PLAN.md, '2464'             -> 0 aparicion(es) 
+   docs/plan/BANCO_DEL_PLAN.md, '2.464'            -> 0 aparicion(es) 
+   DECLARADO: el criterio de esta cola vive ENTERO en
+   docs/plan/08_VERIFICACION.md y NO en el BANCO_DEL_PLAN. La discrepancia
+   con el encargo se declara en vez de resolverse copiando (EJECUTOR.md 2).
+   NO ES PARADA: el texto de 08_VERIFICACION.md alcanza para ejecutar el
+   tramo sin decidir nada, que es la condicion que el encargo pone.
+
+B) EL TRAMO 1, COMPUTADO DEL CRITERIO Y NO INVENTADO
+   CIFRA pares que el TRAMO 1 declara: 1
+      docs/plan/08_VERIFICACION.md:583 -> puesto 2464
+   POR QUE ESE ES EL TAMANO, Y SALE DEL TEXTO Y NO DE MI: la criba escrita
+   en la propia seccion es 2760 D -> 99 que declaran diferenciador -> 6 que
+   hoy lo tienen en el otro nodo -> 1 cuyo paso entro DESPUES del veredicto.
+   Y el parrafo del tramo dice, literal, TRAMO 1 y unico con lo medido hoy:
+   el unico par de arriba. ASI QUE EL TRAMO 1 SON 1 PAR(ES).
+
+C) LA CRIBA, RE CORRIDA HOY SOBRE EL ARCHIVO ENTERO, PARA VER SI SIGUE
+   NOMBRANDO LO MISMO (la maquina se IMPORTA de
+   scripts/loop/vuelta182_tarea3_diferenciador_movido.py y su main() NO se
+   corre: reescribiria evidencia sellada de la vuelta 182)
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ABRIR:
+      disco 4051967 bytes | LF 4051967 bytes
+      sha256 (LF): ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   grafo: 3853 nodos | archivo: 3388 filas
+   varas importadas: VARA_ABSOLUTA 3 | VARA_COBERTURA 0.45
+   CIFRA D en el archivo: 2760
+   CIFRA D que declaran diferenciador: 99
+   CIFRA D con LESION EXACTA hoy (condiciones 1 y 2, sin fechar): 6
+   LAS QUE LA CRIBA NOMBRA HOY: 1778, 2464, 2530, 2540, 3141, 3232
+   DE ELLAS, FUERA DEL TRAMO 1: 1778, 2530, 2540, 3141, 3232
+   QUE SON ESAS DE MAS, Y NO SON UN TRAMO NUEVO: SON LA `PD.1`. Esta criba
+   corre SOLO las condiciones 1 y 2. La condicion 3, que el paso entrara
+   DESPUES del veredicto, la fecho en git la vuelta 182 y su salida sellada
+   vive en docs/loop/SALIDA_V182_T3_DIFERENCIADOR.txt, que aqui NO SE TOCA.
+   Las que no pasan la condicion 3 son justamente los cinco puestos que el
+   acta 187 registra en su `6.1` como `PD.1`, sexta vuelta ABIERTA: su
+   diferenciador YA ESTABA el dia del veredicto, asi que NO PASAN EL
+   DISPARADOR ESCRITO y NO ENTRAN EN LA COLA. Darles cola seria DOCTRINA
+   NUEVA, que es del fundador, y el acta lo dice con esas palabras.
+   COTEJO, MEDIDO Y NO SUPUESTO: los de mas de esta criba son 1778, 2530, 2540, 3141, 3232
+   y los cinco de la `PD.1` que el registro R.49 leyo del acta son
+   1778, 2530, 2540, 3141, 3232. SON LOS MISMOS CINCO: SI
+   Y SI ALGUN DIA LA CRIBA NOMBRARA UNO QUE NO ESTE NI EN EL TRAMO 1 NI EN
+   LA `PD.1`, ESE SI ABRIRIA SU PROPIO TRAMO CON SU FECHA, por la letra de
+   la linea 585, para que un tramo cerrado no se pueda reabrir por la puerta
+   de atras. Hoy no hay ninguno asi.
+
+D) LA RELECTURA DEL PAR DEL TRAMO 1, PUESTO A PUESTO, CON LOS PASOS DE HOY
+   PUESTO 2464, dominio quality, clase de archivo D
+      cero_defectos  contra  zero_defects_concepto
+      declara diferenciador: SI | carece: cero_defectos
+      lesion exacta: SI
+      motivo de la vara: hoy el paso 7 de cero_defectos cubre 3 palabras del diferenciador declarado (cobertura 0.50)
+      el item declarado que se movio: ELIMINAR EXPLICITAMENTE EL USO DE NIVELES DE CALIDAD ACEPTABLES como estandar
+      el paso de HOY que lo cubre: Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+      PASOS DE HOY de cero_defectos (nodo_a): 7
+         paso 1: Establece el estándar de Cero Defectos como compromiso personal de desempeño, no como eslogan motivacional pasajero
+         paso 2: Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos
+         paso 3: Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad
+         paso 4: Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo
+         paso 5: Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto
+         paso 6: Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar
+         paso 7: Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+      PASOS DE HOY de zero_defects_concepto (nodo_b): 4
+         paso 1: Eliminar el uso de niveles de calidad aceptables como estándar de desempeño
+         paso 2: Comunicar con claridad que el estándar es hacerlo bien la primera vez
+         paso 3: Marcar un día concreto para lanzar este compromiso, aunque sea contigo mismo o con quien te ayude en el negocio
+         paso 4: Poner por escrito un compromiso entre tú y la persona que te ayuda
+      LA RAZON ESCRITA, ENTERA Y SIN CORTAR:
+         | El programa completo contra el arranque a escala minima, MISMA FUENTE, Crosby, y sin arista entre ellos. cero_defectos trae EL DESPLIEGUE: comunicarlo
+         | CASO POR CASO EN VEZ DE CON MENSAJES MASIVOS, RECONOCER EL DESEMPENO DE FORMA GENUINA EVITANDO EL EFECTIVO COMO UNICO MECANISMO, y EXTENDER EL
+         | ESTANDAR A TODAS LAS AREAS Y NO SOLO A PRODUCCION. zero_defects_concepto trae DOS COSAS QUE EL OTRO NO TIENE: ELIMINAR EXPLICITAMENTE EL USO DE
+         | NIVELES DE CALIDAD ACEPTABLES como estandar, que es contra lo que Cero Defectos se define; y el arranque a escala minima, MARCAR EL DIA AUNQUE SEA
+         | CONTIGO MISMO y PONER POR ESCRITO UN COMPROMISO ENTRE TU Y LA PERSONA QUE TE AYUDA. SOLAPE DECLARADO en la fecha de lanzamiento y en la claridad del
+         | mensaje. Sano. ARISTA QUE FALTA. Y vuelve a confirmarse lo anotado en el puesto 2434: EL REGISTRO DE NEGOCIO PEQUENO ESTA CONCENTRADO EN NODOS
+         | CONCRETOS, y zero_defects_concepto es uno de ellos en esta familia.
+
+E) LO QUE LA RELECTURA SOSTIENE, Y EL DESTINO QUE EL CRITERIO ESCRITO LE DA
+   (la tabla QUE PASA CON LO QUE SE RELEA, citada arriba con su linea, dice:
+    si sale A entra en la fusion que le corresponda y su perdida se nombra
+    antes; si sale D se queda, y si hay jerarquia se enlaza; si sale B otra
+    vez va a la lista de decisiones del inventario final)
+   PUESTO 2464: clase vieja D -> clase nueva D (LA CLASE NO SE MUEVE)
+      la razon crece de 944 a 3106 caracteres
+      el texto viejo sigue entero dentro del nuevo: SI
+      la correccion ya estaba (idempotencia): no
+
+F) EL MARCADOR, RECOMPUTADO DEL ARCHIVO ANTES DE ESCRIBIR
+   filas 3388 | unicos 3388 | min 1 | max 3388 | huecos 0 | duplicados 0
+   CIFRA clase 'A'   : 551
+   CIFRA clase 'B'   : 72
+   CIFRA clase 'C'   : 5
+   CIFRA clase 'D'   : 2760
+
+G) LA ESCRITURA, LINEA A LINEA Y CONSERVANDO EL ORDEN DEL FICHERO
+   CIFRA filas escritas: 3388 | CIFRA filas TOCADAS: 1
+
+H) EL ARCHIVO AL CERRAR, RELEIDO DEL DISCO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL CERRAR:
+      disco 4054129 bytes | LF 4054129 bytes
+      sha256 (LF): 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   EL sha256 DE CIERRE ES DISTINTO DEL DE APERTURA: SI
+   MARCADOR RECOMPUTADO AL CERRAR:
+      filas 3388 | unicos 3388 | min 1 | max 3388 | huecos 0 | duplicados 0
+      CIFRA clase 'A'   : 551
+      CIFRA clase 'B'   : 72
+      CIFRA clase 'C'   : 5
+      CIFRA clase 'D'   : 2760
+   EL MARCADOR NO SE MOVIO: SI
+   (y es lo que tiene que pasar: la relectura SOSTIENE la clase, asi que lo
+    que cambia es la EVIDENCIA de la razon y no el reparto por clase)
+   LA DIFERENCIA, PAR POR PAR:
+      PUESTO 2464: clase D -> D | razon 944 -> 3106 caracteres | el texto
+         viejo sigue entero: SI | la marca de correccion esta: SI
+   guiones largos o medios en las razones tocadas: 0
+
+VEREDICTO: VERDE
