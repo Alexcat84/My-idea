@@ -73,15 +73,54 @@ CASO E. EL CARRIL TARDIO NO AFLOJA NINGUNA DE LAS CUATRO PIEZAS
       (4) sin la seccion 9                           -> (4) no hay seccion 9 donde meter la bateria
          MUTACION del esperado (exigir que NO la acuse): CAE
 
-   Y LAS OTRAS TRES COMPROBACIONES DEL BLOQUE D TAMPOCO SE AFLOJAN: el
-   cuerpo byte a byte, los guiones y las citas de arnes bloquean en LOS DOS
-   carriles, y eso esta escrito en main() como una columna `bloquea` que
-   solo la de las cifras sin pareja pone a `not tardio`. Aqui se cuenta:
-      CIFRA apariciones de `not tardio` en el instrumento: 2
-      ESPERADO exactamente 1 -> NO CALZA
-      MUTACION del esperado (exigir 2): PASA
+   Y LA CUARTA PATA, QUE ES LA QUE ESTA VUELTA REESCRIBE (acta 188, 7.1):
+   EL INVENTARIO DE GUARDAS EXIMIDAS EN EL CARRIL TARDIO, CON SUS NOMBRES,
+   COTEJADO CONTRA UNA LISTA AUTORIZADA Y ESCRITA.
 
-CIFRA casos: 18 | pasan: 16
-CIFRA casos que CAEN al mutar su esperado: 17 de 17
-CIFRA fallos: 2
-VEREDICTO: ROJO
+   LA LISTA AUTORIZADA, QUE VIVE EN ESTE ARNES CON SU VUELTA Y SU DECISION
+   AL LADO, PARA QUE ANADIR UNA TERCERA SEA UN ACTO VISIBLE Y NO UN DESCUIDO:
+      - 'toda cifra de bytes y todo sha con su pareja'
+        autorizada en la vuelta 178 por: acta 186 punto 7.2, contestando la P.2: las cifras sin pareja de un reporte viejo NI SE EXIMEN NI SE REESCRIBEN, SE DECLARAN
+        marca que prueba que EXIGE SU DECLARACION: 'declaracion_de_cifras_sin_pareja'
+      - 'seccion4_que_no_calza'
+        autorizada en la vuelta 187 por: encargo de la vuelta 187, TAREA 5.b, respuesta del acta 187 a la P.2: EN EL CARRIL DE CIERRE TARDIO, LA GUARDA DE LA 2.d NO BLOQUEA, PERO SE DECLARA
+        marca que prueba que EXIGE SU DECLARACION: 'if not dentro or sin_declarar:'
+   CIFRA entradas de la lista autorizada: 2
+
+   EL SUJETO, CON SU SELLO AL LADO (vuelta 188, TAREA 3.b), para que los
+   numeros de linea de abajo no envejezcan solos:
+      scripts/loop/cerrar_reporte.py -> 97163 bytes normalizados a LF, 1844 lineas
+      sha256 LF 2e37089d0389e67efda7297c105201378c229575c398820b50841ce246a9c7af
+
+   EL INVENTARIO, LEIDO DEL FUENTE Y NO TECLEADO:
+      linea 1748  forma columna  nombre 'toda cifra de bytes y todo sha con su pareja'
+      linea 1813  forma if       nombre 'seccion4_que_no_calza'
+   CIFRA exenciones halladas en el fuente: 2
+   CONTRASTE, la cuenta que este caso hacia antes: `not tardio` aparece 2
+   vez(ces). SE PUBLICA IGUAL, pero YA NO ES EL VEREDICTO: una cuenta de dos
+   no distingue si las dos son las de la lista o si una se cambio por otra.
+
+   (1) EXENCIONES QUE NO ESTAN EN LA LISTA AUTORIZADA: 0 
+   (2) DE LA LISTA QUE HAN DESAPARECIDO DEL FUENTE:    0 
+   (3) EXIMIDAS QUE NO EXIGEN SU DECLARACION:          0 
+       ANONIMAS (que es peor que las tres): 0
+   ESPERADO: cero en las tres -> CALZA
+
+   Y LOS TRES ROJOS SE PRUEBAN, SOBRE FUENTES FABRICADOS EN MEMORIA Y NUNCA
+   SOBRE EL FICHERO VIVO:
+      (1) aparece una TERCERA exencion que nadie autorizo  -> fuente cambiado: SI
+         intrusas 1 ['(sin nombre)'] | ausentes 0  | mudas 0  -> ROJO: SI
+      (2) desaparece del fuente una de las dos de la lista -> fuente cambiado: SI
+         intrusas 0  | ausentes 1 ['toda cifra de bytes y todo sha con su pareja'] | mudas 0  -> ROJO: SI
+      (3) una eximida deja de exigir su declaracion        -> fuente cambiado: SI
+         intrusas 0  | ausentes 0  | mudas 1 ['seccion4_que_no_calza'] -> ROJO: SI
+
+   Y LA MUTACION DEL ESPERADO SOBRE EL FUENTE DE VERDAD, QUE ES LA QUE PRUEBA
+   QUE EL VEREDICTO NO ES UNA CONSTANTE: si se exige que la lista autorizada
+   tenga UNA sola entrada, el cotejo tiene que CAER.
+      con la lista mutada a 1 entrada(s): intrusas 1 ['seccion4_que_no_calza'] -> CAE
+
+CIFRA casos: 22 | pasan: 22
+CIFRA casos que CAEN al mutar su esperado: 21 de 21
+CIFRA fallos: 0
+VEREDICTO: VERDE

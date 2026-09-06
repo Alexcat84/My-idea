@@ -1,0 +1,65 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA EXCLUSION POR ROJO DE LA DOBLE CORRIDA
+(vuelta 188, TAREA 3.c; remedio de la `C.3` del acta 188)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/vuelta188_tarea3c_nomina.py, IMPORTADO.
+SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 12848 bytes | LF 12848 bytes |
+sha256 LF 513086cfff14d213ab8ed22eb276647a3b51f23da8085fdd48a4821efaa3746f
+
+LINEAS DEL SUJETO QUE ESTE ARNES JUZGA, LEIDAS HOY Y CON EL SELLO DE ARRIBA:
+   def rojos_registrados        -> lineas 76
+   def particion_por_rojo       -> lineas 102
+   REGISTRO_ROJOS =             -> lineas 58
+
+LA LISTA DE MENTIRA SOBRE LA QUE SE PARTE, CON 3 ENTRADAS:
+   vuelta186_tarea2c_mutacion_cierre_tardio.py                de la 186
+   vuelta188_tarea2_mutacion_pata_documental.py               NACE HOY
+   vuelta187_tarea4_mutacion_dos_convenciones.py              de la 187
+
+CASO A. UN REGISTRO VACIO NO EXCLUYE A NADIE
+   fichero que no existe (cadena vacia)         -> rojos 0 | excluidos 0 | corren 3 de 3 | CALZA
+      MUTACION del esperado (exigir 1 excluido): CAE
+   registro solo con cabecera de comentarios    -> rojos 0 | excluidos 0 | corren 3 de 3 | CALZA
+      MUTACION del esperado (exigir 1 excluido): CAE
+   registro con lineas en blanco                -> rojos 0 | excluidos 0 | corren 3 de 3 | CALZA
+      MUTACION del esperado (exigir 1 excluido): CAE
+
+CASO B. UN REGISTRO QUE NOMBRA UN ARNES LO EXCLUYE, Y EL EXCLUIDO
+        DESAPARECE DE LA LISTA QUE SE CORRE
+   rojos 1 | excluidos 1 | corren 2 de 3
+   los que corren: vuelta188_tarea2_mutacion_pata_documental.py, vuelta187_tarea4_mutacion_dos_convenciones.py
+   ESPERADO: el excluido NO esta entre los que corren -> CALZA
+   MUTACION del esperado (exigir que corran los 3): CAE
+
+CASO C. LA EXCLUSION NO ES MUDA: NOMBRE, RUTA DE SU ROJO Y MOTIVO
+   script:  scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py
+   salida:  docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+   ruta del rojo: docs/loop/SALIDA_V186_T2C_EN_ROJO.txt
+   motivo:  cayo en rojo con CIFRA fallos: 2 y su remedio es de otra vuelta
+   ESPERADO: las TRES piezas presentes y no una sola -> CALZA
+   MUTACION del esperado (exigir que el motivo NO se conserve): CAE
+
+CASO D. LA COMPARACION ES POR NOMBRE DE FICHERO Y NO POR RUTA COMPLETA
+   ruta con barras invertidas       -> excluidos 1 | CALZA
+      MUTACION del esperado (exigir 0 excluidos): CAE
+   solo el nombre, sin directorio   -> excluidos 1 | CALZA
+      MUTACION del esperado (exigir 0 excluidos): CAE
+   ruta con directorio de mas       -> excluidos 1 | CALZA
+      MUTACION del esperado (exigir 0 excluidos): CAE
+   Y UN NOMBRE QUE NO ESTA EN LA LISTA NO EXCLUYE A NADIE, para que se vea
+   que no esta clavado:
+      rojos 1 | excluidos 0 | corren 3 -> CALZA
+
+CASO E. UNA LINEA SIN MOTIVO EXCLUYE IGUAL, PERO LO DICE
+   sin motivo, con ruta   -> excluidos 1 | ruta 'x.txt' | motivo '(sin motivo declarado)' | CALZA
+      MUTACION del esperado (exigir un motivo inventado): CAE
+   solo el nombre         -> excluidos 1 | ruta '(sin salida declarada)' | motivo '(sin motivo declarado)' | CALZA
+      MUTACION del esperado (exigir un motivo inventado): CAE
+   NO SE LE INVENTA UN MOTIVO: se excluye igual, porque no re correrlo es lo
+   prudente, y la salida declara que su motivo no estaba escrito.
+
+CIFRA casos: 11 | pasan: 11
+CIFRA casos que CAEN al mutar su esperado: 11 de 11
+CIFRA fallos: 0
+VEREDICTO: VERDE

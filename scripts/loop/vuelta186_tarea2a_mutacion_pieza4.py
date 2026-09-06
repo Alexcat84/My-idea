@@ -40,6 +40,7 @@ caso (E).
 USO:
   python scripts/loop/vuelta186_tarea2a_mutacion_pieza4.py
 """
+import hashlib
 import io
 import os
 import sys
@@ -51,6 +52,22 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 LOOP = os.path.join(RAIZ, "docs", "loop")
 NL = chr(10)
 CR_RUTA = os.path.join(RAIZ, "scripts", "loop", "cerrar_reporte.py")
+
+
+def sello_del_sujeto(ruta=None):
+    """LOS BYTES Y EL `sha256` DEL FICHERO CUYOS NUMEROS DE LINEA ESTE ARNES
+    PUBLICA (vuelta 188, TAREA 3.b; respuesta del acta 188 a la `P.2`).
+
+    POR QUE: una salida sellada que publica numeros de linea de un fichero VIVO
+    envejece sola, y sin el sello del sujeto al lado hay que DEDUCIR a mano si un
+    diff futuro viene de que se movio el sujeto o de que se movio el arnes. Con
+    el sello, lo dice la propia salida. **Es aditivo: no cambia ni un veredicto
+    de este arnes.**"""
+    p = ruta or CR_RUTA
+    datos = io.open(p, "rb").read()
+    lf = datos.replace(chr(13).encode() + chr(10).encode(),
+                        chr(10).encode())
+    return (len(datos), len(lf), hashlib.sha256(lf).hexdigest())
 COMPARACION = "ajena != vuelta"
 
 # EL MOTIVO LITERAL DE HOY, TAL COMO LA PIEZA (4) LO ESCRIBE. Va aqui para poder
@@ -230,7 +247,13 @@ def _caso_e(w):
     crudas = [i for i, l in enumerate(lineas_cr, 1) if COMPARACION in l]
     codigo = [i for i in crudas if not lineas_cr[i - 1].lstrip().startswith("#")]
     casos += 1
+    disco_s, lf_s, sha_s = sello_del_sujeto()
     w("   fichero: scripts/loop/cerrar_reporte.py")
+    w("   SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco %d bytes | LF %d bytes |"
+      % (disco_s, lf_s))
+    w("   sha256 LF %s" % sha_s)
+    w("   Con ese sello al lado, los numeros de linea de abajo NO envejecen solos:")
+    w("   un diff futuro dice si se movio el sujeto o si se movio el arnes.")
     w("   CIFRA apariciones CRUDAS: %d, lineas %s"
       % (len(crudas), ", ".join(str(x) for x in crudas)))
     w("   CIFRA apariciones en lineas de CODIGO: %d, lineas %s"
