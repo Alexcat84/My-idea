@@ -1,0 +1,86 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta181_esqueleto_reporte.py
+  B: scripts/loop/vuelta182_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 181, 182
+  CIFRA lineas de docstring: A 46 | B 45
+  CIFRA lineas de maquina:   A 273 | B 281
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1427 | B 1439
+     CIFRA tipos de nodo que NO empatan: 3
+        Constant               A   163 | B   169 | diferencia +6
+        Load                   A   340 | B   343 | diferencia +3
+        Tuple                  A    23 | B    26 | diferencia +3
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 46
+  CIFRA tokens de maquina: A 1312 | B 1330
+  CIFRA tokens que difieren con el texto normalizado: 18
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 3
+  CIFRA LITERALES DE TEXTO:   43
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     B:72  ("1", 'LOS REGISTROS Y LA DEUDA DE LECTURA. (a) El acta NNN y sus adjudicaciones entran en la serie de registr
+     B:73  ("2", 'LA APERTURA DEL AUDITOR COMO CODIGO (decision del fundador del 5 sep 2026, PREGUNTA 3, opcion c, la mit
+     B:74  ("3", 'EL INSTRUMENTO DEL DIFERENCIADOR MOVIDO (decision del fundador del 5 sep 2026, PREGUNTA 1, la `b`). Cru
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:73  ("1", 'LOS REGISTROS, Y LO QUE SE HEREDA DEL ACTA 180, Y ES BLOQUEANTE. (a) El acta del auditor de la vuelta 1
+     A:74  ("2", 'LA BATERIA DE MUTACIONES, ENTERA, SOLA, Y CON SU RELOJ, Y ES LA UNICA TAREA DE TRABAJO DE ESTA VUELTA. 
+     A:228  > **ESTA ES LA VUELTA DE BATERIA, Y NO LLEVA NADA MAS.** `AUDITOR.md` 6.1: la
+     A:229  > bateria corre CADA CINCO, en VUELTA PROPIA. La cadencia se adjudico en el acta
+     A:230  > 176 punto 7.8, se reconfirmo en las actas 178 y 179, y el acta 180 la clava por
+     A:231  > cuarta vez en su punto 10 con estas palabras: *"LA BATERIA: LA PROXIMA ES LA
+     A:232  > NNN, Y ES LA VUELTA QUE VIENE"*. **La 180 fue la ULTIMA que declaro el hueco.
+     A:233  > Aqui se corre.**
+     A:235  > **EL TOPE DE ESTA VUELTA ES DOS SUB-TAREAS, Y NO ES UN DESCUIDO: ES LA
+     A:236  > ADJUDICACION 6.8 DEL ACTA 180.** `AUDITOR.md` 6.2 devolvio el tope a cinco, pero
+     A:237  > la 6.1 y la 6.2 salen de la MISMA parada del 5 sep 2026 y la 6.2 se concedio
+     A:238  > *"combinada con la (a)"*, o sea subordinada a ella. **La vuelta de bateria no
+     A:239  > lleva trabajo de plan al lado.** El tope vuelve a cinco en la NNN.
+     A:241  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** no se lee ningun
+     A:242  > par, no se escribe ningun veredicto, no se toca el marcador, no se toca el estado
+     A:243  > de ninguna ficha, no se toca `docs/plan/`, no se arregla la `P.1` y no se toca
+     A:244  > `cerrar_reporte.py`. **Las dos ultimas van a la NNN y estan escritas en los
+     A:245  > puntos 6.6 y 6.8 del acta 180.**
+     A:291  ## 1. LAS DOS TAREAS DEL ENCARGO, Y SU ESTADO
+     B:75  ("4", 'LAS `D` QUE EL INSTRUMENTO NOMBRE ENTRAN A LA COLA de relectura post fusion de `docs/plan/08_VERIFICACI
+     B:76  ("5", 'LA VUELTA DE BATERIA VA EN LA 183, POR TRAMOS RESUMIBLES (decision del fundador del 5 sep 2026, PREGUNT
+     B:230  > **ESTA VUELTA NO ES DE BATERIA, Y ESO TAMBIEN ES LETRA.** `AUDITOR.md` 6.1: la
+     B:231  > bateria corre CADA CINCO, en VUELTA PROPIA. **La NNN era la suya y se corto
+     B:232  > antes de lanzarla**, y su acta lo registra en el punto 7.5 sin contarlo como
+     B:233  > caida de reporte, porque el esqueleto por anexion dejo la fila diciendo ABIERTA,
+     B:234  > SIN CERRAR y no publico ninguna cifra de una corrida que no hubo. La decision
+     B:235  > del fundador del **5 sep 2026** (PREGUNTA 4 de
+     B:236  > `docs/loop/paradas/2026-09-05-cola-post-fusion-DECISION.md`) manda que corra
+     B:237  > **POR TRAMOS RESUMIBLES**, y la **TAREA 5** de este encargo la deja preparada y
+     B:238  > declarada para la **183**. **La seccion 9 de este reporte cierra con su HUECO
+     B:239  > DECLARADO Y MEDIDO**, que es lo que el regimen 6.1 manda para las vueltas
+     B:240  > intermedias: un hueco declarado no es un hueco escondido.
+     B:242  > **EL TOPE DE ESTA VUELTA ES CINCO SUB-TAREAS, Y TAMPOCO ES UNA GANA.** La
+     B:243  > adjudicacion **6.8 del acta 180** bajo el tope a DOS en la NNN porque era vuelta
+     B:244  > de bateria, y en la misma frase escribio: *"El tope vuelve a cinco en la NNN"*.
+     B:245  > El encargo de esta vuelta trae **CINCO** y dice *"que es el tope. Ni una mas"*.
+     B:247  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** no se relee
+     B:248  > ninguno de los 543 pares que la TAREA 4 mete en la cola (eso es justo lo que la
+     B:249  > decision del fundador evita al conceder la `b` y no la `c`), no se toca el
+     B:250  > marcador, no se cambia ningun veredicto del archivo, y **las `A` no ganan cola
+     B:251  > nueva** por la PREGUNTA 2 de la misma decision. **Y no se corre la bateria**: se
+     B:252  > prepara.
+     B:298  ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
+
+
+FIN

@@ -1,0 +1,510 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta181_apertura.py
+  B: scripts/loop/vuelta182_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 181, 182
+  CIFRA lineas de docstring: A 57 | B 55
+  CIFRA lineas de maquina:   A 461 | B 607
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 4003 | B 5488
+     CIFRA tipos de nodo que NO empatan: 49
+        Load                   A   982 | B  1387 | diferencia +405
+        Name                   A   847 | B  1178 | diferencia +331
+        Call                   A   404 | B   554 | diferencia +150
+        Constant               A   470 | B   609 | diferencia +139
+        Attribute              A   220 | B   303 | diferencia +83
+        Store                  A   212 | B   274 | diferencia +62
+        BinOp                  A   117 | B   153 | diferencia +36
+        Assign                 A    93 | B   123 | diferencia +30
+        Tuple                  A    80 | B   109 | diferencia +29
+        Expr                   A   171 | B   199 | diferencia +28
+        Mod                    A    87 | B   114 | diferencia +27
+        Subscript              A    14 | B    33 | diferencia +19
+        For                    A    25 | B    36 | diferencia +11
+        If                     A    13 | B    24 | diferencia +11
+        BoolOp                 A     4 | B    14 | diferencia +10
+        Compare                A    25 | B    35 | diferencia +10
+        Return                 A     3 | B    13 | diferencia +10
+        IfExp                  A    24 | B    33 | diferencia +9
+        Slice                  A     8 | B    17 | diferencia +9
+        comprehension          A    13 | B    22 | diferencia +9
+        Add                    A    31 | B    38 | diferencia +7
+        In                     A     9 | B    16 | diferencia +7
+        And                    A     2 | B     8 | diferencia +6
+        List                   A    33 | B    38 | diferencia +5
+        ListComp               A    11 | B    16 | diferencia +5
+        Or                     A     2 | B     6 | diferencia +4
+        UnaryOp                A     2 | B     6 | diferencia +4
+        keyword                A    26 | B    30 | diferencia +4
+        FunctionDef            A     4 | B     7 | diferencia +3
+        Not                    A     1 | B     4 | diferencia +3
+        arg                    A     8 | B    11 | diferencia +3
+        arguments              A     5 | B     8 | diferencia +3
+        Continue               A     4 | B     2 | diferencia -2
+        Dict                   A     1 | B     3 | diferencia +2
+        DictComp               A     0 | B     2 | diferencia +2
+        GeneratorExp           A     2 | B     4 | diferencia +2
+        AugAssign              A     4 | B     3 | diferencia -1
+        Break                  A     0 | B     1 | diferencia +1
+        Eq                     A     7 | B     8 | diferencia +1
+        ExceptHandler          A     3 | B     4 | diferencia +1
+        Gt                     A     1 | B     0 | diferencia -1
+        GtE                    A     1 | B     2 | diferencia +1
+        Import                 A     8 | B     9 | diferencia +1
+        Is                     A     2 | B     3 | diferencia +1
+        IsNot                  A     5 | B     6 | diferencia +1
+        Sub                    A     3 | B     4 | diferencia +1
+        Try                    A     3 | B     4 | diferencia +1
+        USub                   A     1 | B     2 | diferencia +1
+        alias                  A     8 | B     9 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 424
+  CIFRA tokens de maquina: A 3679 | B 5076
+  CIFRA tokens que difieren con el texto normalizado: 3421
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 349
+  CIFRA LITERALES DE TEXTO:   75
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:300  w(" puras del propio sujeto y se imprime lo que salga.")
+     A:301  w(" EL CORTE VA AL LADO por adjudicacion 7.2 del acta 178, porque el")
+     A:302  w(" denominador crece DENTRO de la propia vuelta)")
+     A:303  w("CORTE DE ESTA MEDICION: HEAD %s, APERTURA de la vuelta %d, antes de la"
+     A:304  % (head[:12], VUELTA))
+     A:305  w("                        primera operacion de esta vuelta.")
+     A:306  VMV = None
+     A:309  import verificar_mutaciones_viejas as VMV   # noqa: E402
+     A:310  censo = VMV.arneses_del_directorio()
+     A:311  nomina = [s for s, _a in VMV.VIEJAS]
+     A:312  invis = VMV.nomina_invisible_al_censo()
+     A:313  fuera = sorted(set(censo) - set(nomina))
+     A:314  w("CIFRA arneses que ve arneses_del_directorio(): %d" % len(censo))
+     A:315  w("CIFRA entradas de VIEJAS (la nomina): %d" % len(nomina))
+     A:316  w("CIFRA entradas de la nomina que el censo NO ve: %d" % len(invis))
+     A:317  w("CIFRA del censo que estan FUERA de la nomina: %d" % len(fuera))
+     A:318  for n in fuera:
+     A:319  w("     FUERA: %s" % n)
+     A:320  w("LA RESTA COMPROBADA: censo %d menos nomina %d = %d, y fuera de nomina = %d. "
+     A:321  "CALZAN: %s"
+     A:322  % (len(censo), len(nomina), len(censo) - len(nomina), len(fuera),
+     A:323  "SI" if (len(censo) - len(nomina)) == len(fuera) else "NO"))
+     A:324  ultima, faltan = VMV.arneses_que_faltan()
+     A:325  w("arneses_que_faltan() HOY: ultima vuelta de la nomina %s, y dice que faltan %d"
+     A:326  % (ultima, len(faltan)))
+     A:327  for n in faltan:
+     A:328  w("      FALTA: %s" % n)
+     A:329  w("EL SELLO DE CORTE, LLAMADO Y NO PARAFRASEADO:")
+     A:330  w("   sello_de_corte(len(VIEJAS), corte_de_git()) -> %s"
+     A:331  % VMV.sello_de_corte(len(nomina), VMV.corte_de_git()))
+     A:332  w("LAS CONSTANTES DE LA BATERIA, LEIDAS Y NO TECLEADAS:")
+     A:333  w("   TOPE_DE_MINUTOS_POR_TRAMO = %s" % VMV.TOPE_DE_MINUTOS_POR_TRAMO)
+     A:334  w("   FAMILIAS_DE_ARNES = %s" % ", ".join(VMV.FAMILIAS_DE_ARNES))
+     A:335  w("   VARA_DEL_CENSO = %d" % VMV.VARA_DEL_CENSO)
+     A:336  w("LA GUARDA DEL SUJETO CONGELADO, LLAMADA COMO FUNCION (no como proceso):")
+     A:337  malas = VMV.guarda_del_sujeto_congelado()
+     A:338  w("   CIFRA entradas cuyo SUJETO NO ESTA CONGELADO: %d" % len(malas))
+     A:339  for nombre, veredicto, vive in malas:
+     A:340  w("      SUJETO SIN CONGELAR: %-46s %s" % (nombre, veredicto))
+     A:341  w("LAS SEIS PIEZAS DE hay_rojo_al_cierre(), MIRADAS ANTES DE CORRER NADA:")
+     A:342  w("   (las tres primeras SOLO se pueden medir CORRIENDO la bateria, asi que")
+     A:343  w("    aqui salen NO MEDIBLES por construccion y no por resultado. Se dicen")
+     A:344  w("    igual, porque un hueco declarado no es un hueco escondido)")
+     A:345  w("   perdidas            -> NO MEDIBLE EN APERTURA (exige correr los arneses)")
+     A:346  w("   no mordio           -> NO MEDIBLE EN APERTURA (exige correr los arneses)")
+     A:347  w("   no reproducible     -> NO MEDIBLE EN APERTURA (exige correr los arneses)")
+     A:348  w("   faltan de la nomina -> %d" % len(faltan))
+     A:349  w("   invisibles al censo -> %d" % len(invis))
+     A:350  w("   sujeto sin congelar -> %d" % len(malas))
+     A:352  w("NO SE PUDO RECOMPUTAR: %r" % (e,))
+     A:355  w("=== H.6 TAREA 1: LA E.1 DEL ACTA 180, MEDIDA EN EL CODIGO Y NO LEIDA ===")
+     A:356  w("(el acta 180 seccion 5 dice que cerrar_reporte.py tiene DOS ramas para la")
+     A:357  w(" seccion 9 y que la 180 entro por la equivocada. NO SE COPIA: se busca en el")
+     A:358  w(" fichero y se imprime la linea con su numero)")
+     A:365  hits = [(i, l) for i, l in enumerate(t_cer.split(NL), 1) if aguja in l]
+     A:369  w("EL PATRON, APLICADO A LOS CINCO NOMBRES, CON vuelta_de_fichero() DE VERDAD:")
+     A:373  "docs/loop/SALIDA_V178_BATERIA.txt",
+     A:374  "docs/loop/SALIDA_V179_BATERIA.txt",
+     A:376  "docs/loop/SALIDA_VNNN_BATERIA.txt"):
+     A:377  p = os.path.join(RAIZ, nombre.replace("/", os.sep))
+     A:378  w("   %-44s vuelta_de_fichero -> %-5s | existe: %-2s | bytes en disco: %s"
+     A:380  "SI" if os.path.exists(p) else "NO",
+     A:381  (os.path.getsize(p) if os.path.exists(p) else "n/a")))
+     A:384  w("QUIEN ESCRIBE EL NOMBRE SALIDA_V180_HUECO_BATERIA, BUSCADO EN scripts/:")
+     A:385  n_escritores = 0
+     A:386  for base, _dirs, ficheros in os.walk(os.path.join(RAIZ, "scripts")):
+     A:387  if "__pycache__" in base:
+     A:388  continue
+     A:389  for f in sorted(ficheros):
+     A:390  if not f.endswith(".py"):
+     A:391  continue
+     A:392  try:
+     A:393  tt = io.open(os.path.join(base, f), encoding="utf-8", errors="replace").read()
+     A:394  except Exception:
+     A:395  continue
+     A:396  if "SALIDA_V180_HUECO_BATERIA" in tt:
+     A:397  n_escritores += 1
+     A:398  w("      LO NOMBRA: %s"
+     A:399  % os.path.relpath(os.path.join(base, f), RAIZ).replace(os.sep, "/"))
+     A:400  w("   CIFRA ficheros de scripts/ que nombran SALIDA_V180_HUECO_BATERIA: %d"
+     A:401  % n_escritores)
+     A:402  w("EL ACTA 180, LOCALIZADA EN SU FICHERO Y CON SU LINEA:")
+     A:415  hits = [i for i, l in enumerate(l_acta, 1) if l.startswith(aguja) and i > 62440]
+     A:428  p = os.path.join(LOOP, n)
+     A:429  tam = os.path.getsize(p)
+     A:440  p = os.path.join(LOOP, n)
+     A:441  if os.path.getsize(p) == 0:
+     A:444  t = io.open(p, encoding="utf-8", errors="replace").read()
+     A:445  rl = VMV.reloj_de_la_corrida(t)
+     A:450  % (VMV.tamano_por_minutos([]),))
+     A:456  por_lectura = {}
+     A:457  for f in filas_sc:
+     A:458  k = f.get("veredicto_de_la_lectura")
+     A:459  por_lectura[k] = por_lectura.get(k, 0) + 1
+     A:460  for k in sorted(por_lectura, key=lambda x: (x is None, x)):
+     A:461  w("   CIFRA con veredicto_de_la_lectura %-28s: %d" % (repr(k), por_lectura[k]))
+     A:464  w("LA P.1, QUE NO SE TOCA AQUI (adjudicacion 6.6 del acta 180: VA A LA NNN):")
+     A:465  P1 = os.path.join(RAIZ, "scripts", "loop", "vuelta172_tarea1c_guarda_que_mordio.py")
+     A:466  w("   scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py existe: %s"
+     A:467  % ("SI" if os.path.exists(P1) else "NO"))
+     A:468  if os.path.exists(P1):
+     A:469  w("   -> disco %d bytes" % os.path.getsize(P1))
+     A:470  if VMV is not None:
+     A:471  w("   esta en el censo de arneses_del_directorio(): %s"
+     A:472  % ("SI" if os.path.basename(P1) in VMV.arneses_del_directorio() else "NO"))
+     A:473  w("   esta en la nomina VIEJAS: %s"
+     A:474  % ("SI" if os.path.basename(P1) in [s for s, _a in VMV.VIEJAS] else "NO"))
+     B:126  def nodos_por_id(grafo):
+     B:127  """LOS NODOS DEL GRAFO INDEXADOS POR ID, SIN ADIVINAR LA CLAVE DE LA RAIZ.
+     B:128  
+     B:129  Prueba las formas que el fichero puede tener y devuelve la primera que da
+     B:130  nodos: la clave `nodos` como diccionario id -> nodo (que es la que este
+     B:131  repo usa hoy), la misma clave como lista, y `nodes` en las dos formas por
+     B:132  si el fichero cambia de idioma. Si ninguna da nada, devuelve {} y quien
+     B:133  llame publica el cero, que es una medicion y no un adivinanza."""
+     B:134  if not isinstance(grafo, dict):
+     B:135  return {}
+     B:136  for clave in ("nodos", "nodes"):
+     B:137  v = grafo.get(clave)
+     B:138  if isinstance(v, dict) and v:
+     B:139  return {k: n for k, n in v.items() if isinstance(n, dict)}
+     B:140  if isinstance(v, list) and v:
+     B:141  return {n.get("id"): n for n in v
+     B:142  if isinstance(n, dict) and n.get("id")}
+     B:143  return {}
+     B:146  def clave_de_pasos(nodo):
+     B:147  """EL NOMBRE DE LA CLAVE QUE pasos_del_nodo() acabo usando, para que la
+     B:148  salida diga de donde saco los pasos y no haya que creerselo."""
+     B:149  if not isinstance(nodo, dict):
+     B:150  return "(no es dict)"
+     B:151  for clave in sorted(nodo.keys()):
+     B:152  nombre = clave.lower()
+     B:153  if ("paso" in nombre or "step" in nombre) and isinstance(nodo[clave], list):
+     B:154  return clave
+     B:155  return "(ninguna)"
+     B:158  def pasos_del_nodo(nodo):
+     B:159  """LOS PASOS DE UN NODO, BUSCADOS ENTRE SUS PROPIAS CLAVES Y NO TECLEADOS.
+     B:160  
+     B:161  CORRECCION 3 DECLARADA (vuelta NNN). La version anterior probaba las claves
+     B:162  `pasos` y `steps`, y este repo las llama `pasos_accionables`: la segunda
+     B:163  corrida del bloque de apertura publico "cero_defectos -> 0 pasos", que es
+     B:164  falso, y queda entera en docs/loop/SALIDA_VNNN_APERTURA_SEGUNDA_CORRIDA.txt
+     B:165  sin borrar. La reparacion NO es teclear la clave buena: es recorrer las
+     B:166  claves DEL PROPIO NODO y quedarse con la primera cuyo nombre contenga `paso`
+     B:167  o `step` y cuyo valor sea una lista. Si no hay ninguna, devuelve [] y quien
+     B:168  llame publica el cero como medicion."""
+     B:169  if not isinstance(nodo, dict):
+     B:170  return []
+     B:171  for clave in sorted(nodo.keys()):
+     B:172  nombre = clave.lower()
+     B:173  if ("paso" in nombre or "step" in nombre) and isinstance(nodo[clave], list):
+     B:174  return nodo[clave]
+     B:175  return []
+     B:191  w("regimen: VUELTA ORDINARIA, NO DE BATERIA. La bateria corre CADA CINCO en")
+     B:192  w("         vuelta propia (AUDITOR.md 6.1) y la NNN era la suya y se corto")
+     B:193  w("         antes de lanzarla; esta vuelta la deja PREPARADA para la 183 por")
+     B:194  w("         tramos resumibles, y su seccion 9 cierra con HUECO DECLARADO Y")
+     B:366  CABNNN = [i for i, l in enumerate(l_acta, 1)
+     B:367  if l.startswith("# ACTA DEL AUDITOR, VUELTA NNN")]
+     B:368  w("CIFRA cabeceras del acta NNN encontradas: %d" % len(CABNNN))
+     B:369  if CABNNN:
+     B:370  base = CABNNN[0]
+     B:371  w("   lineas del acta NNN, de su cabecera al final del fichero: %d"
+     B:372  % (len(l_acta) - base + 1))
+     B:373  for aguja in ("## 1. ", "## 2. ", "## 3. ", "## 4. ", "## 5. ", "## 6. ",
+     B:377  if l.startswith(aguja) and i >= base]
+     B:382  import serie_de_registros as SER   # noqa: E402
+     B:383  halladas = SER.entradas()
+     B:384  w("serie_de_registros.entradas() -> %d entradas en %d sedes"
+     B:385  % (len(halladas), len(SER.SEDES)))
+     B:386  for s in SER.SEDES:
+     B:387  w("   SEDE: %s" % os.path.relpath(s, RAIZ).replace(os.sep, "/"))
+     B:388  w("CIFRA colisiones: %d | CIFRA huecos: %d"
+     B:389  % (len(SER.colisiones(halladas)), len(SER.huecos(halladas))))
+     B:390  w("SIGUIENTE LIBRE, LLAMADO Y NO TECLEADO: R.%s"
+     B:391  % SER.siguiente_libre(halladas))
+     B:392  for numero, rel, linea, titulo in halladas[-6:]:
+     B:393  w("   ULTIMOS: R.%s en %s:%d -> %s" % (numero, rel, linea, titulo[:100]))
+     B:395  w("NO SE PUDO RECOMPUTAR LA SERIE: %r" % (e,))
+     B:399  w("(el E.1 sobre cerrar_reporte.py y la P.1 del censo. NO SE COPIA NADA DEL ACTA:")
+     B:400  w(" se busca en el fichero y se imprime la linea con su numero)")
+     B:403  l_cer = t_cer.split(NL)
+     B:404  w("scripts/loop/cerrar_reporte.py -> %d lineas | disco %d bytes | LF %d bytes"
+     B:405  % (len(l_cer), os.path.getsize(CER), len(t_cer.encode("utf-8"))))
+     B:410  hits = [(i, l) for i, l in enumerate(l_cer, 1) if aguja in l]
+     B:414  w("EL PATRON APLICADO, CON vuelta_de_fichero() DE VERDAD Y NO PARAFRASEADA:")
+     B:419  "docs/loop/SALIDA_VNNN_BATERIA.txt",
+     B:420  "docs/loop/SALIDA_VNNN_HUECO_BATERIA.txt",
+     B:421  "docs/loop/SALIDA_V183_BATERIA.txt"):
+     B:422  pth = os.path.join(RAIZ, nombre.replace("/", os.sep))
+     B:423  w("   %-46s vuelta_de_fichero -> %-5s | existe: %-2s | disco: %s"
+     B:425  "SI" if os.path.exists(pth) else "NO",
+     B:426  (os.path.getsize(pth) if os.path.exists(pth) else "n/a")))
+     B:429  w("LA P.1, EL ARNES EN ROJO, MEDIDO Y NO RECORDADO:")
+     B:430  RP1 = "scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py"
+     B:431  P1 = os.path.join(RAIZ, RP1.replace("/", os.sep))
+     B:432  w("   %s existe: %s" % (RP1, "SI" if os.path.exists(P1) else "NO"))
+     B:433  if os.path.exists(P1):
+     B:434  g1 = bytes_de_git(RP1)
+     B:435  w("   -> disco %d bytes | git %s"
+     B:436  % (os.path.getsize(P1), ("%d bytes" % g1) if g1 is not None else "NO ESTA EN HEAD"))
+     B:437  c_p1, o_p1 = correr([PY, RP1])
+     B:438  w("   CORRIDO HOY -> EXITCODE %d, %d bytes de salida"
+     B:439  % (c_p1, len(o_p1.encode("utf-8"))))
+     B:440  for l in o_p1.replace(chr(13), "").split(NL):
+     B:441  if l.strip():
+     B:442  w("      | " + l.strip()[:140])
+     B:443  c_nac, o_nac = git(["log", "--diff-filter=A", "--format=%h%x09%ad%x09%s",
+     B:444  "--date=short", "--", RP1])
+     B:445  w("   COMMIT DE NACIMIENTO (git log --diff-filter=A): %s"
+     B:446  % (o_nac.strip()[:160] or "(no localizado)"))
+     B:447  VMV = None
+     B:448  try:
+     B:449  import verificar_mutaciones_viejas as VMV   # noqa: E402
+     B:450  censo = VMV.arneses_del_directorio()
+     B:451  nomina = [s for s, _a in VMV.VIEJAS]
+     B:452  w("   esta en el censo arneses_del_directorio(): %s"
+     B:453  % ("SI" if os.path.basename(P1) in censo else "NO"))
+     B:454  w("   esta en la nomina VIEJAS: %s"
+     B:455  % ("SI" if os.path.basename(P1) in nomina else "NO"))
+     B:456  w("   CIFRA censo: %d | CIFRA nomina: %d | VARA_DEL_CENSO: %d"
+     B:457  % (len(censo), len(nomina), VMV.VARA_DEL_CENSO))
+     B:458  w("   FAMILIAS_DE_ARNES: %s" % ", ".join(VMV.FAMILIAS_DE_ARNES))
+     B:459  except Exception as e:
+     B:460  w("   NO SE PUDO RECOMPUTAR EL CENSO: %r" % (e,))
+     B:463  w("=== H.7 TAREA 1.c: EL TRAMO DE LA CIEGA DE LA NNN, LEIDO DEL ACTA ===")
+     B:464  w("(los 30 puestos NO se teclean: se sacan de la linea del acta que los lista y")
+     B:465  w(" se parsean. Si el acta no los trae, se dice y no se inventa ninguno)")
+     B:466  puestos_ciega = []
+     B:467  if CABNNN:
+     B:468  base = CABNNN[0]
+     B:469  for i in range(base, len(l_acta)):
+     B:470  if "LOS 30 PUESTOS SON" in l_acta[i]:
+     B:471  bloque = NL.join(l_acta[i:i + 4])
+     B:472  w("   LINEA %d del acta, y sus tres siguientes:" % (i + 1))
+     B:473  for l in bloque.split(NL):
+     B:474  w("      | " + l.strip()[:150])
+     B:475  crudo = bloque.split(":", 1)[1] if ":" in bloque else ""
+     B:476  puestos_ciega = [int(x) for x in re.findall(r"\d+", crudo.replace(".", ""))]
+     B:477  break
+     B:478  w("   CIFRA puestos parseados de esa linea: %d" % len(puestos_ciega))
+     B:479  w("   LOS PUESTOS, ORDENADOS: %s" % ", ".join(str(x) for x in sorted(puestos_ciega)))
+     B:480  w("   MIN %s | MAX %s | REPETIDOS %d"
+     B:481  % (min(puestos_ciega) if puestos_ciega else "n/a",
+     B:482  max(puestos_ciega) if puestos_ciega else "n/a",
+     B:483  len(puestos_ciega) - len(set(puestos_ciega))))
+     B:484  w("")
+     B:486  w("=== H.8 TAREA 2: EL AISLADOR Y LA APERTURA DEL AUDITOR, ANTES DE ESCRIBIRLA ===")
+     B:487  for r in ("scripts/loop/aislador_de_ciega.py",
+     B:488  "scripts/loop/verificar_apertura_sellada.py",
+     B:489  "scripts/loop/apertura_del_auditor.py",
+     B:490  "scripts/loop/vueltaNNN_tarea2_mutacion_apertura_auditor.py"):
+     B:491  pth = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:492  g = bytes_de_git(r)
+     B:493  w("   %-58s -> disco %s | git %s"
+     B:494  % (r, ("%d bytes" % os.path.getsize(pth)) if os.path.exists(pth) else "NO EXISTE",
+     B:495  ("%d bytes" % g) if g is not None else "NO ESTA EN HEAD"))
+     B:496  w("   (los dos ultimos NO EXISTEN al abrir, y eso es lo correcto: los escribe")
+     B:497  w("    esta vuelta. Si existieran al abrir, seria que la vuelta ya se corrio)")
+     B:498  AIS = os.path.join(RAIZ, "scripts", "loop", "aislador_de_ciega.py")
+     B:499  t_ais = io.open(AIS, encoding="utf-8", errors="replace").read().replace(chr(13) + NL, NL)
+     B:500  w("   aislador_de_ciega.py -> %d lineas" % len(t_ais.split(NL)))
+     B:501  for aguja in ("def guarda_de_fuga", "def elegir_pares", "def escribir_ciega",
+     B:502  "--criterio", "--puestos", "--semilla", "CAMPOS_CIEGOS"):
+     B:503  hits = [i for i, l in enumerate(t_ais.split(NL), 1) if aguja in l]
+     B:504  w("   %-22s -> lineas %s"
+     B:505  % (repr(aguja), ", ".join(str(x) for x in hits[:6]) or "(ninguna)"))
+     B:506  w("   LAS TRES COSAS QUE EL REMEDIO PROHIBE ANTES DEL SELLO, nombradas aqui para")
+     B:507  w("   que el gemelo no las pueda elegir despues: git log, git status, REPORTE.md")
+     B:508  w("")
+     B:510  w("=== H.9 TAREA 3: EL ARCHIVO DE VEREDICTOS Y EL 2.464, RECONTADOS ===")
+     B:511  VER = os.path.join(RAIZ, "docs", "INTRA_DOMINIO_VEREDICTOS.jsonl")
+     B:512  filas = [json.loads(l) for l in io.open(VER, encoding="utf-8") if l.strip()]
+     B:513  w("docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> %d filas | disco %d bytes"
+     B:514  % (len(filas), os.path.getsize(VER)))
+     B:515  por_clase = {}
+     B:516  for f in filas:
+     B:517  por_clase[f.get("clase")] = por_clase.get(f.get("clase"), 0) + 1
+     B:518  for k in sorted(por_clase, key=lambda x: (x is None, x)):
+     B:519  w("   CIFRA clase %-6s: %d" % (repr(k), por_clase[k]))
+     B:520  w("   SUMA de las clases: %d | filas: %d | CALZAN: %s"
+     B:521  % (sum(por_clase.values()), len(filas),
+     B:522  "SI" if sum(por_clase.values()) == len(filas) else "NO"))
+     B:523  puestos = [f.get("puesto_intra") for f in filas]
+     B:524  w("   MIN puesto %s | MAX puesto %s | HUECOS %d | DUPLICADOS %d"
+     B:525  % (min(puestos), max(puestos),
+     B:526  len(set(range(min(puestos), max(puestos) + 1)) - set(puestos)),
+     B:527  len(puestos) - len(set(puestos))))
+     B:528  EL_2464 = [f for f in filas if f.get("puesto_intra") == 2464]
+     B:529  w("   EL PUESTO 2464, LOCALIZADO Y NO RECORDADO: %d fila(s)" % len(EL_2464))
+     B:530  for f in EL_2464:
+     B:531  w("      nodo_a: %s" % f.get("nodo_a"))
+     B:532  w("      nodo_b: %s" % f.get("nodo_b"))
+     B:533  w("      clase : %s | dominio: %s" % (f.get("clase"), f.get("dominio")))
+     B:534  w("      razon : %s" % str(f.get("razon"))[:400])
+     B:535  w("   LOS CAMPOS DE UNA FILA, LISTADOS PARA QUE EL INSTRUMENTO NO INVENTE NINGUNO:")
+     B:536  w("      %s" % ", ".join(sorted(filas[0].keys())))
+     B:537  w("EL GRAFO DE HOY, ABIERTO PARA VER SI EL DIFERENCIADOR SIGUE AHI:")
+     B:538  GR = os.path.join(RAIZ, "dataset", "metadata", "master_graph.json")
+     B:539  w("   dataset/metadata/master_graph.json -> disco %d bytes" % os.path.getsize(GR))
+     B:540  try:
+     B:541  G = json.load(io.open(GR, encoding="utf-8"))
+     B:542  w("   LAS CLAVES DE LA RAIZ, LISTADAS Y NO ADIVINADAS: %s"
+     B:543  % ", ".join(sorted(G.keys()) if isinstance(G, dict) else ["(no es dict)"]))
+     B:544  porid = nodos_por_id(G)
+     B:545  w("   CIFRA nodos del grafo, contados de la clave que existe: %d" % len(porid))
+     B:546  if porid:
+     B:547  una = sorted(porid)[0]
+     B:548  w("   LAS CLAVES DE UN NODO (%s): %s"
+     B:549  % (una, ", ".join(sorted(porid[una].keys()))))
+     B:550  for nid in ("cero_defectos", "zero_defects_concepto"):
+     B:551  n = porid.get(nid)
+     B:552  if n is None:
+     B:553  w("   %s -> NO ESTA EN EL GRAFO DE HOY" % nid)
+     B:554  continue
+     B:555  pasos = pasos_del_nodo(n)
+     B:556  w("   %s -> %d pasos (clave usada: %s)"
+     B:557  % (nid, len(pasos), clave_de_pasos(n)))
+     B:558  for k, ps in enumerate(pasos, 1):
+     B:559  w("      paso %d: %s" % (k, str(ps)[:170]))
+     B:560  except Exception as e:
+     B:561  w("   NO SE PUDO ABRIR EL GRAFO: %r" % (e,))
+     B:569  pth = os.path.join(LOOP, n)
+     B:570  tam = os.path.getsize(pth)
+     B:577  RBT = "scripts/loop/vuelta176_bateria_por_tramos.py"
+     B:578  BT = os.path.join(RAIZ, RBT.replace("/", os.sep))
+     B:579  w("   %s existe: %s | disco %s bytes"
+     B:580  % (RBT, "SI" if os.path.exists(BT) else "NO",
+     B:581  os.path.getsize(BT) if os.path.exists(BT) else "n/a"))
+     B:582  if os.path.exists(BT):
+     B:583  t_bt = io.open(BT, encoding="utf-8", errors="replace").read().replace(chr(13) + NL, NL)
+     B:584  for i, l in enumerate(t_bt.split(NL), 1):
+     B:585  if "TRAMOS" in l and "=" in l and not l.strip().startswith("#"):
+     B:586  w("      LINEA %d: %s" % (i, l.strip()[:150]))
+     B:592  pth = os.path.join(LOOP, n)
+     B:593  if os.path.getsize(pth) == 0:
+     B:596  tt = io.open(pth, encoding="utf-8", errors="replace").read()
+     B:597  rl = VMV.reloj_de_la_corrida(tt)
+     B:601  w("   TOPE_DE_MINUTOS_POR_TRAMO = %s" % VMV.TOPE_DE_MINUTOS_POR_TRAMO)
+     B:602  ultima, faltan = VMV.arneses_que_faltan()
+     B:603  w("   arneses_que_faltan() HOY: ultima vuelta %s, faltan %d" % (ultima, len(faltan)))
+     B:604  for n in faltan:
+     B:605  w("      FALTA: %s" % n)
+     B:606  invis = VMV.nomina_invisible_al_censo()
+     B:607  w("   nomina_invisible_al_censo(): %d" % len(invis))
+     B:608  malas = VMV.guarda_del_sujeto_congelado()
+     B:609  w("   guarda_del_sujeto_congelado(): %d entradas sin congelar" % len(malas))
+     B:610  for nombre, veredicto, vive in malas:
+     B:611  w("      SUJETO SIN CONGELAR: %-46s %s" % (nombre, veredicto))
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:75  "scripts/loop/cerrar_reporte.py",
+     A:76  "scripts/loop/vuelta175_correr_bateria.py",
+     A:78  "scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py",
+     A:79  "scripts/loop/vuelta174_tarea1b_mutacion_esqueleto.py",
+     A:80  "scripts/loop/sujeto_congelado_de_git.py",
+     A:90  "docs/loop/reportes/REPORTE_V180.md",
+     A:137  w("regimen: VUELTA DE BATERIA, Y NO LLEVA NADA MAS (AUDITOR.md 6.1). DOS")
+     A:138  w("         sub-tareas por la adjudicacion 6.8 del acta 180, la 1 BLOQUEANTE.")
+     A:139  w("         El tope vuelve a cinco en la NNN.")
+     A:297  w("=== H.5 LA NOMINA Y EL CENSO, RECOMPUTADOS Y CON SU CORTE ===")
+     A:298  w("(el encargo dice 108 entradas de nomina, censo 168 y fuera 60, medido por el")
+     A:299  w(" auditor al cierre de la 180. NO SE COPIA NINGUNA: se llaman las funciones")
+     A:403  ACTA = os.path.join(LOOP, "ACTA_AUDITOR.md")
+     A:404  t_acta = io.open(ACTA, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     A:405  l_acta = t_acta.split(NL)
+     A:406  w("   docs/loop/ACTA_AUDITOR.md -> %d lineas | disco %d bytes | LF %d bytes"
+     A:407  % (len(l_acta), os.path.getsize(ACTA), len(t_acta.encode("utf-8"))))
+     A:408  for i, l in enumerate(l_acta, 1):
+     A:409  if l.startswith("# ACTA DEL AUDITOR, VUELTA 180"):
+     A:410  w("   CABECERA DEL ACTA 180 en la LINEA %d: %s" % (i, l.strip()[:120]))
+     A:411  for aguja in ("## 5. LA CAIDA DEL EJECUTOR", "## 6. LAS ADJUDICACIONES",
+     A:412  "**6.1 ", "**6.2 ", "**6.3 ", "**6.4 ", "**6.5 ", "**6.6 ",
+     A:413  "**6.7 ", "**6.8 ", "## 8. LA METRICA DE CREDITO",
+     A:414  "## 10. LA CADENCIA Y EL TOPE", "## 11. PARADA"):
+     A:416  w("   %-34s -> lineas %s"
+     A:417  % (repr(aguja), ", ".join(str(x) for x in hits) or "(ninguna)"))
+     A:420  w("=== H.7 TAREA 2: LAS BATERIAS VIEJAS Y SU RELOJ, CONTADAS DE SU DIRECTORIO ===")
+     A:421  w("(el grano del tope de 10 minutos se mide EN ESTA VUELTA con el reloj de ESTA")
+     A:422  w(" corrida. Aqui solo se deja el CONTRASTE de lo que las corridas viejas")
+     A:423  w(" midieron, leido de sus propios ficheros con reloj_de_la_corrida())")
+     A:449  w("   tamano_por_minutos sobre el reloj VACIO (el por defecto declarado): %s"
+     A:451  w("EL REGISTRO DEL SUJETO CONGELADO, CONTADO DE SU FICHERO Y NO TECLEADO:")
+     B:72  "scripts/loop/cerrar_reporte.py",
+     B:73  "scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py",
+     B:74  "scripts/loop/aislador_de_ciega.py",
+     B:75  "scripts/loop/serie_de_registros.py",
+     B:78  "scripts/loop/verificar_apertura_sellada.py",
+     B:88  "docs/loop/reportes/REPORTE_VNNN.md",
+     B:89  "docs/plan/08_VERIFICACION.md",
+     B:90  "docs/PENDIENTES.md",
+     B:91  "docs/plan/CORRECCIONES_A_APLICAR.md",
+     B:92  "docs/loop/paradas/2026-09-05-cola-post-fusion-DECISION.md",
+     B:144  
+     B:145  
+     B:156  
+     B:157  
+     B:176  
+     B:177  
+     B:195  w("         MEDIDO. CINCO sub-tareas, que es el tope que el acta 180 en su")
+     B:196  w("         6.8 devolvia a esta vuelta con estas palabras: El tope vuelve a")
+     B:197  w("         cinco en la NNN.")
+     B:355  w("=== H.5 TAREA 1.a: LA SERIE DE REGISTROS Y EL ACTA NNN, LOCALIZADAS ===")
+     B:356  w("(no se teclea ningun numero de registro: se llama a serie_de_registros.py y")
+     B:357  w(" se imprime lo que devuelva. La cabecera del acta se busca en su fichero)")
+     B:358  ACTA = os.path.join(LOOP, "ACTA_AUDITOR.md")
+     B:359  t_acta = io.open(ACTA, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:360  l_acta = t_acta.split(NL)
+     B:361  w("docs/loop/ACTA_AUDITOR.md -> %d lineas | disco %d bytes | LF %d bytes"
+     B:362  % (len(l_acta), os.path.getsize(ACTA), len(t_acta.encode("utf-8"))))
+     B:363  for i, l in enumerate(l_acta, 1):
+     B:364  if l.startswith("# ACTA DEL AUDITOR, VUELTA 18"):
+     B:365  w("   CABECERA en la LINEA %d: %s" % (i, l.strip()[:120]))
+     B:374  "## 7. ", "## 8. ", "## 9. ", "## 10. ", "## 11. ",
+     B:375  "**7.1 ", "**7.2 ", "**7.3 ", "**7.4 ", "**7.5 "):
+     B:376  hits = [i for i, l in enumerate(l_acta, 1)
+     B:378  w("   %-10s -> lineas %s"
+     B:379  % (repr(aguja), ", ".join(str(x) for x in hits) or "(ninguna)"))
+     B:398  w("=== H.6 TAREA 1.b: LOS DOS PENDIENTES DEL ACTA 180, MEDIDOS EN EL CODIGO ===")
+     B:485  
+     B:509  
+     B:562  w("")
+     B:563  
+     B:564  w("=== H.10 TAREA 5: LAS BATERIAS Y SUS TRAMOS, CONTADAS DE SU DIRECTORIO ===")
+     B:576  w("EL LANZADOR POR TRAMOS DE LA 176, QUE ES EL PRECEDENTE QUE LA DECISION CITA:")
+     B:612  w("EL REGISTRO DEL SUJETO CONGELADO, CONTADO DE SU FICHERO:")
+
+
+FIN
