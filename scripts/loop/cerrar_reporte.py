@@ -223,6 +223,50 @@ VENTANA_CITA = 120
 # pedirla por escrito y queda escrita en el reporte.
 MARCA_CORRECCION = "CORRECCION DECLARADA"
 
+# LA SEPTIMA COMPROBACION, Y ES LA OPERACION DE CODIGO DE LA SEGUNDA ESCALADA
+# (vuelta 183, TAREA 1.c). `AUDITOR.md` 1.2 vuelve a obligar: la racha de caidas
+# de reporte llego a DOS con el `E.1` del acta 182, y la extension queda
+# AUTOMATICAMENTE ENCARGADA sin esperar decision nueva.
+#
+# EL EJEMPLAR, MEDIDO Y NO SUPUESTO: `docs/loop/reportes/REPORTE_V182.md:46`
+# publica como veredicto de una linea *"[...] Y LAS SEIS CAIDAS QUE COMETI VAN
+# CON SU NOMBRE [...]"*, y su seccion 8 lista SIETE cabeceras `C.1` a `C.7`. El
+# propio cierre de esa seccion dice *"NINGUNA DE LAS SIETE SE TAPA"*. O sea: el
+# reporte se contradice consigo mismo en la unica linea que un lector apurado va
+# a leer, y ninguna guarda lo vio porque el veredicto es LO ULTIMO que se teclea
+# y no salia de ningun tallador.
+#
+# LA FIGURA ES LA DEL TALLADOR DEL 26 AGO 2026
+# (`paradas/2026-08-26-racha-hash-apertura-DECISION.md`): LO QUE SE TECLEA SE
+# COTEJA CONTRA LO QUE SE PUEDE CONTAR. El veredicto sigue siendo prosa del
+# ejecutor (no se talla, porque es un juicio y no una celda), pero sus NUMERALES
+# se cuentan contra el cuerpo, y si no calzan EL CIERRE NO ESCRIBE NADA.
+#
+# LOS NUMERALES SE LEEN TAMBIEN ESCRITOS CON LETRA, que es como el veredicto los
+# escribe siempre: sin esto la guarda no morderia en el unico caso que la trae.
+PALABRA_A_NUMERO = {
+    "cero": 0, "un": 1, "una": 1, "dos": 2, "tres": 3, "cuatro": 4, "cinco": 5,
+    "seis": 6, "siete": 7, "ocho": 8, "nueve": 9, "diez": 10, "once": 11,
+    "doce": 12, "trece": 13, "catorce": 14, "quince": 15,
+}
+# LAS DOS ESPECIES QUE EL CUERPO PERMITE CONTAR HOY, y se dice "hoy" a proposito:
+# el encargo pide "como minimo" estas dos, y anadir una tercera es anadir una
+# entrada aqui mas su contador, no reescribir la guarda.
+SUSTANTIVO_A_ESPECIE = {
+    "caida": "caidas", "caidas": "caidas",
+    "tarea": "tareas", "tareas": "tareas",
+}
+PATRON_NUMERAL = re.compile(
+    r"(?<![\w.,])(\d+|%s)\s+(caidas?|tareas?)\b"
+    % "|".join(sorted(PALABRA_A_NUMERO, key=len, reverse=True)),
+    re.IGNORECASE)
+# LA CABECERA DE UNA CAIDA PROPIA. El acta 182 y el reporte 182 la escriben como
+# ``**`C.1`. TITULO``; se admite sin backticks por si algun reporte los deja.
+PATRON_CAIDA_PROPIA = re.compile(r"^\s*\*{0,2}`?C\.(\d+)`?\s*[.,]")
+CAB_8 = "## 8."
+MARCA_TABLA_ABRE = "<!-- TABLA DE TAREAS -->"
+MARCA_TABLA_CIERRA = "<!-- FIN TABLA DE TAREAS -->"
+
 
 def sha(t):
     return hashlib.sha256(t.replace(chr(13) + NL, NL).encode("utf-8")).hexdigest()
@@ -314,6 +358,150 @@ def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta):
                            % (vuelta, len(lineas_bateria)))
     return "HUECO", ("la bateria de la vuelta %d no corrio: su fichero no existe o "
                      "esta vacio" % vuelta)
+
+
+def caidas_propias_del_cuerpo(cuerpo):
+    """LAS CAIDAS PROPIAS QUE EL CUERPO PERMITE CONTAR: los numerales distintos
+    de las cabeceras `C.n` DENTRO DE LA SECCION 8. Devuelve el conjunto de
+    numeros, o None si el cuerpo no trae seccion 8 y por tanto no hay nada que
+    contar.
+
+    SOLO LA SECCION 8, y no el documento entero, porque un reporte cita `C.n`
+    ajenas en su prosa (las del acta del auditor, por ejemplo) y contarlas seria
+    fabricar un rojo. PURA: recibe el texto y no lee nada."""
+    lineas = cuerpo.split(NL)
+    inicio = None
+    for i, l in enumerate(lineas):
+        if l.startswith(CAB_8):
+            inicio = i
+            break
+    if inicio is None:
+        return None
+    fin = len(lineas)
+    for i in range(inicio + 1, len(lineas)):
+        if lineas[i].startswith("## "):
+            fin = i
+            break
+    return set(int(m.group(1)) for m in
+               (PATRON_CAIDA_PROPIA.match(l) for l in lineas[inicio:fin]) if m)
+
+
+def tareas_de_la_tabla(cuerpo):
+    """LAS FILAS DE LA TABLA DE TAREAS, contadas entre sus dos marcas y sin la
+    cabecera ni el separador. Devuelve un entero, o None si no hay tabla que
+    contar.
+
+    UNA FILA ES UNA FILA CON UN NUMERO DE TAREA DENTRO, y no cualquier linea que
+    empiece por barra: asi la cabecera (`| tarea | que encarga |`) y el separador
+    (`|---|---|`) quedan fuera por lo que son y no por su posicion. PURA."""
+    if MARCA_TABLA_ABRE not in cuerpo or MARCA_TABLA_CIERRA not in cuerpo:
+        return None
+    dentro = cuerpo.split(MARCA_TABLA_ABRE, 1)[1].split(MARCA_TABLA_CIERRA, 1)[0]
+    return len([l for l in dentro.split(NL)
+                if re.match(r"^\|\s*\*{0,2}TAREA\s+\d+", l.strip(), re.IGNORECASE)])
+
+
+def numerales_del_veredicto(veredicto):
+    """LOS NUMERALES QUE EL VEREDICTO PUBLICA, con su especie. Devuelve
+    [(texto_del_numeral, valor, especie)], con la especie en `caidas` o `tareas`.
+
+    LOS NUMERALES SE LEEN EN CIFRA Y EN LETRA, y la letra importa mas: el
+    veredicto de una linea los escribe casi siempre con palabras (*"LAS SEIS
+    CAIDAS"*), y una guarda que solo viera digitos no habria mordido en el unico
+    caso que la trae. PURA."""
+    hallados = []
+    for m in PATRON_NUMERAL.finditer(veredicto):
+        crudo, sust = m.group(1), m.group(2).lower()
+        valor = (int(crudo) if crudo.isdigit()
+                 else PALABRA_A_NUMERO[crudo.lower()])
+        hallados.append((crudo, valor, SUSTANTIVO_A_ESPECIE[sust]))
+    return hallados
+
+
+def numerales_del_veredicto_que_no_calzan(veredicto, cuerpo):
+    """LA GUARDA DE LA ESCALADA (vuelta 183, TAREA 1.c). Devuelve
+    (motivos, cuentas, hallados): `motivos` VACIA si todo calza.
+
+    QUE COTEJA: cada numeral que el veredicto publique de una especie que el
+    cuerpo permite contar, contra esa cuenta. Hoy son dos, las que el encargo
+    nombra como minimo: las CAIDAS PROPIAS (cabeceras `C.n` de la seccion 8) y
+    las TAREAS CERRADAS (filas de la tabla de tareas).
+
+    Y CAE EN ROJO TAMBIEN CUANDO EL VEREDICTO PUBLICA UNA CIFRA QUE EL CUERPO NO
+    PERMITE CONTAR. Un veredicto que dice "las siete caidas" sobre un cuerpo sin
+    seccion 8 no es un veredicto verde: es una cifra sin fichero que la sostenga,
+    que es exactamente lo que `EJECUTOR.md` 1 prohibe.
+
+    LO QUE NO HACE, Y SE DICE PARA QUE NADIE LO ESPERE: no talla el veredicto. El
+    veredicto es un juicio del ejecutor y se sigue escribiendo a mano; lo que
+    deja de ser libre son sus NUMEROS. Un veredicto que necesite nombrar una
+    cuenta AJENA (las caidas de otra vuelta, por ejemplo) no puede escribirla
+    como "N caidas" a secas, y eso es a proposito: en la unica linea que se llama
+    a si misma veredicto, "seis caidas" significa las de este reporte.
+
+    PURA: recibe los dos textos y no lee ni escribe nada. Por eso su caso
+    positivo por mutacion la puede tumbar sin tocar el repo."""
+    caidas = caidas_propias_del_cuerpo(cuerpo)
+    tareas = tareas_de_la_tabla(cuerpo)
+    cuentas = {"caidas": (len(caidas) if caidas is not None else None),
+               "tareas": tareas}
+    hallados = numerales_del_veredicto(veredicto)
+    motivos = []
+    for crudo, valor, especie in hallados:
+        cuenta = cuentas.get(especie)
+        if cuenta is None:
+            motivos.append(
+                "el veredicto publica %r (%d %s) y EL CUERPO NO TRAE NADA QUE "
+                "CONTAR de esa especie: una cifra sin fichero que la sostenga no "
+                "cierra un reporte" % (crudo, valor, especie))
+        elif valor != cuenta:
+            motivos.append(
+                "el veredicto publica %r (%d %s) y el cuerpo, CONTADO, dice %d"
+                % (crudo, valor, especie, cuenta))
+    return motivos, cuentas, hallados
+
+
+def frase_del_caso_del_hueco(existe, tam, tam_lf):
+    """CUAL DE LOS DOS CASOS ES EL HUECO, DICHO Y NO CONFUNDIDO (vuelta 183,
+    TAREA 1.d; adjudicacion 7.1 del acta 182, por extension citada del punto 3 de
+    `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`, que NOMBRA LOS DOS
+    CASOS Y NO LOS CONFUNDE).
+
+    LO QUE PASABA ANTES NO SE BORRA, SE CUENTA: `main()` hacia
+    `tam = os.path.getsize(ruta_bat) if existe else -1` y la seccion publicaba
+    `max(tam, 0)`, asi que UN FICHERO AUSENTE SALIA COMO "0 bytes medidos con
+    os.path.getsize". No lo era: ese cero salia de un `max`. El propio
+    instrumento ya imprimia `NO EXISTE` en su consola, o sea que la informacion
+    existia y se perdia al escribirla.
+
+    DEVUELVE EL PARRAFO, Y SIEMPRE CON UNA CIFRA DE BYTES DENTRO, porque la
+    pieza (2) del hueco declarado sigue exigiendo bytes medidos y esta funcion NO
+    afloja ninguna de las tres piezas: solo dice de donde sale el cero.
+
+    PURA: recibe tres valores y no toca el disco."""
+    if not existe:
+        return (
+            "**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`" + NL +
+            "devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no" + NL +
+            "hay ninguna medicion suya que publicar. Lo que esta seccion recibio de" + NL +
+            "bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes" + NL +
+            "normalizados a LF**, **y ese cero sale de que no hay fichero, no de una" + NL +
+            "medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026" + NL +
+            "en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos" + NL +
+            "casos y no los confunde.")
+    if tam == 0:
+        return (
+            "**CUAL DE LOS DOS CASOS ES: EL FICHERO EXISTE Y MIDE CERO.**" + NL +
+            "`os.path.exists` devuelve SI y `os.path.getsize` **si corrio sobre el**:" + NL +
+            "**0 bytes en disco y 0 bytes normalizados a LF**. **El cero es una" + NL +
+            "medicion, no el resultado de un `max`**, y por eso se puede citar. Es el" + NL +
+            "caso que la bateria del ejecutor dio en las vueltas 171, 172 y 173, y que" + NL +
+            "por la letra del 5 sep NO CUENTA COMO HECHA.")
+    return (
+        "**CUAL DE LOS DOS CASOS ES: NINGUNO DE LOS DOS.** El fichero **existe y" + NL +
+        "tiene cuerpo**: `os.path.getsize` mide **%d bytes en disco y %d bytes" % (tam, tam_lf) + NL +
+        "normalizados a LF**. La rama del hueco se tomo por otro motivo, que" + NL +
+        "`rama_de_la_seccion9()` deja escrito arriba, y no por falta de bytes.")
 
 
 def hueco_declarado_que_falta(seccion9, vuelta):
@@ -720,6 +908,30 @@ def main():
                          "HUECO DECLARADO Y MEDIDO con --hueco-atribucion." % V)
     print("")
 
+    print("B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO")
+    print("     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)")
+    # EL CUERPO QUE EL VEREDICTO DESCRIBE SON LAS DOS MITADES JUNTAS: la tabla de
+    # tareas vive en el esqueleto que ya esta en el arbol, y la seccion 8 con sus
+    # `C.n` vive en el borrador del cierre. Cotejar contra una sola mitad seria
+    # no poder contar la otra.
+    cuerpo_juzgado = texto + NL + cuerpo
+    motivos_ver, cuentas_ver, hallados_ver = numerales_del_veredicto_que_no_calzan(
+        a.veredicto, cuerpo_juzgado)
+    print("   el veredicto, tal como se paso: %r" % a.veredicto.strip()[:120])
+    print("   CIFRA numerales hallados en el veredicto: %d" % len(hallados_ver))
+    for crudo, valor, especie in hallados_ver:
+        print("      %-10r -> %d %s" % (crudo, valor, especie))
+    print("   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:")
+    for especie in sorted(cuentas_ver):
+        v = cuentas_ver[especie]
+        print("      %-8s -> %s"
+              % (especie, v if v is not None else "(el cuerpo no permite contarlo)"))
+    print("   CIFRA numerales que NO calzan: %d" % len(motivos_ver))
+    for m in motivos_ver:
+        print("      " + m)
+    rojos.extend(motivos_ver)
+    print("")
+
     if rojos:
         print("ROJO, %d motivo(s), y NO se escribe nada:" % len(rojos))
         for r in rojos:
@@ -769,12 +981,13 @@ def main():
             "**%s. LA BATERIA DE LA VUELTA %d NO CORRIO, Y EL HUECO SE DECLARA EN VEZ"
             % (MARCA_HUECO, V) + NL +
             "DE RELLENARSE CON OTRA COSA.**" + NL + NL +
-            "**EL NOMBRE DEL FICHERO:** `%s`." % a.bateria + NL +
-            "**SUS BYTES, MEDIDOS EN ESTA CORRIDA** con `os.path.getsize` por" + NL +
-            "`scripts/loop/cerrar_reporte.py`, no tecleados, y POR LAS DOS" + NL +
-            "CONVENCIONES mientras la del fundador no este fijada:" + NL +
-            "**%d bytes en disco y %d bytes normalizados a LF**."
-            % (max(tam, 0), max(tam_lf, 0)) + NL + NL +
+            "**EL NOMBRE DEL FICHERO:** `%s`." % a.bateria + NL + NL +
+            # LA MEDICION, Y AHORA DICE CUAL DE LOS DOS CASOS ES (vuelta 183,
+            # TAREA 1.d; adjudicacion 7.1 del acta 182). La frase la arma
+            # `frase_del_caso_del_hueco()`, que es PURA y tiene arnes propio, y
+            # sigue publicando las DOS convenciones de bytes mientras la del
+            # fundador no este fijada.
+            frase_del_caso_del_hueco(existe, tam, tam_lf) + NL + NL +
             "%s %s" % (MARCA_ATRIBUCION, atribucion) + NL + NL +
             "**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este" + NL +
             "instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b" + NL +

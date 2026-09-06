@@ -1,0 +1,128 @@
+==============================================================================
+ARNES DE LA VUELTA 183, TAREAS 1.c Y 1.d
+==============================================================================
+
+A) EL CASO REAL, LEIDO DEL REPORTE ARCHIVADO DE LA 182 Y NO TECLEADO
+   docs/loop/reportes/REPORTE_V182.md -> 587 lineas | 40726 bytes en disco y 40726 bytes normalizados a LF
+   sha256 del ancla, en disco y normalizado a LF: 8cf08789f5f125c7 y 8cf08789f5f125c7
+   CIFRA lineas que se llaman a si mismas veredicto: 1
+   EL VEREDICTO, EN LA LINEA 46, LEIDO DEL FICHERO:
+      | **EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS CERRARON, EL 2.464 ENTRA A LA COLA COMO UNICA D CON LE
+      | SION EXACTA CONFIRMADA, Y LAS SEIS CAIDAS QUE COMETI VAN CON SU NOMBRE Y SU SALIDA VIEJA GUARDADA.**
+   el veredicto DESENVUELTO, que es como cerrar_reporte.py lo
+   recibe por --veredicto: 169 caracteres
+
+B) LOS CONTADORES SOBRE EL CUERPO REAL, CORRIDOS Y NO RECORDADOS
+   caidas_propias_del_cuerpo() -> [1, 2, 3, 4, 5, 6, 7]
+   CIFRA caidas propias contadas de la seccion 8: 7
+   tareas_de_la_tabla() -> 5
+   LAS CABECERAS `C.n`, CON SU LINEA EN EL FICHERO:
+      linea 509   **`C.1`. CITE COMO PALABRAS DEL ACTA 180 UNA FRASE QUE ES MIA.** Escribi, en el
+      linea 518   **`C.2`. EL BLOQUE DE APERTURA HEREDO DEL CLON TRES LINEAS FALSAS.** Decia *"VUELTA
+      linea 524   **`C.3`. ADIVINE DOS CLAVES DEL GRAFO.** `G.get("nodes")` cuando el fichero las
+      linea 531   **`C.4`. EL FECHADO DE LA TAREA 3 BUSCABA EL PASO EN EL BLOB ENTERO.** Fechaba el
+      linea 538   **`C.5`. PUBLIQUE DOS CIFRAS DE BYTES QUE NO CONTE DE SU FICHERO.** La seccion de
+      linea 545   **`C.6`. MI PRIMER REMEDIO DEL `E.1` ERA INCOMPLETO Y LO DIJO SU PROPIO ARNES.** Lo
+      linea 549   **`C.7`. PUBLIQUE 27 CIFRAS DE BYTES SIN SU PAREJA.** `cerrar_reporte.py` cierra el
+
+C) LA GUARDA SOBRE EL CASO REAL: TIENE QUE CAER
+   numerales hallados en el veredicto real: 2
+      'CINCO'    -> 5 tareas
+      'SEIS'     -> 6 caidas
+   cuentas del cuerpo: {'caidas': 7, 'tareas': 5}
+   CIFRA motivos: 1
+      el veredicto publica 'SEIS' (6 caidas) y el cuerpo, CONTADO, dice 7
+   el veredicto real de la 182 CAE                      PASA  CAE
+
+D) EL MISMO VEREDICTO CON EL NUMERAL BUENO: TIENE QUE PASAR
+   la cuenta del cuerpo es 7, o sea 'siete'
+   el veredicto arreglado, 170 caracteres, difiere del real: SI
+   CIFRA motivos con el numeral bueno: 0
+   el veredicto con el numeral bueno PASA               PASA  CAE
+
+E) LOS CASOS FABRICADOS, PARA TUMBAR LA GUARDA UNO A UNO
+   cinco tareas y siete caidas sobre 5 y 7              PASA  CAE
+   cinco tareas y SEIS caidas sobre 5 y 7               PASA  CAE
+   DOS tareas y siete caidas sobre 5 y 7                PASA  CAE
+   los mismos numerales en CIFRA y no en letra          PASA  CAE
+   en cifra, y la de caidas mal                         PASA  CAE
+   un numero que NO va seguido de caidas ni tareas no se cuenta PASA  CAE
+   el singular tambien se lee: UNA TAREA sobre 5        PASA  CAE
+   CERO tambien se lee, y sobre 7 no calza              PASA  CAE
+
+F) EL CUERPO QUE NO PERMITE CONTAR: UNA CIFRA SIN FICHERO NO CIERRA
+   cuentas sobre un cuerpo SIN seccion 8: {'caidas': None, 'tareas': 5}
+   sin seccion 8, el numeral de caidas CAE              PASA  CAE
+   cuentas sobre un cuerpo SIN tabla de tareas: {'caidas': 7, 'tareas': None}
+   sin tabla, el numeral de tareas CAE                  PASA  CAE
+   y un veredicto SIN numerales sobre ese mismo cuerpo no inventa rojos:
+   un veredicto sin numerales no cae                    PASA  CAE
+
+G) LOS CONTADORES, TUMBADOS UNO A UNO SOBRE CUERPOS FABRICADOS
+   cuerpo con 7 caidas -> el contador dice              PASA  CAE
+   cuerpo con 5 tareas -> el contador dice              PASA  CAE
+   cuerpo con 1 caidas -> el contador dice              PASA  CAE
+   cuerpo con 1 tareas -> el contador dice              PASA  CAE
+   cuerpo con 0 caidas -> el contador dice              PASA  CAE
+   cuerpo con 2 tareas -> el contador dice              PASA  CAE
+   cuerpo con 12 caidas -> el contador dice             PASA  CAE
+   cuerpo con 9 tareas -> el contador dice              PASA  CAE
+   Y LA CABECERA Y EL SEPARADOR DE LA TABLA NO CUENTAN COMO FILAS: el
+   cuerpo de 2 tareas tiene 4 lineas que empiezan por barra y el contador
+   dice 2.
+   lineas que empiezan por barra                        PASA  CAE
+   filas de tarea contadas                              PASA  CAE
+   Y UNA `C.n` CITADA FUERA DE LA SECCION 8 NO SE CUENTA: se le mete una
+   cita en la seccion 7 y el contador no se mueve.
+   con una `C.n` ajena en la seccion 7                  PASA  CAE
+
+H) TAREA 1.d: LA FRASE DEL HUECO DICE CUAL DE LOS DOS CASOS ES
+   --- NO EXISTE ---
+      | **CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`
+      | devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no
+      | hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
+      | bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes
+      | normalizados a LF**, **y ese cero sale de que no hay fichero, no de una
+      | medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026
+      | en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos
+      | casos y no los confunde.
+   --- CERO BYTES ---
+      | **CUAL DE LOS DOS CASOS ES: EL FICHERO EXISTE Y MIDE CERO.**
+      | `os.path.exists` devuelve SI y `os.path.getsize` **si corrio sobre el**:
+      | **0 bytes en disco y 0 bytes normalizados a LF**. **El cero es una
+      | medicion, no el resultado de un `max`**, y por eso se puede citar. Es el
+      | caso que la bateria del ejecutor dio en las vueltas 171, 172 y 173, y que
+      | por la letra del 5 sep NO CUENTA COMO HECHA.
+   --- CON CUERPO ---
+      | **CUAL DE LOS DOS CASOS ES: NINGUNO DE LOS DOS.** El fichero **existe y
+      | tiene cuerpo**: `os.path.getsize` mide **1234 bytes en disco y 1230 bytes
+      | normalizados a LF**. La rama del hueco se tomo por otro motivo, que
+      | `rama_de_la_seccion9()` deja escrito arriba, y no por falta de bytes.
+   la del fichero ausente dice EL FICHERO NO EXISTE     PASA  CAE
+   la del ausente NO dice que getsize lo midiera        PASA  CAE
+   la del cero dice EXISTE Y MIDE CERO                  PASA  CAE
+   la del cero dice que el cero es una medicion         PASA  CAE
+   las dos son DISTINTAS, que es el defecto que se corrige PASA  CAE
+   Y LAS TRES SIGUEN TRAYENDO SUS BYTES, que es la pieza (2) del hueco y
+   esta operacion no afloja ninguna de las tres:
+   la frase NO EXISTE  trae una cifra de bytes          PASA  CAE
+   la frase CERO BYTES trae una cifra de bytes          PASA  CAE
+   la frase CON CUERPO trae una cifra de bytes          PASA  CAE
+   Y NINGUNA DEJA UNA CIFRA DE BYTES SIN SU PAREJA, que es la quinta
+   comprobacion de este mismo instrumento:
+   la frase NO EXISTE  sin cifras huerfanas             PASA  CAE
+   la frase CERO BYTES sin cifras huerfanas             PASA  CAE
+   la frase CON CUERPO sin cifras huerfanas             PASA  CAE
+
+I) EL COTEJO CON EL DEFECTO VIEJO, QUE NO SE BORRA SINO QUE SE CUENTA
+   Lo que la vuelta 182 publicaba era `max(tam, 0)` con `tam = -1` cuando
+   el fichero no existia, o sea el MISMO CERO en los dos casos:
+      fichero ausente -> max(-1, 0) = 0
+      fichero de cero -> max( 0, 0) = 0
+   el defecto viejo daba el mismo numero en los dos casos PASA  CAE
+   y las frases nuevas ya no: son dos textos distintos.
+
+==============================================================================
+CIFRA fallos: 0
+VEREDICTO: VERDE
+==============================================================================

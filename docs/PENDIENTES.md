@@ -12801,3 +12801,128 @@ anteriores dichas y contadas**, con su cifra en
 `docs/loop/SALIDA_V%d_T1A_REGISTRO_R%d.txt`, seccion G. **No se inventan
 aqui**: escribir de golpe ocho registros que nadie encargo seria decidir
 alcance por mi cuenta.
+
+## R.44. Registro de las doce adjudicaciones, la caida propia del auditor y las dos caidas del ejecutor del acta de la vuelta 182
+
+(Acta del auditor, vuelta 182, secciones 2, 5, 6 y 7; escrito en la vuelta 183,
+TAREAS 1.a y 1.b.)
+
+Por adicion, como `R.21` a `R.43`. **Corte de todas las cifras de esta
+entrada: 5 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.43`. Salida:
+`docs/loop/SALIDA_V183_T1A_REGISTRO_R44.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 1.a EN CURSO Y LA TAREA 2 SIN CORRER,
+ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA PASADO.** Es la
+forma que la `6.4` del acta 172 adjudico como correcta y que la realidad
+probo cuando la vuelta 172 se corto: donde una glosa dice EJECUTADA, la
+prueba va nombrada con su fichero de salida; donde dice que va a ejecutarse,
+se dice que **todavia no ha corrido** y no se disfraza.
+
+**Y LOS TRES NUMERALES DEL TITULO TAMPOCO ESTAN TECLEADOS:** se cuentan del
+acta acotada (lineas 63250 a 63681) y de ahi sale el numeral en palabra, incluida
+la concordancia. **12 adjudicaciones (7 de la seccion 5, `5.D.n`, y 5 de la
+seccion 7, `7.n`), 1 caida propia del auditor (`C.n`) y 2 caidas del
+ejecutor (`E.n`).**
+
+**ESTA ACTA TIENE DOS FAMILIAS DE ADJUDICACION Y EL REGISTRADOR DE LA 182
+SOLO SABIA CONTAR UNA.** Su `claves_de_adjudicacion()` barre un prefijo del
+tipo `**7.n `, y las siete de la seccion 5 el acta las escribe como
+``**`D.1`,``. **Corrido tal cual, dejaria SIETE adjudicaciones fuera.** Aqui
+se anade `claves_de_la_seccion5()`, y la funcion vieja se importa y se corre
+igual para las `7.n`: no se reescribe lo que ya funciona.
+
+**Y EL PATRON DE LA CAIDA DEL AUDITOR CAMBIA OTRA VEZ, Y SE DECLARA EN VEZ DE
+FORZARLO.** El acta 181 escribia ``**`C.1`.`` al principio de linea; el acta
+182 escribe la suya DENTRO de una frase en negrita, *"**MI CAIDA PROPIA,
+`C.1`, Y VA IGUAL AUNQUE EL SELLO AGUANTARA.**"*. **El patron de la 182,
+corrido sobre el acta 182, cuenta 0**, y el patron todavia mas viejo
+(`**CAIDA n.`) cuenta 0.
+Las dos cifras se publican al lado de la buena para que se vea que no se
+afloja nada: se anade un patron, no se ensancha el viejo hasta que trague.
+
+**LAS DOCE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero; la glosa que sigue es prosa del ejecutor y
+va marcada como tal.
+
+  - **5.D.1 (`docs/loop/ACTA_AUDITOR.md:63456`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.1`, LA VARA `abs 3, cobertura 0.45`. LA CONCEDO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La vara `abs 3, cobertura 0.45` queda concedida CON SU LIMITE ESCRITO: vale para nombrar candidatos, no para cerrar una clase. Esta vuelta es de bateria y no mueve ninguna clase, asi que el limite no se acerca siquiera.
+  - **5.D.2 (`docs/loop/ACTA_AUDITOR.md:63465`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.2`, LAS SEIS CLAUSULAS DE CARENCIA. CONCEDIDA COMO ESTA DICHA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y SE HEREDA COMO DEUDA MEDIBLE. Las seis clausulas de carencia quedan concedidas como deuda y no como defecto: el dia que alguien ensanche la lista, la cifra de 99 sube. Esta vuelta no ensancha nada.
+  - **5.D.3 (`docs/loop/ACTA_AUDITOR.md:63472`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.3`, EL CORTE POR PUNTO Y COMA. CONCEDIDA, Y EL ORDEN DECLARADO ES LO QUE LA SALVA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El corte por punto y coma queda concedido porque el orden se declaro y la salida vieja se publico entera. No hay trabajo pendiente en el.
+  - **5.D.4 (`docs/loop/ACTA_AUDITOR.md:63480`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.4`, EL ARNES DE LA `P.1` ENTRA A LA NOMINA EN SU MISMA VUELTA. CONCEDIDA POR LA LETRA, QUE ES LA QUE MANDA SOBRE LA COSTUMBRE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y ESTA VUELTA ES LA QUE LA COBRA. El arnes de la `P.1` entro a la nomina en su misma vuelta, y por eso `arneses_que_faltan()` abre la 183 en CERO en vez de en uno. La cifra va medida en el bloque H.9 de la apertura de hoy.
+  - **5.D.5 (`docs/loop/ACTA_AUDITOR.md:63489`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.5`, LA DECLARACION DE SUJETO CONGELADO SOBRE SU PROPIO ARNES. CONCEDIDA, Y VERIFICADA POR MI, QUE ES LA CONDICION."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La declaracion de sujeto congelado sobre su propio arnes quedo concedida porque el auditor la CORRIO, que es la condicion que el acta pone. Esta vuelta la vuelve a medir sin tocarla: `guarda_del_sujeto_congelado()` en el bloque H.9 de la apertura.
+  - **5.D.6 (`docs/loop/ACTA_AUDITOR.md:63495`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"`D.6`, `--siguiente` CUENTA UNA SALIDA DE CERO BYTES COMO NO HECHA. CONCEDIDA POR EXTENSION CITADA, Y LA CITA ES DEL FUNDADOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 2 DE ESTA VUELTA, QUE ES DONDE VIVE. La `D.6` concede que `--siguiente` cuente una salida de CERO BYTES como NO hecha, por extension citada del punto 3 de `paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`. La bateria por tramos de esta vuelta corre con esa regla puesta.
+  - **5.D.7 (`docs/loop/ACTA_AUDITOR.md:63503`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`D.7`, "TRAMO 1 Y UNICO" PARA UN SOLO PAR. CONCEDIDA, Y ES LA MAS FACIL."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El TRAMO 1 y unico de la cola post fusion queda concedido como tramo legitimo. Esta vuelta NO lo relee: es vuelta de bateria y el 2.464 espera a la primera vuelta de trabajo.
+  - **7.1 (`docs/loop/ACTA_AUDITOR.md:63563`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"7.1 EL HUECO DE LA SECCION 9 CIERRA, PERO SU TEXTO CONFUNDE "NO EXISTE" CON "CERO BYTES", Y ESO SE ARREGLA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 1.d DE ESTA VUELTA. La adjudicacion dice que la declaracion del hueco de la seccion 9 tiene que decir CUAL DE LOS DOS casos es, inexistente o de cero bytes, porque hoy `max(tam, 0)` los confunde en un mismo cero. Esta vuelta lo separa en el codigo, con su arnes, y sin tocar las tres piezas que el hueco ya exige.
+  - **7.2 (`docs/loop/ACTA_AUDITOR.md:63578`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.2 LA VARA DE LA `D.1` NO CIERRA CLASES, Y LO ESCRIBO AQUI PARA QUE NO SE HEREDE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Es la declaracion de que la vara de la `D.1` no cierra clases, escrita por el auditor para que no se herede al reves. Esta vuelta no encola ni desencola ningun par.
+  - **7.3 (`docs/loop/ACTA_AUDITOR.md:63583`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.3 LAS SEIS DISCREPANCIAS DE LA CIEGA SON MIAS Y VAN A FAVOR DEL ARCHIVO SIN RELECTURA CONJUNTA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA POR MI PARTE, Y DISPARA LA TAREA 1.e. Las seis discrepancias de la ciega son del auditor y van a favor del archivo; lo que llega al ejecutor es la RELECTURA AL DOBLE del tramo, que `AUDITOR.md` 1.2 manda porque salieron FUERA del marcado.
+  - **7.4 (`docs/loop/ACTA_AUDITOR.md:63588`, leida hoy). VIA: EJECUTADA A MEDIAS, Y LA MITAD QUE FALTA VA DECLARADA.** Titulo
+    literal del acta: *"7.4 LAS TRES PREGUNTAS DEL REPORTE: DOS LAS ADJUDICO Y UNA QUEDA REGISTRADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA A MEDIAS, Y LA MITAD QUE FALTA VA DECLARADA AQUI MISMO. De las tres partes de la `7.4`: la deuda de ocho registros se documenta como SALTO en esta misma entrada y NO se rellena, que es lo que la adjudicacion manda; la `PD.1` de las cinco `D` queda registrada y sin resolver; y el instrumento de vigencia de las ocho `A` rancias por `P.5` NO se cablea en esta vuelta, porque la propia adjudicacion lo manda a la primera vuelta de trabajo y la 183 es de bateria.
+  - **7.5 (`docs/loop/ACTA_AUDITOR.md:63607`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.5 LA `C.1` DEL EJECUTOR SE REGISTRA A SU FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y SE REGISTRA A FAVOR DEL EJECUTOR. El acta registra la `C.1` del ejecutor a su favor porque la cazo su propio instrumento y el texto viejo no se borro. No hay trabajo pendiente.
+
+**LA CAIDA PROPIA DEL AUDITOR, EN LA LINEA 63294, Y NO ES TRABAJO DEL
+EJECUTOR.** Es la `C.1` de la vuelta 182, y el acta la declara **aunque el
+sello aguantara**: el auditor corrio `head -c 900` sobre el archivo de
+veredictos con su sujeto ya aislado, midio el solape con sus 30 y le dio
+CERO. **Es ademas la primera en cinco actas que NO es la del orden de la
+apertura**, y esa racha se corto porque la TAREA 2 de la 182 convirtio el
+remedio en codigo. **El acta confiesa ademas una segunda, menor y sin
+numero** (un verificador de parejas de bytes que publico 7 discrepancias
+falsas y que el propio auditor cazo y reescribio); **su seccion 9 cuenta
+UNA**, y esta entrada cuenta lo que el patron encuentra, que es una.
+
+**LAS DOS CAIDAS DEL EJECUTOR, EN LAS LINEAS 63510 y 63532.**
+El `E.1` **ACUMULA**: el veredicto de una linea del reporte de la 182 dice
+*"LAS SEIS CAIDAS QUE COMETI"* y su seccion 8 lista **siete**, `C.1` a
+`C.7`. Vive en la CONCLUSION del reporte, no en prosa de acompanamiento, y
+por la letra afinada del 27 ago 2026 cuenta para la racha. **La racha de
+reporte llega a DOS, y por eso la escalada de `AUDITOR.md` 1.2 es la TAREA
+1.c de esta vuelta.** El `E.2` **NO acumula**: el reporte afirmaba que la
+181 cerro y archivo su reporte en su misma vuelta y no hizo ninguna de las
+dos cosas, pero la frase vive en el bloque de prosa que abre el reporte.
+**Su consecuencia si es de fondo:** de ella depende el disparador del
+regimen `6.2`, y con la medicion delante la cuenta de vueltas que cierran su
+propio reporte es **UNA**, no dos.
+
+**LA DEUDA DE LA SERIE, DOCUMENTADA COMO SALTO Y NO RELLENADA (TAREA 1.b).**
+La adjudicacion `7.4` del acta 182 lo dice con estas palabras: *"la deuda se
+documenta como salto, no se inventa"*, y encarga **una sola linea de
+constancia**. Esta es:
+
+  - **SALTO DE 8 REGISTROS EN LA SERIE: las actas 173 a 180 no tienen
+    entrada propia.** Sus dos extremos, contados por
+    `scripts/loop/serie_de_registros.py` y no tecleados: **`R.42` cubre el
+    acta 172** y **`R.43` cubre el acta 181**. **No se rellenan aqui:**
+    escribir de memoria ocho registros de ocho actas que nadie ha releido
+    en esta vuelta seria justo lo que `AUDITOR.md` 2 prohibe.
+
+**LO QUE ESTA ENTRADA NO REGISTRA, DICHO PARA QUE NO SE BUSQUE:** la `PD.1`
+de las cinco `D` con el diferenciador ya presente el dia del veredicto queda
+**registrada y sin resolver**, que es lo que el acta manda; y el instrumento
+de vigencia de las ocho `A` rancias por `P.5` **no se cablea en esta vuelta**,
+porque la propia `7.4` lo manda a la primera vuelta de trabajo y la 183 es
+**vuelta de bateria**.

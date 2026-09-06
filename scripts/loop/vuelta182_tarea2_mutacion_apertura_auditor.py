@@ -30,6 +30,21 @@ LOS ESCENARIOS, UNO POR CADA PROHIBIDO Y UNO LIMPIO:
   E) tras los tres                 -> NO, y los nombra los tres
   F) sellar de verdad tras tocar   -> ROJO y **NO escribe fichero de sello**
 
+SUJETO CONGELADO, DECLARADO EN LA VUELTA 183 Y MEDIDO, NO AFIRMADO. Este arnes
+no entro en la nomina de la bateria en su propia vuelta, y al abrir la 183
+`arneses_que_faltan()` lo nombraba solo, con la cifra en el bloque H.9 de
+`docs/loop/SALIDA_V183_APERTURA.txt`: *"faltan 1 . FALTA:
+vuelta182_tarea2_mutacion_apertura_auditor.py"*. Al meterlo,
+`guarda_del_sujeto_congelado()` lo clasificaba NO DECIDIBLE, porque trae LAS DOS
+huellas: las de congelado (`tempfile`, `mkdtemp`) y una de sujeto vivo
+(`REPORTE.md`). LA GUARDA NO ADIVINA CUAL MANDA, y hace bien: pide que el propio
+arnes lo declare. AQUI SE DECLARA, Y CON LA MEDICION DELANTE: la unica aparicion
+de `REPORTE.md` fuera de este docstring es UN DATO DENTRO DE UNA TABLA DE
+ESCENARIOS, la linea `("tras abrir REPORTE.md", ["REPORTE.md"], False)`, y este
+fichero NO ABRE `docs/loop/REPORTE.md` en ninguna linea: todo lo que toca lo
+fabrica en un `mkdtemp` y lo retira (`P.16`). El sujeto, por tanto, esta
+congelado.
+
 USO:
   python scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
 """

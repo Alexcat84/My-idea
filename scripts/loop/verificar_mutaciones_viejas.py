@@ -827,6 +827,36 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 108 A 109.
     ("vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py", False),
+    # ------------------------------------------------------------- VUELTA 183
+    # LOS DOS QUE FALTABAN AL ABRIR LA VUELTA DE BATERIA, Y ENTRAN POR LA MISMA
+    # REGLA DE SIEMPRE: UN ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2
+    # acepto que entre EN SU MISMA VUELTA. La nomina NO SE PODA: crece.
+    #
+    # EL PRIMERO NO ES DE ESTA VUELTA Y ESO ES LO QUE IMPORTA. La vuelta 182
+    # escribio `vuelta182_tarea2_mutacion_apertura_auditor.py` en su TAREA 2 y
+    # NO lo metio aqui. La cifra esta medida ANTES de que esta vuelta tocara
+    # nada, en el bloque H.9 de `docs/loop/SALIDA_V183_APERTURA.txt`:
+    # `arneses_que_faltan() HOY: ultima vuelta 180, faltan 1` y su unico nombre
+    # es ese. Con el fuera, TODOS los tramos de esta bateria habrian cerrado en
+    # ROJO por `hay_rojo_al_cierre()`, que es lo contrario de lo que la vuelta de
+    # bateria existe para medir. Su clasificacion era NO DECIDIBLE porque trae
+    # las DOS huellas; la guarda no adivina y pide que el arnes lo declare, y
+    # eso se hizo en su docstring con la medicion delante: su unica aparicion de
+    # `REPORTE.md` fuera del docstring es un DATO en una tabla de escenarios y
+    # el fichero fabrica todo lo suyo en un `mkdtemp`.
+    ("vuelta182_tarea2_mutacion_apertura_auditor.py", False),
+    # EL SEGUNDO SI ES DE ESTA VUELTA: el arnes de la ESCALADA de `AUDITOR.md`
+    # 1.2 (TAREA 1.c), que prueba `numerales_del_veredicto_que_no_calzan()`,
+    # `caidas_propias_del_cuerpo()`, `tareas_de_la_tabla()` y
+    # `frase_del_caso_del_hueco()`, todas PURAS. Su caso que manda es REAL y no
+    # fabricado: el veredicto de una linea de la 182 contra su propio cuerpo
+    # TIENE QUE CAER, y el mismo con el numeral bueno TIENE QUE PASAR. Su ancla
+    # es `docs/loop/reportes/REPORTE_V182.md`, un reporte ARCHIVADO que no se
+    # mueve, y el arnes imprime su `sha256` cada corrida para que el dia que se
+    # moviera lo dijera solo.
+    #
+    # LA NOMINA CRECE DE 109 A 111.
+    ("vuelta183_tarea1c_mutacion_veredicto.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

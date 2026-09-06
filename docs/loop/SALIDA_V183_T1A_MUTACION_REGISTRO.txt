@@ -1,0 +1,43 @@
+CASO POSITIVO POR MUTACION de vuelta183_tarea1a_registrar_acta182.py
+
+   acta fabricada con D=7 7=5 aud=1 eje=2
+      los contadores dicen D=7 7=5 aud=1 eje=2 -> CALZA
+      titulo computado: Registro de las doce adjudicaciones, la caida propia del auditor y las dos caidas del ejecutor del acta de la vuelta 182
+   acta fabricada con D=1 7=1 aud=1 eje=1
+      los contadores dicen D=1 7=1 aud=1 eje=1 -> CALZA
+      titulo computado: Registro de las dos adjudicaciones, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 182
+   acta fabricada con D=3 7=12 aud=2 eje=1
+      los contadores dicen D=3 7=12 aud=2 eje=1 -> CALZA
+      titulo computado: Registro de las quince adjudicaciones, las dos caidas propias del auditor y la caida del ejecutor del acta de la vuelta 182
+   acta fabricada con D=9 7=2 aud=1 eje=4
+      los contadores dicen D=9 7=2 aud=1 eje=4 -> CALZA
+      titulo computado: Registro de las once adjudicaciones, la caida propia del auditor y las cuatro caidas del ejecutor del acta de la vuelta 182
+
+LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE EL CASO PUEDE CAER:
+   medido sobre el acta fabricada (variable computada): 7
+   con el esperado BUENO   (7): PASA
+   con el esperado MUTADO  (8): CAE
+   EL CASO CAE AL MUTAR EL ESPERADO: SI
+
+LA SEGUNDA MUTACION: EL PATRON DE CAIDA DEL AUDITOR. Con el patron del acta
+181 el contador tiene que dar CERO sobre un acta que la escribe en negrita
+de frase, que es justo el motivo de este fichero.
+   patron del acta 181 sobre acta en forma 182 -> 0 caidas
+   EL CASO CAE CON EL PATRON VIEJO: SI
+
+LA TERCERA MUTACION: EL PREFIJO DE LA SECCION 7. Con el prefijo `6.` el
+contador tiene que dar CERO sobre un acta que numera `7.n`.
+   prefijo '6.' sobre acta de '7.' -> 0 adjudicaciones
+   EL CASO CAE CON EL PREFIJO VIEJO: SI
+
+LA CUARTA MUTACION: EL SALTO. actas_sin_entrada() es PURA, asi que se le
+pasa una serie fabricada y se comprueba que el salto y sus DOS extremos
+salen de los titulos y no de ninguna constante.
+   serie fabricada: cubre las vueltas 100, 101 y 105
+   faltan (computado): [102, 103, 104]
+   extremo bajo (computado): (11, 101) | extremo alto (computado): (12, 105)
+   EL SALTO Y SUS EXTREMOS CALZAN: SI
+   y sobre un tramo SIN salto (100 a 101) devuelve: []
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

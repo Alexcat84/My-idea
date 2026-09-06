@@ -1,0 +1,84 @@
+==============================================================================
+VUELTA 183, TAREAS 1.a Y 1.b: EL ACTA 182 ENTERA, REGISTRADA, Y EL SALTO
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 182: docs/loop/ACTA_AUDITOR.md, lineas 63250 a 63681 (432 lineas)
+   docs/loop/ACTA_AUDITOR.md -> disco 4223070 bytes
+
+B) LAS ADJUDICACIONES, EN SUS DOS FAMILIAS, CONTADAS Y NO TECLEADAS
+   SECCION 5, patron '^\\s*\\*\\*`?D\\.(\\d+)`?[,.]'
+   CIFRA adjudicaciones `5.D.n` halladas: 7
+      D.1 -> 1 aparicion(es)
+      D.2 -> 1 aparicion(es)
+      D.3 -> 1 aparicion(es)
+      D.4 -> 1 aparicion(es)
+      D.5 -> 1 aparicion(es)
+      D.6 -> 1 aparicion(es)
+      D.7 -> 1 aparicion(es)
+   SECCION 7, prefijo '7.'
+   CIFRA adjudicaciones `7.n` halladas: 5
+      7.1 -> 1 aparicion(es)
+      7.2 -> 1 aparicion(es)
+      7.3 -> 1 aparicion(es)
+      7.4 -> 1 aparicion(es)
+      7.5 -> 1 aparicion(es)
+   CIFRA adjudicaciones TOTAL: 12
+   EL CONTRASTE QUE PRUEBA QUE HACIA FALTA CODIGO PROPIO:
+      el registrador de la 172 busca '6.' clavado -> 0 sobre esta acta
+      el registrador de la 182 solo barre un prefijo `**7.n ` -> 5 sobre
+      esta acta, y dejaria las 7 de la seccion 5 fuera.
+
+C) LAS CAIDAS, POR SUS FAMILIAS, Y LOS PATRONES VIEJOS AL LADO
+   CAIDAS DEL AUDITOR (patron de negrita de frase, el del acta 182): 1, en las lineas 63294
+   EL PATRON DEL ACTA 181 (`**`C.n`.` al principio de linea): 0
+   CAIDAS DEL EJECUTOR (patron E.n): 2, en las lineas 63510, 63532
+   EL PATRON MAS VIEJO (`**CAIDA n.`), corrido sobre esta acta: 0
+   (los dos viejos dan CERO y por eso hay un patron nuevo. Se declara, no
+    se fuerza el viejo para que salga algo)
+
+D) EL TITULO, CON SUS TRES NUMERALES COMPUTADOS
+   Registro de las doce adjudicaciones, la caida propia del auditor y las dos caidas del ejecutor del acta de la vuelta 182
+
+E) LOS TITULOS LITERALES DE CADA ADJUDICACION, LEIDOS DEL ACTA
+   D.1 (linea 63456): `D.1`, LA VARA `abs 3, cobertura 0.45`. LA CONCEDO.
+   D.2 (linea 63465): `D.2`, LAS SEIS CLAUSULAS DE CARENCIA. CONCEDIDA COMO ESTA DICHA.
+   D.3 (linea 63472): `D.3`, EL CORTE POR PUNTO Y COMA. CONCEDIDA, Y EL ORDEN DECLARADO ES LO QUE LA SALVA.
+   D.4 (linea 63480): `D.4`, EL ARNES DE LA `P.1` ENTRA A LA NOMINA EN SU MISMA VUELTA. CONCEDIDA POR LA LETRA, QUE ES LA QUE MANDA SOBRE LA COSTUMBRE.
+   D.5 (linea 63489): `D.5`, LA DECLARACION DE SUJETO CONGELADO SOBRE SU PROPIO ARNES. CONCEDIDA, Y VERIFICADA POR MI, QUE ES LA CONDICION.
+   D.6 (linea 63495): `D.6`, `--siguiente` CUENTA UNA SALIDA DE CERO BYTES COMO NO HECHA. CONCEDIDA POR EXTENSION CITADA, Y LA CITA ES DEL FUNDADOR.
+   D.7 (linea 63503): `D.7`, "TRAMO 1 Y UNICO" PARA UN SOLO PAR. CONCEDIDA, Y ES LA MAS FACIL.
+   7.1 (linea 63563): 7.1 EL HUECO DE LA SECCION 9 CIERRA, PERO SU TEXTO CONFUNDE "NO EXISTE" CON "CERO BYTES", Y ESO SE ARREGLA.
+   7.2 (linea 63578): 7.2 LA VARA DE LA `D.1` NO CIERRA CLASES, Y LO ESCRIBO AQUI PARA QUE NO SE HEREDE.
+   7.3 (linea 63583): 7.3 LAS SEIS DISCREPANCIAS DE LA CIEGA SON MIAS Y VAN A FAVOR DEL ARCHIVO SIN RELECTURA CONJUNTA.
+   7.4 (linea 63588): 7.4 LAS TRES PREGUNTAS DEL REPORTE: DOS LAS ADJUDICO Y UNA QUEDA REGISTRADA.
+   7.5 (linea 63607): 7.5 LA `C.1` DEL EJECUTOR SE REGISTRA A SU FAVOR.
+
+F) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 35 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.44
+
+G) LA DEUDA DE LA SERIE (TAREA 1.b), MEDIDA Y DECLARADA COMO SALTO
+   tramo mirado: actas 173 a 181
+   CIFRA actas SIN entrada propia en la serie: 8
+   LAS QUE FALTAN: 173, 174, 175, 176, 177, 178, 179, 180
+   EXTREMO BAJO (ultimo registro que cubre un acta anterior al salto): R.42 cubre el acta 172
+   EXTREMO ALTO (primer registro que cubre un acta posterior): R.43 cubre el acta 181
+   (la entrada de esta vuelta cubre el acta 182 y NO rellena el salto: la
+    adjudicacion 7.4 manda documentarlo, no inventarlo)
+
+H) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR
+   la marca '## R.44.' ya esta en la sede: NO
+   la entrada entera ya esta: NO
+
+I) LA ENTRADA ARMADA
+   11619 bytes | 124 lineas
+
+J) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 850711 a 862331 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+   guiones largos o medios en la entrada: 0
+   serie recomputada TRAS escribir: 36 entradas, siguiente libre R.45
+   CIFRA colisiones tras escribir: 0
+   CIFRA huecos tras escribir: 0

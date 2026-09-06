@@ -1,0 +1,149 @@
+==============================================================================
+VUELTA 183, TAREA 1.e: LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DE LA 182
+encargada por AUDITOR.md:57, porque las seis discrepancias salieron
+FUERA del marcado
+==============================================================================
+
+A) LA CORRECCION DECLARADA: DONDE EL ENCARGO DICE QUE ESTA EL TRAMO Y
+   DONDE ESTA DE VERDAD. NO SE TAPA LO QUE SE CORRIGE.
+   seccion 9 del acta 182: lineas 63644 a 63658 (15 lineas)
+   su cabecera: ## 9. LA METRICA DE CREDITO
+   CIFRA puestos que la seccion 9 lista: 0
+   (el encargo dice que el tramo son los 30 puestos de esa seccion; la
+    seccion es LA METRICA DE CREDITO y no lista ninguno. Se declara y se
+    va a la fuente que si los tiene, que es la del propio auditor)
+
+B) LA FUENTE DE VERDAD DEL TRAMO, COTEJADA CONTRA SU PROPIO SELLO
+   docs/loop/SELLO_APERTURA_AUDITOR_V183.json -> 637 bytes en disco y 637 bytes normalizados a LF
+   ciega: docs/loop/_auditor_v183_ciega_blind.txt
+   bytes que el sello declara: 41200 | bytes en disco hoy: 41200
+   sha256 del sello: 226f577c7f5a2885faaedda1cb72b79ebf74295c076401242540c265dc7fbfc4
+   sha256 de hoy   : 226f577c7f5a2885faaedda1cb72b79ebf74295c076401242540c265dc7fbfc4
+   EL FICHERO ES EL QUE EL SELLO DICE: SI
+   criterio escrito, literal del sello:
+      muestra de 30 pares frescos sobre el archivo entero de veredictos, semilla 183, excluyendo los 30 puestos de la ciega del acta 181 y los 43 del acta 180 (solape cero exigido); auditoria de la vuelta 1
+
+C) EL TRAMO, LEIDO DE LA CIEGA SELLADA Y NO TECLEADO
+   CIFRA puestos del tramo: 30
+   LOS PUESTOS: 6, 34, 63, 137, 197, 311, 375, 389, 393, 461, 929, 977, 1280, 1520, 1815, 1905, 2189, 2249, 2416, 2470, 2624, 2674, 2701, 2709, 2719, 2918, 2932, 2997, 3132, 3317
+
+D) LOS DOS SUJETOS, CONTADOS
+   veredictos: 3388 filas | maximo puesto 3388
+   grafo: 3853 nodos
+
+E) EL DOBLE, ELEGIDO DE FORMA DETERMINISTA Y NO POR AZAR
+   (la funcion vecinos() se IMPORTA de
+    scripts/loop/vuelta182_tarea1c_relectura_al_doble.py, no se copia)
+   CIFRA vecinos anadidos: 30
+   LOS VECINOS: 7, 35, 64, 138, 198, 312, 376, 390, 394, 462, 930, 978, 1281, 1521, 1816, 1906, 2190, 2250, 2417, 2471, 2625, 2675, 2702, 2710, 2720, 2919, 2933, 2998, 3133, 3318
+   SOLAPE CON EL TRAMO: 0
+   CIFRA puestos que se releen EN TOTAL: 60
+   ES EL DOBLE DEL TRAMO: SI
+
+F) EL SOLAPE CON EL TRAMO DE LA 181, MEDIDO Y NO SUPUESTO
+   (el criterio del sello dice que la muestra excluye los 30 de la 181 y
+    los 43 de la 180; aqui se comprueba contra el tramo que la 182 releyo)
+   tramo de la 181, leido del acta: 30 puestos (linea 63210)
+   SOLAPE del tramo de hoy con el de la 181: 0
+
+G) LA RELECTURA MECANICA, PUESTO A PUESTO
+   (la maquina se IMPORTA de vuelta182_tarea3_diferenciador_movido.py)
+   puesto clase  declara  lesion   vivos   cober   nodos
+   6      D      no       no       SI      0.00    autoacusacion_antes_mala_noticia contra usa_el_no_del_proveedor_a_tu_favor   <-- DEL TRAMO
+   7      D      no       no       SI      0.00    preparate_para_marcharte_del_trato contra usa_el_no_del_proveedor_a_tu_favor
+   34     D      no       no       SI      0.00    muestra_puntos_en_comun_antes_de_negociar contra negocia_por_intereses_no_posiciones   <-- DEL TRAMO
+   35     D      no       no       SI      0.00    preguntas_abiertas_motivacion_proveedor contra usa_preguntas_de_como_para_negociar_precio
+   63     D      no       no       SI      0.00    autoacusacion_antes_mala_noticia contra preparate_para_marcharte_del_trato   <-- DEL TRAMO
+   64     D      no       no       SI      0.00    clasifica_tu_inventario contra traduce_stock_muerto_numeros
+   137    D      no       no       SI      0.00    preparate_para_marcharte_del_trato contra verifica_que_el_si_es_real   <-- DEL TRAMO
+   138    D      no       no       SI      0.00    investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor contra separa_la_visita_de_evaluacion_de_la_decision_de_compra
+   197    A      no       no       SI      0.00    obtencion_compromiso_venta contra obtencion_de_compromiso   <-- DEL TRAMO
+   198    D      no       no       SI      0.00    comunicacion_a_toda_la_empresa contra entrenamiento_de_gerentes_para_despidos
+   311    D      no       no       SI      0.00    gestion_cuentas_por_pagar_dpo contra gestion_dso   <-- DEL TRAMO
+   312    A      no       no       SI      0.00    produccion_scheduling_balance_objetivos contra programacion_produccion
+   375    B      no       no       SI      0.00    craft_positioning_statement contra unique_selling_proposition_statement   <-- DEL TRAMO
+   376    A      no       no       SI      0.00    ciclo_construir_medir_aprender contra ciclo_crear_medir_aprender
+   389    A      no       no       SI      0.00    leap_of_faith_assumptions contra leap_of_faith_questions   <-- DEL TRAMO
+   390    D      no       no       SI      0.00    how_might_we_hmw contra preguntar_por_que_no_que
+   393    D      no       no       SI      0.00    busqueda_cofundador_complementario contra evaluacion_capital_para_cofundadores   <-- DEL TRAMO
+   394    A      no       no       SI      0.00    construccion_de_leverage contra gestion_multiples_term_sheets
+   461    D      no       no       SI      0.00    superioridad_producto_beneficios contra ventaja_competitiva_producto   <-- DEL TRAMO
+   462    A      no       no       SI      0.00    crowdfunding_legal_exemptions_jobs_act contra equity_crowdfunding
+   929    D      no       no       SI      0.00    prohibicion_tie_in_sales contra regla_disponibilidad_previa_venta   <-- DEL TRAMO
+   930    D      no       no       SI      0.00    filosofia_customer_validation contra product_market_fit
+   977    D      no       no       SI      0.00    forma_de_contraprestacion_en_adquisicion contra tipos_adquisiciones_tecnologia   <-- DEL TRAMO
+   978    A      SI       SI       SI      0.86    intellectual_property_strategy contra proteccion_propiedad_intelectual
+   1280   D      no       no       SI      0.00    cierre_satisfaccion_postventa contra cierre_segun_complejidad_venta   <-- DEL TRAMO
+   1281   D      no       no       SI      0.00    get_visual contra pensamiento_visual_modelos_negocio
+   1520   D      no       no       SI      0.00    pivote_o_proceder contra realizar_pruebas_pasa_no_pasa   <-- DEL TRAMO
+   1521   D      no       no       SI      0.00    venture_debt_terminos_economicos contra warrants_deuda_convertible
+   1815   D      no       no       SI      0.00    involucramiento_empleados_sostenibilidad contra mobilizar_empleados_cultura_ecologica   <-- DEL TRAMO
+   1816   A      no       no       SI      0.00    accountability_incentivos contra incentivos_reconocimiento_sostenibilidad
+   1905   A      no       no       SI      0.00    eco_eficiencia contra eco_eficiencia_costos   <-- DEL TRAMO
+   1906   D      no       no       SI      0.00    chief_sustainability_officer contra liderazgo_ceo_sostenibilidad
+   2189   D      no       no       SI      0.00    evaluacion_necesidad_franquiciar contra evaluacion_temperamento_franquiciador   <-- DEL TRAMO
+   2190   A      SI       no       SI      0.00    gestion_terminacion_franquiciado contra perdida_control_operativo
+   2249   D      no       no       SI      0.00    construccion_linea_tiempo contra construccion_timeline_resolucion   <-- DEL TRAMO
+   2250   A      no       no       SI      0.00    clasificacion_sistemas_por_nivel_seguridad contra niveles_de_madurez_de_seguridad
+   2416   D      no       no       SI      0.00    eliminacion_causas_error contra eliminacion_causas_error_2   <-- DEL TRAMO
+   2417   A      no       no       SI      0.00    mantener_las_ganancias contra sostener_las_ganancias
+   2470   D      no       no       SI      0.00    establecer_vision_organizacional contra establecer_vision_organizacional_2   <-- DEL TRAMO
+   2471   D      no       no       SI      0.00    certificacion_belts_six_sigma contra certificacion_profesional_calidad
+   2624   A      no       no       SI      0.00    distribucion_exponencial contra formula_exponencial_confiabilidad   <-- DEL TRAMO
+   2625   D      no       no       SI      0.00    concepto_quality_is_free contra costo_de_calidad_3
+   2674   A      no       no       SI      0.00    juran_quality_by_design contra quality_by_design   <-- DEL TRAMO
+   2675   D      no       no       SI      0.00    estructura_organizacional_funcional_proceso contra sistemas_sociotecnicos
+   2701   A      no       no       SI      0.00    accion_correctiva_6 contra accion_correctiva_sistematica   <-- DEL TRAMO
+   2702   D      no       no       SI      0.00    muestreo_de_aceptacion contra planes_de_muestreo_de_aceptacion
+   2709   A      no       no       SI      0.00    contacto_con_el_cliente contra contacto_con_el_cliente_2   <-- DEL TRAMO
+   2710   D      no       no       SI      0.00    rol_black_belt_six_sigma contra rol_green_belt_six_sigma
+   2719   D      no       no       SI      0.00    familia_normas_iso_9000 contra principios_gestion_calidad_iso9000   <-- DEL TRAMO
+   2720   D      no       no       SI      0.00    herramientas_analisis_causa_raiz contra histograma
+   2918   D      no       no       SI      0.00    mito_departamento_control_calidad contra transferencia_de_actividades_a_departamentos_de_linea   <-- DEL TRAMO
+   2919   D      no       no       SI      0.00    deteccion_de_lideres_y_rezagados contra distincion_causas_comunes_especiales
+   2932   D      no       no       SI      0.00    identificacion_empleado_con_el_trabajo contra intercambio_de_roles_para_motivacion   <-- DEL TRAMO
+   2933   D      no       no       SI      0.00    criterios_seleccion_proyectos_calidad contra dmaic_fase_select
+   2997   D      no       no       SI      0.00    abolir_inspeccion_masiva contra aceptacion_de_fallas_como_inevitables   <-- DEL TRAMO
+   2998   D      no       no       SI      0.00    diagrama_de_flujo_proceso_map contra sipoc
+   3132   D      no       no       SI      0.00    costo_de_calidad_3 contra modelo_costo_optimo_calidad   <-- DEL TRAMO
+   3133   D      no       no       SI      0.00    reduccion_tiempo_ciclo contra value_stream_mapping
+   3317   D      no       no       SI      0.00    amenaza_y_oportunidad contra busca_el_riesgo_antes_de_que_te_busque   <-- DEL TRAMO
+   3318   D      no       no       SI      0.00    el_riesgo_del_entorno_que_no_controlas contra riesgo_del_negocio_o_del_proyecto
+
+H) LAS CIFRAS DE LA RELECTURA
+   CIFRA puestos releidos: 60
+   CIFRA que declaran diferenciador: 2
+   CIFRA con LESION EXACTA: 1
+   CIFRA con algun nodo MUERTO en el grafo de hoy: 0
+   CIFRA clase 'A'   : 16
+   CIFRA clase 'B'   : 1
+   CIFRA clase 'D'   : 43
+   LOS LESIONADOS: 978
+      PUESTO 978: hoy el paso 6 de intellectual_property_strategy cubre 6 palabras del diferenciador declarado (cobertura 0.86)
+
+I) LAS SEIS DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA VARA
+   (el acta 182 las nombra en su seccion 4: 375, 393, 1280, 1815, 2416 y
+    2470. Aqui NO se re-decide ninguna clase: solo se dice si estan en el
+    universo releido y que ve la vara en ellas)
+   puesto 375    clase B   declara no  lesion no  | en el universo releido: SI
+   puesto 393    clase D   declara no  lesion no  | en el universo releido: SI
+   puesto 1280   clase D   declara no  lesion no  | en el universo releido: SI
+   puesto 1815   clase D   declara no  lesion no  | en el universo releido: SI
+   puesto 2416   clase D   declara no  lesion no  | en el universo releido: SI
+   puesto 2470   clase D   declara no  lesion no  | en el universo releido: SI
+
+J) LO QUE ESTA RELECTURA SOSTIENE, Y NI UNA PALABRA MAS
+   1. El tramo se leyo de la ciega SELLADA del auditor, cotejada por
+      sha256 contra su propio sello, y NO del acta, que no lo lista.
+   2. El tramo se releyo AL DOBLE: 60 puestos contra los 30 del tramo.
+   3. De los 60, 2 declaran un diferenciador y 1 lo tienen HOY movido al
+      otro nodo.
+   4. Puestos con algun nodo muerto en el grafo de hoy: 0.
+   5. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura
+      MECANICA del tramo con la vara, no una lectura de juicio. Lo que la
+      vara no ve, esta salida NO lo afirma.
+   6. NINGUN VEREDICTO SE MUEVE EN ESTA VUELTA: el archivo se abre para
+      leer y se cierra, y su sha256 va medido en la apertura y en el
+      cierre del reporte.
+
+FIN
