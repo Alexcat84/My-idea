@@ -1,0 +1,30 @@
+EL TRAMO ES EL MISMO CONJUNTO: True (ejecutor 30, auditor 30)
+
+DISCREPANCIAS DEL EJECUTOR (10): [874, 906, 965, 971, 1068, 1804, 1814, 2425, 2659, 2833]
+DISCREPANCIAS DEL AUDITOR  (5): [965, 1068, 1804, 1814, 2833]
+SUBCONJUNTO EXACTO (auditor dentro de ejecutor): True
+EL AUDITOR NO DISCREPA EN NINGUNO QUE EL EJECUTOR NO DISCREPARA: True
+
+FUERA DEL MARCADO, EJECUTOR (3): [1804, 1814, 2833]
+FUERA DEL MARCADO, AUDITOR  (2): [1804, 2833]
+FUERA DEL MARCADO DE LOS **DOS** LECTORES: [1804, 2833]
+
+PUESTO A PUESTO, LAS DISCREPANCIAS DE CUALQUIERA DE LOS DOS:
+puesto | ejec | audi | arch | fuera-ejec | fuera-audi
+   874 |  B   |  D   |  D   |    no      |    no 
+   906 |  B   |  D   |  D   |    no      |    no 
+   965 |  B   |  A   |  D   |    no      |    no 
+   971 |  B   |  D   |  D   |    no      |    no 
+  1068 |  D   |  D   |  A   |    no      |    no 
+  1804 |  A   |  A   |  D   |    SI      |    SI 
+  1814 |  A   |  A   |  D   |    SI      |    no 
+  2425 |  B   |  D   |  D   |    no      |    no 
+  2659 |  B   |  D   |  D   |    no      |    no 
+  2833 |  A   |  A   |  D   |    SI      |    SI 
+
+MISMA CLASE EQUIVOCADA LOS DOS, en los que ambos discrepan:
+     965: ejecutor B, auditor A, archivo D -> ERRORES DISTINTOS
+    1068: ejecutor D, auditor D, archivo A -> MISMO ERROR
+    1804: ejecutor A, auditor A, archivo D -> MISMO ERROR
+    1814: ejecutor A, auditor A, archivo D -> MISMO ERROR
+    2833: ejecutor A, auditor A, archivo D -> MISMO ERROR

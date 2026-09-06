@@ -1,0 +1,45 @@
+==============================================================================
+VUELTA 192: LA RACHA DE CIERRES, CONTADA DEL INVENTARIO ENTERO
+==============================================================================
+
+LA REGLA, ESCRITA ANTES DE CONTAR:
+   ENTRA: todo fichero de docs/loop/ que case '^SALIDA_V(\\d+)_CERRAR_REPORTE\\.txt$'
+   VERDE: el que trae una linea 'CIFRA piezas que faltan' terminada en 0
+   RACHA: consecutivas en verde hacia atras desde la mas alta. Un numero
+          que falta CORTA la racha y se nombra.
+
+A) EL INVENTARIO ENTERO, VUELTA A VUELTA
+   CIFRA ficheros de cierre en disco: 11
+   SALIDA_V179_CERRAR_REPORTE.txt             3382 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V180_CERRAR_REPORTE.txt             2458 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V184_CERRAR_REPORTE.txt             2380 bytes | ROJO  | (sin la linea)
+   SALIDA_V185_CERRAR_REPORTE.txt             4423 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V186_CERRAR_REPORTE.txt             5303 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V187_CERRAR_REPORTE.txt             5190 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V188_CERRAR_REPORTE.txt             6202 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V189_CERRAR_REPORTE.txt             5636 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V190_CERRAR_REPORTE.txt             6721 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V191_CERRAR_REPORTE.txt             7795 bytes | VERDE | CIFRA piezas que faltan: 0
+   SALIDA_V192_CERRAR_REPORTE.txt             7645 bytes | VERDE | CIFRA piezas que faltan: 0
+   CIFRA en VERDE: 10
+
+B) LOS HUECOS DEL INVENTARIO, NOMBRADOS
+   rango mirado: 179 a 192
+   CIFRA vueltas del rango SIN fichero de cierre: 3 (181, 182, 183)
+
+C) LA RACHA
+   tope del inventario: 192
+   CIFRA vueltas CONSECUTIVAS en verde hacia atras: 8
+   las vueltas de la racha: 185, 186, 187, 188, 189, 190, 191, 192
+   que la corta: la vuelta 184 tiene fichero pero no esta en verde
+
+D) LAS TRES CIFRAS QUE ANDAN DANDO VUELTAS, PUBLICADAS JUNTAS
+   el acta 191 venia contando CINCO (187 a 191)
+   el encargo de la 192 dice SEIS (186 a 191) y manda contarlo del
+   instrumento en vez de heredarlo
+   el bloque B.2 de mi sello de apertura, sobre una VENTANA TECLEADA de
+   185 a 191, dice 7, que es el borde de MI ventana y no la racha
+   ESTE INSTRUMENTO, sobre el inventario ENTERO, dice 8
+   LAS CUATRO SE PUBLICAN Y NINGUNA SE RESUELVE COPIANDO.
+
+FIN

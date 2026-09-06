@@ -1,0 +1,32 @@
+==============================================================================
+PRUEBA 1. UN TURNO QUE YA TOCO REPORTE.md, EN UN PROCESO NUEVO,
+          VUELVE A SELLAR COMO SI NADA.
+==============================================================================
+   bitacora tras leer REPORTE.md: ['REPORTE.md']
+   sellar() en ESTE proceso -> ROJO (correcto: cae)
+   -- olvidar_todo() simula el proceso nuevo del CLI --
+   bitacora: (vacia)
+   sellar() en el proceso NUEVO -> VERDE
+      PUEDE SELLAR: SI
+         motivo: la bitacora esta limpia de los tres prohibidos
+         bitacora del turno hasta ahora: (vacia)
+      AISLADOR CORRIDO -> EXITCODE 0
+      SELLO ESCRITO: ../../AppData/Local/Temp/v193probe_3kdlds1b/SELLO_APERTURA_AUDITOR_VPROBE.json (538 bytes)
+         ciega   ../../AppData/Local/Temp/v193probe_3kdlds1b/_auditor_vPROBE_ciega_blind.txt -> 4527 bytes | sha256 e781caa8cc91247f
+         destape ../../AppData/Local/Temp/v193probe_3kdlds1b/_auditor_vPROBE_ciega_reveal.txt -> 1136 bytes | sha256 ed8c3acc9dec29d7
+         prohibidos tocados antes del sello: 0
+
+==============================================================================
+PRUEBA 2. EL SELLO REAL DE LA 193 YA EXISTE EN DISCO Y puede_sellar() DICE SI
+==============================================================================
+   docs/loop/SELLO_APERTURA_AUDITOR_V193.json existe: True (958 bytes)
+   puede_sellar() en proceso nuevo -> SI (la bitacora esta limpia de los tres prohibidos)
+
+==============================================================================
+PRUEBA 3. declarar_clases_escritas() CON EL SELLO REAL EN DISCO
+==============================================================================
+   puede_declarar_clases() -> NO (este turno no ha sellado. Sin sello no hay sujeto, y sin sujeto no hay clases que declarar)
+   FIRMA de puede_declarar_clases: sin parametros, mira _SELLADO del modulo.
+   FIRMA de declarar_clases_escritas: (ruta_clases) unica, sin ruta_sello.
+   El CLI (main) NO expone ninguna bandera para declarar clases:
+   banderas del CLI: ['--criterio', '--vuelta', '--muestra', '--semilla', '--puestos', '--excluir', '--dominio', '--clase', '--estado']

@@ -1,0 +1,58 @@
+FORMATO: COTEJO_DE_CIEGA v1
+==============================================================================
+COTEJO DE CIEGA. AUDITOR DE LA VUELTA 193 (acta 193, cubre la 192).
+Sujeto sellado en docs/loop/SELLO_APERTURA_AUDITOR_V193.json.
+Mis clases: docs/loop/_auditor_v193_mis_clases.txt, COMMITEADAS en d3c38832
+ANTES de mi primer toque de REPORTE.md y ANTES de abrir este destape.
+SEGUNDO LECTOR SOBRE EL MISMO TRAMO QUE LA TAREA 2 DE LA VUELTA 192:
+el solape de mis 30 con los suyos es TOTAL y a proposito.
+declarado: 30
+
+CIFRA puestos cotejados: 30
+CIFRA que COINCIDEN: 25
+CIFRA que DISCREPAN: 5
+CIFRA en los dudosos del lector: 13
+CIFRA discrepancias DENTRO de los dudosos: 3 (965, 1068, 1814)
+CIFRA discrepancias FUERA de los dudosos: 2 (1804, 2833)
+REPARTO DEL LECTOR:  A 5, D 25
+REPARTO DEL ARCHIVO: A 2, D 28
+
+TABLA (una fila POR CADA PUESTO COTEJADO, no solo por las discrepancias):
+puesto | clase del lector | clase del archivo | en dudosos del lector | veredicto
+------------------------------------------------------------------------------
+     5 | D | D | no | COINCIDE
+    22 | D | D | no | COINCIDE
+    69 | D | D | no | COINCIDE
+   131 | D | D | no | COINCIDE
+   157 | D | D | si | COINCIDE
+   202 | D | D | si | COINCIDE
+   395 | D | D | si | COINCIDE
+   611 | A | A | si | COINCIDE
+   650 | D | D | no | COINCIDE
+   717 | D | D | no | COINCIDE
+   874 | D | D | no | COINCIDE
+   906 | D | D | no | COINCIDE
+   965 | A | D | si | DISCREPA
+   971 | D | D | si | COINCIDE
+  1068 | D | A | si | DISCREPA
+  1204 | D | D | no | COINCIDE
+  1370 | D | D | no | COINCIDE
+  1804 | A | D | no | DISCREPA
+  1814 | A | D | si | DISCREPA
+  2029 | D | D | no | COINCIDE
+  2156 | D | D | no | COINCIDE
+  2425 | D | D | si | COINCIDE
+  2659 | D | D | si | COINCIDE
+  2833 | A | D | no | DISCREPA
+  2912 | D | D | no | COINCIDE
+  3069 | D | D | si | COINCIDE
+  3088 | D | D | no | COINCIDE
+  3170 | D | D | si | COINCIDE
+  3184 | D | D | si | COINCIDE
+  3328 | D | D | no | COINCIDE
+FIN DE LA TABLA.
+
+EL DENOMINADOR ES RECUPERABLE CONTANDO LAS FILAS DE ESTA TABLA, y la
+cifra declarada arriba tiene que calzar con ese conteo. Lo comprueba
+`denominador()` de scripts/loop/cotejo_de_ciega.py, y si no calzan el
+fichero es ROJO.
