@@ -1,0 +1,74 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL PARAMETRO `evitar` DE `vecinos()`
+(vuelta 188, TAREA 5.a; adjudicacion 5.2 y respuesta 7.3 del acta 188)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/vuelta182_tarea1c_relectura_al_doble.py,
+y `vecinos()` se IMPORTA de el, no se copia.
+SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 9606 bytes | LF 9606 bytes |
+sha256 LF 9beb144affb8ecde8f8403eb3e5f8a97c85042fb65cab8729c26a2cd3364d3bd
+
+LINEA DE `def vecinos` EN EL SUJETO, CON EL SELLO DE ARRIBA AL LADO: 77
+
+CASO A. SIN `evitar`, LA CONDUCTA ES LA DE ANTES, COTEJADA CONTRA UNA COPIA
+        CONGELADA DE LA VERSION ANTERIOR AL PARAMETRO
+   treinta sueltos, como una ciega de verdad  tramo de 30  | nueva 30 | congelada 30 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   uno solo                                   tramo de 1   | nueva 1 | congelada 1 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   pegado al techo                            tramo de 3   | nueva 3 | congelada 3 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   pegado al suelo                            tramo de 3   | nueva 3 | congelada 3 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   denso y consecutivo                        tramo de 20  | nueva 20 | congelada 20 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   el tramo entero de un archivo diminuto     tramo de 5   | nueva 0 | congelada 0 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   vacio                                      tramo de 0   | nueva 0 | congelada 0 | IDENTICAS
+      MUTACION del esperado (exigir que DIFIERAN): CAE
+   Y `evitar=None` Y `evitar=()` TIENEN QUE DAR LO MISMO QUE NO PASARLO:
+      sin pasarlo 30 | evitar=None 30 | evitar=() 30 -> CALZA
+
+CASO B. CON `evitar`, NINGUN VECINO CAE DENTRO DE `evitar`
+   evitar vacio                                   vecinos 30  | solape con evitar 0 | con el tramo 0 | CALZA
+      MUTACION del esperado (exigir solape de al menos 1): CAE
+   evitar con los inmediatos de arriba            vecinos 30  | solape con evitar 0 | con el tramo 0 | CALZA
+      MUTACION del esperado (exigir solape de al menos 1): CAE
+   evitar con los inmediatos de arriba y de abajo vecinos 30  | solape con evitar 0 | con el tramo 0 | CALZA
+      MUTACION del esperado (exigir solape de al menos 1): CAE
+   evitar con un bloque grande                    vecinos 30  | solape con evitar 0 | con el tramo 0 | CALZA
+      MUTACION del esperado (exigir solape de al menos 1): CAE
+   evitar que contiene tambien al tramo           vecinos 30  | solape con evitar 0 | con el tramo 0 | CALZA
+      MUTACION del esperado (exigir solape de al menos 1): CAE
+   Y EL CONTRASTE QUE PRUEBA QUE `evitar` HACE ALGO: SIN el, sobre el mismo
+   tramo y el mismo conjunto, el solape NO es cero.
+      sin `evitar`: 30 vecinos, solape 30 [240, 291, 416, 551, 671, 910, 1124, 1133]
+
+CASO C. LA CUENTA NO SE ROMPE, Y CUANDO NO QUEDA SITIO DEVUELVE MENOS EN
+        VEZ DE INVENTAR UN VECINO
+   archivo diminuto, evitar lo llena todo   -> [] | esperado 0 | CALZA
+      MUTACION del esperado (exigir 1): CAE
+   archivo diminuto, evitar deja un hueco   -> [3] | esperado 1 | CALZA
+      MUTACION del esperado (exigir 2): CAE
+   sitio de sobra                           -> [12, 21] | esperado 2 | CALZA
+      MUTACION del esperado (exigir 3): CAE
+
+CASO D. LA SALIDA SIGUE SIENDO DETERMINISTA Y CRECIENTE
+   dos llamadas iguales dan la misma lista: SI
+   la lista viene ordenada y sin repetidos: SI
+   ESPERADO las tres cosas -> CALZA
+   MUTACION del esperado (exigir que las dos llamadas difieran): CAE
+   Y EL ORDEN DE `evitar` NO IMPORTA, porque es un conjunto:
+      como lista ordenada 30 | como lista invertida 30 -> CALZA
+
+CASO E. `evitar` NO TIENE QUE CONTENER AL TRAMO, NI LE ESTORBA QUE LO
+        CONTENGA
+   evitar sin el tramo: [102, 201, 301]
+   evitar con el tramo: [102, 201, 301]
+   ESPERADO iguales, porque el tramo ya se saltaba antes -> CALZA
+   MUTACION del esperado (exigir que difieran): CAE
+
+CIFRA casos: 20 | pasan: 20
+CIFRA casos que CAEN al mutar su esperado: 20 de 20
+CIFRA fallos: 0
+VEREDICTO: VERDE

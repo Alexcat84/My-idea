@@ -52,9 +52,7 @@ CASO D. UNA `MESA` CUYA EVIDENCIA ES PROSA ENTERA
    contra 0, y `rutas_de_la_evidencia()` es PURA.
    MUTACION del esperado (exigir 1 mencion en la de prosa): CAE
 
-   TEMPORAL LIMPIADO (P.16, quien fabrica limpia): SI, el directorio ya no existe
-   (su nombre NO se imprime a proposito: `mkdtemp` lo fabrica distinto
-    cada vez y esta salida CAMBIARIA SOLA, que es PARADA por la `P.2`)
+   TEMPORAL LIMPIADO (P.16, quien fabrica limpia): C:\Users\AlexDesk\AppData\Local\Temp\v188_pata_y6ny0oop -> existe: NO
 
 CASO E. EL EXTRACTOR DE NOMBRES NO TRAGA CUALQUIER COSA
    un .md con ruta corta                    'LECTURAS_DIRIGIDAS.md, las once'              -> ['LECTURAS_DIRIGIDAS.md'] | esperado ['LECTURAS_DIRIGIDAS.md'] | CALZA
@@ -74,3 +72,5 @@ CIFRA casos: 11 | pasan: 11
 CIFRA casos que CAEN al mutar su esperado: 11 de 11
 CIFRA fallos: 0
 VEREDICTO: VERDE
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt (4410 bytes)

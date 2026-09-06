@@ -1,0 +1,98 @@
+==============================================================================
+VUELTA 188, TAREA 3.c: LA NOMINA, Y LA DOBLE CORRIDA CON EXCLUSION POR ROJO
+==============================================================================
+
+A) LA NOMINA Y EL CENSO, RECOMPUTADOS AL CERRAR
+   CIFRA censo: 185 | CIFRA nomina AHORA: 125 | VARA_DEL_CENSO: 148
+   arneses_que_faltan(): ultima vuelta 188, FALTAN 0
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 3 entradas sin congelar
+      SUJETO SIN CONGELAR: vuelta186_tarea2c_mutacion_cierre_tardio.py    NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta187_tarea4_mutacion_dos_convenciones.py  NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta188_tarea4_mutacion_cobertura_parejas.py NO DECIDIBLE
+   LOS QUE ESTA VUELTA MANDA CORRER, COMPROBADOS DENTRO DE LA NOMINA:
+      vuelta188_tarea2_mutacion_pata_documental.py             NACE HOY                                   en la nomina: SI
+      vuelta188_tarea3c_mutacion_exclusion_por_rojo.py         NACE HOY                                   en la nomina: SI
+      vuelta188_tarea4_mutacion_cobertura_parejas.py           NACE HOY                                   en la nomina: SI
+      vuelta188_tarea5a_mutacion_vecinos_evitar.py             NACE HOY                                   en la nomina: SI
+      vuelta186_tarea2c_mutacion_cierre_tardio.py              de la 186, REESCRITO HOY por el acta 188 punto 7.1 en la nomina: SI
+      vuelta186_tarea2a_mutacion_pieza4.py                     de la 186, TOCADO HOY por la TAREA 3.b     en la nomina: SI
+   CIFRA de esos que estan dentro: 6 de 6
+   Y ESTE FICHERO NO ENTRA EN LA NOMINA, Y SE MIDE EN VEZ DE DECIRSE:
+      vuelta188_tarea3c_nomina.py esta en el censo de arneses: NO
+      vuelta188_tarea3c_nomina.py esta en la nomina: NO
+
+B) LA EXCLUSION POR ROJO, QUE ES LA `C.3` DEL ACTA 188
+   (la letra rota decia `sin re-correrlo`, y en la 187 un arnes sellado en
+    rojo se corrio DOS VECES MAS dentro de la doble corrida. Aqui la doble
+    corrida los EXCLUYE y LO DICE: una exclusion muda seria peor)
+   registro: docs/loop/ROJOS_DE_LA_VUELTA_188.txt
+      existe: NO. **LA EXCLUSION ES VACIA Y SE DECLARA CON ESAS
+      PALABRAS**: ningun arnes sellado ha salido en rojo en esta vuelta,
+      asi que no hay nada que excluir. Un cero que no se publica no se
+      puede auditar.
+   CIFRA arneses registrados como ROJOS de esta vuelta: 0
+   CIFRA arneses EXCLUIDOS de la doble corrida: 0
+      (ninguno excluido, y el cero va escrito)
+   CIFRA arneses que SI se corren dos veces: 6 de 6
+
+C) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256
+   scripts/loop/vuelta188_tarea2_mutacion_pata_documental.py (NACE HOY)
+      salida: docs/loop/SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt
+      ANTES de correr: disco 4513 bytes | LF 4513 bytes | sha256 LF ae804ea4e2894ccefedce745e7293bc3972031bcf751682e3a3f894985c60a3a
+      CORRIDA 1: exitcode 0 | disco 4513 bytes | LF 4513 bytes | sha256 LF ae804ea4e2894ccefedce745e7293bc3972031bcf751682e3a3f894985c60a3a
+      CORRIDA 2: exitcode 0 | disco 4513 bytes | LF 4513 bytes | sha256 LF ae804ea4e2894ccefedce745e7293bc3972031bcf751682e3a3f894985c60a3a
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt : 1 fila(s)
+         3	1	docs/loop/SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt
+   scripts/loop/vuelta188_tarea3c_mutacion_exclusion_por_rojo.py (NACE HOY)
+      salida: docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt
+      ANTES de correr: disco 3565 bytes | LF 3565 bytes | sha256 LF 622b67673e6d75f47d9264a334fad078456351b3cea3da8120db832ee0adde9f
+      CORRIDA 1: exitcode 0 | disco 3565 bytes | LF 3565 bytes | sha256 LF 4d052ee1f1fce39e4917553c49309efac02dc994ca04642f48af2420bbf5e39c
+      CORRIDA 2: exitcode 0 | disco 3565 bytes | LF 3565 bytes | sha256 LF 4d052ee1f1fce39e4917553c49309efac02dc994ca04642f48af2420bbf5e39c
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt : 1 fila(s)
+         4	4	docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt
+   scripts/loop/vuelta188_tarea4_mutacion_cobertura_parejas.py (NACE HOY)
+      salida: docs/loop/SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt
+      ANTES de correr: disco 9063 bytes | LF 9063 bytes | sha256 LF deebdf5d81cc28ed09125320be4a2a0a30d2b4a6786efe11b30c5b841b9efc24
+      CORRIDA 1: exitcode 0 | disco 9063 bytes | LF 9063 bytes | sha256 LF deebdf5d81cc28ed09125320be4a2a0a30d2b4a6786efe11b30c5b841b9efc24
+      CORRIDA 2: exitcode 0 | disco 9063 bytes | LF 9063 bytes | sha256 LF deebdf5d81cc28ed09125320be4a2a0a30d2b4a6786efe11b30c5b841b9efc24
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt : 0 fila(s)
+   scripts/loop/vuelta188_tarea5a_mutacion_vecinos_evitar.py (NACE HOY)
+      salida: docs/loop/SALIDA_V188_T5A_MUTACION_VECINOS_EVITAR.txt
+      ANTES de correr: disco 4342 bytes | LF 4342 bytes | sha256 LF 5686e3cc465201284df69b206a06f69f20486df86050ca0c568e1702ea5aa7b1
+      CORRIDA 1: exitcode 0 | disco 4342 bytes | LF 4342 bytes | sha256 LF 5686e3cc465201284df69b206a06f69f20486df86050ca0c568e1702ea5aa7b1
+      CORRIDA 2: exitcode 0 | disco 4342 bytes | LF 4342 bytes | sha256 LF 5686e3cc465201284df69b206a06f69f20486df86050ca0c568e1702ea5aa7b1
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V188_T5A_MUTACION_VECINOS_EVITAR.txt : 0 fila(s)
+   scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py (de la 186, REESCRITO HOY por el acta 188 punto 7.1)
+      salida: docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+      ANTES de correr: disco 7545 bytes | LF 7545 bytes | sha256 LF 0efa4f8f7fc856c7d9c61799c70ed1f7b296af088409006aa2baa1f6b95a1fa9
+      CORRIDA 1: exitcode 0 | disco 7545 bytes | LF 7545 bytes | sha256 LF 0efa4f8f7fc856c7d9c61799c70ed1f7b296af088409006aa2baa1f6b95a1fa9
+      CORRIDA 2: exitcode 0 | disco 7545 bytes | LF 7545 bytes | sha256 LF 0efa4f8f7fc856c7d9c61799c70ed1f7b296af088409006aa2baa1f6b95a1fa9
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt : 1 fila(s)
+         4	4	docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+   scripts/loop/vuelta186_tarea2a_mutacion_pieza4.py (de la 186, TOCADO HOY por la TAREA 3.b)
+      salida: docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
+      ANTES de correr: disco 3908 bytes | LF 3908 bytes | sha256 LF 176eb049f8c898aad4fdc11994a94444f009deb6dd6b0237d1c570f1bc9ccf77
+      CORRIDA 1: exitcode 0 | disco 3908 bytes | LF 3908 bytes | sha256 LF 176eb049f8c898aad4fdc11994a94444f009deb6dd6b0237d1c570f1bc9ccf77
+      CORRIDA 2: exitcode 0 | disco 3908 bytes | LF 3908 bytes | sha256 LF 176eb049f8c898aad4fdc11994a94444f009deb6dd6b0237d1c570f1bc9ccf77
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt : 1 fila(s)
+         4	4	docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
+
+   CIFRA paradas: 0
+
+D) EL ESTADO DEL ARBOL DESPUES DE LA DOBLE CORRIDA
+   CIFRA filas de `git diff --numstat -- dataset/`: 0
+
+VEREDICTO: ROJO

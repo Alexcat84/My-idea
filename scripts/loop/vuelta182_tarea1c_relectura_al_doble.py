@@ -74,14 +74,32 @@ def puestos_del_tramo():
     return None, []
 
 
-def vecinos(tramo, maximo):
+def vecinos(tramo, maximo, evitar=None):
     """EL DOBLE DEL TRAMO, DE FORMA DETERMINISTA Y REPRODUCIBLE. PURA.
 
     Para cada puesto del tramo se toma el siguiente libre hacia arriba; si se
     sale del archivo, se baja. Ni azar ni semilla: la misma entrada da siempre la
-    misma salida, y eso es lo que hace que otro pueda repetir esta lectura."""
+    misma salida, y eso es lo que hace que otro pueda repetir esta lectura.
+
+    EL CONJUNTO `evitar` NACE EN LA VUELTA 188 (TAREA 5.a), Y ES ADITIVO
+    (adjudicacion `5.2` y respuesta `7.3` del acta 188, contestando la `P.3` del
+    reporte de la 187: **el solape se le exige AL UNIVERSO**, porque la exclusion
+    existe para que nadie relea lo ya leido y los 60 se leen todos).
+
+    **SU REGLA NO CAMBIA: CAMBIA LO QUE SE LE PASA.** Sin `evitar` se comporta
+    EXACTAMENTE igual que antes, y eso no se afirma, se prueba: el arnes
+    `scripts/loop/vuelta188_tarea5a_mutacion_vecinos_evitar.py` lleva dentro una
+    copia CONGELADA de la version anterior y exige que las dos den la misma
+    salida sobre una bateria de tramos.
+
+    CON `evitar`, ademas de saltar los puestos del propio tramo, salta los de ese
+    conjunto **al subir y al bajar**, de forma que **el cero del solape sale por
+    construccion y no por suerte**. Eso es exactamente lo que el reporte de la 187
+    NO hizo, y con razon: torcer una funcion congelada a mitad de la medicion es
+    lo que `P.5.1` prohibe. **La vara no se tuerce; se le pasa otra cosa.**"""
+    fuera = set(evitar or ())
     elegidos = []
-    ocupados = set(tramo)
+    ocupados = set(tramo) | fuera
     for p in sorted(tramo):
         q = p + 1
         while q in ocupados and q <= maximo:
@@ -90,7 +108,7 @@ def vecinos(tramo, maximo):
             q = p - 1
             while q in ocupados and q >= 1:
                 q -= 1
-        if 1 <= q <= maximo:
+        if 1 <= q <= maximo and q not in fuera:
             elegidos.append(q)
             ocupados.add(q)
     return sorted(elegidos)

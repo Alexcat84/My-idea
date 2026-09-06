@@ -1,0 +1,339 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta187_esqueleto_reporte.py
+  B: scripts/loop/vuelta188_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 187, 188
+  CIFRA lineas de docstring: A 54 | B 50
+  CIFRA lineas de maquina:   A 295 | B 292
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1439 | B 1439
+     CIFRA tipos de nodo que NO empatan: 0
+        (ninguno: los censos por tipo empatan y aun asi los
+        arboles difieren, o sea que lo que cambia es el VALOR de
+        algun nodo y no cuantos hay)
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 83
+  CIFRA tokens de maquina: A 1331 | B 1331
+  CIFRA tokens que difieren con el texto normalizado: 0
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): SI
+  CIFRA SENTENCIAS DE CODIGO: 0
+  CIFRA LITERALES DE TEXTO:   83
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     (ninguna)
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:82  ("1", 'LOS REGISTROS. BLOQUEANTE. El acta NNN entra en la serie con el numero que devuelve `scripts/loop/serie
+     A:83  ("2", 'EL PLAN SE MUEVE: EL PAR 2.464 Y EL TRAMO 1 DE LA COLA POST FUSION. Se LEE el disparador escrito antes 
+     A:84  ("3", 'LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA NNN, encargada por `AUDITOR.md` 1.2 porque las CUA
+     A:85  ("4", 'LA ESCALADA: LA PAREJA DE CONVENCIONES DEJA DE BASTAR CON EXISTIR. `AUDITOR.md` 1.2, mandatorio a parti
+     A:86  ("5", 'LA NOMINA, LA DECLARACION DEL 184 Y EL CIERRE. (a) Los CUATRO arneses de la 186 entran en la nomina MAS
+     A:244  > siguiente vuelta de bateria es la 189**. En las vueltas intermedias la seccion 9
+     A:245  > se cierra igual, con el **nombre del fichero, sus bytes medidos y su
+     A:246  > atribucion**, las tres juntas o no vale.
+     A:248  > **EL TOPE VUELVE A CINCO, Y ESTA MEDIDO EN VEZ DE DARSE POR BUENO.** El
+     A:249  > regimen temporal `AUDITOR.md` 6.2 devolvia el tope a cinco cuando **dos vueltas
+     A:250  > seguidas cerraran su propio reporte** con `scripts/loop/cerrar_reporte.py`. El
+     A:251  > **bloque H.0** del sello de apertura de esta vuelta midio las dos salidas de
+     A:252  > cierre, `docs/loop/SALIDA_V185_CERRAR_REPORTE.txt` y
+     A:253  > `docs/loop/SALIDA_V186_CERRAR_REPORTE.txt`, y **las dos dicen `CIFRA piezas que
+     A:254  > faltan: 0`**. **El regimen se apaga por su propio disparador de salida**, y esta
+     A:255  > vuelta lleva **CINCO tareas**.
+     A:257  > **Y CON EL TOPE EN CINCO SE ACABA LA ARITMETICA QUE APLAZABA EL PLAN.** El plan
+     A:258  > lleva **seis vueltas sin moverse**, y **por eso el par 2.464 y el tramo 1 de la
+     A:259  > cola post fusion van en la TAREA 2, delante de toda la maquinaria salvo los
+     A:260  > registros**. **Si esta vuelta se corta por falta de sitio, que se caiga la
+     A:261  > maquinaria, no el plan.**
+     A:263  > **DONDE SE TALLO ESTE ESQUELETO, DICHO SIN REDONDEAR.** No en la apertura, sino
+     A:264  > **despues de la TAREA 1**. La apertura si corrio primero y entera
+     A:265  > (`docs/loop/SALIDA_VNNN_APERTURA.txt`, con el ciclo de Gate 0 dentro), pero este
+     A:266  > esqueleto necesita que `docs/loop/SALIDA_VNNN_HEAD_APERTURA.txt` este
+     A:267  > **commiteado** para poder leer su commit de nacimiento con
+     A:268  > `git log --diff-filter=A`, y ese commit es el de la TAREA 1. **Se declara en vez
+     A:269  > de disimularse**, que es lo que el banco 9 manda: lo que `EJECUTOR.md` 1 protege
+     A:270  > es que una vuelta cortada deje reporte parcial y no vacio, y desde este punto
+     A:271  > eso se cumple.
+     A:273  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** **no se abre la
+     A:274  > mesa de los tres nodos de la puerta del `PMF`** (puestos 338 y 297), ni la del
+     A:275  > **603**, ni la de **figuras del 226**; las tres estan anotadas en el acta NNN,
+     A:276  > seccion 6.2, con sede en `docs/PENDIENTES.md`, y son trabajo de plan de otra
+     A:277  > vuelta. **No se poda la nomina de la bateria**, que es la opcion `c` que el
+     A:278  > fundador RECHAZO el 5 sep, y aqui se hace lo contrario, que es completarla. **No
+     A:279  > se reabre ni se reescribe `docs/loop/reportes/REPORTE_V184.md`**, que ya esta
+     A:280  > cerrado y archivado: lo que se le anade es la DECLARACION de su defecto. Y **no
+     A:281  > se toca `dataset/`**: el `numstat` se mide al entrar y al salir y las dos cifras
+     A:282  > se publican.
+     A:285  > DE APERTURA Y ANTES DE LA PRIMERA OPERACION.** El remedio se cableo en
+     A:286  > `vuelta177_apertura.py` y desde la 178 vuelve a correr en su sitio. **Una
+     A:287  > columna de apertura medida al cierre es caida que ACUMULA.**
+     B:78  ("1", 'LOS REGISTROS. BLOQUEANTE. El acta NNN entra en la serie con el numero que devuelve `scripts/loop/serie
+     B:79  ("2", 'EL PLAN: LAS CUATRO FICHAS QUE LA VARA NOMBRA, RESUELTAS CONTRA SU EVIDENCIA. `scripts/loop/vuelta150_3
+     B:80  ("3", 'EL CASO E: EL INVENTARIO DE EXENCIONES EN VEZ DE UNA CUENTA TECLEADA. BLOQUEANTE PORQUE LA BATERIA ES L
+     B:81  ("4", 'LA ESCALADA: LA GUARDA QUE VE LA MITAD, Y LA SECCION QUE SE DUPLICA. `AUDITOR.md` 1.2, mandatorio con l
+     B:82  ("5", 'LA RELECTURA AL DOBLE, LOS DOS REMEDIOS PEQUENOS Y EL CIERRE. (a) La relectura al doble del tramo de la
+     B:240  > siguiente vuelta de bateria es la 189, o sea la que viene**. En las vueltas
+     B:241  > intermedias la seccion 9 se cierra igual, con el **nombre del fichero, sus
+     B:242  > bytes medidos y su atribucion**, las tres juntas o no vale.
+     B:244  > **Y ESTA VUELTA ESCRIBE UNA SOLA SECCION 9**, que es la `C.4` del acta NNN: el
+     B:245  > reporte de la NNN llevaba **dos**, en las lineas 870 y 920, con la `## 10.` en
+     B:246  > medio. Lo que esta vuelta tenga que decir de la bateria va **en la que talla
+     B:247  > `scripts/loop/cerrar_reporte.py`**, no en una segunda escrita a mano.
+     B:249  > **EL TOPE SIGUE EN CINCO, Y ESTA MEDIDO EN VEZ DE DARSE POR BUENO.** El regimen
+     B:250  > temporal `AUDITOR.md` 6.2 quedo cumplido y apagado en la NNN. El **bloque H.0**
+     B:251  > del sello de apertura de esta vuelta midio **las tres** salidas de cierre,
+     B:252  > `docs/loop/SALIDA_V185_CERRAR_REPORTE.txt`,
+     B:253  > `docs/loop/SALIDA_V186_CERRAR_REPORTE.txt` y
+     B:254  > `docs/loop/SALIDA_VNNN_CERRAR_REPORTE.txt`, y **las tres dicen `CIFRA piezas que
+     B:255  > faltan: 0`**. Esta vuelta lleva **CINCO tareas**.
+     B:257  > **DONDE SE TALLO ESTE ESQUELETO, Y ESTA VEZ LA RESPUESTA ES EN LA APERTURA.**
+     B:258  > Es el remedio de la `C.1` de la NNN, escrito en la TAREA 5.c del encargo: la
+     B:259  > vuelta NNN lo tallo **despues de la TAREA 1**, y el acta NNN le corrigio la
+     B:260  > causa midiendola contra la vuelta 186, que hizo lo mismo **en tres commits**
+     B:261  > (`793ad9a1` apertura, `88bd3216` **esqueleto en su propio commit**, `456f0847`
+     B:262  > tarea 1). **Aqui va igual: apertura y su commit, esqueleto y SU PROPIO COMMIT,
+     B:263  > y despues las tareas.** Desde el segundo commit de esta vuelta ya hay reporte
+     B:264  > parcial en el arbol.
+     B:266  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** **no se abren
+     B:267  > las mesas anotadas** (la del `PMF` con los puestos 338, 297 y ahora 670, la del
+     B:268  > **603** y la de figuras del **226**), que el `6.3` del acta NNN deja como
+     B:269  > ANOTACION y no encarga; **no se poda la nomina de la bateria**, que es la opcion
+     B:270  > `c` que el fundador RECHAZO el 5 sep; **no se anade ningun campo a
+     B:271  > `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`**, que es la `PD.8` y es del fundador;
+     B:272  > **no se toca el campo `estado` de `docs/plan/OPERACIONES.jsonl`**, declarado
+     B:273  > HISTORICO el 4 sep 2026; **no se reabre `docs/loop/reportes/REPORTE_V184.md`**;
+     B:274  > y **no se mueve ningun veredicto**: el `sha256` LF del archivo abre y tiene que
+     B:275  > cerrar en el mismo valor. Y **no se toca `dataset/`**: el `numstat` se mide al
+     B:276  > entrar y al salir y las dos cifras se publican.
+     B:279  > DE APERTURA Y ANTES DE LA PRIMERA OPERACION.** **Una columna de apertura medida
+     B:280  > al cierre es caida que ACUMULA.**
+
+
+FIN
+EXITCODE ESQUELETO: 0
+
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta187_tarea5a_nomina.py
+  B: scripts/loop/vuelta188_tarea3c_nomina.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 187, 188
+  CIFRA lineas de docstring: A 42 | B 42
+  CIFRA lineas de maquina:   A 157 | B 244
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1252 | B 1868
+     CIFRA tipos de nodo que NO empatan: 34
+        Load                   A   313 | B   470 | diferencia +157
+        Name                   A   264 | B   412 | diferencia +148
+        Call                   A   105 | B   156 | diferencia +51
+        Store                  A    61 | B   106 | diferencia +45
+        Constant               A   142 | B   186 | diferencia +44
+        Attribute              A    66 | B    92 | diferencia +26
+        Expr                   A    51 | B    73 | diferencia +22
+        Assign                 A    34 | B    53 | diferencia +19
+        BinOp                  A    29 | B    45 | diferencia +16
+        Tuple                  A    26 | B    41 | diferencia +15
+        Mod                    A    26 | B    40 | diferencia +14
+        Subscript              A    12 | B    22 | diferencia +10
+        For                    A     8 | B    13 | diferencia +5
+        BoolOp                 A     3 | B     7 | diferencia +4
+        If                     A     4 | B     8 | diferencia +4
+        Compare                A    15 | B    18 | diferencia +3
+        IfExp                  A    10 | B    13 | diferencia +3
+        List                   A     6 | B     9 | diferencia +3
+        arg                    A     2 | B     5 | diferencia +3
+        Add                    A     4 | B     6 | diferencia +2
+        And                    A     3 | B     5 | diferencia +2
+        FunctionDef            A     3 | B     5 | diferencia +2
+        Gt                     A     0 | B     2 | diferencia +2
+        Not                    A     4 | B     6 | diferencia +2
+        Or                     A     0 | B     2 | diferencia +2
+        Return                 A     4 | B     6 | diferencia +2
+        UnaryOp                A     4 | B     6 | diferencia +2
+        arguments              A     3 | B     5 | diferencia +2
+        Continue               A     0 | B     1 | diferencia +1
+        Dict                   A     0 | B     1 | diferencia +1
+        In                     A     3 | B     4 | diferencia +1
+        ListComp               A     3 | B     4 | diferencia +1
+        comprehension          A     3 | B     4 | diferencia +1
+        keyword                A    11 | B    12 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 141
+  CIFRA tokens de maquina: A 1134 | B 1656
+  CIFRA tokens que difieren con el texto normalizado: 544
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 94
+  CIFRA LITERALES DE TEXTO:   47
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:58  LOS_SEIS = [
+     A:79  lf = datos.replace(b"\r\n", b"\n")
+     A:118  w("   LOS SEIS QUE ENTRAN, COMPROBADOS UNO A UNO DENTRO DE LA NOMINA:")
+     A:121  for script, _sal, origen in LOS_SEIS:
+     A:126  w("   CIFRA de los seis que estan dentro: %d de %d" % (n_dentro, len(LOS_SEIS)))
+     A:139  for script, salida, origen in LOS_SEIS:
+     A:187  and n_dentro == len(LOS_SEIS) and paradas == 0)
+     B:57  VUELTA = NNN
+     B:58  REGISTRO_ROJOS = "docs/loop/ROJOS_DE_LA_VUELTA_%d.txt" % VUELTA
+     B:60  LOS_QUE_CORREN = [
+     B:78  def rojos_registrados(texto):
+     B:79  """LOS ARNESES QUE YA SALIERON EN ROJO EN ESTA VUELTA, LEIDOS DEL REGISTRO.
+     B:80  
+     B:81  Devuelve [(script, ruta_de_su_salida, motivo)]. **PURA**: recibe el texto y
+     B:82  no lee ni escribe nada, para que su caso rojo se pueda tumbar sobre registros
+     B:83  fabricados en memoria sin tocar el disco.
+     B:84  
+     B:85  Las lineas vacias y las que empiezan por almohadilla se saltan, para que el
+     B:86  registro pueda llevar su propia cabecera explicativa. Una linea que no traiga
+     B:87  sus tres campos separados por barra sale con motivo `(sin motivo declarado)`,
+     B:88  y quien llama la trata igual que a las demas: **el arnes se excluye
+     B:89  igualmente, porque no correrlo es lo prudente, pero la salida dice que su
+     B:90  motivo no estaba escrito.**"""
+     B:91  salida = []
+     B:92  for linea in (texto or "").replace(chr(13) + NL, NL).split(NL):
+     B:93  l = linea.strip()
+     B:94  if not l or l.startswith("#"):
+     B:95  continue
+     B:96  trozos = [x.strip() for x in l.split("|")]
+     B:97  script = trozos[0]
+     B:98  ruta = trozos[1] if len(trozos) > 1 and trozos[1] else "(sin salida declarada)"
+     B:99  motivo = trozos[2] if len(trozos) > 2 and trozos[2] else "(sin motivo declarado)"
+     B:100  salida.append((script, ruta, motivo))
+     B:101  return salida
+     B:104  def particion_por_rojo(los_que_corren, rojos):
+     B:105  """LA DOBLE CORRIDA, PARTIDA EN DOS: los que se corren y los EXCLUIDOS.
+     B:106  
+     B:107  Devuelve (corren, excluidos), donde `excluidos` es
+     B:108  [(script, salida, origen, ruta_del_rojo, motivo)]. **PURA.**
+     B:109  
+     B:110  LA COMPARACION ES POR NOMBRE DE FICHERO Y NO POR RUTA COMPLETA, a proposito:
+     B:111  el registro puede escribir la ruta con barras de un sistema o de otro, y un
+     B:112  arnes que se salva de la exclusion por una barra seria exactamente la
+     B:113  especie de descuido que esta funcion existe para impedir."""
+     B:114  por_base = {}
+     B:115  for script, ruta, motivo in rojos:
+     B:116  por_base[os.path.basename(script.replace("\\", "/"))] = (ruta, motivo)
+     B:117  corren, excluidos = [], []
+     B:118  for script, salida, origen in los_que_corren:
+     B:119  base = os.path.basename(script.replace("\\", "/"))
+     B:120  if base in por_base:
+     B:121  ruta, motivo = por_base[base]
+     B:122  excluidos.append((script, salida, origen, ruta, motivo))
+     B:123  else:
+     B:124  corren.append((script, salida, origen))
+     B:125  return corren, excluidos
+     B:133  lf = datos.replace(chr(13).encode() + chr(10).encode(), chr(10).encode())
+     B:152  % VUELTA)
+     B:175  w("   LOS QUE ESTA VUELTA MANDA CORRER, COMPROBADOS DENTRO DE LA NOMINA:")
+     B:176  for script, _sal, origen in LOS_QUE_CORREN:
+     B:182  w("   CIFRA de esos que estan dentro: %d de %d" % (n_dentro, len(LOS_QUE_CORREN)))
+     B:193  p_reg = os.path.join(RAIZ, REGISTRO_ROJOS.replace("/", os.sep))
+     B:194  existe = os.path.isfile(p_reg)
+     B:195  texto_reg = io.open(p_reg, encoding="utf-8").read() if existe else ""
+     B:196  w("   registro: %s" % REGISTRO_ROJOS)
+     B:197  if existe:
+     B:198  s = sha_de(p_reg)
+     B:199  w("      existe: SI | disco %d bytes | LF %d bytes | sha256 LF %s"
+     B:200  % (s[2], s[3], s[1]))
+     B:201  else:
+     B:202  w("      existe: NO. **LA EXCLUSION ES VACIA Y SE DECLARA CON ESAS")
+     B:203  w("      PALABRAS**: ningun arnes sellado ha salido en rojo en esta vuelta,")
+     B:204  w("      asi que no hay nada que excluir. Un cero que no se publica no se")
+     B:205  w("      puede auditar.")
+     B:206  rojos = rojos_registrados(texto_reg)
+     B:207  w("   CIFRA arneses registrados como ROJOS de esta vuelta: %d" % len(rojos))
+     B:208  for script, ruta, motivo in rojos:
+     B:209  w("      ROJO: %s" % script)
+     B:210  w("         su salida en rojo: %s" % ruta)
+     B:211  w("         motivo: %s" % motivo)
+     B:212  corren, excluidos = particion_por_rojo(LOS_QUE_CORREN, rojos)
+     B:213  w("   CIFRA arneses EXCLUIDOS de la doble corrida: %d" % len(excluidos))
+     B:214  for script, _sal, _origen, ruta, motivo in excluidos:
+     B:215  w("      EXCLUIDO Y NO RE CORRIDO: %s" % script)
+     B:216  w("         motivo: %s" % motivo)
+     B:217  w("         su salida en rojo, que se conserva sin tocar: %s" % ruta)
+     B:218  if not excluidos:
+     B:219  w("      (ninguno excluido, y el cero va escrito)")
+     B:220  w("   CIFRA arneses que SI se corren dos veces: %d de %d"
+     B:221  % (len(corren), len(LOS_QUE_CORREN)))
+     B:222  w("")
+     B:226  for script, salida, origen in corren:
+     B:274  and n_dentro == len(LOS_QUE_CORREN) and paradas == 0)
+     B:277  ruta = os.path.join(LOOP, "SALIDA_V%d_T3C_NOMINA.txt" % VUELTA)
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:60  "docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt", "de la 186"),
+     A:61  ("scripts/loop/vuelta186_tarea2b_mutacion_pieza2_cercas.py",
+     A:62  "docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt", "de la 186"),
+     A:63  ("scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py",
+     A:64  "docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt", "de la 186"),
+     A:65  ("scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py",
+     A:66  "docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt", "de la 186"),
+     A:67  ("scripts/loop/vueltaNNN_tarea4_mutacion_dos_convenciones.py",
+     A:68  "docs/loop/SALIDA_VNNN_T4_MUTACION_DOS_CONVENCIONES.txt", "NACE HOY"),
+     A:69  ("scripts/loop/vueltaNNN_tarea5b_mutacion_seccion4_tardio.py",
+     A:70  "docs/loop/SALIDA_VNNN_T5B_MUTACION_SECCION4_TARDIO.txt", "NACE HOY"),
+     A:97  w("VUELTA NNN, TAREA 5.a: LA NOMINA, Y LA DOBLE CORRIDA DE LOS SEIS")
+     A:125  w("      %-52s %-9s en la nomina: %s" % (base, origen, "SI" if esta else "NO"))
+     A:133  w("B) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256")
+     A:134  w("   (lo que hace PARADA es que una salida cambie ENTRE LAS DOS CORRIDAS DE")
+     A:135  w("    HOY, que es lo que significa 'cambia sola'. Que se mueva respecto a la")
+     A:136  w("    salida sellada de la 186 tiene causa conocida, esta vuelta toco")
+     A:137  w("    cerrar_reporte.py, y se declara con su numstat al lado)")
+     A:176  w("C) EL ESTADO DEL ARBOL DESPUES DE LA DOBLE CORRIDA")
+     A:190  ruta = os.path.join(LOOP, "SALIDA_VNNN_T5A_NOMINA.txt")
+     B:61  ("scripts/loop/vueltaNNN_tarea2_mutacion_pata_documental.py",
+     B:62  "docs/loop/SALIDA_VNNN_T2_MUTACION_PATA_DOCUMENTAL.txt", "NACE HOY"),
+     B:63  ("scripts/loop/vueltaNNN_tarea3c_mutacion_exclusion_por_rojo.py",
+     B:64  "docs/loop/SALIDA_VNNN_T3C_MUTACION_EXCLUSION_POR_ROJO.txt", "NACE HOY"),
+     B:65  ("scripts/loop/vueltaNNN_tarea4_mutacion_cobertura_parejas.py",
+     B:66  "docs/loop/SALIDA_VNNN_T4_MUTACION_COBERTURA_PAREJAS.txt", "NACE HOY"),
+     B:67  ("scripts/loop/vueltaNNN_tarea5a_mutacion_vecinos_evitar.py",
+     B:68  "docs/loop/SALIDA_VNNN_T5A_MUTACION_VECINOS_EVITAR.txt", "NACE HOY"),
+     B:69  ("scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py",
+     B:70  "docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt",
+     B:71  "de la 186, REESCRITO HOY por el acta NNN punto 7.1"),
+     B:73  "docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt",
+     B:74  "de la 186, TOCADO HOY por la TAREA 3.b"),
+     B:76  
+     B:77  
+     B:102  
+     B:103  
+     B:151  w("VUELTA %d, TAREA 3.c: LA NOMINA, Y LA DOBLE CORRIDA CON EXCLUSION POR ROJO"
+     B:180  w("      %-56s %-42s en la nomina: %s"
+     B:181  % (base, origen, "SI" if esta else "NO"))
+     B:189  w("B) LA EXCLUSION POR ROJO, QUE ES LA `C.3` DEL ACTA NNN")
+     B:190  w("   (la letra rota decia `sin re-correrlo`, y en la NNN un arnes sellado en")
+     B:191  w("    rojo se corrio DOS VECES MAS dentro de la doble corrida. Aqui la doble")
+     B:192  w("    corrida los EXCLUYE y LO DICE: una exclusion muda seria peor)")
+     B:223  
+     B:224  w("C) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256")
+     B:263  w("D) EL ESTADO DEL ARBOL DESPUES DE LA DOBLE CORRIDA")
+
+
+FIN
+EXITCODE NOMINA: 0

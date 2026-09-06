@@ -985,6 +985,35 @@ VIEJAS = [
     ("vuelta186_tarea2d_mutacion_seccion4.py", False),
     ("vuelta187_tarea4_mutacion_dos_convenciones.py", False),
     ("vuelta187_tarea5b_mutacion_seccion4_tardio.py", False),
+    # LOS CUATRO QUE NACEN EN LA VUELTA 188, Y ENTRAN EN LA VUELTA QUE NACEN
+    # porque la bateria es la 189 y no queda ninguna vuelta de margen:
+    #
+    #   - `vuelta188_tarea2_mutacion_pata_documental.py`: la CUARTA prueba de la
+    #     vara del expediente, la DOCUMENTAL, que solo existe para las fichas de
+    #     tipo `MESA`. Su caso mas fuerte es de FORMA: una ficha que no es MESA no
+    #     aparece siquiera en el diccionario.
+    #   - `vuelta188_tarea3c_mutacion_exclusion_por_rojo.py`: la exclusion de la
+    #     doble corrida, que es el remedio de la `C.3` del acta 188. Prueba que un
+    #     registro vacio no excluye a nadie, que uno que nombra excluye de verdad,
+    #     y que LA EXCLUSION NO ES MUDA.
+    #   - `vuelta188_tarea4_mutacion_cobertura_parejas.py`: la escalada de esta
+    #     vuelta, con sus dos patas (las tres formas nuevas de la pareja de
+    #     convenciones mas la cobertura publicada, y la pieza (3) exigiendo
+    #     secciones unicas y en orden). Sus dos casos decisivos van sobre el TEXTO
+    #     REAL de `git show 9a06b7c8:docs/loop/REPORTE.md`, y solo lo LEEN.
+    #   - `vuelta188_tarea5a_mutacion_vecinos_evitar.py`: el parametro `evitar` de
+    #     `vecinos()`, con una COPIA CONGELADA de la version anterior dentro del
+    #     propio arnes para poder exigir que sin el parametro la conducta sea
+    #     identica.
+    #
+    # NINGUNO ADMITE --sujeto: todos fabrican los suyos, salvo los dos casos
+    # decisivos de la escalada, que van sobre un texto REAL y solo lo leen.
+    #
+    # LA NOMINA CRECE DE 121 A 125. NO SE PODA NADA.
+    ("vuelta188_tarea2_mutacion_pata_documental.py", False),
+    ("vuelta188_tarea3c_mutacion_exclusion_por_rojo.py", False),
+    ("vuelta188_tarea4_mutacion_cobertura_parejas.py", False),
+    ("vuelta188_tarea5a_mutacion_vecinos_evitar.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

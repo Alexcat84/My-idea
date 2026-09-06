@@ -45,14 +45,14 @@ CASO D. EL PARAMETRO EN SU VALOR POR DEFECTO SE COMPORTA EXACTAMENTE COMO
 
 CASO E. LA SEGUNDA COPIA DE LA COMPARACION: SE CUENTA Y SE EXIGE 1
    fichero: scripts/loop/cerrar_reporte.py
-   SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 97163 bytes | LF 97163 bytes |
-   sha256 LF 2e37089d0389e67efda7297c105201378c229575c398820b50841ce246a9c7af
+   SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 108128 bytes | LF 108128 bytes |
+   sha256 LF 745a15a8e693ec5c1ef65e9db0fcb2e94459954d280b2360a0c226a7c3452bce
    Con ese sello al lado, los numeros de linea de abajo NO envejecen solos:
    un diff futuro dice si se movio el sujeto o si se movio el arnes.
-   CIFRA apariciones CRUDAS: 2, lineas 770, 1446
+   CIFRA apariciones CRUDAS: 2, lineas 770, 1623
    CIFRA apariciones en lineas de CODIGO: 1, lineas 770
       LINEA 770 (CODIGO): if ajena != vuelta:
-      LINEA 1446 (comentario): # comparacion `ajena != vuelta`, asi que la reparacion que la
+      LINEA 1623 (comentario): # comparacion `ajena != vuelta`, asi que la reparacion que la
    ESPERADO: exactamente 1 en codigo -> CALZA
    MUTACION del esperado (exigir 2 en codigo): CAE
    Y LA PRUEBA DE QUE ESTE CASO SABE CONTAR: sobre un texto FABRICADO con

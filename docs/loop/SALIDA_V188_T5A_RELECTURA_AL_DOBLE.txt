@@ -1,0 +1,160 @@
+==============================================================================
+VUELTA 188, TAREA 5.a: LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 188
+encargada por AUDITOR.md 1.2, porque la discrepancia del auditor (el puesto
+1202) cayo FUERA del discutible de clase marcado (el reporte marco el 2464)
+==============================================================================
+
+A) EL COTEJO DEL sha256, ANTES DE LEER UN SOLO PUESTO
+   (el encargo publica 41098 bytes y sha256 LF 4dbbedc0ac89951e. AQUI NO SE
+    COPIA NINGUNA DE LAS DOS: se computan y se comparan)
+   docs/loop/SELLO_APERTURA_AUDITOR_V189.json -> disco 651 bytes | LF 651 bytes
+   ciega    docs/loop/_auditor_v189_ciega_blind.txt
+      bytes: el sello dice 41098 | medido en disco 41098 -> CALZA
+      sha256: el sello dice 4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c
+              medido LF     4dbbedc0ac89951e979866454b5d7be4b9406c65ba47c664fdf89b51b098df3c
+              -> CALZA
+   destape  docs/loop/_auditor_v189_ciega_reveal.txt
+      bytes: el sello dice 34030 | medido en disco 34030 -> CALZA
+      sha256: el sello dice 9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5
+              medido LF     9267fbf46cbad22f1782d9813cea0ff426ed6da4838f2d7532ae588b566410e5
+              -> CALZA
+   LOS DOS CALZAN. Se puede leer.
+
+B) EL TRAMO Y SU DOBLE, CON `vecinos()` IMPORTADA Y NO COPIADA
+   docs/loop/_auditor_v189_ciega_blind.txt -> 30 puestos distintos
+   LOS PUESTOS DEL TRAMO: 239, 290, 415, 550, 670, 909, 1123, 1132, 1202, 1403, 1791, 1806, 1929, 1962, 1973, 2150, 2162, 2357, 2399, 2418, 2683, 2759, 2783, 2875, 3148, 3179, 3224, 3247, 3280, 3364
+   veredictos: 3388 filas | maximo puesto 3388 | grafo: 3853 nodos
+   docs/loop/_auditor_v189_exclusion.txt -> disco 1648 bytes | LF 1648 bytes | 351 puestos distintos
+   el encargo dice 351 -> CALZA
+
+   EL REMEDIO DEL `D.2`, QUE ES ADITIVO Y NO TUERCE LA VARA: a `vecinos()`
+   se le pasa el conjunto `evitar` con los 351 de la exclusion, y el cero
+   sale POR CONSTRUCCION. Su regla no cambia: cambia lo que se le pasa.
+      SIN `evitar` (la conducta de la 187): 30 vecinos, y su solape con la
+      exclusion es 1: 2151
+      CON `evitar`: 30 vecinos
+   LOS VECINOS: 240, 291, 416, 551, 671, 910, 1124, 1133, 1203, 1404, 1792, 1807, 1930, 1963, 1974, 2153, 2163, 2358, 2400, 2419, 2684, 2760, 2784, 2876, 3149, 3180, 3225, 3248, 3281, 3365
+   CIFRA puestos que se releen EN TOTAL: 60
+   ES EL DOBLE EXACTO DEL TRAMO: SI
+
+C) LOS TRES SOLAPES DEL UNIVERSO, QUE ES LO QUE EL ACTA 188 EXIGE
+   SOLAPE el UNIVERSO contra el TRAMO (los vecinos no repiten el tramo): 0
+   SOLAPE el UNIVERSO contra docs/loop/_auditor_v188_ciega_blind.txt: 0
+   SOLAPE el UNIVERSO contra la EXCLUSION de 351 puestos: 0
+   CIFRA solapes que NO dan 0: 0
+
+D) LA RELECTURA MECANICA, PUESTO A PUESTO
+   (la maquina se IMPORTA de vuelta182_tarea3_diferenciador_movido.py, y
+    NINGUNA CLASE SE VUELVE A DECIDIR)
+   puesto clase  declara  lesion   vivos   cober  familia  nodos
+   239    D      no       no       SI      0.00   no       estructura_estado_resultados contra lectura_estado_resultados   <-- DEL TRAMO
+   240    D      no       no       SI      0.00   no       preguntas_implicacion contra preguntas_problema_2
+   290    A      no       no       SI      0.00   no       decision_cuando_fundar contra tres_preguntas_carrera   <-- DEL TRAMO
+   291    D      no       no       SI      0.00   no       customer_discovery_overview contra customer_discovery_phase2_problem_test
+   415    D      no       no       SI      0.00   SI       customer_discovery_cuatro_fases contra customer_discovery_introduccion   <-- DEL TRAMO
+   416    D      no       no       SI      0.00   no       publicidad_garantia_conforme contra regla_divulgacion_garantia
+   550    A      no       no       SI      0.00   no       preservar_efectivo_buscar_modelo contra restriccion_gasto_validacion   <-- DEL TRAMO
+   551    D      no       no       SI      0.00   no       ranking_proyectos_por_npv contra tasa_interna_retorno_irr
+   670    D      no       no       SI      0.00   SI       customer_discovery_overview contra product_market_fit   <-- DEL TRAMO
+   671    D      no       no       SI      0.00   no       requirements_management_plan contra requirements_traceability_matrix
+   909    D      no       no       SI      0.00   no       estrategia_de_ventas contra influence_map_organizacional   <-- DEL TRAMO
+   910    D      no       no       SI      0.00   no       evaluacion_industria_cliente contra voice_of_customer_estrategico
+   1123   D      no       no       SI      0.00   no       business_plan_cinco_secciones contra lienzo_modelo_negocio   <-- DEL TRAMO
+   1124   D      no       no       SI      0.00   no       customer_validation contra decision_pivotar_o_proceder
+   1132   D      no       no       SI      0.00   no       fase_acclimate_experiencia_cliente contra fase_activate_primera_impresion   <-- DEL TRAMO
+   1133   D      no       no       SI      0.00   no       modelo_spin contra preguntas_problema_2
+   1202   A      no       no       SI      0.00   SI       diferencias_venta_pequena_venta_grande contra riesgo_tecnicas_cierre_venta_compleja   <-- DEL TRAMO
+   1203   D      no       no       SI      0.00   no       fase_acclimate contra ocho_fases_experiencia_cliente
+   1403   D      no       no       SI      0.00   no       filosofia_validacion_clientes contra plan_de_adquisicion_acquire   <-- DEL TRAMO
+   1404   D      no       no       SI      0.00   no       garantias_implicitas_vs_expresas contra mecanismo_resolucion_disputas
+   1791   A      no       no       SI      0.00   no       reduccion_cargas_cumplimiento contra reduccion_cargas_regulatorias   <-- DEL TRAMO
+   1792   A      no       no       SI      0.00   SI       diversidad_como_fortaleza_ecosistemica contra respeto_a_la_diversidad
+   1806   A      no       no       SI      0.00   no       hibridos_monstruosos contra manejo_de_hibridos_monstruosos   <-- DEL TRAMO
+   1807   D      no       no       SI      0.00   no       compra_energia_limpia contra energia_fuentes_limpias
+   1929   D      no       no       SI      0.00   no       contabilidad_ambiental contra contabilidad_flujo_materiales   <-- DEL TRAMO
+   1930   D      no       no       SI      0.00   no       compra_equipos_verdes contra gestion_e_waste
+   1962   D      no       no       SI      0.00   no       desarrollo_plan_exportacion contra estructura_plan_exportacion   <-- DEL TRAMO
+   1963   A      no       no       SI      0.00   no       ecosistema_global_emprendimiento_gee contra recursos_apoyo_pymes_sba
+   1973   D      no       no       SI      0.00   no       seleccion_canales_distribucion contra seleccion_de_distribuidor_internacional   <-- DEL TRAMO
+   1974   D      no       no       SI      0.00   no       cash_in_advance contra metodos_pago_electronico_internacional
+   2150   D      no       no       SI      0.00   no       plan_estrategico_franquicia contra planificacion_salida_estrategica   <-- DEL TRAMO
+   2153   D      no       no       SI      0.00   no       retroalimentacion_franquiciados contra validacion_con_franquiciados
+   2162   D      no       no       SI      0.00   no       estrategia_multicanal_expansion contra mix_ubicaciones_corporativas_franquicia   <-- DEL TRAMO
+   2163   D      no       no       SI      0.00   no       calificacion_prospectos_award contra exito_franquiciado_determina_exito_franquiciador
+   2357   D      no       no       SI      0.00   no       evaluacion_mejora_programa contra seguimiento_efectividad_controles   <-- DEL TRAMO
+   2358   D      no       no       SI      0.00   no       clausula_deber_general_osha contra derecho_rechazo_trabajo_peligroso
+   2399   D      no       no       SI      0.00   no       perspectiva_dentro_del_tunel contra reconstruccion_contexto_situacional   <-- DEL TRAMO
+   2400   A      no       no       SI      0.00   no       new_view_human_error contra vieja_vision_vs_nueva_vision_seguridad
+   2418   A      SI       no       SI      0.25   no       accion_correctiva_5 contra accion_correctiva_6   <-- DEL TRAMO
+   2419   D      no       no       SI      0.00   no       desarrollar_controles_transferir_operaciones contra desarrollo_de_controles_de_proceso
+   2683   D      no       no       SI      0.00   no       gestion_para_la_calidad contra sistema_gestion_calidad   <-- DEL TRAMO
+   2684   D      no       no       SI      0.00   no       conformidad_especificacion_aptitud_uso contra decision_comunicacion
+   2759   A      no       no       SI      0.00   no       breakthrough_desempeno_actual contra six_sigma_dmaic_2   <-- DEL TRAMO
+   2760   A      no       no       SI      0.00   no       gobierno_corporativo_juntas_directivas contra planificacion_gobierno_organizaciones_familiares
+   2783   D      no       no       SI      0.00   SI       responsabilidades_desarrollo_talento_calidad contra rol_director_calidad   <-- DEL TRAMO
+   2784   D      no       no       SI      0.00   no       concepto_quality_is_free contra costo_de_mala_calidad_copq
+   2875   D      no       no       SI      0.00   no       desarrollar_caracteristicas_proceso contra identificar_caracteristicas_metas_proceso   <-- DEL TRAMO
+   2876   D      no       no       SI      0.00   no       fitness_for_purpose_vs_conformance contra insuficiencia_especificaciones
+   3148   D      no       no       SI      0.00   SI       dia_cero_defectos contra zero_defects_concepto   <-- DEL TRAMO
+   3149   D      SI       no       SI      0.00   no       capacidad_proceso_concepto contra control_estadistico_del_proceso
+   3179   D      no       no       SI      0.00   no       grafico_cusum contra grafico_media_movil_ewma   <-- DEL TRAMO
+   3180   D      no       no       SI      0.00   no       auditoria_producto contra evaluacion_encuesta_calidad_proveedor
+   3224   D      no       no       SI      0.00   no       criterios_diseno_producto contra establecer_metas_caracteristicas   <-- DEL TRAMO
+   3225   D      no       no       SI      0.00   no       criterios_seleccion_proyectos_calidad contra proyectos_vitales_pocos
+   3247   D      no       no       SI      0.00   no       consejo_ejecutivo_calidad contra planificacion_estrategica_despliegue_2   <-- DEL TRAMO
+   3248   D      no       no       SI      0.00   no       analisis_beneficio_costo contra evaluacion_seleccion_alternativas_mejora
+   3280   D      no       no       SI      0.00   no       plan_b_antes_de_necesitarlo contra que_hacer_con_un_riesgo_nuevo   <-- DEL TRAMO
+   3281   D      no       no       SI      0.00   no       cual_es_tu_mayor_riesgo contra tecnicas_para_sacar_riesgos_a_la_luz
+   3364   A      SI       no       SI      0.00   no       getting_started_maintenance contra mantenimiento_sistema_cui   <-- DEL TRAMO
+   3365   D      SI       no       SI      0.04   no       csf_funcion_detect contra funcion_detect_monitoreo_red
+
+E) LAS CIFRAS DE LA RELECTURA
+   CIFRA puestos releidos: 60
+   CIFRA que declaran diferenciador: 4
+   CIFRA con LESION EXACTA: 0
+   CIFRA con algun nodo MUERTO en el grafo de hoy: 0
+   REPARTO POR CLASE, CONTADO DEL ARCHIVO:
+      clase 'A'    12
+      clase 'D'    48
+   LOS LESIONADOS: (ninguno)
+
+F) LA CIFRA QUE EL ACTA 188 PIDE APARTE, Y QUE SOLO SE CUENTA
+   (evidencia DE FAMILIA y no del par: una razon que se apoya en un racimo,
+    en unos hermanos o en una NOTA DE NOMINA, en vez de en los dos nodos
+    del par. SOLO SE CUENTA Y SE PUBLICA: no se interpreta y no se
+    adjudica, y el motivo esta escrito en el acta 188, seccion 4)
+   LAS MARCAS QUE SE BUSCAN, LITERALES: 'NOTA DE NOMINA', 'NOTA DE LA NOMINA', 'racimo', 'RACIMO', 'cumulo', 'CUMULO', 'hermanos', 'HERMANOS', 'contra hermanos', '9.20'
+   CIFRA de los 60 releidos cuya razon lleva evidencia DE FAMILIA: 6
+   LOS PUESTOS: 415, 670, 1202, 1792, 2783, 3148
+   Y EL REPARTO ENTRE TRAMO Y VECINOS, PORQUE NO ES LO MISMO:
+      del TRAMO (los 30 que el auditor leyo a ciegas): 5 de 30
+      de los VECINOS: 1 de 30
+   **SI RESULTA QUE LA SALIDA CIEGA NO LLEVA LA CARTA QUE DECIDE UNA PARTE
+   DE LOS PARES, ESO ES UN HALLAZGO DEL FUNDADOR Y NO MIO.**
+
+G) EL PUESTO 1202, MIRADO CON LA MISMA VARA Y PUBLICADO APARTE
+   (el auditor lo pierde a favor del archivo. Aqui se dice si esta dentro
+    del universo releido y QUE VE LA VARA EN EL. Lo que la vara no vea, no
+    se afirma)
+   esta dentro del universo releido: SI
+   esta en el TRAMO de la ciega: SI
+   nodo_a: diferencias_venta_pequena_venta_grande
+   nodo_b: riesgo_tecnicas_cierre_venta_compleja
+   clase que el archivo dice HOY: A
+   dominio: core | banda: True
+   la vara ve: declara diferenciador no | LESION EXACTA no | vivos SI |
+   cobertura 0.00
+   motivo de la vara: la razon no declara ningun diferenciador
+   su razon lleva evidencia DE FAMILIA: SI
+   LA RAZON DEL ARCHIVO, PEGADA ENTERA Y NO RESUMIDA:
+      | LA CLASIFICACION Y LA REGLA DEL TAMANO, otra vez, y con esto el racimo del cierre suma miembro. Lo comun es la tesis entera de los dos nodos y sus dos primeros pasos: clasificar cada oportunidad de venta por su tamano, ciclo, monto y visibilidad en uno, valor y sofisticacion del comprador en el otro; y la regla que sale de esa clasificacion, si la venta es grande no presionar ni cerrar de forma agresiva. PERDIDAS PROPUESTAS, con la verificacion hecha y repartidas por lado. De diferencias_venta_pequena_venta_grande se perderian dos y la primera es su aportacion real: DISENAR LA ESTRATEGIA DE SEGUIMIENTO ENTRE LLAMADAS, porque las decisiones importantes ocurren cuando el vendedor no esta delante, que es lo unico del racimo que habla del tiempo entre reuniones; y anticipar que el cliente evalua tambien la relacion con el vendedor. De riesgo_tecnicas_cierre_venta_compleja se perderian enfocar el esfuerzo en las etapas previas de investigacion y desarrollo de necesidades, y MEDIR LA SATISFACCION POSVENTA para detectar si las tecnicas de cierre estan danando la relacion. NOTA DE NOMINA, banco 9.20 y 9.10: riesgo_tecnicas_cierre_venta_compleja es el centro del racimo del cierre en venta grande y llevaba CUATRO A contra hermanos, los puestos 274, 321, 432 y 1004. El 1004 no estaba en la ficha de la seccion 9, que se escribio con ocho miembros; con el y con este, la nomina medida hoy es de DIEZ.
+   **NINGUNA CLASE SE MUEVE AQUI.** Esta seccion mide y publica.
+
+H) LO QUE ESTA RELECTURA SOSTIENE, Y NI UNA PALABRA MAS
+   1. El tramo se releyo AL DOBLE: 60 puestos contra los 30 del tramo.
+   2. Los tres solapes del UNIVERSO se publican, y 0 de los tres no dan 0.
+   3. NINGUNA CLASE SE VUELVE A DECIDIR. Es la relectura MECANICA del
+      universo con la vara de esta casa, no una lectura de juicio.
+   4. La cuenta de evidencia DE FAMILIA se publica y NO se interpreta.
+
+FIN

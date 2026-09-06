@@ -33,6 +33,13 @@ QUE PRUEBA, CASO A CASO, Y TODOS TIENEN QUE CAER AL MUTAR SU ESPERADO:
   (E) EL EXTRACTOR DE NOMBRES NO TRAGA CUALQUIER COSA: coge `.md`, `.jsonl`,
       `.json`, `.txt` y `.py`, y NO coge prosa con puntos ni versiones.
 
+SUJETO CONGELADO, Y SE DICE CON ESAS PALABRAS PORQUE ES CIERTO: este arnes NO
+abre ningun fichero vivo. Los nombres `LECTURAS_DIRIGIDAS.md` e
+`INVENTARIO.jsonl` aparecen aqui SOLO como texto dentro de fichas FABRICADAS, y
+todas las llamadas que tocan disco van contra un directorio TEMPORAL propio que
+se limpia al salir (`P.16`, quien fabrica limpia). La unica lectura de un fichero
+del repo es la de su PROPIO SUJETO, para sellarlo.
+
 LO QUE ESTE ARNES NO HACE: no corre la vara entera como proceso, no toca
 `docs/plan/OPERACIONES.jsonl` y no escribe ningun veredicto. Llama a las
 funciones PURAS del fichero vivo con fichas fabricadas en memoria y, para el
@@ -88,7 +95,13 @@ def _caso_a(w):
     F = [ficha("OP-X-01", "FUSION", ["LECTURAS_DIRIGIDAS.md, las once"]),
          ficha("OP-X-02", "DESTEJIDO", ["INVENTARIO.jsonl, 323 entradas"]),
          ficha("OP-X-03", "MESA", ["LECTURAS_DIRIGIDAS.md, las once"])]
-    v4 = VARA.p4_vara_documental(F)
+    # LA RAIZ VA A UN TEMPORAL VACIO: este caso solo mira QUE CLAVES devuelve, y
+    # apuntarlo al repo de verdad seria leer ficheros vivos para nada.
+    vacio = tempfile.mkdtemp(prefix="v188_pata_vacio_")
+    try:
+        v4 = VARA.p4_vara_documental(F, raiz=vacio)
+    finally:
+        shutil.rmtree(vacio, ignore_errors=True)
     casos += 1
     w("   fichas dadas: %s" % ", ".join("%s(%s)" % (f["id_op"], f["tipo"]) for f in F))
     w("   claves que devuelve p4_vara_documental(): %s" % sorted(v4))
@@ -103,7 +116,12 @@ def _caso_a(w):
     else:
         caen += 1
     w("   Y CON CERO MESAS, PARA QUE SE VEA QUE NO ESTA CLAVADO:")
-    v4b = VARA.p4_vara_documental([f for f in F if f["tipo"] != "MESA"])
+    vacio2 = tempfile.mkdtemp(prefix="v188_pata_vacio_")
+    try:
+        v4b = VARA.p4_vara_documental([f for f in F if f["tipo"] != "MESA"],
+                                      raiz=vacio2)
+    finally:
+        shutil.rmtree(vacio2, ignore_errors=True)
     casos += 1
     w("      claves: %s | ESPERADO ninguna -> %s"
       % (sorted(v4b), "CALZA" if not v4b else "NO CALZA"))
@@ -211,8 +229,21 @@ def _casos_bcd(w):
         w("")
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
-        w("   TEMPORAL LIMPIADO (P.16, quien fabrica limpia): %s -> existe: %s"
-          % (tmp, "SI" if os.path.exists(tmp) else "NO"))
+        # EL NOMBRE DEL TEMPORAL NO SE IMPRIME, Y ESO ES UNA REPARACION DECLARADA
+        # DE ESTA MISMA VUELTA. La primera version imprimia la ruta entera
+        # (`...\Temp\v188_pata_y6ny0oop`), que `mkdtemp` fabrica distinta cada
+        # vez, asi que la salida de este arnes CAMBIABA SOLA entre dos corridas
+        # del mismo dia sobre el mismo sujeto. **Eso es PARADA por la respuesta
+        # del acta 188 a la `P.2`**, y es exactamente lo que le paso a
+        # `vuelta182_tarea2_mutacion_apertura_auditor.py` en la vuelta 184. Se
+        # imprime lo que se puede COMPROBAR (que se limpio) y no lo que cambia
+        # solo (como se llamaba). La corrida en rojo se conserva entera en
+        # `docs/loop/SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL_EN_ROJO_CAMBIA_SOLA.txt`.
+        w("   TEMPORAL LIMPIADO (P.16, quien fabrica limpia): %s"
+          % ("SI, el directorio ya no existe" if not os.path.exists(tmp)
+             else "NO, y eso es un fallo de este arnes"))
+        w("   (su nombre NO se imprime a proposito: `mkdtemp` lo fabrica distinto")
+        w("    cada vez y esta salida CAMBIARIA SOLA, que es PARADA por la `P.2`)")
         w("")
     return fallos, casos, caen
 

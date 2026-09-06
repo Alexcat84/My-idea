@@ -64,6 +64,8 @@ LOS_QUE_CORREN = [
      "docs/loop/SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt", "NACE HOY"),
     ("scripts/loop/vuelta188_tarea4_mutacion_cobertura_parejas.py",
      "docs/loop/SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt", "NACE HOY"),
+    ("scripts/loop/vuelta188_tarea5a_mutacion_vecinos_evitar.py",
+     "docs/loop/SALIDA_V188_T5A_MUTACION_VECINOS_EVITAR.txt", "NACE HOY"),
     ("scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py",
      "docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt",
      "de la 186, REESCRITO HOY por el acta 188 punto 7.1"),
