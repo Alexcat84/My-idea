@@ -1,0 +1,54 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta183_bateria_por_tramos.py
+  B: scripts/loop/vuelta189_bateria_por_tramos.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 183, 189
+  CIFRA lineas de docstring: A 52 | B 43
+  CIFRA lineas de maquina:   A 705 | B 706
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 4074 | B 4070
+     CIFRA tipos de nodo que NO empatan: 4
+        Assign                 A    80 | B    79 | diferencia -1
+        Constant               A   383 | B   382 | diferencia -1
+        Name                   A   875 | B   874 | diferencia -1
+        Store                  A   142 | B   141 | diferencia -1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 13
+  CIFRA tokens de maquina: A 3637 | B 3636
+  CIFRA tokens que difieren con el texto normalizado: 5
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 3
+  CIFRA LITERALES DE TEXTO:   10
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:108  TRAMOS_QUE_MANDA_LA_DECISION = 9
+     B:98  # cifra de tramos NO SE TECLEA en ningun sitio, sale de len(tramos), y --componer
+     B:99  # comprueba la cobertura leyendola de las salidas y no del reparto.
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:102  # EL TAMANO DEL TRAMO. No se elige por gusto: es el que hace que
+     A:103  # reparto_en_tramos() sobre la nomina de HOY devuelva NUEVE tramos, que es el
+     A:104  # numero del precedente de la vuelta 176 que la decision del fundador cita. Si la
+     A:105  # nomina crece, --plan lo dira en su primera linea y el numero se recalcula: lo
+     A:106  # que manda es que sean NUEVE, no que el tamano sea este.
+     B:93  # EL TAMANO DEL TRAMO, Y AQUI SE DICE LO QUE EL ORIGINAL YA NO PODIA DECIR. El
+     B:94  # original explicaba este 13 diciendo que era "el que hace que reparto_en_tramos()
+     B:95  # sobre la nomina de HOY devuelva NUEVE tramos". ESO ERA CIERTO CON UNA NOMINA DE
+     B:96  # 121 Y HOY ES FALSO: con 125 el mismo 13 da DIEZ tramos, nueve de 13 y uno de 8.
+     B:97  # LO QUE MANDA NO ES EL NUMERO DE TRAMOS, ES QUE LA NOMINA ENTERA SE CUBRA: la
+
+
+FIN
