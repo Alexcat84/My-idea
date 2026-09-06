@@ -1,0 +1,42 @@
+==============================================================================
+LA CUARTA PUERTA Y SUS DOS ARNESES SE CONTRADICEN EN LA SEDE DE VERDAD.
+Auditor de la vuelta 194. Corrido, no deducido.
+==============================================================================
+
+EL FICHERO DEL TURNO ES LA PIEZA `a` DE LA TAREA 4 DE LA VUELTA 193: es lo
+que hace que la bitacora sobreviva al proceso. Su sede de verdad es
+docs\loop\_TURNO_DEL_AUDITOR.json, y esta COMMITEADA en 55167069.
+
+CASO 1. EL ARNES DE LA 192 CORRIDO SOLO, CON EL FICHERO DEL TURNO PUESTO.
+   fichero del turno antes: EXISTE
+   exitcode 0 | (sin linea de veredicto)
+   fichero del turno despues: BORRADO
+   -> el arnes llama AP.olvidar_todo() OCHO veces contra el modulo REAL
+      (lineas 103, 123, 137, 158, 184, 210, 226 y 239) y NUNCA redirige
+      AP.RUTA_DEL_TURNO a un temporal. La 193 le anadio a olvidar_todo()
+      el os.remove(RUTA_DEL_TURNO), y con eso el arnes viejo pasa a
+      BORRAR EL TURNO VIVO DEL AUDITOR en su sede de verdad.
+   -> Y SALE VERDE MIENTRAS LO HACE: no avisa de nada.
+
+CASO 2. EL ARNES DE LA 193 CORRIDO SOLO, CON EL FICHERO DEL TURNO PUESTO.
+   fichero del turno antes: EXISTE
+   exitcode 1 | VEREDICTO: ROJO
+   fichero del turno despues: EXISTE
+   -> su caso H afirma 'y el turno del auditor DE VERDAD no se toco'
+      comprobando os.path.exists(turno_real) == False (lineas 262 a 264).
+      O sea que EXIGE QUE EL FICHERO NO EXISTA, y el fichero existe
+      siempre que haya un turno de auditor vivo.
+
+CASO 3. LOS DOS EN EL ORDEN EN QUE LA BATERIA LOS CORRE (alfabetico).
+   fichero del turno antes: EXISTE
+   192 -> exitcode 0 | (sin linea de veredicto) | turno: BORRADO
+   193 -> exitcode 0 | VEREDICTO: VERDE | turno: BORRADO
+
+LO QUE ESTO SIGNIFICA, Y ES LA MITAD QUE IMPORTA:
+   EL VERDE DEL ARNES DE LA 193 NO ES SUYO. Sale verde PORQUE el arnes de
+   la 192 corrio antes y borro el fichero que el de la 193 exige ausente.
+   Son dos arneses de la MISMA puerta que se contradicen sobre la sede de
+   verdad: uno la borra y el otro la exige vacia, y el orden alfabetico es
+   lo unico que hoy los pone de acuerdo.
+
+fichero del turno restaurado con git checkout -- y REMEDIDO: EXISTE

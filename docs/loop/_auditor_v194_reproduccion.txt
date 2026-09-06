@@ -1,0 +1,103 @@
+==============================================================================
+GUARDA DE ENTRADA A LA NOMINA. Corre ANTES de la bateria, no dentro.
+==============================================================================
+LOS QUE EL CENSO RECLAMA PARA LA NOMINA: 5
+   vuelta191_tarea3_mutacion_lineas.py            CONGELADO      motivo escrito: SI 
+      huellas de vivo:      LECTURAS_DIRIGIDAS.md
+      huellas de congelado: tempfile, mkdtemp, git show, sha256, SUJETO CONGELADO
+   vuelta191_tarea4_mutacion_veredicto.py         CONGELADO      motivo escrito: no 
+      huellas de vivo:      (ninguna)
+      huellas de congelado: tempfile, mkdtemp, sha256
+   vuelta191_tarea6_mutacion_bloque_tallado.py    CONGELADO      motivo escrito: SI 
+      huellas de vivo:      REPORTE.md
+      huellas de congelado: git show, sha256, SUJETO CONGELADO
+   vuelta192_tarea4_mutacion_cuarta_puerta.py     CONGELADO      motivo escrito: no 
+      huellas de vivo:      (ninguna)
+      huellas de congelado: tempfile, mkdtemp, SUJETO CONGELADO
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py NO DECIDIBLE   motivo escrito: no 
+      huellas de vivo:      REPORTE.md
+      huellas de congelado: tempfile, mkdtemp
+
+FALLO (SUJETO VIVO y reclamado, y esto SI hace caer): 0
+DEUDA (NO DECIDIBLE sin motivo escrito, y esto NO hace caer): 1
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py   huellas de vivo: REPORTE.md
+LIMPIOS (congelado, caso declarado, o no decidible CON motivo): 4
+   vuelta191_tarea3_mutacion_lineas.py   CONGELADO
+   vuelta191_tarea4_mutacion_veredicto.py   CONGELADO
+   vuelta191_tarea6_mutacion_bloque_tallado.py   CONGELADO
+   vuelta192_tarea4_mutacion_cuarta_puerta.py   CONGELADO
+
+
+LO QUE ESTA COLUMNA NO ES, Y SE DICE EN VEZ DE CALLARLO (vuelta 193,
+TAREA 2.c): EL VEREDICTO DE ARRIBA SALE DE UNA HUELLA DE TEXTO, Y UNA
+HUELLA DE TEXTO NO PRUEBA REPRODUCCION. `tempfile` y `mkdtemp` cuentan
+como huella de CONGELADO, y por eso esta misma guarda dio CONGELADO a dos
+arneses cuya salida cambiaba en cada corrida (acta 193, hallazgo 5.3 y
+adjudicacion 4.10, medido en docs/loop/_auditor_v193_reproducibilidad.txt).
+LA UNICA VARA QUE LA PRUEBA es correr el arnes dos veces y comparar sus
+bytes, y eso vive en el carril --reproduccion de este mismo fichero.
+SIN ESA BANDERA, LO DE ARRIBA ES UN INDICIO DECLARADO Y NO UN VEREDICTO
+DE REPRODUCCION.
+
+VEREDICTO DE LA PUERTA (por huella de texto): VERDE
+   VERDE CON DEUDA DECLARADA, que no es lo mismo que verde a secas: 1
+   arnes(es) reclamado(s) nombran un sujeto vivo y no escriben por que.
+
+==============================================================================
+LA REPRODUCCION, CORRIDA Y NO DEDUCIDA DE UNA HUELLA (vuelta 193, 2.c)
+==============================================================================
+
+LA VARA: cada arnes reclamado se corre DOS VECES y su salida sellada se
+compara BYTE A BYTE. `reproduce` es entre las dos corridas de hoy;
+`contra_sellada` es contra lo que el repo lleva commiteado. Las dos se
+publican y ninguna se resuelve copiando.
+
+   vuelta191_tarea3_mutacion_lineas.py
+      salida: docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt
+      sellada    -> LF 7246 bytes | sha256 c053d5ebeee3afd2
+      corrida 1  -> exit 0 | LF 7246 bytes | sha256 c053d5ebeee3afd2
+      corrida 2  -> exit 0 | LF 7246 bytes | sha256 c053d5ebeee3afd2
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta191_tarea4_mutacion_veredicto.py
+      salida: docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt
+      sellada    -> LF 6426 bytes | sha256 c7893936f11c7023
+      corrida 1  -> exit 0 | LF 6426 bytes | sha256 c7893936f11c7023
+      corrida 2  -> exit 0 | LF 6426 bytes | sha256 c7893936f11c7023
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta191_tarea6_mutacion_bloque_tallado.py
+      salida: docs/loop/SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt
+      sellada    -> LF 3976 bytes | sha256 a5b846ea7deb3868
+      corrida 1  -> exit 0 | LF 3976 bytes | sha256 a5b846ea7deb3868
+      corrida 2  -> exit 0 | LF 3976 bytes | sha256 a5b846ea7deb3868
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta192_tarea4_mutacion_cuarta_puerta.py
+      salida: docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt
+      sellada    -> LF 4282 bytes | sha256 4779fcd04bc5b2da
+      corrida 1  -> exit 0 | LF 4282 bytes | sha256 4779fcd04bc5b2da
+      corrida 2  -> exit 0 | LF 4282 bytes | sha256 4779fcd04bc5b2da
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      salida: docs/loop/SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt
+      sellada    -> LF 4613 bytes | sha256 10c2d2d1e9eb06ce
+      corrida 1  -> exit 0 | LF 4613 bytes | sha256 10c2d2d1e9eb06ce
+      corrida 2  -> exit 0 | LF 4613 bytes | sha256 10c2d2d1e9eb06ce
+      REPRODUCE ENTRE SUS DOS CORRIDAS: True
+      REPRODUCE CONTRA SU SELLADA:      True
+      restaurada tras la corrida:       True
+
+CIFRA arneses medidos: 5
+CIFRA NO MEDIBLES (declarados, no supuestos): 0 (ninguno)
+CIFRA QUE NO REPRODUCEN: 0 (ninguno)
+CIFRA SIN RESTAURAR: 0 (ninguno)
+
+VEREDICTO DE REPRODUCCION: VERDE
+
+ESCRITO: docs/loop/SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt (5228 bytes)

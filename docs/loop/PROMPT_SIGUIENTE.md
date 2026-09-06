@@ -1,264 +1,221 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Eres el ejecutor de la VUELTA 193. Rama `pasada-unica`. FASE III, EJECUCION.
+Eres el ejecutor de la VUELTA 194. Rama `pasada-unica`. FASE III, EJECUCION.
 
-NO ES VUELTA DE BATERIA, PERO ES LA ULTIMA ANTES. La 189 la corrio entera y por
-`AUDITOR.md` 6.1 la siguiente cae en la 194, o sea la vuelta inmediatamente
-despues de esta. La seccion 9 de tu reporte cierra con el HUECO DECLARADO Y
-MEDIDO por su carril, con su nombre, sus bytes medidos y su atribucion, LAS TRES
-JUNTAS. Un hueco declarado no es un hueco escondido.
+ESTA ES VUELTA DE BATERIA. Por `AUDITOR.md` 6.1, decision del fundador del 5 sep
+2026, la bateria corre CADA CINCO VUELTAS en una vuelta propia QUE NO LLEVA NADA
+MAS. La 189 la corrio entera, y por esa cadencia te toca a ti. La seccion 9 de tu
+reporte NO cierra con hueco declarado: cierra con la bateria corrida.
 
-Y POR ESO LAS DOS BLOQUEANTES SON LAS QUE LE LLEGAN ROTAS A ESA CORRIDA. Medi yo
-mismo TRES arneses cuya salida sellada NO reproduce, y los tres entran en la
-bateria de la 194 tal como estan. No es una sospecha: esta corrido y esta en
-`docs/loop/_auditor_v193_reproducibilidad.txt`.
+VAN TRES SUB-TAREAS Y DOS SON BLOQUEANTES. El tope de CINCO sigue vigente y esta
+ganado: la racha de cierres mide 9 hoy (185 a 193), contada por mi del inventario
+entero con `scripts/loop/vuelta192_racha_de_cierres.py`. CUENTALA TU DEL
+INSTRUMENTO y publica lo que salga. Ese instrumento PISA su propia sellada: si la
+corres, restaurala con `git checkout --` y REMIDELA antes de darla por
+restaurada.
 
-VAN CINCO SUB-TAREAS y DOS SON BLOQUEANTES. El tope de CINCO sigue vigente y esta
-ganado con holgura: la racha de cierres mide 8 hoy (185 a 192), contada por mi
-del inventario entero con `scripts/loop/vuelta192_racha_de_cierres.py`. CUENTALA
-TU DEL INSTRUMENTO y publica lo que salga.
+Y LA TAREA 2 NO ES TRABAJO DE AL LADO: ES LA PRECONDICION DE LA BATERIA. Dos
+entradas de la nomina estan rotas de una forma que la bateria misma va a pisar, y
+por `AUDITOR.md` 6.1 nueve salidas selladas no valen si una es de otra hondura que
+las demas. Es el mismo criterio con el que el acta 193 me puso a mi dos
+bloqueantes antes de esta bateria, y no lo invento hoy.
 
-ABRE EL REPORTE AL EMPEZAR, con su esqueleto tallado y en su propio commit, y
-mide tu desfase de calibrado DENTRO del bloque de apertura y ANTES de la primera
-operacion. Una columna de apertura medida al cierre es caida que ACUMULA.
+ABRE EL REPORTE AL EMPEZAR, con su esqueleto tallado y en su propio commit, y mide
+tu desfase de calibrado DENTRO del bloque de apertura y ANTES de la primera
+operacion. Una columna de apertura medida al cierre es caida que ACUMULA, y esa
+fue mi `C.1` en tu vuelta anterior.
 
-Y UNA COSA QUE ME PASO A MI EN ESTA AUDITORIA Y TE AHORRO: el ciclo de Gate 0
-corre `run_phase1.py` CON `--reaplico-curaduria` (`vuelta192_apertura.py` linea
-638). Sin esa bandera sale EXITCODE 2 y te deja `dataset/` sucio con 72 lineas
-cambiadas, porque la compilacion pisa las 71 etiquetas de cara curadas. Va como
-mi caida propia `C.1` en el acta 193.
+Y UNA COSA QUE ME PASO A MI EN ESTA AUDITORIA Y TE AHORRO: el ciclo de Gate 0 hay
+que correrlo ENTERO. Con solo `run_phase1.py --reaplico-curaduria` quedan 72
+lineas cambiadas en `dataset/metadata/master_graph.json`, y es
+`scripts/etiquetas_de_cara.py --aplicar` quien las repone. Medido por mi hoy: tras
+el ciclo completo el `numstat` de `dataset/`, `web/` y `engine/` da CERO lineas.
 
 =============================================================================
 TAREA 1. LOS REGISTROS. BLOQUEANTE.
 =============================================================================
 
-El acta 193 entra en la serie con el numero que devuelva
+El acta 194 entra en la serie con el numero que devuelva
 `scripts/loop/serie_de_registros.py`, computado y no tecleado (hoy el siguiente
-libre es `R.55`, pero lo dice el instrumento, no este encargo).
+libre es `R.56`, pero lo dice el instrumento, no este encargo).
 
-La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta, no de
+La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta y no de
 aqui:
 
-  - LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, y las diez van A FAVOR: siete son
-    tus discutibles (`D.1` a `D.7`) y las tres restantes son tus preguntas
-    `P.1`, `P.2` y `P.3` contestadas. Otra vez CERO EN CONTRA.
-  - LOS CUATRO HALLAZGOS DE LA SECCION 5, que no salen de ningun discutible: la
-    cuarta puerta que no se puede usar desde el CLI (`5.1`), el cotejo que
-    convierte `"no"` en `si` (`5.2`), el arnes que imprime su `mkdtemp` en la
-    salida sellada (`5.3`), y el reporte que se contradice a si mismo en la
-    cuenta del `DESFASE DECLARADO` (`5.4`).
-  - UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE **NO ACUMULA**: la seccion 5.5 de tu
-    reporte publica 3 donde hoy hay 4 y donde tu propia seccion 0 dice 4. Se
-    registra con su nombre, dispara la relectura al doble, y NO acumula por la
-    letra del 27 ago 2026, porque vive en prosa de una correccion declarada que
-    ademas remite a la seccion 0, que trae la cifra correcta. RACHA DE REPORTE: 0.
-  - UNA CAIDA PROPIA DEL AUDITOR, DE METODO (`C.1`): corri `run_phase1.py` sin
-    `--reaplico-curaduria` y ensucie `dataset/`. La cace en el mismo comando y la
-    repare. Va escrita y no se omite.
+  - LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, y las diez van A FAVOR: siete son tus
+    discutibles (`D.1` a `D.7`) y las tres restantes son tus preguntas `P.1`, `P.2`
+    y `P.3` contestadas por extension citable. CERO EN CONTRA, y es la cuarta acta
+    seguida.
+  - LOS TRES HALLAZGOS DE LA SECCION 5, que no salen de ningun discutible: los dos
+    arneses de la cuarta puerta que se contradicen en la sede de verdad (`5.1`), la
+    seccion 8 que dice cuatro donde el instrumento dice cinco (`5.2`), y los
+    mensajes de commit del bucle que queman la ciega del auditor antes de su primer
+    comando (`5.3`).
+  - UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE **SI ACUMULA**: es el hallazgo `5.2`.
+    Vive solo en `REPORTE.md` y no mueve ningun dato, luego es de reporte; y vive
+    en una CONCLUSION (la seccion 8 se titula LO QUE LA 194 RECIBE y la frase es su
+    titular en negrita), luego cuenta para la racha por la letra del 27 ago 2026.
+    **RACHA DE REPORTE: 1.** No hay escalada que encargar todavia, porque la
+    escalada se dispara a DOS, y lo digo expresamente para que no se lea como
+    olvido.
+  - TRES CAIDAS DEL EJECUTOR DE METODO, `C.1` a `C.3`, todas declaradas por ti
+    mismo en tu propia seccion 8.1. Se registran y no abren racha.
+  - DOS CAIDAS PROPIAS DEL AUDITOR, y la primera es grave: `C.1`, ROMPER UN REMEDIO
+    ESCRITO, que CUENTA PARA LA PARADA por la letra del 5 sep 2026 (abri
+    `REPORTE.md` con un `wc -l` antes de sellar, lo apunte a mano, y el sello de la
+    vuelta 194 SALIO ROJO y no existe); y `C.2`, de metodo, haber commiteado
+    `docs/loop/_TURNO_DEL_AUDITOR.json`, que es estado de turno y no contenido de
+    campana.
   - LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de
-    puestos con su nota: 30 aislados y 30 cotejados, CERO quemados, y los 30 son
-    SOLAPE TOTAL a proposito, o sea control y no cobertura nueva.
+    puestos con su nota: 30 aislados, 30 cotejados, **ONCE QUEMADOS** por el
+    contexto de sesion y no por comando del auditor, y el cotejo publicado dos
+    veces, sobre los 30 y sobre los 19 limpios.
 
 EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido no escribe nada. Pruebalo re
 corriendolo, con la sede medida en bytes antes y despues.
 
 =============================================================================
-TAREA 2. LOS TRES ARNESES QUE NO REPRODUCEN, ANTES DE LA BATERIA DE LA 194.
-BLOQUEANTE, Y ES LA MAS URGENTE DE LA VUELTA.
+TAREA 2. LOS DOS ARNESES DE LA CUARTA PUERTA QUE SE CONTRADICEN. BLOQUEANTE, Y
+ES LA PRECONDICION DE LA BATERIA.
 =============================================================================
 
-ES MI ADJUDICACION `4.10` Y MI HALLAZGO `5.3`, Y ESTA MEDIDO, NO SUPUESTO. Corri
-cada uno DOS veces y compare contra su salida sellada:
+ES MI HALLAZGO `5.1`, Y ESTA CORRIDO Y NO DEDUCIDO:
+`docs/loop/_auditor_v194_cuarta_puerta_rota.txt`, con sus tres casos.
 
-  `vuelta191_tarea3_mutacion_lineas.py`
-      sellada 5836 bytes `bc8d7273baf30644` -> hoy 6559 bytes `9834acf0418c527e`
-  `vuelta191_tarea6_mutacion_bloque_tallado.py`
-      sellada 4173 bytes `6de586c0e5c7a104` -> hoy 4998 bytes `cd48a8a7071d6b89`
-  `guarda_de_entrada_a_la_nomina.py` (su salida
-      `SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`, 2433 bytes)
-      cambia EXACTAMENTE UNA LINEA por corrida: la del `mkdtemp`
+  `vuelta192_tarea4_mutacion_cuarta_puerta.py`
+      llama a `AP.olvidar_todo()` OCHO veces contra el modulo REAL (lineas 103,
+      123, 137, 158, 184, 210, 226 y 239) y NUNCA redirige `AP.RUTA_DEL_TURNO` a
+      un temporal. Tu TAREA 4.a le anadio a `olvidar_todo()` el
+      `os.remove(RUTA_DEL_TURNO)`, y con eso este arnes BORRA EL TURNO VIVO DEL
+      AUDITOR en su sede de verdad. Corrido solo, con el fichero puesto: sale
+      exitcode 0 y el fichero queda BORRADO. No avisa y no cae.
 
-LOS TRES REPRODUCEN ENTRE DOS CORRIDAS DE HOY Y NINGUNO CONTRA SU SELLADA. Yo
-restaure las tres y lo comprobe: `git status` no deja ni una sellada ajena
-modificada. VERIFICALO TU AL ENTRAR antes de tocar nada.
+  `vuelta193_tarea4e_mutacion_sello_entre_procesos.py`
+      su caso `H` exige `os.path.exists(turno_real) == False` (lineas 262 a 264).
+      Corrido solo, con el fichero puesto: exitcode 1, VEREDICTO ROJO.
+
+  LOS DOS EN EL ORDEN ALFABETICO EN QUE LA BATERIA LOS CORRE: el de la 192 borra
+  el fichero y el de la 193 sale VERDE. **SU VERDE NO ES SUYO: se lo debe al
+  otro.** Lo unico que hoy los pone de acuerdo es el orden, y un verde que depende
+  del orden en que corren dos arneses no prueba nada.
+
+NADIE LO HABIA VISTO PORQUE EL FICHERO DEL TURNO LO ESTRENA MI VUELTA: la
+persistencia nacio en tu TAREA 4.a y yo soy el primer turno que la usa.
 
 QUE HACER:
 
-  a) LOS DOS PRIMEROS: CONGELA SU SUJETO o DECLARA EL CASO por el carril que la
-     casa ya tiene para los `CASO DECLARADO`. La `4.4` del acta 191 dice que
-     `SUJETO VIVO` es FALLO y no deuda, y mi `4.10` cierra la unica salida que
-     quedaba: una salida que no reproduce NO ES DEL MISMO CALIBRE, tenga o no
-     tenga motivo escrito. El motivo es contabilidad; la reproduccion es la
-     guarda.
-  b) EL TERCERO: que su salida sellada NO lleve el nombre del directorio
-     temporal. El directorio se sigue fabricando y se sigue retirando (`P.16`);
-     lo que no puede es imprimirse, porque es aleatorio por construccion.
-  c) ARREGLA LA GUARDA QUE NO LO VIO. `guarda_de_entrada_a_la_nomina.py` cuenta
-     `tempfile` y `mkdtemp` como huellas de CONGELADO, y por eso da CONGELADO a
-     un arnes cuya salida cambia en cada corrida. UNA HUELLA DE TEXTO NO PRUEBA
-     REPRODUCCION: la unica vara que la prueba es correrlo dos veces y comparar.
-     Si eso es caro, dilo y deja la huella como indicio declarado, pero NO como
-     veredicto.
-  d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes cuya salida no
-     reproduce vuelve a salir CONGELADO.
-  e) NO TOQUES LA NOMINA. No se poda, no se adelanta y no se le meten entradas
+  a) QUE EL ARNES DE LA 192 NO TOQUE LA SEDE DE VERDAD. Redirige
+     `AP.RUTA_DEL_TURNO` a un temporal antes de su primer `olvidar_todo()`, que es
+     exactamente para lo que tu propio comentario dice que esa variable es de
+     modulo: *"PARA QUE LOS ARNESES LO PUEDAN REDIRIGIR A UN TEMPORAL: un arnes
+     que escribiera en la sede de verdad ensuciaria el turno del auditor"*. El
+     mecanismo ya lo tienes escrito en el arnes de la 193, linea 45.
+  b) QUE EL ARNES DE LA 193 DEJE DE EXIGIR QUE EL FICHERO NO EXISTA. Lo que tiene
+     que comprobar es que EL NO LO TOCO, no que no exista: mide el fichero ANTES
+     y DESPUES (existencia, bytes y `sha256`) y cae si CAMBIA. Un turno de auditor
+     vivo tiene ese fichero puesto, y un arnes que exige su ausencia esta pidiendo
+     que no haya auditor.
+  c) CON SU CASO POSITIVO POR MUTACION, y que pruebe LA COSA QUE FALLA HOY: que
+     CAIGA si un arnes de la nomina modifica o borra `_TURNO_DEL_AUDITOR.json` en
+     su sede de verdad. Que lance PROCESOS DE VERDAD, como hiciste en la 193.4.e,
+     porque corriendo todo en uno esto no se ve.
+  d) QUE EL FICHERO DEL TURNO NO SE PUEDA VOLVER A COMMITEAR. Es mi caida `C.2`
+     y la reparo a medias: lo saco del arbol al cerrar mi turno, pero la guarda
+     durable es tuya. Lo natural es `.gitignore`; si eliges otra via, dilo con su
+     motivo.
+  e) NO SE CLONA NINGUNO DE LOS DOS FICHEROS: se les anade.
+  f) NO TOQUES LA NOMINA. No se poda, no se adelanta y no se le meten entradas
      nuevas: la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada,
      y sigue en 127 entradas leidas del instrumento.
-  f) AL CERRAR, VUELVE A CORRER LOS TRES DOS VECES Y PUBLICA SUS BYTES Y SUS
-     `sha256`. Si alguno sigue sin reproducir, PARAS Y LO TRAES: la 194 no se
-     abre con esto abierto.
+  g) AL CERRAR, CORRE LOS DOS ARNESES EN LOS TRES ESCENARIOS DE MI FICHERO (cada
+     uno solo con el fichero del turno puesto, y los dos seguidos) Y PUBLICA LAS
+     TRES SALIDAS. Si el verde de alguno sigue dependiendo del orden, PARAS Y LO
+     TRAES: la bateria no se corre con esto abierto.
 
 =============================================================================
-TAREA 3. LA VARA DE LAS CIEGAS PASA A SER LA DEL BANCO, Y EL DOBLE SE LEE CON
-ELLA.
+TAREA 3. LA BATERIA, ENTERA Y POR TRAMOS.
 =============================================================================
 
-ES MI ADJUDICACION `4.9`, QUE CONTESTA TU `P.3` A FAVOR. No es doctrina nueva:
-la vara ya esta escrita en `docs/BANCO_DE_TEXTOS.md` `9.6.1`, LA VARA DE LA RAMA
-CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, propuesta y adoptada el 12 ago
-2026, y dice literal: *"Si lo que el hijo anade a lo que la madre ya dice CABE EN
-UNA LINEA, REPITE. Si trae un PROCEDIMIENTO que la madre no tiene, CONTINUA."*
-Por `AUDITOR.md` 0 el banco es la primera fuente de verdad y el literal privado
-de un lector no es fuente de nada.
+`AUDITOR.md` 6.1, literal: *"LA BATERIA CORRE POR TRAMOS OBLIGATORIOS. CADA TRAMO
+SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR. UNA VUELTA CORTADA RETOMA EN EL
+TRAMO SIGUIENTE, no desde el principio. Y LA BATERIA SE DECLARA CORRIDA CUANDO LOS
+NUEVE TRAMOS TIENEN SALIDA SELLADA DEL MISMO CALIBRE."*
 
-LO QUE LO DECIDE, Y ES MEDICION MIA DE ESTA VUELTA: la vara del banco resuelve
-bien los tres pares que nos tumbaron a los dos lectores, Y EN LAS DOS
-DIRECCIONES. En `1804` y `2833` cada nodo trae procedimiento entero propio, luego
-CONTINUA, luego `D`, y los dos leimos `A`. En `1068` lo que cada uno anade cabe
-en una linea, luego REPITE, luego `A`, y los dos leimos `D`. Un criterio que se
-equivoca en los dos sentidos no esta calibrado de menos: mide otra cosa.
+UNA TRAMPA MEDIDA POR MI, Y TE LA PONGO DELANTE PORQUE ES LA QUE MAS BARATO SALE
+DE PISAR. Corri `python scripts/loop/vuelta183_bateria_por_tramos.py --siguiente` y
+me contesto *"CIFRA tramos CON salida sellada no vacia: 9. LOS QUE FALTAN: 10. EL
+SIGUIENTE ES EL TRAMO 10."* **ESAS NUEVE SALIDAS SON DE LAS VUELTAS 183 Y 184, NO
+TUYAS**, y lo verifique con `git log` fichero a fichero: el tramo 1 es de
+`aac1c84e` (vuelta 183), el 5 de `d0058b86` (vuelta 184) y el 9 de `3500db9d`
+(vuelta 184, y su asunto dice EN ROJO). Si corres ese fichero y solo el tramo 10,
+declararias la bateria corrida sobre la corrida de otra vuelta, y la 6.1 lo prohibe
+con estas palabras: *"una corrida de otra vuelta pegada aqui tampoco vale"*.
+
+LA SALIDA ES LA QUE LA 189 YA USO Y NADIE OBJETO: el lanzador SE CLONA por vuelta,
+y su numero NO se teclea, se computa de `os.path.basename(__file__)` (lineas 87 a
+96 del de la 183). Existe `scripts/loop/vuelta189_bateria_por_tramos.py` y es el
+precedente vivo.
 
 QUE HACER:
 
-  a) ESCRIBE EL CRITERIO DE LA CIEGA CITANDO `9.6.1` POR NUMERO, con la frase de
-     la vara copiada literal, y que sea el criterio que se le pasa a
-     `aislador_de_ciega.py` de aqui en adelante. No lo parafrasees: `9.5.0` dice
-     que la regla se cita y no se parafrasea.
-  b) LA RELECTURA AL DOBLE DEL TRAMO DE LA 192, QUE ES LA DEUDA DE CREDITO DE MI
-     TANDA Y LA ENCARGO YO, que es donde `AUDITOR.md` 1.2 la pone. El motivo es
-     TRIPLE esta vez: dos discrepancias cayeron fuera de MI marcado, las dos
-     cayeron tambien fuera del TUYO, y son el mismo par para los dos lectores.
-  c) QUE TRAMO. Los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`, que son
-     los mismos 30 de mi ciega `docs/loop/_auditor_v193_ciega_blind.txt`. Lo mido
-     y lo digo para que no lo busques: son el mismo conjunto, y esta vez lo han
-     leido DOS lectores.
-  d) QUE ES AL DOBLE. Sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de
-     `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada. A
-     `vecinos()` se le pasa `evitar` con TODO lo consumido. CUENTALO TU DE SUS
-     FICHEROS, NO DE ESTE ENCARGO, y publica el conteo con los nombres de los
-     ficheros de los que sale. Solape con el tramo y con el universo: 0 y 0, POR
-     CONSTRUCCION.
-  e) COMO SIEMPRE: criterio escrito literal, ciega y destape en ficheros
-     SEPARADOS, tus clases escritas y COMMITEADAS en su propio commit ANTES de
-     abrir el destape, y tus dudosos NOMBRADOS DELANTE.
-  f) Y PUBLICA LO QUE LA VARA NUEVA CAMBIA: cuantos de tus dudosos y de tus
-     discrepancias habrian salido distinto con `9.6.1`. Si no cambia nada, DILO,
-     que tambien es un dato y me dejaria a mi con una adjudicacion floja.
-
-NO SE TOCA NINGUNA CLASE. `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en
-lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos
-convenciones. Si de la relectura sale una correccion, se declara y se trae; no se
-escribe ni una fila.
-
-=============================================================================
-TAREA 4. LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. ES MI HALLAZGO `5.1`.
-=============================================================================
-
-LO LEVANTO CONTRA EL FICHERO QUE ME PROTEGE A MI, Y LA ESCRIBISTE TU PARA MI EN
-LA 192. No la pude poner en verde. Medido en
-`docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`:
-
-  - `_BITACORA` y `_SELLADO` son estado de MODULO y mueren con el proceso. El
-    auditor sella con el CLI, y en el proceso siguiente `puede_declarar_clases()`
-    responde `NO: este turno no ha sellado` aunque el sello este en disco. El CLI
-    no expone ninguna bandera para declarar clases.
-  - Y LA MITAD MAS SERIA, QUE ES SOBRE LAS TRES PUERTAS VIEJAS: el docstring
-    afirma que *"el sello no se pueda escribir despues"*. LO PROBE Y SE PUEDE. Un
-    turno que toca `REPORTE.md` y arranca otro proceso vuelve a sellar con
-    bitacora vacia, y `sellar()` SOBRESCRIBE el sello publicando `prohibidos
-    tocados antes del sello: 0`.
-
-QUE HACER:
-
-  a) QUE LA BITACORA Y EL SELLO SOBREVIVAN AL PROCESO, en un fichero del turno,
-     para que los toques apuntados en una corrida los vea la siguiente.
-  b) QUE `sellar()` CAIGA EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA, en
-     vez de sobrescribirlo. Un sello no se reescribe, y hoy eso solo se cumple
-     dentro de un mismo proceso.
-  c) QUE EL CLI PUEDA DECLARAR LAS CLASES, con su bandera, leyendo el sello de
-     disco. Sin eso la cuarta puerta no la puede usar nadie que selle por CLI, o
-     sea nadie.
-  d) Y SI ALGO DE ESTO NO SE PUEDE, DILO EN EL DOCSTRING EN VEZ DE AFIRMAR LO
-     CONTRARIO. Lo que hoy sobra no es la guarda: es la frase que promete lo que
-     no hace. Esa frase vive en un docstring de `scripts/`, que es sede de cifra
-     publicada desde el 2 sep 2026.
-  e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un sello se puede reescribir
-     despues de tocar uno de los tres prohibidos en otro proceso.
-  f) NO SE CLONA EL FICHERO. `apertura_del_auditor.py` tiene nombre estable: se
-     le anade.
-  g) Y RE CORRE SU ARNES DE LA NOMINA CON EL PARCHE PUESTO Y COMPRUEBA QUE
-     REPRODUCE BYTE A BYTE, como hiciste en la 192. Hoy da 4282 bytes y `sha256`
-     `4779fcd04bc5b2da`. Si no reproduce, PARAS Y LO TRAES: la bateria es la
-     vuelta siguiente.
-
-=============================================================================
-TAREA 5. EL COTEJO QUE NO CONVIERTA `"no"` EN `si`. ES MI HALLAZGO `5.2`.
-=============================================================================
-
-`cuerpo_del_cotejo()` de `scripts/loop/cotejo_de_ciega.py` hace `bool(du)`, y
-`bool("no")` es `True`. Tu docstring especifica esa columna como *"`en dudosos` .
-`si` o `no`"*, que es justo la forma que revienta. YO LA LLAME ASI Y EL
-INSTRUMENTO ME PUBLICO `discrepancias FUERA de los dudosos: 0 (ninguna)` TENIENDO
-DOS. Lo cace comparando a mano contra mis dudosos escritos.
-
-TU CIFRA PUBLICADA NO ESTA AFECTADA y lo comprobe leyendo tu fuente:
-`vuelta192_tarea2b_cotejo.py` linea 145 pasa `p in dudosos`, un booleano de
-verdad. Es una trampa latente, y salto en cuanto lo uso alguien que no fue quien
-lo escribio.
-
-POR QUE IMPORTA MAS QUE UNA ERRATA: la columna `en dudosos` es la unica del
-fichero de la que cuelga una regla de parada, porque `AUDITOR.md` 1.2 baja el
-credito y encarga el doble POR LO QUE CAE FUERA. Un instrumento que silencia esa
-cifra publica un verde donde hay una escalada.
-
-QUE HACER:
-
-  a) QUE `en_dudosos` SE NORMALICE O CAIGA, y no se resuelva en silencio. Tu
-     propio caso `G` de la mutacion dice que `veredicto_de` *"NO NORMALIZA MAS
-     QUE LA CAJA, PARA QUE UNA CLASE RARA SALGA A LA VISTA EN VEZ DE RESOLVERSE
-     EN SILENCIO"*. Aplicale a esta columna la misma vara que ya le aplicaste a
-     aquella.
-  b) QUE LA GUARDA DE `escribir_cotejo()` MIRE ALGO MAS QUE EL DENOMINADOR, o
-     que diga en su salida que no es la sede de esta comprobacion. Hoy relee del
-     disco y da VERDE sobre un fichero cuya cifra de FUERA es falsa.
-  c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un `en_dudosos` no booleano
-     se convierte en `si` sin avisar. La mutacion de hoy prueba siete cosas y
-     ninguna pasa un `en_dudosos` que no sea booleano.
-  d) RE ESCRIBE MI COTEJO CON EL INSTRUMENTO ARREGLADO y comprueba que da lo que
-     yo publico a mano: 30 cotejados, 25 coinciden, 5 discrepan, 3 dentro (`965`,
-     `1068`, `1814`) y 2 fuera (`1804`, `2833`). Mi fichero es
-     `docs/loop/_auditor_v193_cotejo.txt` y ya va con los booleanos bien puestos.
-  e) `cotejo_de_ciega.py` NACIO EN LA 192 Y ENTRA EN LA NOMINA POR LA REGLA DEL
-     PROPIO FICHERO. Tocarlo ahora es antes de que entre, y eso es a favor, no en
-     contra: dilo en el reporte para que no se lea como que le metiste mano a una
-     entrada de la nomina.
+  a) CLONA EL LANZADOR COMO `scripts/loop/vuelta194_bateria_por_tramos.py`, CLON
+     DECLARADO del de la 189, que es el ultimo que corrio de verdad. Cotejalo con
+     `scripts/loop/cotejar_clon_declarado.py` y pega su salida en el reporte. Con
+     el nombre puesto, sus salidas se llaman solas `SALIDA_V194_BATERIA_TRAMO_N.txt`
+     y `--siguiente` te dira TRAMO 1, que es la verdad.
+  b) EL NUMERO DE TRAMOS SE COMPUTA, NO SE TECLEA NI SE HEREDA. Correlo con
+     `--plan` y publica lo que salga con su FECHA DE CORTE (banco `9.21`). Hoy la
+     nomina esta en 127 y el reparto da DIEZ. El NUEVE de `AUDITOR.md` 6.1 es la
+     cuenta de la nomina del 5 sep 2026, no un objetivo: el propio fichero lo dice
+     en su comentario (*"el numero de tramos NO se teclea tampoco: sale de
+     len(tramos)"*) y la 189 corrio DIEZ y el acta 190 lo dio por bueno. SI TU
+     `--plan` da otra cifra, publica esa y di de que nomina sale.
+  c) CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, antes de seguir al
+     siguiente. Si la vuelta se corta, la que venga retoma con `--siguiente`.
+  d) LA DOBLE CORRIDA NO SE AFLOJA: cada entrada se corre DOS VECES por el cotejo
+     de reproducibilidad de la vuelta 141. Sigue entera.
+  e) AL FINAL, `--componer`, que es quien coteja EL CALIBRE. La bateria se declara
+     corrida cuando TODOS los tramos tienen salida sellada del mismo calibre, y
+     UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA.
+  f) PUBLICA EL RELOJ de la corrida, que la 6.1 lo pide junto a la doble corrida y
+     la salida sellada.
+  g) SI UN TRAMO CAE EN ROJO, NO LO ESCONDAS Y NO LO REPITAS HASTA QUE SALGA
+     VERDE: publicalo con su tramo, su entrada y su motivo. La 189 tumbo una
+     entrada y eso fue lo util de aquella bateria.
 
 =============================================================================
 LO QUE NO ENTRA, DICHO PARA QUE NO SE COLE NI SE REDESCUBRA
 =============================================================================
 
 Ni cribado, ni recomputo, ni operaciones del plan, ni las mesas anotadas, ni
-podar la nomina (la opcion `c` que el fundador RECHAZO el 5 sep 2026), ni la
-bateria, que cae en la 194.
+podar la nomina (la opcion `c` que el fundador RECHAZO el 5 sep 2026), ni ciegas
+nuevas: ES VUELTA DE BATERIA y no lleva trabajo de plan al lado.
 
-Y SIGUEN FUERA, NOMBRADAS PARA QUE LA 194 NO LAS REDESCUBRA:
+Y SIGUEN FUERA, NOMBRADAS PARA QUE LA 195 NO LAS REDESCUBRA:
 
-  - EL DESFASE DE `PATRONES_ACTA`, que apunta al acta de `VUELTA - 1`. NO se
-    arregla todavia: toca `tallar_cabecera_reporte.py`, que CUATRO entradas de la
-    nomina nombran, y moverlo antes de la bateria de la 194 pone en riesgo una
-    corrida por algo que no es un fallo. SE ENCARGA DESPUES DE LA 194, y lo digo
-    aqui para que no se lea como olvido. Lo que SI se arregla es que la cifra del
-    ordinal lleve su FECHA DE CORTE (`9.21`), que es lo que fallo en tu 5.5.
+  - LA RELECTURA AL DOBLE DEL TRAMO DE MI TANDA, que es MI deuda de credito y la
+    encargo yo, que es donde `AUDITOR.md` 1.2 la pone. VA A LA 195 porque la 194
+    es de bateria, y la dejo CERRADA HOY para que no se elija despues de mirar:
+    EL TRAMO son los 30 puestos de `docs/loop/_auditor_v194_ciega_blind.txt`, que
+    son los mismos 30 de `docs/loop/SALIDA_V193_T3_CIEGA.txt`; EL DOBLE son sus 30
+    vecinos deterministas con `vecinos()` IMPORTADA de
+    `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada, con
+    `evitar` cargado de TODO lo consumido y contado de sus ficheros. El motivo:
+    dos discrepancias fuera de mi marcado, `612` y `2426`.
+  - EL REMEDIO DE MI HALLAZGO `5.3`, que es el que de verdad importa y que NO es
+    tuyo del todo: los mensajes de commit del bucle NO deben publicar la clase de
+    ningun puesto ni el reparto de una tanda a ciegas. Tu commit `b57aa7d6`
+    publico ocho puestos con su clase y el reparto entero, y el contexto de
+    apertura de mi sesion me los puso delante ANTES de mi primer comando: once de
+    mis treinta llegaron quemados y ninguna de las cuatro puertas de
+    `apertura_del_auditor.py` puede impedirlo, porque las cuatro vigilan comandos
+    del auditor. DESDE HOY Y SIN ESPERAR A NADIE: escribe tus mensajes de commit
+    SIN clases por puesto y SIN reparto de ciega; di que las clases estan escritas
+    y commiteadas y nombra el fichero, que es lo que hace falta para poder
+    citarlo. La guarda de codigo que lo imponga se encarga en la 195, y va
+    nombrada aqui para que no se lea como olvido.
+  - EL DESFASE DE `PATRONES_ACTA`, que apunta al acta de `VUELTA - 1`. El acta 193
+    lo dejo expresamente DESPUES de la bateria de la 194: la 195 es el sitio.
   - `acumulan()` que lea la tabla, o que declare en su salida que no es la sede.
   - El cotejo de clon declarado que separa sentencia de codigo de cambio de texto.
   - La excepcion que publica siempre su lista.
@@ -268,17 +225,22 @@ Y SIGUEN FUERA, NOMBRADAS PARA QUE LA 194 NO LAS REDESCUBRA:
   - El exitcode 2 propagado a `--componer`.
   - Que el campo `evidencia` de `OP-L-02` nombre los ficheros que ya existen. Su
     ESTADO NO SE MUEVE: sigue en `LISTA`, y declararla HECHA es del fundador.
+  - QUE HACER CON LAS 72 FILAS `B` DEL ARCHIVO. Lo dejo NOMBRADO y medido en mi
+    `4.8` y no resuelto, porque mover una clase esta reservado y eso es del
+    RECOMPUTO. El dato que tiene que llegar entero a quien recompute: DOS lectores
+    independientes, tu y yo, leimos los mismos 30 con `9.6.1` y los DOS emitimos
+    CERO `B` sobre un tramo donde el archivo tiene TRES, en `158`, `612` y `718`.
 
 Y NO SE MUEVE NINGUN VEREDICTO: el `sha256` LF de
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en el mismo valor, y
-`dataset/` no se toca a mano: el `numstat` se mide al entrar y al salir y las dos
-cifras se publican.
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en `0a77b5a35a962621`, medido
+hoy por mi por las dos convenciones sobre 4054129 bytes. Y `dataset/` no se toca a
+mano: el `numstat` se mide al entrar y al salir y las dos cifras se publican.
 
 Y SI RE CORRES UN INSTRUMENTO QUE PISA UNA SALIDA SELLADA AJENA, RESTAURALA CON
 `git checkout --` Y REMIDELA ANTES DE DARLA POR RESTAURADA, Y NO LE TOQUES LOS
-FINALES DE LINEA A MANO: a mi me paso en esta auditoria con cinco salidas, y
-convertirlas a LF despues del `checkout` las volvio a ensuciar. El corte nuevo, si
-interesa, va al lado con su nombre y su vuelta, nunca encima.
+FINALES DE LINEA A MANO. A mi me paso hoy con
+`docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt` y con las selladas del carril de
+reproduccion: las restaure y las remedi, y el `git status` quedo limpio.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
