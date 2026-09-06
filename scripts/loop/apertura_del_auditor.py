@@ -45,6 +45,46 @@ prueba, no se pueda escribir despues**; y el auditor que quiera saltarse esto
 tiene que hacerlo **a sabiendas y sin sello**, que es exactamente la diferencia
 entre un descuido y una decision.
 
+--- LA CUARTA PUERTA (vuelta 192, TAREA 4; hallazgo `5.2` del acta 192) --------
+
+POR QUE NACE, Y LO LEVANTA CONTRA SI MISMO EL QUE SE COLO. Las tres puertas de
+arriba FUNCIONARON en la vuelta 192: la bitacora del auditor salio vacia y su
+sello es verde. **Pero el sujeto de la ciega no vive en ninguno de los tres.**
+Vive en las `clase` y las `razon` de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y por
+ahi entro el auditor de la 192 **con el sello ya escrito y sin romper ninguna
+guarda**: buscando la leyenda de las clases corrio una consulta sobre el archivo
+que le imprimio las razones de los puestos 156 y 201, **que eran de su propia
+tanda**. Los saco del cotejo y lo declaro antes de contar, **pero el remedio no
+puede ser que el auditor se acuerde: esa es justo la enfermedad que este fichero
+vino a curar.**
+
+QUE PROHIBE Y QUE NO, PORQUE LA DIFERENCIA ES TODA LA GUARDA. **NO se prohibe
+leer el archivo entero**, que hace falta para recomputar el marcador y el acta lo
+publica en todas sus vueltas. **Se prohibe DESTAPAR EL SUJETO**, o sea leer
+`clase` o `razon` DE LOS PUESTOS QUE EL SELLO YA ELIGIO, antes de que las clases
+del auditor esten escritas. Por eso:
+
+  4. `leer_veredictos()` **APUNTA SU TOQUE** y, por defecto, **devuelve las filas
+     de los puestos sellados con `clase` y `razon` TAPADAS**. Quien quiera verlas
+     tiene que pedirlo con `destapar_sujeto=True`, y entonces el toque que apunta
+     es otro: `veredictos:destape`. **Un destape no se puede hacer sin querer.**
+     `marcador()` cuenta por clase sobre el archivo ENTERO y **no destapa nada**,
+     porque un agregado de miles de filas no dice la clase de ninguna.
+  5. `declarar_clases_escritas()` **CAE EN ROJO** si la bitacora trae un
+     `veredictos:destape` **anterior**. Es el gemelo de `sellar()`: alli el rojo
+     era no poder sellar; aqui es **no poder declarar las clases escritas**, que
+     es lo que un acta cita como prueba de que leyo a ciegas.
+
+LO QUE ESTA CUARTA PUERTA NO PUEDE HACER, DICHO IGUAL QUE LAS OTRAS TRES: **no
+puede impedir que alguien abra el `jsonl` por su cuenta en su terminal**, ni con
+`python`, ni con `grep`, ni con un editor. Ninguna guarda de este repo puede.
+**Lo que si puede es que la declaracion de clases no se pueda escribir despues**,
+y que **quien se la salte lo haga a sabiendas**. Y hay una segunda cosa que no
+puede y que se dice porque es mas fina: **no sabe si lo que se leyo era del
+sujeto** cuando el archivo se abre por fuera de estas funciones. Solo vigila lo
+que pasa por aqui, y por eso el turno que quiera poder citar su ciega tiene que
+pasar por aqui.
+
 EL ORDEN OBLIGATORIO DE UN TURNO DE AUDITOR:
 
     from apertura_del_auditor import sellar, git_log, git_status, leer_reporte
@@ -62,6 +102,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -74,10 +115,22 @@ NL = chr(10)
 # rojo elija cual probar.
 PROHIBIDOS_ANTES_DEL_SELLO = ("git log", "git status", "REPORTE.md")
 
+# LA CUARTA PUERTA (vuelta 192). Va SEPARADA de las tres de arriba a proposito:
+# aquellas se prohiben ANTES DEL SELLO y esta se prohibe ANTES DE LAS CLASES, que
+# es un momento distinto del turno. Meterlas en la misma tupla habria roto el
+# arnes de la vuelta 182, que recorre esa tupla una a una, y habria mezclado dos
+# reglas que muerden en sitios distintos.
+ARCHIVO_DE_VEREDICTOS = "docs/INTRA_DOMINIO_VEREDICTOS.jsonl"
+CAMPOS_QUE_DESTAPAN = ("clase", "razon")
+TOQUE_VEREDICTOS = "veredictos"
+TOQUE_DESTAPE = "veredictos:destape"
+TAPADO = "(TAPADO POR LA CUARTA PUERTA)"
+
 # LA BITACORA. Es del modulo a proposito: el estado tiene que sobrevivir entre
 # llamadas dentro del mismo turno, que es lo que se esta vigilando.
 _BITACORA = []
 _SELLADO = {"hecho": False, "ruta": None}
+_CLASES = {"escritas": False, "ruta": None}
 
 
 def bitacora():
@@ -106,6 +159,8 @@ def olvidar_todo():
     del _BITACORA[:]
     _SELLADO["hecho"] = False
     _SELLADO["ruta"] = None
+    _CLASES["escritas"] = False
+    _CLASES["ruta"] = None
 
 
 def git_log(*args):
@@ -225,6 +280,140 @@ def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
     return True, informe
 
 
+# --------------------------------------------------- LA CUARTA PUERTA (v192)
+def puestos_sellados(ruta_sello=None):
+    """LOS PUESTOS QUE EL SELLO DE ESTE TURNO ELIGIO. Devuelve una lista de
+    enteros, VACIA si todavia no hay sello.
+
+    NO SE TECLEAN NI SE PASAN POR ARGUMENTO: se leen del propio sello, que nombra
+    la ciega, y de la ciega, que lista sus `puesto_intra`. **El sujeto de la
+    cuarta puerta lo define el sello y nadie mas**, que es lo que impide elegirlo
+    despues de mirar."""
+    ruta = ruta_sello or _SELLADO["ruta"]
+    if not ruta or not os.path.exists(ruta):
+        return []
+    try:
+        sello = json.load(io.open(ruta, encoding="utf-8"))
+    except Exception:
+        return []
+    rel = sello.get("ciega")
+    if not rel:
+        return []
+    p = rel if os.path.isabs(rel) else os.path.join(RAIZ, rel.replace("/", os.sep))
+    if not os.path.exists(p):
+        return []
+    texto = io.open(p, encoding="utf-8", errors="replace").read()
+    return sorted(set(int(x) for x in
+                      re.findall(r"puesto_intra[^0-9]{0,12}(\d+)", texto)))
+
+
+def leer_veredictos(destapar_sujeto=False, ruta=None, ruta_sello=None):
+    """EL ARCHIVO DE VEREDICTOS, Y APUNTA SU TOQUE. **ES LA CUARTA PUERTA.**
+
+    Devuelve la lista de filas. Con `destapar_sujeto=False`, que es lo normal,
+    **las filas de los puestos sellados salen con `clase` y `razon` TAPADAS**: se
+    pueden contar, se pueden cruzar por `puesto_intra`, y no se puede ver lo que
+    la ciega esconde. Con `destapar_sujeto=True` salen enteras **y se apunta un
+    toque distinto**, el de destape, que es el que hace caer
+    `declarar_clases_escritas()` si viene antes.
+
+    Apunta SIEMPRE un toque, incluso tapando, porque un turno tiene derecho a
+    saber cuantas veces se abrio el archivo."""
+    apuntar(TOQUE_DESTAPE if destapar_sujeto else TOQUE_VEREDICTOS)
+    p = ruta or os.path.join(RAIZ, ARCHIVO_DE_VEREDICTOS.replace("/", os.sep))
+    filas = [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
+    if destapar_sujeto:
+        return filas
+    sellados = set(puestos_sellados(ruta_sello))
+    if not sellados:
+        return filas
+    tapadas = []
+    for f in filas:
+        if f.get("puesto_intra") in sellados:
+            f = dict(f)
+            for campo in CAMPOS_QUE_DESTAPAN:
+                if campo in f:
+                    f[campo] = TAPADO
+        tapadas.append(f)
+    return tapadas
+
+
+def marcador(ruta=None):
+    """EL RECUENTO POR CLASE SOBRE EL ARCHIVO ENTERO. Devuelve un dict.
+
+    **NO DESTAPA NADA Y POR ESO NO HACE FALTA PEDIRLO:** un agregado de miles de
+    filas no dice la clase de ninguna. Existe para que la cuarta puerta no
+    estorbe lo que el acta SI tiene que hacer, que es recomputar el marcador
+    ANTES de escribir sus clases."""
+    apuntar(TOQUE_VEREDICTOS)
+    p = ruta or os.path.join(RAIZ, ARCHIVO_DE_VEREDICTOS.replace("/", os.sep))
+    filas = [json.loads(l) for l in io.open(p, encoding="utf-8") if l.strip()]
+    por_clase = {}
+    for f in filas:
+        por_clase[f.get("clase")] = por_clase.get(f.get("clase"), 0) + 1
+    return {"filas": len(filas), "por_clase": por_clase}
+
+
+def destapes_antes_de_las_clases():
+    """LOS TOQUES DE DESTAPE QUE LA BITACORA TRAE. PURA sobre el estado del
+    modulo, y es la funcion que `puede_declarar_clases()` consulta.
+
+    Va separada por el mismo motivo que `toques_prohibidos()`: **la decision se
+    puede probar sin escribir un solo fichero.**"""
+    return [t for t in _BITACORA if t == TOQUE_DESTAPE]
+
+
+def puede_declarar_clases():
+    """(SI_PUEDE, MOTIVO). PURA sobre el estado del modulo.
+
+    **ESTA ES LA FUNCION QUE EL ARNES TUMBA.** Cae si el turno destapo el sujeto
+    antes de escribir sus clases: unas clases escritas DESPUES de ver el archivo
+    no prueban nada, que es exactamente lo mismo que dice `puede_sellar()` sobre
+    el sello."""
+    malos = destapes_antes_de_las_clases()
+    if malos:
+        return False, ("el turno destapo `clase` o `razon` de los puestos "
+                       "SELLADOS %d vez(ces) ANTES de escribir sus clases. EL "
+                       "SUJETO YA SE QUEMO, y unas clases escritas ahora no "
+                       "probarian nada." % len(malos))
+    if _CLASES["escritas"]:
+        return False, "este turno ya declaro sus clases: no se declaran dos veces"
+    if not _SELLADO["hecho"]:
+        return False, ("este turno no ha sellado. Sin sello no hay sujeto, y sin "
+                       "sujeto no hay clases que declarar")
+    return True, "la bitacora esta limpia de destapes y el sello esta escrito"
+
+
+def declarar_clases_escritas(ruta_clases):
+    """MARCA QUE LAS CLASES DEL AUDITOR ESTAN ESCRITAS. Devuelve (ok, informe).
+
+    **CAE EN ROJO Y NO MARCA NADA** si `puede_declarar_clases()` dice que no. Es
+    el gemelo exacto de `sellar()`: alli el rojo era no poder sellar; aqui es no
+    poder declarar, **y a partir de aqui destapar el sujeto ya no quema nada**,
+    porque las clases ya estan escritas."""
+    informe = []
+    w = informe.append
+    ok, motivo = puede_declarar_clases()
+    w("PUEDE DECLARAR LAS CLASES: %s" % ("SI" if ok else "NO"))
+    w("   motivo: %s" % motivo)
+    w("   bitacora del turno hasta ahora: %s"
+      % (", ".join(bitacora()) if bitacora() else "(vacia)"))
+    w("   destapes apuntados: %d" % len(destapes_antes_de_las_clases()))
+    if not ok:
+        w("ROJO: NO se marca nada. La ciega de este turno NO se puede citar.")
+        return False, informe
+    if not os.path.exists(ruta_clases):
+        w("ROJO: %s no existe. Unas clases que no estan escritas no se declaran."
+          % ruta_clases)
+        return False, informe
+    _CLASES["escritas"] = True
+    _CLASES["ruta"] = ruta_clases
+    w("CLASES DECLARADAS: %s (%d bytes)"
+      % (ruta_clases, os.path.getsize(ruta_clases)))
+    w("   desde aqui, destapar el sujeto ya no quema nada.")
+    return True, informe
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--criterio")
@@ -244,10 +433,20 @@ def main():
     print("=" * 78)
     print("   LOS TRES PROHIBIDOS ANTES DEL SELLO: %s"
           % ", ".join(repr(p) for p in PROHIBIDOS_ANTES_DEL_SELLO))
+    print("   Y LA CUARTA PUERTA, ANTES DE LAS CLASES: %s, campos %s"
+          % (ARCHIVO_DE_VEREDICTOS,
+             ", ".join(repr(c) for c in CAMPOS_QUE_DESTAPAN)))
     if a.estado:
         ok, motivo = puede_sellar()
         print("   bitacora: %s" % (", ".join(bitacora()) or "(vacia)"))
         print("   PUEDE SELLAR: %s (%s)" % ("SI" if ok else "NO", motivo))
+        ok2, motivo2 = puede_declarar_clases()
+        print("   LA CUARTA PUERTA: %s" % ARCHIVO_DE_VEREDICTOS)
+        print("      campos que destapan: %s"
+              % ", ".join(repr(c) for c in CAMPOS_QUE_DESTAPAN))
+        print("      destapes apuntados: %d" % len(destapes_antes_de_las_clases()))
+        print("   PUEDE DECLARAR LAS CLASES: %s (%s)"
+              % ("SI" if ok2 else "NO", motivo2))
         return 0
     if not a.criterio or not a.vuelta:
         print("   ROJO: --criterio y --vuelta son obligatorios. Sin criterio "

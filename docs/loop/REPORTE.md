@@ -108,7 +108,7 @@ tabla tallada entera cuando la vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 192 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Con sus DIEZ adjudicaciones `4.1` a `4.10`, y las diez A FAVOR: siete son los discutibles del ejecutor (`D.1` a `D.7`, cuya numeracion en el reporte de la 191 va con el `D.7` escrito ANTES del `D.6`) y las tres restantes son las preguntas y los pendientes de doctrina contestados. OTRA VEZ CERO EN CONTRA, y si el arnes de la 191 ya cubre ese cero, SE DICE CON SU FICHERO en vez de re fabricarlo. Mas los TRES hallazgos de la seccion 5 que no salen de ningun discutible (los dos arneses `SUJETO VIVO` en `5.1`, la cuarta puerta del sello en `5.2`, y el segundo dato independiente sobre la marca contra la dificultad en `5.3`), DOS caidas propias del auditor escritas COMO DOS y ninguna omitida (la `C.1` es DE CIFRA PUBLICADA y va corregida por DECLARACION; la `C.2` es de metodo), CERO caidas del ejecutor que acumulen con las SEIS de metodo que el reporte de la 191 declara, y LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos con su nota: 30 aislados y 28 cotejados, SOLAPE TOTAL a proposito. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido no escribe nada, y se prueba re corriendolo con la sede medida en bytes antes y despues | **CERRADA** | `SALIDA_V192_T1A_REGISTRO_R54.txt`, `SALIDA_V192_T1A_SIMULACION.txt`, `SALIDA_V192_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V192_T1A_RECORRIDO_SIN_ESCRIBIR.txt` |
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DE LA 191. BLOQUEANTE. La encarga el AUDITOR, que es donde `AUDITOR.md` 1.2 la pone, y esta vez CON MOTIVO DOBLE: el puesto `2832` cayo FUERA de los dudosos marcados de DOS lectores independientes en DOS tandas seguidas, la del ejecutor en la 191 y la del auditor en la 192. EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V191_T2_CIEGA.txt`, que el bloque `H.3` del sello de apertura midio como el MISMO conjunto que `docs/loop/_auditor_v192_ciega_blind.txt`. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus SEIS ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. Y SI EL TRAMO VUELVE A TUMBAR A LOS DOS LECTORES EN LOS MISMOS PUESTOS, SE DICE CON SUS NUMEROS. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **CERRADA, Y CON TRES DISCREPANCIAS FUERA DEL MARCADO** | `SALIDA_V192_T2_AISLAMIENTO.txt`, `SALIDA_V192_T2_CIEGA.txt`, `SALIDA_V192_T2_MIS_CLASES.txt`, `SALIDA_V192_T2_DESTAPE.txt`, `SALIDA_V192_T2_COTEJO.txt`, `SALIDA_V192_T2_RECUENTO.txt` |
 | **TAREA 3** | LOS DOS ARNESES `SUJETO VIVO` DE LA 191, ANTES DE QUE ENTREN EN LA NOMINA. BLOQUEANTE, Y LO ES POR LA BATERIA DE LA 194. Es el hallazgo `5.1` del acta 192, corrido con la guarda de la casa y medido en `docs/loop/_auditor_v192_sujeto_vivo.txt`. (a) CORRER LA GUARDA `guarda_del_sujeto_congelado_separada()` y publicar sus TRES listas sobre los doce arneses de la 191, con sus nombres: si la medicion no da 2 y 6, la del ejecutor manda y la del auditor se declara equivocada, que para eso se publica el comando. (b) ARREGLAR LOS DOS `SUJETO VIVO` para que su sujeto quede CONGELADO, o DECLARAR EL CASO por el carril de los `CASO DECLARADO` que la casa ya tiene: la `4.4` del acta 191 adjudico que `SUJETO VIVO` es FALLO y no deuda, asi que dejarlos como estan no es opcion. (c) LOS SEIS `sin_motivo` NO SON FALLO PERO SI SON DEUDA: nombrarlos y decir, por cada uno, si su sujeto esta vivo de verdad o si solo le falta escribir el motivo, sin arreglarlos a ciegas. (d) NO SE TOCA LA NOMINA: no se poda, no se adelanta y no se le meten entradas nuevas, que la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes con sujeto vivo vuelve a colarse hacia la nomina sin declararse | **CERRADA, CON CORRECCION DECLARADA DE LA PREMISA DEL ENCARGO** | `SALIDA_V192_T3_GUARDA.txt`, `SALIDA_V192_T3_DECLARAR_SUJETOS.txt`, `SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt` |
-| **TAREA 4** | LA CUARTA PUERTA DEL SELLO DE LA APERTURA DEL AUDITOR. Es el hallazgo `5.2` del acta 192, levantado por el auditor CONTRA SI MISMO. `scripts/loop/apertura_del_auditor.py` impide tocar `git log`, `git status` y `REPORTE.md` antes del sello, y eso FUNCIONO; pero EL SUJETO DE LA CIEGA NO VIVE EN NINGUNO DE LOS TRES: vive en las razones y las clases de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y por ahi se colo el auditor de la 192 con el sello ya escrito y sin romper ninguna guarda (los puestos 156 y 201 de su propia tanda). (a) AL SELLO SE LE ANADE LA CUARTA PUERTA: una funcion del propio fichero para leer el archivo que APUNTE SU TOQUE, y una comprobacion que CAIGA EN ROJO si el turno leyo `clase` o `razon` DE LOS PUESTOS SELLADOS antes de que las clases del auditor esten escritas. No se prohibe leer el archivo entero, que hace falta para el marcador: se prohibe destapar el sujeto. (b) DECIR EN EL PROPIO FICHERO LO QUE ESTA GUARDA NO PUEDE HACER, como su docstring ya hace con las otras tres. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si la cuarta puerta se quita. (d) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y sin numero de vuelta, y se le anade, no se le hace una version 2 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LA CUARTA PUERTA DEL SELLO DE LA APERTURA DEL AUDITOR. Es el hallazgo `5.2` del acta 192, levantado por el auditor CONTRA SI MISMO. `scripts/loop/apertura_del_auditor.py` impide tocar `git log`, `git status` y `REPORTE.md` antes del sello, y eso FUNCIONO; pero EL SUJETO DE LA CIEGA NO VIVE EN NINGUNO DE LOS TRES: vive en las razones y las clases de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y por ahi se colo el auditor de la 192 con el sello ya escrito y sin romper ninguna guarda (los puestos 156 y 201 de su propia tanda). (a) AL SELLO SE LE ANADE LA CUARTA PUERTA: una funcion del propio fichero para leer el archivo que APUNTE SU TOQUE, y una comprobacion que CAIGA EN ROJO si el turno leyo `clase` o `razon` DE LOS PUESTOS SELLADOS antes de que las clases del auditor esten escritas. No se prohibe leer el archivo entero, que hace falta para el marcador: se prohibe destapar el sujeto. (b) DECIR EN EL PROPIO FICHERO LO QUE ESTA GUARDA NO PUEDE HACER, como su docstring ya hace con las otras tres. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si la cuarta puerta se quita. (d) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y sin numero de vuelta, y se le anade, no se le hace una version 2 | **CERRADA** | `SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`, `scripts/loop/apertura_del_auditor.py`, `SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt` (re corrido, reproduce) |
 | **TAREA 5** | EL FORMATO UNICO DEL COTEJO DE CIEGA. Es el `P.2` del ejecutor, adjudicado A FAVOR en la `4.9` del acta 192. La TAREA 5 de la 191 midio que el universo se queda en 6 ficheros de 43, y tres cotejos de ciega DE VERDAD (los del 183, 184 y 190) quedan fuera POR FORMATO y no por fondo. ES UN FORMATO ANTES QUE UNA RE MEDICION: (a) ESCRIBIR EL FORMATO UNICO del cotejo de ciega, con nombre estable y sin numero de vuelta, que lleve como minimo y explicitos el puesto, la clase del lector, la clase del archivo, si el puesto estaba en los dudosos del lector, y el COINCIDE o DISCREPA, y que deje el DENOMINADOR RECUPERABLE, porque dos de los seis ficheros de hoy solo listan discrepancias. (b) UN LECTOR QUE LEA LOS FORMATOS VIEJOS y publique CUANTOS de los 43 pasa a recuperar, con sus nombres, y cuantos siguen fuera y por que, con la cifra de antes y la de despues LAS DOS JUNTAS. (c) NO SE RE MIDE LA MARCA CONTRA LA DIFICULTAD EN ESTA VUELTA: el universo nuevo se usa cuando este medido y declarado, no en el mismo acto en que se construye. (d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un cotejo del formato nuevo no permite recuperar el denominador | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -477,5 +477,98 @@ alla.**
 secas. **FALLO 0** (ningun reclamado sale `SUJETO VIVO`), **DEUDA 2** (los dos de
 arriba), **LIMPIO 1**. Y su ceguera va escrita en su propio docstring y probada
 por la mutacion `D`: **no ve al que YA esta en la nomina**, para eso esta la otra.
+
+### TAREA 4. LA CUARTA PUERTA DEL SELLO DE LA APERTURA DEL AUDITOR. **CERRADA.** El fichero no se clona: se le anade, y su arnes de la nomina sigue reproduciendo byte a byte.
+
+**(a) LA CUARTA PUERTA, ANADIDA A `scripts/loop/apertura_del_auditor.py`.** El
+fichero pasa de **14724 bytes en disco y 14724 en LF** a **21223 bytes en disco y
+21223 en LF**, y **COMPILA**. Lo que se le anade son **cinco funciones y cuatro
+constantes**, y ni una linea de las tres puertas viejas se toca:
+
+- `puestos_sellados()`. **El sujeto lo define el sello y nadie mas:** lee el
+  sello del turno, de ahi la ruta de la ciega, y de la ciega sus
+  `puesto_intra`. **No se teclean ni se pasan por argumento**, que es lo que
+  impide elegir el sujeto despues de mirar.
+- `leer_veredictos()`. **APUNTA SU TOQUE**, y por defecto devuelve las filas de
+  los puestos sellados **con `clase` y `razon` TAPADAS**. Quien quiera verlas
+  tiene que pedir `destapar_sujeto=True`, y entonces el toque que apunta es
+  **otro**: el de destape. **Un destape no se puede hacer sin querer.**
+- `marcador()`. Cuenta por clase sobre el archivo **entero** y **no destapa
+  nada**, porque un agregado de miles de filas no dice la clase de ninguna.
+  Existe para que la cuarta puerta **no estorbe lo que el acta si tiene que
+  hacer**: recomputar el marcador antes de escribir sus clases.
+- `puede_declarar_clases()`, PURA sobre el estado del modulo, **que es la que el
+  arnes tumba**.
+- `declarar_clases_escritas()`. **CAE EN ROJO y no marca nada** si hubo un
+  destape antes. Es el gemelo exacto de `sellar()`: alli el rojo era no poder
+  sellar; **aqui es no poder declarar las clases escritas**, que es lo que un
+  acta cita como prueba de que leyo a ciegas.
+
+**LA LINEA QUE SEPARA LO PROHIBIDO DE LO PERMITIDO ES TODA LA GUARDA, Y VA
+ESCRITA:** no se prohibe leer el archivo entero, que hace falta para el marcador;
+**se prohibe DESTAPAR EL SUJETO**, o sea leer `clase` o `razon` **de los puestos
+que el sello ya eligio**, antes de que las clases esten escritas.
+
+**Y LA CUARTA PUERTA VA EN SU PROPIA CONSTANTE Y NO DENTRO DE
+`PROHIBIDOS_ANTES_DEL_SELLO`, POR UNA RAZON MEDIDA:** aquellas se prohiben
+**antes del sello** y esta se prohibe **antes de las clases**, que es otro momento
+del turno; y ademas el arnes de la vuelta 182 **recorre esa tupla una a una**, asi
+que meterla dentro lo habria roto. Se comprobo re corriendolo, y esta abajo.
+
+**(b) LO QUE ESTA GUARDA NO PUEDE HACER, ESCRITO EN EL PROPIO FICHERO** como su
+docstring ya hacia con las otras tres, **y ademas PROBADO en el bloque `G` del
+arnes y no solo escrito**: **no puede impedir que alguien abra el `jsonl` por su
+cuenta en su terminal**, ni con `python`, ni con `grep`, ni con un editor. El
+arnes lo lee a mano y comprueba que **la bitacora sigue vacia y las clases se
+pueden declarar igual**. Lo que si puede es que **la declaracion no se pueda
+escribir despues** y que **quien se la salte lo haga a sabiendas**. Y una segunda
+cosa que no puede, dicha porque es mas fina: **no sabe si lo que se leyo era del
+sujeto cuando el archivo se abre por fuera de estas funciones**.
+
+**(c) EL CASO POSITIVO POR MUTACION: VERDE, CON 30 CASOS Y CERO ROJOS**
+(`docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`, **disco 4282 bytes | LF
+4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
+su propio sello en un directorio temporal y los retira. **La mutacion que importa
+es la `E`:** se sustituye `leer_veredictos()` por **la version sin el apunte de
+destape, que es exactamente el codigo de antes de esta vuelta**, y se comprueba
+que entonces
+
+- el sujeto **se ve igual**,
+- **no queda apuntado ningun destape**, y
+- **`declarar_clases_escritas()` sale VERDE**.
+
+**Ese es el agujero, y es el que esta puerta tapa: el sujeto se quema exactamente
+igual y el sello sigue saliendo verde.** Hay una segunda mutacion (`F`): con
+`CAMPOS_QUE_DESTAPAN` vacio, el tapado deja de tapar. Y las dos restauran lo que
+tocaron y lo comprueban.
+
+**(d) NO SE CLONA EL FICHERO.** `apertura_del_auditor.py` conserva su nombre
+estable y sin numero de vuelta: **se le anade, no se le hace una version 2**. El
+parche lo aplico `scripts/loop/_v192_parche_cuarta_puerta.py`, que es **idempotente
+y CAE sin escribir nada si alguna de sus cuatro anclas no aparece**.
+
+**LA COMPROBACION QUE ESTA TAREA SE DEBIA A SI MISMA, Y ES LA MISMA ENFERMEDAD DE
+LA TAREA 3:** `vuelta182_tarea2_mutacion_apertura_auditor.py` **esta en la
+nomina** y su sujeto es justo el fichero que acabo de tocar. Si su salida sellada
+dejara de reproducir, **yo mismo habria roto la bateria de la 194 arreglando la
+puerta que existe para no romperla**. Medido antes y despues, con el fichero ya
+parcheado:
+
+```
+ANTES (identico a HEAD): disco 4982 bytes | LF 4982 bytes | sha256 LF ce85fd0cc659774c
+exitcode del re corrido: 0
+DESPUES:                 disco 4982 bytes | LF 4982 bytes | sha256 LF ce85fd0cc659774c
+REPRODUCE BYTE A BYTE: True
+```
+
+Y `git status --porcelain` sobre esa ruta sale **vacio**, o sea identica a `HEAD`.
+**Una sola entrada de la nomina nombra este fichero, y esa entrada sigue en
+verde.**
+
+**LO QUE ESTA TAREA NO HACE, DICHO PARA QUE NO SE BUSQUE:** no re escribe el acta
+192 ni ninguna de sus cifras; los puestos 156 y 201 que el auditor quemo **siguen
+declarados donde el los declaro**, y esta puerta no los recupera. **Lo que hace es
+que la proxima vez no dependa de que alguien se acuerde**, que es lo que el propio
+auditor pidio al levantarlo contra si mismo.
 
 <!-- FIN ANEXO DE TAREAS -->

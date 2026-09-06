@@ -1,0 +1,71 @@
+==============================================================================
+VUELTA 192, TAREA 4.c: CASO POSITIVO POR MUTACION DE LA CUARTA PUERTA
+==============================================================================
+
+SUJETO CONGELADO: el archivo, la ciega y el sello se FABRICAN en un
+directorio temporal con las cifras sabidas por construccion. Este arnes NO
+abre el archivo de veredictos del repo y NO SE TOCA ninguna fila.
+   puestos SELLADOS del sujeto fabricado: 11, 22, 33
+   puestos NO sellados: 44, 55
+
+A) CON EL SELLO ESCRITO, `leer_veredictos()` TAPA EL SUJETO Y NADA MAS
+   los puestos sellados se leen DEL SELLO y no se teclean           VERDE
+   se devuelven las cinco filas                                     VERDE
+   la clase de un SELLADO sale tapada                               VERDE
+   la razon de un SELLADO sale tapada                               VERDE
+   la clase de un NO sellado NO se tapa                             VERDE
+   y el toque apuntado es el de lectura, no el de destape           VERDE
+   destapes apuntados                                               VERDE
+
+B) `marcador()` CUENTA SOBRE EL ARCHIVO ENTERO Y NO DESTAPA NADA
+   cuenta las cinco filas                                           VERDE
+   y las reparte por clase sin mirar ninguna en particular          VERDE
+   no apunta ningun destape                                         VERDE
+   asi que las clases se pueden declarar despues del marcador       VERDE
+
+C) EL CASO QUE TIENE QUE CAER: DESTAPAR ANTES DE ESCRIBIR LAS CLASES
+   destapando SI se ve la razon del sujeto                          VERDE
+   y queda apuntado como destape                                    VERDE
+   PUEDE DECLARAR LAS CLASES: NO                                    VERDE
+   declarar_clases_escritas() CAE EN ROJO                           VERDE
+   y NO marca nada                                                  VERDE
+      | PUEDE DECLARAR LAS CLASES: NO
+      |    motivo: el turno destapo `clase` o `razon` de los puestos SELLADOS 1 vez(ces) ANTES de escribir sus clases. EL SUJETO YA SE QUEMO, y unas clases escritas ahora no probarian nada.
+      |    bitacora del turno hasta ahora: veredictos:destape
+      |    destapes apuntados: 1
+      | ROJO: NO se marca nada. La ciega de este turno NO se puede citar.
+
+D) SIN DESTAPE PREVIO, DECLARA EN VERDE, Y DESPUES YA NO QUEMA
+   declarar_clases_escritas() sale VERDE                            VERDE
+   y queda marcado                                                  VERDE
+   un destape POSTERIOR ya no puede cambiar lo declarado            VERDE
+   y declarar dos veces no se puede                                 VERDE
+
+E) LA MUTACION DE VERDAD: SE LE QUITA LA CUARTA PUERTA Y TIENE QUE
+   DEJAR DE CAER. Se sustituye `leer_veredictos` por una version SIN
+   el apunte de destape, que es exactamente el codigo de antes de esta
+   vuelta, y se comprueba que la comprobacion se vuelve ciega.
+   sin la puerta, el sujeto se ve igual                             VERDE
+   PERO NO QUEDA APUNTADO NINGUN DESTAPE                            VERDE
+   Y LA COMPROBACION DEJA DE CAER: declara en verde                 VERDE
+      ESO ES EL AGUJERO, Y ES EL QUE ESTA PUERTA TAPA: el sujeto se
+      quema exactamente igual y el sello sigue saliendo verde.
+   la funcion original queda restaurada                             VERDE
+
+F) LA SEGUNDA MUTACION: SI `CAMPOS_QUE_DESTAPAN` SE QUEDA VACIO, EL
+   TAPADO DEJA DE TAPAR
+   sin campos, la razon del sujeto NO se tapa                       VERDE
+   los campos quedan restaurados                                    VERDE
+
+G) LO QUE ESTA GUARDA NO PUEDE HACER, PROBADO Y NO SOLO ESCRITO:
+   abrir el fichero POR FUERA de estas funciones no apunta nada.
+   leido a mano: la bitacora sigue vacia                            VERDE
+   y las clases se pueden declarar igual                            VERDE
+      POR ESO EL DOCSTRING LO DICE: ninguna guarda de este repo puede
+      impedirlo. Lo que si puede es que quien se la salte lo haga a
+      sabiendas, y que la declaracion no se pueda escribir despues.
+
+H) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)
+   el temporal quedo retirado                                       VERDE
+
+CIFRA casos: los de arriba. VEREDICTO: VERDE
