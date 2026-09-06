@@ -8,10 +8,11 @@ escribir. El encargo decia `R.53` y **el instrumento tambien lo dice: CALZA**.
 
 **EL INSTRUMENTO:** `scripts/loop/vuelta191_tarea1a_registrar_acta191.py`.
 Salidas, las tres medidas y ninguna vacia:
-`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt` (6904 bytes),
+`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt` (disco 6904 bytes | LF 6904 bytes),
 `docs/loop/SALIDA_V191_T1A_SIMULACION.txt`,
-`docs/loop/SALIDA_V191_T1A_REGISTRO_R53.txt` (9585 bytes) y
-`docs/loop/SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (9965 bytes).
+`docs/loop/SALIDA_V191_T1A_REGISTRO_R53.txt` (disco 9585 bytes | LF 9585 bytes) y
+`docs/loop/SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (disco 9965 bytes | LF 9965
+bytes).
 
 **LO QUE ESTE REGISTRADOR TUVO QUE ESTRENAR, Y LAS CUATRO SALEN DE CORRER LA
 MAQUINA HEREDADA SOBRE EL ACTA 191 Y VER DONDE SE ROMPE, NO DE SUPONERLO.** Las
@@ -94,14 +95,24 @@ importan, cada una con su mutacion corrida:
   ve**; comparada en mayusculas **si**. Y un acta sin la nota da **falso**.
 - **la idempotencia**: sede sin la entrada **0**, sede con la entrada **2**.
 
-**LA IDEMPOTENCIA, PROBADA RE CORRIENDOLA Y NO AFIRMADA.** `docs/PENDIENTES.md`
-media **980013 bytes** antes de escribir; **998216** despues; y **RE CORRIDO el
-instrumento entero, sigue en 998216 bytes** y su salida dice `NO SE ESCRIBE NADA`
-(`SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, y su nombre lo dice: **una ruta
-que promete prueba es cifra**, asi que el fichero no se llama con un numero de
-serie que no se consumio). La comprobacion es **por el acta y no por el numero**,
-en LAS DOS SEDES, con las marcas literales computadas de la vuelta. `git diff
---numstat -- dataset/`: **0 filas**, antes y despues.
+**LA IDEMPOTENCIA, PROBADA RE CORRIENDOLA Y NO AFIRMADA.** Las tres mediciones de
+la sede van CERCADAS y no en prosa, y se dice por que: la de ANTES es una cifra
+que hoy ya no se puede volver a medir en el disco, asi que publicarla como pareja
+suelta seria darle a la guarda de las dos convenciones una cifra que no puede
+cotejar contra el fichero de hoy. **Cercada es lo que es: una cita de la salida
+del instrumento.**
+
+```
+CIFRA bytes de docs/PENDIENTES.md ANTES de tocar nada: 980013
+la sede pasa de 980013 a 998216 bytes
+RE CORRIDO: docs/PENDIENTES.md sigue en 998216 bytes, NO SE ESCRIBE NADA
+```
+
+La salida del re corrido vive en `SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, y
+**su nombre lo dice**: una ruta que promete prueba es cifra, asi que el fichero no
+se llama con un numero de serie que no se consumio. La comprobacion es **por el
+acta y no por el numero**, en LAS DOS SEDES, con las marcas literales computadas
+de la vuelta. `git diff --numstat -- dataset/`: **0 filas**, antes y despues.
 
 **LA DEUDA DE LA SERIE, REMEDIDA AQUI Y NO HEREDADA DEL `R.52`:** **8** actas sin
 entrada propia, las **173 a 180**, con `R.42` cubriendo el acta 172 y `R.43` el

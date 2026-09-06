@@ -1,11 +1,12 @@
 ### TAREA 5. LA MARCA CONTRA LA DIFICULTAD MEDIDA. CERRADA: LAS TRES CIFRAS ESTAN, Y NO ALCANZAN PARA CONCLUIR.
 
 **NO SE ESCRIBIO NI UNA FILA DEL ARCHIVO.**
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **4054129 bytes por las dos
-convenciones** y `sha256` LF `0a77b5a35a962621`, medido dentro del propio
-instrumento al entrar y al salir. Instrumento:
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **disco 4054129 bytes | LF
+4054129 bytes**, con `sha256` disco y `sha256` LF iguales en `0a77b5a35a962621`,
+medido dentro del propio instrumento al entrar y al salir. Instrumento:
 `scripts/loop/vuelta191_tarea5_marca_contra_dificultad.py`; salida:
-`docs/loop/SALIDA_V191_T5_MARCA_CONTRA_DIFICULTAD.txt` (12555 bytes).
+`docs/loop/SALIDA_V191_T5_MARCA_CONTRA_DIFICULTAD.txt`
+(disco 12555 bytes | LF 12555 bytes).
 
 **(a) EL UNIVERSO SE DECLARA ANTES DE CONTAR, Y LAS DOS REGLAS ESTAN EN EL
 CODIGO, NO EN LA PROSA.** Un universo elegido despues de ver el resultado no

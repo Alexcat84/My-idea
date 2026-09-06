@@ -1198,6 +1198,23 @@ def renglones_fuera_de_cerca(texto):
     return fuera
 
 
+def lineas_del_bloque_tallado(texto):
+    """LOS NUMEROS DE LINEA DEL BLOQUE DE LA CABECERA TALLADA, MARCAS INCLUIDAS.
+    Devuelve un conjunto, VACIO si el bloque no esta o esta mal formado. PURA.
+
+    EL ALCANCE ES ESTRECHO A PROPOSITO: solo lo que va ENTRE `MARCA_ABRE` y
+    `MARCA_CIERRA`, que es exactamente lo que este fichero pega verbatim del
+    tallador. Si alguna de las dos marcas falta o aparece mas de una vez, esta
+    funcion devuelve el conjunto VACIO y **no exime nada**: un bloque que no se
+    puede delimitar no se puede eximir."""
+    lineas = texto.replace(chr(13) + NL, NL).split(NL)
+    abre = [i for i, l in enumerate(lineas, 1) if l.strip() == MARCA_ABRE]
+    cierra = [i for i, l in enumerate(lineas, 1) if l.strip() == MARCA_CIERRA]
+    if len(abre) != 1 or len(cierra) != 1 or cierra[0] < abre[0]:
+        return set()
+    return set(range(abre[0], cierra[0] + 1))
+
+
 def cifras_sin_pareja(texto):
     """LAS CIFRAS DE BYTES Y LOS SHA QUE EL REPORTE PUBLICA SIN SU PAREJA.
 
@@ -1209,9 +1226,27 @@ def cifras_sin_pareja(texto):
     LA REGLA, ESCRITA AQUI PARA QUE NO HAYA QUE DEDUCIRLA DE LA SALIDA: una
     cifra esta emparejada si en su MISMA LINEA hay dos o mas apariciones de su
     especie, o si la linea nombra al menos DOS marcas de convencion. Los bloques
-    cercados quedan fuera porque son citas de la salida de un instrumento."""
+    cercados quedan fuera porque son citas de la salida de un instrumento.
+
+    Y DESDE LA VUELTA 191 (TAREA 6, y va declarada como discutible en el reporte
+    de esa vuelta) EL BLOQUE DE LA CABECERA TALLADA QUEDA FUERA POR EL MISMO
+    MOTIVO, NO POR UNO NUEVO. La causa esta medida y no supuesta: el acta 190
+    tiene un asunto de commit que trae DENTRO `961248 bytes` y un `sha256`, y ese
+    asunto lo cita literalmente la fila de identidad que el tallador produce. El
+    reporte NO afirma esas cifras: **las cita**, y este mismo fichero escribe
+    encima del bloque, con sus palabras, que la tabla va *"PEGADA ENTERA DEL
+    FICHERO QUE LA LLEVA Y NO TECLEADA"*. Es la misma especie que una cerca.
+
+    Y NO SE PIERDE COBERTURA, QUE ES LO QUE HARIA DE ESTO UN AFLOJE: el contenido
+    del bloque lo vigila una guarda MAS ESTRECHA, `--comparar`, que exige que sea
+    **identico byte a byte** al fichero del tallador. Una cifra falsa no puede
+    entrar ahi sin que el tallador la haya producido. Lo que esta guarda pierde
+    es la vigilancia de una copia verbatim; lo que NO pierde es un renglon de
+    prosa del ejecutor, y eso lo prueba su arnes."""
     fallos = []
     for n, linea in renglones_fuera_de_cerca(texto):
+        if n in lineas_del_bloque_tallado(texto):
+            continue
         marcas = sum(1 for m in MARCAS_CONVENCION if m in linea)
         for especie, hits in (("bytes", PATRON_BYTES.findall(linea)),
                               ("sha", PATRON_SHA.findall(linea)

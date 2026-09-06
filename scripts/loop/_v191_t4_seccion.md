@@ -23,7 +23,9 @@ la composicion final y ahora la guarda). Ahora hay **una constante**,
 distinto del que se compone no vigila nada.**
 
 **(b) EL CASO POSITIVO POR MUTACION: VERDE, 0 casos que caen y 0 mutaciones que no
-cayeron** (`docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt`, 6072 bytes). **Dos
+cayeron**, en
+`docs/loop/SALIDA_V191_T4_MUTACION_VEREDICTO.txt`
+(disco 6072 bytes | LF 6072 bytes). **Dos
 carriles, y ninguno sustituye al otro:**
 
 - **EL CARRIL DE LA FUNCION PURA.** Un veredicto limpio dispara **0** motivos; con
@@ -48,7 +50,8 @@ carriles, y ninguno sustituye al otro:**
   traia la etiqueta da **2** apariciones, que es la linea 50 de la 190.
 
 **(c) EL REPORTE DE LA 190 NO SE REESCRIBE.** Esta cerrado y archivado byte a
-byte (68540 bytes, `sha256` LF `7a74fc3ccd11b769`), y **su etiqueta doble se queda
+byte (disco 68540 bytes | LF 68540 bytes, con `sha256` disco y `sha256` LF
+iguales en `7a74fc3ccd11b769`), y **su etiqueta doble se queda
 donde esta con esta explicacion al lado**. Lo que se arregla es que no vuelva a
 pasar.
 

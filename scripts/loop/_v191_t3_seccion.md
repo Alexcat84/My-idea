@@ -78,7 +78,9 @@ guarda**: ahora un fichero nombrado que YA lleva la frase de la pareja sale
 `YA ARREGLADO`. **Re corrido hoy: 0 tocados, 0 sitios, VEREDICTO VERDE.**
 
 **(c) EL CASO POSITIVO POR MUTACION: VERDE, 0 casos que caen y 0 mutaciones que no
-cayeron** (`docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt`, 5836 bytes). **Ninguna
+cayeron**, en
+`docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt`
+(disco 5836 bytes | LF 5836 bytes). **Ninguna
 variable de veredicto es una constante literal**: todas salen de correr la guarda
 sobre un texto fabricado. Los seis bloques:
 

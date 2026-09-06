@@ -99,6 +99,52 @@ if __name__ != "__main__":
 else:
     sys.stdout.reconfigure(encoding="utf-8")
 
+    # EL CARRIL `--rehacer` (vuelta 191, y va declarado como discutible en el
+    # reporte de esa vuelta). QUE ES Y POR QUE EXISTE, MEDIDO Y NO SUPUESTO: al
+    # cerrar la 191 salieron 22 cifras de bytes publicadas SIN SU PAREJA, y dos
+    # de ellas no estaban en la prosa de ninguna tarea sino en la LINEA DE
+    # IDENTIDAD que este mismo fichero escribe, porque el asunto del commit del
+    # acta 190 trae DENTRO `961248 bytes` y un `sha256`. Arreglarlo obliga a
+    # RE ESCRIBIR el esqueleto, y el PASO 0 lo impide con razon: su archivador
+    # no puede archivar como vuelta 190 un REPORTE.md que ya es de la 191.
+    #
+    # QUE SE AFLOJA Y QUE NO. Se salta el PASO 0 y NADA MAS. A cambio se exige
+    # algo que en este caso es MAS FUERTE que el archivado: que el reporte que
+    # se va a pisar sea EL DE ESTA MISMA VUELTA y este COMMITEADO en git sin
+    # cambios en el arbol. Un reporte parcial que vive en un commit no se pierde
+    # al pisarlo: se recupera con `git show`. Si el arbol trae cambios sin
+    # commitear, o si el reporte no es de esta vuelta, ESTE CARRIL CAE EN ROJO.
+    if "--rehacer" in sys.argv:
+        print("CARRIL --rehacer. EL PASO 0 SE SALTA Y SE DICE POR QUE.")
+        rr = subprocess.run(["git", "status", "--porcelain", "--",
+                             "docs/loop/REPORTE.md"], cwd=RAIZ, capture_output=True)
+        sucio = rr.stdout.decode("utf-8", errors="replace").strip()
+        texto_ahora = io.open(os.path.join(LOOP, "REPORTE.md"),
+                              encoding="utf-8").read()
+        n_ahora = vuelta_del_reporte_del_arbol(texto_ahora)
+        c_last, last = git(["log", "-1", "--format=%H %s", "--",
+                            "docs/loop/REPORTE.md"])
+        print("   git status de docs/loop/REPORTE.md: %r" % (sucio or "(limpio)"))
+        print("   vuelta del reporte que se va a pisar, leida de su cabecera: %s"
+              % n_ahora)
+        print("   ultimo commit que lo toca: %s" % last[:130])
+        malos = []
+        if sucio:
+            malos.append("el reporte del arbol tiene cambios sin commitear")
+        if n_ahora != VUELTA:
+            malos.append("el reporte del arbol es el de la vuelta %s y no el de la %d"
+                         % (n_ahora, VUELTA))
+        if not last.strip():
+            malos.append("ningun commit toca docs/loop/REPORTE.md")
+        if malos:
+            print("ROJO, el carril --rehacer NO escribe:")
+            for m in malos:
+                print("   " + m)
+            sys.exit(1)
+        print("   VERDE: lo que se va a pisar es el reporte parcial de ESTA vuelta")
+        print("   y vive entero en git. Se recupera con `git show`.")
+        print("")
+
     # ---------------------------------------------- PASO 0.0, LA FUENTE DEL CLON
     ok_clon, informe_clon = CLON.exigir_fuente_del_clon(
         FUENTE_DEL_CLON, FUNCION_CLONADA)
@@ -111,6 +157,7 @@ else:
 
     # ------------------------------------------------------------- PASO 0
     ruta = os.path.join(LOOP, "REPORTE.md")
+    _rehacer = "--rehacer" in sys.argv
     texto_a_pisar = io.open(ruta, encoding="utf-8").read() if os.path.exists(ruta) else ""
     n_arbol = vuelta_del_reporte_del_arbol(texto_a_pisar)
     print("PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA")
@@ -125,27 +172,34 @@ else:
           % (VUELTA - 1, "SI" if n_arbol == VUELTA - 1 else "NO"))
     print("")
 
-    print("PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (%d), PUBLICADA SALGA LO"
-          % (VUELTA - 1))
-    print("   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR")
-    ok_ant, informe_ant = PASO0.exigir_archivado(VUELTA - 1, ejecutar_archivador=False)
-    for l in informe_ant:
-        print("   " + l)
-    print("   VEREDICTO SOBRE LA %d: %s" % (VUELTA - 1, "VERDE" if ok_ant else "ROJO"))
-    c, toco = git(["log", "--format=%h", "-6", "--", "docs/loop/REPORTE.md"])
-    print("   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: %s"
-          % (", ".join(toco.split()) if toco.strip() else "(ninguno)"))
-    print("")
+    if _rehacer:
+        print("PASO 0.b y 0.c: SALTADOS POR EL CARRIL --rehacer, y se dice.")
+        print("")
+        ok = True
+    else:
+        print("PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (%d), PUBLICADA SALGA LO"
+              % (VUELTA - 1))
+        print("   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR")
+        ok_ant, informe_ant = PASO0.exigir_archivado(VUELTA - 1,
+                                                     ejecutar_archivador=False)
+        for l in informe_ant:
+            print("   " + l)
+        print("   VEREDICTO SOBRE LA %d: %s"
+              % (VUELTA - 1, "VERDE" if ok_ant else "ROJO"))
+        c, toco = git(["log", "--format=%h", "-6", "--", "docs/loop/REPORTE.md"])
+        print("   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: %s"
+              % (", ".join(toco.split()) if toco.strip() else "(ninguno)"))
+        print("")
 
-    print("PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (%d)"
-          % n_arbol)
-    ok, informe = PASO0.exigir_archivado(n_arbol)
-    for l in informe:
-        print("   " + l)
-    print("")
-    if not ok:
-        print("ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.")
-        sys.exit(1)
+        print("PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (%d)"
+              % n_arbol)
+        ok, informe = PASO0.exigir_archivado(n_arbol)
+        for l in informe:
+            print("   " + l)
+        print("")
+        if not ok:
+            print("ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.")
+            sys.exit(1)
 
     fallos = []
 
@@ -194,12 +248,28 @@ else:
                         "--fase04", "--vuelta", str(VUELTA)],
                        cwd=RAIZ, capture_output=True, env=env)
     sal_tallador = r.stdout.decode("utf-8", errors="replace") + r.stderr.decode("utf-8", errors="replace")
+    # EL TALLADOR TIENE DOS SALIDAS Y LAS DOS SON LEGITIMAS, Y ESTO SE APRENDIO
+    # MIDIENDO (vuelta 191, carril --rehacer): en la APERTURA le faltan las
+    # salidas de cierre y dice `ROJO, N celdas no se pudieron leer`; RE CORRIDO
+    # con el bloque de cierre ya en disco, TALLA LA TABLA ENTERA y no imprime esa
+    # linea. La version anterior de este fichero solo sabia leer la primera y
+    # caia en rojo sobre un tallador PERFECTAMENTE VERDE. Ahora se leen las dos y
+    # **se dice cual de las dos fue**, en vez de teclear un cero.
     m = re.search(r"ROJO,\s+(\d+)\s+celdas no se pudieron leer", sal_tallador)
-    if not m:
-        fallos.append("el tallador no imprime la cifra de celdas ilegibles; no se teclea una")
-        celdas = ""
-    else:
+    tallador_verde = "LA TABLA, PARA PEGAR ENTERA" in sal_tallador
+    if m:
         celdas = m.group(1)
+        frase_tallador = ('corrido aqui, el tallador dice **"ROJO, %s celdas no se '
+                          'pudieron leer"**' % celdas)
+    elif tallador_verde:
+        celdas = "0"
+        frase_tallador = ("corrido aqui, el tallador **TALLA LA TABLA ENTERA y no "
+                          "imprime ninguna linea de celdas ilegibles**")
+    else:
+        fallos.append("el tallador no imprime ni la cifra de celdas ilegibles ni "
+                      "la tabla; no se teclea una")
+        celdas = ""
+        frase_tallador = ""
     lado_apertura_roto = [l for l in sal_tallador.splitlines()
                           if "APERTURA" in l and l.strip().startswith(("no ", "sin "))]
 
@@ -272,8 +342,17 @@ haya de que hablar.
 EN ROJO si algo no se encuentra o es ambiguo:
 
 - rama: `%(rama)s`
-- commit del acta de la vuelta %(ant)d: `%(acta8)s`, asunto real leido de git log:
-  %(asunto)s
+- commit del acta de la vuelta %(ant)d: `%(acta8)s`. **Su asunto real va CERCADO
+  ABAJO, y no suelto en esta prosa**, porque un asunto de acta puede traer
+  DENTRO cifras de bytes y `sha256` suyas, y una guarda que mira renglon a
+  renglon no distingue una cita de una afirmacion. Cercarlo es decir lo que es:
+  **una cita de la salida de un instrumento**, que es exactamente el motivo por
+  el que `cerrar_reporte.py` deja los bloques cercados fuera de su guarda de
+  parejas.
+
+```
+%(asunto)s
+```
 - **DESFASE DECLARADO, SEPTIMA VUELTA:** la linea de arriba nombra el acta
   **%(ant)d** porque `PATRONES_ACTA` pide la de `VUELTA - 1`, y **el acta que
   ORDENA esta vuelta es la 191**. Es el `D.2` del reporte de la 184, adjudicado a
@@ -293,10 +372,9 @@ EN ROJO si algo no se encuentra o es ambiguo:
 **PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
 de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta %(v)d`. **Esta
 vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO,
-%(celdas)s celdas no se pudieron leer"** y de esas lineas de rojo, **%(n_ap)d
-mencionan APERTURA**. Este hueco se rellena con la tabla tallada entera cuando la
-vuelta cierre.
+que la mitad izquierda ya se puede leer: %(frase_tallador)s, y de las lineas de
+rojo que imprima, **%(n_ap)d mencionan APERTURA**. Este hueco se rellena con la
+tabla tallada entera cuando la vuelta cierre.
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -314,7 +392,8 @@ vuelta cierre.
 <!-- FIN ANEXO DE TAREAS -->
 """ % dict(v=VUELTA, ant=VUELTA - 1, pisa=n_arbol, rama=rama, acta8=acta_hash[:8],
            asunto=repr(acta_asunto), head8=head_ap[:8], nac8=nac_hash[:8],
-           celdas=celdas, n_ap=len(lado_apertura_roto), filas=filas)
+           celdas=celdas, n_ap=len(lado_apertura_roto), filas=filas,
+           frase_tallador=frase_tallador)
 
     io.open(ruta, "w", encoding="utf-8", newline="\n").write(texto)
     print("ESQUELETO ESCRITO: docs/loop/REPORTE.md (%d bytes, %d lineas)"

@@ -13,7 +13,7 @@ puede leerlo**: aislamiento en **`2a414476`**, mis clases en **`5915621a`**, y e
 destape se abre despues. `git status` del fichero de clases: **limpio**.
 
 **EL TRAMO Y EL DOBLE, TODO CONTADO DE FICHEROS Y NADA TECLEADO**
-(`SALIDA_V191_T2_AISLAMIENTO.txt`, 6348 bytes):
+(`SALIDA_V191_T2_AISLAMIENTO.txt`, disco 6348 bytes | LF 6348 bytes):
 
 | lo que el encargo dice | lo que se conto hoy | |
 |---|---|---|
@@ -30,8 +30,8 @@ cambia lo que se le pasa** (`5.2` del acta 188). El aislador cerro con
 **exitcode 0**, **0 fugas** del destape en la ciega, y las palabras `clase`,
 `razon` y `DISCUTIBLE` aparecen **0 veces** en el texto ciego.
 
-**EL COTEJO, CONTADO DE `docs/loop/SALIDA_V191_T2_COTEJO.txt` (6851 bytes) Y NO
-TECLEADO:**
+**EL COTEJO, CONTADO DE `docs/loop/SALIDA_V191_T2_COTEJO.txt`
+(disco 6851 bytes | LF 6851 bytes) Y NO TECLEADO:**
 
 | | cifra |
 |---|---:|
@@ -75,9 +75,9 @@ en direcciones opuestas, y eso no es una ley: es exactamente por que la TAREA 5
 es una medicion y no un arreglo.**
 
 **NO SE TOCO NINGUNA CLASE.** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra
-en **4054129 bytes por las dos convenciones** y **`sha256` LF
-`0a77b5a35a962621`**, medido al entrar y al salir del instrumento de aislamiento y
-otra vez al final del cotejo. `git diff --numstat -- dataset/`: **0 filas**.
+en **disco 4054129 bytes | LF 4054129 bytes**, y su **`sha256` disco
+`0a77b5a35a962621` y `sha256` LF `0a77b5a35a962621`** son el mismo, medidos al
+entrar y al salir del instrumento de aislamiento y otra vez al final del cotejo. `git diff --numstat -- dataset/`: **0 filas**.
 
 **Y UN INSTRUMENTO QUE ANTES NO EXISTIA.** El cotejo de la vuelta 190 vive en
 disco pero **ningun fichero commiteado lo produce**: `grep -rl "EL COTEJO,
