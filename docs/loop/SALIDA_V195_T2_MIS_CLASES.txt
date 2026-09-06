@@ -47,7 +47,7 @@ puesto  clase  T/D  motivo, en una linea
 10      D      T    Criterios y lista antes de contactar contra investigar
                     precios, formato propio de cotizacion y competidores del
                     proveedor. Procedimiento propio a cada lado.
-11      D      T    Reconocer tacticas de presion contra separar la visita de
+11      D      D    Reconocer tacticas de presion contra separar la visita de
                     evaluacion de la decision. Cruzan en un paso; cada uno trae
                     su propia secuencia.
 24      D      T    Invitar al no contra el silencio y no partir la diferencia.
@@ -141,10 +141,10 @@ puesto  clase  T/D  motivo, en una linea
                     interacciones es el hijo de su paso 15: el hijo trae
                     sorpresas personales, grupos de interes y eventos de
                     agradecimiento, que es PROCEDIMIENTO. CONTINUA.
-974     D      D    DSO y DPO como pareja de capital de trabajo contra la
+974     D      T    DSO y DPO como pareja de capital de trabajo contra la
                     gestion de cuentas por cobrar con reserva de incobrables y
                     cobranza. Cruzan en el DSO; cada lado tiene lo suyo.
-975     D      T    Filosofia de validacion de clientes contra encaje
+975     D      D    Filosofia de validacion de clientes contra encaje
                     problema-solucion. Postura de venta contra prueba del
                     problema y del precio.
 976     D      D    DISCUTIBLE. Formalizar el consejo asesor (mapa por area,
@@ -327,3 +327,25 @@ con esas palabras, para que el cotejo no me acredite una seguridad que no tuve.
 ==============================================================================
 FIN. EL DESTAPE NO SE HA ABIERTO CUANDO ESTE FICHERO SE COMMITEA.
 ==============================================================================
+
+==============================================================================
+CORRECCION DECLARADA, Y EL TEXTO VIEJO NO SE BORRA (EJECUTOR.md 8)
+==============================================================================
+
+LA COLUMNA `T/D` DE TRES FILAS SALIO MAL EN LA PRIMERA ESCRITURA DE ESTE
+FICHERO, y se corrige aqui contando el tramo de su propio fichero en vez de a
+ojo. LO QUE DECIA Y LO QUE DICE:
+
+   puesto 11   decia `T`  y es `D` (es vecino, no del tramo)
+   puesto 974  decia `D`  y es `T` (es del tramo)
+   puesto 975  decia `T`  y es `D` (es vecino)
+
+QUE NO CAMBIA, Y ES LO QUE IMPORTA: **NINGUNA CLASE SE TOCA.** Las sesenta
+clases son las mismas que se sellaron y commitearon con el destape sin abrir; lo
+que estaba mal era el rotulo de a que mitad pertenece cada puesto, que es dato de
+reparto y no de lectura. El reparto correcto es 30 del tramo y 30 vecinos, y la
+version anterior lo publicaba como 31 y 29.
+
+COMO SE CAZO: contando `T` y `D` de la tabla y cotejandolo contra los 30 puestos
+del tramo leidos de docs/loop/_auditor_v195_ciega_blind.txt. La primera version
+sumaba 31 y 29, que no puede ser.
