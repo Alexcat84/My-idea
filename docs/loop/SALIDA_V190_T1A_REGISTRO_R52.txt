@@ -1,0 +1,151 @@
+==============================================================================
+VUELTA 190, TAREA 1: EL ACTA 190 ENTERA, REGISTRADA
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 190: docs/loop/ACTA_AUDITOR.md, lineas 67092 a 67364 (273 lineas)
+   docs/loop/ACTA_AUDITOR.md -> disco 4450245 bytes
+   SECCIONES `## n.` DEL ACTA, LEIDAS Y NO TECLEADAS: 0, 1, 2, 3, 4, 5, 6, 7 y 8
+
+B) LA IDEMPOTENCIA, COMPROBADA ANTES DE MEDIR NADA MAS Y POR EL ACTA
+   (la maquina se IMPORTA del registrador de la 189: `marcas_del_acta` y
+    `entradas_que_registran`. No se re escribe una copia)
+   las DOS sedes que se miran: docs/PENDIENTES.md, docs/plan/CORRECCIONES_A_APLICAR.md
+   las DOS marcas literales, computadas de la vuelta y no tecleadas:
+      'del acta de la vuelta 190'
+      '(Acta del auditor, vuelta 190,'
+   CIFRA lineas que ya registran el acta 190: 0
+   CIFRA bytes de docs/PENDIENTES.md ANTES de tocar nada: 961248
+
+C) LAS ADJUDICACIONES, CONTADAS CON LOS DOS PATRONES Y NO TECLEADAS
+   patron SIN comillas inversas -> 10
+      4.1 -> 1 aparicion(es)
+      4.2 -> 1 aparicion(es)
+      4.3 -> 1 aparicion(es)
+      4.4 -> 1 aparicion(es)
+      4.5 -> 1 aparicion(es)
+      4.6 -> 1 aparicion(es)
+      4.7 -> 1 aparicion(es)
+      4.8 -> 1 aparicion(es)
+      4.9 -> 1 aparicion(es)
+      4.10 -> 1 aparicion(es)
+   patron CON comillas inversas (el del acta 188) -> 0
+
+D) EL TITULO LITERAL DE CADA ADJUDICACION, SU FAMILIA Y SU ESTADO
+   (LA MARCA `EN CONTRA` SE BUSCA ANTES QUE `A FAVOR`, y las dos cifras se
+    publican por separado. El registrador de la 189 no conocia `EN CONTRA` y
+    ademas PARABA si algun discutible no llevaba `A FAVOR`)
+   4.1   linea 67197  [DISCUTIBLE / A FAVOR]
+         4.1 `D.1`, la marca `CERO SON DEL EJECUTOR` como neutralizadora. A FAVOR.
+   4.2   linea 67203  [DISCUTIBLE / A FAVOR]
+         4.2 `D.2`, publicar las dos cuentas de racha en vez de escoger. A FAVOR EN LA FORMA, Y RESUELVO EL FONDO PORQUE LA SEDE ES MIA.
+   4.3   linea 67213  [DISCUTIBLE / A FAVOR]
+         4.3 `D.3`, seguir hasta los diez tramos con exitcode 1 en todos. A FAVOR.
+   4.4   linea 67219  [PREGUNTA / CONTESTADA Y ENCARGADA]
+         4.4 `P.1`, un tramo con exitcode 1 por guarda de nomina. CUENTA COMO CORRIDO, Y LA BATERIA DEBE SEPARARLO EN SU EXITCODE.
+   4.5   linea 67225  [DISCUTIBLE / A FAVOR]
+         4.5 `D.4`, meter el arnes en rojo en `LOS_QUE_CORREN` para que la exclusion lo nombre. A FAVOR.
+   4.6   linea 67231  [DISCUTIBLE / EN CONTRA]
+         4.6 `D.5`, dejar `guarda_del_sujeto_congelado()` FUERA DEL VEREDICTO. EN CONTRA, Y ES EL UNICO QUE TUMBO.
+   4.7   linea 67245  [DISCUTIBLE / A FAVOR]
+         4.7 `D.6`, retirar la constante muerta en el clon declarado. A FAVOR, Y CON EL MOTIVO REFORZADO.
+   4.8   linea 67253  [PREGUNTA / CONTESTADA Y ENCARGADA CON MEDICION PREVIA]
+         4.8 `P.2`, el arnes que no es un fichero. LA VARA ES LA GUARDA, NO SU NOMBRE DE FICHERO, PERO PRIMERO SE MIDE.
+   4.9   linea 67262  [PREGUNTA / CONTESTADA Y ENCARGADA]
+         4.9 `P.3`, la salida sellada que la bateria reescribe. SE RESTAURA SIEMPRE, Y LA MEDICION NUEVA VA AL LADO CON SU NOMBRE, NUNCA ENCIMA.
+   4.10  linea 67273  [OTRA / REGLA CUMPLIDA QUE CADUCA]
+         4.10 EL TOPE DE DOS SUB-TAREAS DE LA 6.2 SE CUMPLIO Y CADUCA. VUELVE EL DE CINCO.
+   REPARTO POR FAMILIA: discutibles 6 | preguntas 3 | otras 1
+   DE LOS DISCUTIBLES: A FAVOR 5 | EN CONTRA 1 | otro estado 0
+      EN CONTRA: 4.6 -> 4.6 `D.5`, dejar `guarda_del_sujeto_congelado()` FUERA DEL VEREDICTO. EN CONTRA, Y ES EL UNICO QUE TUMBO.
+
+E) LOS HALLAZGOS DE LA SECCION 5, Y CUALES CUENTAN FUERA DEL MARCADO
+   5.1   linea 67285  5.1 DOS CONVENCIONES DE `lineas` EN EL MISMO REPORTE, Y NADIE LO DICE.
+   5.2   linea 67298  5.2 LA SERIE TIENE OCHO ACTAS SIN ENTRADA PROPIA, Y LO DICE EL PROPIO REGISTRADOR.
+   5.3   linea 67306  5.3 MI PROPIA RE CORRIDA NO ENSUCIO EL ARBOL, Y LO COMPROBE EN VEZ DE SUPONERLO.
+   5.4   linea 67313  5.4 LA VARA, CORRIDA POR MI CON EL CORTE DE HOY
+   LA FILA QUE DECIDE (linea 67343): | discrepancias y hallazgos FUERA del marcado | **2** (las dos convenciones de `lineas`; las ocho actas sin entrada propia) | **148** |
+   PIEZAS DEL PARENTESIS, NORMALIZADAS: 'dos convenciones de lineas', 'ocho actas sin entrada propia'
+   CIFRA hallazgos que la tabla NOMBRA: 2
+      5.1 (linea 67285) casa por 'dos convenciones de lineas'
+      5.2 (linea 67298) casa por 'ocho actas sin entrada propia'
+   CIFRA hallazgos que la tabla NO nombra: 2 (5.3, 5.4)
+
+F) LAS CAIDAS, CON LA ATRIBUCION HECHA POR LA NEGRITA DE SU PARRAFO
+   la seccion 6 va de la linea 67321 a la 67335
+   SU CABECERA, LITERAL: '## 6. LAS CAIDAS'
+   patron `C.n` de la 187 (coma o punto pegados): 0
+   patron `C.n` de la 188 (admite tambien un espacio): 0
+   patron `A.n` de cabecera de tercer nivel (acta 185): 0
+   patron `R.n` de caida de reporte: 0
+   patron `E.n` de las actas 182 y 184: 0
+   Y LA MAQUINA DE LA 189 SOBRE ESTA SECCION, QUE ES LA QUE NO PUEDE:
+      caidas_por_seccion(): ejecutor 0 | auditor 0 | huerfanas 0
+      (su patron es de cabeza de linea, y las `C.n` del acta 190 van DENTRO
+       de un parrafo, asi que no ve ninguna; y su cabecera de seccion no
+       dice de quien son)
+   CON LA MAQUINA DE ESTA VUELTA (`C.n` en linea + negrita del parrafo):
+      DEL EJECUTOR: 3
+         C.1 en el parrafo de la linea 67323, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+         C.2 en el parrafo de la linea 67323, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+         C.3 en el parrafo de la linea 67323, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+      DEL AUDITOR: 0
+      HUERFANAS: 0
+
+G) LAS DOS ESPECIES DE CERO, SEPARADAS Y MEDIDAS
+   marcas de CERO DE CUENTA (importadas de la 189, SI neutralizan): 'CERO SON DEL EJECUTOR'
+   marcas de CERO DE RACHA (nuevas hoy, NO neutralizan): 'CERO QUE ACUMULEN'
+   CON LA SEPARACION PUESTA: ejecutor 3 | auditor 0
+   TRATANDO EL CERO DE RACHA COMO CERO DE CUENTA: ejecutor 0 | auditor 0
+   O SEA QUE CONFUNDIRLAS BORRARIA 3 CAIDA(S) DE LA CUENTA.
+   la marca de especie 'SON DE METODO' aparece en 1 de los 3 parrafos de la seccion
+
+H) EL CERO DEL AUDITOR, CONTADO Y CON SU DECLARACION AL LADO
+   CIFRA caidas propias del auditor que el reparto halla: 0
+   la frase 'MIAS: CERO' aparece en 1 linea(s): 67333
+      LINEA 67333: **MIAS: CERO.** Selle antes de tocar nada, la exclusion que declare es la que
+   la frase 'DEL EJECUTOR: CERO QUE ACUMULEN' aparece en 1 linea(s): 67323
+   POR LA TABLA (linea 67344): | caidas propias del auditor | **0** | ninguna repetida: no abren racha |
+   POR LA TABLA (linea 67347): | caidas del ejecutor de metodo, registradas y sin racha | **3** (`C.1`, `C.2`, `C.3`) | |
+
+I) LA VARA DE LA `5.4`, CON SUS CIFRAS LEIDAS DEL PARRAFO
+   parrafo de la 5.4, 490 caracteres
+      fichas                             71     (patron '(\\d+)\\s*\\*?\\*?\\s*fichas')
+      que no calzan                      37     (patron '(\\d+) que no calzan')
+      en LISTA sin ninguna prueba        6      (patron '(\\d+) en LISTA sin ninguna prueba')
+      CONSUMIDAS por OP-U-01             2      (patron '(\\d+) estan\\s+CONSUMIDAS')
+      de TRABAJO REAL                    4      (patron '(\\d+) son TRABAJO REAL')
+      mesas con producto en disco        3      (patron '(\\d+) son mesas')
+      menciones de fichero de OP-L-02    0      (patron '\\((\\d+) menciones de fichero')
+   docs/loop/_auditor_v190_vara.txt -> disco 17445 bytes | LF 17164 bytes
+   CIFRA menciones de `OP-L-02` en esa salida: 3
+
+J) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 43 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.52
+
+K) LA DEUDA DE LA SERIE, QUE ES EL HALLAZGO 5.2, REMEDIDA AQUI
+   tramo mirado: actas 173 a 189
+   CIFRA actas SIN entrada propia en la serie: 8
+   LAS QUE FALTAN: 173, 174, 175, 176, 177, 178, 179, 180
+   EXTREMO BAJO: R.42 cubre el acta 172
+   EXTREMO ALTO: R.43 cubre el acta 181
+   el acta 190 publica 8 en su 5.2 -> CALZA
+
+L) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   Registro de las diez adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las tres preguntas contestadas, las cero caidas propias del auditor y las tres caidas del ejecutor del acta de la vuelta 190
+
+M) LA ENTRADA ARMADA
+   18764 bytes | 198 lineas
+   guiones largos o medios en la entrada: 0
+
+N) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 961248 a 980013 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+   SERIE RECOMPUTADA DESPUES DE ESCRIBIR: 44 entradas, siguiente libre R.53
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   Y LA IDEMPOTENCIA, REMEDIDA DESPUES DE ESCRIBIR: el acta 190 aparece en
+   4 linea(s), asi que un RE CORRIDO de este instrumento no escribiria
+   nada.
+
