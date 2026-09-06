@@ -14182,3 +14182,191 @@ sin entrada propia rellenadas: **las seis van a la vuelta 191** y el encargo
 de esta vuelta ya las lleva nombradas para que no haya que redescubrirlas. **Y
 no se poda la nomina de la bateria**, que es la opcion `c` que el fundador
 RECHAZO el 5 sep 2026, **ni se corre la bateria**, que cae en la 194.
+
+## R.53. Registro de las nueve adjudicaciones numeradas, los tres hallazgos de la seccion 5, las tres preguntas contestadas, la caida propia del auditor y las tres caidas del ejecutor del acta de la vuelta 191
+
+(Acta del auditor, vuelta 191, secciones 0, 1, 2, 3, 4, 5, 6, 7 y 8; escrito en la vuelta 191,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.52`. **Corte de todas las cifras de esta
+entrada: 6 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.52`. Salida:
+`docs/loop/SALIDA_V191_T1A_REGISTRO_R53.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 1 EN CURSO Y LAS TAREAS 2 A 5 SIN
+EMPEZAR, ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA
+PASADO.** Es la forma que la `6.4` del acta 172 adjudico como correcta.
+
+**Y LOS CINCO NUMERALES DEL TITULO TAMPOCO ESTAN TECLEADOS:** se cuentan del
+acta acotada (lineas 67365 a 67620) y de ahi sale el numeral en palabra, incluida
+la concordancia. **9 adjudicaciones numeradas (`4.1` a `4.9`, todas en la
+seccion 4), 3 hallazgos numerados en la seccion 5, 3 preguntas contestadas
+DENTRO de las adjudicaciones, 1 caida propia del auditor y 3 caidas del
+ejecutor.**
+
+**LA FORMA DE LOS NUMERALES SE MIDE CON LOS DOS PATRONES Y LAS DOS CIFRAS SE
+PUBLICAN.** Corrido sobre esta acta, **el patron entrecomillado (el del acta
+188) da 0 y el suelto (el del acta 189) da 9**. **Ninguno de los dos se
+ensancha: se corren los dos y se dice lo que dan.**
+
+**LO QUE ESTA ACTA ESTRENA, Y ES UN CERO: NO HAY NINGUNA ADJUDICACION `EN
+CONTRA`, Y LA MAQUINA DE LA 190 SE ROMPE JUSTO POR ESO.** De las 9 que
+nombran un `D.n` o un `P.n`, **6 son discutibles del ejecutor y los 6 van A
+FAVOR**; **EN CONTRA salen 0**. El registrador de la 190 llevaba escrito en
+su `main()` un `if not en_contra: PARADA`, puesto a proposito porque su acta
+declaraba una y queria que la marca nueva se viera de verdad. **Corrida esa
+guarda vieja sobre el acta 191, PARA: SI.** Aqui el cero es un RESULTADO y se
+publica como tal, y **lo que sigue parando es lo que de verdad no se puede
+leer**: un discutible cuyo estado no sea NI a favor NI en contra, que hoy son
+**0**.
+
+**Y LA SEGUNDA COSA QUE ESTRENA: LAS TRES PREGUNTAS SE CONTESTAN CON TRES
+MARCAS QUE EL VOCABULARIO NO TENIA.** Corrido con el vocabulario de la 190 y
+nada mas, **3 titulo(s) saldrian `SIN DECIR`** y este instrumento haria
+PARADA sobre un acta perfectamente legible. Las tres marcas se anaden
+LITERALES (`LA MITAD BARATA SE ADJUDICA`, `ENCARGADA COMO BLOQUEANTE` y `POR EXTENSION CITABLE`), **las cuatro heredadas de la 190 se conservan
+aunque hoy no muerdan** (estrechar el vocabulario a lo que el acta de hoy usa
+haria parar la proxima que las use) y **la PARADA por `SIN DECIR` se conserva
+entera**.
+
+**LAS NUEVE ADJUDICACIONES NUMERADAS, CON SU LINEA EN EL ACTA LEIDA HOY.** El
+titulo de cada una es LITERAL del fichero; la glosa que sigue es prosa del
+ejecutor y va marcada como tal.
+
+  - **`4.1` (`docs/loop/ACTA_AUDITOR.md:67465`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"4.1 `D.1`, ampliar la guarda por una funcion hermana en vez de cambiarle la firma. A FAVOR, Y LO COMPROBE EN EL CODIGO ANTES DE DECIRLO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Ampliar la guarda por una funcion hermana en vez de cambiarle la firma queda a favor, y el motivo que el acta da es el que esta vuelta hereda: **la hermana LLAMA a la original en vez de copiar su logica**, asi que no hay dos fuentes de verdad. **Esta vuelta no toca ninguna guarda de la nomina** y no vuelve a abrir esa decision.
+  - **`4.2` (`docs/loop/ACTA_AUDITOR.md:67476`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"4.2 `D.2`, la vara del `MOTIVO ESCRITO` escrita por el ejecutor porque el encargo no la da. A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. La vara del `MOTIVO ESCRITO` queda a favor no por razonable sino **por cuando se escribio**, antes de medir y publicada en la simulacion previa. **Esta vuelta no la mueve ni la estrecha**, y su fragilidad sigue declarada en el instrumento con su fecha, que es donde se puede discutir.
+  - **`4.3` (`docs/loop/ACTA_AUDITOR.md:67484`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"4.3 `D.3`, el exitcode de la deuda es `2`. A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Que el exitcode de la deuda sea `2` queda a favor, y el acta dice ademas que **que numero exacto sea no lo fija ninguna regla**. **Esta vuelta no corre la bateria ni toca su lanzador**, asi que el `2` se queda donde esta.
+  - **`4.4` (`docs/loop/ACTA_AUDITOR.md:67489`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"4.4 `D.4`, `SUJETO VIVO` cuenta como FALLO y no como DEUDA. A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Que `SUJETO VIVO` cuente como FALLO y no como deuda queda a favor, y el acta mide lo que eso mueve HOY: **cero**, porque esa lista esta vacia. **Decide como se leeran las proximas vueltas y no mueve ninguna cifra de esta.**
+  - **`4.5` (`docs/loop/ACTA_AUDITOR.md:67496`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: EJECUTADA EN LA TAREA 2.** Titulo
+    literal del acta: *"4.5 `D.5`, la tarea 4 no se auto encarga su relectura al doble. A FAVOR, Y LA ENCARGO YO EN ESTA MISMA ACTA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA Y SE EJECUTA EN LA TAREA 2 DE ESTA VUELTA. Que la tarea 4 de la 190 NO se auto encargara su relectura al doble queda a favor: **`AUDITOR.md` 1.2 pone el doble en la mano del auditor**, y el acta 191 la encarga ella misma como TAREA 2 bloqueante. **Traerla medida fue lo correcto; encargarsela a si mismo no lo habria sido.**
+  - **`4.6` (`docs/loop/ACTA_AUDITOR.md:67503`, leida hoy). FAMILIA: DISCUTIBLE. ESTADO: A FAVOR. VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"4.6 `D.6`, no darle sede a `OP-L-02` pudiendo argumentarlo. A FAVOR, Y ADEMAS ERA LO UNICO QUE PODIA HACER."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. No darle sede a `OP-L-02` pudiendo argumentarlo queda a favor **y el acta anade que era lo unico que se podia hacer**: declarar que una salida de vuelta cuenta como producto documental **cambia el criterio de HECHO de la fase 08**, y eso lo reserva el fundador. **Esta vuelta no toca `docs/plan/` mas que para leer.**
+  - **`4.7` (`docs/loop/ACTA_AUDITOR.md:67509`, leida hoy). FAMILIA: PREGUNTA. ESTADO: CONTESTADA A MEDIAS, LA MITAD BARATA ADJUDICADA. VIA: REGISTRADA AQUI, Y SU ESTADO NO SE MUEVE.** Titulo
+    literal del acta: *"4.7 `P.1`, a `OP-L-02` le falta un documento o solo le falta que su `evidencia` nombre los que existen. LA MITAD BARATA SE ADJUDICA, LA CARA NO SE TOCA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** REGISTRADA AQUI, Y SU ESTADO NO SE MUEVE. La mitad barata queda adjudicada (que el campo `evidencia` **nombre los ficheros que ya existen**), y la cara no se toca. **El encargo de esta vuelta la deja EXPRESAMENTE fuera** y dice con esas palabras que `OP-L-02` **sigue en `LISTA`** y que declararla HECHA es del fundador. **Esta vuelta no escribe ni una linea de `docs/plan/OPERACIONES.jsonl`.**
+  - **`4.8` (`docs/loop/ACTA_AUDITOR.md:67518`, leida hoy). FAMILIA: PREGUNTA. ESTADO: CONTESTADA Y ENCARGADA COMO BLOQUEANTE. VIA: EJECUTADA EN LA TAREA 2.** Titulo
+    literal del acta: *"4.8 `P.2`, la discrepancia del 3182 baja el credito de la tanda. ENCARGADA COMO BLOQUEANTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** CONTESTADA Y EJECUTADA EN LA TAREA 2 DE ESTA VUELTA. Que la discrepancia del `3182` baja el credito de la tanda queda contestado que SI, y con una precision que el acta subraya: **la relectura del auditor sobre los mismos 30 NO es el doble y no lo sustituye**. Al doble es **mas extension**, treinta vecinos nuevos; lo del auditor es **otro lector sobre la misma extension**. **Son dos controles distintos y en esta vuelta corren los dos.**
+  - **`4.9` (`docs/loop/ACTA_AUDITOR.md:67524`, leida hoy). FAMILIA: PREGUNTA. ESTADO: CONTESTADA A FAVOR POR EXTENSION CITABLE. VIA: A LA VUELTA 192.** Titulo
+    literal del acta: *"4.9 `P.3`, si el exitcode 2 debe propagarse a `--componer`. SI, POR EXTENSION CITABLE Y SIN DOCTRINA NUEVA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** CONTESTADA A FAVOR Y NO ENTRA EN ESTA VUELTA, Y EL PROPIO ENCARGO LO DICE PARA QUE LA 192 NO LA REDESCUBRA. Que el exitcode `2` deba propagarse a `--componer` sale **por extension citable del banco 9 y sin doctrina nueva**: una composicion que aplana los dos rojos que el tramo distinguio comete la misma falta un piso mas arriba. **Esta vuelta no corre la bateria ni toca su lanzador.**
+
+**LAS TRES PREGUNTAS ESTAN CONTESTADAS Y NO TIENEN SECCION PROPIA:** viven
+DENTRO de las adjudicaciones, como en las actas 189 y 190. **Cuales son NO se
+teclea:** son las 3 cuyo titulo nombra un `P.n`, y son **`4.7` que nombra `P.1`, `4.8` que nombra `P.2`, `4.9` que nombra `P.3`**.
+
+**LOS TRES HALLAZGOS DE LA SECCION 5, Y LOS TRES CUENTAN COMO HALLAZGO FUERA DEL
+MARCADO. CUANTOS NO SE TECLEA, Y AQUI HAY QUE DECIR POR QUE LA MAQUINA DE LA
+190 TAMPOCO PODIA CON ESTO.** Su `piezas_de_la_fila()` parte el parentesis por
+`;`, y **la fila del acta 191 separa por `,`**: partiendo solo por `;` da
+**1** pieza(s) y casa con **0** hallazgo(s), o sea PARADA. Partiendo tambien
+por `,` da **3** piezas y casa con **1**, **y eso tampoco decide nada por si
+solo**, porque la fila PARAFRASEA donde el titulo dice otra cosa. **Quien
+decide es el numeral de la propia fila, leido de ella: dice 3, y la seccion
+tiene 3 claves `5.n`.** La fila, leida del fichero:
+
+  - `docs/loop/ACTA_AUDITOR.md:67598`: | discrepancias y hallazgos FUERA del marcado | **3** (la marca contra la dificultad medida, la etiqueta duplicada, la restauracion que no restaura) | **151** |
+
+  Las piezas que salen de su parentesis partiendo por `;` y por `,`: *marca contra la dificultad medida*, *etiqueta duplicada*, *restauracion que no restaura*.
+
+  - **`5.1` (`docs/loop/ACTA_AUDITOR.md:67533`, leida hoy). VIA: ES LA TAREA 5 DE ESTA VUELTA.** la subcadena de la fila NO lo nombra, y aun asi cuenta, porque quien decide es el numeral.
+    Titulo literal del acta: *"5.1 OCHO DE TREINTA TUMBAN A LOS DOS LECTORES, Y NINGUNO LLEVA LA MARCA QUE EL ARCHIVO SI USA EN OTRAS 427 FILAS."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** HALLAZGO DEL AUDITOR FUERA DE LO QUE EL REPORTE MARCA, Y ES LA TAREA 5 DE ESTA VUELTA. Ocho de los treinta tumban a los dos lectores y ninguno lleva la marca `DISCUTIBLE MARCADO` que 427 filas del archivo si llevan. **El encargo lo manda medir sobre toda la historia de ciegas y no sobre treinta casos**, con el universo declarado ANTES de contar, y **prohibe escribir ni una fila del archivo**: ponerle la marca a ocho razones seria editar datos publicados sobre una muestra de treinta.
+  - **`5.2` (`docs/loop/ACTA_AUDITOR.md:67547`, leida hoy). VIA: ES LA TAREA 4 DE ESTA VUELTA.** **la subcadena de la fila SI lo nombra**.
+    Titulo literal del acta: *"5.2 EL VEREDICTO DE UNA LINEA DEL REPORTE SALE CON LA ETIQUETA DUPLICADA, Y ES NUEVO DE ESTA VUELTA."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** HALLAZGO DEL AUDITOR FUERA DE LO QUE EL REPORTE MARCA, Y ES LA TAREA 4 DE ESTA VUELTA. La etiqueta del veredicto sale duplicada porque `cerrar_reporte.py` la pega sin comprobar si ya venia puesta. **El arreglo es que CAIGA EN ROJO diciendo que recibio y que esperaba**, no que la limpie en silencio. **Y el reporte de la 190 no se reescribe:** esta cerrado y archivado byte a byte.
+  - **`5.3` (`docs/loop/ACTA_AUDITOR.md:67560`, leida hoy). VIA: SIN TOCAR NADA.** la subcadena de la fila NO lo nombra, y aun asi cuenta, porque quien decide es el numeral.
+    Titulo literal del acta: *"5.3 `git checkout --` NO ES RESTAURACION BYTE A BYTE EN ESTE REPO, Y ME MORDIO A MI."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y ESTA VUELTA LA APLICA COMO REGLA DE TRABAJO. `git checkout --` devuelve el fichero en CRLF y cambia los bytes publicados, asi que **una salida sellada ajena que se pise se restaura leyendo el blob y escribiendolo en LF, y se REMIDE antes de darla por restaurada**. **Es caida propia del auditor, declarada por el, y esta vuelta la hereda como precaucion y no como reproche.**
+
+**LAS CAIDAS: UNA DEL AUDITOR Y TRES DEL EJECUTOR, Y AQUI VA LA TERCERA COSA QUE
+ESTA ACTA ESTRENA: SUS CAIDAS NO SE LLAMAN `C.n`.** Se llaman por la clave del
+documento que las declara, y las dos mediciones que lo prueban en vez de
+afirmarlo:
+
+  - **EL PATRON `C.n` EN LINEA (el de la 190) DA 0 SOBRE LA SECCION 6.** El
+    de cabeza de linea de la 187 da 0 y el de la 188 da 0 sobre el acta
+    entera. **Con cero, `caidas_en_linea()` de la 190 saca (0, 0, 0) y su
+    guarda `if not c_eje` PARA.**
+  - **LA MAQUINA DE LA 189 SOBRE LA MISMA SECCION SACA (0, 0, 0)**, porque
+    su patron es de cabeza de linea y aqui no hay ninguna.
+
+**EL REMEDIO ES CONTAR LA CLAVE `N.M` ENTRECOMILLADA Y DEJAR LA ATRIBUCION
+DONDE YA ESTABA: EN LA NEGRITA QUE ABRE EL PARRAFO**, importada de la 190 sin
+tocarla. Con eso el reparto sale **ejecutor 3, auditor 1, huerfanas 0**.
+Las del ejecutor son `5.1`, `5.2`, `5.3` y la del auditor es `5.3`.
+
+**Y LAS CLAVES SE DEDUPLICAN POR PARRAFO A PROPOSITO:** el parrafo del
+ejecutor nombra `5.2` DOS veces, la tercera vez para decir que la etiqueta
+duplicada **no se la cuenta a el**. Contando apariciones en vez de claves
+distintas saldrian **4** donde el acta declara **3**.
+
+**LAS DOS ESPECIES DE CERO SIGUEN SEPARADAS, Y SE VUELVE A MEDIR EN VEZ DE
+HEREDARSE.** La negrita del ejecutor es `DEL EJECUTOR: CERO QUE ACUMULEN.`, que es un cero de RACHA:
+declara cero caidas QUE ABRAN RACHA y **en el mismo parrafo declara 3**.
+Tratado como cero de CUENTA, el reparto sale **ejecutor 0**, o sea que
+confundirlas borraria **3** caida(s) de la cuenta.
+
+**LA CAIDA DEL AUDITOR VA ESCRITA COMO UNA Y NO OMITIDA**, que es lo que el
+encargo pide con esas palabras. La negrita que la declara es literal del
+acta: `MIAS: UNA, DE METODO, Y ES LA `5.3`.`. **La especie de todas ellas se lee del parrafo y no se supone:**
+el literal `DE METODO` aparece en **2** de los 3 parrafos de la seccion 6.
+
+**LA METRICA DE CREDITO DE LA SECCION 7, PEGADA ENTERA DEL FICHERO Y NO
+RESUMIDA.** Son **8** filas de datos, contadas y no tecleadas:
+
+  - `docs/loop/ACTA_AUDITOR.md:67595`: | relecturas | 1 | **326** |
+  - `docs/loop/ACTA_AUDITOR.md:67596`: | puestos | 30 aislados, **30 de solape TOTAL a proposito: control, NO cobertura nueva** | **1.006** |
+  - `docs/loop/ACTA_AUDITOR.md:67597`: | discrepancias DENTRO del marcado | **9** (las nueve en mis dudosos) | **42** |
+  - `docs/loop/ACTA_AUDITOR.md:67598`: | discrepancias y hallazgos FUERA del marcado | **3** (la marca contra la dificultad medida, la etiqueta duplicada, la restauracion que no restaura) | **151** |
+  - `docs/loop/ACTA_AUDITOR.md:67599`: | caidas propias del auditor | **1**, de metodo (`5.3`) | ninguna repetida: no abre racha |
+  - `docs/loop/ACTA_AUDITOR.md:67600`: | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 0** |
+  - `docs/loop/ACTA_AUDITOR.md:67601`: | caidas del ejecutor de reporte | **0** | **racha de reporte: 0** |
+  - `docs/loop/ACTA_AUDITOR.md:67602`: | caidas del ejecutor de metodo, registradas y sin racha | **3** (`5.1`, `5.2`, `5.3` del reporte) | |
+
+**Y LA FILA DE PUESTOS VA CON SU NOTA, QUE ES LO QUE EL ENCARGO MANDA
+REGISTRAR:** los 30 de esta acta son **SOLAPE TOTAL a proposito, o sea control
+y NO cobertura nueva**. El literal que el acta escribe de verdad, leido y no
+parafraseado, es `solape TOTAL`; comparado TAL CUAL contra el `SOLAPE TOTAL` del encargo da
+**NO**, y comparado en mayusculas da **SI**. **Las dos cifras se publican**,
+porque son las MISMAS PALABRAS con otra caja: exigir la caja literal habria
+hecho PARAR este instrumento por una mayuscula, que es lo contrario de lo que
+la guarda existe para cazar. **Si las palabras no estuvieran, este instrumento
+haria PARADA**, porque el encargo pide esa nota y una nota que no esta no se
+parafrasea.
+
+**LA DEUDA DE LA SERIE, REMEDIDA AQUI EN VEZ DE HEREDARSE DEL `R.52`:**
+
+  - **SALTO DE 8 REGISTROS EN LA SERIE: las actas 173 a 180 no tienen
+    entrada propia.** Sus dos extremos, contados por
+    `scripts/loop/serie_de_registros.py` y no tecleados: **`R.42` cubre el
+    acta 172** y **`R.43` cubre el acta 181**. **No se rellenan aqui:**
+    el encargo de esta vuelta las deja EXPRESAMENTE fuera, medidas y no
+    arregladas.
+
+**Y ESTA ENTRADA LA ESCRIBE UN REGISTRADOR IDEMPOTENTE, Y LA IDEMPOTENCIA NO
+SE RE ESCRIBE: SE IMPORTA DEL DE LA 189, QUE ES DONDE NACIO.** La comprobacion
+es **por el acta y no por el numero**, con las marcas literales `del acta de la vuelta 191` y `(Acta del auditor, vuelta 191,`,
+y **en LAS DOS SEDES**. Antes de escribir esta entrada, esas marcas aparecian
+en **0 linea(s)**.
+
+**LO QUE ESTA ENTRADA NO REGISTRA, DICHO PARA QUE NO SE BUSQUE:** no registra
+`acumulan()` leyendo la tabla, ni el cotejo de clon declarado que separa, ni
+la excepcion que publica siempre su lista, ni la medicion del censo de arneses
+con carril de mutacion sin fichero propio, ni las ocho actas sin entrada
+propia rellenadas, ni el exitcode 2 propagado a `--componer`, ni el estado de
+`OP-L-02` movido: **el encargo de esta vuelta las nombra una a una como
+fuera**. **Y no se poda la nomina de la bateria**, que es la opcion `c` que el
+fundador RECHAZO el 5 sep 2026, **ni se corre la bateria**, que cae en la 194.

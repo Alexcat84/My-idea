@@ -1,0 +1,89 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 191
+==============================================================================
+
+A) EL CERO DE `EN CONTRA` NO ROMPE LA MAQUINA, Y ESO SE PRUEBA CON UN ACTA
+   QUE SI LLEVA UNA Y CON OTRA QUE NO
+   acta SIN ninguna EN CONTRA: acotado sin error              obtenido None                   esperado None                   -> PASA
+   acta SIN ninguna EN CONTRA: A FAVOR                        obtenido 6                      esperado 6                      -> PASA
+   acta SIN ninguna EN CONTRA: EN CONTRA                      obtenido 0                      esperado 0                      -> PASA
+   acta SIN ninguna EN CONTRA: SIN DECIR                      obtenido 0                      esperado 0                      -> PASA
+   acta CON una EN CONTRA: acotado sin error                  obtenido None                   esperado None                   -> PASA
+   acta CON una EN CONTRA: A FAVOR                            obtenido 5                      esperado 5                      -> PASA
+   acta CON una EN CONTRA: EN CONTRA                          obtenido 1                      esperado 1                      -> PASA
+   acta CON una EN CONTRA: SIN DECIR                          obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION 1: sobre el acta que SI lleva una, se muta el esperado a 0 y
+   tiene que CAER
+      LA MUTACION CAE: son 1 y no 0, o sea que la marca sigue viva.
+   LA MUTACION 2: la guarda VIEJA de la 190 (`if not en_contra: PARADA`)
+   corrida sobre el acta SIN ninguna, que es la de hoy
+      LA MUTACION CAE: la guarda vieja PARA sobre un acta legible, y por
+      eso este registrador no la hereda.
+   LA MUTACION 3: el orden importa. Un titulo con LAS DOS marcas tiene que
+   salir EN CONTRA
+      LA MUTACION CAE: con las dos marcas sale EN CONTRA, no A FAVOR.
+
+B) LAS TRES MARCAS NUEVAS DE PREGUNTA CONTESTADA, Y EL VOCABULARIO VIEJO
+   marca 'LA MITAD BARATA SE ADJUDICA'                        obtenido 'CONTESTADA A MEDIAS, LA MITAD BARATA ADJUDICADA' esperado 'CONTESTADA A MEDIAS, LA MITAD BARATA ADJUDICADA' -> PASA
+   marca 'ENCARGADA COMO BLOQUEANTE'                          obtenido 'CONTESTADA Y ENCARGADA COMO BLOQUEANTE' esperado 'CONTESTADA Y ENCARGADA COMO BLOQUEANTE' -> PASA
+   marca 'SI, POR EXTENSION CITABLE Y SIN DO'                 obtenido 'CONTESTADA A FAVOR POR EXTENSION CITABLE' esperado 'CONTESTADA A FAVOR POR EXTENSION CITABLE' -> PASA
+   LA MUTACION: con el vocabulario de la 190 y nada mas, las tres tienen que
+   salir SIN DECIR
+      LA MUTACION CAE: las 3 salen SIN DECIR con el vocabulario viejo, o
+      sea que heredarlo habria hecho PARAR este instrumento.
+
+C) LAS CAIDAS POR CLAVE `N.M`, CON LA ATRIBUCION POR LA NEGRITA DEL PARRAFO
+   la seccion 6 se localiza                                   obtenido True                   esperado True                   -> PASA
+   reparto (ejecutor, auditor, huerfanas)                     obtenido (3, 1, 0)              esperado (3, 1, 0)              -> PASA
+   Y LAS DOS MAQUINAS VIEJAS SOBRE LA MISMA SECCION, QUE NO VEN NADA:
+   caidas_en_linea() de la 190 (patron `C.n`)                 obtenido (0, 0, 0)              esperado (0, 0, 0)              -> PASA
+   caidas_por_seccion() de la 189                             obtenido (0, 0, 0)              esperado (0, 0, 0)              -> PASA
+      (las dos dan cero porque buscan `C.n`, y esta acta no escribe ninguna:
+       por eso hace falta contar la clave `N.M`)
+   LA NEGRITA MUDA: un parrafo cuya negrita no diga de quien son
+   negrita muda -> huerfanas                                  obtenido (0, 1, 3)              esperado (0, 1, 3)              -> PASA
+      LA PARADA SE CONSERVA ENTERA: 3 huerfana(s), y una caida sin dueno no
+      se reparte a ojo.
+   LA DEDUPLICACION POR PARRAFO: una clave repetida no cuenta dos veces
+   con `5.2` escrita dos veces: ejecutor                      obtenido 3                      esperado 3                      -> PASA
+      LA MUTACION CAE: hay 5 apariciones y 4 claves distintas del
+      ejecutor mas el auditor, o sea que contar apariciones daria de mas.
+   EL CERO DE RACHA NO NEUTRALIZA, EL DE CUENTA SI
+   tratando el cero de RACHA como de CUENTA: ejecutor         obtenido 0                      esperado 0                      -> PASA
+      LA MUTACION CAE: 3 con la separacion y 0 sin ella.
+
+D) LA FILA QUE DICE CUALES HALLAZGOS CUENTAN FUERA, Y LOS DOS SEPARADORES
+   hallazgos `5.n` sobre el fabricado                         obtenido 3                      esperado 3                      -> PASA
+   la fila de la tabla se localiza                            obtenido 1                      esperado 1                      -> PASA
+   el numeral de la fila, leido y no tecleado                 obtenido 3                      esperado 3                      -> PASA
+   piezas partiendo solo por `;`: 1 -> casan 0
+   piezas partiendo por `;` y por `,`: 3 -> casan 3
+      LA MUTACION CAE: 3 piezas contra 1, o sea que partir solo por `;`
+      dejaba la fila sin trocear.
+   LA MUTACION: una fila SIN cifra en su celda tiene que dar None y no un
+   numero inventado
+      LA MUTACION CAE: sale None y ninguna cifra se inventa.
+
+E) LA NOTA DE LA FILA DE PUESTOS, EXIGIDA LITERAL
+   la fila de puestos se localiza                             obtenido 1                      esperado 1                      -> PASA
+   lleva el literal 'SOLAPE TOTAL'                            obtenido True                   esperado True                   -> PASA
+   LA CAJA: la misma nota con la caja del acta real (`solape TOTAL`) tiene
+   que seguir contando, porque son las mismas palabras
+   con la caja del acta real, comparado en mayusculas         obtenido True                   esperado True                   -> PASA
+      LA MUTACION CAE: comparada TAL CUAL la nota real NO se ve, o sea
+      que exigir la caja habria parado el instrumento por una mayuscula.
+   LA MUTACION: un acta cuya fila de puestos NO traiga la nota tiene que
+   salir en falso, y quien llama para
+      LA MUTACION CAE: sin la nota, la comprobacion da falso.
+
+F) LA IDEMPOTENCIA, IMPORTADA DE LA 189 Y PROBADA IGUAL SOBRE SEDES FABRICADAS
+   sede sin la entrada -> se puede escribir                   obtenido 0                      esperado 0                      -> PASA
+   sede CON la entrada -> ya no se escribe                    obtenido 2                      esperado 2                      -> PASA
+      LA MUTACION CAE: la segunda escritura queda prohibida, con 2
+      linea(s) de prueba.
+
+==============================================================================
+CIFRA casos: los de arriba, uno por linea con PASA o CAE
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE

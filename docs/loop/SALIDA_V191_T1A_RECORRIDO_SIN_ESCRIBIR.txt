@@ -1,0 +1,155 @@
+==============================================================================
+VUELTA 191, TAREA 1: EL ACTA 191 ENTERA, REGISTRADA
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 191: docs/loop/ACTA_AUDITOR.md, lineas 67365 a 67620
+   LAS DOS CONVENCIONES DE `lineas` SOBRE EL TRAMO, QUE ES LA TAREA 3 DE
+   ESTA MISMA VUELTA: por `fin - inicio + 1` da 256
+   docs/loop/ACTA_AUDITOR.md -> disco 4467617 bytes
+   SECCIONES `## n.` DEL ACTA, LEIDAS Y NO TECLEADAS: 0, 1, 2, 3, 4, 5, 6, 7 y 8
+
+B) LA IDEMPOTENCIA, COMPROBADA ANTES DE MEDIR NADA MAS Y POR EL ACTA
+   (la maquina se IMPORTA del registrador de la 189: `marcas_del_acta` y
+    `entradas_que_registran`. No se re escribe una copia)
+   las DOS sedes que se miran: docs/PENDIENTES.md, docs/plan/CORRECCIONES_A_APLICAR.md
+   las DOS marcas literales, computadas de la vuelta y no tecleadas:
+      'del acta de la vuelta 191'
+      '(Acta del auditor, vuelta 191,'
+   CIFRA lineas que ya registran el acta 191: 4
+      docs/PENDIENTES.md:14186 '## R.53. Registro de las nueve adjudicaciones numeradas, los tres hallazgos de la seccion 5, las tre'
+      docs/PENDIENTES.md:14188 '(Acta del auditor, vuelta 191, secciones 0, 1, 2, 3, 4, 5, 6, 7 y 8; escrito en la vuelta 191,'
+      docs/PENDIENTES.md:14361 'es **por el acta y no por el numero**, con las marcas literales `del acta de la vuelta 191` y `(Acta'
+      docs/PENDIENTES.md:14361 'es **por el acta y no por el numero**, con las marcas literales `del acta de la vuelta 191` y `(Acta'
+   CIFRA bytes de docs/PENDIENTES.md ANTES de tocar nada: 998216
+
+C) LAS ADJUDICACIONES, CONTADAS CON LOS DOS PATRONES Y NO TECLEADAS
+   patron SIN comillas inversas -> 9
+      4.1 -> 1 aparicion(es)
+      4.2 -> 1 aparicion(es)
+      4.3 -> 1 aparicion(es)
+      4.4 -> 1 aparicion(es)
+      4.5 -> 1 aparicion(es)
+      4.6 -> 1 aparicion(es)
+      4.7 -> 1 aparicion(es)
+      4.8 -> 1 aparicion(es)
+      4.9 -> 1 aparicion(es)
+   patron CON comillas inversas (el del acta 188) -> 0
+
+D) EL TITULO LITERAL DE CADA ADJUDICACION, SU FAMILIA Y SU ESTADO
+   (EL VOCABULARIO LLEVA LAS TRES MARCAS NUEVAS DEL ACTA 191 Y CONSERVA LAS
+    SEIS DE LA 190. `EN CONTRA` sigue buscandose PRIMERO aunque hoy no
+    muerda)
+   4.1   linea 67465  [DISCUTIBLE / A FAVOR]
+         4.1 `D.1`, ampliar la guarda por una funcion hermana en vez de cambiarle la firma. A FAVOR, Y LO COMPROBE EN EL CODIGO ANTES DE DECIRLO.
+   4.2   linea 67476  [DISCUTIBLE / A FAVOR]
+         4.2 `D.2`, la vara del `MOTIVO ESCRITO` escrita por el ejecutor porque el encargo no la da. A FAVOR.
+   4.3   linea 67484  [DISCUTIBLE / A FAVOR]
+         4.3 `D.3`, el exitcode de la deuda es `2`. A FAVOR.
+   4.4   linea 67489  [DISCUTIBLE / A FAVOR]
+         4.4 `D.4`, `SUJETO VIVO` cuenta como FALLO y no como DEUDA. A FAVOR.
+   4.5   linea 67496  [DISCUTIBLE / A FAVOR]
+         4.5 `D.5`, la tarea 4 no se auto encarga su relectura al doble. A FAVOR, Y LA ENCARGO YO EN ESTA MISMA ACTA.
+   4.6   linea 67503  [DISCUTIBLE / A FAVOR]
+         4.6 `D.6`, no darle sede a `OP-L-02` pudiendo argumentarlo. A FAVOR, Y ADEMAS ERA LO UNICO QUE PODIA HACER.
+   4.7   linea 67509  [PREGUNTA / CONTESTADA A MEDIAS, LA MITAD BARATA ADJUDICADA]
+         4.7 `P.1`, a `OP-L-02` le falta un documento o solo le falta que su `evidencia` nombre los que existen. LA MITAD BARATA SE ADJUDICA, LA CARA NO SE TOC
+   4.8   linea 67518  [PREGUNTA / CONTESTADA Y ENCARGADA COMO BLOQUEANTE]
+         4.8 `P.2`, la discrepancia del 3182 baja el credito de la tanda. ENCARGADA COMO BLOQUEANTE.
+   4.9   linea 67524  [PREGUNTA / CONTESTADA A FAVOR POR EXTENSION CITABLE]
+         4.9 `P.3`, si el exitcode 2 debe propagarse a `--componer`. SI, POR EXTENSION CITABLE Y SIN DOCTRINA NUEVA.
+   CON EL VOCABULARIO DE LA 190 Y NADA MAS, saldrian SIN DECIR: 3
+   REPARTO POR FAMILIA: discutibles 6 | preguntas 3 | otras 0
+   DE LOS DISCUTIBLES: A FAVOR 6 | EN CONTRA 0 | otro estado 0
+   EL CERO DE `EN CONTRA` ES UN RESULTADO Y NO UNA PARADA. La guarda VIEJA
+   de la 190 (`if not en_contra: PARADA`) corrida sobre esta acta: PARARIA
+
+E) LOS HALLAZGOS DE LA SECCION 5, Y CUANTOS CUENTAN FUERA DEL MARCADO
+   5.1   linea 67533  5.1 OCHO DE TREINTA TUMBAN A LOS DOS LECTORES, Y NINGUNO LLEVA LA MARCA QUE EL ARCHIVO SI USA EN OTRAS 427 FILAS.
+   5.2   linea 67547  5.2 EL VEREDICTO DE UNA LINEA DEL REPORTE SALE CON LA ETIQUETA DUPLICADA, Y ES NUEVO DE ESTA VUELTA.
+   5.3   linea 67560  5.3 `git checkout --` NO ES RESTAURACION BYTE A BYTE EN ESTE REPO, Y ME MORDIO A MI.
+   LA FILA QUE DECIDE (linea 67598): | discrepancias y hallazgos FUERA del marcado | **3** (la marca contra la dificultad medida, la etiqueta duplicada, la restauracion que no restaura) | **151** |
+   PARTIENDO SOLO POR `;` (la maquina de la 190): 1 pieza(s), casan 0
+      'marca contra la dificultad medida  la etiqueta duplicada  la restauracion que no restaura'
+   PARTIENDO POR `;` Y POR `,`: 3 pieza(s), casan 1
+      'marca contra la dificultad medida', 'etiqueta duplicada', 'restauracion que no restaura'
+      5.2 (linea 67547) casa por 'etiqueta duplicada'
+   LOS QUE LA SUBCADENA NO NOMBRA: 2 (5.1, 5.3)
+   EL NUMERAL DE LA PROPIA FILA, LEIDO Y NO TECLEADO: 3
+   EL NUMERAL CALZA CON LAS CLAVES `5.n` DE LA SECCION (3 = 3), asi que
+   los 3 cuentan fuera del marcado. El cotejo por subcadena queda al lado
+   como lo que es: una medicion mas debil, que solo resuelve 1 de 3
+   porque la fila PARAFRASEA en vez de citar.
+
+F) LAS CAIDAS, CONTADAS POR LA CLAVE `N.M` Y ATRIBUIDAS POR LA NEGRITA
+   la seccion 6 va de la linea 67574 a la 67590
+   SU CABECERA, LITERAL: '## 6. LAS CAIDAS'
+   patron `C.n` EN LINEA (el de la 190) sobre la seccion 6: 0
+   patron `C.n` de cabeza de linea de la 187 sobre el acta: 0
+   patron `C.n` de cabeza de linea de la 188 sobre el acta: 0
+   patron `A.n` de cabecera de tercer nivel (acta 185): 0
+   patron `R.n` de caida de reporte: 0
+   patron `E.n` de las actas 182 y 184: 0
+   LAS DOS MAQUINAS VIEJAS SOBRE ESTA SECCION, QUE ES DONDE SE ROMPEN:
+      caidas_en_linea() de la 190: ejecutor 0 | auditor 0 | huerfanas 0
+      caidas_por_seccion() de la 189: ejecutor 0 | auditor 0 | huerfanas 0
+   CON LA MAQUINA DE ESTA VUELTA (clave `N.M` + negrita del parrafo):
+      DEL EJECUTOR: 3
+         5.1 en el parrafo de la linea 67576, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+         5.2 en el parrafo de la linea 67576, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+         5.3 en el parrafo de la linea 67576, bajo la negrita 'DEL EJECUTOR: CERO QUE ACUMULEN.'
+      DEL AUDITOR: 1
+         5.3 en el parrafo de la linea 67584, bajo la negrita 'MIAS: UNA, DE METODO, Y ES LA `5.3`.'
+      HUERFANAS: 0
+   CLAVES DEL EJECUTOR contadas por APARICIONES en vez de por claves
+   distintas: 4 (por eso se deduplica por parrafo)
+   TRATANDO EL CERO DE RACHA COMO CERO DE CUENTA: ejecutor 0 | auditor 1
+   O SEA QUE CONFUNDIRLAS BORRARIA 3 CAIDA(S) DE LA CUENTA.
+   la marca de especie 'DE METODO' aparece en 2 de los 3 parrafos de la seccion
+
+G) LA METRICA DE CREDITO DE LA SECCION 7, ENTERA
+   la seccion 7 va de la linea 67591 a la 67611
+   CIFRA filas de datos: 8
+      LINEA 67595  | relecturas | 1 | **326** |
+      LINEA 67596  | puestos | 30 aislados, **30 de solape TOTAL a proposito: control, NO cobertura nueva** | **1.006** |
+      LINEA 67597  | discrepancias DENTRO del marcado | **9** (las nueve en mis dudosos) | **42** |
+      LINEA 67598  | discrepancias y hallazgos FUERA del marcado | **3** (la marca contra la dificultad medida, la etiqueta duplicada, la restauracion que no restaura) | **151** |
+      LINEA 67599  | caidas propias del auditor | **1**, de metodo (`5.3`) | ninguna repetida: no abre racha |
+      LINEA 67600  | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 0** |
+      LINEA 67601  | caidas del ejecutor de reporte | **0** | **racha de reporte: 0** |
+      LINEA 67602  | caidas del ejecutor de metodo, registradas y sin racha | **3** (`5.1`, `5.2`, `5.3` del reporte) | |
+   LA FILA DE PUESTOS, QUE EL ENCARGO MANDA REGISTRAR CON SU NOTA: 1
+      LINEA 67596  | puestos | 30 aislados, **30 de solape TOTAL a proposito: control, NO cobertura nueva** | **1.006** |
+   el literal 'SOLAPE TOTAL' aparece TAL CUAL en la fila de puestos: NO
+   comparado en mayusculas: SI
+   LO QUE EL ACTA ESCRIBE DE VERDAD, LEIDO Y NO PARAFRASEADO: 'solape TOTAL'
+   (las dos cifras se publican: exigir la caja literal habria hecho PARAR
+    este instrumento por una mayuscula)
+   POR LA TABLA (linea 67599): | caidas propias del auditor | **1**, de metodo (`5.3`) | ninguna repetida: no abre racha |
+   POR LA TABLA (linea 67602): | caidas del ejecutor de metodo, registradas y sin racha | **3** (`5.1`, `5.2`, `5.3` del reporte) | |
+
+H) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 45 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.54
+
+I) LA DEUDA DE LA SERIE, REMEDIDA AQUI Y NO HEREDADA
+   tramo mirado: actas 173 a 190
+   CIFRA actas SIN entrada propia en la serie: 8
+   LAS QUE FALTAN: 173, 174, 175, 176, 177, 178, 179, 180
+   EXTREMO BAJO: R.42 cubre el acta 172
+   EXTREMO ALTO: R.43 cubre el acta 181
+   el encargo dice OCHO (173 a 180) -> CALZA
+
+J) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   Registro de las nueve adjudicaciones numeradas, los tres hallazgos de la seccion 5, las tres preguntas contestadas, la caida propia del auditor y las tres caidas del ejecutor del acta de la vuelta 191
+
+K) LA ENTRADA ARMADA
+   18202 bytes | 187 lineas por count(NL) | 188 por len(split(NL))
+   guiones largos o medios en la entrada: 0
+
+L) NO SE ESCRIBE NADA, Y ESTA ES LA IDEMPOTENCIA HACIENDO SU TRABAJO.
+   el acta 191 YA TIENE ENTRADA en la serie: 4 linea(s) la nombran.
+   NO se escribe una entrada nueva y NO se consume el numero R.54.
+   docs/PENDIENTES.md sigue en 998216 bytes.
+
