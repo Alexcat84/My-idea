@@ -1,0 +1,51 @@
+TODA RUTA PUBLICADA EN docs/loop/REPORTE.md, COMPROBADA UNA A UNA
+(vuelta 186; EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+
+CIFRA rutas distintas halladas en el reporte: 41
+RUTA DEL HUECO DECLARADO, leida de la seccion 9 y no tecleada: docs/loop/SALIDA_V186_BATERIA.txt
+
+   OK         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            disco  4051967 bytes | LF  4051967 bytes
+   OK         docs/PENDIENTES.md                                             disco   909780 bytes | LF   909780 bytes
+   OK         docs/loop/ACTA_AUDITOR.md                                      disco  4330537 bytes | LF  4330537 bytes
+   OK         docs/loop/SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt              disco     5802 bytes | LF     5802 bytes
+   OK         docs/loop/SALIDA_V183_BATERIA.txt                              disco    71753 bytes | LF    71753 bytes
+   OK         docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt                    disco     2435 bytes | LF     2415 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt            disco     6100 bytes | LF     6100 bytes
+   OK         docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt      disco     7937 bytes | LF     7937 bytes
+   OK         docs/loop/SALIDA_V185_T2A_REPORTE_184_ANTES.md                 disco    33608 bytes | LF    33608 bytes
+   OK         docs/loop/SALIDA_V186_APERTURA.txt                             disco    27078 bytes | LF    27078 bytes
+   HUECO      docs/loop/SALIDA_V186_BATERIA.txt                              NO EXISTE, y NO ES CAIDA: es el hueco que la seccion 9 declara
+   OK         docs/loop/SALIDA_V186_CICLO_NUMSTAT_CIERRE.txt                 disco      140 bytes | LF      140 bytes
+   OK         docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt                     disco    49804 bytes | LF    49036 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_GATE0_CMD1_APERTURA.txt                  disco     4859 bytes | LF     4790 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_GATE0_CMD1_CIERRE.txt                    disco     4859 bytes | LF     4790 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_HEAD_APERTURA.txt                        disco       41 bytes | LF       41 bytes
+   OK         docs/loop/SALIDA_V186_T1A_MUTACION_REGISTRO_186.txt            disco     5760 bytes | LF     5760 bytes
+   OK         docs/loop/SALIDA_V186_T1A_REGISTRO_R48.txt                     disco     5751 bytes | LF     5751 bytes
+   OK         docs/loop/SALIDA_V186_T1B_NOMINA.txt                           disco     3693 bytes | LF     3693 bytes
+   OK         docs/loop/SALIDA_V186_T1C_RELECTURA_AL_DOBLE.txt               disco    13632 bytes | LF    13632 bytes
+   OK         docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt                  disco     3601 bytes | LF     3601 bytes
+   OK         docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt           disco     2607 bytes | LF     2607 bytes
+   OK         docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt                     disco      965 bytes | LF      948 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt          disco      790 bytes | LF      780 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt               disco     6128 bytes | LF     6030 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt           disco     5040 bytes | LF     5040 bytes
+   OK         docs/loop/SALIDA_V186_T2C_VEREDICTO_184.txt                    disco     2322 bytes | LF     2322 bytes
+   OK         docs/loop/SALIDA_V186_T2C_VEREDICTO_184_FRASE.txt              disco      356 bytes | LF      356 bytes
+   OK         docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt                disco     5007 bytes | LF     5007 bytes
+   OK         docs/loop/SALIDA_V186_TALLADOR_CABECERA.txt                    disco     2501 bytes | LF     2481 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SELLO_APERTURA_AUDITOR_V187.json                     disco      799 bytes | LF      799 bytes
+   OK         docs/loop/reportes/REPORTE_V184.md                             disco   124249 bytes | LF   124249 bytes
+   OK         docs/loop/reportes/REPORTE_V185.md                             disco    42888 bytes | LF    42888 bytes
+   OK         scripts/loop/_v184_cierre_texto.md                             disco    13982 bytes | LF    13982 bytes
+   OK         scripts/loop/cerrar_reporte.py                                 disco    82212 bytes | LF    82212 bytes
+   OK         scripts/loop/cotejar_clon_declarado.py                         disco    25949 bytes | LF    25949 bytes
+   OK         scripts/loop/serie_de_registros.py                             disco     6595 bytes | LF     6595 bytes
+   OK         scripts/loop/verificar_mutaciones_viejas.py                    disco   127577 bytes | LF   127577 bytes
+   OK         scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py          disco     8811 bytes | LF     8811 bytes
+   OK         scripts/loop/vuelta186_esqueleto_reporte.py                    disco    19146 bytes | LF    19146 bytes
+   OK         scripts/loop/vuelta186_rutas_del_reporte.py                    disco     4596 bytes | LF     4596 bytes
+
+CIFRA rutas en que la cifra de disco NO es la de LF: 8
+CIFRA rutas que NO existen o miden cero bytes, SIN CONTAR el hueco declarado: 0
+VEREDICTO: VERDE

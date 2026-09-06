@@ -197,10 +197,10 @@ siete a cuatro), el nombre de la salida y el bloque nuevo de la cuenta de `B`.
 
 #### LAS RUTAS DE PRUEBA DE ESTA TAREA, TODAS COMPROBADAS Y NINGUNA DE CERO BYTES
 
-| ruta | bytes en disco, iguales normalizados a LF |
+| ruta | bytes en disco, iguales normalizados a LF salvo donde se diga |
 |---|---:|
 | `docs/loop/SALIDA_V186_T1A_REGISTRO_R48.txt` | **5751** |
 | `docs/loop/SALIDA_V186_T1A_MUTACION_REGISTRO_186.txt` | **5760** |
 | `docs/loop/SALIDA_V186_T1B_NOMINA.txt` | **3693** |
 | `docs/loop/SALIDA_V186_T1C_RELECTURA_AL_DOBLE.txt` | **13632** |
-| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | **49804** |
+| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | **49804** en disco y **49036** en LF |

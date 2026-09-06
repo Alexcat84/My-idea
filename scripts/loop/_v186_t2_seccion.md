@@ -126,7 +126,7 @@ por otro, la guarda **CAE**.
 
 `scripts/loop/cerrar_reporte.py --vuelta 184` salio con **`EXITCODE 0`** y
 **VERDE con sus cuatro piezas**
-(`docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt`, **6128 bytes en disco y 6128 bytes normalizados a LF**). El carril salio **CIERRE TARDIO**, con la vuelta en curso
+(`docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt`, **6128 bytes en disco y 6030 bytes normalizados a LF**). El carril salio **CIERRE TARDIO**, con la vuelta en curso
 leida de git en **186** y la del reporte en **184**. Las **10** cifras sin pareja
 quedaron **declaradas una a una con su linea y su cuenta total** en una seccion
 10 nueva.
@@ -136,8 +136,8 @@ esconder la decision seria peor que tomarla:
 
 | corrida | exitcode | que dijo |
 |---|---:|---|
-| sin `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt`, **790 bytes en disco y 790 en LF**) | **1** | el destino ya existia con contenido DISTINTO, el reporte de la 184 **sin cerrar** |
-| con `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt`, **965 bytes en disco y 965 en LF**) | **0** | VERDE |
+| sin `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt`, **790 bytes en disco y 780 bytes en LF**) | **1** | el destino ya existia con contenido DISTINTO, el reporte de la 184 **sin cerrar** |
+| con `--forzar` (`docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt`, **965 bytes en disco y 948 bytes en LF**) | **0** | VERDE |
 
 **NADA SE PIERDE AL PISARLO, Y SE COMPROBO ANTES DE PISARLO:** el texto viejo de
 **33608 bytes en disco y 33608 normalizados a LF** sigue entero en
@@ -201,16 +201,16 @@ intacto.
 
 #### LAS RUTAS DE PRUEBA DE ESTA TAREA, TODAS COMPROBADAS Y NINGUNA DE CERO BYTES
 
-| ruta | bytes en disco, iguales normalizados a LF |
+| ruta | bytes en disco, iguales normalizados a LF salvo donde se diga |
 |---|---:|
 | `docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt` | **3601** |
 | `docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt` | **2607** |
 | `docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt` | **5040** |
 | `docs/loop/SALIDA_V186_T2C_VEREDICTO_184.txt` | **2322** |
 | `docs/loop/SALIDA_V186_T2C_VEREDICTO_184_FRASE.txt` | **356** |
-| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | **6128** |
-| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | **790** |
-| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | **965** |
+| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | **6128** en disco y **6030** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | **790** en disco y **780** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | **965** en disco y **948** en LF |
 | `docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt` | **5007** |
 | `docs/loop/SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt` | **5802** |
 | `docs/loop/reportes/REPORTE_V184.md` | **124249** |

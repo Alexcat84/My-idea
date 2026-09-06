@@ -4,7 +4,7 @@ SE CIERRA EL REPORTE DE LA VUELTA 186, EN UN SOLO ACTO
 
 A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
    docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 186 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   CIFRA bytes: 32574 | saltos de linea: 521
+   CIFRA bytes: 32729 | saltos de linea: 521
    contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
    contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
    contiene '\n## 3.'                            -> NO (se esperaba NO)
@@ -12,7 +12,7 @@ A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
 
 B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
    docs/loop/SALIDA_V186_TALLADOR_CABECERA.txt             2481 bytes, 11 filas de tabla
-   scripts/loop/_v186_cierre_texto.md                      9457 bytes, sha256 6b4d4388fc69bc8b
+   scripts/loop/_v186_cierre_texto.md                     11566 bytes, sha256 621f5b0c1c3fea42
       ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
       ## 4. LA GUARDA DEL COMMIT DE `dataset/`, CORRIDA EL DIA QUE SERVIA
       ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
@@ -45,16 +45,16 @@ B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
    el veredicto, tal como se paso: 'LAS DOS TAREAS DEL ENCARGO CIERRAN Y ESTA VUELTA CIERRA SU PROPIO REPORTE, QUE ES LA SEGUNDA SEGUIDA Y DEVUELVE EL TOPE '
    CIFRA numerales hallados en el veredicto: 2
       'DOS'      -> 2 tareas
-      'CERO'     -> 0 caidas
+      'UNA'      -> 1 caidas
    LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
-      caidas   -> 0
+      caidas   -> 1
       tareas   -> 2
    CIFRA numerales que NO calzan: 0
 
 C) SE ESCRIBE
    cabecera: 533 bytes de hueco -> 2573 bytes de tabla pegada
-   veredicto escrito: 460 bytes
-   ESCRITO: docs/loop/REPORTE.md (46086 bytes, 708 saltos de linea)
+   veredicto escrito: 467 bytes
+   ESCRITO: docs/loop/REPORTE.md (48357 bytes, 744 saltos de linea)
 
 D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    (1) veredicto escrito              SI

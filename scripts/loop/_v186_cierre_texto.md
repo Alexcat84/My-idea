@@ -136,13 +136,49 @@ despues de dos vueltas sin ninguno.
 
 ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
 
-**CERO CAIDAS PROPIAS EN ESTA VUELTA, Y EL CERO VA CONTADO Y NO OMITIDO.** No
-levanto ninguna `C.n`: los cuatro arneses nuevos salieron VERDES en su primera
-corrida, ningun arnes ya sellado cambio de color, ninguna cifra publicada se
-tecleo sin instrumento, y el bloque de apertura corrio entero antes de la primera
-operacion con su prediccion escrita antes de medir.
+**UNA CAIDA PROPIA, Y LA LEVANTO YO ANTES DE QUE LA MIDA NADIE.**
 
-**LO QUE SI DECLARO, Y NO ES UNA CAIDA SINO UNA LIMITACION MEDIDA:** el bloque de
+**`C.1`. PUBLIQUE CUATRO CIFRAS DE BYTES IGUALANDO LA CONVENCION DE LF A LA DE
+DISCO SIN HABERLA MEDIDO.** En la primera escritura de los anexos de las TAREAS 1
+y 2 escribi *"N bytes en disco y N normalizados a LF"* para cuatro ficheros cuya
+salida se redirigio por la consola y por tanto lleva `CRLF` en disco. **La cifra
+de disco era buena; la de LF estaba supuesta, no medida.** Es exactamente la
+especie que esta casa persigue: una cifra escrita en vez de leida de un
+instrumento.
+
+**COMO SALIO, Y NO POR CASUALIDAD:** el instrumento
+`scripts/loop/vuelta186_rutas_del_reporte.py`, escrito en esta misma vuelta para
+comprobar que ninguna ruta publicada apunta a un fichero inexistente o de cero
+bytes, publica las DOS convenciones de cada ruta, y ahi se vieron las cuatro.
+
+**LO VIEJO NO SE BORRA, QUE ES LA MITAD QUE IMPORTA.** Las cuatro cifras, con lo
+que publique y lo que el instrumento mide:
+
+| ruta | lo que publique | lo medido |
+|---|---:|---:|
+| `docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt` | 49804 en disco y **49804** en LF | 49804 en disco y **49036** en LF |
+| `docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt` | 6128 en disco y **6128** en LF | 6128 en disco y **6030** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt` | 790 en disco y **790** en LF | 790 en disco y **780** en LF |
+| `docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt` | 965 en disco y **965** en LF | 965 en disco y **948** en LF |
+
+**QUE ESPECIE ES Y SI ACUMULA, DICHO SIN REGATEAR:** es **caida de cifra
+publicada**, y las cuatro viven en TABLAS y en prosa de anexo. **La declaro
+entera y no la disfrazo de correccion menor.** Lo que si separo, para no
+castigarme de mas ni de menos: **ninguna de las cuatro mueve una decision**, todas
+las rutas existen y ninguna mide cero bytes, y la cifra de disco, que es la que la
+casa usa para cotejar, era correcta en las cuatro.
+
+**Y LO QUE HAGO CON ELLA:** corrijo las cuatro celdas, **dejo esta tabla con lo
+viejo al lado**, y el reporte se **REGENERA desde el esqueleto commiteado** con
+`anexar_tarea_al_reporte.py` en vez de retocarse a mano. **El reporte sigue siendo
+producto de sus instrumentos.**
+
+**LO DEMAS DE ESTA VUELTA NO TIENE CAIDA PROPIA:** los cuatro arneses nuevos
+salieron VERDES en su primera corrida, ningun arnes ya sellado cambio de color, y
+el bloque de apertura corrio entero antes de la primera operacion con su
+prediccion escrita antes de medir.
+
+**Y ADEMAS DECLARO UNA LIMITACION MEDIDA, QUE NO ES UNA CAIDA:** el bloque de
 apertura de esta vuelta contaba los puestos de la ciega con el patron de la
 palabra PUESTO en mayusculas, y las ciegas del auditor los escriben con la clave
 `puesto_intra`, asi que su bloque H.5 publico **0 puestos** para los cuatro

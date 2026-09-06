@@ -76,16 +76,23 @@ def main():
             w("      " + r)
         veredicto = ""
     else:
+        # LA CONCORDANCIA DEL SEGUNDO NUMERAL VA DENTRO DEL COMPUTO, no fuera:
+        # con una caida el sustantivo es singular y la coda dice que se levanta,
+        # y con cero es plural y la coda dice que el cero va contado. Escribirlo
+        # a mano seria teclear una cifra por la puerta de atras.
+        if n_caidas == 1:
+            coda = "UNA CAIDA PROPIA, LEVANTADA POR MI ANTES DE QUE LA MIDA NADIE"
+        else:
+            coda = ("%s CAIDAS PROPIAS, Y EL CERO VA CONTADO Y NO OMITIDO"
+                    % NUMERO_A_PALABRA[n_caidas].upper())
         veredicto = (
             "LAS %s TAREAS DEL ENCARGO CIERRAN Y ESTA VUELTA CIERRA SU PROPIO "
             "REPORTE, QUE ES LA SEGUNDA SEGUIDA Y DEVUELVE EL TOPE A CINCO; LAS "
             "DOS ADJUDICACIONES DEL ACTA 186 QUEDAN APLICADAS CON UN ARNES CADA "
             "UNA, EL REPORTE DE LA 184 CIERRA EN VERDE POR EL CARRIL DE CIERRE "
             "TARDIO CON SUS DIEZ CIFRAS SIN PAREJA DECLARADAS, Y LA ESCALADA DE "
-            "LA SECCION 4 CAZA LA CAIDA QUE LA TRAJO; %s CAIDAS PROPIAS, Y EL "
-            "CERO VA CONTADO Y NO OMITIDO."
-            % (NUMERO_A_PALABRA[tareas].upper(),
-               NUMERO_A_PALABRA[n_caidas].upper()))
+            "LA SECCION 4 CAZA LA CAIDA QUE LA TRAJO; %s."
+            % (NUMERO_A_PALABRA[tareas].upper(), coda))
         w("   %s" % veredicto)
     w("")
 
@@ -115,9 +122,8 @@ def main():
         w("      LA GUARDA CAE AL MUTAR: %s" % ("SI" if motivos_m else "NO"))
         if not motivos_m:
             rojos.append("la guarda B.1 no cae al mutar el numeral de tareas")
-        mutada2 = veredicto.replace("; %s CAIDAS PROPIAS"
-                                    % NUMERO_A_PALABRA[n_caidas].upper(),
-                                    "; TRES CAIDAS PROPIAS")
+        mutada2 = veredicto.replace("; %s CAIDA" % coda.split(" CAIDA")[0],
+                                    "; TRES CAIDAS")
         motivos_m2, _c2, _h2 = CR.numerales_del_veredicto_que_no_calzan(
             mutada2, juzgado)
         w("      con el numeral de caidas mutado a TRES -> %d que no calzan"
