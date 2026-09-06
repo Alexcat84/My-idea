@@ -145,6 +145,14 @@ import re
 import subprocess
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# LA MEDICION DE LAS DOS CONVENCIONES SE IMPORTA, NO SE COPIA (vuelta 187,
+# TAREA 4). `scripts/loop/vuelta186_rutas_del_reporte.py` ya sabia medir bytes de
+# disco y bytes normalizados a LF; escribir aqui una tercera copia de esas dos
+# lineas es exactamente lo que la escalada viene a evitar. UNA SEDE, DOS
+# LLAMADORES.
+from vuelta186_rutas_del_reporte import medir_en_disco   # noqa: E402
+
 NL = chr(10)
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REPORTE = os.path.join(RAIZ, "docs", "loop", "REPORTE.md")
@@ -167,6 +175,14 @@ MARCA_ATRIBUCION = "ATRIBUCION:"
 CAB_10_TARDIO = ("## 10. LAS CIFRAS SIN PAREJA, DECLARADAS UNA A UNA POR EL "
                  "CARRIL DE CIERRE TARDIO")
 MARCA_TARDIO = "CIFRAS SIN PAREJA DECLARADAS Y MEDIDAS:"
+# LA SEGUNDA DECLARACION DEL CARRIL TARDIO (vuelta 187, TAREA 5.b; respuesta del
+# acta 187 a la `P.2`, por extension de su propia `7.2` del acta 186: *"ni se
+# eximen ni se reescriben, se declaran"*). El defecto de la seccion 4 de un
+# reporte que se cierra TARDE entra por la MISMA puerta y con la MISMA forma que
+# las cifras sin pareja.
+CAB_11_TARDIO = ("## 11. EL DEFECTO DE LA SECCION 4, DECLARADO POR EL CARRIL DE "
+                 "CIERRE TARDIO")
+MARCA_TARDIO_S4 = "DEFECTO DE LA SECCION 4 DECLARADO Y MEDIDO:"
 # EL PATRON, ENSANCHADO EN LA VUELTA 182 POR EL REMEDIO DEL `E.1` DEL ACTA 180.
 # ANTES ERA r"SALIDA_V(\d+)_BATERIA" Y ESA ERA LA PRIMERA DE LAS TRES CAUSAS: el
 # fichero que la vuelta 180 paso se llamaba `SALIDA_V180_HUECO_BATERIA.txt`, con
@@ -611,6 +627,60 @@ def declaracion_de_cifras_sin_pareja(huerfanas, vuelta, curso):
         p.append("(ninguna: la cuenta es CERO, y se escribe en vez de omitirse)")
     for n, especie, muestra, linea in huerfanas:
         p.append("linea %-6d %-5s %-24s | %s" % (n, especie, muestra, linea))
+    p += [CERCA, ""]
+    return NL.join(p) + NL
+
+
+def declaracion_de_seccion4(motivos, vuelta, curso, nombre_apertura):
+    """EL BLOQUE QUE DECLARA EL DEFECTO DE LA SECCION 4 DENTRO DEL PROPIO REPORTE
+    CERRADO TARDE, CON SU MOTIVO ENTERO. PURA: devuelve texto.
+
+    ES LA HERMANA EXACTA DE `declaracion_de_cifras_sin_pareja()`, y lo es a
+    proposito: el acta 187 contesta la `P.2` diciendo que la `2.d` entra en el
+    carril de cierre tardio *"por la misma puerta y con la misma forma"*. Misma
+    puerta, misma forma, y por eso mismo NO se escribe una tercera manera de
+    declarar un defecto.
+
+    EN EL CARRIL NORMAL ESTA FUNCION NO SE LLAMA Y LA `2.d` SIGUE BLOQUEANDO
+    ENTERA. **Eso lo exige el arnes, no la vista.**
+
+    EL CERO SE DICE Y NO SE OMITE: si no hay ningun motivo, este bloque se
+    escribe igual y dice cero, que es la misma letra que la casa aplica a las
+    caidas propias y a las cifras sin pareja.
+
+    LA LISTA VA DENTRO DE UN BLOQUE CERCADO por el mismo motivo que la de su
+    hermana: es la salida cruda de una guarda, y las guardas de este fichero no
+    miran dentro de las cercas. Si fuera prosa, esta declaracion se acusaria a si
+    misma en la siguiente pasada.
+
+    Y EL REPORTE VIEJO NO SE REESCRIBE. Lo que se le anade es LA DECLARACION del
+    defecto. **Reescribir su seccion 4 seria escribir en pasado lo que no paso.**"""
+    p = [CAB_11_TARDIO, "",
+         "**CARRIL DE CIERRE TARDIO.** Este reporte es el de la vuelta %d y se"
+         % vuelta,
+         "cierra en la vuelta %s, leida del asunto del ultimo commit con `git log`"
+         % curso,
+         "y no tecleada. En este carril **la guarda de la seccion 4 NO bloquea el",
+         "cierre, pero SE DECLARA con su motivo entero**, que es la respuesta del",
+         "acta 187 a la `P.2` por extension de la `7.2` del acta 186: *ni se eximen",
+         "ni se reescriben, se declaran*.",
+         "",
+         "**`%s` NO SE REABRE Y NO SE REESCRIBE SU SECCION 4.**" % nombre_apertura,
+         "Lo que se le anade es esta declaracion. **Reescribir su seccion 4 seria",
+         "escribir en pasado lo que no paso.**",
+         "",
+         "**EN EL CARRIL NORMAL ESTA GUARDA SIGUE BLOQUEANDO ENTERA**, y ninguna",
+         "otra se afloja en este: las cuatro piezas, el cuerpo byte a byte, los",
+         "guiones, las citas de arnes y **la guarda de las dos convenciones** siguen",
+         "mandando igual.",
+         "",
+         "%s **%d** motivo(s)." % (MARCA_TARDIO_S4, len(motivos)),
+         "", CERCA,
+         "CIFRA motivos en rojo de la seccion 4: %d" % len(motivos)]
+    if not motivos:
+        p.append("(ninguno: la cuenta es CERO, y se escribe en vez de omitirse)")
+    for m in motivos:
+        p.append(m)
     p += [CERCA, ""]
     return NL.join(p) + NL
 
@@ -1148,6 +1218,159 @@ def cifras_sin_pareja(texto):
     return fallos
 
 
+# LA GUARDA DE LAS DOS CONVENCIONES (vuelta 187, TAREA 4; OPERACION DE CODIGO DE
+# LA ESCALADA DE `AUDITOR.md` 1.2, ENCARGADA POR LA SECCION 9 DEL ACTA 187).
+#
+# EL HUECO, MEDIDO Y NO SOSPECHADO. El bloque D de este mismo fichero publica
+# `toda cifra de bytes y todo sha con su pareja SI`, y las CUATRO cifras falsas
+# de la `C.1` del acta 187 pasaron por delante de esa linea sin encender nada.
+# La causa es exacta: `cifras_sin_pareja()` comprueba que la pareja EXISTA, no
+# que sea CIERTA. Un reporte que escribe "6128 bytes en disco y 6128 bytes
+# normalizados a LF" sobre un fichero que en LF mide 6030 tiene su pareja
+# completa y su cifra falsa.
+#
+# LAS TRES FORMAS EN QUE ESTA CASA PUBLICA LA PAREJA, LEIDAS DE REPORTES REALES
+# Y NO INVENTADAS. Las dos primeras son prosa y la tercera es la tabla que la
+# `C.1` uso para su cuarta cifra:
+#   (a) `<ruta>` ... N bytes en disco y M bytes normalizados a LF
+#   (b) `<ruta>` ... disco N bytes | LF M bytes
+#   (c) una tabla cuya CABECERA declara que las dos convenciones son IGUALES,
+#       y cuyas filas publican UNA sola cifra por ruta. Esa fila afirma DOS
+#       cosas con un solo numero, y las dos se comprueban.
+PATRON_RUTA_PUBLICADA = re.compile(
+    r"`((?:docs|scripts|dataset|engine|web|paradas)/[A-Za-z0-9_./-]+)`")
+PATRON_PAREJA_PROSA = re.compile(
+    r"(\d[\d.]*)\s*bytes\s+en\s+disco\s+y\s+(\d[\d.]*)\s*"
+    r"(?:bytes\s+)?(?:normalizados\s+a\s+)?(?:en\s+)?LF")
+PATRON_PAREJA_BARRA = re.compile(
+    r"disco\s+(\d[\d.]*)\s*bytes\s*\|\s*LF\s+(\d[\d.]*)\s*bytes")
+PATRON_FILA_UNA_CIFRA = re.compile(
+    r"^\|\s*`([^`]+)`\s*\|\s*\*{0,2}(\d[\d.]*)\*{0,2}\s*\|$")
+# LA CABECERA QUE CONVIERTE UNA SOLA CIFRA EN DOS AFIRMACIONES. Tiene que decir
+# las dos convenciones Y que son iguales; si solo dijera una, la fila publicaria
+# una cifra y no una pareja, y esta guarda no tendria nada que cotejar.
+MARCAS_CABECERA_IGUALES = ("disco", "lf")
+MARCA_CABECERA_IGUALDAD = "iguales"
+
+
+def _entero(txt):
+    """UNA CIFRA DEL REPORTE, EN ENTERO. PURA. Los puntos de millar se quitan
+    porque esta casa escribe 1.040 y 1040 para el mismo numero."""
+    return int(txt.replace(".", ""))
+
+
+def parejas_publicadas(texto):
+    """TODA PAREJA DE CIFRAS DE BYTES QUE EL REPORTE PUBLICA CONTRA UNA RUTA.
+
+    Devuelve [(linea, ruta, publicada_disco, publicada_lf, forma)]. **PURA**:
+    recibe el texto y no lee ni escribe nada, para que el arnes la pueda tumbar
+    sobre textos fabricados sin tocar el repo.
+
+    LOS BLOQUES CERCADOS QUEDAN FUERA, por el mismo motivo que en
+    `cifras_sin_pareja()`: ahi va pegada la salida cruda de un instrumento, que
+    es una CITA y no una celda publicada. **Se reusa `renglones_fuera_de_cerca()`
+    y no se escribe un tercer desbloqueador.**
+
+    LA RUTA DE UNA PAREJA DE PROSA ES LA ULTIMA QUE APARECE ANTES DE LA CIFRA en
+    su misma linea, y si no hay ninguna delante, la primera que aparezca detras.
+    Es la regla mas estrecha que caza los casos reales: una linea que nombra dos
+    ficheros y una sola pareja atribuye la pareja al que la precede."""
+    salida = []
+    cabecera_iguales = False
+    for n, linea in renglones_fuera_de_cerca(texto):
+        # (c) LA TABLA DE UNA SOLA CIFRA. El estado de la cabecera se lleva de
+        # una linea a otra a proposito: una fila de tabla no dice de que columna
+        # es su numero, lo dice su cabecera.
+        if linea.lstrip().startswith("|"):
+            bajo = linea.lower()
+            if (all(m in bajo for m in MARCAS_CABECERA_IGUALES)
+                    and MARCA_CABECERA_IGUALDAD in bajo):
+                cabecera_iguales = True
+                continue
+            m = PATRON_FILA_UNA_CIFRA.match(linea.strip())
+            if cabecera_iguales and m and PATRON_RUTA_PUBLICADA.match(
+                    "`%s`" % m.group(1)):
+                v = _entero(m.group(2))
+                salida.append((n, m.group(1), v, v, "tabla de una cifra"))
+                continue
+        elif not linea.strip():
+            cabecera_iguales = False
+        rutas = [(mm.start(), mm.end(), mm.group(1))
+                 for mm in PATRON_RUTA_PUBLICADA.finditer(linea)]
+        for patron, forma in ((PATRON_PAREJA_PROSA, "prosa disco y LF"),
+                              (PATRON_PAREJA_BARRA, "prosa disco barra LF")):
+            for m in patron.finditer(linea):
+                antes = [(ini, fin, r) for ini, fin, r in rutas if ini < m.start()]
+                detras = [(ini, fin, r) for ini, fin, r in rutas if ini >= m.end()]
+                if antes:
+                    _i, fin_r, ruta = antes[-1]
+                    hueco = linea[fin_r:m.start()]
+                elif detras:
+                    ini_r, _f, ruta = detras[0]
+                    hueco = linea[m.end():ini_r]
+                else:
+                    continue
+                # LA REGLA QUE IMPIDE ATRIBUIR UNA PAREJA AL FICHERO EQUIVOCADO,
+                # Y LA DESTAPO LA PROPIA GUARDA AL CORRERLA SOBRE `bb3aaad3`.
+                # Ahi, la linea 191 dice *"`docs/PENDIENTES.md` pasa de 894124
+                # bytes en disco a 909780 bytes, LA ENTRADA mide 15655 bytes en
+                # disco y 15655 normalizados a LF"*: la pareja es de LA ENTRADA
+                # escrita, no del fichero, y atribuirsela al fichero habria
+                # inventado un rojo. **Una guarda que inventa un rojo no sirve
+                # para cazar los de verdad**, que es la leccion que este mismo
+                # fichero ya lleva escrita desde la vuelta 179.
+                # SI ENTRE LA RUTA Y LA PAREJA HAY OTRA CIFRA DE BYTES, EL
+                # SUJETO ES AMBIGUO Y ESTA GUARDA NO ATRIBUYE NADA. Es la regla
+                # mas estrecha que sigue cazando los cuatro casos de la `C.1`,
+                # donde entre la ruta y su pareja no hay mas que una coma.
+                if PATRON_BYTES.search(hueco):
+                    continue
+                salida.append((n, ruta, _entero(m.group(1)),
+                               _entero(m.group(2)), forma))
+    return salida
+
+
+def convenciones_que_no_calzan(texto, mediciones):
+    """LAS PAREJAS PUBLICADAS CUYA CIFRA NO ES LA QUE EL DISCO DICE.
+
+    Devuelve [(linea, ruta, cual, publicada, medida, forma)], donde `cual` es
+    `DISCO` o `LF`. **PURA**: recibe el texto y un MAPA de mediciones
+    `{ruta: (disco, lf) o None}`, para que el arnes la pueda tumbar sin tocar el
+    repo. **El unico que toca disco es `mediciones_de_las_rutas()`.**
+
+    LO QUE ESTA GUARDA NO HACE, Y SE DICE PARA NO PISAR LAS QUE YA ESTAN:
+
+      - **Una ruta que NO EXISTE no es rojo de esta guarda.** Ya lo es de
+        `vuelta186_rutas_del_reporte.py`, y el HUECO DECLARADO de la seccion 9
+        sigue siendo su excepcion. Aqui una ruta sin medicion **se salta**: dos
+        guardas acusando el mismo hecho dan dos rojos por una falta.
+      - **Una cifra SIN PAREJA no es rojo de esta guarda.** Ese es el rojo de
+        `cifras_sin_pareja()`, con su texto de hoy, y aqui no se toca: esta
+        guarda solo mira parejas COMPLETAS y comprueba si son CIERTAS."""
+    fallos = []
+    for n, ruta, pub_d, pub_l, forma in parejas_publicadas(texto):
+        med = mediciones.get(ruta)
+        if med is None:
+            continue
+        med_d, med_l = med
+        if pub_d != med_d:
+            fallos.append((n, ruta, "DISCO", pub_d, med_d, forma))
+        if pub_l != med_l:
+            fallos.append((n, ruta, "LF", pub_l, med_l, forma))
+    return fallos
+
+
+def mediciones_de_las_rutas(texto, raiz=RAIZ):
+    """EL MAPA `{ruta: (disco, lf) o None}` DE TODA RUTA CON PAREJA PUBLICADA.
+
+    **ES EL UNICO SITIO DE ESTA GUARDA QUE TOCA DISCO**, y por eso sus dos
+    hermanas de arriba son puras. La medicion no se escribe aqui: se llama a
+    `medir_en_disco()` de `scripts/loop/vuelta186_rutas_del_reporte.py`, que es
+    la sede que ya existia."""
+    return {ruta: medir_en_disco(raiz, ruta)
+            for _n, ruta, _d, _l, _f in parejas_publicadas(texto)}
+
+
 def piezas_que_faltan(texto, filas_tallador, lineas_bateria,
                       vuelta=None, nombre_bateria=None,
                       tramos_sellados_en_esta_vuelta=None):
@@ -1466,6 +1689,20 @@ def main():
         print("      CIFRA cifras sin pareja declaradas: %d" % len(huerfanas_previo))
         print("      la declaracion mide %d bytes"
               % len(declaracion.encode("utf-8")))
+        # LA SEGUNDA DECLARACION DEL CARRIL TARDIO (vuelta 187, TAREA 5.b). Se
+        # computa SOBRE EL TEXTO YA ARMADO, que es el que se va a escribir, y por
+        # la misma puerta y con la misma forma que su hermana de arriba.
+        nombre_ap_t, texto_ap_t = lector_de_la_apertura(V)
+        motivos_s4_previo = seccion4_que_no_calza(texto, texto_ap_t, nombre_ap_t)
+        decl_s4 = declaracion_de_seccion4(motivos_s4_previo, V, curso,
+                                          "docs/loop/reportes/REPORTE_V%d.md" % V)
+        texto = texto.rstrip(NL) + NL + NL + decl_s4
+        print("   CARRIL TARDIO: se anexa la declaracion del defecto de la seccion 4")
+        print("      CIFRA motivos en rojo de la seccion 4 declarados: %d"
+              % len(motivos_s4_previo))
+        for m in motivos_s4_previo:
+            print("         " + m)
+        print("      la declaracion mide %d bytes" % len(decl_s4.encode("utf-8")))
     io.open(REPORTE, "w", encoding="utf-8", newline=NL).write(texto)
     print("   ESCRITO: %s (%d bytes, %d saltos de linea)"
           % (rel(REPORTE), len(texto.encode("utf-8")), texto.count(NL)))
@@ -1491,6 +1728,13 @@ def main():
     huerfanas = cifras_sin_pareja(de_nuevo)
     citas = citas_de_arnes_que_no_calzan(de_nuevo, lector_de_docs_loop)
     citas_rojas = [c for c in citas if not c[4].startswith("SIN COTEJO")]
+    # LA GUARDA DE LAS DOS CONVENCIONES (vuelta 187, TAREA 4). SIN BANDERA: lo
+    # que se computa no se teclea. Se cablea AQUI, donde este fichero juzga, y
+    # BLOQUEA EN LOS DOS CARRILES: el carril tardio exime la cifra SIN PAREJA y
+    # la seccion 4 muda, que son defectos de un reporte viejo que se declaran;
+    # una cifra FALSA no es un defecto que se declare, es una cifra falsa.
+    convenciones_rojas = convenciones_que_no_calzan(
+        de_nuevo, mediciones_de_las_rutas(de_nuevo))
     # EN EL CARRIL TARDIO LAS CIFRAS SIN PAREJA NO BLOQUEAN, PERO SE SIGUEN
     # MIDIENDO Y SE SIGUEN IMPRIMIENDO, y ademas quedan DECLARADAS dentro del
     # propio reporte por el bloque C. Las otras TRES comprobaciones de esta lista
@@ -1502,7 +1746,9 @@ def main():
              chr(8212) not in de_nuevo and chr(8211) not in de_nuevo, True),
             ("toda cifra de bytes y todo sha con su pareja",
              not huerfanas, not tardio),
-            ("toda cita de arnes calza con su fichero", not citas_rojas, True)):
+            ("toda cita de arnes calza con su fichero", not citas_rojas, True),
+            ("toda pareja de convenciones es CIERTA, no solo completa",
+             not convenciones_rojas, True)):
         print("   %-34s %s%s"
               % (etiqueta, "SI" if cond else "NO",
                  "" if bloquea else "   (no bloquea: CARRIL DE CIERRE TARDIO,"
@@ -1521,6 +1767,16 @@ def main():
                   % (n, ruta, publicada, propia if propia is not None else "(no medible)"))
             print("         %s" % motivo)
     print("   CIFRA citas de arnes cotejadas que NO calzan: %d" % len(citas_rojas))
+    print("   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):")
+    print("      CIFRA parejas de convenciones publicadas: %d"
+          % len(parejas_publicadas(de_nuevo)))
+    if convenciones_rojas:
+        print("      LAS QUE NO CALZAN, UNA A UNA, CON SU CONVENCION NOMBRADA:")
+        for n, ruta, cual, pub, med, forma in convenciones_rojas:
+            print("         linea %-5d %-58s %-5s publicada %-9d medida %-9d | %s"
+                  % (n, ruta, cual, pub, med, forma))
+    print("   CIFRA parejas cuya cifra NO es la que el disco dice: %d"
+          % len(convenciones_rojas))
     print("   CIFRA citas de arnes SIN COTEJO posible: %d" % (len(citas) - len(citas_rojas)))
     print("")
 
@@ -1547,9 +1803,29 @@ def main():
     print("   CIFRA motivos por los que la seccion 4 NO calza: %d" % len(motivos_s4))
     for m in motivos_s4:
         print("      " + m)
-    # ESTA GUARDA NO SE AFLOJA EN NINGUN CARRIL, NI SIQUIERA EN EL TARDIO: es la
-    # operacion de codigo de una escalada que la racha de reporte ya disparo.
-    extra += len(motivos_s4)
+    # EN EL CARRIL NORMAL ESTA GUARDA NO SE AFLOJA: es la operacion de codigo de
+    # una escalada que la racha de reporte ya disparo, y sigue bloqueando entera.
+    # EN EL CARRIL TARDIO NO BLOQUEA, PERO SE DECLARA (vuelta 187, TAREA 5.b;
+    # respuesta del acta 187 a la `P.2`), y la declaracion se COTEJA POR
+    # CONTENCION contra el texto ya escrito: si no estuviera, esto vuelve a ser
+    # rojo. **Una exencion sin su declaracion seria una exencion muda, y eso es
+    # lo que el banco 9 prohibe.**
+    if not tardio:
+        extra += len(motivos_s4)
+    else:
+        print("   CARRIL DE CIERRE TARDIO: esta guarda NO bloquea, pero SE DECLARA.")
+        dentro = MARCA_TARDIO_S4 in de_nuevo
+        print("      la marca %r esta en el reporte escrito: %s"
+              % (MARCA_TARDIO_S4, "SI" if dentro else "NO"))
+        sin_declarar = [m for m in motivos_s4 if m not in de_nuevo]
+        print("      CIFRA motivos que NO estan declarados en el texto: %d"
+              % len(sin_declarar))
+        for m in sin_declarar:
+            print("         SIN DECLARAR: " + m)
+        if not dentro or sin_declarar:
+            print("      ROJO: el carril tardio exime esta guarda SOLO si la")
+            print("      declaracion esta escrita con sus motivos enteros.")
+            extra += 1 + len(sin_declarar)
     print("")
     if faltan or extra:
         print("ROJO: al reporte de la vuelta %d le faltan %d de sus cuatro piezas."

@@ -945,6 +945,46 @@ VIEJAS = [
     # LA NOMINA CRECE DE 113 A 115.
     ("vuelta185_tarea1b_mutacion_sin_temporal.py", False),
     ("vuelta185_tarea1c_mutacion_bateria_continuada.py", False),
+    # SEIS MAS, ANADIDOS EN LA VUELTA 187 (TAREA 5.a; `P.3` del reporte de la
+    # 186, contestada por el acta 187 en su `7.3`: *"entra en la 187 y tambien
+    # los que nazcan en la 187, medido con la funcion devolviendo 0 al cerrar"*).
+    #
+    # ERA UNA CAIDA MEDIDA CON DOS VUELTAS DE ANTELACION, y por segunda vez
+    # seguida: el bloque de apertura de la 187, corrido antes de tocar nada,
+    # midio `arneses_que_faltan()` devolviendo `ultima vuelta 185, faltan 4`, y
+    # sus cuatro nombres son los cuatro primeros de aqui abajo. **La bateria es
+    # la 189 y quedaban dos vueltas: sin esto abre en rojo.**
+    #
+    # LA NOMINA NO SE PODA: CRECE. La opcion `c` de la parada del 5 sep 2026
+    # sigue RECHAZADA por el fundador, y esta entrada vuelve a hacer lo
+    # contrario, que es completarla.
+    #
+    # QUE PRUEBA CADA UNO, EN UNA LINEA:
+    #   . `2a`: que la pieza (4) de `cerrar_reporte.py` LLAMA a la unica sede de
+    #     `ajena != vuelta` en vez de llevar su propia copia.
+    #   . `2b`: que la pieza (2) busca el hueco de cabecera FUERA de las cercas y
+    #     ya no se enciende sobre una cita.
+    #   . `2c`: que el carril de CIERRE TARDIO no afloja ninguna de las cuatro
+    #     piezas ni ninguna de las otras comprobaciones del bloque D.
+    #   . `2d`: que la seccion 4 del reporte se coteja contra la apertura sellada
+    #     y cae en rojo si discrepa o si no afirma la cifra.
+    #   . `t4` (nace en la 187): que la pareja de convenciones deja de bastar con
+    #     EXISTIR y se recomputa desde el disco; su caso decisivo exige que la
+    #     guarda HABRIA CAZADO las cuatro cifras de la `C.1`.
+    #   . `t5b` (nace en la 187): que la guarda de la seccion 4 bloquea entera en
+    #     el carril NORMAL y en el TARDIO no bloquea pero SE DECLARA, cotejada
+    #     por contencion.
+    #
+    # NINGUNO ADMITE --sujeto: todos fabrican los suyos, salvo los dos casos
+    # decisivos, que van sobre ficheros REALES y solo los LEEN.
+    #
+    # LA NOMINA CRECE DE 115 A 121.
+    ("vuelta186_tarea2a_mutacion_pieza4.py", False),
+    ("vuelta186_tarea2b_mutacion_pieza2_cercas.py", False),
+    ("vuelta186_tarea2c_mutacion_cierre_tardio.py", False),
+    ("vuelta186_tarea2d_mutacion_seccion4.py", False),
+    ("vuelta187_tarea4_mutacion_dos_convenciones.py", False),
+    ("vuelta187_tarea5b_mutacion_seccion4_tardio.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

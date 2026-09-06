@@ -40,6 +40,33 @@ def rutas_del_texto(texto):
     return sorted(set(PATRON_RUTA.findall(texto.replace(chr(13) + NL, NL))))
 
 
+def dos_convenciones(datos):
+    """LAS DOS CIFRAS DE BYTES DE UN CONTENIDO: la de DISCO y la normalizada a
+    LF. PURA: recibe los bytes crudos y no lee ni escribe nada.
+
+    SE SEPARO A UNA FUNCION EN LA VUELTA 187, TAREA 4, Y SE DICE POR QUE. Esta
+    medicion vivia dentro del bucle de `main()` de este mismo fichero, asi que la
+    guarda nueva de `cerrar_reporte.py` no la podia llamar y habria tenido que
+    escribir una TERCERA copia de dos lineas que ya existian. **Una sede, dos
+    llamadores, y NO un tercero.** La conducta de `main()` no cambia: llama aqui
+    y saca exactamente las mismas dos cifras que sacaba antes."""
+    return len(datos), len(datos.replace(chr(13).encode() + chr(10).encode(), chr(10).encode()))
+
+
+def medir_en_disco(raiz, ruta):
+    """LAS DOS CONVENCIONES DE UNA RUTA RELATIVA, LEIDAS DEL DISCO, o `None` si
+    el fichero no existe. **ES EL UNICO SITIO QUE TOCA DISCO PARA ESTO**, y por
+    eso la guarda de `cerrar_reporte.py` puede ser PURA: recibe un mapa que este
+    lector le llena.
+
+    Devuelve `(bytes_disco, bytes_lf)` o `None`. **Un fichero que no existe
+    devuelve `None` y NO cero**: cero seria una cifra, y la ausencia no lo es."""
+    p = os.path.join(raiz, ruta.replace("/", os.sep))
+    if not os.path.isfile(p):
+        return None
+    return dos_convenciones(io.open(p, "rb").read())
+
+
 def hueco_declarado(texto):
     """LA RUTA DEL FICHERO DE BATERIA QUE LA SECCION 9 DECLARA COMO HUECO, o None.
     PURA: se lee de la propia seccion 9 y no se teclea."""
@@ -73,15 +100,14 @@ def main():
                 L.append("   NO EXISTE  %-62s" % r)
                 malas += 1
             continue
-        datos = io.open(p, "rb").read()
-        lf = datos.replace(b"\r\n", b"\n")
-        if len(datos) == 0:
+        bd, bl = dos_convenciones(io.open(p, "rb").read())
+        if bd == 0:
             malas += 1
             L.append("   CERO BYTES %-62s" % r)
             continue
         L.append("   OK         %-62s disco %8d bytes | LF %8d bytes%s"
-                 % (r, len(datos), len(lf),
-                    "" if len(datos) == len(lf) else "   <-- DISCO distinto de LF"))
+                 % (r, bd, bl,
+                    "" if bd == bl else "   <-- DISCO distinto de LF"))
     distintas = len([1 for r in rutas
                      if os.path.exists(os.path.join(RAIZ, r.replace("/", os.sep)))
                      and io.open(os.path.join(RAIZ, r.replace("/", os.sep)),

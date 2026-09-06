@@ -1,0 +1,87 @@
+==============================================================================
+VUELTA 187, TAREA 5.a: LA NOMINA, Y LA DOBLE CORRIDA DE LOS SEIS
+==============================================================================
+
+A) LA NOMINA Y EL CENSO, RECOMPUTADOS AL CERRAR
+   CIFRA censo: 181 | CIFRA nomina AHORA: 121 | VARA_DEL_CENSO: 148
+   arneses_que_faltan(): ultima vuelta 187, FALTAN 0
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 2 entradas sin congelar
+      SUJETO SIN CONGELAR: vuelta186_tarea2c_mutacion_cierre_tardio.py    NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta187_tarea4_mutacion_dos_convenciones.py  NO DECIDIBLE
+   LOS SEIS QUE ENTRAN, COMPROBADOS UNO A UNO DENTRO DE LA NOMINA:
+      vuelta186_tarea2a_mutacion_pieza4.py                 de la 186 en la nomina: SI
+      vuelta186_tarea2b_mutacion_pieza2_cercas.py          de la 186 en la nomina: SI
+      vuelta186_tarea2c_mutacion_cierre_tardio.py          de la 186 en la nomina: SI
+      vuelta186_tarea2d_mutacion_seccion4.py               de la 186 en la nomina: SI
+      vuelta187_tarea4_mutacion_dos_convenciones.py        NACE HOY  en la nomina: SI
+      vuelta187_tarea5b_mutacion_seccion4_tardio.py        NACE HOY  en la nomina: SI
+   CIFRA de los seis que estan dentro: 6 de 6
+   Y ESTE FICHERO NO ENTRA EN LA NOMINA, Y SE MIDE EN VEZ DE DECIRSE:
+      vuelta187_tarea5a_nomina.py esta en el censo de arneses: NO
+      vuelta187_tarea5a_nomina.py esta en la nomina: NO
+
+B) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256
+   (lo que hace PARADA es que una salida cambie ENTRE LAS DOS CORRIDAS DE
+    HOY, que es lo que significa 'cambia sola'. Que se mueva respecto a la
+    salida sellada de la 186 tiene causa conocida, esta vuelta toco
+    cerrar_reporte.py, y se declara con su numstat al lado)
+   scripts/loop/vuelta186_tarea2a_mutacion_pieza4.py (de la 186)
+      salida: docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
+      ANTES de correr: disco 3601 bytes | LF 3601 bytes | sha256 LF 9bb37980006e99d3e3fcc673581d6cc65898071697aa9b4385595f254441699b
+      CORRIDA 1: exitcode 0 | disco 3601 bytes | LF 3601 bytes | sha256 LF 9bb37980006e99d3e3fcc673581d6cc65898071697aa9b4385595f254441699b
+      CORRIDA 2: exitcode 0 | disco 3601 bytes | LF 3601 bytes | sha256 LF 9bb37980006e99d3e3fcc673581d6cc65898071697aa9b4385595f254441699b
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt : 1 fila(s)
+         4	4	docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
+   scripts/loop/vuelta186_tarea2b_mutacion_pieza2_cercas.py (de la 186)
+      salida: docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt
+      ANTES de correr: disco 2607 bytes | LF 2607 bytes | sha256 LF cf0e9dfc2a8bf63da0d227d7c3c269a44f7fe9da44db0a32e5deb5f8ded3f398
+      CORRIDA 1: exitcode 0 | disco 2607 bytes | LF 2607 bytes | sha256 LF cf0e9dfc2a8bf63da0d227d7c3c269a44f7fe9da44db0a32e5deb5f8ded3f398
+      CORRIDA 2: exitcode 0 | disco 2607 bytes | LF 2607 bytes | sha256 LF cf0e9dfc2a8bf63da0d227d7c3c269a44f7fe9da44db0a32e5deb5f8ded3f398
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt : 0 fila(s)
+   scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py (de la 186)
+      salida: docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+      ANTES de correr: disco 5043 bytes | LF 5043 bytes | sha256 LF 5541805c720b977097cef7a9f21b49e94df217d7cdb292f00e9682e9cd377c8e
+      CORRIDA 1: exitcode 1 | disco 5043 bytes | LF 5043 bytes | sha256 LF 5541805c720b977097cef7a9f21b49e94df217d7cdb292f00e9682e9cd377c8e
+         ROJO: el arnes no salio en verde. Se trae sin arreglar.
+      CORRIDA 2: exitcode 1 | disco 5043 bytes | LF 5043 bytes | sha256 LF 5541805c720b977097cef7a9f21b49e94df217d7cdb292f00e9682e9cd377c8e
+         ROJO: el arnes no salio en verde. Se trae sin arreglar.
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt : 1 fila(s)
+         7	7	docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+   scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py (de la 186)
+      salida: docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt
+      ANTES de correr: disco 5007 bytes | LF 5007 bytes | sha256 LF 443a4f12e3b2ce7673b810854f27a19b51c6741676a35e9799d2543cfc0ea475
+      CORRIDA 1: exitcode 0 | disco 5007 bytes | LF 5007 bytes | sha256 LF 443a4f12e3b2ce7673b810854f27a19b51c6741676a35e9799d2543cfc0ea475
+      CORRIDA 2: exitcode 0 | disco 5007 bytes | LF 5007 bytes | sha256 LF 443a4f12e3b2ce7673b810854f27a19b51c6741676a35e9799d2543cfc0ea475
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt : 0 fila(s)
+   scripts/loop/vuelta187_tarea4_mutacion_dos_convenciones.py (NACE HOY)
+      salida: docs/loop/SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt
+      ANTES de correr: disco 6608 bytes | LF 6608 bytes | sha256 LF 969c147da84ac8823d249e61e6f05edee615808f1b27ad57e6f9081c285dc276
+      CORRIDA 1: exitcode 0 | disco 6608 bytes | LF 6608 bytes | sha256 LF 969c147da84ac8823d249e61e6f05edee615808f1b27ad57e6f9081c285dc276
+      CORRIDA 2: exitcode 0 | disco 6608 bytes | LF 6608 bytes | sha256 LF 969c147da84ac8823d249e61e6f05edee615808f1b27ad57e6f9081c285dc276
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt : 0 fila(s)
+   scripts/loop/vuelta187_tarea5b_mutacion_seccion4_tardio.py (NACE HOY)
+      salida: docs/loop/SALIDA_V187_T5B_MUTACION_SECCION4_TARDIO.txt
+      ANTES de correr: disco 4089 bytes | LF 4089 bytes | sha256 LF a0e622551af7ca0a07e847a94b6090eadce79ab71bf5c35aff253a0ac87f9481
+      CORRIDA 1: exitcode 0 | disco 4089 bytes | LF 4089 bytes | sha256 LF a0e622551af7ca0a07e847a94b6090eadce79ab71bf5c35aff253a0ac87f9481
+      CORRIDA 2: exitcode 0 | disco 4089 bytes | LF 4089 bytes | sha256 LF a0e622551af7ca0a07e847a94b6090eadce79ab71bf5c35aff253a0ac87f9481
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V187_T5B_MUTACION_SECCION4_TARDIO.txt : 0 fila(s)
+
+   CIFRA paradas: 2
+
+C) EL ESTADO DEL ARBOL DESPUES DE LA DOBLE CORRIDA
+   CIFRA filas de `git diff --numstat -- dataset/`: 0
+
+VEREDICTO: ROJO

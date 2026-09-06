@@ -1,0 +1,76 @@
+CASO POSITIVO POR MUTACION de la declaracion del defecto de la SECCION 4
+en el CARRIL DE CIERRE TARDIO (vuelta 187, TAREA 5.b; `P.2`, acta 187 7.2)
+
+CASO A. EN EL CARRIL NORMAL LA SECCION 4 MUDA BLOQUEA, Y ESO LO EXIGE EL
+   ARNES Y NO LA VISTA: se lee la columna `bloquea` real de main() del
+   fichero fuente, y se cuenta en cual de los dos carriles suma a `extra`.
+   apariciones de `if not tardio: extra += len(motivos_s4)`: 1 (esperado 1)
+   ES DECIR: en el carril NORMAL los motivos de la seccion 4 SUMAN a extra
+   y el cierre CAE; en el TARDIO no suman por si mismos.
+   con el esperado MUTADO (exigir 0): CAE
+
+CASO B. LA MISMA SECCION 4 MUDA, EN CARRIL TARDIO: NO BLOQUEA POR SI SOLA,
+   Y APARECE DECLARADA EN EL TEXTO, COTEJADA POR CONTENCION.
+   CIFRA motivos en rojo: 1 (esperado 1)
+      | LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA lineas de status'. La apertura sellada APERTURA_DE_MENTIRA.txt dice 2, y una cifra ausente y una 
+   la declaracion mide 1182 bytes
+   LA COTEJO POR CONTENCION, MOTIVO A MOTIVO Y NO POR PARECIDO:
+      motivo dentro del texto cerrado: SI
+   CIFRA motivos SIN declarar: 0 (esperado 0)
+   la marca 'DEFECTO DE LA SECCION 4 DECLARADO Y MEDIDO:' esta: SI
+   VEREDICTO DEL CASO B: VERDE
+   con el esperado MUTADO (exigir 0 motivos): CAE
+   con el esperado MUTADO (exigir que el motivo NO este declarado): CAE
+
+CASO B.1. LA DECLARACION NO SE ACUSA A SI MISMA. Va dentro de una cerca, y
+   las guardas de este fichero no miran dentro de las cercas. Si fuera
+   prosa, la siguiente pasada la contaria como una afirmacion nueva de la
+   seccion 4 y el instrumento se perseguiria la cola.
+   motivos ANTES de anexar la declaracion: 1
+   motivos DESPUES de anexarla:            1
+   SON LOS MISMOS: SI
+   y cifras_sin_pareja() sobre el texto con la declaracion dentro: 0
+   con el esperado MUTADO (exigir que cambien): CAE
+
+CASO C. CERO MOTIVOS EN CARRIL TARDIO: LA DECLARACION DICE CERO Y NO SE
+   OMITE. Un campo ausente y un cero contado no son lo mismo.
+   CIFRA motivos en rojo: 0 (esperado 0)
+   la declaracion se escribe igual: SI, 1062 bytes
+   y DICE CERO con todas las letras: SI
+   la marca 'DEFECTO DE LA SECCION 4 DECLARADO Y MEDIDO:' esta igualmente: SI
+   con el esperado MUTADO (exigir que la declaracion se omita): CAE
+
+CASO D. LOS FICHEROS REALES DEL 184: SE EXIGE 1 MOTIVO Y QUE LA
+   DECLARACION LO NOMBRE. Es el caso que la `P.2` trajo.
+   docs/loop/reportes/REPORTE_V184.md -> disco 124249 bytes | LF 124249 bytes
+   docs/loop/SALIDA_V184_APERTURA.txt -> disco 34194 bytes | LF 34194 bytes
+   LO QUE LA APERTURA SELLADA DEL 184 PUBLICA, LEIDO Y NO TECLEADO:
+      CIFRA lineas de status: 2
+      CIFRA filas de numstat AL ENTRAR: 0
+   CIFRA motivos en rojo: 1 (esperado 1)
+      | LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA lineas de status'. La apertura sellada docs/loop/SALIDA_V184_APERTURA.txt dice 2, y una cifra ausente y una cifra que calza NO son lo mismo
+   CIFRA motivos que la declaracion NOMBRA: 1 de 1
+   la declaracion dice la cuenta: SI
+   y dice que el 184 NO se reabre ni se reescribe: SI
+   VEREDICTO DEL CASO D: VERDE
+   con el esperado MUTADO (exigir 2 motivos): CAE
+   con el esperado MUTADO (exigir 0 motivos): CAE
+
+CASO E. NINGUNA OTRA GUARDA SE AFLOJA POR ESTA TAREA, Y SE CUENTA EN VEZ
+   DE PROMETERSE: la guarda de LAS DOS CONVENCIONES de la TAREA 4 bloquea
+   en LOS DOS carriles, y su columna `bloquea` en main() es `True`.
+   apariciones de la comprobacion con `bloquea=True`: 1 (esperado 1)
+   con el esperado MUTADO (exigir 0): CAE
+
+CASO F. LA EXENCION DEL CARRIL TARDIO NO ES GRATIS: SI LA DECLARACION NO
+   ESTA, VUELVE A SER ROJO. Se prueba sobre el cotejo por contencion, que
+   es lo que main() hace: un texto SIN la declaracion deja motivos sin
+   declarar y eso vuelve a sumar.
+   motivos que NO estan declarados en un texto sin declaracion: 1 de 1
+   la marca 'DEFECTO DE LA SECCION 4 DECLARADO Y MEDIDO:' esta: NO
+   LA EXENCION NO SE COGE SIN DECLARARLA: SI
+   con el esperado MUTADO (exigir que si este declarada): CAE
+
+CIFRA casos: 7
+CIFRA fallos: 0
+VEREDICTO: VERDE

@@ -1,0 +1,97 @@
+CASO POSITIVO POR MUTACION de la guarda de LAS DOS CONVENCIONES
+(vuelta 187, TAREA 4; operacion de codigo de la escalada de AUDITOR.md 1.2)
+
+CASO 1. LAS DOS CONVENCIONES CALZANDO: VERDE.
+   parejas halladas: 1
+   CIFRA que no calzan: 0 (esperado 0)
+   VEREDICTO: VERDE
+   con el esperado MUTADO (se exige 1 que no calce): CAE
+
+CASO 2. LA CIFRA DE LF MUTADA: ROJO, Y TIENE QUE NOMBRAR LF.
+   CIFRA que no calzan: 1 (esperado 1)
+      linea 7    docs/loop/UNA.txt        LF    publicada 110    medida 999    | prosa disco y LF
+   NOMBRA LA CONVENCION QUE FALLA, Y ES LF: SI
+   NOMBRA LA RUTA: SI
+   NOMBRA LA PUBLICADA Y LA MEDIDA: SI, 110 contra 999
+   con el esperado MUTADO (se exige que sea DISCO): CAE
+
+CASO 3. LA CIFRA DE DISCO MUTADA: ROJO, Y TIENE QUE NOMBRAR DISCO.
+   CIFRA que no calzan: 1 (esperado 1)
+      linea 7    docs/loop/UNA.txt        DISCO publicada 120    medida 777    | prosa disco y LF
+   NOMBRA LA CONVENCION QUE FALLA, Y ES DISCO: SI
+   con el esperado MUTADO (se exige que sea LF): CAE
+
+CASO 4. UNA RUTA CON CRLF REAL EN DISCO, DONDE LAS DOS CIFRAS SON
+   LEGITIMAMENTE DISTINTAS: VERDE. ES EL CASO QUE IMPIDE QUE LA GUARDA
+   EXIJA QUE LAS DOS SEAN IGUALES, que seria el error facil de escribir
+   aqui y dejaria en rojo a la mitad de los reportes de esta casa.
+   publicadas: disco 49804 y LF 49036, DISTINTAS entre si
+   CIFRA que no calzan: 0 (esperado 0)
+   VEREDICTO: VERDE
+   con el esperado MUTADO (se exige que caiga por ser distintas): CAE
+
+CASO 5. UNA CIFRA PUBLICADA SIN PAREJA: SIGUE SIENDO EL ROJO DE HOY, CON
+   SU TEXTO DE HOY, Y NO EL DE ESTA GUARDA. Las dos son especies distintas
+   y ninguna pisa a la otra.
+   cifras_sin_pareja() -> 1 (esperado 1, y es SU rojo)
+      linea 7    bytes 333      | La salida vive en `docs/loop/SOLA.txt` (**333 bytes**).
+   convenciones_que_no_calzan() -> 0 (esperado 0: no hay pareja que cotejar)
+   CADA GUARDA EN SU SITIO: SI
+   con el esperado MUTADO (que la nueva tambien la acuse): CAE
+
+CASO 5.1. UNA RUTA QUE NO EXISTE EN DISCO: SIGUE SIENDO EL ROJO QUE YA ES
+   (el de vuelta186_rutas_del_reporte.py), Y ESTA GUARDA NO LO DUPLICA.
+   CIFRA que no calzan: 0 (esperado 0: sin medicion no se acusa)
+   y el lector real la mide como: None
+   con el esperado MUTADO (que esta guarda tambien la acuse): CAE
+
+CASO 6. EL QUE DECIDE: EL TEXTO REAL DE `git show bb3aaad3:docs/loop/REPORTE.md`.
+   SE EXIGE QUE LA GUARDA HABRIA CAZADO LAS CUATRO CIFRAS DE LA `C.1`,
+   NOMBRADAS UNA A UNA. Si no caza el caso que la trajo, no sirve.
+   el texto mide 46086 bytes y 708 lineas
+   CIFRA parejas de convenciones publicadas: 33
+   CIFRA que NO calzan: 11
+      linea 312   docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt               LF    publicada 49804    medida 49036    | tabla de una cifra
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 5043     | prosa disco y LF
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 5043     | prosa disco y LF
+      linea 442   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         LF    publicada 6128     medida 6030     | prosa disco y LF
+      linea 452   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    LF    publicada 790      medida 780      | prosa disco y LF
+      linea 453   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               LF    publicada 965      medida 948      | prosa disco y LF
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     DISCO publicada 5040     medida 5043     | tabla de una cifra
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     LF    publicada 5040     medida 5043     | tabla de una cifra
+      linea 524   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         LF    publicada 6128     medida 6030     | tabla de una cifra
+      linea 525   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    LF    publicada 790      medida 780      | tabla de una cifra
+      linea 526   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               LF    publicada 965      medida 948      | tabla de una cifra
+   LAS RUTAS CAZADAS, DISTINTAS: 5
+      docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt
+      docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt
+      docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt
+      docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt
+      docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+   DE LAS CUATRO DE LA `C.1`, FALTAN POR CAZAR: (ninguna)
+   Y CAZA ADEMAS, QUE SERIA UN ROJO INVENTADO: docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+   LA CONVENCION QUE FALLA EN LAS CUATRO ES LF, Y NO DISCO: NO
+   HABRIA CAZADO LAS CUATRO Y NINGUNA DE MAS: NO
+   con el esperado MUTADO (que cazara CERO): CAE
+
+   Y LA GUARDA VIEJA SOBRE EL MISMO TEXTO, PARA QUE SE VEA EL HUECO QUE
+   ESTA ESCALADA CIERRA: cifras_sin_pareja() sobre las CUATRO lineas que
+   la `C.1` publico da lo siguiente.
+      linea 312   docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt               | la guarda VIEJA la acusa: NO
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
+      linea 411   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
+      linea 442   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         | la guarda VIEJA la acusa: NO
+      linea 452   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    | la guarda VIEJA la acusa: NO
+      linea 453   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               | la guarda VIEJA la acusa: NO
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
+      linea 521   docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt     | la guarda VIEJA la acusa: NO
+      linea 524   docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt         | la guarda VIEJA la acusa: NO
+      linea 525   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt    | la guarda VIEJA la acusa: NO
+      linea 526   docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt               | la guarda VIEJA la acusa: NO
+   CIFRA de esas lineas que la guarda VIEJA acusaba: 0 de 9
+   (si esa cifra es 0, queda medido que las cuatro pasaron por delante
+    de la linea `con su pareja SI` sin encender nada)
+
+CIFRA casos: 7
+CIFRA fallos: 1
+VEREDICTO: ROJO
