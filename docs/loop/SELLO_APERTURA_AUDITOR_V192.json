@@ -1,0 +1,12 @@
+{
+ "vuelta": "192",
+ "criterio": "SOLAPE TOTAL A PROPOSITO sobre la tanda de la vuelta 191: los MISMOS 30 puestos que el ejecutor releyo en su TAREA 2 (relectura al doble del tramo del 3182), leidos por un SEGUNDO LECTOR independiente. Los 30 se sacaron de docs/loop/SALIDA_V191_T2_CIEGA.txt, que es fichero ciego por construccion (lista blanca puesto_intra, nodo_a, nodo_b y pasos) y no destapa ninguna clase ni razon. Es control y NO cobertura nueva, y por construccion cubre TODOS los dudosos marcados del ejecutor, que es por donde AUDITOR.md 1.2 manda empezar. Segunda vuelta seguida con este metodo: la del acta 191 midio que ocho de treinta tumban a los dos lectores, y solo repitiendolo se sabe si aquello fue de la tanda o del archivo.",
+ "ciega": "docs/loop/_auditor_v192_ciega_blind.txt",
+ "destape": "docs/loop/_auditor_v192_ciega_reveal.txt",
+ "bytes_ciega": 41952,
+ "bytes_destape": 33884,
+ "sha256_ciega": "6fd1cee70f4ef2c9520c192e25b22dcee4eba79819803f7ad3bf1640c56a5394",
+ "sha256_destape": "c5f562ecd416ff7d1debecd6d6fd5f5343aac7273e86a7add6b4743f94382beb",
+ "bitacora_antes_del_sello": [],
+ "prohibidos_antes_del_sello": []
+}
