@@ -16,8 +16,7 @@ afloja ninguna guarda para conseguirlo.
 | `docs/loop/SALIDA_V190_T2B_MUTACION_DEUDA_Y_FALLO.txt` | 6763 | 6763 | 95 | `bc1f0f27849ffced` |
 | `docs/loop/SALIDA_V190_T2_NOMINA.txt` | 4510 | 4510 | 77 | `82cc350f1dfbd694` |
 
-El fuente tocado entra en la vuelta con **131802 bytes en `HEAD`** (leido con
-`git cat-file -s`) y sale con **144320 bytes en disco y 144320 normalizado a LF**.
+El fuente tocado entra en la vuelta con **131802 bytes en `HEAD`**, leido con `git cat-file -s`, que es su medida normalizada a LF, y sale con **144320 bytes en disco y 144320 normalizado a LF**.
 
 #### (a) LA SEPARACION, Y LA VARA VA ESCRITA ANTES DE MEDIR
 
@@ -92,12 +91,12 @@ y la que decide es la del bloque F: **con la pieza el veredicto es
 SILENCIO:**
 
 1. **MI PROPIO ARNES ESCRIBIA UNA SALIDA QUE CAMBIABA SOLA.** La doble corrida de
-   `vuelta190_tarea2_nomina.py` la tumbo: **mismos 6650 bytes y `sha256` distinto
-   en cada corrida** (`4678b6db...`, `15fc1632...`, `5c00bdde...`). La causa,
-   medida: el arnes imprimia la ruta de su temporal, y `tempfile.mkdtemp` le pone
-   un sufijo al azar. **Corregido publicando el prefijo estable en vez de la ruta
-   entera**, y remedido: las dos corridas dan ahora **6763 bytes y el mismo
-   `sha256` `bc1f0f27849ffced`**.
+   `vuelta190_tarea2_nomina.py` la tumbo. **La cifra de antes lleva su corte porque
+   ya no es la del disco de hoy:** en el arbol previo a la correccion, esa salida
+   media **los mismos 6650 bytes en disco y 6650 normalizado a LF** y sacaba **tres `sha256` distintos** en tres corridas (`4678b6db...`, `15fc1632...`, `5c00bdde...`). La causa, medida: el arnes imprimia la ruta de su temporal, y
+   `tempfile.mkdtemp` le pone un sufijo al azar. **Corregido publicando el
+   prefijo estable en vez de la ruta entera**, y remedido: las dos corridas dan
+   ahora el mismo **`sha256` `bc1f0f27849ffced` por las dos convenciones, en disco y normalizado a LF**, y sus bytes de hoy estan en la tabla de arriba.
 2. **MI ARNES NUEVO NO ESTABA EN LA NOMINA.** `arneses_que_faltan()` lo acuso con
    su nombre. La regla de la casa es que **un arnes entra en la nomina en su misma
    vuelta** (acta 176, punto 7.2), asi que entran los **dos** que nacen hoy y **la

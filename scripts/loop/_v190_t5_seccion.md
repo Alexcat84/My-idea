@@ -105,9 +105,7 @@ una salida de vuelta cuenta como producto de mesa **cambia el alcance de la
 campana**, y el encargo reserva eso al fundador con esas palabras. **Lo mido, lo
 publico entero, y lo elevo.**
 
-**NO SE DECLARA HECHA Y NO SE MUEVE DE ESTADO:** sigue en **`LISTA`**.
-`docs/plan/OPERACIONES.jsonl` se abrio **solo en lectura** y mide **498085 bytes en
-disco y 498085 normalizado a LF** al entrar y al salir, **identicos**.
+**NO SE DECLARA HECHA Y NO SE MUEVE DE ESTADO:** sigue en **`LISTA`**. `docs/plan/OPERACIONES.jsonl` se abrio **solo en lectura** y mide **498085 bytes en disco y 498085 normalizado a LF** al entrar y al salir, **identicos**.
 
 **LA PREGUNTA QUE TRAIGO, PARA QUE EL AUDITOR LA ELEVE:** dado que las tres
 nominas **si** tienen sede y **si** estan medidas con cobertura completa desde la

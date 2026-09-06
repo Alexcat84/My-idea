@@ -20,15 +20,18 @@ esta tarea, medidas en disco por las dos convenciones:
 | `docs/loop/SALIDA_V190_T1A_REGISTRO_R52.txt` | 8854 | 8854 | 151 | `c3d60058ec7fe662` |
 | `docs/loop/SALIDA_V190_T1A_RECORRIDO_SIN_ESCRIBIR.txt` | 9230 | 9230 | 151 | `0a2717e2cb782c0c` |
 
-**LA ENTRADA:** `R.52` en `docs/PENDIENTES.md`, **18764 bytes**, **198 lineas por
+**LA ENTRADA:** `R.52` en `docs/PENDIENTES.md`, **18764 bytes** (una entrada NO es un fichero: no hay disco ni LF que separar, y por eso esta cifra no lleva pareja de convenciones), **198 lineas por
 `count(NL)` y 199 por `len(split(NL))`** (las dos convenciones publicadas, que es
 justo el hallazgo `5.1` del acta) y **0 guiones largos o medios**. El numero **no
 esta tecleado**: lo devuelve `scripts/loop/serie_de_registros.py`, que recompone
 la serie de sus **dos** sedes y da **43 entradas, 0 colisiones, 0 huecos,
 siguiente libre R.52**. Despues de escribir, remedido: **44 entradas, 0
-colisiones, 0 huecos, siguiente libre R.53**. La sede pasa de **961248 bytes** a
-**980013 bytes**, o sea **18765 bytes** mas, que son los **18764** de la entrada
-mas su salto de linea.
+colisiones, 0 huecos, siguiente libre R.53**. La sede crece en **18765**, que son los **18764** de la
+entrada mas su salto de linea. **Esa cifra es una DIFERENCIA y no el tamano de
+ningun fichero**, asi que no lleva pareja de convenciones;
+sus dos mediciones, la de antes y la de despues, van con su corte en la tabla de
+la idempotencia de mas abajo, porque **la de antes ya no es la del disco de
+hoy**.
 
 #### LO QUE ESTE REGISTRADOR ESTRENA, Y POR QUE NO SE PODIA HEREDAR
 
@@ -122,17 +125,21 @@ PARADA en vez de inventarla): **71 fichas**, **37 que no calzan**, **6 en LISTA
 sin ninguna prueba**, **2 CONSUMIDAS por `OP-U-01`**, **4 de TRABAJO REAL**, **3
 mesas con producto en disco** y **0 menciones de fichero en la evidencia de
 `OP-L-02`**. La salida del auditor donde eso vive,
-`docs/loop/_auditor_v190_vara.txt`, mide **17445 bytes en disco y 17164
-normalizado a LF** y nombra `OP-L-02` **3 veces**.
+`docs/loop/_auditor_v190_vara.txt`, mide **17445 bytes en disco y 17164 normalizado a LF**, y nombra `OP-L-02` **3 veces**.
 
 **LA IDEMPOTENCIA, PROBADA POR MI Y NO HEREDADA, CON LA SEDE MEDIDA ANTES Y
 DESPUES.** Es lo que el encargo pide con esas palabras:
 
-| momento | `docs/PENDIENTES.md` |
-|---|---:|
-| antes de la primera corrida | **961248 bytes** |
-| despues de escribir el `R.52` | **980013 bytes** |
-| **despues del RE CORRIDO** | **980013 bytes** |
+La sede es `docs/PENDIENTES.md`, y **cada cifra va con su corte** porque la
+primera de las tres **ya no es la del disco de hoy**: es el estado del arbol en
+`70d5662c`, antes de que esta tarea escribiera nada. Las tres, con las dos
+convenciones:
+
+| corte | bytes en disco | bytes en LF |
+|---|---:|---:|
+| antes de la primera corrida (arbol de `70d5662c`) | 961248 | 961248 |
+| despues de escribir el `R.52` | 980013 | 980013 |
+| **despues del RE CORRIDO, que es el disco de hoy** | **980013** | **980013** |
 
 El re corrido dice **`NO SE ESCRIBE NADA`**, que el acta 190 ya tiene entrada en
 **4 lineas**, y **no consume el numero `R.53`**. Y **el nombre del fichero de
