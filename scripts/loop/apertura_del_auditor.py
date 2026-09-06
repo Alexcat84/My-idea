@@ -45,6 +45,49 @@ prueba, no se pueda escribir despues**; y el auditor que quiera saltarse esto
 tiene que hacerlo **a sabiendas y sin sello**, que es exactamente la diferencia
 entre un descuido y una decision.
 
+--- LA FRASE DE ARRIBA ERA FALSA HASTA LA VUELTA 193, Y LO DIGO ANTES DE
+    ARREGLARLA (hallazgo `5.1` del acta 193, levantado por el auditor CONTRA EL
+    FICHERO QUE LE PROTEGE) --------------------------------------------------
+
+**"EL SELLO NO SE PUEDA ESCRIBIR DESPUES" NO SE CUMPLIA FUERA DE UN MISMO
+PROCESO, Y ESTA PROBADO, NO SUPUESTO.** `_BITACORA` y `_SELLADO` eran estado de
+MODULO y morian con el proceso. El auditor sella con el CLI, o sea en un proceso
+que termina; **en el proceso siguiente la bitacora nacia vacia**, y un turno que
+ya habia tocado `REPORTE.md` **volvia a sellar como si nada**, con `sellar()`
+SOBRESCRIBIENDO el sello y publicando `prohibidos tocados antes del sello: 0`. La
+prueba entera esta en `docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`, y la
+corrio el auditor contra si mismo.
+
+**Y LA CUARTA PUERTA NO LA PODIA USAR NADIE QUE SELLARA POR CLI, O SEA NADIE:**
+`puede_declarar_clases()` respondia `NO: este turno no ha sellado` **aunque el
+sello estuviera en disco**, y el CLI no exponia ninguna bandera para declarar
+clases.
+
+**LO QUE LA VUELTA 193 ARREGLA, Y COMO:**
+
+  a. **LA BITACORA Y EL SELLO SOBREVIVEN AL PROCESO**, en el fichero del turno
+     `docs/loop/_TURNO_DEL_AUDITOR.json`, que se carga al importar el modulo y se
+     reescribe en cada toque. **Los toques apuntados en una corrida los ve la
+     siguiente.**
+  b. **`sellar()` CAE EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA**, en vez
+     de sobrescribirlo. **Un sello no se reescribe**, y hasta hoy eso solo se
+     cumplia dentro de un mismo proceso.
+  c. **EL CLI PUEDE DECLARAR LAS CLASES**, con `--declarar-clases RUTA`, leyendo
+     el sello de disco. Sin eso la cuarta puerta era inusable.
+
+**Y LO QUE SIGUE SIN PODERSE, DICHO EN VEZ DE PROMETIDO:**
+
+  . **El fichero del turno se puede borrar a mano.** Quien lo borre empieza con la
+    bitacora limpia. **No hay forma de impedirlo desde dentro del repo**, igual
+    que no la hay de impedir un `git status` en otra terminal. Lo que si hay es
+    que **borrarlo es un acto**, y el sello en disco sigue estando: la guarda `b`
+    muerde igual, porque mira el DISCO y no la memoria.
+  . **El fichero del turno no sabe de que vuelta es hasta que se sella.** Los
+    toques anteriores al sello se apuntan sin vuelta, que es lo correcto: son del
+    TURNO, y el turno empieza antes de saber su numero.
+  . **Sigue sin saber si lo que se leyo era del sujeto** cuando el archivo se abre
+    por fuera de estas funciones. Eso no cambia.
+
 --- LA CUARTA PUERTA (vuelta 192, TAREA 4; hallazgo `5.2` del acta 192) --------
 
 POR QUE NACE, Y LO LEVANTA CONTRA SI MISMO EL QUE SE COLO. Las tres puertas de
@@ -128,9 +171,62 @@ TAPADO = "(TAPADO POR LA CUARTA PUERTA)"
 
 # LA BITACORA. Es del modulo a proposito: el estado tiene que sobrevivir entre
 # llamadas dentro del mismo turno, que es lo que se esta vigilando.
+#
+# Y DESDE LA VUELTA 193 SOBREVIVE TAMBIEN AL PROCESO (TAREA 4.a; hallazgo 5.1 del
+# acta 193). Estado de modulo solo es estado de proceso, y el auditor sella con el
+# CLI: cada corrida nacia con la bitacora vacia. Ahora se persiste en el FICHERO
+# DEL TURNO, se carga al importar y se reescribe en cada toque.
 _BITACORA = []
-_SELLADO = {"hecho": False, "ruta": None}
+_SELLADO = {"hecho": False, "ruta": None, "vuelta": None}
 _CLASES = {"escritas": False, "ruta": None}
+
+# EL FICHERO DEL TURNO. Va en una variable de modulo, y no clavado dentro de las
+# funciones, PARA QUE LOS ARNESES LO PUEDAN REDIRIGIR A UN TEMPORAL: un arnes que
+# escribiera en la sede de verdad ensuciaria el turno del auditor.
+RUTA_DEL_TURNO = os.path.join(LOOP, "_TURNO_DEL_AUDITOR.json")
+
+
+def _guardar_turno():
+    """ESCRIBE EL ESTADO DEL TURNO EN SU FICHERO. No levanta: si no se puede
+    escribir, el turno sigue funcionando en memoria y la guarda del disco (la
+    `b`) sigue mordiendo, porque esa mira los SELLOS y no este fichero."""
+    try:
+        io.open(RUTA_DEL_TURNO, "w", encoding="utf-8", newline=NL).write(
+            json.dumps({"bitacora": list(_BITACORA),
+                        "sellado": dict(_SELLADO),
+                        "clases": dict(_CLASES)},
+                       ensure_ascii=False, indent=1) + NL)
+    except Exception:                                    # noqa: BLE001
+        pass
+
+
+def _cargar_turno():
+    """CARGA EL ESTADO DEL TURNO DE SU FICHERO, si existe. Devuelve True si
+    cargo algo. **Se llama al importar el modulo**, que es lo que hace que los
+    toques de una corrida los vea la siguiente."""
+    if not os.path.exists(RUTA_DEL_TURNO):
+        return False
+    try:
+        d = json.load(io.open(RUTA_DEL_TURNO, encoding="utf-8"))
+    except Exception:                                    # noqa: BLE001
+        return False
+    del _BITACORA[:]
+    _BITACORA.extend(d.get("bitacora") or [])
+    _SELLADO.update(d.get("sellado") or {})
+    _CLASES.update(d.get("clases") or {})
+    return True
+
+
+def sello_en_disco(vuelta, base=None):
+    """LA RUTA DEL SELLO DE UNA VUELTA SI YA EXISTE EN DISCO, o cadena vacia.
+
+    **ES LA GUARDA `b` DE LA TAREA 4 DE LA VUELTA 193, Y MIRA EL DISCO Y NO LA
+    MEMORIA**: `_SELLADO` moria con el proceso, asi que un turno en un proceso
+    nuevo reescribia el sello publicando `prohibidos antes del sello: 0`. Un
+    sello no se reescribe, y ahora eso vale entre procesos y no solo dentro de
+    uno."""
+    ruta = os.path.join(base or LOOP, "SELLO_APERTURA_AUDITOR_V%s.json" % vuelta)
+    return ruta if os.path.exists(ruta) else ""
 
 
 def bitacora():
@@ -142,6 +238,7 @@ def apuntar(que):
     """APUNTA UN TOQUE. Se llama ANTES de hacer la cosa, no despues: si la cosa
     revienta, el toque igual paso."""
     _BITACORA.append(que)
+    _guardar_turno()
     return que
 
 
@@ -159,8 +256,16 @@ def olvidar_todo():
     del _BITACORA[:]
     _SELLADO["hecho"] = False
     _SELLADO["ruta"] = None
+    _SELLADO["vuelta"] = None
     _CLASES["escritas"] = False
     _CLASES["ruta"] = None
+    # Y BORRA EL FICHERO DEL TURNO, porque si no lo borrara el olvido seria a
+    # medias: la memoria limpia y el disco sucio.
+    try:
+        if os.path.exists(RUTA_DEL_TURNO):
+            os.remove(RUTA_DEL_TURNO)
+    except Exception:                                    # noqa: BLE001
+        pass
 
 
 def git_log(*args):
@@ -217,6 +322,26 @@ def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
     correrlo sin poder sellarlo seria producir una ciega que nadie puede citar."""
     informe = []
     w = informe.append
+    base = dir_salida or LOOP
+
+    # LA GUARDA DE DISCO (vuelta 193, TAREA 4.b). VA ANTES DE `puede_sellar()` A
+    # PROPOSITO: `puede_sellar()` mira la MEMORIA, y la memoria muere con el
+    # proceso. Un sello YA ESCRITO en disco es la unica prueba que sobrevive, y
+    # reescribirlo borra la bitacora que lo acompanaba.
+    ya = sello_en_disco(vuelta, base)
+    if ya:
+        w("PUEDE SELLAR: NO")
+        w("   motivo: YA HAY SELLO EN DISCO para la vuelta %s, y un sello no se"
+          % vuelta)
+        w("   reescribe. Reescribirlo publicaria `prohibidos antes del sello: 0`")
+        w("   sobre una bitacora que el proceso nuevo no vio.")
+        w("   sello que ya existe: %s (%d bytes)"
+          % (os.path.relpath(ya, RAIZ).replace(os.sep, "/"), os.path.getsize(ya)))
+        w("   bitacora del turno hasta ahora: %s"
+          % (", ".join(bitacora()) if bitacora() else "(vacia)"))
+        w("ROJO: NO se corre el aislador y NO se escribe ningun sello.")
+        return False, informe
+
     ok, motivo = puede_sellar()
     w("PUEDE SELLAR: %s" % ("SI" if ok else "NO"))
     w("   motivo: %s" % motivo)
@@ -226,7 +351,6 @@ def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
         w("ROJO: NO se corre el aislador y NO se escribe ningun sello.")
         return False, informe
 
-    base = dir_salida or LOOP
     ciega = os.path.join(base, "_auditor_v%s_ciega_blind.txt" % vuelta)
     destape = os.path.join(base, "_auditor_v%s_ciega_reveal.txt" % vuelta)
     cmd = [sys.executable, os.path.join(RAIZ, "scripts", "loop",
@@ -269,6 +393,8 @@ def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
         json.dumps(sello, ensure_ascii=False, indent=1) + NL)
     _SELLADO["hecho"] = True
     _SELLADO["ruta"] = ruta
+    _SELLADO["vuelta"] = str(vuelta)
+    _guardar_turno()
     w("SELLO ESCRITO: %s (%d bytes)"
       % (os.path.relpath(ruta, RAIZ).replace(os.sep, "/"), os.path.getsize(ruta)))
     w("   ciega   %s -> %d bytes | sha256 %s"
@@ -384,6 +510,66 @@ def puede_declarar_clases():
     return True, "la bitacora esta limpia de destapes y el sello esta escrito"
 
 
+def puede_declarar_clases_con_sello(vuelta, base=None):
+    """(SI_PUEDE, MOTIVO), LEYENDO EL SELLO DEL DISCO Y NO DE LA MEMORIA.
+
+    **ES LA PIEZA `c` DE LA TAREA 4 DE LA VUELTA 193.** `puede_declarar_clases()`
+    mira `_SELLADO`, que es estado de MODULO: el auditor sella con el CLI, en un
+    proceso que termina, y en el siguiente respondia `NO: este turno no ha
+    sellado` **aunque el sello estuviera en disco**. Sin esto la cuarta puerta no
+    la podia usar nadie que sellara por CLI, o sea nadie.
+
+    **LO QUE NO SE AFLOJA:** la guarda de los destapes sigue siendo la de la
+    bitacora, y la bitacora ahora sobrevive al proceso. Si el turno destapo antes,
+    esto CAE igual."""
+    malos = destapes_antes_de_las_clases()
+    if malos:
+        return False, ("el turno destapo `clase` o `razon` de los puestos "
+                       "SELLADOS %d vez(ces) ANTES de escribir sus clases. EL "
+                       "SUJETO YA SE QUEMO." % len(malos))
+    if _CLASES["escritas"]:
+        return False, "este turno ya declaro sus clases: no se declaran dos veces"
+    ruta = sello_en_disco(vuelta, base)
+    if not ruta:
+        return False, ("no hay sello en disco para la vuelta %s. Sin sello no hay "
+                       "sujeto, y sin sujeto no hay clases que declarar" % vuelta)
+    return True, ("la bitacora esta limpia de destapes y el sello de la vuelta %s "
+                  "esta en disco: %s"
+                  % (vuelta, os.path.relpath(ruta, RAIZ).replace(os.sep, "/")))
+
+
+def declarar_clases_con_sello(ruta_clases, vuelta, base=None):
+    """MARCA LAS CLASES ESCRITAS LEYENDO EL SELLO DE DISCO. Devuelve
+    (ok, informe). Gemelo de `declarar_clases_escritas()` para el carril del
+    CLI, que es el que el auditor usa de verdad."""
+    informe = []
+    w = informe.append
+    ok, motivo = puede_declarar_clases_con_sello(vuelta, base)
+    w("PUEDE DECLARAR LAS CLASES (leyendo el sello de DISCO): %s"
+      % ("SI" if ok else "NO"))
+    w("   motivo: %s" % motivo)
+    w("   bitacora del turno hasta ahora: %s"
+      % (", ".join(bitacora()) if bitacora() else "(vacia)"))
+    w("   destapes apuntados: %d" % len(destapes_antes_de_las_clases()))
+    if not ok:
+        w("ROJO: NO se marca nada. La ciega de este turno NO se puede citar.")
+        return False, informe
+    if not os.path.exists(ruta_clases):
+        w("ROJO: %s no existe. Unas clases que no estan escritas no se declaran."
+          % ruta_clases)
+        return False, informe
+    _CLASES["escritas"] = True
+    _CLASES["ruta"] = ruta_clases
+    _SELLADO["hecho"] = True
+    _SELLADO["ruta"] = sello_en_disco(vuelta, base)
+    _SELLADO["vuelta"] = str(vuelta)
+    _guardar_turno()
+    w("CLASES DECLARADAS: %s (%d bytes)"
+      % (ruta_clases, os.path.getsize(ruta_clases)))
+    w("   desde aqui, destapar el sujeto ya no quema nada.")
+    return True, informe
+
+
 def declarar_clases_escritas(ruta_clases):
     """MARCA QUE LAS CLASES DEL AUDITOR ESTAN ESCRITAS. Devuelve (ok, informe).
 
@@ -408,6 +594,7 @@ def declarar_clases_escritas(ruta_clases):
         return False, informe
     _CLASES["escritas"] = True
     _CLASES["ruta"] = ruta_clases
+    _guardar_turno()
     w("CLASES DECLARADAS: %s (%d bytes)"
       % (ruta_clases, os.path.getsize(ruta_clases)))
     w("   desde aqui, destapar el sujeto ya no quema nada.")
@@ -426,6 +613,13 @@ def main():
     ap.add_argument("--clase")
     ap.add_argument("--estado", action="store_true",
                     help="imprime la bitacora y si se puede sellar, y no hace mas")
+    ap.add_argument("--declarar-clases", dest="declarar_clases",
+                    help="RUTA del fichero de clases del auditor. Lee el sello "
+                         "de DISCO y marca las clases escritas (vuelta 193, "
+                         "TAREA 4.c). Necesita --vuelta")
+    ap.add_argument("--olvidar-turno", action="store_true",
+                    help="borra el fichero del turno. Es un ACTO y se dice: "
+                         "quien lo corra empieza con la bitacora limpia")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     print("=" * 78)
@@ -436,6 +630,26 @@ def main():
     print("   Y LA CUARTA PUERTA, ANTES DE LAS CLASES: %s, campos %s"
           % (ARCHIVO_DE_VEREDICTOS,
              ", ".join(repr(c) for c in CAMPOS_QUE_DESTAPAN)))
+    print("   FICHERO DEL TURNO: %s (%s)"
+          % (os.path.relpath(RUTA_DEL_TURNO, RAIZ).replace(os.sep, "/"),
+             "existe, %d bytes" % os.path.getsize(RUTA_DEL_TURNO)
+             if os.path.exists(RUTA_DEL_TURNO) else "no existe todavia"))
+    if a.olvidar_turno:
+        olvidar_todo()
+        print("   FICHERO DEL TURNO BORRADO. La bitacora empieza limpia, Y ESO ES")
+        print("   UN ACTO: el sello que hubiera en disco NO se borra, y la guarda")
+        print("   de `sellar()` sigue mordiendo porque mira el disco.")
+        return 0
+    if a.declarar_clases:
+        if not a.vuelta:
+            print("   ROJO: --declarar-clases necesita --vuelta para saber que")
+            print("   sello leer del disco.")
+            return 1
+        ok, informe = declarar_clases_con_sello(a.declarar_clases, a.vuelta)
+        for l in informe:
+            print("   " + l)
+        print("   VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
+        return 0 if ok else 1
     if a.estado:
         ok, motivo = puede_sellar()
         print("   bitacora: %s" % (", ".join(bitacora()) or "(vacia)"))
@@ -459,6 +673,13 @@ def main():
         print("   " + l)
     print("   VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
     return 0 if ok else 1
+
+
+# LA CARGA AL IMPORTAR (vuelta 193, TAREA 4.a). VA AQUI, AL FINAL Y FUERA DE
+# `main()`, PORQUE TIENE QUE CORRER TAMBIEN CUANDO EL MODULO SE IMPORTA: el turno
+# del auditor pasa por `import apertura_del_auditor`, no solo por el CLI. Si el
+# fichero no existe, no hace nada y el turno empieza limpio.
+_CARGADO_DEL_DISCO = _cargar_turno()
 
 
 if __name__ == "__main__":

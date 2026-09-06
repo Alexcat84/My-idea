@@ -1,0 +1,81 @@
+==============================================================================
+VUELTA 193, TAREA 4.e: EL SELLO NO SE REESCRIBE, NI SIQUIERA EN OTRO
+PROCESO
+==============================================================================
+
+LO QUE SE PRUEBA Y POR QUE PUEDE CAER: cada paso corre en un PROCESO
+NUEVO de verdad, lanzado con subprocess. El estado de modulo muere entre
+ellos por construccion, asi que si la bitacora o el sello sobreviven es
+porque el fichero del turno los llevo, y no porque el arnes se lo crea.
+
+A) PROCESO 1: EL TURNO TOCA `REPORTE.md`
+   entra con la bitacora vacia                                    VERDE
+   y sale con el toque apuntado                                   VERDE
+   el fichero del turno quedo escrito                             VERDE
+
+B) PROCESO 2, NUEVO Y DISTINTO: LA BITACORA TIENE QUE SOBREVIVIR
+   (ESTE ES EL CASO QUE CAIA. Antes de la 193 el proceso nuevo nacia
+    con la bitacora VACIA y `puede_sellar()` decia SI)
+   el proceso nuevo VE el toque del proceso anterior              VERDE
+   y `puede_sellar()` dice NO                                     VERDE
+      motivo publicado: el turno ya toco 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello escrito ahor
+   LA MUTACION: si la bitacora NO sobreviviera, el proceso nuevo
+   entraria vacio y `puede_sellar()` diria SI
+      LA MUTACION CAE: entro con ['REPORTE.md'], que es el toque del proceso
+      anterior, y por eso no puede sellar.
+
+C) PROCESO 3: INTENTA SELLAR CON LA BITACORA SUCIA, EN OTRO PROCESO
+   sellar() CAE EN ROJO                                           VERDE
+   y NO escribio ningun sello                                     VERDE
+      | PUEDE SELLAR: NO
+      |    motivo: el turno ya toco 'REPORTE.md' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello e
+      |    bitacora del turno hasta ahora: REPORTE.md
+      | ROJO: NO se corre el aislador y NO se escribe ningun sello.
+
+D) SE LIMPIA EL TURNO Y SE SELLA BIEN, PARA TENER UN SELLO DE VERDAD
+   EL SELLO SE MONTA A MANO Y SE DICE: el aislador de verdad necesita
+   el archivo de veredictos, y este arnes NO lo fabrica ni lo toca. Lo
+   que aqui se prueba es la guarda de DISCO, y para eso basta con que
+   el fichero del sello EXISTA.
+   el sello fabricado existe                                      VERDE
+
+E) EL CASO QUE EL ENCARGO NOMBRA: TOCAR UN PROHIBIDO EN UN PROCESO,
+   Y EN OTRO PROCESO VOLVER A SELLAR CON EL SELLO YA EN DISCO
+   el proceso toca `REPORTE.md`                                   VERDE
+   EL SELLO NO SE REESCRIBE: sellar() CAE                         VERDE
+   y el motivo que publica es el del DISCO                        VERDE
+      | PUEDE SELLAR: NO
+      |    motivo: YA HAY SELLO EN DISCO para la vuelta MUT193, y un sello no se
+      |    reescribe. Reescribirlo publicaria `prohibidos antes del sello: 0`
+      |    sobre una bitacora que el proceso nuevo no vio.
+   LA MUTACION: si la guarda mirara solo la MEMORIA, este proceso
+   nuevo la encontraria limpia de sello y reescribiria el fichero
+   publicando `prohibidos tocados antes del sello: 0`
+      LA MUTACION CAE: no se reescribio, y el motivo nombra el
+      disco y no la memoria.
+
+F) LA PIEZA `c`: EL CARRIL QUE DECLARA CLASES LEYENDO EL SELLO DE
+   DISCO, CORRIDO EN UN PROCESO QUE NO SELLO
+   un proceso que NO sello puede declarar sus clases              VERDE
+      | PUEDE DECLARAR LAS CLASES (leyendo el sello de DISCO): SI
+      |    motivo: la bitacora esta limpia de destapes y el sello de la vuelta MUT193 esta en disco: (EL TEMPORAL DEL 
+      |    bitacora del turno hasta ahora: (vacia)
+   LA MUTACION: sin el sello en disco tiene que CAER, o estaria
+   dejando declarar clases de un sujeto que nadie aisló
+   sin sello en disco, declarar CAE                               VERDE
+      LA MUTACION CAE: sin sello no hay sujeto, y lo dice.
+
+G) Y EL DESTAPE SIGUE QUEMANDO ENTRE PROCESOS: LA GUARDA VIEJA NO SE
+   AFLOJA
+   con un destape apuntado en OTRO proceso, declarar CAE          VERDE
+      | PUEDE DECLARAR LAS CLASES (leyendo el sello de DISCO): NO
+      |    motivo: el turno destapo `clase` o `razon` de los puestos SELLADOS 1 vez(ces) ANTES de escribir sus clases.
+      |    bitacora del turno hasta ahora: veredictos:destape
+
+H) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
+   (su nombre NO se imprime: `mkdtemp` lo fabrica aleatorio y esta
+    salida se sella y se compara byte a byte)
+   el temporal quedo retirado                                     VERDE
+   y el turno del auditor DE VERDAD no se toco                    VERDE
+
+VEREDICTO: VERDE

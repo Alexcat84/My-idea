@@ -98,7 +98,7 @@ tabla tallada entera cuando la vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 193 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Registra LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, las diez A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 192 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3` contestadas), OTRA VEZ CERO EN CONTRA; LOS CUATRO HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la cuarta puerta que no se puede usar desde el CLI, `5.2` el cotejo que convierte `"no"` en `si`, `5.3` el arnes que imprime su `mkdtemp` en la salida sellada, `5.4` el reporte que se contradice en la cuenta del `DESFASE DECLARADO`); UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE NO ACUMULA (la seccion 5.5 publica 3 donde hay 4 y donde su propia seccion 0 dice 4: se registra con su nombre, dispara la relectura al doble y NO acumula por la letra del 27 ago 2026, RACHA DE REPORTE 0); UNA CAIDA PROPIA DEL AUDITOR, DE METODO (`C.1`, correr `run_phase1.py` sin `--reaplico-curaduria` y ensuciar `dataset/`); y LA METRICA DE CREDITO de la seccion 7 con la fila de puestos y su nota: 30 aislados y 30 cotejados, CERO quemados, SOLAPE TOTAL a proposito, o sea control y no cobertura nueva. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA EN VERDE** | `SALIDA_V193_T1A_REGISTRO_R55.txt`, `SALIDA_V193_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V193_T1A_MUTACION_REGISTRADOR.txt` |
 | **TAREA 2** | LOS TRES ARNESES QUE NO REPRODUCEN, ANTES DE LA BATERIA DE LA 194. BLOQUEANTE Y LA MAS URGENTE DE LA VUELTA. Es la adjudicacion `4.10` y el hallazgo `5.3` del acta 193, medido en `docs/loop/_auditor_v193_reproducibilidad.txt`: los tres REPRODUCEN entre dos corridas de hoy y NINGUNO contra su sellada. (a) LOS DOS PRIMEROS (`vuelta191_tarea3_mutacion_lineas.py` y `vuelta191_tarea6_mutacion_bloque_tallado.py`): CONGELAR SU SUJETO o DECLARAR EL CASO por el carril de los `CASO DECLARADO`, porque la `4.4` del acta 191 dice que `SUJETO VIVO` es FALLO y no deuda y la `4.10` cierra la salida que quedaba: una salida que no reproduce NO ES DEL MISMO CALIBRE, tenga o no tenga motivo escrito. (b) EL TERCERO (`guarda_de_entrada_a_la_nomina.py`): que su salida sellada NO lleve el nombre del directorio temporal; el directorio se sigue fabricando y se sigue retirando (`P.16`). (c) ARREGLAR LA GUARDA QUE NO LO VIO: `tempfile` y `mkdtemp` cuentan como huellas de CONGELADO y por eso da CONGELADO a un arnes cuya salida cambia en cada corrida; UNA HUELLA DE TEXTO NO PRUEBA REPRODUCCION. (d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes cuya salida no reproduce vuelve a salir CONGELADO. (e) NO SE TOCA LA NOMINA: la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada. (f) AL CERRAR, CORRER LOS TRES DOS VECES Y PUBLICAR SUS BYTES Y SUS `sha256`; si alguno sigue sin reproducir, SE PARA Y SE TRAE | **CERRADA EN VERDE, Y CON UN CUARTO CASO QUE EL ACTA NO TRAIA** | `SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt`, `SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`, y los cuatro cortes viejos `_CORTE_191`/`_CORTE_192` |
 | **TAREA 3** | LA VARA DE LAS CIEGAS PASA A SER LA DEL BANCO, Y EL DOBLE SE LEE CON ELLA. Es la adjudicacion `4.9` del acta 193, que contesta la `P.3` a favor. No es doctrina nueva: la vara ya esta escrita en `docs/BANCO_DE_TEXTOS.md` `9.6.1`, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, propuesta y adoptada el 12 ago 2026. (a) ESCRIBIR EL CRITERIO DE LA CIEGA CITANDO `9.6.1` POR NUMERO, con la frase de la vara copiada LITERAL y no parafraseada (`9.5.0`), y que sea el criterio que se le pasa a `aislador_de_ciega.py` de aqui en adelante. (b) LA RELECTURA AL DOBLE DEL TRAMO DE LA 192, que es la deuda de credito de la tanda del auditor y la encarga el auditor, que es donde `AUDITOR.md` 1.2 la pone, CON MOTIVO TRIPLE: dos discrepancias cayeron fuera del marcado del auditor, las dos cayeron tambien fuera del marcado del ejecutor, y son el mismo par para los dos lectores. (c) EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`, que son los mismos 30 de la ciega del auditor `docs/loop/_auditor_v193_ciega_blind.txt`. (d) AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada, con `evitar` cargado con TODO lo consumido, CONTADO DE SUS FICHEROS Y NO DEL ENCARGO, y con el solape contra el tramo y contra el universo en 0 y 0 POR CONSTRUCCION. (e) criterio escrito literal, ciega y destape en ficheros SEPARADOS, clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y dudosos NOMBRADOS DELANTE. (f) PUBLICAR LO QUE LA VARA NUEVA CAMBIA: cuantos dudosos y cuantas discrepancias habrian salido distinto con `9.6.1`, y si no cambia nada, DECIRLO. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos convenciones | **CERRADA, Y LA VARA NUEVA NO ALCANZA A LA MITAD DE MIS DISCREPANCIAS** | `SALIDA_V193_T3_AISLAMIENTO.txt`, `SALIDA_V193_T3_MIS_CLASES.txt` (commit b57aa7d6), `SALIDA_V193_T3_COTEJO.txt`, `SALIDA_V193_T3_COTEJO_SALIDA.txt`, `SALIDA_V193_T3F_QUE_CAMBIA_LA_VARA.txt` |
-| **TAREA 4** | LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. Es el hallazgo `5.1` del acta 193, levantado por el auditor CONTRA EL FICHERO QUE LE PROTEGE Y QUE EL EJECUTOR ESCRIBIO PARA EL EN LA 192, y medido en `docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`: `_BITACORA` y `_SELLADO` son estado de MODULO y mueren con el proceso, el auditor sella con el CLI, y en el proceso siguiente `puede_declarar_clases()` responde `NO: este turno no ha sellado` aunque el sello este en disco. Y LA MITAD MAS SERIA ES SOBRE LAS TRES PUERTAS VIEJAS: el docstring afirma que el sello no se pueda escribir despues, y un turno que toca `REPORTE.md` y arranca otro proceso vuelve a sellar con bitacora vacia porque `sellar()` SOBRESCRIBE. (a) QUE LA BITACORA Y EL SELLO SOBREVIVAN AL PROCESO, en un fichero del turno. (b) QUE `sellar()` CAIGA EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA, en vez de sobrescribirlo. (c) QUE EL CLI PUEDA DECLARAR LAS CLASES, con su bandera, leyendo el sello de disco. (d) Y SI ALGO NO SE PUEDE, DECIRLO EN EL DOCSTRING en vez de afirmar lo contrario, que esa frase vive en sede de cifra publicada desde el 2 sep 2026. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un sello se puede reescribir despues de tocar uno de los tres prohibidos en otro proceso. (f) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y se le anade. (g) RE CORRER SU ARNES DE LA NOMINA CON EL PARCHE PUESTO Y COMPROBAR QUE REPRODUCE BYTE A BYTE; hoy da 4282 bytes y `sha256` `4779fcd04bc5b2da` | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. Es el hallazgo `5.1` del acta 193, levantado por el auditor CONTRA EL FICHERO QUE LE PROTEGE Y QUE EL EJECUTOR ESCRIBIO PARA EL EN LA 192, y medido en `docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`: `_BITACORA` y `_SELLADO` son estado de MODULO y mueren con el proceso, el auditor sella con el CLI, y en el proceso siguiente `puede_declarar_clases()` responde `NO: este turno no ha sellado` aunque el sello este en disco. Y LA MITAD MAS SERIA ES SOBRE LAS TRES PUERTAS VIEJAS: el docstring afirma que el sello no se pueda escribir despues, y un turno que toca `REPORTE.md` y arranca otro proceso vuelve a sellar con bitacora vacia porque `sellar()` SOBRESCRIBE. (a) QUE LA BITACORA Y EL SELLO SOBREVIVAN AL PROCESO, en un fichero del turno. (b) QUE `sellar()` CAIGA EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA, en vez de sobrescribirlo. (c) QUE EL CLI PUEDA DECLARAR LAS CLASES, con su bandera, leyendo el sello de disco. (d) Y SI ALGO NO SE PUEDE, DECIRLO EN EL DOCSTRING en vez de afirmar lo contrario, que esa frase vive en sede de cifra publicada desde el 2 sep 2026. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un sello se puede reescribir despues de tocar uno de los tres prohibidos en otro proceso. (f) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y se le anade. (g) RE CORRER SU ARNES DE LA NOMINA CON EL PARCHE PUESTO Y COMPROBAR QUE REPRODUCE BYTE A BYTE; hoy da 4282 bytes y `sha256` `4779fcd04bc5b2da` | **CERRADA EN VERDE** | `SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt`, `SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt` (4282 bytes, `4779fcd04bc5b2da`, dos corridas) |
 | **TAREA 5** | EL COTEJO QUE NO CONVIERTA `"no"` EN `si`. Es el hallazgo `5.2` del acta 193. `cuerpo_del_cotejo()` de `scripts/loop/cotejo_de_ciega.py` hace `bool(du)`, y `bool("no")` es `True`; el docstring especifica esa columna como `en dudosos` . `si` o `no`, que es justo la forma que revienta, y el instrumento publico al auditor `discrepancias FUERA de los dudosos: 0 (ninguna)` TENIENDO DOS. LA CIFRA PUBLICADA DEL EJECUTOR NO ESTA AFECTADA: `vuelta192_tarea2b_cotejo.py` linea 145 pasa `p in dudosos`, un booleano de verdad. IMPORTA MAS QUE UNA ERRATA porque la columna `en dudosos` es la unica del fichero de la que cuelga una regla de parada: `AUDITOR.md` 1.2 baja el credito y encarga el doble POR LO QUE CAE FUERA. (a) QUE `en_dudosos` SE NORMALICE O CAIGA, y no se resuelva en silencio, con la misma vara que el caso `G` de la mutacion ya le aplica a `veredicto_de`. (b) QUE LA GUARDA DE `escribir_cotejo()` MIRE ALGO MAS QUE EL DENOMINADOR, o que diga en su salida que no es la sede de esta comprobacion. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un `en_dudosos` no booleano se convierte en `si` sin avisar. (d) RE ESCRIBIR EL COTEJO DEL AUDITOR CON EL INSTRUMENTO ARREGLADO y comprobar que da lo que el publica a mano: 30 cotejados, 25 coinciden, 5 discrepan, 3 dentro y 2 fuera. (e) `cotejo_de_ciega.py` NACIO EN LA 192 Y ENTRA EN LA NOMINA POR LA REGLA DEL PROPIO FICHERO: tocarlo ahora es ANTES de que entre, y eso es a favor y no en contra | **CERRADA EN VERDE** | `SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt`, `SALIDA_V193_T5D_REHACER_COTEJO.txt`, `SALIDA_V193_T5D_COTEJO_AUDITOR_REHECHO.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -441,5 +441,81 @@ una entrada de la nomina.**
 **Y EL CORTE VIEJO NO SE BORRA:** queda en
 `docs/loop/SALIDA_V192_T5_MUTACION_FORMATO_COTEJO_CORTE_192.txt`, con su nombre y
 su vuelta.
+
+### TAREA 4. LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. **CERRADA EN VERDE.**
+
+**a) LA BITACORA Y EL SELLO SOBREVIVEN AL PROCESO**, en el fichero del turno
+`docs/loop/_TURNO_DEL_AUDITOR.json`, que **se carga al IMPORTAR el modulo** (no
+solo en el CLI: el turno del auditor pasa por `import apertura_del_auditor`) y se
+reescribe en cada toque. `apuntar()`, `sellar()` y las dos funciones de clases
+persisten; `olvidar_todo()` **tambien borra el fichero**, porque un olvido que
+deja la memoria limpia y el disco sucio es un olvido a medias.
+
+**b) `sellar()` CAE EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA.** La guarda
+nueva, `sello_en_disco()`, **va ANTES de `puede_sellar()` a proposito**:
+`puede_sellar()` mira la MEMORIA, y la memoria muere con el proceso. **El sello ya
+escrito es la unica prueba que sobrevive**, y reescribirlo borra la bitacora que
+lo acompanaba.
+
+**c) EL CLI PUEDE DECLARAR LAS CLASES, con `--declarar-clases RUTA --vuelta N`**,
+leyendo el sello **de disco** por `puede_declarar_clases_con_sello()`. Sin esto la
+cuarta puerta no la podia usar nadie que sellara por CLI, o sea nadie. **Y no se
+afloja la guarda vieja:** la de los destapes sigue siendo la de la bitacora, y la
+bitacora ahora sobrevive al proceso. Se anade tambien `--olvidar-turno`, que borra
+el fichero **y lo dice**: es un acto, no un descuido.
+
+**d) LA FRASE QUE PROMETIA LO QUE NO HACIA YA NO ESTA SOLA EN EL DOCSTRING.** El
+literal *"el sello, que es lo que el acta cita como prueba, no se pueda escribir
+despues"* **se conserva** (una correccion que tapa lo que corrige no se puede
+auditar) y debajo va una seccion nueva que dice **que era falso fuera de un mismo
+proceso, con la prueba del auditor citada por su ruta**, que ahora es cierto, y
+**que sigue sin poderse**: el fichero del turno se puede borrar a mano (y quien lo
+borre empieza limpio, **pero el sello en disco sigue estando y la guarda `b`
+muerde igual**); el fichero del turno no sabe de que vuelta es hasta que se sella;
+y sigue sin saber si lo leido era del sujeto cuando el archivo se abre por fuera.
+
+**e) EL CASO POSITIVO POR MUTACION, Y ES DE OTRA ESPECIE QUE EL DE LA 192.**
+`scripts/loop/vuelta193_tarea4e_mutacion_sello_entre_procesos.py`, salida en
+`docs/loop/SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt` (4613 bytes,
+**VEREDICTO: VERDE**). **Por que hacia falta uno nuevo y no bastaba el de la 192:
+aquel corre todos sus escenarios DENTRO DE UN MISMO PROCESO, y ahi la guarda vieja
+SI mordia. El agujero vivia justo en la costura que aquel arnes no cruzaba.** Este
+**lanza procesos de verdad con `subprocess`**, que es la unica forma de probar que
+el estado sobrevive. Sus mutaciones, todas corridas:
+
+- el proceso 2 **VE** el `REPORTE.md` que apunto el proceso 1, y `puede_sellar()`
+  dice **NO**. **Si la bitacora no sobreviviera, entraria vacio y diria SI.**
+- el caso que el encargo nombra: tocar un prohibido en un proceso y **en otro
+  proceso volver a sellar con el sello ya en disco**. `sellar()` **CAE**, y el
+  motivo que publica **nombra el DISCO y no la memoria**.
+- el carril `c` **deja declarar clases a un proceso que no sello**, y **CAE sin
+  sello en disco**: sin sello no hay sujeto.
+- y **el destape sigue quemando entre procesos**: con un `veredictos:destape`
+  apuntado en otro proceso, declarar **CAE**.
+
+**Su sujeto esta CONGELADO:** todo se fabrica en un `mkdtemp` y se retira; **no
+toca `docs/loop/`, no toca el turno del auditor de verdad** (se comprueba al
+cerrar) y **no imprime el nombre del temporal**, que se tapa con
+`sin_el_temporal()` incluso cuando se cuela dentro de los informes que el modulo
+devuelve. **Corrido dos veces da 4613 bytes y `sha256` `10c2d2d1e9eb06ce` las
+dos.**
+
+**Y UNA COSA QUE ESTE ARNES DECLARA EN VEZ DE DISIMULAR:** el sello del bloque `D`
+**se monta a mano**, porque el aislador de verdad necesita el archivo de
+veredictos y este arnes no lo fabrica ni lo toca. Lo que ahi se prueba es la
+guarda de DISCO, y para eso basta con que el fichero del sello exista. Va escrito
+dentro de la propia salida.
+
+**f) NO SE CLONO EL FICHERO.** `apertura_del_auditor.py` tiene nombre estable y se
+le anadio: cuatro funciones nuevas (`_guardar_turno`, `_cargar_turno`,
+`sello_en_disco`, `puede_declarar_clases_con_sello`, `declarar_clases_con_sello`),
+dos banderas de CLI y una seccion de docstring. **No hay una version 2.**
+
+**g) SU ARNES DE LA NOMINA RE CORRIDO CON EL PARCHE PUESTO, Y REPRODUCE BYTE A
+BYTE.** `vuelta192_tarea4_mutacion_cuarta_puerta.py` corrido **dos veces** con
+este parche en el arbol: **4282 bytes y `sha256` `4779fcd04bc5b2da` las dos**,
+**exactamente lo que el encargo pide**, con **VEREDICTO: VERDE**. **NO HAY
+PARADA.** Y `git status` no deja el fichero del turno tirado: el arnes lo limpia
+con `olvidar_todo()`, que es lo que ese metodo hace ahora.
 
 <!-- FIN ANEXO DE TAREAS -->
