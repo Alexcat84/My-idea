@@ -1,0 +1,91 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL CARRIL DE CIERRE TARDIO
+(vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
+Aqui no se escribe ningun reporte y no se toca docs/loop/REPORTE.md.
+
+CASO A. LA CONDICION DEL CARRIL, QUE SE COMPUTA Y NO SE PASA POR BANDERA
+   la vuelta en curso es la del reporte       reporte 186   curso 186   -> False | esperado False | CALZA
+      MUTACION del esperado (exigir True): CAE
+   la vuelta en curso es POSTERIOR            reporte 184   curso 186   -> True  | esperado True  | CALZA
+      MUTACION del esperado (exigir False): CAE
+   la vuelta en curso es ANTERIOR             reporte 186   curso 184   -> True  | esperado True  | CALZA
+      MUTACION del esperado (exigir False): CAE
+   la vuelta en curso NO SE PUDO LEER         reporte 184   curso None  -> False | esperado False | CALZA
+      MUTACION del esperado (exigir True): CAE
+   la vuelta del reporte es None              reporte None  curso 186   -> False | esperado False | CALZA
+      MUTACION del esperado (exigir True): CAE
+
+CASO B. CIFRAS SIN PAREJA EN CARRIL NORMAL: BLOQUEAN
+   CIFRA cifras sin pareja medidas sobre el texto fabricado: 3
+      linea 15   bytes 1234                     | El fichero mide 1234 bytes.
+      linea 16   bytes 5678                     | Y el otro mide 5678 bytes.
+      linea 17   sha   abcdef0123456789abcdef01 | Su sha256 es abcdef0123456789abcdef01.
+   carril: NORMAL | bloquea: True
+   ESPERADO: bloquea -> CALZA
+   MUTACION del esperado (exigir que NO bloquee): CAE
+
+CASO C. LAS MISMAS EN CARRIL TARDIO: NO BLOQUEAN Y APARECEN DECLARADAS
+   carril: TARDIO | bloquea: False
+   ESPERADO: NO bloquea -> CALZA
+   MUTACION del esperado (exigir que SI bloquee): CAE
+   LA DECLARACION, COTEJADA POR CONTENCION RENGLON A RENGLON:
+      la declaracion mide 1180 bytes en disco y 1180 normalizados a LF
+      linea 15     bytes 1234                     | El fichero mide 1234 bytes. -> ESTA
+      linea 16     bytes 5678                     | Y el otro mide 5678 bytes. -> ESTA
+      linea 17     sha   abcdef0123456789abcdef01 | Su sha256 es abcdef0123456789abcdef01. -> ESTA
+   CIFRA cifras sin pareja DECLARADAS en el texto: 3 de 3
+   ESPERADO: las 3 -> CALZA
+   MUTACION del esperado (exigir 4 declaradas): CAE
+   Y LA DECLARACION LLEVA SU CUENTA TOTAL:
+      'CIFRA cifras publicadas sin su pareja: 3' esta en la declaracion: SI
+      MUTACION del esperado (exigir la cuenta 4): CAE
+   Y LA DECLARACION VA DENTRO DE UNA CERCA, ASI QUE NO SE ACUSA A SI MISMA:
+      CIFRA cifras sin pareja del texto CON la declaracion pegada: 3
+      ESPERADO: las mismas 3, ni una mas -> CALZA
+      MUTACION del esperado (exigir 4): CAE
+
+CASO D. CERO CIFRAS SIN PAREJA EN CARRIL TARDIO: LA DECLARACION DICE CERO
+        Y NO SE OMITE
+   CIFRA cifras sin pareja del texto limpio: 0
+   la declaracion se escribe igual: SI, 1010 bytes
+   y dice CERO con todas las letras: SI
+   MUTACION del esperado (exigir que la declaracion se omita): CAE
+
+CASO E. EL CARRIL TARDIO NO AFLOJA NINGUNA DE LAS CUATRO PIEZAS
+   (y la prueba mas fuerte es de forma: piezas_que_faltan() NI SIQUIERA
+    TIENE un parametro de carril, asi que no puede saber en cual esta)
+   parametros de piezas_que_faltan(): texto, filas_tallador, lineas_bateria, vuelta, nombre_bateria, tramos_sellados_en_esta_vuelta
+   ninguno nombra el carril: SI
+   MUTACION del esperado (exigir que SI tenga uno): CAE
+
+   Y LAS CUATRO, ROTAS UNA A UNA, CON LA MISMA LLAMADA QUE HACE main():
+      (1) sin veredicto escrito                      -> (1) el veredicto de una linea no esta escrito
+         MUTACION del esperado (exigir que NO la acuse): CAE
+      (2) con el hueco de cabecera fuera de cerca    -> (2) el hueco de la cabecera sigue sin rellenar
+         MUTACION del esperado (exigir que NO la acuse): CAE
+      (2) con las filas del tallador sin pegar       -> (2) 9 fila(s) de la cabecera tallada no estan pegadas
+         MUTACION del esperado (exigir que NO la acuse): CAE
+      (3) sin la seccion 5                           -> (3) faltan las secciones 5
+         MUTACION del esperado (exigir que NO la acuse): CAE
+      (4) sin la seccion 9                           -> (4) no hay seccion 9 donde meter la bateria
+         MUTACION del esperado (exigir que NO la acuse): CAE
+
+   Y LAS OTRAS TRES COMPROBACIONES DEL BLOQUE D TAMPOCO SE AFLOJAN: el
+   cuerpo byte a byte, los guiones y las citas de arnes bloquean en LOS DOS
+   carriles, y eso esta escrito en main() como una columna `bloquea` que
+   solo la de las cifras sin pareja pone a `not tardio`. Aqui se cuenta:
+      CIFRA apariciones de `not tardio` en el instrumento: 2
+      ESPERADO exactamente 1 -> NO CALZA
+      MUTACION del esperado (exigir 2): PASA
+
+CIFRA casos: 18 | pasan: 16
+CIFRA casos que CAEN al mutar su esperado: 17 de 17
+CIFRA fallos: 2
+VEREDICTO: ROJO
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt (5043 bytes)
+
+EXITCODE: 1
