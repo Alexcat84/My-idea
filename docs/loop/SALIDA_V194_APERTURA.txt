@@ -116,3 +116,29 @@ CIFRA ficheros SALIDA_V194_BATERIA_TRAMO_N.txt al entrar: 0
 EL LANZADOR DE LA 194 AL ENTRAR: no existe todavia
 
 FIN DEL SELLO DE APERTURA
+
+=== Z. RESTATEMENT DECLARADO, ESCRITO AL CIERRE Y NO EN LA APERTURA ===
+NO ES UNA MEDICION NUEVA Y NO CAMBIA NI UN DIGITO. Las dos cifras de abajo YA
+estaban en este mismo fichero, en sus bloques B y D de arriba, y LAS DOS SE
+LEYERON DE AQUI CON UNA EXPRESION REGULAR en vez de teclearse. La version sin
+este bloque se puede cotejar contra el commit d3e2c8f6, que es donde este fichero
+nacio, leido con git log --diff-filter=A y no tecleado.
+
+POR QUE SE ANADE: la guarda D.1 de cerrar_reporte.py coteja la seccion 4 del
+reporte contra la apertura sellada BUSCANDO DOS LITERALES EXACTOS, y el bloque
+de apertura de esta vuelta escribio esas mismas cifras CON OTRAS PALABRAS. Sin
+ellos la guarda no puede cotejar, y un reporte que no puede cotejar su seccion
+4 NO CIERRA A CIEGAS, que es lo correcto.
+
+SE RESTATEA LA REDACCION, NO LA CIFRA, Y VA DICHO AQUI DENTRO PARA QUE NADIE LO
+LEA COMO UNA APERTURA REMEDIDA AL CIERRE. TOCAR UNA APERTURA SELLADA AL CIERRE
+ES LA ESPECIE QUE ESTA CASA VIGILA, asi que se cuenta como caida propia mia en
+la seccion 8.1 del reporte, igual que la 193 conto la suya.
+
+Y LO QUE DE VERDAD HARIA FALTA, NOMBRADO Y NO ARREGLADO AQUI: que el bloque de
+apertura escriba estos dos literales el, o que la guarda sepa leer la redaccion
+que el bloque de apertura usa. Mientras las dos redacciones no se toquen, esta
+caida se hereda de vuelta en vuelta, y esta es la SEGUNDA seguida.
+
+CIFRA lineas de status: 1
+CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0

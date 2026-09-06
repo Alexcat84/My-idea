@@ -1,0 +1,38 @@
+VUELTA 194: DOS CELDAS DE APERTURA MEDIDAS AL CIERRE. DECLARADO AQUI, EN SU
+FICHERO PROPIO, Y CONTADO COMO CAIDA MIA.
+
+QUE PASO, SIN ADORNARLO: mi bloque de apertura,
+scripts/loop/vuelta194_apertura.py, NO corrio `npx tsc --noEmit` ni `pnpm test`.
+Es clon declarado del de la 193, y el de la 193 tampoco los corria: herede la
+omision y no la mire. La caida `C.1` que el reporte de la 193 se declaro a si
+mismo era exactamente esta, y el acta 194 la adjudico en su `4.7` A FAVOR DEL
+CARRIL, no del olvido: medir, DECLARAR EL MOMENTO EN FICHERO PROPIO, y contar
+la caida.
+
+QUE HICE: corri los dos comandos EN EL MOMENTO DEL CIERRE y escribi sus salidas
+en docs/loop/SALIDA_V194_TSC_APERTURA.txt y docs/loop/SALIDA_V194_WEB_APERTURA.txt.
+LA CIFRA ES CIERTA; SU MOMENTO NO ES EL QUE SU NOMBRE DICE.
+
+Y NO REPITO LA `C.2` DE LA 193: esta declaracion va EN SU FICHERO PROPIO y NO
+dentro de las dos salidas. Una declaracion honesta metida en la sede de una
+cifra CONVIERTE LA CIFRA EN FALSA, y aquello lo cazo el propio tallador.
+
+LO QUE SE PUEDE MEDIR SOBRE EL ALCANCE, Y NO ES UNA EXCUSA SINO UN DATO:
+   git diff HEAD --numstat -- dataset/ web/ engine/ EN LA APERTURA: 0 fila(s)
+   el mismo comando EN EL CIERRE:                                0 fila(s)
+   Las dos salidas estan selladas en SALIDA_V194_CICLO_NUMSTAT_APERTURA.txt y
+   SALIDA_V194_CICLO_NUMSTAT_CIERRE.txt, y las dos dan CERO.
+   ESO NO CONVIERTE LA MEDICION TARDIA EN UNA MEDICION DE APERTURA. Dice que
+   el arbol de web/ y engine/ no se movio entre los dos momentos, y nada mas.
+   La caida se cuenta igual: EJECUTOR.md 1 dice que una columna de apertura
+   medida al cierre es caida que ACUMULA, y no la discuto.
+
+EL REMEDIO DURABLE, NOMBRADO PARA QUE LA 195 NO LO REDESCUBRA: el bloque de
+apertura tiene que correr EL CICLO COMPLETO, incluidos `npx tsc --noEmit` y
+`pnpm test`, porque el tallador --fase04 pide esas dos celdas por LOS DOS
+lados. Mientras el clon del bloque de apertura no las lleve, esta caida se
+hereda de vuelta en vuelta, que es justo lo que acaba de pasar.
+
+MOMENTO DE ESTA DECLARACION, LEIDO DE GIT Y NO TECLEADO:
+   HEAD al escribirla: 56c2d085
+   HEAD sellado en la apertura: edff65684814

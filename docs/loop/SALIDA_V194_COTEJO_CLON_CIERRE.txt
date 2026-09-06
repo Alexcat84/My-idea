@@ -1,0 +1,26 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta193_cierre.py
+  B: scripts/loop/vuelta194_cierre.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 193, 194
+  CIFRA lineas de docstring: A 26 | B 26
+  CIFRA lineas de maquina:   A 68 | B 68
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : IDENTICO
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : IDENTICO
+     CIFRA nodos del arbol sin docstring: A 540 | B 540
+     LOS DOS ARBOLES SON EL MISMO ARBOL. Lo que difiera en lineas o
+     en tokens NO CAMBIA LO QUE EL PROGRAMA HACE.
+
+LA MAQUINA NO CAMBIA EN NADA, Y ESTA MEDIDO Y NO AFIRMADO.
+  CIFRA lineas de maquina que difieren: 0
+
+FIN

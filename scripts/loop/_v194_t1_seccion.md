@@ -7,13 +7,16 @@ huecos**. El encargo adelantaba `R.56` y **CALZA**, y esa palabra la escribe el
 instrumento y no yo.
 
 **LA ENTRADA ESCRITA:** `R.56` en `docs/PENDIENTES.md`. Contada de
-`docs/loop/SALIDA_V194_T1A_REGISTRO_R56.txt`: **10486 bytes**, **181 lineas** por
-`count(NL)` y **182** por `split`, **0 guiones largos o medios**. La sede pasa de
-**1029096** a **1039583 bytes**, y la entrada se releyo del disco byte a byte.
+`docs/loop/SALIDA_V194_T1A_REGISTRO_R56.txt`:
+**10486 bytes en disco y 10486 bytes normalizado a LF**, **181 lineas** por
+`count(NL)` y **182** por `split`, **0 guiones largos o medios**. La sede
+`docs/PENDIENTES.md` pasa de **1029096 bytes** a **1039583 bytes**, y la entrada
+se releyo del disco byte a byte.
 
 **LA IDEMPOTENCIA NO SE AFIRMA: SE PROBO RE CORRIENDOLO**, con la sede medida en
 bytes antes y despues. Segunda corrida:
-`docs/loop/SALIDA_V194_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (12207 bytes), *"el acta
+`docs/loop/SALIDA_V194_T1A_RECORRIDO_SIN_ESCRIBIR.txt`
+(12207 bytes en disco y 12207 bytes normalizado a LF), *"el acta
 194 YA TIENE ENTRADA en la serie: 2 linea(s) la nombran. NO se escribe una entrada
 nueva y NO se consume el numero R.57."* **docs/PENDIENTES.md sigue en 1039583
 bytes**, la misma cifra por las dos medidas.
@@ -89,7 +92,8 @@ no es un solape: **el solape mide si dos lectores leen lo mismo; el quemado dice
 que uno de los dos ya sabia lo que el otro habia dicho antes de leer.**
 
 **EL CASO POSITIVO POR MUTACION, CORRIDO Y NO PROMETIDO:**
-`docs/loop/SALIDA_V194_T1A_MUTACION_REGISTRADOR.txt` (4074 bytes), **VEREDICTO:
+`docs/loop/SALIDA_V194_T1A_MUTACION_REGISTRADOR.txt`
+(4074 bytes en disco y 4074 bytes normalizado a LF), **VEREDICTO:
 VERDE**, con **27 casos, 27 pasan y 0 fallan**, cifra que ese mismo fichero
 publica de si mismo en su linea `CIFRA casos` y que por eso `cerrar_reporte.py`
 puede cotejar contra esta prosa. Cada trozo
