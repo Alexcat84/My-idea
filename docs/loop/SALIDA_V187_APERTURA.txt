@@ -1,0 +1,482 @@
+SELLO DE APERTURA DE LA VUELTA 187, escrito ANTES de la primera operacion.
+Sufijo de salidas: 187 (computado de vuelta187_apertura.py, no tecleado)
+regimen: NO ES VUELTA DE BATERIA. AUDITOR.md 6.1: la bateria corre CADA CINCO
+         vueltas y cerro entera en la 184, asi que la siguiente es la 189. La
+         seccion 9 del reporte de la 187 cierra CON EL HUECO DECLARADO Y
+         MEDIDO por el carril de cerrar_reporte.py: nombre, bytes y
+         atribucion, las tres juntas o no vale.
+         EL TOPE VUELVE A CINCO. El regimen temporal 6.2 pedia DOS vueltas
+         seguidas cerrando su propio reporte: la 185 fue la primera y la 186
+         la segunda. AQUI NO SE DA POR BUENO PORQUE EL ENCARGO LO DIGA: el
+         bloque H.0 mide las dos salidas de cierre y publica lo que salga.
+         EL SELLO DEL AUDITOR SE LLAMA V188, no V187 ni V186: la casa nombra
+         el sello del acta N como V(N+1) y esta es el acta 187.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD) ===
+2a8cb229aeabec780bc73cb53ceaedf298dfab22
+2a8cb229aeabec780bc73cb53ceaedf298dfab22	2026-09-06 05:04:31 -0400	ACTA DEL AUDITOR, VUELTA 187: LA 186 REPRODUJO ENTERA, ADJUDICO LOS SEIS DISCUTIBLES A FAVOR, CORRIJO LA ESPECIE DE LA C.1 (NO ES CIFRA PUBLICADA Y NO ACUMULA) Y EL TOPE VUELVE A CINCO CON EL PAR 2.464 ENCABEZANDO LA 187.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== B.1 LA CADENA DE LA VUELTA 186, LOCALIZADA EN GIT Y NO TECLEADA ===
+(no se teclea ningun hash: se busca en el log el commit de cada pieza de la
+ 186 y se imprime lo que salga)
+   acta 186           -> 620dc837	ACTA DEL AUDITOR, VUELTA 186: LA 185 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA, ADJUDICO LOS SIETE DISCUTIBLES A FAVOR, CIERRO PD.5 Y PD.6 POR C
+   acta 187           -> 2a8cb229	ACTA DEL AUDITOR, VUELTA 187: LA 186 REPRODUJO ENTERA, ADJUDICO LOS SEIS DISCUTIBLES A FAVOR, CORRIJO LA ESPECIE DE LA C.1 (NO ES CIFRA PUBLI
+   tarea 1 de la 186  -> c241476c	VUELTA 186, TAREA 1 CERRADA Y ANEXADA AL REPORTE: LA 1.c RELEE AL DOBLE CON SOLAPE CERO POR LOS DOS LADOS, LAS CUATRO DISCREPANCIAS DEL AUDIT
+   tarea 2 de la 186  -> bb3aaad3	VUELTA 186, TAREA 2 ANEXADA Y EL REPORTE DE LA 186 CERRADO EN VERDE: cerrar_reporte.py exitcode 0 CON SUS CUATRO PIEZAS, LA CABECERA IDENTICA
+   cierre de la 186   -> 216489a6	VUELTA 186 CERRADA: EL REPORTE DE LA 186 ARCHIVADO EN VERDE (48357 bytes, 744 lineas, sha256 LF 0bd9873f24067221), IDENTICO AL QUE GIT LLEVA 
+
+=== C. git status --porcelain ENTERO ===
+?? scripts/loop/vuelta187_apertura.py
+CIFRA lineas de status: 1
+
+=== D. BYTES DE CADA RUTA QUE EL ENCARGO NOMBRA, POR LAS DOS CONVENCIONES ===
+dataset/metadata/master_graph.json -> disco 8375817 bytes | git 8375817 bytes
+docs/loop/REPORTE.md -> disco 48357 bytes | git 48357 bytes
+docs/loop/ACTA_AUDITOR.md -> disco 4369837 bytes | git 4369837 bytes
+docs/loop/EJECUTOR.md -> disco 12244 bytes | git 12244 bytes
+docs/loop/AUDITOR.md -> disco 27000 bytes | git 27000 bytes
+docs/loop/PROMPT_SIGUIENTE.md -> disco 16898 bytes | git 16898 bytes
+docs/loop/SELLO_APERTURA_AUDITOR_V188.json -> disco 802 bytes | git 802 bytes
+docs/loop/_auditor_v188_ciega_blind.txt -> disco 42599 bytes | git 42599 bytes
+docs/loop/_auditor_v188_ciega_reveal.txt -> disco 32894 bytes | git 32894 bytes
+docs/loop/_auditor_v188_mis_clases.txt -> disco 8030 bytes | git 8030 bytes
+docs/loop/_auditor_v188_exclusion.txt -> disco 1372 bytes | git 1372 bytes
+docs/loop/_auditor_v187_ciega_blind.txt -> disco 39911 bytes | git 39911 bytes
+docs/loop/SALIDA_V184_APERTURA.txt -> disco 34194 bytes | git 34194 bytes
+docs/loop/SALIDA_V186_APERTURA.txt -> disco 27078 bytes | git 27078 bytes
+docs/loop/SALIDA_V186_CERRAR_REPORTE.txt -> disco 5303 bytes | git 5214 bytes
+docs/loop/SALIDA_V185_CERRAR_REPORTE.txt -> disco 4423 bytes | git 4354 bytes
+docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt -> disco 5508 bytes | git 5508 bytes
+docs/loop/SALIDA_V183_BATERIA.txt -> disco 71753 bytes | git 71753 bytes
+docs/loop/reportes/REPORTE_V184.md -> disco 124249 bytes | git 124249 bytes
+docs/loop/reportes/REPORTE_V185.md -> disco 42888 bytes | git 42888 bytes
+docs/loop/reportes/REPORTE_V186.md -> disco 48357 bytes | git 48357 bytes
+docs/PENDIENTES.md -> disco 909780 bytes | git 909780 bytes
+docs/plan/08_VERIFICACION.md -> disco 67121 bytes | git 67121 bytes
+docs/plan/BANCO_DEL_PLAN.md -> disco 61554 bytes | git 61554 bytes
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> disco 20939 bytes | git 20939 bytes
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | git 4051967 bytes
+scripts/loop/guarda_commit_dataset.py -> disco 14928 bytes | git 14928 bytes
+scripts/loop/anexar_tarea_al_reporte.py -> disco 6243 bytes | git 6243 bytes
+scripts/loop/cerrar_reporte.py -> disco 82212 bytes | git 82212 bytes
+scripts/loop/verificar_mutaciones_viejas.py -> disco 127577 bytes | git 127577 bytes
+scripts/loop/vuelta186_rutas_del_reporte.py -> disco 4596 bytes | git 4596 bytes
+scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py -> disco 11404 bytes | git 11404 bytes
+scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py -> disco 8811 bytes | git 8811 bytes
+scripts/loop/serie_de_registros.py -> disco 6595 bytes | git 6595 bytes
+scripts/loop/vuelta186_tarea1a_registrar_acta186.py -> disco 59212 bytes | git 59212 bytes
+scripts/loop/vuelta186_tarea1c_relectura_al_doble.py -> disco 16501 bytes | git 16501 bytes
+scripts/loop/vuelta182_tarea1c_relectura_al_doble.py -> disco 8476 bytes | git 8476 bytes
+scripts/loop/cotejar_clon_declarado.py -> disco 25949 bytes | git 25949 bytes
+scripts/loop/archivar_reporte.py -> disco 7181 bytes | git 7181 bytes
+scripts/loop/tallar_cabecera_reporte.py -> disco 100077 bytes | git 100077 bytes
+scripts/loop/vuelta186_esqueleto_reporte.py -> disco 19146 bytes | git 19146 bytes
+
+=== E. DIFF REAL EN BYTES DE LOS MODIFICADOS (cambio contra suciedad) ===
+CIFRA ficheros modificados: 0
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+
+=== F. LO NO SEGUIDO POR GIT, FICHERO A FICHERO CON SUS BYTES ===
+scripts/loop/vuelta187_apertura.py -> 37655 bytes
+CIFRA ficheros no seguidos: 1
+
+=== G. git ls-tree DE HEAD SOBRE ESAS RUTAS ===
+dataset/metadata/master_graph.json -> 100644 blob cb33552aedddab4d6c51c5c85a7416999b5c70a0	dataset/metadata/master_graph.json
+docs/loop/REPORTE.md -> 100644 blob cede9f83ea2aab21472331bc5c3542629ab37320	docs/loop/REPORTE.md
+docs/loop/ACTA_AUDITOR.md -> 100644 blob b34e39ea6d908953760ea597c3f1b9035dbcc8c7	docs/loop/ACTA_AUDITOR.md
+docs/loop/EJECUTOR.md -> 100644 blob 44734d1a2d159b5ef8edcf0acaafa4c1da5e6c33	docs/loop/EJECUTOR.md
+docs/loop/AUDITOR.md -> 100644 blob 7ce025da60215b6a1701a0f287c262b9507ecf9c	docs/loop/AUDITOR.md
+docs/loop/PROMPT_SIGUIENTE.md -> 100644 blob 75d5eac6bccf5a8409d6ee8732da4f3a9d5ff31a	docs/loop/PROMPT_SIGUIENTE.md
+docs/loop/SELLO_APERTURA_AUDITOR_V188.json -> 100644 blob bd1878f2b451e6841d42a93494a26b2c0545374a	docs/loop/SELLO_APERTURA_AUDITOR_V188.json
+docs/loop/_auditor_v188_ciega_blind.txt -> 100644 blob 61a29c0336788c18f30b37d6413028aa0c5d54ab	docs/loop/_auditor_v188_ciega_blind.txt
+docs/loop/_auditor_v188_ciega_reveal.txt -> 100644 blob 8d993d7b1fa1f1ca6bb8afa8dcede5e0576a7fa6	docs/loop/_auditor_v188_ciega_reveal.txt
+docs/loop/_auditor_v188_mis_clases.txt -> 100644 blob 4bfc62e3b9af109da3069246f6d1abbee1cdda62	docs/loop/_auditor_v188_mis_clases.txt
+docs/loop/_auditor_v188_exclusion.txt -> 100644 blob c885857031a36ee77526dd49b764ab918f387a2c	docs/loop/_auditor_v188_exclusion.txt
+docs/loop/_auditor_v187_ciega_blind.txt -> 100644 blob 3de3c10e25084949d9cc797df0e8c6d49a41fcf6	docs/loop/_auditor_v187_ciega_blind.txt
+docs/loop/SALIDA_V184_APERTURA.txt -> 100644 blob 8fbb487fb648da88bd9577ac4c0a6f03ee0c65ec	docs/loop/SALIDA_V184_APERTURA.txt
+docs/loop/SALIDA_V186_APERTURA.txt -> 100644 blob a0d1c7d6c8e6c5dcf8849155df11c57e62b76d4b	docs/loop/SALIDA_V186_APERTURA.txt
+docs/loop/SALIDA_V186_CERRAR_REPORTE.txt -> 100644 blob c91d61cfcf7b8e0b52670c3515c6facfa54f18f6	docs/loop/SALIDA_V186_CERRAR_REPORTE.txt
+docs/loop/SALIDA_V185_CERRAR_REPORTE.txt -> 100644 blob 5532f300c1c4a844a685551c0ebc2f620b1d7223	docs/loop/SALIDA_V185_CERRAR_REPORTE.txt
+docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt -> 100644 blob 944a4641409880c0830684b6c02a19eddb5d5d01	docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt
+docs/loop/SALIDA_V183_BATERIA.txt -> 100644 blob ba8cdcab0bcdef7187c6da1e36231d5d2a669485	docs/loop/SALIDA_V183_BATERIA.txt
+docs/loop/reportes/REPORTE_V184.md -> 100644 blob 87d4e9f860e3571edc637b03438b085fce1ed476	docs/loop/reportes/REPORTE_V184.md
+docs/loop/reportes/REPORTE_V185.md -> 100644 blob e11c2ea8568a7968b3b81ba7c3c812cc5bfa87f2	docs/loop/reportes/REPORTE_V185.md
+docs/loop/reportes/REPORTE_V186.md -> 100644 blob cede9f83ea2aab21472331bc5c3542629ab37320	docs/loop/reportes/REPORTE_V186.md
+docs/PENDIENTES.md -> 100644 blob 93238cb1357edff61ff4d75acd2e776ba827a821	docs/PENDIENTES.md
+docs/plan/08_VERIFICACION.md -> 100644 blob 9e5b07192c0c32b7533e24f53dac88cd104f734a	docs/plan/08_VERIFICACION.md
+docs/plan/BANCO_DEL_PLAN.md -> 100644 blob 8ccbf4b29b6685e087ef91a3918709f637167893	docs/plan/BANCO_DEL_PLAN.md
+docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 100644 blob 128d4a9f27aeb759ce541f4f09db1c857e4b17c0	docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 100644 blob 806c7c485a4b922a01a9615e6ad759267b78c278	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+scripts/loop/guarda_commit_dataset.py -> 100644 blob 317306df5a384e5bdc6fa263b4f3d4faf7a91178	scripts/loop/guarda_commit_dataset.py
+scripts/loop/anexar_tarea_al_reporte.py -> 100644 blob 70dcc2818a6687903f275f2cde3ae594a0c9ab1d	scripts/loop/anexar_tarea_al_reporte.py
+scripts/loop/cerrar_reporte.py -> 100644 blob a1a9550f8ffe2c318861c94af618fbad9da5012b	scripts/loop/cerrar_reporte.py
+scripts/loop/verificar_mutaciones_viejas.py -> 100644 blob 25e995d42a081f3833f1e89874d54eb0fc91aa60	scripts/loop/verificar_mutaciones_viejas.py
+scripts/loop/vuelta186_rutas_del_reporte.py -> 100644 blob b1f162012bcf0c2aa38652dcec2fdb6ef105ee40	scripts/loop/vuelta186_rutas_del_reporte.py
+scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py -> 100644 blob 81c99a720e216decc82594fb6e08a8e863cbee4c	scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py
+scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py -> 100644 blob c74b69e450a6f007bf03eb3d607aeada6213e00e	scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py
+scripts/loop/serie_de_registros.py -> 100644 blob f85eb0f5e4f25650de3bbbca70f4e0d779be8562	scripts/loop/serie_de_registros.py
+scripts/loop/vuelta186_tarea1a_registrar_acta186.py -> 100644 blob 1c94f9d2b5a71452021e0b77a663df63976b3b15	scripts/loop/vuelta186_tarea1a_registrar_acta186.py
+scripts/loop/vuelta186_tarea1c_relectura_al_doble.py -> 100644 blob f384ee5e73eb6c00289c7560e088c919a26aee0d	scripts/loop/vuelta186_tarea1c_relectura_al_doble.py
+scripts/loop/vuelta182_tarea1c_relectura_al_doble.py -> 100644 blob 426784039c2600e371c40e45aa857ca8789be480	scripts/loop/vuelta182_tarea1c_relectura_al_doble.py
+scripts/loop/cotejar_clon_declarado.py -> 100644 blob f064a8b673348434f53ccaca750c1ef5bdeb7406	scripts/loop/cotejar_clon_declarado.py
+scripts/loop/archivar_reporte.py -> 100644 blob 5c94daf630332f973b1771e14a6f5c0462ee4f1d	scripts/loop/archivar_reporte.py
+scripts/loop/tallar_cabecera_reporte.py -> 100644 blob 9dfb962267aea81f703e2de4eba05cd584a17762	scripts/loop/tallar_cabecera_reporte.py
+scripts/loop/vuelta186_esqueleto_reporte.py -> 100644 blob fcb4be9b5a316e114fd934ae2e23904f8a2f20a8	scripts/loop/vuelta186_esqueleto_reporte.py
+
+=== H. EL REPORTE EN HEAD, MEDIDO SIN CREERLE AL ENCARGO ===
+(el encargo dice que el de la 185 ya cerro y se archivo. Aqui se mide que es
+ y en que estado esta, sin tocarlo y sin archivar nada)
+primera linea: # REPORTE DE LA VUELTA 186 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+lineas (saltos de linea contados): 744
+bytes en git: 48357
+   contiene 'SIN ESCRIBIR TODAVIA'                   -> SI
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'          -> NO
+   contiene 'ABIERTA, SIN CERRAR'                    -> SI
+   contiene 'CERRADA'                                -> SI
+   contiene '<!-- TABLA DE TAREAS -->'               -> SI
+   contiene '<!-- FIN TABLA DE TAREAS -->'           -> SI
+   contiene '<!-- ANEXO DE TAREAS -->'               -> SI
+   contiene '<!-- FIN ANEXO DE TAREAS -->'           -> SI
+   contiene '<!-- CABECERA TALLADA -->'              -> SI
+   contiene '\n## 3.'                                -> SI
+   contiene '\n## 4.'                                -> SI
+   contiene '\n## 5.'                                -> SI
+   contiene '\n## 6.'                                -> SI
+   contiene '\n## 7.'                                -> SI
+   contiene '\n## 8.'                                -> SI
+   contiene '\n## 9.'                                -> SI
+EL DEL ARBOL: bytes LF 48357 | saltos de linea 744 | disco crudo 48357
+identico byte a byte al de HEAD: SI
+FILAS DE LA TABLA DE TAREAS, CONTADAS DE SU TABLA Y NO RECORDADAS:
+   LINEA 99: | **TAREA 1** | LOS REGISTROS Y LAS DOS CUENTAS QUE VENCEN. BLOQUEANTE. (a) El acta 186 entra en la serie con 
+   LINEA 100: | **TAREA 2** | LAS TRES REPARACIONES DE `cerrar_reporte.py`, LA ESCALADA Y EL CIERRE DE DOS REPORTES. (a) La 
+CIFRA filas de tarea en la tabla: 2
+
+=== H.0 LAS DOS VUELTAS QUE APAGAN EL REGIMEN TEMPORAL 6.2, MEDIDAS ===
+(el encargo dice que la 185 y la 186 cerraron su propio reporte y que por eso
+ el tope vuelve a CINCO. AQUI NO SE LE CREE: se miden las dos salidas de
+ cierre y se pega la linea de la cifra de piezas que faltan de cada una)
+   docs/loop/SALIDA_V185_CERRAR_REPORTE.txt -> disco 4423 bytes | LF 4354 bytes | sha256 LF 40171348f4738415d002068337fcd1aec692c4821ffb314833f8c86e7012699c
+      LINEA 8: contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+      LINEA 34: B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+      LINEA 55: CIFRA piezas que faltan: 0
+   docs/loop/SALIDA_V186_CERRAR_REPORTE.txt -> disco 5303 bytes | LF 5214 bytes | sha256 LF 4449064cb6421354739190f6cf7838379ef75e1ae41fad73ffbe04ce0ae120da
+      LINEA 8: contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+      LINEA 43: B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+      LINEA 64: CIFRA piezas que faltan: 0
+   Y EL REPORTE DE LA 186 ARCHIVADO, MEDIDO CONTRA GIT:
+      docs/loop/reportes/REPORTE_V186.md -> disco 48357 bytes | LF 48357 bytes | sha256 LF 0bd9873f240672211a45af367c715e2283bae54a7ea23a8be7dac59dde846713 | git 48357 bytes
+
+=== H.1 EL DISPARADOR ESCRITO DE LA COLA POST FUSION (TAREA 2) ===
+(el encargo manda LEER EL DISPARADOR ANTES DE TOCAR NADA y citarlo por
+ numero. Aqui no se cita de memoria: se busca en los dos ficheros que el
+ encargo nombra y se pega la linea con su numero de linea, sea la que sea)
+   docs/plan/08_VERIFICACION.md -> disco 67121 bytes | lineas 882
+      'cola post fusion'   -> 0 aparicion(es), lineas (ninguna)
+      'COLA POST FUSION'   -> 0 aparicion(es), lineas (ninguna)
+      'post fusion'        -> 0 aparicion(es), lineas (ninguna)
+      'POST FUSION'        -> 1 aparicion(es), lineas 485
+      '2464'               -> 1 aparicion(es), lineas 583
+      '2.464'              -> 2 aparicion(es), lineas 515, 527
+      LAS LINEAS QUE NOMBRAN LA COLA, PEGADAS ENTERAS:
+         LINEA 409: | **`OP-L-02`** | DECISION PENDIENTE | **el universo de 205 se remide**: cada A nueva puede crear pares internos nuevos fuera de cola |
+         LINEA 442: ### LO SEGUNDO QUE VIAJA CON EL RECOMPUTO: **`OP-E-03`, LA DIFERENCIA CONTRA LA COLA**
+         LINEA 445: calibrado **no abre puerta nueva al cribado**: se corre **el dia en que la cola de
+         LINEA 446: un dominio cierra**, y solo aporta **lo que no estaba en la cola**.
+         LINEA 450: | al cerrar la cola de **cada dominio** | `scripts/plan/diferencia_contra_cola.py --dominio <el que cerro>` | sus candidatos del barrido calibrado |
+         LINEA 453: **LO QUE SALE Y QUE SE HACE CON ELLO:** `docs/plan/DIFERENCIA_CONTRA_COLA.jsonl`,
+         LINEA 455: tal, **no entra en la cola y no mueve el marcador**, y **sus veredictos se cuentan
+         LINEA 458: > **POR QUE NO SE PUEDE CORRER ANTES.** Mientras la cola del dominio no este
+         LINEA 461: > porque su cola todavia no existe.**
+         LINEA 464: > repetidos mas ya en cola mas diferencia.** Si no cuadra, el resolutor cambio o la
+         LINEA 465: > cola se movio bajo los pies. Una nomina con cobertura incompleta en el inventario **no dice lo que
+         LINEA 485: ## LA COLA DE RELECTURA POST FUSION
+         LINEA 491: > **EL DISPARADOR, y es mecanico: UN PAR VUELVE A LA COLA CUANDO UNO DE SUS DOS NODOS
+         LINEA 500: > **CORRECCION DECLARADA: LA COLA GANA LA PUERTA DEL DIFERENCIADOR MOVIDO**
+         LINEA 502: > `docs/loop/paradas/2026-09-05-cola-post-fusion-DECISION.md`; acta 181 del
+         LINEA 526: > del otro nodo, y **solo las `D` con la lesion exacta vuelven a la cola**. Su
+         LINEA 533: > **LAS `A` NO GANAN COLA NUEVA** (PREGUNTA 2 de la misma decision). Una `A`
+         LINEA 537: > El instrumento **las cuenta por estado** en vez de abrir una cola que la
+         LINEA 563: crudo en `docs/loop/SALIDA_V182_T3_COLA.json` (**1074 bytes**). Esta seccion la
+         LINEA 564: escribe `scripts/loop/vuelta182_tarea4_entrar_a_la_cola.py` leyendo ese JSON.
+         LINEA 586: **por tramos en las vueltas siguientes**, no en la que las encola: la vuelta
+         LINEA 587: 182 **entra a la cola y declara el tramo**, que es literalmente lo que su
+         LINEA 597: del inventario final. **Esta cola no estrena ningun destino nuevo.**
+         LINEA 604: ejecutar**. **No se encolan**, por la PREGUNTA 2 de la decision del fundador.
+         LINEA 613: > **LA DIFERENCIA IMPORTA: un par que una adjudicacion resolvio NO vuelve a la cola.
+         LINEA 624: > **Y LA COMPROBACION DE QUE ESTA COLA SE CORRIO: al cerrar, ningun par de la lista
+         LINEA 628: ### REGISTRO: **LA COLA TAMBIEN RECIBE LAS COSTURAS QUE UN REPARTO CREA** (14 ago 2026, vuelta 28)
+         LINEA 632: desteje, y esta cola existe para las costuras que las reuniones crean. **La lista de siete
+         LINEA 660: #### REGISTRO: **LAS CINCO COSTURAS DE `OP-F-04-WEI` ENTRAN A LA COLA** (14 ago 2026, vuelta 29)
+         LINEA 678: > que entraron traen material nuevo. **Entra igual a la cola**, porque la regla de esta
+         LINEA 692: > que los movio es repartir.** Queda **PENDIENTE DE DOCTRINA**: la cola tiene disparador para
+         LINEA 725: PARADA en su adjudicacion 2 (*extender la cola a material sin gemelo es escribir una puerta
+         LINEA 728: #### REGISTRO: **LAS DIECISIETE COSTURAS DE `OP-F-04-COL` ENTRAN A LA COLA** (14 ago 2026, vuelta 31)
+         LINEA 800: ### LA COLA GANA SU SEGUNDA PUERTA: **LA COLA DEL OBJETO AJENO** (14 ago 2026, decision del fundador)
+         LINEA 809: > **ENTRA A LA COLA DEL OBJETO AJENO todo nodo donde una medicion declare material SANO,
+   docs/plan/BANCO_DEL_PLAN.md -> disco 61554 bytes | lineas 1253
+      'cola post fusion'   -> 0 aparicion(es), lineas (ninguna)
+      'COLA POST FUSION'   -> 0 aparicion(es), lineas (ninguna)
+      'post fusion'        -> 0 aparicion(es), lineas (ninguna)
+      'POST FUSION'        -> 0 aparicion(es), lineas (ninguna)
+      '2464'               -> 0 aparicion(es), lineas (ninguna)
+      '2.464'              -> 0 aparicion(es), lineas (ninguna)
+      LAS LINEAS QUE NOMBRAN LA COLA, PEGADAS ENTERAS:
+         LINEA 230: cola con un nodo del libro que lleva pegado**.
+         LINEA 281: **Los 29 son los que tienen pares fuera de cola y ninguna mesa que los recoja.**
+         LINEA 416: > marcas del mismo acto sobre la misma fila **colapsan solas**.
+         LINEA 571: ### POR QUE HACEN FALTA LAS DOS, y por que no se pueden colapsar
+
+=== H.2 LA SEDE DE LA ESCALADA, MEDIDA ANTES DE TOCARLA (TAREA 4) ===
+(la guarda de la pareja comprueba que la pareja EXISTA, no que sea CIERTA.
+ Aqui se localiza la sede viva en cerrar_reporte.py y en el instrumento que
+ ya sabe medir las dos convenciones, y se pega lo que salga)
+   scripts/loop/cerrar_reporte.py -> 1569 lineas | disco 82212 bytes
+   'def cifras_sin_pareja'                  -> 1 aparicion(es), lineas 1125
+   'def piezas_que_faltan'                  -> 1 aparicion(es), lineas 1151
+   'def rama_de_la_seccion9'                -> 1 aparicion(es), lineas 618
+   'def es_cierre_tardio'                   -> 1 aparicion(es), lineas 553
+   'def declaracion_de_cifras_sin_pareja'   -> 1 aparicion(es), lineas 575
+   'def seccion4_que_no_calza'              -> 1 aparicion(es), lineas 469
+   'con su pareja'                          -> 1 aparicion(es), lineas 1503
+   'def renglones_fuera_de_cerca'           -> 1 aparicion(es), lineas 1088
+   'def citas_de_arnes_que_no_calzan'       -> 1 aparicion(es), lineas 1002
+   LA LINEA DEL BLOQUE D QUE HOY DA POR BUENA LA PAREJA, PEGADA ENTERA:
+      LINEA 1503:             ("toda cifra de bytes y todo sha con su pareja",
+   scripts/loop/vuelta186_rutas_del_reporte.py -> 106 lineas | disco 4596 bytes
+      LINEA 38: def rutas_del_texto(texto):
+      LINEA 43: def hueco_declarado(texto):
+      LINEA 55: def main():
+      LINEA 77:         lf = datos.replace(b"\r\n", b"\n")
+      LINEA 90:                                 "rb").read().replace(b"\r\n", b"\n")])
+
+=== H.2.1 LAS CUATRO CIFRAS DE LA C.1, EN EL TEXTO REAL QUE LAS TRAJO ===
+(TAREA 4. El caso que la escalada tiene que cazar vive en el reporte de la
+ 186 tal como lo dejo el commit bb3aaad3. Aqui se saca ese texto de git, se
+ buscan sus parejas de disco y LF y se mide CADA ruta en disco para ver
+ cuales de las dos convenciones publicadas NO son ciertas. Ninguna cifra se
+ copia del encargo: todas salen de aqui)
+   git show bb3aaad3:docs/loop/REPORTE.md -> 46086 bytes | lineas 708
+   CIFRA parejas de disco y LF halladas en el texto de bb3aaad3: 0
+   CIFRA parejas cuya cifra de DISCO no calza hoy: 0
+   CIFRA parejas cuya cifra de LF no calza hoy: 0
+
+=== H.3 LA NOMINA Y LOS ARNESES QUE FALTAN (TAREA 5.a) ===
+(el encargo dice que arneses_que_faltan() devuelve hoy exactamente cuatro y
+ los nombra. Aqui no se copian: se llama a la funcion y se pega lo que
+ devuelva, y el tamano de la nomina se cuenta ANTES de meter nada)
+   CIFRA censo: 179 | CIFRA nomina ANTES: 115 | VARA_DEL_CENSO: 148
+   arneses_que_faltan() HOY: ultima vuelta 185, faltan 4
+      FALTA: vuelta186_tarea2a_mutacion_pieza4.py
+      FALTA: vuelta186_tarea2b_mutacion_pieza2_cercas.py
+      FALTA: vuelta186_tarea2c_mutacion_cierre_tardio.py
+      FALTA: vuelta186_tarea2d_mutacion_seccion4.py
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 0 entradas sin congelar
+   docs/plan/SUJETO_CONGELADO_VEREDICTOS.jsonl -> 17 filas, disco 20939 bytes
+   LOS CUATRO ARNESES DE LA 186, MEDIDOS ANTES DE METERLOS:
+      scripts/loop/vuelta186_tarea2a_mutacion_pieza4.py -> disco 13390 bytes | LF 13390 bytes | sha256 LF 0d2c656cb5ec3e17130dc0595ccd09a28a1954154f3728ffdf26e49b3493fe28
+      scripts/loop/vuelta186_tarea2b_mutacion_pieza2_cercas.py -> disco 10659 bytes | LF 10659 bytes | sha256 LF 49a010abf15ea9626bc8b3d4a8fc8cd5d4e2868fd2f10022be9900e7fbdd880a
+      scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py -> disco 14130 bytes | LF 14130 bytes | sha256 LF c459c6d3e879267252a000e62808ea64d0a6ad4e9979d5ae70b7c3fa2deaee72
+      scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py -> disco 11404 bytes | LF 11404 bytes | sha256 LF 9ff90018300391ee9a8e040cd231f65593c50fc6774ca2975d938ca7c243dcd2
+
+=== H.4 LA SECCION 4 DEL REPORTE DE LA 184 Y SU APERTURA (TAREA 5.b) ===
+(la P.2 del ejecutor de la 186 partia de que SALIDA_V184_APERTURA.txt no
+ existia. Aqui se mide si existe y cuanto mide, se pegan sus cifras de
+ status y numstat, y se corre seccion4_que_no_calza() sobre los ficheros
+ REALES para ver cuantos motivos en rojo salen. Ninguna cifra se copia)
+   docs/loop/SALIDA_V184_APERTURA.txt -> disco 34194 bytes | LF 34194 bytes | lineas 529
+      LINEA 32: CIFRA lineas de status: 2
+      LINEA 74: CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   docs/loop/reportes/REPORTE_V184.md -> disco 124249 bytes | lineas 1902
+   seccion 4 empieza en la linea 558 y la 5 en la 570
+   CIFRA lineas de la seccion 4: 12
+      LINEA 558: ## 4. LA GUARDA DEL COMMIT DE `dataset/`, CORRIDA EL DIA QUE SERVIA
+      LINEA 560: `git status --porcelain` da **`M dataset/metadata/master_graph.json`** al
+      LINEA 561: abrir la vuelta y sigue dandolo al cerrarla. **Se midio antes de creerlo:**
+      LINEA 562: `git diff --numstat -- dataset/` da **0 filas**. **Es artefacto de fin de
+      LINEA 563: linea, no contenido. Ninguna perdida de catalogo que declarar**, y el fichero
+      LINEA 564: **no se commitea**. Es la misma medicion que el acta 184 publica en su punto
+      LINEA 565: 3.1. La misma guarda corrio **diez veces mas dentro de la bateria de esta
+      LINEA 566: vuelta**, una al entrar y otra al salir de cada uno de los cinco tramos que
+      LINEA 567: esta vuelta corrio, y las diez dieron **cero filas**: esta contado de los
+      LINEA 568: propios ficheros de tramo y no del lanzador.
+   seccion4_que_no_calza() CORRIDA HOY SOBRE LOS DOS FICHEROS REALES:
+      CIFRA motivos en rojo: 1
+      | LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA lineas de status'. La apertura sellada SALIDA_V184_APERTURA.txt dice 2, y una cifra ausente y una cifra que calza NO son lo mismo
+
+=== H.5 EL SELLO DEL AUDITOR V188 Y SU CIEGA (TAREA 3 Y TAREA 5.c) ===
+(el encargo manda cotejar el sha256 del fichero ciego contra el sello ANTES
+ de releer nada. AQUI NO SE COPIA EL DEL ENCARGO: se computa y se compara.
+ Y EL PATRON DE PUESTOS SE REPARA AQUI, TAREA 5.c: el bloque de la 186 conto
+ con PUESTO en mayusculas y publico 0 para cuatro ficheros; las ciegas los
+ escriben como puesto_intra. Se publican LAS DOS CIFRAS, la VIEJA y la
+ NUEVA, y lo que el bloque decida despues usa la NUEVA)
+   docs/loop/SELLO_APERTURA_AUDITOR_V188.json -> disco 802 bytes
+   CLAVES DEL SELLO: bitacora_antes_del_sello, bytes_ciega, bytes_destape, ciega, criterio, destape, prohibidos_antes_del_sello, sha256_ciega, sha256_destape, vuelta
+   EL SELLO ENTERO, PEGADO Y NO RESUMIDO:
+      | {
+      |   "vuelta": "188",
+      |   "criterio": "ACTA 187 (cubre la vuelta 186): muestra fresca de 30 pares con semilla 1872 sobre todo el archivo, EXCLUYENDO 293 puestos ya leidos o ya releidos: los 150 de las ciegas de las actas 183
+      |   "ciega": "docs/loop/_auditor_v188_ciega_blind.txt",
+      |   "destape": "docs/loop/_auditor_v188_ciega_reveal.txt",
+      |   "bytes_ciega": 42599,
+      |   "bytes_destape": 32894,
+      |   "sha256_ciega": "ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55",
+      |   "sha256_destape": "a602a9170a30beef22927fddac71bb8c23bef69b68048a0ca2b57eb6e81d421e",
+      |   "bitacora_antes_del_sello": [],
+      |   "prohibidos_antes_del_sello": []
+      | }
+   docs/loop/_auditor_v188_ciega_blind.txt
+      disco 42599 bytes | LF 42599 bytes | lineas 498
+      sha256 (disco): ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55
+      sha256 (LF)   : ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55
+      CIFRA VIEJA, patron en mayusculas (la que publico la 186): 0
+      CIFRA NUEVA, patron puesto_intra (TAREA 5.c): 30
+      LOS PUESTOS (patron nuevo): 226, 252, 255, 293, 426, 603, 954, 1222, 1286, 1332, 1341, 1367, 1509, 1540, 1612, 1676, 1703, 1910, 1912, 1953, 2124, 2177, 2382, 2448, 2834, 2953, 3030, 3158, 3314, 3340
+   docs/loop/_auditor_v188_ciega_reveal.txt
+      disco 32894 bytes | LF 32894 bytes | lineas 132
+      sha256 (disco): a602a9170a30beef22927fddac71bb8c23bef69b68048a0ca2b57eb6e81d421e
+      sha256 (LF)   : a602a9170a30beef22927fddac71bb8c23bef69b68048a0ca2b57eb6e81d421e
+      CIFRA VIEJA, patron en mayusculas (la que publico la 186): 0
+      CIFRA NUEVA, patron puesto_intra (TAREA 5.c): 30
+      LOS PUESTOS (patron nuevo): 226, 252, 255, 293, 426, 603, 954, 1222, 1286, 1332, 1341, 1367, 1509, 1540, 1612, 1676, 1703, 1910, 1912, 1953, 2124, 2177, 2382, 2448, 2834, 2953, 3030, 3158, 3314, 3340
+   docs/loop/_auditor_v188_mis_clases.txt
+      disco 8030 bytes | LF 8030 bytes | lineas 45
+      sha256 (disco): 13ce25a07f0a82f42aec4a7733194e3de5fe4a7f4cb89e02281926a9ecc50dff
+      sha256 (LF)   : 13ce25a07f0a82f42aec4a7733194e3de5fe4a7f4cb89e02281926a9ecc50dff
+      CIFRA VIEJA, patron en mayusculas (la que publico la 186): 0
+      CIFRA NUEVA, patron puesto_intra (TAREA 5.c): 0
+      LOS PUESTOS (patron nuevo): (ninguno)
+   docs/loop/_auditor_v187_ciega_blind.txt
+      disco 39911 bytes | LF 39911 bytes | lineas 496
+      sha256 (disco): fd1275d43498fc9f1bd716da33355f7d9a5f0fd05710a1872d8930588fcff1cb
+      sha256 (LF)   : fd1275d43498fc9f1bd716da33355f7d9a5f0fd05710a1872d8930588fcff1cb
+      CIFRA VIEJA, patron en mayusculas (la que publico la 186): 0
+      CIFRA NUEVA, patron puesto_intra (TAREA 5.c): 30
+      LOS PUESTOS (patron nuevo): 338, 491, 646, 666, 679, 780, 782, 1158, 1164, 1259, 1328, 1440, 1452, 1775, 1941, 1942, 2229, 2300, 2374, 2473, 2522, 2553, 2599, 2611, 2695, 2742, 2749, 3024, 3042, 3177
+   EL COTEJO DEL SELLO, COMPUTADO Y NO COPIADO:
+      ciega    docs/loop/_auditor_v188_ciega_blind.txt
+         bytes: sello 42599 | disco medido 42599 -> CALZA
+         sha256: sello ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55
+                 disco  ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55
+                 -> CALZA
+      destape  docs/loop/_auditor_v188_ciega_reveal.txt
+         bytes: sello 32894 | disco medido 32894 -> CALZA
+         sha256: sello a602a9170a30beef22927fddac71bb8c23bef69b68048a0ca2b57eb6e81d421e
+                 disco  a602a9170a30beef22927fddac71bb8c23bef69b68048a0ca2b57eb6e81d421e
+                 -> CALZA
+   LOS PUESTOS DE LA EXCLUSION, CONTADOS DE SU FICHERO Y NO SUPUESTOS:
+      docs/loop/_auditor_v188_exclusion.txt -> disco 1372 bytes | CIFRA puestos distintos: 293
+      SOLAPE ciega de hoy con la exclusion: 0
+      SOLAPE ciega de hoy con la ciega de la 187: 0
+   LOS CUATRO PUESTOS QUE EL ENCARGO NOMBRA, BUSCADOS EN LA CIEGA DE HOY:
+      puesto 226   -> DENTRO de la ciega de hoy
+      puesto 603   -> DENTRO de la ciega de hoy
+      puesto 1612  -> DENTRO de la ciega de hoy
+      puesto 2448  -> DENTRO de la ciega de hoy
+
+=== H.6 LA SERIE DE REGISTROS Y EL ACTA 187 (TAREA 1.a) ===
+(no se teclea ningun numero de registro: se llama a serie_de_registros.py y
+ se imprime lo que devuelva. R.49 NO se da por bueno porque lo diga el encargo)
+docs/loop/ACTA_AUDITOR.md -> 66070 lineas | disco 4369837 bytes | LF 4369837 bytes
+CIFRA cabeceras del acta 187 encontradas: 1
+   CABECERA del acta 187 en la LINEA 65441
+   lineas del acta 187, de su cabecera al final del fichero: 630
+   '## 1. '   -> lineas 65463
+   '## 2. '   -> lineas 65472
+   '## 3. '   -> lineas 65516
+   '## 4. '   -> lineas 65635
+   '## 5. '   -> lineas 65700
+   '## 6. '   -> lineas 65780
+   '## 7. '   -> lineas 65808
+   '## 8. '   -> lineas 65855
+   '## 9. '   -> lineas 65917
+   '## 10. '  -> lineas 65957
+   '## 11. '  -> lineas 65973
+   '## 12. '  -> lineas 65996
+   '## 13. '  -> lineas 66018
+   LOS NUMERALES DEL ACTA 187, CONTADOS CON EL PATRON DE COMILLAS
+   INVERSAS QUE LA 184 ESTRENO, Y NO DE MEMORIA:
+      \*\*`5\.(\d)`    -> 6 aparicion(es), numerales distintos 1, 2, 3, 4, 5, 6
+      \*\*`6\.(\d)`    -> 2 aparicion(es), numerales distintos 1, 2
+      \*\*`7\.(\d)`    -> 3 aparicion(es), numerales distintos 1, 2, 3
+      `PD\.(\d)`       -> 6 aparicion(es), numerales distintos 1, 7
+      `A\.(\d)`        -> 0 aparicion(es), numerales distintos (ninguno)
+      `R\.(\d)`        -> 2 aparicion(es), numerales distintos 1
+      `C\.(\d)`        -> 11 aparicion(es), numerales distintos 1
+   LAS CABECERAS 5.n, 6.n Y 7.n DEL ACTA 187, PEGADAS ENTERAS:
+      LINEA 65702: **`5.1` `D.1`, EL ARNES DE LA `2.a` NO CUENTA LAS LINEAS DE COMENTARIO: A FAVOR,
+      LINEA 65714: **`5.2` `D.2`, LA GUARDA DE LA `2.d` CAE EN ROJO SI EL FICHERO DE APERTURA NO
+      LINEA 65723: **`5.3` `D.3`, `es_cierre_tardio()` NO ESTRECHA LA LETRA: A FAVOR, Y POR EL
+      LINEA 65733: **`5.4` `D.4`, FORZO EL ARCHIVADO DEL REPORTE DE LA 184: A FAVOR, Y LA GUARDA
+      LINEA 65744: **`5.5` `D.5`, LA GUARDA DE LA `2.d` SE CABLEO DESPUES DE CERRAR EL 184: A FAVOR
+      LINEA 65761: **`5.6` `D.6`, EL PUESTO 338 Y LA VARA QUE NO PUEDE VER LO QUE EL AUDITOR VIO: A
+      LINEA 65782: **`6.1` `PD.1` SIGUE ABIERTA, SEXTA VUELTA, Y NO LA ENCARGO.** Las cinco `D` con
+      LINEA 65788: **`6.2` LA `PD.7` DEL REPORTE NO ES UN PENDIENTE DE DOCTRINA, Y LO CORRIJO SIN
+      LINEA 65810: **`7.1` `P.1`, EL CONTEO DE LA SEGUNDA COPIA, CRUDO O SOLO EN CODIGO: SOLO EN
+      LINEA 65818: **`7.2` `P.2`, QUE HACE LA GUARDA DE LA `2.d` AL CERRAR TARDE UN REPORTE SIN
+      LINEA 65843: **`7.3` `P.3`, LOS CUATRO ARNESES NUEVOS EN LA NOMINA: LA VUELTA 187, Y VA
+serie_de_registros.entradas() -> 40 entradas en 2 sedes
+   SEDE: docs/PENDIENTES.md
+   SEDE: docs/plan/CORRECCIONES_A_APLICAR.md
+CIFRA colisiones: 0 | CIFRA huecos: 0
+SIGUIENTE LIBRE, LLAMADO Y NO TECLEADO: R.49
+   ULTIMOS: R.45 en docs/PENDIENTES.md:12930 -> ## R.45. Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida del ej
+   ULTIMOS: R.46 en docs/PENDIENTES.md:13029 -> ## R.46. Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero caida
+   ULTIMOS: R.47 en docs/PENDIENTES.md:13140 -> ## R.47. Registro de las siete adjudicaciones numeradas, los cuatro pendientes de doctrina, la caida
+   ULTIMOS: R.48 en docs/PENDIENTES.md:13266 -> ## R.48. Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, las t
+
+=== H.7 LA BATERIA, QUE ESTA VUELTA NO CORRE, Y SU HUECO ===
+(AUDITOR.md 6.1: corre cada cinco vueltas y la siguiente es la 189. Aqui se
+ mide QUE HAY en disco para poder declarar el hueco con su nombre, sus bytes
+ y su atribucion, que son las tres piezas juntas o no vale)
+   docs/loop/SALIDA_V187_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V186_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V185_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V184_BATERIA.txt -> NO EXISTE
+   docs/loop/SALIDA_V183_BATERIA.txt -> disco 71753 bytes | LF 71753 bytes | sha256 LF 422a909ad6ffb1679f3b60fb12b420474a1023983ac26750451b32a350a706a6
+
+=== H.8 QUE REPORTES ESTAN YA ARCHIVADOS EN docs/loop/reportes/ ===
+   REPORTE_V179.md -> disco 54466 bytes | git 54466 bytes
+   REPORTE_V180.md -> disco 63677 bytes | git 63677 bytes
+   REPORTE_V181.md -> disco 15883 bytes | git 15883 bytes
+   REPORTE_V182.md -> disco 40726 bytes | git 40726 bytes
+   REPORTE_V183.md -> disco 44346 bytes | git 44346 bytes
+   REPORTE_V184.md -> disco 124249 bytes | git 124249 bytes
+   REPORTE_V185.md -> disco 42888 bytes | git 42888 bytes
+   REPORTE_V186.md -> disco 48357 bytes | git 48357 bytes
+CIFRA reportes archivados: 18
+REPORTE_V184.md archivado: SI
+REPORTE_V185.md archivado: SI
+REPORTE_V186.md archivado: SI
+REPORTE_V187.md archivado: NO
+
+=== H.9 EL ARCHIVO DE VEREDICTOS, QUE LA TAREA 2 SI PUEDE MOVER ===
+(el encargo da ea6e850d331d14f0 como sha256 LF de apertura. AQUI NO SE COPIA:
+ se computa. Si la TAREA 2 mueve algo, el de cierre TIENE que ser distinto)
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4051967 bytes | LF 4051967 bytes
+   sha256 (disco): ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   sha256 (LF)   : ea6e850d331d14f01db1186a54f4913fa72eb2560a354430c5e6d047ff0d02be
+   CIFRA filas: 3388
+   CIFRA clase 'A'   : 551
+   CIFRA clase 'B'   : 72
+   CIFRA clase 'C'   : 5
+   CIFRA clase 'D'   : 2760
+   MIN puesto 1 | MAX puesto 3388 | HUECOS 0 | DUPLICADOS 0
+   EL PAR 2464, PEGADO ENTERO ANTES DE TOCARLO (TAREA 2):
+      banda_078_080          False
+      clase                  D
+      clave                  None
+      dominio                quality
+      nodo_a                 cero_defectos
+      nodo_b                 zero_defects_concepto
+      puesto_intra           2464
+      razon                  El programa completo contra el arranque a escala minima, MISMA FUENTE, Crosby, y sin arista entre ellos. cero_defectos trae EL DESPLIEGUE: comunicarlo CASO POR CASO EN VEZ DE CON MENSAJES MASIVOS, REC
+
+FIN DEL SELLO DE APERTURA
