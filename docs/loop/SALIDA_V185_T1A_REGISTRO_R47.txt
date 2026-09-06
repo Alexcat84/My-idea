@@ -1,0 +1,88 @@
+==============================================================================
+VUELTA 185, TAREA 1.a: EL ACTA 185 ENTERA, REGISTRADA
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 185: docs/loop/ACTA_AUDITOR.md, lineas 64434 a 64906 (473 lineas)
+   docs/loop/ACTA_AUDITOR.md -> disco 4297793 bytes
+
+B) LAS ADJUDICACIONES NUMERADAS DE LA SECCION 5, CONTADAS Y NO TECLEADAS
+   prefijo: '5.', con el numeral ENTRE COMILLAS INVERSAS
+   CIFRA adjudicaciones numeradas halladas: 7
+      5.1 -> 1 aparicion(es)
+      5.2 -> 1 aparicion(es)
+      5.3 -> 1 aparicion(es)
+      5.4 -> 1 aparicion(es)
+      5.5 -> 1 aparicion(es)
+      5.6 -> 1 aparicion(es)
+      5.7 -> 1 aparicion(es)
+   EL CONTRASTE QUE PRUEBA QUE HACIA FALTA EL PATRON ENTRECOMILLADO:
+      el patron SIN comillas, el del acta 183 -> 0 sobre esta acta
+
+C) LOS PENDIENTES DE DOCTRINA DE LA SECCION 6, CON EL MISMO PATRON
+   prefijo: '6.'
+   CIFRA pendientes de doctrina hallados: 4
+      6.1 -> 1 aparicion(es)
+      6.2 -> 1 aparicion(es)
+      6.3 -> 1 aparicion(es)
+      6.4 -> 1 aparicion(es)
+
+D) LAS CAIDAS, POR SUS FAMILIAS, Y LOS PATRONES VIEJOS AL LADO
+   CAIDAS PROPIAS DEL AUDITOR (patron `A.n`, cabecera ###): 1, lineas 64489
+      LINEA 64489: ### 2.1 MI CAIDA PROPIA `A.1`, Y ES DE NOMBRE
+   EL PATRON `C.n` DE LINEA (actas 178 a 182): 0
+   EL PATRON `C.n` DE NEGRITA DE FRASE (acta 184): 0
+   CAIDAS DE REPORTE DEL EJECUTOR (patron `R.n`): 1, lineas 64807
+      LINEA 64807: **`R.1`. LA COLUMNA `quien lo sello` DE LA TABLA DE LOS NUEVE TRAMOS ESTA
+   EL PATRON `E.n` DE LAS ACTAS 182 Y 184: 0
+   LINEAS DONDE EL ACTA DECLARA QUE NO TUVO NINGUNA CAIDA PROPIA: (ninguna)
+
+E) EL TITULO, CON SUS CUATRO NUMERALES COMPUTADOS
+   Registro de las siete adjudicaciones numeradas, los cuatro pendientes de doctrina, la caida propia del auditor y la caida de reporte del ejecutor del acta de la vuelta 185
+
+F) LOS TITULOS LITERALES, LEIDOS DEL ACTA
+   5.1 (linea 64677): `5.1` `D.1`, COMPUSO LA BATERIA CON EL TRAMO 9 EN ROJO DENTRO: A FAVOR.
+   5.2 (linea 64686): `5.2` `D.2`, EL ESQUELETO Y EL TALLADOR NOMBRAN EL ACTA DE `VUELTA - 1`: A FAVOR, CON REPARACION ENCARGADA.
+   5.3 (linea 64694): `5.3` `D.3`, RENOMBRO UN CASO QUE EL ACTA 184 NOMBRA POR SU NOMBRE: A FAVOR.
+   5.4 (linea 64701): `5.4` `D.4`, EL ESPERADO COMPUTADO RECOMPONE EL FILTRO DE LA FUNCION BAJO PRUEBA: A FAVOR, CON EL RIESGO ESCRITO.
+   5.5 (linea 64712): `5.5` `D.5`, LA LESION EXACTA DEL PUESTO 3.141: A FAVOR, Y NO SE PERDIO NADA.
+   5.6 (linea 64725): `5.6` `D.6`, EL ARNES DE LA 1.c ENTRO EN LA NOMINA DE LA BATERIA QUE LO ESTRENA: A FAVOR.
+   5.7 (linea 64732): `5.7` `D.7`, ANEXO LOS DISCUTIBLES A LA TAREA 2 EN VEZ DE A LA SECCION 5: A FAVOR, Y LO CONVIERTO EN REGLA POR EXTENSION.
+   6.1 (linea 64746): `6.1` `PD.2`, EL CALIBRE DE UN TRAMO EN ROJO: ADJUDICADO, NO ES DOCTRINA NUEVA.
+   6.2 (linea 64753): `6.2` `PD.3`, UNA BATERIA QUE CRUZA DOS VUELTAS: ADJUDICADO, Y EL ROJO DE `cerrar_reporte.py` ES UN FALSO ROJO.
+   6.3 (linea 64784): `6.3` `PD.4`, UN ARNES QUE SE ESTRENA DENTRO DE LA BATERIA QUE LO ESTRENA: ADJUDICADO POR EXTENSION.
+   6.4 (linea 64796): `6.4` `PD.1` SIGUE ABIERTA, Y AHORA CON SUS CINCO NOMBRES.
+
+G) EL ESTADO DE CADA PENDIENTE, LEIDO DE SU TITULO Y NO TECLEADO
+   6.1 nombra PD.2 -> CERRADA (linea 64746)
+   6.2 nombra PD.3 -> CERRADA (linea 64753)
+   6.3 nombra PD.4 -> CERRADA (linea 64784)
+   6.4 nombra PD.1 -> ABIERTA (linea 64796)
+   LOS PUESTOS DEL PENDIENTE ABIERTO, LEIDOS DEL ACTA: 1778, 2530, 2540, 3141, 3232
+
+H) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 38 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.47
+
+I) LA DEUDA DE LA SERIE, REMEDIDA EN ESTA VUELTA Y NO HEREDADA DEL R.46
+   tramo mirado: actas 173 a 184
+   CIFRA actas SIN entrada propia en la serie: 8
+   LAS QUE FALTAN: 173, 174, 175, 176, 177, 178, 179, 180
+   EXTREMO BAJO (ultimo registro que cubre un acta anterior al salto): R.42 cubre el acta 172
+   EXTREMO ALTO (primer registro que cubre un acta posterior): R.43 cubre el acta 181
+
+J) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR
+   la marca '## R.47.' ya esta en la sede: NO
+   la entrada entera ya esta: NO
+
+K) LA ENTRADA ARMADA
+   12267 bytes | 125 lineas
+
+L) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 881856 a 894124 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+   guiones largos o medios en la entrada: 0
+   SERIE RECOMPUTADA DESPUES DE ESCRIBIR: 39 entradas, siguiente libre R.48
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+

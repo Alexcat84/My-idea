@@ -13136,3 +13136,129 @@ de las cinco `D` con el diferenciador ya presente el dia del veredicto sigue
 rancias por `P.5` **sigue sin cablear**, porque su adjudicacion lo manda a la
 primera vuelta de trabajo y esta sigue siendo **vuelta de bateria**; y el
 TRAMO 1 de la cola post fusion, el par **2.464**, **no se relee aqui**.
+
+## R.47. Registro de las siete adjudicaciones numeradas, los cuatro pendientes de doctrina, la caida propia del auditor y la caida de reporte del ejecutor del acta de la vuelta 185
+
+(Acta del auditor, vuelta 185, secciones 2, 4, 5, 6, 7, 8 y 9; escrito en
+la vuelta 185, TAREA 1.a.)
+
+Por adicion, como `R.21` a `R.46`. **Corte de todas las cifras de esta
+entrada: 6 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.46`. Salida:
+`docs/loop/SALIDA_V185_T1A_REGISTRO_R47.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 1 EN CURSO Y LA TAREA 2 SIN CORRER,
+ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA PASADO.** Es la
+forma que la `6.4` del acta 172 adjudico como correcta: donde una glosa dice
+EJECUTADA, la prueba va nombrada con su fichero de salida; donde dice que va
+a ejecutarse, se dice que **todavia no ha corrido** y no se disfraza.
+
+**Y LOS CUATRO NUMERALES DEL TITULO TAMPOCO ESTAN TECLEADOS:** se cuentan del
+acta acotada (lineas 64434 a 64906) y de ahi sale el numeral en palabra, incluida
+la concordancia. **7 adjudicaciones numeradas (`5.1` a `5.7`, todas en la
+seccion 5), 4 pendientes de doctrina (`6.1` a `6.4`, todos en la seccion
+6), 1 caida propia del auditor y 1 caida de reporte del ejecutor.**
+
+**LA SECCION 6 NUMERA SUS PENDIENTES Y POR ESO SE CUENTAN CON EL MISMO
+PATRON QUE LA 5, NO CON UNO NUEVO.** El registrador de la 184 contaba UNA
+adjudicacion sin numeral con un patron de cabecera de seccion, porque su
+acta la escribia asi; el acta 185 numera ``**`6.1` `` a ``**`6.4` `` con la
+forma entrecomillada de su seccion 5, asi que `claves_entrecomilladas` se
+IMPORTA del registrador de la 184 y se corre con otro prefijo. **No se
+escribe un patron nuevo donde el viejo ya muerde**, que es la otra mitad de
+la misma doctrina.
+
+**EL CONTRASTE QUE PRUEBA QUE LOS PATRONES SE MIDEN Y NO SE SUPONEN.** El
+patron SIN comillas inversas, el del acta 183, corrido sobre esta acta da
+**0**. Se conserva intacto y su cero se publica: **se anaden patrones, no se
+ensancha el viejo hasta que trague**.
+
+**LA CAIDA PROPIA DEL AUDITOR SE LLAMA `A.n` Y ES ESPECIE NUEVA, DICHA POR
+EL PROPIO ACTA.** Vive en una cabecera `###` (`docs/loop/ACTA_AUDITOR.md:64489`)
+y no en una negrita de lista. Los dos patrones `C.n` de las actas anteriores
+se corren igual y dan **0** (patron de linea) y **0** (patron de negrita de
+frase). **Un cero que sale de un patron que no muerde no es evidencia de
+nada, y por eso va con el patron que si muerde al lado.** La linea del acta
+que declara *"NINGUNA CAIDA PROPIA"*: **0 aparicion(es)**, que es lo que
+tiene que dar un acta que **si** tuvo una caida propia.
+
+**LA CAIDA DEL EJECUTOR SE LLAMA `R.n` Y ES DE REPORTE.** El patron de `E.n`,
+el que mordio en las actas 182 y 184, corrido sobre esta da **0**. Las dos
+cifras se publican y ninguna se resuelve copiando.
+
+**LAS SIETE ADJUDICACIONES NUMERADAS, CON SU LINEA EN EL ACTA LEIDA HOY.** El
+titulo de cada una es LITERAL del fichero; la glosa que sigue es prosa del
+ejecutor y va marcada como tal. **Las siete son A FAVOR.**
+
+  - **`5.1` (`docs/loop/ACTA_AUDITOR.md:64677`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.1` `D.1`, COMPUSO LA BATERIA CON EL TRAMO 9 EN ROJO DENTRO: A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El acta lee *mismo calibre* como HONDURA y no como resultado, citando las palabras de `AUDITOR.md` 6.1, y componer con el tramo 9 en rojo dentro queda adjudicado a favor. No hay trabajo pendiente en ella: la bateria ya esta compuesta y su rojo publicado.
+  - **`5.2` (`docs/loop/ACTA_AUDITOR.md:64686`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.2` `D.2`, EL ESQUELETO Y EL TALLADOR NOMBRAN EL ACTA DE `VUELTA - 1`: A FAVOR, CON REPARACION ENCARGADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA A FAVOR, Y SU REPARACION SE DECLARA COMO COLA Y NO SE DISFRAZA DE HECHA. El acta concede el desfase declarado y encarga como cambio de una linea que el esqueleto y el tallador nombren el acta de la vuelta N y no la N-1. ESTA VUELTA NO LO EJECUTA: su encargo trae DOS sub-tareas por el regimen 6.2 y ninguna de las dos es esta. Queda nombrada aqui para que no se pierda.
+  - **`5.3` (`docs/loop/ACTA_AUDITOR.md:64694`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.3` `D.3`, RENOMBRO UN CASO QUE EL ACTA 184 NOMBRA POR SU NOMBRE: A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Renombrar el caso cuyo nombre llevaba dentro la cifra caducada queda adjudicado como el remedio y no como una desviacion del remedio.
+  - **`5.4` (`docs/loop/ACTA_AUDITOR.md:64701`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.4` `D.4`, EL ESPERADO COMPUTADO RECOMPONE EL FILTRO DE LA FUNCION BAJO PRUEBA: A FAVOR, CON EL RIESGO ESCRITO."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y CON EL RIESGO QUE EL ACTA DEJA ESCRITO. El esperado computado se concede PORQUE EL CASO HERMANO EXISTE, el de `LOS_DOS_DE_LA_165`, que no se recompone solo. Si ese hermano se borrara, el arnes quedaria probando su propio reflejo. Esta vuelta no toca ninguno de los dos.
+  - **`5.5` (`docs/loop/ACTA_AUDITOR.md:64712`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.5` `D.5`, LA LESION EXACTA DEL PUESTO 3.141: A FAVOR, Y NO SE PERDIO NADA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y EL ACTA RESUELVE LA DUDA EN VEZ DE ENCARGARLA. La lesion exacta del puesto 3.141 ya estaba registrada desde la vuelta 182: pasa las condiciones 1 y 2 y falla la 3, o sea que NO es un diferenciador movido, y su sede es la `PD.1`. No hace falta encargar nada.
+  - **`5.6` (`docs/loop/ACTA_AUDITOR.md:64725`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.6` `D.6`, EL ARNES DE LA 1.c ENTRO EN LA NOMINA DE LA BATERIA QUE LO ESTRENA: A FAVOR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El arnes que entra a la nomina en su misma vuelta queda concedido por el acta 176 punto 7.2, reconfirmada por la `5.6` del acta 184, y la medicion lo respalda: sin el, `arneses_que_faltan()` daba 1.
+  - **`5.7` (`docs/loop/ACTA_AUDITOR.md:64732`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"`5.7` `D.7`, ANEXO LOS DISCUTIBLES A LA TAREA 2 EN VEZ DE A LA SECCION 5: A FAVOR, Y LO CONVIERTO EN REGLA POR EXTENSION."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y EL ACTA LA CONVIERTE EN REGLA POR EXTENSION. Cuando el cierre del reporte caiga en rojo, los discutibles, las preguntas y las caidas propias SE ANEXAN A LA ULTIMA TAREA QUE SI CERRO, y el reporte lo dice en esa sede. Esta vuelta no necesita aplicarla, porque su cierre no cae en rojo, pero queda escrita.
+
+**LOS CUATRO PENDIENTES DE DOCTRINA DE LA SECCION 6, CON SU ESTADO LEIDO DEL
+TITULO Y NO TECLEADO.** El estado sale de buscar `SIGUE ABIERTA` o `ADJUDICAD` en el
+titulo literal: **PD.2 CERRADA, PD.3 CERRADA, PD.4 CERRADA** y **PD.1 ABIERTA**.
+
+  - **`6.1`, que nombra `PD.2`, estado CERRADA (`docs/loop/ACTA_AUDITOR.md:64746`,
+    leida hoy). VIA: SIN TOCAR NADA.** Titulo literal del acta: *"`6.1` `PD.2`, EL CALIBRE DE UN TRAMO EN ROJO: ADJUDICADO, NO ES DOCTRINA NUEVA."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** `PD.2` CERRADA POR CITA, SIN TOCAR NADA. El calibre de un tramo en rojo lo resuelve `AUDITOR.md` 6.1 con sus propias palabras: *calibre es hondura*, y la unica descalificacion que esa seccion nombra es la del vacio. No es doctrina nueva y no queda trabajo.
+  - **`6.2`, que nombra `PD.3`, estado CERRADA (`docs/loop/ACTA_AUDITOR.md:64753`,
+    leida hoy). VIA: EJECUTADA.** Titulo literal del acta: *"`6.2` `PD.3`, UNA BATERIA QUE CRUZA DOS VUELTAS: ADJUDICADO, Y EL ROJO DE `cerrar_reporte.py` ES UN FALSO ROJO."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** `PD.3` CERRADA POR CITA, Y ES LA UNICA ADJUDICACION DEL ACTA QUE MANDA TOCAR CODIGO. EJECUTADA EN LA TAREA 1.c DE ESTA VUELTA. El rojo de `cerrar_reporte.py` sobre el reporte de la 184 queda declarado FALSO ROJO: la guarda nacio contra pedir prestada la bateria terminada de otra vuelta, y una bateria que RETOMA EN EL TRAMO SIGUIENTE cruza vueltas POR DISENO, que es lo que la decision del fundador del 5 sep 2026 pide. Por `AUDITOR.md` 0, cuando una guarda contradice una decision escrita del fundador, la que se corrige es la guarda. LA REPARACION EXIGE MAS QUE LA GUARDA VIEJA Y NO MENOS: cuatro condiciones a la vez, y la evidencia se computa de `git log` y NO se puede pasar por bandera. La prueba vive en `docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt`.
+  - **`6.3`, que nombra `PD.4`, estado CERRADA (`docs/loop/ACTA_AUDITOR.md:64784`,
+    leida hoy). VIA: SIN TOCAR NADA.** Titulo literal del acta: *"`6.3` `PD.4`, UN ARNES QUE SE ESTRENA DENTRO DE LA BATERIA QUE LO ESTRENA: ADJUDICADO POR EXTENSION."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** `PD.4` CERRADA POR EXTENSION, SIN TOCAR NADA. Una entrada de la nomina que nunca ha aparecido en una bateria COMPLETA no esta probada, y el rojo de su primera bateria completa es un hallazgo SOBRE EL ARNES y no sobre la bateria. Es exactamente lo que paso con `vuelta182_tarea2_mutacion_apertura_auditor.py`, y su reparacion va en la TAREA 1.b de esta vuelta.
+  - **`6.4`, que nombra `PD.1`, estado ABIERTA (`docs/loop/ACTA_AUDITOR.md:64796`,
+    leida hoy). VIA: SIN TOCAR NADA.** Titulo literal del acta: *"`6.4` `PD.1` SIGUE ABIERTA, Y AHORA CON SUS CINCO NOMBRES."*
+    **QUE HACE ESTA VUELTA CON EL (glosa del ejecutor, no del acta):** `PD.1` SIGUE ABIERTA Y ESTA VUELTA NO LA CIERRA NI LA ENCARGA. Lo que cambia es que deja de ser una lista sin nombres: sus cinco puestos quedan escritos en el acta y en esta entrada. El acta dice con todas las letras que darles cola seria doctrina nueva y eso es del fundador.
+
+**LOS CINCO PUESTOS DE LA `PD.1`, LEIDOS DEL ACTA Y NO TECLEADOS.** El
+encargo los nombra y aqui NO se copian: salen del parrafo del pendiente que
+el propio titulo declara ABIERTO. **Son 5 puestos: 1778, 2530, 2540, 3141, 3232.** Es la novedad de
+este registro sobre el `R.46`: la `PD.1` deja de ser una lista sin nombres.
+
+**LA CAIDA DE REPORTE `R.1`, EN LA LINEA 64807, Y NO ACUMULA.**
+Es la columna `quien lo sello` de la tabla de los nueve tramos, **tecleada
+con un `n <= 4` debajo de una frase del reporte que dice que la tabla sale de
+contar sus ficheros *"y no de recordar nada"*. **Los valores son correctos
+hoy** (el auditor los verifico uno a uno con `git log`), **y lo equivocado es
+la frase de procedencia**, que vive en prosa. Por la letra afinada del 27 ago
+2026, **NO ACUMULA**, y **la racha de reporte se mantiene en 2**. Pero un
+`n <= 4` tecleado **es una frontera que caduca**, asi que el acta encarga la
+escalada en codigo y esta vuelta la ejecuta en la **TAREA 1.d**.
+
+**LA DEUDA DE LA SERIE, QUE SIGUE DOCUMENTADA COMO SALTO Y SIN RELLENAR.**
+Se vuelve a medir en esta vuelta en vez de heredarse del `R.46`:
+
+  - **SALTO DE 8 REGISTROS EN LA SERIE: las actas 173 a 180 no tienen
+    entrada propia.** Sus dos extremos, contados por
+    `scripts/loop/serie_de_registros.py` y no tecleados: **`R.42` cubre el
+    acta 172** y **`R.43` cubre el acta 181**. **No se rellenan aqui:**
+    escribir de memoria los registros de unas actas que nadie ha releido
+    en esta vuelta seria justo lo que `AUDITOR.md` 2 prohibe.
+
+**LO QUE ESTA ENTRADA NO REGISTRA, DICHO PARA QUE NO SE BUSQUE:** el
+instrumento de vigencia de las `A` rancias por `P.5` **sigue sin cablear**;
+el desfase del acta `VUELTA - 1` de la `5.2` **queda encargado y sin
+ejecutar**, porque el regimen 6.2 deja esta vuelta en dos sub-tareas; y el
+TRAMO 1 de la cola post fusion, el par **2.464**, **no se relee aqui**: el
+encargo lo pone a la cabeza de la vuelta 186.
