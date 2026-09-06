@@ -1,0 +1,55 @@
+CASO POSITIVO POR MUTACION de vuelta183b_tarea1a_registrar_acta183.py
+
+   acta fabricada con adj=7 aud=0 eje=1
+      los contadores dicen adj=7 aud=0 eje=1 -> CALZA
+      titulo computado: Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 183
+   acta fabricada con adj=1 aud=1 eje=1
+      los contadores dicen adj=1 aud=1 eje=1 -> CALZA
+      titulo computado: Registro de la adjudicacion, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 183
+   acta fabricada con adj=12 aud=3 eje=2
+      los contadores dicen adj=12 aud=3 eje=2 -> CALZA
+      titulo computado: Registro de las doce adjudicaciones, las tres caidas propias del auditor y las dos caidas del ejecutor del acta de la vuelta 183
+   acta fabricada con adj=4 aud=0 eje=0
+      los contadores dicen adj=4 aud=0 eje=0 -> CALZA
+      titulo computado: Registro de las cuatro adjudicaciones, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 183
+
+LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE EL CASO PUEDE CAER:
+   medido sobre el acta fabricada (variable computada): 7
+   con el esperado BUENO   (7): PASA
+   con el esperado MUTADO  (8): CAE
+   EL CASO CAE AL MUTAR EL ESPERADO: SI
+
+LA SEGUNDA MUTACION: EL PATRON DE LA CAIDA DEL EJECUTOR. Con el patron del
+acta 182 el contador tiene que dar CERO sobre un acta que la escribe dentro
+del titulo de una adjudicacion, que es el motivo de este fichero.
+   patron del acta 182 sobre acta en forma 183 -> 0 caidas
+   EL CASO CAE CON EL PATRON VIEJO: SI
+
+LA TERCERA MUTACION: EL PREFIJO DE LA ADJUDICACION. Con el prefijo `7.` el
+contador tiene que dar CERO sobre un acta que numera `5.n`.
+   prefijo '7.' sobre acta de '5.' -> 0 adjudicaciones
+   EL CASO CAE CON EL PREFIJO VIEJO: SI
+
+LA CUARTA MUTACION: EL CERO DE CAIDAS PROPIAS CON Y SIN SU DECLARACION. Es
+la diferencia entre un cero medido y un cero que nadie sostiene, y el
+instrumento tiene que distinguirlos.
+   acta que DECLARA el cero -> 1 linea(s) de declaracion, lineas [3]
+   acta que NO lo declara   -> 0 linea(s) de declaracion
+   EL INSTRUMENTO DISTINGUE LOS DOS CEROS: SI
+
+LA QUINTA MUTACION: EL SALTO. actas_sin_entrada() es PURA y se importa del
+registrador de la 183; se le pasa una serie fabricada y se comprueba que el
+salto y sus DOS extremos salen de los titulos y no de ninguna constante.
+   serie fabricada: cubre las vueltas 100, 101 y 105
+   faltan (computado): [102, 103, 104]
+   extremo bajo (computado): (11, 101) | extremo alto (computado): (12, 105)
+   EL SALTO Y SUS EXTREMOS CALZAN: SI
+
+LA SEXTA MUTACION: EL NUMERAL CERO EN EL TITULO. `PALABRA` no trae el cero
+y la tabla se extiende aqui; el titulo tiene que decirlo y concordar.
+   titulo con cero caidas propias: Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 183
+   DICE EL CERO Y CONCUERDA: SI
+   y con dos, para que se vea que la concordancia no esta clavada: Registro de las siete adjudicaciones, las dos caidas propias del auditor y la caida del ejecutor del acta de la vuelta 183
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

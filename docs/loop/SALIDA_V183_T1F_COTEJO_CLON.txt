@@ -1,0 +1,123 @@
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta183_tarea1e_relectura_al_doble.py
+  B: scripts/loop/vuelta183b_tarea1f_relectura_al_doble.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 183, 183
+  CIFRA lineas de docstring: A 44 | B 45
+  CIFRA lineas de maquina:   A 259 | B 260
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 2089 | B 2104
+     CIFRA tipos de nodo que NO empatan: 17
+        Load                   A   532 | B   540 | diferencia +8
+        Attribute              A   108 | B   114 | diferencia +6
+        Call                   A   236 | B   241 | diferencia +5
+        Name                   A   450 | B   454 | diferencia +4
+        Tuple                  A    26 | B    23 | diferencia -3
+        Constant               A   219 | B   217 | diferencia -2
+        Assign                 A    46 | B    47 | diferencia +1
+        BinOp                  A    54 | B    53 | diferencia -1
+        ExceptHandler          A     1 | B     0 | diferencia -1
+        Expr                   A   105 | B   106 | diferencia +1
+        If                     A    15 | B    16 | diferencia +1
+        ImportFrom             A     2 | B     1 | diferencia -1
+        Mod                    A    40 | B    39 | diferencia -1
+        Store                  A    76 | B    75 | diferencia -1
+        Try                    A     1 | B     0 | diferencia -1
+        alias                  A     9 | B     8 | diferencia -1
+        keyword                A     9 | B    10 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 69
+  CIFRA tokens de maquina: A 1860 | B 1869
+  CIFRA tokens que difieren con el texto normalizado: 85
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 20
+  CIFRA LITERALES DE TEXTO:   49
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:63  CABECERA_182 = "# ACTA DEL AUDITOR, VUELTA 182"
+     A:121  ini9, fin9, cuerpo9 = seccion_del_acta(t_acta, CABECERA_182, 9)
+     A:206  try:
+     A:207  from vuelta182_tarea1c_relectura_al_doble import puestos_del_tramo as p181
+     A:208  linea181, tramo181 = p181()
+     A:210  % (len(tramo181), linea181))
+     A:212  % len(set(tramo) & set(tramo181)))
+     A:213  except Exception as e:
+     A:214  w("   NO SE PUDO LEER EL TRAMO DE LA 181: %r" % (e,))
+     A:263  for p in (375, 393, 1280, 1815, 2416, 2470):
+     B:64  CABECERA_ACTA = "# ACTA DEL AUDITOR, VUELTA NNN"
+     B:122  ini9, fin9, cuerpo9 = seccion_del_acta(t_acta, CABECERA_ACTA, 4)
+     B:207  w("    ciega inmediatamente anterior, la que el acta NNN releyo)")
+     B:208  ANTERIOR = os.path.join(LOOP, "_auditor_vNNN_ciega_blind.txt")
+     B:209  if os.path.exists(ANTERIOR):
+     B:210  tramo_ant = puestos_de_la_ciega(io.open(ANTERIOR, encoding="utf-8").read())
+     B:212  % len(tramo_ant))
+     B:214  % len(set(tramo) & set(tramo_ant)))
+     B:215  else:
+     B:265  for p in (660,):
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:60  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_VNNN.json")
+     A:61  CIEGA = os.path.join(LOOP, "_auditor_vNNN_ciega_blind.txt")
+     A:112  w("VUELTA NNN, TAREA 1.e: LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DE LA 182")
+     A:113  w("encargada por AUDITOR.md:57, porque las seis discrepancias salieron")
+     A:114  w("FUERA del marcado")
+     A:118  w("A) LA CORRECCION DECLARADA: DONDE EL ENCARGO DICE QUE ESTA EL TRAMO Y")
+     A:119  w("   DONDE ESTA DE VERDAD. NO SE TAPA LO QUE SE CORRIGE.")
+     A:123  w("   el acta 182 NO tiene seccion 9. Se dice y no se inventa.")
+     A:126  w("   seccion 9 del acta 182: lineas %d a %d (%d lineas)"
+     A:131  w("   CIFRA puestos que la seccion 9 lista: %d" % len(puestos_sec9))
+     A:132  w("   (el encargo dice que el tramo son los 30 puestos de esa seccion; la")
+     A:133  w("    seccion es LA METRICA DE CREDITO y no lista ninguno. Se declara y se")
+     A:134  w("    va a la fuente que si los tiene, que es la del propio auditor)")
+     A:146  w("   docs/loop/SELLO_APERTURA_AUDITOR_VNNN.json -> %d bytes en disco y %d "
+     A:203  w("F) EL SOLAPE CON EL TRAMO DE LA 181, MEDIDO Y NO SUPUESTO")
+     A:204  w("   (el criterio del sello dice que la muestra excluye los 30 de la 181 y")
+     A:205  w("    los 43 de la 180; aqui se comprueba contra el tramo que la 182 releyo)")
+     A:209  w("   tramo de la 181, leido del acta: %d puestos (linea %s)"
+     A:211  w("   SOLAPE del tramo de hoy con el de la 181: %d"
+     A:259  w("I) LAS SEIS DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA VARA")
+     A:260  w("   (el acta 182 las nombra en su seccion 4: 375, 393, 1280, 1815, 2416 y")
+     A:261  w("    2470. Aqui NO se re-decide ninguna clase: solo se dice si estan en el")
+     A:262  w("    universo releido y que ve la vara en ellas)")
+     A:294  ruta = os.path.join(LOOP, "SALIDA_VNNN_T1E_RELECTURA_AL_DOBLE.txt")
+     B:61  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_V184.json")
+     B:62  CIEGA = os.path.join(LOOP, "_auditor_v184_ciega_blind.txt")
+     B:113  w("CONTINUACION DE LA VUELTA NNN, TAREA 1.f: LA RELECTURA AL DOBLE DEL")
+     B:114  w("TRAMO DE LA CIEGA DEL ACTA NNN, encargada por AUDITOR.md 1.2 porque la")
+     B:115  w("discrepancia del auditor salio FUERA del marcado")
+     B:119  w("A) EL CONTRASTE CON EL ACTA, QUE NO ES CORRECCION SINO COTEJO. EL")
+     B:120  w("   ENCARGO YA NOMBRA LA FUENTE BUENA, Y AQUI SE MIDE QUE LISTA EL ACTA.")
+     B:124  w("   el acta NNN NO tiene seccion 4. Se dice y no se inventa.")
+     B:127  w("   seccion 4 del acta NNN: lineas %d a %d (%d lineas)"
+     B:132  w("   CIFRA puestos que la seccion 4 del acta NNN lista: %d" % len(puestos_sec9))
+     B:133  w("   (la seccion 4 es la de la ciega, y publica el reparto y LA UNICA")
+     B:134  w("    discrepancia, no los 30 puestos. Por eso el tramo se lee de la ciega")
+     B:135  w("    sellada del auditor, que es donde estan, y no del acta)")
+     B:147  w("   docs/loop/SELLO_APERTURA_AUDITOR_V184.json -> %d bytes en disco y %d "
+     B:204  w("F) EL SOLAPE CON EL TRAMO ANTERIOR, MEDIDO Y NO SUPUESTO")
+     B:205  w("   (el criterio del sello dice que la muestra excluye los 89 puestos de")
+     B:206  w("    las ciegas de las actas 180, 181 y 182; aqui se comprueba contra la")
+     B:211  w("   ciega anterior: docs/loop/_auditor_vNNN_ciega_blind.txt -> %d puestos"
+     B:213  w("   SOLAPE del tramo de hoy con el anterior: %d"
+     B:216  w("   LA CIEGA ANTERIOR NO ESTA EN DISCO. No se afirma ningun solape.")
+     B:261  w("I) LA UNICA DISCREPANCIA DEL AUDITOR, MIRADA CON LA MISMA VARA")
+     B:262  w("   (el acta NNN la nombra en su seccion 4: el puesto 660, que el auditor")
+     B:263  w("    pierde a favor del archivo. Aqui NO se re-decide ninguna clase: solo")
+     B:264  w("    se dice si esta en el universo releido y que ve la vara en ella)")
+     B:296  ruta = os.path.join(LOOP, "SALIDA_VNNN_T1F_RELECTURA_AL_DOBLE.txt")
+
+
+FIN

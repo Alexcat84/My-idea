@@ -12926,3 +12926,102 @@ de las cinco `D` con el diferenciador ya presente el dia del veredicto queda
 de vigencia de las ocho `A` rancias por `P.5` **no se cablea en esta vuelta**,
 porque la propia `7.4` lo manda a la primera vuelta de trabajo y la 183 es
 **vuelta de bateria**.
+
+## R.45. Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 183
+
+(Acta del auditor, vuelta 183, secciones 2, 5, 6 y 7; escrito en la
+CONTINUACION de la vuelta 183, TAREA 1.a.)
+
+Por adicion, como `R.21` a `R.44`. **Corte de todas las cifras de esta
+entrada: 5 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.44`. Salida:
+`docs/loop/SALIDA_V183_T1A_REGISTRO_R45.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 1 EN CURSO Y LA TAREA 2 SIN CORRER,
+ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA PASADO.** Es la
+forma que la `6.4` del acta 172 adjudico como correcta y que la realidad
+probo cuando la vuelta 172 se corto: donde una glosa dice EJECUTADA, la
+prueba va nombrada con su fichero de salida; donde dice que va a ejecutarse,
+se dice que **todavia no ha corrido** y no se disfraza.
+
+**Y LOS TRES NUMERALES DEL TITULO TAMPOCO ESTAN TECLEADOS:** se cuentan del
+acta acotada (lineas 63682 a 64048) y de ahi sale el numeral en palabra, incluida
+la concordancia. **7 adjudicaciones (`5.1` a `5.7`, todas en la seccion 5),
+0 caidas propias del auditor y 1 caida del ejecutor (`E.n`).**
+
+**ESTA ACTA NUMERA SUS ADJUDICACIONES `5.n` Y LA ANTERIOR LAS NUMERABA
+`7.n`.** Corrido el prefijo de la vuelta pasada sobre esta acta, da **0**.
+Su seccion 7 no es de adjudicaciones: es LA METRICA DE CREDITO. La cifra de
+cero se publica al lado de la buena y no se resuelve copiando.
+
+**Y LA CAIDA DEL EJECUTOR NO ESTA DONDE ESTABA.** El acta 182 la escribia
+como ``**`E.1`.`` al principio de linea; **el acta 183 la escribe DENTRO DEL
+TITULO de su primera adjudicacion**. El patron viejo, corrido sobre esta
+acta, cuenta **0**. Se anade un patron, no se ensancha el viejo hasta que
+trague.
+
+**LAS CAIDAS PROPIAS DEL AUDITOR SON CERO, Y EL CERO VA CON SU DECLARACION
+AL LADO.** Los dos patrones de caida propia cuentan **0** sobre esta acta,
+y un cero que sale de un patron que no muerde no es evidencia de nada. Lo que
+lo sostiene es que **el acta lo declara con todas las letras**, en la linea
+**63726**: *"NINGUNA CAIDA PROPIA ESTA VUELTA, Y DECLARO EL METODO QUE LA EVITO
+PORQUE ESTUVE A UN PASO DE UNA"*. **Si el patron diera cero y el acta no lo
+declarara, el instrumento haria PARADA en vez de escribir esta entrada.**
+
+**LAS SIETE ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero; la glosa que sigue es prosa del ejecutor y
+va marcada como tal.
+
+  - **5.1 (`docs/loop/ACTA_AUDITOR.md:63883`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"5.1 LA CAIDA DEL EJECUTOR, `E.1`: LAS CUATRO SALIDAS SELLADAS DE ESTA BATERIA DICEN QUE SON DE LA VUELTA 176. CIFRA PUBLICADA, Y ACUMULA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 1.b DE ESTA VUELTA, QUE ES SU OPERACION DE CODIGO. La caida se acata entera y no se discute: las cuatro salidas selladas decian que eran de la vuelta 176 y no lo eran. Lo que pasaba antes NO SE BORRA: el bloque H.2 del bloque de apertura de esta continuacion conto TRES lineas con `176` en cada una de las cuatro, DOCE en total, antes de que nadie tocara el lanzador. Y la reparacion no es teclear un 183 encima del 176: el numero y el nombre se computan de `os.path.basename(__file__)`, con un guarda propio que impide que el lanzador arranque si alguien vuelve a clavar uno.
+  - **5.2 (`docs/loop/ACTA_AUDITOR.md:63924`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"5.2 LAS TRES RUTAS ABREVIADAS DE LA CELDA DE PRUEBA. NO SON CAIDA, Y SE CORRIGEN."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 1.d DE ESTA VUELTA. El acta adjudica las tres rutas abreviadas A FAVOR del ejecutor y aun asi encarga escribirlas enteras, por el motivo que ella misma da: una ruta que hay que reconstruir mentalmente no se puede cotejar pegandola en un comando. Se escriben con su carpeta y su prefijo en la celda de prueba de la TAREA 1 del reporte de la 183.
+  - **5.3 (`docs/loop/ACTA_AUDITOR.md:63933`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"5.3 LA CORRECCION DECLARADA DE LA TAREA 1.e ES BUENA, Y ES DE LAS QUE HAY QUE PREMIAR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y ES UNA CONCESION AL EJECUTOR. La correccion declarada de la TAREA 1.e de la 183 queda concedida entera, y el acta dice ademas que el error del encargo era del auditor. No hay trabajo pendiente en ella.
+  - **5.4 (`docs/loop/ACTA_AUDITOR.md:63944`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"5.4 LOS DOS ARNESES QUE ENTRARON A LA NOMINA SIN ESTAR ENCARGADOS. CONCEDIDOS, Y POR LA REGLA QUE YA ESTABA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y ESTA VUELTA HACE LA MISMA CUENTA OTRA VEZ. Los dos arneses que entraron a la nomina sin estar encargados quedan concedidos por la regla del acta 176 punto 7.2. Esta vuelta anade UN TERCERO por la misma regla y con la misma medicion delante: `arneses_que_faltan()` daba `ultima 183, faltan 1` con el arnes de la TAREA 1.b fuera, y la nomina crece de 111 a 112 sin podar nada.
+  - **5.5 (`docs/loop/ACTA_AUDITOR.md:63956`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"5.5 LA VUELTA SE CORTO, Y ESO NO ES UNA CAIDA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. El acta declara que la vuelta cortada NO es una caida, porque el reporte parcial dice hasta donde se llego. Esta vuelta es la continuacion que ese mismo reporte parcial reclama.
+  - **5.6 (`docs/loop/ACTA_AUDITOR.md:63964`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"5.6 EL FICHERO SIN SEGUIR DE `scripts/loop/` NO SE BORRA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN EL PRIMER COMMIT DE ESTA VUELTA. `scripts/loop/_v183_tallar_cierre.py` estaba sin seguir por git y NO se borro: entra a git con el bloque de apertura, porque es el tallador del cuerpo del cierre que la TAREA 2 va a necesitar.
+  - **5.7 (`docs/loop/ACTA_AUDITOR.md:63971`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"5.7 LA CONTINUACION VA SOBRE EL REPORTE DE LA 183, NO SOBRE UNO NUEVO, Y NO ES DOCTRINA NUEVA: ES ARITMETICA DE DOS REGLAS ESCRITAS."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA, Y ES LA QUE ORDENA ESTA VUELTA ENTERA. La continuacion escribe SOBRE el reporte de la 183 por anexion, no abre uno nuevo y no lo archiva. El motivo es aritmetica de dos reglas escritas: `cerrar_reporte.py` exige la composicion de los nueve tramos, y `AUDITOR.md` 6.1 manda retomar en el tramo siguiente. Este fichero es de la continuacion y por eso su nombre lleva `183b`, pero la vuelta que registra el acta sigue siendo la 183.
+
+**LA CAIDA DEL EJECUTOR, EN LA LINEA 63883, Y ACUMULA.**
+El `E.1` es **CIFRA PUBLICADA EN LA CUARTA SEDE**, que es `scripts/`: las
+cuatro salidas selladas de la bateria de la 183 declaraban en sus primeras
+lineas que eran de la vuelta 176 y que las lanzo el fichero de la 176, y las
+dos cosas eran falsas. **La racha de cifra publicada pasa de 0 a 1, y dos
+tandas seguidas serian PARADA.** El acta dice ademas dos cosas que esta
+entrada recoge sin adornar: que **el fichero lo escribio la vuelta 182 en su
+TAREA 5** y que la caida se registra **contra el rol** y no contra la sesion
+de la 183; y que **el hueco de verificacion que la dejo pasar es del propio
+auditor**, que dio el fichero por bueno corriendo los dos unicos carriles que
+no imprimen esas lineas. **Corregida en la TAREA 1.b de esta continuacion,
+en codigo y con caso positivo por mutacion.**
+
+**LA DEUDA DE LA SERIE, QUE SIGUE DOCUMENTADA COMO SALTO Y SIN RELLENAR.**
+Se vuelve a medir en esta vuelta en vez de heredarse del `R.44`:
+
+  - **SALTO DE 8 REGISTROS EN LA SERIE: las actas 173 a 180 no tienen
+    entrada propia.** Sus dos extremos, contados por
+    `scripts/loop/serie_de_registros.py` y no tecleados: **`R.42` cubre el
+    acta 172** y **`R.43` cubre el acta 181**. **No se rellenan aqui:**
+    escribir de memoria ocho registros de ocho actas que nadie ha releido
+    en esta vuelta seria justo lo que `AUDITOR.md` 2 prohibe.
+
+**LO QUE ESTA ENTRADA NO REGISTRA, DICHO PARA QUE NO SE BUSQUE:** la `PD.1`
+de las cinco `D` con el diferenciador ya presente el dia del veredicto sigue
+**registrada y sin resolver**; el instrumento de vigencia de las ocho `A`
+rancias por `P.5` **sigue sin cablear**, porque su adjudicacion lo manda a la
+primera vuelta de trabajo y esta sigue siendo **vuelta de bateria**; y el
+TRAMO 1 de la cola post fusion, el par **2.464**, **no se relee aqui**.
