@@ -105,7 +105,7 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 194 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Registra LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, las diez A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 193 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3` contestadas por extension citable), CERO EN CONTRA y es la CUARTA acta seguida; LOS TRES HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` los dos arneses de la cuarta puerta que se contradicen en la sede de verdad, `5.2` la seccion 8 que dice cuatro donde el instrumento dice cinco, `5.3` los mensajes de commit del bucle que queman la ciega del auditor antes de su primer comando); UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE **SI ACUMULA** (el hallazgo `5.2`: vive solo en `REPORTE.md`, no mueve ningun dato y vive en una CONCLUSION, luego cuenta para la racha por la letra del 27 ago 2026; **RACHA DE REPORTE 1**, y no hay escalada que encargar porque se dispara a DOS); TRES CAIDAS DEL EJECUTOR DE METODO `C.1` a `C.3`, declaradas por el propio ejecutor en su seccion 8.1, que se registran y NO abren racha; DOS CAIDAS PROPIAS DEL AUDITOR, la primera grave (`C.1`, ROMPER UN REMEDIO ESCRITO, que CUENTA PARA LA PARADA por la letra del 5 sep 2026: el sello de la vuelta 194 SALIO ROJO y no existe) y la segunda de metodo (`C.2`, haber commiteado `docs/loop/_TURNO_DEL_AUDITOR.json`, que es estado de turno y no contenido de campana); y LA METRICA DE CREDITO de la seccion 7 con su fila de puestos y su nota: 30 aislados, 30 cotejados, ONCE QUEMADOS por el contexto de sesion y no por comando del auditor, y el cotejo publicado dos veces, sobre los 30 y sobre los 19 limpios. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA, y con una discrepancia DENTRO del acta publicada y no resuelta copiando** | `SALIDA_V194_T1A_REGISTRO_R56.txt`, `SALIDA_V194_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V194_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V194_T1A_SIMULACION.txt` |
 | **TAREA 2** | LOS DOS ARNESES DE LA CUARTA PUERTA QUE SE CONTRADICEN. BLOQUEANTE, Y ES LA PRECONDICION DE LA BATERIA. Es el hallazgo `5.1` del acta 194, corrido y no deducido en `docs/loop/_auditor_v194_cuarta_puerta_rota.txt` con sus tres casos: `vuelta192_tarea4_mutacion_cuarta_puerta.py` llama a `AP.olvidar_todo()` OCHO veces contra el modulo REAL y nunca redirige `AP.RUTA_DEL_TURNO` a un temporal, asi que BORRA EL TURNO VIVO DEL AUDITOR en su sede de verdad y sale VERDE mientras lo hace; y el caso `H` de `vuelta193_tarea4e_mutacion_sello_entre_procesos.py` exige `os.path.exists(turno_real) == False`, o sea pide que NO haya auditor. En el orden alfabetico en que la bateria los corre, EL VERDE DEL SEGUNDO NO ES SUYO: se lo debe al primero. (a) QUE EL ARNES DE LA 192 NO TOQUE LA SEDE DE VERDAD, redirigiendo `AP.RUTA_DEL_TURNO` a un temporal antes de su primer `olvidar_todo()`. (b) QUE EL ARNES DE LA 193 DEJE DE EXIGIR QUE EL FICHERO NO EXISTA: que mida existencia, bytes y `sha256` ANTES y DESPUES y caiga si CAMBIA. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes de la nomina modifica o borra `_TURNO_DEL_AUDITOR.json` en su sede de verdad, LANZANDO PROCESOS DE VERDAD. (d) QUE EL FICHERO DEL TURNO NO SE PUEDA VOLVER A COMMITEAR. (e) NO SE CLONA NINGUNO DE LOS DOS FICHEROS: se les anade. (f) NO SE TOCA LA NOMINA. (g) AL CERRAR, LOS DOS ARNESES EN LOS TRES ESCENARIOS DEL FICHERO DEL AUDITOR, CON LAS TRES SALIDAS PUBLICADAS; si el verde de alguno sigue dependiendo del orden, SE PARA Y SE TRAE | **CERRADA. Los TRES escenarios del auditor invertidos, y una premisa suya desmentida y publicada** | `SALIDA_V194_T2C_MUTACION_SEDE_DEL_TURNO.txt`, `SALIDA_V194_T2G_TRES_ESCENARIOS.txt`, y las dos selladas re selladas |
-| **TAREA 3** | LA BATERIA, ENTERA Y POR TRAMOS. `AUDITOR.md` 6.1, literal: LA BATERIA CORRE POR TRAMOS OBLIGATORIOS, CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, UNA VUELTA CORTADA RETOMA EN EL TRAMO SIGUIENTE, y LA BATERIA SE DECLARA CORRIDA CUANDO LOS TRAMOS TIENEN SALIDA SELLADA DEL MISMO CALIBRE. (a) CLONAR EL LANZADOR COMO `scripts/loop/vuelta194_bateria_por_tramos.py`, CLON DECLARADO del de la 189, cotejado con `scripts/loop/cotejar_clon_declarado.py` y con su salida pegada. (b) EL NUMERO DE TRAMOS SE COMPUTA CON `--plan`, NO SE TECLEA NI SE HEREDA, y se publica con su FECHA DE CORTE (banco `9.21`): el NUEVE de `AUDITOR.md` 6.1 es la cuenta de la nomina del 5 sep 2026 y no un objetivo. (c) CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR. (d) LA DOBLE CORRIDA NO SE AFLOJA: cada entrada se corre DOS VECES por el cotejo de reproducibilidad de la vuelta 141. (e) AL FINAL `--componer`, que es quien coteja EL CALIBRE, y UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA. (f) PUBLICAR EL RELOJ de la corrida. (g) SI UN TRAMO CAE EN ROJO, NI SE ESCONDE NI SE REPITE HASTA QUE SALGA VERDE: se publica con su tramo, su entrada y su motivo. Y LA TRAMPA MEDIDA POR EL AUDITOR: las NUEVE selladas que `vuelta183_bateria_por_tramos.py --siguiente` encuentra son de las vueltas 183 y 184 y NO de esta, asi que correr ese fichero declararia la bateria corrida sobre la corrida de otra vuelta | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LA BATERIA, ENTERA Y POR TRAMOS. `AUDITOR.md` 6.1, literal: LA BATERIA CORRE POR TRAMOS OBLIGATORIOS, CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, UNA VUELTA CORTADA RETOMA EN EL TRAMO SIGUIENTE, y LA BATERIA SE DECLARA CORRIDA CUANDO LOS TRAMOS TIENEN SALIDA SELLADA DEL MISMO CALIBRE. (a) CLONAR EL LANZADOR COMO `scripts/loop/vuelta194_bateria_por_tramos.py`, CLON DECLARADO del de la 189, cotejado con `scripts/loop/cotejar_clon_declarado.py` y con su salida pegada. (b) EL NUMERO DE TRAMOS SE COMPUTA CON `--plan`, NO SE TECLEA NI SE HEREDA, y se publica con su FECHA DE CORTE (banco `9.21`): el NUEVE de `AUDITOR.md` 6.1 es la cuenta de la nomina del 5 sep 2026 y no un objetivo. (c) CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR. (d) LA DOBLE CORRIDA NO SE AFLOJA: cada entrada se corre DOS VECES por el cotejo de reproducibilidad de la vuelta 141. (e) AL FINAL `--componer`, que es quien coteja EL CALIBRE, y UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA. (f) PUBLICAR EL RELOJ de la corrida. (g) SI UN TRAMO CAE EN ROJO, NI SE ESCONDE NI SE REPITE HASTA QUE SALGA VERDE: se publica con su tramo, su entrada y su motivo. Y LA TRAMPA MEDIDA POR EL AUDITOR: las NUEVE selladas que `vuelta183_bateria_por_tramos.py --siguiente` encuentra son de las vueltas 183 y 184 y NO de esta, asi que correr ese fichero declararia la bateria corrida sobre la corrida de otra vuelta | **CORRIDA: los DIEZ tramos con salida sellada del mismo calibre y cobertura 127 de 127. Y los diez en ROJO, publicados en rojo** | `SALIDA_V194_BATERIA_TRAMO_1.txt` a `_10.txt`, `SALIDA_V194_BATERIA.txt`, `SALIDA_V194_BATERIA_COMPUESTA.txt`, `SALIDA_V194_T3A_COTEJO_CLON.txt`, `SALIDA_V194_T3B_PLAN.txt`, `SALIDA_V194_T3_DATASET_RESTAURADO.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -326,5 +326,145 @@ es cierto lo corra quien lo corra. **Lo que no es cierto es el camino por el que
 llegaba.** No lo adjudico ni lo clasifico: lo mido, lo publico y lo marco abajo.
 **Y no toco la nomina para hacerlo calzar**, que era la otra salida y esta
 expresamente prohibida.
+
+### TAREA 3. LA BATERIA, ENTERA Y POR TRAMOS. **CORRIDA: LOS DIEZ TRAMOS CON SALIDA SELLADA DEL MISMO CALIBRE. Y LOS DIEZ EN ROJO, PUBLICADOS EN ROJO.**
+
+**(a) EL LANZADOR, CLONADO Y COTEJADO.**
+`scripts/loop/vuelta194_bateria_por_tramos.py`, **clon declarado del de la 189**,
+que es el ultimo que corrio de verdad. Cotejo con
+`scripts/loop/cotejar_clon_declarado.py --exigir-codigo-identico`, salida en
+`docs/loop/SALIDA_V194_T3A_COTEJO_CLON.txt`: **SOLO LA MAQUINA: IDENTICO**,
+**CIFRA lineas de maquina que difieren: 0**, y **el AST sin el docstring:
+IDENTICO**, con **4070 nodos en los dos**. Lo unico que difiere es el docstring
+(43 lineas en el original y 37 en el clon). **Su numero no se teclea:** sale de
+`os.path.basename(__file__)`, y la guarda `literales_de_vuelta_clavados()`,
+corrida sobre el propio fuente en cada invocacion, publica **CIFRA literales de
+vuelta clavados en lineas que escriben: 0**.
+
+**(b) EL REPARTO, COMPUTADO Y CON SU FECHA DE CORTE.**
+`--plan`, salida en `docs/loop/SALIDA_V194_T3B_PLAN.txt`: **CIFRA entradas de la
+nomina: 127**, **CIFRA tamano de tramo: 13**, **CIFRA tramos: 10**, **CIFRA suma
+de las entradas de todos los tramos: 127**, con **corte `HEAD e6f46677ab23`,
+nomina contada en esa corrida** (banco `9.21`). **Da DIEZ y no nueve**, y el
+NUEVE de `AUDITOR.md` 6.1 es la cuenta de la nomina del 5 sep 2026, no un
+objetivo: la cifra sale de `len(tramos)` y no de ninguna tecla.
+
+**Y LA TRAMPA DEL ENCARGO, EVITADA Y MEDIDA POR MI.** El bloque `I` del sello de
+apertura fecho **una a una** con `git log --diff-filter=A` las nueve salidas que
+`vuelta183_bateria_por_tramos.py --siguiente` cuenta: **nacen en las vueltas 183 y
+184**, y el asunto del commit que da de alta cada una lo dice en su propia linea.
+`--siguiente` de **mi** lanzador contesta **CIFRA tramos CON salida sellada no
+vacia: 0** y **EL SIGUIENTE ES EL TRAMO 1**, que es la verdad.
+
+**(c) Y (f) LOS DIEZ TRAMOS, CADA UNO COMMITEADO CON SU SALIDA SELLADA AL
+TERMINAR, Y EL RELOJ.** La tabla sale de `--componer`
+(`docs/loop/SALIDA_V194_BATERIA_COMPUESTA.txt`) y el reloj de la linea
+`DURACION DEL TRAMO (monotona, minutos)` de cada salida sellada:
+
+| tramo | bytes disco | bytes LF | lineas | `sha256` | entradas | minutos | exitcode |
+|---:|---:|---:|---:|---|---:|---:|---:|
+| 1 | 11284 | 11284 | 143 | `a4db8c7b420a` | 13 | 1.1 | 1 |
+| 2 | 9528 | 9528 | 137 | `0a08458bafc6` | 13 | 2.9 | 1 |
+| 3 | 9582 | 9582 | 137 | `b5f1b65a553e` | 13 | 7.6 | 1 |
+| 4 | 9596 | 9596 | 137 | `984584039c88` | 13 | 1.4 | 1 |
+| 5 | 9559 | 9559 | 137 | `614226f68f13` | 13 | 0.6 | 1 |
+| 6 | 9605 | 9605 | 137 | `6ace42fc6b5a` | 13 | 1.1 | 1 |
+| 7 | 9815 | 9815 | 139 | `2a40104d3fbf` | 13 | 0.6 | 1 |
+| 8 | 9581 | 9581 | 137 | `5fb1efd65e77` | 13 | 0.8 | 1 |
+| 9 | 10058 | 10058 | 137 | `64042ebd6bfe` | 13 | 0.7 | 1 |
+| 10 | 9492 | 9492 | 128 | `36e2d04ffc83` | 10 | 0.4 | 1 |
+
+**EL RELOJ, LAS DOS MEDIDAS Y NO UNA:** la **suma de las duraciones monotonas de
+los diez tramos da 17.2 minutos**, y la **ventana de reloj de pared del primer
+inicio al ultimo fin es de 30.1 minutos** (inicio del tramo 1
+`2026-09-06T22:01:57Z`, fin del tramo 10 `2026-09-06T22:32:03Z`), leidas de las
+lineas `INICIO` y `FIN (reloj de pared, UTC)` de las dos salidas selladas. **La
+diferencia entre las dos no es un misterio y no se disimula:** entre tramo y tramo
+van el commit y su hook, y ademas el primer intento del tramo 3 se corto.
+
+**EL TRAMO 3 SE CORTO A MITAD EN SU PRIMER INTENTO**, por tope de tiempo del turno
+y no por fallo de la bateria, y **dejo `dataset/metadata/master_graph.json`
+tocado** porque el PASO 5 del lanzador no llego a correr. Medido con **las dos
+varas y sin elegir la comoda**: `git status --porcelain` lo daba por modificado y
+`git diff --numstat` decia **CERO filas**, o sea que la diferencia era de finales
+de linea y no de contenido. Restaurado con `git checkout -- dataset/` **sin tocar
+ningun final de linea a mano**, y **remedido**: cero y cero. Entero en
+`docs/loop/SALIDA_V194_T3_DATASET_RESTAURADO.txt` (1154 bytes). El tramo NO se dio
+por corrido: no dejo salida sellada y `--siguiente` volvio a decir TRAMO 3, que es
+lo que la 6.1 llama retomar en el tramo siguiente.
+
+**(d) LA DOBLE CORRIDA NO SE AFLOJO.** Cada entrada se corre DOS VECES por el
+cotejo de reproducibilidad de la vuelta 141, y el resultado esta en la celda que
+lo mide: **`0 sin reproducir` en los diez tramos**.
+
+**(e) `--componer`, QUE ES QUIEN COTEJA EL CALIBRE.** Exitcode 0 y **VERDE**:
+**CIFRA entradas que los tramos dicen haber corrido: 127**, **CIFRA entradas de la
+nomina que NINGUN tramo corrio: 0**, **CIFRA entradas corridas que NO estan en la
+nomina: 0**, **CIFRA entradas corridas MAS DE UNA VEZ: 0**. La cobertura se lee
+**de las salidas y no se recalcula del reparto**, que es la mitad que impide el
+atajo. La salida unica es `docs/loop/SALIDA_V194_BATERIA.txt`: **102495 bytes en
+disco y 102495 normalizado a LF, 1454 lineas, `sha256` LF
+`f2d927fa66cdc40a3f157294eaee1c86d1ffb4633a7afbd731befc1cd094b263`**. **Ninguna
+salida sellada mide cero bytes**, y esa es la condicion que la 6.1 pone para que
+un tramo cuente como hecho.
+
+**(g) LOS ROJOS, PUBLICADOS CON SU TRAMO, SU ENTRADA Y SU MOTIVO, Y NO REPETIDOS
+HASTA QUE SALGAN VERDES.** **LOS DIEZ TRAMOS SALEN `ROJO POR FALLO` con exitcode
+1**, contados uno a uno de su linea `CLASE DEL VEREDICTO`. **Y la especie del
+veredicto dice lo que de verdad paso**, leida de la linea `CIFRA de FALLO` de cada
+salida:
+
+| especie | cuantos | en cuantos tramos |
+|---|---:|---|
+| con ancla perdida | 0 | los diez |
+| **que no mordieron** | **1** | **solo el tramo 7** |
+| sin reproducir | 0 | los diez |
+| **fuera de la nomina** | **6** | **los diez** |
+| invisibles al censo | 0 | los diez |
+| `SUJETO VIVO` | 0 | los diez |
+| `NO DECIDIBLE` con motivo escrito (deuda declarada) | 3 | los diez |
+
+**NINGUN ARNES FALLO POR SU PROPIA MAQUINA SALVO UNO.** Las 127 entradas corrieron
+y reprodujeron. Los dos motivos del rojo son **censales y globales**, o sea que
+salen en los diez tramos por igual y no dependen de que entradas lleve cada uno:
+
+1. **SEIS ARNESES QUE EL CENSO VE Y LA NOMINA NO TIENE**, nacidos despues de la
+   vara de la vuelta 148: `vuelta191_tarea3_mutacion_lineas.py`,
+   `vuelta191_tarea4_mutacion_veredicto.py`,
+   `vuelta191_tarea6_mutacion_bloque_tallado.py`,
+   `vuelta192_tarea4_mutacion_cuarta_puerta.py`,
+   `vuelta193_tarea4e_mutacion_sello_entre_procesos.py` y
+   `vuelta194_tarea2c_mutacion_sede_del_turno.py`, que es el que esta vuelta
+   escribio. **ES NUEVO EN ESTA BATERIA:** la de la 189 publica **0** en esa misma
+   celda, medido en su tramo 1. **NO SE ARREGLA AQUI**, y por dos razones escritas
+   antes de mirar: el encargo dice **NO TOQUES LA NOMINA**, y podarla o adelantarla
+   es la opcion que el fundador RECHAZO el 5 sep 2026. **Y ES LA CORROBORACION
+   INDEPENDIENTE DE LO QUE LA TAREA 2 MIDIO**: el censo de la bateria, por su
+   cuenta y con otro instrumento, dice que los dos arneses de la cuarta puerta
+   **no estan en la nomina**.
+2. **TRES ENTRADAS SIN SUJETO CONGELADO**, las tres con motivo escrito:
+   `vuelta186_tarea2c_mutacion_cierre_tardio.py`,
+   `vuelta187_tarea4_mutacion_dos_convenciones.py` y
+   `vuelta188_tarea4_mutacion_cobertura_parejas.py`. **NO ES NUEVO:** la bateria de
+   la 189 publica **la misma lista y el mismo rojo en sus diez tramos**, medido en
+   sus salidas selladas.
+
+**Y EL UNICO ARNES QUE FALLO POR SU MAQUINA, NOMBRADO CON SU TRAMO Y SU MOTIVO:**
+**tramo 7**, `vuelta172_tarea5_mutacion_cierre.py`, **exit 1, `NO MORDIO`, 2.4s**.
+Corrido a mano aparte, publica **CIFRA casos: 17 | pasan: 15 | fallan: 2** y
+**CIFRA casos que caen al mutar el esperado: 16 de 17**. Los dos que fallan son
+`A_con_las_cuatro_no_falta_ninguna` (real 1, esperado 0) y
+`A_y_no_nombra_ningun_codigo` (real `['(3)']`, esperado `[]`), y el que no cae al
+mutar es el primero de esos dos. **TAMPOCO ES NUEVO:** la bateria de la 189 lo
+publica igual, `exit 1 NO MORDIO`, en su propia salida sellada. **No lo re corri
+hasta que saliera verde y no lo arreglo**: esta vuelta es de bateria y su encargo
+no lo incluye.
+
+**LO QUE ESTO DEJA DICHO, SIN ADORNARLO:** la bateria **esta corrida** por la vara
+de la 6.1, porque **los diez tramos tienen salida sellada no vacia y del mismo
+calibre** y `--componer` lo coteja leyendo las salidas. **Y su contenido sale en
+rojo**, por dos cuentas censales y un arnes que no muerde, **ninguno de los tres
+arreglable dentro de este encargo**. Las dos cosas son ciertas a la vez y se
+publican juntas: **una bateria corrida no es una bateria verde.**
 
 <!-- FIN ANEXO DE TAREAS -->
