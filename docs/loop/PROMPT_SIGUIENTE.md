@@ -1,148 +1,192 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Eres el ejecutor de la vuelta 189 en la rama `pasada-unica`, FASE III. **ESTA ES
-UNA VUELTA DE BATERIA**, por `AUDITOR.md` 6.1: la bateria **entera y sola**, por
-tramos, con su doble corrida, su reloj y su salida sellada, **y nada de trabajo
-de plan al lado**. Solo lleva DOS tareas y la segunda es la bateria.
+Eres el ejecutor de la VUELTA 190. Rama `pasada-unica`. FASE III, EJECUCION.
 
-Abre con tu bloque de apertura sellado ANTES de la primera operacion (HEAD real,
-`git status --porcelain`, `git diff --numstat -- dataset/` al entrar, y el
-desfase del calibrado medido AHI y no al cierre), y **talla el esqueleto del
-reporte en la apertura y en su propio commit**, como hizo la 188.
+NO ES VUELTA DE BATERIA. La 189 la corrio entera y por `AUDITOR.md` 6.1 la
+siguiente cae en la 194. La seccion 9 de tu reporte cierra con el HUECO
+DECLARADO Y MEDIDO por su carril, con su medicion, su atribucion y su corrida.
+Un hueco declarado no es un hueco escondido.
 
----
+VAN CINCO SUB-TAREAS Y NO DOS. El tope temporal de la `AUDITOR.md` 6.2 se
+cumplio y caduca: su disparador de salida pedia DOS vueltas seguidas cerrando su
+propio reporte con `cerrar_reporte.py`, y son TRES, medidas en git y no
+recordadas: la 187 (`56ec2696`), la 188 (`7302573f`) y la 189 (`f973b0bd`), las
+tres con exitcode 0 en su propia vuelta y las tres archivadas en su propia vuelta
+(`9a06b7c8`, `564a82f9`, `63d0c5b4`). Vuelve el tope de CINCO de la seccion 6.
+Esta adjudicado en la 4.10 del acta 190.
 
-## TAREA 1. LOS REGISTROS. BLOQUEANTE.
+ABRE EL REPORTE AL EMPEZAR, con su esqueleto tallado y en su propio commit, y
+mide tu desfase de calibrado DENTRO del bloque de apertura y ANTES de la primera
+operacion. Una columna de apertura medida al cierre es caida que ACUMULA.
 
-El **acta del auditor de la vuelta 189** (cabecera `# ACTA DEL AUDITOR, VUELTA
-189`, cubre la vuelta 188) entra en la serie con el numero que devuelve
-`scripts/loop/serie_de_registros.py`, **computado y no tecleado**. Lleva:
+=============================================================================
+TAREA 1. LOS REGISTROS. BLOQUEANTE.
+=============================================================================
 
-- **DIEZ adjudicaciones**, `4.1` a `4.10`, y ademas la adjudicacion de la
-  seccion 5 (la bateria corre entera). Las seis primeras (`4.1` a `4.6`) son los
-  seis discutibles del ejecutor y **las seis van A FAVOR**.
-- **TRES preguntas contestadas** (`4.7`, `4.8`, `4.9`).
-- **DOS caidas propias del auditor**, `C.1` y `C.2`, **las dos de metodo y
-  ninguna de racha**, y **CERO caidas del ejecutor**. Registra el cero **como
-  cero y no lo omitas**.
-- **UNA correccion declarada del auditor sobre su propia sede** (`4.9`): el acta
-  188 escribio "de `LD-01` hasta `LD-98`" y la cifra buena, medida hoy, es **68
-  etiquetas distintas con maximo `LD-154`**. **El texto viejo no se borra.**
-- **La racha de reporte queda CORTADA y vuelve a 0** por la adjudicacion `4.10`,
-  y eso **cambia** lo que decia el acta 188 (que la mantenia en 2). El registro
-  lo dice con las dos cifras, la vieja y la nueva.
+El acta 190 entra en la serie con el numero que devuelva
+`scripts/loop/serie_de_registros.py`, computado y no tecleado (hoy el siguiente
+libre es `R.52`, pero lo dice el instrumento, no este encargo).
 
-Con **caso positivo por mutacion** sobre un acta FABRICADA y su esperado mutado
-cayendo, y con **la PARADA conservada entera**: un estado que el registrador no
-sepa leer sigue siendo PARADA.
+La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta, no de
+aqui:
 
-**Y UNA COSA MAS, QUE SALE DE LA `C.2` DEL ACTA Y ES DEL PROPIO REGISTRADOR:
-HAZLO IDEMPOTENTE.** Hoy `scripts/loop/vuelta188_tarea1a_registrar_acta188.py`,
-**re corrido**, no detecta que el acta ya esta registrada y **escribe una entrada
-nueva duplicada con el numero siguiente**. El auditor lo cazo re corriendolo, y
-tuvo que revertir a mano una `R.51` fantasma de 196 lineas en
-`docs/PENDIENTES.md`. **Un instrumento que el auditor tiene mandato de re correr
-y que muta el registro al re correrse es una trampa.** El registrador de esta
-vuelta **comprueba primero si el acta que se le pide ya tiene entrada** (por su
-cabecera literal, no por el numero) y, si la tiene, **sale sin escribir y
-diciendolo con su cifra**. Con su caso positivo por mutacion: un registro que ya
-existe y se intenta escribir dos veces **CAE**.
+  - LAS DIEZ ADJUDICACIONES `4.1` a `4.10`.
+  - QUE NO SON DIEZ A FAVOR. Seis son los discutibles del ejecutor y de esos
+    CINCO van A FAVOR (`D.1`, `D.2`, `D.3`, `D.4`, `D.6`) y UNO EN CONTRA: el
+    `D.5`, la guarda del sujeto congelado fuera del veredicto. Si tu registrador
+    cuenta "seis A FAVOR" por herencia del vocabulario de la vuelta pasada, esta
+    contando mal: la marca de EN CONTRA tiene que existir y tiene que salir en la
+    cuenta. Pruebala por mutacion con un acta fabricada.
+  - LAS TRES PREGUNTAS CONTESTADAS (`4.4` la `P.1`, `4.8` la `P.2`, `4.9` la
+    `P.3`).
+  - LOS DOS HALLAZGOS DE LA SECCION 5 QUE NO SALEN DE NINGUN DISCUTIBLE: las dos
+    convenciones de `lineas` (`5.1`) y las ocho actas sin entrada propia (`5.2`).
+  - CERO CAIDAS PROPIAS DEL AUDITOR, ESCRITO COMO CERO Y NO OMITIDO, y TRES del
+    ejecutor, las tres DE METODO y ninguna de racha.
+  - LA VARA CORRIDA POR EL AUDITOR (`5.4`), con sus cifras.
 
----
+EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE. El de la 189 lo es y esta probado: re
+correrlo dice `NO SE ESCRIBE NADA` y deja `docs/PENDIENTES.md` en sus 961248
+bytes. No lo pierdas al clonarlo, y re correlo tu mismo para probarlo, con la
+sede medida antes y despues.
 
-## TAREA 2. LA BATERIA DE MUTACIONES, ENTERA, POR TRAMOS Y SOLA.
+=============================================================================
+TAREA 2. LA GUARDA DEL SUJETO CONGELADO: SEPARA LA DEUDA DEL FALLO, Y VUELVE
+AL VEREDICTO.
+=============================================================================
 
-**PRIMERO EL CLON, Y ES BLOQUEANTE DE LA BATERIA.**
-`scripts/loop/vuelta183_bateria_por_tramos.py` **NO se corre tal cual**. Motivo
-medido por el auditor en esta vuelta, y esta escrito entero en la seccion 5 de
-su acta:
+Son las adjudicaciones `4.4` y `4.6` del acta 190, y las dos mitades van juntas
+porque una sin la otra no sirve.
 
-- La nomina paso de **121 a 125** entradas, asi que el reparto **ya no da NUEVE
-  tramos sino DIEZ** (`CIFRA entradas de la nomina: 125`, `CIFRA tramos: 10`,
-  nueve de 13 y uno de 8).
-- Su `--siguiente` dice hoy **`CIFRA tramos CON salida sellada no vacia: 9`,
-  `CIFRA tramos que FALTAN: 1`, `EL SIGUIENTE ES EL TRAMO 10`**, porque cuenta
-  las salidas `SALIDA_V183_BATERIA_TRAMO_n.txt` de la corrida de la 183/184.
-- **Correrlo tal cual haria un solo tramo de diez y declararia la bateria
-  corrida habiendo corrido 8 arneses de 125.** Un verde comodo del tamano de la
-  guarda entera.
+(a) `guarda_del_sujeto_congelado()` SEPARA EN SU SALIDA las entradas
+    `NO DECIDIBLE` que traen MOTIVO ESCRITO de las que no lo traen, y publica LAS
+    DOS CIFRAS con sus nombres. Hoy "3 entradas sin congelar" no distingue una
+    deuda de una decision, y esa es la `P.1` que el acta 189 dejo encargada en su
+    `4.7`. Las tres de hoy son `vuelta186_tarea2c_mutacion_cierre_tardio.py`,
+    `vuelta187_tarea4_mutacion_dos_convenciones.py` y
+    `vuelta188_tarea4_mutacion_cobertura_parejas.py`: mide cuantas de las tres
+    traen motivo escrito, no lo supongas.
 
-**LA ADJUDICACION DEL AUDITOR, QUE NO SE RE LITIGA:** la bateria de la 189
-**corre ENTERA sobre la nomina de hoy y NO hereda ni una salida sellada de la
-corrida 183/184**. `AUDITOR.md` 6.1 dice "la bateria entera"; "una vuelta cortada
-retoma en el tramo siguiente" habla de **una vuelta que se corto**, y la del
-183/184 **cerro**; y **"DEL MISMO CALIBRE"** lo cierra, porque nueve salidas de
-hace cinco vueltas y una de hoy no son del mismo calibre. **Y NO SE BORRA NADA:
-las nueve salidas de la 183 se quedan donde estan.**
+(b) LA GUARDA VUELVE AL VEREDICTO del instrumento de la nomina. El `D.5` de la
+    189 la saco y el acta 190 lo TUMBA: publicar los tres nombres arriba y cerrar
+    en verde deja sin sintoma al que solo mire el veredicto, y eso es convertir
+    una deuda visible en una exencion, que es lo que la `4.7` del acta 189
+    advirtio expresamente. Con la separacion de (a) puesta, el veredicto ya puede
+    decir ROJO POR DEUDA DECLARADA distinto de ROJO POR FALLO, sin dejar de ser
+    rojo.
 
-**COMO:** escribe `scripts/loop/vuelta189_bateria_por_tramos.py`, **clon
-declarado** de `vuelta183_bateria_por_tramos.py`, cotejado con
-`scripts/loop/cotejar_clon_declarado.py` y con la salida del cotejo pegada en el
-reporte. El fichero ya computa su numero de vuelta de
-`os.path.basename(__file__)` y trae `literales_de_vuelta_clavados()`, asi que el
-clon **escribe `SALIDA_V189_BATERIA_TRAMO_n.txt` solo y su `--siguiente` cuenta
-desde cero**. **Comprueba las dos cosas antes de lanzar nada**, con `--plan` y
-con `--siguiente`, y pega las dos salidas.
+NO SE AFLOJA NINGUNA GUARDA PARA CONSEGUIR ESTO. Si al volver al veredicto algo
+cierra en rojo, ese rojo se trae con su nombre y no se apaga.
 
-**DESPUES LA BATERIA, TRAMO A TRAMO:**
+Con simulacion previa sobre copia en memoria y caso positivo por mutacion.
 
-1. `--plan` primero, y **publica el reparto computado, no tecleado**: cuantas
-   entradas, cuantos tramos y de que tamano cada uno, con el corte de HEAD.
-2. Cada tramo se corre con `--tramo N`, **se sella su salida y SE COMMITEA antes
-   de pasar al siguiente**. Si la vuelta se corta, la siguiente **retoma en el
-   tramo que diga `--siguiente`**, no desde el principio.
-3. **Doble corrida** de cada arnes, con el cotejo de reproducibilidad: el mismo
-   `sha256` normalizado a LF las dos veces. Un arnes que cambia solo entre dos
-   corridas del mismo dia sobre el mismo sujeto es **PARADA**, y se trae.
-4. **La doble corrida EXCLUYE explicitamente cualquier arnes que ya haya salido
-   en rojo en esa misma vuelta**, y **lo dice en su salida** con el nombre del
-   excluido, la ruta de su salida en rojo y el motivo. Una exclusion muda seria
-   peor que el problema.
-5. **Un arnes ya sellado que cae en rojo detiene AL ARNES, no a la vuelta**: te
-   detienes ahi, lo traes con su salida entera, **sin re correrlo y sin
-   arreglarlo**. Un arnes que **nace hoy** y sale en rojo si se repara, y su
-   corrida en rojo se conserva entera con el motivo dentro del propio fichero.
-6. **El reloj:** publica la estimacion del `--plan` **como estimacion** y, al
-   cerrar cada tramo, **la medicion de verdad**, que es la que manda.
-7. `--componer` al final, y **la bateria se declara corrida cuando LOS DIEZ
-   tramos tienen salida sellada DEL MISMO CALIBRE**. **Una salida sellada que
-   mide CERO BYTES no cuenta como hecha.**
+=============================================================================
+TAREA 3. LA BATERIA: QUE SU EXITCODE SEPARE, Y QUE RESTAURE SOLA LO QUE PISA.
+=============================================================================
 
-**NADA MAS ENTRA EN ESTA VUELTA.** Ni cribado, ni recomputo, ni operaciones del
-plan, ni las mesas anotadas, ni podar la nomina (la opcion `c` que el fundador
-RECHAZO el 5 sep). **La nomina sigue creciendo y nadie la poda sin el fundador.**
+Las dos mitades tocan el mismo lanzador, por eso van en la misma tarea. Son las
+adjudicaciones `4.4` y `4.9` del acta 190. NO SE CORRE LA BATERIA en esta vuelta:
+se arregla su lanzador y se prueba con sus arneses, nada mas.
 
----
+(a) EL EXITCODE SEPARA. Hoy los diez tramos de la 189 salieron con exitcode 1 y
+    en NUEVE de ellos no cayo ni un arnes: la fuente era siempre la guarda de
+    nomina en deuda. Un unico `1` para un arnes caido y para una deuda declarada
+    es degradacion silenciosa (banco 9). Que el lanzador distinga los dos casos en
+    su salida sellada y en su codigo de salida, y que lo diga con su cifra.
 
-## LO QUE VA A LA VUELTA 190 Y NO A ESTA, PARA QUE NO SE CUELE NI SE PIERDA
+(b) LA BATERIA RESTAURA SOLA LAS SALIDAS SELLADAS AJENAS QUE PISA, como ya
+    restaura `dataset/`. Es la `4.9`: una salida sellada es la prueba de la vuelta
+    que la sello, y dejar que una corrida posterior la pise borra el registro.
+    En la 189 piso TRES (`SALIDA_V184_T1C_MUTACION_ESTIMACION.txt`,
+    `SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt` y
+    `SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt`) y las restauro una persona a
+    mano, en dos vueltas distintas y a dos personas distintas. La restauracion va
+    EN LF, que es la convencion de la casa en disco.
 
-Queda escrito aqui **para que la 190 no tenga que redescubrirlo**, y **no se
-toca en la 189**:
+    Y SI EL CORTE NUEVO INTERESA, SE ESCRIBE AL LADO CON NOMBRE NUEVO Y SU
+    VUELTA, nunca encima. Esa es la respuesta entera a tu `P.3`.
 
-1. **LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 189**, encargada por
-   `AUDITOR.md` 1.2 porque la discrepancia del **puesto 2422** cayo FUERA de los
-   dudosos marcados. 30 puestos mas 30 vecinos deterministas, con `vecinos()`
-   importada y su parametro `evitar`, solape del universo en cero, y **ninguna
-   clase se vuelve a decidir**.
-2. **`P.1` EN CODIGO:** la `guarda_del_sujeto_congelado()` **separa en su salida**
-   las entradas `NO DECIDIBLE` que traen motivo escrito dentro de su propio
-   arnes de las que no lo traen. La lista de exentos **NO se abre**: el auditor
-   adjudico que `NO DECIDIBLE` se queda como esta y que la deuda sigue visible.
-3. **`P.2` EN CODIGO:** el cotejo de clon declarado **separa el clon que ANADE
-   codigo del que CAMBIA codigo**, publica las dos cifras (sentencias del
-   original que sobreviven identicas, y sentencias nuevas del clon) y **solo cae
-   en rojo cuando alguna del original no sobrevive**.
-4. **`D.4`, la condicion que el auditor le puso al aprobarlo:** la excepcion
-   mecanica del caso decisivo **publica siempre su lista, aunque este vacia**.
-5. **LA SEDE DE `OP-L-02`, QUE ES UNA MEDICION NO CORRIDA Y NO UNA PARADA.** Su
-   `verificacion` habla de "las tres nominas afectadas" y de "cada grupo del
-   backlog", y **nadie ha buscado todavia si esas tres nominas tienen sede en el
-   repo**. Se busca, con el comando escrito y su salida pegada. **Si la hay, la
-   ficha se resuelve contra ella. Si no la hay en ninguna parte, ENTONCES es
-   PARADA y se trae al fundador**, porque inventarle una sede es cambiar el
-   alcance de la campana.
+Con simulacion previa y caso positivo por mutacion que CAIGA si una salida
+sellada ajena se queda pisada.
 
----
+=============================================================================
+TAREA 4. LA RELECTURA AL DOBLE DEL TRAMO DEL PUESTO 2422.
+=============================================================================
+
+ES UNA DEUDA DEL ACTA 189 Y NO SE SALTA DOS VUELTAS SEGUIDAS. La 189 la aplazo
+con razon (era vuelta de bateria y `AUDITOR.md` 6.1 dice que la bateria va sola),
+pero la razon ya no vale hoy.
+
+El acta 189 encontro la discrepancia del puesto `2422` FUERA de sus dudosos
+marcados, y la letra de `AUDITOR.md` 1.2 dice que eso baja el credito de la tanda
+y obliga a releer ese tramo AL DOBLE. Corre la relectura con
+`scripts/loop/aislador_de_ciega.py`, sobre los vecinos deterministas del `2422`,
+con el criterio escrito, la ciega y el destape en ficheros separados, y las clases
+escritas ANTES de abrir el destape. Publica cuantos coinciden y cuantos discrepan.
+
+NO TOQUES NINGUNA CLASE del archivo. Si de la relectura sale una correccion, se
+declara y se trae; no se escribe sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en
+esta vuelta. El `sha256` LF del archivo abre y cierra en `0a77b5a35a962621`.
+
+=============================================================================
+TAREA 5. LA SEDE DE `OP-L-02`: BUSCARLA, NO INVENTARLA.
+=============================================================================
+
+Es la `4.1` del acta 189, y la vara del acta 190 (`5.4`) la confirma medida:
+corrida con `--corte 63d0c5b4` da 71 fichas, 6 en LISTA sin ninguna prueba, 2 de
+ellas CONSUMIDAS por `OP-U-01` y 4 de TRABAJO REAL; de esas cuatro, tres son
+mesas cuyo producto documental SI existe en disco, y `OP-L-02` es LA UNICA SIN
+DOCUMENTO QUE MEDIR, con 0 menciones de fichero en su evidencia.
+
+Su `verificacion` habla de "las tres nominas afectadas" y de "cada grupo del
+backlog". BUSCA SI ESAS TRES NOMINAS TIENEN SEDE EN EL REPO, con tus propios
+comandos, y publica la busqueda entera: que buscaste, donde, y que encontraste.
+
+Y AQUI ESTA EL LIMITE, ESCRITO PARA QUE NO SE CRUCE: si la busqueda no encuentra
+sede en ninguna parte, ESO ES EL RESULTADO Y SE PUBLICA COMO TAL. NO le inventes
+una sede a la ficha, ni la declares HECHA, ni la muevas de estado: inventarle una
+sede es cambiar el alcance de la campana, y eso lo reserva el fundador. En ese
+caso lo traes y el auditor lo eleva.
+
+=============================================================================
+LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE PIERDA
+=============================================================================
+
+Cinco es el tope y estas seis quedan FUERA a proposito, nombradas para que la
+vuelta 191 las encuentre escritas y no haya que redescubrirlas:
+
+  1. LAS DOS CONVENCIONES DE `lineas` (acta 190, `5.1`). El registrador cuenta con
+     `len(texto.split(NL))` y publica 2231 donde `wc -l` da 2230;
+     `cerrar_reporte.py` cuenta con `texto.count(NL)` y calza. Hay que igualar los
+     instrumentos o declarar la convencion en cada cifra, como ya se hizo con los
+     BYTES.
+  2. `acumulan()` CONTRA LA TABLA (acta 190, `4.2`). Que lea la tabla de credito o
+     que declare en su salida que no es la sede.
+  3. EL COTEJO DE CLON DECLARADO QUE SEPARA (acta 189, `4.8`). Dos cifras:
+     sentencias del original que sobreviven identicas, y sentencias nuevas del
+     clon; rojo SOLO cuando alguna del original no sobrevive.
+  4. LA EXCEPCION QUE PUBLICA SIEMPRE SU LISTA, AUNQUE ESTE VACIA (acta 189,
+     `4.4`). Una puerta que solo se ve cuando se usa no se puede auditar.
+  5. LA MEDICION DEL CENSO DE ARNESES SIN FICHERO (acta 190, `4.8`). PRIMERO se
+     cuenta cuantos instrumentos traen carril `--mutacion` sin fichero que los
+     represente y se publica esa cifra; DESPUES se cambia el censo. No al reves.
+  6. LAS OCHO ACTAS SIN ENTRADA PROPIA EN LA SERIE (acta 190, `5.2`): 173, 174,
+     175, 176, 177, 178, 179 y 180, entre el `R.42` y el `R.43`.
+
+Y SIGUEN FUERA, COMO EN LA 189: el cribado, el recomputo, las operaciones del
+plan que no sean la busqueda de la `TAREA 5`, las mesas anotadas, y PODAR LA
+NOMINA, que el fundador RECHAZO el 5 sep 2026. La nomina sigue creciendo y nadie
+la poda sin el fundador.
+
+=============================================================================
+
+Las guardas de siempre, y ninguna se afloja: simulacion previa sobre copia en
+memoria, caso positivo por mutacion en cada instrumento nuevo, Gate 0 y las
+suites en verde tras cada tarea, `git diff --numstat -- dataset/` medido al
+entrar y al salir con las DOS cifras publicadas, y el reporte cerrado por
+`scripts/loop/cerrar_reporte.py` con sus cuatro piezas y archivado en tu misma
+vuelta. Los tamanos van en BYTES EXACTOS leidos del instrumento, nunca
+redondeados, y los KB solo entre parentesis y detras del byte.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
