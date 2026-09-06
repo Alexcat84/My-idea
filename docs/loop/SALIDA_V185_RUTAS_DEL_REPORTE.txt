@@ -1,0 +1,53 @@
+TODA RUTA PUBLICADA EN docs/loop/REPORTE.md, COMPROBADA UNA A UNA
+
+CIFRA rutas distintas halladas en el reporte: 38
+
+   OK        docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            disco  4051967 bytes | LF  4051967 bytes
+   OK        docs/PENDIENTES.md                                             disco   894124 bytes | LF   894124 bytes
+   OK        docs/loop/REPORTE.md                                           disco    42888 bytes | LF    42888 bytes
+   OK        docs/loop/SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt              disco     5802 bytes | LF     5802 bytes
+   OK        docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt         disco     4982 bytes | LF     4982 bytes
+   OK        docs/loop/SALIDA_V183_BATERIA.txt                              disco    71753 bytes | LF    71753 bytes
+   OK        docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt                    disco     2435 bytes | LF     2415 bytes
+   OK        docs/loop/SALIDA_V185_APERTURA.txt                             disco    26084 bytes | LF    26084 bytes
+   OK        docs/loop/SALIDA_V185_CERRAR_REPORTE_184.txt                   disco     5581 bytes | LF     5497 bytes
+   OK        docs/loop/SALIDA_V185_COTEJO_DE_CLONES.txt                     disco    42081 bytes | LF    41431 bytes
+   OK        docs/loop/SALIDA_V185_ESQUELETO.txt                            disco     3965 bytes | LF     3901 bytes
+   OK        docs/loop/SALIDA_V185_GATE0_CMD1_APERTURA.txt                  disco     4859 bytes | LF     4790 bytes
+   OK        docs/loop/SALIDA_V185_GATE0_CMD1_CIERRE.txt                    disco     4859 bytes | LF     4790 bytes
+   OK        docs/loop/SALIDA_V185_HEAD_APERTURA.txt                        disco       41 bytes | LF       41 bytes
+   NO EXISTE docs/loop/SALIDA_V185_HUECO_BATERIA.txt                       
+   OK        docs/loop/SALIDA_V185_T1A_MUTACION_REGISTRO_185.txt            disco     4443 bytes | LF     4443 bytes
+   OK        docs/loop/SALIDA_V185_T1A_REGISTRO_R47.txt                     disco     4615 bytes | LF     4615 bytes
+   OK        docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt            disco     6100 bytes | LF     6100 bytes
+   OK        docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt      disco     7937 bytes | LF     7937 bytes
+   OK        docs/loop/SALIDA_V185_T1C_SEGUNDA_GUARDA.txt                   disco     2234 bytes | LF     2234 bytes
+   OK        docs/loop/SALIDA_V185_T1D_COTEJO_QUIEN_SELLO.txt               disco     2602 bytes | LF     2602 bytes
+   OK        docs/loop/SALIDA_V185_T1E_RELECTURA_AL_DOBLE.txt               disco    12566 bytes | LF    12566 bytes
+   OK        docs/loop/SALIDA_V185_T2A_REPORTE_184_ANTES.md                 disco    33608 bytes | LF    33608 bytes
+   OK        docs/loop/SALIDA_V185_T2A_REPORTE_184_CERRADO_EN_ROJO.md       disco   122030 bytes | LF   122030 bytes
+   OK        docs/loop/SALIDA_V185_T2A_VEREDICTO_184.txt                    disco     2322 bytes | LF     2322 bytes
+   OK        docs/loop/SALIDA_V185_T2A_VEREDICTO_184_FRASE.txt              disco      356 bytes | LF      356 bytes
+   OK        docs/loop/SALIDA_V185_TALLADOR_CABECERA.txt                    disco     2419 bytes | LF     2399 bytes
+   OK        docs/loop/reportes/REPORTE_V184.md                             disco    33608 bytes | LF    33608 bytes
+   OK        scripts/loop/_v184_cierre_texto.md                             disco    13982 bytes | LF    13982 bytes
+   OK        scripts/loop/_v184_t2_seccion.md                               disco    17487 bytes | LF    17487 bytes
+   OK        scripts/loop/_v185_tallar_t1.py                                disco    26738 bytes | LF    26738 bytes
+   OK        scripts/loop/_v185_tallar_t2.py                                disco    15438 bytes | LF    15438 bytes
+   OK        scripts/loop/cerrar_reporte.py                                 disco    60409 bytes | LF    60409 bytes
+   OK        scripts/loop/serie_de_registros.py                             disco     6595 bytes | LF     6595 bytes
+   OK        scripts/loop/tallar_cabecera_reporte.py                        disco   100077 bytes | LF   100077 bytes
+   OK        scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py          disco     8811 bytes | LF     8811 bytes
+   OK        scripts/loop/vuelta185_esqueleto_reporte.py                    disco    18160 bytes | LF    18160 bytes
+   OK        scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py        disco    13396 bytes | LF    13396 bytes
+
+CIFRA rutas que NO EXISTEN: 1
+   docs/loop/SALIDA_V185_HUECO_BATERIA.txt
+CIFRA rutas de CERO BYTES: 0
+
+LA UNICA QUE NO EXISTE ES LA DEL HUECO DECLARADO, Y ESO NO ES CAIDA DE CIFRA:
+no se publica como evidencia de una corrida, sino como EL NOMBRE DEL HUECO,
+y el propio instrumento escribe al lado, con estas palabras, que os.path.exists
+devuelve NO y que por eso os.path.getsize no llego a correr sobre el. Es el
+carril de cerrar_reporte.py para las vueltas intermedias, el que AUDITOR.md 6.1
+manda usar cuando la bateria no toca.
