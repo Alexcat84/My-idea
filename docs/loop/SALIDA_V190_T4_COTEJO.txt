@@ -1,0 +1,286 @@
+==============================================================================
+VUELTA 190, TAREA 4: EL COTEJO, DESPUES DE ABRIR EL DESTAPE
+==============================================================================
+
+A) LOS TRES FICHEROS, MEDIDOS POR LAS DOS CONVENCIONES
+   docs/loop/SALIDA_V190_T4_CIEGA.txt             disco  39678 | LF  39678 | lineas  494 | sha256 LF 0e2e4f4c6b9ed113
+   docs/loop/SALIDA_V190_T4_MIS_CLASES.txt        disco   4934 | LF   4934 | lineas   57 | sha256 LF 726833347bd0c798
+   docs/loop/SALIDA_V190_T4_DESTAPE.txt           disco  31816 | LF  31816 | lineas  132 | sha256 LF 3e38cb6863405a73
+   EL ORDEN, LEIDO DE GIT Y NO PROMETIDO: el aislamiento y los dos
+   ficheros van en a0148267 y mis clases en 92b22813, ANTES de este cotejo.
+
+B) EL COTEJO, PUESTO A PUESTO
+   puesto | mia | archivo | veredicto | dudoso mio
+        3 |  A  |    A    | COINCIDE  | no
+       20 |  D  |    D    | COINCIDE  | no
+       67 |  D  |    D    | COINCIDE  | SI
+      129 |  D  |    D    | COINCIDE  | no
+      155 |  D  |    D    | COINCIDE  | no
+      200 |  A  |    A    | COINCIDE  | SI
+      391 |  D  |    D    | COINCIDE  | no
+      609 |  A  |    A    | COINCIDE  | no
+      648 |  D  |    B    | DISCREPA  | SI
+      715 |  D  |    D    | COINCIDE  | no
+      872 |  A  |    D    | DISCREPA  | SI
+      904 |  B  |    D    | DISCREPA  | SI
+      963 |  D  |    A    | DISCREPA  | SI
+      969 |  A  |    A    | COINCIDE  | no
+     1066 |  D  |    D    | COINCIDE  | no
+     1201 |  A  |    D    | DISCREPA  | SI
+     1366 |  D  |    A    | DISCREPA  | SI
+     1802 |  D  |    D    | COINCIDE  | no
+     1812 |  D  |    D    | COINCIDE  | SI
+     2027 |  D  |    D    | COINCIDE  | no
+     2154 |  D  |    D    | COINCIDE  | no
+     2423 |  B  |    D    | DISCREPA  | SI
+     2657 |  D  |    D    | COINCIDE  | SI
+     2831 |  D  |    D    | COINCIDE  | no
+     2910 |  D  |    D    | COINCIDE  | no
+     3067 |  A  |    D    | DISCREPA  | SI
+     3086 |  B  |    D    | DISCREPA  | SI
+     3168 |  D  |    D    | COINCIDE  | no
+     3182 |  D  |    A    | DISCREPA  | no
+     3326 |  D  |    D    | COINCIDE  | no
+
+C) LAS CIFRAS
+   CIFRA puestos releidos: 30
+   CIFRA que COINCIDEN: 20
+   CIFRA que DISCREPAN: 10
+   CIFRA discrepancias DENTRO de mis dudosos marcados: 9 (648, 872, 904, 963, 1201, 1366, 2423, 3067, 3086)
+   CIFRA discrepancias FUERA de mis dudosos marcados: 1 (3182)
+   CIFRA dudosos que marque y que SI coincidieron: 4
+   MI REPARTO:   A 7 | B 3 | C 0 | D 20
+   EL DEL ARCHIVO: A 7 | B 1 | C 0 | D 22
+
+D) LAS DIEZ DISCREPANCIAS, UNA A UNA, CON LA RAZON DEL ARCHIVO ENTERA
+   --------------------------------------------------------------------------
+   PUESTO 648. yo D, el archivo B. DENTRO de mis dudosos
+      mi motivo: el peso de la etapa de investigacion en la llamada contra la secuencia SPIN entera; DUDOSO MIO, misma familia
+      razon del archivo:
+         Los dos dicen que el problema no esta donde el vendedor cree, pero senal
+         an sitios distintos, y comparten una orden. modelo_spin ataca el ENTRENA
+         MIENTO: dejar de entrenarse en distinguir preguntas abiertas de cerradas
+          porque ese no es el factor que decide, disenar las preguntas en el orde
+         n Situacion, Problema, Implicacion y Necesidad-beneficio, practicar el p
+         aso de un tipo al siguiente sin que se note, y revisar las llamadas para
+          detectar en que parte de la secuencia te trabas. enfoque_etapa_investig
+         acion ataca el REPARTO DEL TIEMPO: al planificar dedicar mas tiempo a di
+         senar preguntas que a preparar el discurso de producto, no mostrar benef
+         icios hasta haber desarrollado el problema, y medirse a si mismo revisan
+         do cuanto se hablo de producto en la primera mitad de las llamadas pasad
+         as. Lo comun es el paso 4 del segundo y el paso 2 del primero: entrenar 
+         primero Situacion y Problema y despues Implicacion y Necesidad-beneficio
+         . Sin arista entre ellos. LA REGLA FAMILIA DECLARADA NO APLICA por septi
+         ma vez: solo enfoque_etapa_investigacion esta en la nomina del racimo ce
+         nsado La etapa de investigacion en la venta, y modelo_spin, que es el no
+         do que da nombre al metodo entero, quedo fuera.
+   --------------------------------------------------------------------------
+   PUESTO 872. yo A, el archivo D. DENTRO de mis dudosos
+      mi motivo: los cuatro de A estan en B: quien decide, presupuesto, cuantas llamadas y probar el proceso; DUDOSO MIO
+      razon del archivo:
+         La ECONOMIA de la venta contra el MAPA de acceso, sin arista entre ellos
+         , y el sub-puro del sales roadmap se rompe. customer_validation_sales_ro
+         admap mide si la venta funciona: definir quien influye, quien recomienda
+          y quien decide la compra, identificar donde esta el presupuesto disponi
+         ble, determinar cuantas llamadas de venta y cuanto tiempo toma cerrar un
+         a, y probar el proceso completo con ordenes reales a precio completo ant
+         es de escalar. hoja_de_ruta_de_ventas construye el camino de acceso: act
+         ualizar los mapas de organizacion e influencia hechos en el descubrimien
+         to con hallazgos reales, identificar cuantas personas deben decir que si
+         , determinar el orden correcto de contacto entre ejecutivos, tecnicos y 
+         usuarios, crear un mapa de acceso que muestre como conseguir la primera 
+         reunion, y disenar un plan de implementacion que liste todo lo pendiente
+          desde el si verbal hasta el cobro efectivo. Lo compartido es UNA linea,
+          quien influye y quien decide, que el primero enuncia y el segundo desar
+         rolla en un procedimiento de cuatro pasos, mapas, conteo de firmantes, o
+         rden de contacto y mapa de acceso. Por la vara del banco 9.6.1, CONTINUA
+         . CONSECUENCIA DECLARADA: el sub-puro numero 3 del banco 9.5, el sales r
+         oadmap, tenia cuatro pares leidos y los cuatro en A; este es el primero 
+         sano, asi que deja de ser sub-puro y pasa a MEZCLADO. Le quedan cinco le
+         cturas.
+   --------------------------------------------------------------------------
+   PUESTO 904. yo B, el archivo D. DENTRO de mis dudosos
+      mi motivo: tres de cinco pasos coinciden pero uno manda cultura y lenguaje y el otro un temario; DUDOSO MIO
+      razon del archivo:
+         La cultura contra el programa que la instala, del mismo libro y con aris
+         ta en los dos sentidos verificada resolviendo a nodo vivo. cultura_de_tr
+         ansparencia_financiera fija el clima: diagnosticar el nivel actual de co
+         mprension financiera, establecer sesiones de capacitacion regulares, com
+         partir metricas de desempeno en reuniones periodicas, explicar el porque
+          detras de los cambios en indicadores o politicas, y fomentar un lenguaj
+         e de socios de negocio en vez de empleados. Sus pasos 2 y 3 son dos line
+         as, y estrategias_de_alfabetizacion_financiera las desarrolla con proced
+         imiento: disenar TRES sesiones cortas de treinta a sesenta minutos sobre
+          estado de resultados, flujo de caja y balance; ofrecerlas de forma mens
+         ual permitiendo la repeticion; establecer reuniones semanales de numeros
+          con dos o tres metricas clave; crear tableros visuales y mapas de diner
+         o que muestren como se genera la ganancia; e involucrar a los empleados 
+         pidiendoles hacer calculos y pronosticos propios. Por la vara del banco 
+         9.6.1, CONTINUA. Lo propio de la cultura y que el programa no tiene es e
+         xplicar el porque y cambiar el lenguaje.
+   --------------------------------------------------------------------------
+   PUESTO 963. yo D, el archivo A. DENTRO de mis dudosos
+      mi motivo: el cuadrante manda inventario y cadena en A y eleccion de capacidades en B; DUDOSO MIO, arrancan igual
+      razon del archivo:
+         EL MISMO CUADRANTE DE MERCADO Y LA MISMA RECETA, del mismo libro y sin a
+         rista entre ellos. Lo comun es el instrumento entero: diagnosticar en qu
+         e etapa o cuadrante esta cada mercado que atiendes, desarrollo o emergen
+         te, crecimiento, estable o maduro, y elegir segun ese cuadrante en que c
+         apacidad concentrarte, servicio al cliente, desarrollo de producto, efic
+         iencia interna o flexibilidad de demanda. Lo propio de clasificacion_mer
+         cados_cadena_suministro son analizar la relacion entre oferta y demanda 
+         de la industria, ajustar inventario, precios y cadena segun el cuadrante
+         , y revisar periodicamente porque el cuadrante cambia. Lo propio de estr
+         ategia_cuatro_capacidades_mercado son identificar en que capacidad tiene
+         s fortaleza RELATIVA frente a competidores, concentrar la inversion en u
+         na o dos y no en todas, y el aviso de no invertir en eficiencia interna 
+         si compites en mercado de crecimiento. CONDICION VIVA CUMPLIDA: era el u
+         ltimo par en cola de la familia de los cuadrantes de mercado. Cinco pare
+         s leidos y los CINCO en A, y le quedan cinco que nunca entraron.
+   --------------------------------------------------------------------------
+   PUESTO 1201. yo A, el archivo D. DENTRO de mis dudosos
+      mi motivo: los dos disenan un scorecard ponderado y lo aplican para decidir; DUDOSO MIO por la mecanica de gate de B
+      razon del archivo:
+         LA TABLA DE PUNTAJE EN DOS MOMENTOS, del mismo libro y sin arista entre 
+         ellos, y este par cierra una ESTRELLA. scorecard_de_seleccion_de_proyect
+         os sirve para ORDENAR LA CARTERA: definir los seis criterios, alineacion
+          con la estrategia, ventaja frente a la competencia y los demas; decidir
+          como puntuar con pesos o escala simple; evaluar cada proyecto activo; C
+         OMPARAR LOS PUNTAJES ENTRE PROYECTOS para decidir donde invertir primero
+         ; y revisar la lista con lo aprendido de proyectos anteriores. scorecard
+         s_criterios_gate sirve para UNA PUERTA: disenar la tabla con criterios c
+         ualitativos y financieros ponderados, aplicarla en las puertas tempranas
+         , la 1, la 2 y la 3; pedir la AUTOEVALUACION del equipo antes de la reun
+         ion para evitar el sesgo del que presenta; comparar las puntuaciones del
+          equipo contra las de quienes deciden y discutir las diferencias; e inte
+         grar valor presente neto, valor comercial esperado y plazo de recuperaci
+         on. El instrumento es el mismo y el momento y el ritual no se tocan: uno
+          compara proyectos entre si, el otro enfrenta dos lecturas del mismo pro
+         yecto. LO QUE ESTE PAR CIERRA, con el barrido corrido antes de escribir:
+          scoring_model_scorecard es el CENTRO con dos A, los puestos 184 y 820, 
+         y este es el unico par periferico. Sale sano, o sea que la familia del s
+         corecard es un RACIMO EN ESTRELLA del banco 9.23, con las dos cuentas he
+         chas: tres pares con el centro en A y el unico periferico sano. Es el SE
+         GUNDO ejemplar de la figura y el primero con la cuenta periferica COMPLE
+         TA, porque aqui no queda ningun par sin leer.
+   --------------------------------------------------------------------------
+   PUESTO 1366. yo D, el archivo A. DENTRO de mis dudosos
+      mi motivo: el embudo con los seis criterios contra demasiados proyectos para la capacidad; DUDOSO MIO, comparten go/kill
+      razon del archivo:
+         DOS MIEMBROS DE LA MESA UNIDA QUE DICEN LO MISMO, y este era el par pend
+         iente de esa mesa. CUATRO de los cinco pasos de cada uno se corresponden
+         : el embudo que va descartando lo debil y los criterios estrictos de seg
+         uir o frenar para reducir la cartera son lo mismo dicho en dos tiempos; 
+         evaluar con criterios y priorizar por potencial estrategico y financiero
+          tambien; y revisar el balance del conjunto y no proyecto por proyecto e
+         sta en los dos con las mismas palabras. PERDIDAS PROPUESTAS, con la veri
+         ficacion hecha y repartidas por lado. De gestion_de_portafolio_gates_go_
+         kill se perderian dos: los SEIS CRITERIOS nombrados, estrategico, ventaj
+         a competitiva, atractivo de mercado, apalancamiento y factibilidad; y MA
+         TAR EN FIRME los proyectos de bajo valor en vez de reducirles recursos g
+         radualmente, que es la unica regla del inventario contra los proyectos z
+         ombis. De gestion_portafolio_foco se perderian otras dos: AUDITAR el num
+         ero de proyectos activos contra la capacidad REAL de recursos, que es el
+          unico paso que mide la restriccion en vez de la calidad; y EVITAR EL MU
+         LTITAREA excesivo del personal, que es el unico que habla de las persona
+         s y no de los proyectos. CON ESTE PAR LA MESA UNIDA QUEDA EN: 120 pares 
+         posibles, 21 en cola, 19 leidos, DIECISEIS EN A, un B y dos D, y solo do
+         s pendientes en cola. Su cobertura, como manda el banco 9.26, es de 19 d
+         e 120: la forma sigue siendo PROVISIONAL y con la reserva escrita.
+   --------------------------------------------------------------------------
+   PUESTO 2423. yo B, el archivo D. DENTRO de mis dudosos
+      mi motivo: ids casi gemelos y los dos terminan en capacidad del proceso, pero A mide y arregla y B prueba la mejora; DUDOSO MIO
+      razon del archivo:
+         La linea contra su procedimiento, MISMA FUENTE, Juran, y sin arista entr
+         e ellos, con ids gemelos. establecer_capacidad_del_proceso es LA SECUENC
+         IA CORTA: medir la capacidad frente a las metas, diagnosticar causas rai
+         z si no alcanza, e IMPLEMENTAR MEJORAS PARA ELIMINAR ESAS CAUSAS ANTES D
+         E OPERAR EL PROCESO, que es UNA LINEA. establecimiento_capacidad_proceso
+          trae el procedimiento de esa linea, y es todo prueba: DECIDIR COMO SE P
+         ROBARAN LAS MEJORAS, PREPARAR UN PLAN DE PRUEBA PARA CADA UNA, conducirl
+         a y medir, AJUSTARLAS SI LOS RESULTADOS NO SON SATISFACTORIOS, CONFIRMAR
+          CONTROL ESTADISTICO MEDIANTE CARTAS DE CONTROL, y recien entonces el an
+         alisis de capacidad. Por la vara del banco 9.6.1, CONTINUA. ARISTA QUE F
+         ALTA, y con direccion, madre a hijo.
+   --------------------------------------------------------------------------
+   PUESTO 3067. yo A, el archivo D. DENTRO de mis dudosos
+      mi motivo: los dos mandan la campana de conciencia de calidad hablandole a todos y mostrando la medicion; DUDOSO MIO por el paso 4 de B
+      razon del archivo:
+         conciencia_de_calidad_2 (Crosby: organizar reuniones regulares entre sup
+         ervisores y equipos sobre problemas de no conformidad especificos, estab
+         lecer comunicacion visual con afiches y boletines, asegurar que cada sup
+         ervisor transmita directamente y no en una sola reunion masiva, mantener
+          consistencia cumpliendo las promesas hechas, involucrar a relaciones pu
+         blicas para la logistica) contra quality_awareness_crosby (Crosby, Paso 
+         4: comunicar el mensaje a todas las personas sin excepcion, registrar y 
+         mostrar las mediciones actuales desde el inicio, dejar que las personas 
+         participen activamente, evitar amenazas o castigos). MISMA FUENTE Crosby
+         , sim_tit 50,4, sin arista. conciencia_de_calidad_2 trae LA CADENCIA DE 
+         REUNIONES POR SUPERVISOR, LA COMUNICACION VISUAL Y EL APOYO DE RELACIONE
+         S PUBLICAS, pasos enteros propios; quality_awareness_crosby trae REGISTR
+         AR Y MOSTRAR LAS MEDICIONES DESDE EL INICIO y EVITAR AMENAZAS O CASTIGOS
+         , pasos enteros propios que la campana de reuniones no tiene. D.
+   --------------------------------------------------------------------------
+   PUESTO 3086. yo B, el archivo D. DENTRO de mis dudosos
+      mi motivo: los dos analizan capacidad del proceso pero B estudia una unidad y manda intervenir el sistema; DUDOSO MIO
+      razon del archivo:
+         analisis_capacidad_proceso (Juran: graficar mediciones contra limites de
+          especificacion, verificar SPC con cartas de control, calcular desviacio
+         n estandar y limites de capacidad, comparar Cpk/Cpm con especificaciones
+          usando histograma, verificar los cinco supuestos clave) contra capacida
+         d_de_proceso_2 (Deming: seleccionar la unidad a estudiar persona/maquina
+         /sistema, recolectar datos por un periodo representativo de unos 3 meses
+         , construir cartas de control, determinar si el proceso esta dentro de l
+         imites, si no intervenir sobre el sistema no sobre el individuo). MISMA 
+         FUENTE cruzada, sim_tit 44,2, sin arista. analisis_capacidad_proceso es 
+         EL CALCULO CPK/CPM CON HISTOGRAMA Y LOS CINCO SUPUESTOS, ya establecido 
+         como tal contra siete nodos de su familia (2454, 2535, 2636, 2697, 2771,
+          2777, 3032), pasos enteros propios; capacidad_de_proceso_2 trae SELECCI
+         ONAR LA UNIDAD DE ESTUDIO Y NO CULPAR AL INDIVIDUO, pasos enteros propio
+         s de la doctrina Deming de sistema contra individuo que el calculo Cpk/C
+         pm no tiene. D.
+   --------------------------------------------------------------------------
+   PUESTO 3182. yo D, el archivo A. FUERA DE MIS DUDOSOS
+      mi motivo: el plan de control del proceso del proveedor contra la planificacion tecnologica conjunta, aunque comparten seis pasos
+      razon del archivo:
+         control_del_proceso_del_proveedor (Juran: solicitar al proveedor un plan
+          escrito de control del proceso de manufactura, incluir requisitos de SP
+         C para deteccion temprana, definir tareas especiales y buenas practicas 
+         de manufactura, clasificar la seriedad de los defectos para priorizar es
+         fuerzos, establecer estandares sensoriales fisicos cuando se requiera ju
+         icio humano, estandarizar metodos y condiciones de prueba entre proveedo
+         r y comprador) contra planificacion_tecnologica_conjunta (Juran: acordar
+          el significado exacto de los requisitos de desempeno en las especificac
+         iones, cuantificar requisitos de confiabilidad y mantenibilidad, solicit
+         ar al proveedor un plan de control de proceso con tecnicas de SPC, clasi
+         ficar la seriedad de los defectos para enfocar esfuerzos, estandarizar m
+         etodos y condiciones de prueba entre comprador y proveedor, establecer s
+         istema de trazabilidad de lotes). MISMA FUENTE Juran, sim_tit 53,3, sin 
+         arista. DISCUTIBLE MARCADO fuerte, marca fuerte por ser A: TRES pasos so
+         n casi verbatim compartidos, 'solicitar al proveedor un plan de control 
+         de proceso con tecnicas de SPC', 'clasificar la seriedad de los defectos
+         ' y 'estandarizar metodos y condiciones de prueba entre proveedor y comp
+         rador'; el acto compartido es el plan conjunto de control de proceso del
+          proveedor con SPC. Y cada uno anade LINEAS PROPIAS, en los dos sentidos
+         : control_del_proceso_del_proveedor anade definir tareas especiales/buen
+         as practicas de manufactura y estandares sensoriales fisicos; planificac
+         ion_tecnologica_conjunta anade acordar el significado exacto de los requ
+         isitos, cuantificar confiabilidad/mantenibilidad, y trazabilidad de lote
+         s. Ninguno domina el nucleo compartido de tres pasos casi identicos. Bar
+         rido de familia: ningun eslabon previo toca a ninguno de los dos nodos c
+         on A (2.863 y 3.025 son D contra otros vecinos), asi que no es reformula
+         cion transitiva de un cumulo contado. A POR FUSION MUTUA, NUEVO CASO seg
+         un el criterio de la TAREA 1.1: MUEVE EL CONTADOR DE FUSIONES MUTUAS de 
+         VEINTISEIS a VEINTISIETE (el anterior fue el 2.952, item 26 de la serie 
+         renumerada en 98.1). Superviviente POR ELEGIR. Entregables compatibles: 
+         los dos son plan de control de proceso del proveedor con SPC y pruebas e
+         standarizadas.
+
+E) EL ARCHIVO NO SE TOCA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   los 16 primeros: 0a77b5a35a962621 -> el encargo dice 0a77b5a35a962621: CALZA
+   NINGUNA CLASE SE DECIDE AQUI. Las diez discrepancias se resuelven A FAVOR
+   DEL ARCHIVO y no se escribe ni una fila.
+
+FIN DEL COTEJO
