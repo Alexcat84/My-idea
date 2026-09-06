@@ -1,0 +1,94 @@
+==============================================================================
+VUELTA 193, TAREA 3: EL SUJETO DE LA RELECTURA AL DOBLE DEL TRAMO DE LA 192
+==============================================================================
+
+A) EL ARCHIVO, MEDIDO AL ENTRAR Y ABIERTO SOLO EN LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF    : 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   sha256 disco : 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   los 16 primeros del LF: 0a77b5a35a962621 -> el encargo dice 0a77b5a35a962621: CALZA
+   POR LAS DOS CONVENCIONES, que es lo que el encargo pide con esas
+   palabras: los dos sha256 son iguales: SI
+   CIFRA filas: 3388 | MIN 1 | MAX 3388
+
+B) EL TRAMO, CONTADO DE SU FICHERO Y NO TECLEADO
+   docs/loop/SALIDA_V192_T2_CIEGA.txt -> disco 39850 bytes | LF 39850 bytes | sha256 LF da9b03300a305fbd
+   CIFRA puestos del tramo: 30
+   5, 22, 69, 131, 157, 202, 395, 611, 650, 717, 874, 906, 965, 971, 1068, 1204, 1370, 1804, 1814, 2029, 2156, 2425, 2659, 2833, 2912, 3069, 3088, 3170, 3184, 3328
+   EL PUESTO 1804, QUE TUMBO A LOS DOS LECTORES: DENTRO del tramo
+   EL PUESTO 2833, QUE TUMBO A LOS DOS LECTORES: DENTRO del tramo
+   Y LA CIEGA DEL AUDITOR DEL ACTA 193, QUE EL ENCARGO DICE QUE ES EL MISMO
+   CONJUNTO. NO SE CREE: SE CUENTA DE SU FICHERO.
+   docs/loop/_auditor_v193_ciega_blind.txt -> disco 39698 bytes | 30 puestos
+   ES EL MISMO CONJUNTO QUE EL TRAMO: SI
+
+C) EL UNIVERSO YA CONSUMIDO, CONTADO DE SUS OCHO FICHEROS
+   (EL ENCARGO NO DA NINGUNA CIFRA AQUI Y MANDA CONTARLA DE SUS FICHEROS.
+    Aqui no se copia ninguna: se cuentan, Y CON SUS NOMBRES)
+   docs/loop/_auditor_v190_exclusion.txt               1924 bytes |  411 numeros |  411 dentro del archivo
+   docs/loop/_auditor_v189b_exclusion.txt              1792 bytes |  381 numeros |  381 dentro del archivo
+   docs/loop/_auditor_v190_ciega_blind.txt            41948 bytes |   30 numeros |   30 dentro del archivo
+   docs/loop/_auditor_v189b_ciega_blind.txt           40517 bytes |   30 numeros |   30 dentro del archivo
+   docs/loop/SALIDA_V190_T4_CIEGA.txt                 39678 bytes |   30 numeros |   30 dentro del archivo
+   docs/loop/SALIDA_V191_T2_CIEGA.txt                 41803 bytes |   30 numeros |   30 dentro del archivo
+   docs/loop/_auditor_v192_ciega_blind.txt            41952 bytes |   30 numeros |   30 dentro del archivo
+   docs/loop/SALIDA_V192_T2_CIEGA.txt                 39850 bytes |   30 numeros |   30 dentro del archivo
+   CIFRA universo consumido SIN la tanda de la 192: 501
+   CIFRA universo consumido CON la tanda de la 192: 531
+
+D) LOS VECINOS DETERMINISTAS, CON vecinos() IMPORTADA Y NO COPIADA
+   (su regla no se toca: cambia lo que se le pasa. Es la `5.2` del acta 188)
+   CIFRA vecinos elegidos: 30
+   9, 23, 70, 132, 158, 203, 396, 612, 651, 718, 879, 907, 967, 972, 1069, 1205, 1371, 1805, 1817, 2030, 2157, 2426, 2660, 2836, 2913, 3070, 3089, 3171, 3185, 3329
+   AL DOBLE: 30 del tramo mas 30 vecinos = 60 puestos
+   ES EL DOBLE EXACTO: SI
+   SOLAPE de los vecinos con el propio tramo: 0
+   SOLAPE de los vecinos con el universo consumido: 0
+   (los dos ceros salen POR CONSTRUCCION y no por suerte: `evitar` va
+    dentro de la llamada, no comprobado despues)
+   TODOS los vecinos existen en el archivo: SI
+
+E) EL AISLAMIENTO, CON aislador_de_ciega.py Y EL CRITERIO ESCRITO
+   comando: aislador_de_ciega.py --criterio <el de arriba> --ciega docs/loop/SALIDA_V193_T3_CIEGA.txt
+            --destape docs/loop/SALIDA_V193_T3_DESTAPE.txt --puestos <los 30 vecinos>
+      | ==============================================================================
+      | AISLADOR DE CIEGA
+      | ==============================================================================
+      |    criterio: relectura AL DOBLE del tramo de la vuelta 192 (AUDITOR.md 1.2, encargada por el AUDITOR en la seccion 8 del acta 193 y no auto encargada por el ejecutor): los 30 vecinos deterministas de la tanda de 30 puestos de la vuelta 192 (SALIDA_V192_T2_CIEGA.txt). EL MOTIVO ES TRIPLE: dos discrepancias cayeron fuera del marcado del auditor, las dos cayeron tambien fuera del marcado del ejecutor, y son el MISMO par (1804 y 2833) para los dos lectores. Elegidos con vecinos() importada de vuelta182_tarea1c_relectura_al_doble.py sobre el conjunto evitar de todo lo ya consumido, contado de sus ocho ficheros, para que el solape con el tramo y con el universo salga por construccion y no por suerte. LA VARA CON LA QUE SE LEE, CITADA POR NUMERO Y NO PARAFRASEADA: docs/BANCO_DE_TEXTOS.md 9.6.1, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO. Literal: "Si lo que el hijo añade a lo que la madre ya dice CABE EN UNA LÍNEA, REPITE. Si trae un PROCEDIMIENTO que la madre no tiene, CONTINÚA." COMO SE APLICA, y es deliberadamente mecanico: se lee el paso de la madre que el hijo desarrolla y se pregunta si es una linea o si ya trae el procedimiento; se lee el nodo hijo entero y se pregunta que queda si se le quita lo que la madre ya dijo; y de lo que queda se pregunta si cabe en una linea o si es una secuencia de acciones con su propia logica. LA VARA QUE ESTA SUSTITUYE, NOMBRADA EN VEZ DE BORRADA: el solape de pasos entre madre e hijo, literal privado de cada lector, tumbado por la 4.9 del acta 193.
+      |    CIFRA filas del archivo: 3388
+      |    --puestos: 9, 23, 70, 132, 158, 203, 396, 612, 651, 718, 879, 907, 967, 972, 1069, 1205, 1371, 1805, 1817, 2030, 2157, 2426, 2660, 2836, 2913, 3070, 3089, 3171, 3185, 3329
+      |       los 30 existen en el archivo
+      |    CIFRA pares elegidos: 30
+      |    puestos: 9, 23, 70, 132, 158, 203, 396, 612, 651, 718, 879, 907, 967, 972, 1069, 1205, 1371, 1805, 1817, 2030, 2157, 2426, 2660, 2836, 2913, 3070, 3089, 3171, 3185, 3329
+      |    CIFRA fugas del destape en la salida ciega: 0
+      |    VERDE. El sujeto queda aislado ANTES de mirar nada.
+      |       salida ciega: docs/loop/SALIDA_V193_T3_CIEGA.txt (41185 bytes)
+      |       destape:      docs/loop/SALIDA_V193_T3_DESTAPE.txt (39872 bytes)  NO ABRIR hasta tener las clases
+   exitcode del aislador: 0
+   docs/loop/SALIDA_V193_T3_CIEGA.txt -> disco 41185 bytes | LF 41185 bytes | sha256 LF fb9a9ed247ee550f
+   docs/loop/SALIDA_V193_T3_DESTAPE.txt -> disco 39872 bytes | LF 39872 bytes | sha256 LF dbb5b3cbcf483e2c
+   CIFRA puestos en la ciega: 30 | en el destape: 30
+   LOS DOS TRAEN LOS MISMOS PUESTOS: SI
+
+F) LA GUARDA DE FUGA, DICHA CON SUS PALABRAS
+   el aislador NO escribe ninguno de los dos ficheros si algun valor de
+   `clase` o de `razon` de los pares elegidos aparece en el texto ciego.
+   Que los dos existan con bytes es la prueba de que esa guarda paso.
+   la palabra 'clase' aparece 0 vez(ces) en la ciega
+   la palabra 'razon' aparece 1 vez(ces) en la ciega
+   la palabra 'DISCUTIBLE' aparece 0 vez(ces) en la ciega
+
+G) EL ARCHIVO, REMEDIDO AL SALIR DE ESTE FICHERO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   IDENTICO AL DE LA ENTRADA: SI
+   (este fichero abre el archivo SOLO EN LECTURA y no decide ninguna clase)
+
+H) LO QUE FALTA, Y LO HACE UNA PERSONA CON LAS MANOS
+   1. leer docs/loop/SALIDA_V193_T3_CIEGA.txt SIN abrir el destape,
+   2. escribir las clases Y LOS DUDOSOS NOMBRADOS DELANTE en
+      docs/loop/SALIDA_V193_T3_MIS_CLASES.txt, y COMMITEARLO,
+   3. y SOLO ENTONCES abrir docs/loop/SALIDA_V193_T3_DESTAPE.txt y cotejar.
+   EL ORDEN ES LA PRUEBA, Y EL COMMIT ES DONDE SE VE: unas clases escritas
+   despues del destape no prueban nada.
+
