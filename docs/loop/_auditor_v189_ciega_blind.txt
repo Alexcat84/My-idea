@@ -1,0 +1,496 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   muestra fresca de 30 puestos con semilla 1892 sobre todo el archivo, excluyendo los 351 puestos que las ciegas de las actas 183 a 187 y sus vecinos deterministas ya consumieron (docs/loop/_auditor_v189_exclusion.txt)
+
+CIFRA pares elegidos: 30
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 239
+nodo_a: estructura_estado_resultados
+nodo_b: lectura_estado_resultados
+  pasos de A (estructura_estado_resultados): 3
+     paso 1: Identificar la línea de ventas/ingresos como punto de referencia (100%).
+     paso 2: Calcular el porcentaje que representa cada línea de costo respecto a las ventas.
+     paso 3: Establecer metas de porcentaje-de-ventas para líneas clave (ej: gastos de venta no más del 12% de ventas).
+  pasos de B (lectura_estado_resultados): 4
+     paso 1: Identificar las líneas principales: ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta
+     paso 2: Comparar el layout del estado financiero para entender cómo está organizado
+     paso 3: Reconocer que diferentes empresas usan distintos términos para el mismo concepto financiero
+     paso 4: Verificar si las cifras están en miles, millones, o valores absolutos
+------------------------------------------------------------------------------
+puesto_intra: 290
+nodo_a: decision_cuando_fundar
+nodo_b: tres_preguntas_carrera
+  pasos de A (decision_cuando_fundar): 4
+     paso 1: Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?
+     paso 2: Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?
+     paso 3: Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?
+     paso 4: Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto
+  pasos de B (tres_preguntas_carrera): 4
+     paso 1: Evalúa el factor de carrera: pregúntate si tienes la experiencia y las habilidades necesarias
+     paso 2: Evalúa el factor personal: pregúntate si tu situación familiar y financiera soporta el riesgo
+     paso 3: Evalúa el factor de mercado: pregúntate si la oportunidad y el momento son favorables
+     paso 4: Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte
+------------------------------------------------------------------------------
+puesto_intra: 415
+nodo_a: customer_discovery_cuatro_fases
+nodo_b: customer_discovery_introduccion
+  pasos de A (customer_discovery_cuatro_fases): 4
+     paso 1: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+     paso 2: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+     paso 3: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+     paso 4: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+  pasos de B (customer_discovery_introduccion): 3
+     paso 1: Hazte las 4 preguntas clave: ¿hay un problema que el cliente quiere resolver?, ¿tu producto lo resuelve?, ¿hay un modelo de negocio viable?, ¿has aprendido lo suficiente para vender?
+     paso 2: Sal del edificio repetidamente, durante semanas o meses, a hablar con clientes reales
+     paso 3: No delegues esta tarea en otra persona; tienes que liderarla tú mismo
+------------------------------------------------------------------------------
+puesto_intra: 550
+nodo_a: preservar_efectivo_buscar_modelo
+nodo_b: restriccion_gasto_validacion
+  pasos de A (preservar_efectivo_buscar_modelo): 8
+     paso 1: No contrates equipo de ventas ni marketing hasta validar el modelo con hechos, no hipótesis
+     paso 2: Busca patrones de venta repetibles, evitando ventas puntuales por relaciones personales o esfuerzos heroicos
+     paso 3: Aplica el test de escalabilidad: verifica si cada vendedor o dólar adicional genera más ganancia bruta que lo invertido, usando tu ritmo de consumo de caja (burn rate) como tu métrica principal
+     paso 4: Documenta tu propio criterio explícito de qué constituye un modelo validado antes de escalar gasto
+     paso 5: Una vez confirmado el product/market fit, invierte agresivamente en generar demanda y llenar el canal de ventas
+     paso 6: Retrasa las inversiones grandes en infraestructura hasta tener tracción real con clientes.
+     paso 7: Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)
+     paso 8: Reservar caja suficiente para financiar múltiples pivotes
+  pasos de B (restriccion_gasto_validacion): 5
+     paso 1: Posponer la contratación masiva de vendedores hasta validar el modelo de negocio
+     paso 2: Limitar el gasto en marketing de demanda hasta confirmar el segmento de clientes
+     paso 3: Definir un presupuesto máximo por prueba o experimento (por ejemplo, no más de 2,000 a 10,000 dólares por test)
+     paso 4: Reservar caja suficiente para financiar múltiples pivotes
+     paso 5: Medir constantemente la tasa de consumo de caja durante esta etapa
+------------------------------------------------------------------------------
+puesto_intra: 670
+nodo_a: customer_discovery_overview
+nodo_b: product_market_fit
+  pasos de A (customer_discovery_overview): 4
+     paso 1: Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+     paso 2: Sal a comprobar si el problema es real y le duele a tus clientes
+     paso 3: Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+     paso 4: Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+  pasos de B (product_market_fit): 6
+     paso 1: Evaluar si el problema/necesidad es urgente y vital para muchos clientes (definir número pass/fail)
+     paso 2: Evaluar si el producto resuelve el problema a un precio que los clientes pagarían con gusto
+     paso 3: Evaluar si existen suficientes clientes para un negocio de tamaño significativo
+     paso 4: Confirmar comprensión de la demografía y arquetipos de los clientes objetivo
+     paso 5: Evaluar si el negocio puede crecer de forma predecible y escalable
+     paso 6: Decidir formalmente con equipo e inversores si se avanza a Customer Validation
+------------------------------------------------------------------------------
+puesto_intra: 909
+nodo_a: estrategia_de_ventas
+nodo_b: influence_map_organizacional
+  pasos de A (estrategia_de_ventas): 4
+     paso 1: Define en qué nivel de la organización entrarás (ejecutivo o staff operativo)
+     paso 2: Determina cuántas personas del mapa organizacional deben decir 'sí'
+     paso 3: Establece el orden de contacto y el guion para cada persona
+     paso 4: Identifica qué paso podría hacer fracasar toda la venta y quiénes son los posibles saboteadores
+  pasos de B (influence_map_organizacional): 5
+     paso 1: Obtener el organigrama de la empresa cliente (formal o mediante conversaciones)
+     paso 2: Localizar al earlyvangelist dentro del organigrama
+     paso 3: Identificar influenciadores, recomendadores y saboteadores usando información de llamadas de venta previas
+     paso 4: Determinar quién es el comprador económico final
+     paso 5: Repetir el mapeo con cada earlyvangelist para encontrar patrones comunes
+------------------------------------------------------------------------------
+puesto_intra: 1123
+nodo_a: business_plan_cinco_secciones
+nodo_b: lienzo_modelo_negocio
+  pasos de A (business_plan_cinco_secciones): 6
+     paso 1: Escribe la sección del Equipo destacando tu experiencia, tu trayectoria y por qué son las personas indicadas para ejecutar el modelo
+     paso 2: Usa el Canvas visual para mostrar tu Modelo de Negocio, con dibujos, historias y evidencia de que el cliente lo necesita
+     paso 3: Arma tu Análisis Financiero: punto de equilibrio, escenarios de ventas, costos operativos y proyecciones de flujo de caja basadas en los bloques del Canvas
+     paso 4: Describe el Entorno Externo con las cuatro fuerzas externas: mercado, industria, tendencias clave y fuerzas macroeconómicas
+     paso 5: Crea una Hoja de Ruta de Implementación con los proyectos que salen del Canvas y un cronograma (diagrama de Gantt)
+     paso 6: Cierra con un análisis de riesgos basado en las fortalezas, oportunidades, debilidades y amenazas de tu modelo (FODA)
+  pasos de B (lienzo_modelo_negocio): 12
+     paso 1: Imprimir el lienzo en tamaño grande para trabajo colaborativo y un Business Model Canvas para cada miembro del equipo
+     paso 2: Reunirse con el equipo aceptando que habrá vacíos en la primera versión
+     paso 3: Escribir cada bloque en notas post-it sobre el lienzo
+     paso 4: Identificar los segmentos de clientes a los que se dirige la organización
+     paso 5: Definir la propuesta de valor para cada segmento
+     paso 6: Mapear canales, relaciones y fuentes de ingresos
+     paso 7: Mapear recursos, actividades y asociaciones clave
+     paso 8: Calcular la estructura de costos y el profit resultante
+     paso 9: Pausar para investigar más información donde haya vacíos importantes
+     paso 10: Iterar y discutir en grupo hasta lograr coherencia entre los bloques
+     paso 11: Publicar el canvas en el espacio de trabajo y actualizarlo conforme avanza el proyecto
+     paso 12: Usar el lienzo como base para pivotar o validar hipótesis del negocio, y también para llevar una solución ya diseñada a un modelo de negocio viable
+------------------------------------------------------------------------------
+puesto_intra: 1132
+nodo_a: fase_acclimate_experiencia_cliente
+nodo_b: fase_activate_primera_impresion
+  pasos de A (fase_acclimate_experiencia_cliente): 9
+     paso 1: Mapear todos los puntos de contacto entre la primera compra y el logro del objetivo del cliente.
+     paso 2: Identificar momentos de fricción, confusión o estrés potencial en ese recorrido.
+     paso 3: Diseñar herramientas de comunicación (email, presencial, video, correo físico, teléfono, regalos) para cada etapa del proceso.
+     paso 4: Establecer hitos claros y celebrarlos para mantener el compromiso del cliente.
+     paso 5: Medir el nivel de aclimatación con encuestas rápidas o check-ins regulares.
+     paso 6: Crear un documento o gráfico visual (mapa) que muestre en qué etapa está el cliente en cada momento
+     paso 7: Detectar señales silenciosas de desconexión del cliente antes de que se quejen o abandonen
+     paso 8: Simplificar procesos complejos dividiéndolos en pasos pequeños y digeribles
+     paso 9: Asigna un responsable claro para cada punto de contacto y mide qué tan consistente es la ejecución
+  pasos de B (fase_activate_primera_impresion): 7
+     paso 1: Identificar cuál es el momento exacto de 'primer contacto real' del cliente con el producto o servicio
+     paso 2: Eliminar cualquier barrera técnica o logística que retrase la gratificación inmediata (ej: baterías, configuración, activación)
+     paso 3: Diseñar la entrega/kickoff como una experiencia memorable, no un simple trámite
+     paso 4: Evaluar la reacción emocional del cliente en ese primer momento y ajustar el proceso si genera frustración
+     paso 5: Establecer expectativas claras sobre los próximos pasos del proceso.
+     paso 6: Generar momentum temprano mostrando avances o entregables rápidos.
+     paso 7: Evitar fallos en la primera impresión operativa, ya que son difíciles de revertir.
+------------------------------------------------------------------------------
+puesto_intra: 1202
+nodo_a: diferencias_venta_pequena_venta_grande
+nodo_b: riesgo_tecnicas_cierre_venta_compleja
+  pasos de A (diferencias_venta_pequena_venta_grande): 4
+     paso 1: Clasificar cada oportunidad de venta según su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión para el cliente
+     paso 2: Si es venta grande, evitar presión y cierre agresivo entre llamadas, ya que reduce la probabilidad de éxito final
+     paso 3: Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+     paso 4: Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+  pasos de B (riesgo_tecnicas_cierre_venta_compleja): 4
+     paso 1: Evaluar si tu venta es de bajo valor/simple o de alto valor/compleja antes de decidir tu estrategia de cierre.
+     paso 2: Si vendes a compradores profesionales o buscas relaciones de largo plazo, evita presionar con técnicas de cierre agresivas.
+     paso 3: Enfoca el esfuerzo en las etapas previas de investigación y desarrollo de necesidades, no en frases de cierre.
+     paso 4: Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+------------------------------------------------------------------------------
+puesto_intra: 1403
+nodo_a: filosofia_validacion_clientes
+nodo_b: plan_de_adquisicion_acquire
+  pasos de A (filosofia_validacion_clientes): 4
+     paso 1: Tratar cada intento de venta como una prueba de hipótesis, no como ejecución de un plan fijo
+     paso 2: Evitar contratar y estructurar un equipo de ventas tradicional en esta etapa
+     paso 3: Enfocarse en conseguir pedidos reales o compromisos de usuarios como evidencia dura
+     paso 4: Aceptar que las reglas de venta corporativa tradicional no aplican en startups
+  pasos de B (plan_de_adquisicion_acquire): 6
+     paso 1: Revisa las hipótesis de segmentos de clientes, relaciones y propuesta de valor que trazaste en tu mapa del modelo de negocio, y define a qué segmento le vas a hablar con lo que aprendiste hablando con clientes (customer discovery)
+     paso 2: Para cada actividad define quién la hace, qué táctica usas (posicionamiento en buscadores SEO, anuncios pagos PPC, correo, referidos), cuánto presupuesto le das, en cuánto tiempo la corres y qué meta medible persigues
+     paso 3: Establece antes de cada prueba qué resultado la hace pasar o fracasar, con el número concreto que lo decide
+     paso 4: Instrumenta tu sitio, tu app o tu producto para capturar cada acción del cliente antes de lanzar cualquier prueba
+     paso 5: Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado, con el gasto de cada prueba limitado a una cifra que puedas permitirte y preguntada en tu mercado antes de comprometerte, y escala con más fuerza y más presupuesto solo lo que de verdad funcione
+     paso 6: Asegúrate de que todo lo que activa a un cliente (el sistema detrás, los pagos, los correos de confirmación) esté listo antes de lanzar la adquisición
+------------------------------------------------------------------------------
+puesto_intra: 1791
+nodo_a: reduccion_cargas_cumplimiento
+nodo_b: reduccion_cargas_regulatorias
+  pasos de A (reduccion_cargas_cumplimiento): 4
+     paso 1: Mapear todos los materiales usados en productos y procesos de manufactura
+     paso 2: Clasificar materiales según su impacto ambiental y de salud (ej. escala 0-3)
+     paso 3: Priorizar el rediseño de productos para eliminar materiales de alto riesgo regulatorio
+     paso 4: Considerar la descentralización de equipos de cumplimiento si hay heterogeneidad regulatoria regional
+  pasos de B (reduccion_cargas_regulatorias): 5
+     paso 1: Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y tambien en los procesos de manufactura
+     paso 2: Clasificar materias primas según su impacto en salud y ambiente (ej. escala 0-3 tipo 'green list')
+     paso 3: Priorizar el uso de materiales mejor calificados en nuevos productos o reformulaciones
+     paso 4: Evaluar la descentralización de equipos de cumplimiento regulatorio si hay heterogeneidad normativa entre regiones
+     paso 5: Priorizar el rediseño de productos para eliminar materiales de alto riesgo regulatorio
+------------------------------------------------------------------------------
+puesto_intra: 1806
+nodo_a: hibridos_monstruosos
+nodo_b: manejo_de_hibridos_monstruosos
+  pasos de A (hibridos_monstruosos): 3
+     paso 1: Auditar el producto actual identificando combinaciones de materiales técnicos y biológicos mezclados de forma permanente
+     paso 2: Sustituir procesos de mezcla irreversible por diseños desmontables o mono-materiales
+     paso 3: Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente
+  pasos de B (manejo_de_hibridos_monstruosos): 5
+     paso 1: Identificar productos actuales que mezclan materiales biológicos y técnicos sin separación posible
+     paso 2: Rediseñar por partes: hacer biodegradable la porción biológica y recuperable la porción técnica, o pasar a mono-materiales
+     paso 3: Facilitar el desensamble para reciclar cada componente en su metabolismo correspondiente
+     paso 4: Comunicar y capitalizar (marketing) la recuperación de materiales como ventaja competitiva
+     paso 5: Evaluar la toxicidad de los aditivos usados (curtientes, tintes, adhesivos) en cada componente
+------------------------------------------------------------------------------
+puesto_intra: 1929
+nodo_a: contabilidad_ambiental
+nodo_b: contabilidad_flujo_materiales
+  pasos de A (contabilidad_ambiental): 5
+     paso 1: Identificar los costos ambientales ocultos en tu forma actual de llevar las cuentas
+     paso 2: Definir que costos internos y externos vas a incluir en el análisis
+     paso 3: Elegir las herramientas de contabilidad ambiental mas adecuadas para tu negocio, como full cost accounting, EMA
+     paso 4: Buscar a la persona que te ayuda en temas de sostenibilidad para poner en marcha estas herramientas, o a un equipo interdisciplinario (científicos, ingenieros, contadores)
+     paso 5: Reportar resultados tanto para uso interno como para stakeholders externos
+  pasos de B (contabilidad_flujo_materiales): 4
+     paso 1: Mapear todos los insumos físicos que entran a los procesos de producción
+     paso 2: Rastrear las salidas físicas incluyendo residuos y emisiones
+     paso 3: Calcular el balance entre insumos y salidas para identificar ineficiencias
+     paso 4: Evaluar oportunidades de reducción de costos relacionadas con desperdicio de materiales
+------------------------------------------------------------------------------
+puesto_intra: 1962
+nodo_a: desarrollo_plan_exportacion
+nodo_b: estructura_plan_exportacion
+  pasos de A (desarrollo_plan_exportacion): 6
+     paso 1: Reunir consenso entre el personal clave de gestión sobre metas, objetivos, capacidades y restricciones
+     paso 2: Responder las 11 preguntas clave del plan de exportación (productos, licencias, países objetivo, canales, precios, etc.)
+     paso 3: Mantener el plan inicial simple y de pocas páginas
+     paso 4: Establecer el plan como documento vivo, comparando objetivos con resultados reales
+     paso 5: Decidir entre plan detallado (exportación directa) o plan simplificado (exportación indirecta o e-commerce)
+     paso 6: Usar el esquema de tabla de contenidos: resumen ejecutivo, políticas, análisis de situación, componente de marketing
+  pasos de B (estructura_plan_exportacion): 7
+     paso 1: Redactar tabla de contenido y resumen ejecutivo (1-2 páginas)
+     paso 2: Escribir la declaración de compromiso de política de exportación
+     paso 3: Realizar el análisis de situación: producto/servicio, operaciones, personal y recursos internos
+     paso 4: Desarrollar el componente de marketing: selección de mercados, producto, precio, distribución y términos
+     paso 5: Definir tácticas y pasos de acción para países meta primarios y secundarios
+     paso 6: Elaborar el presupuesto de exportación y estados financieros pro-forma
+     paso 7: Establecer el cronograma de implementación y seguimiento periódico
+------------------------------------------------------------------------------
+puesto_intra: 1973
+nodo_a: seleccion_canales_distribucion
+nodo_b: seleccion_de_distribuidor_internacional
+  pasos de A (seleccion_canales_distribucion): 6
+     paso 1: Analizar las características del producto y del mercado objetivo
+     paso 2: Comparar opciones: representante, agente, distribuidor, minorista o venta directa, y tambien e-commerce propio o de terceros, franquicia
+     paso 3: Determinar responsabilidades logísticas, de inventario y servicio postventa de cada canal
+     paso 4: Seleccionar el canal más adecuado según nivel de control deseado y recursos disponibles, y la velocidad de entrada
+     paso 5: Seleccionar uno o más canales complementarios en lugar de depender de un único mercado/canal
+     paso 6: Definir un plan de expansión gradual a múltiples mercados usando los canales elegidos
+  pasos de B (seleccion_de_distribuidor_internacional): 5
+     paso 1: Definir si se requiere un distribuidor (compra y reventa) o un representante de ventas (comisión)
+     paso 2: Evaluar la capacidad técnica del candidato en la industria relacionada
+     paso 3: Solicitar apoyo del U.S. Commercial Service para identificar candidatos evaluados
+     paso 4: Establecer acuerdos contractuales claros sobre soporte, inventario y responsabilidades
+     paso 5: Definir mecanismos de evaluación continua del desempeño del distribuidor
+------------------------------------------------------------------------------
+puesto_intra: 2150
+nodo_a: plan_estrategico_franquicia
+nodo_b: planificacion_salida_estrategica
+  pasos de A (plan_estrategico_franquicia): 5
+     paso 1: Establecer metas de crecimiento a 5, 10 o más años
+     paso 2: Definir estructura del programa de franquicia (fees, territorios, soporte)
+     paso 3: Documentar servicios que se ofrecerán a franquiciados y sus costos asociados
+     paso 4: Diseñar el plan considerando flexibilidad a largo plazo (20-40 años)
+     paso 5: Alinear el plan con decisiones legales y financieras clave antes de ejecutar
+  pasos de B (planificacion_salida_estrategica): 5
+     paso 1: Identifica posibles compradores estratégicos: proveedores o competidores que buscan consolidar el mercado
+     paso 2: Evalúa qué tipo de comprador te daría un mejor precio por tu negocio
+     paso 3: Redacta tus cláusulas de proveedores para poder cambiarlos sin quedar atado a largo plazo
+     paso 4: Define condiciones territoriales flexibles que no te impidan vender a un competidor
+     paso 5: Incluye una cláusula de reserva de derechos (reservation of rights) desde el primer contrato de franquicia
+------------------------------------------------------------------------------
+puesto_intra: 2162
+nodo_a: estrategia_multicanal_expansion
+nodo_b: mix_ubicaciones_corporativas_franquicia
+  pasos de A (estrategia_multicanal_expansion): 4
+     paso 1: Desarrollar y perfeccionar el prototipo corporativo antes de escalar
+     paso 2: Enfocar recursos exclusivamente en franquiciar hasta generar flujo de caja excedente
+     paso 3: Evaluar cuándo el programa de franquicias genera suficiente caja para reabrir el canal corporativo
+     paso 4: Separar temporalmente el crecimiento corporativo del lanzamiento del programa de franquicias
+  pasos de B (mix_ubicaciones_corporativas_franquicia): 6
+     paso 1: Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo
+     paso 2: Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse
+     paso 3: Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno
+     paso 4: Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment
+     paso 5: Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados
+     paso 6: Documenta la estrategia en tu plan de marketing de franquicia, incluyendo el uso de ubicaciones corporativas como centros de entrenamiento o soporte si aplica, y en especial las de en mercados distantes
+------------------------------------------------------------------------------
+puesto_intra: 2357
+nodo_a: evaluacion_mejora_programa
+nodo_b: seguimiento_efectividad_controles
+  pasos de A (evaluacion_mejora_programa): 6
+     paso 1: Definir indicadores rezagados (lesiones, enfermedades) y adelantados (participación, capacitación)
+     paso 2: Recolectar y analizar datos de desempeño periódicamente y compartirlos con tus trabajadores
+     paso 3: Verificar que los procesos clave y controles del programa operen según lo diseñado en tu sitio de trabajo
+     paso 4: Revisar si los indicadores y metas siguen siendo relevantes y ajustarlos si es necesario
+     paso 5: Corregir de inmediato cualquier deficiencia detectada, dejando claro quien se encarga y para cuándo
+     paso 6: Usar herramientas de autoevaluación disponibles en tu mercado y celebrar los éxitos alcanzados
+  pasos de B (seguimiento_efectividad_controles): 6
+     paso 1: Verificar que todos los controles se implementaron según el plan
+     paso 2: Confirmar que los controles de ingeniería fueron instalados y probados
+     paso 3: Verificar que fuiste capacitado en el uso correcto de los controles
+     paso 4: Realizar inspecciones regulares y monitoreo de higiene industrial
+     paso 5: Modificar controles ineficaces o implementar medidas adicionales si es necesario
+     paso 6: Ejecutar mantenimiento preventivo rutinario de equipos y controles
+------------------------------------------------------------------------------
+puesto_intra: 2399
+nodo_a: perspectiva_dentro_del_tunel
+nodo_b: reconstruccion_contexto_situacional
+  pasos de A (perspectiva_dentro_del_tunel): 4
+     paso 1: Reconstruir la información y las señales disponibles para los actores en el momento del evento
+     paso 2: Evitar el uso de palabras como 'fallaron en' o 'debieron haber' en los reportes
+     paso 3: Entrevistar a los involucrados para entender su percepción y objetivos en el momento
+     paso 4: Documentar el contexto de presión, tiempo y recursos disponibles en el momento del incidente
+  pasos de B (reconstruccion_contexto_situacional): 6
+     paso 1: Preguntar cómo se veía el mundo para los actores en ese momento
+     paso 2: Reconstruir qué señales/cues recibieron y en qué orden temporal
+     paso 3: Identificar las metas que perseguían sin saber el resultado final
+     paso 4: Usar el timeline construido para modelar la evolución incompleta e incierta de su comprensión situacional
+     paso 5: Evitar imponer marcos de referencia posteriores (procedimientos, datos críticos conocidos después) sin verificar su relevancia contextual real, y sin presentar el conjunto completo de evidencia como si hubiera sido evidente desde el inicio
+     paso 6: Identificar qué señales se contradecían entre sí en el momento
+------------------------------------------------------------------------------
+puesto_intra: 2418
+nodo_a: accion_correctiva_5
+nodo_b: accion_correctiva_6
+  pasos de A (accion_correctiva_5): 6
+     paso 1: Documenta formalmente cada problema detectado durante la operación, revisión de calidad u otros medios
+     paso 2: Revisa con frecuencia regular, diaria si es posible, los problemas pendientes junto a quien te apoye en calidad
+     paso 3: Crea un chart de acción ítem por ítem que registre problema, gravedad, causa y responsable
+     paso 4: Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+     paso 5: Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+     paso 6: Da seguimiento sistemático a cada ítem hasta su cierre definitivo
+  pasos de B (accion_correctiva_6): 4
+     paso 1: Documentar los problemas detectados mediante auditorías de calidad
+     paso 2: Investigar la causa raíz de cada problema de forma sistemática
+     paso 3: Asignar responsables y plazos para la resolución definitiva
+     paso 4: Dar seguimiento y verificar que la acción implementada haya eliminado el problema
+------------------------------------------------------------------------------
+puesto_intra: 2683
+nodo_a: gestion_para_la_calidad
+nodo_b: sistema_gestion_calidad
+  pasos de A (gestion_para_la_calidad): 4
+     paso 1: Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos
+     paso 2: Extender la responsabilidad de la calidad a toda la jerarquía organizacional, no solo al departamento de calidad
+     paso 3: Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)
+     paso 4: Establecer métodos universales aplicables a cualquier industria o función
+  pasos de B (sistema_gestion_calidad): 4
+     paso 1: Mapea todos los procesos de tu negocio que afectan la calidad, más allá de producción u operaciones
+     paso 2: Identifica quién controla hoy cada parte de ese sistema, ya seas tú o la persona que te ayuda
+     paso 3: Establece una forma de coordinar entre las distintas partes que controlan el sistema
+     paso 4: Documenta el sistema de gestión de calidad siguiendo los estándares que apliquen en tu mercado
+------------------------------------------------------------------------------
+puesto_intra: 2759
+nodo_a: breakthrough_desempeno_actual
+nodo_b: six_sigma_dmaic_2
+  pasos de A (breakthrough_desempeno_actual): 5
+     paso 1: Define el problema con apoyo de quien te asesore
+     paso 2: Mide el desempeño actual del proceso
+     paso 3: Analiza las causas raíz de los problemas crónicos
+     paso 4: Diseña e implementa mejoras (Improve)
+     paso 5: Establece controles para sostener la mejora (Control)
+  pasos de B (six_sigma_dmaic_2): 5
+     paso 1: Define: Definir claramente el problema y los objetivos del proyecto mediante un charter
+     paso 2: Measure: Medir el desempeño actual del proceso y recopilar la voz del cliente (VOC)
+     paso 3: Analyze: Analizar los datos recolectados para determinar las causas raíz del problema
+     paso 4: Improve: Seleccionar e implementar las soluciones adecuadas para resolver el problema
+     paso 5: Control: Establecer mecanismos de control para sostener las mejoras logradas en el tiempo
+------------------------------------------------------------------------------
+puesto_intra: 2783
+nodo_a: responsabilidades_desarrollo_talento_calidad
+nodo_b: rol_director_calidad
+  pasos de A (responsabilidades_desarrollo_talento_calidad): 4
+     paso 1: Define tu visión estrategica: que quieres lograr con la formación en calidad
+     paso 2: Disena e implementa el entrenamiento, ya sea tu mismo o la persona que te ayude con eso
+     paso 3: Consigue o desarrolla el conocimiento tecnico de calidad para dar contenido solido
+     paso 4: Integra el contenido de calidad al desarrollo profesional general, no como algo aparte
+  pasos de B (rol_director_calidad): 5
+     paso 1: Definir que tareas de calidad son del día a día y cuales son nuevas responsabilidades estrategicas
+     paso 2: Identificar que actividades de calidad pueden pasar a quienes ejecutan el trabajo en cada area
+     paso 3: Capacitar a esas personas para que asuman las nuevas responsabilidades de calidad
+     paso 4: Actuar como asesor estrategico en las decisiones de calidad que tu tomas
+     paso 5: Supervisar que la estrategia de calidad se cumpla, en coordinación contigo
+------------------------------------------------------------------------------
+puesto_intra: 2875
+nodo_a: desarrollar_caracteristicas_proceso
+nodo_b: identificar_caracteristicas_metas_proceso
+  pasos de A (desarrollar_caracteristicas_proceso): 4
+     paso 1: Listar los procesos posibles capaces de generar cada característica del producto
+     paso 2: Evaluar la capacidad actual de los procesos frente a los requisitos definidos
+     paso 3: Seleccionar el proceso óptimo con su justificación
+     paso 4: Establecer metas de proceso alineadas con las metas de producto
+  pasos de B (identificar_caracteristicas_metas_proceso): 5
+     paso 1: Descomponer el proceso en características específicas necesarias para cada característica del producto
+     paso 2: Clasificar cada característica en procedimientos, métodos, equipos, materiales, personas, entrenamiento o recursos
+     paso 3: Organizar las características y metas en una hoja de cálculo de diseño de proceso
+     paso 4: Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias
+     paso 5: Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas
+------------------------------------------------------------------------------
+puesto_intra: 3148
+nodo_a: dia_cero_defectos
+nodo_b: zero_defects_concepto
+  pasos de A (dia_cero_defectos): 3
+     paso 1: Elige una fecha única para el lanzamiento oficial
+     paso 2: Realiza actividades especiales que marquen el cambio de actitud
+     paso 3: Explica el programa a todos el mismo día
+  pasos de B (zero_defects_concepto): 4
+     paso 1: Eliminar el uso de niveles de calidad aceptables como estándar de desempeño
+     paso 2: Comunicar con claridad que el estándar es hacerlo bien la primera vez
+     paso 3: Marcar un día concreto para lanzar este compromiso, aunque sea contigo mismo o con quien te ayude en el negocio
+     paso 4: Poner por escrito un compromiso entre tú y la persona que te ayuda
+------------------------------------------------------------------------------
+puesto_intra: 3179
+nodo_a: grafico_cusum
+nodo_b: grafico_media_movil_ewma
+  pasos de A (grafico_cusum): 5
+     paso 1: Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra
+     paso 2: Definir el valor objetivo T y la desviación estándar del proceso
+     paso 3: Establecer límites de control superior e inferior a ±4 desviaciones estándar
+     paso 4: Calcular la suma acumulada superior (Cu) e inferior (CL) para cada punto muestral
+     paso 5: Graficar Cu y CL como líneas separadas y monitorear cruces de los límites
+  pasos de B (grafico_media_movil_ewma): 5
+     paso 1: Definir el tamaño de la ventana móvil o el factor de ponderación exponencial
+     paso 2: Calcular el promedio móvil actualizando con cada nueva medición
+     paso 3: Para EWMA, aplicar mayor peso a las observaciones más recientes según el factor lambda elegido
+     paso 4: Graficar los valores calculados en función del tiempo
+     paso 5: Monitorear tendencias y pequeños desplazamientos sostenidos
+------------------------------------------------------------------------------
+puesto_intra: 3224
+nodo_a: criterios_diseno_producto
+nodo_b: establecer_metas_caracteristicas
+  pasos de A (criterios_diseno_producto): 5
+     paso 1: Fija los cuatro criterios generales: necesidades del cliente, necesidades de quien te provee, competencia y costos combinados
+     paso 2: Define criterios adicionales específicos según la visión y las metas de tu proyecto
+     paso 3: Si las alternativas son complejas, compáralas por escrito usando los mismos criterios para todas
+     paso 4: Decide si desarrollarás nueva funcionalidad, o si reemplazarás, mejorarás o eliminarás características existentes
+     paso 5: Escribe los criterios que acordaste para no perderlos de vista y compártelos con quien te ayude
+  pasos de B (establecer_metas_caracteristicas): 5
+     paso 1: Para cada característica que elegiste, define la unidad de medida apropiada
+     paso 2: Determina cómo vas a medir si se cumple la meta
+     paso 3: Establece el valor objetivo (meta) para cada característica
+     paso 4: Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable
+     paso 5: Si dividiste el diseño en partes, integra los resultados de cada una
+------------------------------------------------------------------------------
+puesto_intra: 3247
+nodo_a: consejo_ejecutivo_calidad
+nodo_b: planificacion_estrategica_despliegue_2
+  pasos de A (consejo_ejecutivo_calidad): 5
+     paso 1: Definir quién participa en esta revisión: tú solo o las personas clave que te ayudan
+     paso 2: Fijar la frecuencia de las reuniones, mensual o trimestral
+     paso 3: Si tu negocio crece, replicar esta misma dinámica de revisión en equipos o áreas más pequeñas, conectadas entre sí
+     paso 4: Asignar a este espacio la responsabilidad de vigilar los KPI y de ejecutar el plan estratégico
+     paso 5: Fomentar que las distintas partes de tu negocio colaboren entre sí, en vez de trabajar cada una por su cuenta
+  pasos de B (planificacion_estrategica_despliegue_2): 7
+     paso 1: Definir tu visión, misión, estrategias y metas anuales de forma integrada
+     paso 2: Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras
+     paso 3: Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas
+     paso 4: Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel
+     paso 5: Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto
+     paso 6: Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad
+     paso 7: Eliminar las iniciativas que no estén alineadas con tu plan estratégico
+------------------------------------------------------------------------------
+puesto_intra: 3280
+nodo_a: plan_b_antes_de_necesitarlo
+nodo_b: que_hacer_con_un_riesgo_nuevo
+  pasos de A (plan_b_antes_de_necesitarlo): 4
+     paso 1: Para cada riesgo grave, escribe qué harás concretamente si se vuelve realidad.
+     paso 2: Identifica qué necesitas preparar de antemano para que ese plan B sea posible.
+     paso 3: Prepara esas piezas ahora: un contacto, un proveedor alterno, una copia de respaldo.
+     paso 4: Guarda tus planes B donde puedas encontrarlos rápido en plena crisis.
+  pasos de B (que_hacer_con_un_riesgo_nuevo): 4
+     paso 1: Cuando aparezca un riesgo nuevo, no lo ignores por no estar en el plan: anótalo de inmediato.
+     paso 2: Estima su probabilidad y su impacto como haces con los demás.
+     paso 3: Decide su camino de respuesta y quién lo vigila.
+     paso 4: Súmalo a tu lista viva para que entre en el ritmo normal de revisión.
+------------------------------------------------------------------------------
+puesto_intra: 3364
+nodo_a: getting_started_maintenance
+nodo_b: mantenimiento_sistema_cui
+  pasos de A (getting_started_maintenance): 6
+     paso 1: Identificar herramientas usadas para diagnóstico y reparación de sistemas.
+     paso 2: Establecer un calendario de mantenimiento regular y verificar su cumplimiento.
+     paso 3: Habilitar actualizaciones automáticas cuando sea posible.
+     paso 4: Planificar reemplazo de hardware/software próximos a fin de vida útil.
+     paso 5: Exigir autenticación multifactor en sesiones de mantenimiento remoto y terminarlas al finalizar.
+     paso 6: Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.
+  pasos de B (mantenimiento_sistema_cui): 6
+     paso 1: Identificar las herramientas usadas para diagnóstico y reparación del sistema
+     paso 2: Determinar un cronograma regular de mantenimiento y verificar su cumplimiento
+     paso 3: Habilitar actualizaciones automáticas donde sea apropiado
+     paso 4: Planificar actualizaciones para hardware o software que llegará a fin de vida útil
+     paso 5: Para mantenimiento remoto, asegurar MFA en la sesión y terminar completamente la conexión al finalizar
+     paso 6: Sanitizar o destruir equipos con CUI antes de retirarlos de las instalaciones.
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
