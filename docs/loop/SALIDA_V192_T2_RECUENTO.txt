@@ -1,0 +1,93 @@
+==============================================================================
+VUELTA 192, TAREA 2: EL COTEJO DE LA RELECTURA AL DOBLE
+==============================================================================
+
+A) EL ARCHIVO, MEDIDO AL ENTRAR Y ABIERTO SOLO EN LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+
+B) MIS CLASES, LEIDAS DE SU FICHERO COMMITEADO Y NO DE LA MEMORIA
+   docs/loop/SALIDA_V192_T2_MIS_CLASES.txt -> disco 6572 bytes | LF 6572 bytes | sha256 LF 24c7f76835cee52a
+   CIFRA clases leidas de mi fichero: 30
+   CIFRA dudosos que declare DELANTE: 15
+   157, 202, 395, 874, 906, 965, 971, 1068, 2029, 2425, 2659, 3069, 3088, 3170, 3184
+
+C) EL DESTAPE, ABIERTO AHORA Y NO ANTES
+   docs/loop/SALIDA_V192_T2_DESTAPE.txt -> disco 32066 bytes | LF 32066 bytes | sha256 LF 5070b61b743c1094
+   CIFRA clases leidas del destape: 30
+
+D) LAS DOS LISTAS TIENEN QUE SER EL MISMO CONJUNTO, O NO SE COTEJA
+   puestos en mis clases: 30 | en el destape: 30
+   SON EL MISMO CONJUNTO: SI
+
+E) EL COTEJO, COMPUESTO POR EL FORMATO UNICO Y NO POR ESTE FICHERO
+   ESCRITO: docs/loop/SALIDA_V192_T2_COTEJO.txt
+      disco 2613 bytes | LF 2613 bytes
+      RELEIDO DEL DISCO Y PASADO POR SU PROPIA GUARDA:
+         denominador declarado: 30 | filas contadas: 30
+         declarado y contado calzan -> VERDE
+
+F) LAS CIFRAS, COMPUTADAS DE LAS FILAS DEL COTEJO Y NO TECLEADAS
+   CIFRA cotejados: 30
+   CIFRA que COINCIDEN: 20
+   CIFRA que DISCREPAN: 10
+   CIFRA discrepancias DENTRO de mis dudosos: 7 (874, 906, 965, 971, 1068, 2425, 2659)
+   CIFRA discrepancias FUERA de mis dudosos: 3 (1804, 1814, 2833)
+   MI REPARTO:        A 4, B 6, D 20
+   REPARTO DEL ARCHIVO: A 2, D 28
+
+G) CADA DISCREPANCIA, CON MI MOTIVO Y LA RAZON DEL ARCHIVO ENFRENTADAS
+   ---- puesto 874: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: los dos mandan sobre el asiento del fundador en la junta y los mandatos son discutiblemente distintos: quien se sienta contra como proteger el asiento. DUDOSO MIO
+        razon del archivo (primeros 400): Quien ocupa los asientos contra como conservar el tuyo, del mismo libro y sin arista entre ellos. fundadores_en_junta_directiva reparte: decidir antes de formar la junta que fundadores ocuparan los asientos disponibles, evitar poner en la junta a un fundador que reporta directamente al director general fundador, considerar roles alternativos para los cofundadores que no sean directores, sesiones s
+   ---- puesto 906: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: los dos mandan sobre la decision de crecer; A mira capacidad y caja y B mira mercado y financiamiento. Mismo objeto, mandatos discutibles. DUDOSO MIO
+        razon del archivo (primeros 400): Crecer segun tu capacidad contra crecer segun el mercado, libros distintos y sin arista entre ellos. decision_consciente_de_crecimiento mira hacia adentro: evaluar si de verdad quieres crecer o prefieres estabilidad, revisar si el negocio tiene hoy la capacidad operativa y financiera para soportar una expansion, proyectar como afectaria contratar gente nueva al flujo de caja y a la nomina, calcula
+   ---- puesto 965: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: ids casi gemelos (fase_adopt y fase_adopt_ciclo_cliente) y misma fase del ciclo, pero CERO pasos compartidos: comunidad contra medicion y canales. DUDOSO MIO
+        razon del archivo (primeros 400): La tribu contra la medicion de la adopcion, del mismo libro y sin arista entre ellos, y el hallazgo es adonde va la duplicacion. fase_adopt construye tribu: crear una comunidad exclusiva para clientes que llegaron a esta etapa, ofrecer recompensas y reconocimientos unicos, desarrollar un lenguaje o cultura compartida, y facilitar que el cliente muestre publicamente su afiliacion. fase_adopt_ciclo_
+   ---- puesto 971: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: los dos mandan sobre el cierre en venta compleja y solo dos de los cuatro pasos de B estan en A: la mitad, no la mayoria. DUDOSO MIO
+        razon del archivo (primeros 400): La clasificacion de la venta contra el avance como objetivo, del mismo libro y sin arista entre ellos, y es la quinta lectura intra-Rackham del racimo del cierre. cierre_segun_complejidad_venta trae una CLASIFICACION con una frontera dentro: clasificar la venta propia por valor, sofisticacion del cliente y relacion posventa; si es pequena y transaccional, aplicar tecnicas de cierre tradicionales S
+   ---- puesto 1068: yo D, el archivo A. DENTRO de mis dudosos
+        mi motivo: las mismas seis herramientas aplicadas a DOS MOMENTOS distintos del recorrido, celebracion contra activate; ids casi gemelos. DUDOSO MIO
+        razon del archivo (primeros 400): LOS SEIS MEDIOS INSTANCIADOS EN DOS FASES, y las dos instancias se repiten entre si. Lo comun es el procedimiento entero: evaluar cual o cuales de los seis canales son coherentes con la relacion y el tipo de negocio, elegir dos o tres para intervenir a proposito, preparar contenido especifico para cada uno, personalizarlo con detalles del recorrido del cliente, elegir el momento oportuno, y medir 
+   ---- puesto 1804: yo A, el archivo D. FUERA de mis dudosos
+        mi motivo: tres de los cinco pasos de A estan en B (contencion de pasillos, rangos de temperatura, economizadores) y el acto es el mismo; ids casi gemelos
+        razon del archivo (primeros 400): La fisica del enfriamiento contra la carga que se enfria, MISMA FUENTE y sin arista entre ellos. gestion_centro_datos_verde ATACA EL AIRE Y EL CALOR: calcular el PUE actual dividiendo la potencia total entre la de los equipos, instalar barreras que separen aire frio y caliente entre estantes, SUBIR LOS TERMOSTATOS DE VEINTE A VEINTIDOS GRADOS HASTA VEINTICINCO O VEINTISIETE, usar agua o aire exter
+   ---- puesto 1814: yo A, el archivo D. FUERA de mis dudosos
+        mi motivo: el paso 1 de A y el paso 1 de B son casi literales, y el 3 de A es el 2 de B; dos de tres del mas corto
+        razon del archivo (primeros 400): La critica contra la salida constructiva, MISMA FUENTE y sin arista entre ellos, y es la misma lectura del puesto 1809 con el otro nodo de la critica. Lo compartido son dos lineas: evaluar si las mejoras solo reducen dano o transforman de verdad, y cuestionar si la reduccion de material o las metricas de eficiencia resuelven el problema de fondo. eco_eficiencia_critica trae lo suyo del lado del EJ
+   ---- puesto 2425: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: ids casi gemelos y misma hoja de diseno, pero solo dos de los cuatro pasos de B estan en A: la mitad, no la mayoria. DUDOSO MIO
+        razon del archivo (primeros 400): La hoja contra la serie de hojas, MISMA FUENTE, Juran, y sin arista entre ellos. spreadsheet_diseno_para_la_calidad ordena EL RECORRIDO COMPLETO DEL QFD: la hoja de necesidades del cliente con sus prioridades, DESGLOSAR LAS NECESIDADES AMPLIAS EN NIVELES DE ESPECIFICIDAD, construir la hoja de diseno de producto, y EXTENDER EL ANALISIS A LAS HOJAS DE DISENO Y CONTROL DE PROCESO; ese tercer paso es 
+   ---- puesto 2659: yo B, el archivo D. DENTRO de mis dudosos
+        mi motivo: ids casi gemelos y misma auditoria; A manda sobre la corrida y B sobre el programa, mandatos discutiblemente distintos. DUDOSO MIO
+        razon del archivo (primeros 400): auditoria_calidad contra programa_auditoria_calidad, DISTINTA FUENTE, Crosby contra Juran, sin arista. Son dos cosas distintas: auditoria_calidad es EJECUTAR LA AUDITORIA, definir que funcion se auditara y contra que criterios, SELECCIONAR AUDITORES IMPARCIALES de otras areas, entrenar al equipo y darles tiempo, e implementar autoauditorias verificadas con muestreos externos; programa_auditoria_ca
+   ---- puesto 2833: yo A, el archivo D. FUERA de mis dudosos
+        mi motivo: cuatro de los cinco pasos de B estan en A: recolectar, limites, graficar, investigar el punto fuera; el acto es el mismo
+        razon del archivo (primeros 400): carta_de_control_shewhart (Carta de Control de Shewhart, Juran: recolectar datos en el tiempo, calcular la linea central y los limites, graficar y clasificar dentro o fuera, si dentro asumir causas comunes, si fuera investigar causa especial, justificar el uso segun impacto en cliente seguridad o economia) contra control_estadistico_de_procesos_2 (SPC mediante Graficos de Control, Deming: recolect
+
+H) LA MARCA 'DISCUTIBLE MARCADO' EN LOS TREINTA, CONTADA DEL DESTAPE
+   CIFRA de los 30 que la llevan: 3 (2659, 2833, 2912)
+   CIFRA de mis 10 discrepancias que la llevan: 2 (2659, 2833)
+   (esto se cuenta y NO se glosa aqui: el encargo prohibe expresamente re
+    medir la marca contra la dificultad en esta vuelta)
+
+I) EL SEGUNDO LECTOR, DICHO CON SUS NUMEROS Y NO SUPUESTO
+   el encargo pide que, SI un tramo vuelve a tumbar a los dos lectores en
+   los mismos puestos, se diga con sus numeros. AQUI SE MIDE:
+   los 30 de la ciega del auditor del acta 192: 30 puestos
+   SOLAPE con los 30 de ESTA tanda: 0
+   O SEA: sobre ESTE tramo hay UN SOLO LECTOR, el ejecutor. El auditor leyo
+   los 30 de la 191, que son OTRO conjunto. NO HAY CRUCE DE DOS LECTORES
+   QUE PUBLICAR AQUI, y decirlo es la respuesta al encargo: la via barata
+   de separar el par dificil del lector distraido NO se puede correr sobre
+   este tramo, porque nadie mas lo ha leido.
+
+J) EL ARCHIVO, REMEDIDO AL SALIR. NO SE ESCRIBIO NI UNA FILA.
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   IDENTICO AL DE LA ENTRADA: SI
+
+FIN

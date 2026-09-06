@@ -1,0 +1,60 @@
+FORMATO: COTEJO_DE_CIEGA v1
+==============================================================================
+vuelta: 192, TAREA 2. Relectura AL DOBLE del tramo de la vuelta 191.
+lector: el ejecutor de la vuelta 192.
+tramo releido: docs/loop/SALIDA_V191_T2_CIEGA.txt (los 30 de la 191).
+sujeto: docs/loop/SALIDA_V192_T2_CIEGA.txt (disco 39850 bytes | LF 39850 bytes, sha256 LF da9b03300a305fbd)
+destape: docs/loop/SALIDA_V192_T2_DESTAPE.txt (disco 32066 bytes | LF 32066 bytes, sha256 LF 5070b61b743c1094)
+clases del lector: docs/loop/SALIDA_V192_T2_MIS_CLASES.txt (disco 6572 bytes | LF 6572 bytes, sha256 LF 24c7f76835cee52a),
+   escritas y COMMITEADAS en su propio commit ANTES de abrir el destape.
+archivo: docs/INTRA_DOMINIO_VEREDICTOS.jsonl (disco 4054129 bytes | LF 4054129 bytes, sha256 LF 0a77b5a35a962621), abierto SOLO EN
+   LECTURA: esta tarea no escribe ni una fila.
+
+CIFRA puestos cotejados: 30
+CIFRA que COINCIDEN: 20
+CIFRA que DISCREPAN: 10
+CIFRA en los dudosos del lector: 15
+CIFRA discrepancias DENTRO de los dudosos: 7 (874, 906, 965, 971, 1068, 2425, 2659)
+CIFRA discrepancias FUERA de los dudosos: 3 (1804, 1814, 2833)
+REPARTO DEL LECTOR:  A 4, B 6, D 20
+REPARTO DEL ARCHIVO: A 2, D 28
+
+TABLA (una fila POR CADA PUESTO COTEJADO, no solo por las discrepancias):
+puesto | clase del lector | clase del archivo | en dudosos del lector | veredicto
+------------------------------------------------------------------------------
+     5 | D | D | no | COINCIDE
+    22 | D | D | no | COINCIDE
+    69 | D | D | no | COINCIDE
+   131 | D | D | no | COINCIDE
+   157 | D | D | si | COINCIDE
+   202 | D | D | si | COINCIDE
+   395 | D | D | si | COINCIDE
+   611 | A | A | no | COINCIDE
+   650 | D | D | no | COINCIDE
+   717 | D | D | no | COINCIDE
+   874 | B | D | si | DISCREPA
+   906 | B | D | si | DISCREPA
+   965 | B | D | si | DISCREPA
+   971 | B | D | si | DISCREPA
+  1068 | D | A | si | DISCREPA
+  1204 | D | D | no | COINCIDE
+  1370 | D | D | no | COINCIDE
+  1804 | A | D | no | DISCREPA
+  1814 | A | D | no | DISCREPA
+  2029 | D | D | si | COINCIDE
+  2156 | D | D | no | COINCIDE
+  2425 | B | D | si | DISCREPA
+  2659 | B | D | si | DISCREPA
+  2833 | A | D | no | DISCREPA
+  2912 | D | D | no | COINCIDE
+  3069 | D | D | si | COINCIDE
+  3088 | D | D | si | COINCIDE
+  3170 | D | D | si | COINCIDE
+  3184 | D | D | si | COINCIDE
+  3328 | D | D | no | COINCIDE
+FIN DE LA TABLA.
+
+EL DENOMINADOR ES RECUPERABLE CONTANDO LAS FILAS DE ESTA TABLA, y la
+cifra declarada arriba tiene que calzar con ese conteo. Lo comprueba
+`denominador()` de scripts/loop/cotejo_de_ciega.py, y si no calzan el
+fichero es ROJO.

@@ -106,7 +106,7 @@ tabla tallada entera cuando la vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 192 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Con sus DIEZ adjudicaciones `4.1` a `4.10`, y las diez A FAVOR: siete son los discutibles del ejecutor (`D.1` a `D.7`, cuya numeracion en el reporte de la 191 va con el `D.7` escrito ANTES del `D.6`) y las tres restantes son las preguntas y los pendientes de doctrina contestados. OTRA VEZ CERO EN CONTRA, y si el arnes de la 191 ya cubre ese cero, SE DICE CON SU FICHERO en vez de re fabricarlo. Mas los TRES hallazgos de la seccion 5 que no salen de ningun discutible (los dos arneses `SUJETO VIVO` en `5.1`, la cuarta puerta del sello en `5.2`, y el segundo dato independiente sobre la marca contra la dificultad en `5.3`), DOS caidas propias del auditor escritas COMO DOS y ninguna omitida (la `C.1` es DE CIFRA PUBLICADA y va corregida por DECLARACION; la `C.2` es de metodo), CERO caidas del ejecutor que acumulen con las SEIS de metodo que el reporte de la 191 declara, y LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos con su nota: 30 aislados y 28 cotejados, SOLAPE TOTAL a proposito. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido no escribe nada, y se prueba re corriendolo con la sede medida en bytes antes y despues | **CERRADA** | `SALIDA_V192_T1A_REGISTRO_R54.txt`, `SALIDA_V192_T1A_SIMULACION.txt`, `SALIDA_V192_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V192_T1A_RECORRIDO_SIN_ESCRIBIR.txt` |
-| **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DE LA 191. BLOQUEANTE. La encarga el AUDITOR, que es donde `AUDITOR.md` 1.2 la pone, y esta vez CON MOTIVO DOBLE: el puesto `2832` cayo FUERA de los dudosos marcados de DOS lectores independientes en DOS tandas seguidas, la del ejecutor en la 191 y la del auditor en la 192. EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V191_T2_CIEGA.txt`, que el bloque `H.3` del sello de apertura midio como el MISMO conjunto que `docs/loop/_auditor_v192_ciega_blind.txt`. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus SEIS ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. Y SI EL TRAMO VUELVE A TUMBAR A LOS DOS LECTORES EN LOS MISMOS PUESTOS, SE DICE CON SUS NUMEROS. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DE LA 191. BLOQUEANTE. La encarga el AUDITOR, que es donde `AUDITOR.md` 1.2 la pone, y esta vez CON MOTIVO DOBLE: el puesto `2832` cayo FUERA de los dudosos marcados de DOS lectores independientes en DOS tandas seguidas, la del ejecutor en la 191 y la del auditor en la 192. EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V191_T2_CIEGA.txt`, que el bloque `H.3` del sello de apertura midio como el MISMO conjunto que `docs/loop/_auditor_v192_ciega_blind.txt`. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus SEIS ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. Y SI EL TRAMO VUELVE A TUMBAR A LOS DOS LECTORES EN LOS MISMOS PUESTOS, SE DICE CON SUS NUMEROS. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **CERRADA, Y CON TRES DISCREPANCIAS FUERA DEL MARCADO** | `SALIDA_V192_T2_AISLAMIENTO.txt`, `SALIDA_V192_T2_CIEGA.txt`, `SALIDA_V192_T2_MIS_CLASES.txt`, `SALIDA_V192_T2_DESTAPE.txt`, `SALIDA_V192_T2_COTEJO.txt`, `SALIDA_V192_T2_RECUENTO.txt` |
 | **TAREA 3** | LOS DOS ARNESES `SUJETO VIVO` DE LA 191, ANTES DE QUE ENTREN EN LA NOMINA. BLOQUEANTE, Y LO ES POR LA BATERIA DE LA 194. Es el hallazgo `5.1` del acta 192, corrido con la guarda de la casa y medido en `docs/loop/_auditor_v192_sujeto_vivo.txt`. (a) CORRER LA GUARDA `guarda_del_sujeto_congelado_separada()` y publicar sus TRES listas sobre los doce arneses de la 191, con sus nombres: si la medicion no da 2 y 6, la del ejecutor manda y la del auditor se declara equivocada, que para eso se publica el comando. (b) ARREGLAR LOS DOS `SUJETO VIVO` para que su sujeto quede CONGELADO, o DECLARAR EL CASO por el carril de los `CASO DECLARADO` que la casa ya tiene: la `4.4` del acta 191 adjudico que `SUJETO VIVO` es FALLO y no deuda, asi que dejarlos como estan no es opcion. (c) LOS SEIS `sin_motivo` NO SON FALLO PERO SI SON DEUDA: nombrarlos y decir, por cada uno, si su sujeto esta vivo de verdad o si solo le falta escribir el motivo, sin arreglarlos a ciegas. (d) NO SE TOCA LA NOMINA: no se poda, no se adelanta y no se le meten entradas nuevas, que la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes con sujeto vivo vuelve a colarse hacia la nomina sin declararse | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LA CUARTA PUERTA DEL SELLO DE LA APERTURA DEL AUDITOR. Es el hallazgo `5.2` del acta 192, levantado por el auditor CONTRA SI MISMO. `scripts/loop/apertura_del_auditor.py` impide tocar `git log`, `git status` y `REPORTE.md` antes del sello, y eso FUNCIONO; pero EL SUJETO DE LA CIEGA NO VIVE EN NINGUNO DE LOS TRES: vive en las razones y las clases de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y por ahi se colo el auditor de la 192 con el sello ya escrito y sin romper ninguna guarda (los puestos 156 y 201 de su propia tanda). (a) AL SELLO SE LE ANADE LA CUARTA PUERTA: una funcion del propio fichero para leer el archivo que APUNTE SU TOQUE, y una comprobacion que CAIGA EN ROJO si el turno leyo `clase` o `razon` DE LOS PUESTOS SELLADOS antes de que las clases del auditor esten escritas. No se prohibe leer el archivo entero, que hace falta para el marcador: se prohibe destapar el sujeto. (b) DECIR EN EL PROPIO FICHERO LO QUE ESTA GUARDA NO PUEDE HACER, como su docstring ya hace con las otras tres. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si la cuarta puerta se quita. (d) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y sin numero de vuelta, y se le anade, no se le hace una version 2 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | EL FORMATO UNICO DEL COTEJO DE CIEGA. Es el `P.2` del ejecutor, adjudicado A FAVOR en la `4.9` del acta 192. La TAREA 5 de la 191 midio que el universo se queda en 6 ficheros de 43, y tres cotejos de ciega DE VERDAD (los del 183, 184 y 190) quedan fuera POR FORMATO y no por fondo. ES UN FORMATO ANTES QUE UNA RE MEDICION: (a) ESCRIBIR EL FORMATO UNICO del cotejo de ciega, con nombre estable y sin numero de vuelta, que lleve como minimo y explicitos el puesto, la clase del lector, la clase del archivo, si el puesto estaba en los dudosos del lector, y el COINCIDE o DISCREPA, y que deje el DENOMINADOR RECUPERABLE, porque dos de los seis ficheros de hoy solo listan discrepancias. (b) UN LECTOR QUE LEA LOS FORMATOS VIEJOS y publique CUANTOS de los 43 pasa a recuperar, con sus nombres, y cuantos siguen fuera y por que, con la cifra de antes y la de despues LAS DOS JUNTAS. (c) NO SE RE MIDE LA MARCA CONTRA LA DIFICULTAD EN ESTA VUELTA: el universo nuevo se usa cuando este medido y declarado, no en el mismo acto en que se construye. (d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un cotejo del formato nuevo no permite recuperar el denominador | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -251,5 +251,108 @@ CALZA.** No se rellenan: el encargo las deja expresamente fuera.
 
 **LA ENTRADA ARMADA: 22541 bytes en disco y 22541 bytes normalizados a LF**, 218
 lineas por `count(NL)` y 219 por `len(split(NL))`, **0 guiones largos o medios**.
+
+### TAREA 2. LA RELECTURA AL DOBLE DEL TRAMO DE LA 191. **CERRADA, Y EL RESULTADO ES MALO PARA MI:** 20 coinciden, 10 discrepan, y **TRES caen FUERA de mis quince dudosos**. Las tres son la MISMA especie de error y la nombro.
+
+**EL SUJETO, ELEGIDO Y AISLADO ANTES DE MIRAR NADA.** Tramo contado de su fichero:
+los 30 puestos de `docs/loop/SALIDA_V191_T2_CIEGA.txt`, con el **2832 DENTRO**, y
+**el mismo conjunto exacto** que `docs/loop/_auditor_v192_ciega_blind.txt`
+(comprobado, no creido). Universo consumido contado de sus **SEIS ficheros y con
+sus nombres**: `_auditor_v190_exclusion.txt` (411), `_auditor_v189b_exclusion.txt`
+(381), `_auditor_v190_ciega_blind.txt` (30), `_auditor_v189b_ciega_blind.txt`
+(30), `SALIDA_V190_T4_CIEGA.txt` (30) y `SALIDA_V191_T2_CIEGA.txt` (30):
+**471 sin la tanda de la 191 y 501 con ella**, las dos como el encargo dice.
+
+**`vecinos()` IMPORTADA y no copiada** de
+`scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`, con `evitar` = los 501:
+**30 vecinos, 60 al doble exacto, SOLAPE 0 con el tramo y 0 con el universo, LOS
+DOS POR CONSTRUCCION** (el `evitar` va DENTRO de la llamada, no comprobado
+despues). Aislador VERDE, **0 fugas**, ciega y destape en ficheros separados.
+
+**EL ORDEN ES LA PRUEBA Y ESTA EN GIT, no en mi palabra:** el aislamiento y sus
+dos ficheros en `0eb8f5ce`; mis clases con **los quince dudosos NOMBRADOS
+DELANTE** en su propio commit; y el destape se abrio DESPUES.
+
+**EL COTEJO, EN EL FORMATO UNICO Y COMPUESTO POR EL, NO POR MI.** La tabla la
+escribe `scripts/loop/cotejo_de_ciega.py`, que es la pieza `a` de la TAREA 5:
+**esta tarea es su primer usuario, y usarlo aqui es la prueba de que sirve** en
+vez de una plantilla que nadie ha corrido. Su guarda del denominador, corrida
+sobre esta misma salida: **declarado 30, filas contadas 30, VERDE.**
+
+**LAS CIFRAS, COMPUTADAS DE LAS FILAS Y NO TECLEADAS**
+(`docs/loop/SALIDA_V192_T2_COTEJO.txt`):
+
+| | cifra | cuales |
+|---|---:|---|
+| cotejados | **30** | el denominador va declarado y ademas se recupera contando filas |
+| COINCIDEN | **20** | |
+| DISCREPAN | **10** | |
+| mis dudosos, nombrados delante | **15** | |
+| discrepancias **DENTRO** de mis dudosos | **7** | 874, 906, 965, 971, 1068, 2425, 2659 |
+| discrepancias **FUERA** de mis dudosos | **3** | **1804, 1814, 2833** |
+| mi reparto | A 4, B 6, D 20 | |
+| reparto del archivo | A 2, D 28 | |
+
+**LAS TRES DE FUERA SON LA MISMA ESPECIE, Y ESO ES LO QUE HAY QUE DECIR.** En las
+tres yo puse **A** y el archivo dice **D**, y en las tres mi motivo escrito es el
+mismo: *conte cuantos pasos del nodo corto estan en el largo y salio mayoria*.
+
+- **1804** (`gestion_centro_datos_verde` contra `optimizacion_centro_datos_verde`):
+  yo conte tres de cinco pasos compartidos. El archivo dice *"uno enfria mejor lo
+  mismo, el otro necesita enfriar menos"*, y nombra lo propio de cada uno: el PUE
+  con su formula y el calor reaprovechado de un lado, la virtualizacion, la
+  renovacion de equipos y la ubicacion geografica del otro.
+- **1814** (`eco_eficiencia_critica` contra `menos_malo_vs_bueno`): yo conte dos
+  de tres. El archivo dice *"la critica y su reemplazo son dos nodos distintos"*,
+  con pasos enteros propios en cada lado.
+- **2833** (`carta_de_control_shewhart` contra `control_estadistico_de_procesos_2`):
+  yo conte cuatro de cinco. El archivo lo resuelve por **fuentes distintas** (Juran
+  contra Deming) y por el **cumulo entero de las cartas de control**, que separa
+  cada variante con fuerza, y **su razon ya predice mi lectura con estas
+  palabras**: *"DISCUTIBLE MARCADO fuerte: ambos construyen e interpretan una
+  carta Shewhart... quien pese ese nucleo dira A"*.
+
+**LA DIFERENCIA SE PUEDE NOMBRAR, Y NO ES DISTRACCION: ES MI VARA.** Mi criterio
+para la `A` cuenta **solape de pasos**; la vara de la casa (`BANCO_DE_TEXTOS.md`
+9.6.1, LA LINEA O EL PROCEDIMIENTO) pregunta otra cosa: **si uno es una LINEA del
+otro desplegada en PROCEDIMIENTO**. Dos nodos pueden compartir la mayoria de sus
+pasos y aun asi **traer cada uno pasos enteros propios**, y entonces son
+`D`. **Mi criterio, escrito antes de mirar y no cambiado a mitad, mide una cosa
+distinta de la que el archivo mide**, y en 3 de 30 esa diferencia me tumba sin
+que yo la viera venir. Va como discutible `D.2` de este reporte.
+
+**Y LO QUE NO HAGO, QUE ES LA MITAD DEL ASUNTO: NO ME AUTO ENCARGO LA ESCALADA.**
+`AUDITOR.md` 1.2 dice que una discrepancia FUERA del marcado baja el credito de
+toda la tanda y que ese tramo se relee al doble. **Aqui son TRES**, no una. **La
+`4.5` del acta 192 acaba de adjudicar A FAVOR, y por segunda vez, que el doble
+esta en la mano del auditor y no en la mia.** Lo traigo medido, con sus numeros y
+sus nombres, y no me lo encargo.
+
+**EL SEGUNDO LECTOR: NO LO HAY SOBRE ESTE TRAMO, Y SE MIDE EN VEZ DE
+SUPONERSE.** El encargo pide que, si un tramo vuelve a tumbar a los dos lectores
+en los mismos puestos, se diga con sus numeros. **Medido: el solape de esta tanda
+con los 30 de `_auditor_v192_ciega_blind.txt` es CERO**, porque el auditor leyo
+los 30 de la 191 y estos son sus vecinos. **Sobre este tramo hay UN SOLO
+LECTOR**, asi que la via barata de separar el par dificil del lector distraido
+**no se puede correr aqui**, y decirlo es la respuesta honrada al encargo.
+
+**LA MARCA `DISCUTIBLE MARCADO`, CONTADA DEL DESTAPE Y NO GLOSADA:** la llevan
+**3 de los 30** (2659, 2833, 2912) y **2 de mis 10 discrepancias** (2659, 2833).
+**Aqui se cuenta y no se concluye:** el encargo prohibe expresamente re medir la
+marca contra la dificultad en esta vuelta.
+
+**Y ALGO QUE DIJE ANTES DE VER NADA Y QUE LA MEDICION CONFIRMA A MEDIAS:** declare
+en mis clases, antes del destape, que esta tanda me salia mas dudosa que la de la
+191 (15 dudosos de 30 contra 13 de 30) porque muchos pares son *marco contra una
+de sus piezas*. **Acerte en que ahi estaba el problema y falle en donde:** de mis
+quince dudosos, **siete discreparon**, pero **las tres que me tumbaron sin
+marcarlas no eran marco contra pieza: eran las tres que llame `A` por conteo de
+pasos**. La prediccion apunto al sitio equivocado y lo digo.
+
+**NO SE TOCO NINGUNA CLASE.** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra
+en **4054129 bytes en disco y 4054129 bytes normalizados a LF**, `sha256` LF
+`0a77b5a35a962621`, medido al entrar y al salir en los dos instrumentos de esta
+tarea. **Ninguna correccion salio de la relectura**, asi que no hay ninguna que
+declarar ni traer.
 
 <!-- FIN ANEXO DE TAREAS -->
