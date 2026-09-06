@@ -76,6 +76,19 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    seguidas aislando el sujeto de la relectura ciega DESPUES de haber corrido
    comandos de verificacion, y no antes. Su acta 173 lo dice con estas palabras:
    *"es un agujero de la doctrina y lo digo yo, que soy el beneficiado"*.
+   ROMPER UN REMEDIO ESCRITO ACUMULA (decision del fundador, 5 sep 2026,
+   PREGUNTA 3 de `paradas/2026-09-05-cola-post-fusion-DECISION.md`, opcion (c),
+   las dos mitades). **COMO LETRA GENERAL Y NO SOLO PARA ESTE CASO: INCUMPLIR UN
+   REMEDIO YA ESCRITO CUENTA COMO CAIDA PARA LA PARADA.** No es una especie
+   nueva de error: es que **un remedio que se puede romper sin consecuencia no
+   es un remedio, es una sugerencia**, y la casa lleva vueltas escribiendo
+   remedios que despues nadie aplica.
+   LA OTRA MITAD DE LA MISMA DECISION quita el problema de raiz, para que la
+   regla no tenga que morder: **LA APERTURA DEL AUDITOR PASA A SER CODIGO**, un
+   fichero GEMELO del bloque de apertura del ejecutor, que **corre
+   `aislador_de_ciega.py` y SELLA su salida ANTES de que el turno pueda tocar
+   `git log`, `git status` o `REPORTE.md`**. Con eso, aislar el sujeto deja de
+   depender de que alguien se acuerde.
 3. ADJUDICA: discrepancias van a relectura conjunta (tu caso escrito con
    evidencia; el ejecutor verifica contra el grafo y decide con la vara; las
    correcciones con correccion declarada y recomputo). Pendientes de doctrina:
@@ -90,6 +103,14 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
 5. Commitea y pushea docs/loop/ (acta, prompt, y PARA_ALEXIS.md si aplica).
 
 ## 2. Disciplina del dictado (tus propios limites)
+
+> **LOS TAMANOS SE PUBLICAN EN BYTES EXACTOS** (`P.2`, decidida por el fundador
+> el 5 sep 2026 en `paradas/2026-09-05-cola-post-fusion-DECISION.md`). Todo
+> tamano de fichero que se publique va en **BYTES EXACTOS leidos del
+> instrumento**, **NUNCA redondeado**. **Los KB solo entre parentesis**, y
+> detras del byte. Motivo: un tamano redondeado **no se puede cotejar contra
+> nada**, y un fichero de cero bytes disfrazado de "0 KB" es exactamente lo que
+> la regla de LA RUTA QUE PROMETE PRUEBA vino a cazar.
 - Nada se afirma sin haberse consultado EN ESTA vuelta: estados, cifras,
   nominas, resultados de busqueda. Lo no consultado se marca "a verificar" y se
   encarga. Prohibido afirmar una busqueda no corrida.
@@ -326,6 +347,23 @@ hueco escondido:** lleva su medicion, su atribucion y su corrida, o no vale.
   el de la 170, la 172 el de la 171, y **el de la 172 no lo archivo nadie**.
 - **El remedio de orden ya se probo:** el acta 172 movio la bateria al PRINCIPIO
   de la vuelta y **siguio en cero**.
+
+**LOS TRAMOS RESUMIBLES** (decision del fundador, 5 sep 2026, PREGUNTA 4 de
+`paradas/2026-09-05-cola-post-fusion-DECISION.md`; opcion (a), con el precedente
+de los nueve tramos de la vuelta 176). **El regimen de arriba QUEDA**; esto dice
+COMO corre la bateria dentro de su vuelta, que es lo que llevaba CINCO vueltas
+sin conseguirse:
+
+> **LA BATERIA CORRE POR TRAMOS OBLIGATORIOS. CADA TRAMO SE COMMITEA CON SU
+> SALIDA SELLADA AL TERMINAR. UNA VUELTA CORTADA RETOMA EN EL TRAMO SIGUIENTE**,
+> no desde el principio. **Y LA BATERIA SE DECLARA CORRIDA CUANDO LOS NUEVE
+> TRAMOS TIENEN SALIDA SELLADA DEL MISMO CALIBRE.**
+
+**POR QUE ESTO SI TERMINA Y LO ANTERIOR NO:** una bateria que solo cuenta cuando
+acaba entera **pierde todo lo hecho cada vez que la vuelta se corta**, y llevaba
+cinco vueltas cortandose. Por tramos, **lo corrido queda corrido**. Y **DEL MISMO
+CALIBRE** es la mitad que impide el atajo: nueve salidas selladas **no valen si
+una es de otra hondura que las demas**.
 
 **LO QUE NO CAMBIA, Y ES LA MITAD QUE IMPORTA:** la bateria **sigue entera y
 sigue sola**, con su doble corrida. **NO se afloja ninguna guarda: solo cambia la

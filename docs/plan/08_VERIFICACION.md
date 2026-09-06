@@ -497,6 +497,46 @@ esta resuelto por definicion. **Lo que se mueve es lo que estaba en el filo**: e
 dudoso, que puede caer a cualquier lado, y el enlace mutuo, que puede dejar de serlo
 si uno de sus dos lados cambia.
 
+> **CORRECCION DECLARADA: LA COLA GANA LA PUERTA DEL DIFERENCIADOR MOVIDO**
+> (5 sep 2026, decision del fundador, PREGUNTA 1 de
+> `docs/loop/paradas/2026-09-05-cola-post-fusion-DECISION.md`; acta 181 del
+> auditor, `docs/loop/ACTA_AUDITOR.md:62907`). **Nada del texto de arriba se
+> borra: esta nota se anade.**
+>
+> **EL DEFECTO DE LA LETRA VIEJA, Y ES DE RAZONAMIENTO, NO DE REDACCION:** el
+> filtro razona sobre **el nodo que MUERE** (*"fundir uno de ellos con un
+> tercero no lo vuelve gemelo del otro"*, y es cierto), pero **se aplica tambien
+> al que CAMBIA DE TEXTO**, que es **un caso distinto**. Absorber un paso
+> cualquiera no acerca a los dos nodos; **absorber el paso que era el
+> DIFERENCIADOR DECLARADO de la razon SI los acerca**, y puede dejar una `D`
+> sostenida sobre una evidencia que ya no existe.
+>
+> **EL CASO QUE LO DESTAPO, FECHADO EN GIT Y SIN CULPA DE NADIE:** el puesto
+> **2.464**, `cero_defectos` contra `zero_defects_concepto`. Su razon sostiene
+> la `D` en que uno *"trae eliminar explicitamente el uso de niveles de calidad
+> aceptables"*, que el otro no tenia. El veredicto se escribio el **12 ago 2026**
+> (`de20c078`), cuando `cero_defectos` tenia **6 pasos y NO tenia el del AQL**;
+> el **20 ago 2026** (`02384c6a`, *"VUELTA 60, LOTE B DEL TRAMO 5"*) una fusion
+> nuestra le metio **justo ese paso**, y hoy tiene **7**. **La razon era verdad
+> el dia que se escribio. Una fusion nuestra, ocho dias despues, le movio la
+> evidencia por debajo.**
+>
+> **LA PUERTA NUEVA, Y ES INSTRUMENTAL PARA QUE NO SEAN 543 LECTURAS:** un
+> instrumento cruza **la razon escrita de cada `D`** contra **los pasos de HOY**
+> del otro nodo, y **solo las `D` con la lesion exacta vuelven a la cola**. Su
+> **caso positivo es obligatorio: el 2.464 tiene que salir NOMBRADO.**
+>
+> **Y AL CIERRE DE LA CAMPANA EL BARRIDO ES LA VECINDAD SEMANTICA** sobre el
+> grafo final, **no 543 lecturas**. El riesgo residual de una `D` rancia es **un
+> duplicado que sobrevive**, y eso es **recuperable y visible por vecindad**.
+>
+> **LAS `A` NO GANAN COLA NUEVA** (PREGUNTA 2 de la misma decision). Una `A`
+> **ejecutada** es cosa consumada, vigilada por la auditoria integral y por la
+> vecindad. Una `A` **sin ejecutar con texto movido** ya es **PAR RANCIO por la
+> regla de `P.5` que existe**, y **su vigencia se comprueba antes de ejecutar**.
+> El instrumento **las cuenta por estado** en vez de abrir una cola que la
+> doctrina ya cubre.
+
 ### LA LISTA, barrida el 12 ago 2026 sobre las diecisiete fusiones del plan
 
 | par | clase | que le pasa | tras que operacion |
