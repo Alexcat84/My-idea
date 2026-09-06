@@ -1,0 +1,118 @@
+SELLO DE APERTURA DE LA VUELTA 194, escrito ANTES de la primera operacion.
+regimen: ESTA SI ES VUELTA DE BATERIA (AUDITOR.md 6.1, decision del fundador
+         del 5 sep 2026). La bateria corre CADA CINCO VUELTAS en una vuelta
+         propia QUE NO LLEVA NADA MAS; la 189 la corrio entera y por esa
+         cadencia toca aqui. La seccion 9 del reporte NO cierra con hueco
+         declarado: cierra con la bateria corrida.
+         TRES SUB-TAREAS y DOS BLOQUEANTES.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+edff656848145fae21df70970152f3174233c3e5
+edff656848145fae21df70970152f3174233c3e5	2026-09-06 17:24:52 -0400	ACTA DEL AUDITOR, VUELTA 194: LA 193 REPRODUJO ENTERA, PERO SU BATERIA LLEGA CON UNA GUARDA QUE SE DA VERDE A SI MISMA, Y MI PROPIA CIEGA VENIA QUEMADA DESDE EL CONTEXTO DE LA SESION.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+git status --porcelain al entrar: 1 linea(s)
+   ?? scripts/loop/vuelta194_apertura.py
+
+=== B.1 LA CADENA DE LA VUELTA 193 Y EL ACTA 194, LOCALIZADAS EN GIT ===
+acta 194                         1 acierto(s): edff6568
+clases ciegas del auditor 194    1 acierto(s): 55167069
+cierre de la 193                 1 acierto(s): 6ea0b28c
+
+=== C. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN. La LF es la que el encargo clava.
+
+=== D. dataset/ AL ENTRAR (git diff --numstat, medido y no supuesto) ===
+CIFRA ficheros de dataset/ con diff al entrar: 0
+   (ninguno: dataset/ entra limpio)
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt, porque su sujeto es el
+   inventario de cierres y ese inventario CRECIO desde que la 192 lo sello.
+   Aqui se corre, se lee la cifra, y la sellada se RESTAURA con
+   git checkout -- y se REMIDE antes de darla por restaurada.
+CIFRA racha de cierres, contada del inventario ENTERO: 9
+las vueltas de la racha: 185, 186, 187, 188, 189, 190, 191, 192, 193
+EL ENCARGO DE LA 194 DICE 9 Y ADEMAS DICE QUE LA CUENTE YO DEL
+   INSTRUMENTO. Manda el instrumento: lo de arriba es lo corrido HOY.
+EL TOPE DE CINCO SUB-TAREAS ESTA GANADO: el regimen temporal de
+   AUDITOR.md 6.2 pedia DOS vueltas seguidas cerrando su propio reporte.
+nuevo corte, medido antes de restaurar:
+   2598 bytes LF | sha256 LF 7e491292b8e2892c
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== F. LOS DOS ARNESES DE LA TAREA 2, Y LA SEDE DEL TURNO DEL AUDITOR ===
+AQUI NO SE CORRE NINGUNO, POR DOS MOTIVOS Y LOS DOS MEDIDOS POR EL AUDITOR
+en docs/loop/_auditor_v194_cuarta_puerta_rota.txt: correrlos pisa su sellada,
+y el de la 192 BORRA docs/loop/_TURNO_DEL_AUDITOR.json en su sede de verdad.
+scripts/loop/vuelta192_tarea4_mutacion_cuarta_puerta.py
+   docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt
+      disco 4282 bytes | LF 4282 bytes | sha256 LF 4779fcd04bc5b2da
+      bytes del blob de HEAD: 4282
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: existe y no esta vacia: SI
+scripts/loop/vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+   docs/loop/SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt
+      disco 4613 bytes | LF 4613 bytes | sha256 LF 10c2d2d1e9eb06ce
+      bytes del blob de HEAD: 4613
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: existe y no esta vacia: SI
+LA SEDE DEL TURNO DEL AUDITOR, docs/loop/_TURNO_DEL_AUDITOR.json:
+   en el arbol de trabajo: NO EXISTE
+   seguido por git (git ls-files): (no, no esta en el indice)
+   cubierto por .gitignore (git check-ignore -v): NO, sin cubrir
+   commits que lo tocan en el historial: edff6568, 55167069
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.56
+CIFRA entradas en total: 47
+CIFRA colisiones: 0
+EL ENCARGO DICE R.56 Y ADEMAS DICE QUE LO DIGA EL INSTRUMENTO. Manda el
+instrumento: lo de arriba es lo que salio corrido HOY.
+
+=== H. LA NOMINA, LEIDA Y NO TOCADA ===
+La opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada: la
+nomina no se poda, no se adelanta y no se le meten entradas nuevas.
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 127
+CIFRA casos declarados: 2
+
+=== I. EL ESTADO DE LA BATERIA AL ENTRAR, Y LA TRAMPA DE LAS SELLADAS ===
+LA TRAMPA, TRAIDA POR EL ENCARGO Y REMEDIDA AQUI: las salidas selladas que
+el lanzador de la 183 encuentra NO son de esta vuelta. Cada una se fecha con
+git log --diff-filter=A, que es quien dice en que commit NACIO.
+CIFRA ficheros SALIDA_V*_BATERIA_TRAMO_N.txt en docs/loop/: 28
+   V176: 9 fichero(s)
+   V183: 9 fichero(s)
+   V189: 10 fichero(s)
+LOS DE LA 183, QUE SON LOS QUE SU LANZADOR CUENTA, CON SU COMMIT DE ORIGEN:
+   SALIDA_V183_BATERIA_TRAMO_1.txt    ede210b2	VUELTA 183, BATERIA TRAMO 1 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 9117 bytes en disco 
+      9116 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_2.txt    34f7ef7f	VUELTA 183, BATERIA TRAMO 2 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7347 bytes en disco,
+      7352 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_3.txt    5db9a541	VUELTA 183, BATERIA TRAMO 3 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7406 bytes en disco 
+      7406 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_4.txt    36e715b9	VUELTA 183, BATERIA TRAMO 4 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7421 bytes en disco 
+      7421 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_5.txt    2d72aa29	VUELTA 183, BATERIA TRAMO 5 DE 9 EN ROJO, exitcode 1, Y AQUI SE PARA SIN RE-CORRERLO: vuelt
+      7385 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_6.txt    5042d91d	VUELTA 184, BATERIA TRAMO 6 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7428 bytes en disco 
+      7428 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_7.txt    cda30e1c	VUELTA 184, BATERIA TRAMO 7 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7456 bytes en disco 
+      7456 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_8.txt    e91a307f	VUELTA 184, BATERIA TRAMO 8 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7407 bytes en disco 
+      7407 bytes en disco
+   SALIDA_V183_BATERIA_TRAMO_9.txt    3500db9d	VUELTA 184, BATERIA TRAMO 9 DE 9 EN ROJO, exitcode 1, Y AQUI SE PARA SIN RE-CORRERLO: vuelt
+      6769 bytes en disco
+CIFRA ficheros SALIDA_V194_BATERIA_TRAMO_N.txt al entrar: 0
+EL LANZADOR DE LA 194 AL ENTRAR: no existe todavia
+
+FIN DEL SELLO DE APERTURA
