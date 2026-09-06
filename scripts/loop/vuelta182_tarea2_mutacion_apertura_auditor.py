@@ -45,6 +45,20 @@ fichero NO ABRE `docs/loop/REPORTE.md` en ninguna linea: todo lo que toca lo
 fabrica en un `mkdtemp` y lo retira (`P.16`). El sujeto, por tanto, esta
 congelado.
 
+LA REPARACION DE LA VUELTA 185, TAREA 1.b, DECLARADA AQUI Y NO ESCONDIDA. Este
+arnes salia `exit 0` y sus catorce casos pasaban, pero ESCRIBIA EN SU SALIDA
+SELLADA UN DATO QUE CAMBIA SOLO: el sufijo aleatorio del `mkdtemp` se colaba en
+el informe de `sellar()` que los bloques C y D pegan, y la doble corrida de la
+bateria, que compara byte a byte, lo cazaba. Tres lineas de diferencia, las 53,
+54 y 55 de su salida, y nada mas. La reparacion es `sin_temporal()`, PURA, que
+sustituye TODAS las formas de esa ruta por el literal `<TEMPORAL>` ANTES del
+recorte a 130 caracteres: recortar primero partiria la ruta por la mitad y
+dejaria media sin normalizar. LO QUE ESTE ARNES PRUEBA NO SE TOCO: los catorce
+casos son los mismos, ningun esperado se afloja y ningun escenario se quita.
+ESTA REPARACION REESCRIBE `docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`
+con `<TEMPORAL>` dentro, y eso es esperado y se dice. Su arnes propio es
+`scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py`.
+
 USO:
   python scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
 """
@@ -61,6 +75,56 @@ import apertura_del_auditor as AP   # noqa: E402
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
 NL = chr(10)
+
+
+# LA MARCA QUE SUSTITUYE A LA RUTA DEL TEMPORAL. Es un literal y no una cadena
+# vacia a proposito: borrar la ruta dejaria la linea muda sobre el hecho de que
+# ahi habia una ruta, y esta casa prefiere que se vea el hueco.
+MARCA_TEMPORAL = "<TEMPORAL>"
+
+
+def sin_temporal(linea, tmp):
+    """LA RUTA DEL TEMPORAL, SUSTITUIDA POR `<TEMPORAL>` EN TODAS SUS FORMAS.
+    PURA: recibe dos cadenas y devuelve una, no lee ni escribe nada, y por eso
+    su arnes la puede tumbar caso por caso sin tocar el repo.
+
+    LAS CUATRO FORMAS QUE CUBRE, y las cuatro hacen falta porque el informe de
+    `sellar()` no promete ninguna en concreto:
+      - LA ABSOLUTA, tal cual la devuelve `mkdtemp`.
+      - LA RELATIVA CON BARRA NORMAL, que es la que salio de verdad en las
+        lineas 53 a 55 de la salida sellada.
+      - LA RELATIVA CON BARRA INVERTIDA, que es la que `os.path.relpath`
+        devuelve en Windows antes de que nadie la normalice.
+      - EL NOMBRE BASE SUELTO del directorio, que es la unica forma que sigue
+        cazando el sufijo aleatorio venga la ruta de donde venga.
+
+    SE SUSTITUYE DE LA MAS LARGA A LA MAS CORTA. Si el nombre base se cambiara
+    antes que la ruta que lo contiene, la ruta quedaria a medias y la linea
+    seguiria siendo distinta entre dos corridas, que es justo lo que esto viene
+    a impedir.
+
+    Y NO NORMALIZA DE MAS: una linea que no lleve ninguna de las cuatro formas
+    dentro sale IDENTICA, byte a byte."""
+    if not tmp or not linea:
+        return linea
+    abso = os.path.abspath(tmp)
+    formas = []
+    for cruda in (tmp, abso, os.path.normpath(tmp)):
+        formas.append(cruda)
+        formas.append(cruda.replace(chr(92), "/"))
+        formas.append(cruda.replace("/", chr(92)))
+    try:
+        rela = os.path.relpath(abso)
+        formas.append(rela)
+        formas.append(rela.replace(chr(92), "/"))
+        formas.append(rela.replace("/", chr(92)))
+    except ValueError:
+        pass
+    formas.append(os.path.basename(os.path.normpath(tmp)))
+    for forma in sorted({f for f in formas if f}, key=len, reverse=True):
+        linea = linea.replace(forma, MARCA_TEMPORAL)
+    return linea
+
 
 
 def main():
@@ -131,7 +195,7 @@ def main():
         ficheros = sorted(os.listdir(tmp))
         w("   tras git_status(), sellar() devuelve: %s" % ok_sucio)
         for l in informe:
-            w("      | " + l[:130])
+            w("      | " + sin_temporal(l, tmp)[:130])
         w("   ficheros escritos en el temporal: %d %s"
           % (len(ficheros), ficheros))
         # DOS VARIABLES COMPUTADAS: el veredicto y el conteo de ficheros.
@@ -151,7 +215,7 @@ def main():
             criterio="criterio de mentira del arnes, bitacora limpia",
             vuelta="ARNES_LIMPIO", muestra=3, semilla=1, dir_salida=tmp)
         for l in informe2:
-            w("      | " + l[:130])
+            w("      | " + sin_temporal(l, tmp)[:130])
         ficheros2 = sorted(os.listdir(tmp))
         w("   sellar() devuelve: %s" % ok_limpio)
         w("   ficheros en el temporal ahora: %d %s" % (len(ficheros2), ficheros2))

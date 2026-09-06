@@ -1,0 +1,105 @@
+ARNES DE LA REPARACION DE LA TAREA 1.b DE LA VUELTA 185
+sujeto vivo: scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
+
+MITAD A. LA FUNCION PURA sin_temporal(), CASO POR CASO
+   el temporal es REAL y se fabrica con mkdtemp, como el sujeto, para que
+   la forma relativa de las entradas sea la que sellar() produce de verdad.
+   SU NOMBRE NO SE PUBLICA AQUI: cambia en cada corrida, y esta salida no
+   puede llevar dentro el mismo dato que cambia solo que se viene a quitar.
+
+   LA ABSOLUTA, tal cual la devuelve mkdtemp
+      entrada : SELLO ESCRITO: C:\Users\AlexDesk\AppData\Local\Temp\<BASE>\SELLO.json (582 bytes)
+      medido  : SELLO ESCRITO: <TEMPORAL>\SELLO.json (582 bytes)
+      esperado: SELLO ESCRITO: <TEMPORAL>\SELLO.json (582 bytes)
+      -> CALZA
+   LA RELATIVA CON BARRA NORMAL, la que salio de verdad en la linea 53
+      entrada :    ciega   ../../AppData/Local/Temp/<BASE>/_auditor_ciega_blind.txt -> 3823 bytes
+      medido  :    ciega   <TEMPORAL>/_auditor_ciega_blind.txt -> 3823 bytes
+      esperado:    ciega   <TEMPORAL>/_auditor_ciega_blind.txt -> 3823 bytes
+      -> CALZA
+   LA RELATIVA CON BARRA INVERTIDA
+      entrada :    destape ..\..\AppData\Local\Temp\<BASE>\_reveal.txt -> 2273 bytes
+      medido  :    destape <TEMPORAL>\_reveal.txt -> 2273 bytes
+      esperado:    destape <TEMPORAL>\_reveal.txt -> 2273 bytes
+      -> CALZA
+   EL NOMBRE BASE SUELTO, sin ninguna carpeta delante
+      entrada : temporal borrado: <BASE> (True)
+      medido  : temporal borrado: <TEMPORAL> (True)
+      esperado: temporal borrado: <TEMPORAL> (True)
+      -> CALZA
+   UNA LINEA SIN NINGUNA RUTA: TIENE QUE SALIR IDENTICA
+      entrada :    sellar() devuelve: True, y no hay ninguna ruta en esta linea
+      medido  :    sellar() devuelve: True, y no hay ninguna ruta en esta linea
+      esperado:    sellar() devuelve: True, y no hay ninguna ruta en esta linea
+      -> CALZA
+   UNA LINEA CON OTRO TEMPORAL QUE NO ES EL SUYO: NO SE TOCA
+      entrada :    ciega   ../../Temp/v182_apertura_OTRO/_blind.txt -> 1 bytes
+      medido  :    ciega   ../../Temp/v182_apertura_OTRO/_blind.txt -> 1 bytes
+      esperado:    ciega   ../../Temp/v182_apertura_OTRO/_blind.txt -> 1 bytes
+      -> CALZA
+   EL LIMITE: UNA RELATIVA A OTRO SITIO PIERDE SOLO EL NOMBRE BASE, Y ESO YA ES DETERMINISTA
+      entrada :    ciega   ../../otro/sitio/<BASE>/_blind.txt -> 3823 bytes
+      medido  :    ciega   ../../otro/sitio/<TEMPORAL>/_blind.txt -> 3823 bytes
+      esperado:    ciega   ../../otro/sitio/<TEMPORAL>/_blind.txt -> 3823 bytes
+      -> CALZA
+
+   CIFRA casos de la mitad A: 7
+   CIFRA que CALZAN: 7
+   CIFRA que NO CALZAN: 0
+
+   LA MUTACION DEL ESPERADO, CASO POR CASO, QUE ES LO QUE PRUEBA QUE ESTOS
+   CASOS PUEDEN CAER. El esperado mutado es el bueno con una letra mas
+   pegada al final: si el caso pasara igual, no estaria comparando nada.
+      LA ABSOLUTA, tal cual la devuelve mkdtemp                      con el esperado MUTADO -> CAE
+      LA RELATIVA CON BARRA NORMAL, la que salio de verdad en la lin con el esperado MUTADO -> CAE
+      LA RELATIVA CON BARRA INVERTIDA                                con el esperado MUTADO -> CAE
+      EL NOMBRE BASE SUELTO, sin ninguna carpeta delante             con el esperado MUTADO -> CAE
+      UNA LINEA SIN NINGUNA RUTA: TIENE QUE SALIR IDENTICA           con el esperado MUTADO -> CAE
+      UNA LINEA CON OTRO TEMPORAL QUE NO ES EL SUYO: NO SE TOCA      con el esperado MUTADO -> CAE
+      EL LIMITE: UNA RELATIVA A OTRO SITIO PIERDE SOLO EL NOMBRE BAS con el esperado MUTADO -> CAE
+   CIFRA casos que CAEN al mutar su esperado: 7 de 7
+
+   LA SEGUNDA MUTACION DE LA MITAD A: QUE LA FUNCION NO NORMALICE DE MAS.
+   Se le pasa un temporal VACIO y una linea con una ruta dentro, y la linea
+   tiene que salir IDENTICA porque no hay nada que sustituir.
+      la linea de prueba, con el nombre base tapado para no meterlo aqui:
+         ciega   ../../Temp/<BASE>/_blind.txt -> 3823 bytes
+      con tmp vacio, la linea sale identica: SI
+      y con el tmp de verdad, la misma linea cambia: SI
+
+MITAD B. LA DOBLE CORRIDA DEL ARNES REPARADO, EN DOS PROCESOS APARTE
+   (es la misma vara que la bateria usa: byte a byte entre dos corridas)
+   SE DECLARA LO QUE ESTO ENSUCIA: cada corrida REESCRIBE
+   docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt. El fichero que
+   queda al terminar es el de la forma REPARADA, con <TEMPORAL> dentro.
+
+   ANTES DE LAS DOS CORRIDAS: 4982 bytes, sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
+   CORRIDA 1 -> exitcode 0 | 4982 bytes | sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
+   CORRIDA 2 -> exitcode 0 | 4982 bytes | sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
+
+   LAS DOS CORRIDAS SALEN exit 0: SI ([0, 0])
+   EL sha256 ES EL MISMO DESPUES DE LAS DOS: SI
+   LOS BYTES SON LOS MISMOS: SI ([4982, 4982])
+
+   LA SALIDA SELLADA, CONTADA DE SU PROPIO FICHERO DESPUES DE LAS DOS:
+      CIFRA apariciones de '<TEMPORAL>': 3
+      CIFRA apariciones de 'v182_apertura_' (el prefijo del mkdtemp): 0
+
+   LAS LINEAS 53, 54 Y 55, QUE ERAN LAS QUE CAMBIABAN SOLAS, PEGADAS:
+      LINEA 53:       | SELLO ESCRITO: <TEMPORAL>/SELLO_APERTURA_AUDITOR_VARNES_LIMPIO.json (582 bytes)
+      LINEA 54:       |    ciega   <TEMPORAL>/_auditor_vARNES_LIMPIO_ciega_blind.txt -> 3823 bytes | sha256 3b6a63b5e8db812f
+      LINEA 55:       |    destape <TEMPORAL>/_auditor_vARNES_LIMPIO_ciega_reveal.txt -> 2273 bytes | sha256 f07484314b9e6ad3
+
+LO QUE ESTE ARNES NO PRUEBA, DICHO EN VEZ DE DARLO POR HECHO: la reparacion
+NO se verifica contra la bateria, porque la 185 no es vuelta de bateria
+(AUDITOR.md 6.1: corre cada cinco vueltas y la siguiente es la 189). La
+prueba de esta vuelta es la doble corrida de arriba; la prueba definitiva
+sera la bateria de la 189.
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
+
+EL TEMPORAL FABRICADO POR ESTE ARNES SE RETIRA (`P.16`, quien fabrica
+limpia). Su nombre base no se publica: cambia en cada corrida y publicarlo
+seria meter en esta salida el mismo dato que cambia solo que la reparacion
+viene a quitar.
