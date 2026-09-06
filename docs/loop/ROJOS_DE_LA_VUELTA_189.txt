@@ -1,0 +1,8 @@
+# REGISTRO DE ARNESES QUE HAN SALIDO EN ROJO EN LA VUELTA 189.
+# Una linea por arnes, con la forma:
+#     script | ruta de su salida en rojo | motivo
+# La lee scripts/loop/vuelta189_tarea2_nomina.py con rojos_registrados(), que es
+# PURA e importada del instrumento de la vuelta 188, y de ahi sale la EXCLUSION
+# de la doble corrida. Un arnes sellado que cae en rojo detiene AL ARNES, no a la
+# vuelta (acta 188, adjudicacion 5.3), y NO SE RE CORRE NI SE ARREGLA.
+vuelta172_tarea5_mutacion_cierre.py | docs/loop/SALIDA_V189_BATERIA_TRAMO_7.txt | NO MORDIO, exit 1, en el tramo 7 de la bateria de esta vuelta (linea 52 de esa salida sellada). En la corrida 183/184 el MISMO arnes daba exit 0 OK en docs/loop/SALIDA_V183_BATERIA_TRAMO_7.txt linea 52. Su sujeto son cadenas literales en memoria, o sea congelado de verdad; lo que se movio entre las dos corridas es scripts/loop/cerrar_reporte.py, que es su sujeto de import. SE TRAE SIN RE CORRERLO Y SIN ARREGLARLO.

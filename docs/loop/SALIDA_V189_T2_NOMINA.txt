@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 189, TAREA 2: LA NOMINA AL CERRAR, Y LA DOBLE CORRIDA CON EXCLUSION
+==============================================================================
+
+A) LA NOMINA Y EL CENSO, RECOMPUTADOS AL CERRAR LA BATERIA
+   CIFRA censo: 185 | CIFRA nomina AHORA: 125 | VARA_DEL_CENSO: 148
+   arneses_que_faltan(): ultima vuelta 188, FALTAN 0
+   nomina_invisible_al_censo(): 0
+   guarda_del_sujeto_congelado(): 3 entradas sin congelar
+      SUJETO SIN CONGELAR: vuelta186_tarea2c_mutacion_cierre_tardio.py    NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta187_tarea4_mutacion_dos_convenciones.py  NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta188_tarea4_mutacion_cobertura_parejas.py NO DECIDIBLE
+   ESTA ES LA UNICA FUENTE DEL exitcode 1 DE LOS DIEZ TRAMOS, y no es de
+   ningun arnes: es la deuda que el acta 189 mide en su seccion 2 y que su
+   `4.7` deja abierta a proposito, con el remedio encargado a la 190.
+
+B) EL ARNES QUE NACE HOY Y EL CENSO, MEDIDO Y NO AFIRMADO
+   vuelta189_tarea1a_registrar_acta189.py               en el censo: NO  | en la nomina: NO
+   vuelta189_tarea2_nomina.py                           en el censo: NO  | en la nomina: NO
+   EL PATRON QUE DECIDE: '^vuelta(\\d+).*(?:mutacion|caso_positivo|simular).*\\.py$'
+   O SEA: el censo mira el NOMBRE DEL FICHERO, y el arnes de esta vuelta
+   vive en el carril `--mutacion` de un fichero que no dice `mutacion` en
+   su nombre. **No lo introduce esta vuelta** (el registrador de la 188
+   tiene la misma forma) y **esta vuelta no lo arregla**: se anota.
+
+C) LA EXCLUSION POR ROJO, QUE HOY NO ESTA VACIA
+   registro: docs/loop/ROJOS_DE_LA_VUELTA_189.txt
+      existe: SI | disco 964 bytes | LF 964 bytes | sha256 LF aefae0656fe1612fcd44c67f5a013d93e11347fb162878583eb3826bb13d51e5
+   CIFRA arneses registrados como ROJOS de esta vuelta: 1
+      ROJO: vuelta172_tarea5_mutacion_cierre.py
+         su salida en rojo: docs/loop/SALIDA_V189_BATERIA_TRAMO_7.txt
+         motivo: NO MORDIO, exit 1, en el tramo 7 de la bateria de esta vuelta (linea 52 de esa salida sellada). En la corrida 183/184 el MISMO arnes daba exit 0 OK en docs/loop/SALIDA_V183_BATERIA_TRAMO_7.txt linea 52. Su sujeto son cadenas literales en memoria, o sea congelado de verdad; lo que se movio entre las dos corridas es scripts/loop/cerrar_reporte.py, que es su sujeto de import. SE TRAE SIN RE CORRERLO Y SIN ARREGLARLO.
+   CIFRA arneses EXCLUIDOS de la doble corrida: 1
+      EXCLUIDO Y NO RE CORRIDO: scripts/loop/vuelta172_tarea5_mutacion_cierre.py
+         motivo: NO MORDIO, exit 1, en el tramo 7 de la bateria de esta vuelta (linea 52 de esa salida sellada). En la corrida 183/184 el MISMO arnes daba exit 0 OK en docs/loop/SALIDA_V183_BATERIA_TRAMO_7.txt linea 52. Su sujeto son cadenas literales en memoria, o sea congelado de verdad; lo que se movio entre las dos corridas es scripts/loop/cerrar_reporte.py, que es su sujeto de import. SE TRAE SIN RE CORRERLO Y SIN ARREGLARLO.
+         su salida en rojo, que se conserva sin tocar: docs/loop/SALIDA_V189_BATERIA_TRAMO_7.txt
+   CIFRA arneses que SI se corren dos veces: 1 de 2
+
+D) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256
+   scripts/loop/vuelta189_tarea1a_registrar_acta189.py (NACE HOY, y su re corrido es su propia prueba de idempotencia)
+      salida: docs/loop/SALIDA_V189_T1A_RECORRIDO_SIN_ESCRIBIR.txt
+      ANTES de correr: disco 8026 bytes | LF 8026 bytes | sha256 LF 49cbe8bf0840e5d838eceba8325010698a47c5da60af2bae42f230967681646a
+      CORRIDA 1: exitcode 0 | disco 8026 bytes | LF 8026 bytes | sha256 LF 49cbe8bf0840e5d838eceba8325010698a47c5da60af2bae42f230967681646a
+      CORRIDA 2: exitcode 0 | disco 8026 bytes | LF 8026 bytes | sha256 LF 49cbe8bf0840e5d838eceba8325010698a47c5da60af2bae42f230967681646a
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      SE MOVIO RESPECTO A LA SALIDA QUE HABIA: SI
+      git diff --numstat -- docs/loop/SALIDA_V189_T1A_RECORRIDO_SIN_ESCRIBIR.txt : 0 fila(s)
+
+   CIFRA paradas: 0
+
+E) EL CARRIL DE MUTACION DEL ARNES QUE NACE HOY, CORRIDO DOS VECES TAMBIEN
+   (el `--mutacion` es lo que de verdad prueba la maquina, y correr el
+    fichero sin argumentos NO lo corre. Se corre aparte y se coteja)
+      CORRIDA 1: exitcode 0 | disco 5068 bytes | LF 5068 bytes | sha256 LF ac68abfc3a17628f63ff6752d9f142092dcaefb105b00fbcac4be7427d6e3f63
+      CORRIDA 2: exitcode 0 | disco 5068 bytes | LF 5068 bytes | sha256 LF ac68abfc3a17628f63ff6752d9f142092dcaefb105b00fbcac4be7427d6e3f63
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+
+F) EL ESTADO DEL ARBOL DESPUES DE TODO
+   CIFRA filas de `git diff --numstat -- dataset/`: 0
+
+VEREDICTO: VERDE
+   (y la guarda del sujeto congelado sigue en 3, publicada arriba y NO
+    metida en este veredicto, por el motivo escrito en el fuente)
