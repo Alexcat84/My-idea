@@ -1,19 +1,16 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Eres el ejecutor de la VUELTA 190. Rama `pasada-unica`. FASE III, EJECUCION.
+Eres el ejecutor de la VUELTA 191. Rama `pasada-unica`. FASE III, EJECUCION.
 
 NO ES VUELTA DE BATERIA. La 189 la corrio entera y por `AUDITOR.md` 6.1 la
 siguiente cae en la 194. La seccion 9 de tu reporte cierra con el HUECO
-DECLARADO Y MEDIDO por su carril, con su medicion, su atribucion y su corrida.
-Un hueco declarado no es un hueco escondido.
+DECLARADO Y MEDIDO por su carril, con su nombre, sus bytes medidos y su
+atribucion, LAS TRES JUNTAS. Un hueco declarado no es un hueco escondido.
 
-VAN CINCO SUB-TAREAS Y NO DOS. El tope temporal de la `AUDITOR.md` 6.2 se
-cumplio y caduca: su disparador de salida pedia DOS vueltas seguidas cerrando su
-propio reporte con `cerrar_reporte.py`, y son TRES, medidas en git y no
-recordadas: la 187 (`56ec2696`), la 188 (`7302573f`) y la 189 (`f973b0bd`), las
-tres con exitcode 0 en su propia vuelta y las tres archivadas en su propia vuelta
-(`9a06b7c8`, `564a82f9`, `63d0c5b4`). Vuelve el tope de CINCO de la seccion 6.
-Esta adjudicado en la 4.10 del acta 190.
+VAN CINCO SUB-TAREAS. El tope de CINCO ya esta vigente desde la 4.10 del acta
+190 y no hace falta volver a ganarlo. Lo remedi para que la cifra no envejezca:
+son CUATRO las vueltas seguidas que cerraron su propio reporte con
+`cerrar_reporte.py`, la 187, la 188, la 189 y la 190, no tres.
 
 ABRE EL REPORTE AL EMPEZAR, con su esqueleto tallado y en su propio commit, y
 mide tu desfase de calibrado DENTRO del bloque de apertura y ANTES de la primera
@@ -23,170 +20,186 @@ operacion. Una columna de apertura medida al cierre es caida que ACUMULA.
 TAREA 1. LOS REGISTROS. BLOQUEANTE.
 =============================================================================
 
-El acta 190 entra en la serie con el numero que devuelva
+El acta 191 entra en la serie con el numero que devuelva
 `scripts/loop/serie_de_registros.py`, computado y no tecleado (hoy el siguiente
-libre es `R.52`, pero lo dice el instrumento, no este encargo).
+libre es `R.53`, pero lo dice el instrumento, no este encargo).
 
 La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta, no de
 aqui:
 
-  - LAS DIEZ ADJUDICACIONES `4.1` a `4.10`.
-  - QUE NO SON DIEZ A FAVOR. Seis son los discutibles del ejecutor y de esos
-    CINCO van A FAVOR (`D.1`, `D.2`, `D.3`, `D.4`, `D.6`) y UNO EN CONTRA: el
-    `D.5`, la guarda del sujeto congelado fuera del veredicto. Si tu registrador
-    cuenta "seis A FAVOR" por herencia del vocabulario de la vuelta pasada, esta
-    contando mal: la marca de EN CONTRA tiene que existir y tiene que salir en la
-    cuenta. Pruebala por mutacion con un acta fabricada.
-  - LAS TRES PREGUNTAS CONTESTADAS (`4.4` la `P.1`, `4.8` la `P.2`, `4.9` la
-    `P.3`).
-  - LOS DOS HALLAZGOS DE LA SECCION 5 QUE NO SALEN DE NINGUN DISCUTIBLE: las dos
-    convenciones de `lineas` (`5.1`) y las ocho actas sin entrada propia (`5.2`).
-  - CERO CAIDAS PROPIAS DEL AUDITOR, ESCRITO COMO CERO Y NO OMITIDO, y TRES del
-    ejecutor, las tres DE METODO y ninguna de racha.
-  - LA VARA CORRIDA POR EL AUDITOR (`5.4`), con sus cifras.
+  - LAS NUEVE ADJUDICACIONES `4.1` a `4.9`, y esta vez SI son nueve a favor:
+    seis son los discutibles del ejecutor (`D.1` a `D.6`) y los seis van A FAVOR,
+    y las tres restantes (`4.7`, `4.8`, `4.9`) son las tres preguntas
+    contestadas. Tu registrador de la 190 aprendio a contar la marca EN CONTRA;
+    esta vuelta tiene que salir CERO EN CONTRA sin que la maquina se rompa por
+    no encontrar ninguna. Pruebalo por mutacion con un acta fabricada que si
+    lleve una.
+  - LOS TRES HALLAZGOS DE LA SECCION 5, que no salen de ningun discutible: la
+    marca `DISCUTIBLE MARCADO` contra la dificultad medida (`5.1`), la etiqueta
+    del veredicto duplicada (`5.2`), y `git checkout --` que no restaura byte a
+    byte (`5.3`).
+  - UNA CAIDA PROPIA DEL AUDITOR, de metodo, la `5.3`, ESCRITA COMO UNA Y NO
+    OMITIDA; y CERO caidas del ejecutor que acumulen, con las TRES de metodo que
+    el reporte de la 190 declara registradas como tales.
+  - LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de
+    puestos con su nota: los 30 de esta acta son SOLAPE TOTAL a proposito, o sea
+    control y no cobertura nueva.
 
-EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE. El de la 189 lo es y esta probado: re
-correrlo dice `NO SE ESCRIBE NADA` y deja `docs/PENDIENTES.md` en sus 961248
-bytes. No lo pierdas al clonarlo, y re correlo tu mismo para probarlo, con la
-sede medida antes y despues.
-
-=============================================================================
-TAREA 2. LA GUARDA DEL SUJETO CONGELADO: SEPARA LA DEUDA DEL FALLO, Y VUELVE
-AL VEREDICTO.
-=============================================================================
-
-Son las adjudicaciones `4.4` y `4.6` del acta 190, y las dos mitades van juntas
-porque una sin la otra no sirve.
-
-(a) `guarda_del_sujeto_congelado()` SEPARA EN SU SALIDA las entradas
-    `NO DECIDIBLE` que traen MOTIVO ESCRITO de las que no lo traen, y publica LAS
-    DOS CIFRAS con sus nombres. Hoy "3 entradas sin congelar" no distingue una
-    deuda de una decision, y esa es la `P.1` que el acta 189 dejo encargada en su
-    `4.7`. Las tres de hoy son `vuelta186_tarea2c_mutacion_cierre_tardio.py`,
-    `vuelta187_tarea4_mutacion_dos_convenciones.py` y
-    `vuelta188_tarea4_mutacion_cobertura_parejas.py`: mide cuantas de las tres
-    traen motivo escrito, no lo supongas.
-
-(b) LA GUARDA VUELVE AL VEREDICTO del instrumento de la nomina. El `D.5` de la
-    189 la saco y el acta 190 lo TUMBA: publicar los tres nombres arriba y cerrar
-    en verde deja sin sintoma al que solo mire el veredicto, y eso es convertir
-    una deuda visible en una exencion, que es lo que la `4.7` del acta 189
-    advirtio expresamente. Con la separacion de (a) puesta, el veredicto ya puede
-    decir ROJO POR DEUDA DECLARADA distinto de ROJO POR FALLO, sin dejar de ser
-    rojo.
-
-NO SE AFLOJA NINGUNA GUARDA PARA CONSEGUIR ESTO. Si al volver al veredicto algo
-cierra en rojo, ese rojo se trae con su nombre y no se apaga.
-
-Con simulacion previa sobre copia en memoria y caso positivo por mutacion.
+EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido no escribe nada. Pruebalo
+re corriendolo, con la sede medida en bytes antes y despues, como en la 190.
 
 =============================================================================
-TAREA 3. LA BATERIA: QUE SU EXITCODE SEPARE, Y QUE RESTAURE SOLA LO QUE PISA.
+TAREA 2. LA RELECTURA AL DOBLE DEL TRAMO DEL 3182. BLOQUEANTE.
 =============================================================================
 
-Las dos mitades tocan el mismo lanzador, por eso van en la misma tarea. Son las
-adjudicaciones `4.4` y `4.9` del acta 190. NO SE CORRE LA BATERIA en esta vuelta:
-se arregla su lanzador y se prueba con sus arneses, nada mas.
+ES LA DEUDA DE CREDITO QUE TU PROPIA TAREA 4 DE LA 190 DEJO MEDIDA Y QUE NO SE
+AUTO ENCARGO, y la adjudique A FAVOR en la 4.5 de mi acta: quien encarga el
+doble es el auditor, y lo encargo aqui.
 
-(a) EL EXITCODE SEPARA. Hoy los diez tramos de la 189 salieron con exitcode 1 y
-    en NUEVE de ellos no cayo ni un arnes: la fuente era siempre la guarda de
-    nomina en deuda. Un unico `1` para un arnes caido y para una deuda declarada
-    es degradacion silenciosa (banco 9). Que el lanzador distinga los dos casos en
-    su salida sellada y en su codigo de salida, y que lo diga con su cifra.
+QUE TRAMO. La tanda de 30 puestos de la vuelta 190, la de
+`docs/loop/SALIDA_V190_T4_CIEGA.txt`, donde la discrepancia del `3182` cayo
+FUERA de tus dudosos marcados.
 
-(b) LA BATERIA RESTAURA SOLA LAS SALIDAS SELLADAS AJENAS QUE PISA, como ya
-    restaura `dataset/`. Es la `4.9`: una salida sellada es la prueba de la vuelta
-    que la sello, y dejar que una corrida posterior la pise borra el registro.
-    En la 189 piso TRES (`SALIDA_V184_T1C_MUTACION_ESTIMACION.txt`,
-    `SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt` y
-    `SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt`) y las restauro una persona a
-    mano, en dos vueltas distintas y a dos personas distintas. La restauracion va
-    EN LF, que es la convencion de la casa en disco.
+QUE ES AL DOBLE. Sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de
+`scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada. 30 del
+tramo mas 30 vecinos son 60: el doble exacto.
 
-    Y SI EL CORTE NUEVO INTERESA, SE ESCRIBE AL LADO CON NOMBRE NUEVO Y SU
-    VUELTA, nunca encima. Esa es la respuesta entera a tu `P.3`.
+EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO. A `vecinos()` se le pasa
+`evitar` con TODO lo consumido, que hoy son 471 puestos: los 441 de antes de la
+190 (las dos exclusiones, 411 y 381, y las dos ciegas de las actas 189b y 190,
+30 y 30) MAS los 30 de la tanda de la 190, que ademas son los mismos 30 que yo
+relei en el acta 191 (`docs/loop/_auditor_v191_ciega_blind.txt`, y son el mismo
+conjunto: lo medi). Cuentalo tu de sus ficheros, no de esta cifra. Solape con el
+propio tramo y con el universo consumido: 0 y 0, POR CONSTRUCCION.
 
-Con simulacion previa y caso positivo por mutacion que CAIGA si una salida
-sellada ajena se queda pisada.
+COMO SIEMPRE: `scripts/loop/aislador_de_ciega.py`, criterio escrito literal,
+ciega y destape en ficheros SEPARADOS, tus clases escritas y COMMITEADAS en su
+propio commit ANTES de abrir el destape, y tus dudosos NOMBRADOS DELANTE.
+Publica cuantos coinciden, cuantos discrepan, cuantos dentro y cuantos fuera de
+tus dudosos.
 
-=============================================================================
-TAREA 4. LA RELECTURA AL DOBLE DEL TRAMO DEL PUESTO 2422.
-=============================================================================
-
-ES UNA DEUDA DEL ACTA 189 Y NO SE SALTA DOS VUELTAS SEGUIDAS. La 189 la aplazo
-con razon (era vuelta de bateria y `AUDITOR.md` 6.1 dice que la bateria va sola),
-pero la razon ya no vale hoy.
-
-El acta 189 encontro la discrepancia del puesto `2422` FUERA de sus dudosos
-marcados, y la letra de `AUDITOR.md` 1.2 dice que eso baja el credito de la tanda
-y obliga a releer ese tramo AL DOBLE. Corre la relectura con
-`scripts/loop/aislador_de_ciega.py`, sobre los vecinos deterministas del `2422`,
-con el criterio escrito, la ciega y el destape en ficheros separados, y las clases
-escritas ANTES de abrir el destape. Publica cuantos coinciden y cuantos discrepan.
-
-NO TOQUES NINGUNA CLASE del archivo. Si de la relectura sale una correccion, se
-declara y se trae; no se escribe sobre `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` en
-esta vuelta. El `sha256` LF del archivo abre y cierra en `0a77b5a35a962621`.
+NO SE TOCA NINGUNA CLASE. `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en
+lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos
+convenciones. Si de la relectura sale una correccion, se declara y se trae; no
+se escribe ni una fila.
 
 =============================================================================
-TAREA 5. LA SEDE DE `OP-L-02`: BUSCARLA, NO INVENTARLA.
+TAREA 3. LAS DOS CONVENCIONES DE `lineas`, QUE LLEVAN DOS VUELTAS ESPERANDO.
 =============================================================================
 
-Es la `4.1` del acta 189, y la vara del acta 190 (`5.4`) la confirma medida:
-corrida con `--corte 63d0c5b4` da 71 fichas, 6 en LISTA sin ninguna prueba, 2 de
-ellas CONSUMIDAS por `OP-U-01` y 4 de TRABAJO REAL; de esas cuatro, tres son
-mesas cuyo producto documental SI existe en disco, y `OP-L-02` es LA UNICA SIN
-DOCUMENTO QUE MEDIR, con 0 menciones de fichero en su evidencia.
+ES LA `5.1` DEL ACTA 190 Y NO SE HA TOCADO. Hay instrumentos de la cadena que
+cuentan lineas con `len(texto.split(NL))`, que suma un elemento vacio final que
+no es una linea, y otros que cuentan con `texto.count(NL)`, que si calza con
+`wc -l`. El de la 190 publico "2231 lineas" de `docs/plan/LECTURAS_DIRIGIDAS.md`
+donde `wc -l` dice 2230. La cifra no era inventada, la imprimia su instrumento:
+por eso el defecto es del instrumento y no del que lo leyo.
 
-Su `verificacion` habla de "las tres nominas afectadas" y de "cada grupo del
-backlog". BUSCA SI ESAS TRES NOMINAS TIENEN SEDE EN EL REPO, con tus propios
-comandos, y publica la busqueda entera: que buscaste, donde, y que encontraste.
+QUE HACER, Y ES UNA MEDICION ANTES QUE UN ARREGLO:
 
-Y AQUI ESTA EL LIMITE, ESCRITO PARA QUE NO SE CRUCE: si la busqueda no encuentra
-sede en ninguna parte, ESO ES EL RESULTADO Y SE PUBLICA COMO TAL. NO le inventes
-una sede a la ficha, ni la declares HECHA, ni la muevas de estado: inventarle una
-sede es cambiar el alcance de la campana, y eso lo reserva el fundador. En ese
-caso lo traes y el auditor lo eleva.
+  a) MIDE PRIMERO. Cuenta cuantos ficheros de `scripts/loop/` cuentan lineas por
+     cada una de las dos convenciones, nombralos, y publica la cifra. Sin esa
+     cifra el arreglo no se sabe de que tamano es. Es la misma disciplina que le
+     aplique a la `P.2` del acta 190: primero se cuenta, despues se cambia.
+  b) DESPUES ARREGLA, y la vara es la de las dos convenciones de BYTES que esta
+     casa ya construyo: una cifra que no se puede cotejar con la herramienta
+     obvia no sirve de cifra. O se publica la pareja, o se publica la que calza
+     con `wc -l` diciendo cual es.
+  c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un instrumento vuelve a
+     publicar una sola cifra de lineas por la convencion que no calza.
 
-=============================================================================
-LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE PIERDA
-=============================================================================
-
-Cinco es el tope y estas seis quedan FUERA a proposito, nombradas para que la
-vuelta 191 las encuentre escritas y no haya que redescubrirlas:
-
-  1. LAS DOS CONVENCIONES DE `lineas` (acta 190, `5.1`). El registrador cuenta con
-     `len(texto.split(NL))` y publica 2231 donde `wc -l` da 2230;
-     `cerrar_reporte.py` cuenta con `texto.count(NL)` y calza. Hay que igualar los
-     instrumentos o declarar la convencion en cada cifra, como ya se hizo con los
-     BYTES.
-  2. `acumulan()` CONTRA LA TABLA (acta 190, `4.2`). Que lea la tabla de credito o
-     que declare en su salida que no es la sede.
-  3. EL COTEJO DE CLON DECLARADO QUE SEPARA (acta 189, `4.8`). Dos cifras:
-     sentencias del original que sobreviven identicas, y sentencias nuevas del
-     clon; rojo SOLO cuando alguna del original no sobrevive.
-  4. LA EXCEPCION QUE PUBLICA SIEMPRE SU LISTA, AUNQUE ESTE VACIA (acta 189,
-     `4.4`). Una puerta que solo se ve cuando se usa no se puede auditar.
-  5. LA MEDICION DEL CENSO DE ARNESES SIN FICHERO (acta 190, `4.8`). PRIMERO se
-     cuenta cuantos instrumentos traen carril `--mutacion` sin fichero que los
-     represente y se publica esa cifra; DESPUES se cambia el censo. No al reves.
-  6. LAS OCHO ACTAS SIN ENTRADA PROPIA EN LA SERIE (acta 190, `5.2`): 173, 174,
-     175, 176, 177, 178, 179 y 180, entre el `R.42` y el `R.43`.
-
-Y SIGUEN FUERA, COMO EN LA 189: el cribado, el recomputo, las operaciones del
-plan que no sean la busqueda de la `TAREA 5`, las mesas anotadas, y PODAR LA
-NOMINA, que el fundador RECHAZO el 5 sep 2026. La nomina sigue creciendo y nadie
-la poda sin el fundador.
+NO TOQUES LOS NUMEROS YA PUBLICADOS EN REPORTES CERRADOS. Un reporte cerrado no
+se reescribe: si una cifra vieja queda explicada por esto, se dice al lado.
 
 =============================================================================
+TAREA 4. LA GUARDA DEL VEREDICTO DUPLICADO EN `cerrar_reporte.py`.
+=============================================================================
 
-Las guardas de siempre, y ninguna se afloja: simulacion previa sobre copia en
-memoria, caso positivo por mutacion en cada instrumento nuevo, Gate 0 y las
-suites en verde tras cada tarea, `git diff --numstat -- dataset/` medido al
-entrar y al salir con las DOS cifras publicadas, y el reporte cerrado por
-`scripts/loop/cerrar_reporte.py` con sus cuatro piezas y archivado en tu misma
-vuelta. Los tamanos van en BYTES EXACTOS leidos del instrumento, nunca
-redondeados, y los KB solo entre parentesis y detras del byte.
+ES MI HALLAZGO `5.2` DEL ACTA 191, Y ES NUEVO DE LA VUELTA 190. La linea 50 del
+reporte de la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA
+LINEA: LAS CINCO TAREAS...`. La causa esta medida: `cerrar_reporte.py` en su
+linea 1817 compone `"**EL VEREDICTO DE UNA LINEA: %s**"`, y su propia salida
+(`SALIDA_V190_CERRAR_REPORTE.txt`, linea 45) prueba que el veredicto que se le
+paso YA traia la etiqueta y sus asteriscos. Los reportes 186 a 189 la traen una
+sola vez, o sea que no es herencia.
+
+QUE HACER:
+
+  a) QUE `cerrar_reporte.py` CAIGA EN ROJO si el `--veredicto` que recibe ya
+     trae la etiqueta o los asteriscos, en vez de pegarla dos veces. Fallar
+     ruidoso: no la limpies en silencio, porque limpiar en silencio es la otra
+     mitad de la misma enfermedad. Que diga que recibio y que esperaba.
+  b) CASO POSITIVO POR MUTACION que CAIGA si la guarda se quita.
+  c) EL REPORTE DE LA 190 NO SE REESCRIBE. Esta cerrado y archivado byte a byte,
+     y su etiqueta doble se queda donde esta con esta explicacion al lado. Lo que
+     se arregla es que no vuelva a pasar.
+
+=============================================================================
+TAREA 5. LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD MEDIDA. SOLO MEDIR.
+=============================================================================
+
+ES MI HALLAZGO `5.1`, Y ESTA TAREA NO TOCA NI UNA RAZON DEL ARCHIVO.
+
+LO QUE MEDI SOBRE MI TANDA DE TREINTA: dos lectores independientes, tu y yo,
+discrepamos del archivo en los MISMOS OCHO puestos (872, 904, 963, 1201, 1366,
+2423, 3067 y 3086); `DISCUTIBLE MARCADO` aparece en 427 de las 3.388 filas del
+archivo, el 12,6 por ciento, y en CERO de esos ocho; el unico de los treinta que
+la lleva es el 3182, que tumbo a un lector y no al otro.
+
+TREINTA CASOS NO SON UNA LEY, Y POR ESO ESTO ES UNA MEDICION Y NO UN ARREGLO.
+Lo que encargo es llevar esa cuenta a TODA la historia de ciegas de la campana
+que se pueda medir de ficheros del repo:
+
+  a) DI PRIMERO CUAL ES TU UNIVERSO Y COMO LO CONSTRUYES, antes de contar nada:
+     que ficheros de cotejo de ciega existen, de que vueltas, y cuales quedan
+     fuera por no ser legibles con una regla unica. Publica la cifra de los que
+     entran y de los que no, con sus nombres. Un universo elegido despues de ver
+     el resultado no sirve.
+  b) CUENTA, sobre ese universo: cuantos puestos han tumbado alguna vez a un
+     lector, cuantos de esos llevan `DISCUTIBLE MARCADO` en su razon, y cual es
+     la tasa de la marca en el archivo entero para poder compararla. Las tres
+     cifras juntas o ninguna.
+  c) NO SAQUES LA CONCLUSION SI LA CUENTA NO LA SOSTIENE. Si el universo sale
+     pequeno, dilo y publica el tamano: "no alcanza para concluir" es un
+     resultado y se escribe como tal. Inventar una tendencia sobre veinte casos
+     es exactamente lo que esta casa persigue.
+  d) NO SE ESCRIBE NI UNA FILA DEL ARCHIVO. Ponerle la marca a ocho razones
+     seria editar datos publicados sobre una muestra de treinta, y eso ni lo
+     adjudico yo ni lo hace esta vuelta.
+
+=============================================================================
+LO QUE NO ENTRA, DICHO PARA QUE NO SE COLE NI SE REDESCUBRA
+=============================================================================
+
+Ni cribado, ni recomputo, ni operaciones del plan, ni las mesas anotadas, ni
+podar la nomina (la opcion `c` que el fundador RECHAZO el 5 sep 2026: la nomina
+sigue creciendo y nadie la poda sin el fundador), ni la bateria, que cae en la
+194.
+
+Y SIGUEN FUERA, NOMBRADAS PARA QUE LA 192 NO LAS REDESCUBRA:
+
+  - `acumulan()` que lea la tabla, o que declare en su salida que no es la sede.
+  - El cotejo de clon declarado que separa sentencia de codigo de cambio de
+    texto.
+  - La excepcion que publica siempre su lista.
+  - La medicion del censo de arneses con carril de mutacion sin fichero propio.
+  - Las ocho actas sin entrada propia en la serie (173 a 180), medidas y no
+    arregladas.
+  - El exitcode 2 propagado a `--componer`, que adjudique A FAVOR en la 4.9 del
+    acta 191 por extension citable del banco 9, y que no entra en esta vuelta.
+  - Que el campo `evidencia` de `OP-L-02` nombre los ficheros que ya existen,
+    adjudicado en la 4.7 como la mitad barata de esa pregunta. Su ESTADO NO SE
+    MUEVE: sigue en `LISTA`, y declararla HECHA es del fundador.
+
+Y NO SE MUEVE NINGUN VEREDICTO: el `sha256` LF de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en el mismo valor, y
+`dataset/` no se toca a mano: el `numstat` se mide al entrar y al salir y las
+dos cifras se publican.
+
+Y SI RE CORRES UN INSTRUMENTO QUE PISA UNA SALIDA SELLADA AJENA, RESTAURALA EN
+LF Y REMIDELA ANTES DE DARLA POR RESTAURADA. `git checkout --` te la devuelve en
+CRLF y te cambia los bytes publicados: me paso a mi en esta acta y lo declare
+como caida propia en su `5.3`. El corte nuevo, si interesa, va al lado con su
+nombre y su vuelta, nunca encima.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.

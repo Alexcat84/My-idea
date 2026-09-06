@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 190, TAREA 2: LA NOMINA CON LA GUARDA DE VUELTA EN EL VEREDICTO
+==============================================================================
+
+A) LA NOMINA Y EL CENSO, RECOMPUTADOS AHORA
+   CIFRA censo: 187 | CIFRA nomina AHORA: 127 | VARA_DEL_CENSO: 148
+   arneses_que_faltan(): ultima vuelta 190, FALTAN 0
+   nomina_invisible_al_censo(): 0
+
+B) LA GUARDA DEL SUJETO CONGELADO, SIN SEPARAR Y SEPARADA
+   guarda_del_sujeto_congelado(): 3 entradas sin congelar
+      SUJETO SIN CONGELAR: vuelta186_tarea2c_mutacion_cierre_tardio.py    NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta187_tarea4_mutacion_dos_convenciones.py  NO DECIDIBLE
+      SUJETO SIN CONGELAR: vuelta188_tarea4_mutacion_cobertura_parejas.py NO DECIDIBLE
+   ESO ES LO QUE SE PUBLICABA HASTA HOY, Y NO DISTINGUE UNA DEUDA DE UNA
+   DECISION. La `P.1` del acta 189, en su `4.7`, pedia separarlas.
+
+   LA VARA DEL MOTIVO ESCRITO, DECLARADA ANTES DE MEDIR:
+      marcas literales (7): GIT SHOW, CAT-FILE, COMMIT, SUJETO_FIJO, SHA256, NO SE TOCA, NO SE ESCRIBE
+      ventana: +/- 3 lineas sobre LA MAQUINA (sin docstring de modulo)
+      regla: TODAS las apariciones con marca -> MOTIVO ESCRITO; ALGUNA sin
+             marca -> SIN MOTIVO ESCRITO. El lado seguro es ese.
+   CIFRA SUJETO VIVO (es FALLO, no deuda): 0
+      (ninguna, y el cero va escrito)
+   CIFRA NO DECIDIBLE CON MOTIVO ESCRITO (deuda declarada): 3
+      vuelta186_tarea2c_mutacion_cierre_tardio.py
+         linea 486   huella REPORTE.md                       marcas: NO SE TOCA, NO SE ESCRIBE
+      vuelta187_tarea4_mutacion_dos_convenciones.py
+         linea 140   huella REPORTE.md                       marcas: GIT SHOW, COMMIT
+         linea 144   huella REPORTE.md                       marcas: COMMIT
+      vuelta188_tarea4_mutacion_cobertura_parejas.py
+         linea 15    huella REPORTE.md                       marcas: COMMIT
+   CIFRA NO DECIDIBLE SIN MOTIVO ESCRITO (deuda sin declarar): 0
+      (ninguna, y el cero va escrito)
+   LA SUMA DE LAS TRES ES 3 Y LA GUARDA SIN SEPARAR DA 3: CALZA
+   Y NO SE EXIME A NADIE: las tres listas cuentan para el veredicto.
+
+C) LA EXCLUSION POR ROJO
+   registro: docs/loop/ROJOS_DE_LA_VUELTA_190.txt
+      existe: NO. LA EXCLUSION ES VACIA Y SE DECLARA CON ESAS PALABRAS.
+      (esta vuelta NO corre la bateria, asi que ningun arnes ha salido
+       en rojo por ella. El cero va escrito, no omitido)
+   CIFRA arneses registrados como ROJOS de esta vuelta: 0
+   CIFRA arneses EXCLUIDOS de la doble corrida: 0
+      (ninguno excluido, y el cero va escrito)
+   CIFRA arneses que SI se corren dos veces: 1 de 1
+
+D) LA DOBLE CORRIDA, EN PROCESOS APARTE, EXIGIENDO EL MISMO sha256
+   scripts/loop/vuelta190_tarea2b_mutacion_deuda_y_fallo.py (NACE HOY, TAREA 2: la deuda separada del fallo y la guarda enchufada)
+      salida: docs/loop/SALIDA_V190_T2B_MUTACION_DEUDA_Y_FALLO.txt
+      ANTES de correr: disco 6763 bytes | LF 6763 bytes | sha256 LF bc1f0f27849ffced4b71dfa82ecf6acf55db8912ea9ef93498572a7dc0057bd0
+      CORRIDA 1: exitcode 0 | disco 6763 bytes | LF 6763 bytes | sha256 LF bc1f0f27849ffced4b71dfa82ecf6acf55db8912ea9ef93498572a7dc0057bd0
+      CORRIDA 2: exitcode 0 | disco 6763 bytes | LF 6763 bytes | sha256 LF bc1f0f27849ffced4b71dfa82ecf6acf55db8912ea9ef93498572a7dc0057bd0
+      LAS DOS CORRIDAS DAN EL MISMO sha256: SI
+      git diff --numstat -- docs/loop/SALIDA_V190_T2B_MUTACION_DEUDA_Y_FALLO.txt : 0 fila(s)
+
+   CIFRA paradas: 0
+
+E) EL ESTADO DEL ARBOL DESPUES DE TODO
+   CIFRA filas de `git diff --numstat -- dataset/`: 0
+
+F) EL VEREDICTO, CON LA GUARDA DENTRO Y CON SU ESPECIE DICHA
+   piezas de FALLO: 0 arneses caidos, 0 fuera de la nomina, 0 invisibles
+      y 0 SUJETO VIVO, que cuenta como fallo y no como deuda
+   piezas de DEUDA DECLARADA: 3 con motivo escrito, 0 sin motivo escrito
+   LA PRECEDENCIA VA ESCRITA: EL FALLO GANA. Publicar deuda habiendo un
+   arnes caido seria la misma degradacion silenciosa, pero al reves.
+
+   Y AQUI VA LA COMPARACION QUE HACE VISIBLE LO QUE LA `4.6` ARREGLA:
+      CON la guarda DENTRO del veredicto (hoy): ROJO POR DEUDA DECLARADA, exitcode 2
+      SIN la guarda, que es lo que el `D.5` de la 189 hacia: VERDE, exitcode 0
+      LAS DOS SON DISTINTAS: SI. Si fueran iguales, la guarda no estaria
+      enchufada y esto no probaria nada.
+
+VEREDICTO: ROJO POR DEUDA DECLARADA
+CIFRA exitcode: 2
+   (y sigue siendo ROJO. Los dos rojos siguen siendo distintos de cero: no se afloja nada)
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V190_T2_NOMINA.txt (4510 bytes)

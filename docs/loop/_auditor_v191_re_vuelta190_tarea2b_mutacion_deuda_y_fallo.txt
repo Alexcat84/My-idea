@@ -1,0 +1,97 @@
+==============================================================================
+CASO POSITIVO POR MUTACION: LA DEUDA SEPARADA DEL FALLO, Y LA GUARDA
+ENCHUFADA AL VEREDICTO (vuelta 190, TAREA 2)
+==============================================================================
+
+A) LA VARA DEL MOTIVO ESCRITO, SOBRE TEXTOS FABRICADOS
+   marcas de la casa (7): GIT SHOW, CAT-FILE, COMMIT, SUJETO_FIJO, SHA256, NO SE TOCA, NO SE ESCRIBE
+   ventana: +/- 3 lineas sobre la maquina
+   MOTIVO ESCRITO del fabricado sin explicar nada           obtenido False                      esperado False                      -> PASA
+      linea 2   huella REPORTE.md                       marcas: (NINGUNA)
+   MOTIVO ESCRITO del fabricado con git show y COMMIT       obtenido True                       esperado True                       -> PASA
+      linea 3   huella REPORTE.md                       marcas: COMMIT
+   LA MUTACION: con la lista de marcas VACIA, hasta el que SI explica
+   tiene que salir SIN MOTIVO. Si no cambiara, las marcas no deciden.
+      LA MUTACION CAE: sin marcas sale SIN MOTIVO, o sea que la vara
+      la deciden las marcas y no el azar.
+   LA MUTACION 2: el que se apoya en la linea DE AL LADO tiene que perder
+   su motivo cuando la ventana se cierra a 0.
+   motivo en la linea de al lado, ventana 3                 obtenido True                       esperado True                       -> PASA
+   el mismo texto con ventana 0                             obtenido False                      esperado False                      -> PASA
+      LA MUTACION CAE: con ventana 3 sale SI y con ventana 0 sale NO.
+
+B) LA REGLA DE `TODAS LAS APARICIONES`, QUE NO ES DECORATIVA
+   apariciones: 2
+      linea 3   marcas: COMMIT
+      linea 8   marcas: (NINGUNA)
+   una explicada y otra no -> SIN MOTIVO                    obtenido False                      esperado False                      -> PASA
+   LA MUTACION: si bastara con UNA aparicion explicada, esto daria SI y
+   una apertura sin explicar se colaria detras de otra que si lo esta.
+      LA MUTACION CAE: con la regla de `alguna` daria SI y con la de
+      `todas` da NO. Las dos reglas NO dan lo mismo sobre este texto.
+
+C) LA SEPARACION SUMA LO MISMO QUE LA GUARDA SIN SEPARAR
+   directorio fabricado: 4 ficheros
+   guarda_del_sujeto_congelado() sin separar: 3
+      NO DECIDIBLE   vuelta200_t1_mutacion_sin_explicar.py
+      NO DECIDIBLE   vuelta200_t2_mutacion_con_motivo.py
+      NO DECIDIBLE   vuelta200_t3_mutacion_medio.py
+   sujeto_vivo : 0 (ninguna)
+   con_motivo  : 1 (vuelta200_t2_mutacion_con_motivo.py)
+   sin_motivo  : 2 (vuelta200_t1_mutacion_sin_explicar.py, vuelta200_t3_mutacion_medio.py)
+   la suma de las tres listas                               obtenido 3                          esperado 3                          -> PASA
+   con motivo escrito                                       obtenido 1                          esperado 1                          -> PASA
+   sin motivo escrito                                       obtenido 2                          esperado 2                          -> PASA
+   LA MUTACION: el esperado de `con motivo` se cambia a 3 y tiene que CAER
+      LA MUTACION CAE: son 1 y no 3.
+
+D) `SUJETO VIVO` ES FALLO Y NO DEUDA
+   cae en la lista de SUJETO VIVO                           obtenido ['vuelta200_t5_mutacion_vivo.py'] esperado ['vuelta200_t5_mutacion_vivo.py'] -> PASA
+   y arrastra la clase a ROJO POR FALLO                     obtenido 'ROJO POR FALLO'           esperado 'ROJO POR FALLO'           -> PASA
+   LA MUTACION: sin el SUJETO VIVO, la misma nomina da otra clase
+      LA MUTACION CAE: con el es 'ROJO POR FALLO' y sin el es 'ROJO POR DEUDA DECLARADA'.
+
+E) LA PRECEDENCIA: EL FALLO GANA
+   solo deuda                                               obtenido 'ROJO POR DEUDA DECLARADA' esperado 'ROJO POR DEUDA DECLARADA' -> PASA
+   deuda y un arnes caido                                   obtenido 'ROJO POR FALLO'           esperado 'ROJO POR FALLO'           -> PASA
+   deuda y un hueco de censo                                obtenido 'ROJO POR FALLO'           esperado 'ROJO POR FALLO'           -> PASA
+   ni deuda ni fallo                                        obtenido 'VERDE'                    esperado 'VERDE'                    -> PASA
+   LA MUTACION: el esperado de `deuda y un arnes caido` se cambia a
+   ROJO POR DEUDA DECLARADA y tiene que CAER
+      LA MUTACION CAE: sale 'ROJO POR FALLO', o sea que el fallo gana.
+
+F) LA GUARDA ESTA ENCHUFADA AL VEREDICTO, Y SE PRUEBA QUITANDOLE LA PIEZA
+   (es el remedio del `D.5` que el acta 190 tumbo en su `4.6`: con la
+    guarda fuera, esto cerraba en VERDE con tres entradas en deuda)
+   CON la deuda dentro del veredicto                        obtenido 'ROJO POR DEUDA DECLARADA' esperado 'ROJO POR DEUDA DECLARADA' -> PASA
+   SIN la deuda (lo que hacia el D.5)                       obtenido 'VERDE'                    esperado 'VERDE'                    -> PASA
+   exitcode CON la deuda dentro                             obtenido 2                          esperado 2                          -> PASA
+   exitcode SIN la deuda                                    obtenido 0                          esperado 0                          -> PASA
+      LA MUTACION CAE: 'ROJO POR DEUDA DECLARADA' con la pieza y 'VERDE' sin ella. La guarda esta
+      enchufada, que es lo que la 4.6 manda.
+
+G) LOS TRES EXITCODES, DISTINTOS, Y LOS DOS ROJOS DISTINTOS DE CERO
+   VERDE                      -> exitcode 0
+   ROJO POR FALLO             -> exitcode 1
+   ROJO POR DEUDA DECLARADA   -> exitcode 2
+   los tres codigos son distintos                           obtenido 3                          esperado 3                          -> PASA
+   los dos rojos son distintos de cero                      obtenido [True, True]               esperado [True, True]               -> PASA
+   NO SE AFLOJA NADA: quien compruebe `!= 0` no cambia de conducta.
+
+H) Y LA GUARDA VIEJA NO SE TOCA, QUE ES LA CONDICION DE NO ROMPER NADA
+   `guarda_del_sujeto_congelado()` sigue devolviendo tuplas de 3 campos,
+   que es lo que llaman los tres arneses viejos que la usan.
+   campos de cada tupla de la guarda vieja                  obtenido [3]                        esperado [3]                        -> PASA
+
+LIMPIEZA (`P.16`, quien fabrica limpia): el temporal se retira.
+   prefijo del temporal (estable; el sufijo al azar NO se publica, para
+   que esta salida sellada se repita byte a byte): v190_t2_
+   existia antes de retirarlo: True | existe despues: False
+
+==============================================================================
+CIFRA casos: los de arriba, uno por linea con PASA o CAE
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V190_T2B_MUTACION_DEUDA_Y_FALLO.txt (6763 bytes)

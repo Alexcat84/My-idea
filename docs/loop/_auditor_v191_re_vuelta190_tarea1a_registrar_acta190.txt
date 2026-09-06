@@ -1,0 +1,84 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 190
+==============================================================================
+
+A) EL ACOTADO DEL ACTA SOBRE UN TEXTO FABRICADO
+   error de acotado                                           obtenido None                   esperado None                   -> PASA
+   el acta empieza en la linea 1                              obtenido 1                      esperado 1                      -> PASA
+   LA MUTACION: se pide una cabecera que el texto NO trae, y tiene que PARAR
+      LA MUTACION CAE, y su texto es: PARADA: '# ACTA DEL AUDITOR, VUELTA 999' aparece 0 veces.
+
+B) EL ESTADO `EN CONTRA`, QUE ES LO QUE ESTA ACTA ESTRENA
+   adjudicaciones sobre 5 a favor + 1 en contra + 1 pregunta  obtenido 7                      esperado 7                      -> PASA
+   discutibles                                                obtenido 6                      esperado 6                      -> PASA
+   discutibles A FAVOR                                        obtenido 5                      esperado 5                      -> PASA
+   discutibles EN CONTRA                                      obtenido 1                      esperado 1                      -> PASA
+   ninguno SIN DECIR                                          obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION 1: el esperado de EN CONTRA se cambia a 0 y tiene que CAER
+      LA MUTACION CAE: son 1 y no 0.
+   LA MUTACION 2: la regla de la 189 (todos los discutibles A FAVOR) sobre
+   esta acta, que es la que habria PARADO o publicado seis a favor
+      LA MUTACION CAE: 5 A FAVOR de 6 discutibles, o sea que la regla
+      vieja habria hecho PARADA sobre un acta perfectamente legible.
+   LA MUTACION 3: el orden importa. Un titulo con LAS DOS marcas tiene que
+   salir EN CONTRA, porque `EN CONTRA` se busca primero
+      LA MUTACION CAE: con las dos marcas sale EN CONTRA, no A FAVOR.
+
+C) LAS CAIDAS EN LINEA, CON LA ATRIBUCION POR LA NEGRITA DEL PARRAFO
+   la seccion 6 se localiza                                   obtenido True                   esperado True                   -> PASA
+   reparto (ejecutor, auditor, huerfanas)                     obtenido (3, 0, 0)              esperado (3, 0, 0)              -> PASA
+   Y EL PATRON DE CABEZA DE LINEA SOBRE LA MISMA SECCION, QUE ES EL QUE NO VE
+   NADA PORQUE LAS `C.n` VAN DENTRO DEL PARRAFO:
+   patron `C.n` de cabeza de linea                            obtenido 0                      esperado 0                      -> PASA
+   Y LA MAQUINA DE LA 189 SOBRE LA MISMA SECCION, QUE SACA TODAS HUERFANAS
+   caidas_por_seccion() de la 189                             obtenido (0, 0, 0)              esperado (0, 0, 0)              -> PASA
+      (da (0,0,0) porque su patron es de cabeza de linea y aqui no hay
+       ninguna: por eso hacen falta LAS DOS cosas, el patron en linea Y la
+       atribucion por negrita)
+   LA NEGRITA MUDA: un parrafo cuya negrita no diga de quien son
+   negrita muda -> huerfanas                                  obtenido (0, 0, 3)              esperado (0, 0, 3)              -> PASA
+      LA PARADA SE CONSERVA ENTERA: 3 huerfana(s), y una caida sin dueno no
+      se reparte a ojo.
+
+D) UN CERO DE RACHA NO ES UN CERO DE CUENTA, Y CONFUNDIRLOS BORRA LAS TRES
+   (la negrita fabricada es 'DEL EJECUTOR: CERO QUE ACUMULEN.', que trae CERO QUE ACUMULEN)
+   con la separacion puesta: ejecutor                         obtenido 3                      esperado 3                      -> PASA
+   tratando el cero de RACHA como cero de CUENTA: ejecutor    obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION: si las dos especies de cero fueran la misma, el ejecutor
+   saldria con 0 caidas y las tres del acta desaparecerian de la cuenta
+      LA MUTACION CAE: 3 con la separacion y 0 sin ella. Las tres se
+      perderian, y eso es exactamente lo que el encargo avisa.
+   Y EL CERO DE CUENTA DEL ACTA 189 SIGUE NEUTRALIZANDO, QUE ES LA `4.1`:
+   negrita con CERO SON DEL EJECUTOR -> no le atribuye        obtenido (0, 0, 3)              esperado (0, 0, 3)              -> PASA
+
+E) LOS HALLAZGOS DE LA SECCION 5 Y LA FILA DE LA TABLA QUE DICE CUALES CUENTAN
+   hallazgos `5.n` sobre el fabricado                         obtenido 2                      esperado 2                      -> PASA
+   la fila de la tabla se localiza                            obtenido 1                      esperado 1                      -> PASA
+   piezas del parentesis: 'una cosa fabricada', 'otra cosa fabricada'
+   hallazgos que la fila nombra                               obtenido 2                      esperado 2                      -> PASA
+   LA MUTACION: una fila cuyo parentesis nombre otra cosa NO tiene que casar
+      LA MUTACION CAE: 0 casan, o sea que el cotejo mira el texto y no
+      cuenta filas a ojo.
+
+F) LA IDEMPOTENCIA, IMPORTADA DE LA 189 Y PROBADA IGUAL SOBRE SEDES FABRICADAS
+   sede sin la entrada -> se puede escribir                   obtenido 0                      esperado 0                      -> PASA
+   sede CON la entrada -> ya no se escribe                    obtenido 2                      esperado 2                      -> PASA
+      LA MUTACION CAE: la segunda escritura queda prohibida, con 2
+      linea(s) de prueba.
+
+G) LAS CIFRAS DE LA VARA, SOBRE UN PARRAFO FABRICADO
+   fichas                                                     obtenido 71                     esperado 71                     -> PASA
+   en LISTA sin ninguna prueba                                obtenido 6                      esperado 6                      -> PASA
+   de TRABAJO REAL                                            obtenido 4                      esperado 4                      -> PASA
+   menciones de fichero de OP-L-02                            obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION: sobre un parrafo SIN cifras, todas tienen que salir None y
+   NINGUNA se inventa
+      LA MUTACION CAE: las 7 salen None y ninguna se inventa.
+
+==============================================================================
+CIFRA casos: los de arriba, uno por linea con PASA o CAE
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V190_T1A_MUTACION_REGISTRADOR.txt (6373 bytes)

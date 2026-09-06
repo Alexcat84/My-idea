@@ -1,0 +1,39 @@
+clases del ejecutor leidas: 30
+puesto | archivo | ejecutor | auditor |
+3      | A | A  | A  | 
+20     | D | D  | D  | 
+67     | D | D  | D  | 
+129    | D | D  | D  | 
+155    | D | D  | D  | 
+200    | A | A  | A  | 
+391    | D | D  | D  | 
+609    | A | A  | A  | 
+648    | B | D* | B  | solo el ejecutor
+715    | D | D  | D  | 
+872    | D | A* | A* | LOS DOS DISCREPAN
+904    | D | B* | A* | LOS DOS DISCREPAN
+963    | A | D* | B* | LOS DOS DISCREPAN
+969    | A | A  | A  | 
+1066   | D | D  | D  | 
+1201   | D | A* | B* | LOS DOS DISCREPAN
+1366   | A | D* | B* | LOS DOS DISCREPAN
+1802   | D | D  | D  | 
+1812   | D | D  | B* | solo el auditor
+2027   | D | D  | D  | 
+2154   | D | D  | D  | 
+2423   | D | B* | B* | LOS DOS DISCREPAN
+2657   | D | D  | D  | 
+2831   | D | D  | D  | 
+2910   | D | D  | D  | 
+3067   | D | A* | A* | LOS DOS DISCREPAN
+3086   | D | B* | A* | LOS DOS DISCREPAN
+3168   | D | D  | D  | 
+3182   | A | D* | A  | solo el ejecutor
+3326   | D | D  | D  | 
+
+DISCREPANCIAS del ejecutor: 10  del auditor: 9
+LAS QUE DISCREPAN LOS DOS (8): [872, 904, 963, 1201, 1366, 2423, 3067, 3086]
+SOLO EL EJECUTOR (2): [648, 3182]
+SOLO EL AUDITOR (1): [1812]
+dudosos del ejecutor: 13 | del auditor: 12 | comunes: [648, 872, 904, 963, 1201, 1366, 1812, 2423, 3067, 3086]
+mis discrepancias FUERA de mis dudosos: []
