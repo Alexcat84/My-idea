@@ -142,6 +142,7 @@ import hashlib
 import io
 import os
 import re
+import subprocess
 import sys
 
 NL = chr(10)
@@ -303,7 +304,57 @@ def vuelta_de_fichero(nombre):
     return int(m.group(1)) if m else None
 
 
-def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta):
+def vuelta_que_sello(asunto):
+    """EL NUMERO DE VUELTA QUE NOMBRA EL ASUNTO DE UN COMMIT (`VUELTA <N>`), o
+    None si no lo nombra. PURA.
+
+    NACE EN LA VUELTA 185, TAREA 1.c, y la 1.d la reusa IMPORTANDOLA en vez de
+    copiarla: la columna `quien lo sello` de la tabla de los nueve tramos estaba
+    TECLEADA con un `n <= 4` (caida de reporte `R.1` del acta 185), y una
+    frontera tecleada caduca sola. Desde aqui, la vuelta que sello un fichero se
+    LEE del asunto de su ultimo commit.
+
+    SI EL ASUNTO NOMBRA LA VUELTA DOS VECES SE DEVUELVE LA PRIMERA, y se dice en
+    vez de dejarlo al azar: el asunto de esta casa empieza por `VUELTA <N>,` y
+    esa primera es la que identifica la vuelta que escribio el commit; las que
+    vengan detras son citas de otras vueltas dentro del mismo texto."""
+    if not asunto:
+        return None
+    m = re.search(r"\bVUELTA\s+(\d+)", asunto)
+    return int(m.group(1)) if m else None
+
+
+def tramos_por_vuelta(vuelta_del_fichero):
+    """QUE VUELTA SELLO CADA TRAMO DE UNA BATERIA. Devuelve
+    `{numero_de_tramo: vuelta_que_sello(asunto)}` para cada
+    `docs/loop/SALIDA_V<vuelta_del_fichero>_BATERIA_TRAMO_<n>.txt` que EXISTA.
+
+    NO ES PURA a proposito, como su hermana `lector_de_docs_loop()`: es la unica
+    pieza de esta guarda que toca el disco y `git log`, y por eso va separada de
+    la funcion que juzga, que si lo es y por eso se puede tumbar en un arnes.
+
+    LA EVIDENCIA SE LEE DE GIT Y NO SE PUEDE TECLEAR. `main()` la computa con
+    esta funcion y NO la recibe por bandera: una evidencia que se puede teclear
+    no es una evidencia."""
+    reparto = {}
+    if vuelta_del_fichero is None:
+        return reparto
+    for n in range(1, 100):
+        nombre = "SALIDA_V%d_BATERIA_TRAMO_%d.txt" % (vuelta_del_fichero, n)
+        ruta = os.path.join(RAIZ, "docs", "loop", nombre)
+        if not os.path.exists(ruta):
+            continue
+        r = subprocess.run(
+            ["git", "log", "-1", "--format=%s", "--",
+             "docs/loop/" + nombre],
+            cwd=RAIZ, capture_output=True)
+        asunto = r.stdout.decode("utf-8", errors="replace").strip()
+        reparto[n] = vuelta_que_sello(asunto)
+    return reparto
+
+
+def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta,
+                        tramos_sellados_en_esta_vuelta=None):
     """QUE RAMA LE TOCA A LA SECCION 9, Y POR QUE. Devuelve (rama, motivo) con
     rama en `CORRIDA`, `HUECO` o `ROJO`.
 
@@ -333,8 +384,33 @@ def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta):
     LA RAMA DE CORRIDA SE VUELVE MAS ESTRECHA, NO MAS ANCHA: antes bastaba con
     traer lineas, ahora hay que traer lineas Y ser de esta vuelta.
 
+    LA BATERIA CONTINUADA (vuelta 185, TAREA 1.c; adjudicacion `6.2` del acta
+    185, que cierra la `PD.3`). LA GUARDA DE ARRIBA NACIO BUENA Y NO SE AFLOJA:
+    nacio en la vuelta 182 contra PEDIR PRESTADA la bateria terminada de otra
+    vuelta, y ese caso sigue siendo ROJO. Pero `AUDITOR.md` 6.1, decision del
+    fundador del 5 sep 2026, MANDA que *"UNA VUELTA CORTADA RETOMA EN EL TRAMO
+    SIGUIENTE"*, o sea que una bateria que cruza vueltas es lo que la decision
+    PIDE. Cuando una guarda contradice una decision escrita del fundador, la que
+    se corrige es la guarda (`AUDITOR.md` 0).
+
+    LA RAMA NUEVA EXIGE MAS QUE LA VIEJA, NO MENOS: solo abre si se cumplen LAS
+    CUATRO condiciones a la vez, y si falla CUALQUIERA cae al ROJO de siempre,
+    con su texto palabra por palabra:
+
+      1. `ajena < vuelta`. UNA BATERIA DE UNA VUELTA POSTERIOR SIEMPRE ES ROJO.
+      2. `tramos_sellados_en_esta_vuelta` NO ESTA VACIO: al menos un tramo de esa
+         misma bateria se sello EN LA VUELTA QUE SE ESTA CERRANDO. Esta es la
+         evidencia de que la bateria se CONTINUO y no se pidio prestada, y se lee
+         de `git log`, no se teclea.
+      3. EL NOMBRE CASA CON `PATRON_NOMBRE_DE_CORRIDA`.
+      4. TRAE LINEAS.
+
+    EL CUARTO PARAMETRO ES OPCIONAL Y SU VALOR POR DEFECTO `None` SE COMPORTA
+    EXACTAMENTE COMO ANTES, para que ningun llamador viejo cambie de conducta: el
+    arnes de la vuelta 182 se corre SIN TOCARLO y tiene que seguir VERDE.
+
     PURA: no lee ni escribe nada, para que su arnes la pueda tumbar caso por caso
-    sin tocar el repo."""
+    sin tocar el repo. Quien la llama le pasa la evidencia ya leida."""
     if vuelta is None:
         return "ROJO", ("no se dijo de que vuelta es este reporte, y sin eso no se "
                         "puede juzgar ninguna bateria")
@@ -343,6 +419,22 @@ def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta):
         return "ROJO", ("el fichero de bateria %r no dice de que vuelta es. Un "
                         "fichero anonimo NO cierra un reporte: se llama "
                         "SALIDA_V<N>_BATERIA o no vale" % (nombre_bateria,))
+    # LA BATERIA CONTINUADA, INSERTADA ANTES DEL ROJO DE LA VUELTA AJENA Y CON
+    # LAS CUATRO CONDICIONES A LA VEZ. Si falla cualquiera, cae al ROJO de abajo,
+    # que NO se reescribe.
+    sellados = tramos_sellados_en_esta_vuelta or []
+    if (ajena < vuelta and sellados
+            and PATRON_NOMBRE_DE_CORRIDA.match(os.path.basename(nombre_bateria))
+            and lineas_bateria):
+        return "CORRIDA", (
+            "la bateria del fichero es de la vuelta %d y se esta cerrando la %d, "
+            "pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La "
+            "vuelta %d sello %d de sus tramos (los tramos %s), leido del asunto "
+            "de su ultimo commit con git log y no tecleado, que es lo que "
+            "AUDITOR.md 6.1 manda cuando dice que una vuelta cortada RETOMA EN "
+            "EL TRAMO SIGUIENTE. Trae %d linea(s) no vacias."
+            % (ajena, vuelta, vuelta, len(sellados),
+               ", ".join(str(x) for x in sorted(sellados)), len(lineas_bateria)))
     if ajena != vuelta:
         return "ROJO", ("el fichero de bateria que se pasa es el de la vuelta %d y "
                         "se esta cerrando la %d. UNA CORRIDA DE OTRA VUELTA NO "
@@ -889,9 +981,23 @@ def main():
     print("   CIFRA lineas no vacias de la bateria: %d" % len(lineas_bat))
     ajena = vuelta_de_fichero(a.bateria)
     print("   vuelta que lleva dentro el nombre del fichero: %s" % ajena)
+    # LA EVIDENCIA DE LA BATERIA CONTINUADA SE COMPUTA AQUI Y NO SE PASA POR
+    # BANDERA (vuelta 185, TAREA 1.c). NO HAY OPCION DE LINEA DE ORDENES PARA
+    # ESTO A PROPOSITO: una evidencia que se puede teclear no es una evidencia.
+    reparto_tramos = tramos_por_vuelta(ajena)
+    tramos_sellados = sorted(n for n, v in reparto_tramos.items() if v == V)
+    print("   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del")
+    print("   asunto de su ultimo commit con git log y NO tecleados:")
+    for n in sorted(reparto_tramos):
+        print("      tramo %-3d -> vuelta %s" % (n, reparto_tramos[n]))
+    print("   CIFRA tramos de esa bateria con fichero en disco: %d"
+          % len(reparto_tramos))
+    print("   CIFRA tramos sellados EN LA VUELTA %d: %d %s"
+          % (V, len(tramos_sellados), tramos_sellados))
     # LA DECISION DE RAMA YA NO SE TOMA AQUI: la toma rama_de_la_seccion9(), que
     # es pura y tiene arnes propio. REMEDIO DEL `E.1` DEL ACTA 180, vuelta 182.
-    rama, motivo_rama = rama_de_la_seccion9(lineas_bat, a.bateria, V)
+    rama, motivo_rama = rama_de_la_seccion9(lineas_bat, a.bateria, V,
+                                            tramos_sellados)
     print("   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): %s" % rama)
     print("      motivo: %s" % motivo_rama)
     if rama == "ROJO":

@@ -1,0 +1,127 @@
+ARNES DE LA RAMA DE LA BATERIA CONTINUADA (vuelta 185, TAREA 1.c)
+sujeto vivo: scripts/loop/cerrar_reporte.py
+
+A) LOS SIETE CASOS, CON LA RAMA COMPUTADA Y NO ESCRITA
+   (el caso G, el del cuarto parametro en su valor por defecto, va aparte
+    abajo, porque compara CADA caso consigo mismo)
+
+   CASO A. bateria de la 183, cerrando la 184, CON tramos sellados en la 184
+      lineas 900  fichero SALIDA_V183_BATERIA.txt                  vuelta 184 tramos [5, 6, 7, 8, 9]
+      COMPUTADA -> CORRIDA  | esperada CORRIDA  | CALZA
+      motivo: la bateria del fichero es de la vuelta 183 y se esta cerrando la 184, pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La vuelta 184 sello 5 de sus tramos (los tramos 5, 6, 7, 8, 9), leid
+   CASO B. bateria de la 183, cerrando la 184, con la lista VACIA
+      lineas 900  fichero SALIDA_V183_BATERIA.txt                  vuelta 184 tramos []
+      COMPUTADA -> ROJO     | esperada ROJO     | CALZA
+      motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
+   CASO C. bateria de la 185 (POSTERIOR), cerrando la 184, con tramos
+      lineas 900  fichero SALIDA_V185_BATERIA.txt                  vuelta 184 tramos [5, 6, 7, 8, 9]
+      COMPUTADA -> ROJO     | esperada ROJO     | CALZA
+      motivo: el fichero de bateria que se pasa es el de la vuelta 185 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
+   CASO D. bateria de la 183, cerrando la 184, con tramos, nombre que NO es de corrida
+      lineas 900  fichero SALIDA_V183_HUECO_BATERIA.txt            vuelta 184 tramos [5, 6, 7, 8, 9]
+      COMPUTADA -> ROJO     | esperada ROJO     | CALZA
+      motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
+   CASO E. bateria de la 183, cerrando la 184, con tramos, CERO lineas
+      lineas 0    fichero SALIDA_V183_BATERIA.txt                  vuelta 184 tramos [5, 6, 7, 8, 9]
+      COMPUTADA -> ROJO     | esperada ROJO     | CALZA
+      motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
+   CASO F. bateria de la 184 cerrando la 184, con lineas
+      lineas 900  fichero SALIDA_V184_BATERIA.txt                  vuelta 184 tramos [5, 6, 7, 8, 9]
+      COMPUTADA -> CORRIDA  | esperada CORRIDA  | CALZA
+      motivo: la bateria de la vuelta 184 trae 900 linea(s) no vacias
+
+   CIFRA casos: 6
+   CIFRA que CALZAN: 6
+   CIFRA que NO CALZAN: 0
+
+B) LA MUTACION DEL ESPERADO, CASO POR CASO. El esperado mutado es el otro
+   valor posible, y si el caso pasara con los dos no estaria comparando
+   nada.
+      CASO A: esperado bueno CORRIDA  | esperado MUTADO ROJO     -> CAE
+      CASO B: esperado bueno ROJO     | esperado MUTADO CORRIDA  -> CAE
+      CASO C: esperado bueno ROJO     | esperado MUTADO CORRIDA  -> CAE
+      CASO D: esperado bueno ROJO     | esperado MUTADO CORRIDA  -> CAE
+      CASO E: esperado bueno ROJO     | esperado MUTADO CORRIDA  -> CAE
+      CASO F: esperado bueno CORRIDA  | esperado MUTADO ROJO     -> CAE
+   CIFRA casos que CAEN al mutar su esperado: 6 de 6
+
+C) EL MOTIVO DEL CASO B, LITERAL E IGUAL AL DE HOY. No se teclea: se exige
+   que sea IDENTICO al que la MISMA funcion devuelve con el cuarto
+   parametro en su valor por defecto, que es la conducta de antes de esta
+   reparacion. Si alguien reescribiera el texto del rojo viejo, esto cae.
+      con la lista VACIA        -> ROJO | el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+      con el defecto None       -> ROJO | el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+      SON IDENTICOS: SI
+      y el motivo lleva dentro 'UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.': SI
+      con el esperado MUTADO (que NO fueran identicos): CAE
+
+D) EL CASO G: EL CUARTO PARAMETRO EN SU VALOR POR DEFECTO `None` TIENE QUE
+   COMPORTARSE EXACTAMENTE COMO HOY EN LOS CASOS A, B, C Y F. Es la
+   promesa de que ningun llamador viejo cambia de conducta.
+   LO QUE ERA HOY, RECONSTRUIDO SIN LA RAMA NUEVA: A, B y C son ROJO por
+   vuelta ajena y F es CORRIDA. Aqui no se teclea: se llama sin el cuarto
+   parametro y se publica lo que salga.
+      CASO A sin el cuarto parametro -> ROJO     | esperado ROJO     | CALZA
+         motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+         con el esperado MUTADO CORRIDA  -> CAE
+      CASO B sin el cuarto parametro -> ROJO     | esperado ROJO     | CALZA
+         motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+         con el esperado MUTADO CORRIDA  -> CAE
+      CASO C sin el cuarto parametro -> ROJO     | esperado ROJO     | CALZA
+         motivo: el fichero de bateria que se pasa es el de la vuelta 185 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+         con el esperado MUTADO CORRIDA  -> CAE
+      CASO F sin el cuarto parametro -> CORRIDA  | esperado CORRIDA  | CALZA
+         motivo: la bateria de la vuelta 184 trae 900 linea(s) no vacias
+         con el esperado MUTADO ROJO     -> CAE
+   CIFRA fallos del caso G: 0
+
+   Y LA DIFERENCIA QUE LA REPARACION INTRODUCE, DICHA CON LAS DOS AL LADO:
+      CASO A: con tramos -> CORRIDA  | con el defecto None -> ROJO     | CAMBIA
+      CASO B: con tramos -> ROJO     | con el defecto None -> ROJO     | IGUAL
+      CASO C: con tramos -> ROJO     | con el defecto None -> ROJO     | IGUAL
+      CASO F: con tramos -> CORRIDA  | con el defecto None -> CORRIDA  | IGUAL
+
+E) `vuelta_que_sello()`, QUE ES PURA, CON SUS TRES CASOS
+   un asunto que NOMBRA la vuelta
+      asunto: VUELTA 184, BATERIA TRAMO 8 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0
+      COMPUTADO -> 184    | esperado 184    | CALZA
+      con el esperado MUTADO 999    -> CAE
+   un asunto que NO la nombra
+      asunto: ACTA DEL AUDITOR: LA 184 REPRODUJO ENTERA Y SIN UNA CIFRA FALSA
+      COMPUTADO -> None   | esperado None   | CALZA
+      con el esperado MUTADO 999    -> CAE
+   un asunto que la nombra DOS VECES: se devuelve la PRIMERA
+      asunto: VUELTA 184, TAREA 2: RETOMA LA BATERIA DE LA VUELTA 183 EN SU TRAMO 6
+      COMPUTADO -> 184    | esperado 184    | CALZA
+      con el esperado MUTADO 999    -> CAE
+
+F) EL CASO QUE ANADE LA TAREA 1.d: `tramos_por_vuelta(183)` SOBRE LOS NUEVE
+   FICHEROS REALES. El reparto tiene que ser 4 y 5: los tramos 1 a 4 los
+   sello la vuelta 183 y los tramos 5 a 9 la vuelta 184. NO SE TECLEA
+   NINGUNA CELDA: sale de leer el asunto del ultimo commit de cada fichero.
+      tramo 1   -> vuelta 183
+      tramo 2   -> vuelta 183
+      tramo 3   -> vuelta 183
+      tramo 4   -> vuelta 183
+      tramo 5   -> vuelta 184
+      tramo 6   -> vuelta 184
+      tramo 7   -> vuelta 184
+      tramo 8   -> vuelta 184
+      tramo 9   -> vuelta 184
+   CIFRA tramos con fichero en disco: 9
+   CIFRA sellados por la vuelta 183: 4 [1, 2, 3, 4]
+   CIFRA sellados por la vuelta 184: 5 [5, 6, 7, 8, 9]
+   CIFRA sellados por otra vuelta o sin asunto: 0 []
+   EL REPARTO ES 4 Y 5 SOBRE NUEVE: SI
+   con el esperado MUTADO (5 y 4): CAE
+   con el esperado MUTADO (nueve tramos sellados por la 183): CAE
+
+G) LO QUE ESTA REPARACION NO TOCA, DICHO PARA QUE SE PUEDA COMPROBAR:
+   el fichero de la bateria no se copia ni se renombra; el rojo viejo no se
+   afloja (su texto se compara literal en el bloque C); y no hay ninguna
+   opcion de linea de ordenes para la lista de tramos, porque una evidencia
+   que se puede teclear no es una evidencia.
+   CIFRA apariciones de '--tramos' en cerrar_reporte.py: 0
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

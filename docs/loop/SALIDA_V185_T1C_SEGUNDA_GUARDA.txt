@@ -1,0 +1,36 @@
+LA SEGUNDA GUARDA DE LA VUELTA AJENA, LOCALIZADA Y MEDIDA (vuelta 185,
+TAREA 1.c). ESTE FICHERO NO REPARA NADA.
+
+A) LAS DOS SEDES DE LA MISMA REGLA, LOCALIZADAS EN EL FICHERO VIVO
+   LINEA 438:     if ajena != vuelta:
+   LINEA 905:                 if vuelta is not None and ajena is not None and ajena != vuelta:
+   LINEA 908:                                   "VUELTA NO SATISFACE ESTA PIEZA" % (ajena, vuelta))
+   CIFRA apariciones de 'ajena != vuelta' en cerrar_reporte.py: 2
+   CIFRA veces que aparece 'tramos_sellados_en_esta_vuelta': 3, y NINGUNA
+   esta dentro de piezas_que_faltan(): esa funcion no recibe la evidencia.
+
+B) LA FUNCION DE VERDAD, LLAMADA SOBRE UN REPORTE FABRICADO
+   el texto fabricado mide 626 bytes y trae sus cuatro piezas puestas
+   la bateria de la 183 pegada en un reporte de la 184 (EL CASO DE HOY)
+      piezas_que_faltan() -> 1
+         (4) la salida pegada en la seccion 9 es la de la vuelta 183 y no la de la 184: UNA CORRIDA DE OTRA VUELTA NO SATISFACE ESTA PIEZA
+   la bateria de la 184 pegada en un reporte de la 184 (el caso normal)
+      piezas_que_faltan() -> 0
+
+C) Y LA RAMA, PARA QUE SE VEA QUE LAS DOS NO DICEN LO MISMO
+   rama_de_la_seccion9() con la evidencia de tramos -> CORRIDA
+   motivo: la bateria del fichero es de la vuelta 183 y se esta cerrando la 184, pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La vuelta 184 sello 5 de sus tramos (los tramos 5, 6, 7, 8, 9), leid
+   piezas_que_faltan() sobre el mismo caso -> 1 pieza(s) que faltan
+
+D) LO QUE ESTO SIGNIFICA, DICHO SIN ADORNAR Y SIN ARREGLARLO
+   La rama nueva dice CORRIDA y la pieza (4) dice que falta. LAS DOS SON
+   LA MISMA REGLA ESCRITA DOS VECES, y el encargo de la 1.c solo nombra
+   una. Reparar la otra seria tocar una guarda que el encargo prohibe
+   tocar, asi que NO SE TOCA: se para y se trae, que es lo que el propio
+   encargo manda con esas palabras.
+   PREDICCION, ESCRITA ANTES DE CORRER LA TAREA 2.a: cerrar_reporte.py
+   --vuelta 184 dara la rama CORRIDA, ESCRIBIRA el reporte en su bloque C,
+   y devolvera exitcode 1 por la pieza (4) en su bloque D.
+   LAS DOS CONDICIONES DE LA PREDICCION, MEDIDAS AQUI:
+      la rama sale CORRIDA:          SI
+      la pieza (4) dice que falta:   SI
