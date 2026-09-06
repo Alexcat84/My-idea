@@ -1,0 +1,60 @@
+CASO POSITIVO POR MUTACION de vuelta184_tarea1a_registrar_acta184.py
+
+   acta fabricada con adj=7 aud=0 eje=1
+      los contadores dicen adj=7 sin_numeral=1 aud=0 eje=1 -> CALZA
+      titulo computado: Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 184
+   acta fabricada con adj=1 aud=1 eje=1
+      los contadores dicen adj=1 sin_numeral=1 aud=1 eje=1 -> CALZA
+      titulo computado: Registro de la adjudicacion numeradas, la adjudicacion del punto 6, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 184
+   acta fabricada con adj=12 aud=3 eje=2
+      los contadores dicen adj=12 sin_numeral=1 aud=3 eje=2 -> CALZA
+      titulo computado: Registro de las doce adjudicaciones numeradas, la adjudicacion del punto 6, las tres caidas propias del auditor y las dos caidas del ejecutor del acta de la vuelta 184
+   acta fabricada con adj=4 aud=0 eje=0
+      los contadores dicen adj=4 sin_numeral=1 aud=0 eje=0 -> CALZA
+      titulo computado: Registro de las cuatro adjudicaciones numeradas, la adjudicacion del punto 6, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 184
+
+LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE EL CASO PUEDE CAER:
+   medido sobre el acta fabricada (variable computada): 7
+   con el esperado BUENO   (7): PASA
+   con el esperado MUTADO  (8): CAE
+   EL CASO CAE AL MUTAR EL ESPERADO: SI
+
+LA SEGUNDA MUTACION: EL PATRON SIN COMILLAS, EL DEL ACTA 183. Sobre un acta
+que numera ``**`5.n` `` tiene que dar CERO, que es el motivo de este fichero.
+   patron sin comillas sobre acta en forma 184 -> 0 adjudicaciones
+   EL CASO CAE CON EL PATRON VIEJO: SI
+
+LA TERCERA MUTACION: LA ADJUDICACION DEL PUNTO 6, QUITADA DEL ACTA. El
+contador tiene que decir CERO y el titulo tiene que CAMBIAR con el, o el
+cuarto numeral no estaria contando nada.
+   acta SIN el punto 6 -> 0 adjudicacion(es) sin numeral
+   titulo con el punto 6: Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 184
+   titulo sin el punto 6: Registro de las siete adjudicaciones numeradas, las cero adjudicaciones sin numeral, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 184
+   EL CUARTO NUMERAL CUENTA DE VERDAD: SI
+
+LA CUARTA MUTACION: EL PATRON DE CAIDA DEL EJECUTOR DEL ACTA 183. Sobre un
+acta que la escribe al principio de linea tiene que dar CERO.
+   patron del acta 183 sobre acta en forma 184 -> 0 caidas
+   EL CASO CAE CON EL PATRON DE LA 183: SI
+
+LA QUINTA MUTACION: EL CERO DE CAIDAS PROPIAS CON Y SIN SU DECLARACION. Es
+la diferencia entre un cero medido y un cero que nadie sostiene.
+   acta que DECLARA el cero -> 1 linea(s) de declaracion, lineas [3]
+   acta que NO lo declara   -> 0 linea(s) de declaracion
+   EL INSTRUMENTO DISTINGUE LOS DOS CEROS: SI
+
+LA SEXTA MUTACION: EL SALTO. actas_sin_entrada() es PURA y se importa del
+registrador de la 183; se le pasa una serie fabricada y se comprueba que el
+salto y sus DOS extremos salen de los titulos y no de ninguna constante.
+   serie fabricada: cubre las vueltas 100, 101 y 105
+   faltan (computado): [102, 103, 104]
+   extremo bajo (computado): (11, 101) | extremo alto (computado): (12, 105)
+   EL SALTO Y SUS EXTREMOS CALZAN: SI
+
+LA SEPTIMA MUTACION: EL NUMERAL CERO EN EL TITULO Y SU CONCORDANCIA.
+   titulo con cero caidas propias: Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero caidas propias del auditor y la caida del ejecutor del acta de la vuelta 184
+   DICE EL CERO Y CONCUERDA: SI
+   y con dos, para que se vea que la concordancia no esta clavada: Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las dos caidas propias del auditor y la caida del ejecutor del acta de la vuelta 184
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

@@ -1,0 +1,78 @@
+==============================================================================
+VUELTA 184, TAREA 1.c: CASO POSITIVO POR MUTACION DE LA ESTIMACION CON SU CORTE
+==============================================================================
+
+A) LA FUNCION PURA, TUMBADA SIN CORRER NINGUN PROCESO
+   la linea que produce, entera:
+      |   ESTIMACION minutos de la nomina entera: entre 37.0 y 48.2 (corte: HEAD abc123def456, nomina de 112 entradas contada en esta corrida)
+   corte leido de vuelta de esa misma linea: ('abc123def456', 112)
+   LA FORMA VIEJA DE LA LINEA, LA QUE CAUSO LA CAIDA `E.1`, ESCRITA AQUI:
+      |   ESTIMACION minutos de la nomina entera: entre 37.0 y 48.2
+   corte leido de la forma vieja: None
+
+B) EL CORTE QUE MIENTE, QUE ES UNA AVERIA DISTINTA DE NO LLEVARLO
+   La misma linea de arriba dice nomina 112. Se le pregunta por 112 y por
+   111, que es justo la cifra vencida que el reporte de la 183 publico.
+   corte_calza(linea, 112) -> True
+   corte_calza(linea, 111) -> False
+   corte_calza(forma vieja, 112) -> False
+
+C) EL --plan DE VERDAD, CORRIDO EN UN PROCESO, Y SUS LINEAS DE ESTIMACION
+   (las dos mitades de arriba son puras y se pueden cumplir sin que el
+    lanzador las use. Este bloque mira la salida REAL)
+   EXITCODE de --plan: 0
+   CIFRA entradas de la nomina que ESA MISMA CORRIDA imprime: 113
+   CIFRA entradas de la nomina contada aqui, en este proceso: 113
+   CIFRA lineas de ESTIMACION halladas en la salida real: 2
+      |   ESTIMACION minutos por tramo de 13 entradas: entre 4.3 y 5.6 (corte: HEAD 2e7bfd57c69e, nomina de 113 entradas contada en esta corrida)
+      |   ESTIMACION minutos de la nomina entera: entre 37.3 y 48.6 (corte: HEAD 2e7bfd57c69e, nomina de 113 entradas contada en esta corrida)
+   de esas, LAS QUE LLEVAN CORTE: 2
+   de esas, LAS QUE ADEMAS LO LLEVAN BIEN (calza con la nomina de la corrida): 2
+   HEAD que declaran las lineas con corte: 2e7bfd57c69e
+
+D) LA CIFRA VENCIDA DE LA 183, RECONSTRUIDA PARA QUE SE VEA DE DONDE SALIO
+   Con la linea nueva, una nomina de 111 y una de 112 producen DOS TEXTOS
+   DISTINTOS, y el que se copie lleva escrito de cual es. Con la vieja, los
+   dos textos solo se distinguian por un decimal que nadie coteja.
+      |   ESTIMACION minutos de la nomina entera: entre 36.6 y 47.7 (corte: HEAD abc123def456, nomina de 111 entradas contada en esta corrida)
+      |   ESTIMACION minutos de la nomina entera: entre 37.0 y 48.2 (corte: HEAD abc123def456, nomina de 112 entradas contada en esta corrida)
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_la_linea_lleva_su_corte_y_se_lee_de_vuelta             PASA   (real=('abc123def456', 112) esperado=('abc123def456', 112))
+   A_la_linea_dice_las_dos_cifras_de_la_estimacion          PASA   (real=True esperado=True)
+   A_la_forma_VIEJA_no_tiene_corte_y_se_detecta             PASA   (real=None esperado=None)
+   B_el_corte_bueno_calza                                   PASA   (real=True esperado=True)
+   B_un_corte_de_otra_nomina_NO_calza                       PASA   (real=False esperado=False)
+   B_una_linea_sin_corte_NO_calza                           PASA   (real=False esperado=False)
+   C_el_plan_sale_verde                                     PASA   (real=0 esperado=0)
+   C_la_nomina_del_plan_es_la_nomina_de_hoy                 PASA   (real=113 esperado=113)
+   C_hay_dos_lineas_de_estimacion                           PASA   (real=2 esperado=2)
+   C_TODAS_llevan_su_corte                                  PASA   (real=2 esperado=2)
+   C_y_el_corte_de_TODAS_calza_con_la_nomina_de_la_corrida  PASA   (real=2 esperado=2)
+   C_las_dos_lineas_declaran_UN_SOLO_head                   PASA   (real=1 esperado=1)
+   D_las_dos_lineas_se_distinguen_por_su_corte              PASA   (real=True esperado=True)
+   D_la_de_111_NO_calza_con_la_nomina_de_hoy                PASA   (real=False esperado=False)
+   CIFRA casos: 14 | pasan: 14 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_la_linea_lleva_su_corte_y_se_lee_de_vuelta             CAE   (esperado mutado=('abc123def456', 112, 'mutado'))
+   A_la_linea_dice_las_dos_cifras_de_la_estimacion          CAE   (esperado mutado=False)
+   A_la_forma_VIEJA_no_tiene_corte_y_se_detecta             CAE   (esperado mutado=('mutado', 0))
+   B_el_corte_bueno_calza                                   CAE   (esperado mutado=False)
+   B_un_corte_de_otra_nomina_NO_calza                       CAE   (esperado mutado=True)
+   B_una_linea_sin_corte_NO_calza                           CAE   (esperado mutado=True)
+   C_el_plan_sale_verde                                     CAE   (esperado mutado=1)
+   C_la_nomina_del_plan_es_la_nomina_de_hoy                 CAE   (esperado mutado=114)
+   C_hay_dos_lineas_de_estimacion                           CAE   (esperado mutado=3)
+   C_TODAS_llevan_su_corte                                  CAE   (esperado mutado=3)
+   C_y_el_corte_de_TODAS_calza_con_la_nomina_de_la_corrida  CAE   (esperado mutado=3)
+   C_las_dos_lineas_declaran_UN_SOLO_head                   CAE   (esperado mutado=2)
+   D_las_dos_lineas_se_distinguen_por_su_corte              CAE   (esperado mutado=False)
+   D_la_de_111_NO_calza_con_la_nomina_de_hoy                CAE   (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 14 de 14
+
+VERDE: los 14 casos pasan tal cual y los 14 caen al mutar el esperado.
+Y LO QUE ESTE ARNES GARANTIZA: si alguien devuelve las dos lineas de
+ESTIMACION del lanzador a su forma sin corte, los casos
+C_TODAS_llevan_su_corte y
+C_y_el_corte_de_TODAS_calza_con_la_nomina_de_la_corrida CAEN.

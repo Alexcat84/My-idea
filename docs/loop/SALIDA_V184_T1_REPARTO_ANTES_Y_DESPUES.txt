@@ -1,0 +1,27 @@
+EL REPARTO ANTES Y DESPUES DE QUE LA TAREA 1.c ENTRE EN LA NOMINA
+(vuelta 184. Se mide ANTES de correr un solo tramo, que es lo que el encargo
+ pide con esas palabras: si el reparto moviera las fronteras de los tramos 1 a
+ 5, sus salidas selladas dejarian de ser del mismo calibre.)
+
+CIFRA tamano de tramo (constante TAMANO del lanzador): 13
+ANTES  (112) -> CIFRA entradas 112 | CIFRA tramos 9 | tamanos 13, 13, 13, 13, 13, 13, 13, 13, 8
+DESPUES(113) -> CIFRA entradas 113 | CIFRA tramos 9 | tamanos 13, 13, 13, 13, 13, 13, 13, 13, 9
+
+LAS FRONTERAS, TRAMO A TRAMO, COMPARADAS POR SU CONTENIDO Y NO POR SU TAMANO:
+   TRAMO 1: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 2: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 3: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 4: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 5: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 6: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 7: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 8: IDENTICO  (antes 13 entradas, despues 13 entradas)
+   TRAMO 9: CAMBIA  (antes 8 entradas, despues 9 entradas)
+      entra: vuelta184_tarea1c_mutacion_estimacion.py
+      sale : (nada)
+
+CIFRA tramos IDENTICOS: 8 de 9
+CIFRA tramos 1 a 5 identicos: 5 de 5
+CIFRA tramos 1 a 8 identicos: 8 de 8
+
+VEREDICTO: LAS FRONTERAS DE LOS TRAMOS 1 A 8 NO SE MUEVEN. El que crece es el noveno.

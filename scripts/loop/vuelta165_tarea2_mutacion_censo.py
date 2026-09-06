@@ -24,6 +24,30 @@ temporal. El unico sujeto vivo es la nomina real de hoy, y de ella solo se mide
 que su cifra de invisibles sea CERO, que es la propiedad que el arreglo instala
 y que tiene que seguir siendo cierta manana. P.16: quien fabrica, limpia.
 
+--- CORRECCION DECLARADA (vuelta 184, TAREA 1.b; adjudicacion del punto 6 del
+    acta 184, que es la unica adjudicacion de esa acta que manda tocar codigo) ---
+
+LO QUE EL BLOQUE A HACIA ANTES, ESCRITO AQUI Y NO BORRADO (`EJECUTOR.md` 8, una
+correccion que tapa lo que corrige no se puede auditar): el caso
+`A_el_patron_VIEJO_no_ve_dos_de_su_propia_nomina` comparaba la medicion de hoy
+contra una lista TECLEADA de DOS nombres, los que el auditor de la vuelta 165
+habia visto ese dia. La nomina solo crece, y el 5 sep 2026 la medicion daba
+CINCO: el caso salio en ROJO, con exitcode 1, y PARO EL TRAMO 5 de la bateria de
+la vuelta 183. EL ARNES ESTABA SANO; LO QUE ENVEJECIO FUE SU CIFRA.
+
+QUE CAMBIA, Y SON TRES COSAS. (i) `esperadas` SE COMPUTA de la nomina real por la
+via directa, y ya no se teclea. (ii) LOS DOS FICHEROS QUE EL AUDITOR DE LA 165
+NOMBRO NO SE BORRAN: se quedan con nombre propio en `LOS_DOS_DE_LA_165` y el caso
+pasa a exigir que sigan DENTRO del conjunto invisible, no que sean TODO el
+conjunto, que es una afirmacion que no envejece porque la nomina solo crece.
+(iii) LAS CIFRAS SALEN CON SU CORTE por banco `9.21`, con el tamano de nomina y el
+`HEAD` al lado, via `B.sello_de_corte`, igual que ya hacen las salidas selladas de
+los tramos.
+
+QUE NO CAMBIA: el caso A sigue mirando LA NOMINA REAL, que es lo unico que aporta
+frente a los otros doce. Apuntarlo a una nomina fabricada habria comprado el
+verde vaciando la guarda, y el acta 184 descarta ese camino con todas las letras.
+
 USO:  python scripts/loop/vuelta165_tarea2_mutacion_censo.py
 """
 import io
@@ -44,20 +68,59 @@ def prueba():
     casos = []
 
     print("A) EL AGUJERO, MEDIDO SOBRE LA NOMINA REAL DE HOY CON LOS DOS PATRONES")
+    head = B.corte_de_git()
+    nomina_real = [s for s, _a in B.VIEJAS]
     invis_viejo = B.nomina_invisible_al_censo(patron=B.PATRON_ARNES_VIEJO)
     invis_nuevo = B.nomina_invisible_al_censo()
-    print("   con el patron VIEJO, entradas de la nomina invisibles: %d" % len(invis_viejo))
+    de_nomina = "de %d de nomina, contadas en esta corrida" % len(nomina_real)
+    print("   CIFRA entradas de la nomina real: %s"
+          % B.sello_de_corte(len(nomina_real), head))
+    print("   con el patron VIEJO, entradas de la nomina invisibles: %s"
+          % B.sello_de_corte(len(invis_viejo), head, de_nomina))
     for n in invis_viejo:
         print("      %s" % n)
-    print("   con el patron NUEVO, entradas de la nomina invisibles: %d" % len(invis_nuevo))
-    print("   LAS DOS QUE EL AUDITOR NOMBRO SIGUEN SIENDO LAS MISMAS:")
-    esperadas = ["vuelta144_3c_caso_positivo_1190.py", "vuelta147_3e_simular_a26.py"]
-    print("      %s" % ", ".join(esperadas))
-    casos.append(("A_el_patron_VIEJO_no_ve_dos_de_su_propia_nomina",
+    print("   con el patron NUEVO, entradas de la nomina invisibles: %s"
+          % B.sello_de_corte(len(invis_nuevo), head, de_nomina))
+    # EL ESPERADO SE COMPUTA DE LA NOMINA REAL Y NO SE TECLEA (vuelta 184, TAREA
+    # 1.b; adjudicacion del punto 6 del acta 184). Lo que habia aqui esta escrito
+    # entero en el docstring y no se borra: eran DOS nombres tecleados contra una
+    # nomina que solo crece.
+    #
+    # POR QUE NO SE TECLEA UN 5 ENCIMA DEL 2: eso es resolver la discrepancia
+    # copiando, que `EJECUTOR.md` 2 prohibe con todas las letras, y volveria a
+    # caducar en la vuelta siguiente. Y POR QUE NO SE VACIA EL CASO apuntandolo a
+    # una nomina fabricada como hacen sus otros doce: este es EL UNICO de los
+    # trece que mira la nomina REAL, y los casos B y C ya cubren lo fabricado.
+    # Vaciarlo seria comprar el verde.
+    #
+    # QUE COMPRUEBA AHORA, Y NO ES TAUTOLOGIA: que `nomina_invisible_al_censo`
+    # con el patron viejo devuelve EXACTAMENTE las entradas de la nomina real que
+    # ese patron no reconoce, computadas aqui por la via directa. Si la funcion
+    # ordenara distinto, leyera otra nomina por defecto o se comiera una entrada,
+    # este caso CAE.
+    esperadas = sorted(n for n in nomina_real if not B.PATRON_ARNES_VIEJO.match(n))
+    print("   EL ESPERADO, COMPUTADO DE LA NOMINA REAL Y NO TECLEADO: %s"
+          % B.sello_de_corte(len(esperadas), head, de_nomina))
+    for n in esperadas:
+        print("      %s" % n)
+    casos.append(("A_el_patron_VIEJO_no_ve_parte_de_su_propia_nomina",
                   invis_viejo, esperadas))
     casos.append(("A_el_patron_NUEVO_las_ve_todas", len(invis_nuevo), 0))
+
+    # LOS DOS FICHEROS QUE EL AUDITOR DE LA 165 NOMBRO NO SE BORRAN. Se quedan con
+    # nombre propio, y el caso pasa a exigir que sigan DENTRO del conjunto
+    # invisible, no que sean TODO el conjunto. ESA AFIRMACION NO ENVEJECE, porque
+    # la nomina solo crece y ninguno de los dos se renombra solo.
+    LOS_DOS_DE_LA_165 = ["vuelta144_3c_caso_positivo_1190.py",
+                         "vuelta147_3e_simular_a26.py"]
+    fuera = sorted(set(LOS_DOS_DE_LA_165) - set(invis_viejo))
+    print("   LOS DOS QUE EL AUDITOR DE LA 165 NOMBRO, POR SU NOMBRE: %s"
+          % ", ".join(LOS_DOS_DE_LA_165))
+    print("   de esos dos, los que YA NO estan dentro del conjunto invisible: %s"
+          % (", ".join(fuera) or "(ninguno)"))
+    casos.append(("A_los_dos_de_la_165_siguen_DENTRO_del_invisible", fuera, []))
     casos.append(("A_y_las_dos_existen_en_disco",
-                  sum(1 for n in esperadas
+                  sum(1 for n in LOS_DOS_DE_LA_165
                       if os.path.exists(os.path.join(B.LOOP, n))), 2))
     print("")
 

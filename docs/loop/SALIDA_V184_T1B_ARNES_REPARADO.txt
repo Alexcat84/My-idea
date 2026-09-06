@@ -1,0 +1,85 @@
+==============================================================================
+VUELTA 165, TAREA 2: CASO POSITIVO POR MUTACION DEL PUNTO CIEGO DEL CENSO
+==============================================================================
+
+A) EL AGUJERO, MEDIDO SOBRE LA NOMINA REAL DE HOY CON LOS DOS PATRONES
+   CIFRA entradas de la nomina real: 113 (corte: HEAD 2e7bfd57c69e, nomina contada en esta corrida)
+   con el patron VIEJO, entradas de la nomina invisibles: 5 (corte: HEAD 2e7bfd57c69e, de 113 de nomina, contadas en esta corrida)
+      vuelta144_3c_caso_positivo_1190.py
+      vuelta147_3e_simular_a26.py
+      vuelta150_2d_simular_op_c_05.py
+      vuelta160_tarea3b_caso_positivo.py
+      vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py
+   con el patron NUEVO, entradas de la nomina invisibles: 0 (corte: HEAD 2e7bfd57c69e, de 113 de nomina, contadas en esta corrida)
+   EL ESPERADO, COMPUTADO DE LA NOMINA REAL Y NO TECLEADO: 5 (corte: HEAD 2e7bfd57c69e, de 113 de nomina, contadas en esta corrida)
+      vuelta144_3c_caso_positivo_1190.py
+      vuelta147_3e_simular_a26.py
+      vuelta150_2d_simular_op_c_05.py
+      vuelta160_tarea3b_caso_positivo.py
+      vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py
+   LOS DOS QUE EL AUDITOR DE LA 165 NOMBRO, POR SU NOMBRE: vuelta144_3c_caso_positivo_1190.py, vuelta147_3e_simular_a26.py
+   de esos dos, los que YA NO estan dentro del conjunto invisible: (ninguno)
+
+B) LA CONSECUENCIA QUE NO ERA COSMETICA: EL VERDE QUE NO MIRA
+   Un directorio fabricado con un arnes POSTERIOR a la nomina cuyo
+   nombre NO lleva la palabra mutacion. El patron viejo dice que no
+   falta ninguno SIN HABERLO MIRADO; el nuevo lo reclama.
+   ficheros fabricados: vuelta100_tarea1_mutacion_dentro.py, vuelta200_tarea9_caso_positivo_fuera.py, vuelta201_tarea9_simular_fuera.py, vuelta202_tarea9_mutacion_fuera.py, vuelta203_tarea9_un_script_cualquiera.py
+   CIFRA que el censo NUEVO reconoce: 4 (vuelta100_tarea1_mutacion_dentro.py, vuelta200_tarea9_caso_positivo_fuera.py, vuelta201_tarea9_simular_fuera.py, vuelta202_tarea9_mutacion_fuera.py)
+   CIFRA que el patron NUEVO reclama: 3 (vuelta200_tarea9_caso_positivo_fuera.py, vuelta201_tarea9_simular_fuera.py, vuelta202_tarea9_mutacion_fuera.py)
+   CIFRA que el censo VIEJO reconoce: 2 (vuelta100_tarea1_mutacion_dentro.py, vuelta202_tarea9_mutacion_fuera.py)
+   CIFRA que el patron VIEJO reclama: 1 (vuelta202_tarea9_mutacion_fuera.py)
+   LOS QUE EL VIEJO DEJABA PASAR SIN MIRAR: vuelta200_tarea9_caso_positivo_fuera.py, vuelta201_tarea9_simular_fuera.py
+
+C) EL INVARIANTE NUEVO: UN CENSO QUE NO VE SU NOMINA ES ROJO
+   nomina fabricada: vuelta300_tarea1_caso_positivo_x.py, vuelta301_tarea1_familia_quinta.py
+   CIFRA invisibles al censo: 1 (vuelta301_tarea1_familia_quinta.py)
+   la que NO se ve es la de la familia QUINTA, que hoy no existe:
+   ese es exactamente el caso que el ensanche del patron NO cubre
+   y que esta comprobacion SI caza.
+
+   P.16: el temporal se retira. Existe todavia: False
+
+D) LAS DOS FAMILIAS QUE FALTABAN SALEN DE LA NOMINA, NO DE LA IMAGINACION
+   FAMILIAS_DE_ARNES declaradas: mutacion, caso_positivo, simular
+   familias que la nomina real usa de verdad: caso_positivo, mutacion, simular
+
+E) PASADA 1, LOS CASOS TAL CUAL
+   A_el_patron_VIEJO_no_ve_parte_de_su_propia_nomina    PASA   (real=['vuelta144_3c_caso_positivo_1190.py', 'vuelta147_3e_simular_a26.py', 'vuelta150_2d_simular_op_c_05.py', 'vuelta160_tarea3b_caso_positivo.py', 'vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py'] esperado=['vuelta144_3c_caso_positivo_1190.py', 'vuelta147_3e_simular_a26.py', 'vuelta150_2d_simular_op_c_05.py', 'vuelta160_tarea3b_caso_positivo.py', 'vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py'])
+   A_el_patron_NUEVO_las_ve_todas                       PASA   (real=0 esperado=0)
+   A_los_dos_de_la_165_siguen_DENTRO_del_invisible      PASA   (real=[] esperado=[])
+   A_y_las_dos_existen_en_disco                         PASA   (real=2 esperado=2)
+   B_el_censo_nuevo_ve_las_tres_familias                PASA   (real=4 esperado=4)
+   B_y_no_cuenta_lo_que_no_es_arnes                     PASA   (real=False esperado=False)
+   B_el_patron_NUEVO_reclama_los_tres                   PASA   (real=3 esperado=3)
+   B_el_patron_VIEJO_solo_reclama_uno                   PASA   (real=1 esperado=1)
+   B_y_los_DOS_que_deja_pasar_son_los_de_las_familias_nuevas PASA   (real=['vuelta200_tarea9_caso_positivo_fuera.py', 'vuelta201_tarea9_simular_fuera.py'] esperado=['vuelta200_tarea9_caso_positivo_fuera.py', 'vuelta201_tarea9_simular_fuera.py'])
+   B_el_VIEJO_saldria_verde_sobre_lo_que_no_miro        PASA   (real=True esperado=True)
+   C_una_nomina_con_familia_quinta_da_invisibles        PASA   (real=['vuelta301_tarea1_familia_quinta.py'] esperado=['vuelta301_tarea1_familia_quinta.py'])
+   C_una_nomina_de_familias_conocidas_da_cero           PASA   (real=0 esperado=0)
+   D_ninguna_familia_declarada_sobra                    PASA   (real=['caso_positivo', 'mutacion', 'simular'] esperado=['caso_positivo', 'mutacion', 'simular'])
+   D_el_patron_nuevo_ve_mas_que_el_viejo                PASA   (real=True esperado=True)
+   CIFRA casos: 14 | pasan: 14 | fallan: 0
+
+F) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   A_el_patron_VIEJO_no_ve_parte_de_su_propia_nomina    CAE   (esperado mutado=['vuelta144_3c_caso_positivo_1190.py', 'vuelta147_3e_simular_a26.py', 'vuelta150_2d_simular_op_c_05.py', 'vuelta160_tarea3b_caso_positivo.py', 'vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py', 'mutado.py'])
+   A_el_patron_NUEVO_las_ve_todas                       CAE   (esperado mutado=1)
+   A_los_dos_de_la_165_siguen_DENTRO_del_invisible      CAE   (esperado mutado=['mutado.py'])
+   A_y_las_dos_existen_en_disco                         CAE   (esperado mutado=3)
+   B_el_censo_nuevo_ve_las_tres_familias                CAE   (esperado mutado=5)
+   B_y_no_cuenta_lo_que_no_es_arnes                     CAE   (esperado mutado=True)
+   B_el_patron_NUEVO_reclama_los_tres                   CAE   (esperado mutado=4)
+   B_el_patron_VIEJO_solo_reclama_uno                   CAE   (esperado mutado=2)
+   B_y_los_DOS_que_deja_pasar_son_los_de_las_familias_nuevas CAE   (esperado mutado=['vuelta200_tarea9_caso_positivo_fuera.py', 'vuelta201_tarea9_simular_fuera.py', 'mutado.py'])
+   B_el_VIEJO_saldria_verde_sobre_lo_que_no_miro        CAE   (esperado mutado=False)
+   C_una_nomina_con_familia_quinta_da_invisibles        CAE   (esperado mutado=['vuelta301_tarea1_familia_quinta.py', 'mutado.py'])
+   C_una_nomina_de_familias_conocidas_da_cero           CAE   (esperado mutado=1)
+   D_ninguna_familia_declarada_sobra                    CAE   (esperado mutado=['caso_positivo', 'mutacion', 'simular', 'mutado.py'])
+   D_el_patron_nuevo_ve_mas_que_el_viejo                CAE   (esperado mutado=False)
+   CIFRA casos que caen al mutar el esperado: 14 de 14
+
+VERDE: los 14 casos pasan tal cual y los 14 caen al mutar el esperado.
+Y LO QUE ESTE ARNES GARANTIZA: si alguien devuelve PATRON_ARNES a su
+forma vieja, los casos A_el_patron_NUEVO_las_ve_todas,
+B_el_censo_nuevo_ve_las_tres_familias, B_el_patron_NUEVO_reclama_los_tres,
+B_y_los_DOS_que_deja_pasar y D_el_patron_nuevo_ve_mas_que_el_viejo CAEN.

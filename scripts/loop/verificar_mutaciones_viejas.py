@@ -885,6 +885,32 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 111 A 112.
     ("vuelta183_tarea1b_mutacion_atribucion.py", False),
+    # ------------------------------------------------------- VUELTA 184 (TAREA 1.c)
+    # EL ARNES DE LA CAIDA `E.1` DEL ACTA 184, y entra POR LA MISMA REGLA DE
+    # SIEMPRE, la del acta 176 punto 7.2: un arnes entra en la nomina y puede
+    # entrar EN SU MISMA VUELTA. La nomina NO SE PODA: crece.
+    #
+    # POR QUE TIENE QUE ESTAR AQUI Y NO EN LA VUELTA SIGUIENTE, MEDIDO Y NO
+    # SUPUESTO: corrido `arneses_que_faltan()` con el fichero ya escrito y antes
+    # de anadirlo, la respuesta fue `ultima vuelta 183, faltan 1` y su unico
+    # nombre era este. Con el fuera, `hay_rojo_al_cierre()` habria cerrado en
+    # ROJO los cinco tramos que quedan de esta bateria, y un rojo que no senala
+    # ninguna guarda rota entrena a mirar los rojos con desgana (`D.4` del acta
+    # 182). Es la misma cuenta que la 183 hizo con los suyos.
+    #
+    # QUE PRUEBA: que las dos lineas de `ESTIMACION` de
+    # `vuelta183_bateria_por_tramos.py --plan` salen CON SU CORTE PEGADO en la
+    # misma linea, con el tamano de nomina y el `HEAD` de esa corrida. Sus casos
+    # rojos son dos y fallan por separado: una linea SIN corte y una linea con un
+    # corte que dice OTRA nomina.
+    #
+    # SU SUJETO ESTA CONGELADO: no abre ningun fichero vivo. Corre `--plan`, que
+    # NO toca la nomina, NO corre ningun arnes y NO escribe ninguna salida
+    # sellada, y cuenta `VIEJAS` en su propio proceso para cotejarla con la que
+    # esa corrida imprime.
+    #
+    # LA NOMINA CRECE DE 112 A 113.
+    ("vuelta184_tarea1c_mutacion_estimacion.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

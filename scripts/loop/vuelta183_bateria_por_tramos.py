@@ -157,6 +157,62 @@ def linea_de_composicion(lanzador):
     return "compuesta por scripts/loop/%s --componer" % lanzador
 
 
+def linea_de_estimacion(que, bajo, alto, nomina, head):
+    """UNA LINEA DE ESTIMACION CON SU CORTE PEGADO EN LA MISMA LINEA. PURA.
+
+    POR QUE EXISTE (vuelta 184, TAREA 1.c; caida `E.1` del acta 184, y es la
+    ESCALADA que esa acta encarga en su seccion 9 por `AUDITOR.md` 1.2).
+
+    LO QUE PASABA ANTES NO SE BORRA, SE CUENTA: `--plan` imprimia la nomina
+    ARRIBA y la estimacion ABAJO, y quien copiaba la estimacion copiaba una cifra
+    sin su corte. El reporte de la 183 publico dos veces `36,6 y 47,7` minutos
+    como estimacion *de hoy* cuando su propia nomina ya era de **112** y el
+    `--plan` de ese dia decia `37,0 y 48,2`: la cifra publicada era la de una
+    nomina de **111**, o sea la de antes de que esa misma vuelta la subiera. La
+    aritmetica lo delata, 111 por 0,33 da 36,6 y 111 por 0,43 da 47,7.
+
+    EL REMEDIO NO ES UNA ADVERTENCIA: la estimacion sale con su corte pegado, de
+    modo que QUIEN COPIE LA ESTIMACION COPIE SU CORTE. Es la misma medicina que
+    `sello_de_corte()` de `verificar_mutaciones_viejas.py` le puso a las cifras de
+    nomina de las salidas selladas por el banco `9.21`, y aqui se escribe con el
+    mismo texto para que las dos se lean igual.
+
+    PURA a proposito: recibe QUE se estima, los dos extremos ya calculados, el
+    tamano de nomina y el head, y devuelve el texto. Su arnes,
+    `scripts/loop/vuelta184_tarea1c_mutacion_estimacion.py`, la tumba sin correr
+    ningun proceso."""
+    return ("  ESTIMACION minutos %s: entre %.1f y %.1f "
+            "(corte: HEAD %s, nomina de %d entradas contada en esta corrida)"
+            % (que, bajo, alto, head, nomina))
+
+
+# EL PATRON QUE LEE EL CORTE DE UNA LINEA DE ESTIMACION. El head va con `.+?` y
+# no con `\S+` a proposito: `corte_de_git()` devuelve `(no medible)` con un
+# espacio dentro cuando git no responde, y una linea con corte de verdad no se
+# puede declarar SIN corte solo porque git no contestara.
+_PATRON_CORTE_ESTIMACION = re.compile(
+    r"\(corte: HEAD (.+?), nomina de (\d+) entradas contada en esta corrida\)$")
+
+
+def corte_de_la_estimacion(linea):
+    """EL CORTE QUE LLEVA UNA LINEA DE ESTIMACION: (head, nomina), o None si la
+    linea NO lleva corte. PURA.
+
+    Es la mitad que puede caer: una linea de estimacion sin corte devuelve None y
+    su arnes la declara ROJA."""
+    m = _PATRON_CORTE_ESTIMACION.search(linea.rstrip())
+    return (m.group(1), int(m.group(2))) if m else None
+
+
+def corte_calza(linea, nomina):
+    """LA LINEA LLEVA SU CORTE Y ESE CORTE DICE LA NOMINA QUE SE LE PASA. PURA.
+
+    Las dos mitades tienen que fallar por separado: una linea SIN corte y una
+    linea CON un corte que miente son dos averias distintas y las dos son rojo."""
+    c = corte_de_la_estimacion(linea)
+    return c is not None and c[1] == nomina
+
+
 def literales_de_vuelta_clavados(texto):
     """LAS LINEAS DE UN FUENTE QUE CLAVAN UN NUMERO DE VUELTA COMO LITERAL EN
     ALGO QUE SE ESCRIBE O SE IMPRIME. PURA: recibe el texto y devuelve
@@ -555,10 +611,17 @@ def plan(tramos):
     print("  ESTIMACION Y NO COMO MEDICION: la ultima bateria con cuerpo (la del")
     print("  auditor de la 171) hizo 75 entradas en 32,5 minutos, o sea 0,43")
     print("  minutos por entrada, y la media historica es 0,33.")
-    print("  ESTIMACION minutos por tramo de %d entradas: entre %.1f y %.1f"
-          % (TAMANO, TAMANO * 0.33, TAMANO * 0.43))
-    print("  ESTIMACION minutos de la nomina entera: entre %.1f y %.1f"
-          % (len(B.VIEJAS) * 0.33, len(B.VIEJAS) * 0.43))
+    # LAS DOS LINEAS DE ESTIMACION SALEN CON SU CORTE PEGADO (vuelta 184, TAREA
+    # 1.c; caida `E.1` del acta 184). La nomina y el head se computan AQUI, en la
+    # misma corrida que la estimacion, para que el corte sea el de la cifra que
+    # acompana y no el de otra medicion.
+    nomina_hoy = len(B.VIEJAS)
+    head_hoy = B.corte_de_git()
+    print(linea_de_estimacion("por tramo de %d entradas" % TAMANO,
+                              TAMANO * 0.33, TAMANO * 0.43, nomina_hoy, head_hoy))
+    print(linea_de_estimacion("de la nomina entera",
+                              nomina_hoy * 0.33, nomina_hoy * 0.43,
+                              nomina_hoy, head_hoy))
     print("  LA MEDICION DE VERDAD LA DA CADA TRAMO AL CERRARSE, y es la que se")
     print("  publica. Esto es solo el reparto.")
     return 0
