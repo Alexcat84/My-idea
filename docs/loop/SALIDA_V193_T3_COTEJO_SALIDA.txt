@@ -1,0 +1,66 @@
+==============================================================================
+VUELTA 193, TAREA 3.b: EL DESTAPE, COTEJADO CONTRA MIS CLASES COMMITEADAS
+==============================================================================
+
+A) EL ARCHIVO, MEDIDO AL ENTRAR Y ABIERTO SOLO EN LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   los 16 primeros: 0a77b5a35a962621
+
+B) MIS CLASES, LEIDAS DE MI PROPIO FICHERO Y NO TECLEADAS AQUI
+   docs/loop/SALIDA_V193_T3_MIS_CLASES.txt -> disco 15100 bytes | sha256 LF 93f68bc267783022
+   CIFRA clases leidas: 30
+   CIFRA dudosos marcados en la misma linea: 8 (132, 203, 718, 967, 972, 1069, 2426, 3171)
+   CIFRA dudosos DECLARADA en la cabecera del mismo fichero: 8
+   LAS DOS CALZAN: SI
+   REPARTO MIO: A 8, D 22
+
+C) EL DESTAPE, ABIERTO AHORA Y NO ANTES
+   docs/loop/SALIDA_V193_T3_DESTAPE.txt -> disco 39872 bytes | sha256 LF dbb5b3cbcf483e2c
+   CIFRA clases leidas del destape: 30
+   puestos mios que el destape no trae: 0 (ninguno)
+
+D) EL COTEJO, CON EL FORMATO UNICO Y `en dudosos` PASADO COMO TEXTO
+   (a proposito por el camino que reventaba antes de la TAREA 5)
+   ESCRITO: docs/loop/SALIDA_V193_T3_COTEJO.txt
+      disco 2527 bytes | LF 2527 bytes
+      RELEIDO DEL DISCO Y PASADO POR SU PROPIA GUARDA:
+         denominador declarado: 30 | filas contadas: 30
+         declarado y contado calzan -> VERDE
+         LA COLUMNA `en dudosos`, RELEIDA Y COTEJADA CONTRA LA QUE
+         SE PASO (y no solo el denominador, que es conteo de filas):
+            CIFRA puestos con `en dudosos` torcido al escribir: 0 (ninguno)
+            CIFRA puestos que no volvieron del disco: 0 (ninguno)
+            CIFRA `si` en el fichero: 8 | CIFRA `no`: 22
+
+E) LAS CIFRAS, COMPUTADAS DE LAS FILAS Y NO TECLEADAS
+   total        30
+   coinciden    23
+   discrepan    7
+   dudosos      8
+   discrepancias DENTRO de mis dudosos: 4 (203, 718, 972, 2426)
+   discrepancias FUERA de mis dudosos: 3 (158, 612, 651)
+   REPARTO DEL LECTOR:  A 8, D 22
+   REPARTO DEL ARCHIVO: A 6, B 3, D 21
+
+   LA REGLA QUE CUELGA DE LA CIFRA DE FUERA, DICHA CON SU NUMERO:
+   AUDITOR.md 1.2 baja el credito de la tanda y encarga la relectura al
+   doble POR LO QUE CAE FUERA DEL MARCADO. Con 3 fuera, esa escalada se dispara y va declarada aqui.
+
+F) LAS DISCREPANCIAS, UNA POR UNA
+   puesto 158   yo dije A, el archivo dice B, FUERA de mis dudosos
+   puesto 203   yo dije A, el archivo dice D, DENTRO de mis dudosos
+   puesto 612   yo dije D, el archivo dice B, FUERA de mis dudosos
+   puesto 651   yo dije D, el archivo dice A, FUERA de mis dudosos
+   puesto 718   yo dije A, el archivo dice B, DENTRO de mis dudosos
+   puesto 972   yo dije D, el archivo dice A, DENTRO de mis dudosos
+   puesto 2426  yo dije A, el archivo dice D, DENTRO de mis dudosos
+
+G) EL ARCHIVO, REMEDIDO AL SALIR
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   IDENTICO AL DE LA ENTRADA: SI
+   (no se toco ninguna clase: si de esta relectura sale una correccion,
+    se declara y se trae, y no se escribe ni una fila)
+
+VEREDICTO DEL COTEJO: VERDE

@@ -1,0 +1,62 @@
+FORMATO: COTEJO_DE_CIEGA v1
+==============================================================================
+==============================================================================
+COTEJO DE CIEGA. EJECUTOR DE LA VUELTA 193, TAREA 3.
+Tramo: los 30 vecinos deterministas del tramo de la 192, aislados en
+docs/loop/SALIDA_V193_T3_AISLAMIENTO.txt.
+Mis clases: docs/loop/SALIDA_V193_T3_MIS_CLASES.txt, COMMITEADAS ANTES de abrir el destape.
+LA VARA: docs/BANCO_DE_TEXTOS.md 9.6.1, LA VARA DE LA RAMA
+CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, citada por numero y
+copiada literal dentro del criterio de la ciega (adjudicacion 4.9 del
+acta 193). REPITE -> A, CONTINUA -> D.
+`en dudosos` va pasado COMO TEXTO `si` / `no`, que es la forma que
+`bool(du)` convertia toda en `si` antes de la TAREA 5 de esta vuelta.
+
+CIFRA puestos cotejados: 30
+CIFRA que COINCIDEN: 23
+CIFRA que DISCREPAN: 7
+CIFRA en los dudosos del lector: 8
+CIFRA discrepancias DENTRO de los dudosos: 4 (203, 718, 972, 2426)
+CIFRA discrepancias FUERA de los dudosos: 3 (158, 612, 651)
+REPARTO DEL LECTOR:  A 8, D 22
+REPARTO DEL ARCHIVO: A 6, B 3, D 21
+
+TABLA (una fila POR CADA PUESTO COTEJADO, no solo por las discrepancias):
+puesto | clase del lector | clase del archivo | en dudosos del lector | veredicto
+------------------------------------------------------------------------------
+     9 | D | D | no | COINCIDE
+    23 | D | D | no | COINCIDE
+    70 | D | D | no | COINCIDE
+   132 | D | D | si | COINCIDE
+   158 | A | B | no | DISCREPA
+   203 | A | D | si | DISCREPA
+   396 | D | D | no | COINCIDE
+   612 | D | B | no | DISCREPA
+   651 | D | A | no | DISCREPA
+   718 | A | B | si | DISCREPA
+   879 | D | D | no | COINCIDE
+   907 | D | D | no | COINCIDE
+   967 | A | A | si | COINCIDE
+   972 | D | A | si | DISCREPA
+  1069 | D | D | si | COINCIDE
+  1205 | A | A | no | COINCIDE
+  1371 | A | A | no | COINCIDE
+  1805 | A | A | no | COINCIDE
+  1817 | D | D | no | COINCIDE
+  2030 | D | D | no | COINCIDE
+  2157 | D | D | no | COINCIDE
+  2426 | A | D | si | DISCREPA
+  2660 | D | D | no | COINCIDE
+  2836 | D | D | no | COINCIDE
+  2913 | D | D | no | COINCIDE
+  3070 | D | D | no | COINCIDE
+  3089 | D | D | no | COINCIDE
+  3171 | D | D | si | COINCIDE
+  3185 | D | D | no | COINCIDE
+  3329 | D | D | no | COINCIDE
+FIN DE LA TABLA.
+
+EL DENOMINADOR ES RECUPERABLE CONTANDO LAS FILAS DE ESTA TABLA, y la
+cifra declarada arriba tiene que calzar con ese conteo. Lo comprueba
+`denominador()` de scripts/loop/cotejo_de_ciega.py, y si no calzan el
+fichero es ROJO.

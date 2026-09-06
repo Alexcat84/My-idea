@@ -1,0 +1,71 @@
+==============================================================================
+VUELTA 193, TAREA 3.f: QUE CAMBIA LA VARA 9.6.1 SOBRE LO YA MEDIDO
+==============================================================================
+
+A) MI TANDA DE LA 192, LEIDA DE SU FICHERO
+   docs/loop/SALIDA_V192_T2_COTEJO.txt -> 30 filas
+   coinciden 20 | discrepan 10 | dudosos 15
+   discrepancias DENTRO: [874, 906, 965, 971, 1068, 2425, 2659]
+   discrepancias FUERA:  [1804, 1814, 2833]
+   REPARTO DEL LECTOR:  A 4, B 6, D 20
+   REPARTO DEL ARCHIVO: A 2, D 28
+
+B) LAS DIEZ DISCREPANCIAS DE LA 192, UNA A UNA, CONTRA EL ALCANCE DE LA
+   VARA. La vara 9.6.1 tiene DOS salidas y nada mas: REPITE -> A y
+   CONTINUA -> D. Un par que yo llame ['B', 'C'] cae FUERA de su alcance.
+   puesto 874   yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 906   yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 965   yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 971   yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 1068  yo D / archivo A / DENTRO de mis dudosos -> la 4.9 del acta 193 la resuelve en A
+   puesto 1804  yo A / archivo D / FUERA de mis dudosos -> la 4.9 del acta 193 la resuelve en D
+   puesto 1814  yo A / archivo D / FUERA de mis dudosos
+   puesto 2425  yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 2659  yo B / archivo D / DENTRO de mis dudosos -> FUERA del alcance de la vara: yo dije B
+   puesto 2833  yo A / archivo D / FUERA de mis dudosos -> la 4.9 del acta 193 la resuelve en D
+
+   CIFRA discrepancias de la 192: 10
+   CIFRA DENTRO del alcance de la vara (A contra D): 4 (1068, 1804, 1814, 2833)
+   CIFRA FUERA del alcance de la vara (yo dije B): 6 (874, 906, 965, 971, 2425, 2659)
+
+C) LO QUE LA VARA CAMBIA DE VERDAD, Y SON LAS TRES QUE EL ACTA ADJUDICA
+   CIFRA discrepancias que la vara resuelve BIEN: 3 (1068, 1804, 2833)
+      puesto 1068: yo dije D, el archivo dice A, la vara dice A
+      puesto 1804: yo dije A, el archivo dice D, la vara dice D
+      puesto 2833: yo dije A, el archivo dice D, la vara dice D
+   CIFRA discrepancias que la vara NO toca: 7 (874, 906, 965, 971, 1814, 2425, 2659)
+
+D) MIS DUDOSOS DE LA 192 CONTRA MIS DUDOSOS DE LA 193
+   dudosos de la 192: 15 de 30
+   dudosos de la 193: 8 de 30
+   discrepancias FUERA del marcado, 192: 3 | 193: 3
+   tasa de coincidencia, 192: 20 de 30 | 193: 23 de 30
+
+E) EL ALCANCE DE LA VARA, MEDIDO SOBRE LA TANDA DE LA 193, QUE ES LA
+   PRIMERA LEIDA ENTERA CON ELLA. AQUI ESTA EL DATO QUE NO ME ESPERABA.
+   docs/loop/SALIDA_V193_T3_COTEJO.txt -> 30 filas
+   REPARTO DEL LECTOR (yo, leyendo SOLO con 9.6.1): A 8, D 22
+   REPARTO DEL ARCHIVO sobre los mismos 30: A 6, B 3, D 21
+   CIFRA `B` que emiti leyendo con la vara: 0
+   CIFRA `B` que el archivo tiene en el mismo tramo: 3
+   los puestos donde el archivo dice `B`: 158, 612, 718
+   CIFRA discrepancias mias que el archivo resuelve en `B`: 3 (158, 612, 718)
+
+   LO QUE ESTO MIDE, DICHO SIN ADORNO: la vara 9.6.1 tiene DOS salidas,
+   REPITE y CONTINUA, y leyendola literal NO PUEDE EMITIR `B` NUNCA. El
+   archivo si usa `B` en este tramo, y 3 de mis 7 discrepancias son
+   exactamente eso: un par que el archivo llama `B` y que la vara solo
+   sabe empujar a `A` o a `D`.
+
+F) LAS DOS COSAS QUE SE PUBLICAN JUNTAS Y NINGUNA SE RESUELVE COPIANDO
+   A FAVOR DE LA VARA: de mis 10 discrepancias de la 192, la vara resuelve
+   BIEN las 3 que el acta 193 adjudica (1068, 1804, 2833), y las tres estaban DENTRO de
+   su alcance. Ninguna de las tres la resuelve el criterio viejo.
+   EN CONTRA DE LA VARA: 6 de esas 10 discrepancias (874, 906, 965, 971, 2425, 2659) son pares que yo
+   llame `B`, y la vara no tiene salida `B`. Y en la tanda de la 193,
+   leida ENTERA con ella, emiti CERO `B` sobre un tramo donde el archivo
+   tiene 3.
+   O SEA: la vara arregla el eje A contra D, que es donde nos tumbo a los
+   dos lectores, y NO dice nada sobre el eje que mas discrepancias me
+   produce a mi. Las dos mitades van publicadas.
+

@@ -97,9 +97,9 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 193 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Registra LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, las diez A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 192 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3` contestadas), OTRA VEZ CERO EN CONTRA; LOS CUATRO HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la cuarta puerta que no se puede usar desde el CLI, `5.2` el cotejo que convierte `"no"` en `si`, `5.3` el arnes que imprime su `mkdtemp` en la salida sellada, `5.4` el reporte que se contradice en la cuenta del `DESFASE DECLARADO`); UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE NO ACUMULA (la seccion 5.5 publica 3 donde hay 4 y donde su propia seccion 0 dice 4: se registra con su nombre, dispara la relectura al doble y NO acumula por la letra del 27 ago 2026, RACHA DE REPORTE 0); UNA CAIDA PROPIA DEL AUDITOR, DE METODO (`C.1`, correr `run_phase1.py` sin `--reaplico-curaduria` y ensuciar `dataset/`); y LA METRICA DE CREDITO de la seccion 7 con la fila de puestos y su nota: 30 aislados y 30 cotejados, CERO quemados, SOLAPE TOTAL a proposito, o sea control y no cobertura nueva. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA EN VERDE** | `SALIDA_V193_T1A_REGISTRO_R55.txt`, `SALIDA_V193_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V193_T1A_MUTACION_REGISTRADOR.txt` |
 | **TAREA 2** | LOS TRES ARNESES QUE NO REPRODUCEN, ANTES DE LA BATERIA DE LA 194. BLOQUEANTE Y LA MAS URGENTE DE LA VUELTA. Es la adjudicacion `4.10` y el hallazgo `5.3` del acta 193, medido en `docs/loop/_auditor_v193_reproducibilidad.txt`: los tres REPRODUCEN entre dos corridas de hoy y NINGUNO contra su sellada. (a) LOS DOS PRIMEROS (`vuelta191_tarea3_mutacion_lineas.py` y `vuelta191_tarea6_mutacion_bloque_tallado.py`): CONGELAR SU SUJETO o DECLARAR EL CASO por el carril de los `CASO DECLARADO`, porque la `4.4` del acta 191 dice que `SUJETO VIVO` es FALLO y no deuda y la `4.10` cierra la salida que quedaba: una salida que no reproduce NO ES DEL MISMO CALIBRE, tenga o no tenga motivo escrito. (b) EL TERCERO (`guarda_de_entrada_a_la_nomina.py`): que su salida sellada NO lleve el nombre del directorio temporal; el directorio se sigue fabricando y se sigue retirando (`P.16`). (c) ARREGLAR LA GUARDA QUE NO LO VIO: `tempfile` y `mkdtemp` cuentan como huellas de CONGELADO y por eso da CONGELADO a un arnes cuya salida cambia en cada corrida; UNA HUELLA DE TEXTO NO PRUEBA REPRODUCCION. (d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes cuya salida no reproduce vuelve a salir CONGELADO. (e) NO SE TOCA LA NOMINA: la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada. (f) AL CERRAR, CORRER LOS TRES DOS VECES Y PUBLICAR SUS BYTES Y SUS `sha256`; si alguno sigue sin reproducir, SE PARA Y SE TRAE | **CERRADA EN VERDE, Y CON UN CUARTO CASO QUE EL ACTA NO TRAIA** | `SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt`, `SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`, y los cuatro cortes viejos `_CORTE_191`/`_CORTE_192` |
-| **TAREA 3** | LA VARA DE LAS CIEGAS PASA A SER LA DEL BANCO, Y EL DOBLE SE LEE CON ELLA. Es la adjudicacion `4.9` del acta 193, que contesta la `P.3` a favor. No es doctrina nueva: la vara ya esta escrita en `docs/BANCO_DE_TEXTOS.md` `9.6.1`, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, propuesta y adoptada el 12 ago 2026. (a) ESCRIBIR EL CRITERIO DE LA CIEGA CITANDO `9.6.1` POR NUMERO, con la frase de la vara copiada LITERAL y no parafraseada (`9.5.0`), y que sea el criterio que se le pasa a `aislador_de_ciega.py` de aqui en adelante. (b) LA RELECTURA AL DOBLE DEL TRAMO DE LA 192, que es la deuda de credito de la tanda del auditor y la encarga el auditor, que es donde `AUDITOR.md` 1.2 la pone, CON MOTIVO TRIPLE: dos discrepancias cayeron fuera del marcado del auditor, las dos cayeron tambien fuera del marcado del ejecutor, y son el mismo par para los dos lectores. (c) EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`, que son los mismos 30 de la ciega del auditor `docs/loop/_auditor_v193_ciega_blind.txt`. (d) AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada, con `evitar` cargado con TODO lo consumido, CONTADO DE SUS FICHEROS Y NO DEL ENCARGO, y con el solape contra el tramo y contra el universo en 0 y 0 POR CONSTRUCCION. (e) criterio escrito literal, ciega y destape en ficheros SEPARADOS, clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y dudosos NOMBRADOS DELANTE. (f) PUBLICAR LO QUE LA VARA NUEVA CAMBIA: cuantos dudosos y cuantas discrepancias habrian salido distinto con `9.6.1`, y si no cambia nada, DECIRLO. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos convenciones | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LA VARA DE LAS CIEGAS PASA A SER LA DEL BANCO, Y EL DOBLE SE LEE CON ELLA. Es la adjudicacion `4.9` del acta 193, que contesta la `P.3` a favor. No es doctrina nueva: la vara ya esta escrita en `docs/BANCO_DE_TEXTOS.md` `9.6.1`, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, propuesta y adoptada el 12 ago 2026. (a) ESCRIBIR EL CRITERIO DE LA CIEGA CITANDO `9.6.1` POR NUMERO, con la frase de la vara copiada LITERAL y no parafraseada (`9.5.0`), y que sea el criterio que se le pasa a `aislador_de_ciega.py` de aqui en adelante. (b) LA RELECTURA AL DOBLE DEL TRAMO DE LA 192, que es la deuda de credito de la tanda del auditor y la encarga el auditor, que es donde `AUDITOR.md` 1.2 la pone, CON MOTIVO TRIPLE: dos discrepancias cayeron fuera del marcado del auditor, las dos cayeron tambien fuera del marcado del ejecutor, y son el mismo par para los dos lectores. (c) EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`, que son los mismos 30 de la ciega del auditor `docs/loop/_auditor_v193_ciega_blind.txt`. (d) AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada, con `evitar` cargado con TODO lo consumido, CONTADO DE SUS FICHEROS Y NO DEL ENCARGO, y con el solape contra el tramo y contra el universo en 0 y 0 POR CONSTRUCCION. (e) criterio escrito literal, ciega y destape en ficheros SEPARADOS, clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y dudosos NOMBRADOS DELANTE. (f) PUBLICAR LO QUE LA VARA NUEVA CAMBIA: cuantos dudosos y cuantas discrepancias habrian salido distinto con `9.6.1`, y si no cambia nada, DECIRLO. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos convenciones | **CERRADA, Y LA VARA NUEVA NO ALCANZA A LA MITAD DE MIS DISCREPANCIAS** | `SALIDA_V193_T3_AISLAMIENTO.txt`, `SALIDA_V193_T3_MIS_CLASES.txt` (commit b57aa7d6), `SALIDA_V193_T3_COTEJO.txt`, `SALIDA_V193_T3_COTEJO_SALIDA.txt`, `SALIDA_V193_T3F_QUE_CAMBIA_LA_VARA.txt` |
 | **TAREA 4** | LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. Es el hallazgo `5.1` del acta 193, levantado por el auditor CONTRA EL FICHERO QUE LE PROTEGE Y QUE EL EJECUTOR ESCRIBIO PARA EL EN LA 192, y medido en `docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`: `_BITACORA` y `_SELLADO` son estado de MODULO y mueren con el proceso, el auditor sella con el CLI, y en el proceso siguiente `puede_declarar_clases()` responde `NO: este turno no ha sellado` aunque el sello este en disco. Y LA MITAD MAS SERIA ES SOBRE LAS TRES PUERTAS VIEJAS: el docstring afirma que el sello no se pueda escribir despues, y un turno que toca `REPORTE.md` y arranca otro proceso vuelve a sellar con bitacora vacia porque `sellar()` SOBRESCRIBE. (a) QUE LA BITACORA Y EL SELLO SOBREVIVAN AL PROCESO, en un fichero del turno. (b) QUE `sellar()` CAIGA EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA, en vez de sobrescribirlo. (c) QUE EL CLI PUEDA DECLARAR LAS CLASES, con su bandera, leyendo el sello de disco. (d) Y SI ALGO NO SE PUEDE, DECIRLO EN EL DOCSTRING en vez de afirmar lo contrario, que esa frase vive en sede de cifra publicada desde el 2 sep 2026. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un sello se puede reescribir despues de tocar uno de los tres prohibidos en otro proceso. (f) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y se le anade. (g) RE CORRER SU ARNES DE LA NOMINA CON EL PARCHE PUESTO Y COMPROBAR QUE REPRODUCE BYTE A BYTE; hoy da 4282 bytes y `sha256` `4779fcd04bc5b2da` | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 5** | EL COTEJO QUE NO CONVIERTA `"no"` EN `si`. Es el hallazgo `5.2` del acta 193. `cuerpo_del_cotejo()` de `scripts/loop/cotejo_de_ciega.py` hace `bool(du)`, y `bool("no")` es `True`; el docstring especifica esa columna como `en dudosos` . `si` o `no`, que es justo la forma que revienta, y el instrumento publico al auditor `discrepancias FUERA de los dudosos: 0 (ninguna)` TENIENDO DOS. LA CIFRA PUBLICADA DEL EJECUTOR NO ESTA AFECTADA: `vuelta192_tarea2b_cotejo.py` linea 145 pasa `p in dudosos`, un booleano de verdad. IMPORTA MAS QUE UNA ERRATA porque la columna `en dudosos` es la unica del fichero de la que cuelga una regla de parada: `AUDITOR.md` 1.2 baja el credito y encarga el doble POR LO QUE CAE FUERA. (a) QUE `en_dudosos` SE NORMALICE O CAIGA, y no se resuelva en silencio, con la misma vara que el caso `G` de la mutacion ya le aplica a `veredicto_de`. (b) QUE LA GUARDA DE `escribir_cotejo()` MIRE ALGO MAS QUE EL DENOMINADOR, o que diga en su salida que no es la sede de esta comprobacion. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un `en_dudosos` no booleano se convierte en `si` sin avisar. (d) RE ESCRIBIR EL COTEJO DEL AUDITOR CON EL INSTRUMENTO ARREGLADO y comprobar que da lo que el publica a mano: 30 cotejados, 25 coinciden, 5 discrepan, 3 dentro y 2 fuera. (e) `cotejo_de_ciega.py` NACIO EN LA 192 Y ENTRA EN LA NOMINA POR LA REGLA DEL PROPIO FICHERO: tocarlo ahora es ANTES de que entre, y eso es a favor y no en contra | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | EL COTEJO QUE NO CONVIERTA `"no"` EN `si`. Es el hallazgo `5.2` del acta 193. `cuerpo_del_cotejo()` de `scripts/loop/cotejo_de_ciega.py` hace `bool(du)`, y `bool("no")` es `True`; el docstring especifica esa columna como `en dudosos` . `si` o `no`, que es justo la forma que revienta, y el instrumento publico al auditor `discrepancias FUERA de los dudosos: 0 (ninguna)` TENIENDO DOS. LA CIFRA PUBLICADA DEL EJECUTOR NO ESTA AFECTADA: `vuelta192_tarea2b_cotejo.py` linea 145 pasa `p in dudosos`, un booleano de verdad. IMPORTA MAS QUE UNA ERRATA porque la columna `en dudosos` es la unica del fichero de la que cuelga una regla de parada: `AUDITOR.md` 1.2 baja el credito y encarga el doble POR LO QUE CAE FUERA. (a) QUE `en_dudosos` SE NORMALICE O CAIGA, y no se resuelva en silencio, con la misma vara que el caso `G` de la mutacion ya le aplica a `veredicto_de`. (b) QUE LA GUARDA DE `escribir_cotejo()` MIRE ALGO MAS QUE EL DENOMINADOR, o que diga en su salida que no es la sede de esta comprobacion. (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un `en_dudosos` no booleano se convierte en `si` sin avisar. (d) RE ESCRIBIR EL COTEJO DEL AUDITOR CON EL INSTRUMENTO ARREGLADO y comprobar que da lo que el publica a mano: 30 cotejados, 25 coinciden, 5 discrepan, 3 dentro y 2 fuera. (e) `cotejo_de_ciega.py` NACIO EN LA 192 Y ENTRA EN LA NOMINA POR LA REGLA DEL PROPIO FICHERO: tocarlo ahora es ANTES de que entre, y eso es a favor y no en contra | **CERRADA EN VERDE** | `SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt`, `SALIDA_V193_T5D_REHACER_COTEJO.txt`, `SALIDA_V193_T5D_COTEJO_AUDITOR_REHECHO.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -276,5 +276,170 @@ su vuelta: `SALIDA_V191_T3_MUTACION_LINEAS_CORTE_191.txt`,
 `SALIDA_V191_T4_MUTACION_VEREDICTO_CORTE_191.txt`,
 `SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO_CORTE_191.txt` y
 `SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA_CORTE_192.txt`.
+
+### TAREA 3. LA VARA DEL BANCO Y LA RELECTURA AL DOBLE. **CERRADA, Y LA VARA NUEVA NO ALCANZA A LA MITAD DE MIS DISCREPANCIAS.**
+
+**a) EL CRITERIO, CITANDO `9.6.1` POR NUMERO Y CON LA FRASE COPIADA LITERAL.** Va
+DENTRO del `CRITERIO` que se le pasa a `aislador_de_ciega.py`, o sea escrito en la
+propia ciega y no en la cabeza del lector, y sale copiado en
+`docs/loop/SALIDA_V193_T3_CIEGA.txt` (41185 bytes, `sha256` LF `fb9a9ed247ee550f`):
+
+> **"Si lo que el hijo añade a lo que la madre ya dice CABE EN UNA LÍNEA, REPITE.
+> Si trae un PROCEDIMIENTO que la madre no tiene, CONTINÚA."**
+
+REPITE va a `A` y CONTINUA va a `D`, que es la lectura que la `4.9` adjudica. **No
+se parafrasea** (`9.5.0`). **Y la vara vieja se nombra en vez de borrarse**: era el
+solape de pasos, un literal privado que cada lector escribia por su cuenta.
+
+**c) y d) EL TRAMO Y EL DOBLE, CONTADOS DE SUS FICHEROS.** De
+`docs/loop/SALIDA_V193_T3_AISLAMIENTO.txt` (7653 bytes):
+
+- **TRAMO: los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`** (39850 bytes,
+  `sha256` LF `da9b03300a305fbd`). **Y la ciega del auditor
+  `docs/loop/_auditor_v193_ciega_blind.txt` trae los MISMOS 30**: no se creyo, se
+  conto de su fichero, y el instrumento dice **ES EL MISMO CONJUNTO QUE EL TRAMO:
+  SI**. **`1804` y `2833` estan los dos DENTRO del tramo.**
+- **AL DOBLE: 30 vecinos deterministas**, con `vecinos()` **IMPORTADA** de
+  `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`. **30 mas 30 son 60, el
+  doble exacto.**
+- **`evitar` cargado de OCHO ficheros, contados uno a uno y con sus nombres**, no
+  de una lista tecleada: los seis de la 192 mas `_auditor_v192_ciega_blind.txt` y
+  `SALIDA_V192_T2_CIEGA.txt`. **Universo consumido: 501 sin la tanda de la 192 y
+  531 con ella.**
+- **SOLAPE con el tramo: 0. SOLAPE con el universo: 0.** Los dos **POR
+  CONSTRUCCION**: `evitar` va DENTRO de la llamada, no comprobado despues.
+
+**e) EL ORDEN, QUE ES LA PRUEBA.** Criterio escrito literal; ciega y destape en
+ficheros SEPARADOS; **mis 30 clases escritas y COMMITEADAS en su propio commit
+`b57aa7d6` ANTES de abrir el destape**; y **mis OCHO dudosos NOMBRADOS DELANTE**
+con el motivo de cada duda escrito: `203`, `718`, `967`, `2426` (donde digo `A` y
+el otro lado podria traer procedimiento) y `132`, `972`, `1069`, `3171` (donde
+digo `D` y lo que se anade podria caber en una linea).
+
+**EL COTEJO, CON EL FORMATO UNICO YA ARREGLADO POR LA TAREA 5** y con `en dudosos`
+pasado **COMO TEXTO** a proposito, o sea por el camino que reventaba. De
+`docs/loop/SALIDA_V193_T3_COTEJO.txt` y su salida
+`docs/loop/SALIDA_V193_T3_COTEJO_SALIDA.txt`:
+
+| | cifra |
+|---|---:|
+| cotejados | **30** |
+| coinciden | **23** |
+| discrepan | **7** |
+| dudosos marcados delante | **8** |
+| discrepancias DENTRO de mis dudosos | **4** (`203`, `718`, `972`, `2426`) |
+| discrepancias FUERA de mis dudosos | **3** (`158`, `612`, `651`) |
+| reparto del lector | A 8, D 22 |
+| reparto del archivo | A 6, B 3, D 21 |
+
+**LAS TRES QUE CAEN FUERA DE MI MARCADO SE DECLARAN, Y CON ELLAS SE DISPARA LA
+ESCALADA DE `AUDITOR.md` 1.2**: `158` (yo `A`, archivo `B`), `612` (yo `D`,
+archivo `B`) y `651` (yo `D`, archivo `A`). **No las escondo tras el hecho de que
+la vara sea nueva.**
+
+**f) LO QUE LA VARA CAMBIA, MEDIDO Y NO AFIRMADO**, de
+`docs/loop/SALIDA_V193_T3F_QUE_CAMBIA_LA_VARA.txt` (4168 bytes), contado de los
+dos cotejos y no tecleado:
+
+**A FAVOR DE LA VARA.** De mis **10** discrepancias de la 192, **4 estan DENTRO de
+su alcance** (`1068`, `1804`, `1814`, `2833`) y **la vara resuelve BIEN las 3 que
+el acta adjudica**: `1068` (yo `D`, archivo `A`, vara `A`), `1804` y `2833` (yo
+`A`, archivo `D`, vara `D`). **Las tres son las que el criterio viejo no resolvia,
+y dos de ellas son las que cayeron fuera del marcado de LOS DOS lectores.**
+
+**EN CONTRA DE LA VARA, Y ES MI DATO PROPIO DE ESTA VUELTA. `9.6.1` TIENE DOS
+SALIDAS Y NO PUEDE EMITIR `B` NUNCA.** Leyendo la tanda de la 193 **entera** con
+ella emiti **CERO `B`** sobre un tramo donde **el archivo tiene TRES** (`158`,
+`612`, `718`). **Y 3 de mis 7 discrepancias son exactamente eso**: un par que el
+archivo llama `B` y que la vara solo sabe empujar a `A` o a `D`. En la 192 el
+mismo agujero ya estaba: **6 de mis 10 discrepancias eran pares que yo llame `B`**
+(`874`, `906`, `965`, `971`, `2425`, `2659`), y **la vara no las toca**.
+
+**LA CONCLUSION, DICHA CON SUS DOS MITADES JUNTAS: la vara arregla el eje `A`
+contra `D`, que es donde nos tumbo a los dos lectores, y no dice nada sobre el eje
+que mas discrepancias me produce a mi.** No es una adjudicacion floja: es una
+adjudicacion **cuyo alcance acaba de quedar medido**.
+
+**LO QUE SI MEJORO, Y TAMBIEN ES MEDICION:** mi tasa pasa de **20 de 30** en la
+192 a **23 de 30** en la 193, y mis dudosos bajan de **15 de 30** a **8 de 30**,
+con la misma cifra de discrepancias fuera del marcado (**3** en las dos). **Un
+criterio escrito reduce a la mitad lo que el lector tiene que marcar como duda.**
+
+**NO SE TOCO NINGUNA CLASE.** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abrio
+**solo en lectura** y su `sha256` LF **abre y cierra en `0a77b5a35a962621`** por
+las dos convenciones, medido en el aislamiento y otra vez en el cotejo.
+
+### TAREA 5. EL COTEJO QUE NO CONVIERTE `"no"` EN `si`. **CERRADA EN VERDE.**
+
+**LA CAIDA, CONFIRMADA CORRIENDOLA Y NO LEYENDOLA.** `bool("no")` en Python es
+`True`, y eso se imprime dentro de la propia mutacion en vez de afirmarse.
+`cuerpo_del_cotejo()` hacia `bool(du)`, y el docstring del formato especifica esa
+columna como *"`en dudosos` . `si` o `no`"*: **la forma que el formato invita a
+usar era justo la que reventaba.**
+
+**a) `en_dudosos` SE NORMALIZA O CAE.** `normalizar_en_dudosos()` admite el
+booleano de verdad, `0`/`1`, y las formas literales `si`/`sí`/`true`/`1` y
+`no`/`false`/`0`, con la caja y los espacios normalizados **y nada mas**.
+**Cualquier otra cosa levanta `EnDudososIlegible`**, que es una excepcion con
+nombre propio y con la causa medida escrita en su docstring. Es la misma vara que
+el caso `G` de la mutacion ya le aplicaba a `veredicto_de`: **lo raro sale a la
+vista en vez de resolverse en silencio.**
+
+**b) LA GUARDA DE `escribir_cotejo()` YA NO MIRA SOLO EL DENOMINADOR, Y SE DICE
+POR QUE.** Sobre el fichero del auditor, **con las dos discrepancias de fuera
+silenciadas, el denominador calzaba PERFECTAMENTE y la guarda daba VERDE**: un
+denominador correcto sobre una columna falsa sigue siendo un verde falso. Ahora la
+guarda **relee la columna `en dudosos` del disco y la coteja contra la que se le
+paso**, normalizada, y publica tres cifras nuevas: puestos torcidos al escribir,
+puestos que no volvieron del disco, y el reparto `si`/`no` del fichero. **Si algo
+no calza, CAE y nombra los puestos.**
+
+**c) EL CASO POSITIVO POR MUTACION, Y CORRE LOS DOS CAMINOS.** En
+`docs/loop/SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt` (4881 bytes, **VEREDICTO:
+VERDE**), bloque `H`. Se fabrica un cotejo con `no` **en texto** en el puesto que
+DISCREPA:
+
+- **camino de hoy**: dudosos **1**, DENTRO `[]`, **FUERA `[2]`**;
+- **camino viejo**, corrido aqui y no citado: `bool()` sobre `['si', 'no', 'no']`
+  da **`[True, True, True]`**, o sea marca los TRES como dudosos y la discrepancia
+  le sale DENTRO. **LA MUTACION CAE.**
+- Mas la mutacion de los valores raros: `'quiza'`, `''`, `None`, `7` y `[]`
+  **LEVANTAN**; `'SI '` y `'No'` **si se leen**, porque la caja y los espacios son
+  lo unico que se normaliza.
+- Mas la mutacion de que `cuerpo_del_cotejo()` **entero** cae si una fila trae un
+  valor ilegible, **en vez de escribir un fichero con la columna inventada**.
+
+**d) EL COTEJO DEL AUDITOR, RE ESCRITO CON EL INSTRUMENTO ARREGLADO.**
+`scripts/loop/vuelta193_tarea5d_rehacer_cotejo_auditor.py`, salida en
+`docs/loop/SALIDA_V193_T5D_REHACER_COTEJO.txt` (2463 bytes) y fichero en
+`docs/loop/SALIDA_V193_T5D_COTEJO_AUDITOR_REHECHO.txt`. **Se le pasa `en dudosos`
+COMO TEXTO a proposito**, que es el camino que reventaba. **Su fichero no se
+toca.**
+
+| | obtenido | lo que el auditor publica a mano | |
+|---|---:|---:|---|
+| cotejados | 30 | 30 | **CALZA** |
+| coinciden | 25 | 25 | **CALZA** |
+| discrepan | 5 | 5 | **CALZA** |
+| DENTRO de sus dudosos | `965, 1068, 1814` | `965, 1068, 1814` | **CALZA** |
+| FUERA de sus dudosos | `1804, 2833` | `1804, 2833` | **CALZA** |
+
+**Y LA MEDICION QUE SEPARA LOS DOS CAMINOS, SOBRE SUS 30 FILAS DE VERDAD:** el
+camino viejo lee **`si` en 30 de 30** (el fichero trae 13 `si` y 17 `no`) y publica
+**0 discrepancias FUERA**; el de hoy publica **2** (`1804`, `2833`). **La regla de
+parada de `AUDITOR.md` 1.2 cuelga de esa cifra, asi que el camino viejo publicaba
+un VERDE donde habia una escalada.**
+
+**e) `cotejo_de_ciega.py` NACIO EN LA 192 Y TODAVIA NO HA ENTRADO EN LA NOMINA.**
+El carril `--reproduccion` de la TAREA 2, corrido en esta vuelta, mide que **los
+arneses que el censo RECLAMA son cuatro** y **ninguno de ellos es este fichero**.
+**Tocarlo ahora es ANTES de que entre, y eso es a favor y no en contra:** entrara
+ya con el `bool(du)` arreglado, con su guarda ensanchada y con su mutacion
+cubriendo la columna. **Lo digo aqui para que no se lea como que le meti mano a
+una entrada de la nomina.**
+
+**Y EL CORTE VIEJO NO SE BORRA:** queda en
+`docs/loop/SALIDA_V192_T5_MUTACION_FORMATO_COTEJO_CORTE_192.txt`, con su nombre y
+su vuelta.
 
 <!-- FIN ANEXO DE TAREAS -->
