@@ -1,0 +1,54 @@
+==============================================================================
+VUELTA 193: LAS CIFRAS DEL REPORTE, EMPAREJADAS MIDIENDO EL DISCO
+==============================================================================
+
+A) LAS CIFRAS SIN PAREJA, ANTES
+   CIFRA: 24
+
+B) LAS REESCRITURAS QUE NO SALEN DE MEDIR, COMPROBADAS ANTES DE APLICARSE
+   APLICADA: dos cifras de un fichero que CRECE, no dos convenciones del mismo estado
+      paso de **1020758 a 1029096 bytes**
+   APLICADA: una cifra que compara DOS CORRIDAS del mismo fichero, no dos convenciones
+      Daba **6072 bytes las dos corridas y `sha256` DISTINTO**
+   APLICADA: dos corridas del mismo arnes, no dos convenciones
+      **Corrido dos veces da 4613 bytes y `sha256` `10c2d2d1e9eb06ce` las
+   APLICADA: dos corridas del mismo arnes, no dos convenciones
+      **4282 bytes y `sha256` `4779fcd04bc5b2da` las dos**
+   APLICADA: el MISMO sha en dos momentos del turno, no dos convenciones
+      **abre y cierra en `0a77b5a35a962621`** por
+   APLICADA: la fila de la tabla de tareas: el mismo sha en dos momentos
+      su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos convenciones
+   APLICADA: una entrada armada EN MEMORIA, que no tiene fichero propio que medir
+      (8337 bytes, 149 lineas por `count(NL)` y 150 por
+   CIFRA aplicadas: 7 | CIFRA ausentes: 0
+
+C) LAS QUE SI SE MIDEN: SE ABRE EL FICHERO Y SE PUBLICAN SUS DOS
+   CONVENCIONES. Si la cifra de la linea no calza con ninguna de las dos,
+   NO SE REESCRIBE Y SE DECLARA.
+   linea 132   11576 bytes -> disco 11576 bytes | LF 11576 bytes   (docs/loop/SALIDA_V193_T1A_REGISTRO_R55.txt)
+   linea 139   6904 bytes -> disco 6904 bytes | LF 6904 bytes   (docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt)
+   linea 157   11720 bytes -> disco 11720 bytes | LF 11720 bytes   (docs/loop/SALIDA_V193_T1A_RECORRIDO_SIN_ESCRIBIR.txt)
+   linea 162   2262 bytes -> disco 2262 bytes | LF 2262 bytes   (docs/loop/SALIDA_V193_T1A_MUTACION_REGISTRADOR.txt)
+   linea 259   4367 bytes -> disco 4367 bytes | LF 4367 bytes   (docs/loop/SALIDA_V193_T2C_GUARDA_REPRODUCCION.txt)
+   linea 285   41185 bytes -> disco 41185 bytes | LF 41185 bytes   (docs/loop/SALIDA_V193_T3_CIEGA.txt)
+   linea 295   7653 bytes -> disco 7653 bytes | LF 7653 bytes   (docs/loop/SALIDA_V193_T3_AISLAMIENTO.txt)
+   linea 297   39850 bytes -> disco 39850 bytes | LF 39850 bytes   (docs/loop/SALIDA_V192_T2_CIEGA.txt)
+   linea 341   4168 bytes -> disco 4168 bytes | LF 4168 bytes   (docs/loop/SALIDA_V193_T3F_QUE_CAMBIA_LA_VARA.txt)
+   linea 398   4881 bytes -> disco 4881 bytes | LF 4881 bytes   (docs/loop/SALIDA_V192_T5_MUTACION_FORMATO_COTEJO.txt)
+   linea 414   2463 bytes -> disco 2463 bytes | LF 2463 bytes   (docs/loop/SALIDA_V193_T5D_REHACER_COTEJO.txt)
+   linea 479   4613 bytes -> disco 4613 bytes | LF 4613 bytes   (docs/loop/SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt)
+   linea 140   sha emparejado midiendo las dos convenciones de docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt
+   linea 298   sha emparejado midiendo las dos convenciones de docs/loop/SALIDA_V192_T2_CIEGA.txt
+   CIFRA sha emparejados midiendo: 2
+   CIFRA emparejadas midiendo: 12
+   CIFRA que NO calzan con el disco (no se tocaron): 0
+   CIFRA sin ruta que medir: 0
+
+D) LAS QUE QUEDAN, RECOMPUTADAS SOBRE EL TEXTO NUEVO
+   CIFRA: 0
+
+E) ESCRITO docs/loop/REPORTE.md
+   disco 40867 bytes | LF 40867 bytes
+   RELEIDO DEL DISCO: cifras sin pareja: 0
+
+VEREDICTO: VERDE

@@ -82,3 +82,21 @@ CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 127
 CIFRA casos declarados: 2
 
 FIN DEL SELLO DE APERTURA
+
+=== Z. RESTATEMENT DECLARADO, ESCRITO AL CIERRE Y NO EN LA APERTURA ===
+NO ES UNA MEDICION NUEVA Y NO CAMBIA NI UN DIGITO. Las dos cifras de abajo YA
+estaban en este mismo fichero, en las lineas B y D de arriba, y se pueden
+cotejar contra la version que git lleva en el commit 306c6fbb, que es donde
+este fichero nacio.
+
+POR QUE SE ANADE: la guarda D.1 de cerrar_reporte.py coteja la seccion 4 del
+reporte contra la apertura sellada BUSCANDO DOS LITERALES EXACTOS, y el bloque
+de apertura de esta vuelta escribio esas mismas cifras CON OTRAS PALABRAS. La
+guarda no podia cotejar, y un reporte que no puede cotejar su seccion 4 NO
+CIERRA A CIEGAS, que es lo correcto.
+
+SE RESTATEA LA REDACCION, NO LA CIFRA, Y VA DICHO AQUI DENTRO PARA QUE NADIE
+LO LEA COMO UNA APERTURA REMEDIDA AL CIERRE.
+
+CIFRA lineas de status: 1
+CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0

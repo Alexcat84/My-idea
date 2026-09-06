@@ -1,0 +1,27 @@
+LA DECLARACION VIVE EN SU PROPIO FICHERO, Y ESO TAMBIEN SE APRENDIO MIDIENDO:
+escrita DENTRO de SALIDA_V193_TSC_APERTURA.txt, el tallador la CONTO como
+salida de `tsc` y publico la celda `22 linea(s) de salida (revisar)`, cuando
+`tsc` no imprimio ni una. Una declaracion honesta metida en la sede de una
+cifra CONVIERTE LA CIFRA EN FALSA. Se saca aqui, y los dos ficheros de
+arriba vuelven a ser la salida cruda de su comando y nada mas.
+
+==============================================================================
+DECLARADO, Y NO SE DISIMULA: ESTA CELDA SE MIDIO AL CIERRE Y NO EN LA APERTURA.
+==============================================================================
+El bloque de apertura de esta vuelta, scripts/loop/vuelta193_apertura.py, NO
+corrio `npx tsc --noEmit` ni `pnpm test`: los omiti al escribirlo. Cuando el
+tallador pidio esas dos celdas de APERTURA al cierre, ya no existia el estado
+que las habria producido a tiempo.
+
+LO QUE HAGO, Y ES LO CONTRARIO DE TAPARLO: corro los dos comandos AHORA, en el
+mismo momento del cierre, y ESCRIBO AQUI DENTRO que este fichero NO es una
+medicion de apertura. La cifra es cierta; su MOMENTO no es el que su nombre
+dice.
+
+POR QUE LA CIFRA NO CAMBIA IGUALMENTE, Y ESO NO ES LA EXCUSA SINO EL DATO: esta
+vuelta no toco `web/` ni `engine/`, y el numstat de dataset/web/engine sale
+vacio al entrar y al salir. PERO ESO ES UNA RAZON, NO UNA MEDICION, y por eso
+no se usa para llamar apertura a lo que no lo es.
+
+ES CAIDA PROPIA MIA, DE METODO, Y VA DECLARADA EN LA SECCION 9 DEL REPORTE DE
+LA VUELTA 193 CON ESTE MISMO NOMBRE.
