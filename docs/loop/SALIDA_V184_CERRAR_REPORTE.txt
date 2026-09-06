@@ -1,0 +1,39 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 184, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 184 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 16031 | saltos de linea: 230
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt             2415 bytes, 11 filas de tabla
+   scripts/loop/_v184_cierre_texto.md                     13982 bytes, sha256 050cdbb4ea99e11c
+      ## 3. EL CIERRE, CON SU IDENTIDAD LEIDA DE GIT
+      ## 4. LA GUARDA DEL COMMIT DE `dataset/`, CORRIDA EL DIA QUE SERVIA
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CON SU NOMBRE Y NINGUNA TAPADA
+   docs/loop/SALIDA_V183_BATERIA.txt                    71753 bytes
+   CIFRA lineas no vacias de la bateria: 1009
+   vuelta que lleva dentro el nombre del fichero: 183
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): ROJO
+      motivo: el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LA VUELTA 184 CIERRA SUS DOS TAREAS, PONE EN CODIGO LAS DOS REPARACIONES QUE EL ACTA 184 ADJUDICO Y CORRE LA BATERIA HAS'
+   CIFRA numerales hallados en el veredicto: 1
+      'DOS'      -> 2 tareas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 2
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+ROJO, 1 motivo(s), y NO se escribe nada:
+   el fichero de bateria que se pasa es el de la vuelta 183 y se esta cerrando la 184. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPORTE.
