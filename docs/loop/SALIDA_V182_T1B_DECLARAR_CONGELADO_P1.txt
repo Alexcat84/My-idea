@@ -1,0 +1,41 @@
+VUELTA 182, TAREA 1.b: EL ULTIMO PASO DEL REMEDIO DE LA P.1
+sujeto: scripts/loop/vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py
+
+A) EL ANCLAJE, ANTES: NO DECIDIBLE
+   CONGELADO: tempfile, mkdtemp, git show, sha256
+   VIVO:      REPORTE.md
+   CIFRA lineas de la MAQUINA que nombran REPORTE.md: 5
+      | print("    toca REPORTE.md; su padre es el commit del acta del auditor)")
+      | print("B) EL SUJETO DE ENTONCES: EL REPORTE.md QUE HABIA AL ABRIR ESTA VUELTA")
+      | c, rep_entonces = git(["show", "%s:docs/loop/REPORTE.md" % head_ap])
+      | rep_tmp = os.path.join(tmp, "REPORTE.md")
+      | print("   (d) (el REPORTE.md del arbol no esta guardado byte a byte en el archivo")
+
+B) LOS CAMBIOS
+   APLICADO: d.1 prosa del bloque A
+   APLICADO: d.1 prosa del bloque B
+   APLICADO: d.1 el nombre del fichero fabricado en el temporal
+   APLICADO: d.1 prosa del cierre
+   APLICADO: d.2 la declaracion SUJETO CONGELADO, con su motivo
+   pasa de 13624 a 14914 bytes en LF
+
+C) EL ARNES, CORRIDO DESPUES: EXITCODE 0
+      | D) LA GUARDA CORRIDA CONTRA EL ESCENARIO DE ENTONCES, EN UN TEMPORAL
+      | VEREDICTO SOBRE EL ESCENARIO DE ENTONCES: ROJO
+      | ESCENARIO SIN ARCHIVO -> ROJO
+      | ESCENARIO CON ARCHIVO -> VERDE
+      | CIFRA comprobaciones: 7 | fallan: 0
+
+D) EL ANCLAJE, DESPUES: CONGELADO
+   CONGELADO: tempfile, mkdtemp, git show, sha256, SUJETO CONGELADO
+   VIVO:      REPORTE.md
+   CIFRA lineas de la MAQUINA que nombran REPORTE.md ahora: 3
+      | #     c, rep_entonces = git(["show", "%s:docs/loop/REPORTE.md" % head_ap])
+      | # SUJETO CONGELADO: el blob `docs/loop/REPORTE.md` del commit de apertura de la
+      | c, rep_entonces = git(["show", "%s:docs/loop/REPORTE.md" % head_ap])
+   guarda_del_sujeto_congelado(): 0 sin congelar
+   arneses_que_faltan(): ultima 180, faltan 0
+   nomina_invisible_al_censo(): 0
+   CIFRA censo: 169 | CIFRA nomina: 109
+
+VEREDICTO: VERDE

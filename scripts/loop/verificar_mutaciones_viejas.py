@@ -806,6 +806,27 @@ VIEJAS = [
     #
     # LA NOMINA CRECE DE 107 A 108.
     ("vuelta180_tarea5_mutacion_backlog_l02.py", False),
+    # VUELTA 182, TAREA 1.b. EL ARNES DE LA `P.1`, REMEDIADO Y RENOMBRADO.
+    # Nacio en la vuelta 172 con el nombre `vuelta172_tarea1c_guarda_que_
+    # mordio.py`, que NO llevaba ninguna de las FAMILIAS_DE_ARNES y por eso el
+    # censo NO LO VEIA: un arnes en rojo que nadie corre es una guarda apagada
+    # (`banco 9`). El acta 180 lo adjudico en su `6.6` con el orden dentro de la
+    # adjudicacion, primero el esperado y despues el nombre, y asi se hizo:
+    # `scripts/loop/vuelta182_tarea1b_remedio_p1.py`, salida en
+    # `docs/loop/SALIDA_V182_T1B_REMEDIO_P1.txt`. Caia con exit 1 fallando 1 de
+    # 6; hoy sale VERDE con 6 de 6.
+    #
+    # POR QUE ENTRA HOY Y NO EN LA 183, Y NO ES PRISA. La regla de entrada NO es
+    # el plazo de una vuelta, es EL SUJETO CONGELADO, y eso lo dice este mismo
+    # fichero desde la vuelta 148: "el plazo de una vuelta era EL MEDIO, NO EL
+    # FIN". Y el remedio de esta vuelta es justamente lo que le congela el
+    # sujeto: antes fabricaba el escenario historico COPIANDO
+    # docs/loop/reportes/ DE HOY, y ahora lo reconstruye entero de `git ls-tree`
+    # y `git show` sobre el commit de apertura de la vuelta 172. Su sujeto son
+    # blobs de git clavados.
+    #
+    # LA NOMINA CRECE DE 108 A 109.
+    ("vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

@@ -1,0 +1,61 @@
+==============================================================================
+VUELTA 182, TAREA 1.a: EL ACTA 181 ENTERA, REGISTRADA EN LA FORMA DE LA CASA
+==============================================================================
+
+A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA
+   acta 181: docs/loop/ACTA_AUDITOR.md, lineas 62907 a 63249 (343 lineas)
+   docs/loop/ACTA_AUDITOR.md -> disco 4197548 bytes
+
+B) LAS ADJUDICACIONES, CONTADAS Y NO TECLEADAS
+   prefijo usado: '7.'
+   CIFRA adjudicaciones halladas: 5
+      7.1 -> 1 aparicion(es)
+      7.2 -> 1 aparicion(es)
+      7.3 -> 1 aparicion(es)
+      7.4 -> 1 aparicion(es)
+      7.5 -> 1 aparicion(es)
+   EL CONTRASTE QUE PRUEBA QUE EL PREFIJO HACIA FALTA: el registrador
+   viejo busca '6.' clavado, y sobre ESTA acta eso da 0 adjudicaciones.
+
+C) LAS CAIDAS, POR SUS DOS FAMILIAS, Y EL PATRON VIEJO AL LADO
+   CAIDAS DEL AUDITOR (patron C.n): 1, en las lineas 62932
+   CAIDAS DEL EJECUTOR (patron E.n): 1, en las lineas 63078
+   EL PATRON VIEJO (CAIDA n), corrido sobre esta acta: 0
+   (el patron viejo da CERO y por eso hay dos patrones nuevos: el acta 181
+    no numera sus caidas como las actas 169 a 172. Se declara, no se fuerza)
+
+D) EL TITULO, CON SUS TRES NUMERALES COMPUTADOS
+   Registro de las cinco adjudicaciones, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 181
+
+E) LOS TITULOS LITERALES DE CADA ADJUDICACION, LEIDOS DEL ACTA
+   7.1 (linea 63168): 7.1 EL `E.2` SE REGISTRA Y NO ACUMULA.
+   7.2 (linea 63171): 7.2 LAS CINCO DISCREPANCIAS DE LA CIEGA SON MIAS, Y LAS ADJUDICO A FAVOR DEL ARCHIVO SIN REGATEAR.
+   7.3 (linea 63177): 7.3 LA `C.1` DE LA CIEGA NO CONTAMINO EL SUJETO, Y LO DIGO CON LA MEDICION.
+   7.4 (linea 63182): 7.4 EL 2.464 NO LO ADJUDICO YO, Y ESA ES LA ADJUDICACION.
+   7.5 (linea 63191): 7.5 LA BATERIA DE LA 181 NO CORRIO, Y NO ES CAIDA DE REPORTE.
+
+F) EL NUMERO DE LA ENTRADA, QUE NO SE TECLEA
+   serie recomputada de sus dos sedes: 34 entradas
+   CIFRA colisiones: 0 | CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.43
+
+G) LA DEUDA DE LA SERIE, MEDIDA Y NO CALLADA
+   ultima entrada escrita: R.42
+   actas con entrada propia en la serie: 161, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172
+   ACTAS ENTRE LA 173 Y LA 181 SIN ENTRADA EN LA SERIE: 9 -> 173, 174, 175, 176, 177, 178, 179, 180, 181
+   (esta vuelta escribe la de la 181, que es la que el encargo pide. Las
+    demas se declaran como deuda medida y NO se inventan aqui)
+
+H) LA IDEMPOTENCIA, COMPROBADA ANTES DE ESCRIBIR
+   la marca '## R.43.' ya esta en la sede: NO
+   la entrada entera ya esta: NO
+
+I) LA ENTRADA ARMADA
+   6749 bytes | 80 lineas
+
+J) ESCRITA EN docs/PENDIENTES.md
+   la sede pasa de 843961 a 850711 bytes
+   RELEIDA DEL DISCO: la entrada esta byte a byte: SI
+   guiones largos o medios en la entrada: 0
+   serie recomputada TRAS escribir: 35 entradas, siguiente libre R.44
+   CIFRA colisiones tras escribir: 0

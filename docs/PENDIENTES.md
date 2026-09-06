@@ -12720,3 +12720,84 @@ porque el encargo de la 174 la aplaza EXPRESAMENTE a la 175, detras de la
 recuperacion del cierre del reporte. **Y la bateria tampoco corre aqui**: por
 el regimen del fundador del 5 sep 2026 corre cada cinco vueltas, en vuelta
 propia, y la proxima es la 175.
+
+## R.43. Registro de las cinco adjudicaciones, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 181
+
+(Acta del auditor, vuelta 181, secciones 2, 5 y 7; escrito en la vuelta 182,
+TAREA 1.a.)
+
+Por adicion, como `R.21` a `R.42`. **Corte de todas las cifras de esta
+entrada: 5 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.42`. Salida:
+`docs/loop/SALIDA_V182_T1A_REGISTRO_R43.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 1.a EN CURSO Y LAS TAREAS 2 A 5 SIN
+CORRER, ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA
+PASADO.** Es la forma que la `6.4` del acta 172 adjudico como correcta y que
+la realidad probo cuando la vuelta 172 se corto: donde una glosa dice
+EJECUTADA, la prueba va nombrada con su fichero de salida; donde dice que va
+a ejecutarse, se dice que **todavia no ha corrido** y no se disfraza.
+
+**Y LOS TRES NUMERALES DEL TITULO TAMPOCO ESTAN TECLEADOS:** se cuentan del
+acta acotada (lineas 62907 a 63249) y de ahi sale el numeral en palabra, incluida
+la concordancia. **5 adjudicaciones `7.n`, 1 caida propia del auditor
+(`C.n`) y 1 caida del ejecutor (`E.n`).**
+
+**EL PATRON DE CAIDA SI CAMBIA ESTA VEZ, Y SE DECLARA EN VEZ DE FORZARLO.**
+Las actas 169 a 172 numeraban sus caidas `**CAIDA n.`; el acta 181 usa
+``**`C.1`.`` para la del auditor y ``**`E.2`.`` para la del ejecutor. **El
+patron viejo, corrido sobre el acta 181, cuenta CERO**, y esa cifra se
+publica al lado de las otras dos para que se vea que no se afloja nada: se
+anaden dos patrones nuevos, no se ensancha el viejo hasta que trague.
+
+**Y EL PREFIJO DE LAS ADJUDICACIONES TAMBIEN.** `claves_de_adjudicacion()`
+del registrador viejo lleva el `6.` clavado en el codigo y el acta 181 numera
+`7.1` a `7.5`. **Corrida con el prefijo viejo sobre esta acta, la cuenta da
+CERO.** Aqui el prefijo es parametro. `PALABRA` y `titulo_de_la_negrita` **se
+importan** de `scripts/loop/vuelta172_tarea1_registrar_acta171.py`, no se
+copian, que es la `6.6` del acta 172 al pie de la letra.
+
+**LAS CINCO ADJUDICACIONES, CON SU LINEA EN EL ACTA LEIDA HOY.** El titulo de
+cada una es LITERAL del fichero; la glosa que sigue es prosa del ejecutor y
+va marcada como tal.
+
+  - **7.1 (`docs/loop/ACTA_AUDITOR.md:63168`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.1 EL `E.2` SE REGISTRA Y NO ACUMULA."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y NO HAY NADA QUE HACER PORQUE LA CAIDA ES AJENA Y YA ESTA CERRADA. El `E.2` de la 181 se registra y NO acumula por la letra afinada del 27 ago 2026: la cifra vivia en prosa de acompanamiento y no en tabla, cabecera ni conclusion. LA RACHA DE REPORTE SIGUE EN UNO, y esta vuelta la cita sin moverla.
+  - **7.2 (`docs/loop/ACTA_AUDITOR.md:63171`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"7.2 LAS CINCO DISCREPANCIAS DE LA CIEGA SON MIAS, Y LAS ADJUDICO A FAVOR DEL ARCHIVO SIN REGATEAR."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA EN LA TAREA 1.c DE ESTA VUELTA. La adjudicacion encarga la RELECTURA AL DOBLE del tramo por `AUDITOR.md` 1.2, porque las cinco discrepancias salieron FUERA del marcado. El tramo son los 30 puestos que la seccion 8 del acta lista, y esta vuelta los relee al doble con el instrumento de la TAREA 1.c, no a mano.
+  - **7.3 (`docs/loop/ACTA_AUDITOR.md:63177`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.3 LA `C.1` DE LA CIEGA NO CONTAMINO EL SUJETO, Y LO DIGO CON LA MEDICION."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA. Es la declaracion del propio auditor de que su `C.1` no contamino el sujeto de la ciega, con su medicion delante (solape cero con los 43 de la 180, guarda de fuga en 0, clases selladas antes del destape). No es trabajo del ejecutor, y se cita porque la TAREA 2 de esta vuelta convierte en codigo justamente el remedio que la `C.1` rompio.
+  - **7.4 (`docs/loop/ACTA_AUDITOR.md:63182`, leida hoy). VIA: EJECUTADA.** Titulo
+    literal del acta: *"7.4 EL 2.464 NO LO ADJUDICO YO, Y ESA ES LA ADJUDICACION."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** EJECUTADA POR LA VIA QUE EL FUNDADOR ABRIO, Y NO POR EXTENSION. La `7.4` dice que el 2.464 NO lo adjudica el auditor porque seria decidir el alcance de una fase, y lo sube a parada. El fundador decidio el 5 sep 2026 por la opcion `b` de la PREGUNTA 1, y las TAREAS 3 y 4 de esta vuelta la ejecutan: instrumento del diferenciador movido, y a la cola SOLO las `D` con la lesion exacta.
+  - **7.5 (`docs/loop/ACTA_AUDITOR.md:63191`, leida hoy). VIA: SIN TOCAR NADA.** Titulo
+    literal del acta: *"7.5 LA BATERIA DE LA 181 NO CORRIO, Y NO ES CAIDA DE REPORTE."*
+    **QUE HACE ESTA VUELTA CON ELLA (glosa del ejecutor, no del acta):** SE ACATA SIN TOCAR NADA, Y SE REGISTRA A FAVOR. El acta declara que la bateria de la 181 no corrio y que eso NO es caida de reporte, porque el esqueleto por anexion dejo la fila diciendo ABIERTA, SIN CERRAR y no publico ninguna cifra de una corrida que no hubo. La bateria va a la 183 por tramos resumibles, y la TAREA 5 de esta vuelta la deja preparada y declarada.
+
+**LA CAIDA PROPIA DEL AUDITOR, EN LA LINEA 62932, Y NO ES TRABAJO DEL
+EJECUTOR.** Es la `C.1`, la **cuarta seguida**, y ademas la primera en que el
+remedio escrito existia y aun asi no se cumplio. **Se registra porque la
+TAREA 2 de esta vuelta convierte ese remedio en codigo**, que es la mitad
+que el fundador concedio el 5 sep 2026 (PREGUNTA 3, opcion `c`); la otra
+mitad, que romper un remedio escrito ACUMULE, ya esta en `AUDITOR.md`.
+
+**LA CAIDA DEL EJECUTOR, EN LA LINEA 63078: `E.2`, Y NO ACUMULA.** La cuenta de
+quien nombra `SALIDA_V180_HUECO_BATERIA` en `scripts/` era 1 cuando se midio
+y era 3 cuando se publico. **La cifra se midio bien y se publico tarde**, y
+vive en prosa de acompanamiento, no en tabla, cabecera ni conclusion: por la
+letra afinada del 27 ago 2026 **NO acumula**. **La racha de reporte se queda
+en UNO.**
+
+**LA DEUDA DE LA SERIE, MEDIDA HOY Y DECLARADA EN VEZ DE CALLADA.** La ultima
+entrada escrita antes de esta registraba el acta de la vuelta **172**
+(`R.42`). **Las actas 173 a 180 no tienen entrada propia en la serie.** Esta
+vuelta escribe la de la 181, que es la que su encargo pide, y **deja las ocho
+anteriores dichas y contadas**, con su cifra en
+`docs/loop/SALIDA_V%d_T1A_REGISTRO_R%d.txt`, seccion G. **No se inventan
+aqui**: escribir de golpe ocho registros que nadie encargo seria decidir
+alcance por mi cuenta.

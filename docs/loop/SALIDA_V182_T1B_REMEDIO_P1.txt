@@ -1,0 +1,48 @@
+VUELTA 182, TAREA 1.b: EL REMEDIO DE LA P.1 DEL ACTA 180
+orden: PRIMERO EL ESPERADO, DESPUES EL NOMBRE (acta 180, linea 62818)
+
+A) EL SUJETO, ANTES DE TOCARLO
+   scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py existe: SI
+   scripts/loop/vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py existe: NO
+   disco 9127 bytes
+   CORRIDO ANTES DEL REMEDIO -> EXITCODE 1
+      | CIFRA comprobaciones: 6 | fallan: 1
+      LA QUE FALLA: el reporte de entonces NO estaba en el archivo                 NO
+
+B) EL ESPERADO, ARREGLADO (y esto va PRIMERO)
+   APLICADO: (a) el bloque C se reconstruye de git
+   APLICADO: (a) el bloque D usa el escenario de entonces
+   APLICADO: (b) la comprobacion deja de mirar el repo de hoy
+   el arnes pasa de 9127 a 11525 bytes en LF
+
+   CORRIDO CON EL ESPERADO ARREGLADO Y EL NOMBRE VIEJO -> EXITCODE 0
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | CIFRA comprobaciones: 6 | fallan: 0
+      | VERDE: LA GUARDA QUE NACIO EN LA VUELTA 171 ESTA MORDIENDO EN LA 172,
+
+C) Y AHORA EL NOMBRE, PORQUE EL ESPERADO YA ESTA VERDE
+   git mv -> exit 0 
+   scripts/loop/vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py existe: SI
+   scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py existe: NO
+   CORRIDO CON EL NOMBRE NUEVO -> EXITCODE 0
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+      | CIFRA comprobaciones: 6 | fallan: 0
+      | VERDE: LA GUARDA QUE NACIO EN LA VUELTA 171 ESTA MORDIENDO EN LA 172,
+
+D) EL CENSO, QUE ES EL MOTIVO ENTERO DEL RENOMBRADO
+   FAMILIAS_DE_ARNES: mutacion, caso_positivo, simular
+   PATRON_ARNES casa con el nombre VIEJO: NO
+   PATRON_ARNES casa con el nombre NUEVO: SI
+   CIFRA censo arneses_del_directorio(): 169
+   el nombre NUEVO esta en el censo: SI
+   el nombre NUEVO esta en la nomina VIEJAS: NO
+   (que NO este en la nomina hoy es lo correcto y lo dice el propio fichero
+    de la bateria: un arnes entra en la nomina EN LA VUELTA SIGUIENTE a la
+    que nace. Aqui se declara para que nadie lo lea como un hueco)
+   arneses_que_faltan(): ultima vuelta de la nomina 180, faltan 1
+      FALTA: vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py
+

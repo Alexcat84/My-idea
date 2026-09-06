@@ -1,0 +1,22 @@
+VUELTA 182, TAREA 1.b: EL REMEDIO DEL E.1 DEL ACTA 180
+sujeto: scripts/loop/cerrar_reporte.py
+   ANTES: 770 lineas | disco 38947 bytes | LF 38947 bytes
+
+EL ESTADO DE ANTES, MEDIDO Y NO RECORDADO:
+   patron VIEJO sobre docs/loop/SALIDA_V180_HUECO_BATERIA.txt      -> None
+   patron VIEJO sobre docs/loop/SALIDA_V181_BATERIA.txt            -> 181
+   patron VIEJO sobre docs/loop/SALIDA_V182_HUECO_BATERIA.txt      -> None
+   (el primero da None y ESA es la causa 1 del E.1)
+
+   APLICADO: (a) el patron ensanchado
+   APLICADO: (c) la funcion pura rama_de_la_seccion9
+   APLICADO: (b) None deja de ser silencio, en main()
+   APLICADO: (c) main() usa la rama decidida
+
+   DESPUES: 825 lineas | LF 42167 bytes
+   CRECE EN: 3220 bytes
+
+ESCRITO scripts/loop/cerrar_reporte.py
+   RELEIDO DEL DISCO, identico a lo que se quiso escribir: SI
+   disco 42167 bytes
+   SINTAXIS: OK

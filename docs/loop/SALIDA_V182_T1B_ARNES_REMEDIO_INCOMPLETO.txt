@@ -1,0 +1,84 @@
+ARNES DE rama_de_la_seccion9(), REMEDIO DEL E.1 DEL ACTA 180
+sujeto vivo: scripts/loop/cerrar_reporte.py
+
+A) EL PATRON, ANTES Y DESPUES, SOBRE LOS MISMOS NOMBRES
+   docs/loop/SALIDA_V180_HUECO_BATERIA.txt          viejo -> None  | vivo -> 180
+   docs/loop/SALIDA_V181_BATERIA.txt                viejo -> 181   | vivo -> 181
+   docs/loop/SALIDA_V183_BATERIA_TRAMO_1.txt        viejo -> 183   | vivo -> 183
+   docs/loop/SALIDA_DE_LA_BATERIA.txt               viejo -> None  | vivo -> None
+
+B) LOS CASOS, CON LAS DOS LOGICAS AL LADO
+   EL CASO REAL DE LA 180: fichero con lineas y con HUECO en el nombre
+      lineas 21   fichero docs/loop/SALIDA_V180_HUECO_BATERIA.txt        vuelta 180
+      VIEJA -> CORRIDA  | VIVA -> CORRIDA  | esperada CORRIDA  | CALZA
+      motivo de la viva: la bateria de la vuelta 180 trae 21 linea(s) no vacias
+   EL MISMO FICHERO PASADO A OTRA VUELTA: es corrida ajena
+      lineas 21   fichero docs/loop/SALIDA_V180_HUECO_BATERIA.txt        vuelta 182
+      VIEJA -> CORRIDA  | VIVA -> ROJO     | esperada ROJO     | CALZA
+      motivo de la viva: el fichero de bateria que se pasa es el de la vuelta 180 y se esta cerrando la 182. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+   HUECO DE VERDAD: fichero de ESTA vuelta y sin lineas
+      lineas 0    fichero docs/loop/SALIDA_V182_HUECO_BATERIA.txt        vuelta 182
+      VIEJA -> HUECO    | VIVA -> HUECO    | esperada HUECO    | CALZA
+      motivo de la viva: la bateria de la vuelta 182 no corrio: su fichero no existe o esta vacio
+   BATERIA DE VERDAD: fichero de ESTA vuelta y con lineas
+      lineas 900  fichero docs/loop/SALIDA_V182_BATERIA.txt              vuelta 182
+      VIEJA -> CORRIDA  | VIVA -> CORRIDA  | esperada CORRIDA  | CALZA
+      motivo de la viva: la bateria de la vuelta 182 trae 900 linea(s) no vacias
+   CORRIDA AJENA CLASICA: la de la 176 pasada a la 182
+      lineas 900  fichero docs/loop/SALIDA_V176_BATERIA.txt              vuelta 182
+      VIEJA -> ROJO     | VIVA -> ROJO     | esperada ROJO     | CALZA
+      motivo de la viva: el fichero de bateria que se pasa es el de la vuelta 176 y se esta cerrando la 182. UNA CORRIDA DE OTRA VUELTA NO CIERRA ESTE REPO
+   FICHERO ANONIMO: el nombre no dice de que vuelta es
+      lineas 900  fichero docs/loop/SALIDA_DE_LA_BATERIA.txt             vuelta 182
+      VIEJA -> CORRIDA  | VIVA -> ROJO     | esperada ROJO     | CALZA
+      motivo de la viva: el fichero de bateria 'docs/loop/SALIDA_DE_LA_BATERIA.txt' no dice de que vuelta es. Un fichero anonimo NO cierra un reporte: se l
+   FICHERO ANONIMO Y VACIO: sigue siendo ROJO, no HUECO
+      lineas 0    fichero docs/loop/bateria.txt                          vuelta 182
+      VIEJA -> HUECO    | VIVA -> ROJO     | esperada ROJO     | CALZA
+      motivo de la viva: el fichero de bateria 'docs/loop/bateria.txt' no dice de que vuelta es. Un fichero anonimo NO cierra un reporte: se llama SALIDA_V
+   SIN VUELTA: no se puede juzgar nada
+      lineas 900  fichero docs/loop/SALIDA_V182_BATERIA.txt              vuelta None
+      VIEJA -> ROJO     | VIVA -> ROJO     | esperada ROJO     | CALZA
+      motivo de la viva: no se dijo de que vuelta es este reporte, y sin eso no se puede juzgar ninguna bateria
+   TRAMO DE LA 183: el nombre por tramos sigue diciendo su vuelta
+      lineas 900  fichero docs/loop/SALIDA_V183_BATERIA_TRAMO_1.txt      vuelta 183
+      VIEJA -> CORRIDA  | VIVA -> CORRIDA  | esperada CORRIDA  | CALZA
+      motivo de la viva: la bateria de la vuelta 183 trae 900 linea(s) no vacias
+
+   CIFRA casos: 9
+   CIFRA que CALZAN: 9
+   CIFRA que NO CALZAN: 0
+   CIFRA casos en que la logica vieja y la viva DIFIEREN: 3
+
+C) EL CASO DE LA CAIDA REAL, SOLO, PORQUE ES EL QUE IMPORTA
+   la 180 paso un fichero de 21 lineas llamado SALIDA_V180_HUECO_BATERIA
+   LA LOGICA VIEJA lo mandaba a: CORRIDA
+   LA LOGICA VIVA lo manda a:    CORRIDA
+   motivo: la bateria de la vuelta 180 trae 21 linea(s) no vacias
+   LA CABECERA QUE SALDRIA CON CADA UNA:
+      vieja -> ## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE
+      viva  -> ## 9. LA BATERIA DE MUTACIONES, CORRIDA ENTERA Y SOLA AL CIERRE
+   Y LA GUARDA hueco_declarado_que_falta() CORRE: NO, porque la rama de CORRIDA no la llama
+
+   DICHO CON TODAS LAS LETRAS: la rama VIVA para este caso sigue siendo
+   CORRIDA, y eso NO es el remedio a medias. El fichero de la 180 SI era el de
+   la vuelta 180 y SI traia lineas; lo que estaba roto no era la rama para
+   ese fichero sino que el instrumento no podia SABER de que vuelta era.
+   Lo que el remedio arregla se ve en el caso 2 y en los dos anonimos: el
+   mismo fichero pasado a OTRA vuelta antes se colaba en silencio y ahora
+   es ROJO, y un fichero cuyo nombre no dice su vuelta antes pasaba y ahora
+   es ROJO. LO QUE FALTABA ERA LA IDENTIDAD, NO EL CONTEO DE LINEAS.
+
+D) LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE ESTO CAE
+   caso mutado: el fichero de la 180 pasado a un cierre de la 182
+   la rama COMPUTADA (no escrita) es: ROJO
+   con el esperado ROJO     -> PASA
+   con el esperado CORRIDA  -> CAE
+   EL CASO CAE AL MUTAR EL ESPERADO A CORRIDA: SI
+
+   LA SEGUNDA MUTACION: SE LE QUITA LA IDENTIDAD AL NOMBRE.
+   con el nombre sin SALIDA_V<N>_ la rama computada es: ROJO
+   TENIA QUE SER ROJO: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

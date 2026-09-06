@@ -1,0 +1,28 @@
+CASO POSITIVO POR MUTACION de vuelta182_tarea1a_registrar_acta181.py
+
+   acta fabricada con adj=5 aud=1 eje=1
+      el contador dice adj=5 aud=1 eje=1 -> CALZA
+      titulo computado: Registro de las cinco adjudicaciones, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 181
+   acta fabricada con adj=3 aud=2 eje=1
+      el contador dice adj=3 aud=2 eje=1 -> CALZA
+      titulo computado: Registro de las tres adjudicaciones, las dos caidas propias del auditor y la caida del ejecutor del acta de la vuelta 181
+   acta fabricada con adj=12 aud=1 eje=4
+      el contador dice adj=12 aud=1 eje=4 -> CALZA
+      titulo computado: Registro de las doce adjudicaciones, la caida propia del auditor y las cuatro caidas del ejecutor del acta de la vuelta 181
+   acta fabricada con adj=1 aud=1 eje=1
+      el contador dice adj=1 aud=1 eje=1 -> CALZA
+      titulo computado: Registro de la adjudicacion, la caida propia del auditor y la caida del ejecutor del acta de la vuelta 181
+
+LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE EL CASO PUEDE CAER:
+   medido sobre el acta fabricada (variable computada): 5
+   con el esperado BUENO   (5): PASA
+   con el esperado MUTADO  (6): CAE
+   EL CASO CAE AL MUTAR EL ESPERADO: SI
+
+LA SEGUNDA MUTACION: EL PREFIJO. Con el prefijo viejo el contador tiene que
+dar CERO sobre un acta que numera 7.n, que es justo el motivo de este fichero.
+   prefijo '6.' sobre acta de '7.' -> 0 adjudicaciones
+   EL CASO CAE CON EL PREFIJO VIEJO: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE

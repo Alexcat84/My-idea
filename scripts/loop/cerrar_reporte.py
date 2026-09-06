@@ -160,7 +160,22 @@ CAB_9_HUECO = "## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO"
 # marca, o no hay hueco declarado y la ausencia sigue siendo muda.
 MARCA_HUECO = "HUECO DECLARADO Y MEDIDO"
 MARCA_ATRIBUCION = "ATRIBUCION:"
-PATRON_FICHERO_BATERIA = re.compile(r"SALIDA_V(\d+)_BATERIA")
+# EL PATRON, ENSANCHADO EN LA VUELTA 182 POR EL REMEDIO DEL `E.1` DEL ACTA 180.
+# ANTES ERA r"SALIDA_V(\d+)_BATERIA" Y ESA ERA LA PRIMERA DE LAS TRES CAUSAS: el
+# fichero que la vuelta 180 paso se llamaba `SALIDA_V180_HUECO_BATERIA.txt`, con
+# la palabra HUECO metida entre la vuelta y la palabra BATERIA, asi que el patron
+# NO casaba y `vuelta_de_fichero()` devolvia None. El trozo `[A-Z0-9_]*` admite
+# cualquier cosa en medio SIN admitir minusculas ni otro fichero: sigue exigiendo
+# `SALIDA_V<numero>_` delante y `BATERIA` detras.
+PATRON_FICHERO_BATERIA = re.compile(r"SALIDA_V(\d+)_[A-Z0-9_]*BATERIA")
+
+# EL NOMBRE DE UNA CORRIDA, QUE NO ES LO MISMO QUE UN NOMBRE QUE LLEVE UNA VUELTA
+# DENTRO. Nace en la vuelta 182 con la pieza (d) del remedio del `E.1`:
+# `SALIDA_V180_BATERIA.txt` y `SALIDA_V176_BATERIA_TRAMO_3.txt` SI son nombres de
+# corrida; `SALIDA_V180_HUECO_BATERIA.txt` NO lo es, y ese fue justamente el
+# fichero con el que la vuelta 180 publico una cabecera falsa sobre un cuerpo que
+# decia lo contrario.
+PATRON_NOMBRE_DE_CORRIDA = re.compile(r"^SALIDA_V\d+_BATERIA[A-Z0-9_]*\.txt$")
 PATRON_BYTES = re.compile(r"(\d[\d.]*)\s+bytes")
 
 # LA PAREJA DE CIFRAS (vuelta 178, TAREA 1.e). Un sha se busca SOLO en lineas
@@ -242,6 +257,63 @@ def vuelta_de_fichero(nombre):
         return None
     m = PATRON_FICHERO_BATERIA.search(nombre)
     return int(m.group(1)) if m else None
+
+
+def rama_de_la_seccion9(lineas_bateria, nombre_bateria, vuelta):
+    """QUE RAMA LE TOCA A LA SECCION 9, Y POR QUE. Devuelve (rama, motivo) con
+    rama en `CORRIDA`, `HUECO` o `ROJO`.
+
+    NACE EN LA VUELTA 182 COMO REMEDIO DEL `E.1` DEL ACTA 180, y nace FUERA de
+    `main()` a proposito. Mientras esta decision vivio dentro de `main()` no se
+    podia probar sin escribir un reporte entero, y por eso nadie la probo: el
+    reporte de la 180 salio diciendo CORRIDA ENTERA Y SOLA sobre una seccion cuyo
+    cuerpo decia que nadie la corrio.
+
+    LAS TRES REGLAS, EN ORDEN, Y LA PRIMERA ES LA QUE FALTABA:
+
+      1. SI EL NOMBRE NO DICE DE QUE VUELTA ES, ES ROJO. Antes esto era silencio:
+         `vuelta_de_fichero()` devolvia None y la guarda de vuelta ajena se
+         saltaba porque su condicion pedia `ajena is not None`. Un fichero de
+         bateria anonimo NO cierra un reporte (`banco 9`, fallar ruidoso).
+      2. SI EL NOMBRE DICE OTRA VUELTA, ES ROJO. Esta ya existia y se conserva
+         palabra por palabra: una corrida de otra vuelta no cierra este reporte.
+      3. SI EL NOMBRE NO ES EL DE UNA CORRIDA, ES `HUECO` AUNQUE TRAIGA LINEAS.
+         `SALIDA_V<N>_BATERIA...` es el nombre de una corrida;
+         `SALIDA_V<N>_HUECO_BATERIA` no lo es. ESTA ES LA REGLA QUE LE FALTABA A
+         LA 180: su fichero era de la vuelta 180 y traia 21 lineas, asi que ni la
+         identidad ni el conteo lo paraban, y la cabecera salio diciendo CORRIDA
+         ENTERA Y SOLA sobre un cuerpo que decia lo contrario.
+      4. SOLO ENTONCES SE MIRA SI TRAE LINEAS. Con lineas, `CORRIDA`; sin lineas,
+         `HUECO`, que es la rama donde vive `hueco_declarado_que_falta()`.
+
+    LA RAMA DE CORRIDA SE VUELVE MAS ESTRECHA, NO MAS ANCHA: antes bastaba con
+    traer lineas, ahora hay que traer lineas Y ser de esta vuelta.
+
+    PURA: no lee ni escribe nada, para que su arnes la pueda tumbar caso por caso
+    sin tocar el repo."""
+    if vuelta is None:
+        return "ROJO", ("no se dijo de que vuelta es este reporte, y sin eso no se "
+                        "puede juzgar ninguna bateria")
+    ajena = vuelta_de_fichero(nombre_bateria)
+    if ajena is None:
+        return "ROJO", ("el fichero de bateria %r no dice de que vuelta es. Un "
+                        "fichero anonimo NO cierra un reporte: se llama "
+                        "SALIDA_V<N>_BATERIA o no vale" % (nombre_bateria,))
+    if ajena != vuelta:
+        return "ROJO", ("el fichero de bateria que se pasa es el de la vuelta %d y "
+                        "se esta cerrando la %d. UNA CORRIDA DE OTRA VUELTA NO "
+                        "CIERRA ESTE REPORTE." % (ajena, vuelta))
+    if not PATRON_NOMBRE_DE_CORRIDA.match(os.path.basename(nombre_bateria)):
+        return "HUECO", ("el fichero %r es de la vuelta %d pero NO se llama como "
+                         "una corrida: una corrida se llama SALIDA_V<N>_BATERIA y "
+                         "esto no lo es, asi que no puede declararse corrida por "
+                         "mucho que traiga lineas"
+                         % (os.path.basename(nombre_bateria), vuelta))
+    if lineas_bateria:
+        return "CORRIDA", ("la bateria de la vuelta %d trae %d linea(s) no vacias"
+                           % (vuelta, len(lineas_bateria)))
+    return "HUECO", ("la bateria de la vuelta %d no corrio: su fichero no existe o "
+                     "esta vacio" % vuelta)
 
 
 def hueco_declarado_que_falta(seccion9, vuelta):
@@ -629,12 +701,15 @@ def main():
     print("   CIFRA lineas no vacias de la bateria: %d" % len(lineas_bat))
     ajena = vuelta_de_fichero(a.bateria)
     print("   vuelta que lleva dentro el nombre del fichero: %s" % ajena)
-    if ajena is not None and ajena != V:
-        rojos.append("el fichero de bateria que se pasa es el de la vuelta %d y se "
-                     "esta cerrando la %d. UNA CORRIDA DE OTRA VUELTA NO CIERRA "
-                     "ESTE REPORTE." % (ajena, V))
+    # LA DECISION DE RAMA YA NO SE TOMA AQUI: la toma rama_de_la_seccion9(), que
+    # es pura y tiene arnes propio. REMEDIO DEL `E.1` DEL ACTA 180, vuelta 182.
+    rama, motivo_rama = rama_de_la_seccion9(lineas_bat, a.bateria, V)
+    print("   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): %s" % rama)
+    print("      motivo: %s" % motivo_rama)
+    if rama == "ROJO":
+        rojos.append(motivo_rama)
     atribucion = a.hueco_atribucion.strip()
-    if not lineas_bat:
+    if rama == "HUECO":
         print("   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:")
         print("   --hueco-atribucion: %s"
               % (repr(atribucion) if atribucion else "(vacia)"))
@@ -676,7 +751,7 @@ def main():
     texto = texto[:i] + veredicto + texto[j + 1:]
     print("   veredicto escrito: %d bytes" % len(veredicto.encode("utf-8")))
 
-    if lineas_bat:
+    if rama == "CORRIDA":
         seccion9 = (
             CAB_9 + NL + NL +
             "**CORRIDA ENTERA Y SOLA, Y SU SALIDA VA AQUI COMPLETA Y SIN RECORTAR.**" + NL +
