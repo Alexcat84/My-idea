@@ -186,9 +186,17 @@ discutibles, **7 A FAVOR y 0 EN CONTRA**.
 **EL CERO DE `EN CONTRA` SE REPITE POR SEGUNDA ACTA SEGUIDA, Y ESTA VEZ NO SE
 VUELVE A PROBAR POR MUTACION: SE DICE CON SU FICHERO**, que es lo que el encargo
 manda con esas palabras. **Y el fichero se MIDE en vez de creerse:**
-`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`, **disco 6904 bytes | LF 6904
-bytes**, `sha256` LF `795c0ec740bdd5cc`, veredicto leido del propio fichero
-`VEREDICTO: VERDE`, y la aguja `EN CONTRA` aparece **13** veces dentro. **Si ese
+`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`,
+**disco 6904 bytes | LF 6904 bytes**, con su `sha256` LF y su veredicto leidos
+del propio fichero y no de la memoria:
+
+```
+   docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt -> disco 6904 bytes | LF 6904 bytes
+   sha256 LF: 795c0ec740bdd5cc1e1b821085c0815f899e92fddd33d3d477f375bb99dc223a
+   su veredicto, leido del propio fichero: 'VEREDICTO: VERDE'
+   la aguja `EN CONTRA` aparece 13 vez(ces) en el arnes
+```
+ **Si ese
 fichero no existiera o midiera cero bytes, este instrumento haria PARADA**: una
 ruta que promete prueba sobre un vacio es caida de cifra (`EJECUTOR.md` 1). La
 guarda vieja de la 190 (`if not en_contra: PARADA`) corrida sobre el acta 192
@@ -479,8 +487,8 @@ fichero.
 **(e) EL CASO POSITIVO POR MUTACION, EN SU PROPIO FICHERO DE NOMBRE ESTABLE:**
 `scripts/loop/guarda_de_entrada_a_la_nomina.py`, **VERDE** con **13 casos** y
 **cinco mutaciones que caen de verdad**
-(`docs/loop/SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`, **disco 2433 bytes | LF
-2433 bytes**). La guarda **cruza lo que ninguna de las dos guardas viejas
+(`docs/loop/SALIDA_V192_T3_MUTACION_ENTRADA_NOMINA.txt`,
+**disco 2433 bytes | LF 2433 bytes**). La guarda **cruza lo que ninguna de las dos guardas viejas
 cruzaba**: `guarda_del_sujeto_congelado_separada()` mira **la nomina de hoy**, o
 sea los que ya entraron, y cuando muerde ya es tarde; `arneses_que_faltan()` mira
 **quien va a entrar** pero no mira su anclaje. **La pregunta nueva es el cruce: de
@@ -554,8 +562,8 @@ cosa que no puede, dicha porque es mas fina: **no sabe si lo que se leyo era del
 sujeto cuando el archivo se abre por fuera de estas funciones**.
 
 **(c) EL CASO POSITIVO POR MUTACION: VERDE, CON 30 CASOS Y CERO ROJOS**
-(`docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`, **disco 4282 bytes | LF
-4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
+(`docs/loop/SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt`,
+**disco 4282 bytes | LF 4282 bytes**). **SUJETO CONGELADO:** fabrica su propio archivo, su propia ciega y
 su propio sello en un directorio temporal y los retira. **La mutacion que importa
 es la `E`:** se sustituye `leer_veredictos()` por **la version sin el apunte de
 destape, que es exactamente el codigo de antes de esta vuelta**, y se comprueba
@@ -716,9 +724,10 @@ que lo prueban.
 ## 3. LO QUE ESTA VUELTA SOSTIENE, Y NI UNA PALABRA MAS
 
 **LAS CINCO TAREAS CERRARON Y NINGUN VEREDICTO DEL ARCHIVO SE MOVIO.**
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **4054129 bytes en disco y
-4054129 bytes normalizados a LF**, `sha256` LF `0a77b5a35a962621`, medido en el
-bloque de apertura, en los dos instrumentos de la TAREA 2 y otra vez al cierre.
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+abre y cierra en **4054129 bytes en disco y 4054129 bytes normalizados a LF**,
+con el mismo `sha256` LF, medido en el bloque de apertura, en los dos
+instrumentos de la TAREA 2 y otra vez al cierre.
 
 **LO QUE SOSTENGO, UNO A UNO:**
 
