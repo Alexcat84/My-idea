@@ -2,8 +2,8 @@ EL RECHAZO DEL TALLADOR DE CABECERA, SELLADO EN DISCO
 instrumento: scripts/loop/tallar_cabecera_reporte.py
 vuelta: 195
 
-CIFRA celdas que no se pudieron leer: 20
-CIFRA de ellas del lado APERTURA: 1
+CIFRA celdas que no se pudieron leer: 19
+CIFRA de ellas del lado APERTURA: 0
 CIFRA de ellas del lado CIERRE  : 19
 CIFRA de ellas del lado LOS DOS : 0
 CIFRA de ellas del lado SIN LADO: 0
@@ -27,7 +27,6 @@ LAS CELDAS, UNA A UNA, CON SU LADO
    [CIERRE  ] no existe la salida SALIDA_V195_TSC_CIERRE.txt
    [CIERRE  ] no existe la salida SALIDA_V195_DESFASE_CALIBRADO_CIERRE.txt
    [CIERRE  ] sin texto para desfase CIERRE
-   [APERTURA] git log --diff-filter=A no trae ningun commit que anada docs/loop/SALIDA_V195_HEAD_APERTURA.txt: no se talla la procedencia del sello
    [CIERRE  ] no existe el sello SALIDA_V195_HEAD_CIERRE.txt (el ejecutor debe correr `git rev-parse HEAD` tras la ultima operacion, antes de escribir el reporte, y guardarlo ahi)
 
 QUE ES ESTE FICHERO Y QUE NO ES: es la prueba de que el tallador se
