@@ -95,7 +95,7 @@ vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 187 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, con sus SEIS adjudicaciones `5.1` a `5.6` todas a favor, los DOS numerales de la seccion 6 (`PD.1` ABIERTA con sus cinco puestos leidos del acta, y el `6.2` como CORRECCION POR DECLARACION, que es un ESTADO NUEVO: la `PD.7` del reporte de la 186 NO es un pendiente de doctrina y el numero `PD.7` queda libre), las TRES preguntas de la seccion 7 las tres CONTESTADAS, CERO caidas propias del auditor registradas COMO CERO Y NO OMITIDAS, UNA caida del ejecutor de reporte (`C.1`, la de las cuatro cifras de LF supuestas) que NO acumula y cuya ESPECIE el acta 187 corrige, y la deuda de la serie REMEDIDA en esta vuelta. Con caso positivo por mutacion sobre un acta FABRICADA, el esperado mutado cayendo, y el registrador aprendiendo el estado nuevo y haciendo PARADA ante uno que no sepa leer | **CERRADA** | `docs/loop/SALIDA_V187_T1A_REGISTRO_R49.txt`, `docs/loop/SALIDA_V187_T1A_MUTACION_REGISTRO_187.txt` |
 | **TAREA 2** | EL PLAN SE MUEVE: EL PAR 2.464 Y EL TRAMO 1 DE LA COLA POST FUSION. Se LEE el disparador escrito antes de tocar nada y se cita por numero; el par 2.464 encabeza y detras va el tramo 1 tal como el disparador lo defina, con el tamano del tramo COMPUTADO del criterio escrito y no inventado; cada par que se mueva lleva su CORRECCION DECLARADA y su RECOMPUTO por la letra de `AUDITOR.md` 1.3; el `sha256` del archivo se publica AL ABRIR y AL CERRAR, y si esta tarea mueve algo el de cierre tiene que ser distinto y la diferencia se explica par por par; y el marcador se RECOMPUTA del archivo con su comando. NO se abre la mesa del `PMF`, ni la del 603, ni la de figuras del 226 | **CERRADA. **EL PLAN SE MOVIO:** el `sha256` LF del archivo pasa de `ea6e850d331d14f0` a `0a77b5a35a962621`** | `docs/loop/SALIDA_V187_T2_COLA_POST_FUSION.txt`, `docs/loop/SALIDA_V187_T2B_TRAMO1_CERRADO.txt` |
-| **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 187, encargada por `AUDITOR.md` 1.2 porque las CUATRO discrepancias del auditor cayeron FUERA del discutible de clase marcado. Cotejo de `sha256` contra el sello `V188` ANTES de leer un solo puesto; 30 puestos mas 30 vecinos deterministas con `vecinos()` IMPORTADA; solape 0 contra el tramo, contra la ciega anterior y contra los 293 puestos de la exclusion, MEDIDO y no supuesto; 60 puestos releidos que es el doble exacto; NINGUNA CLASE SE VUELVE A DECIDIR. Mas los cuatro puestos 226, 603, 1612 y 2448 mirados con la misma vara, y el censo de las `B` del universo releido con sus tres comprobaciones mecanicas una a una | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 187, encargada por `AUDITOR.md` 1.2 porque las CUATRO discrepancias del auditor cayeron FUERA del discutible de clase marcado. Cotejo de `sha256` contra el sello `V188` ANTES de leer un solo puesto; 30 puestos mas 30 vecinos deterministas con `vecinos()` IMPORTADA; solape 0 contra el tramo, contra la ciega anterior y contra los 293 puestos de la exclusion, MEDIDO y no supuesto; 60 puestos releidos que es el doble exacto; NINGUNA CLASE SE VUELVE A DECIDIR. Mas los cuatro puestos 226, 603, 1612 y 2448 mirados con la misma vara, y el censo de las `B` del universo releido con sus tres comprobaciones mecanicas una a una | **CERRADA, con UNA DESVIACION DECLARADA: el solape del universo entero con la exclusion no es 0, es **2**, y los dos son VECINOS deterministas (1287 y 2383), no puestos del tramo** | `docs/loop/SALIDA_V187_T3_RELECTURA_AL_DOBLE.txt`, `docs/loop/SALIDA_V187_COTEJO_DE_CLONES.txt` |
 | **TAREA 4** | LA ESCALADA: LA PAREJA DE CONVENCIONES DEJA DE BASTAR CON EXISTIR. `AUDITOR.md` 1.2, mandatorio a partir de dos. Una guarda que, para cada ruta que el reporte publique con cifra de bytes, RECOMPUTA LAS DOS CONVENCIONES DESDE EL DISCO y las coteja contra las dos publicadas, cayendo en ROJO si alguna discrepa y nombrando la ruta, la cifra publicada, la medida y cual de las dos convenciones falla. REUSA lo que `scripts/loop/vuelta186_rutas_del_reporte.py` ya sabe hacer: una sede, dos llamadores y NO un tercero. Funciones PURAS y un solo lector de disco, cableada donde `cerrar_reporte.py` juzga y SIN bandera. Con arnes obligatorio que incluye UN CASO SOBRE EL TEXTO REAL DE `git show bb3aaad3` exigiendo que HABRIA CAZADO LAS CUATRO CIFRAS DE LA `C.1` | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | LA NOMINA, LA DECLARACION DEL 184 Y EL CIERRE. (a) Los CUATRO arneses de la 186 entran en la nomina MAS los que nazcan hoy, con `arneses_que_faltan()` devolviendo 0 al cerrar, el tamano de la nomina antes y despues, y cada arnes nuevo corrido DOS VECES en procesos aparte exigiendo el mismo `sha256`. NO SE PODA NADA. (b) La declaracion del defecto del reporte de la 184, que es la `P.2`: en el carril de CIERRE TARDIO la guarda de la `2.d` NO bloquea pero SE DECLARA con su motivo entero, en el carril NORMAL sigue bloqueando entera, `REPORTE_V184.md` NO se reabre, y con arnes propio. (c) La cifra inutil del bloque H.5, reparada con la cifra antes y despues. (d) El reporte de la 187 se abre, se llena por anexion y se cierra con `cerrar_reporte.py --vuelta 187` y `archivar_reporte.py --vuelta 187`, con la cabecera tallada y `--comparar` dando CABECERA IDENTICA AL TALLADOR, y su SECCION 9 CIERRA CON EL HUECO DECLARADO Y MEDIDO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -334,5 +334,124 @@ vivo SI, `nodo_b` vivo SI**. **Pasa.**
 la mesa del `PMF` (puestos **338** y **297**), la del **603** y la de figuras del
 **226**. Las tres estan anotadas en el acta 187, seccion `6.2`, con sede en
 `docs/PENDIENTES.md`.
+
+### TAREA 3. LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 187. **CERRADA, Y CON UNA DESVIACION DECLARADA.**
+
+**EL COTEJO DEL `sha256` VA ANTES DE LEER UN SOLO PUESTO, Y SE COMPUTO EN VEZ DE
+COPIARSE DEL ENCARGO.**
+
+| | el sello dice | medido hoy | |
+|---|---|---|:-:|
+| `docs/loop/SELLO_APERTURA_AUDITOR_V188.json` | | disco **802** bytes, LF **802** bytes | |
+| bytes de la ciega | **42599** | **42599** | **CALZA** |
+| `sha256` de la ciega | `ea6d846cb7e0c73e0d2e9794906b2551bb32d939b8ad88f02bbc473b73e79c55` | identico | **CALZA** |
+
+**`EL FICHERO ES EL QUE EL SELLO DICE: SI`.** El nombre del sello **no se dedujo
+del numero de vuelta**: siendo acta **187**, se llama **`V188`**. **El `V186` no
+existe y no se fabrica.**
+
+**EL TRAMO Y SU DOBLE.** El tramo se leyo de la ciega sellada, **no del acta**,
+que en su seccion 4 (lineas **65635 a 65699**, cabecera *"LA RELECTURA CIEGA: 26
+DE 30, Y LAS CUATRO LAS PIERDO YO"*) lista **0 puestos**.
+
+- **30 puestos del tramo**: 226, 252, 255, 293, 426, 603, 954, 1222, 1286, 1332,
+  1341, 1367, 1509, 1540, 1612, 1676, 1703, 1910, 1912, 1953, 2124, 2177, 2382,
+  2448, 2834, 2953, 3030, 3158, 3314, 3340.
+- **30 vecinos deterministas**, con `vecinos()` **IMPORTADA** de
+  `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y **no copiada**.
+- **60 puestos releidos. `ES EL DOBLE DEL TRAMO: SI`.**
+
+**LOS TRES SOLAPES, MEDIDOS Y NO SUPUESTOS. Y EL TERCERO NO SALE CERO, ASI QUE SE
+DECLARA EN VEZ DE ARREGLARSE.**
+
+| solape | contra | cifra |
+|---|---|---:|
+| **F.1** | el tramo contra sus vecinos | **0** |
+| **F.2** | el tramo contra `docs/loop/_auditor_v187_ciega_blind.txt` (30 puestos) | **0** |
+| **F.2** | el **universo entero** contra esa misma ciega | **0** |
+| **F.3** | el **tramo** contra los puestos de `docs/loop/_auditor_v188_exclusion.txt` | **0** |
+| **F.3** | el **universo entero** contra esa misma exclusion | **2** |
+
+**La exclusion mide 1372 bytes y lista 293 puestos distintos, CONTADOS del
+fichero y no copiados del criterio.** Los dos que cruzan son **1287** (vecino
+determinista del **1286**) y **2383** (vecino determinista del **2382**), **los
+dos VECINOS y ninguno del tramo**.
+
+> **POR QUE NO LO ARREGLO, Y ES UNA DESVIACION DECLARADA Y NO UN DESCUIDO.** El
+> encargo pide **solape 0 con los 293**. **El tramo lo cumple: 0.** Los que
+> cruzan salen de `vecinos()`, que es una funcion **importada y congelada**;
+> cambiarla aqui para que la cifra saliera cero seria **mover la vara a mitad de
+> la medicion**, que es exactamente lo que `P.5.1` prohibe. **Se publica la cifra
+> y se nombran los dos puestos.** **DISCUTIBLE DE METODO, MARCADO.**
+
+**LAS CIFRAS DE LA RELECTURA MECANICA, con la maquina IMPORTADA de
+`scripts/loop/vuelta182_tarea3_diferenciador_movido.py`:**
+
+| | cifra |
+|---|---:|
+| puestos releidos | **60** |
+| que declaran diferenciador | **3** |
+| con **lesion exacta** | **0** |
+| con algun **nodo muerto** en el grafo de hoy | **0** |
+| clase `A` en el universo | **8** |
+| clase `B` en el universo | **4** |
+| clase `D` en el universo | **48** |
+
+**`NINGUNA CLASE SE VOLVIO A DECIDIR.`** Esta relectura es la **mecanica** del
+tramo con la vara, no una lectura de juicio.
+
+**LAS CUATRO DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA VARA. LAS CUATRO
+CAEN DENTRO DEL UNIVERSO RELEIDO.**
+
+| puesto | clase | declara | lesion | nodo muerto | nodos |
+|---:|:-:|:-:|:-:|:-:|---|
+| **226** | `B` | no | no | no | `antidilucion_provisiones` contra `antidilution_weighted_average_broad_narrow` |
+| **603** | `B` | no | no | no | `decision_autofinanciamiento_vs_inversion` contra `decision_intensidad_capital` |
+| **1612** | `D` | no | no | no | `elegir_caja_correcta` contra `elegir_resistencia_caja_peso` |
+| **2448** | `D` | **SI** | no | no | `entrenamiento_y_control_estadistico` contra `importancia_de_la_capacitacion` |
+
+**LO QUE LA VARA VE, Y NI UNA PALABRA MAS:** de los cuatro, **solo el 2448
+declara un diferenciador**, y **ninguno de los cuatro tiene lesion exacta ni nodo
+muerto**. **Lo que la vara no ve, aqui no se afirma.**
+
+**EL CENSO DE LAS `B` DEL UNIVERSO, UNA POR UNA CON SUS TRES COMPROBACIONES.
+SOLO SE CUENTA Y SE PUBLICA.**
+
+| puesto | declara diferenciador | lesion exacta | nodo muerto | nodos |
+|---:|:-:|:-:|:-:|---|
+| **226** | NADA | NADA | NADA | `antidilucion_provisiones` contra `antidilution_weighted_average_broad_narrow` |
+| **253** | NADA | NADA | NADA | `fase_acclimate` contra `fase_acclimate_experiencia_cliente` |
+| **603** | NADA | NADA | NADA | `decision_autofinanciamiento_vs_inversion` contra `decision_intensidad_capital` |
+| **604** | NADA | NADA | NADA | `mapa_de_influencia` contra `mapa_organizacional_influencia` |
+
+| la cuenta | cifra |
+|---|---:|
+| `B` en el universo releido | **4 de 60** |
+| `B` que declaran diferenciador | **0** |
+| `B` con lesion exacta | **0** |
+| `B` con algun nodo muerto | **0** |
+| **`B` que dan NADA en las tres** | **4 de 4** |
+| `B` en TODO el archivo, contadas del archivo | **72 de 3388 filas** |
+| de las cuatro discrepancias, cuales son `B` | **226 y 603** |
+
+> **Y AQUI SE PARA.** Esta salida **no dice** que la vara sea ciega a la clase
+> `B`, **no adjudica** ninguna de estas cuatro y **no propone** nada. Publica la
+> cuenta y las tres columnas, que es exactamente lo que el encargo pide. **Si la
+> vara resulta ciega a la clase `B` entera, eso es un hallazgo del fundador y no
+> mio.**
+
+**EL COTEJO DE LOS CLONES DECLARADOS DE ESTA VUELTA, CON LO QUE SALGA Y SIN
+AFIRMAR QUE NINGUN DIFF SALE VACIO** (`docs/loop/SALIDA_V187_COTEJO_DE_CLONES.txt`,
+tres cotejos, los tres con `EXITCODE: 0`):
+
+| clon | fichero entero | docstring | maquina | AST sin docstring | lineas de maquina que difieren |
+|---|:-:|:-:|:-:|:-:|---:|
+| `vuelta186_apertura.py` a `vuelta187_apertura.py` | DIFIERE | DIFIERE | DIFIERE | DIFIERE | **452** |
+| `vuelta186_esqueleto_reporte.py` a `vuelta187_esqueleto_reporte.py` | DIFIERE | DIFIERE | DIFIERE | DIFIERE | **68** |
+| `vuelta186_tarea1c_relectura_al_doble.py` a `vuelta187_tarea3_relectura_al_doble.py` | DIFIERE | DIFIERE | DIFIERE | DIFIERE | **148** |
+
+**Los tres DIFIEREN por los cuatro veredictos, y es lo esperado:** un clon
+declarado de esta casa cambia el sufijo, las rutas, los bloques propios y las
+glosas. **La afirmacion de clon se mide, no se promete.**
 
 <!-- FIN ANEXO DE TAREAS -->

@@ -1,0 +1,869 @@
+===============================================================================
+COTEJO DE CLON DECLARADO: scripts/loop/vuelta186_apertura.py  ->  scripts/loop/vuelta187_apertura.py
+===============================================================================
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta186_apertura.py
+  B: scripts/loop/vuelta187_apertura.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 186, 187
+  CIFRA lineas de docstring: A 58 | B 62
+  CIFRA lineas de maquina:   A 610 | B 722
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 5633 | B 6681
+     CIFRA tipos de nodo que NO empatan: 41
+        Load                   A  1403 | B  1678 | diferencia +275
+        Name                   A  1215 | B  1452 | diferencia +237
+        Call                   A   565 | B   682 | diferencia +117
+        Constant               A   631 | B   728 | diferencia +97
+        Attribute              A   318 | B   379 | diferencia +61
+        Store                  A   310 | B   366 | diferencia +56
+        Expr                   A   210 | B   247 | diferencia +37
+        Tuple                  A   121 | B   146 | diferencia +25
+        Assign                 A   131 | B   155 | diferencia +24
+        BinOp                  A   152 | B   176 | diferencia +24
+        Mod                    A   110 | B   127 | diferencia +17
+        If                     A    29 | B    37 | diferencia +8
+        Add                    A    42 | B    49 | diferencia +7
+        For                    A    34 | B    41 | diferencia +7
+        Subscript              A    28 | B    33 | diferencia +5
+        keyword                A    38 | B    43 | diferencia +5
+        Compare                A    33 | B    37 | diferencia +4
+        In                     A    20 | B    16 | diferencia -4
+        BoolOp                 A    14 | B    17 | diferencia +3
+        Continue               A     6 | B     9 | diferencia +3
+        Eq                     A     4 | B     7 | diferencia +3
+        IfExp                  A    21 | B    24 | diferencia +3
+        List                   A    31 | B    34 | diferencia +3
+        Not                    A     5 | B     8 | diferencia +3
+        NotEq                  A     0 | B     3 | diferencia +3
+        Slice                  A    17 | B    20 | diferencia +3
+        UnaryOp                A     8 | B    11 | diferencia +3
+        And                    A     4 | B     6 | diferencia +2
+        AugAssign              A     5 | B     7 | diferencia +2
+        BitAnd                 A     0 | B     2 | diferencia +2
+        ExceptHandler          A     2 | B     4 | diferencia +2
+        Try                    A     2 | B     4 | diferencia +2
+        Break                  A     0 | B     1 | diferencia +1
+        Dict                   A     1 | B     2 | diferencia +1
+        GtE                    A     4 | B     5 | diferencia +1
+        Import                 A     9 | B    10 | diferencia +1
+        IsNot                  A     4 | B     5 | diferencia +1
+        Or                     A    10 | B    11 | diferencia +1
+        SetComp                A     3 | B     4 | diferencia +1
+        alias                  A     9 | B    10 | diferencia +1
+        comprehension          A    25 | B    26 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 452
+  CIFRA tokens de maquina: A 5193 | B 6162
+  CIFRA tokens que difieren con el texto normalizado: 1793
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 269
+  CIFRA LITERALES DE TEXTO:   183
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:308  "scripts/loop/_v184_cierre_texto.md",
+     A:309  "docs/loop/SALIDA_V183_BATERIA.txt"):
+     A:315  w("   %s" % r)
+     A:317  w("      sha256 (disco): %s" % sd)
+     A:318  w("      sha256 (LF)   : %s" % sl)
+     A:319  g = bytes_de_git(r)
+     A:342  w("      LINEA %d: %s" % (i, l.rstrip()[:150]))
+     A:343  w("   EL ARNES VIEJO QUE SIGUE MANDANDO SOBRE LAS TRES, CORRIDO HOY ANTES DE")
+     A:344  w("   TOCAR NADA:")
+     A:345  RARN = "scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py"
+     A:346  c_ar, o_ar = correr([PY, RARN])
+     A:347  w("      EXITCODE: %d" % c_ar)
+     A:348  for l in o_ar.replace(chr(13), "").split(NL):
+     A:349  if ("CIFRA" in l or "VEREDICTO" in l or "NO CALZA" in l):
+     A:350  w("      | " + l.rstrip()[:150])
+     A:357  RROJO = "docs/loop/SALIDA_V185_T2A_REPORTE_184_CERRADO_EN_ROJO.md"
+     A:358  PROJO = os.path.join(RAIZ, RROJO.replace("/", os.sep))
+     A:359  if os.path.exists(PROJO):
+     A:360  t_rojo = io.open(PROJO, encoding="utf-8", errors="replace").read().replace(
+     A:363  % (RROJO, os.path.getsize(PROJO), len(t_rojo.encode("utf-8")),
+     A:364  t_rojo.count(NL)))
+     A:365  dentro_c = False
+     A:366  n_dentro = n_fuera = 0
+     A:367  for i, l in enumerate(t_rojo.split(NL), 1):
+     A:368  if l.lstrip().startswith("```"):
+     A:369  dentro_c = not dentro_c
+     A:370  continue
+     A:371  if "PENDIENTE DE TALLAR AL CIERRE" in l:
+     A:372  if dentro_c:
+     A:373  n_dentro += 1
+     A:374  else:
+     A:375  n_fuera += 1
+     A:377  % (i, "DENTRO de" if dentro_c else "FUERA de toda", l.strip()[:120]))
+     A:378  w("   CIFRA apariciones DENTRO de cerca: %d" % n_dentro)
+     A:379  w("   CIFRA apariciones FUERA de cerca: %d" % n_fuera)
+     A:381  w("   %s -> NO EXISTE" % RROJO)
+     A:415  "scripts/loop/vuelta185_tarea1c_mutacion_bateria_continuada.py"):
+     A:416  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     A:417  if os.path.exists(p):
+     A:418  sd, sl, bd, bl = sha_de(p)
+     A:419  w("      %s -> disco %d bytes | LF %d bytes | sha256 LF %s" % (r, bd, bl, sl))
+     A:420  else:
+     A:421  w("      %s -> NO EXISTE" % r)
+     A:422  w("   Y SUS SALIDAS SELLADAS, QUE SON LAS QUE LA 189 VA A CORRER DOS VECES:")
+     A:423  for r in ("docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt",
+     A:437  AP185 = os.path.join(LOOP, "SALIDA_V185_APERTURA.txt")
+     A:438  if os.path.exists(AP185):
+     A:439  t_ap = io.open(AP185, encoding="utf-8", errors="replace").read().replace(
+     A:442  % (os.path.getsize(AP185), t_ap.count(NL)))
+     A:448  REP185 = os.path.join(LOOP, "reportes", "REPORTE_V185.md")
+     A:449  if os.path.exists(REP185):
+     A:450  t_r5 = io.open(REP185, encoding="utf-8", errors="replace").read().replace(
+     A:452  l_r5 = t_r5.split(NL)
+     A:454  % (os.path.getsize(REP185), t_r5.count(NL)))
+     A:455  i4 = [i for i, l in enumerate(l_r5, 1) if l.startswith("## 4.")]
+     A:456  i5 = [i for i, l in enumerate(l_r5, 1) if l.startswith("## 5.")]
+     A:460  fin = i5[0] if i5 else len(l_r5) + 1
+     A:461  sec4 = l_r5[i4[0] - 1:fin - 1]
+     A:464  if ("status" in l or "numstat" in l or "CIFRA" in l):
+     A:468  CT185 = os.path.join(RAIZ, "scripts", "loop", "_v185_cierre_texto.md")
+     A:469  if os.path.exists(CT185):
+     A:470  t_c5 = io.open(CT185, encoding="utf-8", errors="replace").read().replace(
+     A:473  % (os.path.getsize(CT185), t_c5.count(NL)))
+     A:474  for i, l in enumerate(t_c5.split(NL), 1):
+     A:475  if "status" in l or "numstat" in l:
+     A:476  w("      LINEA %d: %s" % (i, l.strip()[:150]))
+     A:477  else:
+     A:494  w("      | " + l[:150])
+     A:506  puestos = sorted({int(x) for x in re.findall(r"PUESTO\s+(\d+)", t_c)})
+     A:511  w("      CIFRA puestos con el patron 'PUESTO <n>': %d" % len(puestos))
+     A:512  w("      LOS PUESTOS: %s" % ", ".join(str(x) for x in puestos))
+     A:514  w("   FICHEROS CIEGOS PARA SABER SI ESTAN DENTRO DEL UNIVERSO:")
+     A:515  CUATRO = [338, 491, 1775, 2599]
+     A:516  for nombre in ("_auditor_vNNN_ciega_blind.txt", "_auditor_v185b_ciega_blind.txt"):
+     A:517  p = os.path.join(LOOP, nombre)
+     A:518  if not os.path.exists(p):
+     A:519  continue
+     A:520  t_c = io.open(p, encoding="utf-8", errors="replace").read()
+     A:521  puestos = {int(x) for x in re.findall(r"PUESTO\s+(\d+)", t_c)}
+     A:522  dentro_cuatro = [x for x in CUATRO if x in puestos]
+     A:524  % (nombre, ", ".join(str(x) for x in dentro_cuatro) or "(ninguna)"))
+     A:561  w("      LINEA %d: %s" % (i, l.strip()[:140]))
+     A:611  % (os.path.getsize(VER), len(datos_ver.replace(chr(13).encode(), b""))))
+     B:321  t_c = io.open(p, encoding="utf-8", errors="replace").read().replace(
+     B:322  chr(13) + NL, NL)
+     B:323  w("   %s -> disco %d bytes | LF %d bytes | sha256 LF %s" % (r, bd, bl, sl))
+     B:324  for i, l in enumerate(t_c.split(NL), 1):
+     B:325  if ("CIFRA piezas que faltan" in l or "VEREDICTO" in l
+     B:326  or l.startswith("EXITCODE")):
+     B:327  w("      LINEA %d: %s" % (i, l.strip()[:150]))
+     B:329  RNNN = "docs/loop/reportes/REPORTE_VNNN.md"
+     B:330  PNNN = os.path.join(RAIZ, RNNN.replace("/", os.sep))
+     B:331  if os.path.exists(PNNN):
+     B:332  sd, sl, bd, bl = sha_de(PNNN)
+     B:333  g = bytes_de_git(RNNN)
+     B:335  % (RNNN, bd, bl, sl, ("%d bytes" % g) if g is not None else "NO ESTA EN HEAD"))
+     B:336  else:
+     B:337  w("      %s -> NO EXISTE" % RNNN)
+     B:340  w("=== H.1 EL DISPARADOR ESCRITO DE LA COLA POST FUSION (TAREA 2) ===")
+     B:341  w("(el encargo manda LEER EL DISPARADOR ANTES DE TOCAR NADA y citarlo por")
+     B:342  w(" numero. Aqui no se cita de memoria: se busca en los dos ficheros que el")
+     B:343  w(" encargo nombra y se pega la linea con su numero de linea, sea la que sea)")
+     B:344  for r in ("docs/plan/08_VERIFICACION.md", "docs/plan/BANCO_DEL_PLAN.md"):
+     B:345  p = os.path.join(RAIZ, r.replace("/", os.sep))
+     B:346  if not os.path.exists(p):
+     B:347  w("   %s -> NO EXISTE" % r)
+     B:348  continue
+     B:349  t_d = io.open(p, encoding="utf-8", errors="replace").read().replace(
+     B:350  chr(13) + NL, NL)
+     B:351  w("   %s -> disco %d bytes | lineas %d" % (r, os.path.getsize(p), t_d.count(NL)))
+     B:352  for aguja in ("cola post fusion", "COLA POST FUSION", "post fusion",
+     B:353  "POST FUSION", "2464", "2.464"):
+     B:354  hits = [(i, l) for i, l in enumerate(t_d.split(NL), 1) if aguja in l]
+     B:355  w("      %-20s -> %d aparicion(es), lineas %s"
+     B:356  % (repr(aguja), len(hits),
+     B:357  ", ".join(str(i) for i, _l in hits[:12]) or "(ninguna)"))
+     B:358  w("      LAS LINEAS QUE NOMBRAN LA COLA, PEGADAS ENTERAS:")
+     B:359  n_peg = 0
+     B:360  for i, l in enumerate(t_d.split(NL), 1):
+     B:361  if ("post fusion" in l.lower() or "cola" in l.lower()) and l.strip():
+     B:362  w("         LINEA %d: %s" % (i, l.strip()[:170]))
+     B:363  n_peg += 1
+     B:364  if n_peg >= 40:
+     B:365  w("         (cortado en 40 lineas; el resto se lee del fichero)")
+     B:366  break
+     B:367  w("")
+     B:389  if "con su pareja" in l:
+     B:390  w("      LINEA %d: %s" % (i, l.rstrip()[:170]))
+     B:391  RUT = os.path.join(RAIZ, "scripts", "loop", "vueltaNNN_rutas_del_reporte.py")
+     B:392  if os.path.exists(RUT):
+     B:393  t_rut = io.open(RUT, encoding="utf-8").read().replace(chr(13) + NL, NL)
+     B:394  l_rut = t_rut.split(NL)
+     B:395  w("   scripts/loop/vueltaNNN_rutas_del_reporte.py -> %d lineas | disco %d bytes"
+     B:396  % (len(l_rut), os.path.getsize(RUT)))
+     B:397  for i, l in enumerate(l_rut, 1):
+     B:398  if l.startswith("def ") or "replace(b" in l:
+     B:399  w("      LINEA %d: %s" % (i, l.rstrip()[:140]))
+     B:400  else:
+     B:408  w(" cuales de las dos convenciones publicadas NO son ciertas. Ninguna cifra se")
+     B:409  w(" copia del encargo: todas salen de aqui)")
+     B:410  c_bb, t_bb = git(["show", "bb3aaad3:docs/loop/REPORTE.md"])
+     B:411  if c_bb != 0 or not t_bb.strip():
+     B:412  w("   git show bb3aaad3:docs/loop/REPORTE.md -> NO SE PUDO LEER (exit %d)" % c_bb)
+     B:414  t_bb = t_bb.replace(chr(13) + NL, NL)
+     B:416  % (len(t_bb.encode("utf-8")), t_bb.count(NL)))
+     B:417  PAR = re.compile(r"`([A-Za-z0-9_./-]+\.[A-Za-z0-9]+)`[^\n]{0,220}?"
+     B:418  r"disco\s+([0-9.]+)\s*bytes[^\n]{0,80}?LF\s+([0-9.]+)\s*bytes")
+     B:419  n_par = n_mal_d = n_mal_l = 0
+     B:420  for i, l in enumerate(t_bb.split(NL), 1):
+     B:421  for m in PAR.finditer(l):
+     B:422  ruta_p = m.group(1)
+     B:423  try:
+     B:424  pub_d = int(m.group(2).replace(".", ""))
+     B:425  pub_l = int(m.group(3).replace(".", ""))
+     B:426  except ValueError:
+     B:427  continue
+     B:428  n_par += 1
+     B:429  pp = os.path.join(RAIZ, ruta_p.replace("/", os.sep))
+     B:430  if not os.path.isfile(pp):
+     B:431  w("      LINEA %d: %-56s publicada disco %d LF %d -> LA RUTA NO"
+     B:432  " EXISTE HOY" % (i, ruta_p, pub_d, pub_l))
+     B:433  continue
+     B:434  dat = io.open(pp, "rb").read()
+     B:435  med_d, med_l = len(dat), len(dat.replace(b"\r\n", b"\n"))
+     B:436  mal = []
+     B:437  if med_d != pub_d:
+     B:438  mal.append("DISCO")
+     B:439  n_mal_d += 1
+     B:440  if med_l != pub_l:
+     B:441  mal.append("LF")
+     B:442  n_mal_l += 1
+     B:444  " LF %d | %s"
+     B:445  % (i, ruta_p, pub_d, pub_l, med_d, med_l,
+     B:446  ("FALLA " + " y ".join(mal)) if mal else "calza"))
+     B:447  w("   CIFRA parejas de disco y LF halladas en el texto de bb3aaad3: %d" % n_par)
+     B:448  w("   CIFRA parejas cuya cifra de DISCO no calza hoy: %d" % n_mal_d)
+     B:449  w("   CIFRA parejas cuya cifra de LF no calza hoy: %d" % n_mal_l)
+     B:500  w(" REALES para ver cuantos motivos en rojo salen. Ninguna cifra se copia)")
+     B:501  AP184 = os.path.join(LOOP, "SALIDA_V184_APERTURA.txt")
+     B:502  if os.path.exists(AP184):
+     B:503  sd, sl, bd, bl = sha_de(AP184)
+     B:504  t_ap = io.open(AP184, encoding="utf-8", errors="replace").read().replace(
+     B:507  "lineas %d" % (bd, bl, t_ap.count(NL)))
+     B:513  REP184 = os.path.join(LOOP, "reportes", "REPORTE_V184.md")
+     B:514  if os.path.exists(REP184):
+     B:515  t_r4 = io.open(REP184, encoding="utf-8", errors="replace").read().replace(
+     B:517  l_r4 = t_r4.split(NL)
+     B:519  % (os.path.getsize(REP184), t_r4.count(NL)))
+     B:520  i4 = [i for i, l in enumerate(l_r4, 1) if l.startswith("## 4.")]
+     B:521  i5 = [i for i, l in enumerate(l_r4, 1) if l.startswith("## 5.")]
+     B:525  fin = i5[0] if i5 else len(l_r4) + 1
+     B:526  sec4 = l_r4[i4[0] - 1:fin - 1]
+     B:529  if l.strip():
+     B:533  w("   seccion4_que_no_calza() CORRIDA HOY SOBRE LOS DOS FICHEROS REALES:")
+     B:534  try:
+     B:535  import cerrar_reporte as CR   # noqa: E402
+     B:536  if os.path.exists(REP184) and os.path.exists(AP184):
+     B:537  t_r4b = io.open(REP184, encoding="utf-8", errors="replace").read().replace(
+     B:539  t_a4b = io.open(AP184, encoding="utf-8", errors="replace").read().replace(
+     B:540  chr(13) + NL, NL)
+     B:541  motivos = CR.seccion4_que_no_calza(t_r4b, t_a4b, "SALIDA_V184_APERTURA.txt")
+     B:542  w("      CIFRA motivos en rojo: %d" % len(motivos))
+     B:543  for m in motivos:
+     B:544  w("      | %s" % str(m)[:220])
+     B:545  else:
+     B:546  w("      NO SE PUDO: falta alguno de los dos ficheros")
+     B:547  except Exception as e:
+     B:548  w("      NO SE PUDO CORRER seccion4_que_no_calza: %r" % (e,))
+     B:557  w(" NUEVA, y lo que el bloque decida despues usa la NUEVA)")
+     B:558  PATRON_VIEJO = re.compile(r"PUESTO\s+(\d+)")
+     B:559  PATRON_NUEVO = re.compile(r"^puesto_intra:\s*(\d+)\s*$", re.M)
+     B:561  sello = None
+     B:569  w("      | " + l[:200])
+     B:572  puestos_por_fichero = {}
+     B:582  viejos = sorted({int(x) for x in PATRON_VIEJO.findall(t_c)})
+     B:583  nuevos = sorted({int(x) for x in PATRON_NUEVO.findall(t_c)})
+     B:584  puestos_por_fichero[nombre] = nuevos
+     B:590  % len(viejos))
+     B:591  w("      CIFRA NUEVA, patron puesto_intra (TAREA 5.c): %d" % len(nuevos))
+     B:592  w("      LOS PUESTOS (patron nuevo): %s"
+     B:593  % (", ".join(str(x) for x in nuevos) or "(ninguno)"))
+     B:594  if sello is not None:
+     B:595  w("   EL COTEJO DEL SELLO, COMPUTADO Y NO COPIADO:")
+     B:596  for clave_r, clave_b, clave_s in (("ciega", "bytes_ciega", "sha256_ciega"),
+     B:597  ("destape", "bytes_destape", "sha256_destape")):
+     B:598  r_s = sello.get(clave_r)
+     B:599  if not r_s:
+     B:600  w("      %s -> el sello no la nombra" % clave_r)
+     B:601  continue
+     B:602  p_s = os.path.join(RAIZ, r_s.replace("/", os.sep))
+     B:603  if not os.path.exists(p_s):
+     B:604  w("      %s -> %s NO EXISTE EN DISCO" % (clave_r, r_s))
+     B:605  continue
+     B:606  sd, sl, bd, bl = sha_de(p_s)
+     B:607  w("      %-8s %s" % (clave_r, r_s))
+     B:608  w("         bytes: sello %s | disco medido %d -> %s"
+     B:609  % (sello.get(clave_b), bd,
+     B:610  "CALZA" if sello.get(clave_b) == bd else "NO CALZA"))
+     B:611  w("         sha256: sello %s" % sello.get(clave_s))
+     B:612  w("                 disco  %s" % sd)
+     B:613  w("                 -> %s"
+     B:614  % ("CALZA" if sello.get(clave_s) == sd else "NO CALZA"))
+     B:616  EXC = os.path.join(LOOP, "_auditor_v188_exclusion.txt")
+     B:617  if os.path.exists(EXC):
+     B:618  t_e = io.open(EXC, encoding="utf-8", errors="replace").read()
+     B:619  ex = sorted({int(x) for x in re.findall(r"\d+", t_e)})
+     B:620  w("      docs/loop/_auditor_v188_exclusion.txt -> disco %d bytes | CIFRA "
+     B:621  "puestos distintos: %d" % (os.path.getsize(EXC), len(ex)))
+     B:622  hoy_p = set(puestos_por_fichero.get("_auditor_v188_ciega_blind.txt", []))
+     B:623  ayer_p = set(puestos_por_fichero.get("_auditor_vNNN_ciega_blind.txt", []))
+     B:624  w("      SOLAPE ciega de hoy con la exclusion: %d" % len(hoy_p & set(ex)))
+     B:625  w("      SOLAPE ciega de hoy con la ciega de la NNN: %d" % len(hoy_p & ayer_p))
+     B:626  else:
+     B:627  w("      docs/loop/_auditor_v188_exclusion.txt -> NO EXISTE")
+     B:628  w("   LOS CUATRO PUESTOS QUE EL ENCARGO NOMBRA, BUSCADOS EN LA CIEGA DE HOY:")
+     B:629  hoy_p = set(puestos_por_fichero.get("_auditor_v188_ciega_blind.txt", []))
+     B:630  for x in (226, 603, 1612, 2448):
+     B:632  % (x, "DENTRO de" if x in hoy_p else "FUERA de"))
+     B:661  r"`PD\.(\d)`", r"`A\.(\d)`", r"`R\.(\d)`", r"`C\.(\d)`"):
+     B:670  w("      LINEA %d: %s" % (i, l.strip()[:160]))
+     B:692  for r in ("docs/loop/SALIDA_VNNN_BATERIA.txt", "docs/loop/SALIDA_VNNN_BATERIA.txt",
+     B:718  w("(el encargo da ea6e850d331d14f0 como sha256 LF de apertura. AQUI NO SE COPIA:")
+     B:719  w(" se computa. Si la TAREA 2 mueve algo, el de cierre TIENE que ser distinto)")
+     B:723  % (os.path.getsize(VER), len(datos_ver.replace((chr(13) + NL).encode(), NL.encode()))))
+     B:739  w("   EL PAR 2464, PEGADO ENTERO ANTES DE TOCARLO (TAREA 2):")
+     B:740  for f in filas:
+     B:741  if f.get("puesto_intra") == 2464:
+     B:742  for k in sorted(f.keys()):
+     B:743  w("      %-22s %s" % (k, str(f[k])[:200]))
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:85  "scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py",
+     A:86  "scripts/loop/vuelta185_tarea1c_mutacion_bateria_continuada.py",
+     A:88  "scripts/loop/vuelta185_tarea1a_registrar_acta185.py",
+     A:89  "scripts/loop/vuelta185_tarea1e_relectura_al_doble.py",
+     A:94  "scripts/loop/vuelta185_esqueleto_reporte.py",
+     A:104  "docs/loop/SELLO_APERTURA_AUDITOR_VNNN.json",
+     A:106  "docs/loop/_auditor_vNNN_ciega_reveal.txt",
+     A:107  "docs/loop/_auditor_vNNN_mis_clases.txt",
+     A:108  "docs/loop/_auditor_v185b_ciega_blind.txt",
+     A:109  "docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt",
+     A:110  "scripts/loop/_v184_cierre_texto.md",
+     A:112  "docs/loop/SALIDA_V185_APERTURA.txt",
+     A:113  "docs/loop/SALIDA_V185_CERRAR_REPORTE.txt",
+     A:114  "docs/loop/SALIDA_V185_T2A_REPORTE_184_CERRADO_EN_ROJO.md",
+     A:115  "scripts/loop/_v185_cierre_texto.md",
+     A:172  w("         DOS sub-tareas, que es el tope del regimen temporal 6.2, PERO LA")
+     A:173  w("         CUENTA YA NO ESTA EN CERO: la 185 SI cerro su propio reporte y es la")
+     A:174  w("         PRIMERA de las dos seguidas. Si esta vuelta cierra el suyo, la NNN")
+     A:175  w("         recupera el tope de CINCO.")
+     A:176  w("         EL SELLO DEL AUDITOR SE LLAMA VNNN, no VNNN: la casa nombra el sello")
+     A:177  w("         del acta N como V(N+1) y esta es el acta NNN. El VNNN no existe.")
+     A:198  w("=== B.1 LA CADENA DE LA VUELTA 185, LOCALIZADA EN GIT Y NO TECLEADA ===")
+     A:200  w(" 185 y se imprime lo que salga)")
+     A:202  for etiqueta, aguja in (("acta 185", "ACTA DEL AUDITOR, VUELTA 185"),
+     A:204  ("tarea 1 de la 185", "VUELTA 185, TAREA 1 CERRADA"),
+     A:205  ("tarea 2 de la 185", "VUELTA 185, TAREA 2 ANEXADA"),
+     A:206  ("cierre de la 185", "VUELTA 185 CERRADA")):
+     A:303  w("=== H.1 LAS TRES PIEZAS CON LAS QUE SE CERRARA EL REPORTE DE LA 184 ===")
+     A:304  w("(TAREA 2.c. El encargo da tres cifras y aqui NO SE COPIA NINGUNA: se mide")
+     A:305  w(" cada pieza por las dos convenciones y con su sha256, y la comparacion con lo")
+     A:306  w(" que la 184 midio y la 185 confirmo se hace despues, en el reporte)")
+     A:307  for r in ("docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt",
+     A:312  w("   %s -> NO EXISTE. Sin ella no se cierra nada, y eso se dice." % r)
+     A:316  w("      disco %d bytes | LF %d bytes" % (bd, bl))
+     A:320  w("      git cat-file -s HEAD: %s"
+     A:321  % (("%d bytes" % g) if g is not None else "NO ESTA EN HEAD"))
+     A:324  w("=== H.2 LAS SEDES QUE HAY QUE REPARAR, MEDIDAS ANTES DE TOCARLAS ===")
+     A:325  w("(TAREA 2.a, 2.b y 2.c. No se teclea ninguna linea: se localiza en el fichero")
+     A:326  w(" vivo y se pega lo que salga, sea la linea que el encargo dice o no)")
+     A:332  for aguja in ("ajena != vuelta", "HUECO_CABECERA in texto", "def cifras_sin_pareja",
+     A:333  "def piezas_que_faltan", "def rama_de_la_seccion9",
+     A:334  "def tramos_por_vuelta", "def vuelta_que_sello",
+     A:335  "dentro_de_cerca", "def parrafos_fuera_de_cerca"):
+     A:337  w("   %-34s -> %d aparicion(es), lineas %s"
+     A:338  % (repr(aguja), len(hits), ", ".join(str(i) for i, _l in hits[:10]) or "(ninguna)"))
+     A:339  w("   LAS DOS COPIAS DE LA COMPARACION, PEGADAS ENTERAS CON SU LINEA:")
+     A:341  if "ajena != vuelta" in l or "HUECO_CABECERA in texto" in l:
+     A:353  w("=== H.2.1 EL CASO REAL DE LA PIEZA (2), MEDIDO ANTES DE REPARAR NADA ===")
+     A:354  w("(la PD.5 dice que la marca aparece UNA vez y DENTRO de un bloque cercado.")
+     A:355  w(" Aqui se cuenta sobre el fichero real, dentro y fuera de cerca, y se pega la")
+     A:356  w(" linea que salga)")
+     A:361  chr(13) + NL, NL)
+     A:362  w("   %s -> disco %d bytes | LF %d bytes | lineas %d"
+     A:376  w("      LINEA %d (%s cerca): %s"
+     A:383  w("=== H.3 LOS DOS ARNESES QUE FALTAN EN LA NOMINA (TAREA 1.b) ===")
+     A:384  w("(el reporte de la 185 lo declaro en su D.4 y su P.3, y el acta NNN lo")
+     A:385  w(" verifico. Aqui se vuelve a medir HOY, sin creerle a ninguno de los dos)")
+     A:413  w("   LOS DOS ARNESES DE LA 185, MEDIDOS ANTES DE METERLOS:")
+     A:414  for r in ("scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py",
+     A:424  "docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt"):
+     A:433  w("=== H.4 LA SECCION 4 DE LA 185 Y SU APERTURA SELLADA (TAREA 2.d) ===")
+     A:434  w("(la R.1 del acta NNN dice que el reporte de la 185 publica cero lineas de")
+     A:435  w(" status y que su apertura sellada dice dos. Aqui se buscan las dos cifras en")
+     A:436  w(" el fichero de apertura y se pega lo que salga, sin copiar del acta)")
+     A:441  w("   docs/loop/SALIDA_V185_APERTURA.txt -> disco %d bytes | lineas %d"
+     A:447  w("   docs/loop/SALIDA_V185_APERTURA.txt -> NO EXISTE")
+     A:453  w("   docs/loop/reportes/REPORTE_V185.md -> disco %d bytes | lineas %d"
+     A:467  w("   docs/loop/reportes/REPORTE_V185.md -> NO EXISTE")
+     A:471  chr(13) + NL, NL)
+     A:472  w("   scripts/loop/_v185_cierre_texto.md -> disco %d bytes | lineas %d"
+     A:478  w("   scripts/loop/_v185_cierre_texto.md -> NO EXISTE")
+     A:481  w("=== H.5 EL SELLO DEL AUDITOR VNNN Y SU CIEGA (TAREA 1.c) ===")
+     A:484  w(" Y el nombre del sello NO se deduce del numero de vuelta: siendo acta NNN, el")
+     A:485  w(" sello se llama VNNN, y el VNNN no existe)")
+     A:486  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_VNNN.json")
+     A:488  w("   docs/loop/SELLO_APERTURA_AUDITOR_VNNN.json -> disco %d bytes"
+     A:497  for nombre in ("_auditor_vNNN_ciega_blind.txt", "_auditor_vNNN_ciega_reveal.txt",
+     A:498  "_auditor_vNNN_mis_clases.txt", "_auditor_v185b_ciega_blind.txt"):
+     A:513  w("   LAS CUATRO DISCREPANCIAS QUE EL ACTA NNN NOMBRA, BUSCADAS EN LOS DOS")
+     A:523  w("      %s -> de las cuatro estan dentro: %s"
+     A:528  w(" se imprime lo que devuelva. R.48 NO se da por bueno porque lo diga el encargo)")
+     A:552  r"`PD\.(\d)`", r"`A\.(\d)`", r"`R\.(\d)`"):
+     A:583  for r in ("docs/loop/SALIDA_VNNN_BATERIA.txt", "docs/loop/SALIDA_V185_BATERIA.txt",
+     A:584  "docs/loop/SALIDA_V184_BATERIA.txt", "docs/loop/SALIDA_V183_BATERIA.txt"):
+     A:602  for n in ("REPORTE_V183.md", "REPORTE_V184.md", "REPORTE_V185.md",
+     A:607  w("=== H.9 EL ARCHIVO DE VEREDICTOS, QUE ESTA VUELTA NO PUEDE MOVER ===")
+     A:628  
+     B:88  "scripts/loop/vueltaNNN_rutas_del_reporte.py",
+     B:89  "scripts/loop/vueltaNNN_tarea2d_mutacion_seccion4.py",
+     B:92  "scripts/loop/vueltaNNN_tarea1a_registrar_actaNNN.py",
+     B:93  "scripts/loop/vueltaNNN_tarea1c_relectura_al_doble.py",
+     B:98  "scripts/loop/vueltaNNN_esqueleto_reporte.py",
+     B:108  "docs/loop/SELLO_APERTURA_AUDITOR_V188.json",
+     B:109  "docs/loop/_auditor_v188_ciega_blind.txt",
+     B:110  "docs/loop/_auditor_v188_ciega_reveal.txt",
+     B:111  "docs/loop/_auditor_v188_mis_clases.txt",
+     B:112  "docs/loop/_auditor_v188_exclusion.txt",
+     B:114  "docs/loop/SALIDA_V184_APERTURA.txt",
+     B:115  "docs/loop/SALIDA_VNNN_APERTURA.txt",
+     B:116  "docs/loop/SALIDA_VNNN_CERRAR_REPORTE.txt",
+     B:117  "docs/loop/SALIDA_V185_CERRAR_REPORTE.txt",
+     B:118  "docs/loop/SALIDA_VNNN_RUTAS_DEL_REPORTE.txt",
+     B:122  "docs/loop/reportes/REPORTE_VNNN.md",
+     B:124  "docs/plan/08_VERIFICACION.md",
+     B:125  "docs/plan/BANCO_DEL_PLAN.md",
+     B:179  w("         EL TOPE VUELVE A CINCO. El regimen temporal 6.2 pedia DOS vueltas")
+     B:180  w("         seguidas cerrando su propio reporte: la 185 fue la primera y la NNN")
+     B:181  w("         la segunda. AQUI NO SE DA POR BUENO PORQUE EL ENCARGO LO DIGA: el")
+     B:182  w("         bloque H.0 mide las dos salidas de cierre y publica lo que salga.")
+     B:183  w("         EL SELLO DEL AUDITOR SE LLAMA V188, no VNNN ni VNNN: la casa nombra")
+     B:184  w("         el sello del acta N como V(N+1) y esta es el acta NNN.")
+     B:205  w("=== B.1 LA CADENA DE LA VUELTA NNN, LOCALIZADA EN GIT Y NO TECLEADA ===")
+     B:207  w(" NNN y se imprime lo que salga)")
+     B:209  for etiqueta, aguja in (("acta NNN", "ACTA DEL AUDITOR, VUELTA NNN"),
+     B:211  ("tarea 1 de la NNN", "VUELTA NNN, TAREA 1"),
+     B:212  ("tarea 2 de la NNN", "VUELTA NNN, TAREA 2"),
+     B:213  ("cierre de la NNN", "VUELTA NNN CERRADA")):
+     B:310  w("=== H.0 LAS DOS VUELTAS QUE APAGAN EL REGIMEN TEMPORAL 6.2, MEDIDAS ===")
+     B:311  w("(el encargo dice que la 185 y la NNN cerraron su propio reporte y que por eso")
+     B:312  w(" el tope vuelve a CINCO. AQUI NO SE LE CREE: se miden las dos salidas de")
+     B:313  w(" cierre y se pega la linea de la cifra de piezas que faltan de cada una)")
+     B:314  for r in ("docs/loop/SALIDA_V185_CERRAR_REPORTE.txt",
+     B:315  "docs/loop/SALIDA_VNNN_CERRAR_REPORTE.txt"):
+     B:318  w("   %s -> NO EXISTE. Sin ella no se afirma que esa vuelta cerrase." % r)
+     B:328  w("   Y EL REPORTE DE LA NNN ARCHIVADO, MEDIDO CONTRA GIT:")
+     B:334  w("      %s -> disco %d bytes | LF %d bytes | sha256 LF %s | git %s"
+     B:368  
+     B:369  w("=== H.2 LA SEDE DE LA ESCALADA, MEDIDA ANTES DE TOCARLA (TAREA 4) ===")
+     B:370  w("(la guarda de la pareja comprueba que la pareja EXISTA, no que sea CIERTA.")
+     B:371  w(" Aqui se localiza la sede viva en cerrar_reporte.py y en el instrumento que")
+     B:372  w(" ya sabe medir las dos convenciones, y se pega lo que salga)")
+     B:378  for aguja in ("def cifras_sin_pareja", "def piezas_que_faltan",
+     B:379  "def rama_de_la_seccion9", "def es_cierre_tardio",
+     B:380  "def declaracion_de_cifras_sin_pareja", "def seccion4_que_no_calza",
+     B:381  "con su pareja", "def renglones_fuera_de_cerca",
+     B:382  "def citas_de_arnes_que_no_calzan"):
+     B:384  w("   %-40s -> %d aparicion(es), lineas %s"
+     B:385  % (repr(aguja), len(hits),
+     B:386  ", ".join(str(i) for i, _l in hits[:10]) or "(ninguna)"))
+     B:387  w("   LA LINEA DEL BLOQUE D QUE HOY DA POR BUENA LA PAREJA, PEGADA ENTERA:")
+     B:401  w("   scripts/loop/vueltaNNN_rutas_del_reporte.py -> NO EXISTE")
+     B:404  w("=== H.2.1 LAS CUATRO CIFRAS DE LA C.1, EN EL TEXTO REAL QUE LAS TRAJO ===")
+     B:405  w("(TAREA 4. El caso que la escalada tiene que cazar vive en el reporte de la")
+     B:406  w(" NNN tal como lo dejo el commit bb3aaad3. Aqui se saca ese texto de git, se")
+     B:407  w(" buscan sus parejas de disco y LF y se mide CADA ruta en disco para ver")
+     B:415  w("   git show bb3aaad3:docs/loop/REPORTE.md -> %d bytes | lineas %d"
+     B:443  w("      LINEA %d: %-56s publicada disco %d LF %d | medida disco %d"
+     B:451  
+     B:452  w("=== H.3 LA NOMINA Y LOS ARNESES QUE FALTAN (TAREA 5.a) ===")
+     B:453  w("(el encargo dice que arneses_que_faltan() devuelve hoy exactamente cuatro y")
+     B:454  w(" los nombra. Aqui no se copian: se llama a la funcion y se pega lo que")
+     B:455  w(" devuelva, y el tamano de la nomina se cuenta ANTES de meter nada)")
+     B:483  w("   LOS CUATRO ARNESES DE LA NNN, MEDIDOS ANTES DE METERLOS:")
+     B:484  for r in ("scripts/loop/vueltaNNN_tarea2a_mutacion_pieza4.py",
+     B:485  "scripts/loop/vueltaNNN_tarea2b_mutacion_pieza2_cercas.py",
+     B:486  "scripts/loop/vueltaNNN_tarea2c_mutacion_cierre_tardio.py",
+     B:487  "scripts/loop/vueltaNNN_tarea2d_mutacion_seccion4.py"):
+     B:496  w("=== H.4 LA SECCION 4 DEL REPORTE DE LA 184 Y SU APERTURA (TAREA 5.b) ===")
+     B:497  w("(la P.2 del ejecutor de la NNN partia de que SALIDA_V184_APERTURA.txt no")
+     B:498  w(" existia. Aqui se mide si existe y cuanto mide, se pegan sus cifras de")
+     B:499  w(" status y numstat, y se corre seccion4_que_no_calza() sobre los ficheros")
+     B:506  w("   docs/loop/SALIDA_V184_APERTURA.txt -> disco %d bytes | LF %d bytes | "
+     B:512  w("   docs/loop/SALIDA_V184_APERTURA.txt -> NO EXISTE")
+     B:518  w("   docs/loop/reportes/REPORTE_V184.md -> disco %d bytes | lineas %d"
+     B:532  w("   docs/loop/reportes/REPORTE_V184.md -> NO EXISTE")
+     B:538  chr(13) + NL, NL)
+     B:551  w("=== H.5 EL SELLO DEL AUDITOR V188 Y SU CIEGA (TAREA 3 Y TAREA 5.c) ===")
+     B:554  w(" Y EL PATRON DE PUESTOS SE REPARA AQUI, TAREA 5.c: el bloque de la NNN conto")
+     B:555  w(" con PUESTO en mayusculas y publico 0 para cuatro ficheros; las ciegas los")
+     B:556  w(" escriben como puesto_intra. Se publican LAS DOS CIFRAS, la VIEJA y la")
+     B:560  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_V188.json")
+     B:563  w("   docs/loop/SELLO_APERTURA_AUDITOR_V188.json -> disco %d bytes"
+     B:573  for nombre in ("_auditor_v188_ciega_blind.txt", "_auditor_v188_ciega_reveal.txt",
+     B:574  "_auditor_v188_mis_clases.txt", "_auditor_vNNN_ciega_blind.txt"):
+     B:589  w("      CIFRA VIEJA, patron en mayusculas (la que publico la NNN): %d"
+     B:615  w("   LOS PUESTOS DE LA EXCLUSION, CONTADOS DE SU FICHERO Y NO SUPUESTOS:")
+     B:631  w("      puesto %-5d -> %s la ciega de hoy"
+     B:634  
+     B:637  w(" se imprime lo que devuelva. R.49 NO se da por bueno porque lo diga el encargo)")
+     B:693  "docs/loop/SALIDA_V185_BATERIA.txt", "docs/loop/SALIDA_V184_BATERIA.txt",
+     B:694  "docs/loop/SALIDA_V183_BATERIA.txt"):
+     B:712  for n in ("REPORTE_V184.md", "REPORTE_V185.md", "REPORTE_VNNN.md",
+     B:717  w("=== H.9 EL ARCHIVO DE VEREDICTOS, QUE LA TAREA 2 SI PUEDE MOVER ===")
+
+
+FIN
+EXITCODE: 0
+
+===============================================================================
+COTEJO DE CLON DECLARADO: scripts/loop/vuelta186_esqueleto_reporte.py  ->  scripts/loop/vuelta187_esqueleto_reporte.py
+===============================================================================
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta186_esqueleto_reporte.py
+  B: scripts/loop/vuelta187_esqueleto_reporte.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 186, 187
+  CIFRA lineas de docstring: A 54 | B 54
+  CIFRA lineas de maquina:   A 285 | B 295
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 1427 | B 1439
+     CIFRA tipos de nodo que NO empatan: 3
+        Constant               A   163 | B   169 | diferencia +6
+        Load                   A   340 | B   343 | diferencia +3
+        Tuple                  A    23 | B    26 | diferencia +3
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 68
+  CIFRA tokens de maquina: A 1313 | B 1331
+  CIFRA tokens que difieren con el texto normalizado: 18
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 3
+  CIFRA LITERALES DE TEXTO:   65
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     B:82  ("1", 'LOS REGISTROS. BLOQUEANTE. El acta NNN entra en la serie con el numero que devuelve `scripts/loop/serie
+     B:83  ("2", 'EL PLAN SE MUEVE: EL PAR 2.464 Y EL TRAMO 1 DE LA COLA POST FUSION. Se LEE el disparador escrito antes 
+     B:84  ("3", 'LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA NNN, encargada por `AUDITOR.md` 1.2 porque las CUA
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:82  ("1", 'LOS REGISTROS Y LAS DOS CUENTAS QUE VENCEN. BLOQUEANTE. (a) El acta NNN entra en la serie con el numero
+     A:83  ("2", 'LAS TRES REPARACIONES DE `cerrar_reporte.py`, LA ESCALADA Y EL CIERRE DE DOS REPORTES. (a) La pieza (4)
+     A:245  > **EL TOPE DE ESTA VUELTA ES DOS SUB-TAREAS, PERO LA CUENTA YA NO ESTA EN CERO.**
+     A:246  > El regimen `AUDITOR.md` 6.2 devuelve el tope a cinco cuando **dos vueltas
+     A:247  > seguidas cierren su propio reporte** con `scripts/loop/cerrar_reporte.py`. **La
+     A:248  > 185 cerro el suyo** y es la **PRIMERA de las dos**. **Si esta vuelta cierra el
+     A:249  > suyo, es la SEGUNDA y la NNN recupera el tope de CINCO.** Van dos tareas y no hay
+     A:250  > una tercera.
+     A:252  > **EL TRABAJO DE ESTA VUELTA ES APLICAR LAS DOS ADJUDICACIONES DEL ACTA NNN QUE
+     A:253  > DEJAN UN INSTRUMENTO DICIENDO DOS COSAS DEL MISMO CASO**, meter en la nomina los
+     A:254  > dos arneses que si no dejarian la bateria de la 189 abriendo en rojo, y cerrar el
+     A:255  > reporte de la 184, que lleva dos vueltas sin conseguirse.
+     A:257  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** no se relee el
+     A:258  > par **2.464** ni ningun otro de la cola post fusion (**encabeza el encargo de la
+     A:259  > NNN**, y el acta NNN explica en su seccion 12 que el tope de dos sub-tareas es
+     A:260  > aritmetica y no preferencia); **no se vuelve a decidir ninguna clase** en la
+     A:261  > relectura al doble; no se toca el marcador, ni un veredicto, ni `dataset/`; **no
+     A:262  > se poda la nomina de la bateria**, que es la opcion `c` que el fundador RECHAZO
+     A:263  > el 5 sep, y aqui se hace lo contrario, que es completarla; y **no se abre la mesa
+     A:264  > de los tres nodos de la puerta del `PMF`** que el acta NNN anota en su `6.4`, que
+     A:265  > es trabajo de plan y no de esta vuelta.
+     A:271  >
+     A:272  > **Y EL ESQUELETO VUELVE A SU SITIO DE SIEMPRE, LA APERTURA, AL REVES QUE EN LA
+     A:273  > 185.** Alli tuvo que esperar porque su PASO 0 habria archivado el reporte de la
+     A:274  > 184 sin cerrar. Aqui no hay nada de eso: el reporte del arbol es el de la 185, ya
+     A:275  > cerrado y ya archivado, y el de la 184 tambien esta archivado desde la TAREA 2.a
+     A:276  > de la 185. **El PASO 0 se corre igual y su salida se pega con lo que salga**,
+     A:277  > diga lo que diga, en vez de dejar la fila muda.
+     A:311  ## 1. LAS DOS TAREAS DEL ENCARGO, Y SU ESTADO
+     B:85  ("4", 'LA ESCALADA: LA PAREJA DE CONVENCIONES DEJA DE BASTAR CON EXISTIR. `AUDITOR.md` 1.2, mandatorio a parti
+     B:86  ("5", 'LA NOMINA, LA DECLARACION DEL 184 Y EL CIERRE. (a) Los CUATRO arneses de la NNN entran en la nomina MAS
+     B:248  > **EL TOPE VUELVE A CINCO, Y ESTA MEDIDO EN VEZ DE DARSE POR BUENO.** El
+     B:249  > regimen temporal `AUDITOR.md` 6.2 devolvia el tope a cinco cuando **dos vueltas
+     B:250  > seguidas cerraran su propio reporte** con `scripts/loop/cerrar_reporte.py`. El
+     B:251  > **bloque H.0** del sello de apertura de esta vuelta midio las dos salidas de
+     B:252  > cierre, `docs/loop/SALIDA_V185_CERRAR_REPORTE.txt` y
+     B:253  > `docs/loop/SALIDA_VNNN_CERRAR_REPORTE.txt`, y **las dos dicen `CIFRA piezas que
+     B:254  > faltan: 0`**. **El regimen se apaga por su propio disparador de salida**, y esta
+     B:255  > vuelta lleva **CINCO tareas**.
+     B:257  > **Y CON EL TOPE EN CINCO SE ACABA LA ARITMETICA QUE APLAZABA EL PLAN.** El plan
+     B:258  > lleva **seis vueltas sin moverse**, y **por eso el par 2.464 y el tramo 1 de la
+     B:259  > cola post fusion van en la TAREA 2, delante de toda la maquinaria salvo los
+     B:260  > registros**. **Si esta vuelta se corta por falta de sitio, que se caiga la
+     B:261  > maquinaria, no el plan.**
+     B:263  > **DONDE SE TALLO ESTE ESQUELETO, DICHO SIN REDONDEAR.** No en la apertura, sino
+     B:264  > **despues de la TAREA 1**. La apertura si corrio primero y entera
+     B:265  > (`docs/loop/SALIDA_VNNN_APERTURA.txt`, con el ciclo de Gate 0 dentro), pero este
+     B:266  > esqueleto necesita que `docs/loop/SALIDA_VNNN_HEAD_APERTURA.txt` este
+     B:267  > **commiteado** para poder leer su commit de nacimiento con
+     B:268  > `git log --diff-filter=A`, y ese commit es el de la TAREA 1. **Se declara en vez
+     B:269  > de disimularse**, que es lo que el banco 9 manda: lo que `EJECUTOR.md` 1 protege
+     B:270  > es que una vuelta cortada deje reporte parcial y no vacio, y desde este punto
+     B:271  > eso se cumple.
+     B:272  >
+     B:273  > **LO QUE NO ENTRA EN ESTA VUELTA, DICHO PARA QUE NO SE CUELE:** **no se abre la
+     B:274  > mesa de los tres nodos de la puerta del `PMF`** (puestos 338 y 297), ni la del
+     B:275  > **603**, ni la de **figuras del 226**; las tres estan anotadas en el acta NNN,
+     B:276  > seccion 6.2, con sede en `docs/PENDIENTES.md`, y son trabajo de plan de otra
+     B:277  > vuelta. **No se poda la nomina de la bateria**, que es la opcion `c` que el
+     B:278  > fundador RECHAZO el 5 sep, y aqui se hace lo contrario, que es completarla. **No
+     B:279  > se reabre ni se reescribe `docs/loop/reportes/REPORTE_V184.md`**, que ya esta
+     B:280  > cerrado y archivado: lo que se le anade es la DECLARACION de su defecto. Y **no
+     B:281  > se toca `dataset/`**: el `numstat` se mide al entrar y al salir y las dos cifras
+     B:282  > se publican.
+     B:321  ## 1. LAS CINCO TAREAS DEL ENCARGO, Y SU ESTADO
+
+
+FIN
+EXITCODE: 0
+
+===============================================================================
+COTEJO DE CLON DECLARADO: scripts/loop/vuelta186_tarea1c_relectura_al_doble.py  ->  scripts/loop/vuelta187_tarea3_relectura_al_doble.py
+===============================================================================
+==============================================================================
+COTEJO DE CLON DECLARADO
+==============================================================================
+  A: scripts/loop/vuelta186_tarea1c_relectura_al_doble.py
+  B: scripts/loop/vuelta187_tarea3_relectura_al_doble.py
+  numeros de vuelta sustituidos por NNN EN LOS DOS FICHEROS: 186, 187
+  CIFRA lineas de docstring: A 48 | B 49
+  CIFRA lineas de maquina:   A 296 | B 366
+
+LOS CUATRO VEREDICTOS, SEPARADOS Y NO UNO
+  1) FICHERO ENTERO  : DIFIERE
+  2) SOLO DOCSTRING  : DIFIERE
+  3) SOLO LA MAQUINA : DIFIERE
+  4) EL ARBOL DE SINTAXIS (vuelta 178, TAREA 1.c). Los tres de arriba miden
+     LINEAS y TOKENS; este mide EL ARBOL, que es la vara de 'cambia lo que
+     el programa hace'. Una coma final mueve un token y NO mueve un AST.
+     4.a) AST DEL FICHERO ENTERO   : DIFIERE
+     4.b) AST SIN EL DOCSTRING     : DIFIERE
+     CIFRA nodos del arbol sin docstring: A 2420 | B 3050
+     CIFRA tipos de nodo que NO empatan: 31
+        Load                   A   616 | B   768 | diferencia +152
+        Name                   A   523 | B   669 | diferencia +146
+        Constant               A   256 | B   329 | diferencia +73
+        Call                   A   279 | B   351 | diferencia +72
+        Expr                   A   126 | B   163 | diferencia +37
+        Store                  A    84 | B   105 | diferencia +21
+        BinOp                  A    59 | B    79 | diferencia +20
+        Attribute              A   125 | B   140 | diferencia +15
+        Mod                    A    45 | B    60 | diferencia +15
+        Assign                 A    51 | B    60 | diferencia +9
+        Subscript              A    20 | B    27 | diferencia +7
+        If                     A    16 | B    22 | diferencia +6
+        BitAnd                 A     2 | B     7 | diferencia +5
+        Compare                A    20 | B    25 | diferencia +5
+        IfExp                  A    10 | B    15 | diferencia +5
+        In                     A     7 | B    12 | diferencia +5
+        Add                    A     9 | B    13 | diferencia +4
+        AugAssign              A     3 | B     7 | diferencia +4
+        Not                    A     5 | B     9 | diferencia +4
+        Tuple                  A    25 | B    29 | diferencia +4
+        UnaryOp                A     6 | B    10 | diferencia +4
+        BoolOp                 A     9 | B    12 | diferencia +3
+        comprehension          A    12 | B    15 | diferencia +3
+        And                    A     5 | B     7 | diferencia +2
+        For                    A     7 | B     9 | diferencia +2
+        keyword                A    10 | B    12 | diferencia +2
+        GeneratorExp           A     5 | B     6 | diferencia +1
+        List                   A     7 | B     8 | diferencia +1
+        ListComp               A     6 | B     7 | diferencia +1
+        Or                     A     4 | B     5 | diferencia +1
+        SetComp                A     0 | B     1 | diferencia +1
+
+LA MAQUINA DIFIERE. LA CLASIFICACION, QUE ES LO QUE DECIDE SI ES UN CLON
+  CIFRA lineas de maquina que difieren: 148
+  CIFRA tokens de maquina: A 2145 | B 2681
+  CIFRA tokens que difieren con el texto normalizado: 564
+  EL FLUJO DE CODIGO ES EL MISMO (la maquina no cambia): NO
+  CIFRA SENTENCIAS DE CODIGO: 74
+  CIFRA LITERALES DE TEXTO:   74
+
+  LAS SENTENCIAS DE CODIGO, UNA A UNA (lo que sobrevive a tapar cadenas
+  y comentarios, o sea lo que de verdad cambia la maquina):
+     A:72  LAS_CUATRO = [338, 491, 1775, 2599]
+     A:216  ANTERIOR = os.path.join(LOOP, "_auditor_v185b_ciega_blind.txt")
+     B:67  ANTERIOR = os.path.join(LOOP, "_auditor_vNNN_ciega_blind.txt")
+     B:68  EXCLUSION = os.path.join(LOOP, "_auditor_v188_exclusion.txt")
+     B:75  LAS_CUATRO = [226, 603, 1612, 2448]
+     B:123  w("VUELTA NNN, TAREA 3: LA RELECTURA AL DOBLE DEL")
+     B:219  w("   F.1 SOLAPE ENTRE EL TRAMO Y SUS VECINOS: %d" % len(set(dobles) & set(tramo)))
+     B:226  w("       SOLAPE del UNIVERSO ENTERO de hoy con el anterior: %d"
+     B:227  % len(set(universo) & set(tramo_ant)))
+     B:229  w("   F.2 LA CIEGA ANTERIOR NO ESTA EN DISCO. No se afirma ningun solape.")
+     B:230  if os.path.exists(EXCLUSION):
+     B:231  t_exc = io.open(EXCLUSION, encoding="utf-8", errors="replace").read()
+     B:232  exc = sorted({int(x) for x in re.findall(r"\d+", t_exc)})
+     B:233  w("   F.3 exclusion: docs/loop/_auditor_v188_exclusion.txt -> disco %d bytes"
+     B:234  % os.path.getsize(EXCLUSION))
+     B:235  w("       CIFRA puestos distintos que la exclusion lista: %d" % len(exc))
+     B:236  w("       SOLAPE del TRAMO con la exclusion: %d" % len(set(tramo) & set(exc)))
+     B:237  cruce = sorted(set(universo) & set(exc))
+     B:238  w("       SOLAPE del UNIVERSO ENTERO con la exclusion: %d" % len(cruce))
+     B:239  w("       (el criterio del sello habla de 293 puestos excluidos; la cifra de")
+     B:240  w("        arriba esta CONTADA del fichero y no copiada del criterio)")
+     B:241  if cruce:
+     B:242  w("       LOS QUE CRUZAN, NOMBRADOS UNO A UNO EN VEZ DE DEJARLOS EN UNA")
+     B:243  w("       CIFRA, Y CON EL PUESTO DEL TRAMO QUE LOS TRAJO:")
+     B:244  for x in cruce:
+     B:245  de_donde = [q for q in tramo if x in vecinos([q], maximo)]
+     B:246  w("          puesto %-6d es %s | vecino determinista de %s"
+     B:247  % (x, "DEL TRAMO" if x in tramo else "VECINO",
+     B:248  ", ".join(str(q) for q in de_donde) or "(no localizado)"))
+     B:249  w("       DECLARADO SIN ARREGLARLO: el encargo pide solape 0 con la")
+     B:250  w("       exclusion. EL TRAMO LO CUMPLE (%d). Los que cruzan son"
+     B:251  % len(set(tramo) & set(exc)))
+     B:252  w("       VECINOS DETERMINISTAS, y vecinos() es una funcion IMPORTADA y")
+     B:253  w("       CONGELADA: cambiarla aqui para que la cifra saliera cero seria")
+     B:254  w("       mover la vara a mitad de la medicion, que es justo lo que la")
+     B:255  w("       P.5.1 prohibe. Se publica la cifra y se nombran los puestos.")
+     B:327  w("    NNN `5.6`: las TRES `B` conocidas (338, 226, 603) dan NADA en las cuatro")
+     B:328  w("    comprobaciones mecanicas y aun asi son `B`. Si la vara resulta ciega a la")
+     B:329  w("    clase `B` entera, eso es un hallazgo del fundador y no de este fichero)")
+     B:336  w("")
+     B:337  w("   PARA CADA `B` DEL UNIVERSO, SUS TRES COMPROBACIONES MECANICAS:")
+     B:338  w("   %-7s %-9s %-9s %-11s  %s"
+     B:339  % ("puesto", "declara", "lesion", "nodo muerto", "nodos"))
+     B:340  n_b_declaran = n_b_lesion = n_b_muerto = n_b_nada = 0
+     B:341  for p in b_universo:
+     B:342  f = porpuesto[p]
+     B:343  r = T3.analiza(f, porid)
+     B:344  muerto = not ((f.get("nodo_a") in porid) and (f.get("nodo_b") in porid))
+     B:345  if r["declara"]:
+     B:346  n_b_declaran += 1
+     B:347  if r["lesion"]:
+     B:348  n_b_lesion += 1
+     B:349  if muerto:
+     B:350  n_b_muerto += 1
+     B:351  if not r["declara"] and not r["lesion"] and not muerto:
+     B:352  n_b_nada += 1
+     B:353  w("   %-7d %-9s %-9s %-11s  %s contra %s%s"
+     B:354  % (p, "SI" if r["declara"] else "NADA",
+     B:355  "SI" if r["lesion"] else "NADA", "SI" if muerto else "NADA",
+     B:356  f.get("nodo_a"), f.get("nodo_b"),
+     B:357  "   <-- DEL TRAMO" if p in tramo else ""))
+     B:358  w("")
+     B:359  w("   LAS CIFRAS DEL CENSO DE `B`, CONTADAS DE LA TABLA DE ARRIBA:")
+     B:360  w("      CIFRA `B` del universo: %d" % len(b_universo))
+     B:361  w("      CIFRA `B` que DECLARAN diferenciador: %d" % n_b_declaran)
+     B:362  w("      CIFRA `B` con LESION EXACTA: %d" % n_b_lesion)
+     B:363  w("      CIFRA `B` con algun NODO MUERTO: %d" % n_b_muerto)
+     B:364  w("      CIFRA `B` que dan NADA en las tres: %d de %d"
+     B:365  % (n_b_nada, len(b_universo)))
+     B:382  w("      el sello del acta N como V(N+1) y esta es el acta NNN. El VNNN NO")
+     B:383  w("      EXISTE y no se fabrica. La ruta viene del encargo, no de deducirla")
+     B:384  w("      del numero de vuelta.")
+     B:391  w("   5. LOS TRES SOLAPES VAN MEDIDOS Y NO SUPUESTOS, y el tercero (contra los")
+     B:392  w("      puestos de la exclusion) la vuelta NNN no lo media.")
+
+  LOS LITERALES DE TEXTO, UNA A UNA (lo que desaparece al tapar cadenas y
+  comentarios, o sea lo que solo cambia lo que el fichero DICE):
+     A:64  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_VNNN.json")
+     A:65  CIEGA = os.path.join(LOOP, "_auditor_vNNN_ciega_blind.txt")
+     A:69  # LAS CUATRO DISCREPANCIAS QUE EL ACTA NNN NOMBRA EN SU SECCION 4, Y QUE EL
+     A:70  # AUDITOR PIERDE LAS CUATRO A FAVOR DEL ARCHIVO. Van en una constante con
+     A:71  # nombre para que se vea que son un dato del acta y no del juicio de aqui.
+     A:120  w("VUELTA NNN, TAREA 1.c: LA RELECTURA AL DOBLE DEL")
+     A:122  w("CUATRO discrepancias del auditor salieron FUERA del marcado")
+     A:154  w("   docs/loop/SELLO_APERTURA_AUDITOR_VNNN.json -> %d bytes en disco y %d "
+     A:211  w("F) EL SOLAPE CON EL TRAMO ANTERIOR, MEDIDO Y NO SUPUESTO")
+     A:212  w("   (el criterio del sello dice que la muestra excluye 150 puestos: los 120 de")
+     A:213  w("    las ciegas de las actas 183, 184, 185 y 185b, mas los 30 vecinos")
+     A:214  w("    deterministas de la 1.e de la vuelta 185; aqui se comprueba contra la")
+     A:215  w("    ciega INMEDIATAMENTE ANTERIOR en disco, que es la V185b)")
+     A:219  w("   ciega anterior: docs/loop/_auditor_v185b_ciega_blind.txt -> %d puestos"
+     A:221  w("   SOLAPE del tramo de hoy con el anterior: %d"
+     A:224  w("   LA CIEGA ANTERIOR NO ESTA EN DISCO. No se afirma ningun solape.")
+     A:270  w("   (el acta NNN las nombra en su seccion 4: los puestos 338, 491, 1775 y")
+     A:271  w("    2599, que el auditor pierde LOS CUATRO a favor del archivo. Aqui NO se")
+     A:291  w("I.1) CUANTAS CLASES `B` HAY EN EL UNIVERSO RELEIDO. SOLO SE CUENTA.")
+     A:292  w("   (el encargo la pide con esas palabras porque el puesto 338 es clase `B`.")
+     A:293  w("    ESTA CIFRA NO SE INTERPRETA NI SE ADJUDICA AQUI: se cuenta y se publica)")
+     A:301  w("   CIFRA clases `B` en TODO el archivo, contadas del archivo y no del")
+     A:302  w("   encargo: %d de %d filas" % (len(b_archivo), len(filas)))
+     A:303  w("   de las cuatro discrepancias, cuales son clase `B`: %s"
+     A:311  w("      sha256 contra su propio sello, y NO del acta, que no lo lista. El")
+     A:312  w("      sello se llama VNNN porque la casa nombra el sello del acta N como")
+     A:313  w("      V(N+1) y esta es el acta NNN. El VNNN NO EXISTE y no se fabrica: es")
+     A:314  w("      el hueco que dejo la caida propia A.1 del acta 185. La ruta viene")
+     A:315  w("      del encargo, no de deducirla del numero de vuelta.")
+     A:322  w("   5. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura")
+     A:325  w("   6. NINGUN VEREDICTO SE MUEVE EN ESTA VUELTA: el archivo se abre para")
+     A:326  w("      leer y se cierra, y su sha256 va medido en la apertura y en el")
+     A:327  w("      cierre del reporte.")
+     A:328  w("   7. LA CUENTA DE CLASES `B` DEL UNIVERSO RELEIDO SE PUBLICA Y NO SE")
+     A:329  w("      INTERPRETA. El encargo la pide porque el puesto 338 es `B`; aqui se")
+     A:330  w("      cuenta y ahi se para.")
+     A:335  ruta = os.path.join(LOOP, "SALIDA_VNNN_T1C_RELECTURA_AL_DOBLE.txt")
+     B:65  SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_V188.json")
+     B:66  CIEGA = os.path.join(LOOP, "_auditor_v188_ciega_blind.txt")
+     B:72  # LAS CUATRO DISCREPANCIAS QUE EL ACTA NNN NOMBRA, Y QUE EL AUDITOR PIERDE LAS
+     B:73  # CUATRO A FAVOR DEL ARCHIVO. Van en una constante con nombre para que se vea que
+     B:74  # son un dato del acta y del encargo, y no del juicio de aqui.
+     B:125  w("CUATRO discrepancias del auditor salieron FUERA del discutible de clase")
+     B:126  w("marcado, y TRES fuera incluso de los dudosos que el auditor marco de antemano")
+     B:158  w("   docs/loop/SELLO_APERTURA_AUDITOR_V188.json -> %d bytes en disco y %d "
+     B:215  w("F) LOS TRES SOLAPES, MEDIDOS Y NO SUPUESTOS")
+     B:216  w("   (el encargo exige solape 0 por TRES lados: contra el tramo, contra la")
+     B:217  w("    ciega inmediatamente anterior, y contra los 293 puestos de la exclusion.")
+     B:218  w("    El tercero la vuelta NNN no lo media; aqui si, y se publica lo que salga)")
+     B:222  w("   F.2 ciega anterior: docs/loop/_auditor_vNNN_ciega_blind.txt -> %d puestos"
+     B:224  w("       SOLAPE del tramo de hoy con el anterior: %d"
+     B:256  else:
+     B:257  w("   F.3 LA EXCLUSION NO ESTA EN DISCO. No se afirma ningun solape.")
+     B:303  w("   (el acta NNN las nombra: los puestos 226, 603, 1612 y 2448, que el")
+     B:304  w("    auditor pierde LOS CUATRO a favor del archivo. Aqui NO se")
+     B:324  w("I.1) EL CENSO DE LAS `B` DEL UNIVERSO RELEIDO, UNA POR UNA. SOLO SE CUENTA")
+     B:325  w("     Y SE PUBLICA: NO SE INTERPRETA Y NO SE ADJUDICA.")
+     B:326  w("   (el encargo lo pide con esas palabras y da su motivo, medido en el acta")
+     B:367  w("      CIFRA clases `B` en TODO el archivo, contadas del archivo y no del")
+     B:368  w("      encargo: %d de %d filas" % (len(b_archivo), len(filas)))
+     B:369  w("      de las cuatro discrepancias, cuales son clase `B`: %s"
+     B:373  w("   Y AQUI SE PARA. Esta salida NO dice que la vara sea ciega a la clase `B`,")
+     B:374  w("   NO adjudica ninguna de estas `B` y NO propone nada: publica la cuenta y")
+     B:375  w("   las tres columnas, que es exactamente lo que el encargo pide.")
+     B:380  w("      sha256 contra su propio sello ANTES de leer un solo puesto, y NO del")
+     B:381  w("      acta, que no lo lista. El sello se llama V188 porque la casa nombra")
+     B:393  w("   6. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura")
+     B:396  w("   7. NINGUN VEREDICTO SE MUEVE EN ESTA TAREA. La TAREA 2 de esta misma")
+     B:397  w("      vuelta SI movio uno, el 2.464, y lo dice en su sitio; aqui el archivo")
+     B:398  w("      se abre para leer y se cierra.")
+     B:399  w("   8. EL CENSO DE LAS `B` SE PUBLICA Y NO SE INTERPRETA. El encargo lo pide")
+     B:400  w("      con sus tres columnas; aqui se cuentan y ahi se para. Si la vara")
+     B:401  w("      resulta ciega a la clase `B` entera, eso es un hallazgo del fundador.")
+     B:406  ruta = os.path.join(LOOP, "SALIDA_VNNN_T3_RELECTURA_AL_DOBLE.txt")
+
+
+FIN
+EXITCODE: 0
+
