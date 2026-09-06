@@ -1,0 +1,496 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   ACTA 186 (cubre la vuelta 185): muestra fresca de 30 pares con semilla 1862 sobre todo el archivo, EXCLUYENDO los 150 puestos ya leidos por las ciegas de las actas 183, 184, 185 y 185b (120) y por los 30 vecinos deterministas de la relectura al doble de la TAREA 1.e de la vuelta 185. Solape exigido: CERO con las cuatro ciegas anteriores y con el doble de la 1.e.
+
+CIFRA pares elegidos: 30
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 338
+nodo_a: problem_solution_fit
+nodo_b: product_market_fit
+  pasos de A (problem_solution_fit): 4
+     paso 1: Validar que el problema identificado sea doloroso para un segmento amplio de clientes
+     paso 2: Probar si la solución propuesta resuelve el problema de forma convincente
+     paso 3: Verificar alineación entre modelo de ingresos, precio y necesidades del cliente
+     paso 4: Considerar mercados multi-sided donde puede haber múltiples propuestas de valor
+  pasos de B (product_market_fit): 6
+     paso 1: Evaluar si el problema/necesidad es urgente y vital para muchos clientes (definir número pass/fail)
+     paso 2: Evaluar si el producto resuelve el problema a un precio que los clientes pagarían con gusto
+     paso 3: Evaluar si existen suficientes clientes para un negocio de tamaño significativo
+     paso 4: Confirmar comprensión de la demografía y arquetipos de los clientes objetivo
+     paso 5: Evaluar si el negocio puede crecer de forma predecible y escalable
+     paso 6: Decidir formalmente con equipo e inversores si se avanza a Customer Validation
+------------------------------------------------------------------------------
+puesto_intra: 491
+nodo_a: clausula_no_shop_adquisicion
+nodo_b: no_shop_agreement
+  pasos de A (clausula_no_shop_adquisicion): 4
+     paso 1: Negociar una duración de no-shop entre 45 y 60 días.
+     paso 2: Incluir cláusula de terminación automática si el comprador abandona el proceso.
+     paso 3: Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.
+     paso 4: Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop.
+  pasos de B (no_shop_agreement): 4
+     paso 1: Define el período de exclusividad (comúnmente 30, 60 o 90 días)
+     paso 2: Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones
+     paso 3: Establece la obligación de avisar si alguien más se te acerca durante este periodo
+     paso 4: Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí
+------------------------------------------------------------------------------
+puesto_intra: 646
+nodo_a: analisis_antiguedad_cuentas_por_cobrar
+nodo_b: gestion_dso
+  pasos de A (analisis_antiguedad_cuentas_por_cobrar): 4
+     paso 1: Generar un reporte de antigüedad de cuentas por cobrar segmentado por rangos de días.
+     paso 2: Identificar el porcentaje de cartera en mora superior a 90 días.
+     paso 3: Comparar el aging con el DSO general para detectar riesgos ocultos.
+     paso 4: Priorizar acciones de cobranza sobre los segmentos más antiguos.
+  pasos de B (gestion_dso): 5
+     paso 1: Calcular el DSO actual y su tendencia histórica
+     paso 2: Investigar con operaciones si hay problemas de calidad o entrega que retrasen pagos
+     paso 3: Consultar con ventas y servicio al cliente sobre la salud financiera de los clientes
+     paso 4: Definir políticas de crédito claras (términos, descuentos por pronto pago como 2/10 net 30)
+     paso 5: Establecer criterios de perfil de cliente ideal para otorgar crédito
+------------------------------------------------------------------------------
+puesto_intra: 666
+nodo_a: advocacy_customer_journey
+nodo_b: fase_adopt_ciclo_cliente
+  pasos de A (advocacy_customer_journey): 4
+     paso 1: Identificar señales de que un cliente ha llegado a la fase de Advocate (referidos espontáneos, testimonios positivos)
+     paso 2: Diseñar experiencias memorables en persona, email, correo físico, teléfono, video y presentes para esta fase
+     paso 3: Solicitar testimonios en video dado el nivel de confianza alcanzado
+     paso 4: Reconocer públicamente a los clientes advocates para reforzar el vínculo
+  pasos de B (fase_adopt_ciclo_cliente): 4
+     paso 1: Define qué comportamientos/métricas indican que un cliente ha 'adoptado' tu producto
+     paso 2: Diseña interacciones específicas para cada uno de los 6 canales (in-person, email, mail, phone, video, present)
+     paso 3: Implementa una encuesta de éxito para recopilar datos de personalización
+     paso 4: Establece un ritual de reconocimiento de hitos/aniversarios de la relación
+------------------------------------------------------------------------------
+puesto_intra: 679
+nodo_a: revenue_pricing_hypothesis
+nodo_b: verificar_modelo_ingresos
+  pasos de A (revenue_pricing_hypothesis): 5
+     paso 1: Calcular número esperado de clientes desde hipótesis de mercado y canal
+     paso 2: Restar costos de canal para obtener ingreso neto real
+     paso 3: Seleccionar modelo de pricing adecuado (valor, competitivo, volumen, portfolio, razor-blade, suscripción, leasing)
+     paso 4: Calcular TCO (costo total de propiedad) para ventas B2B
+     paso 5: Preparar un ROI hipotético para presentar a clientes corporativos
+  pasos de B (verificar_modelo_ingresos): 6
+     paso 1: Recopila tus datos de precios, costos de adquisición, tamaño de mercado y costos de canal
+     paso 2: Calcula el ingreso bruto directo estimado por trimestre
+     paso 3: Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales
+     paso 4: Suma los ingresos totales y resta los costos operativos y de adquisición de clientes
+     paso 5: Repite el cálculo en tres escenarios: optimista, esperado y pesimista
+     paso 6: Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado
+------------------------------------------------------------------------------
+puesto_intra: 780
+nodo_a: customer_development_process
+nodo_b: filosofia_customer_validation
+  pasos de A (customer_development_process): 4
+     paso 1: Etapa 1, descubrir a tu cliente: sal a entender que necesita, que le duele y que espera ganar
+     paso 2: Etapa 2, validar con tu cliente: prueba con experimentos si tu solución realmente le importa
+     paso 3: Etapa 3, crear demanda: construye demanda real y guia a tus clientes hacia como comprarte
+     paso 4: Etapa 4, construir tu negocio: pasa de estar buscando respuestas a tener una forma de trabajar que puedas repetir y hacer crecer
+  pasos de B (filosofia_customer_validation): 5
+     paso 1: Revisa las hipótesis de negocio que ya confirmaste hablando con clientes
+     paso 2: Prepara tu primera versión del producto (MVP) y los materiales que necesitas para vender y difundirlo
+     paso 3: Sal a pedir pedidos reales, no solo opiniones
+     paso 4: Confirma que haya pedidos, usuarios o clics reales, no solo respuestas de encuestas
+     paso 5: Responde estas tres preguntas: ¿puede crecer tu negocio?, ¿tu forma de vender se repite?, ¿puedes predecir cuánta gente avanza hacia la compra?
+------------------------------------------------------------------------------
+puesto_intra: 782
+nodo_a: diversidad_vs_homogeneidad_equipo
+nodo_b: homogeneidad_vs_diversidad_equipo
+  pasos de A (diversidad_vs_homogeneidad_equipo): 4
+     paso 1: Piensa con calma qué habilidades le faltan a tu negocio, no elijas socios solo porque te resultan cómodos
+     paso 2: Sal a buscar cofundadores con habilidades y contactos distintos a los tuyos
+     paso 3: Habla con quien consideres sumar y pon sobre la mesa si comparten valores, cuánto compromiso espera cada uno y cuánto riesgo está dispuesto a tolerar
+     paso 4: No caigas en el default de elegir a alguien solo porque se parece a ti o te da comodidad
+  pasos de B (homogeneidad_vs_diversidad_equipo): 6
+     paso 1: Identificar si el equipo fundador actual es homogéneo en habilidades, formación, experiencia funcional o redes sociales
+     paso 2: Hacer un análisis estructurado de las necesidades de capital humano, social y financiero del proyecto para detectar brechas críticas (por ejemplo, conocimiento de industria, técnico o comercial)
+     paso 3: Considerar activamente ampliar la búsqueda de cofundadores fuera del círculo social inmediato para lograr diversidad de perspectivas y habilidades
+     paso 4: Evaluar también factores 'blandos' (tolerancia al riesgo, valores, estilo de trabajo) antes de comprometerse con un cofundador, y cuánto compromiso espera cada uno
+     paso 5: Sopesar los beneficios de cohesión (homogeneidad) contra los beneficios de perspectiva amplia (diversidad) según el contexto del proyecto
+     paso 6: No caigas en el default de elegir a alguien solo porque se parece a ti o te da comodidad
+------------------------------------------------------------------------------
+puesto_intra: 1158
+nodo_a: priorizar_elementos_a_validar
+nodo_b: validar_modelo_negocio_hechos
+  pasos de A (priorizar_elementos_a_validar): 5
+     paso 1: Revisar el lienzo de modelo de negocio completo
+     paso 2: Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio
+     paso 3: Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos
+     paso 4: Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado
+     paso 5: Evitar intentar validar todas las variables del modelo de negocio de forma simultánea
+  pasos de B (validar_modelo_negocio_hechos): 5
+     paso 1: Reunir todas las snapshots semanales o por pivote del business model canvas
+     paso 2: Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+     paso 3: Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+     paso 4: Identificar pruebas pass/fail para cada hipótesis
+     paso 5: Determinar si los resultados cumplen los objetivos de tráfico o financieros
+------------------------------------------------------------------------------
+puesto_intra: 1164
+nodo_a: earlyvangelists_ventas_tempranas
+nodo_b: verificar_product_market_fit
+  pasos de A (earlyvangelists_ventas_tempranas): 4
+     paso 1: Identificar earlyvangelists definidos previamente en customer discovery
+     paso 2: Ofrecerles el MVP y pedir órdenes reales, no solo opiniones
+     paso 3: Usar su feedback para refinar el producto y el modelo de negocio
+     paso 4: Si no compran, reconsiderar la propuesta de valor o el segmento
+  pasos de B (verificar_product_market_fit): 5
+     paso 1: Revisar si los clientes calificaron el problema con 8-10 en severidad
+     paso 2: Verificar si los clientes intentaron soluciones caseras o workarounds
+     paso 3: Analizar el entusiasmo generado por el MVP (comentarios como 'lo necesito ahora')
+     paso 4: Comparar el TAM y SAM estimado con la retroalimentación real de clientes
+     paso 5: Revisar diagramas de flujo de trabajo antes y después del producto
+------------------------------------------------------------------------------
+puesto_intra: 1259
+nodo_a: construir_mvp_baja_fidelidad
+nodo_b: principio_calidad_mvp
+  pasos de A (construir_mvp_baja_fidelidad): 5
+     paso 1: Crea una pagina simple con tu propuesta de valor y sus beneficios
+     paso 2: Incluye una accion clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden
+     paso 3: Suma videos, encuestas o un blog si te ayudan a mostrar la idea
+     paso 4: Prueba varias versiones si quieres testear distintas formas de contar el problema
+     paso 5: Publica lo antes posible sin preocuparte por que se vea perfecto
+  pasos de B (principio_calidad_mvp): 7
+     paso 1: Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.
+     paso 2: No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.
+     paso 3: Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.
+     paso 4: Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).
+     paso 5: Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales
+     paso 6: Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.
+     paso 7: Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas
+------------------------------------------------------------------------------
+puesto_intra: 1328
+nodo_a: storytelling_como_herramienta_de_diseno
+nodo_b: storytelling_modelo_negocio
+  pasos de A (storytelling_como_herramienta_de_diseno): 6
+     paso 1: Identificar el mensaje central que se quiere comunicar
+     paso 2: Traducir el mensaje en actividades concretas y significativas para el público
+     paso 3: Crear momentos memorables (eventos, demostraciones) en lugar de solo publicidad, con figuras de autoridad para modelar el nuevo comportamiento
+     paso 4: Facilitar que la audiencia se apropie y difunda la historia por sí misma
+     paso 5: Reforzar la narrativa con símbolos tangibles (pines, insignias, señales)
+     paso 6: Medir el reconocimiento y adopción de la narrativa en la población objetivo
+  pasos de B (storytelling_modelo_negocio): 5
+     paso 1: Elige un protagonista único: un empleado que observa el problema o un cliente que vive el 'job to be done'.
+     paso 2: Describe los desafíos que enfrenta el protagonista y cómo el nuevo modelo de negocio le resuelve el problema.
+     paso 3: Añade drama y emoción, mostrando qué recibe el protagonista y qué está dispuesto a pagar.
+     paso 4: Selecciona una técnica de presentación adecuada a la audiencia: charla con imagen, video, role play, texto con imagen o cómic.
+     paso 5: Practica contar la historia desde distintos puntos de partida del Business Model Canvas (clientes, propuesta de valor, recursos clave, etc.).
+------------------------------------------------------------------------------
+puesto_intra: 1440
+nodo_a: diamante_decision_tres_partes
+nodo_b: protocolo_reuniones_gate
+  pasos de A (diamante_decision_tres_partes): 4
+     paso 1: Empieza revisando solo si lo que entregaste está completo y con la calidad que esperabas (chequeo de preparación).
+     paso 2: Si pasa esa revisión, evalúa el negocio: mira los números y los criterios que ya tenías definidos.
+     paso 3: Si el negocio se sostiene, compara este proyecto con tus otras iniciativas activas para decidir a cuál le das prioridad.
+     paso 4: Mantén estas tres preguntas separadas durante la revisión, no las mezcles.
+  pasos de B (protocolo_reuniones_gate): 5
+     paso 1: Escribe tu propia lista de reglas para estas reuniones de decisión.
+     paso 2: Elige a alguien que modere la reunión con autoridad para hacer cumplir esas reglas.
+     paso 3: Envía los entregables con al menos 3 días de anticipación y en un formato que todos entiendan igual.
+     paso 4: Ordena la reunión así: quien presenta habla 15 minutos sin interrupciones, luego preguntas y respuestas, revisión de los criterios, cada uno da su valoración, se discuten las diferencias y se cierra con una decisión final.
+     paso 5: Comunica la decisión a las personas del proyecto de inmediato y en persona.
+------------------------------------------------------------------------------
+puesto_intra: 1452
+nodo_a: customer_discovery
+nodo_b: voz_del_cliente_voc
+  pasos de A (customer_discovery): 9
+     paso 1: Sal a hablar directamente con clientes potenciales en vez de quedarte encerrado con tu idea
+     paso 2: Prueba como percibe el cliente el problema antes de mostrarle nada del producto
+     paso 3: Construye una versión minima del producto (MVP) para testear la solución
+     paso 4: Confirma que el problema le importa lo suficiente como para que decida comprar
+     paso 5: Documenta lo que aprendes y ajusta tu modelo de negocio según ese feedback
+     paso 6: Fase 1: desarma tu idea en las nueve partes del lienzo de modelo de negocio y escribe un resumen de una página por cada hipótesis
+     paso 7: Fase 2: sal a probar tus hipótesis de 'problema' hablando directamente con clientes reales
+     paso 8: Fase 3: muestra tu producto mínimo viable y compara las respuestas contra tus metas de éxito y fracaso definidas de antemano
+     paso 9: Fase 4: evalúa si entendiste el problema, si tu propuesta de valor se valida, cuántos clientes hay, si pagarían y si el negocio es rentable, y decide si avanzas a validar con clientes o vuelves a aprender más
+  pasos de B (voz_del_cliente_voc): 6
+     paso 1: Prepárate (o prepara a quien te ayude) para observar a tus clientes en su propio entorno, no solo entrevistarlos, y empieza por los más exigentes.
+     paso 2: Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.
+     paso 3: Complementa tus entrevistas con observación real: tu cliente no siempre te va a contar sus problemas o su comportamiento real cuando lo entrevistas.
+     paso 4: Haz una evaluación preliminar de mercado y un análisis competitivo detallado de productos, precios y tecnologías antes de comprometer recursos importantes.
+     paso 5: Usa lo que observas desde el inicio para diseñar tu producto, no lo dejes para verificar al final, y prueba tus primeras ideas de concepto con clientes reales antes de empezar el desarrollo formal.
+     paso 6: Mantén contacto con tu cliente durante todo el desarrollo, en ciclos cortos, no solo al principio y al final.
+------------------------------------------------------------------------------
+puesto_intra: 1775
+nodo_a: commuting_teletrabajo_sostenible
+nodo_b: movilidad_verde_empleados
+  pasos de A (commuting_teletrabajo_sostenible): 4
+     paso 1: Evaluar la ubicación de oficinas priorizando acceso a transporte público
+     paso 2: Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)
+     paso 3: Establecer políticas claras de teletrabajo para roles compatibles
+     paso 4: Medir el impacto en productividad, satisfacción y reducción de emisiones
+  pasos de B (movilidad_verde_empleados): 5
+     paso 1: Elegir ubicaciones de oficina con buen acceso a transporte público
+     paso 2: Subsidiar pases de autobús o metro para empleados
+     paso 3: Eliminar o reducir el subsidio de estacionamiento gratuito
+     paso 4: Ofrecer espacios preferenciales para carpooling o van pools
+     paso 5: Implementar shuttles compartidos hacia/desde el trabajo
+------------------------------------------------------------------------------
+puesto_intra: 1941
+nodo_a: alineacion_engagement_estrategia_general
+nodo_b: co_creacion_estrategia_engagement
+  pasos de A (alineacion_engagement_estrategia_general): 4
+     paso 1: Verificar que lo que propones para involucrar a tu equipo refleje tu vision y mision de sostenibilidad
+     paso 2: Mostrar con hechos, no solo con palabras, que tu mismo sigues lo que pides
+     paso 3: Elegir a las personas con credibilidad dentro de tu equipo para liderar, no solo a quienes tienen mas conocimiento tecnico
+     paso 4: Dar seguimiento constante y reconocer los errores abiertamente
+  pasos de B (co_creacion_estrategia_engagement): 4
+     paso 1: Crear un equipo multifuncional encargado de desarrollar y supervisar la estrategia de engagement
+     paso 2: Organizar reuniones especiales (retiros) donde empleados diversos reaccionen al pensamiento inicial
+     paso 3: Buscar puntos en común, no convencer a todos de ser entusiastas ambientales
+     paso 4: Incorporar perspectivas externas (ONGs, asesores) para enriquecer la conversación
+------------------------------------------------------------------------------
+puesto_intra: 1942
+nodo_a: carta_de_credito_letter_of_credit
+nodo_b: letters_of_credit
+  pasos de A (carta_de_credito_letter_of_credit): 5
+     paso 1: Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.
+     paso 2: Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.
+     paso 3: Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).
+     paso 4: Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.
+     paso 5: Coordinar con el banco confirmador (en el país del exportador) para la negociación de los documentos y el cobro del pago.
+  pasos de B (letters_of_credit): 6
+     paso 1: Negociar con el comprador que su banco emita una carta de crédito irrevocable
+     paso 2: Solicitar confirmación de un banco de EE.UU. si existe riesgo país o desconocimiento del banco emisor
+     paso 3: Revisar minuciosamente todos los términos y condiciones de la carta de crédito recibida contra la pro forma invoice
+     paso 4: Coordinar con el freight forwarder para cumplir fechas de embarque y documentación requerida
+     paso 5: Presentar los documentos exactos y a tiempo para asegurar el pago
+     paso 6: Solicitar amendments inmediatamente si algún término no puede cumplirse
+------------------------------------------------------------------------------
+puesto_intra: 2229
+nodo_a: cultura_flexible
+nodo_b: cultura_flexible_organizacional
+  pasos de A (cultura_flexible): 4
+     paso 1: Identificar situaciones de crisis donde la jerarquía tradicional impide respuestas ágiles
+     paso 2: Diseñar protocolos que permitan transferir autoridad a expertos técnicos durante emergencias
+     paso 3: Invertir en capacitación de primera línea para ganar la confianza organizacional necesaria
+     paso 4: Establecer criterios claros de cuándo revertir al modo jerárquico normal
+  pasos de B (cultura_flexible_organizacional): 4
+     paso 1: Identificar los valores y supuestos culturales compartidos que sostienen la coordinación
+     paso 2: Entrenar al personal para reconocer cuándo ceder autoridad jerárquica a la experticia técnica
+     paso 3: Fomentar la comunicación cara a cara y la narrativa de 'historias de guerra' para transferir conocimiento tácito
+     paso 4: Diversificar los equipos de trabajo para aumentar la variedad de percepción de riesgos (requisite variety)
+------------------------------------------------------------------------------
+puesto_intra: 2300
+nodo_a: gestion_de_errores
+nodo_b: principios_gestion_error
+  pasos de A (gestion_de_errores): 5
+     paso 1: Diseñar medidas de reducción de errores (mejorar diseño de tareas, información, entrenamiento)
+     paso 2: Diseñar medidas de contención de errores (detección temprana, barreras, tolerancia del sistema)
+     paso 3: Evitar enfoques basados solo en exhortaciones y sanciones disciplinarias
+     paso 4: Distinguir entre factores de error aleatorios y sistemáticos
+     paso 5: Incorporar conocimiento actual de factores humanos en el diseño del programa de EM
+  pasos de B (principios_gestion_error): 5
+     paso 1: Aceptar que el error humano es inevitable y enfocar la gestión en las condiciones de trabajo
+     paso 2: Diseñar mejoras informativas (procedimientos, señalización, retroalimentación) para reducir errores
+     paso 3: Abordar las violaciones mediante cambio cultural, normas y actitudes, no solo mediante sanción
+     paso 4: Evitar la cultura de culpabilización individual como estrategia principal de gestión de errores
+     paso 5: Diferenciar en el análisis organizacional entre errores (no intencionales) y violaciones (intencionales)
+------------------------------------------------------------------------------
+puesto_intra: 2374
+nodo_a: bad_apple_theory
+nodo_b: declive_teoria_manzana_podrida
+  pasos de A (bad_apple_theory): 4
+     paso 1: Revisa si al analizar un incidente terminas señalando a una persona específica como causa raíz sin mirar las condiciones que rodearon el hecho.
+     paso 2: Cuestiona la creencia de que sancionar o apartar a la persona 'responsable' resuelve el problema de fondo.
+     paso 3: Anota casos pasados donde culpar a alguien no evitó que el mismo problema volviera a ocurrir.
+     paso 4: Evalúa si las medidas que aplicaste antes, como advertencias, reglas nuevas o cambios de personal, funcionaron o no.
+  pasos de B (declive_teoria_manzana_podrida): 3
+     paso 1: Cuestionar estadísticas de accidentes que asumen exposición al riesgo homogénea entre trabajadores
+     paso 2: Investigar el contexto y las tareas específicas de cada practicante antes de atribuir culpa personal
+     paso 3: Evitar conclusiones categóricas sobre 'propensión a accidentes' sin evidencia contextual robusta
+------------------------------------------------------------------------------
+puesto_intra: 2473
+nodo_a: economia_de_la_inspeccion
+nodo_b: punto_equilibrio_calidad_inspeccion
+  pasos de A (economia_de_la_inspeccion): 5
+     paso 1: Calcular el costo de inspección por unidad (I)
+     paso 2: Calcular el costo de daño por defecto no detectado (A)
+     paso 3: Determinar el punto de equilibrio pb = I/A
+     paso 4: Comparar el nivel de calidad histórico (p) contra pb
+     paso 5: Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado
+  pasos de B (punto_equilibrio_calidad_inspeccion): 8
+     paso 1: Calcula k1, el costo de inspeccionar una pieza, y k2, el costo de reparar un ensamble que falla por esa pieza defectuosa
+     paso 2: Determina el punto de equilibrio dividiendo k1 entre k2
+     paso 3: Estima la fraccion defectuosa entrante p usando datos historicos del proceso o proveedor en estado de control estadistico
+     paso 4: Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%
+     paso 5: Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio
+     paso 6: Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una
+     paso 7: Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado
+     paso 8: Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable.
+------------------------------------------------------------------------------
+puesto_intra: 2522
+nodo_a: auditorias_primera_segunda_tercera_parte
+nodo_b: concepto_de_auditoria_de_calidad
+  pasos de A (auditorias_primera_segunda_tercera_parte): 4
+     paso 1: Determinar si la relación con el cliente requiere auditoría interna (primera parte) o auditoría del cliente (segunda parte)
+     paso 2: Evaluar si conviene certificar el sistema de calidad mediante un organismo de tercera parte para evitar auditorías redundantes
+     paso 3: Programar auditorías internas periódicas antes de someterse a auditorías externas
+     paso 4: Seleccionar un registrador/certificador competente y acreditado
+  pasos de B (concepto_de_auditoria_de_calidad): 4
+     paso 1: Determinar el tipo de auditoría requerida (interna, de cliente, de certificación)
+     paso 2: Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas
+     paso 3: Seleccionar auditores independientes de la actividad evaluada
+     paso 4: Establecer los estándares o requisitos contra los cuales se comparará el desempeño
+------------------------------------------------------------------------------
+puesto_intra: 2553
+nodo_a: accion_correctiva_4
+nodo_b: accion_correctiva_crosby
+  pasos de A (accion_correctiva_4): 4
+     paso 1: Establecer reuniones regulares de supervisión para tratar problemas de calidad
+     paso 2: Escalar problemas no resueltos al siguiente nivel jerárquico
+     paso 3: Crear reuniones formales en departamentos que no las tengan
+     paso 4: Dar seguimiento visible a la resolución de problemas
+  pasos de B (accion_correctiva_crosby): 4
+     paso 1: Investigar las causas raíz consultando directamente al personal operativo
+     paso 2: Realizar auditorías independientes periódicas por departamento
+     paso 3: Documentar hallazgos en reportes formales de ingeniería de calidad
+     paso 4: Definir planes de acción correctiva específicos por departamento responsable
+------------------------------------------------------------------------------
+puesto_intra: 2599
+nodo_a: estandares_voluntarios
+nodo_b: estandarizacion_industrial_voluntaria
+  pasos de A (estandares_voluntarios): 5
+     paso 1: Evaluar si el área en cuestión requiere regulación obligatoria o puede resolverse con consenso industrial.
+     paso 2: Formar comités técnicos de industria para desarrollar estándares por acuerdo mutuo.
+     paso 3: Documentar el estándar con definiciones operacionales claras y medibles.
+     paso 4: Promover la adopción voluntaria del estándar entre empresas del sector.
+     paso 5: Monitorear si la falta de estándares voluntarios está generando presión para regulación gubernamental.
+  pasos de B (estandarizacion_industrial_voluntaria): 4
+     paso 1: Formar comités multisectoriales con representantes de la industria, gobierno y consumidores para desarrollar estándares
+     paso 2: Documentar especificaciones técnicas basadas en el uso real y las capacidades de producción, no solo en requisitos teóricos
+     paso 3: Establecer mecanismos de revisión periódica de estándares para mantenerlos actualizados sin frenar la innovación
+     paso 4: Promover la colaboración entre competidores de una misma industria para definir estándares comunes de seguridad y compatibilidad
+------------------------------------------------------------------------------
+puesto_intra: 2611
+nodo_a: ingenieria_calidad
+nodo_b: planificacion_inicial_calidad
+  pasos de A (ingenieria_calidad): 4
+     paso 1: Define junto con quien diseña las características de desempeño del producto nuevo
+     paso 2: Coordina con quien fabrica el método de producción y los puntos donde hay que controlar
+     paso 3: Detalla qué debes inspeccionar o probar y asegúrate de que quien lo ejecuta sepa hacerlo
+     paso 4: Establece qué métricas vas a mirar y cada cuánto vas a revisarlas
+  pasos de B (planificacion_inicial_calidad): 5
+     paso 1: Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+     paso 2: Identificar características clave del producto y del proceso (KPCs)
+     paso 3: Clasificar características por importancia (crítica, mayor, menor, incidental)
+     paso 4: Analizar el diagrama de flujo del proceso por estación de trabajo
+     paso 5: Validar la capacidad y los sistemas de medición del proceso
+------------------------------------------------------------------------------
+puesto_intra: 2695
+nodo_a: diseno_de_metodos_de_recoleccion_de_datos
+nodo_b: planificacion_recoleccion_datos
+  pasos de A (diseno_de_metodos_de_recoleccion_de_datos): 5
+     paso 1: Identifica las fuentes y quién puede darte los datos
+     paso 2: Diseña formularios e instrucciones de recolección que minimicen esfuerzo y errores
+     paso 3: Determina qué información adicional necesitas para poder rastrear o analizar más adelante
+     paso 4: Haz un análisis del sistema de medición (MSA) para confirmar que tus mediciones son precisas
+     paso 5: Revisa tu proceso de recolección y valida los resultados que obtienes
+  pasos de B (planificacion_recoleccion_datos): 13
+     paso 1: Establecer objetivos de recolección de datos y formular la pregunta específica
+     paso 2: Definir puntos de recolección de datos comprensivos
+     paso 3: Seleccionar y capacitar recolectores de datos imparciales
+     paso 4: Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)
+     paso 5: Auditar el proceso de recolección y validar resultados
+     paso 6: Filtrar y analizar los datos
+     paso 7: Evaluar supuestos del tamaño de muestra y del análisis
+     paso 8: Aplicar técnicas gráficas y estadísticas al problema original
+     paso 9: Determinar si se necesitan más datos y análisis
+     paso 10: Considerar un análisis de sensibilidad
+     paso 11: Revisar que las conclusiones respondan al problema técnico original
+     paso 12: Presentar los resultados en un informe claro con resumen ejecutivo
+     paso 13: Determinar si las conclusiones aplican a otros problemas
+------------------------------------------------------------------------------
+puesto_intra: 2742
+nodo_a: dmaic_fase_select
+nodo_b: proceso_nominacion_seleccion
+  pasos de A (dmaic_fase_select): 5
+     paso 1: Recopilar nominaciones de proyectos desde clientes, reportes y empleados
+     paso 2: Evaluar los proyectos usando COPQ y otros criterios estratégicos
+     paso 3: Priorizar y seleccionar los proyectos con mayor impacto
+     paso 4: Redactar el problema y objetivo del proyecto en un team charter
+     paso 5: Asignar personal capacitado y definir prioridad del proyecto
+  pasos de B (proceso_nominacion_seleccion): 5
+     paso 1: Convocar nominaciones de proyectos desde todas las fuentes posibles (datos, encuestas, empleados, clientes)
+     paso 2: Aplicar criterios de screening: factibilidad, significancia, medibilidad, ROI, urgencia, resistencia al cambio
+     paso 3: Delegar el filtrado inicial a una secretaría o departamento de calidad
+     paso 4: Presentar lista priorizada de proyectos recomendados al consejo para decisión final
+     paso 5: Asegurar balance entre proyectos 'vitales pocos' y 'útiles muchos' para impacto real en resultados financieros
+------------------------------------------------------------------------------
+puesto_intra: 2749
+nodo_a: auditoria_negocio
+nodo_b: concepto_de_auditoria_de_calidad
+  pasos de A (auditoria_negocio): 5
+     paso 1: Identificar las preguntas clave que quieres que la auditoría responda
+     paso 2: Recopilar y analizar la información necesaria para responder esas preguntas
+     paso 3: Comparar el desempeño auditado contra criterios externos o contra los que tú mismo definiste
+     paso 4: Revisar los hallazgos y las recomendaciones con calma antes de decidir
+     paso 5: Definir qué acciones tomar según los resultados de la auditoría
+  pasos de B (concepto_de_auditoria_de_calidad): 4
+     paso 1: Determinar el tipo de auditoría requerida (interna, de cliente, de certificación)
+     paso 2: Definir si la auditoría será orientada a cumplimiento, a efectividad o ambas
+     paso 3: Seleccionar auditores independientes de la actividad evaluada
+     paso 4: Establecer los estándares o requisitos contra los cuales se comparará el desempeño
+------------------------------------------------------------------------------
+puesto_intra: 3024
+nodo_a: institucionalizar_breakthrough
+nodo_b: mantener_las_ganancias
+  pasos de A (institucionalizar_breakthrough): 5
+     paso 1: Incluir metas de mejora en tu plan de negocio anual
+     paso 2: Actualizar las responsabilidades de cada rol para incluir la mejora continua
+     paso 3: Establecer revisiones periódicas del progreso
+     paso 4: Revisar cómo evalúas el desempeño para que valore los logros de mejora
+     paso 5: Crear momentos de reconocimiento público para los avances logrados
+  pasos de B (mantener_las_ganancias): 5
+     paso 1: Documentar formalmente el plan de control de la mejora implementada
+     paso 2: Establecer un programa de entrenamiento obligatorio para nuevos empleados
+     paso 3: Asignar responsables de supervisión que verifiquen el cumplimiento del control
+     paso 4: Auditar periódicamente que los controles sigan vigentes
+     paso 5: Revisar el sistema tras rotación de personal para asegurar continuidad
+------------------------------------------------------------------------------
+puesto_intra: 3042
+nodo_a: diagrama_de_flujo_proceso_map
+nodo_b: mapeo_flujo_valor
+  pasos de A (diagrama_de_flujo_proceso_map): 8
+     paso 1: Discutir el uso previsto del diagrama y el resultado deseado
+     paso 2: Definir límites del proceso (primer y último paso)
+     paso 3: Documentar cada paso en secuencia usando símbolos apropiados
+     paso 4: Marcar puntos de decisión y continuar por una rama
+     paso 5: Anotar segmentos desconocidos para completarlos después
+     paso 6: Repetir hasta completar todas las ramas
+     paso 7: Revisar el diagrama completo verificando precisión mediante observación o entrevistas
+     paso 8: Analizar el diagrama de flujo resultante
+  pasos de B (mapeo_flujo_valor): 7
+     paso 1: Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar
+     paso 2: Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso
+     paso 3: Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro
+     paso 4: Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr
+     paso 5: Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro
+     paso 6: Registrar métricas de tiempo de ciclo y costo en cada etapa
+     paso 7: Priorizar los problemas detectados como proyectos de mejora
+------------------------------------------------------------------------------
+puesto_intra: 3177
+nodo_a: accion_correctiva
+nodo_b: analisis_causa_raiz_diagnostico
+  pasos de A (accion_correctiva): 5
+     paso 1: Clasificar la no conformidad como esporádica o crónica según su recurrencia.
+     paso 2: Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.
+     paso 3: Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.
+     paso 4: Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.
+     paso 5: Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma.
+  pasos de B (analisis_causa_raiz_diagnostico): 5
+     paso 1: Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     paso 2: Generar una lista de teorías/hipótesis sobre las causas probables con el equipo
+     paso 3: Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado
+     paso 4: Validar estadísticamente cuál teoría explica la mayoría de los casos
+     paso 5: Confirmar la causa raíz antes de diseñar el remedio
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.

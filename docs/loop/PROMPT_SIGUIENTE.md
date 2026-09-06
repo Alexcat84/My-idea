@@ -1,4 +1,4 @@
-# ENCARGO DE LA VUELTA 185 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# ENCARGO DE LA VUELTA 186 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
@@ -6,357 +6,344 @@ Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
 ## LO QUE ESTA VUELTA ES, Y LO QUE NO ES
 
-**NO ES VUELTA DE BATERIA.** La bateria cerro entera en la 184, con sus nueve
-tramos sellados, y por `AUDITOR.md` 6.1 corre **cada cinco vueltas**: la
-siguiente es la **189**. En esta vuelta la seccion 9 del reporte cierra **con el
-HUECO DECLARADO Y MEDIDO** por el carril de `cerrar_reporte.py`, con su nombre de
-fichero, sus bytes medidos y su atribucion, o no vale.
+**NO ES VUELTA DE BATERIA.** La bateria cerro entera en la 184 y por `AUDITOR.md`
+6.1 corre **cada cinco vueltas**: la siguiente es la **189**. La seccion 9 de este
+reporte cierra **con el HUECO DECLARADO Y MEDIDO** por el carril de
+`cerrar_reporte.py`, con su nombre de fichero, sus bytes medidos y su atribucion.
+**Las tres juntas o no vale.**
 
-**EL TOPE SIGUE EN DOS SUB-TAREAS** (`AUDITOR.md` 6.2). La 184 **no cerro su
-propio reporte** (`cerrar_reporte.py` exitcode 1), asi que la cuenta de vueltas
-que cierran su reporte **sigue en cero**. **Van dos tareas y no hay una tercera.**
+**EL TOPE SIGUE EN DOS SUB-TAREAS, PERO LA CUENTA YA NO ESTA EN CERO.** La 185
+**cerro su propio reporte** (`cerrar_reporte.py` exitcode 0, cuatro piezas,
+`REPORTE_V185.md` archivado en 42888 bytes): **es la PRIMERA de las dos seguidas
+que el regimen `AUDITOR.md` 6.2 pide.** **Si esta vuelta cierra el suyo, la 187
+recupera el tope de CINCO.** Van dos tareas y no hay una tercera.
 
-**Y ESTA VUELTA NO TOCA EL PLAN, Y SE DICE POR QUE EN VEZ DE DISIMULARLO.** No se
-relee el par **2.464** ni ningun otro de la cola post fusion, no se cablea el
-instrumento de vigencia de las `A` rancias, no se toca el marcador, ni un
-veredicto, ni `dataset/`. **El trabajo de esta vuelta es desatascar el cierre del
-reporte, que lleva CUATRO vueltas sin conseguirse (181, 182, 183 y 184), y ese es
-el mismo atasco por el que el fundador puso el regimen 6.2 el 5 sep.** La cola
-post fusion, TRAMO 1, el par **2.464**, **encabeza el encargo de la vuelta 186** y
-queda nombrada aqui para que no se pierda.
+**Y ESTA VUELTA TAMPOCO TOCA EL PLAN, Y EL ACTA 186 DICE POR QUE EN SU SECCION 12
+EN VEZ DE DISIMULARLO.** El plan lleva **cinco vueltas sin moverse** (`sha256` del
+archivo de veredictos identico en las actas 179 a 186). Las dos tareas de aqui son
+**obligatorias, no elegidas**: la relectura al doble la manda `AUDITOR.md` 1.2, la
+nomina evita un rojo ya medido para la 189, y las dos reparaciones son
+adjudicaciones del acta 186 que no pueden quedar sin aplicar. **Meter el par 2.464
+encima seria una tercera sub-tarea y el regimen 6.2 la prohibe.**
 
-## EL ORDEN DE ESTA VUELTA, QUE NO ES EL DE SIEMPRE, Y EL MOTIVO
+> **EL PAR 2.464, TRAMO 1 DE LA COLA POST FUSION, ENCABEZA EL ENCARGO DE LA 187**,
+> y esta vez con el tope en cinco si esta vuelta cierra su reporte. **Queda escrito
+> aqui, en la cabecera, para que no se pierda por sexta vez.**
 
-1. **BLOQUE DE APERTURA** entero, antes de la primera operacion: su sellado, el
-   ciclo de Gate 0, y el cotejo del sello del auditor (abajo, con su ruta exacta).
-2. **TAREA 1, letras `a` a `d`.** Cada letra se commitea con su salida al
-   cerrarse. **Durante este tramo `docs/loop/REPORTE.md` sigue siendo el de la
-   184 y NO se toca.**
-3. **TAREA 2, primera mitad:** se cierra el reporte de la **184** con la guarda ya
-   reparada por la `1.c`, y se archiva **CERRADO**.
-4. **EL ESQUELETO DE LA 185** talla `docs/loop/REPORTE.md` con sus dos filas
-   vacias.
-5. **TAREA 1, letra `e`**, y la fila de la TAREA 1 se anexa al cerrarse.
-6. **TAREA 2, segunda mitad:** se cierra el reporte de la **185** con su seccion 9
-   de hueco declarado, y se archiva.
-
-**POR QUE ASI Y NO CON EL PASO 0 PRIMERO.** Si el esqueleto de la 185 corriera
-antes, su PASO 0 archivaria el reporte de la 184 **SIN CERRAR**, y la reparacion
-de la `1.c` llegaria tarde para el unico reporte al que le sirve. **El reporte de
-la 184 no es el parcial de una vuelta cortada:** sus dos tareas cerraron, la
-bateria esta entera y las tres piezas del cierre estan talladas y medidas en
-disco. Lo unico que falto fue el pegado, y lo impidio una guarda que el acta 185
-adjudico como **falso rojo**. **Y en ningun momento de este orden el repo se
-queda sin reporte en disco:** hasta el paso 4 vive el de la 184. **Si la vuelta se
-corta entre el paso 2 y el 4, lo que queda es el reporte de la 184 mas los
-commits de cada letra con su salida sellada, y la vuelta 186 retoma donde el
-ultimo commit diga.**
+**NO SE TOCA:** ni el marcador, ni un veredicto, ni `dataset/`, ni la mesa de los
+tres nodos de la puerta del `PMF` que el acta 186 anota en su `6.4`. **Y NO SE
+PODA LA NOMINA:** aqui se **completa**, que es lo contrario.
 
 ## EL SELLO DEL AUDITOR DE ESTA VUELTA, CON SU RUTA EXACTA
 
-**NO LO DEDUZCAS DEL NUMERO DE VUELTA: EL AUDITOR SE EQUIVOCO AL NOMBRARLO Y LO
-DECLARO EN SU ACTA COMO CAIDA PROPIA `A.1`.** La casa nombra el sello del acta N
-como `V(N+1)`, o sea `V186`, y el de esta acta se llama **`V185b`**. Los tres
-ficheros son:
+**NO LO DEDUZCAS DEL NUMERO DE VUELTA.** La casa nombra el sello del acta N como
+`V(N+1)`, medido contra git en el acta 185; siendo acta **186**, el sello se llama
+**`V187`**. **El `V186` no existe y no se fabrica**: es el hueco que dejo la `A.1`
+del acta 185, explicado en la seccion 2 del acta 186.
 
 | que es | ruta exacta | lo que el sello declara |
 |---|---|---|
-| sello | `docs/loop/SELLO_APERTURA_AUDITOR_V185b.json` | **735 bytes** |
-| ciega | `docs/loop/_auditor_v185b_ciega_blind.txt` | **39740 bytes**, `sha256` `94bd6198ab5ad277` |
-| destape | `docs/loop/_auditor_v185b_ciega_reveal.txt` | **33733 bytes**, `sha256` `8e9e6d1566cd34f9` |
+| sello | `docs/loop/SELLO_APERTURA_AUDITOR_V187.json` | **799 bytes** |
+| ciega | `docs/loop/_auditor_v187_ciega_blind.txt` | **39911 bytes**, `sha256` `fd1275d43498fc9f` |
+| destape | `docs/loop/_auditor_v187_ciega_reveal.txt` | **37559 bytes**, `sha256` `d5e5ec55e29378fd` |
+| mis clases | `docs/loop/_auditor_v187_mis_clases.txt` | **4804 bytes**, escritas antes del destape |
 
-`scripts/loop/vuelta184_tarea1d_relectura_al_doble.py` lleva esa ruta **clavada
-en una constante** (`SELLO = os.path.join(LOOP, "SELLO_APERTURA_AUDITOR_V185.json")`,
-linea 62, y `CIEGA` en la 63). **Su clon de esta vuelta apunta a las rutas de
-arriba, y esa es una diferencia mas que declarar en el cotejo de clones.**
+**El clon de la relectura apunta a esas rutas, y esa es una diferencia mas que
+declarar en el cotejo de clones.** **No copies esas cifras: computalas y
+comparalas.**
 
 ---
 
-## TAREA 1. LOS REGISTROS Y LAS TRES REPARACIONES DE CODIGO. BLOQUEANTE
+## TAREA 1. LOS REGISTROS Y LAS DOS CUENTAS QUE VENCEN. BLOQUEANTE
 
-### 1.a EL ACTA 185 ENTRA EN LA SERIE, Y EL NUMERO NO SE TECLEA
+### 1.a EL ACTA 186 ENTRA EN LA SERIE, Y EL NUMERO NO SE TECLEA
 
 Corre `scripts/loop/serie_de_registros.py` en esta vuelta y usa **el numero que
-devuelva**, no `R.47` porque lo diga aqui. La entrada registra, contadas del acta
+devuelva**, no `R.48` porque lo diga aqui. La entrada registra, contadas del acta
 acotada y no de memoria:
 
 - las **siete adjudicaciones** `5.1` a `5.7`, todas **a favor**;
-- los **cuatro pendientes de doctrina** de la seccion 6, de los que **`PD.2`,
-  `PD.3` y `PD.4` se CIERRAN por cita** y **`PD.1` sigue abierta**, esta ya con
-  sus cinco puestos nombrados (**1778, 2530, 2540, 3141, 3232**);
-- **una caida propia del auditor**, la **`A.1`** del nombre del sello, **contada
-  y no tapada**;
-- **una caida del ejecutor de reporte**, la **`R.1`**, la columna
-  `quien lo sello` tecleada, **que NO acumula por vivir en prosa**;
-- la **deuda de la serie REMEDIDA en esta vuelta**, no heredada del `R.46`.
+- los **cuatro pendientes de doctrina** de la seccion 6, de los que **`PD.5` y
+  `PD.6` se CIERRAN por cita**, **`PD.1` sigue ABIERTA** con sus cinco puestos
+  (**1778, 2530, 2540, 3141, 3232**), y el `6.4` es **una anotacion, no un
+  pendiente propio**;
+- las **tres preguntas** de la seccion 7, **las tres CONTESTADAS**;
+- **cero caidas propias del auditor**, y eso se registra como cero, **no se
+  omite**: un cero contado y un campo ausente no son lo mismo;
+- **una caida del ejecutor de reporte**, la **`R.1`**, la del `git status` en cero
+  lineas, **que NO acumula por vivir en prosa**;
+- la **deuda de la serie REMEDIDA en esta vuelta**, no heredada del `R.47`.
 
-**El acta 185 usa numerales entre comillas inversas**, igual que la 184, asi que
-el patron que las cuenta es el que la 184 estreno. **Caso positivo por mutacion
-obligatorio**, con el esperado mutado cayendo, sobre un acta fabricada y no sobre
-la real.
+**El acta 186 usa numerales entre comillas inversas**, igual que la 184 y la 185.
+**Caso positivo por mutacion obligatorio**, con el esperado mutado cayendo, **sobre
+un acta FABRICADA y no sobre la real**.
 
-### 1.b EL ARNES QUE PARO LA BATERIA: SU SALIDA SELLADA DEJA DE CAMBIAR SOLA
+### 1.b LOS DOS ARNESES DE LA 185 ENTRAN EN LA NOMINA. ES LA RESPUESTA A LA `P.3`
 
-**El diagnostico esta medido dos veces, por el ejecutor de la 184 y por el
-auditor de la 185, y coinciden:**
-`scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py` sale **`exit 0`** y
-sus **catorce casos pasan**; lo unico que falla es que **escribe en su salida
-sellada un dato que cambia solo**: el sufijo del `mkdtemp` de la linea 124
-(`tempfile.mkdtemp(prefix="v182_apertura_")`) se cuela por las lineas **134** y
-**154**, que hacen `w("      | " + l[:130])` sobre el informe de `sellar()`. La
-doble corrida de la bateria compara byte a byte y lo caza. **Tres lineas de
-diferencia, las 53, 54 y 55 de su salida, y nada mas.**
+**ESTO NO ES UNA MEJORA: ES UNA CAIDA YA MEDIDA CON TRES VUELTAS DE ANTELACION.**
+El reporte de la 185 lo declaro en su `D.4` y su `P.3`, y el acta 186 lo verifico:
+`arneses_que_faltan()` devuelve **2**, y son exactamente
+
+- `scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py`
+- `scripts/loop/vuelta185_tarea1c_mutacion_bateria_continuada.py`
+
+**Sin ellos, la bateria de la 189 abre en rojo.**
 
 **QUE HACER, Y NADA MAS QUE ESTO:**
 
-1. Anade al fichero una funcion **PURA** `sin_temporal(linea, tmp)` que sustituya
-   **todas las formas** de esa ruta por el literal `<TEMPORAL>`: la absoluta, la
-   relativa con `/`, la relativa con `\`, y el nombre base suelto del directorio.
-2. Aplicala en las lineas 134 y 154 **ANTES del recorte `[:130]`**, no despues:
-   recortar primero puede partir la ruta por la mitad y dejar media sin
-   normalizar.
-3. **NO toques lo que el arnes prueba.** Sus catorce casos siguen siendo los
-   mismos y siguen teniendo que pasar. **No se aflojan sus esperados ni se le
-   quita ningun escenario.**
+1. Mete los dos en la nomina, **en la sede que la propia funcion consulta**. No
+   inventes una sede nueva y no toques ninguna entrada existente.
+2. **La prueba es que `arneses_que_faltan()` devuelva 0**, corrida despues, con su
+   salida pegada. **Publica tambien el tamano de la nomina antes y despues**, para
+   que se vea que crecio en dos y no en otra cosa.
+3. **NO SE PODA NADA.** La opcion `c` de la parada del 5 sep (jubilar arneses
+   viejos) quedo **RECHAZADA por el fundador**. Si al meterlos ves que algo
+   sobra, **paras y lo traes**.
 
-**ARNES PROPIO OBLIGATORIO**,
-`scripts/loop/vuelta185_tarea1b_mutacion_sin_temporal.py`, con **las dos mitades
-fallando por separado**:
+**Y CORRE LOS DOS ARNESES NUEVOS DOS VECES CADA UNO, EN PROCESOS APARTE**, y exige
+que su `sha256` sea el mismo las dos veces. **Es la unica forma de saber hoy si
+van a sobrevivir a la doble corrida de la 189 en vez de enterarse alli.** Si
+alguno cambia solo, **paras y lo traes sin arreglarlo**: ese es un arnes ya
+sellado, no uno en construccion, y le aplica la letra entera.
 
-- **Mitad A, sobre la funcion PURA:** un caso por cada forma de la ruta (absoluta,
-  relativa con `/`, relativa con `\`, nombre base), mas un caso que exija que
-  **una linea sin ninguna ruta salga IDENTICA** (que no normalice de mas). **Todos
-  tienen que CAER al mutar su esperado.**
-- **Mitad B, la de verdad:** corre el arnes reparado **DOS VECES en un proceso
-  aparte cada una** y exige que el `sha256` de
-  `docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt` sea **el mismo despues
-  de las dos**. **Y exige tambien que las dos corridas salgan `exit 0`.** Si la
-  normalizacion se quitara, esta mitad cae.
+### 1.c LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 186
 
-**DECLARA EN EL REPORTE QUE ESTA REPARACION REESCRIBE ESE FICHERO DE SALIDA** y
-que el que se commitea es el de la forma reparada, con `<TEMPORAL>` dentro. **Es
-esperado y se dice, no se disimula.**
-
-**LO QUE NO SE PUEDE PROBAR EN ESTA VUELTA, Y SE DICE:** esta reparacion **no se
-puede verificar contra la bateria**, porque la 185 no es vuelta de bateria. **La
-prueba de esta vuelta es la doble corrida de la mitad B; la prueba definitiva
-sera la bateria de la 189.** Escribelo asi en vez de dar por hecho el verde de
-una corrida que no ha pasado.
-
-### 1.c LA GUARDA DE LA BATERIA CONTINUADA. ES LA ADJUDICACION `6.2` DEL ACTA 185
-
-**`PD.3` ADJUDICADA: el rojo de `cerrar_reporte.py` sobre el reporte de la 184 es
-un FALSO ROJO**, y el acta 185 lo razona entero en su seccion 6.2. En corto: la
-guarda nacio contra **pedir prestada la bateria terminada de otra vuelta**, y
-**este no es ese caso**; `AUDITOR.md` 6.1, decision del fundador del 5 sep 2026,
-**manda** que *"UNA VUELTA CORTADA RETOMA EN EL TRAMO SIGUIENTE"*, o sea que una
-bateria que cruza vueltas es lo que la decision **pide**. Cuando una guarda
-contradice una decision escrita del fundador, **la que se corrige es la guarda**
-(`AUDITOR.md` 0).
-
-**LA REPARACION TIENE QUE EXIGIR MAS QUE LA GUARDA VIEJA, NO MENOS. En
-`scripts/loop/cerrar_reporte.py`:**
-
-1. **Dos funciones nuevas**, que la `1.d` va a reusar y por eso viven aqui y no
-   duplicadas en otro sitio:
-   - `vuelta_que_sello(asunto)`, **PURA**: devuelve el numero de vuelta que
-     nombra el asunto de un commit (`VUELTA <N>`), o `None` si no lo nombra.
-   - `tramos_por_vuelta(vuelta_del_fichero)`: para cada
-     `docs/loop/SALIDA_V<vuelta_del_fichero>_BATERIA_TRAMO_<n>.txt` que exista,
-     corre `git log -1 --format=%s -- <fichero>` y devuelve
-     `{numero_de_tramo: vuelta_que_sello(asunto)}`.
-
-2. **`rama_de_la_seccion9()` gana un CUARTO parametro**,
-   `tramos_sellados_en_esta_vuelta=None`, **y sigue siendo PURA**. Con el valor
-   por defecto `None` **se comporta EXACTAMENTE como hoy**, para que ningun
-   llamador viejo cambie de conducta.
-
-3. **UNA RAMA NUEVA, insertada ANTES del rojo de la vuelta ajena**, que solo abre
-   si se cumplen **las CUATRO** condiciones a la vez:
-   - `ajena < vuelta`. **Una bateria de una vuelta POSTERIOR siempre es rojo.**
-   - `tramos_sellados_en_esta_vuelta` **no esta vacio**: al menos un tramo de esa
-     misma bateria **se sello en la vuelta que se esta cerrando**. Esta es la
-     evidencia de que la bateria se CONTINUO y no se pidio prestada.
-   - el nombre **casa con `PATRON_NOMBRE_DE_CORRIDA`**.
-   - **trae lineas**.
-
-   Si falla **cualquiera** de las cuatro, **cae al ROJO de siempre, con su texto
-   palabra por palabra tal como esta hoy**. El texto viejo **no se reescribe**.
-
-4. **En `main()`, `tramos_sellados_en_esta_vuelta` SE COMPUTA con
-   `tramos_por_vuelta()` y NO SE PASA POR BANDERA.** No anadas ninguna opcion de
-   linea de ordenes para esto: **una evidencia que se puede teclear no es una
-   evidencia.**
-
-**EL ARNES VIEJO SIGUE MANDANDO:** corre
-`scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py` **sin tocarlo** y tiene
-que salir **VERDE**. Si cambia de color, la reparacion esta mal y **paras**.
-
-**ARNES PROPIO OBLIGATORIO**,
-`scripts/loop/vuelta185_tarea1c_mutacion_bateria_continuada.py`, con **estos
-siete casos como minimo**, y **los siete tienen que CAER al mutar su esperado**:
-
-| caso | lo que se le pasa | lo que tiene que devolver |
-|---|---|---|
-| A | bateria de la 183, cerrando la 184, **con** tramos sellados en la 184 | `CORRIDA` |
-| B | bateria de la 183, cerrando la 184, **con la lista VACIA** | `ROJO`, y **el motivo, literal, igual al de hoy** |
-| C | bateria de la **185**, cerrando la 184, con tramos | `ROJO` |
-| D | bateria de la 183, cerrando la 184, con tramos, nombre `SALIDA_V183_HUECO_BATERIA.txt` | lo que el orden de las reglas de: **el caso afirma el valor exacto, no "no es CORRIDA"** |
-| E | bateria de la 183, cerrando la 184, con tramos, **cero lineas** | **no** `CORRIDA`, con el valor exacto afirmado |
-| F | bateria de la **184** cerrando la 184, con lineas | `CORRIDA`, **igual que hoy** |
-| G | **cuarto parametro en su valor por defecto `None`** | **identico a la conducta de hoy en los casos A, B, C, F** |
-
-Y **un caso mas sobre `vuelta_que_sello()`**, que es PURA: un asunto que nombra
-la vuelta, uno que no la nombra, y uno que la nombra dos veces. **Los tres caen al
-mutar el esperado.**
-
-**LO QUE NO SE HACE, Y ES LA MITAD QUE IMPORTA:** no se copia el fichero de la
-bateria, no se le cambia el nombre, no se afloja el rojo viejo y **no se toca
-ninguna otra guarda**. Si al escribir esto ves que hace falta cambiar algo mas,
-**paras y lo traes**.
-
-### 1.d LA ESCALADA: LA COLUMNA `quien lo sello` SE COMPUTA. `AUDITOR.md` 1.2
-
-**LA RACHA DE REPORTE ESTA EN DOS Y ESTO ES LA OPERACION DE CODIGO DE LA
-ESCALADA, NO UNA MEJORA.** La caida `R.1` del acta 185: en
-`scripts/loop/_v184_tallar_t2.py`, **linea 128**, la novena columna de la tabla
-de los nueve tramos esta **TECLEADA**:
-
-    quien = "vuelta 183" if n <= 4 else "**vuelta 184**"
-
-debajo de una frase del reporte que dice que la tabla sale de contar sus ficheros
-**"y no de recordar nada"**. **Los valores son correctos hoy y caducan solos: un
-`n <= 4` tecleado seguira diciendo `vuelta 183` cuando la bateria de la 189 se
-corte en otro sitio, sin que nadie lo toque.**
-
-**QUE HACER:**
-
-1. **Sustituye la linea 128** por una llamada a `vuelta_que_sello()` y
-   `tramos_por_vuelta()`, **importadas de `cerrar_reporte.py`** y **no copiadas**:
-   la vuelta que sello cada tramo se lee del asunto de su ultimo commit.
-2. **Corre el tallador y coteja: las NUEVE celdas de esa columna tienen que salir
-   IDENTICAS a las que el reporte de la 184 ya lleva** (tramos 1 a 4 `vuelta 183`,
-   tramos 5 a 9 `vuelta 184`). **Ese cotejo es la prueba de la escalada:** la
-   version computada reproduce la tecleada exactamente, y desde hoy la frontera
-   tecleada no existe.
-3. **NO re-pegues nada en `docs/loop/REPORTE.md`.** El reporte de la 184 se cierra
-   en la TAREA 2 con el texto que ya tiene. Aqui solo se prueba el instrumento.
-
-**ARNES:** los casos de `vuelta_que_sello()` de la `1.c` cubren la funcion pura.
-Anade **un caso mas** que corra `tramos_por_vuelta(183)` **sobre los nueve
-ficheros reales** y exija el reparto **4 y 5**, con el esperado mutado cayendo.
-
-### 1.e LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DEL ACTA 185
-
-**POR QUE:** `AUDITOR.md` 1.2. Las **siete** discrepancias de la ciega del acta
-185 cayeron **FUERA de los discutibles marcados**, porque el reporte de la 184 no
+**POR QUE:** `AUDITOR.md` 1.2. Las **cuatro** discrepancias de la ciega del acta
+186 cayeron **FUERA de los discutibles marcados**, porque el reporte de la 185 no
 marco ningun par. **El credito de la tanda baja y el tramo se relee al doble.**
 
 **COTEJA EL `sha256` ANTES DE LEER UN SOLO PUESTO**, contra
-`docs/loop/SELLO_APERTURA_AUDITOR_V185b.json`: la ciega tiene que medir **39740
-bytes** y dar `sha256` `94bd6198ab5ad277`. **Si no calza, paras.** No copies esa
-cifra del encargo: **computala y comparala.**
+`docs/loop/SELLO_APERTURA_AUDITOR_V187.json`: la ciega tiene que medir **39911
+bytes** y dar `sha256` `fd1275d43498fc9f`. **Si no calza, paras.** **Computalo y
+comparalo; no copies la cifra de aqui.**
 
-- **30 puestos** leidos de `docs/loop/_auditor_v185b_ciega_blind.txt`.
+- **30 puestos** leidos de `docs/loop/_auditor_v187_ciega_blind.txt`.
 - **30 vecinos deterministas**, con `vecinos()` **importada** de
   `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`, **no copiada**.
 - **Solape 0** entre tramo y vecinos, y **solape 0** con la ciega inmediatamente
-  anterior (`docs/loop/_auditor_v185_ciega_blind.txt`), **medido, no supuesto**.
+  anterior (`docs/loop/_auditor_v185b_ciega_blind.txt`), **medido, no supuesto**.
 - **60 puestos releidos, que es el doble exacto.**
 - **NINGUNA CLASE SE VUELVE A DECIDIR.** La vara solo dice, por puesto: si declara
   diferenciador, si tiene lesion exacta, si algun nodo esta muerto en el grafo de
   hoy, y su clase de archivo.
 
-**Y PUBLICA APARTE LAS SIETE DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA
-VARA:** los puestos **1208, 1459, 2363, 2386, 2505, 2636 y 2854**, **que el
-auditor pierde LOS SIETE a favor del archivo**. Di de cada uno si esta dentro del
-universo releido y que ve la vara en el. **Lo que la vara no vea, no lo afirmes.**
+**Y PUBLICA APARTE LAS CUATRO DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA
+VARA:** los puestos **338, 491, 1775 y 2599**, **que el auditor pierde LOS CUATRO
+a favor del archivo**. Di de cada uno si esta dentro del universo releido y que ve
+la vara en el. **Lo que la vara no vea, no lo afirmes.**
+
+**Y UNA CIFRA MAS, PORQUE EL 338 ES CLASE `B` Y LAS `B` SON 72 EN TODO EL
+ARCHIVO:** publica **cuantas `B` hay en el universo releido**. **No la interpretes
+ni la adjudiques: solo cuentala.**
 
 ---
 
-## TAREA 2. EL CIERRE DE DOS REPORTES: EL DE LA 184 Y EL DE LA 185
+## TAREA 2. LAS TRES REPARACIONES DE `cerrar_reporte.py` Y EL CIERRE DE DOS REPORTES
 
-### 2.a EL REPORTE DE LA 184 SE CIERRA, CON LA GUARDA YA REPARADA
+**LAS TRES REPARACIONES VAN JUNTAS Y CADA UNA CON SU PROPIO ARNES**, que es la
+respuesta del acta 186 a la `P.1`. **Ninguna se prueba con el arnes de otra.**
 
-**Esto va DESPUES de la `1.c` y ANTES del esqueleto de la 185.**
+**EL ARNES VIEJO SIGUE MANDANDO SOBRE LAS TRES:** corre
+`scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py` **sin tocarlo** al
+terminar, y tiene que salir **VERDE con sus 9 casos**. Si cambia de color, **paras**.
 
-**PRIMERO, LAS TRES PIEZAS SE COTEJAN POR `sha256` Y POR BYTES CONTRA LO QUE LA
-184 MIDIO. Si CUALQUIERA cambio, es ROJO: no se cierra, se archiva tal como esta,
-y se dice.** No es una formalidad: **cerrar hoy con piezas distintas de las que la
-184 talló seria escribir en pasado lo que no paso**, que es justo lo que el PASO 0
-del esqueleto de la 184 se nego a hacer.
+### 2.a LA PIEZA (4) DEJA DE LLEVAR SU PROPIA COPIA DE LA REGLA. ES LA `PD.6`
 
-| pieza | lo que la 184 midio |
+**ADJUDICADO EN EL ACTA 186, PUNTO 6.1.** `ajena != vuelta` vive **2 veces** en
+`scripts/loop/cerrar_reporte.py`: en `rama_de_la_seccion9()`, que la `1.c` de la
+185 ya reparo, y en la **pieza (4)** de `piezas_que_faltan()` (linea 905), que
+**tiene su propia copia y no recibe la evidencia de los tramos**. El acta 185 ya
+declaro ese rojo **falso** cuando la bateria se CONTINUA, citando la decision del
+fundador de `AUDITOR.md` 6.1. **Reparar una sede y no la otra deja el instrumento
+diciendo dos cosas distintas del mismo caso.**
+
+**QUE HACER, Y ES LA MITAD QUE IMPORTA:**
+
+1. **NO le pongas a la pieza (4) una copia sincronizada de la rama nueva.** **La
+   regla se queda en UNA sede y la pieza (4) la LLAMA.** Dos copias que hoy dicen
+   lo mismo son dos copias que manana diran cosas distintas, y eso es lo que ha
+   costado cinco vueltas.
+2. `piezas_que_faltan()` **gana el parametro que le falta** para poder llamarla, con
+   **valor por defecto que conserva EXACTAMENTE la conducta de hoy**, igual que
+   hizo `rama_de_la_seccion9()` en la 185.
+3. **En `main()` ese valor SE COMPUTA con `tramos_por_vuelta()` y NO SE PASA POR
+   BANDERA.** No anadas ninguna opcion de linea de ordenes: **una evidencia que se
+   puede teclear no es una evidencia.**
+4. **El rojo viejo no se reescribe.** Si falla cualquiera de las cuatro
+   condiciones, la pieza (4) sigue cayendo con **su texto de hoy, palabra por
+   palabra**.
+
+**ARNES PROPIO OBLIGATORIO**, `scripts/loop/vuelta186_tarea2a_mutacion_pieza4.py`,
+con **estos casos como minimo, y todos tienen que CAER al mutar su esperado**: la
+bateria de la 183 cerrando la 184 **con** tramos sellados en la 184 (la pieza (4)
+**no** falta); **con la lista vacia** (falta, y con el motivo **literal** de hoy);
+la bateria de la **185** cerrando la 184 (falta); **el parametro en su valor por
+defecto** (identico a la conducta de hoy en todos los anteriores); y **un caso que
+CAE si alguien vuelve a meter una segunda copia de la comparacion en el fichero**,
+contando sus apariciones y exigiendo **1**.
+
+### 2.b LA PIEZA (2) DEJA DE CAER SOBRE UNA CITA. ES LA `PD.5`
+
+**ADJUDICADO EN EL ACTA 186, PUNTO 6.2, Y CON TRES CITAS.** Hoy
+`cerrar_reporte.py` linea **877** hace `if HUECO_CABECERA in texto`, **busca en
+todo el texto y no excluye los bloques cercados**. Medido sobre el caso real: la
+marca aparece **UNA vez, en la linea 353**, **dentro de un bloque cercado**, y la
+linea es **la propia guarda citando su propia salida**; y las **11 filas de 11** de
+la cabecera **si estan pegadas**. **Es un falso positivo, y tal como esta hace
+imposible que un reporte cite entera la salida roja de otro**, que es lo que el
+encargo permanente manda hacer.
+
+**QUE HACER:**
+
+1. La pieza (2) busca `HUECO_CABECERA` **fuera de los bloques cercados**,
+   **REUSANDO el desbloqueador que `cifras_sin_pareja()` ya tiene en este mismo
+   fichero**. **No escribas un tercero.** Si esa funcion no esta separada, **sepArala
+   y que las dos la llamen**: una sede, dos llamadores.
+2. **Lo demas de la pieza (2) no se toca**: si el hueco esta fuera de una cerca,
+   sigue siendo rojo; si el tallador no trae filas, sigue siendo rojo; si alguna
+   fila no esta pegada, sigue siendo rojo, **con sus textos de hoy**.
+
+**ARNES PROPIO OBLIGATORIO**,
+`scripts/loop/vuelta186_tarea2b_mutacion_pieza2_cercas.py`, con **estos casos como
+minimo, todos cayendo al mutar su esperado**: la marca **fuera** de toda cerca
+(falta); la marca **solo dentro** de una cerca (**no** falta); la marca **en las
+dos** (falta); **cero marcas** (no falta); una cerca **sin cerrar** al final del
+texto, **con el valor exacto afirmado y no un "lo que salga"**; y **un caso sobre
+el texto real de `SALIDA_V185_T2A_REPORTE_184_CERRADO_EN_ROJO.md`** que exija que
+la pieza (2) **ya no falte**.
+
+### 2.c EL CARRIL DE CIERRE TARDIO, Y EL REPORTE DE LA 184 SE CIERRA. ES LA `P.2`
+
+**LA RESPUESTA DEL ACTA 186 A LA `P.2` ES: NI SE EXIMEN NI SE REESCRIBEN. SE
+DECLARAN.** Reescribir el texto de la 184 esta descartado (*"cerrar con el texto
+que ya tiene"*, y seria escribir en pasado lo que no paso); eximir en silencio
+esta descartado por banco 9.
+
+1. `cerrar_reporte.py` gana un carril de **CIERRE TARDIO**, que se activa **solo
+   cuando la vuelta que se cierra NO es la vuelta en curso**, y esa condicion **se
+   computa, no se pasa por bandera**.
+2. En ese carril, **las cifras sin pareja NO bloquean el cierre**, pero **se
+   DECLARAN dentro del propio reporte cerrado, una a una, con su linea y su cuenta
+   total**. **Un defecto declarado y medido no es un defecto exento.**
+3. **En el carril normal no cambia nada**: las cifras sin pareja siguen siendo
+   rojo. **Compruebalo con el arnes, no con la vista.**
+4. **Ninguna otra guarda se afloja en el carril tardio.** Las cuatro piezas, el
+   cuerpo byte a byte, los guiones y las citas de arnes siguen mandando igual. **Si
+   al escribirlo ves que hace falta aflojar algo mas, paras y lo traes.**
+
+**ARNES PROPIO OBLIGATORIO**,
+`scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py`, con **estos casos como
+minimo, todos cayendo al mutar su esperado**: cifras sin pareja **en carril
+normal** (bloquea); **las mismas en carril tardio** (no bloquea **y aparecen
+declaradas en el texto**, cotejado por contencion); **cero cifras sin pareja en
+carril tardio** (la declaracion dice cero y no se omite); y **un caso que exija que
+el carril tardio NO afloje ninguna de las cuatro piezas**.
+
+**DESPUES, Y NO ANTES, SE CIERRA EL REPORTE DE LA 184.**
+
+**PRIMERO LAS TRES PIEZAS SE COTEJAN POR `sha256` Y POR BYTES. Si CUALQUIERA
+cambio, es ROJO: no se cierra, se dice, y paras.** **Recomputalas; no copies estas
+cifras.**
+
+| pieza | lo que la 184 midio y la 185 confirmo |
 |---|---|
 | `docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt` | **2435 bytes en disco, 2415 normalizados a LF** |
 | `scripts/loop/_v184_cierre_texto.md` | **13982 bytes**, `sha256` **`050cdbb4ea99e11c`** |
 | `docs/loop/SALIDA_V183_BATERIA.txt` | **71753 bytes**, `sha256` LF **`422a909ad6ffb167`** |
 
-**DESPUES, corre `scripts/loop/cerrar_reporte.py --vuelta 184`** con esas tres
-piezas y el veredicto de una linea de la 184. **La rama de la seccion 9 tiene que
-salir `CORRIDA` por la rama nueva**, y su motivo tiene que **nombrar que la
-bateria se continuo y cuantos tramos sello la 184**. Si sale `ROJO`, **paras y lo
-traes entero**: no la fuerces.
+Luego `scripts/loop/cerrar_reporte.py --vuelta 184` con el veredicto de una linea
+**TALLADO y no tecleado** (la guarda `B.1` tiene que dar **`CIFRA numerales que NO
+calzan: 0`**), y despues `scripts/loop/archivar_reporte.py --vuelta 184`.
+**Publica los bytes del archivado y su `sha256`, y di si es el CERRADO o no.**
 
-**EL VEREDICTO DE UNA LINEA SE TALLA, NO SE TECLEA A OJO.** La guarda `B.1`
-coteja sus numerales contra lo que el cuerpo permite contar, y el cuerpo de la
-184 cuenta **2 tareas** y **2 caidas propias** (`C.1` y `C.2`). **`CIFRA
-numerales que NO calzan` tiene que dar 0.**
+**SI SIGUE SALIENDO ROJO POR ALGO QUE NO SEAN LAS CIFRAS SIN PAREJA, PARAS Y LO
+TRAES ENTERO. No lo fuerces y no anadas un cuarto remedio por tu cuenta.**
 
-**LUEGO `scripts/loop/archivar_reporte.py --vuelta 184`**, y el archivado **tiene
-que ser el CERRADO**, no el de antes. **Publica los bytes del archivado y su
-`sha256`.**
+### 2.d LA ESCALADA: LA SECCION 4 SE COTEJA CONTRA LA APERTURA SELLADA. `AUDITOR.md` 1.2
 
-### 2.b EL REPORTE DE LA 185 SE ABRE, SE LLENA Y SE CIERRA
+**LA RACHA DE REPORTE ESTA EN DOS Y ESTO ES LA OPERACION DE CODIGO DE LA ESCALADA,
+NO UNA MEJORA.** La `R.1` del acta 186: el reporte de la 185 escribio en su seccion
+4 que *"el arbol abrio limpio, con `git status --porcelain` en cero lineas"*, y
+`docs/loop/SALIDA_V185_APERTURA.txt` bloque C, linea 36, dice **`CIFRA lineas de
+status: 2`**. Y en la misma seccion vive un **15** tecleado en
+`scripts/loop/_v185_cierre_texto.md` linea 40 que **ya no se puede reproducir**.
+**Es la misma enfermedad: cifras del estado del arbol tecleadas en la prosa del
+cierre en vez de leidas de la apertura sellada.**
 
-- **El esqueleto** se talla en el paso 4 del orden de arriba, con las **dos filas
-  vacias** de las dos tareas de este encargo, y su PASO 0 **ya no tiene reporte
-  ajeno que archivar**, porque la `2.a` lo dejo archivado y cerrado. **Dilo asi en
-  su salida en vez de dejar la fila muda.**
+**QUE HACER:**
+
+1. Una guarda que **extrae de `docs/loop/SALIDA_V<N>_APERTURA.txt` las dos cifras
+   que ese fichero ya publica**: `CIFRA lineas de status` y `CIFRA filas de
+   git diff --numstat -- dataset/ AL ENTRAR`. **Funciones PURAS sobre el texto**,
+   para que el arnes las pueda tumbar sin tocar el repo.
+2. **Coteja esas dos contra lo que la seccion 4 del reporte afirma**, y **cae en
+   ROJO si discrepan**, nombrando las dos cifras y sus dos sedes.
+3. **Si el reporte no afirma una de las dos, eso NO es verde: es su propio rojo**,
+   con su texto. Una cifra ausente y una cifra que calza no son lo mismo.
+4. Cablearla donde `cerrar_reporte.py` juzga, **sin aflojar ninguna de las guardas
+   que ya hay ahi**.
+
+**ARNES OBLIGATORIO**, `scripts/loop/vuelta186_tarea2d_mutacion_seccion4.py`, con
+**estos casos, todos cayendo al mutar su esperado**: las dos cifras calzando
+(verde); **la de status mutada** (rojo, nombrandola); **la de numstat mutada**
+(rojo); **la seccion 4 sin afirmar ninguna** (rojo); y **un caso sobre los ficheros
+REALES de la 185** que exija que la guarda **hubiera cazado la `R.1`**. **Ese
+ultimo es la prueba de la escalada: si no caza el caso que la trajo, no sirve.**
+
+### 2.e EL REPORTE DE LA 186 SE ABRE, SE LLENA Y SE CIERRA
+
+- **El PASO 0** del esqueleto **ya no tiene reporte ajeno que archivar** si la
+  `2.c` cerro y archivo el de la 184. **Corre igual y pega lo que salga**, diga lo
+  que diga, en vez de dejar la fila muda.
+- **El esqueleto** se talla con sus **dos filas vacias**, una por tarea.
 - **Cada tarea anexa su fila al cerrarse**, no al final.
 - **La cabecera se talla con `scripts/loop/tallar_cabecera_reporte.py`**, y antes
   del commit `--comparar docs/loop/REPORTE.md` tiene que dar **CABECERA IDENTICA
   AL TALLADOR**, con su salida citada. **Cero celdas tecleadas.**
-- **El desfase de calibrado se mide en la APERTURA**, dentro del bloque de
-  apertura y antes de la primera operacion. **Desde la 178, una columna de
-  apertura medida al cierre es caida que ACUMULA.**
-- **LA SECCION 9 CIERRA CON EL HUECO DECLARADO Y MEDIDO**, por el carril de
-  `cerrar_reporte.py`: **nombre del fichero, bytes medidos y atribucion, las tres
-  juntas**. Traer dos de tres **no es un hueco declarado a medias, es un hueco que
-  no cuenta**. La atribucion dice que la bateria corre cada cinco vueltas y que la
-  siguiente es la **189**.
-- **`scripts/loop/cerrar_reporte.py --vuelta 185`** y despues
-  **`archivar_reporte.py --vuelta 185`**. **Si esta vuelta cierra su reporte, es
-  la PRIMERA de las dos seguidas que el regimen 6.2 pide para devolver el tope a
-  cinco.** Dilo con esas palabras en el reporte.
+- **El desfase de calibrado se mide en la APERTURA**, dentro del bloque de apertura
+  y antes de la primera operacion. **Desde la 178, una columna de apertura medida
+  al cierre es caida que ACUMULA.**
+- **LA SECCION 4 DE ESTE REPORTE SE ESCRIBE CON LAS CIFRAS QUE LA GUARDA DE LA
+  `2.d` LEE DE LA APERTURA**, no con las que recuerdes. **Es el primer reporte que
+  su propia escalada vigila, y eso se dice en el.**
+- **LA SECCION 9 CIERRA CON EL HUECO DECLARADO Y MEDIDO**: nombre del fichero,
+  bytes medidos y atribucion, **las tres juntas**. La atribucion dice que la
+  bateria corre cada cinco vueltas y que la siguiente es la **189**.
+- **`scripts/loop/cerrar_reporte.py --vuelta 186`** y despues
+  **`archivar_reporte.py --vuelta 186`**. **Si esta vuelta cierra su reporte, es la
+  SEGUNDA de las dos seguidas y el tope vuelve a CINCO en la 187.** Dilo con esas
+  palabras.
 
 ---
 
 ## LAS GUARDAS QUE NO SE TOCAN EN ESTA VUELTA
 
-- **`git diff --numstat -- dataset/`** se mide **al entrar y al salir** de la
-  vuelta y **las dos cifras se publican**. La `M dataset/metadata/master_graph.json`
-  de `git status` es **final de linea y no contenido**: el `numstat` es la vara.
+- **`git diff --numstat -- dataset/`** se mide **al entrar y al salir** y **las dos
+  cifras se publican**. El `numstat` es la vara, no el `git status`.
 - **Ningun veredicto se mueve.** El `sha256` LF de
-  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` es **`ea6e850d331d14f0`** al abrir, y
-  tiene que ser el mismo al cerrar. **Computalo, no lo copies.**
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` es **`ea6e850d331d14f0`** al abrir, y tiene
+  que ser el mismo al cerrar. **Computalo, no lo copies.**
 - **El ciclo de Gate 0 entero**, en su orden, con las suites en verde: 25/25 del
   motor, `tsc` exit 0, y la web en 82 ficheros y 1.040 tests.
-- **La nomina de la bateria NO SE PODA.** La opcion `c` de la parada del 5 sep
-  quedo **RECHAZADA** por el fundador.
-- **Los tres clones declarados de esta vuelta se cotejan** y su salida se cita.
-  **No afirmes que ningun diff sale vacio: publica lo que salga.**
+- **Los clones declarados de esta vuelta se cotejan** y su salida se cita. **No
+  afirmes que ningun diff sale vacio: publica lo que salga.**
 - **Todo tamano de fichero va en BYTES EXACTOS leidos del instrumento** (`P.2`),
   nunca redondeado, y los KB solo entre parentesis y detras del byte.
 - **Toda ruta que publiques como evidencia de una corrida es CIFRA** (5 sep 2026):
   si apunta a un fichero inexistente o de cero bytes, es **caida de cifra**.
   **Compruebalo antes de escribirla.**
+- **Marca tus discutibles ANTES de saber si aciertas**, y **si alguno es de CLASE y
+  no de metodo, dilo**: llevas dos vueltas sin marcar ninguno de clase y eso deja
+  al auditor sin sujeto por donde empezar su ciega.
 
 ## LO QUE HAY QUE TRAER SIN RESOLVER SI APARECE
 
-Si **cualquier** arnes cae en rojo, **te detienes ahi, lo traes con su salida
-entera, sin re-correrlo y sin arreglarlo**. Si el texto de alguna de estas letras
-no alcanza para ejecutarla sin decidir, **eso es PARADA y no una improvisacion**:
-paras y lo traes.
+Si **cualquier arnes YA SELLADO** cae en rojo, **te detienes ahi, lo traes con su
+salida entera, sin re-correrlo y sin arreglarlo**. **Un arnes que nace en esta
+vuelta y todavia no ha sellado ninguna salida es otra cosa** (adjudicacion `5.2`
+del acta 186): su rojo es parte de escribirlo, lo reparas, **y pegas la corrida en
+rojo entera en el reporte con el motivo dentro del propio fichero**. Si el texto de
+alguna de estas letras no alcanza para ejecutarla sin decidir, **eso es PARADA y no
+una improvisacion**: paras y lo traes.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice una regla vigente, paras y lo traes. No adivines.
