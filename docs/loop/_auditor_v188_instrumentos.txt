@@ -1,0 +1,29 @@
+=== A. git diff --numstat tras mis 7 corridas (ficheros ya seguidos) ===
+warning: in the working copy of 'docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt', LF will be replaced by CRLF the next time Git touches it
+FILAS=0
+
+=== B. arneses_que_faltan() y la nomina, corridos por mi ===
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+TypeError: '<' not supported between instances of 'list' and 'int'
+CIFRA arneses_que_faltan(): 2
+
+=== C. 'ajena != vuelta' en cerrar_reporte.py: crudo y en codigo ===
+700:    if ajena != vuelta:
+1223:                # comparacion `ajena != vuelta`, asi que la reparacion que la
+CRUDO=2
+
+=== D. renglones_fuera_de_cerca: sede unica y sus llamadores ===
+426:    `renglones_fuera_de_cerca()`, que ya es la sede de esa decision en este
+449:    fuera = [(n, l) for n, l in renglones_fuera_de_cerca(texto_del_reporte)
+1088:def renglones_fuera_de_cerca(texto):
+1138:    for n, linea in renglones_fuera_de_cerca(texto):
+1189:    # `renglones_fuera_de_cerca()`: una sede, dos llamadores, y NO un tercero.
+1193:    if any(HUECO_CABECERA in l for _n, l in renglones_fuera_de_cerca(texto)):
+
+=== E. HUECO_CABECERA, donde se busca ===
+155:HUECO_CABECERA = "PENDIENTE DE TALLAR AL CIERRE"
+1193:    if any(HUECO_CABECERA in l for _n, l in renglones_fuera_de_cerca(texto)):
+1280:    for marca, esperado in ((VEREDICTO_VIEJO, True), (HUECO_CABECERA, True),

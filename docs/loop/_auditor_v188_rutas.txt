@@ -1,0 +1,54 @@
+CIFRA rutas distintas nombradas en el reporte: 41
+ok   4051967  docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+ok    909780  docs/PENDIENTES.md
+ok   4330537  docs/loop/ACTA_AUDITOR.md
+ok      5802  docs/loop/SALIDA_V182_T1B_ARNES_RAMA_SECCION9.txt
+ok     71753  docs/loop/SALIDA_V183_BATERIA.txt
+ok      2435  docs/loop/SALIDA_V184_TALLADOR_CABECERA.txt
+ok      6100  docs/loop/SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt
+ok      7937  docs/loop/SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt
+ok     33608  docs/loop/SALIDA_V185_T2A_REPORTE_184_ANTES.md
+ok     27078  docs/loop/SALIDA_V186_APERTURA.txt
+NO EXISTE   docs/loop/SALIDA_V186_BATERIA.txt
+ok       140  docs/loop/SALIDA_V186_CICLO_NUMSTAT_CIERRE.txt
+ok     49804  docs/loop/SALIDA_V186_COTEJO_DE_CLONES.txt
+ok      4859  docs/loop/SALIDA_V186_GATE0_CMD1_APERTURA.txt
+ok      4859  docs/loop/SALIDA_V186_GATE0_CMD1_CIERRE.txt
+ok        41  docs/loop/SALIDA_V186_HEAD_APERTURA.txt
+ok      5760  docs/loop/SALIDA_V186_T1A_MUTACION_REGISTRO_186.txt
+ok      5751  docs/loop/SALIDA_V186_T1A_REGISTRO_R48.txt
+ok      3693  docs/loop/SALIDA_V186_T1B_NOMINA.txt
+ok     13632  docs/loop/SALIDA_V186_T1C_RELECTURA_AL_DOBLE.txt
+ok      3601  docs/loop/SALIDA_V186_T2A_MUTACION_PIEZA4.txt
+ok      2607  docs/loop/SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt
+ok       965  docs/loop/SALIDA_V186_T2C_ARCHIVAR_184.txt
+ok       790  docs/loop/SALIDA_V186_T2C_ARCHIVAR_184_SIN_FORZAR.txt
+ok      6128  docs/loop/SALIDA_V186_T2C_CERRAR_REPORTE_184.txt
+ok      5040  docs/loop/SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
+ok      2322  docs/loop/SALIDA_V186_T2C_VEREDICTO_184.txt
+ok       356  docs/loop/SALIDA_V186_T2C_VEREDICTO_184_FRASE.txt
+ok      5007  docs/loop/SALIDA_V186_T2D_MUTACION_SECCION4.txt
+ok      2501  docs/loop/SALIDA_V186_TALLADOR_CABECERA.txt
+ok       799  docs/loop/SELLO_APERTURA_AUDITOR_V187.json
+ok    124249  docs/loop/reportes/REPORTE_V184.md
+ok     42888  docs/loop/reportes/REPORTE_V185.md
+ok     13982  scripts/loop/_v184_cierre_texto.md
+ok     82212  scripts/loop/cerrar_reporte.py
+ok     25949  scripts/loop/cotejar_clon_declarado.py
+ok      6595  scripts/loop/serie_de_registros.py
+ok    127577  scripts/loop/verificar_mutaciones_viejas.py
+ok      8811  scripts/loop/vuelta182_tarea1b_arnes_rama_seccion9.py
+ok     19146  scripts/loop/vuelta186_esqueleto_reporte.py
+ok      4596  scripts/loop/vuelta186_rutas_del_reporte.py
+
+CIFRA rutas que NO existen: 1 -> ['docs/loop/SALIDA_V186_BATERIA.txt']
+CIFRA rutas de CERO bytes: 0 -> []
+
+=== LAS CIFRAS DE BYTES, COTEJADAS UNA A UNA ===
+DISCREPA  docs/PENDIENTES.md  publicado disco=15655 LF=15655 | medido disco=909780 LF=909780
+cifras 'N en disco y M en LF' que CALZAN: 14
+cifras que DISCREPAN: 1
+
+=== TABLA DE RUTAS DE PRUEBA: | `ruta` | **N** | y variantes con LF ===
+filas de tabla que CALZAN: 18
+filas de tabla que DISCREPAN: 0

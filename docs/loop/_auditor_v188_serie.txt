@@ -1,0 +1,66 @@
+=== A. las dos cifras de la apertura sellada, leidas por mi ===
+35:CIFRA lineas de status: 1
+213:   CIFRA censo: 175 | CIFRA nomina ANTES: 113 | VARA_DEL_CENSO: 148
+214:   arneses_que_faltan() HOY: ultima vuelta 184, faltan 2
+232:      LINEA 36: CIFRA lineas de status: 2
+
+=== B. la serie de registros, corrida por mi hoy ===
+   R.45  docs/PENDIENTES.md:12930  ## R.45. Registro de las siete adjudicaciones, las cero caidas propias del auditor y la caida de
+   R.46  docs/PENDIENTES.md:13029  ## R.46. Registro de las siete adjudicaciones numeradas, la adjudicacion del punto 6, las cero c
+   R.47  docs/PENDIENTES.md:13140  ## R.47. Registro de las siete adjudicaciones numeradas, los cuatro pendientes de doctrina, la c
+   R.48  docs/PENDIENTES.md:13266  ## R.48. Registro de las siete adjudicaciones numeradas, los cuatro numerales de la seccion 6, l
+
+C) EL REPARTO POR SEDE, CONTADO
+   CIFRA entradas en docs/PENDIENTES.md: 39 (R.9, R.10, R.11, R.12, R.13, R.14, R.15, R.16, R.17, R.18, R.19, R.20, R.21, R.22, R.23, R.24, R.25, R.26, R.27, R.28, R.30, R.31, R.32, R.33, R.34, R.35, R.36, R.37, R.38, R.39, R.40, R.41, R.42, R.43, R.44, R.45, R.46, R.47, R.48)
+   CIFRA entradas en docs/plan/CORRECCIONES_A_APLICAR.md: 1 (R.29)
+   CIFRA entradas en total: 40
+
+D) LA SALUD DE LA SERIE
+   CIFRA numeros distintos: 40
+   CIFRA colisiones (un numero escrito mas de una vez): 0
+   CIFRA huecos: 0 (ninguno)
+
+E) EL NUMERO QUE NO SE TECLEA
+   CIFRA mayor numero escrito: R.48
+   SIGUIENTE LIBRE: R.49
+
+VERDE: la serie no tiene colisiones.
+
+=== C. la entrada R.48 en PENDIENTES: bytes medidos ===
+commit 456f0847531aae6bcad724bead29f2eb2be354e6
+Author: alexcat84 <alexcat84@users.noreply.github.com>
+Date:   Sun Sep 6 03:56:29 2026 -0400
+
+    VUELTA 186, TAREA 1.a Y 1.b: EL ACTA 186 ENTRA EN LA SERIE COMO R.48 CON SUS CINCO NUMERALES COMPUTADOS, Y LOS DOS ARNESES DE LA 185 ENTRAN EN LA NOMINA CON arneses_que_faltan() DEVOLVIENDO 0.
+    
+    1.a. EL NUMERO NO SE TECLEA: serie_de_registros.siguiente_libre() dice R.48.
+    Contado del acta acotada (lineas 64908 a 65440, 533 lineas):
+    - 7 adjudicaciones 5.1 a 5.7, todas a favor
+    - 4 numerales en la seccion 6, y el reparto se LEE del titulo: PD.6 CERRADA,
+      PD.5 CERRADA, PD.1 ABIERTA con sus cinco puestos leidos del acta
+      (1778, 2530, 2540, 3141, 3232), y el 6.4 ANOTACION, que es estado NUEVO
+    - 3 preguntas 7.1 a 7.3, las tres CONTESTADAS, con el estado leido de la
+      cabecera literal de la seccion 7 y no supuesto
+    - 0 caidas propias del auditor, CONTADAS Y DECLARADAS: el patron A.n da 0, los
+      dos patrones C.n dan 0, y la frase CERO CAIDAS PROPIAS aparece en la linea
+      64925. Un cero contado y un campo ausente no son lo mismo
+    - 1 caida de reporte del ejecutor, la R.1, en la linea 65301, que no acumula
+    - deuda de la serie REMEDIDA hoy: 8 actas sin entrada (173 a 180), extremos
+      R.42 cubre el acta 172 y R.43 cubre el acta 181
+    Caso positivo por mutacion sobre acta FABRICADA: 10 mutaciones, CIFRA fallos 0,
+    VERDE. La entrada mide 15655 bytes y 154 lineas, cero guiones largos o medios.
+    
+    1.b. LA NOMINA CRECE DE 113 A 115 Y NO SE PODA NADA.
+    arneses_que_faltan() pasa de 2 a 0. Los dos arneses corridos DOS VECES CADA UNO
+    EN PROCESOS APARTE dan el mismo sha256 las dos veces y el mismo que estaba
+    commiteado: 4de055338ac9412b para el 1b (6100 bytes) y 6a2d8721c1a1b75d para el
+    1c (7937 bytes). Sin esto, la bateria de la 189 abria en rojo.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+155	0	docs/PENDIENTES.md
+--- bytes antes y despues:
+antes  disco(git,LF)=894124
+despues disco(git,LF)=909780
+crecimiento=15656
+en disco hoy=909780

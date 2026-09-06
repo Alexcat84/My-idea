@@ -1,0 +1,24 @@
+=== B2. arneses_que_faltan(), bien impreso ===
+CIFRA arneses_que_faltan(): 2
+   falta: 185
+   falta: ['vuelta186_tarea2a_mutacion_pieza4.py', 'vuelta186_tarea2b_mutacion_pieza2_cercas.py', 'vuelta186_tarea2c_mutacion_cierre_tardio.py', 'vuelta186_tarea2d_mutacion_seccion4.py']
+CIFRA tamano de la nomina VIEJAS: 115
+
+=== B3. los cuatro arneses de la 186 en la nomina? ===
+vuelta186_tarea2a_mutacion_pieza4                    en VIEJAS: 0
+vuelta186_tarea2b_mutacion_pieza2_cercas             en VIEJAS: 0
+vuelta186_tarea2c_mutacion_cierre_tardio             en VIEJAS: 0
+vuelta186_tarea2d_mutacion_seccion4                  en VIEJAS: 0
+vuelta185_tarea1b_mutacion_sin_temporal              en VIEJAS: 1
+vuelta185_tarea1c_mutacion_bateria_continuada        en VIEJAS: 1
+
+=== C2. las dos sedes de la comparacion, en git, en su momento ===
+--- en 793ad9a1 (apertura, antes de tocar nada):
+438:    if ajena != vuelta:
+905:                if vuelta is not None and ajena is not None and ajena != vuelta:
+--- en e34101c6 (tras 2.a y 2.b):
+438:    if ajena != vuelta:
+961:                # comparacion `ajena != vuelta`, asi que la reparacion que la
+--- en HEAD:
+700:    if ajena != vuelta:
+1223:                # comparacion `ajena != vuelta`, asi que la reparacion que la

@@ -1,0 +1,51 @@
+=== 1. run_phase1.py --reaplico-curaduria ===
+--- Estadisticas del grafo ---
+{
+  "componentes_conexos": 1,
+  "tamano_componente_principal": 3853,
+  "cobertura_componente_principal_pct": 100.0,
+  "nodos_sin_enlaces_entrantes": 452,
+  "enlaces_rotos_en_grafo": 0
+}
+
+--- Warning informativo: pares de titulo con similitud >= 95 (13) ---
+  [99.2] crosby_estilo_ballet_vs_hockey  <->  estilo_gerencial_ballet_vs_hockey
+  [98.7] ciclo_venta_calidad_franquicia  <->  ciclo_ventas_calidad_franquicia
+  [97.6] capacidad_de_proceso  <->  capacidad_del_proceso
+  [97.3] control_estadistico_de_procesos  <->  control_estadistico_del_proceso
+  [97.2] carta_de_credito_letter_of_credit  <->  letters_of_credit
+  [97.1] costo_de_mala_calidad_3  <->  costo_mala_calidad_copq
+  [97.0] vehiculos_combustibles_alternativos  <->  vehiculos_combustibles_alternativos_2
+  [96.8] causas_comunes_causas_especiales  <->  causas_comunes_vs_especiales
+  [96.7] investigacion_incidentes  <->  investigacion_incidentes_2
+  [96.4] definicion_calidad_conformidad_requisitos_2  <->  definicion_calidad_conformidad_requisitos_3
+  [96.3] involucramiento_sindical  <->  involucramiento_sindical_calidad
+  [96.1] decision_aptitud_para_uso  <->  decision_aptitud_uso
+  [95.7] eliminacion_causas_error_3  <->  eliminacion_causas_error_4
+
+GATE 0: OK
+EXIT=0
+=== 2. etiquetas_de_cara.py --aplicar ===
+      + Adapta tus Puntos de Control
+
+71 etiquetas cambian; 0 ya estaban en su forma final.
+escrito: dataset\metadata\master_graph.json (71 etiquetas)
+escrito: web\lib\assets\master_graph.json (0 etiquetas)
+=== 3. sync_assets_web.py ===
+  prompts.json: 60059 bytes, sha256=26e0ff92ad0a... (12 prompts)
+  semantic_index.json: 21854994 bytes, sha256=42223fccc725...
+
+Manifest escrito en web\lib\assets\manifest.json
+Assets sincronizados: ['master_graph.json', 'preguntas_cache.json', 'node_families.json', 'entry_seeds.json', 'prompts.json', 'semantic_index.json']
+=== 4. git diff HEAD --numstat -- dataset/ web/ engine/ ===
+warning: in the working copy of 'dataset/metadata/master_graph.json', LF will be replaced by CRLF the next time Git touches it
+FILAS=0
+=== 5. engine/run_all_tests.py ===
+  OK    test_reporte_tipo_oferta.py (0.2s)
+  OK    test_resume_pregunta_pendiente.py (0.3s)
+  OK    test_salto_semantico.py (0.1s)
+  OK    test_sigamos_salida.py (0.3s)
+  OK    test_validador_esquema.py (0.2s)
+  OK    test_verificador_huerfanos.py (0.1s)
+
+TODOS LOS TESTS PASARON (25/25).
