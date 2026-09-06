@@ -352,6 +352,95 @@ def fichas():
     return [json.loads(x) for x in io.open(OPS, encoding="utf-8").read().splitlines() if x.strip()]
 
 
+# ---------------------------------------------------------------------------
+# LA CUARTA PRUEBA, DOCUMENTAL, Y SOLO PARA LAS FICHAS DE TIPO `MESA`
+# (vuelta 188, TAREA 2; encargada por el punto 12 del acta 188).
+#
+# EL HUECO, MEDIDO POR EL AUDITOR Y NO SUPUESTO. Las tres pruebas de arriba son
+# DE GRAFO, DE CODIGO y DE GIT, y las tres preguntan por una huella que una MESA
+# no deja: **una mesa produce DOCUMENTOS**. Preguntarle al grafo si una mesa se
+# hizo es preguntarle a la fuente equivocada, que es la caida escrita en el
+# recuadro de `AUDITOR.md` 0: *"contar bien un campo y sacar la conclusion
+# equivocada sigue siendo una caida: la fuente hay que elegirla antes de
+# contarla"*. Las cuatro fichas que esta vara publica como TRABAJO REAL
+# (`OP-L-01`, `OP-L-02`, `OP-L-03` y `OP-I-01`) son las cuatro de tipo `MESA`.
+#
+# QUE SE ANADE Y QUE NO, Y ESTO ES LO QUE IMPIDE QUE SEA UN AFLOJE:
+#
+#   - PARA LAS FICHAS QUE NO SON `MESA` NO CAMBIA ABSOLUTAMENTE NADA. La P4 no se
+#     computa y no puede sostener ninguna fila. Se prueba por mutacion.
+#   - LA CIFRA VIEJA SE SIGUE PUBLICANDO ENTERA Y AL LADO. Este bloque NO entra
+#     en el reparto de `pruebas` de arriba: la tabla de siempre y su
+#     `CIFRA fichas en LISTA sin ninguna prueba` salen identicas. Lo que se anade
+#     es UNA SEGUNDA CUENTA, publicada junto a la primera y con su diferencia
+#     nombrada. **Podar la cifra de la vara sin el fundador es lo que la casa
+#     reserva, y esto no lo hace.**
+#   - LA P4 NO DICE QUE LA MESA SE HIZO BIEN. Dice que **el producto que su propia
+#     `evidencia` nombra EXISTE en disco y cuanto mide**. Si cubre o no cubre lo
+#     que la ficha describe es lectura, y esta vara no la hace.
+TIPO_DOCUMENTAL = "MESA"
+PATRON_FICHERO = re.compile(r"\b([A-Za-z0-9_][A-Za-z0-9_.-]*\.(?:md|jsonl|json|txt|py))\b")
+# DONDE SE BUSCA UN FICHERO QUE LA `evidencia` NOMBRA SIN RUTA. Las fichas
+# escriben `LECTURAS_DIRIGIDAS.md` a secas, sin directorio, asi que la busqueda
+# va por esta lista corta y ORDENADA, y la primera que exista es la que se
+# publica. La lista es explicita a proposito: un barrido recursivo por el repo
+# entero podria enganchar un homonimo de otro sitio y decir que existe algo que
+# no es.
+DIRECTORIOS_DE_EVIDENCIA = ["docs/plan", "docs", "docs/loop", "scripts/plan"]
+
+
+def rutas_de_la_evidencia(f):
+    """LOS FICHEROS QUE LA `evidencia` DE UNA FICHA NOMBRA. PURA: recibe la ficha
+    y devuelve [(mencion, nombre_de_fichero)], sin tocar disco.
+
+    Una entrada de `evidencia` puede ser prosa (`MEDIDO el 11 ago 2026: 205 pares
+    fuera de cola`) y entonces no nombra ningun fichero: **eso se dice, no se
+    rellena**. Una ficha cuya evidencia entera sea prosa sale con la lista vacia,
+    y quien llama publica que NO HAY DOCUMENTO QUE MEDIR."""
+    salida = []
+    for mencion in (f.get("evidencia") or []):
+        for nombre in PATRON_FICHERO.findall(str(mencion)):
+            salida.append((str(mencion), nombre))
+    return salida
+
+
+def localizar_evidencia(nombre, raiz=None):
+    """DONDE VIVE UN FICHERO QUE LA EVIDENCIA NOMBRA SIN RUTA, Y CUANTO MIDE.
+
+    Devuelve (ruta_relativa, bytes_disco, bytes_lf) o (None, None, None). Es el
+    UNICO sitio de este bloque que toca disco, y por eso `rutas_de_la_evidencia`
+    de arriba es pura."""
+    base = raiz or RAIZ
+    for d in DIRECTORIOS_DE_EVIDENCIA:
+        p = os.path.join(base, d.replace("/", os.sep), nombre)
+        if os.path.exists(p):
+            datos = io.open(p, "rb").read()
+            return ("%s/%s" % (d, nombre), len(datos),
+                    len(datos.replace(b"\r\n", b"\n")))
+    return (None, None, None)
+
+
+def p4_vara_documental(F, raiz=None):
+    """LA CUARTA PRUEBA. Devuelve {id_op: [(mencion, nombre, ruta, disco, lf)]},
+    con UNA SOLA entrada por fichero hallado y SOLO para las fichas cuyo `tipo`
+    sea `MESA`.
+
+    Una ficha que no sea `MESA` NO APARECE en el diccionario, ni siquiera con
+    lista vacia: es la forma mas barata de que quien llame no pueda usarla por
+    descuido para una ficha que no le toca."""
+    out = {}
+    for f in F:
+        if f.get("tipo") != TIPO_DOCUMENTAL:
+            continue
+        halladas = []
+        for mencion, nombre in rutas_de_la_evidencia(f):
+            ruta, disco, lf = localizar_evidencia(nombre, raiz)
+            if ruta is not None:
+                halladas.append((mencion, nombre, ruta, disco, lf))
+        out[f["id_op"]] = halladas
+    return out
+
+
 def p1_vara_de_grafo():
     """Invoca tallar_estado_de_fase.py para cada fase y lee su tabla. Devuelve
     {id_op: (veredicto, fase_en_que_salio)}."""
@@ -1001,6 +1090,68 @@ def main():
           % len(consumidas))
     print("CIFRA de esas que son TRABAJO REAL: %d operaciones"
           % (pendientes - len(consumidas)))
+
+    # ------------------------------------------------------------------
+    # LA CUARTA PRUEBA, DOCUMENTAL (vuelta 188, TAREA 2). VA DESPUES DE LA CIFRA
+    # VIEJA Y NO EN SU LUGAR: arriba no se ha tocado nada.
+    print("")
+    print("LA CUARTA PRUEBA, DOCUMENTAL, Y SOLO PARA LAS FICHAS DE TIPO MESA")
+    print("(vuelta 188, TAREA 2; encargada por el punto 12 del acta 188)")
+    print("")
+    print("POR QUE: las tres pruebas de arriba son DE GRAFO, DE CODIGO y DE GIT, y una")
+    print("MESA no deja huella en el grafo: produce DOCUMENTOS. Preguntarle al grafo si")
+    print("una mesa se hizo es preguntarle a la fuente equivocada, que es la caida del")
+    print("recuadro de AUDITOR.md 0. AQUI NO SE PODA NADA: la cifra de arriba sale")
+    print("identica y esta segunda va A SU LADO, con su diferencia nombrada.")
+    print("")
+    v4 = p4_vara_documental(F)
+    print("CIFRA fichas de tipo %s en el expediente: %d" % (TIPO_DOCUMENTAL, len(v4)))
+    en_lista_mesa = [f for f in F if f["estado"] == "LISTA"
+                     and f.get("tipo") == TIPO_DOCUMENTAL]
+    print("CIFRA de esas que estan en LISTA: %d" % len(en_lista_mesa))
+    print("")
+    print("| id_op | fase | pruebas de grafo, codigo y git | evidencia que la ficha nombra | existe | disco | LF |")
+    print("|---|---|---|---|---|---|---|")
+    con_p4 = 0
+    sin_documento = []
+    for f in F:
+        i = f["id_op"]
+        if f["estado"] != "LISTA" or f.get("tipo") != TIPO_DOCUMENTAL:
+            continue
+        if v1.get(i, (False,))[0] or v2[i] or v3[i][1] or v3b.get(i):
+            continue
+        halladas = v4.get(i) or []
+        menciones = rutas_de_la_evidencia(f)
+        if halladas:
+            con_p4 += 1
+            for _m, nombre, ruta, disco, lf in halladas:
+                print("| `%s` | %s | ninguna | `%s` | SI, en `%s` | %d | %d |"
+                      % (i, f["fase"], nombre, ruta, disco, lf))
+        else:
+            sin_documento.append((i, len(menciones)))
+            print("| `%s` | %s | ninguna | %s | NO | | |"
+                  % (i, f["fase"],
+                     ("`%s` (no esta en disco)" % menciones[0][1]) if menciones
+                     else "(su evidencia entera es prosa: no nombra ningun fichero)"))
+    print("")
+    print("LAS DOS CUENTAS, JUNTAS Y CON SU DIFERENCIA NOMBRADA:")
+    print("  CIFRA VIEJA, la de siempre y sin tocar: %d ficha(s) en LISTA sin ninguna"
+          % pendientes)
+    print("  de las tres pruebas, de las cuales %d son TRABAJO REAL."
+          % (pendientes - len(consumidas)))
+    print("  CIFRA NUEVA, con la pata documental: de esas %d de trabajo real, %d son"
+          % (pendientes - len(consumidas), con_p4))
+    print("  MESAS CUYO PRODUCTO DOCUMENTAL SI EXISTE en disco, y %d no lo tienen."
+          % len(sin_documento))
+    print("  LA DIFERENCIA SON %d ficha(s), y no significa que su mesa se hiciera bien:"
+          % con_p4)
+    print("  significa que el documento que su propia evidencia nombra ESTA. Si cubre lo")
+    print("  que la ficha describe es LECTURA, y esta vara no la hace.")
+    for i, n in sin_documento:
+        print("     SIN DOCUMENTO QUE MEDIR: %-18s (%d mencion(es) de fichero en su evidencia)"
+              % (i, n))
+    if not sin_documento:
+        print("     (ninguna se queda sin documento)")
 
 
 # LA GUARDA DE IMPORTACION (vuelta 178, TAREA 4.c). Este fichero llamaba a

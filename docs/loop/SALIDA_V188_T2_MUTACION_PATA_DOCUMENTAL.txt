@@ -1,0 +1,74 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA CUARTA PRUEBA, LA DOCUMENTAL
+(vuelta 188, TAREA 2; encargada por el punto 12 del acta 188)
+==============================================================================
+
+EL SUJETO ES EL FICHERO VIVO scripts/loop/vuelta150_3_relectura_expediente.py, IMPORTADO.
+SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 60262 bytes | LF 60262 bytes |
+sha256 LF b9fd6dcf4e665d3cf03b78cf6c2650e8731b0742f2003c9e6e46caefd26ee21b
+Con ese sello al lado, un diff futuro de esta salida dice SI SE MOVIO EL
+SUJETO O SE MOVIO EL ARNES, en vez de dejarlo a que alguien lo deduzca.
+
+LINEAS DEL SUJETO QUE ESTE ARNES JUZGA, LEIDAS HOY Y CON EL SELLO DE ARRIBA:
+   def rutas_de_la_evidencia        -> lineas 392
+   def localizar_evidencia          -> lineas 407
+   def p4_vara_documental           -> lineas 423
+   TIPO_DOCUMENTAL =                -> lineas 381
+
+CASO A. LA P4 NO EXISTE PARA UNA FICHA QUE NO ES `MESA`, Y ES DE FORMA
+   (no sale con lista vacia: NO APARECE en el diccionario, que es la forma
+    mas barata de que nadie la use por descuido en una ficha que no le toca)
+   fichas dadas: OP-X-01(FUSION), OP-X-02(DESTEJIDO), OP-X-03(MESA)
+   claves que devuelve p4_vara_documental(): ['OP-X-03']
+   ESPERADO solo la MESA -> CALZA
+   MUTACION del esperado (exigir que la FUSION tambien este): CAE
+   Y CON CERO MESAS, PARA QUE SE VEA QUE NO ESTA CLAVADO:
+      claves: [] | ESPERADO ninguna -> CALZA
+      MUTACION del esperado (exigir una clave): CAE
+
+CASO B. UNA `MESA` CUYA EVIDENCIA NOMBRA UN FICHERO QUE EXISTE
+   (el fichero se fabrica en un temporal propio, con CRLF a proposito para
+    que las dos convenciones NO sean el mismo numero, y se limpia al salir)
+   p4_vara_documental() -> {'OP-M-01': [('EXISTE.md, con su razon', 'EXISTE.md', 'docs/plan/EXISTE.md', 23, 21)]}
+   ESPERADO 1 hallazgo en docs/plan/EXISTE.md con disco 23 y LF 21 -> CALZA
+   LAS DOS CONVENCIONES SON DISTINTAS Y SE MIDEN LAS DOS: disco 23 | LF 21
+   MUTACION del esperado (exigir disco 24): CAE
+
+CASO C. UNA `MESA` CUYA EVIDENCIA NOMBRA UN FICHERO QUE NO EXISTE
+   LA P4 NO INVENTA UN DOCUMENTO QUE NO ESTA, que es lo contrario del
+   afloje que se le podria acusar.
+   p4_vara_documental() -> {'OP-M-02': []}
+   menciones de fichero que su evidencia SI nombra: 1 (NO_ESTA.md)
+   ESPERADO lista vacia PERO con 1 mencion -> CALZA
+   MUTACION del esperado (exigir 1 hallazgo): CAE
+
+CASO D. UNA `MESA` CUYA EVIDENCIA ES PROSA ENTERA
+   Sale vacia IGUAL QUE LA ANTERIOR, y aun asi son dos cosas distintas: una
+   nombra un fichero que falta y la otra no nombra ninguno. Las dos se dicen.
+   p4_vara_documental() -> {'OP-M-03': []}
+   menciones de fichero: 0
+   ESPERADO lista vacia Y 0 menciones -> CALZA
+   LA DIFERENCIA CON EL CASO C ES MEDIBLE SIN TOCAR DISCO: 1 mencion(es)
+   contra 0, y `rutas_de_la_evidencia()` es PURA.
+   MUTACION del esperado (exigir 1 mencion en la de prosa): CAE
+
+   TEMPORAL LIMPIADO (P.16, quien fabrica limpia): C:\Users\AlexDesk\AppData\Local\Temp\v188_pata_bgd7iu6y -> existe: NO
+
+CASO E. EL EXTRACTOR DE NOMBRES NO TRAGA CUALQUIER COSA
+   un .md con ruta corta                    'LECTURAS_DIRIGIDAS.md, las once'              -> ['LECTURAS_DIRIGIDAS.md'] | esperado ['LECTURAS_DIRIGIDAS.md'] | CALZA
+      MUTACION del esperado (exigir 2 nombres): CAE
+   un .jsonl                                'INVENTARIO.jsonl, 323 entradas'               -> ['INVENTARIO.jsonl'] | esperado ['INVENTARIO.jsonl'] | CALZA
+      MUTACION del esperado (exigir 2 nombres): CAE
+   dos en la misma mencion                  'A.md y B.jsonl juntos'                        -> ['A.md', 'B.jsonl'] | esperado ['A.md', 'B.jsonl'] | CALZA
+      MUTACION del esperado (exigir 3 nombres): CAE
+   prosa con puntos                         'MEDIDO el 11 ago 2026: 205 pares. 11 leidos.' -> [] | esperado [] | CALZA
+      MUTACION del esperado (exigir 1 nombres): CAE
+   una version, que no es un fichero        'el pack v1.3 salio'                           -> [] | esperado [] | CALZA
+      MUTACION del esperado (exigir 1 nombres): CAE
+   una extension que no esta en la lista    'la hoja tabla.xlsx'                           -> [] | esperado [] | CALZA
+      MUTACION del esperado (exigir 1 nombres): CAE
+
+CIFRA casos: 11 | pasan: 11
+CIFRA casos que CAEN al mutar su esperado: 11 de 11
+CIFRA fallos: 0
+VEREDICTO: VERDE
