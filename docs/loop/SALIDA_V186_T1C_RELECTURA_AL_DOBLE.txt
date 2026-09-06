@@ -1,0 +1,171 @@
+==============================================================================
+VUELTA 186, TAREA 1.c: LA RELECTURA AL DOBLE DEL
+TRAMO DE LA CIEGA DEL ACTA 186, encargada por AUDITOR.md 1.2 porque las
+CUATRO discrepancias del auditor salieron FUERA del marcado
+==============================================================================
+
+A) EL CONTRASTE CON EL ACTA, QUE NO ES CORRECCION SINO COTEJO. EL
+   ENCARGO YA NOMBRA LA FUENTE BUENA, Y AQUI SE MIDE QUE LISTA EL ACTA.
+   seccion 4 del acta 186: lineas 65090 a 65135 (46 lineas)
+   su cabecera: ## 4. LA RELECTURA CIEGA: 26 DE 30, Y LAS CUATRO LAS PIERDO YO
+   CIFRA puestos que la seccion 4 del acta 186 lista: 0
+   (la seccion 4 es la de la ciega, y publica el reparto y LAS CUATRO
+    discrepancias, no los 30 puestos. Por eso el tramo se lee de la ciega
+    sellada del auditor, que es donde estan, y no del acta)
+
+B) LA FUENTE DE VERDAD DEL TRAMO, COTEJADA CONTRA SU PROPIO SELLO
+   docs/loop/SELLO_APERTURA_AUDITOR_V187.json -> 799 bytes en disco y 799 bytes normalizados a LF
+   ciega: docs/loop/_auditor_v187_ciega_blind.txt
+   bytes que el sello declara: 39911 | bytes en disco hoy: 39911
+   sha256 del sello: fd1275d43498fc9f1bd716da33355f7d9a5f0fd05710a1872d8930588fcff1cb
+   sha256 de hoy   : fd1275d43498fc9f1bd716da33355f7d9a5f0fd05710a1872d8930588fcff1cb
+   EL FICHERO ES EL QUE EL SELLO DICE: SI
+   criterio escrito, literal del sello:
+      ACTA 186 (cubre la vuelta 185): muestra fresca de 30 pares con semilla 1862 sobre todo el archivo, EXCLUYENDO los 150 puestos ya leidos por las ciegas de las actas 183, 184, 185 y 185b (120) y por los
+
+C) EL TRAMO, LEIDO DE LA CIEGA SELLADA Y NO TECLEADO
+   CIFRA puestos del tramo: 30
+   LOS PUESTOS: 338, 491, 646, 666, 679, 780, 782, 1158, 1164, 1259, 1328, 1440, 1452, 1775, 1941, 1942, 2229, 2300, 2374, 2473, 2522, 2553, 2599, 2611, 2695, 2742, 2749, 3024, 3042, 3177
+
+D) LOS DOS SUJETOS, CONTADOS
+   veredictos: 3388 filas | maximo puesto 3388
+   grafo: 3853 nodos
+
+E) EL DOBLE, ELEGIDO DE FORMA DETERMINISTA Y NO POR AZAR
+   (la funcion vecinos() se IMPORTA de
+    scripts/loop/vuelta182_tarea1c_relectura_al_doble.py, no se copia)
+   CIFRA vecinos anadidos: 30
+   LOS VECINOS: 339, 492, 647, 667, 680, 781, 783, 1159, 1165, 1260, 1329, 1441, 1453, 1776, 1943, 1944, 2230, 2301, 2375, 2474, 2523, 2554, 2600, 2612, 2696, 2743, 2750, 3025, 3043, 3178
+   SOLAPE CON EL TRAMO: 0
+   CIFRA puestos que se releen EN TOTAL: 60
+   ES EL DOBLE DEL TRAMO: SI
+
+F) EL SOLAPE CON EL TRAMO ANTERIOR, MEDIDO Y NO SUPUESTO
+   (el criterio del sello dice que la muestra excluye 150 puestos: los 120 de
+    las ciegas de las actas 183, 184, 185 y 185b, mas los 30 vecinos
+    deterministas de la 1.e de la vuelta 185; aqui se comprueba contra la
+    ciega INMEDIATAMENTE ANTERIOR en disco, que es la V185b)
+   ciega anterior: docs/loop/_auditor_v185b_ciega_blind.txt -> 30 puestos
+   SOLAPE del tramo de hoy con el anterior: 0
+
+G) LA RELECTURA MECANICA, PUESTO A PUESTO
+   (la maquina se IMPORTA de vuelta182_tarea3_diferenciador_movido.py)
+   puesto clase  declara  lesion   vivos   cober   nodos
+   338    B      no       no       SI      0.00    problem_solution_fit contra product_market_fit   <-- DEL TRAMO
+   339    A      no       no       SI      0.00    entender_term_sheet contra term_sheet_overview
+   491    D      no       no       SI      0.00    clausula_no_shop_adquisicion contra no_shop_agreement   <-- DEL TRAMO
+   492    A      no       no       SI      0.00    asignacion_de_titulos_ejecutivos contra seleccion_ceo_fundador
+   646    D      no       no       SI      0.00    analisis_antiguedad_cuentas_por_cobrar contra gestion_dso   <-- DEL TRAMO
+   647    D      no       no       SI      0.00    accruals_y_activos_prepagados contra principio_correspondencia_contable
+   666    D      no       no       SI      0.00    advocacy_customer_journey contra fase_adopt_ciclo_cliente   <-- DEL TRAMO
+   667    D      no       no       SI      0.00    customer_discovery_overview contra customer_validation_sales_roadmap
+   679    D      no       no       SI      0.00    revenue_pricing_hypothesis contra verificar_modelo_ingresos   <-- DEL TRAMO
+   680    D      no       no       SI      0.00    espiral_muerte_lotes_grandes contra trabajo_en_lotes_pequenos
+   780    D      no       no       SI      0.00    customer_development_process contra filosofia_customer_validation   <-- DEL TRAMO
+   781    A      no       no       SI      0.00    customer_validation contra customer_validation_sell_phase
+   782    A      no       no       SI      0.00    diversidad_vs_homogeneidad_equipo contra homogeneidad_vs_diversidad_equipo   <-- DEL TRAMO
+   783    A      no       no       SI      0.00    ia_colaborador_productividad contra ia_como_nivelador_habilidades
+   1158   D      no       no       SI      0.00    priorizar_elementos_a_validar contra validar_modelo_negocio_hechos   <-- DEL TRAMO
+   1159   D      no       no       SI      0.00    modelo_spin contra obtencion_compromiso_venta
+   1164   D      no       no       SI      0.00    earlyvangelists_ventas_tempranas contra verificar_product_market_fit   <-- DEL TRAMO
+   1165   D      no       no       SI      0.00    formal_acceptance contra project_close_out
+   1259   D      no       no       SI      0.00    construir_mvp_baja_fidelidad contra principio_calidad_mvp   <-- DEL TRAMO
+   1260   D      no       no       SI      0.00    resegmentacion_mercado_nicho_bajo_costo contra tipo_de_mercado_estrategia_competitiva
+   1328   D      no       no       SI      0.00    storytelling_como_herramienta_de_diseno contra storytelling_modelo_negocio   <-- DEL TRAMO
+   1329   D      no       no       SI      0.00    customer_development_process contra customer_validation_sales_roadmap
+   1440   D      no       no       SI      0.00    diamante_decision_tres_partes contra protocolo_reuniones_gate   <-- DEL TRAMO
+   1441   D      no       no       SI      0.00    diversidad_vs_homogeneidad_equipo contra evaluacion_capital_humano
+   1452   D      no       no       SI      0.00    customer_discovery contra voz_del_cliente_voc   <-- DEL TRAMO
+   1453   D      no       no       SI      0.00    customer_discovery_overview contra introduccion_validacion_clientes
+   1775   D      no       no       SI      0.00    commuting_teletrabajo_sostenible contra movilidad_verde_empleados   <-- DEL TRAMO
+   1776   A      no       no       SI      0.00    evitar_greenwashing contra evitar_greenwashing_2
+   1941   D      no       no       SI      0.00    alineacion_engagement_estrategia_general contra co_creacion_estrategia_engagement   <-- DEL TRAMO
+   1942   A      no       no       SI      0.00    carta_de_credito_letter_of_credit contra letters_of_credit   <-- DEL TRAMO
+   1943   A      SI       no       SI      0.00    export_administration_regulations contra regulaciones_exportacion_ear
+   1944   D      no       no       SI      0.00    export_administration_regulations contra licencia_exportacion_regulaciones
+   2229   D      SI       no       SI      0.30    cultura_flexible contra cultura_flexible_organizacional   <-- DEL TRAMO
+   2230   A      SI       SI       SI      0.71    rendicion_cuentas_prospectiva contra responsabilidad_prospectiva
+   2300   D      no       no       SI      0.00    gestion_de_errores contra principios_gestion_error   <-- DEL TRAMO
+   2301   D      no       no       SI      0.00    herramientas_manuales_y_portatiles contra machine_guarding_abrasive_wheels
+   2374   D      no       no       SI      0.00    bad_apple_theory contra declive_teoria_manzana_podrida   <-- DEL TRAMO
+   2375   D      no       no       SI      0.00    epc_condiciones_productoras_error contra heart_metodo_evaluacion_error_humano
+   2473   A      SI       no       SI      0.06    economia_de_la_inspeccion contra punto_equilibrio_calidad_inspeccion   <-- DEL TRAMO
+   2474   D      no       no       SI      0.00    cribado_de_datos contra visualizacion_datos_deteccion_outliers
+   2522   D      no       no       SI      0.00    auditorias_primera_segunda_tercera_parte contra concepto_de_auditoria_de_calidad   <-- DEL TRAMO
+   2523   D      SI       no       SI      0.20    consejo_calidad contra consejo_de_calidad_3
+   2553   D      no       no       SI      0.00    accion_correctiva_4 contra accion_correctiva_crosby   <-- DEL TRAMO
+   2554   D      no       no       SI      0.00    establecer_metas_de_calidad_basadas_en_mercado contra establecimiento_metas_de_calidad
+   2599   D      no       no       SI      0.00    estandares_voluntarios contra estandarizacion_industrial_voluntaria   <-- DEL TRAMO
+   2600   A      no       no       SI      0.00    analisis_causa_raiz_diagnostico contra analisis_diagnostico_causa
+   2611   D      no       no       SI      0.00    ingenieria_calidad contra planificacion_inicial_calidad   <-- DEL TRAMO
+   2612   D      no       no       SI      0.00    medicion_calidad contra metodologia_medicion_copq
+   2695   D      no       no       SI      0.00    diseno_de_metodos_de_recoleccion_de_datos contra planificacion_recoleccion_datos   <-- DEL TRAMO
+   2696   D      no       no       SI      0.00    quality_awareness_crosby contra seminario_de_exito_para_gerencia
+   2742   D      no       no       SI      0.00    dmaic_fase_select contra proceso_nominacion_seleccion   <-- DEL TRAMO
+   2743   D      no       no       SI      0.00    compromiso_gerencial_calidad contra fijacion_de_metas
+   2749   D      no       no       SI      0.00    auditoria_negocio contra concepto_de_auditoria_de_calidad   <-- DEL TRAMO
+   2750   D      no       no       SI      0.00    histogramas_distribucion_frecuencias contra resumen_de_datos_graficos
+   3024   D      no       no       SI      0.00    institucionalizar_breakthrough contra mantener_las_ganancias   <-- DEL TRAMO
+   3025   D      no       no       SI      0.00    control_del_proceso_del_proveedor contra planificacion_inicial_calidad
+   3042   D      no       no       SI      0.00    diagrama_de_flujo_proceso_map contra mapeo_flujo_valor   <-- DEL TRAMO
+   3043   D      no       no       SI      0.00    comunicar_politicas_organizacionales contra politica_formal_de_calidad
+   3177   D      no       no       SI      0.00    accion_correctiva contra analisis_causa_raiz_diagnostico   <-- DEL TRAMO
+   3178   D      no       no       SI      0.00    funciones_del_departamento_de_calidad contra organizacion_independiente_de_calidad
+
+H) LAS CIFRAS DE LA RELECTURA
+   CIFRA puestos releidos: 60
+   CIFRA que declaran diferenciador: 5
+   CIFRA con LESION EXACTA: 1
+   CIFRA con algun nodo MUERTO en el grafo de hoy: 0
+   CIFRA clase 'A'   : 11
+   CIFRA clase 'B'   : 1
+   CIFRA clase 'D'   : 48
+   LOS LESIONADOS: 2230
+      PUESTO 2230: hoy el paso 5 de responsabilidad_prospectiva cubre 5 palabras del diferenciador declarado (cobertura 0.71)
+
+I) LAS CUATRO DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA VARA
+   (el acta 186 las nombra en su seccion 4: los puestos 338, 491, 1775 y
+    2599, que el auditor pierde LOS CUATRO a favor del archivo. Aqui NO se
+    re-decide ninguna clase: solo se dice si estan en el universo releido y
+    que ve la vara en ellas. LO QUE LA VARA NO VEA, NO SE AFIRMA)
+   puesto 338    clase B   declara no  lesion no  muertos no  | en el universo releido: SI
+      nodos: problem_solution_fit contra product_market_fit
+   puesto 491    clase D   declara no  lesion no  muertos no  | en el universo releido: SI
+      nodos: clausula_no_shop_adquisicion contra no_shop_agreement
+   puesto 1775   clase D   declara no  lesion no  muertos no  | en el universo releido: SI
+      nodos: commuting_teletrabajo_sostenible contra movilidad_verde_empleados
+   puesto 2599   clase D   declara no  lesion no  muertos no  | en el universo releido: SI
+      nodos: estandares_voluntarios contra estandarizacion_industrial_voluntaria
+   CIFRA de las cuatro que caen DENTRO del universo releido: 4
+
+I.1) CUANTAS CLASES `B` HAY EN EL UNIVERSO RELEIDO. SOLO SE CUENTA.
+   (el encargo la pide con esas palabras porque el puesto 338 es clase `B`.
+    ESTA CIFRA NO SE INTERPRETA NI SE ADJUDICA AQUI: se cuenta y se publica)
+   CIFRA clases `B` en el universo releido: 1 de 60
+   LOS PUESTOS `B` DEL UNIVERSO: 338
+   CIFRA clases `B` en TODO el archivo, contadas del archivo y no del
+   encargo: 72 de 3388 filas
+   de las cuatro discrepancias, cuales son clase `B`: 338
+
+J) LO QUE ESTA RELECTURA SOSTIENE, Y NI UNA PALABRA MAS
+   1. El tramo se leyo de la ciega SELLADA del auditor, cotejada por
+      sha256 contra su propio sello, y NO del acta, que no lo lista. El
+      sello se llama V187 porque la casa nombra el sello del acta N como
+      V(N+1) y esta es el acta 186. El V186 NO EXISTE y no se fabrica: es
+      el hueco que dejo la caida propia A.1 del acta 185. La ruta viene
+      del encargo, no de deducirla del numero de vuelta.
+   2. El tramo se releyo AL DOBLE: 60 puestos contra los 30 del tramo.
+   3. De los 60, 5 declaran un diferenciador y 1 lo tienen HOY movido al
+      otro nodo.
+   4. Puestos con algun nodo muerto en el grafo de hoy: 0.
+   5. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura
+      MECANICA del tramo con la vara, no una lectura de juicio. Lo que la
+      vara no ve, esta salida NO lo afirma.
+   6. NINGUN VEREDICTO SE MUEVE EN ESTA VUELTA: el archivo se abre para
+      leer y se cierra, y su sha256 va medido en la apertura y en el
+      cierre del reporte.
+   7. LA CUENTA DE CLASES `B` DEL UNIVERSO RELEIDO SE PUBLICA Y NO SE
+      INTERPRETA. El encargo la pide porque el puesto 338 es `B`; aqui se
+      cuenta y ahi se para.
+
+FIN
