@@ -66822,3 +66822,269 @@ misma cuando se corre de verdad.**
 
 **EL BUCLE SIGUE. El encargo de la vuelta 188 esta escrito entero en
 `docs/loop/PROMPT_SIGUIENTE.md`.**
+
+# ACTA DEL AUDITOR, VUELTA 189 (6 sep 2026, auditor Opus 5)
+# Cubre LA VUELTA 188 ENTERA, la que dejo la 189 lista para ser vuelta de
+# bateria. Prefijo de mis ficheros: `_auditor_v189b_*`, y lo declaro porque el
+# prefijo `_auditor_v189_*` YA ESTABA TOMADO por el turno que escribio el acta
+# 188 (commit `5aa9305d`). Mi sello es `SELLO_APERTURA_AUDITOR_V189b.json`.
+# =========================================================================
+
+**LA CABECERA DE UNA LINEA: LA VUELTA 188 REPRODUJO ENTERA BAJO MI MANO Y NO LE
+ENCUENTRO NI UNA CIFRA FALSA. GATE 0 VERDE ENTERO CORRIDO POR MI, LOS SEIS
+ARNESES RE CORRIDOS Y LOS SEIS VERDES, EL MARCADOR RECOMPUTADO DESDE EL ARCHIVO
+(3.388, A 551, B 72, C 5, D 2.760, CERO HUECOS Y CERO DUPLICADOS, `sha256` LF
+`0a77b5a35a962621`) Y LA CABECERA ENTERA RECOMPUTADA POR MI (3.853 / 3.169 /
+684, ARISTAS 8.780 / 8.740 / 17.520 / 9.914). ADJUDICO LOS SEIS DISCUTIBLES, LOS
+SEIS A FAVOR, Y CONTESTO LAS TRES PREGUNTAS. DOS CAIDAS PROPIAS MIAS, LAS DOS
+DECLARADAS CON NOMBRE, Y CERO DEL EJECUTOR. Y TRAIGO UN HALLAZGO QUE HABRIA DADO
+UN VERDE COMODO EN LA VUELTA QUE VIENE: EL LANZADOR DE LA BATERIA YA NO REPARTE
+EN NUEVE TRAMOS SINO EN DIEZ, Y SU `--siguiente` DICE HOY "EL SIGUIENTE ES EL
+TRAMO 10", ASI QUE UNA BATERIA DE LA 189 LANZADA CON EL FICHERO DE HOY CORRERIA
+UN TRAMO DE DIEZ Y SE DECLARARIA CORRIDA.**
+
+## 0. HUECO DE ACTA: NO LO HAY, Y LO MIDO EN VEZ DE SUPONERLO
+
+La ultima acta escrita es la **188** y su propia cabecera dice que cubre **la
+vuelta 187**. La vuelta que audito es la **188**, que es la inmediatamente
+anterior a esta. **Cero vueltas sin acta.** Medido con
+`grep -n "^# ACTA DEL AUDITOR" docs/loop/ACTA_AUDITOR.md` sobre las 66.824
+lineas del fichero, no recordado.
+
+## 1. LA APERTURA, SELLADA ANTES DE MI PRIMER COMANDO DE VERIFICACION
+
+`scripts/loop/apertura_del_auditor.py` corrio **PRIMERO Y SOLO ESO**, con
+`--vuelta 189b --muestra 30 --semilla 18922` y 381 puestos excluidos.
+**`PUEDE SELLAR: SI`, `bitacora del turno hasta ahora: (vacia)`,
+`prohibidos tocados antes del sello: 0`, `VEREDICTO: VERDE`.** El sello vive en
+`docs/loop/SELLO_APERTURA_AUDITOR_V189b.json` (**862 bytes**) y nombra la ciega
+(**40517 bytes**, `sha256` `49d4ac5512edde55`) y el destape (**29681 bytes**,
+`sha256` `1107e98db09572bc`). **Solo despues** toque `git log`, `git status` y
+`REPORTE.md`, y los tres por sus funciones del propio fichero, que apuntan su
+toque: `docs/loop/_auditor_v189b_apertura_toques.txt`.
+
+## 2. LO QUE VERIFIQUE, CON MI COMANDO Y NO CON SU PALABRA
+
+| lo que el reporte dice | lo que mi instrumento mide | |
+|---|---|---|
+| marcador 3.388, A 551, B 72, C 5, D 2.760, 0 huecos, 0 duplicados | identico, recomputado del archivo | CALZA |
+| `sha256` LF del archivo `0a77b5a35a962621` | `0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372` | CALZA |
+| censo 3.853 / 3.169 / 684 | identico, contado del grafo | CALZA |
+| aristas 8.780 / 8.740 / 17.520 / 9.914 | identico, con la definicion de `vuelta141_3_retirar_vuelta.py` | CALZA |
+| Gate 0 OK, motor 25/25, `tsc` 0, web 82 / 1.040, `numstat` de `dataset/` 0 | identico, ciclo entero corrido por mi: `docs/loop/_auditor_v189b_gate0.txt` | CALZA |
+| los seis arneses de la nomina en verde | re corridos por mi, los seis `VEREDICTO: VERDE` y exitcode 0 | CALZA |
+| el reporte de la 187 lleva DOS `## 9.`, lineas 870 y 920, con la `## 10.` en 877 | identico sobre `git show 9a06b7c8` | CALZA |
+| el reporte de la 188 lleva UNA sola `## 9.` | `grep -c` da 1 | CALZA |
+| TAREA 5: 60 puestos releidos, los tres solapes en 0 | `CIFRA puestos que se releen EN TOTAL: 60`, `CIFRA solapes que NO dan 0: 0` | CALZA |
+| nomina 121 a 125, `arneses_que_faltan()` 0, 6 de 6 doble corrida, `CIFRA paradas: 0` | identico; el `ROJO` es solo `guarda_del_sujeto_congelado(): 3 entradas` | CALZA |
+| la vara: 6 en LISTA, 4 TRABAJO REAL, 2 CONSUMIDAS, 6 MESAS y 5 en LISTA | identico, corrida por mi con mi propio corte | CALZA |
+| la entrada `R.50` mide 18321 bytes y 195 lineas, 0 guiones | identico, releida del disco | CALZA |
+| `INVENTARIO.jsonl` 584554 bytes y 672 entradas | identico | CALZA |
+| `LD-154` en la linea 662 y `LD-98` en la 1953 | identico (la 1812 es la tanda que la nombra en rango, no su entrada) | CALZA |
+
+**LAS RUTAS QUE EL REPORTE PUBLICA:** barri los **102** nombres de fichero
+citados. **CERO miden cero bytes.** Las dos que no existen son
+`docs/loop/SALIDA_V188_BATERIA.txt`, que el reporte declara inexistente con esas
+palabras en su hueco medido, y `docs/loop/ROJOS_DE_LA_VUELTA_188.txt`, que el
+reporte declara opcional y cuya ausencia el propio instrumento publica.
+**Ninguna de las dos promete prueba sobre un vacio**, asi que ninguna es caida
+por la letra del 5 sep 2026.
+
+**MI PROPIO BARRIDO DE PAREJAS DE BYTES** sobre el reporte de hoy: **10 parejas
+atribuidas sin ambiguedad y las 10 calzan** contra el disco
+(`docs/loop/_auditor_v189b_parejas.txt`).
+
+## 3. LA RELECTURA CIEGA, Y ME SALE PEOR QUE A LA TANDA ANTERIOR
+
+30 puestos frescos, solape **CERO** contra los 381 ya consumidos. Escribi mis
+clases enteras ANTES de abrir el destape
+(`docs/loop/_auditor_v189b_mis_clases.txt`, con mis siete dudosos nombrados
+delante).
+
+**24 COINCIDEN, 6 DISCREPAN, Y LAS SEIS SE RESUELVEN A FAVOR DEL ARCHIVO.** Lei
+las seis razones antes de decidir y ninguna de mis lecturas se sostiene:
+
+- **199** (yo `A`, archivo `B`): el archivo distingue que uno compara las ideas
+  entre si. Mi `A` era una lectura de mas. **A favor del archivo.**
+- **871** (yo `B`, archivo `D`): la teoria es **la pregunta previa** del
+  checklist y no esta contenida en el. **A favor del archivo.**
+- **2422** (yo `A`, archivo `D`): me guie por el sufijo `_2` del id, que es
+  exactamente la trampa que la razon del archivo nombra ("ids que se diferencian
+  en UN SUFIJO y aun asi no repiten"). **A favor del archivo, y la caida de
+  lectura es mia.**
+- **2656**, **2830** y **2909** (yo `A`, `A` y `B`; archivo `D` las tres): **las
+  tres traen `DISCUTIBLE MARCADO` escrito en su propia razon, con la lectura
+  alternativa nombrada, y esa lectura alternativa es la que yo di.** El archivo
+  no fallo: predijo mi lectura y la dejo escrita.
+
+**EL CREDITO DE LA TANDA BAJA POR LA LETRA:** el **2422** cayo **FUERA** de mis
+dudosos y fuera de todo marcado. **Relectura al doble encargada.**
+
+## 4. LAS ADJUDICACIONES
+
+**4.1 `D.1`, `OP-L-02` declarada PARADA en vez de `(b)`. A FAVOR.** La ficha no
+promete ningun fichero, asi que decir que su producto no la cubre seria afirmar
+algo sobre un producto que la ficha nunca nombro. Se adjudica por extension
+citable de `AUDITOR.md` 3: "una operacion cuyo texto no alcance para ejecutarse
+sin decidir es PARADA, no una improvisacion".
+
+**PERO NO ES PARADA DE CAMPANA, Y DIGO POR QUE.** La `verificacion` de la ficha
+habla de "las tres nominas afectadas" y de "cada grupo del backlog", y **nadie
+ha buscado todavia si esas tres nominas tienen sede en el repo**. Por la
+disciplina del dictado, "lo no consultado se marca a verificar y se encarga":
+**es una medicion no corrida, no una doctrina que falte.** Va encargada. Si
+despues de buscarla no hay sede en ninguna parte, **entonces si** es del
+fundador, porque inventarle una sede es cambiar el alcance.
+
+**4.2 `D.2`, `OP-I-01` como `(a)` con 672 contra 323. A FAVOR.** La pregunta era
+si el producto existe y la cubre, no si la ficha esta al dia. **ANOTACION y no
+encargo:** la brecha de **+349** es trabajo de plan y su sede es
+`docs/PENDIENTES.md`.
+
+**4.3 `D.3`, anadir `LAS SUYAS` como marca de atribucion. A FAVOR, y con
+elogio.** Lo verifique: la cabecera de la seccion 8 del acta 188 dice
+literalmente "LAS CAIDAS, LAS SUYAS DECLARADAS Y LAS DOS QUE LEVANTO YO" y **no
+contiene la palabra `EJECUTOR`**. El encargo afirmaba lo contrario. **Midio en
+vez de creerle al encargo, y declaro la discrepancia en vez de taparla:** eso es
+exactamente lo que esta casa pide.
+
+**4.4 `D.4`, cotejar contra el disco de hoy con excepcion mecanica. A FAVOR**,
+porque es la fuente que la guarda usa en produccion y la lista de excepciones
+sale de `git diff --name-only` y no de un teclado. **CON UNA CONDICION QUE VA AL
+ENCARGO:** la excepcion **publica siempre su lista, aunque este vacia**. Una
+puerta que solo se ve cuando se usa no se puede auditar.
+
+**4.5 `D.5`, denominador de lineas con cifra de bytes. A FAVOR**, y la anotacion
+del propio ejecutor se conserva: **la cobertura dice cual de los dos universos
+publica**, porque un universo de lineas no es un universo de sujetos.
+
+**4.6 `D.6`, acotar la `3.b` a dos de los cuatro arneses. A FAVOR.** Midio
+cuales publican numeros de linea del fichero vivo y son dos; ponerselo a los
+otros dos habria movido dos salidas selladas para nada.
+
+**4.7 `P.1`, la tercera categoria de la `guarda_del_sujeto_congelado()`. NO HACE
+FALTA DOCTRINA NUEVA: se queda como esta.** `NO DECIDIBLE` ya dice la verdad y
+deja la deuda visible, que es lo que fallar ruidoso pide; meterlo en
+`CASOS_DECLARADOS` convertiria una deuda visible en una exencion, y esa puerta
+no se vuelve a cerrar. **Lo que si encargo** es que la guarda **separe en su
+salida** las `NO DECIDIBLE` que traen motivo escrito de las que no, porque "3
+entradas sin congelar" hoy no distingue una deuda de una decision.
+
+**4.8 `P.2`, el clon declarado que anade codigo nuevo. EL COTEJO DEBE
+SEPARARLAS.** Un clon que **anade** una funcion y no toca el resto es
+verificable, porque el original entero sobrevive dentro del clon; uno que
+**cambia** codigo no lo es. El cotejo publica las dos cifras (sentencias del
+original que sobreviven identicas, y sentencias nuevas del clon) y **solo cae en
+rojo cuando alguna del original no sobrevive**. Encargado.
+
+**4.9 `P.3`, la cuenta buena de las etiquetas `LD-nn`. LA MIA ERA LA FALSA, Y ES
+CORRECCION DECLARADA SOBRE MI PROPIA SEDE.** Medido hoy: **68 etiquetas
+distintas, maximo `LD-154` en la linea 662**, y `LD-98` en la 1953. El acta 188
+escribio "de `LD-01` hasta `LD-98`" y **eso es falso por dos motivos**: ni el
+maximo es 98, ni la serie es continua. **La cifra que se publica de aqui en
+adelante es "68 etiquetas distintas, maximo `LD-154`".** El documento **no se
+toca**: la numeracion no monotona se anota y no se arregla.
+
+**4.10 LA RACHA DE REPORTE SE CORTA Y VUELVE A CERO.** El acta 188 la mantuvo en
+**2** con cero caidas en la vuelta 187, y lo hizo bien: la escalada estaba
+**encargada** y no construida. Hoy la escalada **existe, esta cableada donde
+`cerrar_reporte.py` juzga, la corri yo y sale verde con 17 casos y 0 fallos**, y
+**la vuelta 188 vuelve a cerrar con cero caidas de reporte**. La palabra de la
+regla es **seguidas**: dos vueltas seguidas sin ninguna cortan la racha.
+**Declaro la discrepancia con el acta 188 en vez de copiarla**, que es lo que el
+criterio de verificacion manda.
+
+## 5. EL HALLAZGO QUE TRAIGO, Y ES EL QUE MAS IMPORTA
+
+**`scripts/loop/vuelta183_bateria_por_tramos.py` YA NO REPARTE EN NUEVE TRAMOS
+SINO EN DIEZ**, porque la nomina paso de 121 a 125. Corrido por mi hoy:
+**`CIFRA entradas de la nomina: 125`, `CIFRA tramos: 10`** (nueve de 13 y uno de
+8), y **`--siguiente` dice `CIFRA tramos CON salida sellada no vacia: 9`,
+`CIFRA tramos que FALTAN: 1`, `EL SIGUIENTE ES EL TRAMO 10`**.
+
+**LO QUE ESO HARIA EN LA 189 SI NADIE LO MIRA:** la vuelta de bateria lanzaria
+**un tramo de diez**, `--siguiente` diria que estan los diez, y la bateria se
+declararia corrida **habiendo corrido 8 arneses de 125**. **Un verde comodo, y
+del tamano de la guarda entera.**
+
+**ADJUDICO: LA BATERIA DE LA 189 CORRE ENTERA SOBRE LA NOMINA DE HOY Y NO HEREDA
+NI UNA SALIDA SELLADA DE LA CORRIDA 183/184.** Las tres patas, las tres citadas:
+`AUDITOR.md` 6.1 dice **"la bateria entera"**; "una vuelta cortada retoma en el
+tramo siguiente" habla de **una vuelta que se corto**, y la del 183/184
+**cerro**, no se corto; y **"DEL MISMO CALIBRE"** es la mitad que lo cierra,
+porque nueve salidas de hace cinco vueltas y una de hoy **no son del mismo
+calibre por definicion**. **Y NO SE BORRA NADA:** las nueve salidas de la 183 se
+quedan donde estan.
+
+**EL REMEDIO YA ESTA MEDIO ESCRITO EN EL PROPIO FICHERO:** el lanzador computa
+su numero de vuelta de `os.path.basename(__file__)` y tiene
+`literales_de_vuelta_clavados()` para impedir que arranque con el numero
+clavado. **Un clon declarado llamado `vuelta189_bateria_por_tramos.py` escribe
+`SALIDA_V189_BATERIA_TRAMO_n.txt` solo, y su `--siguiente` cuenta desde cero.**
+
+## 6. LAS CAIDAS. DOS SON MIAS Y CERO SON DEL EJECUTOR
+
+**`C.1`, MIA: EL CRITERIO DE MI PROPIO SELLO AFIRMA UN HECHO FALSO.** Escribi en
+el criterio "los 30 del turno de auditor 189 que sello y murio sin escribir
+acta". **Es falso:** ese turno **escribio el acta 188** (commit `5aa9305d`, que
+es el que trae sus ficheros `_auditor_v189_*`). Lo di por muerto porque vi el
+sello `V189` con la ultima acta numerada 188, **sin haber medido antes que el
+prefijo de fichero de esta casa va una vuelta por delante del numero del acta**.
+**LA EXCLUSION QUE PRODUJO ES CORRECTA** (esos 30 puestos si estaban leidos, y
+por eso el solape sigue en cero); **lo falso es la razon narrada, y va en un
+fichero sellado que no se puede reescribir.** Especie: **de metodo**. No es
+cifra publicada (ni cifra ni ruta, y el sello no es ninguna de las cuatro sedes)
+y no es caida de reporte. **No acumula, y lo digo aunque me favorezca.**
+
+**`C.2`, MIA: RE CORRI UN INSTRUMENTO QUE MUTA EL REPO Y ME DEJO EL ARBOL
+SUCIO.** Corri `scripts/loop/vuelta188_tarea1a_registrar_acta188.py` dentro de mi
+tanda de re corridas, y **escribio una entrada `R.51` duplicada de 196 lineas en
+`docs/PENDIENTES.md`** registrando otra vez el acta 188 que la `R.50` ya
+registraba, mas una salida nueva. **Lo reverti entero** y ademas **restaure la
+convencion LF en disco** de los dos ficheros que `git checkout --` me habia
+convertido a CRLF (`docs/PENDIENTES.md` vuelve a 943276 bytes y
+`SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt` a 9063). **`git diff --numstat`
+cierra en 0 filas.** Especie: **de metodo**.
+
+> **Y DE LA `C.2` SALE UN HALLAZGO QUE NO ES MIO Y VA AL ENCARGO: EL REGISTRADOR
+> NO ES IDEMPOTENTE.** Re correrlo **no detecta que el acta ya esta registrada**:
+> registra otra vez con el numero siguiente. **Un instrumento que el auditor
+> tiene mandato de re correr y que muta el registro al re correrse es una
+> trampa**, y la proxima vez puede quedar un `R.51` fantasma commiteado sin que
+> nadie lo vea.
+
+**DEL EJECUTOR: CERO.** Sus dos caidas declaradas (`C.1` y `C.2` de su reporte)
+son de arneses que nacen en su vuelta, y la `5.2` del acta 186 dice que ahi el
+rojo es parte de escribirlos. **Ninguna cifra falsa, ninguna ruta vacia, ninguna
+seccion duplicada.**
+
+## 7. LA METRICA DE CREDITO
+
+| | esta vuelta | acumulado |
+|---|---:|---:|
+| relecturas | 1 | **324** |
+| puestos | 30 aislados, **30 limpios**, solape 0 contra 381 | **946** |
+| discrepancias DENTRO del marcado | **5** (199, 871, 2656, 2830, 2909; tres de ellas marcadas `DISCUTIBLE` por el propio archivo) | **31** |
+| discrepancias y hallazgos FUERA del marcado | **2** (el puesto **2422**; y el reparto de la bateria en DIEZ tramos) | **146** |
+| caidas propias del auditor | **2** (`C.1` el criterio falso del sello, `C.2` el instrumento que muta) | **ninguna repetida: no abren racha** |
+| caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: sigue en 0** |
+| caidas del ejecutor de reporte | **0** | **racha de reporte: CORTADA, vuelve a 0** (adjudicacion 4.10) |
+| caidas del ejecutor de metodo, registradas y sin racha | **0** | |
+
+**CREDITO ROTO: NO.** Cero caidas de clase y cero de cifra publicada. **PARADA:
+NO**, y repase las condiciones una a una: ninguna doctrina nueva hizo falta (las
+diez adjudicaciones salen de regla escrita o de extension citable), ninguna
+contradiccion quedo sin resolver, nada de lo que la casa reserva se toco, Gate 0
+no ha estado en rojo ninguna vuelta, el credito de tanda no se rompio dos veces
+seguidas, la campana no esta consumida y las credenciales no hicieron falta.
+
+## 8. LO QUE ENCARGO A LA VUELTA 189
+
+**ES VUELTA DE BATERIA**, por `AUDITOR.md` 6.1: la bateria **entera y sola**,
+por tramos, con su doble corrida, su reloj y su salida sellada. Va con el clon
+`vuelta189_bateria_por_tramos.py` de la adjudicacion 5, para que **`--siguiente`
+cuente desde cero y los diez tramos sean del mismo calibre**. Los dos remedios
+de codigo pequenos (`P.1` y `P.2`), la idempotencia del registrador, la busqueda
+de la sede de `OP-L-02` y la relectura al doble del tramo del **2422** van
+**detras de la bateria y solo si la bateria cierra**, escritos enteros en
+`docs/loop/PROMPT_SIGUIENTE.md`.
