@@ -1,0 +1,136 @@
+==============================================================================
+VUELTA 182, TAREA 3: EL INSTRUMENTO DEL DIFERENCIADOR MOVIDO
+decision del fundador del 5 sep 2026, PREGUNTA 1, opcion b
+==============================================================================
+
+A) LOS DOS SUJETOS, CONTADOS DE SUS FICHEROS
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 3388 filas | disco 4051967 bytes
+   dataset/metadata/master_graph.json  -> 3853 nodos | disco 8375817 bytes
+   CIFRA clase A: 551
+   CIFRA clase B: 72
+   CIFRA clase C: 5
+   CIFRA clase D: 2760
+
+B) LAS D QUE DECLARAN UN DIFERENCIADOR, CONTADAS Y NO ESTIMADAS
+   CIFRA D: 2760
+   CIFRA D con clausula de carencia: 99
+   CIFRA D SIN clausula de carencia: 2661
+   (las que no declaran ninguna NO pueden tener un diferenciador movido:
+    no hay nada que se les haya movido debajo. Se cuenta y se dice)
+      'que el otro no tiene'   -> 58
+      'que el otro no trae'    -> 0
+      'que el otro no'         -> 31
+      'el otro no tiene'       -> 1
+      'no aparece en el otro'  -> 6
+      'que no tiene'           -> 3
+
+C) EL BARRIDO DE LAS DOS VARAS, PARA QUE NO SE ELIJAN A OJO
+   (filas: palabras coincidentes minimas. columnas: cobertura minima.
+    cada celda es cuantas D salen con LESION EXACTA con esa combinacion)
+   abs      0.30   0.40   0.45   0.50   0.60   0.70
+   2          19     10      7      6      5      3
+   3          18      9      6      5      4      3
+   4          12      7      5      4      4      3
+   5          11      6      4      3      3      2
+   LA VARA ELEGIDA: abs=3, cobertura=0.45 -> 6 D con lesion exacta
+   POR QUE ESA Y NO OTRA, DICHO SIN ADORNO: es la celda mas estrecha que
+   sigue nombrando el 2.464, que es el caso positivo que la decision del
+   fundador declara OBLIGATORIO. Bajar la cobertura mete pares por parecido
+   de vocabulario general; subirla deja fuera el caso que el propio auditor
+   midio a mano. LA TABLA ENTERA VA AQUI para que la eleccion se discuta.
+
+D) EL CASO POSITIVO OBLIGATORIO: EL PUESTO 2464
+   cero_defectos contra zero_defects_concepto (clase D, dominio quality)
+   la razon declara diferenciador: SI
+   el que segun la razon NO lo tiene: cero_defectos
+   el contenido declarado, recortado y no resumido:
+      ELIMINAR EXPLICITAMENTE EL USO DE NIVELES DE CALIDAD ACEPTABLES como estandar, que es contra lo que Cero Defectos se define; y el arranque a escala minima, MARCAR EL DIA AUNQUE SEA CONTIGO MISMO y PONER POR ESCRITO UN COMPROMISO ENTRE TU Y LA PERSONA QUE TE AYUDA
+   el paso de HOY que mas lo cubre: paso 7 de cero_defectos
+      Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+   coincidencias 3 | cobertura 0.50 | LESION EXACTA: SI
+   VERDE: el caso positivo obligatorio SALE NOMBRADO.
+
+E) LAS D CON LESION EXACTA, UNA A UNA
+   CIFRA D con lesion exacta: 6
+   PUESTO 1778  environmental | herramienta_fractal_triple_top_line contra triple_top_line
+      carece segun la razon: herramienta_fractal_triple_top_line | hoy su paso 1 lo cubre
+      coincidencias 8 | cobertura 0.80
+      declarado: MAPEAR EL PROYECTO EN UN FRACTAL recorriendo cada sector cruzado, economia con economia, economia con equidad, equidad con ecologia y los demas; formu
+      paso de hoy: Mapear el proyecto en el fractal recorriendo cada sector: Economía/Economía, Economía/Equidad, Equidad/Equidad, Equidad/Ecología, Ecología/Ecología, E
+   PUESTO 2464  quality | cero_defectos contra zero_defects_concepto
+      carece segun la razon: cero_defectos | hoy su paso 7 lo cubre
+      coincidencias 3 | cobertura 0.50
+      declarado: ELIMINAR EXPLICITAMENTE EL USO DE NIVELES DE CALIDAD ACEPTABLES como estandar, que es contra lo que Cero Defectos se define; y el arranque a escala mi
+      paso de hoy: Eliminar el lenguaje que normaliza niveles aceptables de error (AQL)
+   PUESTO 2530  quality | regla_todo_o_nada_inspeccion contra regla_todo_o_nada_inspeccion_2
+      carece segun la razon: regla_todo_o_nada_inspeccion_2 | hoy su paso 5 lo cubre
+      coincidencias 3 | cobertura 0.50
+      declarado: y una de ellas es el agujero de la regla: QUE HACER SI EL PROCESO ESTA FUERA DE CONTROL, que es donde la regla de los dos extremos no aplica, con insp
+      paso de hoy: Si el proceso está fuera de control, entre los dos extremos, aplica inspección al 100 por ciento o usa las reglas de Joyce Orsini como solución tempor
+   PUESTO 2540  quality | clasificacion_de_seriedad_de_defectos contra clasificacion_de_seriedad_de_defectos_2
+      carece segun la razon: clasificacion_de_seriedad_de_defectos_2 | hoy su paso 2 lo cubre
+      coincidencias 4 | cobertura 0.67
+      declarado: LOS TRES NIVELES NOMBRADOS, critico, mayor y menor; LISTAR TODOS LOS POSIBLES DEFECTOS antes de clasificar; COMUNICAR LA CLASIFICACION AL PROVEEDOR pa
+      paso de hoy: Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto
+   PUESTO 3141  quality | capacidad_de_proceso contra establecer_capacidad_del_proceso
+      carece segun la razon: establecer_capacidad_del_proceso | hoy su paso 3 lo cubre
+      coincidencias 7 | cobertura 0.64
+      declarado: ; establecer_capacidad_del_proceso trae los suyos (diagnosticar causas raiz, implementar mejoras antes de operar)
+      paso de hoy: Implementar mejoras para eliminar las causas raíz antes de operar el proceso.
+   PUESTO 3232  quality | analisis_variacion_desempeno_servicio contra estudio_desempeno_run_charts_servicios
+      carece segun la razon: estudio_desempeno_run_charts_servicios | hoy su paso 1 lo cubre
+      coincidencias 7 | cobertura 0.47
+      declarado: ; estudio_desempeno_run_charts_servicios trae la IDENTIFICACION DE VARIABLES CRITICAS (errores/tiempos/quejas/reprocesos) y la DIRECCION DE RECURSOS D
+      paso de hoy: Identificar las variables críticas de desempeño del servicio (errores, tiempos, quejas, reprocesos)
+
+F) LA TERCERA CONDICION: EL TEXTO SE MOVIO DESPUES DEL VEREDICTO
+   (se fecha SOLO las 6 candidatas, no las 2760 D: fechar 2.760 pares
+    exige recorrer los 194 commits del archivo, y aqui no hace falta)
+   commits que tocan el archivo de veredictos: 194
+   commits que tocan el grafo: 165
+   EL PASO SE BUSCA DENTRO DE SU NODO Y NO EN EL FICHERO ENTERO.
+   CORRECCION DECLARADA de esta misma vuelta: la primera version buscaba
+   el texto en el blob completo y fechaba el paso del AQL del 2.464 el
+   2026-07-10, contra el 20 ago 2026 que el acta 181 fecha a mano. Ese
+   texto vivia en OTRO nodo antes de la fusion. La salida equivocada esta
+   entera en docs/loop/SALIDA_V182_T3_DIFERENCIADOR_FECHADO_MALO.txt.
+   PUESTO 1778  veredicto 2026-08-11 | el paso entra 2026-07-10 | POSTERIOR: NO
+   PUESTO 2464  veredicto 2026-08-12 | el paso entra 2026-08-20 | POSTERIOR: SI
+   PUESTO 2530  veredicto 2026-08-12 | el paso entra 2026-08-07 | POSTERIOR: NO
+   PUESTO 2540  veredicto 2026-08-12 | el paso entra 2026-07-10 | POSTERIOR: NO
+   PUESTO 3141  veredicto 2026-08-13 | el paso entra 2026-07-10 | POSTERIOR: NO
+   PUESTO 3232  veredicto 2026-08-13 | el paso entra 2026-07-10 | POSTERIOR: NO
+
+G) EL VEREDICTO DEL INSTRUMENTO
+   CIFRA D totales: 2760
+   CIFRA D que declaran diferenciador: 99
+   CIFRA D con LESION EXACTA (condiciones 1 y 2): 6
+   CIFRA D con las TRES condiciones: 1
+   LAS QUE ENTRAN A LA COLA: 2464
+   EL 2.464 ESTA ENTRE ELLAS: SI
+
+H) EL CENSO POR ESTADO DE LAS A (PREGUNTA 2 de la misma decision)
+   CIFRA A: 551
+   LAS A NO GANAN COLA NUEVA, y eso es decision del fundador y no mia:
+   la A ejecutada es cosa consumada vigilada por la integral y la vecindad,
+   y la A sin ejecutar con texto movido es PAR RANCIO por la regla P.5 que
+   YA EXISTE, y su vigencia se comprueba antes de ejecutar.
+   CIFRA A EJECUTADAS (uno de los dos nodos ya no esta en el grafo): 0
+   CIFRA A PENDIENTES (los dos nodos siguen vivos): 551
+   CIFRA A no decidibles (falta algun id): 0
+   LA SUMA: 0 + 551 + 0 = 551, y las A son 551. CALZAN: SI
+   CIFRA A PENDIENTES con el diferenciador declarado hoy en el otro nodo
+   (RANCIAS POR P.5, y se marcan, NO se encolan): 8
+      RANCIA POR P.5: puesto 978
+      RANCIA POR P.5: puesto 2230
+      RANCIA POR P.5: puesto 2255
+      RANCIA POR P.5: puesto 2272
+      RANCIA POR P.5: puesto 2414
+      RANCIA POR P.5: puesto 2420
+      RANCIA POR P.5: puesto 2498
+      RANCIA POR P.5: puesto 2509
+
+FIN
+
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V182_T3_DIFERENCIADOR.txt (8313 bytes)
+ESCRITO: C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SALIDA_V182_T3_COLA.json (1074 bytes)
