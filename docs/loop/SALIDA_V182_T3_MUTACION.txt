@@ -1,0 +1,33 @@
+CASO POSITIVO POR MUTACION de vuelta182_tarea3_diferenciador_movido.py
+todo el material va FABRICADO: no se lee el archivo ni dataset/
+
+   LESION: la razon dice que n_tiene carece, y hoy SI lo tiene
+      lesion COMPUTADA: True | esperada: True | CALZA
+      motivo: hoy el paso 1 de n_tiene cubre 3 palabras del diferenciador declarado (cobertura 0.50)
+   SIN LESION: el que carece de verdad no lo tiene hoy
+      lesion COMPUTADA: False | esperada: False | CALZA
+      motivo: el diferenciador declarado NO esta hoy en los pasos de n_no_tiene (mejor paso: 1 palabras, cobertura 0.17)
+   SIN DECLARACION: la razon no declara ningun diferenciador
+      lesion COMPUTADA: False | esperada: False | CALZA
+      motivo: la razon no declara ningun diferenciador
+   NODO AUSENTE: el que carece no esta en el grafo
+      lesion COMPUTADA: False | esperada: False | CALZA
+      motivo: el nodo 'n_fantasma' no esta en el grafo de hoy
+   DOS ITEMS: la razon enumera dos cosas y solo UNA se movio
+      lesion COMPUTADA: True | esperada: True | CALZA
+      motivo: hoy el paso 1 de n_tiene cubre 3 palabras del diferenciador declarado (cobertura 0.50)
+
+LA MUTACION DEL VALOR ESPERADO:
+   la lesion COMPUTADA del caso 1 es: True
+   con el esperado BUENO  (True):  PASA
+   con el esperado MUTADO (False): CAE
+   EL CASO CAE AL MUTAR EL ESPERADO: SI
+
+LA MUTACION DE LA VARA, que prueba que la vara decide de verdad:
+   abs=3 cobertura=0.45 -> lesion True
+   abs=9 cobertura=0.45 -> lesion False
+   abs=3 cobertura=0.99 -> lesion False
+   CON LA VARA IMPOSIBLE LA LESION DESAPARECE: SI
+
+CIFRA fallos: 0
+VEREDICTO: VERDE
