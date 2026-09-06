@@ -1,0 +1,58 @@
+==============================================================================
+VUELTA 192, TAREA 1: CASO POSITIVO POR MUTACION DE LAS TRES COSAS NUEVAS
+==============================================================================
+
+LO QUE SE PRUEBA, Y POR QUE ESTE ES EL CASO QUE PUEDE CAER: las tres
+maquinas nuevas se corren sobre textos FABRICADOS con la cifra sabida, y el
+valor esperado NO es una constante literal igual a la obtenida: cada caso
+compara contra la cifra que el texto fabricado lleva DENTRO por
+construccion, y el caso de mutacion cambia el texto y exige que CAIGA.
+
+A) `estado_de_la_adjudicacion` CON LAS TRES MARCAS NUEVAS
+   titulo con 'NO MUEVE NINGUNA DEL EJECUTOR'                     VERDE
+   titulo con 'SI, Y LO ENCARGO'                                  VERDE
+   titulo con 'SE RESUELVE CON LAS REGLAS DE CORR'                VERDE
+   LA MUTACION: si la marca se le quita al titulo, el estado TIENE que caer
+   a SIN DECIR, que es lo que hace PARAR al instrumento.
+   sin 'NO MUEVE NINGUNA DEL EJECUTOR' -> SIN DECIR               VERDE
+   sin 'SI, Y LO ENCARGO' -> SIN DECIR                            VERDE
+   sin 'SE RESUELVE CON LAS REGLAS DE ' -> SIN DECIR              VERDE
+   Y `EN CONTRA` SIGUE GANANDO AUNQUE EL TITULO TRAIGA UNA MARCA NUEVA:
+   EN CONTRA gana a la marca nueva                                VERDE
+
+B) `expandir_rangos_de_clave` SOBRE UN RANGO FABRICADO
+   claves literales del texto fabricado                           VERDE
+   claves con el rango expandido                                  VERDE
+   LA MUTACION 1: sin el rango, expandir tiene que dar LO MISMO que
+   literales, que es la cifra falsa que esta maquina existe para cazar.
+   sin rango, literales y expandidas coinciden                    VERDE
+   sin rango, la cuenta cae de 6 a 2                              VERDE
+   LA MUTACION 2: un rango AL REVES no se adivina, y se queda sin expandir.
+   rango al reves NO se expande                                   VERDE
+
+C) `caidas_por_lead_heredado` SOBRE UNA SECCION FABRICADA
+   del ejecutor (claves literales del rango)                      VERDE
+   del auditor, POR HERENCIA del lead MIAS                        VERDE
+   huerfanas                                                      VERDE
+   las dos del auditor entran heredadas                           VERDE
+   LA MUTACION 1: la maquina de la 190 sobre ESTA MISMA seccion tiene que
+   sacar CERO del auditor, que es el fallo que esto viene a arreglar.
+   caidas_en_linea() de la 190: auditor                           VERDE
+   caidas_en_linea() de la 190: huerfanas                         VERDE
+   LA MUTACION 2: SI SE QUITA EL LEAD `MIAS`, las dos del auditor TIENEN
+   que caer a HUERFANAS. La herencia no inventa duenos.
+   sin lead: del auditor                                          VERDE
+   sin lead: del ejecutor                                         VERDE
+   sin lead: HUERFANAS (lo que hace PARAR)                        VERDE
+   LA MUTACION 3: si el lead del ejecutor fuera un cero DE CUENTA y no de
+   RACHA, sus claves TIENEN que dejar de contarsele.
+   cero de cuenta: del ejecutor cae a 0                           VERDE
+
+D) `especie_de_la_caida` LEE LA ESPECIE Y NO LA SUPONE
+   parrafo con DE CIFRA PUBLICADA y DE METODO                     VERDE
+   parrafo solo con DE METODO                                     VERDE
+   LA MUTACION: un parrafo SIN especie tiene que dar la lista VACIA, que es
+   lo que hace PARAR al instrumento.
+   parrafo sin ninguna especie                                    VERDE
+
+VEREDICTO: VERDE
