@@ -95,7 +95,7 @@ tabla tallada entera cuando la vuelta cierre.
 <!-- TABLA DE TAREAS -->
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
-| **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 193 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Registra LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, las diez A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 192 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3` contestadas), OTRA VEZ CERO EN CONTRA; LOS CUATRO HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la cuarta puerta que no se puede usar desde el CLI, `5.2` el cotejo que convierte `"no"` en `si`, `5.3` el arnes que imprime su `mkdtemp` en la salida sellada, `5.4` el reporte que se contradice en la cuenta del `DESFASE DECLARADO`); UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE NO ACUMULA (la seccion 5.5 publica 3 donde hay 4 y donde su propia seccion 0 dice 4: se registra con su nombre, dispara la relectura al doble y NO acumula por la letra del 27 ago 2026, RACHA DE REPORTE 0); UNA CAIDA PROPIA DEL AUDITOR, DE METODO (`C.1`, correr `run_phase1.py` sin `--reaplico-curaduria` y ensuciar `dataset/`); y LA METRICA DE CREDITO de la seccion 7 con la fila de puestos y su nota: 30 aislados y 30 cotejados, CERO quemados, SOLAPE TOTAL a proposito, o sea control y no cobertura nueva. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 193 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. Registra LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, las diez A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 192 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3` contestadas), OTRA VEZ CERO EN CONTRA; LOS CUATRO HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la cuarta puerta que no se puede usar desde el CLI, `5.2` el cotejo que convierte `"no"` en `si`, `5.3` el arnes que imprime su `mkdtemp` en la salida sellada, `5.4` el reporte que se contradice en la cuenta del `DESFASE DECLARADO`); UNA CAIDA DEL EJECUTOR, DE REPORTE, QUE NO ACUMULA (la seccion 5.5 publica 3 donde hay 4 y donde su propia seccion 0 dice 4: se registra con su nombre, dispara la relectura al doble y NO acumula por la letra del 27 ago 2026, RACHA DE REPORTE 0); UNA CAIDA PROPIA DEL AUDITOR, DE METODO (`C.1`, correr `run_phase1.py` sin `--reaplico-curaduria` y ensuciar `dataset/`); y LA METRICA DE CREDITO de la seccion 7 con la fila de puestos y su nota: 30 aislados y 30 cotejados, CERO quemados, SOLAPE TOTAL a proposito, o sea control y no cobertura nueva. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA EN VERDE** | `SALIDA_V193_T1A_REGISTRO_R55.txt`, `SALIDA_V193_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V193_T1A_MUTACION_REGISTRADOR.txt` |
 | **TAREA 2** | LOS TRES ARNESES QUE NO REPRODUCEN, ANTES DE LA BATERIA DE LA 194. BLOQUEANTE Y LA MAS URGENTE DE LA VUELTA. Es la adjudicacion `4.10` y el hallazgo `5.3` del acta 193, medido en `docs/loop/_auditor_v193_reproducibilidad.txt`: los tres REPRODUCEN entre dos corridas de hoy y NINGUNO contra su sellada. (a) LOS DOS PRIMEROS (`vuelta191_tarea3_mutacion_lineas.py` y `vuelta191_tarea6_mutacion_bloque_tallado.py`): CONGELAR SU SUJETO o DECLARAR EL CASO por el carril de los `CASO DECLARADO`, porque la `4.4` del acta 191 dice que `SUJETO VIVO` es FALLO y no deuda y la `4.10` cierra la salida que quedaba: una salida que no reproduce NO ES DEL MISMO CALIBRE, tenga o no tenga motivo escrito. (b) EL TERCERO (`guarda_de_entrada_a_la_nomina.py`): que su salida sellada NO lleve el nombre del directorio temporal; el directorio se sigue fabricando y se sigue retirando (`P.16`). (c) ARREGLAR LA GUARDA QUE NO LO VIO: `tempfile` y `mkdtemp` cuentan como huellas de CONGELADO y por eso da CONGELADO a un arnes cuya salida cambia en cada corrida; UNA HUELLA DE TEXTO NO PRUEBA REPRODUCCION. (d) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un arnes cuya salida no reproduce vuelve a salir CONGELADO. (e) NO SE TOCA LA NOMINA: la opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue rechazada. (f) AL CERRAR, CORRER LOS TRES DOS VECES Y PUBLICAR SUS BYTES Y SUS `sha256`; si alguno sigue sin reproducir, SE PARA Y SE TRAE | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 3** | LA VARA DE LAS CIEGAS PASA A SER LA DEL BANCO, Y EL DOBLE SE LEE CON ELLA. Es la adjudicacion `4.9` del acta 193, que contesta la `P.3` a favor. No es doctrina nueva: la vara ya esta escrita en `docs/BANCO_DE_TEXTOS.md` `9.6.1`, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO, propuesta y adoptada el 12 ago 2026. (a) ESCRIBIR EL CRITERIO DE LA CIEGA CITANDO `9.6.1` POR NUMERO, con la frase de la vara copiada LITERAL y no parafraseada (`9.5.0`), y que sea el criterio que se le pasa a `aislador_de_ciega.py` de aqui en adelante. (b) LA RELECTURA AL DOBLE DEL TRAMO DE LA 192, que es la deuda de credito de la tanda del auditor y la encarga el auditor, que es donde `AUDITOR.md` 1.2 la pone, CON MOTIVO TRIPLE: dos discrepancias cayeron fuera del marcado del auditor, las dos cayeron tambien fuera del marcado del ejecutor, y son el mismo par para los dos lectores. (c) EL TRAMO son los 30 puestos de `docs/loop/SALIDA_V192_T2_CIEGA.txt`, que son los mismos 30 de la ciega del auditor `docs/loop/_auditor_v193_ciega_blind.txt`. (d) AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada, con `evitar` cargado con TODO lo consumido, CONTADO DE SUS FICHEROS Y NO DEL ENCARGO, y con el solape contra el tramo y contra el universo en 0 y 0 POR CONSTRUCCION. (e) criterio escrito literal, ciega y destape en ficheros SEPARADOS, clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y dudosos NOMBRADOS DELANTE. (f) PUBLICAR LO QUE LA VARA NUEVA CAMBIA: cuantos dudosos y cuantas discrepancias habrian salido distinto con `9.6.1`, y si no cambia nada, DECIRLO. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en `0a77b5a35a962621` por las dos convenciones | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LA CUARTA PUERTA QUE SOBREVIVA AL PROCESO. Es el hallazgo `5.1` del acta 193, levantado por el auditor CONTRA EL FICHERO QUE LE PROTEGE Y QUE EL EJECUTOR ESCRIBIO PARA EL EN LA 192, y medido en `docs/loop/_auditor_v193_cuarta_puerta_prueba.txt`: `_BITACORA` y `_SELLADO` son estado de MODULO y mueren con el proceso, el auditor sella con el CLI, y en el proceso siguiente `puede_declarar_clases()` responde `NO: este turno no ha sellado` aunque el sello este en disco. Y LA MITAD MAS SERIA ES SOBRE LAS TRES PUERTAS VIEJAS: el docstring afirma que el sello no se pueda escribir despues, y un turno que toca `REPORTE.md` y arranca otro proceso vuelve a sellar con bitacora vacia porque `sellar()` SOBRESCRIBE. (a) QUE LA BITACORA Y EL SELLO SOBREVIVAN AL PROCESO, en un fichero del turno. (b) QUE `sellar()` CAIGA EN ROJO SI YA HAY SELLO EN DISCO PARA ESA VUELTA, en vez de sobrescribirlo. (c) QUE EL CLI PUEDA DECLARAR LAS CLASES, con su bandera, leyendo el sello de disco. (d) Y SI ALGO NO SE PUEDE, DECIRLO EN EL DOCSTRING en vez de afirmar lo contrario, que esa frase vive en sede de cifra publicada desde el 2 sep 2026. (e) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un sello se puede reescribir despues de tocar uno de los tres prohibidos en otro proceso. (f) NO SE CLONA EL FICHERO: `apertura_del_auditor.py` tiene nombre estable y se le anade. (g) RE CORRER SU ARNES DE LA NOMINA CON EL PARCHE PUESTO Y COMPROBAR QUE REPRODUCE BYTE A BYTE; hoy da 4282 bytes y `sha256` `4779fcd04bc5b2da` | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -105,5 +105,70 @@ tabla tallada entera cuando la vuelta cierre.
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
 
 <!-- ANEXO DE TAREAS -->
-*(vacio: ninguna tarea ha cerrado todavia)*
+
+### TAREA 1. LOS REGISTROS. **CERRADA EN VERDE.**
+
+**EL NUMERO NO SE TECLEO.** `scripts/loop/serie_de_registros.py`, corrido en el
+bloque `G` de la apertura y otra vez dentro del registrador, da **`R.55`** como
+siguiente libre, con **46 entradas, 0 colisiones y 0 huecos** antes de escribir.
+El encargo adelantaba `R.55` y **CALZA**, y lo que manda es el instrumento.
+
+**EL INSTRUMENTO ES NUEVO Y DICE POR QUE, PORQUE EL DE LA 192 NO SIRVE AQUI.**
+`scripts/loop/vuelta193_tarea1a_registrar_acta193.py` **importa la maquina
+generica** de `vuelta192_tarea1a_registrar_acta192.py` (acotar el acta, contar
+claves, leer titulos, expandir rangos, leer filas de la tabla, la serie) y **solo
+escribe lo que el acta 193 tiene distinto**. Las cuatro diferencias van medidas y
+no supuestas:
+
+| lo que cambia | la medicion que lo obliga |
+|---|---|
+| `MIA` en SINGULAR como lead del auditor | con `MARCAS_LEAD_AUDITOR = ("MIAS",)` el reparto sale **ejecutor 4, auditor 0**, y el acta declara **UNA** propia. Con la marca ensanchada a `MIA` sale **3 y 1, cero huerfanas** |
+| dos marcas de estado nuevas (`NO LO CAMBIAN` de la `4.8`, `ADJUDICADO: SE CONGELAN` de la `4.10`) | con el vocabulario de la 192 y nada mas saldrian **2** adjudicaciones `SIN DECIR`, y el registrador **PARARIA** |
+| la propia del auditor es **DE METODO** y NINGUNA es de cifra publicada | el registrador de la 192 PARABA si ninguna propia era `DE CIFRA PUBLICADA`. Aqui esa parada seria falsa: lo que se exige es que **cada propia DECLARE su especie**, y el reparto se publica salga lo que salga |
+| las del ejecutor van por DOS filas y no por una | el acta **asigna** una (`C.1`, de REPORTE) y **cita** cuatro (`C.1` a `C.4` del reporte, de METODO). Contarlas juntas da **5**, que **no es el numeral de ninguna fila** de la tabla de credito |
+
+**LAS CIFRAS, CONTADAS DEL CUERPO ACOTADO DEL ACTA (lineas 67926 a 68281 de
+`docs/loop/ACTA_AUDITOR.md`) Y NINGUNA DEL ENCARGO**, en
+`docs/loop/SALIDA_V193_T1A_REGISTRO_R55.txt` (11576 bytes):
+
+- **10 adjudicaciones** `4.1` a `4.10`, cada una con **1** aparicion; patron
+  entrecomillado **0**, patron suelto **10**, **las dos cifras publicadas**.
+- **7 discutibles, los 7 A FAVOR; 3 preguntas contestadas** (`P.1` en la `4.8`,
+  `P.3` en la `4.9`, `P.2` en la `4.10`). **CIFRA `EN CONTRA`: 0**, por tercera
+  acta seguida, **y no se re fabrica su caso**: se cita
+  `docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`, **6904 bytes en disco y
+  6904 por LF**, `sha256` LF `795c0ec740bdd5cc`, veredicto leido del propio
+  fichero `'VEREDICTO: VERDE'`.
+- **4 hallazgos** `5.1` a `5.4`. **La fila de credito que los cuenta dice 6**, y
+  **no se elige a ojo cual vale**: esa fila cuenta juntas discrepancias y
+  hallazgos, y su celda lo escribe. **Por resta: 2 discrepancias fuera del
+  marcado mas los 4 hallazgos.**
+- **1 caida propia del auditor** (`C.1`, DE METODO) contra su fila **1**;
+  **1 caida del ejecutor asignada** (`C.1`, DE REPORTE) contra su fila **1**;
+  **4 citadas de metodo** contra su fila **4**. **LAS TRES CALZAN**, y si alguna
+  no calzara el registrador PARARIA en vez de elegir la que conviene.
+- **La fila de puestos con sus DOS notas, leidas y no parafraseadas:**
+  `'solape TOTAL'` y `'cero quemados'`, con **30 aislados y 30 cotejados**.
+
+**LA IDEMPOTENCIA NO SE AFIRMA: SE PROBO RE CORRIENDOLO, CON LA SEDE MEDIDA EN
+BYTES ANTES Y DESPUES.** `docs/PENDIENTES.md` paso de **1020758 a 1029096 bytes**
+al escribir la entrada (8337 bytes, 149 lineas por `count(NL)` y 150 por
+`split`), y **el re corrido dejo la sede en 1029096, exactamente igual**, con la
+salida `docs/loop/SALIDA_V193_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (11720 bytes)
+diciendo que el acta 193 ya aparece en **2 linea(s)**. Serie despues de escribir:
+**47 entradas, 0 colisiones, 0 huecos, siguiente libre `R.56`**.
+
+**Y CON SU CASO POSITIVO POR MUTACION**, en
+`docs/loop/SALIDA_V193_T1A_MUTACION_REGISTRADOR.txt` (2262 bytes, **VEREDICTO:
+VERDE**), corrido sobre texto FABRICADO y con el valor esperado sacado de como se
+fabrico y no de una constante igual a la obtenida. **Las tres mutaciones CAEN:**
+la marca vieja da **2/0** y la nueva **1/1** sobre la misma seccion fabricada;
+juntar asignadas y citadas da **5** donde separadas dan **1 y 4**; y un titulo
+mudo sale `SIN DECIR`, que es lo que hace PARAR al registrador. **La marca nueva
+`MIA` tampoco rompe la forma en plural**, y ese caso corre.
+
+**LA DEUDA DE LA SERIE, REMEDIDA AQUI Y NO HEREDADA: 8 actas sin entrada propia
+(173 a 180)**, que **CALZA** con lo que el encargo dice y **se registra sin
+arreglarse**, que es donde el encargo la deja.
+
 <!-- FIN ANEXO DE TAREAS -->

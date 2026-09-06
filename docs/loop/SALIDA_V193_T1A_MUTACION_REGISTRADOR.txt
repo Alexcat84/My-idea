@@ -1,0 +1,39 @@
+==============================================================================
+VUELTA 193, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR
+==============================================================================
+
+A) LAS DOS MARCAS DE ESTADO NUEVAS MUERDEN, Y LAS VIEJAS MANDAN PRIMERO
+   un titulo con NO LO CAMBIAN sale contestado                    VERDE
+   un titulo con ADJUDICADO: SE CONGELAN sale bloqueante          VERDE
+   LA MUTACION 1: si una marca VIEJA muerde, tiene que mandar ella aunque
+   el titulo traiga ademas una nueva
+   EN CONTRA gana a NO LO CAMBIAN en el mismo titulo              VERDE
+   LA MUTACION 2: un titulo que no diga ninguna sale SIN DECIR, que es lo
+   que hace PARAR al registrador. Si saliera cualquier otra cosa, un estado
+   ilegible pasaria por bueno
+   un titulo mudo sale SIN DECIR                                  VERDE
+
+B) EL LEAD DEL AUDITOR EN SINGULAR, SOBRE UNA SECCION 6 FABRICADA
+   (el texto se fabrica aqui con UNA caida de cada lado, asi que el valor
+    esperado sale de la construccion y no de la medicion)
+   CON LA MARCA VIEJA el auditor sale con cero                    VERDE
+   y sus dos claves caen del lado del ejecutor                    VERDE
+   CON LA MARCA NUEVA el reparto sale 1 y 1                       VERDE
+   LA MUTACION: si la marca nueva no cambiara el reparto, no estaria
+   arreglando nada
+      LA MUTACION CAE: 2/0 con la vieja contra 1/1 con la nueva.
+   Y LA MUTACION AL REVES: la marca nueva NO puede romper la forma en
+   PLURAL, que es la que usan las actas anteriores
+   con MIAS en plural la marca nueva sigue repartiendo bien       VERDE
+
+C) LAS ASIGNADAS Y LAS CITADAS, SOBRE UNA SECCION 6 FABRICADA CON LAS DOS
+   la asignada es UNA y su clave es la 1                          VERDE
+   la citada expande su rango a CUATRO                            VERDE
+   LA MUTACION: si las dos se contaran juntas saldrian 5 claves, que es la
+   cifra que no corresponde a ninguna fila de la tabla del acta 193
+      LA MUTACION CAE: juntas dan 5, separadas dan 1 y 4.
+   LA MUTACION 2: una seccion SIN parrafo de cita tiene que dar CERO
+   citadas, o el reparto estaria inventando una
+   sin parrafo de cita, citadas es cero                           VERDE
+
+VEREDICTO: VERDE
