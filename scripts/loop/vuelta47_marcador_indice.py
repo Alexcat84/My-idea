@@ -147,8 +147,8 @@ def main():
         m = re.match(r"^\|\s*\**([^|*~]+?)\**\s*\|\s*\**(\d+)\**\s*\|", linea)
         if m:
             publicado[m.group(1).strip()] = int(m.group(2))
-    print("  bloque leido: %d lineas, acotado al marcador VIGENTE" %
-          len(bloque.split("\n")))
+    print("  bloque leido: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL)), acotado al marcador VIGENTE"
+          % (bloque.count("\n"), len(bloque.split("\n"))))
     medido = {"operaciones": len(ops)}
     for clave, nombre in FASES:
         medido[nombre] = sum(1 for o in ops if o["fase"] == clave)

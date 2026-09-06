@@ -1,0 +1,57 @@
+==============================================================================
+VUELTA 191, TAREA 3: EL ARREGLO DE LAS DOS CONVENCIONES DE `lineas`
+==============================================================================
+
+A) LA MEDICION VA PRIMERO, Y LA LISTA SALE DE ELLA Y NO DE MI
+   CIFRA ficheros .py censados: 1327
+   CIFRA en ROJO ANTES de tocar nada: 0
+   CIFRA ficheros que este arreglo nombra: 12
+   EN ROJO Y NO NOMBRADOS AQUI: 0 (ninguno)
+   NOMBRADOS AQUI Y NO EN ROJO: 12 (_v145_cuerpo_reporte.py, _v63_construir_fundidor.py, vuelta162_tarea6_escribir_reporte.py, vuelta164_tarea7_escribir_reporte.py, vuelta165_tarea7_escribir_reporte.py, vuelta166_tarea3b_motivo.py, vuelta166_tarea4b_correccion_declarada.py, vuelta166_tarea5b_frontera_ld07.py, vuelta168_tarea1_adosar_nota_r36.py, vuelta182_tarea1b_remedio_e1.py, vuelta47_marcador_indice.py, vuelta65_caso_positivo_generador.py)
+   DE ESOS, YA ARREGLADOS (llevan la frase de la pareja): 12 (_v145_cuerpo_reporte.py, _v63_construir_fundidor.py, vuelta162_tarea6_escribir_reporte.py, vuelta164_tarea7_escribir_reporte.py, vuelta165_tarea7_escribir_reporte.py, vuelta166_tarea3b_motivo.py, vuelta166_tarea4b_correccion_declarada.py, vuelta166_tarea5b_frontera_ld07.py, vuelta168_tarea1_adosar_nota_r36.py, vuelta182_tarea1b_remedio_e1.py, vuelta47_marcador_indice.py, vuelta65_caso_positivo_generador.py)
+   DE ESOS, DESCUADRADOS DE VERDAD: 0 (ninguno)
+
+B) LA NOMINA DE LA BATERIA, LEIDA DEL INSTRUMENTO, PARA NO PISAR UNA
+   SALIDA SELLADA QUE SE COMPARA BYTE A BYTE
+   CIFRA entradas de la nomina: 127
+   CIFRA de los que este arreglo nombra que estan en la nomina: 0 (ninguno)
+
+C) LOS CAMBIOS, UNO A UNO, CON SU CUENTA DE APARICIONES
+   _v145_cuerpo_reporte.py                        YA ARREGLADO: lleva la frase de la pareja, no se toca
+   _v63_construir_fundidor.py                     YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta162_tarea6_escribir_reporte.py           YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta164_tarea7_escribir_reporte.py           YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta165_tarea7_escribir_reporte.py           YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta166_tarea3b_motivo.py                    YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta166_tarea4b_correccion_declarada.py      YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta166_tarea5b_frontera_ld07.py             YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta168_tarea1_adosar_nota_r36.py            YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta182_tarea1b_remedio_e1.py                YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta47_marcador_indice.py                    YA ARREGLADO: lleva la frase de la pareja, no se toca
+   vuelta65_caso_positivo_generador.py            YA ARREGLADO: lleva la frase de la pareja, no se toca
+   CIFRA ficheros tocados: 0 | CIFRA sitios reemplazados: 0
+
+D) LA COMPROBACION, RECORRIENDO EL CENSO DESPUES
+   CIFRA en ROJO DESPUES: 0
+
+E) Y CADA FICHERO TOCADO SIGUE COMPILANDO, QUE NO SE DA POR SUPUESTO
+   (se compila EN MEMORIA con `compile(...)` y no con `py_compile`: en
+    Windows `os.devnull` es `nul`, que no es un fichero regular, y
+    `py_compile` cae con FileExistsError sobre codigo perfectamente sano.
+    Es una CORRECCION DECLARADA de este mismo instrumento: su primera
+    corrida saco los doce en NO COMPILA y ninguno estaba roto)
+   _v145_cuerpo_reporte.py                        compila
+   _v63_construir_fundidor.py                     compila
+   vuelta162_tarea6_escribir_reporte.py           compila
+   vuelta164_tarea7_escribir_reporte.py           compila
+   vuelta165_tarea7_escribir_reporte.py           compila
+   vuelta166_tarea3b_motivo.py                    compila
+   vuelta166_tarea4b_correccion_declarada.py      compila
+   vuelta166_tarea5b_frontera_ld07.py             compila
+   vuelta168_tarea1_adosar_nota_r36.py            compila
+   vuelta182_tarea1b_remedio_e1.py                compila
+   vuelta47_marcador_indice.py                    compila
+   vuelta65_caso_positivo_generador.py            compila
+   CIFRA que no compilan: 0
+
+VEREDICTO: VERDE

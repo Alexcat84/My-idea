@@ -80,8 +80,9 @@ def main():
     with io.open(REPORTE, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(final)
     print("D) ESCRITO")
-    print("   docs/loop/REPORTE.md, %d lineas, %d bytes"
-          % (len(final.split("\n")), len(final.encode("utf-8"))))
+    print("   docs/loop/REPORTE.md, %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL)), %d bytes"
+          % (final.count("\n"), len(final.split("\n")),
+             len(final.encode("utf-8"))))
     print("")
 
     print("E) LA COMPROBACION, QUE NO SE FIA DE LO QUE ACABA DE ESCRIBIR")

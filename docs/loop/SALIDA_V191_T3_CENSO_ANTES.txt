@@ -1,0 +1,63 @@
+==============================================================================
+CENSO DE LAS DOS CONVENCIONES DE `lineas`, ANTES DEL ARREGLO
+==============================================================================
+
+EL SUJETO: `scripts/loop/*.py` del commit 57bb5b2b
+   asunto: VUELTA 191, TAREA 2 CERRADA Y ANEXADA: EL AL DOBLE DEL 3182 RELEIDO, 23 COINCIDEN Y 7 DISCREPAN, Y LA UNICA QUE CAE FUER
+   sacados con `git show` a un directorio temporal y LEIDOS,
+   nunca corridos.
+EL INSTRUMENTO: el detector de HOY, el mismo que corre sobre el
+   arbol de trabajo. Dos estados del sujeto, UNA sola vara.
+CIFRA ficheros .py sacados de git: 1325
+
+LA VARA, LA MISMA EN LOS DOS CENSOS:
+   `len(texto.split(NL))` cuenta TROZOS y da UNO DE MAS. NO calza con wc -l.
+   `texto.count(NL)` cuenta SALTOS y SI calza con wc -l.
+   `len(texto.splitlines())` calza cuando el texto termina en salto.
+   `len(texto.split(NL)) - 1` es la SPLIT ya corregida y SI calza.
+   ROJO es una cosa sola: contar por SPLIT y por ninguna de las que calzan.
+
+A) EL REPARTO
+   CIFRA ficheros .py censados: 1325
+   ROJO: cuenta lineas SOLO por la convencion que no calza con wc -l 12
+   VERDE: publica la pareja                                         38
+   VERDE: cuenta solo por una convencion que calza con wc -l        141
+   NO APLICA: no cuenta lineas de ninguna de las tres formas        1134
+
+B) LOS FICHEROS EN ROJO, NOMBRADOS UNO A UNO CON SUS SITIOS
+   _v145_cuerpo_reporte.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 539   print("escrito docs/loop/REPORTE.md, %d lineas" % len(texto.split("\n")))
+   _v63_construir_fundidor.py -> 2 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 97    print("  lineas del ancestro: %d" % len(fuente.split(NL)))
+      LINEA 153   print("ESCRITO: %s (%d lineas)" % (os.path.relpath(DESTINO, RAIZ), len(salida.split(NL))))
+   vuelta162_tarea6_escribir_reporte.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 454   n = len(texto.split("\n"))
+   vuelta164_tarea7_escribir_reporte.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 600   print("REPORTE.md escrito: %d lineas" % len(texto.split("\n")))
+   vuelta165_tarea7_escribir_reporte.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 84    % (len(final.split("\n")), len(final.encode("utf-8"))))
+   vuelta166_tarea3b_motivo.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 151   % (len(lineas), len(t2.split("\n"))))
+   vuelta166_tarea4b_correccion_declarada.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 216   % (len(lineas), len(t2.split("\n"))))
+   vuelta166_tarea5b_frontera_ld07.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 165   % (len(lineas), len(t2.split("\n"))))
+   vuelta168_tarea1_adosar_nota_r36.py -> 2 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 245   print("   CIFRA lineas del fichero DESPUES: %d" % len(relee.split("\n")))
+      LINEA 246   print("   CIFRA lineas anadidas: %d" % (len(relee.split("\n")) - largo_antes))
+   vuelta182_tarea1b_remedio_e1.py -> 2 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 209   % (len(t.split(NL)), os.path.getsize(CER), len(t.encode("utf-8"))))
+      LINEA 233   % (len(nuevo.split(NL)), len(nuevo.encode("utf-8"))))
+   vuelta47_marcador_indice.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 151   len(bloque.split("\n")))
+   vuelta65_caso_positivo_generador.py -> 1 sitio(s) SPLIT sin corregir, 0 que calcen
+      LINEA 194   print("     %-10s exit %d | %d lineas" % (etq, cod, len(s.split(NL))))
+   CIFRA ficheros en ROJO: 12
+
+C) LOS SITIOS, QUE ES EL TAMANO DEL ASUNTO
+   CIFRA sitios split            68
+   CIFRA sitios count            266
+   CIFRA sitios splitlines       34
+   CIFRA sitios split_corregido  1
+
+VEREDICTO: ROJO, 12 fichero(s)

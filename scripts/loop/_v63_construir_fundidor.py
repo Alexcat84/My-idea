@@ -94,7 +94,8 @@ def main():
     print("  ancestro: %s" % os.path.relpath(ANCESTRO, RAIZ))
     print("  sha1 del ancestro medido hoy: %s"
           % hashlib.sha1(fuente.encode("utf-8")).hexdigest()[:12])
-    print("  lineas del ancestro: %d" % len(fuente.split(NL)))
+    print("  lineas del ancestro: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+          % (fuente.count(NL), len(fuente.split(NL))))
     print("=" * 78)
     print()
 
@@ -150,7 +151,9 @@ def main():
         return 0
     ya = io.open(DESTINO, encoding="utf-8").read() if os.path.exists(DESTINO) else None
     io.open(DESTINO, "w", encoding="utf-8", newline=NL).write(salida)
-    print("ESCRITO: %s (%d lineas)" % (os.path.relpath(DESTINO, RAIZ), len(salida.split(NL))))
+    print("ESCRITO: %s (%d lineas por count(NL), que calza con wc -l, y %d por len(split(NL)))"
+          % (os.path.relpath(DESTINO, RAIZ), salida.count(NL),
+             len(salida.split(NL))))
     if ya is not None:
         print("IDEMPOTENCIA: el fichero ya existia y sale %s"
               % ("IDENTICO" if ya == salida else "DISTINTO"))

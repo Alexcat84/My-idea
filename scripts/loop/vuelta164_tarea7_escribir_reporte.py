@@ -597,7 +597,8 @@ def main():
     texto = CUERPO % {"CABECERA": cab}
     with io.open(REPORTE, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(texto)
-    print("REPORTE.md escrito: %d lineas" % len(texto.split("\n")))
+    print("REPORTE.md escrito: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+          % (texto.count("\n"), len(texto.split("\n"))))
     print("cabecera pegada desde docs/loop/SALIDA_V164_T7_CABECERA.txt: %d lineas"
           % len(cab.rstrip().split("\n")))
     return 0

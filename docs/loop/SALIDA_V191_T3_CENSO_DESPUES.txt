@@ -1,0 +1,32 @@
+==============================================================================
+CENSO DE LAS DOS CONVENCIONES DE `lineas`, DESPUES DEL ARREGLO
+==============================================================================
+
+EL SUJETO: `scripts/loop/*.py` del ARBOL DE TRABAJO de hoy.
+EL INSTRUMENTO: el mismo detector que el censo de ANTES.
+
+LA VARA, LA MISMA EN LOS DOS CENSOS:
+   `len(texto.split(NL))` cuenta TROZOS y da UNO DE MAS. NO calza con wc -l.
+   `texto.count(NL)` cuenta SALTOS y SI calza con wc -l.
+   `len(texto.splitlines())` calza cuando el texto termina en salto.
+   `len(texto.split(NL)) - 1` es la SPLIT ya corregida y SI calza.
+   ROJO es una cosa sola: contar por SPLIT y por ninguna de las que calzan.
+
+A) EL REPARTO
+   CIFRA ficheros .py censados: 1329
+   ROJO: cuenta lineas SOLO por la convencion que no calza con wc -l 0
+   VERDE: publica la pareja                                         54
+   VERDE: cuenta solo por una convencion que calza con wc -l        141
+   NO APLICA: no cuenta lineas de ninguna de las tres formas        1134
+
+B) LOS FICHEROS EN ROJO, NOMBRADOS UNO A UNO CON SUS SITIOS
+   (ninguno)
+   CIFRA ficheros en ROJO: 0
+
+C) LOS SITIOS, QUE ES EL TAMANO DEL ASUNTO
+   CIFRA sitios split            85
+   CIFRA sitios count            292
+   CIFRA sitios splitlines       37
+   CIFRA sitios split_corregido  6
+
+VEREDICTO: VERDE, ninguno en rojo

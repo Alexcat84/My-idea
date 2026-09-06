@@ -191,7 +191,8 @@ def mitad2():
     sal = {}
     for etq, script in (("ANCESTRO", DOS_ANC), ("CORREGIDO", DOS)):
         cod, s = correr([script, "--tramo", TRAMO_MENTIRA])
-        print("     %-10s exit %d | %d lineas" % (etq, cod, len(s.split(NL))))
+        print("     %-10s exit %d | %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+              % (etq, cod, s.count(NL), len(s.split(NL))))
         sal[etq] = [l.rstrip() for l in s.split(NL)]
         if cod != 0:
             fallos.append("%s: el dossier salio con exit %d" % (etq, cod))

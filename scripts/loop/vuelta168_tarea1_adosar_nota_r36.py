@@ -242,8 +242,10 @@ def main():
         print("   PARADA: se perdio texto viejo. Esto no puede pasar.")
         return 1
     print("   la marca de la nota esta: %s" % ("SI" if MARCA in relee else "NO"))
-    print("   CIFRA lineas del fichero DESPUES: %d" % len(relee.split("\n")))
-    print("   CIFRA lineas anadidas: %d" % (len(relee.split("\n")) - largo_antes))
+    print("   CIFRA lineas del fichero DESPUES: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+          % (relee.count("\n"), len(relee.split("\n"))))
+    print("   CIFRA lineas anadidas: %d (la resta cancela el uno de mas de\n   len(split(NL)), porque largo_antes se conto igual)"
+          % (len(relee.split("\n")) - largo_antes))
     print("   CIFRA lineas borradas: 0 (la escritura es una INSERCION)")
     print("   CIFRA notas escritas: 1")
     print("")

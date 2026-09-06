@@ -212,8 +212,8 @@ def main(aplicar):
         fh.write(nuevo)
     print("F) ESCRITO")
     t2 = io.open(SEDE, encoding="utf-8").read()
-    print("   CIFRA lineas antes: %d | despues: %d"
-          % (len(lineas), len(t2.split("\n"))))
+    print("   CIFRA lineas antes: %d por len(split(NL)) | despues: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+          % (len(lineas), t2.count("\n"), len(t2.split("\n"))))
     print("   el bloque esta: %s" % (MARCA in t2))
     print("   la linea de R.34 sigue entera: %s" % (lineas[n_aguja - 1] in t2))
     print("   FIN")

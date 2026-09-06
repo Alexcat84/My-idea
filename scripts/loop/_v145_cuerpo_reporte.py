@@ -536,4 +536,5 @@ a("")
 
 texto = "\n".join(P) + "\n"
 io.open(os.path.join(LOOP, "REPORTE.md"), "w", encoding="utf-8", newline="\n").write(texto)
-print("escrito docs/loop/REPORTE.md, %d lineas" % len(texto.split("\n")))
+print("escrito docs/loop/REPORTE.md, %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+      % (texto.count("\n"), len(texto.split("\n"))))

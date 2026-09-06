@@ -91,7 +91,7 @@ vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 191 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, con sus NUEVE adjudicaciones `4.1` a `4.9`, QUE ESTA VEZ SI SON NUEVE A FAVOR: seis son los discutibles del ejecutor (`D.1` a `D.6`) y los seis van A FAVOR, y las tres restantes (`4.7`, `4.8`, `4.9`) son las tres preguntas contestadas. EL CERO DE `EN CONTRA` TIENE QUE SALIR SIN QUE LA MAQUINA SE ROMPA POR NO ENCONTRAR NINGUNA, y se prueba por mutacion con un acta fabricada que SI lleve una. Mas los TRES hallazgos de la seccion 5 que no salen de ningun discutible (la marca `DISCUTIBLE MARCADO` contra la dificultad medida en `5.1`, la etiqueta del veredicto duplicada en `5.2`, y `git checkout --` que no restaura byte a byte en `5.3`), UNA caida propia del auditor de metodo ESCRITA COMO UNA Y NO OMITIDA, CERO caidas del ejecutor que acumulen con las TRES de metodo que el reporte de la 190 declara, y LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos con su nota de SOLAPE TOTAL a proposito. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido, no escribe nada, y se prueba re corriendolo con la sede medida en bytes antes y despues | **CERRADA EN VERDE** | `SALIDA_V191_T1A_REGISTRO_R53.txt`, `SALIDA_V191_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V191_T1A_SIMULACION.txt` |
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DEL 3182. BLOQUEANTE. Es la deuda de credito que la TAREA 4 de la 190 dejo medida y que no se auto encargo, adjudicada A FAVOR en la `4.5` del acta 191 y encargada ahi mismo: quien encarga el doble es el auditor. EL TRAMO es la tanda de 30 puestos de `docs/loop/SALIDA_V190_T4_CIEGA.txt`, donde la discrepancia del `3182` cayo FUERA de los dudosos marcados. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **CERRADA, CON UNA DISCREPANCIA FUERA DEL MARCADO TRAIDA ENTERA** | `SALIDA_V191_T2_AISLAMIENTO.txt`, `SALIDA_V191_T2_CIEGA.txt`, `SALIDA_V191_T2_MIS_CLASES.txt`, `SALIDA_V191_T2_DESTAPE.txt`, `SALIDA_V191_T2_COTEJO.txt` |
-| **TAREA 3** | LAS DOS CONVENCIONES DE `lineas`, QUE LLEVAN DOS VUELTAS ESPERANDO. Es la `5.1` del acta 190 y no se ha tocado. Hay instrumentos de la cadena que cuentan lineas con `len(texto.split(NL))`, que suma un elemento vacio final que no es una linea, y otros que cuentan con `texto.count(NL)`, que si calza con `wc -l`. ES UNA MEDICION ANTES QUE UN ARREGLO: (a) MIDE PRIMERO cuantos ficheros de `scripts/loop/` cuentan lineas por cada una de las dos convenciones, nombralos y publica la cifra, porque sin esa cifra el arreglo no se sabe de que tamano es; (b) DESPUES ARREGLA con la vara de las dos convenciones de BYTES que esta casa ya construyo: o se publica la pareja, o se publica la que calza con `wc -l` diciendo cual es; (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un instrumento vuelve a publicar una sola cifra de lineas por la convencion que no calza. NO SE TOCAN LOS NUMEROS YA PUBLICADOS EN REPORTES CERRADOS | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LAS DOS CONVENCIONES DE `lineas`, QUE LLEVAN DOS VUELTAS ESPERANDO. Es la `5.1` del acta 190 y no se ha tocado. Hay instrumentos de la cadena que cuentan lineas con `len(texto.split(NL))`, que suma un elemento vacio final que no es una linea, y otros que cuentan con `texto.count(NL)`, que si calza con `wc -l`. ES UNA MEDICION ANTES QUE UN ARREGLO: (a) MIDE PRIMERO cuantos ficheros de `scripts/loop/` cuentan lineas por cada una de las dos convenciones, nombralos y publica la cifra, porque sin esa cifra el arreglo no se sabe de que tamano es; (b) DESPUES ARREGLA con la vara de las dos convenciones de BYTES que esta casa ya construyo: o se publica la pareja, o se publica la que calza con `wc -l` diciendo cual es; (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un instrumento vuelve a publicar una sola cifra de lineas por la convencion que no calza. NO SE TOCAN LOS NUMEROS YA PUBLICADOS EN REPORTES CERRADOS | **CERRADA EN VERDE** | `SALIDA_V191_T3_CENSO_ANTES.txt`, `SALIDA_V191_T3_CENSO_DESPUES.txt`, `SALIDA_V191_T3_ARREGLO.txt`, `SALIDA_V191_T3_MUTACION_LINEAS.txt` |
 | **TAREA 4** | LA GUARDA DEL VEREDICTO DUPLICADO EN `cerrar_reporte.py`. Es el hallazgo `5.2` del acta 191. La linea 50 del reporte de la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS...`, y la causa esta medida: `cerrar_reporte.py` en su linea 1817 compone la etiqueta y su propia salida prueba que el veredicto que se le paso YA la traia. (a) QUE `cerrar_reporte.py` CAIGA EN ROJO si el `--veredicto` que recibe ya trae la etiqueta o los asteriscos, en vez de pegarla dos veces, y que diga QUE RECIBIO y QUE ESPERABA: fallar ruidoso, sin limpiarla en silencio, porque limpiar en silencio es la otra mitad de la misma enfermedad. (b) CASO POSITIVO POR MUTACION que CAIGA si la guarda se quita. (c) EL REPORTE DE LA 190 NO SE REESCRIBE: esta cerrado y archivado byte a byte, y su etiqueta doble se queda donde esta con la explicacion al lado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 5** | LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD MEDIDA. SOLO MEDIR, Y NO TOCA NI UNA RAZON DEL ARCHIVO. Es el hallazgo `5.1` del acta 191: sobre su tanda de treinta, dos lectores independientes discrepan del archivo en los MISMOS OCHO puestos, `DISCUTIBLE MARCADO` aparece en 427 de las 3.388 filas y en CERO de esos ocho. TREINTA CASOS NO SON UNA LEY, y por eso esto es una medicion. (a) DI PRIMERO CUAL ES TU UNIVERSO Y COMO LO CONSTRUYES antes de contar nada: que ficheros de cotejo de ciega existen, de que vueltas, y cuales quedan fuera por no ser legibles con una regla unica, con la cifra de los que entran y de los que no y con sus nombres, porque un universo elegido despues de ver el resultado no sirve. (b) CUENTA sobre ese universo cuantos puestos han tumbado alguna vez a un lector, cuantos de esos llevan la marca, y cual es la tasa de la marca en el archivo entero: las tres cifras juntas o ninguna. (c) NO SAQUES LA CONCLUSION SI LA CUENTA NO LA SOSTIENE: si el universo sale pequeno, dilo y publica el tamano. (d) NO SE ESCRIBE NI UNA FILA DEL ARCHIVO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -298,5 +298,108 @@ vuelta. Una tabla que solo existe en su salida no se puede volver a correr, y
 `EJECUTOR.md` 1 dice que **la tabla se imprime, no se teclea**. El de esta vuelta
 es `scripts/loop/vuelta191_tarea2b_cotejo.py`, y **lee mis clases y el destape de
 sus ficheros y cuenta**, sin decidir ninguna clase.
+
+### TAREA 3. LAS DOS CONVENCIONES DE `lineas`. CERRADA EN VERDE, MIDIENDO PRIMERO.
+
+**LA MEDICION VA PRIMERO Y EL ARREGLO DESPUES**, que es lo que el encargo pide y
+la misma disciplina que la `P.2` del acta 190. El instrumento nuevo y estable es
+`scripts/loop/dos_convenciones_de_lineas.py`, sin numero de vuelta porque lo va a
+llamar cualquiera.
+
+**LA VARA, ESCRITA ANTES DE CONTAR NADA.** `len(texto.split(NL))` cuenta TROZOS y
+deja un trozo final vacio que **no es una linea**: da uno de mas y **no calza con
+`wc -l`**. `texto.count(NL)` cuenta SALTOS y **si calza**. `len(splitlines())`
+calza cuando el texto termina en salto. **ROJO es una cosa sola y comprobable:
+contar por SPLIT y por ninguna de las que calzan.**
+
+**(a) LA MEDICION. LAS DOS CIFRAS SALEN DE FICHEROS SELLADOS Y NINGUNA SE TECLEA:**
+`docs/loop/SALIDA_V191_T3_CENSO_ANTES.txt` y
+`docs/loop/SALIDA_V191_T3_CENSO_DESPUES.txt`. **El de ANTES no se puede pedir al
+arbol una vez arreglado**, asi que `scripts/loop/vuelta191_tarea3_censo.py` saca
+los `scripts/loop/*.py` de `HEAD` con `git show` a un directorio temporal y corre
+sobre ellos **el detector de HOY**: dos estados del sujeto, **una sola vara**.
+
+| | ANTES (1325 ficheros de `HEAD`) | DESPUES (1329 del arbol) |
+|---|---:|---:|
+| **ROJO**, cuentan SOLO por la que no calza | **12** | **0** |
+| VERDE, publican la pareja | 38 | 54 |
+| VERDE, solo por una que calza | 141 | 141 |
+| sitios `split` | 68 | 85 |
+| sitios `count` | 266 | 292 |
+| sitios `splitlines` | 34 | 37 |
+| sitios `split` ya corregidos con `- 1` | 1 | 6 |
+
+**LOS DOCE EN ROJO, NOMBRADOS**, del bloque `B` del censo de ANTES:
+`_v145_cuerpo_reporte.py`, `_v63_construir_fundidor.py` (2 sitios),
+`vuelta162_tarea6_escribir_reporte.py`, `vuelta164_tarea7_escribir_reporte.py`,
+`vuelta165_tarea7_escribir_reporte.py`, `vuelta166_tarea3b_motivo.py`,
+`vuelta166_tarea4b_correccion_declarada.py`, `vuelta166_tarea5b_frontera_ld07.py`,
+`vuelta168_tarea1_adosar_nota_r36.py` (2), `vuelta182_tarea1b_remedio_e1.py` (2),
+`vuelta47_marcador_indice.py` y `vuelta65_caso_positivo_generador.py`.
+**Ninguno es un instrumento de nombre estable de la cadena viva**: `cerrar_reporte.py`,
+`archivar_reporte.py` y `anexar_tarea_al_reporte.py` ya contaban por la que calza,
+medido uno a uno.
+
+**Y AQUI VA UNA CORRECCION DECLARADA SIN BORRAR LO QUE CORRIGE.** La PRIMERA
+version del detector saco **13** en rojo, no 12. Al mirarlos uno a uno, el
+decimotercero era un **falso positivo**:
+`vuelta183_tarea1b_mutacion_atribucion.py` escribe `len(mutado.split(NL)) - 1`,
+que es **exactamente** `count(NL)`. Y no era inocuo: **ese fichero esta en la
+nomina de la bateria** (comprobado contra `verificar_mutaciones_viejas.VIEJAS`,
+127 entradas), o sea que "arreglarlo" habria movido una salida sellada que la
+bateria de la 194 compara byte a byte. **El detector aprendio la cuarta
+categoria**, `split_corregido`, que cuenta como que CALZA, y un sitio corregido
+**no se cuenta ademas como sitio SPLIT**: acusar al que ya se corrigio es la misma
+especie de cifra falsa que este detector caza.
+
+**(b) EL ARREGLO.** `scripts/loop/vuelta191_tarea3_arreglar_lineas.py`, salida
+`docs/loop/SALIDA_V191_T3_ARREGLO.txt`. **La lista no la escribi yo: sale del
+censo**, y el instrumento CAE EN ROJO si su lista no calza con la del censo. **12
+ficheros tocados, 15 sitios reemplazados**, cada uno con su `(viejo, nuevo)`
+literal y **exigiendo que el viejo aparezca EXACTAMENTE UNA VEZ**: un reemplazo
+que no sabe donde cae no se hace. Los 15 quedan publicando **la pareja, con
+`wc -l` nombrado dentro de la propia frase**. Antes de tocar nada comprueba la
+nomina de la bateria: **0 de los 12 estan en ella**. Y **los 12 siguen
+compilando**, comprobado en memoria.
+
+**NO SE TOCA NINGUN NUMERO YA PUBLICADO EN UN REPORTE CERRADO.** Lo que cambia es
+lo que esos instrumentos IMPRIMIRIAN si se volvieran a correr. **El "2231 lineas"
+del reporte de la 190 se queda donde esta**, y esta es la explicacion al lado:
+`docs/plan/LECTURAS_DIRIGIDAS.md` da **2230 por `count(NL)`** y **2231 por
+`len(split(NL))`**, y **`wc -l` corrido hoy dice `2230`**. La cifra no era
+inventada: la imprimia su instrumento.
+
+**DOS CORRECCIONES MAS DEL PROPIO ARREGLO, DECLARADAS IGUAL.** (i) Su
+comprobacion de compilado usaba `py_compile` con `cfile=os.devnull`, y en Windows
+`nul` no es un fichero regular: **los 12 salieron NO COMPILA y ninguno estaba
+roto**. Se compila en memoria. (ii) Re corrido, el instrumento **se acusaba a si
+mismo**: despues de arreglar los doce el censo ya no los saca y la lista dejaba de
+calzar. **Un arreglo que se declara roto por haber funcionado no sirve de
+guarda**: ahora un fichero nombrado que YA lleva la frase de la pareja sale
+`YA ARREGLADO`. **Re corrido hoy: 0 tocados, 0 sitios, VEREDICTO VERDE.**
+
+**(c) EL CASO POSITIVO POR MUTACION: VERDE, 0 casos que caen y 0 mutaciones que no
+cayeron** (`docs/loop/SALIDA_V191_T3_MUTACION_LINEAS.txt`, 5836 bytes). **Ninguna
+variable de veredicto es una constante literal**: todas salen de correr la guarda
+sobre un texto fabricado. Los seis bloques:
+
+- **el fuente que publica SOLO por SPLIT sale ROJO**, y pedirle VERDE **CAE**. Es
+  literalmente lo que el encargo manda cazar.
+- **`NO APLICA` no es VERDE**: un fichero que no cuenta lineas no ha aprobado
+  nada, y confundirlos dejaria pasar cualquier cosa.
+- **la SPLIT corregida con `- 1` no se acusa**, con sus 0 sitios SPLIT y 1
+  corregido.
+- **la pareja sobre textos de largo conocido**: `(3, 4)` si el texto termina en
+  salto y `(2, 3)` si no. Si las dos convenciones dieran lo mismo no habria nada
+  que arreglar, y la mutacion lo comprueba.
+- **el censo sobre un directorio fabricado**: 0 rojos, se mete el defecto, **1
+  rojo y lo nombra**.
+- **el ejemplar del acta 190 cotejado contra `wc -l` DE VERDAD**, corrido como
+  proceso: `count` da 2230 y `wc -l` da 2230, **CALZA**; `split` da 2231, **no
+  calza**.
+
+**Y LA GUARDA SE APLICA A QUIEN LA ESCRIBIO**, que es el bloque `E` del arnes:
+los **ocho** instrumentos de esta vuelta salen **0 en ROJO**. Una guarda que no se
+aplica a su autor no es una guarda.
 
 <!-- FIN ANEXO DE TAREAS -->

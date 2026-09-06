@@ -452,7 +452,8 @@ def main():
     texto = CUERPO.replace("__TABLA__", tabla)
     io.open(REPORTE, "w", encoding="utf-8", newline="\n").write(texto)
     n = len(texto.split("\n"))
-    print("   CIFRA lineas del reporte escrito: %d" % n)
+    print("   CIFRA lineas del reporte escrito: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
+          % (texto.count("\n"), n))
     largos = [c for c in texto if c in u"—–"]
     print("   CIFRA guiones largos o medios: %d" % len(largos))
     if largos:

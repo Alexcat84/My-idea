@@ -205,8 +205,9 @@ def main():
     w("VUELTA 182, TAREA 1.b: EL REMEDIO DEL E.1 DEL ACTA 180")
     w("sujeto: scripts/loop/cerrar_reporte.py")
     t = io.open(CER, encoding="utf-8").read().replace(chr(13) + NL, NL)
-    w("   ANTES: %d lineas | disco %d bytes | LF %d bytes"
-      % (len(t.split(NL)), os.path.getsize(CER), len(t.encode("utf-8"))))
+    w("   ANTES: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL)) | disco %d bytes | LF %d bytes"
+      % (t.count(NL), len(t.split(NL)), os.path.getsize(CER),
+         len(t.encode("utf-8"))))
     w("")
 
     w("EL ESTADO DE ANTES, MEDIDO Y NO RECORDADO:")
@@ -229,8 +230,9 @@ def main():
         print(NL.join(salida))
         return 1
     w("")
-    w("   DESPUES: %d lineas | LF %d bytes"
-      % (len(nuevo.split(NL)), len(nuevo.encode("utf-8"))))
+    w("   DESPUES: %d lineas por count(NL), que calza con wc -l, y %d por len(split(NL)) | LF %d bytes"
+      % (nuevo.count(NL), len(nuevo.split(NL)),
+         len(nuevo.encode("utf-8"))))
     w("   CRECE EN: %d bytes" % (len(nuevo.encode("utf-8")) - len(t.encode("utf-8"))))
     w("")
 
