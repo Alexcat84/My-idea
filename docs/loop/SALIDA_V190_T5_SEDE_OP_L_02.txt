@@ -1,0 +1,265 @@
+==============================================================================
+VUELTA 190, TAREA 5: LA BUSQUEDA DE LA SEDE DE OP-L-02
+==============================================================================
+
+EL LIMITE, ESCRITO DELANTE Y NO AL FINAL: si la busqueda no encuentra sede
+en ninguna parte, ESO ES EL RESULTADO Y SE PUBLICA COMO TAL. No se le
+inventa una sede a la ficha, no se la declara HECHA y no se la mueve de
+estado. Inventarle una sede es cambiar el alcance de la campana, y eso lo
+reserva el fundador.
+
+A) LA FICHA, LEIDA DE SU SEDE Y NO DE UN RECUERDO
+   docs/plan/OPERACIONES.jsonl -> disco 498085 bytes | LF 498085 bytes | 71 lineas
+   CIFRA fichas: 71
+   LA CLAVE DEL ID EN ESTE FICHERO ES `id_op` Y NO `id`, medido y no
+   supuesto: el bloque H.7 del sello de apertura de esta vuelta busco por
+   `id` y por `operacion` y dio CERO. Se declara en vez de taparse.
+   OP-L-02 vive en docs/plan/OPERACIONES.jsonl:42
+      fase           09_LECTURAS_DIRIGIDAS
+      tipo           MESA
+      estado         LISTA
+      orden          2
+      fecha_corte    2026-08-11
+      nodos          0 elemento(s): []
+      preservar      0 elemento(s): []
+      eliminar       0 elemento(s): []
+      aristas_nuevas 0 elemento(s): []
+      depende_de     3 elemento(s): ["OP-D-01", "OP-D-02", "OP-D-03"]
+      bloquea_a      0 elemento(s): []
+   CIFRA elementos de `verificacion`: 4
+   CIFRA elementos de `evidencia`: 1
+      evidencia: MEDIDO el 11 ago 2026: 205 pares fuera de cola, 11 leidos, 194 pendientes
+
+B) LO QUE LA FICHA PIDE VERIFICAR, LITERAL Y NUMERADO
+   1) las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+   2) el marcador del cribado no se mueve: sigue en 2.117
+   3) cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+   4) CORRECCION DECLARADA (2026-09-04, vuelta 170, TAREA 3.b; adjudicacion 6.11 del acta 169), POR EL CARRIL DEL BANCO 9.21 MAS 9.10, COMO UN ELEMENTO MAS DE ESTA MISMA LISTA verificacion Y SIN CLAVE NUEVA DE ESQUEMA (la via que OP-L-01 uso en la vuelta 166 para es
+      (...1226 caracteres mas)
+
+C) LAS MENCIONES DE FICHERO EN SU EVIDENCIA, CONTADAS Y NO SUPUESTAS
+   (la vara del acta 190 dice 0 menciones de fichero en su evidencia. AQUI
+    SE VUELVE A CONTAR, sobre el campo `evidencia` y sobre el `nota`)
+   campo `evidencia`: 73 caracteres, 0 mencion(es) de fichero
+   campo `nota`: 5578 caracteres, 13 mencion(es) de fichero
+      AUDITOR.md
+      EJECUTOR.md
+      INVENTARIO.jsonl
+      LD_SALES_ROADMAP.md
+      LECTURAS_DIRIGIDAS.md
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      docs/loop/ACTA_AUDITOR.md
+      docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt
+      docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt
+      docs/loop/SALIDA_V170_T4B_PUENTES.txt
+      docs/plan/LD_SALES_ROADMAP.md
+      docs/plan/OPERACIONES.jsonl
+      scripts/vuelta16_generar_actos.mjs
+   campo `verificacion`: 1682 caracteres, 2 mencion(es) de fichero
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt
+
+D) LAS RUTAS QUE LA PROPIA FICHA NOMBRA, COMPROBADAS UNA A UNA EN DISCO
+   (una ruta publicada como prueba es CIFRA, `EJECUTOR.md` 1: si no existe
+    o mide cero bytes, es caida de cifra)
+   docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt       disco    5559 | LF    5449 |   110 lineas
+   docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt      disco    7945 | LF    7836 |   109 lineas
+   docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt         disco    5337 | LF    5238 |    99 lineas
+   docs/loop/SALIDA_V170_T4B_PUENTES.txt                disco    4564 | LF    4482 |    82 lineas
+   docs/plan/LD_SALES_ROADMAP.md                        disco   20563 | LF   20563 |   350 lineas
+   docs/plan/LECTURAS_DIRIGIDAS.md                      disco  214916 | LF  214916 |  2230 lineas
+   docs/plan/INVENTARIO.jsonl                           disco  584554 | LF  584554 |   672 lineas
+   CIFRA rutas que la ficha nombra: 7
+   CIFRA que existen en disco: 7
+   CIFRA de cero bytes: 0
+
+E) EL UNIVERSO DE LA BUSQUEDA, DICHO ANTES DE BUSCAR
+   carpetas: docs, scripts
+   extensiones: .md, .jsonl, .txt, .json, .py, .mjs
+   se excluyen __pycache__, node_modules y .git
+   CIFRA ficheros del universo: 10901
+
+F) LAS TRES NOMINAS AFECTADAS, BUSCADAS UNA A UNA
+   (los nombres salen del campo `nota` de la propia ficha, con su literal
+    al lado, y no de una lista inventada)
+   ------------------------------------------------------------------------
+   NOMINA: cuadrantes de mercado
+      literal de la ficha: 'cuadrantes de mercado (8)'
+      agujas buscadas: 'cuadrante', 'cuadrantes'
+      CIFRA ficheros que la nombran: 518
+         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                        'cuadrante' x36 (4054129 bytes)
+         docs/loop/SALIDA_V66_DOSSIER_LOTE_B.txt                    'cuadrante' x36 (110683 bytes)
+         docs/loop/_auditor_v66b/dossier_prefusion.txt              'cuadrante' x36 (110686 bytes)
+         docs/loop/_v66/dossier_lote_b.txt                          'cuadrante' x36 (110683 bytes)
+         scripts/loop/_v66_lote_b.py                                'cuadrante' x24 (60296 bytes)
+         docs/loop/SALIDA_V66_FUSION_LOTE_B.txt                     'cuadrante' x23 (37752 bytes)
+         docs/loop/_v66/fusion_simulada.txt                         'cuadrante' x23 (37592 bytes)
+         docs/loop/PLAN_V66_OPU02_LOTE_B.json                       'cuadrante' x21 (53174 bytes)
+         docs/plan/LECTURAS_DIRIGIDAS.md                            'cuadrante' x21 (214916 bytes)
+         docs/plan/LECTURAS_DIRIGIDAS.md                            'cuadrantes' x20 (214916 bytes)
+         docs/plan/03_FUSIONES.md                                   'cuadrante' x17 (831759 bytes)
+         docs/INTRA_DOMINIO_INFORME.md                              'cuadrante' x16 (943970 bytes)
+      CANDIDATOS A SEDE (en docs/plan/, que es donde viven los
+      documentos del plan): 3
+         docs/plan/LECTURAS_DIRIGIDAS.md
+         docs/plan/LECTURAS_DIRIGIDAS.md
+         docs/plan/03_FUSIONES.md
+   ------------------------------------------------------------------------
+   NOMINA: ecuacion de valor
+      literal de la ficha: 'ecuacion de valor (5)'
+      agujas buscadas: 'ecuacion de valor', 'ecuacion_de_valor'
+      CIFRA ficheros que la nombran: 356
+         docs/loop/SALIDA_V67_DOSSIER_LOTE_C.txt                    'ecuacion_de_valor' x22 (80724 bytes)
+         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                        'ecuacion_de_valor' x17 (4054129 bytes)
+         docs/loop/_auditor_v90_union_apertura.txt                  'ecuacion_de_valor' x17 (588101 bytes)
+         docs/loop/_auditor_v90_union_cierre.txt                    'ecuacion_de_valor' x17 (595236 bytes)
+         docs/loop/_auditor_v91_union_apertura.txt                  'ecuacion_de_valor' x17 (595236 bytes)
+         docs/loop/_auditor_v91_union_cierre.txt                    'ecuacion_de_valor' x17 (600478 bytes)
+         docs/loop/_auditor_v92_union_866d006c.txt                  'ecuacion_de_valor' x17 (600478 bytes)
+         docs/loop/_auditor_v92_union_WORK.txt                      'ecuacion_de_valor' x17 (600415 bytes)
+         docs/plan/INVENTARIO.jsonl                                 'ecuacion_de_valor' x17 (584554 bytes)
+         docs/loop/_auditor_v181_ciega_A.txt                        'ecuacion_de_valor' x16 (37209 bytes)
+         docs/INTRA_DOMINIO_INFORME.md                              'ecuacion_de_valor' x12 (943970 bytes)
+         docs/plan/LECTURAS_DIRIGIDAS.md                            'ecuacion de valor' x12 (214916 bytes)
+      CANDIDATOS A SEDE (en docs/plan/, que es donde viven los
+      documentos del plan): 2
+         docs/plan/INVENTARIO.jsonl
+         docs/plan/LECTURAS_DIRIGIDAS.md
+   ------------------------------------------------------------------------
+   NOMINA: el bloque humano de la supervision de la IA
+      literal de la ficha: 'el bloque humano de la supervision de la IA (3)'
+      agujas buscadas: 'supervision de la IA', 'bloque humano', 'supervision_ia'
+      CIFRA ficheros que la nombran: 103
+         docs/loop/ACTA_AUDITOR.md                                  'bloque humano' x22 (4450245 bytes)
+         docs/plan/RECOMPUTO_3388.md                                'bloque humano' x10 (183244 bytes)
+         docs/plan/OPERACIONES.jsonl                                'supervision de la IA' x9 (498085 bytes)
+         docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl              'supervision de la IA' x8 (438786 bytes)
+         docs/loop/_auditor_v124_OPERACIONES_MUT2.jsonl             'supervision de la IA' x8 (438824 bytes)
+         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                        'supervision de la IA' x7 (4054129 bytes)
+         docs/loop/ACTA_AUDITOR.md                                  'supervision de la IA' x7 (4450245 bytes)
+         docs/loop/SALIDA_V170_T5A_FORMA_NOMINAS.txt                'supervision de la IA' x7 (7840 bytes)
+         docs/plan/LECTURAS_DIRIGIDAS.md                            'bloque humano' x7 (214916 bytes)
+         docs/plan/RECOMPUTO_3388.md                                'supervision de la IA' x7 (183244 bytes)
+         docs/INTRA_DOMINIO_INFORME.md                              'supervision de la IA' x6 (943970 bytes)
+         docs/loop/reportes/REPORTE_V170.md                         'supervision de la IA' x6 (45706 bytes)
+      CANDIDATOS A SEDE (en docs/plan/, que es donde viven los
+      documentos del plan): 4
+         docs/plan/RECOMPUTO_3388.md
+         docs/plan/OPERACIONES.jsonl
+         docs/plan/LECTURAS_DIRIGIDAS.md
+         docs/plan/RECOMPUTO_3388.md
+
+G) LOS GRUPOS DEL BACKLOG, BUSCADOS UNO A UNO
+   GRUPO: 126 esperan destejido                  agujas 'esperan destejido', '126'
+      CIFRA ficheros que lo nombran: 435
+         docs/loop/ACTA_AUDITOR.md                                  '126' x67
+         docs/PENDIENTES.md                                         '126' x37
+         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                        '126' x21
+         docs/INTRA_DOMINIO_INFORME.md                              '126' x17
+         docs/INTRA_DOMINIO_PARES.jsonl                             '126' x16
+         docs/loop/SALIDA_V49_BARRIDO_910.txt                       '126' x16
+   GRUPO: 55 resto sin mesa ni nomina            agujas 'resto sin mesa', '55 son resto'
+      CIFRA ficheros que lo nombran: 17
+         docs/loop/SALIDA_V188_APERTURA.txt                         'resto sin mesa' x2
+         docs/loop/SALIDA_V188_APERTURA.txt                         '55 son resto' x2
+         docs/loop/SALIDA_V188_T2_EVIDENCIA_DE_LAS_FICHAS.txt       'resto sin mesa' x2
+         docs/loop/SALIDA_V188_T2_EVIDENCIA_DE_LAS_FICHAS.txt       '55 son resto' x2
+         docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl              'resto sin mesa' x2
+         docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl              '55 son resto' x2
+   GRUPO: 5 de sales roadmap                     agujas 'sales roadmap', 'LD_SALES_ROADMAP'
+      CIFRA ficheros que lo nombran: 137
+         docs/INTRA_DOMINIO_PARES.jsonl                             'sales roadmap' x34
+         docs/loop/ACTA_AUDITOR.md                                  'sales roadmap' x25
+         docs/loop/SALIDA_V66_DOSSIER_LOTE_B.txt                    'sales roadmap' x15
+         docs/loop/_auditor_v66b/dossier_prefusion.txt              'sales roadmap' x15
+         docs/loop/_v66/dossier_lote_b.txt                          'sales roadmap' x15
+         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                        'sales roadmap' x12
+   GRUPO: 3 ya leidas en la primera tanda        agujas 'primera tanda'
+      CIFRA ficheros que lo nombran: 32
+         docs/loop/ACTA_AUDITOR.md                                  'primera tanda' x9
+         docs/FICHA_SUBFUSION_GRADIENTE.md                          'primera tanda' x8
+         docs/plan/LECTURAS_DIRIGIDAS.md                            'primera tanda' x5
+         docs/loop/SALIDA_V188_APERTURA.txt                         'primera tanda' x3
+         docs/loop/SALIDA_V188_T2_EVIDENCIA_DE_LAS_FICHAS.txt       'primera tanda' x3
+         docs/loop/_auditor_v124_OPERACIONES_MUT.jsonl              'primera tanda' x3
+
+H) LA BUSQUEDA DEL DOCUMENTO PROPIO DE LA FICHA, QUE ES LA PREGUNTA REAL
+   Las otras tres mesas de TRABAJO REAL tienen un producto documental en
+   disco. La pregunta es si `OP-L-02` tiene el suyo. Se busca por SU PROPIO
+   NOMBRE en el universo entero:
+   CIFRA ficheros que nombran `OP-L-02`: 178
+      docs/loop/ACTA_AUDITOR.md                                  x46  (4450245 bytes)
+      scripts/loop/vuelta170_tarea3_deudas_de_corte.py           x19  (18049 bytes)
+      docs/PENDIENTES.md                                         x13  (980013 bytes)
+      docs/loop/reportes/REPORTE_V170.md                         x12  (45706 bytes)
+      docs/plan/RECOMPUTO_3388.md                                x12  (183244 bytes)
+      scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py        x9   (13487 bytes)
+      docs/loop/reportes/REPORTE_V180.md                         x8   (63677 bytes)
+      docs/loop/reportes/REPORTE_V188.md                         x8   (77653 bytes)
+      scripts/loop/vuelta170_tarea5_forma_de_las_nominas.py      x8   (18489 bytes)
+      scripts/loop/vuelta190_tarea1a_registrar_acta190.py        x8   (78499 bytes)
+      docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt               x7   (5337 bytes)
+      scripts/loop/vuelta168_tarea5_abrir_las_seis.py            x7   (15376 bytes)
+      docs/loop/reportes/REPORTE_V169.md                         x6   (43586 bytes)
+      scripts/loop/backlog_l02_resuelto.py                       x6   (19473 bytes)
+      docs/loop/SALIDA_V168_T5_LAS_SEIS.txt                      x5   (7634 bytes)
+      docs/loop/SALIDA_V170_T5A_FORMA_NOMINAS.txt                x5   (7840 bytes)
+      docs/loop/SALIDA_V188_T2_EVIDENCIA_DE_LAS_FICHAS.txt       x5   (47632 bytes)
+      docs/loop/SALIDA_V190_T1A_SIMULACION.txt                   x5   (28285 bytes)
+      scripts/loop/_v188_t2_seccion.md                           x5   (10234 bytes)
+      docs/loop/REPORTE.md                                       x4   (41818 bytes)
+      docs/loop/SALIDA_V189_T1A_SIMULACION.txt                   x4   (26904 bytes)
+      scripts/loop/_v170_t5_seccion.md                           x4   (6003 bytes)
+      scripts/loop/_v180_t5_seccion.md                           x4   (8458 bytes)
+      scripts/loop/backlog_l03_vuelta14.py                       x4   (6791 bytes)
+      docs/loop/SALIDA_V150_3A_VARA_POR_FASE.txt                 x3   (30120 bytes)
+      docs/loop/SALIDA_V157_T9_FASE_09_LECTURAS_DIRIGIDAS.txt    x3   (1359 bytes)
+      docs/loop/SALIDA_V159_T9_FASE_09_LECTURAS_DIRIGIDAS.txt    x3   (1371 bytes)
+      docs/loop/SALIDA_V160_T7_FASE_09_LECTURAS_DIRIGIDAS.txt    x3   (1371 bytes)
+      docs/loop/SALIDA_V161_T3_FASE_09.txt                       x3   (1371 bytes)
+      docs/loop/SALIDA_V161_T4_FASE_09.txt                       x3   (1371 bytes)
+      docs/loop/SALIDA_V162_T6_FASE_09.txt                       x3   (1371 bytes)
+      docs/loop/SALIDA_V164_T7_FASE_09.txt                       x3   (1359 bytes)
+      docs/loop/SALIDA_V165_T7_FASES.txt                         x3   (32355 bytes)
+      docs/loop/SALIDA_V165_T7_FASE_09.txt                       x3   (1359 bytes)
+      docs/loop/SALIDA_V170_T5B_VEREDICTO_OP_L_02.txt            x3   (5074 bytes)
+      docs/loop/SALIDA_V188_T2_VARA_CON_PATA.txt                 x3   (17509 bytes)
+      docs/loop/_auditor_v158_fase_09_LECTURAS_DIRIGIDAS.txt     x3   (1359 bytes)
+      docs/loop/_auditor_v189b_vara.txt                          x3   (17445 bytes)
+      docs/loop/_auditor_v190_vara.txt                           x3   (17445 bytes)
+      docs/loop/_v168_t5_seccion.md                              x3   (6830 bytes)
+   REPARTO POR CARPETA:
+      docs                               1 fichero(s)
+      docs/loop                          24 fichero(s)
+      docs/loop/reportes                 4 fichero(s)
+      docs/plan                          1 fichero(s)
+      scripts/loop                       10 fichero(s)
+   CIFRA en docs/plan/, que es donde vive el producto de una mesa: 1
+      docs/plan/RECOMPUTO_3388.md
+   Y LA BUSQUEDA DE UN FICHERO CUYO NOMBRE LLEVE LA FICHA DENTRO:
+      CIFRA ficheros cuyo NOMBRE nombra la ficha: 5
+         docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt           5559 bytes
+         docs/loop/SALIDA_V170_T5B_VEREDICTO_OP_L_02.txt          5074 bytes
+         scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py       9310 bytes
+         scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py      13487 bytes
+         scripts/loop/vuelta190_tarea5_sede_de_op_l_02.py         14028 bytes
+
+I) EL RESUMEN, Y AQUI NO SE CRUZA EL LIMITE
+   LAS TRES NOMINAS:
+      cuadrantes de mercado                          518 fichero(s) la nombran | 3 candidato(s) a sede en docs/plan/
+      ecuacion de valor                              356 fichero(s) la nombran | 2 candidato(s) a sede en docs/plan/
+      el bloque humano de la supervision de la IA    103 fichero(s) la nombran | 4 candidato(s) a sede en docs/plan/
+   LOS GRUPOS DEL BACKLOG:
+      126 esperan destejido                          435 fichero(s) lo nombran
+      55 resto sin mesa ni nomina                     17 fichero(s) lo nombran
+      5 de sales roadmap                             137 fichero(s) lo nombran
+      3 ya leidas en la primera tanda                 32 fichero(s) lo nombran
+
+   LO QUE ESTE FICHERO NO HACE, Y SE DICE OTRA VEZ AL CERRAR:
+      no le inventa una sede a la ficha,
+      no la declara HECHA,
+      no la mueve de estado (sigue en 'LISTA'),
+      y no escribe una sola linea en docs/plan/OPERACIONES.jsonl.
+   docs/plan/OPERACIONES.jsonl al salir -> disco 498085 bytes | LF 498085 bytes
+   IDENTICO AL DE LA ENTRADA: SI
+
