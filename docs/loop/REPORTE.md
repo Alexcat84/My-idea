@@ -103,7 +103,7 @@ tabla tallada entera cuando la vuelta cierre.
 <!-- TABLA DE TAREAS -->
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
-| **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 195 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta: LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, y LAS DIEZ A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 194 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3`, dos contestadas por extension citable con la cita comprobada contra su fichero), CERO EN CONTRA y es la QUINTA acta seguida; LOS TRES HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la fila de credito del acta 194 que rotula mal su cifra, `5.2` el rojo de la bateria que SI es reparable, `5.3` `--componer` que publica VERDE sobre diez tramos rojos); CERO CAIDAS DEL EJECUTOR EN LA VUELTA 194, de cifra publicada y de reporte, con LA RACHA DE REPORTE VUELTA A CERO desde el 1 que dejo el acta 194, y SIN ESCALADA QUE ENCARGAR, dicho expresamente para que no se lea como olvido; UNA CAIDA PROPIA DEL AUDITOR, `C.1`, DE METODO (leer `clase` y `razon` del archivo con `json` a mano en vez de por `AP.marcador()` y `AP.leer_veredictos()`, que es la cuarta puerta y ya ofrecia las dos cosas sin coste), con el sujeto NO quemado y probado DESPUES por la propia puerta: 30 de 30 sellados vuelven TAPADOS y 0 destapes apuntados; LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos (30 aislados, 30 cotejados, CERO QUEMADOS, que es la diferencia con la 194 y se debe a que los mensajes de commit del ejecutor ya no publican clases por puesto: ESO FUNCIONO); y LA FILA DE CAIDAS PROPIAS PARTIDA EN DOS, las que ACUMULAN y el total del cuerpo, que es el remedio del hallazgo `5.1` aplicado por el auditor a su propia tabla. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 195 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta: LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, y LAS DIEZ A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 194 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3`, dos contestadas por extension citable con la cita comprobada contra su fichero), CERO EN CONTRA y es la QUINTA acta seguida; LOS TRES HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la fila de credito del acta 194 que rotula mal su cifra, `5.2` el rojo de la bateria que SI es reparable, `5.3` `--componer` que publica VERDE sobre diez tramos rojos); CERO CAIDAS DEL EJECUTOR EN LA VUELTA 194, de cifra publicada y de reporte, con LA RACHA DE REPORTE VUELTA A CERO desde el 1 que dejo el acta 194, y SIN ESCALADA QUE ENCARGAR, dicho expresamente para que no se lea como olvido; UNA CAIDA PROPIA DEL AUDITOR, `C.1`, DE METODO (leer `clase` y `razon` del archivo con `json` a mano en vez de por `AP.marcador()` y `AP.leer_veredictos()`, que es la cuarta puerta y ya ofrecia las dos cosas sin coste), con el sujeto NO quemado y probado DESPUES por la propia puerta: 30 de 30 sellados vuelven TAPADOS y 0 destapes apuntados; LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos (30 aislados, 30 cotejados, CERO QUEMADOS, que es la diferencia con la 194 y se debe a que los mensajes de commit del ejecutor ya no publican clases por puesto: ESO FUNCIONO); y LA FILA DE CAIDAS PROPIAS PARTIDA EN DOS, las que ACUMULAN y el total del cuerpo, que es el remedio del hallazgo `5.1` aplicado por el auditor a su propia tabla. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA. R.57 escrita, idempotencia probada en bytes, y el lector tuvo que cambiar TRES veces** | `SALIDA_V195_T1A_REGISTRO_R57.txt`, `SALIDA_V195_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V195_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V195_T1A_SIMULACION.txt` |
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. BLOQUEANTE, Y ES DEUDA SUYA QUE PAGA EL EJECUTOR CON EL INSTRUMENTO. `AUDITOR.md` 1.2: dos discrepancias del auditor cayeron FUERA de su marcado, `654` y `719`, asi que EL CREDITO DE SU TANDA BAJA Y EL TRAMO SE RELEE AL DOBLE. El tramo y el doble estan CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v195_doble_para_la_196.txt`, para que no se elijan despues de mirar. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y NO se copia, con `evitar` cargado de TODO lo consumido y contado de sus ficheros; el solape con el tramo y con el universo tiene que salir CERO POR CONSTRUCCION, no por suerte. (b) LEER LOS 60 A CIEGAS, tramo y doble, con `aislador_de_ciega.py`, y escribir las clases ANTES de abrir el destape. (c) LA VARA ES `docs/BANCO_DE_TEXTOS.md` `9.6.1`, citada por numero y no parafraseada, Y CON EL ERROR DEL AUDITOR PUESTO: la vara de contenido-manda es EL SUELO, NO EL TECHO, y antes de aplicarla se pregunta si el par pertenece a una familia con REGLA PROPIA ya fijada, porque entonces manda la especifica (el `719` se perdio por no preguntarlo: hay regla fijada en el puesto `595` con el `580` de precedente vivo). (d) NO SALTARSE LA `B`: el auditor emitio CERO `B` en 30 pares y el archivo tenia una, el `654`. (e) PUBLICAR EL COTEJO con sus cifras (cuantos coinciden, cuantos discrepan, y cuales caen dentro y fuera del marcado), con los discutibles marcados ANTES de saber si se acierta | **CERRADA, 54 de 60, y con DOS discrepancias FUERA de mi marcado que publico yo** | `SALIDA_V195_T2_SUJETO.txt`, `SALIDA_V195_T2_CIEGA.txt`, `SALIDA_V195_T2_MIS_CLASES.txt`, `SALIDA_V195_T2_DESTAPE.txt`, `SALIDA_V195_T2E_COTEJO.txt` |
 | **TAREA 3** | EL ROJO DE LA BATERIA, ATACADO EN SU CAUSA. Es el hallazgo `5.2` del acta 195 y la adjudicacion de la pregunta `P.2` del reporte de la 194. LO RESERVADO AL FUNDADOR ES PODAR LA NOMINA, NO HACERLA CRECER: la opcion `c` que rechazo el 5 sep 2026 era JUBILAR ARNESES VIEJOS, que es lo contrario de anadir, y el NO TOQUES LA NOMINA de los encargos anteriores se escribio para VUELTAS DE BATERIA y contra LA PODA. (a) LOS SEIS QUE EL CENSO VE Y LA NOMINA NO TIENE ENTRAN EN LA NOMINA, cada uno CON SU SUJETO CONGELADO y cotejado contra su blob de git, RECONTADOS del instrumento al empezar. (b) EL QUE NO PUEDA TENER SUJETO CONGELADO ENTRA COMO CASO DECLARADO, con su marca. (c) LAS TRES ENTRADAS SIN SUJETO CONGELADO que ya estan dentro (`vuelta186_tarea2c_mutacion_cierre_tardio.py`, `vuelta187_tarea4_mutacion_dos_convenciones.py`, `vuelta188_tarea4_mutacion_cobertura_parejas.py`, las tres ancladas a `REPORTE.md` VIVO) se resuelven POR LA MISMA REGLA: o se les congela el sujeto, o pasan a CASO DECLARADO con su marca. (d) `vuelta172_tarea5_mutacion_cierre.py` NO MUERDE desde la 189: se arregla para que caiga cuando tiene que caer, o se declara rota con su motivo medido. (e) NO SE PODA NADA: la nomina solo crece. (f) AL CERRAR, LA BATERIA SOLO SOBRE LO QUE SE TOCO, para comprobar que el rojo atacado se apago, PUBLICANDO LA CIFRA de arneses fuera de la nomina y de entradas sin sujeto congelado, y NO la bateria entera, que no es su vuelta. (g) CON SU CASO POSITIVO POR MUTACION, que pruebe lo que falla hoy: que la mirada de la nomina sobre si misma CAIGA cuando un arnes que el censo ve se queda fuera de la nomina sin ser caso declarado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | `--componer` DEJA DE PUBLICAR VERDE SOBRE DIEZ ROJOS. Es el hallazgo `5.3` del acta 195 y la otra mitad de la pregunta `P.3` del reporte de la 194: `SALIDA_V194_BATERIA_COMPUESTA.txt` termina en VERDE, los 10 tramos cubren la nomina entera, con exitcode 0, mientras los diez tramos traen `CLASE DEL VEREDICTO: ROJO POR FALLO` y exitcode 1. Es cierto EN LO QUE MIDE, la cobertura, y enganoso EN LO QUE PARECE DECIR, el estado de la bateria; banco `9.1`, el instrumento debe caerse en vez de mentir. (a) `--componer` PROPAGA EL PEOR VEREDICTO DE LOS TRAMOS a su propio exitcode y a su linea final: cobertura entera y algun tramo en rojo NO es VERDE. (b) LAS DOS COSAS SE SIGUEN DICIENDO POR SEPARADO, la cobertura con su cifra y el veredicto con la suya, porque que propague el rojo no puede borrar que la cobertura estaba completa. (c) CON SU CASO POSITIVO POR MUTACION, con la salida de la 194 de sujeto congelado, que es el caso real: diez tramos rojos con cobertura 127 de 127 tienen que dar ROJO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -256,5 +256,150 @@ publica las dos cifras y dice si calzan es la que lo enseno**, y por eso la caid
 se vio en vez de pasar. Corregido acotando la tabla por su cabecera de cierre; hoy
 las dos listas salen **SIETE y SIETE, y LAS DOS SON LA MISMA**. **El codigo viejo
 se nombra entero en el docstring de la funcion en vez de borrarse.**
+
+### TAREA 1. LOS REGISTROS. **CERRADA. `R.57` ESCRITA, IDEMPOTENCIA PROBADA EN BYTES, Y EL LECTOR TUVO QUE CAMBIAR TRES VECES PORQUE EL ACTA CAMBIO DE FORMA.**
+
+**EL NUMERO DE LA ENTRADA NO SE TECLEA.** `scripts/loop/serie_de_registros.py`,
+corrido en el bloque `G` de la apertura y otra vez dentro del registrador, da
+**`SIGUIENTE LIBRE: R.57`** sobre **48 entradas** y **0 colisiones**. El encargo
+adelanta `R.57` y **el instrumento dice `R.57`: CALZA**. Tras escribir, la serie
+recomputada da **49 entradas, siguiente libre `R.58`, 0 colisiones y 0 huecos**.
+
+#### 1.a LO QUE SE CONTO DEL CUERPO ACOTADO DEL ACTA, Y NINGUNA DEL ENCARGO
+
+Acta 195 acotada en `docs/loop/ACTA_AUDITOR.md`, **lineas 68709 a 69017**, o sea
+**309 lineas**. Secciones leidas y no tecleadas: **0, 1, 2, 3, 4, 5, 6, 7 y 8**.
+Todo lo de abajo sale de `docs/loop/SALIDA_V195_T1A_REGISTRO_R57.txt`.
+
+| lo que se cuenta | cifra | como se leyo |
+|---|---:|---|
+| adjudicaciones `4.1` a `4.10` | **10** | patron entrecomillado (el del acta 184) |
+| las mismas, con el patron suelto (el del acta 189) | **0** | se publica aunque sea cero |
+| de ellas, discutibles del ejecutor | **7** | familia leida del titulo |
+| de ellas, preguntas contestadas | **3** | `P.1`, `P.2`, `P.3` |
+| discutibles **A FAVOR** | **7** | estado leido del titulo |
+| discutibles **EN CONTRA** | **0** | **y es la QUINTA acta seguida** |
+| hallazgos de la seccion 5 | **3** | `claves_entrecomilladas` |
+| caidas propias del auditor, del CUERPO de la seccion 3 | **1** | `C.1`, linea 68832 |
+| caidas del ejecutor, de reporte | **0** | fila de la tabla |
+| caidas del ejecutor, de cifra publicada | **0** | fila de la tabla |
+| caidas del ejecutor, de metodo | **0** | fila de la tabla |
+| actas sin entrada propia en la serie (173 a 194) | **8** | 173 a 180, remedido aqui |
+
+**EL CERO DE `EN CONTRA` NO SE VUELVE A PROBAR POR MUTACION: SE DICE CON SU
+FICHERO.** `docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt` mide **6904
+bytes** en disco y **6904** por LF, y su veredicto, leido del propio fichero, es
+`'VEREDICTO: VERDE'`. La guarda vieja de la 190 corrida sobre esta acta
+**PARARIA**, y esa es la medicion que dice que el cero es un resultado y no un
+descuido.
+
+**LA RACHA DE REPORTE VUELVE A CERO**, leida de la celda derecha de su propia fila
+y no supuesta: **`racha de reporte: 0`**. El acta lo dice expresamente y el
+registrador **PARA si esa celda no publica la racha**, para que un cero no se
+pueda teclear. **No hay escalada que encargar.**
+
+#### 1.b EL LECTOR TUVO QUE CAMBIAR TRES VECES, Y LAS TRES CON SU CIFRA DELANTE
+
+**Esto no es cosmetica: sin los tres cambios el registrador PARA, y con ellos mal
+hechos registra una cifra falsa.** Los tres son ANADIDOS y no ensanches, que es la
+diferencia que el acta 184 adjudico a favor en su `5.3`: **ninguna marca vieja se
+retira ni se recorta, el lector heredado corre PRIMERO y entero, y la cifra de lo
+que el heredado daria se publica al lado.**
+
+**1. LA FILA DE LAS CAIDAS PROPIAS DEL AUDITOR VIENE PARTIDA EN DOS, Y LA AGUJA
+VIEJA CASA CON LAS DOS.** El acta escribe `caidas propias del auditor QUE
+ACUMULAN` (**0**) y `caidas propias del auditor, TOTAL del cuerpo` (**1**). La
+aguja corta que usaba el registrador de la 194 (`caidas propias del auditor`) casa
+sobre esta acta con **2 filas**, y quien se quedara con `[0]` **registraria 0
+donde el cuerpo declara 1**. `filas_de_las_propias()` lee las dos con su aguja
+larga, publica las dos y **coteja contra la del TOTAL**, que es la que mide lo
+mismo que el cuerpo: **1 contra 1, CALZA**.
+
+**Y esto merece decirse entero, porque es lo contrario de una rareza: la fila
+partida ES EL REMEDIO DEL HALLAZGO `5.1` DEL PROPIO ACTA APLICADO A SU MISMA TABLA
+EN LA VUELTA EN QUE LO LEVANTA.** El `5.1` denuncia que la fila del acta 194 decia
+*"caidas propias del auditor: 1"* cuando su cuerpo declaraba dos, porque contaba
+solo las que acumulan. **Un registrador que no cambiara habria repetido esa misma
+confusion desde el otro lado.**
+
+**2. LA FILA DE METODO ESCRIBE `**0 nuevas**` Y EL LECTOR HEREDADO NO LA LEE.**
+`R92.numeral_de_la_fila` busca `**<digitos>**` pegados y devuelve `None` sobre esa
+celda, o sea que el registrador **PARARIA por una fila que SI trae su cifra y solo
+la acompana de un adjetivo**. `numeral_de_la_fila_195()` la lee y da **0**, sin
+cambiar lo que el heredado ya leia y **sin dejar de dar `None` ante una celda de
+verdad muda**.
+
+**3. DOS ESTADOS DE ADJUDICACION QUE EL VOCABULARIO NO TENIA.** La `4.8` cierra
+con *"CONTESTADA, y la respuesta corrige a mi predecesor, no al ejecutor"* y la
+`4.10` con *"CONTESTADA, con las dos mitades"*. **Con el vocabulario heredado
+entero saldrian `SIN DECIR` 2 adjudicaciones y el registrador PARARIA**, cifra
+publicada en la propia salida. Las dos marcas nuevas son **literales del acta**,
+no parafrasis.
+
+**Y EN SENTIDO CONTRARIO, UN LECTOR QUE ESTA VUELTA NO HACE FALTA Y NO SE
+RETIRA:** `hallazgos_en_titular()`, que la 194 tuvo que anadir porque su acta
+titulaba con `###`, **da CERO sobre el acta 195**, que vuelve a la negrita de
+apertura de parrafo. Los tres lectores se corren y las tres cifras se publican:
+`claves_entrecomilladas` **3**, `claves_de_adjudicacion` **0**,
+`hallazgos_en_titular` **0**. **Retirarlo estrecharia el vocabulario a la forma del
+acta de hoy, y la proxima que titule con `###` haria PARAR el instrumento.**
+
+#### 1.c LA EXIGENCIA QUE SE HACE CONDICIONAL, Y LA RAMA QUE SIGUE ENTERA
+
+La fila de puestos del acta 195 dice **`30 aislados, 30 cotejados, CERO
+quemados`** y **no publica un segundo cotejo**. El registrador de la 194 exigia
+SIEMPRE `cotejo limpio va sobre N` y **sobre esta acta PARARIA**. Con **CERO**
+quemados **no hay dos cotejos que publicar**, asi que el acta escribe uno solo, y
+eso es correcto.
+
+**LA EXIGENCIA SE HACE CONDICIONAL A QUE HAYA QUEMADOS, Y EN ESA RAMA SIGUE
+ENTERA:** si los hubiera y faltara el segundo cotejo, el registrador para igual.
+**Lo que se estrecha es el caso, no la guarda**, y `quemados_son_cero(None)`
+devuelve `False` a proposito: **si no se pudo leer, no se supone que sean cero**.
+
+**Y LA CIFRA DE CERO QUEMADOS TIENE CAUSA MEDIDA, QUE ES LO QUE EL ENCARGO MANDA
+REGISTRAR:** la 194 midio **once**, y la diferencia es que **los mensajes de commit
+del ejecutor ya no publican clases por puesto ni el reparto de una ciega**. **Eso
+funciono, y se registra como lo que es: un remedio a mano que midio.** Su guarda de
+codigo sigue pendiente y va nombrada en lo que queda fuera.
+
+#### 1.d LAS TRES PREGUNTAS, CONTESTADAS, Y LO QUE CADA UNA ADJUDICA
+
+| clave | pregunta | estado leido del titulo |
+|---|---|---|
+| `4.8` | `P.1` | CONTESTADA, y la respuesta corrige al predecesor del auditor |
+| `4.9` | `P.2` | CONTESTADA A FAVOR POR EXTENSION CITABLE |
+| `4.10` | `P.3` | CONTESTADA con las dos mitades: corrida SI, verde NO |
+
+**LA `4.9` ES LA QUE ABRE LA TAREA 3 DE ESTA VUELTA** y la `4.10` la TAREA 4.
+**Registrar no es adjudicar**, y esta seccion solo deja escrito lo que el acta
+dice.
+
+#### 1.e EL CASO POSITIVO POR MUTACION, Y LA IDEMPOTENCIA PROBADA EN BYTES
+
+`--mutacion` corre sobre texto FABRICADO, con el valor esperado sacado de como se
+fabrico el texto y no de una constante igual a la obtenida:
+`docs/loop/SALIDA_V195_T1A_MUTACION_REGISTRADOR.txt`, **`CIFRA casos: 27 | pasan:
+27 | fallan: 0`**, **`VEREDICTO: VERDE`**, contado de su propio fichero.
+
+**Y CADA UNO DE LOS TRES CAMBIOS DE LECTOR LLEVA SU MUTACION, que es lo que los
+separa de un adorno:** la aguja corta de la 194 tiene que casar con **DOS** filas
+sobre la tabla fabricada y su primera tiene que ser el **0**; el heredado tiene que
+devolver **`None`** sobre `**0 nuevas**` y **`SIN DECIR`** sobre los dos titulos
+nuevos; y la guarda de la entrada tiene que **CAER** si la entrada se queda con una
+sola mitad de la fila. **Si alguna de esas no cayera, el cambio no haria falta.**
+
+**LA IDEMPOTENCIA NO SE AFIRMA: SE PRUEBA RE CORRIENDOLO, CON LA SEDE MEDIDA EN
+BYTES.**
+
+| momento | bytes de `docs/PENDIENTES.md` |
+|---|---:|
+| antes de escribir | **1039583** |
+| despues de escribir `R.57` | **1050189** |
+| **despues del RE CORRIDO** | **1050189** |
+
+El re corrido escribio `docs/loop/SALIDA_V195_T1A_RECORRIDO_SIN_ESCRIBIR.txt` y
+**no toco la sede**: el acta 195 aparece ya en **2 linea(s)** por sus dos marcas
+literales, y **no se consumio el numero `R.58`**.
 
 <!-- FIN ANEXO DE TAREAS -->

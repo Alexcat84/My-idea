@@ -14921,3 +14921,189 @@ literales del acta 194 (computadas de la vuelta, no tecleadas) **en LAS DOS
 SEDES** de la serie. Antes de escribir esta entrada aparecian en **0**
 linea(s); despues aparecen y **un re corrido no escribe nada**, con la sede
 medida en bytes antes y despues.
+
+## R.57. Registro de las diez adjudicaciones numeradas, los tres hallazgos de la seccion 5, las tres preguntas contestadas, la caida propia del auditor y las cero caidas del ejecutor del acta de la vuelta 195
+
+(Acta del auditor, vuelta 195, secciones 0, 1, 2, 3, 4, 5, 6, 7 y 8; escrito en la vuelta 195,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.56`. **Corte de todas las cifras de esta
+entrada: 6 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162, que es
+la que citan los `R.30` a `R.56`. Salida:
+`docs/loop/SALIDA_V195_T1A_REGISTRO_R57.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 2 YA CERRADA Y LAS TAREAS 3 Y 4 SIN
+EMPEZAR, ASI QUE SUS GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA
+PASADO.** Es la forma que la `6.4` del acta 172 adjudico como correcta. **Y
+el orden va declarado en vez de dejarse:** la TAREA 2 fue antes que esta
+porque la seccion 2 del acta 195 publica las clases del auditor sobre los
+mismos 30 puestos que el ejecutor tenia que leer a ciegas, y registrar el
+acta antes habria quemado la ciega. **La 195 NO es vuelta de bateria**
+(`AUDITOR.md` 6.1: la 194 la corrio entera y la proxima cae en la 199).
+
+**LOS CINCO NUMERALES DEL TITULO NO ESTAN TECLEADOS:** se cuentan del acta
+acotada (lineas 68709 a 69017). **10 adjudicaciones numeradas (`4.1` a `4.10`),
+3 hallazgos numerados en la seccion 5, 3 preguntas contestadas DENTRO de
+las adjudicaciones, 1 caida propia del auditor y 0 caidas del ejecutor.**
+
+**LA FORMA DE LOS NUMERALES SE MIDE CON LOS DOS PATRONES Y LAS DOS CIFRAS SE
+PUBLICAN.** El patron entrecomillado (el del acta 184) da 10 y el suelto (el
+del acta 189) da 0. **El acta 195 numera con comillas inversas, asi que
+manda el primero; ninguno se ensancha y se dice lo que dan los dos.**
+
+### LAS 10 ADJUDICACIONES, UNA POR UNA, CON SU ESTADO LEIDO DEL TITULO
+
+| clave | familia | estado, leido del titulo literal | linea del acta |
+|---|---|---|---:|
+| `4.1` | DISCUTIBLE | A FAVOR | 68863 |
+| `4.2` | DISCUTIBLE | A FAVOR | 68867 |
+| `4.3` | DISCUTIBLE | A FAVOR | 68874 |
+| `4.4` | DISCUTIBLE | A FAVOR | 68879 |
+| `4.5` | DISCUTIBLE | A FAVOR | 68886 |
+| `4.6` | DISCUTIBLE | A FAVOR | 68892 |
+| `4.7` | DISCUTIBLE | A FAVOR | 68898 |
+| `4.8` | PREGUNTA | CONTESTADA, Y LA RESPUESTA CORRIGE AL PREDECESOR DEL AUDITOR | 68904 |
+| `4.9` | PREGUNTA | CONTESTADA A FAVOR POR EXTENSION CITABLE | 68911 |
+| `4.10` | PREGUNTA | CONTESTADA CON LAS DOS MITADES: CORRIDA SI, VERDE NO | 68915 |
+
+**EL CERO DE `EN CONTRA` VA POR LA QUINTA ACTA SEGUIDA.** De las 10,
+**7 son discutibles del ejecutor y los 7 van A FAVOR**; las otras 3 son
+**preguntas contestadas** (`P.1` en la `4.8`, `P.2` en la `4.9`, `P.3` en la `4.10`), **dos de ellas por extension citable y con
+la cita comprobada contra su fichero**. **CIFRA `EN CONTRA`: 0.**
+
+**Y ESE CERO NO SE VUELVE A PROBAR POR MUTACION: SE DICE CON SU FICHERO.**
+`docs/loop/SALIDA_V191_T1A_MUTACION_REGISTRADOR.txt` mide **6904 bytes** en disco y **6904** por LF, y su
+veredicto, leido del propio fichero, es 'VEREDICTO: VERDE'. La guarda vieja de la 190
+(`if not en_contra: PARADA`) corrida sobre esta acta **PARARIA**.
+
+### LOS 3 HALLAZGOS DE LA SECCION 5, Y AQUI EL LECTOR QUE MANDA ES EL VIEJO
+
+- **`5.1`** (linea 68925 del acta): `5.1` LA FILA DE CREDITO DEL ACTA 194 ROTULA MAL SU CIFRA, Y ESO COSTO UNA PREGUNTA.
+- **`5.2`** (linea 68933 del acta): `5.2` EL ROJO DE LA BATERIA ES REPARABLE, Y NADIE LO HABIA DICHO.
+- **`5.3`** (linea 68966 del acta): `5.3` `--componer` PUBLICA `VERDE` SOBRE DIEZ TRAMOS ROJOS.
+
+**LOS TRES LECTORES SE CORREN Y LAS TRES CIFRAS SE PUBLICAN.** El acta 195
+**vuelve a la negrita de apertura de parrafo**, que es la forma vieja:
+`claves_entrecomilladas` da **3**, `claves_de_adjudicacion` da **0** y
+`hallazgos_en_titular()`, el lector que la 194 tuvo que ANADIR para su acta,
+da **0**. **Ninguno se retira**: retirar el de la 194 estrecharia el
+vocabulario a la forma del acta de hoy, y la proxima que titule con `###`
+haria PARAR el instrumento.
+
+**LA FILA DE LA TABLA DE CREDITO QUE LOS CUENTA, PEGADA Y NO PARAFRASEADA:**
+
+```
+| discrepancias y hallazgos FUERA del marcado | **5** (`654`, `719`; y los tres hallazgos de la seccion 5) | **170** |
+```
+
+**SU NUMERAL, LEIDO Y NO TECLEADO, ES 5, Y LAS CLAVES `5.n` SON 3.**
+**No se elige a ojo cual vale: la fila cuenta JUNTAS las discrepancias y los
+hallazgos**, y su propia celda lo escribe nombrando el `654` y el `719`. Por
+resta salen **2 discrepancias fuera del marcado** mas los 3 hallazgos.
+
+### LAS CAIDAS, Y LA FILA DE LAS PROPIAS VIENE PARTIDA EN DOS A PROPOSITO
+
+**LA SEDE DE LAS CAIDAS PROPIAS NO SE SUPONE: es la seccion 3.** En el acta
+194 estaban en la 8 y en la 192 en la 6. Su cabecera, literal: '## 3. MIS CAIDAS PROPIAS DE ESTA VUELTA'
+
+| lo que se cuenta | del cuerpo del acta | de su fila de la tabla |
+|---|---:|---:|
+| caidas propias del auditor, TOTAL | 1 | 1 |
+| caidas propias del auditor, QUE ACUMULAN | (el cuerpo no las separa) | 0 |
+| del ejecutor, de reporte | (el cuerpo no las declara: son cero) | 0 |
+| del ejecutor, de cifra publicada | (el cuerpo no las declara: son cero) | 0 |
+| del ejecutor, de metodo, con el rango expandido | 0 | 0 |
+
+**LA FILA DE LAS PROPIAS VIENE PARTIDA EN DOS, Y ESO NO ES UNA RAREZA DEL
+ACTA: ES EL REMEDIO DE SU PROPIO HALLAZGO `5.1` APLICADO A SU MISMA TABLA EN
+LA VUELTA EN QUE LO LEVANTA.** El `5.1` denuncia que la fila del acta 194
+decia *"caidas propias del auditor: 1"* cuando su cuerpo declaraba dos,
+porque en realidad contaba **solo las que acumulan**. Aqui el acta escribe
+las dos filas con su rotulo entero.
+
+**Y ESO OBLIGO A CAMBIAR EL LECTOR, CON SU MEDICION DELANTE.** La aguja corta
+de la 194 (`caidas propias del auditor`) casa sobre esta acta con **2**
+filas, y quien la usara se quedaria con `[0]`, o sea con la de las que
+ACUMULAN: **registraria 0 donde el cuerpo declara 1**, que es exactamente
+la confusion que el `5.1` denuncia. **`filas_de_las_propias()` lee las dos
+con su aguja larga, publica las dos, y coteja contra la del TOTAL**, que es
+la que mide lo mismo que el cuerpo. **El cotejo calza: 1 y 1.**
+
+**LA ESPECIE DE LA CAIDA PROPIA, LEIDA DE SU PARRAFO Y NO SUPUESTA:**
+
+- **DEL AUDITOR**, `C.1` (linea 68832 del acta): DE METODO
+
+**EL VOCABULARIO DE ESTADOS SI CRECE, EN DOS MARCAS, Y LA CIFRA QUE LO
+JUSTIFICA VA DELANTE:** con el heredado entero y nada mas saldrian `SIN
+DECIR` **2** adjudicaciones (la `4.8` y la `4.10`) y este registrador
+**PARARIA**. Las dos marcas nuevas son **literales del acta y no
+parafrasis**: `LA RESPUESTA CORRIGE A MI PREDECESOR`, `CON LAS DOS MITADES`. **Se anaden y no se ensanchan**
+(la diferencia que el acta 184 adjudico a favor en su `5.3`): ninguna vieja
+se retira ni se recorta, y el heredado corre PRIMERO, de modo que un titulo
+que dijera `EN CONTRA` seguiria saliendo `EN CONTRA`.
+
+**EL VOCABULARIO DE ESPECIES NO CRECE EN ESTA ACTA**, y se dice porque en la
+194 si crecio: con el de la 193 y nada mas saldrian SIN ESPECIE **0**
+caida(s). Reparto: **DE CIFRA PUBLICADA 0, DE METODO 1, ROMPER UN
+REMEDIO ESCRITO 0**.
+
+**LA `C.1` DEL AUDITOR ES DE METODO Y NO ACUMULA**, y el propio acta lo
+razona: no toca ninguno de los tres prohibidos antes del sello, **el sujeto
+NO se quemo**, y lo probo DESPUES por la propia cuarta puerta (**30 de 30
+sellados vuelven TAPADOS y 0 destapes apuntados**). **No continua ninguna
+racha: abre la suya en 1.**
+
+**Y LAS TRES DEL EJECUTOR SON CERO: 0 de reporte, 0 de cifra publicada y
+0 de metodo.** **LA RACHA DE REPORTE VUELVE A CERO**, leida de la celda
+derecha de su fila y no supuesta: **racha de reporte: 0**. La 194 la dejo
+en 1 y esta vuelta la corta. **NO HAY ESCALADA QUE ENCARGAR**, y el acta lo
+dice expresamente para que no se lea como olvido.
+
+### LA METRICA DE CREDITO, Y SU FILA DE PUESTOS MIDE CERO QUEMADOS
+
+**LAS 9 FILAS DE DATOS DE LA SECCION 7, PEGADAS DEL ACTA:**
+
+```
+| relecturas | 1 | **330** |
+| puestos | 30 aislados, **30 cotejados**, **CERO quemados** | **1.126** |
+| discrepancias DENTRO del marcado | **1** (`3330`) | **53** |
+| discrepancias y hallazgos FUERA del marcado | **5** (`654`, `719`; y los tres hallazgos de la seccion 5) | **170** |
+| caidas propias del auditor QUE ACUMULAN | **0** | la `C.1` de la 194 (ROMPER UN REMEDIO ESCRITO) **vuelve a racha 0** |
+| caidas propias del auditor, TOTAL del cuerpo | **1** (`C.1`, de metodo; el sujeto NO se quemo, probado por la puerta) | especie nueva: **racha 1** |
+| caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 0** |
+| caidas del ejecutor de reporte | **0** | **racha de reporte: 0** (la 194 la dejo en 1 y esta vuelta la corta) |
+| caidas del ejecutor de metodo | **0 nuevas** | |
+```
+
+**LA NOTA DE LA FILA DE PUESTOS ES `CERO quemados`.** Las dos heredadas se
+siguen buscando y sus cifras se publican: `SOLAPE TOTAL` (de la 191) aparece
+**NO** y `ONCE QUEMADOS` (de la 194) aparece **NO**.
+
+Son **30 aislados y 30 cotejados, con CERO quemados**. **ESA ES LA DIFERENCIA
+CON LA 194, QUE MIDIO ONCE, Y EL ACTA LE PONE CAUSA: los mensajes de commit
+del ejecutor ya no publican clases por puesto ni el reparto de una ciega.
+**ESO FUNCIONO, Y SE REGISTRA COMO LO QUE ES: UN REMEDIO A MANO QUE MIDIO.**
+Su guarda de codigo sigue pendiente y va nombrada en lo que queda fuera.
+
+**Y LA FILA NO PUBLICA UN SEGUNDO COTEJO, QUE TAMBIEN ES UNA MEDICION Y NO
+UN HUECO:** con **CERO** quemados no hay dos cotejos que publicar, asi que el
+acta escribe uno solo. **El registrador de la 194 exigia SIEMPRE el segundo y
+sobre esta acta PARARIA.** Aqui la exigencia se hace **condicional a que haya
+quemados**, y **en esa rama sigue entera**: si los hubiera y faltara el
+segundo cotejo, el registrador para igual. **Lo que se estrecha es el caso,
+no la guarda.**
+
+### LA DEUDA DE LA SERIE, REMEDIDA AQUI EN VEZ DE HEREDARSE
+
+Tramo mirado: actas **173 a 194**. **CIFRA actas sin entrada propia en la
+serie: 8** (173, 174, 175, 176, 177, 178, 179, 180). **Se registra y NO se arregla en esta vuelta**, que es lo
+que el encargo de la 195 deja escrito en su lista de lo que sigue fuera.
+
+**Y ESTA ENTRADA LA ESCRIBE UN REGISTRADOR IDEMPOTENTE, Y LA IDEMPOTENCIA NO
+SE AFIRMA: SE PRUEBA RE CORRIENDOLO.** La comprobacion busca las DOS marcas
+literales del acta 195 (computadas de la vuelta, no tecleadas) **en LAS DOS
+SEDES** de la serie. Antes de escribir esta entrada aparecian en **0**
+linea(s); despues aparecen y **un re corrido no escribe nada**, con la sede
+medida en bytes antes y despues.

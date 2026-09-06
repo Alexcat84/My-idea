@@ -1,0 +1,67 @@
+==============================================================================
+VUELTA 195, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR
+==============================================================================
+
+A) `filas_de_las_propias()` SOBRE UNA TABLA FABRICADA CON LA FILA PARTIDA
+   la aguja de QUE ACUMULAN casa con UNA sola fila                VERDE
+   la aguja de TOTAL casa con UNA sola fila                       VERDE
+   y cada una trae SU numeral, que son distintos                  VERDE
+   LA MUTACION, Y ES LA QUE PRUEBA QUE EL LECTOR NUEVO HACIA FALTA: la
+   aguja CORTA de la 194 casa con LAS DOS filas, y quien se quedara con la
+   primera registraria 0 donde el cuerpo declara 7. Si diera una sola fila,
+   el lector nuevo seria un adorno.
+   la aguja corta de la 194 casa con LAS DOS                      VERDE
+   y su primera fila es la de las QUE ACUMULAN, o sea el 0        VERDE
+
+B) `cifras_de_la_fila_de_puestos()` Y LA EXIGENCIA CONDICIONAL
+   con quemados lee las CUATRO cifras                             VERDE
+   sin quemados lee tres y devuelve None en el cotejo limpio      VERDE
+   LA MUTACION: si `quemados_son_cero` dijera que SI ante cualquier cosa, la
+   exigencia del segundo cotejo se apagaria para siempre y una fila con once
+   quemados y sin cotejo limpio pasaria por buena.
+   `CERO` es cero                                                 VERDE
+   `0` es cero                                                    VERDE
+   `ONCE` NO es cero                                              VERDE
+   y `None` NO es cero, que es lo prudente                        VERDE
+
+C) `entrada_publica_las_dos_mitades()`, QUE CAE SI LA ENTRADA SE QUEDA CON
+   UNA SOLA MITAD
+   la entrada con LAS DOS mitades pasa                            VERDE
+   LA MUTACION: se quita la mitad de las que ACUMULAN y la guarda TIENE que
+   caer. Si no cayera, el registro repetiria desde su lado el error que el
+   hallazgo 5.1 denuncia en la tabla del acta.
+   y la entrada que se queda con UNA sola CAE                     VERDE
+
+B.2) `numeral_de_la_fila_195()`, QUE LEE `**0 nuevas**` SIN ENSANCHAR
+   LA MUTACION: si el heredado ya leyera `**0 nuevas**`, el lector nuevo
+   seria un adorno; y si el nuevo leyera cualquier cosa, una celda muda
+   dejaria de hacer PARAR.
+   el heredado NO lee `**0 nuevas**`                              VERDE
+   el nuevo SI la lee, y da 0                                     VERDE
+   y no cambia lo que el heredado ya leia                         VERDE
+   una celda muda sigue dando None con los dos                    VERDE
+
+C.2) `estado_de_la_adjudicacion_195()`, QUE ANADE DOS MARCAS SIN ENSANCHAR
+   LA MUTACION: con el vocabulario HEREDADO estos dos titulos salen SIN
+   DECIR, y el registrador PARA. Si el heredado ya los leyera, las marcas
+   nuevas serian un adorno y su cifra no diria nada.
+   con el heredado, la de la 4.8 sale SIN DECIR                   VERDE
+   con el heredado, la de la 4.10 sale SIN DECIR                  VERDE
+   con el nuevo, la de la 4.8 se lee                              VERDE
+   con el nuevo, la de la 4.10 se lee                             VERDE
+   Y LA PARADA SE CONSERVA: un titulo mudo sigue saliendo SIN DECIR, y el
+   heredado sigue mandando por delante del nuevo.
+   un titulo mudo sigue saliendo SIN DECIR                        VERDE
+   y `EN CONTRA` gana aunque el titulo traiga una marca nueva     VERDE
+
+D) `titulo_de_la_entrada()` NOMBRA EL ACTA 195 Y NO OTRA
+   el titulo cierra con `del acta de la vuelta 195`               VERDE
+   LA MUTACION: la maquina de la 194 cierra con SU numero, y un titulo
+   armado con ella nombraria el acta equivocada, que es lo que rompe la
+   marca de idempotencia de la casa.
+   la de la 194 cierra con `del acta de la vuelta 194`            VERDE
+   y las dos frases NO son la misma                               VERDE
+   la concordancia del singular sale bien con UNA caida propia    VERDE
+
+CIFRA casos: 27 | pasan: 27 | fallan: 0
+VEREDICTO: VERDE
