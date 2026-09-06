@@ -1,0 +1,46 @@
+GUARDA DE LA FUENTE DEL CLON (vuelta 180, TAREA 4.b)
+   este fichero CLONA 'vuelta_del_reporte_del_arbol' de scripts/loop/vuelta174_esqueleto_reporte.py
+   scripts/loop/vuelta174_esqueleto_reporte.py -> 13918 bytes, 273 lineas
+   CIFRA funciones que define: 2
+   define 'vuelta_del_reporte_del_arbol': SI
+   VERDE: la fuente del clon existe, parsea y sigue definiendo
+   la funcion clonada. El arnes de la original puede correr.
+
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 8150 bytes
+   primera linea: # REPORTE DE LA VUELTA 189 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 189
+   coincide con VUELTA - 1 (188): NO
+
+PASO 0.b. LA GUARDA SOBRE LA VUELTA ANTERIOR (188), PUBLICADA SALGA LO
+   QUE SALGA, EN MODO SOLO COMPROBACION Y SIN LANZAR EL ARCHIVADOR
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py NO se lanza (modo solo comprobacion)
+      docs/loop/reportes/REPORTE_V188.md -> 77653 bytes, sha256 fa10335f2b4a76bd
+      vuelta leida de la cabecera del archivo: 188
+      el reporte que se va a pisar -> 8150 bytes, sha256 f4afac81e30bf00c
+      ROJO, 1 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (d) EL TEXTO QUE SE VA A PISAR NO ESTA GUARDADO: el REPORTE.md del arbol (sha256 f4afac81e30bf00c) NO ES el archivado en docs/loop/reportes/REPORTE_V188.md (sha256 fa10335f2b4a76bd). Escribir el esqueleto encima perderia ese texto.
+   VEREDICTO SOBRE LA 188: ROJO
+   los seis ultimos commits que TOCAN docs/loop/REPORTE.md: 7302573f, 3aceb323, 2a1561f3, dcd1c6e2, 67562e11, 31f716b5
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (189)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 189 -> EXIT 1
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 189.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): 7302573f965c7d66e9175b72c32721471cc1c10d
+         |   asunto de ese commit: 2026-09-06 08:01:42 -0400	VUELTA 188, EL REPORTE CERRADO EN VERDE: cerrar_reporte.py exitcode 0 CON SUS CUATRO PIEZAS, UNA SOLA SECCION 9, LA CABECERA
+         |   vuelta LEIDA de la cabecera del texto: 188
+         |   ROJO, 1 motivo(s), y NO se escribe nada:
+         |      el reporte que lleva 7302573f es el de la VUELTA 188, no el de la 189: no se archiva bajo un numero que no es el suyo
+      docs/loop/reportes/REPORTE_V189.md -> NO EXISTE
+      ROJO, 2 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (a) el archivador NO sale verde para la vuelta 189
+         (b) no existe el archivo docs/loop/reportes/REPORTE_V189.md
+
+ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.
