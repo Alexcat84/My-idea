@@ -93,7 +93,7 @@ vuelta cierre.
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DEL 3182. BLOQUEANTE. Es la deuda de credito que la TAREA 4 de la 190 dejo medida y que no se auto encargo, adjudicada A FAVOR en la `4.5` del acta 191 y encargada ahi mismo: quien encarga el doble es el auditor. EL TRAMO es la tanda de 30 puestos de `docs/loop/SALIDA_V190_T4_CIEGA.txt`, donde la discrepancia del `3182` cayo FUERA de los dudosos marcados. AL DOBLE son sus 30 vecinos deterministas, con `vecinos()` IMPORTADA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y no copiada: 30 mas 30 son 60, el doble exacto. EL SOLAPE SE LE EXIGE AL UNIVERSO Y NO AL TRAMO: a `vecinos()` se le pasa `evitar` con TODO lo consumido, contado de sus ficheros y no tecleado. Con `scripts/loop/aislador_de_ciega.py`, criterio escrito literal, ciega y destape en ficheros SEPARADOS, las clases escritas y COMMITEADAS en su propio commit ANTES de abrir el destape, y los dudosos NOMBRADOS DELANTE. NO SE TOCA NINGUNA CLASE: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` se abre solo en lectura y su `sha256` LF abre y cierra en el mismo valor por las dos convenciones | **CERRADA, CON UNA DISCREPANCIA FUERA DEL MARCADO TRAIDA ENTERA** | `SALIDA_V191_T2_AISLAMIENTO.txt`, `SALIDA_V191_T2_CIEGA.txt`, `SALIDA_V191_T2_MIS_CLASES.txt`, `SALIDA_V191_T2_DESTAPE.txt`, `SALIDA_V191_T2_COTEJO.txt` |
 | **TAREA 3** | LAS DOS CONVENCIONES DE `lineas`, QUE LLEVAN DOS VUELTAS ESPERANDO. Es la `5.1` del acta 190 y no se ha tocado. Hay instrumentos de la cadena que cuentan lineas con `len(texto.split(NL))`, que suma un elemento vacio final que no es una linea, y otros que cuentan con `texto.count(NL)`, que si calza con `wc -l`. ES UNA MEDICION ANTES QUE UN ARREGLO: (a) MIDE PRIMERO cuantos ficheros de `scripts/loop/` cuentan lineas por cada una de las dos convenciones, nombralos y publica la cifra, porque sin esa cifra el arreglo no se sabe de que tamano es; (b) DESPUES ARREGLA con la vara de las dos convenciones de BYTES que esta casa ya construyo: o se publica la pareja, o se publica la que calza con `wc -l` diciendo cual es; (c) CON SU CASO POSITIVO POR MUTACION, que CAIGA si un instrumento vuelve a publicar una sola cifra de lineas por la convencion que no calza. NO SE TOCAN LOS NUMEROS YA PUBLICADOS EN REPORTES CERRADOS | **CERRADA EN VERDE** | `SALIDA_V191_T3_CENSO_ANTES.txt`, `SALIDA_V191_T3_CENSO_DESPUES.txt`, `SALIDA_V191_T3_ARREGLO.txt`, `SALIDA_V191_T3_MUTACION_LINEAS.txt` |
 | **TAREA 4** | LA GUARDA DEL VEREDICTO DUPLICADO EN `cerrar_reporte.py`. Es el hallazgo `5.2` del acta 191. La linea 50 del reporte de la 190 dice `**EL VEREDICTO DE UNA LINEA: **EL VEREDICTO DE UNA LINEA: LAS CINCO TAREAS...`, y la causa esta medida: `cerrar_reporte.py` en su linea 1817 compone la etiqueta y su propia salida prueba que el veredicto que se le paso YA la traia. (a) QUE `cerrar_reporte.py` CAIGA EN ROJO si el `--veredicto` que recibe ya trae la etiqueta o los asteriscos, en vez de pegarla dos veces, y que diga QUE RECIBIO y QUE ESPERABA: fallar ruidoso, sin limpiarla en silencio, porque limpiar en silencio es la otra mitad de la misma enfermedad. (b) CASO POSITIVO POR MUTACION que CAIGA si la guarda se quita. (c) EL REPORTE DE LA 190 NO SE REESCRIBE: esta cerrado y archivado byte a byte, y su etiqueta doble se queda donde esta con la explicacion al lado | **CERRADA EN VERDE, CON UNA PARADA DECLARADA** | `SALIDA_V191_T4_MUTACION_VEREDICTO.txt`, `SALIDA_V191_APERTURA.txt` bloque `H.5` |
-| **TAREA 5** | LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD MEDIDA. SOLO MEDIR, Y NO TOCA NI UNA RAZON DEL ARCHIVO. Es el hallazgo `5.1` del acta 191: sobre su tanda de treinta, dos lectores independientes discrepan del archivo en los MISMOS OCHO puestos, `DISCUTIBLE MARCADO` aparece en 427 de las 3.388 filas y en CERO de esos ocho. TREINTA CASOS NO SON UNA LEY, y por eso esto es una medicion. (a) DI PRIMERO CUAL ES TU UNIVERSO Y COMO LO CONSTRUYES antes de contar nada: que ficheros de cotejo de ciega existen, de que vueltas, y cuales quedan fuera por no ser legibles con una regla unica, con la cifra de los que entran y de los que no y con sus nombres, porque un universo elegido despues de ver el resultado no sirve. (b) CUENTA sobre ese universo cuantos puestos han tumbado alguna vez a un lector, cuantos de esos llevan la marca, y cual es la tasa de la marca en el archivo entero: las tres cifras juntas o ninguna. (c) NO SAQUES LA CONCLUSION SI LA CUENTA NO LA SOSTIENE: si el universo sale pequeno, dilo y publica el tamano. (d) NO SE ESCRIBE NI UNA FILA DEL ARCHIVO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 5** | LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD MEDIDA. SOLO MEDIR, Y NO TOCA NI UNA RAZON DEL ARCHIVO. Es el hallazgo `5.1` del acta 191: sobre su tanda de treinta, dos lectores independientes discrepan del archivo en los MISMOS OCHO puestos, `DISCUTIBLE MARCADO` aparece en 427 de las 3.388 filas y en CERO de esos ocho. TREINTA CASOS NO SON UNA LEY, y por eso esto es una medicion. (a) DI PRIMERO CUAL ES TU UNIVERSO Y COMO LO CONSTRUYES antes de contar nada: que ficheros de cotejo de ciega existen, de que vueltas, y cuales quedan fuera por no ser legibles con una regla unica, con la cifra de los que entran y de los que no y con sus nombres, porque un universo elegido despues de ver el resultado no sirve. (b) CUENTA sobre ese universo cuantos puestos han tumbado alguna vez a un lector, cuantos de esos llevan la marca, y cual es la tasa de la marca en el archivo entero: las tres cifras juntas o ninguna. (c) NO SAQUES LA CONCLUSION SI LA CUENTA NO LA SOSTIENE: si el universo sale pequeno, dilo y publica el tamano. (d) NO SE ESCRIBE NI UNA FILA DEL ARCHIVO | **CERRADA: LAS TRES CIFRAS ESTAN Y NO ALCANZAN PARA CONCLUIR** | `SALIDA_V191_T5_MARCA_CONTRA_DIFICULTAD.txt`, `SALIDA_V191_T2_COTEJO.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -478,5 +478,100 @@ reescribo el reporte de la 188, que esta cerrado. **La adjudicacion de la `5.2` 
 cambia por esto**, porque el defecto y su remedio son los mismos; lo que cambia es
 **cuantas veces mordio antes de que se cazara**, y eso le importa a quien lleve la
 cuenta de las rachas.
+
+### TAREA 5. LA MARCA CONTRA LA DIFICULTAD MEDIDA. CERRADA: LAS TRES CIFRAS ESTAN, Y NO ALCANZAN PARA CONCLUIR.
+
+**NO SE ESCRIBIO NI UNA FILA DEL ARCHIVO.**
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en **4054129 bytes por las dos
+convenciones** y `sha256` LF `0a77b5a35a962621`, medido dentro del propio
+instrumento al entrar y al salir. Instrumento:
+`scripts/loop/vuelta191_tarea5_marca_contra_dificultad.py`; salida:
+`docs/loop/SALIDA_V191_T5_MARCA_CONTRA_DIFICULTAD.txt` (12555 bytes).
+
+**(a) EL UNIVERSO SE DECLARA ANTES DE CONTAR, Y LAS DOS REGLAS ESTAN EN EL
+CODIGO, NO EN LA PROSA.** Un universo elegido despues de ver el resultado no
+sirve:
+
+- **REGLA 1, LOS CANDIDATOS:** ficheros `.txt` y `.md` de `docs/loop/` cuyo
+  NOMBRE contiene `COTEJO`. Son **43**, nombrados uno a uno en el bloque `B`.
+- **REGLA 2, LA LEGIBILIDAD:** entra el que traiga al menos una linea con un
+  numero **y** la palabra `DISCREPA` **como palabra entera** (no casa con
+  `DISCREPAN` ni con `DISCREPANCIAS`), cuyo primer numero sea un puesto que
+  existe en el archivo.
+
+**Y LA REGLA DE NOMBRE TAMBIEN SE AUDITA, PARA QUE LA ELECCION DEL CANDIDATO SE
+PUEDA DISCUTIR:** el bloque `C` publica los **10** ficheros de `docs/loop/` que
+dicen `DISCREPA` y que la regla 1 deja fuera (`ACTA_AUDITOR.md` con 29
+apariciones, cuatro destapes de ciega, y cinco sueltos). **No entran**: la regla
+es la que es y no se ensancha despues de mirar.
+
+**LOS QUE ENTRAN SON SEIS DE CUARENTA Y TRES**, y van con su cuenta:
+
+| fichero | discrepantes | coincidentes |
+|---|---:|---:|
+| `SALIDA_V190_T4_COTEJO.txt` | 10 | 20 |
+| `SALIDA_V191_T2_COTEJO.txt` | 7 | 23 |
+| `_auditor_v155_cotejo_t3.txt` | 1 | 0 |
+| `_auditor_v182_cotejo_ciega.txt` | 6 | 24 |
+| `_auditor_v189b_cotejo.txt` | 6 | 0 |
+| `_auditor_v191_cotejo_ciega.txt` | 9 | 21 |
+
+**LOS 37 QUE QUEDAN FUERA VAN NOMBRADOS UNO A UNO** en el bloque `D`, con su
+motivo. **Y aqui esta lo que hay que decir en voz alta:** entre los que caen
+estan `_auditor_v183_cotejo_ciega.txt`, `_auditor_v184_cotejo_ciega.txt` y
+`_auditor_v190_cotejo_ciega.txt`, que **SI son cotejos de ciega de verdad**. No
+entran porque **esta casa tiene al menos seis formatos distintos de cotejo** y
+ninguna regla unica los lee a todos: la 183 escribe `PUESTO 375 | yo D | archivo
+B`, la 184 escribe `DISCREPAN: 1 -> [660]`, la 190 escribe `DISCREPAN: 2 [1645,
+2967]`. **Eso es exactamente lo que "no legibles con una regla unica" significa**,
+y ensanchar la regla hasta que los coja seria elegir el universo despues de ver
+el resultado. **0 lineas con `DISCREPA` fueron rechazadas por no ser un puesto.**
+
+**(b) LAS TRES CIFRAS, JUNTAS Y NO SUELTAS:**
+
+| | cifra |
+|---|---:|
+| **1.** puestos que han TUMBADO alguna vez a un lector | **30** |
+| **2.** de esos, los que llevan `DISCUTIBLE MARCADO` | **6** (2656, 2830, 2832, 2909, 3063, 3182) |
+| **3.** tasa de la marca en el archivo entero | **427 de 3.388 = 12,60 por ciento** |
+
+**LOS TREINTA, NOMBRADOS:** 33, 199, 201, 648, 716, 871, 872, 904, 963, 1012,
+1201, 1366, 1369, 1612, 1812, 1813, 1842, 2422, 2423, 2464, 2656, 2830, 2832,
+2909, 3063, 3067, 3086, 3087, 3182, 3183.
+
+**LA COMPARACION, QUE ES PARA LO QUE SIRVEN LAS TRES:** tasa de la marca entre
+los que tumban **20,00 por ciento**, tasa en el archivo entero **12,60 por
+ciento**, **diferencia +7,40 puntos**.
+
+**Y EL DENOMINADOR NO SE INVENTA.** La misma regla recupera **69** coincidentes,
+o sea **96** puestos leidos en total, **pero dos de los seis ficheros solo listan
+las discrepancias** (`_auditor_v155_cotejo_t3.txt` y `_auditor_v189b_cotejo.txt`),
+asi que "cuantos se leyeron" NO sale de esta regla. **Se dice en vez de
+estimarse.**
+
+**(c) NO ALCANZA PARA CONCLUIR, Y ESO ES UN RESULTADO Y SE ESCRIBE COMO TAL.**
+Treinta puestos son el **0,89 por ciento** del archivo. Con 30 casos una
+diferencia de tasas no distingue una tendencia de un accidente de muestreo, y
+**esta medicion no afirma ninguna**. El propio instrumento lo escribe en su bloque
+`G` y **la frase esta en el codigo, con su umbral, antes de conocer el
+resultado**.
+
+**Y HAY QUE DECIR ALGO MAS, PORQUE ES LO CONTRARIO DE LO QUE SE ESPERABA.** El
+acta 191 midio sobre SUS treinta que **ocho tumbaron a dos lectores y CERO
+llevaban la marca**, y de ahi salio la sospecha de que la marca y la dificultad
+no se tocan. **Ensanchado el universo a lo que se puede leer del repo, la cuenta
+apunta al otro lado**: 6 de 30, un 20 por ciento contra el 12,60 del archivo. **Y
+la relectura al doble de la TAREA 2 de esta misma vuelta apunta igual**: el unico
+puesto que me tumbo FUERA de mis dudosos, el 2832, **SI lleva la marca**.
+
+**NINGUNA DE LAS DOS DIRECCIONES SE SOSTIENE CON ESTAS CIFRAS**, y lo honesto es
+publicar las dos y el tamano. **Lo que esta vuelta deja no es una conclusion: es
+el UNIVERSO, la REGLA y las TRES CIFRAS**, para que la vuelta que quiera concluir
+sepa de donde parte y para que la primera cosa que haga sea **hacer legibles con
+una regla unica los tres cotejos de ciega que hoy no lo son**.
+
+**(d) NI UNA FILA DEL ARCHIVO ESCRITA**, y `git diff --numstat -- dataset/` en
+**0 filas**. Ponerle la marca a ocho razones sobre una muestra de treinta seria
+editar datos publicados, y el encargo lo prohibe con esas palabras.
 
 <!-- FIN ANEXO DE TAREAS -->

@@ -1,0 +1,173 @@
+==============================================================================
+VUELTA 191, TAREA 5: LA MARCA `DISCUTIBLE MARCADO` CONTRA LA DIFICULTAD
+MEDIDA, SOBRE TODA LA HISTORIA DE CIEGAS QUE SE PUEDE LEER DEL REPO
+==============================================================================
+
+0) LAS DOS REGLAS DEL UNIVERSO, ESCRITAS ANTES DE LA PRIMERA CUENTA
+   REGLA 1, CANDIDATOS: ficheros .txt y .md de docs/loop/ cuyo NOMBRE
+      contiene 'COTEJO' en cualquier caja.
+   REGLA 2, LEGIBILIDAD: un candidato ENTRA si trae al menos una linea con
+      un numero Y la palabra DISCREPA como palabra entera (no casa con
+      DISCREPAN ni con DISCREPANCIAS), y su primer numero es un puesto que
+      existe en el archivo. Cualquier otro formato queda FUERA y se nombra.
+   Y LO QUE ESTA MEDICION NO PUEDE: recuperar el DENOMINADOR. Varios de los
+      ficheros que entran SOLO listan discrepancias, asi que 'cuantos se
+      leyeron en total' no sale de la misma regla. Se dice en vez de
+      estimarse.
+
+A) EL ARCHIVO, MEDIDO AL ENTRAR Y ABIERTO SOLO EN LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF: 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   CIFRA filas: 3388 | MIN 1 | MAX 3388
+   CIFRA filas con 'DISCUTIBLE MARCADO' en su razon: 427
+   TASA DE LA MARCA EN EL ARCHIVO ENTERO: 0.1260 (12.60 por ciento)
+
+B) LOS CANDIDATOS POR LA REGLA 1, NOMBRADOS UNO A UNO
+   CIFRA candidatos: 43
+      SALIDA_V162_T2A_COTEJO.txt                               4429 bytes
+      SALIDA_V163_T5A_COTEJO.txt                               2500 bytes
+      SALIDA_V164_T2A_COTEJO_CONTADOR.txt                      3920 bytes
+      SALIDA_V177_T1C_COTEJO_176.txt                           5816 bytes
+      SALIDA_V177_T1D_COTEJO_MIS_CLONES.txt                   22329 bytes
+      SALIDA_V178_COTEJO_MIS_CLONES.txt                        6337 bytes
+      SALIDA_V178_T1C_COTEJO_176.txt                           4741 bytes
+      SALIDA_V178_T4_COTEJO_VARA.txt                           2840 bytes
+      SALIDA_V179_COTEJO_ARCHIVO.txt                            584 bytes
+      SALIDA_V179_COTEJO_MIS_CLONES.txt                       31299 bytes
+      SALIDA_V182_COTEJO_CLON_APERTURA.txt                    31084 bytes
+      SALIDA_V182_COTEJO_CLON_ESQUELETO.txt                    6030 bytes
+      SALIDA_V182_T5_COTEJO_CLON_BATERIA.txt                   7017 bytes
+      SALIDA_V183_T1B_COTEJO_CLON_APERTURA.txt                37617 bytes
+      SALIDA_V183_T1F_COTEJO_CLON.txt                          7878 bytes
+      SALIDA_V184_COTEJO_DE_CLONES.txt                        24487 bytes
+      SALIDA_V185_COTEJO_DE_CLONES.txt                        42081 bytes
+      SALIDA_V185_T1D_COTEJO_QUIEN_SELLO.txt                   2602 bytes
+      SALIDA_V186_COTEJO_DE_CLONES.txt                        49804 bytes
+      SALIDA_V187_COTEJO_DE_CLONES.txt                        56638 bytes
+      SALIDA_V188_COTEJO_DE_CLONES.txt                        21965 bytes
+      SALIDA_V189_T2_COTEJO_CLON.txt                           3022 bytes
+      SALIDA_V190_T3_COTEJO_CLON.txt                          14332 bytes
+      SALIDA_V190_T4_COTEJO.txt                               20783 bytes
+      SALIDA_V191_T2_COTEJO.txt                                6851 bytes
+      SALIDA_V60_COTEJO_INSUMO.txt                            10229 bytes
+      SALIDA_V62_COTEJO_INSUMO.txt                             4435 bytes
+      SALIDA_V62_COTEJO_INSUMO_B.txt                           2362 bytes
+      SALIDA_V68_COTEJO_CITAS_REPORTE.txt                      1359 bytes
+      _auditor_v155_cotejo_t3.txt                               266 bytes
+      _auditor_v182_cotejo_ciega.txt                           6828 bytes
+      _auditor_v183_cotejo_ciega.txt                           2168 bytes
+      _auditor_v184_cotejo_ciega.txt                           1332 bytes
+      _auditor_v189b_cotejo.txt                                 460 bytes
+      _auditor_v190_cotejo.txt                                 1788 bytes
+      _auditor_v190_cotejo_ciega.txt                           1066 bytes
+      _auditor_v191_cotejo_ciega.txt                          12308 bytes
+      _auditor_v62_cotejo_varas.txt                            1563 bytes
+      _auditor_v76_cotejos.txt                                 1172 bytes
+      _auditor_v90_cotejo_escritura.txt                         383 bytes
+      _auditor_v91_cotejo.txt                                  1692 bytes
+      _auditor_v91_cotejo2.txt                                  185 bytes
+      _auditor_v92_cotejo_87.txt                                316 bytes
+
+C) LA REGLA DE NOMBRE, AUDITADA: LOS FICHEROS DE docs/loop/ QUE DICEN
+   `DISCREPA` Y QUE LA REGLA 1 DEJA FUERA
+   CIFRA ficheros que dicen DISCREPA y no llevan COTEJO en el nombre: 10
+      ACTA_AUDITOR.md                                        29 apariciones de DISCREPA
+      SALIDA_V35_PARES_OPD03.txt                              1 apariciones de DISCREPA
+      _auditor_v157_ciega_reveal.txt                         10 apariciones de DISCREPA
+      _auditor_v159_ciega_destape.txt                         2 apariciones de DISCREPA
+      _auditor_v160_destape.txt                               1 apariciones de DISCREPA
+      _auditor_v162_ciega_reveal.txt                          1 apariciones de DISCREPA
+      _auditor_v188_apertura_toques.txt                       1 apariciones de DISCREPA
+      _auditor_v188_rutas.txt                                 1 apariciones de DISCREPA
+      _auditor_v189_apertura_toques.txt                       1 apariciones de DISCREPA
+      _auditor_v91_vara_direccion.txt                         1 apariciones de DISCREPA
+   (van nombrados para que la eleccion del candidato tambien se pueda
+    discutir. NO entran: la regla 1 es la que es y no se ensancha despues
+    de mirar)
+
+D) LA REGLA 2 SOBRE CADA CANDIDATO: QUIEN ENTRA Y QUIEN NO
+   ENTRA SALIDA_V190_T4_COTEJO.txt                           10 discrepantes |  20 coincidentes | 0 lineas rechazadas
+   ENTRA SALIDA_V191_T2_COTEJO.txt                            7 discrepantes |  23 coincidentes | 0 lineas rechazadas
+   ENTRA _auditor_v155_cotejo_t3.txt                          1 discrepantes |   0 coincidentes | 0 lineas rechazadas
+   ENTRA _auditor_v182_cotejo_ciega.txt                       6 discrepantes |  24 coincidentes | 0 lineas rechazadas
+   ENTRA _auditor_v189b_cotejo.txt                            6 discrepantes |   0 coincidentes | 0 lineas rechazadas
+   ENTRA _auditor_v191_cotejo_ciega.txt                       9 discrepantes |  21 coincidentes | 0 lineas rechazadas
+
+   LOS QUE QUEDAN FUERA, NOMBRADOS CON SU MOTIVO:
+      SALIDA_V162_T2A_COTEJO.txt                           no trae ninguna linea legible por la regla 2
+      SALIDA_V163_T5A_COTEJO.txt                           no trae ninguna linea legible por la regla 2
+      SALIDA_V164_T2A_COTEJO_CONTADOR.txt                  no trae ninguna linea legible por la regla 2
+      SALIDA_V177_T1C_COTEJO_176.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V177_T1D_COTEJO_MIS_CLONES.txt                no trae ninguna linea legible por la regla 2
+      SALIDA_V178_COTEJO_MIS_CLONES.txt                    no trae ninguna linea legible por la regla 2
+      SALIDA_V178_T1C_COTEJO_176.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V178_T4_COTEJO_VARA.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V179_COTEJO_ARCHIVO.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V179_COTEJO_MIS_CLONES.txt                    no trae ninguna linea legible por la regla 2
+      SALIDA_V182_COTEJO_CLON_APERTURA.txt                 no trae ninguna linea legible por la regla 2
+      SALIDA_V182_COTEJO_CLON_ESQUELETO.txt                no trae ninguna linea legible por la regla 2
+      SALIDA_V182_T5_COTEJO_CLON_BATERIA.txt               no trae ninguna linea legible por la regla 2
+      SALIDA_V183_T1B_COTEJO_CLON_APERTURA.txt             no trae ninguna linea legible por la regla 2
+      SALIDA_V183_T1F_COTEJO_CLON.txt                      no trae ninguna linea legible por la regla 2
+      SALIDA_V184_COTEJO_DE_CLONES.txt                     no trae ninguna linea legible por la regla 2
+      SALIDA_V185_COTEJO_DE_CLONES.txt                     no trae ninguna linea legible por la regla 2
+      SALIDA_V185_T1D_COTEJO_QUIEN_SELLO.txt               no trae ninguna linea legible por la regla 2
+      SALIDA_V186_COTEJO_DE_CLONES.txt                     no trae ninguna linea legible por la regla 2
+      SALIDA_V187_COTEJO_DE_CLONES.txt                     no trae ninguna linea legible por la regla 2
+      SALIDA_V188_COTEJO_DE_CLONES.txt                     no trae ninguna linea legible por la regla 2
+      SALIDA_V189_T2_COTEJO_CLON.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V190_T3_COTEJO_CLON.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V60_COTEJO_INSUMO.txt                         no trae ninguna linea legible por la regla 2
+      SALIDA_V62_COTEJO_INSUMO.txt                         no trae ninguna linea legible por la regla 2
+      SALIDA_V62_COTEJO_INSUMO_B.txt                       no trae ninguna linea legible por la regla 2
+      SALIDA_V68_COTEJO_CITAS_REPORTE.txt                  no trae ninguna linea legible por la regla 2
+      _auditor_v183_cotejo_ciega.txt                       no trae ninguna linea legible por la regla 2
+      _auditor_v184_cotejo_ciega.txt                       no trae ninguna linea legible por la regla 2
+      _auditor_v190_cotejo.txt                             no trae ninguna linea legible por la regla 2
+      _auditor_v190_cotejo_ciega.txt                       no trae ninguna linea legible por la regla 2
+      _auditor_v62_cotejo_varas.txt                        no trae ninguna linea legible por la regla 2
+      _auditor_v76_cotejos.txt                             no trae ninguna linea legible por la regla 2
+      _auditor_v90_cotejo_escritura.txt                    no trae ninguna linea legible por la regla 2
+      _auditor_v91_cotejo.txt                              no trae ninguna linea legible por la regla 2
+      _auditor_v91_cotejo2.txt                             no trae ninguna linea legible por la regla 2
+      _auditor_v92_cotejo_87.txt                           no trae ninguna linea legible por la regla 2
+
+   CIFRA candidatos: 43
+   CIFRA QUE ENTRAN: 6
+   CIFRA QUE QUEDAN FUERA: 37
+   CIFRA lineas con DISCREPA rechazadas por no ser un puesto: 0
+
+E) LAS TRES CIFRAS QUE EL ENCARGO PIDE, JUNTAS
+   1. CIFRA puestos que han TUMBADO alguna vez a un lector: 30
+      33, 199, 201, 648, 716, 871, 872, 904, 963, 1012, 1201, 1366, 1369, 1612, 1812, 1813, 1842, 2422, 2423, 2464, 2656, 2830, 2832, 2909, 3063, 3067, 3086, 3087, 3182, 3183
+   2. CIFRA de esos que llevan 'DISCUTIBLE MARCADO': 6
+      2656, 2830, 2832, 2909, 3063, 3182
+   3. TASA DE LA MARCA EN EL ARCHIVO ENTERO: 427 de 3388 = 0.1260 (12.60 por ciento)
+   Y LA COMPARACION, QUE ES PARA LO QUE SIRVEN LAS TRES:
+      tasa de la marca entre los que TUMBAN: 0.2000 (20.00 por ciento)
+      tasa de la marca en el ARCHIVO ENTERO: 0.1260 (12.60 por ciento)
+      diferencia en puntos porcentuales: +7.40
+
+F) EL DENOMINADOR, HASTA DONDE LA REGLA LO DEJA VER
+   CIFRA puestos declarados COINCIDENTES por la misma regla: 69
+   CIFRA puestos leidos que la regla SI recupera (disc + coin): 96
+   ficheros que entran y NO declaran ningun coincidente (solo listan las
+   discrepancias), o sea donde el denominador NO se recupera:
+      _auditor_v155_cotejo_t3.txt
+      _auditor_v189b_cotejo.txt
+   CIFRA de esos: 2 de 6
+
+G) EL TAMANO DE LA MUESTRA, DICHO EN VOZ ALTA ANTES DE CUALQUIER GLOSA
+   30 puestos que tumbaron a un lector, sobre un archivo de 3388 filas.
+   Eso es el 0.89 por ciento del archivo.
+   NO ALCANZA PARA CONCLUIR, Y ESO ES UN RESULTADO Y SE ESCRIBE COMO
+   TAL. Con 30 casos, una diferencia de tasas no distingue una
+   tendencia de un accidente de muestreo, y esta medicion NO afirma
+   ninguna. Lo que si queda es la CIFRA, el UNIVERSO y la REGLA, para
+   que la proxima vuelta que quiera concluir sepa de donde parte.
+
+H) EL ARCHIVO, REMEDIDO AL SALIR. NO SE ESCRIBIO NI UNA FILA.
+   disco 4054129 bytes | LF 4054129 bytes | sha256 LF 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   IDENTICO AL DE LA ENTRADA: SI
+
+FIN
