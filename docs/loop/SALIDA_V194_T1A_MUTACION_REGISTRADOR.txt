@@ -1,0 +1,65 @@
+==============================================================================
+VUELTA 194, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR
+==============================================================================
+
+A) `hallazgos_en_titular()` SOBRE UN ACTA FABRICADA CON TRES TITULARES
+   encuentra los TRES titulares y no el de negrita                VERDE
+   y sus claves salen en orden                                    VERDE
+   el titulo es lo que dice el titular, sin el cuerpo             VERDE
+   y las comillas inversas del titulo no lo cortan                VERDE
+   LA MUTACION: los DOS lectores heredados sobre el MISMO texto tienen que
+   dar CERO. Si dieran otra cosa, el lector nuevo seria un ensanche y no un
+   anadido, y la cifra que se publica al lado no diria nada.
+   claves_de_adjudicacion sobre el fabricado da cero              VERDE
+   claves_entrecomilladas sobre el fabricado da cero              VERDE
+
+B) `caidas_propias_entrecomilladas()` SOBRE UNA SECCION FABRICADA
+   lee las DOS que ABREN parrafo                                  VERDE
+   LA MUTACION: una clave NOMBRADA en el cuerpo no es una caida declarada.
+   Si el lector la contara, la cifra del cuerpo saldria 3 y el descuadre
+   contra la tabla seria un artefacto del lector y no del acta.
+   y NO cuenta la que solo se nombra en el cuerpo                 VERDE
+   la especie sale del parrafo y no se supone                     VERDE
+
+B.2) LA MARCA DE ESPECIE QUE ESTA ACTA ESTRENA, Y LA PARADA SE CONSERVA
+   LA MUTACION: con el vocabulario de la 193 esta caida sale SIN ESPECIE, y
+   con cero especies el registrador PARA. Si la marca nueva no mordiera, la
+   parada seria falsa; si la parada se hubiera quitado, una caida sin
+   especie pasaria por buena.
+   con el vocabulario de la 193 sale SIN ESPECIE                  VERDE
+   con el vocabulario de la 194 sale con SU especie               VERDE
+   y una caida muda sigue saliendo SIN ESPECIE con el nuevo       VERDE
+   las viejas siguen mordiendo con el vocabulario nuevo           VERDE
+
+C) `nota_de_la_fila_de_puestos()` BUSCA LAS DOS Y NO PARAFRASEA NINGUNA
+   la heredada NO esta y se dice que no esta                      VERDE
+   la nueva SI esta                                               VERDE
+   y el literal que se publica es el que la fila trae             VERDE
+   LA MUTACION: con otra caja, la nota sigue mordiendo y el literal que se
+   publica cambia. Exigirla caracter a caracter haria PARAR por una
+   mayuscula, que es lo contrario de lo que la guarda existe para cazar.
+   en minusculas muerde igual                                     VERDE
+   y el literal publicado es el de la fila                        VERDE
+   pero `tal cual` dice NO, que es la otra mitad del dato         VERDE
+
+D) `entrada_publica_las_dos()`, LA GUARDA QUE SUSTITUYE A LA PARADA VIEJA
+      | la fila de cotejo con LAS DOS cifras ('| caidas propias del auditor | 2 | 1 |') esta en la entrada: SI
+      | la entrada DECLARA el descuadre ('LA PRIMERA FILA NO CALZA'): SI
+   con las dos cifras Y el descuadre declarado, VERDE             VERDE
+   LA MUTACION 1: la misma entrada SIN la frase que declara el descuadre
+   una discrepancia callada CAE                                   VERDE
+   LA MUTACION 2: la entrada que publica UNA sola cifra en su fila
+   publicar solo la del cuerpo CAE                                VERDE
+   LA MUTACION 3: sin descuadre, la guarda solo exige la fila de cotejo
+   sin descuadre y con su fila, VERDE                             VERDE
+   sin descuadre pero SIN la fila de cotejo, CAE                  VERDE
+
+E) `titulo_de_la_entrada()` NOMBRA EL ACTA 194 Y NO OTRA
+   el titulo cierra con `del acta de la vuelta 194`               VERDE
+   LA MUTACION: la maquina de la 192 cierra con SU vuelta, y por eso no se
+   delega. La marca de idempotencia de la casa es esa frase literal.
+   la heredada nombraria el acta 192                              VERDE
+   y las dos frases NO son la misma                               VERDE
+
+CIFRA casos: 27 | pasan: 27 | fallan: 0
+VEREDICTO: VERDE
