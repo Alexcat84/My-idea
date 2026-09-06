@@ -1,0 +1,65 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL REGISTRADOR DEL ACTA 189
+==============================================================================
+
+A) EL ACOTADO DEL ACTA SOBRE UN TEXTO FABRICADO
+   error de acotado                                           obtenido None                   esperado None                   -> PASA
+   el acta empieza en la linea 1                              obtenido 1                      esperado 1                      -> PASA
+   LA MUTACION: se pide una cabecera que el texto NO trae, y tiene que PARAR
+      LA MUTACION CAE, y su texto es: PARADA: '# ACTA DEL AUDITOR, VUELTA 999' aparece 0 veces.
+
+B) LAS ADJUDICACIONES, CONTADAS CON LOS DOS PATRONES SOBRE EL FABRICADO
+   patron SIN comillas sobre 3 fabricadas                     obtenido 3                      esperado 3                      -> PASA
+   patron CON comillas sobre 3 fabricadas                     obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION: el esperado del patron suelto se cambia a 4 y tiene que CAER
+      LA MUTACION CAE: 3 no es 4.
+
+C) LA ATRIBUCION DE LAS CAIDAS, CON LOS DOS VOCABULARIOS Y LOS TRES CASOS
+   cabecera al modo 189 (MIAS + CERO del ejecutor)            obtenido (0, 2, 0)              esperado (0, 2, 0)              -> PASA
+   cabecera al modo 188 (LAS SUYAS)                           obtenido (2, 0, 0)              esperado (2, 0, 0)              -> PASA
+   cabecera que no dice de quien son                          obtenido (0, 0, 2)              esperado (0, 0, 2)              -> PASA
+   Y EL VOCABULARIO VIEJO SOBRE LA CABECERA DEL 189, QUE ES EL QUE SE EQUIVOCA:
+   vocabulario de la 188 sobre la cabecera de la 189          obtenido (2, 0, 0)              esperado (2, 0, 0)              -> PASA
+   LA MUTACION: se le quita la marca de CERO DECLARADO al vocabulario nuevo
+   sobre la cabecera del 189, y el reparto TIENE QUE cambiar de (0,2,0)
+      LA MUTACION CAE: sin ella sale (2, 0, 0) en vez de (0, 2, 0).
+   Y LA PARADA SE CONSERVA ENTERA: la cabecera muda deja 2 huerfana(s), y una
+   caida huerfana no se reparte a ojo: hace PARADA.
+
+D) LA DECLARACION DEL CERO DEL EJECUTOR, QUE NO SE PUBLICA DESNUDO
+   con la declaracion del cero                                obtenido 1                      esperado 1                      -> PASA
+   SIN la declaracion del cero                                obtenido 0                      esperado 0                      -> PASA
+   LA MUTACION: el acta SIN declaracion tiene que dar 0 y por eso el
+   instrumento hace PARADA en vez de publicar un cero desnudo.
+
+E) LA IDEMPOTENCIA, SOBRE SEDES FABRICADAS: ESCRIBIR DOS VECES TIENE QUE CAER
+   sede sin la entrada -> se puede escribir                   obtenido 0                      esperado 0                      -> PASA
+   sede CON la entrada -> ya no se escribe                    obtenido 2                      esperado 2                      -> PASA
+   LA SEGUNDA ESCRITURA, SIMULADA: se intenta escribir otra vez sobre la sede
+   que ya la tiene, y el instrumento TIENE QUE NEGARSE.
+      LA MUTACION CAE: la segunda escritura queda prohibida, con 2
+      linea(s) de prueba: fabricada/A.md:3 'del acta de la vuelta 189'; fabricada/A.md:5 '(Acta del auditor, vuelta 189,'
+   Y LA COMPROBACION VIEJA, LA DEL REGISTRADOR DE LA 188, SOBRE LA MISMA SEDE:
+   pregunta si `## R.<siguiente>.` ya esta, y `<siguiente>` no existe todavia.
+   la comprobacion por NUMERO ve la entrada                   obtenido False                  esperado False                  -> PASA
+      POR ESO DUPLICABA: la vieja dice que NO esta y la nueva dice que SI.
+
+F) EL REGISTRADOR DE LA 188, RE CORRIDO SOBRE EL REPO DE VERDAD, SIN CORRERLO
+   (no se corre: se mide su linea 1348 y se comprueba que el acta 188 SI
+    tiene entrada, o sea que un re corrido suyo escribiria una duplicada)
+   el acta 188 YA tiene entrada en la serie                   obtenido True                   esperado True                   -> PASA
+      docs/PENDIENTES.md:13583 '## R.50. Registro de las seis adjudicaciones numeradas, los tres numerales de la seccion'
+      docs/PENDIENTES.md:13585 '(Acta del auditor, vuelta 188, secciones 4, 5, 6, 7, 8, 9, 10, 11, 12 y 13;'
+
+G) LAS ETIQUETAS `LD-nn`, SOBRE UN TEXTO FABRICADO Y SOBRE EL DE VERDAD
+   distintas sobre el fabricado                               obtenido 4                      esperado 4                      -> PASA
+   maxima sobre el fabricado                                  obtenido 'LD-154'               esperado 'LD-154'               -> PASA
+   LA MUTACION: el esperado de la maxima se cambia a `LD-98` y tiene que CAER
+      LA MUTACION CAE: la maxima es LD-154 y no LD-98, que es EXACTAMENTE la
+      especie de la cifra falsa que el acta 188 publico.
+
+==============================================================================
+CIFRA casos: los de arriba, uno por linea con PASA o CAE
+CIFRA casos que CAEN: 0
+CIFRA mutaciones que NO cayeron (y deberian): 0
+VEREDICTO: VERDE
