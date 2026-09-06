@@ -1,0 +1,49 @@
+==============================================================================
+VUELTA 193, TAREA 5.d: EL COTEJO DEL AUDITOR, RE ESCRITO CON EL
+INSTRUMENTO ARREGLADO
+==============================================================================
+
+A) EL FICHERO DEL AUDITOR, LEIDO Y NO TOCADO
+   docs/loop/_auditor_v193_cotejo.txt -> disco 2227 bytes
+   CIFRA filas legibles: 30
+   su propia guarda del denominador: declarado 30 | contado 30 | declarado y contado calzan
+
+B) LAS FILAS, RE ARMADAS CON `en dudosos` COMO TEXTO `si` / `no`
+   (ES EL CAMINO QUE REVENTABA, A PROPOSITO: el auditor llamo a la columna
+    con las formas que el docstring del formato especifica, y esas son
+    justo las que `bool()` convertia todas en `si`)
+   CIFRA filas con `si` en texto: 13
+   CIFRA filas con `no` en texto: 17
+
+C) EL CAMINO VIEJO, CORRIDO AQUI PARA QUE LA DIFERENCIA SEA UNA MEDICION
+   `bool()` sobre los 30 textos da `si` en 30 de 30
+   con esa lectura, las discrepancias FUERA de los dudosos serian: 0 (ninguna)
+   Y ESA ES LA CIFRA QUE EL INSTRUMENTO LE PUBLICO AL AUDITOR.
+
+D) EL CAMINO DE HOY, CON `normalizar_en_dudosos()`
+   ESCRITO: docs/loop/SALIDA_V193_T5D_COTEJO_AUDITOR_REHECHO.txt
+      disco 2327 bytes | LF 2327 bytes
+      RELEIDO DEL DISCO Y PASADO POR SU PROPIA GUARDA:
+         denominador declarado: 30 | filas contadas: 30
+         declarado y contado calzan -> VERDE
+         LA COLUMNA `en dudosos`, RELEIDA Y COTEJADA CONTRA LA QUE
+         SE PASO (y no solo el denominador, que es conteo de filas):
+            CIFRA puestos con `en dudosos` torcido al escribir: 0 (ninguno)
+            CIFRA puestos que no volvieron del disco: 0 (ninguno)
+            CIFRA `si` en el fichero: 13 | CIFRA `no`: 17
+
+E) LAS CIFRAS, COTEJADAS CONTRA LO QUE EL AUDITOR PUBLICA A MANO
+   total        obtenido 30   esperado 30   -> CALZA
+   coinciden    obtenido 25   esperado 25   -> CALZA
+   discrepan    obtenido 5    esperado 5    -> CALZA
+   disc_dentro  obtenido [965, 1068, 1814]      esperado [965, 1068, 1814]      -> CALZA
+   disc_fuera   obtenido [1804, 2833]           esperado [1804, 2833]           -> CALZA
+   CIFRA en los dudosos del lector: 13
+
+F) LA MUTACION QUE SEPARA LOS DOS CAMINOS
+   LA MUTACION CAE: el camino viejo publica 0 discrepancias FUERA y
+   el de hoy publica 2 (1804, 2833). La regla de parada de AUDITOR.md 1.2
+   cuelga de esa cifra, asi que el camino viejo publicaba un VERDE
+   donde habia una escalada.
+
+VEREDICTO: VERDE

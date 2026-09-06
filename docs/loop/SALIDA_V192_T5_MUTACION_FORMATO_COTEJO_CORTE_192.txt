@@ -1,0 +1,42 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DEL FORMATO UNICO DEL COTEJO DE CIEGA
+==============================================================================
+
+LO QUE SE PRUEBA: que `denominador()` CAE cuando el cotejo no permite
+recuperar sobre cuantos pares se midio. Los textos se FABRICAN aqui, con
+la cifra sabida por construccion, y el valor esperado NO es una constante
+igual a la obtenida.
+
+A) UN COTEJO BIEN FORMADO, CON TRES FILAS
+   denominador() sale VERDE                                         VERDE
+   declarado y contado son los dos 3                                VERDE
+   filas_del_cotejo() recupera las tres                             VERDE
+   el veredicto se computa y no se teclea                           VERDE
+
+B) LA MUTACION QUE EL ENCARGO PIDE: UN COTEJO QUE SOLO LISTA LAS
+   DISCREPANCIAS. Es la forma de dos de los seis ficheros que hoy entran
+   en la medicion, y por eso su denominador no se sabe.
+   denominador() CAE sobre el cotejo mutilado                       VERDE
+   y dice que declarado (3) y contado (1) no calzan                 VERDE
+
+C) LA MUTACION SIN LA LINEA DEL DENOMINADOR EN LA CABECERA
+   denominador() CAE sin la linea declarada                         VERDE
+   y el motivo nombra la linea que falta                            VERDE
+
+D) LA MUTACION SIN LA MARCA DE FORMATO
+   denominador() CAE sin la marca de formato                        VERDE
+
+E) LA MUTACION CON LA TABLA VACIA
+   denominador() CAE con cero filas                                 VERDE
+
+F) LA MUTACION QUE FALSEA EL DENOMINADOR DECLARADO
+   denominador() CAE si la cabecera miente                          VERDE
+   y publica las dos cifras, 30 declarada y 3 contada               VERDE
+
+G) `veredicto_de` NO NORMALIZA MAS QUE LA CAJA, PARA QUE UNA CLASE RARA
+   SALGA A LA VISTA EN VEZ DE RESOLVERSE EN SILENCIO
+   'a' contra 'A' COINCIDE                                          VERDE
+   'A' contra 'D' DISCREPA                                          VERDE
+   'AB' contra 'A' DISCREPA                                         VERDE
+
+VEREDICTO: VERDE

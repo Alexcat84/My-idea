@@ -39,4 +39,54 @@ G) `veredicto_de` NO NORMALIZA MAS QUE LA CAJA, PARA QUE UNA CLASE RARA
    'A' contra 'D' DISCREPA                                          VERDE
    'AB' contra 'A' DISCREPA                                         VERDE
 
+H) LA COLUMNA `en dudosos` SE NORMALIZA O CAE, Y NO SE RESUELVE EN
+   SILENCIO (vuelta 193, TAREA 5.c; hallazgo 5.2 del acta 193)
+   LA CAIDA QUE ESTO CIERRA, DICHA CON SU CIFRA: la version vieja hacia
+   `bool(du)`, y `bool("no")` es True. Un auditor escribio la columna con
+   las formas que el propio docstring de este fichero especifica, `si` y
+   `no`, y el instrumento le publico `discrepancias FUERA de los dudosos:
+   0 (ninguna)` TENIENDO DOS.
+
+   LA MUTACION QUE MANDA: se fabrica un cotejo con `no` en TEXTO en el
+   puesto que DISCREPA. Con la version vieja ese `no` se volvia `si` y la
+   discrepancia salia DENTRO de los dudosos; con esta tiene que salir
+   FUERA. Los dos caminos se corren y se publican los dos.
+      con `no` en TEXTO, la version de HOY dice:
+         dudosos 1 | DENTRO [] | FUERA [2]
+   el `no` en texto NO se convierte en `si`                         VERDE
+   y la discrepancia sale FUERA de los dudosos, que es donde va     VERDE
+   Y EL CAMINO VIEJO, CORRIDO AQUI PARA QUE LA MUTACION NO SEA UNA
+   AFIRMACION: se aplica `bool()` a los mismos valores, que es lo que la
+   version vieja hacia, y se mira que sale
+      `bool()` sobre ['si', 'no', 'no'] da [True, True, True]
+      LA MUTACION CAE: la version vieja marca los TRES como dudosos,
+      incluidos los dos que decian `no`, y la discrepancia del puesto
+      2 le sale DENTRO. La de hoy la saca FUERA.
+   los dos caminos NO dan lo mismo                                  VERDE
+
+   LA MUTACION 2: un valor QUE NO ES NI BOOLEANO NI UNA DE LAS FORMAS
+   ADMITIDAS TIENE QUE LEVANTAR, no volverse `si`
+      'quiza'  -> LEVANTA
+            'quiza' se comporta como debe                           VERDE
+      ''       -> LEVANTA
+            '' se comporta como debe                                VERDE
+      None     -> LEVANTA
+            None se comporta como debe                              VERDE
+      7        -> LEVANTA
+            7 se comporta como debe                                 VERDE
+      []       -> LEVANTA
+            [] se comporta como debe                                VERDE
+      'SI '    -> se lee como True
+            'SI ' se comporta como debe                             VERDE
+      'No'     -> se lee como False
+            'No' se comporta como debe                              VERDE
+   (`SI ` y `No` SI se leen: la caja y los espacios se normalizan, que es
+    lo unico que se normaliza. Lo demas CAE)
+
+   LA MUTACION 3: `cuerpo_del_cotejo()` ENTERO tiene que caer si una fila
+   trae un valor ilegible, en vez de escribir un fichero con la columna
+   inventada
+      LA MUTACION CAE: levanta EnDudososIlegible y nombra el valor.
+      `en dudosos` llego como 'quiza', que no es ni booleano ni una de las f
+
 VEREDICTO: VERDE

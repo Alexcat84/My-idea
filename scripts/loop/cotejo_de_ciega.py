@@ -77,6 +77,61 @@ PAT_FILA = re.compile(
 PAT_DENOM = re.compile(r"^%s:\s*(\d+)\s*$" % re.escape(LINEA_DENOMINADOR))
 
 
+# LAS FORMAS QUE `en dudosos` ADMITE, ESCRITAS ANTES DE MEDIR NADA (vuelta 193,
+# TAREA 5.a; hallazgo 5.2 del acta 193). La lista es CORTA a proposito: se admite
+# el booleano de verdad y las dos formas que el propio docstring de este fichero
+# especifica para la columna, `si` y `no`. **Todo lo demas CAE**, que es la misma
+# vara que el caso `G` de la mutacion ya le aplica a `veredicto_de`: una clase
+# rara SALE A LA VISTA en vez de resolverse en silencio.
+VALORES_SI = ("si", "s\u00ed", "true", "1")
+VALORES_NO = ("no", "false", "0")
+
+
+class EnDudososIlegible(ValueError):
+    """LA COLUMNA `en dudosos` NO SE PUDO LEER, Y NO SE ADIVINA.
+
+    NACE DE UNA CAIDA MEDIDA Y NO DE UNA PRECAUCION (acta 193, hallazgo `5.2`):
+    `cuerpo_del_cotejo()` hacia `bool(du)`, y **`bool("no")` es `True`**. El
+    docstring de este mismo fichero especifica esa columna como *"`si` o `no`"*,
+    o sea que **la forma que el formato invita a usar era justo la que
+    reventaba**. Un auditor la uso y el instrumento le publico
+    `discrepancias FUERA de los dudosos: 0 (ninguna)` **teniendo DOS**.
+
+    **POR QUE ESTO ES MAS QUE UNA ERRATA:** la columna `en dudosos` es la unica
+    de la que cuelga una regla de PARADA, porque `AUDITOR.md` 1.2 baja el credito
+    de la tanda y encarga la relectura al doble **por lo que cae FUERA**. Un
+    instrumento que silencia esa cifra **publica un verde donde hay una
+    escalada**."""
+
+
+def normalizar_en_dudosos(valor):
+    """`en dudosos` COMO BOOLEANO, O CAE. PURA.
+
+    Admite el booleano de verdad y las formas literales que el formato
+    especifica. **Cualquier otra cosa levanta `EnDudososIlegible`**, y ese es el
+    punto entero: la version vieja aceptaba cualquier cosa y la convertia en
+    `si`. **No se normaliza mas de lo necesario, para que lo raro salga a la
+    vista.**"""
+    if valor is True or valor is False:
+        return valor
+    if isinstance(valor, int):
+        if valor in (0, 1):
+            return bool(valor)
+        raise EnDudososIlegible(
+            "`en dudosos` llego como el entero %r, y solo 0 y 1 se leen" % valor)
+    if isinstance(valor, str):
+        v = valor.strip().lower()
+        if v in VALORES_SI:
+            return True
+        if v in VALORES_NO:
+            return False
+    raise EnDudososIlegible(
+        "`en dudosos` llego como %r, que no es ni booleano ni una de las formas "
+        "que el formato admite (%s / %s). NO SE ADIVINA: la columna de la que "
+        "cuelga la regla de parada de AUDITOR.md 1.2 no se resuelve en silencio."
+        % (valor, "/".join(VALORES_SI), "/".join(VALORES_NO)))
+
+
 def veredicto_de(clase_lector, clase_archivo):
     """COINCIDE O DISCREPA, COMPUTADO Y NO TECLEADO. PURA.
 
@@ -160,8 +215,13 @@ def cuerpo_del_cotejo(cabecera, filas):
     `filas` son tuplas `(puesto, clase_lector, clase_archivo, en_dudosos)`: el
     veredicto **no se le pasa, se computa**, para que no se pueda teclear uno que
     contradiga a sus dos clases."""
-    completas = [(p, str(cl).upper(), str(ca).upper(), bool(du),
-                  veredicto_de(cl, ca)) for p, cl, ca, du in filas]
+    # `bool(du)` ERA EL FALLO Y AQUI VA SU REMEDIO (vuelta 193, TAREA 5.a):
+    # `bool("no")` es `True`, y el docstring de arriba especifica esta columna
+    # como `si` o `no`. Ahora se NORMALIZA o se CAE, y no se resuelve en
+    # silencio. La excepcion nombra el valor que llego.
+    completas = [(p, str(cl).upper(), str(ca).upper(),
+                  normalizar_en_dudosos(du), veredicto_de(cl, ca))
+                 for p, cl, ca, du in filas]
     r = resumen(completas)
     L = [MARCA_FORMATO, "=" * 78]
     L.extend(cabecera)
@@ -214,6 +274,47 @@ def escribir_cotejo(ruta, cabecera, filas):
            "   RELEIDO DEL DISCO Y PASADO POR SU PROPIA GUARDA:",
            "      denominador declarado: %s | filas contadas: %d" % (dec, cont),
            "      %s -> %s" % (motivo, "VERDE" if ok else "ROJO")]
+
+    # LA SEGUNDA MITAD DE LA GUARDA (vuelta 193, TAREA 5.b). LA PRIMERA MIRABA
+    # SOLO EL DENOMINADOR, Y ESO ES EL CONTEO DE FILAS: sobre el fichero del
+    # auditor de la 193, con las DOS discrepancias de fuera silenciadas, el
+    # denominador calzaba PERFECTAMENTE y la guarda daba VERDE. **Un
+    # denominador correcto sobre una columna falsa sigue siendo un verde
+    # falso.**
+    #
+    # QUE MIRA AHORA: la columna `en dudosos` RELEIDA DEL DISCO contra la que se
+    # le paso, normalizada. Si el fichero escrito dice `si` donde la entrada
+    # decia `no`, esta guarda CAE y nombra los puestos. **Ese es exactamente el
+    # caso que el hallazgo 5.2 describe.**
+    entrada = {}
+    ilegibles = []
+    for p, _cl, _ca, du in filas:
+        try:
+            entrada[int(p)] = normalizar_en_dudosos(du)
+        except EnDudososIlegible as e:
+            ilegibles.append((p, str(e)))
+    del_disco = dict((f[0], f[3]) for f in filas_del_cotejo(releido))
+    torcidos = sorted(p for p, v in entrada.items()
+                      if p in del_disco and del_disco[p] != v)
+    ausentes = sorted(p for p in entrada if p not in del_disco)
+    inf.append("      LA COLUMNA `en dudosos`, RELEIDA Y COTEJADA CONTRA LA QUE")
+    inf.append("      SE PASO (y no solo el denominador, que es conteo de filas):")
+    inf.append("         CIFRA puestos con `en dudosos` torcido al escribir: %d (%s)"
+               % (len(torcidos), ", ".join(str(x) for x in torcidos) or "ninguno"))
+    inf.append("         CIFRA puestos que no volvieron del disco: %d (%s)"
+               % (len(ausentes), ", ".join(str(x) for x in ausentes) or "ninguno"))
+    inf.append("         CIFRA `si` en el fichero: %d | CIFRA `no`: %d"
+               % (len([1 for v in del_disco.values() if v]),
+                  len([1 for v in del_disco.values() if not v])))
+    if ilegibles:
+        inf.append("         CIFRA valores ILEGIBLES en la entrada: %d"
+                   % len(ilegibles))
+        for pp, mot in ilegibles:
+            inf.append("            puesto %s: %s" % (pp, mot))
+    if torcidos or ausentes or ilegibles:
+        ok = False
+        inf.append("      ROJO: la columna de la que cuelga la regla de parada de")
+        inf.append("      AUDITOR.md 1.2 no calza con lo que se paso.")
     return ok, inf
 
 
@@ -301,6 +402,72 @@ def prueba_de_mutacion():
     ok &= _caso(w, "'a' contra 'A' COINCIDE", veredicto_de("a", "A"), "COINCIDE")
     ok &= _caso(w, "'A' contra 'D' DISCREPA", veredicto_de("A", "D"), "DISCREPA")
     ok &= _caso(w, "'AB' contra 'A' DISCREPA", veredicto_de("AB", "A"), "DISCREPA")
+    w("")
+
+    w("H) LA COLUMNA `en dudosos` SE NORMALIZA O CAE, Y NO SE RESUELVE EN")
+    w("   SILENCIO (vuelta 193, TAREA 5.c; hallazgo 5.2 del acta 193)")
+    w("   LA CAIDA QUE ESTO CIERRA, DICHA CON SU CIFRA: la version vieja hacia")
+    w("   `bool(du)`, y `bool(\"no\")` es %r. Un auditor escribio la columna con"
+      % bool("no"))
+    w("   las formas que el propio docstring de este fichero especifica, `si` y")
+    w("   `no`, y el instrumento le publico `discrepancias FUERA de los dudosos:")
+    w("   0 (ninguna)` TENIENDO DOS.")
+    w("")
+    w("   LA MUTACION QUE MANDA: se fabrica un cotejo con `no` en TEXTO en el")
+    w("   puesto que DISCREPA. Con la version vieja ese `no` se volvia `si` y la")
+    w("   discrepancia salia DENTRO de los dudosos; con esta tiene que salir")
+    w("   FUERA. Los dos caminos se corren y se publican los dos.")
+    filas_texto = [(1, "A", "A", "si"), (2, "A", "D", "no"), (3, "D", "D", "no")]
+    bueno_txt = cuerpo_del_cotejo(["cabecera de prueba"], filas_texto)
+    r_txt = resumen(filas_del_cotejo(bueno_txt))
+    w("      con `no` en TEXTO, la version de HOY dice:")
+    w("         dudosos %d | DENTRO %s | FUERA %s"
+      % (r_txt["dudosos"], r_txt["disc_dentro"], r_txt["disc_fuera"]))
+    ok &= _caso(w, "el `no` en texto NO se convierte en `si`", r_txt["dudosos"], 1)
+    ok &= _caso(w, "y la discrepancia sale FUERA de los dudosos, que es donde va",
+                (r_txt["disc_dentro"], r_txt["disc_fuera"]), ([], [2]))
+    w("   Y EL CAMINO VIEJO, CORRIDO AQUI PARA QUE LA MUTACION NO SEA UNA")
+    w("   AFIRMACION: se aplica `bool()` a los mismos valores, que es lo que la")
+    w("   version vieja hacia, y se mira que sale")
+    viejo_bools = [bool(du) for _p, _cl, _ca, du in filas_texto]
+    w("      `bool()` sobre %r da %r"
+      % ([f[3] for f in filas_texto], viejo_bools))
+    if all(viejo_bools):
+        w("      LA MUTACION CAE: la version vieja marca los TRES como dudosos,")
+        w("      incluidos los dos que decian `no`, y la discrepancia del puesto")
+        w("      2 le sale DENTRO. La de hoy la saca FUERA.")
+    else:
+        w("      LA MUTACION NO CAYO: `bool()` ya distinguia `si` de `no`.")
+        ok = False
+    ok &= _caso(w, "los dos caminos NO dan lo mismo",
+                viejo_bools == [f[3] for f in filas_del_cotejo(bueno_txt)], False)
+    w("")
+    w("   LA MUTACION 2: un valor QUE NO ES NI BOOLEANO NI UNA DE LAS FORMAS")
+    w("   ADMITIDAS TIENE QUE LEVANTAR, no volverse `si`")
+    for raro in ("quiza", "", None, 7, [], "SI ", "No"):
+        try:
+            v = normalizar_en_dudosos(raro)
+            cayo = False
+        except EnDudososIlegible:
+            v, cayo = None, True
+        esperado_cae = raro not in ("SI ", "No")
+        w("      %-8r -> %s"
+          % (raro, "LEVANTA" if cayo else "se lee como %r" % v))
+        ok &= _caso(w, "         %r se comporta como debe" % (raro,),
+                    cayo, esperado_cae)
+    w("   (`SI ` y `No` SI se leen: la caja y los espacios se normalizan, que es")
+    w("    lo unico que se normaliza. Lo demas CAE)")
+    w("")
+    w("   LA MUTACION 3: `cuerpo_del_cotejo()` ENTERO tiene que caer si una fila")
+    w("   trae un valor ilegible, en vez de escribir un fichero con la columna")
+    w("   inventada")
+    try:
+        cuerpo_del_cotejo(["x"], [(1, "A", "A", "quiza")])
+        w("      LA MUTACION NO CAYO: escribio el cotejo con un valor ilegible.")
+        ok = False
+    except EnDudososIlegible as e:
+        w("      LA MUTACION CAE: levanta EnDudososIlegible y nombra el valor.")
+        w("      %s" % str(e)[:70])
     w("")
 
     w("VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
