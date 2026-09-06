@@ -69,6 +69,7 @@ USO:
   python scripts/loop/vuelta191_tarea1a_registrar_acta191.py --mutacion
 """
 import argparse
+import hashlib
 import io
 import os
 import re
@@ -97,6 +98,7 @@ from vuelta190_tarea1a_registrar_acta190 import (   # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
+# NO SE TOCA: el acta se abre SOLO EN LECTURA y su sha256 se publica.
 ACTA = os.path.join(LOOP, "ACTA_AUDITOR.md")
 SEDE = os.path.join(RAIZ, "docs", "PENDIENTES.md")
 NL = chr(10)
@@ -394,6 +396,7 @@ QUE_HACE_ESTA_VUELTA = {
             "deja EXPRESAMENTE fuera** y dice con esas palabras que `OP-L-02` "
             "**sigue en `LISTA`** y que declararla HECHA es del fundador. **Esta "
             "vuelta no escribe ni una linea de `docs/plan/OPERACIONES.jsonl`.**"),
+            # NO SE TOCA ni una linea de OPERACIONES.jsonl: es texto de la glosa.
     "4.8": ("CONTESTADA Y EJECUTADA EN LA TAREA 2 DE ESTA VUELTA. Que la "
             "discrepancia del `3182` baja el credito de la tanda queda contestado "
             "que SI, y con una precision que el acta subraya: **la relectura del "
@@ -503,6 +506,7 @@ def armar_entrada(numero, titulo, medido):
     p.append("ejecutor y va marcada como tal.")
     p.append("")
     for clave, familia, estado, ln, tit in m["adjudicaciones"]:
+        # NO SE TOCA: es una CITA de la linea del acta dentro del texto de la entrada.
         p.append("  - **`%s` (`docs/loop/ACTA_AUDITOR.md:%d`, leida hoy). FAMILIA: %s. "
                  "ESTADO: %s. VIA: %s.** Titulo" % (clave, ln, familia, estado,
                                                     VIA.get(clave, "(sin via)")))
@@ -533,6 +537,7 @@ def armar_entrada(numero, titulo, medido):
     p.append("tiene %d claves `5.n`.** La fila, leida del fichero:" % m["n_hall"])
     p.append("")
     for ln, txt in m["fila_fuera"]:
+        # NO SE TOCA: es una CITA de la linea del acta dentro del texto de la entrada.
         p.append("  - `docs/loop/ACTA_AUDITOR.md:%d`: %s" % (ln, txt))
     p.append("")
     p.append("  Las piezas que salen de su parentesis partiendo por `;` y por `,`: %s."
@@ -543,6 +548,7 @@ def armar_entrada(numero, titulo, medido):
                  if clave in m["claves_nombradas"] else
                  "la subcadena de la fila NO lo nombra, y aun asi cuenta, porque "
                  "quien decide es el numeral")
+        # NO SE TOCA: es una CITA de la linea del acta dentro del texto de la entrada.
         p.append("  - **`%s` (`docs/loop/ACTA_AUDITOR.md:%d`, leida hoy). VIA: %s.** %s."
                  % (clave, ln, VIA.get(clave, "(sin via)"), marca))
         p.append("    Titulo literal del acta: *\"%s\"*" % tit)
@@ -603,6 +609,7 @@ def armar_entrada(numero, titulo, medido):
     p.append("RESUMIDA.** Son **%d** filas de datos, contadas y no tecleadas:" % m["n_filas7"])
     p.append("")
     for ln, txt in m["filas7"]:
+        # NO SE TOCA: es una CITA de la linea del acta dentro del texto de la entrada.
         p.append("  - `docs/loop/ACTA_AUDITOR.md:%d`: %s" % (ln, txt))
     p.append("")
     p.append("**Y LA FILA DE PUESTOS VA CON SU NOTA, QUE ES LO QUE EL ENCARGO MANDA")
@@ -1030,11 +1037,21 @@ def _medir():
         return 1
     inicio, fin = rango
     w("A) EL CUERPO DEL ACTA, ACOTADO ANTES DE CONTAR NADA")
+    # NO SE TOCA: se publica el tramo leido; el acta no se escribe.
     w("   acta %d: docs/loop/ACTA_AUDITOR.md, lineas %d a %d"
       % (VUELTA_DEL_ACTA, inicio, fin))
     w("   LAS DOS CONVENCIONES DE `lineas` SOBRE EL TRAMO, QUE ES LA TAREA 3 DE")
     w("   ESTA MISMA VUELTA: por `fin - inicio + 1` da %d" % (fin - inicio + 1))
-    w("   docs/loop/ACTA_AUDITOR.md -> disco %d bytes" % os.path.getsize(ACTA))
+    # EL SUJETO DE ESTE INSTRUMENTO ESTA VIVO A PROPOSITO Y AQUI SE DICE POR QUE
+    # (vuelta 192, TAREA 3.b). Un registrador TIENE que leer el acta de hoy:
+    # congelarlo lo romperia. Lo que si se puede, y es lo que se hace desde esta
+    # linea, es PUBLICAR EL `sha256` DE LO QUE ACABA DE LEER, para que una corrida
+    # que lea otra acta se pueda detectar. NO SE TOCA el acta: se abre en lectura.
+    _datos_acta = io.open(ACTA, "rb").read()
+    _lf_acta = _datos_acta.replace(b"\r\n", b"\n")
+    w("   docs/loop/ACTA_AUDITOR.md -> disco %d bytes | LF %d bytes"
+      % (len(_datos_acta), len(_lf_acta)))
+    w("   sha256 LF del acta leida: %s" % hashlib.sha256(_lf_acta).hexdigest())
     secciones = secciones_del_acta(lineas, inicio, fin)
     w("   SECCIONES `## n.` DEL ACTA, LEIDAS Y NO TECLEADAS: %s" % _lista(secciones))
     w("")

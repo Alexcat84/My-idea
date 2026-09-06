@@ -1,0 +1,172 @@
+==============================================================================
+VUELTA 192, TAREA 3.a y 3.c: LA GUARDA DEL SUJETO CONGELADO SOBRE LOS
+ARNESES DE LA 191, CORRIDA POR EL EJECUTOR
+==============================================================================
+
+EL COMANDO, PUBLICADO PARA QUE SE PUEDA CONTRADECIR:
+   VMV.guarda_del_sujeto_congelado_separada(nomina=[(n, True) for n in
+                                            los_ficheros_vuelta191])
+   con VMV = scripts/loop/verificar_mutaciones_viejas.py, importado y no
+   copiado, y la nomina pasada POR PARAMETRO sin tocar `VIEJAS`.
+
+A) LOS ARNESES DE LA 191, DESCUBIERTOS POR PATRON Y NO TECLEADOS
+   patron: '^vuelta191_.*\\.py$'
+   CIFRA ficheros que casan: 12 (el acta 192 dice DOCE)
+      vuelta191_apertura.py                                   27826 bytes
+      vuelta191_cierre.py                                      3436 bytes
+      vuelta191_esqueleto_reporte.py                          25202 bytes
+      vuelta191_tarea1a_registrar_acta191.py                  79940 bytes
+      vuelta191_tarea2_relectura_al_doble.py                  14082 bytes
+      vuelta191_tarea2b_cotejo.py                              9862 bytes
+      vuelta191_tarea3_arreglar_lineas.py                     15977 bytes
+      vuelta191_tarea3_censo.py                                6121 bytes
+      vuelta191_tarea3_mutacion_lineas.py                     11297 bytes
+      vuelta191_tarea4_mutacion_veredicto.py                  11421 bytes
+      vuelta191_tarea5_marca_contra_dificultad.py             12795 bytes
+      vuelta191_tarea6_mutacion_bloque_tallado.py              8353 bytes
+
+B) LA NOMINA DE HOY, QUE ESTA VUELTA NO TOCA
+   CIFRA entradas de VMV.VIEJAS: 127 (el acta 192 dice 127)
+   nomina de hoy -> sujeto_vivo  0
+   nomina de hoy -> con_motivo   3
+      vuelta186_tarea2c_mutacion_cierre_tardio.py   NO DECIDIBLE
+      vuelta187_tarea4_mutacion_dos_convenciones.py   NO DECIDIBLE
+      vuelta188_tarea4_mutacion_cobertura_parejas.py   NO DECIDIBLE
+   nomina de hoy -> sin_motivo   0
+   el acta 192 dice `sujeto_vivo 0` y `sin_motivo 0` sobre la nomina: CALZA
+
+C) LAS TRES LISTAS SOBRE LOS DOCE ARNESES DE LA 191, CON SUS NOMBRES
+   CIFRA SUJETO VIVO (es FALLO, no deuda: 4.4 del acta 191): 0
+      (ninguna, y el cero va escrito)
+   CIFRA NO DECIDIBLE CON MOTIVO ESCRITO (deuda declarada): 2
+      vuelta191_tarea1a_registrar_acta191.py
+         huellas de vivo: OPERACIONES.jsonl, ACTA_AUDITOR.md
+         linea 32    huella ACTA_AUDITOR.md              marcas: SHA256, NO SE TOCA
+         linea 328   huella OPERACIONES.jsonl            marcas: NO SE TOCA
+         linea 329   huella OPERACIONES.jsonl            marcas: NO SE TOCA
+         linea 440   huella ACTA_AUDITOR.md              marcas: NO SE TOCA
+         linea 471   huella ACTA_AUDITOR.md              marcas: NO SE TOCA
+         linea 482   huella ACTA_AUDITOR.md              marcas: NO SE TOCA
+         linea 543   huella ACTA_AUDITOR.md              marcas: NO SE TOCA
+         linea 971   huella ACTA_AUDITOR.md              marcas: NO SE TOCA, NO SE ESCRIBE
+         linea 982   huella ACTA_AUDITOR.md              marcas: SHA256, NO SE TOCA
+      vuelta191_tarea2b_cotejo.py
+         huellas de vivo: INTRA_DOMINIO_VEREDICTOS.jsonl
+         linea 212   huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256, NO SE TOCA
+         linea 213   huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256, NO SE TOCA
+   CIFRA NO DECIDIBLE SIN MOTIVO ESCRITO (deuda sin declarar): 6
+      vuelta191_apertura.py
+         huellas de vivo: REPORTE.md, INTRA_DOMINIO_VEREDICTOS.jsonl, OPERACIONES.jsonl, master_graph.json, ACTA_AUDITOR.md, LECTURAS_DIRIGIDAS.md
+         linea 37    huella master_graph.json            marcas: (NINGUNA)
+         linea 38    huella REPORTE.md                   marcas: (NINGUNA)
+         linea 39    huella ACTA_AUDITOR.md              marcas: (NINGUNA)
+         linea 68    huella OPERACIONES.jsonl            marcas: (NINGUNA)
+         linea 70    huella LECTURAS_DIRIGIDAS.md        marcas: (NINGUNA)
+         linea 72    huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: (NINGUNA)
+         linea 287   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 322   huella ACTA_AUDITOR.md              marcas: (NINGUNA)
+         linea 327   huella ACTA_AUDITOR.md              marcas: (NINGUNA)
+         linea 504   huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256
+         linea 506   huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256
+      vuelta191_esqueleto_reporte.py
+         huellas de vivo: REPORTE.md, INTRA_DOMINIO_VEREDICTOS.jsonl
+         linea 26    huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: COMMIT, SHA256, NO SE TOCA, NO SE ESCRIBE
+         linea 67    huella REPORTE.md                   marcas: COMMIT, SHA256
+         linea 78    huella REPORTE.md                   marcas: (NINGUNA)
+         linea 80    huella REPORTE.md                   marcas: (NINGUNA)
+         linea 84    huella REPORTE.md                   marcas: (NINGUNA)
+         linea 85    huella REPORTE.md                   marcas: COMMIT
+         linea 96    huella REPORTE.md                   marcas: COMMIT
+         linea 117   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 122   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 126   huella REPORTE.md                   marcas: NO SE ESCRIBE
+         linea 147   huella REPORTE.md                   marcas: COMMIT
+         linea 148   huella REPORTE.md                   marcas: COMMIT
+         linea 284   huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256, NO SE TOCA
+         linea 357   huella REPORTE.md                   marcas: (NINGUNA)
+      vuelta191_tarea2_relectura_al_doble.py
+         huellas de vivo: INTRA_DOMINIO_VEREDICTOS.jsonl
+         linea 19    huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: (NINGUNA)
+      vuelta191_tarea3_mutacion_lineas.py
+         huellas de vivo: LECTURAS_DIRIGIDAS.md
+         linea 183   huella LECTURAS_DIRIGIDAS.md        marcas: (NINGUNA)
+         linea 192   huella LECTURAS_DIRIGIDAS.md        marcas: (NINGUNA)
+      vuelta191_tarea5_marca_contra_dificultad.py
+         huellas de vivo: INTRA_DOMINIO_VEREDICTOS.jsonl
+         linea 12    huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: (NINGUNA)
+         linea 86    huella INTRA_DOMINIO_VEREDICTOS.jsonl marcas: SHA256
+      vuelta191_tarea6_mutacion_bloque_tallado.py
+         huellas de vivo: REPORTE.md
+         linea 108   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 110   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 115   huella REPORTE.md                   marcas: (NINGUNA)
+         linea 130   huella REPORTE.md                   marcas: (NINGUNA)
+
+   LO QUE EL ACTA 192 DICE Y LO QUE ESTA CORRIDA DA, LAS DOS CIFRAS:
+      sujeto_vivo: el acta dice 2, esta corrida da 0
+      sin_motivo:  el acta dice 6, esta corrida da 6
+   (esta corrida es POSTERIOR a la pieza `b`, que declaro los dos sujetos
+    por sus carriles. La cifra de ANTES, medida en el bloque H.4 del sello
+    de apertura de esta vuelta y ANTES de la primera operacion, fue
+    `sujeto_vivo 2` y `sin_motivo 6`, o sea que el acta CALZABA)
+
+D) LA MEDICION QUE EL ENCARGO NO PIDE Y QUE CAMBIA SU PREMISA:
+   CUALES DE LOS DOCE RECLAMA DE VERDAD LA REGLA DE ENTRADA
+   la regla es VMV.PATRON_ARNES, leida del fichero y no tecleada:
+      '^vuelta(\\d+).*(?:mutacion|caso_positivo|simular).*\\.py$'
+      familias que exige en el NOMBRE: mutacion, caso_positivo, simular
+      vara del censo: 148
+   CIFRA ficheros en el censo entero: 190
+   CIFRA de los DOCE que el censo ve: 3
+      vuelta191_apertura.py                                en el censo: no
+      vuelta191_cierre.py                                  en el censo: no
+      vuelta191_esqueleto_reporte.py                       en el censo: no
+      vuelta191_tarea1a_registrar_acta191.py               en el censo: no
+      vuelta191_tarea2_relectura_al_doble.py               en el censo: no
+      vuelta191_tarea2b_cotejo.py                          en el censo: no
+      vuelta191_tarea3_arreglar_lineas.py                  en el censo: no
+      vuelta191_tarea3_censo.py                            en el censo: no
+      vuelta191_tarea3_mutacion_lineas.py                  en el censo: SI
+      vuelta191_tarea4_mutacion_veredicto.py               en el censo: SI
+      vuelta191_tarea5_marca_contra_dificultad.py          en el censo: no
+      vuelta191_tarea6_mutacion_bloque_tallado.py          en el censo: SI
+   Y LOS QUE `arneses_que_faltan()` RECLAMA HOY: 3
+      vuelta191_tarea3_mutacion_lineas.py
+      vuelta191_tarea4_mutacion_veredicto.py
+      vuelta191_tarea6_mutacion_bloque_tallado.py
+
+   EL CRUCE, QUE ES LA CIFRA QUE IMPORTA:
+      arneses de la 191 con SUJETO VIVO: 0 (ninguno)
+      de esos, RECLAMADOS por el censo: 0 (ninguno)
+
+E) LA GUARDA DE LA PUERTA, QUE ES LA PIEZA `e`, CORRIDA AQUI
+   LOS QUE EL CENSO RECLAMA PARA LA NOMINA: 3
+      vuelta191_tarea3_mutacion_lineas.py            NO DECIDIBLE   motivo escrito: no 
+         huellas de vivo:      LECTURAS_DIRIGIDAS.md
+         huellas de congelado: tempfile, mkdtemp
+      vuelta191_tarea4_mutacion_veredicto.py         CONGELADO      motivo escrito: no 
+         huellas de vivo:      (ninguna)
+         huellas de congelado: tempfile, mkdtemp
+      vuelta191_tarea6_mutacion_bloque_tallado.py    NO DECIDIBLE   motivo escrito: no 
+         huellas de vivo:      REPORTE.md
+         huellas de congelado: sha256
+   
+   FALLO (SUJETO VIVO y reclamado, y esto SI hace caer): 0
+   DEUDA (NO DECIDIBLE sin motivo escrito, y esto NO hace caer): 2
+      vuelta191_tarea3_mutacion_lineas.py   huellas de vivo: LECTURAS_DIRIGIDAS.md
+      vuelta191_tarea6_mutacion_bloque_tallado.py   huellas de vivo: REPORTE.md
+   LIMPIOS (congelado, caso declarado, o no decidible CON motivo): 1
+      vuelta191_tarea4_mutacion_veredicto.py   CONGELADO
+   
+   VEREDICTO DE LA PUERTA: VERDE
+      VERDE CON DEUDA DECLARADA, que no es lo mismo que verde a secas: 2
+      arnes(es) reclamado(s) nombran un sujeto vivo y no escriben por que.
+
+F) LO QUE NO SE TOCA, DICHO CON SUS CIFRAS
+   la nomina sigue en 127 entradas: no se poda, no se adelanta y no se le
+   anade nada. La opcion `c` que el fundador RECHAZO el 5 sep 2026 sigue
+   rechazada, y quien mete a alguien en la nomina es la regla del fichero.
+   Los `sin_motivo` NO SE ARREGLAN AQUI: el encargo lo prohibe con esas
+   palabras, y su diagnostico uno a uno va en el reporte.
+
+FIN

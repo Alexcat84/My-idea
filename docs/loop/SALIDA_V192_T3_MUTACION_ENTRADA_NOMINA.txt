@@ -1,0 +1,44 @@
+==============================================================================
+CASO POSITIVO POR MUTACION DE LA GUARDA DE ENTRADA A LA NOMINA
+==============================================================================
+
+LO QUE SE PRUEBA, Y POR QUE PUEDE CAER: los arneses se FABRICAN en un
+directorio temporal con su anclaje sabido por construccion, y la nomina se
+le pasa por parametro. El valor esperado de cada caso sale de como se
+fabrico el fichero, no de una constante igual a la obtenida.
+
+A) EL CASO QUE TIENE QUE CAER: UN ARNES CON SUJETO VIVO, RECLAMADO POR
+   EL CENSO Y SIN DECLARARSE
+   el censo reclama los cuatro fabricados                         VERDE
+   LA GUARDA CAE EN ROJO                                          VERDE
+   y el que la tumba es el de sujeto vivo                         VERDE
+
+B) LA MUTACION QUE LA LEVANTA: EL MISMO ARNES, DECLARADO EN SU PROPIO
+   FICHERO POR EL CARRIL DE LA CASA. La guarda TIENE que dejar de caer.
+   sin el de sujeto vivo, la guarda NO cae                        VERDE
+   el declarado en su fichero sale limpio                         VERDE
+
+C) LA DEUDA SE PUBLICA Y NO HACE CAER, QUE ES LA SEPARACION DE LA 4.4
+   Y LA 4.6 DEL ACTA 190 Y AQUI NO SE RE DECIDE
+   el NO DECIDIBLE sin motivo entra en DEUDA                      VERDE
+   y la deuda NO pone la guarda en rojo                           VERDE
+   el NO DECIDIBLE CON motivo escrito sale limpio                 VERDE
+
+D) LA MUTACION QUE PRUEBA QUE MIRA AL QUE ENTRA Y NO AL QUE YA ESTA:
+   SI EL DE SUJETO VIVO YA ESTUVIERA EN LA NOMINA, EL CENSO NO LO
+   RECLAMA Y ESTA GUARDA NO LO VE. Es su ceguera, y va escrita.
+   ya en la nomina: el censo NO lo reclama                        VERDE
+   y por eso esta guarda NO cae por el                            VERDE
+   (para ese caso ya existe `guarda_del_sujeto_congelado_separada()`,
+    que mira la nomina de hoy. Las dos hacen falta y ninguna sobra)
+
+E) LA MUTACION DE LA VARA: SUBIENDOLA POR ENCIMA DE LA VUELTA
+   FABRICADA, EL CENSO DEJA DE RECLAMAR Y LA GUARDA DEJA DE VER
+   con la vara en 999 no se reclama a nadie                       VERDE
+   y la guarda sale VERDE por vacio, no por limpio                VERDE
+
+F) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)
+   C:\Users\AlexDesk\AppData\Local\Temp\guarda_entrada_wo7542zz existe todavia: False
+   el temporal quedo retirado                                     VERDE
+
+VEREDICTO: VERDE

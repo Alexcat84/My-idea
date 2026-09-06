@@ -1,0 +1,80 @@
+==============================================================================
+VUELTA 192, TAREA 3.b: LOS DOS `SUJETO VIVO`, CADA UNO POR SU CARRIL
+==============================================================================
+
+A) EL ANCLAJE DE LOS DOS, ANTES DE TOCAR NADA
+   vuelta191_tarea3_arreglar_lineas.py            SUJETO VIVO    congela=[] vive=['REPORTE.md'] motivo=no
+   vuelta191_tarea1a_registrar_acta191.py         SUJETO VIVO    congela=[] vive=['OPERACIONES.jsonl', 'ACTA_AUDITOR.md'] motivo=no
+
+B) LA COMPROBACION QUE SOSTIENE LA DECLARACION DEL FALSO POSITIVO
+   (no se declara nada sin medirlo: se cuentan las aperturas de fichero)
+   CIFRA aperturas de fichero en vuelta191_tarea3_arreglar_lineas.py: 6
+      linea 199   c = io.open(ruta, encoding="utf-8", errors="replace").read() if os.path.isfile(ruta) else ""
+      linea 228   io.open(os.path.join(RAIZ, SALIDA.replace("/", os.sep)), "w",
+      linea 246   codigo = io.open(ruta, encoding="utf-8").read().replace(chr(13) + NL, NL)
+      linea 275   io.open(ruta, "w", encoding="utf-8", newline=NL).write(nuevo)
+      linea 303   fuente = io.open(ruta, encoding="utf-8").read()
+      linea 319   io.open(os.path.join(RAIZ, SALIDA.replace("/", os.sep)), "w",
+   CIFRA de esas aperturas que nombran REPORTE.md: 0
+   NINGUNA APERTURA NOMBRA EL REPORTE: la declaracion es cierta.
+
+C) LA COMPROBACION QUE SOSTIENE EL OTRO CARRIL
+   CIFRA aperturas de vuelta191_tarea1a_registrar_acta191.py que nombran ACTA: 0
+      linea 1037  w("   docs/loop/ACTA_AUDITOR.md -> disco %d bytes" % os.path.getsize(ACTA))
+   EL SUJETO ESTA VIVO DE VERDAD: declararlo CONGELADO seria mentir.
+
+D) LOS CAMBIOS, APLICADOS UNO A UNO
+   vuelta191_tarea3_arreglar_lineas.py
+      aplicado CAMBIOS = [
+   vuelta191_tarea1a_registrar_acta191.py
+      aplicado import argparse
+import io
+
+      aplicado     w("   docs/loop/ACTA_AUDITOR.md -> disco %d bytes" % os.
+      1 aparicion(es) ACTA = os.path.join(LOOP, "ACTA_AUDITOR.md")
+      1 aparicion(es)         p.append("  - **`%s` (`docs/loop/ACTA_AUDITOR.md:%d`
+      2 aparicion(es)         p.append("  - `docs/loop/ACTA_AUDITOR.md:%d`: %s" % 
+      1 aparicion(es)         p.append("  - **`%s` (`docs/loop/ACTA_AUDITOR.md:%d`
+      1 aparicion(es)     w("   acta %d: docs/loop/ACTA_AUDITOR.md, lineas %d a %d
+      1 aparicion(es)             "vuelta no escribe ni una linea de `docs/plan/OP
+
+E) ESCRITOS, Y RELEIDOS DEL DISCO PARA COMPROBARLO
+   vuelta191_tarea3_arreglar_lineas.py -> disco 15977 bytes | LF 15977 bytes
+   vuelta191_tarea1a_registrar_acta191.py -> disco 79940 bytes | LF 79940 bytes
+
+F) LOS DOS COMPILAN, QUE ES LO MINIMO ANTES DE DARLOS POR ARREGLADOS
+   vuelta191_tarea3_arreglar_lineas.py -> COMPILA
+   vuelta191_tarea1a_registrar_acta191.py -> COMPILA
+
+G) EL ANCLAJE, REMEDIDO DEL DISCO Y NO SUPUESTO
+   vuelta191_tarea3_arreglar_lineas.py            SUJETO VIVO -> CONGELADO
+      congela=['SUJETO CONGELADO']
+      vive=['REPORTE.md']
+      motivo escrito en TODAS sus apariciones: no
+         linea 22    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 26    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 37    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 38    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 58    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 59    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 63    huella REPORTE.md                       marcas: (NINGUNA)
+         linea 65    huella REPORTE.md                       marcas: (NINGUNA)
+   vuelta191_tarea1a_registrar_acta191.py         SUJETO VIVO -> NO DECIDIBLE
+      congela=['sha256']
+      vive=['OPERACIONES.jsonl', 'ACTA_AUDITOR.md']
+      motivo escrito en TODAS sus apariciones: SI
+         linea 32    huella ACTA_AUDITOR.md                  marcas: SHA256, NO SE TOCA
+         linea 328   huella OPERACIONES.jsonl                marcas: NO SE TOCA
+         linea 329   huella OPERACIONES.jsonl                marcas: NO SE TOCA
+         linea 440   huella ACTA_AUDITOR.md                  marcas: NO SE TOCA
+         linea 471   huella ACTA_AUDITOR.md                  marcas: NO SE TOCA
+         linea 482   huella ACTA_AUDITOR.md                  marcas: NO SE TOCA
+         linea 543   huella ACTA_AUDITOR.md                  marcas: NO SE TOCA
+         linea 971   huella ACTA_AUDITOR.md                  marcas: NO SE TOCA, NO SE ESCRIBE
+         linea 982   huella ACTA_AUDITOR.md                  marcas: SHA256, NO SE TOCA
+
+H) NINGUNO DE LOS DOS SE HA CORRIDO, Y SE DICE POR QUE: correrlos pisaria
+   salidas selladas de la vuelta 191. El anclaje se decide leyendo el
+   TEXTO, y eso es lo que se ha hecho.
+
+FIN

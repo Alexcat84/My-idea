@@ -53,6 +53,23 @@ SALIDA = "docs/loop/SALIDA_V191_T3_ARREGLO.txt"
 # DE UN GREP. `wc -l` va nombrado DENTRO de la frase: ese es el punto entero.
 _PAR = "%d lineas por count(NL), que calza con wc -l, y %d por len(split(NL))"
 
+# --- DECLARACION DE SUJETO, ANADIDA EN LA VUELTA 192 (TAREA 3.b) -------------
+#
+# SUJETO CONGELADO. Este fichero salia `SUJETO VIVO` en
+# `guarda_del_sujeto_congelado_separada()` por SEIS apariciones del literal
+# `REPORTE.md` en su maquina, y LAS SEIS ESTAN DENTRO DE LOS LITERALES DE
+# `CAMBIOS`, que son PATRONES DE PARCHEO: el texto que este fichero BUSCA Y
+# SUSTITUYE dentro de OTROS scripts cuyos `print` mencionan el reporte.
+#
+# ESTE FICHERO NO ABRE `docs/loop/REPORTE.md` EN NINGUNA LINEA, y se puede
+# comprobar: sus unicas aperturas son sobre `ruta`, que sale de los nombres de
+# `CAMBIOS`, y sobre su propia `SALIDA`. La declaracion va aqui, con su
+# evidencia, en vez de ensanchar la huella de la guarda: una huella mas estrecha
+# dejaria de ver casos de verdad, y el precio de un falso positivo es una linea
+# como esta.
+#
+# Lo declara la vuelta 192 y lo mide `scripts/loop/vuelta192_tarea3_declarar_sujetos.py`.
+
 CAMBIOS = [
     ("_v145_cuerpo_reporte.py", [
         ('print("escrito docs/loop/REPORTE.md, %d lineas" % len(texto.split("\\n")))',
