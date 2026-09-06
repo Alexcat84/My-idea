@@ -1,0 +1,147 @@
+==============================================================================
+VUELTA 184, TAREA 1.d: LA RELECTURA AL DOBLE DEL
+TRAMO DE LA CIEGA DEL ACTA 184, encargada por AUDITOR.md 1.2 porque las
+TRES discrepancias del auditor salieron FUERA del marcado
+==============================================================================
+
+A) EL CONTRASTE CON EL ACTA, QUE NO ES CORRECCION SINO COTEJO. EL
+   ENCARGO YA NOMBRA LA FUENTE BUENA, Y AQUI SE MIDE QUE LISTA EL ACTA.
+   seccion 4 del acta 184: lineas 64207 a 64246 (40 lineas)
+   su cabecera: ## 4. LA RELECTURA CIEGA: 30 PUESTOS FRESCOS, 27 COINCIDEN, Y LAS TRES DISCREPANCIAS SON MIAS
+   CIFRA puestos que la seccion 4 del acta 184 lista: 0
+   (la seccion 4 es la de la ciega, y publica el reparto y LAS TRES
+    discrepancias, no los 30 puestos. Por eso el tramo se lee de la ciega
+    sellada del auditor, que es donde estan, y no del acta)
+
+B) LA FUENTE DE VERDAD DEL TRAMO, COTEJADA CONTRA SU PROPIO SELLO
+   docs/loop/SELLO_APERTURA_AUDITOR_V185.json -> 674 bytes en disco y 674 bytes normalizados a LF
+   ciega: docs/loop/_auditor_v185_ciega_blind.txt
+   bytes que el sello declara: 38747 | bytes en disco hoy: 38747
+   sha256 del sello: f81f1b32594221f10141f83b29a2b71990ef78c61f3ab64a4e835eba8dfa975a
+   sha256 de hoy   : f81f1b32594221f10141f83b29a2b71990ef78c61f3ab64a4e835eba8dfa975a
+   EL FICHERO ES EL QUE EL SELLO DICE: SI
+   criterio escrito, literal del sello:
+      muestra de 30 pares frescos sobre el archivo entero de veredictos, semilla 185, excluyendo los 89 puestos de las ciegas de las actas 180, 182 y 183 (solape cero exigido); auditoria de la vuelta 184, l
+
+C) EL TRAMO, LEIDO DE LA CIEGA SELLADA Y NO TECLEADO
+   CIFRA puestos del tramo: 30
+   LOS PUESTOS: 7, 116, 482, 641, 652, 731, 875, 1020, 1095, 1111, 1115, 1260, 1614, 1697, 1846, 2008, 2024, 2046, 2223, 2244, 2445, 2493, 2594, 2681, 2985, 3140, 3175, 3268, 3360, 3387
+
+D) LOS DOS SUJETOS, CONTADOS
+   veredictos: 3388 filas | maximo puesto 3388
+   grafo: 3853 nodos
+
+E) EL DOBLE, ELEGIDO DE FORMA DETERMINISTA Y NO POR AZAR
+   (la funcion vecinos() se IMPORTA de
+    scripts/loop/vuelta182_tarea1c_relectura_al_doble.py, no se copia)
+   CIFRA vecinos anadidos: 30
+   LOS VECINOS: 8, 117, 483, 642, 653, 732, 876, 1021, 1096, 1112, 1116, 1261, 1615, 1698, 1847, 2009, 2025, 2047, 2224, 2245, 2446, 2494, 2595, 2682, 2986, 3141, 3176, 3269, 3361, 3388
+   SOLAPE CON EL TRAMO: 0
+   CIFRA puestos que se releen EN TOTAL: 60
+   ES EL DOBLE DEL TRAMO: SI
+
+F) EL SOLAPE CON EL TRAMO ANTERIOR, MEDIDO Y NO SUPUESTO
+   (el criterio del sello dice que la muestra excluye los 89 puestos de
+    las ciegas de las actas 180, 181 y 182; aqui se comprueba contra la
+    ciega inmediatamente anterior, la que el acta 183 releyo en su continuacion)
+   ciega anterior: docs/loop/_auditor_v184_ciega_blind.txt -> 30 puestos
+   SOLAPE del tramo de hoy con el anterior: 0
+
+G) LA RELECTURA MECANICA, PUESTO A PUESTO
+   (la maquina se IMPORTA de vuelta182_tarea3_diferenciador_movido.py)
+   puesto clase  declara  lesion   vivos   cober   nodos
+   7      D      no       no       SI      0.00    preparate_para_marcharte_del_trato contra usa_el_no_del_proveedor_a_tu_favor   <-- DEL TRAMO
+   8      D      no       no       SI      0.00    prepara_posicion_agenda_antes_negociar contra preparate_para_marcharte_del_trato
+   116    D      no       no       SI      0.00    reconoce_las_tacticas_de_presion_y_urgencia_artificial_del_vendedor contra usa_el_no_del_proveedor_a_tu_favor   <-- DEL TRAMO
+   117    D      no       no       SI      0.00    muestra_puntos_en_comun_antes_de_negociar contra ofrece_valor_no_economico
+   482    A      no       no       SI      0.00    advances_vs_continuations contra marco_avances_continuaciones   <-- DEL TRAMO
+   483    A      no       no       SI      0.00    clasificacion_mercados_cadena_suministro contra marco_analisis_mercado_cadena_suministro
+   641    A      no       no       SI      0.00    fase_diseno_prototipado_modelos contra prototipado_modelos_negocio   <-- DEL TRAMO
+   642    D      no       no       SI      0.00    project_performance_report contra reporte_estado_miembro_equipo
+   652    D      no       no       SI      0.00    asignacion_de_titulos_ejecutivos contra ceo_equity_premium   <-- DEL TRAMO
+   653    A      no       no       SI      0.00    ciclo_de_conversion_de_efectivo contra dso_dpo_gestion_capital_trabajo
+   731    D      no       no       SI      0.00    customer_discovery_cuatro_fases contra modelo_customer_development   <-- DEL TRAMO
+   732    D      no       no       SI      0.00    involucramiento_fundador_busqueda_ceo contra riesgo_beneficio_retener_fundador
+   875    D      no       no       SI      0.00    errores_comunes_asignacion_roles contra fundadores_en_junta_directiva   <-- DEL TRAMO
+   876    D      no       no       SI      0.00    etapa_build_business_case contra etapa_scoping
+   1020   D      no       no       SI      0.00    fase_acclimate_experiencia_cliente contra fases_de_retencion_de_clientes   <-- DEL TRAMO
+   1021   D      no       no       SI      0.00    modelo_spin contra preguntas_implicacion
+   1095   D      no       no       SI      0.00    design_test_repeat contra determine_what_to_prototype   <-- DEL TRAMO
+   1096   A      no       no       SI      0.00    earlyvangelists_ventas_tempranas contra filosofia_customer_validation
+   1111   D      no       no       SI      0.00    diez_principios_testing contra disenar_tests_pass_fail   <-- DEL TRAMO
+   1112   A      no       no       SI      0.00    creacion_option_pool contra option_pool_negociacion
+   1115   D      no       no       SI      0.00    change_log contra solicitud_cambio   <-- DEL TRAMO
+   1116   D      no       no       SI      0.00    por_que_balancea_el_balance contra reconciliacion_utilidad_neta_flujo_caja
+   1260   D      no       no       SI      0.00    resegmentacion_mercado_nicho_bajo_costo contra tipo_de_mercado_estrategia_competitiva   <-- DEL TRAMO
+   1261   D      SI       no       SI      0.00    customer_development_modelo contra voz_del_cliente_voc
+   1614   D      no       no       SI      0.00    calcular_peso_dimensional_antes_cotizar contra elegir_caja_correcta   <-- DEL TRAMO
+   1615   D      no       no       SI      0.00    acolchado_segun_forma contra clasificar_tipo_paquete
+   1697   D      no       no       SI      0.00    elegir_modo_transporte_volumen_distancia contra elegir_sobre_o_caja_tamano   <-- DEL TRAMO
+   1698   D      no       no       SI      0.00    elegir_material_de_relleno_segun_producto contra revisar_necesidades_de_empaque
+   1846   D      no       no       SI      0.00    movilidad_verde_empleados contra teletrabajo_sostenible   <-- DEL TRAMO
+   1847   D      no       no       SI      0.00    diseno_para_el_medio_ambiente contra eco_efectividad_2
+   2008   D      no       no       SI      0.00    import_regulations_foreign_governments contra licencia_exportacion_regulaciones   <-- DEL TRAMO
+   2009   D      no       no       SI      0.00    programas_estatales_locales_financiamiento_exportacion contra recursos_apoyo_gubernamental_exportacion
+   2024   D      no       no       SI      0.00    adaptacion_producto_mercado_exterior contra fijacion_precio_exportacion   <-- DEL TRAMO
+   2025   D      no       no       SI      0.00    proteccion_patentes_internacional contra proteccion_propiedad_intelectual_internacional
+   2046   D      no       no       SI      0.00    extension_credito_compradores_extranjeros contra prevencion_problemas_de_pago   <-- DEL TRAMO
+   2047   D      no       no       SI      0.00    programas_ex_im_bank contra seguro_de_credito_a_la_exportacion
+   2223   A      SI       no       SI      0.13    rutas_de_salida_y_puertas_de_emergencia contra rutas_salida_planificacion_emergencias   <-- DEL TRAMO
+   2224   D      no       no       SI      0.00    controles_no_rutinarias_emergencias contra peligros_emergencias_no_rutinarias
+   2244   A      SI       no       SI      0.05    evitar_sesgo_retrospectivo_hindsight contra reconstruccion_contexto_situacional   <-- DEL TRAMO
+   2245   D      no       no       SI      0.00    escaleras_fijas_seguridad contra escaleras_portatiles_seguridad
+   2445   A      SI       no       SI      0.20    adaptaciones_sectoriales_iso contra estandares_especificos_industria   <-- DEL TRAMO
+   2446   D      no       no       SI      0.00    establecer_estandares_desempeno contra establecimiento_metas_de_calidad
+   2493   D      no       no       SI      0.00    make_certain_programa contra programa_make_certain_3   <-- DEL TRAMO
+   2494   D      SI       no       SI      0.00    definicion_calidad_fitness_for_purpose contra fitness_for_use_purpose
+   2594   D      no       no       SI      0.00    auditoria_de_producto_2 contra auditoria_producto   <-- DEL TRAMO
+   2595   D      no       no       SI      0.00    crosby_programa_14_pasos_introduccion contra programa_de_mejora_de_calidad
+   2681   D      no       no       SI      0.00    errores_de_medicion contra validacion_sistema_medicion_2   <-- DEL TRAMO
+   2682   D      no       no       SI      0.00    circulos_calidad_qc contra circulos_de_calidad_qc_circles
+   2985   D      no       no       SI      0.00    distincion_causas_comunes_especiales contra responsabilidad_gerencial_causas_comunes   <-- DEL TRAMO
+   2986   D      no       no       SI      0.00    analisis_diagnostico_causa contra formulacion_teorias_causa
+   3140   D      no       no       SI      0.00    prevencion_versus_control_de_calidad contra programa_cero_defectos   <-- DEL TRAMO
+   3141   D      SI       SI       SI      0.64    capacidad_de_proceso contra establecer_capacidad_del_proceso
+   3175   D      no       no       SI      0.00    roadmap_despliegue_lean_six_sigma contra roles_six_sigma   <-- DEL TRAMO
+   3176   D      no       no       SI      0.00    rol_facilitador_equipos_mejora contra rol_lider_equipo_calidad
+   3268   D      no       no       SI      0.00    cultura_que_habla_del_riesgo_sin_miedo contra deja_de_ignorar_el_riesgo   <-- DEL TRAMO
+   3269   D      no       no       SI      0.00    como_sabes_que_tu_metodo_sirve contra empieza_con_lo_que_ya_funciona
+   3360   D      no       no       SI      0.00    amenaza_y_oportunidad contra gestionar_el_riesgo_es_de_adultos   <-- DEL TRAMO
+   3361   D      no       no       SI      0.00    haz_tu_lista_de_lo_que_puede_fallar contra riesgo_no_es_mala_suerte
+   3387   D      no       no       SI      0.00    evaluar_controles contra implementar_controles   <-- DEL TRAMO
+   3388   D      no       no       SI      0.00    csf_funcion_detect contra csf_funcion_identify
+
+H) LAS CIFRAS DE LA RELECTURA
+   CIFRA puestos releidos: 60
+   CIFRA que declaran diferenciador: 6
+   CIFRA con LESION EXACTA: 1
+   CIFRA con algun nodo MUERTO en el grafo de hoy: 0
+   CIFRA clase 'A'   : 9
+   CIFRA clase 'D'   : 51
+   LOS LESIONADOS: 3141
+      PUESTO 3141: hoy el paso 3 de establecer_capacidad_del_proceso cubre 7 palabras del diferenciador declarado (cobertura 0.64)
+
+I) LAS TRES DISCREPANCIAS DEL AUDITOR, MIRADAS CON LA MISMA VARA
+   (el acta 184 las nombra en su seccion 4: los puestos 641, 2493 y 2594,
+    que el auditor pierde LOS TRES a favor del archivo. Aqui NO se re-decide
+    ninguna clase: solo se dice si estan en el universo releido y que ve la
+    vara en ellas)
+   puesto 641    clase A   declara no  lesion no  | en el universo releido: SI
+   puesto 2493   clase D   declara no  lesion no  | en el universo releido: SI
+   puesto 2594   clase D   declara no  lesion no  | en el universo releido: SI
+
+J) LO QUE ESTA RELECTURA SOSTIENE, Y NI UNA PALABRA MAS
+   1. El tramo se leyo de la ciega SELLADA del auditor, cotejada por
+      sha256 contra su propio sello, y NO del acta, que no lo lista.
+   2. El tramo se releyo AL DOBLE: 60 puestos contra los 30 del tramo.
+   3. De los 60, 6 declaran un diferenciador y 1 lo tienen HOY movido al
+      otro nodo.
+   4. Puestos con algun nodo muerto en el grafo de hoy: 0.
+   5. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura
+      MECANICA del tramo con la vara, no una lectura de juicio. Lo que la
+      vara no ve, esta salida NO lo afirma.
+   6. NINGUN VEREDICTO SE MUEVE EN ESTA VUELTA: el archivo se abre para
+      leer y se cierra, y su sha256 va medido en la apertura y en el
+      cierre del reporte.
+
+FIN
