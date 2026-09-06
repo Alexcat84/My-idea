@@ -555,6 +555,55 @@ si uno de sus dos lados cambia.
 `customer_validation_sell_phase` contra `verificar_product_market_fit`, **estaba en la
 lista y sale**, porque **`LD-59` dejo a ese nodo fuera de la fusion: ya no muere.**
 
+### LA ENTRADA POR EL DIFERENCIADOR MOVIDO (5 sep 2026, vuelta 182)
+
+**Procedencia, y ninguna cifra de esta seccion esta tecleada:** la produjo
+`scripts/loop/vuelta182_tarea3_diferenciador_movido.py`, su salida entera vive
+en `docs/loop/SALIDA_V182_T3_DIFERENCIADOR.txt` (**8313 bytes**) y la lista en
+crudo en `docs/loop/SALIDA_V182_T3_COLA.json` (**1074 bytes**). Esta seccion la
+escribe `scripts/loop/vuelta182_tarea4_entrar_a_la_cola.py` leyendo ese JSON.
+
+**LAS TRES CONDICIONES DE LA LESION EXACTA, Y LA CRIBA QUE HACEN, CONTADA:**
+
+| condicion | cuantas `D` la pasan |
+|---|---:|
+| todas las `D` del archivo | **2760** |
+| 1. su razon **declara** un diferenciador | **99** |
+| 2. y hoy el otro nodo **si lo tiene** | **6** |
+| 3. y el paso **entra despues** del veredicto | **1** |
+
+**Una `D` cuya razon no declara ningun diferenciador no puede tener un
+diferenciador movido**, y por eso la primera criba es la que mas quita: no es
+una comodidad, es que no hay nada que se le haya movido debajo.
+
+**LA LISTA, EN LA MISMA FORMA QUE LA DEL 12 AGO 2026:**
+
+| par | clase | que le pasa | tras que operacion |
+|---:|---|---|---|
+| **2464** | **D** | el diferenciador declarado de su razon **esta hoy en los pasos de `cero_defectos`** (paso 7, cobertura 0.50) | fusion del **2026-08-20**, posterior a su veredicto del **2026-08-12** |
+
+**EL TRAMO, DECLARADO AQUI Y NO IMPROVISADO DESPUES.** Esta unica `D` se relee
+**por tramos en las vueltas siguientes**, no en la que las encola: la vuelta
+182 **entra a la cola y declara el tramo**, que es literalmente lo que su
+encargo manda. **TRAMO 1 y unico con lo medido hoy: el unico par de arriba**,
+y se relee **entero o no cuenta**. Si el instrumento volviera a correr y
+nombrara mas, cada nuevo grupo abre **su propio tramo con su fecha**, para que
+un tramo cerrado no se pueda reabrir por la puerta de atras.
+
+**LO QUE PASA CON LO QUE SE RELEA es lo que ya dice esta pagina** unas lineas
+mas abajo, en *QUE PASA CON LO QUE SE RELEA*, y **no se cambia ni una letra**:
+si sale `A` entra en la fusion que le corresponda y su perdida se nombra
+antes; si sale `D` se queda; si sale `B` otra vez va a la lista de decisiones
+del inventario final. **Esta cola no estrena ningun destino nuevo.**
+
+**Y LAS `A` NO ENTRAN AQUI, CON SU CENSO DELANTE:** **551** `A` en el archivo,
+de ellas **0 ejecutadas** (uno de sus dos nodos ya no esta en el grafo) y
+**551 pendientes** (los dos siguen vivos). De las pendientes, **8 tienen hoy
+su diferenciador declarado en el otro nodo** y quedan **marcadas RANCIAS por
+`P.5`**, que es la regla que ya existe: su vigencia se comprueba **antes de
+ejecutar**. **No se encolan**, por la PREGUNTA 2 de la decision del fundador.
+Son los puestos **978, 2230, 2255, 2272, 2414, 2420, 2498, 2509**.
+
 ### LOS SIETE DEL PIVOTE NO ENTRAN, y hay que decir por que
 
 **Los puestos 668, 737, 753, 771, 843, 957 y 1298 son B y sus nodos mueren o cambian**,

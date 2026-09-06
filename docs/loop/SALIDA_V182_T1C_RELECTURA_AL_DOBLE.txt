@@ -1,0 +1,103 @@
+==============================================================================
+VUELTA 182, TAREA 1.c: LA RELECTURA AL DOBLE DEL TRAMO DE LA CIEGA DE LA 181
+encargada por la adjudicacion 7.2 del acta 181, por AUDITOR.md 1.2
+==============================================================================
+
+A) EL TRAMO, LEIDO DEL ACTA CON SU LINEA
+   docs/loop/ACTA_AUDITOR.md:63210
+   CIFRA puestos del tramo: 30
+   LOS PUESTOS: 100, 236, 278, 432, 787, 926, 949, 1012, 1126, 1151, 1161, 1251, 1274, 1361, 1372, 1390, 1487, 1493, 1599, 1612, 1842, 1870, 2380, 2464, 2582, 2863, 3063, 3081, 3087, 3158
+
+B) LOS DOS SUJETOS, CONTADOS
+   veredictos: 3388 filas | maximo puesto 3388
+   grafo: 3853 nodos
+
+C) EL DOBLE, ELEGIDO DE FORMA DETERMINISTA Y NO POR AZAR
+   CIFRA vecinos anadidos: 30
+   LOS VECINOS: 101, 237, 279, 433, 788, 927, 950, 1013, 1127, 1152, 1162, 1252, 1275, 1362, 1373, 1391, 1488, 1494, 1600, 1613, 1843, 1871, 2381, 2465, 2583, 2864, 3064, 3082, 3088, 3159
+   SOLAPE CON EL TRAMO: 0
+   CIFRA puestos que se releen EN TOTAL: 60
+   ES EL DOBLE DEL TRAMO: SI
+
+D) LA RELECTURA MECANICA, PUESTO A PUESTO
+   (la maquina se IMPORTA de vuelta182_tarea3_diferenciador_movido.py)
+   puesto clase  declara  lesion   vivos   cober   nodos
+   100    D      no       no       SI      0.00    clasifica_tu_inventario contra conoce_insumos_vitales   <-- DEL TRAMO
+   101    D      no       no       SI      0.00    preparate_para_marcharte_del_trato contra verifica_quien_tiene_el_poder_de_decidir_o_vetar
+   236    A      no       no       SI      0.00    how_might_we_brief_social contra how_might_we_briefs   <-- DEL TRAMO
+   237    A      no       no       SI      0.00    desafios_de_diseno_competitivos contra diseno_de_desafios_de_innovacion
+   278    A      no       no       SI      0.00    enfoque_etapa_investigacion contra etapa_de_investigacion   <-- DEL TRAMO
+   279    B      no       no       SI      0.00    intimation_illumination contra wallas_etapa_iluminacion
+   432    A      no       no       SI      0.00    cierre_sofisticacion_comprador contra riesgo_tecnicas_cierre_venta_compleja   <-- DEL TRAMO
+   433    D      no       no       SI      0.00    establecer_linea_base_mvp contra producto_minimo_viable
+   787    A      SI       no       SI      0.08    construccion_de_leverage contra estrategia_competencia_vcs   <-- DEL TRAMO
+   788    A      no       no       SI      0.00    enfoque_mercado_voc contra voice_of_customer_homework
+   926    D      no       no       SI      0.00    customer_segments_hypothesis contra verificar_clientes_y_canales   <-- DEL TRAMO
+   927    D      no       no       SI      0.00    change_log contra decision_log
+   949    D      no       no       SI      0.00    composicion_board_directors contra fundadores_en_junta_directiva   <-- DEL TRAMO
+   950    A      no       no       SI      0.00    construccion_de_valor_percibido contra ecuacion_de_valor
+   1012   D      no       no       SI      0.00    seis_canales_comunicacion_assess contra seis_medios_comunicacion_cliente   <-- DEL TRAMO
+   1013   D      no       no       SI      0.00    diseno_organizacional_equipos_innovacion contra equipos_pequenos_vs_grandes
+   1126   D      no       no       SI      0.00    email_marketing_para_captacion contra email_marketing_retencion   <-- DEL TRAMO
+   1127   D      no       no       SI      0.00    gestion_portafolio_foco contra pruning_portafolio
+   1151   D      no       no       SI      0.00    gestion_portafolio_dos_niveles contra revision_portafolio_periodica   <-- DEL TRAMO
+   1152   D      no       no       SI      0.00    impacto_estado_resultados_en_balance contra reconciliacion_utilidad_neta_flujo_caja
+   1161   D      no       no       SI      0.00    actualizar_modelo_de_negocio_pivot_o_proceed contra validar_modelo_negocio_hechos   <-- DEL TRAMO
+   1162   D      no       no       SI      0.00    flexible_go_kill_criteria contra scoring_model_scorecard
+   1251   D      no       no       SI      0.00    fase_acclimate_experiencia_cliente contra fase_accomplish_experiencia_cliente   <-- DEL TRAMO
+   1252   D      no       no       SI      0.00    catalogo_pivotes contra pivot_como_hipotesis_estrategica
+   1274   D      no       no       SI      0.00    etapa_scoping contra gate1_idea_screen   <-- DEL TRAMO
+   1275   D      no       no       SI      0.00    modelo_cascada_desarrollo_producto contra waterfall_vs_agile_development
+   1361   D      no       no       SI      0.00    eleccion_83b contra vesting_acciones_fundadores   <-- DEL TRAMO
+   1362   D      no       no       SI      0.00    analisis_de_cohortes contra customer_retention_metrics_webmobile
+   1372   D      no       no       SI      0.00    garantias_implicitas_vs_expresas contra prohibicion_tie_in_sales   <-- DEL TRAMO
+   1373   D      no       no       SI      0.00    gestion_cuentas_por_cobrar contra tipos_de_pasivos
+   1390   D      no       no       SI      0.00    brief_competitivo contra superioridad_producto_beneficios   <-- DEL TRAMO
+   1391   D      no       no       SI      0.00    carta_de_intencion_loi contra term_sheet_disposiciones_vinculantes
+   1487   D      no       no       SI      0.00    acumulacion_capital_previo_fundacion contra analisis_motivaciones_fundador   <-- DEL TRAMO
+   1488   A      no       no       SI      0.00    hipotesis_de_canales contra seleccion_canal_fisico
+   1493   D      no       no       SI      0.00    conversion_rights contra metodo_conversion_notas_cap_table   <-- DEL TRAMO
+   1494   D      no       no       SI      0.00    cuatro_etapas_del_pensamiento_creativo contra periodo_incubacion_mental
+   1599   D      no       no       SI      0.00    protective_provisions_alineacion contra right_of_first_refusal_pro_rata   <-- DEL TRAMO
+   1600   D      no       no       SI      0.00    rol_gates_agile contra seleccion_proyectos_agile
+   1612   D      no       no       SI      0.00    elegir_caja_correcta contra elegir_resistencia_caja_peso   <-- DEL TRAMO
+   1613   D      no       no       SI      0.00    encuestar_al_cliente_para_saber_que_valora contra medir_satisfaccion_real_del_cliente
+   1842   D      no       no       SI      0.00    productos_de_servicio contra servicizacion_producto   <-- DEL TRAMO
+   1843   D      no       no       SI      0.00    contabilidad_ambiental contra contabilidad_basada_actividades
+   1870   D      no       no       SI      0.00    business_materiality_assessment contra priorizacion_iniciativas_sostenibilidad   <-- DEL TRAMO
+   1871   A      no       no       SI      0.00    colaboracion_sectorial contra trabajo_colectivo_estandares_industria
+   2380   D      no       no       SI      0.00    brecha_entre_trabajo_prescrito_y_real contra violaciones_procedimentales_por_sobreespecificacion   <-- DEL TRAMO
+   2381   D      no       no       SI      0.00    evitar_sesgo_retrospectivo_hindsight contra perspectiva_dentro_del_tunel
+   2464   D      SI       SI       SI      0.50    cero_defectos contra zero_defects_concepto   <-- DEL TRAMO
+   2465   A      SI       no       SI      0.20    design_for_six_sigma_dfss contra design_for_six_sigma_dmadv
+   2582   D      no       no       SI      0.00    desarrollar_estrategias_largo_plazo contra establecer_vision_organizacional_2   <-- DEL TRAMO
+   2583   D      no       no       SI      0.00    mejora_calidad_crosby contra programa_mejora_calidad_14_pasos
+   2863   D      no       no       SI      0.00    especificacion_requisitos_proveedores contra planificacion_tecnologica_conjunta   <-- DEL TRAMO
+   2864   D      no       no       SI      0.00    inspeccion_optima_proceso contra regla_todo_o_nada_inspeccion_2
+   3063   D      no       no       SI      0.00    accion_correctiva_2 contra accion_correctiva_5   <-- DEL TRAMO
+   3064   A      no       no       SI      0.00    cambio_actitud_gerencial contra seminario_de_exito_para_gerencia
+   3081   D      no       no       SI      0.00    breakthrough_desempeno_actual contra ciclo_pdca_pdsa   <-- DEL TRAMO
+   3082   D      no       no       SI      0.00    establecer_vision_organizacional_2 contra metas_negocio_calidad
+   3087   D      no       no       SI      0.00    analisis_pareto_de_proveedores contra principio_pareto   <-- DEL TRAMO
+   3088   D      no       no       SI      0.00    equipo_mejora_calidad_2 contra programa_mejora_calidad_14_pasos
+   3158   D      no       no       SI      0.00    establecimiento_metas_de_calidad contra medicion_calidad   <-- DEL TRAMO
+   3159   D      no       no       SI      0.00    gestion_estrategica_de_calidad_sqm contra rol_director_calidad
+
+E) LAS CIFRAS DE LA RELECTURA
+   CIFRA puestos releidos: 60
+   CIFRA que declaran diferenciador: 3
+   CIFRA con LESION EXACTA: 1
+   CIFRA con algun nodo MUERTO en el grafo de hoy: 0
+   LOS LESIONADOS: 2464
+      PUESTO 2464: hoy el paso 7 de cero_defectos cubre 3 palabras del diferenciador declarado (cobertura 0.50)
+
+F) LO QUE ESTA RELECTURA SOSTIENE, Y NI UNA PALABRA MAS
+   1. El tramo se releyo AL DOBLE: 60 puestos contra los 30 del tramo.
+   2. De los 60, 3 declaran un diferenciador y 1 lo tienen HOY movido al
+      otro nodo. El 2.464 esta en el tramo y sale: SI
+   3. Ningun par de este tramo tiene un nodo muerto: SI, cero muertos
+   4. ESTA RELECTURA NO VUELVE A DECIDIR NINGUNA CLASE. Es la relectura
+      MECANICA del tramo con la vara nueva de esta vuelta, no una lectura
+      de juicio. Lo que la vara no ve, esta salida NO lo afirma.
+
+FIN
