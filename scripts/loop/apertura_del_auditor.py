@@ -200,11 +200,41 @@ def _guardar_turno():
         pass
 
 
+def _reiniciar_memoria():
+    """DEJA EL ESTADO DE MODULO COMO RECIEN IMPORTADO, SIN TOCAR NINGUN FICHERO.
+
+    ES LA MITAD DE `olvidar_todo()` QUE NO BORRA NADA, y va separada porque las
+    dos mitades tienen dueno distinto: el olvido entero es un ACTO del arnes
+    (vacia la memoria Y borra el fichero), y esto es solo la memoria."""
+    del _BITACORA[:]
+    _SELLADO.update({"hecho": False, "ruta": None, "vuelta": None})
+    _CLASES.update({"escritas": False, "ruta": None})
+
+
 def _cargar_turno():
-    """CARGA EL ESTADO DEL TURNO DE SU FICHERO, si existe. Devuelve True si
-    cargo algo. **Se llama al importar el modulo**, que es lo que hace que los
-    toques de una corrida los vea la siguiente."""
+    """CARGA EL ESTADO DEL TURNO DE SU FICHERO. Devuelve True si cargo algo.
+    **Se llama al importar el modulo**, que es lo que hace que los toques de una
+    corrida los vea la siguiente.
+
+    ARREGLADA EN LA VUELTA 194, TAREA 2, Y LA CAUSA ESTA MEDIDA. Antes, cuando el
+    fichero NO existia, esta funcion se iba dejando la memoria como estuviera. Eso
+    la convertia en un MEZCLADOR y no en un cargador, y rompia lo unico para lo
+    que `RUTA_DEL_TURNO` es de modulo: **un arnes que redirige la ruta a un
+    temporal y vuelve a cargar seguia viendo el turno de la SEDE DE VERDAD**,
+    porque el modulo ya lo habia cargado al importar y el temporal todavia no
+    existia. Medido con el arnes de la 193 corrido con el turno puesto: sus
+    procesos hijos entraban con `['x']` en la bitacora en vez de vacios, y sus
+    casos `A`, `B` y `E` salian en rojo por una razon que no era la suya.
+
+    LA VARA, ESCRITA ENTERA PORQUE TIENE DOS LADOS:
+      . **el fichero NO existe** -> el disco dice QUE NO HAY TURNO, y la memoria
+        se reinicia para decir lo mismo. Devuelve False, que sigue siendo
+        "no cargue nada";
+      . **el fichero existe pero NO se puede leer** -> eso NO es "no hay turno":
+        es un fichero roto, y **la memoria NO se toca**, porque tirar el estado
+        vivo por un JSON corrupto seria perder la prueba en silencio."""
     if not os.path.exists(RUTA_DEL_TURNO):
+        _reiniciar_memoria()
         return False
     try:
         d = json.load(io.open(RUTA_DEL_TURNO, encoding="utf-8"))

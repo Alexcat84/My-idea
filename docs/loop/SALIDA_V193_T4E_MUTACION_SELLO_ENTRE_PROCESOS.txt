@@ -8,6 +8,10 @@ NUEVO de verdad, lanzado con subprocess. El estado de modulo muere entre
 ellos por construccion, asi que si la bitacora o el sello sobreviven es
 porque el fichero del turno los llevo, y no porque el arnes se lo crea.
 
+0) LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE EMPEZAR
+   EXISTE, 178 bytes
+   sha256: d897c177043e4493
+
 A) PROCESO 1: EL TURNO TOCA `REPORTE.md`
    entra con la bitacora vacia                                    VERDE
    y sale con el toque apuntado                                   VERDE
@@ -76,6 +80,12 @@ H) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
    (su nombre NO se imprime: `mkdtemp` lo fabrica aleatorio y esta
     salida se sella y se compara byte a byte)
    el temporal quedo retirado                                     VERDE
-   y el turno del auditor DE VERDAD no se toco                    VERDE
+   LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES Y DESPUES Y NO SUPUESTA
+   (corregido en la 194: antes se exigia que NO EXISTIERA, que es
+    pedir que no haya auditor)
+   al entrar: EXISTE, 178 bytes | al salir: EXISTE, 178 bytes
+   sha256 al entrar: d897c177043e4493
+   sha256 al salir:  d897c177043e4493
+   el turno del auditor DE VERDAD no CAMBIO                       VERDE
 
 VEREDICTO: VERDE

@@ -8,6 +8,12 @@ abre el archivo de veredictos del repo y NO SE TOCA ninguna fila.
    puestos SELLADOS del sujeto fabricado: 11, 22, 33
    puestos NO sellados: 44, 55
 
+0) LA SEDE DE VERDAD DEL TURNO, REDIRIGIDA ANTES DEL PRIMER OLVIDO
+   (ANADIDO EN LA 194, TAREA 2.a, por el hallazgo `5.1` del acta 194)
+   AP.RUTA_DEL_TURNO ya NO apunta a docs/loop/                      VERDE
+   y apunta DENTRO del temporal de este arnes                       VERDE
+   la sede de verdad al entrar: EXISTE
+
 A) CON EL SELLO ESCRITO, `leer_veredictos()` TAPA EL SUJETO Y NADA MAS
    los puestos sellados se leen DEL SELLO y no se teclean           VERDE
    se devuelven las cinco filas                                     VERDE
@@ -67,5 +73,15 @@ G) LO QUE ESTA GUARDA NO PUEDE HACER, PROBADO Y NO SOLO ESCRITO:
 
 H) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)
    el temporal quedo retirado                                       VERDE
+   y AP.RUTA_DEL_TURNO queda restaurada a su sede                   VERDE
+
+I) LA SEDE DE VERDAD DEL TURNO, REMEDIDA (ANADIDO EN LA 194, TAREA 2.a)
+   LO QUE SE COMPRUEBA NO ES QUE EL FICHERO NO EXISTA: es QUE ESTE
+   ARNES NO LO TOCO. Un turno de auditor vivo lo tiene puesto, y exigir
+   su ausencia seria pedir que no haya auditor.
+   al entrar: EXISTE, 178 bytes | al salir: EXISTE, 178 bytes
+   sha256 al entrar: d897c177043e4493
+   sha256 al salir:  d897c177043e4493
+   la sede de verdad NO CAMBIO (existencia, bytes y sha256)         VERDE
 
 CIFRA casos: los de arriba. VEREDICTO: VERDE

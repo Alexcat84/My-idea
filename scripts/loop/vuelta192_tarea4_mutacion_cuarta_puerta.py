@@ -29,6 +29,7 @@ QUE PRUEBA, UNA A UNA:
 USO:
   python scripts/loop/vuelta192_tarea4_mutacion_cuarta_puerta.py
 """
+import hashlib
 import io
 import json
 import os
@@ -96,8 +97,49 @@ def main():
     w("")
 
     tmp = tempfile.mkdtemp(prefix="cuarta_puerta_")
+    # ---------------------------------------------------------------------
+    # ANADIDO EN LA VUELTA 194, TAREA 2.a. HALLAZGO `5.1` DEL ACTA 194, CORRIDO
+    # Y NO DEDUCIDO EN docs/loop/_auditor_v194_cuarta_puerta_rota.txt.
+    #
+    # ESTE ARNES LLAMA A `AP.olvidar_todo()` OCHO VECES CONTRA EL MODULO REAL Y
+    # NUNCA REDIRIGIA `AP.RUTA_DEL_TURNO`. La TAREA 4.a de la vuelta 193 le
+    # anadio a `olvidar_todo()` el `os.remove(RUTA_DEL_TURNO)`, y con eso este
+    # arnes pasaba a BORRAR EL TURNO VIVO DEL AUDITOR EN SU SEDE DE VERDAD, sin
+    # avisar y sin caer: exitcode 0 con el fichero borrado.
+    #
+    # EL MECANISMO NO ES NUEVO NI ES MIO: el comentario de `RUTA_DEL_TURNO` en
+    # `apertura_del_auditor.py` dice que la variable es de modulo "PARA QUE LOS
+    # ARNESES LO PUEDAN REDIRIGIR A UN TEMPORAL", y el arnes de la 193 ya lo hace
+    # en su linea 45. Lo que faltaba era hacerlo aqui.
+    #
+    # Y NO BASTA CON REDIRIGIR: LA SEDE DE VERDAD SE MIDE ANTES Y DESPUES, y este
+    # arnes CAE EN ROJO si cambia. Un arnes que promete no tocar algo y no lo
+    # comprueba es exactamente lo que dejo pasar este agujero.
+    TURNO_REAL = os.path.join(LOOP, "_TURNO_DEL_AUDITOR.json")
+
+    def _medir_turno_real():
+        """(existe, bytes, sha256) DE LA SEDE DE VERDAD. Semi-pura: solo lee."""
+        if not os.path.isfile(TURNO_REAL):
+            return (False, 0, "")
+        datos = io.open(TURNO_REAL, "rb").read()
+        return (True, len(datos), hashlib.sha256(datos).hexdigest())
+
+    turno_antes = _medir_turno_real()
+    ruta_del_turno_original = AP.RUTA_DEL_TURNO
+    AP.RUTA_DEL_TURNO = os.path.join(tmp, "_TURNO_DEL_AUDITOR.json")
+    # ---------------------------------------------------------------------
     try:
         archivo, ciega, sello, clases = _fabricar(tmp)
+
+        w("0) LA SEDE DE VERDAD DEL TURNO, REDIRIGIDA ANTES DEL PRIMER OLVIDO")
+        w("   (ANADIDO EN LA 194, TAREA 2.a, por el hallazgo `5.1` del acta 194)")
+        ok &= _caso(w, "AP.RUTA_DEL_TURNO ya NO apunta a docs/loop/",
+                    AP.RUTA_DEL_TURNO == ruta_del_turno_original, False)
+        ok &= _caso(w, "y apunta DENTRO del temporal de este arnes",
+                    os.path.dirname(AP.RUTA_DEL_TURNO) == tmp, True)
+        w("   la sede de verdad al entrar: %s"
+          % ("EXISTE" if turno_antes[0] else "NO EXISTE"))
+        w("")
 
         w("A) CON EL SELLO ESCRITO, `leer_veredictos()` TAPA EL SUJETO Y NADA MAS")
         AP.olvidar_todo()
@@ -237,9 +279,26 @@ def main():
         w("")
     finally:
         AP.olvidar_todo()
+        AP.RUTA_DEL_TURNO = ruta_del_turno_original
         shutil.rmtree(tmp, ignore_errors=True)
         w("H) EL DIRECTORIO FABRICADO SE RETIRA (P.16, quien fabrica limpia)")
         ok &= _caso(w, "el temporal quedo retirado", os.path.exists(tmp), False)
+        ok &= _caso(w, "y AP.RUTA_DEL_TURNO queda restaurada a su sede",
+                    AP.RUTA_DEL_TURNO, ruta_del_turno_original)
+        w("")
+
+        w("I) LA SEDE DE VERDAD DEL TURNO, REMEDIDA (ANADIDO EN LA 194, TAREA 2.a)")
+        w("   LO QUE SE COMPRUEBA NO ES QUE EL FICHERO NO EXISTA: es QUE ESTE")
+        w("   ARNES NO LO TOCO. Un turno de auditor vivo lo tiene puesto, y exigir")
+        w("   su ausencia seria pedir que no haya auditor.")
+        turno_despues = _medir_turno_real()
+        w("   al entrar: %s | al salir: %s"
+          % ("EXISTE, %d bytes" % turno_antes[1] if turno_antes[0] else "NO EXISTE",
+             "EXISTE, %d bytes" % turno_despues[1] if turno_despues[0] else "NO EXISTE"))
+        w("   sha256 al entrar: %s" % (turno_antes[2][:16] or "(no hay fichero)"))
+        w("   sha256 al salir:  %s" % (turno_despues[2][:16] or "(no hay fichero)"))
+        ok &= _caso(w, "la sede de verdad NO CAMBIO (existencia, bytes y sha256)",
+                    turno_despues, turno_antes)
         w("")
 
     w("CIFRA casos: los de arriba. VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))

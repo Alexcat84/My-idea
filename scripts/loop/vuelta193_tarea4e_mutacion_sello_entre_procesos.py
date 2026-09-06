@@ -20,6 +20,7 @@ fabricado**, para que ni el sujeto ni la sede sean los vivos.
 USO:
   python scripts/loop/vuelta193_tarea4e_mutacion_sello_entre_procesos.py
 """
+import hashlib
 import io
 import json
 import os
@@ -99,6 +100,21 @@ def sin_el_temporal(linea, tmp):
     return linea
 
 
+def medir_turno_real(ruta=None):
+    """(existe, bytes, sha256) DE LA SEDE DE VERDAD DEL TURNO DEL AUDITOR.
+
+    ANADIDA EN LA VUELTA 194, TAREA 2.b. Semi-pura: lo unico que toca disco es
+    leer la ruta que se le pasa, y la ruta va por parametro para que se pueda
+    medir una fabricada. **Devuelve las TRES cosas a proposito:** un fichero que
+    se borra y se vuelve a escribir con el mismo tamano tiene el mismo `existe` y
+    los mismos `bytes`, y solo el `sha256` lo delata."""
+    ruta = ruta or os.path.join(LOOP, "_TURNO_DEL_AUDITOR.json")
+    if not os.path.isfile(ruta):
+        return (False, 0, "")
+    datos = io.open(ruta, "rb").read()
+    return (True, len(datos), hashlib.sha256(datos).hexdigest())
+
+
 def _caso(w, nombre, obtenido, esperado):
     ok = obtenido == esperado
     w("   %-62s %s" % (nombre, "VERDE" if ok else "ROJO"))
@@ -123,6 +139,16 @@ def main():
     w("NUEVO de verdad, lanzado con subprocess. El estado de modulo muere entre")
     w("ellos por construccion, asi que si la bitacora o el sello sobreviven es")
     w("porque el fichero del turno los llevo, y no porque el arnes se lo crea.")
+    w("")
+
+    # LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE FABRICAR NADA (anadido en la
+    # vuelta 194, TAREA 2.b): el caso `H` la vuelve a medir al final y CAE SI
+    # CAMBIA. Antes exigia que NO EXISTIERA, y eso es pedir que no haya auditor.
+    turno_antes = medir_turno_real()
+    w("0) LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE EMPEZAR")
+    w("   %s" % ("EXISTE, %d bytes" % turno_antes[1] if turno_antes[0]
+                 else "NO EXISTE"))
+    w("   sha256: %s" % (turno_antes[2][:16] or "(no hay fichero)"))
     w("")
 
     tmp = tempfile.mkdtemp(prefix="v193_sello_procesos_")
@@ -259,9 +285,32 @@ def main():
         w("   (su nombre NO se imprime: `mkdtemp` lo fabrica aleatorio y esta")
         w("    salida se sella y se compara byte a byte)")
         ok &= _caso(w, "el temporal quedo retirado", os.path.exists(tmp), False)
-        turno_real = os.path.join(LOOP, "_TURNO_DEL_AUDITOR.json")
-        ok &= _caso(w, "y el turno del auditor DE VERDAD no se toco",
-                    os.path.exists(turno_real), False)
+        # -----------------------------------------------------------------
+        # CORREGIDO EN LA VUELTA 194, TAREA 2.b. HALLAZGO `5.1` DEL ACTA 194.
+        #
+        # LO QUE ESTE CASO DECIA ANTES, Y ERA FALSO: comprobaba
+        # `os.path.exists(turno_real) == False`, o sea EXIGIA QUE EL FICHERO DEL
+        # TURNO NO EXISTIERA. Un turno de auditor vivo lo tiene puesto, asi que
+        # este arnes salia en ROJO cada vez que habia auditor, y salia en VERDE
+        # solo porque el arnes de la 192 corria antes en orden alfabetico y lo
+        # BORRABA. **Su verde no era suyo: se lo debia al otro.**
+        #
+        # LO QUE TIENE QUE COMPROBAR ES QUE EL NO LO TOCO, no que no exista. La
+        # medicion se toma ANTES (arriba, `turno_antes`) y aqui DESPUES, con las
+        # tres cosas: existencia, bytes y `sha256`. CAE SI CAMBIA.
+        turno_despues = medir_turno_real()
+        w("   LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES Y DESPUES Y NO SUPUESTA")
+        w("   (corregido en la 194: antes se exigia que NO EXISTIERA, que es")
+        w("    pedir que no haya auditor)")
+        w("   al entrar: %s | al salir: %s"
+          % ("EXISTE, %d bytes" % turno_antes[1] if turno_antes[0] else "NO EXISTE",
+             "EXISTE, %d bytes" % turno_despues[1] if turno_despues[0]
+             else "NO EXISTE"))
+        w("   sha256 al entrar: %s" % (turno_antes[2][:16] or "(no hay fichero)"))
+        w("   sha256 al salir:  %s" % (turno_despues[2][:16] or "(no hay fichero)"))
+        ok &= _caso(w, "el turno del auditor DE VERDAD no CAMBIO",
+                    turno_despues, turno_antes)
+        # -----------------------------------------------------------------
     w("")
 
     w("VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))

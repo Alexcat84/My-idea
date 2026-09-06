@@ -1,0 +1,67 @@
+==============================================================================
+VUELTA 194, TAREA 2.g: LOS DOS ARNESES EN LOS TRES ESCENARIOS DEL
+FICHERO DEL AUDITOR
+==============================================================================
+
+LA VARA DE ESTE FICHERO, ESCRITA ANTES DE CORRER NADA: un verde que
+depende del orden en que corren dos arneses no prueba nada. Por eso cada
+escenario mide TAMBIEN el sha256 de la salida sellada de cada arnes: si
+el verde de uno fuera prestado, su salida cambiaria entre escenarios.
+
+ESCENARIO 1. SOLO EL ARNES DE LA 192, CON EL FICHERO DEL TURNO PUESTO
+   fichero del turno ANTES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   vuelta192_tarea4_mutacion_cuarta_puerta.py
+      exitcode 0 | (sin linea de veredicto)
+      su sellada: 5153 bytes | sha256 ee605b4b8450c484
+   sale con exitcode 0                                            VERDE
+   fichero del turno DESPUES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   el fichero del turno sigue EXACTAMENTE como estaba             VERDE
+   LO QUE LA TABLA DEL AUDITOR PUBLICABA PARA ESTE ESCENARIO, COMO
+   CONTRASTE Y NO COMO FUENTE: 'exit 0, verde' y el fichero 'BORRADO'
+
+ESCENARIO 2. SOLO EL ARNES DE LA 193, CON EL FICHERO DEL TURNO PUESTO
+   fichero del turno ANTES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      exitcode 0 | VEREDICTO: VERDE
+      su sellada: 5023 bytes | sha256 1cb7f216c650b06f
+   sale con exitcode 0                                            VERDE
+   fichero del turno DESPUES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   el fichero del turno sigue EXACTAMENTE como estaba             VERDE
+   LO QUE LA TABLA DEL AUDITOR PUBLICABA PARA ESTE ESCENARIO, COMO
+   CONTRASTE Y NO COMO FUENTE: 'exit 1, ROJO' y el fichero 'EXISTE'
+
+ESCENARIO 3. LOS DOS SEGUIDOS, EN EL ORDEN ALFABETICO DE LA BATERIA
+   fichero del turno ANTES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   vuelta192_tarea4_mutacion_cuarta_puerta.py
+      exitcode 0 | (sin linea de veredicto)
+      su sellada: 5153 bytes | sha256 ee605b4b8450c484
+   sale con exitcode 0                                            VERDE
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      exitcode 0 | VEREDICTO: VERDE
+      su sellada: 5023 bytes | sha256 1cb7f216c650b06f
+   sale con exitcode 0                                            VERDE
+   fichero del turno DESPUES: EXISTE, 178 bytes, sha256 d897c177043e4493
+   el fichero del turno sigue EXACTAMENTE como estaba             VERDE
+   LO QUE LA TABLA DEL AUDITOR PUBLICABA PARA ESTE ESCENARIO, COMO
+   CONTRASTE Y NO COMO FUENTE: '192 verde, 193 verde' y el fichero 'BORRADO'
+
+EL COTEJO QUE DECIDE: LA SALIDA DE CADA ARNES ES LA MISMA CORRIDO SOLO
+Y CORRIDO EN COMPANIA. Si el verde de uno dependiera del otro, aqui se
+veria, porque la salida sellada llevaria dentro la diferencia.
+   vuelta192_tarea4_mutacion_cuarta_puerta.py
+      corrido solo:    ee605b4b8450c484
+      corrido en orden:ee605b4b8450c484
+   su salida sellada es la MISMA en los dos escenarios            VERDE
+   y su exitcode tambien                                          VERDE
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      corrido solo:    1cb7f216c650b06f
+      corrido en orden:1cb7f216c650b06f
+   su salida sellada es la MISMA en los dos escenarios            VERDE
+   y su exitcode tambien                                          VERDE
+
+LA SEDE, DEVUELTA A COMO ESTABA Y REMEDIDA
+   la sede quedo EXACTAMENTE como estaba al entrar                VERDE
+   y el temporal quedo retirado (P.16)                            VERDE
+
+CIFRA casos: 13 | pasan: 13 | fallan: 0
+VEREDICTO: VERDE
