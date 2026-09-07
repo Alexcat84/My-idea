@@ -1,0 +1,161 @@
+==============================================================================
+VUELTA 196, TAREA 2: MIS CLASES SOBRE LOS 120, Y SU COTEJO
+==============================================================================
+
+A) EL SUJETO Y LA COBERTURA, CONTADOS Y NO TECLEADOS
+   docs/loop/SALIDA_V196_T2_CIEGA.txt -> disco 164199 bytes | LF 164199 | sha256 LF c72db9a4f9bfc1cf
+   CIFRA puestos de la ciega: 120
+   CIFRA puestos del DOBLE, leidos de la sellada del auditor: 60
+   CIFRA puestos del TRAMO, por diferencia: 60
+   CIFRA clases que yo escribi: 120
+   CIFRA puestos SIN clase mia: 0 
+   CIFRA clases mias que no estan en el sujeto: 0 
+
+B) MI REPARTO, ANTES DE ABRIR NADA
+   sobre los 120: A 16, B 2, C 0, D 102
+   sobre el TRAMO (60): A 8, B 1, C 0, D 51
+   sobre el DOBLE (60): A 8, B 1, C 0, D 51
+   LA `B` NI SE SALTA NI SE SOBRE EMITE: emito 2 sobre 120, y el archivo
+   entero lleva 72 sobre 3388, que es el 2,1 por ciento. Sobre 120 eso son
+   2,5 esperadas.
+
+C) LA CONTAMINACION, DECLARADA Y MEDIDA ANTES DEL COTEJO
+   LOS SEIS QUEMADOS, importados de la sellada del sujeto y no retecleados:
+      654   acta 196, hallazgo 5.1: declara que el encargo de la 195 publico su clase de archivo al ensenar 
+      719   acta 196, hallazgo 5.1: declara que el encargo de la 195 publico su clase de archivo al ensenar 
+      976   acta 196, adjudicacion 4.1: publica que el archivo dice A, y el PROMPT_SIGUIENTE de esta vuelta 
+      2428  acta 196, adjudicacion 4.2: publica que el archivo dice D, y el PROMPT_SIGUIENTE de esta vuelta 
+      2662  acta 196, adjudicacion 4.3: publica que el archivo dice D por una correccion declarada de la vue
+      3173  acta 196, adjudicacion 4.4: publica que el archivo dice D y que el propio archivo se marca DISCU
+   Y LA GRANDE, QUE NO ES LA DE LOS SEIS: acta 196, seccion 2: MI REPARTO CONTRA EL DEL ARCHIVO. Publica el reparto del archivo sobre los 60 del tramo
+   `A 8, B 1, C 0, D 51` sobre los 60 del TRAMO.
+   MI REPARTO SOBRE EL TRAMO ES `A 8, B 1, C 0, D 51`.
+   COINCIDE CON EL FILTRADO: SI
+   NO RECLAMO CEGUERA SOBRE EL TRAMO, Y ESA ES LA DECLARACION: ese reparto lo
+   LEI en la TAREA 1 de esta misma vuelta, que es BLOQUEANTE y obliga a
+   leer el acta entera. La unica mitad que se puede llamar ciega de verdad
+   es el DOBLE, y por eso su cotejo se publica aparte.
+
+D) MIS CLASES, UNA POR UNA (el destape NO se ha abierto)
+   10    D                          Criterios propios antes de contactar contra investigar el mercado. Cada lado conserva su procedimiento.
+   11    D                          Reconocer la urgencia artificial contra estructurar la visita como solo evaluacion. Procedimiento a los dos lados.
+   12    D                          Gestionar el contrato firmado contra investigar antes de renovar. Momentos y entregables distintos.
+   13    D                          Intereses no posiciones contra preparar el punto de retirada. Comparten una linea, problema no persona, y nada mas.
+   24    D                          Dos tacticas distintas: el permiso para decir no contra el silencio y no partir la diferencia.
+   25    D                          La aritmetica del lote contra el costo del stock muerto. Uno termina en cantidad de pedido y el otro en fecha de liquidacion.
+   26    D                          El no del proveedor contra verificar que el si es real. B trae un procedimiento entero que A nombra en una linea.
+   27    D                          Preguntas calibradas contra el permiso para decir no. Tacticas hermanas y distintas.
+   71    D                          Preparacion y agenda contra la tactica del no.
+   72    D                          Intereses no posiciones contra el silencio.
+   73    D                          Valor no economico contra preparacion y agenda.
+   74    D                          Preparacion y agenda contra punto unico de contacto.
+   133   D                          Documentar lo que queda fuera del alcance contra el registro de lecciones. Artefactos y momentos distintos.
+   134   D                          Puntos en comun antes de negociar contra prepararse para marcharse.
+   135   D                          Intereses no posiciones contra verificar quien decide o veta.
+   139   D                          Prepararse para marcharse contra avisar a los proveedores no elegidos.
+   159   D                          Clasificar Full contra Limited es la decision; Magnuson Moss son los tres requisitos y el abogado.
+   160   A                          Ids sinonimos, y TRES de los cuatro pasos de B son pasos de A. Lo que queda fuera son lineas: party round y desacuerdos al lider.
+   161   A                          Los pasos 2, 3 y 4 de B son los pasos 1, 5 y 6 de A, dos de ellos palabra por palabra. B esta entero dentro de A.
+   162   D                          Magnuson Moss nombra los terminos enganosos en una linea y B los despliega en procedimiento propio.
+   204   D                          Terminos economicos del venture debt contra el pricing del warrant: el hijo despliega dos pasos de la madre en siete, y la madre conserva tasa, comisi
+   205   D                          Inside out contra outside in: dos patrones opuestos de innovacion abierta.
+   206   A                          Los cuatro pasos de B son literalmente las cuatro fases que A ya escribe en sus pasos 6 a 9. B no anade nada que no sea una linea.
+   207   B DISCUTIBLE               Los dos seleccionan arenas cruzando atractivo de mercado con fortaleza propia, y se cruzan justo en el medio. Se distinguen en el encuadre: uno termin
+   397   D                          Capital humano, social y financiero del fundador contra la critica desapasionada de la idea.
+   398   D                          Orden de comunicacion tras un despido ejecutivo contra el proceso de despidos responsables.
+   399   D                          Terminos enganosos de la garantia contra la clausula de venta atada.
+   400   A DISCUTIBLE               Tres de los cinco pasos de B son pasos de A, uno casi palabra por palabra. Fuera del solape quedan lineas a los dos lados: fisico o digital contra hab
+   613   D                          Construir la matriz probabilidad por impacto contra el plan de gestion de riesgos entero.
+   614   A                          Los CUATRO pasos de A estan dentro de los nueve de B, dos de ellos palabra por palabra. A no anade procedimiento.
+   615   D                          Las cuatro etapas del customer development contra la introduccion al discovery.
+   616   D                          Gates go kill con seis criterios contra la revision formal con strategic buckets.
+   654   B QUEMADO                  Dos listas de tacticas de activacion cruzadas en el medio por la prueba gratuita, sin que ninguna nombre a la otra. QUEMADO: el acta 196 declara que s
+   655   A DISCUTIBLE               Ids casi identicos, y por 9.6.3 eso NO decide. Lo que decide: fuera del solape A conserva la preparacion del MVP y las tres preguntas de escala, y B s
+   656   D                          El analisis de ratios nombra el ROA en una linea y B lo despliega con formula y verificacion del balance.
+   657   D                          Conexion personal y emocional contra la investigacion de datos: rituales y nombre propio contra CRM y fuentes.
+   719   D QUEMADO                  Bienvenida tras la compra contra celebracion de un logro: dos FASES distintas de la misma serie, y por la regla de familia dos fases distintas son san
+   720   D                          Papel del fundador en la busqueda del CEO contra la planificacion de la sucesion.
+   721   D                          La etapa de iluminacion nombra la intimacion en una linea y B la despliega en procedimiento.
+   722   D                          Equipos de visita a cliente contra etnografia: guia de entrevista e hipotesis contra observar sin interferir.
+   880   D DISCUTIBLE               La tribu de marca nombra el marcador visual en una linea y B lo despliega, pero dos de los cinco pasos de B repiten a A palabra por palabra.
+   881   D                          El diccionario de la WBS contra construir la WBS: dos artefactos distintos.
+   882   D                          La busqueda del CEO externo nombra el involucramiento del fundador en una linea y B lo despliega.
+   883   A                          Los cuatro pasos de B son cuatro de los seis de A, dos de ellos palabra por palabra. B no anade nada.
+   908   A DISCUTIBLE               Mismo procedimiento de cuatro pasos uno a uno: mercado, dolores, capacidades propias, solucion integrada. Lo unico que cambia es el encuadre del merca
+   910   D                          La evaluacion de industria nombra el VoC en una linea y B lo despliega en procedimiento.
+   911   D                          Obtener el compromiso contra el riesgo de las tecnicas de cierre. B despliega una linea de A.
+   912   D                          La revision de pivotar o seguir contra el modelo entero de customer development.
+   973   D                          Investigar datos nombra en su ultimo paso el uso personalizado, y B lo despliega.
+   974   D                          DSO y DPO contra la gestion de cuentas por cobrar: reserva de incobrables y cobranza contra la aritmetica de los dos ratios.
+   975   D                          Filosofia de validacion de clientes contra el ajuste problema solucion.
+   976   A QUEMADO                  Familia de la junta asesora con REGLA PROPIA ya fijada, que manda sobre la vara general. QUEMADO: el acta 196 publica su clase y su razon.
+   979   D                          Fundamentos del design thinking contra identificar pensadores de diseno internos.
+   980   D                          Fase admit contra fase assess: dos FASES distintas de la misma serie, y por la regla de familia eso es sano.
+   981   D                          Catalogo de tecnicas de MVP contra las posibilidades de prototipado.
+   982   D                          Arquetipos de cliente contra el perfil de jobs, pains y gains.
+   1070  D                          Hipotesis de segmentos de cliente contra el ajuste producto mercado.
+   1071  D                          Duos contra trios frente a la relacion previa del equipo fundador.
+   1072  D                          La busqueda del CEO externo nombra el rol futuro del fundador en una linea y B despliega la transicion.
+   1073  D                          Salir del edificio contra preparar la lista y la agenda de contactos.
+   1206  D                          Relacion continua con el cliente contra el riesgo de las tecnicas de cierre. Comparten una linea.
+   1207  D                          Abandonar el plan de negocio contra romper la vision en experimentos concretos.
+   1212  D                          Compromiso con linea de tiempo contra la obtencion del compromiso dentro de la reunion.
+   1213  D                          Autofinanciarse o no contra las fuentes de financiamiento: runway y control contra estructura fiscal y terminos.
+   1372  D                          Garantias implicitas contra expresas frente a la prohibicion de venta atada.
+   1373  D                          Cuentas por cobrar contra tipos de pasivos.
+   1374  D                          Calculo del cash burn contra la validacion de la hipotesis de ingresos con LTV.
+   1379  D                          Actitud de experimentacion contra transformacion organizacional por diseno.
+   1807  D                          Ids casi sinonimos y por 9.6.3 no deciden: A conserva broker, tarifa fija y venta de excedente, y B conserva mix, instalacion en sitio y RECs.
+   1808  D DISCUTIBLE               Ids sinonimos. Fuera del solape del reconocimiento, A conserva programas por nivel y canales de ideas, y B conserva el ejemplo propio, las competencia
+   1809  D DISCUTIBLE               Critica a la ecoeficiencia contra menos malo frente a bueno: A conserva toxinas, incineracion y rediseno regenerativo, y B conserva el lenguaje y la p
+   1810  D DISCUTIBLE               Capacidad de empleados contra inversion en capacitacion: A conserva treasure hunts e induccion, B conserva roles de material toxico y Eco Advantage.
+   1818  A                          El paso 5 de A y el paso 3 de B son la misma frase. Los tres pasos de B estan dentro de los cinco de A y B no anade procedimiento.
+   1819  D                          Empaque ecoeficiente contra transporte de bajas emisiones.
+   1820  D                          Benchmarking de practicas contra evaluacion de materialidad con los nueve factores.
+   1821  D DISCUTIBLE               El concepto cradle to cradle produce una decision escrita en una frase; la ecoefectividad produce el rediseno entero. Procedimiento corto pero propio 
+   2031  D                          El certificado de origen es UN documento; B es la documentacion de exportacion entera y lo nombra en una linea.
+   2032  D                          El metodo paso a paso de investigacion de mercado contra la lista de fuentes.
+   2033  D                          Convenio de Paris contra PCT: dos tratados distintos.
+   2034  D                          Carta de credito contra letra de cambio: dos instrumentos distintos.
+   2158  D                          Leyes estatales de franquicia contra revision legal del marketing.
+   2159  D                          Crecimiento desde franquiciados actuales contra velocidad de expansion.
+   2160  D                          Mercados secundarios contra rentabilidad del franquiciante.
+   2161  D DISCUTIBLE               B nombra en su paso 3 el capital necesario sin depender de los fees, y A lo despliega con fuente de capital y validacion experta. Madre e hijo con dir
+   2427  D                          Ids casi identicos y por 9.6.3 no deciden: A conserva capex contra opex, muestreo y prueba de robustez, y B conserva la cadena entera de estimacion y 
+   2428  D QUEMADO                  Uno genera caracteristicas y el otro las elige y prioriza: arista que falta, con direccion. QUEMADO: el acta 196 publica su clase y su razon.
+   2429  A DISCUTIBLE               Los dos primeros pasos son los mismos y el ultimo tambien. Fuera del solape A solo conserva comparar las dos listas, que es una linea, y B conserva la
+   2430  A DISCUTIBLE               Mapear, eliminar lo que no agrega valor y el sistema pull estan a los dos lados. Fuera quedan lineas: las ocho categorias e involucrar gente contra de
+   2661  D                          Calificar al comprador contra calificar al proveedor: sujetos distintos.
+   2662  A QUEMADO E INALCANZABLE   A ciegas los dos son la misma constitucion del consejo de calidad. INALCANZABLE por el hallazgo 5.3 del acta 196: la clase se apoya en una fusion plan
+   2663  A                          Los seis pasos de A estan dentro de los once de B, tres de ellos palabra por palabra.
+   2664  A                          Los seis pasos de B son seis de los siete de A, casi frase por frase. A solo conserva el equipo con project owner.
+   2837  D                          Reuniones de accion correctiva contra el formulario de eliminacion de causas de error.
+   2838  A                          Los cinco pasos de A estan dentro de los ocho de B, tres de ellos como parentesis literales. A no anade procedimiento.
+   2839  D                          Benchmarking de mejores practicas contra el monitoreo continuo ano contra ano.
+   2840  D                          Aprobacion de la alta direccion contra los inhibidores del breakthrough.
+   2914  D                          Auditoria de calidad contra auditoria de negocio: alcances y procedimientos distintos.
+   2915  D                          La escalera diaria, semanal y mensual contra la clasificacion esporadico frente a cronico.
+   2916  D DISCUTIBLE               El consejo de once pasos contra el de cuatro. B conserva institucionalizarlo como estructura permanente y coordinar la repeticion del ciclo.
+   2917  D DISCUTIBLE               Dos pasos de B citan a A palabra por palabra, pero A conserva puntos de consumo y niveles de reposicion, y B conserva push contra pull, cuellos de bot
+   3071  D                          Auditorias de vigilancia de la certificacion contra el concepto de auditoria de calidad.
+   3072  D DISCUTIBLE               El consejo de calidad contra el papel de la alta direccion. A conserva Pareto, proyectos, carta y vinculo de consejos; B conserva estrategias, partici
+   3073  D                          El consejo de calidad contra el equipo de mejora: dos cuerpos distintos.
+   3074  D                          Metas SMART de proyecto contra metas de calidad validadas con benchmarks.
+   3090  D                          Definir la calidad como aptitud de uso contra contrastarla con la conformidad interna.
+   3091  D                          Las quejas llegan tarde contra el sistema de manejo de quejas.
+   3092  D                          Boxplot contra histograma: dos graficos distintos.
+   3093  D                          Diagnostico antes del remedio contra responsabilidad personal en la gestion.
+   3172  D                          A establece la mejora como politica en una linea y B despliega como se redacta, se publica y se sigue.
+   3173  D QUEMADO                  Los dos enumeran la triada del autocontrol, y cada lado conserva su especializacion propia. QUEMADO: el acta 196 publica su clase.
+   3174  D                          Eliminar lemas contra remover barreras: dos puntos distintos de la misma serie, y comparten una sola linea.
+   3180  D                          Auditoria del producto propio contra encuesta de calidad al proveedor.
+   3186  D                          El proceso de benchmarking nombra la brecha en una linea y B despliega bruta, neta y vital few.
+   3187  D                          Concepto de auditoria contra la separacion entre aseguramiento y control.
+   3188  D                          La escalera de accion correctiva contra el ciclo PDCA de control.
+   3189  D                          Costo de calidad contra medicion de calidad con graficos de tendencia.
+   3330  D                          El riesgo cambia con el tiempo contra el riesgo se administra siempre.
+   3331  D                          Revisar la lista de riesgos contra nombrar las suposiciones fragiles.
+   3332  D                          El colchon de reserva contra el plan B preparado de antemano.
+   3333  D                          El riesgo del entorno que no controlas contra que hacer con un riesgo nuevo.
+
+FIN. El cotejo se corre despues, con --cotejar.
