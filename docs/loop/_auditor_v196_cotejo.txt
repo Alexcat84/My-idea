@@ -1,0 +1,27 @@
+==============================================================================
+COTEJO DE LA CIEGA DE LA VUELTA 196
+==============================================================================
+sujeto sellado: 60 puestos | mis clases: 60 | filas del archivo halladas: 60
+bitacora del turno: git log, git status, REPORTE.md, veredictos:destape
+
+MIS CLASES:    A 10 | B 1 | C 0 | D 49
+EL ARCHIVO:    A 8 | B 1 | C 0 | D 51
+
+COINCIDEN: 56 de 60
+DISCREPAN: 4 -> 976, 2428, 2662, 3173
+
+SIN LOS DOS QUEMADOS (654, 719), que salen del credito por declaracion:
+   COINCIDEN: 54 de 58 | DISCREPAN: 4
+
+LAS DISCREPANCIAS, UNA A UNA, CON MI MARCADO DELANTE:
+   976   yo D | archivo A | DENTRO de mi marcado
+   2428  yo A | archivo D | FUERA de mi marcado
+   2662  yo A | archivo D | DENTRO de mi marcado
+   3173  yo A | archivo D | DENTRO de mi marcado
+
+REPARTO: DENTRO 3 -> 976, 2662, 3173
+         FUERA  1 -> 2428
+         FUERA sin quemados 1 -> 2428
+
+MIS DISCUTIBLES QUE ACERTE (marcados y coincidentes): 25, 654, 655, 719, 1206, 1807, 1808, 2427, 3072, 3090, 3091, 3172
+MIS DISCUTIBLES MARCADOS: 15

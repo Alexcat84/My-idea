@@ -1,0 +1,23 @@
+==============================================================================
+EL TRAMO Y EL DOBLE PARA LA VUELTA 197, CERRADOS EN LA 196
+==============================================================================
+EL TRAMO: 60 puestos, leidos de docs/loop/_auditor_v196_ciega_blind.txt
+   10, 11, 24, 25, 71, 72, 133, 134, 159, 160, 204, 205, 397, 398, 613, 614, 654, 655, 719, 720, 880, 881, 908, 910, 973, 974, 975, 976, 1070, 1071, 1206, 1207, 1372, 1373, 1807, 1808, 1818, 1819, 2031, 2032, 2158, 2159, 2427, 2428, 2661, 2662, 2837, 2838, 2914, 2915, 3071, 3072, 3090, 3091, 3172, 3173, 3186, 3187, 3330, 3331
+
+EL UNIVERSO CONSUMIDO, CONTADO DE SUS FICHEROS Y NO TECLEADO
+   ficheros que EXISTEN: 14 de 14
+   CIFRA universo consumido (con el tramo dentro): 621
+   CIFRA universo consumido SIN el tramo: 561
+
+EL DOBLE: 60 vecinos deterministas
+   12, 13, 26, 27, 73, 74, 135, 139, 161, 162, 206, 207, 399, 400, 615, 616, 656, 657, 721, 722, 882, 883, 911, 912, 979, 980, 981, 982, 1072, 1073, 1212, 1213, 1374, 1379, 1809, 1810, 1820, 1821, 2033, 2034, 2160, 2161, 2429, 2430, 2663, 2664, 2839, 2840, 2916, 2917, 3073, 3074, 3092, 3093, 3174, 3180, 3188, 3189, 3332, 3333
+
+SOLAPE DEL DOBLE CON EL TRAMO:    0 
+SOLAPE DEL DOBLE CON EL UNIVERSO: 0 
+   Los dos ceros salen POR CONSTRUCCION: `evitar` va DENTRO de la
+   llamada a vecinos(), no comprobado despues.
+
+Y EL 2428, QUE ES EL QUE DISPARA `AUDITOR.md` 1.2, ESTA DENTRO DEL
+TRAMO QUE SE DICE RELEER: SI
+SELLADO EN: docs/loop/_auditor_v196_doble_para_la_197.txt (1061 bytes)
+VEREDICTO: VERDE
