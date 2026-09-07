@@ -1,0 +1,32 @@
+COTEJO DE LA CIEGA DEL AUDITOR, VUELTA 199. Todo contado del fichero.
+  sellados                       : 51
+  adjudicados por mi             : 49
+  MI HUECO, sellados sin clase   : 2 [160, 161] -> el archivo los da ['A', 'A']
+  coinciden                      : 37 de 49
+  discrepan                      : 12 de 49
+  mi reparto (49 filas)          : {'A': 22, 'D': 27}
+  reparto del archivo (51)       : {'A': 18, 'B': 11, 'D': 22}
+
+LAS 12 DISCREPANCIAS, UNA A UNA:
+    158  mio A -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    168  mio A -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    170  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    172  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    180  mio A -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    181  mio A -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    186  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    187  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    196  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    199  mio A -> archivo B | razon del archivo ABRE con DUDOSO: SI
+    203  mio A -> archivo D | razon del archivo ABRE con DUDOSO: NO
+    210  mio D -> archivo B | razon del archivo ABRE con DUDOSO: SI
+
+  discrepancias contra la clase B : 11
+  de esas, con razon que ABRE con DUDOSO: 11
+  discrepancias contra otra clase : [(203, 'D')]
+
+MIS DISCUTIBLES MARCADOS ANTES DEL DESTAPE: [168, 180, 199, 203, 207]
+  de ellos discreparon           : [168, 180, 199, 203]
+  de ellos coincidieron          : [207]
+  discrepancias DENTRO de mi marcado: 4
+  discrepancias FUERA  de mi marcado: 8 [158, 170, 172, 181, 186, 187, 196, 210]

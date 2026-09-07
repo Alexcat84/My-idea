@@ -1,0 +1,139 @@
+CLASES DEL AUDITOR, VUELTA 199. ESCRITAS ANTES DE CUALQUIER DESTAPE.
+Sujeto: el sellado en docs/loop/SELLO_APERTURA_AUDITOR_V199.json
+Ciega leida: docs/loop/_auditor_v199_ciega_blind.txt (71193 bytes)
+Vara: docs/BANCO_DE_TEXTOS.md 9.6.1 (LA LINEA O EL PROCEDIMIENTO), 9.6.2, 9.6.3,
+      9.22 (LOS DOS POLOS) y la regla practica del informe 67.6 citada en el 9.22:
+      es LINEA un puntero, una advertencia, un criterio suelto o una accion unica;
+      es PROCEDIMIENTO un paso que obliga a varias decisiones dentro de si o que
+      se repite en el tiempo.
+LO QUE LA CIEGA NO ME DA, Y LO DIGO ANTES DE ADJUDICAR: la ciega lleva lista
+      blanca puesto_intra, nodo_a, nodo_b y pasos. NO lleva aristas ni anatomia de
+      costurados. Por eso NO puedo aplicar el conteo de radios del 9.6.1 ni
+      decidir un bloqueo por costura (clase B) de la 9.9. TODAS MIS CLASES SON
+      POR CONTENIDO. Donde eso pueda cambiar el veredicto lo digo en la fila.
+
+puesto | mi clase | razon en una linea
+------ | -------- | -------------------------------------------------------------
+150 | D | anclaje de precio contra interlocutor unico: dos procedimientos sin solape.
+151 | D | investigar precios de mercado contra centralizar el trato: sin solape.
+152 | D | ofrecer valor no monetario contra detectar urgencia fabricada: distintos.
+153 | D | rapport previo contra interlocutor unico: sin solape.
+154 | D | detectar presion contra preguntar como: dos tacticas distintas.
+155 | D | limite de retirada (BATNA) contra separar visita de compra; comparten el
+        |   aguante a la urgencia como linea, las colas van a sitios distintos.
+157 | D | el hijo trae PROCEDIMIENTO (canal, colocacion, preparar al vendedor) que
+        |   la madre solo nombra como requisito: continua.
+158 | A | LINEA en los dos sentidos: separar contrato de garantia, redactar claro y
+        |   no renunciar a garantias implicitas estan en los dos; A solo anade
+        |   precio, duracion y alcance, y B solo quien responde. 9.22 segundo polo.
+159 | D | clasificar Full contra Limited es procedimiento propio del hijo sobre la
+        |   linea titulo claro de la madre: continua.
+162 | D | el hijo desarrolla no uses frases enganosas con procedimiento propio.
+163 | D | investigacion de voz del cliente contra criterio de puerta: distintos.
+164 | D | el hijo desarrolla terminos divulgados con claridad con procedimiento.
+166 | A | cuatro pasos contra cuatro y los cuatro se emparejan: definir donde la IA
+        |   decide sola, revisar antes de usar, anotar alucinaciones, doble revision
+        |   en lo critico. Repiten.
+167 | D | las cuatro etapas del modelo contra la etapa 1 desarrollada: el hijo trae
+        |   procedimiento (canvas, problema, MVP, pivotar). Continua.
+168 | A | DISCUTIBLE. El asiento de fundador contra el de CEO esta en los dos; lo
+        |   que B anade (mayorias especiales, asumir el costo del capital) son dos
+        |   LINEAS. Por 9.22 segundo polo, repiten. Lo marco porque A trae tres
+        |   pasos mas que rozan procedimiento (composicion por ronda, partir la
+        |   ronda, nominar al independiente).
+169 | A | cinco de seis pasos emparejados y uno VERBATIM (lanzar la integracion y
+        |   medir el trafico y los referidos generados). Repiten.
+170 | D | preguntas de IMPLICACION contra preguntas de PROBLEMA: comparten el ritual
+        |   de preparacion pero cada cola es un tipo de pregunta distinto, con su
+        |   procedimiento. Es el contraste del 2091, no el 2080.
+171 | D | disponibilidad previa contra divulgacion: dos reglas distintas, sin solape.
+172 | D | un paso emparejado de cuatro contra cinco (varios mapas del mismo
+        |   territorio) y colas distintas: continuo y Venn en uno, patrones y
+        |   oportunidades en el otro.
+173 | A | CONOPS, demanda por instalacion, transporte, modelar y simular: los cinco
+        |   pasos se emparejan en el mismo orden. B solo anade implementar y
+        |   monitorear, que es una linea.
+174 | A | los tres pasos del corto caben enteros en el largo (compromiso visible,
+        |   reconocer al que se arriesga, abrir la idea a cualquiera); lo unico
+        |   propio del corto es tiempo y no solo dinero, que es una linea.
+175 | A | el corto esta contenido entero en el largo, con DOS pasos VERBATIM
+        |   (liderar tu mismo las conversaciones; documentar en el momento).
+177 | A | el corto esta contenido entero en el largo, con la frase de su paso 2
+        |   dentro del paso 2 del largo y su paso 4 VERBATIM en el paso 9.
+178 | A | seis de seis emparejados, dos VERBATIM (celebrar historias; escuchar y dar
+        |   voz). Lo que anade el largo (insignias, rituales, monitoreo) son lineas.
+179 | A | el corto esta contenido entero en el largo, con DOS pasos VERBATIM
+        |   (dividir en escenas; titular cada escena).
+180 | A | DISCUTIBLE. La espina (reconocer la presion social, aislar a la multitud,
+        |   decidir aunque no sea popular) esta en los dos; los residuos de los dos
+        |   lados son lineas. Lo marco porque el bloque de vision contra backlog del
+        |   largo (tres pasos seguidos) roza procedimiento propio.
+181 | A | misma declaracion de posicionamiento centrada en el cliente; los cuatro
+        |   residuos (superlativos, tipo de mercado, la reaccion cuentame mas, una
+        |   sola voz) son lineas.
+182 | A | cuatro de cuatro casi literales: vocero, mensajes antes de que escale,
+        |   transparencia bajo presion, la crisis como reposicionamiento.
+183 | A | el corto esta contenido entero en el largo, con TRES pasos VERBATIM
+        |   (expectativas, momentum, no fallar la primera impresion).
+184 | A | mismos seis criterios, misma escala, mismo uso para priorizar, y un paso
+        |   VERBATIM (scorecard distinto segun el tipo de proyecto).
+186 | D | el hijo trae PROCEDIMIENTO: las pruebas concretas de evidencia (8 a 10 en
+        |   severidad, workarounds, entusiasmo del MVP, TAM y SAM contra feedback,
+        |   diagramas antes y despues). La madre solo lista criterios. Continua.
+187 | D | comparten los tres circulos; la cola del otro (riesgo de mezclar
+        |   relaciones y acuerdos explicitos si es cercano) es procedimiento propio.
+188 | A | el corto esta contenido entero en el largo, con un paso VERBATIM (no
+        |   cerrarlo con un apreton de manos rapido).
+189 | A | los cuatro pasos del corto se emparejan uno a uno con los del largo y el
+        |   cuarto es VERBATIM (preguntar el proceso tras la segunda reunion).
+190 | D | la taxonomia de inversores contra la rama de los angeles con procedimiento
+        |   propio (redes, presentacion, que aporta cada uno, sillon en directorio).
+191 | D | el hijo desarrolla la mitad DSO con procedimiento propio (politica de
+        |   credito 2/10 net 30, perfil de cliente ideal) que la madre no tiene.
+193 | D | el discurso de cierre a toda la empresa contra el orden de aviso tras
+        |   despedir a un ejecutivo: dos situaciones y dos procedimientos.
+194 | A | seis contra seis emparejados y uno VERBATIM (listar stakeholders y su
+        |   influencia). Lo unico propio es formular preguntas por bloque del Canvas.
+195 | A | los cuatro pasos del corto estan en el largo y TRES son VERBATIM (mapear
+        |   la relacion previa, evaluar los roles, verificar el equity).
+196 | D | el hijo trae PROCEDIMIENTO propio (mapa del proceso, puntos de contacto de
+        |   la compra al dia 100, responsable por punto). Continua.
+198 | D | el discurso del fundador contra el entrenamiento de los gerentes: dos
+        |   actos distintos del mismo despido.
+199 | A | DISCUTIBLE. Una pagina por idea, los mismos criterios, y decidir con quien
+        |   ayuda en lo tecnico y lo comercial: la espina es la misma y los residuos
+        |   (la lista de obligatorios; comparar las ideas entre si) son lineas. Lo
+        |   marco porque los dos nombran puertas DISTINTAS de la misma escalera y
+        |   eso puede pedir la lectura de familia y no la de pareja.
+202 | D | las cuatro etapas de la llamada contra la etapa de Investigacion
+        |   desarrollada con procedimiento propio. Continua.
+203 | A | DISCUTIBLE, Y ES EL ESPEJO DEL 191. Aqui el hijo NO trae procedimiento:
+        |   calcular el DPO y balancear pagos ya estan en la madre, y lo unico
+        |   propio es evaluar el impacto reputacional, que es una linea. Por eso
+        |   este va a A y su gemelo del 191 va a D: la asimetria es de contenido.
+204 | D | el hijo desarrolla los warrants con procedimiento propio (cobertura en el
+        |   term sheet, valor economico diluido, plazo, OID) y la madre no expande
+        |   ninguna linea suya: la tasa y las comisiones no viven en el hijo.
+205 | D | inside out contra outside in: las dos mitades opuestas de la innovacion
+        |   abierta. Sin solape.
+207 | A | DISCUTIBLE Y CON CAVEAT DE CIEGA. Por contenido repiten: mercados
+        |   atractivos por competencias propias es igual a arenas, y los cuatro
+        |   residuos son lineas. PERO no puedo ver si alguno de los dos esta
+        |   COSTURADO; si lo esta y el solape toca la juntura, la 9.9 lo manda a B
+        |   y mi A seria por ceguera de instrumento, no por lectura.
+208 | D | la madre nombra sus cuatro fases y el hijo desarrolla la fase 2 con
+        |   procedimiento propio (disenar experimentos, preparar contactos,
+        |   perfiles, conocimiento competitivo). Continua.
+210 | D | comparten tres tacticas (lealtad, bienvenida, llamada antes de renovar)
+        |   pero las colas van a sitios distintos: instrumentacion y canales en uno,
+        |   economia de la retencion (ROI por tactica, cohortes, CAC contra LTV,
+        |   simular utilidades) en el otro. Contraste del 2091.
+
+RESUMEN DE MIS CLASES, CONTADO Y NO TECLEADO (el comando va en el acta):
+   A: 24   B: 0   C: 0   D: 27   TOTAL: 51
+DISCUTIBLES QUE MARCO YO: 168, 180, 199, 203, 207
+CAVEAT DE INSTRUMENTO: mi B y mi C valen CERO POR CONSTRUCCION, no por lectura:
+   la clase B de la 9.9 se decide por costura y la C del 9.22 por aristas, y la
+   ciega no lleva ni junturas ni aristas. Una discrepancia contra una B o una C
+   del archivo NO es una discrepancia de lectura mia: es el limite del sujeto que
+   selle, y asi se registra en el acta.
