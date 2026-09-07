@@ -1,0 +1,107 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 197, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 197 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 34053 | saltos de linea: 460
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
+     (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del
+      reporte de la 190 salio con la etiqueta DUPLICADA porque este
+      instrumento la pega sin comprobar si ya venia puesta. SE FALLA
+      RUIDOSO: no se limpia en silencio, porque limpiar en silencio es
+      la otra mitad de la misma enfermedad)
+     apariciones de 'EL VEREDICTO DE UNA LINEA:' en el veredicto recibido: 0
+     empieza por '**': no | termina por '**': no
+     CIFRA motivos: 0
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V197_TALLADOR_CABECERA.txt             2384 bytes, 11 filas de tabla
+   scripts/loop/_v197_cierre_texto.md                     12243 bytes, sha256 6d36086245c051b7
+      ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+      ## 4. LO QUE SE TOCO, Y LO QUE NO
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. PREGUNTAS, QUE NO ADIVINO
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. LO QUE LA 198 RECIBE
+   docs/loop/SALIDA_V197_BATERIA.txt                    NO EXISTE
+   CIFRA lineas no vacias de la bateria: 0
+   vuelta que lleva dentro el nombre del fichero: 197
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+   CIFRA tramos de esa bateria con fichero en disco: 0
+   CIFRA tramos sellados EN LA VUELTA 197: 0 []
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): HUECO
+      motivo: la bateria de la vuelta 197 no corrio: su fichero no existe o esta vacio
+   LA BATERIA DE ESTA VUELTA NO CORRIO. Se mira la atribucion:
+   --hueco-atribucion: 'NADIE la corrio, y NO tocaba: por AUDITOR.md 6.1, decision del fundador del 5 sep 2026, la bateria de mutaciones corre CADA CINCO VUELTAS en una vuelta propia que NO LLEVA NADA MAS. La 194 la corrio ENTERA por sus DIEZ tramos y por esa cadencia LA SIGUIENTE VUELTA DE BATERIA ES LA 199. Esta vuelta NO es de bateria: su encargo se lo dice con esas palabras en su cuarta linea, su sello de apertura lo escribe en el bloque I y ese mismo bloque mide CERO ficheros SALIDA_V197_BATERIA_TRAMO_N.txt en disco al entrar, sobre 38 selladas de bateria que si hay en docs/loop/ repartidas entre las vueltas 176, 183, 189 y 194. El fichero docs/loop/SALIDA_V197_BATERIA.txt NO EXISTE y por eso mide cero, y esa medicion va aqui CON SU NOMBRE en vez de callarse: un hueco declarado no es un hueco escondido. Y LO QUE ESTA VUELTA SI MIDIO DEL RADIO DE LA BATERIA, sin correrla, Y AHORA CON SU VARA AL LADO, que es la TAREA 4.a y la adjudicacion 4.7 del acta 197: la nomina de verificar_mutaciones_viejas.py entra y sale en 135 entradas con CASOS_DECLARADOS en 2; el censo reconoce 195 arneses; LA VARA DEL CENSO VALE 148 y decide, y CON ESA VARA hay 0 arneses del censo fuera de la nomina, pero SIN VARA hay 60, y las dos cifras se publican juntas porque un 0 solo al lado de un censo de 195 y una nomina de 135 se lee como cobertura total del censo y es cobertura desde la vara para arriba; hay ademas 0 entradas invisibles al censo y 0 entradas sin sujeto congelado. Todo leido del instrumento en el bloque F del sello de apertura, que ahora mide LAS DOS y lista los diez primeros de los 60. NO SE PODO NI UNA ENTRADA. Y UNA COSA MAS QUE ESTA VUELTA MIDIO Y NO REPARO, porque no esta encargada: de 5 arneses de la nomina que tocan apertura_del_auditor.py, 1 BORRA la sede del turno del auditor cada vez que corre, medido con una corrida en SALIDA_V197_T2_QUIEN_BORRA_LA_SEDE.txt y preguntado en la seccion 6.'
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 197
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 197
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LAS CUATRO TAREAS CERRADAS: R.59 escrita con siete lectores nuevos que salvan seis paradas, el orden del turno del audit'
+   CIFRA numerales hallados en el veredicto: 1
+      'CUATRO'   -> 4 tareas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 0
+      tareas   -> 4
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 545 bytes de hueco -> 2476 bytes de tabla pegada
+   veredicto escrito: 465 bytes
+   ESCRITO: docs/loop/REPORTE.md (51726 bytes, 682 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja SI
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   CIFRA cifras publicadas sin su pareja: 0
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 1
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 1
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 19
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 10
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 0
+         (ninguna, y el cero va escrito)
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V197_APERTURA.txt -> 11453 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 1
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 1, en la linea 506: `git status --porcelain` 1 linea al entrar, que era el propio bloque de apertura
+      numstat  -> 0, en la linea 509: `git diff --numstat -- dataset/` 0 filas al entrar.
+      numstat  -> 0, en la linea 537: - **`dataset/` NO SE TOCO A MANO Y NO SE MOVIO.** `git diff --numstat -- dataset/` da **0 filas 
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+VERDE: el reporte de la vuelta 197 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

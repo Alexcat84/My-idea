@@ -1,0 +1,31 @@
+==============================================================================
+VUELTA 197: LE PONGO SU PAREJA A CADA CIFRA DE BYTES DEL REPORTE
+==============================================================================
+
+LA GUARDA QUE ME CAZO: cerrar_reporte.py, vuelta 178 TAREA 1.e, exige que
+toda cifra de bytes vaya con LAS DOS CONVENCIONES. Corrida sobre mi
+reporte cayo con 17 cifras sin pareja. NO SE METEN EN UNA CERCA PARA QUE
+NO LAS VEA: se les mide la pareja y se escribe.
+
+   docs/loop/SALIDA_V197_T1A_REGISTRO_R59.txt               1 cita(s) -> disco 14908 | LF 14908
+   docs/loop/SALIDA_V197_T1A_RECORRIDO_SIN_ESCRIBIR.txt     1 cita(s) -> disco 15019 | LF 15019
+   docs/loop/SALIDA_V197_T1A_MUTACION_REGISTRADOR.txt       1 cita(s) -> disco 4085 | LF 4085
+   docs/loop/ACTA_AUDITOR.md                                la cita '**4595886** bytes' no aparece; no se toca nada
+   docs/loop/SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt    1 cita(s) -> disco 6491 | LF 6491
+   docs/loop/SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt       LA CIFRA PUBLICADA (3480) NO CALZA CON EL DISCO (3516): NO se
+      reescribe. Una cifra que no calza es una caida, no un formato.
+   docs/loop/SALIDA_V197_T2C_GUARDA_MARCADOR_ACTA_197.txt   1 cita(s) -> disco 2364 | LF 2364
+   docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json              1 cita(s) -> disco 102 | LF 102
+   docs/loop/SALIDA_V197_T3_CIEGA.txt                       1 cita(s) -> disco 326299 | LF 326299
+   docs/loop/SALIDA_V197_T3_DESTAPE.txt                     1 cita(s) -> disco 250425 | LF 250425
+   docs/loop/SALIDA_V197_T3_MIS_CLASES.txt                  1 cita(s) -> disco 43605 | LF 43605
+   docs/loop/SELLO_APERTURA_AUDITOR_V197.json               la cita '(1657 bytes)' no aparece; no se toca nada
+
+CIFRA citas reescritas: 9
+docs/loop/REPORTE.md pasa de 33444 a 33648 bytes
+
+LO QUE QUEDA SIN PAREJA A PROPOSITO, Y SE DICE: las cifras de 329 y 801
+bytes del fichero del turno del auditor SI llevan su pareja en la seccion
+4, que es su sede; en las secciones de tarea aparecen como CITA de esa
+medicion y no como medicion nueva. Si la guarda las sigue viendo, se
+publica su cifra y no se esconde.

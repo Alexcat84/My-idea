@@ -47,8 +47,7 @@
 > **Y no se toca `dataset/` a mano**: el `numstat` se mide al entrar y al salir y
 > **las dos cifras se publican**.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre.
-
+**EL VEREDICTO DE UNA LINEA: LAS CUATRO TAREAS CERRADAS: R.59 escrita con siete lectores nuevos que salvan seis paradas, el orden del turno del auditor ya es codigo con 49 de 49 en verde, 207 de 224 en la mitad limpia de una ciega de 240 que vuelve a doblar el tramo por once discrepancias fuera de un marcado que no existe por debajo del 2662, y las dos cifras sin vara ya viajan con la suya, con el tope del austero medido por tres varas y 5.1 veces por encima.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -85,12 +84,25 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva.**
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 197`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO, 19 celdas no se pudieron leer"**, y de las lineas de
-rojo que imprima, **0 mencionan APERTURA**. Este hueco se rellena con la
-tabla tallada entera cuando la vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 197`, y su salida
+cruda vive en `docs/loop/SALIDA_V197_TALLADOR_CABECERA.txt` (2404 bytes en disco y 2384 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `85c3d52b` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 196: LA 195 REPRODUJO ENTERA EN CATORCE CIFRAS, PERO PUBLICA UNA RUTA QUE PROMETE PRUEBA SOBRE UN FICHERO QUE NUNCA EXISTIO.'), HEAD real de apertura `548856b1` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `1ec91610` (leido de `SALIDA_V197_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CUATRO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -113,14 +125,14 @@ tabla tallada entera cuando la vuelta cierre.
 **Instrumento:** `scripts/loop/vuelta197_tarea1a_registrar_acta197.py`, que IMPORTA
 la maquina de `R92`, `R94`, `R95` y `R96` y no copia nada.
 **Ficheros de salida, y toda cifra de abajo se cuenta de ellos:**
-`docs/loop/SALIDA_V197_T1A_REGISTRO_R59.txt` (14908 bytes),
-`docs/loop/SALIDA_V197_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (15019 bytes),
-`docs/loop/SALIDA_V197_T1A_MUTACION_REGISTRADOR.txt` (4085 bytes),
+`docs/loop/SALIDA_V197_T1A_REGISTRO_R59.txt` (disco 14908 bytes y LF 14908 bytes),
+`docs/loop/SALIDA_V197_T1A_RECORRIDO_SIN_ESCRIBIR.txt` (disco 15019 bytes y LF 15019 bytes),
+`docs/loop/SALIDA_V197_T1A_MUTACION_REGISTRADOR.txt` (disco 4085 bytes y LF 4085 bytes),
 `docs/loop/SALIDA_V197_T1A_SIMULACION.txt`.
 
 **EL CUERPO SE ACOTO EN ESTA VUELTA Y NO POR LA LINEA DEL ENCARGO:**
 `R92.cuerpo_del_acta` da lineas **69341 a 69635**, **295 lineas**, sobre un
-`ACTA_AUDITOR.md` de **4595886 bytes**. Las dos calzan con las que el encargo cita,
+`ACTA_AUDITOR.md` de disco **4595886** bytes y LF **4595886** bytes. Las dos calzan con las que el encargo cita,
 **y se dice que calzan porque se remidieron, no porque se heredaran**.
 
 **EL NUMERO NO SE TECLEO:** serie recomputada de sus dos sedes, **50 entradas, 0
@@ -201,11 +213,11 @@ futuro.
 
 **Sobre `scripts/loop/apertura_del_auditor.py`, que NO SE CLONA.** Instrumentos y
 ficheros de salida, **y toda cifra de abajo se cuenta de ellos**:
-`docs/loop/SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (6491 bytes),
-`docs/loop/SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt` (3480 bytes),
-`docs/loop/SALIDA_V197_T2C_GUARDA_MARCADOR_ACTA_197.txt` (2364 bytes),
+`docs/loop/SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (disco 6491 bytes y LF 6491 bytes),
+`docs/loop/SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt` (disco 3516 bytes y LF 3516 bytes; **CORRECCION DECLARADA SIN BORRAR LO VIEJO: aqui decia 3480**, que era su tamano la primera vez que corrio; la reconstruccion de la sede del turno lo re corrio y crecio, y lo cazo `vuelta197_parear_convenciones.py` al remedirlo del disco),
+`docs/loop/SALIDA_V197_T2C_GUARDA_MARCADOR_ACTA_197.txt` (disco 2364 bytes y LF 2364 bytes),
 `docs/loop/SALIDA_V197_T2_QUIEN_BORRA_LA_SEDE.txt`,
-`docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json` (102 bytes).
+`docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json` (disco 102 bytes y LF 102 bytes).
 
 **(a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO.** La decision vive en
 `puede_leer_reporte()`, pura y probable sin escribir un fichero, y el orden
@@ -243,14 +255,15 @@ no**) y con la sede de verdad del turno medida antes y despues.
 **`C.1` CAIDA MIA, DE METODO, DECLARADA Y CAZADA POR MI PROPIA GUARDA.** La primera
 version del arnes restauraba `AP.RUTA_DEL_TURNO` a su sede **antes** de llamar a
 `AP.olvidar_todo()`, y `olvidar_todo()` **borra el fichero del turno**: el arnes se
-llevo por delante `docs/loop/_TURNO_DEL_AUDITOR.json`, que media **329 bytes** con
-`sha256` LF `7203f39fd7f5a54f`. **Lo cazo el ultimo caso del propio arnes**, el que
+llevo por delante `docs/loop/_TURNO_DEL_AUDITOR.json`, que media
+disco 329 bytes y LF 329 bytes; y los `sha256` de disco y LF son `7203f39fd7f5a54f` y `7203f39fd7f5a54f`.
+**Lo cazo el ultimo caso del propio arnes**, el que
 mide la sede antes y despues. El orden ya esta corregido con su motivo al lado, y
 la sede se reconstruyo **por el carril** con `vuelta197_tarea2b_cerrar_turno_197.py`,
 del contenido que el bloque `D.1` del sello de apertura publico **antes de la
 primera operacion**. **El fichero nuevo no se hace pasar por el original: se
-escribe CERRADO y lleva el motivo dentro**, y mide **801 bytes**, `sha256` LF
-`69dfc4b6c6854d39`.
+escribe CERRADO y lleva el motivo dentro**, y mide
+disco 801 bytes y LF 801 bytes; y los `sha256` de disco y LF son `69dfc4b6c6854d39` y `69dfc4b6c6854d39`.
 
 **HALLAZGO QUE NADIE ENCARGO, MEDIDO Y NO SUPUESTO.** Corridos **5** arneses de la
 nomina que tocan este modulo, **1 BORRA la sede del turno**:
@@ -291,8 +304,8 @@ cerrado, con su motivo dentro y sin hacerse pasar por el original.
 ### TAREA 3, LA RELECTURA AL DOBLE DE 240. CERRADA. 207 DE 224 EN LA MITAD LIMPIA, Y ONCE DISCREPANCIAS FUERA DEL MARCADO QUE VUELVEN A DOBLAR EL TRAMO.
 
 **Instrumentos y ficheros de salida, y toda cifra de abajo se cuenta de ellos:**
-`docs/loop/SALIDA_V197_T3_SUJETO.txt`, `_T3_CIEGA.txt` (326299 bytes),
-`_T3_DESTAPE.txt` (250425 bytes), `_T3_MIS_CLASES.txt` (43605 bytes) y
+`docs/loop/SALIDA_V197_T3_SUJETO.txt`, `_T3_CIEGA.txt` (disco 326299 bytes y LF 326299 bytes),
+`_T3_DESTAPE.txt` (disco 250425 bytes y LF 250425 bytes), `_T3_MIS_CLASES.txt` (disco 43605 bytes y LF 43605 bytes) y
 `_T3_COTEJO.txt`. **El orden fue: sujeto commiteado, clases commiteadas, y SOLO
 DESPUES el destape.**
 
@@ -457,3 +470,217 @@ literal. **Lo discutible es que ampliar la lista de restas hace la V3 mas pequen
 me favorece**, aunque el criterio (tener guarda que la busque) sea comprobable.
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+
+**NINGUNA CIFRA DE ABAJO ESTA TECLEADA DE MEMORIA: cada una nombra el fichero de
+salida del que se cuenta** (`EJECUTOR.md` 1, LA TABLA SE CUENTA DE SU FICHERO).
+
+| que | cifra | de que fichero se cuenta |
+|---|---|---|
+| racha de cierres al entrar | **2**, vueltas **195 y 196** | `SALIDA_V197_APERTURA.txt`, bloque `E` |
+| serie de registros | siguiente libre **R.59**, 50 entradas, 0 colisiones, 0 huecos | `SALIDA_V197_APERTURA.txt` bloque `G` y `SALIDA_V197_T1A_REGISTRO_R59.txt` |
+| acta 197 acotada | lineas **69341 a 69635**, **295** lineas, sobre **4595886** bytes | `SALIDA_V197_T1A_REGISTRO_R59.txt`, bloque `A` |
+| lectores nuevos del registrador | **7**, con **35** casos de mutacion y **35** verdes | `SALIDA_V197_T1A_MUTACION_REGISTRADOR.txt` |
+| idempotencia del registrador | `docs/PENDIENTES.md` 1063803 a **1072852** bytes, y **sigue en 1072852** al re correrlo | `SALIDA_V197_T1A_RECORRIDO_SIN_ESCRIBIR.txt` |
+| guardas del turno del auditor | **49** casos, **49** verdes, **0** rojos | `SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` |
+| guarda del marcador sobre el acta REAL | **3388 filas; A 551, B 72, C 5, D 2760** calzan, y **5 de 5** mutaciones CAEN | `SALIDA_V197_T2C_GUARDA_MARCADOR_ACTA_197.txt` |
+| arneses de la nomina que BORRAN la sede del turno | **1 de 5** corridos | `SALIDA_V197_T2_QUIEN_BORRA_LA_SEDE.txt` |
+| universo consumido | **681** de **16** ficheros con su lector, **300** con un solo patron, **561** sin el tramo | `SALIDA_V197_T3_SUJETO.txt`, bloque `C` |
+| el doble | **120**, solape **0** con el tramo y **0** con el universo | `SALIDA_V197_T3_SUJETO.txt`, bloque `D` |
+| quemados | **14** sellados antes de leer y **2** declarados tarde: **16** | `SALIDA_V197_T3_SUJETO.txt` `D.2` y `SALIDA_V197_T3_COTEJO.txt` `C` |
+| inalcanzables a ciegas | **14** citan RACIMO, **6** CORRECCION DECLARADA, **20** en union | `SALIDA_V197_T3_SUJETO.txt`, bloque `D.3` |
+| marcado sobre los 240 | **31** llevan `DISCUTIBLE MARCADO`, **31 arriba del 2662** y **0 en los 177 de abajo** | `SALIDA_V197_T3_COTEJO.txt`, bloque `F` |
+| cotejo de los 240 | **215 de 240**; **207 de 224 LIMPIOS**; **8 de 16** quemados | `SALIDA_V197_T3_COTEJO.txt`, bloque `D` |
+| discrepancias limpias | **17**: **6 DENTRO** y **11 FUERA** del marcado | `SALIDA_V197_T3_COTEJO.txt`, bloque `E` |
+| censo y nomina, CON SU VARA | censo **195**, nomina **135**, fuera **CON la vara 148: 0** y **SIN vara: 60** | `SALIDA_V197_APERTURA.txt`, bloque `F` |
+| tope del austero, tres varas | **V3 = 408**, y **V1 y V2 no se teclean aqui**: viven en su fichero de salida, recorrido DESPUES de la ultima edicion. **CORRECCION DECLARADA SIN BORRAR LO VIEJO: esta fila decia V1 459 y 460 y V2 444**, que era la medicion de cuando se anexo la TAREA 4, antes de que el cierre pegara la cabecera y las secciones 3 a 9 (`EJECUTOR.md` 1, EL ESTADO AL CIERRE SE MIDE AL CIERRE). **Y HAY UN REGRESO QUE SE DECLARA EN VEZ DE DISIMULARSE: publicar la V1 de un reporte DENTRO de ese reporte la mueve**, asi que la V1 y la V2 se citan por su fichero y no por su cifra. **La V3 SI es estable en 408**, porque estas correcciones caen en secciones que la V3 resta | `SALIDA_V197_T4_TRES_VARAS.txt`, recorrido DESPUES de la ultima edicion |
+
+## 4. LO QUE SE TOCO, Y LO QUE NO
+
+**EL ARBOL AL ENTRAR, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO EN ESTA PROSA.**
+`docs/loop/SALIDA_V197_APERTURA.txt`, bloque `C`, publica las dos cifras del estado
+del arbol con la redaccion exacta que la guarda coteja, y aqui se repiten LEIDAS de
+ella:
+
+`git status --porcelain` 1 linea al entrar, que era el propio bloque de apertura
+todavia sin commitear.
+
+`git diff --numstat -- dataset/` 0 filas al entrar.
+
+**Y ESAS DOS CIFRAS LAS ESCRIBIO EL PROPIO BLOQUE DE APERTURA**, con la redaccion
+exacta que la guarda `D.1` busca. **La apertura sellada no se toco al cierre ni una
+vez.**
+
+**LO QUE SE TOCO:**
+
+- `scripts/loop/`: el bloque de apertura y el de cierre, el esqueleto del reporte,
+  el registrador del acta 197, los tres arneses de las guardas nuevas, el sujeto de
+  la relectura al doble, el fichero de mis clases, el cotejo, el medidor de las tres
+  varas y los cuatro cuerpos de tarea.
+- `scripts/loop/apertura_del_auditor.py`: **la unica pieza compartida que esta
+  vuelta modifica**, y **no se clono**, que es lo que el encargo manda.
+- `docs/loop/`: las salidas de esta vuelta, el reporte, `REPORTE_V196.md`
+  archivado byte a byte antes de pisar nada, y `_TURNO_DEL_AUDITOR.json`,
+  **reconstruido por su carril tras una caida mia declarada**.
+- `docs/PENDIENTES.md`: la entrada `R.59`, y **solo por adicion**.
+
+**LO QUE NO SE TOCO, MEDIDO Y NO PROMETIDO:**
+
+- **`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` NO SE MOVIO.** Abre y cierra igual por
+  LAS DOS CONVENCIONES, y las dos van en la misma linea:
+  disco 4054129 bytes y LF 4054129 bytes; y los `sha256` de disco y LF son `0a77b5a35a962621` y `0a77b5a35a962621`.
+  Medido en la apertura, en el bloque `A` y el `F` del sujeto de la ciega, en el
+  bloque `H` del cotejo y otra vez al cerrar.
+- **NINGUNA CLASE SE TOCO.** El cribado y el recomputo quedan fuera por encargo, y
+  las **17 discrepancias limpias se DECLARAN y no se mueven**.
+- **`dataset/` NO SE TOCO A MANO Y NO SE MOVIO.** `git diff --numstat -- dataset/`
+  da **0 filas al entrar y 0 al salir**, y el ciclo de Gate 0 entero
+  (`run_phase1.py --reaplico-curaduria` y despues `etiquetas_de_cara.py --aplicar`)
+  deja **0 lineas** en `dataset/`, `web/` y `engine/` por los dos lados, sellado en
+  `SALIDA_V197_CICLO_NUMSTAT_APERTURA.txt` y `..._CIERRE.txt`.
+- **LA NOMINA NI SE PODO NI CRECIO:** **135 entradas** y `CASOS_DECLARADOS` en
+  **2** al entrar, y ninguna tarea de esta vuelta la toca.
+- **NINGUNA SALIDA SELLADA AJENA QUEDO PISADA.**
+  `SALIDA_V192_RACHA_DE_CIERRES.txt` se re corrio en la apertura, se restauro con
+  `git checkout --` y se REMIDIO, **identica antes y despues**, y va por LAS DOS
+  CONVENCIONES porque en este fichero NO coinciden:
+  disco 2443 bytes y LF 2399 bytes; y los `sha256` de disco y LF son `ceb100c9fb83df88` y `4469a54a3417f36b`.
+- **EL SELLO DE APERTURA DEL AUDITOR, `SELLO_APERTURA_AUDITOR_V197.json`, NO SE
+  TOCO**, y va por LAS DOS CONVENCIONES:
+  disco 1657 bytes y LF 1657 bytes; y los `sha256` de disco y LF son `f43b81c3d2d6b378` y `f43b81c3d2d6b378`.
+  La guarda `b` de `sellar()` lo sigue mirando en disco.
+- **NI CRIBADO, NI RECOMPUTO, NI OPERACIONES DEL PLAN, NI MESAS ANOTADAS, NI LA
+  BATERIA ENTERA**, que no es su vuelta y cae en la 199.
+
+**LO QUE SI SE MOVIO Y NO DEBIA, DICHO EN LA MISMA SECCION Y NO ESCONDIDO:**
+`docs/loop/_TURNO_DEL_AUDITOR.json` entro midiendo disco 329 bytes y LF 329 bytes, con `sha256` de disco y LF `7203f39fd7f5a54f` y `7203f39fd7f5a54f`,
+y **lo borro un arnes mio**. Sale midiendo
+disco 801 bytes y LF 801 bytes; y los `sha256` de disco y LF son `69dfc4b6c6854d39` y `69dfc4b6c6854d39`.
+**Reconstruido por el carril de la TAREA 2.b** del
+contenido que el bloque `D.1` del sello de apertura publico antes de la primera
+operacion, y **escrito CERRADO**. Es la caida `C.1` de la seccion 8.1.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**ONCE, y cada uno vive completo en la seccion de su tarea.** Nueve se marcaron
+**antes** de saber el resultado y dos son **posteriores al destape y se dicen como
+tales**, que es la diferencia que hace que la marca valga.
+
+| clave | de que va | cuando se marco |
+|---|---|---|
+| `D.1` | la marca `NO MUEVE LA RACHA` no cambia ninguna cifra publicada, y aun asi la escribi | antes |
+| `D.2` | publico la resta heredada sabiendo que en esta acta no significa lo que dice | antes |
+| `D.3` | `DE REPORTE` es la marca de especie mas corta del vocabulario | antes |
+| `D.4` | `leer_reporte()` apunta su toque aunque luego caiga: la bitacora pasa a ser de intentos | antes |
+| `D.5` | la constancia del cierre vale como prueba de que las clases se escribieron | antes |
+| `D.6` | reconstrui la sede del turno que mi propio arnes borro | antes |
+| `D.7` | emiti **cero `B`** en 240 pares, y lo escribi con su riesgo delante | antes, y sali perdiendo |
+| `D.8` | amplie los quemados de nueve a dieciseis, contra mi propio credito | antes |
+| `D.9` | aplique la contencion mas de lo que el archivo la aplica | **despues del destape** |
+| `D.10` | los quemados me salieron peor que los limpios, 8 de 16 contra 207 de 224 | **despues del destape** |
+| `D.11` | la tercera vara la defini yo, y ampliarla me favorece | antes |
+
+## 6. PREGUNTAS, QUE NO ADIVINO
+
+**`P.1` EL TOPE DE 80 LINEAS, CON SUS TRES CIFRAS DELANTE Y SIN QUEJA.** **La V3
+vale 408: la tercera vara esta 5.1 veces por encima del tope.** La V1 y la V2 se
+leen de `docs/loop/SALIDA_V197_T4_TRES_VARAS.txt`, recorrido despues de la ultima
+edicion, y **no se teclean aqui por una razon medida: publicar la V1 de un reporte
+DENTRO de ese reporte la mueve**. **CORRECCION DECLARADA SIN BORRAR LO VIEJO: aqui
+decia V1 459 y 460 y V2 444**, que era la medicion del momento en que se anexo la
+TAREA 4, antes de que el cierre pegara la cabecera y las secciones 3 a 9. La `4.6` pidio las tres medidas para decidir sobre numeros, y aqui estan.
+**No la contesto yo**, y las tres salidas posibles son del fundador: subir el tope,
+medirlo por la vara estrecha, o recortar de verdad lo que hoy es obligatorio.
+
+**`P.2` UN ARNES DE LA NOMINA BORRA LA SEDE DEL TURNO DEL AUDITOR EN CADA CORRIDA,
+Y NO LO REPARO PORQUE NO ESTA ENCARGADO.** Medido con una corrida y no leyendo
+codigo: de **5** arneses que tocan el modulo, **1** la borra
+(`vuelta182_tarea2_mutacion_apertura_auditor.py`). **Mientras eso siga asi, cada
+vuelta de bateria deja al auditor sin sede y el remedio de la TAREA 2.b no se ve en
+produccion aunque este entero en el codigo.** La pregunta es si reparar un arnes de
+la nomina sin encargo entra en el MODO DE CIERRE o si hace falta que se encargue.
+
+**`P.3` LA DOCTRINA QUE SE MANDA CITAR QUEMA PUESTOS DEL PROPIO SUJETO.** El
+encargo manda citar el banco `9.22`, y el `9.22` nombra su ejemplar **con puesto,
+clase y los dos nodos**: el **1077**, que estaba dentro de mis 240. Es la misma
+especie del hallazgo `5.1` del acta 197 pero por una puerta nueva: **no es el acta
+ni el reporte, es el BANCO**. La pregunta es si los ejemplares del banco tienen que
+salir del universo de las ciegas por construccion, como ya se hace con lo ya
+consumido.
+
+## 7. PENDIENTES DE DOCTRINA
+
+**NINGUNO.** Las cuatro tareas se hicieron con letra escrita: `AUDITOR.md` 1.2, 6.1
+y 6.2, las adjudicaciones `4.4`, `4.5`, `4.6` y `4.7` del acta 197, sus hallazgos
+`5.2` y `5.4`, y el banco `9.6.1`, `9.6.2`, `9.6.3` y `9.22`. **Las tres preguntas
+de la seccion 6 no piden doctrina nueva: piden una decision sobre cifras ya
+publicadas.**
+
+## 8. LO QUE LA 198 RECIBE
+
+**LA DEUDA QUE ESTA VUELTA DEJA, MEDIDA Y NO ANUNCIADA:**
+
+- **EL TRAMO SE RELEE AL DOBLE OTRA VEZ.** Once de mis diecisiete discrepancias
+  limpias cayeron **FUERA del marcado**, asi que por `AUDITOR.md` 1.2 el credito de
+  mi tanda BAJA. **La serie medida va 30, 60, 120, 240 y ahora 480.** Y con ella el
+  hallazgo `5.2` del acta 197 en su forma mas dura: **nueve de esas once estan por
+  debajo del 2662, donde el archivo no marca nada**, asi que caen fuera **por
+  construccion**.
+- **LAS DOS CAIDAS DE MI SECCION 8.1**, que abajo van con su nombre.
+- **LAS TRES PREGUNTAS DE LA SECCION 6.**
+- **LO QUE SIGUE FUERA Y NO SE REDESCUBRE:** el desfase de `PATRONES_ACTA`; la
+  guarda de codigo del hallazgo `5.3` del acta 194; `acumulan()` que lea la tabla;
+  el cotejo de clon declarado; las ocho actas sin entrada propia en la serie (173 a
+  180, remedido en esta vuelta); el estado de `OP-L-02`, **que no se movio y sigue
+  en `LISTA`**; **que hacer con las filas `B` del archivo**; y **los puestos que dos
+  o tres lectores independientes fallaron**, a los que esta vuelta anade los suyos y
+  **no resuelve, porque mover una clase es del RECOMPUTO**.
+
+### 8.1 MIS CAIDAS DE ESTA VUELTA, DECLARADAS POR MI
+
+**`C.1` DE METODO. MI ARNES BORRO LA SEDE DEL TURNO DEL AUDITOR.** La primera
+version de `scripts/loop/vuelta197_tarea2_mutacion_orden_del_turno.py` restauraba
+`AP.RUTA_DEL_TURNO` a su sede **antes** de llamar a `AP.olvidar_todo()`, y
+`olvidar_todo()` borra el fichero del turno. **La cazo el ultimo caso de ese mismo
+arnes**, el que mide la sede antes y despues. El orden esta corregido con su motivo
+al lado, la sede se reconstruyo por el carril y **el arnes ahora tiene un caso mas
+que comprueba que el temporal SI queda borrado**. **NO es caida de cifra publicada:
+ninguna cifra falsa salio de aqui, y la medicion de entrada esta sellada en la
+apertura.**
+
+**`C.2` DE METODO. NO COMPROBE SI LOS QUEMADOS DE LA 196 CAIAN EN MI UNIVERSO.**
+Clone `vuelta196_tarea2_relectura_al_doble.py` para escribir mi sujeto y lei su
+lista `QUEMADOS` entera, que nombra el `654` con su clase de archivo, **y el `654`
+estaba dentro de mis 240**. Lo declare en el fichero de clases, **antes del destape
+pero despues de sellar el sujeto**, que es peor que declararlo antes. **El remedio
+para la 198 es mecanico: al clonar un sujeto, cotejar su lista de quemados contra
+el universo nuevo.**
+
+**LAS DOS SON DE METODO Y NINGUNA ACUMULA.** Y las dos las cazo una guarda mia o mi
+propia lectura, no el auditor.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 197 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V197_BATERIA.txt`.
+
+**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`
+devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no
+hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
+bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes
+normalizados a LF**, **y ese cero sale de que no hay fichero, no de una
+medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026
+en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos
+casos y no los confunde.
+
+ATRIBUCION: NADIE la corrio, y NO tocaba: por AUDITOR.md 6.1, decision del fundador del 5 sep 2026, la bateria de mutaciones corre CADA CINCO VUELTAS en una vuelta propia que NO LLEVA NADA MAS. La 194 la corrio ENTERA por sus DIEZ tramos y por esa cadencia LA SIGUIENTE VUELTA DE BATERIA ES LA 199. Esta vuelta NO es de bateria: su encargo se lo dice con esas palabras en su cuarta linea, su sello de apertura lo escribe en el bloque I y ese mismo bloque mide CERO ficheros SALIDA_V197_BATERIA_TRAMO_N.txt en disco al entrar, sobre 38 selladas de bateria que si hay en docs/loop/ repartidas entre las vueltas 176, 183, 189 y 194. El fichero docs/loop/SALIDA_V197_BATERIA.txt NO EXISTE y por eso mide cero, y esa medicion va aqui CON SU NOMBRE en vez de callarse: un hueco declarado no es un hueco escondido. Y LO QUE ESTA VUELTA SI MIDIO DEL RADIO DE LA BATERIA, sin correrla, Y AHORA CON SU VARA AL LADO, que es la TAREA 4.a y la adjudicacion 4.7 del acta 197: la nomina de verificar_mutaciones_viejas.py entra y sale en 135 entradas con CASOS_DECLARADOS en 2; el censo reconoce 195 arneses; LA VARA DEL CENSO VALE 148 y decide, y CON ESA VARA hay 0 arneses del censo fuera de la nomina, pero SIN VARA hay 60, y las dos cifras se publican juntas porque un 0 solo al lado de un censo de 195 y una nomina de 135 se lee como cobertura total del censo y es cobertura desde la vara para arriba; hay ademas 0 entradas invisibles al censo y 0 entradas sin sujeto congelado. Todo leido del instrumento en el bloque F del sello de apertura, que ahora mide LAS DOS y lista los diez primeros de los 60. NO SE PODO NI UNA ENTRADA. Y UNA COSA MAS QUE ESTA VUELTA MIDIO Y NO REPARO, porque no esta encargada: de 5 arneses de la nomina que tocan apertura_del_auditor.py, 1 BORRA la sede del turno del auditor cada vez que corre, medido con una corrida en SALIDA_V197_T2_QUIEN_BORRA_LA_SEDE.txt y preguntado en la seccion 6.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.
