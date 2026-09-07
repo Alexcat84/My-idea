@@ -141,7 +141,7 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL, que es el remedio de la `C.E1` de la 202 y va PRIMERA porque `AUDITOR.md` 1.4 pone los registros en la TAREA 1. **LO QUE SE CORRIGE ES UNA FRASE FALSA**: las dos entradas dicen que las adjudicaciones de las actas 173 y 174 viven en la **seccion 6 sin clave numerada**, y el acta 202 midio en su `4.1` que **SI estan numeradas** (la 173 de `6.1` a `6.5` y la 174 de `6.1` a `6.10`), y que lo unico que les falta son las comillas inversas. **Las dos lineas se miden aqui y no se copian del encargo.** **EL CARRIL ES EL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, con el texto viejo **entero, sin tachar y sin borrar**, y la correccion fechada debajo. **Y EN LA MISMA ADICION VA EL REPARTO REAL** de las dos actas por la vara adjudicada en el `4.1`: **el numeral se toma de la seccion cuyo PROPIO TITULO lo nombra, nunca del numero de seccion**, y dentro de ella las claves se cuentan por su propia numeracion `N.M`, **lleve o no comillas inversas**; y **cada entrada declara que uso esa vara**. **EL COMPUTO VA EN UN `_v203_*`**, fuera del censo y de la nomina; **los lectores heredados se IMPORTAN** y lo unico que se ensancha es el patron de clave, **con parametro opcional para que los llamantes viejos no se toquen**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS** (el `0` del heredado, que es cierto, y lo que da la vara adjudicada) y **la discrepancia se declara**. **GUARDA OBLIGATORIA Y CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA** | `docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`, `_IDEM.txt`, `docs/PENDIENTES.md` (lineas 15766 a 15991 y 15992 a 16209), `scripts/loop/_v203_reparto_de_actas_viejas.py` |
 | **TAREA 2** | LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE, adjudicada por el acta 202 en su `4.4`. **EL CARRIL, IDENTICO AL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, un elemento mas de la misma lista, **sin clave nueva de esquema** y **sin tocar ni tachar el texto viejo**. La ficha vive en la **linea 41** y se cita por **linea mas indice**. **TRES COSAS OBLIGATORIAS, MEDIDAS HOY**: que `las_once()` **no devuelve once** sino toda cabecera `LD` que haya hoy en `docs/plan/LECTURAS_DIRIGIDAS.md`, con **la cifra de hoy y la del corte 2026-09-04 y sus dos fechas**; la **comparacion resuelta** de hoy contra la congelada y **los puestos implicados**, cada cifra con su corte; y **la que no puede faltar**, que en comparacion **LITERAL** siguen apareciendo **0**, o sea que **la clausula 1 NO se cae** y lo que envejecio es la cifra de la excepcion. **LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA**: con su corte era cierta. **`OP-L-01` NO SE CIERRA** y su `estado` no se toca. **GUARDA OBLIGATORIA**: **1 sola linea** de `OPERACIONES.jsonl` distinta (la **41**), **1 sola clave** (`verificacion`), los **6** elementos viejos **identicos y en su orden**, su `estado` igual al entrar y al salir, y **0 de las 71 fichas** moviendo `estado`. **CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA. CORRECCION ESCRITA POR ADICION. LA FICHA NO SE CIERRA** | `docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01.txt`, `_IDEM.txt`, `docs/plan/OPERACIONES.jsonl` (linea 41, elemento 7 de `verificacion`) |
-| **TAREA 3** | `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL: **la unica de las cuatro que la vara del plan da como trabajo real y que nadie ha medido contra el criterio de HECHO**. La 201 le corrigio la `evidencia`; **nadie le ha mirado la `verificacion`.** Se mide contra el criterio de hecho de `docs/plan/08_VERIFICACION.md` **citado por linea**, con su `verificacion` citada por **linea 44 mas indice** (**se comprueba la linea, no se supone**). **Y EL CRITERIO SE APLICA COMO EL ACTA 202 LO APLICO EN SU `4.3`**: no basta con que las clausulas salgan cumplidas hoy, se pregunta **clausula por clausula si SE CAERIA SI EL FALLO VOLVIERA**, y si alguna solo pasa porque alguien la remide a mano, **se dice, y esa ficha no se cierra**. **Si hay instrumentos suyos se IMPORTAN y se corren tal cual**, comprobando **ANTES** que no escriben, y **comprobandolo de verdad**, que es la caida `C.2` del auditor de la 202. **PROPONE, NO CIERRA** | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL: **la unica de las cuatro que la vara del plan da como trabajo real y que nadie ha medido contra el criterio de HECHO**. La 201 le corrigio la `evidencia`; **nadie le ha mirado la `verificacion`.** Se mide contra el criterio de hecho de `docs/plan/08_VERIFICACION.md` **citado por linea**, con su `verificacion` citada por **linea 44 mas indice** (**se comprueba la linea, no se supone**). **Y EL CRITERIO SE APLICA COMO EL ACTA 202 LO APLICO EN SU `4.3`**: no basta con que las clausulas salgan cumplidas hoy, se pregunta **clausula por clausula si SE CAERIA SI EL FALLO VOLVIERA**, y si alguna solo pasa porque alguien la remide a mano, **se dice, y esa ficha no se cierra**. **Si hay instrumentos suyos se IMPORTAN y se corren tal cual**, comprobando **ANTES** que no escriben, y **comprobandolo de verdad**, que es la caida `C.2` del auditor de la 202. **PROPONE, NO CIERRA** | **CERRADA COMO LECTURA MEDIDA. PROPUESTA: NO SE CIERRA** | `docs/loop/SALIDA_V203_T3_OP_I_01.txt`, `docs/loop/SALIDA_V203_T3_INSTRUMENTO_169.txt`, `docs/plan/OPERACIONES.jsonl` (linea 44), `docs/plan/08_VERIFICACION.md` (lineas 7, 9, 14 y 15) |
 | **TAREA 4** | LA DEUDA. `R.65` Y `R.66`, LAS ACTAS 175 Y 176, por el `4.9` del acta 201: la deuda son las **175 a 180**, **DOS POR VUELTA**, de la mas vieja a la mas nueva. Va **DETRAS** del trabajo de plan y nunca delante. **Eran 8 y quedan 6.** `R.65` para el **acta 175** y `R.66` para el **acta 176**, en `docs/PENDIENTES.md`. **LAS DOS SON DE LA CONVENCION VIEJA**, asi que usan **la vara adjudicada en el `4.1` del acta 202**, la misma que la TAREA 1, y **cada entrada declara que la uso**. **SE REUTILIZA EL COMPUTO DE LA TAREA 1: no se escribe un segundo.** **Cada acta se acota EN ESTA VUELTA** por linea de inicio y fin, con su reparto entero. **SI EL REPORTE ARCHIVADO NO EXISTE, NO SE FABRICA**: se declara la ausencia con `os.path.isfile` y `os.path.getsize` y se usa la vara del `4.7` del acta 201, **declarandolo**. **CIERRA CON LA SERIE MEDIDA**: entradas, colisiones, huecos y siguiente libre | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -352,5 +352,116 @@ escritura ya habia citado la ruta canonica, asi que lo escrito no cambia.**
 **NO SE CIERRA** (acta 202, `4.4`), su `estado` no se toca, no se mueve ni un
 veredicto, no se adjudica clase a ningun puesto, no se toca ni un nodo y no se
 autoriza ninguna lectura nueva.
+
+### TAREA 3. `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL
+
+**ES LA UNICA DE LAS CUATRO QUE LA VARA DEL PLAN DA COMO TRABAJO REAL Y QUE NADIE
+HABIA MEDIDO CONTRA EL CRITERIO DE HECHO.** La 201 le corrigio la `evidencia`;
+**a la `verificacion` no la habia mirado nadie.**
+
+**3.a EL CRITERIO, CITADO POR LINEA Y NO DE MEMORIA.** En
+`docs/plan/08_VERIFICACION.md`, que mide **69068** bytes en disco y **69068**
+normalizado a LF: la **cabecera** en la **linea 7**
+(`## EL CRITERIO DE HECHO, y es uno solo`), **1 sola aparicion**; el **literal**
+en la **linea 9**, *UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL
+FALLO VOLVIERA*, **1 sola aparicion**; y su **comprobacion barata** en las
+**lineas 14 y 15**, *correr la prueba ANTES del arreglo. Si pasa, no prueba
+nada*. **Y SE DECLARA LO QUE NO ESTA:** ese documento **no nombra `OP-I-01` ni
+una vez** (**0 lineas**), asi que el criterio que se le aplica es **el general**.
+
+**3.b LA FICHA, POR LINEA MAS INDICE, Y LA LINEA SE COMPRUEBA EN VEZ DE
+SUPONERSE.** El encargo dice **linea 44**; medido aqui, `OP-I-01` vive en **1
+sola linea** de `docs/plan/OPERACIONES.jsonl` y es la **44**. **CALZA.**
+`estado='LISTA'`, `tipo='MESA'`, `fase='10_INVENTARIO'`,
+`fecha_corte='2026-08-11'`. Su `verificacion` trae **4 elementos** y **los 4 son
+clausulas que hay que cumplir**: **0** de ellos es una `CORRECCION DECLARADA`.
+**Esa distincion importa y por eso se mide**, porque en la ficha hermana
+`OP-L-01` cuatro de sus siete elementos no son clausulas. En la `evidencia`, en
+cambio, **1 de sus 4** si lo es, el **indice 3**.
+
+**3.c LO QUE REPRODUCE LA CORRECCION DE LA 201, MEDIDO HOY CON OTRO
+INSTRUMENTO.** La `evidencia` nombra `INVENTARIO.jsonl, 323 entradas` en **2**
+de sus elementos, el **0** y el **3**, y hoy hay **672**. **No es un hallazgo
+nuevo:** el acta 201 ya lo corrigio en su TAREA 2 y su correccion publica **672
+entradas, 0 lineas no JSON, 584554 bytes en disco y 584554 normalizados a LF**.
+**Medido hoy por mi: 672, 0, 584554 y 584554. CALZA AL DIGITO.** Y el reparto por
+tipo tambien: **556 acto, 54 familia_de_ids, 20 figura, 19 defecto, 13 racimo,
+10 dominio**, que suma **672**.
+
+**3.d LAS CUATRO CLAUSULAS, MEDIDAS, Y DESPUES PASADAS POR LA PREGUNTA QUE EL
+CRITERIO HACE.** Cada veredicto sale de una **expresion computada sobre el
+fichero**, nunca de un literal.
+
+| clausula | medida hoy | se caeria si el fallo volviera |
+|---|---|---|
+| **1.** `toda entrada lleva su fecha_corte` | **672 de 672** con `fecha_corte`, **0** sin ella, en **4** cortes distintos | **SI** |
+| **2.** `toda forma con cobertura incompleta va marcada PROVISIONAL` | **1** entrada marcada `PROVISIONAL`, **0** con `cobertura` vacia, y **0 apariciones** de las **7** variantes buscadas | **NO** |
+| **3.** `todo hueco va NOMBRADO, nunca rellenado` | **0** filas con `nota` y `cobertura` las dos vacias | **NO** |
+| **4.** `el inventario se recomputa entero con el disparador de 08_VERIFICACION` | el instrumento corre en **exitcode 0** | **EN PARTE** |
+
+**3.e Y LA COLUMNA DE LA DERECHA ES LA TAREA, NO LA DE EN MEDIO.** Las cuatro
+salen **sin contraejemplo** hoy. Lo que esta tarea trae es que **dos de ellas no
+se caerian** y **una se caeria solo en parte**:
+
+- **LA 2 Y LA 3 COMPARTEN EL MISMO AGUJERO, Y ES DE VARA.** Las dos exigen saber
+  **donde hay cobertura incompleta** o **donde hay hueco**, y la clave
+  `cobertura` de `docs/plan/INVENTARIO.jsonl` es **texto libre**, no un campo con
+  valores cerrados. **La busqueda positiva va publicada**, porque una busqueda
+  negativa no se puede citar (`EJECUTOR.md` 9): de las **7** variantes
+  (`incompleta`, `INCOMPLETA`, `parcial`, `PARCIAL`, `sin cerrar`, `pendiente`,
+  `falta`), **las 7 dan 0 apariciones**. **El dia que alguien deje de marcar
+  `PROVISIONAL` una forma incompleta, esta comprobacion daria exactamente lo
+  mismo**, porque no hay campo que lo delate. Lo que hoy las sostiene es que
+  **alguien las mira**, no una expresion que caiga: es la degradacion silenciosa
+  del banco `9`.
+- **LA 4 SE CAE SOLO EN LA PARTE QUE SI RECOMPUTA.** La clausula dice
+  **`el inventario se recomputa ENTERO`**, y el alcance del disparador, acotado
+  por la adjudicacion `6.4` del acta 168, son los tipos `acto` y `racimo`:
+  **569 de 672 dentro y 103 fuera**, medido por el propio instrumento en esta
+  vuelta. Los **103** de fuera **no tienen quien los tumbe**.
+
+**3.f LO QUE EL INSTRUMENTO MIDE HOY, PEGADO DE SU PROPIA SALIDA.** **672**
+entradas del inventario, **569 dentro** del disparador y **103 fuera**, **348
+vigentes** y **221 marcadas SUPERADA**; de las **348** re medidas, **333
+calzan**, **8 difieren** y **7** no tienen componente. **Y EL PROPIO INSTRUMENTO
+DECLARA UNA DISCREPANCIA QUE NO RESUELVE COPIANDO**, y aqui se reproduce en vez
+de silenciarse: el fichero sellado de componentes trae **332 lineas** (**54
+ABIERTO**, **278 CERRADO**) y la corrida de hoy da **47** (**21 ABIERTO**, **26
+CERRADO**), o sea que **`la corrida de hoy REPRODUCE el fichero sellado` sale
+`False`**.
+
+**3.g LA COMPROBACION DE SI ESCRIBE SALIO POSITIVA, Y NO SE IGNORO.**
+`scripts/loop/vuelta169_tarea3_op_i_01.py` mide **13148** bytes en disco y
+**13148** normalizado a LF, y leido **antes** de correrlo trae **2 lineas con
+marca de escritura**, las **26** y la **147**: **escribe sobre
+`docs/loop/RECOMPUTO_V169.jsonl`, que esta sellado y commiteado en la vuelta 169**
+(commit `a77b206f`). **Por eso se corrio con el protocolo del sello**, el mismo
+que el bloque `E` de la apertura uso con el instrumento de la racha: medir antes,
+correr, leer, **restaurar con `git checkout --`** y remedir. Su `sha256` LF vale
+`e8a10f174df3c5fa` **antes, despues de correr y despues de restaurar**, y
+`git status` cierra con **0 lineas nuevas** respecto de antes. **Esto es
+exactamente la caida `C.2` del auditor de la 202, y aqui no se repitio.**
+
+**UN DETALLE QUE SE DECLARA EN VEZ DE DEJARSE PASAR:** el fichero mide hoy
+**15369** bytes en disco y **15322** normalizado a LF, y esas dos cifras **no
+coinciden entre si** porque `git checkout` lo devuelve con CRLF y la corrida lo
+habia escrito con LF. **Su contenido no cambio**: el `sha256` normalizado a LF es
+el mismo por las dos convenciones de lectura, y `git hash-object` sobre el disco
+devuelve el mismo blob que `HEAD`.
+
+**3.h LA PROPUESTA, Y LA ADJUDICA EL AUDITOR: `OP-I-01` NO SE CIERRA.** No porque
+una clausula salga en rojo hoy, **que ninguna sale**, sino porque **2 de sus 4 no
+se caerian si el fallo volviera y 1 se caeria solo en parte**, que es lo que el
+criterio de la **linea 9** pregunta. **El `estado` no se toca: entra `LISTA` y
+sale `LISTA`.** Y esta tarea **no escribe en el plan**: `git diff --numstat` da
+**0 filas** en `docs/plan/OPERACIONES.jsonl`, `docs/plan/INVENTARIO.jsonl`,
+`docs/plan/08_VERIFICACION.md` y `docs/loop/RECOMPUTO_V169.jsonl`.
+
+**3.i UNA CAIDA MIA, CAZADA ANTES DE PUBLICARSE.** Mi primera tanda de patrones
+para leer las cifras del instrumento sacaba **`(no legible)` en 3 de 4**, porque
+yo habia **tecleado las etiquetas de memoria** en vez de leerlas de su salida.
+Arreglado leyendo el fichero y ampliando a **12 etiquetas mas la del veredicto de
+reproduccion**; re-corrido, **las 13 salen legibles**. Ninguna de esas cifras
+llego a publicarse mal.
 
 <!-- FIN ANEXO DE TAREAS -->

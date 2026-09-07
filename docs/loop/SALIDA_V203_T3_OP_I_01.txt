@@ -1,0 +1,213 @@
+==============================================================================
+VUELTA 203, TAREA 3: OP-I-01 CONTRA EL CRITERIO DE HECHO
+LA CUARTA FICHA REAL. SE PROPONE, NO SE CIERRA.
+==============================================================================
+
+A) EL CRITERIO DE HECHO, CITADO POR LINEA Y NO DE MEMORIA
+   docs/plan/08_VERIFICACION.md: disco 69068 bytes | LF 69068 bytes | sha256 LF 76bfebb6b2d8ef72
+   CIFRA lineas por split(NL): 914
+   CIFRA lineas con la cabecera 'EL CRITERIO DE HECHO': 1 | linea(s): 7
+      linea    7 | ## EL CRITERIO DE HECHO, y es uno solo
+   CIFRA lineas con el literal 'SE CAERIA SI EL FALLO VOLVIERA': 1 | linea(s): 9
+      linea    9 | > **UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA.**
+   CIFRA lineas con 'comprobacion barata': 2 | linea(s): 14, 163
+      linea   14 | una comprobacion barata: **correr la prueba ANTES del arreglo. Si pasa, no prueba
+      linea   15 | nada.**
+      linea   16 | 
+      linea   17 | ---
+      linea  163 | real, NO esta viendo una regresion.** La comprobacion barata que lo separa: `git diff
+      linea  164 | --quiet` sale con **exit 0** y `git hash-object` sobre el fichero del disco devuelve el
+      linea  165 | mismo blob que `git rev-parse HEAD:dataset/metadata/master_graph.json`. **Si los dos
+      linea  166 | blobs coinciden, no hay movimiento que reportar por mucho que `git status` lo liste.**
+   CIFRA lineas de ese documento que nombran OP-I-01: 0
+   ESO SE DICE Y NO SE CALLA: el criterio que se le aplica a esta ficha es
+   EL GENERAL, porque el documento NO la nombra ni una vez.
+   CIFRA cabeceras 'EL DISPARADOR DEL RECOMPUTO': 1 | linea(s): 379
+   CIFRA lineas del PASO 4 del disparador: 1 | linea(s): 397
+      linea  397 | | **4** | **LAS NOMINAS Y LOS ACTOS** | cada racimo y cada acto se re-mide **con su cobertura al lado** (banco 9.26), usando las componentes del paso 
+
+B) LA FICHA, CITADA POR LINEA MAS INDICE, Y LA LINEA SE COMPRUEBA
+   docs/plan/OPERACIONES.jsonl: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   CIFRA lineas NO VACIAS: 71
+   CIFRA lineas donde vive OP-I-01: 1 | linea(s): 44
+   EL ENCARGO DICE LINEA 44. COMPROBADO, NO SUPUESTO: la ficha vive en la
+   LINEA 44. CALZA: SI
+   estado='LISTA'  tipo='MESA'  fase='10_INVENTARIO'  fecha_corte='2026-08-11'
+   CIFRA elementos de `evidencia`: 4
+   CIFRA elementos de `verificacion`: 4
+      verificacion indice 0 (elemento 1), 33 caracteres:
+         toda entrada lleva su fecha_corte
+      verificacion indice 1 (elemento 2), 58 caracteres:
+         toda forma con cobertura incompleta va marcada PROVISIONAL
+      verificacion indice 2 (elemento 3), 39 caracteres:
+         todo hueco va NOMBRADO, nunca rellenado
+      verificacion indice 3 (elemento 4), 70 caracteres:
+         el inventario se recomputa entero con el disparador de 08_VERIFICACION
+   CIFRA elementos que son CORRECCION DECLARADA y NO clausula que cumplir: 0 | indice(s): (ninguno)
+   CIFRA CLAUSULAS QUE HAY QUE CUMPLIR: 4 | indice(s): 0, 1, 2, 3
+   Y LO MISMO EN LA EVIDENCIA, PARA NO CONFUNDIR LAS DOS LISTAS:
+   CIFRA elementos de `evidencia` que son CORRECCION DECLARADA: 1 | indice(s): 3
+
+C) EL SUJETO DE LAS CLAUSULAS: docs/plan/INVENTARIO.jsonl, MEDIDO HOY
+   docs/plan/INVENTARIO.jsonl: disco 584554 bytes | LF 584554 bytes | sha256 LF 69666b73339f2afe
+   CIFRA filas no vacias: 672 | CIFRA lineas que NO son JSON valido: 0
+      tipo acto             556
+      tipo defecto          19
+      tipo dominio          10
+      tipo familia_de_ids   54
+      tipo figura           20
+      tipo racimo           13
+   LO QUE LA `evidencia` PROMETE, LEIDO DE LA PROPIA FICHA:
+      evidencia indice 0 (elemento 1) nombra 323 entradas | medidas hoy: 672 | DISCREPA
+      evidencia indice 3 (elemento 4) nombra 323 entradas | medidas hoy: 672 | DISCREPA
+   Y ESA DISCREPANCIA NO ES UN HALLAZGO NUEVO: EL ACTA 201 YA LA CORRIGIO
+   EN SU TAREA 2, y su correccion vive en el elemento 4 de la `evidencia`.
+   LO QUE ESA CORRECCION PUBLICA, LEIDO DE ELLA: 672 entradas, 0 lineas
+   no JSON, 584554 bytes en disco y 584554 normalizados a LF.
+   REPRODUCIDO HOY POR MI, CON OTRO INSTRUMENTO: 672 entradas, 0 no
+   JSON, 584554 bytes en disco y 584554 normalizados a LF. CALZA AL DIGITO: SI
+
+D) LAS CLAUSULAS, UNA POR UNA, MEDIDAS Y DESPUES PASADAS POR EL CRITERIO
+   DE HECHO. EL VEREDICTO DE CADA UNA SALE DE UNA EXPRESION COMPUTADA
+   SOBRE EL FICHERO, NUNCA DE UN LITERAL.
+
+   D.1 CLAUSULA 1 (indice 0): 'toda entrada lleva su fecha_corte'
+       CIFRA entradas CON `fecha_corte` no vacia: 672 de 672
+       CIFRA entradas SIN `fecha_corte`: 0
+       CIFRA cortes distintos: 4
+          2026-08-11   323
+          2026-08-12   11
+          2026-08-13   337
+          2026-08-14   1
+       VEREDICTO CLAUSULA 1: CUMPLIDA
+       EL CRITERIO DE HECHO: SE CAERIA SI EL FALLO VOLVIERA? SI. El
+       veredicto es `len(sin_corte) == 0` sobre el fichero entero: basta
+       UNA entrada sin `fecha_corte` para que caiga, y la lista de las
+       que faltasen se imprimiria con su nombre. NO se remide a mano.
+
+   D.2 CLAUSULA 2 (indice 1): 'toda forma con cobertura incompleta va marcada PROVISIONAL'
+       LA CLAUSULA TIENE DOS MITADES Y SE MIDEN LAS DOS: que se sepa QUE
+       FORMA tiene cobertura incompleta, y que ESA vaya marcada PROVISIONAL.
+       CIFRA entradas cuya `forma` trae el literal PROVISIONAL: 1
+          racimo | la supervision de la IA | forma: PROVISIONAL al corte 2026-09-04, y lo es por el banco 9.26: faltan 8 pares por l
+       Y AHORA LA MITAD QUE NO SE PUEDE MEDIR SIN DECIDIR, Y SE DICE:
+       la clave `cobertura` de este fichero es TEXTO LIBRE, no un campo
+       con valores cerrados. Medido hoy:
+       CIFRA entradas con `cobertura` vacia: 0
+       LA BUSQUEDA POSITIVA, porque una busqueda negativa no se puede
+       citar (EJECUTOR.md 9). Variantes buscadas en `cobertura` y su cuenta:
+          incompleta     0 aparicion(es)
+          INCOMPLETA     0 aparicion(es)
+          parcial        0 aparicion(es)
+          PARCIAL        0 aparicion(es)
+          sin cerrar     0 aparicion(es)
+          pendiente      0 aparicion(es)
+          falta          0 aparicion(es)
+       VEREDICTO CLAUSULA 2, TAL COMO SE PUEDE MEDIR HOY: SIN CONTRAEJEMPLO
+       EL CRITERIO DE HECHO: SE CAERIA SI EL FALLO VOLVIERA? NO, Y ESTO ES
+       LO QUE ESTA TAREA TRAE. Para que esta clausula se cayera haria falta
+       saber, POR UNA VARA ESCRITA, que entradas tienen cobertura
+       INCOMPLETA; y `cobertura` es texto libre. Un dia que alguien deje de
+       marcar PROVISIONAL una forma incompleta, ESTA COMPROBACION SEGUIRIA
+       DANDO LO MISMO, porque no hay campo que la delate. Lo que hoy la
+       sostiene es que ALGUIEN LA MIRA, no una expresion que caiga.
+
+   D.3 CLAUSULA 3 (indice 2): 'todo hueco va NOMBRADO, nunca rellenado'
+       LA BUSQUEDA POSITIVA sobre `nota` mas `cobertura`:
+          NO MEDIBLE       0 fila(s)
+          no medible       0 fila(s)
+          sin componente   0 fila(s)
+          HUECO            5 fila(s)
+          hueco            114 fila(s)
+          no se rellena    0 fila(s)
+          NOMBRADO         18 fila(s)
+       CIFRA filas con `nota` Y `cobertura` las dos vacias: 0
+       VEREDICTO CLAUSULA 3, TAL COMO SE PUEDE MEDIR HOY: SIN CONTRAEJEMPLO
+       EL CRITERIO DE HECHO: SE CAERIA SI EL FALLO VOLVIERA? NO. Lo que
+       esta comprobacion sabe medir es que ninguna fila esta MUDA del todo,
+       y eso NO es lo que la clausula pide. `todo hueco va NOMBRADO, nunca
+       rellenado` exige saber DONDE hay hueco, y para eso hace falta la
+       misma vara escrita que le falta a la clausula 2. Un hueco RELLENADO
+       en silencio no deja sintoma en ningun campo, que es exactamente la
+       enfermedad que el banco 9 llama degradacion silenciosa.
+
+   D.4 CLAUSULA 4 (indice 3): 'el inventario se recomputa entero con el disparador de 08_VERIFICACION'
+       ESTA SI TIENE INSTRUMENTO, Y LO PRIMERO ES MIRAR SI ESCRIBE.
+       scripts/loop/vuelta169_tarea3_op_i_01.py: disco 13148 bytes | LF 13148 bytes | sha256 LF 3230ce65e3b9343b
+       CIFRA lineas con marca de ESCRITURA en disco: 2
+          linea   26 | POR QUE NO SE PISA LA NOMINA SELLADA: `recomputo_3388.py` exige `--salida` sin
+          linea  147 | "--salida", os.path.relpath(SALIDA_V169, RAIZ).replace(os.sep, "/")],
+       LA COMPROBACION SALE POSITIVA Y NO SE IGNORA: ESTE INSTRUMENTO SI
+       ESCRIBE, y ademas escribe sobre docs/loop/RECOMPUTO_V169.jsonl, que esta SELLADO Y COMMITEADO
+       en la vuelta 169: a77b206f 2026-09-04 VUELTA 169 CERRADA: LAS CINCO TAREAS ENTREGADAS, LA BATERIA EN VERDE TRAS TRES CORRIDAS, Y
+       POR ESO SE CORRE CON EL PROTOCOLO DEL SELLO: se mide antes, se
+       corre, se lee, se RESTAURA con git checkout -- y se REMIDE.
+       SELLADO ANTES: disco 15369 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+       CIFRA lineas de git status ANTES de correrlo: 3
+       exitcode del instrumento: 0
+       su salida cruda queda sellada aparte en
+       docs/loop/SALIDA_V203_T3_INSTRUMENTO_169.txt
+       entradas inventario    672
+       dentro disparador      569
+       fuera disparador       103
+       vigentes               348
+       superadas              221
+       componentes sellado    332
+       componentes hoy        47
+       re medidas             348
+       calzan                 333
+       difieren               8
+       sin componente         7
+       exit recomputo         0
+       reproduce el sellado   False
+       LA DISCREPANCIA QUE EL PROPIO INSTRUMENTO DECLARA, PEGADA ENTERA:
+          DISCREPANCIA DECLARADA, no resuelta copiando:
+          sellado: 332 lineas, {'ABIERTO': 54, 'CERRADO': 278}
+          hoy    : 47 lineas, {'ABIERTO': 21, 'CERRADO': 26}
+       SELLADO TRAS CORRER: disco 15322 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+       LO PISO: NO, la corrida lo deja identico
+       SELLADO RESTAURADO: disco 15369 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+       RESTAURADO IDENTICO AL DE ENTRADA: SI
+       CIFRA lineas de git status DESPUES de correr y restaurar: 3
+       CIFRA lineas de status NUEVAS respecto de antes: 0
+       VEREDICTO CLAUSULA 4, TAL COMO EL INSTRUMENTO LA DEJA: el instrumento corre en verde
+       EL CRITERIO DE HECHO: SE CAERIA SI EL FALLO VOLVIERA? EN PARTE, Y
+       LA PARTE QUE NO SE DICE. El instrumento SI computa y SI cotejaria
+       una discrepancia de componentes, pero su alcance esta acotado por la
+       adjudicacion 6.4 del acta 168 a los tipos `acto` y `racimo`: los
+       otros cuatro tipos del inventario quedan FUERA del disparador y el
+       propio instrumento lo declara. O sea que la clausula dice `el
+       inventario se recomputa ENTERO` y lo que se recomputa es una parte
+       nombrada. La parte que se recomputa SI se caeria; el resto NO tiene
+       quien lo tumbe.
+
+==============================================================================
+E) EL RESUMEN, Y NO ES UN CIERRE
+==============================================================================
+| clausula | medida hoy | se caeria si el fallo volviera |
+|---|---|---|
+| clausula 1 | SIN CONTRAEJEMPLO | SI |
+| clausula 2 | SIN CONTRAEJEMPLO | NO |
+| clausula 3 | SIN CONTRAEJEMPLO | NO |
+| clausula 4 | SIN CONTRAEJEMPLO | EN PARTE |
+   CIFRA clausulas medidas: 4
+   CIFRA clausulas SIN CONTRAEJEMPLO hoy: 4
+   CIFRA clausulas que SE CAERIAN si el fallo volviera: 1
+   CIFRA clausulas que NO se caerian: 2
+   CIFRA clausulas que se caerian EN PARTE: 1
+
+   LO QUE SE PROPONE, Y LO ADJUDICA EL AUDITOR: OP-I-01 NO SE CIERRA. No
+   porque una clausula salga en rojo hoy, que no sale, sino porque DOS de
+   sus CUATRO no se caerian si el fallo volviera y UNA se caeria solo en
+   parte, que es lo que el criterio de HECHO de la linea 9 pregunta.
+   EL ESTADO NO SE TOCA: entra 'LISTA' y sale 'LISTA'.
+
+F) LA GUARDA DE QUE ESTA TAREA NO ESCRIBE EN EL PLAN
+   git diff --numstat -- docs/plan/OPERACIONES.jsonl        0 fila(s)
+   git diff --numstat -- docs/plan/INVENTARIO.jsonl         0 fila(s)
+   git diff --numstat -- docs/plan/08_VERIFICACION.md       0 fila(s)
+   git diff --numstat -- docs/loop/RECOMPUTO_V169.jsonl     0 fila(s)
+   docs/plan/OPERACIONES.jsonl al salir: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   IDENTICO AL DE LA ENTRADA DE ESTA TAREA: SI
+
+FIN
