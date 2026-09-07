@@ -1,0 +1,52 @@
+==============================================================================
+VUELTA 198, EL AUDITOR CONTRA LAS GUARDAS QUE LE PROTEGEN:
+UN TURNO CERRADO NO SE REABRE, Y CON EL SE APAGAN LOS REMEDIOS DE LA 193
+Y DE LA 197
+==============================================================================
+
+SEDE DE VERDAD AL ENTRAR: 631 bytes, sha256 d19ed42f5f5d639a
+
+------------------------------------------------------------------------------
+ESCENARIO 1 (CONTROL). TURNO ABIERTO (`vivo.abierto: true`).
+Es como se comportaba la sede ANTES de que la 197 la cerrara.
+   el sello sobrevive de un proceso al siguiente                      VERDE
+   la bitacora ACUMULA entre procesos (remedio de la 193)             VERDE
+      bitacora medida: ['git log', 'git status']
+   `sellar()` tendria con que caer en rojo: ve los prohibidos         VERDE
+      toques prohibidos que ve: ['git log', 'git status']
+   `leer_reporte()` SIN vuelta CAE EN ROJO (remedio de la 197)        VERDE
+      motivo: este turno TIENE SELLO y NO ha declarado sus clases. La tabla de discr...
+
+------------------------------------------------------------------------------
+ESCENARIO 2 (EL DE VERDAD). TURNO CERRADO (`vivo.abierto: false`), que es
+EXACTAMENTE el estado en que la vuelta 197 dejo la sede y en el que yo la
+encontre al abrir mi turno.
+
+   el fichero JUSTO DESPUES de sellar: sellado=True, vivo.abierto=False
+   el fichero tras dos toques:         {"sellado": false, "bitacora": [], "vivo": false}
+
+   EL SELLO NO SOBREVIVE: el proceso siguiente lo tira                VERDE
+      se guardo `sellado: true` y se lee `sellado: False`
+   LA BITACORA NO ACUMULA: cada proceso empieza limpio                VERDE
+      bitacora medida: [] (se apuntaron los dos, en procesos distintos)
+   `sellar()` YA NO PUEDE CAER EN ROJO: no ve ningun prohibido        VERDE
+      toques prohibidos que ve: []
+   `leer_reporte()` SIN vuelta DEJA PASAR: LA GUARDA NO MUERDE        VERDE
+      motivo que da: este turno NO ha sellado: no hay sujeto elegido, y por eso leer el rep...
+   `vivo.abierto` sigue en false despues de sellar y de dos toques    VERDE
+
+------------------------------------------------------------------------------
+SEDE DE VERDAD AL SALIR:  631 bytes, sha256 d19ed42f5f5d639a
+   LA SEDE DE VERDAD NO SE MOVIO (P.16, y la leccion de la `C.1` de la 197) VERDE
+
+==============================================================================
+CASOS: 10 | VERDES: 10 | ROJOS: 0
+VEREDICTO DEL ARNES: VERDE
+==============================================================================
+
+LO QUE MIDE, DICHO SIN ADORNO: las dos guardas estan ENTERAS EN EL CODIGO y
+sus casos de mutacion son verdes, pero sobre un turno CERRADO ninguna de las
+dos muerde. El remedio de la 193 y el de la 197 llevan apagados desde que la
+197 cerro la sede, y el sujeto de MI ciega se quemo por esa via.
+EL VERDE DE ESTE ARNES SIGNIFICA QUE EL AGUJERO ESTA MEDIDO, no que este
+reparado: repararlo es de codigo y va encargado, no lo hace este fichero.
