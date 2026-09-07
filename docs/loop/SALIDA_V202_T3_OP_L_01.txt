@@ -1,0 +1,169 @@
+==============================================================================
+VUELTA 202, TAREA 3 . OP-L-01 CONTRA EL CRITERIO DE HECHO, Y EL HUECO
+DE LA VIGENCIA DE LA TABLA VIVA DE LOS PUROS
+LECTURA MEDIDA. NO SE CIERRA NADA, NO SE MUEVE NINGUNA CLASE.
+==============================================================================
+
+A) LOS DOS INSTRUMENTOS, CORRIDOS EN MODO MEDICION Y SIN --aplicar
+   scripts/loop/vuelta166_tarea2_correccion_op_l_01.py
+      25900 bytes en disco | 25900 bytes normalizados a LF
+      sellada de HOY:   docs/loop/SALIDA_V202_T3_CLAUSULAS_12_166.txt, 32943 bytes en disco | 32684 bytes en LF
+      sellada VIEJA:    docs/loop/SALIDA_V166_T2_CORRECCION_OP_L_01.txt, 16344 bytes en disco | 16152 bytes en LF
+   scripts/loop/vuelta169_tarea4_op_l_01_clausula3.py
+      12210 bytes en disco | 12210 bytes normalizados a LF
+      sellada de HOY:   docs/loop/SALIDA_V202_T3_CLAUSULA_3_169.txt, 4028 bytes en disco | 3963 bytes en LF
+      sellada VIEJA:    docs/loop/SALIDA_V169_T4_OP_L_01.txt, 4373 bytes en disco | 4300 bytes en LF
+
+B) EL CRITERIO DE HECHO, CITADO POR LINEA
+   docs/plan/08_VERIFICACION.md: 69068 bytes en disco | 69068 bytes normalizados a LF | 913 lineas
+   cabecera del criterio: 1 acierto(s), linea(s) 7
+      linea 7: ## EL CRITERIO DE HECHO, y es uno solo
+      linea 9: > **UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA.**
+      linea 10: >
+      linea 11: > **No cuando pasa verde: cuando se CAERIA.**
+      linea 13: **Es el criterio del CASO POSITIVO de la FASE 0, aplicado a todo el plan.** Y tiene
+      linea 14: una comprobacion barata: **correr la prueba ANTES del arreglo. Si pasa, no prueba
+      linea 15: nada.**
+   lineas de docs/plan/08_VERIFICACION.md que NOMBRAN OP-L-01: 0, linea(s) (ninguna)
+
+C) LA verificacion DE OP-L-01, CITADA POR LINEA MAS INDICE (acta 201, 4.4)
+   CIFRA lineas donde vive OP-L-01: 1 | linea(s): 41
+   la ficha vive en la LINEA 41
+   estado (SE LEE, NO SE MUEVE): 'LISTA' | tipo: 'MESA' | fecha_corte: '2026-08-11'
+   CIFRA elementos de `verificacion`: 6
+   CIFRA elementos de `evidencia`: 4
+   CIFRA clausulas propiamente dichas: 3
+   CIFRA correcciones declaradas: 3
+      linea 41 + indice 0 (elemento 1), 78 caracteres:
+         'ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui'
+      linea 41 + indice 1 (elemento 2), 51 caracteres:
+         'el marcador del cribado no se mueve: sigue en 2.117'
+      linea 41 + indice 2 (elemento 3), 69 caracteres:
+         'cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)'
+      CORRECCION DECLARADA en linea 41 + indice 3 (elemento 4), 3326 caracteres
+      CORRECCION DECLARADA en linea 41 + indice 4 (elemento 5), 1993 caracteres
+      CORRECCION DECLARADA en linea 41 + indice 5 (elemento 6), 2376 caracteres
+      evidencia indice 0 (elemento 1): 'LECTURAS_DIRIGIDAS.md, las once con su razon'
+      evidencia indice 1 (elemento 2): 'INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar'
+      evidencia indice 2 (elemento 3): 'BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS'
+      evidencia indice 3 (elemento 4): 'MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes'
+
+D) EL CRITERIO DE HECHO APLICADO: NO ES PRESENCIA, ES SI LA CIFRA
+   AGUANTA. EL INSTRUMENTO SE VUELVE A CORRER HOY Y SUS CIFRAS SE
+   COTEJAN CONTRA LAS QUE LA FICHA TIENE CONGELADAS.
+   | cifra | corrida VIEJA (sellada del 2026-09-04) | corrida de HOY |
+   | CIFRA cabeceras LD leidas de LECTURAS_DIRIGIDAS.md   | 11       | 27       | DISCREPA
+   | CIFRA de las once que aparecen, LITERAL              | 0        | 0        | CALZA
+   | CIFRA de las once que aparecen, RESUELTA             | 3        | 11       | DISCREPA
+   | CIFRA puestos implicados en total                    | 5        | 61       | DISCREPA
+   | CIFRA alias en el mapa                               | 761      | 761      | CALZA
+   | CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl   | 3388     | 3388     | CALZA
+   | CIFRA marcador del cribado HOY                       | 3388     | 3388     | CALZA
+   CIFRA cifras cotejadas: 7 | CIFRA que DISCREPAN: 3
+
+   LA CIFRA QUE LA PROPIA FICHA TIENE CONGELADA, LEIDA DE LA FICHA Y NO
+   DEL FICHERO DE SALIDA:
+      linea 41 + indice 3 (elemento 4) dice: EN COMPARACION
+         RESUELTA APARECEN 3
+         y declara 3388 filas del archivo
+
+E) EL HUECO DE LA VIGENCIA DE LA TABLA VIVA DE LOS PUROS
+   LA VARA, DECLARADA ANTES DE CORRERSE Y NO DESPUES DE MIRAR:
+   
+     UNA FILA DE LA TABLA VIVA DE LOS PUROS SIGUE EN PIE AL CORTE DE HOY SI TODOS
+     LOS PUESTOS QUE ELLA MISMA CITA EXISTEN EN docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+     AL CORTE DE HOY. Una fila que cita un puesto que hoy no existe NO SIGUE EN PIE.
+   
+     UNA FILA QUE NO CITA NINGUN PUESTO NO ES MEDIBLE POR ESTA VARA, y se cuenta
+     aparte: NI EN PIE NI CAIDA. Contarla como en pie seria fabricar cobertura, y
+     contarla como caida seria fabricar un rojo.
+   
+     LOS PUESTOS SE EXTRAEN DE LA FILA CON UNA SOLA EXPRESION REGULAR, la constante
+     PATRON_PUESTO de este fichero, que casa `puesto N`, `puestos N, M y K` y `el N`
+     cuando el numeral va en negrita. LO QUE ESA EXPRESION NO CACE SE DECLARA COMO
+     NO CAZADO en vez de completarse a ojo.
+   
+     ESTA VARA MIDE PRESENCIA DEL PUESTO, NO CALIDAD DE LA FILA, y eso se dice
+     delante: la clase que el archivo da HOY a cada puesto se PUBLICA al lado, pero
+     NO se compara contra la que la fila afirma, porque las filas afirman su clase
+     en prosa libre y una comparacion a ojo no es una medicion.
+   
+     Y LA VIGENCIA ES OTRA COSA QUE LA PRESENCIA, y se mide aparte: el MAXIMO puesto
+     que cada fila cita, contra el `vigente al puesto` que la cabecera declara y
+     contra el marcador de hoy.
+
+   docs/BANCO_DE_TEXTOS.md: 182228 bytes en disco | 182228 bytes normalizados a LF | 3118 lineas
+   linea 938, leida y no supuesta: #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+   CIFRA vigencia declarada por la cabecera, leida de ella: 1157
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 4054129 bytes en disco | 4054129 bytes normalizados a LF
+   CIFRA marcador de hoy, recontado aqui: 3388 filas
+   CIFRA lineas que NO son JSON valido: 0
+   CIFRA puestos distintos: 3388 | maximo: 3388
+   CIFRA diferencia entre el marcador de hoy y la vigencia declarada: 2231
+   ESTE CONTEO NO PASA POR EL RESOLUTOR Y SE DICE POR QUE: P.1 lo manda
+      para todo conteo que TOQUE IDS, y contar puestos, filas y clases
+      NO toca ningun id. La vara declarada arriba es de PRESENCIA DE
+      PUESTO, y un puesto no es un id.
+
+   LA TABLA SE ACOTA AL BLOQUE CONTIGUO DE LINEAS QUE EMPIEZAN POR |
+      justo detras de la cabecera: lineas 953 a 965
+   CIFRA filas numeradas de la TABLA VIVA dentro de esa cota: 11
+   | # | linea | puestos citados | todos existen hoy | max citado | pasa de 1157 |
+   | 1   |   955 | (ninguno) | NO MEDIBLE POR ESTA VARA | . | . |
+   | 2   |   956 | 950 | SI | 950 | no |
+   |     |       | clases que el archivo da HOY: 950=A
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras que
+   |     |       | la fila menciona y la expresion NO caza: 2026
+   | 3   |   957 | 872 | SI | 872 | no |
+   |     |       | clases que el archivo da HOY: 872=D
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras que
+   |     |       | la fila menciona y la expresion NO caza: 2026
+   | 4   |   958 | (ninguno) | NO MEDIBLE POR ESTA VARA | . | . |
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras
+   |     |       | que la fila menciona y la expresion NO caza:
+   |     |       | 862 | clases hoy: 862=A
+   | 5   |   959 | 2117 | SI | 2117 | SI |
+   |     |       | clases que el archivo da HOY: 2117=D
+   | 6   |   960 | (ninguno) | NO MEDIBLE POR ESTA VARA | . | . |
+   | 7   |   961 | 1190 | SI | 1190 | SI |
+   |     |       | clases que el archivo da HOY: 1190=D
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras que
+   |     |       | la fila menciona y la expresion NO caza: 2026
+   | 8   |   962 | (ninguno) | NO MEDIBLE POR ESTA VARA | . | . |
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras
+   |     |       | que la fila menciona y la expresion NO caza:
+   |     |       | 2026 | clases hoy: 2026=D
+   | 9   |   963 | 1182, 1208, 1400, 1573, 1600 | SI | 1600 | SI |
+   |     |       | clases que el archivo da HOY: 1182=A, 1208=A, 1400=D, 1573=A, 1600=D
+   | 10  |   964 | (ninguno) | NO MEDIBLE POR ESTA VARA | . | . |
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras
+   |     |       | que la fila menciona y la expresion NO caza:
+   |     |       | 197, 222, 463, 1101, 1157, 2026 | clases hoy: 197=A, 222=A, 463=A, 1101=D, 1157=D, 2026=D
+   | 11  |   965 | 925, 1488, 1517 | SI | 1517 | SI |
+   |     |       | clases que el archivo da HOY: 925=D, 1488=A, 1517=A
+   |     |       | FUERA DE LA VARA, numerales de 3 o 4 cifras que
+   |     |       | la fila menciona y la expresion NO caza: 762, 945, 2026
+
+   LO DE FUERA DE LA VARA SE PUBLICA PERO NO SE CUENTA, Y AQUI SE VE POR
+      QUE: el numeral 2026 que aparece en cinco filas ES EL ANO DE UNA
+      FECHA, no un puesto, y el archivo tiene ademas un puesto 2026 que
+      no tiene nada que ver. UNA VARA DE NUMERALES SUELTOS CONFUNDIRIA
+      LAS DOS COSAS; una vara de `puesto N` no. Esa es la razon de que la
+      vara este escrita como esta, y se dice en vez de callarse.
+
+   CIFRA filas EN PIE al corte 3388 (todos sus puestos existen): 6
+   CIFRA filas CAIDAS (citan un puesto que hoy no existe): 0
+   CIFRA filas NO MEDIBLES POR ESTA VARA (no citan puesto): 5
+   SUMA: 11, y las filas de la tabla son 11
+   CIFRA filas que CITAN UN PUESTO MAS ALLA DE LA VIGENCIA DECLARADA (1157): 4
+   CIFRA filas con un puesto citado AL CORTE DE HOY O MAS ALLA (3388): 0,
+      y esa cifra sale de MIRAR fila a fila, no de no haber mirado.
+
+   EL HUECO, DICHO CON LA MEDICION DELANTE Y SIN MOVER NADA:
+      la cabecera declara vigencia al puesto 1157; 4 de las 11 filas citan
+      un puesto POR ENCIMA de esa vigencia, o sea que LA CABECERA YA ESTA
+      DESMENTIDA POR SUS PROPIAS CELDAS; y el marcador de hoy vale 3388,
+      que es 2231 puestos mas alla de la vigencia declarada.
+      NINGUNA CLASE SE MUEVE AQUI: mover una clase es del RECOMPUTO.
+
+FIN
