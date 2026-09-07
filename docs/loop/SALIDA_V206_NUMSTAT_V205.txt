@@ -1,0 +1,54 @@
+**TODO LO DE ESTA SECCION SALE DE `git` CORRIDO EN ESTA VUELTA Y NO SE
+HEREDA DE LA APERTURA** (`EJECUTOR.md` 1, EL ESTADO AL CIERRE SE MIDE AL
+CIERRE). LA HUELLA SE MIDE ENTRE DOS COMMITS, `e66bf67d` de apertura y `43f2158e`
+de cierre, **y no contra el arbol de trabajo**: esta vuelta se cierra
+tarde, y medir contra el arbol de hoy le colgaria ficheros de otra vuelta.
+
+### 4.1 LAS CUATRO SEDES QUE EL ENCARGO EXIGE EN CERO, MEDIDAS AL CIERRE
+
+Comando: `git diff e66bf67d..43f2158e --numstat -- <sede>`
+
+| sede | filas de numstat |
+|---|---:|
+| `dataset/` | 0 |
+| `web/` | 0 |
+| `engine/` | 0 |
+| `docs/plan/` | 0 |
+
+**CIFRA suma de filas de las cuatro sedes: 0.**
+
+### 4.2 LAS TRES SEDES DEL AUDITOR, QUE EL EJECUTOR NO ESCRIBE
+
+**EL CERO DE `PARA_ALEXIS.md` ES DE AUSENCIA DE FICHERO, Y ASI SE DICE**
+(`4.5` del acta 204). Comando: `git diff e66bf67d..43f2158e --numstat -- <sede>`.
+
+| sede del auditor | existe en disco | filas de numstat | de que es el cero |
+|---|---|---:|---|
+| `docs/loop/PROMPT_SIGUIENTE.md` | SI | 0 | de no haberla tocado |
+| `docs/loop/ACTA_AUDITOR.md` | SI | 0 | de no haberla tocado |
+| `docs/loop/PARA_ALEXIS.md` | NO | 0 | **de ausencia de fichero**, no de no haberla tocado |
+
+### 4.3 LAS DOS SEDES SELLADAS, REMEDIDAS Y NO HEREDADAS
+
+Leidas del arbol de `43f2158e` con `git show`, que es el arbol al cerrar
+esa vuelta, y no del disco de hoy.
+
+| fichero | bytes (disco y LF, en el mismo renglon) | sha256 (disco y LF, en el mismo renglon) | calza con el encargo |
+|---|---|---|---|
+| `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | 4054129 bytes en disco y 4054129 bytes normalizado a LF | sha256 disco `0a77b5a35a962621` y sha256 LF `0a77b5a35a962621` | SI |
+| `docs/plan/OPERACIONES.jsonl` | 513043 bytes en disco y 513043 bytes normalizado a LF | sha256 disco `829c583eb779cab6` y sha256 LF `829c583eb779cab6` | SI |
+
+**NINGUN campo `estado`, NINGUNA clase y NINGUN veredicto se movio, y no lo
+digo: lo miden los dos `sha256` de arriba, identicos por las dos
+convenciones a los que el encargo trae del cierre de la 204.**
+
+### 4.4 LO QUE LA VUELTA SI TOCO, LEIDO DE `git` Y NO NARRADO
+
+Comando: `git diff e66bf67d..43f2158e --numstat` sobre el arbol entero.
+
+| directorio tocado | ficheros |
+|---|---:|
+| `docs/loop` | 24 |
+| `scripts/loop` | 1 |
+
+**CIFRA ficheros tocados contra el HEAD de apertura: 25.**

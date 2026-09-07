@@ -1,0 +1,39 @@
+LA TABLA DEL SELLADO, CONTADA DE LOS 11 FICHEROS Y NO TECLEADA
+
+| tramo | salida sellada | bytes (las dos convenciones) | sha256 LF | entradas | exitcode | minutos |
+|---|---|---|---|---|---|---|
+| 1 | `SALIDA_V205_BATERIA_TRAMO_1.txt` | 9555 bytes en disco y 9555 normalizado a LF | `85c94304eef1fa28` | 13 | 1 | 2.8 |
+| 2 | `SALIDA_V205_BATERIA_TRAMO_2.txt` | 7788 bytes en disco y 7788 normalizado a LF | `8a426852569997fb` | 13 | 1 | 6.7 |
+| 3 | `SALIDA_V205_BATERIA_TRAMO_3.txt` | 8525 bytes en disco y 8525 normalizado a LF | `d665343b2715e6bb` | 13 | 1 | 11.2 |
+| 4 | `SALIDA_V205_BATERIA_TRAMO_4.txt` | 8072 bytes en disco y 8072 normalizado a LF | `07a889be43424245` | 13 | 1 | 3.0 |
+| 5 | `SALIDA_V205_BATERIA_TRAMO_5.txt` | 8149 bytes en disco y 8149 normalizado a LF | `65206552cad293f7` | 13 | 1 | 2.4 |
+| 6 | `SALIDA_V205_BATERIA_TRAMO_6.txt` | 7880 bytes en disco y 7880 normalizado a LF | `6c8c8725822883c1` | 13 | 1 | 3.0 |
+| 7 | `SALIDA_V205_BATERIA_TRAMO_7.txt` | 7896 bytes en disco y 7896 normalizado a LF | `427b396bd08b2fc8` | 13 | 1 | 2.5 |
+| 8 | `SALIDA_V205_BATERIA_TRAMO_8.txt` | 7855 bytes en disco y 7855 normalizado a LF | `fa02d03f1befeaf2` | 13 | 1 | 2.8 |
+| 9 | `SALIDA_V205_BATERIA_TRAMO_9.txt` | 8523 bytes en disco y 8523 normalizado a LF | `570ab8df86712b23` | 13 | 1 | 2.6 |
+| 10 | `SALIDA_V205_BATERIA_TRAMO_10.txt` | 8473 bytes en disco y 8473 normalizado a LF | `7fc7bf36a70ad181` | 13 | 1 | 4.1 |
+| 11 | `SALIDA_V205_BATERIA_TRAMO_11.txt` | 6271 bytes en disco y 6271 normalizado a LF | `c9e02832786abb5c` | 5 | 1 | 0.9 |
+
+LA TABLA DEL VEREDICTO DE CADA TRAMO, CONTADA DE LOS MISMOS FICHEROS
+
+| tramo | ancla perdida | no mordio | no reproducible | ruido de concurrencia | clase del veredicto | reloj de pared UTC |
+|---|---|---|---|---|---|---|
+| 1 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T20:59:33Z a 2026-09-07T21:02:20Z |
+| 2 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:03:34Z a 2026-09-07T21:10:14Z |
+| 3 | 0 | 1 | 0 | 2 | ROJO POR FALLO | 2026-09-07T21:21:06Z a 2026-09-07T21:32:15Z |
+| 4 | 0 | 1 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:32:50Z a 2026-09-07T21:35:48Z |
+| 5 | 0 | 2 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:36:25Z a 2026-09-07T21:38:48Z |
+| 6 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:39:22Z a 2026-09-07T21:42:21Z |
+| 7 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:42:53Z a 2026-09-07T21:45:21Z |
+| 8 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:45:54Z a 2026-09-07T21:48:44Z |
+| 9 | 0 | 1 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:49:17Z a 2026-09-07T21:51:52Z |
+| 10 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:52:32Z a 2026-09-07T21:56:35Z |
+| 11 | 0 | 0 | 0 | 0 | ROJO POR FALLO | 2026-09-07T21:57:09Z a 2026-09-07T21:58:04Z |
+
+CIFRA tramos con fichero en disco: 11 de 11
+CIFRA tramos AUSENTES: 0
+CIFRA tramos de CERO BYTES: 0
+CIFRA suma de las entradas corridas, sumada de las lineas ENTRADA DEL TRAMO: 135
+CIFRA suma de bytes de los tramos: 88987 en disco y 88987 normalizado a LF
+CIFRA suma de minutos de los tramos, sumada de sus lineas de duracion: 42.0
+CIFRA suma de horas: 0.70

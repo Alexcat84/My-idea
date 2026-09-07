@@ -1,0 +1,85 @@
+LA TABLA DE LOS ONCE TRAMOS, CONTADA DE SUS FICHEROS EN LA VUELTA 206
+==============================================================================
+  TRAMO 1  | SALIDA_V205_BATERIA_TRAMO_1.txt
+           | disco 9555 bytes | LF 9555 bytes | lineas 129
+           | sha256 LF 85c94304eef1fa28
+           | exitcode 1 | minutos 2.8 | segundos 167.1
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 2  | SALIDA_V205_BATERIA_TRAMO_2.txt
+           | disco 7788 bytes | LF 7788 bytes | lineas 123
+           | sha256 LF 8a426852569997fb
+           | exitcode 1 | minutos 6.7 | segundos 400.1
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 3  | SALIDA_V205_BATERIA_TRAMO_3.txt
+           | disco 8525 bytes | LF 8525 bytes | lineas 131
+           | sha256 LF d665343b2715e6bb
+           | exitcode 1 | minutos 11.2 | segundos 669.4
+           | veredicto ROJO POR FALLO | ruido de concurrencia 2 | entradas 13
+  TRAMO 4  | SALIDA_V205_BATERIA_TRAMO_4.txt
+           | disco 8072 bytes | LF 8072 bytes | lineas 125
+           | sha256 LF 07a889be43424245
+           | exitcode 1 | minutos 3.0 | segundos 177.9
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 5  | SALIDA_V205_BATERIA_TRAMO_5.txt
+           | disco 8149 bytes | LF 8149 bytes | lineas 126
+           | sha256 LF 65206552cad293f7
+           | exitcode 1 | minutos 2.4 | segundos 142.9
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 6  | SALIDA_V205_BATERIA_TRAMO_6.txt
+           | disco 7880 bytes | LF 7880 bytes | lineas 123
+           | sha256 LF 6c8c8725822883c1
+           | exitcode 1 | minutos 3.0 | segundos 178.8
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 7  | SALIDA_V205_BATERIA_TRAMO_7.txt
+           | disco 7896 bytes | LF 7896 bytes | lineas 123
+           | sha256 LF 427b396bd08b2fc8
+           | exitcode 1 | minutos 2.5 | segundos 148.2
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 8  | SALIDA_V205_BATERIA_TRAMO_8.txt
+           | disco 7855 bytes | LF 7855 bytes | lineas 123
+           | sha256 LF fa02d03f1befeaf2
+           | exitcode 1 | minutos 2.8 | segundos 170.7
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 9  | SALIDA_V205_BATERIA_TRAMO_9.txt
+           | disco 8523 bytes | LF 8523 bytes | lineas 125
+           | sha256 LF 570ab8df86712b23
+           | exitcode 1 | minutos 2.6 | segundos 155.1
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 10 | SALIDA_V205_BATERIA_TRAMO_10.txt
+           | disco 8473 bytes | LF 8473 bytes | lineas 123
+           | sha256 LF 7fc7bf36a70ad181
+           | exitcode 1 | minutos 4.1 | segundos 243.3
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 13
+  TRAMO 11 | SALIDA_V205_BATERIA_TRAMO_11.txt
+           | disco 6271 bytes | LF 6271 bytes | lineas 94
+           | sha256 LF c9e02832786abb5c
+           | exitcode 1 | minutos 0.9 | segundos 54.9
+           | veredicto ROJO POR FALLO | ruido de concurrencia 0 | entradas 5
+
+  CIFRA tramos con fichero contado: 11
+  CIFRA ficheros que el patron no encontro: 0
+  CIFRA tramos de CERO BYTES: 0
+  CIFRA suma de las entradas corridas leidas de las salidas: 135
+  CIFRA suma de los minutos leidos de las salidas: 42.0
+  CIFRA exitcodes distintos entre los once: 1 (1)
+  CIFRA veredictos distintos entre los once: 1 (ROJO POR FALLO)
+  CIFRA tramos con RUIDO DE CONCURRENCIA distinto de 0: 1
+      TRAMO 3: 2 fichero(s)
+  CIFRA mediana de minutos por tramo: 2.8
+  CIFRA maximo de minutos en un tramo: 11.2
+
+LA TABLA EN MARKDOWN, PARA PEGARLA ENTERA Y NO TECLEARLA
+
+| tramo | salida sellada | bytes disco | bytes LF | lineas | sha256 LF | exitcode | minutos |
+|---|---|---|---|---|---|---|---|
+| 1 | `SALIDA_V205_BATERIA_TRAMO_1.txt` | 9555 | 9555 | 129 | `85c94304eef1fa28` | 1 | 2.8 |
+| 2 | `SALIDA_V205_BATERIA_TRAMO_2.txt` | 7788 | 7788 | 123 | `8a426852569997fb` | 1 | 6.7 |
+| 3 | `SALIDA_V205_BATERIA_TRAMO_3.txt` | 8525 | 8525 | 131 | `d665343b2715e6bb` | 1 | 11.2 |
+| 4 | `SALIDA_V205_BATERIA_TRAMO_4.txt` | 8072 | 8072 | 125 | `07a889be43424245` | 1 | 3.0 |
+| 5 | `SALIDA_V205_BATERIA_TRAMO_5.txt` | 8149 | 8149 | 126 | `65206552cad293f7` | 1 | 2.4 |
+| 6 | `SALIDA_V205_BATERIA_TRAMO_6.txt` | 7880 | 7880 | 123 | `6c8c8725822883c1` | 1 | 3.0 |
+| 7 | `SALIDA_V205_BATERIA_TRAMO_7.txt` | 7896 | 7896 | 123 | `427b396bd08b2fc8` | 1 | 2.5 |
+| 8 | `SALIDA_V205_BATERIA_TRAMO_8.txt` | 7855 | 7855 | 123 | `fa02d03f1befeaf2` | 1 | 2.8 |
+| 9 | `SALIDA_V205_BATERIA_TRAMO_9.txt` | 8523 | 8523 | 125 | `570ab8df86712b23` | 1 | 2.6 |
+| 10 | `SALIDA_V205_BATERIA_TRAMO_10.txt` | 8473 | 8473 | 123 | `7fc7bf36a70ad181` | 1 | 4.1 |
+| 11 | `SALIDA_V205_BATERIA_TRAMO_11.txt` | 6271 | 6271 | 94 | `c9e02832786abb5c` | 1 | 0.9 |

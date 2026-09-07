@@ -1,0 +1,20 @@
+EL COTEJO DE LAS ONCE FILAS: LAS MIAS DE HOY CONTRA LAS DEL ACTA 205
+==============================================================================
+  CIFRA filas mias, contadas de los ficheros en esta vuelta: 11
+  CIFRA filas leidas de la tabla del acta 205: 11
+
+  CIFRA discrepancias: 0
+
+  CIFRA suma de bytes de disco de los once (mia): 88987
+  CIFRA suma de minutos de los once (mia): 42.0
+
+LA PRUEBA DE MUTACION, PORQUE UN COTEJO QUE SIEMPRE DICE VERDE NO PRUEBA
+==============================================================================
+  MUTACION tramo 1 campo bytes_disco -> 9556 : CAE (1 discrepancia(s))
+  MUTACION tramo 3 campo minutos -> 11.3 : CAE (1 discrepancia(s))
+  MUTACION tramo 7 campo sha256_lf -> 427b396bd08b2fc9 : CAE (1 discrepancia(s))
+  MUTACION tramo 11 campo exitcode -> 0 : CAE (1 discrepancia(s))
+  CIFRA casos de mutacion: 4 | CIFRA que CAEN: 4
+  VERDE: las 4 mutaciones tumban el cotejo, o sea que muerde.
+
+VERDE: las 11 filas mias calzan al digito con las 11 del acta 205.
