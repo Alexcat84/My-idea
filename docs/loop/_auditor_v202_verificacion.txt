@@ -1,0 +1,63 @@
+VERIFICACION DEL AUDITOR, VUELTA 202. Todo recontado hoy, 7 sep 2026.
+
+--- 1. VEREDICTOS ---
+  bytes disco 4054129 | bytes LF 4054129
+  sha256 disco 0a77b5a35a962621 | sha256 LF 0a77b5a35a962621
+  filas 3388 | por clase {'D': 2760, 'A': 551, 'B': 72, 'C': 5} suma 3388
+  puestos distintos 3388 | max 3388 | huecos 0
+
+--- 2. OPERACIONES.jsonl Y LAS TRES FICHAS ---
+  bytes disco 501883 | bytes LF 501883 | sha256 LF 6006fd16dc08dc58
+  lineas no vacias 71 | no JSON 0
+  OP-L-01 -> LINEA 41 | estado 'LISTA' | evidencia 4 | verificacion 6
+  OP-L-02 -> LINEA 42 | estado 'LISTA' | evidencia 1 | verificacion 4
+  OP-L-03 -> LINEA 43 | estado 'LISTA' | evidencia 4 | verificacion 4
+  OP-I-01 -> LINEA 44 | estado 'LISTA' | evidencia 4 | verificacion 4
+
+  ELEMENTO 4 (indice 3) DE evidencia DE OP-L-03, LITERAL:
+  "CORRECCION DECLARADA (2026-09-07, vuelta 202, TAREA 1), POR EL CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista evidencia, que es la via que la ficha gemela OP-L-01 uso en la vuelta 166 y que el acta 71, seccion 6, adjudicacion 3, adjudico CON LAS PALABRAS NO ES PARADA, y la misma que la vuelta 201 uso para OP-I-01). (1) LO QUE SE CORRIGE es la clausula que en esta lista dice, verbatim: 'LECTURAS_DIRIGIDAS.md, el reparto por acto'. MEDIDO HOY, CON FECHA DE CORTE 2026-09-07 y contando el fichero en la vuelta 202 con scripts/loop/_v202_t1_correccion_op_l_03.py: docs/plan/LECTURAS_DIRIGIDAS.md, que mide 214916 bytes en disco y 214916 normalizados a LF, trae 0 apariciones del literal 'reparto por acto' y 0 menciones de OP-L-03. La busqueda se corrio tambien POSITIVA sobre 8 variantes, porque una busqueda negativa no se puede citar sola (EJECUTOR.md 9). EL DOCUMENTO NO ES EL QUE TRAE EL REPARTO: LA EVIDENCIA APUNTABA AL DOCUMENTO EQUIVOCADO. (2) EL REPARTO POR ACTO VIVE, CON FECHA DE CORTE 2026-09-07, EN DOS FICHEROS Y LOS DOS SE NOMBRAN: docs/plan/OP_L_03_LECTURAS.jsonl, que mide 51368 bytes en disco y 51368 normalizados a LF, con 14 filas, 14 actos distintos y 0 lineas que no sean JSON valido; y docs/plan/OP_L_03_TRIANGULOS.jsonl, que mide 55705 bytes en disco y 55705 normalizados a LF, con 19 filas, 8 actos distintos y 0 lineas que no sean JSON valido. (3) LA COBERTURA REAL, RECONTADA HOY CON FECHA DE CORTE 2026-09-07, PORQUE UNA EVIDENCIA CORREGIDA QUE PROMETA MAS DE LO QUE EXISTE ES LO QUE LA REGLA 'LA RUTA QUE PROMETE PRUEBA ES CIFRA' VINO A CAZAR: el elemento 2 de esta misma lista promete '55 pares en 29 actos' con corte 11 ago 2026, y docs/plan/OP_L_03_LECTURAS.jsonl trae hoy 14 actos distintos, de los cuales 11 tienen leido en true y 3 en false, y sus campos cifra_pares_leidos suman 19 pares. O SEA: 15 de los 29 actos prometidos siguen sin ficha de lectura, y 36 de los 55 pares prometidos siguen sin lectura registrada. LA PROMESA VIEJA NO ES UNA MENTIRA Y NO SE RETIRA: con su corte era lo que se iba a hacer; lo que esta correccion anade es CUANTO DE ESO EXISTE HOY, con su propio corte. NINGUN CAMPO estado SE MUEVE con esta correccion: la vara del trabajo pendiente es el instrumento y nunca el campo estado (recuadro de AUDITOR.md 0, decision del fundador del 4 sep 2026)."
+
+  LOS 3 ELEMENTOS VIEJOS DE OP-L-03, PARA COTEJAR QUE NO SE TOCARON:
+    en ebe04895: 3 elementos | hoy: 4 elementos
+    los 3 viejos IDENTICOS Y EN SU ORDEN: True
+
+--- 3. LAS 71 FICHAS: ESTADO Y LINEAS DISTINTAS CONTRA ebe04895 ---
+  fichas en ebe04895 71 | hoy 71
+  fichas que MUEVEN estado: 0 (ninguna)
+  lineas distintas: 1 -> [43]
+  claves que cambian en esa linea: 1 -> ['evidencia']
+
+--- 4. LECTURAS_DIRIGIDAS.md ---
+  bytes disco 214916 | bytes LF 214916 | lineas 2231
+    'reparto por acto'   -> 0
+    'OP-L-03'            -> 0
+    'OP_L_03'            -> 0
+    'reparto_por_acto'   -> 0
+    'OP-L-01'            -> 0
+    'OP-L-02'            -> 1
+    'lectura dirigida'   -> 1
+    'LD-'                -> 297
+  cabeceras markdown que nombran un LD-n: 61
+  LD-n distintos en todo el documento: 68
+
+--- 5. LOS DOS FICHEROS DEL REPARTO POR ACTO ---
+  docs/plan/OP_L_03_LECTURAS.jsonl
+     51368 bytes disco, 51368 LF | 14 filas, 0 no JSON
+     claves: ['acto', 'apoyo_del_archivo_por_un_tercero', 'cambia_respecto_del_par', 'cifra_miembros', 'cifra_nodos_vivos_por_grafo', 'cifra_nodos_vivos_por_resolutor', 'cifra_pares_con_veredicto', 'cifra_pares_leidos', 'cifra_pares_por_leer_medidos_hoy', 'cifra_pares_por_leer_segun_el_instrumento', 'cifra_pares_posibles', 'cifra_pares_que_ya_no_existen', 'cifra_pares_reales_del_acto', 'cifra_pares_sin_lectura', 'clases_de_los_pares_por_leer', 'cobertura', 'donde_va_el_veredicto', 'el_instrumento_y_yo_calzamos', 'fecha', 'forma', 'id_op', 'leido', 'miembros', 'ninguno_tiene_puesto_en_la_cola', 'no_mueve_veredictos', 'nodos_vivos_por_grafo', 'nodos_vivos_por_resolutor', 'pares_con_veredicto', 'pares_por_leer', 'pares_que_ya_no_existen', 'reparto_de_clases', 'resolutor_y_grafo_calzan', 'veredictos_movidos', 'vuelta']
+     actos distintos 14 | leido=true 11 | leido=false 3 | suma cifra_pares_leidos 19
+  docs/plan/OP_L_03_TRIANGULOS.jsonl
+     55705 bytes disco, 55705 LF | 19 filas, 0 no JSON
+     claves: ['acto', 'acto_leido_por_la_177', 'el_lado_de_fuera_es_el_D', 'fecha', 'id_op', 'lados', 'recomputable_entero_del_archivo', 'terna', 'veredictos_movidos', 'vuelta', 'vuelta_que_anota_la_fuente']
+     actos distintos 8 | leido=true 0 | leido=false 0 | suma cifra_pares_leidos 0
+
+--- 6. NUMSTAT ---
+  HEAD       dataset/               -> 0 filas | 
+  HEAD       web/                   -> 0 filas | 
+  HEAD       engine/                -> 0 filas | 
+  HEAD       docs/plan/             -> 0 filas | 
+  HEAD       docs/PENDIENTES.md     -> 0 filas | 
+  ebe04895   dataset/               -> 0 filas | 
+  ebe04895   web/                   -> 0 filas | 
+  ebe04895   engine/                -> 0 filas | 
+  ebe04895   docs/plan/             -> 1 filas | 1	1	docs/plan/OPERACIONES.jsonl
+  ebe04895   docs/PENDIENTES.md     -> 1 filas | 188	0	docs/PENDIENTES.md

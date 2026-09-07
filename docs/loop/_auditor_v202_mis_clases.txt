@@ -1,0 +1,217 @@
+MIS CLASES, VUELTA 202. ESCRITAS ANTES DE CUALQUIER DESTAPE.
+Sujeto: los 40 puestos del sello SELLO_APERTURA_AUDITOR_V202.json, muestra
+aleatoria semilla 202 sobre el archivo entero. Leidos SOLO de los pasos de la
+ciega _auditor_v202_ciega_blind.txt. Ni razon ni clase del archivo consultadas.
+
+EL REMEDIO DE LA `C.A1` SIGUE PUESTO Y LO CUMPLO: este fichero se escribe SIN
+RESUMEN. El reparto NO se teclea. Se pega debajo, en su seccion propia, de la
+salida literal del contador, corrido DESPUES de que estas filas existan.
+
+RUBRICA, HEREDADA DE LA 200 Y DE LA 201 PORQUE SUS COTEJOS LA VALIDARON:
+  A = REPITE. Los dos nodos dicen lo mismo; uno sobra o se funden.
+  B = DUDOSO. Se pisan de verdad y NO resuelve limpio. SI se lee de los pasos.
+  C = necesita aristas o cableado. ESTO SI es ciego para mi: la ciega no lleva
+      grafo. No adjudico ninguna C, y lo digo ANTES de mirar.
+  D = distintos. El solape es de tema, no de contenido.
+
+LA VARA DEL FILO, CITADA POR NUMERO Y DECLARADA ANTES DE APLICARLA: `9.6.1` LA
+MAYORIA MANDA, su precision `9.6.2` LA VARA TIENE DIRECCION y su precision
+`9.6.3` EL TAMANO DEL SOLAPE NO DECIDE. La aplico asi, y lo escribo como regla
+mecanica para no torcerla par a par: cuento los ACTOS de cada nodo que se
+repiten en el otro, y solo pongo A si los repetidos son MAS DE LA MITAD de los
+actos de AL MENOS UNO de los dos. Mitad exacta no es mayoria y no basta.
+
+Y UNA SEGUNDA VARA QUE ESTE SUJETO ME OBLIGO A ESCRIBIR, PORQUE VIENE CARGADO DE
+JERARQUIAS: un nodo cuyos actos caben TODOS DENTRO DE UN SOLO PASO del otro es
+un SUB-NODO, y eso es ARISTA y no repeticion. Es la misma lectura que el acta
+201 hizo del puesto 57 ("lo que B trae es el paso 5 de A en UNA linea: arista,
+no repeticion"). Un nodo PARAGUAS que enumera a varios hermanos que el catalogo
+ya tiene por separado tampoco repite a ninguno de ellos.
+
+LA TENSION CON LA TASA BASE, DICHA ANTES DEL DESTAPE Y NO DESPUES: el archivo
+reparte A 16,3 / B 2,1 / C 0,1 / D 81,5 por ciento. En 40 al azar tocarian unas
+6 o 7 A y menos de 1 B. Pongo 7 A y 1 B. La 201 puso dos B y fallo las dos; NO
+recorto a cero por eso, porque eso seria ajustar a la tasa y no leer, pero SI
+recorto a una: de los cuatro pares donde dude entre B y otra clase, tres los
+resuelvo con la vara de la mayoria y solo uno se queda sin resolver.
+
+PUESTO  CLASE  POR QUE (de los pasos, y nada mas)
+148     D   quien negocia POR MI LADO (un solo interlocutor autorizado, desviar
+            llamadas, dejar constancia) contra quien decide DEL OTRO LADO
+            (preguntar quien mas aprueba, detectar el veto). Dos asientos.
+151     D   investigar precios y fuentes antes de hablar contra nombrar un unico
+            contacto. Ni un acto en comun; solo comparten el proveedor.
+231     D * comparar payback, NPV e IRR y elegir entre metodos, contra EJECUTAR
+            el NPV (proyectar flujos, fijar tasa, descontar, sumar, sensibilidad).
+            El uno usa al otro: es dependencia, no repeticion. Dudo porque los
+            dos deciden con el NPV.
+526     A   B cabe ENTERO en A: investigacion de mercado y VoC, evaluacion
+            tecnica, business case y prueba de concepto con clientes reales son
+            los pasos 4, 2, 6 y 5 de A. Los 5 actos de B estan en los 6 de A.
+788     A * 4 de los 5 actos de A se repiten en B: VoC a fondo, evaluacion
+            preliminar de mercado, probar concepto con clientes reales y seguir
+            validando en ciclos. Mayoria en una direccion, que `9.6.2` admite.
+            Dudo porque en la otra direccion no: B trae evaluacion tecnica y
+            business case que A no tiene, y A trae analisis competitivo.
+803     D   percepcion de valor en la venta (cuantificar el costo del problema,
+            preguntas de implicacion) contra la relacion de largo plazo (soporte
+            post venta, puntos de contacto recurrentes). Comparten "no seas
+            agresivo" y nada mas.
+812     D   un programa de hitos con disparo automatico y medicion de impacto
+            contra el oficio de regalar (sin logo, a la familia, calidad sobre
+            costo). El tema es el detalle al cliente; los actos son otros.
+826     D   dos entregables distintos del mismo fundraising: el documento de una
+            o dos paginas que se manda el mismo dia contra el deck de 10 a 15
+            slides con diseno y dos versiones. Coinciden en el INDICE de
+            contenidos, que es tema, no acto.
+973     D   registrar datos del cliente (15 pasos de captura y CRM) contra USAR
+            esos datos para personalizar. Solo el paso 15 de A toca a B, y es
+            uno de quince: arista.
+1019    D   entrenar a los gerentes para despedir a su propia gente contra
+            informar a la junta del despido de un ejecutivo. Otro sujeto, otro
+            interlocutor, otro paquete.
+1042    D   cuando ALIGERAR o saltarse la reunion de gate segun riesgo contra
+            COMO conducir la reunion (moderador, 3 dias de antelacion, orden del
+            dia). Complementarios, no repetidos.
+1336    D   la apertura de la llamada (7 pasos sobre los primeros minutos)
+            contra las cuatro etapas de la llamada entera. La apertura es UNA de
+            las cuatro etapas: sub-nodo, o sea arista.
+1339    D * politica de supervision (que decide la IA y que no, doble revision,
+            registrar alucinaciones) contra mapeo empirico (probar con casos
+            variados y anotar donde rinde). Los dos terminan en un mapa de
+            tareas, y por eso dude entre B y D; los resuelvo con la vara: solo
+            1 acto de 4 se repite en cada direccion, que no es mayoria.
+1580    D   la fase entera de Customer Discovery (descomponer el lienzo, probar
+            problema, MVP, decidir pivote) contra priorizar QUE validar (las
+            cinco variables criticas, cada lado del mercado). B es un paso
+            dentro del 1 de A.
+1631    D   inspeccionarte tu el empaque (apretar la caja, mirar refuerzos)
+            contra mandar una muestra al courier y esperar su dictamen.
+1648    D   que relleno segun la forma de la pieza contra que caja elegir. Dos
+            decisiones distintas del mismo envio.
+1678    D   definir el umbral de dano ANTES de la prueba contra decidir si el
+            producto necesita proteccion especial. Ni un acto compartido.
+1744    D   elegir la caja contra meter una segunda etiqueta dentro. Nada en
+            comun salvo el paquete.
+1753    D   accionar sobre la entrega (notificaciones, rango de horas, rastreo,
+            devoluciones) contra MEDIR la brecha entre lo esperado y lo
+            recibido. Los dos abren preguntando al cliente y ahi se separan.
+1814    A   los 3 actos de A estan en B: evaluar si la sostenibilidad solo
+            reduce dano, senalar la metrica de eficiencia que optimiza lo que no
+            es, y cuestionar que reducir resuelva el fondo. B anade el lenguaje
+            y la presentacion, pero no contradice ni un acto.
+1849    B * se pisan en 2 de los 4 actos de A y no resuelve limpio: dar el
+            ejemplo visible (A1 contra B2) e incentivos y reconocimientos (A2
+            contra B4) son el mismo acto. Lo que queda es de otra altura: A pone
+            competencias internas y senaletica, B pone co creacion, indicadores
+            en la evaluacion de desempeno y sistema de gestion ambiental. Ni
+            mayoria para A ni actos ajenos para D. ES LA UNICA B QUE PONGO.
+1905    A   B cabe entero en A y un paso es LITERAL, palabra por palabra:
+            "Implementa un sistema de seguimiento ambiental con metricas que
+            puedas ir ampliando (panel de control digital)" es el paso 3 de B y
+            el paso 6 de A. Medir por etapa, identificar desperdicio y rediseno,
+            y el retorno de la inversion son los otros tres.
+1921    D   verificar la afirmacion antes de publicarla (tres veces, con citas)
+            contra auditar tu posicion ambiental real (riesgos, politicas que no
+            cumples, esqueletos). Uno mira el texto, el otro la empresa.
+1951    D * determinar si hace falta licencia y pedirla contra clasificar el
+            ECCN y cribar listas (USML, denegados, OFAC). Dude entre A y B por
+            los titulos casi sinonimos, pero por la vara solo 2 de los 4 actos
+            de A caen en B, que es mitad exacta y no mayoria.
+2025    D * patentes contra propiedad intelectual entera. Comparten el PCT
+            literal y consultar a las oficinas, pero A trae novedad y busqueda
+            de prior art que B no tiene, y B trae marcas y clausulas de PI en
+            contratos que A no tiene. Mitad y mitad en las dos direcciones: por
+            la vara no llega a A, y es el par que mas me hizo dudar.
+2140    D   las cuatro ventas de la franquicia como marco de etapas contra los
+            mensajes que explican que es y que no es una franquicia. B habla de
+            autonomia y de seguir el sistema, que A no toca.
+2143    D   los tres riesgos del franquiciador (mercado, dinero, gestion) contra
+            el cruce entre riesgo de concepto y amenaza competitiva con su
+            momento de arranque. Solo se cruzan en mirar competidores.
+2162    D * la MISMA pregunta con RESPUESTA CONTRARIA: A manda enfocar recursos
+            EXCLUSIVAMENTE en franquiciar y separar el crecimiento corporativo,
+            B manda decidir si los dos canales van en paralelo con recursos
+            dedicados. Contestar distinto la misma pregunta no es repetir. Dude
+            porque el acto central es el mismo.
+2504    A   los 4 actos de B estan en A, y uno es LITERAL: "Eliminar el lenguaje
+            que normaliza niveles aceptables de error (AQL)" es el paso 2 de B y
+            el paso 7 de A. Comunicar el estandar, ligarlo a la actitud personal
+            y repetir el mensaje son los otros tres.
+2580    A   mismo instrumento y mismo uso: calcular el costo de la calidad con
+            todos sus rubros, usar la cifra para justificar la inversion en
+            prevencion y seguir su tendencia en el tiempo son 3 de los 4 actos
+            de A y estan los tres en B. B anade benchmark y Pareto de procesos.
+2633    D * carta de control y "estar en control no es cumplir especificacion"
+            contra montar el control estadistico y quitar causas especiales.
+            Comparten la carta y el "una vez en control, interviene el sistema",
+            que son 2 de 4 en cada direccion: mitad exacta, no mayoria.
+2642    D * el esporadico contra el cronico es doctrina compartida y son 3 pasos
+            calcados, pero A es la practica de mejora en la operacion (cultura,
+            equipo, soporte) y B es la trilogia completa, que abre con la
+            PLANIFICACION traduciendo al cliente en especificaciones y cierra
+            integrando los tres procesos. 3 de 6 en las dos direcciones: mitad.
+2691    A * el reporte dual del estadistico contra el dotted line generalizado a
+            cualquier rol tecnico. 3 de los 4 actos de A estan en B, y uno casi
+            literal: que la promocion no dependa de justificar malas practicas
+            (A3) es "prevenir que se recompense a alguien por justificar malas
+            practicas" (B4). Dudo porque B generaliza a finanzas, legal y
+            seguridad, y porque A nombra un lider de metodologia que B no tiene.
+2772    D * "dia de cero defectos" es el paso 3 de "cero defectos" desplegado en
+            tres. Cabe entero DENTRO DE UN SOLO PASO del otro: sub-nodo, o sea
+            arista. Dudo porque el catalogo podria no querer los dos.
+2900    D * el concepto (conformidad a especificacion contra aptitud para el
+            uso, y comunicar la decision) contra el procedimiento operativo
+            (cuarentena, investigador, MRB, porcentaje bajo waiver). Comparten
+            aptitud para el uso y decidir la disposicion, 2 de 4 y 2 de 5:
+            mitad, no mayoria. Comunicar no es documentar.
+2930    D * elegir modelo de excelencia y compararte con organizaciones
+            reconocidas contra recorrer las siete categorias de Baldrige con su
+            metodo de evaluacion. Comparten autoevaluarse e identificar brechas,
+            2 de 4 en cada direccion. El benchmark externo de A no esta en B y
+            el metodo de evaluacion de B no esta en A.
+3054    D   montar el espacio de revision de calidad del servicio (reunion fija,
+            puntos de contacto, compartir informacion) contra transferir tareas
+            de calidad a la linea (capacitar, dejar al de calidad de consultor,
+            encuestar). Solo se rozan en repartir responsabilidades.
+3084    D * disenar el plan de control (sujetos, estandar, sensor, frecuencia,
+            criterios de accion) contra transferirlo a la operacion y disolver
+            el equipo. Comparten capacitar, auditar y documentar, 3 de 6 en las
+            dos direcciones: mitad exacta. Son dos fases del mismo Juran.
+3092    D   dos graficos distintos: caja y bigotes con mediana y cuartiles
+            contra histograma con limites de especificacion y capacidad.
+3129    D * A es un nodo PARAGUAS que enumera grafico temporal, histograma, caja
+            y estadisticos, y el catalogo ya tiene al histograma y a la caja como
+            nodos propios (los del puesto 3092). Un paraguas no repite a sus
+            miembros. Dudo porque 3 de los 4 actos de B caen dentro de A.
+
+MI C EN CERO, DECLARADA ANTES DE MIRAR Y CON SU MOTIVO: la ciega no lleva grafo,
+y la C es exactamente la clase que se decide mirando aristas. No adjudico
+ninguna, y si el archivo trae C aqui, esa la pierdo por el carril y no por
+haberla leido mal. Es lo unico que declaro ciego, y la B NO entra ahi.
+
+MIS DISCUTIBLES, MARCADOS CON ASTERISCO EN SU PROPIA FILA Y ANTES DE SABER SI
+ACIERTO. Son 15 y son muchos, y digo por que en vez de disimularlo: este sujeto
+vino cargado de JERARQUIAS (paraguas contra miembro, general contra especifico,
+fase contra procedimiento) y ahi es donde mi vara de la mayoria manda menos,
+porque la mitad exacta cae de un lado por una sola linea de un paso.
+231, 788, 1339, 1849, 1951, 2025, 2162, 2633, 2642, 2691, 2772, 2900, 2930,
+3084, 3129
+
+REPARTO, PEGADO DE LA SALIDA DEL CONTADOR Y NO TECLEADO (remedio C.A1).
+El contador vive en docs/loop/_auditor_v202_contador.py, lleva prefijo de guion
+bajo, esta FUERA del censo y FUERA de la nomina congelada en 135, y se corrio
+DESPUES de que las filas de arriba existieran. Esto es su salida literal:
+
+CONTADOR DE MIS CLASES, VUELTA 202
+  fichero: docs/loop/_auditor_v202_mis_clases.txt (14118 bytes en disco)
+  filas con clase: 40
+  REPARTO CONTADO: A 7  B 1  C 0  D 32
+  suma del reparto: 40
+  puestos SELLADOS (leidos del sello y de la ciega): 40
+  puestos MIOS distintos: 40
+  sellados SIN clase mia: ninguno
+  clases mias FUERA del sello: ninguna
+  discutibles con asterisco en las filas: 15 -> [231, 788, 1339, 1849, 1951, 2025, 2162, 2633, 2642, 2691, 2772, 2900, 2930, 3084, 3129]
+  discutibles listados al pie:            15 -> [231, 788, 1339, 1849, 1951, 2025, 2162, 2633, 2642, 2691, 2772, 2900, 2930, 3084, 3129]
+  LAS DOS LISTAS DE DISCUTIBLES CALZAN: SI

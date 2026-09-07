@@ -1,0 +1,62 @@
+VERIFICACION 2 DEL AUDITOR, VUELTA 202.
+
+--- A. PENDIENTES.md: R.63 Y R.64, Y EL CRECIMIENTO ---
+  hoy: 1101602 bytes disco, 1101602 LF | 15952 lineas por wc -l
+  en ebe04895 (LF): 1091080 bytes | 15764 lineas
+  crecimiento LF: 10522 bytes
+    cabecera de R.62 -> [15681]
+    cabecera de R.63 -> [15766]
+    cabecera de R.64 -> [15865]
+    cabecera de R.65 -> (ninguna cabecera)
+  claves R.n distintas nombradas en el documento: 64, de R.1 a R.64
+
+--- B. LA SERIE DE REGISTROS, RECOMPUTADA CON EL INSTRUMENTO DE LA CASA ---
+    funcion: colisiones
+    funcion: entradas
+    funcion: huecos
+    funcion: main
+    funcion: siguiente_libre
+
+--- C. TABLA VIVA DE LOS PUROS, docs/BANCO_DE_TEXTOS.md ---
+  linea 938 literal: #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+  'vigente al puesto' en la 938: SI
+  cifra de vigencia leida de esa linea: 1157
+  bloque contiguo de tabla tras la 938: lineas 953 a 965, 13 filas de tabla
+  filas quitando cabecera y separador: 11
+    L953   puestos citados [] | | # | racimo | miembros | pares posibles | leídos | en A | estado hoy |
+    L955   puestos citados [] | | **1** | **el efectivo contra la ganancia** | 3 | 3 | **3** | 3 | **PURO**, re-verificado con el contador el 
+    L956   puestos citados ['2026', '950'] | | **2** | la ecuación de valor | **4** | **6** | 4 | 4 | **SUB-PURO desde el 13 ago 2026**, degradado con corr
+    L957   puestos citados ['2026', '872'] | | **3** | el sales roadmap | **5** | **10** | 5 | 4 | **MEZCLADO desde el 13 ago 2026**: el puesto **872** sal
+    L958   puestos citados ['862'] | | **4** | la etapa de investigación en la venta | **4** | **6** | **5** | **5** | **SUB-PURO a UNA lectura de 
+    L959   puestos citados ['117'] | | **5** | **la competencia entre inversores** | **~~4~~ 5** | **~~6~~ 10** | **7** | **7** | **~~PURO~~ SUB-PU
+    L960   puestos citados [] | | **6** | **la etnografía de campo** | **4** | **6** | 3 | 3 | **SUB-PURO**, y el primero que **nace de un par
+    L961   puestos citados ['2026', '1190'] | | **7** | la junta asesora | **4** | **6** | **5** | **4** | **MEZCLADO desde el 16 ago 2026** (antes sub-puro
+    L962   puestos citados ['2026'] | | **8** | **los cuadrantes de mercado** | **6** | **15** | **7** | **7** | **SUB-PURO, y el más cargado del in
+    L963   puestos citados ['1400', '1182', '1208', '1600', '1573'] | | **9** | **build-measure-learn** | **8** | **28** | **9** | **9** | **SUB-PURO, y el de MÁS MIEMBROS del inve
+    L964   puestos citados ['2026', '1101', '1157', '197', '222', '463'] | | **10** | **el compromiso contado tres veces** | 3 | 3 | **3** | 3 | **PURO**, y el **primero certificado por
+    L965   puestos citados ['2026', '762', '945', '1517', '1488'] | | **11** | **la seleccion de canal** | **6** | **15** | **8** | **8** | **SUB-PURO, y EMPATA con los cuadrante
+
+--- D. LOS REPORTES ARCHIVADOS 168 a 199 ---
+  ausentes en el rango 168 a 199: 2 -> [173, 198]
+  REPORTE_V173.md existe: False
+  REPORTE_V174.md existe: True | 32568 bytes disco, 32568 LF
+  reportes archivados con el literal 'DESFASE DECLARADO' (168 a 201): 12 -> [189, 190, 191, 192, 193, 194, 195, 196, 197, 199, 200, 201]
+
+--- E. LA ACOTACION DE LAS ACTAS 173 Y 174 EN ACTA_AUDITOR.md ---
+  ACTA_AUDITOR.md: 70907 lineas
+    L58375  # ACTA DEL AUDITOR, VUELTA 172 (5 sep 2026, auditor Opus 5)
+    L58941  # ACTA DEL AUDITOR, VUELTA 173 (5 sep 2026, auditor Opus 5)
+    L59448  # ACTA DEL AUDITOR, VUELTA 174 (5 sep 2026, auditor Opus 5)
+    L59995  # ACTA DEL AUDITOR, VUELTA 175 (5 sep 2026, auditor Opus 5)
+
+--- F. GUIONES LARGOS Y MEDIOS EN EL REPORTE ---
+  guiones largos (em dash): 0 | guiones medios (en dash): 0
+
+--- G. LAS RUTAS QUE EL REPORTE PUBLICA COMO PRUEBA ---
+  rutas distintas citadas: 80 | vivas 45 | de CERO bytes 0 | AUSENTES 35
+  las de CERO bytes: (ninguna)
+  las AUSENTES: ['AUDITOR.md', 'EJECUTOR.md', 'LECTURAS_DIRIGIDAS.md', 'OPERACIONES.jsonl', 'PASO_NODO_CALIBRADO.jsonl', 'REPORTE_V189.md', 'REPORTE_V190.md', 'REPORTE_V191.md', 'REPORTE_V192.md', 'REPORTE_V193.md', 'REPORTE_V194.md', 'REPORTE_V195.md', 'REPORTE_V196.md', 'REPORTE_V197.md', 'REPORTE_V199.md', 'REPORTE_V200.md', 'REPORTE_V201.md', 'SALIDA_V202_BATERIA_TRAMO_N.txt', 'SALIDA_V202_CICLO_NUMSTAT_APERTURA.txt', 'SALIDA_V202_CICLO_NUMSTAT_CIERRE.txt', 'SALIDA_V202_CIERRE_MEDICIONES.txt', 'SALIDA_V202_HEAD_CIERRE.txt', 'SALIDA_V202_SERIE_APERTURA.txt', 'SALIDA_V202_T1_CORRECCION_OP_L_03.txt', 'SALIDA_V202_T1_GUARDA_ESTADO.txt', 'SALIDA_V202_T2_OP_L_02.txt', 'SALIDA_V202_T3_OP_L_01.txt', '_IDEM.txt', 'cerrar_reporte.py', 'docs/loop/SALIDA_V202_BATERIA.txt', 'docs/loop/reportes/REPORTE_V173.md', 'la-bateria-sin-techo-DECISION.md', 'vuelta170_tarea5b_veredicto_op_l_02.py', 'vuelta197_tarea2_mutacion_orden_del_turno.py', 'vuelta199_tarea1_mutacion_guardas_revividas.py']
+
+--- H. LA NOMINA DE LA BATERIA ---
+  entradas de la nomina: (no se encontro constante)
+  CASOS_DECLARADOS: 2
