@@ -15762,3 +15762,191 @@ cita y no celda tecleada.**
 - (linea 69861) | caidas del ejecutor de reporte | **0** | **racha de reporte: 0** |
 - (linea 69862) | caidas del ejecutor de metodo | **2** (`C.1`, `C.2`), declaradas por el | no acumulan |
 
+
+## R.63. Registro del acta de la vuelta 173, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+
+(Acta del auditor, vuelta 173; escrito en la vuelta 202, TAREA 4.)
+
+Por adicion, como `R.21` a `R.62`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+Salida: `docs/loop/SALIDA_V202_T4_REGISTROS.txt`.
+
+**NINGUN LECTOR NUEVO SE ESCRIBIO PARA ESTA ENTRADA, Y SE DICE POR QUE:** rige
+la MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3) y esta vuelta no tiene ninguna
+excepcion. Los numerales salen de lectores YA ESCRITOS:
+`R84.claves_entrecomilladas()` para las `4.n`, las `5.n` y las `C.An`, y
+`R94.caidas_propias_entrecomilladas()` para las `C.n` del ejecutor.
+
+**ESTA ES LA PRIMERA DE LAS OCHO DE LA DEUDA, Y SE PAGA DE LA MAS VIEJA A LA
+MAS NUEVA** (adjudicacion `4.9` del acta 201, DOS POR VUELTA). La deuda son las
+actas **173 a 180**, y esta vuelta paga la **173** y la **174**. **El trabajo de
+plan va delante y esta tarea detras**, que es lo que la moratoria `6.3` manda al
+decir que **el trabajo es el plan hasta agotarlo**.
+
+**EL REPORTE DE LA VUELTA 173 NO SE ARCHIVO NUNCA, Y ESTA ENTRADA DECLARA LA
+AUSENCIA EN VEZ DE RELLENARLA:** `docs/loop/reportes/REPORTE_V173.md` **no
+existe**, medido en esta vuelta con `os.path.isfile` y `os.path.getsize` desde
+`scripts/loop/_v202_t4_registrar_actas.py`, y tambien por el bloque `H.2` del
+sello de apertura `docs/loop/SALIDA_V202_APERTURA.txt`, que ademas conto el rango
+entero: de la **168** a la **199** faltan **DOS** reportes archivados, la **173** y
+la **198**. **NO SE RECONSTRUYE Y NO SE FABRICA.**
+
+**LA CONSECUENCIA MEDIDA, Y ES LA QUE EXPLICA EL NUMERAL DE PREGUNTAS:** la via
+de siempre filtra las claves `P.n` de los titulos `4.n` del acta contra la seccion
+de PREGUNTAS del reporte archivado de esa vuelta. **Sin reporte no hay filtro.**
+Por eso el numeral de esta entrada usa **la vara que el acta 201 dejo escrita en
+su `4.7`**, las claves `P.n` nombradas en los titulos `4.n` del acta, **y lo dice
+en vez de publicar un cero** que se leeria como que el acta 173 no contesto
+ninguna pregunta. **Declarada asi, no es caida.**
+
+**LOS CINCO NUMERALES NO SE PUBLICAN COMO REPARTO, Y EL MOTIVO ESTA MEDIDO,
+NO SUPUESTO.** El acta acotada va de la linea 58941 a la 59447, sobre un fichero de
+4680981 bytes en disco y 4680981 normalizado a LF. Sobre ese cuerpo, los cinco lectores
+heredados devuelven **0, 0, 0, 0 y 0**: `R84.claves_entrecomilladas()`
+con prefijo `4.`, con prefijo `5.` y con prefijo `C.A`, el numeral de
+preguntas, y `R94.caidas_propias_entrecomilladas()`. **ESOS CINCO CEROS SON
+DE CONVENCION Y NO DE AUSENCIA**, y por eso **no se publican como el reparto
+del acta**: esta acta es **ANTERIOR a la 184** y escribe sus claves como
+**cabeceras markdown** `### 4.1`, no como ``**`4.1` ...``; ademas **su seccion
+4 es LOS HALLAZGOS y no LAS ADJUDICACIONES**, sus adjudicaciones viven en la
+**seccion 6 sin clave numerada**, y sus caidas propias del auditor en la
+**seccion 3**. **La vuelta 201 ya rechazo publicar un cero de esta especie**
+en su entrada de la 198, con estas palabras: *lo dice en vez de publicar un
+cero que se leeria como que el acta no contesto ninguna pregunta*.
+
+**LO QUE SI SE MIDE Y SE PUBLICA ES LA ESTRUCTURA DEL ACTA**, contada por el
+bloque `H.2` del sello de apertura de esta vuelta,
+`docs/loop/SALIDA_V202_APERTURA.txt`, que es un instrumento que YA CORRIO y no
+un lector nuevo. **Y LO QUE FALTA SE TRAE COMO PARADA en vez de improvisarse:**
+computar el reparto de esta acta pide **o un lector para la convencion vieja**,
+que la moratoria `AUDITOR.md` 6.3 prohibe fabricar, **o decidir que seccion del
+acta vieja cuenta como cada numeral**, que es **DECIDIR y no medir**
+(`AUDITOR.md` 3). **No lo arregla el ejecutor.**
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** NOMBRADAS EN LOS TITULOS `4.n` DEL ACTA, porque el reporte de esa vuelta NO EXISTE y el filtro no se puede correr.
+Los titulos `4.n` del acta nombran **0** claves `P.n` (ninguna), y la seccion
+de preguntas del reporte pone **0** (ninguna). Referencia leida: `(no existe REPORTE_V173.md)`.
+Claves nombradas que quedan fuera del numeral: **0** (ninguna).
+
+### LAS 0 ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+| clave | pregunta que contesta | linea | titulo, literal del acta |
+|---|---|---:|---|
+
+### LOS 0 HALLAZGOS DE LA SECCION 5
+
+- (ninguno: el lector heredado no encuentra ninguna clave `5.n`)
+
+### LAS CAIDAS: 0 DEL AUDITOR Y 0 DEL EJECUTOR
+
+- (ninguna que los lectores heredados vean en este cuerpo)
+
+**EL CONTRASTE HEREDADO SE PUBLICA AL LADO Y LA DISCREPANCIA SE DECLARA:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor y **0** del auditor
+sobre este mismo cuerpo. **Las cifras de esta entrada son las de los lectores
+que leen la NEGRITA QUE ABRE cada caida, y las dos lecturas quedan
+escritas.**
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `(None, None, None, None)` sobre la fila de puestos
+de este cuerpo.** Cuando no alcanza, **bajo la moratoria no se escribe un
+lector para la forma nueva: la fila se PEGA con su numero de linea, que es
+cita y no celda tecleada.**
+
+- (linea 59356) | relecturas | 1 | **308** |
+- (linea 59357) | puestos | 8 | **530** |
+- (linea 59358) | discrepancias DENTRO del marcado | 1 | **22** |
+- (linea 59359) | discrepancias y hallazgos FUERA del marcado | 6 | **71** |
+- (linea 59360) | caidas propias del auditor | 3 | (se declaran, no se acumulan aqui) |
+
+
+## R.64. Registro del acta de la vuelta 174, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+
+(Acta del auditor, vuelta 174; escrito en la vuelta 202, TAREA 4.)
+
+Por adicion, como `R.21` a `R.62`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+Salida: `docs/loop/SALIDA_V202_T4_REGISTROS.txt`.
+
+**NINGUN LECTOR NUEVO SE ESCRIBIO PARA ESTA ENTRADA, Y SE DICE POR QUE:** rige
+la MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3) y esta vuelta no tiene ninguna
+excepcion. Los numerales salen de lectores YA ESCRITOS:
+`R84.claves_entrecomilladas()` para las `4.n`, las `5.n` y las `C.An`, y
+`R94.caidas_propias_entrecomilladas()` para las `C.n` del ejecutor.
+
+**ESTA ES LA SEGUNDA DE LAS OCHO DE LA DEUDA** (adjudicacion `4.9` del acta 201).
+Con esta entrada quedan **SEIS** actas de la deuda sin entrada propia, las **175 a
+180**, y la cifra de la deuda se **REMIDE AL CIERRE** de esta misma corrida en vez
+de heredarse.
+
+**Y AQUI SI HAY REPORTE ARCHIVADO, QUE ES LA DIFERENCIA CON LA ENTRADA DE
+ARRIBA:** `docs/loop/reportes/REPORTE_V174.md` **existe**, medido con
+`os.path.isfile` y `os.path.getsize` en esta vuelta, asi que el numeral de
+preguntas de esta entrada **si va por el filtro de siempre** y no por la vara del
+`4.7`. **Las dos vias quedan escritas, una en cada entrada, para que se puedan
+comparar.**
+
+**LOS CINCO NUMERALES NO SE PUBLICAN COMO REPARTO, Y EL MOTIVO ESTA MEDIDO,
+NO SUPUESTO.** El acta acotada va de la linea 59448 a la 59994, sobre un fichero de
+4680981 bytes en disco y 4680981 normalizado a LF. Sobre ese cuerpo, los cinco lectores
+heredados devuelven **0, 0, 0, 0 y 0**: `R84.claves_entrecomilladas()`
+con prefijo `4.`, con prefijo `5.` y con prefijo `C.A`, el numeral de
+preguntas, y `R94.caidas_propias_entrecomilladas()`. **ESOS CINCO CEROS SON
+DE CONVENCION Y NO DE AUSENCIA**, y por eso **no se publican como el reparto
+del acta**: esta acta es **ANTERIOR a la 184** y escribe sus claves como
+**cabeceras markdown** `### 4.1`, no como ``**`4.1` ...``; ademas **su seccion
+4 es LOS HALLAZGOS y no LAS ADJUDICACIONES**, sus adjudicaciones viven en la
+**seccion 6 sin clave numerada**, y sus caidas propias del auditor en la
+**seccion 3**. **La vuelta 201 ya rechazo publicar un cero de esta especie**
+en su entrada de la 198, con estas palabras: *lo dice en vez de publicar un
+cero que se leeria como que el acta no contesto ninguna pregunta*.
+
+**LO QUE SI SE MIDE Y SE PUBLICA ES LA ESTRUCTURA DEL ACTA**, contada por el
+bloque `H.2` del sello de apertura de esta vuelta,
+`docs/loop/SALIDA_V202_APERTURA.txt`, que es un instrumento que YA CORRIO y no
+un lector nuevo. **Y LO QUE FALTA SE TRAE COMO PARADA en vez de improvisarse:**
+computar el reparto de esta acta pide **o un lector para la convencion vieja**,
+que la moratoria `AUDITOR.md` 6.3 prohibe fabricar, **o decidir que seccion del
+acta vieja cuenta como cada numeral**, que es **DECIDIR y no medir**
+(`AUDITOR.md` 3). **No lo arregla el ejecutor.**
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** FILTRADAS contra la seccion de PREGUNTAS del reporte archivado.
+Los titulos `4.n` del acta nombran **0** claves `P.n` (ninguna), y la seccion
+de preguntas del reporte pone **0** (ninguna). Referencia leida: `la seccion de PREGUNTAS aparece 0 veces`.
+Claves nombradas que quedan fuera del numeral: **0** (ninguna).
+
+### LAS 0 ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+| clave | pregunta que contesta | linea | titulo, literal del acta |
+|---|---|---:|---|
+
+### LOS 0 HALLAZGOS DE LA SECCION 5
+
+- (ninguno: el lector heredado no encuentra ninguna clave `5.n`)
+
+### LAS CAIDAS: 0 DEL AUDITOR Y 0 DEL EJECUTOR
+
+- (ninguna que los lectores heredados vean en este cuerpo)
+
+**EL CONTRASTE HEREDADO SE PUBLICA AL LADO Y LA DISCREPANCIA SE DECLARA:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor y **0** del auditor
+sobre este mismo cuerpo. **Las cifras de esta entrada son las de los lectores
+que leen la NEGRITA QUE ABRE cada caida, y las dos lecturas quedan
+escritas.**
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `(None, None, None, None)` sobre la fila de puestos
+de este cuerpo.** Cuando no alcanza, **bajo la moratoria no se escribe un
+lector para la forma nueva: la fila se PEGA con su numero de linea, que es
+cita y no celda tecleada.**
+
+- (linea 59905) | relecturas | 1 | **309** |
+- (linea 59906) | puestos | 8 | **538** |
+- (linea 59907) | discrepancias DENTRO del marcado | 0 | **22** |
+- (linea 59908) | discrepancias y hallazgos FUERA del marcado | 3 | **74** |
+- (linea 59909) | caidas propias del auditor | 2 | (se declaran; la racha de la especie SI cuenta desde el 5 sep) |
+

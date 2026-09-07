@@ -1,0 +1,143 @@
+==============================================================================
+LOS DOS REGISTROS DE LA VUELTA 202, TAREA 4: EL ACTA 173 (4.a) Y EL ACTA
+174 (4.b), LAS DOS MAS VIEJAS DE LA DEUDA DE OCHO DEL ACTA 201 4.9
+==============================================================================
+
+0) LA PRUEBA DE LA UNICA CONDUCTA PROPIA, ANTES DE ESCRIBIR NADA
+   NO HAY LECTOR NUEVO EN ESTE FICHERO, ASI QUE NO HAY CASO ROJO NUEVO DE
+   LECTURA QUE MUTAR, Y ESO SE DECLARA EN VEZ DE FABRICAR UNO QUE SE
+   APRUEBE SOLO (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION).
+   LA GUARDA VIEJA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo unico
+   que convierte 'hacia falta arreglarla' en una medicion:
+   sede SIN la entrada, numero 63               esperado False nueva False vieja False VERDE
+   sede CON la entrada, numero 63               esperado True  nueva True  vieja True  VERDE
+   sede con R.630, que NO es R.63               esperado False nueva False vieja False VERDE
+   sede con la entrada en mitad                 esperado True  nueva True  vieja True  VERDE
+   el acta 173 ya registrada con OTRO numero    esperado True  nueva True  vieja False VERDE
+   el acta 174 NO registrada, numero libre      esperado False nueva False vieja False VERDE
+   el acta 174 ya registrada con OTRO numero    esperado True  nueva True  vieja False VERDE
+   el acta citada en prosa, NO en titular       esperado False nueva False vieja False VERDE
+   CIFRA casos donde la vieja y la nueva DISCREPAN: 2
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 8 de 8
+   CIFRA casos: 8 | verdes: 8 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+LA SEDE AL ENTRAR: docs/PENDIENTES.md, 1101602 bytes en disco
+
+==============================================================================
+TAREA 4.a . EL SUJETO ES EL ACTA DE LA VUELTA 173
+==============================================================================
+
+A) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 56
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.65
+
+B) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4680981 bytes | LF 4680981 bytes
+   CUERPO ACOTADO del acta 173: lineas 58941 a 59447, 507 lineas
+   R84.claves_entrecomilladas(prefijo '4.')  -> 0: (ninguna)
+   R84.claves_entrecomilladas(prefijo '5.')  -> 0: (ninguna)
+   R84.claves_entrecomilladas(prefijo 'C.A') -> 0: (ninguna)
+   R94.caidas_propias_entrecomilladas()      -> 0: (ninguna)
+   EL CONTRASTE HEREDADO, PUBLICADO AL LADO Y NO ESCONDIDO:
+   R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 0
+   docs/loop/reportes/REPORTE_V173.md existe: NO
+   bytes medidos con os.path.getsize: NINGUNO, y el cero sale de que NO HAY FICHERO, no de medir uno
+   CIFRA claves `P.n` nombradas en los titulos `4.n` del acta: 0 ((ninguna))
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 ((ninguna))  [(no existe REPORTE_V173.md)]
+   CIFRA preguntas del numeral: 0, por la via: NOMBRADAS EN LOS TITULOS `4.n` DEL ACTA, porque el reporte de esa vuelta NO EXISTE y el filtro no se puede correr
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 59357 devuelve (None, None, None, None)
+   linea 59356 | | relecturas | 1 | **308** |
+   linea 59357 | | puestos | 8 | **530** |
+   linea 59358 | | discrepancias DENTRO del marcado | 1 | **22** |
+   linea 59359 | | discrepancias y hallazgos FUERA del marcado | 6 | **71** |
+   linea 59360 | | caidas propias del auditor | 3 | (se declaran, no se acumulan aqui) |
+
+C) EL TITULO. LOS CINCO NUMERALES HEREDADOS SE COMPUTAN Y SE
+   PUBLICAN COMO CONTRASTE, PERO NO SE USAN COMO TITULO, Y EL MOTIVO
+   ESTA MEDIDO: los cinco lectores heredados dan CERO sobre esta acta
+   porque es de la convencion ANTERIOR a la 184. Un titulo que dijera
+   'las cero adjudicaciones numeradas' se leeria como que el acta no
+   adjudico nada, y la vuelta 201 ya rechazo esa lectura falsa en su
+   entrada de la 198.
+   EL HEREDADO CLAVA SU PROPIA VUELTA Y ESO SE DECLARA, NO SE ESCONDE:
+   R92.titulo_de_la_entrada() cierra con 'del acta de la vuelta 192'.
+   CIFRA apariciones de ese literal en el titulo crudo: 1
+   TITULO HEREDADO, PUBLICADO COMO CONTRASTE Y NO USADO:
+      Registro de las cero adjudicaciones numeradas, los cero hallazgos de la seccion 5, las cero preguntas contestadas, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 173
+   TITULO ESCRITO: Registro del acta de la vuelta 173, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+   titulo escrito: R.65. Registro del acta de la vuelta 173, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+
+D) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 173 o el numero R.65 YA ESTAN: SI
+   CIFRA bytes de la entrada compuesta: 5654
+   NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE.
+
+==============================================================================
+TAREA 4.b . EL SUJETO ES EL ACTA DE LA VUELTA 174
+==============================================================================
+
+A) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 56
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.65
+
+B) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4680981 bytes | LF 4680981 bytes
+   CUERPO ACOTADO del acta 174: lineas 59448 a 59994, 547 lineas
+   R84.claves_entrecomilladas(prefijo '4.')  -> 0: (ninguna)
+   R84.claves_entrecomilladas(prefijo '5.')  -> 0: (ninguna)
+   R84.claves_entrecomilladas(prefijo 'C.A') -> 0: (ninguna)
+   R94.caidas_propias_entrecomilladas()      -> 0: (ninguna)
+   EL CONTRASTE HEREDADO, PUBLICADO AL LADO Y NO ESCONDIDO:
+   R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 0
+   docs/loop/reportes/REPORTE_V174.md existe: SI
+   bytes medidos con os.path.getsize: 32568
+   CIFRA claves `P.n` nombradas en los titulos `4.n` del acta: 0 ((ninguna))
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 ((ninguna))  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 0, por la via: FILTRADAS contra la seccion de PREGUNTAS del reporte archivado
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 59906 devuelve (None, None, None, None)
+   linea 59905 | | relecturas | 1 | **309** |
+   linea 59906 | | puestos | 8 | **538** |
+   linea 59907 | | discrepancias DENTRO del marcado | 0 | **22** |
+   linea 59908 | | discrepancias y hallazgos FUERA del marcado | 3 | **74** |
+   linea 59909 | | caidas propias del auditor | 2 | (se declaran; la racha de la especie SI cuenta desde el 5 sep) |
+
+C) EL TITULO. LOS CINCO NUMERALES HEREDADOS SE COMPUTAN Y SE
+   PUBLICAN COMO CONTRASTE, PERO NO SE USAN COMO TITULO, Y EL MOTIVO
+   ESTA MEDIDO: los cinco lectores heredados dan CERO sobre esta acta
+   porque es de la convencion ANTERIOR a la 184. Un titulo que dijera
+   'las cero adjudicaciones numeradas' se leeria como que el acta no
+   adjudico nada, y la vuelta 201 ya rechazo esa lectura falsa en su
+   entrada de la 198.
+   EL HEREDADO CLAVA SU PROPIA VUELTA Y ESO SE DECLARA, NO SE ESCONDE:
+   R92.titulo_de_la_entrada() cierra con 'del acta de la vuelta 192'.
+   CIFRA apariciones de ese literal en el titulo crudo: 1
+   TITULO HEREDADO, PUBLICADO COMO CONTRASTE Y NO USADO:
+      Registro de las cero adjudicaciones numeradas, los cero hallazgos de la seccion 5, las cero preguntas contestadas, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 174
+   TITULO ESCRITO: Registro del acta de la vuelta 174, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+   titulo escrito: R.65. Registro del acta de la vuelta 174, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
+
+D) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 174 o el numero R.65 YA ESTAN: SI
+   CIFRA bytes de la entrada compuesta: 4866
+   NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   sede: 1101602 bytes en disco al salir | crecimiento 0 bytes
+   CIFRA entradas de la serie DESPUES: 56
+   CIFRA colisiones DESPUES: 0
+   CIFRA huecos DESPUES: 0
+   SIGUIENTE LIBRE DESPUES: R.65
+   CIFRA entradas escritas por esta corrida: 0
+   LA DEUDA DE LA SERIE, REMEDIDA AL CIERRE:
+   CIFRA actas de la 173 a la 200 SIN entrada propia: 6
+   cuales: 175, 176, 177, 178, 179, 180
+
+FIN
