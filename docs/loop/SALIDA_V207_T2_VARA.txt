@@ -1,0 +1,120 @@
+==============================================================================
+VUELTA 207, TAREA 2.a: LA VARA DE LA MESA OP-L-01, SACADA DE SU FICHA
+Y SELLADA ANTES DE ABRIR NINGUNO DE LOS TRES DOCUMENTOS
+==============================================================================
+
+A) LA SEDE DE LA FICHA, POR LAS DOS CONVENCIONES
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF
+   sha256 disco 829c583eb779cab6 | sha256 LF 829c583eb779cab6
+
+B) LA FICHA, LOCALIZADA Y SELLADA
+   id_op: OP-L-01 | linea del fichero: 41
+   CIFRA campos de la ficha: 18
+   CIFRA bytes de la linea de la ficha: 20829
+   sha256 de la linea de la ficha: 4a77e83cfa1136f3f399831c2459f4a26ffacf07a1faf1baec714f754053ce94
+   tipo: MESA | fase: 09_LECTURAS_DIRIGIDAS | orden: 1
+   depende_de: [] (CIFRA: 0)
+   bloquea_a: [] (CIFRA: 0)
+   fecha_corte: 2026-08-11
+   estado: LISTA   <- SE LEE COMO DATO Y NO SE TOCA (AUDITOR.md 0)
+   CIFRA elementos de `evidencia`: 4
+   CIFRA elementos de `verificacion`: 7
+   de esos, CORRECCIONES DECLARADAS: 4
+
+C) LA VARA. CADA PUNTO CON SU CITA COMPROBADA CONTRA LA FICHA
+   (si una cita no aparece VERBATIM en el elemento que dice, esto cae en
+    ROJO y no escribe nada: una vara con citas sin comprobar no es vara)
+
+   V.1   UN DOCUMENTO `LECTURAS_DIRIGIDAS.md` CON LAS ONCE LECTURAS Y, EN CADA UNA, SU RAZON
+         sede: `evidencia[0]`, linea 41 del fichero
+         cita: 'LECTURAS_DIRIGIDAS.md, las once con su razon'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.2   UNA SECCION 52 EN `INTRA_DOMINIO_INFORME.md` CON LAS PAREJAS QUE EL EJERCICIO NO PUEDE CERRAR
+         sede: `evidencia[1]`, linea 41 del fichero
+         cita: 'INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.3   UNA `TABLA VIVA DE LOS PUROS` EN `BANCO_DE_TEXTOS.md`
+         sede: `evidencia[2]`, linea 41 del fichero
+         cita: 'BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.4   LA CIFRA MEDIDA DEL 11 AGO 2026: 205 PARES INTERNOS FUERA DE COLA SOBRE 221 COMPONENTES
+         sede: `evidencia[3]`, linea 41 del fichero
+         cita: 'MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.5   LA TANDA DE ONCE LECTURAS DIRIGIDAS, HECHAS EL 11 AGO 2026
+         sede: `adjudicacion`, linea 41 del fichero
+         cita: 'TANDA DE ONCE LECTURAS DIRIGIDAS, hechas el 11 ago 2026.'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.6   LAS ONCE CON LA MISMA VARA Y EL MISMO FORMATO DE VEREDICTO QUE EL CRIBADO, Y MARCADAS COMO LECTURA DIRIGIDA
+         sede: `adjudicacion`, linea 41 del fichero
+         cita: 'Misma vara y mismo formato de veredicto que el cribado, MARCADAS COMO LECTURA DIRIGIDA'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.7   EL SALDO DE LA TANDA: 2 `A` Y 9 `D`
+         sede: `adjudicacion`, linea 41 del fichero
+         cita: 'SALDO: 2 A y 9 D.'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.8   LAS ONCE NOMBRADAS UNA A UNA, DE `LD-01` A `LD-11`, CADA UNA CON SU VEREDICTO
+         sede: `nota`, linea 41 del fichero
+         cita: 'LAS ONCE: LD-01 junta asesora D (cierra 6 de 6); LD-02 canal fisico contra digital D (ROMPE el sub-puro)'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.9   UNA CLASE NUEVA, `A DE BLOQUE`, NACIDA EN `LD-06`, CON SU DEFINICION
+         sede: `nota`, linea 41 del fichero
+         cita: 'CLASE NUEVA: A DE BLOQUE (LD-06). La A no es entre los nodos: es entre el BLOQUE INJERTADO de uno y el otro nodo entero.'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.10  EL ARREGLO DE `LD-06` DICHO POR SU NOMBRE: NO ES FUSION DE NODOS, ES DESTEJIDO MAS FUSION PARCIAL
+         sede: `nota`, linea 41 del fichero
+         cita: 'El arreglo no es fusion de nodos: es DESTEJIDO mas fusion parcial.'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.11  LA LECCION DEL SALDO: 9 DE 11 SALIERON SANAS, Y POR QUE ESOS PARES NO ESTABAN EN LA COLA
+         sede: `nota`, linea 41 del fichero
+         cita: 'LA LECCION DEL SALDO: 9 de 11 salieron SANAS.'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.12  LA CLAUSULA 1 DE VERIFICACION: NINGUNA DE LAS ONCE VIVE EN `INTRA_DOMINIO_VEREDICTOS.jsonl`
+         sede: `verificacion[0]`, linea 41 del fichero
+         cita: 'ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.13  LA CLAUSULA 2 DE VERIFICACION: EL MARCADOR DEL CRIBADO NO SE MUEVE
+         sede: `verificacion[1]`, linea 41 del fichero
+         cita: 'el marcador del cribado no se mueve: sigue en 2.117'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.14  LA CLAUSULA 3 DE VERIFICACION: CADA NOMINA AFECTADA SE RE-MIDE CON SU COBERTURA AL LADO
+         sede: `verificacion[2]`, linea 41 del fichero
+         cita: 'cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)'
+         la cita aparece VERBATIM en esa sede: SI
+
+   CIFRA puntos de la vara: 14
+   CIFRA citas que NO aparecen verbatim: 0
+
+D) EL REPARTO DE LA VARA, DECLARADO ANTES DE MIRAR NINGUN DOCUMENTO
+   CIFRA puntos que SE COTEJAN contra los tres documentos: 10
+      V.1, V.2, V.3, V.5, V.6, V.7, V.8, V.9, V.10, V.11
+   CIFRA puntos que NO son documentales: 4
+      V.4   es una CIFRA MEDIDA, no un documento: su sede seria una salida de instrumento del 11 ago 2026, no ninguno de los tres
+      V.12  es una CLAUSULA DE VERIFICACION contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, que NO es ninguno de los tres documentos de la evidencia
+      V.13  es una CLAUSULA DE VERIFICACION contra el marcador del cribado, que NO vive en ninguno de los tres
+      V.14  es una CLAUSULA DE VERIFICACION contra las nominas del inventario, que NO viven en ninguno de los tres
+   ESTE REPARTO SE SELLA AQUI. Si el cotejo quisiera mover un punto de un
+   lado al otro despues de mirar, eso seria acomodar la vara a lo visto, y
+   el sello lo delataria.
+
+E) LOS TRES DOCUMENTOS QUE LA FICHA NOMBRA COMO SU EVIDENCIA
+   evidencia[0] LECTURAS_DIRIGIDAS.md, las once con su razon
+   evidencia[1] INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar
+   evidencia[2] BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS
+   evidencia[3] MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes
+   ESTE COMPUTO NO LOS ABRE Y NO LOS MIDE. Eso es el 2.b.
+
+FIN DE LA VARA
