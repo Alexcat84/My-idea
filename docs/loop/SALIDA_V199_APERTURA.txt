@@ -1,0 +1,320 @@
+SELLO DE APERTURA DE LA VUELTA 199, escrito ANTES de la primera operacion.
+regimen: MORATORIA DE MAQUINARIA (AUDITOR.md 6.3, decision del fundador del 7
+         sep 2026). NO SE FABRICAN ARNESES, GUARDAS NI LECTORES NUEVOS salvo
+         las TAREAS 1 y 2 que el acta 198 ya adjudico. La nomina queda
+         CONGELADA EN 135. El trabajo es EL PLAN.
+         ESTA NO ES VUELTA DE BATERIA: el encargo dice con todas sus letras
+         que LA VUELTA DE BATERIA SE CORRE EN LA 200, para que los remedios
+         de las TAREAS 1 y 2 esten DENTRO cuando corra. La seccion 9 del
+         reporte cierra con HUECO DECLARADO Y MEDIDO.
+         EL TOPE DE SUB-TAREAS LO MANDA LA CIFRA DEL BLOQUE E, contada aqui
+         del instrumento. El encargo trae CUATRO sub-tareas.
+ESTE BLOQUE CORRE EL CICLO COMPLETO, tsc y pnpm test INCLUIDOS, y escribe el
+         mismo los dos literales de la guarda D.1.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+17796e77bdcb99460489d1a86f614dc8d0fd467f
+17796e77bdcb99460489d1a86f614dc8d0fd467f	2026-09-07 07:22:32 -0400	Decision del fundador: el tope se retira, la serie gana raiz y techo, la guarda que no muerde es cifra, y el bucle vuelve al plan
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular. Se escriben AQUI, en el bloque de apertura, para
+que la apertura sellada NO haya que tocarla al cierre.
+CIFRA lineas de status: 1
+   ?? scripts/loop/vuelta199_apertura.py
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.1 LA CADENA DE LA VUELTA 197, EL ACTA 198 Y LA DECISION, EN GIT ===
+acta 198                         1 acierto(s): 04480e27
+cierre de la 197                 1 acierto(s): ca8e7ba9
+decision del fundador            1 acierto(s): 17796e77
+
+=== D. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN, y el cierre las remide contra estas.
+
+=== D.1 EL FICHERO DEL TURNO DEL AUDITOR, MEDIDO AL ENTRAR ===
+ES EL SUJETO DE LAS TAREAS 1 Y 2. Se mide AQUI, entero y literal, porque la
+TAREA 2 repara justamente el arnes que lo borra, y sin esta medida de entrada
+no habria contra que cotejar el 'no se movio' del cierre.
+   docs/loop/_TURNO_DEL_AUDITOR.json
+      disco 789 bytes | LF 789 bytes | sha256 LF 52a780c072700280
+      CIFRA lineas del fichero del turno por split(NL): 35
+      contenido literal, cercado ENTERO:
+      | {
+      |  "bitacora": [
+      |   "git log"
+      |  ],
+      |  "sellado": {
+      |   "hecho": false,
+      |   "ruta": null,
+      |   "vuelta": null
+      |  },
+      |  "clases": {
+      |   "escritas": false,
+      |   "ruta": null
+      |  },
+      |  "cerrados": {
+      |   "197": {
+      |    "motivo": "el auditor de la 197 declaro sus clases y escribio su acta; el turno se cierra por el carril de la TAREA 2.b de la vuelta 197. El fichero anterior lo borro un arnes mio y esa caida va declarada en SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt",
+      |    "ruta_clases": "docs/loop/_auditor_v197_mis_clases.txt",
+      |    "bitacora": [
+      |     "git log",
+      |     "git status",
+      |     "REPORTE.md",
+      |     "veredictos"
+      |    ]
+      |   },
+      |   "198": {
+      |    "motivo": "clases declaradas por el carril del sello de disco",
+      |    "ruta_clases": "docs/loop/_auditor_v198_mis_clases.txt",
+      |    "bitacora": []
+      |   }
+      |  },
+      |  "vivo": {
+      |   "abierto": false
+      |  }
+      | }
+      | 
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+EL NOMBRE SALE DE LA CONSTANTE QUE SE EJECUTA, NO DE LA PROSA.
+instrumento: scripts/loop/vuelta192_racha_de_cierres.py
+   existe y no esta vacio: SI, 5678 bytes en disco | 5678 LF | sha256 LF 5461d55226877ac3
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt. Aqui se corre, se lee la cifra, y la
+   sellada se RESTAURA con git checkout -- y se REMIDE.
+CIFRA racha de cierres, contada del inventario ENTERO: 3
+las vueltas de la racha: 195, 196, 197
+EL TOPE, LEIDO DE AUDITOR.md 6.2 CONTRA ESTA CIFRA: el regimen
+   temporal pide DOS vueltas seguidas cerrando su propio reporte para
+   devolver el tope de cinco.
+   CON RACHA 3 EL REGIMEN TEMPORAL SE APAGA Y VUELVE EL TOPE DE
+   CINCO. El encargo trae CUATRO sub-tareas, que cabe.
+nuevo corte, medido antes de restaurar:
+   2846 bytes LF | sha256 LF 8a43a9de8e36308e
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== E.1 EL INVENTARIO DE CIERRES SELLADOS, CONTADO DE DISCO ===
+CIFRA ficheros SALIDA_V*_CERRAR_REPORTE.txt en docs/loop/: 15
+las vueltas con sellada de cierre: 179, 180, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 195, 196, 197
+CIFRA vueltas del rango 179 a 197 SIN sellada: 4
+   cuales: 181, 182, 183, 194
+CIFRA sellada de cierre de la vuelta 199 al entrar: 0
+
+=== F. LA NOMINA Y EL CENSO AL ENTRAR, CONTRA EL CONGELADO EN 135 ===
+AQUI NO SE TOCA NADA: se MIDE. AUDITOR.md 6.3 congela la nomina en 135: NI
+   CRECE NI SE PODA. Si la cifra medida no es 135, SE DECLARA la discrepancia
+   en vez de ajustarla.
+LA CIFRA DE FUERA DE LA NOMINA VIAJA CON SU VARA, Y SE MIDEN LAS DOS
+   (adjudicacion 4.7 del acta 197).
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CONGELADO QUE MANDA AUDITOR.md 6.3: 135
+CALZA LA NOMINA CON EL CONGELADO: SI
+CIFRA casos declarados: 2
+CIFRA arneses que el censo reconoce en scripts/loop/: 196
+LA VARA DEL CENSO, que es la que decide (vuelta 178, TAREA 1.b): 148
+CIFRA ultima vuelta representada en la nomina (INFORMATIVA): 195
+CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 1
+      FUERA DE LA NOMINA (con vara 148): vuelta197_tarea2_mutacion_orden_del_turno.py
+CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 61
+   LAS DOS CIFRAS JUNTAS SON LA FRASE ENTERA: con vara 148 salen 1, sin
+   vara salen 61.
+CIFRA entradas de la nomina que el censo NO VE: 0
+CIFRA entradas SIN SUJETO CONGELADO, leidas de
+   guarda_del_sujeto_congelado(): 0
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.60
+CIFRA entradas en total: 51
+CIFRA colisiones: 0
+
+=== H. EL SUJETO DE LA TAREA 1: LAS DOS GUARDAS APAGADAS ===
+SE MIDE QUE EL ARNES DEL AUDITOR Y SU SALIDA EXISTEN Y NO ESTAN VACIOS (la
+regla LA RUTA QUE PROMETE PRUEBA ES CIFRA, 5 sep 2026), porque el encargo dice
+que SE PARTE DEL ARNES QUE EL AUDITOR DEJO ESCRITO y no de uno nuevo.
+   scripts/loop/apertura_del_auditor.py
+      disco 53246 bytes | LF 53246 bytes | sha256 LF 0ddab90156f8f3dd
+      existe y no esta vacio: SI
+   scripts/loop/_auditor_v198_guarda_muerta.py
+      disco 10454 bytes | LF 10454 bytes | sha256 LF 1131cee12f0bf410
+      existe y no esta vacio: SI
+   docs/loop/SALIDA_V198_GUARDA_MUERTA.txt
+      disco 3011 bytes | LF 3011 bytes | sha256 LF 5c176093f4944afa
+      existe y no esta vacio: SI
+LAS LINEAS DE CODIGO QUE EL ACTA 198 SENALA, LOCALIZADAS CON grep -n AQUI:
+   _VIVO abierto puesto a True                          2 acierto(s), linea(s) 265, 334
+   _VIVO abierto puesto a False                         1 acierto(s), linea(s) 841
+   la rama que mira el sello en disco solo con vuelta   1 acierto(s), linea(s) 393
+
+=== H.1 EL SUJETO DE LA TAREA 2: LAS SEIS LLAMADAS QUE BORRAN LA SEDE ===
+SE CUENTAN CON grep AQUI Y NO SE TECLEAN. El acta 198 dice SEIS; si el conteo
+de hoy no diera seis, MANDA EL CONTEO DE HOY y la discrepancia se declara.
+   scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py: 12570 bytes disco | 12570 LF
+   CIFRA llamadas a AP.olvidar_todo() contadas hoy: 6
+   lineas: 153, 175, 190, 213, 232, 262
+   CALZA CON LAS SEIS QUE EL ACTA 198 DICE: SI
+   CIFRA menciones de RUTA_DEL_TURNO en el arnes AL ENTRAR: 0
+      lineas: (ninguna)
+
+=== H.2 EL SUJETO DE LA TAREA 3: LOS EJEMPLARES DEL BANCO ===
+AQUI SOLO SE MIDE QUE EL BANCO EXISTE Y CUANTAS VECES NOMBRA UN EJEMPLAR. LA
+LISTA SE COMPUTA EN LA TAREA 3, no aqui, y los dos que el acta 198 nombra
+(el 1077 del ejecutor y el 165 del auditor) se buscan para que la TAREA 3
+tenga contra que cotejar su computo.
+   docs/BANCO_DE_TEXTOS.md: 182228 bytes disco | 182228 LF | sha256 LF 68557cd00a3124f4
+   CIFRA lineas del banco por split(NL): 3119
+   CIFRA lineas con el literal EJEMPLAR: 41
+   el 1077 aparece en 1 linea(s): 2543
+   el 165 aparece en 1 linea(s): 867
+
+=== H.3 EL SUJETO DE LA TAREA 4: LA VARA DEL PLAN, CORRIDA AQUI ===
+EL ENCARGO DICE, CON ESAS PALABRAS, QUE EL PLAN SE RETOMA POR LA VARA DEL
+EXPEDIENTE Y NO POR EL CAMPO estado. La vara es el instrumento de abajo, y se
+corre AQUI, en la apertura, para que la TAREA 4 no elija su sujeto despues de
+mirar.
+   scripts/loop/vuelta150_3_relectura_expediente.py: 60262 bytes disco | 60262 LF
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD
+   EXITCODE: 0
+   salida sellada en docs/loop/SALIDA_V199_VARA_DEL_PLAN_APERTURA.txt
+   17437 bytes de salida
+   | | `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-F-02` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-F-03` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-01` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-02` | 02_DESTEJIDOS | LISTA | P1+P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-03` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-04` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-05` | 02_DESTEJIDOS | LISTA | P1+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-06` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-S-06` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-S-07` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-C-04` | 00_CODIGO | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-U-01` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-E-01` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-U-02` | 03_FUSIONES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-F-04-COL` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-F-04-HOR` | 01_FUENTES | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-F-04-WEI` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-F-04-RAC` | 01_FUENTES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-E-03` | 04_ENLACES | LISTA | P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-D-07` | 02_DESTEJIDOS | LISTA | P2+P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | | `OP-E-06` | 04_ENLACES | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-E-07` | 04_ENLACES | LISTA | P3a+P3b | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-08` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | | `OP-D-09` | 02_DESTEJIDOS | LISTA | P3a | CONGELADO DECLARADO (la ficha habla de su estado: ESTADO) |
+   | OP-F-01 (01_FUENTES, estado LISTA)
+   | OP-F-02 (01_FUENTES, estado LISTA)
+   | OP-F-03 (01_FUENTES, estado LISTA)
+   | OP-D-01 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-02 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-03 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-04 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-05 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-06 (02_DESTEJIDOS, estado LISTA)
+   | OP-S-06 (00_CODIGO, estado LISTA)
+   | OP-S-07 (00_CODIGO, estado LISTA)
+   | OP-C-01 (00_CODIGO, estado LISTA)
+   | OP-C-02 (00_CODIGO, estado LISTA)
+   | OP-C-03 (00_CODIGO, estado LISTA)
+   | OP-C-04 (00_CODIGO, estado LISTA)
+   | OP-U-01 (03_FUSIONES, estado LISTA)
+   | OP-E-01 (04_ENLACES, estado LISTA)
+   | OP-A-01 (07_ADUANA, estado LISTA)
+   | OP-A-02 (07_ADUANA, estado LISTA)
+   | OP-U-02 (03_FUSIONES, estado LISTA)
+   | OP-F-04-COL (01_FUENTES, estado LISTA)
+   | OP-F-04-HOR (01_FUENTES, estado LISTA)
+   | OP-F-04-WEI (01_FUENTES, estado LISTA)
+   | OP-F-04-RAC (01_FUENTES, estado LISTA)
+   | OP-E-03 (04_ENLACES, estado LISTA)
+   | OP-M-02-PROG (03_FUSIONES, estado LISTA)
+   | OP-M-02-ASSESS (03_FUSIONES, estado LISTA)
+   | OP-M-02-ACTIVATE (03_FUSIONES, estado LISTA)
+   | OP-M-02-ACCOMPLISH (03_FUSIONES, estado LISTA)
+   | OP-D-07 (02_DESTEJIDOS, estado LISTA)
+   | OP-M-03-I (03_FUSIONES, estado LISTA)
+   | OP-M-03-II (03_FUSIONES, estado LISTA)
+   | OP-E-06 (04_ENLACES, estado LISTA)
+   | OP-E-07 (04_ENLACES, estado LISTA)
+   | OP-D-08 (02_DESTEJIDOS, estado LISTA)
+   | OP-D-09 (02_DESTEJIDOS, estado LISTA)
+   | Criterio: estado LISTA y TODAS sus depende_de en HECHA. Las de depende_de VACIO
+   | CONTADO: 4 operacion(es) LISTA con todas sus dependencias en HECHA.
+   | CONTRASTE: 23 operacion(es) LISTA con depende_de VACIO (nunca bloqueadas).
+   | Y LO QUE DE VERDAD QUEDA POR CORRER: las fichas en LISTA SIN NINGUNA de las
+   | tres pruebas. Son las unicas cuyo estado LISTA calza con el repo, o sea las
+   | | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | (vacio) | no |
+   | | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA | no |
+   | | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA | no |
+   | | `OP-I-01` | 10_INVENTARIO | MESA | (vacio) | no |
+   | | `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | OP-M-02=HECHA, OP-M-02-MEDIOS=LISTA | SI, por `OP-U-01` |
+   | CONTADO: 6 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+   | 6 en LISTA sin prueba, de las cuales 4 son TRABAJO REAL y 2 estan
+   | PODAR LA CIFRA DE LA VARA SIN EL FUNDADOR ES LO QUE LA CASA RESERVA:
+   | CIFRA fichas del expediente: 71 operaciones
+   | CIFRA fichas que no calzan: 37 operaciones
+   | CIFRA fichas congeladas declaradas: 24 operaciones
+   | CIFRA fichas congeladas en silencio: 12 operaciones
+   | CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   | CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+   | CIFRA de esas que estan CONSUMIDAS por otra ficha: 2 operaciones
+   | CIFRA de esas que son TRABAJO REAL: 4 operaciones
+   | CIFRA fichas de tipo MESA en el expediente: 6
+   | CIFRA de esas que estan en LISTA: 5
+   | | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | ninguna | `LECTURAS_DIRIGIDAS.md` | SI, en `docs/plan/LECTURAS_DIRIGIDAS.md` | 214916 | 214916 |
+   | | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | ninguna | `INTRA_DOMINIO_INFORME.md` | SI, en `docs/INTRA_DOMINIO_INFORME.md` | 943970 | 943970 |
+   | | `OP-L-01` | 09_LECTURAS_DIRIGIDAS | ninguna | `BANCO_DE_TEXTOS.md` | SI, en `docs/BANCO_DE_TEXTOS.md` | 182228 | 182228 |
+   | | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | ninguna | (su evidencia entera es prosa: no nombra ningun fichero) | NO | | |
+   | | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `BANCO_DEL_PLAN.md` | SI, en `docs/plan/BANCO_DEL_PLAN.md` | 61554 | 61554 |
+   | | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `LECTURAS_DIRIGIDAS.md` | SI, en `docs/plan/LECTURAS_DIRIGIDAS.md` | 214916 | 214916 |
+   | | `OP-I-01` | 10_INVENTARIO | ninguna | `INVENTARIO.jsonl` | SI, en `docs/plan/INVENTARIO.jsonl` | 584554 | 584554 |
+   | | `OP-I-01` | 10_INVENTARIO | ninguna | `10_INVENTARIO.md` | SI, en `docs/plan/10_INVENTARIO.md` | 34258 | 33845 |
+   | CIFRA VIEJA, la de siempre y sin tocar: 6 ficha(s) en LISTA sin ninguna
+   | de las tres pruebas, de las cuales 4 son TRABAJO REAL.
+   | CIFRA NUEVA, con la pata documental: de esas 4 de trabajo real, 3 son
+   | SIN DOCUMENTO QUE MEDIR: OP-L-02            (0 mencion(es) de fichero en su evidencia)
+
+=== I. EL HUECO DE LA SECCION 9, MEDIDO AL ENTRAR ===
+NO ES VUELTA DE BATERIA: el encargo manda correrla en la 200 para que los
+remedios de las TAREAS 1 y 2 esten dentro. La seccion 9 cierra con HUECO
+DECLARADO Y MEDIDO por el carril de la TAREA 1.b de la vuelta 173.
+CIFRA ficheros SALIDA_V*_BATERIA_TRAMO_N.txt en docs/loop/: 38
+   V176: 9 fichero(s)
+   V183: 9 fichero(s)
+   V189: 10 fichero(s)
+   V194: 10 fichero(s)
+CIFRA ficheros SALIDA_V199_BATERIA_TRAMO_N.txt al entrar: 0
+
+=== J. EL ACTA 198, ACOTADA CON grep -n EN ESTA VUELTA ===
+docs/loop/ACTA_AUDITOR.md: 4611384 bytes disco | 4611384 bytes LF | sha256 LF cd49b931941d4f4f
+CIFRA lineas del acta por split(NL): 69877
+cabecera de la VUELTA 198: 1 acierto(s), linea(s) 69636
+cabecera de la VUELTA 199: 0 acierto(s), linea(s) (ninguna)
+CUERPO ACOTADO del acta 198: lineas 69636 a 69877 (1-indexadas), 242 lineas
+   la de arriba es LA COTA QUE MANDA en esta vuelta.
+
+FIN DEL SELLO DE APERTURA
