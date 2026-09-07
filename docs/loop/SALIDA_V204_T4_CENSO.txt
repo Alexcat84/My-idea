@@ -1,0 +1,107 @@
+==============================================================================
+VUELTA 204, TAREA 4: EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO.
+NINGUNA FICHA SE CIERRA Y NINGUN estado SE MUEVE.
+==============================================================================
+
+A) LA PRIMERA LECTURA: LAS FICHAS POR SU CAMPO `estado`, RECONTADAS HOY
+   Y SE DICE LO QUE ESTA LECTURA ES: EL CAMPO, que `AUDITOR.md` 0 prohibe
+   usar como vara del trabajo pendiente. Va aqui porque el encargo pide LAS
+   DOS, no porque valga por si sola.
+   docs/plan/OPERACIONES.jsonl: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   CIFRA lineas NO VACIAS: 71
+   CIFRA fichas con estado 'LISTA'  42
+   CIFRA fichas con estado 'HECHA'  29
+   EL ENCARGO DICE 71 FICHAS, 42 LISTA Y 29 HECHA, Y MANDA RECONTARLAS.
+   LO MEDIDO: 71 fichas, 42 LISTA, 29 HECHA. CALZA
+   reparto por `tipo`, al lado y sin mezclarlo: {'CAMPO_SUCIO': 8, 'DECISION_DE_FUENTE': 7, 'DESTEJIDO': 9, 'ENLACE': 5, 'ENLACE CON EVIDENCIA DE LECTURA': 1, 'ENLACE MAS PODA DEL SOLAPE': 1, 'ENLACE MUTUO': 1, 'FRONTERA_DECLARADA': 1, 'FUSION': 3, 'FUSION DE MESA': 13, 'FUSION DE MESA: LA CAMARILLA DE CINCO': 1, 'GUARDA': 1, 'HERRAMIENTA': 2, 'LECTURA DIRIGIDA': 1, 'LECTURA DIRIGIDA CORTA': 1, 'MESA': 6, 'MESA ADJUDICADA: DOS ETAPAS, CON FRONTERA REGISTRADA': 1, 'MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE': 1, 'MESA ADJUDICADA: DOS PUERTAS MAS UN ACTO': 1, 'MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA': 1, 'MESA ADJUDICADA: SERIE DECLARADA': 1, 'REENCUADRE_DE_MARCO': 1, 'RENOMBRE_CON_ALIAS': 1, 'SANEO MECANICO': 1, 'VIGENCIA': 2}
+
+B) LA SEGUNDA LECTURA: LA VARA DEL TRABAJO PENDIENTE, QUE ES LA QUE MANDA
+   corte: el HEAD DE APERTURA de esta vuelta, LEIDO de docs/loop/SALIDA_V204_HEAD_APERTURA.txt
+   y no tecleado: 59d32eeef3d39850149852fe89cd57abe08761f4
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte 59d32eeef3d39850149852fe89cd57abe08761f4
+   LA VARA LLEVA UN COMMIT Y NUNCA UNA FECHA: con una fecha sale
+   `ROJO: no se pudo leer OPERACIONES.jsonl`.
+   docs/loop/SALIDA_V204_T4_VARA.txt: disco 18759 bytes | LF 18468 bytes | sha256 LF 26aceea650da798e
+   CIFRA fichas del expediente:                       71
+   CIFRA fichas que no calzan:                        37
+   CIFRA fichas congeladas declaradas:                24
+   CIFRA fichas congeladas en silencio:               12
+   CIFRA fichas HECHA sin ninguna prueba:             1
+   CIFRA fichas en LISTA sin ninguna prueba:          6
+   CIFRA de esas que estan CONSUMIDAS por otra ficha: 2
+   CIFRA de esas que son TRABAJO REAL:                4
+   EL ENCARGO PUBLICA LAS MISMAS OCHO CIFRAS CORRIDAS POR EL AUDITOR SOBRE
+   c4ffc221. LAS MIAS SALEN DE MI CORRIDA SOBRE 59d32eee.
+   CIFRA de las ocho que DIFIEREN de las del encargo: 0
+      (ninguna: las ocho calzan al digito)
+
+C) LAS DOS LECTURAS JUNTAS, Y LA DISCREPANCIA DECLARADA. ESTE ES EL PUNTO.
+   | lectura | que mide | cifra |
+   |---|---|---:|
+   | el campo `estado` | fichas que el campo llama HECHA | 29 |
+   | el campo `estado` | fichas que el campo llama LISTA | 42 |
+   | la vara | fichas cuyo estado NO CALZA con el repo | 37 |
+   | la vara | de esas, TRABAJO REAL | 4 |
+
+   LA DISCREPANCIA, DICHA CON SUS CIFRAS Y NO CON UN ADJETIVO:
+   . el campo dice que quedan 42 fichas en LISTA, o sea trabajo por hacer;
+   . la vara dice que de las 71 hay 37 que NO CALZAN, y que de esas solo 4
+     son TRABAJO REAL;
+   . o sea que el campo `estado` SOBREESTIMA el trabajo pendiente en 38
+     fichas, y por eso `AUDITOR.md` 0 lo prohibe como vara;
+   . y en el otro sentido el campo tambien MIENTE POR EXCESO DE CONFIANZA:
+     1 ficha esta en HECHA sin ninguna prueba en el repo.
+   NINGUNA DE LAS DOS CIFRAS SE CORRIGE CON LA OTRA: SE PUBLICAN LAS DOS.
+
+   LA SALVEDAD QUE ESA RESTA NECESITA, Y VA PEGADA A ELLA PARA QUE NADIE LA
+   LEA SOLA: `TRABAJO REAL` es la etiqueta de la VARA, no un sinonimo de
+   'lo unico que queda por hacer'. La vara llega a esa cifra por un camino
+   escrito: de las 42 en LISTA, 24 salen por CONGELADA DECLARADA (su propia
+   ficha dice que esta congelada), 12 por CONGELADA EN SILENCIO, 6 quedan
+   en LISTA sin ninguna prueba, y de esas 2 estan CONSUMIDAS por otra ficha.
+   LA RESTA DE ARRIBA ES ARITMETICA SOBRE LAS DOS CIFRAS PUBLICADAS, y no
+   una afirmacion de que las otras 38 esten hechas.
+
+D) LAS TRECE QUE NADIE HA MIRADO NUNCA, NOMBRADAS UNA A UNA
+   SE LEEN DE LA TABLA DE LA VARA, fila a fila, y no se teclean.
+   CIFRA filas de la tabla de la vara leidas: 61
+   CIFRA CONGELADAS EN SILENCIO: 12
+   CIFRA HECHA SIN NINGUNA PRUEBA: 1
+   CIFRA de las dos juntas: 13
+
+   | id_op | fase | estado | pruebas que dan positivo | motivo |
+   |---|---|---|---|---|
+   | `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO: la ficha no dice nada de su estado |
+   | `OP-V-01` | 08_VERIFICACION | HECHA | ninguna | HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo |
+
+   QUE SIGNIFICA `CONGELADO EN SILENCIO`, DICHO Y NO SUPUESTO: la ficha esta
+   en LISTA, tiene alguna huella en el repo, y **su propio texto no dice
+   nada de su estado**. No significa que este mal: significa que **nadie la
+   ha mirado y escrito nunca**, que es justo lo que el encargo pide nombrar.
+   Y `HECHA SIN NINGUNA PRUEBA` significa que **el estado afirma mas que el
+   repo**: ninguna de las pruebas de grafo, codigo o git da positivo.
+
+   EL REPARTO POR FASE DE LAS TRECE, CONTADO Y NO A OJO:
+      03_FUSIONES            6
+      00_CODIGO              3
+      07_ADUANA              2
+      01_FUENTES             1
+      08_VERIFICACION        1
+
+E) LA GUARDA: NINGUN `estado` SE MOVIO
+   docs/plan/OPERACIONES.jsonl al salir: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   IDENTICO AL DE ENTRADA: SI
+   CIFRA de las 71 fichas que cambian de `estado` en esta tarea: 0
+
+FIN

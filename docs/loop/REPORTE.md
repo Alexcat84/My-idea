@@ -166,7 +166,7 @@ tabla tallada entera cuando la vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. `R.67` PARA EL ACTA 177 Y `R.68` PARA EL ACTA 178, las dos siguientes de la deuda por el `4.9` del acta 201, y va PRIMERA porque `AUDITOR.md` 1.4 pone los registros en la TAREA 1. **LA DEUDA SE REMIDE AQUI Y NO SE COPIA DEL ENCARGO**: se cuenta cuantas actas de la 177 a la 180 siguen sin registro. **DE QUE CONVENCION SON SE COMPRUEBA, NO SE SUPONE**: la 184 es la frontera, y si un acta ya escribe sus claves con comillas inversas **el lector heredado basta y se dice**. **EL COMPUTO DE LA 203 SE REUTILIZA**, `scripts/loop/_v203_reparto_de_actas_viejas.py`, clonado a un `_v204_*` **con su cifra de `difflib` al lado**, y no se escribe un tercero. **CADA ACTA SE ACOTA EN ESTA VUELTA** por linea de inicio y de fin, con **el reparto entero y cada numeral con la seccion de la que sale nombrada por su TITULO**. **UN NUMERAL NO COMPUTABLE SE DECLARA EN VEZ DE PUBLICAR UN CERO**, con **las tres lecturas** cuando discrepen, porque un cero de convencion no es un cero de ausencia. **SE COTEJA CONTRA LA FILA DE METRICA DE CADA ACTA**, que la escribio el auditor de aquella vuelta y no el ejecutor. **CIERRA CON LA SERIE MEDIDA** por `scripts/loop/serie_de_registros.py` y **no con una expresion regular propia**. **GUARDA OBLIGATORIA Y CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA** | `SALIDA_V204_T1_REGISTROS.txt`, `SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`, `SALIDA_V204_T1C_AMBIGUEDAD.txt`, `SALIDA_V204_T1_MEDICION.txt` |
 | **TAREA 2** | EL TAMANO DEL AGUJERO DE `cobertura`, MEDIDO Y NO TAPADO. Adjudicado en el `4.3` del acta 203: **`OP-I-01` no se cierra** porque sus clausulas **2** y **3** no se caerian si el fallo volviera, ya que `cobertura` es texto libre. **ESTA TAREA NO CIERRA LA FICHA Y NO ESCRIBE LA VARA**: la vara es codigo permanente y va a la auditoria integral por el `4.7`. Lo que se pide es **medir de que tamano es el agujero**, para que quien escriba la vara despues sepa contra que. **CUANTAS FORMAS DISTINTAS toma hoy el campo `cobertura`** en las entradas de `docs/plan/INVENTARIO.jsonl` (**la cifra de entradas se RECUENTA**), **agrupadas por su forma**, y **cuantas quedarian fuera de cualquier vara razonable**. **LA BUSQUEDA ES POSITIVA Y NUNCA NEGATIVA** (`EJECUTOR.md` 9) y **SE DECLARA SOBRE QUE CAMPO CORRE CADA UNA**, que es la `C.2` del acta 203: la misma variante da cifras distintas sobre el campo y sobre el fichero entero, y **una vara sin declarar convierte una medicion buena en una acusacion**. **SE MIDE LO MISMO PARA LA CLAUSULA 3**, la de los huecos nombrados, que comparte el agujero. **PROPONE, NO CIERRA**, y **no toca el `estado`** | **CERRADA** | `SALIDA_V204_T2_COBERTURA.txt` |
 | **TAREA 3** | LA DISCREPANCIA DE COMPONENTES QUE EL PROPIO INSTRUMENTO DECLARA. La 203 la reprodujo y no la persiguio, y lo dijo. **SE MIDE DE DONDE SALE LA DIFERENCIA**, con el resolutor delante, y **se declara**: cuantas componentes del sellado no estan hoy, cuantas hay hoy que no estaban, y **si la causa es el universo, la fecha o el instrumento**. **LA NOMINA SELLADA NO SE REGENERA**: `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` **se CUENTA, no se reescribe**. **EL INSTRUMENTO ESCRIBE SOBRE UNA SEDE SELLADA EN LA 169**, asi que va con **protocolo del sello**: se mide antes, se corre, se restaura con `git checkout --` y se REMIDE. **SUS DOS TAMANOS DISCREPAN POR EL CRLF** y eso es el `PD.2`: **se publica, no se resuelve**. **SI DE AQUI SALE QUE UNA CIFRA PUBLICADA ENVEJECIO**, va por el carril del banco `9.10`, **POR ADICION Y EN SU SEDE**, con el texto viejo entero y sin tachar. **SI SALE QUE HACE FALTA CODIGO, SE PARA Y SE TRAE** | **CERRADA** | `SALIDA_V204_T3_COMPONENTES.txt`, `SALIDA_V204_T3_INSTRUMENTO.txt`, `SALIDA_V204_T3_RECOMPUTO.txt` |
-| **TAREA 4** | EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO. Las cuatro fichas reales estan medidas y **ninguna se cerro**, y la moratoria `6.3` dice que el trabajo es el plan hasta agotarlo: **ese tramo esta agotado y la pregunta que nadie ha contestado con una cifra es QUE QUEDA**. **SE CUENTAN LAS FICHAS DE `docs/plan/OPERACIONES.jsonl` POR `estado`** (la cifra se RECUENTA) **y se cruza esa cuenta con la vara del trabajo pendiente**, `scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD de apertura>`, **que nunca es el campo `estado`** (`AUDITOR.md` 0) y **a la que se le pasa un COMMIT y no una fecha**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS Y LA DISCREPANCIA SE DECLARA**: ese cruce es el punto, no la suma. **SE NOMBRAN UNA A UNA LAS CONGELADAS EN SILENCIO Y LA `HECHA` SIN NINGUNA PRUEBA**, que son las que nadie ha mirado nunca y el candidato natural al trabajo de la 205. **NINGUNA FICHA SE CIERRA Y NINGUN `estado` SE MUEVE**: lo que esta tarea produce es **el mapa de lo que queda**, para que el fundador decida el orden | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO. Las cuatro fichas reales estan medidas y **ninguna se cerro**, y la moratoria `6.3` dice que el trabajo es el plan hasta agotarlo: **ese tramo esta agotado y la pregunta que nadie ha contestado con una cifra es QUE QUEDA**. **SE CUENTAN LAS FICHAS DE `docs/plan/OPERACIONES.jsonl` POR `estado`** (la cifra se RECUENTA) **y se cruza esa cuenta con la vara del trabajo pendiente**, `scripts/loop/vuelta150_3_relectura_expediente.py --corte <HEAD de apertura>`, **que nunca es el campo `estado`** (`AUDITOR.md` 0) y **a la que se le pasa un COMMIT y no una fecha**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS Y LA DISCREPANCIA SE DECLARA**: ese cruce es el punto, no la suma. **SE NOMBRAN UNA A UNA LAS CONGELADAS EN SILENCIO Y LA `HECHA` SIN NINGUNA PRUEBA**, que son las que nadie ha mirado nunca y el candidato natural al trabajo de la 205. **NINGUNA FICHA SE CIERRA Y NINGUN `estado` SE MUEVE**: lo que esta tarea produce es **el mapa de lo que queda**, para que el fundador decida el orden | **CERRADA** | `SALIDA_V204_T4_CENSO.txt`, `SALIDA_V204_T4_VARA.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -502,5 +502,113 @@ candidato natural a una lectura propia. Son 21 pares y un trio, y **no tocan
 ninguna componente de hoy**, lo que apunta a que su arista dejo de ser `A` en la
 sede de veredictos y no a que sus nodos se fundieran. **No lo persigo mas: lo
 mido, lo nombro y lo dejo.**
+
+### TAREA 4. EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO
+
+**NINGUNA FICHA SE CIERRA Y NINGUN `estado` SE MUEVE.** Lo que esta tarea produce
+es **el mapa de lo que queda**, para que el fundador decida el orden. Todo sale
+de `docs/loop/SALIDA_V204_T4_CENSO.txt` y de
+`docs/loop/SALIDA_V204_T4_VARA.txt`.
+
+#### LAS DOS LECTURAS, CORRIDAS HOY Y PUBLICADAS JUNTAS
+
+**LA PRIMERA, EL CAMPO `estado`, QUE ES LA QUE `AUDITOR.md` 0 PROHIBE COMO VARA**
+y que va aqui porque el encargo pide las dos: `docs/plan/OPERACIONES.jsonl` mide
+**513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF
+**829c583eb779cab6**, con **71 lineas no vacias, 42 en `LISTA` y 29 en `HECHA`**.
+El encargo decia 42 y 29 y **lo recontado calza**.
+
+**LA SEGUNDA, LA VARA DEL TRABAJO PENDIENTE, QUE ES LA QUE MANDA.** Corrida con
+`scripts/loop/vuelta150_3_relectura_expediente.py --corte 59d32eee...`, **con un
+COMMIT y nunca una fecha**, y ese commit es mi HEAD de apertura **leido de
+`docs/loop/SALIDA_V204_HEAD_APERTURA.txt` y no tecleado**. Su salida mide
+**18759 bytes en disco y 18468 normalizado a LF**, `sha256` LF
+**26aceea650da798e**.
+
+| cifra de la vara | mi corrida sobre `59d32eee` | el encargo, corrido por el auditor sobre `c4ffc221` |
+|---|---:|---:|
+| fichas del expediente | 71 | 71 |
+| fichas que no calzan | 37 | 37 |
+| congeladas declaradas | 24 | 24 |
+| congeladas en silencio | 12 | 12 |
+| `HECHA` sin ninguna prueba | 1 | 1 |
+| en `LISTA` sin ninguna prueba | 6 | 6 |
+| de esas, consumidas por otra ficha | 2 | 2 |
+| de esas, TRABAJO REAL | 4 | 4 |
+
+**LAS OCHO CALZAN AL DIGITO, Y ESO SE MIDIO EN VEZ DE MIRARSE:** el computo
+cuenta cuantas de las ocho difieren y da **0**. Son **corridas distintas sobre
+commits distintos**, y coinciden.
+
+#### EL CRUCE, QUE ES EL PUNTO DEL ENCARGO Y NO LA SUMA
+
+- El campo dice que quedan **42 fichas en `LISTA`**, o sea trabajo por hacer.
+- La vara dice que de las 71 hay **37 que NO CALZAN**, y que de esas solo **4 son
+  TRABAJO REAL**.
+- **El campo `estado` sobreestima el trabajo pendiente en 38 fichas**, y por eso
+  `AUDITOR.md` 0 lo prohibe como vara.
+- **Y en el otro sentido el campo tambien miente, por exceso de confianza:
+  1 ficha esta en `HECHA` sin ninguna prueba en el repo.**
+
+**LA SALVEDAD VA PEGADA A LA RESTA PARA QUE NADIE LA LEA SOLA:** `TRABAJO REAL`
+es la etiqueta de la vara, **no un sinonimo de lo unico que queda por hacer**. La
+vara llega ahi por un camino escrito: de las 42 en `LISTA`, **24** salen por
+congelada declarada, **12** por congelada en silencio, **6** quedan sin ninguna
+prueba y **2** de esas estan consumidas por otra ficha. **La resta es aritmetica
+sobre las dos cifras publicadas, no una afirmacion de que las otras 38 esten
+hechas.** **NINGUNA DE LAS DOS CIFRAS SE CORRIGE CON LA OTRA: SE PUBLICAN LAS
+DOS.**
+
+#### LAS TRECE QUE NADIE HA MIRADO NUNCA, NOMBRADAS UNA A UNA
+
+**Las filas se LEEN de la tabla de la vara, fila a fila, y no se teclean:** el
+computo lee **61 filas**, de las que **12 son congeladas en silencio** y **1 es
+`HECHA` sin ninguna prueba**, y **12 mas 1 son 13**.
+
+| id_op | fase | estado | pruebas que dan positivo | motivo |
+|---|---|---|---|---|
+| `OP-F-01` | 01_FUENTES | LISTA | P3a | CONGELADO EN SILENCIO |
+| `OP-C-01` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO |
+| `OP-C-02` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO |
+| `OP-C-03` | 00_CODIGO | LISTA | P2+P3a | CONGELADO EN SILENCIO |
+| `OP-A-01` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO |
+| `OP-A-02` | 07_ADUANA | LISTA | P2+P3a | CONGELADO EN SILENCIO |
+| `OP-M-02-PROG` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO |
+| `OP-M-02-ASSESS` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO |
+| `OP-M-02-ACTIVATE` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO |
+| `OP-M-02-ACCOMPLISH` | 03_FUSIONES | LISTA | P1 | CONGELADO EN SILENCIO |
+| `OP-M-03-I` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO |
+| `OP-M-03-II` | 03_FUSIONES | LISTA | P1+P3a | CONGELADO EN SILENCIO |
+| `OP-V-01` | 08_VERIFICACION | **HECHA** | **ninguna** | **HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo** |
+
+**QUE SIGNIFICAN LAS DOS ETIQUETAS, DICHO Y NO SUPUESTO.** `CONGELADO EN
+SILENCIO` es una ficha en `LISTA`, con alguna huella en el repo, cuyo **propio
+texto no dice nada de su estado**: no significa que este mal, significa que
+**nadie la ha mirado y escrito nunca**. `HECHA SIN NINGUNA PRUEBA` significa que
+**el estado afirma mas que el repo**: ninguna de las tres pruebas, de grafo, de
+codigo y de git, da positivo.
+
+**EL REPARTO POR FASE DE LAS TRECE, CONTADO Y NO A OJO:** **6** en
+`03_FUSIONES`, **3** en `00_CODIGO`, **2** en `07_ADUANA`, **1** en
+`01_FUENTES` y **1** en `08_VERIFICACION`.
+
+#### LA GUARDA
+
+`docs/plan/OPERACIONES.jsonl` sale con **513043 bytes en disco y 513043
+normalizado a LF**, `sha256` LF **829c583eb779cab6**, **identico al de entrada**,
+y **0 de las 71 fichas cambian de `estado`**. El `numstat` de `docs/plan/` sigue
+en **0 filas**.
+
+#### LO QUE PROPONGO Y NO DECIDO, MARCADO COMO DISCUTIBLE
+
+**`D.4` LA TRECE NO SON UN BLOQUE HOMOGENEO, Y EL ORDEN IMPORTA.** Seis de las
+trece son de `03_FUSIONES` y **cuatro de esas seis son hermanas del mismo tronco
+`OP-M-02-*`**, con lo que **una sola lectura las cubriria a las cuatro**. Y
+`OP-V-01` **no es del mismo genero que las otras doce**: las doce afirman de
+menos y ella afirma **de mas**, que es el unico caso del expediente en que el
+campo va por delante del repo. **PROPONGO, SIN DECIDIRLO**, que si la 205 toma
+este trabajo empiece por `OP-V-01` sola y siga por el tronco `OP-M-02-*` en
+bloque. **El orden lo decide el fundador, y esto es una propuesta con su cifra
+delante, no un encargo.**
 
 <!-- FIN ANEXO DE TAREAS -->
