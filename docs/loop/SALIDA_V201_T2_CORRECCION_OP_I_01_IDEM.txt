@@ -1,0 +1,31 @@
+==============================================================================
+VUELTA 201, TAREA 2 . LA CORRECCION DECLARADA DE LA EVIDENCIA DE OP-I-01
+adjudicada por el acta 199 en su 4.1. NO ES PARADA.
+==============================================================================
+
+A) EL RECUENTO DE HOY, HECHO AQUI Y NO HEREDADO
+   docs/plan/INVENTARIO.jsonl: disco 584554 bytes | LF 584554 bytes
+   CIFRA entradas (lineas no vacias): 672
+   CIFRA lineas que NO son JSON valido: 0
+   EL REPARTO POR TIPO, RECONTADO HOY:
+      acto                     556
+      familia_de_ids           54
+      figura                   20
+      defecto                  19
+      racimo                   13
+      dominio                  10
+   SUMA DEL REPARTO: 672
+   LA SUMA CALZA CON LAS ENTRADAS: SI
+
+B) LA CIFRA VIEJA, LEIDA DE LA FICHA Y CITADA POR LINEA
+   docs/plan/OPERACIONES.jsonl: disco 499474 bytes | LF 499474 bytes
+   CIFRA lineas NO VACIAS: 71
+   LINEA DE LA FICHA OP-I-01: 44
+   LA MARCA 'CORRECCION DECLARADA (2026-09-07, vuelta 201, TAREA 2)' YA ESTA en `evidencia`: la correccion se escribio en
+   una corrida anterior. IDEMPOTENTE, NO SE ESCRIBE NADA, y se sale
+   AQUI, antes de la guarda del 323, porque la propia correccion CITA
+   el 323 verbatim y esa guarda caeria por el motivo equivocado.
+   CIFRA elementos de `evidencia` al entrar: 4
+   crecimiento en disco: 0 bytes
+
+FIN

@@ -113,7 +113,7 @@ tabla tallada entera cuando la vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. (1.a) El **acta 200** entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, **computado y no tecleado**, y su cuerpo se acota EN ESTA VUELTA y no con las cifras del encargo. (1.b) **LA ENTRADA DE LA VUELTA 198**, por la adjudicacion `4.7` del acta 200: sigue sin entrada propia y sin reporte archivado, y su entrada **DECLARA LA AUSENCIA** con el instrumento que la midio. **NO SE FABRICA EL REPORTE.** (1.c) **UNA CORRECCION DE CITA, DE UNA LINEA, EN SU SEDE**: la seccion 8 de `docs/loop/reportes/REPORTE_V200.md` atribuye a `AUDITOR.md` 0 unas palabras que son del **acta 185**, y el aviso se anade **con el texto viejo entero y sin tachar**, por el carril del banco `9.10` mas `EJECUTOR.md` 8. **NO ES CAIDA Y NO SE COBRA.** Y **no se escribe ningun lector nuevo**: la moratoria lo prohibe | **CERRADA** | `docs/loop/SALIDA_V201_T1_REGISTROS.txt`, `docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`, `docs/loop/SALIDA_V201_T1C_CORRECCION_DE_CITA.txt`, `docs/PENDIENTES.md` (R.61 en la linea 15595 y R.62 en la 15681), `docs/loop/reportes/REPORTE_V200.md` (aviso en la linea 590) |
-| **TAREA 2** | LA CORRECCION DECLARADA DE LA EVIDENCIA DE `OP-I-01`, adjudicada por el acta 199 en su `4.1`. La ficha promete **323** entradas y `docs/plan/INVENTARIO.jsonl` tiene otra cifra. La vieja **no es una mentira**: viaja con su fecha de corte, y lo que envejecio es la evidencia. La correccion va **EN SU SEDE**, con el texto viejo entero y sin tachar, y **las dos cifras con su fecha de corte cada una** (banco `9.21`). **NINGUNA DE LAS DOS SE TECLEA**: la del fichero se recuenta en esta vuelta y se pega su salida, la de la ficha se lee de la ficha y se cita por linea. Y se publica **el reparto por tipo recontado hoy**. **NINGUN CAMPO `estado` SE MUEVE** | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | LA CORRECCION DECLARADA DE LA EVIDENCIA DE `OP-I-01`, adjudicada por el acta 199 en su `4.1`. La ficha promete **323** entradas y `docs/plan/INVENTARIO.jsonl` tiene otra cifra. La vieja **no es una mentira**: viaja con su fecha de corte, y lo que envejecio es la evidencia. La correccion va **EN SU SEDE**, con el texto viejo entero y sin tachar, y **las dos cifras con su fecha de corte cada una** (banco `9.21`). **NINGUNA DE LAS DOS SE TECLEA**: la del fichero se recuenta en esta vuelta y se pega su salida, la de la ficha se lee de la ficha y se cita por linea. Y se publica **el reparto por tipo recontado hoy**. **NINGUN CAMPO `estado` SE MUEVE** | **CERRADA** | `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`, `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`, `docs/loop/SALIDA_V201_T2_GUARDA_ESTADO.txt`, `docs/plan/OPERACIONES.jsonl` (linea 44, elemento 4 de `evidencia`) |
 | **TAREA 3** | LA MEDICION DE `OP-L-02` CONTRA SU `verificacion`, NO CONTRA SU `evidencia`, adjudicada por el acta 199 en su `4.2`. Es la unica de las cuatro fichas reales **SIN DOCUMENTO QUE MEDIR**: su evidencia entera es prosa. Se lee la ficha entera, se **cita su `verificacion` por linea**, y se responde con medicion: **que pide exactamente, que parte se puede comprobar hoy contra el repo y que parte no**. Si su `verificacion` tampoco alcanza para ejecutarla sin decidir, **eso es un hallazgo medido y va como PARADA** (`AUDITOR.md` 3), no como improvisacion | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LAS OTRAS DOS FICHAS REALES, `OP-L-01` Y `OP-L-03`, LEIDAS CONTRA SU VARA. Es el trabajo que la moratoria `6.3` manda: **EL PLAN HASTA AGOTARLO**. **LO PRIMERO: la vara se vuelve a correr AQUI** con el corte de esta vuelta y **se publican sus cifras de hoy**; si discrepan de las del encargo, **la discrepancia se declara y no se resuelve copiando** (`AUDITOR.md` 1.1). Por cada ficha: **se cita su `verificacion` por linea**, se **miden sus documentos en bytes exactos de disco y LF** (`P.2`), y se dice **si el documento cubre lo que la ficha describe**, con la cita que lo sostenga o con el hueco nombrado. **NO SE MUEVE NINGUN `estado`** y **no se cierra ninguna ficha**: lo que produce esta tarea es **lectura medida** | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -213,5 +213,76 @@ regla**, no la regla.
 paradas que la 200 levanto no se vuelven a levantar y no se arreglan.** El acta
 200 las adjudica en su `4.1` y su `4.2`, **las dos reparaciones son de codigo**, y
 **la moratoria `6.3` las prohibe hoy**. Van a la auditoria integral.
+
+### TAREA 2: LA CORRECCION DECLARADA DE LA EVIDENCIA DE `OP-I-01`, EN SU SEDE
+
+**ADJUDICADA POR EL ACTA 199 EN SU `4.1`. NO ES PARADA.** Comando corrido en esta
+vuelta, con su salida sellada en
+`docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`:
+
+```
+python scripts/loop/_v201_t2_correccion_op_i_01.py --escribir
+```
+
+**NINGUNA DE LAS DOS CIFRAS ESTA TECLEADA, Y CADA UNA VIAJA CON SU FECHA DE
+CORTE** (banco `9.21`):
+
+- **323 entradas, corte 2026-08-11.** No se busco a ojo: se **cita por linea**.
+  Vive en la **linea 44** de `docs/plan/OPERACIONES.jsonl`, en el **elemento 1**
+  de la lista `evidencia` de la ficha, verbatim `INVENTARIO.jsonl, 323 entradas`,
+  y el `2026-08-11` es el `fecha_corte` de la propia ficha. El computo **cae en
+  rojo si el 323 no esta en exactamente un elemento**, para que la cifra vieja no
+  se elija a dedo. **El 323 aparece TAMBIEN en el campo `nota`**, y ese campo **no
+  se toca**.
+- **672 entradas, corte 2026-09-07.** Recontadas **en esta vuelta**, leyendo
+  `docs/plan/INVENTARIO.jsonl` linea a linea y parseando cada una como JSON:
+  **672 lineas no vacias**, **0 lineas que no son JSON valido**, **584554 bytes en
+  disco y 584554 normalizados a LF**.
+
+**EL REPARTO POR TIPO, RECONTADO HOY Y NO COPIADO DE NINGUNA ACTA NI DEL ACTA
+199.** Contado de `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`:
+
+| tipo | entradas, corte 2026-09-07 |
+|---|---:|
+| `acto` | 556 |
+| `familia_de_ids` | 54 |
+| `figura` | 20 |
+| `defecto` | 19 |
+| `racimo` | 13 |
+| `dominio` | 10 |
+| **suma** | **672** |
+
+**LA SUMA DEL REPARTO CALZA CON LAS ENTRADAS: SI.** Y **el reparto viejo (221
+actos, 53 familias de ids, 14 defectos, 13 racimos, 12 figuras y 10 dominios)
+sigue escrito en el campo `nota` de la ficha y no se toca**, que es lo que
+significa **el texto viejo entero y sin tachar**.
+
+**LA CIFRA VIEJA NO ES UNA MENTIRA Y NO SE RETIRA.** Con su corte era cierta. **Lo
+que envejecio es la evidencia**, y por eso la correccion entra **POR ADICION**,
+como un **elemento mas de la misma lista `evidencia`** y **sin clave nueva de
+esquema**: es la via que la ficha gemela `OP-L-01` uso en la vuelta 166 y que el
+acta 71, seccion 6, adjudicacion 3, adjudico **CON LAS PALABRAS NO ES PARADA**.
+
+**NINGUN CAMPO `estado` SE MOVIO, Y NO SE AFIRMA: SE MIDE CONTRA `HEAD`.** Salida
+sellada en `docs/loop/SALIDA_V201_T2_GUARDA_ESTADO.txt`, que sale **VERDE**: **1
+sola linea difiere** de las 71 y es la **44**; de esa ficha cambia **1 sola clave**
+y es `evidencia`; el `estado` de `OP-I-01` entra y sale en `LISTA`; los **3
+elementos viejos siguen identicos y en su orden** y ahora son **4**; y **0 de las
+71 fichas** cambian su campo `estado`. `git diff --numstat` sobre `docs/plan/`
+da **1 anadida y 1 borrada** en `docs/plan/OPERACIONES.jsonl`, que es lo que
+`jsonl` da siempre al reescribir una linea, y el fichero pasa de **498085 bytes en
+disco y LF** a **499474 bytes en disco y LF**, con **71 lineas no vacias antes y
+despues** y **0 lineas que no sean JSON valido**.
+
+**UNA CORRECCION DE MI PROPIO COMPUTO, HECHA EN ESTA MISMA VUELTA Y DECLARADA EN
+VEZ DE CALLADA.** En su primera version la guarda del 323 corria **delante** de la
+de idempotencia, y la segunda corrida caia en **ROJO** diciendo *"el 323 no esta
+en exactamente un elemento de `evidencia`"*. **Era cierto**, porque **la propia
+correccion cita el 323 verbatim** y despues de escribirla hay **dos** elementos con
+esa cifra. **No escribia nada, que es lo que se queria, pero lo decia por el motivo
+equivocado**, y un instrumento que acierta por el motivo equivocado no vale. Se
+reordeno, se dejo escrito dentro del fichero, y la segunda corrida esta sellada
+aparte en `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`: **IDEMPOTENTE**,
+**4 elementos de `evidencia` al entrar** y **crecimiento 0 bytes**.
 
 <!-- FIN ANEXO DE TAREAS -->

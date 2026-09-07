@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 201, TAREA 2 . LA CORRECCION DECLARADA DE LA EVIDENCIA DE OP-I-01
+adjudicada por el acta 199 en su 4.1. NO ES PARADA.
+==============================================================================
+
+A) EL RECUENTO DE HOY, HECHO AQUI Y NO HEREDADO
+   docs/plan/INVENTARIO.jsonl: disco 584554 bytes | LF 584554 bytes
+   CIFRA entradas (lineas no vacias): 672
+   CIFRA lineas que NO son JSON valido: 0
+   EL REPARTO POR TIPO, RECONTADO HOY:
+      acto                     556
+      familia_de_ids           54
+      figura                   20
+      defecto                  19
+      racimo                   13
+      dominio                  10
+   SUMA DEL REPARTO: 672
+   LA SUMA CALZA CON LAS ENTRADAS: SI
+
+B) LA CIFRA VIEJA, LEIDA DE LA FICHA Y CITADA POR LINEA
+   docs/plan/OPERACIONES.jsonl: disco 498156 bytes | LF 498085 bytes
+   CIFRA lineas NO VACIAS: 71
+   LINEA DE LA FICHA OP-I-01: 44
+   fecha_corte de la ficha: '2026-08-11'
+   estado de la ficha (SE LEE, NO SE MUEVE): 'LISTA'
+   CIFRA elementos de `evidencia`: 3
+      evidencia[1]: INVENTARIO.jsonl, 323 entradas
+      evidencia[2]: 10_INVENTARIO.md, la vista humana
+      evidencia[3]: consolidacion de lo medido entre el 11 ago 2026 y el corte del puesto 2117
+   CIFRA elementos de `evidencia` que traen el 323: 1, indices 1
+   LA CIFRA VIEJA, CITADA: linea 44 de docs/plan/OPERACIONES.jsonl,
+      `evidencia` elemento 1: 'INVENTARIO.jsonl, 323 entradas'
+   CIFRA leida de ese elemento (no tecleada): 323
+   el 323 aparece TAMBIEN en el campo `nota`: SI
+
+C) LA CORRECCION, COMPUESTA CON LAS DOS CIFRAS Y SUS DOS FECHAS DE CORTE
+   CIFRA caracteres de la correccion: 1385
+   CIFRA guiones largos y medios: 0
+   LAS DOS CIFRAS CON SU FECHA DE CORTE CADA UNA (banco 9.21):
+      323 entradas con corte 2026-08-11 (la de la ficha)
+      672 entradas con corte 2026-09-07 (la de hoy)
+
+   EL TEXTO DE LA CORRECCION, ENTERO:
+   | CORRECCION DECLARADA (2026-09-07, vuelta 201, TAREA 2), POR EL CARRIL DEL BA
+   | NCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA 
+   | DE ESQUEMA (es un elemento mas de esta misma lista evidencia, que es la via 
+   | que la ficha gemela OP-L-01 uso en la vuelta 166 para su clausula equivalent
+   | e y que el acta 71, seccion 6, adjudicacion 3, adjudico CON LAS PALABRAS NO 
+   | ES PARADA). LO QUE SE CORRIGE es la clausula que en esta lista dice, verbati
+   | m: 'INVENTARIO.jsonl, 323 entradas'. LA CIFRA VIEJA NO ES UNA MENTIRA Y NO S
+   | E RETIRA: viaja con la fecha_corte de esta ficha, 2026-08-11, y con esa fech
+   | a era cierta. LO QUE ENVEJECIO ES LA EVIDENCIA. MEDIDO HOY, CON FECHA DE COR
+   | TE 2026-09-07 y contando el fichero linea a linea en la vuelta 201 con scrip
+   | ts/loop/_v201_t2_correccion_op_i_01.py: docs/plan/INVENTARIO.jsonl tiene 672
+   |  entradas (lineas no vacias), 0 lineas que no sean JSON valido, 584554 bytes
+   |  en disco y 584554 normalizados a LF. EL REPARTO POR TIPO, RECONTADO HOY Y N
+   | O COPIADO DE NINGUNA ACTA: 556 acto, 54 familia_de_ids, 20 figura, 19 defect
+   | o, 13 racimo, 10 dominio, que suma 672. EL REPARTO DE LA CIFRA VIEJA SIGUE E
+   | SCRITO EN EL CAMPO nota DE ESTA MISMA FICHA Y NO SE TOCA. NINGUN CAMPO estad
+   | o SE MUEVE con esta correccion: la vara del trabajo pendiente es el instrume
+   | nto y nunca el campo estado (recuadro de AUDITOR.md 0, decision del fundador
+   |  del 4 sep 2026).
+
+D) LA IDEMPOTENCIA Y LA GUARDA DE QUE NADA MAS SE MUEVE
+   la marca 'CORRECCION DECLARADA (2026-09-07, vuelta 201, TAREA 2)' ya esta en `evidencia`: NO
+   CIFRA claves distintas de `evidencia` que cambian de valor: 0  (ninguna)
+   CIFRA claves de la ficha antes: 18 | despues: 18
+   MISMAS CLAVES Y EN EL MISMO ORDEN: SI
+   CIFRA elementos de `evidencia` antes: 3 | despues: 4
+   LOS 3 VIEJOS SIGUEN IDENTICOS Y EN SU ORDEN: SI
+
+E) LA ESCRITURA
+   ESCRITA: la linea 44 de docs/plan/OPERACIONES.jsonl
+   docs/plan/OPERACIONES.jsonl al salir: disco 499474 bytes | LF 499474 bytes
+   crecimiento en disco: 1318 bytes
+   CIFRA lineas NO VACIAS al salir: 71
+   CIFRA lineas que NO son JSON valido al salir: 0
+
+FIN
