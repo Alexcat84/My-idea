@@ -1,0 +1,38 @@
+==============================================================================
+RE VERIFICACION DEL CIERRE DE LA VUELTA 200, SOBRE EL FICHERO FINAL
+==============================================================================
+
+POR QUE EXISTE. cerrar_reporte.py salio VERDE con sus cuatro piezas, y
+DESPUES la seccion 9 se completo a mano con los DOS NOMBRES que el punto
+2.f del encargo manda escribir ahi, porque ese instrumento compone la
+seccion 9 el solo y no admite texto anadido. Ese anadido NO puede quedarse
+sin comprobar: aqui se vuelven a correr LAS MISMAS GUARDAS PURAS de
+cerrar_reporte.py, IMPORTADAS Y NO COPIADAS, sobre el fichero tal como
+queda en disco. Ninguna guarda se afloja: se re corren.
+
+docs/loop/REPORTE.md: disco 137433 bytes | LF 137433 bytes
+   sha256 disco df86ab7d14f91463 | sha256 LF df86ab7d14f91463
+
+CIFRA cifras publicadas sin su pareja: 0
+CIFRA parejas que la guarda VE y atribuye: 3
+CIFRA lineas fuera de cerca con alguna cifra de bytes: 11
+CIFRA de esas que nombran una ruta en su misma linea: 8
+CIFRA parejas vistas y NO atribuidas: 0
+CIFRA motivos por los que la seccion 4 NO calza: 0
+CIFRA citas de arnes que NO calzan con su fichero: 0
+CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+SECCION ## 3. presente: True
+SECCION ## 4. presente: True
+SECCION ## 5. presente: True
+SECCION ## 6. presente: True
+SECCION ## 7. presente: True
+SECCION ## 8. presente: True
+SECCION ## 9. presente: True
+EL LITERAL 'SIN ESCRIBIR TODAVIA' sigue en el fichero: NO
+EL LITERAL 'PENDIENTE DE TALLAR AL CIERRE' sigue en el fichero: NO
+EL CUERPO DEL CIERRE SIGUE BYTE A BYTE DENTRO DEL REPORTE: SI
+LOS DOS ARNESES NOMBRADOS EN LA SECCION 9:
+   vuelta197_tarea2_mutacion_orden_del_turno.py     aparece 34 vez(ces) en la seccion 9
+   vuelta199_tarea1_mutacion_guardas_revividas.py   aparece 34 vez(ces) en la seccion 9
+
+FIN

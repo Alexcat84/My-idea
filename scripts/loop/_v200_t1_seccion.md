@@ -7,12 +7,13 @@ acta 199 declara que un computo de una vuelta, con prefijo de guion bajo, fuera
 del censo y fuera de la nomina y que no vigila a nadie, **no es maquinaria**.
 **Ficheros de salida, y toda cifra de abajo se cuenta de ellos:**
 `docs/loop/SALIDA_V200_T1A_REGISTRO_R60.txt` (disco 8974 bytes y LF 8974 bytes,
-`sha256` LF `24d55cd02d626c4f`),
+`sha256` `24d55cd02d626c4f` por disco y `24d55cd02d626c4f` por LF),
 `docs/loop/SALIDA_V200_T1A_REGISTRO_IDEM.txt` (disco 9100 bytes y LF 8962 bytes,
-`sha256` LF `81fa613af871114b`, y **las dos cifras no coinciden porque este se
-sello por redireccion de consola y llego con CRLF**),
+`sha256` `90d22b9de53d33cd` por disco y `81fa613af871114b` por LF, y **las cuatro
+cifras difieren entre convenciones porque este se sello por redireccion de
+consola y llego con CRLF**),
 `docs/loop/SALIDA_V200_T1B_CORRECCIONES_EN_SU_SEDE.txt` (disco 3292 bytes y LF
-3292 bytes, `sha256` LF `a805477c03bd134f`).
+3292 bytes, `sha256` `a805477c03bd134f` por disco y `a805477c03bd134f` por LF).
 
 **NINGUN LECTOR NUEVO, Y ESO ES LA MITAD DEL ENCARGO.** Rige la moratoria
 `AUDITOR.md` 6.3 y **esta vuelta no tiene ninguna excepcion**. Los numerales
@@ -66,11 +67,14 @@ cuanto la entrada se escribe**: al re-correr el registrador para probar la
 idempotencia, el siguiente libre ya era `R.61`, la guarda respondio que `R.61` no
 estaba (**y era cierto**) y escribio **una segunda entrada del mismo acta**.
 
-**MEDIDO Y NO NARRADO:** la sede paso de **1079444** a **1086030** bytes en disco
-y la serie de **52** a **53** entradas; el `sha256` LF paso de `1c56ba86ffe292f9`
-a `24c0ecd7425c2418`. **La duplicada se retiro con `git checkout --`** y la sede
-volvio a su estado del commit, **disco 1088345 bytes y LF 1072852 bytes**, con
-`sha256` LF `6d4ff7222b4e77b7`. **Nunca se commiteo.**
+**MEDIDO Y NO NARRADO:** `docs/PENDIENTES.md` paso de **1079444** a **1086030**
+bytes en disco y la serie de **52** a **53** entradas; su `sha256` **por LF** paso
+de `1c56ba86ffe292f9` a `24c0ecd7425c2418`, y **el `sha256` de disco de esos dos
+estados NO SE MIDIO en su momento, asi que no se publica ninguno**: un sha que no
+se midio no se deduce. **La duplicada se retiro con `git checkout --`** y la sede
+volvio a su estado del commit, **1088345 bytes en disco y 1072852 normalizados a
+LF**, con `sha256` **por LF** `6d4ff7222b4e77b7` y **sin cifra de disco por el
+mismo motivo**. **Nunca se commiteo.**
 
 **EL ARREGLO ES LA VARA CORRECTA, NO UN PARCHE:** la idempotencia es **por
 sujeto**, una entrada por acta, y se busca el literal `del acta de la vuelta N`
@@ -88,8 +92,9 @@ ensanche: *otra acta con el mismo numero libre* sigue dando `False`, y *el acta
 citada en prosa y no en titular* sigue dando `False`.
 
 **Y LA IDEMPOTENCIA SE PROBO DESPUES DEL ARREGLO, RE CORRIENDO CON `--escribir`:**
-la sede mide **1079444 bytes en disco y 1079444 LF** con `sha256` LF
-`1c56ba86ffe292f9` **antes y despues**, la serie sigue en **52** entradas y el
+`docs/PENDIENTES.md` mide **1079444 bytes en disco y 1079444 normalizados a LF**
+con `sha256` `1c56ba86ffe292f9` por disco y `1c56ba86ffe292f9` por LF, **antes y
+despues**; la serie sigue en **52** entradas y el
 instrumento imprime *"NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE."*
 
 #### LAS TRES CORRECCIONES DE CIFRA, CADA UNA EN SU SEDE

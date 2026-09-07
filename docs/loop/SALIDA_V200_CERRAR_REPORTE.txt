@@ -1,0 +1,115 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 200, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 200 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 27624 | saltos de linea: 420
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
+     (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del
+      reporte de la 190 salio con la etiqueta DUPLICADA porque este
+      instrumento la pega sin comprobar si ya venia puesta. SE FALLA
+      RUIDOSO: no se limpia en silencio, porque limpiar en silencio es
+      la otra mitad de la misma enfermedad)
+     apariciones de 'EL VEREDICTO DE UNA LINEA:' en el veredicto recibido: 0
+     empieza por '**': no | termina por '**': no
+     CIFRA motivos: 0
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V200_TALLADOR_CABECERA.txt             2429 bytes, 11 filas de tabla
+   scripts/loop/_v200_cierre_texto.md                     12361 bytes, sha256 070d07c095243aca
+      ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+      ## 4. LO QUE SE TOCO, Y LO QUE NO
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. PREGUNTAS, QUE NO ADIVINO
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. LO QUE LA 201 RECIBE, Y LAS DOS PARADAS
+   docs/loop/SALIDA_V183_BATERIA.txt                    92570 bytes
+   CIFRA lineas no vacias de la bateria: 1312
+   vuelta que lleva dentro el nombre del fichero: 183
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+      tramo 1   -> vuelta 200
+      tramo 2   -> vuelta 200
+      tramo 3   -> vuelta 200
+      tramo 4   -> vuelta 200
+      tramo 5   -> vuelta 200
+      tramo 6   -> vuelta 200
+      tramo 7   -> vuelta 200
+      tramo 8   -> vuelta 200
+      tramo 9   -> vuelta 200
+      tramo 10  -> vuelta 200
+      tramo 11  -> vuelta 200
+   CIFRA tramos de esa bateria con fichero en disco: 11
+   CIFRA tramos sellados EN LA VUELTA 200: 11 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): CORRIDA
+      motivo: la bateria del fichero es de la vuelta 183 y se esta cerrando la 200, pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La vuelta 200 sello 11 de sus tramos (los tramos 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), leido del asunto de su ultimo commit con git log y no tecleado, que es lo que AUDITOR.md 6.1 manda cuando dice que una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE. Trae 1312 linea(s) no vacias.
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 200
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 200
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LA VUELTA 200 CIERRA CON SUS DOS TAREAS Y CON DOS PARADAS QUE NO SE ARREGLAN AQUI: la bateria corrio ENTERA en sus ONCE '
+   CIFRA numerales hallados en el veredicto: 1
+      'DOS'      -> 2 tareas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 0
+      tareas   -> 2
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 545 bytes de hueco -> 2521 bytes de tabla pegada
+   veredicto escrito: 718 bytes
+   ESCRITO: docs/loop/REPORTE.md (135603 bytes, 2057 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja SI
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   CIFRA cifras publicadas sin su pareja: 0
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 3
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 3
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 11
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 8
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 0
+         (ninguna, y el cero va escrito)
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V200_APERTURA.txt -> 13156 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 1
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 1, en la linea 466: `git status --porcelain` 1 linea al entrar, que era el propio bloque de apertura
+      numstat  -> 0, en la linea 469: `git diff --numstat -- dataset/` 0 filas al entrar.
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+VERDE: el reporte de la vuelta 200 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

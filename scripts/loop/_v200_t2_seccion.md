@@ -3,7 +3,7 @@
 **Instrumento:** `scripts/loop/vuelta183_bateria_por_tramos.py`, **NO CLONADO**,
 que es lo que el encargo manda por defecto. **Salida unica:**
 `docs/loop/SALIDA_V183_BATERIA.txt`, **disco 92570 bytes y LF 92570 bytes**,
-`sha256` LF `aac5f56abac9e758`, **1424 lineas**. Preservacion previa en
+`sha256` `aac5f56abac9e758` por disco y `aac5f56abac9e758` por LF, **1424 lineas**. Preservacion previa en
 `docs/loop/SALIDA_V200_T2_PRESERVAR_LAS_NUEVE.txt`.
 
 **LAS DOS MITADES DE LA TRAMPA, MEDIDAS ANTES DE TOCAR NADA Y NO CREIDAS.** El
