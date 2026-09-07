@@ -1,0 +1,66 @@
+==============================================================================
+LAS TRES CORRECCIONES DE CIFRA DEL ACTA 199, EN SU SEDE
+==============================================================================
+
+A) LA SEDE, MEDIDA AL ENTRAR
+   docs/loop/reportes/REPORTE_V199.md
+   disco 54251 bytes | LF 54251 bytes
+   sha256 disco a32272ff36524041 | sha256 LF a32272ff36524041
+   CIFRA lineas por split(NL): 789 | por count(NL): 788
+   la marca 'CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200' ya esta: SI
+
+B) LOS TRES ANCLAJES, BUSCADOS Y NO TECLEADOS
+   LA CORRECCION YA ESTA ESCRITA, ASI QUE EL ANCLAJE APARECE DOS VECES:
+   la original y la que el bloque CITA. La exigencia de UNA SOLA vale
+   para el fichero SIN corregir, y aqui se dice en vez de aflojarse.
+   C.1              2 acierto(s), linea(s) 648, 708
+   C.1 (seccion 9)  1 acierto(s), linea(s) 681
+   C.2 y C.3        2 acierto(s), linea(s) 489, 745
+
+C) LA CIFRA DE LA C.1, RECOMPUTADA Y NO TECLEADA
+   comando: V.arneses_que_faltan(vara=148) y V.arneses_que_faltan(vara=0)
+   sobre scripts/loop/verificar_mutaciones_viejas.py
+   CIFRA entradas de la nomina: 135
+   CIFRA arneses que el censo reconoce: 197
+   LA VARA DEL CENSO, leida del modulo: 148
+   CIFRA ultima vuelta representada en la nomina (INFORMATIVA): 195
+   CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2
+      vuelta197_tarea2_mutacion_orden_del_turno.py
+      vuelta199_tarea1_mutacion_guardas_revividas.py
+   CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 62
+
+D) LAS CIFRAS DE LA C.2 Y LA C.3, RECONTADAS DE SU FICHERO
+   docs/plan/10_INVENTARIO.md: disco 34258 bytes | LF 33845 bytes
+   sha256 disco cd3c823e3699879f | sha256 LF 67f464d3d0b9e067
+   CIFRA lineas por split(NL): 414  (el camino del 414)
+   CIFRA lineas por count(NL): 413  (el camino del 413)
+   CIFRA el fichero acaba en salto de linea: SI
+   CIFRA lineas con el literal HUECO (sensible): 3, lineas 8, 105, 213
+   CIFRA apariciones del literal HUECO: 3
+   CIFRA lineas con hueco (insensible): 4, lineas 8, 45, 105, 213
+   CIFRA lineas con PROVISIONAL: 2, lineas 203, 398
+
+E) LO QUE SE ESCRIBE
+   NO SE ESCRIBE: la marca ya esta en la sede. IDEMPOTENTE.
+
+F) LA SEDE, REMEDIDA AL SALIR
+   disco 54251 bytes | LF 54251 bytes
+   sha256 disco a32272ff36524041 | sha256 LF a32272ff36524041
+   crecimiento en bytes LF: 0
+   la marca 'CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200' esta ahora: SI
+
+G) EL TEXTO VIEJO SIGUE ENTERO, Y SE COMPRUEBA EN VEZ DE PROMETERSE
+   LA VARA CORRECTA NO ES 'APARECE UNA VEZ', Y SE DICE POR QUE: el bloque
+   de correcciones CITA el texto viejo, asi que despues de escribir hay DOS
+   apariciones de cada literal, la original y la citada. Exigir una sola
+   seria exigir que la correccion no citara lo que corrige, que es justo lo
+   contrario de lo que EJECUTOR.md 8 manda. LA VARA ES: sigue estando, y
+   NO SE BORRO NI UNA LINEA.
+   C.1              el literal viejo sigue 2 vez(ces) en la sede
+   C.1 (seccion 9)  el literal viejo sigue 1 vez(ces) en la sede
+   C.2 y C.3        el literal viejo sigue 2 vez(ces) en la sede
+   CIFRA anclajes viejos que siguen en la sede: 3 de 3
+   CIFRA lineas del fichero viejo que YA NO ESTAN en el nuevo: 0
+   CIFRA lineas del fichero viejo: 789 | del nuevo: 789 | anadidas: 0
+
+FIN

@@ -489,6 +489,8 @@ sin abrir el fichero se lleva `323`.
 literal `PROVISIONAL` **2** veces y `HUECO` **4**, que son las otras dos clausulas
 de su `verificacion` con rastro.
 
+> **CORRECCION DECLARADA (vuelta 200, TAREA 1): la cifra C.2 y C.3 de este parrafo es falsa. El texto viejo se queda entero y sin tachar; la correccion va al final de este fichero, bajo `CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200`.**
+
 **`P.4` DISCUTIBLE MARCADO, Y VA MARCADO ANTES DE SABER SI ACIERTO.** Leo que la
 `evidencia` de `OP-I-01` **necesita una CORRECCION DECLARADA por el carril del
 banco `9.10`**, la misma via que `OP-L-01` uso en la vuelta 166 y `OP-L-03` en la
@@ -653,6 +655,8 @@ delante**, y `apertura_del_auditor.py` es el modulo que media la nomina entera.
 - **las cuatro fichas del plan siguen en `LISTA`**, con su saldo medido en la
   seccion 2 y las dos preguntas abiertas, `P.4` y `P.8`.
 
+> **CORRECCION DECLARADA (vuelta 200, TAREA 1): la cifra C.1 de este parrafo es falsa. El texto viejo se queda entero y sin tachar; la correccion va al final de este fichero, bajo `CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200`.**
+
 **Y SIGUEN FUERA, NOMBRADAS:** la guarda de codigo del hallazgo `5.3` del acta 194;
 `acumulan()` que lea la tabla; el cotejo de clon declarado; las ocho actas sin
 entrada propia en la serie (173 a 180); y **que hacer con las filas `B` del
@@ -676,9 +680,109 @@ casos y no los confunde.
 
 ATRIBUCION: NADIE la corrio, y NO tocaba, y esta vez el motivo NO es la cadencia sino el encargo. Por AUDITOR.md 6.1 la cadencia de cinco desde la 194 ponia la bateria en esta vuelta, y el encargo de la 199 LA MUEVE A LA 200 con su motivo escrito en su propia linea: que los remedios de las TAREAS 1 y 2 esten DENTRO de la nomina cuando la bateria corra, porque correrla antes mediria una maquinaria que sabemos rota. Esta vuelta lo dice en su encargo, su sello de apertura lo escribe en el bloque I, y ese mismo bloque mide CERO ficheros SALIDA_V199_BATERIA_TRAMO_N.txt en disco al entrar, sobre 38 selladas de bateria que si hay en docs/loop/ repartidas entre las vueltas 176, 183, 189 y 194. El fichero docs/loop/SALIDA_V199_BATERIA.txt NO EXISTE y por eso mide cero, y esa medicion va aqui CON SU NOMBRE en vez de callarse: un hueco declarado no es un hueco escondido. Y LO QUE ESTA VUELTA SI MIDIO DEL RADIO DE LA BATERIA, sin correrla, y con su vara al lado: la nomina de verificar_mutaciones_viejas.py entra y sale en 135 entradas y CALZA con el congelado que manda AUDITOR.md 6.3, con CASOS_DECLARADOS en 2; el censo reconoce 196 arneses; LA VARA DEL CENSO VALE 148 y decide, y CON ESA VARA hay 1 arnes del censo fuera de la nomina, pero SIN VARA hay 61, y las dos cifras se publican juntas porque un numero solo al lado de un censo de 196 y una nomina de 135 se lee como cobertura total del censo y es cobertura desde la vara para arriba; hay ademas 0 entradas invisibles al censo y 0 entradas sin sujeto congelado. EL 1 CON VARA ES NUEVO Y SE NOMBRA: es vuelta197_tarea2_mutacion_orden_del_turno.py, escrito por la 197 y nunca metido en la nomina porque el congelado lo impide, asi que la 200 NO lo va a correr, y eso es consecuencia de una regla escrita y no un descuido. NO SE PODO NI UNA ENTRADA Y NO SE ANADIO NINGUNA: los tres ficheros nuevos de esta vuelta llevan prefijo de guion bajo y quedan fuera del censo y fuera de la nomina, por el mismo congelado. Y LO QUE ESTA VUELTA SI REPARO DEL RADIO DE LA BATERIA: el arnes de la nomina que borraba la sede del turno del auditor cada vez que corria, que era la P.2 del reporte de la 197 y la TAREA 2 de este encargo, ya redirige su sede en las SEIS llamadas y su caso rojo se probo por mutacion en dos pasos.
 
+> **CORRECCION DECLARADA (vuelta 200, TAREA 1): la cifra C.1 (seccion 9) de este parrafo es falsa. El texto viejo se queda entero y sin tachar; la correccion va al final de este fichero, bajo `CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200`.**
+
 **POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
 instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
 (adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
 estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
 Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
 **una corrida de otra vuelta pegada aqui tampoco vale**.
+
+---
+
+## CORRECCIONES DECLARADAS, ESCRITAS EN LA VUELTA 200
+
+**ESTE BLOQUE LO ESCRIBE LA VUELTA 200, NO LA 199.** Sale de la seccion 3 del
+acta del auditor de la vuelta 199, que levanta **tres caidas de reporte** sobre
+este fichero, y del encargo de la 200, que manda escribirlas **cada una en su
+sede, por el carril del banco `9.10` mas `EJECUTOR.md` 8, con el texto viejo
+entero y sin tachar**. **Arriba no se ha borrado ni un caracter**: cada parrafo
+afectado lleva detras un aviso de una linea que apunta aqui.
+
+**Corte de todas las cifras de este bloque: 7 sep 2026.**
+
+### `C.1`, LA QUE ACUMULA: ERA UNO Y SON DOS, Y NO SE CORRIGE TECLEANDO EL DOS
+
+**LO QUE ESTE FICHERO DICE Y SE QUEDA DONDE ESTA:** su seccion 8 publica
+*"**1 arnes del censo queda fuera de la nomina con la vara 148**, y es
+`vuelta197_tarea2_mutacion_orden_del_turno.py`"*, y su seccion 9 repite el **1**
+con vara y el **61** sin vara, sobre un censo de **196**.
+
+**LA CIFRA NO SE CORRIGE TECLEANDO EL DOS: SE PEGA LA SALIDA DEL INSTRUMENTO,
+CORRIDO EN LA VUELTA 200** con `V.arneses_que_faltan()` sobre
+`scripts/loop/verificar_mutaciones_viejas.py`:
+
+```
+CIFRA entradas de la nomina: 135
+CIFRA arneses que el censo reconoce en scripts/loop/: 197
+LA VARA DEL CENSO, leida del modulo: 148
+CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2
+      vuelta197_tarea2_mutacion_orden_del_turno.py
+      vuelta199_tarea1_mutacion_guardas_revividas.py
+CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 62
+```
+
+| que dice este fichero | que mide la 200 | de donde sale la de hoy |
+|---|---|---|
+| fuera de la nomina con vara 148: **1** | **2** | `V.arneses_que_faltan(vara=148)` |
+| fuera de la nomina sin vara: **61** | **62** | `V.arneses_que_faltan(vara=0)` |
+| arneses que el censo reconoce: **196** | **197** | `V.arneses_del_directorio()` |
+
+**EL SEGUNDO ES `vuelta199_tarea1_mutacion_guardas_revividas.py`, Y LO ESCRIBIO
+ESTA MISMA VUELTA 199.** El **1** no era falso cuando se midio: sale del bloque
+`F` del sello de apertura de la 199, tomado **antes** de que la vuelta escribiera
+nada. **Lo que fallo es que se publico sin su corte en la seccion que traspasa
+el estado a la vuelta siguiente**, y la 200 es vuelta de bateria con la nomina
+congelada en 135, o sea que ese segundo arnes **no lo va a correr nadie**.
+**Esto no se arregla metiendolo en la nomina**: la moratoria `AUDITOR.md` 6.3 la
+congela, y meterlo seria saltarse una decision del fundador. **Se dice, y por
+eso la seccion 9 del reporte de la 200 nombra LOS DOS.**
+
+### `C.2`: EL LITERAL `HUECO` SALE 3, NO 4. **SE CORRIGE LA CIFRA**
+
+**LO QUE ESTE FICHERO DICE Y SE QUEDA DONDE ESTA:** su seccion `4.d` publica
+*"con el literal `PROVISIONAL` **2** veces y `HUECO` **4**"* sobre
+`docs/plan/10_INVENTARIO.md`.
+
+**EL ENCARGO DE LA 200 PIDE ELEGIR ENTRE CORREGIR LA CIFRA O CORREGIR LA
+ETIQUETA, Y SE DICE CUAL SE ELIGE: SE CORRIGE LA CIFRA.** El motivo es que la
+etiqueta que el parrafo escribe es **el literal**, en singular y con la palabra
+en mayusculas, y esa etiqueta describe bien la clausula de la `verificacion` que
+se estaba midiendo. **La cifra que no calzaba con ella era la del patron
+insensible a mayusculas.** Las dos se publican, cada una con su etiqueta:
+
+| etiqueta | patron | cifra de hoy | lineas |
+|---|---|---:|---|
+| lineas con el literal `HUECO` | sensible a mayusculas | **3** | 8, 105, 213 |
+| apariciones del literal `HUECO` | sensible, contando repeticiones | **3** | (no aplica) |
+| lineas que nombran un hueco | insensible a mayusculas | **4** | 8, 45, 105, 213 |
+| lineas con `PROVISIONAL` | sensible a mayusculas | **2** | 203, 398 |
+
+**LA CUARTA LINEA, LA QUE SOBRABA, ES LA 45**, y dice *hueco* en minusculas.
+**El `PROVISIONAL` **2** si calzaba y no se toca.**
+
+**ES LA MISMA ESPECIE QUE LA ERRATA DEL `pares?` QUE ESTA MISMA VUELTA CAZO EN
+SU TAREA 3:** la etiqueta nombra un sujeto y la cifra sale de otro patron.
+
+### `C.3`: EL FICHERO TIENE 413 LINEAS, NO 414. **SE CORRIGE LA CIFRA**
+
+**LO QUE ESTE FICHERO DICE Y SE QUEDA DONDE ESTA:** el mismo parrafo publica
+**414 lineas** de `docs/plan/10_INVENTARIO.md`.
+
+**LAS DOS CONVENCIONES, MEDIDAS HOY Y PUBLICADAS LAS DOS**, que es lo que esta
+casa hace mientras la convencion no este fijada:
+
+| camino | cifra de hoy |
+|---|---:|
+| `texto.split(chr(10))`, el camino del 414 | **414** |
+| `texto.count(chr(10))`, el camino del 413 | **413** |
+| el fichero acaba en salto de linea | **SI** |
+| bytes en disco / bytes normalizados a LF | **34258** / **33845** |
+| `sha256` LF | `67f464d3d0b9e067` |
+
+**SE CORRIGE LA CIFRA A 413.** `split()` sobre un texto que termina en salto
+devuelve una ultima cadena vacia que no es una linea del fichero, y por eso el
+**414** contaba una de mas. **El texto viejo se queda arriba entero**, que es la
+unica forma de que esta correccion se pueda auditar.
+

@@ -1,0 +1,137 @@
+==============================================================================
+REGISTRO DEL ACTA 199 EN LA SERIE R.N (vuelta 200, TAREA 1)
+==============================================================================
+
+A) EL NUMERO, COMPUTADO Y NO TECLEADO
+   CIFRA entradas de la serie ANTES: 51
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.60
+
+B) EL CUERPO DEL ACTA, ACOTADO EN ESTA VUELTA Y NO HEREDADO
+   docs/loop/ACTA_AUDITOR.md: disco 4635053 bytes | LF 4635053 bytes
+   CUERPO ACOTADO: lineas 69878 a 70229, 352 lineas
+
+C) LOS NUMERALES, CONTADOS DEL CUERPO ACOTADO CON LECTORES HEREDADOS
+   NINGUN LECTOR ES NUEVO. Se dice cual lee cada cosa.
+   R84.claves_entrecomilladas(prefijo '4.')  -> 5: 4.1, 4.2, 4.3, 4.4, 4.5
+   R84.claves_entrecomilladas(prefijo '5.')  -> 4: 5.1, 5.2, 5.3, 5.4
+   R84.claves_entrecomilladas(prefijo 'C.A') -> 2: C.A1, C.A2
+   R94.caidas_propias_entrecomilladas()      -> 3: C.1, C.2, C.3
+
+   EL CONTRASTE HEREDADO, PUBLICADO AL LADO Y NO ESCONDIDO:
+   R92.caidas_por_lead_heredado() -> ejecutor 4, auditor 3, huerfanas 0
+      EJE C.1   linea 70011: `C.1`, DE REPORTE, Y ACUMULA: EL REPORTE LE DICE A LA 200 QUE HAY *UN*
+      EJE C.2   linea 70035: `C.2`, DE REPORTE, NO ACUMULA (prosa):
+      EJE C.3   linea 70043: `C.3`, DE REPORTE, NO ACUMULA (prosa):
+      EJE C.2   linea 70047: UN FILO QUE MIDO Y NO COBRO, PORQUE EL REPORTE SE DESACTIVA SOLO:
+      AUD C.1   linea 70189: (sin negrita)
+      AUD C.2   linea 70189: (sin negrita)
+      AUD C.3   linea 70189: (sin negrita)
+   LA DISCREPANCIA SE DECLARA EN VEZ DE RESOLVERSE CALLANDO: el heredado
+   da 4 del ejecutor porque cuenta tambien la cita de `C.2` del parrafo
+   del FILO, que el acta declara COMO CITA y no como caida nueva; y da 3
+   del auditor porque las lee de la TABLA de la metrica, donde las tres
+   `C.n` del ejecutor estan citadas. Las cifras que esta entrada publica
+   son las de los lectores de arriba, que leen la NEGRITA QUE ABRE cada
+   caida, y las dos lecturas quedan escritas.
+
+D) LAS PREGUNTAS CONTESTADAS, CONTADAS DE LOS DOS FICHEROS Y NO DE UNO
+   LA FUENTE HAY QUE ELEGIRLA ANTES DE CONTARLA (regla del fundador, 4 sep
+   2026). Aqui se cuentan LAS DOS y se dice cual manda: los titulos `4.n`
+   del acta nombran claves `P.n`, y el REPORTE es quien decide cuales de
+   esas claves son PREGUNTAS y cuales son DISCUTIBLES.
+   CIFRA claves `P.n` nombradas en los titulos `4.n` del acta: 5
+   cuales: P.4, P.8, P.3, P.1, P.2
+   CIFRA claves `P.n` que el reporte pone en su seccion de PREGUNTAS: 4
+   cuales: P.1, P.3, P.4, P.8   (seccion: ## 6. PREGUNTAS, QUE NO ADIVINO (lineas 599 a 625))
+   CIFRA preguntas CONTESTADAS (las nombradas que el reporte llama
+      pregunta): 4, cuales: P.4, P.8, P.3, P.1
+   CIFRA claves nombradas que el reporte NO llama pregunta: 1, cuales: P.2
+   LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE CALLANDO: el acta dice en su
+   apertura y en su seccion 6 que son LAS CUATRO PREGUNTAS DEL REPORTE, y
+   sus titulos `4.n` nombran 5 claves `P.n`. Las dos son ciertas sobre
+   sujetos distintos, y el numeral del titulo de esta entrada usa el 4,
+   que es el que calza con la cifra del acta.
+
+E) LAS ADJUDICACIONES, UNA POR UNA, CON SU LINEA Y SU TITULO LITERAL
+   4.1  linea 70089: **`4.1` LA `P.4`, ADJUDICADA: SE ESCRIBE LA CORRECCION DECLARADA DE `OP-I-01`.** La
+   4.2  linea 70098: **`4.2` LA `P.8`, ADJUDICADA, Y LA VARA NO ES LA QUE EL REPORTE MIRO.** El reporte dice
+   4.3  linea 70113: **`4.3` LA `P.3`, ADJUDICADA POR EXTENSION DE LA `4.2` DEL ACTA 198.** La lista de
+   4.4  linea 70121: **`4.4` LA `P.1`, ADJUDICADA POR MI PORQUE ES MIA: EL ARNES DE LA 198 QUEDA CITADO Y NO
+   4.5  linea 70130: **`4.5` LA `P.2`, ADJUDICADA: LOS TRES LECTORES `_v199_*` NO SON MAQUINARIA.** El
+
+F) LOS HALLAZGOS, UNO POR UNO, CON SU LINEA Y SU TITULO LITERAL
+   5.1  linea 70139: **`5.1` LA `B` DEL ARCHIVO NO TIENE DEFINICION ESCRITA EN EL BANCO, Y ESO ME COSTO ONCE
+   5.2  linea 70151: **`5.2` EL LANZADOR DE LA BATERIA LE VA A MENTIR A LA VUELTA 200, Y LO MEDI
+   5.3  linea 70164: **`5.3` `AUDITOR.md` 6.1 DICE NUEVE TRAMOS Y HOY SON ONCE.** Su texto dice *"su
+   5.4  linea 70171: **`5.4` LA CAMPAÑA SIGUE SIN MOVERSE, Y AHORA SON VEINTINUEVE VUELTAS.** Medido por mi:
+
+G) LAS CAIDAS, UNA POR UNA, CON SU LINEA Y SU TITULO LITERAL
+   AUDITOR  C.A1  linea 70060: **`C.A1` MIA, DE CIFRA: MI FICHERO DE CLASES PUBLICA UN TOTAL QUE NO TIENE.** Su
+   AUDITOR  C.A2  linea 70076: **`C.A2` MIA, DE METODO: CORRI `run_phase1.py` A SECAS Y ENSUCIE `dataset/`.** Verificar
+   EJECUTOR C.1   linea 70011: **`C.1`, DE REPORTE, Y ACUMULA: EL REPORTE LE DICE A LA 200 QUE HAY *UN* ARNES DEL
+   EJECUTOR C.2   linea 70035: **`C.2`, DE REPORTE, NO ACUMULA (prosa):** la seccion 4.d dice que
+   EJECUTOR C.3   linea 70043: **`C.3`, DE REPORTE, NO ACUMULA (prosa):** la misma seccion publica **414 lineas** de
+
+H) LA METRICA, PEGADA ENTERA Y NO EXTRAIDA
+   EL LECTOR HEREDADO NO ALCANZA Y SE DICE: R95.cifras_de_la_fila_de_puestos()
+   sobre la fila de puestos (linea 70192) devuelve (None, None, None, None)
+   POR ESO LA FILA SE PEGA Y NO SE EXTRAE. Una cifra que un lector
+   heredado no sabe leer NO SE TECLEA: se cita con su linea.
+   linea 70191 | | relecturas | 1 | **334** |
+   linea 70192 | | puestos | **51 sellados, 49 cotejados, 2 en mi hueco** | **1.414** |
+   linea 70193 | | discrepancias DENTRO del marcado (el mio) | **4** | **64** |
+   linea 70194 | | discrepancias FUERA del marcado (el mio) | **8** | **187** |
+   linea 70195 | | caidas propias del auditor QUE ACUMULAN | **1** (`C.A1`, cifra tecleada en mi fichero sellado) | **segunda acta seguida de la misma especie** |
+   linea 70196 | | caidas propias del auditor, TOTAL del cuerpo | **2** (`C.A1`, `C.A2`) | |
+   linea 70197 | | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 1** |
+   linea 70198 | | caidas del ejecutor de reporte QUE ACUMULAN | **1** (`C.1`) | **racha de reporte: 1** |
+   linea 70199 | | caidas del ejecutor de reporte que NO acumulan | **2** (`C.2`, `C.3`), prosa | |
+
+I) LA DEUDA DE LA SERIE, REMEDIDA Y NO HEREDADA
+   CIFRA actas de la 173 a la 199 SIN entrada propia: 10
+   cuales: 173, 174, 175, 176, 177, 178, 179, 180, 198, 199
+   CIFRA actas del rango CON entrada propia: 17
+
+J) EL CASO POSITIVO POR MUTACION
+   NO HAY LECTOR NUEVO EN ESTE FICHERO, ASI QUE NO HAY CASO ROJO NUEVO DE
+   LECTURA QUE MUTAR, Y ESO SE DECLARA EN VEZ DE FABRICAR UNO QUE SE
+   APRUEBE SOLO (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION). LO
+   QUE SI ES PROPIO DE AQUI ES LA GUARDA DE IDEMPOTENCIA, Y SE PRUEBA:
+   LA GUARDA VIEJA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo unico
+   que convierte 'hacia falta arreglarla' en una medicion:
+   sede SIN la entrada, numero 60             esperado False nueva False vieja False VERDE
+   sede CON la entrada, numero 60             esperado True  nueva True  vieja True  VERDE
+   sede con R.600, que NO es R.60             esperado False nueva False vieja False VERDE
+   sede con la entrada en mitad               esperado True  nueva True  vieja True  VERDE
+   el acta ya registrada con OTRO numero      esperado True  nueva True  vieja False VERDE
+   otra acta con el mismo numero libre        esperado False nueva False vieja False VERDE
+   el acta citada en prosa, NO en titular     esperado False nueva False vieja False VERDE
+   CIFRA casos donde la vieja y la nueva DISCREPAN: 1
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 7 de 7
+   CIFRA casos: 7 | verdes: 7 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+K) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   EL HEREDADO CLAVA SU PROPIA VUELTA Y ESO SE DECLARA, NO SE ESCONDE:
+   R92.titulo_de_la_entrada() cierra con `del acta de la vuelta 192`,
+   porque es el registrador de la 192 y ese numero vive en su constante.
+   Aqui se SUSTITUYE ese literal por el de esta acta, y la sustitucion se
+   mide: si el literal no aparece EXACTAMENTE UNA VEZ, no se escribe nada.
+   CIFRA apariciones de 'del acta de la vuelta 192' en el titulo crudo: 1
+   titulo crudo:  Registro de las cinco adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las cuatro preguntas contestadas, las dos caidas propias del auditor y las tres caidas del ejecutor del acta de la vuelta 192
+   titulo escrito: R.60. Registro de las cinco adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las cuatro preguntas contestadas, las dos caidas propias del auditor y las tres caidas del ejecutor del acta de la vuelta 199
+
+L) LA SEDE Y LA IDEMPOTENCIA
+   sede: docs/PENDIENTES.md, 1088345 bytes en disco al entrar
+   la entrada R.60 YA ESTA ESCRITA: NO
+   ESCRITA: R.60 anadida al final de docs/PENDIENTES.md
+   sede: 1079444 bytes en disco al salir | crecimiento -8901 bytes
+   CIFRA entradas de la serie DESPUES: 52
+   CIFRA colisiones DESPUES: 0
+   CIFRA huecos DESPUES: 0
+   SIGUIENTE LIBRE DESPUES: R.61
+
+FIN

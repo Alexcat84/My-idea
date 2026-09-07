@@ -15491,3 +15491,103 @@ Actas 173 a 196 sin entrada propia en la serie: **8** (173, 174, 175, 176, 177, 
 se recomputa cada vuelta y no se hereda.** Los dos extremos del salto,
 leidos de los titulos y no tecleados: bajo `(42, 172)`, alto `(43, 181)`.
 
+
+## R.60. Registro de las cinco adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las cuatro preguntas contestadas, las dos caidas propias del auditor y las tres caidas del ejecutor del acta de la vuelta 199
+
+(Acta del auditor, vuelta 199, secciones 0, 1, 2, 3, 4, 5, 6, 7 y 8; escrito en la vuelta 200, TAREA 1.)
+
+Por adicion, como `R.21` a `R.59`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+Salida: `docs/loop/SALIDA_V200_T1A_REGISTRO_R60.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LA TAREA 2 SIN EMPEZAR, ASI QUE SUS GLOSAS NO
+AFIRMAN EN PASADO LO QUE TODAVIA NO HA PASADO** (la forma que la `6.4` del
+acta 172 adjudico como correcta). **La 200 SI es vuelta de bateria**
+(`AUDITOR.md` 6.1, cadencia de cinco desde la 194 y encargo expreso de la
+199), y por eso su TAREA 2 es la bateria entera y no hay trabajo de plan al
+lado.
+
+**NINGUN LECTOR NUEVO SE ESCRIBIO PARA ESTA ENTRADA, Y SE DICE POR QUE:** rige
+la MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3) y esta vuelta no tiene ninguna
+excepcion. Los numerales salen de lectores YA ESCRITOS:
+`R84.claves_entrecomilladas()` para las `4.n`, las `5.n` y las `C.An`, y
+`R94.caidas_propias_entrecomilladas()` para las `C.n` del ejecutor.
+
+**LOS CINCO NUMERALES DEL TITULO NO ESTAN TECLEADOS:** se cuentan del acta
+acotada (lineas 69878 a 70229, sobre un fichero de 4635053 bytes en disco y 4635053 normalizado a LF). **5 adjudicaciones numeradas (`4.1` a `4.5`), 4 hallazgos numerados en la seccion 5, 4 preguntas contestadas DENTRO de las adjudicaciones, 2 caidas propias del auditor y 3 caidas del ejecutor.**
+
+**LA CIFRA DE PREGUNTAS SE CUENTA DE LOS DOS FICHEROS Y NO DE UNO, Y LA
+DIFERENCIA SE DECLARA:** los titulos `4.n` del acta nombran **5** claves
+`P.n` (`P.4`, `P.8`, `P.3`, `P.1`, `P.2`), y la seccion `## 6. PREGUNTAS, QUE NO ADIVINO (lineas 599 a 625)` del reporte de la 199 pone **4**
+(`P.1`, `P.3`, `P.4`, `P.8`). **La que sobra es `P.2`**, que el reporte marca como DISCUTIBLE en su
+seccion 5 y no como pregunta en su seccion 6. **El numeral del titulo usa
+las 4 que el reporte llama pregunta**, que es la cifra que el acta publica
+en su apertura y en su seccion 6. **Las dos lecturas quedan escritas.**
+
+### LAS 5 ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+| clave | pregunta que contesta | linea | titulo, literal del acta |
+|---|---|---:|---|
+| `4.1` | `P.4` | 70089 | `4.1` LA `P.4`, ADJUDICADA: SE ESCRIBE LA CORRECCION DECLARADA DE `OP-I-01`.** La |
+| `4.2` | `P.8` | 70098 | `4.2` LA `P.8`, ADJUDICADA, Y LA VARA NO ES LA QUE EL REPORTE MIRO.** El reporte dice |
+| `4.3` | `P.3` | 70113 | `4.3` LA `P.3`, ADJUDICADA POR EXTENSION DE LA `4.2` DEL ACTA 198.** La lista de |
+| `4.4` | `P.1` | 70121 | `4.4` LA `P.1`, ADJUDICADA POR MI PORQUE ES MIA: EL ARNES DE LA 198 QUEDA CITADO Y NO |
+| `4.5` | `P.2` | 70130 | `4.5` LA `P.2`, ADJUDICADA: LOS TRES LECTORES `_v199_*` NO SON MAQUINARIA.** El |
+
+### LOS 4 HALLAZGOS DE LA SECCION 5
+
+- **`5.1`** (linea 70139): **`5.1` LA `B` DEL ARCHIVO NO TIENE DEFINICION ESCRITA EN EL BANCO, Y ESO ME COSTO ONCE
+- **`5.2`** (linea 70151): **`5.2` EL LANZADOR DE LA BATERIA LE VA A MENTIR A LA VUELTA 200, Y LO MEDI
+- **`5.3`** (linea 70164): **`5.3` `AUDITOR.md` 6.1 DICE NUEVE TRAMOS Y HOY SON ONCE.** Su texto dice *"su
+- **`5.4`** (linea 70171): **`5.4` LA CAMPAÑA SIGUE SIN MOVERSE, Y AHORA SON VEINTINUEVE VUELTAS.** Medido por mi:
+
+### LAS CAIDAS: 2 DEL AUDITOR Y 3 DEL EJECUTOR
+
+- **AUDITOR `C.A1`** (linea 70060): **`C.A1` MIA, DE CIFRA: MI FICHERO DE CLASES PUBLICA UN TOTAL QUE NO TIENE.** Su
+- **AUDITOR `C.A2`** (linea 70076): **`C.A2` MIA, DE METODO: CORRI `run_phase1.py` A SECAS Y ENSUCIE `dataset/`.** Verificar
+- **EJECUTOR `C.1`** (linea 70011): **`C.1`, DE REPORTE, Y ACUMULA: EL REPORTE LE DICE A LA 200 QUE HAY *UN* ARNES DEL
+- **EJECUTOR `C.2`** (linea 70035): **`C.2`, DE REPORTE, NO ACUMULA (prosa):** la seccion 4.d dice que
+- **EJECUTOR `C.3`** (linea 70043): **`C.3`, DE REPORTE, NO ACUMULA (prosa):** la misma seccion publica **414 lineas** de
+
+**EL CONTRASTE HEREDADO SE PUBLICA AL LADO Y LA DISCREPANCIA SE DECLARA:**
+`R92.caidas_por_lead_heredado()` da **4** del ejecutor y **3** del auditor
+sobre este mismo cuerpo. Las **4** del ejecutor incluyen la cita de `C.2`
+que vive en el parrafo del FILO, que el acta declara COMO CITA y no como
+caida nueva; y las **3** del auditor las lee de la TABLA de la metrica,
+donde las `C.n` del ejecutor estan citadas. **Las cifras de esta entrada son
+las de los lectores que leen la NEGRITA QUE ABRE cada caida, y las dos
+lecturas quedan escritas.**
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` NO ALCANZA SOBRE ESTA ACTA y se dice:**
+devuelve `(None, None, None, None)` sobre su fila de puestos, porque esa fila
+tiene otra forma. **Bajo la moratoria no se escribe un lector para la forma
+nueva: la fila se PEGA con su numero de linea, que es cita y no celda
+tecleada.**
+
+- (linea 70191) | relecturas | 1 | **334** |
+- (linea 70192) | puestos | **51 sellados, 49 cotejados, 2 en mi hueco** | **1.414** |
+- (linea 70193) | discrepancias DENTRO del marcado (el mio) | **4** | **64** |
+- (linea 70194) | discrepancias FUERA del marcado (el mio) | **8** | **187** |
+- (linea 70195) | caidas propias del auditor QUE ACUMULAN | **1** (`C.A1`, cifra tecleada en mi fichero sellado) | **segunda acta seguida de la misma especie** |
+- (linea 70196) | caidas propias del auditor, TOTAL del cuerpo | **2** (`C.A1`, `C.A2`) | |
+- (linea 70197) | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 1** |
+- (linea 70198) | caidas del ejecutor de reporte QUE ACUMULAN | **1** (`C.1`) | **racha de reporte: 1** |
+- (linea 70199) | caidas del ejecutor de reporte que NO acumulan | **2** (`C.2`, `C.3`), prosa | |
+
+### LAS TRES CORRECCIONES DE CIFRA QUE ESTA MISMA TAREA ESCRIBE
+
+La seccion 3 del acta levanta **tres caidas de reporte**, y las tres se
+corrigen **en su sede**, `docs/loop/reportes/REPORTE_V199.md`, por el carril
+del banco `9.10` mas `EJECUTOR.md` 8, **con el texto viejo entero y sin
+tachar**. La `C.1` es **la que acumula** y su cifra **no se corrige
+tecleando el dos**: se recomputa corriendo `V.arneses_que_faltan(vara=148)`
+en la apertura de esta vuelta.
+
+### LA DEUDA DE LA SERIE, REMEDIDA Y NO HEREDADA
+
+Actas 173 a 199 sin entrada propia en la serie: **10** (173, 174, 175, 176, 177, 178, 179, 180, 198, 199). **La cifra se
+recomputa cada vuelta y no se hereda.**
+
