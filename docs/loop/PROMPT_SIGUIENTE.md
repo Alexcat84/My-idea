@@ -1,182 +1,173 @@
-# ENCARGO DE LA VUELTA 203 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# ENCARGO DE LA VUELTA 204 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
 ## LO QUE MANDA ESTA VUELTA, Y VA DELANTE PARA QUE NO SE DEDUZCA
 
 - **RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3): **ninguna vuelta fabrica
-  arneses, guardas ni lectores nuevos.** **Y LA LINEA EXACTA YA ESTA ADJUDICADA, ASI QUE
-  NO LA VUELVAS A DISCUTIR:** el `4.5` del acta 199 dice que la moratoria prohibe *"arneses,
-  guardas y lectores QUE SE QUEDEN VIGILANDO; un computo de una vuelta que muere con ella
-  no es eso"*. **Un fichero `_v203_*` con prefijo de guion bajo, fuera del censo y fuera de
-  la nomina, ES un computo de una vuelta y NO roza la moratoria.** **La nomina sigue
-  CONGELADA en 135.**
-- **NO ES VUELTA DE BATERIA.** Corrio entera en la 200 y por la cadencia de cinco de
-  `AUDITOR.md` 6.1 **le toca a la 205**. Tu seccion 9 cierra con el **hueco declarado y
-  medido**: **nombre, bytes medidos y atribucion, las tres juntas**.
-- **EL TOPE DE SUB-TAREAS ES CINCO** y **la racha de cierres vale 4**, contada por el
-  auditor con `scripts/loop/vuelta192_racha_de_cierres.py` (vueltas 199, 200, 201 y 202).
-  **Este encargo trae CUATRO.**
+  arneses, guardas ni lectores nuevos QUE SE QUEDEN VIGILANDO**, y esa linea ya esta
+  adjudicada en el `4.5` del acta 199: **un fichero `_v204_*` con prefijo de guion bajo,
+  fuera del censo y fuera de la nomina, ES un computo de una vuelta y NO roza la
+  moratoria.** **La nomina sigue CONGELADA en 135.**
+- **NO ES VUELTA DE BATERIA. LE TOCA A LA 205**, por la cadencia de cinco de
+  `AUDITOR.md` 6.1. Tu seccion 9 cierra con el **hueco declarado y medido**: **nombre,
+  bytes medidos y atribucion, las tres juntas**.
+- **LA RACHA DE CIERRES VALE 5** si el auditor confirma el cierre de la 203, contada con
+  `scripts/loop/vuelta192_racha_de_cierres.py`. **CUENTALA TU, NO LA COPIES DE AQUI**, y
+  si el instrumento dice otra cosa, **declara la discrepancia**. Con racha por encima de
+  dos el tope es de **CINCO** sub-tareas; **este encargo trae CUATRO**.
 - **NO SE MUEVE NINGUN CAMPO `estado`.** La vara del trabajo pendiente es
   `scripts/loop/vuelta150_3_relectura_expediente.py`, nunca el campo (`AUDITOR.md` 0).
-- **NO SE MUEVE NINGUNA CLASE NI NINGUN VEREDICTO.** El `sha256` LF de
-  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra igual, y hoy vale
-  `0a77b5a35a962621` por las dos convenciones, recontado por el auditor. Publica las dos.
+- **NO SE MUEVE NINGUNA CLASE NI NINGUN VEREDICTO.** El `sha256` de
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra igual, y al cerrar la 203 valia
+  `0a77b5a35a962621` por las dos convenciones. **Publica las dos y remidelas tu.**
 - **`dataset/`, `web/` y `engine/` en cero filas de `numstat`.** Y si corres el Gate 0,
   corre **el ciclo entero**, nunca `run_phase1.py` a secas.
-- **UNA CIFRA MIA QUE TE AHORRA UN SUSTO** (hallazgo `5.2` del acta 202): tu inventario de
-  salidas se mide a si mismo y **envejece dentro de tu propia vuelta**. La 202 publico
-  **37** y hoy hay **41**, y los cuatro de mas nacieron DESPUES del bloque que los conto.
-  **No es caida, pero le falta media linea:** por el banco `9.21`, **declara junto al corte
-  los ficheros que nacen despues de medirlo.**
+- **DOS CIFRAS MIAS QUE TE AHORRAN UN SUSTO, LAS DOS APRENDIDAS EN ROJO EN LA 203.**
+  **(a)** Una pareja de bytes **completa puede ser FALSA**: si pegas a una ruta el tamano
+  que tenia **en mitad de la vuelta** y otra tarea vuelve a mover esa sede, la guarda
+  recomputa del disco al cierre y **te tumba, con razon**. **Detras de cada ruta va SU
+  tamano al cierre**; el intermedio se dice **sin nombrar la ruta**. **(b)** El markdown
+  **parte la frase donde le cabe el ancho** y deja el numero solo en su renglon sin su
+  pareja: **junta la cifra con su pareja en el MISMO renglon**. Las dos me tumbaron el
+  cierre y las dos estan en la `C.6` de mi reporte.
 
-## LO QUE EL ACTA 202 ADJUDICO Y NO TIENES QUE VOLVER A LEVANTAR
+## LO QUE EL ACTA 202 ADJUDICO Y SIGUE VIGENTE, PARA QUE NO SE VUELVA A LEVANTAR
 
-- **LA PARADA DE LA TAREA 4 DE LA 202 NO ERA PARADA** (acta 202, `4.1`), y se cayo por dos
-  sitios: **(a)** no hay nada que decidir, porque **cada acta titula sus propias secciones**
-  (`LAS ADJUDICACIONES`, `LOS HALLAZGOS`, `MIS CAIDAS PROPIAS`) y **leer el titulo que el
-  documento escribe es medir**; y **(b)** las adjudicaciones de las actas viejas **SI estan
-  numeradas**: el acta 173 trae `6.1` a `6.5` y el acta 174 trae `6.1` a `6.10`. **Lo unico
-  que les falta son las comillas inversas.**
-- **LA VARA DE LAS ACTAS ANTERIORES A LA 184, ADJUDICADA Y OBLIGATORIA** (acta 202, `4.1`,
-  por extension del `4.7` del acta 201): **el numeral se toma de la seccion cuyo PROPIO
-  TITULO lo nombra, NUNCA del numero de seccion, y dentro de ella las claves se cuentan por
-  su propia numeracion `N.M`, lleve o no comillas inversas. Y la entrada declara que uso
-  esa vara.**
-- **`OP-L-02` QUEDA EN 3 DE 3 Y AUN ASI NO SE CIERRA** (acta 202, `4.3`), y el motivo es el
-  criterio de HECHO: mientras el instrumento siga diffeando contra `46208790`, la clausula 2
-  **daria `NO CUMPLIDA` con el fallo o sin el**. **No la vuelvas a levantar y no toques su
-  `estado`.**
-- **`D.1`, `D.2`, `D.4` y `D.5` de la 202 adjudicadas A FAVOR** (acta 202, `4.2` y `4.5`).
+- **LA VARA DE LAS ACTAS ANTERIORES A LA 184** (acta 202, `4.1`, por extension del `4.7`
+  del acta 201): **el numeral se toma de la seccion cuyo PROPIO TITULO lo nombra, NUNCA
+  del numero de seccion, y dentro de ella las claves se cuentan por su propia numeracion
+  `N.M`, lleve o no comillas inversas. Y la entrada declara que uso esa vara.**
+- **`OP-L-02` QUEDA EN 3 DE 3 Y AUN ASI NO SE CIERRA** (acta 202, `4.3`), porque mientras
+  el instrumento siga diffeando contra `46208790` la clausula 2 **daria `NO CUMPLIDA` con
+  el fallo o sin el**. **No la vuelvas a levantar y no toques su `estado`.**
+- **`OP-L-01` NO SE CIERRA** (acta 202, `4.4`), y su correccion de `verificacion` ya esta
+  escrita por la 203 en su TAREA 2. **No se repite.**
 
-## TAREA 1: LOS REGISTROS. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL
+## TAREA 1: LOS REGISTROS. `R.67` Y `R.68`, LAS ACTAS 177 Y 178
 
-**Es el remedio de la `C.E1` de la 202, y va PRIMERA porque `AUDITOR.md` 1.4 pone los
-registros en la TAREA 1.**
+**Por el `4.9` del acta 201: la deuda son las 177 a 180, DOS POR VUELTA, de la mas vieja
+a la mas nueva. Eran 8, quedaban 6 y quedan 4.** Va **PRIMERA** porque `AUDITOR.md` 1.4
+pone los registros en la TAREA 1.
 
-- **LO QUE SE CORRIGE, Y ESTA MEDIDO:** `R.63` y `R.64` dicen, en `docs/PENDIENTES.md`
-  lineas **15813** y **15902**, que las adjudicaciones de esas actas viven en la
-  **seccion 6 sin clave numerada**. **Es falso**: estan numeradas. **Mide tu las dos cifras,
-  no las copies de aqui.**
-- **EL CARRIL ES EL DE `OP-L-03` DE LA 202:** banco `9.10`, **POR ADICION**, con el texto
-  viejo **entero, sin tachar y sin borrar**, y la correccion fechada debajo.
-- **Y EN LA MISMA ADICION VA EL REPARTO REAL DE LAS DOS ACTAS**, ahora que la vara esta
-  adjudicada: adjudicaciones, hallazgos, preguntas contestadas, caidas propias del auditor
-  y caidas del ejecutor, **cada numeral con la seccion de la que sale nombrada por su
-  TITULO** y **con la declaracion de que uso la vara del `4.1`**.
-- **EL COMPUTO VA EN UN `_v203_*` CON PREFIJO DE GUION BAJO**, fuera del censo y fuera de
-  la nomina. **Los lectores heredados se IMPORTAN**; lo unico que se ensancha es el patron
-  de clave, y **el ensanche va con parametro opcional para que los llamantes viejos no se
-  toquen**, que es como el acta 173 en su `6.2` adjudico que se hacen estas cosas.
-- **PUBLICA LAS DOS LECTURAS JUNTAS:** lo que el lector heredado devuelve (que es **0**, y
-  es cierto) y lo que devuelve con la vara adjudicada. **La discrepancia se declara, no se
-  resuelve copiando.**
+- **`R.67` para el acta 177 y `R.68` para el acta 178**, en `docs/PENDIENTES.md`.
+- **COMPRUEBA TU DE QUE CONVENCION SON**, no lo supongas: la 184 es la frontera, y si
+  alguna de las dos ya escribe sus claves con comillas inversas **el lector heredado
+  basta y se dice**. **La vara del `4.1` se declara igual, use la plantilla que use.**
+- **REUTILIZA EL COMPUTO DE LA 203**, `scripts/loop/_v203_reparto_de_actas_viejas.py`:
+  **impórtalo o clónalo con su cifra de difflib al lado, pero no escribas un tercero.**
+  Si lo clonas, el clon es `_v204_*` y **publica cuantas lineas vienen sin tocar**.
+- **ACOTA CADA ACTA EN ESTA VUELTA** (lineas de inicio y fin contadas hoy) y publica el
+  reparto entero, **cada numeral con la seccion de la que sale nombrada por su TITULO**.
+- **SI UN NUMERAL NO ES COMPUTABLE, DECLARALO EN VEZ DE PUBLICAR UN CERO.** La 203 midio
+  que el acta 176 titula `LA CAIDA DEL EJECUTOR, CON SU NOMBRE` y escribe su caida como
+  ``**CAIDA DE REPORTE 1:``, que ninguna de las dos formas numeradas ve: **publicar el 0
+  habria sido un cero falso.** **Publica las tres lecturas** cuando discrepen.
+- **COTEJA CONTRA LA FILA DE METRICA DE CADA ACTA**, que la escribio el auditor de
+  aquella vuelta y no tu. En la 203 calzo en las cuatro actas y es la mejor prueba de que
+  el computo no inventa nada.
+- **SI EL REPORTE ARCHIVADO NO EXISTE, NO LO FABRIQUES**, y **si existe pero NO TITULA
+  seccion de PREGUNTAS, tampoco vale el filtro**: eso es el `PD.1` de mi reporte, y hasta
+  que se adjudique **se usa la vara del `4.7` del acta 201 DECLARANDOLO**.
+- **CIERRA CON LA SERIE MEDIDA:** entradas, colisiones, huecos y siguiente libre. Al
+  cerrar la 203 valia **58, 0, 0 y `R.67`**. **Recomputala tu.**
 - **GUARDA OBLIGATORIA Y CORRIDA DOS VECES:** la segunda sella **crecimiento 0**.
 
-## TAREA 2: LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE
+## TAREA 2: LAS DOS CLAUSULAS DE `OP-I-01` QUE NO SE CAERIAN, MEDIDAS SIN FABRICAR VARA
 
-**Adjudicada por el acta 202 en su `4.4`.** El ejecutor de la 202 hizo bien en medirla y
-preguntar (`P.2`); **ahora esta adjudicada y se escribe.**
+**Adjudicado o no, esto NO cierra la ficha.** La 203 midio en su TAREA 3 que las clausulas
+**2** (`toda forma con cobertura incompleta va marcada PROVISIONAL`) y **3** (`todo hueco
+va NOMBRADO, nunca rellenado`) **no se caerian si el fallo volviera**, porque la clave
+`cobertura` de `docs/plan/INVENTARIO.jsonl` es **texto libre**.
 
-- **EL CARRIL, IDENTICO AL DE `OP-L-03` DE LA 202:** banco `9.10`, **POR ADICION**, un
-  elemento mas de la misma lista, **sin clave nueva de esquema** y **sin tocar ni tachar el
-  texto viejo**. La ficha vive en la **linea 41**, y se cita por **linea mas indice**.
-- **QUE TIENE QUE DECIR, Y LAS TRES SON OBLIGATORIAS, MEDIDAS POR TI HOY:**
-  1. que `las_once()` **no devuelve once**: devuelve toda cabecera `LD` que haya hoy en
-     `docs/plan/LECTURAS_DIRIGIDAS.md`. **Recuenta cuantas devuelve** y **cuantas habia al
-     corte 2026-09-04**, y publica las dos con sus fechas.
-  2. la **comparacion resuelta** de hoy contra la que la ficha tiene congelada, y **los
-     puestos implicados**, cada cifra con su corte.
-  3. **Y LA QUE NO PUEDE FALTAR:** que en comparacion **LITERAL** siguen apareciendo
-     **0**, o sea que **la clausula 1 NO se cae**: lo que envejecio es la cifra de la
-     excepcion. **Sin esa linea la correccion se leeria como que la clausula se rompio, y
-     es falso.**
-- **LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA:** con su corte era cierta.
-- **`OP-L-01` NO SE CIERRA** (acta 202, `4.4`), y su `estado` no se toca.
-- **GUARDA OBLIGATORIA:** mide contra `HEAD` que **1 sola linea** de `OPERACIONES.jsonl`
-  difiere (la **41**), que de esa ficha cambia **1 sola clave** (`verificacion`), que los
-  **6** elementos viejos siguen **identicos y en su orden**, que su `estado` entra y sale
-  igual, y que **0 de las 71 fichas** mueven `estado`. **Corrida DOS VECES**, con
-  **crecimiento 0** la segunda.
+- **LO QUE SE PIDE ES MEDIR EL TAMANO DEL AGUJERO, NO TAPARLO.** Cuenta **cuantas formas
+  distintas** toma hoy el campo `cobertura` en las **672** entradas (recuenta la cifra),
+  **agrupadas por su forma**, y **cuantas entradas quedarian fuera de cualquier vara
+  razonable**. **Publica la busqueda positiva**, nunca una negativa.
+- **NO ESCRIBAS LA VARA.** Escribir la vara es maquinaria y la moratoria la prohibe: es
+  la `P.3` de mi reporte. **Lo que esta vuelta produce es la MEDICION del agujero, para
+  que quien la escriba despues sepa de que tamano es.**
+- **EL INSTRUMENTO SE IMPORTA Y SE CORRE TAL CUAL, COMPROBANDO ANTES SI ESCRIBE.** Y si
+  escribe, **dilo y usa el protocolo del sello**: medir, correr, restaurar con
+  `git checkout --` y remedir. `vuelta169_tarea3_op_i_01.py` **SI escribe**, sobre
+  `docs/loop/RECOMPUTO_V169.jsonl`, sellado en la vuelta 169. **Ya esta medido: no te
+  sorprenda.**
+- **PROPON, NO CIERRES.** Y **no toques el `estado`** de `OP-I-01`.
 
-## TAREA 3: `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL
+## TAREA 3: LA DISCREPANCIA DE COMPONENTES QUE EL PROPIO INSTRUMENTO DECLARA
 
-**Es la unica de las cuatro que la vara del plan da como trabajo real y que nadie ha
-medido contra el criterio de HECHO.** La 201 le corrigio la `evidencia`; **nadie le ha
-mirado la `verificacion`.**
+**La 203 la reprodujo y no la persiguio, y eso se dice:** al correr
+`vuelta169_tarea3_op_i_01.py` en esta vuelta, su bloque `E` publica que **el fichero
+sellado de componentes trae 332 lineas** (**54 ABIERTO**, **278 CERRADO**) y **la corrida
+de hoy da 47** (**21** y **26**), y su propio veredicto de reproduccion sale **`False`**.
 
-- **MIDELA CONTRA EL CRITERIO DE HECHO** de `docs/plan/08_VERIFICACION.md`, **citado por
-  linea**, con su `verificacion` citada por **linea 44 mas indice** (comprueba la linea, no
-  la supongas).
-- **Y APLICA EL CRITERIO COMO EL ACTA 202 LO APLICO EN SU `4.3`:** no basta con que las
-  clausulas salgan cumplidas hoy. **Pregunta, clausula por clausula, si SE CAERIA SI EL
-  FALLO VOLVIERA**, y si alguna solo pasa porque alguien la remide a mano, **dilo**: esa
-  ficha no se cierra.
-- **Si hay instrumentos suyos, se IMPORTAN y se corren tal cual**, comprobando **ANTES**
-  que no escriben. **Y COMPRUEBALO DE VERDAD:** el auditor de la 202 se salto esa
-  comprobacion, corrio `vuelta192_racha_de_cierres.py` y **le reescribio a la vuelta 192 su
-  salida sellada**. **Es su caida `C.2` y te la deja escrita para que no la repitas.**
-- **PROPON, NO CIERRES.**
+- **MIDE DE DONDE SALE ESA DIFERENCIA**, con el resolutor delante por `P.1`, y
+  **declarala**: cuantas componentes del sellado no estan hoy, cuantas hay hoy que no
+  estaban, y **si la causa es el universo, la fecha o el instrumento**.
+- **NO REGENERES LA NOMINA SELLADA.** `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` **se
+  CUENTA, no se reescribe**, y esa es la letra del propio instrumento.
+- **SI DE AQUI SALE QUE UNA CIFRA PUBLICADA ENVEJECIO, VA POR EL CARRIL DEL BANCO `9.10`,
+  POR ADICION Y EN SU SEDE**, con el texto viejo entero y sin tachar. **Si sale que hace
+  falta codigo, PARA Y LO TRAES.**
 
-## TAREA 4: LA DEUDA. `R.65` Y `R.66`, LAS ACTAS 175 Y 176
+## TAREA 4: EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO
 
-**Por el `4.9` del acta 201: la deuda son las 175 a 180, DOS POR VUELTA, de la mas vieja a
-la mas nueva.** Va **detras** del trabajo de plan y nunca delante. **Eran 8, quedan 6.**
+**Las cuatro fichas reales estan medidas: `OP-L-03` (202), `OP-L-02` (202), `OP-L-01`
+(202 y 203) y `OP-I-01` (203). Ninguna se cerro, y las cuatro con su motivo escrito.**
+**La pregunta que nadie ha contestado con una cifra es: QUE QUEDA.**
 
-- **`R.65` para el acta 175 y `R.66` para el acta 176**, en `docs/PENDIENTES.md`.
-- **LAS DOS SON DE LA CONVENCION VIEJA**, asi que **usan la vara adjudicada en el `4.1`
-  del acta 202**, la misma que la TAREA 1, y **cada entrada declara que la uso**.
-  **Reutiliza el computo de la TAREA 1: no escribas un segundo.**
-- **ACOTA CADA ACTA EN ESTA VUELTA** (lineas de inicio y fin contadas hoy) y publica el
-  reparto entero.
-- **SI EL REPORTE ARCHIVADO DE ESA VUELTA NO EXISTE, NO LO FABRIQUES:** declara la
-  ausencia con `os.path.isfile` y `os.path.getsize` y usa la vara del `4.7` del acta 201,
-  **declarandolo**.
-- **CIERRA CON LA SERIE MEDIDA:** entradas, colisiones, huecos y siguiente libre. Al abrir
-  esta vuelta vale **56 entradas, 0 colisiones, 0 huecos, siguiente libre R.65**,
-  recomputado por el auditor con `serie_de_registros.py`.
+- **CUENTA LAS 71 FICHAS DE `docs/plan/OPERACIONES.jsonl` POR `estado`**, y **cruza esa
+  cuenta con la vara del trabajo pendiente**, que es
+  `scripts/loop/vuelta150_3_relectura_expediente.py` **y nunca el campo `estado`**.
+- **PUBLICA LAS DOS LECTURAS JUNTAS Y DECLARA LA DISCREPANCIA** si la hay. **Ese cruce es
+  el punto del encargo**, no la suma.
+- **NINGUNA FICHA SE CIERRA Y NINGUN `estado` SE MUEVE.** Lo que esta tarea produce es
+  **el mapa de lo que queda**, para que el fundador decida el orden.
+- **NOMBRA, SIN RESOLVERLAS, LAS QUE YA ESTAN MEDIDAS Y NO SE PUEDEN CERRAR HOY**, con la
+  linea del acta que lo adjudico al lado.
 
-## LO QUE NO ENTRA, NOMBRADO PARA QUE LA 204 NO LO REDESCUBRA
+## LO QUE NO ENTRA, NOMBRADO PARA QUE LA 205 NO LO REDESCUBRA
 
 - **LA OPERACION DE CODIGO DE LA ESCALADA, ENCARGADA Y CON SU EJECUCION SUSPENDIDA**
-  (acta 202, `4.6`). La racha de reporte vale **2** y `AUDITOR.md` 1.2 obliga a encargarla;
-  la moratoria `6.3` prohibe fabricarla porque **es una guarda que se queda vigilando**.
-  **Queda escrita con su alcance** (una pieza de `cerrar_reporte.py` que, cuando el reporte
-  declare una PARADA, exija la **medicion POSITIVA de cada premisa de hecho** en que se
-  apoya, con su fichero sellado, y caiga en ROJO si falta, con su caso por mutacion
-  delante) **y se ejecuta en la PRIMERA vuelta despues de que la moratoria se levante.**
-  **ARRASTRALA EN TU PROPIO ENCARGO A LA 204 PARA QUE NO SE PIERDA.**
+  (acta 202, `4.6`), **ARRASTRADA AQUI PARA QUE NO SE PIERDA**: una pieza de
+  `cerrar_reporte.py` que, cuando el reporte declare una PARADA, exija la **medicion
+  POSITIVA de cada premisa de hecho** en que se apoya, con su fichero sellado, y **caiga
+  en ROJO si falta**, con su caso por mutacion delante. `AUDITOR.md` 1.2 obliga a
+  encargarla y la moratoria `6.3` prohibe fabricarla porque **es una guarda que se queda
+  vigilando**. **Se ejecuta en la PRIMERA vuelta despues de que la moratoria se levante.**
+  **VUELVE A ARRASTRARLA EN TU ENCARGO A LA 205.**
+- **LA VARA ESCRITA PARA `cobertura`**, que las clausulas 2 y 3 de `OP-I-01` necesitan
+  para caerse. Es codigo permanente: **auditoria integral**.
 - **La reparacion del HEAD envejecido** de `vuelta170_tarea5b_veredicto_op_l_02.py`
-  (acta 201, `4.2`). Es codigo permanente: **auditoria integral**. **Y de ella depende que
-  `OP-L-02` se pueda cerrar.**
+  (acta 201, `4.2`). **De ella depende que `OP-L-02` se pueda cerrar.**
 - **El cierre del turno del auditor que se reabre despues de declarar las clases**
-  (acta 201, `5.1`, y acta 202, `5.1`: **segunda vez, y esta con los tres prohibidos y un
-  destape dentro**). Es codigo permanente: **auditoria integral**.
+  (acta 201, `5.1`; acta 202, `5.1`).
 - **Los dos arneses que el censo ve y la nomina congelada no tiene** (acta 202, `5.3`).
 - **Podar la nomina**, **mover una clase**, **cerrar una ficha por tu cuenta**, **anadir
   `docs/PENDIENTES.md` como quinta sede de cifra publicada** y **que hacer con las filas
   `B` del archivo**.
 
-## PARA EL AUDITOR DE LA 203, Y NO ES OPCIONAL
+## PARA EL AUDITOR DE LA 204
 
-**TU ACTA ABRE CON EL REMEDIO DE LA `C.1`, COMO TAREA BLOQUEANTE TUYA Y ANTES DE VERIFICAR
-NADA**, por LA CAIDA DEL AUDITOR GANA DIENTES: son **tres actas seguidas** tocando
-`REPORTE.md` fuera del carril (200, 201 y 202). **El remedio no es la linea que ya fallo
-dos veces:** escribe tu **plan de apertura ANTES de tu primer comando**, en
-`docs/loop/_auditor_v203_orden_de_apertura.txt`, con los comandos que vas a correr hasta
-`sellar()` **listados uno a uno**, y despues **no corras ninguno que no este en esa lista**.
-**Y publica el marcador en su forma canonica como PRIMERA cifra de tu verificacion**: dos
-actas seguidas han caido en rojo por meter otra cifra con la palabra `filas` delante.
+**LA 203 NO TOCO `REPORTE.md` FUERA DEL CARRIL Y NO LEVANTO NINGUNA PARADA**, asi que el
+remedio bloqueante de la `C.1` de tu acta anterior **solo se repite si la 203 reincidio**;
+**mide antes de exigirlo.** **Publica el marcador en su forma canonica como PRIMERA cifra
+de tu verificacion.** Y **ANTES DE CORRER CUALQUIER INSTRUMENTO, COMPRUEBA SI ESCRIBE**:
+el de la racha y el de `OP-I-01` **los dos escriben**, y los dos estan medidos por la 203.
+
+**Y HAY TRES COSAS DE LA 203 QUE PIDEN ADJUDICACION, NO OPINION:** el `D.1` (un parametro
+opcional en un fichero permanente bajo la moratoria, que el encargo mando), el `D.3` (la
+regla de cuando un numeral de caidas es computable) y el `PD.1` (un reporte archivado que
+existe pero no titula seccion de PREGUNTAS).
 
 ## EL CIERRE
 
-Cierra tu propio reporte con `scripts/loop/cerrar_reporte.py` y sus cuatro piezas: si
-cierra, la racha de cierres pasa a **5**. Marca tus discutibles **antes de saber si
-aciertas**. Toda cifra que publiques sale del instrumento corrido **en esta vuelta**; una
-nota vieja o un acta previa se citan **como contraste**, y si discrepan de la medicion de
-hoy **la discrepancia se declara en vez de resolverse copiando**. **Y antes de declarar una
-PARADA, mide su premisa EN POSITIVO y pega la medicion:** las dos ultimas vueltas pararon
-sobre premisas que nunca se midieron asi, y la racha de reporte esta en **2**.
+Cierra tu propio reporte con `scripts/loop/cerrar_reporte.py` y sus cuatro piezas. Marca
+tus discutibles **antes de saber si aciertas**. Toda cifra que publiques sale del
+instrumento corrido **en esta vuelta**; una nota vieja o un acta previa se citan **como
+contraste**, y si discrepan de la medicion de hoy **la discrepancia se declara en vez de
+resolverse copiando**. **Y antes de declarar una PARADA, mide su premisa EN POSITIVO y
+pega la medicion.**
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice una
 regla vigente, paras y lo traes. No adivines.

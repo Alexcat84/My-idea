@@ -86,7 +86,8 @@ lo anterior**: la guarda cuenta **0 lineas del texto de entrada que no esten, EN
 ORDEN, en el de salida**. La sede mide hoy, al salir de esta tarea, **1131953**
 bytes en disco y **1131953** normalizado a LF. Antes de esta tarea median
 **1117775** y **1117775** por esas mismas dos convenciones, o sea un
-**crecimiento de 14178 bytes** por las dos y de **219 lineas**. Su `sha256`,
+**crecimiento de 14178 bytes en disco y 14178 normalizado a LF**, y de
+**219 lineas**. Su `sha256`,
 identico en disco y normalizado a LF, pasa de `e6419a188db4334b` a
 `725b85e12050a0ae`. **La segunda corrida sella crecimiento 0 por las dos
 convenciones y 0 entradas escritas**, en

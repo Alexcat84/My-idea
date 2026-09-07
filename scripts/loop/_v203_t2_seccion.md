@@ -85,10 +85,11 @@ bytes** por las dos. Su `sha256`, identico en disco y normalizado a LF, pasa de
 | **0 de las 71** fichas mueven `estado` | **0 de 71**, y **0** fichas aparecen o desaparecen |
 | `git diff --numstat` de esa sede | **1 fila**, `1 1 docs/plan/OPERACIONES.jsonl` |
 
-**LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0**, en
-`docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01_IDEM.txt`: **0 bytes de crecimiento
-por las dos convenciones**, la ficha reconocida como **ya corregida**, y el
-`sha256` de la sede identico al de la salida de la primera.
+**LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0**, y su salida
+`docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01_IDEM.txt` mide **8644** bytes en disco
+y **8644** normalizado a LF. **El crecimiento de la sede en esa corrida es 0 por
+las dos convenciones**, la ficha se reconoce como **ya corregida**, y el `sha256`
+de la sede queda identico al de la salida de la primera.
 
 **2.f UNA CAIDA MIA, CAZADA ANTES DE PUBLICARSE Y DECLARADA.** En la primera
 prueba de idempotencia el elemento compuesto media **11161** caracteres en la

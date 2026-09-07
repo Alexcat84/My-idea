@@ -32,11 +32,17 @@ actas antes de escribir el patron. Son la negrita **con** comillas inversas (la
 forma de la 184 en adelante), la negrita **sin** comillas inversas (las
 ADJUDICACIONES de las actas 173 a 176) y el **titular markdown** `### 4.1` (los
 HALLAZGOS de las actas 173 y 174). **Y LA TRAMPA QUE EL PATRON ESQUIVA TAMBIEN
-ESTA MEDIDA:** en el cuerpo de estas actas hay lineas como
-``**3.388 filas, A 551, B 72**`` y ``**32.568 bytes**``, que son **cifras con
-separador de millar y no claves**; no se cuelan porque la clave se busca por su
+ESTA MEDIDA:** en el cuerpo de estas actas hay lineas que empiezan por
+negrita y siguen por un numero con **separador de millar**, y **no son claves**;
+las dos que este computo probo van cercadas abajo como la cita que son. No se
+cuelan porque la clave se busca por su
 prefijo exacto, que es **el numero de la seccion**, y `3.` y `32.` no son el
 numero de ninguna seccion mirada. **Los dos casos estan en la tabla de mutacion.**
+
+```
+**3.388 filas, A 551, B 72**
+**32.568 bytes**
+```
 
 **1.d EL REPARTO REAL, POR LA VARA ADJUDICADA, CONTADO DEL FICHERO DE SALIDA.**
 Acta **173** acotada en las lineas **58941 a 59447** (**507** lineas) y acta
@@ -75,13 +81,16 @@ las dos cifras quedan escritas dentro de cada entrada.
 
 **1.g LO QUE SE ESCRIBIO, Y SOLO POR ADICION.** Contado del fichero de salida:
 el bloque de `R.63` mide **7911** bytes y **127** lineas, y el de `R.64` mide
-**8260** bytes y **129** lineas. `docs/PENDIENTES.md` mide hoy, al salir de esta
-tarea, **1117775** bytes en disco y **1117775** normalizado a LF. Antes de esta
-tarea median **1101602** y **1101602** por esas mismas dos convenciones, o sea un
-**crecimiento de 16173 bytes** por las dos y de **256 lineas**. Su `sha256`,
+**8260** bytes y **129** lineas. La sede entro en **1101602** bytes en disco y
+**1101602** normalizado a LF, y salio de esta tarea en **1117775** y **1117775**
+por esas mismas dos convenciones, o sea **16173** de crecimiento por las dos y
+**256** lineas. Su `sha256`,
 identico en disco y normalizado a LF, pasa de `04228d4c0fcea65c` a
 `e6419a188db4334b`. Las entradas pasan a vivir en las lineas **15766 a 15991** y
-**15992 a 16209**.
+**15992 a 16209**. **LA RUTA NO SE NOMBRA EN ESTA FRASE A PROPOSITO, Y SE DICE
+POR QUE:** la TAREA 4 vuelve a mover esta misma sede, asi que su tamano de HOY no
+es el de esta linea; **el tamano al cierre, pegado a su ruta, va en la seccion
+3**, que es donde una guarda que recomputa del disco lo puede cotejar.
 
 **1.h LA GUARDA, Y LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0.** La guarda del texto
 viejo cuenta **0 lineas del texto de entrada que no esten, EN ORDEN, en el de
