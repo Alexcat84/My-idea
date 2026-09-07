@@ -75,11 +75,12 @@ las dos cifras quedan escritas dentro de cada entrada.
 
 **1.g LO QUE SE ESCRIBIO, Y SOLO POR ADICION.** Contado del fichero de salida:
 el bloque de `R.63` mide **7911** bytes y **127** lineas, y el de `R.64` mide
-**8260** bytes y **129** lineas. `docs/PENDIENTES.md` pasa de **1101602** bytes
-en disco y **1101602** normalizado a LF, con `sha256` LF `04228d4c0fcea65c`, a
-**1117775** bytes en disco y **1117775** normalizado a LF, con `sha256` LF
-`e6419a188db4334b`: **crecimiento 16173 bytes** por las dos convenciones y
-**256 lineas**. Las entradas pasan a vivir en las lineas **15766 a 15991** y
+**8260** bytes y **129** lineas. `docs/PENDIENTES.md` mide hoy, al salir de esta
+tarea, **1117775** bytes en disco y **1117775** normalizado a LF. Antes de esta
+tarea median **1101602** y **1101602** por esas mismas dos convenciones, o sea un
+**crecimiento de 16173 bytes** por las dos y de **256 lineas**. Su `sha256`,
+identico en disco y normalizado a LF, pasa de `04228d4c0fcea65c` a
+`e6419a188db4334b`. Las entradas pasan a vivir en las lineas **15766 a 15991** y
 **15992 a 16209**.
 
 **1.h LA GUARDA, Y LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0.** La guarda del texto

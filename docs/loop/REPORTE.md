@@ -140,7 +140,7 @@ tabla tallada entera cuando la vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL, que es el remedio de la `C.E1` de la 202 y va PRIMERA porque `AUDITOR.md` 1.4 pone los registros en la TAREA 1. **LO QUE SE CORRIGE ES UNA FRASE FALSA**: las dos entradas dicen que las adjudicaciones de las actas 173 y 174 viven en la **seccion 6 sin clave numerada**, y el acta 202 midio en su `4.1` que **SI estan numeradas** (la 173 de `6.1` a `6.5` y la 174 de `6.1` a `6.10`), y que lo unico que les falta son las comillas inversas. **Las dos lineas se miden aqui y no se copian del encargo.** **EL CARRIL ES EL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, con el texto viejo **entero, sin tachar y sin borrar**, y la correccion fechada debajo. **Y EN LA MISMA ADICION VA EL REPARTO REAL** de las dos actas por la vara adjudicada en el `4.1`: **el numeral se toma de la seccion cuyo PROPIO TITULO lo nombra, nunca del numero de seccion**, y dentro de ella las claves se cuentan por su propia numeracion `N.M`, **lleve o no comillas inversas**; y **cada entrada declara que uso esa vara**. **EL COMPUTO VA EN UN `_v203_*`**, fuera del censo y de la nomina; **los lectores heredados se IMPORTAN** y lo unico que se ensancha es el patron de clave, **con parametro opcional para que los llamantes viejos no se toquen**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS** (el `0` del heredado, que es cierto, y lo que da la vara adjudicada) y **la discrepancia se declara**. **GUARDA OBLIGATORIA Y CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA** | `docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`, `_IDEM.txt`, `docs/PENDIENTES.md` (lineas 15766 a 15991 y 15992 a 16209), `scripts/loop/_v203_reparto_de_actas_viejas.py` |
-| **TAREA 2** | LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE, adjudicada por el acta 202 en su `4.4`. **EL CARRIL, IDENTICO AL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, un elemento mas de la misma lista, **sin clave nueva de esquema** y **sin tocar ni tachar el texto viejo**. La ficha vive en la **linea 41** y se cita por **linea mas indice**. **TRES COSAS OBLIGATORIAS, MEDIDAS HOY**: que `las_once()` **no devuelve once** sino toda cabecera `LD` que haya hoy en `docs/plan/LECTURAS_DIRIGIDAS.md`, con **la cifra de hoy y la del corte 2026-09-04 y sus dos fechas**; la **comparacion resuelta** de hoy contra la congelada y **los puestos implicados**, cada cifra con su corte; y **la que no puede faltar**, que en comparacion **LITERAL** siguen apareciendo **0**, o sea que **la clausula 1 NO se cae** y lo que envejecio es la cifra de la excepcion. **LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA**: con su corte era cierta. **`OP-L-01` NO SE CIERRA** y su `estado` no se toca. **GUARDA OBLIGATORIA**: **1 sola linea** de `OPERACIONES.jsonl` distinta (la **41**), **1 sola clave** (`verificacion`), los **6** elementos viejos **identicos y en su orden**, su `estado` igual al entrar y al salir, y **0 de las 71 fichas** moviendo `estado`. **CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE, adjudicada por el acta 202 en su `4.4`. **EL CARRIL, IDENTICO AL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, un elemento mas de la misma lista, **sin clave nueva de esquema** y **sin tocar ni tachar el texto viejo**. La ficha vive en la **linea 41** y se cita por **linea mas indice**. **TRES COSAS OBLIGATORIAS, MEDIDAS HOY**: que `las_once()` **no devuelve once** sino toda cabecera `LD` que haya hoy en `docs/plan/LECTURAS_DIRIGIDAS.md`, con **la cifra de hoy y la del corte 2026-09-04 y sus dos fechas**; la **comparacion resuelta** de hoy contra la congelada y **los puestos implicados**, cada cifra con su corte; y **la que no puede faltar**, que en comparacion **LITERAL** siguen apareciendo **0**, o sea que **la clausula 1 NO se cae** y lo que envejecio es la cifra de la excepcion. **LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA**: con su corte era cierta. **`OP-L-01` NO SE CIERRA** y su `estado` no se toca. **GUARDA OBLIGATORIA**: **1 sola linea** de `OPERACIONES.jsonl` distinta (la **41**), **1 sola clave** (`verificacion`), los **6** elementos viejos **identicos y en su orden**, su `estado` igual al entrar y al salir, y **0 de las 71 fichas** moviendo `estado`. **CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA. CORRECCION ESCRITA POR ADICION. LA FICHA NO SE CIERRA** | `docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01.txt`, `_IDEM.txt`, `docs/plan/OPERACIONES.jsonl` (linea 41, elemento 7 de `verificacion`) |
 | **TAREA 3** | `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL: **la unica de las cuatro que la vara del plan da como trabajo real y que nadie ha medido contra el criterio de HECHO**. La 201 le corrigio la `evidencia`; **nadie le ha mirado la `verificacion`.** Se mide contra el criterio de hecho de `docs/plan/08_VERIFICACION.md` **citado por linea**, con su `verificacion` citada por **linea 44 mas indice** (**se comprueba la linea, no se supone**). **Y EL CRITERIO SE APLICA COMO EL ACTA 202 LO APLICO EN SU `4.3`**: no basta con que las clausulas salgan cumplidas hoy, se pregunta **clausula por clausula si SE CAERIA SI EL FALLO VOLVIERA**, y si alguna solo pasa porque alguien la remide a mano, **se dice, y esa ficha no se cierra**. **Si hay instrumentos suyos se IMPORTAN y se corren tal cual**, comprobando **ANTES** que no escriben, y **comprobandolo de verdad**, que es la caida `C.2` del auditor de la 202. **PROPONE, NO CIERRA** | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LA DEUDA. `R.65` Y `R.66`, LAS ACTAS 175 Y 176, por el `4.9` del acta 201: la deuda son las **175 a 180**, **DOS POR VUELTA**, de la mas vieja a la mas nueva. Va **DETRAS** del trabajo de plan y nunca delante. **Eran 8 y quedan 6.** `R.65` para el **acta 175** y `R.66` para el **acta 176**, en `docs/PENDIENTES.md`. **LAS DOS SON DE LA CONVENCION VIEJA**, asi que usan **la vara adjudicada en el `4.1` del acta 202**, la misma que la TAREA 1, y **cada entrada declara que la uso**. **SE REUTILIZA EL COMPUTO DE LA TAREA 1: no se escribe un segundo.** **Cada acta se acota EN ESTA VUELTA** por linea de inicio y fin, con su reparto entero. **SI EL REPORTE ARCHIVADO NO EXISTE, NO SE FABRICA**: se declara la ausencia con `os.path.isfile` y `os.path.getsize` y se usa la vara del `4.7` del acta 201, **declarandolo**. **CIERRA CON LA SERIE MEDIDA**: entradas, colisiones, huecos y siguiente libre | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -226,11 +226,12 @@ las dos cifras quedan escritas dentro de cada entrada.
 
 **1.g LO QUE SE ESCRIBIO, Y SOLO POR ADICION.** Contado del fichero de salida:
 el bloque de `R.63` mide **7911** bytes y **127** lineas, y el de `R.64` mide
-**8260** bytes y **129** lineas. `docs/PENDIENTES.md` pasa de **1101602** bytes
-en disco y **1101602** normalizado a LF, con `sha256` LF `04228d4c0fcea65c`, a
-**1117775** bytes en disco y **1117775** normalizado a LF, con `sha256` LF
-`e6419a188db4334b`: **crecimiento 16173 bytes** por las dos convenciones y
-**256 lineas**. Las entradas pasan a vivir en las lineas **15766 a 15991** y
+**8260** bytes y **129** lineas. `docs/PENDIENTES.md` mide hoy, al salir de esta
+tarea, **1117775** bytes en disco y **1117775** normalizado a LF. Antes de esta
+tarea median **1101602** y **1101602** por esas mismas dos convenciones, o sea un
+**crecimiento de 16173 bytes** por las dos y de **256 lineas**. Su `sha256`,
+identico en disco y normalizado a LF, pasa de `04228d4c0fcea65c` a
+`e6419a188db4334b`. Las entradas pasan a vivir en las lineas **15766 a 15991** y
 **15992 a 16209**.
 
 **1.h LA GUARDA, Y LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0.** La guarda del texto
@@ -245,5 +246,111 @@ el `sha256` LF de la sede **identico** a la salida de la primera.
 
 **1.i LO QUE NO SE TOCO:** ningun campo `estado`, ninguna clase, ningun
 veredicto, y **cero lineas de `numstat`** en `dataset/`, `web/` y `engine/`.
+
+### TAREA 2. LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE
+
+**ADJUDICADA POR EL ACTA 202 EN SU `4.4`.** El ejecutor de la 202 midio la
+discrepancia y **pregunto** en su `P.2` en vez de escribirla por su cuenta.
+Ahora esta adjudicada, y se escribe.
+
+**2.a EL INSTRUMENTO SE IMPORTA, NO SE CLONA, Y ANTES SE COMPRUEBA DE VERDAD QUE
+NO ESCRIBE.** `scripts/loop/vuelta166_tarea2_correccion_op_l_01.py` mide **25900**
+bytes en disco y **25900** normalizado a LF, con `sha256` identico por las dos
+convenciones, disco y normalizado a LF: `2886775eb6c29db5`. Leido antes de
+llamarlo, trae **2 lineas con marca de escritura en disco**, las **431** y
+**432**, y **las dos viven dentro de su `main()`**. De el se llaman
+**`las_once()`, `mapa_de_alias()`, `veredictos()`, `medir_clausula_1()` y su
+`CABECERA_LD`**, y **su `main()` no se llama**. **Esa comprobacion es la caida
+`C.2` del auditor de la 202**, que corrio un instrumento sin mirar antes si
+escribia y le reescribio a la vuelta 192 su salida sellada. **Aqui se miro
+primero.**
+
+**2.b LAS TRES COSAS QUE LA CORRECCION TENIA QUE DECIR, LAS TRES MEDIDAS HOY.**
+
+**LA PRIMERA, `las_once()` NO DEVUELVE ONCE.** Devuelve **toda cabecera `LD` que
+haya HOY** en `docs/plan/LECTURAS_DIRIGIDAS.md`. Medido con el resolutor delante
+(`P.1`): **3853** ficheros de nodo, **761** alias en el mapa, y **27** cabeceras
+`LD` al corte **2026-09-07**. **Y LA CIFRA VIEJA TAMPOCO SE TECLEA:**
+`git rev-list -1 --before='2026-09-04 23:59:59'` sobre ese mismo fichero devuelve
+el commit `9363c1ba`, de fecha **2026-09-04**; su contenido en ese commit mide
+**205820** bytes, y contado **con la MISMA `CABECERA_LD`** trae **11** cabeceras
+`LD`. **Once, medidas, no supuestas.** Hoy `docs/plan/LECTURAS_DIRIGIDAS.md` mide
+**214916** bytes en disco y **214916** normalizado a LF.
+
+**Y LA PALABRA `once` NO SALE DEL NOMBRE DE LA FUNCION**, que seria circular:
+sale del campo `adjudicacion` de la propia ficha, que dice
+`TANDA DE ONCE LECTURAS DIRIGIDAS`, leido de ella en esta vuelta.
+
+**LA SEGUNDA, LA COMPARACION RESUELTA Y SUS PUESTOS, CADA CIFRA CON SU CORTE.**
+
+| cifra | corte 2026-09-04, leido de la propia ficha | corte 2026-09-07, medido hoy | |
+|---|---:|---:|---|
+| cabeceras `LD` que `las_once()` devuelve | 11 | **27** | DISCREPA |
+| filas de `INTRA_DOMINIO_VEREDICTOS.jsonl` | 3388 | 3388 | CALZA |
+| alias del resolutor | 761 | 761 | CALZA |
+| pares distintos, LITERAL | 3388 | 3388 | CALZA |
+| pares distintos, RESUELTOS | 3009 | 3009 | CALZA |
+| de las `LD` que aparecen, LITERAL | 0 | 0 | CALZA |
+| de las `LD` que aparecen, RESUELTA | 3 | **11** | DISCREPA |
+| puestos implicados | 5 | **61** | DISCREPA |
+
+**8 cifras cotejadas y 3 que DISCREPAN**, contadas de
+`docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01.txt`. Las tres viejas se leyeron
+**del elemento 4 de la propia `verificacion`**, con expresiones regulares sobre
+su texto, no de un acta ni del encargo. Las once que hoy caen en resuelto son
+`LD-01`, `LD-05` y `LD-11`, que son las de siempre, mas **ocho `LD-139` a
+`LD-146` que no son de aquella tanda**, con **7 puestos cada una**.
+
+**LA TERCERA, Y ES LA QUE NO PODIA FALTAR: EN COMPARACION LITERAL SIGUEN
+APARECIENDO 0.** La clausula 1 pregunta si alguna de las lecturas dirigidas vive
+en `INTRA_DOMINIO_VEREDICTOS.jsonl`, y medido hoy la respuesta sigue siendo
+**ninguna**. **LA CLAUSULA 1 NO SE CAE:** lo que envejecio es **la cifra de la
+excepcion**, no la clausula. El instrumento **cae en ROJO y no escribe nada** si
+esa comparacion literal no diera 0, y esa guarda es una expresion computada, no
+un literal.
+
+**2.c LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA.** Viajaba con su corte
+**2026-09-04** y con ese corte era cierta. Lo que cambio no es la medicion sino
+**el universo medido**, y por eso la adicion **no borra ni tacha el elemento 4**,
+que sigue entero arriba con su corte al lado.
+
+**2.d LO QUE SE ESCRIBIO, Y SOLO POR ADICION.** Un elemento mas en la lista
+`verificacion` de `OP-L-01`, **linea 41**, **sin clave nueva de esquema**. El
+elemento mide **11156** caracteres y **11156** bytes utf-8.
+`docs/plan/OPERACIONES.jsonl` mide hoy, al salir de esta tarea, **513043** bytes
+en disco y **513043** normalizado a LF. Antes de esta tarea median **501883** y
+**501883** por esas mismas dos convenciones, o sea un **crecimiento de 11160
+bytes** por las dos. Su `sha256`, identico en disco y normalizado a LF, pasa de
+`6006fd16dc08dc58` a `829c583eb779cab6`.
+
+**2.e LA GUARDA, MEDIDA CONTRA `HEAD` Y NO CONTRA UNA COPIA EN MEMORIA.**
+
+| lo que la guarda exige | lo que mide |
+|---|---|
+| **1 sola linea** distinta contra `HEAD` | **1**, la **41** |
+| **1 sola clave** de esa ficha cambia | **1**, `verificacion` |
+| los **6** elementos viejos, identicos y en su orden | **6 de 6**, y la lista pasa de **6** a **7** |
+| el `estado` entra y sale igual | `LISTA` en `HEAD` y `LISTA` en disco |
+| **0 de las 71** fichas mueven `estado` | **0 de 71**, y **0** fichas aparecen o desaparecen |
+| `git diff --numstat` de esa sede | **1 fila**, `1 1 docs/plan/OPERACIONES.jsonl` |
+
+**LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0**, en
+`docs/loop/SALIDA_V203_T2_CORRECCION_OP_L_01_IDEM.txt`: **0 bytes de crecimiento
+por las dos convenciones**, la ficha reconocida como **ya corregida**, y el
+`sha256` de la sede identico al de la salida de la primera.
+
+**2.f UNA CAIDA MIA, CAZADA ANTES DE PUBLICARSE Y DECLARADA.** En la primera
+prueba de idempotencia el elemento compuesto media **11161** caracteres en la
+segunda corrida y **11156** en la primera, cinco mas. **No era inestabilidad del
+computo:** el texto citaba dentro **el nombre del fichero de salida de cada
+corrida**, y la segunda corrida usa `--salida ..._IDEM`. Arreglado fijando la
+cita a la **ruta canonica** en vez de al argumento, con su motivo escrito dentro
+del codigo; re-corrido, las dos corridas componen **11156** caracteres. **La
+escritura ya habia citado la ruta canonica, asi que lo escrito no cambia.**
+
+**2.g LO QUE NO SE HACE, Y ESTA DICHO DENTRO DEL PROPIO ELEMENTO:** `OP-L-01`
+**NO SE CIERRA** (acta 202, `4.4`), su `estado` no se toca, no se mueve ni un
+veredicto, no se adjudica clase a ningun puesto, no se toca ni un nodo y no se
+autoriza ninguna lectura nueva.
 
 <!-- FIN ANEXO DE TAREAS -->

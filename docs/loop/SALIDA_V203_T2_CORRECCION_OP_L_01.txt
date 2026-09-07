@@ -1,0 +1,121 @@
+==============================================================================
+VUELTA 203, TAREA 2: LA CORRECCION DECLARADA DE LA verificacion DE
+OP-L-01, EN SU SEDE, POR ADICION Y POR EL CARRIL DEL BANCO 9.10
+==============================================================================
+
+A) EL INSTRUMENTO SE IMPORTA, NO SE CLONA, Y ANTES SE COMPRUEBA QUE NO
+   ESCRIBE. SE COMPRUEBA DE VERDAD (caida C.2 del auditor de la 202).
+   scripts/loop/vuelta166_tarea2_correccion_op_l_01.py
+      disco 25900 bytes | LF 25900 bytes | sha256 LF 2886775eb6c29db5
+      CIFRA lineas por count(NL): 509
+      CIFRA lineas con marca de ESCRITURA en disco: 2
+         linea  431 | with io.open(OPS, "w", encoding="utf-8", newline="\n") as fh:
+         linea  432 | fh.write("\n".join(lineas_nuevas))
+      LO QUE SE LLAMA DE EL, Y NADA MAS: las_once(), mapa_de_alias(),
+      veredictos(), medir_clausula_1() y su CABECERA_LD. Su main() NO se
+      llama, que es donde vive lo que escribe con --aplicar.
+   CIFRA lineas de git status ANTES de importarlo y llamarlo: 2
+
+B) EL RESOLUTOR DELANTE DE TODO CONTEO (P.1), Y LAS TRES LECTURAS DE HOY
+   CIFRA ficheros de nodo leidos: 3853
+   CIFRA alias en el mapa del resolutor: 761
+   CIFRA cabeceras LD que las_once() devuelve HOY: 27
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA pares distintos, comparacion LITERAL: 3388
+   CIFRA pares distintos, comparacion RESUELTA: 3009
+   CIFRA de las LD que aparecen, LITERAL: 0
+   CIFRA de las LD que aparecen, RESUELTA: 11
+   CIFRA puestos implicados en total: 61
+      LD-01    formalizar_junta_asesora contra identificar_consejo_asesores (lectura dirigida: D), 3 puesto(s)
+      LD-05    estrategia_innovacion_producto contra estrategia_de_innovacion_producto (lectura dirigida: D), 1 puesto(s)
+      LD-11    pensamiento_visual contra pensamiento_visual_modelos_negocio (lectura dirigida: D), 1 puesto(s)
+      LD-139   clasificacion_mercados_cadena_suministro contra cuatro_capacidades_mercado (lectura dirigida: D), 7 puesto(s)
+      LD-140   clasificacion_mercados_cadena_suministro contra cuatro_categorias_desempeno_cadena_suministro (lectura dirigida: D), 7 puesto(s)
+      LD-141   cuatro_capacidades_mercado contra modelo_cuadrantes_mercado (lectura dirigida: D), 7 puesto(s)
+      LD-142   cuatro_categorias_desempeno_cadena_suministro contra estrategia_cuatro_capacidades_mercado (lectura dirigida: D), 7 puesto(s)
+      LD-143   cuatro_categorias_desempeno_cadena_suministro contra marco_analisis_mercado_cadena_suministro (lectura dirigida: D), 7 puesto(s)
+      LD-144   cuatro_categorias_desempeno_cadena_suministro contra modelo_cuadrantes_mercado (lectura dirigida: D), 7 puesto(s)
+      LD-145   estrategia_cuatro_capacidades_mercado contra marco_analisis_mercado_cadena_suministro (lectura dirigida: D), 7 puesto(s)
+      LD-146   marco_analisis_mercado_cadena_suministro contra modelo_cuadrantes_mercado (lectura dirigida: A), 7 puesto(s)
+
+C) EL UNIVERSO DE las_once() AL CORTE 2026-09-04, LEIDO DE GIT Y NO TECLEADO
+   comando: git rev-list -1 --before='2026-09-04 23:59:59' HEAD -- docs/plan/LECTURAS_DIRIGIDAS.md
+   commit que ese comando devuelve: 9363c1ba
+   su fecha: 2026-09-04
+   su asunto: TAREA 5: el colapso medido en sus dos mitades, los 13 publicados uno por uno, y CERO clases adjudicadas
+   CIFRA bytes de ese docs/plan/LECTURAS_DIRIGIDAS.md en aquel commit: 205820
+   CIFRA cabeceras LD ahi, contadas CON LA MISMA CABECERA_LD: 11
+   docs/plan/LECTURAS_DIRIGIDAS.md HOY: disco 214916 bytes | LF 214916 bytes | sha256 LF dda1cdd67042c733
+
+D) LO QUE LA FICHA TIENE CONGELADO, LEIDO DE ELLA Y NO DE UN ACTA
+   CIFRA lineas NO VACIAS de docs/plan/OPERACIONES.jsonl: 71
+   CIFRA lineas donde vive OP-L-01: 1 | linea(s): 41
+   LA COORDENADA ES LINEA MAS INDICE (acta 201, 4.4). La ficha esta en la
+   LINEA 41, y el encargo dice 41: CALZA SI
+   estado='LISTA'  tipo='MESA'  fase='09_LECTURAS_DIRIGIDAS'  fecha_corte='2026-08-11'
+   CIFRA claves de la ficha: 18
+   CIFRA elementos de `verificacion` ANTES: 6
+      verificacion indice 0 (elemento 1), 78 caracteres: 'ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui'
+      verificacion indice 1 (elemento 2), 51 caracteres: 'el marcador del cribado no se mueve: sigue en 2.117'
+      verificacion indice 2 (elemento 3), 69 caracteres: 'cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)'
+      verificacion indice 3 (elemento 4), 3326 caracteres: "CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR EL CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO E
+      verificacion indice 4 (elemento 5), 1993 caracteres: "CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR EL MISMO CARRIL DEL BANCO 9.10, CON EL TEXTO VI
+      verificacion indice 5 (elemento 6), 2376 caracteres: "CORRECCION DECLARADA (2026-09-04, vuelta 169, TAREA 4 del encargo), POR EL CARRIL DEL BANCO 9.10, CON EL TEXTO VIEJO EN
+   CONGELADO en el elemento 4, literal:                         0
+   CONGELADO en el elemento 4, resuelta:                        3
+   CONGELADO en el elemento 4, pares literales:                 3388
+   CONGELADO en el elemento 4, pares resueltos:                 3009
+   CONGELADO en el elemento 4, alias:                           761
+   CONGELADO en el elemento 4, filas:                           3388
+   CONGELADO en el elemento 4, puestos implicados:              5
+   LA PALABRA `once` NO SALE DEL NOMBRE DE LA FUNCION: sale del campo
+   `adjudicacion` de esta misma ficha, que dice 'TANDA DE ONCE LECTURAS DIRIGIDAS'
+
+E) EL COTEJO, CIFRA A CIFRA, CON SUS DOS CORTES
+   cabeceras LD que las_once() devuelve       corte 2026-09-04: 11       | corte 2026-09-07: 27        DISCREPA
+   filas de INTRA_DOMINIO_VEREDICTOS.jsonl    corte 2026-09-04: 3388     | corte 2026-09-07: 3388      CALZA
+   alias del resolutor                        corte 2026-09-04: 761      | corte 2026-09-07: 761       CALZA
+   pares distintos, LITERAL                   corte 2026-09-04: 3388     | corte 2026-09-07: 3388      CALZA
+   pares distintos, RESUELTOS                 corte 2026-09-04: 3009     | corte 2026-09-07: 3009      CALZA
+   de las LD que aparecen, LITERAL            corte 2026-09-04: 0        | corte 2026-09-07: 0         CALZA
+   de las LD que aparecen, RESUELTA           corte 2026-09-04: 3        | corte 2026-09-07: 11        DISCREPA
+   puestos implicados                         corte 2026-09-04: 5        | corte 2026-09-07: 61        DISCREPA
+   CIFRA cifras cotejadas: 8 | CIFRA que DISCREPAN: 3
+
+   LA LINEA QUE NO PUEDE FALTAR, Y VA AQUI Y NO AL FINAL: EN COMPARACION
+   LITERAL SIGUEN APARECIENDO 0. La clausula 1 pregunta si alguna de las
+   lecturas dirigidas VIVE en el archivo de veredictos, y en literal la
+   respuesta sigue siendo NINGUNA. LA CLAUSULA 1 NO SE CAE: lo que
+   envejecio es LA CIFRA DE LA EXCEPCION, no la clausula.
+
+F) EL ELEMENTO NUEVO, COMPUESTO Y MEDIDO ANTES DE ESCRIBIRSE
+   CIFRA caracteres del elemento nuevo: 11156
+   CIFRA bytes utf-8 del elemento nuevo: 11156
+   la correccion de esta vuelta YA esta en la ficha: NO
+
+G) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/plan/OPERACIONES.jsonl: disco 501883 bytes | LF 501883 bytes | sha256 LF 6006fd16dc08dc58
+   CIFRA fichas leidas para la guarda de estado: 71
+
+   ESCRITO: un elemento mas en `verificacion` de OP-L-01, linea 41.
+
+==============================================================================
+H) LA GUARDA, RELEIDA DEL DISCO Y CONTRA HEAD
+==============================================================================
+   docs/plan/OPERACIONES.jsonl al salir: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   CIFRA crecimiento en bytes de disco: 11160
+   CIFRA crecimiento en bytes LF: 11160
+   git diff --numstat -- docs/plan/OPERACIONES.jsonl: 1 fila(s)
+      1	1	docs/plan/OPERACIONES.jsonl
+   CIFRA lineas DISTINTAS contra HEAD: 1 | linea(s): 41
+   CIFRA claves de esa ficha que CAMBIAN: 1 | cuales: verificacion
+   CIFRA elementos de `verificacion` ANTES: 6 | DESPUES: 7
+   CIFRA elementos viejos IDENTICOS Y EN SU ORDEN: 6 de 6
+   el `estado` entra 'LISTA' y sale 'LISTA': IGUAL
+   CIFRA fichas en HEAD: 71 | CIFRA fichas en el disco al salir: 71
+   CIFRA fichas que aparecen o desaparecen: 0 y 0
+   CIFRA de las 71 fichas que MUEVEN su campo `estado` contra HEAD: 0
+   cuales: (ninguna)
+   y la de esta tarea en concreto: OP-L-01 entra 'LISTA' en HEAD y sale 'LISTA' en disco
+
+FIN
