@@ -1,0 +1,152 @@
+==============================================================================
+VUELTA 199, TAREA 4: EL PLAN, RETOMADO POR LA VARA DEL EXPEDIENTE.
+LA LECTURA QUE LA VARA DEJA ESCRITA Y NO HACE.
+==============================================================================
+
+FECHA DE CORTE de todo lo de abajo, leida de git: 2026-09-07
+NINGUN `estado` SE MUEVE EN ESTA CORRIDA. Se lee, se mide y se documenta.
+
+EL EXPEDIENTE, CONTADO HOY: 71 fichas en docs/plan/OPERACIONES.jsonl
+   OP-L-03    presente: True | estado: LISTA | corte de la ficha: 2026-08-11
+   OP-L-01    presente: True | estado: LISTA | corte de la ficha: 2026-08-11
+   OP-L-02    presente: True | estado: LISTA | corte de la ficha: 2026-08-11
+   OP-I-01    presente: True | estado: LISTA | corte de la ficha: 2026-08-11
+
+==============================================================================
+4.a  OP-L-03, LA QUE LLEVA MAS VUELTAS APLAZADA
+==============================================================================
+LO QUE SU FICHA PROMETE, leido de su `evidencia` de hoy:
+   . BANCO_DEL_PLAN.md P.5
+   . MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117
+   . LECTURAS_DIRIGIDAS.md, el reparto por acto
+
+EL INSTRUMENTO DE SUS PARES REALES SE VUELVE A CORRER HOY, y no se hereda
+la cifra de la 179: EJECUTOR.md 2 dice que un reporte anterior NUNCA es
+fuente de una cifra nueva.
+   instrumento: scripts/loop/vuelta179_tarea2_cobertura_final.py (6046 bytes)
+   exitcode: 0
+   | A) LAS DOS FUENTES, MEDIDAS, Y CADA CIFRA CON SU CORTE PEGADO
+   | CIFRA ficheros de dataset/nodos/ leidos por el resolutor: 3853 (corte: HEAD 455384a1830b, ficheros de dataset/nodos/ contados en esta corrid
+   | CIFRA actos que el instrumento da: 40 (NO se mueve dentro de una vuelta: sale del corte sellado en la vuelta 15)
+   | CIFRA filas de docs/plan/OP_L_03_LECTURAS.jsonl: 14 (corte: HEAD 455384a1830b, filas del registro de lecturas contadas en esta corrida)
+   | CIFRA de esas filas escritas por la vuelta 177: 6 (corte: HEAD 455384a1830b, filas de la vuelta 177 contadas en esta corrida)
+   | CIFRA de esas filas escritas por la vuelta 179: 8 (corte: HEAD 455384a1830b, filas de la vuelta 179 contadas en esta corrida)
+   | CIFRA pares con clase escrita por la vuelta 177: 8 (corte: HEAD 455384a1830b, pares con clase de la vuelta 177 contados en esta corrida)
+   | CIFRA pares con clase escrita por la vuelta 179: 10 (corte: HEAD 455384a1830b, pares con clase de la vuelta 179 contados en esta corrida)
+   | CIFRA pares distintos con clase escrita, en total: 18 (corte: HEAD 455384a1830b, pares con clase contados en esta corrida)
+   | C) LOS PARES REALES DE HOY, BUSCADOS UNO A UNO EN SU ACTO
+   | CIFRA pares reales en todo el backlog: 18 (corte: HEAD 455384a1830b, pares reales contados en esta corrida)
+   | CIFRA de esos CON lectura escrita en su acto: 18 (corte: HEAD 455384a1830b, pares reales con lectura contados en esta corrida)
+   | CIFRA de esos SIN lectura: 0 (corte: HEAD 455384a1830b, pares reales sin lectura contados en esta corrida)
+   | LA RESTA: 18 con lectura mas 0 sin lectura = 18, y los reales son 18. CALZA: SI
+   | VERDE: los 18 pares reales del backlog de OP-L-03 tienen lectura escrita.
+
+   LA CIFRA DE HOY, extraida de esa salida: con lectura 18 | sin lectura 0
+   su registro propio: docs/plan/OP_L_03_LECTURAS.jsonl
+      51368 bytes | 14 filas no vacias | sha256 LF d93c59a86372cf50
+
+==============================================================================
+4.b  OP-L-01, LAS ONCE LECTURAS DIRIGIDAS
+==============================================================================
+LO QUE SU FICHA PROMETE, leido de su `evidencia` de hoy:
+   . LECTURAS_DIRIGIDAS.md, las once con su razon
+   . INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar
+   . BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS
+   . MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes
+
+LAS ONCE, BUSCADAS UNA A UNA EN docs/plan/LECTURAS_DIRIGIDAS.md:
+   LD-01  ESTA (2 aparicion(es))
+   LD-02  ESTA (3 aparicion(es))
+   LD-03  ESTA (1 aparicion(es))
+   LD-04  ESTA (3 aparicion(es))
+   LD-05  ESTA (1 aparicion(es))
+   LD-06  ESTA (6 aparicion(es))
+   LD-07  ESTA (4 aparicion(es))
+   LD-08  ESTA (1 aparicion(es))
+   LD-09  ESTA (2 aparicion(es))
+   LD-10  ESTA (1 aparicion(es))
+   LD-11  ESTA (1 aparicion(es))
+   CIFRA de las once que estan: 11 de 11
+   CONTRASTE, y se publica para que el 11 no se lea como el total: el
+   fichero trae 68 identificadores LD distintos, del LD-01 al LD-154. Las once de
+   OP-L-01 son la PRIMERA TANDA, no el fichero entero.
+
+LA CLAUSULA QUE SU `verificacion` ESCRIBE Y QUE SI SE PUEDE MEDIR:
+   "ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl"
+   CIFRA de las once que aparecen en el archivo de veredictos: 0
+      cuales: (ninguna)
+
+LOS OTROS DOS DOCUMENTOS QUE SU EVIDENCIA NOMBRA, BUSCADOS POR SU ANCLA:
+   docs/INTRA_DOMINIO_INFORME.md        943970 bytes | ancla '(?im)^#+.*\\b52\\b': 4 acierto(s)
+   docs/BANCO_DE_TEXTOS.md              182228 bytes | ancla 'TABLA VIVA DE LOS PUROS': 1 acierto(s)
+
+==============================================================================
+4.c  OP-L-02, LA QUE EL ENCARGO MANDA MEDIR ANTES DE DAR POR HECHO NADA
+==============================================================================
+EL ENCARGO DICE, CON ESAS PALABRAS: MEDIR SI SU DOCUMENTO EXISTE Y
+DECLARARLO. Si no existe, SE DICE; no se da por hecho ni se fabrica.
+
+SU `evidencia` ENTERA, leida de la ficha de hoy:
+   . MEDIDO el 11 ago 2026: 205 pares fuera de cola, 11 leidos, 194 pendientes
+
+CIFRA ficheros que su evidencia nombra: 0
+   (NINGUNO)
+
+SE DICE, Y ES EL RESULTADO DE LA 4.c: **OP-L-02 NO TIENE DOCUMENTO QUE
+MEDIR.** Su evidencia entera es UNA FRASE DE PROSA con una medicion del 11
+ago 2026 dentro, y no nombra ni un fichero. No hay nada que abrir, y por
+eso NO SE FABRICA NINGUNO: fabricarlo seria inventar la prueba que falta.
+
+LO QUE SI SE PUEDE MEDIR SIN FABRICAR NADA, y se mide: su `nota` describe
+una SEGUNDA TANDA de 16 lecturas por tres grupos. Se busca cada grupo en
+docs/plan/LECTURAS_DIRIGIDAS.md, que es donde vivirian si vivieran.
+   cuadrantes de mercado            21 acierto(s) en LECTURAS_DIRIGIDAS.md
+   ecuacion de valor                12 acierto(s) en LECTURAS_DIRIGIDAS.md
+   supervision humana de la IA      5 acierto(s) en LECTURAS_DIRIGIDAS.md
+
+Y LA CIFRA QUE SU PROPIA NOTA PUBLICA, PARA QUE LA PREGUNTA QUEDE ESCRITA
+CON NUMEROS: dice 205 fuera de cola, 126 esperando destejido o cirugia y 79
+que no esperan; de esos 79, 24 cuelgan de mesa o nomina y 55 son resto. LAS
+CIFRAS SON SUYAS, del corte 2026-08-11, y NO se re miden aqui porque
+re medirlas seria recomputo y esta vuelta no lo trae encargado.
+
+==============================================================================
+4.d  OP-I-01, EL INVENTARIO NAVEGABLE
+==============================================================================
+LO QUE SU FICHA PROMETE, leido de su `evidencia` de hoy:
+   . INVENTARIO.jsonl, 323 entradas
+   . 10_INVENTARIO.md, la vista humana
+   . consolidacion de lo medido entre el 11 ago 2026 y el corte del puesto 2117
+
+   docs/plan/INVENTARIO.jsonl: 584554 bytes | 672 filas no vacias | sha256 LF 69666b73339f2afe
+   LA FICHA PROMETE 323 ENTRADAS. CONTADAS HOY: 672.
+   CALZA: NO, y la discrepancia SE DECLARA en vez de ajustarse
+
+   EL REPARTO POR TIPO, CONTADO DEL FICHERO Y NO DE LA NOTA:
+      acto                         556
+      familia_de_ids               54
+      figura                       20
+      defecto                      19
+      racimo                       13
+      dominio                      10
+
+   LA CLAUSULA "toda entrada lleva su fecha_corte", MEDIDA:
+      CIFRA entradas con fecha_corte: 672 de 672
+      CIFRA entradas SIN fecha_corte: 0
+
+   docs/plan/10_INVENTARIO.md: 34258 bytes | 414 lineas
+      el literal PROVISIONAL  aparece 2 vez(ces)
+      el literal HUECO        aparece 4 vez(ces)
+
+==============================================================================
+EL SALDO DE LA TAREA 4, Y NINGUNA DE ESTAS LINEAS MUEVE UN `estado`
+==============================================================================
+   OP-L-03    CUBIERTA EN SU LECTURA
+   OP-L-01    CUBIERTA EN SU DOCUMENTO
+   OP-L-02    SIN DOCUMENTO QUE MEDIR, y se declara
+   OP-I-01    CUBIERTA A MEDIAS, y lo que falta va nombrado arriba
+
+LO QUE ESTO NO DICE, Y SE DICE PARA QUE NADIE LO LEA DE MAS: que el
+documento de una ficha CUBRA lo que la ficha promete NO significa que su
+mesa se hiciera bien. Significa que lo que la ficha escribio que estaria,
+esta, y que se puede abrir y contar. Adjudicar el `estado` es del auditor.
