@@ -1,0 +1,162 @@
+==============================================================================
+VUELTA 199, TAREA 3: LOS EJEMPLARES DEL BANCO, COMPUTADOS DEL BANCO.
+==============================================================================
+
+EL BANCO, MEDIDO HOY:
+   docs/BANCO_DE_TEXTOS.md
+   182228 bytes en disco | 182228 bytes LF | sha256 LF 68557cd00a3124f4
+   CIFRA lineas por split(NL): 3119
+   FECHA DE CORTE (banco 9.21), leida de git: 2026-09-07
+
+EL COMPUTO, CON SU REGLA DELANTE Y NO DESPUES:
+   marcadores: puesto, puestos, par, pares
+   uniones que continuan la lista: coma, `y`, `e`, `a`
+   `a` entre dos numeros se lee como RANGO cerrado
+   tope de rango que se expande: 60
+   CIFRA puestos distintos cosechados del banco: 109
+
+LOS RANGOS QUE EL BANCO ESCRIBE, DECLARADOS UNO A UNO:
+   linea  2327: 2389 a 2400 (12 puestos) -> EXPANDIDO
+
+EL ARCHIVO, CONTADO DEL PROPIO aislador_de_ciega.py Y NO DE UNA COPIA:
+   CIFRA filas del archivo: 3388
+   rango de puestos: 1 a 3388
+
+LO QUE NO EXISTE EN EL ARCHIVO SE DECLARA Y NO ENTRA:
+   CIFRA numeros cosechados que NO son puestos del archivo: 0
+
+EL CONTROL DEL ACTA 198, Y ES LO QUE IMPIDE QUE ESTO SE APRUEBE SOLO:
+   el 1077, que el acta 198 nombra, sale del computo              VERDE
+      linea(s) del banco donde se nombra: 2543
+   el 165, que el acta 198 nombra, sale del computo               VERDE
+      linea(s) del banco donde se nombra: 867
+   los dos del control existen ademas en el archivo               VERDE
+
+LA LISTA, ENTERA Y CON SU PROCEDENCIA. Cada puesto con la linea del banco
+que lo nombra: LA CIFRA NO VIAJA SOLA.
+   156    linea(s) del banco: 1286
+   165    linea(s) del banco: 867
+   176    linea(s) del banco: 890
+   185    linea(s) del banco: 1234
+   192    linea(s) del banco: 1353
+   197    linea(s) del banco: 964
+   200    linea(s) del banco: 1353
+   201    linea(s) del banco: 1445
+   206    linea(s) del banco: 1286
+   209    linea(s) del banco: 1383
+   217    linea(s) del banco: 1234
+   222    linea(s) del banco: 964
+   255    linea(s) del banco: 1353
+   258    linea(s) del banco: 1234
+   276    linea(s) del banco: 1280, 1286
+   277    linea(s) del banco: 1340
+   278    linea(s) del banco: 1383
+   292    linea(s) del banco: 1340
+   300    linea(s) del banco: 1144, 1197
+   303    linea(s) del banco: 1143, 1248, 1383
+   319    linea(s) del banco: 1362
+   326    linea(s) del banco: 1843
+   344    linea(s) del banco: 2040
+   361    linea(s) del banco: 1946
+   373    linea(s) del banco: 1573
+   374    linea(s) del banco: 2040
+   386    linea(s) del banco: 2040
+   395    linea(s) del banco: 1730
+   452    linea(s) del banco: 1940
+   463    linea(s) del banco: 964
+   487    linea(s) del banco: 1197
+   490    linea(s) del banco: 1649
+   497    linea(s) del banco: 1649
+   511    linea(s) del banco: 1572
+   522    linea(s) del banco: 1649
+   537    linea(s) del banco: 2757
+   544    linea(s) del banco: 1197
+   555    linea(s) del banco: 1649
+   557    linea(s) del banco: 1649
+   568    linea(s) del banco: 1649
+   581    linea(s) del banco: 1615
+   582    linea(s) del banco: 1649
+   586    linea(s) del banco: 1649
+   609    linea(s) del banco: 2758
+   610    linea(s) del banco: 1649
+   624    linea(s) del banco: 1340, 1649
+   633    linea(s) del banco: 1615
+   637    linea(s) del banco: 1591
+   658    linea(s) del banco: 1636
+   678    linea(s) del banco: 1636
+   683    linea(s) del banco: 1592
+   690    linea(s) del banco: 1262
+   709    linea(s) del banco: 1456
+   712    linea(s) del banco: 2076
+   719    linea(s) del banco: 1593
+   769    linea(s) del banco: 1391
+   781    linea(s) del banco: 1458
+   787    linea(s) del banco: 1087
+   800    linea(s) del banco: 1411
+   815    linea(s) del banco: 1843
+   835    linea(s) del banco: 1903
+   862    linea(s) del banco: 1422
+   863    linea(s) del banco: 2203, 2210
+   872    linea(s) del banco: 957, 968
+   878    linea(s) del banco: 1004, 1019
+   915    linea(s) del banco: 1932
+   918    linea(s) del banco: 1056
+   950    linea(s) del banco: 956
+   976    linea(s) del banco: 1058
+   1001   linea(s) del banco: 2353
+   1023   linea(s) del banco: 1056
+   1030   linea(s) del banco: 999
+   1050   linea(s) del banco: 2474
+   1061   linea(s) del banco: 2466
+   1077   linea(s) del banco: 2543
+   1087   linea(s) del banco: 1573
+   1157   linea(s) del banco: 938
+   1190   linea(s) del banco: 961, 1058
+   1240   linea(s) del banco: 2554
+   1306   linea(s) del banco: 1056
+   1330   linea(s) del banco: 1056
+   1346   linea(s) del banco: 2658, 2813
+   1348   linea(s) del banco: 2659
+   1400   linea(s) del banco: 963
+   1449   linea(s) del banco: 1062
+   1517   linea(s) del banco: 965
+   1573   linea(s) del banco: 963
+   1600   linea(s) del banco: 963
+   2012   linea(s) del banco: 3063
+   2091   linea(s) del banco: 2594
+   2117   linea(s) del banco: 959, 1000
+   2195   linea(s) del banco: 1739
+   2215   linea(s) del banco: 1739
+   2237   linea(s) del banco: 808
+   2389   linea(s) del banco: 2327
+   2390   linea(s) del banco: 2327
+   2391   linea(s) del banco: 2327
+   2392   linea(s) del banco: 2327
+   2393   linea(s) del banco: 2327
+   2394   linea(s) del banco: 2327
+   2395   linea(s) del banco: 2327
+   2396   linea(s) del banco: 2327
+   2397   linea(s) del banco: 2327
+   2398   linea(s) del banco: 2327
+   2399   linea(s) del banco: 2327
+   2400   linea(s) del banco: 2327
+   2432   linea(s) del banco: 2820
+   2456   linea(s) del banco: 1798
+   2477   linea(s) del banco: 2870
+
+CIFRA PUESTOS QUE SALEN DEL UNIVERSO DE LAS CIEGAS: 109
+CIFRA universo que queda: 3279 de 3388 (3.2 por ciento fuera)
+
+   la lista no esta vacia                                         VERDE
+   la lista no se come mas de la mitad del archivo                VERDE
+      109 de 3388
+ESCRITA LA LISTA: docs/loop/_v199_ejemplares_del_banco_exclusion.txt
+   SIN CABECERA A PROPOSITO: `numeros_de()` lee enteros sueltos, y una
+   cabecera con la fecha o el `sha256` dentro le meteria enteros que no
+   son puestos. La procedencia vive en ESTE fichero.
+   109 lineas, 476 bytes
+
+==============================================================================
+CASOS: 5 | VERDES: 5 | ROJOS: 0
+VEREDICTO: VERDE
+==============================================================================
