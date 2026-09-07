@@ -1,0 +1,51 @@
+SELLO DE APERTURA DE LA VUELTA 205.
+LA VERDAD SOBRE CUANDO NACE ESTE FICHERO, DICHA ANTES QUE NADA Y NO ESCONDIDA:
+   los VALORES de los bloques A, B, C y D de aqui abajo se MIDIERON EN CONSOLA
+   ANTES DE LA PRIMERA OPERACION de la vuelta, y estan copiados de esa medicion.
+   EL FICHERO, en cambio, se ESCRIBE MAS TARDE, con los tramos de la bateria ya
+   corriendo. Por eso el tallador dira SELLO RECONSTRUIDO DESPUES y TENDRA RAZON:
+   no se le discute y no se le tapa. Va como caida propia en la seccion 8.
+regimen: VUELTA DE BATERIA (AUDITOR.md 6.1). UNA SOLA TAREA Y NADA MAS AL LADO.
+         MORATORIA DE MAQUINARIA (AUDITOR.md 6.3): la nomina CONGELADA EN 135.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, medido antes de la 1.a operacion) ===
+e66bf67df4a8359ab8f17e2deae90245604f9156
+e66bf67df4a8359ab8f17e2deae90245604f9156	2026-09-07 16:48:33 -0400	ACTA DEL AUDITOR, VUELTA 204: EL DATO CIERRA VERDE ENTERO Y LA UNICA CAIDA QUE ACUMULA ES UN NEGATIVO PUBLICADO SOBRE UNA MEDICION QUE LO DESMIENTE. La 204 escribio que ninguno de los reportes 177 y 178 titula seccion de PREGUNTAS, y los dos la titulan: ## 6. LAS PREGUNTAS, en las lineas 632 y 832. Persegui la causa hasta el codigo
+
+=== B. RAMA Y REMOTO (medidos antes de la 1.a operacion) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+origin/pasada-unica al entrar: e66bf67df4a8359ab8f17e2deae90245604f9156 (identico al HEAD local)
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular, y son la medicion de ANTES de la 1.a operacion.
+CIFRA lineas de status: 0
+   (ninguna: el arbol entra limpio, git status --porcelain sin una sola fila)
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.0 EL NUMSTAT DE LAS CUATRO SEDES QUE EL ENCARGO PIDE, AL ENTRAR ===
+CIFRA filas de numstat AL ENTRAR en dataset/     0
+CIFRA filas de numstat AL ENTRAR en web/         0
+CIFRA filas de numstat AL ENTRAR en engine/      0
+CIFRA filas de numstat AL ENTRAR en docs/plan/   0
+
+=== D. LA SEDE DE LOS VEREDICTOS Y LA DEL PLAN, MEDIDAS ANTES DE TOCAR NADA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   EL ENCARGO DICE QUE AL CERRAR LA 204 VALIA 0a77b5a35a962621 POR LAS DOS.
+   CALZA LO MEDIDO CON LO QUE EL ENCARGO DICE: SI
+docs/plan/OPERACIONES.jsonl
+   disco 513043 bytes | sha256 disco 829c583eb779cab6
+   LF    513043 bytes | sha256 LF    829c583eb779cab6
+   EL ENCARGO DICE QUE AL CERRAR LA 204 VALIA 829c583eb779cab6 POR LAS DOS.
+   CALZA LO MEDIDO CON LO QUE EL ENCARGO DICE: SI
+
+=== E. LA NOMINA Y EL CENSO, CONTRA EL CONGELADO EN 135 ===
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CONGELADO QUE MANDA AUDITOR.md 6.3: 135
+CALZA LA NOMINA CON EL CONGELADO: SI
+
+FIN DEL SELLO DE APERTURA
