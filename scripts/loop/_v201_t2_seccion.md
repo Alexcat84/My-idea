@@ -20,8 +20,8 @@ CORTE** (banco `9.21`):
   se toca**.
 - **672 entradas, corte 2026-09-07.** Recontadas **en esta vuelta**, leyendo
   `docs/plan/INVENTARIO.jsonl` linea a linea y parseando cada una como JSON:
-  **672 lineas no vacias**, **0 lineas que no son JSON valido**, **584554 bytes en
-  disco y 584554 normalizados a LF**.
+  **672 lineas no vacias**, **0 lineas que no son JSON valido**, y
+  **584554 bytes en disco y 584554 normalizados a LF**.
 
 **EL REPARTO POR TIPO, RECONTADO HOY Y NO COPIADO DE NINGUNA ACTA NI DEL ACTA
 199.** Contado de `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`:
@@ -54,9 +54,10 @@ y es `evidencia`; el `estado` de `OP-I-01` entra y sale en `LISTA`; los **3
 elementos viejos siguen identicos y en su orden** y ahora son **4**; y **0 de las
 71 fichas** cambian su campo `estado`. `git diff --numstat` sobre `docs/plan/`
 da **1 anadida y 1 borrada** en `docs/plan/OPERACIONES.jsonl`, que es lo que
-`jsonl` da siempre al reescribir una linea, y el fichero pasa de **498085 bytes en
-disco y LF** a **499474 bytes en disco y LF**, con **71 lineas no vacias antes y
-despues** y **0 lineas que no sean JSON valido**.
+`jsonl` da siempre al reescribir una linea. El fichero sale en
+**499474 bytes en disco y 499474 normalizados a LF**, y antes de escribir media
+498085 por disco y 498085 por LF. Tiene **71 lineas no vacias antes y despues** y
+**0 lineas que no sean JSON valido**.
 
 **UNA CORRECCION DE MI PROPIO COMPUTO, HECHA EN ESTA MISMA VUELTA Y DECLARADA EN
 VEZ DE CALLADA.** En su primera version la guarda del 323 corria **delante** de la
@@ -66,5 +67,6 @@ correccion cita el 323 verbatim** y despues de escribirla hay **dos** elementos 
 esa cifra. **No escribia nada, que es lo que se queria, pero lo decia por el motivo
 equivocado**, y un instrumento que acierta por el motivo equivocado no vale. Se
 reordeno, se dejo escrito dentro del fichero, y la segunda corrida esta sellada
-aparte en `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`: **IDEMPOTENTE**,
-**4 elementos de `evidencia` al entrar** y **crecimiento 0 bytes**.
+aparte en `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`, que mide
+**1390 bytes en disco y 1390 normalizados a LF**: **IDEMPOTENTE**, **4 elementos
+de `evidencia` al entrar** y la ficha sin crecer ni un byte.

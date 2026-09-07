@@ -1,0 +1,115 @@
+MEDICIONES DEL CIERRE DE LA VUELTA 201, RECOMPUTADAS AL CIERRE
+==========================================================================
+
+A) LA SEDE DE LOS VEREDICTOS, REMEDIDA AL CIERRE
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LA APERTURA MIDIO 4054129 por las dos convenciones y sha 0a77b5a35a962621
+   por las dos, sellado en docs/loop/SALIDA_V201_APERTURA.txt bloque D.
+   ABRE Y CIERRA EN EL MISMO VALOR: SI
+
+B) EL NUMSTAT DE LAS CUATRO SEDES, AL CIERRE
+   CIFRA filas de numstat AL CERRAR en dataset/     0
+   CIFRA filas de numstat AL CERRAR en web/         0
+   CIFRA filas de numstat AL CERRAR en engine/      0
+   CIFRA filas de numstat AL CERRAR en docs/plan/   0
+   LA APERTURA MIDIO 0, 0, 0 y 0 filas, en el bloque C.0 del sello.
+
+C) LO QUE ESTA VUELTA SI TOCO DE ESAS CUATRO SEDES, CONTRA EL HEAD DE
+   APERTURA. El numstat de arriba compara contra HEAD, y esta vuelta ya
+   commiteo por tramos, asi que sin esta segunda medicion el 0 de docs/plan/
+   se leeria como que no se toco nada, y SI se toco.
+   comando: git diff 405123f1 --numstat -- dataset/ web/ engine/ docs/plan/
+   CIFRA filas contra el HEAD de apertura: 1
+      1	1	docs/plan/OPERACIONES.jsonl
+   ES LA TAREA 2, y es la unica escritura de esta vuelta en esas cuatro
+   sedes: dataset/, web/ y engine/ salen en CERO filas por las dos varas.
+
+D) LA NOMINA Y EL CENSO, REMEDIDOS AL CIERRE CONTRA EL CONGELADO EN 135
+   CIFRA entradas de la nomina: 135
+   CALZA CON EL CONGELADO 135 DE AUDITOR.md 6.3: SI
+   CIFRA casos declarados: 2
+   CIFRA arneses que el censo reconoce: 197
+   LA VARA DEL CENSO: 148
+   CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2
+      FUERA DE LA NOMINA (con vara 148): vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA (con vara 148): vuelta199_tarea1_mutacion_guardas_revividas.py
+   CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 62
+   CIFRA entradas de la nomina que el censo NO VE: 0
+   CIFRA entradas SIN SUJETO CONGELADO: 0
+   LA APERTURA MIDIO: nomina 135, casos 2, censo 197, vara 148, fuera 2 con
+   vara y 62 sin vara, 0 invisibles y 0 sin sujeto congelado. IDENTICAS.
+   NINGUNA ENTRADA SE ANADIO Y NINGUNA SE PODO.
+
+E) EL HUECO DE LA BATERIA, MEDIDO AL CIERRE Y NO SUPUESTO
+   docs/loop/SALIDA_V201_BATERIA.txt existe: NO
+   bytes: NINGUNO, y el cero sale de que NO HAY FICHERO, no de medir uno
+   CIFRA ficheros SALIDA_V201_BATERIA_TRAMO_N.txt: 0
+   CIFRA salidas unicas de bateria en docs/loop/, de otras vueltas: 12
+   DONDE VIVE LA CORRIDA DE LA 200, MEDIDO Y NO SUPUESTO. El lanzador
+   scripts/loop/vuelta183_bateria_por_tramos.py computa su vuelta de SU
+   PROPIO NOMBRE DE FICHERO, asi que la corrida de la vuelta 200 quedo
+   sellada con nombre de 183. Se comprueba con git log:
+      SALIDA_V200_BATERIA.txt      existe: NO  
+      SALIDA_V183_BATERIA.txt      existe: SI  disco 92570 bytes | LF 92570 bytes
+         ultimo commit que lo toca: 118bf6e3 2026-09-07 VUELTA 200, TAREA 2 CERRADA Y ANEXADA: LA BATERIA ENTERA CORRIDA EN SUS ONCE TRAMOS, NO EN LOS DOS QUE --siguiente DECIA. La tramp
+   POR ESO ESTA SECCION NO DICE QUE LA 200 NO CORRIO LA BATERIA: dice que
+   SU SALIDA NO SE LLAMA COMO SU VUELTA, que es cosa distinta y que el acta
+   200 ya adjudica.
+
+F) LA SERIE, REMEDIDA AL CIERRE
+   CIFRA entradas en total: 54
+   CIFRA colisiones (un numero escrito mas de una vez): 0
+   CIFRA huecos: 0
+   SIGUIENTE LIBRE: R.63
+
+G) LOS FICHEROS DE ESTA VUELTA, MEDIDOS UNO A UNO
+   EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA: si apunta a un fichero
+   inexistente o de CERO BYTES es CAIDA DE CIFRA.
+   ESTE PROPIO FICHERO SE MIDE APARTE Y SE DICE POR QUE: se esta escribiendo
+   cuando el inventario corre, asi que aqui saldria en cero por el METODO y
+   no por el fichero. Su medicion va en el bloque H, tomada despues.
+   SALIDA_V201_APERTURA.txt                          14236 bytes  VIVO
+   SALIDA_V201_CERRAR_REPORTE.txt                     7837 bytes  VIVO
+   SALIDA_V201_CICLO_ETIQUETAS_APERTURA.txt           8106 bytes  VIVO
+   SALIDA_V201_CICLO_ETIQUETAS_CIERRE.txt             8106 bytes  VIVO
+   SALIDA_V201_CICLO_NUMSTAT_APERTURA.txt              140 bytes  VIVO
+   SALIDA_V201_CICLO_NUMSTAT_CIERRE.txt                140 bytes  VIVO
+   SALIDA_V201_CICLO_SYNC_APERTURA.txt                 583 bytes  VIVO
+   SALIDA_V201_CICLO_SYNC_CIERRE.txt                   583 bytes  VIVO
+   SALIDA_V201_CONTEO_APERTURA.txt                     169 bytes  VIVO
+   SALIDA_V201_CONTEO_CIERRE.txt                       169 bytes  VIVO
+   SALIDA_V201_DESFASE_CALIBRADO_APERTURA.txt          505 bytes  VIVO
+   SALIDA_V201_DESFASE_CALIBRADO_CIERRE.txt            505 bytes  VIVO
+   SALIDA_V201_GATE0_CMD1_APERTURA.txt                4859 bytes  VIVO
+   SALIDA_V201_GATE0_CMD1_CIERRE.txt                  4859 bytes  VIVO
+   SALIDA_V201_HEAD_APERTURA.txt                        41 bytes  VIVO
+   SALIDA_V201_HEAD_CIERRE.txt                          41 bytes  VIVO
+   SALIDA_V201_MOTOR_APERTURA.txt                     1160 bytes  VIVO
+   SALIDA_V201_MOTOR_CIERRE.txt                       1160 bytes  VIVO
+   SALIDA_V201_SERIE_APERTURA.txt                     7584 bytes  VIVO
+   SALIDA_V201_T1C_CORRECCION_DE_CITA.txt             1873 bytes  VIVO
+   SALIDA_V201_T1_REGISTROS.txt                       8533 bytes  VIVO
+   SALIDA_V201_T1_REGISTROS_IDEM.txt                  8447 bytes  VIVO
+   SALIDA_V201_T2_CORRECCION_OP_I_01.txt              4179 bytes  VIVO
+   SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt         1390 bytes  VIVO
+   SALIDA_V201_T2_GUARDA_ESTADO.txt                    639 bytes  VIVO
+   SALIDA_V201_T3_OP_L_02.txt                         9199 bytes  VIVO
+   SALIDA_V201_T4_LECTURA.txt                        13224 bytes  VIVO
+   SALIDA_V201_T4_VARA.txt                           17849 bytes  VIVO
+   SALIDA_V201_TALLADOR_CABECERA.txt                  2434 bytes  VIVO
+   SALIDA_V201_TALLADOR_COMPARAR.txt                  2574 bytes  VIVO
+   SALIDA_V201_TALLADOR_RECHAZO.txt                   1886 bytes  VIVO
+   SALIDA_V201_TSC_APERTURA.txt                          7 bytes  VIVO
+   SALIDA_V201_TSC_CIERRE.txt                            7 bytes  VIVO
+   SALIDA_V201_VARA_DEL_PLAN.txt                     17509 bytes  VIVO
+   SALIDA_V201_WEB_APERTURA.txt                        472 bytes  VIVO
+   SALIDA_V201_WEB_CIERRE.txt                          336 bytes  VIVO
+   CIFRA ficheros SALIDA_V201_* (sin contar este): 36
+   CIFRA vivos: 36 | CIFRA de CERO BYTES: 0
+
+FIN
+
+H) LA MEDICION DE ESTE MISMO FICHERO, TOMADA DESPUES DE ESCRIBIRLO
+   docs/loop/SALIDA_V201_CIERRE_MEDICIONES.txt: 6578 bytes en disco y LF

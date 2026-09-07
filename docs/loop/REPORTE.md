@@ -61,8 +61,7 @@
 > **Y no se toca `dataset/` a mano**: el `numstat` de `dataset/`, `web/`, `engine/`
 > y `docs/plan/` se mide al entrar y al salir y **las dos cifras se publican**.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre.
-
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 201 CIERRA CON SUS CUATRO TAREAS Y CON UNA SOLA PARADA, QUE ES UNA MEDICION Y NO UNA EXCUSA: el acta 200 entra en la serie como R.61 y la vuelta 198 como R.62 DECLARANDO LA AUSENCIA DE SU REPORTE en vez de fabricarlo, sin escribir un solo lector nuevo; la correccion de cita de la 1.c no se escribio hasta comprobar sus dos mitades sobre los dos ficheros; la evidencia de OP-I-01 lleva ya su correccion declarada en su sede con las dos cifras y sus dos fechas de corte, el 323 CITADO por linea e indice y el 672 RECONTADO hoy, y con 0 de 71 fichas moviendo su campo estado; OP-L-02 se midio contra su verificacion y NO SE PUEDE EJECUTAR SIN DECIDIR, porque su propio texto da tres y seis para las mismas nominas y no las nombra por id; y la vara del plan, corrida por mi con el corte de esta vuelta, sale exitcode 0 con CERO cifras discrepando del encargo, deja OP-L-01 con sus cuatro pruebas de cobertura cubiertas y destapa que el hueco de OP-L-03 no es que falte el trabajo sino que su evidencia apunta al documento equivocado.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -99,12 +98,25 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva.**
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 201`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO, 19 celdas no se pudieron leer"**, y de las lineas de
-rojo que imprima, **0 mencionan APERTURA**. Este hueco se rellena con la
-tabla tallada entera cuando la vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 201`, y su salida
+cruda vive en `docs/loop/SALIDA_V201_TALLADOR_CABECERA.txt` (2434 bytes en disco y 2414 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `405123f1` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 200, SIN PARADA: EL EJECUTOR CIERRA CON CERO CAIDAS Y LAS DOS PARADAS QUE LEVANTA SE ADJUDICAN CON REGLA ESCRITA; LAS CUATRO CAIDAS DE ESTA ACTA SON MIAS.'), HEAD real de apertura `405123f1` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `d25a96f2` (leido de `SALIDA_V201_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CUATRO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -114,7 +126,7 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. (1.a) El **acta 200** entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, **computado y no tecleado**, y su cuerpo se acota EN ESTA VUELTA y no con las cifras del encargo. (1.b) **LA ENTRADA DE LA VUELTA 198**, por la adjudicacion `4.7` del acta 200: sigue sin entrada propia y sin reporte archivado, y su entrada **DECLARA LA AUSENCIA** con el instrumento que la midio. **NO SE FABRICA EL REPORTE.** (1.c) **UNA CORRECCION DE CITA, DE UNA LINEA, EN SU SEDE**: la seccion 8 de `docs/loop/reportes/REPORTE_V200.md` atribuye a `AUDITOR.md` 0 unas palabras que son del **acta 185**, y el aviso se anade **con el texto viejo entero y sin tachar**, por el carril del banco `9.10` mas `EJECUTOR.md` 8. **NO ES CAIDA Y NO SE COBRA.** Y **no se escribe ningun lector nuevo**: la moratoria lo prohibe | **CERRADA** | `docs/loop/SALIDA_V201_T1_REGISTROS.txt`, `docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`, `docs/loop/SALIDA_V201_T1C_CORRECCION_DE_CITA.txt`, `docs/PENDIENTES.md` (R.61 en la linea 15595 y R.62 en la 15681), `docs/loop/reportes/REPORTE_V200.md` (aviso en la linea 590) |
 | **TAREA 2** | LA CORRECCION DECLARADA DE LA EVIDENCIA DE `OP-I-01`, adjudicada por el acta 199 en su `4.1`. La ficha promete **323** entradas y `docs/plan/INVENTARIO.jsonl` tiene otra cifra. La vieja **no es una mentira**: viaja con su fecha de corte, y lo que envejecio es la evidencia. La correccion va **EN SU SEDE**, con el texto viejo entero y sin tachar, y **las dos cifras con su fecha de corte cada una** (banco `9.21`). **NINGUNA DE LAS DOS SE TECLEA**: la del fichero se recuenta en esta vuelta y se pega su salida, la de la ficha se lee de la ficha y se cita por linea. Y se publica **el reparto por tipo recontado hoy**. **NINGUN CAMPO `estado` SE MUEVE** | **CERRADA** | `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`, `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`, `docs/loop/SALIDA_V201_T2_GUARDA_ESTADO.txt`, `docs/plan/OPERACIONES.jsonl` (linea 44, elemento 4 de `evidencia`) |
-| **TAREA 3** | LA MEDICION DE `OP-L-02` CONTRA SU `verificacion`, NO CONTRA SU `evidencia`, adjudicada por el acta 199 en su `4.2`. Es la unica de las cuatro fichas reales **SIN DOCUMENTO QUE MEDIR**: su evidencia entera es prosa. Se lee la ficha entera, se **cita su `verificacion` por linea**, y se responde con medicion: **que pide exactamente, que parte se puede comprobar hoy contra el repo y que parte no**. Si su `verificacion` tampoco alcanza para ejecutarla sin decidir, **eso es un hallazgo medido y va como PARADA** (`AUDITOR.md` 3), no como improvisacion | **CERRADA CON PARADA** | `docs/loop/SALIDA_V201_T3_OP_L_02.txt` (9199 bytes), `docs/plan/OPERACIONES.jsonl` linea 42 (leida, NO tocada) |
+| **TAREA 3** | LA MEDICION DE `OP-L-02` CONTRA SU `verificacion`, NO CONTRA SU `evidencia`, adjudicada por el acta 199 en su `4.2`. Es la unica de las cuatro fichas reales **SIN DOCUMENTO QUE MEDIR**: su evidencia entera es prosa. Se lee la ficha entera, se **cita su `verificacion` por linea**, y se responde con medicion: **que pide exactamente, que parte se puede comprobar hoy contra el repo y que parte no**. Si su `verificacion` tampoco alcanza para ejecutarla sin decidir, **eso es un hallazgo medido y va como PARADA** (`AUDITOR.md` 3), no como improvisacion | **CERRADA CON PARADA** | `docs/loop/SALIDA_V201_T3_OP_L_02.txt` (9199 bytes en disco y 9199 en LF), `docs/plan/OPERACIONES.jsonl` linea 42 (leida, NO tocada) |
 | **TAREA 4** | LAS OTRAS DOS FICHAS REALES, `OP-L-01` Y `OP-L-03`, LEIDAS CONTRA SU VARA. Es el trabajo que la moratoria `6.3` manda: **EL PLAN HASTA AGOTARLO**. **LO PRIMERO: la vara se vuelve a correr AQUI** con el corte de esta vuelta y **se publican sus cifras de hoy**; si discrepan de las del encargo, **la discrepancia se declara y no se resuelve copiando** (`AUDITOR.md` 1.1). Por cada ficha: **se cita su `verificacion` por linea**, se **miden sus documentos en bytes exactos de disco y LF** (`P.2`), y se dice **si el documento cubre lo que la ficha describe**, con la cita que lo sostenga o con el hueco nombrado. **NO SE MUEVE NINGUN `estado`** y **no se cierra ninguna ficha**: lo que produce esta tarea es **lectura medida** | **CERRADA** | `docs/loop/SALIDA_V201_T4_VARA.txt` (17849 bytes en disco, 17565 LF), `docs/loop/SALIDA_V201_T4_LECTURA.txt` (13224 bytes en disco y LF), `docs/plan/OPERACIONES.jsonl` lineas 41 y 43 (leidas, NO tocadas) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -144,8 +156,8 @@ de la nomina, que sigue **congelada en 135**.
 
 **1.a . EL ACTA 200 ENTRA COMO `R.61`.** El cuerpo se acoto **en esta vuelta** y
 no con las cifras del encargo: **lineas 70230 a 70549 de
-`docs/loop/ACTA_AUDITOR.md`, 320 lineas**, sobre un fichero de **4657056 bytes en
-disco y 4657056 normalizados a LF**. Numerales contados de ese cuerpo: **8
+`docs/loop/ACTA_AUDITOR.md`, 320 lineas**, sobre un fichero de
+**4657056 bytes en disco y 4657056 normalizados a LF**. Numerales contados de ese cuerpo: **8
 adjudicaciones** (`4.1` a `4.8`), **4 hallazgos** de la seccion 5, **2 preguntas
 contestadas**, **4 caidas propias del auditor** (`C.A1` a `C.A4`) y **0 caidas
 del ejecutor**. **El contraste heredado se publica al lado y la discrepancia se
@@ -178,8 +190,9 @@ y **los 8 CAEN al mutar el esperado**. Contado de
 `docs/loop/SALIDA_V201_T1_REGISTROS.txt`.
 
 **LA SEGUNDA CORRIDA ES LA PRUEBA DE QUE NO DUPLICA**, sellada aparte en
-`docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`: **0 entradas escritas** y
-**crecimiento 0 bytes**.
+`docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`, que mide
+**8447 bytes en disco y 8447 normalizados a LF**: **0 entradas escritas** y la
+sede sin crecer ni un byte.
 
 **LA SERIE, REMEDIDA AL CERRAR CON `serie_de_registros.py` Y NO HEREDADA:** **54
 entradas**, **0 colisiones**, **0 huecos**, siguiente libre **`R.63`**.
@@ -236,8 +249,8 @@ CORTE** (banco `9.21`):
   se toca**.
 - **672 entradas, corte 2026-09-07.** Recontadas **en esta vuelta**, leyendo
   `docs/plan/INVENTARIO.jsonl` linea a linea y parseando cada una como JSON:
-  **672 lineas no vacias**, **0 lineas que no son JSON valido**, **584554 bytes en
-  disco y 584554 normalizados a LF**.
+  **672 lineas no vacias**, **0 lineas que no son JSON valido**, y
+  **584554 bytes en disco y 584554 normalizados a LF**.
 
 **EL REPARTO POR TIPO, RECONTADO HOY Y NO COPIADO DE NINGUNA ACTA NI DEL ACTA
 199.** Contado de `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01.txt`:
@@ -270,9 +283,10 @@ y es `evidencia`; el `estado` de `OP-I-01` entra y sale en `LISTA`; los **3
 elementos viejos siguen identicos y en su orden** y ahora son **4**; y **0 de las
 71 fichas** cambian su campo `estado`. `git diff --numstat` sobre `docs/plan/`
 da **1 anadida y 1 borrada** en `docs/plan/OPERACIONES.jsonl`, que es lo que
-`jsonl` da siempre al reescribir una linea, y el fichero pasa de **498085 bytes en
-disco y LF** a **499474 bytes en disco y LF**, con **71 lineas no vacias antes y
-despues** y **0 lineas que no sean JSON valido**.
+`jsonl` da siempre al reescribir una linea. El fichero sale en
+**499474 bytes en disco y 499474 normalizados a LF**, y antes de escribir media
+498085 por disco y 498085 por LF. Tiene **71 lineas no vacias antes y despues** y
+**0 lineas que no sean JSON valido**.
 
 **UNA CORRECCION DE MI PROPIO COMPUTO, HECHA EN ESTA MISMA VUELTA Y DECLARADA EN
 VEZ DE CALLADA.** En su primera version la guarda del 323 corria **delante** de la
@@ -282,13 +296,15 @@ correccion cita el 323 verbatim** y despues de escribirla hay **dos** elementos 
 esa cifra. **No escribia nada, que es lo que se queria, pero lo decia por el motivo
 equivocado**, y un instrumento que acierta por el motivo equivocado no vale. Se
 reordeno, se dejo escrito dentro del fichero, y la segunda corrida esta sellada
-aparte en `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`: **IDEMPOTENTE**,
-**4 elementos de `evidencia` al entrar** y **crecimiento 0 bytes**.
+aparte en `docs/loop/SALIDA_V201_T2_CORRECCION_OP_I_01_IDEM.txt`, que mide
+**1390 bytes en disco y 1390 normalizados a LF**: **IDEMPOTENTE**, **4 elementos
+de `evidencia` al entrar** y la ficha sin crecer ni un byte.
 
 ### TAREA 3: `OP-L-02` MEDIDA CONTRA SU `verificacion`. TERMINA EN PARADA, Y LA PARADA ES LA MEDICION
 
 **ADJUDICADA POR EL ACTA 199 EN SU `4.2`.** Comando corrido en esta vuelta, con su
-salida sellada en `docs/loop/SALIDA_V201_T3_OP_L_02.txt` (**9199 bytes**):
+salida sellada en `docs/loop/SALIDA_V201_T3_OP_L_02.txt`, que mide
+**9199 bytes en disco y 9199 normalizados a LF**:
 
 ```
 python scripts/loop/_v201_t3_medir_op_l_02.py
@@ -494,3 +510,236 @@ clase, no se toco ni un nodo ni un veredicto y NO SE ESCRIBIO UNA SOLA LINEA EN
    escritura en `docs/plan/` que nadie me adjudico aqui.
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+
+**TODA FILA DE ESTA TABLA CITA EL FICHERO DEL QUE SE CUENTA** (`EJECUTOR.md` 1,
+LA TABLA SE CUENTA DE SU FICHERO). Ninguna celda esta tecleada de memoria.
+
+| que | cifra | de que fichero se cuenta |
+|---|---|---|
+| racha de cierres, que decide el tope de sub-tareas | **2**, con las vueltas **199** y **200** | `SALIDA_V201_APERTURA.txt`, bloque `E` |
+| entradas de la serie `R.N`, antes y despues | **52** y **54**, con **0** colisiones y **0** huecos en las dos | `SALIDA_V201_T1_REGISTROS.txt` |
+| numerales del acta 200 | **8** adjudicaciones, **4** hallazgos, **2** preguntas, **4** caidas del auditor, **0** del ejecutor | `SALIDA_V201_T1_REGISTROS.txt` |
+| numerales del acta 198 | **3** adjudicaciones, **5** hallazgos, **3** preguntas, **2** caidas del auditor, **0** del ejecutor | `SALIDA_V201_T1_REGISTROS.txt` |
+| cuerpo del acta 200, acotado hoy | lineas **70230** a **70549**, **320** lineas | `SALIDA_V201_APERTURA.txt`, bloque `H` |
+| cuerpo del acta 198, acotado hoy | lineas **69636** a **69877**, **242** lineas | `SALIDA_V201_T1_REGISTROS.txt` |
+| prueba de la guarda de idempotencia | **8** casos, **8** verdes, **0** rojos, **8 de 8 CAEN** al mutar el esperado, **2** discrepan contra la guarda vieja | `SALIDA_V201_T1_REGISTROS.txt` |
+| la segunda corrida del registrador | **0** entradas escritas, crecimiento **0** bytes | `SALIDA_V201_T1_REGISTROS_IDEM.txt` |
+| deuda de la serie al cerrar | **8** actas de la 173 a la 200 sin entrada propia, las de la **173** a la **180** | `SALIDA_V201_T1_REGISTROS.txt` |
+| el literal de la 1.c, en los dos ficheros | **0** lineas en `AUDITOR.md` y **4** en `ACTA_AUDITOR.md`, de las cuales **1** cae dentro del acta 185 | `SALIDA_V201_T1C_CORRECCION_DE_CITA.txt` |
+| entradas de `docs/plan/INVENTARIO.jsonl`, recontadas hoy | **672** lineas no vacias y **0** que no son JSON valido | `SALIDA_V201_T2_CORRECCION_OP_I_01.txt` |
+| reparto por tipo del inventario, recontado hoy | **556** acto, **54** familia_de_ids, **20** figura, **19** defecto, **13** racimo, **10** dominio, suma **672** | `SALIDA_V201_T2_CORRECCION_OP_I_01.txt` |
+| la cifra vieja de `OP-I-01`, citada y no tecleada | **323**, en la linea **44** y en el elemento **1** de su `evidencia` | `SALIDA_V201_T2_CORRECCION_OP_I_01.txt` |
+| la guarda de que ningun `estado` se movio | **1** linea difiere de **71**, **1** clave cambia y es `evidencia`, **0** de **71** fichas cambian su `estado` | `SALIDA_V201_T2_GUARDA_ESTADO.txt` |
+| elementos de `evidencia` de `OP-L-02` que nombran un fichero | **0** de **1** | `SALIDA_V201_T3_OP_L_02.txt` |
+| marcador del cribado, recontado hoy | **3388** filas, **3388** puestos distintos, maximo **3388**, **0** huecos, y **A 551, B 72, C 5, D 2760** que suma **3388** | `SALIDA_V201_T3_OP_L_02.txt` |
+| backlog de `OP-L-02` | **189** pares en **4** grupos, **4 de 4** con motivo escrito, suma **189** contra **189** | `SALIDA_V201_T3_OP_L_02.txt` |
+| rutas que `OP-L-02` promete como prueba | **8** distintas, **8** vivas, **0** inexistentes, **0** de cero bytes | `SALIDA_V201_T3_OP_L_02.txt` |
+| la vara del plan, corrida por mi con el corte de esta vuelta | **71** fichas, **37** que no calzan, **6** en LISTA sin prueba, **4** de trabajo real, **2** consumidas, **24** congeladas declaradas, **12** en silencio, **1** HECHA sin prueba | `SALIDA_V201_T4_VARA.txt` |
+| contraste de esa vara contra las cifras del encargo | **0** discrepan | `SALIDA_V201_T4_LECTURA.txt` |
+| cobertura de `OP-L-01` | **4** pruebas CUBIERTAS y **0** NO CUBIERTAS | `SALIDA_V201_T4_LECTURA.txt` |
+| cobertura de `OP-L-03` | **1** prueba CUBIERTA y **2** NO CUBIERTAS | `SALIDA_V201_T4_LECTURA.txt` |
+| los ficheros `docs/plan/OP_L_03_*` que la `evidencia` no nombra | **2**, con **14** filas y **14** actos distintos uno, y **19** filas y **8** actos distintos el otro, **0** lineas no JSON en los dos | `SALIDA_V201_T4_LECTURA.txt` |
+| la nomina y el censo, al entrar y al salir | **135** y **135** contra el congelado **135**, censo **197**, vara **148**, fuera **2** con vara y **62** sin vara, **0** invisibles, **0** sin sujeto congelado | `SALIDA_V201_APERTURA.txt` bloque `F` y `SALIDA_V201_CIERRE_MEDICIONES.txt` bloque `D` |
+| ficheros sellados de esta vuelta, remedidos DESPUES del cierre | **36** ficheros `SALIDA_V201_*`, **36** vivos y **0** de CERO BYTES, mas ese mismo fichero con **6578** bytes en disco y **6578** normalizados a LF. **La cifra se remidio despues de cerrar a proposito**: el propio cierre escribe su sellada y la del cotejo del tallador, y una cuenta tomada antes se quedaria corta en dos | `SALIDA_V201_CIERRE_MEDICIONES.txt` bloques `G` y `H` |
+
+## 4. LO QUE SE TOCO, Y LO QUE NO
+
+**EL ARBOL AL ENTRAR, LEIDO DE LA APERTURA SELLADA Y NO TECLEADO EN ESTA PROSA.**
+`docs/loop/SALIDA_V201_APERTURA.txt`, bloque `C`, publica las dos cifras del
+estado del arbol con la redaccion exacta que la guarda coteja, y aqui se repiten
+LEIDAS de ella:
+
+`git status --porcelain` 1 linea al entrar, que era el propio bloque de apertura
+todavia sin commitear.
+
+`git diff --numstat -- dataset/` 0 filas al entrar.
+
+**La apertura sellada no se toco al cierre ni una vez.**
+
+**LO QUE SE TOCO:**
+
+- `docs/PENDIENTES.md`: las entradas **`R.61`** (acta 200) y **`R.62`** (acta 198,
+  declarando la ausencia de su reporte), anadidas al final. **171 lineas anadidas
+  y 0 borradas**, contadas con `git diff --numstat`.
+- `docs/loop/reportes/REPORTE_V200.md`: **un aviso de cita de una linea** detras
+  del parrafo de su PARADA `1`. **2 lineas anadidas y 0 borradas**. El fichero sale
+  en **138307 bytes en disco y 138307 normalizados a LF**, y entraba en
+  **137433 en disco y 137433 en LF**, medido antes de escribir.
+- `docs/plan/OPERACIONES.jsonl`: **un elemento mas** en la `evidencia` de
+  `OP-I-01`, en su linea **44**. Es **la unica escritura de esta vuelta en
+  `docs/plan/`**, y va con su guarda medida contra `HEAD`.
+- `scripts/loop/`: el bloque de apertura, el esqueleto y el bloque de cierre (los
+  tres **clones declarados**, y los dos ultimos generados programaticamente del de
+  la 200 para que su codigo vaya byte a byte), **cinco computos de un solo uso con
+  prefijo de guion bajo** y **cuatro cuerpos de tarea**.
+- `docs/loop/`: las salidas selladas de esta vuelta y el reporte.
+
+**LO QUE NO SE TOCO, Y SE MIDE EN VEZ DE PROMETERSE:**
+
+- **`dataset/` no se toco a mano.** El `numstat` contra `HEAD` sale con **0
+  filas** al entrar y **0 al salir**, medido en
+  `SALIDA_V201_CICLO_NUMSTAT_APERTURA.txt` y en
+  `SALIDA_V201_CICLO_NUMSTAT_CIERRE.txt`, y **contra el HEAD de apertura tambien
+  sale en 0 filas**, medido en `SALIDA_V201_CIERRE_MEDICIONES.txt` bloque `C`.
+- **`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` no se movio.**
+  **4054129 bytes en disco y 4054129 normalizados a LF**, con
+  `sha256` `0a77b5a35a962621` de disco y `0a77b5a35a962621` de LF,
+  **al entrar y al salir**. **Ninguna clase y ningun veredicto se mueven,
+  porque mover una clase es del RECOMPUTO.**
+- **`web/` y `engine/` en cero filas de `numstat`** por las dos varas, la de
+  `HEAD` y la del HEAD de apertura.
+- **NINGUN CAMPO `estado` SE MOVIO**, y no se afirma: se mide contra `HEAD` en
+  `SALIDA_V201_T2_GUARDA_ESTADO.txt`, que sale **VERDE** con **0 de 71 fichas**
+  cambiando su `estado`. La vara del trabajo pendiente es el instrumento, nunca el
+  campo (recuadro de `AUDITOR.md` 0).
+- **La nomina no crecio ni se podo**: **135** al entrar y **135** al salir, con
+  `CASOS_DECLARADOS` en **2** y el censo en **197** las dos veces. **Los dos
+  arneses que quedan fuera con la vara 148 siguen fuera**, y son
+  `vuelta197_tarea2_mutacion_orden_del_turno.py` y
+  `vuelta199_tarea1_mutacion_guardas_revividas.py`.
+- **`AUDITOR.md` no se toco**, ni siquiera para la correccion de cita de la
+  TAREA 1.c: **el aviso va en el reporte que hizo la cita, no en la regla**.
+- **Las dos paradas que la 200 levanto no se tocaron y no se volvieron a
+  levantar.** El acta 200 las adjudica en su `4.1` y su `4.2` y **las dos
+  reparaciones son de codigo**: la moratoria `6.3` las prohibe hoy y van a la
+  auditoria integral.
+- **`OP-L-01`, `OP-L-02` y `OP-L-03` se LEYERON y no se movieron:** las tres
+  entran y salen en `LISTA` y **ninguna ficha se cerro por cuenta del ejecutor**.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**`D.1` LA COTA DE LA `verificacion` DE UNA FICHA JSONL SE CITA COMO LINEA MAS
+INDICE, Y ESO LO ELEGI YO.** El encargo manda *"cita su `verificacion` por
+linea"*, y las cuatro fichas reales viven **cada una en UNA sola linea** de
+`docs/plan/OPERACIONES.jsonl`. Citar solo la linea (**41**, **42** o **43**) no
+distingue una clausula de otra, asi que **doy las dos coordenadas juntas, la
+linea y el indice del elemento**. **Si la casa queria otra cosa, esta es la
+lectura que use y va marcada antes de saberlo.**
+
+**`D.2` LA PRUEBA DE COBERTURA DE LA TAREA 4 ES DE PRESENCIA, NO DE CALIDAD, Y LA
+AGUJA LA ELEGI YO.** La declare **antes de correrla**, en la constante `PRUEBAS`
+de `scripts/loop/_v201_t4_leer_op_l_01_y_03.py`, justamente para no elegirla
+despues de mirar. Pero **quien decide que literal representa a cada elemento de
+`evidencia` soy yo**: que `las once con su razon` se compruebe con las once
+cabeceras `LD-01` a `LD-11` es una decision de lectura, no una medicion. **Va
+marcada.**
+
+**`D.3` DIGO QUE `OP-L-03` TIENE UN HUECO DE EVIDENCIA Y NO DE TRABAJO, Y ESA
+FRASE ES UNA INTERPRETACION SOBRE DOS MEDICIONES.** Las dos mediciones son
+firmes: el documento que su `evidencia` nombra **no trae ni el literal `reparto
+por acto` ni una sola mencion de `OP-L-03`**, y **existen dos ficheros
+`docs/plan/OP_L_03_*` que si traen un reparto por acto y que su `evidencia` no
+nombra**. **Que eso signifique que el trabajo esta hecho y mal apuntado, y no que
+falte, NO lo he medido:** no he leido si esos dos ficheros cubren lo que la ficha
+describe. **Lo digo como interpretacion y va marcada.**
+
+**`D.4` NO ESCRIBI LA CORRECCION DECLARADA DE LA `evidencia` DE `OP-L-03`,
+AUNQUE SE PARECE MUCHO A LA QUE SI ESCRIBI PARA `OP-I-01`.** El motivo es que **el
+encargo adjudica escritura en sede para `OP-I-01` y solo LECTURA MEDIDA para
+`OP-L-01` y `OP-L-03`**, y escribir en `docs/plan/` sin adjudicacion es lo que la
+casa reserva. **La propongo en la TAREA 4 con su evidencia. Si la lectura correcta
+era escribirla, este es el error y va marcado.**
+
+**`D.5` LA CIFRA DE PREGUNTAS DE `R.62` NO SALE DE LA MISMA VIA QUE LA DE
+`R.61`.** Para el acta 200 el numeral se filtra contra la seccion de PREGUNTAS de
+su reporte archivado; para el acta 198 **ese reporte no existe**, asi que use **las
+claves `P.n` nombradas en los titulos `4.n` del acta**. **La entrada lo dice con
+todas sus letras**, y prefiero eso a publicar un **0** que se leeria como que el
+acta 198 no contesto ninguna pregunta. **Pero son dos varas distintas en la misma
+serie, y eso va marcado.**
+
+## 6. PREGUNTAS, QUE NO ADIVINO
+
+**`P.1` LA `verificacion[1]` DE `OP-L-02` DA TRES Y SU `nota` DA SEIS PARA LAS
+MISMAS NOMINAS, Y NINGUNA LAS NOMBRA POR ID.** Es la PARADA de esta vuelta.
+**Cuales son las nominas afectadas, nombradas por id, y son tres o son seis.** No
+lo decido yo.
+
+**`P.2` LA `evidencia` DE `OP-L-03` APUNTA A UN DOCUMENTO QUE NO TRAE LO QUE
+PROMETE, Y LOS QUE SI LO TRAEN EXISTEN Y NO ESTAN NOMBRADOS.** Propongo una
+correccion declarada de su `evidencia`, del mismo carril que la de `OP-I-01`.
+**No la escribo sin adjudicacion.**
+
+**`P.3` `OP-L-01` TIENE SUS CUATRO PRUEBAS DE COBERTURA CUBIERTAS.** Eso **no
+dice que su mesa se hiciera bien**, y por eso no la cierro. **Pregunto si toca
+mirarla contra el criterio de HECHO de `docs/plan/08_VERIFICACION.md`**, y dejo
+nombrado lo unico que la lectura levanta: **la TABLA VIVA DE LOS PUROS declara
+vigencia al puesto 1157 y el marcador vale hoy 3388**.
+
+**`P.4` LA DEUDA DE LA SERIE BAJA A 8 Y SON TODAS SEGUIDAS: LAS ACTAS 173 A 180.**
+Esta vuelta pago la de la 198 porque el acta 200 la adjudico en su `4.7`. **Las
+ocho restantes no las adjudica nadie todavia**, y pregunto si se pagan y en que
+orden.
+
+## 7. PENDIENTES DE DOCTRINA
+
+**Ninguno nuevo.** Esta vuelta no encontro ningun par ni ninguna operacion que
+pidiera una regla que no existe. Lo que encontro fue **una ficha cuyo texto no
+alcanza para ejecutarse sin decidir**, y para eso **la regla si existe** y es
+`AUDITOR.md` 3: **es PARADA, no una improvisacion**, y asi va escrita.
+
+## 8. LO QUE LA 202 RECIBE, Y LA UNICA PARADA
+
+**PARADA `1`: `OP-L-02` NO SE PUEDE EJECUTAR SIN DECIDIR, Y NO LA ARREGLO YO.**
+Su `verificacion[1]`, en la linea **42** de `docs/plan/OPERACIONES.jsonl`, pide
+que **las tres nominas afectadas** queden con cobertura completa y su forma
+reescrita; el campo `nota` **de la misma ficha** escribe **`SEIS nominas`** una vez
+y **`TRES nominas`** una vez, sobre las mismas nominas; y **ninguna de las dos las
+nombra por id**, con `nodos`, `preservar`, `eliminar` y `superviviente` en **0, 0,
+0 y `None`**. **Elegir cuales son las tres es decidir, no medir.** `AUDITOR.md` 3
+lo llama PARADA con esas palabras. **Lo que hace falta para desbloquearla es una
+sola decision escrita, y no es mia.**
+
+**Y NO HAY UNA SEGUNDA PARADA, AUNQUE LA 200 DEJARA DOS.** El acta 200 las
+adjudica en su `4.1` y su `4.2`: el rojo de los once tramos es **falso rojo de
+censo** y el bloque `F` de `vuelta185_tarea1c_mutacion_bateria_continuada.py` es
+**un arnes cuya premisa envejecio**. **Las dos reparaciones son de codigo y van a
+la auditoria integral. Esta vuelta ni las toca ni las vuelve a levantar.**
+
+**LO QUE LA 202 SE VA A ENCONTRAR, Y SE DICE PARA QUE NO LO REDESCUBRA:**
+
+- **la racha de cierres vale 2** con las vueltas 199 y 200, asi que el **tope de
+  sub-tareas esta en CINCO** y `AUDITOR.md` 6.2 ya no aplica. **Si esta vuelta
+  cierra, la racha pasa a 3.**
+- **la bateria vuelve en la 205** por la cadencia de cinco de `AUDITOR.md` 6.1,
+  contando desde la 200. **Aqui la seccion 9 cierra con hueco declarado.**
+- **la nomina sigue congelada en 135** y **los dos arneses que el censo ve y ella
+  no tiene siguen fuera**, con la vara 148. **Sin vara son 62.**
+- **quedan DOS de las cuatro fichas reales sin resolver**: `OP-L-02`, que es la
+  PARADA de arriba, y `OP-L-03`, cuya `evidencia` propongo corregir.
+- **`OP-L-01` queda con sus cuatro pruebas de cobertura cubiertas** y **propuesta,
+  no cerrada**.
+- **`OP-I-01` ya tiene su correccion declarada en su sede**, con las dos cifras y
+  sus dos fechas de corte, y **su campo `estado` sin mover**.
+- **la deuda de la serie son 8 actas seguidas**, de la **173** a la **180**.
+- **el lanzador de la bateria sigue sellando con nombre de 183**, asi que la
+  corrida de la 200 vive en `SALIDA_V183_BATERIA.txt`. **No es que la 200 no
+  corriera la bateria: es que su salida no se llama como su vuelta**, y el acta
+  200 ya lo adjudica.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 201 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V201_BATERIA.txt`.
+
+**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`
+devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no
+hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
+bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes
+normalizados a LF**, **y ese cero sale de que no hay fichero, no de una
+medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026
+en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos
+casos y no los confunde.
+
+ATRIBUCION: NADIE la corrio, y NO tocaba: es LA CADENCIA de AUDITOR.md 6.1, que pone la bateria CADA CINCO VUELTAS y en vuelta propia. La 200 fue la vuelta de bateria y la corrio ENTERA, en sus once tramos y con 135 de 135 entradas, asi que a la 201 le toca vuelta intermedia y su hueco se declara y se mide en vez de rellenarse. El encargo de esta vuelta lo dice con esas palabras y su sello de apertura lo escribe en el bloque I, que ademas mide CERO ficheros SALIDA_V201_BATERIA_TRAMO_N.txt en disco al entrar, sobre 40 selladas por tramo que si hay en docs/loop/ repartidas entre las vueltas 176, 183, 189 y 194. Y LO QUE ESTA VUELTA SI MIDIO DEL RADIO DE LA BATERIA, sin correrla: la nomina de verificar_mutaciones_viejas.py entra y sale en 135 entradas y CALZA con el congelado que manda AUDITOR.md 6.3, con CASOS_DECLARADOS en 2; el censo reconoce 197 arneses; LA VARA DEL CENSO VALE 148 y decide, y CON ESA VARA hay 2 arneses del censo fuera de la nomina, pero SIN VARA hay 62, y las dos cifras se publican juntas porque un numero solo al lado de un censo de 197 y una nomina de 135 se lee como cobertura total y es cobertura desde la vara para arriba; hay ademas 0 entradas invisibles al censo y 0 entradas sin sujeto congelado. LOS DOS ARNESES QUE QUEDAN FUERA CON LA VARA 148 VAN NOMBRADOS: vuelta197_tarea2_mutacion_orden_del_turno.py y vuelta199_tarea1_mutacion_guardas_revividas.py, los dos escritos por vueltas anteriores y ninguno metido en la nomina porque el congelado lo impide, asi que la 205 tampoco los va a correr, y eso es consecuencia de una regla escrita y no un descuido. NO SE PODO NI UNA ENTRADA Y NO SE ANADIO NINGUNA: los cinco computos nuevos de esta vuelta llevan prefijo de guion bajo y quedan fuera del censo y fuera de la nomina, por el mismo congelado. Y DONDE QUEDO SELLADA LA CORRIDA DE LA 200 NO SE NOMBRA AQUI A PROPOSITO, porque nombrar un fichero de otra vuelta dentro de este hueco es justo lo que la guarda de la pieza 4 prohibe y hace bien: la medicion entera, con su ruta y su commit, va en la seccion 8 de este reporte y en docs/loop/SALIDA_V201_CIERRE_MEDICIONES.txt bloque E.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.

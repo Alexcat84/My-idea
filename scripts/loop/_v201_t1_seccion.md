@@ -20,8 +20,8 @@ de la nomina, que sigue **congelada en 135**.
 
 **1.a . EL ACTA 200 ENTRA COMO `R.61`.** El cuerpo se acoto **en esta vuelta** y
 no con las cifras del encargo: **lineas 70230 a 70549 de
-`docs/loop/ACTA_AUDITOR.md`, 320 lineas**, sobre un fichero de **4657056 bytes en
-disco y 4657056 normalizados a LF**. Numerales contados de ese cuerpo: **8
+`docs/loop/ACTA_AUDITOR.md`, 320 lineas**, sobre un fichero de
+**4657056 bytes en disco y 4657056 normalizados a LF**. Numerales contados de ese cuerpo: **8
 adjudicaciones** (`4.1` a `4.8`), **4 hallazgos** de la seccion 5, **2 preguntas
 contestadas**, **4 caidas propias del auditor** (`C.A1` a `C.A4`) y **0 caidas
 del ejecutor**. **El contraste heredado se publica al lado y la discrepancia se
@@ -54,8 +54,9 @@ y **los 8 CAEN al mutar el esperado**. Contado de
 `docs/loop/SALIDA_V201_T1_REGISTROS.txt`.
 
 **LA SEGUNDA CORRIDA ES LA PRUEBA DE QUE NO DUPLICA**, sellada aparte en
-`docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`: **0 entradas escritas** y
-**crecimiento 0 bytes**.
+`docs/loop/SALIDA_V201_T1_REGISTROS_IDEM.txt`, que mide
+**8447 bytes en disco y 8447 normalizados a LF**: **0 entradas escritas** y la
+sede sin crecer ni un byte.
 
 **LA SERIE, REMEDIDA AL CERRAR CON `serie_de_registros.py` Y NO HEREDADA:** **54
 entradas**, **0 colisiones**, **0 huecos**, siguiente libre **`R.63`**.

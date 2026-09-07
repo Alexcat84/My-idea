@@ -1,7 +1,8 @@
 ### TAREA 3: `OP-L-02` MEDIDA CONTRA SU `verificacion`. TERMINA EN PARADA, Y LA PARADA ES LA MEDICION
 
 **ADJUDICADA POR EL ACTA 199 EN SU `4.2`.** Comando corrido en esta vuelta, con su
-salida sellada en `docs/loop/SALIDA_V201_T3_OP_L_02.txt` (**9199 bytes**):
+salida sellada en `docs/loop/SALIDA_V201_T3_OP_L_02.txt`, que mide
+**9199 bytes en disco y 9199 normalizados a LF**:
 
 ```
 python scripts/loop/_v201_t3_medir_op_l_02.py
