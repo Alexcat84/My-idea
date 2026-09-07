@@ -1,0 +1,44 @@
+==============================================================================
+VUELTA 197, TAREA 2: QUIEN BORRA LA SEDE DEL TURNO DEL AUDITOR
+==============================================================================
+
+NO ES UNA SOSPECHA NI UNA LECTURA DE CODIGO: es una corrida. Se restaura la
+sede por el carril de la TAREA 2.b, se corre UN arnes de la nomina, y se
+vuelve a mirar. El que la borra queda nombrado por su cifra.
+
+vuelta182_tarea2_mutacion_apertura_auditor.py              exit=0
+   sede antes:   EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   sede despues: NO EXISTE
+   BORRA LA SEDE: SI
+vuelta192_tarea4_mutacion_cuarta_puerta.py                 exit=0
+   sede antes:   EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   sede despues: EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   BORRA LA SEDE: NO
+vuelta193_tarea4e_mutacion_sello_entre_procesos.py         exit=0
+   sede antes:   EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   sede despues: EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   BORRA LA SEDE: NO
+vuelta194_tarea2c_mutacion_sede_del_turno.py               exit=0
+   sede antes:   EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   sede despues: EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   BORRA LA SEDE: NO
+vuelta197_tarea2_mutacion_orden_del_turno.py               exit=0
+   sede antes:   EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   sede despues: EXISTE, 801 bytes, sha 69dfc4b6c6854d39
+   BORRA LA SEDE: NO
+
+CIFRA arneses corridos: 5
+CIFRA arneses que BORRAN la sede del turno: 1
+   BORRA: scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
+
+QUE SIGNIFICA, DICHO SIN ADORNO: el remedio de la TAREA 2.b esta en el codigo
+y sus 49 casos salen verdes, PERO un arnes de la nomina borra la sede del
+turno cada vez que corre, porque llama a AP.olvidar_todo() contra el modulo
+real SIN redirigir AP.RUTA_DEL_TURNO a un temporal. Es la misma leccion que
+la TAREA 2.a de la vuelta 193 le aplico a olvidar_todo() y que la TAREA 2.a
+de la 194 le aplico al arnes de la 192, y que a ESTE no se le aplico nunca.
+NO LO REPARO: reparar un arnes de la nomina no esta encargado en esta vuelta,
+y tocar una guarda sin encargo es lo que la casa reserva. QUEDA MEDIDO Y
+NOMBRADO, y la sede se restaura por su carril al terminar.
+
+SEDE RESTAURADA AL TERMINAR ESTA MEDICION: SI, 801 bytes, sha 69dfc4b6c6854d39

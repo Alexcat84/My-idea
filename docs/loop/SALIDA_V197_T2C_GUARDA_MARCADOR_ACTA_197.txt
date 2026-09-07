@@ -1,0 +1,51 @@
+==============================================================================
+VUELTA 197, TAREA 2.c: LA GUARDA DE LA C.A1 SOBRE EL ACTA 197 REAL
+==============================================================================
+
+0) LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE TOCAR NADA
+   EXISTE, 801 bytes, sha256 LF 69dfc4b6c6854d39
+   SE MIDE PORQUE `marcador()` APUNTA SU TOQUE y escribiria en ella. La
+   ruta se redirige a un temporal durante toda esta corrida.
+
+A) LA SALIDA DE `AP.marcador()` DE ESTA VUELTA, SELLADA
+   docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json (102 bytes)
+   filas: 3388
+   por_clase: A 551, B 72, C 5, D 2760
+   ESTAS CIFRAS SALEN DE CONTAR docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   POR EL CARRIL, no de ninguna tabla. Es lo que la C.A1 no hizo tres
+   actas seguidas.
+
+B) EL CUERPO DEL ACTA 197, ACOTADO EN ESTA CORRIDA
+   lineas 69341 a 69635 (295 lineas), sobre un fichero de 4595886 bytes
+
+C) LA GUARDA, CORRIDA SOBRE ESE CUERPO
+   GUARDA DEL MARCADOR (C.A1), vuelta 197
+      cifras que el acta publica: {'filas': 3388, 'por_clase': {'A': 551, 'B': 72, 'C': 5, 'D': 2760}}
+      salida sellada esperada: docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json
+      cifras de la salida sellada: filas 3388, por_clase {'A': 551, 'B': 72, 'C': 5, 'D': 2760}
+      VERDE: las filas y las 4 clases calzan con la salida sellada.
+   VEREDICTO SOBRE EL ACTA REAL: VERDE
+
+D) LA MUTACION SOBRE EL ACTA REAL, PORQUE UN VERDE SIN ELLA NO PRUEBA
+   QUE LA GUARDA MIRE
+   cifras leidas del acta: {'filas': 3388, 'por_clase': {'A': 551, 'B': 72, 'C': 5, 'D': 2760}}
+   filas 3388 -> 3389: la guarda CAE
+   clase A 551 -> 552: la guarda CAE
+   clase B 72 -> 73: la guarda CAE
+   clase C 5 -> 6: la guarda CAE
+   clase D 2760 -> 2761: la guarda CAE
+   CIFRA mutaciones corridas: 5 | CIFRA que CAYERON: 5
+
+E) Y EL OTRO CASO ROJO: SIN LA SALIDA SELLADA, LA GUARDA CAE
+   se corre sobre una base VACIA, sin borrar la sellada de verdad
+      ROJO: NO existe salida de marcador() de esta vuelta, o no se puede
+      leer. Una cifra de marcador que nadie saco por este carril es
+      exactamente la C.A1, y por eso no pasa.
+   la guarda CAE
+
+F) EL TEMPORAL SE RETIRA Y LA SEDE SE REMIDE (P.16)
+   al entrar: EXISTE, 801 bytes, sha256 LF 69dfc4b6c6854d39
+   al salir:  EXISTE, 801 bytes, sha256 LF 69dfc4b6c6854d39
+   LA SEDE DE VERDAD NO CAMBIO: SI
+
+VEREDICTO: VERDE

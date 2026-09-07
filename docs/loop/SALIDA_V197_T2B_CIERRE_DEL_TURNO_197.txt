@@ -1,0 +1,60 @@
+==============================================================================
+VUELTA 197, TAREA 2.b: EL TURNO DEL AUDITOR 197, CERRADO POR SU CARRIL
+==============================================================================
+
+A) EL ESTADO DEL FICHERO AL ENTRAR, MEDIDO Y NO SUPUESTO
+   docs/loop/_TURNO_DEL_AUDITOR.json
+   EXISTE, 801 bytes, sha256 LF 69dfc4b6c6854d39
+
+B) LO QUE EL SELLO DE APERTURA DE ESTA VUELTA MIDIO, ANTES DE QUE YO
+   TOCARA NADA (docs/loop/SALIDA_V197_APERTURA.txt, bloque D.1)
+   bytes: 329 | sha256 LF: 7203f39fd7f5a54f
+   bitacora que traia: git log, git status, REPORTE.md, veredictos
+   clases declaradas en: docs/loop/_auditor_v197_mis_clases.txt
+   CAIDA MIA, DECLARADA: la primera version de mi arnes de la TAREA 2
+   restauro AP.RUTA_DEL_TURNO ANTES de llamar a olvidar_todo(), y
+   olvidar_todo() BORRA el fichero del turno. Este fichero se llevo por
+   delante la sede de verdad. LO CAZO EL PROPIO ARNES, en su ultimo caso,
+   el que mide la sede antes y despues y CAE SI CAMBIA. El orden de esas
+   dos lineas ya esta corregido con su motivo escrito al lado.
+   EL FICHERO QUE ESTE INSTRUMENTO ESCRIBE NO SE HACE PASAR POR EL
+   ORIGINAL: se escribe CERRADO, que es lo que el carril de la TAREA 2.b
+   hace, y lleva su motivo dentro.
+
+C) EL SELLO EN DISCO, QUE NO SE TOCA NI AQUI NI EN NINGUNA PARTE
+   sello_en_disco(197) -> C:\Users\AlexDesk\Documents\I have an idea\docs\loop\SELLO_APERTURA_AUDITOR_V197.json
+   1657 bytes | sha256 LF f43b81c3d2d6b378
+   LA GUARDA `b` DE sellar() SIGUE MIRANDO ESTE FICHERO, y este fichero
+   no cambia. Cerrar el turno NO borra el sello.
+
+D) EL CIERRE, POR EL CARRIL Y NO A MANO
+   estado montado antes de cerrar, de las dos fuentes selladas:
+      bitacora: git log, git status, REPORTE.md, veredictos
+      sellado:  {'hecho': True, 'ruta': 'C:\\Users\\AlexDesk\\Documents\\I have an idea\\docs\\loop\\SELLO_APERTURA_AUDITOR_V197.json', 'vuelta': '197'}
+      clases:   {'escritas': True, 'ruta': 'docs/loop/_auditor_v197_mis_clases.txt'}
+   TURNO CERRADO: el auditor de la 197 declaro sus clases y escribio su acta; el turno se cierra por el carril de la TAREA 2.b de la vuelta 197. El fichero anterior lo borro un arnes mio y esa caida va declarada en SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt
+      vuelta registrada en `cerrados`: 197
+      el fichero del turno NO se borra: docs/loop/_TURNO_DEL_AUDITOR.json
+      un turno NUEVO lo cargara como CERRADO y empezara limpio SIN borrar
+      nada. El sello en disco NO se toca y la guarda `b` de sellar() sigue
+      mirando el disco igual que antes.
+      vueltas cerradas en el fichero: 197
+   VEREDICTO DEL CIERRE: VERDE
+
+E) EL FICHERO AL SALIR, RELEIDO DEL DISCO
+   EXISTE, 801 bytes, sha256 LF 69dfc4b6c6854d39
+   vivo.abierto: False
+   vueltas en `cerrados`: 197
+   bitacora guardada dentro del cierre, como constancia: git log, git status, REPORTE.md, veredictos
+
+F) LA PRUEBA DE QUE UN TURNO NUEVO EMPIEZA LIMPIO SIN BORRAR NADA
+   _cargar_turno() devuelve: False (False = no hay turno VIVO que cargar)
+   bitacora tras cargar: (vacia)
+   PUEDE SELLAR: SI
+      motivo: la bitacora esta limpia de los tres prohibidos
+   el fichero del turno SIGUE EN DISCO: SI, 801 bytes
+   vueltas cerradas que el turno nuevo VE: 197
+   PUEDE LEER REPORTE.md para la vuelta 197: SI
+      motivo: el turno de la vuelta 197 se CERRO con sus clases declaradas (docs/loop/_auditor_v197_mis_clases.txt): la constancia del cierre es la prueba, y el reporte ya no puede quemar nada
+
+VEREDICTO: VERDE

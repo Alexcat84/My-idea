@@ -180,6 +180,30 @@ _BITACORA = []
 _SELLADO = {"hecho": False, "ruta": None, "vuelta": None}
 _CLASES = {"escritas": False, "ruta": None}
 
+# EL CIERRE DEL TURNO (vuelta 197, TAREA 2.b; hallazgo `5.4` del acta 197).
+#
+# EL AGUJERO, MEDIDO Y NO NARRADO: el fichero del turno SOBREVIVIA AL TURNO. El
+# auditor de la 197 llego con la bitacora del turno ANTERIOR puesta (`git log`,
+# `git status`, `REPORTE.md` y dos destapes), `sellar()` cayo en rojo por esos
+# toques ajenos, y tuvo que correr `--olvidar-turno` PARA PODER SELLAR. **Una
+# guarda que obliga a borrar la bitacora en cada vuelta ensena a borrar la
+# bitacora**, que es lo contrario de lo que la guarda quiere.
+#
+# EL REMEDIO, Y LO QUE NO HACE: el turno se CIERRA al declarar las clases. Cerrar
+# NO es borrar: el fichero se queda, con su bitacora dentro y con un registro
+# `cerrados` por vuelta, y lo unico que cambia es que **un turno nuevo lo carga
+# como CERRADO y empieza limpio sin tener que borrar nada**.
+#
+# LO QUE NO SE AFLOJA, Y VA PRIMERO PARA QUE SE VEA:
+#   . EL SELLO EN DISCO NO SE TOCA. `sello_en_disco()` y la guarda `b` de
+#     `sellar()` siguen mirando el disco exactamente igual.
+#   . NO SE PUEDEN DECLARAR CLASES DOS VECES. Antes lo impedia `_CLASES` cargado
+#     del fichero; ahora, ademas, `_CERRADOS` guarda QUE VUELTA cerro, y
+#     `puede_declarar_clases_con_sello()` cae sobre una vuelta ya cerrada. La
+#     guarda no se pierde al limpiar: cambia de sitio y se hace explicita.
+_CERRADOS = {}
+_VIVO = {"abierto": True}
+
 # EL FICHERO DEL TURNO. Va en una variable de modulo, y no clavado dentro de las
 # funciones, PARA QUE LOS ARNESES LO PUEDAN REDIRIGIR A UN TEMPORAL: un arnes que
 # escribiera en la sede de verdad ensuciaria el turno del auditor.
@@ -194,7 +218,9 @@ def _guardar_turno():
         io.open(RUTA_DEL_TURNO, "w", encoding="utf-8", newline=NL).write(
             json.dumps({"bitacora": list(_BITACORA),
                         "sellado": dict(_SELLADO),
-                        "clases": dict(_CLASES)},
+                        "clases": dict(_CLASES),
+                        "cerrados": dict(_CERRADOS),
+                        "vivo": dict(_VIVO)},
                        ensure_ascii=False, indent=1) + NL)
     except Exception:                                    # noqa: BLE001
         pass
@@ -235,10 +261,25 @@ def _cargar_turno():
         vivo por un JSON corrupto seria perder la prueba en silencio."""
     if not os.path.exists(RUTA_DEL_TURNO):
         _reiniciar_memoria()
+        _CERRADOS.clear()
+        _VIVO["abierto"] = True
         return False
     try:
         d = json.load(io.open(RUTA_DEL_TURNO, encoding="utf-8"))
     except Exception:                                    # noqa: BLE001
+        return False
+    # LOS CERRADOS SE CARGAN SIEMPRE: son hechos historicos del fichero y NO
+    # dependen de que el turno vivo siga abierto. Son los que impiden que una
+    # vuelta ya cerrada vuelva a declarar clases.
+    _CERRADOS.clear()
+    _CERRADOS.update(d.get("cerrados") or {})
+    vivo = d.get("vivo") or {}
+    _VIVO["abierto"] = bool(vivo.get("abierto", True))
+    if not _VIVO["abierto"]:
+        # EL TURNO ANTERIOR SE CERRO: el turno nuevo empieza LIMPIO, y el fichero
+        # NO se borra. Esto es el hallazgo `5.4` del acta 197 resuelto sin ensenar
+        # a nadie a borrar su propia bitacora.
+        _reiniciar_memoria()
         return False
     del _BITACORA[:]
     _BITACORA.extend(d.get("bitacora") or [])
@@ -289,6 +330,8 @@ def olvidar_todo():
     _SELLADO["vuelta"] = None
     _CLASES["escritas"] = False
     _CLASES["ruta"] = None
+    _CERRADOS.clear()
+    _VIVO["abierto"] = True
     # Y BORRA EL FICHERO DEL TURNO, porque si no lo borrara el olvido seria a
     # medias: la memoria limpia y el disco sucio.
     try:
@@ -310,9 +353,92 @@ def git_status(*args):
     return _git(["status"] + list(args))
 
 
-def leer_reporte(ruta=None):
-    """Abre `docs/loop/REPORTE.md`, Y APUNTA SU TOQUE."""
+class ReporteFueraDeOrden(RuntimeError):
+    """LO QUE `leer_reporte()` LEVANTA CUANDO EL ORDEN NO SE CUMPLE.
+
+    ES UNA EXCEPCION Y NO UN VALOR DE VUELTA A PROPOSITO: la casa manda FALLAR
+    RUIDOSO (banco 9). Un `leer_reporte()` que devolviera cadena vacia dejaria al
+    turno leyendo un reporte vacio sin enterarse, y esa es la degradacion
+    silenciosa que no deja sintoma."""
+
+
+def puede_leer_reporte(vuelta=None, base=None):
+    """(SI_PUEDE, MOTIVO). PURA sobre el estado del modulo y, si se le da
+    `vuelta`, sobre la existencia del sello en disco.
+
+    DE DONDE SALE, Y NO ES UNA IDEA MIA: adjudicacion `4.5` del acta 197, que
+    contesta la `P.3` del reporte de la 196 **por extension de `AUDITOR.md` 1.2**
+    (*"imprime PRIMERO los pasos, adjudica tu clase, y SOLO DESPUES destapa la
+    razon escrita"*). **LA TABLA DE DISCREPANCIAS DE UN REPORTE ES UN DESTAPE**, y
+    esta MEDIDO: el reporte de la 196 publico la clase de archivo de 8 de los 120
+    puestos que el auditor de la 197 acababa de sellar, y ademas el reparto entero
+    del archivo sobre esos mismos 120. El auditor lo sufrio SIGUIENDO EL ORDEN
+    ESCRITO, no saltandoselo.
+
+    EL ORDEN OBLIGATORIO PASA A SER:
+    `sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`.
+
+    LO QUE **NO** SE PROHIBE, Y ES LA MITAD QUE IMPIDE QUE ESTO ESTORBE: **un
+    turno SIN SELLO sigue pudiendo leer el reporte**, porque ahi no hay sujeto que
+    quemar. Lo unico que se prohibe es leerlo **con el sujeto ya elegido y las
+    clases sin escribir**.
+
+    EL SELLO SE MIRA EN LOS DOS SITIOS: en la memoria del turno (`_SELLADO`, que
+    desde la 193 sobrevive al proceso por el fichero del turno) y, si se pasa
+    `vuelta`, tambien en DISCO. Con eso la guarda no se puede esquivar arrancando
+    un proceso nuevo, que es exactamente como se esquivaba la de `sellar()` antes
+    de la vuelta 193."""
+    hay_sello = bool(_SELLADO["hecho"])
+    de_disco = ""
+    if vuelta is not None:
+        de_disco = sello_en_disco(vuelta, base)
+        hay_sello = hay_sello or bool(de_disco)
+    if not hay_sello:
+        return True, ("este turno NO ha sellado: no hay sujeto elegido, y por eso "
+                      "leer el reporte no puede quemar nada")
+    if _CLASES["escritas"]:
+        return True, ("el sujeto esta sellado Y las clases ya estan escritas (%s): "
+                      "desde aqui el reporte ya no puede quemar nada"
+                      % (_CLASES["ruta"] or "sin ruta apuntada"))
+    # LA CONSTANCIA DEL CIERRE VALE COMO PRUEBA DE QUE LAS CLASES SE ESCRIBIERON.
+    # LO CAZO EL ARNES DE ESTA MISMA TAREA, Y NO LO SUPUSE: al cerrar el turno,
+    # `_CLASES` se limpia para el turno siguiente, pero el sello sigue EN DISCO, y
+    # sin esto la guarda bloqueaba PARA SIEMPRE la lectura del reporte de una
+    # vuelta cuyas clases si se declararon. El registro `cerrados[vuelta]` guarda
+    # la ruta de esas clases, y esa es la prueba durable.
+    if vuelta is not None and str(vuelta) in _CERRADOS:
+        reg = _CERRADOS[str(vuelta)] or {}
+        if reg.get("ruta_clases"):
+            return True, ("el turno de la vuelta %s se CERRO con sus clases "
+                          "declaradas (%s): la constancia del cierre es la prueba, "
+                          "y el reporte ya no puede quemar nada"
+                          % (vuelta, reg.get("ruta_clases")))
+    return False, ("este turno TIENE SELLO%s y NO ha declarado sus clases. La "
+                   "tabla de discrepancias de un reporte ES UN DESTAPE "
+                   "(adjudicacion 4.5 del acta 197, por extension de AUDITOR.md "
+                   "1.2), y leerlo ahora QUEMA EL SUJETO. El orden es "
+                   "sellar() -> clasificar -> --declarar-clases -> leer_reporte()."
+                   % (" en disco (%s)" % os.path.relpath(de_disco, RAIZ).replace(
+                       os.sep, "/") if de_disco else ""))
+
+
+def leer_reporte(ruta=None, vuelta=None, base=None):
+    """Abre `docs/loop/REPORTE.md`, APUNTA SU TOQUE, Y **CAE EN ROJO** si el turno
+    tiene sello y todavia no ha declarado sus clases.
+
+    EL TOQUE SE APUNTA ANTES DE DECIDIR NADA, y eso es deliberado: el modulo dice
+    desde la vuelta 182 que `apuntar()` *"se llama ANTES de hacer la cosa, no
+    despues: si la cosa revienta, el toque igual paso"*. Un intento de leer el
+    reporte es un intento, y se registra. **Apuntar de mas solo puede hacer las
+    guardas mas estrictas, nunca mas laxas**, que es el lado seguro.
+
+    CAE LEVANTANDO `ReporteFueraDeOrden` en vez de devolviendo un valor, porque
+    quien llama a esto quiere el texto y no un veredicto, y una cadena vacia
+    devuelta en silencio es justo la degradacion que el banco 9 prohibe."""
     apuntar("REPORTE.md")
+    ok, motivo = puede_leer_reporte(vuelta=vuelta, base=base)
+    if not ok:
+        raise ReporteFueraDeOrden(motivo)
     ruta = ruta or os.path.join(LOOP, "REPORTE.md")
     if not os.path.exists(ruta):
         return ""
@@ -510,6 +636,147 @@ def marcador(ruta=None):
     return {"filas": len(filas), "por_clase": por_clase}
 
 
+# --------------------------------------------------------------------------
+# LA GUARDA DE LA `C.A1` (vuelta 197, TAREA 2.c).
+#
+# POR QUE ES DE CODIGO Y NO DE MEMORIA, Y ESTA MEDIDO: TRES ACTAS SEGUIDAS (195,
+# 196 y 197) recontaron el marcador con `json` a mano en vez de por
+# `AP.marcador()`. **El remedio de memoria ya se probo y fallo**: el acta 196
+# declaro la caida, la remedio DENTRO de su vuelta corriendo el instrumento, y el
+# acta 197 volvio a caer por la misma puerta. Un remedio que hay que recordar no
+# es un remedio.
+#
+# LO QUE LA GUARDA EXIGE: que la cifra del marcador que un acta PUBLICA calce con
+# una SALIDA SELLADA de `marcador()` **de esa misma vuelta**. Si esa salida no
+# existe, es ROJO; si existe y no calza, es ROJO. **No hay tercera via**: un acta
+# que publique un marcador que nadie sello por este carril no pasa.
+NOMBRE_SALIDA_MARCADOR = "SALIDA_MARCADOR_AUDITOR_V%s.json"
+
+# LA FORMA EN QUE LAS ACTAS ESCRIBEN SU FILA DEL MARCADOR, LEIDA DE LAS ACTAS 195,
+# 196 y 197 y no inventada: `**3388 filas; A 551, B 72, C 5, D 2760**`.
+PAT_FILAS_DEL_ACTA = re.compile(r"\*\*(\d[\d.,]*)\s+filas")
+PAT_CLASE_DEL_ACTA = re.compile(r"\b([A-Z])\s+(\d[\d.,]*)\b")
+
+
+def _entero(literal):
+    """UN ENTERO DE UN LITERAL DE ACTA, QUE PUEDE TRAER PUNTOS DE MILLAR. PURA.
+    Devuelve el entero o None. `1.306` es mil trescientos seis en esta casa, y no
+    uno coma tres."""
+    if literal is None:
+        return None
+    limpio = str(literal).replace(".", "").replace(",", "").strip()
+    return int(limpio) if limpio.isdigit() else None
+
+
+def sellar_marcador(vuelta, ruta=None, base=None):
+    """CORRE `marcador()` Y SELLA SU SALIDA EN UN FICHERO DE ESA VUELTA.
+    Devuelve (ruta_escrita, medicion).
+
+    ES LA MITAD QUE HACE QUE LA GUARDA PUEDA MORDER: sin una salida sellada no hay
+    contra que cotejar, y entonces "calza con `AP.marcador()`" seria una
+    afirmacion y no una medicion."""
+    m = marcador(ruta=ruta)
+    destino = os.path.join(base or LOOP, NOMBRE_SALIDA_MARCADOR % vuelta)
+    io.open(destino, "w", encoding="utf-8", newline=NL).write(
+        json.dumps({"vuelta": str(vuelta), "filas": m["filas"],
+                    "por_clase": m["por_clase"]},
+                   ensure_ascii=False, indent=1, sort_keys=True) + NL)
+    return destino, m
+
+
+def salida_del_marcador(vuelta, base=None):
+    """LA SALIDA SELLADA DE `marcador()` DE UNA VUELTA, o None si no existe o no
+    se puede leer. PURA salvo por leer el fichero."""
+    ruta = os.path.join(base or LOOP, NOMBRE_SALIDA_MARCADOR % vuelta)
+    if not os.path.exists(ruta):
+        return None
+    try:
+        return json.load(io.open(ruta, encoding="utf-8"))
+    except Exception:                                    # noqa: BLE001
+        return None
+
+
+def cifras_del_marcador_del_acta(texto):
+    """LAS CIFRAS DEL MARCADOR QUE UN ACTA PUBLICA. PURA.
+    Devuelve `{"filas": int, "por_clase": {...}}` o None si el texto no las trae.
+
+    LEE LA FORMA QUE LAS ACTAS USAN, que no es la del `json` del modulo:
+    `**3388 filas; A 551, B 72, C 5, D 2760**`. Un texto que no traiga la palabra
+    `filas` en negrita devuelve None, **y quien llame CAE**, en vez de comparar
+    contra un diccionario vacio y salir verde por no haber encontrado nada."""
+    if not texto:
+        return None
+    m = PAT_FILAS_DEL_ACTA.search(texto)
+    if not m:
+        return None
+    filas = _entero(m.group(1))
+    if filas is None:
+        return None
+    # EL REPARTO SE LEE SOLO DESDE DONDE ACABA `filas`, para que un numero de
+    # cualquier otra parte de la linea no entre como si fuera una clase.
+    cola = texto[m.end():]
+    corte = cola.find("**")
+    if corte >= 0:
+        cola = cola[:corte]
+    por_clase = {}
+    for clase, cifra in PAT_CLASE_DEL_ACTA.findall(cola):
+        v = _entero(cifra)
+        if v is not None and clase not in por_clase:
+            por_clase[clase] = v
+    return {"filas": filas, "por_clase": por_clase}
+
+
+def guarda_del_marcador(texto, vuelta, base=None):
+    """(OK, INFORME). LA GUARDA DE LA `C.A1`, ENTERA.
+
+    CAE EN ROJO en los tres casos que importan, y ninguno se adivina:
+      . el acta NO publica cifras de marcador legibles;
+      . NO existe salida sellada de `marcador()` de esa vuelta;
+      . existe y NO calza, en las filas o en el reparto por clase.
+
+    PURA salvo por leer la salida sellada."""
+    informe = []
+    w = informe.append
+    w("GUARDA DEL MARCADOR (C.A1), vuelta %s" % vuelta)
+    del_acta = cifras_del_marcador_del_acta(texto)
+    w("   cifras que el acta publica: %r" % (del_acta,))
+    if del_acta is None:
+        w("   ROJO: el acta no publica ninguna cifra de marcador legible. No se")
+        w("   supone que no la tenga: se cae, que es lo que hace mirar.")
+        return False, informe
+    sellada = salida_del_marcador(vuelta, base)
+    ruta = os.path.join(base or LOOP, NOMBRE_SALIDA_MARCADOR % vuelta)
+    w("   salida sellada esperada: %s"
+      % os.path.relpath(ruta, RAIZ).replace(os.sep, "/"))
+    if sellada is None:
+        w("   ROJO: NO existe salida de marcador() de esta vuelta, o no se puede")
+        w("   leer. Una cifra de marcador que nadie saco por este carril es")
+        w("   exactamente la C.A1, y por eso no pasa.")
+        return False, informe
+    w("   cifras de la salida sellada: filas %s, por_clase %r"
+      % (sellada.get("filas"), sellada.get("por_clase")))
+    fallos = []
+    if del_acta["filas"] != sellada.get("filas"):
+        fallos.append("filas: el acta dice %s y marcador() dice %s"
+                      % (del_acta["filas"], sellada.get("filas")))
+    sel_clases = sellada.get("por_clase") or {}
+    for clase in sorted(set(list(del_acta["por_clase"]) + list(sel_clases))):
+        a = del_acta["por_clase"].get(clase)
+        b = sel_clases.get(clase)
+        if a != b:
+            fallos.append("clase %s: el acta dice %r y marcador() dice %r"
+                          % (clase, a, b))
+    for f in fallos:
+        w("   NO CALZA -> %s" % f)
+    if fallos:
+        w("   ROJO: %d discrepancia(s). El acta NO puede publicar ese marcador."
+          % len(fallos))
+        return False, informe
+    w("   VERDE: las filas y las %d clases calzan con la salida sellada."
+      % len(sel_clases))
+    return True, informe
+
+
 def destapes_antes_de_las_clases():
     """LOS TOQUES DE DESTAPE QUE LA BITACORA TRAE. PURA sobre el estado del
     modulo, y es la funcion que `puede_declarar_clases()` consulta.
@@ -540,6 +807,51 @@ def puede_declarar_clases():
     return True, "la bitacora esta limpia de destapes y el sello esta escrito"
 
 
+def cerrados():
+    """LAS VUELTAS CUYO TURNO YA SE CERRO, con lo que se registro de cada una.
+    Copia, no el original."""
+    return dict(_CERRADOS)
+
+
+def cerrar_turno(motivo, vuelta=None, ruta_clases=None):
+    """CIERRA EL TURNO DEJANDO CONSTANCIA, SIN BORRAR NADA. Devuelve
+    (ok, informe).
+
+    ES EL REMEDIO DEL HALLAZGO `5.4` DEL ACTA 197, y lo que hace es exactamente
+    esto y nada mas:
+
+      . escribe en el fichero del turno un registro `cerrados[vuelta]` con el
+        motivo, la ruta de las clases y **la bitacora tal como quedo**;
+      . marca el bloque vivo como CERRADO, con lo que `_cargar_turno()` de un
+        proceso nuevo **reinicia la memoria y empieza limpio**;
+      . **NO borra el fichero**, **NO borra el sello en disco** y **NO toca la
+        memoria de este proceso**, que sigue viendo su propio turno entero hasta
+        que termine.
+
+    POR QUE NO SE LIMPIA LA MEMORIA AQUI: el proceso que declara sus clases sigue
+    siendo el mismo turno y sigue necesitando su estado. Lo que tiene que empezar
+    limpio es EL SIGUIENTE, y eso lo decide la carga, no el cierre."""
+    informe = []
+    w = informe.append
+    clave = str(vuelta) if vuelta is not None else None
+    if clave:
+        _CERRADOS[clave] = {"motivo": motivo,
+                            "ruta_clases": ruta_clases,
+                            "bitacora": list(_BITACORA)}
+    _VIVO["abierto"] = False
+    _guardar_turno()
+    w("TURNO CERRADO: %s" % motivo)
+    w("   vuelta registrada en `cerrados`: %s" % (clave or "(ninguna)"))
+    w("   el fichero del turno NO se borra: %s"
+      % os.path.relpath(RUTA_DEL_TURNO, RAIZ).replace(os.sep, "/"))
+    w("   un turno NUEVO lo cargara como CERRADO y empezara limpio SIN borrar")
+    w("   nada. El sello en disco NO se toca y la guarda `b` de sellar() sigue")
+    w("   mirando el disco igual que antes.")
+    w("   vueltas cerradas en el fichero: %s"
+      % (", ".join(sorted(_CERRADOS)) or "(ninguna)"))
+    return True, informe
+
+
 def puede_declarar_clases_con_sello(vuelta, base=None):
     """(SI_PUEDE, MOTIVO), LEYENDO EL SELLO DEL DISCO Y NO DE LA MEMORIA.
 
@@ -559,6 +871,16 @@ def puede_declarar_clases_con_sello(vuelta, base=None):
                        "SUJETO YA SE QUEMO." % len(malos))
     if _CLASES["escritas"]:
         return False, "este turno ya declaro sus clases: no se declaran dos veces"
+    # LA GUARDA QUE EL CIERRE OBLIGA A HACER EXPLICITA (vuelta 197, TAREA 2.b).
+    # Antes, "no se declaran dos veces" lo sostenia `_CLASES` cargado del fichero.
+    # Al cerrar el turno esa memoria se limpia para el turno siguiente, asi que la
+    # prohibicion se guarda POR VUELTA y en un sitio que el cierre no borra.
+    # ES LA MISMA GUARDA, MAS EXPLICITA, NO UNA MAS FLOJA.
+    if str(vuelta) in _CERRADOS:
+        return False, ("el turno de la vuelta %s YA SE CERRO con sus clases "
+                       "declaradas (%s). No se declaran dos veces, y esto vale "
+                       "TAMBIEN entre procesos."
+                       % (vuelta, _CERRADOS[str(vuelta)].get("ruta_clases")))
     ruta = sello_en_disco(vuelta, base)
     if not ruta:
         return False, ("no hay sello en disco para la vuelta %s. Sin sello no hay "
@@ -597,6 +919,13 @@ def declarar_clases_con_sello(ruta_clases, vuelta, base=None):
     w("CLASES DECLARADAS: %s (%d bytes)"
       % (ruta_clases, os.path.getsize(ruta_clases)))
     w("   desde aqui, destapar el sujeto ya no quema nada.")
+    w("   Y DESDE AQUI TAMBIEN SE PUEDE LEER `REPORTE.md`: la guarda de la "
+      "TAREA 2.a")
+    w("   de la vuelta 197 lo prohibia mientras las clases no estuvieran escritas.")
+    _ok_c, inf_c = cerrar_turno("clases declaradas por el carril del sello de disco",
+                                vuelta=vuelta, ruta_clases=ruta_clases)
+    for l in inf_c:
+        w("   " + l)
     return True, informe
 
 
@@ -628,6 +957,11 @@ def declarar_clases_escritas(ruta_clases):
     w("CLASES DECLARADAS: %s (%d bytes)"
       % (ruta_clases, os.path.getsize(ruta_clases)))
     w("   desde aqui, destapar el sujeto ya no quema nada.")
+    _ok_c, inf_c = cerrar_turno("clases declaradas por el carril de memoria",
+                                vuelta=_SELLADO.get("vuelta"),
+                                ruta_clases=ruta_clases)
+    for l in inf_c:
+        w("   " + l)
     return True, informe
 
 
@@ -650,6 +984,18 @@ def main():
     ap.add_argument("--olvidar-turno", action="store_true",
                     help="borra el fichero del turno. Es un ACTO y se dice: "
                          "quien lo corra empieza con la bitacora limpia")
+    ap.add_argument("--cerrar-turno", dest="cerrar_turno", action="store_true",
+                    help="CIERRA el turno dejando constancia y SIN borrar nada "
+                         "(vuelta 197, TAREA 2.b). Necesita --vuelta")
+    ap.add_argument("--sellar-marcador", dest="sellar_marcador",
+                    action="store_true",
+                    help="corre marcador() y SELLA su salida en "
+                         "SALIDA_MARCADOR_AUDITOR_V<vuelta>.json. Necesita "
+                         "--vuelta")
+    ap.add_argument("--guarda-marcador", dest="guarda_marcador",
+                    help="RUTA de un fichero de texto (el acta o su seccion). "
+                         "Comprueba que el marcador que publica calza con la "
+                         "salida sellada de esa vuelta. Necesita --vuelta")
     a = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8")
     print("=" * 78)
@@ -670,6 +1016,41 @@ def main():
         print("   UN ACTO: el sello que hubiera en disco NO se borra, y la guarda")
         print("   de `sellar()` sigue mordiendo porque mira el disco.")
         return 0
+    if a.cerrar_turno:
+        if not a.vuelta:
+            print("   ROJO: --cerrar-turno necesita --vuelta para saber que")
+            print("   vuelta queda registrada como cerrada.")
+            return 1
+        _ok, informe = cerrar_turno("cerrado a mano por el CLI", vuelta=a.vuelta)
+        for l in informe:
+            print("   " + l)
+        return 0
+    if a.sellar_marcador:
+        if not a.vuelta:
+            print("   ROJO: --sellar-marcador necesita --vuelta.")
+            return 1
+        destino, m = sellar_marcador(a.vuelta)
+        print("   SALIDA DE marcador() SELLADA: %s (%d bytes)"
+              % (os.path.relpath(destino, RAIZ).replace(os.sep, "/"),
+                 os.path.getsize(destino)))
+        print("   filas %d | por_clase %r" % (m["filas"], m["por_clase"]))
+        print("   ESTA es la salida contra la que --guarda-marcador cotejara lo")
+        print("   que el acta publique. Sin ella, la guarda CAE EN ROJO.")
+        return 0
+    if a.guarda_marcador:
+        if not a.vuelta:
+            print("   ROJO: --guarda-marcador necesita --vuelta.")
+            return 1
+        if not os.path.exists(a.guarda_marcador):
+            print("   ROJO: %s no existe." % a.guarda_marcador)
+            return 1
+        texto = io.open(a.guarda_marcador, encoding="utf-8",
+                        errors="replace").read()
+        ok, informe = guarda_del_marcador(texto, a.vuelta)
+        for l in informe:
+            print("   " + l)
+        print("   VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
+        return 0 if ok else 1
     if a.declarar_clases:
         if not a.vuelta:
             print("   ROJO: --declarar-clases necesita --vuelta para saber que")
@@ -691,6 +1072,12 @@ def main():
         print("      destapes apuntados: %d" % len(destapes_antes_de_las_clases()))
         print("   PUEDE DECLARAR LAS CLASES: %s (%s)"
               % ("SI" if ok2 else "NO", motivo2))
+        ok3, motivo3 = puede_leer_reporte(vuelta=a.vuelta)
+        print("   PUEDE LEER REPORTE.md: %s (%s)"
+              % ("SI" if ok3 else "NO", motivo3))
+        print("   TURNO VIVO ABIERTO: %s" % ("SI" if _VIVO["abierto"] else "NO"))
+        print("   VUELTAS YA CERRADAS en el fichero del turno: %s"
+              % (", ".join(sorted(_CERRADOS)) or "(ninguna)"))
         return 0
     if not a.criterio or not a.vuelta:
         print("   ROJO: --criterio y --vuelta son obligatorios. Sin criterio "

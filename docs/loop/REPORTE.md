@@ -99,7 +99,7 @@ tabla tallada entera cuando la vuelta cierre.
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 197 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, y el cuerpo del acta se acota contando su primera linea con `grep -n` EN ESTA VUELTA. La entrada registra, y cada cifra se cuenta del cuerpo acotado: LAS SIETE ADJUDICACIONES `4.1` a `4.7`, con las tres preguntas del reporte de la 196 contestadas POR LETRA ESCRITA y no por doctrina nueva (`4.3` la `P.1`, `4.4` la `P.2`, `4.5` la `P.3`); LOS CUATRO HALLAZGOS de la seccion 5 (`5.1` el reporte que quema la ciega del auditor por construccion, `5.2` el marcado de discutibles que no existe por debajo del puesto 2662, `5.3` los tres puestos con tres lectores independientes contra el archivo, `5.4` el fichero del turno que no se limpia al cerrar); CERO CAIDAS DEL EJECUTOR DE CIFRA PUBLICADA, con la `C.E1` de la 196 RE CLASIFICADA A MI FAVOR como caida de REPORTE en prosa de acompanamiento, que NO acumula; MIS DOS CAIDAS DE METODO; y CINCO CAIDAS PROPIAS DEL AUDITOR, `C.A1` a `C.A5`, todas de metodo y todas remediadas dentro de su vuelta, con la `C.A1` en su TERCERA acta seguida de la misma especie. Y LA METRICA DE CREDITO de la seccion 7 con sus cifras. EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues, y CADA LECTOR NUEVO LLEVA SU MUTACION DELANTE | **CERRADA** | `SALIDA_V197_T1A_REGISTRO_R59.txt`, `_MUTACION_REGISTRADOR.txt` (35/35), `_RECORRIDO_SIN_ESCRIBIR.txt` |
-| **TAREA 2** | EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. BLOQUEANTE. Sale de la adjudicacion `4.5` del acta 197, que contesta mi `P.3` por extension de `AUDITOR.md` 1.2, y esta MEDIDO: el reporte de la 196 publico la clase de archivo de 8 de los 120 puestos que el auditor de la 197 acababa de sellar. Sobre `scripts/loop/apertura_del_auditor.py`, QUE NO SE CLONA: (a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO si el turno tiene sello y no ha declarado sus clases todavia, con lo que el orden obligatorio pasa a ser `sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`, y un turno SIN sello sigue pudiendo leer el reporte. (b) EL FICHERO DEL TURNO SE CIERRA, que es el hallazgo `5.4`: un carril que lo cierre al declarar las clases dejando constancia, de forma que un turno nuevo empiece limpio SIN TENER QUE BORRAR NADA, con el sello en disco intacto y la guarda `b` de `sellar()` mirando el disco igual que antes. (c) LA GUARDA DE CODIGO DE LA `C.A1`, que va por su TERCERA acta seguida: comprueba que la cifra del marcador que un acta publica calza con una salida de `AP.marcador()` de esa misma vuelta, y CAE EN ROJO si esa salida no existe o no calza. CADA UNA DE LAS TRES LLEVA SU CASO POSITIVO POR MUTACION DELANTE, con nombre estable y salida sellada, y el caso rojo tiene que MORDER: sin el remedio la guarda deja pasar y con el no | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 2** | EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. BLOQUEANTE. Sale de la adjudicacion `4.5` del acta 197, que contesta mi `P.3` por extension de `AUDITOR.md` 1.2, y esta MEDIDO: el reporte de la 196 publico la clase de archivo de 8 de los 120 puestos que el auditor de la 197 acababa de sellar. Sobre `scripts/loop/apertura_del_auditor.py`, QUE NO SE CLONA: (a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO si el turno tiene sello y no ha declarado sus clases todavia, con lo que el orden obligatorio pasa a ser `sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`, y un turno SIN sello sigue pudiendo leer el reporte. (b) EL FICHERO DEL TURNO SE CIERRA, que es el hallazgo `5.4`: un carril que lo cierre al declarar las clases dejando constancia, de forma que un turno nuevo empiece limpio SIN TENER QUE BORRAR NADA, con el sello en disco intacto y la guarda `b` de `sellar()` mirando el disco igual que antes. (c) LA GUARDA DE CODIGO DE LA `C.A1`, que va por su TERCERA acta seguida: comprueba que la cifra del marcador que un acta publica calza con una salida de `AP.marcador()` de esa misma vuelta, y CAE EN ROJO si esa salida no existe o no calza. CADA UNA DE LAS TRES LLEVA SU CASO POSITIVO POR MUTACION DELANTE, con nombre estable y salida sellada, y el caso rojo tiene que MORDER: sin el remedio la guarda deja pasar y con el no | **CERRADA** | `SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (49/49), `_T2B_CIERRE_DEL_TURNO_197.txt`, `_T2C_GUARDA_MARCADOR_ACTA_197.txt`, `_T2_QUIEN_BORRA_LA_SEDE.txt` |
 | **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. Es deuda suya que paga el ejecutor con el instrumento. `AUDITOR.md` 1.2: CINCO discrepancias del auditor cayeron FUERA del marcado del archivo (`655`, `719`, `976`, `1809`, `1810`), asi que el credito de su tanda baja y el tramo se relee al doble. EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v197_doble_para_la_198.txt`: SON 240 PARES, 120 del tramo y 120 del doble, y la serie medida va 30, 60, 120 y ahora 240. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` de `scripts/loop/vuelta196_tarea2_relectura_al_doble.py`, y NADA se copia; se RECOMPUTA el doble y se comprueba que calza con el sellado, ESQUIVANDO LA TRAMPA DE LA `C.A5` (los `_exclusion.txt` guardan enteros sueltos y se leen con `numeros_de()`). (b) LEER LOS 240 A CIEGAS con `aislador_de_ciega.py` y escribir las clases ANTES de abrir el destape. (c) LA VARA es `9.6.1` con `9.6.2`, `9.6.3` y la tabla de LOS DOS POLOS del `9.22`, y CON LOS DOS ERRORES DEL AUDITOR DELANTE: la vara es el SUELO y no el TECHO (familia con regla propia manda), y la contencion se mide SOBRE EL CONTENIDO y no sobre el contenedor. (d) NO SALTARSE LA `B` NI SOBRE EMITIRLA. (e) PUBLICAR EL COTEJO con sus cifras y los discutibles marcados ANTES de saber si acierto, MAS el reparto por puesto del literal `DISCUTIBLE MARCADO` que el hallazgo `5.2` obliga. (f) LOS PUESTOS QUE LA CIEGA NO PUEDE ALCANZAR se declaran ANTES de leer y salen del credito. (g) LOS QUEMADOS por el acta y por el reporte se declaran ANTES de leer y no entran al credito | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LAS DOS CIFRAS QUE VIAJAN SIN SU VARA. (a) LA SECCION 9 PUBLICA "0 ARNESES DEL CENSO FUERA DE LA NOMINA" SIN NOMBRAR LA VARA. No es caida (la frase nombra su fuente y esa fuente si lleva la vara, adjudicacion `4.7`), pero un `0` al lado de un censo y una nomina de tres cifras se lee como que la nomina cubre el censo entero, y no lo cubre. Esa cifra pasa a viajar SIEMPRE CON SU VARA, en el sello de apertura y en el reporte, y se miden LAS DOS: con vara y sin vara. (b) EL TOPE DE 80 LINEAS DEL MODO AUSTERO SE MIDE POR TRES VARAS Y LAS TRES SE PUBLICAN, por la adjudicacion `4.6`: total, escrita a mano (la vara que el acta 196 fijo en su `4.7`), y escrita a mano menos lo que otra regla obliga a escribir. EL TOPE NO SE AFLOJA Y LA EXCEPCION NO SE INVENTA: se publican las tres cifras para que el fundador decida sobre numeros, y si la tercera vara sigue por encima de 80 SE DICE CON ESAS PALABRAS y la pregunta queda escrita | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -196,5 +196,96 @@ SIN ESPECIE. La marca solo se aplica a **la linea del titular**, nunca al parraf
 que es lo que impide que una cita cualquiera de la palabra reporte atribuya especie.
 Aun asi es la marca mas corta del vocabulario y podria casar de mas en un titular
 futuro.
+
+### TAREA 2, EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. CERRADA. 49 DE 49 EN VERDE, Y UNA CAIDA MIA QUE CAZO MI PROPIA GUARDA.
+
+**Sobre `scripts/loop/apertura_del_auditor.py`, que NO SE CLONA.** Instrumentos y
+ficheros de salida, **y toda cifra de abajo se cuenta de ellos**:
+`docs/loop/SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (6491 bytes),
+`docs/loop/SALIDA_V197_T2B_CIERRE_DEL_TURNO_197.txt` (3480 bytes),
+`docs/loop/SALIDA_V197_T2C_GUARDA_MARCADOR_ACTA_197.txt` (2364 bytes),
+`docs/loop/SALIDA_V197_T2_QUIEN_BORRA_LA_SEDE.txt`,
+`docs/loop/SALIDA_MARCADOR_AUDITOR_V197.json` (102 bytes).
+
+**(a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO.** La decision vive en
+`puede_leer_reporte()`, pura y probable sin escribir un fichero, y el orden
+obligatorio pasa a ser `sellar()` -> clasificar -> `--declarar-clases` ->
+`leer_reporte()`. **Un turno SIN sello sigue pudiendo leer el reporte**, y eso se
+prueba en dos casos. Con sello y sin clases, `leer_reporte()` levanta
+`ReporteFueraDeOrden`: es excepcion y no valor de vuelta **porque una cadena vacia
+devuelta en silencio es la degradacion que el banco `9` prohibe**. La guarda vale
+**entre procesos**, con el sello leido de DISCO, que es la unica forma de que no se
+esquive arrancando otro.
+
+**(b) EL FICHERO DEL TURNO SE CIERRA, Y CERRAR NO ES BORRAR.** `cerrar_turno()`
+escribe en el fichero un registro `cerrados[vuelta]` con el motivo, la ruta de las
+clases y **la bitacora tal como quedo**, y marca el bloque vivo como cerrado. Un
+turno nuevo lo carga como CERRADO y **empieza limpio sin borrar nada**. Medido en
+procesos de verdad: el turno 2 heredaba `git log, git status, REPORTE.md` y **no
+podia sellar**; tras el cierre, el turno nuevo entra con la bitacora **vacia**, ya
+**puede sellar**, el fichero **sigue en disco** y el **sello en disco no se toco**.
+**LA GUARDA NO SE PIERDE AL LIMPIAR:** declarar dos veces la misma vuelta sigue
+cayendo, ahora por `cerrados` y **tambien entre procesos**.
+
+**(c) LA GUARDA DE LA `C.A1`, QUE VA POR SU TERCERA ACTA SEGUIDA.**
+`sellar_marcador()` sella la salida de `AP.marcador()` de una vuelta, y
+`guarda_del_marcador()` exige que la cifra que un acta publica calce con ella.
+**Corrida sobre el acta 197 REAL**, no sobre un texto fabricado: cuerpo acotado en
+esa corrida, lineas **69341 a 69635**, y `3388 filas; A 551, B 72, C 5, D 2760`
+calzan con la salida sellada. **Y las CINCO mutaciones sobre el acta real cayeron
+las cinco** (las filas y cada una de las cuatro clases), mas el caso de **no haber
+salida sellada**, que es exactamente lo que la `C.A1` es.
+
+**CASO POSITIVO POR MUTACION: 49 casos, 49 verdes, 0 rojos**, con las dos
+direcciones corridas en cada pieza (**sin el remedio la guarda deja pasar, con el
+no**) y con la sede de verdad del turno medida antes y despues.
+
+**`C.1` CAIDA MIA, DE METODO, DECLARADA Y CAZADA POR MI PROPIA GUARDA.** La primera
+version del arnes restauraba `AP.RUTA_DEL_TURNO` a su sede **antes** de llamar a
+`AP.olvidar_todo()`, y `olvidar_todo()` **borra el fichero del turno**: el arnes se
+llevo por delante `docs/loop/_TURNO_DEL_AUDITOR.json`, que media **329 bytes** con
+`sha256` LF `7203f39fd7f5a54f`. **Lo cazo el ultimo caso del propio arnes**, el que
+mide la sede antes y despues. El orden ya esta corregido con su motivo al lado, y
+la sede se reconstruyo **por el carril** con `vuelta197_tarea2b_cerrar_turno_197.py`,
+del contenido que el bloque `D.1` del sello de apertura publico **antes de la
+primera operacion**. **El fichero nuevo no se hace pasar por el original: se
+escribe CERRADO y lleva el motivo dentro**, y mide **801 bytes**, `sha256` LF
+`69dfc4b6c6854d39`.
+
+**HALLAZGO QUE NADIE ENCARGO, MEDIDO Y NO SUPUESTO.** Corridos **5** arneses de la
+nomina que tocan este modulo, **1 BORRA la sede del turno**:
+`scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py`, que llama a
+`AP.olvidar_todo()` contra el modulo real **sin redirigir `AP.RUTA_DEL_TURNO` a un
+temporal**. Los otros cuatro la dejan intacta byte a byte. **Es la misma leccion
+que la 193 le aplico a `olvidar_todo()` y la 194 al arnes de la 192, y a este no se
+le aplico nunca.** **NO LO REPARO**, porque reparar un arnes de la nomina no esta
+encargado en esta vuelta. Consecuencia dicha sin adorno: **mientras eso siga asi,
+cada corrida de la bateria vuelve a dejar sin sede el turno del auditor**, y el
+remedio de la `2.b` no se puede ver en produccion aunque este entero en el codigo.
+Los cuatro arneses heredados siguen en VERDE.
+
+**DISCUTIBLES MARCADOS, ESCRITOS ANTES DE SABER SI ACIERTO.**
+
+**`D.4` DISCUTIBLE MARCADO. `leer_reporte()` APUNTA SU TOQUE AUNQUE LUEGO CAIGA.**
+Un intento bloqueado deja `REPORTE.md` en la bitacora sin que se haya leido nada.
+Lo sostengo porque el modulo dice desde la 182 que `apuntar()` va **antes** de
+hacer la cosa, y porque apuntar de mas **solo puede hacer las guardas mas
+estrictas**. Lo discutible es que la bitacora deja de ser un registro de lo hecho y
+pasa a serlo de lo intentado.
+
+**`D.5` DISCUTIBLE MARCADO. LA CONSTANCIA DEL CIERRE VALE COMO PRUEBA DE QUE LAS
+CLASES SE ESCRIBIERON.** Sin esa via, cerrar el turno bloqueaba **para siempre** la
+lectura del reporte de esa vuelta, porque el sello sigue en disco y la memoria de
+las clases se limpia. **Lo cazo el arnes y no yo**. Lo discutible es que un registro
+del propio fichero del turno se acepte como prueba: quien pudiera escribir ese
+fichero se auto concederia el permiso. **El sello en disco no tiene ese problema y
+la ruta de clases si.**
+
+**`D.6` DISCUTIBLE MARCADO. RECONSTRUI LA SEDE DEL TURNO QUE MI ARNES BORRO.** La
+alternativa era dejarla sin existir y declarar la perdida. Reconstrui porque el
+contenido estaba medido y sellado antes de la primera operacion, y porque un
+auditor sin sede empieza distinto. Lo discutible es que **un fichero reconstruido
+por el ejecutor esta en la sede que prueba el turno del auditor**, aunque se escriba
+cerrado, con su motivo dentro y sin hacerse pasar por el original.
 
 <!-- FIN ANEXO DE TAREAS -->
