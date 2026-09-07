@@ -1,14 +1,14 @@
 LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
-docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador2_1unodl76\lanzador_en_curso.txt
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador2_7goeiu0e\lanzador_en_curso.txt
 ==============================================================================
-TRAMO 2 DE 9, DE LA BATERIA DE LA VUELTA 183
+TRAMO 2 DE 11, DE LA BATERIA DE LA VUELTA 183
 ==============================================================================
   lanzador (os.path.basename, no tecleado): vuelta183_bateria_por_tramos.py
   vuelta (computada del nombre, no tecleada): 183
   CIFRA literales de vuelta clavados en el fuente: 0
-  CIFRA nomina entera (leida del modulo, no tecleada): 112
+  CIFRA nomina entera (leida del modulo, no tecleada): 135
   CIFRA tamano de tramo: 13
-  CIFRA tramos del reparto (computada): 9
+  CIFRA tramos del reparto (computada): 11
   CIFRA entradas de ESTE tramo: 13
       vuelta144_3a_mutaciones.py
       vuelta144_3b_mutacion_negativa.py
@@ -33,9 +33,9 @@ PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 2
 ******************************************************************************
 PASO 3. LA CORRIDA DEL TRAMO 2
 ******************************************************************************
-  inicio (UTC): 2026-09-06T04:04:04Z
+  inicio (UTC): 2026-09-07T13:32:52Z
   comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 2 --tamano-tramo 13
-  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo2_ujj62f2v\tramo_en_curso.txt
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo2_jgcxv8qb\tramo_en_curso.txt
   destino final: docs/loop/SALIDA_V183_BATERIA_TRAMO_2.txt
 
 ******************************************************************************
@@ -43,13 +43,13 @@ PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
         (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
 ******************************************************************************
   docs/loop/SALIDA_V183_BATERIA_TRAMO_2.txt
-  CIFRA bytes en disco: 7352
-  CIFRA bytes normalizado a LF: 7352
-  CIFRA lineas: 114
-  CIFRA sha256 (LF): eb9f0fc446152400
-  CIFRA exitcode del tramo: 0
-  CIFRA duracion en minutos: 3.8
-  inicio (UTC): 2026-09-06T04:04:04Z | fin (UTC): 2026-09-06T04:07:53Z
+  CIFRA bytes en disco: 7804
+  CIFRA bytes normalizado a LF: 7804
+  CIFRA lineas: 123
+  CIFRA sha256 (LF): 553e56b775af0ef4
+  CIFRA exitcode del tramo: 1
+  CIFRA duracion en minutos: 6.4
+  inicio (UTC): 2026-09-07T13:32:52Z | fin (UTC): 2026-09-07T13:39:18Z
 
 ******************************************************************************
 PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 2
@@ -57,4 +57,6 @@ PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 2
   CIFRA filas de `git diff --numstat -- dataset/`: 0
   LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
 
-TRAMO 2 VERDE. Su salida esta sellada, medida y se puede commitear.
+EL TRAMO 2 SALE EN ROJO, exitcode 1, Y AQUI SE PARA.
+No se re-corre: la guarda que muerde es informacion, no un estorbo
+(encargo de la vuelta 176, TAREA 1.f). La salida esta sellada y medida.
