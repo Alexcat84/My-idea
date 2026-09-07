@@ -15338,3 +15338,156 @@ literales del acta 196 (computadas de la vuelta, no tecleadas) **en LAS DOS
 SEDES** de la serie. Antes de escribir esta entrada aparecian en **0**
 linea(s); despues aparecen y **un re corrido no escribe nada**, con la sede
 medida en bytes antes y despues.
+
+## R.59. Registro de las siete adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las tres preguntas contestadas, las cinco caidas propias del auditor y las tres caidas del ejecutor del acta de la vuelta 197
+
+(Acta del auditor, vuelta 197, secciones 0, 1, 2, 3, 4, 5, 6, 7 y 8; escrito en la vuelta 197,
+TAREA 1.)
+
+Por adicion, como `R.21` a `R.58`. **Corte de todas las cifras de esta
+entrada: 6 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+La SEDE tampoco se supone: sale de la adjudicacion 6.3 del acta 162. Salida:
+`docs/loop/SALIDA_V197_T1A_REGISTRO_R59.txt`.
+
+**ESTA ENTRADA SE ESCRIBE CON LAS TAREAS 2, 3 Y 4 SIN EMPEZAR, ASI QUE SUS
+GLOSAS NO AFIRMAN EN PASADO LO QUE TODAVIA NO HA PASADO.** Es la forma que la
+`6.4` del acta 172 adjudico como correcta. **Y EL ORDEN VA DECLARADO EN VEZ
+DE DEJARSE, Y ESTA VEZ CONTRA MI:** la TAREA 1 va PRIMERA aunque el acta 197
+publica en su `4.1` y en su `5.3` la clase de archivo de NUEVE puestos que
+caen DENTRO de los 240 que la TAREA 3 lee a ciegas. **Esos nueve se declaran
+QUEMADOS antes de leer y salen del credito**, que es la via que el propio
+encargo manda y la misma que el acta 196 acepto para el `2662`.
+**La 197 NO es vuelta de bateria** (`AUDITOR.md` 6.1: la 194 la corrio entera
+por sus diez tramos y la proxima cae en la 199).
+
+**LOS CINCO NUMERALES DEL TITULO NO ESTAN TECLEADOS:** se cuentan del acta
+acotada (lineas 69341 a 69635, sobre un fichero de 4595886 bytes). **7 adjudicaciones
+numeradas (`4.1` a `4.7`), 4 hallazgos numerados en la seccion 5, 3
+preguntas contestadas DENTRO de las adjudicaciones, 5 caidas propias del
+auditor y 3 caidas del ejecutor.**
+
+### LOS SIETE LECTORES NUEVOS, CADA UNO CON LA CIFRA QUE LO OBLIGA
+
+**NINGUNO SE ESCRIBIO POR GUSTO: cada uno tiene delante la cifra que este
+registrador habria publicado sin el, y en los seis primeros esa cifra es una
+PARADA sobre un acta correcta.**
+
+| lector | que lee | sin el | con el |
+|---|---|---|---|
+| `caidas_en_titular_con_varias_claves()` | todas las claves de un titular | 6 claves, pierde `C.E3`, `C.A4` | 8 claves |
+| `parte_de_la_caida_197()` | la parte en plural (`MIAS`) | 2 `SIN DECIR` (`C.A3`, `C.A4`) | 0 |
+| `cifras_de_la_fila_de_puestos_197()` | la celda entera en negrita | `('120', None, None, None)` | `('120', '120', '8', None)` |
+| `cotejo_limpio_197()` | *"los **112** LIMPIOS"* | 0 aciertos | 1 aciertos |
+| `estado_de_la_adjudicacion_197()` | seis marcas literales del acta | 5 `SIN DECIR` | 0 |
+| `claves_con_letra_de_la_fila()` | `` `C.E2` `` en la fila de metodo | 0 claves, rama sin dientes | 2 claves, exigencia dura |
+| `puestos_que_nombra_la_fila()` | los puestos de la fila de FUERA | la resta da 1 | la fila nombra 5 |
+
+**EL SEPTIMO NO SALVA NINGUNA PARADA Y SE ESCRIBE IGUAL, Y SE DICE POR QUE:**
+la resta heredada (`numeral - hallazgos`) da **1** sobre esta acta, porque
+supone que la fila cuenta juntas las discrepancias y los hallazgos, **y en el
+acta 197 no los cuenta juntos**: la fila nombra **5** puestos
+(`655`, `719`, `976`, `1809`, `1810`), los 5 son discrepancias, y los 4 hallazgos viven en su propia
+seccion. **LAS DOS CIFRAS SE PUBLICAN Y LA DISCREPANCIA SE DECLARA:** la
+resta no se retira, deja de ser la unica.
+
+### LAS 7 ADJUDICACIONES, UNA POR UNA, CON SU ESTADO Y SU PROCEDENCIA
+
+| clave | familia | estado | de donde sale | con el lector de la 196 | linea |
+|---|---|---|---|---|---:|
+| `4.1` | OTRA | A FAVOR | TITULO | A FAVOR | 69490 |
+| `4.2` | OTRA | PUBLICADAS Y FUERA DEL CREDITO | TITULO | SIN DECIR | 69500 |
+| `4.3` | PREGUNTA | CONTESTADA: NO MUEVE LA RACHA, SIN DOCTRINA NUEVA | TITULO | A FAVOR | 69503 |
+| `4.4` | PREGUNTA | CONTESTADA: NO SE ENSANCHA LA LISTA BLANCA, SALEN DEL CREDITO | TITULO | SIN DECIR | 69520 |
+| `4.5` | PREGUNTA | CONTESTADA POR EXTENSION Y CONTRA EL PROPIO AUDITOR | TITULO | SIN DECIR | 69527 |
+| `4.6` | OTRA | SE MANTIENE, Y SE MIDE POR TRES VARAS | TITULO | SIN DECIR | 69535 |
+| `4.7` | OTRA | NO ES CAIDA, Y SE ARREGLA IGUAL | TITULO | SIN DECIR | 69544 |
+
+**EL VOCABULARIO DE ESTADOS CRECE EN SEIS MARCAS, TODAS LITERALES DE LOS
+TITULOS DEL ACTA:** `NO ENTRAN AL CREDITO`, `NO MUEVE LA RACHA`, `SALEN DEL CREDITO`, `ADJUDICADA POR EXTENSION`, `SE MANTIENE Y NO SE AFLOJA`, `NO ES CAIDA`. **Con el lector
+de la 196, 5 de las 7 saldrian `SIN DECIR` y este registrador PARARIA**
+sobre un acta que las adjudica todas con claridad. **Se anaden y no se
+ensancha ninguna:** `EN CONTRA` y `A FAVOR` siguen yendo primero y en ese
+orden, y una adjudicacion muda en el titulo **y** en el parrafo sigue saliendo
+`SIN DECIR` y sigue haciendo PARAR.
+
+**Y UNA DE LAS SEIS EXISTE POR UNA MEDICION Y NO POR COMODIDAD.** Sin
+`NO MUEVE LA RACHA`, el estado de la `4.3` salia del **PARRAFO**, y salia por
+la frase *"No adjudico a favor del bucle: adjudico por la sede"*: o sea, por
+un `A FAVOR` que **en su sitio dice lo contrario de lo que el lector entiende**.
+Con la marca del titulo, la `4.3` deja de depender de esa frase. **Las dos
+lecturas se publican en la tabla de arriba.**
+
+### LAS 8 CAIDAS DEL CUERPO, REPARTIDAS POR LO QUE SU TITULAR DICE
+
+| clave | parte | especie | linea |
+|---|---|---|---:|
+| `C.E1` | EJECUTOR | DE REPORTE | 69437 |
+| `C.E2` | EJECUTOR | DE METODO | 69444 |
+| `C.E3` | EJECUTOR | DE METODO | 69444 |
+| `C.A1` | AUDITOR | DE METODO | 69448 |
+| `C.A2` | AUDITOR | DE METODO | 69462 |
+| `C.A3` | AUDITOR | DE METODO | 69471 |
+| `C.A4` | AUDITOR | DE METODO | 69471 |
+| `C.A5` | AUDITOR | DE METODO | 69480 |
+
+**DOS TITULARES LLEVAN DOS CLAVES CADA UNO** (``### `C.E2` Y `C.E3`...`` y
+``### `C.A3` Y `C.A4`...``), y el lector de la 196 se queda con la primera de
+cada uno. **MEDIDO: 6 claves contra 8, y las que pierde son `C.E3`, `C.A4`.**
+Con esa cuenta el cuerpo daria **4** caidas del auditor contra la fila del
+TOTAL, que dice **5**, y este registrador PARARIA sobre un acta correcta.
+
+**Y LA ESPECIE DE LA `C.E1` OBLIGA UNA MARCA NUEVA, LITERAL:**
+`DE REPORTE`. Su titular dice *"ES DE REPORTE, NO DE CIFRA"*, y con las
+marcas de la 196 saldria SIN ESPECIE (`C.E1`) y el registrador PARARIA.
+
+### LA TABLA DE CREDITO, CON LAS DOS PARTES PUBLICADAS
+
+| fila | cuerpo | fila del acta |
+|---|---:|---:|
+| caidas propias del auditor, TOTAL | 5 | 5 |
+| caidas propias del auditor, QUE ACUMULAN | 0 | 0 |
+| del ejecutor, de cifra publicada | 0 | 0 |
+| del ejecutor, de reporte | 1 | 1 |
+| del ejecutor, de metodo | 2 | 2 |
+
+**LAS DOS RACHAS SE LEEN DE LA CELDA DERECHA DE SU PROPIA FILA Y NO SE
+SUPONEN: racha de cifra publicada 1, racha de reporte 1.** La `C.E1` de la
+vuelta 196 **la re clasifico el propio auditor en su `4.3`**, de cifra
+publicada a **reporte**, y por la letra del 27 ago 2026 **no acumula**, porque
+vive en prosa de acompanamiento y no en una tabla, una cabecera o una
+conclusion. **Lo registro como el acta lo escribe, y digo que me favorece.**
+
+### LA FILA DE PUESTOS Y EL COTEJO LIMPIO
+
+**120 aislados, 120 cotejados, 8 quemados**, y el cotejo limpio va sobre
+**112**, leido de la seccion 2 del acta y **exigido a CALZAR** con
+`cotejados - quemados` = **112**. La exigencia que la 196 endurecio **sigue
+entera**; lo unico que cambia es **donde se lee**, porque esta acta lo escribe
+en la cabecera de su tabla y no en su fila de puestos.
+
+### LA METRICA DE CREDITO, TAL COMO EL ACTA LA PUBLICA
+
+| relecturas | 1 | **332** |
+| puestos | **120 aislados, 120 cotejados, 8 quemados** | **1.306** |
+| discrepancias DENTRO del marcado | **4** (`2838`, `2916`, `3072`, `3173`) | **60** |
+| discrepancias y hallazgos FUERA del marcado | **5** (`655`, `719`, `976`, `1809`, `1810`) | **179** |
+| caidas propias del auditor QUE ACUMULAN | **0** | |
+| caidas propias del auditor, TOTAL del cuerpo | **5** (`C.A1` a `C.A5`, todas de metodo, todas remediadas dentro de la vuelta) | `C.A1`: **TERCERA seguida de su especie** |
+| caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 1** |
+| caidas del ejecutor de reporte | **1** (`C.E1`, re clasificada en la `4.3`), en prosa: **no acumula** | **racha de reporte: 1** |
+| caidas del ejecutor de metodo | **2** (`C.E2`, `C.E3`), declaradas por el | no acumulan |
+
+### LOS HALLAZGOS DE LA SECCION 5, QUE NO SALEN DE NINGUN DISCUTIBLE
+
+- **`5.1`** (linea 69552): `5.1` EL REPORTE QUEMA LA CIEGA DEL AUDITOR POR CONSTRUCCION, Y ES LA `P.3` PERO DEL OTRO LADO.
+- **`5.2`** (linea 69559): `5.2` EL MARCADO DE DISCUTIBLES NO EXISTE POR DEBAJO DEL PUESTO 2662, Y LA METRICA DE CREDITO SE APOYA EN EL.
+- **`5.3`** (linea 69568): `5.3` TRES PUESTOS TIENEN YA TRES LECTORES INDEPENDIENTES CONTRA EL ARCHIVO.
+- **`5.4`** (linea 69577): `5.4` EL FICHERO DEL TURNO DEL AUDITOR NO SE LIMPIA AL CERRAR.
+
+### LA DEUDA DE LA SERIE, REMEDIDA Y NO HEREDADA
+
+Actas 173 a 196 sin entrada propia en la serie: **8** (173, 174, 175, 176, 177, 178, 179, 180). **La cifra
+se recomputa cada vuelta y no se hereda.** Los dos extremos del salto,
+leidos de los titulos y no tecleados: bajo `(42, 172)`, alto `(43, 181)`.
+

@@ -1,0 +1,67 @@
+==============================================================================
+VUELTA 197, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR
+==============================================================================
+
+A) `caidas_en_titular_con_varias_claves()` SOBRE TITULARES FABRICADOS
+   el lector de la 196 se queda con la PRIMERA de cada titular      VERDE
+   el lector nuevo lee las CINCO claves de los tres titulares       VERDE
+   y NO se cuela la `C.A9` que solo vive en el cuerpo               VERDE
+   LA MUTACION: si el lector nuevo mirara el parrafo y no el titular, la
+   `C.A9` entraria y habria SEIS caidas donde hay cinco.
+
+B) `parte_de_la_caida_197()` Y EL PLURAL
+   el lector de la 196 no sabe leer MIAS                            VERDE
+   el nuevo si, y devuelve AUDITOR                                  VERDE
+   el singular sigue funcionando igual que antes                    VERDE
+   el ejecutor sigue ganando cuando su marca esta                   VERDE
+   un titular mudo SIGUE saliendo SIN DECIR y haciendo PARAR        VERDE
+   LA MUTACION: si el plural se hubiera metido ENSANCHANDO el patron a
+   `MIA` sin frontera, `MIAMI` tambien casaria. Se comprueba:
+   una palabra que solo CONTIENE MIA no atribuye nada               VERDE
+
+C) `cifras_de_la_fila_de_puestos_197()` CON LA CELDA ENTERA EN NEGRITA
+   el lector de la 195 no lee la forma envolvente                   VERDE
+   el nuevo lee las tres cifras                                     VERDE
+   y la forma VIEJA sigue leyendose igual que antes                 VERDE
+   LA MUTACION: si el nuevo hubiera SUSTITUIDO al heredado en vez de
+   correr detras, la fila vieja habria cambiado de valor. No cambia.
+
+D) `cotejo_limpio_197()` DONDE EL ACTA LO ESCRIBE
+   el patron de la 196 no encuentra nada aqui                       VERDE
+   el patron de esta acta lee el 112                                VERDE
+   y sobre un texto mudo devuelve vacio, que es lo que hace PARAR   VERDE
+   LA MUTACION QUE MAS IMPORTA: el acta trae DOS filas con la misma cifra,
+   una en MAYUSCULAS (la del cotejo) y otra en minusculas (el reparto por
+   clase). Si el patron fuera insensible a la caja, cogeria la que llegue
+   antes y la cifra publicada dependeria del orden de las filas.
+   la fila en minusculas NO casa, y por eso no puede colarse        VERDE
+
+E) `estado_de_la_adjudicacion_197()` Y SUS SEIS MARCAS
+   estado de `4.2` LAS CUATRO QUEMADAS SE PUBLICAN Y NO E           VERDE
+   estado de `4.3` LA `P.1`: NO MUEVE LA RACHA, Y NO HACE           VERDE
+   estado de `4.4` NO SE ENSANCHA LA LISTA BLANCA; ESOS P           VERDE
+   estado de `4.5` ADJUDICADA POR EXTENSION Y CONTRA MI P           VERDE
+   estado de `4.6` EL TOPE SE MANTIENE Y NO SE AFLOJA, PE           VERDE
+   estado de `4.7` EL 0 DE LA SECCION 9 NO ES CAIDA, Y SE           VERDE
+   las SEIS salen SIN DECIR con el lector de la 196                 VERDE
+   EN CONTRA sigue ganando a todas las nuevas                       VERDE
+   A FAVOR sigue ganando a todas las nuevas                         VERDE
+   una adjudicacion muda SIGUE saliendo SIN DECIR                   VERDE
+   y la procedencia sigue diciendo NINGUNA cuando los dos callan    VERDE
+
+F) `claves_con_letra_de_la_fila()` Y EL RANGO
+   el heredado, de solo digitos, no ve ninguna clave con letra      VERDE
+   el nuevo lee las dos claves sueltas                              VERDE
+   y expande el rango de cinco                                      VERDE
+   un rango al reves NO se adivina: quedan sus dos literales        VERDE
+   y un rango de letras distintas tampoco se expande                VERDE
+
+G) `puestos_que_nombra_la_fila()`
+   lee los cinco puestos y no la cifra de la celda                  VERDE
+   no repite un puesto nombrado dos veces                           VERDE
+   y una fila sin puestos devuelve vacio en vez de inventar         VERDE
+
+==============================================================================
+CASOS: 35 | VERDES: 35 | ROJOS: 0
+VEREDICTO: VERDE
+==============================================================================
