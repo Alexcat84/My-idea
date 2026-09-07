@@ -1,0 +1,137 @@
+==============================================================================
+VUELTA 202, TAREA 1 . LA CORRECCION DECLARADA DE LA evidencia DE OP-L-03
+adjudicada por el acta 201 en su 4.3. CARRIL: banco 9.10, POR ADICION.
+==============================================================================
+
+A) LA FICHA, LOCALIZADA POR LINEA, Y SU evidencia CITADA POR LINEA MAS
+   INDICE (acta 201, 4.4). SE PUBLICAN LAS DOS NUMERACIONES DEL INDICE.
+   docs/plan/OPERACIONES.jsonl: disco 499474 bytes | LF 499474 bytes
+   CIFRA lineas NO VACIAS: 71
+   LINEA DE LA FICHA OP-L-03: 43
+   estado de la ficha (SE LEE, NO SE MUEVE): 'LISTA'
+   fecha_corte de la ficha: '2026-08-11'
+   CIFRA elementos de `evidencia`: 3
+      evidencia indice 0 (elemento 1): 'BANCO_DEL_PLAN.md P.5'
+      evidencia indice 1 (elemento 2): 'MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117'
+      evidencia indice 2 (elemento 3): 'LECTURAS_DIRIGIDAS.md, el reparto por acto'
+
+B) LA PRIMERA DE LAS TRES COSAS OBLIGATORIAS: EL DOCUMENTO QUE LA
+   evidencia NOMBRA NO TRAE LO QUE PROMETE. LAS DOS CIFRAS SE CUENTAN
+   AQUI Y NO SE COPIAN DEL ENCARGO.
+   CIFRA elementos de `evidencia` que NOMBRAN LECTURAS_DIRIGIDAS.md: 1,
+      elementos 3 (indices 2)
+   LA CLAUSULA QUE SE CORRIGE, CITADA: linea 43 de
+      docs/plan/OPERACIONES.jsonl, `evidencia` elemento 3 (indice 2):
+      'LECTURAS_DIRIGIDAS.md, el reparto por acto'
+   docs/plan/LECTURAS_DIRIGIDAS.md: disco 214916 bytes | LF 214916 bytes | 2230 lineas por count(NL)
+   CIFRA apariciones del literal 'reparto por acto': 0
+   CIFRA menciones de 'OP-L-03': 0
+   LA BUSQUEDA POSITIVA, PORQUE UNA BUSQUEDA NEGATIVA NO SE PUEDE CITAR
+      SOLA (EJECUTOR.md 9). Las 8 variantes buscadas y su cuenta:
+      reparto por acto       0 aparicion(es)
+      reparto por            0 aparicion(es)
+      por acto               0 aparicion(es)
+      OP-L-03                0 aparicion(es)
+      OP_L_03                0 aparicion(es)
+      OP L 03                0 aparicion(es)
+      OP_L_03_LECTURAS       0 aparicion(es)
+      OP_L_03_TRIANGULOS     0 aparicion(es)
+
+C) LA SEGUNDA: DONDE VIVE DE VERDAD EL REPARTO POR ACTO, LOS DOS
+   FICHEROS NOMBRADOS Y CON SUS BYTES EXACTOS (P.2)
+   docs/plan/OP_L_03_LECTURAS.jsonl
+      disco 51368 bytes (50.2 KB) | LF 51368 bytes
+      CIFRA filas no vacias: 14
+      CIFRA lineas que NO son JSON valido: 0
+      CIFRA actos DISTINTOS: 14
+      CIFRA actos con `leido` en true: 11 | en false: 3
+      SUMA de `cifra_pares_leidos`: 19
+      los actos distintos: analisis_trafico_competitivo, breakthrough_desempeno_actual, cash_burn_calculation, cierre_segun_complejidad_venta, colaboracion_cadena_suministro, compra_por_precio_mas_bajo_como_error, construccion_de_leverage, creacion_option_pool, crowdfunding_legal_exemptions_jobs_act, disenar_tests_pass_fail, encuadre_desafio_diseno, estrategia_de_innovacion_arenas, evaluacion_tecnologias_disruptivas, fase_diseno_prototipado_modelos
+   docs/plan/OP_L_03_TRIANGULOS.jsonl
+      disco 55705 bytes (54.4 KB) | LF 55705 bytes
+      CIFRA filas no vacias: 19
+      CIFRA lineas que NO son JSON valido: 0
+      CIFRA actos DISTINTOS: 8
+      CIFRA actos con `leido` en true: 0 | en false: 0
+      SUMA de `cifra_pares_leidos`: 0
+      los actos distintos: cash_burn_calculation, colaboracion_cadena_suministro, compra_por_precio_mas_bajo_como_error, construccion_de_leverage, creacion_option_pool, disenar_tests_pass_fail, estrategia_de_innovacion_arenas, fase_diseno_prototipado_modelos
+
+D) LA TERCERA, Y ES LA QUE NO PUEDE FALTAR: LA COBERTURA REAL CONTRA LO
+   QUE LA evidencia PROMETE. LA CIFRA VIEJA SE LEE DE LA FICHA.
+   CIFRA elementos de `evidencia` que prometen pares en actos: 1,
+      elementos 2 (indices 1)
+   LA PROMESA, CITADA: linea 43, `evidencia` elemento 2 (indice 1):
+      'MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117'
+   CIFRAS LEIDAS DE ESE ELEMENTO (no tecleadas): 55 pares en 29 actos
+   corte que la propia promesa declara: puesto 2117
+   LA COBERTURA DE HOY, RECONTADA AQUI:
+      actos con ficha de lectura: 14 de los 29 prometidos
+      de esos, con `leido` en true: 11
+      pares leidos, sumando `cifra_pares_leidos`: 19 de los 55 prometidos
+      actos con ficha de triangulo: 8
+      CIFRA actos prometidos SIN ficha de lectura: 15
+      CIFRA pares prometidos SIN lectura registrada: 36
+   LA PROMESA NO SE RETIRA Y NO ES UNA MENTIRA: viaja con su corte, el
+      11 ago 2026, y con ese corte era lo que se iba a hacer. LO QUE LA
+      CORRECCION ANADE ES CUANTO DE ESO EXISTE HOY, con SU corte.
+
+E) LA CORRECCION, COMPUESTA CON TODAS LAS CIFRAS MEDIDAS ARRIBA
+   CIFRA caracteres de la correccion: 2405
+   CIFRA guiones largos y medios: 0
+   LAS TRES COSAS OBLIGATORIAS, COMPROBADAS UNA A UNA DENTRO DEL TEXTO:
+      (1) el documento y sus dos ceros         1 aparicion(es)
+      (2) OP_L_03_LECTURAS.jsonl nombrado      2 aparicion(es)
+      (2) OP_L_03_TRIANGULOS.jsonl nombrado    1 aparicion(es)
+      (3) la cobertura real                    1 aparicion(es)
+      (3) la fecha de corte de hoy             4 aparicion(es)
+
+   EL TEXTO DE LA CORRECCION, ENTERO:
+   | CORRECCION DECLARADA (2026-09-07, vuelta 202, TAREA 1), POR EL CARRIL DEL BA
+   | NCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA 
+   | DE ESQUEMA (es un elemento mas de esta misma lista evidencia, que es la via 
+   | que la ficha gemela OP-L-01 uso en la vuelta 166 y que el acta 71, seccion 6
+   | , adjudicacion 3, adjudico CON LAS PALABRAS NO ES PARADA, y la misma que la 
+   | vuelta 201 uso para OP-I-01). (1) LO QUE SE CORRIGE es la clausula que en es
+   | ta lista dice, verbatim: 'LECTURAS_DIRIGIDAS.md, el reparto por acto'. MEDID
+   | O HOY, CON FECHA DE CORTE 2026-09-07 y contando el fichero en la vuelta 202 
+   | con scripts/loop/_v202_t1_correccion_op_l_03.py: docs/plan/LECTURAS_DIRIGIDA
+   | S.md, que mide 214916 bytes en disco y 214916 normalizados a LF, trae 0 apar
+   | iciones del literal 'reparto por acto' y 0 menciones de OP-L-03. La busqueda
+   |  se corrio tambien POSITIVA sobre 8 variantes, porque una busqueda negativa 
+   | no se puede citar sola (EJECUTOR.md 9). EL DOCUMENTO NO ES EL QUE TRAE EL RE
+   | PARTO: LA EVIDENCIA APUNTABA AL DOCUMENTO EQUIVOCADO. (2) EL REPARTO POR ACT
+   | O VIVE, CON FECHA DE CORTE 2026-09-07, EN DOS FICHEROS Y LOS DOS SE NOMBRAN:
+   |  docs/plan/OP_L_03_LECTURAS.jsonl, que mide 51368 bytes en disco y 51368 nor
+   | malizados a LF, con 14 filas, 14 actos distintos y 0 lineas que no sean JSON
+   |  valido; y docs/plan/OP_L_03_TRIANGULOS.jsonl, que mide 55705 bytes en disco
+   |  y 55705 normalizados a LF, con 19 filas, 8 actos distintos y 0 lineas que n
+   | o sean JSON valido. (3) LA COBERTURA REAL, RECONTADA HOY CON FECHA DE CORTE 
+   | 2026-09-07, PORQUE UNA EVIDENCIA CORREGIDA QUE PROMETA MAS DE LO QUE EXISTE 
+   | ES LO QUE LA REGLA 'LA RUTA QUE PROMETE PRUEBA ES CIFRA' VINO A CAZAR: el el
+   | emento 2 de esta misma lista promete '55 pares en 29 actos' con corte 11 ago
+   |  2026, y docs/plan/OP_L_03_LECTURAS.jsonl trae hoy 14 actos distintos, de lo
+   | s cuales 11 tienen leido en true y 3 en false, y sus campos cifra_pares_leid
+   | os suman 19 pares. O SEA: 15 de los 29 actos prometidos siguen sin ficha de 
+   | lectura, y 36 de los 55 pares prometidos siguen sin lectura registrada. LA P
+   | ROMESA VIEJA NO ES UNA MENTIRA Y NO SE RETIRA: con su corte era lo que se ib
+   | a a hacer; lo que esta correccion anade es CUANTO DE ESO EXISTE HOY, con su 
+   | propio corte. NINGUN CAMPO estado SE MUEVE con esta correccion: la vara del 
+   | trabajo pendiente es el instrumento y nunca el campo estado (recuadro de AUD
+   | ITOR.md 0, decision del fundador del 4 sep 2026).
+
+F) LA GUARDA DE QUE NADA MAS SE MUEVE
+   CIFRA claves distintas de `evidencia` que cambian de valor: 0  (ninguna)
+   CIFRA claves de la ficha antes: 18 | despues: 18
+   MISMAS CLAVES Y EN EL MISMO ORDEN: SI
+   CIFRA elementos de `evidencia` antes: 3 | despues: 4
+   LOS 3 VIEJOS SIGUEN IDENTICOS Y EN SU ORDEN: SI
+   estado ANTES: 'LISTA' | estado DESPUES: 'LISTA'
+
+G) LA ESCRITURA
+   ESCRITA: la linea 43 de docs/plan/OPERACIONES.jsonl
+   docs/plan/OPERACIONES.jsonl al salir: disco 501883 bytes | LF 501883 bytes
+   crecimiento en disco: 2409 bytes
+   CIFRA lineas NO VACIAS al salir: 71
+   CIFRA lineas que NO son JSON valido al salir: 0
+
+FIN

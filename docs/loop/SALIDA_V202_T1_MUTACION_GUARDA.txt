@@ -1,0 +1,44 @@
+PRUEBA DE MUTACION DE LA GUARDA DE LA VUELTA 202, TAREA 1
+======================================================================
+EJECUTOR.md 1: EL CASO ROJO SE PRUEBA POR MUTACION. Ninguna guarda se
+publica como prueba sin haber corrido antes su prueba de mutacion.
+EL REPO NO SE TOCA: los casos se fabrican MUTANDO LAS LINEAS EN
+MEMORIA y llamando a la funcion PURA veredicto().
+
+CASO DE CONTROL (el arbol de verdad): VERDE
+   CIFRA lineas no vacias en HEAD: 71
+   CIFRA lineas no vacias en el arbol: 71
+   CIFRA lineas que difieren: 1, cuales: [43]
+   la linea 43 es la ficha: OP-L-03 en HEAD y OP-L-03 en el arbol
+   CIFRA claves de esa ficha que cambian de valor: 1, cuales: ['evidencia']
+   estado de OP-L-03 ANTES: 'LISTA' | DESPUES: 'LISTA'
+   CIFRA elementos de `evidencia` ANTES: 3 | DESPUES: 4
+   los 3 viejos siguen identicos y en su orden: True
+   CIFRA fichas de las 71 cuyo campo `estado` cambia: 0, cuales: (ninguna)
+   VEREDICTO: VERDE
+
+A) dos lineas difieren en vez de una               CAE EN ROJO
+      ROJO: se esperaba exactamente 1 linea distinta.
+      VEREDICTO: ROJO
+B) cambia una clave que no es `evidencia`          CAE EN ROJO
+      ROJO: cambia alguna clave que no es `evidencia`.
+      VEREDICTO: ROJO
+C) el estado de la ficha del sujeto se mueve       CAE EN ROJO
+      ROJO: cambia alguna clave que no es `evidencia`.
+      ROJO: el estado de la ficha se movio.
+      VEREDICTO: ROJO
+D) el estado de OTRA ficha se mueve                CAE EN ROJO
+      ROJO: se esperaba exactamente 1 linea distinta.
+      VEREDICTO: ROJO
+E) un elemento viejo de `evidencia` se reescribe   CAE EN ROJO
+      ROJO: los elementos viejos no siguen identicos y en su orden.
+      VEREDICTO: ROJO
+F) ninguna linea difiere                           CAE EN ROJO
+      ROJO: se esperaba exactamente 1 linea distinta.
+      VEREDICTO: ROJO
+
+CIFRA casos: 6 | pasan: 6
+CIFRA casos que CAEN: 6 de 6
+CIFRA casos de mutacion: 6 | CIFRA que CAEN EN ROJO: 6
+CIFRA casos de control que quedan VERDES: 1 de 1
+VEREDICTO DE LA MUTACION: VERDE, la guarda muerde

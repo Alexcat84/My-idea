@@ -1,0 +1,14 @@
+GUARDA DE LA VUELTA 202, TAREA 1: NINGUN `estado` SE MUEVE
+======================================================================
+corrida: PRIMERA
+medida contra HEAD con git show HEAD:docs/plan/OPERACIONES.jsonl
+CIFRA lineas no vacias en HEAD: 71
+CIFRA lineas no vacias en el arbol: 71
+CIFRA lineas que difieren: 1, cuales: [43]
+la linea 43 es la ficha: OP-L-03 en HEAD y OP-L-03 en el arbol
+CIFRA claves de esa ficha que cambian de valor: 1, cuales: ['evidencia']
+estado de OP-L-03 ANTES: 'LISTA' | DESPUES: 'LISTA'
+CIFRA elementos de `evidencia` ANTES: 3 | DESPUES: 4
+los 3 viejos siguen identicos y en su orden: True
+CIFRA fichas de las 71 cuyo campo `estado` cambia: 0, cuales: (ninguna)
+VEREDICTO: VERDE
