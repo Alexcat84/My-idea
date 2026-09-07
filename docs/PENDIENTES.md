@@ -15862,6 +15862,133 @@ cita y no celda tecleada.**
 - (linea 59360) | caidas propias del auditor | 3 | (se declaran, no se acumulan aqui) |
 
 
+
+### CORRECCION DECLARADA (2026-09-07, vuelta 203, TAREA 1 del encargo), POR EL CARRIL DEL BANCO 9.10, POR ADICION Y CON EL TEXTO VIEJO ENTERO ARRIBA
+
+**EL TEXTO DE ARRIBA NO SE TACHA NI SE BORRA, Y ESO NO ES UNA
+FORMALIDAD:** *una correccion que tapa lo que corrige no se puede
+auditar* (`EJECUTOR.md` 8). Lo que sigue es **un bloque mas de esta misma
+entrada**, sin clave nueva de esquema, exactamente como el acta 202 hizo
+con la `evidencia` de `OP-L-03` en su TAREA 1.
+
+**LO QUE ESTABA MAL, CITADO POR LINEA Y NO PARAFRASEADO.** El texto de
+arriba dice que las adjudicaciones de esta acta viven en la **seccion 6 sin clave numerada**.
+En `docs/PENDIENTES.md` ese literal vive hoy en **2** lineas, la **15813 y la 15902**,
+contadas en esta vuelta y no copiadas de ningun encargo. **ES FALSO:**
+**las adjudicaciones de esta acta SI estan numeradas**, y lo unico que
+les falta son **las comillas inversas** que el lector heredado exige. Lo
+adjudico el acta 202 en su `4.1`, y aqui se REMIDE en vez de copiarse.
+
+**LO QUE SI SEGUIA SIENDO CIERTO, DICHO PARA NO EXAGERAR LA CORRECCION:**
+los cinco lectores heredados **devuelven cero sobre esta acta**, y ese
+cero es CIERTO. Lo que era falso era **la razon** que se le ponia. Las
+dos lecturas van publicadas juntas mas abajo.
+
+**LA VARA QUE ESTA CORRECCION USA, DECLARADA Y CITADA** (acta 202, `4.1`,
+por extension del `4.7` del acta 201): **el numeral se toma de la seccion
+cuyo PROPIO TITULO lo nombra, NUNCA del numero de seccion, y dentro de
+ella las claves se cuentan por su propia numeracion `N.M`, lleve o no
+comillas inversas.** **ESTA ENTRADA DECLARA QUE USO ESA VARA.**
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTO.** Rige la
+MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Los lectores se IMPORTAN, y
+lo unico que se ensancho es **el patron de clave**, con **un parametro
+`plantilla` OPCIONAL** en `R84.claves_entrecomilladas()` cuyo valor por
+defecto es la expresion que esa funcion ya tenia dentro, **para que
+ninguno de sus catorce llamantes se toque**: es la forma que el acta 173
+adjudico en su propia `6.2`. El computo vive en
+`scripts/loop/_v203_reparto_de_actas_viejas.py`, con **prefijo de guion
+bajo, fuera del censo y fuera de la nomina**, que es lo que el `4.5` del
+acta 199 llama **computo de una vuelta**.
+
+**EL ACTA ACOTADA EN ESTA VUELTA:** lineas **58941** a **59447**, **507** lineas,
+sobre un fichero de **4706383** bytes en disco y **4706383** normalizado a LF.
+Su cuerpo trae **9** secciones `## N. TITULO`.
+
+#### EL REPARTO REAL, CADA NUMERAL CON LA SECCION QUE LO TITULA
+
+| numeral | seccion que lo titula, por su TITULO | numero de esa seccion | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | LAS ADJUDICACIONES | 6 | 59294 | `6.1`, `6.2`, `6.3`, `6.4`, `6.5` | **5** |
+| hallazgos | LOS HALLAZGOS, CADA UNO CON SU MEDICION | 4 | 59157 | `4.1`, `4.2`, `4.3`, `4.4`, `4.5` | **5** |
+| caidas propias del auditor | MIS CAIDAS PROPIAS, CON SU NOMBRE | 3 | 59124 | `CAIDA 1`, `CAIDA 2`, `CAIDA 3` | **3** |
+| caidas del ejecutor | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| preguntas contestadas | (no es una seccion: son las `P.n` que los titulos de las adjudicaciones nombran) | (no aplica) | (no aplica) | (ninguna) | **0** |
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta NO EXISTE y el filtro no se puede correr (vara del `4.7` del acta 201).
+`docs/loop/reportes/REPORTE_V173.md` **NO EXISTE**, y su seccion de preguntas se lee asi: (no existe REPORTE_V173.md).
+**NO SE FABRICA Y NO SE RECONSTRUYE:** medido con `os.path.isfile` y
+`os.path.getsize` en esta vuelta, **no hay fichero que medir**, y el
+cero no sale de contar uno vacio.
+Claves `P.n` nombradas: **0** (ninguna). Claves que quedan fuera del numeral:
+**0** (ninguna).
+
+#### LAS DOS LECTURAS, PUBLICADAS JUNTAS, Y LA DISCREPANCIA DECLARADA
+
+| lectura | adjudicaciones | hallazgos | caidas del auditor |
+|---|---:|---:|---:|
+| **el lector heredado tal cual**, `R84.claves_entrecomilladas()` con su plantilla de siempre | 0 | 0 | 0 |
+| **la vara adjudicada en el `4.1`**, mismo lector con la plantilla ancha | **5** | **5** | **3** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md`
+2). El cero del heredado **es cierto** y sigue siendo cierto: esa
+plantilla exige comillas inversas y esta acta no las escribe. La cifra
+de la derecha es la del **mismo lector** con la plantilla ancha, y las
+dos quedan escritas.
+
+**Y LA COLUMNA DE LAS CAIDAS DEL AUDITOR LLEVA SU PROPIA DECLARACION,
+PORQUE SU FORMA NO ES `N.M`:** esta acta escribe sus caidas como
+``- **`CAIDA n`. TITULO``, que **no es la numeracion `N.M` de la vara**;
+por eso se cuentan **con su propia forma**, medida en esta vuelta, y no
+con la plantilla ancha, que sobre esa seccion da **0**.
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor, **0** del
+auditor y **0** huerfanas sobre este mismo cuerpo.
+
+#### LAS 5 ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+| clave | pregunta que contesta | linea | titulo, literal del acta |
+|---|---|---:|---|
+| `6.1` | (ninguna) | 59296 | 6.1 LA TAREA 1.a ESTA BIEN HECHA Y NO SE REPITE.** La nomina da **82** con |
+| `6.2` | (ninguna) | 59301 | 6.2 LA TAREA 1.b ESTA BIEN HECHA, CUMPLE LA LETRA ESTRECHA DE MI 6.2 Y NO SE |
+| `6.3` | (ninguna) | 59309 | 6.3 EL COMENTARIO DE LA 4.4 SE CORRIGE POR EL CARRIL `9.10`, NO SE BORRA.** La |
+| `6.4` | (ninguna) | 59316 | 6.4 EL HUECO DE MI PROPIA BATERIA, SI LO HAY, SE DECLARA POR EL CARRIL QUE LA |
+| `6.5` | (ninguna) | 59322 | 6.5 LA DISCREPANCIA DEL `737` NO ABRE RELECTURA DEL ARCHIVO, ABRE RELECTURA AL |
+
+#### LOS 5 HALLAZGOS, UNO POR UNO, CON SU LINEA
+
+- **`4.1`** (linea 59159): ### 4.1 LA VUELTA 173 NO ESCRIBIO REPORTE, NI SIQUIERA EL ESQUELETO, Y LA DEUDA ES DE DOS
+- **`4.2`** (linea 59179): ### 4.2 EL CIERRE LLEVA CUATRO VUELTAS DIFERIDO, Y ESTO NO LO NARRO: LO MIDO EN GIT
+- **`4.3`** (linea 59200): ### 4.3 LA BATERIA DEL EJECUTOR NO CORRIO POR TERCERA VUELTA SEGUIDA, Y SU SALIDA QUEDO SIN COMMITEAR
+- **`4.4`** (linea 59215): ### 4.4 EL COMENTARIO NUEVO DE LA CUARTA SEDE NOMBRA COMO PRUEBA UNA SALIDA DE CERO BYTES
+- **`4.5`** (linea 59241): ### 4.5 CUATRO SUB-TAREAS DEL ENCARGO NO SE EJECUTARON, Y DOS DE ELLAS YA VENIAN DE ARRASTRE
+
+#### LAS CAIDAS, CON SU LINEA Y CON SU FORMA DECLARADA
+
+- **AUDITOR `CAIDA 1`** (linea 59126): - **`CAIDA 1`. AISLE LA CIEGA TARDE, Y VAN TRES ACTAS SEGUIDAS CON LA MISMA.**
+- **AUDITOR `CAIDA 2`** (linea 59137): - **`CAIDA 2`. LANCE LA BATERIA Y DESPUES ESCRIBI AL LADO, QUE ES JUSTO LO QUE
+- **AUDITOR `CAIDA 3`** (linea 59148): - **`CAIDA 3`. BUSQUE LA TAXONOMIA DE CLASES Y ME QUEME UN PELO.** Al hacer
+- (ninguna seccion de esta acta titula las caidas del ejecutor: **eso
+  se declara, no se publica como un cero**)
+
+#### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `(None, None, None, None)` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (linea 59356) | relecturas | 1 | **308** |
+- (linea 59357) | puestos | 8 | **530** |
+- (linea 59358) | discrepancias DENTRO del marcado | 1 | **22** |
+- (linea 59359) | discrepancias y hallazgos FUERA del marcado | 6 | **71** |
+- (linea 59360) | caidas propias del auditor | 3 | (se declaran, no se acumulan aqui) |
+
+**EL COTEJO QUE NADIE PIDIO Y QUE VALE LA PENA DECIR:** la propia fila
+de metrica de esta acta publica **`3`** caidas propias del auditor, y el
+computo de esta correccion, por la forma `CAIDA n`, cuenta **3**.
+
+*(Correccion escrita en la vuelta 203, TAREA 1. Corte de todas sus cifras:
+7 sep 2026. Salida: `docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`.)*
+
 ## R.64. Registro del acta de la vuelta 174, con sus cinco numerales NO COMPUTABLES POR LOS LECTORES HEREDADOS porque el acta es de la convencion anterior a la 184
 
 (Acta del auditor, vuelta 174; escrito en la vuelta 202, TAREA 4.)
@@ -15950,3 +16077,132 @@ cita y no celda tecleada.**
 - (linea 59908) | discrepancias y hallazgos FUERA del marcado | 3 | **74** |
 - (linea 59909) | caidas propias del auditor | 2 | (se declaran; la racha de la especie SI cuenta desde el 5 sep) |
 
+
+
+### CORRECCION DECLARADA (2026-09-07, vuelta 203, TAREA 1 del encargo), POR EL CARRIL DEL BANCO 9.10, POR ADICION Y CON EL TEXTO VIEJO ENTERO ARRIBA
+
+**EL TEXTO DE ARRIBA NO SE TACHA NI SE BORRA, Y ESO NO ES UNA
+FORMALIDAD:** *una correccion que tapa lo que corrige no se puede
+auditar* (`EJECUTOR.md` 8). Lo que sigue es **un bloque mas de esta misma
+entrada**, sin clave nueva de esquema, exactamente como el acta 202 hizo
+con la `evidencia` de `OP-L-03` en su TAREA 1.
+
+**LO QUE ESTABA MAL, CITADO POR LINEA Y NO PARAFRASEADO.** El texto de
+arriba dice que las adjudicaciones de esta acta viven en la **seccion 6 sin clave numerada**.
+En `docs/PENDIENTES.md` ese literal vive hoy en **2** lineas, la **15813 y la 15902**,
+contadas en esta vuelta y no copiadas de ningun encargo. **ES FALSO:**
+**las adjudicaciones de esta acta SI estan numeradas**, y lo unico que
+les falta son **las comillas inversas** que el lector heredado exige. Lo
+adjudico el acta 202 en su `4.1`, y aqui se REMIDE en vez de copiarse.
+
+**LO QUE SI SEGUIA SIENDO CIERTO, DICHO PARA NO EXAGERAR LA CORRECCION:**
+los cinco lectores heredados **devuelven cero sobre esta acta**, y ese
+cero es CIERTO. Lo que era falso era **la razon** que se le ponia. Las
+dos lecturas van publicadas juntas mas abajo.
+
+**LA VARA QUE ESTA CORRECCION USA, DECLARADA Y CITADA** (acta 202, `4.1`,
+por extension del `4.7` del acta 201): **el numeral se toma de la seccion
+cuyo PROPIO TITULO lo nombra, NUNCA del numero de seccion, y dentro de
+ella las claves se cuentan por su propia numeracion `N.M`, lleve o no
+comillas inversas.** **ESTA ENTRADA DECLARA QUE USO ESA VARA.**
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTO.** Rige la
+MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Los lectores se IMPORTAN, y
+lo unico que se ensancho es **el patron de clave**, con **un parametro
+`plantilla` OPCIONAL** en `R84.claves_entrecomilladas()` cuyo valor por
+defecto es la expresion que esa funcion ya tenia dentro, **para que
+ninguno de sus catorce llamantes se toque**: es la forma que el acta 173
+adjudico en su propia `6.2`. El computo vive en
+`scripts/loop/_v203_reparto_de_actas_viejas.py`, con **prefijo de guion
+bajo, fuera del censo y fuera de la nomina**, que es lo que el `4.5` del
+acta 199 llama **computo de una vuelta**.
+
+**EL ACTA ACOTADA EN ESTA VUELTA:** lineas **59448** a **59994**, **547** lineas,
+sobre un fichero de **4706383** bytes en disco y **4706383** normalizado a LF.
+Su cuerpo trae **10** secciones `## N. TITULO`.
+
+#### EL REPARTO REAL, CADA NUMERAL CON LA SECCION QUE LO TITULA
+
+| numeral | seccion que lo titula, por su TITULO | numero de esa seccion | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | LAS ADJUDICACIONES | 6 | 59802 | `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `6.9`, `6.10` | **10** |
+| hallazgos | LOS HALLAZGOS, CADA UNO CON SU MEDICION | 4 | 59635 | `4.1`, `4.2`, `4.3`, `4.4`, `4.5` | **5** |
+| caidas propias del auditor | MIS CAIDAS PROPIAS, CON SU NOMBRE | 3 | 59612 | `CAIDA 1`, `CAIDA 2` | **2** |
+| caidas del ejecutor | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| preguntas contestadas | (no es una seccion: son las `P.n` que los titulos de las adjudicaciones nombran) | (no aplica) | (no aplica) | `P.1`, `P.2` | **2** |
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201).
+`docs/loop/reportes/REPORTE_V174.md` **existe**, y su seccion de preguntas se lee asi: la seccion de PREGUNTAS aparece 0 veces.
+Su tamano, medido en esta vuelta con `os.path.getsize`: **32568** bytes.
+Claves `P.n` nombradas: **2** (`P.1`, `P.2`). Claves que quedan fuera del numeral:
+**0** (ninguna).
+
+#### LAS DOS LECTURAS, PUBLICADAS JUNTAS, Y LA DISCREPANCIA DECLARADA
+
+| lectura | adjudicaciones | hallazgos | caidas del auditor |
+|---|---:|---:|---:|
+| **el lector heredado tal cual**, `R84.claves_entrecomilladas()` con su plantilla de siempre | 0 | 0 | 0 |
+| **la vara adjudicada en el `4.1`**, mismo lector con la plantilla ancha | **10** | **5** | **2** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md`
+2). El cero del heredado **es cierto** y sigue siendo cierto: esa
+plantilla exige comillas inversas y esta acta no las escribe. La cifra
+de la derecha es la del **mismo lector** con la plantilla ancha, y las
+dos quedan escritas.
+
+**Y LA COLUMNA DE LAS CAIDAS DEL AUDITOR LLEVA SU PROPIA DECLARACION,
+PORQUE SU FORMA NO ES `N.M`:** esta acta escribe sus caidas como
+``- **`CAIDA n`. TITULO``, que **no es la numeracion `N.M` de la vara**;
+por eso se cuentan **con su propia forma**, medida en esta vuelta, y no
+con la plantilla ancha, que sobre esa seccion da **0**.
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor, **0** del
+auditor y **0** huerfanas sobre este mismo cuerpo.
+
+#### LAS 10 ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+| clave | pregunta que contesta | linea | titulo, literal del acta |
+|---|---|---:|---|
+| `6.1` | (ninguna) | 59804 | 6.1 EL `D.1` (CORREGIR LA `4.4` ANTES DE ARCHIVAR) ES CORRECTO, Y LA 4.2 LE DA |
+| `6.2` | (ninguna) | 59812 | 6.2 EL `D.2` (SI EL ARREGLO CUENTA COMO TERCERA SUB-TAREA) SE ADJUDICA QUE |
+| `6.3` | (ninguna) | 59817 | 6.3 EL `D.3` (EL PASO 0 ENDURECIDO SIN ENCARGO) ES CORRECTO Y SE QUEDA.** No |
+| `6.4` | (ninguna) | 59825 | 6.4 EL `D.4` (LA MAQUINA IMPORTADA EN VEZ DE CLONADA) ES CORRECTO, Y EL CONTRA |
+| `6.5` | (ninguna) | 59834 | 6.5 EL `D.5` (LA FILA ANEXADA CON EL CIERRE PENDIENTE) ES CORRECTO Y ES LO |
+| `6.6` | (ninguna) | 59841 | 6.6 EL `D.6` (LA CABECERA DEL 172 LA TALLO EL AUDITOR) ES CORRECTO, Y LO |
+| `6.7` | (ninguna) | 59850 | 6.7 EL `D.7` Y EL `PD.1` (NO HAY ETIQUETA PARA "SUPERADA POR DECISION DEL |
+| `6.8` | `P.1` | 59858 | 6.8 EL `P.1` (SI EL TOPE DE 80 LINEAS DEL AUSTERO RIGE) SE ADJUDICA: NO |
+| `6.9` | `P.2` | 59867 | 6.9 EL `P.2` (SI LAS DOS CAIDAS DE RUTA ACUMULAN HACIA ATRAS) SE ADJUDICA: NO |
+| `6.10` | (ninguna) | 59876 | 6.10 EL `PD.2` (EL DOCSTRING DE `paso0_archivar_anterior.py`) SE ADJUDICA: SE |
+
+#### LOS 5 HALLAZGOS, UNO POR UNO, CON SU LINEA
+
+- **`4.1`** (linea 59637): ### 4.1 LA CIFRA DE BYTES DE UN `.txt` DE `docs/loop` NO REPRODUCE, Y EL REPORTE MEZCLA DOS CONVENCIONES SIN DECIRLO
+- **`4.2`** (linea 59678): ### 4.2 LA CLAUSULA `4.4` SE CORRIGIO EN UNA SEDE Y QUEDO VIVA EN OTRA DEL MISMO FICHERO
+- **`4.3`** (linea 59705): ### 4.3 CINCO ARNESES FUERA DE LA NOMINA, NO UNO
+- **`4.4`** (linea 59720): ### 4.4 LO QUE SI SALIO LIMPIO, Y SE DICE PORQUE LLEVABA CUATRO VUELTAS SIN SALIR
+- **`4.5`** (linea 59735): ### 4.5 LO QUE ENCARGO, Y LO QUE SOLO ANOTO
+
+#### LAS CAIDAS, CON SU LINEA Y CON SU FORMA DECLARADA
+
+- **AUDITOR `CAIDA 1`** (linea 59614): - **`CAIDA 1`. TIRE EL AISLADOR DOS VECES, Y LA SEGUNDA TIRADA FUE DESPUES DE
+- **AUDITOR `CAIDA 2`** (linea 59626): - **`CAIDA 2`. TECLEE EL NOMBRE DEL CORREDOR DE TESTS DE MEMORIA Y REVENTO.**
+- (ninguna seccion de esta acta titula las caidas del ejecutor: **eso
+  se declara, no se publica como un cero**)
+
+#### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `(None, None, None, None)` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (linea 59905) | relecturas | 1 | **309** |
+- (linea 59906) | puestos | 8 | **538** |
+- (linea 59907) | discrepancias DENTRO del marcado | 0 | **22** |
+- (linea 59908) | discrepancias y hallazgos FUERA del marcado | 3 | **74** |
+- (linea 59909) | caidas propias del auditor | 2 | (se declaran; la racha de la especie SI cuenta desde el 5 sep) |
+
+**EL COTEJO QUE NADIE PIDIO Y QUE VALE LA PENA DECIR:** la propia fila
+de metrica de esta acta publica **`2`** caidas propias del auditor, y el
+computo de esta correccion, por la forma `CAIDA n`, cuenta **2**.
+
+*(Correccion escrita en la vuelta 203, TAREA 1. Corte de todas sus cifras:
+7 sep 2026. Salida: `docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`.)*

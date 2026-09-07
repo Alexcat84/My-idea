@@ -1,0 +1,182 @@
+==============================================================================
+VUELTA 203, TAREA 1: LA CORRECCION DECLARADA DE R.63 Y R.64, Y EL
+REPARTO REAL DE LAS ACTAS 173 Y 174 POR LA VARA DEL 4.1 DEL ACTA 202
+==============================================================================
+
+0) LA PRUEBA POR MUTACION DEL ENSANCHE, ANTES DE ESCRIBIR NADA
+   (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION). Lo unico
+   propio de esta vuelta es LA PLANTILLA, y es lo que se prueba.
+   LA PLANTILLA HEREDADA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo
+   unico que convierte 'hacia falta ensancharla' en una medicion:
+   negrita CON comillas, la forma de la 184                 ancha 2  (esp 2 ) vieja 2  (esp 2 ) defecto 2  VERDE
+   negrita SIN comillas, la forma de las adjudicaciones vie ancha 3  (esp 3 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   titular markdown, la forma de los hallazgos viejos       ancha 2  (esp 2 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra con separador de millar NO es una clave         ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra de bytes con millar NO es una clave             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la numeracion CORTA en el primer hueco                   ancha 1  (esp 1 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   una clave citada EN MITAD de la prosa no cuenta          ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   seccion vacia da cero por las dos plantillas             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la 10 y siguientes tambien entran, que es la 174         ancha 10 (esp 10) vieja 0  (esp 0 ) defecto 0  VERDE
+   CIFRA casos donde la ancha y la heredada DISCREPAN: 4
+   LA TERCERA COLUMNA ES LA QUE PRUEBA QUE NINGUN LLAMANTE VIEJO SE
+   MUEVE: `defecto` es la funcion llamada SIN el parametro nuevo, y en
+   los 9 casos da EXACTAMENTE lo mismo que la plantilla heredada.
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 9 de 9
+   CIFRA casos: 9 | verdes: 9 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+A) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/PENDIENTES.md: disco 1117775 bytes | LF 1117775 bytes | sha256 LF e6419a188db4334b
+   CIFRA lineas por split(NL): 16209
+   CIFRA lineas con el literal 'seccion 6 sin clave numerada': 4 | linea(s): 15813, 15875, 16029, 16091
+      linea 15813 | **seccion 6 sin clave numerada**, y sus caidas propias del auditor en la
+      linea 15875 | arriba dice que las adjudicaciones de esta acta viven en la **seccion 6 sin clave numerada**.
+      linea 16029 | **seccion 6 sin clave numerada**, y sus caidas propias del auditor en la
+      linea 16091 | arriba dice que las adjudicaciones de esta acta viven en la **seccion 6 sin clave numerada**.
+
+==============================================================================
+TAREA 1.a . LA ENTRADA R.63, DEL ACTA DE LA VUELTA 173
+==============================================================================
+
+B) LA ENTRADA ACOTADA EN LA SEDE, COMPUTADA Y NO TECLEADA
+   R.63: lineas 15766 a 15991, 226 lineas
+   CIFRA bytes de la entrada al entrar: 13566
+   trae el literal falso 'seccion 6 sin clave numerada': SI
+
+C) EL REPARTO DEL ACTA 173, MEDIDO EN ESTA VUELTA POR LA VARA
+   docs/loop/ACTA_AUDITOR.md: disco 4706383 bytes | LF 4706383 bytes
+   CUERPO ACOTADO del acta 173: lineas 58941 a 59447, 507 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 9
+      seccion 1  linea 58955  lineas 58955 a 59070  LA VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+      seccion 2  linea 59071  lineas 59071 a 59123  LA RELECTURA CIEGA
+      seccion 3  linea 59124  lineas 59124 a 59156  MIS CAIDAS PROPIAS, CON SU NOMBRE
+      seccion 4  linea 59157  lineas 59157 a 59249  LOS HALLAZGOS, CADA UNO CON SU MEDICION
+      seccion 5  linea 59250  lineas 59250 a 59293  LA BATERIA DE MUTACIONES
+      seccion 6  linea 59294  lineas 59294 a 59327  LAS ADJUDICACIONES
+      seccion 7  linea 59328  lineas 59328 a 59349  LO QUE SUBE AL FUNDADOR
+      seccion 8  linea 59350  lineas 59350 a 59398  LA METRICA DE CREDITO
+      seccion 9  linea 59399  lineas 59399 a 59447  LA PARADA, CON LAS CONDICIONES RECORRIDAS UNA A UNA
+   ADJUDICACIONES: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 6, linea 59294, titulo literal: 'LAS ADJUDICACIONES'
+      claves `6.M` POR LA VARA ANCHA: 5 (6.1, 6.2, 6.3, 6.4, 6.5)
+      claves `6.M` POR LA PLANTILLA HEREDADA, publicada al lado: 0 (ninguna)
+   HALLAZGOS: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 4, linea 59157, titulo literal: 'LOS HALLAZGOS, CADA UNO CON SU MEDICION'
+      claves `4.M` POR LA VARA ANCHA: 5 (4.1, 4.2, 4.3, 4.4, 4.5)
+      claves `4.M` POR LA PLANTILLA HEREDADA, publicada al lado: 0 (ninguna)
+   CAIDAS DEL AUDITOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 3, linea 59124, titulo literal: 'MIS CAIDAS PROPIAS, CON SU NOMBRE'
+      claves `3.M` por la vara: 0 (ninguna)
+      claves `CAIDA n` de la forma vieja: 3 (CAIDA 1, CAIDA 2, CAIDA 3)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CAIDAS DEL EJECUTOR: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 0
+   docs/loop/reportes/REPORTE_V173.md existe: NO
+   bytes medidos con os.path.getsize: NINGUNO, y el cero sale de que NO HAY FICHERO, no de medir uno
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 0 (ninguna)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [(no existe REPORTE_V173.md)]
+   CIFRA preguntas del numeral: 0, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta NO EXISTE y el filtro no se puede correr (vara del `4.7` del acta 201)
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 59357 devuelve (None, None, None, None)
+   linea 59356 | | relecturas | 1 | **308** |
+   linea 59357 | | puestos | 8 | **530** |
+   linea 59358 | | discrepancias DENTRO del marcado | 1 | **22** |
+   linea 59359 | | discrepancias y hallazgos FUERA del marcado | 6 | **71** |
+   linea 59360 | | caidas propias del auditor | 3 | (se declaran, no se acumulan aqui) |
+
+D) LA IDEMPOTENCIA Y LA ESCRITURA
+   la correccion de esta vuelta YA esta en R.63: SI
+   CIFRA bytes del bloque compuesto: 7933
+   CIFRA lineas del bloque compuesto: 127
+   NO SE ESCRIBE: la correccion ya estaba. IDEMPOTENTE.
+
+==============================================================================
+TAREA 1.b . LA ENTRADA R.64, DEL ACTA DE LA VUELTA 174
+==============================================================================
+
+B) LA ENTRADA ACOTADA EN LA SEDE, COMPUTADA Y NO TECLEADA
+   R.64: lineas 15992 a 16209, 218 lineas
+   CIFRA bytes de la entrada al entrar: 13127
+   trae el literal falso 'seccion 6 sin clave numerada': SI
+
+C) EL REPARTO DEL ACTA 174, MEDIDO EN ESTA VUELTA POR LA VARA
+   docs/loop/ACTA_AUDITOR.md: disco 4706383 bytes | LF 4706383 bytes
+   CUERPO ACOTADO del acta 174: lineas 59448 a 59994, 547 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 10
+      seccion 0  linea 59450  lineas 59450 a 59478  EL REMEDIO BLOQUEANTE, PRIMERO, PORQUE LA REGLA MANDA QUE ABRA CON EL
+      seccion 1  linea 59479  lineas 59479 a 59492  HUECO DE ACTA: NO
+      seccion 2  linea 59493  lineas 59493 a 59611  LA VERIFICACION, CON MIS COMANDOS Y EN ESTA VUELTA
+      seccion 3  linea 59612  lineas 59612 a 59634  MIS CAIDAS PROPIAS, CON SU NOMBRE
+      seccion 4  linea 59635  lineas 59635 a 59753  LOS HALLAZGOS, CADA UNO CON SU MEDICION
+      seccion 5  linea 59754  lineas 59754 a 59801  LA RELECTURA CIEGA
+      seccion 6  linea 59802  lineas 59802 a 59884  LAS ADJUDICACIONES
+      seccion 7  linea 59885  lineas 59885 a 59898  LO QUE SUBE AL FUNDADOR, SIN DECIDIRLO YO
+      seccion 8  linea 59899  lineas 59899 a 59960  LA METRICA DE CREDITO
+      seccion 9  linea 59961  lineas 59961 a 59994  LAS CONDICIONES DE PARADA, RECORRIDAS UNA A UNA
+   ADJUDICACIONES: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 6, linea 59802, titulo literal: 'LAS ADJUDICACIONES'
+      claves `6.M` POR LA VARA ANCHA: 10 (6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 6.10)
+      claves `6.M` POR LA PLANTILLA HEREDADA, publicada al lado: 0 (ninguna)
+   HALLAZGOS: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 4, linea 59635, titulo literal: 'LOS HALLAZGOS, CADA UNO CON SU MEDICION'
+      claves `4.M` POR LA VARA ANCHA: 5 (4.1, 4.2, 4.3, 4.4, 4.5)
+      claves `4.M` POR LA PLANTILLA HEREDADA, publicada al lado: 0 (ninguna)
+   CAIDAS DEL AUDITOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 3, linea 59612, titulo literal: 'MIS CAIDAS PROPIAS, CON SU NOMBRE'
+      claves `3.M` por la vara: 0 (ninguna)
+      claves `CAIDA n` de la forma vieja: 2 (CAIDA 1, CAIDA 2)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CAIDAS DEL EJECUTOR: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 0
+   docs/loop/reportes/REPORTE_V174.md existe: SI
+   bytes medidos con os.path.getsize: 32568
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 2 (P.1, P.2)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 2, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201)
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 59906 devuelve (None, None, None, None)
+   linea 59905 | | relecturas | 1 | **309** |
+   linea 59906 | | puestos | 8 | **538** |
+   linea 59907 | | discrepancias DENTRO del marcado | 0 | **22** |
+   linea 59908 | | discrepancias y hallazgos FUERA del marcado | 3 | **74** |
+   linea 59909 | | caidas propias del auditor | 2 | (se declaran; la racha de la especie SI cuenta desde el 5 sep) |
+
+D) LA IDEMPOTENCIA Y LA ESCRITURA
+   la correccion de esta vuelta YA esta en R.64: SI
+   CIFRA bytes del bloque compuesto: 8282
+   CIFRA lineas del bloque compuesto: 129
+   NO SE ESCRIBE: la correccion ya estaba. IDEMPOTENTE.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/PENDIENTES.md al salir: disco 1117775 bytes | LF 1117775 bytes | sha256 LF e6419a188db4334b
+   CIFRA crecimiento en bytes de disco: 0
+   CIFRA crecimiento en bytes LF: 0
+   CIFRA lineas por split(NL) al salir: 16209 (al entrar 16209, crecimiento 0)
+   CIFRA entradas escritas por esta corrida: 0
+
+LA GUARDA DEL TEXTO VIEJO: NI UNA LINEA BORRADA NI UNA CAMBIADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (la adicion solo puede ANADIR: si esta cifra no es 0, es ROJO)
+
+   R.63 al salir: lineas 15766 a 15991 | trae la marca de la correccion: SI
+   R.63 al salir: sigue trayendo el texto viejo con el literal 'seccion 6 sin clave numerada': SI
+   R.64 al salir: lineas 15992 a 16209 | trae la marca de la correccion: SI
+   R.64 al salir: sigue trayendo el texto viejo con el literal 'seccion 6 sin clave numerada': SI
+
+FIN

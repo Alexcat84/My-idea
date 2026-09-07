@@ -139,7 +139,7 @@ tabla tallada entera cuando la vuelta cierre.
 <!-- TABLA DE TAREAS -->
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
-| **TAREA 1** | LOS REGISTROS. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL, que es el remedio de la `C.E1` de la 202 y va PRIMERA porque `AUDITOR.md` 1.4 pone los registros en la TAREA 1. **LO QUE SE CORRIGE ES UNA FRASE FALSA**: las dos entradas dicen que las adjudicaciones de las actas 173 y 174 viven en la **seccion 6 sin clave numerada**, y el acta 202 midio en su `4.1` que **SI estan numeradas** (la 173 de `6.1` a `6.5` y la 174 de `6.1` a `6.10`), y que lo unico que les falta son las comillas inversas. **Las dos lineas se miden aqui y no se copian del encargo.** **EL CARRIL ES EL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, con el texto viejo **entero, sin tachar y sin borrar**, y la correccion fechada debajo. **Y EN LA MISMA ADICION VA EL REPARTO REAL** de las dos actas por la vara adjudicada en el `4.1`: **el numeral se toma de la seccion cuyo PROPIO TITULO lo nombra, nunca del numero de seccion**, y dentro de ella las claves se cuentan por su propia numeracion `N.M`, **lleve o no comillas inversas**; y **cada entrada declara que uso esa vara**. **EL COMPUTO VA EN UN `_v203_*`**, fuera del censo y de la nomina; **los lectores heredados se IMPORTAN** y lo unico que se ensancha es el patron de clave, **con parametro opcional para que los llamantes viejos no se toquen**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS** (el `0` del heredado, que es cierto, y lo que da la vara adjudicada) y **la discrepancia se declara**. **GUARDA OBLIGATORIA Y CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 1** | LOS REGISTROS. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL, que es el remedio de la `C.E1` de la 202 y va PRIMERA porque `AUDITOR.md` 1.4 pone los registros en la TAREA 1. **LO QUE SE CORRIGE ES UNA FRASE FALSA**: las dos entradas dicen que las adjudicaciones de las actas 173 y 174 viven en la **seccion 6 sin clave numerada**, y el acta 202 midio en su `4.1` que **SI estan numeradas** (la 173 de `6.1` a `6.5` y la 174 de `6.1` a `6.10`), y que lo unico que les falta son las comillas inversas. **Las dos lineas se miden aqui y no se copian del encargo.** **EL CARRIL ES EL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, con el texto viejo **entero, sin tachar y sin borrar**, y la correccion fechada debajo. **Y EN LA MISMA ADICION VA EL REPARTO REAL** de las dos actas por la vara adjudicada en el `4.1`: **el numeral se toma de la seccion cuyo PROPIO TITULO lo nombra, nunca del numero de seccion**, y dentro de ella las claves se cuentan por su propia numeracion `N.M`, **lleve o no comillas inversas**; y **cada entrada declara que uso esa vara**. **EL COMPUTO VA EN UN `_v203_*`**, fuera del censo y de la nomina; **los lectores heredados se IMPORTAN** y lo unico que se ensancha es el patron de clave, **con parametro opcional para que los llamantes viejos no se toquen**. **LAS DOS LECTURAS SE PUBLICAN JUNTAS** (el `0` del heredado, que es cierto, y lo que da la vara adjudicada) y **la discrepancia se declara**. **GUARDA OBLIGATORIA Y CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **CERRADA** | `docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`, `_IDEM.txt`, `docs/PENDIENTES.md` (lineas 15766 a 15991 y 15992 a 16209), `scripts/loop/_v203_reparto_de_actas_viejas.py` |
 | **TAREA 2** | LA CORRECCION DECLARADA DE LA `verificacion` DE `OP-L-01`, EN SU SEDE, adjudicada por el acta 202 en su `4.4`. **EL CARRIL, IDENTICO AL DE `OP-L-03` DE LA 202**: banco `9.10`, **POR ADICION**, un elemento mas de la misma lista, **sin clave nueva de esquema** y **sin tocar ni tachar el texto viejo**. La ficha vive en la **linea 41** y se cita por **linea mas indice**. **TRES COSAS OBLIGATORIAS, MEDIDAS HOY**: que `las_once()` **no devuelve once** sino toda cabecera `LD` que haya hoy en `docs/plan/LECTURAS_DIRIGIDAS.md`, con **la cifra de hoy y la del corte 2026-09-04 y sus dos fechas**; la **comparacion resuelta** de hoy contra la congelada y **los puestos implicados**, cada cifra con su corte; y **la que no puede faltar**, que en comparacion **LITERAL** siguen apareciendo **0**, o sea que **la clausula 1 NO se cae** y lo que envejecio es la cifra de la excepcion. **LA PROMESA VIEJA NO SE RETIRA Y NO ES UNA MENTIRA**: con su corte era cierta. **`OP-L-01` NO SE CIERRA** y su `estado` no se toca. **GUARDA OBLIGATORIA**: **1 sola linea** de `OPERACIONES.jsonl` distinta (la **41**), **1 sola clave** (`verificacion`), los **6** elementos viejos **identicos y en su orden**, su `estado` igual al entrar y al salir, y **0 de las 71 fichas** moviendo `estado`. **CORRIDA DOS VECES**, con **crecimiento 0** la segunda | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 3** | `OP-I-01` CONTRA EL CRITERIO DE HECHO, LA CUARTA FICHA REAL: **la unica de las cuatro que la vara del plan da como trabajo real y que nadie ha medido contra el criterio de HECHO**. La 201 le corrigio la `evidencia`; **nadie le ha mirado la `verificacion`.** Se mide contra el criterio de hecho de `docs/plan/08_VERIFICACION.md` **citado por linea**, con su `verificacion` citada por **linea 44 mas indice** (**se comprueba la linea, no se supone**). **Y EL CRITERIO SE APLICA COMO EL ACTA 202 LO APLICO EN SU `4.3`**: no basta con que las clausulas salgan cumplidas hoy, se pregunta **clausula por clausula si SE CAERIA SI EL FALLO VOLVIERA**, y si alguna solo pasa porque alguien la remide a mano, **se dice, y esa ficha no se cierra**. **Si hay instrumentos suyos se IMPORTAN y se corren tal cual**, comprobando **ANTES** que no escriben, y **comprobandolo de verdad**, que es la caida `C.2` del auditor de la 202. **PROPONE, NO CIERRA** | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | LA DEUDA. `R.65` Y `R.66`, LAS ACTAS 175 Y 176, por el `4.9` del acta 201: la deuda son las **175 a 180**, **DOS POR VUELTA**, de la mas vieja a la mas nueva. Va **DETRAS** del trabajo de plan y nunca delante. **Eran 8 y quedan 6.** `R.65` para el **acta 175** y `R.66` para el **acta 176**, en `docs/PENDIENTES.md`. **LAS DOS SON DE LA CONVENCION VIEJA**, asi que usan **la vara adjudicada en el `4.1` del acta 202**, la misma que la TAREA 1, y **cada entrada declara que la uso**. **SE REUTILIZA EL COMPUTO DE LA TAREA 1: no se escribe un segundo.** **Cada acta se acota EN ESTA VUELTA** por linea de inicio y fin, con su reparto entero. **SI EL REPORTE ARCHIVADO NO EXISTE, NO SE FABRICA**: se declara la ausencia con `os.path.isfile` y `os.path.getsize` y se usa la vara del `4.7` del acta 201, **declarandolo**. **CIERRA CON LA SERIE MEDIDA**: entradas, colisiones, huecos y siguiente libre | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
@@ -148,5 +148,102 @@ tabla tallada entera cuando la vuelta cierre.
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
 
 <!-- ANEXO DE TAREAS -->
-*(vacio: ninguna tarea ha cerrado todavia)*
+
+### TAREA 1. LA CORRECCION DECLARADA DE `R.63` Y `R.64`, Y SU REPARTO REAL
+
+**VA PRIMERA PORQUE `AUDITOR.md` 1.4 PONE LOS REGISTROS EN LA TAREA 1**, y es el
+remedio de la `C.E1` de la 202.
+
+**1.a LA FRASE FALSA, MEDIDA AQUI Y NO COPIADA DEL ENCARGO.** El encargo dice que
+`R.63` y `R.64` afirman que las adjudicaciones de esas actas viven en la
+**seccion 6 sin clave numerada**, y manda medirlo. Medido en esta vuelta por
+`scripts/loop/_v203_t1_correccion_registros.py`, ese literal vive en
+**2 lineas** de `docs/PENDIENTES.md`, la **15813** y la **15902**, y las dos
+calzan con lo que el encargo dice. El bloque `H.1` del sello de apertura lo
+midio antes por separado y da lo mismo. **Las cabeceras `## R.63.` y `## R.64.`
+aparecen 1 vez cada una, en las lineas 15766 y 15865.**
+
+**1.b LA PRUEBA POR MUTACION VA DELANTE DE ESCRIBIR NADA.** Lo unico propio de
+esta vuelta es **la plantilla de clave**, y es lo que se prueba, sobre textos
+FABRICADOS dentro de la funcion y sin tocar el repo. Contado de
+`docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS.txt`: **9 casos, los 9 verdes y
+0 rojos**; **4 casos donde la plantilla ancha y la heredada DISCREPAN**; y la
+segunda pasada muta el esperado y **caen los 9 de 9**. **NINGUN VEREDICTO ES UNA
+CONSTANTE LITERAL:** los tres valores de cada caso salen de correr
+`R84.claves_entrecomilladas()` tres veces sobre el mismo texto.
+
+**Y LA TERCERA COLUMNA DE ESA TABLA ES LA QUE PRUEBA QUE NINGUN LLAMANTE VIEJO
+SE MUEVE:** la funcion llamada **SIN el parametro nuevo** da, en los **9** casos,
+exactamente lo mismo que la plantilla heredada. **Ese es el unico ensanche de
+esta vuelta**, y va como el acta 173 adjudico en su `6.2`: **parametro opcional,
+sin tocar a ninguno de los catorce llamantes**.
+
+**1.c LAS TRES FORMAS DE CLAVE NO SE INVENTARON: SE MIDIERON** sobre las cuatro
+actas antes de escribir el patron. Son la negrita **con** comillas inversas (la
+forma de la 184 en adelante), la negrita **sin** comillas inversas (las
+ADJUDICACIONES de las actas 173 a 176) y el **titular markdown** `### 4.1` (los
+HALLAZGOS de las actas 173 y 174). **Y LA TRAMPA QUE EL PATRON ESQUIVA TAMBIEN
+ESTA MEDIDA:** en el cuerpo de estas actas hay lineas como
+``**3.388 filas, A 551, B 72**`` y ``**32.568 bytes**``, que son **cifras con
+separador de millar y no claves**; no se cuelan porque la clave se busca por su
+prefijo exacto, que es **el numero de la seccion**, y `3.` y `32.` no son el
+numero de ninguna seccion mirada. **Los dos casos estan en la tabla de mutacion.**
+
+**1.d EL REPARTO REAL, POR LA VARA ADJUDICADA, CONTADO DEL FICHERO DE SALIDA.**
+Acta **173** acotada en las lineas **58941 a 59447** (**507** lineas) y acta
+**174** en las **59448 a 59994** (**547** lineas), sobre un
+`docs/loop/ACTA_AUDITOR.md` de **4706383** bytes en disco y **4706383**
+normalizado a LF.
+
+| numeral | acta 173 | acta 174 |
+|---|---|---|
+| adjudicaciones | **5** (`6.1` a `6.5`), seccion **6** LAS ADJUDICACIONES, linea 59294 | **10** (`6.1` a `6.10`), seccion **6** LAS ADJUDICACIONES, linea 59802 |
+| hallazgos | **5** (`4.1` a `4.5`), seccion **4** LOS HALLAZGOS, linea 59157 | **5** (`4.1` a `4.5`), seccion **4** LOS HALLAZGOS, linea 59635 |
+| caidas propias del auditor | **3** (`CAIDA 1` a `CAIDA 3`), seccion **3**, linea 59124 | **2** (`CAIDA 1` y `CAIDA 2`), seccion **3**, linea 59612 |
+| caidas del ejecutor | **no computable**: ninguna seccion de esa acta titula ese numeral | **no computable**: ninguna seccion de esa acta titula ese numeral |
+| preguntas contestadas | **0** | **2** (`P.1`, `P.2`) |
+
+**LO QUE ESA TABLA REPRODUCE, Y NO ES POCO:** el acta 202 midio en su `4.1` que
+la 173 trae `6.1` a `6.5` y la 174 `6.1` a `6.10`. **Medido hoy con un
+instrumento distinto, sale lo mismo.**
+
+**1.e EL COTEJO QUE NADIE PIDIO Y QUE ES LA MEJOR PRUEBA DE QUE EL COMPUTO NO SE
+INVENTA NADA.** La propia **fila de metrica de credito** de cada acta publica
+cuantas caidas propias tuvo el auditor, y esa fila **la escribio el auditor de
+aquella vuelta, no yo**. Cotejada contra mi computo por la forma `CAIDA n`:
+
+| acta | lo que la fila de metrica del acta publica | lo que este computo cuenta | calza |
+|---|---:|---:|---|
+| 173 (linea 59360) | **3** | **3** | SI |
+| 174 (linea 59909) | **2** | **2** | SI |
+
+**1.f LAS DOS LECTURAS, PUBLICADAS JUNTAS, Y LA DISCREPANCIA DECLARADA.** El
+lector heredado con su plantilla de siempre da **0, 0 y 0** sobre las dos actas,
+y **ese cero es CIERTO**: esa plantilla exige comillas inversas y estas actas no
+las escriben. La vara adjudicada da **5, 5 y 3** en la 173 y **10, 5 y 2** en la
+174. **La discrepancia se declara, no se resuelve copiando** (`EJECUTOR.md` 2), y
+las dos cifras quedan escritas dentro de cada entrada.
+
+**1.g LO QUE SE ESCRIBIO, Y SOLO POR ADICION.** Contado del fichero de salida:
+el bloque de `R.63` mide **7911** bytes y **127** lineas, y el de `R.64` mide
+**8260** bytes y **129** lineas. `docs/PENDIENTES.md` pasa de **1101602** bytes
+en disco y **1101602** normalizado a LF, con `sha256` LF `04228d4c0fcea65c`, a
+**1117775** bytes en disco y **1117775** normalizado a LF, con `sha256` LF
+`e6419a188db4334b`: **crecimiento 16173 bytes** por las dos convenciones y
+**256 lineas**. Las entradas pasan a vivir en las lineas **15766 a 15991** y
+**15992 a 16209**.
+
+**1.h LA GUARDA, Y LA SEGUNDA CORRIDA SELLA CRECIMIENTO 0.** La guarda del texto
+viejo cuenta **0 lineas del texto de entrada que no esten, EN ORDEN, en el de
+salida**: una adicion solo puede anadir, y si esa cifra no fuera 0 seria ROJO.
+Las dos entradas, releidas del disco, **traen la marca de la correccion** y
+**siguen trayendo el texto viejo con el literal falso**, sin tachar y sin borrar.
+La segunda corrida, en
+`docs/loop/SALIDA_V203_T1_CORRECCION_REGISTROS_IDEM.txt`, sella **crecimiento 0
+por las dos convenciones, 0 lineas de crecimiento y 0 entradas escritas**, con
+el `sha256` LF de la sede **identico** a la salida de la primera.
+
+**1.i LO QUE NO SE TOCO:** ningun campo `estado`, ninguna clase, ningun
+veredicto, y **cero lineas de `numstat`** en `dataset/`, `web/` y `engine/`.
+
 <!-- FIN ANEXO DE TAREAS -->

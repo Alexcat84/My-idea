@@ -95,18 +95,42 @@ PAT_ADJ_SIN_NUMERAL = re.compile(r"^##\s+6\.\s+LA ADJUDICACION\b")
 CLAVE_SIN_NUMERAL = "punto 6"
 
 
-def claves_entrecomilladas(lineas, inicio, fin, prefijo, tope=40):
+PLANTILLA_CLAVE_184 = r"^\s*\*\*`%s` "
+
+
+def claves_entrecomilladas(lineas, inicio, fin, prefijo, tope=40, plantilla=None):
     """LAS ADJUDICACIONES ESCRITAS ``**`5.1` ...``, o sea con el numeral entre
     comillas inversas, que es la forma del acta 184. PURA.
 
     ES UN PATRON NUEVO Y NO UN ENSANCHE DEL VIEJO: el importado sigue intacto y
     su cifra sobre esta acta se publica al lado. La diferencia entre anadir y
     ensanchar es la que el reporte de la 183 uso en su 1.a y la que el acta 184
-    adjudico a favor en su `5.3`."""
+    adjudico a favor en su `5.3`.
+
+    --- EL ENSANCHE DE LA VUELTA 203, TAREA 1, CON EL TEXTO VIEJO ENTERO ARRIBA
+        Y SIN TACHARLO (`EJECUTOR.md` 8) ---
+
+    QUE CAMBIA: nada de la conducta. Se anade el parametro OPCIONAL `plantilla`,
+    cuyo valor por defecto es `PLANTILLA_CLAVE_184`, que es LA MISMA expresion
+    que esta funcion tenia escrita dentro. **Con la plantilla por defecto esta
+    funcion devuelve exactamente lo que devolvia**, y por eso NINGUNO de sus
+    catorce llamantes se toca: es la forma que el acta 173 adjudico en su `6.2`,
+    *"la compatibilidad hacia atras se resolvio con parametros opcionales en vez
+    de tocando los llamantes"*.
+
+    POR QUE HACE FALTA, Y ESTA MEDIDO: las actas ANTERIORES a la 184 numeran sus
+    claves igual (`6.1`, `6.2`, ...) pero **sin comillas inversas**, y unas
+    veces en negrita y otras como titular markdown. El acta 202 lo adjudico en
+    su `4.1`: **el numeral se cuenta por su propia numeracion `N.M`, lleve o no
+    comillas inversas**. Sin este parametro, la unica salida era escribir un
+    lector nuevo, que la moratoria `AUDITOR.md` 6.3 prohibe.
+
+    LA PLANTILLA LLEVA UN SOLO `%s`, donde va la clave YA ESCAPADA."""
     claves = []
+    pl = plantilla or PLANTILLA_CLAVE_184
     for k in range(1, tope + 1):
         clave = "%s%d" % (prefijo, k)
-        pat = re.compile(r"^\s*\*\*`%s` " % re.escape(clave))
+        pat = re.compile(pl % re.escape(clave))
         cuantas = len([i for i in range(inicio, fin + 1) if pat.match(lineas[i - 1])])
         if cuantas == 0:
             break
