@@ -814,6 +814,27 @@ contando un fichero que otro tiene que acordarse de crear **mide la memoria del
 ejecutor, no la racha**. **Yo si sello el mio en esta vuelta**, pero eso no arregla
 el carril y no lo arreglo por mi cuenta.
 
+**Y LA REMEDICION AL CIERRE HACE LA PREGUNTA MAS ESTRECHA TODAVIA, ASI QUE VA
+AQUI EN VEZ DE GUARDARSELA PARA LA 196.** `EJECUTOR.md` 1 manda remedir al cierre
+lo que la propia vuelta pudo mover, y **sellar mi salida de cierre movio
+exactamente lo que este instrumento cuenta**. Remedido en
+`docs/loop/SALIDA_V195_RACHA_REMEDIDA_AL_CIERRE.txt`: el inventario pasa a **13
+ficheros**, la vuelta mas alta es la **195**, y dentro del rango **faltan cuatro
+numeros: 181, 182, 183 y 194**. Como la racha se cuenta **hacia atras desde la mas
+alta** y la 194 no tiene fichero, **la racha queda en 1, sobre la sola vuelta
+195**.
+
+**ESO NO DICE QUE LA 194 NO CERRARA SU REPORTE**, que lo cerro en exitcode 0 y su
+mensaje de commit lo publica. **Dice que el instrumento no puede verlo.** Un hueco
+no solo impide que la racha crezca: **la corta**. Y la cifra que gobierna el tope
+de sub-tareas de `AUDITOR.md` 6.2 sale de ahi.
+
+**LA CIFRA DE APERTURA NO SE TOCA Y SIGUE SIENDO CIERTA:** la racha valia **9**
+sobre las vueltas 185 a 193 cuando el bloque `E` la midio, y esa medicion esta
+sellada en `docs/loop/SALIDA_V195_APERTURA.txt`. **Las dos cifras son verdaderas
+midiendo momentos distintos, y las dos se publican en vez de resolverse copiando
+una sobre otra.**
+
 **`P.2` LA DECLARACION DE SUJETO CONGELADO NO TIENE NADA QUE LA VERIFIQUE.** Es el
 `D.3` visto desde el otro lado. El literal `SUJETO CONGELADO` en el texto de un
 arnes convierte un `NO DECIDIBLE` en `CONGELADO` **sin que nada compruebe que sea
@@ -880,6 +901,33 @@ la 194 publico en sus diez tramos**, y eso se sabra cuando corra.
   en las dos direcciones:** el auditor emitio 0 `B` donde el archivo tenia 1, y yo
   emiti 4 donde el archivo tiene 1. **El sesgo de los lectores contra esa clase
   esta medido en los dos sentidos y ahora tambien el sesgo a favor.**
+
+### 8.0 UNA ANEXION HECHA DESPUES DE CERRAR, DECLARADA CON SU HORA Y SU MOTIVO
+
+**ESTE REPORTE SE CERRO CON `cerrar_reporte.py` EN EXITCODE 0 Y DESPUES SE LE
+ANEXO UN PARRAFO A LA PREGUNTA `P.1` Y ESTA MISMA SECCION.** Se dice aqui porque
+tocar un reporte ya cerrado es de la especie que esta casa vigila, y callarlo seria
+peor que hacerlo.
+
+**QUE SE ANADIO Y POR QUE:** al sellar `docs/loop/SALIDA_V195_CERRAR_REPORTE.txt`,
+que es el fichero que `vuelta192_racha_de_cierres.py` cuenta, **la racha cambio**,
+y `EJECUTOR.md` 1 manda remedir al cierre lo que la propia vuelta pudo mover. La
+remedicion esta sellada en `docs/loop/SALIDA_V195_RACHA_REMEDIDA_AL_CIERRE.txt` y
+**hace mi propia pregunta `P.1` mas estrecha**, no mas comoda: la racha no se queda
+en 9, **cae a 1**.
+
+**QUE NO SE TOCO:** ni una cifra de las que ya estaban, ni la cabecera tallada, ni
+el veredicto, ni la seccion 9, ni ninguna de las cuatro secciones de tareas.
+**Ninguna cifra publicada cambio de valor.**
+
+**Y LAS GUARDAS QUE TODAVIA PUEDEN CORRER SOBRE UN REPORTE CERRADO SE VOLVIERON A
+CORRER, con su salida sellada:** `tallar_cabecera_reporte.py --comparar` sigue
+dando **CABECERA IDENTICA AL TALLADOR** (9 filas cotejadas, 0 distintas, 0
+ausentes), y las cuatro piezas, las parejas de convenciones y los guiones se
+recomprobaron llamando a las funciones puras de `cerrar_reporte.py` sobre el texto
+final. **Lo que NO se puede volver a correr es `cerrar_reporte.py` entero**, porque
+su primera guarda exige que el sujeto este SIN CERRAR, y eso tambien se dice en vez
+de disimularlo.
 
 ### 8.1 MIS CAIDAS PROPIAS DE ESTA VUELTA, DECLARADAS Y NO OMITIDAS
 

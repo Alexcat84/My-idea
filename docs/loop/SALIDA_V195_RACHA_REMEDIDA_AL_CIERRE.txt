@@ -1,0 +1,48 @@
+==============================================================================
+VUELTA 195: LA RACHA DE CIERRES, REMEDIDA AL CIERRE
+==============================================================================
+
+POR QUE SE REMIDE, Y ES EJECUTOR.md 1: EL ESTADO AL CIERRE SE MIDE AL
+CIERRE si algo de la propia vuelta pudo haberlo movido. Esta vuelta SELLO
+docs/loop/SALIDA_V195_CERRAR_REPORTE.txt, que es exactamente el fichero que
+este instrumento cuenta, asi que la cifra de la apertura ya no es la de hoy.
+
+EL INVENTARIO ENTERO, LEIDO DEL DIRECTORIO Y NO DE UNA VENTANA:
+   V179  SALIDA_V179_CERRAR_REPORTE.txt        3382 bytes  VERDE   CIFRA piezas que faltan: 0
+   V180  SALIDA_V180_CERRAR_REPORTE.txt        2458 bytes  VERDE   CIFRA piezas que faltan: 0
+   V184  SALIDA_V184_CERRAR_REPORTE.txt        2380 bytes  ROJO    (sin la linea)
+   V185  SALIDA_V185_CERRAR_REPORTE.txt        4423 bytes  VERDE   CIFRA piezas que faltan: 0
+   V186  SALIDA_V186_CERRAR_REPORTE.txt        5303 bytes  VERDE   CIFRA piezas que faltan: 0
+   V187  SALIDA_V187_CERRAR_REPORTE.txt        5190 bytes  VERDE   CIFRA piezas que faltan: 0
+   V188  SALIDA_V188_CERRAR_REPORTE.txt        6202 bytes  VERDE   CIFRA piezas que faltan: 0
+   V189  SALIDA_V189_CERRAR_REPORTE.txt        5636 bytes  VERDE   CIFRA piezas que faltan: 0
+   V190  SALIDA_V190_CERRAR_REPORTE.txt        6721 bytes  VERDE   CIFRA piezas que faltan: 0
+   V191  SALIDA_V191_CERRAR_REPORTE.txt        7795 bytes  VERDE   CIFRA piezas que faltan: 0
+   V192  SALIDA_V192_CERRAR_REPORTE.txt        7645 bytes  VERDE   CIFRA piezas que faltan: 0
+   V193  SALIDA_V193_CERRAR_REPORTE.txt        6967 bytes  VERDE   CIFRA piezas que faltan: 0
+   V195  SALIDA_V195_CERRAR_REPORTE.txt        7468 bytes  VERDE   CIFRA piezas que faltan: 0
+
+CIFRA ficheros del inventario: 13
+CIFRA vuelta mas alta del inventario: 195
+CIFRA numeros que FALTAN dentro del rango: 4
+LOS QUE FALTAN: 181, 182, 183, 194
+
+CIFRA vueltas CONSECUTIVAS en verde hacia atras: 1
+las vueltas de la racha: 195
+EL NUMERO QUE LA CORTA: 194, y la causa es que NO HAY FICHERO suyo.
+
+LO QUE ESTO MIDE Y LO QUE NO, DICHO PARA QUE NO SE LEA DE MAS:
+   La apertura de esta vuelta midio la racha en 9, sobre las vueltas 185 a
+   193, y esa cifra era CIERTA EN SU MOMENTO: esta sellada en el bloque E de
+   docs/loop/SALIDA_V195_APERTURA.txt y no se toca.
+   Al sellar mi propia salida de cierre, el inventario gana la 195 y la
+   racha SE MIDE HACIA ATRAS DESDE LA MAS ALTA. Como la 194 no tiene
+   fichero, la racha se corta ahi y queda en 1.
+   ESO NO DICE QUE LA 194 NO CERRARA SU REPORTE: lo cerro en exitcode 0 y su
+   mensaje de commit lo publica. Dice que ESTE INSTRUMENTO NO PUEDE VERLO,
+   porque cuenta un fichero que cerrar_reporte.py NO escribe y que el
+   ejecutor tiene que redirigir a mano.
+   ES LA PREGUNTA P.1 DEL REPORTE, Y ESTA MEDICION LA HACE MAS ESTRECHA: no
+   es solo que la racha no crezca, es que UN HUECO LA CORTA A 1.
+
+FIN

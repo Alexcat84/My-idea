@@ -1,0 +1,27 @@
+==============================================================================
+VUELTA 195: RE VERIFICACION DEL REPORTE TRAS LA ANEXION DECLARADA EN 8.0
+==============================================================================
+
+LO QUE SE PUEDE CORRER SOBRE UN REPORTE YA CERRADO, Y LO QUE NO:
+   cerrar_reporte.py ENTERO no se puede: su primera guarda exige que el
+   sujeto este SIN CERRAR. Lo que SI se puede es llamar a sus funciones
+   PURAS sobre el texto final, que es para lo que son puras. A
+   piezas_que_faltan se le pasan LOS MISMOS argumentos que el cierre le
+   paso, vuelta y nombre de la bateria incluidos: sin ellos la pieza (4)
+   no puede juzgar un hueco y cae, y esa caida seria del llamador y no
+   del reporte.
+
+EL SUJETO, MEDIDO POR LAS DOS CONVENCIONES:
+   disco 68203 bytes y LF 68203 bytes; y los sha256 de disco y LF son 7394fe69b8708ed3 y 7394fe69b8708ed3
+   lineas por count(NL): 994 | por len(split(NL)): 995
+
+LAS CUATRO PIEZAS: CIFRA piezas que faltan: 0
+CIFRA cifras publicadas sin su pareja: 0
+CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+CIFRA motivos por los que la seccion 4 NO calza: 0
+CIFRA secciones `## n.` distintas: 10
+CIFRA secciones DUPLICADAS: 0 (ninguna)
+CIFRA secciones FUERA DE ORDEN: 0
+
+VEREDICTO DE LA RE VERIFICACION: VERDE
+FIN
