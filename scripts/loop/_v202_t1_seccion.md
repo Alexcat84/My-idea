@@ -26,8 +26,7 @@ en **la linea 43** de `docs/plan/OPERACIONES.jsonl`, con **1 solo acierto** de l
 
 **(1) EL DOCUMENTO QUE LA `evidencia` NOMBRA NO TRAE LO QUE PROMETE.** El
 elemento **3** (indice **2**) nombra `LECTURAS_DIRIGIDAS.md`, y ese documento,
-que en `docs/plan/LECTURAS_DIRIGIDAS.md` mide **214916 bytes en disco y 214916
-bytes normalizados a LF** y **2230 lineas** por `count(NL)`, trae **0 apariciones
+que en `docs/plan/LECTURAS_DIRIGIDAS.md` mide **214916 bytes en disco y 214916 bytes normalizados a LF** y **2230 lineas** por `count(NL)`, trae **0 apariciones
 del literal `reparto por acto`** y **0 menciones de `OP-L-03`**. **LAS DOS CIFRAS
 SE CONTARON AQUI.** Y la busqueda se corrio tambien **POSITIVA sobre 8
 variantes**, porque `EJECUTOR.md` 9 dice que **una busqueda negativa no se puede
@@ -96,21 +95,16 @@ Selladas en `docs/loop/SALIDA_V202_T1_GUARDA_ESTADO.txt` y
 
 **LA SEGUNDA CORRIDA DE LA CORRECCION SELLA CRECIMIENTO 0**, que es lo que el
 encargo pide: `docs/loop/SALIDA_V202_T1_CORRECCION_OP_L_03_IDEM.txt` dice
-**IDEMPOTENTE**, **4 elementos de `evidencia` al entrar** y **crecimiento en
-disco 0 bytes**. **El orden de las guardas viene heredado ya arreglado de la
+**IDEMPOTENTE**, **4 elementos de `evidencia` al entrar** y **crecimiento de 0 bytes en disco y de 0 bytes normalizados a LF**. **El orden de las guardas viene heredado ya arreglado de la
 caida declarada de la 201**: la de idempotencia va **delante** de las de cifra,
 porque la propia correccion **cita esas cifras verbatim** y una guarda de cifra
 puesta delante caeria en la segunda corrida **por el motivo equivocado**.
 
 #### LO QUE NO SE MOVIO, MEDIDO Y NO AFIRMADO
 
-`docs/plan/OPERACIONES.jsonl` entra midiendo **499474 bytes en disco y 499474 en
-LF** y sale midiendo **501883 bytes en disco y 501883 en LF**, con un
-**crecimiento de 2409 bytes**; tiene **71 lineas no vacias antes y despues** y
+`docs/plan/OPERACIONES.jsonl` mide AL SALIR **501883 bytes en disco y 501883 bytes normalizados a LF**, y ANTES de esta correccion media **499474 bytes en disco y 499474 bytes normalizados a LF**, con un **crecimiento de 2409 bytes en disco y de 2409 bytes normalizados a LF**; tiene **71 lineas no vacias antes y despues** y
 **0 lineas que no sean JSON valido**. `git diff HEAD --numstat` da **0 filas en
 `dataset/`, 0 en `web/` y 0 en `engine/`**, y en `docs/plan/` da **1 anadida y 1
 borrada** en `OPERACIONES.jsonl`, que es lo que un `jsonl` da siempre al
 reescribir una linea. **Y ningun veredicto se movio:**
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` mide **4054129 bytes en disco y 4054129 en
-LF**, y su `sha256` vale **0a77b5a35a962621** por la convencion de disco y
-**0a77b5a35a962621** por la de LF, que es el mismo valor que el sello de apertura.
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` mide **4054129 bytes en disco y 4054129 bytes normalizados a LF**, y su `sha256` vale **0a77b5a35a962621** por la convencion de disco y **0a77b5a35a962621** por la de LF, que es el mismo valor que el sello de apertura.

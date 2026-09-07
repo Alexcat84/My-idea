@@ -32,7 +32,7 @@ toca: los casos se fabrican en un temporal y se limpia (`P.16`).
 | acta | lineas de inicio y fin, contadas hoy | lineas | reporte archivado |
 |---|---|---:|---|
 | **173** | 58941 a 59447 | 507 | `docs/loop/reportes/REPORTE_V173.md` **NO EXISTE** |
-| **174** | 59448 a 59994 | 547 | `docs/loop/reportes/REPORTE_V174.md` **existe, 32568 bytes** |
+| **174** | 59448 a 59994 | 547 | `docs/loop/reportes/REPORTE_V174.md` **existe, 32568 bytes en disco y 32568 bytes normalizados a LF** |
 
 `docs/loop/ACTA_AUDITOR.md` mide **4680981 bytes en disco y 4680981 bytes
 normalizados a LF**. **La ausencia del reporte de la 173 se midio con
@@ -96,10 +96,7 @@ entrada**, que es la unica forma de que el segundo numero no se teclee. Salieron
 **`R.63` para el acta 173** y **`R.64` para el acta 174**, y viven en
 `docs/PENDIENTES.md` en las **lineas 15766 y 15865**.
 
-`docs/PENDIENTES.md` entra midiendo **1091080 bytes en disco y 1091080 bytes
-normalizados a LF** y sale midiendo **1101602 bytes en disco y 1101602 bytes
-normalizados a LF**: **crecimiento de 10522 bytes**. **La segunda corrida sella
-IDEMPOTENTE**: **0 entradas escritas** y **crecimiento 0 bytes**, con la guarda
+`docs/PENDIENTES.md` mide AL SALIR **1101602 bytes en disco y 1101602 bytes normalizados a LF**, y ANTES de estas dos entradas media **1091080 bytes en disco y 1091080 bytes normalizados a LF**, con un **crecimiento de 10522 bytes en disco y de 10522 bytes normalizados a LF**. **La segunda corrida sella IDEMPOTENTE**: **0 entradas escritas** y **crecimiento de 0 bytes en disco y de 0 bytes normalizados a LF**, con la guarda
 diciendo *NO SE ESCRIBE: la entrada ya estaba* las **2** veces. Selladas en
 `docs/loop/SALIDA_V202_T4_REGISTROS.txt` y
 `docs/loop/SALIDA_V202_T4_REGISTROS_IDEM.txt`.

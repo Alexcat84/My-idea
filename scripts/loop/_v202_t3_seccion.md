@@ -10,9 +10,7 @@ encuentra no estaba medido.
 para las clausulas 1 y 2, y `scripts/loop/vuelta169_tarea4_op_l_01_clausula3.py`
 para la 3. **El `sha256` de `docs/plan/OPERACIONES.jsonl` entra y sale igual en
 las dos corridas**, medido antes y despues: `6006fd16dc08dc58` las dos veces.
-Selladas en `docs/loop/SALIDA_V202_T3_CLAUSULAS_12_166.txt` (**32943 bytes en
-disco y 32684 en LF**) y `docs/loop/SALIDA_V202_T3_CLAUSULA_3_169.txt` (**4028
-bytes en disco y 3963 en LF**). La lectura entera esta en
+Selladas en `docs/loop/SALIDA_V202_T3_CLAUSULAS_12_166.txt` (**32943 bytes en disco y 32684 bytes normalizados a LF**) y `docs/loop/SALIDA_V202_T3_CLAUSULA_3_169.txt` (**4028 bytes en disco y 3963 bytes normalizados a LF**). La lectura entera esta en
 `docs/loop/SALIDA_V202_T3_OP_L_01.txt`.
 
 #### EL CRITERIO DE HECHO Y LA `verificacion`, CITADOS POR LINEA
@@ -92,8 +90,7 @@ MEDIBLE POR ESTA VARA** y se cuenta aparte, **ni en pie ni caida**; y la vara mi
 `docs/BANCO_DE_TEXTOS.md`, que mide **182228 bytes en disco y 182228 bytes
 normalizados a LF**, y dice literalmente *TABLA VIVA DE LOS PUROS, al 14 ago 2026
 (vigente al puesto 1157)*: **vigencia 1157, leida de la cabecera**. Y
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, que mide **4054129 bytes en disco y
-4054129 bytes normalizados a LF**, trae **3388 filas**, **0 lineas que no sean
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, que mide **4054129 bytes en disco y 4054129 bytes normalizados a LF**, trae **3388 filas**, **0 lineas que no sean
 JSON valido**, **3388 puestos distintos** y **maximo 3388**. **La diferencia es de
 2231 puestos.**
 

@@ -3,14 +3,11 @@
 **LO PRIMERO, Y SIN CLONAR NADA.** Los dos instrumentos se **importaron y se
 corrieron tal cual**, y **ninguno se toco**: `scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py`
 mide **9310 bytes en disco y 9310 bytes normalizados a LF**, y
-`scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py` mide **13487 bytes en disco
-y 13487 bytes normalizados a LF**. **Se comprobo ANTES de correrlos que ninguno
+`scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py` mide **13487 bytes en disco y 13487 bytes normalizados a LF**. **Se comprobo ANTES de correrlos que ninguno
 escribe ficheros**: **0 lineas con marca de escritura en disco** en cada uno, y
 despues de correrlos **0 lineas de `git status` que no sean salidas de esta
 tarea**. Selladas con nombre de esta vuelta en
-`docs/loop/SALIDA_V202_T2_COBERTURA_169.txt` (**5559 bytes en disco y 5449 en
-LF**) y `docs/loop/SALIDA_V202_T2_VEREDICTO_170.txt` (**5880 bytes en disco y
-5789 en LF**). La lectura entera vive en `docs/loop/SALIDA_V202_T2_OP_L_02.txt`.
+`docs/loop/SALIDA_V202_T2_COBERTURA_169.txt` (**5559 bytes en disco y 5449 bytes normalizados a LF**) y `docs/loop/SALIDA_V202_T2_VEREDICTO_170.txt` (**5880 bytes en disco y 5789 bytes normalizados a LF**). La lectura entera vive en `docs/loop/SALIDA_V202_T2_OP_L_02.txt`.
 
 #### EL CRITERIO DE HECHO, CITADO POR LINEA
 
