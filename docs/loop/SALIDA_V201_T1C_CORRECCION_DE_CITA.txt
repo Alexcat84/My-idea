@@ -1,0 +1,37 @@
+==============================================================================
+VUELTA 201, TAREA 1.c . LA CORRECCION DE CITA EN SU SEDE
+==============================================================================
+
+A) LA SEDE, MEDIDA AL ENTRAR
+   docs/loop/reportes/REPORTE_V200.md: disco 138307 bytes | LF 138307 bytes
+   CIFRA lineas por split(NL): 2086 | por count(NL): 2085
+   cabecera de la seccion 8: 1 acierto(s), linea(s) 578
+   el ancla 'escribe como PARADA y no se arregla.**': 1 acierto(s), linea(s) 588
+
+B) LA MEDICION QUE SOSTIENE LA CORRECCION, HECHA AQUI Y NO HEREDADA
+   CIFRA lineas de docs/loop/AUDITOR.md con 'se corrige es la guarda': 0  (ninguna)
+   CIFRA lineas de docs/loop/ACTA_AUDITOR.md con 'se corrige es la guarda': 4  64775, 65217, 70302, 70412
+   COTA del acta 185, computada de sus cabeceras: (64434, 64907)
+   CIFRA de esas lineas que caen DENTRO del acta 185 (64434 a 64907): 1  64775
+   cabecera del punto `6.2` DENTRO del acta 185: 1 acierto(s), 64753
+   CIFRA de esas lineas que caen POR DEBAJO de la cabecera del `6.2`: 1
+      linea 64775: guarda contradice una decision del fundador, la que se corrige es la guarda.**
+
+C) LAS TRES CONDICIONES DE LA CORRECCION
+   el literal NO esta en AUDITOR.md                           SI
+   el literal SI esta en ACTA_AUDITOR.md                      SI
+   al menos una de esas lineas cae bajo el `6.2` del acta 185 SI
+   el ancla del parrafo aparece exactamente una vez           SI
+
+D) EL AVISO, DE UNA LINEA, COMPUESTO Y MEDIDO
+   CIFRA caracteres del aviso: 872
+   CIFRA lineas del aviso: 1
+   CIFRA guiones largos y medios en el aviso: 0
+
+E) LA IDEMPOTENCIA Y LA ESCRITURA
+   la marca 'AVISO DE CITA (vuelta 201, TAREA 1.c)' ya esta en la sede: SI
+   NO SE ESCRIBE: el aviso ya estaba. IDEMPOTENTE.
+   sede al salir: disco 138307 bytes | LF 138307 bytes
+   crecimiento en disco: 0 bytes
+
+FIN

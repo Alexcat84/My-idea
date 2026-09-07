@@ -1,0 +1,133 @@
+==============================================================================
+LOS DOS REGISTROS DE LA VUELTA 201, TAREA 1: EL ACTA 200 (1.a) Y LA VUELTA
+198 (1.b, POR LA ADJUDICACION 4.7 DEL ACTA 200)
+==============================================================================
+
+0) LA PRUEBA DE LA UNICA CONDUCTA PROPIA, ANTES DE ESCRIBIR NADA
+   NO HAY LECTOR NUEVO EN ESTE FICHERO, ASI QUE NO HAY CASO ROJO NUEVO DE
+   LECTURA QUE MUTAR, Y ESO SE DECLARA EN VEZ DE FABRICAR UNO QUE SE
+   APRUEBE SOLO (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION).
+   LA GUARDA VIEJA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo unico
+   que convierte 'hacia falta arreglarla' en una medicion:
+   sede SIN la entrada, numero 61               esperado False nueva False vieja False VERDE
+   sede CON la entrada, numero 61               esperado True  nueva True  vieja True  VERDE
+   sede con R.610, que NO es R.61               esperado False nueva False vieja False VERDE
+   sede con la entrada en mitad                 esperado True  nueva True  vieja True  VERDE
+   el acta 200 ya registrada con OTRO numero    esperado True  nueva True  vieja False VERDE
+   el acta 198 NO registrada, numero libre      esperado False nueva False vieja False VERDE
+   el acta 198 ya registrada con OTRO numero    esperado True  nueva True  vieja False VERDE
+   el acta citada en prosa, NO en titular       esperado False nueva False vieja False VERDE
+   CIFRA casos donde la vieja y la nueva DISCREPAN: 2
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 8 de 8
+   CIFRA casos: 8 | verdes: 8 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+LA SEDE AL ENTRAR: docs/PENDIENTES.md, 1091080 bytes en disco
+
+==============================================================================
+TAREA 1.a . EL SUJETO ES EL ACTA DE LA VUELTA 200
+==============================================================================
+
+A) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 54
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.63
+
+B) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4657056 bytes | LF 4657056 bytes
+   CUERPO ACOTADO del acta 200: lineas 70230 a 70549, 320 lineas
+   R84.claves_entrecomilladas(prefijo '4.')  -> 8: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8
+   R84.claves_entrecomilladas(prefijo '5.')  -> 4: 5.1, 5.2, 5.3, 5.4
+   R84.claves_entrecomilladas(prefijo 'C.A') -> 4: C.A1, C.A2, C.A3, C.A4
+   R94.caidas_propias_entrecomilladas()      -> 0: (ninguna)
+   EL CONTRASTE HEREDADO, PUBLICADO AL LADO Y NO ESCONDIDO:
+   R92.caidas_por_lead_heredado() -> ejecutor 1, auditor 0, huerfanas 0
+   docs/loop/reportes/REPORTE_V200.md existe: SI
+   bytes medidos con os.path.getsize: 137433
+   CIFRA claves `P.n` nombradas en los titulos `4.n` del acta: 2 (P.4, P.3)
+   CIFRA claves `P.n` que el reporte llama pregunta: 4 (P.1, P.2, P.3, P.4)  [## 6. PREGUNTAS, QUE NO ADIVINO (lineas 543 a 571)]
+   CIFRA preguntas del numeral: 2, por la via: FILTRADAS contra la seccion de PREGUNTAS del reporte archivado
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 70515 devuelve (None, None, None, None)
+   linea 70514 | | relecturas | 1 | **335** |
+   linea 70515 | | puestos | **40 sellados, 40 cotejados, 0 en mi hueco** | **1.454** |
+   linea 70516 | | discrepancias DENTRO del marcado (el mio) | **3** | **67** |
+   linea 70517 | | discrepancias FUERA del marcado (el mio) | **4** | **191** |
+   linea 70518 | | caidas propias del auditor QUE ACUMULAN | **1** (`C.A1`, romper el remedio escrito por el acta 199) | **TERCERA acta seguida de la misma especie: el acta 201 ABRE con su remedio** |
+   linea 70519 | | caidas propias del auditor, TOTAL del cuerpo | **4** (`C.A1` a `C.A4`) | |
+   linea 70520 | | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 0** |
+   linea 70521 | | caidas del ejecutor de reporte QUE ACUMULAN | **0** | **racha de reporte: 0** |
+   linea 70522 | | caidas del ejecutor de reporte que NO acumulan | **0** | |
+
+C) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   EL HEREDADO CLAVA SU PROPIA VUELTA Y ESO SE DECLARA, NO SE ESCONDE:
+   R92.titulo_de_la_entrada() cierra con 'del acta de la vuelta 192'.
+   CIFRA apariciones de ese literal en el titulo crudo: 1
+   titulo escrito: R.63. Registro de las ocho adjudicaciones numeradas, los cuatro hallazgos de la seccion 5, las dos preguntas contestadas, las cuatro caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 200
+
+D) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 200 o el numero R.63 YA ESTAN: SI
+   CIFRA bytes de la entrada compuesta: 6034
+   NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE.
+
+==============================================================================
+TAREA 1.b . EL SUJETO ES EL ACTA DE LA VUELTA 198
+==============================================================================
+
+A) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 54
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.63
+
+B) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4657056 bytes | LF 4657056 bytes
+   CUERPO ACOTADO del acta 198: lineas 69636 a 69877, 242 lineas
+   R84.claves_entrecomilladas(prefijo '4.')  -> 3: 4.1, 4.2, 4.3
+   R84.claves_entrecomilladas(prefijo '5.')  -> 5: 5.1, 5.2, 5.3, 5.4, 5.5
+   R84.claves_entrecomilladas(prefijo 'C.A') -> 2: C.A1, C.A2
+   R94.caidas_propias_entrecomilladas()      -> 0: (ninguna)
+   EL CONTRASTE HEREDADO, PUBLICADO AL LADO Y NO ESCONDIDO:
+   R92.caidas_por_lead_heredado() -> ejecutor 2, auditor 2, huerfanas 0
+   docs/loop/reportes/REPORTE_V198.md existe: NO
+   bytes medidos con os.path.getsize: NINGUNO, y el cero sale de que NO HAY FICHERO, no de medir uno
+   CIFRA claves `P.n` nombradas en los titulos `4.n` del acta: 3 (P.2, P.3, P.1)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 ((ninguna))  [(no existe REPORTE_V198.md)]
+   CIFRA preguntas del numeral: 3, por la via: NOMBRADAS EN LOS TITULOS `4.n` DEL ACTA, porque el reporte de esa vuelta NO EXISTE y el filtro no se puede correr
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 69855 devuelve ('240', None, None, None)
+   linea 69854 | | relecturas | 1 | **333** |
+   linea 69855 | | puestos | **240 aislados, 59 cotejados, 3 quemados** | **1.365** |
+   linea 69856 | | discrepancias DENTRO del marcado | **0** | **60** |
+   linea 69857 | | discrepancias y hallazgos FUERA del marcado | **0** | **179** |
+   linea 69858 | | caidas propias del auditor QUE ACUMULAN | **1** (`C.A1`, romper un remedio escrito) | |
+   linea 69859 | | caidas propias del auditor, TOTAL del cuerpo | **2** (`C.A1`, `C.A2`) | |
+   linea 69860 | | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | **racha de cifra publicada: 1** |
+   linea 69861 | | caidas del ejecutor de reporte | **0** | **racha de reporte: 0** |
+   linea 69862 | | caidas del ejecutor de metodo | **2** (`C.1`, `C.2`), declaradas por el | no acumulan |
+
+C) EL TITULO, CON SUS CINCO NUMERALES COMPUTADOS
+   EL HEREDADO CLAVA SU PROPIA VUELTA Y ESO SE DECLARA, NO SE ESCONDE:
+   R92.titulo_de_la_entrada() cierra con 'del acta de la vuelta 192'.
+   CIFRA apariciones de ese literal en el titulo crudo: 1
+   titulo escrito: R.63. Registro de las tres adjudicaciones numeradas, los cinco hallazgos de la seccion 5, las tres preguntas contestadas, las dos caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 198
+
+D) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 198 o el numero R.63 YA ESTAN: SI
+   CIFRA bytes de la entrada compuesta: 5600
+   NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   sede: 1091080 bytes en disco al salir | crecimiento 0 bytes
+   CIFRA entradas de la serie DESPUES: 54
+   CIFRA colisiones DESPUES: 0
+   CIFRA huecos DESPUES: 0
+   SIGUIENTE LIBRE DESPUES: R.63
+   CIFRA entradas escritas por esta corrida: 0
+   LA DEUDA DE LA SERIE, REMEDIDA AL CIERRE:
+   CIFRA actas de la 173 a la 200 SIN entrada propia: 8
+   cuales: 173, 174, 175, 176, 177, 178, 179, 180
+
+FIN

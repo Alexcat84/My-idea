@@ -587,6 +587,8 @@ una guarda contradice una decision escrita del fundador, **la que se corrige es
 la guarda**. **No la corrijo yo**: es codigo, y la moratoria lo prohibe. **Se
 escribe como PARADA y no se arregla.**
 
+> **AVISO DE CITA (vuelta 201, TAREA 1.c). LA REGLA SE CITA, NO SE PARAFRASEA (banco `9.5.0`).** El parrafo de arriba se queda ENTERO Y SIN TACHAR, y esta linea solo corrige DE DONDE sale su regla: las palabras *"Cuando una guarda contradice una decision del fundador, la que se corrige es la guarda"* **no estan en `AUDITOR.md`** (medido en la vuelta 201 con `scripts/loop/_v201_t1c_correccion_de_cita.py`: **0 lineas** de `docs/loop/AUDITOR.md` traen el literal `se corrige es la guarda`), sino en el **acta 185, punto `6.2`**, en la **linea 64775** de `docs/loop/ACTA_AUDITOR.md`, dentro del cuerpo del acta 185 acotado hoy en las lineas 64434 a 64907 y por debajo de la cabecera de su `6.2` en la linea 64753; y de ahi salen derivadas de la jerarquia que `AUDITOR.md` 0 SI establece. **No es caida y no se cobra:** es la forma en que la casa lo cita desde el acta 185.
+
 **PARADA `2`: UN BLOQUE DE ARNES CON EL SUJETO VIVO.** El bloque `F` de
 `vuelta185_tarea1c_mutacion_bateria_continuada.py` sale `NO MORDIO` porque **esta
 misma vuelta re sella los nueve ficheros cuyo `git log` el bloque afirma**. Sus
