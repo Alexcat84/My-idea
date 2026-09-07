@@ -1,20 +1,14 @@
-GUARDA DE LA ATRIBUCION, CORRIDA SOBRE EL PROPIO FUENTE
-  lanzador (os.path.basename, no tecleado): vuelta183_bateria_por_tramos.py
-  vuelta (computada del nombre, no tecleada): 183
-  CIFRA literales de vuelta clavados en lineas que escriben: 0
-  VERDE: ninguna linea que escribe clava un numero de vuelta.
-
 LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
-docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador6_mcrdpeur\lanzador_en_curso.txt
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador6_mfabv8al\lanzador_en_curso.txt
 ==============================================================================
-TRAMO 6 DE 9, DE LA BATERIA DE LA VUELTA 183
+TRAMO 6 DE 11, DE LA BATERIA DE LA VUELTA 183
 ==============================================================================
   lanzador (os.path.basename, no tecleado): vuelta183_bateria_por_tramos.py
   vuelta (computada del nombre, no tecleada): 183
   CIFRA literales de vuelta clavados en el fuente: 0
-  CIFRA nomina entera (leida del modulo, no tecleada): 113
+  CIFRA nomina entera (leida del modulo, no tecleada): 135
   CIFRA tamano de tramo: 13
-  CIFRA tramos del reparto (computada): 9
+  CIFRA tramos del reparto (computada): 11
   CIFRA entradas de ESTE tramo: 13
       vuelta168_tarea2_mutacion_reconstructor.py
       vuelta168_tarea4_mutacion_op_v_01.py
@@ -39,9 +33,9 @@ PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 6
 ******************************************************************************
 PASO 3. LA CORRIDA DEL TRAMO 6
 ******************************************************************************
-  inicio (UTC): 2026-09-06T05:16:46Z
+  inicio (UTC): 2026-09-07T14:09:35Z
   comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 6 --tamano-tramo 13
-  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo6_bui5b3hm\tramo_en_curso.txt
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo6_n1kj6idl\tramo_en_curso.txt
   destino final: docs/loop/SALIDA_V183_BATERIA_TRAMO_6.txt
 
 ******************************************************************************
@@ -49,13 +43,13 @@ PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
         (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
 ******************************************************************************
   docs/loop/SALIDA_V183_BATERIA_TRAMO_6.txt
-  CIFRA bytes en disco: 7428
-  CIFRA bytes normalizado a LF: 7428
-  CIFRA lineas: 114
-  CIFRA sha256 (LF): 129099fc24499b72
-  CIFRA exitcode del tramo: 0
-  CIFRA duracion en minutos: 0.9
-  inicio (UTC): 2026-09-06T05:16:46Z | fin (UTC): 2026-09-06T05:17:37Z
+  CIFRA bytes en disco: 7887
+  CIFRA bytes normalizado a LF: 7887
+  CIFRA lineas: 123
+  CIFRA sha256 (LF): 98498ba8f979eace
+  CIFRA exitcode del tramo: 1
+  CIFRA duracion en minutos: 2.2
+  inicio (UTC): 2026-09-07T14:09:35Z | fin (UTC): 2026-09-07T14:11:45Z
 
 ******************************************************************************
 PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 6
@@ -63,5 +57,6 @@ PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 6
   CIFRA filas de `git diff --numstat -- dataset/`: 0
   LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
 
-TRAMO 6 VERDE. Su salida esta sellada, medida y se puede commitear.
-TRANSCRIPCION DEL LANZADOR COPIADA A docs/loop/SALIDA_V183_LANZADOR_TRAMO_6.txt (3181 bytes), ESCRITA FUERA MIENTRAS LA BATERIA CORRIA
+EL TRAMO 6 SALE EN ROJO, exitcode 1, Y AQUI SE PARA.
+No se re-corre: la guarda que muerde es informacion, no un estorbo
+(encargo de la vuelta 176, TAREA 1.f). La salida esta sellada y medida.
