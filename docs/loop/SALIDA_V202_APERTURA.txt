@@ -1,0 +1,328 @@
+SELLO DE APERTURA DE LA VUELTA 202, escrito ANTES de la primera operacion.
+regimen: MORATORIA DE MAQUINARIA (AUDITOR.md 6.3, decision del fundador del 7
+         sep 2026). NO SE FABRICAN ARNESES, GUARDAS NI LECTORES NUEVOS, y
+         esta vuelta NO TIENE NINGUNA EXCEPCION. La nomina queda CONGELADA EN
+         135: ni crece ni se poda.
+         ESTA NO ES VUELTA DE BATERIA. La 200 lo fue y cerro entera; por la
+         cadencia de AUDITOR.md 6.1 le toca a la 205. La seccion 9 cierra con
+         el HUECO DECLARADO Y MEDIDO por su carril.
+         EL TRABAJO ES EL PLAN: las cuatro fichas reales.
+         EL TOPE DE SUB-TAREAS LO MANDA LA CIFRA DEL BLOQUE E, contada aqui
+         del instrumento. El encargo trae CUATRO sub-tareas.
+ESTE BLOQUE CORRE EL CICLO COMPLETO, tsc y pnpm test INCLUIDOS, y escribe el
+         mismo los dos literales de la guarda D.1.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+ebe04895d9d4caa1c95ea8451f708b3fbcd4abd7
+ebe04895d9d4caa1c95ea8451f708b3fbcd4abd7	2026-09-07 12:23:42 -0400	ACTA DEL AUDITOR, VUELTA 201: LA UNICA PARADA QUE EL REPORTE LEVANTA NO ES PARADA, Y SE DISUELVE MIDIENDO CON INSTRUMENTOS QUE YA EXISTIAN. El ejecutor cierra sus cuatro tareas con TODAS sus cifras reproducidas al digito y una sola caida, que no es de cifra.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular. Se escriben AQUI, en el bloque de apertura, para
+que la apertura sellada NO haya que tocarla al cierre.
+CIFRA lineas de status: 3
+   ?? scripts/loop/_gen_v202_apertura_cabeza.py
+   ?? scripts/loop/_gen_v202_apertura_h.py
+   ?? scripts/loop/vuelta202_apertura.py
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.0 EL NUMSTAT DE LAS CUATRO SEDES QUE EL ENCARGO PIDE, AL ENTRAR ===
+CIFRA filas de numstat AL ENTRAR en dataset/     0
+CIFRA filas de numstat AL ENTRAR en web/         0
+CIFRA filas de numstat AL ENTRAR en engine/      0
+CIFRA filas de numstat AL ENTRAR en docs/plan/   0
+
+=== C.1 LA CADENA DE LA VUELTA 201 Y SU ACTA, EN GIT ===
+acta 201                         1 acierto(s): ebe04895
+cierre de la 201                 1 acierto(s): e1e54944
+decision del fundador            1 acierto(s): 17796e77
+
+=== D. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN, y el cierre las remide contra estas.
+
+=== D.1 EL FICHERO DEL TURNO DEL AUDITOR, MEDIDO AL ENTRAR ===
+   docs/loop/_TURNO_DEL_AUDITOR.json
+      disco 2061 bytes | LF 2061 bytes | sha256 LF 074647cbf2e13b8c
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+EL NOMBRE SALE DE LA CONSTANTE QUE SE EJECUTA, NO DE LA PROSA.
+instrumento: scripts/loop/vuelta192_racha_de_cierres.py
+   existe y no esta vacio: SI, 5678 bytes en disco | 5678 LF | sha256 LF 5461d55226877ac3
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt. Aqui se corre, se lee la cifra, y la
+   sellada se RESTAURA con git checkout -- y se REMIDE.
+CIFRA racha de cierres, contada del inventario ENTERO: 3
+las vueltas de la racha: 199, 200, 201
+   CON RACHA 3 EL REGIMEN TEMPORAL SE APAGA Y VUELVE EL TOPE DE
+   CINCO. El encargo trae CUATRO sub-tareas, que cabe.
+nuevo corte, medido antes de restaurar:
+   3133 bytes LF | sha256 LF 8288924f3856b192
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== E.1 EL INVENTARIO DE CIERRES SELLADOS, CONTADO DE DISCO ===
+CIFRA ficheros SALIDA_V*_CERRAR_REPORTE.txt en docs/loop/: 18
+las vueltas con sellada de cierre: 179, 180, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 195, 196, 197, 199, 200, 201
+CIFRA vueltas del rango 179 a 201 SIN sellada: 5
+   cuales: 181, 182, 183, 194, 198
+CIFRA sellada de cierre de la vuelta 202 al entrar: 0
+
+=== F. LA NOMINA Y EL CENSO AL ENTRAR, CONTRA EL CONGELADO EN 135 ===
+AQUI NO SE TOCA NADA: se MIDE. AUDITOR.md 6.3 congela la nomina en 135: NI
+   CRECE NI SE PODA. Si la cifra medida no es 135, SE DECLARA la discrepancia
+   en vez de ajustarla.
+LA CIFRA DE FUERA DE LA NOMINA VIAJA CON SU VARA Y SE MIDEN LAS DOS
+   (adjudicacion 4.7 del acta 197).
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CONGELADO QUE MANDA AUDITOR.md 6.3: 135
+CALZA LA NOMINA CON EL CONGELADO: SI
+CIFRA casos declarados: 2
+CIFRA arneses que el censo reconoce en scripts/loop/: 197
+LA VARA DEL CENSO, que es la que decide (vuelta 178, TAREA 1.b): 148
+CIFRA ultima vuelta representada en la nomina (INFORMATIVA): 195
+CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2
+      FUERA DE LA NOMINA (con vara 148): vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA (con vara 148): vuelta199_tarea1_mutacion_guardas_revividas.py
+CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 62
+   LAS DOS CIFRAS JUNTAS SON LA FRASE ENTERA: con vara 148 salen 2, sin
+   vara salen 62.
+CIFRA entradas de la nomina que el censo NO VE: 0
+CIFRA entradas SIN SUJETO CONGELADO, leidas de
+   guarda_del_sujeto_congelado(): 0
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.63
+CIFRA entradas en total: 54
+CIFRA colisiones: 0
+EL ENCARGO DICE QUE HOY EL SIGUIENTE LIBRE ES R.63 Y MANDA VOLVER A CORRERLO.
+   CALZA LO CORRIDO CON LO QUE EL ENCARGO DICE: SI
+
+=== H. EL SUJETO DE LA TAREA 1: LA FICHA OP-L-03, SU EVIDENCIA Y LOS DOS ===
+    FICHEROS DEL REPARTO POR ACTO, MEDIDOS ANTES DE TOCAR NADA
+LA COORDENADA DE UNA FICHA JSONL ES LINEA MAS INDICE (acta 201, 4.4). AQUI SE
+   PUBLICAN LAS DOS NUMERACIONES DEL INDICE, la de base 0 de Python y la de
+   base 1 que el encargo usa, para que ninguna cita quede ambigua.
+   docs/plan/OPERACIONES.jsonl: 499474 bytes disco | 499474 LF | sha256 LF 2d6f1fd0bc181d04
+   CIFRA lineas NO VACIAS de OPERACIONES.jsonl: 71
+   CIFRA lineas donde vive OP-L-03: 1 | linea(s): 43
+   la ficha OP-L-03 vive en la LINEA 43
+   estado='LISTA'  tipo='MESA'  fase='09_LECTURAS_DIRIGIDAS'  fecha_corte='2026-08-11'
+   CIFRA claves de la ficha: 18
+      adjudicacion, aristas_nuevas, bloquea_a, depende_de, eliminar, estado, evidencia, fase, fecha_corte, id_op, nodos, nota, orden, pregunta_pendiente, preservar, superviviente, tipo, verificacion
+   CIFRA elementos de `evidencia`: 3
+      evidencia indice 0 (elemento 1): 'BANCO_DEL_PLAN.md P.5'
+      evidencia indice 1 (elemento 2): 'MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117'
+      evidencia indice 2 (elemento 3): 'LECTURAS_DIRIGIDAS.md, el reparto por acto'
+   CIFRA elementos de `verificacion`: 4
+      verificacion indice 0 (elemento 1), 53 caracteres: 'ningun acto se funde con un par interno sin veredicto'
+      verificacion indice 1 (elemento 2), 85 caracteres: 'las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador'
+      verificacion indice 2 (elemento 3), 83 caracteres: 'cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado'
+      verificacion indice 3 (elemento 4), 3455 caracteres: "CORRECCION DECLARADA (2026-08-26, vuelta 72, TAREA 1 del encargo), POR EL CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de es
+   CIFRA elementos de `evidencia` que NOMBRAN un fichero: 2
+   CIFRA elementos de `evidencia` que traen el literal 'reparto por acto': 1
+
+LAS DOS CIFRAS QUE EL ENCARGO MANDA MEDIR SOBRE EL DOCUMENTO QUE LA EVIDENCIA
+   NOMBRA. NO SE COPIAN DEL ENCARGO: SE CUENTAN AQUI.
+   docs/plan/LECTURAS_DIRIGIDAS.md: 214916 bytes disco | 214916 LF | sha256 LF dda1cdd67042c733
+   CIFRA lineas por split(NL): 2231 | por count(NL): 2230
+   CIFRA apariciones del literal 'reparto por acto': 0
+   CIFRA lineas que traen el literal 'reparto por acto': 0
+   CIFRA apariciones de 'OP-L-03': 0
+   CIFRA lineas que mencionan 'OP-L-03': 0
+   LA BUSQUEDA POSITIVA, PORQUE UNA BUSQUEDA NEGATIVA NO SE PUEDE CITAR
+      (EJECUTOR.md 9). Variantes buscadas y su cuenta:
+      reparto por acto     0 aparicion(es)
+      reparto por          0 aparicion(es)
+      por acto             0 aparicion(es)
+      OP-L-03              0 aparicion(es)
+      OP_L_03              0 aparicion(es)
+      OP L 03              0 aparicion(es)
+
+LOS DOS FICHEROS QUE SI TRAEN EL REPARTO POR ACTO, MEDIDOS EN BYTES EXACTOS
+   (P.2: bytes exactos, nunca redondeados, KB solo entre parentesis y detras
+   del byte). SE MIDE TAMBIEN SU CONTENIDO: filas, actos distintos y lineas
+   que no son JSON.
+   docs/plan/OP_L_03_LECTURAS.jsonl
+      disco 51368 bytes (50.2 KB) | LF 51368 bytes | sha256 LF d93c59a86372cf50
+      CIFRA filas no vacias: 14
+      CIFRA lineas que NO son JSON valido: 0
+      CIFRA filas con campo `acto`: 14
+      CIFRA actos DISTINTOS: 14
+      los actos distintos, ordenados: analisis_trafico_competitivo, breakthrough_desempeno_actual, cash_burn_calculation, cierre_segun_complejidad_venta, colaboracion_cadena_suministro, compra_por_precio_mas_bajo_como_error, construccion_de_leverage, creacion_option_pool, crowdfunding_legal_exemptions_jobs_act, disenar_tests_pass_fail, encuadre_desafio_diseno, estrategia_de_innovacion_arenas, evaluacion_tecnologias_disruptivas, fase_diseno_prototipado_modelos
+   docs/plan/OP_L_03_TRIANGULOS.jsonl
+      disco 55705 bytes (54.4 KB) | LF 55705 bytes | sha256 LF 9c0b14d6beccf39b
+      CIFRA filas no vacias: 19
+      CIFRA lineas que NO son JSON valido: 0
+      CIFRA filas con campo `acto`: 19
+      CIFRA actos DISTINTOS: 8
+      los actos distintos, ordenados: cash_burn_calculation, colaboracion_cadena_suministro, compra_por_precio_mas_bajo_como_error, construccion_de_leverage, creacion_option_pool, disenar_tests_pass_fail, estrategia_de_innovacion_arenas, fase_diseno_prototipado_modelos
+
+LA CIFRA QUE LA EVIDENCIA PROMETE, LEIDA DE LA PROPIA FICHA Y NO TECLEADA:
+   evidencia indice 1 (elemento 2) promete 55 pares en 29 actos
+      su literal entero: 'MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117'
+
+=== H.1 EL SUJETO DE LAS TAREAS 2 Y 3: LOS DOS INSTRUMENTOS DE OP-L-02, ===
+    EL CRITERIO DE HECHO Y LA TABLA VIVA DE LOS PUROS
+LOS DOS INSTRUMENTOS SE IMPORTAN Y NO SE CLONAN (encargo de esta vuelta). AQUI
+   SE MIDEN Y SE LEEN PARA COMPROBAR SI ESCRIBEN FICHEROS, que es lo que el
+   encargo manda comprobar ANTES de correrlos.
+   scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py
+      disco 9310 bytes | LF 9310 bytes | sha256 LF 8abef122fd62c9cc
+      CIFRA lineas por count(NL): 203
+      CIFRA lineas con marca de ESCRITURA en disco: 0
+         (ninguna: el instrumento SOLO MIDE, no escribe ficheros)
+      CIFRA apariciones del literal 46208790 (el HEAD sellado en la 170): 0
+   scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py
+      disco 13487 bytes | LF 13487 bytes | sha256 LF 498a8324462bd03c
+      CIFRA lineas por count(NL): 287
+      CIFRA lineas con marca de ESCRITURA en disco: 0
+         (ninguna: el instrumento SOLO MIDE, no escribe ficheros)
+      CIFRA apariciones del literal 46208790 (el HEAD sellado en la 170): 0
+
+EL CRITERIO DE HECHO, LOCALIZADO POR LINEA Y NO CITADO DE MEMORIA:
+   docs/plan/08_VERIFICACION.md: 69068 bytes disco | 69068 LF | sha256 LF 76bfebb6b2d8ef72
+   CIFRA lineas por count(NL): 913
+   CRITERIO DE HECHO    1 linea(s): 7
+   criterio de hecho    0 linea(s): (ninguna)
+   OP-L-01              0 linea(s): (ninguna)
+   OP-L-02              1 linea(s): 409
+   OP-L-03              0 linea(s): (ninguna)
+
+LA TABLA VIVA DE LOS PUROS Y SU LITERAL DE VIGENCIA, MEDIDOS AL ENTRAR:
+   docs/BANCO_DE_TEXTOS.md: 182228 bytes disco | 182228 LF | sha256 LF 68557cd00a3124f4
+   CIFRA lineas por split(NL): 3119 | por count(NL): 3118
+   EL ENCARGO NOMBRA LA LINEA 938. Su contenido, leido y no supuesto:
+      linea 938: #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+   CIFRA lineas con el literal 'vigente al puesto': 3 | linea(s): 938, 2448, 2474
+      linea 938: #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+      linea 2448: > cruzar dos conjuntos del archivo se escribe **"vigente al puesto N"**, nunca a
+      linea 2474: | **qué habría evitado el susto** | escribir la salida como **"17 costuras con gemelo, vigente al puesto 1050"** |
+   CIFRA lineas con el literal TABLA VIVA: 1 | linea(s): 938
+
+=== H.2 EL SUJETO DE LA TAREA 4: LAS ACTAS 173 Y 174, ACOTADAS AQUI, Y ===
+    SUS REPORTES ARCHIVADOS, MEDIDOS CON os.path.isfile Y os.path.getsize
+   docs/loop/ACTA_AUDITOR.md: 4680981 bytes disco | 4680981 bytes LF | sha256 LF 15af954690575c3f
+   CIFRA lineas del acta por split(NL): 70907
+   cabecera de la VUELTA 173: 1 acierto(s), linea(s) 58941
+   cabecera de la VUELTA 174: 1 acierto(s), linea(s) 59448
+   cabecera de la VUELTA 201: 1 acierto(s), linea(s) 70550
+   cabecera de la VUELTA 202: 0 acierto(s), linea(s) (ninguna)
+   CUERPO ACOTADO del acta 173: lineas 58941 a 59447 (1-indexadas), 507 lineas
+      seccion 1: 1 cabecera(s) en linea(s) 58955
+      seccion 2: 1 cabecera(s) en linea(s) 59071
+      seccion 3: 1 cabecera(s) en linea(s) 59124
+      seccion 4: 6 cabecera(s) en linea(s) 59157, 59159, 59179, 59200, 59215, 59241
+      seccion 5: 1 cabecera(s) en linea(s) 59250
+      seccion 6: 1 cabecera(s) en linea(s) 59294
+      seccion 7: 1 cabecera(s) en linea(s) 59328
+      seccion 8: 1 cabecera(s) en linea(s) 59350
+      seccion 9: 1 cabecera(s) en linea(s) 59399
+      CIFRA claves P.n distintas nombradas en el cuerpo: 0 ((ninguna))
+   CUERPO ACOTADO del acta 174: lineas 59448 a 59994 (1-indexadas), 547 lineas
+      seccion 0: 1 cabecera(s) en linea(s) 59450
+      seccion 1: 1 cabecera(s) en linea(s) 59479
+      seccion 2: 1 cabecera(s) en linea(s) 59493
+      seccion 3: 1 cabecera(s) en linea(s) 59612
+      seccion 4: 6 cabecera(s) en linea(s) 59635, 59637, 59678, 59705, 59720, 59735
+      seccion 5: 1 cabecera(s) en linea(s) 59754
+      seccion 6: 1 cabecera(s) en linea(s) 59802
+      seccion 7: 1 cabecera(s) en linea(s) 59885
+      seccion 8: 1 cabecera(s) en linea(s) 59899
+      seccion 9: 1 cabecera(s) en linea(s) 59961
+      CIFRA claves P.n distintas nombradas en el cuerpo: 2 (P.1, P.2)
+
+LOS REPORTES ARCHIVADOS DE LA DEUDA, MEDIDOS Y NO RECORDADOS:
+   docs/loop/reportes/REPORTE_V173.md       os.path.isfile: NO | os.path.getsize: NO MEDIBLE, no hay fichero
+   docs/loop/reportes/REPORTE_V174.md       os.path.isfile: SI | os.path.getsize: 32568 bytes
+   CIFRA reportes archivados en docs/loop/reportes/: 31
+   rango 168 a 200
+   CIFRA vueltas del rango SIN reporte archivado: 2
+      cuales: 173, 198
+   CIFRA vueltas del rango 168 a 199 SIN reporte archivado: 2
+      cuales: 173, 198
+   docs/PENDIENTES.md: 1091080 bytes disco | 1091080 LF | sha256 LF d66b5e39d3419723
+
+=== H.3 EL INVENTARIO Y LAS CUATRO FICHAS REALES, MEDIDOS ANTES DE TOCAR ===
+    NADA, Y LA VARA DEL TRABAJO PENDIENTE CORRIDA CON EL HEAD DE APERTURA
+   docs/plan/INVENTARIO.jsonl: 584554 bytes disco | 584554 LF | sha256 LF 69666b73339f2afe
+   CIFRA lineas NO VACIAS (las entradas): 672
+   LAS CUATRO FICHAS REALES, LOCALIZADAS POR LINEA EN docs/plan/OPERACIONES.jsonl:
+      OP-L-01   1 linea(s): 41
+         estado='LISTA'  tipo='MESA'  fase='09_LECTURAS_DIRIGIDAS'
+         CIFRA elementos de `verificacion`: 6
+         CIFRA elementos de `evidencia`: 4
+      OP-L-02   1 linea(s): 42
+         estado='LISTA'  tipo='MESA'  fase='09_LECTURAS_DIRIGIDAS'
+         CIFRA elementos de `verificacion`: 4
+         CIFRA elementos de `evidencia`: 1
+      OP-L-03   1 linea(s): 43
+         estado='LISTA'  tipo='MESA'  fase='09_LECTURAS_DIRIGIDAS'
+         CIFRA elementos de `verificacion`: 4
+         CIFRA elementos de `evidencia`: 3
+      OP-I-01   1 linea(s): 44
+         estado='LISTA'  tipo='MESA'  fase='10_INVENTARIO'
+         CIFRA elementos de `verificacion`: 4
+         CIFRA elementos de `evidencia`: 4
+   LOS CUATRO DOCUMENTOS QUE LA VARA NOMBRA, EN BYTES EXACTOS (P.2):
+      docs/plan/LECTURAS_DIRIGIDAS.md        disco   214916 bytes | LF   214916 bytes | sha256 LF dda1cdd67042c733 | 2230 lineas por count(NL)
+      docs/INTRA_DOMINIO_INFORME.md          disco   943970 bytes | LF   943970 bytes | sha256 LF c05b6bcd20188a9c | 16774 lineas por count(NL)
+      docs/BANCO_DE_TEXTOS.md                disco   182228 bytes | LF   182228 bytes | sha256 LF 68557cd00a3124f4 | 3118 lineas por count(NL)
+      docs/plan/BANCO_DEL_PLAN.md            disco    61554 bytes | LF    61554 bytes | sha256 LF 7836c8976c585143 | 1253 lineas por count(NL)
+
+   LA VARA DEL TRABAJO PENDIENTE, CORRIDA AQUI CON EL HEAD DE APERTURA COMO
+   CORTE. LA VARA NO SE CLONA Y NO SE TOCA: SE INVOCA.
+   vara: scripts/loop/vuelta150_3_relectura_expediente.py
+      60262 bytes disco | 60262 LF | sha256 LF b9fd6dcf4e665d3c
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte ebe04895
+   exitcode: 0
+   sellada en docs/loop/SALIDA_V202_VARA_DEL_PLAN.txt (17849 bytes)
+   | CIFRA fichas del expediente: 71 operaciones
+   | CIFRA fichas que no calzan: 37 operaciones
+   | CIFRA fichas congeladas declaradas: 24 operaciones
+   | CIFRA fichas congeladas en silencio: 12 operaciones
+   | CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   | CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+   | CIFRA de esas que estan CONSUMIDAS por otra ficha: 2 operaciones
+   | CIFRA de esas que son TRABAJO REAL: 4 operaciones
+   | CIFRA fichas de tipo MESA en el expediente: 6
+   | CIFRA de esas que estan en LISTA: 5
+   | CIFRA VIEJA, la de siempre y sin tocar: 6 ficha(s) en LISTA sin ninguna
+   | CIFRA NUEVA, con la pata documental: de esas 4 de trabajo real, 3 son
+
+=== I. EL INVENTARIO DE SELLADAS DE BATERIA, CONTADO DE DISCO ===
+ESTA VUELTA NO CORRE LA BATERIA (cadencia de AUDITOR.md 6.1). Se cuenta lo
+   que hay para que el HUECO de la seccion 9 se declare CON MEDICION.
+CIFRA ficheros SALIDA_V*_BATERIA_TRAMO_N.txt en docs/loop/: 40
+   V176: 9 fichero(s)
+   V183: 11 fichero(s)
+   V189: 10 fichero(s)
+   V194: 10 fichero(s)
+CIFRA salidas unicas SALIDA_V*_BATERIA.txt en docs/loop/: 12
+   SALIDA_V165_BATERIA.txt      disco    13979 bytes | LF    13798 bytes
+   SALIDA_V166_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V167_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V168_BATERIA.txt      disco    15045 bytes | LF    14845 bytes
+   SALIDA_V170_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V171_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V172_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V173_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V176_BATERIA.txt      disco    60197 bytes | LF    60197 bytes
+   SALIDA_V183_BATERIA.txt      disco    92570 bytes | LF    92570 bytes
+   SALIDA_V189_BATERIA.txt      disco    81968 bytes | LF    81968 bytes
+   SALIDA_V194_BATERIA.txt      disco   102495 bytes | LF   102495 bytes
+CIFRA ficheros SALIDA_V202_BATERIA_TRAMO_N.txt al entrar: 0
+CIFRA docs/loop/SALIDA_V202_BATERIA.txt existe al entrar: NO
+
+FIN DEL SELLO DE APERTURA
