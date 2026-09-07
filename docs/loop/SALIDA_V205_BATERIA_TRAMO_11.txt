@@ -1,0 +1,94 @@
+CORRIDA DEL TRAMO 11 DE 11, BATERIA DE LA VUELTA 205
+lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
+INICIO (reloj de pared, UTC): 2026-09-07T21:57:09Z
+RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
+==============================================================================
+==============================================================================
+LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
+==============================================================================
+
+  LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 0d6ab8743d2f, nomina contada en esta corrida)
+  CIFRA arneses en scripts/loop/ que el censo reconoce: 197
+  EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
+  `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 0d6ab8743d2f, nomina contada en esta corrida)
+  CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
+  LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
+  CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
+      FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
+
+  EL REPARTO EN TRAMOS (vuelta 176, TAREA 1.c). LO QUE SE PARTE ES EL
+  BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
+  DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
+  corre ENTERA en este tramo y sigue encendiendo el rojo.
+  CIFRA nomina entera: 135 (corte: HEAD 0d6ab8743d2f, nomina contada en esta corrida)
+  CIFRA tamano de tramo: 13
+  CIFRA tramos del reparto (computada, no tecleada): 11
+  CIFRA TRAMO QUE SE CORRE: 11 de 11
+  CIFRA entradas de ESTE tramo: 5
+  CIFRA suma de las entradas de TODOS los tramos: 135
+      ENTRADA DEL TRAMO: vuelta192_tarea4_mutacion_cuarta_puerta.py
+      ENTRADA DEL TRAMO: vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      ENTRADA DEL TRAMO: vuelta194_tarea2c_mutacion_sede_del_turno.py
+      ENTRADA DEL TRAMO: vuelta195_tarea3g_mutacion_nomina_enchufada.py
+      ENTRADA DEL TRAMO: vuelta195_tarea4c_mutacion_componer_rojo.py
+
+
+  vuelta192_tarea4_mutacion_cuarta_puerta.py exit 0  OK                   2.7s
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt
+  vuelta193_tarea4e_mutacion_sello_entre_procesos.py exit 0  OK                  11.8s
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt
+  vuelta194_tarea2c_mutacion_sede_del_turno.py exit 0  OK                  14.5s
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt, SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt, SALIDA_V194_T2C_MUTACION_SEDE_DEL_TURNO.txt
+  vuelta195_tarea3g_mutacion_nomina_enchufada.py exit 0  OK                  11.5s
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V195_T3G_MUTACION_NOMINA_ENCHUFADA.txt
+  vuelta195_tarea4c_mutacion_componer_rojo.py exit 0  OK                  12.4s
+      salidas selladas que escribe (computadas, no tecleadas): SALIDA_V195_T4C_MUTACION_COMPONER_ROJO.txt
+
+  EL CRONOMETRO (adjudicacion 6.8 del acta 163)
+  CIFRA arneses cronometrados: 5
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 52.7
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.9
+  CIFRA arnes MAS LENTO: vuelta194_tarea2c_mutacion_sede_del_turno.py con 14.5s
+  CIFRA arnes MAS RAPIDO: vuelta192_tarea4_mutacion_cuarta_puerta.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 11.8
+  CIFRA arneses que pasan de 30 segundos: 0
+  LOS DIEZ MAS LENTOS, DE MAS A MENOS:
+      vuelta194_tarea2c_mutacion_sede_del_turno.py    14.5s
+      vuelta195_tarea4c_mutacion_componer_rojo.py    12.4s
+      vuelta193_tarea4e_mutacion_sello_entre_procesos.py    11.8s
+      vuelta195_tarea3g_mutacion_nomina_enchufada.py    11.5s
+      vuelta192_tarea4_mutacion_cuarta_puerta.py     2.7s
+  AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
+  reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
+  de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
+  darle al menos este total con holgura: matarla antes NO es un rojo,
+  es no haberla medido.
+
+  ANCLA PERDIDA  : 0 (ninguna)
+  NO MORDIO      : 0 (ninguna)
+  NO REPRODUCIBLE: 0 (ninguna)
+  CASO DECLARADO : 0 (ninguna)
+  RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
+  CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
+      FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 0d6ab8743d2f, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 0d6ab8743d2f, nomina contada en esta corrida)
+      (ninguna)
+  LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
+      CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
+      CIFRA de DEUDA DECLARADA: 0 NO DECIDIBLE con motivo escrito, 0 sin
+      CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+
+ROJO: 2 arnes(es) que el censo VE y que la nomina NO tiene, nacidos en la vuelta 148 o despues, se quedan FUERA. La regla escrita en este mismo fichero desde la vuelta 148 dice que UN ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2 acepto que entre EN SU MISMA VUELTA. La lista entera: vuelta197_tarea2_mutacion_orden_del_turno.py, vuelta199_tarea1_mutacion_guardas_revividas.py
+VEREDICTO DE ESTA CORRIDA: ROJO POR FALLO
+CIFRA exitcode: 1
+FIN
+==============================================================================
+EXITCODE DEL TRAMO 11: 1
+FIN (reloj de pared, UTC): 2026-09-07T21:58:04Z
+DURACION DEL TRAMO (monotona, segundos): 54.9
+DURACION DEL TRAMO (monotona, minutos): 0.9
