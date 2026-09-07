@@ -1,0 +1,51 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 38335 bytes
+   primera linea: # REPORTE DE LA VUELTA 206 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 206
+   coincide con VUELTA - 1 (206): SI
+
+PASO 0.b. LO QUE MI APERTURA MIDIO, Y CONTRA LO QUE EL ENCARGO DECIA
+   el encargo 207 dice que el reporte de la 206 esta CERRADO Y ARCHIVADO
+   docs/loop/reportes/REPORTE_V206.md existia ANTES de esta corrida: NO
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (206)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 206 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 206.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): d42f73a9fdedd452cdb7afdf1cd0611af39d901e
+         |   asunto de ese commit: 2026-09-07 18:50:09 -0400	VUELTA 206, CIERRE: EL REPORTE QUEDA CERRADO CON SUS CUATRO PIEZAS Y LAS DOS TAREAS ENTREGADAS. cerrar_reporte.py --vuelta 2
+         |   vuelta LEIDA de la cabecera del texto: 206
+         |   ESCRITO: docs/loop/reportes/REPORTE_V206.md
+         |   VERDE.
+         |      vuelta            206
+         |      commit de origen  d42f73a9fdedd452cdb7afdf1cd0611af39d901e
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V206.md
+         |      bytes             38335
+         |      lineas            564
+         |      sha256 (LF)       87e5be03f57736165149cb52aaf3d8a8bddd4375a8ae94a66fd2db16f316529c
+      docs/loop/reportes/REPORTE_V206.md -> 38335 bytes, sha256 87e5be03f5773616
+      vuelta leida de la cabecera del archivo: 206
+      el reporte que se va a pisar -> 38335 bytes, sha256 87e5be03f5773616
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA (EJECUTOR.md 1):
+   rama: pasada-unica
+   HEAD de apertura: 3e523b74948ee5ec0168c016fddc40ae02506229
+   asunto (primeros 90): ACTA DEL AUDITOR, VUELTA 206: LA VUELTA CUMPLIO SU ENCARGO ENTERO Y CERRO SU PROPIO REPORT
+
+ESCRITO docs/loop/REPORTE.md -> 3939 bytes, 61 lineas
+
+LAS MARCAS QUE cerrar_reporte.py EXIGE EN UN REPORTE SIN CERRAR:
+   '**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**'   -> SI (se esperaba SI)
+   'PENDIENTE DE TALLAR AL CIERRE'                          -> SI (se esperaba SI)
+   '<!-- CABECERA TALLADA -->'                              -> SI (se esperaba SI)
+   '<!-- FIN CABECERA TALLADA -->'                          -> SI (se esperaba SI)
+   '\n## 3.'                                                -> NO (se esperaba NO)
+   '\n## 9.'                                                -> NO (se esperaba NO)
