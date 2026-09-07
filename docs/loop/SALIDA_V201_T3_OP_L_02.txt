@@ -1,0 +1,153 @@
+==============================================================================
+VUELTA 201, TAREA 3 . OP-L-02 MEDIDA CONTRA SU `verificacion`
+adjudicada por el acta 199 en su 4.2. NO SE MUEVE NINGUN `estado`.
+==============================================================================
+
+A) LA FICHA, LOCALIZADA POR LINEA Y LEIDA ENTERA
+   docs/plan/OPERACIONES.jsonl: disco 499474 bytes | LF 499474 bytes
+   CIFRA lineas con la ficha OP-L-02: 1, linea(s) 42
+   estado (SE LEE, NO SE MUEVE): 'LISTA'
+   fecha_corte: '2026-08-11' | tipo: 'MESA' | fase: '09_LECTURAS_DIRIGIDAS'
+   depende_de: OP-D-01, OP-D-02, OP-D-03
+
+B) POR QUE SE MIDE CONTRA `verificacion` Y NO CONTRA `evidencia`,
+   CONTADO AQUI Y NO HEREDADO DEL ENCARGO
+   CIFRA elementos de `evidencia`: 1
+      evidencia[1]: MEDIDO el 11 ago 2026: 205 pares fuera de cola, 11 leidos, 194 pendientes
+   CIFRA elementos de `evidencia` que nombran un fichero: 0  (ninguno)
+   ESA ES LA RAZON, Y ES UNA CIFRA: sin fichero nombrado NO HAY DOCUMENTO
+   QUE MEDIR, asi que la vara tiene que ser el campo `verificacion`.
+
+C) LA `verificacion`, CITADA CLAUSULA A CLAUSULA CON SU LINEA
+   LA FICHA ES UNA LINEA DE JSONL, asi que la cita por linea es la LINEA
+   42 de docs/plan/OPERACIONES.jsonl, y dentro de ella el INDICE del
+   elemento en la lista `verificacion`. Las dos coordenadas se dan juntas.
+   CIFRA elementos de `verificacion`: 4
+   --- verificacion[1] (linea 42) CLAUSULA ---
+      | las tres nominas afectadas quedan con cobertura COMPLETA y su forma rees
+      | crita
+   --- verificacion[2] (linea 42) CLAUSULA ---
+      | el marcador del cribado no se mueve: sigue en 2.117
+   --- verificacion[3] (linea 42) CLAUSULA ---
+      | cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+   --- verificacion[4] (linea 42) CORRECCION DECLARADA POR ADICION ---
+      | CORRECCION DECLARADA (2026-09-04, vuelta 170, TAREA 3.b; adjudicacion 6.
+      | 11 del acta 169), POR EL CARRIL DEL BANCO 9.21 MAS 9.10, COMO UN ELEMENT
+      | O MAS DE ESTA MISMA LISTA verificacion Y SIN CLAVE NUEVA DE ESQUEMA (la 
+      | via que OP-L-01 uso en la vuelta 166 para esta misma clausula y que OP-L
+      | -03 uso en la vuelta 72, y que el acta 71, seccion 6, adjudicacion 3, ad
+      | judico CON LAS PALABRAS NO ES PARADA). LO QUE SE CORRIGE es la clausula 
+      | que en esta lista dice, verbatim: 'el marcador del cribado no se mueve: 
+      | sigue en 2.117'. LA CLAUSULA NO ES FALSA Y ESO SE DICE PRIMERO: lo que e
+      | xige es que la operacion NO MUEVA el marcador, no que el marcador valga 
+      | 2.117 hoy. EL NUMERAL 2.117 ES EL VALOR DEL MARCADOR EN LA fecha_corte D
+      | E ESTA FICHA (2026-08-11), TESTIGO Y NO CONDICION, y por eso se queda EN
+      | TERO donde esta. LO QUE LE FALTABA ES EL CORTE ESCRITO AL LADO, que es l
+      | o que el 9.21 pide, y aqui se le pone. MEDIDO HOY, 2026-09-04, RECOMPUTA
+      | NDO docs/INTRA_DOMINIO_VEREDICTOS.jsonl LINEA A LINEA: el marcador del c
+      | ribado vale 3388, repartido en A 551, B 72, C 5, D 2760, con 3388 puesto
+      | s distintos, maximo 3388 y 0 huecos. LA CLAUSULA, LEIDA ASI, SIGUE EN PI
+      | E Y NO SE PUEDE INCUMPLIR POR UNA CIFRA QUE OTRA OPERACION MOVIO. Salida
+      | : docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt. LO QUE ESTA CORRECCION N
+      | O HACE: no borra el numeral 2.117 ni la clausula que lo lleva, no mueve 
+      | el marcador, no adjudica ninguna clase, no toca ni un nodo y no cambia e
+      | l estado ni las dependencias de ninguna ficha.
+
+D) CLAUSULA 1: LAS TRES NOMINAS. QUE PIDE Y QUE SE PUEDE COMPROBAR
+   PIDE, verbatim: 'las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita'
+   PIDE DOS COSAS Y NO UNA: (i) que las nominas afectadas queden con
+      COBERTURA COMPLETA, y (ii) que su FORMA quede REESCRITA.
+   EL NUMERAL QUE LA CLAUSULA ESCRIBE: tres
+   CUANTAS NOMINAS NOMBRA LA PROPIA FICHA, CONTADO DE SU TEXTO:
+      cuadrantes               aparece 2 vez(ces) en el texto de la ficha
+      ecuacion de valor        aparece 2 vez(ces) en el texto de la ficha
+      bloque humano            aparece 2 vez(ces) en el texto de la ficha
+      sales roadmap            aparece 3 vez(ces) en el texto de la ficha
+      supervision de la IA     aparece 1 vez(ces) en el texto de la ficha
+   CIFRA apariciones del literal 'SEIS nominas' en la ficha: 1
+   CIFRA apariciones del literal 'TRES nominas' en la ficha: 1
+   LAS NOMINAS NO ESTAN NOMBRADAS POR ID EN NINGUN SITIO DE LA FICHA, y
+      eso se cuenta en vez de afirmarse: los campos `nodos`, `preservar`,
+      `eliminar` y `superviviente` de esta ficha miden
+      nodos=0 preservar=0 eliminar=0 superviviente=None
+
+E) CLAUSULA 2: EL MARCADOR. RECONTADO HOY, LINEA A LINEA
+   PIDE, verbatim: 'el marcador del cribado no se mueve: sigue en 2.117'
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: disco 4054129 bytes | LF 4054129 bytes
+   CIFRA filas: 3388
+   CIFRA puestos distintos: 3388 | maximo: 3388 | huecos: 0
+   EL REPARTO POR CLASE, RECONTADO HOY:
+      clase A            551
+      clase B            72
+      clase C            5
+      clase D            2760
+   SUMA DEL REPARTO: 3388
+   NO PASA POR EL RESOLUTOR Y SE DICE POR QUE: `P.1` lo manda para TODO
+      CONTEO QUE TOQUE IDS, y contar PUESTOS no toca ninguno. Aqui no se
+      agrupa ni se compara un solo id.
+   EL NUMERAL 2.117 DE LA CLAUSULA, CONTRA LO MEDIDO HOY: la correccion
+      declarada de la vuelta 170 que vive en esta misma lista ya dice que
+      el 2.117 es TESTIGO Y NO CONDICION, y que la clausula exige que la
+      OPERACION no mueva el marcador, no que valga 2.117 hoy.
+
+F) CLAUSULA 3: CADA GRUPO DEL BACKLOG CON SU MOTIVO ESCRITO
+   PIDE, verbatim: 'cada grupo del backlog lleva su motivo escrito, no solo su cuenta'
+   EL BACKLOG, LEIDO DEL CAMPO `nota` DE LA PROPIA FICHA:
+      CIFRA pares del backlog: 189
+      CIFRA grupos escritos: 4
+         126  esperan destejido                                    motivo escrito: SI
+         55   son resto sin mesa ni nomina                         motivo escrito: SI
+         5    de sales roadmap con clase ya decidida               motivo escrito: SI
+         3    ya leidas en la primera tanda                        motivo escrito: SI
+      SUMA DE LOS GRUPOS: 189 contra el total escrito 189 -> CALZA
+      CIFRA grupos CON motivo escrito: 4 de 4
+      LA CLAUSULA 3 SE PUEDE COMPROBAR HOY Y SALE: CUMPLIDA
+
+G) CLAUSULA 4: LA CORRECCION DECLARADA DE LA VUELTA 170, QUE YA VIVE
+   DENTRO DE ESTA MISMA LISTA
+   CIFRA caracteres: 1486
+   NO ES UNA CLAUSULA QUE PEDIR: es la correccion por adicion de la
+      clausula 2, y por eso NO se mide como criterio. Se cita entera en
+      el bloque C.
+
+H) LAS RUTAS QUE LA FICHA PROMETE COMO PRUEBA, MEDIDAS UNA A UNA
+   (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA: si apunta a un
+   fichero inexistente o de CERO BYTES es CAIDA DE CIFRA.)
+   CIFRA rutas distintas nombradas en la ficha: 8
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl                  4054129 bytes en disco
+      docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt         5337 bytes en disco
+      docs/plan/LD_SALES_ROADMAP.md                        20563 bytes en disco
+      docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt       5559 bytes en disco
+      docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt      7945 bytes en disco
+      docs/loop/ACTA_AUDITOR.md                            4657056 bytes en disco
+      docs/plan/OPERACIONES.jsonl                          499474 bytes en disco
+      docs/loop/SALIDA_V170_T4B_PUENTES.txt                4564 bytes en disco
+   CIFRA rutas vivas: 8 | inexistentes: 0 | de cero bytes: 0
+
+I) EL VEREDICTO DE LA LECTURA, CON SU CIFRA DELANTE
+   CLAUSULA 1: NO ALCANZA PARA EJECUTAR SIN DECIDIR.
+      Motivo medido, no opinado: la clausula escribe el numeral 'tres' y la
+      propia `nota` de la ficha escribe 'SEIS nominas' 1 vez(ces) y
+      'TRES nominas' 1 vez(ces). Las dos frases estan en la MISMA ficha,
+      hablan de las MISMAS nominas y dan numeros distintos, y NINGUNA de
+      las dos las nombra por id: los campos `nodos`, `preservar`,
+      `eliminar` y `superviviente` de la ficha estan TODOS vacios.
+      Elegir cuales son las 'tres afectadas' es DECIDIR, no medir.
+   CLAUSULA 2: SE PUEDE MEDIR EL MARCADOR, PERO NO ES CRITERIO DE HECHO.
+      Lo que pide es que la OPERACION no mueva el marcador. Eso solo se
+      comprueba corriendo la operacion y comparando antes y contra
+      despues, y la operacion NO SE HA CORRIDO. Hoy el marcador vale 3388,
+      con 0 huecos, y ese numero es un ESTADO, no el cumplimiento de la
+      clausula.
+   CLAUSULA 3: SE PUEDE COMPROBAR HOY Y SE COMPRUEBA ARRIBA.
+   CLAUSULA 4: NO ES CRITERIO, ES LA CORRECCION DECLARADA DE LA 2.
+   POR TANTO: `OP-L-02` NO SE PUEDE EJECUTAR HOY SIN DECIDIR, y eso NO SE
+      IMPROVISA NI SE DECLARA HECHA. Va como PARADA al reporte, con esta
+      medicion, por AUDITOR.md 3.
+
+J) LO QUE ESTE COMPUTO NO HIZO, DICHO PARA QUE NO HAGA FALTA MIRARLO
+   No movio ningun `estado`, no cerro la ficha, no adjudico ninguna clase,
+   no toco ni un veredicto, no escribio una sola linea en docs/plan/ y no
+   ejecuto la operacion. Lo unico que produce es esta salida sellada.
+
+FIN
