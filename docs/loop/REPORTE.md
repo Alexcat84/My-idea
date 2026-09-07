@@ -101,7 +101,7 @@ tabla tallada entera cuando la vuelta cierre.
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 197 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, y el cuerpo del acta se acota contando su primera linea con `grep -n` EN ESTA VUELTA. La entrada registra, y cada cifra se cuenta del cuerpo acotado: LAS SIETE ADJUDICACIONES `4.1` a `4.7`, con las tres preguntas del reporte de la 196 contestadas POR LETRA ESCRITA y no por doctrina nueva (`4.3` la `P.1`, `4.4` la `P.2`, `4.5` la `P.3`); LOS CUATRO HALLAZGOS de la seccion 5 (`5.1` el reporte que quema la ciega del auditor por construccion, `5.2` el marcado de discutibles que no existe por debajo del puesto 2662, `5.3` los tres puestos con tres lectores independientes contra el archivo, `5.4` el fichero del turno que no se limpia al cerrar); CERO CAIDAS DEL EJECUTOR DE CIFRA PUBLICADA, con la `C.E1` de la 196 RE CLASIFICADA A MI FAVOR como caida de REPORTE en prosa de acompanamiento, que NO acumula; MIS DOS CAIDAS DE METODO; y CINCO CAIDAS PROPIAS DEL AUDITOR, `C.A1` a `C.A5`, todas de metodo y todas remediadas dentro de su vuelta, con la `C.A1` en su TERCERA acta seguida de la misma especie. Y LA METRICA DE CREDITO de la seccion 7 con sus cifras. EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues, y CADA LECTOR NUEVO LLEVA SU MUTACION DELANTE | **CERRADA** | `SALIDA_V197_T1A_REGISTRO_R59.txt`, `_MUTACION_REGISTRADOR.txt` (35/35), `_RECORRIDO_SIN_ESCRIBIR.txt` |
 | **TAREA 2** | EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. BLOQUEANTE. Sale de la adjudicacion `4.5` del acta 197, que contesta mi `P.3` por extension de `AUDITOR.md` 1.2, y esta MEDIDO: el reporte de la 196 publico la clase de archivo de 8 de los 120 puestos que el auditor de la 197 acababa de sellar. Sobre `scripts/loop/apertura_del_auditor.py`, QUE NO SE CLONA: (a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO si el turno tiene sello y no ha declarado sus clases todavia, con lo que el orden obligatorio pasa a ser `sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`, y un turno SIN sello sigue pudiendo leer el reporte. (b) EL FICHERO DEL TURNO SE CIERRA, que es el hallazgo `5.4`: un carril que lo cierre al declarar las clases dejando constancia, de forma que un turno nuevo empiece limpio SIN TENER QUE BORRAR NADA, con el sello en disco intacto y la guarda `b` de `sellar()` mirando el disco igual que antes. (c) LA GUARDA DE CODIGO DE LA `C.A1`, que va por su TERCERA acta seguida: comprueba que la cifra del marcador que un acta publica calza con una salida de `AP.marcador()` de esa misma vuelta, y CAE EN ROJO si esa salida no existe o no calza. CADA UNA DE LAS TRES LLEVA SU CASO POSITIVO POR MUTACION DELANTE, con nombre estable y salida sellada, y el caso rojo tiene que MORDER: sin el remedio la guarda deja pasar y con el no | **CERRADA** | `SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (49/49), `_T2B_CIERRE_DEL_TURNO_197.txt`, `_T2C_GUARDA_MARCADOR_ACTA_197.txt`, `_T2_QUIEN_BORRA_LA_SEDE.txt` |
 | **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. Es deuda suya que paga el ejecutor con el instrumento. `AUDITOR.md` 1.2: CINCO discrepancias del auditor cayeron FUERA del marcado del archivo (`655`, `719`, `976`, `1809`, `1810`), asi que el credito de su tanda baja y el tramo se relee al doble. EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v197_doble_para_la_198.txt`: SON 240 PARES, 120 del tramo y 120 del doble, y la serie medida va 30, 60, 120 y ahora 240. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` de `scripts/loop/vuelta196_tarea2_relectura_al_doble.py`, y NADA se copia; se RECOMPUTA el doble y se comprueba que calza con el sellado, ESQUIVANDO LA TRAMPA DE LA `C.A5` (los `_exclusion.txt` guardan enteros sueltos y se leen con `numeros_de()`). (b) LEER LOS 240 A CIEGAS con `aislador_de_ciega.py` y escribir las clases ANTES de abrir el destape. (c) LA VARA es `9.6.1` con `9.6.2`, `9.6.3` y la tabla de LOS DOS POLOS del `9.22`, y CON LOS DOS ERRORES DEL AUDITOR DELANTE: la vara es el SUELO y no el TECHO (familia con regla propia manda), y la contencion se mide SOBRE EL CONTENIDO y no sobre el contenedor. (d) NO SALTARSE LA `B` NI SOBRE EMITIRLA. (e) PUBLICAR EL COTEJO con sus cifras y los discutibles marcados ANTES de saber si acierto, MAS el reparto por puesto del literal `DISCUTIBLE MARCADO` que el hallazgo `5.2` obliga. (f) LOS PUESTOS QUE LA CIEGA NO PUEDE ALCANZAR se declaran ANTES de leer y salen del credito. (g) LOS QUEMADOS por el acta y por el reporte se declaran ANTES de leer y no entran al credito | **CERRADA** | `SALIDA_V197_T3_SUJETO.txt`, `_T3_CIEGA.txt`, `_T3_MIS_CLASES.txt` (selladas antes), `_T3_COTEJO.txt` |
-| **TAREA 4** | LAS DOS CIFRAS QUE VIAJAN SIN SU VARA. (a) LA SECCION 9 PUBLICA "0 ARNESES DEL CENSO FUERA DE LA NOMINA" SIN NOMBRAR LA VARA. No es caida (la frase nombra su fuente y esa fuente si lleva la vara, adjudicacion `4.7`), pero un `0` al lado de un censo y una nomina de tres cifras se lee como que la nomina cubre el censo entero, y no lo cubre. Esa cifra pasa a viajar SIEMPRE CON SU VARA, en el sello de apertura y en el reporte, y se miden LAS DOS: con vara y sin vara. (b) EL TOPE DE 80 LINEAS DEL MODO AUSTERO SE MIDE POR TRES VARAS Y LAS TRES SE PUBLICAN, por la adjudicacion `4.6`: total, escrita a mano (la vara que el acta 196 fijo en su `4.7`), y escrita a mano menos lo que otra regla obliga a escribir. EL TOPE NO SE AFLOJA Y LA EXCEPCION NO SE INVENTA: se publican las tres cifras para que el fundador decida sobre numeros, y si la tercera vara sigue por encima de 80 SE DICE CON ESAS PALABRAS y la pregunta queda escrita | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 4** | LAS DOS CIFRAS QUE VIAJAN SIN SU VARA. (a) LA SECCION 9 PUBLICA "0 ARNESES DEL CENSO FUERA DE LA NOMINA" SIN NOMBRAR LA VARA. No es caida (la frase nombra su fuente y esa fuente si lleva la vara, adjudicacion `4.7`), pero un `0` al lado de un censo y una nomina de tres cifras se lee como que la nomina cubre el censo entero, y no lo cubre. Esa cifra pasa a viajar SIEMPRE CON SU VARA, en el sello de apertura y en el reporte, y se miden LAS DOS: con vara y sin vara. (b) EL TOPE DE 80 LINEAS DEL MODO AUSTERO SE MIDE POR TRES VARAS Y LAS TRES SE PUBLICAN, por la adjudicacion `4.6`: total, escrita a mano (la vara que el acta 196 fijo en su `4.7`), y escrita a mano menos lo que otra regla obliga a escribir. EL TOPE NO SE AFLOJA Y LA EXCEPCION NO SE INVENTA: se publican las tres cifras para que el fundador decida sobre numeros, y si la tercera vara sigue por encima de 80 SE DICE CON ESAS PALABRAS y la pregunta queda escrita | **CERRADA** | `SALIDA_V197_APERTURA.txt` bloque F, `SALIDA_V197_T4_TRES_VARAS.txt`, `_T4_MUTACION_TRES_VARAS.txt` (8/8) |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -391,5 +391,69 @@ PEOR QUE LOS LIMPIOS**: 8 de 16 contra 207 de 224. Un puesto quemado deberia ser
 mas facil, no mas dificil. **La causa que sostengo: los quemados son en su mayoria
 los puestos que el acta discute, o sea los dificiles, y saber que el archivo gano
 NO es saber que clase puso.**
+
+### TAREA 4, LAS DOS CIFRAS QUE VIAJAN SIN SU VARA. CERRADA.
+
+**Ficheros de salida, y toda cifra de abajo se cuenta de ellos:**
+`docs/loop/SALIDA_V197_APERTURA.txt` bloque `F`,
+`docs/loop/SALIDA_V197_T4_TRES_VARAS.txt` y
+`docs/loop/SALIDA_V197_T4_MUTACION_TRES_VARAS.txt`.
+
+**(a) LA CIFRA DE FUERA DE LA NOMINA YA NO PUEDE VIAJAR SOLA.** El remedio va
+**dentro del bloque `F` del sello de apertura**, que es donde nace la cifra, y de
+ahi lo lee la cabecera del reporte por `varas_de_la_nomina()` del esqueleto, que
+**CAE EN ROJO si el sello no trae las dos**. Medido en esta vuelta: censo **195**,
+nomina **135**, invisibles al censo **0**, sin sujeto congelado **0**, y **fuera de
+la nomina CON la vara 148: 0**, **SIN vara: 60**. Las dos van impresas **con el
+numero de la vara al lado**, y el sello lista los diez primeros de los 60 para que
+la cifra no viaje sola. **No era caida** y la `4.7` lo dice; lo que se arregla es
+que un `0` junto a un 195 y un 135 **se lee como cobertura total del censo, y es
+cobertura desde la vara para arriba**.
+
+**(b) EL TOPE DE 80 LINEAS, MEDIDO POR LAS TRES VARAS.** Instrumento:
+`scripts/loop/vuelta197_tarea4_tres_varas.py`, con **8 casos de mutacion, 8
+verdes, 0 rojos**.
+
+| vara | que cuenta | este reporte | el de la 196 |
+|---|---|---:|---:|
+| **V1 total** | `count(NL)` | **395** | **588** |
+| **V1 total** | `len(split(NL))` | **396** | **589** |
+| **V2 escrita a mano** | total menos las piezas TALLADAS | **380** | **562** |
+| **V3 estrecha** | V2 menos lo que otra regla obliga | **344** | **267** |
+
+*(Las dos columnas se midieron al anexarse esta tarea; el reporte sigue creciendo
+hasta el cierre y sus cifras finales las remide el instrumento al cerrar.)*
+
+**LA TERCERA VARA SIGUE MUY POR ENCIMA DE 80, Y LO DIGO CON ESAS PALABRAS**, que
+es lo que el encargo manda: **344 lineas contra un tope de 80, 4.3 veces el tope**,
+y en el reporte de la 196 **267, 3.3 veces**. **El tope no se afloja y no invento
+ninguna excepcion.**
+
+**CADA RESTA LLEVA AL LADO LA GUARDA QUE LA OBLIGA**, y **una seccion sin guarda NO
+se resta**: eso es lo unico que impide que la vara estrecha sea una excusa, y va
+probado con su mutacion (una seccion `## 99.` fabricada sin guarda NO baja la V3).
+**Una marca de pieza tallada que aparezca dos veces tampoco se resta.**
+
+**DISCREPANCIA DECLARADA Y NO RESUELTA COPIANDO.** La `4.6` del acta 197 dice que
+el reporte de la 196 mide **318 por la vara estrecha del acta 196**. Mi V2 sobre
+ese mismo fichero da **562**. La causa que sostengo, medida: **318 es el numero de
+saltos de linea del reporte de la 196 ANTES de cerrarlo**, y sale literal de
+`docs/loop/SALIDA_V196_CERRAR_REPORTE.txt` (*"CIFRA bytes: 22804 | saltos de linea:
+318"*). **No es la vara estrecha: es el conteo total de un reporte a medio
+escribir.** Publico las dos y no elijo.
+
+**LA PREGUNTA QUE DEJO ESCRITA, Y NO LA CONTESTO YO.** El austero dice que
+**recorta tinta, no control**. Las tres cifras muestran que lo que empuja el
+reporte por encima del tope **no es prosa de acompanamiento sino piezas que una
+guarda exige**: la seccion 9, la seccion 4, la tabla de tareas, la cabecera
+tallada. **Las tres respuestas posibles son del fundador y ninguna mia:** subir el
+tope, medirlo por la vara estrecha, o recortar de verdad lo que hoy es
+obligatorio.
+
+**`D.11` DISCUTIBLE MARCADO. LA V3 LA DEFINI YO.** El encargo dice *"escrita a mano
+menos lo que otra regla obliga a escribir"* y nombra cuatro piezas entre
+parentesis. Yo reste **ocho secciones**, cada una con la guarda que la busca por su
+literal. **Lo discutible es que ampliar la lista de restas hace la V3 mas pequena y
+me favorece**, aunque el criterio (tener guarda que la busque) sea comprobable.
 
 <!-- FIN ANEXO DE TAREAS -->

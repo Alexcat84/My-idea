@@ -1,0 +1,98 @@
+==============================================================================
+VUELTA 197, TAREA 4.b: EL TOPE DE 80 LINEAS, MEDIDO POR LAS TRES VARAS
+==============================================================================
+
+ADJUDICACION `4.6` DEL ACTA 197. EL TOPE NO SE AFLOJA Y LA EXCEPCION NO SE
+INVENTA: se publican las tres cifras para que el fundador decida sobre
+numeros y no sobre una queja. TOPE VIGENTE: 80 lineas.
+
+------------------------------------------------------------------------------
+FICHERO: docs/loop/REPORTE.md
+   bytes en disco: 29686
+
+   | vara | que cuenta | cifra | contra el tope de 80 |
+   |---|---|---:|---|
+   | **V1 total** | `count(NL)` | **395** | POR ENCIMA |
+   | **V1 total** | `len(split(NL))` | **396** | POR ENCIMA |
+   | **V2 escrita a mano** | total menos las piezas TALLADAS | **380** | POR ENCIMA |
+   | **V3 estrecha** | V2 menos lo que otra regla obliga | **344** | POR ENCIMA |
+
+   LO QUE LA V2 RESTA, PIEZA A PIEZA, CON SU GUARDA AL LADO:
+      cabecera tallada     8 lineas | hallada
+         la exige: scripts/loop/tallar_cabecera_reporte.py --fase04, y cerrar_reporte.py la exige por su marca MARCA_ABRE
+      tabla de tareas      8 lineas | hallada
+         la exige: scripts/loop/anexar_tarea_al_reporte.py la exige por su marca ABRE_TABLA y CAE EN ROJO si no aparece exactamente una vez
+      SUBTOTAL restado por la V2: 16 lineas
+
+   LO QUE LA V3 RESTA ADEMAS, SECCION A SECCION, CON SU GUARDA AL LADO:
+      ## 9.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, constantes CAB_9 y CAB_9_HUECO, y la guarda (4) de su cabecera: la seccion 9 existe o el cierre es ROJO
+      ## 4.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, seccion_4_del_reporte() y la escalada que la coteja contra la apertura sellada
+      ## 3.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9, las siete existen
+      ## 5.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 6.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 7.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 8.      0 lineas | NO HALLADA, no se resta
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9, y claves_de_caida_de_la_seccion_8()
+      ## 0.     36 lineas | hallada
+         la exige: vuelta197_esqueleto_reporte.py, LA IDENTIDAD SE LEE DE GIT (EJECUTOR.md 1): cae en rojo si algo no se lee de git
+      SUBTOTAL restado por la V3: 36 lineas
+
+   **LA TERCERA VARA SIGUE POR ENCIMA DE 80.** Se dice con esas
+   palabras, que es lo que el encargo manda. Son 344 lineas contra un
+   tope de 80: 4.3 veces el tope.
+
+------------------------------------------------------------------------------
+FICHERO: docs/loop/reportes/REPORTE_V196.md
+   bytes en disco: 42654
+
+   | vara | que cuenta | cifra | contra el tope de 80 |
+   |---|---|---:|---|
+   | **V1 total** | `count(NL)` | **588** | POR ENCIMA |
+   | **V1 total** | `len(split(NL))` | **589** | POR ENCIMA |
+   | **V2 escrita a mano** | total menos las piezas TALLADAS | **562** | POR ENCIMA |
+   | **V3 estrecha** | V2 menos lo que otra regla obliga | **267** | POR ENCIMA |
+
+   LO QUE LA V2 RESTA, PIEZA A PIEZA, CON SU GUARDA AL LADO:
+      cabecera tallada    21 lineas | hallada
+         la exige: scripts/loop/tallar_cabecera_reporte.py --fase04, y cerrar_reporte.py la exige por su marca MARCA_ABRE
+      tabla de tareas      6 lineas | hallada
+         la exige: scripts/loop/anexar_tarea_al_reporte.py la exige por su marca ABRE_TABLA y CAE EN ROJO si no aparece exactamente una vez
+      SUBTOTAL restado por la V2: 27 lineas
+
+   LO QUE LA V3 RESTA ADEMAS, SECCION A SECCION, CON SU GUARDA AL LADO:
+      ## 9.     25 lineas | hallada
+         la exige: cerrar_reporte.py, constantes CAB_9 y CAB_9_HUECO, y la guarda (4) de su cabecera: la seccion 9 existe o el cierre es ROJO
+      ## 4.     51 lineas | hallada
+         la exige: cerrar_reporte.py, seccion_4_del_reporte() y la escalada que la coteja contra la apertura sellada
+      ## 3.     44 lineas | hallada
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9, las siete existen
+      ## 5.     48 lineas | hallada
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 6.     26 lineas | hallada
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 7.      8 lineas | hallada
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9
+      ## 8.     56 lineas | hallada
+         la exige: cerrar_reporte.py, guarda (3): LAS SECCIONES 3 A 9, y claves_de_caida_de_la_seccion_8()
+      ## 0.     37 lineas | hallada
+         la exige: vuelta197_esqueleto_reporte.py, LA IDENTIDAD SE LEE DE GIT (EJECUTOR.md 1): cae en rojo si algo no se lee de git
+      SUBTOTAL restado por la V3: 295 lineas
+
+   **LA TERCERA VARA SIGUE POR ENCIMA DE 80.** Se dice con esas
+   palabras, que es lo que el encargo manda. Son 267 lineas contra un
+   tope de 80: 3.3 veces el tope.
+
+------------------------------------------------------------------------------
+LA PREGUNTA QUE QUEDA ESCRITA, Y NO LA CONTESTO YO:
+   El modo austero dice que RECORTA TINTA, NO CONTROL. Las tres cifras de
+   arriba muestran que lo que empuja el reporte por encima del tope no es
+   prosa de acompanamiento sino PIEZAS QUE UNA GUARDA EXIGE. La pregunta
+   es del fundador y tiene tres respuestas posibles, ninguna mia: subir el
+   tope, medirlo por la vara estrecha, o recortar de verdad las secciones
+   que hoy son obligatorias. EL TOPE NO SE AFLOJA MIENTRAS NO SE DECIDA.

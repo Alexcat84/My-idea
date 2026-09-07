@@ -1,0 +1,29 @@
+==============================================================================
+VUELTA 197, TAREA 4.b: CASO POSITIVO POR MUTACION DE LAS TRES VARAS
+==============================================================================
+
+A) SOBRE UN REPORTE FABRICADO DE 13 LINEAS
+   V1 por len(split(NL)) cuenta las 13                            VERDE
+   V1 por count(NL) cuenta 12, que es una menos                   VERDE
+   V2 resta las 6 lineas talladas y deja 7                        VERDE
+   V3 resta ademas las 2 de la seccion 9 y deja 5                 VERDE
+   y la seccion 99, que NO tiene guarda, NO se resta              VERDE
+   LA MUTACION QUE MAS IMPORTA: si la V3 restara cualquier `## n.` en vez
+   de solo las que una guarda busca, la seccion 99 tambien caeria y la V3
+   daria 3. Se comprueba que da 5.
+   la V3 NO es 3                                                  VERDE
+
+B) UNA MARCA AMBIGUA NO SE RESTA
+   con la marca de apertura DUPLICADA, la cabecera no se resta    VERDE
+   LA MUTACION: restar a ojo una pieza cuya marca es ambigua es la puerta
+   por la que la vara estrecha se convierte en una excusa. No se resta.
+
+C) UN TEXTO SIN NINGUNA MARCA: LAS TRES VARAS COINCIDEN
+   V1 split, V2 y V3 son las tres 3                               VERDE
+   Es la comprobacion de que las varas RESTAN y no INVENTAN: sin piezas
+   talladas ni secciones con guarda, no hay nada que descontar.
+
+==============================================================================
+CASOS: 8 | VERDES: 8 | ROJOS: 0
+VEREDICTO: VERDE
+==============================================================================
