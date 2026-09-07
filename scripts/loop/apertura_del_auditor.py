@@ -280,6 +280,29 @@ def _cargar_turno():
         # NO se borra. Esto es el hallazgo `5.4` del acta 197 resuelto sin ensenar
         # a nadie a borrar su propia bitacora.
         _reiniciar_memoria()
+        # Y AQUI VA LA MITAD `1.a` DEL ENCARGO DE LA VUELTA 199, QUE ES EL
+        # REMEDIO DEL PUNTO `C` DE LA PARADA DE LA 198. **LA MARCA DE CERRADO SE
+        # CONSUME AL CARGARLA**: el fichero decia `vivo.abierto: false` PARA
+        # SIEMPRE, asi que **cada proceso nuevo volvia a reiniciar la memoria y
+        # tiraba lo que el anterior habia apuntado**. Con eso se apagaban DOS
+        # remedios escritos: el de la 193 (que la bitacora sobreviva al proceso,
+        # que es lo unico que deja a `sellar()` caer en rojo si el turno ya toco
+        # `git log`) y el de la 197 (que `leer_reporte()` caiga con el sujeto
+        # sellado y las clases sin escribir).
+        #
+        # LO QUE NO SE AFLOJA, Y VA PRIMERO: **la memoria SIGUE reiniciandose**,
+        # o sea el turno nuevo SIGUE empezando limpio, que es el remedio entero
+        # de la 197. Lo unico que cambia es que **el turno nuevo queda VIVO** en
+        # vez de nacer muerto, y por eso lo que ESTE turno apunte a partir de
+        # aqui si llega al proceso siguiente. El disco no se toca en esta linea:
+        # se reescribe cuando el turno nuevo escriba algo, que es `_guardar_turno()`.
+        #
+        # POR QUE AQUI Y NO SOLO EN `sellar()`: la guarda de la 193 tiene que
+        # morder sobre toques hechos **ANTES** del sello. Reabrir solo al sellar
+        # dejaria esos toques sin acumular entre procesos, que es justo el hueco.
+        # `sellar()` lo pone tambien, por si alguien carga y sella sin pasar por
+        # esta rama.
+        _VIVO["abierto"] = True
         return False
     del _BITACORA[:]
     _BITACORA.extend(d.get("bitacora") or [])
@@ -298,6 +321,41 @@ def sello_en_disco(vuelta, base=None):
     uno."""
     ruta = os.path.join(base or LOOP, "SELLO_APERTURA_AUDITOR_V%s.json" % vuelta)
     return ruta if os.path.exists(ruta) else ""
+
+
+def sello_mas_reciente_en_disco(base=None):
+    """(RUTA, VUELTA) DEL SELLO DE VUELTA MAS ALTA QUE HAY EN DISCO, o ("", "").
+
+    **ES LA MITAD `1.b` DEL ENCARGO DE LA VUELTA 199**, y nace de una caida
+    medida: `puede_leer_reporte()` solo consultaba `sello_en_disco()` **si se le
+    pasaba `vuelta`**, y el orden que `AUDITOR.md` escribe es `leer_reporte()` A
+    SECAS. Con la memoria reiniciada y sin `vuelta`, la guarda concluia *"este
+    turno NO ha sellado"* **con el sello de esa vuelta en el disco, a su lado**.
+    El auditor de la 198 lo sufrio siguiendo el orden escrito.
+
+    LA VARA ES LA VUELTA MAS ALTA, y va escrita porque es lo unico que se puede
+    sostener sin adivinar: el turno vivo es siempre el del sello mas nuevo, y los
+    sellos viejos ya tienen su constancia de cierre en `_CERRADOS`. Los nombres
+    que no traen un numero entero detras de la `V` se ordenan por texto y siempre
+    por debajo de los numericos, para que un `SELLO_APERTURA_AUDITOR_VARNES.json`
+    de un arnes no se cuele como el mas reciente.
+
+    Semi-pura: lo unico que toca disco es leer el directorio."""
+    carpeta = base or LOOP
+    mejor = (None, "", "")
+    try:
+        nombres = os.listdir(carpeta)
+    except Exception:                                    # noqa: BLE001
+        return "", ""
+    for nombre in nombres:
+        m = re.match(r"^SELLO_APERTURA_AUDITOR_V(.+)\.json$", nombre)
+        if not m:
+            continue
+        v = m.group(1)
+        n = int(v) if v.isdigit() else -1
+        if mejor[0] is None or (n, v) > (mejor[0], mejor[1]):
+            mejor = (n, v, os.path.join(carpeta, nombre))
+    return (mejor[2], mejor[1]) if mejor[0] is not None else ("", "")
 
 
 def bitacora():
@@ -383,16 +441,34 @@ def puede_leer_reporte(vuelta=None, base=None):
     quemar. Lo unico que se prohibe es leerlo **con el sujeto ya elegido y las
     clases sin escribir**.
 
-    EL SELLO SE MIRA EN LOS DOS SITIOS: en la memoria del turno (`_SELLADO`, que
-    desde la 193 sobrevive al proceso por el fichero del turno) y, si se pasa
-    `vuelta`, tambien en DISCO. Con eso la guarda no se puede esquivar arrancando
-    un proceso nuevo, que es exactamente como se esquivaba la de `sellar()` antes
-    de la vuelta 193."""
+    EL SELLO SE MIRA EN LOS DOS SITIOS, Y **SIEMPRE EN DISCO** (vuelta 199,
+    mitad `1.b`): en la memoria del turno (`_SELLADO`, que desde la 193 sobrevive
+    al proceso por el fichero del turno) y en DISCO, con `vuelta` por
+    `sello_en_disco()` y SIN `vuelta` por `sello_mas_reciente_en_disco()`. Con eso
+    la guarda no se puede esquivar arrancando un proceso nuevo, que es exactamente
+    como se esquivaba la de `sellar()` antes de la vuelta 193.
+
+    **CORRECCION DECLARADA, Y NO SE TAPA LO QUE CORRIGE** (`EJECUTOR.md` 8): esta
+    linea decia antes *"y, si se pasa `vuelta`, tambien en DISCO"*, y ESA ERA LA
+    PUERTA. `AUDITOR.md` manda llamar a `leer_reporte()` **a secas**, o sea sin
+    `vuelta`, y por esa rama la guarda no miraba el disco y **dejaba pasar**. El
+    auditor de la 198 lo midio contra si mismo: sello por el CLI, llamo como la
+    doctrina manda, y el modulo le entrego el reporte con las tablas de
+    discrepancias de su propio sujeto sin un solo rojo
+    (`docs/loop/SALIDA_V198_GUARDA_MUERTA.txt`, 10 casos)."""
     hay_sello = bool(_SELLADO["hecho"])
     de_disco = ""
+    vuelta_del_disco = ""
     if vuelta is not None:
         de_disco = sello_en_disco(vuelta, base)
-        hay_sello = hay_sello or bool(de_disco)
+        vuelta_del_disco = str(vuelta) if de_disco else ""
+    else:
+        # LA MITAD `1.b` DEL ENCARGO DE LA VUELTA 199. **SIN `vuelta` TAMBIEN SE
+        # MIRA EL DISCO**, y esta rama es la que faltaba: la sede real llama a
+        # `leer_reporte()` A SECAS, que es como `AUDITOR.md` lo escribe, y por
+        # aqui se escapaba entera la guarda de la 197.
+        de_disco, vuelta_del_disco = sello_mas_reciente_en_disco(base)
+    hay_sello = hay_sello or bool(de_disco)
     if not hay_sello:
         return True, ("este turno NO ha sellado: no hay sujeto elegido, y por eso "
                       "leer el reporte no puede quemar nada")
@@ -406,13 +482,22 @@ def puede_leer_reporte(vuelta=None, base=None):
     # sin esto la guarda bloqueaba PARA SIEMPRE la lectura del reporte de una
     # vuelta cuyas clases si se declararon. El registro `cerrados[vuelta]` guarda
     # la ruta de esas clases, y esa es la prueba durable.
-    if vuelta is not None and str(vuelta) in _CERRADOS:
-        reg = _CERRADOS[str(vuelta)] or {}
+    #
+    # Y LA CLAVE SE COMPUTA, NO SE EXIGE POR PARAMETRO (vuelta 199, mitad `1.b`):
+    # con `vuelta` manda `vuelta`; SIN `vuelta` manda la del sello que se acaba de
+    # encontrar en disco, y si tampoco la hay, la que el turno tenga en memoria.
+    # Sin esto, la rama nueva del disco bloquearia PARA SIEMPRE la lectura del
+    # reporte de una vuelta cuyas clases si se declararon, que es exactamente la
+    # caida que este mismo bloque vino a evitar cuando se escribio.
+    clave = (str(vuelta) if vuelta is not None
+             else (vuelta_del_disco or _SELLADO["vuelta"] or ""))
+    if clave and clave in _CERRADOS:
+        reg = _CERRADOS[clave] or {}
         if reg.get("ruta_clases"):
             return True, ("el turno de la vuelta %s se CERRO con sus clases "
                           "declaradas (%s): la constancia del cierre es la prueba, "
                           "y el reporte ya no puede quemar nada"
-                          % (vuelta, reg.get("ruta_clases")))
+                          % (clave, reg.get("ruta_clases")))
     return False, ("este turno TIENE SELLO%s y NO ha declarado sus clases. La "
                    "tabla de discrepancias de un reporte ES UN DESTAPE "
                    "(adjudicacion 4.5 del acta 197, por extension de AUDITOR.md "
@@ -467,6 +552,33 @@ def puede_sellar():
     if _SELLADO["hecho"]:
         return False, "este turno ya sello: un sello no se reescribe"
     return True, "la bitacora esta limpia de los tres prohibidos"
+
+
+def _apuntar_sello(ruta, vuelta):
+    """MARCA EL SELLO EN EL ESTADO DEL TURNO Y LO GUARDA. Es la COLA de
+    `sellar()`, la parte que corre DESPUES de que el sello ya este escrito en
+    disco, y va separada por el mismo motivo que `puede_sellar()` esta separada
+    de `sellar()`: **para que un arnes la pueda correr sin escribir un sello de
+    verdad ni arrancar el aislador**.
+
+    ANTES ESTABA EN LINEA DENTRO DE `sellar()`, Y ESO TENIA UN PRECIO MEDIDO: el
+    arnes de la vuelta 199 tenia que COPIAR estas cuatro lineas en su proceso
+    hijo, y una copia no se entera de las mutaciones que se le hacen al original.
+    Su MUTACION `B` salio ROJA por eso, no por el remedio. **Un caso que prueba
+    una copia de si mismo no prueba nada** (`EJECUTOR.md` 1, 29 ago 2026), y la
+    salida honesta era hacer testable lo que se estaba probando, no aflojar el
+    caso.
+
+    LA LINEA DE `_VIVO` ES LA OTRA MITAD DE LA `1.a` (vuelta 199): UN TURNO QUE
+    SELLA ESTA VIVO. Si el fichero venia marcado como cerrado por el turno
+    ANTERIOR y nadie lo reabre, `_guardar_turno()` volveria a escribir
+    `vivo.abierto: false` JUNTO CON el sello, y el proceso siguiente tiraria el
+    sello recien puesto."""
+    _SELLADO["hecho"] = True
+    _SELLADO["ruta"] = ruta
+    _SELLADO["vuelta"] = str(vuelta)
+    _VIVO["abierto"] = True
+    _guardar_turno()
 
 
 def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
@@ -547,10 +659,7 @@ def sellar(criterio, vuelta, muestra=None, semilla=None, puestos=None,
     ruta = os.path.join(base, "SELLO_APERTURA_AUDITOR_V%s.json" % vuelta)
     io.open(ruta, "w", encoding="utf-8", newline=NL).write(
         json.dumps(sello, ensure_ascii=False, indent=1) + NL)
-    _SELLADO["hecho"] = True
-    _SELLADO["ruta"] = ruta
-    _SELLADO["vuelta"] = str(vuelta)
-    _guardar_turno()
+    _apuntar_sello(ruta, vuelta)
     w("SELLO ESCRITO: %s (%d bytes)"
       % (os.path.relpath(ruta, RAIZ).replace(os.sep, "/"), os.path.getsize(ruta)))
     w("   ciega   %s -> %d bytes | sha256 %s"

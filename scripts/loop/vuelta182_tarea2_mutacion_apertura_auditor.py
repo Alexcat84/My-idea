@@ -62,6 +62,7 @@ con `<TEMPORAL>` dentro, y eso es esperado y se dice. Su arnes propio es
 USO:
   python scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py
 """
+import hashlib
 import importlib
 import io
 import os
@@ -127,6 +128,21 @@ def sin_temporal(linea, tmp):
 
 
 
+def sede_medida():
+    """LA SEDE DEL TURNO DEL AUDITOR, MEDIDA EN BYTES Y `sha256`. Devuelve una
+    cadena, y `NO EXISTE` si no esta. Semi-pura: solo lee.
+
+    ES LA VARA DE LA TAREA 2 DE LA VUELTA 199, y va aqui y no en un fichero nuevo
+    porque la moratoria de maquinaria (`AUDITOR.md` 6.3) dice que no se fabrican
+    arneses nuevos: lo que se repara es ESTE."""
+    ruta = os.path.join(LOOP, "_TURNO_DEL_AUDITOR.json")
+    if not os.path.exists(ruta):
+        return "NO EXISTE"
+    datos = io.open(ruta, "rb").read()
+    return "%d bytes, sha256 %s" % (len(datos),
+                                    hashlib.sha256(datos).hexdigest()[:16])
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     importlib.reload(AP)
@@ -135,6 +151,50 @@ def main():
     fallos = 0
     w("CASO POSITIVO POR MUTACION de scripts/loop/apertura_del_auditor.py")
     w("todo el material va FABRICADO: el sello de prueba se escribe en un temporal")
+    w("")
+
+    # ------------------------------------------------------------------------
+    # LA REPARACION DE LA VUELTA 199, TAREA 2, DECLARADA AQUI Y NO ESCONDIDA.
+    #
+    # LO QUE ESTABA MAL, MEDIDO POR EL AUDITOR DE LA 198 Y NO SOSPECHADO: este
+    # arnes llama a `AP.olvidar_todo()` SEIS VECES contra el modulo real SIN
+    # redirigir `AP.RUTA_DEL_TURNO`, y `olvidar_todo()` **BORRA EL FICHERO DEL
+    # TURNO**. O sea: cada corrida de este arnes se llevaba por delante
+    # `docs/loop/_TURNO_DEL_AUDITOR.json`, que es la sede del turno del auditor.
+    # Y este arnes esta EN LA NOMINA DE LA BATERIA, que corre entera.
+    #
+    # LA REPARACION, Y ES LA MISMA LECCION QUE LA 193 LE APLICO A
+    # `olvidar_todo()` Y LA 194 AL ARNES DE LA 192: la ruta del turno se redirige
+    # A UN TEMPORAL **ANTES DE LA PRIMERA LLAMADA**, con lo que LAS SEIS quedan
+    # cubiertas de una vez. SEIS Y NO CINCO: un arnes que borra la sede de verdad
+    # es peor que no tenerlo, y cinco de seis sigue borrandola.
+    #
+    # Y `AP.LOOP` TAMBIEN SE REDIRIGE, por una razon que este mismo fichero
+    # declaraba mal: su docstring dice que **NO ABRE `docs/loop/REPORTE.md` en
+    # ninguna linea**, y el bloque `B` llama a `AP.leer_reporte()`, que lo abre.
+    # Con `AP.LOOP` en el temporal, la afirmacion del docstring pasa a ser cierta
+    # y ademas el bloque `B` deja de depender de los sellos de la sede real.
+    #
+    # LA MEDIDA VA DELANTE Y DETRAS: si la sede se mueve, este arnes CAE.
+    sede_antes = sede_medida()
+    ruta_turno_real = AP.RUTA_DEL_TURNO
+    loop_real = AP.LOOP
+    carpeta_turno = tempfile.mkdtemp(prefix="v182_turno_")
+    AP.RUTA_DEL_TURNO = os.path.join(carpeta_turno, "_TURNO_DEL_AUDITOR.json")
+    AP.LOOP = carpeta_turno
+    AP._cargar_turno()
+    w("LA SEDE DEL TURNO, REDIRIGIDA ANTES DE LA PRIMERA LLAMADA (vuelta 199, T2)")
+    w("   sede de verdad AL ENTRAR: %s" % sede_antes)
+    w("   AP.RUTA_DEL_TURNO redirigida a un temporal: %s"
+      % (AP.RUTA_DEL_TURNO != ruta_turno_real))
+    w("   AP.LOOP redirigido a un temporal:           %s"
+      % (AP.LOOP != loop_real))
+    w("   llamadas a AP.olvidar_todo() que cubre la redireccion: TODAS (6),")
+    w("   porque la redireccion es de modulo y va antes de la primera.")
+    if AP.RUTA_DEL_TURNO == ruta_turno_real or AP.LOOP == loop_real:
+        fallos += 1
+        w("   ROJO: la redireccion no se aplico. NO se sigue: borraria la sede.")
+        return 1
     w("")
     w("LOS TRES PROHIBIDOS, LEIDOS DE LA CONSTANTE Y NO TECLEADOS AQUI:")
     w("   %s" % ", ".join(repr(p) for p in AP.PROHIBIDOS_ANTES_DEL_SELLO))
@@ -260,6 +320,27 @@ def main():
         w("   la constante se deja como estaba: %s"
           % ("SI" if AP.PROHIBIDOS_ANTES_DEL_SELLO == originales else "NO"))
     AP.olvidar_todo()
+    w("")
+
+    # ------------------------------------------------------------------------
+    # LA SEDE, REMEDIDA AL SALIR. ES EL CASO ROJO DE LA TAREA 2 DE LA 199, y
+    # MUERDE: sin la redireccion de arriba, las seis `olvidar_todo()` habrian
+    # borrado el fichero y esta comparacion daria `NO EXISTE` contra los bytes de
+    # entrada. Ninguna de las dos variables es una constante literal: las dos
+    # salen de medir el fichero.
+    AP.RUTA_DEL_TURNO = ruta_turno_real
+    AP.LOOP = loop_real
+    shutil.rmtree(carpeta_turno, ignore_errors=True)
+    sede_despues = sede_medida()
+    w("LA SEDE DEL TURNO, REMEDIDA AL SALIR (caso rojo de la vuelta 199, T2)")
+    w("   AL ENTRAR: %s" % sede_antes)
+    w("   AL SALIR:  %s" % sede_despues)
+    w("   LA SEDE NO SE MOVIO: %s" % ("SI" if sede_antes == sede_despues else "NO"))
+    w("   el temporal del turno se retira (P.16): %s"
+      % (not os.path.exists(carpeta_turno)))
+    if sede_antes != sede_despues:
+        fallos += 1
+        w("   ROJO: este arnes se llevo por delante la sede del turno del auditor.")
     w("")
     w("CIFRA fallos: %d" % fallos)
     w("VEREDICTO: %s" % ("VERDE" if fallos == 0 else "ROJO"))

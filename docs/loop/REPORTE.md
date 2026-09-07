@@ -103,8 +103,8 @@ tabla tallada entera cuando la vuelta cierre.
 <!-- TABLA DE TAREAS -->
 | tarea | que encarga | estado | donde vive la prueba |
 |---|---|---|---|
-| **TAREA 1** | LAS DOS GUARDAS APAGADAS DE `apertura_del_auditor.py`. BLOQUEANTE, y es UNA DE LAS DOS UNICAS EXCEPCIONES a la moratoria de maquinaria (`AUDITOR.md` 6.3), porque el acta 198 ya la adjudico. Llevan apagadas desde la vuelta 197 y le quemaron el sujeto de la ciega al propio auditor. Son dos mitades y ninguna vale sin la otra: (1.a) REABRIR EL TURNO AL SELLAR, o no dejarlo cerrado para siempre; (1.b) `leer_reporte()` MIRANDO EL SELLO EN DISCO tambien cuando no hay `vuelta`, que es como `AUDITOR.md` manda llamarla. CADA MITAD CON SU CASO ROJO QUE MUERDA DE VERDAD, y con dos exigencias que no se negocian porque son justo por donde se escaparon: PROBADO EN PROCESOS DISTINTOS (no en la misma corrida, que es lo que las dejaba pasar) y SOBRE UN TURNO CERRADO. Se parte del ARNES QUE EL AUDITOR DEJO ESCRITO, `scripts/loop/_auditor_v198_guarda_muerta.py`; no se escribe uno nuevo desde cero | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 2** | EL ARNES QUE BORRA LA SEDE DEL TURNO. BLOQUEANTE, y es LA OTRA EXCEPCION a la moratoria. `scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py` llama a `AP.olvidar_todo()` SEIS veces contra el modulo real SIN redirigir `AP.RUTA_DEL_TURNO`, asi que borra `docs/loop/_TURNO_DEL_AUDITOR.json` cada vez que corre. Se redirige `AP.RUTA_DEL_TURNO` en LAS SEIS llamadas, no en cinco: un arnes que borra la sede de verdad es peor que no tenerlo. TIENE FECHA porque la bateria corre esa nomina entera y su vuelta es la 200 | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 1** | LAS DOS GUARDAS APAGADAS DE `apertura_del_auditor.py`. BLOQUEANTE, y es UNA DE LAS DOS UNICAS EXCEPCIONES a la moratoria de maquinaria (`AUDITOR.md` 6.3), porque el acta 198 ya la adjudico. Llevan apagadas desde la vuelta 197 y le quemaron el sujeto de la ciega al propio auditor. Son dos mitades y ninguna vale sin la otra: (1.a) REABRIR EL TURNO AL SELLAR, o no dejarlo cerrado para siempre; (1.b) `leer_reporte()` MIRANDO EL SELLO EN DISCO tambien cuando no hay `vuelta`, que es como `AUDITOR.md` manda llamarla. CADA MITAD CON SU CASO ROJO QUE MUERDA DE VERDAD, y con dos exigencias que no se negocian porque son justo por donde se escaparon: PROBADO EN PROCESOS DISTINTOS (no en la misma corrida, que es lo que las dejaba pasar) y SOBRE UN TURNO CERRADO. Se parte del ARNES QUE EL AUDITOR DEJO ESCRITO, `scripts/loop/_auditor_v198_guarda_muerta.py`; no se escribe uno nuevo desde cero | **CERRADA** | `SALIDA_V199_T1_GUARDAS_REVIVIDAS.txt` (26/26), y los cinco heredados corridos despues del cambio: `SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (52/52, tres casos anadidos) |
+| **TAREA 2** | EL ARNES QUE BORRA LA SEDE DEL TURNO. BLOQUEANTE, y es LA OTRA EXCEPCION a la moratoria. `scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py` llama a `AP.olvidar_todo()` SEIS veces contra el modulo real SIN redirigir `AP.RUTA_DEL_TURNO`, asi que borra `docs/loop/_TURNO_DEL_AUDITOR.json` cada vez que corre. Se redirige `AP.RUTA_DEL_TURNO` en LAS SEIS llamadas, no en cinco: un arnes que borra la sede de verdad es peor que no tenerlo. TIENE FECHA porque la bateria corre esa nomina entera y su vuelta es la 200 | **CERRADA** | `SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt` (0 fallos, sede intacta), `SALIDA_V199_T2_MUTACION_SEDE.txt` (9/9) |
 | **TAREA 3** | LOS EJEMPLARES DEL BANCO FUERA DEL UNIVERSO DE LAS CIEGAS, COMPUTADOS DEL BANCO por el carril `--excluir` que `aislador_de_ciega.py` ya tiene. COMPUTADOS, NO TECLEADOS. Sale de la `P.3` del reporte de la 197, adjudicada por el auditor de la 198 por extension de la `4.4` del acta 197: el banco nombra sus ejemplares CON PUESTO Y CLASE, y la doctrina que se manda citar ENTREGA LA RESPUESTA. Le paso al ejecutor con el `1077` y al auditor con el `165`, y los dos se buscan como caso de control del computo | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 | **TAREA 4** | RETOMAR EL PLAN, POR LA VARA DEL EXPEDIENTE Y NO POR EL CAMPO `estado`. Es la tarea que la moratoria viene a proteger: el plan es el trabajo, y las tres de arriba son la deuda que hay que pagar antes. En este orden: (4.a) `OP-L-03` CON SUS 18 PARES REALES, que es la que lleva mas vueltas aplazada; (4.b) `OP-L-01`; (4.c) `OP-L-02`, y aqui una advertencia del encargo: MEDIR SI SU DOCUMENTO EXISTE Y DECLARARLO, y si no existe SE DICE, no se da por hecho ni se fabrica; (4.d) `OP-I-01` | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -112,5 +112,174 @@ tabla tallada entera cuando la vuelta cierre.
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
 
 <!-- ANEXO DE TAREAS -->
-*(vacio: ninguna tarea ha cerrado todavia)*
+
+### TAREA 1, CERRADA. LAS DOS GUARDAS APAGADAS, VUELTAS A ENCENDER Y PROBADAS DONDE SE ESCAPARON
+
+**LA PRUEBA VIVE EN `docs/loop/SALIDA_V199_T1_GUARDAS_REVIVIDAS.txt`, 26 casos,
+26 VERDES, 0 ROJOS**, contados de ese fichero con `grep -E "CASOS:"` en esta
+vuelta. El arnes es
+`scripts/loop/vuelta199_tarea1_mutacion_guardas_revividas.py`, y **parte del que
+el auditor dejo escrito**, `scripts/loop/_auditor_v198_guarda_muerta.py`, del que
+copia el proceso hijo, el constructor de escenarios y la medicion de la sede.
+**Lo que cambia son los esperados:** aquel salia verde probando que las guardas NO
+mordian; este sale verde probando que SI muerden.
+
+**LAS DOS EXIGENCIAS DEL ENCARGO SE CUMPLEN Y SE MIDEN:** cada paso corre en un
+`subprocess` propio (**cuatro procesos distintos por escenario**), y todos los
+escenarios se montan sobre un turno **CERRADO** (`vivo.abierto: false`), que es el
+estado exacto en que la 197 dejo la sede.
+
+**`1.a` REABRIR EL TURNO. La marca de cerrado SE CONSUME AL CARGARLA.** El
+remedio va en `_cargar_turno()` (linea que reabre tras `_reiniciar_memoria()`) y
+en `_apuntar_sello()`. **La memoria SIGUE reiniciandose**, o sea el turno nuevo
+sigue empezando limpio, que era el remedio entero de la 197; lo unico que cambia
+es que **el turno nuevo queda VIVO en vez de nacer muerto**.
+
+**`1.b` `puede_leer_reporte()` MIRA EL DISCO TAMBIEN SIN `vuelta`**, por
+`sello_mas_reciente_en_disco()`, que devuelve el sello de vuelta mas alta que hay
+en el directorio. Con `vuelta` manda `vuelta`; sin ella manda el sello del disco;
+y la clave del cierre (`_CERRADOS`) **se computa** en vez de exigirse por
+parametro, para que la rama nueva no bloquee para siempre el reporte de una vuelta
+cuyas clases si se declararon.
+
+**LA MUTACION, QUE ES LO QUE HACE QUE ESTO SEA PRUEBA Y NO AFIRMACION.** Se copia
+el modulo a un temporal, se le quitan los remedios por sustitucion de texto, y se
+corren LOS MISMOS escenarios contra la copia mutilada. **Cada `viejo` se cuenta
+antes: si no aparece exactamente una vez, el arnes cae sin medir nada.**
+
+| mutacion | que quita | que pasa, medido |
+|---|---|---|
+| **A** | `_cargar_turno()` deja de reabrir | la bitacora ya NO acumula (`['git status', 'REPORTE.md']` en vez de los tres) y un toque anterior al sello ya NO cierra `puede_sellar()` |
+| **B** | `_apuntar_sello()` deja de reabrir | con la `A` fuera y la `B` puesta el sello SOBREVIVE; con las dos fuera el sello SE TIRA |
+| **C** | `sello_mas_reciente_en_disco()` devuelve vacio | `leer_reporte()` sin `vuelta` vuelve a DEJAR PASAR |
+| **TOTAL** | las tres | reproduce las CUATRO medidas del auditor de la 198: sello no sobrevive, bitacora no acumula, cero prohibidos vistos, y la lectura pasa |
+
+**DOS COSAS QUE ESTE ARNES APRENDIO EN ROJO CONTRA SI MISMO, Y VAN ESCRITAS
+PORQUE SON LA MITAD QUE LO HACE VALER.** Su primera corrida salio **18 de 23**, y
+los cinco rojos eran suyos y no del remedio:
+
+1. **LA `B` NO SE VE SOLA.** Con la `A` puesta, `_cargar_turno()` ya reabre el
+   turno antes de que la cola del sello llegue, asi que quitarle su linea no
+   cambia nada medible. **Se mide contra la `A` ya quitada** (`mut_A` contra
+   `mut_AB`). Un remedio que solo se ve cuando el otro falta sigue siendo un
+   remedio, pero **decir que se prueba solo seria falso**.
+2. **LA `C` NO SE VE EN EL ESCENARIO LARGO**, por el motivo simetrico: con la `A`
+   puesta el sello sobrevive EN MEMORIA y la guarda cae por la memoria antes de
+   mirar el disco. **Se mide en su escenario propio**, que es ademas el estado
+   exacto del auditor de la 198: turno cerrado, memoria en blanco, y el sello en
+   el disco al lado.
+
+**Y UNA CAIDA MIA, `C.1`, DECLARADA SIN TAPAR LO QUE CORRIGE.** Mi primera version
+del proceso hijo **COPIABA** dentro de si las cuatro lineas de la cola de
+`sellar()`, igual que hacia el arnes del auditor. **Una copia no se entera de las
+mutaciones que se le hacen al original**, asi que la MUTACION `B` salia ROJA
+midiendo mi hijo y no el modulo. La salida honesta no era aflojar el caso: fue
+sacar esas cuatro lineas a `_apuntar_sello()` en el modulo y **llamarla**. El
+comportamiento de `sellar()` no cambia; lo que cambia es que ahora se puede probar.
+
+**LO QUE NO SE AFLOJA, Y ES LA MITAD QUE IMPIDE QUE LA GUARDA SEA UNA PARED:** dos
+casos propios miden que un turno cerrado **CON su constancia** (`cerrados[199]` con
+su `ruta_clases`) **SI puede leer**, y que un turno **sin sello en ningun sitio**
+tambien.
+
+**LA SEDE DE VERDAD NO SE MOVIO:** `789 bytes, sha256 52a780c072700280` al entrar y
+al salir del arnes.
+
+**LOS CUATRO ARNESES HEREDADOS QUE MIRAN ESTE MODULO SE CORRIERON DESPUES DEL
+CAMBIO**, y sus veredictos se leen de sus ficheros: `vuelta192_tarea4` VERDE,
+`vuelta193_tarea4e` VERDE, `vuelta194_tarea2c` VERDE (14 de 14) y
+`vuelta197_tarea2c` VERDE. El quinto, `vuelta197_tarea2_mutacion_orden_del_turno.py`,
+**salio ROJO 48 de 49 y se resolvio sin aflojar nada**: va en su propio apartado
+de abajo.
+
+**`D.1` EL ROJO DEL ARNES DE LA 197, Y POR QUE NO ES UNA REGRESION.** Su caso
+*"SIN sello: SI puede leer el reporte"* llamaba a `puede_leer_reporte()` a secas.
+Ese arnes prometia en su docstring **"TODO SOBRE UN TEMPORAL"** y era **verdad a
+medias**: redirigia `AP.RUTA_DEL_TURNO` pero **no `AP.LOOP`**. Mientras la guarda
+solo mirara el disco CON `vuelta`, eso no se notaba; desde la `1.b` una llamada a
+secas dentro de ese arnes leia **los sellos REALES de `docs/loop/`**. **La premisa
+del caso, no su esperado, era lo que habia dejado de ser cierto.** Se arreglo
+completando el sandbox y **anadiendo un caso en vez de sustituir ninguno**: el
+original se mide ahora contra un directorio SIN sellos y sigue esperando `True`, y
+al lado entra el que la `1.b` hace nacer, *"sin sello en memoria pero CON sello en
+disco: ya NO puede"*, que espera `False`. **Ese arnes pasa de 49 a 52 casos, 52 en
+verde, y ningun esperado se aflojo.**
+
+**`P.1` UNA PREGUNTA QUE NO CONTESTO YO, Y VA MARCADA.** No corri
+`_auditor_v198_guarda_muerta.py` despues del remedio, **a proposito**: sus diez
+casos estan escritos para salir verdes sobre el agujero, asi que ahora saldrian
+rojos, y correrlo **pisaria `docs/loop/SALIDA_V198_GUARDA_MUERTA.txt`, que es la
+prueba sellada del auditor**. Su bloque `MUTACION TOTAL` de mi arnes reproduce sus
+cuatro medidas una a una. **No esta en la nomina de la bateria** (medido: la nomina
+no lo nombra), asi que la 200 no lo va a correr. **Si el auditor quiere que su
+arnes quede invertido en vez de citado, eso lo decide el, no yo.**
+
+### TAREA 2, CERRADA. EL ARNES QUE BORRABA LA SEDE DEL TURNO, Y LAS SEIS LLAMADAS
+
+**LA CIFRA DE LAS SEIS NO SE HEREDO: SE CONTO HOY.** El bloque `H.1` del sello de
+apertura de esta vuelta corrio el conteo ANTES de la primera operacion, y dice
+**6 llamadas a `AP.olvidar_todo()`**, en las lineas **153, 175, 190, 213, 232 y
+262**, y **CERO menciones de `RUTA_DEL_TURNO`** en todo el fichero. Calza con las
+seis que el acta 198 nombra. Fuente: `docs/loop/SALIDA_V199_APERTURA.txt`.
+
+**LA REPARACION CUBRE LAS SEIS, Y NO CINCO, PORQUE ES DE MODULO Y VA ANTES DE LA
+PRIMERA.** `AP.RUTA_DEL_TURNO` se redirige a un `mkdtemp` justo despues del
+`importlib.reload(AP)` y se restaura en el bloque final. Una redireccion por
+llamada habria dejado seis sitios donde olvidarse de uno; una de modulo delante de
+todas no los tiene. **Y se redirige tambien `AP.LOOP`**, por una razon que el
+propio fichero declaraba mal y que va abajo.
+
+**EL CASO ROJO ESTA DENTRO DEL ARNES Y ES SUYO:** mide la sede en bytes y `sha256`
+al entrar y al salir, y **suma un fallo si se movio**. Ninguna de las dos cifras es
+una constante literal: las dos salen de `sede_medida()`. Corrida de hoy, leida de
+`docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`:
+**`789 bytes, sha256 52a780c072700280`** al entrar y **lo mismo** al salir,
+**`CIFRA fallos: 0`, VEREDICTO VERDE**. Los catorce casos que ese arnes ya probaba
+siguen enteros: ningun esperado se aflojo y ningun escenario se quito.
+
+**LA PRUEBA DE MUTACION DEL CASO ROJO, QUE `EJECUTOR.md` 1 EXIGE**, vive en
+`docs/loop/SALIDA_V199_T2_MUTACION_SEDE.txt`, **9 casos, 9 VERDES**, y la corre
+`scripts/loop/_v199_t2_mutacion_sede.py`. Va en fichero aparte y con prefijo `_`
+por un motivo que se dice: **la mutacion es destructiva por naturaleza**, y la sede
+esta en `.gitignore`, o sea que **git no la puede devolver**. Meterla dentro del
+arnes de la nomina dejaria un arnes que destruye la sede cada vez que la bateria
+pasa, que es exactamente lo que esta tarea repara. **No entra en la nomina**
+(congelada en 135) y el censo no lo cuenta por el prefijo.
+
+| paso | que se le quita al arnes | que se mide |
+|---|---|---|
+| **M1** | solo la REDIRECCION | **la GUARDA muerde**: exitcode 1 y la sede queda intacta, `sha256 52a780c072700280` |
+| **M2** | la redireccion **Y** la guarda (el arnes tal como estaba antes de esta vuelta) | **la sede QUEDA PISADA**: `52a780c072700280` al entrar contra `31ddfaad65791b63` despues |
+| **restauracion** | (nada) | la sede vuelve **byte a byte** y se **REMIDE**: `52a780c072700280` |
+
+**`C.2` UNA CAIDA MIA EN ESTA MISMA PRUEBA, DECLARADA SIN TAPAR LO QUE CORRIGE.**
+Mi primera version media **la EXISTENCIA** del fichero y esperaba que
+desapareciera. Salio **ROJO**, y tenia razon: `olvidar_todo()` BORRA el fichero,
+pero **el `apuntar()` siguiente LO VUELVE A CREAR** con la bitacora del arnes
+dentro. **Medir la existencia daba VERDE sobre una sede PISADA**, que es el fallar
+callado que el banco `9` prohibe. **La vara pasa a ser el contenido**, y con ella
+el caso muerde. Lo que el acta 198 llama "borra la sede" es, medido de cerca,
+**la borra y la reescribe con otro contenido**: el fichero sigue ahi y ya no es el
+del auditor. **La diferencia importa** porque una guarda que solo mire si el
+fichero existe habria dado verde.
+
+**`D.2` Y UNA SEGUNDA CAPA QUE NO SABIA QUE ESTABA MIDIENDO, PUBLICADA COMO CASO.**
+La `M1` se escribio esperando que borrara la sede, y **no la borra**: salta la
+guarda que la propia reparacion dejo puesta (*"si la redireccion no se aplico, NO
+se sigue: borraria la sede"*). **Eso no es un fallo de la mutacion, es una capa de
+mas**, y por eso la mutacion se parte en dos en vez de darse por buena.
+
+**`D.3` LA PROMESA DEL DOCSTRING QUE ERA FALSA, Y AHORA ES CIERTA.** Ese arnes
+declara desde la vuelta 183 que **"este fichero NO ABRE `docs/loop/REPORTE.md` en
+ninguna linea"**, y su bloque `B` llama a `AP.leer_reporte()`, que **lo abria**.
+Con `AP.LOOP` redirigido al temporal, la afirmacion pasa a ser cierta y el bloque
+`B` deja de depender de los sellos de la sede real. **Se declara aqui en vez de
+corregirse callando**, porque una promesa de docstring que nadie mide es una cifra
+sin vara.
+
+**LA FECHA SE CUMPLE:** la bateria corre en la **200** con la nomina congelada en
+**135**, y este arnes esta **dentro** de esa nomina (medido: `VMV.VIEJAS` lo nombra
+en la linea 847 de `scripts/loop/verificar_mutaciones_viejas.py`). **Cuando la 200
+lo corra, ya no se llevara la sede por delante.**
+
 <!-- FIN ANEXO DE TAREAS -->

@@ -149,10 +149,24 @@ def main():
 
     tmp = tempfile.mkdtemp(prefix="v197_orden_turno_")
     ruta_original = AP.RUTA_DEL_TURNO
+    loop_original = AP.LOOP
     try:
         AP.RUTA_DEL_TURNO = os.path.join(tmp, "_TURNO_DEL_AUDITOR.json")
+        # EL SANDBOX SE COMPLETA EN LA VUELTA 199, TAREA 1.b, Y SE DECLARA.
+        # Este arnes prometia en su docstring *"TODO SOBRE UN TEMPORAL"*, y era
+        # verdad a medias: `AP.LOOP` seguia apuntando a `docs/loop/` de verdad.
+        # Mientras `puede_leer_reporte()` solo mirara el disco CON `vuelta`, eso
+        # no se notaba. Desde que la 199 la hace mirar el disco TAMBIEN SIN
+        # `vuelta`, una llamada a secas dentro de este arnes leia los sellos
+        # REALES de la sede. Se redirige, y con eso la promesa del docstring pasa
+        # a ser cierta.
+        AP.LOOP = tmp
         ok &= _caso(w, "AP.RUTA_DEL_TURNO ya NO apunta a la sede de verdad",
                     AP.RUTA_DEL_TURNO == ruta_original, False)
+        ok &= _caso(w, "y AP.LOOP tampoco apunta a docs/loop de verdad",
+                    AP.LOOP == loop_original, False)
+        vacio = os.path.join(tmp, "sin_sellos")
+        os.makedirs(vacio)
         io.open(os.path.join(tmp, "mis_clases.txt"), "w", encoding="utf-8",
                 newline=NL).write("clases fabricadas por el arnes" + NL)
         io.open(os.path.join(tmp, "REPORTE_FABRICADO.md"), "w", encoding="utf-8",
@@ -167,8 +181,20 @@ def main():
         w("   (la variable del veredicto es COMPUTADA: sale de llamar a la")
         w("    funcion, nunca de una constante escrita al lado)")
         AP.olvidar_todo()
-        ok &= _caso(w, "SIN sello: SI puede leer el reporte, y eso no se prohibe",
-                    AP.puede_leer_reporte()[0], True)
+        # EL CASO ORIGINAL DE LA 197, CON SU PREMISA HECHA CIERTA. Decia
+        # *"SIN sello: SI puede leer"*, y su premisa era que el turno no tuviera
+        # sello. Desde la 199 *sin sello* significa SIN SELLO EN NINGUN SITIO, ni
+        # en memoria ni en disco, asi que se mide contra un directorio SIN
+        # SELLOS. **Es la mitad que impide que la guarda sea una pared**, y sigue
+        # entera: lo que cambia es donde se mira, no lo que se espera.
+        ok &= _caso(w, "SIN sello EN NINGUN SITIO: SI puede leer, y no se prohibe",
+                    AP.puede_leer_reporte(base=vacio)[0], True)
+        # Y EL CASO QUE LA VUELTA 199 HACE NACER, ANADIDO Y NO SUSTITUIDO: sin
+        # sello en MEMORIA pero CON el sello EN DISCO, la guarda YA MUERDE. Antes
+        # de la 199 esta misma llamada devolvia True, y por ahi se le escapo el
+        # sujeto al auditor de la 198.
+        ok &= _caso(w, "SIN sello en memoria pero CON sello EN DISCO: ya NO puede",
+                    AP.puede_leer_reporte()[0], False)
         ok &= _caso(w, "y sin sello EN DISCO tampoco se prohibe",
                     AP.puede_leer_reporte(vuelta=VUELTA, base=tmp)[0], False)
         w("      OJO: la linea de arriba sale FALSE porque el sello de la vuelta")
@@ -359,6 +385,7 @@ def main():
         # RESTAURA DESPUES.
         AP.olvidar_todo()
         AP.RUTA_DEL_TURNO = ruta_original
+        AP.LOOP = loop_original
         shutil.rmtree(tmp, ignore_errors=True)
         w("D) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)")
         w("   (su nombre NO se imprime: `mkdtemp` lo fabrica aleatorio y esta")
@@ -366,6 +393,8 @@ def main():
         ok &= _caso(w, "el temporal quedo retirado", os.path.exists(tmp), False)
         ok &= _caso(w, "y AP.RUTA_DEL_TURNO vuelve a su sede",
                     AP.RUTA_DEL_TURNO == ruta_original, True)
+        ok &= _caso(w, "y AP.LOOP vuelve a docs/loop de verdad",
+                    AP.LOOP == loop_original, True)
         ok &= _caso(w, "el fichero del turno del TEMPORAL si quedo borrado",
                     os.path.exists(os.path.join(tmp, "_TURNO_DEL_AUDITOR.json")),
                     False)

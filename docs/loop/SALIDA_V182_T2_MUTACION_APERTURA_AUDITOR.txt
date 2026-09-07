@@ -1,6 +1,13 @@
 CASO POSITIVO POR MUTACION de scripts/loop/apertura_del_auditor.py
 todo el material va FABRICADO: el sello de prueba se escribe en un temporal
 
+LA SEDE DEL TURNO, REDIRIGIDA ANTES DE LA PRIMERA LLAMADA (vuelta 199, T2)
+   sede de verdad AL ENTRAR: 789 bytes, sha256 52a780c072700280
+   AP.RUTA_DEL_TURNO redirigida a un temporal: True
+   AP.LOOP redirigido a un temporal:           True
+   llamadas a AP.olvidar_todo() que cubre la redireccion: TODAS (6),
+   porque la redireccion es de modulo y va antes de la primera.
+
 LOS TRES PROHIBIDOS, LEIDOS DE LA CONSTANTE Y NO TECLEADOS AQUI:
    'git log', 'git status', 'REPORTE.md'
 
@@ -73,6 +80,12 @@ E) LA MUTACION DEL VALOR ESPERADO, QUE ES LO QUE PRUEBA QUE ESTO CAE
    con la lista mutada, puede_sellar computa: True
    TENIA QUE CAMBIAR A True: SI
    la constante se deja como estaba: SI
+
+LA SEDE DEL TURNO, REMEDIDA AL SALIR (caso rojo de la vuelta 199, T2)
+   AL ENTRAR: 789 bytes, sha256 52a780c072700280
+   AL SALIR:  789 bytes, sha256 52a780c072700280
+   LA SEDE NO SE MOVIO: SI
+   el temporal del turno se retira (P.16): True
 
 CIFRA fallos: 0
 VEREDICTO: VERDE

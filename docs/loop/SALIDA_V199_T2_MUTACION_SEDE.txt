@@ -1,0 +1,43 @@
+==============================================================================
+VUELTA 199, TAREA 2: LA PRUEBA DE MUTACION DEL CASO ROJO.
+SIN LA REDIRECCION, LA SEDE DEL TURNO QUEDA PISADA. CON ELLA, INTACTA.
+==============================================================================
+
+LA SEDE AL ENTRAR: 789 bytes, sha256 52a780c072700280
+   el respaldo se escribe y calza byte a byte con la sede         VERDE
+   la redireccion aparece EXACTAMENTE 1 vez en el arnes           VERDE
+      veces contadas: 1
+   la guarda de la redireccion aparece EXACTAMENTE 1 vez en el ar VERDE
+      veces contadas: 1
+
+M1. SE LE QUITA SOLO LA REDIRECCION.
+   Se esperaba que borrase la sede, y NO la borra: salta la GUARDA que la
+   propia reparacion dejo puesta. Es una segunda capa, y se publica.
+   M1 -> exitcode 1 | la sede existe: True | sha256 52a780c072700280
+   M1: la GUARDA muerde y el arnes NO sigue (exitcode distinto de VERDE
+      exitcode medido: 1
+   M1: con la guarda puesta, la sede queda INTACTA byte a byte    VERDE
+      sha256 tras M1: 52a780c072700280
+
+M2. SE LE QUITAN LA REDIRECCION **Y** LA GUARDA, que es el arnes tal como
+   estaba ANTES de esta vuelta. Aqui es donde el caso rojo tiene que morder.
+   M2 -> exitcode 1 | la sede existe: True | sha256 31ddfaad65791b63
+   M2: SIN redireccion NI guarda, LA SEDE QUEDA PISADA            VERDE
+      sha256 al entrar 52a780c072700280 | sha256 tras M2 31ddfaad65791b63 (existe: True)
+   la copia mutada se retira del arbol (P.16)                     VERDE
+
+LA RESTAURACION, Y SE REMIDE: una restauracion que no se remide no lo es.
+   sha256 al entrar:    52a780c072700280
+   sha256 al restaurar: 52a780c072700280
+   LA SEDE QUEDA IDENTICA BYTE A BYTE A COMO ENTRO                VERDE
+   el temporal se retira (P.16)                                   VERDE
+
+==============================================================================
+CASOS: 9 | VERDES: 9 | ROJOS: 0
+VEREDICTO: VERDE
+==============================================================================
+
+LO QUE ESTO SIGNIFICA, DICHO SIN ADORNO: el caso rojo de la TAREA 2 MUERDE.
+Con la redireccion la sede no se mueve. Sin ella, y sin la guarda, el arnes
+la BORRA y luego la REESCRIBE con su propio estado: el fichero sigue ahi y
+su contenido ya no es el del auditor. Las dos cifras salen de medir.

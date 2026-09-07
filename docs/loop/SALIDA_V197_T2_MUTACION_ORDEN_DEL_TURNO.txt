@@ -3,13 +3,15 @@ VUELTA 197, TAREA 2: CASO POSITIVO POR MUTACION DEL ORDEN DEL TURNO
 ==============================================================================
 
 0) LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE FABRICAR NADA
-   EXISTE, 801 bytes | sha256 69dfc4b6c6854d39
+   EXISTE, 789 bytes | sha256 52a780c072700280
 
    AP.RUTA_DEL_TURNO ya NO apunta a la sede de verdad               VERDE
+   y AP.LOOP tampoco apunta a docs/loop de verdad                   VERDE
 A) `puede_leer_reporte()`: LOS TRES ESTADOS DEL TURNO, UNO POR UNO
    (la variable del veredicto es COMPUTADA: sale de llamar a la
     funcion, nunca de una constante escrita al lado)
-   SIN sello: SI puede leer el reporte, y eso no se prohibe         VERDE
+   SIN sello EN NINGUN SITIO: SI puede leer, y no se prohibe        VERDE
+   SIN sello en memoria pero CON sello EN DISCO: ya NO puede        VERDE
    y sin sello EN DISCO tampoco se prohibe                          VERDE
       OJO: la linea de arriba sale FALSE porque el sello de la vuelta
       MUT197 SI existe en el temporal. Es el caso siguiente.
@@ -60,7 +62,7 @@ B) `cerrar_turno()`, EN PROCESOS DE VERDAD, QUE ES DONDE VIVE EL
 B.1) Y EL ORDEN DEL REPORTE TAMBIEN VALE ENTRE PROCESOS, que es la
      unica forma de que no se esquive arrancando otro
    un proceso nuevo, con el sello EN DISCO y sin clases: CAE        VERDE
-      motivo publicado: este turno TIENE SELLO en disco (../../AppData/Local/Temp/v197_orden_turno_8elww0q0/SELLO_APERTURA_AUDITOR_VMU
+      motivo publicado: este turno TIENE SELLO en disco (../../AppData/Local/Temp/v197_orden_turno_gy0q5wrg/SELLO_APERTURA_AUDITOR_VMU
    declara sus clases en otro proceso: VERDE                        VERDE
    y ahora SI, aunque el turno se cerro en medio                    VERDE
    y lee el texto de verdad                                         VERDE
@@ -90,12 +92,13 @@ D) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
     salida se sella y se compara byte a byte)
    el temporal quedo retirado                                       VERDE
    y AP.RUTA_DEL_TURNO vuelve a su sede                             VERDE
+   y AP.LOOP vuelve a docs/loop de verdad                           VERDE
    el fichero del turno del TEMPORAL si quedo borrado               VERDE
    LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES Y DESPUES:
-   al entrar: EXISTE, 801 bytes | al salir: EXISTE, 801 bytes
+   al entrar: EXISTE, 789 bytes | al salir: EXISTE, 789 bytes
    el turno del auditor DE VERDAD no CAMBIO                         VERDE
 
 ==============================================================================
-CASOS: 49 | VERDES: 49 | ROJOS: 0
+CASOS: 52 | VERDES: 52 | ROJOS: 0
 VEREDICTO: VERDE
 ==============================================================================

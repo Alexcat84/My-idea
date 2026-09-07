@@ -1,0 +1,99 @@
+==============================================================================
+VUELTA 199, TAREA 1: LAS DOS GUARDAS APAGADAS, VUELTAS A ENCENDER Y
+PROBADAS EN PROCESOS DISTINTOS SOBRE UN TURNO CERRADO.
+Arnes de partida: scripts/loop/_auditor_v198_guarda_muerta.py
+==============================================================================
+
+SEDE DE VERDAD AL ENTRAR: 789 bytes, sha256 52a780c072700280
+
+------------------------------------------------------------------------------
+LAS COPIAS DEL MODULO, Y CADA MUTACION COMPROBADA ANTES DE USARLA
+   original: 59500 bytes, sha256 4ede4d2d46de0606
+   la mutacion A. aparece EXACTAMENTE 1 vez en el modulo            VERDE
+      veces contadas: 1
+   A. _cargar_turno() deja de reabrir el turno consumido (mata la 1.a de carga) -> mut_A
+   la mutacion B. aparece EXACTAMENTE 1 vez en el modulo            VERDE
+      veces contadas: 1
+   B. _apuntar_sello() deja de reabrir el turno (mata la 1.a de sello) -> mut_B
+   la mutacion C. aparece EXACTAMENTE 1 vez en el modulo            VERDE
+      veces contadas: 1
+   C. sello_mas_reciente_en_disco() devuelve vacio (mata la 1.b) -> mut_C
+   la mutacion TOTAL cambia el modulo de verdad (no sale identica)  VERDE
+      bytes original 59500, bytes mutado 59458
+
+------------------------------------------------------------------------------
+ESCENARIO CON EL REMEDIO PUESTO. TURNO CERRADO, CUATRO PROCESOS DISTINTOS.
+   tras el 1.er proceso (toco `git log`, ANTES de sellar):
+      bitacora ['git log'] | puede_sellar False
+   tras los cuatro procesos:
+      {"sellado": true, "bitacora": ["git log", "git status", "REPORTE.md"], "vivo": true}
+
+   1.a LA BITACORA ACUMULA ENTRE PROCESOS (remedio de la 193)       VERDE
+      bitacora medida: ['git log', 'git status', 'REPORTE.md']
+   1.a EL SELLO SOBREVIVE de un proceso al siguiente                VERDE
+   1.a `sellar()` PUEDE CAER EN ROJO: ve los prohibidos             VERDE
+      toques prohibidos que ve: ['git log', 'git status', 'REPORTE.md']
+   1.a UN TOQUE ANTERIOR AL SELLO YA CIERRA `puede_sellar()`        VERDE
+      motivo: el turno ya toco 'git log' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello e
+   1.a `vivo.abierto` quedo en TRUE tras sellar                     VERDE
+   1.b `leer_reporte()` SIN vuelta CAE EN ROJO                      VERDE
+      motivo: este turno TIENE SELLO en disco (v199_t1_qu3fj68n/base_sano/SELLO_APERTURA_AUDITOR_V199.json) y 
+   1.b y el sello que encuentra en disco SIN vuelta es el 199       VERDE
+      sello_mas_reciente_en_disco(): ['C:\\Users\\AlexDesk\\AppData\\Local\\Temp\\v199_t1_qu3fj68n\\base_sano\\SELLO_APERTURA_AUDITOR_V199.json', '199']
+
+------------------------------------------------------------------------------
+EL CASO DE LA PARED: UN TURNO CERRADO **CON SU CONSTANCIA** TIENE QUE
+DEJAR LEER. Un guardia que no deja pasar a nadie no es un guardia.
+   1.b con `cerrados[199]` y su `ruta_clases`, SIN vuelta, DEJA PAS VERDE
+      motivo: el turno de la vuelta 199 se CERRO con sus clases declaradas (docs/loop/_auditor_v199_mis_clases
+
+Y SIN NINGUN SELLO EN DISCO NI EN MEMORIA, TAMPOCO ES PARED:
+   1.b sin sujeto sellado en ningun sitio, SIN vuelta, DEJA PASAR   VERDE
+      motivo: este turno NO ha sellado: no hay sujeto elegido, y por eso leer el reporte no puede quemar nada
+
+------------------------------------------------------------------------------
+LA MUTACION: SE LE QUITA CADA REMEDIO Y SE COMPRUEBA QUE SU CASO CAE.
+Si un caso NO cae al quitarle su remedio, ese caso no prueba nada.
+
+   MUTACION A (solo A)
+      bitacora: ['git status', 'REPORTE.md'] | sellado: True | prohibidos: ['git status', 'REPORTE.md']
+   MUTACION A: la bitacora ya NO acumula entre procesos             VERDE
+      bitacora con la mutacion: ['git status', 'REPORTE.md']
+   MUTACION A: un toque anterior al sello ya NO cierra el sello     VERDE
+      puede_sellar con la mutacion: True
+
+   MUTACION B, MEDIDA CONTRA LA `A` YA QUITADA (mut_A contra mut_AB)
+      con A quitada y B PUESTA:   sellado True
+      con A y B quitadas:         sellado False
+   MUTACION B: con la A fuera, la B PUESTA salva el sello           VERDE
+   MUTACION B: con la A fuera, quitar la B TIRA el sello            VERDE
+      sellado con A y B quitadas: False
+
+   MUTACION C, EN SU ESCENARIO PROPIO (el del auditor de la 198):
+      turno CERRADO, memoria en blanco, y el sello V199 EN EL DISCO.
+      con el remedio:   sellado en memoria False | puede_leer SIN vuelta False
+      con la mutacion:  sellado en memoria False | puede_leer SIN vuelta True
+   1.b EL ESCENARIO ES EL BUENO: la memoria NO tiene sello, solo el VERDE
+   1.b CON EL REMEDIO, `leer_reporte()` SIN vuelta CAE EN ROJO      VERDE
+      motivo: este turno TIENE SELLO en disco (v199_t1_qu3fj68n/base_solo_disco/SELLO_APERTURA_AUDITOR
+   MUTACION C: sin el remedio, SIN vuelta DEJA PASAR (el agujero de VERDE
+      motivo con la mutacion: este turno NO ha sellado: no hay sujeto elegido, y por eso leer el reporte no puede quem
+
+   Y LA MUTACION TOTAL, que es el modulo TAL COMO ESTABA ANTES DE ESTA
+   VUELTA: tiene que reproducir el agujero ENTERO que el auditor midio.
+      bitacora: [] | sellado: False | prohibidos: []
+   TOTAL: el sello NO sobrevive, como midio la 198                  VERDE
+   TOTAL: la bitacora NO acumula, como midio la 198                 VERDE
+      bitacora: []
+   TOTAL: `sellar()` no ve ningun prohibido, como midio la 198      VERDE
+   TOTAL: `leer_reporte()` SIN vuelta DEJA PASAR, como midio la 198 VERDE
+
+------------------------------------------------------------------------------
+SEDE DE VERDAD AL SALIR:  789 bytes, sha256 52a780c072700280
+   LA SEDE DE VERDAD NO SE MOVIO (P.16, leccion de la `C.1` de la 1 VERDE
+   el temporal se retira (P.16, quien fabrica limpia)               VERDE
+
+==============================================================================
+CASOS: 26 | VERDES: 26 | ROJOS: 0
+VEREDICTO DEL ARNES: VERDE
+==============================================================================
