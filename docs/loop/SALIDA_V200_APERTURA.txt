@@ -1,0 +1,207 @@
+SELLO DE APERTURA DE LA VUELTA 200, escrito ANTES de la primera operacion.
+regimen: MORATORIA DE MAQUINARIA (AUDITOR.md 6.3, decision del fundador del 7
+         sep 2026). NO SE FABRICAN ARNESES, GUARDAS NI LECTORES NUEVOS, y
+         esta vuelta NO TIENE NINGUNA EXCEPCION: las dos de la 199 se
+         consumieron. La nomina queda CONGELADA EN 135.
+         ESTA ES VUELTA DE BATERIA. AUDITOR.md 6.1 dice que NO LLEVA NADA
+         MAS: la bateria entera, su doble corrida, su reloj y su salida
+         sellada. El encargo trae DOS tareas y la segunda es la bateria.
+         EL TOPE DE SUB-TAREAS LO MANDA LA CIFRA DEL BLOQUE E, contada aqui
+         del instrumento. El encargo trae DOS sub-tareas.
+ESTE BLOQUE CORRE EL CICLO COMPLETO, tsc y pnpm test INCLUIDOS, y escribe el
+         mismo los dos literales de la guarda D.1.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+69a16e29686196021707ab9f67bead8032b0f6ad
+69a16e29686196021707ab9f67bead8032b0f6ad	2026-09-07 08:46:54 -0400	ACTA DEL AUDITOR, VUELTA 199, SIN PARADA: LA VUELTA REPRODUCE ENTERA SALVO UN NUMERO QUE SU PROPIA VUELTA VOLVIO FALSO, Y MIS ONCE DISCREPANCIAS SALEN DE UNA DEFINICION QUE HEREDE SIN COMPROBAR.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular. Se escriben AQUI, en el bloque de apertura, para
+que la apertura sellada NO haya que tocarla al cierre.
+CIFRA lineas de status: 1
+   ?? scripts/loop/vuelta200_apertura.py
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.1 LA CADENA DE LA VUELTA 199 Y SU ACTA, EN GIT ===
+acta 199                         1 acierto(s): 69a16e29
+cierre de la 199                 1 acierto(s): fceae11f
+decision del fundador            1 acierto(s): 17796e77
+
+=== D. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN, y el cierre las remide contra estas.
+
+=== D.1 EL FICHERO DEL TURNO DEL AUDITOR, MEDIDO AL ENTRAR ===
+   docs/loop/_TURNO_DEL_AUDITOR.json
+      disco 1022 bytes | LF 1022 bytes | sha256 LF 38f4be921415bc98
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+EL NOMBRE SALE DE LA CONSTANTE QUE SE EJECUTA, NO DE LA PROSA.
+instrumento: scripts/loop/vuelta192_racha_de_cierres.py
+   existe y no esta vacio: SI, 5678 bytes en disco | 5678 LF | sha256 LF 5461d55226877ac3
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt. Aqui se corre, se lee la cifra, y la
+   sellada se RESTAURA con git checkout -- y se REMIDE.
+CIFRA racha de cierres, contada del inventario ENTERO: 1
+las vueltas de la racha: 199
+   CON RACHA 1 EL TOPE SIGUE SIENDO DE DOS SUB-TAREAS, y el
+   encargo trae DOS, que tambien cabe.
+nuevo corte, medido antes de restaurar:
+   2935 bytes LF | sha256 LF 94bfc33de3fb480d
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== E.1 EL INVENTARIO DE CIERRES SELLADOS, CONTADO DE DISCO ===
+CIFRA ficheros SALIDA_V*_CERRAR_REPORTE.txt en docs/loop/: 16
+las vueltas con sellada de cierre: 179, 180, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 195, 196, 197, 199
+CIFRA vueltas del rango 179 a 199 SIN sellada: 5
+   cuales: 181, 182, 183, 194, 198
+CIFRA sellada de cierre de la vuelta 200 al entrar: 0
+
+=== F. LA NOMINA Y EL CENSO AL ENTRAR, CONTRA EL CONGELADO EN 135 ===
+AQUI NO SE TOCA NADA: se MIDE. AUDITOR.md 6.3 congela la nomina en 135: NI
+   CRECE NI SE PODA. Si la cifra medida no es 135, SE DECLARA la discrepancia
+   en vez de ajustarla.
+ESTA ES LA MEDICION DE LA CAIDA C.1 DEL ACTA 199, Y SE TOMA AQUI PARA QUE LA
+   TAREA 1.a NO ELIJA SU CIFRA DESPUES DE MIRAR. La cifra viaja con su vara y
+   se miden LAS DOS (adjudicacion 4.7 del acta 197).
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CONGELADO QUE MANDA AUDITOR.md 6.3: 135
+CALZA LA NOMINA CON EL CONGELADO: SI
+CIFRA casos declarados: 2
+CIFRA arneses que el censo reconoce en scripts/loop/: 197
+LA VARA DEL CENSO, que es la que decide (vuelta 178, TAREA 1.b): 148
+CIFRA ultima vuelta representada en la nomina (INFORMATIVA): 195
+CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2
+      FUERA DE LA NOMINA (con vara 148): vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA (con vara 148): vuelta199_tarea1_mutacion_guardas_revividas.py
+CIFRA arneses del censo FUERA de la nomina SIN VARA (vara=0): 62
+   LAS DOS CIFRAS JUNTAS SON LA FRASE ENTERA: con vara 148 salen 2, sin
+   vara salen 62.
+CIFRA entradas de la nomina que el censo NO VE: 0
+CIFRA entradas SIN SUJETO CONGELADO, leidas de
+   guarda_del_sujeto_congelado(): 0
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.60
+CIFRA entradas en total: 51
+CIFRA colisiones: 0
+
+=== H. EL SUJETO DE LA TAREA 1: EL ACTA 199 Y LA SEDE DE LAS TRES ===
+    CORRECCIONES DE CIFRA
+docs/loop/ACTA_AUDITOR.md: 4635053 bytes disco | 4635053 bytes LF | sha256 LF dcbfabdb58b655f6
+CIFRA lineas del acta por split(NL): 70229
+cabecera de la VUELTA 198: 1 acierto(s), linea(s) 69636
+cabecera de la VUELTA 199: 1 acierto(s), linea(s) 69878
+cabecera de la VUELTA 200: 0 acierto(s), linea(s) (ninguna)
+CUERPO ACOTADO del acta 199: lineas 69878 a 70229 (1-indexadas), 352 lineas
+   la de arriba es LA COTA QUE MANDA en esta vuelta. El encargo cita
+   69878 a 70229. CALZA EL PRINCIPIO CON EL ENCARGO: SI
+   CALZA EL FINAL CON EL ENCARGO: SI
+
+LA SEDE DE LAS TRES CORRECCIONES, MEDIDA AL ENTRAR. Al entrar, el reporte de
+   la 199 todavia vive en docs/loop/REPORTE.md; el esqueleto de esta vuelta lo
+   ARCHIVA en docs/loop/reportes/REPORTE_V199.md antes de pisarlo, y ESA es la
+   sede donde las tres correcciones se escriben.
+   docs/loop/REPORTE.md: 48688 bytes disco | 48688 LF | sha256 LF e88a05f2d64c791f
+   CIFRA lineas por split(NL): 685 | CIFRA lineas por count(NL): 684
+   C.1, la frase del arnes fuera de la nomina     2 linea(s): 646, 677
+   C.1, el 61 sin vara                            0 linea(s): (ninguna)
+   C.2, el literal HUECO                          4 linea(s): 15, 489, 661, 663
+   C.3, el 414                                    1 linea(s): 488
+
+EL FICHERO QUE LAS CAIDAS C.2 Y C.3 MIDEN, CONTADO AQUI POR LOS DOS CAMINOS
+   QUE EL ACTA 199 DISTINGUE. La C.2 dice que el literal HUECO sale 3 y no 4,
+   y que el 4 es el conteo INSENSIBLE a mayusculas. La C.3 dice 413 lineas y
+   no 414, y que el 414 sale de split() sobre un fichero que acaba en salto.
+   docs/plan/10_INVENTARIO.md: 34258 bytes disco | 33845 LF | sha256 LF 67f464d3d0b9e067
+   CIFRA lineas por split(NL) (el camino del 414): 414
+   CIFRA lineas por count(NL) (el camino del 413): 413
+   CIFRA acaba en salto de linea: SI
+   CIFRA lineas con el literal HUECO, SENSIBLE a mayusculas: 3
+      lineas: 8, 105, 213
+   CIFRA lineas con hueco, INSENSIBLE a mayusculas: 4
+      lineas: 8, 45, 105, 213
+   CIFRA apariciones del literal HUECO (no lineas, apariciones): 3
+   CIFRA lineas con PROVISIONAL: 2, lineas 203, 398
+
+=== H.1 EL SUJETO DE LA TAREA 2: LAS NUEVE SELLADAS DEL 183, MEDIDAS ===
+    ANTES DE TOCAR NADA
+EL ACTA 199, HALLAZGO 5.2, DICE QUE ESTE LANZADOR LE VA A MENTIR A ESTA
+   VUELTA: computa su vuelta de su propio nombre de fichero, no admite
+   --vuelta, y escribe siempre SALIDA_V183_BATERIA_TRAMO_N.txt. Sus NUEVE
+   salidas selladas son DE LA CORRIDA DE LA 183 y correr el tramo 1 las PISA.
+   AQUI SE MIDEN ENTERAS, con bytes y sha256, ANTES de tocar nada, que es la
+   mitad del remedio que el encargo manda.
+   scripts/loop/vuelta183_bateria_por_tramos.py: 35327 bytes disco | 35327 LF | sha256 LF 82ad349079112d67
+   CIFRA salidas selladas SALIDA_V183_BATERIA_TRAMO_N.txt al entrar: 9
+      SALIDA_V183_BATERIA_TRAMO_1.txt    disco     9116 bytes | LF     9116 bytes | sha256 LF 96bec3628ebc63c6
+         ultimo commit que lo toca: aac1c84e VUELTA 183, BATERIA TRAMO 1 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 9116 bytes en di
+      SALIDA_V183_BATERIA_TRAMO_2.txt    disco     7352 bytes | LF     7352 bytes | sha256 LF eb9f0fc446152400
+         ultimo commit que lo toca: c2fc89c2 VUELTA 183, BATERIA TRAMO 2 DE 9, RE CORRIDO CON LA ATRIBUCION YA REPARADA: VERDE, exitcode 0, 7352 bytes en di
+      SALIDA_V183_BATERIA_TRAMO_3.txt    disco     7406 bytes | LF     7406 bytes | sha256 LF cc356b7e22ccb987
+         ultimo commit que lo toca: 5db9a541 VUELTA 183, BATERIA TRAMO 3 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7406 bytes en disco y 7406 normalizados 
+      SALIDA_V183_BATERIA_TRAMO_4.txt    disco     7421 bytes | LF     7421 bytes | sha256 LF 2c606409febaed94
+         ultimo commit que lo toca: 36e715b9 VUELTA 183, BATERIA TRAMO 4 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7421 bytes en disco y 7421 normalizados 
+      SALIDA_V183_BATERIA_TRAMO_5.txt    disco     7385 bytes | LF     7385 bytes | sha256 LF 27ee315fa70438d2
+         ultimo commit que lo toca: d0058b86 VUELTA 184, BATERIA TRAMO 5 DE 9 RE CORRIDO CON LA REPARACION DE LA 1.b PUESTA: VERDE, exitcode 0, 7385 bytes e
+      SALIDA_V183_BATERIA_TRAMO_6.txt    disco     7428 bytes | LF     7428 bytes | sha256 LF 129099fc24499b72
+         ultimo commit que lo toca: 5042d91d VUELTA 184, BATERIA TRAMO 6 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7428 bytes en disco y 7428 normalizados 
+      SALIDA_V183_BATERIA_TRAMO_7.txt    disco     7456 bytes | LF     7456 bytes | sha256 LF 91f313782bb0bb44
+         ultimo commit que lo toca: cda30e1c VUELTA 184, BATERIA TRAMO 7 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7456 bytes en disco y 7456 normalizados 
+      SALIDA_V183_BATERIA_TRAMO_8.txt    disco     7407 bytes | LF     7407 bytes | sha256 LF 8a50d540b539717e
+         ultimo commit que lo toca: e91a307f VUELTA 184, BATERIA TRAMO 8 DE 9, SELLADO Y MEDIDO: VERDE, exitcode 0, 7407 bytes en disco y 7407 normalizados 
+      SALIDA_V183_BATERIA_TRAMO_9.txt    disco     6769 bytes | LF     6769 bytes | sha256 LF ae1017415f8f0cdd
+         ultimo commit que lo toca: 3500db9d VUELTA 184, BATERIA TRAMO 9 DE 9 EN ROJO, exitcode 1, Y AQUI SE PARA SIN RE-CORRERLO: vuelta182_tarea2_mutacion
+   CIFRA salidas selladas SALIDA_V200_BATERIA_TRAMO_N.txt al entrar: 0
+
+   EL REPARTO Y LA TRAMPA, CORRIDOS AQUI Y NO RECORDADOS:
+   comando: python scripts/loop/vuelta183_bateria_por_tramos.py --plan  (exitcode 0)
+   CIFRA tramos del reparto, COMPUTADA HOY: 11
+   CIFRA entradas de la nomina segun --plan: 135
+   AUDITOR.md 6.1 DICE NUEVE TRAMOS Y HOY SALEN 11: es el hallazgo 5.3 del
+   acta 199, una cifra de la doctrina que envejecio. NO se toca AUDITOR.md,
+   que es del fundador.
+   | ESTIMACION Y NO COMO MEDICION: la ultima bateria con cuerpo (la del
+   | ESTIMACION minutos por tramo de 13 entradas: entre 4.3 y 5.6 (corte: HEAD 69a16e296861, nomina de 135 entradas contada en esta corrida)
+   | ESTIMACION minutos de la nomina entera: entre 44.6 y 58.0 (corte: HEAD 69a16e296861, nomina de 135 entradas contada en esta corrida)
+   comando: python scripts/loop/vuelta183_bateria_por_tramos.py --siguiente  (exitcode 0)
+   CIFRA tramos que --siguiente da POR HECHOS: 9
+   CIFRA tramos que --siguiente dice que FALTAN: 2
+   --siguiente DICE QUE EL SIGUIENTE ES EL TRAMO 10, Y ESA ES LA MENTIRA
+   MEDIDA: esos hechos son de la corrida de la vuelta 183, no de la 200.
+   ESTA VUELTA CORRE LOS 11 TRAMOS, no los que --siguiente diga.
+
+=== I. EL INVENTARIO ENTERO DE SELLADAS DE BATERIA, CONTADO DE DISCO ===
+CIFRA ficheros SALIDA_V*_BATERIA_TRAMO_N.txt en docs/loop/: 38
+   V176: 9 fichero(s)
+   V183: 9 fichero(s)
+   V189: 10 fichero(s)
+   V194: 10 fichero(s)
+CIFRA salidas unicas SALIDA_V*_BATERIA.txt en docs/loop/: 12
+   SALIDA_V165_BATERIA.txt      disco    13979 bytes | LF    13798 bytes
+   SALIDA_V166_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V167_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V168_BATERIA.txt      disco    15045 bytes | LF    14845 bytes
+   SALIDA_V170_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V171_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V172_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V173_BATERIA.txt      disco        0 bytes | LF        0 bytes
+   SALIDA_V176_BATERIA.txt      disco    60197 bytes | LF    60197 bytes
+   SALIDA_V183_BATERIA.txt      disco    71753 bytes | LF    71753 bytes
+   SALIDA_V189_BATERIA.txt      disco    81968 bytes | LF    81968 bytes
+   SALIDA_V194_BATERIA.txt      disco   102495 bytes | LF   102495 bytes
+
+FIN DEL SELLO DE APERTURA
