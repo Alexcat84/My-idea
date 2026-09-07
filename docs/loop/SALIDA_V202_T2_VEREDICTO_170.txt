@@ -1,0 +1,91 @@
+==============================================================================
+VUELTA 170, TAREA 5.b: LAS TRES CLAUSULAS DE OP-L-02, MEDIDAS UNA A UNA
+==============================================================================
+
+A) LAS CLAUSULAS, LEIDAS DE LA FICHA Y NO TECLEADAS
+   CIFRA elementos de `verificacion`: 4
+   CIFRA clausulas propiamente dichas: 3
+   CIFRA correcciones declaradas (no son clausulas que cumplir): 1
+      1. las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+      2. el marcador del cribado no se mueve: sigue en 2.117
+      3. cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+
+B) CLAUSULA 1: cobertura COMPLETA y forma reescrita
+   NOMINAS_OP_L_02 parseadas del fichero: 6
+   | # | miembros | vivos | posibles | leidos | SIN | cobertura |
+   |---:|---:|---:|---:|---:|---:|---|
+   | 1 | 6 | 6 | 15 | 15 | 0 | 15 de 15 |
+   | 2 | 6 | 1 | 0 | 0 | 0 | 0 de 0 |
+   | 3 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 4 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 5 | 5 | 5 | 10 | 10 | 0 | 10 de 10 |
+   | 6 | 4 | 2 | 1 | 1 | 0 | 1 de 1 |
+   CIFRA pares SIN veredicto en las SEIS nominas: 0
+   los cuadrantes de mercado      forma reescrita con el corte 2026-09-04: SI | 311 caracteres
+   la ecuacion de valor           forma reescrita con el corte 2026-09-04: SI | 1057 caracteres
+   la supervision de la IA        forma reescrita con el corte 2026-09-04: SI | 753 caracteres
+   VEREDICTO CLAUSULA 1: CUMPLIDA
+
+C) CLAUSULA 2: el marcador del cribado no se mueve
+   LA CLAUSULA DICE QUE LA OPERACION NO LO MUEVA, no que valga 2.117 hoy,
+   y desde la TAREA 3 de esta vuelta esa lectura esta escrita en la ficha
+   con su fecha de corte al lado, por 9.21.
+   marcador recomputado del archivo HOY: 3388 filas (A 551, B 72, C 5, D 2760)
+   HEAD de apertura, leido del sello: 46208790
+   git diff 46208790 HEAD --numstat -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   CIFRA filas del numstat: 1
+      1	1	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   y sin commitear (arbol de trabajo): 0 filas
+   VEREDICTO CLAUSULA 2: NO CUMPLIDA
+
+D) CLAUSULA 3: cada grupo del backlog lleva su motivo escrito
+   CIFRA tablas del backlog halladas en LECTURAS_DIRIGIDAS.md: 1
+   CIFRA grupos del backlog: 4
+   linea 505   **126**  **esperan destejido o cirugia**                motivo escrito: SI (64 caracteres)
+   linea 506   **55**   **resto sin mesa ni nomina**                   motivo escrito: SI (140 caracteres)
+   linea 507   ~~**5**~ ~~**sales roadmap**~~ **LEIDOS, 14 ago 2026**  motivo escrito: SI (448 caracteres)
+   linea 508   3        **junta asesora y seleccion de canal**         motivo escrito: SI (33 caracteres)
+   CIFRA grupos SIN motivo escrito: 0 []
+   VEREDICTO CLAUSULA 3: CUMPLIDA
+
+E) EL VEREDICTO DE OP-L-02, CON LA MEDICION DELANTE
+   clausula 1: CUMPLIDA
+   clausula 2: NO CUMPLIDA
+   clausula 3: CUMPLIDA
+   CIFRA clausulas cumplidas: 2 de 3
+   EL CAMPO `estado` NO SE TOCA, y sigue diciendo 'LISTA'. No es la vara.
+
+F) LA VARA DEL TRABAJO PENDIENTE, QUE ES EL INSTRUMENTO Y NO EL CAMPO
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD
+   | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA | no |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | OP-D-01=LISTA, OP-D-02=LISTA, OP-D-03=LISTA, OP-D-04=LISTA, OP-D-05=LISTA, OP-D-06=LISTA | no |
+   CONTADO: 6 ficha(s) en LISTA sin ninguna prueba de ejecucion.
+   6 en LISTA sin prueba, de las cuales 4 son TRABAJO REAL y 2 estan
+   PODAR LA CIFRA DE LA VARA SIN EL FUNDADOR ES LO QUE LA CASA RESERVA:
+   CIFRA fichas del expediente: 71 operaciones
+   CIFRA fichas que no calzan: 37 operaciones
+   CIFRA fichas congeladas declaradas: 24 operaciones
+   CIFRA fichas congeladas en silencio: 12 operaciones
+   CIFRA fichas HECHA sin ninguna prueba: 1 operaciones
+   CIFRA fichas en LISTA sin ninguna prueba: 6 operaciones
+   CIFRA de esas que estan CONSUMIDAS por otra ficha: 2 operaciones
+   CIFRA de esas que son TRABAJO REAL: 4 operaciones
+   CIFRA fichas de tipo MESA en el expediente: 6
+   CIFRA de esas que estan en LISTA: 5
+   | `OP-L-02` | 09_LECTURAS_DIRIGIDAS | ninguna | (su evidencia entera es prosa: no nombra ningun fichero) | NO | | |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `BANCO_DEL_PLAN.md` | SI, en `docs/plan/BANCO_DEL_PLAN.md` | 61554 | 61554 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `LECTURAS_DIRIGIDAS.md` | SI, en `docs/plan/LECTURAS_DIRIGIDAS.md` | 214916 | 214916 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `LECTURAS_DIRIGIDAS.md` | SI, en `docs/plan/LECTURAS_DIRIGIDAS.md` | 214916 | 214916 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `LECTURAS_DIRIGIDAS.md` | SI, en `docs/plan/LECTURAS_DIRIGIDAS.md` | 214916 | 214916 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `EJECUTOR.md` | SI, en `docs/loop/EJECUTOR.md` | 13194 | 13194 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `OP_L_03_LECTURAS.jsonl` | SI, en `docs/plan/OP_L_03_LECTURAS.jsonl` | 51368 | 51368 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `OP_L_03_TRIANGULOS.jsonl` | SI, en `docs/plan/OP_L_03_TRIANGULOS.jsonl` | 55705 | 55705 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `OP_L_03_LECTURAS.jsonl` | SI, en `docs/plan/OP_L_03_LECTURAS.jsonl` | 51368 | 51368 |
+   | `OP-L-03` | 09_LECTURAS_DIRIGIDAS | ninguna | `AUDITOR.md` | SI, en `docs/loop/AUDITOR.md` | 30581 | 30581 |
+   CIFRA VIEJA, la de siempre y sin tocar: 6 ficha(s) en LISTA sin ninguna
+   CIFRA NUEVA, con la pata documental: de esas 4 de trabajo real, 3 son
+   SIN DOCUMENTO QUE MEDIR: OP-L-02            (0 mencion(es) de fichero en su evidencia)
+   exit del instrumento: 0
+
+OP-L-02 NO QUEDA CUMPLIDA. NO se abre OP-L-03: el encargo dice
+'solo entonces', y este instrumento lo obedece.

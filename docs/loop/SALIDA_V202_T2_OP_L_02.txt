@@ -1,0 +1,126 @@
+==============================================================================
+VUELTA 202, TAREA 2 . OP-L-02 CONTRA EL CRITERIO DE HECHO
+LECTURA MEDIDA. NO SE CIERRA NADA Y NINGUN estado SE MUEVE.
+==============================================================================
+
+A) LOS DOS INSTRUMENTOS: IMPORTADOS Y CORRIDOS TAL CUAL, NO CLONADOS
+   La moratoria (AUDITOR.md 6.3) prohibe fabricar y prohibe tocar. Aqui
+   se comprueba que NINGUNO ESCRIBE FICHEROS, como hizo el auditor, y
+   que sus selladas de ESTA vuelta existen y no estan vacias.
+   scripts/loop/vuelta169_tarea5_cobertura_op_l_02.py
+      9310 bytes en disco | 9310 bytes normalizados a LF
+      CIFRA lineas con marca de escritura en disco: 0 
+      sellada: docs/loop/SALIDA_V202_T2_COBERTURA_169.txt, 5559 bytes en disco | 5449 bytes en LF
+   scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py
+      13487 bytes en disco | 13487 bytes normalizados a LF
+      CIFRA lineas con marca de escritura en disco: 0 
+      sellada: docs/loop/SALIDA_V202_T2_VEREDICTO_170.txt, 5880 bytes en disco | 5789 bytes en LF
+   CIFRA lineas de git status que NO son salidas de esta tarea: 0
+      (ninguna: correrlos NO ensucio el arbol)
+
+B) EL CRITERIO DE HECHO, CITADO POR LINEA Y NO DE MEMORIA
+   docs/plan/08_VERIFICACION.md: 69068 bytes en disco | 69068 bytes normalizados a LF | 913 lineas
+   cabecera del criterio: 1 acierto(s), linea(s) 7
+      linea 7: ## EL CRITERIO DE HECHO, y es uno solo
+      linea 9: > **UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA.**
+      linea 10: >
+      linea 11: > **No cuando pasa verde: cuando se CAERIA.**
+      linea 13: **Es el criterio del CASO POSITIVO de la FASE 0, aplicado a todo el plan.** Y tiene
+      linea 14: una comprobacion barata: **correr la prueba ANTES del arreglo. Si pasa, no prueba
+      linea 15: nada.**
+   lineas de docs/plan/08_VERIFICACION.md que NOMBRAN OP-L-02: 1, linea(s) 409
+      linea 409: | **`OP-L-02`** | DECISION PENDIENTE | **el universo de 205 se remide**: cada A nueva puede crear pares internos nuevos fuera de cola |
+
+C) LAS TRES CLAUSULAS, CITADAS POR LINEA MAS INDICE (acta 201, 4.4)
+   CIFRA lineas donde vive OP-L-02: 1 | linea(s): 42
+   la ficha OP-L-02 vive en la LINEA 42
+   estado (SE LEE, NO SE MUEVE): 'LISTA' | tipo: 'MESA' | fecha_corte: '2026-08-11'
+   CIFRA elementos de `verificacion`: 4
+   CIFRA elementos de `evidencia`: 1
+   CIFRA clausulas propiamente dichas: 3
+   CIFRA correcciones declaradas (no son clausulas que cumplir): 1
+      linea 42 + indice 0 (elemento 1), 77 caracteres:
+         'las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita'
+      linea 42 + indice 1 (elemento 2), 51 caracteres:
+         'el marcador del cribado no se mueve: sigue en 2.117'
+      linea 42 + indice 2 (elemento 3), 65 caracteres:
+         'cada grupo del backlog lleva su motivo escrito, no solo su cuenta'
+      CORRECCION DECLARADA en linea 42 + indice 3 (elemento 4), 1486 caracteres
+
+D) LOS VEREDICTOS DEL INSTRUMENTO, LEIDOS DE SU SELLADA DE ESTA VUELTA
+   clausula 1: CUMPLIDA
+   clausula 2: NO CUMPLIDA
+   clausula 3: CUMPLIDA
+   CIFRA clausulas cumplidas segun el instrumento: 2 de 3
+   CIFRA pares SIN veredicto en las seis nominas: 0
+   CIFRA grupos del backlog SIN motivo escrito: 0
+
+E) LA CLAUSULA 2, REMEDIDA CONTRA EL HEAD DE APERTURA DE ESTA VUELTA.
+   LAS DOS LECTURAS SE PUBLICAN JUNTAS Y LA DISCREPANCIA SE DECLARA.
+   HEAD que el instrumento usa, leido de docs/loop/SALIDA_V170_HEAD_APERTURA.txt: 46208790
+   HEAD de apertura de ESTA vuelta, leido de docs/loop/SALIDA_V202_HEAD_APERTURA.txt: ebe04895
+   LOS DOS SELLOS SE LEEN DE DISCO. NINGUNO SE TECLEA.
+   la del instrumento (HEAD de la vuelta 170)
+      comando: git diff 46208790 HEAD --numstat -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      CIFRA filas del numstat: 1
+         1	1	docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      y sin commitear (arbol de trabajo): 0 filas
+      LECTURA DE LA CLAUSULA 2: NO CUMPLIDA
+   la de esta vuelta (HEAD de apertura de la 202)
+      comando: git diff ebe04895 HEAD --numstat -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+      CIFRA filas del numstat: 0
+      y sin commitear (arbol de trabajo): 0 filas
+      LECTURA DE LA CLAUSULA 2: CUMPLIDA
+   LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO:
+      contra 46208790 salen 1 filas y la clausula sale NO CUMPLIDA
+      contra ebe04895 salen 0 filas y la clausula sale CUMPLIDA
+      EL ACTA 201 YA LO ADJUDICO EN SU 4.2: es FALSO ROJO, porque el
+      instrumento diffea contra un HEAD sellado en la vuelta 170 y
+      desde entonces han pasado vueltas que SI movieron el fichero.
+      SU REPARACION ES DE CODIGO Y LA MORATORIA LA PROHIBE HOY.
+
+   EL MARCADOR, RECONTADO AQUI Y NO COPIADO. P.1 manda pasar por el
+   resolutor todo conteo que TOQUE IDS; contar filas y clases del
+   archivo NO toca ningun id, asi que NO pasa por el resolutor, y eso
+   se dice en vez de callarlo.
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 4054129 bytes en disco | 4054129 bytes normalizados a LF
+      CIFRA filas no vacias: 3388
+      CIFRA lineas que NO son JSON valido: 0
+      EL REPARTO POR CLASE: A 551, B 72, C 5, D 2760
+      SUMA DEL REPARTO: 3388
+      CIFRA puestos distintos: 3388 | maximo: 3388 | huecos: 0
+      CORRECCION DECLARADA de este mismo fichero: la primera version
+      buscaba la clave `puesto` y publicaba 0 puestos distintos. La
+      clave de este archivo se llama `puesto_intra`, y el 0 no era una
+      medicion sino el sintoma de mirar donde no hay nada.
+      LA CLAUSULA PIDE QUE LA OPERACION NO LO MUEVA, no que valga 2.117
+      hoy, y su propia CORRECCION DECLARADA lo dice: el 2.117 es el
+      valor en la fecha_corte de la ficha, TESTIGO Y NO CONDICION.
+
+F) EL CRITERIO DE HECHO APLICADO A LAS TRES CLAUSULAS
+   EL CRITERIO PIDE QUE LA VERIFICACION SE CAERIA SI EL FALLO VOLVIERA,
+   y trae su propia comprobacion barata: correr la prueba antes del
+   arreglo, y si pasa, no prueba nada. AQUI SE COMPRUEBA LEYENDO EL
+   CODIGO DEL INSTRUMENTO, SIN TOCARLO, que cada veredicto sale de una
+   VARIABLE COMPUTADA y no de un literal, que es lo que EJECUTOR.md 1
+   llama un caso rojo que no puede fallar.
+   clausula 1:
+      scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py linea 166: cumple1 = (sin_total == 0 and con_corte == len(LAS_TRES))
+      el veredicto sale de un LITERAL: NO, sale de una expresion computada
+   clausula 2:
+      scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py linea 195: cumple2 = (len(filas) == 0 and len(filas2) == 0)
+      el veredicto sale de un LITERAL: NO, sale de una expresion computada
+   clausula 3:
+      scripts/loop/vuelta170_tarea5b_veredicto_op_l_02.py linea 222: cumple3 = (len(grupos) > 0 and not sin_motivo)
+      el veredicto sale de un LITERAL: NO, sale de una expresion computada
+
+G) LA PROPUESTA, QUE NO CIERRA NADA
+   SEGUN EL INSTRUMENTO, TAL CUAL SE CORRIO: 2 de 3 clausulas cumplidas
+   CON LA CLAUSULA 2 REMEDIDA CONTRA EL HEAD DE ESTA VUELTA: 3 de 3
+   LAS TRES QUEDAN CUMPLIDAS: SI
+   Y AUN ASI NO SE CIERRA: el encargo dice PROPONLO Y NO LO CIERRES, y
+   AUDITOR.md 0 dice que el campo estado no es la vara. El estado de
+   OP-L-02 entra y sale en 'LISTA'.
+   CIFRA lineas de docs/plan/OPERACIONES.jsonl que este fichero cambia: 0
+
+FIN
