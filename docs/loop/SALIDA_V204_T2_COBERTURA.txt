@@ -1,0 +1,207 @@
+==============================================================================
+VUELTA 204, TAREA 2: EL TAMANO DEL AGUJERO DE `cobertura`, MEDIDO Y NO
+TAPADO. NO CIERRA OP-I-01, NO ESCRIBE LA VARA Y NO TOCA NINGUN estado.
+==============================================================================
+
+A) LA SEDE, RECONTADA HOY Y NO COPIADA DEL ENCARGO
+   docs/plan/INVENTARIO.jsonl: disco 584554 bytes | LF 584554 bytes | sha256 LF 69666b73339f2afe
+   CIFRA lineas NO VACIAS: 672
+   CIFRA lineas que NO parsean como JSON: 0
+   CIFRA entradas leidas: 672
+   EL ENCARGO DICE 672 Y MANDA RECONTARLAS. LO MEDIDO DA 672: CALZA
+   CIFRA claves distintas del esquema: 9
+      tipo           presente en 672 de 672 entradas
+      nombre         presente en 672 de 672 entradas
+      miembros       presente en 672 de 672 entradas
+      forma          presente en 672 de 672 entradas
+      cobertura      presente en 672 de 672 entradas
+      estado         presente en 672 de 672 entradas
+      operaciones    presente en 672 de 672 entradas
+      fecha_corte    presente en 672 de 672 entradas
+      nota           presente en 672 de 672 entradas
+   CIFRA entradas CON la clave `cobertura`: 672
+   CIFRA tipos de valor del campo `cobertura`: {'str': 672}
+   CIFRA entradas cuyo `cobertura` esta vacio o solo blancos: 0
+
+B) CUANTAS FORMAS DISTINTAS TOMA HOY EL CAMPO, AGRUPADAS POR SU FORMA
+   LA VARA DE AGRUPACION, DICHA ANTES DE LA CIFRA: se sustituye toda tira de
+   digitos por `N` (esqueleto), y se agrupa por el esqueleto. Es la unica
+   forma de que 'tres de cinco' y 'cuatro de nueve' cuenten como LA MISMA
+   FORMA, que es lo que el encargo pide contar.
+   BUSQUEDA POSITIVA, Y EL CAMPO SE DECLARA: corre sobre el valor del campo
+   `cobertura` de cada entrada, NUNCA sobre la linea entera del fichero.
+   CIFRA FORMAS DISTINTAS del campo `cobertura`: 23
+   CIFRA VALORES LITERALES distintos del campo `cobertura`: 77
+
+   | entradas | forma (esqueleto, digitos a N) |
+   |      554 | N de N pares leidos; N en cola; N fuera de cola |
+   |       53 | N ids |
+   |       18 | N |
+   |        9 | N de N |
+   |        9 | N ejemplares |
+   |        6 | puestos N a N, N pares leidos |
+   |        4 | SIN CRIBAR |
+   |        4 | N ejemplar |
+   |        1 | N de N pares: N en el archivo y N en LD-N |
+   |        1 | N de N al corte N-N-N, con el resolutor delante por P.N (N de la cola, N por lectura dirigida, N sin veredicto). El text |
+   |        1 | N de N (LD-N a LD-N, N ago N, vuelta N). El texto viejo de este campo, sin tocar: N de N |
+   |        1 | N de N al corte N-N-N: no hay pares entre un solo nodo. El texto viejo de este campo, sin tocar: 'N de N' |
+   |        1 | N de N al corte N-N-N, con el resolutor delante por P.N (N de la cola, N por lectura dirigida, N SIN veredicto). El text |
+   |        1 | N polos, N ejemplares del primero y N del segundo |
+   |        1 | N nodos candidatos, N confirmados |
+   |        1 | N ejemplar y N contraejemplo |
+   |        1 | N dominios medidos |
+   |        1 | medio dominio exportacion |
+   |        1 | N ejemplares, uno de ellos con TODAS sus lecturas hechas |
+   |        1 | N reclasificadas |
+   |        1 | N,N%, banda N,N a N,N |
+   |        1 | N de N pares leidos; N en cola; N fuera de cola (LD-N a LD-N, N ago N). El texto viejo de este campo, sin tocar: N de N  |
+   |        1 | N ids, los N medidos vivos y con fuente unica Hugos en esta corrida |
+
+C) LAS VARAS CANDIDATAS, CONTADAS UNA A UNA Y SOBRE EL CAMPO `cobertura`
+   NINGUNA SE PROPONE COMO LA BUENA Y NINGUNA SE ESCRIBE EN CODIGO: se
+   cuenta cuantas entradas caeria cada una, que es lo que el encargo pide.
+   V1  N de N pares leidos; N en cola; N fuera de cola   555 entradas
+   V2  N ids                                              54 entradas
+   V3  N a secas                                          18 entradas
+   V4  N de N                                            569 entradas
+   V5  N ejemplar o N ejemplares                          10 entradas
+   V6  puestos N a N, N pares leidos                       6 entradas
+   CIFRA entradas que CAEN en AL MENOS UNA de las 6 varas candidatas: 657
+   CIFRA entradas que NO CAEN EN NINGUNA, o sea EL AGUJERO: 15
+   ESA ES LA CIFRA QUE EL ENCARGO PIDE: cuantas entradas quedarian fuera de
+   cualquier vara razonable. VA CON SU VARA AL LADO, porque un numero de
+   agujero sin la vara que lo mide no significa nada.
+
+   LAS 15 DE FUERA, UNA A UNA, CON SU TIPO Y SU VALOR LITERAL:
+      #7    tipo dominio        'SIN CRIBAR'
+      #8    tipo dominio        'SIN CRIBAR'
+      #9    tipo dominio        'SIN CRIBAR'
+      #10   tipo dominio        'SIN CRIBAR'
+      #299  tipo figura         '2 polos, 3 ejemplares del primero y 2 del segundo'
+      #305  tipo figura         '1 ejemplar'
+      #306  tipo figura         '67 nodos candidatos, 43 confirmados'
+      #307  tipo figura         '1 ejemplar y 1 contraejemplo'
+      #308  tipo figura         '3 dominios medidos'
+      #309  tipo figura         'medio dominio exportacion'
+      #330  tipo figura         '1 ejemplar'
+      #331  tipo figura         '15 reclasificadas'
+      #332  tipo defecto        '4,2%, banda 0,7 a 20,2'
+      #333  tipo figura         '1 ejemplar'
+      #334  tipo figura         '1 ejemplar'
+
+D) LA MISMA BUSQUEDA SOBRE EL FICHERO ENTERO, PUBLICADA AL LADO
+   ES LA LECCION DE LA `C.2` DEL ACTA 203: la misma variante da cifras
+   distintas segun el campo, y quien no declara el campo convierte una
+   medicion buena en una acusacion. AQUI VAN LAS DOS.
+   | busqueda | sobre el CAMPO `cobertura` | sobre la LINEA ENTERA del fichero |
+   | V1  N de N pares leidos; N en cola; N fuera de cola |  555 |  555 |
+   | V2  N ids                                        |   54 |   54 |
+   | V3  N a secas                                    |   18 |    0 |
+   | V4  N de N                                       |  569 |  574 |
+   | V5  N ejemplar o N ejemplares                    |   10 |   11 |
+   | V6  puestos N a N, N pares leidos                |    6 |    0 |
+   LAS DOS COLUMNAS SON CIERTAS Y MIDEN COSAS DISTINTAS: la izquierda ancla
+   al principio del CAMPO, la derecha busca en cualquier sitio de la LINEA.
+
+E) LA CLAUSULA 3, LA DE LOS HUECOS NOMBRADOS, QUE COMPARTE EL AGUJERO
+   TEXTO LITERAL DE LA CLAUSULA, LEIDO HOY DE LA FICHA Y NO DE MEMORIA:
+   docs/plan/OPERACIONES.jsonl: disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   la ficha OP-I-01 vive en la LINEA 44
+   CIFRA elementos de `verificacion`: 4
+      clausula 1 (indice 0): toda entrada lleva su fecha_corte
+      clausula 2 (indice 1): toda forma con cobertura incompleta va marcada PROVISIONAL
+      clausula 3 (indice 2): todo hueco va NOMBRADO, nunca rellenado
+      clausula 4 (indice 3): el inventario se recomputa entero con el disparador de 08_VERIFICACION
+   estado de la ficha, LEIDO Y NO TOCADO: 'LISTA'
+
+   LAS BUSQUEDAS POSITIVAS DEL HUECO, CADA UNA CON SU CAMPO DECLARADO:
+   | literal | campo | entradas |
+   | SIN CRIBAR     | cobertura  |    4 |
+   | SIN CRIBAR     | forma      |    0 |
+   | SIN CRIBAR     | estado     |    0 |
+   | SIN CRIBAR     | nota       |    0 |
+   | HUECO          | cobertura  |    0 |
+   | HUECO          | forma      |    0 |
+   | HUECO          | estado     |    0 |
+   | HUECO          | nota       |    5 |
+   | hueco          | cobertura  |    0 |
+   | hueco          | forma      |    0 |
+   | hueco          | estado     |    0 |
+   | hueco          | nota       |  114 |
+   | NOMBRADO       | cobertura  |    0 |
+   | NOMBRADO       | forma      |    0 |
+   | NOMBRADO       | estado     |    0 |
+   | NOMBRADO       | nota       |   18 |
+   | nombrado       | cobertura  |    0 |
+   | nombrado       | forma      |    0 |
+   | nombrado       | estado     |    0 |
+   | nombrado       | nota       |  115 |
+   | no rellenado   | cobertura  |    0 |
+   | no rellenado   | forma      |    0 |
+   | no rellenado   | estado     |    0 |
+   | no rellenado   | nota       |  114 |
+   | PENDIENTE      | cobertura  |    0 |
+   | PENDIENTE      | forma      |    0 |
+   | PENDIENTE      | estado     |    0 |
+   | PENDIENTE      | nota       |    2 |
+   | sin veredicto  | cobertura  |    1 |
+   | sin veredicto  | forma      |    0 |
+   | sin veredicto  | estado     |    0 |
+   | sin veredicto  | nota       |    0 |
+
+   EL AGUJERO DE LA CLAUSULA 3, DICHO CON LA MISMA VARA QUE EL DE LA 2: el
+   literal que mas entradas trae y el que menos difieren en DOS ORDENES DE
+   MAGNITUD sobre los MISMOS campos, o sea que `hueco nombrado` tampoco
+   tiene forma. Y ninguna de las dos clausulas dice EN QUE CAMPO se escribe
+   el hueco, que es la mitad del agujero: la cifra cambia segun el campo que
+   se mire, y la clausula no lo fija.
+
+F) LA CLAUSULA 2, LA DEL PROVISIONAL, MEDIDA IGUAL
+   | literal | campo | entradas |
+   | PROVISIONAL    | cobertura  |    0 |
+   | PROVISIONAL    | forma      |    1 |
+   | PROVISIONAL    | estado     |    1 |
+   | PROVISIONAL    | nota       |    1 |
+   | provisional    | cobertura  |    0 |
+   | provisional    | forma      |    1 |
+   | provisional    | estado     |    0 |
+   | provisional    | nota       |    0 |
+   CIFRA valores distintos del campo `forma`: 28
+   CIFRA entradas cuyo campo `forma` es EXACTAMENTE `PROVISIONAL`: 0
+   LA CLAUSULA 2 DICE *toda forma con cobertura incompleta va marcada
+   PROVISIONAL*, Y AQUI ESTA EL AGUJERO ENTERO EN UNA LINEA: para poder
+   comprobarla haria falta saber QUE ES `cobertura incompleta`, y el campo
+   `cobertura` es TEXTO LIBRE con 23 formas distintas, asi que hoy NO HAY
+   NADA QUE COMPARAR. No es que la clausula se incumpla: es que NO SE PUEDE
+   MEDIR, que es exactamente lo que el `4.3` del acta 203 adjudico.
+
+G) LA COINCIDENCIA QUE SALIO MEDIDA Y NO BUSCADA, Y SE COMPRUEBA EN VEZ DE
+   CELEBRARSE: LA VARA V4 CAE EXACTAMENTE SOBRE LA POBLACION DEL DISPARADOR
+   CIFRA entradas que caen en V4: 569
+   CIFRA entradas de tipo `acto` o `racimo`, que es lo que el paso 4 de
+   docs/plan/08_VERIFICACION.md nombra: 569
+   LOS DOS CONJUNTOS SON EL MISMO: True
+   CIFRA en V4 y NO en acto o racimo: 0
+   CIFRA en acto o racimo y NO en V4: 0
+   CIFRA entradas FUERA del disparador: 103, repartidas asi: {'dominio': 10, 'familia_de_ids': 54, 'figura': 20, 'defecto': 19}
+   POR QUE IMPORTA, Y ES LO UNICO QUE ESTA TAREA APORTA A QUIEN ESCRIBA LA
+   VARA DESPUES: el `4.3` del acta 203 midio 569 dentro del disparador y 103
+   fuera, y esas mismas 569 son EXACTAMENTE las que hoy YA tienen una forma
+   comprobable a maquina. O sea que el agujero de `cobertura` NO esta
+   repartido por todo el fichero: esta CONCENTRADO en las 103 de fuera.
+   Y LAS 15 SON UN SUBCONJUNTO DE ESAS 103, NO UNA SUMA APARTE, y eso se
+   COMPRUEBA en vez de decirse:
+      CIFRA de las 15 sin ninguna vara que estan FUERA del disparador: 15
+      CIFRA de las 15 sin ninguna vara que estan DENTRO del disparador: 0
+      LAS 15 SON SUBCONJUNTO DE LAS 103: True
+   NO SE PROPONE NINGUNA VARA: se deja la cifra medida.
+
+H) LO QUE ESTA TAREA NO HACE, DICHO Y NO SUPUESTO
+   . NO cierra OP-I-01 y NO propone cerrarla.
+   . NO escribe ninguna vara: eso es codigo permanente y va a la auditoria
+     integral por el `4.7` del acta 203, y hoy la moratoria 6.3 lo prohibe.
+   . NO toca el campo `estado` de ninguna ficha ni de ninguna entrada.
+   . NO reescribe INVENTARIO.jsonl ni OPERACIONES.jsonl: los LEE.
+
+FIN
