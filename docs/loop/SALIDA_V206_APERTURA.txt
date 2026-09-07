@@ -1,0 +1,59 @@
+SELLO DE APERTURA DE LA VUELTA 206.
+LA VERDAD SOBRE CUANDO NACE ESTE FICHERO, DICHA ANTES QUE NADA Y NO ESCONDIDA:
+   los VALORES de los bloques A, B, C y D se MIDIERON EN CONSOLA ANTES DE LA
+   PRIMERA OPERACION de la vuelta, y estan copiados de esa medicion. EL FICHERO,
+   en cambio, se ESCRIBE MAS TARDE, con la TAREA 1 y la TAREA 2 ya cerradas. Por
+   eso el tallador dira SELLO RECONSTRUIDO DESPUES y TENDRA RAZON: no se le
+   discute y no se le tapa. Va como caida propia en la seccion 8.
+   LO QUE SI SE SELLO ANTES DE LA PRIMERA OPERACION es el HEAD, en
+   docs/loop/SALIDA_V206_HEAD_APERTURA.txt.
+regimen: DOS SUB-TAREAS Y NINGUNA MAS (AUDITOR.md 6.2, adjudicacion 4.4 del
+         acta 205). MORATORIA DE MAQUINARIA (AUDITOR.md 6.3): la nomina
+         CONGELADA EN 135.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, medido antes de la 1.a operacion) ===
+78ca71763851a8219f8bf5138bab39fdc367fbdd
+Asunto, leido de git log: ACTA DEL AUDITOR, VUELTA 205: LA BATERIA CORRIO ENTERA
+Y EN SU PROPIO NOMBRE POR PRIMERA VEZ DESDE LA 194, Y LA VUELTA NO CERRO.
+
+=== B. RAMA Y REMOTO (medidos antes de la 1.a operacion) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular, y son la medicion de ANTES de la 1.a operacion.
+CIFRA lineas de status: 5
+   NO ENTRA LIMPIO, Y SE DICE: una fila M y cuatro sin seguimiento. La M es
+   dataset/metadata/master_graph.json y NO ES UNA MODIFICACION: el fichero es
+   identico EN CRUDO al de HEAD, 8375817 bytes y sha256 LF 627cc662296f7f00 en
+   los dos, y es el aviso de fin de linea de git. Las cuatro sin seguimiento son
+   ficheros de computo que el auditor de la 205 dejo sin committear, y la
+   EJECUTOR.md 3 manda committearlas antes de tocar nada: es la 1.a operacion.
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.0 EL NUMSTAT DE LAS CUATRO SEDES QUE EL ENCARGO PIDE, AL ENTRAR ===
+CIFRA filas de numstat AL ENTRAR en dataset/     0
+CIFRA filas de numstat AL ENTRAR en web/         0
+CIFRA filas de numstat AL ENTRAR en engine/      0
+CIFRA filas de numstat AL ENTRAR en docs/plan/   0
+
+=== D. LA SEDE DE LOS VEREDICTOS Y LA DEL PLAN, MEDIDAS ANTES DE TOCAR NADA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   EL ENCARGO DICE QUE AL CERRAR LA 205 VALIA 0a77b5a35a962621 POR LAS DOS.
+   CALZA LO MEDIDO CON LO QUE EL ENCARGO DICE: SI
+docs/plan/OPERACIONES.jsonl
+   disco 513043 bytes | sha256 disco 829c583eb779cab6
+   LF    513043 bytes | sha256 LF    829c583eb779cab6
+   EL ENCARGO DICE QUE AL CERRAR LA 205 VALIA 829c583eb779cab6 POR LAS DOS.
+   CALZA LO MEDIDO CON LO QUE EL ENCARGO DICE: SI
+
+=== E. LA NOMINA Y EL CENSO, CONTRA EL CONGELADO EN 135 ===
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CONGELADO QUE MANDA AUDITOR.md 6.3: 135
+CALZA LA NOMINA CON EL CONGELADO: SI
+
+FIN DEL SELLO DE APERTURA
