@@ -73,22 +73,22 @@ MITAD B. LA DOBLE CORRIDA DEL ARNES REPARADO, EN DOS PROCESOS APARTE
    docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt. El fichero que
    queda al terminar es el de la forma REPARADA, con <TEMPORAL> dentro.
 
-   ANTES DE LAS DOS CORRIDAS: 4982 bytes, sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
-   CORRIDA 1 -> exitcode 0 | 4982 bytes | sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
-   CORRIDA 2 -> exitcode 0 | 4982 bytes | sha256 ce85fd0cc659774ca0967bb369c33d93ad7def437594907a7a7c523b5fb08aef
+   ANTES DE LAS DOS CORRIDAS: 5606 bytes, sha256 4d9e74b6b56e10bf1405243a6878676b261145a3036bff84ce5c6ab069f509de
+   CORRIDA 1 -> exitcode 0 | 5606 bytes | sha256 4d9e74b6b56e10bf1405243a6878676b261145a3036bff84ce5c6ab069f509de
+   CORRIDA 2 -> exitcode 0 | 5606 bytes | sha256 4d9e74b6b56e10bf1405243a6878676b261145a3036bff84ce5c6ab069f509de
 
    LAS DOS CORRIDAS SALEN exit 0: SI ([0, 0])
    EL sha256 ES EL MISMO DESPUES DE LAS DOS: SI
-   LOS BYTES SON LOS MISMOS: SI ([4982, 4982])
+   LOS BYTES SON LOS MISMOS: SI ([5606, 5606])
 
    LA SALIDA SELLADA, CONTADA DE SU PROPIO FICHERO DESPUES DE LAS DOS:
       CIFRA apariciones de '<TEMPORAL>': 3
       CIFRA apariciones de 'v182_apertura_' (el prefijo del mkdtemp): 0
 
    LAS LINEAS 53, 54 Y 55, QUE ERAN LAS QUE CAMBIABAN SOLAS, PEGADAS:
-      LINEA 53:       | SELLO ESCRITO: <TEMPORAL>/SELLO_APERTURA_AUDITOR_VARNES_LIMPIO.json (582 bytes)
-      LINEA 54:       |    ciega   <TEMPORAL>/_auditor_vARNES_LIMPIO_ciega_blind.txt -> 3823 bytes | sha256 3b6a63b5e8db812f
-      LINEA 55:       |    destape <TEMPORAL>/_auditor_vARNES_LIMPIO_ciega_reveal.txt -> 2273 bytes | sha256 f07484314b9e6ad3
+      LINEA 53: D) Y CON LA BITACORA LIMPIA SI SELLA, para que se vea que no esta
+      LINEA 54:    simplemente roto (un guardia que no deja pasar a nadie no es un
+      LINEA 55:    guardia, es una pared)
 
 LO QUE ESTE ARNES NO PRUEBA, DICHO EN VEZ DE DARLO POR HECHO: la reparacion
 NO se verifica contra la bateria, porque la 185 no es vuelta de bateria
