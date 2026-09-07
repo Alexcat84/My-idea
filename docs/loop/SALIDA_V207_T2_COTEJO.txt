@@ -1,0 +1,144 @@
+==============================================================================
+VUELTA 207, TAREA 2.b y 2.c: OP-L-01 COTEJADA CONTRA LOS TRES DOCUMENTOS
+QUE SU PROPIA FICHA NOMBRA COMO EVIDENCIA
+==============================================================================
+
+A) LOS TRES DOCUMENTOS, REMEDIDOS POR MI Y NO COPIADOS DEL ENCARGO
+   docs/plan/LECTURAS_DIRIGIDAS.md     214916 bytes en disco y  214916 normalizado a LF, 2231 lineas
+      sha256 disco dda1cdd67042c733 | sha256 LF dda1cdd67042c733
+   docs/INTRA_DOMINIO_INFORME.md       943970 bytes en disco y  943970 normalizado a LF, 16775 lineas
+      sha256 disco c05b6bcd20188a9c | sha256 LF c05b6bcd20188a9c
+   docs/BANCO_DE_TEXTOS.md             182228 bytes en disco y  182228 normalizado a LF, 3119 lineas
+      sha256 disco 68557cd00a3124f4 | sha256 LF 68557cd00a3124f4
+
+   EL CONTRASTE DEL ENCARGO, PUBLICADO AL LADO: 214916 / 214916,
+   943970 / 943970 y 182228 / 182228. CALZAN LOS TRES.
+
+B) LAS CABECERAS `LD`, CONTADAS CON `CABECERA_LD` IMPORTADA Y NO CON UN
+   PATRON MIO (es la vara que la campana ya usa, y el acta 203 la cita)
+   CIFRA cabeceras LD en el documento de HOY: 27
+   CIFRA de ellas que son de LA TANDA DE ONCE (LD-01 a LD-11): 11
+   CIFRA cabeceras de FUERA de la tanda: 16
+   LAS ONCE, CON SU VEREDICTO LEIDO DE SU CABECERA Y NO TECLEADO:
+      LD-01  linea    76  D         formalizar_junta_asesora contra identificar_consejo_asesores
+      LD-02  linea    95  D         channels_hypothesis_physical contra channels_hypothesis_web_mobile
+      LD-03  linea   112  A         channels_hypothesis_web_mobile contra seleccion_canal_fisico
+      LD-04  linea   128  D         evaluacion_tecnologias_disruptivas contra explotacion_tecnologias_disruptiva
+      LD-05  linea   146  D         estrategia_innovacion_producto contra estrategia_de_innovacion_producto
+      LD-06  linea   165  A DE BLOQUE  project_close_out contra reunion_conclusion_proyecto
+      LD-07  linea   187  D         project_close_out contra encuesta_satisfaccion_postproyecto
+      LD-08  linea   224  D         disenar_tests_pass_fail contra diseno_experimentos_hipotesis
+      LD-09  linea   243  D         refinar_sales_roadmap contra evaluacion_vp_ventas
+      LD-10  linea   257  D         refinar_sales_roadmap contra framework_evaluacion_director_vent
+      LD-11  linea   268  D         pensamiento_visual contra pensamiento_visual_modelos_negocio
+   CIFRA de las once que el patron NO encontro: 0 (ninguna)
+   CIFRA veredictos que empiezan por A: 2 | CIFRA que son D: 9
+   (la ficha dice SALDO: 2 A y 9 D)
+
+C) EL BLOQUE DE CADA UNA DE LAS ONCE, ACOTADO, PARA VER SI TRAE SU RAZON
+   LD-01  lineas    76 a    94 |  13 lineas de prosa |  3 lineas de cita `>`
+   LD-02  lineas    95 a   111 |  11 lineas de prosa |  2 lineas de cita `>`
+   LD-03  lineas   112 a   127 |  10 lineas de prosa |  4 lineas de cita `>`
+   LD-04  lineas   128 a   145 |  12 lineas de prosa |  5 lineas de cita `>`
+   LD-05  lineas   146 a   164 |  12 lineas de prosa |  5 lineas de cita `>`
+   LD-06  lineas   165 a   186 |  15 lineas de prosa |  6 lineas de cita `>`
+   LD-07  lineas   187 a   223 |  30 lineas de prosa | 23 lineas de cita `>`
+   LD-08  lineas   224 a   242 |  13 lineas de prosa |  6 lineas de cita `>`
+   LD-09  lineas   243 a   256 |   9 lineas de prosa |  2 lineas de cita `>`
+   LD-10  lineas   257 a   267 |   7 lineas de prosa |  3 lineas de cita `>`
+   LD-11  lineas   268 a   541 | 209 lineas de prosa | 44 lineas de cita `>`
+   CIFRA de las once SIN prosa o SIN linea de cita: 0 (ninguna)
+
+D) EL COTEJO, PUNTO POR PUNTO. UNA FILA SIN CITA NO VALE
+
+   V.1   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:74  ## LAS ONCE, una por una
+         las 11 de la tanda estan, con veredicto leido de su cabecera, y las 11 traen prosa y linea de cita. CIFRA sin razon: 0
+
+   la seccion 52 va de la linea 10055 a la 10111 (57 lineas)
+   CIFRA de las once cuyos DOS identificadores estan en esa seccion: 8 (LD-04, LD-05, LD-06, LD-07, LD-08, LD-09, LD-10, LD-11)
+   CIFRA de las once que NO estan en la seccion 52: 3 (LD-01, LD-02, LD-03)
+   V.2   INF  CUBRE     docs/INTRA_DOMINIO_INFORME.md:10055  ## 52. LAS PAREJAS QUE EL EJERCICIO NO PUEDE CERRAR
+         la seccion existe con ese titulo exacto y trae las parejas. MEDIDO ADEMAS, y va como dato y no como reproche: 8 de las once caen dentro y 3 no (LD-01, LD-02, LD-03), porque esas cierran nomina y no salen de esta lista
+
+   la tabla va de la linea 938 a la 972 | CIFRA filas `| **`: 11
+
+   LA PRUEBA QUE DE VERDAD DECIDE ESTE PUNTO, Y NO ES QUE LA TABLA
+   EXISTA: LA MESA DECLARA QUE DOS NOMINAS QUEDAN CON COBERTURA
+   COMPLETA. SE MIRA SI LA TABLA LO LLEVA.
+      NOMINA 'junta asesora'
+         lo que LA MESA dice que dejo (docs/plan/LECTURAS_DIRIGIDAS.md:290):
+            | **junta asesora** | 5 de 6, **mezclado** | **6 de 6, cobertura COMPLETA**, mezclado confirmado. `LD-01` es D y **no cambia la clase, cierra la cuenta** |
+         lo que LA TABLA VIVA lleva hoy (docs/BANCO_DE_TEXTOS.md:961):
+            miembros **4** | pares posibles **6** | leidos **5** | en A **4**
+         la tabla da COBERTURA COMPLETA para esta nomina: NO
+      NOMINA 'seleccion de canal'
+         lo que LA MESA dice que dejo (docs/plan/LECTURAS_DIRIGIDAS.md:291):
+            | **seleccion de canal** | 8 de 10, **sub-puro** | **10 de 10, cobertura COMPLETA. MEZCLADO**: `LD-02` mete el primer D. **El sub-puro cae, y cae con la nomina cerrada** |
+         lo que LA TABLA VIVA lleva hoy (docs/BANCO_DE_TEXTOS.md:965):
+            miembros **6** | pares posibles **15** | leidos **8** | en A **8**
+         la tabla da COBERTURA COMPLETA para esta nomina: NO
+      CIFRA nominas que la mesa declara CERRADAS y la tabla NO lleva cerradas: 2
+      CIFRA nominas cuya fila NO HALLE en la tabla: 0 (ninguna)
+         junta asesora          tabla dice 5 de 6, linea 961
+         seleccion de canal     tabla dice 8 de 15, linea 965
+   V.3   BAN  A MEDIAS  docs/BANCO_DE_TEXTOS.md:938  #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+         la tabla EXISTE con ese nombre exacto y trae 11 filas de racimo, y hasta ahi el punto se cumple. **PERO NO LLEVA EL EFECTO DE ESTA MESA**: de las 2 nominas que la mesa declara con cobertura COMPLETA, 2 siguen sin cerrar en la tabla (junta asesora, seleccion de canal). Su corte es 14 ago 2026 al puesto 1157, TRES DIAS DESPUES del fecha_corte de la ficha, asi que no es que la tabla sea vieja: es POSTERIOR y aun asi no lo lleva. **ESTE VEREDICTO ES MIO Y VA MARCADO COMO DISCUTIBLE `D.1`**
+
+   V.4   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:17  **Medido el 11 ago 2026 sobre las 221 componentes de A, corte del puesto 2117:**
+         **ESTE PUNTO IBA SELLADO COMO NO DOCUMENTAL Y RESULTA QUE SI TIENE SEDE DOCUMENTAL.** El sello se respeta y la discrepancia se declara: no se mueve de lado, se dice. Linea de la cifra 205: 21
+
+   V.5   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:44  ## ESTA TANDA: ONCE LECTURAS
+         la tanda se declara ONCE en su propio titulo, y la fecha 11 ago 2026 esta en la linea 17
+
+   V.6   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:10  **Se leen con la MISMA VARA y el mismo formato de veredicto que el cribado, y van
+         y la segunda mitad de la clausula, `no entran en la cola ni mueven su marcador`, esta en la linea 11
+
+   V.7   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:60  ## EL SALDO
+         la tabla del saldo esta, y su cifra CALZA CON MI RECUENTO DE LAS CABECERAS: 2 que empiezan por A y 9 que son D, contra las 2 y 9 que la ficha declara. calza: SI
+
+   V.8   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:74  ## LAS ONCE, una por una
+         CIFRA de las once con cabecera propia y veredicto: 11 de 11
+
+   V.9   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:177  > **LA A NO ES ENTRE LOS NODOS: ES ENTRE EL BLOQUE INJERTADO Y EL OTRO NODO.**
+         la clase se nombra en 4 linea(s) y su DEFINICION esta en la linea 177
+
+   V.10  LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:180  > **Y por eso el arreglo NO es fundir los dos nodos: es DESTEJER `project_close_out`
+         el arreglo se dice por su nombre en la linea 180 y se repite en la tabla de formas en la linea 296
+
+   V.11  LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:299  > **LA LECCION DEL SALDO: 9 de 11 salieron SANAS.** Estos pares no estaban en la
+         la leccion esta escrita entera, con su motivo detras
+
+   V.12  LD   NO DOCUMENTAL docs/plan/LECTURAS_DIRIGIDAS.md:1826  | los tres pares, tienen veredicto? | **NO**, los tres, sobre las **3.388** filas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` |
+         SELLADO COMO NO DOCUMENTAL ANTES DE MIRAR: es una CLAUSULA DE VERIFICACION contra `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, que NO es ninguno de los tres documentos de la evidencia. Se busco igual, y el literal 'INTRA_DOMINIO_VEREDICTOS' aparece
+
+   V.13  LD   NO DOCUMENTAL docs/plan/LECTURAS_DIRIGIDAS.md:11  marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador.**
+         SELLADO COMO NO DOCUMENTAL ANTES DE MIRAR: es una CLAUSULA DE VERIFICACION contra el marcador del cribado, que NO vive en ninguno de los tres. Se busco igual, y el literal 'no entran en la cola ni mueven su marcador' aparece
+
+   V.14  LD   NO DOCUMENTAL docs/plan/LECTURAS_DIRIGIDAS.md:51  | **cierran una nomina** | **3** | junta asesora (1) y seleccion de canal (2): con ellas las dos quedan con **cobertura completa** |
+         SELLADO COMO NO DOCUMENTAL ANTES DE MIRAR: es una CLAUSULA DE VERIFICACION contra las nominas del inventario, que NO viven en ninguno de los tres. Se busco igual, y el literal 'cobertura' aparece
+
+
+E) LA COBERTURA, MEDIDA Y NO NARRADA (2.c)
+   CIFRA puntos de la vara: 14
+   CIFRA puntos SELLADOS como documentales: 10
+   CIFRA puntos SELLADOS como NO documentales: 4
+
+   CIFRA CUBRE:         10  V.1, V.2, V.4, V.5, V.6, V.7, V.8, V.9, V.10, V.11
+   CIFRA A MEDIAS:       1  V.3
+   CIFRA NO CUBRE:       0  (ninguno)
+   CIFRA NO DOCUMENTAL:  3  V.12, V.13, V.14
+
+   LA LISTA NOMINAL DE LOS QUE NO CUBREN: (NINGUNO)
+   LA LISTA NOMINAL DE LOS QUE CUBREN A MEDIAS: V.3
+
+   SOBRE LOS 10 PUNTOS DOCUMENTALES SELLADOS: 9 CUBREN, 1 a medias, 0 no cubren
+
+F) LO QUE NO SE HACE AQUI, Y SE DICE (2.d)
+   NO SE CIERRA LA FICHA: cerrar una ficha del plan es adjudicacion del
+   auditor y no del ejecutor. Se publica la cobertura y se para.
+   NO SE TOCA EL CAMPO `estado` de docs/plan/OPERACIONES.jsonl: ni se
+   levanta, ni se baja, ni se mira para decidir (AUDITOR.md 0).
+   NO SE EJECUTA NINGUN PUNTO QUE FALTE: una mesa a medias es peor que
+   una mesa pendiente.
+
+FIN DEL COTEJO
