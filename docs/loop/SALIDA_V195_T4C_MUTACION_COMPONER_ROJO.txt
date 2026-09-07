@@ -1,0 +1,100 @@
+==============================================================================
+VUELTA 195, TAREA 4.c: CASO POSITIVO POR MUTACION DE QUE --componer
+PROPAGUE EL PEOR VEREDICTO, CON EL CASO REAL DE LA 194
+==============================================================================
+
+A) EL SUJETO CONGELADO: LAS DIEZ SALIDAS DE LA 194, POR BLOB DE GIT
+   commit clavado: 56c2d085 (no se busca en el arbol)
+   tramo  1 -> SALIDA_V194_BATERIA_TRAMO_1.txt: 11284 bytes del blob
+   tramo  2 -> SALIDA_V194_BATERIA_TRAMO_2.txt: 9528 bytes del blob
+   tramo  3 -> SALIDA_V194_BATERIA_TRAMO_3.txt: 9582 bytes del blob
+   tramo  4 -> SALIDA_V194_BATERIA_TRAMO_4.txt: 9596 bytes del blob
+   tramo  5 -> SALIDA_V194_BATERIA_TRAMO_5.txt: 9559 bytes del blob
+   tramo  6 -> SALIDA_V194_BATERIA_TRAMO_6.txt: 9605 bytes del blob
+   tramo  7 -> SALIDA_V194_BATERIA_TRAMO_7.txt: 9815 bytes del blob
+   tramo  8 -> SALIDA_V194_BATERIA_TRAMO_8.txt: 9581 bytes del blob
+   tramo  9 -> SALIDA_V194_BATERIA_TRAMO_9.txt: 10058 bytes del blob
+   tramo 10 -> SALIDA_V194_BATERIA_TRAMO_10.txt: 9492 bytes del blob
+
+B) LA CLASE DE CADA UNO, LEIDA DE SU SALIDA Y NO RECALCULADA
+   tramo  1 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  2 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  3 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  4 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  5 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  6 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  7 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  8 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo  9 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+   tramo 10 -> ROJO POR FALLO   CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
+
+C) EL CASO QUE EL ENCARGO NOMBRA: DIEZ TRAMOS ROJOS TIENEN QUE DAR ROJO
+   peor veredicto: 'ROJO POR FALLO' | codigo de salida: 1 | ilegibles: 0
+   LA CITA DE LO QUE LA 194 PUBLICO, Y ES UNA CITA Y NO UNA AFIRMACION
+   DE ESTE ARNES: 'VERDE: los 10 tramos cubren la nomina entera'
+   Con esta maquina esa linea YA NO SE PUEDE ESCRIBIR sobre estos diez,
+   porque el veredicto propagado no es VERDE.
+
+D) LOS TRES CASOS QUE LA 194 NO DEJO, FABRICADOS EN MEMORIA
+   Una guarda probada solo con el caso que ya ocurrio no sabe que hacer
+   con el siguiente, asi que los tres se fabrican aqui.
+   verde  -> VERDE
+   deuda  -> ROJO POR DEUDA DECLARADA
+   mudo   -> None
+
+E) LA ESCALERA DE GRAVEDAD, PROBADA EN SUS TRES PELDANOS
+   VERDE solo con todos verdes; la deuda gana al verde; y el fallo gana
+   a la deuda. Si el orden estuviera al reves, una bateria con un arnes
+   caido se publicaria como deuda declarada, que es la degradacion que
+   la 4.4 del acta 190 ya cazo una vez.
+   solo verdes      -> VERDE                      codigo 0
+   verde mas deuda  -> ROJO POR DEUDA DECLARADA   codigo 2
+   deuda mas fallo  -> ROJO POR FALLO             codigo 1
+
+F) UN TRAMO QUE NO PUBLICA SU CLASE CUENTA COMO FALLO, NO COMO VERDE
+   La duda no se resuelve a favor: un tramo cuyo estado no se puede
+   saber no puede sostener un verde compuesto.
+   verde mas mudo -> ROJO POR FALLO codigo 1, ilegibles [2]
+
+G) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
+   sigue existiendo: NO
+
+H) PASADA 1, LOS CASOS TAL CUAL
+   los_DIEZ_blobs_se_leen                               PASA   (real=10 esperado=10)
+   los_DIEZ_dan_ROJO_POR_FALLO                          PASA   (real=['ROJO POR FALLO'] esperado=['ROJO POR FALLO'])
+   el_peor_de_los_diez_es_ROJO_POR_FALLO                PASA   (real='ROJO POR FALLO' esperado='ROJO POR FALLO')
+   y_su_codigo_de_salida_NO_es_cero                     PASA   (real=True esperado=True)
+   y_no_hay_ninguno_ilegible                            PASA   (real=0 esperado=0)
+   con_estos_diez_el_veredicto_ya_no_es_VERDE           PASA   (real=False esperado=False)
+   el_fabricado_verde_se_lee_bien                       PASA   (real='VERDE' esperado='VERDE')
+   el_fabricado_deuda_se_lee_bien                       PASA   (real='ROJO POR DEUDA DECLARADA' esperado='ROJO POR DEUDA DECLARADA')
+   el_fabricado_mudo_se_lee_bien                        PASA   (real=None esperado=None)
+   peor_de_solo_verdes                                  PASA   (real='VERDE' esperado='VERDE')
+   peor_de_verde_mas_deuda                              PASA   (real='ROJO POR DEUDA DECLARADA' esperado='ROJO POR DEUDA DECLARADA')
+   peor_de_deuda_mas_fallo                              PASA   (real='ROJO POR FALLO' esperado='ROJO POR FALLO')
+   un_tramo_mudo_pone_ROJO_POR_FALLO                    PASA   (real='ROJO POR FALLO' esperado='ROJO POR FALLO')
+   y_lo_nombra_en_la_lista_de_ilegibles                 PASA   (real=[2] esperado=[2])
+   el_temporal_queda_retirado                           PASA   (real=False esperado=False)
+   CIFRA casos: 15 | pasan: 15 | fallan: 0
+
+I) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   los_DIEZ_blobs_se_leen                               CAE     (esperado mutado=11)
+   los_DIEZ_dan_ROJO_POR_FALLO                          CAE     (esperado mutado=['ROJO POR FALLO', 'DE MENTIRA'])
+   el_peor_de_los_diez_es_ROJO_POR_FALLO                CAE     (esperado mutado='ROJO POR FALLO DE MENTIRA')
+   y_su_codigo_de_salida_NO_es_cero                     CAE     (esperado mutado=False)
+   y_no_hay_ninguno_ilegible                            CAE     (esperado mutado=1)
+   con_estos_diez_el_veredicto_ya_no_es_VERDE           CAE     (esperado mutado=True)
+   el_fabricado_verde_se_lee_bien                       CAE     (esperado mutado='VERDE DE MENTIRA')
+   el_fabricado_deuda_se_lee_bien                       CAE     (esperado mutado='ROJO POR DEUDA DECLARADA DE MENTIRA')
+   el_fabricado_mudo_se_lee_bien                        CAE     (esperado mutado='ALGO QUE NO ES None')
+   peor_de_solo_verdes                                  CAE     (esperado mutado='VERDE DE MENTIRA')
+   peor_de_verde_mas_deuda                              CAE     (esperado mutado='ROJO POR DEUDA DECLARADA DE MENTIRA')
+   peor_de_deuda_mas_fallo                              CAE     (esperado mutado='ROJO POR FALLO DE MENTIRA')
+   un_tramo_mudo_pone_ROJO_POR_FALLO                    CAE     (esperado mutado='ROJO POR FALLO DE MENTIRA')
+   y_lo_nombra_en_la_lista_de_ilegibles                 CAE     (esperado mutado=[2, 'DE MENTIRA'])
+   el_temporal_queda_retirado                           CAE     (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 15 de 15
+
+CIFRA casos: 15 | pasan: 15 | fallan: 0
+VEREDICTO: VERDE
+VERDE: los 15 casos pasan tal cual y los 15 caen al mutar el esperado.

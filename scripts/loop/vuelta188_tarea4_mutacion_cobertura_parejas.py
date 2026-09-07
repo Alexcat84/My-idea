@@ -66,6 +66,22 @@ TAREA 3.b).
 
 USO:
   python scripts/loop/vuelta188_tarea4_mutacion_cobertura_parejas.py
+
+--- SUJETO CONGELADO, DECLARADO EN LA VUELTA 195 (TAREA 3.c) ---
+
+**LA HUELLA DE VIVO QUE LA GUARDA VE AQUI ES `REPORTE.md`, Y ES EL VALOR DE LA
+CONSTANTE `RUTA_DEL_187`, QUE SOLO SE USA DETRAS DE UN `git show`:** las dos
+llamadas que la usan son `git_show("%s:%s" % (COMMIT_DEL_187, RUTA_DEL_187))`, con
+`COMMIT_DEL_187` fijo en este mismo fichero. O sea **el BLOB de un commit fijo**,
+que no se mueve.
+
+**EL FICHERO DEL ARBOL DE TRABAJO NO SE ABRE EN NINGUN MOMENTO** para ese sujeto:
+lo que el arnes abre en escritura es su propia salida sellada, y lo que abre en
+lectura son textos fabricados y el blob de arriba.
+
+**POR ESO SU SUJETO ESTA CONGELADO** y esta declaracion lo dice con el literal que
+la regla de la vuelta 148 pide.
+
 """
 import hashlib
 import io

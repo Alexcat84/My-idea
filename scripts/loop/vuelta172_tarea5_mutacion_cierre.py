@@ -25,6 +25,23 @@ resultado no depende de que haya en `docs/loop/` hoy ni dentro de diez vueltas.
 NINGUN VEREDICTO ES UNA CONSTANTE LITERAL: los reales salen de llamar a
 `piezas_que_faltan`, y la pasada 2 muta cada esperado y exige que el caso CAIGA.
 
+--- REPARADO EN LA VUELTA 195, Y LA CAUSA VA ESCRITA (TAREA 3.d) ---
+
+ESTE ARNES LLEVABA SIN MORDER DESDE LA VUELTA 188, Y LAS BATERIAS DE LA 189 Y LA
+194 LO PUBLICABAN COMO `NO MORDIO` SIN DIAGNOSTICARLO. La causa, medida en la
+vuelta 195 corriendolo: **su propio caso verde fabricaba DOS secciones `## 9.`**,
+la del bucle y la de `CR.CAB_9`. Eso era inofensivo hasta que la TAREA 4.b de la
+vuelta 188 ensancho la pieza (3) de `cerrar_reporte.py` para cazar SECCIONES
+DUPLICADAS; desde entonces `A_con_las_cuatro_no_falta_ninguna` daba 1 en vez de 0
+y `A_y_no_nombra_ningun_codigo` devolvia `['(3)']` en vez de `[]`.
+
+**NO ES QUE LA GUARDA ESTUVIERA MAL: ES QUE EL SUJETO DE MENTIRA DE ESTE ARNES
+DEJO DE SER UN REPORTE VALIDO Y NADIE LO RE APUNTO.** Una guarda que no muerde no
+es una guarda, y un arnes cuyo caso verde falla no puede probar nada de lo demas.
+El arreglo esta en `reporte()` y va comentado en su sitio. **NO SE AFLOJA NINGUN
+CASO:** la rama `secciones=False` sigue fabricando un reporte SIN la seccion 9 y
+la pieza (3) sigue teniendo que cazarla.
+
 USO:  python scripts/loop/vuelta172_tarea5_mutacion_cierre.py
 """
 import os
@@ -68,7 +85,21 @@ def reporte(veredicto=True, cabecera=True, secciones=True, bateria=True,
         L.append("**" + CR.HUECO_CABECERA + ", Y SE DICE EN VEZ DE RELLENARLA.**")
     L.append(CR.MARCA_CIERRA)
     L.append("")
-    tope = 10 if secciones else 9
+    # LA REPARACION DE LA VUELTA 195, DECLARADA Y CON SU CAUSA MEDIDA. Aqui
+    # decia `tope = 10 if secciones else 9`, o sea que con `secciones=True`
+    # fabricaba `## 1.` a `## 9.` **y ADEMAS** `CAB_9`, que tambien es `## 9.`:
+    # DOS secciones nueve en el mismo reporte de mentira. Eso era inofensivo
+    # hasta la vuelta 188, cuando la TAREA 4.b ensancho la pieza (3) de
+    # `cerrar_reporte.py` para cazar SECCIONES DUPLICADAS, y desde entonces EL
+    # PROPIO CASO VERDE DE ESTE ARNES caia: `A_con_las_cuatro_no_falta_ninguna`
+    # daba 1 en vez de 0, nombrando el codigo `(3)`. Un arnes cuyo caso verde
+    # falla NO MUERDE, y asi lo publicaban las baterias de la 189 y la 194.
+    #
+    # EL TOPE PASA A 9 EN LAS DOS RAMAS, y las dos siguen midiendo lo suyo:
+    #   . con `secciones=True`  -> `## 1.` a `## 8.` mas `CAB_9` = 1 a 9 UNICAS.
+    #   . con `secciones=False` -> `## 1.` a `## 8.` y sin `CAB_9`, o sea sin
+    #     la 9, que es lo que la pieza (3) tiene que cazar. NO SE AFLOJA NADA.
+    tope = 9
     for k in range(1, tope):
         L.append("## %d. SECCION %d DE MENTIRA" % (k, k))
         L.append("")

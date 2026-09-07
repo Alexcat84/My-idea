@@ -19,6 +19,25 @@ fabricado**, para que ni el sujeto ni la sede sean los vivos.
 
 USO:
   python scripts/loop/vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+
+--- SUJETO CONGELADO, DECLARADO EN LA VUELTA 195 (TAREA 3.c) ---
+
+**LA HUELLA DE VIVO QUE LA GUARDA VE AQUI ES `REPORTE.md`, Y NO ES UNA APERTURA
+DE ESE FICHERO.** Es el argumento de `AP.apuntar("REPORTE.md")` dentro del
+programa hijo que este arnes lanza: **una CADENA que se mete en la bitacora del
+turno para poder comprobar si sobrevive entre procesos**. `apuntar()` escribe un
+nombre en una lista; no abre, no lee y no toca `docs/loop/REPORTE.md`.
+
+**LO QUE ESTE ARNES SI TOCA, Y ESO SI ES SU SUJETO:** un directorio temporal de
+`mkdtemp` donde redirige `AP.RUTA_DEL_TURNO` y donde escribe sus sellos y su
+turno de mentira. **Todo lo que abre en escritura vive dentro de ese temporal**, y
+`P.16` (quien fabrica limpia) lo retira al salir.
+
+**POR ESO SU SUJETO ESTA CONGELADO** y esta declaracion lo dice con el literal que
+la regla de la vuelta 148 pide. **La cadena que la guarda confunde con un fichero
+no se cambia**: cambiarla para contentar a la guarda seria falsear la prueba, que
+es justamente comprobar que ESE nombre viaja entre procesos.
+
 """
 import hashlib
 import io

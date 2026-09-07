@@ -1,0 +1,85 @@
+==============================================================================
+VUELTA 195, TAREA 3.f: LA BATERIA CORRIDA SOLO SOBRE LO QUE ESTA VUELTA
+TOCO. NO ES LA BATERIA ENTERA Y NO SE CITA COMO TAL.
+==============================================================================
+LA CADENCIA, LEIDA DE AUDITOR.md 6.1 Y NO DE MEMORIA: la bateria corre
+CADA CINCO VUELTAS en una vuelta propia que no lleva nada mas; la 194 la
+corrio entera por sus diez tramos y la proxima cae en la 199.
+
+A) EL ESTADO AL ENTRAR, MEDIDO Y NO SUPUESTO
+   CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   docs/loop/_TURNO_DEL_AUDITOR.json al entrar: 345 bytes, sha256 LF 2e085e88795b9df2
+   HEAD de apertura, leido del sello y no tecleado: 124a18a871f4
+
+B) LO QUE SE TOCO, COMPUTADO DE GIT Y COTEJADO CONTRA LO DECLARADO
+   CIFRA arneses tocados segun git: 7
+      vuelta172_tarea5_mutacion_cierre.py
+      vuelta186_tarea2c_mutacion_cierre_tardio.py
+      vuelta187_tarea4_mutacion_dos_convenciones.py
+      vuelta188_tarea4_mutacion_cobertura_parejas.py
+      vuelta193_tarea4e_mutacion_sello_entre_procesos.py
+      vuelta195_tarea3g_mutacion_nomina_enchufada.py
+      vuelta195_tarea4c_mutacion_componer_rojo.py
+   CIFRA arneses que la TAREA declara haber tocado: 12
+   en git y NO declarados por la tarea: (ninguno)
+   declarados por la tarea y NO en git: vuelta191_tarea3_mutacion_lineas.py, vuelta191_tarea4_mutacion_veredicto.py, vuelta191_tarea6_mutacion_bloque_tallado.py, vuelta192_tarea4_mutacion_cuarta_puerta.py, vuelta194_tarea2c_mutacion_sede_del_turno.py
+   SE CORRE LA UNION DE LAS DOS, que es el lado prudente: si git ve uno
+   que la tarea no declara, se corre igual.
+   CIFRA arneses que se van a correr: 12
+
+C) LAS TRES CIFRAS QUE EL ENCARGO MANDA PUBLICAR, SOBRE EL REPO DE HOY
+   (no salen de esta corrida acotada: salen de las funciones del modulo)
+   CIFRA entradas de la nomina: 135
+   CIFRA arneses que el censo reconoce: 195
+   CIFRA arneses DEL CENSO que se quedan FUERA de la nomina: 0
+      (ninguno)
+   CIFRA entradas de la nomina SIN SUJETO CONGELADO: 0
+      (ninguna)
+   CIFRA entradas de la nomina que el censo NO VE: 0
+      (ninguna)
+
+D) LA CORRIDA ACOTADA, CADA ARNES DOS VECES (cotejo de la vuelta 141)
+   LA MAQUINA ES LA DE LA BATERIA Y NO UNA COPIA: `correr_dos_veces()`
+   sobre `DOCS_LOOP`, `clasificar()`, y la exencion de CASO DECLARADO con
+   sus TRES condiciones (codigo declarado, estado NO MORDIO y LA MARCA
+   dentro de la salida). Una copia de esa logica aqui diria manana otra
+   cosa que la bateria.
+
+   arnes                                                exit   estado           segundos
+   vuelta172_tarea5_mutacion_cierre.py                  0      OK               2.9
+   vuelta186_tarea2c_mutacion_cierre_tardio.py          0      OK               2.8
+   vuelta187_tarea4_mutacion_dos_convenciones.py        0      OK               3.1
+   vuelta188_tarea4_mutacion_cobertura_parejas.py       0      OK               3.9
+   vuelta191_tarea3_mutacion_lineas.py                  0      OK               67.5
+   vuelta191_tarea4_mutacion_veredicto.py               0      OK               2.5
+   vuelta191_tarea6_mutacion_bloque_tallado.py          0      OK               2.9
+   vuelta192_tarea4_mutacion_cuarta_puerta.py           0      OK               2.3
+   vuelta193_tarea4e_mutacion_sello_entre_procesos.py   0      OK               3.5
+   vuelta194_tarea2c_mutacion_sede_del_turno.py         0      OK               5.2
+   vuelta195_tarea3g_mutacion_nomina_enchufada.py       0      OK               2.3
+   vuelta195_tarea4c_mutacion_componer_rojo.py          0      OK               2.8
+
+   EL RELOJ, MEDIDO Y NO ESTIMADO: 1.7 minutos de duracion monotona
+
+E) LO QUE ESTA CORRIDA ACOTADA ENCUENTRA
+   CIFRA arneses corridos: 12
+   ANCLA PERDIDA  : 0 (ninguna)
+   NO MORDIO      : 0 (ninguno)
+   CASO DECLARADO : 0 (ninguno)
+   SIN REPRODUCIR : 0 (ninguno)
+
+F) EL ESTADO AL SALIR, REMEDIDO Y NO SUPUESTO
+   CIFRA filas de `git diff --numstat -- dataset/` AL SALIR: 0
+   docs/loop/_TURNO_DEL_AUDITOR.json al salir: 345 bytes, sha256 LF 2e085e88795b9df2
+   LA SEDE DEL TURNO NO SE MOVIO: SI
+   (es la que `vuelta192_tarea4_mutacion_cuarta_puerta.py` borraba antes de
+    que la 194 lo arreglara, y por eso se remide aqui en vez de creerlo)
+
+G) EL VEREDICTO DE ESTA CORRIDA ACOTADA, Y SU ALCANCE
+   hay rojo: False
+   CLASE DEL VEREDICTO: VERDE | CIFRA exitcode: 0
+   Y SU ALCANCE, DICHO PARA QUE NO SE CITE DE MAS: esto mide LOS 12
+   ARNESES QUE ESTA VUELTA TOCO, no los 135 de la nomina. La bateria entera
+   cae en la 199 por la cadencia de AUDITOR.md 6.1.
+
+FIN

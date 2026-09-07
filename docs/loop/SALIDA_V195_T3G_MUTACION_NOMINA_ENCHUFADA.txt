@@ -1,0 +1,90 @@
+==============================================================================
+VUELTA 195, TAREA 3.g: CASO POSITIVO POR MUTACION DE QUE LA MIRADA DE LA
+NOMINA SOBRE SI MISMA ESTE ENCHUFADA AL VEREDICTO
+==============================================================================
+
+A) EL DIRECTORIO FABRICADO, QUE NO ES scripts/loop/
+   temporal: uno de `mkdtemp` con prefijo `v195_nomina_`. SU NOMBRE
+   NO SE IMPRIME a proposito: lleva un sufijo distinto en cada
+   corrida y haria esta salida IRREPRODUCIBLE.
+   ficheros: vuelta200_tarea1_mutacion_dentro.py, vuelta201_tarea2_mutacion_fuera.py, vuelta202_tarea3_mutacion_declarada_y_fuera.py, vuelta203_tarea4_un_script_cualquiera.py
+   CIFRA arneses que el censo reconoce: 3 (vuelta200_tarea1_mutacion_dentro.py, vuelta201_tarea2_mutacion_fuera.py, vuelta202_tarea3_mutacion_declarada_y_fuera.py)
+   el cuarto NO es un arnes de mutacion y el censo NO lo cuenta.
+
+B) LA NOMINA FABRICADA DEJA DOS FUERA, Y UNO DE ELLOS ES CASO DECLARADO
+   nomina:     vuelta200_tarea1_mutacion_dentro.py
+   declarados: vuelta202_tarea3_mutacion_declarada_y_fuera.py
+   CIFRA que faltan: 2 (vuelta201_tarea2_mutacion_fuera.py, vuelta202_tarea3_mutacion_declarada_y_fuera.py)
+   Y LA QUE IMPORTA: SER CASO DECLARADO NO SACA A NADIE DE LA NOMINA.
+   `arneses_que_faltan()` NO consulta CASOS_DECLARADOS, y por eso el
+   declarado sigue saliendo. Una exencion de exitcode no es una
+   exencion de estar en la nomina, y eso se prueba en vez de leerse.
+
+C) EL CABLE: CON ESA LISTA, EL VEREDICTO TIENE QUE SER ROJO
+   Esto es lo que no estaba probado por nada, y es la mitad que
+   importa: que VER a los que faltan MUEVA el veredicto. La unica
+   forma de saberlo era correr la bateria entera y mirar el color.
+   hay_rojo_al_cierre(faltan=2) -> True
+   clase_del_rojo(...)           -> 'ROJO POR FALLO' (codigo 1)
+   Y NO ES `ROJO POR DEUDA`: un hueco de censo es FALLO, no deuda, y
+   la precedencia esta escrita en `clase_del_rojo()`.
+
+D) SE APAGA LA PIEZA Y EL ROJO TIENE QUE APAGARSE CON ELLA
+   Si el rojo siguiera encendido con la lista vacia, este cable no
+   probaria nada: estaria encendido por otra cosa.
+   hay_rojo_al_cierre(faltan=0) -> False
+   clase_del_rojo(...)          -> 'VERDE' (codigo 0)
+
+E) SI LOS DOS ENTRAN EN LA NOMINA, DEJA DE FALTAR NADIE Y EL ROJO SE VA
+   Es el escenario de esta misma vuelta: la TAREA 3.a metio SEIS en la
+   nomina de verdad. Aqui se prueba la CONDUCTA sobre el fabricado.
+   CIFRA que faltan tras meterlos: 0
+
+F) Y LA VARA SIGUE PROTEGIENDO A LOS ANTERIORES, QUE NO SE AFLOJA
+   Con la vara en 202, el de la 201 queda por debajo y no se reclama.
+   con la vara en 202, faltan: 1 (vuelta202_tarea3_mutacion_declarada_y_fuera.py)
+
+G) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
+   sigue existiendo: NO
+
+H) PASADA 1, LOS CASOS TAL CUAL
+   el_censo_ve_los_TRES_arneses_y_no_el_cuarto              PASA   (real=3 esperado=3)
+   ve_a_los_DOS_que_estan_fuera                             PASA   (real=['vuelta201_tarea2_mutacion_fuera.py', 'vuelta202_tarea3_mutacion_declarada_y_fuera.py'] esperado=['vuelta201_tarea2_mutacion_fuera.py', 'vuelta202_tarea3_mutacion_declarada_y_fuera.py'])
+   el_declarado_sigue_faltando                              PASA   (real=True esperado=True)
+   con_faltan_hay_rojo                                      PASA   (real=True esperado=True)
+   y_la_clase_es_ROJO_POR_FALLO                             PASA   (real='ROJO POR FALLO' esperado='ROJO POR FALLO')
+   y_su_codigo_de_salida_NO_es_cero                         PASA   (real=True esperado=True)
+   y_NO_es_ROJO_POR_DEUDA                                   PASA   (real=False esperado=False)
+   sin_faltan_no_hay_rojo                                   PASA   (real=False esperado=False)
+   y_la_clase_vuelve_a_VERDE                                PASA   (real='VERDE' esperado='VERDE')
+   y_su_codigo_es_cero                                      PASA   (real=0 esperado=0)
+   metidos_en_la_nomina_ya_no_faltan                        PASA   (real=0 esperado=0)
+   y_entonces_no_hay_rojo_por_esta_pieza                    PASA   (real=False esperado=False)
+   la_vara_protege_al_anterior                              PASA   (real=False esperado=False)
+   y_el_de_la_202_si_se_reclama                             PASA   (real=True esperado=True)
+   el_temporal_queda_retirado                               PASA   (real=False esperado=False)
+   CIFRA casos: 15 | pasan: 15 | fallan: 0
+
+I) PASADA 2, SE MUTA EL VALOR ESPERADO Y CADA CASO TIENE QUE CAER
+   Un caso que no cae al mutar su esperado no esta comprobando nada, que
+   es la letra de EJECUTOR.md 1: EL CASO ROJO SE PRUEBA POR MUTACION.
+   el_censo_ve_los_TRES_arneses_y_no_el_cuarto              CAE     (esperado mutado=4)
+   ve_a_los_DOS_que_estan_fuera                             CAE     (esperado mutado=['vuelta201_tarea2_mutacion_fuera.py', 'vuelta202_tarea3_mutacion_declarada_y_fuera.py', 'vuelta999_tarea9_mutacion_de_mentira.py'])
+   el_declarado_sigue_faltando                              CAE     (esperado mutado=False)
+   con_faltan_hay_rojo                                      CAE     (esperado mutado=False)
+   y_la_clase_es_ROJO_POR_FALLO                             CAE     (esperado mutado='ROJO POR FALLO DE MENTIRA')
+   y_su_codigo_de_salida_NO_es_cero                         CAE     (esperado mutado=False)
+   y_NO_es_ROJO_POR_DEUDA                                   CAE     (esperado mutado=True)
+   sin_faltan_no_hay_rojo                                   CAE     (esperado mutado=True)
+   y_la_clase_vuelve_a_VERDE                                CAE     (esperado mutado='VERDE DE MENTIRA')
+   y_su_codigo_es_cero                                      CAE     (esperado mutado=1)
+   metidos_en_la_nomina_ya_no_faltan                        CAE     (esperado mutado=1)
+   y_entonces_no_hay_rojo_por_esta_pieza                    CAE     (esperado mutado=True)
+   la_vara_protege_al_anterior                              CAE     (esperado mutado=True)
+   y_el_de_la_202_si_se_reclama                             CAE     (esperado mutado=False)
+   el_temporal_queda_retirado                               CAE     (esperado mutado=True)
+   CIFRA casos que caen al mutar el esperado: 15 de 15
+
+CIFRA casos: 15 | pasan: 15 | fallan: 0
+VEREDICTO: VERDE
+VERDE: los 15 casos pasan tal cual y los 15 caen al mutar el esperado.

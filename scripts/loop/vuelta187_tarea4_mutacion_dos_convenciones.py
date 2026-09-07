@@ -23,6 +23,22 @@ Ningun `assert` de aqui compara dos constantes literales.
 
 USO:
   python scripts/loop/vuelta187_tarea4_mutacion_dos_convenciones.py
+
+--- SUJETO CONGELADO, DECLARADO EN LA VUELTA 195 (TAREA 3.c) ---
+
+**LA HUELLA DE VIVO QUE LA GUARDA VE AQUI ES `REPORTE.md`, Y NUNCA ES EL FICHERO
+DEL ARBOL DE TRABAJO:** todas sus apariciones en la maquina son parte de
+`git show bb3aaad3:docs/loop/REPORTE.md`, o sea **el BLOB de un commit fijo**, con
+el hash escrito en la constante `COMMIT_DE_LA_C1` de este mismo fichero.
+
+**UN BLOB DE GIT NO SE MUEVE.** Es exactamente la especie de sujeto que
+`HUELLAS_DE_CONGELADO` ya reconoce por `git show`, y el arnes la trae. Lo que le
+faltaba era la DECLARACION que la regla pide cuando un texto trae huellas de las
+dos especies, y va aqui.
+
+**NO SE TOCA `docs/loop/REPORTE.md`** ni en lectura del arbol ni en escritura: la
+ruta solo aparece detras de un `git show` con su commit delante.
+
 """
 import io
 import os

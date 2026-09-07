@@ -105,8 +105,8 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 195 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado. La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta: LAS DIEZ ADJUDICACIONES `4.1` a `4.10`, y LAS DIEZ A FAVOR (siete son los discutibles `D.1` a `D.7` del reporte de la 194 y las tres restantes son las preguntas `P.1`, `P.2` y `P.3`, dos contestadas por extension citable con la cita comprobada contra su fichero), CERO EN CONTRA y es la QUINTA acta seguida; LOS TRES HALLAZGOS DE LA SECCION 5 que no salen de ningun discutible (`5.1` la fila de credito del acta 194 que rotula mal su cifra, `5.2` el rojo de la bateria que SI es reparable, `5.3` `--componer` que publica VERDE sobre diez tramos rojos); CERO CAIDAS DEL EJECUTOR EN LA VUELTA 194, de cifra publicada y de reporte, con LA RACHA DE REPORTE VUELTA A CERO desde el 1 que dejo el acta 194, y SIN ESCALADA QUE ENCARGAR, dicho expresamente para que no se lea como olvido; UNA CAIDA PROPIA DEL AUDITOR, `C.1`, DE METODO (leer `clase` y `razon` del archivo con `json` a mano en vez de por `AP.marcador()` y `AP.leer_veredictos()`, que es la cuarta puerta y ya ofrecia las dos cosas sin coste), con el sujeto NO quemado y probado DESPUES por la propia puerta: 30 de 30 sellados vuelven TAPADOS y 0 destapes apuntados; LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de puestos (30 aislados, 30 cotejados, CERO QUEMADOS, que es la diferencia con la 194 y se debe a que los mensajes de commit del ejecutor ya no publican clases por puesto: ESO FUNCIONO); y LA FILA DE CAIDAS PROPIAS PARTIDA EN DOS, las que ACUMULAN y el total del cuerpo, que es el remedio del hallazgo `5.1` aplicado por el auditor a su propia tabla. Y EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues | **CERRADA. R.57 escrita, idempotencia probada en bytes, y el lector tuvo que cambiar TRES veces** | `SALIDA_V195_T1A_REGISTRO_R57.txt`, `SALIDA_V195_T1A_RECORRIDO_SIN_ESCRIBIR.txt`, `SALIDA_V195_T1A_MUTACION_REGISTRADOR.txt`, `SALIDA_V195_T1A_SIMULACION.txt` |
 | **TAREA 2** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. BLOQUEANTE, Y ES DEUDA SUYA QUE PAGA EL EJECUTOR CON EL INSTRUMENTO. `AUDITOR.md` 1.2: dos discrepancias del auditor cayeron FUERA de su marcado, `654` y `719`, asi que EL CREDITO DE SU TANDA BAJA Y EL TRAMO SE RELEE AL DOBLE. El tramo y el doble estan CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v195_doble_para_la_196.txt`, para que no se elijan despues de mirar. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y NO se copia, con `evitar` cargado de TODO lo consumido y contado de sus ficheros; el solape con el tramo y con el universo tiene que salir CERO POR CONSTRUCCION, no por suerte. (b) LEER LOS 60 A CIEGAS, tramo y doble, con `aislador_de_ciega.py`, y escribir las clases ANTES de abrir el destape. (c) LA VARA ES `docs/BANCO_DE_TEXTOS.md` `9.6.1`, citada por numero y no parafraseada, Y CON EL ERROR DEL AUDITOR PUESTO: la vara de contenido-manda es EL SUELO, NO EL TECHO, y antes de aplicarla se pregunta si el par pertenece a una familia con REGLA PROPIA ya fijada, porque entonces manda la especifica (el `719` se perdio por no preguntarlo: hay regla fijada en el puesto `595` con el `580` de precedente vivo). (d) NO SALTARSE LA `B`: el auditor emitio CERO `B` en 30 pares y el archivo tenia una, el `654`. (e) PUBLICAR EL COTEJO con sus cifras (cuantos coinciden, cuantos discrepan, y cuales caen dentro y fuera del marcado), con los discutibles marcados ANTES de saber si se acierta | **CERRADA, 54 de 60, y con DOS discrepancias FUERA de mi marcado que publico yo** | `SALIDA_V195_T2_SUJETO.txt`, `SALIDA_V195_T2_CIEGA.txt`, `SALIDA_V195_T2_MIS_CLASES.txt`, `SALIDA_V195_T2_DESTAPE.txt`, `SALIDA_V195_T2E_COTEJO.txt` |
-| **TAREA 3** | EL ROJO DE LA BATERIA, ATACADO EN SU CAUSA. Es el hallazgo `5.2` del acta 195 y la adjudicacion de la pregunta `P.2` del reporte de la 194. LO RESERVADO AL FUNDADOR ES PODAR LA NOMINA, NO HACERLA CRECER: la opcion `c` que rechazo el 5 sep 2026 era JUBILAR ARNESES VIEJOS, que es lo contrario de anadir, y el NO TOQUES LA NOMINA de los encargos anteriores se escribio para VUELTAS DE BATERIA y contra LA PODA. (a) LOS SEIS QUE EL CENSO VE Y LA NOMINA NO TIENE ENTRAN EN LA NOMINA, cada uno CON SU SUJETO CONGELADO y cotejado contra su blob de git, RECONTADOS del instrumento al empezar. (b) EL QUE NO PUEDA TENER SUJETO CONGELADO ENTRA COMO CASO DECLARADO, con su marca. (c) LAS TRES ENTRADAS SIN SUJETO CONGELADO que ya estan dentro (`vuelta186_tarea2c_mutacion_cierre_tardio.py`, `vuelta187_tarea4_mutacion_dos_convenciones.py`, `vuelta188_tarea4_mutacion_cobertura_parejas.py`, las tres ancladas a `REPORTE.md` VIVO) se resuelven POR LA MISMA REGLA: o se les congela el sujeto, o pasan a CASO DECLARADO con su marca. (d) `vuelta172_tarea5_mutacion_cierre.py` NO MUERDE desde la 189: se arregla para que caiga cuando tiene que caer, o se declara rota con su motivo medido. (e) NO SE PODA NADA: la nomina solo crece. (f) AL CERRAR, LA BATERIA SOLO SOBRE LO QUE SE TOCO, para comprobar que el rojo atacado se apago, PUBLICANDO LA CIFRA de arneses fuera de la nomina y de entradas sin sujeto congelado, y NO la bateria entera, que no es su vuelta. (g) CON SU CASO POSITIVO POR MUTACION, que pruebe lo que falla hoy: que la mirada de la nomina sobre si misma CAIGA cuando un arnes que el censo ve se queda fuera de la nomina sin ser caso declarado | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
-| **TAREA 4** | `--componer` DEJA DE PUBLICAR VERDE SOBRE DIEZ ROJOS. Es el hallazgo `5.3` del acta 195 y la otra mitad de la pregunta `P.3` del reporte de la 194: `SALIDA_V194_BATERIA_COMPUESTA.txt` termina en VERDE, los 10 tramos cubren la nomina entera, con exitcode 0, mientras los diez tramos traen `CLASE DEL VEREDICTO: ROJO POR FALLO` y exitcode 1. Es cierto EN LO QUE MIDE, la cobertura, y enganoso EN LO QUE PARECE DECIR, el estado de la bateria; banco `9.1`, el instrumento debe caerse en vez de mentir. (a) `--componer` PROPAGA EL PEOR VEREDICTO DE LOS TRAMOS a su propio exitcode y a su linea final: cobertura entera y algun tramo en rojo NO es VERDE. (b) LAS DOS COSAS SE SIGUEN DICIENDO POR SEPARADO, la cobertura con su cifra y el veredicto con la suya, porque que propague el rojo no puede borrar que la cobertura estaba completa. (c) CON SU CASO POSITIVO POR MUTACION, con la salida de la 194 de sujeto congelado, que es el caso real: diez tramos rojos con cobertura 127 de 127 tienen que dar ROJO | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | EL ROJO DE LA BATERIA, ATACADO EN SU CAUSA. Es el hallazgo `5.2` del acta 195 y la adjudicacion de la pregunta `P.2` del reporte de la 194. LO RESERVADO AL FUNDADOR ES PODAR LA NOMINA, NO HACERLA CRECER: la opcion `c` que rechazo el 5 sep 2026 era JUBILAR ARNESES VIEJOS, que es lo contrario de anadir, y el NO TOQUES LA NOMINA de los encargos anteriores se escribio para VUELTAS DE BATERIA y contra LA PODA. (a) LOS SEIS QUE EL CENSO VE Y LA NOMINA NO TIENE ENTRAN EN LA NOMINA, cada uno CON SU SUJETO CONGELADO y cotejado contra su blob de git, RECONTADOS del instrumento al empezar. (b) EL QUE NO PUEDA TENER SUJETO CONGELADO ENTRA COMO CASO DECLARADO, con su marca. (c) LAS TRES ENTRADAS SIN SUJETO CONGELADO que ya estan dentro (`vuelta186_tarea2c_mutacion_cierre_tardio.py`, `vuelta187_tarea4_mutacion_dos_convenciones.py`, `vuelta188_tarea4_mutacion_cobertura_parejas.py`, las tres ancladas a `REPORTE.md` VIVO) se resuelven POR LA MISMA REGLA: o se les congela el sujeto, o pasan a CASO DECLARADO con su marca. (d) `vuelta172_tarea5_mutacion_cierre.py` NO MUERDE desde la 189: se arregla para que caiga cuando tiene que caer, o se declara rota con su motivo medido. (e) NO SE PODA NADA: la nomina solo crece. (f) AL CERRAR, LA BATERIA SOLO SOBRE LO QUE SE TOCO, para comprobar que el rojo atacado se apago, PUBLICANDO LA CIFRA de arneses fuera de la nomina y de entradas sin sujeto congelado, y NO la bateria entera, que no es su vuelta. (g) CON SU CASO POSITIVO POR MUTACION, que pruebe lo que falla hoy: que la mirada de la nomina sobre si misma CAIGA cuando un arnes que el censo ve se queda fuera de la nomina sin ser caso declarado | **CERRADA. Las TRES causas del rojo quedan en 0, 0 y 0, y el que no mordia muerde** | `SALIDA_V195_T3F_BATERIA_DE_LO_TOCADO.txt`, `SALIDA_V195_T3G_MUTACION_NOMINA_ENCHUFADA.txt` |
+| **TAREA 4** | `--componer` DEJA DE PUBLICAR VERDE SOBRE DIEZ ROJOS. Es el hallazgo `5.3` del acta 195 y la otra mitad de la pregunta `P.3` del reporte de la 194: `SALIDA_V194_BATERIA_COMPUESTA.txt` termina en VERDE, los 10 tramos cubren la nomina entera, con exitcode 0, mientras los diez tramos traen `CLASE DEL VEREDICTO: ROJO POR FALLO` y exitcode 1. Es cierto EN LO QUE MIDE, la cobertura, y enganoso EN LO QUE PARECE DECIR, el estado de la bateria; banco `9.1`, el instrumento debe caerse en vez de mentir. (a) `--componer` PROPAGA EL PEOR VEREDICTO DE LOS TRAMOS a su propio exitcode y a su linea final: cobertura entera y algun tramo en rojo NO es VERDE. (b) LAS DOS COSAS SE SIGUEN DICIENDO POR SEPARADO, la cobertura con su cifra y el veredicto con la suya, porque que propague el rojo no puede borrar que la cobertura estaba completa. (c) CON SU CASO POSITIVO POR MUTACION, con la salida de la 194 de sujeto congelado, que es el caso real: diez tramos rojos con cobertura 127 de 127 tienen que dar ROJO | **CERRADA. --componer propaga el peor veredicto y la cobertura se sigue diciendo aparte** | `SALIDA_V195_T4C_MUTACION_COMPONER_ROJO.txt` |
 <!-- FIN TABLA DE TAREAS -->
 
 ## 2. LAS TAREAS, UNA POR UNA (cada seccion se ANEXA al cerrarse su tarea)
@@ -401,5 +401,242 @@ BYTES.**
 El re corrido escribio `docs/loop/SALIDA_V195_T1A_RECORRIDO_SIN_ESCRIBIR.txt` y
 **no toco la sede**: el acta 195 aparece ya en **2 linea(s)** por sus dos marcas
 literales, y **no se consumio el numero `R.58`**.
+
+### TAREA 3. EL ROJO DE LA BATERIA, ATACADO EN SU CAUSA. **CERRADA, Y LAS TRES CAUSAS DEL ROJO QUEDAN EN CERO, CERO Y CERO.**
+
+**LO QUE ESTABA ROTO, MEDIDO EN EL BLOQUE `F` DEL SELLO DE APERTURA Y ANTES DE LA
+PRIMERA OPERACION:** 6 arneses del censo fuera de la nomina, 3 entradas sin sujeto
+congelado, y 1 arnes que no muerde. **Las tres cosas ponian en ROJO los diez tramos
+de cualquier bateria**, y un rojo permanente y conocido apaga la bateria sola: si
+siempre esta roja, nadie mira el rojo nuevo.
+
+#### 3.a LOS SEIS ENTRAN EN LA NOMINA, Y LO RESERVADO ERA PODARLA, NO HACERLA CRECER
+
+**LAS DOS CITAS VAN LEIDAS DE SUS FICHEROS Y NO DE MEMORIA.** De
+`scripts/loop/verificar_mutaciones_viejas.py`, desde la vuelta 148: *"LO QUE ESTA
+REGLA EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA ERA EL MEDIO, NO EL FIN."*
+De `AUDITOR.md` 6.1: *"LA NOMINA SIGUE CRECIENDO: NADIE LA PODA SIN EL FUNDADOR."*
+**La opcion `c` que el fundador RECHAZO el 5 sep 2026 era JUBILAR ARNESES VIEJOS**,
+que es exactamente lo contrario de anadir.
+
+**LOS SEIS SE RECONTARON DEL INSTRUMENTO AL EMPEZAR** y salieron los mismos seis
+que el encargo nombra. Los seis tenian ya **SUJETO CONGELADO comprobado por
+`anclaje_de()` antes de entrar**, salvo uno, que lo recibe en la `3.c`.
+
+| lo que se mide | apertura | cierre |
+|---|---:|---:|
+| entradas de la nomina | **127** | **135** |
+| arneses que el censo reconoce | **193** | **195** |
+| arneses del censo FUERA de la nomina | **6** | **0** |
+| entradas SIN SUJETO CONGELADO | **3** | **0** |
+| entradas que el censo NO VE | **0** | **0** |
+
+**LA NOMINA CRECE DE 127 A 135 Y NO SE QUITA NI UNA ENTRADA.** Son los seis del
+encargo mas los **dos que nacen hoy** (`3.g` y `4.c`), que entran en su misma
+vuelta por la regla aplicada a si misma.
+
+#### 3.b Y 3.c LOS QUE NO TENIAN SUJETO CONGELADO: NINGUNO NECESITO SER CASO DECLARADO
+
+La regla ofrece dos salidas, **o se les congela el sujeto, o pasan a CASO
+DECLARADO con su marca**. **Los CUATRO se resolvieron por la primera**, y ninguno
+entro como caso declarado: `CASOS_DECLARADOS` sigue en **2** entradas, las mismas
+de antes.
+
+**Y LA DECLARACION NO ES UN SELLO DE GOMA: los cuatro se miraron uno a uno ANTES
+de escribir nada, y en los cuatro la huella de vivo NO es una apertura del fichero
+vivo.** Lo que cada uno hace de verdad va escrito en su propia declaracion, dentro
+de su docstring:
+
+| arnes | que ve la guarda | que es de verdad |
+|---|---|---|
+| `vuelta193_tarea4e_mutacion_sello_entre_procesos.py` | `REPORTE.md` | el argumento de `AP.apuntar("REPORTE.md")`, una CADENA que va a la bitacora del turno para comprobar si sobrevive entre procesos. Todo lo que abre en escritura vive en un `mkdtemp` |
+| `vuelta186_tarea2c_mutacion_cierre_tardio.py` | `REPORTE.md` | una linea que el propio arnes IMPRIME para decir que no lo toca. Su sujeto de datos son cadenas fabricadas; lo unico que lee del disco es el codigo bajo prueba, cuyo `sha256` publica |
+| `vuelta187_tarea4_mutacion_dos_convenciones.py` | `REPORTE.md` | siempre detras de `git show bb3aaad3:...`, o sea el BLOB de un commit fijo |
+| `vuelta188_tarea4_mutacion_cobertura_parejas.py` | `REPORTE.md` | el valor de `RUTA_DEL_187`, que solo se usa detras de `git show` con `COMMIT_DEL_187` delante |
+
+**NO SE TOCA NI UNA LINEA DE MAQUINA DE LOS CUATRO.** La declaracion va en el
+docstring, que es donde la guarda busca la huella de congelado y donde esta casa
+escribe lo que un fichero declara de si mismo. **La cadena que la guarda confunde
+con un fichero no se cambia**: cambiarla para contentar a la guarda seria falsear
+la prueba.
+
+#### 3.d EL QUE NO MORDIA: DIAGNOSTICADO, REPARADO, Y CON SU CAUSA ESCRITA
+
+`vuelta172_tarea5_mutacion_cierre.py` llevaba **desde la vuelta 188** sin morder, y
+las baterias de la 189 y la 194 lo publicaban como `NO MORDIO` **sin
+diagnosticarlo**. Corrido en esta vuelta, la causa sale sola: **su propio caso
+verde fabricaba DOS secciones `## 9.`**, la del bucle y la de `CR.CAB_9`.
+
+Eso era inofensivo hasta que **la TAREA 4.b de la vuelta 188 ensancho la pieza (3)
+de `cerrar_reporte.py` para cazar SECCIONES DUPLICADAS**. Desde entonces
+`A_con_las_cuatro_no_falta_ninguna` daba **1** en vez de **0** y
+`A_y_no_nombra_ningun_codigo` devolvia **`['(3)']`** en vez de `[]`.
+
+**NO ES QUE LA GUARDA ESTUVIERA MAL: ES QUE EL SUJETO DE MENTIRA DEL ARNES DEJO DE
+SER UN REPORTE VALIDO Y NADIE LO RE APUNTO.** El arreglo es una linea (`tope = 9`
+en las dos ramas) y va comentado en su sitio con su causa. **NO SE AFLOJA NINGUN
+CASO:** la rama `secciones=False` sigue fabricando un reporte SIN la seccion 9 y la
+pieza (3) sigue teniendo que cazarla.
+
+| corrida | resultado |
+|---|---|
+| antes, en esta vuelta | `ROJO: fallos=2, casos que no caen=1`, exitcode **1** |
+| despues | **`VERDE: los 17 casos pasan tal cual y los 17 caen al mutar el esperado`**, exitcode **0** |
+
+#### 3.e NO SE PODA NADA
+
+**No se quito ni una entrada.** La nomina solo crece: 127 a 135, y `CASOS_DECLARADOS`
+sigue en 2.
+
+#### 3.f LA BATERIA SOLO SOBRE LO TOCADO, Y EL ROJO SE APAGO
+
+`scripts/loop/vuelta195_tarea3f_bateria_de_lo_tocado.py`. **NO ES LA BATERIA Y NO
+SE CITA COMO TAL**: la cadencia de `AUDITOR.md` 6.1 pone la siguiente en la 199.
+
+**LA LISTA DE LO TOCADO NO SE TECLEA A OJO: se computa de git** con
+`git diff --name-only <apertura>..HEAD` filtrado por el censo, y se coteja contra
+lo que la tarea declara haber tocado. **Se corre la UNION de las dos**, que es el
+lado prudente. Salieron **12 arneses**, con las dos listas coincidiendo.
+
+| lo que la corrida acotada encuentra | cifra |
+|---|---:|
+| arneses corridos, cada uno DOS veces | **12** |
+| ANCLA PERDIDA | **0** |
+| NO MORDIO | **0** |
+| CASO DECLARADO | **0** |
+| SIN REPRODUCIR | **0** |
+| **CLASE DEL VEREDICTO** | **VERDE, exitcode 0** |
+
+**Y LAS TRES CIFRAS QUE EL ENCARGO MANDA PUBLICAR SALGAN COMO SALGAN, medidas
+sobre el repo de hoy y no sobre esta corrida acotada: arneses del censo FUERA de la
+nomina 0, entradas SIN SUJETO CONGELADO 0, entradas que el censo NO VE 0.** **Las
+tres son cero, y por eso no hay lista que publicar.**
+
+**`dataset/` en 0 filas de `numstat` al entrar y 0 al salir**, y **la sede del
+turno del auditor no se movio** (345 bytes, `sha256` LF `2e085e88795b9df2` por los
+dos lados), que se remide en vez de creerse porque es la que
+`vuelta192_tarea4_mutacion_cuarta_puerta.py` borraba antes de que la 194 lo
+arreglara.
+
+**Y ESTA CORRIDA CAZO UNA CAIDA MIA ANTES DE QUE SALIERA DE LA VUELTA.** En su
+primera pasada, `vuelta195_tarea3g_mutacion_nomina_enchufada.py` salio **NO
+REPRODUCIBLE**: escribia el nombre del temporal de `mkdtemp` en su salida sellada,
+y ese nombre cambia en cada corrida. **Una salida sellada que cambia sola no se
+puede cotejar con nada.** Corregido quitando el nombre y dejando escrito por que;
+la segunda pasada da **0 sin reproducir**. **El cotejo de reproducibilidad de la
+vuelta 141 hizo exactamente su trabajo sobre un arnes recien nacido.**
+
+#### 3.g EL CASO POSITIVO POR MUTACION, Y PRUEBA EL CABLE Y NO SOLO LA MIRADA
+
+`scripts/loop/vuelta195_tarea3g_mutacion_nomina_enchufada.py`, salida en
+`docs/loop/SALIDA_V195_T3G_MUTACION_NOMINA_ENCHUFADA.txt`: **`CIFRA casos: 15 |
+pasan: 15 | fallan: 0`**, **`CIFRA casos que caen al mutar el esperado: 15 de 15`**,
+**`VEREDICTO: VERDE`**, contado de su propio fichero.
+
+**POR QUE NO BASTABA CON LO QUE YA HABIA, Y ES LA MITAD QUE IMPORTA.**
+`prueba_de_la_nomina()` ya comprobaba que `arneses_que_faltan()` VE a los que estan
+fuera. **Lo que no estaba probado por nada es que ese ver MUEVA EL VEREDICTO**, y
+la unica forma de saberlo era correr la bateria entera y mirar el color, que es lo
+que la adjudicacion `4.4` del acta 190 llama inaceptable. Aqui el cable se prueba
+**apagandolo y encendiendolo**: con la lista de faltantes hay `ROJO POR FALLO` y
+codigo distinto de cero; con la lista vacia vuelve `VERDE` y codigo cero.
+
+**Y LA TERCERA COSA, QUE ES LA QUE EL ENCARGO SUBRAYA: SER `CASO DECLARADO` NO ES
+UNA PUERTA TRASERA PARA SALIRSE DE LA NOMINA.** `arneses_que_faltan()` no consulta
+`CASOS_DECLARADOS`, y aqui se prueba en vez de leerse: un arnes declarado que no
+este en la nomina **sigue saliendo como que falta**. **Una exencion de exitcode no
+es una exencion de estar en la nomina.**
+
+Ademas se prueba que **un hueco de censo es FALLO y no DEUDA** (la precedencia de
+`clase_del_rojo()`), y que **la vara del censo sigue protegiendo a los anteriores**,
+que no se afloja.
+
+**Todo sobre un directorio de `mkdtemp` y nominas fabricadas en memoria**, sin
+tocar `scripts/loop/` ni ningun dato de la campana, y con el temporal retirado al
+salir (`P.16`).
+
+### TAREA 4. `--componer` DEJA DE PUBLICAR VERDE SOBRE DIEZ ROJOS. **CERRADA, Y LA LINEA QUE LA 194 PUBLICO YA NO SE PUEDE ESCRIBIR SOBRE ESOS MISMOS DIEZ TRAMOS.**
+
+**EL CASO, MEDIDO Y NO CONTADO.** `docs/loop/SALIDA_V194_BATERIA_COMPUESTA.txt`
+termina en *"VERDE: los 10 tramos cubren la nomina entera"* con `exitcode 0`,
+mientras los diez tramos que compone traen `CLASE DEL VEREDICTO: ROJO POR FALLO` y
+`exitcode 1`. **Las dos cosas eran verdaderas midiendo cosas distintas**: la
+cobertura estaba completa (127 de 127) y la bateria estaba roja. Lo que estaba mal
+era que la salida **se leyera como si la bateria estuviera bien**. Banco `9.1`: el
+instrumento debe caerse en vez de mentir.
+
+#### 4.a EL PEOR VEREDICTO SE PROPAGA AL EXITCODE Y A LA LINEA FINAL
+
+Dos funciones nuevas en `scripts/loop/vuelta194_bateria_por_tramos.py`, que es el
+lanzador del que la 199 clonara el suyo:
+
+- **`clase_de_la_salida(ruta)`** lee la `CLASE DEL VEREDICTO` que cada tramo
+  publica. **Se lee de la salida y no se recalcula**, igual que la cobertura:
+  recalcularla seria preguntarle al reparto por el reparto. **Un tramo que no
+  publica su clase devuelve `None`, y `None` NO se confunde con VERDE.**
+- **`peor_veredicto(clases)`** devuelve la peor clase, su codigo y la lista de
+  ilegibles. **Si hay algun ilegible, el peor es `ROJO POR FALLO`**: no se puede
+  componer un verde sobre un tramo cuyo estado no se sabe.
+
+**LOS NOMBRES Y LOS CODIGOS NO SE TECLEAN EN EL LANZADOR: se leen de
+`verificar_mutaciones_viejas`**, que es su sede, para que no haya dos tablas que
+manana digan cosas distintas.
+
+#### 4.b LAS DOS COSAS SE SIGUEN DICIENDO POR SEPARADO
+
+**Que propague el rojo no puede borrar que la cobertura estaba completa**, que es
+informacion util y medida. La salida publica ahora **tres bloques distintos**: la
+cobertura con su cifra, el veredicto de cada tramo con la suya, y el peor de los
+dos. La linea final dice **las dos cosas juntas**: *"LA COBERTURA: los N tramos
+cubren la nomina entera..."* y, debajo, el veredicto propagado con su motivo.
+
+**CORRIDO SOBRE LAS DIEZ SELLADAS DE LA 194**, el composor lee los diez veredictos
+y publica `EL PEOR VEREDICTO DE LOS TRAMOS: ROJO POR FALLO (codigo 1)`. **Esa
+corrida NO llego a componer nada y NO piso ninguna sellada**, porque con la nomina
+ya en 135 el reparto pide 11 tramos y solo hay 10: se paro antes de escribir, y
+`SALIDA_V194_BATERIA_COMPUESTA.txt` quedo **byte a byte igual**, comprobado con
+`cmp`.
+
+#### 4.c EL CASO POSITIVO POR MUTACION, CON EL CASO REAL Y NO CON UNO COMODO
+
+`scripts/loop/vuelta195_tarea4c_mutacion_componer_rojo.py`, salida en
+`docs/loop/SALIDA_V195_T4C_MUTACION_COMPONER_ROJO.txt`: **`CIFRA casos: 15 |
+pasan: 15 | fallan: 0`**, **`CIFRA casos que caen al mutar el esperado: 15 de 15`**,
+**`VEREDICTO: VERDE`**, contado de su propio fichero.
+
+**SUJETO CONGELADO, Y ES EL DE VERDAD:** las diez salidas de la 194 se leen **por
+`git show` del commit `56c2d085`**, que es el que cierra su TAREA 3 y ya tiene las
+diez en su arbol. **Un blob de git no se mueve**, y no se abre ningun fichero del
+arbol de trabajo.
+
+**LO QUE EXIGE, Y ES EXACTAMENTE LO QUE EL ENCARGO PIDE:** los diez tramos dan
+`ROJO POR FALLO`, el peor de los diez es `ROJO POR FALLO`, su codigo NO es cero, y
+**con estos diez el veredicto ya no puede ser VERDE**. La linea que la 194 publico
+va dentro del arnes **como CITA y no como afirmacion suya**.
+
+**Y LOS TRES CASOS QUE LA 194 NO DEJO VAN FABRICADOS EN MEMORIA**, porque una
+guarda probada solo con el caso que ya ocurrio no sabe que hacer con el siguiente:
+un tramo verde, un tramo en deuda, y **un tramo que no publica su clase**. Ese
+tercero pone `ROJO POR FALLO` y sale nombrado en la lista de ilegibles.
+
+**LA ESCALERA DE GRAVEDAD SE PRUEBA EN SUS TRES PELDANOS:** solo verdes da VERDE,
+verde mas deuda da `ROJO POR DEUDA DECLARADA`, y deuda mas fallo da `ROJO POR
+FALLO`. **Si el orden estuviera al reves, una bateria con un arnes caido se
+publicaria como deuda declarada**, que es la degradacion que la `4.4` del acta 190
+ya cazo una vez.
+
+#### 4.d UNA CORRECCION DECLARADA DENTRO DE ESTA TAREA
+
+La primera version del arnes apuntaba el sujeto congelado a **`6a508ca5`**, que es
+el commit que anadio **el tramo 1** y en cuyo arbol solo existia **UNO de los
+diez**. **Lo cazo su propio caso `los_DIEZ_blobs_se_leen`**, midiendo 1 donde tenia
+que medir 10, que es para lo que ese caso esta. Corregido a `56c2d085` y **el
+commit viejo se nombra en el codigo en vez de borrarse**, con lo que pasaba.
+
+#### 4.e ESTO LLEVABA VUELTAS EN LA LISTA DE LO QUE SIGUE FUERA
+
+Como *"el exitcode 2 propagado a `--componer`"*. **Hoy entra porque tiene su caso
+medido delante**, y lo que se hizo es mas que propagar un 2: **se propaga el peor
+de los tres veredictos, sea cual sea**, y la cobertura se sigue diciendo aparte.
 
 <!-- FIN ANEXO DE TAREAS -->

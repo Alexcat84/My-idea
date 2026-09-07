@@ -1025,6 +1025,61 @@ VIEJAS = [
     #     salidas selladas ajenas que la bateria pisa (adjudicacion 4.9).
     ("vuelta190_tarea2b_mutacion_deuda_y_fallo.py", False),
     ("vuelta190_tarea3b_mutacion_selladas_ajenas.py", False),
+    # LOS SEIS QUE ENTRAN EN LA VUELTA 195 (TAREA 3.a), Y LA NOMINA PASA DE 127 A
+    # 133. NO SE PODA NADA: NI UNA ENTRADA SE QUITA.
+    #
+    # POR QUE ENTRAN AHORA Y NO ANTES, CON SUS DOS CITAS LEIDAS DE SUS FICHEROS Y
+    # NO DE MEMORIA. La primera, del docstring de ESTE fichero desde la vuelta
+    # 148: "LO QUE ESTA REGLA EXIGE ES SUJETO CONGELADO. EL PLAZO DE UNA VUELTA
+    # ERA EL MEDIO, NO EL FIN." La segunda, de `AUDITOR.md` 6.1: "LA NOMINA SIGUE
+    # CRECIENDO: NADIE LA PODA SIN EL FUNDADOR."
+    #
+    # LO RESERVADO AL FUNDADOR ES PODARLA, NO HACERLA CRECER. La opcion `c` que
+    # rechazo el 5 sep 2026 era JUBILAR ARNESES VIEJOS, que es exactamente lo
+    # contrario de anadir; y el "NO TOQUES LA NOMINA" de los encargos anteriores
+    # se escribio para VUELTAS DE BATERIA y contra LA PODA. Es la adjudicacion
+    # `4.9` del acta 195, que contesta la `P.2` POR EXTENSION CITABLE, y su
+    # hallazgo `5.2`.
+    #
+    # LA CAUSA MEDIDA DE QUE ESTO IMPORTE, Y NO ES CELO: estos seis ponian en ROJO
+    # los DIEZ tramos de la bateria de la 194 por `arneses_que_faltan()`. Un rojo
+    # permanente y conocido apaga la bateria sola: si siempre esta roja, nadie
+    # mira el rojo nuevo.
+    #
+    # LOS SEIS SE RECONTARON DEL INSTRUMENTO AL EMPEZAR LA VUELTA 195 (bloque `F`
+    # del sello de apertura) y NO se copiaron del encargo. Los seis tienen SUJETO
+    # CONGELADO comprobado por `anclaje_de()` antes de entrar, y el sexto de la
+    # lista lo tiene por DECLARACION, anadida en la TAREA 3.c con su motivo.
+    #   - `vuelta191_tarea3_mutacion_lineas.py`: temporal, blob de git y sha256.
+    #   - `vuelta191_tarea4_mutacion_veredicto.py`: temporal y sha256.
+    #   - `vuelta191_tarea6_mutacion_bloque_tallado.py`: blob de git y sha256.
+    #   - `vuelta192_tarea4_mutacion_cuarta_puerta.py`: temporal y sha256, y con
+    #     `AP.RUTA_DEL_TURNO` redirigida a un temporal desde la vuelta 194.
+    #   - `vuelta193_tarea4e_mutacion_sello_entre_procesos.py`: temporal y sha256,
+    #     con su declaracion escrita en la 195.
+    #   - `vuelta194_tarea2c_mutacion_sede_del_turno.py`: temporal y sha256.
+    #
+    # NINGUNO ADMITE --sujeto: los seis fabrican los suyos.
+    ("vuelta191_tarea3_mutacion_lineas.py", False),
+    ("vuelta191_tarea4_mutacion_veredicto.py", False),
+    ("vuelta191_tarea6_mutacion_bloque_tallado.py", False),
+    ("vuelta192_tarea4_mutacion_cuarta_puerta.py", False),
+    ("vuelta193_tarea4e_mutacion_sello_entre_procesos.py", False),
+    ("vuelta194_tarea2c_mutacion_sede_del_turno.py", False),
+    # LOS DOS QUE NACEN EN LA VUELTA 195 Y ENTRAN EN SU MISMA VUELTA, por la regla
+    # de arriba aplicada a si misma. LA NOMINA PASA DE 133 A 135. NO SE PODA NADA.
+    #   - `vuelta195_tarea3g_mutacion_nomina_enchufada.py`: prueba que la mirada de
+    #     la nomina sobre si misma ESTE ENCHUFADA AL VEREDICTO, y que ser CASO
+    #     DECLARADO no sea una puerta trasera para salirse de la nomina. Sujeto
+    #     congelado: directorio de `mkdtemp` y nominas fabricadas en memoria.
+    #   - `vuelta195_tarea4c_mutacion_componer_rojo.py`: prueba que `--componer`
+    #     propague el peor veredicto de los tramos. Sujeto congelado: las DIEZ
+    #     salidas de la bateria de la 194 leidas por `git show` de un commit
+    #     clavado, mas tres tramos fabricados en memoria.
+    #
+    # NINGUNO ADMITE --sujeto: los dos fabrican los suyos.
+    ("vuelta195_tarea3g_mutacion_nomina_enchufada.py", False),
+    ("vuelta195_tarea4c_mutacion_componer_rojo.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

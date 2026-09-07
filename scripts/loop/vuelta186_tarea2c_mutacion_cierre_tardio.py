@@ -39,6 +39,28 @@ funciones PURAS del fichero vivo con textos fabricados en memoria.
 
 USO:
   python scripts/loop/vuelta186_tarea2c_mutacion_cierre_tardio.py
+
+--- SUJETO CONGELADO, DECLARADO EN LA VUELTA 195 (TAREA 3.c) ---
+
+**LA HUELLA DE VIVO QUE LA GUARDA VE AQUI ES `REPORTE.md`, Y ES UNA LINEA QUE
+ESTE ARNES IMPRIME PARA DECIR QUE NO LO TOCA:** *"Aqui no se escribe ningun
+reporte y no se toca docs/loop/REPORTE.md."* La guarda mira la maquina (el fichero
+sin su docstring de modulo) y ahi esa frase es un `w(...)`, no una apertura.
+
+**CUAL ES SU SUJETO DE DATOS, DICHO SIN ADORNARLO: CADENAS FABRICADAS EN
+MEMORIA.** Todas las llamadas a las funciones PURAS de `cerrar_reporte.py` van
+sobre textos que este proceso construye, y **no lee ningun fichero de datos de la
+campana**.
+
+**Y LO UNICO QUE SI LEE DEL DISCO SE DICE EN VEZ DE CALLARLO:** abre
+`scripts/loop/cerrar_reporte.py`, que es **el codigo bajo prueba**, y publica su
+`sha256` como procedencia. Eso no es un sujeto que se mueva por debajo: es la
+identidad del modulo que se esta probando, y **todo arnes importa el codigo que
+prueba**. La huella `sha256` que la guarda ya le ve sale precisamente de ahi.
+
+**POR ESO SU SUJETO ESTA CONGELADO** y esta declaracion lo dice con el literal que
+la regla de la vuelta 148 pide.
+
 """
 import hashlib
 import io
