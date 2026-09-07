@@ -10,11 +10,11 @@ que es la diferencia con la 195.
 **EL CUERPO SE ACOTO AQUI Y NO POR LA LINEA QUE EL ENCARGO CITA.** El encargo dice
 que el acta empieza en la 69019 y manda recontarla porque el fichero puede haber
 crecido. Recontada por `R92.cuerpo_del_acta` en esta vuelta: **lineas 69019 a
-69340, 322 lineas**, sobre un `ACTA_AUDITOR.md` de **4577757 bytes**. La cifra del
+69340, 322 lineas**, sobre un `ACTA_AUDITOR.md` de **disco 4577757 bytes y LF 4577757 bytes**. La cifra del
 encargo **CALZA**.
 
 **LAS CIFRAS, TODAS CONTADAS DEL CUERPO ACOTADO** (fichero:
-`docs/loop/SALIDA_V196_T1A_REGISTRO_R58.txt`, 14778 bytes):
+`docs/loop/SALIDA_V196_T1A_REGISTRO_R58.txt`, disco 14778 bytes y LF 14778 bytes):
 
 | lo que se cuenta | del acta | lo que el encargo dice | |
 |---|---:|---|---|
@@ -71,7 +71,7 @@ la fila nombre alguna clave, y en esa rama sigue entera.** Lo que se estrecha es
 caso, no la guarda.
 
 **EL CASO POSITIVO POR MUTACION, CORRIDO ANTES DE ESCRIBIR NADA**
-(`docs/loop/SALIDA_V196_T1A_MUTACION_REGISTRADOR.txt`, 3800 bytes): **27 casos, los
+(`docs/loop/SALIDA_V196_T1A_MUTACION_REGISTRADOR.txt`, disco 3800 bytes y LF 3800 bytes): **27 casos, los
 27 pasan**. Los seis trozos son PUROS y corren sobre texto FABRICADO, con el
 esperado sacado de como se fabrico el texto. **Cada uno lleva su mutacion medida al
 lado**: el parrafo entero le daria a la `4.2` el `EN CONTRA` de la `4.3`; el
@@ -79,7 +79,7 @@ heredado llama PREGUNTA a la `4.10`; un cotejo limpio de 47 con 60 y 2 no calza;
 una caida sin parte sale `SIN DECIR` y no se rellena sola.
 
 **LA IDEMPOTENCIA NO SE AFIRMA: SE PRUEBA RE CORRIENDOLO, CON LA SEDE EN BYTES.**
-`docs/PENDIENTES.md` paso de **1050189 a 1063803 bytes** al escribir la entrada.
+`docs/PENDIENTES.md` paso de **1050189 bytes a 1063803 bytes**, iguales por disco y por LF, al escribir la entrada.
 Re corrido acto seguido: **sigue en 1063803**, exitcode 0, y su salida es
 `docs/loop/SALIDA_V196_T1A_RECORRIDO_SIN_ESCRIBIR.txt`. **No se escribio nada y no
 se consumio el `R.59`.** La serie recomputada despues de escribir: **50 entradas,

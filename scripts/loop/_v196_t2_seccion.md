@@ -8,7 +8,7 @@ deterministas, cerrados por el auditor en
 y no se copia. **Mi recomputacion y la sellada son EL MISMO CONJUNTO**, y el solape
 del doble con el tramo y con el universo sale **0 y 0 POR CONSTRUCCION**, porque
 `evitar` va dentro de la llamada y no comprobado despues
-(`docs/loop/SALIDA_V196_T2_SUJETO.txt`, 12038 bytes).
+(`docs/loop/SALIDA_V196_T2_SUJETO.txt`, que la PRIMERA corrida dejo en disco 12038 bytes y LF 12038 bytes; CIFRA CORREGIDA EN LA SECCION 3, porque hoy mide otra cosa).
 
 **EL UNIVERSO CONSUMIDO, CONTADO DE SUS CATORCE FICHEROS: 621.** Calza con el
 encargo. **Y el `561 sin el tramo` se mide POR LAS DOS LECTURAS, porque no
@@ -20,7 +20,7 @@ asi que quitar su fichero no los quita del universo. **Lo que manda para
 `vecinos()` es la union entera.**
 
 **EL COTEJO, POR LAS CUATRO VARAS** (fichero:
-`docs/loop/SALIDA_V196_T2_COTEJO.txt`, 13981 bytes, contado antes de publicar esta
+`docs/loop/SALIDA_V196_T2_COTEJO.txt`, disco 13981 bytes y LF 13981 bytes, contado antes de publicar esta
 tabla):
 
 | sobre que se mide | coinciden | discrepan |
@@ -101,5 +101,5 @@ alias que **no esta aplicado al grafo**. **Ningun lector a ciegas puede alcanzar
 y no lo arreglo por mi cuenta.
 
 **EL ARCHIVO NO SE MOVIO NI UN BYTE:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` mide
-**4054129 bytes** por las dos convenciones y **`sha256` LF `0a77b5a35a962621`** al
+**disco 4054129 bytes y LF 4054129 bytes**, y su **`sha256` es `0a77b5a35a962621` por disco y `0a77b5a35a962621` por LF**, al
 entrar al aislador, al salir de el y al cerrar el cotejo. **Ninguna clase se toco.**
