@@ -1,8 +1,8 @@
 ### TAREA 3. LA DISCREPANCIA DE COMPONENTES, PERSEGUIDA Y DECLARADA
 
 **LA NOMINA SELLADA SE CUENTA Y NO SE REESCRIBE.**
-`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` mide **96361 bytes en disco y 96029
-normalizado a LF**, `sha256` LF **95dca64dbce48d52**, y **332 lineas no vacias**.
+`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` mide **96361 bytes en disco y 96029 normalizado a LF**, `sha256` LF **95dca64dbce48d52**,
+y **332 lineas no vacias**.
 No se abrio en modo escritura en ninguna linea, y el `numstat` de `docs/plan/`
 sigue en **0 filas**. Todo lo de abajo sale de
 `docs/loop/SALIDA_V204_T3_COMPONENTES.txt`.
@@ -22,8 +22,8 @@ no se borra.
 instrumento documenta en su linea 52 la variable de entorno
 `V169_RECOMPUTO_SALIDA`, y por ahi se redirigio la salida a
 `docs/loop/RECOMPUTO_V204_DIAGNOSTICO.jsonl`. **MEDIDO Y NO AFIRMADO:**
-`docs/loop/RECOMPUTO_V169.jsonl` mide **15369 bytes en disco y 15322 normalizado
-a LF**, `sha256` LF **e8a10f174df3c5fa**, **antes y despues de correr**, y
+`docs/loop/RECOMPUTO_V169.jsonl` mide **15369 bytes en disco y 15322 normalizado a LF**, `sha256` LF **e8a10f174df3c5fa**,
+**antes y despues de correr**, y
 `git status --porcelain` sobre las dos sedes da **0 filas**. **No hizo falta
 restaurar nada porque no se toco nada.**
 

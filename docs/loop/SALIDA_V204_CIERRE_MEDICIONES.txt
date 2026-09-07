@@ -1,0 +1,154 @@
+==============================================================================
+MEDICIONES DE CIERRE DE LA VUELTA 204, RECOMPUTADAS Y NO HEREDADAS
+==============================================================================
+
+A) LA IDENTIDAD AL CIERRE, LEIDA DE GIT
+   HEAD de cierre, sellado en docs/loop/SALIDA_V204_HEAD_CIERRE.txt: 36a66e2239448ba01e525a2ccbf3895878f60726
+   36a66e2239448ba01e525a2ccbf3895878f60726	2026-09-07 16:07:56 -0400	VUELTA 204, TAREA 4 CERRADA Y ANEXADA AL CERRARSE: EL CENSO DE LO QUE QUEDA DEL PLAN, MEDIDO Y NO NARRADO. NINGUNA FICHA SE CIERRA Y 
+   rama: pasada-unica
+
+B) LA SEDE DE LOS VEREDICTOS, REMEDIDA AL CIERRE POR LAS DOS CONVENCIONES
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: disco 4054129 bytes | LF 4054129 bytes | sha256 LF 0a77b5a35a962621
+   EL SELLO DE APERTURA DIJO 0a77b5a35a962621 POR LAS DOS. CALZA AL CIERRE: SI
+
+C) EL MARCADOR, RECONTADO AL CIERRE Y EN SU FORMA CANONICA
+   MARCADOR GLOBAL
+     A 551
+     B 72
+     C 5
+     D 2760
+   n = 3388 corte = 3388 huecos: 0 dups(puesto): 0
+   CIFRA lineas que NO son JSON valido: 0
+   LA CLAVE SE LLAMA `puesto_intra` Y NO `puesto`: es la caida que el
+   ejecutor de la 202 declaro en su TAREA 2, y aqui se mira donde hay algo.
+   ESTE CONTEO NO PASA POR EL RESOLUTOR Y SE DICE POR QUE: contar filas y
+   clases no toca ningun id, y P.1 manda el resolutor cuando el conteo TOCA
+   IDS. Ninguna clase se mueve en esta vuelta.
+
+D) LA SERIE `R.n` AL CIERRE, RECOMPUTADA
+   SIGUIENTE LIBRE: R.69
+   CIFRA entradas en total: 60
+   CIFRA colisiones (un numero escrito mas de una vez): 0
+   CIFRA huecos: 0 (ninguno)
+
+E) LA NOMINA Y EL CENSO AL CIERRE, CONTRA EL CONGELADO EN 135
+   CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+   CALZA CON EL CONGELADO 135: SI
+   CIFRA arneses que el censo reconoce en scripts/loop/: 197
+   CIFRA arneses del censo FUERA de la nomina CON LA VARA 148: 2, y SIN vara: 62
+      FUERA DE LA NOMINA (con vara 148): vuelta197_tarea2_mutacion_orden_del_turno.py
+      FUERA DE LA NOMINA (con vara 148): vuelta199_tarea1_mutacion_guardas_revividas.py
+   NINGUN FICHERO DE ESTA VUELTA ENTRA AL CENSO, Y SE COMPRUEBA:
+   CIFRA ficheros que esta vuelta anade a scripts/loop/: 15
+      _gen_v204_cierre.py                            en el censo: NO
+      _gen_v204_esqueleto.py                         en el censo: NO
+      _gen_v204_t1_registros.py                      en el censo: NO
+      _v204_apertura.py                              en el censo: NO
+      _v204_cierre_mediciones.py                     en el censo: NO
+      _v204_t1_registros.py                          en el censo: NO
+      _v204_t1_seccion.md                            en el censo: NO
+      _v204_t1b_ambiguedad.py                        en el censo: NO
+      _v204_t2_cobertura.py                          en el censo: NO
+      _v204_t2_seccion.md                            en el censo: NO
+      _v204_t3_componentes.py                        en el censo: NO
+      _v204_t3_seccion.md                            en el censo: NO
+      _v204_t4_censo.py                              en el censo: NO
+      _v204_t4_seccion.md                            en el censo: NO
+      vuelta204_esqueleto_reporte.py                 en el censo: NO
+   CIFRA de los mios que el censo VE: 0
+
+F) EL NUMSTAT DE LAS CUATRO SEDES, AL CERRAR
+   CIFRA filas de numstat AL SALIR en dataset/     0
+   CIFRA filas de numstat AL SALIR en web/         0
+   CIFRA filas de numstat AL SALIR en engine/      0
+   CIFRA filas de numstat AL SALIR en docs/plan/   0
+   ESTA VUELTA NO ESCRIBIO NI UNA LINEA EN docs/plan/, Y POR ESO EL CERO
+   NO ES DE ARBOL LIMPIO DESPUES DE COMMITEAR SINO DE NO HABER TOCADO
+   NADA: las TAREAS 2, 3 y 4 LEEN esas sedes y ninguna las abre en modo
+   escritura. La unica sede movida de la campana es docs/PENDIENTES.md.
+
+G) LAS SEDES QUE ESTA VUELTA MOVIO, REMEDIDAS AL CIERRE
+   docs/PENDIENTES.md                 disco 1145356 bytes | LF 1145356 bytes | sha256 LF de3311c2a8d5aa8c
+   docs/plan/OPERACIONES.jsonl        disco 513043 bytes | LF 513043 bytes | sha256 LF 829c583eb779cab6
+   docs/plan/INVENTARIO.jsonl         disco 584554 bytes | LF 584554 bytes | sha256 LF 69666b73339f2afe
+   docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl disco 96361 bytes | LF 96029 bytes | sha256 LF 95dca64dbce48d52
+   docs/loop/RECOMPUTO_V169.jsonl     disco 15369 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+   docs/loop/REPORTE.md               disco 45979 bytes | LF 45979 bytes | sha256 LF e3f1ebdec40f888f
+
+H) EL INVENTARIO DE SALIDAS, REMEDIDO AL CIERRE EN VEZ DE HEREDARSE
+   ESTA ES LA CIFRA QUE EL ACTA 202 MIDIO EN SU 5.2: el inventario ENVEJECE
+   DENTRO DE LA PROPIA VUELTA. La de la apertura no se copia: se remide, y
+   se declara que ESTA remedicion tambien tiene su instante.
+   CIFRA ficheros SALIDA_V204 en docs/loop/ AL CIERRE: 34
+   SALIDA_V204_APERTURA.txt                                   10982 bytes
+   SALIDA_V204_CICLO_ETIQUETAS_APERTURA.txt                   8106 bytes
+   SALIDA_V204_CICLO_ETIQUETAS_CIERRE.txt                     8106 bytes
+   SALIDA_V204_CICLO_NUMSTAT_APERTURA.txt                     140 bytes
+   SALIDA_V204_CICLO_NUMSTAT_CIERRE.txt                       140 bytes
+   SALIDA_V204_CICLO_SYNC_APERTURA.txt                        583 bytes
+   SALIDA_V204_CICLO_SYNC_CIERRE.txt                          583 bytes
+   SALIDA_V204_CONTEO_APERTURA.txt                            169 bytes
+   SALIDA_V204_CONTEO_CIERRE.txt                              169 bytes
+   SALIDA_V204_DESFASE_CALIBRADO_APERTURA.txt                 505 bytes
+   SALIDA_V204_DESFASE_CALIBRADO_CIERRE.txt                   505 bytes
+   SALIDA_V204_GATE0_CMD1_APERTURA.txt                        4859 bytes
+   SALIDA_V204_GATE0_CMD1_CIERRE.txt                          4859 bytes
+   SALIDA_V204_HEAD_APERTURA.txt                              41 bytes
+   SALIDA_V204_HEAD_CIERRE.txt                                41 bytes
+   SALIDA_V204_MOTOR_APERTURA.txt                             1160 bytes
+   SALIDA_V204_MOTOR_CIERRE.txt                               1160 bytes
+   SALIDA_V204_SERIE_APERTURA.txt                             8418 bytes
+   SALIDA_V204_SERIE_CIERRE.txt                               8696 bytes
+   SALIDA_V204_T1C_AMBIGUEDAD.txt                             6286 bytes
+   SALIDA_V204_T1_MEDICION.txt                                15377 bytes
+   SALIDA_V204_T1_REGISTROS.txt                               15489 bytes
+   SALIDA_V204_T1_REGISTROS_SEGUNDA.txt                       15397 bytes
+   SALIDA_V204_T2_COBERTURA.txt                               11393 bytes
+   SALIDA_V204_T3_COMPONENTES.txt                             9337 bytes
+   SALIDA_V204_T3_INSTRUMENTO.txt                             6189 bytes
+   SALIDA_V204_T3_RECOMPUTO.txt                               56770 bytes
+   SALIDA_V204_T4_CENSO.txt                                   7095 bytes
+   SALIDA_V204_T4_VARA.txt                                    18759 bytes
+   SALIDA_V204_TALLADOR_RECHAZO.txt                           1886 bytes
+   SALIDA_V204_TSC_APERTURA.txt                               7 bytes
+   SALIDA_V204_TSC_CIERRE.txt                                 7 bytes
+   SALIDA_V204_WEB_APERTURA.txt                               336 bytes
+   SALIDA_V204_WEB_CIERRE.txt                                 336 bytes
+   CIFRA de esos que miden CERO bytes: 0
+   LA APERTURA CONTO 1 EN SU BLOQUE J, Y NOMBRO LOS QUE IBAN A NACER DESPUES.
+   LOS QUE NACEN DESPUES DE ESTE BLOQUE, DECLARADOS AQUI POR SU NOMBRE:
+      SALIDA_V204_TALLADOR_CABECERA.txt, SALIDA_V204_TALLADOR_COMPARAR.txt y
+      SALIDA_V204_CERRAR_REPORTE.txt, que nacen del cierre del reporte.
+
+I) EL HUECO DE LA BATERIA, DECLARADO Y MEDIDO AL CIERRE
+   nombre: docs/loop/SALIDA_V204_BATERIA.txt
+   existe: NO
+   bytes medidos con os.path.getsize: NINGUNO, y el cero sale de que NO HAY FICHERO, no de medir uno vacio
+   CIFRA ficheros SALIDA_V204_BATERIA_TRAMO_N.txt: 0
+   atribucion: EL EJECUTOR DE LA VUELTA 204, y el motivo es LA CADENCIA de
+   AUDITOR.md 6.1: la bateria corre CADA CINCO VUELTAS, en vuelta propia; la
+   200 lo fue y le toca a la 205. NO es una omision de esta vuelta.
+
+J) LAS RUTAS QUE EL REPORTE PUBLICA COMO PRUEBA, COMPROBADAS UNA A UNA
+   (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA: si apunta a un
+   fichero inexistente o de CERO BYTES es CAIDA DE CIFRA.)
+   AUSENTE  docs/loop/PARA_ALEXIS.md
+   AUSENTE  docs/loop/SALIDA_V204_BATERIA.txt
+   CIFRA rutas distintas que el reporte publica: 32
+   CIFRA vivas: 30 | CIFRA ausentes: 2 | CIFRA de cero bytes: 0
+
+K) LA TAREA 0: LAS TRES SEDES DEL AUDITOR, CONTRA EL HEAD DE APERTURA
+   ES LA PIEZA QUE EL ENCARGO OBLIGA A PUBLICAR EN LA SECCION 4, Y LAS TRES
+   TIENEN QUE DAR 0. El HEAD de apertura se LEE del sello y no se teclea.
+   HEAD de apertura, leido de SALIDA_V204_HEAD_APERTURA.txt: 59d32eeef3d39850149852fe89cd57abe08761f4
+   CIFRA filas de numstat de docs/loop/PROMPT_SIGUIENTE.md      0
+      existe, y mide 15196 bytes en disco y 15196 normalizado a LF
+   CIFRA filas de numstat de docs/loop/ACTA_AUDITOR.md          0
+      existe, y mide 4734621 bytes en disco y 4734621 normalizado a LF
+   CIFRA filas de numstat de docs/loop/PARA_ALEXIS.md           0
+      Y EL CERO SE DISTINGUE: este fichero NO EXISTE en el arbol ni en
+      git ls-files, asi que su 0 es DE AUSENCIA DE FICHERO y no de
+      fichero sin tocar. AUDITOR.md 4 lo describe como el fichero que el
+      auditor escribe CUANDO HAY PARADA, y no ha habido ninguna.
+
+FIN DE LAS MEDICIONES DE CIERRE

@@ -6,16 +6,17 @@ campo `estado`**. La vara es codigo permanente y va a la auditoria integral por
 el `4.7` del acta 203. Todo lo de abajo sale de
 `docs/loop/SALIDA_V204_T2_COBERTURA.txt`.
 
-**LA SEDE, RECONTADA HOY:** `docs/plan/INVENTARIO.jsonl` mide **584554 bytes en
-disco y 584554 normalizado a LF**, `sha256` LF **69666b73339f2afe**, con **672
+**LA SEDE, RECONTADA HOY:** `docs/plan/INVENTARIO.jsonl` mide **584554 bytes en disco y 584554 normalizado a LF**,
+con `sha256` **69666b73339f2afe** en disco y **69666b73339f2afe** normalizado a LF, y con **672
 lineas no vacias, 0 que no parsean como JSON y 672 con la clave `cobertura`**,
 todas de tipo cadena y **0 vacias**. El encargo decia 672 y **lo recontado
 calza**.
 
 **EL TEXTO DE LAS CUATRO CLAUSULAS, LEIDO HOY DE LA FICHA Y NO DE MEMORIA.**
-`OP-I-01` vive en la **linea 44** de `docs/plan/OPERACIONES.jsonl`, que mide
-**513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF
-**829c583eb779cab6**. Su `verificacion` trae 4 elementos: (1) *toda entrada lleva
+`OP-I-01` vive en la **linea 44** de `docs/plan/OPERACIONES.jsonl`,
+que mide **513043 bytes en disco y 513043 normalizado a LF**,
+con `sha256` **829c583eb779cab6** en disco y **829c583eb779cab6** normalizado a LF.
+Su `verificacion` trae 4 elementos: (1) *toda entrada lleva
 su fecha_corte*, (2) *toda forma con cobertura incompleta va marcada
 PROVISIONAL*, (3) *todo hueco va NOMBRADO, nunca rellenado*, (4) *el inventario
 se recomputa entero con el disparador de 08_VERIFICACION*. Su `estado` sigue

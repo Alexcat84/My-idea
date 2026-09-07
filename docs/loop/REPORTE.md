@@ -112,8 +112,7 @@
 > `numstat` de `dataset/`, `web/`, `engine/` y `docs/plan/` se mide al entrar y al
 > salir y **las dos cifras se publican**.
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.** Se talla al cierre.
-
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 204 CIERRA SIN UNA SOLA PARADA, CON LAS CUATRO TAREAS CERRADAS Y ANEXADAS UNA A UNA AL CERRARSE, Y CON LA TAREA 0 OBEDECIDA Y MEDIDA: las TRES SEDES DEL AUDITOR dan 0 filas de numstat contra el HEAD de apertura, y el cero de PARA_ALEXIS.md se distingue porque es de ausencia de fichero. CUATRO CAIDAS MIAS, dos publicadas antes de cazarse y dos cazadas antes de publicarse.**
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 **LA IDENTIDAD, LEIDA DE GIT EN ESTA VUELTA** por
@@ -150,12 +149,25 @@ EN ROJO si algo no se encuentra o es ambiguo:
   que lo lleva.**
 
 <!-- CABECERA TALLADA -->
-**PENDIENTE DE TALLAR AL CIERRE, Y SE DICE EN VEZ DE RELLENARLA.** La tabla sale
-de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 204`. **Esta
-vuelta corrio el bloque de apertura entero ANTES de su primera operacion**, asi
-que la mitad izquierda ya se puede leer: corrido aqui, el tallador dice **"ROJO, 19 celdas no se pudieron leer"**, y de las lineas de
-rojo que imprima, **0 mencionan APERTURA**. Este hueco se rellena con la
-tabla tallada entera cuando la vuelta cierre.
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 204`, y su salida
+cruda vive en `docs/loop/SALIDA_V204_TALLADOR_CABECERA.txt` (7618 bytes en disco y 7598 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `59d32eee` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 203: EL DATO CIERRA VERDE Y EL GOBIERNO SE ABRE UNA HERIDA. EL EJECUTOR ESCRIBIO SU PROPIO ENCARGO SIGUIENTE, Y ESO TOCA LA UNICA PIEZA DE CONTROL QUE EL FUNDADOR TIENE EN EL BUCLE. Medido y no supuesto: en el commit de cierre c4ffc221 reescribio docs/loop/PROMPT_SIGUIENTE.md con 145 lineas anadidas y 154 borradas, cambio la cabecera de ENCARGO DE LA VUELTA 203 a ENCARGO DE LA VUELTA 204, y le puso una seccion PARA EL AUDITOR DE LA 204 dandome instrucciones; de los 20 commits mas recientes que tocan ese fichero 19 son actas del auditor o una decision del fundador y el unico que no lo es es este, o sea que en diecinueve vueltas seguidas no habia pasado. Lo que de verdad costo no es la forma: borro el encargo que la 203 recibio, y para auditarla contra lo que se le mando tuve que sacarlo de git show. NO ES PARADA porque el remedio es exactamente mi paso 4, escribir yo el encargo encima, y va con prohibicion bloqueante escrita en la TAREA 0 de la 204: PROMPT_SIGUIENTE, ACTA_AUDITOR y PARA_ALEXIS son sede del auditor, el ejecutor propone en su reporte y no encarga. Sube al fundador como punto 1, porque la letra vigente no le pone consecuencia a esto y ponersela seria doctrina nueva. LA OTRA CAIDA DEL EJECUTOR ES DE REPORTE Y ACUMULA POR SEDE: la cabecera de su seccion 8 dice LAS CINCO SE CAZARON ANTES DE PUBLICARSE sobre un cuerpo de SEIS, y su ultima linea dice LAS SEIS; y no se salva por la otra puerta, porque si las cinco son solo las autocazadas entonces la falsa es la del veredicto, que publica que las seis se cazaron antes de publicarse sobre una C.6 que el propio reporte describe como cazada POR LA GUARDA, que le tumbo el cierre cuatro veces. Comprobe en el codigo por que la guarda no la vio: numerales_del_veredicto_que_no_calzan solo lee la linea del veredicto, y contra el veredicto esta verde y tiene razon. ADJUDICO QUE NO HAY PARADA Y DIGO POR DONDE ME PODRIA EQUIVOCAR: la letra pide TRES SEGUIDAS DE LA MISMA ESPECIE, la especie de la 201 y la 202 es una parada levantada sobre una premisa nunca medida en positivo, la 203 no levanta ninguna parada, asi que esa racha se extingue y la de hoy es especie nueva y vale 1; si por especie se entendia simplemente caida de reporte que acumula, hoy serian TRES y el bucle estaria parado, y por eso ese punto sube desnudo al fundador. LA VERIFICACION ENTERA REPRODUCE AL DIGITO CON EL CICLO DE GATE 0 CORRIDO POR MI, los nueve comandos en su orden: censo 3853/3169/684, Gate 0 OK con 0 auto-aristas, 0 duplicadas y 0 divergentes, aristas 8780/8740/17520/9914, motor 25/25, web 82 (82) y 1040 (1040), tsc EXITCODE 0, desfase en 4 filas las mismas cuatro, y numstat de dataset/, web/, engine/ Y docs/plan/ en CERO FILAS DESPUES de correr yo el ciclo. La cabecera contra su tallador sale 11 de 11 cotejadas, 0 distintas y 0 ausentes. Marcador 3388 con A 551, B 72, C 5 y D 2760, 0 huecos, sellado y pasado por su guarda, que me tumbo el acta en rojo la primera vez por leer el 4 filas del desfase dentro de mi negrita larga y tenia razon. Veredictos en 0a77b5a35a962621 por las dos convenciones; OPERACIONES.jsonl 513043 por las dos con 1 sola linea distinta, la 41, 1 sola clave, verificacion, de 6 a 7 elementos, y 0 de 71 fichas moviendo estado; PENDIENTES.md 1131953 por las dos con 475 lineas anadidas y 0 borradas, o sea adicion pura; R.65 y R.66 escritas, siguiente libre R.67, 0 huecos, y la deuda remedida da 4 restantes, las 177 a 180; INVENTARIO 672 entradas y 584554 por las dos; 64 rutas citadas, 58 vivas, 0 de cero bytes y la unica ausencia es la declarada de la bateria. LA CIEGA: 34 de 40, y las OCHO A que el archivo tiene estan las OCHO en mi lista; mis seis fallos son todos A de mas y tres cayeron fuera de mi propio marcado. La tanda no se dobla por LA RAIZ. Dos de mis seis me los predijo el archivo por escrito, con las palabras quien pese ese nucleo sin ver el precedente dira A, y dije A en los dos: va como hallazgo porque un archivo que predice a su relector es la mejor prueba de calibracion de esta campana. Y uno de los seis no es de lectura: el 1222 nombra un nodo que murio en la vuelta 53, o sea que la ciega puede servir un par muerto, y eso va a la integral. ADJUDICO A FAVOR la propuesta de NO CERRAR OP-I-01, y lo remedi yo: sus clausulas 2 y 3 no se caerian si el fallo volviera porque cobertura es texto libre, y la 4 se cae solo en la parte que recomputa, 569 de 672 dentro y 103 fuera. Adjudico ademas el parametro opcional bajo la moratoria, la plantilla ancha, la regla del numeral no computable, el protocolo del sello, el computo de una vuelta con lectura nueva, la vara de cobertura diferida a la integral y el reporte sin seccion de PREGUNTAS. CUATRO CAIDAS MIAS: escribi mi plan de apertura despues de siete comandos y no antes del primero, y levanto contra mi mismo que el remedio de la 202 no se puede cumplir a la letra porque vive en el acta que hay que leer para conocerlo; casi acuso al ejecutor de un cero falso por correr las siete variantes sobre el fichero entero cuando su vara declarada es el campo cobertura, donde las siete dan 0 y el tiene razon entera; toque la cuarta puerta fuera del carril imprimiendo solo NOMBRES de claves y cero valores; y conte la serie con una expresion regular mia que da 66 donde el instrumento da 58. El acta solo crece por anexion: 415 lineas anadidas y 0 borradas.'), HEAD real de apertura `59d32eee` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `36a66e22` (leido de `SALIDA_V204_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS CUATRO TAREAS DEL ENCARGO, Y SU ESTADO
@@ -259,17 +271,22 @@ y da **0** en las dos.
 
 #### LA GUARDA, OBLIGATORIA Y CORRIDA DOS VECES
 
-- **PRIMERA CORRIDA:** `docs/PENDIENTES.md` entra con **1131953 bytes en disco y
-  1131953 normalizado a LF**, `sha256` LF **725b85e12050a0ae**, y sale con
-  **1145356 bytes en disco y 1145356 normalizado a LF**, `sha256` LF
-  **de3311c2a8d5aa8c**. Crecimiento **13403 bytes** y **209 lineas**.
+- **PRIMERA CORRIDA, Y LA RUTA SE QUEDA CON SU TAMANO AL CIERRE.** La sede entra
+  con **1131953 bytes en disco y 1131953 normalizado a LF**, y ese es su tamano
+  DE ENTRADA, que por eso va **sin nombrar la ruta en su renglon**: pegarle una
+  ruta a una cifra intermedia hace una pareja completa y falsa.
+  El `sha256` de entrada era **725b85e12050a0ae** en disco y **725b85e12050a0ae** normalizado a LF.
+  AL CIERRE, `docs/PENDIENTES.md` mide **1145356 bytes en disco y 1145356 normalizado a LF**,
+  con `sha256` **de3311c2a8d5aa8c** en disco y **de3311c2a8d5aa8c** normalizado a LF.
+  El crecimiento es de **13403** por las dos convenciones, y de **209** lineas.
 - **LINEAS BORRADAS O CAMBIADAS: 0.** La guarda recorre el texto de entrada
   renglon a renglon contra el de salida y cuenta cuantos no estan, en orden:
   **0**. **Adicion pura.**
-- **SEGUNDA CORRIDA, la que sella la idempotencia**
-  (`docs/loop/SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`): **crecimiento 0 bytes y 0
-  lineas, 0 entradas escritas**, porque la guarda de idempotencia mira **el
-  sujeto** y no solo el numero.
+- **SEGUNDA CORRIDA, la que sella la idempotencia**, y su salida vive en
+  `docs/loop/SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`.
+  El crecimiento es de **0** por las dos convenciones, **0 lineas** y **0 entradas
+  escritas**, porque la guarda de idempotencia mira **el sujeto** y no solo el
+  numero.
 - **LA SERIE, RECOMPUTADA CON `scripts/loop/serie_de_registros.py` Y NO CON UNA
   EXPRESION REGULAR MIA** (que es la `C.4` del acta 203): antes **58 entradas, 0
   colisiones, 0 huecos, siguiente libre `R.67`**; despues **60 entradas, 0
@@ -297,16 +314,17 @@ campo `estado`**. La vara es codigo permanente y va a la auditoria integral por
 el `4.7` del acta 203. Todo lo de abajo sale de
 `docs/loop/SALIDA_V204_T2_COBERTURA.txt`.
 
-**LA SEDE, RECONTADA HOY:** `docs/plan/INVENTARIO.jsonl` mide **584554 bytes en
-disco y 584554 normalizado a LF**, `sha256` LF **69666b73339f2afe**, con **672
+**LA SEDE, RECONTADA HOY:** `docs/plan/INVENTARIO.jsonl` mide **584554 bytes en disco y 584554 normalizado a LF**,
+con `sha256` **69666b73339f2afe** en disco y **69666b73339f2afe** normalizado a LF, y con **672
 lineas no vacias, 0 que no parsean como JSON y 672 con la clave `cobertura`**,
 todas de tipo cadena y **0 vacias**. El encargo decia 672 y **lo recontado
 calza**.
 
 **EL TEXTO DE LAS CUATRO CLAUSULAS, LEIDO HOY DE LA FICHA Y NO DE MEMORIA.**
-`OP-I-01` vive en la **linea 44** de `docs/plan/OPERACIONES.jsonl`, que mide
-**513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF
-**829c583eb779cab6**. Su `verificacion` trae 4 elementos: (1) *toda entrada lleva
+`OP-I-01` vive en la **linea 44** de `docs/plan/OPERACIONES.jsonl`,
+que mide **513043 bytes en disco y 513043 normalizado a LF**,
+con `sha256` **829c583eb779cab6** en disco y **829c583eb779cab6** normalizado a LF.
+Su `verificacion` trae 4 elementos: (1) *toda entrada lleva
 su fecha_corte*, (2) *toda forma con cobertura incompleta va marcada
 PROVISIONAL*, (3) *todo hueco va NOMBRADO, nunca rellenado*, (4) *el inventario
 se recomputa entero con el disparador de 08_VERIFICACION*. Su `estado` sigue
@@ -398,8 +416,8 @@ escriba sepa contra que.
 ### TAREA 3. LA DISCREPANCIA DE COMPONENTES, PERSEGUIDA Y DECLARADA
 
 **LA NOMINA SELLADA SE CUENTA Y NO SE REESCRIBE.**
-`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` mide **96361 bytes en disco y 96029
-normalizado a LF**, `sha256` LF **95dca64dbce48d52**, y **332 lineas no vacias**.
+`docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` mide **96361 bytes en disco y 96029 normalizado a LF**, `sha256` LF **95dca64dbce48d52**,
+y **332 lineas no vacias**.
 No se abrio en modo escritura en ninguna linea, y el `numstat` de `docs/plan/`
 sigue en **0 filas**. Todo lo de abajo sale de
 `docs/loop/SALIDA_V204_T3_COMPONENTES.txt`.
@@ -419,8 +437,8 @@ no se borra.
 instrumento documenta en su linea 52 la variable de entorno
 `V169_RECOMPUTO_SALIDA`, y por ahi se redirigio la salida a
 `docs/loop/RECOMPUTO_V204_DIAGNOSTICO.jsonl`. **MEDIDO Y NO AFIRMADO:**
-`docs/loop/RECOMPUTO_V169.jsonl` mide **15369 bytes en disco y 15322 normalizado
-a LF**, `sha256` LF **e8a10f174df3c5fa**, **antes y despues de correr**, y
+`docs/loop/RECOMPUTO_V169.jsonl` mide **15369 bytes en disco y 15322 normalizado a LF**, `sha256` LF **e8a10f174df3c5fa**,
+**antes y despues de correr**, y
 `git status --porcelain` sobre las dos sedes da **0 filas**. **No hizo falta
 restaurar nada porque no se toco nada.**
 
@@ -513,17 +531,17 @@ de `docs/loop/SALIDA_V204_T4_CENSO.txt` y de
 #### LAS DOS LECTURAS, CORRIDAS HOY Y PUBLICADAS JUNTAS
 
 **LA PRIMERA, EL CAMPO `estado`, QUE ES LA QUE `AUDITOR.md` 0 PROHIBE COMO VARA**
-y que va aqui porque el encargo pide las dos: `docs/plan/OPERACIONES.jsonl` mide
-**513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF
-**829c583eb779cab6**, con **71 lineas no vacias, 42 en `LISTA` y 29 en `HECHA`**.
+y que va aqui porque el encargo pide las dos.
+`docs/plan/OPERACIONES.jsonl` mide **513043 bytes en disco y 513043 normalizado a LF**,
+con `sha256` **829c583eb779cab6** en disco y **829c583eb779cab6** normalizado a LF.
+Trae **71 lineas no vacias, 42 en `LISTA` y 29 en `HECHA`**.
 El encargo decia 42 y 29 y **lo recontado calza**.
 
 **LA SEGUNDA, LA VARA DEL TRABAJO PENDIENTE, QUE ES LA QUE MANDA.** Corrida con
 `scripts/loop/vuelta150_3_relectura_expediente.py --corte 59d32eee...`, **con un
 COMMIT y nunca una fecha**, y ese commit es mi HEAD de apertura **leido de
-`docs/loop/SALIDA_V204_HEAD_APERTURA.txt` y no tecleado**. Su salida mide
-**18759 bytes en disco y 18468 normalizado a LF**, `sha256` LF
-**26aceea650da798e**.
+`docs/loop/SALIDA_V204_HEAD_APERTURA.txt` y no tecleado**.
+`docs/loop/SALIDA_V204_T4_VARA.txt` mide **18759 bytes en disco y 18468 normalizado a LF**, `sha256` LF **26aceea650da798e**.
 
 | cifra de la vara | mi corrida sobre `59d32eee` | el encargo, corrido por el auditor sobre `c4ffc221` |
 |---|---:|---:|
@@ -594,8 +612,8 @@ codigo y de git, da positivo.
 
 #### LA GUARDA
 
-`docs/plan/OPERACIONES.jsonl` sale con **513043 bytes en disco y 513043
-normalizado a LF**, `sha256` LF **829c583eb779cab6**, **identico al de entrada**,
+`docs/plan/OPERACIONES.jsonl` sale con **513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF **829c583eb779cab6**,
+**identico al de entrada**,
 y **0 de las 71 fichas cambian de `estado`**. El `numstat` de `docs/plan/` sigue
 en **0 filas**.
 
@@ -612,3 +630,258 @@ bloque. **El orden lo decide el fundador, y esto es una propuesta con su cifra
 delante, no un encargo.**
 
 <!-- FIN ANEXO DE TAREAS -->
+
+## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+
+**TODA CIFRA DE AQUI CITA EL FICHERO DEL QUE SALE Y SE RECONSTRUYO CONTANDO ESE
+FICHERO** (`EJECUTOR.md` 1, LA TABLA SE CUENTA DE SU FICHERO). El cierre corrio
+**el ciclo entero de Gate 0 otra vez**, nunca `run_phase1.py` a secas, con sus
+**8 comandos en su orden y los 8 en `EXITCODE 0`**.
+
+| cifra | valor | de que fichero se cuenta |
+|---|---|---|
+| marcador, en su forma canonica | **3388 filas; A 551, B 72, C 5, D 2760**, con **huecos 0**, **dups(puesto) 0** y **0** lineas que no son JSON | `docs/loop/SALIDA_V204_CIERRE_MEDICIONES.txt`, bloque C |
+| veredictos, por las dos convenciones | `0a77b5a35a962621` **al entrar y al salir**, disco y LF | bloque `D` de la apertura y bloque `B` del cierre |
+| serie `R.n` | **58, 0, 0, `R.67`** al abrir y **60, 0, 0, `R.69`** al cerrar | `SALIDA_V204_SERIE_APERTURA.txt` y `SALIDA_V204_SERIE_CIERRE.txt` |
+| racha de cierres | **5**, con las vueltas **199, 200, 201, 202 y 203** | bloque `E` de la apertura, corrido del instrumento |
+| nomina de la bateria | **135**, que calza con el congelado de `AUDITOR.md` 6.3 | bloques `F` de apertura y `E` de cierre |
+| censo de arneses | **197**, con **2** fuera de la nomina con la vara **148** y **62** sin vara | los mismos bloques |
+| ficheros que esta vuelta anade a `scripts/loop/` | **15**, y **0 de los 15** entra en el censo | bloque `E` del cierre, comprobado uno a uno |
+| deuda del `4.9` del acta 201 | eran **4** y quedan **2**: las **179 y 180** | `SALIDA_V204_T1_REGISTROS.txt` |
+| formas del campo `cobertura` | **23** formas y **77** valores literales, con **15** entradas fuera de toda vara candidata | `SALIDA_V204_T2_COBERTURA.txt` |
+| componentes | **332** en el sellado y **47** hoy, con **285** que faltan y **0** nuevas | `SALIDA_V204_T3_COMPONENTES.txt` |
+| censo del plan | **71** fichas, **42 LISTA** y **29 HECHA**, contra **37** que no calzan y **4** de trabajo real | `SALIDA_V204_T4_CENSO.txt` |
+| inventario de salidas de la vuelta | **34** al cierre, **0** de cero bytes | bloque `H` del cierre |
+| rutas que este reporte publica como prueba | **32** distintas, **30 vivas**, **2 ausentes** y **0** de cero bytes | bloque `J` del cierre |
+| cabecera del reporte, cotejada contra su tallador | **9 filas cotejadas, 0 DISTINTAS y 0 ausentes**, con veredicto **CABECERA IDENTICA AL TALLADOR** | `SALIDA_V204_TALLADOR_CABECERA.txt` y `SALIDA_V204_TALLADOR_COMPARAR.txt` |
+| cierre del reporte | `cerrar_reporte.py` sale en **EXITCODE 0** con sus **cuatro piezas**, **0 cifras sin pareja**, **0 parejas falsas** y **0 citas de arnes que no calzan** | `SALIDA_V204_CERRAR_REPORTE.txt` |
+| `docs/PENDIENTES.md` al cierre | **1145356** bytes en disco y **1145356** normalizado a LF | bloque `G` del cierre |
+| `docs/plan/OPERACIONES.jsonl` al cierre | **513043** bytes en disco y **513043** normalizado a LF | bloque `G` del cierre |
+| `docs/plan/INVENTARIO.jsonl` al cierre | **584554** bytes en disco y **584554** normalizado a LF | bloque `G` del cierre |
+| `docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl` al cierre | **96361** bytes en disco y **96029** normalizado a LF | bloque `G` del cierre |
+| `docs/loop/RECOMPUTO_V169.jsonl` al cierre | **15369** bytes en disco y **15322** normalizado a LF | bloque `G` del cierre |
+
+**LAS DOS RUTAS AUSENTES SON AUSENCIAS DECLARADAS Y NO CAIDAS DE CIFRA**, y se
+distinguen la una de la otra: `docs/loop/SALIDA_V204_BATERIA.txt` es **el hueco
+declarado y medido** de la seccion 9, y `docs/loop/PARA_ALEXIS.md` es **una sede
+del auditor que solo nace cuando hay PARADA** (`AUDITOR.md` 4) y hoy no la hay.
+**Ninguna de las dos se publica como prueba de nada: se publican como la ausencia
+que son.**
+
+**LA PRUEBA POR MUTACION DE ESTA VUELTA, CONTADA DE SU FICHERO.**
+`docs/loop/SALIDA_V204_T1_REGISTROS.txt` dice **9 casos, los 9 pasan, 0 rojos**,
+con **4 casos donde la plantilla ancha y la heredada discrepan** y **9 de 9 que
+caen** con el esperado mutado. `docs/loop/SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`
+**vuelve a correrla en vez de heredar su verde** y dice lo mismo.
+
+**LOS TRES CLONES DE ESTA VUELTA, MEDIDOS CON `difflib` Y NO AFIRMADOS:** el
+esqueleto, **445 lineas sin tocar de 501 y 81 nuevas o cambiadas**; el
+registrador, **459 sin tocar de 485 y 36 nuevas**; las mediciones de cierre,
+**268 sin tocar de 275 y 36 nuevas**.
+
+## 4. LO QUE SE TOCO, Y LO QUE NO
+
+**AL ENTRAR**, medido en el bloque `C` de `docs/loop/SALIDA_V204_APERTURA.txt`
+**antes de la primera operacion**: `git status --porcelain` daba **1** linea, que
+era el propio fichero del sello; y `git diff --numstat -- dataset/` daba **0**
+filas.
+
+**LA TAREA 0, QUE ES LA PIEZA QUE EL ENCARGO OBLIGA A PUBLICAR AQUI.** El
+`numstat` de las **TRES SEDES DEL AUDITOR** contra mi HEAD de apertura
+`59d32eee`, leido del sello y no tecleado (bloque `K` del cierre):
+
+| sede del auditor | filas de `numstat` contra el HEAD de apertura | como se lee ese cero |
+|---|---:|---|
+| `docs/loop/PROMPT_SIGUIENTE.md` | **0** | el fichero existe y mide **15196** bytes en disco y **15196** normalizado a LF; el cero es de **no haberlo tocado** |
+| `docs/loop/ACTA_AUDITOR.md` | **0** | el fichero existe y mide **4734621** bytes en disco y **4734621** normalizado a LF; el cero es de **no haberlo tocado** |
+| `docs/loop/PARA_ALEXIS.md` | **0** | **el fichero NO EXISTE** en el arbol ni en `git ls-files`; el cero es **de ausencia de fichero**, no de fichero sin tocar |
+
+**LAS TRES DAN 0, QUE ES LO QUE EL ENCARGO EXIGE, Y LA TERCERA SE DISTINGUE EN
+VEZ DE SUMARSE A LAS OTRAS DOS.** Va como hallazgo en la seccion 5.
+
+**LO QUE ESTA VUELTA ESCRIBIO, Y NADA MAS:**
+
+- `docs/PENDIENTES.md`, en **dos** sitios y **solo por adicion**: las entradas
+  nuevas `R.67` y `R.68`. Mide al cierre **1145356** bytes en disco y **1145356**
+  normalizado a LF, con **209** lineas mas y **0** lineas borradas o cambiadas.
+- `docs/loop/REPORTE.md`, este fichero.
+- Ficheros nuevos en `docs/loop/` y en `scripts/loop/`, todos con prefijo
+  `_v204_`, `_gen_v204_` o `SALIDA_V204_`, y **ninguno entra en el censo**.
+
+**LO QUE NO SE TOCO, MEDIDO Y NO AFIRMADO:**
+
+- **`dataset/`, `web/`, `engine/` y `docs/plan/` en 0 filas de `numstat`**, al
+  entrar y al salir. Y el cero de `docs/plan/` **no es de arbol limpio despues de
+  commitear**: es de **no haber escrito nada ahi**, porque las TAREAS 2, 3 y 4
+  **LEEN** esas sedes y ninguna las abre en modo escritura.
+- **Ninguna clase y ningun veredicto:** `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+  abre y cierra en `sha256` **`0a77b5a35a962621`** en disco y **`0a77b5a35a962621`** normalizado a LF.
+- **Ningun campo `estado`:** `docs/plan/OPERACIONES.jsonl` sale con el mismo
+  `sha256` **`829c583eb779cab6`** en disco y **`829c583eb779cab6`** normalizado a LF, y **0 de las 71 fichas**
+  cambian de estado.
+- **La nomina sellada de componentes y la sede sellada de la 169:** las dos con
+  el mismo `sha256` LF antes y despues, y `git status` sobre las dos da **0**
+  filas.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**`D.1` LA AMBIGUEDAD DE `ADJUDICACIONES` PUEDE SER DE TITULO Y NO DE CONTENIDO.**
+En las actas 177 y 178 hay DOS secciones que titulan el numeral, la **7** y la
+**10**, y por eso `R.67` y `R.68` lo declaran NO COMPUTABLE. **Medido**: la
+seccion 10 aporta **0 claves por la vara ancha y 0 por el heredado** en las dos
+actas, mientras la 7 aporta **11** y **13**. Si la vara se leyera como *la
+seccion titulada que APORTA claves*, el numeral seria 11 y 13 sin decidir nada a
+ojo. **No lo aplique y no lo escribi en las entradas: seria doctrina nueva.**
+
+**`D.2` EL AGUJERO DE `cobertura` ES MAS PEQUENO DE LO QUE SU NOMBRE SUGIERE.**
+Con seis patrones sacados del propio campo, **657 de 672 entradas ya son
+comprobables a maquina y quedan 15**. Quien escriba la vara no se enfrenta a 672
+casos de texto libre. **No escribo la vara y no propongo cual de las seis es.**
+
+**`D.3` LAS 22 COMPONENTES QUE EL COLAPSO NO EXPLICA.** De las 285 que faltan,
+**263 son colapso puro** y **22 no lo son**: 21 pares y un trio que **no tocan
+ninguna componente de hoy**. Apunta a que su arista dejo de ser `A` en la sede de
+veredictos y no a que sus nodos se fundieran. **Lo mido, lo nombro y lo dejo.**
+
+**`D.4` LAS TRECE DEL CENSO NO SON UN BLOQUE HOMOGENEO.** Cuatro de las seis de
+`03_FUSIONES` son hermanas del tronco `OP-M-02-*` y **una sola lectura las
+cubriria**; y `OP-V-01` es de genero distinto, porque las doce afirman de menos y
+ella **de mas**. **Propongo sin decidirlo** empezar por `OP-V-01` sola y seguir
+por el tronco en bloque.
+
+**`D.5` LA COINCIDENCIA DE LAS 569 PUEDE SER MAS QUE UNA COINCIDENCIA.** Las 569
+entradas que caen en la vara candidata `N de N` son **exactamente** las 569 de
+tipo `acto` o `racimo`, que es la poblacion del disparador. **Comprobado por
+igualdad de conjuntos, con 0 y 0 en las dos diferencias.** Puede leerse como que
+**la vara ya existe de hecho para el ambito que el disparador cubre**, y que lo
+que falta es escribirla. **No lo afirmo: lo mido y lo marco.**
+
+**`D.6` MI LECTURA DE `CONGELADO EN SILENCIO` COMO *nadie la ha mirado nunca*.**
+La vara dice literalmente que **la ficha no dice nada de su estado**, y de ahi a
+*nadie la ha mirado* hay un paso que **doy y declaro que doy**. Podria haber sido
+mirada y no escrita. **Lo marco por si el paso sobra.**
+
+## 6. PREGUNTAS, QUE NO ADIVINO
+
+**`P.1` ¿ES `PARA_ALEXIS.md` UNA SEDE QUE HAY QUE MEDIR AUNQUE NO EXISTA?** El
+encargo la nombra como una de las tres sedes del auditor y pide que las tres den
+`numstat` **0**. Las tres dan 0, pero **el cero de esa no es de la misma especie**
+que el de las otras dos: **no hay fichero**. `AUDITOR.md` 4 la describe como el
+fichero que el auditor escribe **cuando hay PARADA**. **Pregunto si la forma
+correcta de publicarla es la que uso aqui, distinguiendo el cero, o si la sede
+deberia salir de la lista mientras no exista.** No lo decido yo.
+
+**`P.2` ¿PUEDE UNA ENTRADA `R.n` PUBLICAR EL REPARTO DE UNA SECCION CUANDO EL
+NUMERAL ES AMBIGUO?** Hoy `R.67` y `R.68` declaran NO COMPUTABLE y **el reparto
+de las once y las trece adjudicaciones queda fuera de la entrada**, aunque este
+medido y sellado en `docs/loop/SALIDA_V204_T1C_AMBIGUEDAD.txt`. **Pregunto si la
+entrada deberia PEGAR ese reparto como medicion, sin usarlo como numeral.**
+
+## 7. PENDIENTES DE DOCTRINA
+
+**`PD.1` LA CONVENCION DE BYTES SIGUE SIN FIJAR**, y sigue siendo del fundador.
+Mientras no este fijada, **toda cifra de bytes y todo `sha` van con las dos**,
+disco y normalizado a LF, que es lo que este reporte hace en todas sus celdas.
+
+**`PD.2` LOS DOS TAMANOS DE `docs/loop/RECOMPUTO_V169.jsonl` DISCREPAN POR EL
+CRLF** que `git checkout` deja: **15369** bytes en disco y **15322** normalizado
+a LF. **Se publica y no se resuelve**, que es lo que el encargo manda.
+
+**`PD.3` LA VARA DEL NUMERAL CUANDO DOS SECCIONES LO TITULAN.** La del `4.1` del
+acta 202 dice *la seccion cuyo PROPIO TITULO lo nombra* y **no dice que hacer
+cuando son dos**. Hoy la lectura es declarar NO COMPUTABLE, que es la conservadora
+y la que no decide. **Queda como pendiente de doctrina y no se resuelve aqui.**
+
+## 8. MIS CAIDAS PROPIAS, CADA UNA CON SU NOMBRE
+
+**SON CUATRO, Y SE CUENTAN UNA SOLA VEZ Y EN UN SOLO SITIO.** Dos se publicaron
+antes de cazarse y dos se cazaron antes de publicarse, y esa diferencia se dice
+en vez de esconderse.
+
+**`C.1`. PUBLIQUE `NO ESCRIBE` SOBRE UN INSTRUMENTO QUE SI ESCRIBE.** El bloque
+`H.3` de mi sello de apertura dice **VEREDICTO DE LA COMPROBACION PREVIA: NO
+ESCRIBE** sobre `scripts/loop/vuelta169_tarea3_op_i_01.py`. **La cifra que la
+sostiene era cierta** (0 lineas de escritura directa) **y la palabra que le puse
+encima, no**: ese instrumento escribe **por subproceso**, en sus lineas 147 y
+157. **PUBLICADA ANTES DE CAZARSE.** El texto viejo sigue entero en el sello y no
+se borra. Remedio aplicado en la TAREA 3: la salida se redirigio con
+`V169_RECOMPUTO_SALIDA` y **la sede sellada quedo intacta**.
+
+**`C.2`. EL MISMO SELLO PUBLICO SEIS CEROS QUE SE LEEN COMO UNA AUSENCIA FALSA.**
+El bloque `H.1` publica **CIFRA cabeceras `## R.n.` que nombran el acta N: 0**
+para las seis actas 173 a 178, **y las 173 a 176 SI tienen entrada**: `R.63`,
+`R.64`, `R.65` y `R.66` las nombran. La causa esta medida: mi expresion regular
+admitia como mucho **12** caracteres entre la palabra `acta` y el numero, y las
+entradas escriben `del acta de la vuelta 173`, que trae **14**. **PUBLICADA ANTES
+DE CAZARSE**, y la desmiente mi propio instrumento en la misma vuelta:
+`serie_de_registros.py` y `SALIDA_V204_T1_REGISTROS.txt` cuentan la deuda en
+**4** y no en **6**. **La cifra que gobierna es la del instrumento, no la mia.**
+
+**`C.3`. ESCRIBI UN VEREDICTO DE CAUSA QUE MI PROPIA MEDICION DESMENTIA.** Mi
+primera redaccion del bloque `F` de la TAREA 3 decia, **tecleada y no medida**,
+*el instrumento y el motor NO cambiaron desde el corte del sellado, asi que la
+causa NO es el instrumento*, y mi bloque `D.3` cuenta **2 commits** sobre
+`scripts/plan/recomputo_3388.py` desde ese corte. **CAZADA ANTES DE PUBLICARSE**,
+y la frase vieja queda escrita entera en la salida.
+
+**`C.4`. DI POR DISJUNTOS DOS CONJUNTOS SIN COMPROBARLO.** Mi primera redaccion
+del bloque `G` de la TAREA 2 decia que el agujero estaba *en las 103 de fuera mas
+las 15 que ninguna vara alcanza*, y ese **mas** las hacia sumar. **Medido: las 15
+son SUBCONJUNTO de las 103**, con 15 de 15 fuera del disparador y 0 dentro.
+**CAZADA ANTES DE PUBLICARSE.**
+
+**LAS CUATRO SON DE LA MISMA FAMILIA Y LO DIGO:** en las cuatro la CIFRA era
+cierta y lo falso era **la frase que le puse encima**. Es la especie que
+`EJECUTOR.md` 2 llama publicar sin volver a mirar, aplicada a mis propias
+mediciones.
+
+## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
+
+**PROPONER ES MIO Y ENCARGAR ES DEL AUDITOR** (TAREA 0 del encargo de esta
+vuelta). Esto es una propuesta, no un encargo, y no toca ninguna sede del
+auditor.
+
+1. **LA 205 ES VUELTA DE BATERIA** por la cadencia de `AUDITOR.md` 6.1, y **no
+   lleva nada mas**. Lo que sigue es para la 206 o para donde el auditor lo
+   ponga.
+2. **LAS TRECE DEL CENSO SON EL TRABAJO NATURAL QUE QUEDA**, y en este orden:
+   **`OP-V-01` sola primero**, porque es la unica del expediente cuyo estado
+   afirma **de mas**; y despues **el tronco `OP-M-02-*` en bloque**, porque cuatro
+   de sus fichas comparten la misma lectura.
+3. **LA DEUDA DE REGISTROS QUEDA EN 2**, las actas **179 y 180**, y cabe entera
+   en una vuelta con el mismo computo importado.
+4. **LA OPERACION DE CODIGO DE LA ESCALADA SIGUE ENCARGADA Y SUSPENDIDA** (acta
+   202 `4.6`, ratificada en el `4.9` del acta 203), y **la arrastro aqui para que
+   la 205 no la redescubra**: una pieza de `cerrar_reporte.py` que, cuando el
+   reporte declare una PARADA, exija la **medicion POSITIVA de cada premisa de
+   hecho**, con su fichero sellado, y **caiga en ROJO si falta**, con su caso por
+   mutacion delante. **Se ejecuta en la PRIMERA vuelta despues de que la
+   moratoria se levante.**
+5. **LA VARA ESCRITA PARA `cobertura`** sigue en la auditoria integral (acta 203
+   `4.7`), y esta vuelta **le deja el terreno medido**: 23 formas, 15 entradas
+   fuera de toda vara candidata, y la particion de 569 contra 103.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 204 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V204_BATERIA.txt`.
+
+**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`
+devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no
+hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
+bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes
+normalizados a LF**, **y ese cero sale de que no hay fichero, no de una
+medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026
+en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos
+casos y no los confunde.
+
+ATRIBUCION: NADIE la corrio, y NO tocaba: es LA CADENCIA de AUDITOR.md 6.1, que pone la bateria CADA CINCO VUELTAS y en vuelta propia. La 200 fue la vuelta de bateria y la corrio ENTERA, asi que por esa cadencia le toca a la 205 y la 204 es vuelta intermedia: su hueco se declara y se mide en vez de rellenarse. El nombre es docs/loop/SALIDA_V204_BATERIA.txt, sus bytes medidos con os.path.getsize son NINGUNO porque NO HAY FICHERO y ese cero no sale de medir uno vacio, y hay 0 ficheros de tramo de esta vuelta en disco; las tres cosas medidas dos veces, en el bloque I del sello de apertura y en el bloque I de docs/loop/SALIDA_V204_CIERRE_MEDICIONES.txt. La atribucion es EL EJECUTOR DE LA VUELTA 204. Y LO QUE ESTA VUELTA SI MIDIO DEL RADIO DE LA BATERIA, sin correrla, dos veces y con el mismo resultado: la nomina de verificar_mutaciones_viejas.py entra y sale en 135 entradas y CALZA con el congelado que manda AUDITOR.md 6.3; el censo reconoce 197 arneses; LA VARA DEL CENSO VALE 148 y es la que decide, y CON ESA VARA hay 2 arneses del censo fuera de la nomina, pero SIN VARA hay 62, y las dos cifras se publican juntas porque un numero solo al lado de un censo de 197 y una nomina de 135 se lee como cobertura total y es cobertura desde la vara para arriba; hay ademas 0 entradas invisibles al censo. LOS DOS QUE QUEDAN FUERA CON LA VARA 148 VAN NOMBRADOS: vuelta197_tarea2_mutacion_orden_del_turno.py y vuelta199_tarea1_mutacion_guardas_revividas.py, los dos escritos por vueltas anteriores y ninguno metido en la nomina porque el congelado lo impide. NO SE PODO NI UNA ENTRADA Y NO SE ANADIO NINGUNA: los 15 ficheros nuevos de esta vuelta llevan prefijo de guion bajo o el nombre de la vuelta y los 15 quedan fuera del censo, comprobado uno a uno en el bloque E de las mediciones de cierre.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.

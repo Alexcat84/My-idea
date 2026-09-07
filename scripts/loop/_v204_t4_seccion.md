@@ -8,17 +8,17 @@ de `docs/loop/SALIDA_V204_T4_CENSO.txt` y de
 #### LAS DOS LECTURAS, CORRIDAS HOY Y PUBLICADAS JUNTAS
 
 **LA PRIMERA, EL CAMPO `estado`, QUE ES LA QUE `AUDITOR.md` 0 PROHIBE COMO VARA**
-y que va aqui porque el encargo pide las dos: `docs/plan/OPERACIONES.jsonl` mide
-**513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF
-**829c583eb779cab6**, con **71 lineas no vacias, 42 en `LISTA` y 29 en `HECHA`**.
+y que va aqui porque el encargo pide las dos.
+`docs/plan/OPERACIONES.jsonl` mide **513043 bytes en disco y 513043 normalizado a LF**,
+con `sha256` **829c583eb779cab6** en disco y **829c583eb779cab6** normalizado a LF.
+Trae **71 lineas no vacias, 42 en `LISTA` y 29 en `HECHA`**.
 El encargo decia 42 y 29 y **lo recontado calza**.
 
 **LA SEGUNDA, LA VARA DEL TRABAJO PENDIENTE, QUE ES LA QUE MANDA.** Corrida con
 `scripts/loop/vuelta150_3_relectura_expediente.py --corte 59d32eee...`, **con un
 COMMIT y nunca una fecha**, y ese commit es mi HEAD de apertura **leido de
-`docs/loop/SALIDA_V204_HEAD_APERTURA.txt` y no tecleado**. Su salida mide
-**18759 bytes en disco y 18468 normalizado a LF**, `sha256` LF
-**26aceea650da798e**.
+`docs/loop/SALIDA_V204_HEAD_APERTURA.txt` y no tecleado**.
+`docs/loop/SALIDA_V204_T4_VARA.txt` mide **18759 bytes en disco y 18468 normalizado a LF**, `sha256` LF **26aceea650da798e**.
 
 | cifra de la vara | mi corrida sobre `59d32eee` | el encargo, corrido por el auditor sobre `c4ffc221` |
 |---|---:|---:|
@@ -89,8 +89,8 @@ codigo y de git, da positivo.
 
 #### LA GUARDA
 
-`docs/plan/OPERACIONES.jsonl` sale con **513043 bytes en disco y 513043
-normalizado a LF**, `sha256` LF **829c583eb779cab6**, **identico al de entrada**,
+`docs/plan/OPERACIONES.jsonl` sale con **513043 bytes en disco y 513043 normalizado a LF**, `sha256` LF **829c583eb779cab6**,
+**identico al de entrada**,
 y **0 de las 71 fichas cambian de `estado`**. El `numstat` de `docs/plan/` sigue
 en **0 filas**.
 

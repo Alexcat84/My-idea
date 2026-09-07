@@ -84,17 +84,22 @@ y da **0** en las dos.
 
 #### LA GUARDA, OBLIGATORIA Y CORRIDA DOS VECES
 
-- **PRIMERA CORRIDA:** `docs/PENDIENTES.md` entra con **1131953 bytes en disco y
-  1131953 normalizado a LF**, `sha256` LF **725b85e12050a0ae**, y sale con
-  **1145356 bytes en disco y 1145356 normalizado a LF**, `sha256` LF
-  **de3311c2a8d5aa8c**. Crecimiento **13403 bytes** y **209 lineas**.
+- **PRIMERA CORRIDA, Y LA RUTA SE QUEDA CON SU TAMANO AL CIERRE.** La sede entra
+  con **1131953 bytes en disco y 1131953 normalizado a LF**, y ese es su tamano
+  DE ENTRADA, que por eso va **sin nombrar la ruta en su renglon**: pegarle una
+  ruta a una cifra intermedia hace una pareja completa y falsa.
+  El `sha256` de entrada era **725b85e12050a0ae** en disco y **725b85e12050a0ae** normalizado a LF.
+  AL CIERRE, `docs/PENDIENTES.md` mide **1145356 bytes en disco y 1145356 normalizado a LF**,
+  con `sha256` **de3311c2a8d5aa8c** en disco y **de3311c2a8d5aa8c** normalizado a LF.
+  El crecimiento es de **13403** por las dos convenciones, y de **209** lineas.
 - **LINEAS BORRADAS O CAMBIADAS: 0.** La guarda recorre el texto de entrada
   renglon a renglon contra el de salida y cuenta cuantos no estan, en orden:
   **0**. **Adicion pura.**
-- **SEGUNDA CORRIDA, la que sella la idempotencia**
-  (`docs/loop/SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`): **crecimiento 0 bytes y 0
-  lineas, 0 entradas escritas**, porque la guarda de idempotencia mira **el
-  sujeto** y no solo el numero.
+- **SEGUNDA CORRIDA, la que sella la idempotencia**, y su salida vive en
+  `docs/loop/SALIDA_V204_T1_REGISTROS_SEGUNDA.txt`.
+  El crecimiento es de **0** por las dos convenciones, **0 lineas** y **0 entradas
+  escritas**, porque la guarda de idempotencia mira **el sujeto** y no solo el
+  numero.
 - **LA SERIE, RECOMPUTADA CON `scripts/loop/serie_de_registros.py` Y NO CON UNA
   EXPRESION REGULAR MIA** (que es la `C.4` del acta 203): antes **58 entradas, 0
   colisiones, 0 huecos, siguiente libre `R.67`**; despues **60 entradas, 0
