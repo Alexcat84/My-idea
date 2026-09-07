@@ -1,0 +1,146 @@
+==============================================================================
+VUELTA 204, TAREA 3: DE DONDE SALE LA DISCREPANCIA DE COMPONENTES QUE EL
+PROPIO INSTRUMENTO DECLARA. LA NOMINA SELLADA SE CUENTA, NO SE REESCRIBE.
+==============================================================================
+
+A) LAS DOS SEDES AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl: disco 96361 bytes | LF 96029 bytes | sha256 LF 95dca64dbce48d52
+   docs/loop/RECOMPUTO_V169.jsonl: disco 15369 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+   EL `PD.2` SE PUBLICA Y NO SE RESUELVE: los dos tamanos de la sede sellada
+   de la 169 discrepan por el CRLF que `git checkout` deja, 15369 en disco y 15322
+   normalizado a LF. La convencion de bytes sigue siendo del fundador.
+
+B) EL PROTOCOLO DEL SELLO, Y LA PUERTA QUE NI SIQUIERA ESCRIBE
+   scripts/loop/vuelta169_tarea3_op_i_01.py: disco 13148 bytes | LF 13148 bytes | sha256 LF 3230ce65e3b9343b
+   CIFRA lineas con ESCRITURA DIRECTA (`.write(` o `open(...,'w')`): 0 | (ninguna)
+   CIFRA lineas que ESCRIBEN POR SUBPROCESO (`--salida` o `SALIDA_V169`): 4
+      lineas: 26, 52, 147, 157
+   MI PROPIA CAIDA, DECLARADA AQUI Y NO TAPADA: el bloque `H.3` de mi sello
+   de apertura publico *VEREDICTO DE LA COMPROBACION PREVIA: NO ESCRIBE*
+   sobre este instrumento, y ES FALSO EN LO QUE IMPORTA. Mi marca solo veia
+   la ESCRITURA DIRECTA, que en efecto es 0, y este instrumento escribe POR
+   SUBPROCESO. La cifra de 0 era cierta; la palabra que le puse encima, no.
+   EL TEXTO VIEJO NO SE BORRA: sigue entero en el sello de apertura.
+   REMEDIO: se redirige la salida con `V169_RECOMPUTO_SALIDA`, que el propio
+   instrumento documenta en su linea 52, a docs/loop/RECOMPUTO_V204_DIAGNOSTICO.jsonl.
+   exit del instrumento: 0
+   docs/loop/RECOMPUTO_V169.jsonl DESPUES de correr: disco 15369 bytes | LF 15322 bytes | sha256 LF e8a10f174df3c5fa
+   LA SEDE SELLADA DE LA 169 QUEDA IDENTICA, y no hizo falta restaurarla: SI
+   CIFRA filas de `git status --porcelain` sobre las DOS sedes: 0
+
+   EL BLOQUE `E` DEL INSTRUMENTO, REPRODUCIDO HOY Y NO COPIADO DEL ENCARGO:
+      E) EL INSTRUMENTO SE CORRE HOY, A SALIDA PROPIA, Y SE COTEJA
+         exit de scripts/plan/recomputo_3388.py: 0
+         CIFRA lineas de la corrida de HOY: 47
+         CIFRA ABIERTO   de HOY: 21
+         CIFRA CERRADO   de HOY: 26
+         la corrida de hoy REPRODUCE el fichero sellado en linea y estado: False
+         DISCREPANCIA DECLARADA, no resuelta copiando:
+            sellado: 332 lineas, {'ABIERTO': 54, 'CERRADO': 278}
+            hoy    : 47 lineas, {'ABIERTO': 21, 'CERRADO': 26}
+         paso 1: A crudas en el archivo (clase == 'A'): 551
+         paso 1: de esas, colapsan a auto-arista tras resolver (mismo nodo vivo en los dos lados): 398
+         paso 1: PARES DISTINTOS EN EL RETRATO (tras resolver y deduplicar): 149
+         paso 1: de esos, con mas de un veredicto crudo apuntando al mismo par resuelto: 4
+
+C) EL COTEJO CONJUNTO A CONJUNTO, CON EL RESOLUTOR DELANTE POR `P.1`
+   CIFRA componentes del fichero SELLADO: 332
+   CIFRA componentes de la corrida de HOY: 47
+   reparto por estado del SELLADO: {'ABIERTO': 54, 'CERRADO': 278}
+   reparto por estado de HOY:      {'ABIERTO': 21, 'CERRADO': 26}
+   CIFRA nodos del grafo vivo: 3853 | CIFRA alias en el resolutor: 761
+   CIFRA claves distintas del SELLADO tras resolver: 332
+   CIFRA claves distintas de HOY tras resolver: 47
+   CIFRA componentes del sellado QUE NO ESTAN HOY: 285
+   CIFRA componentes de hoy QUE NO ESTABAN EN EL SELLADO: 0
+   CIFRA componentes que COINCIDEN en las dos: 47
+
+D) LA CAUSA, MEDIDA EN POSITIVO Y NO ADIVINADA
+   D.1 EL UNIVERSO: cuantas componentes del sellado COLAPSAN hoy
+      CIFRA componentes del sellado cuyos miembros resuelven HOY a UN SOLO
+      nodo, o sea que la campana los FUNDIO: 263 de 332
+      CIFRA componentes del sellado con algun miembro que HOY no es nodo
+      vivo ni alias que lleve a uno: 0
+      CIFRA componentes del sellado que ya tenian UN SOLO miembro: 0
+
+   D.2 LA FECHA: cuando se sello cada cosa, leido de git y no tecleado
+      docs/plan/RECOMPUTO_3388_COMPONENTES.jsonl     ultimo commit que lo toca: 70878328 2026-08-19
+      docs/loop/RECOMPUTO_V169.jsonl                 ultimo commit que lo toca: a77b206f 2026-09-04
+      scripts/plan/recomputo_3388.py                 ultimo commit que lo toca: 12053ade 2026-09-04
+      dataset/metadata/master_graph.json             ultimo commit que lo toca: a34328b2 2026-09-02
+      scripts/loop/vuelta169_tarea3_op_i_01.py       ultimo commit que lo toca: c01def8d 2026-09-04
+      FECHA DE CORTE DEL SELLADO, leida de git: 2026-08-19
+
+   D.3 EL INSTRUMENTO: cuantas veces cambio DESDE ese corte
+      CIFRA commits que tocan scripts/plan/recomputo_3388.py desde 2026-08-19: 2
+         12053ade 2026-09-04 TAREA 3: la guarda en rojo se arregla DONDE VIVE, y la A deja de perderse al agrupar
+         a3914f4b 2026-08-19 VUELTA 48, TAREA 1 (cuatro de cinco puntos): LA CAIDA DE LA VUELTA 47 CORREGIDA, EL INSTRU
+      CIFRA commits que tocan scripts/loop/vuelta169_tarea3_op_i_01.py desde 2026-08-19: 2
+         c01def8d 2026-09-04 TAREAS 3, 4 y 5: OP-I-01 CLAUSULA 4 EJECUTADA CON SU ALCANCE, OP-L-01 CLAUSULA 3 RE MEDIDA
+         c0961104 2026-09-04 VUELTA 169: EL ESQUELETO DEL REPORTE, TALLADO. Y SE DECLARA POR QUE NO SE TALLO ANTES DE L
+
+   D.4 EL UNIVERSO OTRA VEZ, POR LA OTRA PUERTA: cuantas veces cambio el
+       grafo y la sede de veredictos desde ese mismo corte
+      CIFRA commits que tocan dataset/metadata/master_graph.json       desde 2026-08-19: 91
+      CIFRA commits que tocan docs/INTRA_DOMINIO_VEREDICTOS.jsonl      desde 2026-08-19: 15
+
+   D.5 LO QUE EL COLAPSO NO EXPLICA, CONTADO EN VEZ DE PASADO POR ALTO
+      CIFRA componentes del sellado que HOY NO ESTAN: 285
+      de esas, las que resuelven a UN SOLO nodo (colapso puro): 263
+      de esas, las que TODAVIA tienen dos o mas nodos distintos y aun asi
+      no aparecen hoy: 22
+      ESAS 22 SON LAS QUE EL COLAPSO NO EXPLICA SOLO, y no se tapan.
+      de esas 22: 0 estan CONTENIDAS en una componente de hoy, 0 SOLAPAN
+      con alguna sin estar contenidas, y 22 no tocan ninguna.
+      reparto por numero de nodos distintos tras resolver: {2: 21, 3: 1}
+
+E) LA ARITMETICA DEL COLAPSO, LEIDA DE LA SALIDA DEL RECOMPUTO DE HOY
+   exit de scripts/plan/recomputo_3388.py: 0
+      A crudas en el archivo (clase == 'A'): 551
+      de esas, colapsan a auto-arista tras resolver (mismo nodo vivo en los dos lados): 398
+      PARES DISTINTOS EN EL RETRATO (tras resolver y deduplicar): 149
+      de esos, con mas de un veredicto crudo apuntando al mismo par resuelto: 4
+      COMPONENTES DE TAMANO >= 2, la mas grande primero:
+
+F) EL VEREDICTO SOBRE LA CAUSA, COMPUESTO DE LAS CIFRAS DE ARRIBA
+   NO SE PROPONE NINGUNA REPARACION Y NO SE TOCA NINGUNA CIFRA PUBLICADA.
+
+   UNA CAIDA MIA, CAZADA ANTES DE PUBLICARSE Y DECLARADA AQUI DENTRO
+   (`EJECUTOR.md` 8, una correccion que tapa lo que corrige no se puede
+   auditar). MI PRIMERA REDACCION DE ESTE BLOQUE DECIA, TECLEADO Y NO
+   MEDIDO, *el instrumento y el motor NO cambiaron desde el corte del
+   sellado, asi que la causa NO es el instrumento*. MI PROPIO BLOQUE D.3 LO
+   DESMIENTE: el motor tiene commits despues del corte, y uno de ellos dice
+   en su asunto *la A deja de perderse al agrupar*, que es un cambio de
+   conducta y no de forma. LA FRASE VIEJA QUEDA ESCRITA AQUI Y NO SE BORRA.
+
+   LO QUE LAS CIFRAS SOSTIENEN, Y SOLO ESO:
+   . EL UNIVERSO CAMBIO, Y MUCHO: 106 commits sobre el grafo y la sede de
+     veredictos desde el corte 2026-08-19 (D.4), y **263 de las 332** componentes del
+     sellado resuelven HOY a UN SOLO nodo (D.1), que es exactamente lo que la
+     nota de la propia ficha describe: cada acto fundido convierte sus pares
+     A internos en auto-arista y deja de formar componente.
+   . EL INSTRUMENTO TAMBIEN CAMBIO, y NO se puede descartar como causa
+     PARCIAL: el motor cambio despues del corte (D.3). LO QUE SI SE PUEDE
+     DECIR CON CIFRA es que el conjunto de hoy es SUBCONJUNTO ESTRICTO del
+     sellado: 0 componentes de hoy que no estaban en el sellado. Un cambio
+     de algoritmo que agrupara distinto habria producido componentes NUEVAS,
+     y no hay ninguna.
+   . LA FECHA NO ES UNA CAUSA APARTE sino la etiqueta de la primera: lo que
+     cambia con el tiempo es el universo, no el reloj.
+   . EL REPARTO DE LA CAUSA, EN UNA LINEA: de las 285 que faltan, 263 son
+     colapso puro y 22 NO lo son, y esas 22 no las explica el colapso solo.
+
+   POR DONDE ME PODRIA EQUIVOCAR, dicho antes de saberlo:
+   . si alguien contase como cambio del instrumento un cambio en un modulo
+     que el motor IMPORTE, mi D.3 no lo veria: mide los dos ficheros por su
+     ruta y no su cadena de imports entera;
+   . mi D.1 llama COLAPSO a que los miembros resuelvan a un solo nodo, y esa
+     es UNA lectura del colapso, no la unica: una componente puede dejar de
+     serlo sin fundirse del todo, y esas caen en la cifra de 22 de la D.5;
+   . NO SE MIDIO el grafo del corte 2026-08-19 contra el de hoy nodo a nodo:
+     eso exige sacar de git una version vieja del grafo y correr el motor
+     sobre ella, que es una corrida nueva y no la pedia el encargo. SE DICE
+     EN VEZ DE CALLARLO, porque es la medicion que cerraria la pregunta.
+
+FIN
