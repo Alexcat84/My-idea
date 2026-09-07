@@ -1,0 +1,139 @@
+SELLO DE APERTURA DE LA VUELTA 196, escrito ANTES de la primera operacion.
+regimen: ESTA NO ES VUELTA DE BATERIA (AUDITOR.md 6.1, decision del fundador
+         del 5 sep 2026). La bateria corre CADA CINCO VUELTAS en una vuelta
+         propia QUE NO LLEVA NADA MAS; la 194 la corrio entera por sus diez
+         tramos y la proxima cae en la 199. La seccion 9 del reporte cierra
+         con HUECO DECLARADO Y MEDIDO, no con una bateria a medias.
+         DOS SUB-TAREAS Y LAS DOS BLOQUEANTES, por AUDITOR.md 6.2 y por la
+         cifra que el bloque E de abajo cuenta del instrumento.
+ESTE BLOQUE CORRE EL CICLO COMPLETO, tsc y pnpm test INCLUIDOS, y escribe el
+         los dos literales de la guarda D.1. Eso funciono en la 195 y no se
+         deshace.
+EL NOMBRE DEL INSTRUMENTO DE LA RACHA NO SE TECLEA EN LA PROSA: sale de la
+         constante que se ejecuta, y se comprueba que existe y no esta vacio
+         ANTES de correrlo. Es el remedio de la caida C.E1 del acta 196.
+
+=== A. HEAD DE APERTURA (git rev-parse HEAD, leido y no tecleado) ===
+85c3d52ba6b650701203cf5055c22b201e55ca95
+85c3d52ba6b650701203cf5055c22b201e55ca95	2026-09-06 20:48:57 -0400	ACTA DEL AUDITOR, VUELTA 196: LA 195 REPRODUJO ENTERA EN CATORCE CIFRAS, PERO PUBLICA UNA RUTA QUE PROMETE PRUEBA SOBRE UN FICHERO QUE NUNCA EXISTIO.
+
+=== B. RAMA Y REMOTO (leidos de git, no tecleados) ===
+rama: pasada-unica
+remoto de seguimiento: origin/pasada-unica
+adelante/atras contra el remoto (HEAD...upstream): 0	0
+
+=== C. EL ESTADO DEL ARBOL AL ENTRAR, EN LA REDACCION QUE LA GUARDA LEE ===
+LOS DOS LITERALES DE ABAJO SON LOS QUE LA GUARDA D.1 DE cerrar_reporte.py
+busca por expresion regular. Se escriben AQUI, en el bloque de apertura, para
+que la apertura sellada NO haya que tocarla al cierre.
+CIFRA lineas de status: 1
+   ?? scripts/loop/vuelta196_apertura.py
+CIFRA filas de `git diff --numstat -- dataset/` AL ENTRAR: 0
+   (ninguna: dataset/ entra limpio)
+
+=== C.1 LA CADENA DE LA VUELTA 195 Y EL ACTA 196, LOCALIZADAS EN GIT ===
+acta 196                         1 acierto(s): 85c3d52b
+clases ciegas del auditor 196    0 acierto(s): (ninguno)
+cierre de la 195                 1 acierto(s): 3654d3bb
+
+=== D. LA SEDE DE LOS VEREDICTOS, QUE NO SE PUEDE MOVER EN ESTA VUELTA ===
+docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   disco 4054129 bytes | sha256 disco 0a77b5a35a962621
+   LF    4054129 bytes | sha256 LF    0a77b5a35a962621
+   LAS DOS CONVENCIONES SE PUBLICAN. La LF es la que el encargo clava,
+   y el encargo la clava en 0a77b5a35a962621. LO QUE MANDA ES LA MEDIDA
+   DE ARRIBA: si no calzan, se declara la discrepancia y no se copia.
+
+=== E. LA RACHA DE CIERRES, CONTADA DEL INSTRUMENTO Y NO HEREDADA ===
+EL NOMBRE SALE DE LA CONSTANTE QUE SE EJECUTA, NO DE LA PROSA (remedio de la
+   caida C.E1 del acta 196, que era un nombre tecleado que no existia).
+instrumento: scripts/loop/vuelta192_racha_de_cierres.py
+   existe y no esta vacio: SI, 5678 bytes en disco | 5678 LF | sha256 LF 5461d55226877ac3
+comando: python scripts/loop/vuelta192_racha_de_cierres.py
+NOTA MEDIDA Y DECLARADA: este instrumento PISA su propia salida sellada
+   docs/loop/SALIDA_V192_RACHA_DE_CIERRES.txt, porque su sujeto es el
+   inventario de cierres y ese inventario CRECIO desde que la 192 lo
+   sello. Aqui se corre, se lee la cifra, y la sellada se RESTAURA con
+   git checkout -- y se REMIDE antes de darla por restaurada.
+CIFRA racha de cierres, contada del inventario ENTERO: 1
+las vueltas de la racha: 195
+EL ENCARGO DE LA 196 DICE QUE LA CUENTE YO DEL INSTRUMENTO Y QUE
+   PUBLIQUE LO QUE SALGA. Manda el instrumento: lo de arriba es lo
+   corrido HOY.
+EL TOPE, LEIDO DE AUDITOR.md 6.2 CONTRA ESTA CIFRA: el regimen
+   temporal pide DOS vueltas seguidas cerrando su propio reporte para
+   devolver el tope de cinco. CON RACHA 1 EL TOPE ES DE DOS
+   SUB-TAREAS, y esta vuelta trae DOS.
+nuevo corte, medido antes de restaurar:
+   2648 bytes LF | sha256 LF d7a212efdfc6c114
+SELLADA ANTES:     2399 bytes LF | sha256 LF 4469a54a3417f36b
+SELLADA RESTAURADA:2399 bytes LF | sha256 LF 4469a54a3417f36b
+RESTAURADA IDENTICA A LA SELLADA DE ENTRADA: SI
+
+=== E.1 EL INVENTARIO DE CIERRES SELLADOS, CONTADO DE DISCO ===
+SE MIDE AQUI porque la racha se cuenta hacia atras desde la vuelta MAS ALTA y
+un hueco en medio la corta. Lo que hay en disco al entrar, sin tocarlo:
+CIFRA ficheros SALIDA_V*_CERRAR_REPORTE.txt en docs/loop/: 13
+las vueltas con sellada de cierre: 179, 180, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 195
+CIFRA vueltas del rango 179 a 195 SIN sellada: 4
+   cuales: 181, 182, 183, 194
+CIFRA sellada de cierre de la vuelta 196 al entrar: 0
+   ESO ES LO QUE ESTA VUELTA TIENE QUE SELLAR, y es la linea del encargo.
+
+=== F. LA NOMINA Y EL CENSO AL ENTRAR, MEDIDOS Y NO TOCADOS ===
+AQUI NO SE TOCA NADA: se MIDE. La nomina NO se poda en esta vuelta, y
+tampoco crece: la TAREA que la hizo crecer fue de la 195 y aqui no hay
+ninguna tarea cuyo sujeto sea la nomina.
+CIFRA entradas de la nomina, leidas de VMV.VIEJAS: 135
+CIFRA casos declarados: 2
+CIFRA arneses que el censo reconoce en scripts/loop/: 195
+LA VARA DEL CENSO, que es la que decide (vuelta 178, TAREA 1.b): 148
+CIFRA ultima vuelta representada en la nomina (INFORMATIVA, ya no decide): 195
+CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de
+   la nomina: 0
+CIFRA entradas de la nomina que el censo NO VE: 0
+CIFRA entradas SIN SUJETO CONGELADO, leidas de
+   guarda_del_sujeto_congelado(): 0
+
+=== G. EL NUMERO DE LA SERIE, COMPUTADO Y NO TECLEADO ===
+comando: python scripts/loop/serie_de_registros.py
+SIGUIENTE LIBRE de la serie: R.58
+CIFRA entradas en total: 49
+CIFRA colisiones: 0
+EL ENCARGO NO TECLEA NINGUN NUMERO DE SERIE Y DICE QUE LO DIGA EL
+   INSTRUMENTO. Manda el instrumento: lo de arriba es lo que salio HOY.
+
+=== H. EL TRAMO Y EL DOBLE DE LA TAREA 2, CERRADOS POR EL AUDITOR ===
+SE MIDEN, NO SE ELIGEN: el auditor los cerro antes de que yo mirara nada, y
+aqui solo se comprueba que sus dos ficheros existen y no estan vacios (la
+regla LA RUTA QUE PROMETE PRUEBA ES CIFRA, 5 sep 2026).
+   docs/loop/_auditor_v196_doble_para_la_197.txt
+      disco 1061 bytes | LF 1061 bytes | sha256 LF cc59025fdd9d5ff1
+      existe y no esta vacio: SI
+   docs/loop/_auditor_v196_ciega_blind.txt
+      disco 80705 bytes | LF 80705 bytes | sha256 LF d0c2daf9bbc1822b
+      existe y no esta vacio: SI
+
+=== H.1 LA VARA DE LA CIEGA, LOCALIZADA EN EL BANCO Y NO PARAFRASEADA ===
+El encargo manda citar 9.6.1 por numero con sus precisiones 9.6.2 y 9.6.3.
+Aqui solo se comprueba QUE EXISTEN en el banco, con su linea, para que la
+TAREA 2 pueda citarlas sin teclear una referencia que no este.
+   9.6.1: 1 cabecera(s) en el banco, linea(s) 1612
+   9.6.2: 1 cabecera(s) en el banco, linea(s) 1737
+   9.6.3: 1 cabecera(s) en el banco, linea(s) 1796
+
+=== I. EL HUECO DE LA SECCION 9, MEDIDO AL ENTRAR ===
+NO ES VUELTA DE BATERIA y por eso la seccion 9 cierra con HUECO DECLARADO Y
+MEDIDO por el carril de la TAREA 1.b de la vuelta 173. Lo que se mide aqui es
+QUE SELLADAS DE BATERIA HAY EN DISCO AL ENTRAR, para que nadie pueda declarar
+la bateria de esta vuelta corrida sobre la corrida de otra.
+CIFRA ficheros SALIDA_V*_BATERIA_TRAMO_N.txt en docs/loop/: 38
+   V176: 9 fichero(s)
+   V183: 9 fichero(s)
+   V189: 10 fichero(s)
+   V194: 10 fichero(s)
+CIFRA ficheros SALIDA_V196_BATERIA_TRAMO_N.txt al entrar: 0
+LA CADENCIA, LEIDA DE AUDITOR.md 6.1 Y NO DE MEMORIA: la 194 la corrio
+entera y la proxima cae en la 199. AQUI NO SE CORRE LA BATERIA ENTERA.
+
+FIN DEL SELLO DE APERTURA
