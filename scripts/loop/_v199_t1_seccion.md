@@ -67,8 +67,8 @@ casos propios miden que un turno cerrado **CON su constancia** (`cerrados[199]` 
 su `ruta_clases`) **SI puede leer**, y que un turno **sin sello en ningun sitio**
 tambien.
 
-**LA SEDE DE VERDAD NO SE MOVIO:** `789 bytes, sha256 52a780c072700280` al entrar y
-al salir del arnes.
+**LA SEDE DE VERDAD NO SE MOVIO**, y va con su ruta delante y con las dos convenciones, porque la de bytes no esta fijada:
+`docs/loop/_TURNO_DEL_AUDITOR.json` mide 789 bytes en disco y 789 normalizado a LF, con `sha256 disco 52a780c072700280 y sha256 LF 52a780c072700280`, al entrar y al salir del arnes.
 
 **LOS CUATRO ARNESES HEREDADOS QUE MIRAN ESTE MODULO SE CORRIERON DESPUES DEL
 CAMBIO**, y sus veredictos se leen de sus ficheros: `vuelta192_tarea4` VERDE,

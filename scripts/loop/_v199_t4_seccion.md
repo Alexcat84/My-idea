@@ -43,8 +43,7 @@ estaria, esta, y se puede abrir y contar. **Adjudicar el `estado` es del auditor
 | de esos, **SIN** lectura | **0** |
 
 **La resta cierra: 18 mas 0 son 18, y los reales son 18.** El instrumento imprime
-**VERDE**. Su registro propio mide **51368 bytes**, `sha256` LF
-`d93c59a86372cf50`. **Los 18 pares reales que el encargo nombra estan leidos, y
+**VERDE**. Su registro propio `docs/plan/OP_L_03_LECTURAS.jsonl` mide **51368 bytes en disco y 51368 normalizado a LF**, con `sha256 disco d93c59a86372cf50 y sha256 LF d93c59a86372cf50`. **Los 18 pares reales que el encargo nombra estan leidos, y
 esta vuelta lo comprueba en vez de citarlo.**
 
 #### 4.b `OP-L-01`, LAS ONCE LECTURAS DIRIGIDAS
@@ -53,8 +52,8 @@ esta vuelta lo comprueba en vez de citarlo.**
 11 estan**, de `LD-01` a `LD-11`. Su clausula de `verificacion` *"ninguna de las
 once aparece en `INTRA_DOMINIO_VEREDICTOS.jsonl`"* **se midio y da 0**: ninguna se
 colo en el archivo. Los otros dos documentos de su evidencia responden a su ancla:
-`docs/INTRA_DOMINIO_INFORME.md` (943970 bytes, 4 aciertos de cabecera con el 52) y
-`docs/BANCO_DE_TEXTOS.md` (182228 bytes, 1 acierto de `TABLA VIVA DE LOS PUROS`).
+`docs/INTRA_DOMINIO_INFORME.md` (943970 bytes en disco y 943970 normalizado a LF, 4 aciertos de cabecera con el 52) y
+`docs/BANCO_DE_TEXTOS.md` (182228 bytes en disco y 182228 normalizado a LF, 1 acierto de `TABLA VIVA DE LOS PUROS`).
 
 **Y UN CONTRASTE QUE SE PUBLICA PARA QUE EL 11 NO SE LEA COMO EL TOTAL:** ese
 fichero trae **68 identificadores `LD` distintos, del `LD-01` al `LD-154`**. **Las
@@ -86,8 +85,7 @@ lo trae encargado. **Son suyas, del corte 2026-08-11, y asi se citan.**
 #### 4.d `OP-I-01`, Y AQUI SALE UNA DISCREPANCIA QUE NO ESTABA BUSCADA
 
 **LA FICHA PROMETE 323 ENTRADAS. CONTADAS HOY: 672.** No calza, **y se declara en
-vez de ajustarse**. `docs/plan/INVENTARIO.jsonl` mide **584554 bytes**, `sha256`
-LF `69666b73339f2afe`, **672 filas no vacias**.
+vez de ajustarse**. `docs/plan/INVENTARIO.jsonl` mide **584554 bytes en disco y 584554 normalizado a LF**, con `sha256 disco 69666b73339f2afe y sha256 LF 69666b73339f2afe`, y **672 filas no vacias**.
 
 | tipo | la `nota` de la ficha (corte 2026-08-11) | contado del fichero hoy (2026-09-07) |
 |---|---:|---:|
@@ -106,7 +104,7 @@ sin abrir el fichero se lleva `323`.
 
 **LA CLAUSULA QUE SI SE PUEDE MEDIR SALE ENTERA EN VERDE:** *"toda entrada lleva su
 `fecha_corte`"*, **672 de 672, 0 sin corte**. Y su vista humana,
-`docs/plan/10_INVENTARIO.md`, existe con **34258 bytes y 414 lineas**, con el
+`docs/plan/10_INVENTARIO.md`, existe con **34258 bytes en disco y 33845 normalizado a LF**, que aqui NO coinciden y por eso se publican las dos, y **414 lineas**, con el
 literal `PROVISIONAL` **2** veces y `HUECO` **4**, que son las otras dos clausulas
 de su `verificacion` con rastro.
 

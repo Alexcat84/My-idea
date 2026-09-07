@@ -16,9 +16,12 @@ propio fichero declaraba mal y que va abajo.
 **EL CASO ROJO ESTA DENTRO DEL ARNES Y ES SUYO:** mide la sede en bytes y `sha256`
 al entrar y al salir, y **suma un fallo si se movio**. Ninguna de las dos cifras es
 una constante literal: las dos salen de `sede_medida()`. Corrida de hoy, leida de
-`docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`:
-**`789 bytes, sha256 52a780c072700280`** al entrar y **lo mismo** al salir,
-**`CIFRA fallos: 0`, VEREDICTO VERDE**. Los catorce casos que ese arnes ya probaba
+`docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`, que cierra con
+**`CIFRA fallos: 0`, VEREDICTO VERDE**.
+
+**LA SEDE, CON SU RUTA EN LA MISMA LINEA QUE SU CIFRA:** `docs/loop/_TURNO_DEL_AUDITOR.json` mide 789 bytes en disco y 789 normalizado a LF, con `sha256 disco 52a780c072700280 y sha256 LF 52a780c072700280`, al entrar y al salir.
+
+Los catorce casos que ese arnes ya probaba
 siguen enteros: ningun esperado se aflojo y ningun escenario se quito.
 
 **LA PRUEBA DE MUTACION DEL CASO ROJO, QUE `EJECUTOR.md` 1 EXIGE**, vive en
@@ -32,7 +35,7 @@ pasa, que es exactamente lo que esta tarea repara. **No entra en la nomina**
 
 | paso | que se le quita al arnes | que se mide |
 |---|---|---|
-| **M1** | solo la REDIRECCION | **la GUARDA muerde**: exitcode 1 y la sede queda intacta, `sha256 52a780c072700280` |
+| **M1** | solo la REDIRECCION | **la GUARDA muerde**: exitcode 1 y la sede queda intacta, `sha256 disco 52a780c072700280 y sha256 LF 52a780c072700280` |
 | **M2** | la redireccion **Y** la guarda (el arnes tal como estaba antes de esta vuelta) | **la sede QUEDA PISADA**: `52a780c072700280` al entrar contra `31ddfaad65791b63` despues |
 | **restauracion** | (nada) | la sede vuelve **byte a byte** y se **REMIDE**: `52a780c072700280` |
 

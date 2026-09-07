@@ -17,7 +17,7 @@ numero que va DELANTE (*"los 240 pares"* es un conteo).
 
 | cifra | valor | de donde sale |
 |---|---:|---|
-| banco medido hoy | 182228 bytes, `sha256` LF `68557cd00a3124f4`, 3119 lineas | `SALIDA_V199_T3_EJEMPLARES_DEL_BANCO.txt` |
+| `docs/BANCO_DE_TEXTOS.md` medido hoy | 182228 bytes en disco y 182228 normalizado a LF, `sha256 disco 68557cd00a3124f4 y sha256 LF 68557cd00a3124f4`, 3119 lineas | la sellada de esta tarea |
 | fecha de corte (banco `9.21`) | 2026-09-07 | leida de `git log -1 --date=short` |
 | puestos cosechados del banco | **109** | mismo fichero |
 | de esos, que NO existen en el archivo | **0** | mismo fichero |
