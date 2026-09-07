@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 196, TAREA 1: CASO POSITIVO POR MUTACION DEL REGISTRADOR
+==============================================================================
+
+A) `claves_en_negrita_sola()` SOBRE UN PARRAFO FABRICADO CON LAS DOS FORMAS
+   el lector heredado ve SOLO la forma de lead                    VERDE
+   el lector nuevo ve SOLO la forma de negrita sola               VERDE
+   LA MUTACION: si el lector nuevo casara tambien con el lead, la union
+   contaria dos veces la `4.1`; y si el heredado bastara, la `4.2` y la
+   `4.3` no existirian para este registrador.
+
+B) `trozo_de_la_clave_inline()` NO LE PRESTA A UNA CLAVE EL VEREDICTO DE OTRA
+   el trozo de la `4.2` NO trae el `EN CONTRA` de la `4.3`        VERDE
+   el trozo de la `4.3` SI trae su propio `EN CONTRA`             VERDE
+   y por eso sus estados salen distintos                          VERDE
+   LA MUTACION: con el parrafo ENTERO para las dos, la `4.2` saldria
+   `EN CONTRA`, que es un veredicto prestado. Medido aqui:
+   el parrafo entero le daria a la `4.2` el estado de la otra     VERDE
+
+C) `estado_con_su_procedencia()` ENSANCHA LA VENTANA SIN AFLOJAR LA GUARDA
+   con el titulo solo, el estado es SIN DECIR                     VERDE
+   con el parrafo, sale A FAVOR y dice que vino del PARRAFO       VERDE
+   y un texto mudo en LOS DOS sigue saliendo SIN DECIR            VERDE
+   el titulo manda cuando habla: EN CONTRA gana al parrafo        VERDE
+   la marca nueva es literal y no parafrasis                      VERDE
+   y el heredado NO la sabia leer, que es lo que la justifica     VERDE
+
+D) `caidas_en_titular_con_letra()` Y `parte_de_la_caida()`
+   el lector heredado no ve NINGUNA de las tres                   VERDE
+   el lector nuevo ve las TRES, con su letra                      VERDE
+   y la parte sale del titulo, con la tercera SIN DECIR           VERDE
+   LA MUTACION: si `parte_de_la_caida` devolviera AUDITOR por defecto, la
+   `C.E1` del ejecutor se registraria como propia del auditor y la caida
+   que ACUMULA desapareceria del lado que le toca. La tercera prueba que
+   el SIN DECIR existe y no se rellena solo.
+   la especie tambien sale del titulo y no se supone              VERDE
+
+E) `cotejo_limpio_del_cuerpo()` Y LA EXIGENCIA QUE SE ENDURECE
+   la fila de puestos NO trae el cotejo limpio                    VERDE
+   y el acta SI lo trae, en la cabecera de la otra tabla          VERDE
+   y calza con cotejados menos quemados                           VERDE
+   LA MUTACION, Y ES LA QUE PRUEBA QUE LA EXIGENCIA SE ENDURECE: con un
+   cotejo limpio FALSO, la guarda de la 195 lo dejaria pasar porque solo
+   miraba que el literal estuviera; esta lo caza porque compara.
+   un cotejo limpio de 47 con 60 y 2 NO calza                     VERDE
+   y sin quemados la exigencia ni siquiera corre                  VERDE
+
+F) `familia_por_la_primera_clave()` NO DEJA QUE UNA CITA ROBE LA FAMILIA
+   la que adjudica un `D.n` y CITA un `P.n` es DISCUTIBLE         VERDE
+   LA MUTACION: el lector heredado, corrido sobre EL MISMO texto, dice otra
+   cosa, y por eso el lector nuevo no es un adorno.
+   y la heredada la llamaria PREGUNTA                             VERDE
+   la que adjudica un `P.n` de verdad sigue siendo PREGUNTA       VERDE
+   y la que no nombra ninguna clave sigue siendo OTRA             VERDE
+
+G) `entrada_publica_las_dos_partes()` SOBRE UNA ENTRADA FABRICADA
+   la entrada con LOS DOS lados pasa                              VERDE
+   la entrada que se calla el lado del ejecutor CAE               VERDE
+
+==============================================================================
+CIFRA casos: 27 | pasan: 27 | fallan: 0
+VEREDICTO: VERDE
+==============================================================================
