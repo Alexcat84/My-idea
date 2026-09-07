@@ -1,0 +1,77 @@
+MEDICIONES DEL AUDITOR, VUELTA 203. Todas corridas HOY.
+  docs/INTRA_DOMINIO_VEREDICTOS.jsonl              4054129 disco |   4054129 LF | sha256 0a77b5a35a962621
+  docs/plan/OPERACIONES.jsonl                       513043 disco |    513043 LF | sha256 829c583eb779cab6
+  docs/PENDIENTES.md                               1131953 disco |   1131953 LF | sha256 725b85e12050a0ae
+  docs/loop/REPORTE.md                               66628 disco |     66628 LF | sha256 677ed8a418178ac6
+  docs/loop/SALIDA_V203_TALLADOR_CABECERA.txt         5962 disco |      5942 LF | sha256 3ed4cc35f7b38a52
+
+MARCADOR RECONTADO POR MI: filas 3388 | A 551 B 72 C 5 D 2760 | suma 3388
+  puestos distintos 3388 | maximo 3388 | huecos 0 | no JSON 0
+
+OPERACIONES.jsonl: 71 fichas
+  no JSON: 0 | estados: {'LISTA': 42, 'HECHA': 29}
+  numstat OPERACIONES contra 6de97511: 1	1	docs/plan/OPERACIONES.jsonl
+  numstat OPERACIONES contra 668f8341: 1	1	docs/plan/OPERACIONES.jsonl
+  LINEAS DISTINTAS contra 6de97511: 1 -> [41]
+     linea 41 (None): claves distintas ['verificacion'] | estado 'LISTA' -> 'LISTA' | verificacion 6 -> 7 elementos
+  FICHAS QUE MUEVEN `estado`: 0 de 71
+
+NUMSTAT de dataset/, web/, engine/ y docs/plan/ DESPUES de correr yo el ciclo: 0 filas
+
+--- SERIE R.n, RECONTADA POR MI ---
+  entradas R.n distintas: 66 | maximo R.66
+  siguiente libre: R.67
+  R.63 en lineas [15766] | R.64 en [15992] | R.65 en [16210] | R.66 en [16317]
+  huecos en la serie: 0 -> []
+
+--- NOMINA DE LA BATERIA, LEIDA DEL AST ---
+  CASOS_DECLARADOS: 2 entradas
+
+--- GUIONES LARGOS Y MEDIOS EN LO QUE LA VUELTA ESCRIBIO ---
+  docs/loop/REPORTE.md                   largos 0 | medios 0
+  docs/PENDIENTES.md                     largos 54 | medios 0
+  docs/plan/OPERACIONES.jsonl            largos 0 | medios 0
+
+--- LOS 54 GUIONES LARGOS DE PENDIENTES.md: SON VIEJOS O LOS ESCRIBIO LA 203 ---
+  guiones largos en el PENDIENTES de 6de97511 (antes de la vuelta): 54
+  guiones largos en el PENDIENTES de HOY                          : 54
+  lineas: antes 15953 | hoy 16428 | anadidas al final 476
+  guiones largos EN LO ANADIDO: 0
+  guiones largos en el tramo R.63 mas R.64 (lineas 15766 a 16209): 0
+
+--- INVENTARIO.jsonl, RECONTADO POR MI (TAREA 3) ---
+  bytes disco 584554 | bytes LF 584554
+  entradas 672 | no JSON 0
+  por tipo: [('acto', 556), ('familia_de_ids', 54), ('figura', 20), ('defecto', 19), ('racimo', 13), ('dominio', 10)] | suma 672
+  con fecha_corte 672 de 672 | sin ella 0 | cortes distintos 4
+  apariciones del literal PROVISIONAL: 3
+     variante 'incompleta' -> 0 apariciones
+     variante 'INCOMPLETA' -> 3 apariciones
+     variante 'parcial'    -> 1 apariciones
+     variante 'PARCIAL'    -> 0 apariciones
+     variante 'sin cerrar' -> 0 apariciones
+     variante 'pendiente'  -> 531 apariciones
+     variante 'falta'      -> 14 apariciones
+  filas con `cobertura` vacia: 0
+  filas con `nota` Y `cobertura` las dos vacias: 0
+
+--- OP-I-01 EN LA FICHA, LEIDA POR MI ---
+
+  RECOMPUTO_V169.jsonl: disco 15369 | LF 15322 | sha256 LF e8a10f174df3c5fa
+
+--- PROVISIONAL, POR CAMPO (la clausula 2 de OP-I-01) ---
+  campo estado     -> 1 filas con PROVISIONAL
+  campo cobertura  -> 0 filas con PROVISIONAL
+  campo nota       -> 1 filas con PROVISIONAL
+  campo forma      -> 1 filas con PROVISIONAL
+     la supervision de la IA            tipo racimo         estado 'en mesa, particion PROVISIONAL'
+     la serie de Coleman                tipo racimo         estado 'MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas'
+
+--- LAS DOS FICHAS, POR `id_op` ---
+  OP-L-01  linea 41  estado LISTA    tipo MESA     fase 09_LECTURAS_DIRIGIDAS verificacion 7 | evidencia 4
+  OP-L-02  linea 42  estado LISTA    tipo MESA     fase 09_LECTURAS_DIRIGIDAS verificacion 4 | evidencia 1
+  OP-L-03  linea 43  estado LISTA    tipo MESA     fase 09_LECTURAS_DIRIGIDAS verificacion 4 | evidencia 4
+  OP-I-01  linea 44  estado LISTA    tipo MESA     fase 10_INVENTARIO    verificacion 4 | evidencia 4
+
+  EL ELEMENTO 7 DE LA `verificacion` DE OP-L-01 (11156 caracteres), que la TAREA 2 anade:
+  CORRECCION DECLARADA (2026-09-07, vuelta 203, TAREA 2 del encargo), POR EL CARRIL DEL BANCO 9.10, POR ADICION, CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista verificacion, la via que esta ficha ya uso en las vueltas 166 y 169 y que el acta 71, seccion 6, adjudicacion 3, adjudico CON LAS PALABRAS NO ES PARADA). ADJUDICADA POR EL ACTA 202 EN SU 4.4: el ejecutor de la 202 midio la discrepancia y pregunto en su P.2 en vez de escribirla por su cuenta, y ahora esta adjudicada. LO QUE SE CORRIGE NO ES UNA CLAUSULA: ES LA CIFRA DE LA EXCEPCION que el elemento 4 de esta misma lista dejo congelada el 2026-09-04. LO PRIMERO Y ANTES QUE NADA, PORQUE SIN ESTA LINEA LA CORRECCION SE LEERIA AL REVES: EN COMPARACION LITERAL SIGUEN APARECIENDO 0, o sea que LA CLAUSULA 1 NO SE CAE. Lo que la clausula pregunta es si alguna de las lecturas

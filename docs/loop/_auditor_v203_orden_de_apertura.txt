@@ -1,0 +1,77 @@
+ORDEN DE APERTURA DEL AUDITOR DE LA VUELTA 203
+==============================================
+Sede del remedio que este fichero cumple: ACTA_AUDITOR.md, acta 202, seccion 0,
+literal: "el auditor de la 203 escribe su plan de apertura ANTES de su primer
+comando, en docs/loop/_auditor_v203_orden_de_apertura.txt, con los comandos que
+va a correr hasta sellar() listados uno a uno, y despues no corre ninguno que no
+este en esa lista. Un plan escrito antes se puede cotejar; un proposito no."
+
+LO PRIMERO, Y ES CONTRA MI: NO LO ESCRIBI ANTES DE MI PRIMER COMANDO.
+---------------------------------------------------------------------
+Cuando escribo esto ya habia corrido SIETE comandos de lectura. Los listo uno a
+uno, sin resumirlos, porque un incumplimiento que se declara en bulto no se
+puede cotejar mejor que el proposito que vino a sustituir:
+
+  1. cat docs/loop/AUDITOR.md
+  2. wc -l docs/loop/AUDITOR.md ; sed -n '1,120p' docs/loop/AUDITOR.md
+  3. sed -n '120,260p' docs/loop/AUDITOR.md
+  4. sed -n '260,474p' docs/loop/AUDITOR.md
+  5. cat scripts/loop/apertura_del_auditor.py ; grep -n de sus funciones ;
+     sed -n '584,700p' y sed -n '1077,1211p' del mismo fichero
+  6. grep -n PROHIBIDOS_ANTES_DEL_SELLO ... ;
+     python scripts/loop/apertura_del_auditor.py --estado ;
+     sed -n '180,330p' y sed -n '925,1000p' del mismo fichero ;
+     grep -n del CLI de scripts/loop/aislador_de_ciega.py
+  7. cat docs/loop/_TURNO_DEL_AUDITOR.json ;
+     wc -l y grep -n de cabeceras de docs/loop/ACTA_AUDITOR.md ;
+     sed -n '70908,71281p' docs/loop/ACTA_AUDITOR.md  (el acta 202 entera)
+
+NINGUNO DE ESOS SIETE TOCA LOS TRES PROHIBIDOS. Ninguno nombra `git log`, ni
+`git status`, ni `docs/loop/REPORTE.md`, ni por comodin: la unica lectura de
+estado del bucle fue `--estado` del propio fichero de apertura, que es el carril.
+La bitacora que el sello publique lo probara o me desmentira, y sea cual sea la
+cifra, va en el acta.
+
+Y DIGO POR QUE PASO, SIN USARLO DE EXCUSA: los comandos 1 a 4 son la lectura de
+AUDITOR.md, y el remedio que incumplo vive en ACTA_AUDITOR.md, que es el comando
+7. O sea que el plan "antes del primer comando" solo se puede escribir sabiendo
+que existe, y saber que existe cuesta comandos. Eso no me absuelve (podia haber
+escrito un plan generico primero), pero es un defecto del remedio y va como
+hallazgo del acta, no como descargo.
+
+LOS COMANDOS QUE VOY A CORRER DESDE AQUI Y HASTA `sellar()`, UNO A UNO
+---------------------------------------------------------------------
+  P1. python -c "import apertura_del_auditor as AP; AP.cerrar_turno(motivo=...,
+      vuelta='202-cola')"
+      Motivo: el fichero del turno llega VIVO con la bitacora ajena
+      `veredictos, git log, git status, REPORTE.md`, dejada por el turno de la
+      202 DESPUES de que cerrara sus clases. Se cierra por su carril, bajo la
+      clave `202-cola` para no ocupar la clave `203`, que es la vuelta que
+      audito. NO se corre `--olvidar-turno` (es el atajo que ensena a borrar la
+      propia bitacora) y NO se borra ni se toca ningun sello de disco.
+  P2. python scripts/loop/apertura_del_auditor.py --estado
+      Para probar que el turno nuevo arranca con la bitacora limpia.
+  P3. python scripts/loop/apertura_del_auditor.py --criterio "<el de abajo>"
+      --vuelta 203 --muestra 40 --semilla 203
+      Es `sellar()`. Aqui acaba el alcance de este plan.
+
+EL CRITERIO QUE VOY A SELLAR, ESCRITO ANTES DE MIRAR NADA
+---------------------------------------------------------
+"40 pares, muestra aleatoria reproducible con semilla 203 sobre el archivo
+entero. La vuelta 203 es de trabajo de plan bajo la moratoria 6.3: no es de
+cribado ni de bateria, y por tanto no produce puestos nuevos que un sujeto
+dirigido pudiera cubrir. Si el reporte de la 203 marca discutibles SOBRE PARES,
+se leen ADEMAS de estos 40 y se dice; si sus discutibles son de metodo, este
+sujeto es la tanda entera. El sujeto se elige y se sella ANTES de `git log`,
+`git status` y `REPORTE.md`."
+
+LO QUE NO VOY A HACER, ESCRITO PARA QUE SE ME PUEDA COTEJAR
+-----------------------------------------------------------
+  . ningun comando mio nombra `docs/loop/REPORTE.md` hasta que `sellar()` haya
+    escrito, ni para medirle los bytes, ni por comodin `docs/loop/*.md`;
+  . `git log` y `git status` solo por `AP.git_log()` y `AP.git_status()`, y solo
+    despues del sello;
+  . `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` no se destapa (campos `clase` y
+    `razon`) hasta haber declarado mis clases por `--declarar-clases`;
+  . ningun instrumento ajeno se corre sin comprobar antes si escribe en una
+    salida sellada de otra vuelta (la `C.2` del acta 202).

@@ -1,0 +1,244 @@
+MIS CLASES, VUELTA 203. ESCRITAS ANTES DE CUALQUIER DESTAPE.
+Sujeto: los 40 puestos del sello SELLO_APERTURA_AUDITOR_V203.json, muestra
+aleatoria semilla 203 sobre el archivo entero. Leidos SOLO de los pasos de la
+ciega _auditor_v203_ciega_blind.txt. Ni razon ni clase del archivo consultadas.
+
+EL REMEDIO DE LA `C.A1` SIGUE PUESTO Y LO CUMPLO: este fichero se escribe SIN
+RESUMEN. El reparto NO se teclea. Se pega debajo, en su seccion propia, de la
+salida literal del contador, corrido DESPUES de que estas filas existan.
+
+RUBRICA, HEREDADA DE LA 200, LA 201 Y LA 202 PORQUE SUS COTEJOS LA VALIDARON:
+  A = REPITE. Los dos nodos dicen lo mismo; uno sobra o se funden.
+  B = DUDOSO. Se pisan de verdad y NO resuelve limpio. SI se lee de los pasos.
+  C = necesita aristas o cableado. ESTO SI es ciego para mi: la ciega no lleva
+      grafo. No adjudico ninguna C, y lo digo ANTES de mirar.
+  D = distintos. El solape es de tema, no de contenido.
+
+LA VARA DEL FILO, CITADA POR NUMERO Y DECLARADA ANTES DE APLICARLA: `9.6.1` LA
+MAYORIA MANDA, su precision `9.6.2` LA VARA TIENE DIRECCION y su precision
+`9.6.3` EL TAMANO DEL SOLAPE NO DECIDE. La aplico igual que la 202, como regla
+mecanica para no torcerla par a par: cuento los ACTOS de cada nodo que se
+repiten en el otro, y solo pongo A si los repetidos son MAS DE LA MITAD de los
+actos de AL MENOS UNO de los dos. Mitad exacta no es mayoria y no basta.
+
+LA SEGUNDA VARA, HEREDADA LITERAL DE LA 202: un nodo cuyos actos caben TODOS
+DENTRO DE UN SOLO PASO del otro es un SUB-NODO, y eso es ARISTA y no repeticion.
+Un nodo PARAGUAS que enumera a varios hermanos que el catalogo ya tiene por
+separado tampoco repite a ninguno de ellos.
+
+Y UNA TERCERA QUE ESTE SUJETO ME OBLIGA A ESCRIBIR, PORQUE VIENE CARGADO DE
+PARES QUE NOMBRAN LO MISMO SIN DECIR LO MISMO: cuando un nodo SOLO NOMBRA lo que
+el otro DEFINE, no repite. Nombrar un acto y desarrollarlo son actos distintos, y
+esa es la unica forma que tengo de separar la jerarquia de la duplicacion sin ver
+el grafo. La escribo ANTES de aplicarla y la uso en el 3175 contra mi propio
+recuento de mayoria, que es donde mas me cuesta.
+
+LA TENSION CON LA TASA BASE, DICHA ANTES DEL DESTAPE Y NO DESPUES: el archivo
+reparte A 16,3 / B 2,1 / C 0,1 / D 81,5 por ciento. En 40 al azar tocarian unas
+6 o 7 A. PONGO 14, o sea el DOBLE de lo que la tasa predice, y no lo recorto:
+recortar a la tasa seria ajustar y no leer, y la 202 ya escribio que su vara
+salio ANCHA por un lado. Si me equivoco, me equivoco por ancho otra vez y el
+cotejo lo dira con su numero. Lo que NO hago es esconderlo: lo digo antes.
+
+PUESTO  CLASE  POR QUE (de los pasos, y nada mas)
+91      D   administrar el contrato YA FIRMADO (vencimiento, facturas contra lo
+            pactado, trato con el proveedor, renovar o cambiar) contra ESCRIBIR
+            LECCIONES al cerrar cada compra. Ni un acto en comun.
+119     D   decidir los CRITERIOS de eleccion antes de contactar contra la
+            TECNICA DE PREGUNTAS abiertas dentro de la negociacion. Comparten el
+            proveedor y nada mas.
+174     A * los 3 actos de A estan en los 6 de B: dedicarle tiempo y no solo
+            dinero es el compromiso visible de B1, reconocer a quien se anima
+            gane o pierda son B2 y B3 juntos, y abrir espacios para ideas de
+            cualquiera es la comunicacion abierta de B5. Mayoria entera en una
+            direccion. Dudo porque A1 contra B1 es lo mas flojo de los tres:
+            dedicar tiempo no es exhibir carteles.
+300     A   B cabe ENTERO en A y con una linea LITERALMENTE IGUAL: el paso 1 de
+            B es el paso 8 de A palabra por palabra. B2 es A2, B3 es A4 y B4 es
+            A5. Los 4 actos de B estan en los 8 de A.
+372     D * el CONTENIDO de la carta de intencion (precio, exclusividad,
+            breakup fee, confidencialidad, fecha de terminacion) contra los
+            CONSEJOS para negociarla (asesoria legal, leer el no-shop, mirar el
+            estilo del comprador, el precio no es final). 1 acto comun de 4 y 5:
+            el exclusive dealing de A2 y el no-shop de B2. Dudo porque es el
+            mismo documento.
+393     D * DONDE buscar al cofundador y como cerrar (networking, excompanieros,
+            compatibilidad de vision) contra QUE inventariar antes de buscar
+            (habilidades, contactos, capital, brechas). Solo A1 y B4 se tocan.
+            Dudo porque B4 manda hacer justo lo que A desarrolla.
+418     D * el ARTEFACTO del sales roadmap (quien influye, donde esta el
+            presupuesto, cuantas llamadas, probar con ordenes reales) contra la
+            FILOSOFIA de la fase (cada venta es una hipotesis, no montes equipo
+            de ventas, las reglas corporativas no aplican). 1 acto comun de 4 y
+            4. Dudo porque son la misma fase del mismo metodo.
+431     D   EJECUTAR la prueba del problema (disenar experimentos, entrevistar,
+            perfilar, capturar competencia) contra VERIFICAR el ajuste con
+            criterios ya medidos (severidad 8-10, workarounds, TAM y SAM). Dos
+            momentos, ni un acto compartido.
+482     A   los 4 actos de A estan en los 6 de B: definir el objetivo como
+            accion concreta es B3, evitar objetivos vagos es B5, clasificar
+            avance contra continuacion es B1 e identificar que falto es B2.
+540     D * definir el mapa de valor (listar productos, pain relievers, gain
+            creators) contra COMPARARLO contra el perfil del cliente. Los verbos
+            son otros: definir no es comparar, y `9.3.1` hace vara del verbo. 2
+            de 4 en el mejor recuento, que es mitad exacta y no mayoria. Dudo
+            porque B4 manda verificar el encaje, que es A entero.
+829     D * UNA fase del ciclo con su detalle propio (metricas de adopcion, 6
+            canales, encuesta, ritual de aniversarios) contra LAS OCHO fases
+            (ubicar al cliente, disenar la emocion de cada una, ver donde se
+            atasca, priorizar Affirm y Activate). A es el detalle de una casilla
+            de B: sub-nodo, o sea arista. Dudo porque B2 cubre a A por arriba.
+871     D   los CRITERIOS del reparto de equity (9 actos: aportes pasados,
+            costo de oportunidad, prima de idea, dedicacion, actas) contra la
+            TEORIA de que logica se aplica (social contra negocio). Solo el
+            reparto proporcional se toca. B es el marco, A es el trabajo.
+970     D   dos estados financieros DISTINTOS: el de flujo de efectivo con sus
+            tres categorias contra el estado de resultados y sus lineas. Ni un
+            acto comun; el tema es "leer un financiero".
+1018    D   las 4 preguntas de apertura del descubrimiento y salir del edificio
+            contra los criterios ya medibles del ajuste producto-mercado.
+            Momentos opuestos del mismo metodo, cero actos compartidos.
+1062    D * la ETAPA DE PRELIMINARES (como abrir, no mas del 20 por ciento, no
+            hables de producto) contra la ETAPA DE INVESTIGACION (disena
+            preguntas, no muestres beneficios, entrena Situacion y Problema). 2
+            actos de 5 y de 6, que no es mayoria de ninguno. Dudo porque las dos
+            repiten "no hables de producto en la primera mitad".
+1071    D   el TAMANO del equipo fundador (duo contra trio, desempate, que pasa
+            si uno se va) contra la RELACION PREVIA (amigos, excompanieros,
+            extranios). Dos variables distintas de la misma decision.
+1072    D   BUSCAR al CEO sucesor (evaluar internos, definir el mandato, firma
+            de busqueda, involucrar al fundador) contra QUE HACE EL FUNDADOR
+            DESPUES (su nuevo rol, quien manda, dejar el consejo). B es el paso
+            6 de A desarrollado: sub-nodo, o sea arista.
+1222    A   3 de los 4 actos de A estan en B: definir que informacion guardar es
+            B1, anotarla en el CRM es B2, y los gestos personalizados son B6.
+            Los dos hacen lo mismo, registrar al cliente para personalizarle.
+1410    D   auditar CALIDAD (elegir el proceso, registrar deficiencias con
+            accion correctiva, Change Request) contra auditar RIESGOS (eventos
+            ocurridos, respuestas implementadas, cumplimiento del proceso de
+            riesgos). Misma forma, objeto distinto. `9.13`: aislado no es gemelo.
+1436    A * 2 de los 3 actos de A estan en B y son los dos que importan: estimar
+            las contrataciones antes de la ronda es el option budget de B1, y
+            negociar el tamanio con el inversor es B2. Mayoria de A (2 de 3).
+            Dudo porque B trae dos actos que A no tiene (alternativas de
+            negociacion, y si el pool incluye lo ya otorgado).
+1567    D   redactar el BRIEF de diseno (objetivos sin sobre-especificar,
+            restricciones, ajustarlo a mitad) contra reformular el objetivo como
+            pregunta "How Might We". B es una tecnica de encuadre; A es el
+            documento. 1 acto comun de 4 y 4.
+1818    A   los 3 actos de B estan en los 5 de A, y uno es LITERALMENTE IGUAL:
+            el paso 3 de B es el paso 5 de A palabra por palabra. B1 es A4 y B2
+            es A3. Y los dos titulos dicen lo mismo.
+1857    A   3 de los 4 actos coinciden en las dos direcciones: analizar el
+            ecosistema o contexto local (A1 y B1), evitar la solucion de talla
+            unica (A3 y B2) y fomentar la interdependencia (A4 y B3).
+1862    D   MEDIR la TI verde (inventariar hardware, listar software, contar
+            papel, calcular consumo) contra ACTUAR (virtualizar, recuperar
+            calor, reciclar e-waste, consolidar envios). Cero actos comunes:
+            uno mide y el otro interviene.
+2016    D   evaluar si el PRODUCTO sirve para exportar (historial local,
+            caracteristicas unicas, ventajas del pais) contra FIJAR EL PRECIO de
+            exportacion (costeo marginal, aranceles, demanda, competencia).
+2019    D   la regla De Minimis (calcular insumos no originarios, porcentaje,
+            umbral 7-10, excepciones textiles) contra el PROCEDIMIENTO ENTERO de
+            reglas de origen (clasificar HS, comparar MFN contra preferencial,
+            consultar el ROO, tariff shift o RVC). Los 4 actos de A caben dentro
+            del paso 5 de B: sub-nodo, o sea arista.
+2281    A   3 de los 3 actos de A estan en B, y uno es LITERALMENTE IGUAL: el
+            paso 2 de A es el paso 5 de B palabra por palabra, y el paso 3 de A
+            y el 3 de B comparten hasta la frase "volumen de informacion
+            disperso entre los participantes". Reconstruir el estado de
+            conocimiento previo es A1 y B2.
+2344    D   el procedimiento de bloqueo y etiquetado de energia (candados,
+            liberar energia almacenada, verificar el aislamiento) contra la
+            seguridad de maquinaria en general (anclar, guardas, paro de
+            emergencia rojo, inspeccion). Solo comparten "capacitar".
+2404    D * el PRINCIPIO de no cerrar en error humano y mapear lo organizacional
+            contra el MODELO de capas de defensa penetradas y violacion contra
+            error. Los actos no calzan: mapear factores previos no es
+            reconstruir capas, y fallas activas contra latentes no es violacion
+            contra error. Dudo porque los dos son Reason.
+2436    A   los 4 actos coinciden uno a uno: identificar cuales de las siete
+            reconoces (A1 y B1), pensar su impacto en la cultura (A2 y B2),
+            priorizar cual primero "empezando por la que genera mayor dano de
+            fondo" (A3 y B3, y esa frase es LITERAL en los dos), y comprometerse
+            con el cambio de fondo y no el parche (A4 y B4).
+2439    A   3 de los 4 actos de A estan en B: listar los defectos (B2), definir
+            las categorias critico, mayor y menor (B3) y usar la clasificacion
+            para el muestreo y la inspeccion (B4). Y los dos nombres son el
+            mismo con un sufijo.
+2460    A   3 de los 4 actos coinciden: identificar el estandar sectorial
+            aplicable (A1 y A2 contra B1), mapear sus requisitos contra el ISO
+            generico (A3 y B2) e implementar o adaptar las extensiones (A4 y
+            B3). Hasta los ejemplos son los mismos, cGMP.
+2506    A * los cinco actos son las mismas cinco letras del ciclo y en el mismo
+            orden: planificar, ejecutar, estudiar o verificar, actuar y repetir.
+            Dudo, y digo por que: A lo encuadra como LAZO DE CONTROL (sujetos de
+            control, actuador, accion correctiva) y B como PRUEBA DE MEJORA
+            (hipotesis, escala pequenia, adoptar adaptar o abandonar). El
+            encuadre difiere; los actos no.
+2633    D * el AVISO de que estar en control no es cumplir especificaciones
+            (verificar control, aceptar la distincion, intervenir el sistema,
+            promedio contra dispersion) contra la PRACTICA del control
+            estadistico (poner cartas, eliminar causas puntuales, experimentar
+            ya estable, no ajustar por medicion suelta). 2 actos de 4 y 4:
+            mitad exacta, no mayoria. Dudo por eso mismo.
+2963    D * las CARACTERISTICAS CLAVE con su detalle (inputs de QFD y AMFE,
+            clasificar, partes sensibles, documentar la relacion, registrar en
+            planos) contra la PLANIFICACION INICIAL entera (revisar el diseno
+            con operaciones, identificar KPCs, clasificar, diagrama de flujo,
+            validar capacidad). 2 actos de 5 y 5, y uno es literal (las cuatro
+            categorias critica, mayor, menor, incidental). Dudo porque B2 nombra
+            a A entero: nombrar no es definir, y por eso lo dejo en D.
+3032    D * ANALIZAR LA CAPACIDAD del proceso (graficar contra especificacion,
+            Cpk y Cpm, histograma, los cinco supuestos) contra DISTINGUIR limite
+            de control de limite de especificacion (calcular de datos reales, no
+            ajustar por un punto, capacitar supervisores). Los actos son otros.
+            Dudo porque los dos viven del mismo malentendido.
+3063    A * 3 de los 4 actos de A estan en B: observar los rechazos reales como
+            evidencia es documentar formalmente cada problema (B1), la causa
+            raiz sistemica y no culpar es B4, y prevenir la recurrencia y no
+            solo corregir tambien es B4. Dudo porque A3 y A4 caen los dos sobre
+            el mismo acto de B, y porque el analisis de tendencias de A2 no
+            esta en B.
+3072    A * 5 de los 6 actos de B estan en los 11 de A: crear el espacio de
+            revision y participar (A1), asignar recursos concretos (A5), revisar
+            el progreso y quitar obstaculos (A6), reconocer y recompensar (A6) y
+            participar en los proyectos cronicos (A3 y A4). Mayoria clara de B.
+            Dudo porque uno es el ORGANO y el otro es el ROL de quien lo preside,
+            y el catalogo podria querer los dos.
+3175    D * y VOY CONTRA MI PROPIO RECUENTO DE MAYORIA, que da A: los 5 actos de
+            B (estructura de roles, capacitar al liderazgo, designar Champions,
+            certificar Black y Green Belts, sistema de proyectos) caen dentro de
+            los pasos 4, 5 y 6 de A. Aplico la TERCERA VARA que escribi arriba:
+            A solo NOMBRA los roles ("capacitar a la primera ola de Champions,
+            Green Belts y Black Belts") y B los DEFINE. Nombrar no es definir, y
+            un roadmap de 3 a 5 anios no repite a la ficha de roles. Es el par
+            que peor llevo y por eso lleva asterisco.
+3194    D   CUANDO Y PARA QUE usar cartas de control (quien actua, guia segun
+            control y especificacion, no ponerlas por poner) contra la REGLA de
+            no fijar nunca los limites desde especificaciones. 1 acto comun de 4
+            y 4: la educacion sobre la diferencia.
+
+MIS DISCUTIBLES, marcados con asterisco ARRIBA y listados aqui ANTES de destapar:
+174, 372, 393, 418, 540, 829, 1062, 1436, 2404, 2506, 2633, 2963, 3032, 3063,
+3072, 3175
+
+REPARTO, PEGADO DE LA SALIDA DEL CONTADOR Y NO TECLEADO (remedio C.A1).
+El contador vive en docs/loop/_auditor_v203_contador.py, es CLON DECLARADO del
+de la 202 (mismo fichero con la vuelta cambiada), lleva prefijo de guion bajo,
+esta FUERA del censo y FUERA de la nomina congelada en 135, y se corrio DESPUES
+de que las filas de arriba existieran. Esto es su salida literal:
+
+CONTADOR DE MIS CLASES, VUELTA 203
+  fichero: docs/loop/_auditor_v203_mis_clases.txt (15919 bytes en disco)
+  filas con clase: 40
+  REPARTO CONTADO: A 14  B 0  C 0  D 26
+  suma del reparto: 40
+  puestos SELLADOS (leidos del sello y de la ciega): 40
+  puestos MIOS distintos: 40
+  sellados SIN clase mia: ninguno
+  clases mias FUERA del sello: ninguna
+  discutibles con asterisco en las filas: 16 -> [174, 372, 393, 418, 540, 829, 1062, 1436, 2404, 2506, 2633, 2963, 3032, 3063, 3072, 3175]
+  discutibles listados al pie:            16 -> [174, 372, 393, 418, 540, 829, 1062, 1436, 2404, 2506, 2633, 2963, 3032, 3063, 3072, 3175]
+  LAS DOS LISTAS DE DISCUTIBLES CALZAN: SI
