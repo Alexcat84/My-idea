@@ -1,0 +1,139 @@
+==============================================================================
+MIS CLASES, ESCRITAS ANTES DE ABRIR EL DESTAPE
+auditor de la vuelta 197. Sujeto sellado en SELLO_APERTURA_AUDITOR_V197.json
+(120 puestos, ciega docs/loop/_auditor_v197_ciega_blind.txt, 162966 bytes,
+sha256 bd701135c5eb5c58...). Destape SIN ABRIR al escribir este fichero.
+LA VARA: docs/BANCO_DE_TEXTOS.md 9.6.1 con sus precisiones 9.6.2 y 9.6.3, mas
+la tabla de LOS DOS POLOS DEL 9.22 y la regla practica del informe 67.6
+(es LINEA un puntero, una advertencia, un criterio suelto o una accion unica;
+es PROCEDIMIENTO un paso que obliga a varias decisiones dentro de si).
+LA CONTAMINACION VA DECLARADA APARTE, EN _auditor_v197_contaminacion.txt, Y SE
+ESCRIBIO ANTES QUE ESTE FICHERO.
+==============================================================================
+
+puesto clase  por que, en una linea
+------ -----  --------------------------------------------------------------
+10     D      criterios de eleccion contra inteligencia de mercado: dos procedimientos
+11     D      B trae el procedimiento de la visita de evaluacion, que A no tiene
+12     D      B desarrolla el paso 4 de A (decidir renovacion) con procedimiento propio
+13     D      preparar la retirada es procedimiento propio, no una linea de A
+24     D      dos tacticas distintas de negociacion, sin madre ni hijo
+25     D      EOQ contra liquidacion de stock muerto: mismo costo, distinto fin
+26     D      B desarrolla con procedimiento el paso 5 de A (el si rapido es falso)
+27     D      preguntas abiertas contra invitar el no: dos tacticas
+71     D      preparacion de agenda contra tactica del no
+72     D      intereses contra silencio: dos tacticas
+73     D      valor no economico contra preparacion de posicion
+74     D      preparacion contra punto unico de contacto
+133    D      registro de cambios de alcance contra lecciones aprendidas
+134    D      rapport contra retirada
+135    D      intereses contra quien tiene el veto
+139    D      retirada contra avisar a los no elegidos
+159    D      A desarrolla el titulo claro de B con el procedimiento Full/Limited
+160    A      mismos pasos, uno literal identico, orden distinto: repiten
+161    A      los 4 pasos de B estan en A, dos de ellos literales
+162    D      B desarrolla el paso 3 de A (frases enganosas) con procedimiento
+204    D      B desarrolla con procedimiento los warrants; A trae ademas tasa y comisiones
+205    D      inside-out contra outside-in: dos patrones opuestos
+206    A      los 4 pasos de B son las fases 1 a 4 de A, dichas igual
+207    A      linea en los dos sentidos: objetivos y roadmap contra alcance y filtro de gate
+397    D      capacidades del fundador contra evaluacion desapasionada de la idea
+398    D      comunicar la salida de un ejecutivo contra el proceso de despidos
+399    D      terminos enganosos contra clausula de venta atada
+400    A      cinco pasos contra cinco, mismo orden y mismo canal unico
+613    D      A desarrolla los pasos 5 y 6 de B con el procedimiento de la matriz
+614    A      los 4 pasos de A estan en B, dos de ellos literales
+615    D      mapa de las cuatro etapas contra la introduccion de la primera
+616    D      B trae buckets y ranking, procedimiento que A no tiene
+654    B      se pisan en prueba gratuita y seguimiento, sin arista y sin nombrarse
+655    D      A trae el procedimiento; lo de B son advertencias sobre el equipo de ventas
+656    D      B desarrolla el ROA, que en A es una linea del paso 1
+657    D      B trae el procedimiento de recoleccion que A no tiene
+719    A      cuatro de cinco en el mismo orden; lo de B cabe en dos lineas
+720    D      el papel del fundador en la busqueda contra el plan de sucesion entero
+721    D      B desarrolla el paso 2 de A (la intimacion) con procedimiento
+722    D      visita multidisciplinaria contra etnografia: dos procedimientos
+880    A      B esta dentro de A y su paso final es literal identico
+881    D      el diccionario de la WBS contra la WBS: dos artefactos
+882    D      B desarrolla el paso 5 de A con procedimiento propio
+883    A      los 4 pasos de B estan en A, dos de ellos literales
+908    A      cuatro contra cuatro en el mismo orden; solo cambia emergente o existente
+910    D      B desarrolla el paso 1 de A (VoC cara a cara) con procedimiento
+911    D      B desarrolla el paso 4 de A (evitar presion) con procedimiento
+912    D      revision pivot-o-sigue contra el modelo de customer development
+973    D      B desarrolla el paso 15 de A (usar los datos) con procedimiento
+974    D      DSO/DPO de capital de trabajo contra gestion de cobranza
+975    D      filosofia de validacion contra ajuste problema-solucion
+976    D      mapa por area y compensacion contra cortejo informal: colas distintas
+979    D      B desarrolla el paso 2 de A (equipo interdisciplinario) con procedimiento
+980    D      fase Admit contra fase Assess: dos momentos del mismo ciclo
+981    D      A desarrolla el paso 5 de B (construir un MVP) con procedimiento
+982    D      arquetipo de Blank contra jobs, pains y gains de Osterwalder
+1070   D      hipotesis de segmentos contra la puerta del ajuste producto-mercado
+1071   D      duo contra trio frente a tipo de relacion previa
+1072   D      B desarrolla el paso 6 de A (rol futuro del fundador) con procedimiento
+1073   D      B trae el procedimiento de agendar las entrevistas, que A no tiene
+1206   D      relacion continua contra riesgo de las tecnicas de cierre
+1207   D      B desarrolla el paso 4 de A (decidir por evidencia) con procedimiento
+1212   D      compromiso con linea de tiempo contra estructura de la reunion
+1213   D      runway y control contra fuentes y estructura fiscal
+1372   D      implicitas contra expresas frente a venta atada
+1373   D      cuentas por cobrar contra tipos de pasivo
+1374   D      calculo del quemado contra validacion de la hipotesis de ingresos
+1379   D      actitud de experimentacion contra unidad tipo think tank
+1807   D      A trae el procedimiento de compra (PPA, broker, tarifas, excedente)
+1808   D      B trae las practicas concretas que desarrollan el paso 1 de A
+1809   A      A cubre los pasos 1, 2 y 3 de B; lo que queda son dos lineas
+1810   A      B esta en A salvo dos lineas (roles toxicos, Eco-Advantage)
+1818   A      B esta entero en A y su paso 3 es literal identico al paso 5 de A
+1819   D      empaque contra modo de transporte
+1820   D      B desarrolla los pasos 4 y 5 de A con el procedimiento de materialidad
+1821   D      B trae el procedimiento de rediseno por ciclo de vida que A no tiene
+2031   D      A trae el procedimiento del COO, que en B es una linea del paso 1
+2032   D      A trae el procedimiento de seleccion; B trae un catalogo de fuentes
+2033   D      Convenio de Paris contra PCT: dos rutas
+2034   D      carta de credito contra letra de cambio: dos instrumentos
+2158   D      registro estatal contra revision legal del marketing
+2159   D      crecimiento desde franquiciados contra velocidad de expansion
+2160   D      mercados secundarios contra rentabilidad del franquiciante
+2161   D      A desarrolla el paso 3 de B (calcular capital) con procedimiento
+2427   D      B trae el procedimiento de calculo; lo de A son advertencias de metodo
+2428   D      9.6.3: uno GENERA caracteristicas con metodos creativos y el otro ELIGE
+2429   A      pasos 1 y 2 casi literales y el fin compartido; el resto son lineas
+2430   A      linea en los dos sentidos sobre el mismo esqueleto lean
+2661   D      califica al comprador contra califica al proveedor: sujetos distintos
+2662   A      el mismo consejo descrito dos veces; lo de B son dos lineas
+2663   A      los pasos 7, 8 y 9 de B son literales de A; B contiene a A
+2664   A      los 6 pasos de B calzan uno a uno con los pasos 2 a 7 de A
+2837   D      reuniones de supervision contra formulario de causas de error
+2838   D      B contiene a A y trae ademas el viaje remedial entero: procedimiento
+2839   D      estudio de mejores practicas contra monitoreo periodico
+2840   D      aprobacion de la direccion contra inhibidores del breakthrough
+2914   D      auditoria de calidad contra auditoria de negocio
+2915   D      cadencia de escalamiento contra doctrina esporadico o cronico
+2916   A      B esta en A salvo dos lineas (institucionalizar, repetir el ciclo)
+2917   A      el paso 6 de B es literal del paso 4 de A y el 4 lleva dentro el 2
+3071   D      A trae el procedimiento de vigilancia y recertificacion
+3072   A      los pasos de B estan en A salvo la participacion personal en los equipos
+3073   D      consejo voluntario y autonomo contra equipo formal que tu diriges
+3074   D      meta SMART de proyecto contra fijacion de metas con benchmarking
+3090   D      B trae el procedimiento de cerrar la brecha conformidad contra aptitud
+3091   D      B trae el sistema de quejas entero, que A no tiene
+3092   D      boxplot contra histograma
+3093   D      diagnostico antes del remedio contra responsabilidad personal
+3172   D      B desarrolla el paso 1 de A (politica obligatoria) con procedimiento
+3173   A      las tres condiciones de autocontrol en el mismo orden; el resto son lineas
+3174   D      dos puntos de Deming; se pisan en dos pasos pero cada uno trae su procedimiento
+3180   D      auditoria de producto contra encuesta al proveedor
+3186   D      B desarrolla el paso 4 de A (detectar brechas) con procedimiento
+3187   D      tipos de auditoria contra la separacion QA y QC
+3188   D      cadencia de accion correctiva contra el ciclo PDCA
+3189   D      costo de la calidad contra graficos de tendencia de defectos
+3330   D      A trae el procedimiento de revision que desarrolla el paso 2 de B
+3331   D      la lista viva contra nombrar supuestos fragiles
+3332   D      colchon de tiempo y dinero contra plan B preparado
+3333   D      entorno externo contra que hacer con un riesgo nuevo
+
+==============================================================================
+MI REPARTO SE COMPUTA DEL FICHERO CON EL COTEJO. NO SE TECLEA AQUI.
+==============================================================================

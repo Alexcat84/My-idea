@@ -1,0 +1,47 @@
+==============================================================================
+COTEJO DE LA CIEGA, AUDITOR DE LA VUELTA 197
+==============================================================================
+CIFRA mis clases: 120
+CIFRA clases del archivo leidas del destape: 120
+CIFRA quemados leidos de la declaracion de contaminacion: 8 -> 207, 616, 654, 880, 2429, 2430, 2662, 2917
+CIFRA puestos sin clase en el destape: 0 
+
+-- LOS 120 ENTEROS: n=120
+   CIFRA coinciden: 107 de 120
+   CIFRA discrepan: 13 -> 616, 655, 719, 976, 1809, 1810, 2429, 2430, 2662, 2838, 2916, 3072, 3173
+   reparto mio    : [('A', 22), ('B', 1), ('D', 97)]
+   reparto archivo: [('A', 17), ('B', 1), ('D', 102)]
+
+-- LOS LIMPIOS, SIN LOS QUEMADOS, Y ES LA CIFRA QUE MANDA: n=112
+   CIFRA coinciden: 103 de 112
+   CIFRA discrepan: 9 -> 655, 719, 976, 1809, 1810, 2838, 2916, 3072, 3173
+   reparto mio    : [('A', 16), ('D', 96)]
+   reparto archivo: [('A', 13), ('D', 99)]
+
+-- SOLO LOS QUEMADOS, publicados y FUERA del credito: n=8
+   CIFRA coinciden: 4 de 8
+   CIFRA discrepan: 4 -> 616, 2429, 2430, 2662
+   reparto mio    : [('A', 6), ('B', 1), ('D', 1)]
+   reparto archivo: [('A', 4), ('B', 1), ('D', 3)]
+
+==============================================================================
+LAS DISCREPANCIAS, UNA POR UNA
+==============================================================================
+puesto   mia    archivo  quemado
+616      D      A        SI
+655      D      A        no
+719      A      D        no
+976      D      A        no
+1809     A      D        no
+1810     A      D        no
+2429     A      D        SI
+2430     A      D        SI
+2662     A      D        SI
+2838     D      A        no
+2916     A      D        no
+3072     A      D        no
+3173     A      D        no
+
+CIFRA discrepancias totales: 13
+CIFRA discrepancias limpias: 9
+CIFRA discrepancias quemadas: 4

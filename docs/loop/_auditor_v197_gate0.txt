@@ -1,0 +1,19 @@
+=== Paso 2: Redireccion de nodos fusionados ===
+  0 nodo(s) actualizado(s). Vistas completadas: 0 en nodos_siguientes, 0 en nodos_previos.
+  3853 nodos compilados.
+=== Paso 7: Validador Gate 0 ===
+--- Resumen Gate 0 ---
+  [OK] Todos los nodos tienen dominio valido (['compras', 'core', 'entrega', 'environmental', 'exportacion', 'franquicias', 'health_safety', 'quality', 'risk_management', 'seguridad_digital']) (valor: 0)
+  [OK] Nodos en master_graph.json == archivos en disco (valor: 3853 vs 3853)
+  [OK] Cero grupos con titulo_concepto exacto duplicado (valor: 0)
+  [OK] Universo: activos / deprecados (valor: 3169 activos, 684 deprecados (siguen en el grafo))
+  [OK] Ningun nodo ACTIVO cuya unica entrada este deprecada (valor: 0 fantasmas)
+  [OK] Ningun alias es reclamado por dos nodos distintos (valor: 0 con dos duenos)
+  [OK] Los dos master_graph (dataset y web) dicen lo mismo (valor: 0 nodos divergentes)
+  [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-aristas)
+  [OK] OP-C-05: ninguna lista de aristas de un nodo VIVO tiene dos entradas que RESUELVAN al mismo destino (valor: 0 lista(s) con duplicada tras resolver)
+  [OK] OP-C-05: todo par bidireccional entre nodos VIVOS tiene su veredicto de lectura REGISTRADO CON CITA (valor: 154 par(es) bidireccional(es) tras resolver, 154 con cita, 0 SIN CITA [FUERA DE ESTA VARA, decision del fundador del 14 ago 2026, camino A: 3 par(es) mas que solo existen si se admite como declarante a un nodo DEPRECADO, o sea 157 con ellos: ['asignacion_recursos_en_gates <-> sistema_gates_go_kill', 'formalizar_junta_asesora <-> identificar_consejo_asesores', 'revision_portafolio_periodica <-> sistema_gates_go_kill']])
+  [OK] Ninguna semilla de entrada esta deprecada (valor: 0 deprecadas)
+  [OK] Ningun puente aprobado apunta a un nodo deprecado (valor: 0 rotos)
+  "nodos_sin_enlaces_entrantes": 452,
+GATE 0: OK

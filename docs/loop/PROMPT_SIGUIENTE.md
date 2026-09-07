@@ -1,227 +1,182 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Eres el ejecutor de la VUELTA 196. Rama `pasada-unica`. FASE III, EJECUCION.
+Eres el ejecutor de la VUELTA 197 de la campana My Idea. Rama `pasada-unica`.
+Lee `docs/loop/EJECUTOR.md` entero antes de la primera operacion y corre tu bloque
+de apertura sellado ANTES de tocar nada, como siempre.
 
-NO ES VUELTA DE BATERIA. La 194 la corrio entera por sus diez tramos y la proxima
-cae en la 199, por la cadencia de `AUDITOR.md` 6.1. Tu seccion 9 cierra con el
-HUECO DECLARADO Y MEDIDO por el carril de la TAREA 1.b de la vuelta 173, con su
-medicion, su atribucion y su corrida. Un hueco declarado no es un hueco escondido.
+**EL TOPE DE CINCO SUB-TAREAS VOLVIO SOLO, Y LA CIFRA NO SE TECLEA.** `AUDITOR.md`
+6.2 dice que el regimen temporal de dos sub-tareas se apaga cuando DOS VUELTAS
+SEGUIDAS cierren su propio reporte con `cerrar_reporte.py`. El auditor corrio
+`scripts/loop/vuelta192_racha_de_cierres.py` en la vuelta 197 y **da la racha en 2,
+con las vueltas 195 y 196**. Vuelve a medirlo tu en tu apertura: **manda tu medicion
+de hoy, no esta linea.** Van CUATRO sub-tareas, no cinco.
 
-VAN DOS SUB-TAREAS Y LAS DOS SON BLOQUEANTES, Y TE DIGO POR QUE SON DOS Y NO
-CINCO, PORQUE ES LO CONTRARIO DE LO QUE TE ENCONTRASTE LA VUELTA PASADA. Tu propia
-remedicion al cierre de la 195 dejo la racha de cierres en 1, no en 9: el
-inventario tiene 13 ficheros, la vuelta mas alta es la 195 y dentro del rango
-faltan 181, 182, 183 y 194, asi que la racha contada hacia atras desde la mas alta
-vale 1. LO RECONTE YO A MANO en esta auditoria y me da lo mismo que a ti.
-`AUDITOR.md` 6.2 pide DOS vueltas seguidas cerrando su propio reporte, y con 1 el
-tope es de DOS sub-tareas. CUENTALA TU DEL INSTRUMENTO al abrir, con
-`scripts/loop/vuelta192_racha_de_cierres.py`, y publica lo que salga. Ese
-instrumento PISA su propia sellada: si la corres, restaurala con `git checkout --`
-y REMIDELA antes de darla por restaurada.
+**ESTA NO ES VUELTA DE BATERIA.** Por `AUDITOR.md` 6.1 la bateria corre CADA CINCO
+vueltas en vuelta propia: la 194 la corrio entera por sus diez tramos y **la
+siguiente cae en la 199**. Tu seccion 9 cierra con el HUECO DECLARADO Y MEDIDO, con
+su nombre, sus bytes y su atribucion, las tres juntas.
 
-Y AQUI VA LA PARTE QUE SI ESTA EN TU MANO, EN UNA LINEA: SELLA TU
-`docs/loop/SALIDA_V196_CERRAR_REPORTE.txt`. Con eso la racha llega a 2 y el tope de
-CINCO vuelve solo en la 197, sin que nadie tenga que adjudicar nada. Tu `P.1`
-quedo contestada en la adjudicacion `4.5` de mi acta, a favor de medir el ACTO y no
-el fichero, pero NO me apoyo en mi propia adjudicacion para ensanchar tu encargo:
-me quedo del lado estrecho hasta que el instrumento lo diga.
+**NO SE MUEVE NINGUNA CLASE Y NINGUN VEREDICTO.** El `sha256` LF de
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` abre y cierra en el mismo valor, y
+`git diff --numstat -- dataset/` se mide al entrar y al salir y las dos cifras se
+publican. El cribado y el recomputo quedan fuera de esta vuelta.
 
-ABRE EL REPORTE AL EMPEZAR, con su esqueleto tallado y en su propio commit, y mide
-tu desfase de calibrado DENTRO del bloque de apertura y ANTES de la primera
-operacion. Tu bloque de apertura corrio el ciclo completo la vuelta pasada y
-escribio el mismo los dos literales de la guarda `D.1`: eso funciono y no se
-deshace.
+---
 
-Y LO QUE TE AHORRO DE MI AUDITORIA, QUE ES LO MAS UTIL QUE SACO DE ELLA: TU Y YO
-LEIMOS LOS MISMOS 60 POR SEPARADO Y FALLAMOS EXACTAMENTE LOS MISMOS CUATRO
-PUESTOS. `976`, `2428`, `2662` y `3173`. Yo saque 56 de 60 y tu 54, pero mis cuatro
-son un subconjunto de tus seis. Dos lectores independientes que convergen dicen
-algo del archivo y no solo de los lectores, y por eso los tres hallazgos de mi
-seccion 5 salen de ahi.
+## TAREA 1, LOS REGISTROS. BLOQUEANTE.
 
-=============================================================================
-TAREA 1. LOS REGISTROS. BLOQUEANTE.
-=============================================================================
+El acta 197 entra en la serie con el numero que devuelva
+`scripts/loop/serie_de_registros.py`, **computado y no tecleado**: el auditor lo
+midio en `R.59` con siguiente libre tras el `R.58`, pero **manda tu corrida**. El
+cuerpo del acta se acota contando su primera linea con `grep -n` EN ESTA VUELTA: el
+auditor la midio empezando en la **69341** sobre un `ACTA_AUDITOR.md` de **4595886
+bytes**, y el fichero puede haber crecido.
 
-El acta 196 entra en la serie con el numero que devuelva
-`scripts/loop/serie_de_registros.py`, computado y no tecleado. El acta vive en
-`docs/loop/ACTA_AUDITOR.md` a partir de la linea 69019, contada por mi hoy con
-`grep -n`; RECUENTALA TU, porque el fichero puede haber crecido.
+La entrada registra, y **cada cifra se cuenta del cuerpo acotado, no de esta lista**:
+las **SIETE adjudicaciones** `4.1` a `4.7`, con las tres preguntas del reporte de la
+196 contestadas **por letra escrita y no por doctrina nueva** (`4.3` la `P.1`, `4.4`
+la `P.2`, `4.5` la `P.3`); los **CUATRO hallazgos** de la seccion 5 (`5.1` el reporte
+que quema la ciega del auditor por construccion, `5.2` el marcado de discutibles que
+no existe por debajo del puesto 2662, `5.3` los tres puestos con tres lectores
+independientes contra el archivo, `5.4` el fichero del turno que no se limpia al
+cerrar); **CERO caidas del ejecutor de cifra publicada**, con la `C.E1` de la 196
+**RE CLASIFICADA A TU FAVOR** como caida de REPORTE en prosa de acompanamiento, que
+**NO acumula** (racha de cifra publicada en **1**, racha de reporte en **1**); tus
+**DOS caidas de metodo**; y **CINCO caidas propias del auditor**, `C.A1` a `C.A5`,
+todas de metodo y todas remediadas dentro de su vuelta, **con la `C.A1` en su TERCERA
+acta seguida de la misma especie**. Y la METRICA DE CREDITO de la seccion 7 con sus
+cifras: relecturas **332**, puestos **1.306**, dentro **60**, fuera **179**.
 
-La entrada registra, y cada cifra se cuenta del cuerpo acotado del acta y no de
-aqui:
+El registrador tiene que seguir siendo IDEMPOTENTE: se prueba re corriendolo, con la
+sede medida en bytes antes y despues. Si el acta 197 escribe de alguna forma que tus
+lectores heredados no leen, **cada lector nuevo lleva su mutacion delante y su cifra
+al lado**, como hizo la 196 con sus seis.
 
-  - LAS CATORCE ADJUDICACIONES `4.1` a `4.14`, Y LAS CATORCE VAN A FAVOR. Cuatro
-    son las discrepancias de mi propia ciega, resueltas a favor del archivo; tres
-    son tus preguntas `P.1`, `P.2` y `P.3`, las tres contestadas por extension
-    citable; y siete son tus discutibles `D.1` a `D.7`. CERO EN CONTRA, y es la
-    SEXTA acta seguida.
-  - LOS TRES HALLAZGOS DE LA SECCION 5, que no salen de ningun discutible: el
-    encargo que quema puestos de la ciega siguiente (`5.1`), los mismos cuatro
-    puestos fallados por dos lectores independientes (`5.2`), y la ciega que no
-    puede alcanzar la clase de un puesto cuya correccion se apoya en una fusion
-    planeada y no aplicada (`5.3`, medido en el `2662`).
-  - UNA CAIDA TUYA, Y ES DE CIFRA PUBLICADA, NO DE REPORTE: `C.E1`. La linea 19
-    de tu reporte dice que el bloque `E` del sello de apertura corrio
-    `scripts/loop/vuelta193_racha_de_cierres.py`, y ese fichero NO EXISTE en disco
-    NI EN NINGUNA RAMA (`git log --all` sobre esa ruta no devuelve nada). Lo que
-    corrio de verdad, en la linea 46 de `SALIDA_V195_APERTURA.txt`, es
-    `vuelta192_racha_de_cierres.py`, que es el nombre que tu propio reporte usa
-    BIEN en sus lineas 809 y 913. Entra por `AUDITOR.md` 4, LA RUTA QUE PROMETE
-    PRUEBA ES CIFRA. LA RACHA DE CIFRA PUBLICADA QUEDA EN 1: dos tandas seguidas
-    serian PARADA, y por eso se registra con su nombre y no se suaviza. Lo que NO
-    es: la corrida se hizo y su cifra es correcta y esta sellada. Lo falso es el
-    nombre del instrumento.
-  - TUS CUATRO CAIDAS DE METODO (`C.1` a `C.4` de tu seccion 8.1), LAS CUATRO
-    CAZADAS DENTRO DE LA VUELTA POR GUARDAS QUE TU MISMO ESCRIBISTE, y NINGUNA
-    ACUMULA. Se registran porque la vara es lo que se mide, no lo que llega a
-    publicarse, que es tu propio `D.7` y lo adjudique a favor.
-  - UNA CAIDA PROPIA MIA, `C.A1`, DE METODO, Y CON SU RACHA EN 2: reconte el
-    marcador con `json` a mano en vez de por `AP.marcador()`, que es la misma
-    especie que el `C.1` del acta 195. La remedie dentro de la vuelta y
-    `AP.marcador()` da lo mismo que mi cuenta. A LA TERCERA, el acta 197 tiene
-    que ABRIR con su remedio como tarea bloqueante del propio auditor.
-  - LA METRICA DE CREDITO de la seccion 7 con sus cifras, incluida la fila de
-    puestos: 60 aislados, 60 cotejados y DOS QUEMADOS, el `654` y el `719`, que
-    salen del credito porque el encargo publico su clase de archivo. La fila de
-    caidas propias va PARTIDA EN DOS, las que acumulan y el total del cuerpo.
+## TAREA 2, EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. BLOQUEANTE.
 
-EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: re corrido no escribe nada. Pruebalo re
-corriendolo, con la sede medida en bytes antes y despues.
+**DE DONDE SALE, Y NO ES UNA IDEA MIA:** adjudicacion `4.5` del acta 197, que contesta
+la `P.3` del reporte de la 196 **por extension de `AUDITOR.md` 1.2** (*"imprime
+PRIMERO los pasos, adjudica tu clase, y SOLO DESPUES destapa la razon escrita"*).
+**La tabla de discrepancias de un reporte ES un destape**, y esta medido: el reporte
+de la 196 publico **la clase de archivo de 8 de los 120 puestos** que el auditor de
+la 197 acababa de sellar, **y ademas el reparto entero del archivo sobre esos mismos
+120**. El auditor lo sufrio siguiendo el orden escrito, no saltandoselo.
 
-=============================================================================
-TAREA 2. LA RELECTURA AL DOBLE DE MI TRAMO. BLOQUEANTE, Y ES DEUDA MIA QUE
-PAGAS TU CON EL INSTRUMENTO.
-=============================================================================
+Sobre `scripts/loop/apertura_del_auditor.py`, **que NO SE CLONA**:
 
-`AUDITOR.md` 1.2: UNA discrepancia mia cayo FUERA de mi marcado, el `2428`, asi
-que EL CREDITO DE MI TANDA BAJA Y EL TRAMO SE RELEE AL DOBLE.
+(a) **`leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO** si el turno tiene sello y
+**no ha declarado sus clases todavia**. El orden obligatorio pasa a ser
+`sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`. Un turno sin
+sello sigue pudiendo leer el reporte, porque ahi no hay sujeto que quemar: **lo que
+se prohibe es leerlo con el sujeto ya elegido y las clases sin escribir.**
 
-EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE HOY, computados y no tecleados, en
-`docs/loop/_auditor_v196_doble_para_la_197.txt`, para que no se elijan despues de
-mirar:
+(b) **EL FICHERO DEL TURNO SE CIERRA**, que es el hallazgo `5.4`. Hoy
+`_TURNO_DEL_AUDITOR.json` sobrevive al turno y el auditor siguiente lo hereda sucio,
+con lo que **tiene que borrarlo para poder sellar, y una guarda que ensena a borrar
+su propia bitacora no es una guarda**. Anade un carril que lo CIERRE al declarar las
+clases (o al escribir el acta) dejando constancia de que se cerro, de forma que un
+turno nuevo empiece limpio **sin tener que borrar nada**. **El sello en disco no se
+toca y la guarda `b` de `sellar()` sigue mirando el disco.**
 
-  EL TRAMO son los 60 puestos de `docs/loop/_auditor_v196_ciega_blind.txt`, que
-  son los mismos 60 de tu tanda de la 195.
-  EL DOBLE son sus 60 vecinos deterministas: 12, 13, 26, 27, 73, 74, 135, 139,
-  161, 162, 206, 207, 399, 400, 615, 616, 656, 657, 721, 722, 882, 883, 911, 912,
-  979, 980, 981, 982, 1072, 1073, 1212, 1213, 1374, 1379, 1809, 1810, 1820, 1821,
-  2033, 2034, 2160, 2161, 2429, 2430, 2663, 2664, 2839, 2840, 2916, 2917, 3073,
-  3074, 3092, 3093, 3174, 3180, 3188, 3189, 3332, 3333.
+(c) **EL REMEDIO DE LA `C.A1` DEL AUDITOR, QUE VA POR SU TERCERA ACTA SEGUIDA.**
+Tres actas seguidas (195, 196, 197) recontando el marcador a mano con `json` en vez
+de por `AP.marcador()`. El remedio de memoria ya fallo: la 196 lo declaro, lo
+remedio dentro de su vuelta, y la 197 volvio a caer. **Escribe la guarda de codigo
+que lo cace:** un carril que compruebe que la cifra del marcador que un acta publica
+**calza con una salida de `AP.marcador()` de esa misma vuelta**, y que caiga en ROJO
+si esa salida no existe o no calza.
 
-SON CIENTO VEINTE PARES, Y LA CIFRA NO ES UN DESCUIDO: el doble compone. La serie
-medida va 30, 60 y ahora 120, porque cada tanda doblada que vuelva a dar una
-discrepancia fuera del marcado dobla otra vez. NO CAMBIO LA REGLA, que es del
-fundador y esta escrita: la ejecuto y la nombro con su serie para que se vea venir.
-Si al medirla te sale que no cabe en una vuelta con sus guardas completas, PARAS Y
-LO TRAES con tu cifra delante, en vez de leer 120 mal o leer 60 y llamarlo 120.
+**CADA UNA DE LAS TRES LLEVA SU CASO POSITIVO POR MUTACION DELANTE**, con nombre
+estable y salida sellada, y **el caso rojo tiene que morder de verdad**: se prueba
+que sin el remedio la guarda deja pasar y con el no. Ninguna guarda vieja se afloja.
 
-QUE HACER:
+## TAREA 3, LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR.
 
-  a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`
-     y NO se copia, con `evitar` cargado de TODO lo consumido y contado de sus
-     ficheros, que hoy son CATORCE y dan 621 puestos (561 sin el tramo).
-     Recomputalo tu y publica lo que salga: si tu cifra no es 621, publica la tuya
-     y di de que ficheros sale. El solape con el tramo y con el universo tiene que
-     salir CERO POR CONSTRUCCION, no por suerte.
-  b) LEE LOS 120 A CIEGAS, tramo y doble, con `aislador_de_ciega.py`, y escribe tus
-     clases ANTES de abrir el destape.
-  c) LA VARA ES `docs/BANCO_DE_TEXTOS.md` `9.6.1`, citada por numero y no
-     parafraseada, con sus precisiones `9.6.2` y `9.6.3`. Y LLEVATE PUESTOS LOS
-     DOS ERRORES QUE TU Y YO COMPARTIMOS, porque son los que mas rinden:
-       PRIMERO, LA VARA ES EL SUELO Y NO EL TECHO. Antes de aplicarla pregunta si
-       el par pertenece a una familia con REGLA PROPIA ya fijada, porque entonces
-       manda la especifica. Yo perdi el `976` por no preguntarlo: su razon cita
-       que es la misma A del puesto `712` y que el sub-puro numero 7 lleva cuatro
-       pares leidos y los cuatro en A. Y consultar la familia NO quema nada,
-       porque las clases de OTROS puestos no son tu sujeto sellado.
-       SEGUNDO, LA SEMEJANZA DE LOS IDS NO DECIDE. El banco `9.6.3` dice que el
-       tamano del solape no decide y que se pesa el resto y en que lado. Los dos
-       perdimos el `2428` (`desarrollar_` contra `desarrollo_`) por dejar que el
-       nombre pesara, cuando uno genera y el otro elige y hay ARISTA QUE FALTA
-       con direccion.
-  d) NO TE SALTES LA `B` NI LA SOBRE EMITAS. Tu emitiste 4 donde el archivo tiene
-     1 y el auditor de la 195 emitio 0 donde tenia 1. Yo emiti 1 y acerte. El
-     sesgo esta medido en las dos direcciones y las dos son perdida.
-  e) PUBLICA EL COTEJO con sus cifras: cuantos coinciden, cuantos discrepan, y
-     cuales caen dentro y fuera de tu marcado. Marca tus discutibles ANTES de
-     saber si aciertas.
-  f) Y SI ALGUN PUESTO DE LOS 120 RESULTA INALCANZABLE A CIEGAS por lo que mi
-     hallazgo `5.3` describe, o sea que su clase se apoya en una fusion planeada
-     y NO aplicada al grafo y la ciega te ensena los pasos del nodo viejo,
-     DECLARALO CON SU NUMERO Y SU MEDICION y sacalo de tu credito, como yo saque
-     los dos quemados. NO lo arregles por tu cuenta: tocar el aislador o mover una
-     clase no es de esta vuelta.
+Es deuda del auditor y la paga el ejecutor con el instrumento, como en la 196.
+`AUDITOR.md` 1.2: **CINCO discrepancias del auditor cayeron FUERA del marcado del
+archivo** (`655`, `719`, `976`, `1809`, `1810`), asi que el credito de su tanda baja
+y el tramo se relee al doble.
 
-=============================================================================
-LO QUE NO ENTRA, DICHO PARA QUE NO SE COLE NI SE REDESCUBRA
-=============================================================================
+**EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE ANTES**, computados y no tecleados, en
+`docs/loop/_auditor_v197_doble_para_la_198.txt`, **para que no se elijan despues de
+mirar**. Son **240 pares**: 120 del tramo y 120 del doble. La serie medida va 30, 60,
+120 y ahora 240.
 
-Ni cribado, ni recomputo, ni operaciones del plan, ni las mesas anotadas, ni podar
-la nomina, ni la bateria entera, que no es su vuelta y cae en la 199.
+(a) `vecinos()` **SE IMPORTA** de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py`
+y NO se copia, y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` se importan de
+`scripts/loop/vuelta196_tarea2_relectura_al_doble.py`. **Recomputa el doble y
+comprueba que calza con el sellado.** OJO CON UNA TRAMPA QUE EL AUDITOR PISO Y
+DECLARO en su `C.A5`: **los dos `_exclusion.txt` guardan enteros sueltos y se leen
+con `numeros_de()`, no con el patron de `puesto_intra`**; con un solo patron para
+todos el universo sale 300 en vez de **681**, y el "solape 0 por construccion" seria
+falso. El universo son **681** de **16** ficheros, y **561** por diferencia de
+conjuntos con el tramo.
 
-Y ESTAS SIGUEN FUERA, EN ESTE ORDEN, PARA QUE LA 197 NO LAS REDESCUBRA. Las tres
-primeras son las que yo pondria delante si el tope subiera a cinco:
+(b) **LEER LOS 240 A CIEGAS** con `aislador_de_ciega.py`, y **escribir las clases
+ANTES de abrir el destape**.
 
-  - QUE `cerrar_reporte.py` ESCRIBA SU PROPIA SALIDA SELLADA. Es el remedio de tu
-    `P.1` y de mi adjudicacion `4.5`, y es codigo, no doctrina. Mientras el
-    fichero lo tenga que redirigir alguien a mano, el instrumento mide la memoria
-    del ejecutor y no la racha, que es tu propia frase y tienes razon.
-  - EL TOPE DE 80 LINEAS DEL MODO AUSTERO, ADJUDICADO EN MI `4.7` Y EN CONTRA
-    TUYA. El tope se mide sobre la prosa que escribes A MANO y no sobre la
-    cabecera ni las tablas talladas, que la propia regla nombra como contenido
-    que se queda. Pero tu reporte de la 195 mide 995 lineas por `split` y 994 por
-    `count(NL)`, y las piezas talladas son una fraccion minima: bajo las dos
-    lecturas esta muy por encima. NO lo registro como caida porque preguntaste en
-    vez de romperlo en silencio. Lo que queda encargado es MEDIR tu reporte por
-    las dos varas y publicar las dos cifras, y bajar la prosa de acompanamiento
-    que el registro ya dice.
-  - LA GUARDA DE LA `P.2`, ADJUDICADA A FAVOR EN MI `4.6` Y CON SU CALIBRADO
-    ANTES QUE SUS DIENTES: que la huella de vivo no case con `open(`, `io.open(`
-    ni `read_text`. En su PRIMERA vuelta la guarda PUBLICA SU LISTA y NO detiene a
-    nadie, y solo muerde cuando su lista salga vacia sobre los cinco arneses de
-    hoy. Tu propio miedo esta bien puesto y por eso va asi.
-  - EL DESFASE DE `PATRONES_ACTA`, que apunta al acta de `VUELTA - 1`. Lleva
-    cuatro encargos en primer lugar de la cola y sigue sin hacerse; lo digo con su
-    numero en vez de dejarlo caer otra vez. Es cosmetica de cabecera y por eso
-    pierde contra las tres de arriba, pero cuatro aplazamientos ya son un patron.
-  - LA FILA DE CREDITO DEL ACTA CON SU ROTULO IMPUESTO POR EL INSTRUMENTO que la
-    talla. A mano ya la aplicamos el acta 195 y yo.
-  - LA GUARDA DE CODIGO DEL HALLAZGO `5.3` DEL ACTA 194, los mensajes de commit
-    sin clases por puesto ni reparto de ciega. A mano funciona y esta medido: mis
-    60 llegaron con CERO QUEMADOS por esa via.
-  - EL REMEDIO DE MI HALLAZGO `5.1`: que un encargo que ensene la leccion de un
-    puesto vivo en la cola nombre su FIGURA y no su CLASE. Es de una linea de
-    disciplina y no de codigo, y lo aplico yo mismo en esta TAREA 2 (por eso el
-    `976` y el `2428` van con su figura y su razon, que ya estan destapados, y no
-    hay ningun puesto de tus 120 cuya clase te haya dicho).
-  - `acumulan()` que lea la tabla, o que declare en su salida que no es la sede.
-  - El cotejo de clon declarado que separa sentencia de codigo de cambio de texto.
-  - La excepcion que publica siempre su lista.
-  - La medicion del censo de arneses con carril de mutacion sin fichero propio.
-  - Las ocho actas sin entrada propia en la serie (173 a 180), medidas y no
-    arregladas.
-  - Que el campo `evidencia` de `OP-L-02` nombre los ficheros que ya existen. Su
-    ESTADO NO SE MUEVE: sigue en `LISTA`, y declararla HECHA es del fundador.
-  - QUE HACER CON LAS 72 FILAS `B` DEL ARCHIVO, y ahora tambien LOS CUATRO PUESTOS
-    QUE DOS LECTORES INDEPENDIENTES FALLARON (`976`, `2428`, `2662`, `3173`), que
-    son mi hallazgo `5.2`. Los dejo NOMBRADOS y medidos y NO resueltos, porque
-    mover una clase esta reservado y eso es del RECOMPUTO. El marcador de hoy,
-    recomputado por mi con `AP.marcador()`: `A 551, B 72, C 5, D 2760` sobre 3388
-    filas, cero huecos y cero duplicados.
+(c) LA VARA es `docs/BANCO_DE_TEXTOS.md` `9.6.1`, citada por numero y no
+parafraseada, con sus precisiones `9.6.2` y `9.6.3` y la tabla de LOS DOS POLOS del
+`9.22`. **Y CON LOS DOS ERRORES DEL AUDITOR PUESTOS DELANTE, que son los que su
+cotejo midio y no una sospecha:**
+  . **LA VARA ES EL SUELO Y NO EL TECHO.** Antes de aplicarla se pregunta si el par
+    pertenece a una familia con REGLA PROPIA ya fijada, porque entonces manda la
+    especifica. **Es la especie del `719` (la regla del puesto 595: el mismo
+    instrumento en dos ocasiones distintas es sano) y la del `976` (la familia del
+    sub-puro 7, cuatro pares leidos y los cuatro en A).**
+  . **LA CONTENCION SE MIDE SOBRE EL CONTENIDO, NO SOBRE EL CONTENEDOR.** Si el nodo
+    corto cabe ENTERO en el largo y **no trae ni un paso propio**, es `A` por
+    contencion, **por mucho que el largo traiga ademas un procedimiento entero**.
+    Preguntarse "el hijo trae procedimiento, luego CONTINUA" mirando el residuo del
+    contenedor es la especie del `2838`.
 
-Y NO SE MUEVE NINGUN VEREDICTO: el `sha256` LF de
-`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` tiene que abrir y cerrar en
-`0a77b5a35a962621`, que es lo que medi hoy por las dos convenciones sobre 4054129
-bytes. Y `dataset/` no se toca a mano: el `numstat` se mide al entrar y al salir y
-las dos cifras se publican. El ciclo de Gate 0 se corre ENTERO, con
-`run_phase1.py --reaplico-curaduria` y despues `etiquetas_de_cara.py --aplicar`:
-corrido por mi hoy, asi da CERO lineas en `dataset/`, `web/` y `engine/`. La nomina
-NO se poda: sigue en 135 entradas con `CASOS_DECLARADOS` en 2, medido por mi.
+(d) **NO SALTARSE LA `B` NI SOBRE EMITIRLA.** El sesgo esta medido en las dos
+direcciones y las dos son perdida.
 
-Y SI RE CORRES UN INSTRUMENTO QUE PISA UNA SALIDA SELLADA AJENA, RESTAURALA CON
-`git checkout --` Y REMIDELA ANTES DE DARLA POR RESTAURADA, Y NO LE TOQUES LOS
-FINALES DE LINEA A MANO.
+(e) **PUBLICAR EL COTEJO** con sus cifras: cuantos coinciden, cuantos discrepan, y
+cuales caen dentro y fuera del marcado, **con los discutibles marcados ANTES de saber
+si aciertas**. Y publica ademas, **porque el hallazgo `5.2` lo obliga**, cuantos de
+los 240 llevan el literal `DISCUTIBLE MARCADO` en su razon y **como se reparten por
+puesto**: sobre el sujeto de la 197 salieron **14 de 120, y los 14 del 2662 para
+arriba**, con **0 en los 89 puestos por debajo**. Si tu reparto sale igual, **la
+metrica de dentro-o-fuera no es comparable entre tramos y esa cifra tiene que estar
+publicada**, no deducida.
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes. No adivines.
+(f) **LOS PUESTOS QUE LA CIEGA NO PUEDE ALCANZAR SE DECLARAN ANTES DE LEER, CON SU
+NUMERO Y SU MEDICION, Y SALEN DEL CREDITO**, por la adjudicacion `4.4`: los que se
+apoyan en un racimo censado o en una correccion declarada sobre una fusion no
+aplicada. **No se ensancha la lista blanca del aislador**, que entregaria la
+respuesta. Sobre los 120 de la 197 fueron **6 razones citando un racimo y 3 una
+correccion declarada**.
+
+(g) **Y LOS QUE LLEGUEN CON SU CLASE YA SABIDA POR HABER LEIDO EL ACTA O EL REPORTE
+SE DECLARAN TAMBIEN, ANTES DE LEER.** El acta 197 publica la clase de archivo de
+`655`, `719`, `976`, `1809`, `1810`, `2838`, `2916`, `3072` y `3173` en su seccion
+`4.1` y en su `5.3`, y **los nueve estan dentro de estos 240**. **Quemados: se
+publican y no entran al credito.**
+
+## TAREA 4, LAS DOS CIFRAS QUE VIAJAN SIN SU VARA.
+
+(a) **LA SECCION 9 PUBLICA "0 ARNESES DEL CENSO FUERA DE LA NOMINA" SIN NOMBRAR LA
+VARA.** Medido por el auditor en la vuelta 197: censo **195**, nomina **135**,
+entradas invisibles al censo **0**, y fuera de la nomina **60 SIN la vara** y **0 CON
+la vara 148**. **No es caida** (la frase nombra su fuente y esa fuente si lleva la
+vara, adjudicacion `4.7`), pero un `0` al lado de un 195 y un 135 **se lee como que
+la nomina cubre el censo entero, y no lo cubre**. Haz que esa cifra viaje SIEMPRE con
+su vara, en el sello de apertura y en el reporte, y **mide las dos** (con vara y sin
+vara) en vez de una.
+
+(b) **EL TOPE DE 80 LINEAS DEL MODO AUSTERO SE MIDE POR TRES VARAS Y LAS TRES SE
+PUBLICAN**, por la adjudicacion `4.6`: **total**, **escrita a mano** (la vara que el
+acta 196 fijo en su `4.7`), y **escrita a mano menos lo que otra regla obliga a
+escribir** (cabecera tallada, tabla de tareas, seccion 9 y las demas piezas que una
+guarda busca). El reporte de la 196 midio **588 lineas por `count(NL)` y 589 por
+`split`**, y **318 por la vara estrecha**, cuatro veces el tope. **El tope no se
+afloja y la excepcion no se inventa:** se publican las tres cifras para que el
+fundador decida sobre numeros. Si la tercera vara sigue por encima de 80, **dilo con
+esas palabras en el reporte** y deja la pregunta escrita.
+
+---
+
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
+una regla vigente, paras y lo traes. No adivines.
