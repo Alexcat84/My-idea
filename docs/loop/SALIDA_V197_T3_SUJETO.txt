@@ -1,0 +1,166 @@
+==============================================================================
+VUELTA 197, TAREA 3: EL SUJETO DE LA RELECTURA AL DOBLE DEL TRAMO DEL
+AUDITOR DE LA 197. Deuda suya por AUDITOR.md 1.2, pagada con instrumento.
+SON DOSCIENTOS CUARENTA PARES: la serie medida va 30, 60, 120 y ahora 240.
+==============================================================================
+
+A) EL ARCHIVO, MEDIDO AL ENTRAR Y ABIERTO SOLO EN LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 bytes
+   sha256 LF    : 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   sha256 disco : 0a77b5a35a962621339d58a1eeda9afc046cbff9f42dc6dbbaf16aa627aae372
+   CIFRA filas: 3388 | MIN 1 | MAX 3388
+
+B) EL TRAMO, CONTADO DE SU FICHERO Y NO TECLEADO
+   docs/loop/_auditor_v197_ciega_blind.txt
+      disco 162966 bytes | LF 162966 bytes | sha256 LF bd701135c5eb5c58
+   CIFRA puestos del tramo: 120
+   10, 11, 12, 13, 24, 25, 26, 27, 71, 72, 73, 74, 133, 134, 135, 139, 159, 160, 161, 162, 204, 205, 206, 207, 397, 398, 399, 400, 613, 614, 615, 616, 654, 655, 656, 657, 719, 720, 721, 722, 880, 881, 882, 883, 908, 910, 911, 912, 973, 974, 975, 976, 979, 980, 981, 982, 1070, 1071, 1072, 1073, 1206, 1207, 1212, 1213, 1372, 1373, 1374, 1379, 1807, 1808, 1809, 1810, 1818, 1819, 1820, 1821, 2031, 2032, 2033, 2034, 2158, 2159, 2160, 2161, 2427, 2428, 2429, 2430, 2661, 2662, 2663, 2664, 2837, 2838, 2839, 2840, 2914, 2915, 2916, 2917, 3071, 3072, 3073, 3074, 3090, 3091, 3092, 3093, 3172, 3173, 3174, 3180, 3186, 3187, 3188, 3189, 3330, 3331, 3332, 3333
+   EL PUESTO 655, DE LOS CINCO FUERA DEL MARCADO: DENTRO del tramo
+   EL PUESTO 719, DE LOS CINCO FUERA DEL MARCADO: DENTRO del tramo
+   EL PUESTO 976, DE LOS CINCO FUERA DEL MARCADO: DENTRO del tramo
+   EL PUESTO 1809, DE LOS CINCO FUERA DEL MARCADO: DENTRO del tramo
+   EL PUESTO 1810, DE LOS CINCO FUERA DEL MARCADO: DENTRO del tramo
+
+C) EL UNIVERSO YA CONSUMIDO, CONTADO DE SUS DIECISEIS FICHEROS, Y CON EL
+   LECTOR QUE LE TOCA A CADA UNO. ES LA `C.A5` DEL AUDITOR ESQUIVADA CON
+   SU CIFRA DELANTE: con un solo patron el universo sale 300 en vez de 681.
+   docs/loop/_auditor_v189b_exclusion.txt              1792 bytes | numeros_de  |  381 dentro
+   docs/loop/_auditor_v190_exclusion.txt               1924 bytes | numeros_de  |  411 dentro
+   docs/loop/_auditor_v189b_ciega_blind.txt           40517 bytes | puestos_de  |   30 dentro
+   docs/loop/_auditor_v190_ciega_blind.txt            41948 bytes | puestos_de  |   30 dentro
+   docs/loop/SALIDA_V190_T4_CIEGA.txt                 39678 bytes | puestos_de  |   30 dentro
+   docs/loop/SALIDA_V191_T2_CIEGA.txt                 41803 bytes | puestos_de  |   30 dentro
+   docs/loop/_auditor_v192_ciega_blind.txt            41952 bytes | puestos_de  |   30 dentro
+   docs/loop/SALIDA_V192_T2_CIEGA.txt                 39850 bytes | puestos_de  |   30 dentro
+   docs/loop/_auditor_v193_ciega_blind.txt            39698 bytes | puestos_de  |   30 dentro
+   docs/loop/SALIDA_V193_T3_CIEGA.txt                 41185 bytes | puestos_de  |   30 dentro
+   docs/loop/_auditor_v194_ciega_blind.txt            40480 bytes | puestos_de  |   30 dentro
+   docs/loop/_auditor_v195_ciega_blind.txt            40551 bytes | puestos_de  |   30 dentro
+   docs/loop/SALIDA_V195_T2_CIEGA.txt                 81838 bytes | puestos_de  |   60 dentro
+   docs/loop/_auditor_v196_ciega_blind.txt            80705 bytes | puestos_de  |   60 dentro
+   docs/loop/SALIDA_V196_T2_CIEGA.txt                164199 bytes | puestos_de  |  120 dentro
+   docs/loop/_auditor_v197_ciega_blind.txt           162966 bytes | puestos_de  |  120 dentro
+   CIFRA ficheros del universo que EXISTEN: 16 de 16
+   CIFRA universo consumido, CON EL LECTOR QUE LE TOCA A CADA UNO: 681
+   CIFRA universo consumido, CON UN SOLO PATRON PARA TODOS: 300
+   ESA ES LA TRAMPA DE LA `C.A5`, MEDIDA AQUI Y NO CREIDA: la diferencia
+   es de 381 puestos, y con la cifra corta el `solape 0 por construccion`
+   seria falso.
+   LA SELLADA DEL AUDITOR DICE 681 -> CALZA
+   CIFRA universo menos los 120 puestos del tramo, POR DIFERENCIA DE
+   CONJUNTOS: 561
+   LA SELLADA DEL AUDITOR DICE 561 -> CALZA
+
+D) LOS VECINOS DETERMINISTAS, CON vecinos() IMPORTADA Y NO COPIADA
+   CIFRA vecinos elegidos: 120
+   14, 15, 16, 17, 28, 29, 30, 31, 75, 76, 77, 78, 140, 141, 144, 145, 163, 164, 165, 166, 208, 209, 210, 211, 401, 402, 403, 404, 617, 618, 619, 620, 658, 659, 662, 663, 723, 724, 725, 726, 884, 885, 886, 887, 913, 914, 915, 916, 983, 984, 985, 986, 987, 988, 989, 990, 1074, 1075, 1076, 1077, 1214, 1215, 1217, 1218, 1380, 1381, 1382, 1383, 1822, 1823, 1824, 1825, 1826, 1827, 1828, 1829, 2035, 2036, 2037, 2038, 2163, 2164, 2165, 2166, 2431, 2432, 2433, 2434, 2665, 2666, 2667, 2668, 2841, 2842, 2843, 2844, 2920, 2921, 2922, 2923, 3075, 3076, 3077, 3078, 3094, 3095, 3096, 3097, 3190, 3191, 3192, 3193, 3194, 3195, 3196, 3197, 3334, 3335, 3336, 3337
+   AL DOBLE: 120 del tramo mas 120 vecinos = 240 puestos
+   ES EL DOBLE EXACTO: SI
+   SOLAPE de los vecinos con el propio tramo: 0
+   SOLAPE de los vecinos con el universo consumido: 0
+   (los dos ceros salen POR CONSTRUCCION: `evitar` va DENTRO de la
+    llamada, no comprobado despues)
+   TODOS los vecinos existen en el archivo: SI
+
+D.1) EL COTEJO CONTRA LA SELLADA DEL AUDITOR, QUE NO SE COPIA
+   docs/loop/_auditor_v197_doble_para_la_198.txt
+      disco 1829 bytes | LF 1829 bytes | sha256 LF 780dbd7ea55ae1b9
+   CIFRA vecinos que la sellada publica, CON EL LECTOR DE LA 196: 0
+   CIFRA vecinos que la sellada publica, CON EL LECTOR DE ESTA VUELTA: 120
+   POR QUE HUBO QUE ESCRIBIR UN LECTOR, Y ES UNA MEDICION: la sellada de
+   la 197 SE TITULA `EL DOBLE DEL TRAMO DEL AUDITOR 197...`, asi que su
+   PRIMERA LINEA tambien empieza por `EL DOBLE`. El lector de la 196 casa
+   con el titulo, no encuentra dos puntos, y devuelve la lista VACIA: el
+   cotejo habria publicado un NO CALZA FALSO contra una sellada correcta.
+   El lector de esta vuelta exige `EL DOBLE:` con sus dos puntos. LAS DOS
+   CIFRAS SE PUBLICAN Y NINGUN LECTOR SE RETIRA.
+   MI RECOMPUTACION Y LA SELLADA SON EL MISMO CONJUNTO: SI
+
+D.2) LOS QUEMADOS (pieza `g`), DECLARADOS AQUI Y NO DESPUES DE COTEJAR
+   UN PUESTO CUYA CLASE YA ME DIJERON NO PRUEBA QUE YO LEA BIEN, asi que
+   SALE DEL CREDITO. Se lee igual y su clase se publica igual.
+   VAN CATORCE Y EL ENCARGO NOMBRA NUEVE, Y LA DIFERENCIA VA CONTRA MI:
+   los cinco de mas salen de la `4.2` y la `5.3` leidas por mi. El
+   criterio es 'los que lleguen con su clase YA SABIDA', no 'los que el
+   encargo liste'.
+   616   DENTRO -> acta 197, adjudicacion 4.2: una de las CUATRO discrepancias quemadas que el acta publica. NO lo nombra el encargo: lo anado yo
+   655   DENTRO -> acta 197, adjudicacion 4.1: una de las NUEVE discrepancias limpias, las nueve adjudicadas A FAVOR DEL ARCHIVO
+   719   DENTRO -> acta 197, adjudicacion 4.1, Y ADEMAS con su razon: el archivo cita la REGLA PROPIA del puesto 595, el mismo instrumento en dos ocasiones
+   976   DENTRO -> acta 197, adjudicacion 4.1, Y ADEMAS con su razon: la familia del sub-puro 7, cuatro pares leidos y los cuatro en A
+   1809  DENTRO -> acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo
+   1810  DENTRO -> acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo
+   2428  DENTRO -> acta 197, hallazgo 5.3: dice que el auditor COINCIDE con el archivo en el 2428, o sea publica su clase por la via de la coincidencia. NO lo nombra el encargo: lo anado yo
+   2429  DENTRO -> acta 197, adjudicacion 4.2: discrepancia quemada publicada. NO lo nombra el encargo: lo anado yo
+   2430  DENTRO -> acta 197, adjudicacion 4.2: discrepancia quemada publicada. NO lo nombra el encargo: lo anado yo
+   2662  DENTRO -> acta 197, adjudicacion 4.2 y hallazgo 5.3: quemada publicada Y tres lectores contra el archivo. NO lo nombra el encargo: lo anado yo
+   2838  DENTRO -> acta 197, adjudicacion 4.1, Y ADEMAS con su razon: contencion invertida, el corto cabe entero en el largo y no trae paso propio
+   2916  DENTRO -> acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo
+   3072  DENTRO -> acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo
+   3173  DENTRO -> acta 197, adjudicacion 4.1 y hallazgo 5.3: TRES lectores independientes contra el archivo, y el acta lo nombra
+   CIFRA quemados declarados: 14
+   CIFRA quemados DENTRO de los 240: 14
+   CIFRA quemados FUERA: 0
+   CIFRA los NUEVE que el encargo nombra y que estan dentro: 9
+
+D.3) LOS INALCANZABLES A CIEGAS (pieza `f`), CONTADOS ANTES DE LEER
+   EL BARRIDO MIRA SOLO SI LA RAZON CITA UN RACIMO O UNA CORRECCION
+   DECLARADA, Y NO DEVUELVE NI LA CLASE NI EL TEXTO DE LA RAZON. Lo que
+   sale es el NUMERO del puesto y la cuenta, y nada mas: un barrido que
+   devolviera la razon seria un destape con otro nombre.
+   Y NO SE ENSANCHA LA LISTA BLANCA DEL AISLADOR, que entregaria la
+   respuesta: eso lo prohibe la adjudicacion `4.4` del acta 197.
+   CIFRA razones de los 240 que citan un RACIMO: 14
+      206, 207, 208, 209, 615, 616, 618, 620, 663, 911, 990, 1206, 1217, 1381
+   CIFRA razones que citan una CORRECCION DECLARADA: 6
+      204, 402, 658, 724, 2662, 2916
+   CIFRA INALCANZABLES A CIEGAS, union de los dos: 20
+   SOBRE LOS 120 DE LA 197 EL AUDITOR MIDIO 6 Y 3. Aqui son 14 y 6 sobre
+   240 puestos, y la comparacion se publica sin resolverla.
+
+D.4) EL REPARTO DEL MARCADO (pieza `e`), QUE EL HALLAZGO `5.2` OBLIGA
+   EL HALLAZGO DICE: de los 120 del auditor, 14 llevan el literal
+   `DISCUTIBLE MARCADO` y LOS 14 SON DEL 2662 PARA ARRIBA, con 0 en los 89
+   puestos por debajo. Si el reparto sale igual sobre estos 240, LA METRICA
+   DE DENTRO-O-FUERA NO ES COMPARABLE ENTRE TRAMOS, y esa cifra tiene que
+   estar PUBLICADA y no deducida.
+   CIFRA de los 240 que llevan 'DISCUTIBLE MARCADO': 31
+   cuales: 2662, 2663, 2664, 2665, 2666, 2667, 2668, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2914, 2915, 2916, 2917, 2920, 2921, 2922, 2923, 3072, 3076, 3078, 3094, 3095, 3096, 3173, 3332
+   REPARTO POR PUESTO, con el corte del hallazgo (2662):
+      del 2662 PARA ARRIBA: 31 marcados de 63 puestos
+      por DEBAJO del 2662 : 0 marcados de 177 puestos
+   EL REPARTO SALE IGUAL QUE EL DEL AUDITOR (todo arriba, cero abajo): SI
+
+E) EL AISLAMIENTO DE LOS 240, CON aislador_de_ciega.py
+   CIFRA puestos que van a la ciega: 240
+   comando: aislador_de_ciega.py --criterio <el de arriba> --ciega docs/loop/SALIDA_V197_T3_CIEGA.txt
+            --destape docs/loop/SALIDA_V197_T3_DESTAPE.txt --puestos <los 240 puestos>
+      | ==============================================================================
+      | AISLADOR DE CIEGA
+      | ==============================================================================
+      |    criterio: relectura AL DOBLE del tramo de la tanda del AUDITOR de la vuelta 197 (AUDITOR.md 1.2, y es DEUDA DEL AUDITOR que paga el ejecutor con el instrumento): los 120 puestos de _auditor_v197_ciega_blind.txt MAS sus 120 vecinos deterministas, o sea DOSCIENTOS CUARENTA pares. EL MOTIVO: CINCO discrepancias del auditor (655, 719, 976, 1809, 1810) cayeron FUERA de su marcado, asi que el credito de su tanda baja y el tramo se relee al doble. La serie medida va 30, 60, 120 y ahora 240. Los vecinos, elegidos con vecinos() importada de vuelta182_tarea1c_relectura_al_doble.py sobre el conjunto evitar de todo lo ya consumido, contado de sus dieciseis ficheros con el lector que le toca a cada uno, para que el solape con el tramo y con el universo salga por construccion y no por suerte. LA VARA CON LA QUE SE LEE, CITADA POR NUMERO Y NO PARAFRASEADA: docs/BANCO_DE_TEXTOS.md 9.6.1, LA VARA DE LA RAMA CONTENIDO-MANDA: LA LINEA O EL PROCEDIMIENTO. Literal: "Si lo que el hijo añade a lo que la madre ya dice CABE EN UNA LÍNEA, REPITE. Si trae un PROCEDIMIENTO que la madre no tiene, CONTINÚA." Y CON SUS PRECISIONES 9.6.2 y 9.6.3 y la tabla de LOS DOS POLOS del 9.22. PRIMERO: LA VARA DE CONTENIDO-MANDA ES EL SUELO, NO EL TECHO. ANTES de aplicarla se pregunta si el par pertenece a una familia con REGLA PROPIA YA FIJADA, porque entonces manda la especifica. ES LA ESPECIE DEL 719 (la regla del puesto 595: el mismo instrumento en dos ocasiones distintas es sano) Y LA DEL 976 (la familia del sub-puro 7, cuatro pares leidos y los cuatro en A). Consultar la familia NO quema nada, porque las clases de OTROS puestos no son el sujeto sellado. SEGUNDO: LA CONTENCION SE MIDE SOBRE EL CONTENIDO, NO SOBRE EL CONTENEDOR. Si el nodo corto cabe ENTERO en el largo y NO trae ni un paso propio, es A por contencion, POR MUCHO QUE EL LARGO TRAIGA ADEMAS UN PROCEDIMIENTO ENTERO. Preguntarse 'el hijo trae procedimiento, luego CONTINUA' mirando el RESIDUO DEL CONTENEDOR en vez del residuo del contenido es la especie del 2838. La pregunta correcta es QUE QUEDA DEL CORTO si se le quita lo que el largo ya dijo, y no que le sobra al largo. TERCERO, HEREDADO Y NO RETIRADO: LA SEMEJANZA DE LOS IDS NO DECIDE. El banco 9.6.3 dice que el TAMANO DEL SOLAPE NO DECIDE y que se pesa EL RESTO Y EN QUE LADO. LA CLASE B NI SE SALTA NI SE SOBRE EMITE, y el sesgo esta medido en LAS DOS direcciones y las dos son perdida. B es el par que se pisa sin arista y sin que ninguno nombre al otro, no un comodin para la duda. La tabla de LOS DOS POLOS del banco 9.22 va delante de esta lectura. COMO SE APLICA, y es deliberadamente mecanico: primero se pregunta si hay regla propia de familia; si no la hay, se lee el paso de la madre que el hijo desarrolla y se pregunta si es una linea o si ya trae el procedimiento; se lee el nodo hijo entero y se pregunta que queda si se le quita lo que la madre ya dijo; y de lo que queda se pregunta si cabe en una linea o si es una secuencia de acciones con su propia logica.
+      |    CIFRA filas del archivo: 3388
+      |    --puestos: 10, 11, 12, 13, 14, 15, 16, 17, 24, 25, 26, 27, 28, 29, 30, 31, 71, 72, 73, 74, 75, 76, 77, 78, 133, 134, 135, 139, 140, 141, 144, 145, 159, 160, 161, 162, 163, 164, 165, 166, 204, 205, 206, 207, 208, 209, 210, 211, 397, 398, 399, 400, 401, 402, 403, 404, 613, 614, 615, 616, 617, 618, 619, 620, 654, 655, 656, 657, 658, 659, 662, 663, 719, 720, 721, 722, 723, 724, 725, 726, 880, 881, 882, 883, 884, 885, 886, 887, 908, 910, 911, 912, 913, 914, 915, 916, 973, 974, 975, 976, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1206, 1207, 1212, 1213, 1214, 1215, 1217, 1218, 1372, 1373, 1374, 1379, 1380, 1381, 1382, 1383, 1807, 1808, 1809, 1810, 1818, 1819, 1820, 1821, 1822, 1823, 1824, 1825, 1826, 1827, 1828, 1829, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2158, 2159, 2160, 2161, 2163, 2164, 2165, 2166, 2427, 2428, 2429, 2430, 2431, 2432, 2433, 2434, 2661, 2662, 2663, 2664, 2665, 2666, 2667, 2668, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2914, 2915, 2916, 2917, 2920, 2921, 2922, 2923, 3071, 3072, 3073, 3074, 3075, 3076, 3077, 3078, 3090, 3091, 3092, 3093, 3094, 3095, 3096, 3097, 3172, 3173, 3174, 3180, 3186, 3187, 3188, 3189, 3190, 3191, 3192, 3193, 3194, 3195, 3196, 3197, 3330, 3331, 3332, 3333, 3334, 3335, 3336, 3337
+      |       los 240 existen en el archivo
+      |    CIFRA pares elegidos: 240
+      |    puestos: 10, 11, 12, 13, 14, 15, 16, 17, 24, 25, 26, 27, 28, 29, 30, 31, 71, 72, 73, 74, 75, 76, 77, 78, 133, 134, 135, 139, 140, 141, 144, 145, 159, 160, 161, 162, 163, 164, 165, 166, 204, 205, 206, 207, 208, 209, 210, 211, 397, 398, 399, 400, 401, 402, 403, 404, 613, 614, 615, 616, 617, 618, 619, 620, 654, 655, 656, 657, 658, 659, 662, 663, 719, 720, 721, 722, 723, 724, 725, 726, 880, 881, 882, 883, 884, 885, 886, 887, 908, 910, 911, 912, 913, 914, 915, 916, 973, 974, 975, 976, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 1070, 1071, 1072, 1073, 1074, 1075, 1076, 1077, 1206, 1207, 1212, 1213, 1214, 1215, 1217, 1218, 1372, 1373, 1374, 1379, 1380, 1381, 1382, 1383, 1807, 1808, 1809, 1810, 1818, 1819, 1820, 1821, 1822, 1823, 1824, 1825, 1826, 1827, 1828, 1829, 2031, 2032, 2033, 2034, 2035, 2036, 2037, 2038, 2158, 2159, 2160, 2161, 2163, 2164, 2165, 2166, 2427, 2428, 2429, 2430, 2431, 2432, 2433, 2434, 2661, 2662, 2663, 2664, 2665, 2666, 2667, 2668, 2837, 2838, 2839, 2840, 2841, 2842, 2843, 2844, 2914, 2915, 2916, 2917, 2920, 2921, 2922, 2923, 3071, 3072, 3073, 3074, 3075, 3076, 3077, 3078, 3090, 3091, 3092, 3093, 3094, 3095, 3096, 3097, 3172, 3173, 3174, 3180, 3186, 3187, 3188, 3189, 3190, 3191, 3192, 3193, 3194, 3195, 3196, 3197, 3330, 3331, 3332, 3333, 3334, 3335, 3336, 3337
+      |    CIFRA fugas del destape en la salida ciega: 0
+      |    VERDE. El sujeto queda aislado ANTES de mirar nada.
+      |       salida ciega: docs/loop/SALIDA_V197_T3_CIEGA.txt (326299 bytes)
+      |       destape:      docs/loop/SALIDA_V197_T3_DESTAPE.txt (250425 bytes)  NO ABRIR hasta tener las clases
+   exitcode del aislador: 0
+   docs/loop/SALIDA_V197_T3_CIEGA.txt -> disco 326299 bytes | LF 326299 bytes | sha256 LF 54bd0adedfc31a18
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: no esta vacia: SI
+   docs/loop/SALIDA_V197_T3_DESTAPE.txt -> disco 250425 bytes | LF 250425 bytes | sha256 LF 097ca24e99ee1b03
+      LA RUTA QUE PROMETE PRUEBA ES CIFRA: no esta vacia: SI
+
+F) EL ARCHIVO AL SALIR, REMEDIDO Y NO SUPUESTO
+   sha256 LF al entrar: 0a77b5a35a962621
+   sha256 LF al salir : 0a77b5a35a962621
+   NO SE MOVIO NINGUN VEREDICTO: SI
+
+G) LO QUE FALTA, Y LO HACE EL EJECUTOR CON LAS MANOS
+   Este fichero NO LEE EL DESTAPE. Escribe la ciega y el destape y los
+   deja cerrados. Las clases se escriben en un tercer fichero ANTES de
+   abrir el destape, y ese orden es lo unico que hace que el cotejo valga.
+
+FIN
