@@ -1,0 +1,232 @@
+==============================================================================
+VUELTA 201, TAREA 4 . `OP-L-01` Y `OP-L-03` LEIDAS CONTRA SU VARA
+NO SE MUEVE NINGUN `estado` Y NO SE CIERRA NINGUNA FICHA.
+==============================================================================
+
+A) LO PRIMERO Y SIN SALTARSELO: LA VARA, CORRIDA AQUI POR MI
+   La vara NO SE CLONA Y NO SE TOCA: se invoca.
+   comando: python scripts/loop/vuelta150_3_relectura_expediente.py --corte 405123f1b49cde57f4ce4f05a1d1cd5ab4d7e065
+   exitcode: 0
+   sellada en docs/loop/SALIDA_V201_T4_VARA.txt (17849 bytes)
+   LAS CIFRAS DE HOY, LEIDAS DE SU SALIDA:
+      CIFRA VIEJA, la de siempre y sin tocar               6
+      CIFRA de esas que estan CONSUMIDAS por otra ficha    2
+      CIFRA de esas que estan en LISTA                     5
+      CIFRA de esas que son TRABAJO REAL                   4
+      CIFRA fichas HECHA sin ninguna prueba                1
+      CIFRA fichas congeladas declaradas                   24
+      CIFRA fichas congeladas en silencio                  12
+      CIFRA fichas de tipo MESA en el expediente           6
+      CIFRA fichas del expediente                          71
+      CIFRA fichas en LISTA sin ninguna prueba             6
+      CIFRA fichas que no calzan                           37
+
+   EL CONTRASTE CON LAS CIFRAS DEL ENCARGO, Y SI DISCREPAN SE DECLARA
+   (AUDITOR.md 1.1, EL INSTRUMENTO MANDA):
+      de esas que estan CONSUMIDAS por otra ficha    encargo 2    hoy 2      CALZA
+      de esas que son TRABAJO REAL                   encargo 4    hoy 4      CALZA
+      fichas del expediente                          encargo 71   hoy 71     CALZA
+      fichas en LISTA sin ninguna prueba             encargo 6    hoy 6      CALZA
+      fichas que no calzan                           encargo 37   hoy 37     CALZA
+   CIFRA cifras del encargo que DISCREPAN de las de hoy: 0
+
+B) LAS DOS FICHAS, LOCALIZADAS POR LINEA
+   docs/plan/OPERACIONES.jsonl: disco 499474 bytes | LF 499474 bytes
+   OP-L-01   1 linea(s): 41
+   OP-L-03   1 linea(s): 43
+
+==============================================================================
+FICHA OP-L-01 . LINEA 41 DE docs/plan/OPERACIONES.jsonl
+==============================================================================
+   estado (SE LEE, NO SE MUEVE): 'LISTA'
+   fecha_corte: '2026-08-11' | tipo: 'MESA' | fase: '09_LECTURAS_DIRIGIDAS' | orden: 1
+   depende_de: (vacio)
+   nodos=0 preservar=0 eliminar=0 superviviente=None
+
+   SU `verificacion`, CITADA POR LINEA. LA FICHA ES UNA LINEA DE
+   JSONL, asi que la coordenada es LA LINEA 41 MAS EL INDICE del
+   elemento, y las dos van juntas.
+   CIFRA elementos de `verificacion`: 6
+   --- verificacion[1] (linea 41) CLAUSULA, 78 caracteres ---
+      | ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven sol
+      | o aqui
+   --- verificacion[2] (linea 41) CLAUSULA, 51 caracteres ---
+      | el marcador del cribado no se mueve: sigue en 2.117
+   --- verificacion[3] (linea 41) CLAUSULA, 69 caracteres ---
+      | cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+   --- verificacion[4] (linea 41) CORRECCION DECLARADA POR ADICION, 3326 caracteres ---
+      | CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR 
+      | EL CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARL
+      | O Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista v
+      | erificacion, que es la via que la ficha gemela OP-L-03 uso en la vuelta 
+      | 72 para su c ...(la correccion se cita entera en el fichero, aqui va su 
+      | apertura)
+   --- verificacion[5] (linea 41) CORRECCION DECLARADA POR ADICION, 1993 caracteres ---
+      | CORRECCION DECLARADA (2026-09-04, vuelta 166, TAREA 2 del encargo), POR 
+      | EL MISMO CARRIL DEL BANCO 9.10, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN C
+      | LAVE NUEVA DE ESQUEMA. LO QUE SE CORRIGE es la clausula que en esta list
+      | a dice, verbatim: 'el marcador del cribado no se mueve: sigue en 2.117'.
+      |  LA VUELTA 1 ...(la correccion se cita entera en el fichero, aqui va su 
+      | apertura)
+   --- verificacion[6] (linea 41) CORRECCION DECLARADA POR ADICION, 2376 caracteres ---
+      | CORRECCION DECLARADA (2026-09-04, vuelta 169, TAREA 4 del encargo), POR 
+      | EL CARRIL DEL BANCO 9.10, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN CLAVE N
+      | UEVA DE ESQUEMA (es un elemento mas de esta misma lista verificacion, la
+      |  via que esta ficha ya uso en la vuelta 166 para sus clausulas 4 y 5 y q
+      | ue el acta 7 ...(la correccion se cita entera en el fichero, aqui va su 
+      | apertura)
+
+   SU `evidencia`, ELEMENTO A ELEMENTO, CON SU FICHERO MEDIDO EN
+   BYTES EXACTOS DE DISCO Y LF (P.2)
+   CIFRA elementos de `evidencia`: 4
+      evidencia[1]: LECTURAS_DIRIGIDAS.md, las once con su razon
+         docs/plan/LECTURAS_DIRIGIDAS.md
+            disco 214916 bytes | LF 214916 bytes | 2230 lineas por count(NL)
+      evidencia[2]: INTRA_DOMINIO_INFORME.md seccion 52, las parejas que el ejercicio no puede cerrar
+         docs/INTRA_DOMINIO_INFORME.md
+            disco 943970 bytes | LF 943970 bytes | 16774 lineas por count(NL)
+      evidencia[3]: BANCO_DE_TEXTOS.md, TABLA VIVA DE LOS PUROS
+         docs/BANCO_DE_TEXTOS.md
+            disco 182228 bytes | LF 182228 bytes | 3118 lineas por count(NL)
+      evidencia[4]: MEDIDO el 11 ago 2026: 205 pares internos fuera de cola sobre 221 componentes
+         NO NOMBRA NINGUN FICHERO: es prosa, y no hay
+            documento que medir por esta via.
+
+   LA LECTURA: SI EL DOCUMENTO CUBRE LO QUE LA FICHA DESCRIBE
+   LA PRUEBA VA DECLARADA ANTES DE CORRERSE, en la constante PRUEBAS
+   de este mismo fichero, para que la aguja no se elija despues de
+   mirar. ES PRUEBA DE PRESENCIA, NO DE CALIDAD, y se dice.
+      evidencia[1] . las once con su razon
+         fichero: docs/plan/LECTURAS_DIRIGIDAS.md
+         aguja:   '^###\\s+`LD-(0[1-9]|1[01])`'  (minimo 11)
+         CIFRA aciertos: 11, linea(s) 76, 95, 112, 128, 146, 165, 187, 224, 243, 257, 268
+         VEREDICTO: CUBIERTA
+         LA CITA QUE LO SOSTIENE, pegada de su linea:
+            linea 76: ### `LD-01` . `formalizar_junta_asesora` contra `identificar_consejo_asesores` . **D**
+            linea 95: ### `LD-02` . `channels_hypothesis_physical` contra `channels_hypothesis_web_mobile` . **D**
+            linea 112: ### `LD-03` . `channels_hypothesis_web_mobile` contra `seleccion_canal_fisico` . **A**
+      evidencia[1] . la cabecera que agrupa a las once
+         fichero: docs/plan/LECTURAS_DIRIGIDAS.md
+         aguja:   '^##\\s+LAS ONCE, una por una'  (minimo 1)
+         CIFRA aciertos: 1, linea(s) 74
+         VEREDICTO: CUBIERTA
+         LA CITA QUE LO SOSTIENE, pegada de su linea:
+            linea 74: ## LAS ONCE, una por una
+      evidencia[2] . seccion 52, las parejas que el ejercicio no puede cerrar
+         fichero: docs/INTRA_DOMINIO_INFORME.md
+         aguja:   '^##\\s+52\\.\\s+LAS PAREJAS QUE EL EJERCICIO NO PUEDE CERRAR'  (minimo 1)
+         CIFRA aciertos: 1, linea(s) 10055
+         VEREDICTO: CUBIERTA
+         LA CITA QUE LO SOSTIENE, pegada de su linea:
+            linea 10055: ## 52. LAS PAREJAS QUE EL EJERCICIO NO PUEDE CERRAR
+      evidencia[3] . TABLA VIVA DE LOS PUROS
+         fichero: docs/BANCO_DE_TEXTOS.md
+         aguja:   'TABLA VIVA DE LOS PUROS'  (minimo 1)
+         CIFRA aciertos: 1, linea(s) 938
+         VEREDICTO: CUBIERTA
+         LA CITA QUE LO SOSTIENE, pegada de su linea:
+            linea 938: #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+
+   CIFRA pruebas de cobertura de OP-L-01: 4 CUBIERTAS y 0 NO CUBIERTAS
+
+==============================================================================
+FICHA OP-L-03 . LINEA 43 DE docs/plan/OPERACIONES.jsonl
+==============================================================================
+   estado (SE LEE, NO SE MUEVE): 'LISTA'
+   fecha_corte: '2026-08-11' | tipo: 'MESA' | fase: '09_LECTURAS_DIRIGIDAS' | orden: 3
+   depende_de: OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-05, OP-D-06
+   nodos=0 preservar=0 eliminar=0 superviviente=None
+
+   SU `verificacion`, CITADA POR LINEA. LA FICHA ES UNA LINEA DE
+   JSONL, asi que la coordenada es LA LINEA 43 MAS EL INDICE del
+   elemento, y las dos van juntas.
+   CIFRA elementos de `verificacion`: 4
+   --- verificacion[1] (linea 43) CLAUSULA, 53 caracteres ---
+      | ningun acto se funde con un par interno sin veredicto
+   --- verificacion[2] (linea 43) CLAUSULA, 85 caracteres ---
+      | las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueve
+      | n su marcador
+   --- verificacion[3] (linea 43) CLAUSULA, 83 caracteres ---
+      | cada acto cuya lectura completa cambie su forma se re-mide con su cobert
+      | ura al lado
+   --- verificacion[4] (linea 43) CORRECCION DECLARADA POR ADICION, 3455 caracteres ---
+      | CORRECCION DECLARADA (2026-08-26, vuelta 72, TAREA 1 del encargo), POR E
+      | L CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO
+      |  Y SIN CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista ve
+      | rificacion, que es la via que la ficha gemela de OP-U-02 uso en la vuelt
+      | a 66 para su ...(la correccion se cita entera en el fichero, aqui va su 
+      | apertura)
+
+   SU `evidencia`, ELEMENTO A ELEMENTO, CON SU FICHERO MEDIDO EN
+   BYTES EXACTOS DE DISCO Y LF (P.2)
+   CIFRA elementos de `evidencia`: 3
+      evidencia[1]: BANCO_DEL_PLAN.md P.5
+         docs/plan/BANCO_DEL_PLAN.md
+            disco 61554 bytes | LF 61554 bytes | 1253 lineas por count(NL)
+      evidencia[2]: MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117
+         NO NOMBRA NINGUN FICHERO: es prosa, y no hay
+            documento que medir por esta via.
+      evidencia[3]: LECTURAS_DIRIGIDAS.md, el reparto por acto
+         docs/plan/LECTURAS_DIRIGIDAS.md
+            disco 214916 bytes | LF 214916 bytes | 2230 lineas por count(NL)
+
+   LA LECTURA: SI EL DOCUMENTO CUBRE LO QUE LA FICHA DESCRIBE
+   LA PRUEBA VA DECLARADA ANTES DE CORRERSE, en la constante PRUEBAS
+   de este mismo fichero, para que la aguja no se elija despues de
+   mirar. ES PRUEBA DE PRESENCIA, NO DE CALIDAD, y se dice.
+      evidencia[1] . P.5
+         fichero: docs/plan/BANCO_DEL_PLAN.md
+         aguja:   '^##\\s+P\\.5\\s'  (minimo 1)
+         CIFRA aciertos: 1, linea(s) 239
+         VEREDICTO: CUBIERTA
+         LA CITA QUE LO SOSTIENE, pegada de su linea:
+            linea 239: ## P.5 REGLA DE ORDEN: CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO
+      evidencia[3] . el reparto por acto
+         fichero: docs/plan/LECTURAS_DIRIGIDAS.md
+         aguja:   'reparto por acto'  (minimo 1)
+         CIFRA aciertos: 0, linea(s) (ninguna)
+         VEREDICTO: NO CUBIERTA, Y EL HUECO VA NOMBRADO
+      evidencia[3] . el sujeto de la ficha, nombrado en el documento
+         fichero: docs/plan/LECTURAS_DIRIGIDAS.md
+         aguja:   'OP-L-03'  (minimo 1)
+         CIFRA aciertos: 0, linea(s) (ninguna)
+         VEREDICTO: NO CUBIERTA, Y EL HUECO VA NOMBRADO
+
+   CIFRA pruebas de cobertura de OP-L-03: 1 CUBIERTAS y 2 NO CUBIERTAS
+
+==============================================================================
+B.2) EL HUECO DE `OP-L-03`, MEDIDO HASTA EL FINAL EN VEZ DE DEJARLO EN
+     'NO CUBIERTA'. UNA BUSQUEDA NEGATIVA NO SE PUEDE CITAR SIN HABERLA
+     CORRIDO (EJECUTOR.md 9), Y AQUI SE CORRE LA POSITIVA TAMBIEN.
+==============================================================================
+   CIFRA ficheros docs/plan/OP_L_03_* en disco: 2
+      OP_L_03_LECTURAS.jsonl             disco 51368 bytes | LF 51368 bytes | 14 lineas por count(NL)
+         CIFRA filas no vacias: 14
+         CIFRA lineas que NO son JSON valido: 0
+         CIFRA valores distintos del campo `acto`: 14
+         LA `evidencia` DE LA FICHA LO NOMBRA: NO
+      OP_L_03_TRIANGULOS.jsonl           disco 55705 bytes | LF 55705 bytes | 19 lineas por count(NL)
+         CIFRA filas no vacias: 19
+         CIFRA lineas que NO son JSON valido: 0
+         CIFRA valores distintos del campo `acto`: 8
+         LA `evidencia` DE LA FICHA LO NOMBRA: NO
+   LA FRASE ENTERA, Y LAS DOS MITADES SE MIDEN: el documento que la
+   `evidencia` de OP-L-03 NOMBRA (docs/plan/LECTURAS_DIRIGIDAS.md) NO trae
+   ni el literal 'reparto por acto' ni una sola mencion de OP-L-03; y los
+   ficheros que SI traen un reparto por acto de esta ficha EXISTEN en
+   disco y su `evidencia` NO LOS NOMBRA. EL HUECO NO ES QUE FALTE EL
+   TRABAJO: ES QUE LA EVIDENCIA APUNTA AL DOCUMENTO EQUIVOCADO.
+
+==============================================================================
+C) LO QUE ESTA TAREA PROPONE Y LO QUE NO DECIDE
+==============================================================================
+   NO SE MOVIO NINGUN `estado`, NO SE CERRO NINGUNA FICHA y NO SE ESCRIBIO
+   UNA SOLA LINEA EN docs/plan/. Lo unico que produce esta tarea es
+   LECTURA MEDIDA. Si de ella sale que una ficha esta cumplida, SE PROPONE
+   CON SU EVIDENCIA Y LO ADJUDICA EL AUDITOR.
+
+   Y LO QUE LA PROPIA VARA YA DICE Y AQUI NO SE MEJORA: que el documento
+   este NO significa que su mesa se hiciera bien. Esta lectura mide
+   PRESENCIA de lo que la ficha dice que hay, no calidad de la mesa.
+
+FIN
