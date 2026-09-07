@@ -100,7 +100,7 @@ tabla tallada entera cuando la vuelta cierre.
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS. BLOQUEANTE. El acta 197 entra en la serie con el numero que devuelve `scripts/loop/serie_de_registros.py`, computado y no tecleado, y el cuerpo del acta se acota contando su primera linea con `grep -n` EN ESTA VUELTA. La entrada registra, y cada cifra se cuenta del cuerpo acotado: LAS SIETE ADJUDICACIONES `4.1` a `4.7`, con las tres preguntas del reporte de la 196 contestadas POR LETRA ESCRITA y no por doctrina nueva (`4.3` la `P.1`, `4.4` la `P.2`, `4.5` la `P.3`); LOS CUATRO HALLAZGOS de la seccion 5 (`5.1` el reporte que quema la ciega del auditor por construccion, `5.2` el marcado de discutibles que no existe por debajo del puesto 2662, `5.3` los tres puestos con tres lectores independientes contra el archivo, `5.4` el fichero del turno que no se limpia al cerrar); CERO CAIDAS DEL EJECUTOR DE CIFRA PUBLICADA, con la `C.E1` de la 196 RE CLASIFICADA A MI FAVOR como caida de REPORTE en prosa de acompanamiento, que NO acumula; MIS DOS CAIDAS DE METODO; y CINCO CAIDAS PROPIAS DEL AUDITOR, `C.A1` a `C.A5`, todas de metodo y todas remediadas dentro de su vuelta, con la `C.A1` en su TERCERA acta seguida de la misma especie. Y LA METRICA DE CREDITO de la seccion 7 con sus cifras. EL REGISTRADOR SIGUE SIENDO IDEMPOTENTE: se prueba re corriendolo, con la sede medida en bytes antes y despues, y CADA LECTOR NUEVO LLEVA SU MUTACION DELANTE | **CERRADA** | `SALIDA_V197_T1A_REGISTRO_R59.txt`, `_MUTACION_REGISTRADOR.txt` (35/35), `_RECORRIDO_SIN_ESCRIBIR.txt` |
 | **TAREA 2** | EL ORDEN DEL TURNO DEL AUDITOR PASA A CODIGO. BLOQUEANTE. Sale de la adjudicacion `4.5` del acta 197, que contesta mi `P.3` por extension de `AUDITOR.md` 1.2, y esta MEDIDO: el reporte de la 196 publico la clase de archivo de 8 de los 120 puestos que el auditor de la 197 acababa de sellar. Sobre `scripts/loop/apertura_del_auditor.py`, QUE NO SE CLONA: (a) `leer_reporte()` APUNTA SU TOQUE Y CAE EN ROJO si el turno tiene sello y no ha declarado sus clases todavia, con lo que el orden obligatorio pasa a ser `sellar()` -> clasificar -> `--declarar-clases` -> `leer_reporte()`, y un turno SIN sello sigue pudiendo leer el reporte. (b) EL FICHERO DEL TURNO SE CIERRA, que es el hallazgo `5.4`: un carril que lo cierre al declarar las clases dejando constancia, de forma que un turno nuevo empiece limpio SIN TENER QUE BORRAR NADA, con el sello en disco intacto y la guarda `b` de `sellar()` mirando el disco igual que antes. (c) LA GUARDA DE CODIGO DE LA `C.A1`, que va por su TERCERA acta seguida: comprueba que la cifra del marcador que un acta publica calza con una salida de `AP.marcador()` de esa misma vuelta, y CAE EN ROJO si esa salida no existe o no calza. CADA UNA DE LAS TRES LLEVA SU CASO POSITIVO POR MUTACION DELANTE, con nombre estable y salida sellada, y el caso rojo tiene que MORDER: sin el remedio la guarda deja pasar y con el no | **CERRADA** | `SALIDA_V197_T2_MUTACION_ORDEN_DEL_TURNO.txt` (49/49), `_T2B_CIERRE_DEL_TURNO_197.txt`, `_T2C_GUARDA_MARCADOR_ACTA_197.txt`, `_T2_QUIEN_BORRA_LA_SEDE.txt` |
-| **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. Es deuda suya que paga el ejecutor con el instrumento. `AUDITOR.md` 1.2: CINCO discrepancias del auditor cayeron FUERA del marcado del archivo (`655`, `719`, `976`, `1809`, `1810`), asi que el credito de su tanda baja y el tramo se relee al doble. EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v197_doble_para_la_198.txt`: SON 240 PARES, 120 del tramo y 120 del doble, y la serie medida va 30, 60, 120 y ahora 240. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` de `scripts/loop/vuelta196_tarea2_relectura_al_doble.py`, y NADA se copia; se RECOMPUTA el doble y se comprueba que calza con el sellado, ESQUIVANDO LA TRAMPA DE LA `C.A5` (los `_exclusion.txt` guardan enteros sueltos y se leen con `numeros_de()`). (b) LEER LOS 240 A CIEGAS con `aislador_de_ciega.py` y escribir las clases ANTES de abrir el destape. (c) LA VARA es `9.6.1` con `9.6.2`, `9.6.3` y la tabla de LOS DOS POLOS del `9.22`, y CON LOS DOS ERRORES DEL AUDITOR DELANTE: la vara es el SUELO y no el TECHO (familia con regla propia manda), y la contencion se mide SOBRE EL CONTENIDO y no sobre el contenedor. (d) NO SALTARSE LA `B` NI SOBRE EMITIRLA. (e) PUBLICAR EL COTEJO con sus cifras y los discutibles marcados ANTES de saber si acierto, MAS el reparto por puesto del literal `DISCUTIBLE MARCADO` que el hallazgo `5.2` obliga. (f) LOS PUESTOS QUE LA CIEGA NO PUEDE ALCANZAR se declaran ANTES de leer y salen del credito. (g) LOS QUEMADOS por el acta y por el reporte se declaran ANTES de leer y no entran al credito | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
+| **TAREA 3** | LA RELECTURA AL DOBLE DEL TRAMO DEL AUDITOR. Es deuda suya que paga el ejecutor con el instrumento. `AUDITOR.md` 1.2: CINCO discrepancias del auditor cayeron FUERA del marcado del archivo (`655`, `719`, `976`, `1809`, `1810`), asi que el credito de su tanda baja y el tramo se relee al doble. EL TRAMO Y EL DOBLE ESTAN CERRADOS DESDE ANTES, computados y no tecleados, en `docs/loop/_auditor_v197_doble_para_la_198.txt`: SON 240 PARES, 120 del tramo y 120 del doble, y la serie medida va 30, 60, 120 y ahora 240. (a) `vecinos()` SE IMPORTA de `scripts/loop/vuelta182_tarea1c_relectura_al_doble.py` y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` de `scripts/loop/vuelta196_tarea2_relectura_al_doble.py`, y NADA se copia; se RECOMPUTA el doble y se comprueba que calza con el sellado, ESQUIVANDO LA TRAMPA DE LA `C.A5` (los `_exclusion.txt` guardan enteros sueltos y se leen con `numeros_de()`). (b) LEER LOS 240 A CIEGAS con `aislador_de_ciega.py` y escribir las clases ANTES de abrir el destape. (c) LA VARA es `9.6.1` con `9.6.2`, `9.6.3` y la tabla de LOS DOS POLOS del `9.22`, y CON LOS DOS ERRORES DEL AUDITOR DELANTE: la vara es el SUELO y no el TECHO (familia con regla propia manda), y la contencion se mide SOBRE EL CONTENIDO y no sobre el contenedor. (d) NO SALTARSE LA `B` NI SOBRE EMITIRLA. (e) PUBLICAR EL COTEJO con sus cifras y los discutibles marcados ANTES de saber si acierto, MAS el reparto por puesto del literal `DISCUTIBLE MARCADO` que el hallazgo `5.2` obliga. (f) LOS PUESTOS QUE LA CIEGA NO PUEDE ALCANZAR se declaran ANTES de leer y salen del credito. (g) LOS QUEMADOS por el acta y por el reporte se declaran ANTES de leer y no entran al credito | **CERRADA** | `SALIDA_V197_T3_SUJETO.txt`, `_T3_CIEGA.txt`, `_T3_MIS_CLASES.txt` (selladas antes), `_T3_COTEJO.txt` |
 | **TAREA 4** | LAS DOS CIFRAS QUE VIAJAN SIN SU VARA. (a) LA SECCION 9 PUBLICA "0 ARNESES DEL CENSO FUERA DE LA NOMINA" SIN NOMBRAR LA VARA. No es caida (la frase nombra su fuente y esa fuente si lleva la vara, adjudicacion `4.7`), pero un `0` al lado de un censo y una nomina de tres cifras se lee como que la nomina cubre el censo entero, y no lo cubre. Esa cifra pasa a viajar SIEMPRE CON SU VARA, en el sello de apertura y en el reporte, y se miden LAS DOS: con vara y sin vara. (b) EL TOPE DE 80 LINEAS DEL MODO AUSTERO SE MIDE POR TRES VARAS Y LAS TRES SE PUBLICAN, por la adjudicacion `4.6`: total, escrita a mano (la vara que el acta 196 fijo en su `4.7`), y escrita a mano menos lo que otra regla obliga a escribir. EL TOPE NO SE AFLOJA Y LA EXCEPCION NO SE INVENTA: se publican las tres cifras para que el fundador decida sobre numeros, y si la tercera vara sigue por encima de 80 SE DICE CON ESAS PALABRAS y la pregunta queda escrita | **ABIERTA, SIN CERRAR** | (la fila se anexa al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
 
@@ -287,5 +287,109 @@ contenido estaba medido y sellado antes de la primera operacion, y porque un
 auditor sin sede empieza distinto. Lo discutible es que **un fichero reconstruido
 por el ejecutor esta en la sede que prueba el turno del auditor**, aunque se escriba
 cerrado, con su motivo dentro y sin hacerse pasar por el original.
+
+### TAREA 3, LA RELECTURA AL DOBLE DE 240. CERRADA. 207 DE 224 EN LA MITAD LIMPIA, Y ONCE DISCREPANCIAS FUERA DEL MARCADO QUE VUELVEN A DOBLAR EL TRAMO.
+
+**Instrumentos y ficheros de salida, y toda cifra de abajo se cuenta de ellos:**
+`docs/loop/SALIDA_V197_T3_SUJETO.txt`, `_T3_CIEGA.txt` (326299 bytes),
+`_T3_DESTAPE.txt` (250425 bytes), `_T3_MIS_CLASES.txt` (43605 bytes) y
+`_T3_COTEJO.txt`. **El orden fue: sujeto commiteado, clases commiteadas, y SOLO
+DESPUES el destape.**
+
+**(a) EL DOBLE RECOMPUTADO CALZA CON LA SELLADA.** `vecinos()` importada de la
+182, y `puestos_de()`, `numeros_de()` y `UNIVERSO_CONSUMIDO` de la 196. Universo
+**681** de **16** ficheros con el lector que le toca a cada uno, **300** con un
+solo patron: la trampa de la `C.A5` medida y no creida, con **381** puestos de
+diferencia. **561** por diferencia de conjuntos. Doble **120**, solape **0** con
+el tramo y **0** con el universo **por construccion**. **Y HUBO QUE ESCRIBIR UN
+LECTOR:** la sellada se TITULA `EL DOBLE DEL TRAMO...`, asi que su primera linea
+tambien empieza por `EL DOBLE`; el lector de la 196 casa con el titulo y devuelve
+**0** vecinos, o sea **un `NO CALZA` falso contra una sellada correcta**. Con el
+lector que exige los dos puntos: **120**, y **calza**.
+
+**(b) LOS 240 LEIDOS A CIEGAS**, uno por uno, con `aislador_de_ciega.py`.
+**Mi reparto, sellado antes del destape: A 47, B 0, C 1, D 192.**
+
+**(c) LA VARA** fue `9.6.1` con `9.6.2`, `9.6.3` y la tabla de LOS DOS POLOS del
+`9.22`, citadas por numero. **Los dos errores del auditor fueron dentro del
+criterio y sirvieron:** catorce de mis `A` las marque como CONTENCION MEDIDA SOBRE
+EL CONTENIDO, y en cinco de ellas hay pasos repetidos **palabra por palabra** entre
+los dos nodos.
+
+**(e) EL COTEJO.**
+
+| sobre que se mide | coinciden | discrepan |
+|---|---:|---:|
+| los **240** enteros | 215 de 240 | 25 |
+| **los 224 LIMPIOS, y es la cifra que manda** | **207 de 224** | **17** |
+| solo los 16 quemados, fuera del credito | 8 de 16 | 8 |
+
+| | mio | del archivo |
+|---|---|---|
+| sobre los 240 | A 47, B 0, C 1, D 192 | A 35, B 3, C 1, D 201 |
+| sobre los 224 limpios | A 38, B 0, C 0, D 186 | A 31, B 2, C 0, D 191 |
+
+**DENTRO del marcado: 6** (`2668`, `2917`, `2922`, `3076`, `3094`, `3095`).
+**FUERA del marcado: 11** (`165`, `207`, `210`, `662`, `724`, `880`, `886`,
+`1218`, `1807`, `1808`, `2434`). **`AUDITOR.md` 1.2: el credito de mi tanda BAJA y
+el tramo se relee AL DOBLE. La serie medida va 30, 60, 120, 240 y ahora 480.**
+
+**Y LA `B` LA FALLE POR OMISION, EXACTAMENTE COMO ESCRIBI QUE PODIA PASAR ANTES DE
+ABRIR NADA.** El fichero de clases dice, sellado: *"EMITO CERO B... si el archivo
+trae alguna B en estos 240, la falle por omision"*. El archivo trae **3** en los
+240 y **2** en la mitad limpia (`210` y `662`). **Sobre emiti `A` por 7 en la
+mitad limpia**, 38 contra 31, que es la otra cara del mismo sesgo.
+
+**(f) LOS INALCANZABLES A CIEGAS, contados ANTES de leer** por un barrido que no
+devuelve ni la clase ni el texto de la razon: **14** citan un RACIMO, **6** una
+CORRECCION DECLARADA, **20** en union. Sobre los 120 del auditor fueron 6 y 3.
+**No se ensancho la lista blanca del aislador**, que es lo que la `4.4` prohibe.
+
+**(g) LOS QUEMADOS: 16, y CATORCE se sellaron antes de leer**, nueve nombrados por
+el encargo y **cinco anadidos por mi contra mi propio credito** (`616`, `2428`,
+`2429`, `2430`, `2662`). **Los otros DOS se declararon TARDE, en el fichero de
+clases, y eso es peor que declararlos antes**, asi que van con su nombre:
+
+- **`654`.** Su clase de archivo me llego por la lista `QUEMADOS` de
+  `scripts/loop/vuelta196_tarea2_relectura_al_doble.py`, **que lei ENTERO al
+  clonarlo para escribir mi propio sujeto**, o sea antes de la ciega. **Es
+  contaminacion mia por no comprobar si los quemados de la 196 caian dentro de MI
+  universo.**
+- **`1077`.** Es el **EJEMPLAR del banco `9.22`**, y el banco lo nombra con su
+  clase `C` y con sus dos nodos. **El encargo me manda citar el `9.22`.**
+
+**(e.bis) EL REPARTO DEL MARCADO, QUE EL HALLAZGO `5.2` OBLIGA A PUBLICAR.** De
+los **240**, llevan `DISCUTIBLE MARCADO` **31**, y **los 31 son del 2662 para
+arriba**: **0 marcados en los 177 puestos por debajo**, contra **31 de 63** por
+encima. **El reparto sale igual que el del auditor.** Dicho sin deducir: **la
+metrica de dentro-o-fuera del marcado NO ES COMPARABLE ENTRE TRAMOS**, porque una
+discrepancia en el tramo bajo cae FUERA **por construccion**, no por ser peor.
+**Nueve de mis once discrepancias de fuera del marcado estan por debajo del 2662.**
+
+**DISCUTIBLES.** Los dos primeros van marcados **antes de saber si acierto**, en el
+fichero de clases sellado; los otros dos son **posteriores al destape y se dicen
+como tales**, que es la diferencia que hace que la marca valga.
+
+**`D.7` DISCUTIBLE MARCADO ANTES DEL DESTAPE. EMITI CERO `B`.** Lo escribi con su
+riesgo delante y sali perdiendo: el archivo tiene 2 en la mitad limpia. Sostengo
+que la definicion que use (se pisan sin arista y sin que ninguno nombre al otro) es
+la del banco, y que el problema es que **no la busque activamente en 240 pares**.
+
+**`D.8` DISCUTIBLE MARCADO ANTES DEL DESTAPE. AMPLIE LOS QUEMADOS DE NUEVE A
+DIECISEIS, y siete de los siete de mas los puse yo contra mi credito.** Lo
+discutible es si un puesto que el acta nombra en una lista de "discrepancias
+quemadas" sin publicar su clase esta de verdad quemado.
+
+**`D.9` DISCUTIBLE, POSTERIOR AL DESTAPE Y SE DICE. LA CONTENCION LA APLIQUE MAS
+DE LO QUE EL ARCHIVO LA APLICA.** De mis 38 `A` limpias el archivo confirma 31, y
+las que fallo son casi todas contencion (`886`, `1218`, `1807`, `1808`, `2434`,
+`2668`, `2922`, `3076`, `3094`, `3095`). **El remedio del `2838` funciono en el
+`2838` y me hizo sobre emitir en otros diez.**
+
+**`D.10` DISCUTIBLE, POSTERIOR AL DESTAPE Y SE DICE. LOS QUEMADOS ME SALIERON
+PEOR QUE LOS LIMPIOS**: 8 de 16 contra 207 de 224. Un puesto quemado deberia ser
+mas facil, no mas dificil. **La causa que sostengo: los quemados son en su mayoria
+los puestos que el acta discute, o sea los dificiles, y saber que el archivo gano
+NO es saber que clase puso.**
 
 <!-- FIN ANEXO DE TAREAS -->

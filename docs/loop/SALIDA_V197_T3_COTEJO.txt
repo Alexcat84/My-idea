@@ -1,0 +1,103 @@
+==============================================================================
+VUELTA 197, TAREA 3: EL COTEJO DE LOS 240 CONTRA EL ARCHIVO
+==============================================================================
+
+A) MIS CLASES, LEIDAS DE SU FICHERO SELLADO Y NO DE MI MEMORIA
+   docs/loop/SALIDA_V197_T3_MIS_CLASES.txt (43605 bytes)
+   CIFRA clases leidas: 240
+
+B) EL ARCHIVO, LEIDO EN MODO LECTURA
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> 3388 filas
+
+C) LOS QUEMADOS, QUE SE LEEN IGUAL PERO NO ENTRAN AL CREDITO
+   CIFRA quemados SELLADOS EN EL SUJETO, antes de leer: 14
+   CIFRA quemados DECLARADOS TARDE, en el fichero de clases: 2
+      654: su clase de archivo llego por la lista QUEMADOS de vuelta196_tarea2_relectura_al_doble.py, leida al clonar el fichero
+      1077: es el EJEMPLAR del banco 9.22, que el encargo manda citar, y el banco lo nombra con su clase y con sus dos nodos
+   CIFRA quemados en total: 16
+   CIFRA puestos LIMPIOS, que son los que dan credito: 224
+
+D) EL COTEJO, Y LA CIFRA QUE MANDA ES LA DE LOS LIMPIOS
+
+| sobre que se mide | coinciden | discrepan |
+|---|---:|---:|
+| los 240 enteros | 215 de 240 | 25 |
+| **los 224 LIMPIOS, y es la cifra que manda** | **207 de 224** | **17** |
+| solo los 16 quemados, fuera del credito | 8 de 16 | 8 |
+
+| | mio | del archivo |
+|---|---|---|
+| sobre los 240 | A 47, B 0, C 1, D 192 | A 35, B 3, C 1, D 201 |
+| sobre los 224 limpios | A 38, B 0, C 0, D 186 | A 31, B 2, C 0, D 191 |
+
+E) LAS DISCREPANCIAS, UNA POR UNA, CON SU MARCADO
+
+| puesto | mia | archivo | limpio | marcado |
+|---:|:---:|:---:|:---:|:---:|
+| 165 | D | A | SI | FUERA |
+| 207 | D | A | SI | FUERA |
+| 210 | D | B | SI | FUERA |
+| 616 | D | A | NO, quemado | FUERA |
+| 654 | D | B | NO, quemado | FUERA |
+| 662 | D | B | SI | FUERA |
+| 724 | A | D | SI | FUERA |
+| 880 | D | A | SI | FUERA |
+| 886 | A | D | SI | FUERA |
+| 1218 | A | D | SI | FUERA |
+| 1807 | A | D | SI | FUERA |
+| 1808 | A | D | SI | FUERA |
+| 1809 | A | D | NO, quemado | FUERA |
+| 1810 | A | D | NO, quemado | FUERA |
+| 2430 | A | D | NO, quemado | FUERA |
+| 2434 | A | D | SI | FUERA |
+| 2662 | A | D | NO, quemado | DENTRO |
+| 2668 | A | D | SI | DENTRO |
+| 2916 | A | D | NO, quemado | DENTRO |
+| 2917 | D | A | SI | DENTRO |
+| 2922 | A | D | SI | DENTRO |
+| 3076 | A | D | SI | DENTRO |
+| 3094 | A | D | SI | DENTRO |
+| 3095 | A | D | SI | DENTRO |
+| 3173 | A | D | NO, quemado | DENTRO |
+
+   CIFRA discrepancias LIMPIAS: 17
+   CIFRA DENTRO del marcado: 6 -> 2668, 2917, 2922, 3076, 3094, 3095
+   CIFRA FUERA del marcado: 11 -> 165, 207, 210, 662, 724, 880, 886, 1218, 1807, 1808, 2434
+   AUDITOR.md 1.2: si alguna cae FUERA del marcado, el credito de esta
+   tanda BAJA y el tramo se relee AL DOBLE en la vuelta siguiente.
+
+F) EL REPARTO DEL MARCADO, QUE EL HALLAZGO `5.2` OBLIGA A PUBLICAR
+   CIFRA de los 240 que llevan 'DISCUTIBLE MARCADO' en su razon: 31
+   del 2662 PARA ARRIBA: 31 marcados de 63 puestos
+   por DEBAJO del 2662 : 0 marcados de 177 puestos
+   EL REPARTO SALE COMO EL DEL AUDITOR (todo arriba, cero abajo): SI
+   LO QUE ESO SIGNIFICA, DICHO Y NO DEDUCIDO: la metrica de dentro-o-fuera
+   del marcado NO ES COMPARABLE ENTRE TRAMOS del archivo, porque el archivo
+   no marca nada por debajo del 2662. Una discrepancia en el tramo bajo cae
+   FUERA por construccion, no por ser peor.
+
+G) LOS QUEMADOS, CON SU CLASE PUBLICADA IGUAL
+
+| puesto | mia | archivo | calza | de donde venia quemado |
+|---:|:---:|:---:|:---:|---|
+| 616 | D | A | NO | acta 197, adjudicacion 4.2: una de las CUATRO discrepancias quemadas que el acta publica. NO lo  |
+| 654 | D | B | NO | su clase de archivo llego por la lista QUEMADOS de vuelta196_tarea2_relectura_al_doble.py, leida |
+| 655 | A | A | SI | acta 197, adjudicacion 4.1: una de las NUEVE discrepancias limpias, las nueve adjudicadas A FAVO |
+| 719 | D | D | SI | acta 197, adjudicacion 4.1, Y ADEMAS con su razon: el archivo cita la REGLA PROPIA del puesto 59 |
+| 976 | A | A | SI | acta 197, adjudicacion 4.1, Y ADEMAS con su razon: la familia del sub-puro 7, cuatro pares leido |
+| 1077 | C | C | SI | es el EJEMPLAR del banco 9.22, que el encargo manda citar, y el banco lo nombra con su clase y c |
+| 1809 | A | D | NO | acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo |
+| 1810 | A | D | NO | acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo |
+| 2428 | D | D | SI | acta 197, hallazgo 5.3: dice que el auditor COINCIDE con el archivo en el 2428, o sea publica su |
+| 2429 | D | D | SI | acta 197, adjudicacion 4.2: discrepancia quemada publicada. NO lo nombra el encargo: lo anado yo |
+| 2430 | A | D | NO | acta 197, adjudicacion 4.2: discrepancia quemada publicada. NO lo nombra el encargo: lo anado yo |
+| 2662 | A | D | NO | acta 197, adjudicacion 4.2 y hallazgo 5.3: quemada publicada Y tres lectores contra el archivo.  |
+| 2838 | A | A | SI | acta 197, adjudicacion 4.1, Y ADEMAS con su razon: contencion invertida, el corto cabe entero en |
+| 2916 | A | D | NO | acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo |
+| 3072 | D | D | SI | acta 197, adjudicacion 4.1: discrepancia limpia adjudicada a favor del archivo |
+| 3173 | A | D | NO | acta 197, adjudicacion 4.1 y hallazgo 5.3: TRES lectores independientes contra el archivo, y el  |
+
+H) EL ARCHIVO NO SE TOCO: este fichero lo abre en modo lectura y no escribe
+   ni una fila.
+
+FIN DEL COTEJO
