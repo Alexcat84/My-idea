@@ -1,0 +1,69 @@
+==============================================================================
+VUELTA 207, TAREA 1.d: LAS DOS CAIDAS DE REPORTE DEL ACTA 206,
+CORREGIDAS EN EL REPORTE ARCHIVADO DE LA 206 POR CORRECCION DECLARADA
+==============================================================================
+
+A) EL SUJETO AL ENTRAR, POR LAS DOS CONVENCIONES
+   destino docs/loop/reportes/REPORTE_V206.md: 41867 bytes en disco y 41867 normalizado a LF
+      sha256 disco 672a1046012af2f9 | sha256 LF 672a1046012af2f9
+      sha256 disco COMPLETO: 672a1046012af2f93ccc5791664fc49fdaab1347bbf0200eed84b6d26c2b74ce
+      sha256 LF COMPLETO   : 672a1046012af2f93ccc5791664fc49fdaab1347bbf0200eed84b6d26c2b74ce
+   CIFRA lineas: 622
+
+B) LA `E.1`. LOS DOS `sha256` DE docs/loop/SALIDA_V206_NO_MORDIO.txt, MEDIDOS POR MI
+   (el encargo lo manda expresamente: no se copian los del auditor)
+   medido hoy: docs/loop/SALIDA_V206_NO_MORDIO.txt: 4151 bytes en disco y 4103 normalizado a LF
+      sha256 disco f38bd7855d7760b5 | sha256 LF cffa5cd0724d0427
+      sha256 disco COMPLETO: f38bd7855d7760b5cf4d9e3c2fc1983ea443684062a7743f9948244b9aac737c
+      sha256 LF COMPLETO   : cffa5cd0724d04274fc88c70259c36fa6b28c07d9a7f5da114c1bd931e00f6ae
+   EL MISMO FICHERO EN EL COMMIT DE CIERRE DE LA 206 (d42f73a9), leido
+   con git show: 4103 bytes | 4103 LF | sha256 LF cffa5cd0724d0427
+   (git guarda el blob ya normalizado, y por eso su sha calza con el LF
+    del disco y no con el de disco)
+   LA HISTORIA DEL FICHERO, PARA SABER SI ALGUIEN LO VOLVIO A CORRER
+      a75ff760 VUELTA 206, TAREA 1: LA VUELTA 205 QUEDA CERRADA, NO REPETIDA. --componer salio V
+
+C) LA `E.2`. LO QUE LA 205 SELLO, LEIDO DE GIT Y NO DEL FICHERO DE HOY
+   (regla `1.e` del encargo, hallazgo `7.3` del acta 206)
+   git show 78ca7176:docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt -> 3188 bytes | 3188 LF | sha256 LF b9df894ff422dc77
+      SELLADO> CIFRA celdas que no se pudieron leer: 39
+      SELLADO> CIFRA de ellas del lado APERTURA: 19
+      SELLADO> CIFRA de ellas del lado CIERRE  : 19
+      SELLADO> CIFRA de ellas del lado LOS DOS : 0
+      SELLADO> CIFRA de ellas del lado SIN LADO: 1
+   el mismo nombre HOY: docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt: 1922 bytes en disco y 1922 normalizado a LF
+      sha256 disco 254c2257ae55a0f2 | sha256 LF 254c2257ae55a0f2
+      sha256 disco COMPLETO: 254c2257ae55a0f28220e7ff808c554752dc4f64810294fddb416a0c6168f6b7
+      sha256 LF COMPLETO   : 254c2257ae55a0f28220e7ff808c554752dc4f64810294fddb416a0c6168f6b7
+      HOY> CIFRA celdas que no se pudieron leer: 19
+      HOY> CIFRA de ellas del lado APERTURA: 18
+      HOY> CIFRA de ellas del lado CIERRE  : 1
+      HOY> CIFRA de ellas del lado LOS DOS : 0
+      HOY> CIFRA de ellas del lado SIN LADO: 0
+   LA HISTORIA DEL FICHERO, QUE ES LA PRUEBA DE QUE SE VOLVIO A CORRER:
+      a75ff760 VUELTA 206, TAREA 1: LA VUELTA 205 QUEDA CERRADA, NO REPETIDA. --componer salio V
+      78ca7176 ACTA DEL AUDITOR, VUELTA 205: LA BATERIA CORRIO ENTERA Y EN SU PROPIO NOMBRE POR 
+
+D) LA IDEMPOTENCIA, MIRADA ANTES DE TOCAR NADA
+   la correccion de la `E.1` YA ESTA: SI
+   la correccion de la `E.2` YA ESTA: SI
+
+E) LA COLOCACION, POR ANCLA Y NO POR NUMERO DE LINEA
+
+F) LA GUARDA DE ADICION PURA, ANTES DE ESCRIBIR
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (si no es 0, es ROJO y no se escribe)
+   CIFRA lineas al entrar: 622 | al salir: 622 | anadidas: 0
+
+G) NO SE ESCRIBE: las dos correcciones ya estaban. IDEMPOTENTE.
+
+H) EL SUJETO AL SALIR, REMEDIDO Y NO HEREDADO
+   destino docs/loop/reportes/REPORTE_V206.md: 41867 bytes en disco y 41867 normalizado a LF
+      sha256 disco 672a1046012af2f9 | sha256 LF 672a1046012af2f9
+      sha256 disco COMPLETO: 672a1046012af2f93ccc5791664fc49fdaab1347bbf0200eed84b6d26c2b74ce
+      sha256 LF COMPLETO   : 672a1046012af2f93ccc5791664fc49fdaab1347bbf0200eed84b6d26c2b74ce
+   CIFRA crecimiento en bytes de disco: 0
+   CIFRA crecimiento en bytes LF: 0
+
+FIN

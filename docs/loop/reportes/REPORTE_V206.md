@@ -77,6 +77,27 @@ ficheros sellados de la bateria. Salida cruda en
 `docs/loop/SALIDA_V206_NO_MORDIO.txt`, 4151 bytes en disco y 4103 normalizado a
 LF, sha256 `cffa5cd0724d0427` en disco y `cffa5cd0724d0427` normalizado a LF.
 
+> **CORRECCION DECLARADA DE LA VUELTA 207, SOBRE LA `E.1` DEL ACTA 206.** El renglon de arriba se queda **entero y sin tocar**, porque una
+> correccion que tapa lo que corrige no se puede auditar (`EJECUTOR.md` 8).
+> **LO QUE DICE Y ES FALSO:** que el `sha256` de disco y el normalizado a LF
+> de `docs/loop/SALIDA_V206_NO_MORDIO.txt` son los dos `cffa5cd0724d0427`.
+> **LO QUE MIDO YO EN LA VUELTA 207, con `hashlib` sobre el fichero y sobre
+> el mismo fichero con los `CRLF` cambiados por `LF`, y NO copiado de nadie:**
+> **4151** bytes en disco y **4103** normalizado a LF, **sha256 de disco
+> `f38bd7855d7760b5`** y **sha256 LF `cffa5cd0724d0427`**. **Los dos son distintos**, y
+> la propia linea corregida ya lo probaba sin saberlo: **4151** contra **4103**
+> bytes solo puede salir de que el fichero tiene `CRLF`, y entonces los dos
+> `sha256` no pueden coincidir. **La cifra de bytes era correcta; el `sha256`
+> de disco era el de LF escrito dos veces.**
+> **LOS DOS COMPLETOS, PARA QUE SE PUEDAN REHACER:** disco
+> `f38bd7855d7760b5cf4d9e3c2fc1983ea443684062a7743f9948244b9aac737c`,
+> LF `cffa5cd0724d04274fc88c70259c36fa6b28c07d9a7f5da114c1bd931e00f6ae`.
+> **ESTA CAIDA NO ACUMULA** (`AUDITOR.md` 4, letra afinada del 27 ago 2026,
+> citada por el acta 206 en su `E.1`): vive en prosa de acompanamiento de una
+> linea de evidencia, no en tabla, cabecera ni conclusion. **La conclusion de
+> la seccion 3.0 no se mueve ni un digito.**
+
+
 - **CIFRA familias distintas de la linea `CIFRA de FALLO` entre los once: 3.** Si
   la causa fuera una sola, esa cifra seria **1**. Las tres se diferencian solo en
   el segundo sumando: **0**, **1** y **2** que no mordieron.
@@ -379,6 +400,42 @@ columna de apertura entera: esos seis ficheros **no existian y nunca habian
 existido**, y no es una suposicion mia, es lo que dice el rechazo que aquella
 vuelta dejo sellado en `docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt`. Corri el
 ciclo entero hoy, en mi turno, y sus valores quedaron en esos nombres.
+
+> **CORRECCION DECLARADA DE LA VUELTA 207, SOBRE LA `E.2` DEL ACTA 206.** El parrafo de arriba se queda **entero y sin tocar**
+> (`EJECUTOR.md` 8). **LO QUE SE CORRIGE ES LA PROCEDENCIA, NO EL HECHO.**
+> **LO QUE DICE Y ES FALSO:** que el **19** y el **18** son *lo que dice el
+> rechazo que aquella vuelta dejo sellado*. **No lo son.** Ese `19 / 18` es el
+> contenido que **esta misma vuelta 206** escribio encima de
+> `docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt` al volver a correr el tallador, en el
+> commit `a75ff760`.
+> **LO QUE LA VUELTA 205 SELLO DE VERDAD, LEIDO POR MI CON
+> `git show 78ca7176:docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt`:**
+> `CIFRA celdas que no se pudieron leer: 39`
+> `CIFRA de ellas del lado APERTURA: 19`
+> `CIFRA de ellas del lado CIERRE  : 19`
+> `CIFRA de ellas del lado LOS DOS : 0`
+> `CIFRA de ellas del lado SIN LADO: 1`
+> Ese blob mide **3188** bytes y **3188** normalizado a LF, sha256 LF
+> **`b9df894ff422dc77`**.
+> **Y ESTO ES LO QUE EL MISMO NOMBRE DE FICHERO DICE HOY EN DISCO**, que es
+> de donde salio el `19 / 18`: **1922** bytes en disco y **1922** normalizado a
+> LF, sha256 disco **`254c2257ae55a0f2`** y sha256 LF **`254c2257ae55a0f2`**.
+> `CIFRA celdas que no se pudieron leer: 19`
+> `CIFRA de ellas del lado APERTURA: 18`
+> `CIFRA de ellas del lado CIERRE  : 1`
+> `CIFRA de ellas del lado LOS DOS : 0`
+> `CIFRA de ellas del lado SIN LADO: 0`
+> **LA REGLA QUE ESTO DEJA, Y ES EL HALLAZGO `7.3` DEL ACTA 206:** una salida
+> sellada que una vuelta posterior vuelve a correr **deja de ser evidencia de
+> la vuelta que la sello**. La fuente correcta es
+> `git show <commit de aquella vuelta>:<ruta>`, nunca el fichero de hoy.
+> **LA CONCLUSION DEL `D.1` SE SOSTIENE Y NO SE TOCA:** los seis
+> `SALIDA_V205_*_APERTURA.txt` no existian antes de la vuelta 206, y el acta
+> 206 lo verifico aparte midiendo que los seis se anaden **una sola vez en
+> toda la historia de git, y es en `a75ff760`**. Lo que estaba mal era
+> de donde se decia que salia la cifra. **ESTA CAIDA NO ACUMULA**, por la
+> misma letra que la `E.1`: prosa de un discutible.
+
 
 **LO QUE SOSTIENE QUE ESOS VALORES SEAN LOS DE AQUEL MOMENTO ES UNA MEDICION Y NO
 UNA PROMESA:** `git diff --numstat e66bf67d..HEAD` sobre `dataset/`, `web/` y
