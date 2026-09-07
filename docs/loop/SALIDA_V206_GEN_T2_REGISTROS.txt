@@ -1,0 +1,35 @@
+1) DOCSTRING: 34 lineas viejas -> 33 lineas nuevas
+2) LOS CAMBIOS PUNTUALES, CADA UNO CON SU CUENTA DE APARICIONES:
+   1   aparicion(es)  VUELTA_QUE_ESCRIBE = 204
+   1   aparicion(es)  SUJETOS = [177, 178]
+   1   aparicion(es)  ap.add_argument("--salida", default="T1_REGISTROS")
+   1   aparicion(es)  a("(Acta del auditor, vuelta %d; escrito en la vuelta %d, TAREA 1.
+   1   aparicion(es)  a("Por adicion, como `R.21` a `R.66`. **Corte de todas las cifras 
+   1   aparicion(es)  a("Salida: `docs/loop/SALIDA_V%d_T1_REGISTROS.txt`." % VUELTA_QUE_
+   1   aparicion(es)      w("VUELTA %d, TAREA 1: R.67 PARA EL ACTA 177 Y R.68 PARA EL AC
+   1   aparicion(es)      w("LAS DOS SIGUIENTES DE LA DEUDA DEL 4.9 DEL ACTA 201, REMEDI
+   1   aparicion(es)  for etiqueta, vuelta in zip(("1.a", "1.b"), SUJETOS):
+   1   aparicion(es)          m = REP.medir_acta(vuelta, w)
+   1   aparicion(es)      preg = len(m["preguntas"])
+   1   aparicion(es)      a("| preguntas contestadas | (no es una seccion: son las `P.n`
+   1   aparicion(es)      a("")
+   1   aparicion(es)  def main():
+
+EL CLON, MEDIDO Y NO AFIRMADO (difflib.SequenceMatcher):
+   CIFRA lineas de la fuente _v204_t1_registros.py: 495
+   CIFRA lineas del destino _v206_t2_registros.py: 624
+   CIFRA lineas que vienen SIN TOCAR de la fuente: 460
+   CIFRA lineas nuevas o cambiadas en el destino: 164
+
+EL LECTOR HEREDADO DE PREGUNTAS NO SE TOCA, Y SE COMPRUEBA AQUI:
+   CIFRA veces que este generador escribe 'def preguntas_del_reporte': 0
+   CIFRA veces que el destino llama a REP.preguntas_del_reporte: 2
+
+EL COMPUTO DEL REPARTO NO SE CLONA: SE IMPORTA. Por eso no hay cifra de
+   difflib para el, y la linea del import se copia sin tocar:
+   linea 11 | **IMPORTA** de `scripts/loop/_v203_reparto_de_actas_viejas.py`, el mismo que
+   linea 49 | import _v203_reparto_de_actas_viejas as REP                 # noqa: E402
+   linea 180 | a("`scripts/loop/_v203_reparto_de_actas_viejas.py`, con prefijo de guion bajo,")
+   linea 254 | a("rompe (acta 204 `4.4`, linea 196 de `_v203_reparto_de_actas_viejas.py`),")
+
+ESCRITO: scripts/loop/_v206_t2_registros.py (30447 bytes)

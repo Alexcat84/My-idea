@@ -1,0 +1,255 @@
+==============================================================================
+VUELTA 206, TAREA 2: R.69 PARA EL ACTA 179 Y R.70 PARA EL ACTA 180,
+LAS DOS ULTIMAS DE LA DEUDA DEL 4.9 DEL ACTA 201, REMEDIDA AQUI
+==============================================================================
+
+0) LA PRUEBA POR MUTACION DEL ENSANCHE, OTRA VEZ Y ANTES DE ESCRIBIR NADA.
+   Es la MISMA del computo de la 203, porque es el MISMO fichero IMPORTADO:
+   vuelve a correr aqui en vez de heredar su verde de otra corrida.
+   LA PLANTILLA HEREDADA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo
+   unico que convierte 'hacia falta ensancharla' en una medicion:
+   negrita CON comillas, la forma de la 184                 ancha 2  (esp 2 ) vieja 2  (esp 2 ) defecto 2  VERDE
+   negrita SIN comillas, la forma de las adjudicaciones vie ancha 3  (esp 3 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   titular markdown, la forma de los hallazgos viejos       ancha 2  (esp 2 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra con separador de millar NO es una clave         ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra de bytes con millar NO es una clave             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la numeracion CORTA en el primer hueco                   ancha 1  (esp 1 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   una clave citada EN MITAD de la prosa no cuenta          ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   seccion vacia da cero por las dos plantillas             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la 10 y siguientes tambien entran, que es la 174         ancha 10 (esp 10) vieja 0  (esp 0 ) defecto 0  VERDE
+   CIFRA casos donde la ancha y la heredada DISCREPAN: 4
+   LA TERCERA COLUMNA ES LA QUE PRUEBA QUE NINGUN LLAMANTE VIEJO SE
+   MUEVE: `defecto` es la funcion llamada SIN el parametro nuevo, y en
+   los 9 casos da EXACTAMENTE lo mismo que la plantilla heredada.
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 9 de 9
+   CIFRA casos: 9 | verdes: 9 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+A) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/PENDIENTES.md: disco 1145356 bytes | LF 1145356 bytes | sha256 LF de3311c2a8d5aa8c
+   CIFRA lineas por split(NL): 16637
+
+==============================================================================
+TAREA 2.a . EL SUJETO ES EL ACTA DE LA VUELTA 179
+==============================================================================
+
+B) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 60
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.69
+
+C) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4771842 bytes | LF 4771842 bytes
+   CUERPO ACOTADO del acta 179: lineas 62019 a 62448, 430 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 12
+      seccion 1  linea 62038  lineas 62038 a 62044  HUECO DE ACTA: NO
+      seccion 2  linea 62045  lineas 62045 a 62067  MI CAIDA PROPIA, DELANTE, Y ES LA SEGUNDA SEGUIDA DE LA MISMA ESPECIE
+      seccion 3  linea 62068  lineas 62068 a 62172  LA VERIFICACION, TODA CORRIDA POR MI EN ESTA VUELTA
+      seccion 4  linea 62173  lineas 62173 a 62231  LA RELECTURA CIEGA: 24 DE 27 LIMPIOS, Y LAS TRES LAS FALLE YO
+      seccion 5  linea 62232  lineas 62232 a 62246  CAIDAS DEL EJECUTOR: NINGUNA, Y LO DIGO CON LA LISTA DE LO QUE BUSQUE
+      seccion 6  linea 62247  lineas 62247 a 62269  MI HALLAZGO PROPIO, MEDIDO: LA TABLA DE TRAMOS SE MUEVE Y NO LLEVA COR
+      seccion 7  linea 62270  lineas 62270 a 62388  LAS ADJUDICACIONES
+      seccion 8  linea 62389  lineas 62389 a 62396  LO QUE SUBE AL FUNDADOR (y no detiene el bucle)
+      seccion 9  linea 62397  lineas 62397 a 62413  LA METRICA DE CREDITO
+      seccion 10 linea 62414  lineas 62414 a 62424  LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA, EN UNA LISTA
+      seccion 11 linea 62425  lineas 62425 a 62436  LA CADENCIA Y EL TOPE
+      seccion 12 linea 62437  lineas 62437 a 62448  PARADA: NO
+   ADJUDICACIONES: 2 seccion(es) cuyo TITULO lo nombra
+      -> seccion 7, linea 62270, titulo literal: 'LAS ADJUDICACIONES'
+      -> seccion 10, linea 62414, titulo literal: 'LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA, EN UNA LISTA'
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: el titulo lo nombran 2 secciones y eso seria DECIDIR.
+   HALLAZGOS: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CAIDAS DEL AUDITOR: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CAIDAS DEL EJECUTOR: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 2, huerfanas 1
+   docs/loop/reportes/REPORTE_V179.md existe: SI
+   bytes medidos con os.path.getsize: 54466
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 0 (ninguna)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 0, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201)
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 62402 devuelve ('30', None, None, None)
+   linea 62401 | | relecturas | 1 | **314** |
+   linea 62402 | | puestos | 30 aislados, **27 limpios** | **633** |
+   linea 62403 | | discrepancias DENTRO del marcado | **0** (el marcado estaba quemado, punto 7.1) | **26** |
+   linea 62404 | | discrepancias y hallazgos FUERA del marcado | **4** (3 discrepancias **que falle yo** y **un hallazgo mio**, la seccion 6) | **89** |
+   linea 62405 | | caidas propias del auditor | **1**, puesta la primera | racha de la especie en **2**: una mas y el acta 180 abre con su remedio |
+   linea 62406 | | caidas del ejecutor que ACUMULAN | **0** | racha de cifra publicada **0** |
+   linea 62407 | | caidas del ejecutor de reporte | **0** | racha de reporte **0**, y su escalada quedo entregada y corriendo |
+
+C.1) LAS PREGUNTAS, CONTADAS A MANO Y NO CON el lector heredado,
+     porque el encargo de la 206 lo prohibe expresamente
+   cuento a mano sobre: docs/loop/reportes/REPORTE_V179.md
+   LA CUENTA VIEJA, DEL LECTOR HEREDADO, PUBLICADA COMO CONTRASTE Y NO
+   BORRADA: 0 clave(s) (ninguna) | la seccion de PREGUNTAS aparece 0 veces
+   CIFRA secciones `## N.` en el reporte: 10
+   CIFRA de ellas cuyo TITULO nombra PREGUNTAS: 1
+      linea 750 | ## 6. LAS PREGUNTAS
+   seccion acotada: lineas 750 a 772 (23 lineas)
+      linea 752 clava P.1 | **P.1. EL CABLEADO DE LA GUARDA DEL SUJETO CONGELADO.** Con los 17 veredictos
+      linea 758 clava P.2 | **P.2. LA ETIQUETA `(vuelta 177)` DE `clases_por_par()`.** Esta rota, esta medida
+      linea 763 clava P.3 | **P.3. LA CONDICION `EL PAR TIENE PUESTO` NO PUEDE DAR QUE SI.** Medida en la
+      linea 769 clava P.4 | **P.4. EL ARCHIVO SE CONTRADICE CONSIGO MISMO EN LA FAMILIA DEL OPTION POOL.**
+   CIFRA claves `P.n` contadas a mano en esa seccion: 4 (P.1, P.2, P.3, P.4)
+   LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO: el lector
+   heredado dice 0 y mi cuenta a mano dice 4. Las dos quedan escritas.
+   CIFRA claves `P.n` nombradas en titulos de adjudicaciones: 0
+   EL NUMERAL DE PREGUNTAS ES: NO COMPUTABLE, porque ninguna seccion de esta acta titula las adjudicaciones y no hay titulo del que sacar una `P.n`
+   CIFRA preguntas del numeral, recomputada a mano: 0 (ninguna)
+
+D) EL TITULO. EL HEREDADO SE COMPUTA Y SE PUBLICA COMO CONTRASTE,
+   PERO NO SE USA, Y EL MOTIVO VA MEDIDO Y NO AFIRMADO.
+   CIFRA numerales NO COMPUTABLES sobre esta acta: 4 | cuales: hallazgos, caidas del auditor, caidas del ejecutor, adjudicaciones
+   TITULO HEREDADO, PUBLICADO COMO CONTRASTE Y NO USADO:
+      Registro de las cero adjudicaciones numeradas, los cero hallazgos de la seccion 5, las cero preguntas contestadas, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 192
+   POR QUE NO SE USA: publica los CINCO numerales como cifras, y sobre
+   esta acta 4 de los cinco NO SON COMPUTABLES. Un titulo que dijera
+   'los cero hallazgos' se leeria como que el acta no hallo nada, y es
+   falso. Mismo precedente que la 201 en su entrada de la 198.
+   TITULO ESCRITO: Registro de las adjudicaciones numeradas NO COMPUTABLES, los hallazgos NO COMPUTABLES, las preguntas contestadas NO COMPUTABLES, las caidas propias del auditor NO COMPUTABLES, las caidas del ejecutor NO COMPUTABLES del acta de la vuelta 179, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+E) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 179 o el numero R.69 YA ESTAN: NO
+   CIFRA bytes de la entrada compuesta: 8120
+   CIFRA lineas de la entrada compuesta: 127
+   ESCRITA: R.69 anadida al final de docs/PENDIENTES.md
+
+==============================================================================
+TAREA 2.b . EL SUJETO ES EL ACTA DE LA VUELTA 180
+==============================================================================
+
+B) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 61
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   SIGUIENTE LIBRE: R.70
+
+C) EL CUERPO DEL ACTA Y SUS NUMERALES, MEDIDOS EN ESTA VUELTA
+   docs/loop/ACTA_AUDITOR.md: disco 4771842 bytes | LF 4771842 bytes
+   CUERPO ACOTADO del acta 180: lineas 62449 a 62906, 458 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 11
+      seccion 1  linea 62467  lineas 62467 a 62473  HUECO DE ACTA: NO
+      seccion 2  linea 62474  lineas 62474 a 62507  MI CAIDA PROPIA, DELANTE, Y ES LA TERCERA SEGUIDA DE LA MISMA ESPECIE
+      seccion 3  linea 62508  lineas 62508 a 62624  LA VERIFICACION, TODA CORRIDA POR MI EN ESTA VUELTA
+      seccion 4  linea 62625  lineas 62625 a 62686  LA RELECTURA CIEGA: 43 PUESTOS EN DOS CARRILES, 30 COINCIDEN, Y LAS 13
+      seccion 5  linea 62687  lineas 62687 a 62755  LA CAIDA DEL EJECUTOR, UNA, Y ACUMULA
+      seccion 6  linea 62756  lineas 62756 a 62839  LAS ADJUDICACIONES
+      seccion 7  linea 62840  lineas 62840 a 62853  LO QUE SUBE AL FUNDADOR (y no detiene el bucle)
+      seccion 8  linea 62854  lineas 62854 a 62875  LA METRICA DE CREDITO
+      seccion 9  linea 62876  lineas 62876 a 62885  LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA, EN UNA LISTA
+      seccion 10 linea 62886  lineas 62886 a 62895  LA CADENCIA Y EL TOPE
+      seccion 11 linea 62896  lineas 62896 a 62906  PARADA: NO
+   ADJUDICACIONES: 2 seccion(es) cuyo TITULO lo nombra
+      -> seccion 6, linea 62756, titulo literal: 'LAS ADJUDICACIONES'
+      -> seccion 9, linea 62876, titulo literal: 'LAS ADJUDICACIONES QUE CITAN REGLA ESCRITA, EN UNA LISTA'
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: el titulo lo nombran 2 secciones y eso seria DECIDIR.
+   HALLAZGOS: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CAIDAS DEL AUDITOR: 0 seccion(es) cuyo TITULO lo nombra
+      NINGUNA CIFRA POR ESTA VIA, Y SE DECLARA EN VEZ DE PUBLICAR
+      UN CERO: ninguna seccion de esta acta titula ese numeral.
+   CAIDAS DEL EJECUTOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 5, linea 62687, titulo literal: 'LA CAIDA DEL EJECUTOR, UNA, Y ACUMULA'
+      claves `5.M` por la vara: 0 (ninguna)
+      claves `CAIDA n` de la forma vieja: 0 (ninguna)
+      leads en negrita que abren con CAIDA o AMAGO: 0 (ninguno)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 5
+   docs/loop/reportes/REPORTE_V180.md existe: SI
+   bytes medidos con os.path.getsize: 63677
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 0 (ninguna)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 0, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201)
+   R95.cifras_de_la_fila_de_puestos() sobre la linea 62648 devuelve (None, None, None, None)
+   linea 62648 | | puestos aislados | **43** (31 del carril A, 12 del B) |
+   linea 62858 | | relecturas | 1 (en dos carriles) | **315** |
+   linea 62859 | | puestos | 43 aislados, **43 limpios** | **676** |
+   linea 62860 | | discrepancias DENTRO del marcado | **0** (el marcado no eran clases, punto 4) | **26** |
+   linea 62861 | | discrepancias y hallazgos FUERA del marcado | **14** (13 discrepancias **que falle yo** y **un hallazgo mio**, el `E.1`) | **103** |
+   linea 62862 | | caidas propias del auditor | **1**, puesta la primera | **racha de la especie en 3: el acta 181 ABRE con su remedio** |
+   linea 62863 | | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | racha de cifra publicada **0** |
+   linea 62864 | | caidas del ejecutor de reporte | **1** (`E.1`, en cabecera) | **racha de reporte 1** |
+
+C.1) LAS PREGUNTAS, CONTADAS A MANO Y NO CON el lector heredado,
+     porque el encargo de la 206 lo prohibe expresamente
+   cuento a mano sobre: docs/loop/reportes/REPORTE_V180.md
+   LA CUENTA VIEJA, DEL LECTOR HEREDADO, PUBLICADA COMO CONTRASTE Y NO
+   BORRADA: 0 clave(s) (ninguna) | la seccion de PREGUNTAS aparece 0 veces
+   CIFRA secciones `## N.` en el reporte: 10
+   CIFRA de ellas cuyo TITULO nombra PREGUNTAS: 1
+      linea 843 | ## 6. LAS PREGUNTAS
+   seccion acotada: lineas 843 a 865 (23 lineas)
+      linea 845 clava P.1 | **`P.1`. `scripts/loop/vuelta172_tarea1c_guarda_que_mordio.py` ESTA EN ROJO Y
+      linea 861 clava P.2 | **`P.2`. LA CONVENCION DE BYTES SIGUE SIN FIJAR, Y ES DEL FUNDADOR.** Van siete
+   CIFRA claves `P.n` contadas a mano en esa seccion: 2 (P.1, P.2)
+   LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO: el lector
+   heredado dice 0 y mi cuenta a mano dice 2. Las dos quedan escritas.
+   CIFRA claves `P.n` nombradas en titulos de adjudicaciones: 0
+   EL NUMERAL DE PREGUNTAS ES: NO COMPUTABLE, porque ninguna seccion de esta acta titula las adjudicaciones y no hay titulo del que sacar una `P.n`
+   CIFRA preguntas del numeral, recomputada a mano: 0 (ninguna)
+
+D) EL TITULO. EL HEREDADO SE COMPUTA Y SE PUBLICA COMO CONTRASTE,
+   PERO NO SE USA, Y EL MOTIVO VA MEDIDO Y NO AFIRMADO.
+   CIFRA numerales NO COMPUTABLES sobre esta acta: 3 | cuales: hallazgos, caidas del auditor, adjudicaciones
+   TITULO HEREDADO, PUBLICADO COMO CONTRASTE Y NO USADO:
+      Registro de las cero adjudicaciones numeradas, los cero hallazgos de la seccion 5, las cero preguntas contestadas, las cero caidas propias del auditor y las cero caidas del ejecutor del acta de la vuelta 192
+   POR QUE NO SE USA: publica los CINCO numerales como cifras, y sobre
+   esta acta 3 de los cinco NO SON COMPUTABLES. Un titulo que dijera
+   'los cero hallazgos' se leeria como que el acta no hallo nada, y es
+   falso. Mismo precedente que la 201 en su entrada de la 198.
+   TITULO ESCRITO: Registro de las adjudicaciones numeradas NO COMPUTABLES, los hallazgos NO COMPUTABLES, las preguntas contestadas NO COMPUTABLES, las caidas propias del auditor NO COMPUTABLES, las 0 caidas del ejecutor del acta de la vuelta 180, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+E) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 180 o el numero R.70 YA ESTAN: NO
+   CIFRA bytes de la entrada compuesta: 8068
+   CIFRA lineas de la entrada compuesta: 128
+   ESCRITA: R.70 anadida al final de docs/PENDIENTES.md
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/PENDIENTES.md al salir: disco 1161546 bytes | LF 1161546 bytes | sha256 LF f933b87fcbd7ba12
+   CIFRA crecimiento en bytes de disco: 16190
+   CIFRA crecimiento en bytes LF: 16190
+   CIFRA lineas al salir: 16894 (al entrar 16637, crecimiento 257)
+   CIFRA entradas escritas por esta corrida: 2
+      R.69  ->  acta de la vuelta 179
+      R.70  ->  acta de la vuelta 180
+
+LA GUARDA DEL TEXTO VIEJO: NI UNA LINEA BORRADA NI UNA CAMBIADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (la adicion solo puede ANADIR: si esta cifra no es 0, es ROJO)
+
+LA SERIE AL CIERRE, RECOMPUTADA Y NO HEREDADA
+   CIFRA entradas de la serie DESPUES: 62
+   CIFRA colisiones DESPUES: 0
+   CIFRA huecos DESPUES: 0
+   SIGUIENTE LIBRE DESPUES: R.71
+
+LA DEUDA DEL 4.9 DEL ACTA 201, REMEDIDA AL CIERRE
+   CIFRA actas de la 173 a la 180 SIN entrada propia: 0
+   cuales: (ninguna)
+
+FIN
+                                                                                                                                                                                                                                                              

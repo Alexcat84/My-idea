@@ -16634,3 +16634,260 @@ cuenta **(sin seccion)**.
 `R92.caidas_por_lead_heredado()` da **1** del ejecutor, **0** del auditor
 y **1** huerfanas sobre este mismo cuerpo.
 
+
+## R.69. Registro de las adjudicaciones numeradas NO COMPUTABLES, los hallazgos NO COMPUTABLES, las preguntas contestadas NO COMPUTABLES, las caidas propias del auditor NO COMPUTABLES, las caidas del ejecutor NO COMPUTABLES del acta de la vuelta 179, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+(Acta del auditor, vuelta 179; escrito en la vuelta 206, TAREA 2.)
+
+Por adicion, como `R.21` a `R.68`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+Salida: `docs/loop/SALIDA_V206_T2_REGISTROS.txt`.
+
+**ESTA ENTRADA DECLARA QUE USO LA VARA DEL `4.1` DEL ACTA 202**, que es
+obligatoria para toda acta ANTERIOR a la 184: *el numeral se toma de la
+seccion cuyo PROPIO TITULO lo nombra, NUNCA del numero de seccion, y dentro
+de ella las claves se cuentan por su propia numeracion `N.M`, lleve o no
+comillas inversas*. **Y donde ninguna seccion titula un numeral, la entrada
+DECLARA que no es computable en vez de publicar un cero**, que se leeria
+como que el acta no hizo esa cosa. Es el mismo precedente que la vuelta 201
+sento en su entrada de la 198.
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTA ENTRADA.** Rige la
+MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Los lectores se IMPORTAN y lo
+unico que se ensancho es **el patron de clave**, con un parametro
+`plantilla` OPCIONAL en `R84.claves_entrecomilladas()` cuyo valor por
+defecto es la expresion que ya tenia dentro, **para que ninguno de sus
+catorce llamantes se toque**. El computo vive en
+`scripts/loop/_v203_reparto_de_actas_viejas.py`, con prefijo de guion bajo,
+**fuera del censo y fuera de la nomina**, y **es el MISMO que uso la
+TAREA 1 y la TAREA 4 de la vuelta 203**, y aqui se IMPORTA tal cual:
+no se escribio un tercero y tampoco se clono.
+
+**EL ACTA ACOTADA EN ESTA VUELTA:** lineas **62019** a **62448**, **430** lineas,
+sobre un fichero de **4771842** bytes en disco y **4771842** normalizado a LF. Su
+cuerpo trae **12** secciones `## N. TITULO`, y aqui van las que este
+computo mira, cada una con **su numero y su titulo literal**:
+
+| numeral | seccion que lo titula, por su TITULO | numero | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| hallazgos | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| caidas propias del auditor | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| caidas del ejecutor | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| preguntas contestadas | (no es una seccion: son las `P.n` que los titulos de las adjudicaciones nombran) | (no aplica) | (no aplica) | (ninguna) | **no computable** |
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** FILTRADAS contra la seccion de PREGUNTAS del reporte archivado, CONTADA A MANO en la vuelta 206 y NO con `preguntas_del_reporte()`, cuyo patron el articulo `LAS` le rompe (acta 204 `4.4`).
+`docs/loop/reportes/REPORTE_V179.md` **existe**, y su seccion de preguntas se lee asi: la seccion de preguntas se titula '## 6. LAS PREGUNTAS', en la linea 750, y sus claves las conte A MANO en la vuelta 206 porque el lector heredado no la ve.
+Ese fichero mide **54466** bytes, medidos en esta vuelta con
+`os.path.isfile` y `os.path.getsize`.
+Claves `P.n` nombradas: **0** (ninguna). Claves que quedan fuera del numeral:
+**0** (ninguna).
+
+### EL REPARTO MEDIDO DE LAS PREGUNTAS, QUE NO ES EL NUMERAL
+
+**ESTO ES UNA MEDICION Y NO UN NUMERAL** (acta 204 `4.6`, que el encargo
+de la vuelta 206 cita para las entradas desde `R.69`). El numeral de
+arriba se queda como esta; esto va debajo y no lo sustituye.
+
+**COMO SE CONTO, DICHO PARA QUE SE PUEDA RECONTAR SIN CORRER NADA:** en
+`docs/loop/reportes/REPORTE_V179.md` la seccion de preguntas se titula
+**6. LAS PREGUNTAS**, en la linea **750**, y va hasta la **772**. De ahi salen las claves
+`P.n` EN LAS DOS FORMAS que esta campana usa, con comillas inversas y sin
+ellas. **EL LECTOR HEREDADO NO LAS VE**: su patron exige que la palabra
+PREGUNTAS vaya pegada al numero de seccion y el articulo `LAS` se lo
+rompe (acta 204 `4.4`, linea 196 de `_v203_reparto_de_actas_viejas.py`),
+y ese lector ES CODIGO Y NO SE TOCO EN ESTA VUELTA.
+
+| lectura | claves `P.n` en la seccion de preguntas del reporte | cuantas |
+|---|---|---:|
+| **contada a mano en la vuelta 206** | `P.1`, `P.2`, `P.3`, `P.4` | **4** |
+| el lector heredado, `REP.preguntas_del_reporte()`, publicado como contraste | el patron no encontro nada | 0 |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md`
+2). **EL CERO DEL HEREDADO NO ES UN HECHO DEL MUNDO**: es que su patron
+no encontro nada (`EJECUTOR.md` 9).
+
+### LAS DOS LECTURAS, PUBLICADAS JUNTAS Y CON LA DISCREPANCIA DECLARADA
+
+| lectura | adjudicaciones | hallazgos |
+|---|---:|---:|
+| **el lector heredado tal cual**, `R84.claves_entrecomilladas()` con su plantilla de siempre | (sin seccion) | (sin seccion) |
+| **la vara adjudicada en el `4.1`**, mismo lector con la plantilla ancha | **(sin seccion)** | **(sin seccion)** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md` 2).
+El cero del heredado **es cierto**: esa plantilla exige comillas inversas y
+esta acta no las escribe. Las dos cifras quedan escritas.
+
+### LAS CAIDAS, CON SUS TRES LECTURAS Y SU FORMA DECLARADA
+
+**LA FORMA DE CLAVE DE LAS CAIDAS DE ESTA ACTA NO ES `N.M`**, y por eso se
+publican **las tres lecturas** en vez de elegir una en silencio: la de la
+vara (`N.M`), la de la forma vieja (``**`CAIDA n`.``) y la de los
+encabezados en negrita que abren con `CAIDA` o `AMAGO`, que es la unica que
+ve la forma que el acta 176 usa (``**CAIDA DE REPORTE 1:``).
+
+| seccion | por la vara `N.M` | por `CAIDA n` | por lead en negrita |
+|---|---:|---:|---:|
+| caidas propias del auditor | (ninguna seccion la titula) | (ninguna seccion la titula) | (ninguna seccion la titula) |
+| caidas del ejecutor | (ninguna seccion la titula) | (ninguna seccion la titula) | (ninguna seccion la titula) |
+
+- **AUDITOR:** ninguna seccion de esta acta titula ese numeral, **y eso
+  se declara, no se publica como un cero**.
+- **EJECUTOR:** ninguna seccion de esta acta titula ese numeral, **y eso
+  se declara, no se publica como un cero**.
+
+### LAS CERO ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+- (ninguna seccion de esta acta se titula LAS ADJUDICACIONES)
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `('30', None, None, None)` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (linea 62401) | relecturas | 1 | **314** |
+- (linea 62402) | puestos | 30 aislados, **27 limpios** | **633** |
+- (linea 62403) | discrepancias DENTRO del marcado | **0** (el marcado estaba quemado, punto 7.1) | **26** |
+- (linea 62404) | discrepancias y hallazgos FUERA del marcado | **4** (3 discrepancias **que falle yo** y **un hallazgo mio**, la seccion 6) | **89** |
+- (linea 62405) | caidas propias del auditor | **1**, puesta la primera | racha de la especie en **2**: una mas y el acta 180 abre con su remedio |
+- (linea 62406) | caidas del ejecutor que ACUMULAN | **0** | racha de cifra publicada **0** |
+- (linea 62407) | caidas del ejecutor de reporte | **0** | racha de reporte **0**, y su escalada quedo entregada y corriendo |
+
+**EL COTEJO CONTRA LA PROPIA FILA DE METRICA DEL ACTA, QUE LA ESCRIBIO EL
+AUDITOR DE AQUELLA VUELTA Y NO ESTA VUELTA:** esa fila publica
+`**1**, puesta la primera` caidas propias del auditor, y este computo, por la forma `CAIDA n`,
+cuenta **(sin seccion)**.
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor, **2** del auditor
+y **1** huerfanas sobre este mismo cuerpo.
+
+
+## R.70. Registro de las adjudicaciones numeradas NO COMPUTABLES, los hallazgos NO COMPUTABLES, las preguntas contestadas NO COMPUTABLES, las caidas propias del auditor NO COMPUTABLES, las 0 caidas del ejecutor del acta de la vuelta 180, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+(Acta del auditor, vuelta 180; escrito en la vuelta 206, TAREA 2.)
+
+Por adicion, como `R.21` a `R.68`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
+Salida: `docs/loop/SALIDA_V206_T2_REGISTROS.txt`.
+
+**ESTA ENTRADA DECLARA QUE USO LA VARA DEL `4.1` DEL ACTA 202**, que es
+obligatoria para toda acta ANTERIOR a la 184: *el numeral se toma de la
+seccion cuyo PROPIO TITULO lo nombra, NUNCA del numero de seccion, y dentro
+de ella las claves se cuentan por su propia numeracion `N.M`, lleve o no
+comillas inversas*. **Y donde ninguna seccion titula un numeral, la entrada
+DECLARA que no es computable en vez de publicar un cero**, que se leeria
+como que el acta no hizo esa cosa. Es el mismo precedente que la vuelta 201
+sento en su entrada de la 198.
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTA ENTRADA.** Rige la
+MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Los lectores se IMPORTAN y lo
+unico que se ensancho es **el patron de clave**, con un parametro
+`plantilla` OPCIONAL en `R84.claves_entrecomilladas()` cuyo valor por
+defecto es la expresion que ya tenia dentro, **para que ninguno de sus
+catorce llamantes se toque**. El computo vive en
+`scripts/loop/_v203_reparto_de_actas_viejas.py`, con prefijo de guion bajo,
+**fuera del censo y fuera de la nomina**, y **es el MISMO que uso la
+TAREA 1 y la TAREA 4 de la vuelta 203**, y aqui se IMPORTA tal cual:
+no se escribio un tercero y tampoco se clono.
+
+**EL ACTA ACOTADA EN ESTA VUELTA:** lineas **62449** a **62906**, **458** lineas,
+sobre un fichero de **4771842** bytes en disco y **4771842** normalizado a LF. Su
+cuerpo trae **11** secciones `## N. TITULO`, y aqui van las que este
+computo mira, cada una con **su numero y su titulo literal**:
+
+| numeral | seccion que lo titula, por su TITULO | numero | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| hallazgos | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| caidas propias del auditor | **NINGUNA SECCION DE ESTA ACTA TITULA ESTE NUMERAL** | (no aplica) | (no aplica) | (no aplica) | **no computable** |
+| caidas del ejecutor | LA CAIDA DEL EJECUTOR, UNA, Y ACUMULA | 5 | 62687 | (ninguna) | **0** |
+| preguntas contestadas | (no es una seccion: son las `P.n` que los titulos de las adjudicaciones nombran) | (no aplica) | (no aplica) | (ninguna) | **no computable** |
+
+**LA VIA DEL NUMERAL DE PREGUNTAS, DICHA Y NO SUPUESTA:** FILTRADAS contra la seccion de PREGUNTAS del reporte archivado, CONTADA A MANO en la vuelta 206 y NO con `preguntas_del_reporte()`, cuyo patron el articulo `LAS` le rompe (acta 204 `4.4`).
+`docs/loop/reportes/REPORTE_V180.md` **existe**, y su seccion de preguntas se lee asi: la seccion de preguntas se titula '## 6. LAS PREGUNTAS', en la linea 843, y sus claves las conte A MANO en la vuelta 206 porque el lector heredado no la ve.
+Ese fichero mide **63677** bytes, medidos en esta vuelta con
+`os.path.isfile` y `os.path.getsize`.
+Claves `P.n` nombradas: **0** (ninguna). Claves que quedan fuera del numeral:
+**0** (ninguna).
+
+### EL REPARTO MEDIDO DE LAS PREGUNTAS, QUE NO ES EL NUMERAL
+
+**ESTO ES UNA MEDICION Y NO UN NUMERAL** (acta 204 `4.6`, que el encargo
+de la vuelta 206 cita para las entradas desde `R.69`). El numeral de
+arriba se queda como esta; esto va debajo y no lo sustituye.
+
+**COMO SE CONTO, DICHO PARA QUE SE PUEDA RECONTAR SIN CORRER NADA:** en
+`docs/loop/reportes/REPORTE_V180.md` la seccion de preguntas se titula
+**6. LAS PREGUNTAS**, en la linea **843**, y va hasta la **865**. De ahi salen las claves
+`P.n` EN LAS DOS FORMAS que esta campana usa, con comillas inversas y sin
+ellas. **EL LECTOR HEREDADO NO LAS VE**: su patron exige que la palabra
+PREGUNTAS vaya pegada al numero de seccion y el articulo `LAS` se lo
+rompe (acta 204 `4.4`, linea 196 de `_v203_reparto_de_actas_viejas.py`),
+y ese lector ES CODIGO Y NO SE TOCO EN ESTA VUELTA.
+
+| lectura | claves `P.n` en la seccion de preguntas del reporte | cuantas |
+|---|---|---:|
+| **contada a mano en la vuelta 206** | `P.1`, `P.2` | **2** |
+| el lector heredado, `REP.preguntas_del_reporte()`, publicado como contraste | el patron no encontro nada | 0 |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md`
+2). **EL CERO DEL HEREDADO NO ES UN HECHO DEL MUNDO**: es que su patron
+no encontro nada (`EJECUTOR.md` 9).
+
+### LAS DOS LECTURAS, PUBLICADAS JUNTAS Y CON LA DISCREPANCIA DECLARADA
+
+| lectura | adjudicaciones | hallazgos |
+|---|---:|---:|
+| **el lector heredado tal cual**, `R84.claves_entrecomilladas()` con su plantilla de siempre | (sin seccion) | (sin seccion) |
+| **la vara adjudicada en el `4.1`**, mismo lector con la plantilla ancha | **(sin seccion)** | **(sin seccion)** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md` 2).
+El cero del heredado **es cierto**: esa plantilla exige comillas inversas y
+esta acta no las escribe. Las dos cifras quedan escritas.
+
+### LAS CAIDAS, CON SUS TRES LECTURAS Y SU FORMA DECLARADA
+
+**LA FORMA DE CLAVE DE LAS CAIDAS DE ESTA ACTA NO ES `N.M`**, y por eso se
+publican **las tres lecturas** en vez de elegir una en silencio: la de la
+vara (`N.M`), la de la forma vieja (``**`CAIDA n`.``) y la de los
+encabezados en negrita que abren con `CAIDA` o `AMAGO`, que es la unica que
+ve la forma que el acta 176 usa (``**CAIDA DE REPORTE 1:``).
+
+| seccion | por la vara `N.M` | por `CAIDA n` | por lead en negrita |
+|---|---:|---:|---:|
+| caidas propias del auditor | (ninguna seccion la titula) | (ninguna seccion la titula) | (ninguna seccion la titula) |
+| caidas del ejecutor (seccion 5, linea 62687) | 0 | **0** | 0 |
+
+- **AUDITOR:** ninguna seccion de esta acta titula ese numeral, **y eso
+  se declara, no se publica como un cero**.
+- **EJECUTOR:** la seccion existe y **no trae ningun encabezado de caida**
+  por ninguna de las tres formas.
+
+### LAS CERO ADJUDICACIONES, UNA POR UNA, CON SU LINEA
+
+- (ninguna seccion de esta acta se titula LAS ADJUDICACIONES)
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `(None, None, None, None)` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (linea 62648) | puestos aislados | **43** (31 del carril A, 12 del B) |
+- (linea 62858) | relecturas | 1 (en dos carriles) | **315** |
+- (linea 62859) | puestos | 43 aislados, **43 limpios** | **676** |
+- (linea 62860) | discrepancias DENTRO del marcado | **0** (el marcado no eran clases, punto 4) | **26** |
+- (linea 62861) | discrepancias y hallazgos FUERA del marcado | **14** (13 discrepancias **que falle yo** y **un hallazgo mio**, el `E.1`) | **103** |
+- (linea 62862) | caidas propias del auditor | **1**, puesta la primera | **racha de la especie en 3: el acta 181 ABRE con su remedio** |
+- (linea 62863) | caidas del ejecutor que ACUMULAN por cifra publicada | **0** | racha de cifra publicada **0** |
+- (linea 62864) | caidas del ejecutor de reporte | **1** (`E.1`, en cabecera) | **racha de reporte 1** |
+
+**EL COTEJO CONTRA LA PROPIA FILA DE METRICA DEL ACTA, QUE LA ESCRIBIO EL
+AUDITOR DE AQUELLA VUELTA Y NO ESTA VUELTA:** esa fila publica
+`**1**, puesta la primera` caidas propias del auditor, y este computo, por la forma `CAIDA n`,
+cuenta **(sin seccion)**.
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor, **0** del auditor
+y **5** huerfanas sobre este mismo cuerpo.
+
