@@ -117,6 +117,18 @@ lo que diga el encargo.
    evidencia de una corrida cuenta como CIFRA PUBLICADA en su sede, y si apunta
    a un fichero inexistente o de CERO BYTES es CAIDA DE CIFRA. Antes de escribir
    una ruta como prueba, se comprueba que el fichero existe y que no esta vacio.
+   MORATORIA DE MAQUINARIA, Y EL BUCLE VUELVE AL PLAN (7 sep 2026, decision del
+   fundador; el regimen entero en AUDITOR.md seccion 6.3). NO SE FABRICAN
+   ARNESES, GUARDAS NI LECTORES NUEVOS, salvo las TAREAS 1 y 2 que el acta 198
+   ya adjudico y lo que una CAIDA DE DATO exija CON SU CITA. La nomina de la
+   bateria queda CONGELADA EN 135: ni crece ni se poda. EL TRABAJO ES EL PLAN
+   HASTA AGOTARLO: las cuatro fichas reales, la cola restante y el cierre. Si
+   una vuelta cree necesitar maquinaria nueva, PARA Y LO TRAE en vez de
+   fabricarla.
+   Y EL TOPE NUMERICO DEL REPORTE SE RETIRO (mismo dia, mismo sitio): 408 lineas
+   contra un tope de 80 hechas de piezas obligatorias. Queda la letra
+   cualitativa, y se acorta quitando lo que sobra, no recortando lo que la casa
+   manda escribir.
 2. EL INSTRUMENTO MANDA (14 ago 2026; motivo: las caidas de las vueltas 15
    y 16 fueron las dos de esta especie). Toda cifra o nombre propio que se
    publique se lee de la salida del instrumento corrido EN ESTA VUELTA. Una
@@ -163,7 +175,9 @@ proxima vuelta y hasta la apertura de la fase 06:
 1. LOTES AL DOBLE: las lecturas dirigidas van en tramos de 80 pares (no 40);
    cuando dos operaciones quepan en una vuelta con sus guardas completas, van
    las dos.
-2. EL REPORTE SE ENCOGE: tope de 80 lineas. Cabecera tallada, tablas talladas
+2. ~~EL REPORTE SE ENCOGE: tope de 80 lineas.~~ **EL TOPE NUMERICO SE RETIRO**
+   (7 sep 2026, ver AUDITOR.md seccion 6; la letra vieja no se borra, se tacha).
+   Queda la letra CUALITATIVA: Cabecera tallada, tablas talladas
    con su comando, adjudicaciones por numero y linea, y las decisiones de
    lectura en el registro JSONL (no narradas en prosa). Queda prohibida la
    prosa de acompanamiento que repite lo que el registro ya dice.

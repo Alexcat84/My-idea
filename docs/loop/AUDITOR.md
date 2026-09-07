@@ -55,6 +55,20 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    caidas, dentro/fuera del marcado). La regla del credito: si una discrepancia
    aparece FUERA de los discutibles marcados, baja el credito de toda la tanda:
    ese tramo se relee al doble y lo dices en el acta.
+   LA RAIZ Y EL CINTURON DE LA SERIE QUE DOBLA (7 sep 2026, decision del
+   fundador, punto 2 de `paradas/2026-09-07-el-bucle-se-volvio-el-bucle-DECISION.md`).
+   Dos mitades, y la primera es la que corrige el razonamiento:
+   LA RAIZ: **una discrepancia que aparece en un tramo SIN MARCADO NO ROMPE EL
+   CREDITO DE TANDA.** Se registra y se adjudica como cualquier otra, pero **la
+   comparacion que esta regla supone NO EXISTE AHI**: la regla mide si el
+   ejecutor acerto al MARCAR sus discutibles, y en un tramo donde nadie marco
+   nada no hay nada que comparar. Castigar por eso es medir contra una vara que
+   no se puso.
+   EL CINTURON: **LA RELECTURA AL DOBLE TIENE TECHO EN 240.** El exceso **se
+   declara y se reparte en tramos siguientes; NUNCA se dobla otra vez.** Una
+   serie que dobla sin techo deja de ser un remedio y pasa a ser una condena:
+   llega un punto en que la deuda de lectura no cabe en ninguna vuelta y el
+   remedio garantiza que nada se cierre.
    LA ESCALADA SE ENCARGA, NO SOLO SE DECLARA (29 ago 2026; motivo: la
    parada de la vuelta 89. La racha de reporte llego a DOS en el acta de la
    vuelta 88, el auditor la declaro en dos, y NO encargo la operacion de
@@ -220,6 +234,17 @@ FASE III, EJECUCION: SOLO tras cerrar la fase II con Gate 0 verde. Se ejecuta en
     (`docs/loop/SALIDA_V173_BATERIA.txt`)"*, y ese fichero **mide CERO BYTES**.
     **Ninguno de los dos acumulaba** por la letra del 27 ago, y por eso se
     escribe esta.
+    LA GUARDA QUE SE PUBLICA COMO MORDIENDO Y NO MUERDE ES CIFRA PUBLICADA
+    (7 sep 2026, decision del fundador, punto 3 de
+    `paradas/2026-09-07-el-bucle-se-volvio-el-bucle-DECISION.md`). **HERMANA DE
+    LA ANTERIOR**, y por el mismo motivo: publicar *"esta guarda muerde"* sobre
+    una guarda **apagada** engana igual que un numero falso o que una ruta a un
+    fichero vacio. **Las tres son la misma especie: un letrero que afirma una
+    comprobacion que no ocurrio.**
+    **SIN RETROACTIVIDAD:** rige desde el 7 sep 2026, asi que **el caso de la
+    vuelta 197 queda REGISTRADO Y NO ACUMULA**. Fue el que la trajo: dos
+    remedios escritos llevaban apagados desde esa vuelta y se publicaban como
+    vivos, y le quemaron el sujeto de la ciega al propio auditor.
 
   - ~~**Caida de REPORTE** (una afirmacion equivocada que vive solo en
     `REPORTE.md` y no mueve ningun dato): se registra con nombre en el acta
@@ -323,10 +348,21 @@ proxima vuelta y hasta la apertura de la fase 06:
 1. LOTES AL DOBLE: las lecturas dirigidas van en tramos de 80 pares (no 40);
    cuando dos operaciones quepan en una vuelta con sus guardas completas, van
    las dos.
-2. EL REPORTE SE ENCOGE: tope de 80 lineas. Cabecera tallada, tablas talladas
-   con su comando, adjudicaciones por numero y linea, y las decisiones de
-   lectura en el registro JSONL (no narradas en prosa). Queda prohibida la
-   prosa de acompanamiento que repite lo que el registro ya dice.
+2. ~~EL REPORTE SE ENCOGE: tope de 80 lineas.~~ **EL TOPE NUMERICO SE RETIRA**
+   (7 sep 2026, decision del fundador, punto 1 de
+   `paradas/2026-09-07-el-bucle-se-volvio-el-bucle-DECISION.md`; la letra del
+   27 ago no se borra, se tacha). **EL MOTIVO ES UNA CIFRA: 408 LINEAS CONTRA
+   UN TOPE DE 80**, y las 408 salian de PIEZAS OBLIGATORIAS que otras reglas
+   mandan poner. **UNA REGLA QUE TODOS VIOLAN POR OBLIGACION DE OTRAS REGLAS
+   ENSEÑA A VIOLAR REGLAS**, que es el peor efecto posible en una casa cuyo
+   unico capital es que la letra se cumpla.
+   **QUEDA LA LETRA CUALITATIVA, Y ES LA QUE SIEMPRE IMPORTO:** nada que el
+   registro ya diga, TODA CIFRA TALLADA, y las secciones obligatorias mandan.
+   Cabecera tallada, tablas talladas con su comando, adjudicaciones por numero y
+   linea, y las decisiones de lectura en el registro JSONL (no narradas en
+   prosa). Queda prohibida la prosa de acompanamiento que repite lo que el
+   registro ya dice. **Se acorta quitando lo que sobra, no recortando lo que la
+   casa manda escribir.**
 3. EL ACTA SE ENCOGE IGUAL: tope de 60 lineas cuando no hay caidas ni
    discutibles fuera del marcado. La verificacion NO se recorta: Gate, suites,
    talladores y ciega sobre el registro siguen enteros; lo que se recorta es su
@@ -398,6 +434,28 @@ cadencia.** Y **LA NOMINA SIGUE CRECIENDO: NADIE LA PODA SIN EL FUNDADOR.** La
 opcion (c) de la parada, jubilar los arneses viejos, **queda RECHAZADA**: borrar
 guardas que ninguna regla ordena borrar es lo que la casa reserva, y va contra
 fallar ruidoso.
+
+### 6.3 MORATORIA DE MAQUINARIA: EL BUCLE VUELVE AL PLAN (7 sep 2026)
+
+**Decision del fundador, punto 4 de
+`paradas/2026-09-07-el-bucle-se-volvio-el-bucle-DECISION.md`.**
+
+> **NINGUNA VUELTA FABRICA ARNESES, GUARDAS NI LECTORES NUEVOS.** Las unicas
+> excepciones son **las TAREAS 1 y 2 ya adjudicadas por el acta 198** y **lo que
+> una CAIDA DE DATO exija, con su cita**.
+
+**LA NOMINA DE LA BATERIA QUEDA CONGELADA EN 135.** **Ni crece ni se poda:** la
+poda se decide en la **auditoria integral** y no antes. Congelarla es lo que
+permite que la moratoria se sostenga sola, porque la nomina crecia justamente
+con la maquinaria nueva.
+
+**EL TRABAJO ES EL PLAN HASTA AGOTARLO:** las **cuatro fichas reales**, la
+**cola restante** bajo la regla nueva del diferenciador movido, y **el cierre**.
+
+**EL MOTIVO, Y ES EL NOMBRE DE LA PARADA:** el bucle se volvio el bucle. Llego a
+un punto en que casi todo lo que producia era maquinaria para vigilarse a si
+mismo, y el plan (que es para lo que existe) llevaba vueltas sin avanzar. **Una
+guarda mas no arregla eso: lo agrava.**
 
 ### 6.2 REGIMEN TEMPORAL DE DOS SUB-TAREAS (decision del fundador, 5 sep 2026)
 
