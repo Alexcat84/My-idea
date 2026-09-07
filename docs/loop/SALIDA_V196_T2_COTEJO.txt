@@ -1,0 +1,201 @@
+==============================================================================
+VUELTA 196, TAREA 2: MIS CLASES SOBRE LOS 120, Y SU COTEJO
+==============================================================================
+
+A) EL SUJETO Y LA COBERTURA, CONTADOS Y NO TECLEADOS
+   docs/loop/SALIDA_V196_T2_CIEGA.txt -> disco 164199 bytes | LF 164199 | sha256 LF c72db9a4f9bfc1cf
+   CIFRA puestos de la ciega: 120
+   CIFRA puestos del DOBLE, leidos de la sellada del auditor: 60
+   CIFRA puestos del TRAMO, por diferencia: 60
+   CIFRA clases que yo escribi: 120
+   CIFRA puestos SIN clase mia: 0 
+   CIFRA clases mias que no estan en el sujeto: 0 
+
+B) MI REPARTO, ANTES DE ABRIR NADA
+   sobre los 120: A 16, B 2, C 0, D 102
+   sobre el TRAMO (60): A 8, B 1, C 0, D 51
+   sobre el DOBLE (60): A 8, B 1, C 0, D 51
+   LA `B` NI SE SALTA NI SE SOBRE EMITE: emito 2 sobre 120, y el archivo
+   entero lleva 72 sobre 3388, que es el 2,1 por ciento. Sobre 120 eso son
+   2,5 esperadas.
+
+C) LA CONTAMINACION, DECLARADA Y MEDIDA ANTES DEL COTEJO
+   LOS SEIS QUEMADOS, importados de la sellada del sujeto y no retecleados:
+      654   acta 196, hallazgo 5.1: declara que el encargo de la 195 publico su clase de archivo al ensenar 
+      719   acta 196, hallazgo 5.1: declara que el encargo de la 195 publico su clase de archivo al ensenar 
+      976   acta 196, adjudicacion 4.1: publica que el archivo dice A, y el PROMPT_SIGUIENTE de esta vuelta 
+      2428  acta 196, adjudicacion 4.2: publica que el archivo dice D, y el PROMPT_SIGUIENTE de esta vuelta 
+      2662  acta 196, adjudicacion 4.3: publica que el archivo dice D por una correccion declarada de la vue
+      3173  acta 196, adjudicacion 4.4: publica que el archivo dice D y que el propio archivo se marca DISCU
+   Y LA GRANDE, QUE NO ES LA DE LOS SEIS: acta 196, seccion 2: MI REPARTO CONTRA EL DEL ARCHIVO. Publica el reparto del archivo sobre los 60 del tramo
+   `A 8, B 1, C 0, D 51` sobre los 60 del TRAMO.
+   MI REPARTO SOBRE EL TRAMO ES `A 8, B 1, C 0, D 51`.
+   COINCIDE CON EL FILTRADO: SI
+   NO RECLAMO CEGUERA SOBRE EL TRAMO, Y ESA ES LA DECLARACION: ese reparto lo
+   LEI en la TAREA 1 de esta misma vuelta, que es BLOQUEANTE y obliga a
+   leer el acta entera. La unica mitad que se puede llamar ciega de verdad
+   es el DOBLE, y por eso su cotejo se publica aparte.
+
+D) EL DESTAPE, ABIERTO AHORA Y NO ANTES
+   docs/loop/SALIDA_V196_T2_DESTAPE.txt -> disco 124298 bytes | LF 124298 | sha256 LF 1277a88cbf67e0b8
+   CIFRA filas del archivo: 3388
+
+E) EL COTEJO, PUESTO POR PUESTO
+   10    mia D | archivo D | CALZA                             
+   11    mia D | archivo D | CALZA                             
+   12    mia D | archivo D | CALZA                             
+   13    mia D | archivo D | CALZA                             
+   24    mia D | archivo D | CALZA                             
+   25    mia D | archivo D | CALZA                             
+   26    mia D | archivo D | CALZA                             
+   27    mia D | archivo D | CALZA                             
+   71    mia D | archivo D | CALZA                             
+   72    mia D | archivo D | CALZA                             
+   73    mia D | archivo D | CALZA                             
+   74    mia D | archivo D | CALZA                             
+   133   mia D | archivo D | CALZA                             
+   134   mia D | archivo D | CALZA                             
+   135   mia D | archivo D | CALZA                             
+   139   mia D | archivo D | CALZA                             
+   159   mia D | archivo D | CALZA                             
+   160   mia A | archivo A | CALZA                             
+   161   mia A | archivo A | CALZA                             
+   162   mia D | archivo D | CALZA                             
+   204   mia D | archivo D | CALZA                             
+   205   mia D | archivo D | CALZA                             
+   206   mia A | archivo A | CALZA                             
+   207   mia B | archivo A | DISCREPA  DISCUTIBLE              
+         mi razon:      Los dos seleccionan arenas cruzando atractivo de mercado con fortaleza propia, y se cruzan justo en el medio. Se distinguen en el encuadre: 
+         razon del archivo: REPITE con estrategia_de_innovacion_y_tecnologia. Los dos mandan mapear las arenas de mercado y tecnologia, elegir las que cruzan atractivo con competencias propias y usar esa eleccion como 
+   397   mia D | archivo D | CALZA                             
+   398   mia D | archivo D | CALZA                             
+   399   mia D | archivo D | CALZA                             
+   400   mia A | archivo A | CALZA     DISCUTIBLE              
+   613   mia D | archivo D | CALZA                             
+   614   mia A | archivo A | CALZA                             
+   615   mia D | archivo D | CALZA                             
+   616   mia D | archivo A | DISCREPA                          
+         mi razon:      Gates go kill con seis criterios contra la revision formal con strategic buckets.
+         razon del archivo: FAMILIA DECLARADA: los dos son miembros del racimo censado Portafolio: revisar, podar, reasignar, asi que no se pelea la clase. Se registra A porque el eje entero se repite: embudo o compuer
+   654   mia B | archivo B | CALZA     QUEMADO                 
+   655   mia A | archivo A | CALZA     DISCUTIBLE              
+   656   mia D | archivo D | CALZA                             
+   657   mia D | archivo D | CALZA                             
+   719   mia D | archivo D | CALZA     QUEMADO                 
+   720   mia D | archivo D | CALZA                             
+   721   mia D | archivo D | CALZA                             
+   722   mia D | archivo D | CALZA                             
+   880   mia D | archivo A | DISCREPA  DISCUTIBLE              
+         mi razon:      La tribu de marca nombra el marcador visual en una linea y B lo despliega, pero dos de los cinco pasos de B repiten a A palabra por palabra.
+         razon del archivo: LA MISMA TRIBU CON DOS NOMBRES, del mismo libro y sin arista entre ellos. Lo comun es el mecanismo entero: crear o identificar un elemento visual o simbolico distintivo asociado a la marca, 
+   881   mia D | archivo D | CALZA                             
+   882   mia D | archivo D | CALZA                             
+   883   mia A | archivo A | CALZA                             
+   908   mia A | archivo A | CALZA     DISCUTIBLE              
+   910   mia D | archivo D | CALZA                             
+   911   mia D | archivo D | CALZA                             
+   912   mia D | archivo D | CALZA                             
+   973   mia D | archivo D | CALZA                             
+   974   mia D | archivo D | CALZA                             
+   975   mia D | archivo D | CALZA                             
+   976   mia A | archivo A | CALZA     QUEMADO                 
+   979   mia D | archivo D | CALZA                             
+   980   mia D | archivo D | CALZA                             
+   981   mia D | archivo D | CALZA                             
+   982   mia D | archivo D | CALZA                             
+   1070  mia D | archivo D | CALZA                             
+   1071  mia D | archivo D | CALZA                             
+   1072  mia D | archivo D | CALZA                             
+   1073  mia D | archivo D | CALZA                             
+   1206  mia D | archivo D | CALZA                             
+   1207  mia D | archivo D | CALZA                             
+   1212  mia D | archivo D | CALZA                             
+   1213  mia D | archivo D | CALZA                             
+   1372  mia D | archivo D | CALZA                             
+   1373  mia D | archivo D | CALZA                             
+   1374  mia D | archivo D | CALZA                             
+   1379  mia D | archivo D | CALZA                             
+   1807  mia D | archivo D | CALZA                             
+   1808  mia D | archivo D | CALZA     DISCUTIBLE              
+   1809  mia D | archivo D | CALZA     DISCUTIBLE              
+   1810  mia D | archivo D | CALZA     DISCUTIBLE              
+   1818  mia A | archivo A | CALZA                             
+   1819  mia D | archivo D | CALZA                             
+   1820  mia D | archivo D | CALZA                             
+   1821  mia D | archivo D | CALZA     DISCUTIBLE              
+   2031  mia D | archivo D | CALZA                             
+   2032  mia D | archivo D | CALZA                             
+   2033  mia D | archivo D | CALZA                             
+   2034  mia D | archivo D | CALZA                             
+   2158  mia D | archivo D | CALZA                             
+   2159  mia D | archivo D | CALZA                             
+   2160  mia D | archivo D | CALZA                             
+   2161  mia D | archivo D | CALZA     DISCUTIBLE              
+   2427  mia D | archivo D | CALZA                             
+   2428  mia D | archivo D | CALZA     QUEMADO                 
+   2429  mia A | archivo D | DISCREPA  DISCUTIBLE              
+         mi razon:      Los dos primeros pasos son los mismos y el ultimo tambien. Fuera del solape A solo conserva comparar las dos listas, que es una linea, y B c
+         razon del archivo: Comparar las dos listas contra graduarlas, MISMA FUENTE, Juran, y sin arista entre ellos. Los dos arrancan igual, la lista de caracteristicas de calidad desde las especificaciones y la lista
+   2430  mia A | archivo D | DISCREPA  DISCUTIBLE              
+         mi razon:      Mapear, eliminar lo que no agrega valor y el sistema pull estan a los dos lados. Fuera quedan lineas: las ocho categorias e involucrar gente
+         razon del archivo: El desperdicio contra el valor, MISMA FUENTE, Juran, y sin arista entre ellos. introduccion_lean entra POR LO QUE SOBRA: mapear el proceso para hallar actividades sin valor, CLASIFICAR LOS D
+   2661  mia D | archivo D | CALZA                             
+   2662  mia A | archivo D | DISCREPA  QUEMADO E INALCANZABLE  
+         mi razon:      A ciegas los dos son la misma constitucion del consejo de calidad. INALCANZABLE por el hallazgo 5.3 del acta 196: la clase se apoya en una f
+         razon del archivo: CORRECCION DECLARADA EL 20 ago 2026 (vuelta 51), Y LA COLISION QUE LA OBLIGA LA FABRICO ESTA MISMA VUELTA: SE DICE ASI EN VEZ DE PRESENTARLA COMO HALLAZGO. LA CLASE CAMBIA: DE A A D. ES EL S
+   2663  mia A | archivo A | CALZA                             
+   2664  mia A | archivo A | CALZA                             
+   2837  mia D | archivo D | CALZA                             
+   2838  mia A | archivo A | CALZA                             
+   2839  mia D | archivo D | CALZA                             
+   2840  mia D | archivo D | CALZA                             
+   2914  mia D | archivo D | CALZA                             
+   2915  mia D | archivo D | CALZA                             
+   2916  mia D | archivo D | CALZA     DISCUTIBLE              
+   2917  mia D | archivo A | DISCREPA  DISCUTIBLE              
+         mi razon:      Dos pasos de B citan a A palabra por palabra, pero A conserva puntos de consumo y niveles de reposicion, y B conserva push contra pull, cuel
+         razon del archivo: kanban_pull_system (definir puntos de consumo, diseñar el tipo de señal kanban tarjeta/espacio/contenedor, establecer niveles de reposicion segun consumo real, implementar y capacitar a los 
+   3071  mia D | archivo D | CALZA                             
+   3072  mia D | archivo D | CALZA     DISCUTIBLE              
+   3073  mia D | archivo D | CALZA                             
+   3074  mia D | archivo D | CALZA                             
+   3090  mia D | archivo D | CALZA                             
+   3091  mia D | archivo D | CALZA                             
+   3092  mia D | archivo D | CALZA                             
+   3093  mia D | archivo D | CALZA                             
+   3172  mia D | archivo D | CALZA                             
+   3173  mia D | archivo D | CALZA     QUEMADO                 
+   3174  mia D | archivo D | CALZA                             
+   3180  mia D | archivo D | CALZA                             
+   3186  mia D | archivo D | CALZA                             
+   3187  mia D | archivo D | CALZA                             
+   3188  mia D | archivo D | CALZA                             
+   3189  mia D | archivo D | CALZA                             
+   3330  mia D | archivo D | CALZA                             
+   3331  mia D | archivo D | CALZA                             
+   3332  mia D | archivo D | CALZA                             
+   3333  mia D | archivo D | CALZA                             
+
+F) LAS CIFRAS DEL COTEJO, POR LAS TRES VARAS
+   los 120 enteros                                113 de 120 coinciden,  7 discrepan
+   los 114 sin quemados                           108 de 114 coinciden,  6 discrepan
+   el DOBLE, la unica mitad ciega de verdad        55 de  60 coinciden,  5 discrepan
+   el TRAMO, con el reparto filtrado               58 de  60 coinciden,  2 discrepan
+
+   CIFRA discutibles que marque ANTES de saber: 15
+   CIFRA discrepancias DENTRO de mi marcado: 5 -> 207, 880, 2429, 2430, 2917
+   CIFRA discrepancias FUERA de mi marcado: 2 -> 616, 2662
+   CIFRA discrepancias FUERA del marcado Y NO QUEMADAS: 1 -> 616
+   ESA ES LA QUE DISPARA AUDITOR.md 1.2 sobre mi propia tanda.
+
+G) EL REPARTO REAL DEL ARCHIVO, CONTADO Y NO SUPUESTO
+   sobre los 120: A 17, B 1, C 0, D 102
+   sobre el TRAMO: A 8, B 1, C 0, D 51
+   sobre el DOBLE: A 9, B 0, C 0, D 51
+   EL FILTRADO DEL ACTA DECIA `A 8, B 1, C 0, D 51` sobre el tramo, y el
+   archivo contado hoy da lo de arriba.
+
+H) EL ARCHIVO NO SE MOVIO
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl -> disco 4054129 bytes | LF 4054129 | sha256 LF 0a77b5a35a962621
+
+FIN DEL COTEJO
