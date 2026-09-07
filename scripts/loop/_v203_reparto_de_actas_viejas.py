@@ -158,6 +158,30 @@ def caidas_viejas(lineas, a, b):
     return salida
 
 
+PAT_LEAD_DE_CAIDA = re.compile(
+    r"^\s*[-*]?\s*\*\*`?((?:CAIDA|AMAGO)[^*`:.]*)")
+
+
+def leads_de_caida(lineas, a, b):
+    """LOS ENCABEZADOS EN NEGRITA QUE ABREN CON LA PALABRA `CAIDA` O `AMAGO`,
+    LLEVEN O NO NUMERO Y LLEVEN O NO COMILLAS INVERSAS. Devuelve (lead, linea,
+    literal). PURA.
+
+    POR QUE HACE FALTA, Y ESTA MEDIDO, NO SUPUESTO: el acta 176 escribe su caida
+    del ejecutor como ``**CAIDA DE REPORTE 1: ...``, que **no es `N.M`** y
+    **tampoco es ``**`CAIDA n`.``**. Un lector que solo mirase esas dos formas
+    publicaria un CERO sobre una seccion que el acta titula LA CAIDA DEL
+    EJECUTOR, CON SU NOMBRE, y ese cero se leeria como que no hubo caida. Esta
+    lectura va AL LADO de las otras dos, no en vez de ellas, y quien llama
+    publica las tres."""
+    salida = []
+    for i in range(a, b + 1):
+        m = PAT_LEAD_DE_CAIDA.match(lineas[i - 1])
+        if m:
+            salida.append((m.group(1).strip(), i, lineas[i - 1].strip()))
+    return salida
+
+
 def preguntas_del_reporte(ruta):
     """LAS CLAVES `P.n` QUE EL REPORTE PONE EN SU SECCION DE PREGUNTAS, y el
     titulo literal de esa seccion. Devuelve (claves, titulo). Clonada del
@@ -245,14 +269,19 @@ def medir_acta(vuelta, w):
             # la `N.M` de la vara, y las dos se publican.
             nm, donde = claves_de(lineas, sec)
             viejas = caidas_viejas(lineas, sec[3], sec[4])
+            leads = leads_de_caida(lineas, sec[3], sec[4])
             heredado = R94.caidas_propias_entrecomilladas(lineas, sec[3], sec[4])
             w("      claves `%d.M` por la vara: %d (%s)"
               % (sec[0], len(nm), ", ".join(c for c, _n in nm) or "ninguna"))
             w("      claves `CAIDA n` de la forma vieja: %d (%s)"
               % (len(viejas), ", ".join(c for c, _l, _t in viejas) or "ninguna"))
+            w("      leads en negrita que abren con CAIDA o AMAGO: %d (%s)"
+              % (len(leads), "; ".join(c for c, _l, _t in leads) or "ninguno"))
+            for c, ln, tt in leads:
+                w("         linea %5d | %s" % (ln, tt[:110]))
             w("      `R94.caidas_propias_entrecomilladas()` heredado: %d"
               % len(heredado))
-            m[etiqueta] = dict(nm=nm, donde=donde, viejas=viejas,
+            m[etiqueta] = dict(nm=nm, donde=donde, viejas=viejas, leads=leads,
                                heredado=heredado, sec=sec)
         else:
             nm, donde = claves_de(lineas, sec)
