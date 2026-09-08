@@ -502,6 +502,34 @@ def main():
     a("dejo nada a medias en disco, pero costo una corrida y lo cuento porque la")
     a("casa cuenta las caidas propias, no solo las que ensucian una cifra.")
     a("")
+    a("**`C.5`. EL LADO APERTURA DEL CICLO DE GATE 0 Y LOS DOS SELLOS DE `HEAD`")
+    a("NACIERON AL CIERRE, NO AL ABRIR.** El tallador de la cabecera los exige y")
+    a("**ninguno de los tres existia** cuando la vuelta llego a cerrarse: los corri y")
+    a("los escribi ahi mismo. **Es tardio y lo digo con su nombre**, que es la misma")
+    a("especie que la `C.3` del reporte de la 208. **Y el tallador lo repite por su")
+    a("cuenta en su celda de identidad**, sin que yo se lo pida: dice `sello")
+    a("RECONSTRUIDO DESPUES` con el commit en que nacio.")
+    a("")
+    a("**LO QUE SI SE SOSTIENE, MEDIDO Y NO ALEGADO.** El `HEAD` de apertura **no se")
+    a("invento**: `docs/loop/SALIDA_V209_HEAD_APERTURA.txt` se escribio copiando el")
+    a("literal `CIFRA HEAD de apertura` de mi propio sello")
+    a("`docs/loop/SALIDA_V209_APERTURA.txt`, que si se escribio **antes de la primera")
+    a("operacion**, y los dos dicen `%s`. **El fichero es tardio; la cifra que"
+      % ap_head[:8])
+    a("lleva, no.** Y lo que sostiene que las cifras de APERTURA del ciclo valgan es")
+    a("que **el arbol contra el que corre no se movio entre los dos lados**: mi sello")
+    a("publica `dataset/`, `web/` y `engine/` en **%s** filas de `git diff --numstat`"
+      % ap_numstat)
+    a("al entrar, y el numstat del cierre las da en cero otra vez, con censo **%s**"
+      % v["censo_g"])
+    a("y `nodos_siguientes` **%s** iguales por los dos lados." % sig)
+    a("")
+    a("**LO QUE NO SOSTIENE, Y NO ME LO CALLO:** una medicion tomada al cierre **no")
+    a("es una medicion de apertura** por mucho que el arbol no se haya movido, y")
+    a("`EJECUTOR.md` 1 lo dice sin matices. **La columna de apertura de mi cabecera")
+    a("es, en rigor, una segunda corrida del cierre**, y quien la lea tiene que")
+    a("saberlo. Por eso esta caida se cuenta entera y no como media.")
+    a("")
     a("## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE")
     a("")
     a("La **210** es **VUELTA DE BATERIA** por la cadencia de cinco (`AUDITOR.md`")
@@ -552,6 +580,16 @@ def main():
 
     cuerpo = NL.join(p) + NL
 
+    # LA CIFRA DE CAIDAS DEL VEREDICTO NO SE TECLEA: SE CUENTA DE LAS CLAVES QUE
+    # EL PROPIO CUERPO TRAE. Si manana se anade o se quita una, el veredicto la
+    # sigue sin que nadie se acuerde.
+    claves = sorted(set(re.findall(r"\*\*`(C\.\d+)`\.", cuerpo)))
+    PALABRA = {1: "UNA", 2: "DOS", 3: "TRES", 4: "CUATRO", 5: "CINCO",
+               6: "SEIS", 7: "SIETE", 8: "OCHO"}
+    n_caidas = len(claves)
+    print("   CIFRA caidas propias contadas del cuerpo: %d (%s)"
+          % (n_caidas, ", ".join(claves)))
+
     veredicto = (
         "**EL VEREDICTO DE UNA LINEA: LA VUELTA 209 ENTREGO SUS TRES TAREAS "
         "ENTERAS Y CON SUS GUARDAS. `R.73` ESCRITA POR ADICION PURA CON 0 "
@@ -562,18 +600,19 @@ def main():
         "PUNTO POR PUNTO CONTRA SU VARA SELLADA, %s DE %s CUBREN, %s A MEDIAS, "
         "%s NO CUBRE Y 0 FILAS SIN CITA, SIN TOCAR SU `estado`. CERO "
         "DISCREPANCIAS CON EL CONTRASTE DEL ENCARGO EN LOS TRES APARTADOS. "
-        "CUATRO CAIDAS PROPIAS, LAS CUATRO CAZADAS POR MIS GUARDAS ANTES DE "
-        "PUBLICAR. TRES DISCUTIBLES MARCADOS, TRES PREGUNTAS Y UN PENDIENTE DE "
+        "%s CAIDAS PROPIAS, CADA UNA CONTADA UNA SOLA VEZ Y NINGUNA ESCONDIDA. "
+        "TRES DISCUTIBLES MARCADOS, TRES PREGUNTAS Y UN PENDIENTE DE "
         "DOCTRINA. NO SE CUMPLE NINGUNA CONDICION DE PARADA.**"
-        % (v["cubre"], v["vara_p"], v["medias"], v["nocubre"]))
+        % (v["cubre"], v["vara_p"], v["medias"], v["nocubre"],
+           PALABRA[n_caidas]))
 
     texto = io.open(REPORTE, encoding="utf-8").read().replace(chr(13) + NL, NL)
     marca_ver = "**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**"
     fallos = 0
     print("LO QUE SE COMPRUEBA ANTES DE ESCRIBIR:")
     n = texto.count(marca_ver)
-    print("   la marca del veredicto sin escribir aparece %d vez(ces) (se exige 1)"
-          % n)
+    print("   el reporte sigue con su veredicto SIN ESCRIBIR: %d vez(ces) "
+          "(se exige 1, porque quien lo cierra es cerrar_reporte.py)" % n)
     if n != 1:
         fallos += 1
     for cab in ("## 3.", "## 4.", "## 5.", "## 6.", "## 7.", "## 8.", "## 9."):
@@ -622,12 +661,20 @@ def main():
         print("ROJO: el cierre NO ESCRIBE. docs/loop/REPORTE.md queda intacto.")
         return 1
 
-    nuevo = texto.replace(marca_ver, cuerpo + NL + veredicto, 1)
-    io.open(REPORTE, "w", encoding="utf-8", newline=NL).write(nuevo)
-    print("ESCRITO docs/loop/REPORTE.md -> %d bytes en disco y %d bytes "
-          "normalizado a LF, %d lineas"
-          % (len(nuevo.encode("utf-8")), len(nuevo.encode("utf-8")),
-             nuevo.count(NL)))
+    # EL CUERPO VA A SU PROPIO FICHERO Y **NO SE ESCRIBE EN EL REPORTE**: quien
+    # cierra el reporte es `cerrar_reporte.py --cuerpo`, y meterselo por mi cuenta
+    # lo duplicaria. Este computo compone y juzga; el instrumento de la casa pega.
+    destino = os.path.join(AQUI, "_v%d_cierre_texto.md" % VUELTA)
+    io.open(destino, "w", encoding="utf-8", newline=NL).write(cuerpo)
+    ver_ruta = os.path.join(AQUI, "_v%d_veredicto.txt" % VUELTA)
+    io.open(ver_ruta, "w", encoding="utf-8", newline=NL).write(veredicto + NL)
+    print("ESCRITO %s -> %d bytes en disco y %d bytes normalizado a LF, %d lineas"
+          % (os.path.basename(destino), len(cuerpo.encode("utf-8")),
+             len(cuerpo.encode("utf-8")), cuerpo.count(NL)))
+    print("ESCRITO %s -> %d bytes en disco y %d bytes normalizado a LF"
+          % (os.path.basename(ver_ruta), len(veredicto.encode("utf-8")) + 1,
+             len(veredicto.encode("utf-8")) + 1))
+    print("EL REPORTE NO SE TOCA AQUI: lo cierra cerrar_reporte.py --cuerpo.")
     return 0
 
 
