@@ -1,0 +1,86 @@
+==============================================================================
+TAREA 2 DE LA VUELTA 212. LA COLA DE RELECTURA, BAJO LA REGLA QUE LA 730 DEJA.
+==============================================================================
+
+## 0. LA PUERTA: ESTA TAREA SOLO SE ABRE SI LA 1.b CONFIRMO
+CIFRA bytes de docs/loop/SALIDA_V212_T1B_PUESTO_730.txt: 10520
+CIFRA la 1.b dice CONFIRMA: SI: SI
+
+## 1. LOS CUATRO, LEIDOS DE LA LINEA DE LA 1.b QUE LOS PUBLICA
+   linea leida> CIFRA razones en clase A que nombran el cero-enlazados (patron holgado): 4, y son 474, 568, 586, 730
+CIFRA puestos leidos de esa linea: 4, y la cifra que la propia linea declara es 4 (se exige que sean iguales)
+
+## 2. EL ARCHIVO, MEDIDO HOY
+CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+CIFRA sede docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 4057130 bytes en disco y 4057130 normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+
+LA TABLA DE LOS CUATRO CON SU CLASE DE HOY: 4 fila(s) armada(s), y la cifra de al lado dice que deberian ser 4
+   cuatro> puesto 474 clase HOY A
+   cuatro> puesto 568 clase HOY A
+   cuatro> puesto 586 clase HOY A
+   cuatro> puesto 730 clase HOY D (era A en la apertura de esta vuelta y la 1.b lo paso a D)
+CIFRA de los 4, cuantos siguen en A despues de la 1.b: 3 (474, 568, 586)
+CIFRA los que quedan por mirar en esta tarea, o sea los cuatro menos el 730: 3
+
+## 3. UNO A UNO: SU RAZON ENTERA Y DE QUE DEPENDE SU CLASE
+
+### PUESTO 474
+CIFRA clase A | dominio core | clave 0.8408
+CIFRA nodo_a: milk_run_deliveries
+CIFRA nodo_b: programacion_entregas_delivery_scheduling
+CIFRA bytes de su razon: 1646
+RAZON ENTERA, pegada sin cortar:
+   EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. milk_run_deliveries es el paso 3 de programacion_entregas_delivery_scheduling desarrollado, la rama de disenar rutas milk run cuando el lote economico no llena camion, y repite ademas dos pasos mas de la madre, el calculo del EOQ por ubicacion y la eleccion de la tecnica de ruteo entre matriz de ahorros y asignacion generalizada. La madre es la decision entre entrega directa y milk run; el hijo es una de las dos ramas contada aparte con tres de sus cinco pasos ya dichos arriba. Ninguno enlaza al otro. Detalle anotado: en las aristas de este par hay un nodo DEPRECADO. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. El unico hijo de paso vivo de programacion_entregas_delivery_scheduling es milk_run_deliveries, por el paso 3; ni la matriz de ahorros ni la asignacion generalizada ni las entregas directas tienen nodo propio. PROPORCION: CERO enlazados, o sea que no hay hermanos enlazados y la figura NO APLICA: manda la regla original. Y el texto lo confirma por su cuenta: este hijo no solo desarrolla el paso 3, REPITE ademas dos pasos mas de la madre, asi que repite y no continua. LA CLASE A SE SOSTIENE.
+
+LA TABLA DE FRASES DE SILUETA: 1 fila(s) armada(s) sobre 5 anclas buscadas
+   silueta> [la figura NO APLICA] PROPORCION: CERO enlazados, o sea que no hay hermanos enlazados y la figura NO APLICA: manda la regla original
+LA TABLA DE FRASES DE CONTENIDO: 3 fila(s) armada(s) sobre 6 anclas buscadas
+   contenido> [REPITE ademas] Y el texto lo confirma por su cuenta: este hijo no solo desarrolla el paso 3, REPITE ademas dos pasos mas de la madre, asi que repite y no continua
+   contenido> [repite ademas] milk_run_deliveries es el paso 3 de programacion_entregas_delivery_scheduling desarrollado, la rama de disenar rutas milk run cuando el lote economico no llena camion, y repite ademas dos pasos mas de la madre, el calculo del EOQ por ubicacion y la eleccion de la tecnica de ruteo entre matriz de ahorros y asignacion generalizada
+   contenido> [LA VARA del banco 9.6.1, la linea o el procedimiento] La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA
+
+### PUESTO 568
+CIFRA clase A | dominio core | clave 0.8312
+CIFRA nodo_a: publicidad_offline_pruebas_locales
+CIFRA nodo_b: tracking_publicidad_offline
+CIFRA bytes de su razon: 3661
+RAZON ENTERA, pegada sin cortar:
+   EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. tracking_publicidad_offline es el paso 3 de publicidad_offline_pruebas_locales desarrollado, asignar un codigo unico o una direccion web a cada campana para rastrear que trae clientes, convertido en nodo entero con la direccion web propia por campana, el codigo de descuento distinto por canal y la decision de donde meterle mas, que es el paso 4 de la madre otra vez. Lo unico suyo es la pregunta como se entero de nosotros en el formulario. Los dos son de Traction, Weinberg. OBSERVACION NUEVA, y es de forma: la madre tiene DOS pasos con casa propia, el 2 es publicidad_remanente_remnant_ads, y no enlaza a ninguno de los dos; el que si enlaza al hijo del paso 2 es el hijo del paso 3. La madre no enlaza a sus hijos y los hijos se enlazan entre ellos. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. Hijos de paso vivos de publicidad_offline_pruebas_locales: publicidad_remanente_remnant_ads por el paso 2 y tracking_publicidad_offline por el paso 3. PROPORCION: CERO enlazados, que es lo que la razon ya decia; las dos aristas de la madre van a content_marketing_blog y seo_estrategia_fat_head. La figura NO APLICA, manda la regla original. LA CLASE A SE SOSTIENE. RATIFICADO EL 12 ago 2026: el fundador incorporo el limite del cero-enlazados DENTRO de la regla del banco 9.6.1, como caso extremo del mitad-o-menos. La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido. Este veredicto deja de colgar de una nota mia y pasa a citar la regla. CHOQUE DECLARADO EL 12 ago 2026, Y LO TRAIGO EN VEZ DE RESOLVERLO: la razon de arriba dice dos cosas que no encajan. La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A. La ratificacion dice que cero enlazados es el caso extremo del mitad-o-menos y que entonces MANDA EL CONTENIDO. No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista. NO CAMBIO LA CLASE por mi cuenta porque el encargo dice que estos diez quedan citando la regla, pero dejo el choque escrito aqui y en la seccion 19 del informe, con la cuenta de cuales aguantarian el test de contenido y cuales no. Sin el visto del auditor este veredicto queda con las dos lecturas encima. EJECUCION DEL 12 ago 2026 CON LA VARA NOMBRADA, LA LINEA O EL PROCEDIMIENTO del banco 9.6.1, que resuelve el choque de la seccion 19 en la rama contenido-manda. Par verificado otra vez contra el grafo al escribir el cambio: la madre publicidad_offline_pruebas_locales NO enlaza a tracking_publicidad_offline, verificado resolviendo a nodo vivo. Y la vara CONFIRMA la A por el lado del contenido, no por el de la arista: lo unico que el hijo anade a los pasos 3 y 4 de la madre es UNA LINEA, la pregunta como se entero de nosotros en el formulario. Todo lo demas que trae, la direccion web por campana, el codigo de descuento por canal y la decision de donde invertir mas, ya esta en la madre. REPITE. LA CLASE A SE SOSTIENE, ahora citando la vara y no la ausencia de arista.
+
+LA TABLA DE FRASES DE SILUETA: 3 fila(s) armada(s) sobre 5 anclas buscadas
+   silueta> [manda la regla original] La figura NO APLICA, manda la regla original
+   silueta> [manda la regla original] La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A
+   silueta> [PROPORCION: CERO enlazados] PROPORCION: CERO enlazados, que es lo que la razon ya decia; las dos aristas de la madre van a content_marketing_blog y seo_estrategia_fat_head
+LA TABLA DE FRASES DE CONTENIDO: 4 fila(s) armada(s) sobre 6 anclas buscadas
+   contenido> [la vara CONFIRMA] Y la vara CONFIRMA la A por el lado del contenido, no por el de la arista: lo unico que el hijo anade a los pasos 3 y 4 de la madre es UNA LINEA, la pregunta como se entero de nosotros en el formulario
+   contenido> [LA VARA del banco 9.6.1, la linea o el procedimiento] La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA
+   contenido> [manda el contenido] La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido
+   contenido> [manda el contenido] No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista
+
+### PUESTO 586
+CIFRA clase A | dominio core | clave 0.8293
+CIFRA nodo_a: brainstorming_efectivo
+CIFRA nodo_b: construir_sobre_ideas_ajenas
+CIFRA bytes de su razon: 3748
+RAZON ENTERA, pegada sin cortar:
+   EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. construir_sobre_ideas_ajenas es el paso 2 de brainstorming_efectivo desarrollado, priorizar la regla de construir sobre las ideas de otros por encima de generar las propias, convertido en nodo entero con sus tres movimientos: compartir abiertamente en vez de guardarlas como propiedad individual, hacer sesiones de construccion colectiva del tipo si, y ademas, y no atribuir las ideas a una sola persona para que puedan evolucionar. Lo unico que se perderia es esa tercera, la no atribucion. NO APLICO aqui la figura del puesto 581, hermanos enlazados menos uno, y digo por que: brainstorming_efectivo enlaza a seis nodos pero ninguno de los seis es el desarrollo de un paso suyo, son vecinos de la sesion, o sea que no hay una familia de radios en la que falte uno. LIMITE DE LA REGLA FAMILIA DECLARADA por quinta vez: solo brainstorming_efectivo esta en la nomina del racimo Las reglas del brainstorming. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. Hijos de paso vivos de brainstorming_efectivo: construir_sobre_ideas_ajenas por el paso 2 y reglas_brainstorming por el paso 1. PROPORCION: CERO enlazados, que es exactamente lo que la razon ya argumentaba: los seis nodos que la madre enlaza son vecinos de la sesion y ninguno desarrolla un paso suyo, incluido brainstorming, que es hermano de racimo y no hijo. La figura NO APLICA. LA CLASE A SE SOSTIENE. RATIFICADO EL 12 ago 2026: el fundador incorporo el limite del cero-enlazados DENTRO de la regla del banco 9.6.1, como caso extremo del mitad-o-menos. La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido. Este veredicto deja de colgar de una nota mia y pasa a citar la regla. CHOQUE DECLARADO EL 12 ago 2026, Y LO TRAIGO EN VEZ DE RESOLVERLO: la razon de arriba dice dos cosas que no encajan. La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A. La ratificacion dice que cero enlazados es el caso extremo del mitad-o-menos y que entonces MANDA EL CONTENIDO. No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista. NO CAMBIO LA CLASE por mi cuenta porque el encargo dice que estos diez quedan citando la regla, pero dejo el choque escrito aqui y en la seccion 19 del informe, con la cuenta de cuales aguantarian el test de contenido y cuales no. Sin el visto del auditor este veredicto queda con las dos lecturas encima. EJECUCION DEL 12 ago 2026 CON LA VARA NOMBRADA, LA LINEA O EL PROCEDIMIENTO del banco 9.6.1, que resuelve el choque de la seccion 19 en la rama contenido-manda. Par verificado otra vez contra el grafo al escribir el cambio: la madre brainstorming_efectivo NO enlaza a construir_sobre_ideas_ajenas, verificado resolviendo a nodo vivo. Y la vara CONFIRMA la A por contenido: lo unico que el hijo anade al paso 2 de la madre es UNA LINEA, no atribuir las ideas a una sola persona para que puedan evolucionar. Compartir abiertamente y construir sobre lo del otro es lo que la madre ya manda. REPITE. LA CLASE A SE SOSTIENE, ahora citando la vara y no la ausencia de arista.
+
+LA TABLA DE FRASES DE SILUETA: 2 fila(s) armada(s) sobre 5 anclas buscadas
+   silueta> [manda la regla original] La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A
+   silueta> [PROPORCION: CERO enlazados] PROPORCION: CERO enlazados, que es exactamente lo que la razon ya argumentaba: los seis nodos que la madre enlaza son vecinos de la sesion y ninguno desarrolla un paso suyo, incluido brainstorming, que es hermano de racimo y no hijo
+LA TABLA DE FRASES DE CONTENIDO: 4 fila(s) armada(s) sobre 6 anclas buscadas
+   contenido> [la vara CONFIRMA] Y la vara CONFIRMA la A por contenido: lo unico que el hijo anade al paso 2 de la madre es UNA LINEA, no atribuir las ideas a una sola persona para que puedan evolucionar
+   contenido> [LA VARA del banco 9.6.1, la linea o el procedimiento] La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA
+   contenido> [manda el contenido] La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido
+   contenido> [manda el contenido] No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista
+
+## 4. LO QUE ESTAS CIFRAS DEJAN MEDIDO, PARA QUE EL VEREDICTO NO SEA UNA
+   IMPRESION
+LA TABLA DEL REPARTO DE FRASES: 3 fila(s) armada(s) sobre los 3 puestos que quedan por mirar
+   reparto> puesto 474: frases de silueta 1, frases de contenido 3, y la frase que CIERRA su clase es de CONTENIDO
+   reparto> puesto 568: frases de silueta 3, frases de contenido 4, y la frase que CIERRA su clase es de CONTENIDO
+   reparto> puesto 586: frases de silueta 2, frases de contenido 4, y la frase que CIERRA su clase es de CONTENIDO
+CIFRA puestos cuya clase NO cierra por contenido: 0 (ninguno)
+
+CIFRA clases cambiadas por esta tarea: 0. Esta tarea NO CAMBIA NINGUNA CLASE, y el archivo sale con el mismo sha256 con el que entro a ella.
+CIFRA sha256 del archivo al cerrar la TAREA 2: 758edf1f5c313c18 (el mismo que arriba: SI)
