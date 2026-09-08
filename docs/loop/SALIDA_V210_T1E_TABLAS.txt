@@ -1,0 +1,68 @@
+LAS DOS TABLAS DE LA TAREA 1 DE LA VUELTA 210, IMPRESAS DE LOS FICHEROS
+SELLADOS Y DE git log, NUNCA TECLEADAS.
+
+A. EL CALIBRE, FILA POR TRAMO. Cada celda sale del fichero de esa fila.
+
+| tramo | fichero sellado | bytes disco | bytes LF | lineas | sha256 LF | entradas | OK | CASO DECLARADO | NO MORDIO | ANCLA PERDIDA | NO REPRODUCIBLE | RUIDO | exitcode | minutos |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `SALIDA_V183_BATERIA_TRAMO_1.txt` | 9544 | 9544 | 129 | `42aa5cfefc6430c9` | 13 | 11 | 2 | 0 | 0 | 0 | 0 | 1 | 0.9 |
+| 2 | `SALIDA_V183_BATERIA_TRAMO_2.txt` | 7795 | 7795 | 123 | `81a3c7a531cf6a0e` | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 3.8 |
+| 3 | `SALIDA_V183_BATERIA_TRAMO_3.txt` | 8050 | 8050 | 125 | `59a76bcd2a130c26` | 13 | 12 | 0 | 1 | 0 | 0 | 0 | 1 | 10.6 |
+| 4 | `SALIDA_V183_BATERIA_TRAMO_4.txt` | 7862 | 7862 | 123 | `057302c48260d68e` | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 1.4 |
+| 5 | `SALIDA_V183_BATERIA_TRAMO_5.txt` | 8274 | 8274 | 127 | `3af8acc15e739cce` | 13 | 10 | 0 | 3 | 0 | 0 | 0 | 1 | 0.7 |
+| 6 | `SALIDA_V183_BATERIA_TRAMO_6.txt` | 8205 | 8205 | 126 | `59159791450eb06a` | 13 | 11 | 0 | 2 | 0 | 0 | 0 | 1 | 1.4 |
+| 7 | `SALIDA_V183_BATERIA_TRAMO_7.txt` | 7893 | 7893 | 123 | `eb7f1f76a3ffb256` | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0.7 |
+| 8 | `SALIDA_V183_BATERIA_TRAMO_8.txt` | 7848 | 7848 | 123 | `f1f6f5e46d6b9ea5` | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 0.8 |
+| 9 | `SALIDA_V183_BATERIA_TRAMO_9.txt` | 8525 | 8525 | 125 | `acec86b22c4647ce` | 13 | 12 | 0 | 1 | 0 | 0 | 0 | 1 | 0.8 |
+| 10 | `SALIDA_V183_BATERIA_TRAMO_10.txt` | 8472 | 8472 | 123 | `f399ff43b678a39d` | 13 | 13 | 0 | 0 | 0 | 0 | 0 | 1 | 2.0 |
+| 11 | `SALIDA_V183_BATERIA_TRAMO_11.txt` | 6273 | 6273 | 94 | `e9ecd2bf6606e3be` | 5 | 5 | 0 | 0 | 0 | 0 | 0 | 1 | 0.3 |
+
+  CIFRA suma de entradas de los once tramos: 135
+  CIFRA suma de OK: 126
+  CIFRA suma de CASO DECLARADO: 2
+  CIFRA suma de NO MORDIO: 7
+  CIFRA suma de las tres clases: 135
+  CIFRA suma de bytes en disco de los once: 88741
+  CIFRA suma de minutos de los once: 23.4
+  CIFRA tramos con RUIDO DE CONCURRENCIA distinto de cero: 0
+  CIFRA tramos con exitcode distinto de 1: 0
+
+  LOS NO MORDIO, UNO A UNO, CON EL TRAMO QUE LOS CAZO:
+      tramo 3   vuelta160_tarea6b_mutacion_puerta.py                 exit 1
+      tramo 5   vuelta165_tarea6_mutacion_op_l_01.py                 exit 1
+      tramo 5   vuelta166_tarea2_mutacion_correccion.py              exit 1
+      tramo 5   vuelta168_tarea1_mutacion_nota.py                    exit 1
+      tramo 6   vuelta168_tarea2_mutacion_reconstructor.py           exit 1
+      tramo 6   vuelta171_mutacion_busqueda_acta.py                  exit 1
+      tramo 9   vuelta185_tarea1c_mutacion_bateria_continuada.py     exit 1
+  CIFRA entradas NO MORDIO, contadas de las filas: 7
+  calza con la suma de la columna NO MORDIO (7): SI
+
+B. LA FRESCURA. QUE COMMIT SELLO CADA TRAMO, LEIDO DE git log.
+
+| tramo | commit que lo sello | vuelta que nombra su asunto |
+|---|---|---|
+| 1 | `ca702058` | 210 |
+| 2 | `4895fb06` | 210 |
+| 3 | `3fa5b035` | 210 |
+| 4 | `a9a8fff9` | 210 |
+| 5 | `274a0aed` | 210 |
+| 6 | `fc68e550` | 210 |
+| 7 | `3d79c288` | 210 |
+| 8 | `97185bc4` | 210 |
+| 9 | `ed74786d` | 210 |
+| 10 | `08e9acdd` | 210 |
+| 11 | `7dfbfdf7` | 210 |
+| compuesta | `cb80b4e7` | 210 |
+
+  CIFRA tramos cuyo commit nombra la VUELTA 210: 11 de 11
+  LOS TRAMOS: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+  CIFRA tramos cuyo commit nombra OTRA vuelta: 0
+  POR QUE ESTA TABLA ES LA VARA Y NO EL NOMBRE DEL FICHERO: el lanzador
+  computa su vuelta de os.path.basename(__file__), asi que sus salidas se
+  llaman SALIDA_V183_* corra la vuelta que corra. El nombre no dice de que
+  vuelta es la CORRIDA; el commit si.
+
+C. LA SALIDA UNICA, REMEDIDA AQUI Y NO COPIADA DE --componer:
+  docs/loop/SALIDA_V183_BATERIA.txt: 93499 bytes en disco y 93499 normalizado a LF, 1433 lineas, sha256 LF 68e7505d560634c3
+
