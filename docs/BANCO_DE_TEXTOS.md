@@ -937,6 +937,15 @@ puntero desde donde se usa.
 
 #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
 
+<!-- PUNTERO A LA CORRECCION V208 -->
+
+> **HAY UNA CORRECCION DECLARADA POSTERIOR A ESTA CABECERA, JUSTO DEBAJO
+> DE LA TABLA, CON CORTE 7 sep 2026 Y POR EL CARRIL DEL 9.10.** Toca las filas
+> **7** (la junta asesora) y **11** (la seleccion de canal). **El corte de
+> esta cabecera, 14 ago 2026, no se toca ni se tacha**: es el corte de las
+> once filas tal como estan escritas, y el corte de la correccion va con
+> la correccion.
+
 > **PASADA DE REDACCION del 14 ago 2026, por el banco 9.26: la forma va con su
 > COBERTURA.** Las columnas *pares posibles* y *leidos* de esta tabla **ya son esa
 > cobertura**: leanse siempre juntas con la columna de estado. **Toda forma con
@@ -963,6 +972,63 @@ Cuando choquen con esta tabla, **manda la tabla**.
 | **9** | **build-measure-learn** | **8** | **28** | **9** | **9** | **SUB-PURO, y el de MÁS MIEMBROS del inventario**: siete pares leídos y los siete en A. **Remedido al puesto 1400** (R38, banco 9.10): eran cinco y son **siete**, por el **1182** y el **1208**, los dos del **barrido de las A**. **Remedido otra vez al puesto 1600** (puesto **1573**, subconjunto estricto): entra `design_thinking_proceso` y son **OCHO**. **Cola cerrada**, nueve pares leidos y los nueve en A |
 | **10** | **el compromiso contado tres veces** | 3 | 3 | **3** | 3 | **PURO**, y el **primero certificado por los dos instrumentos desde el minuto uno** (14 ago 2026, tramo 1101-1157). Racimo de Rackham: `obtencion_compromiso`, `obtencion_de_compromiso` y `obtencion_compromiso_venta`, pares **197, 222 y 463**. El **barrido de las A no levanta ni un candidato fuera**; el **contador se come a un miembro**, `obtencion_compromiso`, por no llevar la partícula *de*. **Cero aristas internas entre los tres** |
 | **11** | **la seleccion de canal** | **6** | **15** | **8** | **8** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargado del inventario**: siete pares leidos y **los siete en A**, sin un solo sano. Anadido el 14 ago 2026 al **recomputar la ficha del racimo**, que citaba cuatro leidos cuando ya eran siete (banco 9.10). **NO es estrella**: el 762 y el 945 no tocan al general. **Recomputado al puesto 1517**: el **1488** lo sube a 8 de 15, los ocho en A, y confirma el **9.25** por tercera vez |
+
+<!-- CORRECCION DECLARADA V208 TABLA VIVA -->
+
+> **CORRECCION DECLARADA (7 sep 2026, vuelta 208, TAREA 2), POR EL CARRIL DEL
+> BANCO `9.10`, POR ADICION, CON EL TEXTO VIEJO ENTERO ARRIBA, SIN
+> TACHARLO Y SIN CLAVE NUEVA DE ESQUEMA.** Las once filas de la tabla
+> siguen enteras y sin tocar; lo que se anade son **las dos filas
+> corregidas**, que son las unicas que la mesa `OP-L-01` mueve.
+>
+> **QUIEN LA ENCARGA:** la adjudicacion `6.3` del acta del auditor de la
+> vuelta 207, que sale de su `6.1`. El criterio de HECHO de la fase
+> `06 MESAS` en `docs/plan/08_VERIFICACION.md` exige que cada decision
+> vaya **con su cobertura al lado**, y la `verificacion[2]` de la propia
+> ficha `OP-L-01` pide que **cada nomina afectada se re-mida con su
+> cobertura al lado**. Esta tabla es la sede de esa cobertura.
+>
+> **EL DENOMINADOR SE RECOMPUTO PRIMERO, Y NO ES DE ADORNO.** Se conto de
+> la **nomina de miembros** de cada familia, en
+> `docs/INTRA_DOMINIO_INFORME.md`, y no de esta tabla, con el resolutor
+> puesto (`P.1`). Salida en
+> `docs/loop/SALIDA_V208_T2A_DENOMINADOR.txt`.
+
+| # | racimo | miembros | pares posibles | leidos | en A | estado con su cobertura al lado |
+|---:|---|---:|---:|---:|---:|---|
+| **7** | la junta asesora **(FILA CORREGIDA EN LA VUELTA 208)** | **4** | **6** | **6** | **4** | **MEZCLADO**, y **COBERTURA COMPLETA, 6 de 6** (banco 9.26): la cierra `LD-01`, que es **D**, en `docs/plan/LECTURAS_DIRIGIDAS.md` linea 76. El par que faltaba era `formalizar_junta_asesora` contra `identificar_consejo_asesores`, el que nunca entro a la cola. **La clase no cambia: ya era MEZCLADO por el puesto 1190** |
+| **11** | la seleccion de canal **(FILA CORREGIDA EN LA VUELTA 208)** | **6** | **15** | **10** | **9** | **MEZCLADO desde esta correccion** (antes SUB-PURO): `LD-02` mete el **primer D** dentro de la nomina y **el sub-puro cae**. **COBERTURA 10 de 15, o sea INCOMPLETA y por tanto PROVISIONAL** (banco 9.26). Entran `LD-02` (**D**, linea 95) y `LD-03` (**A**, linea 112) de `docs/plan/LECTURAS_DIRIGIDAS.md` |
+
+> **LA DISCREPANCIA DE LA SELECCION DE CANAL SE DECLARA Y NO SE RESUELVE
+> COPIANDO** (`EJECUTOR.md` 2). La mesa declara, en
+> `docs/plan/LECTURAS_DIRIGIDAS.md` linea 291, *10 de 10, cobertura
+> COMPLETA*; **sobre el denominador recomputado es 10 de 15 y NO es
+> completa**. Su denominador de 10 sale de la tabla por nomina de la
+> propia mesa, linea 31, que cuenta **5 miembros**; y la nomina de esa
+> familia, verificada contra el grafo en `docs/INTRA_DOMINIO_INFORME.md`
+> linea 5321, lleva una **correccion declarada del 11 ago 2026** que dice
+> literalmente *son SEIS y no cinco*. **La mesa cuenta sobre el universo
+> anterior a esa correccion.** Las dos cifras quedan escritas y ninguna se
+> elige en silencio.
+>
+> **Y LA JUNTA ASESORA TIENE UNA SEGUNDA CUENTA QUE TAMBIEN SE DICE.** Sus
+> **4** miembros son **2** nodos distintos TRAS RESOLVER, porque la
+> campana fundio **2** de ellos despues del `fecha_corte` de la ficha:
+> `identificar_junta_asesores` resuelve hoy a
+> `identificar_consejo_asesores`, y `formalize_advisory_board` a
+> `formalizar_junta_asesora`. **En esa convencion los pares posibles son
+> 1 y no 6.** Es HUELLA DE FUSION, que es como la propia ficha `OP-L-01`
+> llama a este mismo fenomeno. **Las columnas de esta tabla cuentan en
+> LITERAL**, con los ids tal como la nomina los escribe, y por eso las
+> filas de arriba van en literal; **la cuenta resuelta va aqui al lado y no
+> sustituye a ninguna**. En la seleccion de canal las dos convenciones dan
+> lo mismo, **15**.
+>
+> **LO QUE ESTA CORRECCION NO HACE:** no cierra la ficha `OP-L-01`, no toca
+> su campo `estado`, no mueve ni un veredicto del archivo, no adjudica
+> clase a ningun puesto, no toca ni un nodo y no autoriza ninguna lectura
+> nueva. **Cerrar una ficha es adjudicacion del auditor.**
+
 
 > **LECCIÓN DEL 13 ago 2026, con dos sub-puros rotos el mismo día** (el 3 por el
 > puesto 872 y la familia de innovación por el 863): **una familia con muchos

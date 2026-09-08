@@ -1,0 +1,58 @@
+==============================================================================
+VUELTA 208, TAREA 2.e: LA `V.14`, CORREGIDA POR ADICION Y NO REHECHA
+==============================================================================
+
+A) EL SELLO, MEDIDO AL ENTRAR
+   scripts/loop/_v207_t2_vara.py: 10846 bytes en disco y 10846 normalizado a LF,
+   sha256 disco e5e1c0904ea135b2 y sha256 LF e5e1c0904ea135b2
+   CIFRA puntos de la vara sellada: 14
+   CIFRA puntos sellados como NO DOCUMENTALES: 4
+   CIFRA puntos sellados como DOCUMENTALES: 10
+
+B) LO QUE EL SELLO DICE DE LA `V.14`, VERBATIM Y SIN PARAFRASEAR
+   `NO_DOCUMENTALES['V.14']` = 'es una CLAUSULA DE VERIFICACION contra las nominas del inventario, que NO viven en ninguno de los tres'
+   su enunciado en la vara: LA CLAUSULA 3 DE VERIFICACION: CADA NOMINA AFECTADA SE RE-MIDE CON SU COBERTURA AL LADO
+   su sede en la ficha:     verificacion
+   su cita literal:         2
+
+C) LA SEDE QUE EL SELLO DECIA QUE NO EXISTIA, MEDIDA HOY
+   el sello dice que las nominas del inventario NO viven en ninguno de los
+   tres documentos. LA COBERTURA DE ESAS NOMINAS VIVE EN LA `TABLA VIVA DE
+   LOS PUROS`, QUE ESTA EN `docs/BANCO_DE_TEXTOS.md`, UNO DE LOS TRES.
+   la tabla abre en docs/BANCO_DE_TEXTOS.md:938
+   CIFRA filas CORREGIDAS por esta vuelta dentro de esa tabla: 2
+      docs/BANCO_DE_TEXTOS.md:999 | la junta asesora **(FILA CORREGIDA EN LA VUE | cobertura **6** de **6**
+      docs/BANCO_DE_TEXTOS.md:1000 | la seleccion de canal **(FILA CORREGIDA EN L | cobertura **10** de **15**
+   CIFRA de esas filas que llevan la palabra COBERTURA escrita: 2
+
+D) LAS DOS CUENTAS, PUBLICADAS JUNTAS, QUE ES LO QUE LA `6.4` PIDE
+   CIFRA veredictos leidos de docs/loop/SALIDA_V207_T2_COTEJO.txt: 14
+   CIFRA veredictos leidos de docs/loop/SALIDA_V208_T2D_COTEJO_REPETIDO.txt: 14
+   CUENTA 1, LA DEL SELLO (no se reescribe): 10 puntos documentales
+      V.1, V.2, V.3, V.5, V.6, V.7, V.8, V.9, V.10, V.11
+   CUENTA 2, LA DE LOS VEREDICTOS DE HOY: 11 puntos con veredicto documental
+      V.1, V.2, V.3, V.4, V.5, V.6, V.7, V.8, V.9, V.10, V.11
+   CIFRA puntos con veredicto documental que el sello NO sello como tales: 1 (V.4)
+      V.4    sellado como NO DOCUMENTAL con este motivo: es una CIFRA MEDIDA, no un documento: su sede seria una salida de instrumento del 11 ago 2026, no ninguno de los tres
+
+   LA ASIMETRIA SE DECLARA Y NO SE ARREGLA MOVIENDO EL SELLO. Mover un
+   punto de lado despues de mirar es exactamente lo que sellar el reparto
+   viene a impedir, y la `6.4` lo adjudico asi con todas las letras.
+
+E) LO QUE LA `V.14` DEBERIA LLEVAR, DECLARADO AL LADO Y NO SUSTITUYENDO AL
+   SELLO
+   veredicto que el cotejo le da hoy, corrido tal cual: NO DOCUMENTAL
+   la `V.14` TIENE sede en uno de los tres documentos: SI, docs/BANCO_DE_TEXTOS.md
+   y esa sede LLEVA la cobertura de las dos nominas que la mesa mueve: SI
+   POR TANTO, DECLARADO Y NO ESCRITO EN EL SELLO: la `V.14` es DOCUMENTAL
+   y su sede es `docs/BANCO_DE_TEXTOS.md`, filas 999, 1000.
+   EL SELLO NO SE REESCRIBE, y sigue diciendo NO DOCUMENTAL con su motivo.
+
+==============================================================================
+EL CIERRE: EL SELLO, REMEDIDO PARA PROBAR QUE NO SE TOCO
+==============================================================================
+   scripts/loop/_v207_t2_vara.py: 10846 bytes en disco y 10846 normalizado a LF,
+   sha256 disco e5e1c0904ea135b2 y sha256 LF e5e1c0904ea135b2
+   IDENTICO AL DE LA APERTURA DE ESTA CORRIDA: SI
+
+FIN

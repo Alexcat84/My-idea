@@ -1,0 +1,170 @@
+==============================================================================
+VUELTA 208, TAREA 2.a: EL DENOMINADOR PRIMERO, RECOMPUTADO DE LA NOMINA
+DE MIEMBROS Y NO DE LA TABLA
+==============================================================================
+
+0) EL RESOLUTOR, PUESTO ANTES DE CONTAR NADA (`P.1`)
+   CIFRA ficheros de nodo leidos de dataset/nodos/: 3853
+   CIFRA alias en el mapa: 761
+   CIFRA node_id distintos en disco: 3853
+
+A) LAS TRES SEDES, MEDIDAS AL ENTRAR
+   docs/INTRA_DOMINIO_INFORME.md: 943970 bytes en disco y 943970 normalizado a LF, 16775 lineas
+   docs/BANCO_DE_TEXTOS.md: 182228 bytes en disco y 182228 normalizado a LF, 3119 lineas
+   docs/plan/LECTURAS_DIRIGIDAS.md: 214916 bytes en disco y 214916 normalizado a LF, 2231 lineas
+
+B) LA NOMINA DE MIEMBROS DE CADA UNA, LEIDA DE SU SECCION DEL INFORME
+   --- JUNTA ASESORA ---
+   seccion hallada: docs/INTRA_DOMINIO_INFORME.md linea 2314 a 2339
+   titulo literal: #### LA NOMINA DE LA JUNTA ASESORA: SEPTIMO SUB-PURO
+   CIFRA miembros hallados: 4
+      linea  2323  identificar_consejo_asesores                   -> resuelve a identificar_consejo_asesores                   existe en el grafo: SI
+      linea  2323  identificar_junta_asesores                     -> resuelve a identificar_consejo_asesores                   existe en el grafo: SI
+      linea  2323  formalizar_junta_asesora                       -> resuelve a formalizar_junta_asesora                       existe en el grafo: SI
+      linea  2323  formalize_advisory_board                       -> resuelve a formalizar_junta_asesora                       existe en el grafo: SI
+   CIFRA miembros DISTINTOS EN LITERAL: 4
+   CIFRA PARES POSIBLES EN LITERAL: 6
+   CIFRA miembros DISTINTOS TRAS RESOLVER: 2
+   CIFRA PARES POSIBLES TRAS RESOLVER: 1
+   CIFRA miembros que NO existen en el grafo: 0 (ninguno)
+   CIFRA miembros que HOY RESUELVEN A OTRO NODO, o sea HUELLA DE FUSION: 2
+      identificar_junta_asesores  ->  identificar_consejo_asesores
+      formalize_advisory_board  ->  formalizar_junta_asesora
+   LAS DOS CONVENCIONES DAN LO MISMO: NO, y la diferencia se declara en vez de elegir una en silencio
+   los 6 pares EN LITERAL, enumerados:
+      formalizar_junta_asesora contra formalize_advisory_board
+      formalizar_junta_asesora contra identificar_consejo_asesores
+      formalizar_junta_asesora contra identificar_junta_asesores
+      formalize_advisory_board contra identificar_consejo_asesores
+      formalize_advisory_board contra identificar_junta_asesores
+      identificar_consejo_asesores contra identificar_junta_asesores
+   los 1 pares TRAS RESOLVER, enumerados:
+      formalizar_junta_asesora contra identificar_consejo_asesores
+
+   --- SELECCION DE CANAL ---
+   seccion hallada: docs/INTRA_DOMINIO_INFORME.md linea 5301 a 5433
+   titulo literal: ## 10. RACIMO NUEVO: LA SELECCION DE CANAL, y choca con la relectura R1
+   CIFRA miembros hallados: 6
+      linea  5314  seleccion_canal_distribucion                   -> resuelve a seleccion_canal_distribucion                   existe en el grafo: SI
+      linea  5315  seleccion_canal_fisico                         -> resuelve a seleccion_canal_fisico                         existe en el grafo: SI
+      linea  5316  channels_hypothesis_web_mobile                 -> resuelve a channels_hypothesis_web_mobile                 existe en el grafo: SI
+      linea  5317  hipotesis_de_canales                           -> resuelve a hipotesis_de_canales                           existe en el grafo: SI
+      linea  5318  channels_hypothesis_physical                   -> resuelve a channels_hypothesis_physical                   existe en el grafo: SI
+      linea  5319  validar_canal_distribucion                     -> resuelve a validar_canal_distribucion                     existe en el grafo: SI
+   CIFRA miembros DISTINTOS EN LITERAL: 6
+   CIFRA PARES POSIBLES EN LITERAL: 15
+   CIFRA miembros DISTINTOS TRAS RESOLVER: 6
+   CIFRA PARES POSIBLES TRAS RESOLVER: 15
+   CIFRA miembros que NO existen en el grafo: 0 (ninguno)
+   CIFRA miembros que HOY RESUELVEN A OTRO NODO, o sea HUELLA DE FUSION: 0
+   LAS DOS CONVENCIONES DAN LO MISMO: SI
+   los 15 pares EN LITERAL, enumerados:
+      channels_hypothesis_physical contra channels_hypothesis_web_mobile
+      channels_hypothesis_physical contra hipotesis_de_canales
+      channels_hypothesis_physical contra seleccion_canal_distribucion
+      channels_hypothesis_physical contra seleccion_canal_fisico
+      channels_hypothesis_physical contra validar_canal_distribucion
+      channels_hypothesis_web_mobile contra hipotesis_de_canales
+      channels_hypothesis_web_mobile contra seleccion_canal_distribucion
+      channels_hypothesis_web_mobile contra seleccion_canal_fisico
+      channels_hypothesis_web_mobile contra validar_canal_distribucion
+      hipotesis_de_canales contra seleccion_canal_distribucion
+      hipotesis_de_canales contra seleccion_canal_fisico
+      hipotesis_de_canales contra validar_canal_distribucion
+      seleccion_canal_distribucion contra seleccion_canal_fisico
+      seleccion_canal_distribucion contra validar_canal_distribucion
+      seleccion_canal_fisico contra validar_canal_distribucion
+   los 15 pares TRAS RESOLVER, enumerados:
+      channels_hypothesis_physical contra channels_hypothesis_web_mobile
+      channels_hypothesis_physical contra hipotesis_de_canales
+      channels_hypothesis_physical contra seleccion_canal_distribucion
+      channels_hypothesis_physical contra seleccion_canal_fisico
+      channels_hypothesis_physical contra validar_canal_distribucion
+      channels_hypothesis_web_mobile contra hipotesis_de_canales
+      channels_hypothesis_web_mobile contra seleccion_canal_distribucion
+      channels_hypothesis_web_mobile contra seleccion_canal_fisico
+      channels_hypothesis_web_mobile contra validar_canal_distribucion
+      hipotesis_de_canales contra seleccion_canal_distribucion
+      hipotesis_de_canales contra seleccion_canal_fisico
+      hipotesis_de_canales contra validar_canal_distribucion
+      seleccion_canal_distribucion contra seleccion_canal_fisico
+      seleccion_canal_distribucion contra validar_canal_distribucion
+      seleccion_canal_fisico contra validar_canal_distribucion
+
+C) LO QUE CADA FUENTE PUBLICA HOY, LEIDO DE SU LINEA Y NO TECLEADO
+
+   LA TABLA VIVA DE LOS PUROS, docs/BANCO_DE_TEXTOS.md:
+      linea 938 (la cabecera de la tabla): #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+      linea 961 | | **7** | la junta asesora | **4** | **6** | **5** | **4** | **MEZCLADO desde el 16 ago 2026** (antes sub-puro), corrección declarada por el 9.10: el 
+         racimo: la junta asesora
+         miembros: **4** | pares posibles: **6** | leidos: **5** | en A: **4**
+      linea 965 | | **11** | **la seleccion de canal** | **6** | **15** | **8** | **8** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargado del inventario**: 
+         racimo: **la seleccion de canal**
+         miembros: **6** | pares posibles: **15** | leidos: **8** | en A: **8**
+
+   LO QUE LA MESA DECLARA, docs/plan/LECTURAS_DIRIGIDAS.md:
+      linea 290 | | **junta asesora** | 5 de 6, **mezclado** | **6 de 6, cobertura COMPLETA**, mezclado confirmado. `LD-01` es D y **no cambia la clase, cierra la cuenta** |
+      linea 291 | | **seleccion de canal** | 8 de 10, **sub-puro** | **10 de 10, cobertura COMPLETA. MEZCLADO**: `LD-02` mete el primer D. **El sub-puro cae, y cae con la nomina cerrada** |
+
+   Y LA TABLA POR NOMINA DE LA PROPIA MESA, que es de donde sale su 10:
+      linea 28 | | nomina | miembros | posibles | leidos | **fuera de cola** |
+      linea 29 | |---|---:|---:|---:|---:|
+      linea 30 | | **junta asesora** | 4 | 6 | 5 | **1** |
+      linea 31 | | **seleccion de canal** | 5 | 10 | 8 | **2** |
+      linea 32 | | ecuacion de valor | 5 | 10 | 5 | 5 |
+      linea 33 | | sales roadmap | 6 | 15 | ~~10~~ **15, desde el 14 ago 2026** | ~~5~~ **0**, ver [`LD_SALES_ROADMAP.md`](LD_SALES_ROADM
+
+D) LOS TRES DENOMINADORES, JUNTOS Y SIN ELEGIR EN SILENCIO
+
+   nomina                 recomputado    tabla viva     mesa           veredicto
+   junta asesora          6              6              6              LAS TRES CALZAN
+                          (tras resolver da 1, y esa cifra NO se coteja contra las dos fuentes porque ellas cuentan en literal)
+   seleccion de canal     15             15             10             LA TABLA CALZA, LA MESA NO
+                          (tras resolver da 15, y esa cifra NO se coteja contra las dos fuentes porque ellas cuentan en literal)
+
+E) LOS LEIDOS, PARA QUE EL NUMERADOR NO SE HEREDE TAMPOCO
+   CIFRA cabeceras LD en docs/plan/LECTURAS_DIRIGIDAS.md hoy: 27
+   --- JUNTA ASESORA ---
+   CIFRA lecturas dirigidas cuyos DOS extremos, TRAS RESOLVER, estan
+   dentro de esta nomina: 1
+      LD-01    formalizar_junta_asesora contra identificar_consejo_asesores | clase D
+   CIFRA leidos que la tabla viva publica hoy: 5
+   CIFRA en A que la tabla viva publica hoy: 4
+   CIFRA de esas lecturas dirigidas que son de clase A: 0
+   CIFRA leidos DESPUES de sumar las lecturas dirigidas de la mesa: 5 mas 1 = 6
+   CIFRA en A DESPUES: 4 mas 0 = 4
+   CIFRA PARES POSIBLES RECOMPUTADOS EN LITERAL: 6
+   COBERTURA SOBRE EL DENOMINADOR RECOMPUTADO EN LITERAL: 6 de 6, o sea COMPLETA
+   LO QUE LA MESA DECLARA PARA ESTA NOMINA:
+      | **junta asesora** | 5 de 6, **mezclado** | **6 de 6, cobertura COMPLETA**, mezclado confirmado. `LD-01` es D y **no cambia la clase, cierra la cuenta** |
+   MI COBERTURA Y LA DE LA MESA DICEN LO MISMO: SI
+
+   --- SELECCION DE CANAL ---
+   CIFRA lecturas dirigidas cuyos DOS extremos, TRAS RESOLVER, estan
+   dentro de esta nomina: 2
+      LD-02    channels_hypothesis_physical contra channels_hypothesis_web_mobile | clase D
+      LD-03    channels_hypothesis_web_mobile contra seleccion_canal_fisico | clase A
+   CIFRA leidos que la tabla viva publica hoy: 8
+   CIFRA en A que la tabla viva publica hoy: 8
+   CIFRA de esas lecturas dirigidas que son de clase A: 1
+   CIFRA leidos DESPUES de sumar las lecturas dirigidas de la mesa: 8 mas 2 = 10
+   CIFRA en A DESPUES: 8 mas 1 = 9
+   CIFRA PARES POSIBLES RECOMPUTADOS EN LITERAL: 15
+   COBERTURA SOBRE EL DENOMINADOR RECOMPUTADO EN LITERAL: 10 de 15, o sea INCOMPLETA, o sea PROVISIONAL (banco 9.26)
+   LO QUE LA MESA DECLARA PARA ESTA NOMINA:
+      | **seleccion de canal** | 8 de 10, **sub-puro** | **10 de 10, cobertura COMPLETA. MEZCLADO**: `LD-02` mete el primer D. **El sub-puro cae, y cae con la nomina cerrada** |
+   MI COBERTURA Y LA DE LA MESA DICEN LO MISMO: NO. La mesa declara cobertura COMPLETA y sobre el denominador recomputado NO lo es. LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO.
+
+==============================================================================
+EL RESULTADO DEL 2.a, EN UNA TABLA
+==============================================================================
+| nomina | miembros recomputados EN LITERAL | posibles recomputados EN LITERAL | posibles segun la tabla viva | posibles segun la mesa | leidos hoy | mas las LD | cobertura sobre el denominador recomputado |
+| junta asesora | 4 | 6 | 6 | 6 | 5 | 6 | 6 de 6, COMPLETA |
+| seleccion de canal | 6 | 15 | 15 | 10 | 8 | 10 | 10 de 15, INCOMPLETA (PROVISIONAL) |
+
+Y LA SEGUNDA CONVENCION, LA RESUELTA, QUE NO SUSTITUYE A LA DE ARRIBA:
+| nomina | miembros tras resolver | posibles tras resolver | miembros que HOY resuelven a otro nodo |
+| junta asesora | 2 | 1 | 2 (identificar_junta_asesores a identificar_consejo_asesores; formalize_advisory_board a formalizar_junta_asesora) |
+| seleccion de canal | 6 | 15 | 0 (ninguno) |
+
+FIN

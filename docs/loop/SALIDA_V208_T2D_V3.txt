@@ -1,0 +1,93 @@
+==============================================================================
+VUELTA 208, TAREA 2.d: LA `V.3`, MEDIDA CON LAS DOS FILAS YA ESCRITAS
+==============================================================================
+
+A) LAS DOS SEDES, MEDIDAS AL ENTRAR
+   docs/BANCO_DE_TEXTOS.md: 186490 bytes en disco y 186490 normalizado a LF,
+   sha256 disco 8adbd60239509bb4 y sha256 LF 8adbd60239509bb4
+   docs/plan/LECTURAS_DIRIGIDAS.md: 214916 bytes en disco y 214916 normalizado a
+   LF, sha256 disco dda1cdd67042c733 y sha256 LF dda1cdd67042c733
+
+B) LECTURA (1). EL INSTRUMENTO SELLADO DE LA 207, CORRIDO TAL CUAL
+   EXITCODE del instrumento sellado: 0
+      V.3   BAN  A MEDIAS  docs/BANCO_DE_TEXTOS.md:938  #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+      CIFRA CUBRE:         10  V.1, V.2, V.4, V.5, V.6, V.7, V.8, V.9, V.10, V.11
+      CIFRA A MEDIAS:       1  V.3
+      CIFRA NO CUBRE:       0  (ninguno)
+
+   Y ESTO ES LO QUE HAY QUE DECIR DE ESA LECTURA, MEDIDO Y NO SUPUESTO:
+   su busqueda toma la PRIMERA fila de la tabla cuya celda de nombre case
+   (`fila_ban[0]` en la linea 236 de scripts/loop/_v207_t2_cotejo.py), y
+   una correccion POR ADICION deja DOS filas por nomina. LEE LA VIEJA.
+
+C) LAS FILAS DE LA TABLA, VIEJAS Y CORREGIDAS, CON SU LINEA
+   --- JUNTA ASESORA ---
+   CIFRA filas de la tabla cuya celda de nombre trae 'junta asesora': 2
+      de ellas VIEJAS (sin la marca de fila corregida): 1
+         linea 970 | miembros **4** | posibles **6** | leidos **5** | en A **4**
+      de ellas CORREGIDAS: 1
+         linea 999 | miembros **4** | posibles **6** | leidos **6** | en A **4**
+   --- SELECCION DE CANAL ---
+   CIFRA filas de la tabla cuya celda de nombre trae 'seleccion de canal': 2
+      de ellas VIEJAS (sin la marca de fila corregida): 1
+         linea 974 | miembros **6** | posibles **15** | leidos **8** | en A **8**
+      de ellas CORREGIDAS: 1
+         linea 1000 | miembros **6** | posibles **15** | leidos **10** | en A **9**
+
+D) LECTURA (2). EL MISMO CRITERIO DE LA 207, SOBRE LAS FILAS CORREGIDAS
+   el criterio, literal del instrumento: para cada nomina que la mesa
+   declara con cobertura COMPLETA, `leidos` TIENE que igualar a `posibles`
+   --- JUNTA ASESORA ---
+      la mesa lo declara COMPLETA en docs/plan/LECTURAS_DIRIGIDAS.md:290
+      la fila corregida da 6 de 6, o sea COMPLETA: SI
+      cita: docs/BANCO_DE_TEXTOS.md:999
+   --- SELECCION DE CANAL ---
+      la mesa lo declara COMPLETA en docs/plan/LECTURAS_DIRIGIDAS.md:291
+      la fila corregida da 10 de 15, o sea COMPLETA: NO
+      cita: docs/BANCO_DE_TEXTOS.md:1000
+   CIFRA nominas que la mesa declara CERRADAS y la fila CORREGIDA no
+   lleva cerradas: 1 (seleccion de canal)
+   VEREDICTO DE LA `V.3` POR EL CRITERIO DE LA 207: A MEDIAS
+
+E) LECTURA (3). EL CRITERIO DE LA ADJUDICACION `6.1` DEL ACTA 207
+   literal: cada decision escrita con su motivo y su COBERTURA AL LADO
+   (banco 9.26), y el 9.26 dice que mientras falte un par la forma es
+   PROVISIONAL y SE DICE ASI. Ese criterio NO exige cobertura completa:
+   exige que la cobertura ESTE ESCRITA, con su motivo, y que lo incompleto
+   se diga PROVISIONAL.
+   --- JUNTA ASESORA ---
+      la fila lleva la palabra COBERTURA: SI
+      la fila lleva la cifra `6 de 6` al lado: SI
+      la fila lleva su MOTIVO, nombrando la lectura dirigida que la mueve: SI
+      si esta incompleta, la fila la declara PROVISIONAL: no aplica, esta completa
+      cita: docs/BANCO_DE_TEXTOS.md:999
+      esta nomina satisface el criterio `6.1`: SI
+   --- SELECCION DE CANAL ---
+      la fila lleva la palabra COBERTURA: SI
+      la fila lleva la cifra `10 de 15` al lado: SI
+      la fila lleva su MOTIVO, nombrando la lectura dirigida que la mueve: SI
+      si esta incompleta, la fila la declara PROVISIONAL: SI
+      cita: docs/BANCO_DE_TEXTOS.md:1000
+      esta nomina satisface el criterio `6.1`: SI
+   VEREDICTO DE LA `V.3` POR EL CRITERIO DE LA `6.1`: CUBRE
+
+==============================================================================
+EL RESULTADO DEL 2.d, DEJADO MEDIDO PARA QUE EL AUDITOR ADJUDIQUE
+==============================================================================
+| lectura | criterio | veredicto de la `V.3` | cita |
+|---|---|---|---|
+| (1) el instrumento sellado de la 207, corrido tal cual | toma la PRIMERA fila que case, y esa es la VIEJA | **A MEDIAS** | `scripts/loop/_v207_t2_cotejo.py`, y su salida en `docs/loop/SALIDA_V208_T2D_COTEJO_REPETIDO.txt` |
+| (2) el mismo criterio, sobre las filas CORREGIDAS | `leidos` igual a `posibles` en las dos nominas | **A MEDIAS** | `docs/BANCO_DE_TEXTOS.md:999`, `docs/BANCO_DE_TEXTOS.md:1000` |
+| (3) el criterio de la adjudicacion `6.1` del acta 207 | la cobertura ESCRITA al lado, con su motivo, y lo incompleto dicho PROVISIONAL | **CUBRE** | `docs/BANCO_DE_TEXTOS.md:999`, `docs/BANCO_DE_TEXTOS.md:1000` |
+
+LO QUE LAS TRES TIENEN EN COMUN, Y ES LO UNICO QUE NO SE DISCUTE: la tabla
+AHORA LLEVA EL EFECTO DE LA MESA, que es lo que no llevaba. Lo que queda
+por adjudicar es si una cobertura que la propia fila declara PROVISIONAL
+cubre el punto o no lo cubre.
+
+Y LO QUE NO SE HACE AQUI, DICHO: NO SE CIERRA `OP-L-01`, NO SE TOCA SU
+CAMPO `estado` Y NO SE ESCRIBE UNA SOLA LINEA EN NINGUNA SEDE.
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+
+FIN

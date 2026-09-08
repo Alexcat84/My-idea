@@ -1,0 +1,86 @@
+==============================================================================
+VUELTA 208, TAREA 2.b: LAS DOS FILAS DE LA TABLA VIVA DE LOS PUROS,
+ESCRITAS POR EL CARRIL DEL BANCO 9.10, POR ADICION Y CON CORRECCION
+DECLARADA
+==============================================================================
+
+A) LAS ONCE CIFRAS, LEIDAS DE LA SALIDA DEL 2.a Y NO TECLEADAS
+   docs/loop/SALIDA_V208_T2A_DENOMINADOR.txt: 11634 bytes en disco
+   --- junta asesora ---
+      miembros       4
+      posibles       6
+      leidos_antes   5
+      en_a_antes     4
+      ld             1
+      leidos         6
+      en_a           4
+      mie_res        2
+      pos_res        1
+      fundidos       2
+      completa       True
+      lecturas dirigidas que entran: LD-01 (D)
+   --- seleccion de canal ---
+      miembros       6
+      posibles       15
+      leidos_antes   8
+      en_a_antes     8
+      ld             2
+      leidos         10
+      en_a           9
+      mie_res        6
+      pos_res        15
+      fundidos       0
+      completa       False
+      lecturas dirigidas que entran: LD-02 (D), LD-03 (A)
+
+B) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/BANCO_DE_TEXTOS.md: 182228 bytes en disco y 182228 normalizado a LF,
+   sha256 disco 68557cd00a3124f4 y sha256 LF 68557cd00a3124f4
+   CIFRA lineas: 3119
+   CIFRA guiones largos en el fichero ENTERO al entrar: 22
+   CIFRA guiones medios en el fichero ENTERO al entrar: 1
+   (esos son del texto viejo y NO se tocan; lo que esta corrida escribe
+    tiene que llevar CERO de los dos, y se mide aparte mas abajo)
+
+C) LAS CUATRO SEDES, REMEDIDAS ANTES DE ESCRIBIR
+   la cabecera de la tabla aparece 1 vez(ces) (se exige 1)
+      linea 938 | #### TABLA VIVA DE LOS PUROS, al 14 ago 2026 (vigente al puesto 1157)
+   la fila vieja de junta asesora aparece 1 vez(ces) (se exige 1)
+      linea 961 | | **7** | la junta asesora | **4** | **6** | **5** | **4** | **MEZCLADO desde el 16 ago 2026** (antes sub-puro), corrección declar
+   la fila vieja de seleccion de canal aparece 1 vez(ces) (se exige 1)
+      linea 965 | | **11** | **la seleccion de canal** | **6** | **15** | **8** | **8** | **SUB-PURO, y EMPATA con los cuadrantes como el mas cargad
+   el puntero YA ESTA: NO | el bloque YA ESTA: NO
+
+D) LO QUE SE VA A ESCRIBIR, MEDIDO ANTES DE ESCRIBIRLO
+   puntero: 430 bytes, 7 lineas, guiones largos 0, guiones medios 0
+   bloque: 3753 bytes, 56 lineas, guiones largos 0, guiones medios 0
+   LAS DOS FILAS CORREGIDAS, PEGADAS AQUI ENTERAS:
+      | **7** | la junta asesora | **4** | **6** | **6** | **4** | **MEZCLADO**, y **COBERTURA COMPLETA, 6 de 6** (banco 9.26): la cierra `LD-01`, que es **D**, en `docs/plan/LECTURAS_DIRIGIDAS.md` linea 76. El par que faltaba era `formalizar_junta_asesora` contra `identificar_consejo_asesores`, el que nunca entro a la cola. **La clase no cambia: ya era MEZCLADO por el puesto 1190** |
+      | **11** | la seleccion de canal | **6** | **15** | **10** | **9** | **MEZCLADO desde esta correccion** (antes SUB-PURO): `LD-02` mete el **primer D** dentro de la nomina y **el sub-puro cae**. **COBERTURA 10 de 15, o sea INCOMPLETA y por tanto PROVISIONAL** (banco 9.26). Entran `LD-02` (**D**, linea 95) y `LD-03` (**A**, linea 112) de `docs/plan/LECTURAS_DIRIGIDAS.md` |
+
+   MODO MEDICION: no se escribe nada.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/BANCO_DE_TEXTOS.md al salir: 182228 bytes en disco y 182228 normalizado a
+   LF, sha256 disco 68557cd00a3124f4 y sha256 LF 68557cd00a3124f4
+   CIFRA crecimiento en bytes de disco: 0
+   CIFRA crecimiento en bytes LF: 0
+   CIFRA lineas al salir: 3119 (al entrar 3119)
+
+LA GUARDA DURA DEL 2.c: NI UNA LINEA DE TEXTO VIEJO BORRADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (si esta cifra no es 0, es ROJO: se habria borrado texto viejo)
+
+LAS DOS FILAS VIEJAS, COMPROBADAS ENTERAS AL SALIR
+   la fila vieja de junta asesora sigue apareciendo 1 vez(ces), en la linea 961
+   la fila vieja de seleccion de canal sigue apareciendo 1 vez(ces), en la linea 965
+   LA CABECERA CON SU CORTE VIEJO SIGUE ENTERA: SI
+
+LA SEDE QUE NO SE TOCA, REMEDIDA AL CIERRE
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+
+FIN
