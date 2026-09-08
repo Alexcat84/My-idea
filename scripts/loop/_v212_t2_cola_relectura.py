@@ -90,7 +90,12 @@ def main():
         di("ROJO: no existe %s. La tarea no se abre." % SALIDA_1B)
         return 1
     med = io.open(p1b, encoding="utf-8").read()
-    di("CIFRA bytes de %s: %d" % (SALIDA_1B, os.path.getsize(p1b)))
+    _m1b = medir_en_disco(RAIZ, SALIDA_1B)
+    _s1b = shas(SALIDA_1B)
+    di("CIFRA sede %s: %d bytes en disco y %d normalizado a LF (%s), sha256 disco "
+       "%s y sha256 LF %s" % (SALIDA_1B, _m1b[0], _m1b[1],
+                              "COINCIDEN" if _m1b[0] == _m1b[1] else "NO COINCIDEN",
+                              _s1b[0], _s1b[1]))
     confirma = "CONFIRMA: SI" in med
     di("CIFRA la 1.b dice CONFIRMA: SI: %s" % ("SI" if confirma else "NO"))
     if not confirma:
@@ -191,8 +196,10 @@ def main():
     di("")
     di("CIFRA clases cambiadas por esta tarea: 0. Esta tarea NO CAMBIA NINGUNA CLASE, "
        "y el archivo sale con el mismo sha256 con el que entro a ella.")
-    di("CIFRA sha256 del archivo al cerrar la TAREA 2: %s (el mismo que arriba: %s)"
-       % (shas(ARCHIVO)[0], "SI" if shas(ARCHIVO)[0] == sd else "NO"))
+    _sf = shas(ARCHIVO)
+    di("CIFRA sha256 del archivo al cerrar la TAREA 2: %s en disco y %s normalizado "
+       "a LF (el mismo que arriba: %s)"
+       % (_sf[0], _sf[1], "SI" if _sf[0] == sd and _sf[1] == sl else "NO"))
     return 0
 
 

@@ -1,0 +1,34 @@
+==============================================================================
+VUELTA 212. HALLAZGO: EL INSTRUMENTO DE RUTAS SE CAE CON UN DIRECTORIO.
+==============================================================================
+
+La sede es scripts/loop/vuelta186_rutas_del_reporte.py y NO SE TOCA: la
+moratoria de AUDITOR.md 6.3 prohibe reparar lectores. Aqui solo se mide,
+importando su propia funcion rutas_del_texto para que el patron sea EL SUYO.
+
+CIFRA docs/loop/reportes/REPORTE_V211.md: 29 rutas distintas, medidas con SU patron
+LA TABLA DE RUTAS QUE SON DIRECTORIO Y NO FICHERO, en docs/loop/reportes/REPORTE_V211.md: 2 fila(s) armada(s) sobre las 29 rutas de ese texto
+   directorio> docs/plan/
+   directorio> scripts/loop/
+CIFRA rutas de docs/loop/reportes/REPORTE_V211.md que no existen en disco: 1 ['docs/loop/SALIDA_V211_BATERIA.txt']
+CIFRA ese texto TUMBA el instrumento: SI (basta UNA fila de la tabla de arriba)
+
+CIFRA docs/loop/reportes/REPORTE_V210.md: 19 rutas distintas, medidas con SU patron
+LA TABLA DE RUTAS QUE SON DIRECTORIO Y NO FICHERO, en docs/loop/reportes/REPORTE_V210.md: 2 fila(s) armada(s) sobre las 19 rutas de ese texto
+   directorio> docs/plan/
+   directorio> scripts/loop/
+CIFRA rutas de docs/loop/reportes/REPORTE_V210.md que no existen en disco: 0 
+CIFRA ese texto TUMBA el instrumento: SI (basta UNA fila de la tabla de arriba)
+
+CIFRA directorios citados en los DOS sujetos archivados, sumados: 4
+
+EL CASO ROJO POR MUTACION DE ESTA MEDICION, corrido sobre texto en memoria
+y sin tocar ningun fichero: si el detector fuera una constante, un texto sin
+directorios daria lo mismo que uno con directorios.
+CIFRA directorios en el texto SIN directorio: 0 (se exige 0)
+CIFRA directorios en el texto CON directorio: 1 (se exige 1)
+EL CASO ROJO CAE COMO TIENE QUE CAER: sin mutar da 0 y mutado da 1.
+
+LO QUE ESTO PRUEBA, Y ES LA MITAD QUE IMPORTA: la cifra de rutas que el
+reporte de la 211 publica NO PUEDE HABER SALIDO DE ESTE INSTRUMENTO, porque
+sobre ese texto el instrumento no llega a imprimir: revienta antes.

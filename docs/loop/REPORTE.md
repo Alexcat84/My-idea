@@ -42,10 +42,25 @@
 ## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
 
 <!-- CABECERA TALLADA -->
-PENDIENTE DE TALLAR AL CIERRE con
-`scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 212`, y pegada entera
-por `scripts/loop/cerrar_reporte.py`. **LA CELDA QUE NO SALGA DE UN INSTRUMENTO NO
-SE ESCRIBE.**
+**LA TABLA, PEGADA ENTERA DEL FICHERO QUE LA LLEVA Y NO TECLEADA.** Salio
+de `scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 212`, y su salida
+cruda vive en `docs/loop/SALIDA_V212_TALLADOR_CABECERA.txt` (2597 bytes en disco y 2577 normalizado a LF, 11 filas de
+tabla,
+contadas por `scripts/loop/cerrar_reporte.py`). **LA CELDA QUE NO SALGA DE UN
+INSTRUMENTO NO SE ESCRIBE.**
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `ddeb676c` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 211: LAS DOS TAREAS ENTREGADAS Y TODA CIFRA REPRODUCE AL DIGITO SALVO UNA TABLA A LA QUE LE FALTA UNA FILA. La 2.e dice "3 de 3 sedes" y lista DOS, y la que se cae es la unica que decia NO COINCIDEN: lo causa un \\w+ en el compositor y lo pruebo corriendo los dos patrones. Caida de reporte que ACUMULA, racha 1 de 3.'), HEAD real de apertura `ddeb676c` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `e8d2c59f` (leido de `SALIDA_V212_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
 <!-- FIN CABECERA TALLADA -->
 
 ## 1. LAS TAREAS DEL ENCARGO, Y SU ESTADO
@@ -195,7 +210,7 @@ El acta del auditor que cubre la vuelta 211 abre en la linea **74334** de `docs/
 | sede al entrar, por las dos convenciones | 513043 bytes en disco y 513043 normalizado a LF (COINCIDEN), sha256 disco 7a52387bb8a4aa4f y sha256 LF 7a52387bb8a4aa4f |
 | sede al salir, por las dos convenciones | 514452 bytes en disco y 514452 normalizado a LF (COINCIDEN), sha256 disco ca1d95b5b3d19e9e y sha256 LF ca1d95b5b3d19e9e |
 | **cuentas por `estado`, identicas a las de la entrada** | **SI**, y son estado> HECHA    32 y estado> LISTA    39 |
-| `git diff --numstat` sobre `docs/plan/` al entrar / al salir | 0 / 1 (se exige 1, y es docs/plan/OPERACIONES.jsonl) |
+| `git diff --numstat` sobre el arbol docs/plan (sin comillas inversas a proposito: el instrumento de rutas se cae con un directorio, y va en la 5) al entrar / al salir | 0 / 1 (se exige 1, y es docs/plan/OPERACIONES.jsonl) |
 | la recarga del `jsonl` linea a linea | 71; lineas que NO parsean: 0 (se exige 0) |
 | **el campo `nodos` NO se movio** | **14 (se exige 14)** |
 | **el campo `estado` NO se movio** | **'LISTA' (se exige 'LISTA')** |
@@ -219,7 +234,7 @@ El acta del auditor que cubre la vuelta 211 abre en la linea **74334** de `docs/
 
 ### LA TAREA 2 SE ABRE, PORQUE LA `1.b` CONFIRMO
 
-El encargo la condiciona con estas palabras: *esta tarea SOLO se abre si la `1.b` CONFIRMA el cambio del 730*. **Confirmo, y por eso existe.** La puerta la comprueba el propio instrumento leyendo la salida de la `1.b`: CIFRA la 1.b dice CONFIRMA: SI: SI, sobre un fichero de 10520 bytes.
+El encargo la condiciona con estas palabras: *esta tarea SOLO se abre si la `1.b` CONFIRMA el cambio del 730*. **Confirmo, y por eso existe.** La puerta la comprueba el propio instrumento leyendo la salida de la `1.b`: CIFRA la 1.b dice CONFIRMA: SI: SI, sobre un fichero que mide 10520 bytes en disco y 10520 normalizado a LF (COINCIDEN), sha256 disco 2991383baa3dbcf6 y sha256 LF 2991383baa3dbcf6.
 
 **Y LA LISTA DE LOS CUATRO NO LA TECLEO: LA LEE.** El instrumento saca los cuatro puestos de la linea de la `1.b` que los publica, y coteja la lista contra la cifra que esa misma linea declara: CIFRA puestos leidos de esa linea: 4, y la cifra que la propia linea declara es 4 (se exige que sean iguales).
 
@@ -262,19 +277,19 @@ El encargo la condiciona con estas palabras: *esta tarea SOLO se abre si la `1.b
 
 **VAN DENTRO DE CERCA PORQUE SON VERBATIM DEL ARCHIVO**, no prosa de este reporte: sus cifras son del que las escribio, no mias. Las lee el compositor del propio `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`.
 
-**PUESTO 474**, clase `A`, `milk_run_deliveries` contra `programacion_entregas_delivery_scheduling`, razon de 1646 bytes:
+**PUESTO 474**, clase `A`, `milk_run_deliveries` contra `programacion_entregas_delivery_scheduling`. Su razon entera, sin cortar (los bytes de cada una van contados en la salida sellada de la tarea, y no aqui: un campo de una fila no es un fichero y no tiene dos convenciones):
 
 ```
 EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. milk_run_deliveries es el paso 3 de programacion_entregas_delivery_scheduling desarrollado, la rama de disenar rutas milk run cuando el lote economico no llena camion, y repite ademas dos pasos mas de la madre, el calculo del EOQ por ubicacion y la eleccion de la tecnica de ruteo entre matriz de ahorros y asignacion generalizada. La madre es la decision entre entrega directa y milk run; el hijo es una de las dos ramas contada aparte con tres de sus cinco pasos ya dichos arriba. Ninguno enlaza al otro. Detalle anotado: en las aristas de este par hay un nodo DEPRECADO. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. El unico hijo de paso vivo de programacion_entregas_delivery_scheduling es milk_run_deliveries, por el paso 3; ni la matriz de ahorros ni la asignacion generalizada ni las entregas directas tienen nodo propio. PROPORCION: CERO enlazados, o sea que no hay hermanos enlazados y la figura NO APLICA: manda la regla original. Y el texto lo confirma por su cuenta: este hijo no solo desarrolla el paso 3, REPITE ademas dos pasos mas de la madre, asi que repite y no continua. LA CLASE A SE SOSTIENE.
 ```
 
-**PUESTO 568**, clase `A`, `publicidad_offline_pruebas_locales` contra `tracking_publicidad_offline`, razon de 3661 bytes:
+**PUESTO 568**, clase `A`, `publicidad_offline_pruebas_locales` contra `tracking_publicidad_offline`. Su razon entera, sin cortar (los bytes de cada una van contados en la salida sellada de la tarea, y no aqui: un campo de una fila no es un fichero y no tiene dos convenciones):
 
 ```
 EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. tracking_publicidad_offline es el paso 3 de publicidad_offline_pruebas_locales desarrollado, asignar un codigo unico o una direccion web a cada campana para rastrear que trae clientes, convertido en nodo entero con la direccion web propia por campana, el codigo de descuento distinto por canal y la decision de donde meterle mas, que es el paso 4 de la madre otra vez. Lo unico suyo es la pregunta como se entero de nosotros en el formulario. Los dos son de Traction, Weinberg. OBSERVACION NUEVA, y es de forma: la madre tiene DOS pasos con casa propia, el 2 es publicidad_remanente_remnant_ads, y no enlaza a ninguno de los dos; el que si enlaza al hijo del paso 2 es el hijo del paso 3. La madre no enlaza a sus hijos y los hijos se enlazan entre ellos. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. Hijos de paso vivos de publicidad_offline_pruebas_locales: publicidad_remanente_remnant_ads por el paso 2 y tracking_publicidad_offline por el paso 3. PROPORCION: CERO enlazados, que es lo que la razon ya decia; las dos aristas de la madre van a content_marketing_blog y seo_estrategia_fat_head. La figura NO APLICA, manda la regla original. LA CLASE A SE SOSTIENE. RATIFICADO EL 12 ago 2026: el fundador incorporo el limite del cero-enlazados DENTRO de la regla del banco 9.6.1, como caso extremo del mitad-o-menos. La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido. Este veredicto deja de colgar de una nota mia y pasa a citar la regla. CHOQUE DECLARADO EL 12 ago 2026, Y LO TRAIGO EN VEZ DE RESOLVERLO: la razon de arriba dice dos cosas que no encajan. La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A. La ratificacion dice que cero enlazados es el caso extremo del mitad-o-menos y que entonces MANDA EL CONTENIDO. No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista. NO CAMBIO LA CLASE por mi cuenta porque el encargo dice que estos diez quedan citando la regla, pero dejo el choque escrito aqui y en la seccion 19 del informe, con la cuenta de cuales aguantarian el test de contenido y cuales no. Sin el visto del auditor este veredicto queda con las dos lecturas encima. EJECUCION DEL 12 ago 2026 CON LA VARA NOMBRADA, LA LINEA O EL PROCEDIMIENTO del banco 9.6.1, que resuelve el choque de la seccion 19 en la rama contenido-manda. Par verificado otra vez contra el grafo al escribir el cambio: la madre publicidad_offline_pruebas_locales NO enlaza a tracking_publicidad_offline, verificado resolviendo a nodo vivo. Y la vara CONFIRMA la A por el lado del contenido, no por el de la arista: lo unico que el hijo anade a los pasos 3 y 4 de la madre es UNA LINEA, la pregunta como se entero de nosotros en el formulario. Todo lo demas que trae, la direccion web por campana, el codigo de descuento por canal y la decision de donde invertir mas, ya esta en la madre. REPITE. LA CLASE A SE SOSTIENE, ahora citando la vara y no la ausencia de arista.
 ```
 
-**PUESTO 586**, clase `A`, `brainstorming_efectivo` contra `construir_sobre_ideas_ajenas`, razon de 3748 bytes:
+**PUESTO 586**, clase `A`, `brainstorming_efectivo` contra `construir_sobre_ideas_ajenas`. Su razon entera, sin cortar (los bytes de cada una van contados en la salida sellada de la tarea, y no aqui: un campo de una fila no es un fichero y no tiene dos convenciones):
 
 ```
 EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado resolviendo a nodo vivo. REESCRITA EL 13 ago 2026 POR EL BARRIDO DE RAZONES: la apertura original citaba la PARAFRASIS ABOLIDA por el banco 9.5.0 como si fuera el argumento. La arista es DATO DEL GRAFO y no argumento, y corta en los dos sentidos: no acusa cuando falta ni exculpa cuando esta. La clase la decide LA VARA del banco 9.6.1, la linea o el procedimiento, como se lee mas abajo, y NO CAMBIA. construir_sobre_ideas_ajenas es el paso 2 de brainstorming_efectivo desarrollado, priorizar la regla de construir sobre las ideas de otros por encima de generar las propias, convertido en nodo entero con sus tres movimientos: compartir abiertamente en vez de guardarlas como propiedad individual, hacer sesiones de construccion colectiva del tipo si, y ademas, y no atribuir las ideas a una sola persona para que puedan evolucionar. Lo unico que se perderia es esa tercera, la no atribucion. NO APLICO aqui la figura del puesto 581, hermanos enlazados menos uno, y digo por que: brainstorming_efectivo enlaza a seis nodos pero ninguno de los seis es el desarrollo de un paso suyo, son vecinos de la sesion, o sea que no hay una familia de radios en la que falte uno. LIMITE DE LA REGLA FAMILIA DECLARADA por quinta vez: solo brainstorming_efectivo esta en la nomina del racimo Las reglas del brainstorming. MEDICION DEL 12 ago 2026, LA MEDICION DE LOS VEINTE, con la regla LA MAYORIA MANDA del banco 9.6.1: FORMA medida: RADIOS. Hijos de paso vivos de brainstorming_efectivo: construir_sobre_ideas_ajenas por el paso 2 y reglas_brainstorming por el paso 1. PROPORCION: CERO enlazados, que es exactamente lo que la razon ya argumentaba: los seis nodos que la madre enlaza son vecinos de la sesion y ninguno desarrolla un paso suyo, incluido brainstorming, que es hermano de racimo y no hijo. La figura NO APLICA. LA CLASE A SE SOSTIENE. RATIFICADO EL 12 ago 2026: el fundador incorporo el limite del cero-enlazados DENTRO de la regla del banco 9.6.1, como caso extremo del mitad-o-menos. La redaccion queda asi: si no hay ni un hermano enlazado no hay mayoria de la que tirar, la silueta no dice nada y manda el contenido. Este veredicto deja de colgar de una nota mia y pasa a citar la regla. CHOQUE DECLARADO EL 12 ago 2026, Y LO TRAIGO EN VEZ DE RESOLVERLO: la razon de arriba dice dos cosas que no encajan. La parte vieja dice que con cero enlazados LA FIGURA NO APLICA y manda la regla original, sin arista igual a duplicacion, que es lo que sostiene la A. La ratificacion dice que cero enlazados es el caso extremo del mitad-o-menos y que entonces MANDA EL CONTENIDO. No son lo mismo: si manda el contenido, este par hay que juzgarlo por continua-o-repite y no por la ausencia de arista. NO CAMBIO LA CLASE por mi cuenta porque el encargo dice que estos diez quedan citando la regla, pero dejo el choque escrito aqui y en la seccion 19 del informe, con la cuenta de cuales aguantarian el test de contenido y cuales no. Sin el visto del auditor este veredicto queda con las dos lecturas encima. EJECUCION DEL 12 ago 2026 CON LA VARA NOMBRADA, LA LINEA O EL PROCEDIMIENTO del banco 9.6.1, que resuelve el choque de la seccion 19 en la rama contenido-manda. Par verificado otra vez contra el grafo al escribir el cambio: la madre brainstorming_efectivo NO enlaza a construir_sobre_ideas_ajenas, verificado resolviendo a nodo vivo. Y la vara CONFIRMA la A por contenido: lo unico que el hijo anade al paso 2 de la madre es UNA LINEA, no atribuir las ideas a una sola persona para que puedan evolucionar. Compartir abiertamente y construir sobre lo del otro es lo que la madre ya manda. REPITE. LA CLASE A SE SOSTIENE, ahora citando la vara y no la ausencia de arista.
@@ -297,7 +312,7 @@ EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado re
 | que | lo que dice el instrumento |
 |---|---|
 | clases cambiadas por la TAREA 2 | 0 |
-| el `sha256` del archivo al cerrar la TAREA 2 | 758edf1f5c313c18 (el mismo que arriba: SI) |
+| el `sha256` del archivo al cerrar la TAREA 2 | 758edf1f5c313c18 en disco y 758edf1f5c313c18 normalizado a LF (el mismo que arriba: SI) |
 | filas del archivo | 3388 |
 | puestos que dependen de la silueta y habria que traer | 0 (ninguno) |
 
@@ -305,5 +320,164 @@ EL HIJO CON CASA PROPIA. Dato del grafo: SIN ARISTA entre los dos, verificado re
 
 <!-- FIN ANEXO DE TAREAS -->
 
-**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 212 ENTREGA SUS DOS TAREAS: el puesto 730 verificado contra el grafo, confirmado por la vara y corregido por el carril del banco 9.10 con el marcador RECOMPUTADO de A 551 a A 550, la P.2 de OP-F-04-HOR declarada sin tocar nodos ni estado, y la cola de relectura midiendo que NINGUNO de los tres que quedan en A cuelga de la silueta. UNA caida propia declarada, CUATRO discutibles marcados y UN hallazgo: el instrumento de rutas de la casa se cae con un directorio, y eso tumba tambien al reporte de la 210 y al de la 211.**
 
+## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+
+**TODA CIFRA DE ESTA SECCION CITA EL FICHERO DEL QUE SALE** (`EJECUTOR.md` 1, LA TABLA SE CUENTA DE SU FICHERO). Las de las dos tareas van en su anexo, talladas por `scripts/loop/_v212_t1_seccion.py` y `scripts/loop/_v212_t2_seccion.py`, y **aqui no se repiten**.
+
+### 3.1. EL CICLO ENTERO DE GATE 0, LOS DOS LADOS, NUNCA `run_phase1.py` A SECAS
+
+Corrido con `scripts/loop/_v212_ciclo_gate0.py`, que **IMPORTA** los ocho comandos de `scripts/loop/_v205_ciclo_gate0.py` y solo le corrige el numero de vuelta, computado de su propio nombre y no tecleado. **PEOR EXITCODE DE LOS OCHO: 0 en APERTURA y 0 en CIERRE.**
+
+**EL CICLO DE GATE 0, LOS DOS LADOS.** **FILAS ARMADAS LEYENDO las DIECIOCHO salidas `docs/loop/SALIDA_V212_*_APERTURA.txt` y `_CIERRE.txt`: 9; FILAS QUE DEBERIA HABER: 9.**
+
+| # | comando | APERTURA | CIERRE |
+|---|---|---|---|
+| 1 | `run_phase1.py --reaplico-curaduria` | EXITCODE 0, 4790 bytes | EXITCODE 0, 4790 bytes |
+| 2 | `etiquetas_de_cara.py --aplicar` | EXITCODE 0, 7928 bytes | EXITCODE 0, 7928 bytes |
+| 3 | `sync_assets_web.py` | EXITCODE 0, 574 bytes | EXITCODE 0, 574 bytes |
+| 4 | `git diff HEAD --numstat` | EXITCODE 0, **0 filas**, 140 bytes | EXITCODE 0, **0 filas**, 140 bytes |
+| 5 | `vuelta83_conteo_aristas.py WORK` | EXITCODE 0, 168 bytes | EXITCODE 0, 168 bytes |
+| 6 | `vuelta85_medir_desfase_calibrado` | EXITCODE 0, 498 bytes | EXITCODE 0, 498 bytes |
+| 7 | `engine/run_all_tests.py` | EXITCODE 0, 1131 bytes | EXITCODE 0, 1131 bytes |
+| 8a | `npx tsc --noEmit` | EXITCODE 0, 7 bytes | EXITCODE 0, 7 bytes |
+| 8b | `pnpm test` | EXITCODE 0, 336 bytes | EXITCODE 0, 336 bytes |
+
+**LAS DIECIOCHO CELDAS SE CUENTAN DE SUS DIECIOCHO FICHEROS**, una a una, y el `EXITCODE` sale de la ultima linea de cada uno. **`git diff HEAD --numstat` da CERO FILAS en los dos lados: el grafo no se movio ni al abrir ni al cerrar.**
+
+### 3.2. LAS SEDES QUE LA VUELTA MOVIO Y LAS QUE NO, POR LAS DOS CONVENCIONES
+
+**LAS SEDES, AL ENTRAR Y AL CERRAR.** **FILAS ARMADAS LEYENDO `docs/loop/SALIDA_V212_APERTURA.txt` para la apertura y una medicion de AHORA para el cierre: 7; FILAS QUE DEBERIA HABER: 7.**
+
+| sede | al entrar (disco / LF) | al cerrar (disco / LF) | `sha256` de cierre (disco / LF) | la movio esta vuelta |
+|---|---|---|---|---|
+| `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` | 4054129 / 4054129 | 4057130 / 4057130 | `758edf1f5c313c18` / `758edf1f5c313c18` | **SI**, la `TAREA 1.b`: el puesto 730 |
+| `docs/plan/OPERACIONES.jsonl` | 513043 / 513043 | 514452 / 514452 | `ca1d95b5b3d19e9e` / `ca1d95b5b3d19e9e` | **SI**, la `TAREA 1.c`: la `adjudicacion` de `OP-F-04-HOR` |
+| `dataset/metadata/master_graph.json` | 8375817 / 8375817 | 8375817 / 8375817 | `627cc662296f7f00` / `627cc662296f7f00` | NO, solo se leyo para resolver aristas |
+| `docs/plan/01_FUENTES.md` | 128187 / 126666 | 128187 / 126666 | `73168452929b3d42` / `f965abf6c3ca95c3` | NO, solo se leyeron sus lineas 1168 y 1453 |
+| `docs/plan/08_VERIFICACION.md` | 69068 / 69068 | 69068 / 69068 | `76bfebb6b2d8ef72` / `76bfebb6b2d8ef72` | NO, solo se leyo su linea 9 |
+| `docs/BANCO_DE_TEXTOS.md` | 186490 / 186490 | 186490 / 186490 | `8adbd60239509bb4` / `8adbd60239509bb4` | NO, solo se leyeron sus `9.6.1`, `9.6.2`, `9.6.3` y `9.10` |
+| `docs/loop/ACTA_AUDITOR.md` | 4936249 / 4936249 | 4936249 / 4936249 | `a977aa91e8b9f86c` / `a977aa91e8b9f86c` | NO, solo se leyo |
+
+**LAS DOS QUE SE MOVIERON SE MOVIERON UNA SOLA VEZ CADA UNA, Y LAS DOS LO PRUEBAN CON `sha256` DISTINTO AL SALIR** (`SI (se exige SI)` en la `1.b` y `SI (se exige SI)` en la `1.c`). **`docs/plan/01_FUENTES.md` es la unica sede cuyas dos convenciones NO COINCIDEN**, y no es cosa de esta vuelta: entra y sale igual, y ni se abrio para escribir.
+
+### 3.3. LAS RUTAS QUE ESTE REPORTE CITA, MEDIDAS CON EL INSTRUMENTO DE LA CASA
+
+**LA CIFRA NO SE PUBLICA AQUI, Y NO ES OMISION: ES LA REGLA.** El instrumento que las cuenta es `scripts/loop/vuelta186_rutas_del_reporte.py` y **necesita el reporte YA CERRADO** para contar las rutas que el propio cierre anade. Publicar aqui la cifra de antes del cierre seria medir temprano y publicar tarde, que es la caida de la vuelta 28 (`EJECUTOR.md` 1, EL ESTADO AL CIERRE SE MIDE AL CIERRE). **Su salida sellada es `docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt` y ahi vive la cifra**, corrida sobre el reporte cerrado.
+
+**Y LA CORRIDA QUE SE COMMITEA ES LA DE DESPUES DEL CIERRE, no una de antes.** Su veredicto y su cifra de rutas que no existen o miden cero se leen en ese fichero sellado, y no se copian aqui: copiarlas seria volver a publicar una medicion de apertura como si fuera de cierre.
+
+## 4. LO QUE SE TOCO, Y LO QUE NO
+
+**SE TOCARON DOS SEDES Y TRES CAMPOS EN TOTAL:** la `clase` y la `razon` del puesto 730 en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y la `adjudicacion` de `OP-F-04-HOR` en `docs/plan/OPERACIONES.jsonl`. **NI UN NODO DEL GRAFO**, que es lo que la regla 4 de `EJECUTOR.md` manda en modo de cierre, y lo prueban las dos celdas de `git diff HEAD --numstat` de la `3.1`, las dos en cero filas.
+
+**LO QUE MI APERTURA SELLADA DICE, COTEJADO Y NO TECLEADO** (`docs/loop/SALIDA_V212_APERTURA.txt`): **`git status --porcelain` AL ENTRAR daba 2 lineas**, y las dos eran mis propios computos `_v212_` sin seguir todavia, no trabajo ajeno colgando; y **CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0**, o sea que la vuelta empezo con el grafo limpio.
+
+### 4.1. LA MORATORIA DE MAQUINARIA, Y LO QUE ESTA VUELTA ESCRIBIO
+
+**TODO LO QUE ESTA VUELTA ESCRIBIO EN scripts/loop, LISTADO CON `os.listdir` EN ESTA CORRIDA.** **FILAS ARMADAS LEYENDO un `os.listdir` del arbol scripts/loop (otra vez sin comillas inversas, por lo mismo que la 7 bis) filtrado por el prefijo: 14; FILAS QUE DEBERIA HABER: 14.**
+
+| fichero | que es |
+|---|---|
+| `scripts/loop/_v212_apertura.py` | computo de la vuelta |
+| `scripts/loop/_v212_ciclo_gate0.py` | computo de la vuelta |
+| `scripts/loop/_v212_cierre_texto.md` | cuerpo compuesto, no fuente |
+| `scripts/loop/_v212_cierre_texto.py` | computo de la vuelta |
+| `scripts/loop/_v212_esqueleto.py` | computo de la vuelta |
+| `scripts/loop/_v212_hallazgo_rutas.py` | computo de la vuelta |
+| `scripts/loop/_v212_t1_seccion.md` | cuerpo compuesto, no fuente |
+| `scripts/loop/_v212_t1_seccion.py` | computo de la vuelta |
+| `scripts/loop/_v212_t1b_escribir.py` | computo de la vuelta |
+| `scripts/loop/_v212_t1b_puesto_730.py` | computo de la vuelta |
+| `scripts/loop/_v212_t1c_op_f_04_hor.py` | computo de la vuelta |
+| `scripts/loop/_v212_t2_cola_relectura.py` | computo de la vuelta |
+| `scripts/loop/_v212_t2_seccion.md` | cuerpo compuesto, no fuente |
+| `scripts/loop/_v212_t2_seccion.py` | computo de la vuelta |
+
+**CIFRA ficheros con prefijo `_v212_`: 14, de ellos 11 con extension `.py` y 3 con extension `.md`.** **LA CIFRA Y LA LISTA SALEN DEL MISMO `os.listdir`, en la misma linea de codigo**, que es el remedio de la `C.3` que el ejecutor de la 211 se cazo a si mismo: alli la cifra estaba tecleada y la lista no la miraba nadie.
+
+**LOS 14 LLEVAN LOS 14 EL PREFIJO DE GUION BAJO**, o sea que estan **fuera del censo y fuera de la nomina**, y mueren con la vuelta. **NINGUNO ES ARNES, GUARDA NI LECTOR NUEVO:** los cuatro que miden importan sus funciones de la sede que ya existe (`scripts/loop/apertura_del_auditor.py` para el marcador, `scripts/loop/verificar_aristas_vivas.py` para el resolutor, `scripts/loop/vuelta186_rutas_del_reporte.py` para las dos convenciones y para el patron de rutas), y los tres compositores solo leen salidas y arman texto. **LA NOMINA DE LA BATERIA SIGUE CONGELADA EN 135 Y NADIE LA PODO.**
+
+### 4.2. LA `1.d` DEL ENCARGO, CUMPLIDA POR OMISION Y DICHA EN VOZ ALTA
+
+**NO TOQUE `OP-I-01`** (sigue en `LISTA`, contado en la `1.c` al medir por `estado` antes y despues), **NO MARQUE LAS 95 ENTRADAS DEL INVENTARIO**, y **NO ESCRIBI NI UNA FILA NUEVA EN `docs/plan/08_VERIFICACION.md`**. Las tres son prohibiciones expresas del encargo y las tres se cumplen. La `1.d` las registra con su cita en el anexo de la TAREA 1.
+
+## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+
+**`D.1` NO BARRI LAS DOS CITAS VIVAS DEL 730 FUERA DEL ARCHIVO, Y EL BANCO `9.10` DICE QUE UN VOLTEO BARRE SUS TABLAS DERIVADAS EN EL MISMO ACTO.** Las medi y las publico en la TAREA 1: `docs/INTRA_DOMINIO_INFORME.md` linea 6941 y `docs/plan/03_FUSIONES.md` linea 5424, mas una tercera en un reporte archivado que no se toca. **Mi lectura es que no envejecen como frase**, porque las dos dicen que el 730 *declara* la `A` por la lectura vieja y la fila **sigue diciendo eso**, con el texto viejo entero encima; lo que envejece es la clase que el lector infiere. **Y mi motivo para no editarlas es que es prosa sellada del informe y del plan**, que es forma, y la forma del plan el propio auditor la manda al fundador en su `6.2`. **Puedo estar equivocado en las dos mitades y por eso lo marco.**
+
+**`D.2` EL PUESTO `474`.** Es el unico de los tres que quedan en `A` que **no tiene bloque de EJECUCION con la vara nombrada**, y lleva la lectura vieja escrita en presente (*la figura NO APLICA: manda la regla original*). **No lo muevo**, porque la ratificacion del banco lo nombra entre los que se sostienen y su razon cierra por contenido. **Pero es el que mas se parece al 730 de los que quedan**, y si alguien va a discutir uno, va a ser ese.
+
+**`D.3` DIGO QUE DOS CIFRAS DEL ACTA 211 NO REPRODUCEN.** Su **13** y su **9** no salen de ningun patron que yo haya probado: el guion literal da 11 y 8, el patron holgado da 14 y 10. **Puede que el auditor usara un tercer patron que no se me ocurrio**, y por eso publico LOS DOS MIOS con su expresion regular al lado en vez de decir solo que el suyo esta mal. **Lo que no es discutible es que la lista de los cuatro en `A` y los once del choque reproducen al digito.**
+
+**`D.4` PEGUE LAS TRES RAZONES ENTERAS DENTRO DE CERCA.** El encargo pide la razon entera; las cercas son donde esta casa pone el verbatim, y la guarda de las dos convenciones **no mira dentro de una cerca** (es lo que el acta 211 mide en su `7.2`). **O sea que las cifras que esas razones llevan dentro entran al reporte sin que ninguna guarda las mire.** Son del autor que las escribio y no mias, y lo digo, pero alguien puede sostener que un verbatim con cifras deberia ir de otra manera.
+
+## 6. LAS PREGUNTAS
+
+**`P.1` EL BARRIDO DEL `9.10`: QUIEN LO HACE.** Cuando una relectura conjunta voltea UN veredicto, las citas vivas de ese numero en el informe y en el plan quedan describiendo la clase vieja. **El `9.10` manda barrerlas y el encargo no me lo ordena, y editar prosa sellada tampoco me toca.** No es contradiccion suficiente para parar (la `D.1` explica por que), pero la casa no tiene escrito quien lo hace en un volteo de UNA sola fila. **Traigo las dos lineas nombradas para que se adjudique.**
+
+**`P.2` EL INSTRUMENTO DE RUTAS SE CAE CON UN DIRECTORIO, Y ESO TOCA A TRES REPORTES.** Va entera en la `7`, con su medicion. La pregunta es de gobierno: **la moratoria prohibe reparar lectores**, y este no da una cifra mala, da una excepcion. **No lo toque. Pregunto si el arreglo entra por la puerta de la caida de dato o si espera a que se levante la moratoria.**
+
+## 7. PENDIENTES DE DOCTRINA
+
+**`PD.1` UNA CORRECCION QUE CONSERVA EL TEXTO VIEJO ENTERO DEJA LAS CITAS DERIVADAS EN UN ESTADO QUE LA DOCTRINA NO NOMBRA.** El banco `9.10` habla de tablas que **citan un veredicto por numero** y de volteos **en bloque**. Aqui hay un volteo de UNA fila y dos citas que **no son tablas**: son prosa narrativa que describe lo que la fila decia, y que **sigue siendo cierta como descripcion del texto**. **No hay regla que diga si eso hay que barrerlo, matizarlo o dejarlo.** Registro lo mejor sostenido (no barrer, declarar) y sigo, que es lo que manda la regla 5 de `EJECUTOR.md`.
+
+**`PD.2` UN VERBATIM CON CIFRAS AJENAS DENTRO DE UNA CERCA NO TIENE REGLA.** Va ligado a la `D.4`. La casa exige que toda cifra lleve su corte y su atribucion, y una razon del archivo pegada entera trae docenas de cifras del que la escribio. **La cerca las saca del alcance de la guarda, que es lo que las hace publicables; lo que no esta escrito es si eso es lo correcto o solo lo que funciona.**
+
+## 8. MIS CAIDAS PROPIAS, CADA UNA CON SU NOMBRE Y CONTADA UNA SOLA VEZ
+
+**`C.1`. ESCRIBI Y COMMITEE UN FICHERO LLAMADO `SALIDA_V212_TALLADOR_CABECERA.txt` QUE NO LLEVABA UNA CABECERA: LLEVABA UN RECHAZO.** En la apertura corri el tallador sabiendo que la mitad del cierre no existe todavia, y **redirigi su salida al mismo nombre que usa el fichero bueno**. Durante un commit entero, una ruta que promete una cabecera tallada apuntaba a veinte celdas que no se pudieron leer. **Es la especie de LA RUTA QUE PROMETE PRUEBA ES CIFRA** (`EJECUTOR.md` 1): la ruta existia y no media cero, asi que ninguna guarda la habria cazado, y el contenido no era el que el nombre promete. **REMEDIO, y es una linea: el tallador de apertura, si se corre, escribe en un nombre con `_RECHAZO` y no en el del cierre.** El fichero bueno existe desde el cierre y es el que la cabecera cita.
+
+**LO QUE NO CUENTO COMO CAIDA, Y DIGO POR QUE.** Primero: **el heredoc de comillas simples se me cayo** al escribir el primer computo, igual que a la 209, la 210, la 211 y al propio auditor. **No es caida porque el remedio ya estaba escrito y lo cumpli:** use la herramienta de fichero y lo digo, que es lo que el acta 210 dejo dicho. Segundo: **el compositor de la TAREA 1 cayo en ROJO en su primera corrida**, porque le pedi la tercera aparicion de una linea que solo tiene dos. **Eso no es una caida: es la guarda haciendo su trabajo**, y cayo **antes** de escribir nada. Tercero: **parche una celda del reporte ya anexado** para quitarle unas comillas inversas a un directorio; **no lo cuento como caida porque el parche se verifico contra el `.md` regenerado byte a byte** y porque el motivo esta publicado entero en la `7`, pero **lo digo en vez de callarlo** porque un reporte parcheado a mano es exactamente lo que la 211 decidio no volver a hacer.
+
+## 7 BIS. EL HALLAZGO DE LA VUELTA, MEDIDO Y NO REPARADO
+
+**EL INSTRUMENTO QUE HACE CUMPLIR *LA RUTA QUE PROMETE PRUEBA ES CIFRA* SE CAE CON EXCEPCION SI EL REPORTE CITA UN DIRECTORIO.** `scripts/loop/vuelta186_rutas_del_reporte.py` casa la cadena docs/plan seguida de barra (la escribo aqui SIN comillas inversas a proposito, porque escribirla con ellas reproduce el fallo dentro de este mismo reporte, y eso me paso), `os.path.exists` dice que si porque el directorio existe, y el `read()` revienta. **Lo medi importando SU funcion, para que el patron fuera el suyo y no uno mio.**
+
+**LOS DOS REPORTES ARCHIVADOS, MEDIDOS.** **FILAS ARMADAS LEYENDO `docs/loop/SALIDA_V212_HALLAZGO_RUTAS.txt`: 6; FILAS QUE DEBERIA HABER: 6.**
+
+| lo que midio el instrumento |
+|---|
+| docs/loop/reportes/REPORTE_V211.md: 29 rutas distintas, medidas con SU patron |
+| rutas de docs/loop/reportes/REPORTE_V211.md que no existen en disco: 1 ['docs/loop/SALIDA_V211_BATERIA.txt'] |
+| ese texto TUMBA el instrumento: SI (basta UNA fila de la tabla de arriba) |
+| docs/loop/reportes/REPORTE_V210.md: 19 rutas distintas, medidas con SU patron |
+| rutas de docs/loop/reportes/REPORTE_V210.md que no existen en disco: 0 |
+| ese texto TUMBA el instrumento: SI (basta UNA fila de la tabla de arriba) |
+
+**CIFRA directorios citados en los DOS sujetos archivados, sumados: 4.** **LOS SUJETOS SON LOS DOS REPORTES YA ARCHIVADOS Y NO EL DE ESTA VUELTA, A PROPOSITO:** este reporte todavia va a crecer con su cierre, y publicar aqui sus bytes seria medir temprano y publicar tarde. **A este lo mide el propio instrumento de la casa DESPUES del cierre, y si citara un directorio se caeria.** **NO ES UN DEFECTO QUE TRAIGA ESTA VUELTA:** el reporte de la 210 y el de la 211 citan dos directorios cada uno y los dos tumban el instrumento igual. **Y esto prueba una cosa que importa mas que el crash: la cifra de rutas que el reporte de la 211 publica no puede haber salido de este instrumento, porque sobre ese texto el instrumento no llega a imprimir.**
+
+**NO LO REPARO, Y ES LETRA:** la moratoria de `AUDITOR.md` 6.3 prohibe arreglar lectores. **Lo que si hice, porque no cuesta codigo, es sacar de mi reporte los DOS sitios donde citaba un directorio entre comillas inversas**, uno en la TAREA 1 y otro en esta misma seccion, **y por eso el instrumento SI corre sobre este reporte**. El segundo es el que mas dice: **describir el fallo con su ejemplo entrecomillado lo reproducia**, y lo cace corriendo el instrumento sobre el reporte ya cerrado en vez de darlo por bueno. Su caso rojo por mutacion esta corrido: EL CASO ROJO CAE COMO TIENE QUE CAER: sin mutar da 0 y mutado da 1..
+
+## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
+
+1. **ADJUDICAR LA `P.1`**: quien barre las citas vivas de un veredicto volteado cuando el volteo es de una sola fila. Las dos lineas estan nombradas y medidas, y el trabajo, si se adjudica, son dos ediciones de prosa.
+2. **ADJUDICAR LA `P.2`**: si el crash del instrumento de rutas entra por la puerta de la caida de dato (y entonces se arregla ya) o espera a que se levante la moratoria. **Mientras no se decida, todo reporte que cite un directorio entre comillas inversas se queda sin medir sus rutas, y eso no deja sintoma.**
+3. **NO ABRIR COLA DE RE-CRIBADO.** La TAREA 2 midio que **ninguno** de los tres que quedan en `A` cuelga de la silueta. **El cerco del cero-enlazados esta cerrado**, y la unica marca que queda es la `D.2` del `474`, que es marca y no encargo.
+4. **LA 215 ES LA VUELTA DE BATERIA**, por la cadencia de cinco de `AUDITOR.md` 6.1. La 212 no lo es y su seccion 9 lo declara con su hueco medido.
+
+## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
+
+**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 212 NO CORRIO, Y EL HUECO SE DECLARA EN VEZ
+DE RELLENARSE CON OTRA COSA.**
+
+**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V212_BATERIA.txt`.
+
+**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.exists`
+devuelve NO, asi que `os.path.getsize` **no llego a correr sobre el** y no
+hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
+bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes
+normalizados a LF**, **y ese cero sale de que no hay fichero, no de una
+medicion sobre uno**. La distincion es del fundador, escrita el 5 sep 2026
+en el punto 3 de `la-bateria-sin-techo-DECISION.md`, que nombra los dos
+casos y no los confunde.
+
+ATRIBUCION: NADIE la corrio, y no por olvido: la 212 NO ES VUELTA DE BATERIA. La cadencia de cinco de AUDITOR.md 6.1 pone la siguiente en la 215, la 210 corrio la ultima con sus once tramos, y el encargo de esta vuelta lo escribe con todas las letras.
+
+**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) de este
+instrumento admite el hueco declarado desde la vuelta 173, TAREA 1.b
+(adjudicacion 6.2 del acta del auditor de la vuelta 172), y la letra es
+estrecha: **el nombre, los bytes medidos y la atribucion, LAS TRES JUNTAS**.
+Faltando cualquiera de las tres, este instrumento sigue cayendo en ROJO, y
+**una corrida de otra vuelta pegada aqui tampoco vale**.

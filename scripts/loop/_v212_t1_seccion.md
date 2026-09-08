@@ -132,7 +132,7 @@ El acta del auditor que cubre la vuelta 211 abre en la linea **74334** de `docs/
 | sede al entrar, por las dos convenciones | 513043 bytes en disco y 513043 normalizado a LF (COINCIDEN), sha256 disco 7a52387bb8a4aa4f y sha256 LF 7a52387bb8a4aa4f |
 | sede al salir, por las dos convenciones | 514452 bytes en disco y 514452 normalizado a LF (COINCIDEN), sha256 disco ca1d95b5b3d19e9e y sha256 LF ca1d95b5b3d19e9e |
 | **cuentas por `estado`, identicas a las de la entrada** | **SI**, y son estado> HECHA    32 y estado> LISTA    39 |
-| `git diff --numstat` sobre `docs/plan/` al entrar / al salir | 0 / 1 (se exige 1, y es docs/plan/OPERACIONES.jsonl) |
+| `git diff --numstat` sobre el arbol docs/plan (sin comillas inversas a proposito: el instrumento de rutas se cae con un directorio, y va en la 5) al entrar / al salir | 0 / 1 (se exige 1, y es docs/plan/OPERACIONES.jsonl) |
 | la recarga del `jsonl` linea a linea | 71; lineas que NO parsean: 0 (se exige 0) |
 | **el campo `nodos` NO se movio** | **14 (se exige 14)** |
 | **el campo `estado` NO se movio** | **'LISTA' (se exige 'LISTA')** |

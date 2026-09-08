@@ -3,25 +3,18 @@ LA CABECERA DEL REPORTE, TALLADA. Vuelta 212. Modo fase04.
 Cada celda sale de la salida que la cita; ninguna esta tecleada.
 ==============================================================================
 
-  ROJO, 20 celdas no se pudieron leer y NO se talla nada:
-     no existe la salida SALIDA_V212_GATE0_CMD1_CIERRE.txt
-     sin texto para censo (nodos) CIERRE
-     sin texto para censo (vivos) CIERRE
-     sin texto para censo (deprecados) CIERRE
-     sin texto para Gate 0 auto-aristas CIERRE
-     sin texto para Gate 0 duplicadas de titulo CIERRE
-     sin texto para Gate 0 nodos divergentes CIERRE
-     sin texto para veredicto Gate 0 CIERRE
-     no existe la salida SALIDA_V212_CONTEO_CIERRE.txt
-     no se pudo leer las cifras de aristas CIERRE
-     no existe la salida SALIDA_V212_MOTOR_CIERRE.txt
-     sin texto para motor CIERRE
-     no existe la salida SALIDA_V212_WEB_CIERRE.txt
-     no se pudo leer web ficheros CIERRE
-     no se pudo leer web tests CIERRE
-     no existe la salida SALIDA_V212_TSC_CIERRE.txt
-     no existe la salida SALIDA_V212_DESFASE_CALIBRADO_CIERRE.txt
-     sin texto para desfase CIERRE
-     git log --diff-filter=A no trae ningun commit que anada docs/loop/SALIDA_V212_HEAD_APERTURA.txt: no se talla la procedencia del sello
-     no existe el sello SALIDA_V212_HEAD_CIERRE.txt (el ejecutor debe correr `git rev-parse HEAD` tras la ultima operacion, antes de escribir el reporte, y guardarlo ahi)
-     RECHAZO SELLADO EN docs/loop/SALIDA_V212_TALLADOR_RECHAZO.txt (2034 bytes, 20 celdas)
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `ddeb676c` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 211: LAS DOS TAREAS ENTREGADAS Y TODA CIFRA REPRODUCE AL DIGITO SALVO UNA TABLA A LA QUE LE FALTA UNA FILA. La 2.e dice "3 de 3 sedes" y lista DOS, y la que se cae es la unica que decia NO COINCIDEN: lo causa un \\w+ en el compositor y lo pruebo corriendo los dos patrones. Caida de reporte que ACUMULA, racha 1 de 3.'), HEAD real de apertura `ddeb676c` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `e8d2c59f` (leido de `SALIDA_V212_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+FIN

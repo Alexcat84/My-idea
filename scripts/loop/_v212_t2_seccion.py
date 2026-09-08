@@ -97,9 +97,9 @@ w()
 w("El encargo la condiciona con estas palabras: *esta tarea SOLO se abre si la `1.b` "
   "CONFIRMA el cambio del 730*. **Confirmo, y por eso existe.** La puerta la comprueba "
   "el propio instrumento leyendo la salida de la `1.b`: "
-  + pick(S2, "CIFRA la 1.b dice CONFIRMA") + ", sobre un fichero de "
-  + valor(S2, "CIFRA bytes de docs/loop/SALIDA_V%d_T1B_PUESTO_730.txt" % VUELTA)
-  + " bytes.")
+  + pick(S2, "CIFRA la 1.b dice CONFIRMA") + ", sobre un fichero que mide "
+  + valor(S2, "CIFRA sede docs/loop/SALIDA_V%d_T1B_PUESTO_730.txt" % VUELTA)
+  + ".")
 w()
 w("**Y LA LISTA DE LOS CUATRO NO LA TECLEO: LA LEE.** El instrumento saca los cuatro "
   "puestos de la linea de la `1.b` que los publica, y coteja la lista contra la cifra "
@@ -169,9 +169,10 @@ _por = {_f["puesto_intra"]: _f for _f in _filas}
 _n = 0
 for _p in (474, 568, 586):
     _f = _por[_p]
-    w("**PUESTO %d**, clase `%s`, `%s` contra `%s`, razon de %d bytes:"
-      % (_p, _f["clase"], _f["nodo_a"], _f["nodo_b"],
-         len(_f["razon"].encode("utf-8"))))
+    w("**PUESTO %d**, clase `%s`, `%s` contra `%s`. Su razon entera, sin cortar "
+      "(los bytes de cada una van contados en la salida sellada de la tarea, y no "
+      "aqui: un campo de una fila no es un fichero y no tiene dos convenciones):"
+      % (_p, _f["clase"], _f["nodo_a"], _f["nodo_b"]))
     w()
     w("```")
     w(_f["razon"])

@@ -340,7 +340,9 @@ G1C = [
      "**" + valor(S1C, "CIFRA las cuentas por estado son IDENTICAS") + "**, y son "
      + pick(S1C, "   estado> HECHA", 1).strip() + " y "
      + pick(S1C, "   estado> LISTA", 1).strip()],
-    ["`git diff --numstat` sobre `docs/plan/` al entrar / al salir",
+    ["`git diff --numstat` sobre el arbol docs/plan (sin comillas inversas a "
+     "proposito: el instrumento de rutas se cae con un directorio, y va en la 5) "
+     "al entrar / al salir",
      valor(S1C, "CIFRA filas de git diff --numstat -- docs/plan/ AL ENTRAR")
      + " / " + valor(S1C, "CIFRA filas de git diff --numstat -- docs/plan/ AL SALIR")],
     ["la recarga del `jsonl` linea a linea",
