@@ -260,38 +260,3 @@ La **210** es **VUELTA DE BATERIA** por la cadencia de cinco (`AUDITOR.md`
 **`OP-L-02`**, medida y a la espera de adjudicacion, y **`OP-I-01`**, sin
 empezar.
 
-## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO
-
-**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA 209 NO CORRIO, Y EL HUECO
-SE DECLARA EN VEZ DE RELLENARSE CON OTRA COSA.**
-
-**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V209_BATERIA.txt`.
-
-**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.isfile`
-devuelve **NO**, asi que `os.path.getsize` **no llego a correr sobre el** y no
-hay ninguna medicion suya que publicar. Lo que esta seccion recibio de
-bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes normalizado a
-LF**, **y ese cero sale de que no hay fichero, no de una medicion sobre uno**.
-La distincion es del fundador, escrita el 5 sep 2026 en el punto 3 de
-`paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`, que nombra los dos
-casos y no los confunde.
-
-**ATRIBUCION: NADIE la corrio en la vuelta 209, y no es un olvido.** Por
-`AUDITOR.md` 6.1 la bateria corre **CADA CINCO vueltas**, en una vuelta propia
-que no lleva nada al lado, y la **adjudicacion `6.10` del acta 208** lo dice
-con sus numeros: **la ultima de la cadencia fue la 205 y la siguiente es la
-210**. Esta vuelta traia **TRES sub-tareas** y ninguna de las tres era la
-bateria, asi que aqui **NO hay corrida propia que pegar** y lo que va es este
-hueco declarado y medido, **con el cero distinguido como DE AUSENCIA DE
-FICHERO y no de fichero vacio**.
-
-**LA NOMINA SIGUE CONGELADA EN 135**, recomputada en esta vuelta importando su
-fuente y no tecleada. **Ni crece ni se poda** (`AUDITOR.md` 6.3).
-
-**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) del instrumento
-de cierre admite el hueco declarado desde la vuelta 173, TAREA 1.b
-(adjudicacion `6.2` del acta de la 172), y la letra es estrecha: **el nombre,
-los bytes medidos y la atribucion, LAS TRES JUNTAS**. Faltando cualquiera de
-las tres, el instrumento sigue cayendo en ROJO, y **una corrida de otra vuelta
-pegada aqui tampoco vale**.
-

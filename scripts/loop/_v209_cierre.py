@@ -538,46 +538,15 @@ def main():
     a("**`OP-L-02`**, medida y a la espera de adjudicacion, y **`OP-I-01`**, sin")
     a("empezar.")
     a("")
-    a("## 9. LA BATERIA DE MUTACIONES: HUECO DECLARADO Y MEDIDO")
-    a("")
-    a("**HUECO DECLARADO Y MEDIDO. LA BATERIA DE LA VUELTA %d NO CORRIO, Y EL HUECO"
-      % VUELTA)
-    a("SE DECLARA EN VEZ DE RELLENARSE CON OTRA COSA.**")
-    a("")
-    a("**EL NOMBRE DEL FICHERO:** `docs/loop/SALIDA_V%d_BATERIA.txt`." % VUELTA)
-    a("")
-    a("**CUAL DE LOS DOS CASOS ES: EL FICHERO NO EXISTE.** `os.path.isfile`")
-    a("devuelve **%s**, asi que `os.path.getsize` **no llego a correr sobre el** y no"
-      % ("SI" if bat_existe else "NO"))
-    a("hay ninguna medicion suya que publicar. Lo que esta seccion recibio de")
-    a("bateria, medido y no supuesto, son **0 bytes en disco y 0 bytes normalizado a")
-    a("LF**, **y ese cero sale de que no hay fichero, no de una medicion sobre uno**.")
-    a("La distincion es del fundador, escrita el 5 sep 2026 en el punto 3 de")
-    a("`paradas/2026-09-05-la-bateria-sin-techo-DECISION.md`, que nombra los dos")
-    a("casos y no los confunde.")
-    a("")
-    a("**ATRIBUCION: NADIE la corrio en la vuelta %d, y no es un olvido.** Por"
-      % VUELTA)
-    a("`AUDITOR.md` 6.1 la bateria corre **CADA CINCO vueltas**, en una vuelta propia")
-    a("que no lleva nada al lado, y la **adjudicacion `6.10` del acta 208** lo dice")
-    a("con sus numeros: **la ultima de la cadencia fue la 205 y la siguiente es la")
-    a("210**. Esta vuelta traia **TRES sub-tareas** y ninguna de las tres era la")
-    a("bateria, asi que aqui **NO hay corrida propia que pegar** y lo que va es este")
-    a("hueco declarado y medido, **con el cero distinguido como DE AUSENCIA DE")
-    a("FICHERO y no de fichero vacio**.")
-    a("")
-    a("**LA NOMINA SIGUE CONGELADA EN %s**, recomputada en esta vuelta importando su"
-      % (nomina if nomina is not None else "NO COMPUTABLE"))
-    a("fuente y no tecleada. **Ni crece ni se poda** (`AUDITOR.md` 6.3).")
-    a("")
-    a("**POR QUE ESTO CIERRA Y UNA AUSENCIA MUDA NO.** La pieza (4) del instrumento")
-    a("de cierre admite el hueco declarado desde la vuelta 173, TAREA 1.b")
-    a("(adjudicacion `6.2` del acta de la 172), y la letra es estrecha: **el nombre,")
-    a("los bytes medidos y la atribucion, LAS TRES JUNTAS**. Faltando cualquiera de")
-    a("las tres, el instrumento sigue cayendo en ROJO, y **una corrida de otra vuelta")
-    a("pegada aqui tampoco vale**.")
-    a("")
-
+    # LA SECCION 9 **NO SE ESCRIBE AQUI**, Y ESO ES UNA CORRECCION DECLARADA
+    # (7 sep 2026, vuelta 209, cierre). Este computo la componia entero y
+    # `cerrar_reporte.py` escribe LA SUYA, asi que el reporte salia con `## 9.`
+    # DOS VECES y el instrumento cayo en rojo por su pieza (3), secciones
+    # duplicadas. **La seccion 9 la escribe el instrumento** a partir de
+    # `--bateria` y `--hueco-atribucion`, que es donde vive la letra estrecha de
+    # las TRES PIEZAS (nombre, bytes medidos con el cero distinguido, y
+    # atribucion). Lo que este cuerpo aporta sobre la bateria vive donde le toca:
+    # **la nomina congelada va en el 4.1**, dentro de la glosa de la moratoria.
     cuerpo = NL.join(p) + NL
 
     # LA CIFRA DE CAIDAS DEL VEREDICTO NO SE TECLEA: SE CUENTA DE LAS CLAVES QUE
@@ -619,7 +588,8 @@ def main():
           "(se exige 1, porque quien lo cierra es cerrar_reporte.py)" % n)
     if n != 1:
         fallos += 1
-    for cab in ("## 3.", "## 4.", "## 5.", "## 6.", "## 7.", "## 8.", "## 9."):
+    # LA `## 9.` NO SE CUENTA AQUI: la escribe cerrar_reporte.py.
+    for cab in ("## 3.", "## 4.", "## 5.", "## 6.", "## 7.", "## 8."):
         c = cuerpo.count(NL + cab) + (1 if cuerpo.startswith(cab) else 0)
         print("   la seccion %-6s aparece %d vez(ces) en el cuerpo (se exige 1)"
               % (cab, c))
