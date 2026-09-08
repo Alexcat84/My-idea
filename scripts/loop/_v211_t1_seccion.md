@@ -13,9 +13,8 @@ exactamente una linea: **se leen, no se recuerdan** (`6.6` del acta 210, linea *
 #### 1.a. EL ACTA 210, LEIDA Y NO REESCRITA
 
 La seccion de la **210** abre en la linea **73924** de `docs/loop/ACTA_AUDITOR.md`,
-que mi apertura mide en **4902898** bytes en disco y **4902898** normalizado
-a LF, `sha256` **`7217a5d76c98d65f`** (4788.0 KB). **Calza al digito con el encargo**,
-que publica **4902898** y **`7217a5d76c98d65f`**.
+que mi apertura mide en **4902898** bytes en disco y **4902898** normalizado a LF (4788.0 KB), con `sha256` **`7217a5d76c98d65f`** en disco y **`7217a5d76c98d65f`** normalizado a LF.
+**Calza al digito con el encargo**, que publica **4902898** y **`7217a5d76c98d65f`**.
 
 #### 1.b. LOS DOS CAMPOS `estado`, EN EL MISMO COMPUTO Y CON LAS TRES GUARDAS
 

@@ -157,8 +157,12 @@ L_INV2 = linea_del_acta("el primer bloque y el veredicto es INVARIANTE\"*",
 
 ap_acta = uno(AP, r"CIFRA docs/loop/ACTA_AUDITOR\.md: (\d+) bytes en disco y (\d+) bytes",
               "apertura del acta")
-ap_sha = uno(AP, r"CIFRA docs/loop/ACTA_AUDITOR\.md: \d+ bytes en disco y \d+ bytes normalizado a LF \(\w+\), sha256 disco (\w+)",
-             "sha de apertura del acta")
+# LOS DOS sha SE LEEN Y SE PUBLICAN EN LA MISMA LINEA. Publicar uno solo deja
+# una CIFRA SIN PAREJA, que es rojo de `cerrar_reporte.py` por la convencion de
+# la vuelta 178: mientras la convencion de bytes no este fijada, toda cifra de
+# bytes o de sha va con las dos, disco y normalizado a LF.
+ap_sha = uno(AP, r"CIFRA docs/loop/ACTA_AUDITOR\.md: \d+ bytes en disco y \d+ bytes normalizado a LF \(\w+\), sha256 disco (\w+) y sha256 LF (\w+)",
+             "los dos sha de apertura del acta")
 
 CUERPO = """### TAREA 1. LOS REGISTROS, Y LOS DOS CAMPOS `estado` QUE EL ACTA 209 DEJO ADJUDICADOS
 
@@ -175,9 +179,8 @@ exactamente una linea: **se leen, no se recuerdan** (`6.6` del acta 210, linea *
 #### 1.a. EL ACTA 210, LEIDA Y NO REESCRITA
 
 La seccion de la **210** abre en la linea **%(L210)d** de `docs/loop/ACTA_AUDITOR.md`,
-que mi apertura mide en **%(acta_disco)s** bytes en disco y **%(acta_lf)s** normalizado
-a LF, `sha256` **`%(acta_sha)s`** (%(acta_kb).1f KB). **Calza al digito con el encargo**,
-que publica **4902898** y **`7217a5d76c98d65f`**.
+que mi apertura mide en **%(acta_disco)s** bytes en disco y **%(acta_lf)s** normalizado a LF (%(acta_kb).1f KB), con `sha256` **`%(acta_sha)s`** en disco y **`%(acta_sha_lf)s`** normalizado a LF.
+**Calza al digito con el encargo**, que publica **4902898** y **`7217a5d76c98d65f`**.
 
 #### 1.b. LOS DOS CAMPOS `estado`, EN EL MISMO COMPUTO Y CON LAS TRES GUARDAS
 
@@ -286,7 +289,7 @@ comprobe**, y por eso no lo escribo.
     "v": VUELTA,
     "L210": L_210, "L64": L_64, "L65": L_65, "L2C": L_2C, "L63": L_63,
     "L66": L_66, "L71": L_71, "LINV": L_INV, "LINV2": L_INV2,
-    "acta_disco": ap_acta[0], "acta_lf": ap_acta[1], "acta_sha": ap_sha,
+    "acta_disco": ap_acta[0], "acta_lf": ap_acta[1], "acta_sha": ap_sha[0], "acta_sha_lf": ap_sha[1],
     "acta_kb": int(ap_acta[0]) / 1024.0,
     "b_e0": b_entrar[0], "b_e1": b_entrar[1],
     "b_s0": b_sha0[0], "b_s1": b_sha0[1],
