@@ -319,13 +319,20 @@ def main():
     a("**ESTA TABLA SE RECOMPUTA AL CIERRE Y NO SE HEREDA DE LA APERTURA**")
     a("(`EJECUTOR.md` 1, EL ESTADO AL CIERRE SE MIDE AL CIERRE).")
     a("")
-    a("**Medido con `git status --porcelain` al cierre: %d lineas.** Mi apertura"
-      % st_filas)
-    a("sellada, `docs/loop/SALIDA_V209_APERTURA.txt`, publica **%s** al entrar."
-      % ap_status)
-    a("**Medido con `git diff --numstat -- dataset/` al cierre: %d filas.** Mi"
+    a("**Mi apertura sellada, `docs/loop/SALIDA_V209_APERTURA.txt`, publica con")
+    a("`git status --porcelain` %s linea al entrar, y con" % ap_status)
+    a("`git diff --numstat -- dataset/` %s filas al entrar.** Las dos se LEEN de la"
+      % ap_numstat)
+    a("apertura sellada y no se teclean.")
+    a("")
+    a("**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: %d y %d.**"
+      % (st_filas, sedes["dataset/"]))
+    a("La del estado del arbol baja de %s a %d **y la diferencia esta medida y no"
+      % (ap_status, st_filas))
+    a("es un misterio**: al abrir, la unica linea sin rastrear era el propio fichero")
+    a("de mi sello de apertura, y al cerrar ya esta committeado con todo lo demas.")
+    a("**La de `dataset/` no se mueve: sigue en %d por los dos lados.**"
       % sedes["dataset/"])
-    a("apertura sellada publica **%s** al entrar." % ap_numstat)
     a("")
     a("| sede | filas de `git diff --numstat` al cierre | por que |")
     a("|---|---:|---|")
@@ -589,16 +596,26 @@ def main():
     if not m:
         fallos += 1
     # LA GUARDA DE LA SECCION 4: el marcador va DELANTE de su numero.
+    # LA GUARDA MIDE CONTRA LA **APERTURA SELLADA**, Y NO CONTRA EL CIERRE. Es lo
+    # que `seccion4_que_no_calza()` de `cerrar_reporte.py` compara: TODO numero
+    # que vaya detras de uno de esos dos marcadores tiene que ser el de la
+    # apertura. Por eso la seccion 4 escribe el marcador PEGADO a la cifra de
+    # apertura, y la medicion del cierre va en otra frase que NO repite el
+    # literal del marcador. La primera version de este computo comparaba contra
+    # el cierre y habria dejado un `0` detras de `git status --porcelain` donde
+    # la apertura dice `1`: rojo seguro, cazado antes de correr el instrumento.
     s4 = cuerpo[cuerpo.index("## 4."):cuerpo.index("## 5.")]
-    for marcador, esperado in (("git status --porcelain", st_filas),
+    for marcador, esperado in (("git status --porcelain", int(ap_status)),
                                ("git diff --numstat -- dataset/",
-                                sedes["dataset/"])):
-        hit = re.search(re.escape(marcador) + r"[^0-9]{0,40}(\d+)", s4)
-        val = int(hit.group(1)) if hit else None
-        print("   la seccion 4 dice %-32r y detras el numero %s (apertura %s): %s"
-              % (marcador, val, esperado,
-                 "CALZA" if val == esperado else "NO CALZA, Y ESO ES ROJO"))
-        if val != esperado:
+                                int(ap_numstat))):
+        vistos = [int(x) for x in
+                  re.findall(re.escape(marcador) + r"[^0-9]{0,40}(\d+)", s4)]
+        print("   la seccion 4 pone detras de %-32r los numeros %s (la apertura "
+              "sellada dice %s): %s"
+              % (marcador, vistos, esperado,
+                 "CALZAN" if vistos and all(x == esperado for x in vistos)
+                 else "NO CALZAN, Y ESO ES ROJO"))
+        if not vistos or not all(x == esperado for x in vistos):
             fallos += 1
     print("   CIFRA comprobaciones que fallan: %d" % fallos)
     if fallos:
