@@ -1,0 +1,41 @@
+==========================================================================
+LA VARA DEL `4.1` DEL ACTA 202, SOBRE EL ACTA 206 Y SOBRE LA 207
+==========================================================================
+LECTOR IMPORTADO Y NO TOCADO: scripts/loop/_v203_reparto_de_actas_viejas.py
+PLANTILLA DE CLAVE, LEIDA DE EL: '^\\s*(?:\\*\\*`?|#{2,4}\\s+`?)%s`?[ .:,]'
+MARCAS que busca, leidas de EL y no tecleadas:
+   adjudicaciones         ('ADJUDICACIONES', 'LA ADJUDICACION')
+   hallazgos              ('LOS HALLAZGOS', 'HALLAZGOS')
+   caidas_del_auditor     ('MIS CAIDAS PROPIAS', 'MIS PROPIAS CAIDAS')
+   caidas_del_ejecutor    ('LA CAIDA DEL EJECUTOR', 'LAS CAIDAS DEL EJECUTOR')
+
+--------------------------------------------------------------------------
+ACTA 206
+--------------------------------------------------------------------------
+acotada en las lineas 72281 a 72640 | 11 secciones `##`
+  ADJUDICACIONES         SECCION HALLADA (linea 72439) PERO 0 CLAVES
+  HALLAZGOS              4 -> 7.1, 7.2, 7.3, 7.4
+  CAIDAS DEL AUDITOR     NO COMPUTABLE: 0 seccion(es) cuyo TITULO lo nombra
+  CAIDAS DEL EJECUTOR    SECCION HALLADA (linea 72407) PERO 0 CLAVES
+  CIFRA numerales COMPUTABLES sobre el acta 206: 1 de 4
+
+--------------------------------------------------------------------------
+ACTA 207
+--------------------------------------------------------------------------
+acotada en las lineas 72641 a 73082 | 11 secciones `##`
+  ADJUDICACIONES         8 -> 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8
+  HALLAZGOS              5 -> 7.1, 7.2, 7.3, 7.4, 7.5
+  CAIDAS DEL AUDITOR     4 -> 9.1, 9.2, 9.3, 9.4
+  CAIDAS DEL EJECUTOR    1 -> 4.1
+  CIFRA numerales COMPUTABLES sobre el acta 207: 4 de 4
+
+==========================================================================
+LO QUE ESTO DEMUESTRA, Y ES TODO LO QUE PRETENDE
+==========================================================================
+EL LECTOR NO SE TOCO: ni una linea, y la moratoria de `AUDITOR.md` 6.3
+queda intacta. Lo unico que cambio son los TITULOS de las secciones del
+acta, elegidos con el literal que la vara ya buscaba, y que cada clave de
+la casa (`C.n`, `E.n`) lleve al lado su `N.M` en el formato que la
+PLANTILLA_ANCHA acepta. COSTE EN CODIGO: CERO.
+
+CIFRA acta 206: 1 de 4 | CIFRA acta 207: 4 de 4

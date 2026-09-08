@@ -1,178 +1,203 @@
-# ENCARGO DE LA VUELTA 207 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-**DOS SUB-TAREAS Y NINGUNA MAS** (`AUDITOR.md` 6.2; adjudicacion `6.6` del acta
-206: la 204 cerro su reporte, la 205 NO y la 206 SI, o sea que la racha esta en
-UNA y no en DOS, y el tope de cinco todavia no vuelve).
+Eres el ejecutor de la VUELTA 208. Rama `pasada-unica`, FASE III. Lee
+`docs/loop/EJECUTOR.md` entero antes del primer comando y abre tu reporte con la
+vuelta: talla el esqueleto de `docs/loop/REPORTE.md` ANTES de la primera tarea,
+con las CUATRO marcas del anexo puestas (`<!-- TABLA DE TAREAS -->`,
+`<!-- ANEXO DE TAREAS -->` y sus dos cierres), que es la `C.1` que la 207 tuvo
+que remendar a mano. Mira que exige `anexar_tarea_al_reporte.py` ANTES de tallar,
+no despues.
 
-**LA BATERIA NO CORRE EN ESTA VUELTA** (`AUDITOR.md` 6.1; adjudicacion `6.7` del
-acta 206). La ultima de la cadencia fue la **205** y la siguiente es la **210**.
-Tu seccion 9 cierra con el **HUECO DECLARADO Y MEDIDO**, con sus **tres piezas
-juntas**: el nombre del fichero, los bytes medidos (distinguiendo el cero de
-ausencia de fichero del cero de un fichero vacio) y la atribucion. Faltando una
-de las tres, `cerrar_reporte.py` cae en ROJO y hace bien.
+TRES SUB-TAREAS. El tope volvio a CINCO (mi acta 207, adjudicacion `6.5`: la 206
+y la 207 cerraron las dos su propio reporte con `cerrar_reporte.py`, que es el
+disparador de `AUDITOR.md` 6.2), pero te pongo tres y no cinco porque la TAREA 2
+toca una sede sellada del banco y prefiero que sobre guarda a que sobre trabajo.
 
-**LA MORATORIA DE MAQUINARIA SIGUE PUESTA** (`AUDITOR.md` 6.3). Ninguna vuelta
-fabrica arneses, guardas ni lectores nuevos. La nomina sigue **congelada en 135**
-y no se poda. Todo computo tuyo va con **prefijo de guion bajo**, fuera del censo
-y fuera de la nomina. **Y queda adjudicado que IMPORTAR NO ES CLONAR** (acta 206
-`6.5`): un fichero con guion bajo que importa un instrumento y solo le corrige un
-dato es computo de una vuelta y no roza la moratoria. Ya no lo preguntes.
+LA BATERIA NO CORRE EN ESTA VUELTA (`AUDITOR.md` 6.1, mi adjudicacion `6.7`): la
+ultima fue la 205 y la siguiente es la 210. Tu seccion 9 cierra con el HUECO
+DECLARADO Y MEDIDO y sus TRES piezas juntas, distinguiendo el cero de ausencia
+del cero de fichero vacio.
 
----
-
-## TAREA 1: LOS REGISTROS DE LA VUELTA 206
-
-**1.a. LEE EL ACTA 206 ENTERA** (`docs/loop/ACTA_AUDITOR.md`, la seccion que
-empieza en `# ACTA DEL AUDITOR, VUELTA 206`). El acta crecio por anexion pura:
-**4771842** bytes antes y **4793964** despues, **22122** anadidos, y el texto
-viejo sigue entero delante. **Esas cifras son contraste, no fuente: remidelas.**
-
-**1.b. ESCRIBE `R.71` EN `docs/PENDIENTES.md`, POR ADICION PURA Y EN SU SEDE**,
-con el acta 206 como sujeto. **El numero NO se teclea:** lo computa
-`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes.
-Mi medicion de hoy, como contraste y no como fuente: **62** entradas, **0**
-colisiones, **0** huecos, mayor `R.70`, siguiente libre `R.71`. Corre el
-instrumento al entrar y al salir y publica las dos puntas.
-**LA GUARDA DE ADICION PURA:** `git diff --numstat -- docs/PENDIENTES.md` con
-**0 lineas borradas**, y el conteo de lineas del texto de entrada que no esten,
-en orden, en el de salida, tambien en **0**.
-
-**1.c. LAS SEIS ADJUDICACIONES DEL ACTA 206 SE REGISTRAN, Y TRES DE ELLAS CIERRAN
-PENDIENTES QUE VENIAN ARRASTRANDOSE.** No las narres: registralas con su numero.
-- `6.2`: el `exit 3221225794` **no es de la misma especie** que un arnes que no
-  muerde. Es un proceso que no arranco (`0xc0000142`), o sea un hecho que el
-  instrumento **no midio**, y publicarlo como `NO MORDIO` lo cubre el banco
-  `9.1`. **La cuenta se parte: 4 arneses que corrieron y no mordieron, mas 1 que
-  no corrio.** Tu `P.2` queda contestada.
-- `6.3`: tu `P.3` queda contestada **con medicion**. `archivar_reporte.py` acepta
-  `--commit`, pero `cerrar_reporte.py` **no tiene ningun argumento de ruta**, asi
-  que el cierre tardio solo puede hacerse sobre `docs/loop/REPORTE.md`. Cerrar
-  primero y tallar despues **era lo unico que las herramientas permiten**, y por
-  eso **tu `C.2` NO cuenta como caida tuya**.
-- `6.4`: tu `PD.1` queda cerrada. Una columna de apertura reconstruida vale **si
-  y solo si la propia celda publica que es reconstruccion, con su commit y su
-  prueba al lado**, que es lo que el tallador escribio.
-- `6.5`: tu `PD.2` queda cerrada. Importar no es clonar.
-- `6.6` y `6.7`: el tope de dos sub-tareas y la cadencia de la bateria.
-
-**1.d. LAS DOS CAIDAS DE REPORTE QUE TE LEVANTO EL ACTA 206 SE CORRIGEN EN EL
-REPORTE ARCHIVADO DE LA 206, POR CORRECCION DECLARADA Y CON EL TEXTO VIEJO
-ENTERO ENCIMA** (`EJECUTOR.md` 8). **Ninguna de las dos acumula.**
-- `E.1`: `docs/loop/REPORTE.md` publica de `docs/loop/SALIDA_V206_NO_MORDIO.txt`
-  *"sha256 `cffa5cd0724d0427` en disco y `cffa5cd0724d0427` normalizado a LF"*, y
-  el sha de DISCO **no es ese**. **Mide los dos tu y publica los dos**, no copies
-  los mios. La misma linea ya prueba que no pueden ser iguales, porque publica
-  **4151** bytes de disco contra **4103** en LF.
-- `E.2`: el discutible `D.1` atribuye **19 / 18** a lo que *"aquella vuelta dejo
-  sellado"*, y lo que la 205 sello dice **39 celdas: 19 de APERTURA, 19 de CIERRE
-  y 1 SIN LADO**. El **19 / 18** lo escribio ESTA vuelta encima de ese fichero,
-  en el commit `a75ff760`. **La conclusion de tu `D.1` se sostiene y la verifique
-  aparte** (los seis `SALIDA_V205_*_APERTURA.txt` se anaden una sola vez en toda
-  la historia de git, y es en `a75ff760`). **Corrige la procedencia, no el
-  hecho**, y lee la fuente correcta con
-  `git show 78ca7176:docs/loop/SALIDA_V205_TALLADOR_RECHAZO.txt`.
-
-**1.e. LA REGLA QUE SALE DE LA `E.2` Y QUE VAS A NECESITAR TODA LA VUELTA**
-(hallazgo `7.3` del acta 206): **una salida sellada que una vuelta posterior
-vuelve a correr deja de ser evidencia de la vuelta que la sello.** Si citas un
-fichero sellado como prueba de lo que dijo una vuelta anterior, la fuente es
-`git show <commit de aquella vuelta>:<ruta>`, nunca el fichero de hoy.
+RIGE LA MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Ningun arnes, guarda ni
+lector nuevo. Todo tu computo va con prefijo `_v208_*`, fuera del censo y fuera
+de la nomina, que sigue CONGELADA EN 135 y que recomputé yo con `ast` en esta
+vuelta. Si un lector heredado no te alcanza, LO DECLARAS NO COMPUTABLE con su
+motivo medido y sigues: no lo ensanchas.
 
 ---
 
-## TAREA 2: EL PLAN. LA MESA `OP-L-01`, LEIDA CONTRA LOS DOCUMENTOS QUE SU PROPIA FICHA NOMBRA
+## TAREA 1. LOS REGISTROS DE LA VUELTA 207
 
-**POR QUE ESTA Y POR QUE AHORA.** La moratoria dice que **el trabajo es el plan
-hasta agotarlo: las cuatro fichas reales, la cola restante y el cierre**
-(`AUDITOR.md` 6.3). La deuda de registros que ocupaba las ultimas vueltas **se
-agoto en la 206**. Corri la vara del trabajo pendiente en mi turno,
-`python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD`, y las
-**cuatro** fichas de TRABAJO REAL son **`OP-L-01`, `OP-L-02`, `OP-L-03` y
-`OP-I-01`**, las cuatro de tipo MESA. **Son cuatro y no tres**: el punto 6 de tu
-reporte arrastraba una lista de tres que venia de mis propias actas 203 y 204, y
-la corrijo en la adjudicacion `6.8`. **Empiezas por `OP-L-01` porque su tabla de
-dependencias esta VACIA y los tres documentos que su evidencia nombra existen en
-disco**, o sea que es la unica de las cuatro que se puede cerrar sin depender de
-nada.
+1.a. Lee entera mi acta de la vuelta 207 en `docs/loop/ACTA_AUDITOR.md` y REMIDE
+     sus cifras de crecimiento con tus comandos. CONTRASTE, para que lo cotejes y
+     NO para que lo copies: el acta pasa de 4793964 a 4820516 bytes en disco y a
+     4820516 normalizado a LF, o sea 26552 anadidos, con sha256 disco
+     `0ca61c2ee053dd0d` y sha256 LF `0ca61c2ee053dd0d`, y 73081 lineas. Mi
+     seccion empieza en la linea 72641. Si tu medicion discrepa, DECLARAS la
+     discrepancia; no la resuelves copiando.
+     AVISO MEDIDO, que a la 207 le costo una caida: `git show 3e523b74^:...` se
+     come el acento circunflejo en algunos shells y te devuelve el commit sin el
+     padre. Usa `~1` o comprueba que los dos valores son distintos antes de
+     restar.
 
-**LA VARA MANDA Y EL CAMPO `estado` NO** (`AUDITOR.md` 0). No toques el campo
-`estado` de `OPERACIONES.jsonl`. **No lo levantes, no lo bajes y no lo mires para
-decidir.** Lo que dice si la mesa se hizo es la lectura que te encargo aqui.
+1.b. Escribe `R.72` en `docs/PENDIENTES.md` POR ADICION PURA Y EN SU SEDE. El
+     numero NO se teclea: lo computa `scripts/loop/serie_de_registros.py`,
+     corrido por ti AL ENTRAR y AL SALIR, y publicas las dos puntas.
+     CONTRASTE de la punta de entrada, medido por mi hoy: 63 entradas en total
+     (62 en `docs/PENDIENTES.md` y 1 en `docs/plan/CORRECCIONES_A_APLICAR.md`),
+     0 colisiones, 0 huecos, mayor `R.71`, siguiente libre `R.72`.
+     Publica `git diff --numstat` sobre la sede con sus lineas anadidas y
+     BORRADAS, y la cuenta de lineas del texto de entrada que no esten, en orden,
+     en el de salida. Corre la segunda vez y publica que crece 0 bytes.
 
-**2.a. LEE LA FICHA `OP-L-01` ENTERA** y saca de ella, sin resumir y sin decidir
-todavia, **la lista numerada de lo que la ficha dice que esa mesa produce**. Cada
-punto con la linea de la ficha de la que sale. Esa lista es tu vara, y **la
-escribes ANTES de abrir ningun documento**, por el mismo motivo por el que la
-ciega se sella antes de verificar: una vara escrita despues de mirar se acomoda
-a lo que se vio.
+1.c. Registra POR SU NUMERO las OCHO adjudicaciones de mi acta, `6.1` a `6.8`,
+     cada una con su linea. Y esta vez la vara del `4.1` del acta 202 SI te va a
+     computar: escribi mi acta con los titulos que esa vara ya buscaba y con cada
+     clave de la casa llevando su `N.M` al lado. Mi prueba, corrida con el lector
+     IMPORTADO y sin tocarle una linea, esta en
+     `docs/loop/SALIDA_V207_VARA_SOBRE_MI_ACTA.txt`: da 4 de 4 numerales sobre el
+     acta 207 contra 1 de 4 sobre la 206. CORRELA TU y publica lo que te dé. Si
+     te da otra cosa, esa discrepancia es un hallazgo y va a tu 3.0.
+     Las cinco adjudicaciones que CIERRAN pendientes son la `6.1` (tu `P.2`), la
+     `6.3` (tu `P.3`), la `6.4` (tu `PD.1`), la `6.5` (el tope) y la `6.8` (tu
+     `P.1`). Dilo al registrarlas.
 
-**2.b. COTEJA CADA PUNTO CONTRA LOS TRES DOCUMENTOS QUE LA PROPIA FICHA NOMBRA
-COMO SU EVIDENCIA**, y son estos tres, medidos por mi hoy como contraste:
-`docs/plan/LECTURAS_DIRIGIDAS.md` (**214916** bytes en disco y **214916**
-normalizado a LF), `docs/INTRA_DOMINIO_INFORME.md` (**943970** y **943970**) y
-`docs/BANCO_DE_TEXTOS.md` (**182228** y **182228**). **Remidelos tu.**
-Para cada punto de tu lista, **una fila** con: el punto, si el documento lo
-CUBRE, lo cubre A MEDIAS o NO lo cubre, y **la cita con su fichero y su linea**.
-**Una fila sin cita no vale**, y prefiero un NO CUBRE honesto a un CUBRE sin
-linea que lo sostenga.
-
-**2.c. PUBLICA LA COBERTURA MEDIDA, NO NARRADA:** cuantos puntos de la ficha
-CUBREN, cuantos a medias y cuantos no, y **la lista nominal de los que no**. Esa
-es la cifra que esta mesa lleva dos vueltas sin tener, y **es exactamente lo que
-la vara dice de si misma que no hace**: *"Si cubre lo que la ficha describe es
-LECTURA, y esta vara no la hace."*
-
-**2.d. NO CIERRES LA FICHA TU.** Publica la cobertura y **para ahi**. Si tu
-medicion dice que `OP-L-01` esta cubierta entera, dilo y **dejalo propuesto**:
-cerrar una ficha del plan es adjudicacion del auditor, no tuya. Si dice que
-faltan puntos, **nombralos y no los ejecutes en esta vuelta**: no caben con sus
-guardas y una mesa a medias es peor que una mesa pendiente.
-
-**2.e. TU COMPUTO VA EN UN FICHERO `_v207_*` CON PREFIJO DE GUION BAJO**, fuera
-del censo y fuera de la nomina, y su salida sellada en `docs/loop/`. **No
-fabricas ningun lector nuevo de proposito general**: si necesitas contar, cuenta
-en tu computo de vuelta y dilo.
+1.d. CORRIGE MI CAIDA `4.1` CONTRA TI, en el reporte que archives de la 207, por
+     CORRECCION DECLARADA y con el texto viejo entero encima. Tu seccion `2.a`
+     publica "6 de `verificacion`" y son SIETE. No la corrijas copiandome:
+     REMIDELA tu sobre la linea 41 de `docs/plan/OPERACIONES.jsonl`, y cita al
+     lado la linea 21 de tu propia salida sellada
+     `docs/loop/SALIDA_V207_T2_VARA.txt`, que ya imprimia
+     `CIFRA elementos de verificacion: 7`. Deja escrito que la cobertura NO
+     cambia: `V.12`, `V.13` y `V.14` salen de `verificacion[0]`, `[1]` y `[2]`, y
+     los cuatro elementos no contados son las CORRECCIONES DECLARADAS, que nunca
+     fueron puntos de la vara.
 
 ---
 
-## LO QUE ARRASTRAS Y NO SE PIERDE
+## TAREA 2. LA `TABLA VIVA DE LOS PUROS`, PUESTA AL DIA POR EL CARRIL DEL `9.10`
 
-1. **LA COLA DE LA AUDITORIA INTEGRAL, CON CINCO ENTRADAS NOMBRADAS** (acta 206
-   `8.3`): las **cinco entradas de la nomina que no muerden**, partidas en 4 mas
-   1 por la `6.2`; el `--siguiente` del lanzador, que computa su vuelta del
-   nombre del fichero y responde `183` en cualquier vuelta (acta 205 `5.2`); el
-   patron de `preguntas_del_reporte()`, roto en la linea **196** de
-   `scripts/loop/_v203_reparto_de_actas_viejas.py` (acta 204 `4.4`); **la guarda
-   de las dos convenciones, que solo mira BYTES y no `sha256`**, y por eso dejo
-   pasar la `E.1` (acta 206 `7.2`); y la falta de argumento de ruta en
-   `cerrar_reporte.py` (acta 206 `6.3`). **Ninguna se toca ahora: la moratoria
-   las cubre a todas.**
-2. **LA OPERACION DE CODIGO DE LA ESCALADA SIGUE ENCARGADA Y CON SU EJECUCION
-   SUSPENDIDA** (acta 202 `4.6`, ratificada por la 203 `4.9`, la 204 `4.10`, la
-   205 y esta): se ejecuta en la primera vuelta despues de que la moratoria se
-   levante. **Arrastrala otra vez para que la 208 no la pierda.**
-3. **LAS OTRAS TRES FICHAS REALES** (`OP-L-02`, `OP-L-03` y `OP-I-01`) siguen
-   abiertas. `OP-L-02` es la unica de las cuatro **sin ningun documento que
-   medir**: su evidencia entera es prosa y no nombra ningun fichero. **No la
-   toques todavia.**
-4. **LA VARA DEL TRABAJO PENDIENTE, PARA QUE NO SE LEA EL CAMPO `estado`:**
-   `python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD`. Mis
-   cifras de hoy, como contraste: **71** fichas, **37** que no calzan, **6** en
-   LISTA sin ninguna prueba, **2** consumidas y **4** de TRABAJO REAL.
+ESTO ES LO QUE MI ADJUDICACION `6.3` ENCARGA, Y SALE DE LA `6.1`: el criterio de
+HECHO de la fase `06 MESAS` en `docs/plan/08_VERIFICACION.md` exige "cada
+decision escrita con su motivo y su COBERTURA AL LADO (banco 9.26)", el banco
+`9.26` dice que mientras falte un par la forma es PROVISIONAL, y la propia
+`verificacion[2]` de `OP-L-01` pide que "cada nomina afectada se re-mide con su
+cobertura al lado". La tabla no lo lleva, y por eso `OP-L-01` no cierra.
+
+2.a. PRIMERO EL DENOMINADOR, Y ESTE ORDEN NO ES DE ADORNO. Recomputa cuantos
+     pares POSIBLES tiene cada una de las dos nominas, de su nomina de miembros y
+     no de la tabla. MOTIVO MEDIDO, y es mi hallazgo `7.2`: en la junta asesora
+     las dos fuentes dicen 6 posibles y solo discrepan en los leidos, o sea que
+     es la tabla sin refrescar; pero en la SELECCION DE CANAL la mesa cuenta
+     10 de 10 y la tabla 8 de 15, y ahi los DENOMINADORES no coinciden. Escribir
+     los leidos sobre un denominador sin comprobar seria arreglar la mitad
+     visible. Publica los dos denominadores con el comando que los saca.
+
+2.b. ESCRIBE LAS DOS FILAS en `docs/BANCO_DE_TEXTOS.md`, por el carril del banco
+     `9.10` (toda tabla que cita un veredicto se recomputa del archivo), con
+     CORRECCION DECLARADA, con el texto viejo entero encima, sin tacharlo y sin
+     clave nueva de esquema. Las sedes, medidas por mi hoy: la tabla abre en la
+     linea 938 con corte 14 ago 2026 al puesto 1157; la junta asesora es la fila
+     de la linea 961 y dice 5 leidos de 6 posibles; la seleccion de canal es la
+     de la linea 965 y dice 8 de 15. Lo que la mesa declara esta en
+     `docs/plan/LECTURAS_DIRIGIDAS.md:290` y `:291`, con "cobertura COMPLETA" las
+     dos. REMIDE las cuatro sedes antes de escribir.
+     El corte de la tabla se actualiza tambien: hoy dice 14 ago 2026 y la
+     correccion es posterior.
+
+2.c. PUBLICA `docs/BANCO_DE_TEXTOS.md` por las DOS convenciones, antes y despues,
+     con sus `sha256`. CONTRASTE de hoy: 182228 bytes en disco y 182228
+     normalizado a LF, sha256 disco `68557cd00a3124f4` y sha256 LF
+     `68557cd00a3124f4`. Y publica `git diff --numstat` con las lineas anadidas y
+     las BORRADAS: si borras una sola linea de texto viejo, es rojo.
+
+2.d. NO CIERRES `OP-L-01` Y NO TOQUES SU CAMPO `estado`. Cerrar una ficha es
+     adjudicacion mia. Lo que si haces es dejar MEDIDO si con las dos filas
+     escritas la `V.3` pasa de `A MEDIAS` a `CUBRE`, con su cita de fichero y
+     linea, para que yo la cierre en la 209 sin volver a medir.
+     `docs/plan/OPERACIONES.jsonl` tiene que salir de esta vuelta con el MISMO
+     `sha256` con el que entra: 513043 bytes por las dos convenciones y
+     `829c583eb779cab6`. Publicalo al cierre.
+
+2.e. Y LA `V.14` VA CORREGIDA POR ADICION, NO REHECHA (mi adjudicacion `6.4`).
+     Se sello como NO DOCUMENTAL "porque las nominas del inventario no viven en
+     ninguno de los tres documentos", y la cobertura de esas nominas vive en la
+     `TABLA VIVA DE LOS PUROS`, que esta en `BANCO_DE_TEXTOS.md`, que es uno de
+     los tres. Es la misma especie que tu `D.2` con la `V.4`: se declara al lado,
+     con las dos cuentas juntas, y el sello NO se reescribe.
 
 ---
 
-## EL CIERRE DE TU VUELTA
+## TAREA 3. LA MESA `OP-L-03`, MEDIDA CONTRA LOS DOCUMENTOS QUE SU FICHA NOMBRA
 
-Tu reporte abre con la vuelta y crece por anexion (`EJECUTOR.md` 1). **Esta vez
-si puedes tallar tu esqueleto primero**, porque el reporte de la 206 ya esta
-cerrado y archivado y `docs/loop/REPORTE.md` no es sujeto de ninguna tarea tuya.
-Cierra con `scripts/loop/cerrar_reporte.py --vuelta 207` y sus cuatro piezas, y
-**publica los dos `sha256` de cada fichero que cites, el de disco y el de LF,
-medidos los dos**: la guarda no mira esa pareja y la `E.1` de la 206 salio justo
-por ahi.
+MISMO METODO QUE LA `OP-L-01` DE LA 207, QUE SALIO BIEN Y POR ESO SE REPITE.
+
+3.a. LA VARA PRIMERO, SELLADA EN SU PROPIO COMMIT ANTES DE ABRIR NINGUN
+     DOCUMENTO, con cada punto llevando la CITA LITERAL del campo y del elemento
+     de la ficha del que sale, y con el computo comprobando VERBATIM que cada
+     cita aparece en la ficha. Sella tambien EL REPARTO: cuales son documentales
+     y cuales no, con su motivo escrito ANTES de mirar.
+     ESCARMIENTO DE LA 207, PARA QUE NO SE REPITA: alli DOS puntos se sellaron
+     como no documentales y resultaron tener sede (`V.4` y, cazada por mi, la
+     `V.14`). Antes de declarar un punto NO DOCUMENTAL, comprueba que su sede no
+     esta en ninguno de los documentos de la evidencia.
+
+3.b. EL COTEJO, punto por punto, con CUBRE, A MEDIAS o NO CUBRE y su cita de
+     FICHERO Y LINEA. Una fila sin cita no vale. Y aplica la `6.1`: si un punto
+     nombra una nomina o una forma de familia, la cobertura tiene que estar al
+     lado en su sede, o no cubre.
+     Los documentos que la ficha nombra, medidos por mi hoy con la vara del
+     trabajo pendiente (`scripts/loop/vuelta150_3_relectura_expediente.py
+     --corte HEAD`, salida en
+     `docs/loop/SALIDA_V207_VARA_EXPEDIENTE_AUDITOR.txt`): `BANCO_DEL_PLAN.md`
+     61554 y 61554, `LECTURAS_DIRIGIDAS.md` 214916 y 214916, `EJECUTOR.md` 13194
+     y 13194, `OP_L_03_LECTURAS.jsonl` 51368 y 51368,
+     `OP_L_03_TRIANGULOS.jsonl` 55705 y 55705, y `AUDITOR.md` 30581 y 30581.
+     REMIDELOS TU. Ojo con `LECTURAS_DIRIGIDAS.md`: si la TAREA 2 no lo toca,
+     tiene que salir igual, y si algo lo mueve, lo dices.
+
+3.c. Publica la COBERTURA MEDIDA Y NO NARRADA, con la lista nominal de los que no
+     cubren, y las dos cuentas separadas si el reparto sellado y los veredictos
+     no coinciden en numero, como hiciste en la 207.
+
+3.d. NO CIERRES LA FICHA y NO toques su campo `estado`. Proponla y para.
+
+3.e. SI LA TAREA 3 NO CABE CON SUS GUARDAS COMPLETAS, DEJALA ABIERTA Y DILO EN
+     LA TABLA. Tu propia frase de la 207 es la regla: una mesa a medias es peor
+     que una mesa pendiente. Una fila que siga diciendo ABIERTA, SIN CERRAR es
+     una respuesta honesta; una mesa medida a ojo no lo es.
+
+---
+
+## LO QUE VA EN TODA VUELTA, Y NO ES OPCIONAL
+
+- SELLA TU APERTURA antes de la primera operacion, con el HEAD leido de `git` y
+  no tecleado, y el estado del arbol. Y si un fichero de identidad nace despues,
+  DECLARALO como hiciste en tu `C.2`, no lo disimules.
+- EL CICLO ENTERO DE GATE 0 POR LOS DOS LADOS, los ocho comandos en su orden,
+  NUNCA `run_phase1.py` a secas. Importa el ciclo, no lo clones (acta 206 `6.5`).
+- `git diff HEAD --numstat` sobre `dataset/`, `web/`, `engine/` y `docs/plan/` en
+  CERO filas, medido AL CIERRE y no heredado de la apertura.
+- LAS SEDES SELLADAS con sus `sha256` por las DOS convenciones, al cierre y
+  recomputadas: `INTRA_DOMINIO_VEREDICTOS.jsonl` (4054129 y `0a77b5a35a962621`)
+  y `OPERACIONES.jsonl` (513043 y `829c583eb779cab6`). Ni un veredicto ni un
+  `estado` se mueven.
+- LAS TRES SEDES DEL AUDITOR en 0, distinguiendo el cero de `PARA_ALEXIS.md` como
+  DE AUSENCIA DE FICHERO si sigue sin existir.
+- CIERRA TU PROPIO REPORTE con `scripts/loop/cerrar_reporte.py --vuelta 208` y
+  archiva el mio de la 207 con `archivar_reporte.py`. AVISO MEDIDO, de tu `C.4`:
+  ese instrumento ESCRIBE PRIMERO Y VALIDA DESPUES, asi que una corrida en rojo
+  te deja el reporte pisado en disco. Committea antes de correrlo y comprueba el
+  `sha256` despues.
+- TODA CIFRA QUE PUBLIQUES SALE DE UN INSTRUMENTO CORRIDO EN ESTA VUELTA. Las de
+  este encargo son CONTRASTE. Si discrepan de tu medicion, la discrepancia se
+  declara, no se resuelve copiando.
+- TODA RUTA QUE PUBLIQUES COMO EVIDENCIA TIENE QUE EXISTIR Y NO MEDIR CERO
+  BYTES. Una ausencia declarada (como tu hueco de bateria) es otra cosa y esa si
+  vale, con sus tres piezas.
+- MARCA TUS DISCUTIBLES ANTES DE SABER SI ACIERTAS, y con "por donde me puedo
+  estar equivocando" escrito. Los seis del sujeto de mi ciega estaban bien
+  marcados y acerte cinco: el marcado funciona y se agradece.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
