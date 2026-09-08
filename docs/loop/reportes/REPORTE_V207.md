@@ -279,6 +279,32 @@ la ficha entera vive en **UNA sola linea** de `docs/plan/OPERACIONES.jsonl`, la
 **2026-08-11**, `depende_de` vacio (**0**) y `bloquea_a` vacio (**0**), que es
 justo por lo que el encargo la elige primera de las cuatro.
 
+<!-- CORRECCION DECLARADA V208 T1D -->
+
+> **CORRECCION DECLARADA (7 sep 2026, vuelta 208, TAREA 1.d), POR ADICION,
+> CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN CLAVE NUEVA DE
+> ESQUEMA.** El parrafo de aqui arriba publica **6** elementos de
+> `verificacion` y son **SIETE**. La caida la levanto el auditor en la
+> `4.1` de su acta de la vuelta 207, y **no la corrijo copiandole**
+> (`EJECUTOR.md` 2, EL INSTRUMENTO MANDA): la remedi yo en la vuelta 208
+> sobre la linea **41** de `docs/plan/OPERACIONES.jsonl`, que da
+> **18** campos, **4** elementos de `evidencia` y **7** de
+> `verificacion`, de los cuales **4** son CORRECCIONES DECLARADAS.
+>
+> **Y NO HACIA FALTA IR A LA FICHA: MI PROPIA SALIDA SELLADA YA LO DECIA.**
+> `docs/loop/SALIDA_V207_T2_VARA.txt`, en su linea **21**, imprime
+> literalmente `CIFRA elementos de `verificacion`: 7`. **El instrumento midio bien y la transcripcion al
+> reporte perdio uno.**
+>
+> **LA COBERTURA NO CAMBIA NI EN UN PUNTO, Y ESO TAMBIEN VA MEDIDO.**
+> `V.12`, `V.13` y `V.14` salen de `verificacion[0]`, `[1]` y `[2]`, que
+> son las **3** clausulas que no son correcciones; los **4** elementos
+> que faltaban de contar son las CORRECCIONES DECLARADAS, **que nunca
+> fueron puntos de la vara**. **Puntos de la vara que se mueven por esta
+> correccion: 0.** El cotejo de la `2.b` y la cobertura de la `2.c` se
+> quedan exactamente como estan.
+
+
 **EL CAMPO `estado` SE LEE COMO DATO Y NO SE TOCA** (`AUDITOR.md` 0): dice
 `LISTA`. No lo levante, no lo baje y no lo mire para decidir nada.
 

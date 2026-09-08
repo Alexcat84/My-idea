@@ -1,0 +1,71 @@
+==============================================================================
+VUELTA 208, TAREA 1.d: LA CAIDA `4.1` DEL ACTA 207, CORREGIDA POR
+CORRECCION DECLARADA EN EL REPORTE ARCHIVADO DE LA 207
+==============================================================================
+
+A) LA CIFRA, REMEDIDA POR MI SOBRE LA LINEA 41 DE docs/plan/OPERACIONES.jsonl
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+   CIFRA lineas del fichero: 71
+   CIFRA campos de la ficha: 18
+   CIFRA elementos de `evidencia`: 4
+   CIFRA elementos de `verificacion`: 7
+   CIFRA de esos que son CORRECCION DECLARADA: 4 (indices 3, 4, 5, 6)
+   CIFRA clausulas de verificacion que NO son correccion: 3 (indices 0, 1, 2)
+      verificacion[0]: ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+      verificacion[1]: el marcador del cribado no se mueve: sigue en 2.117
+      verificacion[2]: cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+
+B) LA MISMA CIFRA, LEIDA DE MI PROPIA SALIDA SELLADA DE LA 207
+   docs/loop/SALIDA_V207_T2_VARA.txt: 6533 bytes en disco
+   su linea 21, pegada entera y no parafraseada:
+         CIFRA elementos de `verificacion`: 7
+   CIFRA leida de esa linea: 7
+
+C) LAS DOS MEDICIONES, JUNTAS
+   remedida por mi sobre la ficha:      7
+   leida de mi salida sellada de la 207: 7
+   el reporte de la 207 publica:        6
+   LAS DOS MIAS CALZAN EN 7: SI
+
+D) LA COBERTURA NO CAMBIA, Y SE COMPRUEBA EN VEZ DE AFIRMARSE
+   `V.12`, `V.13` y `V.14` salen de verificacion[0], [1] y [2].
+   los tres indices de los que salen son clausulas y no correcciones: SI
+   los cuatro elementos que faltaban de contar son CORRECCIONES
+   DECLARADAS, que nunca fueron puntos de la vara: SI
+   CIFRA puntos de la vara que se mueven por esta correccion: 0
+
+E) EL REPORTE ARCHIVADO, Y LA GUARDA DEL ANCLA
+   docs/loop/reportes/REPORTE_V207.md: 50306 bytes en disco y 50306 normalizado a
+   LF, sha256 disco e0d67989e21687ce y sha256 LF e0d67989e21687ce
+   CIFRA lineas: 773
+   CIFRA veces que el parrafo ancla aparece: 1 (se exige 1)
+   la correccion YA ESTA escrita: NO
+
+F) EL BLOQUE COMPUESTO
+   CIFRA bytes del bloque: 1392
+   CIFRA lineas del bloque: 25
+   CIFRA guiones largos: 0 | guiones medios: 0
+
+   MODO MEDICION: no se escribe nada.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/loop/reportes/REPORTE_V207.md al salir: 50306 bytes en disco y 50306
+   normalizado a LF, sha256 disco e0d67989e21687ce y sha256 LF e0d67989e21687ce
+   CIFRA crecimiento en bytes de disco: 0
+   CIFRA crecimiento en bytes LF: 0
+   CIFRA lineas al salir: 773 (al entrar 773)
+
+LA GUARDA DEL TEXTO VIEJO: NI UNA LINEA BORRADA NI UNA CAMBIADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (si esta cifra no es 0, es ROJO)
+
+LA SEDE QUE SOLO SE LEYO, REMEDIDA AL CIERRE
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+   IDENTICO AL DE LA APERTURA DE ESTA CORRIDA: SI
+
+FIN

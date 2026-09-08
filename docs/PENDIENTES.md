@@ -17037,3 +17037,143 @@ NO son seis caidas del ejecutor:** corre sobre el CUERPO ENTERO y reparte
 por la negrita que atribuye, no por la seccion. **Se publica como contraste
 y no como numeral.**
 
+
+## R.72. Registro de las 8 adjudicaciones numeradas, los 5 hallazgos, las 2 preguntas contestadas, las 4 caidas propias del auditor, la 1 caida del ejecutor del acta de la vuelta 207, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+(Acta del auditor, vuelta 207; escrito en la vuelta 208, TAREA 1.)
+
+Por adicion, como `R.21` a `R.71`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes,
+corrido AL ENTRAR y AL SALIR. Salida:
+`docs/loop/SALIDA_V208_T1_REGISTROS.txt`.
+
+**ESTA ES LA PRIMERA ENTRADA EN NUEVE REGISTROS QUE PUEDE PUBLICAR LOS
+CUATRO NUMERALES COMO CIFRAS EN VEZ DE DECLARARLOS NO COMPUTABLES, Y EL
+MOTIVO NO ES QUE LA VARA CAMBIARA.** `R.63` a `R.71` declararon casi todos
+sus numerales no computables porque las actas modernas dejaron de escribirse
+como la vara del `4.1` del acta 202 espera. **El acta 207 se escribio a
+proposito para que la vara la lea** (su adjudicacion `6.8`), y el lector no
+se toco ni en una linea. **La moratoria de `AUDITOR.md` 6.3 queda intacta.**
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTA ENTRADA Y NINGUNO SE
+CLONO.** El computo vive en `scripts/loop/_v208_t1_registros.py`, con prefijo
+de guion bajo, **fuera del censo y fuera de la nomina**, y IMPORTA
+`scripts/loop/_v203_reparto_de_actas_viejas.py`, `serie_de_registros.py`,
+`vuelta184_tarea1a_registrar_acta184.py`,
+`vuelta192_tarea1a_registrar_acta192.py` y
+`scripts/loop/_v206_t2_registros.py`. **IMPORTAR NO ES CLONAR** (acta 206
+`6.5`).
+
+**EL ACTA ACOTADA EN ESTA VUELTA:** lineas **72641** a **73082**, **442** lineas,
+sobre un fichero de **4820516** bytes en disco y **4820516** normalizado a LF. Su
+cuerpo trae **11** secciones `## N. TITULO`.
+
+### LOS CUATRO NUMERALES, POR LA VARA Y SIN RETOCAR
+
+| numeral | seccion que la VARA elige por su TITULO | numero | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | LAS ADJUDICACIONES | 6 | 72856 | `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8` | **8** |
+| hallazgos | LOS HALLAZGOS | 7 | 72939 | `7.1`, `7.2`, `7.3`, `7.4`, `7.5` | **5** |
+| caidas del auditor | MIS CAIDAS PROPIAS | 9 | 73026 | `9.1`, `9.2`, `9.3`, `9.4` | **4** |
+| caidas del ejecutor | LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA | 4 | 72792 | `4.1` | **1** |
+
+**CIFRA numerales COMPUTABLES de 4 sobre el acta 207: 4.**
+
+### LA MISMA VARA SOBRE EL ACTA 206, CORRIDA POR MI Y NO COPIADA
+
+La `7.1` del acta 207 publica **4 de 4** sobre la 207 contra **1 de 4** sobre
+la 206, y su salida es `docs/loop/SALIDA_V207_VARA_SOBRE_MI_ACTA.txt`. **Esa
+cifra es CONTRASTE y no fuente** (`EJECUTOR.md` 2): aqui se vuelve a correr
+la vara sobre las dos actas, con el mismo lector importado.
+
+| acta | numerales COMPUTABLES de 4, medidos por mi | el acta 207, como contraste | calza |
+|---|---:|---:|---|
+| **206** | **1** | 1 | SI |
+| **207** | **4** | 4 | SI |
+
+### LAS 8 ADJUDICACIONES DEL ACTA 207, UNA POR UNA Y CON SU LINEA
+
+**LAS CINCO QUE CIERRAN PENDIENTES SE DICEN AL REGISTRARLAS**, como el
+encargo pide: la `6.1` cierra la `P.2`, la `6.3` la `P.3`, la `6.4` la
+`PD.1`, la `6.5` el tope de sub-tareas y la `6.8` la `P.1`. **Las tres
+restantes (`6.2`, `6.6` y `6.7`) no cierran ningun pendiente numerado.**
+
+| clave | que pendiente cierra | pregunta que su TITULO nombra | linea | titulo, literal del acta |
+|---|---|---|---:|---|
+| `6.1` | `P.2` del reporte de la 207 | `P.2` | 72858 | `6.1` LA `P.2` SE ADJUDICA, Y NO HACE FALTA DOCTRINA NUEVA: UNA EVIDENCIA QUE |
+| `6.2` | (ninguno) | (ninguna) | 72879 | `6.2` `OP-L-01` NO SE CIERRA, Y ESO NO ES UNA PARADA.** Por la `6.1`, su |
+| `6.3` | `P.3` del reporte de la 207 | `P.3` | 72886 | `6.3` LA `P.3` SE CONTESTA: LAS DOS FILAS LAS ESCRIBE LA VUELTA 208, Y CON EL |
+| `6.4` | `PD.1` del reporte de la 207 | `PD.1` | 72894 | `6.4` LA `PD.1` SE ADJUDICA: UN PUNTO DE UNA VARA SELLADA QUE APARECE DEL OTRO |
+| `6.5` | el TOPE de sub-tareas, que vuelve a cinco | (ninguna) | 72906 | `6.5` EL TOPE DE SUB-TAREAS VUELVE A CINCO. EL DISPARADOR SE CUMPLIO. |
+| `6.6` | (ninguno) | (ninguna) | 72916 | `6.6` LA MORATORIA SE RESPETO Y LO MIDO YO:** **11** ficheros anadidos a |
+| `6.7` | (ninguno) | (ninguna) | 72921 | `6.7` LA BATERIA NO CORRE EN LA 208.** Cadencia de cinco (`AUDITOR.md` 6.1): |
+| `6.8` | `P.1` del reporte de la 207 | (ninguna) | 72925 | `6.8` EL `3.0.a` NO ROMPE LA MORATORIA Y TIENE REMEDIO GRATIS, Y LO APLICO EN |
+
+### LOS 5 HALLAZGOS, LAS 4 CAIDAS PROPIAS DEL AUDITOR Y LA 1 DEL EJECUTOR
+
+| clave | numeral | linea | titulo, literal del acta |
+|---|---|---:|---|
+| `7.1` | hallazgos | 72941 | `7.1` EL ACTA SE PUEDE HACER LEGIBLE PARA LA VARA SIN TOCAR LA VARA, Y AQUI |
+| `7.2` | hallazgos | 72963 | `7.2` LA SELECCION DE CANAL TIENE DOS DENOMINADORES PUBLICADOS Y NADIE LO |
+| `7.3` | hallazgos | 72970 | `7.3` LA CUARTA PUERTA MORDIO DE VERDAD, Y ES LA PRIMERA VEZ QUE SE PUEDE |
+| `7.4` | hallazgos | 72990 | `7.4` LA FAMILIA DE LAS TECNICAS DE CIERRE SIGUE FUERA DE |
+| `7.5` | hallazgos | 72976 | `7.5` LA GUARDA DEL MARCADOR SE ATA AL PRIMER `filas` EN NEGRITA DEL ACTA, |
+| `9.1` | caidas del auditor | 73028 | `9.1` (`C.1`). MEDI `docs/loop/` EN MI PRIMER COMANDO, Y ES LA SEPTIMA DE |
+| `9.2` | caidas del auditor | 73038 | `9.2` (`C.2`). CASI PUBLICO QUE LA `4.4` DEL REPORTE ERA FALSA, Y LA FALSA |
+| `9.3` | caidas del auditor | 73048 | `9.3` (`C.3`). MI COTEJO DE CITAS MARCO `NO CALZA` SOBRE UNA CITA BUENA. |
+| `9.4` | caidas del auditor | 73057 | `9.4` (`C.4`). MI PRIMERA BUSQUEDA DE `RACIMOS_MIEMBROS.jsonl` DIJO QUE NO |
+| `4.1` | caidas del ejecutor | 72794 | `4.1` (`E.1`). EL REPORTE DICE `6` ELEMENTOS DE `verificacion` Y SON `7`, |
+
+**LOS HALLAZGOS VAN EN EL ORDEN EN QUE EL ACTA LOS ESCRIBE, QUE NO ES EL
+ORDEN DE SUS NUMEROS**, y eso se dice en vez de reordenarlos en silencio.
+
+### EL CERO FALSO QUE ESTE TITULO NO PUBLICA, DECLARADO Y MEDIDO
+
+`REG206.titulo_de()` cuenta las caidas con `numeral(dato, 'viejas')`, o sea
+**por la forma antigua `CAIDA n`**. **El acta 207 no usa esa forma**: escribe
+sus caidas como `9.1` a `9.4` y `4.1`, que es la forma `N.M` de la vara.
+Corrido tal cual, el titulo diria **las 0 caidas propias del auditor** sobre
+un acta que trae **cuatro**, y eso es publicar el cero de un instrumento como
+un hecho del mundo (`EJECUTOR.md` 9).
+
+| caida | por `CAIDA n`, la forma antigua | por `N.M`, la forma de esta acta |
+|---|---:|---:|
+| caidas del auditor | **0** | **4** |
+| caidas del ejecutor | **0** | **1** |
+
+**NINGUN LECTOR SE TOCO: SE CAMBIO EL DATO, NO LA MAQUINA.** A la misma
+`titulo_de()` importada se le pasan las caidas contadas por la forma que esta
+acta usa. **Y EL TITULO CRUDO QUEDA ESCRITO AQUI, ENTERO Y SIN TACHAR**, que
+es la regla de la correccion declarada de la casa:
+
+> Registro de las 8 adjudicaciones numeradas, los 5 hallazgos, las 2 preguntas contestadas, las 0 caidas propias del auditor, las 0 caidas del ejecutor del acta de la vuelta 207, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+### LAS PREGUNTAS CONTESTADAS
+
+**LA VIA DEL NUMERAL, DICHA Y NO SUPUESTA:** NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201).
+`docs/loop/reportes/REPORTE_V207.md` **existe**, y mide **50306** bytes con `os.path.getsize`. La seccion que el
+lector heredado ve: `la seccion de PREGUNTAS aparece 0 veces`.
+
+| lectura | claves | cuantas |
+|---|---|---:|
+| **nombradas en los TITULOS de las adjudicaciones**, que es la via del `4.7` del acta 201 | `P.2`, `P.3` | **2** |
+| **las que el reporte archivado llama pregunta**, por el lector heredado | (ninguna) | **0** |
+| **el numeral publicado**, por la via de arriba | `P.2`, `P.3` | **2** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md` 2).
+**NINGUN CERO DE UN INSTRUMENTO SE PUBLICA COMO UN HECHO DEL MUNDO**
+(`EJECUTOR.md` 9).
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `None` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (ninguna fila de metrica con esos prefijos en este cuerpo)
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **10** del ejecutor, **0** del auditor
+y **1** huerfanas sobre este mismo cuerpo. **Corre sobre el CUERPO ENTERO y
+reparte por la negrita que atribuye, no por la seccion: se publica como
+contraste y no como numeral.**
+
