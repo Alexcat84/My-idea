@@ -26,8 +26,9 @@
 | lineas del fichero | 73081 | 73081 | SI |
 | linea donde empieza la seccion del auditor | 72641 | 72641 | SI |
 
-**Y LOS DOS `sha256` TAMBIEN**, leidos de mi sello de apertura: **`0ca61c2ee053dd0d`**
-por disco y **`0ca61c2ee053dd0d`** por LF, los mismos dos que el encargo publica.
+**Y LOS DOS `sha256` TAMBIEN**, leidos de mi sello de apertura:
+sha256 disco **`0ca61c2ee053dd0d`** y sha256 LF **`0ca61c2ee053dd0d`**, los mismos
+dos que el encargo publica.
 
 **EL AVISO MEDIDO DEL ENCARGO LO COMPROBE ANTES DE RESTAR, NO DESPUES.** El
 encargo avisa que el acento circunflejo se lo come el shell. Lo mire: en el mio
@@ -67,8 +68,9 @@ que NO estan, en orden, en el de SALIDA son **0**.
 
 **LA SEGUNDA CORRIDA CRECE 0 BYTES, COMO EL ENCARGO PIDE.**
 `SALIDA_V208_T1_REGISTROS_IDEM.txt` publica `NO SE ESCRIBE: la entrada ya estaba.
-IDEMPOTENTE.` y `CIFRA crecimiento en bytes de disco: 0` y `CIFRA crecimiento en
-bytes LF: 0`. El `numstat` sigue en **140 / 0** despues de la segunda corrida.
+IDEMPOTENTE.` y la sede crece **0** bytes en disco y **0** bytes normalizado a LF,
+leido de sus dos lineas `CIFRA crecimiento`. El `numstat` sigue en **140 / 0**
+despues de la segunda corrida.
 
 #### 1.c. LAS OCHO ADJUDICACIONES, POR SU NUMERO Y CON SU LINEA
 

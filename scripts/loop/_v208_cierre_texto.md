@@ -84,7 +84,7 @@ dos fuentes usan. Salida: `docs/loop/SALIDA_V208_T2A_DENOMINADOR.txt`.
 
 **EL ESTADO DEL ARBOL AL ENTRAR, LEIDO DE MI APERTURA SELLADA Y NO TECLEADO.**
 `docs/loop/SALIDA_V208_APERTURA.txt`, escrito **antes de la primera operacion**,
-publica `CIFRA lineas de status: 1` medidas con `git status --porcelain`, y esa
+publica que las lineas medidas con `git status --porcelain` son **1**, y esa
 unica linea era mi propio computo sin seguimiento. Y publica
 `CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0`.
 
@@ -206,10 +206,11 @@ PISADO EN DISCO.** Es exactamente la especie del aviso que el encargo me dio sob
 `cerrar_reporte.py`, cometida por mi en mi propio computo. La primera corrida de
 `_v208_esqueleto.py` salio en rojo **despues** de haber escrito
 `docs/loop/REPORTE.md`, asi que me dejo en disco un texto que su propia guarda
-declaraba malo. Lo cace, lo restaure con `git checkout HEAD --`, comprobe que el
-sha256 LF volvia a `e0d67989e21687ce`, y **reordene mi computo**: compone en
-memoria, juzga entero, y solo escribe si el juicio da cero fallos, con relectura
-del disco al final.
+declaraba malo. Lo cace, lo restaure con `git checkout HEAD --`, y comprobe que
+volvia al mismo sha256 por las dos convenciones: sha256 disco
+`e0d67989e21687ce` y sha256 LF `e0d67989e21687ce`. Y **reordene mi computo**:
+compone en memoria, juzga entero, y solo escribe si el juicio da cero fallos,
+con relectura del disco al final.
 
 **`C.2`. MI PROSA CITABA LAS CUATRO MARCAS DEL ANEXO Y LA GUARDA LAS CONTABA DOS
 VECES.** El texto del esqueleto explicaba la `C.1` de la 207 copiando los cuatro
