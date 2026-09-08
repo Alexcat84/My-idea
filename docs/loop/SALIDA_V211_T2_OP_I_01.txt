@@ -1,0 +1,145 @@
+==============================================================================
+VUELTA 211, TAREA 2: OP-I-01, MEDIDA Y NO CERRADA. NO SE TOCA SU CAMPO estado.
+==============================================================================
+
+PASO 4, PRIMERA MITAD: LAS TRES SEDES AL ENTRAR
+   AL ENTRAR, por las dos convenciones:
+      docs/plan/INVENTARIO.jsonl   584554 bytes en disco y 584554 normalizado a LF (COINCIDEN), sha256 disco 69666b73339f2afe y LF 69666b73339f2afe
+         contraste del encargo: 584554 y 584554  ->  CALZA: SI
+      docs/plan/10_INVENTARIO.md   34258 bytes en disco y 33845 normalizado a LF (NO COINCIDEN), sha256 disco cd3c823e3699879f y LF 67f464d3d0b9e067
+         contraste del encargo: 34258 y 33845  ->  CALZA: SI
+      docs/loop/AUDITOR.md         30581 bytes en disco y 30581 normalizado a LF (COINCIDEN), sha256 disco 0527e091eb020829 y LF 0527e091eb020829
+         contraste del encargo: 30581 y 30581  ->  CALZA: SI
+
+==============================================================================
+PASO 1. LA FORMA DE LA FICHA, LEIDA ENTERA DEL jsonl
+==============================================================================
+   linea del fichero: 44
+   CIFRA campos: 18
+   claves: adjudicacion, aristas_nuevas, bloquea_a, depende_de, eliminar, estado, evidencia, fase, fecha_corte, id_op, nodos, nota, orden, pregunta_pendiente, preservar, superviviente, tipo, verificacion
+   tipo           'MESA'
+   orden          1
+   fase           '10_INVENTARIO'
+   fecha_corte    '2026-08-11'
+   estado         'LISTA'
+   depende_de     [] (CIFRA elementos: 0)
+   bloquea_a      [] (CIFRA elementos: 0)
+
+   EL TAMANO EN CARACTERES DE LOS CUATRO CAMPOS QUE EL ENCARGO PIDE:
+      evidencia      LISTA de 4 elementos, 1522 caracteres sumados
+      verificacion   LISTA de 4 elementos, 200 caracteres sumados
+      adjudicacion   cadena de 186 caracteres
+      nota           cadena de 12772 caracteres
+
+==============================================================================
+PASO 2. SU CRITERIO DE HECHO CONTRA LA FILA `10 INVENTARIO`
+==============================================================================
+   LA TABLA `POR FASE` DE docs/plan/08_VERIFICACION.md, BARRIDA Y NO RECORDADA:
+      linea 23 | fila `0 CODIGO`
+      linea 24 | fila `01 FUENTES`
+      linea 25 | fila `02 DESTEJIDOS`
+      linea 26 | fila `03 FUSIONES`
+      linea 27 | fila `04 ENLACES`
+      linea 28 | fila `05 SANEO`
+      linea 29 | fila `06 MESAS`
+      linea 30 | fila `07 ADUANA`
+      linea 199 | fila `LA VARA OPERATIVA`
+      linea 200 | fila `LA CIFRA QUE SE VIGILA`
+   CIFRA filas de la tabla: 10
+   CIFRA filas cuyo numero de fase es 10: 0
+   CIFRA menciones del literal '10 INVENTARIO' en el fichero entero: 0
+
+   *** PARADA, Y NO IMPROVISACION (encargo, punto 6; `AUDITOR.md` 3) ***
+   LA FILA `10 INVENTARIO` QUE EL ENCARGO MANDA CITAR **NO EXISTE**.
+   La tabla llega hasta `07 ADUANA` y no tiene fila 08, 09 ni 10.
+   El encargo dice: medir 'contra ella y no contra tu idea de lo que la
+   ficha deberia ser'. Una fila que no esta NO SE SUSTITUYE por la que a
+   uno le parezca, y por eso este paso queda SIN VEREDICTO y se trae.
+
+   LO QUE SI EXISTE, Y SE PUBLICA SIN ADJUDICARLO A ESTA FICHA:
+      linea 9: **UNA FASE ESTA HECHA CUANDO SU VERIFICACION SE CAERIA SI EL FALLO VOLVIERA.**
+      Es el criterio general, que el propio fichero titula
+      'EL CRITERIO DE HECHO, y es uno solo'. **Que ese criterio general
+      valga para una ficha de fase 10 sin fila propia es precisamente
+      LA DECISION QUE NO ME TOCA**, y por eso se trae en vez de usarse.
+
+==============================================================================
+PASO 3. PUNTO POR PUNTO DE SU `verificacion`, CADA UNO CON SU CITA
+==============================================================================
+
+   PUNTO 1. 'toda entrada lleva su fecha_corte'
+      VEREDICTO: **CUBRE**
+      LO MEDIDO: CIFRA entradas: 672. CIFRA con `fecha_corte`: 672. CIFRA sin `fecha_corte`: 0.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/INVENTARIO.jsonl (contado hoy, entrada a entrada) y la regla en docs/plan/10_INVENTARIO.md linea 7: "todo lo que se copia lleva su fecha de corte"
+
+   PUNTO 2. 'toda forma con cobertura incompleta va marcada PROVISIONAL'
+      VEREDICTO: **NO CUBRE**
+      LO MEDIDO: CIFRA entradas con cobertura de la forma 'N de M pares leidos': 555. De esas, INCOMPLETAS (N menor que M): 95. De esas incompletas, con la palabra PROVISIONAL en algun campo: 0. CIFRA entradas del inventario entero que llevan PROVISIONAL: 3, y las tres son de tipo `racimo`, ninguna de ellas incompleta por esta cuenta.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/INVENTARIO.jsonl, contado hoy campo a campo
+
+   PUNTO 3. 'todo hueco va NOMBRADO, nunca rellenado'
+      VEREDICTO: **A MEDIAS**
+      LO MEDIDO: LA MITAD QUE SE PUEDE MEDIR: CIFRA entradas que nombran HUECO en algun campo: 119, o sea que el hueco SI se nombra. LA MITAD QUE NO SE PUEDE MEDIR: 'nunca rellenado' es una NEGATIVA, y una busqueda negativa no se puede citar (`EJECUTOR.md` 9). Por eso no escribo CUBRE.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/INVENTARIO.jsonl (contado hoy) y la regla en docs/plan/10_INVENTARIO.md linea 8: "Lo que no existe todavia se escribe como HUECO NOMBRADO, no se rellena"
+
+   PUNTO 4. 'el inventario se recomputa entero con el disparador de 08_VERIFICACION'
+      VEREDICTO: **A MEDIAS**
+      LO MEDIDO: EL DISPARADOR YA DISPARO Y LAS DOS MITADES NO FUERON A LA VEZ. El archivo fuente SI se recomputo: la propia vista humana publica que esta al corte 2.117 y que 'el archivo fuente tiene hoy (corte 3.388)'. La vista humana NO se recomputo, y lo dice ella misma con todas las letras. 'El inventario' son las dos formas que la adjudicacion de la ficha nombra, y solo una esta al dia.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/08_VERIFICACION.md linea 381 ("Se dispara EL DIA QUE EL CRIBADO LLEGUE AL PUESTO 3.388"), docs/plan/10_INVENTARIO.md linea 19 ("LA TABLA NO SE REGENERA AQUI, A PROPOSITO") y docs/plan/10_INVENTARIO.md linea 32 (la fila `filas totales` de su propia tabla de aviso)
+
+   CIFRA puntos de la `verificacion`: 4
+   CIFRA puntos que quedan SIN CITA: 0 (se exige 0)
+   EL REPARTO: A MEDIAS 2, CUBRE 1, NO CUBRE 1
+
+==============================================================================
+PASO 5. LAS 336 ENTRADAS DE `AUDITOR.md` 5, RECOMPUTADAS DEL FICHERO
+==============================================================================
+   LA CIFRA PUBLICADA, LEIDA DE SU SEDE Y NO RECORDADA:
+      docs/loop/AUDITOR.md linea 335: cinco fronteras, **inventario de 336 entradas** (dominio 10, acto 221, racimo
+      docs/loop/AUDITOR.md linea 336: 13, familia_de_ids 53, figura 20, defecto 19).
+   SUMA de la cifra publicada, recontada de sus propios sumandos: 336
+
+   MI RECOMPUTO DE HOY, CONTANDO docs/plan/INVENTARIO.jsonl LINEA A LINEA:
+
+   | tipo | `AUDITOR.md` 5 (corte 12 ago 2026) | mi conteo de hoy | calza |
+   |---|---:|---:|---|
+   | `acto` | 221 | 556 | **NO** |
+   | `defecto` | 19 | 19 | SI |
+   | `dominio` | 10 | 10 | SI |
+   | `familia_de_ids` | 53 | 54 | **NO** |
+   | `figura` | 20 | 20 | SI |
+   | `racimo` | 13 | 13 | SI |
+   | **TOTAL** | **336** | **672** | **NO** |
+
+   CIFRA lineas del fichero que no son JSON valido: 0 (contadas al leer)
+   LAS DOS CIFRAS SE PUBLICAN AL LADO Y **NO SE RESUELVE COPIANDO NINGUNA**
+   (`AUDITOR.md` 1.1). La de 336 lleva su corte y el archivo pudo envejecer
+   honestamente (banco `9.21`).
+
+   Y LA DISCREPANCIA TIENE CAUSA MEDIDA, QUE NO ES LA MISMA PARA LOS DOS TIPOS:
+      docs/plan/10_INVENTARIO.md linea 32 publica `filas totales` **671** para el archivo fuente al
+      corte 3.388, y mi conteo de hoy da **672**.
+      docs/plan/10_INVENTARIO.md linea 33 dice de los otros cinco tipos: "identicos, no se movieron",
+      y `familia_de_ids` **SI se movio**: 54 hoy contra las 53 de esa fila.
+      CIFRA `familia_de_ids` con `fecha_corte` posterior al 2026-08-11: 1
+         'HUGOS-SISTEMAS', fecha_corte 2026-08-14
+      ESA ES LA UNIDAD QUE SEPARA 671 DE 672, y queda declarada.
+
+==============================================================================
+PASO 4, SEGUNDA MITAD: LAS TRES SEDES AL SALIR, REMEDIDAS Y NO HEREDADAS
+==============================================================================
+   AL SALIR, por las dos convenciones:
+      docs/plan/INVENTARIO.jsonl   584554 bytes en disco y 584554 normalizado a LF (COINCIDEN), sha256 disco 69666b73339f2afe y LF 69666b73339f2afe
+         contraste del encargo: 584554 y 584554  ->  CALZA: SI
+      docs/plan/10_INVENTARIO.md   34258 bytes en disco y 33845 normalizado a LF (NO COINCIDEN), sha256 disco cd3c823e3699879f y LF 67f464d3d0b9e067
+         contraste del encargo: 34258 y 33845  ->  CALZA: SI
+      docs/loop/AUDITOR.md         30581 bytes en disco y 30581 normalizado a LF (COINCIDEN), sha256 disco 0527e091eb020829 y LF 0527e091eb020829
+         contraste del encargo: 30581 y 30581  ->  CALZA: SI
+
+   CIFRA sedes que salen identicas a como entraron: 3 de 3
+   ESTA TAREA NO ESCRIBE EN NINGUNA DE LAS TRES, asi que se exigen las tres.
+
+EL CAMPO estado DE OP-I-01, RELEIDO AL SALIR: 'LISTA'
+   NO SE TOCO, Y ESE ES EL PUNTO 7 DEL ENCARGO.
+
+FIN
