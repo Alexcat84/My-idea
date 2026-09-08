@@ -1,0 +1,190 @@
+MIS CLASES DE LA CIEGA, VUELTA 212. ESCRITAS ANTES DEL DESTAPE Y ANTES DE ABRIR
+docs/loop/REPORTE.md.
+
+FICHERO ESCRITO CON LA HERRAMIENTA DE FICHERO (no con heredoc), y lo digo porque
+el acta 210 dejo escrito que se usa `python - <<PYEOF` o la herramienta de
+fichero, y se dice cual.
+
+SUJETO: docs/loop/_auditor_v212_ciega_blind.txt (55176 bytes), aislado con
+`scripts/loop/aislador_de_ciega.py` corrido A MANO, criterio "muestra aleatoria
+del archivo entero, semilla 212, muestra 40, excluidos los cuatro puestos que el
+prompt del sistema me quemo (474, 568, 586, 730)".
+
+SIN SELLO. `sellar()` cayo en ROJO por mi propia mano y lo dejo medido en
+docs/loop/_auditor_v212_apertura_ROJA.txt. Esta ciega NO SE PUEDE CITAR COMO
+SELLADA.
+
+LA CONTAMINACION QUE DECLARO ANTES DE CONTAR NADA, y es de una sola especie:
+el prompt con el que arranco este turno trae los asuntos de los CINCO ultimos
+commits de la rama, y esos asuntos nombran CLASES de puestos concretos: el 730
+(*"SE CONFIRMA Y PASA DE A A D"*), y el 474, el 568 y el 586 (*"cierran su clase
+POR CONTENIDO"*, con el 474 marcado discutible). LOS CUATRO VAN EXCLUIDOS DEL
+SUJETO por `--excluir`, y por eso el criterio lo dice literal. No los clasifico
+ni cuentan para mi cifra.
+
+LA VARA QUE APLICO, y la escribo antes de la tabla para que se pueda juzgar:
+  . banco 9.6.1 (la mayoria manda; el cero es el caso extremo del mitad-o-menos)
+  . banco 9.6.2 (la vara pregunta QUE ANADE EL HIJO A LA MADRE, nunca al reves)
+  . banco 9.6.3 (el tamano del solape no decide: lo que se pesa es el RESTO, y
+    procedimiento en LOS DOS LADOS es par SANO)
+  . informe 67.6 (es LINEA un puntero, una advertencia, un criterio suelto o una
+    accion unica; es PROCEDIMIENTO un paso con varias decisiones dentro o que se
+    repite en el tiempo)
+
+Y EL REMEDIO QUE MI ANTECESOR ME DEJO ESCRITO EN LA `9.3` DEL ACTA 211, aplicado
+par por par ANTES de poner cada `A`: *"antes de poner A, pregunta DONDE ACABA
+cada nodo, no cuanto le sobra"*. Las cuatro veces que me cambio la clase van
+declaradas en la ultima seccion de este fichero, con el par y el motivo.
+
+------------------------------------------------------------------------------
+MIS CLASES, LOS 40
+------------------------------------------------------------------------------
+140  D   criterios de eleccion de proveedor contra preparar la negociacion: dos
+         momentos distintos de la compra, procedimiento en los dos lados
+169  A   gemelos ES/EN. Los 5 pasos de B calzan uno a uno en A y uno es
+         literal ("lanzar la integracion y medir el trafico/referidos"). Lo
+         unico que A tiene fuera es una LINEA (entrar primero cuando lanza una
+         plataforma nueva). Acaban los dos en el mismo sitio
+184  A   el mismo instrumento con dos nombres: 6 a 10 preguntas sobre los mismos
+         seis criterios, misma escala, y el ultimo paso de B es LITERALMENTE el
+         sexto de A ("usa un scorecard distinto segun el tipo de proyecto")
+188  A   los 4 pasos del pequeno estan dentro del grande, y el tercero es
+         literal ("no cierres el acuerdo con un simple apreton de manos"). El
+         hijo no despliega ninguna linea de la madre: la repite mas corta
+220  A   la misma doctrina del avance contra la continuacion, 3 de 4 pasos casi
+         literales. Lo que queda fuera es una LINEA por lado (diagnosticar que
+         falto / buscar alternativa en la llamada) y los dos acaban en lo mismo
+244  A   los 6 pasos de B estan enteros dentro de los 8 de A (scouting, web de
+         ideas, transferencia universitaria, sesiones con proveedores, LEGO,
+         Stage-Gate). A solo anade el NIH y el filtro B2C/B2B
+287  D   NPV contra IRR: dos instrumentos financieros distintos que comparten la
+         proyeccion de flujos. Uno acaba en el VAN y el analisis de sensibilidad,
+         el otro en la tasa que iguala a cero contra el hurdle rate
+370  D   el contrato de servicio (precio, duracion, alcance, ingreso recurrente)
+         contra no prometer en la garantia lo que no puedes cumplir: objetos
+         distintos
+536  A   gemelos ES/EN del mismo hito. Los dos hacen las mismas tres
+         comprobaciones (que el problema importe, que la solucion convenza, que
+         el modelo cuadre) y lo que B tiene fuera es una LINEA (multi-sided)
+557  D   el papel del fundador en la busqueda del CEO contra el fundador que
+         inicia su propia sucesion: uno acaba en el control del consejo sobre la
+         decision, el otro en negociar su rol post-transicion
+642  D   informe de desempeno del proyecto contra reporte de estado de un
+         miembro. El solape es grande, pero queda PROCEDIMIENTO en los dos
+         lados: el impacto en hitos y presupuesto general de un lado, y los
+         fondos gastados y la planificacion del periodo siguiente del otro
+660  A   gemelos ES/EN. Los dos acaban en el mismo sitio, iterar sobre la
+         retroalimentacion, y lo que A tiene fuera son tres LINEAS (materiales
+         baratos, usarlo para discutir, no invertir en acabados)
+761  D   el term sheet visto desde el fundador que se financia (aprobacion del
+         fondo, su propio contrato, no pagar honorarios si no cierra) contra las
+         disposiciones vinculantes de una transaccion (confidencialidad, reparto
+         de costos, fecha de terminacion). Procedimiento en los dos lados
+804  A   los 5 pasos de B estan dentro de los 10 de A y TRES son literales
+         (validar la demanda, transmision en vivo o meetups satelite, repetir
+         anualmente)
+1146 D   la ecuacion de valor antes de dar el precio contra la prevencion de
+         objeciones medida sobre tus propias llamadas: la segunda diagnostica tu
+         practica, la primera conduce una conversacion
+1186 D   elegir el TIPO de inversor segun lo que te falta contra el proceso
+         concreto del capital de riesgo (pitch deck, due diligence, junta).
+         Procedimiento en los dos lados
+1209 D   el hijo despliega y no repite: el pivote post-ventas anade el analisis
+         de por que no llegaron las ordenes y ENUMERA las tres causas candidatas
+         (segmento, propuesta de valor, modelo de ingresos), que la madre solo
+         enuncia como "identifica que parte necesita cambiar". Vara del 9.6.2
+1212 D   el compromiso con linea de tiempo y fecha limite contra el cierre de
+         una reunion pidiendo el compromiso mas alto realista: dos
+         procedimientos distintos. (Nota: el nodo A repite su propio paso 3 en
+         el 6, costura interna, no es asunto del par)
+1235 D   las motivaciones divergentes ante una venta contra duos y trios de
+         fundadores: temas distintos
+1261 D   customer development contra voz del cliente: dos metodos de fuentes
+         distintas. Uno sale a probar hipotesis, el otro observa al cliente en
+         su entorno y acompana el desarrollo entero
+1324 D   los equipos de visita a cliente contra la voz del cliente. Procedimiento
+         en los dos lados: la guia de entrevista, las hipotesis previas y el
+         taller de consolidacion de un lado; la evaluacion de mercado y el
+         contacto continuo durante el desarrollo del otro
+1344 D   las cuatro etapas del proceso contra la filosofia de la etapa de
+         validacion: un mapa contra unos principios
+1402 A   el mismo instrumento con dos nombres que significan lo mismo (framework
+         y matrix). Los 3 pasos de A estan dentro de los 5 de B y lo unico que A
+         tiene fuera es una LINEA (decidir segun recursos y objetivos)
+1592 D   disenar el test pass/fail contra extraer y priorizar las hipotesis: dos
+         momentos consecutivos del mismo metodo
+1628 D   inspeccionar la rigidez de la caja contra someterla a caidas, sacudidas
+         y fugas: inspeccion estatica contra ensayo
+1733 D   elegir sobre o caja contra poner la etiqueta duplicada dentro: temas
+         distintos
+1890 D   consolidar cargas y backhaul contra el eco-ruteo: dos palancas
+         distintas que se miden con el mismo ahorro de combustible
+1916 D   el formato y el canal de la comunicacion interna contra el reporte de
+         resultados, que ademas acaba en la divulgacion regulatoria
+2093 D   motivar y entrenar al franquiciado como portavoz contra el paso de
+         validacion del candidato, que acaba en preparar al CANDIDATO para
+         interpretar respuestas variadas. Destinos distintos
+2142 D   el embudo con su tasa de conversion por etapa contra la medicion con
+         herramientas, tasa de captura y pruebas A/B. Procedimiento en los dos
+         lados
+2292 A   la misma doctrina de Dekker dicha dos veces: evitar el vocabulario de
+         "fallaron en" y "debieron haber" es casi literal en los dos, y el
+         contexto de restricciones tambien. Lo que A tiene fuera es una LINEA
+         (comunicar honrando la experiencia humana)
+2368 A   el error como punto de partida y no como conclusion, y buscar los
+         factores del sistema, se repiten en los dos nodos con otras palabras.
+         Lo que queda fuera es una LINEA por lado
+2393 D   dejar de usar el LTIF contra dejar de usar el triangulo de Heinrich:
+         dos indicadores distintos criticados, y procedimiento en los dos lados
+         (reporte de precursores e indicadores de proceso de un lado, investigar
+         menores y graves como fenomenos distintos del otro)
+2500 A   gemelos ES/EN. Los 4 pasos de B estan dentro de los 7 de A y TRES son
+         literales (documentar el flujo actual, registrar metricas de tiempo de
+         ciclo y costo, priorizar los problemas como proyectos de mejora)
+2626 D   el costo de calidad dentro de la revision mensual del negocio, con
+         dueno por desviacion, contra el diagnostico exhaustivo y el seguimiento
+         de la tendencia como medida de madurez. Comparten el argumento para
+         invertir en prevencion, pero queda procedimiento en los dos lados
+2894 D   TPM contra RCM: dos metodologias con nombre propio que solo comparten
+         el OEE final
+3124 D   el camino de la certificacion contra el concepto de auditoria (tipo,
+         orientacion, independencia del auditor)
+3175 D   el roadmap de despliegue por fases contra la estructura de roles:
+         procedimiento en los dos lados
+3178 D   lo que HACE el departamento de calidad contra DONDE se sienta en el
+         organigrama: funcion contra estructura
+3383 D   la funcion Protect entera contra la gestion de contrasenas. El hijo
+         despliega la linea de la madre y anade su propia lista de contrasenas
+         comprometidas con su verificacion. Vara del 9.6.2
+
+------------------------------------------------------------------------------
+LAS CUATRO VECES QUE EL REMEDIO DE LA `9.3` DEL ACTA 211 ME CAMBIO LA CLASE
+------------------------------------------------------------------------------
+Las escribo porque el remedio solo sirve si se puede comprobar que se aplico, y
+las cuatro son `A` que NO puse despues de preguntar donde acaba cada nodo:
+
+  642   tenia `A` por solape casi total. Al preguntar donde acaba cada uno, uno
+        acaba en el impacto sobre hitos y presupuesto general y el otro en la
+        planificacion del periodo siguiente, y las dos sobras son PROCEDIMIENTO.
+  1209  tenia `A` porque los dos acaban en volver a probar el modelo. La vara
+        del 9.6.2 lo voltea: el hijo ENUMERA las tres causas que la madre solo
+        enuncia, y eso es desplegar, no repetir.
+  2093  tenia `A` porque los dos entrenan al franquiciado para que hable bien de
+        la marca. Uno acaba en los referidos y el otro en preparar al CANDIDATO.
+  2142  tenia `A` porque los dos miden el costo por canal y mueven el
+        presupuesto. Queda procedimiento en los dos lados: la conversion por
+        etapa del embudo de un lado, las herramientas y las pruebas A/B del
+        otro.
+
+------------------------------------------------------------------------------
+MI REPARTO. NO LO TECLEO: LO CUENTA EL COMANDO DE LA LINEA SIGUIENTE
+------------------------------------------------------------------------------
+  python -c "import io,re;t=io.open(r'docs/loop/_auditor_v212_mis_clases.txt',encoding='utf-8').read();import collections;f=re.findall(r'^ *(\d+) +([ABCD])   ',t,re.M);print(len(f),collections.Counter(c for _,c in f))"
+
+(la cifra se pega debajo cuando el comando corre, y si no calza con la tabla
+manda el comando)
+
+SALIDA DEL COMANDO, PEGADA:
+  pares clasificados: 40
+  reparto: {'D': 28, 'A': 12}
+  puestos A: [169, 184, 188, 220, 244, 536, 660, 804, 1402, 2292, 2368, 2500]
