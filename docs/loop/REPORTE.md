@@ -212,7 +212,8 @@ que pasa de **50306** bytes en disco y **50306** normalizado a LF (sha256
 `e0d67989e21687ce` por las dos) a **51699** y **51699** (sha256 `231b2df5d3414bf1`
 por las dos). `git diff --numstat` da **26** anadidas y **0 BORRADAS**, y las
 lineas del texto de entrada que faltan del de salida son **0**.
-**Segunda corrida IDEMPOTENTE: 0 bytes de crecimiento.**
+**Segunda corrida IDEMPOTENTE: crece 0 bytes en disco y 0 bytes
+normalizado a LF.**
 
 **Y LA FICHA SOLO SE LEYO:** `docs/plan/OPERACIONES.jsonl` entra y sale de esta
 sub-tarea en **513043** bytes por las dos convenciones, con sha256

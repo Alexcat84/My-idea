@@ -4,7 +4,7 @@ SE CIERRA EL REPORTE DE LA VUELTA 208, EN UN SOLO ACTO
 
 A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
    docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 208 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   CIFRA bytes: 35710 | saltos de linea: 584
+   CIFRA bytes: 35749 | saltos de linea: 586
    contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
    contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
    contiene '\n## 3.'                            -> NO (se esperaba NO)
@@ -22,7 +22,7 @@ A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
 
 B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
    docs/loop/SALIDA_V208_TALLADOR_CABECERA.txt             2442 bytes, 11 filas de tabla
-   scripts/loop/_v208_cierre_texto.md                     15653 bytes, sha256 a7ddd357f0d56a94
+   scripts/loop/_v208_cierre_texto.md                     15723 bytes, sha256 273cc74fee77c918
       ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
       ## 4. LO QUE SE TOCO, Y LO QUE NO
       ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
@@ -64,7 +64,7 @@ B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
 C) SE ESCRIBE
    cabecera: 268 bytes de hueco -> 2534 bytes de tabla pegada
    veredicto escrito: 346 bytes
-   ESCRITO: docs/loop/REPORTE.md (55662 bytes, 871 saltos de linea)
+   ESCRITO: docs/loop/REPORTE.md (55771 bytes, 874 saltos de linea)
 
 D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    (1) veredicto escrito              SI
@@ -78,10 +78,8 @@ D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    toda cita de arnes calza con su fichero SI
    toda pareja de convenciones es CIERTA, no solo completa SI
    LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):
-      linea 111   sha   0ca61c2ee053dd0d     | **Y LOS DOS `sha256` TAMBIEN**, leidos de mi sello de apertura: **`0ca61c2ee053dd0d`**
-      linea 228   bytes 0                    | **Segunda corrida IDEMPOTENTE: 0 bytes de crecimiento.**
-      linea 809   sha   e0d67989e21687ce     | sha256 LF volvia a `e0d67989e21687ce`, y **reordene mi computo**: compone en
-   CIFRA cifras publicadas sin su pareja: 3
+      linea 230   bytes 0                    | **Segunda corrida IDEMPOTENTE: 0 bytes de crecimiento.**
+   CIFRA cifras publicadas sin su pareja: 1
    CIFRA citas de arnes cotejadas que NO calzan: 0
    LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
       CIFRA parejas de convenciones publicadas: 38
@@ -102,9 +100,8 @@ D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
       CIFRA lineas de status: 1
       CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
    LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
-      status   -> (no afirma nada)
-      numstat  -> 0, en la linea 688: `CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0`.
-   CIFRA motivos por los que la seccion 4 NO calza: 1
-      LA SECCION 4 DEL REPORTE NO AFIRMA NADA sobre 'CIFRA lineas de status'. La apertura sellada docs/loop/SALIDA_V208_APERTURA.txt dice 1, y una cifra ausente y una cifra que calza NO son lo mismo
+      status   -> 1, en la linea 688: publica que las lineas medidas con `git status --porcelain` son **1**, y esa
+      numstat  -> 0, en la linea 690: `CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0`.
+   CIFRA motivos por los que la seccion 4 NO calza: 0
 
 ROJO: al reporte de la vuelta 208 le faltan 0 de sus cuatro piezas.
