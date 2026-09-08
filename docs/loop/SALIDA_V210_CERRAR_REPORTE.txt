@@ -4,7 +4,7 @@ SE CIERRA EL REPORTE DE LA VUELTA 210, EN UN SOLO ACTO
 
 A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
    docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   CIFRA bytes: 26139 | saltos de linea: 462
+   CIFRA bytes: 14980 | saltos de linea: 261
    contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
    contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
    contiene '\n## 3.'                            -> NO (se esperaba NO)
@@ -73,7 +73,7 @@ B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
 C) SE ESCRIBE
    cabecera: 268 bytes de hueco -> 2548 bytes de tabla pegada
    veredicto escrito: 497 bytes
-   ESCRITO: docs/loop/REPORTE.md (135513 bytes, 2131 saltos de linea)
+   ESCRITO: docs/loop/REPORTE.md (124354 bytes, 1930 saltos de linea)
 
 D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    (1) veredicto escrito              SI
@@ -83,12 +83,10 @@ D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    CIFRA piezas que faltan: 0
    el cuerpo del cierre esta byte a byte SI
    cero guiones largos y cero guiones medios SI
-   toda cifra de bytes y todo sha con su pareja NO
+   toda cifra de bytes y todo sha con su pareja SI
    toda cita de arnes calza con su fichero SI
    toda pareja de convenciones es CIERTA, no solo completa SI
-   LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):
-      linea 218   bytes 93499                | - **La salida unica: `docs/loop/SALIDA_V183_BATERIA.txt`, 93499 bytes en
-   CIFRA cifras publicadas sin su pareja: 1
+   CIFRA cifras publicadas sin su pareja: 0
    CIFRA citas de arnes cotejadas que NO calzan: 0
    LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
       CIFRA parejas de convenciones publicadas: 4
@@ -96,8 +94,8 @@ D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
       CIFRA parejas que la guarda VE y atribuye: 4
       CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
-      universo donde una pareja podria estar: 5
-      CIFRA de esas que ademas nombran una ruta en su misma linea: 5
+      universo donde una pareja podria estar: 4
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 4
       CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 0
          (ninguna, y el cero va escrito)
    CIFRA citas de arnes SIN COTEJO posible: 0
@@ -109,8 +107,10 @@ D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
       CIFRA lineas de status: 1
       CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
    LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
-      status   -> 1, en la linea 544: `git status --porcelain` 1 lineas al entrar, y con
-      numstat  -> 0, en la linea 545: `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
+      status   -> 1, en la linea 343: `git status --porcelain` 1 lineas al entrar, y con
+      numstat  -> 0, en la linea 344: `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
    CIFRA motivos por los que la seccion 4 NO calza: 0
 
-ROJO: al reporte de la vuelta 210 le faltan 0 de sus cuatro piezas.
+VERDE: el reporte de la vuelta 210 queda cerrado, con sus cuatro piezas.
+   LA SEGUNDA COMPROBACION (leer de git lo que se acaba de commitear)
+   NO la hace este fichero: va DESPUES del commit, con git show.

@@ -68,7 +68,7 @@ propia salida, **remedidas hoy en el lado CIERRE de esta vuelta** y no heredadas
 `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
 LEEN de la apertura sellada y no se teclean.
 
-**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 8
+**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 3
 y 0.**
 
 | sede | filas de `numstat` al cierre | por que |
@@ -94,14 +94,14 @@ contra el `HEAD` vivo y la frase que lo nombraba estaba TECLEADA. En
 el `HEAD` contra el que la midio en la misma tupla**, y la frase de abajo se
 compone con ese `HEAD`: **no hay forma de nombrar un corte distinto del medido.**
 
-**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `2cc9eb38`,
+**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `cb5a201a`,
 que es el `HEAD` que este mismo computo leyo y no uno tecleado: 10, de
 los que 10 llevan el prefijo `_v210_` y 0 no lo llevan.**
 
 **ESTA CIFRA NACE CORTA POR CONSTRUCCION Y LO DIGO DENTRO DE LA MISMA FRASE:**
 `scripts/loop/_v210_cierre.py` es el fichero que cuenta, va en el commit del
 cierre, y **ese commit todavia no existe cuando el conteo corre**. Falta por
-tanto **este mismo fichero** y cualquiera que nazca despues de `2cc9eb38`.
+tanto **este mismo fichero** y cualquiera que nazca despues de `cb5a201a`.
 **No se arregla el instrumento, que es moratoria**: se escribe la glosa con su
 corte, y el corte es el que la frase nombra.
 
@@ -198,6 +198,28 @@ JUICIO.** El fichero `_v210_esqueleto.py` se escribio a la segunda porque el
 primer intento se fue por una comilla del propio `heredoc`, no por nada del
 esqueleto. **No toco ninguna cifra ni ningun fichero del repo** y lo digo porque
 la casa cuenta las caidas, no solo las que dejan rastro.
+
+**`C.3`. RE CORRI EL ESQUELETO SOBRE MI PROPIO REPORTE YA ANEXADO, Y SU PASO 0
+ARCHIVO MI PARCIAL COMO SI FUERA EL DE UNA VUELTA CERRADA.** Al remediar el rojo
+de las cifras sin pareja re corri la cadena entera, y `_v210_esqueleto.py`
+empieza por archivar *el reporte que va a pisar*: como el del arbol ya era el de
+la 210 anexado, escribio `docs/loop/reportes/REPORTE_V210.md`. **El archivo de
+una vuelta lo escribe la vuelta SIGUIENTE, nunca ella misma**, asi que ese
+fichero se retiro con `git rm` y queda declarado en el commit que lo retira.
+**Y el esqueleto me cazo:** cayo en ROJO con dos motivos y **no escribio nada**,
+diciendo con sus palabras *"EL TEXTO QUE SE VA A PISAR NO ESTA GUARDADO"* y
+nombrando los dos `sha256`. Su salida esta entera en
+`docs/loop/SALIDA_V210_ESQUELETO.txt`. **La consecuencia si la cause yo:** como
+el esqueleto no escribio, el anexado siguiente metio un SEGUNDO cuerpo de la
+TAREA 1 en el mismo reporte. **El remedio no fue re correr el esqueleto sino
+recuperar el original** del commit `e411137f`, que es el que se tallo antes de la
+primera tarea, y anexar UNA sola vez encima, contando con `grep` que la cabecera
+de la TAREA 1 aparece exactamente una vez. Cuenta como UNA caida.
+
+**Y LAS TRES SE PARECEN, QUE ES LO QUE ME LLEVO DE LA VUELTA:** en la `C.1` di
+por muerto un proceso vivo y en la `C.3` di por fresco un arbol que ya estaba
+escrito. **Las dos veces supuse el estado en vez de mirarlo, y las dos veces me
+cazo una guarda de la casa y no yo.**
 
 ## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
 

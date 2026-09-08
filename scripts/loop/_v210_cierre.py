@@ -380,6 +380,28 @@ primer intento se fue por una comilla del propio `heredoc`, no por nada del
 esqueleto. **No toco ninguna cifra ni ningun fichero del repo** y lo digo porque
 la casa cuenta las caidas, no solo las que dejan rastro.
 
+**`C.3`. RE CORRI EL ESQUELETO SOBRE MI PROPIO REPORTE YA ANEXADO, Y SU PASO 0
+ARCHIVO MI PARCIAL COMO SI FUERA EL DE UNA VUELTA CERRADA.** Al remediar el rojo
+de las cifras sin pareja re corri la cadena entera, y `_v%(v)d_esqueleto.py`
+empieza por archivar *el reporte que va a pisar*: como el del arbol ya era el de
+la %(v)d anexado, escribio `docs/loop/reportes/REPORTE_V%(v)d.md`. **El archivo de
+una vuelta lo escribe la vuelta SIGUIENTE, nunca ella misma**, asi que ese
+fichero se retiro con `git rm` y queda declarado en el commit que lo retira.
+**Y el esqueleto me cazo:** cayo en ROJO con dos motivos y **no escribio nada**,
+diciendo con sus palabras *"EL TEXTO QUE SE VA A PISAR NO ESTA GUARDADO"* y
+nombrando los dos `sha256`. Su salida esta entera en
+`docs/loop/SALIDA_V%(v)d_ESQUELETO.txt`. **La consecuencia si la cause yo:** como
+el esqueleto no escribio, el anexado siguiente metio un SEGUNDO cuerpo de la
+TAREA 1 en el mismo reporte. **El remedio no fue re correr el esqueleto sino
+recuperar el original** del commit `e411137f`, que es el que se tallo antes de la
+primera tarea, y anexar UNA sola vez encima, contando con `grep` que la cabecera
+de la TAREA 1 aparece exactamente una vez. Cuenta como UNA caida.
+
+**Y LAS TRES SE PARECEN, QUE ES LO QUE ME LLEVO DE LA VUELTA:** en la `C.1` di
+por muerto un proceso vivo y en la `C.3` di por fresco un arbol que ya estaba
+escrito. **Las dos veces supuse el estado en vez de mirarlo, y las dos veces me
+cazo una guarda de la casa y no yo.**
+
 ## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
 
 **La 211 no es de bateria** (la cadencia de cinco pone la siguiente en la 215) y
@@ -400,7 +422,7 @@ adjudicacion**, que es mi `P.1`.
                  "GUARDAS QUE NO MUERDEN. %d DISCUTIBLES MARCADOS, %d PREGUNTAS, "
                  "%d PENDIENTE DE DOCTRINA Y %d CAIDAS PROPIAS."
                  % (v["t_frescos"], VUELTA, v["t_ajenos"], v["t_entradas"],
-                    v["t_nm"], 3, 2, 1, 2))
+                    v["t_nm"], 3, 2, 1, 3))
 
     fallos = 0
     print("EL JUICIO, ANTES DE ESCRIBIR NADA:")
