@@ -1,150 +1,145 @@
-# ENCARGO DE LA VUELTA 211 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+# ENCARGO DE LA VUELTA 212 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
-**Commitea y pushea lo pendiente en la rama activa antes de tocar nada.**
+Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
 
-Corre tu bloque de apertura tal como esta escrito en `EJECUTOR.md` 1, y sella sus
-salidas ANTES de la primera operacion: `SALIDA_V211_APERTURA.txt`,
-`SALIDA_V211_HEAD_APERTURA.txt` y el lado APERTURA del ciclo entero de Gate 0.
-Talla el esqueleto del reporte con su instrumento antes de la primera tarea, y
-anexa cada tarea AL CERRARSE, no al final de la vuelta.
+**RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3): ningun arnes, guarda ni lector
+nuevo. Lo que escribas en `scripts/loop/` lleva prefijo `_v212_`, fuera del censo y
+fuera de la nomina. **La nomina de la bateria sigue CONGELADA EN 135 y no se poda.**
 
-**LA 211 NO ES VUELTA DE BATERIA.** La cadencia de cinco de `AUDITOR.md` 6.1 pone
-la siguiente en la **215**. No la corras.
+**LA 212 NO ES VUELTA DE BATERIA.** La 210 la corrio entera (11 tramos, verificado por
+mi en git) y la cadencia de cinco de `AUDITOR.md` 6.1 pone la siguiente en la **215**.
+La seccion 9 de tu reporte cierra con **HUECO DECLARADO Y MEDIDO**: nombre del fichero,
+bytes medidos y atribucion, **las tres juntas**, por el carril de `rama_de_la_seccion9()`.
 
-**RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3): ningun arnes, guarda ni
-lector nuevo. Lo que escribas esta vuelta lleva prefijo `_v211_`, fuera del censo
-y fuera de la nomina. **La nomina de la bateria sigue CONGELADA EN 135 y no se
-poda.** Las excepciones son las que la propia moratoria nombra: lo que una CAIDA
-DE DATO exija, con su cita.
+**DOS SUB-TAREAS.** El tope de cinco esta disponible (el disparador de `AUDITOR.md` 6.2
+se cumplio: la 209, la 210 y la 211 cerraron su propio reporte con `cerrar_reporte.py`),
+pero el trabajo que queda cabe en dos y una adjudicacion favorable no engorda un encargo.
 
-**DOS TAREAS, NO MAS.** El acta 210 adjudica en su `6.7` que el disparador del
-regimen `6.2` esta cumplido y que el tope podria volver a cinco, y aun asi encarga
-dos: el trabajo que queda cabe en dos.
+**SIGUE RIGIENDO LA OBLIGACION DE DICTADO DEL `6.6` DEL ACTA 210** (linea **74203** de
+`docs/loop/ACTA_AUDITOR.md`): toda cita de un acta anterior lleva **LA LINEA** donde vive
+el texto citado, **y la linea se LEE, no se recuerda**.
 
----
+**Y SE ANADE UNA, QUE SALE DE LA `4.1` Y LA `7.3` DE MI ACTA DE HOY Y NO CUESTA CODIGO:**
 
-## TAREA 1. LOS REGISTROS, Y LOS DOS CAMPOS `estado` QUE EL ACTA 209 DEJO ADJUDICADOS
-
-**1.a. EL ACTA 210 ESTA ESCRITA Y ANEXADA**, y su seccion abre en la linea **73924**
-de `docs/loop/ACTA_AUDITOR.md`, que paso de **4875334** a **4902898** bytes
-(**27564** de crecimiento, `sha256` `7217a5d76c98d65f`). No la reescribas: leela y
-cita de ella por linea.
-
-**1.b. LOS DOS CAMPOS `estado`, CON LAS TRES GUARDAS DEL `2.c` DE LA 209.** Pon
-`OP-L-02` en **`HECHA`** (adjudicacion `6.4` del acta 209) y `OP-L-03` en **`HECHA`**
-(adjudicacion `6.5` del acta 209, que arregla que una ficha cerrada por el acta 208
-siguiera en `LISTA`). Las dos van **en el mismo computo**, con:
-
-- la sede publicada **por las dos convenciones al entrar y al salir**
-  (`docs/plan/OPERACIONES.jsonl`, bytes en disco y bytes normalizados a LF, mas su
-  `sha256` por las dos);
-- la comprobacion de que **solo cambian esos dos campos**: cuenta las fichas antes y
-  despues por `estado` y publica las dos cuentas, y `git diff --numstat` sobre
-  `docs/plan/` con su cifra de filas;
-- el **caso positivo** de que la lectura del fichero sigue siendo valida: recarga el
-  `jsonl` linea a linea y publica la CIFRA de fichas, que tiene que seguir siendo la
-  misma de antes.
-
-**RECUERDA CUAL ES LA VARA Y CUAL NO:** el campo `estado` es **HISTORICO** y no
-decide que queda por ejecutar (recuadro 0 de `AUDITOR.md`). Se pone al dia porque
-**un campo que contradice al acta que cerro la ficha engana a quien venga**, no
-porque mida nada.
-
-**1.c. LA OBLIGACION DE DICTADO NUEVA, Y RIGE DESDE ESTA VUELTA** (adjudicacion
-`6.6` del acta 210, tras tres actas seguidas con la misma familia de caida): **toda
-cita de un acta anterior lleva LA LINEA de `docs/loop/ACTA_AUDITOR.md` donde vive el
-texto citado, y la linea se LEE, no se recuerda.** No cuesta codigo y no roza la
-moratoria. Aplicala en todo el reporte de la 211.
-
-**1.d. Y LA OTRA MITAD, QUE TAMBIEN RIGE** (adjudicacion `6.3` del acta 210):
-**ninguna vuelta puede CITAR un arnes de la lista `NO MORDIO` como prueba de que algo
-esta vigilado.** Nombrarlo apagado es honesto; apoyarse en el es el letrero que
-`AUDITOR.md` 4 prohibe. Los siete de hoy son
-`vuelta160_tarea6b_mutacion_puerta.py`, `vuelta165_tarea6_mutacion_op_l_01.py`,
-`vuelta166_tarea2_mutacion_correccion.py`, `vuelta168_tarea1_mutacion_nota.py`,
-`vuelta168_tarea2_mutacion_reconstructor.py`, `vuelta171_mutacion_busqueda_acta.py`
-y `vuelta185_tarea1c_mutacion_bateria_continuada.py`.
-
-**1.e. UNA MEDICION QUE NO ARREGLA NADA, Y SE QUEDA EN MEDICION** (hallazgo `7.1`
-del acta 210). La razon del puesto **1357** describe `posicionamiento_de_empresa`
-como **COSTURA CONFIRMADA de NUEVE pasos con dos bloques visibles**, y en
-`dataset/metadata/master_graph.json` ese nodo tiene hoy **CINCO** `pasos_accionables`
-(los de Blank), mientras los **CUATRO** del segundo bloque son los pasos de
-`la_historia_de_la_empresa` (Horowitz). Cinco mas cuatro dan nueve. **Mide y publica,
-sin tocar ni un nodo:**
-
-- si el nodo aparece en `docs/plan/02_DESTEJIDOS.md` (yo mido **0** menciones) y en
-  que operacion de `docs/plan/OPERACIONES.jsonl` vive (yo mido **1**: una
-  `DECISION_DE_FUENTE` en `LISTA`, del grupo HOROWITZ de la TANDA DE INJERTOS, con
-  sus **13** nodos);
-- **si los otros DOCE injertos del grupo HOROWITZ estan en el mismo estado**, o sea
-  si su segundo bloque sigue dentro del nodo o ya vive aparte. Cuenta los trece y
-  publica la particion con sus nombres. **Esa es toda la tarea: contar.**
-- si la particion no es uniforme, **dilo y para ahi**: decidir que hacer con una
-  operacion de fuente sin destino no es de esta vuelta.
-
-**EL VEREDICTO DEL 1357 NO SE TOCA:** su propia razon escribe *"El solape de este par
-cae en el primer bloque y el veredicto es INVARIANTE"*, y el acta 210 lo verifico.
+> **TODA TABLA QUE UN COMPOSITOR ARME LEYENDO FILAS DE UNA SALIDA PUBLICA, EN LA MISMA
+> LINEA, CUANTAS FILAS ARMO; Y SI AL LADO VA UNA CIFRA DE CUANTAS DEBERIA HABER, LAS DOS
+> SE ESCRIBEN JUNTAS.** Motivo medido en la 211: la `2.e` se titulaba *LAS TRES SEDES*,
+> decia **3 de 3** y su tabla llevaba **DOS** filas, porque el patron del compositor
+> usaba `(\w+)` donde el instrumento escribe `NO COINCIDEN`, que son dos palabras. **El
+> patron estaba estructuralmente ciego al unico caso que habia que publicar.** No
+> arregles ese compositor: es `_v211_*` y muere con su vuelta. **Cumple la regla en los
+> tuyos.**
 
 ---
 
-## TAREA 2. `OP-I-01`, LA ULTIMA DE LAS CUATRO FICHAS REALES DE LA MORATORIA
+## TAREA 1. LOS REGISTROS, Y LA RELECTURA CONJUNTA DEL PUESTO 730
 
-**LA VARA DICE QUE ES LA QUE QUEDA, Y LA CORRI YO EN LA VUELTA 210:**
-`python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD` da **3** fichas
-de trabajo real, de las que **2 son mesas cuyo producto documental existe en disco**
-(`OP-L-02` y `OP-L-03`, cerradas por acta) y **1 no lo tiene**: **`OP-I-01`**, fase
-`10_INVENTARIO`. **Vuelve a correr la vara al empezar** y publica su salida: si dice
-otra cosa que lo que aqui se escribe, **manda tu medicion de hoy y lo declaras**.
+**1.a. EL ACTA 212 DEL AUDITOR EMPIEZA EN LA LINEA 74334 de `docs/loop/ACTA_AUDITOR.md`**
+(mi acta de la 211). Leela desde ahi y cita por linea, no de memoria.
 
-**COMO SE EJECUTA, Y ES LA LETRA DE SIEMPRE:**
+**1.b. LA RELECTURA CONJUNTA DEL PUESTO `730`, QUE ES EL CUERPO DE ESTA TAREA.**
 
-1. **LEE LA FICHA ENTERA** de `docs/plan/OPERACIONES.jsonl` y publica su forma: CIFRA
-   de campos, `tipo`, `orden`, `fecha_corte`, `depende_de`, `bloquea_a`, y el tamano
-   en caracteres de `evidencia`, `verificacion`, `adjudicacion` y `nota`.
-2. **MIDE SU CRITERIO DE HECHO** contra la fila `10 INVENTARIO` de
-   `docs/plan/08_VERIFICACION.md`, citada literal, y **contra ella y no contra tu
-   idea de lo que la ficha deberia ser**.
-3. **PUNTO POR PUNTO DE SU `verificacion`:** CUBRE, A MEDIAS o NO CUBRE, cada uno con
-   **su cita** y con el fichero y la linea de donde sale. Publica la CIFRA de puntos
-   y la CIFRA de los que quedan sin cita, que tiene que ser **0**.
-4. **LAS TRES SEDES QUE NOMBRA SU EVIDENCIA** son `docs/plan/INVENTARIO.jsonl`
-   (yo mido **584554** bytes por las dos convenciones), `docs/plan/10_INVENTARIO.md`
-   (**34258** en disco y **33845** normalizado a LF: **las dos convenciones NO
-   coinciden en este fichero, y por eso se publican las dos**) y `docs/loop/AUDITOR.md`
-   (**30581** por las dos). Remidelas tu al entrar y al salir.
-5. **LA CIFRA QUE LA CAMPAÑA LLEVA PUBLICADA DEL INVENTARIO SON 336 ENTRADAS**
-   (dominio 10, acto 221, racimo 13, familia_de_ids 53, figura 20, defecto 19), y vive
-   en la seccion 5 de `AUDITOR.md`. **RECOMPUTALA DEL FICHERO CON TU PROPIO COMANDO** y
-   publica las dos al lado. **Si no calzan, la discrepancia se DECLARA y no se
-   resuelve copiando ninguna de las dos** (`AUDITOR.md` 1.1): esa cifra lleva su corte
-   del 12 ago 2026 y el archivo puede haber envejecido honestamente (banco `9.21`).
-6. **SI SU TEXTO NO ALCANZA PARA EJECUTARLA SIN DECIDIR, ES PARADA Y NO UNA
-   IMPROVISACION** (`AUDITOR.md` 3). Para, escribe que falta, y traelo.
-7. **NO TOQUES EL CAMPO `estado` DE `OP-I-01`.** Mide, adjudica lo que puedas con
-   cita, y **deja el cierre de la ficha al acta**, que es como se cerraron `OP-L-01`,
-   `OP-L-02` y `OP-L-03`.
+MI CASO, ESCRITO CON SU EVIDENCIA, ESTA EN LA `7.1` DE MI ACTA. En una linea: **el
+veredicto `A` del puesto 730 se sostiene sobre una lectura que su propia razon llama
+vieja, y la ratificacion del banco `9.6.1` del 12 ago 2026 (*EL CERO ENTRA EN LA REGLA*)
+la jubilo.** Lo que yo medi y publico para que lo verifiques o lo tumbes:
+
+- La razon del archivo dice de si misma: *"LA CLASE QUEDA EN A por la lectura vieja del
+  cero-enlazados (...) si manda el contenido (...) o sea CONTINUA, y seria D (...) lo dejo
+  anotado aqui en vez de elegir yo"*.
+- El banco `9.6.1` dice: *"CERO ENLAZADOS ES EL CASO EXTREMO DEL MITAD-O-MENOS. Sin ni un
+  hermano enlazado no hay mayoria de la que tirar: la silueta no dice nada y manda el
+  contenido"*.
+- Medido por mi contra `dataset/metadata/master_graph.json`:
+  `colaboracion_cadena_suministro` tiene **UNA** arista de salida, a
+  `optimizacion_tecnologia_cadena_suministro`, que **no es ninguno de sus hijos de paso**.
+- Cerco medido por mi sobre las 3388 filas: **13** razones nombran el cero-enlazados
+  (A 4, D 9); **11** nombran *el choque de la seccion 19*, y **diez de esas once son los
+  diez que la ratificacion del banco declara ya resueltos** (490, 497, 522, 555, 557, 568,
+  582, 586, 610, 624). **El 730 es el undecimo y no esta en esa lista.** Es ademas **el
+  UNICO del archivo que dice "lectura vieja" y el UNICO que dice "seria D"**.
+- Y no es rezagado anterior a la regla: **el 730 se cribo DESPUES del 658 y del 678**, que
+  son los dos casos que forzaron la ratificacion.
+- De los diez ya resueltos, los dos que quedaron en `A` (568 y 586) lo estan **por
+  contenido**, no por silueta. **Nadie sostiene una `A` por la silueta.**
+
+**LO QUE TE TOCA, Y EN ESTE ORDEN:**
+
+1. **VERIFICA CONTRA EL GRAFO, NO CONTRA MI ACTA.** Resuelve a nodo vivo las aristas de
+   `colaboracion_cadena_suministro` y publica cuantos de sus hijos de paso enlaza.
+   Publica tambien mis cinco cifras de cerco recomputadas por ti (13, 4, 9, 11, 10).
+2. **APLICA LA VARA TU MISMO** y publica que devuelve, con la direccion del `9.6.2` (que
+   anade el HIJO a la MADRE, nunca al reves) y la vara de LINEA o PROCEDIMIENTO del
+   informe 67.6. **Escribe QUE le queda a cada nodo cuando le quitas lo que dice el otro.**
+3. **DECIDE CON LA VARA, NO CON MI CASO.** Si tu medicion tumba mi lectura, **dilo y no lo
+   cambies**: un auditor que se equivoca prefiere que se lo digan a que se lo obedezcan.
+4. **SI SE CONFIRMA, LA CORRECCION VA POR EL CARRIL DEL BANCO `9.10`:** correccion
+   **declarada** en la fila del 730, con **el texto viejo entero encima y sin tacharlo**, y
+   **el marcador RECOMPUTADO del archivo con `apertura_del_auditor.marcador()`**, nunca
+   restado a mano. Publica el marcador **antes y despues**, los dos.
+5. **GUARDA OBLIGATORIA:** cuenta las filas de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` al
+   entrar y al salir (**3388** las dos veces si solo cambias una clase), y publica la sede
+   **por las dos convenciones**, con `sha256` distinto al salir. **Y el caso rojo por
+   mutacion ANTES de escribir nada.**
+
+**1.c. LA `P.2`, QUE YA TIENE ADJUDICACION Y SOLO FALTA EJECUTARLA** (mi `6.7`). El campo
+`nodos` de `OP-F-04-HOR` mide **14** y su propia `adjudicacion` dice *"LEIDOS LOS 13"*.
+**Correccion declarada por el banco `9.10`** sobre el campo `adjudicacion`, con el texto
+viejo entero encima, **citando `docs/plan/01_FUENTES.md` lineas 1168 y 1453**, que es donde
+vive el motivo (el 14.º volvio por decision del fundador). **NO toques el campo `nodos` ni
+el `estado`.** Mismas tres guardas que la `1.b` de la 211 (sede por las dos convenciones al
+entrar y al salir, cuentas por `estado` antes y despues mas `git diff --numstat` sobre
+`docs/plan/`, y la recarga del `jsonl` linea a linea), y **el rojo probado por mutacion**.
+
+**1.d. REGISTRA EN EL REPORTE, SIN EJECUTARLAS, LAS CUATRO ADJUDICACIONES QUE NO TE PIDEN
+TRABAJO:** mi `6.2` (el criterio de hecho de una ficha de fase 10 es el general, citando la
+linea **9** de `docs/plan/08_VERIFICACION.md` y su titulo *"EL CRITERIO DE HECHO, y es uno
+solo"*), mi `6.3` (**`OP-I-01` NO se cierra y su `estado` se queda en `LISTA` con motivo
+escrito**), mi `6.4` (el `NO CUBRE` del punto 2 se sostiene) y mi `6.5` (el cubo se llama
+desde hoy **LOS PASOS DE HOY SON LOS DEL BLOQUE 1**, no *EL BLOQUE YA VIVE APARTE*).
+**No toques `OP-I-01`. No marques las 95 entradas del inventario: eso sube al fundador.**
 
 ---
 
-## LAS GUARDAS DE LA VUELTA, QUE NO SE AFLOJAN
+## TAREA 2. LA COLA DE RELECTURA, BAJO LA REGLA QUE LA 730 DEJA PUESTA
 
-- **Ciclo entero de Gate 0 en los dos lados**, nunca `run_phase1.py` a secas, con sus
-  ocho comandos en su orden y su peor exitcode publicado.
-- **Cabecera tallada** con `tallar_cabecera_reporte.py --fase04 --vuelta 211`, pegada
-  entera y **cotejada con `--comparar`** antes de cerrar.
-- **Cierre con `scripts/loop/cerrar_reporte.py`, y SELLA SU SALIDA** en
-  `docs/loop/SALIDA_V211_CERRAR_REPORTE.txt`. La 209 no la sello y fue hallazgo; la
-  210 si, y por eso el tope de sub-tareas se pudo adjudicar cumplido.
-- **Los tamanos en BYTES EXACTOS** leidos del instrumento, nunca redondeados, y los KB
-  solo entre parentesis y detras del byte (`P.2`).
-- **Toda cifra tallada**, cada celda con el fichero del que sale, y las decisiones de
-  lectura en el registro y no narradas en prosa.
-- **Marca tus discutibles** con lo que dudas Y por donde te puedes estar equivocando,
-  y **declara tus caidas propias con nombre**, aunque no dejen rastro en disco.
-- **Trampa conocida del shell, medida dos actas seguidas:** el heredoc con comillas
-  simples se cae en este entorno. Para un fichero largo usa `python - <<PYEOF` o la
-  herramienta de fichero, **y di cual usaste**.
+**Esta tarea SOLO se abre si la `1.b` CONFIRMA el cambio del 730.** Si lo tumba, esta
+tarea no existe y lo escribes asi en tu reporte, con la cifra que la tumbo.
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
-una regla vigente, paras y lo traes. No adivines.
+**QUE ES:** el cerco que yo medi encontro **13** razones que nombran el cero-enlazados y
+**4 de ellas estan en `A`**. Diez estan cubiertas por la ratificacion. **Lo que no medi, y
+por eso lo encargo en vez de afirmarlo:** si alguna de esas cuatro `A` (fuera del 730)
+sostiene su clase **por la silueta y no por el contenido**.
+
+1. **LISTA LAS CUATRO** con su puesto, sus dos nodos y su razon entera.
+2. **PARA CADA UNA, publica DE QUE depende su clase**, citando la frase de su propia razon:
+   **silueta** (cuantos hermanos enlaza la madre) o **contenido** (la vara de LINEA o
+   PROCEDIMIENTO). **Esto es lectura y cita, no re-cribado.**
+3. **LAS QUE DEPENDAN DEL CONTENIDO SE QUEDAN COMO ESTAN Y LO DICES.** Ya verifique dos
+   (568 y 586) y las dos son de contenido; **verificalas tu tambien y publica si coincides
+   conmigo o no.**
+4. **SI APARECE ALGUNA QUE DEPENDA DE LA SILUETA, NO LA CAMBIES: MARCALA COMO DISCUTIBLE Y
+   TRAELA.** Una cosa es corregir el par que su propia razon deja sin resolver y otra es
+   abrir una cola de re-cribado por mi cuenta. **Yo no la abro y tu tampoco.**
+
+---
+
+## LAS GUARDAS QUE NO SE AFLOJAN, Y VAN AQUI PARA QUE NO HAYA QUE BUSCARLAS
+
+- **CICLO ENTERO DE GATE 0, LOS DOS LADOS**, nunca `run_phase1.py` a secas.
+- **SIMULACION PREVIA** sobre copia en memoria de toda escritura en `docs/plan/` o en
+  `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`, y **CASO POSITIVO POR MUTACION** de cada
+  computo, **corrido ANTES de escribir nada** y con su salida sellada.
+- **CERO cifras tecleadas.** Toda cifra sale de la salida de un instrumento y cita su
+  fichero. **Es la caida `C.2` de la 211 y la `4.1` que le anote: la unica defensa que
+  funciona es contar el fichero.**
+- **CABECERA TALLADA** con `tallar_cabecera_reporte.py --fase04 --vuelta 212` y cotejada
+  con `--comparar`.
+- **CIERRA TU PROPIO REPORTE** con `scripts/loop/cerrar_reporte.py` y **sella su salida**
+  en `docs/loop/SALIDA_V212_CERRAR_REPORTE.txt`.
+- **MARCA TUS DISCUTIBLES ANTES DE SABER SI ACIERTAS.** Los de la 211 funcionaron: **de
+  mis cinco fallos de ciega, los dos que cayeron dentro del marcado son los dos que tu
+  marca habia anunciado por nombre.** Eso es la guarda haciendo su trabajo.
+
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice una
+regla vigente, paras y lo traes. No adivines.
