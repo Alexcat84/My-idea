@@ -1,0 +1,192 @@
+==============================================================================
+VUELTA 208, TAREA 3.a: LA VARA DE OP-L-03, SELLADA ANTES DEL COTEJO
+==============================================================================
+
+A) LA FICHA, SELLADA
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+   la ficha OP-L-03 vive en la LINEA 43
+   CIFRA campos de la ficha: 18
+   CIFRA elementos de `evidencia`: 4
+   CIFRA elementos de `verificacion`: 4
+   de esos, CORRECCIONES DECLARADAS: 1 en evidencia y 1 en verificacion
+   CIFRA `depende_de`: 6 (OP-D-01, OP-D-02, OP-D-03, OP-D-04, OP-D-05, OP-D-06)
+   CIFRA `bloquea_a`: 2 (OP-U-01, OP-U-02)
+   `fecha_corte`: 2026-08-11
+   `estado`: LISTA   <- SE LEE COMO DATO Y NO SE TOCA (AUDITOR.md 0)
+   `orden`: 3 | `tipo`: MESA | `fase`: 09_LECTURAS_DIRIGIDAS
+
+B) LOS SEIS DOCUMENTOS QUE LA FICHA NOMBRA, Y DE QUE CAMPO SALE CADA UNO
+   BDP  docs/plan/BANCO_DEL_PLAN.md              61554 bytes en disco y 61554 normalizado a LF
+        sale de: evidencia[0], 'BANCO_DEL_PLAN.md P.5'
+   LD   docs/plan/LECTURAS_DIRIGIDAS.md          214916 bytes en disco y 214916 normalizado a LF
+        sale de: evidencia[2], 'LECTURAS_DIRIGIDAS.md, el reparto por acto'
+   LEC  docs/plan/OP_L_03_LECTURAS.jsonl         51368 bytes en disco y 51368 normalizado a LF
+        sale de: evidencia[3], que la nombra como sede real del reparto por acto
+   TRI  docs/plan/OP_L_03_TRIANGULOS.jsonl       55705 bytes en disco y 55705 normalizado a LF
+        sale de: evidencia[3], que la nombra como la segunda sede real
+   EJE  docs/loop/EJECUTOR.md                    13194 bytes en disco y 13194 normalizado a LF
+        sale de: evidencia[3], 'una busqueda negativa no se puede citar sola (EJECUTOR.md 9)'
+   AUD  docs/loop/AUDITOR.md                     30581 bytes en disco y 30581 normalizado a LF
+        sale de: evidencia[3], 'la vara del trabajo pendiente es el instrumento y nunca el campo estado (recuadro de AUDITOR.md 0)'
+
+   LO QUE DECLARO Y NO DISIMULO: de los seis, TRES los abri antes de esta
+   tarea y en esta misma vuelta: EJE (lo manda el encargo como primer acto),
+   AUD (citado por el encargo) y LD (lo midio mi TAREA 2). Los otros tres
+   los abro por primera vez en el cotejo. El sello garantiza que la vara y
+   su reparto se escriben ANTES de cotejar, y eso se cumple.
+
+C) LA VARA. CADA PUNTO CON SU CITA COMPROBADA VERBATIM CONTRA LA FICHA
+
+   V.1   LA REGLA `P.5` DEL `BANCO_DEL_PLAN.md`, QUE ES LO QUE ESTA MESA INVOCA COMO SU PRIMERA EVIDENCIA
+         sede: `evidencia[0]`, linea 43 del fichero
+         cita: 'BANCO_DEL_PLAN.md P.5'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.2   EL REPARTO MEDIDO EL 11 AGO 2026: 55 PARES EN 29 ACTOS, CORTE PUESTO 2117
+         sede: `evidencia[1]`, linea 43 del fichero
+         cita: 'MEDIDO el 11 ago 2026: 55 pares en 29 actos, corte puesto 2117'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.3   EL REPARTO POR ACTO EN `LECTURAS_DIRIGIDAS.md`
+         sede: `evidencia[2]`, linea 43 del fichero
+         cita: 'LECTURAS_DIRIGIDAS.md, el reparto por acto'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.4   LA PRIMERA SEDE REAL DEL REPARTO: `OP_L_03_LECTURAS.jsonl`, CON 14 FILAS, 14 ACTOS DISTINTOS Y 0 LINEAS QUE NO SEAN JSON VALIDO
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: 'docs/plan/OP_L_03_LECTURAS.jsonl, que mide 51368 bytes en disco y 51368 normalizados a LF, con 14 filas, 14 actos distintos y 0 lineas que no sean JSO'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.5   LA SEGUNDA SEDE REAL: `OP_L_03_TRIANGULOS.jsonl`, CON 19 FILAS, 8 ACTOS DISTINTOS Y 0 LINEAS QUE NO SEAN JSON VALIDO
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: 'docs/plan/OP_L_03_TRIANGULOS.jsonl, que mide 55705 bytes en disco y 55705 normalizados a LF, con 19 filas, 8 actos distintos y 0 lineas que no sean JS'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.6   LA COBERTURA RECONTADA: 11 ACTOS CON `leido` EN TRUE, 3 EN FALSE, Y `cifra_pares_leidos` SUMANDO 19 PARES
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: '14 actos distintos, de los cuales 11 tienen leido en true y 3 en false, y sus campos cifra_pares_leidos suman 19 pares'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.7   LO QUE FALTA, DICHO POR LA PROPIA FICHA: 15 DE LOS 29 ACTOS SIN FICHA DE LECTURA Y 36 DE LOS 55 PARES SIN LECTURA REGISTRADA
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: '15 de los 29 actos prometidos siguen sin ficha de lectura, y 36 de los 55 pares prometidos siguen sin lectura registrada'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.8   LA BUSQUEDA NEGATIVA QUE LA CORRECCION DE LA 202 PUBLICA: 0 APARICIONES DE 'reparto por acto' Y 0 MENCIONES DE `OP-L-03` EN `LECTURAS_DIRIGIDAS.md`
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: "trae 0 apariciones del literal 'reparto por acto' y 0 menciones de OP-L-03"
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.9   LA CLAUSULA 1 DE VERIFICACION: NINGUN ACTO SE FUNDE CON UN PAR INTERNO SIN VEREDICTO
+         sede: `verificacion[0]`, linea 43 del fichero
+         cita: 'ningun acto se funde con un par interno sin veredicto'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.10  LA CLAUSULA 2 DE VERIFICACION: LAS 55 MARCADAS LECTURA DIRIGIDA NO ENTRAN EN LA COLA NI MUEVEN SU MARCADOR
+         sede: `verificacion[1]`, linea 43 del fichero
+         cita: 'las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.11  LA CLAUSULA 3 DE VERIFICACION: CADA ACTO CUYA LECTURA COMPLETA CAMBIE SU FORMA SE RE-MIDE CON SU COBERTURA AL LADO
+         sede: `verificacion[2]`, linea 43 del fichero
+         cita: 'cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.12  LA TERCERA MITAD DE LA VARA NUEVA: LO QUE BLOQUEA UNA FUSION ES EL TRIANGULO A MAS A MAS D MEDIDO DE `P.10`
+         sede: `verificacion[3]`, linea 43 del fichero
+         cita: 'el TRIANGULO A mas A mas D MEDIDO de P.10'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.13  LA REMISION DEL `estado`: LA VARA DEL TRABAJO PENDIENTE ES EL INSTRUMENTO Y NUNCA EL CAMPO `estado`
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: 'la vara del trabajo pendiente es el instrumento y nunca el campo estado (recuadro de AUDITOR.md 0, decision del fundador del 4 sep 2026)'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.14  LA REMISION DE LA BUSQUEDA NEGATIVA: UNA BUSQUEDA NEGATIVA NO SE PUEDE CITAR SOLA
+         sede: `evidencia[3]`, linea 43 del fichero
+         cita: 'porque una busqueda negativa no se puede citar sola (EJECUTOR.md 9)'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.15  LA ADJUDICACION: POR LA REGLA `P.5`, CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO DESPUES DE SU DESTEJIDO Y ANTES DE SU FUSION
+         sede: `adjudicacion`, linea 43 del fichero
+         cita: 'Por la regla P.5, cada acto que vaya a fundirse se lee ENTERO despues de su destejido y antes de su fusion'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.16  EL RECOMPUTO AL CORTE 3.388: EL BACKLOG SUBE A CUARENTA ACTOS Y SETENTA Y TRES PARES
+         sede: `nota`, linea 43 del fichero
+         cita: 'el backlog SUBIO de 29 actos y 55 pares (corte 2117, el viejo no se borra) a CUARENTA actos y SETENTA Y TRES pares'
+         la cita aparece VERBATIM en esa sede: SI
+
+   V.17  LAS DEPENDENCIAS: SEIS FICHAS DE LAS QUE DEPENDE Y DOS A LAS QUE BLOQUEA
+         sede: `depende_de`, linea 43 del fichero
+         cita: (no hay literal: el punto es sobre la ESTRUCTURA del
+               campo, no sobre su texto)
+
+   V.18  LA SEGUNDA MITAD DE LA VARA NUEVA: UN PAR SIN LEER ES EL QUE ESTA EN COLA Y SIN VEREDICTO, Y LOS 47 ACTOS TRAEN CERO EN `en_cola_sin_leer`
+         sede: `verificacion[3]`, linea 43 del fichero
+         cita: 'los 47 actos del tramo traen CERO en en_cola_sin_leer'
+         la cita aparece VERBATIM en esa sede: SI
+
+   CIFRA puntos de la vara: 18
+   CIFRA citas que NO aparecen verbatim: 0
+
+D) EL ESCARMIENTO DE LA 207: ANTES DE SELLAR UN PUNTO COMO NO DOCUMENTAL,
+   SE BUSCA SU LITERAL EN LOS SEIS DOCUMENTOS
+   Y LA BUSQUEDA VA TAMBIEN POSITIVA, con un literal de control por
+   documento que TIENE que aparecer (`EJECUTOR.md` 9).
+
+   EL CONTROL POSITIVO, PRIMERO:
+      BDP  el literal de control 'P.5'        aparece 14 vez(ces)
+      LD   el literal de control 'LD-01'      aparece 2 vez(ces)
+      LEC  el literal de control 'acto'       aparece 81 vez(ces)
+      TRI  el literal de control 'acto'       aparece 42 vez(ces)
+      EJE  el literal de control 'EJECUTOR'   aparece 1 vez(ces)
+      AUD  el literal de control 'AUDITOR'    aparece 9 vez(ces)
+   CIFRA controles positivos que NO aparecen: 0
+
+   V.16  literal que se busca: 'CUARENTA actos y SETENTA Y TRES pares'
+         AUD  docs/loop/AUDITOR.md                     -> 0 aparicion(es)
+         BDP  docs/plan/BANCO_DEL_PLAN.md              -> 0 aparicion(es)
+         EJE  docs/loop/EJECUTOR.md                    -> 0 aparicion(es)
+         LD   docs/plan/LECTURAS_DIRIGIDAS.md          -> 0 aparicion(es)
+         LEC  docs/plan/OP_L_03_LECTURAS.jsonl         -> 0 aparicion(es)
+         TRI  docs/plan/OP_L_03_TRIANGULOS.jsonl       -> 0 aparicion(es)
+   V.18  literal que se busca: 'en_cola_sin_leer'
+         AUD  docs/loop/AUDITOR.md                     -> 0 aparicion(es)
+         BDP  docs/plan/BANCO_DEL_PLAN.md              -> 0 aparicion(es)
+         EJE  docs/loop/EJECUTOR.md                    -> 0 aparicion(es)
+         LD   docs/plan/LECTURAS_DIRIGIDAS.md          -> 0 aparicion(es)
+         LEC  docs/plan/OP_L_03_LECTURAS.jsonl         -> 0 aparicion(es)
+         TRI  docs/plan/OP_L_03_TRIANGULOS.jsonl       -> 0 aparicion(es)
+   CIFRA puntos candidatos a NO DOCUMENTAL cuyo literal SI aparece en
+   alguno de los seis: 0
+
+E) EL REPARTO DE LA VARA, SELLADO ANTES DE COTEJAR NINGUN DOCUMENTO
+   CIFRA puntos que SE COTEJAN contra los seis documentos: 16
+      V.1, V.2, V.3, V.4, V.5, V.6, V.7, V.8, V.9, V.10, V.11, V.12, V.13, V.14, V.15, V.17
+   CIFRA puntos que NO son documentales: 2
+      V.16  es una CIFRA DE RECOMPUTO cuya sede declarada es docs/plan/RECOMPUTO_3388.md, que NO es ninguno de los seis documentos que la ficha nombra
+      V.18  es una CLAUSULA sobre el campo en_cola_sin_leer de scripts/plan/recomputo_3388.py, que NO es ninguno de los seis
+   Y CADA UNO DE LOS TRES SE BUSCO EN LOS SEIS ANTES DE SELLARSE, con 0
+   apariciones y con el control positivo en verde. EL SELLO NO ES UNA
+   SUPOSICION: ES UNA MEDICION.
+
+   EL REPARTO POR DOCUMENTO DE LOS QUE SI SE COTEJAN:
+      AUD  docs/loop/AUDITOR.md                     1 punto(s): V.13
+      BDP  docs/plan/BANCO_DEL_PLAN.md              4 punto(s): V.1, V.9, V.15, V.17
+      EJE  docs/loop/EJECUTOR.md                    1 punto(s): V.14
+      LD   docs/plan/LECTURAS_DIRIGIDAS.md          3 punto(s): V.3, V.8, V.10
+      LEC  docs/plan/OP_L_03_LECTURAS.jsonl         5 punto(s): V.2, V.4, V.6, V.7, V.11
+      TRI  docs/plan/OP_L_03_TRIANGULOS.jsonl       2 punto(s): V.5, V.12
+
+   SI EL COTEJO QUISIERA MOVER UN PUNTO DE UN LADO AL OTRO DESPUES DE
+   MIRAR, ESTE SELLO LO DELATARIA.
+
+F) LO QUE ESTE COMPUTO NO HACE
+   NO cierra la ficha, NO toca su campo `estado` y NO escribe una sola
+   linea en ninguna sede. `docs/plan/OPERACIONES.jsonl` sigue en 513043 bytes
+   en disco y 513043 normalizado a LF, sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6,
+   IDENTICO al de la apertura de esta corrida: SI
+
+FIN DE LA VARA
