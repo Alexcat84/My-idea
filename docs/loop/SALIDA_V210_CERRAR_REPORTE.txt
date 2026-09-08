@@ -1,0 +1,118 @@
+==============================================================================
+SE CIERRA EL REPORTE DE LA VUELTA 210, EN UN SOLO ACTO
+==============================================================================
+
+A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
+   docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   CIFRA bytes: 14675 | saltos de linea: 258
+   contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
+   contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
+   contiene '\n## 3.'                            -> NO (se esperaba NO)
+   contiene '\n## 9.'                            -> NO (se esperaba NO)
+
+A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
+     (vuelta 191, TAREA 4; hallazgo `5.2` del acta 191. La linea 50 del
+      reporte de la 190 salio con la etiqueta DUPLICADA porque este
+      instrumento la pega sin comprobar si ya venia puesta. SE FALLA
+      RUIDOSO: no se limpia en silencio, porque limpiar en silencio es
+      la otra mitad de la misma enfermedad)
+     apariciones de 'EL VEREDICTO DE UNA LINEA:' en el veredicto recibido: 0
+     empieza por '**': no | termina por '**': no
+     CIFRA motivos: 0
+
+B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
+   docs/loop/SALIDA_V210_TALLADOR_CABECERA.txt             2456 bytes, 11 filas de tabla
+   scripts/loop/_v210_cierre_texto.md                     12526 bytes, sha256 e1f5ad72c4a98dcc
+      ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
+      ## 4. LO QUE SE TOCO, Y LO QUE NO
+      ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+      ## 6. LAS PREGUNTAS
+      ## 7. PENDIENTES DE DOCTRINA
+      ## 8. MIS CAIDAS PROPIAS, CADA UNA CON SU NOMBRE Y CONTADA UNA SOLA VEZ
+      ## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
+   docs/loop/SALIDA_V183_BATERIA.txt                    93499 bytes
+   CIFRA lineas no vacias de la bateria: 1321
+   vuelta que lleva dentro el nombre del fichero: 183
+   TRAMOS DE ESA BATERIA Y LA VUELTA QUE SELLO CADA UNO, leidos del
+   asunto de su ultimo commit con git log y NO tecleados:
+      tramo 1   -> vuelta 210
+      tramo 2   -> vuelta 210
+      tramo 3   -> vuelta 210
+      tramo 4   -> vuelta 210
+      tramo 5   -> vuelta 210
+      tramo 6   -> vuelta 210
+      tramo 7   -> vuelta 210
+      tramo 8   -> vuelta 210
+      tramo 9   -> vuelta 210
+      tramo 10  -> vuelta 210
+      tramo 11  -> vuelta 210
+   CIFRA tramos de esa bateria con fichero en disco: 11
+   CIFRA tramos sellados EN LA VUELTA 210: 11 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+   RAMA DE LA SECCION 9, decidida por rama_de_la_seccion9(): CORRIDA
+      motivo: la bateria del fichero es de la vuelta 183 y se esta cerrando la 210, pero NO ES UNA CORRIDA AJENA: ES LA MISMA BATERIA CONTINUADA. La vuelta 210 sello 11 de sus tramos (los tramos 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), leido del asunto de su ultimo commit con git log y no tecleado, que es lo que AUDITOR.md 6.1 manda cuando dice que una vuelta cortada RETOMA EN EL TRAMO SIGUIENTE. Trae 1321 linea(s) no vacias.
+
+B.0) EL CARRIL: NORMAL O CIERRE TARDIO, COMPUTADO Y NO PASADO POR
+     BANDERA (vuelta 186, TAREA 2.c; respuesta del acta 186 a la P.2)
+   vuelta que se cierra: 210
+   vuelta EN CURSO, leida del asunto del ultimo commit con git log y
+   NO tecleada: 210
+   CARRIL: NORMAL
+   en el carril normal NO CAMBIA NADA: las cifras sin pareja siguen
+   siendo ROJO.
+
+B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
+     PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
+   el veredicto, tal como se paso: 'LA UNICA TAREA DE LA VUELTA DE BATERIA QUEDA ENTREGADA: LOS ONCE TRAMOS CORRIDOS, SELLADOS Y COMMITEADOS EN ESTA VUELTA,'
+   CIFRA numerales hallados en el veredicto: 1
+      '2'        -> 2 caidas
+   LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
+      caidas   -> 2
+      tareas   -> 1
+   CIFRA numerales que NO calzan: 0
+
+C) SE ESCRIBE
+   cabecera: 268 bytes de hueco -> 2548 bytes de tabla pegada
+   veredicto escrito: 497 bytes
+   ESCRITO: docs/loop/REPORTE.md (123851 bytes, 1924 saltos de linea)
+
+D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
+   (1) veredicto escrito              SI
+   (2) cabecera pegada                SI
+   (3) secciones 3 a 9                SI
+   (4) bateria dentro de la 9 o hueco declarado SI
+   CIFRA piezas que faltan: 0
+   el cuerpo del cierre esta byte a byte SI
+   cero guiones largos y cero guiones medios SI
+   toda cifra de bytes y todo sha con su pareja NO
+   toda cita de arnes calza con su fichero SI
+   toda pareja de convenciones es CIERTA, no solo completa SI
+   LAS CIFRAS SIN PAREJA, UNA A UNA (vuelta 178, TAREA 1.e):
+      linea 197   bytes 6273                 | pequeno es el tramo 11 con 6273 bytes y el mas grande el tramo 1 con 9544, los
+      linea 216   bytes 93499                | - **La salida unica: `docs/loop/SALIDA_V183_BATERIA.txt`, 93499 bytes en
+      linea 299   sha   68e7505d560634c3     | **1433 lineas**, `sha256` LF `68e7505d560634c3`. Remedida al cierre por
+   CIFRA cifras publicadas sin su pareja: 3
+   CIFRA citas de arnes cotejadas que NO calzan: 0
+   LAS DOS CONVENCIONES, RECOMPUTADAS DEL DISCO (vuelta 187, TAREA 4):
+      CIFRA parejas de convenciones publicadas: 3
+   CIFRA parejas cuya cifra NO es la que el disco dice: 0
+   LA COBERTURA DE ESTA GUARDA, DICHA POR ELLA MISMA (vuelta 188, 4.a):
+      CIFRA parejas que la guarda VE y atribuye: 3
+      CIFRA lineas fuera de cerca con alguna cifra de bytes, que es el
+      universo donde una pareja podria estar: 5
+      CIFRA de esas que ademas nombran una ruta en su misma linea: 3
+      CIFRA parejas vistas y NO atribuidas, por ambiguas o sin sujeto: 0
+         (ninguna, y el cero va escrito)
+   CIFRA citas de arnes SIN COTEJO posible: 0
+
+D.1) LA SECCION 4, COTEJADA CONTRA LA APERTURA SELLADA (vuelta 186,
+     TAREA 2.d; escalada de AUDITOR.md 1.2 contra la R.1 del acta 186)
+   apertura sellada: docs/loop/SALIDA_V210_APERTURA.txt -> 5550 bytes
+   LO QUE LA APERTURA PUBLICA, LEIDO DE ELLA Y NO TECLEADO:
+      CIFRA lineas de status: 1
+      CIFRA filas de git diff --numstat -- dataset/ AL ENTRAR: 0
+   LO QUE LA SECCION 4 DEL REPORTE AFIRMA, FUERA DE TODA CERCA:
+      status   -> 1, en la linea 337: `git status --porcelain` 1 lineas al entrar, y con
+      numstat  -> 0, en la linea 338: `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
+   CIFRA motivos por los que la seccion 4 NO calza: 0
+
+ROJO: al reporte de la vuelta 210 le faltan 0 de sus cuatro piezas.

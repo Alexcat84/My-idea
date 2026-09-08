@@ -21,10 +21,13 @@ coincidencia. Es la letra de `EJECUTOR.md` 1, LA TABLA SE CUENTA DE SU FICHERO.
 | minutos sumados de los once tramos | **23.4** | `SALIDA_V210_T1E_TABLAS.txt` |
 | entradas sin correr, ajenas y repetidas segun `--componer` | **0**, **0** y **0** | `SALIDA_V210_T1D_COMPONER.txt` |
 
-**LA SALIDA UNICA DE LA BATERIA:** `docs/loop/SALIDA_V183_BATERIA.txt`,
-**93499 bytes en disco y 93499 bytes normalizado a LF**,
-**1433 lineas**, `sha256` LF `68e7505d560634c3`. Remedida al cierre por
-`scripts/loop/_v210_tabla_tramos.py` y no copiada de `--componer`.
+**LA SALIDA UNICA DE LA BATERIA**, remedida al cierre por
+`scripts/loop/_v210_tabla_tramos.py` y no copiada de `--componer`. **Las dos
+convenciones van en la misma linea, y los dos `sha256` tambien**, que es como
+esta casa publica una pareja:
+
+- `docs/loop/SALIDA_V183_BATERIA.txt`: **93499 bytes en disco y 93499 bytes normalizado a LF**, **1433 lineas**.
+- `docs/loop/SALIDA_V183_BATERIA.txt`: **sha256 disco `68e7505d560634c3` y sha256 LF `68e7505d560634c3`**.
 
 **EL MARCADOR DEL CRIBADO NO SE MOVIO Y ESA GLOSA LLEVA SU CORTE:** esta vuelta
 **no adjudica ninguna clase** y **no toca `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`**,
@@ -65,7 +68,7 @@ propia salida, **remedidas hoy en el lado CIERRE de esta vuelta** y no heredadas
 `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
 LEEN de la apertura sellada y no se teclean.
 
-**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 3
+**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 10
 y 0.**
 
 | sede | filas de `numstat` al cierre | por que |
@@ -91,14 +94,14 @@ contra el `HEAD` vivo y la frase que lo nombraba estaba TECLEADA. En
 el `HEAD` contra el que la midio en la misma tupla**, y la frase de abajo se
 compone con ese `HEAD`: **no hay forma de nombrar un corte distinto del medido.**
 
-**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `36997247`,
-que es el `HEAD` que este mismo computo leyo y no uno tecleado: 7, de
-los que 7 llevan el prefijo `_v210_` y 0 no lo llevan.**
+**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `d9bcee53`,
+que es el `HEAD` que este mismo computo leyo y no uno tecleado: 10, de
+los que 10 llevan el prefijo `_v210_` y 0 no lo llevan.**
 
 **ESTA CIFRA NACE CORTA POR CONSTRUCCION Y LO DIGO DENTRO DE LA MISMA FRASE:**
 `scripts/loop/_v210_cierre.py` es el fichero que cuenta, va en el commit del
 cierre, y **ese commit todavia no existe cuando el conteo corre**. Falta por
-tanto **este mismo fichero** y cualquiera que nazca despues de `36997247`.
+tanto **este mismo fichero** y cualquiera que nazca despues de `d9bcee53`.
 **No se arregla el instrumento, que es moratoria**: se escribe la glosa con su
 corte, y el corte es el que la frase nombra.
 

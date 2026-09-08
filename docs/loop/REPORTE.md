@@ -178,10 +178,12 @@ da 0 en los ONCE tramos**, o sea que **las dos corridas de las 135
 entradas dieron lo mismo en las 135**. La cifra no se afirma de
 memoria: esta en la tabla de arriba, columna por columna.
 
-**CERO BYTES NO CUENTA COMO HECHO.** Ninguno de los once mide cero: el mas
-pequeno es el tramo 11 con 6273 bytes y el mas grande el tramo 1 con 9544, los
-dos en la tabla. `--componer` lo vuelve a comprobar por su cuenta y publica
-**0 salidas de cero bytes**.
+**CERO BYTES NO CUENTA COMO HECHO.** Ninguno de los once mide cero, y la cifra
+de cada uno esta en la columna `bytes disco` de la tabla de arriba, que sale de
+su propio fichero. `--componer` lo vuelve a comprobar por su cuenta y publica
+**0 salidas de cero bytes**. Aqui no se repite ninguna de esas cifras en prosa
+a proposito: repetirla seria teclearla dos veces y una de las dos acabaria
+envejeciendo sola.
 
 **DEL MISMO CALIBRE.** Los once traen **13 entradas cada uno salvo el 11, que
 lleva las 5 de la cola** (135 menos diez por 13); los once salen con

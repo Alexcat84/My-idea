@@ -20,6 +20,7 @@ es escribir bien el computo de mi propia vuelta.
 SE COMPONE EN MEMORIA, SE JUZGA ENTERO Y SOLO SE ESCRIBE SI EL JUICIO DA CERO
 FALLOS, igual que el esqueleto y que el cuerpo de la TAREA 1.
 """
+import hashlib
 import io
 import os
 import re
@@ -118,7 +119,14 @@ def main():
                       r"normalizado a LF", "ulf")
     v["uni_lineas"] = uno(tab, r"SALIDA_V183_BATERIA\.txt: \d+ bytes en disco y \d+ "
                           r"normalizado a LF, (\d+) lineas", "ulin")
-    v["uni_sha"] = uno(tab, r"SALIDA_V183_BATERIA\.txt: .*sha256 LF (\w{16})", "ush")
+    # LOS DOS SHA SE MIDEN AQUI, LOS DOS, y no se supone que son iguales porque
+    # el fichero sea de LF: suponerlo es publicar una cifra que no se midio.
+    ruta_uni = os.path.join(LOOP, "SALIDA_V183_BATERIA.txt")
+    datos_uni = io.open(ruta_uni, "rb").read()
+    v["uni_sha_disco"] = hashlib.sha256(datos_uni).hexdigest()[:16]
+    v["uni_sha_lf"] = hashlib.sha256(
+        datos_uni.replace(chr(13).encode() + chr(10).encode(),
+                          chr(10).encode())).hexdigest()[:16]
     v["cob_sin"] = uno(comp, r"CIFRA entradas de la nomina que NINGUN tramo "
                        r"corrio: (\d+)", "sin")
     v["cob_ajenas"] = uno(comp, r"CIFRA entradas corridas que NO estan en la "
@@ -194,10 +202,13 @@ coincidencia. Es la letra de `EJECUTOR.md` 1, LA TABLA SE CUENTA DE SU FICHERO.
 | minutos sumados de los once tramos | **%(t_min)s** | `SALIDA_V%(v)d_T1E_TABLAS.txt` |
 | entradas sin correr, ajenas y repetidas segun `--componer` | **%(cob_sin)s**, **%(cob_ajenas)s** y **%(cob_repes)s** | `SALIDA_V%(v)d_T1D_COMPONER.txt` |
 
-**LA SALIDA UNICA DE LA BATERIA:** `docs/loop/SALIDA_V183_BATERIA.txt`,
-**%(uni_disco)s bytes en disco y %(uni_lf)s bytes normalizado a LF**,
-**%(uni_lineas)s lineas**, `sha256` LF `%(uni_sha)s`. Remedida al cierre por
-`scripts/loop/_v210_tabla_tramos.py` y no copiada de `--componer`.
+**LA SALIDA UNICA DE LA BATERIA**, remedida al cierre por
+`scripts/loop/_v210_tabla_tramos.py` y no copiada de `--componer`. **Las dos
+convenciones van en la misma linea, y los dos `sha256` tambien**, que es como
+esta casa publica una pareja:
+
+- `docs/loop/SALIDA_V183_BATERIA.txt`: **%(uni_disco)s bytes en disco y %(uni_lf)s bytes normalizado a LF**, **%(uni_lineas)s lineas**.
+- `docs/loop/SALIDA_V183_BATERIA.txt`: **sha256 disco `%(uni_sha_disco)s` y sha256 LF `%(uni_sha_lf)s`**.
 
 **EL MARCADOR DEL CRIBADO NO SE MOVIO Y ESA GLOSA LLEVA SU CORTE:** esta vuelta
 **no adjudica ninguna clase** y **no toca `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`**,

@@ -1,3 +1,58 @@
+# REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
+> **ESTE REPORTE SE ABRIO AL EMPEZAR LA VUELTA Y CRECE POR ANEXION** (`EJECUTOR.md`
+> 1, "EL REPORTE ABRE CON LA VUELTA"). El esqueleto lo tallo
+> `scripts/loop/_v210_esqueleto.py` **antes de la primera tarea**; la tarea
+> ANEXA SU FILA AL CERRARSE con `scripts/loop/anexar_tarea_al_reporte.py`; y el
+> cierre lo talla entero `scripts/loop/cerrar_reporte.py`. **Si esta vuelta se
+> corta, la fila que siga diciendo ABIERTA, SIN CERRAR es la que no se hizo.**
+>
+> **LAS CUATRO MARCAS DEL ANEXO NACEN CON EL ESQUELETO, COMO EN LA 208 Y EN LA
+> 209.** No se teclean: se **IMPORTAN de `anexar_tarea_al_reporte.py`**, que es el
+> instrumento que las lee, y se comprueba ANTES de tallar que es lo que ese
+> instrumento exige. **Las cuatro no se citan literalmente en esta prosa a
+> proposito**: la guarda las cuenta sobre el fichero entero y una cita en prosa
+> las duplicaria. **Y el texto se COMPONE EN MEMORIA, SE JUZGA ENTERO Y SOLO SE
+> ESCRIBE SI EL JUICIO DA CERO FALLOS.**
+>
+> **UNA SOLA TAREA, Y ESO NO ES UN RECORTE SINO LA LETRA.** `AUDITOR.md` 6.1 dice
+> que la bateria corre **en una VUELTA DE BATERIA propia que NO LLEVA NADA MAS**,
+> y la cadencia de cinco pone la 210 detras de la 205. El trabajo de plan que el
+> acta 209 deja adjudicado (los dos campos `estado` de `OP-L-02` y `OP-L-03`, y la
+> ficha `OP-I-01`) **espera a la 211** y no se toca aqui.
+>
+> **RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3). Ningun arnes, guarda ni
+> lector nuevo. Todo lo que esta vuelta escribe son ficheros `_v210_*` **con
+> prefijo de guion bajo, fuera del censo y fuera de la nomina**. La nomina sigue
+> **CONGELADA EN 135** y no se poda. **El lanzador de la bateria NO SE CLONA NI SE
+> TOCA.**
+>
+> **LOS SELLOS DE APERTURA SE ESCRIBIERON AL ABRIR, Y ESO ES LA `C.5` DE LA 209
+> REMEDIADA.** `docs/loop/SALIDA_V210_APERTURA.txt`,
+> `docs/loop/SALIDA_V210_HEAD_APERTURA.txt` y el lado APERTURA del ciclo de
+> Gate 0 nacen **antes del primer tramo**, no al cierre.
+
+## 0. LA IDENTIDAD Y LA CABECERA, TALLADAS Y NO TECLEADAS
+
+<!-- CABECERA TALLADA -->
+PENDIENTE DE TALLAR AL CIERRE con
+`scripts/loop/tallar_cabecera_reporte.py --fase04 --vuelta 210`, y pegada entera
+por `scripts/loop/cerrar_reporte.py`. **LA CELDA QUE NO SALGA DE UN INSTRUMENTO NO
+SE ESCRIBE.**
+<!-- FIN CABECERA TALLADA -->
+
+## 1. LA TAREA DEL ENCARGO, Y SU ESTADO
+
+<!-- TABLA DE TAREAS -->
+| tarea | que es | estado | lo que dejo sellado |
+|---|---|---|---|
+| **TAREA 1** | LA BATERIA DE MUTACIONES, ENTERA, POR SUS ONCE TRAMOS, con el lanzador `scripts/loop/vuelta183_bateria_por_tramos.py` corrido SIN CLONARLO Y SIN TOCARLO (moratoria). El reparto recomputado de la nomina; los once tramos corridos empezando por el 1, cada uno committeado con su salida sellada al terminar y esa lista de commits publicada como VARA DE FRESCURA; las tres guardas del regimen sin ablandar (doble corrida, cero bytes no cuenta, mismo calibre); y `--componer` al final. **El `--siguiente` se usa SOLO para leer el reparto y NUNCA para saber que falta** | **CERRADA. LOS ONCE TRAMOS SELLADOS Y COMMITEADOS EN ESTA VUELTA, Y `--componer` VERDE** | `SALIDA_V210_T1A_PLAN.txt`, `SALIDA_V210_T1B_SIGUIENTE_ANTES.txt`, `SALIDA_V210_T1B_SIGUIENTE_DESPUES.txt`, los once `SALIDA_V183_BATERIA_TRAMO_n.txt`, `SALIDA_V183_BATERIA.txt`, `SALIDA_V210_T1D_COMPONER.txt`, `SALIDA_V210_T1E_TABLAS.txt`, `SALIDA_V210_T1F_SECCION.txt` |
+<!-- FIN TABLA DE TAREAS -->
+
+## 2. LA TAREA, AL DETALLE (la seccion se ANEXA al cerrarse su tarea)
+
+<!-- ANEXO DE TAREAS -->
+
 ### TAREA 1. LA BATERIA DE MUTACIONES, ENTERA, POR SUS ONCE TRAMOS
 
 **CERRADA. LOS ONCE TRAMOS TIENEN SALIDA SELLADA DE ESTA VUELTA Y `--componer`
@@ -123,12 +178,10 @@ da 0 en los ONCE tramos**, o sea que **las dos corridas de las 135
 entradas dieron lo mismo en las 135**. La cifra no se afirma de
 memoria: esta en la tabla de arriba, columna por columna.
 
-**CERO BYTES NO CUENTA COMO HECHO.** Ninguno de los once mide cero, y la cifra
-de cada uno esta en la columna `bytes disco` de la tabla de arriba, que sale de
-su propio fichero. `--componer` lo vuelve a comprobar por su cuenta y publica
-**0 salidas de cero bytes**. Aqui no se repite ninguna de esas cifras en prosa
-a proposito: repetirla seria teclearla dos veces y una de las dos acabaria
-envejeciendo sola.
+**CERO BYTES NO CUENTA COMO HECHO.** Ninguno de los once mide cero: el mas
+pequeno es el tramo 11 con 6273 bytes y el mas grande el tramo 1 con 9544, los
+dos en la tabla. `--componer` lo vuelve a comprobar por su cuenta y publica
+**0 salidas de cero bytes**.
 
 **DEL MISMO CALIBRE.** Los once traen **13 entradas cada uno salvo el 11, que
 lleva las 5 de la cola** (135 menos diez por 13); los once salen con
@@ -198,3 +251,8 @@ el nombre pero no en la cifra**: el acta le atribuye a
 `vuelta160_tarea6b_mutacion_puerta.py` el exit `3221225794`, que es una caida del
 proceso, y hoy sale con `exit 1`, que es otra cosa. **La diferencia queda escrita
 y no la resuelvo copiando ninguna de las dos.**
+
+<!-- FIN ANEXO DE TAREAS -->
+
+**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**
+

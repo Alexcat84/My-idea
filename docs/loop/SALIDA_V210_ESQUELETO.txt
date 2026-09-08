@@ -1,44 +1,44 @@
 PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
-   docs/loop/REPORTE.md -> 57538 bytes
-   primera linea: # REPORTE DE LA VUELTA 209 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   vuelta LEIDA (no tecleada): 209
-   coincide con VUELTA menos 1 (209): SI
+   docs/loop/REPORTE.md -> 14675 bytes
+   primera linea: # REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 210
+   coincide con VUELTA menos 1 (209): NO
 
 PASO 0.b. LO QUE MI APERTURA MIDIO SOBRE EL ARCHIVO DEL REPORTE ANTERIOR
-   mi sello dice: CIFRA docs/loop/reportes/REPORTE_V209.md existe al entrar: NO
-   existe AHORA, tras el PASO 0 de archivado: SI
+   mi sello dice: CIFRA docs/loop/reportes/REPORTE_V210.md existe al entrar: NO
+   existe AHORA, tras el PASO 0 de archivado: NO
 
-PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (209)
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (210)
    PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
       el esqueleto va a PISAR docs/loop/REPORTE.md
-      archivar_reporte.py --vuelta 209 -> EXIT 0
+      archivar_reporte.py --vuelta 210 -> EXIT 0
          | ==============================================================================
-         | ARCHIVADOR DE REPORTES. Vuelta 209.
+         | ARCHIVADOR DE REPORTES. Vuelta 210.
          | El texto se lee de git, no del arbol de trabajo.
          | ==============================================================================
-         |   commit elegido solo (ultimo que toco la ruta): fb835d9c9e35ccc9cc6463830db03d1c39662bd9
-         |   asunto de ese commit: 2026-09-07 23:27:06 -0400	VUELTA 209, CIERRE: EL REPORTE QUEDA CERRADO CON SUS CUATRO PIEZAS Y LAS TRES TAREAS ENTREGADAS.
-         |   vuelta LEIDA de la cabecera del texto: 209
-         |   el destino docs/loop/reportes/REPORTE_V209.md YA EXISTE con contenido IDENTICO (sha256 b51520a8179e)
+         |   commit elegido solo (ultimo que toco la ruta): 8c9e67788162116efb0096f62e54ec7c6ffdffa7
+         |   asunto de ese commit: 2026-09-08 01:04:10 -0400	VUELTA 210, TAREA 1 CERRADA Y ANEXADA AL REPORTE AL CERRARSE, no al final de la vuelta.
+         |   vuelta LEIDA de la cabecera del texto: 210
+         |   ESCRITO: docs/loop/reportes/REPORTE_V210.md
          |   VERDE.
-         |      vuelta            209
-         |      commit de origen  fb835d9c9e35ccc9cc6463830db03d1c39662bd9
+         |      vuelta            210
+         |      commit de origen  8c9e67788162116efb0096f62e54ec7c6ffdffa7
          |      ruta de origen    docs/loop/REPORTE.md
-         |      destino           docs/loop/reportes/REPORTE_V209.md
-         |      bytes             57538
-         |      lineas            875
-         |      sha256 (LF)       b51520a8179e350956938fc273d90489a8244090fe1ce762b8e3c6ebaf0690ab
-      docs/loop/reportes/REPORTE_V209.md -> 57538 bytes, sha256 b51520a8179e3509
-      vuelta leida de la cabecera del archivo: 209
-      el reporte que se va a pisar -> 57538 bytes, sha256 b51520a8179e3509
+         |      destino           docs/loop/reportes/REPORTE_V210.md
+         |      bytes             14675
+         |      lineas            258
+         |      sha256 (LF)       96a06b38e3db345974dd0e41358d8c3de4b4ebe14e6bcca107ab4cc99c0ee33c
+      docs/loop/reportes/REPORTE_V210.md -> 14675 bytes, sha256 96a06b38e3db3459
+      vuelta leida de la cabecera del archivo: 210
+      el reporte que se va a pisar -> 14675 bytes, sha256 96a06b38e3db3459
       LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
       VERDE: el reporte anterior esta archivado y lo que se va a
       pisar esta guardado byte a byte. El esqueleto puede escribir.
 
 LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA (EJECUTOR.md 1):
    rama: pasada-unica
-   HEAD en el momento del esqueleto: e3d33e42f41167b24e35eacbb68eea0e14d1c7b4
-   asunto (primeros 90): ACTA DEL AUDITOR, VUELTA 209: LA VUELTA ENTREGO SUS TRES TAREAS Y TODA CIFRA REPRODUCE AL 
+   HEAD en el momento del esqueleto: d9bcee53a555e8d8cf8d37907ec86078396bbee6
+   asunto (primeros 90): VUELTA 210, CIERRE: el tallador de cabecera VERDE en modo --fase04, el HEAD de cierre sell
 
 LO QUE anexar_tarea_al_reporte.py EXIGE, COMPROBADO SOBRE LO COMPUESTO:
    marca <!-- TABLA DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
