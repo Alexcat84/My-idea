@@ -1,5 +1,5 @@
 LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
-docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador3_i694oqaz\lanzador_en_curso.txt
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador3_k2bw7upj\lanzador_en_curso.txt
 ==============================================================================
 TRAMO 3 DE 11, DE LA BATERIA DE LA VUELTA 183
 ==============================================================================
@@ -33,9 +33,9 @@ PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 3
 ******************************************************************************
 PASO 3. LA CORRIDA DEL TRAMO 3
 ******************************************************************************
-  inicio (UTC): 2026-09-07T13:50:26Z
+  inicio (UTC): 2026-09-08T04:10:51Z
   comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 3 --tamano-tramo 13
-  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo3_p1ldeqyc\tramo_en_curso.txt
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo3_fadio36s\tramo_en_curso.txt
   destino final: docs/loop/SALIDA_V183_BATERIA_TRAMO_3.txt
 
 ******************************************************************************
@@ -43,19 +43,23 @@ PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
         (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
 ******************************************************************************
   docs/loop/SALIDA_V183_BATERIA_TRAMO_3.txt
-  CIFRA bytes en disco: 7857
-  CIFRA bytes normalizado a LF: 7857
-  CIFRA lineas: 123
-  CIFRA sha256 (LF): 5156e936d0053599
+  CIFRA bytes en disco: 8053
+  CIFRA bytes normalizado a LF: 8053
+  CIFRA lineas: 125
+  CIFRA sha256 (LF): d3f221792242652e
   CIFRA exitcode del tramo: 1
-  CIFRA duracion en minutos: 12.9
-  inicio (UTC): 2026-09-07T13:50:26Z | fin (UTC): 2026-09-07T14:03:20Z
+  CIFRA duracion en minutos: 10.8
+  inicio (UTC): 2026-09-08T04:10:51Z | fin (UTC): 2026-09-08T04:21:39Z
 
 ******************************************************************************
 PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 3
 ******************************************************************************
-  CIFRA filas de `git diff --numstat -- dataset/`: 0
-  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+  CIFRA filas de `git diff --numstat -- dataset/`: 1
+  SUCIO AL ENTRAR. Los ficheros, NOMBRADOS POR GIT y no tecleados:
+      +72 -72  dataset/metadata/master_graph.json
+  `git checkout -- dataset/metadata/master_graph.json` -> exit 0
+  CIFRA filas DESPUES de restaurar (remedido, no supuesto): 0
+  RESTAURADO Y REMEDIDO: cero filas. El tramo puede empezar.
 
 EL TRAMO 3 SALE EN ROJO, exitcode 1, Y AQUI SE PARA.
 No se re-corre: la guarda que muerde es informacion, no un estorbo
