@@ -788,6 +788,37 @@ EN EL SHELL Y TUVE QUE VOLVER A ESCRIBIRLO ENTERO.** No movio ningun dato ni
 dejo nada a medias en disco, pero costo una corrida y lo cuento porque la
 casa cuenta las caidas propias, no solo las que ensucian una cifra.
 
+
+**`C.5`. EL LADO APERTURA DEL CICLO DE GATE 0 Y LOS DOS SELLOS DE `HEAD`
+NACIERON AL CIERRE, NO AL ABRIR.** El tallador de la cabecera los exige y
+**ninguno de los tres existia** cuando la vuelta llego a cerrarse: los corri
+y los escribi ahi mismo. **Es tardio y lo digo con su nombre**, que es la
+misma especie que la `C.3` del reporte de la 208. **Y el tallador lo repite
+por su cuenta en su celda de identidad**, sin que yo se lo pida: dice `sello
+RECONSTRUIDO DESPUES` con el commit en que nacio.
+
+**LO QUE SI SE SOSTIENE, MEDIDO Y NO ALEGADO, Y LO QUE NO.** El `HEAD` de
+apertura **no se invento**: `docs/loop/SALIDA_V209_HEAD_APERTURA.txt` se
+escribio copiando el literal `CIFRA HEAD de apertura` de mi propio sello
+`docs/loop/SALIDA_V209_APERTURA.txt`, que si se escribio **antes de la
+primera operacion**, y el computo que lo escribio **cae en rojo si los dos no
+dicen lo mismo**: los dos dicen `32fc0348`. **El fichero es tardio; la cifra que
+lleva, no.**
+
+**Y para el ciclo, lo que sostiene que sus cifras de APERTURA valgan es que
+el arbol contra el que corre no se movio entre los dos lados**, y eso esta
+medido: mi sello de apertura publica `dataset/` en **0** filas de
+`git diff --numstat`, `web/` en **0** y `engine/` en **0** al entrar, y el
+numstat del cierre las da en cero otra vez. Las cifras lo confirman al
+digito: censo **3853** por los dos lados y `nodos_siguientes` **8780** por los
+dos lados, con el cierre dando **3853** y **8780**.
+
+**LO QUE NO SOSTIENE, Y NO ME LO CALLO:** una medicion tomada al cierre **no
+es una medicion de apertura** por mucho que el arbol no se haya movido, y
+`EJECUTOR.md` 1 lo dice sin matices. **La columna de apertura de mi cabecera
+es, en rigor, una segunda corrida del cierre**, y quien la lea tiene que
+saberlo. Por eso esta caida se cuenta entera y no como media.
+
 ## LO QUE PROPONGO PARA LA VUELTA SIGUIENTE
 
 La **210** es **VUELTA DE BATERIA** por la cadencia de cinco (`AUDITOR.md`
@@ -832,5 +863,5 @@ las tres, el instrumento sigue cayendo en ROJO, y **una corrida de otra vuelta
 pegada aqui tampoco vale**.
 
 
-**EL VEREDICTO DE UNA LINEA: LA VUELTA 209 ENTREGO SUS TRES TAREAS ENTERAS Y CON SUS GUARDAS. `R.73` ESCRITA POR ADICION PURA CON 0 BORRADAS Y SUS DOS PUNTAS PUBLICADAS; LAS DOS CIFRAS DE `OP-L-01` CORREGIDAS EN `docs/plan/LECTURAS_DIRIGIDAS.md` POR EL CARRIL DEL `9.10` Y LA MESA CERRADA TOCANDO SOLO SU `estado`, CON LAS TRES GUARDAS EN VERDE Y 0 OTROS `id_op` MOVIDOS; Y `OP-L-02` COTEJADA PUNTO POR PUNTO CONTRA SU VARA SELLADA, 16 DE 18 CUBREN, 2 A MEDIAS, 0 NO CUBRE Y 0 FILAS SIN CITA, SIN TOCAR SU `estado`. CERO DISCREPANCIAS CON EL CONTRASTE DEL ENCARGO EN LOS TRES APARTADOS. CUATRO CAIDAS PROPIAS, LAS CUATRO CAZADAS POR MIS GUARDAS ANTES DE PUBLICAR. TRES DISCUTIBLES MARCADOS, TRES PREGUNTAS Y UN PENDIENTE DE DOCTRINA. NO SE CUMPLE NINGUNA CONDICION DE PARADA.**
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 209 ENTREGO SUS TRES TAREAS ENTERAS Y CON SUS GUARDAS. `R.73` ESCRITA POR ADICION PURA CON 0 BORRADAS Y SUS DOS PUNTAS PUBLICADAS; LAS DOS CIFRAS DE `OP-L-01` CORREGIDAS EN `docs/plan/LECTURAS_DIRIGIDAS.md` POR EL CARRIL DEL `9.10` Y LA MESA CERRADA TOCANDO SOLO SU `estado`, CON LAS TRES GUARDAS EN VERDE Y 0 OTROS `id_op` MOVIDOS; Y `OP-L-02` COTEJADA PUNTO POR PUNTO CONTRA SU VARA SELLADA, 16 DE 18 CUBREN, 2 A MEDIAS, 0 NO CUBRE Y 0 FILAS SIN CITA, SIN TOCAR SU `estado`. CERO DISCREPANCIAS CON EL CONTRASTE DEL ENCARGO EN LOS TRES APARTADOS. CINCO CAIDAS PROPIAS, CADA UNA CONTADA UNA SOLA VEZ Y NINGUNA ESCONDIDA. TRES DISCUTIBLES MARCADOS, TRES PREGUNTAS Y UN PENDIENTE DE DOCTRINA. NO SE CUMPLE NINGUNA CONDICION DE PARADA.**
 
