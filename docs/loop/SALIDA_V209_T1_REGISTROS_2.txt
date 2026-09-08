@@ -1,0 +1,228 @@
+==============================================================================
+VUELTA 209, TAREA 1: R.73 PARA EL ACTA 208
+==============================================================================
+
+0) LA PRUEBA POR MUTACION DEL LECTOR IMPORTADO, ANTES DE ESCRIBIR NADA.
+   Vuelve a correr aqui en vez de heredar su verde de otra corrida.
+   LA PLANTILLA HEREDADA CORRE AL LADO, ENTERA Y SIN TOCAR, que es lo
+   unico que convierte 'hacia falta ensancharla' en una medicion:
+   negrita CON comillas, la forma de la 184                 ancha 2  (esp 2 ) vieja 2  (esp 2 ) defecto 2  VERDE
+   negrita SIN comillas, la forma de las adjudicaciones vie ancha 3  (esp 3 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   titular markdown, la forma de los hallazgos viejos       ancha 2  (esp 2 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra con separador de millar NO es una clave         ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la cifra de bytes con millar NO es una clave             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la numeracion CORTA en el primer hueco                   ancha 1  (esp 1 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   una clave citada EN MITAD de la prosa no cuenta          ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   seccion vacia da cero por las dos plantillas             ancha 0  (esp 0 ) vieja 0  (esp 0 ) defecto 0  VERDE
+   la 10 y siguientes tambien entran, que es la 174         ancha 10 (esp 10) vieja 0  (esp 0 ) defecto 0  VERDE
+   CIFRA casos donde la ancha y la heredada DISCREPAN: 4
+   LA TERCERA COLUMNA ES LA QUE PRUEBA QUE NINGUN LLAMANTE VIEJO SE
+   MUEVE: `defecto` es la funcion llamada SIN el parametro nuevo, y en
+   los 9 casos da EXACTAMENTE lo mismo que la plantilla heredada.
+   LA SEGUNDA PASADA MUTA EL ESPERADO Y EXIGE QUE CADA CASO CAIGA:
+   CIFRA casos que CAEN con el esperado mutado: 9 de 9
+   CIFRA casos: 9 | verdes: 9 | rojos: 0
+   VEREDICTO DE LA PRUEBA: VERDE
+
+1.a) EL CRECIMIENTO DEL ACTA, REMEDIDO CON MIS COMANDOS
+   commit que toco el acta, leido de git log: 32fc034831256806d0749547efb0e8869d6f44ad
+   asunto (primeros 110): ACTA DEL AUDITOR, VUELTA 208: LA VUELTA CUMPLIO SU ENCARGO ENTERO Y TODA CIFRA REPRODUCE AL DIGITO CON MIS COM
+   EL PADRE SE PIDE CON ~1 Y NUNCA CON EL CIRCUNFLEJO (aviso vigente).
+   padre: 174717b809400c7d766c298bd79790956238a917
+   los dos blobs son IDENTICOS: NO (si lo fueran, la resta seria un cero falso y no se publicaria)
+   ACTA ANTES  (32fc0348~1): 4820516 bytes en disco y 4820516 normalizado a LF, sha256 disco 0ca61c2ee053dd0d y sha256 LF 0ca61c2ee053dd0d
+   ACTA DESPUES (32fc0348): 4849108 bytes en disco y 4849108 normalizado a LF, sha256 disco 2abc86822340d1bd y sha256 LF 2abc86822340d1bd
+   CIFRA crecimiento en bytes de disco: 28592
+   CIFRA crecimiento en bytes normalizado a LF: 28592
+   git diff --numstat 32fc0348~1 32fc0348 -- docs/loop/ACTA_AUDITOR.md : 443	0	docs/loop/ACTA_AUDITOR.md
+   CIFRA lineas anadidas al acta: 443 | CIFRA lineas borradas: 0
+   ACTA EN EL ARBOL DE HOY: 4849108 bytes en disco y 4849108 normalizado a LF, sha256 LF 2abc86822340d1bd
+   CIFRA lineas del acta por split(NL): 73525 | por wc -l (sin la ultima vacia): 73524
+   CIFRA linea en que abre la seccion del acta 208: 73083
+
+   EL COTEJO CONTRA EL CONTRASTE DEL ENCARGO (contraste, NO fuente):
+      acta ANTES, bytes                mio 4820516    contraste 4820516    CALZA
+      acta DESPUES, bytes en disco     mio 4849108    contraste 4849108    CALZA
+      acta DESPUES, bytes LF           mio 4849108    contraste 4849108    CALZA
+      linea en que abre la seccion     mio 73083      contraste 73083      CALZA
+      sha256 disco del acta de hoy     mio 2abc86822340d1bd contraste 2abc86822340d1bd CALZA
+      sha256 LF del acta de hoy        mio 2abc86822340d1bd contraste 2abc86822340d1bd CALZA
+   CIFRA discrepancias con el contraste del encargo en el 1.a: 0
+
+A) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/PENDIENTES.md: disco 1190145 bytes | LF 1190145 bytes | sha256 LF 772f6167da46fba8
+   CIFRA lineas por split(NL): 17347
+   contraste del encargo: 1180091 por las dos y sha256 9cf019a1c9a856f0
+   CALZA: NO, Y LA DISCREPANCIA SE DECLARA
+
+B) EL NUMERO, COMPUTADO Y NO TECLEADO, RECOMPUTANDO LA SERIE AHORA
+   CIFRA entradas de la serie ANTES: 65 (64 en docs/PENDIENTES.md y 1 en docs/plan/CORRECCIONES_A_APLICAR.md)
+   CIFRA colisiones ANTES: 0
+   CIFRA huecos ANTES: 0
+   MAYOR ESCRITA: R.73 | SIGUIENTE LIBRE: R.74
+   contraste del encargo: 64 (63 y 1), 0 colisiones, 0 huecos, mayor R.72,
+   siguiente libre R.73
+
+C) LA VARA DEL `4.1` DEL ACTA 202, CORRIDA POR MI SOBRE LAS DOS ACTAS
+   EL LECTOR VA IMPORTADO Y SIN TOCARLE UNA LINEA: `vara_sobre()` viene de
+   `_v208_t1_registros.py` y `medir_acta()` de `_v203_reparto_de_actas_
+   viejas.py`. Si un numeral no sale, SE DECLARA NO COMPUTABLE con su
+   motivo y NO se ensancha el lector (moratoria de `AUDITOR.md` 6.3).
+   --- LA VARA SOBRE EL ACTA 207 ---
+   docs/loop/ACTA_AUDITOR.md: disco 4849108 bytes | LF 4849108 bytes
+   CUERPO ACOTADO del acta 207: lineas 72641 a 73082, 442 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 11
+      seccion 0  linea 72648  lineas 72648 a 72673  MI TAREA BLOQUEANTE: LA SEPTIMA DE LA MISMA FAMILIA, Y VA PRIMERA
+      seccion 1  linea 72674  lineas 72674 a 72681  EL VEREDICTO EN UNA LINEA
+      seccion 2  linea 72682  lineas 72682 a 72750  LO QUE MEDI YO, CON MIS COMANDOS Y EN ESTA VUELTA
+      seccion 3  linea 72751  lineas 72751 a 72791  LA RELECTURA CIEGA: 38 DE 40
+      seccion 4  linea 72792  lineas 72792 a 72823  LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA
+      seccion 5  linea 72824  lineas 72824 a 72855  LA MESA `OP-L-01`, MEDIDA POR MI CONTRA SU PROPIO CRITERIO DE HECHO
+      seccion 6  linea 72856  lineas 72856 a 72938  LAS ADJUDICACIONES
+      seccion 7  linea 72939  lineas 72939 a 72999  LOS HALLAZGOS
+      seccion 8  linea 73000  lineas 73000 a 73025  LO QUE SUBE AL FUNDADOR, SIN PARADA Y SIN DECIDIRLO YO
+      seccion 9  linea 73026  lineas 73026 a 73063  MIS CAIDAS PROPIAS
+      seccion 10 linea 73064  lineas 73064 a 73082  CIERRE
+   ADJUDICACIONES: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 6, linea 72856, titulo literal: 'LAS ADJUDICACIONES'
+      claves `6.M` POR LA VARA ANCHA: 8 (6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8)
+      claves `6.M` POR LA PLANTILLA HEREDADA, publicada al lado: 8 (6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8)
+   HALLAZGOS: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 7, linea 72939, titulo literal: 'LOS HALLAZGOS'
+      claves `7.M` POR LA VARA ANCHA: 5 (7.1, 7.2, 7.3, 7.4, 7.5)
+      claves `7.M` POR LA PLANTILLA HEREDADA, publicada al lado: 5 (7.1, 7.2, 7.3, 7.4, 7.5)
+   CAIDAS DEL AUDITOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 9, linea 73026, titulo literal: 'MIS CAIDAS PROPIAS'
+      claves `9.M` por la vara: 4 (9.1, 9.2, 9.3, 9.4)
+      claves `CAIDA n` de la forma vieja: 0 (ninguna)
+      leads en negrita que abren con CAIDA o AMAGO: 0 (ninguno)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CAIDAS DEL EJECUTOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 4, linea 72792, titulo literal: 'LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA'
+      claves `4.M` por la vara: 1 (4.1)
+      claves `CAIDA n` de la forma vieja: 0 (ninguna)
+      leads en negrita que abren con CAIDA o AMAGO: 0 (ninguno)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 1
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 8
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 5
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 10, auditor 0, huerfanas 1
+   docs/loop/reportes/REPORTE_V207.md existe: SI
+   bytes medidos con os.path.getsize: 51699
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 2 (P.2, P.3)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 2, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201)
+   CIFRA numerales COMPUTABLES sobre el acta 207: 4 de 4
+      ADJUDICACIONES         8 -> 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8
+      HALLAZGOS              5 -> 7.1, 7.2, 7.3, 7.4, 7.5
+      CAIDAS DEL AUDITOR     4 -> 9.1, 9.2, 9.3, 9.4
+      CAIDAS DEL EJECUTOR    1 -> 4.1
+
+   --- LA VARA SOBRE EL ACTA 208 ---
+   docs/loop/ACTA_AUDITOR.md: disco 4849108 bytes | LF 4849108 bytes
+   CUERPO ACOTADO del acta 208: lineas 73083 a 73525, 443 lineas
+   CIFRA secciones `## N. TITULO` del cuerpo: 11
+      seccion 0  linea 73089  lineas 73089 a 73112  MI TAREA BLOQUEANTE: LA NOVENA DE LA MISMA FAMILIA, Y ABRE EL ACTA
+      seccion 1  linea 73113  lineas 73113 a 73121  EL VEREDICTO EN UNA LINEA
+      seccion 2  linea 73122  lineas 73122 a 73193  LO QUE MEDI YO, CON MIS COMANDOS Y EN ESTA VUELTA
+      seccion 3  linea 73194  lineas 73194 a 73232  LA RELECTURA CIEGA: 38 DE 40
+      seccion 4  linea 73233  lineas 73233 a 73281  LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA
+      seccion 5  linea 73282  lineas 73282 a 73306  LAS DOS MESAS, MEDIDAS POR MI CONTRA SU PROPIO CRITERIO DE HECHO
+      seccion 6  linea 73307  lineas 73307 a 73415  LAS ADJUDICACIONES
+      seccion 7  linea 73416  lineas 73416 a 73451  LOS HALLAZGOS
+      seccion 8  linea 73452  lineas 73452 a 73474  LO QUE SUBE AL FUNDADOR, SIN PARADA Y SIN DECIDIRLO YO
+      seccion 9  linea 73475  lineas 73475 a 73508  MIS CAIDAS PROPIAS
+      seccion 10 linea 73509  lineas 73509 a 73525  CIERRE
+   ADJUDICACIONES: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 6, linea 73307, titulo literal: 'LAS ADJUDICACIONES'
+      claves `6.M` POR LA VARA ANCHA: 10 (6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 6.10)
+      claves `6.M` POR LA PLANTILLA HEREDADA, publicada al lado: 10 (6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 6.10)
+   HALLAZGOS: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 7, linea 73416, titulo literal: 'LOS HALLAZGOS'
+      claves `7.M` POR LA VARA ANCHA: 3 (7.1, 7.2, 7.3)
+      claves `7.M` POR LA PLANTILLA HEREDADA, publicada al lado: 3 (7.1, 7.2, 7.3)
+   CAIDAS DEL AUDITOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 9, linea 73475, titulo literal: 'MIS CAIDAS PROPIAS'
+      claves `9.M` por la vara: 4 (9.1, 9.2, 9.3, 9.4)
+      claves `CAIDA n` de la forma vieja: 0 (ninguna)
+      leads en negrita que abren con CAIDA o AMAGO: 0 (ninguno)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CAIDAS DEL EJECUTOR: 1 seccion(es) cuyo TITULO lo nombra
+      -> seccion 4, linea 73233, titulo literal: 'LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA'
+      claves `4.M` por la vara: 1 (4.1)
+      claves `CAIDA n` de la forma vieja: 0 (ninguna)
+      leads en negrita que abren con CAIDA o AMAGO: 0 (ninguno)
+      `R94.caidas_propias_entrecomilladas()` heredado: 0
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '4.') -> 1
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '5.') -> 2
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '6.') -> 10
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo '7.') -> 3
+   CONTRASTE HEREDADO R84.claves_entrecomilladas(prefijo 'C.A') -> 0
+   CONTRASTE HEREDADO R92.caidas_por_lead_heredado() -> ejecutor 0, auditor 0, huerfanas 8
+   docs/loop/reportes/REPORTE_V208.md existe: SI
+   bytes medidos con os.path.getsize: 55798
+   CIFRA claves `P.n` nombradas en los titulos de las adjudicaciones: 3 (P.1, P.2, P.3)
+   CIFRA claves `P.n` que el reporte llama pregunta: 0 (ninguna)  [la seccion de PREGUNTAS aparece 0 veces]
+   CIFRA preguntas del numeral: 3, por la via: NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201)
+   CIFRA numerales COMPUTABLES sobre el acta 208: 4 de 4
+      ADJUDICACIONES         10 -> 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 6.10
+      HALLAZGOS              3 -> 7.1, 7.2, 7.3
+      CAIDAS DEL AUDITOR     4 -> 9.1, 9.2, 9.3, 9.4
+      CAIDAS DEL EJECUTOR    1 -> 4.1
+
+C.1) LAS DIEZ ADJUDICACIONES, POR SU NUMERO Y CON SU LINEA MEDIDA
+   CIFRA adjudicaciones medidas: 10
+      6.1  linea 73309  cierra: el CHOQUE DE NUEVE ACTAS entre el remedio del acta 205 y `AUDITOR.md` 1 | **`6.1` EL REMEDIO DEL ACTA 205 SE AFINA, Y NO ES DOCTRINA NUEVA NI TOCA
+      6.2  linea 73329  cierra: `P.1` del reporte de la 208                                    | **`6.2` LA `P.1` SE ADJUDICA: LA `V.3` DE `OP-L-01` CUBRE, Y NO POR GENEROSIDAD.
+      6.3  linea 73336  cierra: (ninguno)                                                      | **`6.3` `OP-L-01` NO SE CIERRA AUN, Y EL MOTIVO ES OTRO Y ESTA MEDIDO EN LA `5.2
+      6.4  linea 73344  cierra: `P.2` del reporte de la 208                                    | **`6.4` LA `P.2` SE ADJUDICA: `OP-L-03` SE CIERRA, Y LAS DOS CUENTAS VAN JUNTAS.
+      6.5  linea 73359  cierra: `P.3` del reporte de la 208                                    | **`6.5` LA `P.3` SE CONTESTA SIN TOCAR NINGUN LECTOR.** El instrumento sellado d
+      6.6  linea 73371  cierra: `PD.1` del reporte de la 208                                   | **`6.6` LA `PD.1` SE ADJUDICA SIN DOCTRINA NUEVA: MANDA LA CONVENCION DEL CORTE 
+      6.7  linea 73381  cierra: los TRES DISCUTIBLES del reporte de la 208, los tres ADMITIDOS | **`6.7` LOS TRES DISCUTIBLES QUEDAN ADMITIDOS, Y EL MARCADO FUNCIONO EN LOS TRES
+      6.8  linea 73400  cierra: (ninguno)                                                      | **`6.8` EL TOPE SIGUE EN CINCO Y LE PONGO TRES.** El disparador de `AUDITOR.md` 
+      6.9  linea 73408  cierra: (ninguno)                                                      | **`6.9` LA MORATORIA SE RESPETO Y LO MIDO YO: 19 de 19 CON PREFIJO, 0 SIN EL**, 
+      6.10 linea 73412  cierra: (ninguno)                                                      | **`6.10` LA BATERIA NO CORRE EN LA 209.** Cadencia de cinco (`AUDITOR.md` 6.1): 
+   CIFRA adjudicaciones que el encargo dice que cierran pendiente: 6
+   CIFRA de esas que NO estan entre las medidas: 0 (ninguna)
+
+D) EL TITULO DE LA ENTRADA, Y EL CERO FALSO QUE NO SE PUBLICA
+   TITULO CRUDO, publicado como contraste y NO usado: Registro de las 10 adjudicaciones numeradas, los 3 hallazgos, las 3 preguntas contestadas, las 0 caidas propias del auditor, las 0 caidas del ejecutor del acta de la vuelta 208, computados con LA VARA DEL `4.1` DEL ACTA 202
+   LAS DOS CUENTAS DE CADA CAIDA, JUNTAS Y SIN ELEGIR EN SILENCIO:
+      caidas del auditor     por `CAIDA n`: 0 | por `N.M` (la forma de esta acta): 4
+      caidas del ejecutor    por `CAIDA n`: 0 | por `N.M` (la forma de esta acta): 1
+   TITULO ESCRITO: Registro de las 10 adjudicaciones numeradas, los 3 hallazgos, las 3 preguntas contestadas, las 4 caidas propias del auditor, la 1 caida del ejecutor del acta de la vuelta 208, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+E) LA SEDE Y LA IDEMPOTENCIA
+   la entrada del acta 208 o el numero R.74 YA ESTAN: SI
+   CIFRA bytes de la entrada compuesta: 10065
+   CIFRA lineas de la entrada compuesta: 166
+   CIFRA guiones largos en la entrada: 0 | guiones medios: 0
+   NO SE ESCRIBE: la entrada ya estaba. IDEMPOTENTE.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/PENDIENTES.md al salir: disco 1190145 bytes | LF 1190145 bytes | sha256 LF 772f6167da46fba8
+   CIFRA crecimiento en bytes de disco: 0
+   CIFRA crecimiento en bytes normalizado a LF: 0
+   CIFRA lineas al salir: 17347 (al entrar 17347, crecimiento 0)
+   CIFRA entradas escritas por esta corrida: 0
+
+LA GUARDA DEL TEXTO VIEJO: NI UNA LINEA BORRADA NI UNA CAMBIADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (la adicion solo puede ANADIR: si esta cifra no es 0, es ROJO)
+
+LA SERIE AL CIERRE, RECOMPUTADA Y NO HEREDADA (LA SEGUNDA PUNTA)
+   CIFRA entradas de la serie DESPUES: 65 (64 en docs/PENDIENTES.md y 1 en docs/plan/CORRECCIONES_A_APLICAR.md)
+   CIFRA colisiones DESPUES: 0
+   CIFRA huecos DESPUES: 0
+   MAYOR ESCRITA DESPUES: R.73 | SIGUIENTE LIBRE DESPUES: R.74
+
+LA DEUDA DE REGISTROS, REMEDIDA AL CIERRE Y ENSANCHADA HASTA LA 208
+   CIFRA actas de la 173 a la 208 SIN entrada propia: 5
+   cuales: 201, 202, 203, 204, 205
+
+FIN

@@ -17177,3 +17177,170 @@ y **1** huerfanas sobre este mismo cuerpo. **Corre sobre el CUERPO ENTERO y
 reparte por la negrita que atribuye, no por la seccion: se publica como
 contraste y no como numeral.**
 
+
+## R.73. Registro de las 10 adjudicaciones numeradas, los 3 hallazgos, las 3 preguntas contestadas, las 4 caidas propias del auditor, la 1 caida del ejecutor del acta de la vuelta 208, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+(Acta del auditor, vuelta 208; escrito en la vuelta 209, TAREA 1.)
+
+Por adicion, como `R.21` a `R.72`. **Corte de todas las cifras de esta
+entrada: 7 sep 2026.** El numero de esta entrada NO esta tecleado: lo computa
+`scripts/loop/serie_de_registros.py` recomputando la serie de sus DOS sedes,
+corrido AL ENTRAR y AL SALIR. Salida:
+`docs/loop/SALIDA_V209_T1_REGISTROS.txt`.
+
+**NINGUN LECTOR NUEVO PERMANENTE SE ESCRIBIO PARA ESTA ENTRADA Y NINGUNO SE
+CLONO.** El computo vive en `scripts/loop/_v209_t1_registros.py`, con prefijo
+de guion bajo, **fuera del censo y fuera de la nomina**, y IMPORTA
+`scripts/loop/_v203_reparto_de_actas_viejas.py` (la vara del `4.1` del acta
+202), `serie_de_registros.py`, `scripts/loop/_v206_t2_registros.py` y
+`scripts/loop/_v208_t1_registros.py`, del que se reutiliza `vara_sobre()`
+**tal cual**. **IMPORTAR NO ES CLONAR** (acta 206 `6.5`). Lo unico propio de
+este computo es la PROSA de esta entrada, que es texto y no un lector.
+
+### EL CRECIMIENTO DEL ACTA, REMEDIDO Y NO COPIADO
+
+El encargo de la vuelta 209 da estas cifras **como CONTRASTE y no como
+fuente** (`EJECUTOR.md` 2). Se han vuelto a medir con `git show`,
+`git diff --numstat` y las dos convenciones de la casa.
+
+| que se mide | medido en la vuelta 209 | contraste del encargo | calza |
+|---|---:|---:|---|
+| acta ANTES (blob de `32fc0348~1`), bytes | **4820516** | 4820516 | SI |
+| acta DESPUES (blob de `32fc0348`), bytes en disco | **4849108** | 4849108 | SI |
+| acta DESPUES, bytes normalizado a LF | **4849108** | 4849108 | SI |
+| `sha256` disco del acta | **`2abc86822340d1bd`** | `2abc86822340d1bd` | SI |
+| `sha256` LF del acta | **`2abc86822340d1bd`** | `2abc86822340d1bd` | SI |
+| linea en que abre la seccion del acta 208 | **73083** | 73083 | SI |
+
+**CIFRA crecimiento del acta: 28592 bytes en disco y 28592 bytes normalizado a
+LF**, con **443** lineas anadidas y **0** borradas segun
+`git diff --numstat 32fc0348~1 32fc0348`. **El acta solo crece por anexion y su cero de
+borradas lo prueba.**
+
+**EL PADRE SE PIDIO CON `~1` Y NUNCA CON EL CIRCUNFLEJO**, y ademas se
+comprobo ANTES DE RESTAR que los dos blobs son DISTINTOS: una resta entre dos
+valores iguales daria un cero que no es una medicion. **CIFRA discrepancias
+con el contraste del encargo en este apartado: 0.**
+
+### LAS 10 ADJUDICACIONES DEL ACTA 208, UNA POR UNA Y CON SU LINEA MEDIDA
+
+**SEIS DE LAS DIEZ CIERRAN PENDIENTE, Y SE DICE AL REGISTRARLAS**, que es lo
+que el encargo pide: la `6.1` cierra el choque de nueve actas entre el remedio
+del acta 205 y `AUDITOR.md` 1, la `6.2` la `P.1`, la `6.4` la `P.2`, la `6.5`
+la `P.3`, la `6.6` la `PD.1` y la `6.7` los tres discutibles, los tres
+ADMITIDOS. **Las cuatro restantes (`6.3`, `6.8`, `6.9` y `6.10`) no cierran
+ningun pendiente numerado**, y eso se dice en vez de inflar la cuenta.
+
+| clave | que pendiente cierra | pregunta que su TITULO nombra | linea | titulo, literal del acta |
+|---|---|---|---:|---|
+| `6.1` | el CHOQUE DE NUEVE ACTAS entre el remedio del acta 205 y `AUDITOR.md` 1 | (ninguna) | 73309 | `6.1` EL REMEDIO DEL ACTA 205 SE AFINA, Y NO ES DOCTRINA NUEVA NI TOCA |
+| `6.2` | `P.1` del reporte de la 208 | `P.1` | 73329 | `6.2` LA `P.1` SE ADJUDICA: LA `V.3` DE `OP-L-01` CUBRE, Y NO POR GENEROSIDAD. |
+| `6.3` | (ninguno) | (ninguna) | 73336 | `6.3` `OP-L-01` NO SE CIERRA AUN, Y EL MOTIVO ES OTRO Y ESTA MEDIDO EN LA `5.2`. |
+| `6.4` | `P.2` del reporte de la 208 | `P.2` | 73344 | `6.4` LA `P.2` SE ADJUDICA: `OP-L-03` SE CIERRA, Y LAS DOS CUENTAS VAN JUNTAS. |
+| `6.5` | `P.3` del reporte de la 208 | `P.3` | 73359 | `6.5` LA `P.3` SE CONTESTA SIN TOCAR NINGUN LECTOR.** El instrumento sellado de la |
+| `6.6` | `PD.1` del reporte de la 208 | `PD.1` | 73371 | `6.6` LA `PD.1` SE ADJUDICA SIN DOCTRINA NUEVA: MANDA LA CONVENCION DEL CORTE DE |
+| `6.7` | los TRES DISCUTIBLES del reporte de la 208, los tres ADMITIDOS | (ninguna) | 73381 | `6.7` LOS TRES DISCUTIBLES QUEDAN ADMITIDOS, Y EL MARCADO FUNCIONO EN LOS TRES. |
+| `6.8` | (ninguno) | (ninguna) | 73400 | `6.8` EL TOPE SIGUE EN CINCO Y LE PONGO TRES.** El disparador de `AUDITOR.md` 6.2 |
+| `6.9` | (ninguno) | (ninguna) | 73408 | `6.9` LA MORATORIA SE RESPETO Y LO MIDO YO: 19 de 19 CON PREFIJO, 0 SIN EL**, y la |
+| `6.10` | (ninguno) | (ninguna) | 73412 | `6.10` LA BATERIA NO CORRE EN LA 209.** Cadencia de cinco (`AUDITOR.md` 6.1): la |
+
+**CIFRA adjudicaciones medidas por la vara: 10. CIFRA de las que cierran
+pendiente: 6.**
+
+### LOS CUATRO NUMERALES, POR LA VARA Y SIN RETOCAR
+
+| numeral | seccion que la VARA elige por su TITULO | numero | linea | claves | cuantas |
+|---|---|---:|---:|---|---:|
+| adjudicaciones | LAS ADJUDICACIONES | 6 | 73307 | `6.1`, `6.2`, `6.3`, `6.4`, `6.5`, `6.6`, `6.7`, `6.8`, `6.9`, `6.10` | **10** |
+| hallazgos | LOS HALLAZGOS | 7 | 73416 | `7.1`, `7.2`, `7.3` | **3** |
+| caidas del auditor | MIS CAIDAS PROPIAS | 9 | 73475 | `9.1`, `9.2`, `9.3`, `9.4` | **4** |
+| caidas del ejecutor | LAS CAIDAS DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA | 4 | 73233 | `4.1` | **1** |
+
+**CIFRA numerales COMPUTABLES de 4 sobre el acta 208: 4.**
+
+### LA MISMA VARA SOBRE EL ACTA 207, CORRIDA POR MI Y NO COPIADA
+
+| acta | numerales COMPUTABLES de 4, medidos en esta vuelta |
+|---|---:|
+| **207** | **4** |
+| **208** | **4** |
+
+### LOS HALLAZGOS, LAS CAIDAS PROPIAS DEL AUDITOR Y LA DEL EJECUTOR
+
+| clave | numeral | linea | titulo, literal del acta |
+|---|---|---:|---|
+| `7.1` | hallazgos | 73418 | `7.1` EL FICHERO DEL TURNO ME LLEGO CON LA BITACORA DEL TURNO ANTERIOR PUESTA, Y |
+| `7.2` | hallazgos | 73436 | `7.2` EL INSTRUMENTO DEL CIERRE NO PUEDE CONTARSE A SI MISMO, Y ESO NO ESTA DICHO |
+| `7.3` | hallazgos | 73444 | `7.3` MI VARA DE LA CIEGA SOLO REPARTIA ENTRE `A` Y `D`, Y EL ARCHIVO USA |
+| `9.1` | caidas del auditor | 73477 | `9.1` (`C.1`). MEDI `docs/loop/` EN MI PRIMER COMANDO, Y ES LA NOVENA DE SU |
+| `9.2` | caidas del auditor | 73486 | `9.2` (`C.2`). MI PATRON DE CABECERAS `LD` ERA MAS ANCHO QUE LA AFIRMACION QUE |
+| `9.3` | caidas del auditor | 73493 | `9.3` (`C.3`). CASI PUBLICO QUE EL GRAFO NO TIENE ALIAS.** Busque el campo como |
+| `9.4` | caidas del auditor | 73502 | `9.4` (`C.4`). MI VARA DE LA CIEGA NO TENIA SITIO PARA LA `B`.** Va entera en la |
+| `4.1` | caidas del ejecutor | 73235 | `4.1` (`E.1`). LA GLOSA DE LA MORATORIA PUBLICA `16` FICHEROS SIN SU CORTE, Y LA |
+
+### EL CERO FALSO QUE ESTE TITULO NO PUBLICA, DECLARADO Y MEDIDO
+
+`REG206.titulo_de()` cuenta las caidas con `numeral(dato, 'viejas')`, o sea
+**por la forma antigua `CAIDA n`**. **El acta 208 tampoco usa esa forma**:
+escribe sus caidas como `9.1` a `9.4` y `4.1`, que es la forma `N.M` de la
+vara. Es la misma especie que el `D.1` del reporte de la 208, **que el acta
+208 ADMITIO en su `6.7`** con esta letra general: *cuando un lector heredado
+no ve el dato por la forma en que se escribe hoy, se le pasa el dato contado
+por la forma vigente y se publican las dos cuentas mas el resultado crudo*.
+**Eso es exactamente lo que se hace aqui, y ya no es una eleccion del
+ejecutor: es doctrina adjudicada.**
+
+| caida | por `CAIDA n`, la forma antigua | por `N.M`, la forma de esta acta |
+|---|---:|---:|
+| caidas del auditor | **0** | **4** |
+| caidas del ejecutor | **0** | **1** |
+
+**NINGUN LECTOR SE TOCO: SE CAMBIO EL DATO, NO LA MAQUINA.** Y **EL TITULO
+CRUDO QUEDA ESCRITO AQUI, ENTERO Y SIN TACHAR**, que es la regla de la
+correccion declarada de la casa:
+
+> Registro de las 10 adjudicaciones numeradas, los 3 hallazgos, las 3 preguntas contestadas, las 0 caidas propias del auditor, las 0 caidas del ejecutor del acta de la vuelta 208, computados con LA VARA DEL `4.1` DEL ACTA 202
+
+### LA SERIE `R.N`, RECOMPUTADA DE SUS DOS SEDES A LA ENTRADA
+
+| que se mide | medido a la entrada | contraste del encargo | calza |
+|---|---:|---:|---|
+| entradas de la serie | **64** | 64 | SI |
+| de ellas en `docs/PENDIENTES.md` | **63** | 63 | SI |
+| de ellas en `docs/plan/CORRECCIONES_A_APLICAR.md` | **1** | 1 | SI |
+| colisiones | **0** | 0 | SI |
+| huecos | **0** | 0 | SI |
+| siguiente libre | **R.73** | R.73 | SI |
+
+**LAS DOS PUNTAS SE PUBLICAN**, la de entrada aqui y la de salida en
+`docs/loop/SALIDA_V209_T1_REGISTROS.txt`, que es donde el instrumento la
+recomputa DESPUES de escribir.
+
+### LAS PREGUNTAS CONTESTADAS
+
+**LA VIA DEL NUMERAL, DICHA Y NO SUPUESTA:** NOMBRADAS EN LOS TITULOS DE LAS ADJUDICACIONES, porque el reporte de esa vuelta SI EXISTE pero NO TITULA NINGUNA SECCION DE PREGUNTAS y el filtro no se puede correr (vara del `4.7` del acta 201).
+`docs/loop/reportes/REPORTE_V208.md` **existe**, y mide **55798** bytes con `os.path.getsize`. La seccion que el
+lector heredado ve: `la seccion de PREGUNTAS aparece 0 veces`.
+
+| lectura | claves | cuantas |
+|---|---|---:|
+| **nombradas en los TITULOS de las adjudicaciones**, que es la via del `4.7` del acta 201 | `P.1`, `P.2`, `P.3` | **3** |
+| **las que el reporte archivado llama pregunta**, por el lector heredado | (ninguna) | **0** |
+| **el numeral publicado**, por la via de arriba | `P.1`, `P.2`, `P.3` | **3** |
+
+**LA DISCREPANCIA SE DECLARA Y NO SE RESUELVE COPIANDO** (`EJECUTOR.md` 2).
+**NINGUN CERO DE UN INSTRUMENTO SE PUBLICA COMO UN HECHO DEL MUNDO**
+(`EJECUTOR.md` 9).
+
+### LA METRICA DE CREDITO, PEGADA ENTERA Y NO EXTRAIDA
+
+**`R95.cifras_de_la_fila_de_puestos()` devuelve `None` sobre la fila de puestos de este cuerpo.** Cuando no alcanza, la fila se PEGA con su numero de linea, que es cita y no celda tecleada.
+
+- (ninguna fila de metrica con esos prefijos en este cuerpo)
+
+**EL CONTRASTE HEREDADO DEL REPARTO POR NEGRITA, TAMBIEN AL LADO:**
+`R92.caidas_por_lead_heredado()` da **0** del ejecutor, **0** del auditor
+y **8** huerfanas sobre este mismo cuerpo. **Corre sobre el CUERPO ENTERO y
+reparte por la negrita que atribuye, no por la seccion: se publica como
+contraste y no como numeral.**
+
