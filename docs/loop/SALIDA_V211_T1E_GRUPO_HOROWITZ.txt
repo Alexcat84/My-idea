@@ -1,0 +1,80 @@
+==============================================================================
+VUELTA 211, TAREA 1.e: EL GRUPO HOROWITZ, CONTADO. NO SE TOCA NI UN NODO.
+==============================================================================
+
+(a.1) EL NODO DEL HALLAZGO 7.1 EN docs/plan/02_DESTEJIDOS.md
+   CIFRA menciones de 'posicionamiento_de_empresa' en 02_DESTEJIDOS.md: 0
+   contraste del encargo: 0
+   CALZA: SI
+
+(a.2) EN QUE OPERACION DE docs/plan/OPERACIONES.jsonl VIVE
+   CIFRA fichas barridas: 71
+   CIFRA operaciones cuyo campo nodos lo contiene: 1
+   contraste del encargo: 1
+      linea 38 | id_op OP-F-04-HOR | tipo DECISION_DE_FUENTE | estado 'LISTA' | fase 01_FUENTES
+         CIFRA nodos del campo: 14
+         adjudicacion (primeros 90): TANDA DE INJERTOS, grupo HOROWITZ. LEIDOS LOS 13, y los 13 CONFIRMADOS: en los 13 el mater
+
+(a.3) LA CIFRA DE NODOS DE LA OPERACION, CONTADA HOY CONTRA SU CONTRASTE
+   CIFRA nodos del campo `nodos` de OP-F-04-HOR, contada hoy: 14
+   contraste del encargo: 13
+   contraste de la propia adjudicacion de la ficha: la frase LEIDOS LOS 13
+   CALZAN: NO, Y LA DISCREPANCIA SE DECLARA SIN RESOLVERLA
+
+(b) LA VARA DE LA PARTICION, BARRIDA DE docs/plan/01_FUENTES.md
+    lineas 1462 a 1477, y NO TECLEADA
+   CIFRA filas leidas de la tabla: 14
+   CIFRA nodos del campo `nodos` de la operacion: 14
+   CIFRA nodos de la tabla que NO estan en el campo: 0 []
+   CIFRA nodos del campo que NO estan en la tabla: 0 []
+
+   CIFRA nodos del grafo: 3853 (total_nodos declarado: 3853)
+
+(b) LA PARTICION, NODO POR NODO Y CON SUS NOMBRES
+
+| # | nodo | frontera leida | fin bloque 1 | total de la frontera | pasos HOY | veredicto |
+|---:|---|---|---:|---:|---:|---|
+| 1 | `actualizacion_posiciones_existentes` | 1 a 4 / 5 a 19 | 4 | 19 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 2 | `background_startup_vs_corporativo` | 1 a 4 / 5 a 9 | 4 | 9 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 3 | `contratacion_experiencia_vs_potencial` | 1 a 4 / 5 a 10 | 4 | 10 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 4 | `decision_de_salir_a_bolsa` | 1 a 5 / 6 a 10 | 5 | 10 | 5 | **EL BLOQUE YA VIVE APARTE** |
+| 5 | `decision_de_vender_startup` | 1 a 10 / 11 a 34 | 10 | 34 | 15 | **NI UNA COSA NI LA OTRA** |
+| 6 | `estrategia_de_innovacion_producto` | 1 a 3 / 4 a 7 | 3 | 7 | 3 | **EL BLOQUE YA VIVE APARTE** |
+| 7 | `manejo_empleados_en_adquisicion` | 1 a 4 / 5 a 9 | 4 | 9 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 8 | `metas_vs_proposito` | 1 a 4 / 5 a 9 / 10 a 14 | 4 | 14 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 9 | `organizacion_adaptativa` | 1 a 4 / 5 a 8 | 4 | 8 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 10 | `plan_mejora_procesos` | 1 a 5 / 6 a 10 / 11 a 15 | 5 | 15 | 5 | **EL BLOQUE YA VIVE APARTE** |
+| 11 | `posicionamiento_de_empresa` | 1 a 5 / 6 a 9 | 5 | 9 | 5 | **EL BLOQUE YA VIVE APARTE** |
+| 12 | `principio_calidad_mvp` | 1 a 5 / 6 a 10 / 11 a 14 | 5 | 14 | 7 | **NI UNA COSA NI LA OTRA** |
+| 13 | `revisiones_regulares_desempeno_ceo` | 1 a 4 / 5 a 10 | 4 | 10 | 4 | **EL BLOQUE YA VIVE APARTE** |
+| 14 | `seleccion_ceo_fundador` | 1 a 4 / 5 a 12 | 4 | 12 | 6 | **NI UNA COSA NI LA OTRA** |
+
+(b) EL REPARTO, CONTADO DE LA TABLA DE ARRIBA
+   EL BLOQUE YA VIVE APARTE     11 nodo(s)
+   NI UNA COSA NI LA OTRA       3 nodo(s)
+   CIFRA nodos repartidos: 14
+
+   EL BLOQUE YA VIVE APARTE:
+       1. actualizacion_posiciones_existentes        pasos hoy 4 (bloque 1 acaba en 4, frontera entera 19)
+       2. background_startup_vs_corporativo          pasos hoy 4 (bloque 1 acaba en 4, frontera entera 9)
+       3. contratacion_experiencia_vs_potencial      pasos hoy 4 (bloque 1 acaba en 4, frontera entera 10)
+       4. decision_de_salir_a_bolsa                  pasos hoy 5 (bloque 1 acaba en 5, frontera entera 10)
+       6. estrategia_de_innovacion_producto          pasos hoy 3 (bloque 1 acaba en 3, frontera entera 7)
+       7. manejo_empleados_en_adquisicion            pasos hoy 4 (bloque 1 acaba en 4, frontera entera 9)
+       8. metas_vs_proposito                         pasos hoy 4 (bloque 1 acaba en 4, frontera entera 14)
+       9. organizacion_adaptativa                    pasos hoy 4 (bloque 1 acaba en 4, frontera entera 8)
+      10. plan_mejora_procesos                       pasos hoy 5 (bloque 1 acaba en 5, frontera entera 15)
+      11. posicionamiento_de_empresa                 pasos hoy 5 (bloque 1 acaba en 5, frontera entera 9)
+      13. revisiones_regulares_desempeno_ceo         pasos hoy 4 (bloque 1 acaba en 4, frontera entera 10)
+   NI UNA COSA NI LA OTRA:
+       5. decision_de_vender_startup                 pasos hoy 15 (bloque 1 acaba en 10, frontera entera 34)
+      12. principio_calidad_mvp                      pasos hoy 7 (bloque 1 acaba en 5, frontera entera 14)
+      14. seleccion_ceo_fundador                     pasos hoy 6 (bloque 1 acaba en 4, frontera entera 12)
+
+   CIFRA nodos que NO se pudieron medir: 0 (se exige 0)
+(c) LA PARTICION ES UNIFORME: NO
+   EL ENCARGO MANDA PARAR AQUI: decidir que hacer con una operacion de
+   fuente sin destino NO ES DE ESTA VUELTA. Se mide, se publica y se para.
+
+
+FIN
