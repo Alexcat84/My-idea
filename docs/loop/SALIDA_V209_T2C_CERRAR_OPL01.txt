@@ -1,0 +1,61 @@
+==============================================================================
+VUELTA 209, TAREA 2.c: SE CIERRA OP-L-01 TOCANDO SOLO SU CAMPO estado
+==============================================================================
+
+GUARDA (2), PRIMERA MITAD: LA SEDE **ANTES**, POR LAS DOS CONVENCIONES
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+   contraste del encargo: 513043 por las dos y sha256 829c583eb779cab6
+   CALZA: SI
+   CIFRA fichas en el fichero: 71
+
+GUARDA (1): EL VALOR VIEJO, LEIDO Y NO SUPUESTO
+   linea 41, id_op leido: OP-L-01
+   es la ficha que el encargo nombra: SI
+   CIFRA campos de la ficha: 18
+   VALOR VIEJO del campo estado, leido del fichero: 'LISTA'
+   VALOR NUEVO que se va a escribir:                'HECHA'
+
+EL VALOR NUEVO NO SE INVENTA: SE COMPRUEBA QUE YA ES VOCABULARIO DE LA SEDE
+   estado 'HECHA'  lo llevan 29 fichas hoy
+   estado 'LISTA'  lo llevan 42 fichas hoy
+   'HECHA' ya existe en el fichero: SI
+
+LA CIRUGIA, SOBRE LA LINEA Y NO SOBRE EL JSON
+   '"estado": "LISTA"' aparece 1 vez(ces) EN SU LINEA (se exige 1)
+   CIFRA bytes de la linea antes: 20829 | despues: 20829 | crecimiento: 0
+   CIFRA campos de la ficha que NO se mueven: 17 de 17
+   el campo estado pasa de 'LISTA' a 'HECHA'
+
+LA ESCRITURA
+   ESCRITA: la linea 41 y ninguna otra.
+
+==============================================================================
+GUARDA (2), SEGUNDA MITAD: LA SEDE **DESPUES**, REMEDIDA Y NO HEREDADA
+==============================================================================
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   CIFRA crecimiento: 0 bytes en disco y 0 bytes normalizado a LF
+
+GUARDA (3): UNA LINEA CAMBIADA Y NI UNA MAS, Y NINGUN OTRO id_op MOVIDO
+   git diff --numstat -- docs/plan/OPERACIONES.jsonl :
+      1	1	docs/plan/OPERACIONES.jsonl
+   CIFRA ficheros tocados: 1 (se exige 1)
+   CIFRA lineas anadidas: 1 | CIFRA lineas borradas: 1
+   UNA LINEA CAMBIADA Y NI UNA MAS: SI
+
+   EL CENSO DE id_op Y estado, COTEJADO ENTERO CONTRA EL DE ANTES:
+   CIFRA fichas antes: 71 | CIFRA fichas despues: 71
+   CIFRA fichas que se movieron: 1 (se espera 1, y que sea OP-L-01)
+      linea 41 OP-L-01 'LISTA'  ->  linea 41 OP-L-01 'HECHA'
+   SE MOVIO SOLO OP-L-01 Y SOLO SU estado: SI
+
+   CIFRA otros id_op cuyo estado cambio: 0
+
+   EL REPARTO DE estado, ANTES Y DESPUES:
+      'HECHA'  antes 29  despues 30
+      'LISTA'  antes 42  despues 41
+
+VEREDICTO DE LAS TRES GUARDAS: VERDE, LAS TRES
+
+FIN

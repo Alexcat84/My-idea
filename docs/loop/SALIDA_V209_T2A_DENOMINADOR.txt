@@ -1,0 +1,122 @@
+==============================================================================
+VUELTA 209, TAREA 2.a: EL DENOMINADOR PRIMERO, RECOMPUTADO DE LA NOMINA
+DE MIEMBROS Y NO DE LA TABLA
+==============================================================================
+
+EL LECTOR VA IMPORTADO Y SIN TOCARLE UNA LINEA (moratoria de AUDITOR.md
+6.3): `lineas`, `seccion`, `ids_de` y `NOMINAS` vienen de
+`_v208_t2_denominador.py`, y `mapa_de_alias`, `resolver` y `CABECERA_LD`
+de `vuelta166_tarea2_correccion_op_l_01.py`. IMPORTAR NO ES CLONAR.
+
+0) EL RESOLUTOR, PUESTO ANTES DE CONTAR NADA (`P.1`)
+   CIFRA ficheros de nodo leidos de dataset/nodos/: 3853
+   CIFRA node_id distintos en disco: 3853
+   CIFRA alias en el mapa: 761
+   contraste del encargo: 3853 node_id y 761 alias
+   CALZA: SI
+
+A) LAS DOS SEDES, MEDIDAS AL ENTRAR POR LAS DOS CONVENCIONES
+   docs/INTRA_DOMINIO_INFORME.md: 943970 bytes en disco y 943970 bytes normalizado a LF, 16775 lineas
+   docs/plan/LECTURAS_DIRIGIDAS.md: 214916 bytes en disco y 214916 bytes normalizado a LF, 2231 lineas
+
+B) LA NOMINA DE MIEMBROS DE CADA UNA, LEIDA DE SU SECCION DEL INFORME
+   --- JUNTA ASESORA ---
+   seccion hallada: docs/INTRA_DOMINIO_INFORME.md linea 2314 a 2339
+   titulo literal: #### LA NOMINA DE LA JUNTA ASESORA: SEPTIMO SUB-PURO
+   CIFRA miembros hallados: 4
+      linea  2323  identificar_consejo_asesores                   -> resuelve a identificar_consejo_asesores                   existe en el grafo: SI
+      linea  2323  identificar_junta_asesores                     -> resuelve a identificar_consejo_asesores                   existe en el grafo: SI
+      linea  2323  formalizar_junta_asesora                       -> resuelve a formalizar_junta_asesora                       existe en el grafo: SI
+      linea  2323  formalize_advisory_board                       -> resuelve a formalizar_junta_asesora                       existe en el grafo: SI
+   CIFRA miembros DISTINTOS EN LITERAL: 4
+   CIFRA PARES POSIBLES EN LITERAL: 6
+   CIFRA miembros DISTINTOS TRAS RESOLVER: 2
+   CIFRA PARES POSIBLES TRAS RESOLVER: 1
+   CIFRA miembros que NO existen en el grafo: 0 (ninguno)
+   CIFRA miembros FUNDIDOS, o sea que hoy resuelven a otro nodo: 2
+      identificar_junta_asesores  ->  identificar_consejo_asesores
+      formalize_advisory_board  ->  formalizar_junta_asesora
+   LAS DOS CONVENCIONES DAN LO MISMO: NO, y la diferencia se declara en vez de elegir una en silencio
+   MANDA LA LITERAL, que es la del `fecha_corte` de la ficha
+   (adjudicacion `6.6` del acta 208). La resuelta va AL LADO.
+
+   --- SELECCION DE CANAL ---
+   seccion hallada: docs/INTRA_DOMINIO_INFORME.md linea 5301 a 5433
+   titulo literal: ## 10. RACIMO NUEVO: LA SELECCION DE CANAL, y choca con la relectura R1
+   CIFRA miembros hallados: 6
+      linea  5314  seleccion_canal_distribucion                   -> resuelve a seleccion_canal_distribucion                   existe en el grafo: SI
+      linea  5315  seleccion_canal_fisico                         -> resuelve a seleccion_canal_fisico                         existe en el grafo: SI
+      linea  5316  channels_hypothesis_web_mobile                 -> resuelve a channels_hypothesis_web_mobile                 existe en el grafo: SI
+      linea  5317  hipotesis_de_canales                           -> resuelve a hipotesis_de_canales                           existe en el grafo: SI
+      linea  5318  channels_hypothesis_physical                   -> resuelve a channels_hypothesis_physical                   existe en el grafo: SI
+      linea  5319  validar_canal_distribucion                     -> resuelve a validar_canal_distribucion                     existe en el grafo: SI
+   CIFRA miembros DISTINTOS EN LITERAL: 6
+   CIFRA PARES POSIBLES EN LITERAL: 15
+   CIFRA miembros DISTINTOS TRAS RESOLVER: 6
+   CIFRA PARES POSIBLES TRAS RESOLVER: 15
+   CIFRA miembros que NO existen en el grafo: 0 (ninguno)
+   CIFRA miembros FUNDIDOS, o sea que hoy resuelven a otro nodo: 0
+   LAS DOS CONVENCIONES DAN LO MISMO: SI
+   MANDA LA LITERAL, que es la del `fecha_corte` de la ficha
+   (adjudicacion `6.6` del acta 208). La resuelta va AL LADO.
+
+B.1) EL COTEJO CONTRA EL CONTRASTE DEL ENCARGO (contraste, NO fuente)
+   junta asesora, miembros LITERAL          mio 4      contraste 4      CALZA
+   junta asesora, pares LITERAL             mio 6      contraste 6      CALZA
+   junta asesora, miembros RESUELTA         mio 2      contraste 2      CALZA
+   junta asesora, pares RESUELTA            mio 1      contraste 1      CALZA
+   seleccion de canal, miembros LITERAL     mio 6      contraste 6      CALZA
+   seleccion de canal, pares LITERAL        mio 15     contraste 15     CALZA
+   seleccion de canal, miembros RESUELTA    mio 6      contraste 6      CALZA
+   seleccion de canal, pares RESUELTA       mio 15     contraste 15     CALZA
+   seleccion de canal, fundidos             mio 0      contraste 0      CALZA
+   CIFRA discrepancias con el contraste del encargo en el 2.a: 0
+
+C) LA NOMINA VERIFICADA CONTRA EL GRAFO Y SU CORRECCION DECLARADA,
+   LEIDAS DE SU LINEA Y NO TECLEADAS
+   docs/INTRA_DOMINIO_INFORME.md:5312 | | nodo | pasos | de que trata |
+   docs/INTRA_DOMINIO_INFORME.md:5313 | |---|---:|---|
+   docs/INTRA_DOMINIO_INFORME.md:5314 | | **`seleccion_canal_distribucion`** | 5 | el canal **en general** |
+   docs/INTRA_DOMINIO_INFORME.md:5315 | | `seleccion_canal_fisico` | 4 | el canal **fisico** |
+   docs/INTRA_DOMINIO_INFORME.md:5316 | | `channels_hypothesis_web_mobile` | 5 | el canal **digital** |
+   docs/INTRA_DOMINIO_INFORME.md:5317 | | `hipotesis_de_canales` | 5 | la hipotesis de canal del lienzo |
+   docs/INTRA_DOMINIO_INFORME.md:5318 | | **`channels_hypothesis_physical`** | 5 | **la hipotesis de canal FISICO** |
+   docs/INTRA_DOMINIO_INFORME.md:5319 | | `validar_canal_distribucion` | 6 | validar el canal elegido |
+   docs/INTRA_DOMINIO_INFORME.md:5320 | 
+   docs/INTRA_DOMINIO_INFORME.md:5321 | > **CORRECCION DEL 11 ago 2026, de la relectura R6 (puesto 214): son SEIS y no
+   docs/INTRA_DOMINIO_INFORME.md:5322 | > cinco.** `channels_hypothesis_physical` no estaba en esta lista cuando se
+
+D) LO QUE LAS DOS LINEAS DE LA MESA PUBLICAN HOY, LEIDO DE SU LINEA
+   --- tabla por nomina ---
+   docs/plan/LECTURAS_DIRIGIDAS.md:31 empieza por '| **seleccion de canal** |': SI
+   literal: | **seleccion de canal** | 5 | 10 | 8 | **2** |
+   --- que nominas cambian ---
+   docs/plan/LECTURAS_DIRIGIDAS.md:291 empieza por '| **seleccion de canal** |': SI
+   literal: | **seleccion de canal** | 8 de 10, **sub-puro** | **10 de 10, cobertura COMPLETA. MEZCLADO**: `LD-02` mete el primer D. **El sub-puro cae, y cae con la nomina cerrada** |
+   CIFRA lineas de la mesa que calzan con su ancla: 2 de 2
+
+E) LOS DOS DENOMINADORES, JUNTOS Y SIN ELEGIR EN SILENCIO
+
+   nomina                 LITERAL (manda)  RESUELTA (al lado) lo que la mesa dice
+   seleccion de canal     6 miembros, 15 pares 6 miembros, 15 pares 5 miembros, 10 pares
+   junta asesora          4 miembros, 6 pares 2 miembros, 1 pares (no es la que el encargo manda corregir)
+
+   CIFRA leidos que la linea 31 publica: 8
+   CIFRA fuera de cola que la linea 31 publica: 2
+   LA LINEA 31 CALZA CON EL RECOMPUTO: NO, Y ESA ES LA PRIMERA DE LAS DOS CIFRAS QUE SIGUEN MAL
+
+F) LOS LEIDOS, PARA QUE EL NUMERADOR TAMPOCO SE HEREDE
+   CIFRA cabeceras LD en docs/plan/LECTURAS_DIRIGIDAS.md hoy: 27
+   CIFRA lecturas dirigidas cuyos DOS extremos, TRAS RESOLVER, caen
+   dentro de la seleccion de canal: 2
+      LD-02    channels_hypothesis_physical contra channels_hypothesis_web_mobile | clase D
+      LD-03    channels_hypothesis_web_mobile contra seleccion_canal_fisico | clase A
+
+   LA COBERTURA DE LA SELECCION DE CANAL, MEDIDA Y NO NARRADA:
+   CIFRA leidos publicados por la linea 31: 8
+   CIFRA denominador recomputado en LITERAL: 15
+   CIFRA leidos mas las lecturas dirigidas de esta nomina: 8 mas 2 es 10
+   COBERTURA: 10 de 15
+   COMPLETA O PROVISIONAL: INCOMPLETA, y por el banco `9.26` la forma es PROVISIONAL
+
+FIN

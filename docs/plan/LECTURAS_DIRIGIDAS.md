@@ -39,6 +39,54 @@ marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador.**
 > **NINGUNA de estas nominas tiene un solo par EN LA COLA.** Los que faltan, faltan
 > para siempre. **Por eso la lectura dirigida no es un lujo: es la unica via.**
 
+<!-- CORRECCION DECLARADA V209 TABLA POR NOMINA -->
+
+> **CORRECCION DECLARADA (7 sep 2026, vuelta 209, TAREA 2), POR EL CARRIL
+> DEL BANCO `9.10`, POR ADICION, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN
+> TACHARLO.** Las nueve filas de la tabla de aqui arriba siguen enteras y
+> sin tocar; lo que se anade es **la fila corregida de la seleccion de
+> canal**, que es la unica que este recomputo mueve.
+>
+> **QUIEN LA ENCARGA:** la adjudicacion `6.3` del acta del auditor de la
+> vuelta 208, medida en su `5.2`. El criterio de HECHO de la fase
+> `06 MESAS` en `docs/plan/08_VERIFICACION.md` exige que cada decision
+> vaya **con su cobertura al lado**, y esta tabla publicaba un denominador
+> que el recomputo desmiente.
+>
+> **EL MOTIVO, MEDIDO Y NO ALEGADO.** El denominador se conto de la
+> **nomina de miembros** de `docs/INTRA_DOMINIO_INFORME.md` lineas `5314`
+> a `5319`, y **no de esta tabla**, con el resolutor puesto (`P.1`). Esa
+> nomina tiene **6** miembros y su **CORRECCION DECLARADA del 11 ago 2026**
+> vive en `docs/INTRA_DOMINIO_INFORME.md:5321` y dice, literal, *son SEIS
+> y no cinco*. Con **6** miembros los pares posibles son **15** y no 10.
+>
+> **LAS DOS CONVENCIONES, Y MANDA LA DEL CORTE DE LA FICHA.** En LITERAL
+> son **6** miembros y **15** pares; TRAS RESOLVER son **6** y **15**,
+> con **0** miembros fundidos. **Las dos dan lo mismo aqui.** La que
+> manda es la **LITERAL**, que es la del `fecha_corte` de `OP-L-01`
+> (**2026-08-11**), por la adjudicacion `6.6` del acta 208. La resuelta se
+> publica al lado, con su fecha de hoy, **7 sep 2026**, y nunca en su
+> lugar.
+>
+> **NINGUNA CIFRA DE LA FILA ESTA TECLEADA:** todas salen de
+> `docs/loop/SALIDA_V209_T2A_DENOMINADOR.txt`, y el computo que la escribe
+> **cae en rojo si no puede leer una**. La columna `fuera de cola` se
+> computa con la misma regla que su control positivo valido sobre la fila
+> vieja: **posibles menos leidos**.
+
+| nomina | miembros | posibles | leidos | **fuera de cola** |
+|---|---:|---:|---:|---:|
+| **seleccion de canal** **(FILA CORREGIDA EN LA VUELTA 209)** | **6** | **15** | **10** | **5** |
+
+> **LA COBERTURA, AL LADO Y MEDIDA: 10 de 15, o sea INCOMPLETA y por tanto
+> PROVISIONAL** (banco `9.26`, verbatim: *mientras falte un par, la forma
+> es PROVISIONAL y se dice asi*). Los **10** leidos son los **8** que la
+> fila vieja publicaba mas las **2** lecturas dirigidas cuyos dos extremos,
+> tras resolver, caen dentro de esta nomina: `LD-02` (**D**) y `LD-03`
+> (**A**). **Los 5 pares que faltan no estan en la cola y no van a venir**,
+> que es justo lo que dice el recuadro de aqui arriba.
+
+
 ---
 
 ## ESTA TANDA: ONCE LECTURAS
@@ -298,6 +346,36 @@ narrativa**, y presentarlo como historia visual **para venderlo**.
 
 > **LA LECCION DEL SALDO: 9 de 11 salieron SANAS.** Estos pares no estaban en la
 > cola **porque de verdad se parecen poco**, y la cola los descarto con razon.
+
+<!-- CORRECCION DECLARADA V209 QUE NOMINAS CAMBIAN -->
+
+> **CORRECCION DECLARADA (7 sep 2026, vuelta 209, TAREA 2), POR EL CARRIL
+> DEL BANCO `9.10`, POR ADICION, CON EL TEXTO VIEJO ENTERO ARRIBA Y SIN
+> TACHARLO.** Las ocho filas de la tabla de aqui arriba siguen enteras y
+> sin tocar; lo que se anade es **la fila corregida de la seleccion de
+> canal**.
+>
+> **LO QUE ESTABA MAL, DICHO CON SUS DOS CIFRAS.** La fila vieja publica
+> *10 de 10, cobertura COMPLETA*. **El denominador no es 10 sino 15**, y
+> con **10** leidos la cobertura es **10 de 15**: **INCOMPLETA, y por el
+> banco `9.26` la forma es PROVISIONAL y se dice asi**. El motivo entero,
+> con la nomina y su correccion del 11 ago 2026, esta en la correccion
+> declarada de la tabla por nomina de mas arriba en este mismo documento.
+>
+> **LA CELDA `antes` TAMBIEN LLEVABA EL DENOMINADOR VIEJO**, y por eso la
+> fila corregida la reescribe como **8 de 15**: son los mismos **8**
+> leidos de siempre sobre el denominador recomputado. **Lo digo en vez de
+> cambiarlo callando**, porque la adjudicacion `6.3` del acta 208 nombra la
+> celda `despues` y no esta.
+>
+> **LA CLASE NO CAMBIA CON ESTO:** `LD-02` mete el primer **D** dentro de
+> la nomina y el sub-puro cae igual. **Lo que cae es el *cerrada*:** la
+> nomina **no** queda cerrada, quedan **5** pares sin leer.
+
+| nomina o forma | antes | **despues** |
+|---|---|---|
+| **seleccion de canal** **(FILA CORREGIDA EN LA VUELTA 209)** | 8 de 15, **sub-puro** | **10 de 15, cobertura INCOMPLETA y por tanto PROVISIONAL** (banco `9.26`). **MEZCLADO**: `LD-02` mete el primer D y **el sub-puro cae**. **La nomina NO queda cerrada: faltan 5 pares** |
+
 > **Lo que los hacia necesarios no era el parecido: era que colgaban de una nomina
 > o de una figura.**
 

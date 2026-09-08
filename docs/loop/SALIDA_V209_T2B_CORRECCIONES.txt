@@ -1,0 +1,85 @@
+==============================================================================
+VUELTA 209, TAREA 2.b: LAS DOS CIFRAS DE OP-L-01 EN SU PROPIO DOCUMENTO,
+CORREGIDAS POR EL CARRIL DEL BANCO 9.10 Y POR ADICION PURA
+==============================================================================
+
+0) LAS CIFRAS, LEIDAS DE LA SALIDA DEL 2.a Y NO TECLEADAS
+   el bloque de la SELECCION DE CANAL, acotado: 1577 bytes en disco y 1577 bytes normalizado a LF
+   y el de la JUNTA ASESORA queda FUERA a proposito: SI, no aparece
+   miembros_lit     -> 6    (leida del BLOQUE de la seleccion de canal)
+   pares_lit        -> 15   (leida del BLOQUE de la seleccion de canal)
+   miembros_res     -> 6    (leida del BLOQUE de la seleccion de canal)
+   pares_res        -> 15   (leida del BLOQUE de la seleccion de canal)
+   fundidos         -> 0    (leida del BLOQUE de la seleccion de canal)
+   leidos_viejos    -> 8    (leida del fichero entero, cifra que no es de nomina)
+   fuera_viejos     -> 2    (leida del fichero entero, cifra que no es de nomina)
+   mesa_miembros    -> 5    (leida del fichero entero, cifra que no es de nomina)
+   lds_dentro       -> 2    (leida del fichero entero, cifra que no es de nomina)
+   leidos_nuevos    -> 10   (leida del fichero entero, cifra que no es de nomina)
+   cobertura_num    -> 10   (leida del fichero entero, cifra que no es de nomina)
+   cobertura_den    -> 15   (leida del fichero entero, cifra que no es de nomina)
+   node_id          -> 3853 (leida del fichero entero, cifra que no es de nomina)
+   alias            -> 761  (leida del fichero entero, cifra que no es de nomina)
+   discrepan        -> 0    (leida del fichero entero, cifra que no es de nomina)
+
+1) LA SEDE AL ENTRAR, POR LAS DOS CONVENCIONES
+   docs/plan/LECTURAS_DIRIGIDAS.md: 214916 bytes en disco y 214916 bytes normalizado a LF
+   sha256 disco dda1cdd67042c733 y sha256 LF dda1cdd67042c733
+   contraste del encargo: 214916 por las dos y sha256 dda1cdd67042c733
+   CALZA: SI
+   CIFRA lineas por split: 2231
+
+2) LAS GUARDAS, ANTES DE COMPONER NADA
+   (b) LAS DOS LINEAS VIEJAS, COTEJADAS VERBATIM CONTRA SU NUMERO:
+      linea 31 calza al byte: SI
+      linea 291 calza al byte: SI
+   (a) CADA ANCLA APARECE EXACTAMENTE UNA VEZ:
+      ancla de la tabla por nomina       aparece 1 vez(ces) (se exige 1)
+      ancla de que nominas cambian       aparece 1 vez(ces) (se exige 1)
+   Y CADA LINEA VIEJA APARECE EXACTAMENTE UNA VEZ, para que la adicion no
+   pueda confundirse de fila:
+      la de la linea 31   aparece 1 vez(ces) (se exige 1)
+      la de la linea 291  aparece 1 vez(ces) (se exige 1)
+   (c) EL CONTROL POSITIVO DE LA COLUMNA `fuera de cola`, SOBRE LA FILA
+       VIEJA: posibles menos leidos tiene que dar fuera de cola.
+       fila vieja: 5 miembros, 10 posibles, 8 leidos, 2 fuera de cola
+       10 menos 8 es 2, y la columna dice 2: CALZA
+   CIFRA guardas que fallan: 0
+
+3) LAS DOS FILAS NUEVAS, COMPUESTAS DE CIFRAS LEIDAS
+   miembros 6, posibles 15, leidos 10, fuera de cola 5
+   cobertura 10 de 15, INCOMPLETA y por tanto PROVISIONAL (banco 9.26)
+
+4) LOS DOS BLOQUES COMPUESTOS
+   bloque de la tabla por nomina    2599 bytes, 47 lineas
+   bloque de que nominas cambian    1661 bytes, 29 lineas
+   CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+   la marca '(FILA CORREGIDA EN LA VUELTA 209)' aparece 2 vez(ces) en lo compuesto (se exigen 2)
+
+5) LA ESCRITURA, DE ABAJO ARRIBA Y POR ADICION
+   las dos correcciones YA ESTAN: NO
+   ESCRITAS las dos correcciones por adicion.
+
+==============================================================================
+EL CIERRE, REMEDIDO Y NO HEREDADO
+==============================================================================
+   docs/plan/LECTURAS_DIRIGIDAS.md al salir: 219178 bytes en disco y 219178 bytes normalizado a LF
+   sha256 disco a8ba1749b9a3fa13 y sha256 LF a8ba1749b9a3fa13
+   CIFRA crecimiento: 4262 bytes en disco y 4262 bytes normalizado a LF
+   CIFRA lineas al salir: 2309 (al entrar 2231)
+
+(d) LA GUARDA DEL TEXTO VIEJO: NI UNA LINEA BORRADA NI UNA CAMBIADA
+   CIFRA lineas del texto de ENTRADA que NO estan, en orden, en el de
+   SALIDA: 0
+   (la adicion solo puede ANADIR: si esta cifra no es 0, es ROJO)
+
+DONDE QUEDAN LAS CUATRO FILAS, REMEDIDO SOBRE EL FICHERO DE SALIDA
+   (las dos viejas se MUEVEN de numero porque encima de ellas no se
+   escribio nada, pero debajo si: el numero cambia, EL TEXTO NO.)
+   la vieja de la tabla por nomina    en la linea [31] (entraba en la 31)
+   la vieja de que nominas cambian    en la linea [339] (entraba en la 291)
+   las dos filas NUEVAS, por su marca en la celda de nombre: lineas [79, 377]
+      linea 79 | | **seleccion de canal** **(FILA CORREGIDA EN LA VUELTA 209)** | **6** | **15** | **10** | **5** |
+      linea 377 | | **seleccion de canal** **(FILA CORREGIDA EN LA VUELTA 209)** | 8 de 15, **sub-puro** | **10 de 15, cobertura INCOMPLETA y por tanto PROVISIONAL** (banco `9.26`). **MEZCLADO**: `LD-02` mete
+
+FIN
