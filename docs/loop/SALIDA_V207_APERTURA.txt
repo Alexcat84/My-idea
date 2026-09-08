@@ -25,3 +25,16 @@ CIFRA docs/INTRA_DOMINIO_INFORME.md: 943970 bytes en disco y 943970 bytes normal
 CIFRA docs/BANCO_DE_TEXTOS.md: 182228 bytes en disco y 182228 bytes normalizado a LF, sha256 disco 68557cd00a3124f4 y sha256 LF 68557cd00a3124f4
 
 CIFRA docs/loop/reportes/REPORTE_V206.md existe al entrar: NO
+
+CORRECCION DECLARADA DE LA VUELTA 207 SOBRE SU PROPIO SELLO.
+EL TEXTO VIEJO QUEDA ENTERO ARRIBA Y NO SE TACHA (EJECUTOR.md 8). LO QUE SE
+ANADE NO ES UNA MEDICION NUEVA: ES LA MISMA CIFRA DE ARRIBA, RE-ESCRITA EN LA
+FORMA LITERAL QUE LA GUARDA D.1 DE cerrar_reporte.py SABE LEER, que es
+PATRON_CIFRA_STATUS = "CIFRA lineas de status:\s*(\d+)" y exige los dos puntos
+pegados a la palabra status. Mi sello escribio "CIFRA lineas de status, medidas
+con git status --porcelain: 1" y esa coma le rompe la coincidencia, asi que el
+cierre no podia cotejar su seccion 4 y hacia bien en no cerrar a ciegas.
+EL VALOR NO SE TECLEA: se lee de la linea de arriba de este mismo fichero.
+LA MEDICION ES LA DE LA APERTURA, tomada antes de la primera operacion; lo que
+llega tarde es la FORMA de escribirla, y eso va como caida mia en el reporte.
+CIFRA lineas de status: 1

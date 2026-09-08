@@ -57,8 +57,9 @@ al entrar y al salir, recomputando la serie de sus DOS sedes:
 | entradas escritas por la SEGUNDA corrida | 0 |
 
 `docs/PENDIENTES.md` pasa de **1161546** bytes en disco y **1161546**
-normalizado a LF (sha256 LF `f933b87fcbd7ba12`) a **1171455** y **1171455**
-(sha256 LF `c2129e11ec925f1f`). La entrada mide **9908** bytes.
+normalizado a LF, con sha256 disco `f933b87fcbd7ba12` y sha256 LF `f933b87fcbd7ba12`,
+a **1171455** bytes en disco y **1171455** normalizado a LF, con sha256 disco `c2129e11ec925f1f` y sha256 LF `c2129e11ec925f1f`.
+La entrada mide **9908** bytes.
 
 **LA PRUEBA POR MUTACION DEL ENSANCHE CORRIO OTRA VEZ ANTES DE ESCRIBIR NADA**,
 porque es el mismo fichero importado y no se hereda un verde de otra corrida:
