@@ -1,0 +1,634 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   muestra aleatoria de 40 puestos del archivo entero de veredictos, semilla 209, sin filtro de dominio ni de clase, para la relectura ciega de la vuelta 209. El sujeto se sella ANTES de abrir REPORTE.md, asi que no lo eligen los discutibles marcados: esos se adjudican aparte, con su propia evidencia, tal como en las vueltas 205 a 208.
+
+CIFRA pares elegidos: 40
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 96
+nodo_a: autoacusacion_antes_mala_noticia
+nodo_b: etiqueta_lo_que_piensa_el_proveedor
+  pasos de A (autoacusacion_antes_mala_noticia): 5
+     paso 1: Antes de la llamada o el mensaje, escribe todo lo malo que el proveedor podría pensar de tu propuesta.
+     paso 2: Empieza la conversación diciendo en voz alta esas quejas antes de que él las mencione.
+     paso 3: Nombra lo que crees que siente el otro con frases como parece que esto te preocupa y espera en silencio.
+     paso 4: Ofrece de inmediato una salida o alternativa concreta después de nombrar la queja.
+     paso 5: Cierra confirmando que quieres seguir trabajando juntos en el futuro.
+  pasos de B (etiqueta_lo_que_piensa_el_proveedor): 5
+     paso 1: Antes de hablar de precio o condiciones, di en voz alta lo que crees que siente o piensa el proveedor.
+     paso 2: Empieza la frase con 'parece que...' o 'da la sensación de que...' para suavizar la afirmación.
+     paso 3: Haz una pausa después de etiquetar y deja que la otra persona corrija o confirme.
+     paso 4: Anota la información nueva que surja de esa corrección, suele revelar su verdadera prioridad.
+     paso 5: Usa esa información para ajustar tu siguiente oferta o pregunta.
+------------------------------------------------------------------------------
+puesto_intra: 115
+nodo_a: etiqueta_lo_que_piensa_el_proveedor
+nodo_b: preguntas_abiertas_motivacion_proveedor
+  pasos de A (etiqueta_lo_que_piensa_el_proveedor): 5
+     paso 1: Antes de hablar de precio o condiciones, di en voz alta lo que crees que siente o piensa el proveedor.
+     paso 2: Empieza la frase con 'parece que...' o 'da la sensación de que...' para suavizar la afirmación.
+     paso 3: Haz una pausa después de etiquetar y deja que la otra persona corrija o confirme.
+     paso 4: Anota la información nueva que surja de esa corrección, suele revelar su verdadera prioridad.
+     paso 5: Usa esa información para ajustar tu siguiente oferta o pregunta.
+  pasos de B (preguntas_abiertas_motivacion_proveedor): 5
+     paso 1: Antes de negociar, prepara preguntas que empiecen con cómo o qué en vez de preguntas de sí o no.
+     paso 2: Durante la conversación, pregunta sobre su mercado, su carga de trabajo o sus otros clientes.
+     paso 3: Repite en tus palabras lo que dice para animarlo a seguir hablando y dar más detalle.
+     paso 4: Anota cualquier dato que suene como una urgencia o una limitación que no esperabas escuchar.
+     paso 5: Usa ese dato para ajustar tu oferta, sin mencionar directamente que lo detectaste.
+------------------------------------------------------------------------------
+puesto_intra: 280
+nodo_a: estrategia_de_innovacion_arenas
+nodo_b: seleccion_arenas_estrategicas
+  pasos de A (estrategia_de_innovacion_arenas): 4
+     paso 1: Definir los objetivos de crecimiento a largo plazo de la unidad de negocio.
+     paso 2: Mapear las 'arenas' potenciales (mercados/tecnologías) donde la empresa podría competir.
+     paso 3: Seleccionar arenas objetivo basadas en el atractivo del mercado y la fortaleza competitiva propia.
+     paso 4: Desarrollar un Roadmap de producto estratégico para esas arenas seleccionadas.
+  pasos de B (seleccion_arenas_estrategicas): 6
+     paso 1: Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación
+     paso 2: Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales
+     paso 3: Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias
+     paso 4: Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura
+     paso 5: Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver
+     paso 6: Selecciona y prioriza de 2 a 4 arenas específicas como foco final
+------------------------------------------------------------------------------
+puesto_intra: 313
+nodo_a: customer_discovery_phase2_problem_test
+nodo_b: problem_solution_fit
+  pasos de A (customer_discovery_phase2_problem_test): 5
+     paso 1: Diseñar experimentos de prueba del problema con clientes reales
+     paso 2: Prepararse para contactos y entrevistas con clientes
+     paso 3: Probar la comprensión del problema y su importancia percibida por el cliente
+     paso 4: Profundizar en el entendimiento del cliente (perfiles, comportamientos)
+     paso 5: Capturar conocimiento competitivo y de mercado durante las entrevistas
+  pasos de B (problem_solution_fit): 4
+     paso 1: Validar que el problema identificado sea doloroso para un segmento amplio de clientes
+     paso 2: Probar si la solución propuesta resuelve el problema de forma convincente
+     paso 3: Verificar alineación entre modelo de ingresos, precio y necesidades del cliente
+     paso 4: Considerar mercados multi-sided donde puede haber múltiples propuestas de valor
+------------------------------------------------------------------------------
+puesto_intra: 320
+nodo_a: estrategia_anuncios_sociales_respuesta_indirecta
+nodo_b: social_ads_indirect_response
+  pasos de A (estrategia_anuncios_sociales_respuesta_indirecta): 4
+     paso 1: Definir el objetivo del anuncio social como awareness, no como conversión inmediata
+     paso 2: Crear contenido que genere afinidad con la marca antes de pedir una acción
+     paso 3: Construir audiencia y engagement a lo largo del tiempo
+     paso 4: Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)
+  pasos de B (social_ads_indirect_response): 6
+     paso 1: Define tu objetivo de largo plazo, afinidad y conversión futura, en lugar de mirar solo los clics inmediatos
+     paso 2: Crea contenido que explique la misión o el propósito de tu marca, no solo tu producto
+     paso 3: Dirige tus anuncios sociales hacia contenido de valor en lugar de páginas de venta directa
+     paso 4: Alimenta a tu audiencia con contenido recurrente antes de pedirle que compre
+     paso 5: Mide la conversión en ventanas de tiempo más largas que las que usarías en publicidad de buscadores
+     paso 6: Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)
+------------------------------------------------------------------------------
+puesto_intra: 375
+nodo_a: craft_positioning_statement
+nodo_b: unique_selling_proposition_statement
+  pasos de A (craft_positioning_statement): 5
+     paso 1: Revisar lo que los clientes valoraron más en customer discovery
+     paso 2: Identificar frases recurrentes sobre el problema o la solución
+     paso 3: Usar el outline de Geoffrey Moore para estructurar el positioning statement
+     paso 4: Realizar una sesión de brainstorming con el equipo para generar candidatos de tagline
+     paso 5: Validar el mensaje contra pruebas emocionales, de credibilidad y de tipo de mercado
+  pasos de B (unique_selling_proposition_statement): 5
+     paso 1: Redactar la USP en el formato 'Ayudamos a X a hacer Y haciendo Z'
+     paso 2: Presentar la declaración a varias personas (no necesariamente del mercado objetivo)
+     paso 3: Pedirles que resuman lo que entendieron
+     paso 4: Si no la entienden, dar una explicación más larga y volver a pedir un resumen
+     paso 5: Iterar la declaración hasta que sea clara para terceros
+------------------------------------------------------------------------------
+puesto_intra: 416
+nodo_a: publicidad_garantia_conforme
+nodo_b: regla_divulgacion_garantia
+  pasos de A (publicidad_garantia_conforme): 6
+     paso 1: Revisa todo tu material publicitario que mencione garantías para verificar que cumple las guías de la FTC.
+     paso 2: Indica en el anuncio dónde se puede consultar la garantía completa si tu producto cuesta más de $15.
+     paso 3: Si usas 'satisfacción garantizada' o 'money back', asegúrate de ofrecer reembolso total y declara cualquier condición, como un límite de días.
+     paso 4: Si usas la palabra 'lifetime', especifica claramente a qué vida te refieres: al producto, al comprador original o al vehículo.
+     paso 5: Verifica que lo que anuncias coincida exactamente con el texto legal de la garantía disponible antes de la venta.
+     paso 6: Consulta a un abogado especializado en publicidad y garantías antes de lanzar tu campaña.
+  pasos de B (regla_divulgacion_garantia): 3
+     paso 1: Redacta un solo documento que incluya: qué cubre, qué no cubre, cuánto dura, cómo se pide el servicio, y un aviso sobre los derechos que da la ley de tu estado.
+     paso 2: Usa un lenguaje simple, sin jerga legal innecesaria.
+     paso 3: Revisa que toda la información esté junta en ese documento y no repartida en varios papeles o secciones.
+------------------------------------------------------------------------------
+puesto_intra: 518
+nodo_a: cuatro_capacidades_mercado
+nodo_b: estrategia_cuatro_capacidades_mercado
+  pasos de A (cuatro_capacidades_mercado): 4
+     paso 1: Evalúa el desempeño actual de la empresa en las cuatro capacidades frente a competidores
+     paso 2: Identifica en qué capacidad la empresa ya tiene ventaja competitiva
+     paso 3: Invierte recursos en reforzar esa fortaleza en vez de corregir debilidades menores no críticas
+     paso 4: Define métricas de desempeño específicas para cada capacidad elegida (ej. fill rate, tiempo de entrega)
+  pasos de B (estrategia_cuatro_capacidades_mercado): 4
+     paso 1: Diagnosticar en qué etapa de madurez está tu mercado (emergente, crecimiento, estable, maduro).
+     paso 2: Identificar en qué capacidad tu empresa ya tiene fortalezas relativas frente a competidores.
+     paso 3: Seleccionar 1-2 capacidades de mercado donde concentrarás inversión (no todas a la vez).
+     paso 4: Evitar invertir en eficiencia interna si compites en mercado de crecimiento; prioriza servicio y producto.
+------------------------------------------------------------------------------
+puesto_intra: 552
+nodo_a: executive_summary_inversion
+nodo_b: preparacion_materiales_fundraising
+  pasos de A (executive_summary_inversion): 6
+     paso 1: Definir el problema que se resuelve y su importancia
+     paso 2: Explicar por qué el producto es superior a alternativas existentes
+     paso 3: Justificar por qué el equipo es el adecuado para ejecutar la idea
+     paso 4: Incluir datos financieros de alto nivel con expectativas realistas
+     paso 5: Hacer revisar el documento por alguien externo a la empresa para pulir la redacción
+     paso 6: Enviarlo el mismo día que un VC lo solicite
+  pasos de B (preparacion_materiales_fundraising): 4
+     paso 1: Escribe una descripción corta de 1 a 3 párrafos sobre tu producto, tu equipo y tu negocio
+     paso 2: Prepara un resumen ejecutivo claro y conciso
+     paso 3: Arma una presentación enfocada en el contenido más que en el diseño
+     paso 4: Prepara un prototipo o una demostración si puedes
+------------------------------------------------------------------------------
+puesto_intra: 673
+nodo_a: errores_comunes_asignacion_roles
+nodo_b: seleccion_ceo_fundador
+  pasos de A (errores_comunes_asignacion_roles): 5
+     paso 1: Confrontar directamente el conflicto sobre quién será CEO en lugar de evitarlo con títulos ambiguos
+     paso 2: Evaluar objetivamente si la persona con la idea original es realmente la mejor opción para CEO
+     paso 3: Ser cautelosos al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+     paso 4: Evitar colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+     paso 5: Evaluar compatibilidad de motivaciones antes de fundar juntos
+  pasos de B (seleccion_ceo_fundador): 6
+     paso 1: Evalúa la compatibilidad de motivaciones con tus socios antes de fundar juntos, y reúnete con tu equipo fundador para discutir abiertamente quién debe ser el CEO, sin asumir que la persona con la idea lo será automáticamente: confronta el conflicto de frente en lugar de evitarlo con títulos ambiguos
+     paso 2: Identifica quién es la 'persona de la idea' original en el equipo y evalúa objetivamente si es realmente la mejor opción para CEO
+     paso 3: Evalúa a los candidatos según su capacidad de ejecución, no solo su pasión y visión, midiendo el nivel de compromiso (full-time vs part-time) de cada cofundador y mapeando el capital humano, social y financiero que aporta cada fundador
+     paso 4: Considera roles alternativos para la persona con la idea si no es el mejor CEO, como presidente de la junta (Chairman), director de tecnología (CTO) o director científico (Chief Scientific Officer), y sé cauteloso al asignar títulos C-level tempranamente, considerando el crecimiento futuro
+     paso 5: Negocia explícitamente el título de CEO antes de que surjan conflictos, y evita colocar automáticamente a cofundadores en la junta directiva solo por lealtad
+     paso 6: Documenta el acuerdo formalmente para evitar ambigüedad futura, dejando por escrito por qué se asignó cada título para futura referencia
+------------------------------------------------------------------------------
+puesto_intra: 694
+nodo_a: elementos_creadores_valor
+nodo_b: value_proposition_startup
+  pasos de A (elementos_creadores_valor): 4
+     paso 1: Identificar cuál de los 7 elementos (diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento
+     paso 2: Analizar casos de referencia (Rolex-marca, Tata Nano-precio, Salesforce-reducción de costos, NetJets-accesibilidad, iPod-conveniencia)
+     paso 3: Seleccionar 2-3 elementos prioritarios y diseñar la propuesta de valor alrededor de ellos
+     paso 4: Validar con clientes reales si perciben ese valor diferencial
+  pasos de B (value_proposition_startup): 3
+     paso 1: Identifica los problemas o necesidades reales de tu segmento de clientes.
+     paso 2: Define que caracteristicas de tu producto o servicio resuelven esos problemas.
+     paso 3: Verifica el encaje entre tu propuesta de valor y tu segmento de clientes hablando directamente con ellos.
+------------------------------------------------------------------------------
+puesto_intra: 705
+nodo_a: customer_profile
+nodo_b: value_proposition_canvas
+  pasos de A (customer_profile): 5
+     paso 1: Seleccionar un segmento de clientes concreto
+     paso 2: Identificar y listar los customer jobs (funcionales, sociales, emocionales)
+     paso 3: Identificar y listar los customer pains (obstáculos, riesgos, resultados no deseados)
+     paso 4: Identificar y listar los customer gains (requeridos, esperados, deseados, inesperados)
+     paso 5: Priorizar jobs, pains y gains según importancia/severidad/relevancia
+  pasos de B (value_proposition_canvas): 6
+     paso 1: Descargar el template del Value Proposition Canvas
+     paso 2: Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente
+     paso 3: Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains
+     paso 4: Trabajar ambos lados iterativamente hasta encontrar Fit
+     paso 5: Comunicar ambos documentos a toda la organización para crear entendimiento compartido.
+     paso 6: Usar los documentos como scoreboard durante conversaciones reales con clientes.
+------------------------------------------------------------------------------
+puesto_intra: 748
+nodo_a: producto_como_experimento
+nodo_b: startup_como_experimento_cientifico
+  pasos de A (producto_como_experimento): 5
+     paso 1: Antes de construir, responder: ¿el cliente reconoce el problema?, ¿compraría una solución?, ¿nos la compraría a nosotros?, ¿podemos construirla?
+     paso 2: Construir un prototipo mínimo (aunque incompleto) y exponerlo a clientes reales
+     paso 3: Registrar qué funcionalidades reclaman los clientes como faltantes (señal de importancia real)
+     paso 4: No añadir funcionalidades del roadmap original que los clientes no reclamen
+     paso 5: Iterar con base en el uso real antes de invertir en marketing o lanzamiento masivo
+  pasos de B (startup_como_experimento_cientifico): 4
+     paso 1: Formular una hipótesis clara y falsable antes de construir cualquier producto o función
+     paso 2: Diseñar el experimento de forma que pueda fallar (si no puede fallar, no se puede aprender)
+     paso 3: Ejecutar el experimento a pequeña escala antes de comprometer recursos grandes
+     paso 4: Analizar los resultados empíricos y contrastarlos contra la hipótesis original
+------------------------------------------------------------------------------
+puesto_intra: 831
+nodo_a: estrategia_crecimiento_clientes
+nodo_b: optimizacion_metricas_crecimiento
+  pasos de A (estrategia_crecimiento_clientes): 6
+     paso 1: Calcular el valor de vida del cliente de la base de clientes actual
+     paso 2: Diseñar programas de venta cruzada y venta adicional integrados en el proceso de compra (por ejemplo: 'gasta 25 dólares más y obtén envío gratis')
+     paso 3: Crear motores de recomendación tipo 'si compraste X, te gustará Y'
+     paso 4: Diseñar mecanismos de marketing viral y programas de referidos que incentiven a los clientes actuales a invitar a nuevos
+     paso 5: Probar estas tácticas con clientes reales, incluyendo ofertas y promociones exclusivas
+     paso 6: Revisar tácticas específicas de canales web o móviles para identificar ideas adicionales de crecimiento
+  pasos de B (optimizacion_metricas_crecimiento): 6
+     paso 1: Mide los dólares incrementales promedio por cliente recurrente (meta: +15%)
+     paso 2: Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B
+     paso 3: Aumenta el tamaño promedio de orden mediante suscripciones más largas o bonos
+     paso 4: Monitorea la tasa de opt-outs; si supera el 25% del baseline, suaviza el enfoque de venta
+     paso 5: Realiza encuestas de satisfacción y llamadas de seguimiento que incluyan ofertas sutiles
+     paso 6: Diseña e implementa un programa de referidos para atraer nuevos clientes a través de los existentes
+------------------------------------------------------------------------------
+puesto_intra: 920
+nodo_a: customer_archetypes
+nodo_b: customer_profile_value_map
+  pasos de A (customer_archetypes): 4
+     paso 1: Dibujar o bocetar al usuario final y al decisor clave
+     paso 2: Definir perfil demográfico y psicográfico (edad, estilo de vida, intereses)
+     paso 3: Determinar el contexto físico del cliente (oficina, cubículo, hogar, etc.)
+     paso 4: Usar estos arquetipos para informar canal, relación con cliente y modelo de ingresos
+  pasos de B (customer_profile_value_map): 4
+     paso 1: Especificar los jobs, pains y gains del cliente en el Customer Profile.
+     paso 2: Documentar cómo tu producto/servicio alivia pains y crea gains en el Value Map.
+     paso 3: Comunicar ambos documentos a toda la organización para crear entendimiento compartido.
+     paso 4: Usar los documentos como scoreboard durante conversaciones reales con clientes.
+------------------------------------------------------------------------------
+puesto_intra: 932
+nodo_a: cumplimiento_magnuson_moss
+nodo_b: mecanismo_resolucion_disputas
+  pasos de A (cumplimiento_magnuson_moss): 4
+     paso 1: Decide si vas a ofrecer una garantia escrita sobre tu producto.
+     paso 2: Si decides ofrecerla, verifica que cumple los tres requisitos: titulo claro, terminos divulgados con claridad y disponibilidad antes de la venta.
+     paso 3: Revisa que tu garantia no obligue al cliente a comprarte algo mas ni use frases enganosas.
+     paso 4: Consulta con un abogado que conozca esta ley antes de publicar tu garantia, para confirmar que todo esta en regla.
+  pasos de B (mecanismo_resolucion_disputas): 4
+     paso 1: Decide si vas a ofrecer un mecanismo informal de resolución de disputas.
+     paso 2: Si quieres exigirlo como paso previo a que el cliente te demande, diseñalo cumpliendo los estándares de la Dispute Resolution Rule (gratuito, imparcial, con plazos y auditoría).
+     paso 3: Documenta los procedimientos por escrito y capacita a alguien de tu equipo, o contrata un tercero (por ejemplo, el Better Business Bureau) para administrarlo.
+     paso 4: Explica este mecanismo dentro del texto de tu garantía.
+------------------------------------------------------------------------------
+puesto_intra: 1155
+nodo_a: disenar_verbos_no_sustantivos
+nodo_b: falacia_del_disenador_affordances
+  pasos de A (disenar_verbos_no_sustantivos): 4
+     paso 1: Para cada elemento clave de lo que estas creando, pregunta: ¿que accion humana estoy habilitando o dificultando con esta decisión?
+     paso 2: Anota los efectos que no se ven a simple vista de tu diseño: conversaciones, habitos, personas que quedan afuera, no solo la funcion evidente.
+     paso 3: Revisa las decisiones que parecen neutras (tamaños, materiales, forma de acceder a algo) buscando el efecto en el comportamiento que esconden.
+     paso 4: Ajusta tu diseño priorizando el comportamiento que quieres provocar por encima de la estetica o la funcion aislada del objeto.
+  pasos de B (falacia_del_disenador_affordances): 4
+     paso 1: Cuando salgas a observar a la gente en el terreno, busca usos que nadie pidió ni imaginó para tu producto o espacio.
+     paso 2: Pregúntate qué otras cosas permite hacer tu diseño más allá de para qué lo pensaste.
+     paso 3: Diseña con flexibilidad, esperando que la gente lo reinterprete según sus propias necesidades.
+     paso 4: No des por hecho que tu intención va a controlar cómo lo va a usar la persona que lo tenga en sus manos.
+------------------------------------------------------------------------------
+puesto_intra: 1158
+nodo_a: priorizar_elementos_a_validar
+nodo_b: validar_modelo_negocio_hechos
+  pasos de A (priorizar_elementos_a_validar): 5
+     paso 1: Revisar el lienzo de modelo de negocio completo
+     paso 2: Identificar las cinco variables críticas -o menos- que determinarán el éxito del negocio
+     paso 3: Enfocar los recursos de validación en los elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos
+     paso 4: Si es un mercado con múltiples lados, priorizar la validación de cada lado del mercado por separado
+     paso 5: Evitar intentar validar todas las variables del modelo de negocio de forma simultánea
+  pasos de B (validar_modelo_negocio_hechos): 5
+     paso 1: Reunir todas las snapshots semanales o por pivote del business model canvas
+     paso 2: Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas
+     paso 3: Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente
+     paso 4: Identificar pruebas pass/fail para cada hipótesis
+     paso 5: Determinar si los resultados cumplen los objetivos de tráfico o financieros
+------------------------------------------------------------------------------
+puesto_intra: 1172
+nodo_a: decision_log
+nodo_b: issue_log
+  pasos de A (decision_log): 3
+     paso 1: Asignar un ID único a cada decisión
+     paso 2: Documentar la decisión, responsable y fecha
+     paso 3: Registrar comentarios sobre alternativas consideradas e impacto
+  pasos de B (issue_log): 4
+     paso 1: Registrar cada issue con ID único y categoría
+     paso 2: Definir impacto en objetivos y nivel de urgencia
+     paso 3: Asignar responsable y fecha límite de resolución
+     paso 4: Actualizar estado hasta el cierre del issue
+------------------------------------------------------------------------------
+puesto_intra: 1311
+nodo_a: mvp_alta_fidelidad
+nodo_b: prueba_mvp_alta_fidelidad
+  pasos de A (mvp_alta_fidelidad): 5
+     paso 1: Partir del MVP de baja fidelidad usado en customer discovery
+     paso 2: Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)
+     paso 3: Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual
+     paso 4: Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real
+     paso 5: Iterar continuamente mediante desarrollo ágil y despliegue continuo
+  pasos de B (prueba_mvp_alta_fidelidad): 5
+     paso 1: Decide un número limitado de clientes a quienes invitarás a probar tu producto (MVP)
+     paso 2: Incluye una llamada a la acción clara: comprar, registrarse o saber más
+     paso 3: Mide cuántas visitas necesitas antes de que alguien empiece a usarlo
+     paso 4: Mide cuántos usuarios recomiendan tu producto a amigos y qué tan rápido empiezan a usarlo
+     paso 5: Evita publicidad, prensa o demostraciones públicas durante esta prueba
+------------------------------------------------------------------------------
+puesto_intra: 1314
+nodo_a: customer_discovery_overview
+nodo_b: prueba_solucion_con_cliente
+  pasos de A (customer_discovery_overview): 4
+     paso 1: Descompon tu visión inicial en las nueve partes de tu lienzo de modelo de negocio (Business Model Canvas)
+     paso 2: Sal a comprobar si el problema es real y le duele a tus clientes
+     paso 3: Muestrales tu producto minimo viable (MVP) y tu propuesta de valor para validar la solución
+     paso 4: Evalua los resultados y decide si tienes suficiente validación para pasar a probar con clientes reales (Customer Validation) o si necesitas pivotar
+  pasos de B (prueba_solucion_con_cliente): 6
+     paso 1: Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)
+     paso 2: Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'
+     paso 3: Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría
+     paso 4: Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor
+     paso 5: Pregunta cómo es el proceso interno de aprobación de compra de quien te compra
+     paso 6: Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar
+------------------------------------------------------------------------------
+puesto_intra: 1334
+nodo_a: estado_flujo_de_caja_tres_categorias
+nodo_b: flujo_de_caja_libre
+  pasos de A (estado_flujo_de_caja_tres_categorias): 6
+     paso 1: Pide a quien te lleva la contabilidad un estado de flujo de caja si todavía no lo tienes
+     paso 2: Clasifica cada movimiento de efectivo en operación, inversión o financiamiento
+     paso 3: Revisa si el efectivo que genera tu operación es positivo o negativo y si se mantiene sano con el tiempo
+     paso 4: Analiza si estás invirtiendo poco en activos (posible señal de que exprimes el negocio) o mucho (apuesta a futuro), según el tipo de negocio que tienes
+     paso 5: Identifica de dónde viene la mayor parte de tu efectivo y compara entre periodos qué tanto dependes de dinero externo
+     paso 6: Conecta los cambios de tu balance general, como las cuentas por cobrar, con las líneas correspondientes de tu flujo de efectivo
+  pasos de B (flujo_de_caja_libre): 5
+     paso 1: Consigue el estado de flujo de caja del periodo
+     paso 2: Toma el efectivo neto que dejaron las operaciones
+     paso 3: Resta lo que invertiste en equipo o activos (capex), que aparece en la sección de inversión
+     paso 4: Revisa si el resultado es positivo y si va creciendo con el tiempo
+     paso 5: Usa esta cifra para decidir si pagas deuda, compras algo o subes sueldos
+------------------------------------------------------------------------------
+puesto_intra: 1497
+nodo_a: multi_sided_market_channel
+nodo_b: optimizacion_mercado_multilado
+  pasos de A (multi_sided_market_channel): 4
+     paso 1: Identifica posibles anunciantes o agencias que puedan interesarse en tu audiencia
+     paso 2: Estima cuánto estarían dispuestos a pagar y cómo se maneja ese proceso de venta
+     paso 3: Confirma que tu audiencia tenga suficiente volumen (millones de visitas mensuales)
+     paso 4: Busca lo que hace distinta a tu audiencia para que valga más frente a quienes venden espacio publicitario al por mayor
+  pasos de B (optimizacion_mercado_multilado): 4
+     paso 1: Aprender las reglas del juego del lado pagador (requisitos de tráfico, formatos de anuncio)
+     paso 2: Determinar el roadmap de ventas: tiempos, pasos de aprobación, tamaño de órdenes iniciales
+     paso 3: Aplicar procesos de 'get customers' adaptados a este segundo lado del mercado
+     paso 4: Validar la hipótesis de ingresos con conversaciones reales, sin esperar ventas inmediatas
+------------------------------------------------------------------------------
+puesto_intra: 1680
+nodo_a: aplicar_regla_fija_de_colchon_de_relleno
+nodo_b: elegir_caja_correcta
+  pasos de A (aplicar_regla_fija_de_colchon_de_relleno): 4
+     paso 1: Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.
+     paso 2: Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.
+     paso 3: Rellena cualquier espacio vacío hasta que el producto no se mueva al agitar la caja con cuidado.
+     paso 4: Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.
+  pasos de B (elegir_caja_correcta): 5
+     paso 1: Descarta cualquier caja gastada, aplastada o perforada, sin excepcion.
+     paso 2: Elige el tamano que deje espacio para el relleno sin quedar demasiado holgado.
+     paso 3: Usa caja de doble pared cuando el contenido sea pesado o fragil.
+     paso 4: Pregunta a tu courier cual es su formula de peso por volumen antes de armar el envio.
+     paso 5: Revisa el limite de peso impreso en la caja antes de sellarla.
+------------------------------------------------------------------------------
+puesto_intra: 1720
+nodo_a: encuestar_al_cliente_para_saber_que_valora
+nodo_b: segmentar_clientes_nivel_servicio
+  pasos de A (encuestar_al_cliente_para_saber_que_valora): 5
+     paso 1: Identifica quien decide realmente la compra entre tus clientes.
+     paso 2: Elige un metodo simple de encuesta segun tu alcance: mensaje, correo o llamada corta.
+     paso 3: Pregunta que aspectos del envio les importan mas: tiempo, condicion, aviso o devolucion facil.
+     paso 4: Agrupa las respuestas por tipo de cliente para ver si esperan cosas distintas.
+     paso 5: Usa esos resultados para decidir que vas a medir despues, en lugar de adivinar.
+  pasos de B (segmentar_clientes_nivel_servicio): 4
+     paso 1: Identifica dos o tres grupos de clientes segun cuanto compran o cuanto les urge la entrega.
+     paso 2: Pregunta directamente, con una llamada o mensaje corto, que espera cada grupo de la entrega.
+     paso 3: Define un paquete de servicio distinto para cada grupo, con plazos y costos propios.
+     paso 4: Comunica cada paquete con claridad en el momento de la compra.
+------------------------------------------------------------------------------
+puesto_intra: 1814
+nodo_a: eco_eficiencia_critica
+nodo_b: menos_malo_vs_bueno
+  pasos de A (eco_eficiencia_critica): 3
+     paso 1: Evaluar si las iniciativas actuales de sostenibilidad solo reducen daño o realmente lo eliminan
+     paso 2: Identificar procesos industriales que aún generan toxinas aunque en menor cantidad
+     paso 3: Cuestionar si la reducción de tamaño/material realmente resuelve el problema de fondo
+  pasos de B (menos_malo_vs_bueno): 5
+     paso 1: Evaluar si las mejoras actuales del producto son solo reducciones de daño o transformaciones reales
+     paso 2: Identificar métricas de 'eficiencia' que puedan estar optimizando el aspecto equivocado del problema
+     paso 3: Redefinir los objetivos del proyecto desde 'reducir impacto negativo' hacia 'generar impacto positivo', empezando por al menos una meta ambiental
+     paso 4: Evitar el lenguaje de culpa (cero emisiones, huella cero) y sustituirlo por lenguaje de calidad de vida y abundancia
+     paso 5: Presentar a stakeholders la visión de 'ser 100% bueno' como alternativa a las metas actuales
+------------------------------------------------------------------------------
+puesto_intra: 2013
+nodo_a: barreras_comerciales_no_arancelarias
+nodo_b: licencia_exportacion_regulaciones
+  pasos de A (barreras_comerciales_no_arancelarias): 4
+     paso 1: Consulta con la oficina de comercio exterior de tu país sobre las regulaciones del mercado al que quieres vender
+     paso 2: Revisa los textos de los acuerdos comerciales que apliquen entre tu país y el país destino
+     paso 3: Si detectas una barrera que te parece injusta o discriminatoria, averigua cómo presentar una queja formal ante el organismo correspondiente en tu mercado
+     paso 4: Ajusta tu producto o tu proceso de exportación según lo que descubras en la revisión regulatoria
+  pasos de B (licencia_exportacion_regulaciones): 6
+     paso 1: Clasificar el producto con un ECCN (Export Control Classification Number) en bis.doc.gov
+     paso 2: Verificar si el producto está en la Lista de Municiones de EE.UU. (USML) bajo ITAR
+     paso 3: Consultar las listas de partes denegadas (denied parties lists) en bis.doc.gov
+     paso 4: Revisar la lista consolidada de sanciones de OFAC antes de completar pedidos internacionales
+     paso 5: Designar un oficial de cumplimiento de exportaciones si se exportan pocos productos a pocos países
+     paso 6: Incluir la Declaración de Control de Destino en todas las facturas comerciales
+------------------------------------------------------------------------------
+puesto_intra: 2282
+nodo_a: enfoque_situacional_vs_personal
+nodo_b: principios_gestion_error
+  pasos de A (enfoque_situacional_vs_personal): 5
+     paso 1: Analiza la cadena causal completa detrás de cada error antes de decidir cómo responder
+     paso 2: Prioriza el rediseño de la tarea, herramientas o procedimiento como primera línea de intervención
+     paso 3: Revisa si los errores repetidos están asociados a un mismo puesto o situación más que a una misma persona
+     paso 4: Reserva las medidas centradas en la persona para casos de mala conducta deliberada o repetida sin justificación situacional
+     paso 5: Define tus propios criterios para decidir cuándo actuar sobre el proceso y cuándo sobre el individuo
+  pasos de B (principios_gestion_error): 5
+     paso 1: Aceptar que el error humano es inevitable y enfocar la gestión en las condiciones de trabajo
+     paso 2: Diseñar mejoras informativas (procedimientos, señalización, retroalimentación) para reducir errores
+     paso 3: Abordar las violaciones mediante cambio cultural, normas y actitudes, no solo mediante sanción
+     paso 4: Evitar la cultura de culpabilización individual como estrategia principal de gestión de errores
+     paso 5: Diferenciar en el análisis organizacional entre errores (no intencionales) y violaciones (intencionales)
+------------------------------------------------------------------------------
+puesto_intra: 2319
+nodo_a: cultura_como_mecanismo_descentralizacion
+nodo_b: cultura_flexible_organizacional
+  pasos de A (cultura_como_mecanismo_descentralizacion): 4
+     paso 1: Identificar los supuestos y premisas de decisión compartidos que guían al personal en situaciones no estandarizadas
+     paso 2: Fomentar la socialización temprana del personal en estos valores compartidos antes de otorgar autonomía operativa
+     paso 3: Evaluar si las operaciones descentralizadas mantienen coherencia con los objetivos centrales sin necesidad de supervisión directa
+     paso 4: Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas
+  pasos de B (cultura_flexible_organizacional): 4
+     paso 1: Identificar los valores y supuestos culturales compartidos que sostienen la coordinación
+     paso 2: Entrenar al personal para reconocer cuándo ceder autoridad jerárquica a la experticia técnica
+     paso 3: Fomentar la comunicación cara a cara y la narrativa de 'historias de guerra' para transferir conocimiento tácito
+     paso 4: Diversificar los equipos de trabajo para aumentar la variedad de percepción de riesgos (requisite variety)
+------------------------------------------------------------------------------
+puesto_intra: 2357
+nodo_a: evaluacion_mejora_programa
+nodo_b: seguimiento_efectividad_controles
+  pasos de A (evaluacion_mejora_programa): 6
+     paso 1: Definir indicadores rezagados (lesiones, enfermedades) y adelantados (participación, capacitación)
+     paso 2: Recolectar y analizar datos de desempeño periódicamente y compartirlos con tus trabajadores
+     paso 3: Verificar que los procesos clave y controles del programa operen según lo diseñado en tu sitio de trabajo
+     paso 4: Revisar si los indicadores y metas siguen siendo relevantes y ajustarlos si es necesario
+     paso 5: Corregir de inmediato cualquier deficiencia detectada, dejando claro quien se encarga y para cuándo
+     paso 6: Usar herramientas de autoevaluación disponibles en tu mercado y celebrar los éxitos alcanzados
+  pasos de B (seguimiento_efectividad_controles): 6
+     paso 1: Verificar que todos los controles se implementaron según el plan
+     paso 2: Confirmar que los controles de ingeniería fueron instalados y probados
+     paso 3: Verificar que fuiste capacitado en el uso correcto de los controles
+     paso 4: Realizar inspecciones regulares y monitoreo de higiene industrial
+     paso 5: Modificar controles ineficaces o implementar medidas adicionales si es necesario
+     paso 6: Ejecutar mantenimiento preventivo rutinario de equipos y controles
+------------------------------------------------------------------------------
+puesto_intra: 2470
+nodo_a: establecer_vision_organizacional
+nodo_b: establecer_vision_organizacional_2
+  pasos de A (establecer_vision_organizacional): 6
+     paso 1: Escribe una visión simple, directa e inspiradora, centrada en tu cliente
+     paso 2: Define tu misión: qué haces y a quién le sirves
+     paso 3: Establece tus estrategias como los pocos factores clave para tener éxito (precio, valor, tecnología, cultura)
+     paso 4: Define metas anuales de corto plazo (1 a 2 años) y de largo plazo (2 a 3 años)
+     paso 5: Establece criterios que guíen tus decisiones diarias en temas como calidad, cuidado del entorno y seguridad
+     paso 6: Crea un plan que baje tu visión a estrategias, metas y proyectos concretos
+  pasos de B (establecer_vision_organizacional_2): 5
+     paso 1: Dedica tiempo a pensar con claridad hacia dónde quieres llevar tu negocio en los próximos años, y si tienes con quién conversarlo, hazlo
+     paso 2: Redacta una visión simple, directa y medible a 3 o 5 años
+     paso 3: Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios
+     paso 4: Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables
+     paso 5: Comparte la visión de forma que sea entendida y compartida por todas las personas que trabajan contigo
+------------------------------------------------------------------------------
+puesto_intra: 2628
+nodo_a: competencias_director_calidad_bloom
+nodo_b: competencias_ingeniero_calidad
+  pasos de A (competencias_director_calidad_bloom): 4
+     paso 1: Elaborar una matriz de competencias para el rol de Director de Calidad
+     paso 2: Clasificar cada competencia según los niveles de Bloom aplicables
+     paso 3: Evaluar al candidato o titular actual contra la matriz de competencias
+     paso 4: Identificar brechas de conocimiento y diseñar plan de desarrollo
+  pasos de B (competencias_ingeniero_calidad): 4
+     paso 1: Definir las siete categorías de competencia técnica requeridas para el rol
+     paso 2: Evaluar el nivel de dominio de Bloom alcanzado en cada categoría
+     paso 3: Diseñar plan de formación técnica en las áreas con brechas
+     paso 4: Certificar al ingeniero mediante organismo reconocido (ej. ASQ CQE)
+------------------------------------------------------------------------------
+puesto_intra: 2632
+nodo_a: control_charts_shewhart
+nodo_b: control_estadistico_de_procesos
+  pasos de A (control_charts_shewhart): 6
+     paso 1: Seleccionar el tipo de gráfico adecuado según el tipo de dato (Fig. 19.23 Roadmap)
+     paso 2: Recolectar 20-30 subgrupos racionales antes de establecer límites
+     paso 3: Calcular límites de control usando fórmulas basadas en ±3σ (Tabla 19.3)
+     paso 4: Graficar los datos en orden temporal de producción
+     paso 5: Interpretar los resultados y definir acciones para el personal de producción
+     paso 6: Retirar los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características
+  pasos de B (control_estadistico_de_procesos): 10
+     paso 1: Elegir la característica a graficar, priorizando las de alta tasa de defectos
+     paso 2: Identificar variables y condiciones del proceso que contribuyen a la característica final
+     paso 3: Verificar que el sistema de medición tenga precisión y exactitud suficientes
+     paso 4: Determinar el punto más temprano de prueba para detectar causas asignables
+     paso 5: Elegir el tipo de gráfico de control adecuado (variables o atributos)
+     paso 6: Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio
+     paso 7: Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5
+     paso 8: Establecer un sistema simple y confiable de recolección de datos
+     paso 9: Calcular límites de control y definir instrucciones de interpretación y acción
+     paso 10: Graficar los datos e interpretar los resultados
+------------------------------------------------------------------------------
+puesto_intra: 2662
+nodo_a: consejo_calidad_2
+nodo_b: consejo_de_calidad_3
+  pasos de A (consejo_calidad_2): 5
+     paso 1: Conformar el consejo con altos directivos de línea y staff, presidido por el máximo responsable del nivel correspondiente
+     paso 2: Incluir al director de calidad como miembro del consejo
+     paso 3: Redactar una carta constitutiva con responsabilidades claras del consejo
+     paso 4: Establecer infraestructura para seleccionar proyectos de calidad y asignar líderes de equipo
+     paso 5: Definir mecanismos de revisión periódica de progreso y remoción de obstáculos
+  pasos de B (consejo_de_calidad_3): 4
+     paso 1: Conformar el consejo con representantes de las distintas áreas de mejora
+     paso 2: Establecer una periodicidad de reuniones para compartir avances
+     paso 3: Coordinar la repetición del ciclo de mejora de calidad
+     paso 4: Institucionalizar el consejo como parte de la estructura permanente
+------------------------------------------------------------------------------
+puesto_intra: 2681
+nodo_a: errores_de_medicion
+nodo_b: validacion_sistema_medicion_2
+  pasos de A (errores_de_medicion): 5
+     paso 1: Definir formalmente el método de prueba paso a paso
+     paso 2: Identificar las fuentes de variabilidad (operador, equipo, día, laboratorio)
+     paso 3: Verificar la estabilidad del proceso de medición mediante carta de control
+     paso 4: Calcular bias y repetibilidad del instrumento de medición
+     paso 5: Calibrar el equipo respecto a estándares de medida reconocidos
+  pasos de B (validacion_sistema_medicion_2): 4
+     paso 1: Cuantificar la variación debida al proceso de manufactura
+     paso 2: Cuantificar la variación debida al sistema de medición (Gauge R&R)
+     paso 3: Comparar ambas fuentes de variación para determinar capacidad de medición
+     paso 4: Corregir o calibrar el sistema de medición si es necesario
+------------------------------------------------------------------------------
+puesto_intra: 2692
+nodo_a: accion_correctiva_5
+nodo_b: mejora_continua_operaciones
+  pasos de A (accion_correctiva_5): 6
+     paso 1: Documenta formalmente cada problema detectado durante la operación, revisión de calidad u otros medios
+     paso 2: Revisa con frecuencia regular, diaria si es posible, los problemas pendientes junto a quien te apoye en calidad
+     paso 3: Crea un chart de acción ítem por ítem que registre problema, gravedad, causa y responsable
+     paso 4: Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+     paso 5: Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+     paso 6: Da seguimiento sistemático a cada ítem hasta su cierre definitivo
+  pasos de B (mejora_continua_operaciones): 6
+     paso 1: Diagnostica la cultura de calidad actual de tu operación
+     paso 2: Clasifica cada problema como esporadico o cronico antes de actuar
+     paso 3: Resuelve de inmediato los problemas esporadicos o urgentes
+     paso 4: Dedica tiempo y esfuerzo enfocado a atacar los problemas cronicos de raiz
+     paso 5: Junta a las personas de otras areas cuando la causa raiz las involucre
+     paso 6: Pide a quien te ayuda con calidad soporte tecnico y capacitación continua
+------------------------------------------------------------------------------
+puesto_intra: 2761
+nodo_a: definir_metas_smart_de_proyecto
+nodo_b: establecer_proyecto_y_metas_diseno
+  pasos de A (definir_metas_smart_de_proyecto): 4
+     paso 1: Redactar la meta del proyecto especificando qué se hará y cuándo
+     paso 2: Verificar que la meta sea medible definiendo indicadores de calidad, cantidad, costo y tiempo
+     paso 3: Validar que la meta sea realista pero desafiante
+     paso 4: Obtener acuerdo de todos los afectados sobre la meta final
+  pasos de B (establecer_proyecto_y_metas_diseno): 5
+     paso 1: Vincular el proyecto de diseño con tu estrategia de ventas o de negocio
+     paso 2: Redactar un enunciado de meta que incluya el alcance y los resultados que quieres lograr
+     paso 3: Definir quien te va a ayudar en el proyecto y prepararlo para la tarea
+     paso 4: Definir metricas SMART: especificas, medibles, acordadas, realistas y con tiempo definido
+     paso 5: Revisar el avance del proyecto de forma periodica
+------------------------------------------------------------------------------
+puesto_intra: 2876
+nodo_a: fitness_for_purpose_vs_conformance
+nodo_b: insuficiencia_especificaciones
+  pasos de A (fitness_for_purpose_vs_conformance): 4
+     paso 1: Mapear la definición de calidad del cliente versus la definición interna de la organización
+     paso 2: Identificar factores post-venta no cubiertos por especificaciones técnicas (transporte, instalación, mantenimiento)
+     paso 3: Revisar especificaciones internas para incluir criterios de aptitud de uso real
+     paso 4: Alinear métricas de calidad interna con la experiencia real del cliente
+  pasos de B (insuficiencia_especificaciones): 4
+     paso 1: Comunicar a proveedores el uso final específico del material o componente, no solo las especificaciones técnicas
+     paso 2: Evaluar la compatibilidad e integración de componentes en el sistema completo, no solo su cumplimiento individual
+     paso 3: Diseñar y probar subsistemas de manera conjunta, no de forma aislada
+     paso 4: Solicitar retroalimentación de diseño e ingeniería antes de fijar especificaciones finales
+------------------------------------------------------------------------------
+puesto_intra: 2920
+nodo_a: ejecucion_auditoria
+nodo_b: reporte_auditoria
+  pasos de A (ejecucion_auditoria): 4
+     paso 1: Confirma cada hallazgo con la persona responsable de esa área antes de escribirlo en el reporte
+     paso 2: Decide si tú vas a investigar la causa del problema o si se lo dejas a quien maneja esa parte del negocio
+     paso 3: Propón mejoras, pero evita diseñar tú mismo la solución final
+     paso 4: Mantén al cliente clave al tanto de cómo va avanzando la revisión
+  pasos de B (reporte_auditoria): 5
+     paso 1: Redacta el reporte incluyendo resumen ejecutivo, alcance, hallazgos y recomendaciones
+     paso 2: Revisa el borrador con la persona responsable del área auditada antes de compartirlo, en una reunión de cierre
+     paso 3: Clasifica cada hallazgo según su gravedad (crítica, mayor, menor)
+     paso 4: Define junto con la persona auditada a quién se le va a entregar el reporte
+     paso 5: Empieza el reporte con lo que sí funciona bien, para mantener el equilibrio
+------------------------------------------------------------------------------
+puesto_intra: 3055
+nodo_a: benchmarking_mejores_practicas
+nodo_b: clasificacion_benchmarking
+  pasos de A (benchmarking_mejores_practicas): 4
+     paso 1: Identificar procesos clave a comparar (diseño, logística, ventas, etc.)
+     paso 2: Seleccionar organizaciones reconocidas como mejores en clase para esos procesos
+     paso 3: Subcontratar o realizar el estudio de benchmarking comparando prácticas
+     paso 4: Identificar brechas entre el desempeño propio y las mejores prácticas encontradas
+  pasos de B (clasificacion_benchmarking): 4
+     paso 1: Determinar el objeto del benchmarking: función, proceso, unidad de negocio, proyecto o modelo genérico
+     paso 2: Decidir el tipo de participantes: internos, externos, competidores o no competidores
+     paso 3: Seleccionar el modelo de excelencia (ej. Baldridge o EFQM) si se busca un marco holístico de comparación
+     paso 4: Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
