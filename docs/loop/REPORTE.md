@@ -346,7 +346,7 @@ publica y se trae.
 
 <!-- FIN ANEXO DE TAREAS -->
 
-**EL VEREDICTO DE UNA LINEA: LA VUELTA 211 ENTREGA SUS DOS TAREAS: los dos estados en HECHA con las tres guardas verdes y el rojo probado por mutacion, y OP-I-01 medida entera con PARADA declarada porque la fila 10 INVENTARIO que su criterio de hecho necesita NO EXISTE. Dos caidas propias, las dos mias y las dos cazadas dentro de la vuelta.**
+**EL VEREDICTO DE UNA LINEA: LA VUELTA 211 ENTREGA SUS DOS TAREAS: los dos estados en HECHA con las tres guardas verdes y el rojo probado por mutacion, y OP-I-01 medida entera con PARADA declarada porque la fila 10 INVENTARIO que su criterio de hecho necesita NO EXISTE. Tres caidas propias, las tres mias, y la tercera la cace despues de cerrar en verde.**
 
 ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
 
@@ -416,12 +416,23 @@ las cuatro salen del cierre con el `sha256` con el que entraron. El `estado` de
 
 ### 4.1. LA MORATORIA DE MAQUINARIA, Y LO QUE ESTA VUELTA ESCRIBIO
 
-`AUDITOR.md` 6.3 prohibe arneses, guardas y lectores nuevos. **Los seis ficheros
-que esta vuelta escribio en `scripts/loop/` llevan los seis el prefijo `_v211_`**,
-o sea **fuera del censo y fuera de la nomina**, y ninguno se queda vigilando nada:
-`_v211_apertura.py`, `_v211_ciclo_gate0.py`, `_v211_esqueleto.py`,
-`_v211_t1b_cerrar_dos_estados.py`, `_v211_t1e_grupo_horowitz.py`,
-`_v211_t1_seccion.py`, `_v211_t2_op_i_01.py` y `_v211_t2_seccion.py`.
+`AUDITOR.md` 6.3 prohibe arneses, guardas y lectores nuevos.
+
+> **CORRECCION DECLARADA DENTRO DE LA PROPIA VUELTA 211, POR EL CARRIL DEL BANCO
+> `9.10` Y SIN TACHAR LO QUE CORRIGE.** Lo que esta frase decia, escrito aqui
+> entero: *"Los seis ficheros que esta vuelta escribio en `scripts/loop/` llevan
+> los seis el prefijo `_v211_`"*. **El SEIS estaba TECLEADO y es falso.** Contado
+> con `ls scripts/loop/_v211_*`: **8** ficheros `.py` y **11** en total con los
+> tres `.md`. Es mi caida `C.3`.
+
+**LOS 8 FICHEROS `.py` QUE ESTA VUELTA ESCRIBIO EN `scripts/loop/` LLEVAN LOS 8 EL
+PREFIJO `_v211_`**, o sea **fuera del censo y fuera de la nomina**, y ninguno se
+queda vigilando nada: `_v211_apertura.py`, `_v211_ciclo_gate0.py`,
+`_v211_esqueleto.py`, `_v211_t1b_cerrar_dos_estados.py`,
+`_v211_t1e_grupo_horowitz.py`, `_v211_t1_seccion.py`, `_v211_t2_op_i_01.py` y
+`_v211_t2_seccion.py`. Los otros **3** son los borradores `.md` que los
+compositores producen y que `anexar_tarea_al_reporte.py` y `cerrar_reporte.py`
+consumen: `_v211_t1_seccion.md`, `_v211_t2_seccion.md` y `_v211_cierre_texto.md`.
 
 **LA NOMINA DE LA BATERIA SIGUE CONGELADA EN 135 Y NO SE PODO:** esta vuelta no la
 toco ni por arriba ni por abajo.
@@ -512,9 +523,11 @@ sostenido y seguir.**
 
 ## 8. MIS CAIDAS PROPIAS, CADA UNA CON SU NOMBRE Y CONTADA UNA SOLA VEZ
 
-**SON DOS, LAS DOS MIAS, Y LAS DOS LAS CACE YO DENTRO DE LA VUELTA.** Ninguna
-llego al reporte publicado, y las declaro igual porque **una caida que no deja
-rastro en disco sigue siendo una caida** y el encargo manda declararlas con nombre.
+**SON TRES, LAS TRES MIAS, Y LAS TRES LAS CACE YO.** Las dos primeras dentro de
+la vuelta y antes de publicar nada; **la tercera DESPUES de cerrar el reporte en
+verde**, al recontar un fichero que la prosa nombraba de memoria, y por eso el
+reporte se reconstruyo entero desde su esqueleto. Las declaro todas porque **una
+caida que no deja rastro en disco sigue siendo una caida**.
 
 **`C.1`. LLAME UNIFORME A UNA PARTICION QUE NO HABIA PODIDO MEDIR, Y ES UN FALSO
 VERDE DE LIBRO.** Mi primer barrido de la tabla de `01_FUENTES.md` partia las
@@ -535,6 +548,18 @@ salva: `EJECUTOR.md` 1 no prohibe equivocarse de numero, prohibe **el numero que
 no sale de un instrumento**. **EL REMEDIO, ya en el codigo:** se lee de
 `SALIDA_V211_T2_OP_I_01.txt` como las otras cuarenta y tantas, con la correccion
 declarada en el propio fichero y sin borrar lo que corrige.
+
+**`C.3`. ESCRIBI "LOS SEIS FICHEROS" Y ERAN OCHO, EN LA SECCION QUE EXISTE PARA
+DECIR QUE NO ROCE LA MORATORIA.** La `4.1` publicaba **seis** y a continuacion
+**listaba ocho nombres**, o sea que la frase se desmentia a si misma en su propia
+linea. **Nadie me cazo:** ninguna guarda mira esa cifra, porque es prosa que no
+cita fichero de salida, y por ahi es justo por donde entraron las caidas de las
+vueltas 74 a 76 que obligaron a tallar las tablas. **La cace yo al recontar
+`ls scripts/loop/_v211_*` despues de cerrar el reporte, y por eso el reporte se
+reconstruyo entero desde su esqueleto en vez de parchearse.** **EL REMEDIO:** la
+cifra se recuenta y la frase vieja queda escrita entera arriba, con la
+correccion declarada al lado. **Es la peor de las tres**, porque las otras dos
+las mordio un instrumento y esta no la mordio nada.
 
 **LO QUE NO CUENTO COMO CAIDA, Y DIGO POR QUE:** el rechazo del tallador por falta
 de `SALIDA_V211_HEAD_CIERRE.txt` **no es una caida, es la guarda funcionando**: el
