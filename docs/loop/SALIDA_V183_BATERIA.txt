@@ -13,17 +13,17 @@ CIFRA entradas que los tramos dicen haber corrido: 135
 CIFRA entradas sin correr: 0 | repetidas: 0 | ajenas: 0
 LA COBERTURA SE LEYO DE LAS SALIDAS, no se recalculo del reparto.
 
-  tramo 1 -> SALIDA_V183_BATERIA_TRAMO_1.txt: 9558 bytes disco, 9558 bytes LF, 129 lineas, sha256 413cf381cac38391
-  tramo 2 -> SALIDA_V183_BATERIA_TRAMO_2.txt: 7804 bytes disco, 7804 bytes LF, 123 lineas, sha256 553e56b775af0ef4
-  tramo 3 -> SALIDA_V183_BATERIA_TRAMO_3.txt: 7857 bytes disco, 7857 bytes LF, 123 lineas, sha256 5156e936d0053599
-  tramo 4 -> SALIDA_V183_BATERIA_TRAMO_4.txt: 7867 bytes disco, 7867 bytes LF, 123 lineas, sha256 75acd39e3b709189
-  tramo 5 -> SALIDA_V183_BATERIA_TRAMO_5.txt: 7827 bytes disco, 7827 bytes LF, 123 lineas, sha256 2f4ba7df501556c8
-  tramo 6 -> SALIDA_V183_BATERIA_TRAMO_6.txt: 7887 bytes disco, 7887 bytes LF, 123 lineas, sha256 98498ba8f979eace
-  tramo 7 -> SALIDA_V183_BATERIA_TRAMO_7.txt: 7893 bytes disco, 7893 bytes LF, 123 lineas, sha256 c09960750d7c1ea4
-  tramo 8 -> SALIDA_V183_BATERIA_TRAMO_8.txt: 7848 bytes disco, 7848 bytes LF, 123 lineas, sha256 b07f055c9e20934d
-  tramo 9 -> SALIDA_V183_BATERIA_TRAMO_9.txt: 8523 bytes disco, 8523 bytes LF, 125 lineas, sha256 c323573fb6b3f9b7
-  tramo 10 -> SALIDA_V183_BATERIA_TRAMO_10.txt: 8475 bytes disco, 8475 bytes LF, 123 lineas, sha256 a91d4a64007fcb93
-  tramo 11 -> SALIDA_V183_BATERIA_TRAMO_11.txt: 6273 bytes disco, 6273 bytes LF, 94 lineas, sha256 f50d0fbbd5546bb2
+  tramo 1 -> SALIDA_V183_BATERIA_TRAMO_1.txt: 9544 bytes disco, 9544 bytes LF, 129 lineas, sha256 42aa5cfefc6430c9
+  tramo 2 -> SALIDA_V183_BATERIA_TRAMO_2.txt: 7795 bytes disco, 7795 bytes LF, 123 lineas, sha256 81a3c7a531cf6a0e
+  tramo 3 -> SALIDA_V183_BATERIA_TRAMO_3.txt: 8050 bytes disco, 8050 bytes LF, 125 lineas, sha256 59a76bcd2a130c26
+  tramo 4 -> SALIDA_V183_BATERIA_TRAMO_4.txt: 7862 bytes disco, 7862 bytes LF, 123 lineas, sha256 057302c48260d68e
+  tramo 5 -> SALIDA_V183_BATERIA_TRAMO_5.txt: 8274 bytes disco, 8274 bytes LF, 127 lineas, sha256 3af8acc15e739cce
+  tramo 6 -> SALIDA_V183_BATERIA_TRAMO_6.txt: 8205 bytes disco, 8205 bytes LF, 126 lineas, sha256 59159791450eb06a
+  tramo 7 -> SALIDA_V183_BATERIA_TRAMO_7.txt: 7893 bytes disco, 7893 bytes LF, 123 lineas, sha256 eb7f1f76a3ffb256
+  tramo 8 -> SALIDA_V183_BATERIA_TRAMO_8.txt: 7848 bytes disco, 7848 bytes LF, 123 lineas, sha256 f1f6f5e46d6b9ea5
+  tramo 9 -> SALIDA_V183_BATERIA_TRAMO_9.txt: 8525 bytes disco, 8525 bytes LF, 125 lineas, sha256 acec86b22c4647ce
+  tramo 10 -> SALIDA_V183_BATERIA_TRAMO_10.txt: 8472 bytes disco, 8472 bytes LF, 123 lineas, sha256 f399ff43b678a39d
+  tramo 11 -> SALIDA_V183_BATERIA_TRAMO_11.txt: 6273 bytes disco, 6273 bytes LF, 94 lineas, sha256 e9ecd2bf6606e3be
 ==============================================================================
 
 ==============================================================================
@@ -32,7 +32,7 @@ TRAMO 1 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 1 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T13:28:40Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:03:42Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -40,11 +40,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 8a60182f750f, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD e411137f9d81, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 8a60182f750f, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD e411137f9d81, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -55,7 +55,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 8a60182f750f, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD e411137f9d81, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 1 de 11
@@ -76,54 +76,54 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta144_2d_mutacion_cobertura.py
 
 
-  vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK                   5.2s
+  vuelta133_tarea2e_mutacion_cifras.py   exit 0  OK                   3.3s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta135_2e_mutacion_1.py             exit 0  OK                  11.7s
+  vuelta135_2e_mutacion_1.py             exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_1.txt
-  vuelta135_2e_mutacion_2.py             exit 0  OK                  11.7s
+  vuelta135_2e_mutacion_2.py             exit 0  OK                   3.2s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_2.txt
-  vuelta135_2e_mutacion_3.py             exit 1  CASO DECLARADO      11.0s
+  vuelta135_2e_mutacion_3.py             exit 1  CASO DECLARADO       3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V135_2E_MUTACION_3.txt
       SUJETO FIJO VERIFICADO: SUJETO_FIJO_V135_2E_REPORTE_134.md calza con el blob e12e4c36 (sha256 d1f97a510f17e35046eeec4975e1e0a1adabcfdda5a4646a250aa6db
-  vuelta139_2b_mutaciones.py             exit 0  OK                  11.5s
+  vuelta139_2b_mutaciones.py             exit 0  OK                   4.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta140_2a_mutaciones.py             exit 2  CASO DECLARADO      11.5s
+  vuelta140_2a_mutaciones.py             exit 2  CASO DECLARADO       3.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
       ==============================================================================
-  vuelta141_2_mutaciones.py              exit 0  OK                  10.9s
+  vuelta141_2_mutaciones.py              exit 0  OK                   3.3s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta143_2a_mutaciones.py             exit 0  OK                  12.5s
+  vuelta143_2a_mutaciones.py             exit 0  OK                   5.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta143_2b_mutacion_bateria.py       exit 0  OK                  11.9s
+  vuelta143_2b_mutacion_bateria.py       exit 0  OK                   4.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta143_2c_mutacion_positivo.py      exit 0  OK                  12.9s
+  vuelta143_2c_mutacion_positivo.py      exit 0  OK                   4.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta144_2a_mutaciones.py             exit 0  OK                  11.0s
+  vuelta144_2a_mutaciones.py             exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta144_2b_mutacion_giro.py          exit 0  OK                  15.3s
+  vuelta144_2b_mutacion_giro.py          exit 0  OK                   7.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta144_2d_mutacion_cobertura.py     exit 0  OK                  11.0s
+  vuelta144_2d_mutacion_cobertura.py     exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 148.1
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 2.5
-  CIFRA arnes MAS LENTO: vuelta144_2b_mutacion_giro.py con 15.3s
-  CIFRA arnes MAS RAPIDO: vuelta133_tarea2e_mutacion_cifras.py con 5.2s
-  CIFRA mediana por arnes, en segundos: 11.5
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 50.2
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.8
+  CIFRA arnes MAS LENTO: vuelta144_2b_mutacion_giro.py con 7.1s
+  CIFRA arnes MAS RAPIDO: vuelta144_2a_mutaciones.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 3.3
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta144_2b_mutacion_giro.py                 15.3s
-      vuelta143_2c_mutacion_positivo.py             12.9s
-      vuelta143_2a_mutaciones.py                    12.5s
-      vuelta143_2b_mutacion_bateria.py              11.9s
-      vuelta135_2e_mutacion_1.py                    11.7s
-      vuelta135_2e_mutacion_2.py                    11.7s
-      vuelta140_2a_mutaciones.py                    11.5s
-      vuelta139_2b_mutaciones.py                    11.5s
-      vuelta144_2a_mutaciones.py                    11.0s
-      vuelta135_2e_mutacion_3.py                    11.0s
+      vuelta144_2b_mutacion_giro.py                  7.1s
+      vuelta143_2a_mutaciones.py                     5.1s
+      vuelta143_2c_mutacion_positivo.py              4.7s
+      vuelta143_2b_mutacion_bateria.py               4.1s
+      vuelta139_2b_mutaciones.py                     4.0s
+      vuelta140_2a_mutaciones.py                     3.8s
+      vuelta133_tarea2e_mutacion_cifras.py           3.3s
+      vuelta141_2_mutaciones.py                      3.3s
+      vuelta135_2e_mutacion_2.py                     3.2s
+      vuelta135_2e_mutacion_1.py                     3.1s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -142,8 +142,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 8a60182f750f, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 8a60182f750f, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD e411137f9d81, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD e411137f9d81, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -156,9 +156,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 1: 1
-FIN (reloj de pared, UTC): 2026-09-07T13:31:10Z
-DURACION DEL TRAMO (monotona, segundos): 150.4
-DURACION DEL TRAMO (monotona, minutos): 2.5
+FIN (reloj de pared, UTC): 2026-09-08T04:04:34Z
+DURACION DEL TRAMO (monotona, segundos): 52.2
+DURACION DEL TRAMO (monotona, minutos): 0.9
 
 
 ==============================================================================
@@ -167,7 +167,7 @@ TRAMO 2 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 2 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T13:32:52Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:06:22Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -175,11 +175,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 44fd9bbe650f, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD ca70205861b4, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 44fd9bbe650f, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD ca70205861b4, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -190,7 +190,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 44fd9bbe650f, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD ca70205861b4, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 2 de 11
@@ -211,52 +211,52 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta148_2a_mutacion_nomina_commiteada.py
 
 
-  vuelta144_3a_mutaciones.py             exit 0  OK                   7.5s
+  vuelta144_3a_mutaciones.py             exit 0  OK                   4.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta144_3b_mutacion_negativa.py      exit 0  OK                  24.4s
+  vuelta144_3b_mutacion_negativa.py      exit 0  OK                  12.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta144_3c_caso_positivo_1190.py     exit 0  OK                  11.4s
+  vuelta144_3c_caso_positivo_1190.py     exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta145_2a_mutacion_ancla_unica.py   exit 0  OK                  11.2s
+  vuelta145_2a_mutacion_ancla_unica.py   exit 0  OK                   3.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta145_2b_mutacion_arneses.py       exit 0  OK                  46.0s
+  vuelta145_2b_mutacion_arneses.py       exit 0  OK                  20.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta145_2c_mutacion_censo.py         exit 0  OK                  33.7s
+  vuelta145_2c_mutacion_censo.py         exit 0  OK                  13.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta146_2b_mutacion_ausencias.py     exit 0  OK                  11.7s
+  vuelta146_2b_mutacion_ausencias.py     exit 0  OK                   3.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta147_2c_mutacion_vitalidad.py     exit 0  OK                 175.5s
+  vuelta147_2c_mutacion_vitalidad.py     exit 0  OK                 135.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta147_3d_mutacion_nomina.py        exit 0  OK                  13.5s
+  vuelta147_3d_mutacion_nomina.py        exit 0  OK                   5.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta147_3e_simular_a26.py            exit 0  OK                  13.4s
+  vuelta147_3e_simular_a26.py            exit 0  OK                   5.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta148_0d_mutacion_corredor.py      exit 0  OK                  14.6s
+  vuelta148_0d_mutacion_corredor.py      exit 0  OK                   8.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta148_1a_mutacion_embebido.py      exit 0  OK                  14.6s
+  vuelta148_1a_mutacion_embebido.py      exit 0  OK                   6.4s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta148_2a_mutacion_nomina_commiteada.py exit 0  OK                   7.3s
+  vuelta148_2a_mutacion_nomina_commiteada.py exit 0  OK                   4.3s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 384.8
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 6.4
-  CIFRA arnes MAS LENTO: vuelta147_2c_mutacion_vitalidad.py con 175.5s
-  CIFRA arnes MAS RAPIDO: vuelta148_2a_mutacion_nomina_commiteada.py con 7.3s
-  CIFRA mediana por arnes, en segundos: 13.5
-  CIFRA arneses que pasan de 30 segundos: 3
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 225.9
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 3.8
+  CIFRA arnes MAS LENTO: vuelta147_2c_mutacion_vitalidad.py con 135.2s
+  CIFRA arnes MAS RAPIDO: vuelta144_3c_caso_positivo_1190.py con 2.9s
+  CIFRA mediana por arnes, en segundos: 5.6
+  CIFRA arneses que pasan de 30 segundos: 1
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta147_2c_mutacion_vitalidad.py           175.5s
-      vuelta145_2b_mutacion_arneses.py              46.0s
-      vuelta145_2c_mutacion_censo.py                33.7s
-      vuelta144_3b_mutacion_negativa.py             24.4s
-      vuelta148_1a_mutacion_embebido.py             14.6s
-      vuelta148_0d_mutacion_corredor.py             14.6s
-      vuelta147_3d_mutacion_nomina.py               13.5s
-      vuelta147_3e_simular_a26.py                   13.4s
-      vuelta146_2b_mutacion_ausencias.py            11.7s
-      vuelta144_3c_caso_positivo_1190.py            11.4s
+      vuelta147_2c_mutacion_vitalidad.py           135.2s
+      vuelta145_2b_mutacion_arneses.py              20.1s
+      vuelta145_2c_mutacion_censo.py                13.8s
+      vuelta144_3b_mutacion_negativa.py             12.7s
+      vuelta148_0d_mutacion_corredor.py              8.2s
+      vuelta148_1a_mutacion_embebido.py              6.4s
+      vuelta147_3d_mutacion_nomina.py                5.6s
+      vuelta147_3e_simular_a26.py                    5.1s
+      vuelta144_3a_mutaciones.py                     4.7s
+      vuelta148_2a_mutacion_nomina_commiteada.py     4.3s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -271,8 +271,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 44fd9bbe650f, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 44fd9bbe650f, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD ca70205861b4, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD ca70205861b4, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -285,9 +285,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 2: 1
-FIN (reloj de pared, UTC): 2026-09-07T13:39:18Z
-DURACION DEL TRAMO (monotona, segundos): 386.2
-DURACION DEL TRAMO (monotona, minutos): 6.4
+FIN (reloj de pared, UTC): 2026-09-08T04:10:10Z
+DURACION DEL TRAMO (monotona, segundos): 227.7
+DURACION DEL TRAMO (monotona, minutos): 3.8
 
 
 ==============================================================================
@@ -296,7 +296,7 @@ TRAMO 3 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 3 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T13:50:26Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:33:52Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -304,11 +304,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD ff6c1d151d64, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD e72a22b97168, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD ff6c1d151d64, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD e72a22b97168, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -319,7 +319,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD ff6c1d151d64, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD e72a22b97168, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 3 de 11
@@ -340,52 +340,53 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta160_tarea6b_mutacion_puerta.py
 
 
-  vuelta148_2b_mutacion_cifras_conjunto.py exit 0  OK                   2.5s
+  vuelta148_2b_mutacion_cifras_conjunto.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta148_2c_mutacion_vara_parada.py   exit 0  OK                  10.5s
+  vuelta148_2c_mutacion_vara_parada.py   exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta148_2d_mutacion_exencion.py      exit 0  OK                  11.6s
+  vuelta148_2d_mutacion_exencion.py      exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta150_5c_mutacion_ciclo.py         exit 0  OK                  12.5s
+  vuelta150_5c_mutacion_ciclo.py         exit 0  OK                   3.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta154_tarea2d_mutacion_guarda.py   exit 0  OK                 185.7s
+  vuelta154_tarea2d_mutacion_guarda.py   exit 0  OK                  95.5s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta154_tarea6_mutacion_corredor.py  exit 0  OK                  13.0s
+  vuelta154_tarea6_mutacion_corredor.py  exit 0  OK                   5.5s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta156_tarea4b_mutacion_tallador.py exit 0  OK                  12.0s
+  vuelta156_tarea4b_mutacion_tallador.py exit 0  OK                   3.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta156_tarea5d_mutacion_corredor.py exit 0  OK                  46.1s
+  vuelta156_tarea5d_mutacion_corredor.py exit 0  OK                  51.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta157_tarea4b_mutacion_tachado.py  exit 0  OK                  11.2s
+  vuelta157_tarea4b_mutacion_tachado.py  exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta157_tarea5c_mutacion_ruido.py    exit 0  OK                  11.4s
+  vuelta157_tarea5c_mutacion_ruido.py    exit 0  OK                   3.4s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta157_tarea6b_mutacion_re_sellado.py exit 0  OK                  14.1s
+  vuelta157_tarea6b_mutacion_re_sellado.py exit 0  OK                   7.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta159_tarea6c_mutacion_exencion.py exit 0  OK                 357.2s
+  vuelta159_tarea6c_mutacion_exencion.py exit 0  OK                 451.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta160_tarea6b_mutacion_puerta.py   exit 0  OK                  82.0s
+  vuelta160_tarea6b_mutacion_puerta.py   exit 1  NO MORDIO            2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
+      ==============================================================================
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 769.8
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 12.8
-  CIFRA arnes MAS LENTO: vuelta159_tarea6c_mutacion_exencion.py con 357.2s
-  CIFRA arnes MAS RAPIDO: vuelta148_2b_mutacion_cifras_conjunto.py con 2.5s
-  CIFRA mediana por arnes, en segundos: 12.5
-  CIFRA arneses que pasan de 30 segundos: 4
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 635.2
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 10.6
+  CIFRA arnes MAS LENTO: vuelta159_tarea6c_mutacion_exencion.py con 451.0s
+  CIFRA arnes MAS RAPIDO: vuelta148_2d_mutacion_exencion.py con 2.6s
+  CIFRA mediana por arnes, en segundos: 3.6
+  CIFRA arneses que pasan de 30 segundos: 3
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta159_tarea6c_mutacion_exencion.py       357.2s
-      vuelta154_tarea2d_mutacion_guarda.py         185.7s
-      vuelta160_tarea6b_mutacion_puerta.py          82.0s
-      vuelta156_tarea5d_mutacion_corredor.py        46.1s
-      vuelta157_tarea6b_mutacion_re_sellado.py      14.1s
-      vuelta154_tarea6_mutacion_corredor.py         13.0s
-      vuelta150_5c_mutacion_ciclo.py                12.5s
-      vuelta156_tarea4b_mutacion_tallador.py        12.0s
-      vuelta148_2d_mutacion_exencion.py             11.6s
-      vuelta157_tarea5c_mutacion_ruido.py           11.4s
+      vuelta159_tarea6c_mutacion_exencion.py       451.0s
+      vuelta154_tarea2d_mutacion_guarda.py          95.5s
+      vuelta156_tarea5d_mutacion_corredor.py        51.1s
+      vuelta157_tarea6b_mutacion_re_sellado.py       7.6s
+      vuelta154_tarea6_mutacion_corredor.py          5.5s
+      vuelta156_tarea4b_mutacion_tallador.py         3.8s
+      vuelta150_5c_mutacion_ciclo.py                 3.6s
+      vuelta157_tarea5c_mutacion_ruido.py            3.4s
+      vuelta160_tarea6b_mutacion_puerta.py           2.9s
+      vuelta157_tarea4b_mutacion_tachado.py          2.8s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -393,30 +394,31 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   es no haberla medido.
 
   ANCLA PERDIDA  : 0 (ninguna)
-  NO MORDIO      : 0 (ninguna)
+  NO MORDIO      : 1 (vuelta160_tarea6b_mutacion_puerta.py)
   NO REPRODUCIBLE: 0 (ninguna)
   CASO DECLARADO : 0 (ninguna)
   RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD ff6c1d151d64, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD ff6c1d151d64, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD e72a22b97168, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD e72a22b97168, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
-      CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
+      CIFRA de FALLO: 0 con ancla perdida, 1 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
       CIFRA de DEUDA DECLARADA: 0 NO DECIDIBLE con motivo escrito, 0 sin
       CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
 
 ROJO: 2 arnes(es) que el censo VE y que la nomina NO tiene, nacidos en la vuelta 148 o despues, se quedan FUERA. La regla escrita en este mismo fichero desde la vuelta 148 dice que UN ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2 acepto que entre EN SU MISMA VUELTA. La lista entera: vuelta197_tarea2_mutacion_orden_del_turno.py, vuelta199_tarea1_mutacion_guardas_revividas.py
+ROJO: 0 con el ancla perdida, 1 que no mordieron y 0 cuya salida sellada NO SE REPITE.
 VEREDICTO DE ESTA CORRIDA: ROJO POR FALLO
 CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 3: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:03:20Z
-DURACION DEL TRAMO (monotona, segundos): 772.2
-DURACION DEL TRAMO (monotona, minutos): 12.9
+FIN (reloj de pared, UTC): 2026-09-08T04:44:28Z
+DURACION DEL TRAMO (monotona, segundos): 636.5
+DURACION DEL TRAMO (monotona, minutos): 10.6
 
 
 ==============================================================================
@@ -425,7 +427,7 @@ TRAMO 4 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 4 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:04:41Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:45:31Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -433,11 +435,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 36ebfb3d29f8, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 3fa5b035c853, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 36ebfb3d29f8, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 3fa5b035c853, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -448,7 +450,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 36ebfb3d29f8, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD 3fa5b035c853, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 4 de 11
@@ -469,52 +471,52 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta164_tarea1_mutacion_registro.py
 
 
-  vuelta160_tarea7c_mutacion_guarda_cita.py exit 0  OK                  18.3s
+  vuelta160_tarea7c_mutacion_guarda_cita.py exit 0  OK                   8.5s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta161_tarea1a_mutacion_alcance.py  exit 0  OK                  21.0s
+  vuelta161_tarea1a_mutacion_alcance.py  exit 0  OK                  13.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta162_tarea1a_mutacion_serie.py    exit 0  OK                  12.6s
+  vuelta162_tarea1a_mutacion_serie.py    exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta162_tarea2a_mutacion_puerta.py   exit 0  OK                  13.3s
+  vuelta162_tarea2a_mutacion_puerta.py   exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta162_tarea2b_mutacion_excepcion.py exit 0  OK                  10.9s
+  vuelta162_tarea2b_mutacion_excepcion.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta162_tarea3_mutacion_fila.py      exit 0  OK                  11.6s
+  vuelta162_tarea3_mutacion_fila.py      exit 0  OK                   3.3s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea1b_mutacion_relectura.py exit 0  OK                  11.3s
+  vuelta163_tarea1b_mutacion_relectura.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea1c_mutacion_tramo.py    exit 0  OK                  10.8s
+  vuelta163_tarea1c_mutacion_tramo.py    exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea2_mutacion_nomina.py    exit 0  OK                  11.4s
+  vuelta163_tarea2_mutacion_nomina.py    exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea4a_mutacion_cobertura.py exit 0  OK                  13.6s
+  vuelta163_tarea4a_mutacion_cobertura.py exit 0  OK                   5.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea4b_mutacion_re_sellado.py exit 0  OK                  35.7s
+  vuelta163_tarea4b_mutacion_re_sellado.py exit 0  OK                  25.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta163_tarea5a_mutacion_contador.py exit 0  OK                   5.4s
+  vuelta163_tarea5a_mutacion_contador.py exit 0  OK                   6.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta164_tarea1_mutacion_registro.py  exit 0  OK                   2.6s
+  vuelta164_tarea1_mutacion_registro.py  exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 178.5
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 3.0
-  CIFRA arnes MAS LENTO: vuelta163_tarea4b_mutacion_re_sellado.py con 35.7s
-  CIFRA arnes MAS RAPIDO: vuelta164_tarea1_mutacion_registro.py con 2.6s
-  CIFRA mediana por arnes, en segundos: 11.6
-  CIFRA arneses que pasan de 30 segundos: 1
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 81.1
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 1.4
+  CIFRA arnes MAS LENTO: vuelta163_tarea4b_mutacion_re_sellado.py con 25.7s
+  CIFRA arnes MAS RAPIDO: vuelta163_tarea1c_mutacion_tramo.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 2.8
+  CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta163_tarea4b_mutacion_re_sellado.py      35.7s
-      vuelta161_tarea1a_mutacion_alcance.py         21.0s
-      vuelta160_tarea7c_mutacion_guarda_cita.py     18.3s
-      vuelta163_tarea4a_mutacion_cobertura.py       13.6s
-      vuelta162_tarea2a_mutacion_puerta.py          13.3s
-      vuelta162_tarea1a_mutacion_serie.py           12.6s
-      vuelta162_tarea3_mutacion_fila.py             11.6s
-      vuelta163_tarea2_mutacion_nomina.py           11.4s
-      vuelta163_tarea1b_mutacion_relectura.py       11.3s
-      vuelta162_tarea2b_mutacion_excepcion.py       10.9s
+      vuelta163_tarea4b_mutacion_re_sellado.py      25.7s
+      vuelta161_tarea1a_mutacion_alcance.py         13.0s
+      vuelta160_tarea7c_mutacion_guarda_cita.py      8.5s
+      vuelta163_tarea5a_mutacion_contador.py         6.1s
+      vuelta163_tarea4a_mutacion_cobertura.py        5.2s
+      vuelta162_tarea3_mutacion_fila.py              3.3s
+      vuelta162_tarea2b_mutacion_excepcion.py        2.8s
+      vuelta162_tarea2a_mutacion_puerta.py           2.8s
+      vuelta162_tarea1a_mutacion_serie.py            2.8s
+      vuelta164_tarea1_mutacion_registro.py          2.8s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -529,8 +531,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 36ebfb3d29f8, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 36ebfb3d29f8, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 3fa5b035c853, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 3fa5b035c853, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -543,9 +545,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 4: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:07:41Z
-DURACION DEL TRAMO (monotona, segundos): 179.9
-DURACION DEL TRAMO (monotona, minutos): 3.0
+FIN (reloj de pared, UTC): 2026-09-08T04:46:53Z
+DURACION DEL TRAMO (monotona, segundos): 82.8
+DURACION DEL TRAMO (monotona, minutos): 1.4
 
 
 ==============================================================================
@@ -554,7 +556,7 @@ TRAMO 5 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 5 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:08:20Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:47:36Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -562,11 +564,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 320e4c1caf27, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD a9a8fff983c3, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 320e4c1caf27, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD a9a8fff983c3, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -577,7 +579,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 320e4c1caf27, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD a9a8fff983c3, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 5 de 11
@@ -598,52 +600,55 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta168_tarea1_mutacion_nota.py
 
 
-  vuelta164_tarea4_mutacion_005.py       exit 0  OK                   2.9s
+  vuelta164_tarea4_mutacion_005.py       exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta165_tarea1_mutacion_registro.py  exit 0  OK                   2.6s
+  vuelta165_tarea1_mutacion_registro.py  exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta165_tarea2_mutacion_censo.py     exit 0  OK                   2.8s
+  vuelta165_tarea2_mutacion_censo.py     exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta165_tarea4_mutacion_sujeto.py    exit 0  OK                   3.0s
+  vuelta165_tarea4_mutacion_sujeto.py    exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta165_tarea6_mutacion_op_l_01.py   exit 0  OK                   2.6s
+  vuelta165_tarea6_mutacion_op_l_01.py   exit 1  NO MORDIO            3.1s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta166_tarea1_mutacion_registro.py  exit 0  OK                   2.6s
+      ==============================================================================
+  vuelta166_tarea1_mutacion_registro.py  exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta166_tarea2_mutacion_correccion.py exit 0  OK                   3.3s
+  vuelta166_tarea2_mutacion_correccion.py exit 1  NO MORDIO            3.4s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta166_tarea3_mutacion_retrato.py   exit 0  OK                   7.1s
+      ==============================================================================
+  vuelta166_tarea3_mutacion_retrato.py   exit 0  OK                   7.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta166_tarea6_mutacion_guarda.py    exit 0  OK                   2.6s
+  vuelta166_tarea6_mutacion_guarda.py    exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta167_tarea1_mutacion_registro.py  exit 0  OK                   2.6s
+  vuelta167_tarea1_mutacion_registro.py  exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta167_tarea3_mutacion_ii.py        exit 0  OK                   3.3s
+  vuelta167_tarea3_mutacion_ii.py        exit 0  OK                   3.4s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta168_tarea1_mutacion_registro.py  exit 0  OK                   2.6s
+  vuelta168_tarea1_mutacion_registro.py  exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta168_tarea1_mutacion_nota.py      exit 0  OK                   2.9s
+  vuelta168_tarea1_mutacion_nota.py      exit 1  NO MORDIO            2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
+      ==============================================================================
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 40.8
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 42.9
   CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.7
-  CIFRA arnes MAS LENTO: vuelta166_tarea3_mutacion_retrato.py con 7.1s
-  CIFRA arnes MAS RAPIDO: vuelta166_tarea1_mutacion_registro.py con 2.6s
-  CIFRA mediana por arnes, en segundos: 2.8
+  CIFRA arnes MAS LENTO: vuelta166_tarea3_mutacion_retrato.py con 7.6s
+  CIFRA arnes MAS RAPIDO: vuelta166_tarea1_mutacion_registro.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 2.9
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta166_tarea3_mutacion_retrato.py           7.1s
-      vuelta167_tarea3_mutacion_ii.py                3.3s
-      vuelta166_tarea2_mutacion_correccion.py        3.3s
-      vuelta165_tarea4_mutacion_sujeto.py            3.0s
-      vuelta164_tarea4_mutacion_005.py               2.9s
+      vuelta166_tarea3_mutacion_retrato.py           7.6s
+      vuelta167_tarea3_mutacion_ii.py                3.4s
+      vuelta166_tarea2_mutacion_correccion.py        3.4s
+      vuelta165_tarea6_mutacion_op_l_01.py           3.1s
+      vuelta165_tarea4_mutacion_sujeto.py            3.1s
+      vuelta165_tarea2_mutacion_censo.py             2.9s
       vuelta168_tarea1_mutacion_nota.py              2.9s
-      vuelta165_tarea2_mutacion_censo.py             2.8s
-      vuelta168_tarea1_mutacion_registro.py          2.6s
-      vuelta165_tarea6_mutacion_op_l_01.py           2.6s
-      vuelta165_tarea1_mutacion_registro.py          2.6s
+      vuelta166_tarea6_mutacion_guarda.py            2.8s
+      vuelta164_tarea4_mutacion_005.py               2.8s
+      vuelta165_tarea1_mutacion_registro.py          2.7s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -651,29 +656,30 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   es no haberla medido.
 
   ANCLA PERDIDA  : 0 (ninguna)
-  NO MORDIO      : 0 (ninguna)
+  NO MORDIO      : 3 (vuelta165_tarea6_mutacion_op_l_01.py, vuelta166_tarea2_mutacion_correccion.py, vuelta168_tarea1_mutacion_nota.py)
   NO REPRODUCIBLE: 0 (ninguna)
   CASO DECLARADO : 0 (ninguna)
   RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 320e4c1caf27, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 320e4c1caf27, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD a9a8fff983c3, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD a9a8fff983c3, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
-      CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
+      CIFRA de FALLO: 0 con ancla perdida, 3 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
       CIFRA de DEUDA DECLARADA: 0 NO DECIDIBLE con motivo escrito, 0 sin
       CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
 
 ROJO: 2 arnes(es) que el censo VE y que la nomina NO tiene, nacidos en la vuelta 148 o despues, se quedan FUERA. La regla escrita en este mismo fichero desde la vuelta 148 dice que UN ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2 acepto que entre EN SU MISMA VUELTA. La lista entera: vuelta197_tarea2_mutacion_orden_del_turno.py, vuelta199_tarea1_mutacion_guardas_revividas.py
+ROJO: 0 con el ancla perdida, 3 que no mordieron y 0 cuya salida sellada NO SE REPITE.
 VEREDICTO DE ESTA CORRIDA: ROJO POR FALLO
 CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 5: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:09:02Z
-DURACION DEL TRAMO (monotona, segundos): 42.4
+FIN (reloj de pared, UTC): 2026-09-08T04:48:21Z
+DURACION DEL TRAMO (monotona, segundos): 44.7
 DURACION DEL TRAMO (monotona, minutos): 0.7
 
 
@@ -683,7 +689,7 @@ TRAMO 6 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 6 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:09:35Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:49:13Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -691,11 +697,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 2b5bbf53e744, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 274a0aed8b83, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 2b5bbf53e744, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 274a0aed8b83, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -706,7 +712,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 2b5bbf53e744, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD 274a0aed8b83, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 6 de 11
@@ -727,52 +733,54 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta171_tarea5a_mutacion_enchufe.py
 
 
-  vuelta168_tarea2_mutacion_reconstructor.py exit 0  OK                   5.0s
+  vuelta168_tarea2_mutacion_reconstructor.py exit 1  NO MORDIO            2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta168_tarea4_mutacion_op_v_01.py   exit 0  OK                  24.3s
+      ==============================================================================
+  vuelta168_tarea4_mutacion_op_v_01.py   exit 0  OK                  21.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta169_tarea2_mutacion_reanclaje.py exit 0  OK                  12.4s
+  vuelta169_tarea2_mutacion_reanclaje.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta170_tarea1a_mutacion_registro.py exit 0  OK                  12.3s
+  vuelta170_tarea1a_mutacion_registro.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta170_tarea2a_mutacion_aislador.py exit 0  OK                  13.8s
+  vuelta170_tarea2a_mutacion_aislador.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta98_tarea4_prueba_mutacion.py     exit 0  OK                  11.8s
+  vuelta98_tarea4_prueba_mutacion.py     exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta99_tarea3_prueba_mutacion.py     exit 0  OK                  12.3s
+  vuelta99_tarea3_prueba_mutacion.py     exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta109_tarea2_4_prueba_mutacion.py  exit 0  OK                  24.6s
+  vuelta109_tarea2_4_prueba_mutacion.py  exit 0  OK                  29.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py exit 0  OK                   2.5s
+  vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta113_tarea2_mutacion_tsc.py       exit 0  OK                   2.5s
+  vuelta113_tarea2_mutacion_tsc.py       exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta171_mutacion_busqueda_acta.py    exit 0  OK                   2.5s
+  vuelta171_mutacion_busqueda_acta.py    exit 1  NO MORDIO            2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta171_tarea1a_mutacion_registro.py exit 0  OK                   2.5s
+      ==============================================================================
+  vuelta171_tarea1a_mutacion_registro.py exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta171_tarea5a_mutacion_enchufe.py  exit 0  OK                   2.5s
+  vuelta171_tarea5a_mutacion_enchufe.py  exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 128.9
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 2.1
-  CIFRA arnes MAS LENTO: vuelta109_tarea2_4_prueba_mutacion.py con 24.6s
-  CIFRA arnes MAS RAPIDO: vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py con 2.5s
-  CIFRA mediana por arnes, en segundos: 11.8
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 80.0
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 1.3
+  CIFRA arnes MAS LENTO: vuelta109_tarea2_4_prueba_mutacion.py con 29.0s
+  CIFRA arnes MAS RAPIDO: vuelta98_tarea4_prueba_mutacion.py con 2.6s
+  CIFRA mediana por arnes, en segundos: 2.7
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta109_tarea2_4_prueba_mutacion.py         24.6s
-      vuelta168_tarea4_mutacion_op_v_01.py          24.3s
-      vuelta170_tarea2a_mutacion_aislador.py        13.8s
-      vuelta169_tarea2_mutacion_reanclaje.py        12.4s
-      vuelta99_tarea3_prueba_mutacion.py            12.3s
-      vuelta170_tarea1a_mutacion_registro.py        12.3s
-      vuelta98_tarea4_prueba_mutacion.py            11.8s
-      vuelta168_tarea2_mutacion_reconstructor.py     5.0s
-      vuelta171_mutacion_busqueda_acta.py            2.5s
-      vuelta171_tarea5a_mutacion_enchufe.py          2.5s
+      vuelta109_tarea2_4_prueba_mutacion.py         29.0s
+      vuelta168_tarea4_mutacion_op_v_01.py          21.2s
+      vuelta171_tarea5a_mutacion_enchufe.py          2.8s
+      vuelta168_tarea2_mutacion_reconstructor.py     2.8s
+      vuelta99_tarea3_prueba_mutacion.py             2.8s
+      vuelta170_tarea2a_mutacion_aislador.py         2.8s
+      vuelta170_tarea1a_mutacion_registro.py         2.7s
+      vuelta169_tarea2_mutacion_reanclaje.py         2.7s
+      vuelta112_tarea2_6_mutacion_u_censo_dos_reglas.py     2.7s
+      vuelta171_tarea1a_mutacion_registro.py         2.6s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -780,30 +788,31 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   es no haberla medido.
 
   ANCLA PERDIDA  : 0 (ninguna)
-  NO MORDIO      : 0 (ninguna)
+  NO MORDIO      : 2 (vuelta168_tarea2_mutacion_reconstructor.py, vuelta171_mutacion_busqueda_acta.py)
   NO REPRODUCIBLE: 0 (ninguna)
   CASO DECLARADO : 0 (ninguna)
   RUIDO DE CONCURRENCIA: 0 fichero(s) (ninguno)
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 2b5bbf53e744, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 2b5bbf53e744, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 274a0aed8b83, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 274a0aed8b83, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
-      CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
+      CIFRA de FALLO: 0 con ancla perdida, 2 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
       CIFRA de DEUDA DECLARADA: 0 NO DECIDIBLE con motivo escrito, 0 sin
       CLASE DEL VEREDICTO: ROJO POR FALLO | CIFRA exitcode: 1
 
 ROJO: 2 arnes(es) que el censo VE y que la nomina NO tiene, nacidos en la vuelta 148 o despues, se quedan FUERA. La regla escrita en este mismo fichero desde la vuelta 148 dice que UN ARNES ENTRA EN LA NOMINA, y el acta 176 punto 7.2 acepto que entre EN SU MISMA VUELTA. La lista entera: vuelta197_tarea2_mutacion_orden_del_turno.py, vuelta199_tarea1_mutacion_guardas_revividas.py
+ROJO: 0 con el ancla perdida, 2 que no mordieron y 0 cuya salida sellada NO SE REPITE.
 VEREDICTO DE ESTA CORRIDA: ROJO POR FALLO
 CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 6: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:11:45Z
-DURACION DEL TRAMO (monotona, segundos): 130.2
-DURACION DEL TRAMO (monotona, minutos): 2.2
+FIN (reloj de pared, UTC): 2026-09-08T04:50:35Z
+DURACION DEL TRAMO (monotona, segundos): 81.7
+DURACION DEL TRAMO (monotona, minutos): 1.4
 
 
 ==============================================================================
@@ -812,7 +821,7 @@ TRAMO 7 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 7 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:12:37Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:51:16Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -820,11 +829,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 0941c3f07c97, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD fc68e550e46a, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 0941c3f07c97, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD fc68e550e46a, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -835,7 +844,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 0941c3f07c97, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD fc68e550e46a, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 7 de 11
@@ -856,52 +865,52 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta177_tarea1e_mutacion_correcciones_chicas.py
 
 
-  vuelta172_tarea1b_mutacion_registro.py exit 0  OK                   2.6s
+  vuelta172_tarea1b_mutacion_registro.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta172_tarea2a_mutacion_exclusion.py exit 0  OK                   2.5s
+  vuelta172_tarea2a_mutacion_exclusion.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta172_tarea3_mutacion_numeracion.py exit 0  OK                   2.5s
+  vuelta172_tarea3_mutacion_numeracion.py exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta172_tarea5_mutacion_cierre.py    exit 0  OK                   2.6s
+  vuelta172_tarea5_mutacion_cierre.py    exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta173_tarea1b_mutacion_hueco.py    exit 0  OK                   2.5s
+  vuelta173_tarea1b_mutacion_hueco.py    exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta174_tarea1a_mutacion_44.py       exit 0  OK                   2.5s
+  vuelta174_tarea1a_mutacion_44.py       exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta174_tarea1b_mutacion_esqueleto.py exit 0  OK                   2.5s
+  vuelta174_tarea1b_mutacion_esqueleto.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta174_tarea1b_mutacion_sellar.py   exit 0  OK                   2.5s
+  vuelta174_tarea1b_mutacion_sellar.py   exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta174_tarea2b_mutacion_confirmar.py exit 0  OK                   2.5s
+  vuelta174_tarea2b_mutacion_confirmar.py exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta176_tarea1c_mutacion_tramos.py   exit 0  OK                   2.5s
+  vuelta176_tarea1c_mutacion_tramos.py   exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta177_tarea1b_mutacion_esperado_vivo.py exit 0  OK                   3.2s
+  vuelta177_tarea1b_mutacion_esperado_vivo.py exit 0  OK                   3.5s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta177_tarea1d_mutacion_cotejo.py   exit 0  OK                   3.5s
+  vuelta177_tarea1d_mutacion_cotejo.py   exit 0  OK                   3.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta177_tarea1e_mutacion_correcciones_chicas.py exit 0  OK                   2.5s
+  vuelta177_tarea1e_mutacion_correcciones_chicas.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 34.3
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 37.3
   CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.6
-  CIFRA arnes MAS LENTO: vuelta177_tarea1d_mutacion_cotejo.py con 3.5s
-  CIFRA arnes MAS RAPIDO: vuelta174_tarea2b_mutacion_confirmar.py con 2.5s
-  CIFRA mediana por arnes, en segundos: 2.5
+  CIFRA arnes MAS LENTO: vuelta177_tarea1d_mutacion_cotejo.py con 3.6s
+  CIFRA arnes MAS RAPIDO: vuelta174_tarea2b_mutacion_confirmar.py con 2.6s
+  CIFRA mediana por arnes, en segundos: 2.8
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta177_tarea1d_mutacion_cotejo.py           3.5s
-      vuelta177_tarea1b_mutacion_esperado_vivo.py     3.2s
-      vuelta172_tarea1b_mutacion_registro.py         2.6s
-      vuelta172_tarea5_mutacion_cierre.py            2.6s
-      vuelta173_tarea1b_mutacion_hueco.py            2.5s
-      vuelta172_tarea3_mutacion_numeracion.py        2.5s
-      vuelta174_tarea1b_mutacion_sellar.py           2.5s
-      vuelta177_tarea1e_mutacion_correcciones_chicas.py     2.5s
-      vuelta176_tarea1c_mutacion_tramos.py           2.5s
-      vuelta174_tarea1b_mutacion_esqueleto.py        2.5s
+      vuelta177_tarea1d_mutacion_cotejo.py           3.6s
+      vuelta177_tarea1b_mutacion_esperado_vivo.py     3.5s
+      vuelta173_tarea1b_mutacion_hueco.py            2.8s
+      vuelta177_tarea1e_mutacion_correcciones_chicas.py     2.8s
+      vuelta172_tarea1b_mutacion_registro.py         2.8s
+      vuelta172_tarea2a_mutacion_exclusion.py        2.8s
+      vuelta174_tarea1b_mutacion_esqueleto.py        2.8s
+      vuelta176_tarea1c_mutacion_tramos.py           2.8s
+      vuelta172_tarea5_mutacion_cierre.py            2.7s
+      vuelta174_tarea1a_mutacion_44.py               2.7s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -916,8 +925,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 0941c3f07c97, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 0941c3f07c97, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD fc68e550e46a, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD fc68e550e46a, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -930,9 +939,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 7: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:13:12Z
-DURACION DEL TRAMO (monotona, segundos): 35.6
-DURACION DEL TRAMO (monotona, minutos): 0.6
+FIN (reloj de pared, UTC): 2026-09-08T04:51:55Z
+DURACION DEL TRAMO (monotona, segundos): 39.1
+DURACION DEL TRAMO (monotona, minutos): 0.7
 
 
 ==============================================================================
@@ -941,7 +950,7 @@ TRAMO 8 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 8 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:13:47Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:52:34Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -949,11 +958,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD f582790832f2, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 3d79c288f84a, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD f582790832f2, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 3d79c288f84a, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -964,7 +973,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD f582790832f2, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD 3d79c288f84a, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 8 de 11
@@ -985,52 +994,52 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta180_tarea1b_mutacion_etiqueta.py
 
 
-  vuelta177_tarea1f_mutacion_tope_minutos.py exit 0  OK                   2.5s
+  vuelta177_tarea1f_mutacion_tope_minutos.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea1b_mutacion_hermano.py  exit 0  OK                   2.5s
+  vuelta178_tarea1b_mutacion_hermano.py  exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea1c_mutacion_ast.py      exit 0  OK                   2.9s
+  vuelta178_tarea1c_mutacion_ast.py      exit 0  OK                   3.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea1d_mutacion_puestos.py  exit 0  OK                   3.1s
+  vuelta178_tarea1d_mutacion_puestos.py  exit 0  OK                   3.2s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea1e_mutacion_higiene.py  exit 0  OK                   2.7s
+  vuelta178_tarea1e_mutacion_higiene.py  exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea2_mutacion_resolutor.py exit 0  OK                   2.5s
+  vuelta178_tarea2_mutacion_resolutor.py exit 0  OK                   3.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta178_tarea4_mutacion_consumidas.py exit 0  OK                   2.5s
+  vuelta178_tarea4_mutacion_consumidas.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta150_2d_simular_op_c_05.py        exit 0  OK                   4.1s
+  vuelta150_2d_simular_op_c_05.py        exit 0  OK                   4.3s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta160_tarea3b_caso_positivo.py     exit 0  OK                  12.1s
+  vuelta160_tarea3b_caso_positivo.py     exit 0  OK                  12.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta179_tarea1b_mutacion_citas.py    exit 0  OK                   2.5s
+  vuelta179_tarea1b_mutacion_citas.py    exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta179_tarea3_mutacion_triangulos.py exit 0  OK                   2.5s
+  vuelta179_tarea3_mutacion_triangulos.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta179_tarea1d_mutacion_corte.py    exit 0  OK                   2.5s
+  vuelta179_tarea1d_mutacion_corte.py    exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
   vuelta180_tarea1b_mutacion_etiqueta.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 45.2
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 48.6
   CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.8
-  CIFRA arnes MAS LENTO: vuelta160_tarea3b_caso_positivo.py con 12.1s
-  CIFRA arnes MAS RAPIDO: vuelta178_tarea2_mutacion_resolutor.py con 2.5s
-  CIFRA mediana por arnes, en segundos: 2.5
+  CIFRA arnes MAS LENTO: vuelta160_tarea3b_caso_positivo.py con 12.7s
+  CIFRA arnes MAS RAPIDO: vuelta180_tarea1b_mutacion_etiqueta.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 2.8
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta160_tarea3b_caso_positivo.py            12.1s
-      vuelta150_2d_simular_op_c_05.py                4.1s
-      vuelta178_tarea1d_mutacion_puestos.py          3.1s
-      vuelta178_tarea1c_mutacion_ast.py              2.9s
-      vuelta180_tarea1b_mutacion_etiqueta.py         2.7s
-      vuelta178_tarea1e_mutacion_higiene.py          2.7s
-      vuelta177_tarea1f_mutacion_tope_minutos.py     2.5s
-      vuelta179_tarea3_mutacion_triangulos.py        2.5s
-      vuelta179_tarea1b_mutacion_citas.py            2.5s
-      vuelta179_tarea1d_mutacion_corte.py            2.5s
+      vuelta160_tarea3b_caso_positivo.py            12.7s
+      vuelta150_2d_simular_op_c_05.py                4.3s
+      vuelta178_tarea1c_mutacion_ast.py              3.2s
+      vuelta178_tarea1d_mutacion_puestos.py          3.2s
+      vuelta178_tarea2_mutacion_resolutor.py         3.0s
+      vuelta178_tarea1e_mutacion_higiene.py          2.9s
+      vuelta179_tarea1d_mutacion_corte.py            2.8s
+      vuelta179_tarea3_mutacion_triangulos.py        2.8s
+      vuelta178_tarea1b_mutacion_hermano.py          2.8s
+      vuelta179_tarea1b_mutacion_citas.py            2.8s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -1045,8 +1054,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD f582790832f2, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD f582790832f2, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 3d79c288f84a, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 3d79c288f84a, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -1059,8 +1068,8 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 8: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:14:33Z
-DURACION DEL TRAMO (monotona, segundos): 46.6
+FIN (reloj de pared, UTC): 2026-09-08T04:53:25Z
+DURACION DEL TRAMO (monotona, segundos): 50.4
 DURACION DEL TRAMO (monotona, minutos): 0.8
 
 
@@ -1070,7 +1079,7 @@ TRAMO 9 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRAM
 
 CORRIDA DEL TRAMO 9 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:15:15Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:54:05Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -1078,11 +1087,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD fe90a62d0115, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 97185bc4b223, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD fe90a62d0115, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 97185bc4b223, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -1093,7 +1102,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD fe90a62d0115, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD 97185bc4b223, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 9 de 11
@@ -1114,53 +1123,53 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta186_tarea2b_mutacion_pieza2_cercas.py
 
 
-  vuelta180_tarea2c_mutacion_cableado.py exit 0  OK                   2.6s
+  vuelta180_tarea2c_mutacion_cableado.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta180_tarea3_mutacion_corte_de_tramos.py exit 0  OK                  10.7s
+  vuelta180_tarea3_mutacion_corte_de_tramos.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta180_tarea4_mutacion_texto_y_clon.py exit 0  OK                  11.5s
+  vuelta180_tarea4_mutacion_texto_y_clon.py exit 0  OK                   3.0s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta180_tarea5_mutacion_backlog_l02.py exit 0  OK                  10.9s
+  vuelta180_tarea5_mutacion_backlog_l02.py exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py exit 0  OK                  11.5s
+  vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py exit 0  OK                   3.6s
       salidas selladas que escribe (computadas, no tecleadas): ninguna
-  vuelta182_tarea2_mutacion_apertura_auditor.py exit 0  OK                  11.3s
+  vuelta182_tarea2_mutacion_apertura_auditor.py exit 0  OK                   3.8s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt
-  vuelta183_tarea1c_mutacion_veredicto.py exit 0  OK                  11.1s
+  vuelta183_tarea1c_mutacion_veredicto.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V183_T1C_MUTACION_VEREDICTO.txt
-  vuelta183_tarea1b_mutacion_atribucion.py exit 0  OK                  11.6s
+  vuelta183_tarea1b_mutacion_atribucion.py exit 0  OK                   3.5s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V183_T1B_MUTACION_ATRIBUCION.txt
-  vuelta184_tarea1c_mutacion_estimacion.py exit 0  OK                  11.3s
+  vuelta184_tarea1c_mutacion_estimacion.py exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V184_T1C_MUTACION_ESTIMACION.txt
-  vuelta185_tarea1b_mutacion_sin_temporal.py exit 0  OK                  11.3s
+  vuelta185_tarea1b_mutacion_sin_temporal.py exit 0  OK                   4.5s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt, SALIDA_V185_T1B_MUTACION_SIN_TEMPORAL.txt
-  vuelta185_tarea1c_mutacion_bateria_continuada.py exit 1  NO MORDIO           13.0s
+  vuelta185_tarea1c_mutacion_bateria_continuada.py exit 1  NO MORDIO            5.9s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V185_T1C_MUTACION_BATERIA_CONTINUADA.txt
       ARNES DE LA RAMA DE LA BATERIA CONTINUADA (vuelta 185, TAREA 1.c)
-  vuelta186_tarea2a_mutacion_pieza4.py   exit 0  OK                  10.8s
+  vuelta186_tarea2a_mutacion_pieza4.py   exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V186_T2A_MUTACION_PIEZA4.txt
-  vuelta186_tarea2b_mutacion_pieza2_cercas.py exit 0  OK                  10.8s
+  vuelta186_tarea2b_mutacion_pieza2_cercas.py exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V186_T2B_MUTACION_PIEZA2_CERCAS.txt
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 138.6
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 2.3
-  CIFRA arnes MAS LENTO: vuelta185_tarea1c_mutacion_bateria_continuada.py con 13.0s
-  CIFRA arnes MAS RAPIDO: vuelta180_tarea2c_mutacion_cableado.py con 2.6s
-  CIFRA mediana por arnes, en segundos: 11.3
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 44.3
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.7
+  CIFRA arnes MAS LENTO: vuelta185_tarea1c_mutacion_bateria_continuada.py con 5.9s
+  CIFRA arnes MAS RAPIDO: vuelta180_tarea3_mutacion_corte_de_tramos.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 3.0
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta185_tarea1c_mutacion_bateria_continuada.py    13.0s
-      vuelta183_tarea1b_mutacion_atribucion.py      11.6s
-      vuelta180_tarea4_mutacion_texto_y_clon.py     11.5s
-      vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py    11.5s
-      vuelta182_tarea2_mutacion_apertura_auditor.py    11.3s
-      vuelta185_tarea1b_mutacion_sin_temporal.py    11.3s
-      vuelta184_tarea1c_mutacion_estimacion.py      11.3s
-      vuelta183_tarea1c_mutacion_veredicto.py       11.1s
-      vuelta180_tarea5_mutacion_backlog_l02.py      10.9s
-      vuelta186_tarea2b_mutacion_pieza2_cercas.py    10.8s
+      vuelta185_tarea1c_mutacion_bateria_continuada.py     5.9s
+      vuelta185_tarea1b_mutacion_sin_temporal.py     4.5s
+      vuelta182_tarea2_mutacion_apertura_auditor.py     3.8s
+      vuelta172_tarea1c_caso_positivo_guarda_que_mordio.py     3.6s
+      vuelta183_tarea1b_mutacion_atribucion.py       3.5s
+      vuelta184_tarea1c_mutacion_estimacion.py       3.1s
+      vuelta180_tarea4_mutacion_texto_y_clon.py      3.0s
+      vuelta180_tarea5_mutacion_backlog_l02.py       2.9s
+      vuelta186_tarea2a_mutacion_pieza4.py           2.9s
+      vuelta186_tarea2b_mutacion_pieza2_cercas.py     2.9s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -1175,8 +1184,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD fe90a62d0115, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD fe90a62d0115, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 97185bc4b223, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 97185bc4b223, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 1 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -1190,9 +1199,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 9: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:17:36Z
-DURACION DEL TRAMO (monotona, segundos): 141.0
-DURACION DEL TRAMO (monotona, minutos): 2.3
+FIN (reloj de pared, UTC): 2026-09-08T04:54:51Z
+DURACION DEL TRAMO (monotona, segundos): 45.9
+DURACION DEL TRAMO (monotona, minutos): 0.8
 
 
 ==============================================================================
@@ -1201,7 +1210,7 @@ TRAMO 10 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRA
 
 CORRIDA DEL TRAMO 10 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:18:16Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:55:39Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -1209,11 +1218,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 2620b94be8bb, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD ed74786dbe7a, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 2620b94be8bb, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD ed74786dbe7a, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -1224,7 +1233,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 2620b94be8bb, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD ed74786dbe7a, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 10 de 11
@@ -1245,52 +1254,52 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
       ENTRADA DEL TRAMO: vuelta191_tarea6_mutacion_bloque_tallado.py
 
 
-  vuelta186_tarea2c_mutacion_cierre_tardio.py exit 0  OK                   2.7s
+  vuelta186_tarea2c_mutacion_cierre_tardio.py exit 0  OK                   2.9s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V186_T2C_MUTACION_CIERRE_TARDIO.txt
-  vuelta186_tarea2d_mutacion_seccion4.py exit 0  OK                  11.3s
+  vuelta186_tarea2d_mutacion_seccion4.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V186_T2D_MUTACION_SECCION4.txt
-  vuelta187_tarea4_mutacion_dos_convenciones.py exit 0  OK                  11.7s
+  vuelta187_tarea4_mutacion_dos_convenciones.py exit 0  OK                   3.2s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V187_T4_MUTACION_DOS_CONVENCIONES.txt
-  vuelta187_tarea5b_mutacion_seccion4_tardio.py exit 0  OK                  10.8s
+  vuelta187_tarea5b_mutacion_seccion4_tardio.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V187_T5B_MUTACION_SECCION4_TARDIO.txt
-  vuelta188_tarea2_mutacion_pata_documental.py exit 0  OK                  11.0s
+  vuelta188_tarea2_mutacion_pata_documental.py exit 0  OK                   2.8s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V188_T2_MUTACION_PATA_DOCUMENTAL.txt
-  vuelta188_tarea3c_mutacion_exclusion_por_rojo.py exit 0  OK                  10.8s
+  vuelta188_tarea3c_mutacion_exclusion_por_rojo.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V188_T3C_MUTACION_EXCLUSION_POR_ROJO.txt
-  vuelta188_tarea4_mutacion_cobertura_parejas.py exit 0  OK                   9.7s
+  vuelta188_tarea4_mutacion_cobertura_parejas.py exit 0  OK                   3.9s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V188_T4_MUTACION_COBERTURA_PAREJAS.txt
-  vuelta188_tarea5a_mutacion_vecinos_evitar.py exit 0  OK                   2.4s
+  vuelta188_tarea5a_mutacion_vecinos_evitar.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V188_T5A_MUTACION_VECINOS_EVITAR.txt
-  vuelta190_tarea2b_mutacion_deuda_y_fallo.py exit 0  OK                   2.5s
+  vuelta190_tarea2b_mutacion_deuda_y_fallo.py exit 0  OK                   3.0s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V190_T2B_MUTACION_DEUDA_Y_FALLO.txt
-  vuelta190_tarea3b_mutacion_selladas_ajenas.py exit 0  OK                   2.5s
+  vuelta190_tarea3b_mutacion_selladas_ajenas.py exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V190_T3B_MUTACION_SELLADAS_AJENAS.txt
-  vuelta191_tarea3_mutacion_lineas.py    exit 0  OK                  69.3s
+  vuelta191_tarea3_mutacion_lineas.py    exit 0  OK                  80.5s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V191_T3_MUTACION_LINEAS.txt
-  vuelta191_tarea4_mutacion_veredicto.py exit 0  OK                   2.6s
+  vuelta191_tarea4_mutacion_veredicto.py exit 0  OK                   2.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V191_T4_MUTACION_VEREDICTO.txt
-  vuelta191_tarea6_mutacion_bloque_tallado.py exit 0  OK                   3.0s
+  vuelta191_tarea6_mutacion_bloque_tallado.py exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V191_T6_MUTACION_BLOQUE_TALLADO.txt
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 13
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 150.4
-  CIFRA TIEMPO TOTAL de la bateria, en minutos: 2.5
-  CIFRA arnes MAS LENTO: vuelta191_tarea3_mutacion_lineas.py con 69.3s
-  CIFRA arnes MAS RAPIDO: vuelta188_tarea5a_mutacion_vecinos_evitar.py con 2.4s
-  CIFRA mediana por arnes, en segundos: 9.7
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 115.9
+  CIFRA TIEMPO TOTAL de la bateria, en minutos: 1.9
+  CIFRA arnes MAS LENTO: vuelta191_tarea3_mutacion_lineas.py con 80.5s
+  CIFRA arnes MAS RAPIDO: vuelta191_tarea4_mutacion_veredicto.py con 2.7s
+  CIFRA mediana por arnes, en segundos: 2.9
   CIFRA arneses que pasan de 30 segundos: 1
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta191_tarea3_mutacion_lineas.py           69.3s
-      vuelta187_tarea4_mutacion_dos_convenciones.py    11.7s
-      vuelta186_tarea2d_mutacion_seccion4.py        11.3s
-      vuelta188_tarea2_mutacion_pata_documental.py    11.0s
-      vuelta187_tarea5b_mutacion_seccion4_tardio.py    10.8s
-      vuelta188_tarea3c_mutacion_exclusion_por_rojo.py    10.8s
-      vuelta188_tarea4_mutacion_cobertura_parejas.py     9.7s
-      vuelta191_tarea6_mutacion_bloque_tallado.py     3.0s
-      vuelta186_tarea2c_mutacion_cierre_tardio.py     2.7s
-      vuelta191_tarea4_mutacion_veredicto.py         2.6s
+      vuelta191_tarea3_mutacion_lineas.py           80.5s
+      vuelta188_tarea4_mutacion_cobertura_parejas.py     3.9s
+      vuelta187_tarea4_mutacion_dos_convenciones.py     3.2s
+      vuelta191_tarea6_mutacion_bloque_tallado.py     3.1s
+      vuelta190_tarea3b_mutacion_selladas_ajenas.py     3.1s
+      vuelta190_tarea2b_mutacion_deuda_y_fallo.py     3.0s
+      vuelta186_tarea2c_mutacion_cierre_tardio.py     2.9s
+      vuelta188_tarea2_mutacion_pata_documental.py     2.8s
+      vuelta188_tarea5a_mutacion_vecinos_evitar.py     2.7s
+      vuelta188_tarea3c_mutacion_exclusion_por_rojo.py     2.7s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -1305,8 +1314,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 2620b94be8bb, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 2620b94be8bb, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD ed74786dbe7a, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD ed74786dbe7a, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -1319,9 +1328,9 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 10: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:20:48Z
-DURACION DEL TRAMO (monotona, segundos): 151.8
-DURACION DEL TRAMO (monotona, minutos): 2.5
+FIN (reloj de pared, UTC): 2026-09-08T04:57:36Z
+DURACION DEL TRAMO (monotona, segundos): 117.6
+DURACION DEL TRAMO (monotona, minutos): 2.0
 
 
 ==============================================================================
@@ -1330,7 +1339,7 @@ TRAMO 11 DE 11. SALIDA CRUDA, SIN RECORTAR, DE docs/loop/SALIDA_V183_BATERIA_TRA
 
 CORRIDA DEL TRAMO 11 DE 11, BATERIA DE LA VUELTA 183
 lanzada por scripts/loop/vuelta183_bateria_por_tramos.py
-INICIO (reloj de pared, UTC): 2026-09-07T14:21:58Z
+INICIO (reloj de pared, UTC): 2026-09-08T04:58:16Z
 RESTAURACION AL ENTRAR: no hizo falta, dataset/ estaba limpio (cero filas de `git diff --numstat`)
 ==============================================================================
 ==============================================================================
@@ -1338,11 +1347,11 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 ==============================================================================
 
   LA NOMINA, MIRADA CONTRA scripts/loop/ (adjudicacion 6.8 del acta 162)
-  CIFRA entradas en la nomina: 135 (corte: HEAD 617741f764f9, nomina contada en esta corrida)
+  CIFRA entradas en la nomina: 135 (corte: HEAD 08e9acddabec, nomina contada en esta corrida)
   CIFRA arneses en scripts/loop/ que el censo reconoce: 197
   EL UNIVERSO DEL CENSO, NOMBRADO (vuelta 165, TAREA 2): ficheros
   `vuelta<N>...<familia>...py` de scripts/loop/, con familia en mutacion, caso_positivo, simular.
-  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 617741f764f9, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE: 0, de 135 (corte: HEAD 08e9acddabec, nomina contada en esta corrida)
   CIFRA ultima vuelta representada en la nomina: 195 (INFORMATIVA desde la vuelta 178: ya no decide)
   LA VARA DEL CENSO, que es la que decide: 148 (vuelta 178, TAREA 1.b)
   CIFRA arneses DEL CENSO, no anteriores a la vara, que se quedan FUERA de la nomina: 2
@@ -1353,7 +1362,7 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   BOCADO, NO LA BATERIA: cada entrada sigue corriendo y sigue corriendo
   DOS VECES, y la mirada de la nomina sobre si misma de aqui arriba
   corre ENTERA en este tramo y sigue encendiendo el rojo.
-  CIFRA nomina entera: 135 (corte: HEAD 617741f764f9, nomina contada en esta corrida)
+  CIFRA nomina entera: 135 (corte: HEAD 08e9acddabec, nomina contada en esta corrida)
   CIFRA tamano de tramo: 13
   CIFRA tramos del reparto (computada, no tecleada): 11
   CIFRA TRAMO QUE SE CORRE: 11 de 11
@@ -1368,29 +1377,29 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
 
   vuelta192_tarea4_mutacion_cuarta_puerta.py exit 0  OK                   2.6s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt
-  vuelta193_tarea4e_mutacion_sello_entre_procesos.py exit 0  OK                   3.5s
+  vuelta193_tarea4e_mutacion_sello_entre_procesos.py exit 0  OK                   3.7s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt
-  vuelta194_tarea2c_mutacion_sede_del_turno.py exit 0  OK                   5.4s
+  vuelta194_tarea2c_mutacion_sede_del_turno.py exit 0  OK                   5.3s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V192_T4_MUTACION_CUARTA_PUERTA.txt, SALIDA_V193_T4E_MUTACION_SELLO_ENTRE_PROCESOS.txt, SALIDA_V194_T2C_MUTACION_SEDE_DEL_TURNO.txt
-  vuelta195_tarea3g_mutacion_nomina_enchufada.py exit 0  OK                   2.6s
+  vuelta195_tarea3g_mutacion_nomina_enchufada.py exit 0  OK                   2.5s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V195_T3G_MUTACION_NOMINA_ENCHUFADA.txt
-  vuelta195_tarea4c_mutacion_componer_rojo.py exit 0  OK                   3.0s
+  vuelta195_tarea4c_mutacion_componer_rojo.py exit 0  OK                   3.1s
       salidas selladas que escribe (computadas, no tecleadas): SALIDA_V195_T4C_MUTACION_COMPONER_ROJO.txt
 
   EL CRONOMETRO (adjudicacion 6.8 del acta 163)
   CIFRA arneses cronometrados: 5
-  CIFRA TIEMPO TOTAL de la bateria, en segundos: 17.1
+  CIFRA TIEMPO TOTAL de la bateria, en segundos: 17.2
   CIFRA TIEMPO TOTAL de la bateria, en minutos: 0.3
-  CIFRA arnes MAS LENTO: vuelta194_tarea2c_mutacion_sede_del_turno.py con 5.4s
-  CIFRA arnes MAS RAPIDO: vuelta195_tarea3g_mutacion_nomina_enchufada.py con 2.6s
-  CIFRA mediana por arnes, en segundos: 3.0
+  CIFRA arnes MAS LENTO: vuelta194_tarea2c_mutacion_sede_del_turno.py con 5.3s
+  CIFRA arnes MAS RAPIDO: vuelta195_tarea3g_mutacion_nomina_enchufada.py con 2.5s
+  CIFRA mediana por arnes, en segundos: 3.1
   CIFRA arneses que pasan de 30 segundos: 0
   LOS DIEZ MAS LENTOS, DE MAS A MENOS:
-      vuelta194_tarea2c_mutacion_sede_del_turno.py     5.4s
-      vuelta193_tarea4e_mutacion_sello_entre_procesos.py     3.5s
-      vuelta195_tarea4c_mutacion_componer_rojo.py     3.0s
+      vuelta194_tarea2c_mutacion_sede_del_turno.py     5.3s
+      vuelta193_tarea4e_mutacion_sello_entre_procesos.py     3.7s
+      vuelta195_tarea4c_mutacion_componer_rojo.py     3.1s
       vuelta192_tarea4_mutacion_cuarta_puerta.py     2.6s
-      vuelta195_tarea3g_mutacion_nomina_enchufada.py     2.6s
+      vuelta195_tarea3g_mutacion_nomina_enchufada.py     2.5s
   AVISO DE RELOJ: cada entrada se corre DOS VECES (el cotejo de
   reproducibilidad de la TAREA 2.f de la vuelta 141), asi que el tiempo
   de cada arnes YA INCLUYE sus dos corridas. Quien la lance tiene que
@@ -1405,8 +1414,8 @@ LAS 135 MUTACIONES VIEJAS. ANCLA PERDIDA CUENTA COMO ROJO.
   CIFRA arneses DEL CENSO, no anteriores a la vara 148, que se quedan FUERA de la nomina (recomputado al cierre): 2
       FUERA DE LA NOMINA: vuelta197_tarea2_mutacion_orden_del_turno.py
       FUERA DE LA NOMINA: vuelta199_tarea1_mutacion_guardas_revividas.py
-  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 617741f764f9, nomina contada en esta corrida)
-  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 617741f764f9, nomina contada en esta corrida)
+  CIFRA entradas de la nomina que el censo NO VE (recomputado al cierre): 0, de 135 (corte: HEAD 08e9acddabec, nomina contada en esta corrida)
+  CIFRA entradas cuyo SUJETO NO ESTA CONGELADO (recomputado al cierre): 0, de 135 (corte: HEAD 08e9acddabec, nomina contada en esta corrida)
       (ninguna)
   LA ESPECIE DEL VEREDICTO, SEPARADA (vuelta 190, TAREA 2):
       CIFRA de FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 2 fuera de la nomina, 0 invisibles al censo, 0 SUJETO VIVO
@@ -1419,6 +1428,6 @@ CIFRA exitcode: 1
 FIN
 ==============================================================================
 EXITCODE DEL TRAMO 11: 1
-FIN (reloj de pared, UTC): 2026-09-07T14:22:16Z
-DURACION DEL TRAMO (monotona, segundos): 18.4
+FIN (reloj de pared, UTC): 2026-09-08T04:58:34Z
+DURACION DEL TRAMO (monotona, segundos): 18.5
 DURACION DEL TRAMO (monotona, minutos): 0.3
