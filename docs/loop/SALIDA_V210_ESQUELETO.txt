@@ -1,63 +1,31 @@
 PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
-   docs/loop/REPORTE.md -> 14675 bytes
+   docs/loop/REPORTE.md -> 14826 bytes
    primera linea: # REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
    vuelta LEIDA (no tecleada): 210
    coincide con VUELTA menos 1 (209): NO
 
 PASO 0.b. LO QUE MI APERTURA MIDIO SOBRE EL ARCHIVO DEL REPORTE ANTERIOR
    mi sello dice: CIFRA docs/loop/reportes/REPORTE_V210.md existe al entrar: NO
-   existe AHORA, tras el PASO 0 de archivado: NO
+   existe AHORA, tras el PASO 0 de archivado: SI
 
 PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (210)
    PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
       el esqueleto va a PISAR docs/loop/REPORTE.md
-      archivar_reporte.py --vuelta 210 -> EXIT 0
+      archivar_reporte.py --vuelta 210 -> EXIT 1
          | ==============================================================================
          | ARCHIVADOR DE REPORTES. Vuelta 210.
          | El texto se lee de git, no del arbol de trabajo.
          | ==============================================================================
-         |   commit elegido solo (ultimo que toco la ruta): 8c9e67788162116efb0096f62e54ec7c6ffdffa7
-         |   asunto de ese commit: 2026-09-08 01:04:10 -0400	VUELTA 210, TAREA 1 CERRADA Y ANEXADA AL REPORTE AL CERRARSE, no al final de la vuelta.
+         |   commit elegido solo (ultimo que toco la ruta): 2cc9eb38a9f09fbf3fe334b1bfb174ec87f3c967
+         |   asunto de ese commit: 2026-09-08 01:13:18 -0400	VUELTA 210, CIERRE: la guarda de las cifras sin pareja de cerrar_reporte.py mordio y se corrige EN EL GENERADOR, no en la sa
          |   vuelta LEIDA de la cabecera del texto: 210
-         |   ESCRITO: docs/loop/reportes/REPORTE_V210.md
-         |   VERDE.
-         |      vuelta            210
-         |      commit de origen  8c9e67788162116efb0096f62e54ec7c6ffdffa7
-         |      ruta de origen    docs/loop/REPORTE.md
-         |      destino           docs/loop/reportes/REPORTE_V210.md
-         |      bytes             14675
-         |      lineas            258
-         |      sha256 (LF)       96a06b38e3db345974dd0e41358d8c3de4b4ebe14e6bcca107ab4cc99c0ee33c
+         |   ROJO, 1 motivo(s), y NO se escribe nada:
+         |      el destino docs/loop/reportes/REPORTE_V210.md ya existe con contenido DISTINTO (en disco sha256 96a06b38e3db, recuperado sha256 fdf2c207a130). Se necesita --forzar para pisarlo.
       docs/loop/reportes/REPORTE_V210.md -> 14675 bytes, sha256 96a06b38e3db3459
       vuelta leida de la cabecera del archivo: 210
-      el reporte que se va a pisar -> 14675 bytes, sha256 96a06b38e3db3459
-      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
-      VERDE: el reporte anterior esta archivado y lo que se va a
-      pisar esta guardado byte a byte. El esqueleto puede escribir.
+      el reporte que se va a pisar -> 14826 bytes, sha256 fdf2c207a130b907
+      ROJO, 2 motivo(s). EL ESQUELETO NO ESCRIBE:
+         (a) el archivador NO sale verde para la vuelta 210
+         (d) EL TEXTO QUE SE VA A PISAR NO ESTA GUARDADO: el REPORTE.md del arbol (sha256 fdf2c207a130b907) NO ES el archivado en docs/loop/reportes/REPORTE_V210.md (sha256 96a06b38e3db3459). Escribir el esqueleto encima perderia ese texto.
 
-LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA (EJECUTOR.md 1):
-   rama: pasada-unica
-   HEAD en el momento del esqueleto: d9bcee53a555e8d8cf8d37907ec86078396bbee6
-   asunto (primeros 90): VUELTA 210, CIERRE: el tallador de cabecera VERDE en modo --fase04, el HEAD de cierre sell
-
-LO QUE anexar_tarea_al_reporte.py EXIGE, COMPROBADO SOBRE LO COMPUESTO:
-   marca <!-- TABLA DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
-   marca <!-- FIN TABLA DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
-   marca <!-- ANEXO DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
-   marca <!-- FIN ANEXO DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
-   fila de la TAREA 1    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
-   el literal del vacio esta dentro del bloque del anexo: SI
-
-LAS MARCAS QUE cerrar_reporte.py EXIGE EN UN REPORTE SIN CERRAR:
-   '**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**'   -> SI (se esperaba SI)
-   'PENDIENTE DE TALLAR AL CIERRE'                          -> SI (se esperaba SI)
-   '<!-- CABECERA TALLADA -->'                              -> SI (se esperaba SI)
-   '<!-- FIN CABECERA TALLADA -->'                          -> SI (se esperaba SI)
-   '\n## 3.'                                                -> NO (se esperaba NO)
-   '\n## 9.'                                                -> NO (se esperaba NO)
-
-CIFRA guiones largos: 0 | CIFRA guiones medios: 0
-CIFRA comprobaciones que fallan: 0
-ESCRITO docs/loop/REPORTE.md -> 3443 bytes, 59 lineas
-RELECTURA DEL DISCO: identico a lo juzgado: SI
-VERDE: el esqueleto queda tallado.
+ROJO: el esqueleto NO escribe. El reporte anterior no esta a salvo.

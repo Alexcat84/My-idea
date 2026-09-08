@@ -68,7 +68,7 @@ propia salida, **remedidas hoy en el lado CIERRE de esta vuelta** y no heredadas
 `git diff --numstat -- dataset/` AL ENTRAR: 0 filas.** Las dos se
 LEEN de la apertura sellada y no se teclean.
 
-**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 10
+**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 8
 y 0.**
 
 | sede | filas de `numstat` al cierre | por que |
@@ -94,14 +94,14 @@ contra el `HEAD` vivo y la frase que lo nombraba estaba TECLEADA. En
 el `HEAD` contra el que la midio en la misma tupla**, y la frase de abajo se
 compone con ese `HEAD`: **no hay forma de nombrar un corte distinto del medido.**
 
-**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `d9bcee53`,
+**CIFRA ficheros anadidos a `scripts/loop/` entre `e3d33e42` y `2cc9eb38`,
 que es el `HEAD` que este mismo computo leyo y no uno tecleado: 10, de
 los que 10 llevan el prefijo `_v210_` y 0 no lo llevan.**
 
 **ESTA CIFRA NACE CORTA POR CONSTRUCCION Y LO DIGO DENTRO DE LA MISMA FRASE:**
 `scripts/loop/_v210_cierre.py` es el fichero que cuenta, va en el commit del
 cierre, y **ese commit todavia no existe cuando el conteo corre**. Falta por
-tanto **este mismo fichero** y cualquiera que nazca despues de `d9bcee53`.
+tanto **este mismo fichero** y cualquiera que nazca despues de `2cc9eb38`.
 **No se arregla el instrumento, que es moratoria**: se escribe la glosa con su
 corte, y el corte es el que la frase nombra.
 

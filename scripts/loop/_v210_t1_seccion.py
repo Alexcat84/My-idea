@@ -246,9 +246,10 @@ Salida: `docs/loop/SALIDA_V%(v)d_T1D_COMPONER.txt`.
   dice que hay que leerlas.
 - **CIFRA entradas de la nomina que NINGUN tramo corrio: %(cob_sin)s | ajenas:
   %(cob_ajenas)s | repetidas: %(cob_repes)s.**
-- **La salida unica: `docs/loop/SALIDA_V183_BATERIA.txt`, %(uni_disco)s bytes en
-  disco y %(uni_lf)s normalizado a LF**, %(uni_lineas)s lineas, `sha256` LF
-  `%(uni_sha)s`.
+- La salida unica, **con sus dos convenciones EN LA MISMA LINEA**, que es como
+  esta casa publica una pareja y como la guarda de `cerrar_reporte.py` sabe
+  leerla:
+- `docs/loop/SALIDA_V183_BATERIA.txt`: **%(uni_disco)s bytes en disco y %(uni_lf)s bytes normalizado a LF**, **%(uni_lineas)s lineas**, `sha256` LF `%(uni_sha)s`.
 
 **VERDE:** los once tramos cubren la nomina entera, cada entrada **exactamente una
 vez**, y la salida unica existe y no mide cero.
