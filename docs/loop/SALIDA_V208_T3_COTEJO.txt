@@ -1,0 +1,127 @@
+==============================================================================
+VUELTA 208, TAREAS 3.b Y 3.c: EL COTEJO DE OP-L-03, PUNTO POR PUNTO
+==============================================================================
+
+A) LA VARA, IMPORTADA DEL SELLO Y NO RE-ESCRITA
+   scripts/loop/_v208_t3_vara.py: sha256 disco 80be1e9485d62d90
+   CIFRA puntos de la vara sellada: 18
+   CIFRA sellados NO DOCUMENTALES: 2 (V.16, V.18)
+   CIFRA sellados DOCUMENTALES: 16
+
+B) LOS SEIS DOCUMENTOS, REMEDIDOS POR MI Y COTEJADOS CONTRA EL CONTRASTE
+   AUD  docs/loop/AUDITOR.md                     30581 bytes en disco y 30581 normalizado a LF | contraste 30581 | calza: SI
+   BDP  docs/plan/BANCO_DEL_PLAN.md              61554 bytes en disco y 61554 normalizado a LF | contraste 61554 | calza: SI
+   EJE  docs/loop/EJECUTOR.md                    13194 bytes en disco y 13194 normalizado a LF | contraste 13194 | calza: SI
+   LD   docs/plan/LECTURAS_DIRIGIDAS.md          214916 bytes en disco y 214916 normalizado a LF | contraste 214916 | calza: SI
+   LEC  docs/plan/OP_L_03_LECTURAS.jsonl         51368 bytes en disco y 51368 normalizado a LF | contraste 51368 | calza: SI
+   TRI  docs/plan/OP_L_03_TRIANGULOS.jsonl       55705 bytes en disco y 55705 normalizado a LF | contraste 55705 | calza: SI
+   CIFRA documentos cuya medicion NO calza con el contraste del encargo: 0
+   Y LO DIGO EXPRESAMENTE PORQUE EL ENCARGO LO PIDE: mi TAREA 2 NO tocó
+   docs/plan/LECTURAS_DIRIGIDAS.md, solo lo leyo, y por eso sale igual.
+
+C) EL COTEJO, PUNTO POR PUNTO, CON SU FICHERO Y SU LINEA
+
+   V.1   BDP  CUBRE     docs/plan/BANCO_DEL_PLAN.md:239
+         ## P.5 REGLA DE ORDEN: CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO
+         las 1 sonda(s) de PRESENCIA aparecen: 'P.5' en 13 linea(s), la primera la 239
+
+   V.2   LEC  CUBRE     docs/plan/OP_L_03_LECTURAS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 177, "fecha": "2026-09-05", "acto": "breakthrough_desempeno_actual", "miembros": ["breakthrough_desempeno_actual", "secuencia_universal_bre
+         las 1 sonda(s) de PRESENCIA aparecen: '"id_op": "OP-L-03"' en 14 linea(s), la primera la 1
+
+   V.3   LD   NO CUBRE  docs/plan/LECTURAS_DIRIGIDAS.md:(sin linea)
+         EL PATRON NO ENCONTRO 'reparto por acto' en docs/plan/LECTURAS_DIRIGIDAS.md. NO DIGO QUE NO EXISTA: DIGO QUE NO LO HALLE
+
+   V.4   LEC  CUBRE     docs/plan/OP_L_03_LECTURAS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 177, "fecha": "2026-09-05", "acto": "breakthrough_desempeno_actual", "miembros": ["breakthrough_desempeno_actual", "secuencia_universal_bre
+         las 1 sonda(s) de PRESENCIA aparecen: '"acto":' en 14 linea(s), la primera la 1
+
+   V.5   TRI  CUBRE     docs/plan/OP_L_03_TRIANGULOS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 178, "fecha": "2026-09-05", "acto": "cash_burn_calculation", "acto_leido_por_la_177": true, "terna": ["cash_burn_calculation", "validacion_
+         las 1 sonda(s) de PRESENCIA aparecen: '"terna":' en 19 linea(s), la primera la 1
+
+   V.6   LA `6.1` SE LE APLICA: publica una COBERTURA (11 leidos de 14 actos, 19 pares) y por tanto esa cobertura tiene que estar al lado en su sede
+         CIFRA filas del fichero con campo `cobertura` no vacio: 14
+         CIFRA filas sin el: 0
+   V.6   LEC  CUBRE     docs/plan/OP_L_03_LECTURAS.jsonl:3
+         {"id_op": "OP-L-03", "vuelta": 177, "fecha": "2026-09-05", "acto": "cash_burn_calculation", "miembros": ["cash_burn_calculation", "metrics_that_matter_framework", "valida
+         las 3 sonda(s) de PRESENCIA aparecen: '"leido": true' en 11 linea(s), la primera la 3; '"leido": false' en 3 linea(s), la primera la 1; '"cifra_pares_leidos"' en 11 linea(s), la primera la 3. **Y LA `6.1` SE CUMPLE ENTERA**: las 14 filas de docs/plan/OP_L_03_LECTURAS.jsonl llevan la cobertura al lado
+
+   V.7   LA `6.1` SE LE APLICA: publica lo que FALTA de una nomina (15 de 29 actos, 36 de 55 pares) y por tanto es una cifra de cobertura
+         CIFRA filas del fichero con campo `cobertura` no vacio: 14
+         CIFRA filas sin el: 0
+   V.7   LEC  CUBRE     docs/plan/OP_L_03_LECTURAS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 177, "fecha": "2026-09-05", "acto": "breakthrough_desempeno_actual", "miembros": ["breakthrough_desempeno_actual", "secuencia_universal_bre
+         las 1 sonda(s) de PRESENCIA aparecen: '"leido": false' en 3 linea(s), la primera la 1. **Y LA `6.1` SE CUMPLE ENTERA**: las 14 filas de docs/plan/OP_L_03_LECTURAS.jsonl llevan la cobertura al lado
+
+   V.8   LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:76
+         ### `LD-01` . `formalizar_junta_asesora` contra `identificar_consejo_asesores` . **D**
+         las 2 sonda(s) de AUSENCIA dan CERO, que es lo que este punto AFIRMA: 'reparto por acto' en 0 lineas; 'OP-L-03' en 0 lineas. y el CONTROL POSITIVO aparece, asi que el cero de arriba es del mundo y no de mi patron: 'LD-01' en 2 linea(s), la primera la 76; 'LECTURA DIRIGIDA' en 6 linea(s), la primera la 11
+
+   V.9   BDP  CUBRE     docs/plan/BANCO_DEL_PLAN.md:239
+         ## P.5 REGLA DE ORDEN: CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO
+         las 2 sonda(s) de PRESENCIA aparecen: 'P.5' en 13 linea(s), la primera la 239; 'P.10' en 1 linea(s), la primera la 759
+
+   V.10  LD   CUBRE     docs/plan/LECTURAS_DIRIGIDAS.md:11
+         marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador.**
+         las 1 sonda(s) de PRESENCIA aparecen: 'LECTURA DIRIGIDA' en 6 linea(s), la primera la 11
+
+   V.11  LA `6.1` SE LE APLICA: su cita dice literalmente 'se re-mide con su cobertura al lado'
+         CIFRA filas del fichero con campo `cobertura` no vacio: 14
+         CIFRA filas sin el: 0
+   V.11  LEC  CUBRE     docs/plan/OP_L_03_LECTURAS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 177, "fecha": "2026-09-05", "acto": "breakthrough_desempeno_actual", "miembros": ["breakthrough_desempeno_actual", "secuencia_universal_bre
+         las 1 sonda(s) de PRESENCIA aparecen: '"cobertura"' en 14 linea(s), la primera la 1. **Y LA `6.1` SE CUMPLE ENTERA**: las 14 filas de docs/plan/OP_L_03_LECTURAS.jsonl llevan la cobertura al lado
+
+   V.12  TRI  CUBRE     docs/plan/OP_L_03_TRIANGULOS.jsonl:1
+         {"id_op": "OP-L-03", "vuelta": 178, "fecha": "2026-09-05", "acto": "cash_burn_calculation", "acto_leido_por_la_177": true, "terna": ["cash_burn_calculation", "validacion_
+         las 1 sonda(s) de PRESENCIA aparecen: '"el_lado_de_fuera_es_el_D"' en 19 linea(s), la primera la 1
+
+   V.13  AUD  CUBRE     docs/loop/AUDITOR.md:17
+         > **LA VARA DEL TRABAJO PENDIENTE ES EL INSTRUMENTO, NUNCA EL CAMPO `estado`**
+         las 1 sonda(s) de PRESENCIA aparecen: 'la vara del trabajo pendiente es el instrumento' en 1 linea(s), la primera la 17. BUSCADO SIN DISTINGUIR MAYUSCULAS, y se dice: la sede lo escribe en versales
+
+   V.14  EJE  CUBRE     docs/loop/EJECUTOR.md:164
+         importar quien la declare ("una busqueda negativa no se puede citar").
+         las 1 sonda(s) de PRESENCIA aparecen: 'una busqueda negativa no se puede citar' en 1 linea(s), la primera la 164
+
+   V.15  BDP  CUBRE     docs/plan/BANCO_DEL_PLAN.md:239
+         ## P.5 REGLA DE ORDEN: CADA ACTO QUE VAYA A FUNDIRSE SE LEE ENTERO
+         las 1 sonda(s) de PRESENCIA aparecen: 'P.5' en 13 linea(s), la primera la 239
+
+   V.16  ---  NO DOCUMENTAL (sellado antes de mirar)
+         motivo sellado: es una CIFRA DE RECOMPUTO cuya sede declarada es docs/plan/RECOMPUTO_3388.md, que NO es ninguno de los seis documentos que la ficha nombra
+         se busco igual el literal 'CUARENTA actos y SETENTA Y TRES pares' en los seis: 0 apariciones, y eso es lo que el sello ya media
+
+   V.17  BDP  CUBRE     docs/plan/BANCO_DEL_PLAN.md:282
+         Los demas la cumplen por otra via: **173 actos ya estan enteros** (`OP-U-01`), y
+         las 1 sonda(s) de PRESENCIA aparecen: 'OP-U-01' en 1 linea(s), la primera la 282
+
+   V.18  ---  NO DOCUMENTAL (sellado antes de mirar)
+         motivo sellado: es una CLAUSULA sobre el campo en_cola_sin_leer de scripts/plan/recomputo_3388.py, que NO es ninguno de los seis
+         se busco igual el literal 'en_cola_sin_leer' en los seis: 0 apariciones, y eso es lo que el sello ya media
+
+==============================================================================
+D) LA COBERTURA, MEDIDA Y NO NARRADA (TAREA 3.c)
+==============================================================================
+   CIFRA CUBRE:         15  V.1, V.2, V.4, V.5, V.6, V.7, V.8, V.9, V.10, V.11, V.12, V.13, V.14, V.15, V.17
+   CIFRA A MEDIAS:       0  (ninguno)
+   CIFRA NO CUBRE:       1  V.3
+   CIFRA NO DOCUMENTAL:  2  V.16, V.18
+   CIFRA total de filas: 18 (la vara tiene 18 puntos)
+
+   LA LISTA NOMINAL DE LOS QUE NO CUBREN: V.3
+   LA LISTA NOMINAL DE LOS QUE CUBREN A MEDIAS: (NINGUNO)
+
+   LAS DOS CUENTAS SEPARADAS, PORQUE EL REPARTO SELLADO Y LOS VEREDICTOS
+   NO TIENEN POR QUE COINCIDIR EN NUMERO (como en la 207):
+      CUENTA 1, LA DEL SELLO: 16 puntos documentales
+      CUENTA 2, LA DE LOS VEREDICTOS: 16 puntos con veredicto documental
+      CALZAN: SI
+
+E) LO QUE ESTE COMPUTO NO HACE (TAREA 3.d)
+   NO CIERRA LA FICHA Y NO TOCA SU CAMPO `estado`, que sigue diciendo 'LISTA'
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF,
+   sha256 disco 829c583eb779cab6 y sha256 LF 829c583eb779cab6
+
+FIN
