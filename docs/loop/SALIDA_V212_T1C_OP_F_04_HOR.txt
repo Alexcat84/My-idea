@@ -1,0 +1,108 @@
+==============================================================================
+TAREA 1.c DE LA VUELTA 212. LA `P.2`: LA ADJUDICACION DE OP-F-04-HOR.
+==============================================================================
+
+## 0. EL MOTIVO, LEIDO DEL DISCO Y NO RECORDADO
+CIFRA lineas de docs/plan/01_FUENTES.md: 1522
+LA TABLA DE LAS LINEAS DEL MOTIVO: 2 fila(s) armada(s) sobre 2 lineas que el encargo nombra
+   motivo> docs/plan/01_FUENTES.md linea 1168 :: > **devolvio `principio_calidad_mvp` a la operacion y la nomina volvio a CATORCE**, porque la
+   motivo> docs/plan/01_FUENTES.md linea 1453 :: > 2026-08-11, adjudicacion *LEIDOS LOS 13*). **El que sobra es `principio_calidad_mvp`**: medido
+
+## 1. LA ENTRADA
+CIFRA fichas de docs/plan/OPERACIONES.jsonl AL ENTRAR: 71
+CIFRA sede docs/plan/OPERACIONES.jsonl AL ENTRAR: 513043 bytes en disco y 513043 normalizado a LF (COINCIDEN), sha256 disco 7a52387bb8a4aa4f y sha256 LF 7a52387bb8a4aa4f
+LA TABLA DE CUENTAS POR estado AL ENTRAR: 2 fila(s) armada(s), y suman 71, que es el total de fichas
+   estado> HECHA    32
+   estado> LISTA    39
+CIFRA filas de git diff --numstat -- docs/plan/ AL ENTRAR: 0
+
+CIFRA lineas con la ficha OP-F-04-HOR: 1 (se exige 1) -> [37]
+CIFRA round-trip de json.dumps sobre la ficha vieja identico a su linea: SI
+CIFRA el campo nodos de OP-F-04-HOR mide: 14 (contado del campo, no tecleado)
+CIFRA el campo estado de OP-F-04-HOR AL ENTRAR: 'LISTA'
+CIFRA bytes de la adjudicacion AL ENTRAR: 220
+   adjudicacion vieja> TANDA DE INJERTOS, grupo HOROWITZ. LEIDOS LOS 13, y los 13 CONFIRMADOS: en los 13 el material del libro declarado en segunda posicion ESTA PRESENTE, y esta como BLOQUE APENDICE al final de los pasos. NINGUNO es arrastre.
+CIFRA la adjudicacion contiene la frase LEIDOS LOS 13: SI
+LA TABLA DE NODOS DEL CAMPO QUE LAS DOS LINEAS DEL MOTIVO NOMBRAN: 1 fila(s) armada(s) sobre los 14 del campo
+   nombrado> principio_calidad_mvp (posicion 14 de 14 en el campo nodos)
+
+## 2. LA SIMULACION SOBRE COPIA EN MEMORIA, ANTES DE TOCAR EL DISCO
+CIFRA bytes de la adjudicacion vieja 220, de la nueva 1629, de lo anadido 1409
+   filas antes 71, filas despues 71 (se exige que sean iguales)
+   lineas distintas: 1 (se exige 1)
+   la linea distinta es la ficha 'OP-F-04-HOR' (se exige 'OP-F-04-HOR')
+   campos que cambian: adjudicacion (se exige exactamente adjudicacion)
+   el campo nodos NO se movio: SI (mide 14 antes y 14 despues)
+   el campo estado NO se movio: SI ('LISTA' antes y 'LISTA' despues)
+   el texto viejo esta ENTERO Y ENCIMA (la adjudicacion nueva empieza por la vieja, byte a byte): SI
+   guiones largos 0, guiones medios 0 (se exige 0 y 0)
+CIFRA fallos de la simulacion: 0 (se exige 0)
+CIFRA las cuentas por estado NO se mueven en la simulacion: SI
+
+## 3. EL CASO ROJO POR MUTACION, CORRIDO ANTES DE ESCRIBIR NADA
+MUTANTE 1, la correccion TAPA el texto viejo: fallos 1 (se exige >0)
+     filas antes 71, filas despues 71 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es la ficha 'OP-F-04-HOR' (se exige 'OP-F-04-HOR')
+     campos que cambian: adjudicacion (se exige exactamente adjudicacion)
+     el campo nodos NO se movio: SI (mide 14 antes y 14 despues)
+     el campo estado NO se movio: SI ('LISTA' antes y 'LISTA' despues)
+     el texto viejo esta ENTERO Y ENCIMA (la adjudicacion nueva empieza por la vieja, byte a byte): NO
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+MUTANTE 2, se toca ademas el campo nodos (se le quita el 14.o): fallos 2 (se exige >0)
+     filas antes 71, filas despues 71 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es la ficha 'OP-F-04-HOR' (se exige 'OP-F-04-HOR')
+     campos que cambian: adjudicacion, nodos (se exige exactamente adjudicacion)
+     el campo nodos NO se movio: NO (mide 14 antes y 13 despues)
+     el campo estado NO se movio: SI ('LISTA' antes y 'LISTA' despues)
+     el texto viejo esta ENTERO Y ENCIMA (la adjudicacion nueva empieza por la vieja, byte a byte): SI
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+MUTANTE 3, se toca ademas el campo estado (la prohibicion expresa del encargo): fallos 2 (se exige >0)
+     filas antes 71, filas despues 71 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es la ficha 'OP-F-04-HOR' (se exige 'OP-F-04-HOR')
+     campos que cambian: adjudicacion, estado (se exige exactamente adjudicacion)
+     el campo nodos NO se movio: SI (mide 14 antes y 14 despues)
+     el campo estado NO se movio: NO ('LISTA' antes y 'HECHA' despues)
+     el texto viejo esta ENTERO Y ENCIMA (la adjudicacion nueva empieza por la vieja, byte a byte): SI
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+MUTANTE 4, se toca ademas otra ficha (OP-F-01): fallos 1 (se exige >0)
+     filas antes 71, filas despues 71 (se exige que sean iguales)
+     lineas distintas: 2 (se exige 1)
+
+CIFRA mutantes corridos: 4. CIFRA mutantes que CAEN en rojo: 4 (se exige que caigan todos)
+EL CASO ROJO SE COMPORTA: la guarda dice VERDE sobre lo correcto y ROJO sobre las cuatro escrituras equivocadas.
+
+## 4. LA ESCRITURA
+ESCRITO docs/plan/OPERACIONES.jsonl
+
+## 5. LA SALIDA, CON LA RECARGA DEL jsonl LINEA A LINEA
+CIFRA lineas del fichero recargadas una a una: 71; lineas que NO parsean: 0 (se exige 0)
+CIFRA fichas AL SALIR: 71 (se exige 71)
+CIFRA lo escrito es identico a lo juzgado: SI
+   filas antes 71, filas despues 71 (se exige que sean iguales)
+   lineas distintas: 1 (se exige 1)
+   la linea distinta es la ficha 'OP-F-04-HOR' (se exige 'OP-F-04-HOR')
+   campos que cambian: adjudicacion (se exige exactamente adjudicacion)
+   el campo nodos NO se movio: SI (mide 14 antes y 14 despues)
+   el campo estado NO se movio: SI ('LISTA' antes y 'LISTA' despues)
+   el texto viejo esta ENTERO Y ENCIMA (la adjudicacion nueva empieza por la vieja, byte a byte): SI
+   guiones largos 0, guiones medios 0 (se exige 0 y 0)
+CIFRA fallos de la guarda SOBRE EL DISCO: 0 (se exige 0)
+LA TABLA DE CUENTAS POR estado AL SALIR: 2 fila(s) armada(s), y suman 71
+   estado> HECHA    32
+   estado> LISTA    39
+CIFRA las cuentas por estado son IDENTICAS a las de la entrada: SI
+CIFRA sede docs/plan/OPERACIONES.jsonl AL SALIR: 514452 bytes en disco y 514452 normalizado a LF (COINCIDEN), sha256 disco ca1d95b5b3d19e9e y sha256 LF ca1d95b5b3d19e9e
+CIFRA el sha256 cambia entre entrada y salida: SI (se exige SI)
+CIFRA filas de git diff --numstat -- docs/plan/ AL SALIR: 1 (se exige 1, y es docs/plan/OPERACIONES.jsonl)
+   numstat> 1	1	docs/plan/OPERACIONES.jsonl
+CIFRA el campo nodos de OP-F-04-HOR AL SALIR: 14 (se exige 14)
+CIFRA el campo estado de OP-F-04-HOR AL SALIR: 'LISTA' (se exige 'LISTA')
+CIFRA bytes de la adjudicacion AL SALIR: 1629
+
+VERDE: la `P.2` queda declarada sobre el campo adjudicacion, con el texto viejo entero encima, y ni nodos ni estado se movieron.
