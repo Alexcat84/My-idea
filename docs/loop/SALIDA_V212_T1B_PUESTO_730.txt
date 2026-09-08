@@ -1,0 +1,149 @@
+==============================================================================
+TAREA 1.b DE LA VUELTA 212. LA RELECTURA CONJUNTA DEL PUESTO 730.
+==============================================================================
+
+## 0. LA ENTRADA, MEDIDA ANTES DE TOCAR NADA
+
+CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 3388 (contadas de este fichero, no tecleadas)
+CIFRA sede docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 4054129 bytes en disco y 4054129 normalizado a LF (COINCIDEN), sha256 disco 0a77b5a35a962621 y sha256 LF 0a77b5a35a962621
+CIFRA marcador AL ENTRAR, recomputado con apertura_del_auditor.marcador(): 3388 filas; A 551, B 72, C 5, D 2760
+
+CIFRA filas que llevan puesto_intra 730: 1 (se exige 1)
+CIFRA clase del 730 AL ENTRAR: A
+CIFRA bytes de la razon del 730 AL ENTRAR: 1195
+CIFRA nodo_a y nodo_b del 730: colaboracion_cadena_suministro / efecto_bullwhip
+
+## 1. VERIFICADO CONTRA EL GRAFO, RESOLVIENDO A NODO VIVO (P.1)
+
+CIFRA nodos del grafo cargados: 3853
+CIFRA nodos vivos: 3169
+
+LA TABLA DE ARISTAS DE SALIDA DE LA MADRE, ARMADA LEYENDO EL GRAFO: 1 fila(s) armada(s), y la cifra que la madre declara en sus nodos_siguientes es 1
+   salida> optimizacion_tecnologia_cadena_suministro      es hijo de paso: NO
+LA TABLA DE ARISTAS DE ENTRADA DE LA MADRE: 1 fila(s) armada(s), y la cifra que la madre declara en sus nodos_previos es 1
+   entrada> sales_operations_planning                      es hijo de paso: NO
+
+LOS HIJOS DE PASO QUE LA RAZON DEL ARCHIVO NOMBRA: 2 nombrados
+   hijo> efecto_bullwhip                        resuelto a efecto_bullwhip                        existe SI vivo SI enlazado por la madre NO
+   hijo> compartir_datos_cadena_suministro      resuelto a compartir_datos_cadena_suministro      existe SI vivo SI enlazado por la madre NO
+CIFRA hijos de paso QUE LA MADRE ENLAZA: 0 de 2
+
+EL CAVEAT DE LA 9.6.1 (LA FAMILIA ENCADENADA NO SE CUENTA POR RADIOS): ANTES DE CONTAR SE MIRA LA FORMA.
+CIFRA nodos alcanzables desde la madre por aristas de SALIDA hasta 3 saltos: 7
+   cadena> efecto_bullwhip                        alcanzable desde la madre: NO
+   cadena> compartir_datos_cadena_suministro      alcanzable desde la madre: NO
+VEREDICTO DE LA FORMA: NO HAY CADENA. Los hijos no cuelgan de la madre ni por cadena, asi que se cuentan los radios, y los radios son CERO
+
+### EL CASO ROJO POR MUTACION DEL CONTADOR DE SILUETA, CORRIDO ANTES DE DECIDIR
+(EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION: si el contador fuera una
+constante, meterle una arista de mentira no lo movria.)
+CIFRA hijos enlazados SOBRE LA COPIA MUTADA (se le mete a mano la arista a efecto_bullwhip): 1
+EL CASO ROJO CAE COMO TIENE QUE CAER: sin mutar da 0 y mutado da 1 (se exige 0 y 1).
+CIFRA el grafo del disco queda intacto: la mutacion vive en un dict en memoria, y quien lo comprueba es el numstat de dataset/ del ciclo de Gate 0 del cierre.
+
+## 2. EL CERCO, RECOMPUTADO POR MI SOBRE LAS 3388 FILAS, CON EL PATRON DICHO
+
+PATRON cero-enlazados, GUION LITERAL                    FILAS ARMADAS 11 (y la tabla de la linea de abajo lleva esas mismas 11); por clase A 3, D 8
+   puestos (11): 490, 497, 522, 555, 557, 568, 582, 586, 610, 624, 730
+PATRON cero enlazados, HOLGADO (guion, espacio o nada)  FILAS ARMADAS 14 (y la tabla de la linea de abajo lleva esas mismas 14); por clase A 4, D 10
+   puestos (14): 474, 490, 497, 522, 555, 557, 568, 582, 586, 610, 624, 658, 730, 778
+PATRON choque de la seccion 19, FRASE ENTERA            FILAS ARMADAS 11 (y la tabla de la linea de abajo lleva esas mismas 11); por clase A 3, D 8
+   puestos (11): 490, 497, 522, 555, 557, 568, 582, 586, 610, 624, 730
+PATRON seccion 19 A SECAS                               FILAS ARMADAS 13 (y la tabla de la linea de abajo lleva esas mismas 13); por clase A 3, D 10
+   puestos (13): 490, 497, 522, 555, 557, 568, 582, 586, 610, 624, 658, 678, 730
+PATRON lectura vieja                                    FILAS ARMADAS  3 (y la tabla de la linea de abajo lleva esas mismas 3); por clase A 1, D 2
+   puestos (3): 730, 2215, 2371
+PATRON seria D                                          FILAS ARMADAS  5 (y la tabla de la linea de abajo lleva esas mismas 5); por clase A 2, C 1, D 2
+   puestos (5): 494, 658, 678, 730, 2250
+
+CIFRA razones en clase A que nombran el cero-enlazados (patron holgado): 4, y son 474, 568, 586, 730
+CIFRA razones en clase D que lo nombran (patron holgado): 10
+CIFRA de las 11 filas de la FRASE ENTERA, cuantas estan en la lista de DIEZ que la ratificacion declara resueltas: 10; y cuantas NO: 1 (730)
+CIFRA los DIEZ de la ratificacion, comprobados uno a uno en el archivo: 10 de 10 existen
+LA TABLA DE LOS DIEZ CON SU CLASE DE HOY: 10 fila(s) armada(s) sobre 10 puestos nombrados por la ratificacion
+   diez> puesto 490 clase D
+   diez> puesto 497 clase D
+   diez> puesto 522 clase D
+   diez> puesto 555 clase D
+   diez> puesto 557 clase D
+   diez> puesto 568 clase A
+   diez> puesto 582 clase D
+   diez> puesto 586 clase A
+   diez> puesto 610 clase D
+   diez> puesto 624 clase D
+
+EL ORDEN DE CRIBADO, MEDIDO EN EL ORDEN DEL FICHERO Y NO SUPUESTO:
+   indice de la fila del puesto 658 dentro del fichero: 657
+   indice de la fila del puesto 678 dentro del fichero: 677
+   indice de la fila del puesto 730 dentro del fichero: 729
+CIFRA el 730 va DESPUES del 658 y del 678 en el orden del fichero: SI
+
+## 3. LA VARA APLICADA POR MI: 9.6.1, LA DIRECCION DEL 9.6.2 Y EL 67.6
+
+LA TABLA DE PASOS DE LA MADRE colaboracion_cadena_suministro: 5 fila(s) armada(s), y el campo pasos_accionables declara 5
+   madre paso 1> Medir el efecto látigo comparando pedidos entrantes vs. pedidos salientes durante un periodo (trimestre o año)
+   madre paso 2> Graficar la divergencia entre demanda de clientes y órdenes a proveedores
+   madre paso 3> Determinar la posición de la empresa en la cadena (cerca o lejos del cliente final)
+   madre paso 4> Establecer acuerdos de intercambio de datos de inventario y ventas (POS) con socios clave
+   madre paso 5> Construir un sistema simple y de bajo costo de visibilidad de inventario compartido (spreadsheets, bases de datos, reportes) si no hay presupuesto para software especializado
+LA TABLA DE PASOS DEL HIJO efecto_bullwhip: 6 fila(s) armada(s), y el campo pasos_accionables declara 6
+   hijo paso 1> Mide qué tan grande es el efecto látigo en tu negocio comparando cómo varía la demanda en distintos puntos de tu cadena
+   hijo paso 2> Calcula cuánto te está costando en producción y en programar tu operación
+   hijo paso 3> Calcula cuánto te está costando en transporte, envíos y recepción de mercadería
+   hijo paso 4> Averigua cuánto inventario necesitas para no quedarte sin producto y cuánto te cuesta mantenerlo
+   hijo paso 5> Revisa cuánto estás perdiendo en ventas por no tener producto disponible cuando lo necesitas
+   hijo paso 6> Usa estos números para decidir si vale la pena invertir en compartir datos o coordinarte mejor con tus proveedores
+CIFRA entregable de la madre, bytes: 117
+   madre entregable> Gráfico de medición del efecto látigo propio y acuerdo inicial de intercambio de datos con al menos un socio clave
+CIFRA entregable del hijo, bytes: 168
+   hijo entregable> Un cálculo claro de cuánto te cuesta el efecto látigo en tu negocio, que te sirva para decidir si conviene invertir en mejor visibilidad de datos con tus proveedores
+
+LO QUE LE QUEDA A CADA NODO CUANDO LE QUITAS LO QUE DICE EL OTRO.
+La correspondencia la lee la razon del archivo y la confirmo yo leyendo los
+dos campos de arriba: los pasos 1 y 2 de la madre (medir el latigo comparando
+pedidos entrantes contra salientes, y graficar la divergencia) son el paso 1
+del hijo (medir cuanto varia la demanda en distintos puntos de la cadena).
+
+   DIRECCION DEL 9.6.2, LA UNICA QUE MANDA: QUE ANADE EL HIJO A LA MADRE.
+   LE QUEDAN AL HIJO 5 de sus 6 pasos: los pasos 2, 3, 4, 5 y 6.
+     coste en produccion y en programacion de la operacion (2);
+     coste en transporte, envios y recepcion (3);
+     cuanto inventario de seguridad hace falta y cuanto cuesta mantenerlo (4);
+     cuanto se pierde en ventas por rotura de stock (5);
+     y usar esos numeros para decidir si vale la pena invertir (6).
+   CLASIFICACION POR EL 67.6: son CUATRO computos de coste sobre bases
+   distintas mas una regla de decision que se alimenta de los cuatro. Cada uno
+   obliga a decisiones dentro de si (que periodo, que bases de coste, que
+   nivel de servicio) y se repite en el tiempo. ES PROCEDIMIENTO, NO LINEA.
+   Y el entregable lo confirma: el del hijo es un CALCULO DE CUANTO CUESTA que
+   sirve para decidir la inversion; el de la madre es un GRAFICO mas un ACUERDO.
+
+   LA DIRECCION CONTRARIA, ESCRITA SOLO PORQUE EL ENCARGO PIDE LOS DOS LADOS Y
+   NO PORQUE DECIDA (el 9.6.2 la prohibe como vara): QUE LE QUEDA A LA MADRE.
+   LE QUEDAN A LA MADRE 3 de sus 5 pasos: los pasos 3, 4 y 5.
+     determinar la posicion de la empresa en la cadena (3);
+     establecer acuerdos de intercambio de datos de inventario y POS (4);
+     construir el sistema barato de visibilidad compartida (5).
+   Tambien es PROCEDIMIENTO. PROCEDIMIENTO EN LOS DOS LADOS, que por el 9.6.3
+   es el par SANO: uno acaba en la contabilidad del latigo y el otro en el
+   acuerdo con el socio. NO ES DUPLICACION.
+
+   LAS DOS DIRECCIONES DEVUELVEN LO MISMO: CONTINUA, o sea D.
+
+## 4. LA DECISION, TOMADA CON LA VARA Y NO CON EL CASO DEL AUDITOR
+
+CIFRA hijos enlazados: 0 de 2. CIFRA cadena que rescate la silueta: NO.
+Por la RATIFICACION del 9.6.1 (el CERO entra en la regla), con cero hermanos
+enlazados la silueta no dice nada y MANDA EL CONTENIDO: APLICA
+Por la vara de LINEA o PROCEDIMIENTO (67.6), lo que el hijo anade a la madre
+es PROCEDIMIENTO, no linea: CONTINUA.
+VEREDICTO DE ESTA MEDICION: la clase del 730 pasa de A a D. CONFIRMA: SI
+
+## 5. EL BARRIDO DE TABLAS DERIVADAS QUE EL BANCO 9.10 PIDE MIRAR
+(se MIDE aqui y NO se edita: editar prosa sellada del informe o del plan es
+forma que este encargo no ordena. Va al reporte como discutible.)
+LA TABLA DE CITAS DEL 730 FUERA DEL ARCHIVO: 3 fila(s) armada(s) sobre 3 sedes miradas
+   cita> docs/INTRA_DOMINIO_INFORME.md linea 6941 :: **El puesto 730** es el primer veredicto nuevo emitido **despues** de que el
+   cita> docs/plan/03_FUSIONES.md linea 5424 :: > puesto **730** declara que la clase queda en `A` **por la lectura vieja del cero-enlazados** y
+   cita> docs/loop/reportes/REPORTE_V179.md linea 311 :: | `colaboracion_cadena_suministro` vs `diagnostico_efecto_latigo` | **A** | 730 (`A`) y 329 (`A`
+

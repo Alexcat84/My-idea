@@ -1,0 +1,93 @@
+==============================================================================
+TAREA 1.b DE LA VUELTA 212. LA ESCRITURA DE LA CORRECCION DEL PUESTO 730.
+==============================================================================
+
+## 0. LA PUERTA: SIN MEDICION QUE CONFIRME, ESTE FICHERO NO ESCRIBE
+CIFRA bytes de la salida de la medicion: 10520
+CIFRA la medicion dice CONFIRMA: SI: SI
+
+## 1. LA ENTRADA
+CIFRA filas AL ENTRAR: 3388
+CIFRA sede docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 4054129 bytes en disco y 4054129 normalizado a LF (COINCIDEN), sha256 disco 0a77b5a35a962621 y sha256 LF 0a77b5a35a962621
+CIFRA marcador AL ENTRAR, con apertura_del_auditor.marcador(): 3388 filas; A 551, B 72, C 5, D 2760
+
+CIFRA indices de linea con el puesto 730: 1 (se exige 1) -> [729]
+CIFRA round-trip de json.dumps sobre la fila vieja identico a su linea: SI
+
+## 2. LA SIMULACION SOBRE COPIA EN MEMORIA, ANTES DE TOCAR EL DISCO
+CIFRA bytes de la razon vieja 1195, de la razon nueva 4196, de lo anadido 3001
+   filas antes 3388, filas despues 3388 (se exige que sean iguales)
+   lineas distintas: 1 (se exige 1)
+   la linea distinta es el puesto 730 (se exige 730)
+   campos que cambian: clase, razon (se exigen exactamente clase y razon)
+   clase antes 'A', clase despues 'D' (se exige 'A' y 'D')
+   el texto viejo esta ENTERO Y ENCIMA (la razon nueva empieza por la vieja, byte a byte): SI
+   guiones largos 0, guiones medios 0 (se exige 0 y 0)
+CIFRA fallos de la simulacion: 0 (se exige 0)
+
+CIFRA marcador SIMULADO sobre la copia en memoria: 3388 filas; A 550, B 72, C 5, D 2761
+CIFRA el simulado mueve exactamente una A a una D contra el de entrada: SI
+
+## 3. EL CASO ROJO POR MUTACION, CORRIDO ANTES DE ESCRIBIR NADA
+(EJECUTOR.md 1: ningun assert se publica como prueba sin haber corrido su
+prueba de mutacion. Se muta LA ESCRITURA, no el valor esperado, y se exige
+que la MISMA guarda que acaba de decir VERDE diga ROJO.)
+
+MUTANTE 1, la correccion TAPA el texto viejo: fallos 1 (se exige >0)
+     filas antes 3388, filas despues 3388 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es el puesto 730 (se exige 730)
+     campos que cambian: clase, razon (se exigen exactamente clase y razon)
+     clase antes 'A', clase despues 'D' (se exige 'A' y 'D')
+     el texto viejo esta ENTERO Y ENCIMA (la razon nueva empieza por la vieja, byte a byte): NO
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+MUTANTE 2, se toca ademas la fila del 731: fallos 1 (se exige >0)
+     filas antes 3388, filas despues 3388 (se exige que sean iguales)
+     lineas distintas: 2 (se exige 1)
+
+MUTANTE 3, la clase escrita es B y no la D que la vara devuelve: fallos 1 (se exige >0)
+     filas antes 3388, filas despues 3388 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es el puesto 730 (se exige 730)
+     campos que cambian: clase, razon (se exigen exactamente clase y razon)
+     clase antes 'A', clase despues 'B' (se exige 'A' y 'D')
+     el texto viejo esta ENTERO Y ENCIMA (la razon nueva empieza por la vieja, byte a byte): SI
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+MUTANTE 4, ademas de clase y razon se mueve el campo clave: fallos 1 (se exige >0)
+     filas antes 3388, filas despues 3388 (se exige que sean iguales)
+     lineas distintas: 1 (se exige 1)
+     la linea distinta es el puesto 730 (se exige 730)
+     campos que cambian: clase, clave, razon (se exigen exactamente clase y razon)
+     clase antes 'A', clase despues 'D' (se exige 'A' y 'D')
+     el texto viejo esta ENTERO Y ENCIMA (la razon nueva empieza por la vieja, byte a byte): SI
+     guiones largos 0, guiones medios 0 (se exige 0 y 0)
+
+CIFRA mutantes corridos: 4. CIFRA mutantes que CAEN en rojo: 4 (se exige que caigan todos)
+EL CASO ROJO SE COMPORTA: la guarda dice VERDE sobre lo correcto y ROJO sobre las cuatro escrituras equivocadas.
+
+## 4. LA ESCRITURA, QUE SOLO LLEGA AQUI CON LA SIMULACION EN VERDE Y LOS
+   CUATRO MUTANTES EN ROJO
+ESCRITO docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+
+## 5. LA SALIDA, RELEIDA DEL DISCO LINEA A LINEA
+CIFRA filas AL SALIR: 3388 (se exige 3388)
+CIFRA lo escrito es identico a lo juzgado: SI
+   filas antes 3388, filas despues 3388 (se exige que sean iguales)
+   lineas distintas: 1 (se exige 1)
+   la linea distinta es el puesto 730 (se exige 730)
+   campos que cambian: clase, razon (se exigen exactamente clase y razon)
+   clase antes 'A', clase despues 'D' (se exige 'A' y 'D')
+   el texto viejo esta ENTERO Y ENCIMA (la razon nueva empieza por la vieja, byte a byte): SI
+   guiones largos 0, guiones medios 0 (se exige 0 y 0)
+CIFRA fallos de la guarda SOBRE EL DISCO: 0 (se exige 0)
+CIFRA sede docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR: 4057130 bytes en disco y 4057130 normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+CIFRA el sha256 cambia entre entrada y salida: SI (se exige SI)
+CIFRA marcador AL SALIR, con apertura_del_auditor.marcador(): 3388 filas; A 550, B 72, C 5, D 2761
+CIFRA el marcador del disco calza con el que la simulacion predijo: SI
+CIFRA clase del 730 AL SALIR: D
+CIFRA bytes de la razon del 730 AL SALIR: 4196
+CIFRA salida sellada del marcador: docs/loop/SALIDA_MARCADOR_AUDITOR_V212_T1B.json (106 bytes)
+
+VERDE: la correccion del 730 queda DECLARADA, con el texto viejo entero encima.
