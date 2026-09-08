@@ -1,0 +1,215 @@
+==============================================================================
+VUELTA 209, TAREAS 3.b a 3.d: EL COTEJO DE OP-L-02 CONTRA SU VARA SELLADA
+==============================================================================
+
+LA VARA VIENE IMPORTADA DE `_v209_t3_vara.py`, COMMITTEADA ANTES DE ABRIR
+NINGUN DOCUMENTO. Este fichero NO puede cambiarla.
+   CIFRA puntos de la vara: 18
+   CIFRA sellados NO DOCUMENTALES: 5
+
+A) `docs/plan/OPERACIONES.jsonl` AL **ENTRAR** DE ESTA TAREA (3.d)
+   513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   OP-L-02 en la linea 42, estado 'LISTA'
+
+B) LAS MEDICIONES DE ESTA VUELTA, ANTES DE JUZGAR NINGUN PUNTO
+   B.1) EL MARCADOR DEL CRIBADO, RECOMPUTADO DEL ARCHIVO LINEA A LINEA
+      **CIFRA marcador del cribado HOY: 3388 filas, repartidas en A 551, B 72, C 5 y D 2760**
+      el campo del puesto existe en todas las filas (ningun None) y da mas de un valor: SI
+      CIFRA puestos distintos: 3388 | maximo: 3388 | huecos: 0
+      la suma de las cuatro clases da 3388 y las filas son 3388: CUADRA
+      EL SELLO DEL AUDITOR, docs/loop/SALIDA_MARCADOR_AUDITOR_V208.json:
+      filas 3388, A 551, B 72, C 5, D 2760
+      MI RECOMPUTO CALZA CON EL SELLO DEL AUDITOR: SI, AL DIGITO
+
+      **LAS DOS CIFRAS DEL MARCADOR, PUBLICADAS JUNTAS Y CON SU CORTE**
+      (es lo que el encargo manda en el 3.b y lo que el banco 9.21 pide):
+      . **2.117**, corte **2026-08-11**, que es el `fecha_corte` de la
+        ficha, escrito en `verificacion[1]`. TESTIGO Y NO CONDICION.
+      . **3388**, corte **7 sep 2026**, recomputado hoy por mi del archivo.
+      NO SE ARREGLA TOCANDO LA FICHA: el instrumento no fallo, la cifra se
+      quedo vieja, y para eso esta la CORRECCION DECLARADA de
+      `verificacion[3]`, que ya le puso el corte al lado el 4 sep 2026.
+
+   B.2) LAS ARITMETICAS DE LA FICHA, SUMADAS Y NO CREIDAS
+      evidencia[0]: 11 leidos mas 194 pendientes               11 + 194 = 205 contra 205  CUADRA
+      nota: 126 esperan mas 79 no esperan                      126 + 79 = 205 contra 205  CUADRA
+      nota: de los 79, 24 cuelgan mas 55 resto                 24 + 55 = 79 contra 79  CUADRA
+      nota: cuadrantes 8 mas ecuacion 5 mas bloque humano 3    8 + 5 + 3 = 16 contra 16  CUADRA
+      nota: backlog 126 mas 55 mas 5 mas 3                     126 + 55 + 5 + 3 = 189 contra 189  CUADRA
+      adjudicacion: 2 A mas 14 D de la segunda tanda           2 + 14 = 16 contra 16  CUADRA
+      nota: cuadrantes 8 A mas 7 D                             8 + 7 = 15 contra 15  CUADRA
+      nota: ecuacion de valor 6 A mas 4 D                      6 + 4 = 10 contra 10  CUADRA
+      nota: bloque humano 5 A mas 5 D                          5 + 5 = 10 contra 10  CUADRA
+      nota: sales roadmap 1 A mas 4 D                          1 + 4 = 5 contra 5  CUADRA
+      los 205 fuera de cola menos las 16 de la segunda tanda   205 + -16 = 189 contra 189  CUADRA
+      **CIFRA aritmeticas de la ficha comprobadas: 11, de las que cuadran 11 y no cuadran 0**
+
+   B.3) LAS TRES NOMINAS DE `verificacion[0]`, BUSCADAS EN LA PROPIA FICHA
+      El encargo avisa: si de la `adjudicacion` y la `nota` NO salen las
+      tres CON NOMBRE, la ficha no alcanza y eso es PARADA (`AUDITOR.md` 3).
+      cuadrantes de mercado                      nombrada en la nota: SI (literal 'cuadrantes de mercado (8)')
+      ecuacion de valor                          nombrada en la nota: SI (literal 'ecuacion de valor (5)')
+      bloque humano de la supervision de la IA   nombrada en la nota: SI (literal 'el bloque humano de la supervision de la IA (3)')
+      **CIFRA de las tres nominas afectadas que la ficha NOMBRA: 3 de 3**
+      LA FICHA ALCANZA PARA COTEJAR ESTE PUNTO SIN DECIDIR: SI, Y POR TANTO NO HAY PARADA POR ESTE MOTIVO
+
+   B.4) LAS CINCO LECTURAS `LD-66` A `LD-70`, EN SU DOCUMENTO Y CON SU LINEA
+      LD-66 -> docs/plan/LD_SALES_ROADMAP.md:48
+      LD-67 -> docs/plan/LD_SALES_ROADMAP.md:78
+      LD-68 -> docs/plan/LD_SALES_ROADMAP.md:104
+      LD-69 -> docs/plan/LD_SALES_ROADMAP.md:157
+      LD-70 -> docs/plan/LD_SALES_ROADMAP.md:195
+      **CIFRA cabeceras de LD-66 a LD-70 halladas: 5 de 5**
+      **CIFRA reparto de esas cinco, contado de sus cabeceras: 1 A y 4 D**
+      la ficha dice `SALDO: 1 A y 4 D`: CALZA AL DIGITO
+
+   B.5) LAS SEIS NOMINAS DE LA FICHA, DE SU SALIDA SELLADA DE LA 169
+      NOMINA 1 customer_validation_sales_roadmap          escritos 6, vivos 6, colapsados 0, pares 15, cobertura 15 de 15, sin veredicto 0
+      NOMINA 2 clasificacion_mercados_cadena_suministro   escritos 6, vivos 1, colapsados 5, pares 0, cobertura 0 de 0, sin veredicto 0
+      NOMINA 3 alineacion_etica_ia_negocio                escritos 5, vivos 5, colapsados 0, pares 10, cobertura 10 de 10, sin veredicto 0
+      NOMINA 4 construccion_de_valor_percibido            escritos 5, vivos 5, colapsados 0, pares 10, cobertura 10 de 10, sin veredicto 0
+      NOMINA 5 channels_hypothesis_physical               escritos 5, vivos 5, colapsados 0, pares 10, cobertura 10 de 10, sin veredicto 0
+      NOMINA 6 formalizar_junta_asesora                   escritos 4, vivos 2, colapsados 2, pares 1, cobertura 1 de 1, sin veredicto 0
+      **CIFRA nominas halladas en la salida sellada: 6**
+      **CIFRA pares SIN veredicto de ninguna sede, sumando las seis: 0**
+
+      LA DISCREPANCIA QUE ENCUENTRO Y QUE NO RESUELVO COPIANDO
+      (`EJECUTOR.md` 2): la `nota` dice `cuadrantes 15 de 15 con 8 A y
+      7 D`, y la NOMINA 2 de esa misma salida, que es la de los
+      cuadrantes, publica `0 de 0` con 6 miembros escritos, 1 vivo tras
+      resolver y 5 colapsados por alias.
+      **SON LAS DOS CONVENCIONES, Y LA FICHA HABLA EN LITERAL:** el `15`
+      es el numero de pares de SEIS miembros escritos, que es el universo
+      que habia en el `fecha_corte` 2026-08-11; el `0 de 0` es la foto
+      RESUELTA de hoy, despues de que cinco de esos seis se fundieran.
+      **MANDA LA LITERAL, que es la del corte de la ficha** (adjudicacion
+      `6.6` del acta 208), **y la resuelta se publica al lado**. Las dos
+      van escritas y ninguna sustituye a la otra.
+
+   B.6) LA BUSQUEDA NEGATIVA DE LA `nota`, RE-VERIFICADA CONTRA EL GRAFO
+      `EJECUTOR.md` 9: una busqueda negativa no se puede citar, se
+      re-verifica. Se repite el barrido que la nota declara.
+      **CIFRA fichas barridas: 71**
+      CIFRA nodos del acto buscados: 6
+      **CIFRA apariciones en los campos nodos, preservar, eliminar y superviviente: 0**
+      EL CONTROL POSITIVO DEL MISMO BARRIDO, para que el cero no sea el
+      cero de un patron roto: se busca un nodo que SI tiene que estar.
+      **CIFRA fichas cuyo campo `nodos` trae al menos un nodo: 47**
+         ejemplar: OP-F-01 tiene 'seleccion_representante_extranjero' en `nodos`
+
+   B.7) EL ACTO DEL SALES ROADMAP, MEDIDO CON EL RESOLUTOR DELANTE (P.1)
+      **CIFRA miembros escritos: 6 | vivos tras resolver: 6**
+      **CIFRA pares posibles en LITERAL: 15**
+      la ficha dice `6 miembros escritos, 6 vivos tras resolver, 15 pares
+      posibles`: CALZA AL DIGITO
+
+   B.8) LAS RUTAS QUE LA FICHA PROMETE COMO PRUEBA, MEDIDAS UNA A UNA
+      (`EJECUTOR.md` 1: LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+      ACTOS  scripts/vuelta16_generar_actos.mjs                   5158 bytes
+      BDP    docs/plan/BANCO_DEL_PLAN.md                          61554 bytes
+      COB    docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt       5559 bytes
+      CORTE  docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt         5337 bytes
+      INV    docs/plan/INVENTARIO.jsonl                           584554 bytes
+      LD     docs/plan/LECTURAS_DIRIGIDAS.md                      219178 bytes
+      LDSR   docs/plan/LD_SALES_ROADMAP.md                        20563 bytes
+      LOTE   docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt      7945 bytes
+      OPS    docs/plan/OPERACIONES.jsonl                          513043 bytes
+      PUEN   docs/loop/SALIDA_V170_T4B_PUENTES.txt                4564 bytes
+      VER    docs/INTRA_DOMINIO_VEREDICTOS.jsonl                  4054129 bytes
+      **CIFRA rutas de la ficha comprobadas: 11, de las que fallan 0**
+
+   B.9) LAS TRES DEPENDENCIAS, BUSCADAS EN EL PROPIO FICHERO
+      OP-D-01    existe en docs/plan/OPERACIONES.jsonl linea 4 | estado 'LISTA'
+      OP-D-02    existe en docs/plan/OPERACIONES.jsonl linea 5 | estado 'LISTA'
+      OP-D-03    existe en docs/plan/OPERACIONES.jsonl linea 6 | estado 'LISTA'
+      **CIFRA dependencias que NO existen: 0**
+
+   B.10) LOS CUATRO GRUPOS DEL BACKLOG, Y SI CADA UNO LLEVA SU MOTIVO
+      126 esperan destejido    cuenta escrita: SI  | motivo escrito: NO 
+      55 resto sin mesa        cuenta escrita: SI  | motivo escrito: SI 
+      5 de sales roadmap       cuenta escrita: SI  | motivo escrito: SI 
+      3 de la primera tanda    cuenta escrita: SI  | motivo escrito: SI 
+      **CIFRA grupos del backlog: 4, de los que llevan su motivo escrito y no solo su cuenta: 3**
+
+C) EL COTEJO PUNTO POR PUNTO. CADA FILA CON SU CITA DE FICHERO Y LINEA.
+
+   punto veredicto  cita, y por que entra asi
+   --- V.1 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `tipo`, y su criterio de HECHO en `docs/plan/08_VERIFICACION.md:29`
+       por que: el campo dice 'MESA', y la fila 06 MESAS existe en su linea medida
+   --- V.2 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `orden`
+       por que: vale 2, la segunda de las tres mesas
+   --- V.3 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `fecha_corte`
+       por que: vale '2026-08-11', y es contra ese corte contra el que se juzgan sus cifras
+   --- V.4 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `depende_de`, y las tres halladas en ese mismo fichero
+       por que: las 3 dependencias existen; 0 no se encuentran
+   --- V.5 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `evidencia[0]`
+       por que: sus tres cifras cuadran entre si (11 mas 194 da 205) y con la particion de la nota (126 mas 79 da 205); 11 de 11 aritmeticas de la ficha cuadran
+   --- V.6 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campos `verificacion[0]` y `nota`
+       por que: las tres nominas SI se pueden nombrar desde la propia ficha (3 de 3), asi que NO hay parada por texto insuficiente
+   --- V.7 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `verificacion[1]`, con su correccion en `verificacion[3]`
+       por que: la clausula exige que la OPERACION no mueva el marcador, no que valga 2.117 hoy; las dos cifras van publicadas juntas con su corte (2.117 al 2026-08-11 y 3388 al 7 sep 2026)
+   --- V.8 --- A MEDIAS
+       sede: `docs/plan/OPERACIONES.jsonl:42` campos `verificacion[2]`, `nota` y `adjudicacion`
+       por que: 3 de 4 grupos del backlog llevan su motivo escrito y no solo su cuenta
+   --- V.9 --- CUBRE
+       sede: `docs/INTRA_DOMINIO_VEREDICTOS.jsonl:recomputado entero, 3388 filas` y `docs/loop/SALIDA_MARCADOR_AUDITOR_V208.json:1`
+       por que: mi recomputo da 3388 filas con A 551, B 72, C 5 y D 2760, identico a lo que la correccion declarada publica y al sello del auditor
+   --- V.10 --- CUBRE
+       sede: `docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt:9`
+       por que: la ruta existe y no mide cero bytes; de las 11 rutas del corpus fallan 0
+   --- V.11 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `adjudicacion`
+       por que: la decision de la mesa esta escrita, y la `nota` le pone al lado su motivo y su cobertura, que es lo que la fila 06 MESAS exige
+   --- V.12 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `adjudicacion`, cotejado contra el reparto por nomina de la `nota`
+       por que: 2 A mas 14 D dan 16, y las tres nominas leidas (8 mas 5 mas 3) tambien dan 16
+   --- V.13 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `nota`, y las tres nominas en `docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt:45`
+       por que: las tres estan NOMBRADAS y sus tres cuentas suman 16
+   --- V.14 --- CUBRE
+       sede: `docs/plan/LD_SALES_ROADMAP.md:48` a `docs/plan/LD_SALES_ROADMAP.md:195`
+       por que: las 5 cabeceras estan, y su reparto contado de ellas da 1 A y 4 D, que es el `SALDO: 1 A y 4 D` de la ficha
+   --- V.15 --- A MEDIAS
+       sede: `docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt:35`
+       por que: la salida sellada trae las 6 nominas y suma 0 pares SIN veredicto de ninguna sede, o sea que la parte de `cero pares sin veredicto` CUBRE; pero `cobertura COMPLETA` solo se sostiene en la convencion LITERAL, porque la NOMINA 2 publica `0 de 0` con 5 de sus 6 miembros colapsados por alias. Las dos convenciones van publicadas y manda la LITERAL
+   --- V.16 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:42` campo `nota`
+       por que: los cuatro grupos suman 189, y 205 menos las 16 de la segunda tanda tambien dan 189
+   --- V.17 --- CUBRE
+       sede: `scripts/vuelta16_generar_actos.mjs:8` y el resolutor de la casa
+       por que: 6 miembros escritos, 6 vivos tras resolver y 15 pares posibles, recomputado por mi con `mapa_de_alias()` y `resolver()`
+   --- V.18 --- CUBRE
+       sede: `docs/plan/OPERACIONES.jsonl:las 71 fichas barridas`
+       por que: el barrido da 0 apariciones, y su CONTROL POSITIVO da 47 fichas con `nodos` no vacio, asi que el cero no es el cero de un patron roto
+
+D) LAS DOS CUENTAS, SEPARADAS Y JUNTAS, COMO EN LA 208
+
+   LA CUENTA DEL SELLO (lo que la vara sello ANTES de mirar):
+   **CIFRA puntos de la vara: 18, de los que DOCUMENTALES 13 y NO DOCUMENTALES 5**
+
+   LA CUENTA DE LOS VEREDICTOS (lo que el cotejo saca DESPUES de mirar):
+   **CIFRA veredictos emitidos: 18, de los que CUBRE 16, A MEDIAS 2 y NO CUBRE 0**
+   **CIFRA filas del cotejo SIN cita de fichero y linea: 0**
+
+   LA COBERTURA, MEDIDA Y NO NARRADA: **16 de 18 CUBREN**, y su lista
+   NOMINAL de los que NO cubren entero:
+      V.8   A MEDIAS
+      V.15  A MEDIAS
+
+E) `docs/plan/OPERACIONES.jsonl` AL **SALIR** DE ESTA TAREA (3.d)
+   513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   OP-L-02 en la linea 42, estado 'LISTA'
+   **LA SEDE NO SE MOVIO NI UN BYTE Y EL `estado` SIGUE EN 'LISTA': SI**
+   NO SE CIERRA OP-L-02: aqui se mide y se PROPONE, y la adjudicacion es del
+   auditor. La autorizacion del 2.c era SOLO para OP-L-01.
+
+FIN
