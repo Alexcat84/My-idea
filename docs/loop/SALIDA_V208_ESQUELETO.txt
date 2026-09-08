@@ -1,0 +1,65 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 50306 bytes
+   primera linea: # REPORTE DE LA VUELTA 207 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 207
+   coincide con VUELTA menos 1 (207): SI
+
+PASO 0.b. LO QUE MI APERTURA MIDIO SOBRE EL ARCHIVO DEL REPORTE ANTERIOR
+   mi sello dice: CIFRA docs/loop/reportes/REPORTE_V207.md existe al entrar: NO
+   existe AHORA, tras el PASO 0 de archivado: SI
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (207)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 207 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 207.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): bdfbe52555299a6740e8b44d2b2ed7805aeaf2c9
+         |   asunto de ese commit: 2026-09-07 20:05:44 -0400	VUELTA 207, CIERRE: EL REPORTE QUEDA CERRADO CON SUS CUATRO PIEZAS Y LAS DOS TAREAS ENTREGADAS. cerrar_reporte.py --vuelta 2
+         |   vuelta LEIDA de la cabecera del texto: 207
+         |   el destino docs/loop/reportes/REPORTE_V207.md YA EXISTE con contenido IDENTICO (sha256 e0d67989e216)
+         |   VERDE.
+         |      vuelta            207
+         |      commit de origen  bdfbe52555299a6740e8b44d2b2ed7805aeaf2c9
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V207.md
+         |      bytes             50306
+         |      lineas            772
+         |      sha256 (LF)       e0d67989e21687ce7c5c0b8f38b4716fdb63016d940bc17dba6dce64610714de
+      docs/loop/reportes/REPORTE_V207.md -> 50306 bytes, sha256 e0d67989e21687ce
+      vuelta leida de la cabecera del archivo: 207
+      el reporte que se va a pisar -> 50306 bytes, sha256 e0d67989e21687ce
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA (EJECUTOR.md 1):
+   rama: pasada-unica
+   HEAD en el momento del esqueleto: 6877f013b32adab216489110c19120da7531eeb0
+   asunto (primeros 90): VUELTA 208, APERTURA SELLADA ANTES DE LA PRIMERA OPERACION. El sello lo escribe scripts/lo
+
+LO QUE anexar_tarea_al_reporte.py EXIGE, COMPROBADO SOBRE LO ESCRITO:
+   marca <!-- TABLA DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
+   marca <!-- FIN TABLA DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
+   marca <!-- ANEXO DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
+   marca <!-- FIN ANEXO DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
+   fila de la TAREA 1    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   fila de la TAREA 2    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   fila de la TAREA 3    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   el literal del vacio esta dentro del bloque del anexo: SI
+
+LAS MARCAS QUE cerrar_reporte.py EXIGE EN UN REPORTE SIN CERRAR:
+   '**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**'   -> SI (se esperaba SI)
+   'PENDIENTE DE TALLAR AL CIERRE'                          -> SI (se esperaba SI)
+   '<!-- CABECERA TALLADA -->'                              -> SI (se esperaba SI)
+   '<!-- FIN CABECERA TALLADA -->'                          -> SI (se esperaba SI)
+   '\n## 3.'                                                -> NO (se esperaba NO)
+   '\n## 9.'                                                -> NO (se esperaba NO)
+
+CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+CIFRA comprobaciones que fallan: 0
+ESCRITO docs/loop/REPORTE.md -> 5207 bytes, 71 lineas
+RELECTURA DEL DISCO: identico a lo juzgado: SI
+VERDE: el esqueleto queda tallado.
