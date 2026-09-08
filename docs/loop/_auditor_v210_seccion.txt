@@ -1,0 +1,409 @@
+# ACTA DEL AUDITOR, VUELTA 210 (8 sep 2026, auditor Opus 5)
+# Cubre LA VUELTA 210 ENTERA. Prefijo de mis ficheros: `_auditor_v210_*`.
+
+**NO HAY HUECO DE ACTA:** la ultima escrita es la de la **209** (linea **73526** de
+este fichero) y cubre la vuelta inmediatamente anterior a esta.
+
+## 0. NO ABRO CON TAREA BLOQUEANTE, Y LO MIDO EN VEZ DE ALEGARLO
+
+La familia `C.1` que llego a NUEVE se corto en la 209 y **no vuelve hoy**. Mi sello
+`docs/loop/SELLO_APERTURA_AUDITOR_V210.json` (**646** bytes) publica
+`prohibidos_antes_del_sello: []` y `bitacora_antes_del_sello: []`. Mi primer comando
+del turno fue `cat docs/loop/AUDITOR.md`, que la afinacion `6.1` del acta 208 declara
+que NO cuenta. `git log` y `git status` los corri **por el carril del modulo**, y
+`REPORTE.md` no lo abri hasta declarar mis clases.
+
+**LO QUE ENCONTRE ANTES DE PODER SELLAR, Y LO DIGO PORQUE ES UN ACTO MIO:** el fichero
+del turno traia un **turno vivo ajeno** con `veredictos` y **cuatro** toques de
+`REPORTE.md`, y `puede_sellar()` decia **NO**. No borre nada: lo **cerre** con
+`--cerrar-turno --vuelta 209-cola`, que es el carril con precedente en el propio
+fichero (`206` y `207-cola`), y la bitacora ajena **queda dentro del fichero** como
+constancia. Solo entonces sello, con la bitacora limpia.
+
+## 1. EL VEREDICTO EN UNA LINEA
+
+**LA VUELTA 210 ENTREGO SU UNICA TAREA ENTERA Y TODA CIFRA QUE PUBLICA REPRODUCE AL
+DIGITO CON MIS COMANDOS, SALVO UNA: ATRIBUYE AL ACTA 205 UNA CUENTA QUE VIVE EN EL
+ACTA 206 Y QUE NACIO PRECISAMENTE DE CORREGIR AL 205. LOS ONCE TRAMOS ESTAN SELLADOS
+POR ESTA VUELTA, LEIDO DE GIT POR MI. ADJUDICO SUS TRES DISCUTIBLES, SUS DOS PREGUNTAS
+Y SU PENDIENTE DE DOCTRINA SIN DOCTRINA NUEVA. MI CIEGA SALIO 72 DE 80. NO SE CUMPLE
+NINGUNA CONDICION DE PARADA.**
+
+## 2. LO QUE MEDI YO, CON MIS COMANDOS Y EN ESTA VUELTA
+
+**EL MARCADOR, RECOMPUTADO DEL ARCHIVO Y SELLADO POR `AP.marcador()`:** **3388 filas;
+A 551, B 72, C 5, D 2760**, en `docs/loop/SALIDA_MARCADOR_AUDITOR_V210.json` (**102**
+bytes). **Identico al de la 209 y al de la 208.**
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` mide **4054129** bytes por las dos convenciones
+con `sha256` **`0a77b5a35a962621`** por las dos, y **su ultimo commit es de la vuelta
+187**: esta vuelta no lo toco, medido y no supuesto.
+
+**EL CICLO ENTERO DE GATE 0, CORRIDO POR MI** con `scripts/loop/_auditor_v210_ciclo.py`,
+que **IMPORTA** `_v205_ciclo_gate0.py` y solo le cambia donde escribe (acta 206 `6.5`).
+Salida en `docs/loop/SALIDA_V210_CICLO_AUDITOR.txt` (**1149** bytes). **8 de 8 en
+EXITCODE 0**, peor de los ocho **0**. Censo **3853 / 3169 / 684**. Gate 0 **OK**:
+enlaces rotos 0, auto-aristas **0**, duplicadas de titulo **0**, divergentes **0**,
+componentes **1**, cobertura **100,0**. Aristas **8780 / 8740 / 17520 / 9914**, auto
+**0**, listas con duplicada **0**. Motor **25/25**. Web **82 passed (82)** y **1040
+passed (1040)**. `tsc` **EXIT 0**. Desfase del calibrado **4** filas, las mismas
+cuatro. `git diff HEAD --numstat` en **0** filas despues de correr yo el ciclo.
+
+**LA CABECERA, COTEJADA CONTRA SU TALLADOR POR MI:** `tallar_cabecera_reporte.py
+--fase04 --vuelta 210 --comparar docs/loop/REPORTE.md` da **9** cotejadas, **0
+DISTINTAS**, **0 ausentes**, **CABECERA IDENTICA AL TALLADOR**.
+
+**EL REPORTE, MEDIDO POR MI:** **125916** bytes en disco y **125916** normalizado a LF,
+`sha256` **`560000188c8c4210`** por las dos convenciones. **1952** lineas por `wc -l` y
+**1953** por `len(split)`. **0** guiones largos y **0** guiones medios. **31** rutas
+distintas citadas, **0** de cero bytes y **1** inexistente
+(`docs/loop/reportes/REPORTE_V210.md`), que **NO es caida de ruta**: el reporte no la
+promete como prueba, la nombra como el fichero que escribio por error y **retiro con
+`git rm`**, declarado en su `C.3` y en el commit `cb5a201a`.
+
+**LAS SIETE GUARDAS DE `cerrar_reporte.py`, CORRIDAS POR MI IMPORTANDO EL FICHERO** y
+con los mismos argumentos que su `main()`: `piezas_que_faltan` **[]**,
+`cifras_sin_pareja` **0**, `convenciones_que_no_calzan` **[]**,
+`citas_de_arnes_que_no_calzan` **0**, `secciones_fuera_de_orden` **[]**,
+`numerales_del_veredicto_que_no_calzan` **[]** (1 numeral hallado, cuentas del cuerpo
+`caidas 3, tareas 1`), y `rama_de_la_seccion9` **CORRIDA**. Y el hueco `7.1` del acta
+209 **queda cerrado**: `docs/loop/SALIDA_V210_CERRAR_REPORTE.txt` existe y mide
+**6400** bytes.
+
+**LA BATERIA, RECONTADA POR MI DE LOS ONCE FICHEROS SELLADOS Y NO DE `--componer`:**
+nomina **135**, recomputada importando su fuente; tamano de tramo **13**; tramos del
+reparto **11**. Los once ficheros existen, **ninguno mide cero bytes** (de **6273** a
+**9544** bytes, de **94** a **129** lineas) y **11 de 11 llevan commit que nombra la
+VUELTA 210**, leido por mi con `git log` sobre cada ruta. `OK` **126**, `CASO
+DECLARADO` **2**, `NO MORDIO` **7**, **suma 135**. `ANCLA PERDIDA` **0**, `NO
+REPRODUCIBLE` **0**, `RUIDO DE CONCURRENCIA` **0** en los once. Minutos sumados
+**23.4**. Tramos con exitcode distinto de 1: **0**. Cobertura recomputada por mi con
+`entradas_de_la_salida()`: **135** entradas, **135 distintas**, **0 sin correr, 0
+ajenas, 0 repetidas**. Y `tramos_por_vuelta(183)` **corrido por mi** devuelve los once
+tramos con vuelta **210**: **esa evidencia sale de git y no se puede teclear.**
+
+**LA MORATORIA, RECONTADA POR MI EN LOS DOS CORTES:** entre `e3d33e42` y `cb5a201a`
+(el corte que la glosa nombra) **10 anadidos a `scripts/loop/`, 10 con prefijo `_v210_`
+y 0 sin el**; y entre `e3d33e42` y el HEAD final `6bfbf976`, **11 y 11 y 0**. **El
+lanzador `vuelta183_bateria_por_tramos.py` no se toco:** su ultimo commit es de la
+**vuelta 184**, medido por mi. La nomina sigue **CONGELADA EN 135**.
+
+**LA VARA DEL TRABAJO PENDIENTE, CORRIDA POR MI EN ESTA VUELTA** con
+`vuelta150_3_relectura_expediente.py --corte HEAD`, que es el instrumento y nunca el
+campo `estado`: **3 fichas de trabajo real**, de las que **2 son mesas cuyo producto
+documental existe** (`OP-L-02` y `OP-L-03`, cerradas por acta) y **1 no**: **`OP-I-01`**.
+
+## 3. LA RELECTURA CIEGA: 72 DE 80, Y LA MEJOR EN OCHO ACTAS
+
+Sujeto sellado **antes de mi primer comando de verificacion**, sello
+`SELLO_APERTURA_AUDITOR_V210.json` (**646** bytes) con `prohibidos tocados antes del
+sello: 0`. Ciega `_auditor_v210_ciega_blind.txt` (**107095** bytes, `sha256`
+`21eead9cf8c9262e`), destape `_auditor_v210_ciega_reveal.txt` (**80239** bytes,
+`sha256` `21cd824f3ec3d9ea`). Clases en `_auditor_v210_mis_clases.txt` (**8321**
+bytes), declaradas por el carril del sello de disco en **VERDE, 0 destapes
+apuntados**, y **antes** del destape y **antes** de abrir `REPORTE.md`.
+
+**LA CIEGA VA A 80 Y NO A 40 PORQUE EL ACTA 209 ASUMIO ESA DEUDA EN SU `6.1`.** La
+vara de las cuatro salidas la escribi del canon (`9.6.1`, `9.6.2` y `9.22`) y **no del
+acta anterior**, para no heredar su lectura.
+
+**LA CONTAMINACION LA DECLARE ANTES DE CONTAR, Y NO ME SIRVIO.** El acta 209 nombra
+los puestos con que calibro su `B` (62, 158, 168, **170**, 172 y 180) y yo lei esa
+frase **antes de sellar**, porque `AUDITOR.md` 1 manda leer el acta anterior. La
+semilla 210 me trajo el **170** dentro. Lo declare excluido en mi fichero de clases
+**antes del destape**, y **aun asi lo falle**: puse `D` donde el archivo dice `B`.
+**Publico las dos cifras y me quedo con la peor: 72 de 80.** La exclusion que declare
+por adelantado daria **72 de 79**, y **no la tomo**, porque tomarla ahora que se que
+la pista no me ayudo seria quedarme con mi propio beneficio con el resultado ya en la
+mano.
+
+**REPARTO DEL ARCHIVO EN EL SUJETO: A 12, B 1, C 0, D 67. EL MIO: A 14, B 1, C 0,
+D 65.**
+
+**MIS OCHO DISCREPANCIAS, Y LAS OCHO SON MIAS: CERO VEREDICTOS DEL ARCHIVO SE CAEN.**
+Lei las ocho razones y en las ocho el archivo se sostiene.
+
+| puesto | yo | archivo | de que especie es mi fallo |
+|---:|---|---|---|
+| **2228** | A | D | **`A` DE MAS.** Dos escuelas, Dekker y Reason, que critican lo mismo sin decir lo mismo: una trae dos blindajes institucionales y la otra ACOTA el modelo de persona en vez de abolirlo. Lei rama sustantiva como linea |
+| **2448** | A | D | **`A` DE MAS.** Uno trae la CURVA DE APRENDIZAJE como instrumento de parada; el otro separa el caso del que ya aprendio y aun asi no rinde. Dos ramas distintas, no una apostilla |
+| **2505** | A | D | **`A` DE MAS.** Quien se sienta contra que produce el consejo: composicion y carta constitutiva de un lado, vision y metas en el plan del otro. Y el archivo levanta ademas una figura nueva que yo no vi |
+| **2580** | A | D | **`A` DE MAS.** Crosby contra Juran: el costo como ESCALON DE MADUREZ contra el COPQ categorizado, comparado con la industria y pareteado. Tercer par de su familia tras el 2459 y el 2490, los dos `D` |
+| **2253** | D | A | **`A` PERDIDA.** Sus cuatro pasos son **cuatro verbos sin contenido**: ni un test, ni un criterio, ni un instrumento. Le acredite mitad propia a un nodo que cabe en una linea |
+| **2387** | D | A | **`A` PERDIDA.** Sus pasos 1 y 3 caben en los pasos 1 y 2 del otro y le queda **una linea**. Ademas el archivo lo cuenta: con este, ese nodo cae en `A` por DECIMA vez |
+| **1357** | B | D | **`B` DE MAS**, y sobre evidencia que mi ciega no lleva: el archivo lee **NUEVE** pasos en dos bloques y la ciega me paso **CINCO** |
+| **170** | D | B | **`B` PERDIDA**, y es el puesto contaminado. El archivo lo llama DUDOSO: *el objeto difiere, la narracion no* |
+
+**MI SUJETO TRAE 10 PARES CON `DISCUTIBLE MARCADO`** (2627, 2679, 2686, 2688, 2764,
+2779, 2788, 2877, 2825 y 2978), medido sobre el destape, **y ACERTE LOS DIEZ. LAS
+OCHO DISCREPANCIAS CAEN FUERA DEL MARCADO.**
+
+**LA REGLA DEL CREDITO, ADJUDICADA EN LA `6.1`, Y LA DEUDA DE LECTURA TAMBIEN:** no
+doblo otra vez. Va entero abajo.
+
+**METRICA DE CREDITO ACUMULADA:** relecturas **23**, puestos **395**, caidas **24**,
+de ellas **6 dentro del marcado** y **18 fuera**.
+
+## 4. LA CAIDA DEL EJECUTOR: UNA, DE REPORTE, Y NO ACUMULA
+
+**`4.1` (`E.1`). ATRIBUYE AL ACTA 205 UNA CUENTA QUE VIVE EN EL ACTA 206, Y QUE NACIO
+DE CORREGIR AL 205.** Su seccion `1.f` escribe: *"CONTRASTE CON EL ACTA 205 (...)
+Aquel acta nombra 5 entradas que no mordieron; yo mido 7"*, y le atribuye a ese acta el
+`exit 3221225794` de `vuelta160_tarea6b_mutacion_puerta.py`.
+
+**MEDIDO POR MI SOBRE `ACTA_AUDITOR.md`, CON SUS LINEAS:**
+
+| que | donde vive de verdad | linea |
+|---|---|---:|
+| el acta 205 entera | de la **72024** a la **72281** | |
+| *"la bateria NO PUEDE SALIR VERDE mientras la moratoria viva"* | acta **205**, `5.3` | **72187** |
+| **las CINCO que no mordieron, con el `exit 3221225794`** | acta **206**, `5` | **72454** |
+| menciones de `NO MORDIO` dentro del acta 205 | **NINGUNA** | |
+
+**El acta 205 no nombra ni una entrada que no mordiera: afirma que los once tramos
+caen por LA MISMA CAUSA UNICA.** El acta 206 midio los once, encontro las cinco y
+declaro falsa aquella palabra con estas: *"El acta 205 leyo la linea `CIFRA de FALLO`
+de un tramo y la dio por identica en los once sin contar los once"*. **Acreditarle al
+205 la cuenta que lo corrige invierte quien midio que.** La otra cita del reporte al
+205 (la de la bateria roja) **si es suya**, y lo digo para no acusar de mas.
+
+**LO QUE NO ES:** la sustancia del contraste **es correcta y la verifique**. De las
+cinco del 206 y las siete de hoy, **coinciden dos** (`vuelta165_tarea6_mutacion_op_l_01.py`
+y `vuelta185_tarea1c_mutacion_bateria_continuada.py`), **una coincide en el nombre y no
+en la cifra** (`vuelta160_tarea6b_mutacion_puerta.py`, `exit 3221225794` alli y `exit 1`
+hoy), y las otras dos del 206 (`vuelta163_tarea4b_mutacion_re_sellado.py` y
+`vuelta166_tarea6_mutacion_guarda.py`) **no estan en las siete**. **Todo eso calza al
+digito. Lo unico falso es el numero del acta.**
+
+**NO ACUMULA** (`AUDITOR.md` 4, letra afinada del 27 ago 2026): vive en **prosa de
+acompanamiento**, no en tabla, ni en cabecera, ni en conclusion; el veredicto de una
+linea no lleva ninguna de las dos cifras. **Es la misma sede y la misma familia que la
+`4.1` del acta 208 y la `4.1` del acta 209, y le aplico la misma letra en vez de
+inventarle una mas dura para lo mismo.** Dispara la relectura al doble de su tramo, y
+ese tramo es la seccion `1.f`, que relei entera y de la que sale la verificacion de
+arriba.
+
+**PERO TRES ACTAS SEGUIDAS CON LA MISMA FAMILIA NO SE DEJAN PASAR EN SILENCIO, AUNQUE
+NINGUNA ACUMULE.** La familia es *la cita nombra una fuente o un corte que no es el
+que produjo la cifra*: acta 208 `4.1`, acta 209 `4.1` y esta. **La mitad del CORTE ya
+esta remediada en codigo y lo comprobe funcionando**: `moratoria()` de
+`_v210_cierre.py` devuelve cifra y `HEAD` en la misma tupla, y la glosa de esta vuelta
+nombra el corte que midio. **La mitad de la FUENTE sigue abierta**, y su remedio no
+cuesta codigo ni roza la moratoria: va como obligacion de dictado en la `6.6` y en el
+encargo.
+
+**RACHA DE CIFRA PUBLICADA: 0. RACHA DE REPORTE QUE ACUMULA: 0.** **No hay escalada
+que encargar.**
+
+**LO QUE HIZO BIEN Y SE DICE:** sus **tres** caidas propias estan declaradas con
+nombre, y la `C.3` **entro al reporte por una correccion posterior** en vez de quedarse
+en el mensaje de un commit (`4349b303`); **declaro el `D.3` ANTES de pasar por el
+carril cuya guarda esta apagada**, que es la unica forma honesta de pasar por el; **no
+uso `--siguiente` para saber que faltaba**, que era la trampa que mi `7.3` de la 209 le
+dejo nombrada, y publico su **0** como la cifra falsa que es; y **cerro y sello su
+propio reporte**, que era el hueco `7.1` de la 209.
+
+## 5. LA UNICA TAREA, MEDIDA POR MI CONTRA SU PROPIO CRITERIO DE HECHO
+
+El criterio lo fija `AUDITOR.md` 6.1: **la bateria se declara corrida cuando los NUEVE
+tramos tienen salida sellada DEL MISMO CALIBRE**, y mi `7.3` de la 209 recomputo que
+sobre la nomina de hoy **son ONCE y no nueve**.
+
+**LO CUMPLE, Y LO MIDO ENTERO.** Once ficheros, **cero de cero bytes**, **11 de 11
+sellados por commit de la VUELTA 210** leido de git, **135 entradas exactamente una
+vez** y **dos corridas cada una** con `NO REPRODUCIBLE` en **0**, `--componer` verde y
+la bateria **sola**, sin trabajo de plan al lado (`docs/plan/` en **0** filas de
+`numstat`). **El calibre es el mismo**: diez tramos de **13** entradas y el ultimo de
+**5**, con lineas entre **123** y **129** y el ultimo en **94**, que es la proporcion
+de su bocado y no otra hondura.
+
+## 6. LAS ADJUDICACIONES
+
+**`6.1` LA REGLA DEL CREDITO NO SE ROMPE, Y LA DEUDA DE LECTURA NO SE DOBLA OTRA VEZ.**
+Dos citas y ninguna invencion. La **RAIZ** de `AUDITOR.md` 1.2 (7 sep 2026): *"una
+discrepancia que aparece en un tramo SIN MARCADO NO ROMPE EL CREDITO DE TANDA (...) la
+regla mide si el ejecutor acerto al MARCAR sus discutibles"*. Y la `6.1` del acta 209:
+cuando el sujeto es una muestra del archivo entero, la regla mide **el marcado del
+cribado que produjo esos veredictos**, no la vuelta auditada. **La vuelta 210 no cribo
+ni un par**, y en el marcado que si existe **acerte los diez de diez**. El credito
+queda **intacto**.
+**Y LA DEUDA NO SE DOBLA:** el **CINTURON** de `AUDITOR.md` 1.2 dice para que existe su
+techo: *"una serie que dobla sin techo deja de ser un remedio y pasa a ser una
+condena"*. Mi ciega ya ES la doblada (80), la lectura **mejoro de 31 de 40 a 72 de 80**
+y el credito no esta roto. **Doblar a 160 sobre una serie que sube seria aplicar el
+remedio al reves.** La ciega de la 211 vuelve a **40**.
+
+**`6.2` EL `D.1` Y LA `P.2` SE CONTESTAN JUNTOS, Y LA LETRA YA ESTABA ESCRITA: EL
+RUIDO DE OTRA CORRIDA DE LA MISMA BATERIA SE RE CORRE; CUALQUIER OTRO RUIDO SE
+DECLARA.** No hace falta doctrina nueva. `AUDITOR.md` 6.1 exige que la bateria corra
+**SOLA**, en *"una VUELTA DE BATERIA propia que no lleva nada mas"*. Cuando el ruido lo
+produce **otra corrida de la misma bateria**, esa condicion **no se cumplio**, y
+declararla no la cumple: solo la documenta. El instrumento tiene razon en que el ruido
+*"no es rojo de nadie"*, y eso sigue valiendo para el ruido AJENO. **El ejecutor
+eligio bien**, y su `D.1` esta bien marcado: dudar de la severidad que uno mismo se
+impone es exactamente lo que se marca.
+
+**`6.3` EL `D.2` Y LA `P.1` SE CONTESTAN JUNTOS: UN `NO MORDIO` CAZADO Y NOMBRADO NO
+ES UNA CAIDA DE DATO, Y NO ABRE LA EXCEPCION DE LA MORATORIA.** La regla de
+`AUDITOR.md` 4 castiga **LA GUARDA QUE SE PUBLICA COMO MORDIENDO Y NO MUERDE**, y su
+motivo esta escrito: *"un letrero que afirma una comprobacion que no ocurrio"*. **Lo
+que hace caida es la PUBLICACION, no la existencia.** Esta vuelta hizo lo contrario:
+las conto, las nombro una a una con su tramo y **publico que no muerden**. Ese es el
+trabajo de la bateria, no su fallo. Precedente en la misma sede: el acta 206 nombro
+cinco y **las mando a la integral sin llamarlas caida de dato**.
+**LA MITAD QUE SI ATA, Y SALE DE LA MISMA REGLA POR EXTENSION CITABLE:** *ninguna
+vuelta puede CITAR un arnes de la lista `NO MORDIO` como prueba de que algo esta
+vigilado.* Nombrarlo apagado es honesto; apoyarse en el es el letrero que la regla
+prohibe. **Las siete suben a la integral por nombre**, y son
+`vuelta160_tarea6b_mutacion_puerta.py`, `vuelta165_tarea6_mutacion_op_l_01.py`,
+`vuelta166_tarea2_mutacion_correccion.py`, `vuelta168_tarea1_mutacion_nota.py`,
+`vuelta168_tarea2_mutacion_reconstructor.py`, `vuelta171_mutacion_busqueda_acta.py` y
+`vuelta185_tarea1c_mutacion_bateria_continuada.py`.
+
+**`6.4` EL `D.3` QUEDA ADMITIDO Y SU DEFENSA ES CIERTA, PORQUE LA COMPROBE YO.** Cerro
+por el carril de la bateria continuada de `rama_de_la_seccion9()` sabiendo que su arnes
+sale `NO MORDIO`. **Corri `tramos_por_vuelta(183)` por mi cuenta y devuelve los once
+tramos con vuelta 210, leido del asunto de sus commits.** O sea: **el carril lo abre
+evidencia de git, no el arnes apagado**, y esa evidencia no se puede teclear. Por mi
+propia `6.3`, citar el arnes habria sido la caida; **citar el git no lo es**. Marcarlo
+igual fue correcto.
+
+**`6.5` LA `PD.1` SE ADJUDICA POR EXTENSION Y NO ES PARADA: UN LOG DE CERO BYTES NO
+DICE NADA DEL PROCESO.** Dos citas. El **RECUADRO 0** de `AUDITOR.md`: *"Contar bien un
+campo y sacar la conclusion equivocada sigue siendo una caida: la fuente hay que
+elegirla antes de contarla"*. Y el banco `9.18.1`, **EL REMEDIO ESPEJO**: *un control
+que caza una averia deja libre a su gemela*. La letra vigente (*"una salida sellada de
+cero bytes no cuenta como hecha"*) mira **el producto**; su gemela mira **el proceso**,
+y nadie la habia escrito. **LA LETRA:** *un log de cero bytes no prueba que el proceso
+murio; antes de relanzar nada se pregunta POR EL PROCESO, no por su log.* **No cuesta
+codigo** y es el remedio que el propio ejecutor uso.
+
+**`6.6` LA FAMILIA DE LA CITA MAL ATRIBUIDA GANA SU REMEDIO DE DICTADO, Y NO ES
+MAQUINARIA.** Tres actas seguidas (208, 209 y 210) con una cita que nombra una fuente o
+un corte que no produjo la cifra. La mitad del corte ya es codigo y funciona. **LA
+MITAD DE LA FUENTE SE CIERRA CON UNA OBLIGACION DE ESCRITURA:** *toda cita de un acta
+anterior lleva LA LINEA de `docs/loop/ACTA_AUDITOR.md` donde vive el texto citado, y la
+linea se LEE, no se recuerda.* Rige para el ejecutor y **para mi**, y en esta acta la
+cumplo: las lineas 72024, 72187, 72281 y 72454 estan medidas por mi en la seccion 4.
+**No roza `AUDITOR.md` 6.3**, porque no fabrica ningun arnes, guarda ni lector.
+
+**`6.7` EL TOPE DE SUB-TAREAS PODRIA VOLVER A CINCO Y AUN ASI ENCARGO DOS.** El
+disparador del regimen `6.2` es *"hasta que DOS VUELTAS SEGUIDAS CIERREN SU PROPIO
+REPORTE con `cerrar_reporte.py`"*. La **209** lo corrio (su acta lo midio: las cuatro
+piezas puestas y la seccion 9 con la forma exacta de `rama_de_la_seccion9()`) y la
+**210** lo corrio **y sello su salida**, `SALIDA_V210_CERRAR_REPORTE.txt`, **6400**
+bytes. **El disparador nombra el acto, no su sello: se cumple.** Aun asi el encargo de
+la 211 lleva **DOS** tareas y no cinco, porque el trabajo que queda cabe en dos y
+**una adjudicacion favorable no es motivo para engordar un encargo.**
+
+## 7. LOS HALLAZGOS
+
+**`7.1` LA RAZON DEL PUESTO 1357 DESCRIBE UN NODO DE NUEVE PASOS QUE HOY TIENE CINCO, Y
+LOS OTROS CUATRO VIVEN EN UN NODO APARTE.** Lo levante desde mi propia ciega y lo medi
+contra el grafo. La razon llama a `posicionamiento_de_empresa` **COSTURA CONFIRMADA de
+NUEVE pasos con dos bloques visibles** y cita literalmente su segundo bloque (la
+historia completa de la empresa; que empleados, inversionistas, prensa y clientes
+puedan contarla; las quejas recurrentes). **En `dataset/metadata/master_graph.json` hoy
+ese nodo tiene CINCO `pasos_accionables`, los cinco de Blank**, y **los cuatro del
+segundo bloque son los cuatro pasos de `la_historia_de_la_empresa`, de Horowitz**.
+Cinco mas cuatro dan nueve.
+**EL VEREDICTO NO SE MUEVE, Y LO DICE SU PROPIA RAZON:** *"El solape de este par cae en
+el primer bloque y el veredicto es INVARIANTE"*. **La clausula estaba puesta de
+antemano y aguanta**: mi `B` cae y su `D` se sostiene.
+**LO QUE NO PUEDO RESOLVER SIN SALIRME DE MI CARRIL, Y POR ESO LO ENCARGO MEDIDO Y NO
+ARREGLADO:** el nodo es uno de los **13 injertos del grupo HOROWITZ** de una operacion
+`DECISION_DE_FUENTE` que sigue en `LISTA`, y `02_DESTEJIDOS.md` **no lo nombra**.
+**Que el grafo ya este partido y su operacion siga sin destino es una pregunta de
+datos, no de maquinaria**, y va a la 211 como medicion.
+
+**`7.2` LA GUARDA DE LAS DOS CONVENCIONES SIGUE CON POCO SUJETO, Y AHORA LO MIDO YO EN
+TRES REPORTES.** Corrida por mi con `cobertura_de_parejas()` importada: sobre el
+reporte de la **210** ve **4** parejas atribuidas, **4** lineas con bytes y **0**
+descartes; el acta 209 midio **1** sobre el suyo y **38** sobre el de la 208. **Sube de
+1 a 4 y sigue lejisimos de 38.** La causa es la misma que nombro la 209 y la confirmo:
+este reporte escribe casi todos sus bytes **dentro de tablas y de cercas**, donde el
+patron no mira. **Las cifras son ciertas, las remedi todas al digito.** Es la especie
+de la guarda que se publica como mordiendo. **Va a la integral y no la toco**, que es
+moratoria. **Es su segunda acta seguida.**
+
+**`7.3` EL `--siguiente` SIGUE MINTIENDO Y ESTA VEZ NO ENGANO A NADIE.** Mi `7.3` de la
+209 midio que el lanzador clava `V183` en el nombre de toda salida y que su
+`--siguiente` publicaria **0 tramos que faltan** sobre trabajo sin hacer. **Paso
+exactamente eso** (`SALIDA_V210_T1B_SIGUIENTE_ANTES.txt` dice **0**), **y el encargo
+llevaba la trampa declarada, asi que el ejecutor la publico como falsa y corrio los
+once desde el 1.** Lo escribo porque es la prueba de que **una trampa nombrada en el
+encargo cuesta cero codigo y funciona**: sigue en la integral, y sigue sin tocarse.
+
+## 8. LO QUE SUBE AL FUNDADOR, SIN PARADA Y SIN DECIDIRLO YO
+
+1. **`docs/plan/OPERACIONES.jsonl` VA A CAMBIAR EN LA 211**, en dos campos `estado`
+   (`OP-L-02` y `OP-L-03`), por adjudicacion de las `6.4` y `6.5` del acta 209. Es una
+   sede de `docs/plan/`. **Lo aviso porque el plan es tuyo**, y el carril ya se probo
+   con `OP-L-01`.
+2. **DE LAS CUATRO FICHAS REALES DE LA MORATORIA QUEDA UNA, Y LO MIDO CON LA VARA:**
+   `vuelta150_3_relectura_expediente.py` da **3** de trabajo real, **2** con su
+   documento en disco (las dos mesas ya cerradas por acta) y **1 sin el**: **`OP-I-01`**.
+   **El plan se esta agotando, que es lo que la moratoria del 7 sep pedia.**
+3. **LA COLA DE LA AUDITORIA INTEGRAL, HOY EN VEINTIUNA ENTRADAS NOMBRADAS:** las trece
+   del acta 209, mas **las SIETE guardas que no muerden** (`6.3` de esta, cada una por
+   su nombre) y **el nodo `posicionamiento_de_empresa` con su injerto Horowitz** (`7.1`
+   de esta). **Todas declaradas, ninguna arreglada:** la moratoria lo prohibe y ninguna
+   regla ordena tocarlas hoy.
+4. **UNA GUARDA QUE LLEVA DOS ACTAS BAJANDO DE COBERTURA** (`7.2`), y la digo aparte
+   porque es la unica de la cola que **empeora sola**.
+
+## 9. MIS CAIDAS PROPIAS
+
+**`9.1` (`C.1`). FALLE 8 DE 80 Y LAS SEIS PRINCIPALES SON LA MISMA EQUIVOCACION MEDIDA
+AL DERECHO Y AL REVES.** Va entera en la `3`. **La especie, que es lo unico util de
+declarar:** pese **cuantos** pasos distintos tenia cada nodo en vez de preguntar si lo
+distinto era **LINEA o PROCEDIMIENTO**. En las cuatro `A` de mas trate como apostilla
+una **rama sustantiva** (la curva de aprendizaje, la carta constitutiva, el escalon de
+madurez, el acotamiento del modelo de persona); en las dos `A` perdidas hice lo
+contrario y le acredite **mitad propia a cuatro verbos sin contenido**. Es una sola
+raiz con dos caras.
+**Y LA DIGO CONTRA MI AUNQUE LA LETRA NO ME OBLIGUE:** el acta 209 fallo **cuatro `A`
+de mas** y yo fallo **cuatro**. Su especie escrita era otra (parafrasis como
+contencion) y por eso empezaba en uno, pero **el genero `A` DE MAS lleva DOS actas
+seguidas**, y prefiero escribir el remedio ahora que esperar a que la regla de los
+dientes me obligue en la tercera. **MI REMEDIO, PARA EL AUDITOR DE LA 211 Y PARA MI:**
+*antes de poner `A`, escribe QUE le queda a cada nodo cuando le quitas lo que el otro
+dice, y clasificalo como LINEA o PROCEDIMIENTO con la vara del informe 67.6. Si una de
+las dos sobras obliga a varias decisiones dentro de si, NO es `A`. Y si una sobra no
+nombra ni un test, ni un criterio, ni un instrumento, NO es mitad propia.*
+**REGISTRA.**
+
+**`9.2` (`C.2`). CORRI TRES GUARDAS DE `cerrar_reporte.py` CON LOS ARGUMENTOS
+EQUIVOCADOS Y ME DIERON TRES ROJOS FALSOS.** Le pase el reporte entero donde `main()`
+pasa **solo el veredicto**, y una extraccion mia de la cabecera donde pasa **las filas
+de tabla del tallador**. Salieron *"el fichero del tallador no trae ninguna fila"* y
+ocho numerales que no calzaban. **Ninguno era cierto:** con los argumentos que `main()`
+usa, las tres dan **[]**, **[]** y **1 numeral hallado, 0 que no calcen**. **Los cace
+antes de publicarlos y por eso no hay acusacion falsa en esta acta**, pero es
+exactamente la especie del recuadro 0 (*la fuente hay que elegirla antes de contarla*)
+y **casi le cuelgo al ejecutor dos caidas que eran mias**. **REGISTRA.**
+
+**`9.3` (`C.3`). SE ME CAYO UN HEREDOC Y ESCRIBI MI FICHERO DE CLASES CON LA
+HERRAMIENTA DE FICHERO.** Ni movio datos ni dejo nada a medias, y el fichero salio
+entero y antes del destape. **Es la misma que la `C.3` del auditor de la 209**, o sea
+**dos actas seguidas**, y por eso la dejo escrita para la 211: *en este shell, el
+heredoc con comillas simples se cae; para un fichero largo se usa `python - <<PYEOF` o
+la herramienta de fichero, y se dice cual.* **REGISTRA.**
+
+## 10. CIERRE
+
+**LA VUELTA 210 CIERRA.** Reporte **125916** y **125916**, `sha256` `560000188c8c4210`
+por las dos convenciones, con sus cuatro piezas, **0 cifras sin pareja** y **0
+convenciones que no calzan**, las siete guardas corridas por mi. Gate 0 **8 de 8 en
+EXITCODE 0** corrido por mi. Marcador **3388 filas; A 551, B 72, C 5, D 2760**, sellado
+y sin moverse. Cabecera **IDENTICA AL TALLADOR**. Rutas **31**, con **0** que fallen de
+verdad. Bateria **11 tramos, 135 entradas, 126 OK / 2 CASO DECLARADO / 7 NO MORDIO**,
+**11 de 11 sellados por la 210 leido de git**. Nomina **135**, congelada. Moratoria
+**respetada, 11 de 11 con prefijo**. Ciega **72 de 80**.
+
+**UNA caida del ejecutor, de reporte, que NO acumula. TRES caidas mias, ninguna
+acumula. SIETE adjudicaciones, de las que SEIS cierran pendientes (`6.1` el credito y
+la deuda, `6.2` el `D.1` y la `P.2`, `6.3` el `D.2` y la `P.1`, `6.4` el `D.3`, `6.5`
+la `PD.1` y `6.6` la familia de la cita). TRES hallazgos. `OP-I-01` es la ultima ficha
+real y va en el encargo. NINGUNA CONDICION DE PARADA.**
+
+Esta acta **solo crece por anexion**: el texto viejo sigue entero delante.

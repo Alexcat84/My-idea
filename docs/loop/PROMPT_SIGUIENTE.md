@@ -1,154 +1,150 @@
-Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
+# ENCARGO DE LA VUELTA 211 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
 
-Eres el ejecutor de la VUELTA 210. Rama `pasada-unica`, FASE III. Lee
-`docs/loop/EJECUTOR.md` entero antes del primer comando y abre tu reporte con la
-vuelta: talla el esqueleto de `docs/loop/REPORTE.md` ANTES de la primera tarea,
-con las cuatro marcas del anexo IMPORTADAS de `anexar_tarea_al_reporte.py` y no
-tecleadas, componiendo en memoria y escribiendo solo si el juicio da cero fallos,
-como en la 208 y en la 209.
+**Commitea y pushea lo pendiente en la rama activa antes de tocar nada.**
 
-ESTA ES LA VUELTA DE BATERIA Y NO LLEVA NADA MAS. Es la cadencia de cinco de
-`AUDITOR.md` 6.1: la ultima fue la 205 y le toca a la 210. La letra es literal y
-no la ablando: la bateria entera, sola, con su doble corrida, su reloj y su
-salida sellada. NO HAY TAREA DE PLAN EN ESTA VUELTA. El trabajo de plan que mi
-acta 209 deja adjudicado (los dos campos `estado` y `OP-I-01`) espera a la 211 y
-va escrito al final de este encargo para que no se pierda.
+Corre tu bloque de apertura tal como esta escrito en `EJECUTOR.md` 1, y sella sus
+salidas ANTES de la primera operacion: `SALIDA_V211_APERTURA.txt`,
+`SALIDA_V211_HEAD_APERTURA.txt` y el lado APERTURA del ciclo entero de Gate 0.
+Talla el esqueleto del reporte con su instrumento antes de la primera tarea, y
+anexa cada tarea AL CERRARSE, no al final de la vuelta.
 
-RIGE LA MORATORIA DE MAQUINARIA (`AUDITOR.md` 6.3). Ningun arnes, guarda ni
-lector nuevo. Todo tu computo va con prefijo `_v210_*`, fuera del censo y fuera
-de la nomina, que sigue CONGELADA EN 135 y que recomputé yo importando su fuente
-en la vuelta 209. Si un lector heredado no te alcanza, LO DECLARAS NO COMPUTABLE
-con su motivo medido y sigues: no lo ensanchas.
+**LA 211 NO ES VUELTA DE BATERIA.** La cadencia de cinco de `AUDITOR.md` 6.1 pone
+la siguiente en la **215**. No la corras.
 
-DOS AVISOS MEDIDOS QUE SALEN DE MI ACTA 209 Y QUE TE AHORRAN UNA CAIDA:
+**RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3): ningun arnes, guarda ni
+lector nuevo. Lo que escribas esta vuelta lleva prefijo `_v211_`, fuera del censo
+y fuera de la nomina. **La nomina de la bateria sigue CONGELADA EN 135 y no se
+poda.** Las excepciones son las que la propia moratoria nombra: lo que una CAIDA
+DE DATO exija, con su cita.
 
-- LA GLOSA QUE NOMBRA SU CORTE TIENE QUE NOMBRAR EL CORTE QUE MIDIO. Es la unica
-  caida que te cuento de la 209 y no acumula. Su `4.1` publica "19 ficheros,
-  medido en ESTE CORTE, que es el commit de la TAREA 3": el 19 es cierto, pero el
-  commit de la TAREA 3 (`39af9958`) da 14, y el 19 sale de un commit de CIERRE.
-  La causa esta en el codigo y la mido: `_v209_cierre.py` computa contra el `HEAD`
-  vivo y la frase que lo nombra esta TECLEADA, con el `head_ahora` que esa misma
-  funcion ya tiene sin usar. En tu `_v210_cierre.py` LA FRASE LEE EL CORTE QUE
-  COMPUTO, nunca uno tecleado. No es ensanchar un lector: es escribir bien el
-  computo de tu propia vuelta.
-- SELLA LA SALIDA DE `cerrar_reporte.py`. `SALIDA_V209_CERRAR_REPORTE.txt` NO
-  EXISTE, y es el primer hueco de esa serie desde la 205: existen las de la 199 a
-  la 204 y las de la 206, 207 y 208, contadas por mi. No es caida (tu reporte no
-  la promete en ningun sitio), pero me obligo a correr sus guardas yo en vez de
-  citar tu salida. Sellala en `docs/loop/SALIDA_V210_CERRAR_REPORTE.txt`.
+**DOS TAREAS, NO MAS.** El acta 210 adjudica en su `6.7` que el disparador del
+regimen `6.2` esta cumplido y que el tope podria volver a cinco, y aun asi encarga
+dos: el trabajo que queda cabe en dos.
 
 ---
 
-## TAREA 1. LA BATERIA DE MUTACIONES, ENTERA, POR SUS ONCE TRAMOS
+## TAREA 1. LOS REGISTROS, Y LOS DOS CAMPOS `estado` QUE EL ACTA 209 DEJO ADJUDICADOS
 
-Es la unica tarea de la vuelta. El lanzador ya esta escrito y NO SE CLONA NI SE
-TOCA (moratoria): `scripts/loop/vuelta183_bateria_por_tramos.py`.
+**1.a. EL ACTA 210 ESTA ESCRITA Y ANEXADA**, y su seccion abre en la linea **73924**
+de `docs/loop/ACTA_AUDITOR.md`, que paso de **4875334** a **4902898** bytes
+(**27564** de crecimiento, `sha256` `7217a5d76c98d65f`). No la reescribas: leela y
+cita de ella por linea.
 
-**PRIMERO, LA TRAMPA, QUE LA CORRI YO Y VA ENTERA EN LA `7.3` DE MI ACTA 209.
-LEELA ANTES DE CORRER NADA.** Ese lanzador **computa su vuelta de su propio
-nombre** y lo dice de si mismo: `vuelta (computada del nombre, no tecleada): 183`.
-Por eso **todas sus salidas se llaman `SALIDA_V183_BATERIA_TRAMO_n.txt` corra la
-vuelta que corra**, y su `--siguiente` cuenta ESOS ficheros. Corrido hoy por mi,
-publica `CIFRA tramos que FALTAN: 0` y `LOS 11 TRAMOS TIENEN SALIDA SELLADA`
-**sobre las salidas que dejaron las corridas viejas**. **SI EMPIEZAS POR AHI Y LE
-HACES CASO, DECLARAS CORRIDA UNA BATERIA QUE TU VUELTA NO HA CORRIDO.** No le
-haces caso, y no arreglas el lanzador.
+**1.b. LOS DOS CAMPOS `estado`, CON LAS TRES GUARDAS DEL `2.c` DE LA 209.** Pon
+`OP-L-02` en **`HECHA`** (adjudicacion `6.4` del acta 209) y `OP-L-03` en **`HECHA`**
+(adjudicacion `6.5` del acta 209, que arregla que una ficha cerrada por el acta 208
+siguiera en `LISTA`). Las dos van **en el mismo computo**, con:
 
-1.a. LA CIFRA DEL REPARTO, MEDIDA POR MI HOY Y COMO CONTRASTE: nomina **135**
-     (importada de `verificar_mutaciones_viejas.VIEJAS`, congelada por
-     `AUDITOR.md` 6.3) y **CIFRA tramos del reparto: 11**. `AUDITOR.md` 6.1 dice
-     NUEVE y esa glosa lleva su corte dentro ("sobre la nomina de hoy", 5 sep
-     2026, cuando la nomina tenia 82): **envejecio honestamente y hoy son ONCE**.
-     Recomputalo tu y publica tu cifra; si te da otra, DECLARAS la discrepancia.
+- la sede publicada **por las dos convenciones al entrar y al salir**
+  (`docs/plan/OPERACIONES.jsonl`, bytes en disco y bytes normalizados a LF, mas su
+  `sha256` por las dos);
+- la comprobacion de que **solo cambian esos dos campos**: cuenta las fichas antes y
+  despues por `estado` y publica las dos cuentas, y `git diff --numstat` sobre
+  `docs/plan/` con su cifra de filas;
+- el **caso positivo** de que la lectura del fichero sigue siendo valida: recarga el
+  `jsonl` linea a linea y publica la CIFRA de fichas, que tiene que seguir siendo la
+  misma de antes.
 
-1.b. CORRES LOS ONCE TRAMOS, EMPEZANDO POR EL 1, y **el `--siguiente` lo usas solo
-     para leer el reparto, nunca para saber que falta**. Publica esa distincion en
-     tu reporte con la cifra que el te da al lado, para que se vea por que no la
-     obedeciste.
+**RECUERDA CUAL ES LA VARA Y CUAL NO:** el campo `estado` es **HISTORICO** y no
+decide que queda por ejecutar (recuadro 0 de `AUDITOR.md`). Se pone al dia porque
+**un campo que contradice al acta que cerro la ficha engana a quien venga**, no
+porque mida nada.
 
-1.c. CADA TRAMO SE COMMITEA CON SU SALIDA SELLADA AL TERMINAR, y el commit dice
-     que tramo cierra. Es la letra de `AUDITOR.md` 6.1: una vuelta cortada retoma
-     en el tramo siguiente y no desde el principio, y eso solo funciona si lo
-     hecho queda committeado.
-     **Y EL COMMIT ES ADEMAS TU VARA DE FRESCURA, QUE ES LO QUE EL NOMBRE DEL
-     FICHERO NO TE DA:** como las salidas se siguen llamando `V183`, lo unico que
-     prueba que un tramo es de ESTA vuelta es que su fichero cambie en un commit
-     de la 210. Publica esa lista de commits, uno por tramo. **No renombres ni
-     copies las salidas a un nombre `V210`**: un fichero copiado no es un fichero
-     corrido, y eso seria fabricar la prueba en vez de tenerla.
+**1.c. LA OBLIGACION DE DICTADO NUEVA, Y RIGE DESDE ESTA VUELTA** (adjudicacion
+`6.6` del acta 210, tras tres actas seguidas con la misma familia de caida): **toda
+cita de un acta anterior lleva LA LINEA de `docs/loop/ACTA_AUDITOR.md` donde vive el
+texto citado, y la linea se LEE, no se recuerda.** No cuesta codigo y no roza la
+moratoria. Aplicala en todo el reporte de la 211.
 
-1.d. LAS TRES GUARDAS DEL REGIMEN, LAS TRES SIN ABLANDAR:
-     - DOBLE CORRIDA de cada entrada (cotejo de reproducibilidad, vuelta 141), y
-       publicas si las dos corridas dan lo mismo.
-     - UNA SALIDA SELLADA QUE MIDE CERO BYTES NO CUENTA COMO HECHA. Si un tramo
-       sale en cero, ESO ES EL RESULTADO y lo dices con su nombre: no lo tapas
-       con la salida de otro tramo ni de otra vuelta.
-     - DEL MISMO CALIBRE: los tramos no valen si uno sale de otra hondura que los
-       demas. Publica la cifra de cada uno (entradas corridas, verdes, rojos) en
-       una sola tabla para que se vea que son comparables.
-     - Y CUANDO LOS ONCE ESTEN, `--componer` arma la salida unica y coteja el
-       calibre, que es lo que el propio lanzador dice de si mismo. Sella tambien
-       esa salida.
+**1.d. Y LA OTRA MITAD, QUE TAMBIEN RIGE** (adjudicacion `6.3` del acta 210):
+**ninguna vuelta puede CITAR un arnes de la lista `NO MORDIO` como prueba de que algo
+esta vigilado.** Nombrarlo apagado es honesto; apoyarse en el es el letrero que
+`AUDITOR.md` 4 prohibe. Los siete de hoy son
+`vuelta160_tarea6b_mutacion_puerta.py`, `vuelta165_tarea6_mutacion_op_l_01.py`,
+`vuelta166_tarea2_mutacion_correccion.py`, `vuelta168_tarea1_mutacion_nota.py`,
+`vuelta168_tarea2_mutacion_reconstructor.py`, `vuelta171_mutacion_busqueda_acta.py`
+y `vuelta185_tarea1c_mutacion_bateria_continuada.py`.
 
-1.e. LA BATERIA SE DECLARA CORRIDA CUANDO TODOS SUS TRAMOS TIENEN SALIDA SELLADA
-     DEL MISMO CALIBRE, y no antes. Si la vuelta se corta a mitad, DEJAS LA FILA
-     ABIERTA en tu tabla de tareas diciendo en que tramo quedo, que es
-     exactamente lo que el regimen por tramos vino a permitir. Preferimos seis
-     tramos sellados y dichos que once narrados.
+**1.e. UNA MEDICION QUE NO ARREGLA NADA, Y SE QUEDA EN MEDICION** (hallazgo `7.1`
+del acta 210). La razon del puesto **1357** describe `posicionamiento_de_empresa`
+como **COSTURA CONFIRMADA de NUEVE pasos con dos bloques visibles**, y en
+`dataset/metadata/master_graph.json` ese nodo tiene hoy **CINCO** `pasos_accionables`
+(los de Blank), mientras los **CUATRO** del segundo bloque son los pasos de
+`la_historia_de_la_empresa` (Horowitz). Cinco mas cuatro dan nueve. **Mide y publica,
+sin tocar ni un nodo:**
 
-1.f. TU SECCION 9 ESTA VUELTA NO LLEVA HUECO: LLEVA LA BATERIA. Si algun tramo
-     queda sin correr, ese hueco parcial se declara con sus TRES piezas (el
-     nombre del fichero, los bytes medidos distinguiendo el cero de ausencia del
-     cero de fichero vacio, y la atribucion), que es la misma letra estrecha de
-     siempre.
+- si el nodo aparece en `docs/plan/02_DESTEJIDOS.md` (yo mido **0** menciones) y en
+  que operacion de `docs/plan/OPERACIONES.jsonl` vive (yo mido **1**: una
+  `DECISION_DE_FUENTE` en `LISTA`, del grupo HOROWITZ de la TANDA DE INJERTOS, con
+  sus **13** nodos);
+- **si los otros DOCE injertos del grupo HOROWITZ estan en el mismo estado**, o sea
+  si su segundo bloque sigue dentro del nodo o ya vive aparte. Cuenta los trece y
+  publica la particion con sus nombres. **Esa es toda la tarea: contar.**
+- si la particion no es uniforme, **dilo y para ahi**: decidir que hacer con una
+  operacion de fuente sin destino no es de esta vuelta.
 
----
-
-## LO QUE VALE PARA TODA LA VUELTA
-
-- CIERRA TU PROPIO REPORTE con `scripts/loop/cerrar_reporte.py --vuelta 210`, y
-  COMMITEA ANTES DE CORRERLO: ese instrumento escribe primero y valida despues,
-  asi que una corrida en rojo te deja el reporte pisado en disco y lo recuperas
-  con `git checkout HEAD --`. Y SELLA SU SALIDA, que es el segundo aviso de
-  arriba.
-- TODA CIFRA QUE PUBLIQUES SALE DE UN INSTRUMENTO CORRIDO EN ESTA VUELTA. Las de
-  este encargo son CONTRASTE. Si discrepan de tu medicion, la discrepancia se
-  declara, no se resuelve copiando.
-- TODA GLOSA EN PROSA LLEVA EL CORTE DE LA CIFRA QUE INTERPRETA, o no se escribe
-  (banco `9.21`, tercera mitad), Y ESE CORTE ES EL QUE MIDIO, LEIDO Y NO TECLEADO.
-- TODA RUTA QUE PUBLIQUES COMO EVIDENCIA TIENE QUE EXISTIR Y NO MEDIR CERO
-  BYTES. En la 209 barri tus 45 rutas y fallaron 0.
-- ANTES DE CONTAR, ACOTA EL TROZO A SU SUJETO. Es mi adjudicacion `6.8` del acta
-  209, que contesta tu `PD.1` por extension del recuadro 0 de `AUDITOR.md`
-  ("la fuente hay que elegirla antes de contarla"): una guarda de unicidad sobre
-  un fichero con mas de un sujeto NO prueba identidad, y se comprueba ademas que
-  el otro sujeto queda fuera. Es la hermana del cero falso.
-- MARCA TUS DISCUTIBLES ANTES DE SABER SI ACIERTAS, con "por donde me puedo estar
-  equivocando" escrito. Tus tres de la 209 estaban bien marcados y los tres
-  quedaron ADMITIDOS: el marcado funciona y se agradece.
-- LOS SELLOS DE APERTURA SE ESCRIBEN AL ABRIR. Tu `C.5` de la 209 declara que los
-  dos sellos de `HEAD` y el lado APERTURA del ciclo nacieron al cierre, y lo
-  comprobe: los tres entran en el commit `2a9fcc8c`. Lo declaraste y por eso no
-  te cuenta como cifra falsa, pero en esta vuelta que no vuelva a pasar.
+**EL VEREDICTO DEL 1357 NO SE TOCA:** su propia razon escribe *"El solape de este par
+cae en el primer bloque y el veredicto es INVARIANTE"*, y el acta 210 lo verifico.
 
 ---
 
-## LO QUE NO ES DE ESTA VUELTA, ESCRITO AQUI PARA QUE NO SE PIERDA
+## TAREA 2. `OP-I-01`, LA ULTIMA DE LAS CUATRO FICHAS REALES DE LA MORATORIA
 
-Mi acta 209 adjudica tres cosas de plan que la 210 NO ejecuta, porque la vuelta
-de bateria no lleva nada al lado. Van a la 211:
+**LA VARA DICE QUE ES LA QUE QUEDA, Y LA CORRI YO EN LA VUELTA 210:**
+`python scripts/loop/vuelta150_3_relectura_expediente.py --corte HEAD` da **3** fichas
+de trabajo real, de las que **2 son mesas cuyo producto documental existe en disco**
+(`OP-L-02` y `OP-L-03`, cerradas por acta) y **1 no lo tiene**: **`OP-I-01`**, fase
+`10_INVENTARIO`. **Vuelve a correr la vara al empezar** y publica su salida: si dice
+otra cosa que lo que aqui se escribe, **manda tu medicion de hoy y lo declaras**.
 
-1. `OP-L-02` QUEDA CERRADA POR MI ADJUDICACION `6.4` (18 de 18: sus dos `A MEDIAS`
-   suben a CUBRE por las `6.2` y `6.3`). Su campo `estado` pasa a `HECHA` con las
-   MISMAS TRES GUARDAS del `2.c` de la 209, que salieron limpias.
-2. `OP-L-03` LLEVA UNA VUELTA CERRADA POR ACTA (mi `6.4` de la 208) Y SU `estado`
-   SIGUE EN `LISTA`. Se pone al dia por el mismo carril y en el mismo computo. La
-   vara del trabajo pendiente sigue siendo el instrumento y nunca el campo, pero
-   un campo historico que contradice el acta que lo cerro enganara a quien venga.
-3. `OP-I-01` ES LA ULTIMA DE LAS CUATRO FICHAS REALES DE LA MORATORIA y no se ha
-   empezado. Se mide por el mismo metodo probado ya tres veces: vara sellada en su
-   propio commit antes de abrir ningun documento, cotejo punto por punto con su
-   cita de fichero y linea en cada fila, y las dos cuentas separadas.
+**COMO SE EJECUTA, Y ES LA LETRA DE SIEMPRE:**
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes. No adivines.
+1. **LEE LA FICHA ENTERA** de `docs/plan/OPERACIONES.jsonl` y publica su forma: CIFRA
+   de campos, `tipo`, `orden`, `fecha_corte`, `depende_de`, `bloquea_a`, y el tamano
+   en caracteres de `evidencia`, `verificacion`, `adjudicacion` y `nota`.
+2. **MIDE SU CRITERIO DE HECHO** contra la fila `10 INVENTARIO` de
+   `docs/plan/08_VERIFICACION.md`, citada literal, y **contra ella y no contra tu
+   idea de lo que la ficha deberia ser**.
+3. **PUNTO POR PUNTO DE SU `verificacion`:** CUBRE, A MEDIAS o NO CUBRE, cada uno con
+   **su cita** y con el fichero y la linea de donde sale. Publica la CIFRA de puntos
+   y la CIFRA de los que quedan sin cita, que tiene que ser **0**.
+4. **LAS TRES SEDES QUE NOMBRA SU EVIDENCIA** son `docs/plan/INVENTARIO.jsonl`
+   (yo mido **584554** bytes por las dos convenciones), `docs/plan/10_INVENTARIO.md`
+   (**34258** en disco y **33845** normalizado a LF: **las dos convenciones NO
+   coinciden en este fichero, y por eso se publican las dos**) y `docs/loop/AUDITOR.md`
+   (**30581** por las dos). Remidelas tu al entrar y al salir.
+5. **LA CIFRA QUE LA CAMPAÑA LLEVA PUBLICADA DEL INVENTARIO SON 336 ENTRADAS**
+   (dominio 10, acto 221, racimo 13, familia_de_ids 53, figura 20, defecto 19), y vive
+   en la seccion 5 de `AUDITOR.md`. **RECOMPUTALA DEL FICHERO CON TU PROPIO COMANDO** y
+   publica las dos al lado. **Si no calzan, la discrepancia se DECLARA y no se
+   resuelve copiando ninguna de las dos** (`AUDITOR.md` 1.1): esa cifra lleva su corte
+   del 12 ago 2026 y el archivo puede haber envejecido honestamente (banco `9.21`).
+6. **SI SU TEXTO NO ALCANZA PARA EJECUTARLA SIN DECIDIR, ES PARADA Y NO UNA
+   IMPROVISACION** (`AUDITOR.md` 3). Para, escribe que falta, y traelo.
+7. **NO TOQUES EL CAMPO `estado` DE `OP-I-01`.** Mide, adjudica lo que puedas con
+   cita, y **deja el cierre de la ficha al acta**, que es como se cerraron `OP-L-01`,
+   `OP-L-02` y `OP-L-03`.
+
+---
+
+## LAS GUARDAS DE LA VUELTA, QUE NO SE AFLOJAN
+
+- **Ciclo entero de Gate 0 en los dos lados**, nunca `run_phase1.py` a secas, con sus
+  ocho comandos en su orden y su peor exitcode publicado.
+- **Cabecera tallada** con `tallar_cabecera_reporte.py --fase04 --vuelta 211`, pegada
+  entera y **cotejada con `--comparar`** antes de cerrar.
+- **Cierre con `scripts/loop/cerrar_reporte.py`, y SELLA SU SALIDA** en
+  `docs/loop/SALIDA_V211_CERRAR_REPORTE.txt`. La 209 no la sello y fue hallazgo; la
+  210 si, y por eso el tope de sub-tareas se pudo adjudicar cumplido.
+- **Los tamanos en BYTES EXACTOS** leidos del instrumento, nunca redondeados, y los KB
+  solo entre parentesis y detras del byte (`P.2`).
+- **Toda cifra tallada**, cada celda con el fichero del que sale, y las decisiones de
+  lectura en el registro y no narradas en prosa.
+- **Marca tus discutibles** con lo que dudas Y por donde te puedes estar equivocando,
+  y **declara tus caidas propias con nombre**, aunque no dejen rastro en disco.
+- **Trampa conocida del shell, medida dos actas seguidas:** el heredoc con comillas
+  simples se cae en este entorno. Para un fichero largo usa `python - <<PYEOF` o la
+  herramienta de fichero, **y di cual usaste**.
+
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
+una regla vigente, paras y lo traes. No adivines.
