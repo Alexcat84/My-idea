@@ -1,0 +1,31 @@
+==============================================================================
+VUELTA 211, TAREA 1.b: OP-L-02 Y OP-L-03 PASAN A HECHA, LAS DOS EN EL MISMO COMPUTO
+*** CORRIDA MUTADA. El dato 'OP-L-03' se cambio por 'OP-L-99' a proposito.
+*** SE EXIGE QUE EL VEREDICTO CAIGA. Un verde aqui prueba que la
+*** guarda no comprueba nada.
+==============================================================================
+
+GUARDA (1), PRIMERA MITAD: LA SEDE **AL ENTRAR**, POR LAS DOS CONVENCIONES
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   LAS DOS CONVENCIONES COINCIDEN en este fichero
+   CIFRA fichas en el fichero AL ENTRAR: 71
+
+GUARDA (1), SEGUNDA MITAD: EL VALOR VIEJO DE CADA FICHA, LEIDO Y NO SUPUESTO
+   linea 42, id_op leido del fichero: OP-L-02
+      la ficha que se nombra es OP-L-02: SI
+      CIFRA campos de la ficha: 18
+      VALOR VIEJO del campo estado, leido: 'LISTA'
+      VALOR NUEVO que se va a escribir:    'HECHA'
+   linea 43, id_op leido del fichero: OP-L-03
+      la ficha que se nombra es OP-L-99: NO, Y ESO ES ROJO
+   CIFRA fichas que pasan la guarda (1): 1 de 2
+
+VEREDICTO: ROJO. No se escribe nada.
+
+FIN
+
+LO QUE LA MUTACION EXIGE: que el veredicto de este computo
+sea ROJO, o sea que este cierre traiga codigo distinto de 0.
+CODIGO CON EL QUE EL COMPUTO IBA A CERRAR: 1
+VEREDICTO DE LA PRUEBA DE MUTACION: VERDE, LA GUARDA MUERDE

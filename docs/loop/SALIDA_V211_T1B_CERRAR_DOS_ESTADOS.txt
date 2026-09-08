@@ -1,0 +1,79 @@
+==============================================================================
+VUELTA 211, TAREA 1.b: OP-L-02 Y OP-L-03 PASAN A HECHA, LAS DOS EN EL MISMO COMPUTO
+==============================================================================
+
+GUARDA (1), PRIMERA MITAD: LA SEDE **AL ENTRAR**, POR LAS DOS CONVENCIONES
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   LAS DOS CONVENCIONES COINCIDEN en este fichero
+   CIFRA fichas en el fichero AL ENTRAR: 71
+
+GUARDA (1), SEGUNDA MITAD: EL VALOR VIEJO DE CADA FICHA, LEIDO Y NO SUPUESTO
+   linea 42, id_op leido del fichero: OP-L-02
+      la ficha que se nombra es OP-L-02: SI
+      CIFRA campos de la ficha: 18
+      VALOR VIEJO del campo estado, leido: 'LISTA'
+      VALOR NUEVO que se va a escribir:    'HECHA'
+   linea 43, id_op leido del fichero: OP-L-03
+      la ficha que se nombra es OP-L-03: SI
+      CIFRA campos de la ficha: 18
+      VALOR VIEJO del campo estado, leido: 'LISTA'
+      VALOR NUEVO que se va a escribir:    'HECHA'
+   CIFRA fichas que pasan la guarda (1): 2 de 2
+
+EL VALOR NUEVO NO SE INVENTA: YA ES VOCABULARIO DE LA SEDE
+   estado 'HECHA'  lo llevan 30 fichas AL ENTRAR
+   estado 'LISTA'  lo llevan 41 fichas AL ENTRAR
+   'HECHA' ya existe en el fichero: SI
+
+LA CIRUGIA, SOBRE CADA LINEA Y NO SOBRE EL JSON
+   OP-L-02, linea 42: '"estado": "LISTA"' aparece 1 vez(ces) EN SU LINEA (se exige 1)
+      CIFRA bytes de la linea antes: 7989 | despues: 7989 | crecimiento: 0
+      CIFRA campos que NO se mueven: 17 de 17
+      el campo estado pasa de 'LISTA' a 'HECHA'
+   OP-L-03, linea 43: '"estado": "LISTA"' aparece 1 vez(ces) EN SU LINEA (se exige 1)
+      CIFRA bytes de la linea antes: 9308 | despues: 9308 | crecimiento: 0
+      CIFRA campos que NO se mueven: 17 de 17
+      el campo estado pasa de 'LISTA' a 'HECHA'
+
+LA ESCRITURA, UNA SOLA VEZ Y CON LAS DOS LINEAS A LA VEZ
+   ESCRITAS: las lineas 42, 43 y ninguna otra.
+
+==============================================================================
+GUARDA (1), AL SALIR: LA SEDE REMEDIDA Y NO HEREDADA
+==============================================================================
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco 7a52387bb8a4aa4f y sha256 LF 7a52387bb8a4aa4f
+   LAS DOS CONVENCIONES COINCIDEN en este fichero
+   CIFRA crecimiento: 0 bytes en disco y 0 bytes normalizado a LF
+   el sha256 CAMBIO: SI (es lo que prueba que algo se escribio)
+
+GUARDA (2): SOLO CAMBIAN ESOS DOS CAMPOS
+   git diff --numstat -- docs/plan/ :
+      2	2	docs/plan/OPERACIONES.jsonl
+   CIFRA filas de git diff --numstat sobre docs/plan/: 1
+   CIFRA filas que se esperan en este modo: 1
+   CIFRA lineas anadidas: 2 | CIFRA lineas borradas: 2
+   DOS LINEAS CAMBIADAS Y NI UNA MAS: SI
+
+   LAS DOS CUENTAS POR estado, ANTES Y DESPUES, LAS DOS PUBLICADAS:
+      'HECHA'   ANTES 30   DESPUES 32
+      'LISTA'   ANTES 41   DESPUES 39
+      TOTAL     ANTES 71   DESPUES 71
+
+   EL CENSO DE id_op Y estado, COTEJADO ENTERO CONTRA EL DE ANTES:
+   CIFRA fichas que se movieron: 2 (se esperan 2 en este modo)
+      linea 42 OP-L-02 'LISTA'  ->  linea 42 OP-L-02 'HECHA'
+      linea 43 OP-L-03 'LISTA'  ->  linea 43 OP-L-03 'HECHA'
+   SE MOVIERON SOLO ESAS FICHAS Y SOLO SU estado: SI
+   CIFRA otros id_op cuyo estado cambio: 0
+
+GUARDA (3), EL CASO POSITIVO: EL jsonl SE RECARGA LINEA A LINEA
+   CIFRA fichas releidas del disco: 71
+   CIFRA fichas AL ENTRAR (la que tiene que repetirse): 71
+   CIFRA lineas que no son JSON valido: 0 (se exige 0)
+   LA LECTURA DEL FICHERO SIGUE SIENDO VALIDA: SI
+
+VEREDICTO DE LAS TRES GUARDAS: VERDE, LAS TRES
+
+FIN
