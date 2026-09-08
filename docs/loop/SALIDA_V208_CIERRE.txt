@@ -1,0 +1,86 @@
+==============================================================================
+VUELTA 208, CIERRE: LOS DOS SELLOS Y LAS MEDICIONES, RECOMPUTADAS AL
+CIERRE Y NO HEREDADAS
+==============================================================================
+
+A) EL SELLO DE APERTURA. EL VALOR NO SE TECLEA: SE LEE DE MI PROPIO SELLO
+   leido de docs/loop/SALIDA_V208_APERTURA.txt: 0d9e71a3f6a540860452afbb4bfc1552f32f11f9
+   ese sello quedo committeado en: 6877f013b32adab216489110c19120da7531eeb0
+   ESCRITO docs/loop/SALIDA_V208_HEAD_APERTURA.txt
+   Y LO DECLARO EN VEZ DE DISIMULARLO: el VALOR es de apertura de verdad,
+   pero EL FICHERO CON ESE NOMBRE nace ahora. Es la especie de la C.2 de
+   la 207 y va a mi seccion 8.
+
+B) EL SELLO DE CIERRE, LEIDO DE git rev-parse HEAD
+   HEAD tras la ultima operacion de tarea: 769c03eb934544e20d16527c3f3751771aa46737
+   asunto de ese commit (primeros 110): VUELTA 208, TAREAS 3.b a 3.e: LA MESA OP-L-03 QUEDA MEDIDA CONTRA LOS SEIS DOCUMENTOS QUE SU FICHA NOMBRA, Y L
+   ESCRITO docs/loop/SALIDA_V208_HEAD_CIERRE.txt
+
+C) NUMSTAT AL CIERRE, RECOMPUTADO CONTRA EL HEAD DE APERTURA Y NO HEREDADO
+   comando: git diff 0d9e71a3 --numstat -- <sede>
+   CIFRA filas de dataset/       : 0
+   CIFRA filas de web/           : 0
+   CIFRA filas de engine/        : 0
+   CIFRA filas de docs/plan/     : 0
+   CIFRA total de filas en las cuatro sedes: 0
+
+   Y EL numstat CONTRA HEAD (arbol de trabajo contra el ultimo commit),
+   que es lo que el encargo pide en CERO filas:
+   CIFRA filas de git diff HEAD --numstat -- dataset/       : 0
+   CIFRA filas de git diff HEAD --numstat -- web/           : 0
+   CIFRA filas de git diff HEAD --numstat -- engine/        : 0
+   CIFRA filas de git diff HEAD --numstat -- docs/plan/     : 0
+   CIFRA total: 0
+
+D) LAS SEDES SELLADAS, REMEDIDAS AL CIERRE POR LAS DOS CONVENCIONES
+   docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 4054129 bytes en disco y 4054129 normalizado a LF, sha256 disco 0a77b5a35a962621 y
+      sha256 LF 0a77b5a35a962621 | contraste 4054129 y 0a77b5a35a962621 | CALZA POR LAS DOS: SI
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 normalizado a LF, sha256 disco 829c583eb779cab6 y
+      sha256 LF 829c583eb779cab6 | contraste 513043 y 829c583eb779cab6 | CALZA POR LAS DOS: SI
+   CIFRA sedes selladas que NO calzan: 0
+   NI UN VEREDICTO NI UN `estado` SE MOVIERON: CONFIRMADO
+
+E) LAS TRES SEDES DEL AUDITOR, CON EL CERO DISTINGUIDO
+   CIFRA docs/loop/ACTA_AUDITOR.md: 0 filas de git diff contra el HEAD de apertura,
+      FICHERO PRESENTE (4820516 bytes en disco)
+   CIFRA docs/loop/PROMPT_SIGUIENTE.md: 0 filas de git diff contra el HEAD de apertura,
+      FICHERO PRESENTE (12079 bytes en disco)
+   CIFRA PARA_ALEXIS.md: 0 filas POR AUSENCIA DE FICHERO (no existe en disco)
+
+F) EL HUECO DE BATERIA, CON SUS TRES PIEZAS
+   NOMBRE DEL FICHERO: docs/loop/SALIDA_V208_BATERIA.txt
+   BYTES MEDIDOS EN ESTA CORRIDA: 0 bytes, Y ES UN CERO DE AUSENCIA
+      DE FICHERO, NO DE FICHERO VACIO: os.path.isfile devuelve False.
+   ATRIBUCION: NADIE la corrio en esta vuelta, ni el ejecutor ni el
+      auditor, y no es una omision sino la cadencia de AUDITOR.md 6.1:
+      la ultima fue la 205 y la siguiente es la 210.
+   LA ULTIMA BATERIA DE VERDAD: docs/loop/SALIDA_V205_BATERIA.txt, 93745 bytes en disco
+
+G) EL REPORTE, MEDIDO ANTES DE CERRARLO
+   docs/loop/REPORTE.md: 35710 bytes en disco y 35710 normalizado a LF,
+   sha256 disco 1692e1ac06dd0e82 y sha256 LF 1692e1ac06dd0e82
+   CIFRA lineas: 585
+   CIFRA guiones largos: 0 | guiones medios: 0
+
+H) LOS FICHEROS QUE ESTA VUELTA ANADIO A scripts/loop/, Y SU PREFIJO
+   CIFRA ficheros anadidos a scripts/loop/: 16
+   CIFRA con prefijo de guion bajo: 16
+   CIFRA SIN prefijo de guion bajo: 0 (ninguno)
+      scripts/loop/_v208_apertura.py
+      scripts/loop/_v208_ciclo_gate0.py
+      scripts/loop/_v208_esqueleto.py
+      scripts/loop/_v208_parche_cotejo.py
+      scripts/loop/_v208_parche_denominador.py
+      scripts/loop/_v208_t1_registros.py
+      scripts/loop/_v208_t1_seccion.md
+      scripts/loop/_v208_t1d_correccion.py
+      scripts/loop/_v208_t2_denominador.py
+      scripts/loop/_v208_t2_seccion.md
+      scripts/loop/_v208_t2b_tabla_viva.py
+      scripts/loop/_v208_t2d_v3.py
+      scripts/loop/_v208_t2e_v14.py
+      scripts/loop/_v208_t3_cotejo.py
+      scripts/loop/_v208_t3_seccion.md
+      scripts/loop/_v208_t3_vara.py
+
+FIN
