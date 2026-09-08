@@ -1,0 +1,39 @@
+{
+ "bitacora": [
+  "REPORTE.md",
+  "veredictos"
+ ],
+ "sellado": {
+  "hecho": false,
+  "ruta": null,
+  "vuelta": null
+ },
+ "clases": {
+  "escritas": false,
+  "ruta": null
+ },
+ "cerrados": {
+  "206": {
+   "motivo": "cerrado a mano por el CLI",
+   "ruta_clases": null,
+   "bitacora": [
+    "git log",
+    "git status",
+    "REPORTE.md",
+    "veredictos"
+   ]
+  },
+  "207": {
+   "motivo": "clases declaradas por el carril del sello de disco",
+   "ruta_clases": "docs/loop/_auditor_v207_mis_clases.txt",
+   "bitacora": [
+    "git log",
+    "git status",
+    "REPORTE.md"
+   ]
+  }
+ },
+ "vivo": {
+  "abierto": true
+ }
+}
