@@ -4,7 +4,7 @@ SE CIERRA EL REPORTE DE LA VUELTA 210, EN UN SOLO ACTO
 
 A) EL SUJETO, COMPROBADO ANTES DE TOCARLO
    docs/loop/REPORTE.md primera linea: # REPORTE DE LA VUELTA 210 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
-   CIFRA bytes: 14980 | saltos de linea: 261
+   CIFRA bytes: 15045 | saltos de linea: 261
    contiene '**EL VEREDICTO DE UNA LINEA: SIN E' -> SI (se esperaba SI)
    contiene 'PENDIENTE DE TALLAR AL CIERRE'      -> SI (se esperaba SI)
    contiene '\n## 3.'                            -> NO (se esperaba NO)
@@ -22,7 +22,7 @@ A.1) EL VEREDICTO QUE SE RECIBE, MIRADO ANTES DE PEGARLE NADA
 
 B) LAS TRES PIEZAS QUE VIENEN DE FUERA, MEDIDAS ANTES DE PEGARLAS
    docs/loop/SALIDA_V210_TALLADOR_CABECERA.txt             2456 bytes, 11 filas de tabla
-   scripts/loop/_v210_cierre_texto.md                     12724 bytes, sha256 45a97e2bb0382949
+   scripts/loop/_v210_cierre_texto.md                     14221 bytes, sha256 186bbd4aaa4f8b46
       ## 3. LAS CIFRAS DE LA VUELTA, CONTADAS DE SUS FICHEROS
       ## 4. LO QUE SE TOCO, Y LO QUE NO
       ## 5. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
@@ -64,16 +64,16 @@ B.1) LOS NUMERALES DEL VEREDICTO, COTEJADOS CONTRA LO QUE EL CUERPO
      PERMITE CONTAR (vuelta 183, TAREA 1.c; escalada de AUDITOR.md 1.2)
    el veredicto, tal como se paso: 'LA UNICA TAREA DE LA VUELTA DE BATERIA QUEDA ENTREGADA: LOS ONCE TRAMOS CORRIDOS, SELLADOS Y COMMITEADOS EN ESTA VUELTA,'
    CIFRA numerales hallados en el veredicto: 1
-      '2'        -> 2 caidas
+      '3'        -> 3 caidas
    LAS CUENTAS DEL CUERPO, CONTADAS Y NO TECLEADAS:
-      caidas   -> 2
+      caidas   -> 3
       tareas   -> 1
    CIFRA numerales que NO calzan: 0
 
 C) SE ESCRIBE
    cabecera: 268 bytes de hueco -> 2548 bytes de tabla pegada
    veredicto escrito: 497 bytes
-   ESCRITO: docs/loop/REPORTE.md (124354 bytes, 1930 saltos de linea)
+   ESCRITO: docs/loop/REPORTE.md (125916 bytes, 1952 saltos de linea)
 
 D) SE RELEE DEL DISCO Y SE MIRAN LAS CUATRO PIEZAS
    (1) veredicto escrito              SI
