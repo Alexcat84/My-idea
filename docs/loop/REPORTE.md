@@ -122,10 +122,10 @@ salida**, y **las dos puntas se publican**.
 
 **LA SEDE, POR LAS DOS CONVENCIONES Y EN SUS DOS PUNTAS.** Al entrar,
 `docs/PENDIENTES.md` mide **1180091** bytes en disco y **1180091** bytes normalizado a
-LF, con `sha256` LF **`9cf019a1c9a856f0`**, que calza al digito con el contraste del
+LF, con `sha256` disco **`9cf019a1c9a856f0`** y `sha256` LF **`9cf019a1c9a856f0`**, que calzan al digito con el contraste del
 encargo (1180091 por las dos y `9cf019a1c9a856f0`) y con mi propio sello de
 apertura. Al salir mide **1190145** bytes en disco y **1190145** bytes normalizado a LF,
-con `sha256` LF **`772f6167da46fba8`**.
+con `sha256` disco **`772f6167da46fba8`** y `sha256` LF **`772f6167da46fba8`**.
 
 **CIFRA crecimiento de la sede: 10054 bytes en disco y 10054 bytes normalizado a
 LF.** La entrada compuesta mide **10053** bytes y trae **166** lineas, con **0**
@@ -286,7 +286,7 @@ de la nueva sin ella.
 
 **LA SEDE, POR LAS DOS CONVENCIONES Y EN SUS DOS PUNTAS.** Entra en **214916**
 bytes en disco y **214916** bytes normalizado a LF, con `sha256` disco **`dda1cdd67042c733`** y
-`sha256` LF **`dda1cdd67042c733`**, que calza al digito con el contraste del encargo.
+`sha256` disco **`dda1cdd67042c733`** y `sha256` LF **`dda1cdd67042c733`**, que calzan al digito con el contraste del encargo.
 Sale en **219178** bytes en disco y **219178** bytes normalizado a LF, con `sha256`
 disco **`a8ba1749b9a3fa13`** y `sha256` LF **`a8ba1749b9a3fa13`**.
 **CIFRA crecimiento: 4262 bytes en disco y 4262 bytes normalizado a LF.**

@@ -78,7 +78,7 @@ de la nueva sin ella.
 
 **LA SEDE, POR LAS DOS CONVENCIONES Y EN SUS DOS PUNTAS.** Entra en **214916**
 bytes en disco y **214916** bytes normalizado a LF, con `sha256` disco **`dda1cdd67042c733`** y
-`sha256` LF **`dda1cdd67042c733`**, que calza al digito con el contraste del encargo.
+`sha256` disco **`dda1cdd67042c733`** y `sha256` LF **`dda1cdd67042c733`**, que calzan al digito con el contraste del encargo.
 Sale en **219178** bytes en disco y **219178** bytes normalizado a LF, con `sha256`
 disco **`a8ba1749b9a3fa13`** y `sha256` LF **`a8ba1749b9a3fa13`**.
 **CIFRA crecimiento: 4262 bytes en disco y 4262 bytes normalizado a LF.**
