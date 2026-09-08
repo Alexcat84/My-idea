@@ -590,8 +590,12 @@ def main():
     print("   CIFRA caidas propias contadas del cuerpo: %d (%s)"
           % (n_caidas, ", ".join(claves)))
 
+    # EL VEREDICTO VA **SIN** LA ETIQUETA Y **SIN** LOS ASTERISCOS: los pone
+    # `cerrar_reporte.py`. Su guarda me lo dijo en rojo en la primera corrida y
+    # no escribio nada, que es exactamente para lo que esta: pegar la etiqueta
+    # dos veces es lo que produjo la linea 50 del reporte de la vuelta 190.
     veredicto = (
-        "**EL VEREDICTO DE UNA LINEA: LA VUELTA 209 ENTREGO SUS TRES TAREAS "
+        "LA VUELTA 209 ENTREGO SUS TRES TAREAS "
         "ENTERAS Y CON SUS GUARDAS. `R.73` ESCRITA POR ADICION PURA CON 0 "
         "BORRADAS Y SUS DOS PUNTAS PUBLICADAS; LAS DOS CIFRAS DE `OP-L-01` "
         "CORREGIDAS EN `docs/plan/LECTURAS_DIRIGIDAS.md` POR EL CARRIL DEL "
@@ -602,7 +606,7 @@ def main():
         "DISCREPANCIAS CON EL CONTRASTE DEL ENCARGO EN LOS TRES APARTADOS. "
         "%s CAIDAS PROPIAS, CADA UNA CONTADA UNA SOLA VEZ Y NINGUNA ESCONDIDA. "
         "TRES DISCUTIBLES MARCADOS, TRES PREGUNTAS Y UN PENDIENTE DE "
-        "DOCTRINA. NO SE CUMPLE NINGUNA CONDICION DE PARADA.**"
+        "DOCTRINA. NO SE CUMPLE NINGUNA CONDICION DE PARADA."
         % (v["cubre"], v["vara_p"], v["medias"], v["nocubre"],
            PALABRA[n_caidas]))
 

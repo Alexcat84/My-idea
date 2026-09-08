@@ -71,8 +71,8 @@ propia salida, medidas hoy **7 sep 2026** y no heredadas.
 `git diff --numstat -- dataset/` 0 filas al entrar.** Las dos se LEEN de la
 apertura sellada y no se teclean.
 
-**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 3 y 0.**
-La del estado del arbol baja de 1 a 3 **y la diferencia esta medida y no
+**Y RECOMPUTADAS AL CIERRE POR MI, CON LOS MISMOS DOS COMANDOS: 1 y 0.**
+La del estado del arbol baja de 1 a 1 **y la diferencia esta medida y no
 es un misterio**: al abrir, la unica linea sin rastrear era el propio fichero
 de mi sello de apertura, y al cerrar ya esta committeado con todo lo demas.
 **La de `dataset/` no se mueve: sigue en 0 por los dos lados.**
@@ -108,8 +108,8 @@ contarse a si mismo**, porque va en el mismo commit que cuenta. **No se
 arregla el instrumento, que es moratoria**: se escribe la glosa con su corte.
 
 **CIFRA ficheros anadidos a `scripts/loop/` entre `32fc0348` y `HEAD`, medido en
-ESTE CORTE, que es el commit de la TAREA 3 y NO el commit de cierre: 17, de
-los que 17 llevan el prefijo `_v209_` y 0 no lo llevan.**
+ESTE CORTE, que es el commit de la TAREA 3 y NO el commit de cierre: 19, de
+los que 19 llevan el prefijo `_v209_` y 0 no lo llevan.**
 
 **ESTA CIFRA NACE CORTA POR CONSTRUCCION Y LO DIGO AQUI, DENTRO DE LA MISMA
 FRASE.** `scripts/loop/_v209_cierre.py` es el fichero que cuenta, va en el
