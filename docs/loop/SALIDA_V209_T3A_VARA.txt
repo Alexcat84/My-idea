@@ -1,0 +1,196 @@
+==============================================================================
+VUELTA 209, TAREA 3.a: LA VARA DE OP-L-02, SELLADA ANTES DE COTEJAR NADA
+==============================================================================
+
+A) LA FICHA, MEDIDA AL ENTRAR
+   docs/plan/OPERACIONES.jsonl: 513043 bytes en disco y 513043 bytes normalizado a LF
+   sha256 disco e96dbe74485814e9 y sha256 LF e96dbe74485814e9
+   linea 42, id_op leido: OP-L-02
+   CIFRA campos de la ficha: 18
+   CIFRA bytes de la linea de la ficha: 7989 en disco y 7989 normalizado a LF
+   tipo 'MESA' | orden 2 | fecha_corte '2026-08-11' | estado 'LISTA'
+   CIFRA elementos de depende_de: 3 (OP-D-01, OP-D-02, OP-D-03)
+   CIFRA elementos de bloquea_a: 0 (vacio)
+   CIFRA elementos de evidencia: 1
+   CIFRA elementos de verificacion: 4
+   CIFRA elementos de verificacion que son CORRECCION DECLARADA: 1
+   CIFRA caracteres de adjudicacion: 260 | de nota: 5578
+   pregunta_pendiente: None
+
+   EL COTEJO CONTRA EL CONTRASTE DEL ENCARGO (contraste, NO fuente):
+      campos                     mio 18             contraste 18             CALZA
+      tipo                       mio MESA           contraste MESA           CALZA
+      orden                      mio 2              contraste 2              CALZA
+      fecha_corte                mio 2026-08-11     contraste 2026-08-11     CALZA
+      depende_de                 mio 3              contraste 3              CALZA
+      bloquea_a                  mio 0              contraste 0              CALZA
+      evidencia                  mio 1              contraste 1              CALZA
+      verificacion               mio 4              contraste 4              CALZA
+      verificacion CORRECCION    mio 1              contraste 1              CALZA
+      estado                     mio LISTA          contraste LISTA          CALZA
+   CIFRA discrepancias con el contraste del encargo en el 3.a: 0
+
+B) LAS 18 CITAS, COMPROBADAS **VERBATIM** CONTRA SU CAMPO
+   (si una no aparece EXACTAMENTE en su campo, la vara CAE EN ROJO)
+   V.1   tipo               cita de 4 caracteres aparece VERBATIM: SI
+   V.2   orden              cita de 1 caracteres aparece VERBATIM: SI
+   V.3   fecha_corte        cita de 10 caracteres aparece VERBATIM: SI
+   V.4   depende_de         cita de 7 caracteres aparece VERBATIM: SI
+   V.5   evidencia[0]       cita de 73 caracteres aparece VERBATIM: SI
+   V.6   verificacion[0]    cita de 77 caracteres aparece VERBATIM: SI
+   V.7   verificacion[1]    cita de 51 caracteres aparece VERBATIM: SI
+   V.8   verificacion[2]    cita de 65 caracteres aparece VERBATIM: SI
+   V.9   verificacion[3]    cita de 72 caracteres aparece VERBATIM: SI
+   V.10  verificacion[3]    cita de 52 caracteres aparece VERBATIM: SI
+   V.11  adjudicacion       cita de 64 caracteres aparece VERBATIM: SI
+   V.12  adjudicacion       cita de 44 caracteres aparece VERBATIM: SI
+   V.13  nota               cita de 113 caracteres aparece VERBATIM: SI
+   V.14  nota               cita de 96 caracteres aparece VERBATIM: SI
+   V.15  nota               cita de 102 caracteres aparece VERBATIM: SI
+   V.16  nota               cita de 163 caracteres aparece VERBATIM: SI
+   V.17  nota               cita de 92 caracteres aparece VERBATIM: SI
+   V.18  nota               cita de 152 caracteres aparece VERBATIM: SI
+   CIFRA citas que NO aparecen verbatim en su campo: 0
+
+C) EL CORPUS, MEDIDO Y CON SU CONTROL POSITIVO
+   ACTOS  scripts/vuelta16_generar_actos.mjs                   5158 bytes en disco y 5158 bytes normalizado a LF
+          sale de: nota, 'la nomina parseada de scripts/vuelta16_generar_actos.mjs'
+   BDP    docs/plan/BANCO_DEL_PLAN.md                          61554 bytes en disco y 61554 bytes normalizado a LF
+          sale de: nota, 'la operacion que abra este acto por P.5 y P.8' y 'lo que P.10 llama COSTURA'
+   COB    docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt       5559 bytes en disco y 5449 bytes normalizado a LF
+          sale de: nota, '(docs/loop/SALIDA_V169_T5_COBERTURA_OP_L_02.txt)'
+   CORTE  docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt         5337 bytes en disco y 5238 bytes normalizado a LF
+          sale de: verificacion[3], 'Salida: docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt'
+   INV    docs/plan/INVENTARIO.jsonl                           584554 bytes en disco y 584554 bytes normalizado a LF
+          sale de: nota, 'las dos entradas de INVENTARIO.jsonl'
+   LD     docs/plan/LECTURAS_DIRIGIDAS.md                      219178 bytes en disco y 219178 bytes normalizado a LF
+          sale de: nota, 'la fila del universo de LECTURAS_DIRIGIDAS.md'
+   LDSR   docs/plan/LD_SALES_ROADMAP.md                        20563 bytes en disco y 20563 bytes normalizado a LF
+          sale de: nota, 'viven en docs/plan/LD_SALES_ROADMAP.md con su razon una por una'
+   LOTE   docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt      7945 bytes en disco y 7836 bytes normalizado a LF
+          sale de: nota, 'Ver docs/loop/SALIDA_V169_T5_LOTE_SALES_ROADMAP.txt'
+   OPS    docs/plan/OPERACIONES.jsonl                          513043 bytes en disco y 513043 bytes normalizado a LF
+          sale de: nota, 'se barrieron las 71 fichas de docs/plan/OPERACIONES.jsonl'
+   PUEN   docs/loop/SALIDA_V170_T4B_PUENTES.txt                4564 bytes en disco y 4482 bytes normalizado a LF
+          sale de: nota, 'Salida: docs/loop/SALIDA_V170_T4B_PUENTES.txt'
+   VER    docs/INTRA_DOMINIO_VEREDICTOS.jsonl                  4054129 bytes en disco y 4054129 bytes normalizado a LF
+          sale de: verificacion[3], 'RECOMPUTANDO docs/INTRA_DOMINIO_VEREDICTOS.jsonl LINEA A LINEA'
+
+   EL CONTROL POSITIVO, PRIMERO: UNA BUSQUEDA NEGATIVA NO SE PUEDE CITAR
+   SOLA (`EJECUTOR.md` 9). Cada literal de control TIENE que aparecer.
+      ACTOS  literal de control 'acto'               aparece 6 vez(ces)
+      BDP    literal de control 'P.10'               aparece 1 vez(ces)
+      COB    literal de control 'cobertura'          aparece 8 vez(ces)
+      CORTE  literal de control 'OP-L-02'            aparece 7 vez(ces)
+      INV    literal de control 'cobertura'          aparece 692 vez(ces)
+      LD     literal de control 'LECTURA DIRIGIDA'   aparece 6 vez(ces)
+      LDSR   literal de control 'LD-66'              aparece 6 vez(ces)
+      LOTE   literal de control 'sales_roadmap'      aparece 52 vez(ces)
+      OPS    literal de control 'OP-L-02'            aparece 1 vez(ces)
+      PUEN   literal de control 'puente'             aparece 11 vez(ces)
+      VER    literal de control 'puesto'             aparece 4726 vez(ces)
+   CIFRA controles positivos que FALLAN: 0
+
+D) EL ESCARMIENTO: ANTES DE SELLAR UN PUNTO COMO NO DOCUMENTAL, SE BUSCA
+   SU LITERAL EN EL CORPUS. SI APARECE, LA VARA CAE Y EL PUNTO SE SELLA
+   DOCUMENTAL.
+   --- V.1 ---
+       motivo, escrito ANTES de mirar: es estructura de la propia ficha: el campo `tipo`. No hay documento que pueda decir que esta ficha es una MESA mas que ella misma.
+       NO SE BUSCA LITERAL: el punto es un campo de la propia ficha
+       (`tipo`, `orden`, `fecha_corte`), y su unica sede posible es
+       la ficha. Buscarlo en el corpus no seria una prueba de nada.
+   --- V.2 ---
+       motivo, escrito ANTES de mirar: es estructura de la propia ficha: el campo `orden`.
+       NO SE BUSCA LITERAL: el punto es un campo de la propia ficha
+       (`tipo`, `orden`, `fecha_corte`), y su unica sede posible es
+       la ficha. Buscarlo en el corpus no seria una prueba de nada.
+   --- V.3 ---
+       motivo, escrito ANTES de mirar: es estructura de la propia ficha: el campo `fecha_corte`.
+       NO SE BUSCA LITERAL: el punto es un campo de la propia ficha
+       (`tipo`, `orden`, `fecha_corte`), y su unica sede posible es
+       la ficha. Buscarlo en el corpus no seria una prueba de nada.
+   --- V.5 ---
+       motivo, escrito ANTES de mirar: es la unica `evidencia` de la ficha y es PROSA que NO NOMBRA NINGUN FICHERO. Se coteja contra lo que afirma y contra la propia nota, no contra un documento que la ficha no nombra.
+       literal que se busca: '205 pares fuera de cola, 11 leidos, 194 pendientes'
+       CIFRA documentos del corpus donde APARECE: 0 (ninguno)
+       (`OPS` queda fuera de esta busqueda: contiene la propia ficha)
+   --- V.7 ---
+       motivo, escrito ANTES de mirar: la clausula habla de lo que la OPERACION no debe hacer, no de lo que un documento dice. El marcador se mide del archivo, y eso lo hace la V.9; aqui lo que se juzga es la clausula.
+       literal que se busca: 'el marcador del cribado no se mueve: sigue en 2.117'
+       CIFRA documentos del corpus donde APARECE: 0 (ninguno)
+       (`OPS` queda fuera de esta busqueda: contiene la propia ficha)
+   CIFRA puntos candidatos a NO DOCUMENTAL cuyo literal SI aparece en el
+   corpus: 0
+
+E) EL REPARTO DOCUMENTAL, SELLADO **AHORA**, ANTES DE MIRAR NINGUNA CIFRA
+   CIFRA puntos de la vara: 18
+   CIFRA puntos DOCUMENTALES: 13
+      V.4, V.6, V.8, V.9, V.10, V.11, V.12, V.13, V.14, V.15, V.16, V.17, V.18
+   CIFRA puntos NO DOCUMENTALES: 5
+      V.1   es estructura de la propia ficha: el campo `tipo`. No hay documento que pueda decir que 
+      V.2   es estructura de la propia ficha: el campo `orden`.
+      V.3   es estructura de la propia ficha: el campo `fecha_corte`.
+      V.5   es la unica `evidencia` de la ficha y es PROSA que NO NOMBRA NINGUN FICHERO. Se coteja c
+      V.7   la clausula habla de lo que la OPERACION no debe hacer, no de lo que un documento dice. 
+   la suma cuadra con el total: SI
+
+F) LOS 18 PUNTOS, ENTEROS Y CON SU CITA
+   --- V.1 (tipo) --- NO DOCUMENTAL
+       cita literal: MESA
+       que se comprueba: la ficha se declara MESA, y por tanto su criterio de HECHO es el de la fila 06 MESAS de docs/plan/08_VERIFICACION.md
+   --- V.2 (orden) --- NO DOCUMENTAL
+       cita literal: 2
+       que se comprueba: es la SEGUNDA de las tres mesas de la fase 09
+   --- V.3 (fecha_corte) --- NO DOCUMENTAL
+       cita literal: 2026-08-11
+       que se comprueba: toda cifra de la ficha se juzga contra ESTE corte y no contra hoy (banco 9.21)
+   --- V.4 (depende_de) --- DOCUMENTAL
+       cita literal: OP-D-01
+       que se comprueba: las tres de las que depende existen en el fichero y se pueden nombrar
+   --- V.5 (evidencia[0]) --- NO DOCUMENTAL
+       cita literal: MEDIDO el 11 ago 2026: 205 pares fuera de cola, 11 leidos, 194 pendientes
+       que se comprueba: la unica evidencia de la ficha es PROSA con su fecha de corte; se coteja contra lo que afirma, y sus tres cifras tienen que cuadrar entre si
+   --- V.6 (verificacion[0]) --- DOCUMENTAL
+       cita literal: las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+       que se comprueba: las TRES nominas tienen que poder NOMBRARSE desde la propia ficha; si no se pueden, la ficha no alcanza y eso es PARADA (AUDITOR.md 3)
+   --- V.7 (verificacion[1]) --- NO DOCUMENTAL
+       cita literal: el marcador del cribado no se mueve: sigue en 2.117
+       que se comprueba: la clausula exige que la operacion NO MUEVA el marcador; el 2.117 es el valor en el fecha_corte, testigo y no condicion
+   --- V.8 (verificacion[2]) --- DOCUMENTAL
+       cita literal: cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+       que se comprueba: cada grupo del backlog documentado tiene que traer su motivo, no solo su numero
+   --- V.9 (verificacion[3]) --- DOCUMENTAL
+       cita literal: el marcador del cribado vale 3388, repartido en A 551, B 72, C 5, D 2760
+       que se comprueba: la CORRECCION DECLARADA del 4 sep 2026 publica el marcador de ese dia con su reparto; se remide hoy contra el archivo
+   --- V.10 (verificacion[3]) --- DOCUMENTAL
+       cita literal: Salida: docs/loop/SALIDA_V170_T3_DEUDAS_DE_CORTE.txt
+       que se comprueba: la ruta que la correccion declara como su prueba existe y no mide cero bytes (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+   --- V.11 (adjudicacion) --- DOCUMENTAL
+       cita literal: SE LEEN SOLO LOS QUE CUELGAN DE UNA MESA O DE UNA NOMINA ABIERTA
+       que se comprueba: la decision de la mesa, escrita; es la que el criterio de HECHO exige que lleve su motivo y su cobertura al lado
+   --- V.12 (adjudicacion) --- DOCUMENTAL
+       cita literal: SEGUNDA TANDA LEIDA: 16 lecturas, 2 A y 14 D
+       que se comprueba: el saldo de la segunda tanda, que tiene que cuadrar con el reparto por nomina de la nota
+   --- V.13 (nota) --- DOCUMENTAL
+       cita literal: SE LEYERON 16: cuadrantes de mercado (8), ecuacion de valor (5) y el bloque humano de la supervision de la IA (3)
+       que se comprueba: las TRES nominas de la V.6, NOMBRADAS, y sus tres cuentas sumando 16
+   --- V.14 (nota) --- DOCUMENTAL
+       cita literal: LOS CINCO SE LEYERON el 14 ago 2026 como LD-66 a LD-70, y viven en docs/plan/LD_SALES_ROADMAP.md
+       que se comprueba: las cinco cabeceras LD-66 a LD-70 estan en ese documento
+   --- V.15 (nota) --- DOCUMENTAL
+       cita literal: las SEIS nominas de esta ficha tienen HOY cobertura COMPLETA, cero pares sin veredicto en ninguna sede
+       que se comprueba: la afirmacion de las SEIS, con su salida sellada al lado
+   --- V.16 (nota) --- DOCUMENTAL
+       cita literal: BACKLOG DOCUMENTADO, 189 pares: 126 esperan destejido, 55 son resto sin mesa ni nomina, 5 de sales roadmap con clase ya decidida, y 3 ya leidas en la primera tanda
+       que se comprueba: el backlog con sus cuatro grupos, cada uno con su motivo escrito, y las cuatro cuentas sumando 189: es la sede que la V.8 exige
+   --- V.17 (nota) --- DOCUMENTAL
+       cita literal: 6 miembros escritos, 6 vivos tras resolver, 15 pares posibles, 15 con clase y CERO sin clase
+       que se comprueba: la medicion del acto del sales roadmap, con el resolutor delante
+   --- V.18 (nota) --- DOCUMENTAL
+       cita literal: se barrieron las 71 fichas de docs/plan/OPERACIONES.jsonl buscando estos nodos en los campos nodos, preservar, eliminar y superviviente, y salieron CERO
+       que se comprueba: la busqueda negativa que la nota declara HECHA CON SU COMANDO; se re-verifica contra el grafo porque una busqueda negativa no se puede citar (EJECUTOR.md 9)
+
+==============================================================================
+CIFRA comprobaciones que fallan en el sello de la vara: 0
+VEREDICTO DEL SELLO: VERDE
+==============================================================================
