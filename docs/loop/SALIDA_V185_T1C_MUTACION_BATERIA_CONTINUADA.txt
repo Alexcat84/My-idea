@@ -99,22 +99,22 @@ F) EL CASO QUE ANADE LA TAREA 1.d: `tramos_por_vuelta(183)` SOBRE LOS NUEVE
    FICHEROS REALES. El reparto tiene que ser 4 y 5: los tramos 1 a 4 los
    sello la vuelta 183 y los tramos 5 a 9 la vuelta 184. NO SE TECLEA
    NINGUNA CELDA: sale de leer el asunto del ultimo commit de cada fichero.
-      tramo 1   -> vuelta 220
-      tramo 2   -> vuelta 220
-      tramo 3   -> vuelta 220
-      tramo 4   -> vuelta 220
-      tramo 5   -> vuelta 220
-      tramo 6   -> vuelta 220
-      tramo 7   -> vuelta 220
-      tramo 8   -> vuelta 220
-      tramo 9   -> vuelta 215
-      tramo 10  -> vuelta 215
-      tramo 11  -> vuelta 215
-   CIFRA tramos con fichero en disco: 11
-   CIFRA sellados por la vuelta 183: 0 []
-   CIFRA sellados por la vuelta 184: 0 []
-   CIFRA sellados por otra vuelta o sin asunto: 11 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-   EL REPARTO ES 4 Y 5 SOBRE NUEVE: NO
+   commits cuyo asunto empieza por 'VUELTA 184, BATERIA TRAMO 9 DE 9': 1 (hace falta 1)
+   el reparto se lee EN ese commit: 3500db9d
+      tramo 1   -> vuelta 183
+      tramo 2   -> vuelta 183
+      tramo 3   -> vuelta 183
+      tramo 4   -> vuelta 183
+      tramo 5   -> vuelta 184
+      tramo 6   -> vuelta 184
+      tramo 7   -> vuelta 184
+      tramo 8   -> vuelta 184
+      tramo 9   -> vuelta 184
+   CIFRA tramos con fichero en disco: 9
+   CIFRA sellados por la vuelta 183: 4 [1, 2, 3, 4]
+   CIFRA sellados por la vuelta 184: 5 [5, 6, 7, 8, 9]
+   CIFRA sellados por otra vuelta o sin asunto: 0 []
+   EL REPARTO ES 4 Y 5 SOBRE NUEVE: SI
    con el esperado MUTADO (5 y 4): CAE
    con el esperado MUTADO (nueve tramos sellados por la 183): CAE
 
@@ -125,5 +125,5 @@ G) LO QUE ESTA REPARACION NO TOCA, DICHO PARA QUE SE PUEDA COMPROBAR:
    que se puede teclear no es una evidencia.
    CIFRA apariciones de '--tramos' en cerrar_reporte.py: 0
 
-CIFRA fallos: 1
-VEREDICTO: ROJO
+CIFRA fallos: 0
+VEREDICTO: VERDE

@@ -29,6 +29,7 @@ USO:
 """
 import io
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -211,7 +212,22 @@ def main():
     w("   FICHEROS REALES. El reparto tiene que ser 4 y 5: los tramos 1 a 4 los")
     w("   sello la vuelta 183 y los tramos 5 a 9 la vuelta 184. NO SE TECLEA")
     w("   NINGUNA CELDA: sale de leer el asunto del ultimo commit de cada fichero.")
-    reparto = CR.tramos_por_vuelta(183)
+    # REPARADO EN LA AUDITORIA INTEGRAL (9 sep 2026): los once ficheros de tramo
+    # los volvio a sellar la vuelta 220 (medido: los once dan "vuelta 220" en
+    # HEAD), asi que el reparto 4 y 5 de las vueltas 183 y 184 solo se puede
+    # leer en su propio commit. El commit NO SE TECLEA: es el unico cuyo asunto
+    # empieza por el titulo del tramo 9 de la 184, leido de git log.
+    TITULO_TRAMO_9 = "VUELTA 184, BATERIA TRAMO 9 DE 9"
+    rl = subprocess.run(["git", "log", "--format=%H%x09%s"], cwd=CR.RAIZ,
+                        capture_output=True)
+    hits = [l.split("\t", 1)[0] for l in rl.stdout.decode("utf-8", "replace").splitlines()
+            if l.split("\t", 1)[-1].startswith(TITULO_TRAMO_9)]
+    w("   commits cuyo asunto empieza por %r: %d (hace falta 1)" % (TITULO_TRAMO_9, len(hits)))
+    if len(hits) != 1:
+        fallos += 1
+    ref_184 = hits[0] if len(hits) == 1 else "HEAD"
+    w("   el reparto se lee EN ese commit: %s" % ref_184[:8])
+    reparto = CR.tramos_por_vuelta(183, ref=ref_184)
     for n in sorted(reparto):
         w("      tramo %-3d -> vuelta %s" % (n, reparto[n]))
     w("   CIFRA tramos con fichero en disco: %d" % len(reparto))

@@ -181,7 +181,10 @@ def cargar_version_vieja():
 
 def commit_acta_real():
     """El hash del acta 159, leido de git y no tecleado."""
-    r = subprocess.run(["git", "log", "--format=%H %s", "-n", "500"], cwd=RAIZ,
+    # VENTANA REABIERTA EN LA AUDITORIA INTEGRAL (9 sep 2026): la ventana de
+    # 500 commits dejo de alcanzar al commit buscado (medido: el acta 159 esta a
+    # 641 commits de HEAD en la 220). Se lee la historia entera de la rama.
+    r = subprocess.run(["git", "log", "--format=%H %s"], cwd=RAIZ,
                        capture_output=True)
     for linea in r.stdout.decode("utf-8", "replace").splitlines():
         h, _, asunto = linea.partition(" ")

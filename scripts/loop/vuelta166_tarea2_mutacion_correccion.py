@@ -127,10 +127,16 @@ def main():
     print("F) MUTACION 4: SE TOCA EL RESTO DE LA FICHA (Y EL ESTADO ES EL CASO GORDO)")
     m = json.loads(linea_vieja)
     m["verificacion"] = list(m["verificacion"]) + ["A", "B"]
-    m["estado"] = "HECHA"
+    # REPARADO EN LA AUDITORIA INTEGRAL (9 sep 2026): la ficha esta en HECHA
+    # desde la vuelta 209 (commit 1a3d6d54), asi que escribir "HECHA" dejo de ser
+    # una mutacion y el invariante 4 no tenia nada que tumbar. El estado se mueve
+    # SIEMPRE a un valor distinto del que la ficha tiene hoy, sea cual sea.
+    estado_hoy = json.loads(linea_vieja).get("estado")
+    m["estado"] = "LISTA" if estado_hoy == "HECHA" else "HECHA"
     ln, lns = _con(lineas, n, m)
     v = _veredictos(T.invariantes(linea_vieja, ln, lineas, lns, n))
-    print("   se cambia estado de LISTA a HECHA de tapadillo dentro de la correccion")
+    print("   se cambia estado de %s a %s de tapadillo dentro de la correccion"
+          % (estado_hoy, m["estado"]))
     casos.append(("F_mover_el_estado_tumba_el_invariante_4",
                   v["4_el_resto_de_la_ficha_no_se_toca_ni_en_estado"], False))
     m = json.loads(linea_vieja)

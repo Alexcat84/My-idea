@@ -102,7 +102,15 @@ def prueba():
     # verse porque la bateria no se corrio; esta se vio EN LA MISMA SESION que la
     # causo, corriendo la bateria despues de escribir. EL CASO NO SE AFLOJA:
     # sigue siendo una IGUALDAD EXACTA contra el conteo real de la ficha.
-    casos.append(("C_tiene_seis_clausulas", len(d.get("verificacion") or []), 6))
+    # RE ANCLADO POR TERCERA VEZ EN LA AUDITORIA INTEGRAL (9 sep 2026), Y LOS
+    # DOS MOTIVOS DE ARRIBA NO SE BORRAN: la ficha paso de SEIS a SIETE clausulas
+    # en la vuelta 203 (commit 169a2ff6, correccion declarada de la verificacion),
+    # las declaradas de TRES a CUATRO en ese mismo commit, y el estado de LISTA a
+    # HECHA en la vuelta 209 (commit 1a3d6d54), leido de git log sobre la ficha.
+    # Este arnes no se corrio entre la 203 y la 220 con su bateria en verde y
+    # por eso la caida tardo diecisiete vueltas en repararse. EL CASO NO SE
+    # AFLOJA: sigue siendo IGUALDAD EXACTA contra el conteo real de la ficha.
+    casos.append(("C_tiene_siete_clausulas", len(d.get("verificacion") or []), 7))
     declaradas = [c for c in (d.get("verificacion") or [])
                   if c.startswith("CORRECCION DECLARADA")]
     print("   CIFRA clausulas que son CORRECCION DECLARADA: %d" % len(declaradas))
@@ -111,11 +119,11 @@ def prueba():
     # invariante que el numero solo no da: si alguien reescribiera la ficha
     # borrando el texto viejo en vez de anadir, este caso caeria aunque el
     # conteo siguiera dando seis.
-    casos.append(("C_tres_de_las_seis_son_correccion_declarada", len(declaradas), 3))
+    casos.append(("C_cuatro_de_las_siete_son_correccion_declarada", len(declaradas), 4))
     casos.append(("C_las_tres_viejas_siguen_enteras",
                   len([c for c in (d.get("verificacion") or [])
                        if not c.startswith("CORRECCION DECLARADA")]), 3))
-    casos.append(("C_sigue_en_LISTA", d.get("estado"), "LISTA"))
+    casos.append(("C_esta_en_HECHA_desde_la_209", d.get("estado"), "HECHA"))
     casos.append(("C_su_corte_es_del_11_ago", d.get("fecha_corte"), "2026-08-11"))
     print("")
 

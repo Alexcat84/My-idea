@@ -352,7 +352,7 @@ def vuelta_que_sello(asunto):
     return int(m.group(1)) if m else None
 
 
-def tramos_por_vuelta(vuelta_del_fichero):
+def tramos_por_vuelta(vuelta_del_fichero, ref=None):
     """QUE VUELTA SELLO CADA TRAMO DE UNA BATERIA. Devuelve
     `{numero_de_tramo: vuelta_que_sello(asunto)}` para cada
     `docs/loop/SALIDA_V<vuelta_del_fichero>_BATERIA_TRAMO_<n>.txt` que EXISTA.
@@ -363,19 +363,30 @@ def tramos_por_vuelta(vuelta_del_fichero):
 
     LA EVIDENCIA SE LEE DE GIT Y NO SE PUEDE TECLEAR. `main()` la computa con
     esta funcion y NO la recibe por bandera: una evidencia que se puede teclear
-    no es una evidencia."""
+    no es una evidencia.
+
+    `ref` (auditoria integral, 9 sep 2026): con `None` la conducta es la de
+    siempre, HEAD y el disco. Con un commit, el reparto se lee EN ESE COMMIT:
+    existencia por `git cat-file -e` y asunto por `git log -1 <ref>`. Existe
+    porque los ficheros de tramo se vuelven a sellar en cada bateria y el
+    reparto de una vuelta pasada solo se puede leer en su propio commit."""
     reparto = {}
     if vuelta_del_fichero is None:
         return reparto
     for n in range(1, 100):
         nombre = "SALIDA_V%d_BATERIA_TRAMO_%d.txt" % (vuelta_del_fichero, n)
         ruta = os.path.join(RAIZ, "docs", "loop", nombre)
-        if not os.path.exists(ruta):
-            continue
-        r = subprocess.run(
-            ["git", "log", "-1", "--format=%s", "--",
-             "docs/loop/" + nombre],
-            cwd=RAIZ, capture_output=True)
+        if ref is None:
+            if not os.path.exists(ruta):
+                continue
+            orden = ["git", "log", "-1", "--format=%s", "--", "docs/loop/" + nombre]
+        else:
+            existe = subprocess.run(["git", "cat-file", "-e", "%s:docs/loop/%s" % (ref, nombre)],
+                                    cwd=RAIZ, capture_output=True)
+            if existe.returncode != 0:
+                continue
+            orden = ["git", "log", "-1", "--format=%s", ref, "--", "docs/loop/" + nombre]
+        r = subprocess.run(orden, cwd=RAIZ, capture_output=True)
         asunto = r.stdout.decode("utf-8", errors="replace").strip()
         reparto[n] = vuelta_que_sello(asunto)
     return reparto

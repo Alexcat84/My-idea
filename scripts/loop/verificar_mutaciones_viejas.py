@@ -1080,6 +1080,22 @@ VIEJAS = [
     # NINGUNO ADMITE --sujeto: los dos fabrican los suyos.
     ("vuelta195_tarea3g_mutacion_nomina_enchufada.py", False),
     ("vuelta195_tarea4c_mutacion_componer_rojo.py", False),
+    # LA NOMINA SE ABRE EN LA AUDITORIA INTEGRAL (9 sep 2026). La congelacion en
+    # 135 era regimen del BUCLE (AUDITOR.md 6.3, 7 sep 2026) y murio con el
+    # bucle; el regimen post bucle esta en AUDITOR.md 6.4. Entran los DOS que
+    # el censo veia y la nomina congelada no tenia (PARADA 2 de la bateria de
+    # la vuelta 220), corridos uno a uno en la integral: exitcode 0 los dos.
+    # LA NOMINA PASA DE 135 A 137. NO SE PODA NADA: los siete que no mordian
+    # se repararon barato con su mutacion probada, ninguno se retiro.
+    #   - `vuelta197_tarea2_mutacion_orden_del_turno.py`: las tres piezas que
+    #     la 197 anadio a `apertura_del_auditor.py` (leer el reporte sin sello,
+    #     cerrar el turno limpio entre procesos, la guarda del marcador). Sujeto
+    #     congelado: escenarios en temporal y procesos hijo.
+    #   - `vuelta199_tarea1_mutacion_guardas_revividas.py`: las dos guardas que
+    #     la 199 volvio a encender, probadas en procesos distintos sobre un turno
+    #     cerrado, con la mutacion que las apaga en una copia temporal.
+    ("vuelta197_tarea2_mutacion_orden_del_turno.py", False),
+    ("vuelta199_tarea1_mutacion_guardas_revividas.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

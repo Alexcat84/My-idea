@@ -481,10 +481,56 @@ fallar ruidoso.
 > excepciones son **las TAREAS 1 y 2 ya adjudicadas por el acta 198** y **lo que
 > una CAIDA DE DATO exija, con su cita**.
 
-**LA NOMINA DE LA BATERIA QUEDA CONGELADA EN 135.** **Ni crece ni se poda:** la
-poda se decide en la **auditoria integral** y no antes. Congelarla es lo que
+~~**LA NOMINA DE LA BATERIA QUEDA CONGELADA EN 135.** **Ni crece ni se poda:** la
+poda se decide en la **auditoria integral** y no antes.~~ Congelarla es lo que
 permite que la moratoria se sostenga sola, porque la nomina crecia justamente
 con la maquinaria nueva.
+
+**CORRECCION DECLARADA (auditoria integral, 9 sep 2026, decision del fundador,
+PASO 1.b):** la nomina congelada **fue regimen del BUCLE y muere con el bucle**.
+En la integral la nomina **se abre**: entran los dos arneses que el censo veia
+y la nomina no tenia (197 y 199, 135 a 137), y los siete que no mordian se
+midieron uno a uno y **los siete se repararon barato con su mutacion probada**
+(ninguno retirado). El regimen que sigue es el 6.4, y la lectura "la poda se
+decide en la integral" queda cumplida: **se decidio no podar**.
+
+### 6.4 REGIMEN POST BUCLE DE LA BATERIA (auditoria integral, 9 sep 2026)
+
+**Decision del fundador, PASO 1.b de la auditoria integral, y lo que se midio al
+aplicarla** (`docs/loop/ACTA_INTEGRAL.md`, 1.b). Vale desde el merge de la
+campaña y sustituye a la cadencia de cinco vueltas del 6.1, que era cadencia de
+un bucle que ya no corre. **Lo que no cambia:** la bateria sigue entera, sigue
+sola, con su doble corrida y por tramos sellados; ninguna guarda se afloja.
+
+1. **LA NOMINA ESTA ABIERTA Y LA LLENA EL CENSO.** Todo arnes de las familias
+   del censo (`mutacion`, `caso_positivo`, `simular`) desde la vara 148 entra en
+   `VIEJAS` en la misma sesion que lo escribe. Un arnes que el censo ve y la
+   nomina no tiene es ROJO de la bateria, como hoy.
+2. **CUANDO CORRE:** entera, antes de pedir cualquier merge a staging o a main,
+   y en toda sesion que toque `scripts/loop/`. Entre esas sesiones no corre
+   sola: no hay vueltas.
+3. **EL ROJO SE MIDE EN LA MISMA SESION, UNO A UNO, Y TIENE DOS ESPECIES** que
+   se dicen por su nombre porque las siete de la 220 fueron las dos:
+   **la guarda que no muerde** (el mutante no cae) y **el sujeto que se movio**
+   (la ficha cambio de conteo o de estado, el commit buscado quedo fuera de
+   una ventana contada, los ficheros sellados se volvieron a sellar). Las siete
+   de la 220 eran sujeto movido: cuatro ventanas de `git log` de 400 y 500
+   commits con el acta a 513 a 641 de profundidad, dos anclas a la ficha
+   OP-L-01 anteriores a sus commits 169a2ff6 y 1a3d6d54, y un reparto de tramos
+   leido en HEAD cuando solo existe en su commit 3500db9d.
+4. **REPARAR BARATO O RETIRAR, NUNCA DEJAR EN ROJO.** Se repara barato lo que se
+   arregla sin aflojar el caso: re anclar a la cifra real con el commit que la
+   movio leido de git, leer la historia entera en vez de una ventana contada,
+   leer la evidencia historica en su propio commit. La reparacion se prueba con
+   la segunda pasada del propio arnes (el esperado mutado tiene que caer). Lo que
+   no se repara barato **se retira de la nomina con su motivo escrito en la
+   entrada** y su salida ultima sellada; retirar sin motivo escrito sigue
+   prohibido (6.1, opcion (c) rechazada).
+5. **NINGUNA VENTANA CONTADA SOBRE GIT.** Un arnes que busca un commit por su
+   asunto lee la rama entera; `-n` y `-400` son la caida que tardo diecisiete
+   vueltas en verse.
+6. **LA SALIDA SE SELLA CON EL NOMBRE DE LA SESION** que la corrio (en la
+   integral, prefijo `_integral_`), nunca sobre la salida de otra sesion.
 
 **EL TRABAJO ES EL PLAN HASTA AGOTARLO:** las **cuatro fichas reales**, la
 **cola restante** bajo la regla nueva del diferenciador movido, y **el cierre**.

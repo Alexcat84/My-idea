@@ -65,7 +65,10 @@ def git(args):
 def hash_del_acta_167():
     """EL HASH DE LA PARADA, LEIDO DE GIT Y NO TECLEADO (`EJECUTOR.md` 1, LA
     IDENTIDAD SE LEE DE GIT). Uno solo: si hay cero o mas de uno, PARA."""
-    c, log = git(["log", "--format=%H%x09%s", "-400"])
+    # VENTANA REABIERTA EN LA AUDITORIA INTEGRAL (9 sep 2026): la ventana de
+    # 400 commits dejo de alcanzar al commit buscado (medido: el acta 167 esta a
+    # 541 commits de HEAD en la 220). Se lee la historia entera de la rama.
+    c, log = git(["log", "--format=%H%x09%s"])
     if c != 0:
         return None, "PARADA: git log fallo."
     hits = [l for l in log.splitlines() if l.split("\t", 1)[-1].startswith(PATRON_ACTA_167)]

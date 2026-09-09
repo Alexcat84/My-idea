@@ -74,7 +74,10 @@ def git(args):
 def commit_del_acta(n):
     """EL COMMIT DEL ACTA N, LEIDO DE GIT. Uno solo o PARA."""
     patron = "ACTA DE LA VUELTA %d DEL AUDITOR" % n
-    c, log = git(["log", "--format=%H%x09%s", "-400"])
+    # VENTANA REABIERTA EN LA AUDITORIA INTEGRAL (9 sep 2026): la ventana de
+    # 400 commits dejo de alcanzar al commit buscado (medido: el acta 165 esta a
+    # 556 commits de HEAD en la 220). Se lee la historia entera de la rama.
+    c, log = git(["log", "--format=%H%x09%s"])
     if c != 0:
         return None, "PARADA: git log fallo."
     hits = [l for l in log.splitlines() if l.split("\t", 1)[-1].startswith(patron)]

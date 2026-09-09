@@ -111,7 +111,10 @@ def prueba_de_mutacion():
     print("")
 
     print("F) EL CASO REAL, LEIDO DE GIT HOY Y NO SUPUESTO")
-    r = subprocess.run(["git", "log", "--pretty=format:%H\x01%s", "-400"],
+    # VENTANA REABIERTA EN LA AUDITORIA INTEGRAL (9 sep 2026): la ventana de
+    # 400 commits dejo de alcanzar al commit buscado (medido: el acta 170 (d7b18370) esta a
+    # 513 commits de HEAD en la 220). Se lee la historia entera de la rama.
+    r = subprocess.run(["git", "log", "--pretty=format:%H\x01%s"],
                        cwd=RAIZ, capture_output=True, text=True)
     reales = [l.split("\x01", 1) for l in r.stdout.splitlines() if "\x01" in l]
     print("   asuntos leidos de git log: %d" % len(reales))
