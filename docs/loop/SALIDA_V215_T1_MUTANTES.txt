@@ -1,0 +1,46 @@
+EL TEXTO BUENO, POR EL MISMO JUICIO QUE LOS MUTANTES
+   CIFRA adjudicaciones halladas: 9 | CIFRA que el encargo dice: 9
+   CIFRA etiquetas correlativas de 5.1 a 5.9: SI (se exige SI)
+   CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 0 []
+   CIFRA el hallazgo 3.1 aparece: SI (se exige SI)
+CIFRA fallos del texto bueno: 0 (se exigen 0)
+
+MUTANTE A. FALTA UNA ADJUDICACION (se quita la 5.3)
+   CIFRA fallos: 3 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 8 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: NO (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 1 ['5.3']
+      CIFRA el hallazgo 3.1 aparece: SI (se exige SI)
+MUTANTE B. FALTA UNA DE LAS CINCO DEL ENCARGO (se quita la 5.5)
+   CIFRA fallos: 3 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 8 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: NO (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 1 ['5.5']
+      CIFRA el hallazgo 3.1 aparece: SI (se exige SI)
+MUTANTE C. UNA ETIQUETA RENUMERADA (la 5.9 pasa a 5.10, y siguen siendo nueve)
+   CIFRA fallos: 1 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 9 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: NO (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 0 []
+      CIFRA el hallazgo 3.1 aparece: SI (se exige SI)
+MUTANTE D. UNA ADJUDICACION DE MAS (la 5.4 duplicada, y son diez)
+   CIFRA fallos: 2 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 10 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: NO (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 0 []
+      CIFRA el hallazgo 3.1 aparece: SI (se exige SI)
+MUTANTE E. FALTA EL HALLAZGO 3.1
+   CIFRA fallos: 1 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 9 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: SI (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 0 []
+      CIFRA el hallazgo 3.1 aparece: NO (se exige SI)
+MUTANTE F. LAS DOS LISTAS VACIAS, QUE ES EL CASO DE UN LECTOR QUE NO ENCUENTRA NADA
+   CIFRA fallos: 4 | CAE: SI (se exige CAE SI)
+      CIFRA adjudicaciones halladas: 0 | CIFRA que el encargo dice: 9
+      CIFRA etiquetas correlativas de 5.1 a 5.9: NO (se exige SI)
+      CIFRA de las CINCO que el encargo manda aplicar que NO aparecen: 5 ['5.1', '5.2', '5.3', '5.4', '5.5']
+      CIFRA el hallazgo 3.1 aparece: NO (se exige SI)
+
+CIFRA mutantes: 6 | CIFRA mutantes que CAEN: 6
+VERDE: el texto bueno pasa en 0 fallos y los 6 mutantes caen.
