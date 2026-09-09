@@ -102,15 +102,22 @@ def main():
     m_vuelta = re.search(r"VUELTA (\d+)", asuntos)
     vuelta_sellos = m_vuelta.group(1) if m_vuelta else "(no leida)"
 
+    # LAS DOS CONVENCIONES VAN JUNTAS O NO VAN: una cifra de bytes sin su pareja
+    # es lo que cerrar_reporte.py bloquea, y con razon. La sede de la medicion es
+    # medir_en_disco, importada y no copiada.
+    sys.path.insert(0, os.path.join(RAIZ, "scripts", "loop"))
+    from vuelta186_rutas_del_reporte import medir_en_disco  # noqa: E402
     faltan_inst = []
     filas_inst = []
     for que, ruta in INSTRUMENTOS:
         p = os.path.join(RAIZ, ruta.replace("/", os.sep))
         ok = os.path.isfile(p) and os.path.getsize(p) > 0
-        filas_inst.append("| %s | `%s` | %s |"
-                          % (que, ruta,
-                             ("**SI**, %d bytes" % os.path.getsize(p)) if ok
-                              else "**NO**"))
+        m = medir_en_disco(RAIZ, ruta) if ok else None
+        filas_inst.append(
+            "| %s | `%s` | %s |"
+            % (que, ruta,
+               ("**SI**, %d bytes en disco y %d bytes normalizados a LF"
+                % (m[0], m[1])) if m else "**NO**"))
         if not ok:
             faltan_inst.append(ruta)
 

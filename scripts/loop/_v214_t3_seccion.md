@@ -90,15 +90,15 @@ cifra:**
 
 | que pide el encargo | instrumento | existe |
 |---|---|---|
-| el ciclo entero de Gate 0, los ocho comandos | `scripts/loop/_v205_ciclo_gate0.py` | **SI**, 4359 bytes |
-| la bateria por tramos | `scripts/loop/vuelta183_bateria_por_tramos.py` | **SI**, 35327 bytes |
-| la vara del trabajo pendiente | `scripts/loop/vuelta150_3_relectura_expediente.py` | **SI**, 60262 bytes |
-| el inventario de las 71 contra sus pruebas | `scripts/loop/_v213_t2_cierre_fase_iii.py` | **SI**, 16687 bytes |
-| el marcador y el censo, recomputados | `scripts/loop/vuelta159_tarea9_marcador_cierre.py` | **SI**, 7948 bytes |
-| las tres suites, dentro del ciclo de Gate 0 | `engine/run_all_tests.py` | **SI**, 2535 bytes |
-| el cierre del reporte | `scripts/loop/cerrar_reporte.py` | **SI**, 114466 bytes |
-| el tallador de la cabecera | `scripts/loop/tallar_cabecera_reporte.py` | **SI**, 100077 bytes |
-| el barrido de rutas del reporte | `scripts/loop/vuelta186_rutas_del_reporte.py` | **SI**, 5887 bytes |
+| el ciclo entero de Gate 0, los ocho comandos | `scripts/loop/_v205_ciclo_gate0.py` | **SI**, 4359 bytes en disco y 4359 bytes normalizados a LF |
+| la bateria por tramos | `scripts/loop/vuelta183_bateria_por_tramos.py` | **SI**, 35327 bytes en disco y 35327 bytes normalizados a LF |
+| la vara del trabajo pendiente | `scripts/loop/vuelta150_3_relectura_expediente.py` | **SI**, 60262 bytes en disco y 60262 bytes normalizados a LF |
+| el inventario de las 71 contra sus pruebas | `scripts/loop/_v213_t2_cierre_fase_iii.py` | **SI**, 16687 bytes en disco y 16687 bytes normalizados a LF |
+| el marcador y el censo, recomputados | `scripts/loop/vuelta159_tarea9_marcador_cierre.py` | **SI**, 7948 bytes en disco y 7948 bytes normalizados a LF |
+| las tres suites, dentro del ciclo de Gate 0 | `engine/run_all_tests.py` | **SI**, 2535 bytes en disco y 2457 bytes normalizados a LF |
+| el cierre del reporte | `scripts/loop/cerrar_reporte.py` | **SI**, 114466 bytes en disco y 114466 bytes normalizados a LF |
+| el tallador de la cabecera | `scripts/loop/tallar_cabecera_reporte.py` | **SI**, 100077 bytes en disco y 100077 bytes normalizados a LF |
+| el barrido de rutas del reporte | `scripts/loop/vuelta186_rutas_del_reporte.py` | **SI**, 5887 bytes en disco y 5887 bytes normalizados a LF |
 
 **CIFRA instrumentos comprobados: 9 | CIFRA ausentes o de cero bytes:
 0.**
