@@ -1,0 +1,75 @@
+==============================================================================
+VUELTA 214, TAREA 1.a Y 1.b. LAS 95 SE DICEN. MODO --simular
+==============================================================================
+QUIEN LO ORDENA: docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 1
+LA DOCTRINA: banco 9.26. LA SEDE: el campo forma, por el precedente de
+scripts/loop/_v203_t3_op_i_01.py linea 258, que mide esta misma clausula
+sobre ese campo.
+
+EL CONTEO ANTES, SOBRE EL FICHERO EN DISCO:
+   CIFRA entradas del inventario: 672
+   CIFRA entradas con cobertura de la forma 'N de M pares leidos': 555
+   CIFRA de esas que estan INCOMPLETAS (N menor que M): 95
+   CIFRA de esas incompletas con PROVISIONAL en su campo forma: 0
+   CIFRA entradas del fichero entero con PROVISIONAL en su campo forma: 1
+   CIFRA entradas del fichero entero con PROVISIONAL en CUALQUIER campo: 3
+   CIFRA bytes: 584554 | sha256 69666b73339f2afe
+
+LO QUE EL COMPOSITOR HIZO, EN MEMORIA:
+   CIFRA lineas del fichero (incluida la ultima vacia): 673
+   CIFRA entradas no vacias: 672
+   CIFRA con forma N de M: 555
+   CIFRA INCOMPLETAS: 95
+   CIFRA entradas que el compositor MARCA en esta corrida: 95
+   LAS DOS CONVENCIONES DE VOLCADO QUE ESTE FICHERO TIENE DENTRO, MEDIDAS:
+      separadores (',', ':')   -> 335 linea(s)
+      separadores (', ', ': ') -> 337 linea(s)
+   CIFRA lineas que NO vuelven a su propio texto con NINGUNA de las dos: 0
+
+LA GUARDA DEL ENCARGO: SI EL INSTRUMENTO MARCA UN NUMERO DISTINTO DE 95,
+SE PARA Y SE TRAE, EN VEZ DE AJUSTAR LA CIFRA.
+   CIFRA que el encargo nombra: 95
+   CIFRA que este instrumento mide: 95
+   CALZAN: SI
+
+LAS TRES PRIMERAS MARCAS, ENTERAS, PARA QUE SE VEA LA FORMA DEL TEXTO:
+   linea 12 | customer_development_modelo | convencion de volcado (', ', ': ')
+      VIEJO: componente conexa de la relacion gemelo (banco 9.24)
+      NUEVO: componente conexa de la relacion gemelo (banco 9.24). FORMA PROVISIONAL (banco 9.26): la cobertura de esta entrada es INCOMPLETA, 16 de 36 pares leidos, y mientras falte un par la forma es PROVISIONAL y se dice asi. MARCADA EN LA VUELTA 214 (2026-09-09) POR DECISION DEL FUNDADOR, docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 1, y por el carril del banco 9.10: el texto viejo de este campo va entero y sin tachar delante de esta marca, que se ANEXA y no sustituye. La marca NO completa la cobertura: la DICE.
+   linea 15 | channels_hypothesis_physical | convencion de volcado (', ', ': ')
+      VIEJO: componente conexa de la relacion gemelo (banco 9.24)
+      NUEVO: componente conexa de la relacion gemelo (banco 9.24). FORMA PROVISIONAL (banco 9.26): la cobertura de esta entrada es INCOMPLETA, 8 de 10 pares leidos, y mientras falte un par la forma es PROVISIONAL y se dice asi. MARCADA EN LA VUELTA 214 (2026-09-09) POR DECISION DEL FUNDADOR, docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 1, y por el carril del banco 9.10: el texto viejo de este campo va entero y sin tachar delante de esta marca, que se ANEXA y no sustituye. La marca NO completa la cobertura: la DICE.
+   linea 16 | alineacion_etica_ia_negocio | convencion de volcado (', ', ': ')
+      VIEJO: componente conexa de la relacion gemelo (banco 9.24)
+      NUEVO: componente conexa de la relacion gemelo (banco 9.24). FORMA PROVISIONAL (banco 9.26): la cobertura de esta entrada es INCOMPLETA, 7 de 10 pares leidos, y mientras falte un par la forma es PROVISIONAL y se dice asi. MARCADA EN LA VUELTA 214 (2026-09-09) POR DECISION DEL FUNDADOR, docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 1, y por el carril del banco 9.10: el texto viejo de este campo va entero y sin tachar delante de esta marca, que se ANEXA y no sustituye. La marca NO completa la cobertura: la DICE.
+
+EL JUICIO ENTERO, SOBRE LOS DOS TEXTOS:
+   el numero de entradas no se mueve                              VERDE
+      CIFRA entradas antes 672, despues 672
+   las mismas entradas siguen siendo las INCOMPLETAS              VERDE
+      CIFRA incompletas antes 95, despues 95, en los mismos indices: SI
+   las INCOMPLETAS son EXACTAMENTE las que el encargo nombra      VERDE
+      CIFRA incompletas medidas 95, esperadas por el encargo 95
+   TODAS las incompletas quedan marcadas PROVISIONAL en su forma  VERDE
+      CIFRA incompletas 95, de ellas marcadas 95
+   NINGUNA entrada COMPLETA gana la marca en esta vuelta          VERDE
+      CIFRA marcadas fuera de las incompletas antes 1, despues 1 (las de antes NO son mias y no se tocan)
+   se mueven EXACTAMENTE las incompletas y ninguna mas            VERDE
+      CIFRA entradas cuyo JSON cambia 95, incompletas 95, son las mismas: SI
+   de las que se mueven, SOLO se mueve el campo forma             VERDE
+      ningun otro campo cambia en ninguna de las 95
+   el texto viejo de forma queda ENTERO Y DELANTE, sin tapar      VERDE
+      la forma nueva EMPIEZA por la vieja en las 95
+   el campo cobertura no se toca (la marca DICE, no COMPLETA)     VERDE
+      CIFRA coberturas movidas: 0 de 95
+   cada marca cita el banco 9.26 y la decision POR SU RUTA        VERDE
+      CIFRA marcas con las dos citas 95 de 95
+   la N y la M de cada marca salen de SU PROPIA cobertura         VERDE
+      CIFRA marcas cuya pareja de cifras calza con su cobertura 95 de 95
+   las lineas que NO son de las 95 salen IGUALES BYTE A BYTE      VERDE
+      CIFRA lineas identicas 578, CIFRA lineas reformateadas sin mandato 0
+   cero guiones largos y cero guiones medios                      VERDE
+      CIFRA guiones largos mas medios: 0
+   CIFRA comprobaciones que fallan: 0
+
+SIMULACION: NO SE ESCRIBE NADA. El fichero en disco queda como estaba.

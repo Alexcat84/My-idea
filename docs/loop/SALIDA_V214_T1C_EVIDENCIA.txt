@@ -1,0 +1,132 @@
+==============================================================================
+VUELTA 214, TAREA 1.c. LA PRUEBA DEL CIERRE DE OP-I-01, EN SU PROPIA SEDE. MODO --escribir
+==============================================================================
+EL CARRIL: banco 9.10, un elemento mas de la lista evidencia, como ya hizo
+esta misma ficha en la vuelta 201. NO SE ESCRIBE EL CAMPO estado.
+
+LAS RUTAS QUE EL TEXTO VA A PROMETER COMO PRUEBA, COMPROBADAS ANTES:
+   docs/loop/SALIDA_V214_T1_SIMULACION.txt              existe SI | 5726 bytes
+   docs/loop/SALIDA_V214_T1_MUTANTES.txt                existe SI | 7601 bytes
+   docs/loop/SALIDA_V214_T1_MARCAR_95.txt               existe SI | 8107 bytes
+   docs/loop/SALIDA_V214_T1C_OP_I_01.txt                existe SI | 5272 bytes
+   docs/loop/SALIDA_V214_T1_VARA.txt                    existe SI | 17336 bytes
+
+LAS CIFRAS DEL TEXTO NUEVO, LEIDAS DE SUS SALIDAS Y NO TECLEADAS:
+   amedias            2
+   bytes_antes        584554
+   bytes_despues      629533
+   caen               6
+   con_forma          555
+   cubre              2
+   entradas           672
+   incompletas        95
+   marcadas_antes     0
+   marcadas_despues   95
+   mutantes           6
+   nocubre            0
+   sha_antes          69666b73339f2afe
+   sha_despues        43cea06634e6fc1a
+
+LA FICHA VIVE EN LA LINEA 44 de docs/plan/OPERACIONES.jsonl
+
+EL TEXTO NUEVO, ENTERO, PARA QUE SE PUEDA LEER SIN ABRIR EL JSONL:
+   CORRECCION DECLARADA (2026-09-09, vuelta 214, TAREA 1 del encargo), POR EL
+   CARRIL DEL BANCO 9.10 Y CON EL TEXTO VIEJO ENTERO ARRIBA, SIN TACHARLO Y SIN
+   CLAVE NUEVA DE ESQUEMA (es un elemento mas de esta misma lista evidencia,
+   que es la via que esta ficha ya uso en la vuelta 201 y la ficha gemela
+   OP-L-01 en la vuelta 166). QUIEN LO ORDENA, POR SU RUTA Y NO DE MEMORIA:
+   docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 1 del
+   fundador. LO QUE SE ANADE ES LA PRUEBA DEL CIERRE DEL PUNTO 2 DE
+   verificacion, que decia verbatim 'toda forma con cobertura incompleta va
+   marcada PROVISIONAL' y que la vuelta 211 midio en NO CUBRE. LO EJECUTADO,
+   MEDIDO Y NO PROMETIDO: las 95 entradas de docs/plan/INVENTARIO.jsonl con
+   cobertura de la forma N de M INCOMPLETA quedan marcadas PROVISIONAL en su
+   campo forma, por instrumento (scripts/loop/_v214_t1_marcar_95.py) y nunca a
+   mano. El conteo va ANTES y DESPUES sobre el mismo fichero: incompletas
+   marcadas 0 al entrar y 95 al salir, sobre 672 entradas totales y 555 con
+   forma N de M. El fichero pasa de 584554 a 629533 bytes y su sha256 de
+   69666b73339f2afe a 43cea06634e6fc1a. LA MARCA SE ANEXA Y NO SUSTITUYE: el
+   texto viejo del campo forma queda entero y delante en las 95, y el campo
+   cobertura NO se toca, porque la marca DICE la cobertura incompleta y no la
+   COMPLETA (banco 9.26). LA GUARDA DEL ENCARGO SE CUMPLIO SIN AJUSTAR NADA: si
+   el instrumento hubiera marcado un numero distinto de 95, la vuelta paraba.
+   EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION: 6 mutantes y los 6 caen,
+   con el texto bueno pasando el mismo juicio en 0 fallos
+   (docs/loop/SALIDA_V214_T1_MUTANTES.txt). LOS CUATRO PUNTOS RE-MEDIDOS HOY,
+   en docs/loop/SALIDA_V214_T1C_OP_I_01.txt: 2 en CUBRE, 2 en A MEDIAS y 0 en
+   NO CUBRE; el punto 2 se mueve de NO CUBRE a CUBRE y es el unico que se
+   mueve. Y LA DISCREPANCIA SE DECLARA EN VEZ DE TAPARSE: los puntos 3 y 4
+   SIGUEN EN A MEDIAS y esta vuelta no los mueve. El 3 porque su mitad
+   pendiente es una NEGATIVA ('nunca rellenado') y una busqueda negativa no se
+   puede citar; el 4 porque su mitad pendiente es regenerar la vista humana, y
+   docs/plan/10_INVENTARIO.md declara en su linea 19 que NO se regenera ahi A
+   PROPOSITO. Ninguno de los dos es NO CUBRE y ninguno lo levanta el bucle por
+   su cuenta: suben NOMBRADOS a la auditoria integral. NINGUN CAMPO estado SE
+   MUEVE CON ESTA CORRECCION, ni en esta ficha ni en ninguna otra: la vara del
+   trabajo pendiente es el instrumento y nunca el campo estado (recuadro de
+   AUDITOR.md 0, decision del fundador del 4 sep 2026). LO QUE ESTA CORRECCION
+   NO HACE: no borra ni tacha ninguna cifra vieja, no toca ni un nodo, no mueve
+   ni un veredicto, no regenera el inventario y no cambia las dependencias de
+   ninguna ficha.
+
+EL JUICIO ENTERO:
+   el numero de fichas no se mueve                                VERDE
+      CIFRA fichas antes 71, despues 71
+   cambia EXACTAMENTE una linea del expediente                    VERDE
+      CIFRA lineas que cambian: 1
+   la linea que cambia es la de OP-I-01                           VERDE
+      id_op antes 'OP-I-01', despues 'OP-I-01'
+   de esa ficha, SOLO se mueve la lista evidencia                 VERDE
+      ningun otro campo cambia, y no nace ninguna clave de esquema
+   el campo estado NO se mueve en NINGUNA ficha del fichero       VERDE
+      CIFRA fichas cuyo estado cambia: 0
+   la lista evidencia crece en EXACTAMENTE un elemento            VERDE
+      CIFRA elementos antes 4, despues 5
+   los elementos viejos quedan ENTEROS y en su orden, sin tachar  VERDE
+      CIFRA elementos viejos identicos 4 de 4
+   el elemento nuevo cita el carril 9.10 y la decision POR SU RUTA VERDE
+      las dos citas presentes: SI
+   el elemento nuevo dice que NINGUN campo estado se mueve        VERDE
+      la clausula esta escrita: SI
+   TODAS las cifras del texto salen de una salida sellada         VERDE
+      CIFRA cifras que no se pudieron leer de su fichero: 0 
+   el texto nuevo no publica ningun None                          VERDE
+      CIFRA apariciones de None en el texto nuevo: 0
+   las rutas que el texto promete como prueba EXISTEN y no son de 0 bytes VERDE
+      CIFRA rutas inexistentes o vacias: 0 []
+   cero guiones largos y cero guiones medios                      VERDE
+      CIFRA guiones largos mas medios: 0
+   CIFRA comprobaciones que fallan: 0
+
+ESCRITO docs/plan/OPERACIONES.jsonl
+   RELECTURA DEL DISCO identica a lo juzgado: SI
+EL JUICIO OTRA VEZ, YA CONTRA EL DISCO:
+   el numero de fichas no se mueve                                VERDE
+      CIFRA fichas antes 71, despues 71
+   cambia EXACTAMENTE una linea del expediente                    VERDE
+      CIFRA lineas que cambian: 1
+   la linea que cambia es la de OP-I-01                           VERDE
+      id_op antes 'OP-I-01', despues 'OP-I-01'
+   de esa ficha, SOLO se mueve la lista evidencia                 VERDE
+      ningun otro campo cambia, y no nace ninguna clave de esquema
+   el campo estado NO se mueve en NINGUNA ficha del fichero       VERDE
+      CIFRA fichas cuyo estado cambia: 0
+   la lista evidencia crece en EXACTAMENTE un elemento            VERDE
+      CIFRA elementos antes 4, despues 5
+   los elementos viejos quedan ENTEROS y en su orden, sin tachar  VERDE
+      CIFRA elementos viejos identicos 4 de 4
+   el elemento nuevo cita el carril 9.10 y la decision POR SU RUTA VERDE
+      las dos citas presentes: SI
+   el elemento nuevo dice que NINGUN campo estado se mueve        VERDE
+      la clausula esta escrita: SI
+   TODAS las cifras del texto salen de una salida sellada         VERDE
+      CIFRA cifras que no se pudieron leer de su fichero: 0 
+   el texto nuevo no publica ningun None                          VERDE
+      CIFRA apariciones de None en el texto nuevo: 0
+   las rutas que el texto promete como prueba EXISTEN y no son de 0 bytes VERDE
+      CIFRA rutas inexistentes o vacias: 0 []
+   cero guiones largos y cero guiones medios                      VERDE
+      CIFRA guiones largos mas medios: 0
+   CIFRA comprobaciones que fallan sobre el disco: 0
+
+VERDE: la ficha tiene su prueba.

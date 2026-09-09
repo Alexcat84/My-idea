@@ -1,0 +1,80 @@
+==============================================================================
+VUELTA 214, TAREA 1.c. LOS CUATRO PUNTOS DE OP-I-01, RE-MEDIDOS HOY
+==============================================================================
+LA FICHA ESCRIBE LOS PUNTOS Y NO ESCRIBE SU ESTADO. CUBRE, A MEDIAS y NO
+CUBRE son veredictos MEDIDOS por este instrumento sobre el arbol de hoy.
+
+CIFRA puntos de verificacion de OP-I-01, contados de la ficha: 4
+CIFRA campo estado de la ficha, LEIDO y NO usado como vara: 'LISTA'
+
+CIFRA veredictos de contraste leidos de docs/loop/SALIDA_V211_T2_OP_I_01.txt: 4
+
+==============================================================================
+PUNTO POR PUNTO, CADA UNO CON SU CIFRA DE HOY Y SU CITA
+==============================================================================
+   PUNTO 1, PEGADO ENTERO DE LA FICHA:
+      toda entrada lleva su fecha_corte
+      VEREDICTO MEDIDO HOY: **CUBRE**
+      VEREDICTO DE LA VUELTA 211, COMO CONTRASTE: **CUBRE**
+      SE MUEVE: NO, calza con el contraste
+      LO MEDIDO: CIFRA entradas: 672. CIFRA con fecha_corte: 672. CIFRA sin fecha_corte: 0.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/10_INVENTARIO.md linea 7: > que se copia lleva su fecha de corte**. Lo que no existe todavia **se escribe
+
+   PUNTO 2, PEGADO ENTERO DE LA FICHA:
+      toda forma con cobertura incompleta va marcada PROVISIONAL
+      VEREDICTO MEDIDO HOY: **CUBRE**
+      VEREDICTO DE LA VUELTA 211, COMO CONTRASTE: **NO CUBRE**
+      SE MUEVE: SI, de NO CUBRE a CUBRE
+      LO MEDIDO: CIFRA entradas con cobertura de la forma 'N de M pares leidos': 555. De esas, INCOMPLETAS (N menor que M): 95. De esas incompletas, con PROVISIONAL en su campo forma: 95. CIFRA incompletas SIN marcar: 0.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/INVENTARIO.jsonl, contado hoy campo a campo; y la regla en docs/BANCO_DE_TEXTOS.md linea 2847: > posibles.** Y **mientras falte un par, la forma es PROVISIONAL** y se dice asi.
+
+   PUNTO 3, PEGADO ENTERO DE LA FICHA:
+      todo hueco va NOMBRADO, nunca rellenado
+      VEREDICTO MEDIDO HOY: **A MEDIAS**
+      VEREDICTO DE LA VUELTA 211, COMO CONTRASTE: **A MEDIAS**
+      SE MUEVE: NO, calza con el contraste
+      LO MEDIDO: LA MITAD QUE SE PUEDE MEDIR: CIFRA entradas que nombran HUECO en algun campo: 119, o sea que el hueco SI se nombra. LA MITAD QUE NO SE PUEDE MEDIR: 'nunca rellenado' es una NEGATIVA, y una busqueda negativa no se puede citar (EJECUTOR.md 9). Por eso no se escribe CUBRE, y NO es un defecto de esta vuelta: es un limite de la clausula.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/10_INVENTARIO.md linea 8: > como HUECO NOMBRADO, no se rellena.**
+
+   PUNTO 4, PEGADO ENTERO DE LA FICHA:
+      el inventario se recomputa entero con el disparador de 08_VERIFICACION
+      VEREDICTO MEDIDO HOY: **A MEDIAS**
+      VEREDICTO DE LA VUELTA 211, COMO CONTRASTE: **A MEDIAS**
+      SE MUEVE: NO, calza con el contraste
+      LO MEDIDO: EL DISPARADOR YA DISPARO Y LAS DOS MITADES NO FUERON A LA VEZ. El archivo fuente SI se recomputo. La vista humana NO, y lo dice ella misma con todas las letras en su propio aviso. 'El inventario' son las dos formas que la adjudicacion de la ficha nombra, y solo una esta al dia. MEDIDO HOY: docs/plan/INVENTARIO.jsonl tiene 672 entradas; la vista humana sigue publicando su aviso de corte 2.117 en su linea 15.
+      CITA, CON SU FICHERO Y SU LINEA: docs/plan/08_VERIFICACION.md linea 381: **Se dispara EL DIA QUE EL CRIBADO LLEGUE AL PUESTO 3.388**, y no antes. Es la | docs/plan/10_INVENTARIO.md linea 19: > **LA TABLA NO SE REGENERA AQUI, A PROPOSITO:** la regla de arriba dice que est
+
+EL REPARTO DE HOY, CONTADO DE LOS CUATRO VEREDICTOS DE ARRIBA:
+   A MEDIAS   2
+   CUBRE      2
+   CIFRA puntos: 4 | CIFRA puntos SIN cita CON SU LINEA: 0 (se exige 0)
+   LA GUARDA MIRA LA LINEA Y NO SOLO EL TEXTO: una cita que dice 'linea
+   None' NO es una cita, y la primera corrida de este instrumento publico
+   exactamente eso en el punto 3. Se caza aqui y no se deja pasar.
+
+CIFRA puntos cuyo veredicto SE MUEVE respecto de la 211: 1
+   PUNTO 2: NO CUBRE -> CUBRE
+
+==============================================================================
+LO QUE ESTO SIGNIFICA PARA EL CIERRE, DICHO SIN ADORNO
+==============================================================================
+CIFRA puntos en NO CUBRE: 0 
+CIFRA puntos en A MEDIAS: 2 [3, 4]
+
+LA DISCREPANCIA CON EL ENCARGO SE DECLARA Y NO SE RESUELVE COPIANDO
+(EJECUTOR.md 2 y 8): el encargo y la DECISION 1 del fundador nombran EL
+PUNTO 2 como lo que bloquea, y el punto 2 se ha movido a CUBRE hoy. PERO
+LOS PUNTOS 3 Y 4 SIGUEN EN A MEDIAS, y no los mueve esta vuelta ni los
+podria mover el marcado de las 95:
+   PUNTO 3: su mitad pendiente es UNA NEGATIVA ('nunca rellenado'), y una
+   busqueda negativa no se puede citar. No es trabajo que quede: es un
+   limite de como esta escrita la clausula.
+   PUNTO 4: su mitad pendiente es REGENERAR LA VISTA HUMANA, y el propio
+   documento declara que NO se regenera ahi A PROPOSITO. Es trabajo de la
+   escala del disparador, no de una vuelta.
+NINGUNO DE LOS DOS ES 'NO CUBRE', y ninguno de los dos lo levanta el
+bucle por su cuenta. SE SUBEN NOMBRADOS.
+
+CIFRA comprobaciones que fallan: 0
+
+VERDE: los cuatro puntos quedan re-medidos.
