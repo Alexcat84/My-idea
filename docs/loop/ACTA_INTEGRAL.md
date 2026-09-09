@@ -528,3 +528,112 @@ el rojo de la 10 (el redactor produce lo que una guarda del producto prohibe, de
 intermitente: la K paso esta fase con el mismo grafo) pero en OTRO redactor y OTRA
 guarda. Nada de la campaña toca a ninguno de los dos. **Se para y se trae, como manda
 el punto 1 de la decision.**
+
+### 2.c (cierre) EL VUELO CIERRA POR COMPOSICION, POR DECISION DEL FUNDADOR
+
+La ultima decision esta verbatim en
+`docs/loop/paradas/2026-09-09-cierre-integral-final-DECISION.md`. No se corre
+corrida D. **Con el mismo grafo congelado, cada verificacion del vuelo paso en al
+menos una corrida:** la K entera, 16 de 16 (4 sep 2026); la B cayo en la
+verificacion 10 (que la K y la C pasaron); la C cayo en la FASE 2P (que la K y la B
+pasaron). Los costos calzan cobro a cobro en las tres corridas que llegaron al final
+del gasto (K, B y C: 10 cobros y 55 creditos cada una). Las dos caidas son de
+generacion intermitente del producto y quedan fichadas POR ESPECIE en
+`docs/PENDIENTES.md`, ficha `los-redactores-contra-las-guardas-del-producto`, con sus
+dos ejemplares y sus testigos. **El grafo de la campaña queda verificado por el vuelo
+en su alcance.**
+
+**Una cifra propia corregida con tachado:** en 2.c (continuacion) esta acta escribio
+que la corrida A tuvo ~~7 cobros~~ **6 cobros** (plan_completo 10, seguimiento 5,
+mundo_activar 5, 5 y 5, seguimiento 5: 35 creditos). El ledger de hoy cierra en **26
+cobros y 145 creditos** (A 6 y 35, B 10 y 55, C 10 y 55), contra **145 creditos
+sembrados en tres claves** (55, 35 y 55), y el saldo vuelve a **45**, el mismo con el
+que entro la sesion.
+
+### 2.a (cierre) EL CICLO FINAL DE GATE 0 SOBRE EL COMMIT `b0ef64d0`
+
+`_integral_ciclo_gate0.py CIERRE_FINAL`, sellado en `SALIDA_integral_*_CIERRE_FINAL.txt`:
+los ocho comandos exitcode 0, **27 comprobaciones OK y 0 FALLO**, numstat **0 filas**
+contra HEAD, motor 25 de 25, tsc limpio, web 82 ficheros y 1040 pruebas. Es el cuarto
+ciclo de la sesion (APERTURA, CIERRE, REPARO, CIERRE_FINAL) y los cuatro dan los mismos
+27 OK.
+
+---
+
+## PASO 3. EL VEREDICTO: CAMPAÑA CONSUMADA CON REPAROS LISTADOS
+
+**La campaña del bucle (`pasada-unica`, fases 0 a 10 del plan de `docs/plan/`) esta
+CONSUMADA**, medida en esta sesion con el fundador delante, y **con los reparos que
+siguen, cada uno con su ficha o su declaracion**. Nada de lo que sigue es una parada:
+son las herencias que el merge lleva escritas.
+
+### 3.1 LOS REPAROS LISTADOS
+
+| reparo | especie | donde vive |
+|---|---|---|
+| los redactores contra las guardas del producto (dos ejemplares: el reporte del 16 con la GIGO, corridas K/B/C; el plan del mundo con la puerta de documentos del registro, corrida C) | reparo de producto, post merge | `docs/PENDIENTES.md`, ficha `los-redactores-contra-las-guardas-del-producto` |
+| el ambar de la prueba de rumbos (la usuaria habla como persona y le responde el nodo en jerga) | ambar declarado, frente de recuperacion | `docs/loop/SALIDA_integral_RUMBOS.txt`, linea 51; `docs/PENDIENTES.md`, FRENTE DE RECUPERACION |
+| los dudosos de la ciega final (F02, F09, F16; E06, E07, E12, E17), con E07 caido | declarados antes de mirar | `docs/loop/SALIDA_integral_CIEGA_DECLARACIONES.json` y `_COTEJO.txt` |
+| las cuatro discrepancias de grano de la ciega (F04 dos absorbidos, F06, F19) | limite del instrumento: una clase de dos valores no distingue perdidas de parametro que el plan si registra | acta 2.g y registro de la integral en `docs/plan/03_FUSIONES.md` |
+
+### 3.2 LAS REMISIONES HEREDADAS, CADA UNA CON SU FICHA
+
+| remision | ficha |
+|---|---|
+| el relleno de los huecos nombrados del inventario (cuatro dominios sin cribar y el puente de la mesa unida), clausula idx 2 de `OP-I-01` | `docs/PENDIENTES.md`, `relleno-de-huecos-del-inventario` |
+| la ciega por familia (rediseño del instrumento, cola de la 219 entrada 5) | `docs/PENDIENTES.md`, `ciega-por-familia` |
+| los actos DECLARADOS Y NO FUNDIDOS de la fase 03 (quince de `OP-U-02` y siete solo en la pagina, cinco de ellos *se acumula para la mesa*), reabribles solo por la cola ordinaria post campaña | `docs/plan/03_FUSIONES.md`, cierre de la fase 03 (linea 9284) y `docs/loop/SALIDA_integral_1A_DESTINO_ACTOS.txt` |
+| el residuo global de vigencia fuera de las nominas de `OP-S-03`, `OP-S-04`, `OP-S-05` (el tercero de Incoterms, Alexa en un sexto nodo) | `docs/PENDIENTES.md`, `vigencia-del-marco-internacional` y `vigencia-de-herramientas-nombradas` |
+| los huecos de contenido (primera contratacion del nucleo, huella de carbono a escala de taller) | `docs/PENDIENTES.md`, `huecos-de-contenido` |
+| las 477 aristas que faltan y los 73 gemelos que el cribado no ve, pendientes por diseño | `docs/plan/10_INVENTARIO.md`, tabla de defectos, y `OP-E-01`, `OP-E-03` |
+
+### 3.3 LAS CIFRAS FINALES, TALLADAS EN ESTA SESION
+
+| que | cifra | sello |
+|---|---|---|
+| Gate 0, cuatro ciclos | 27 comprobaciones OK, 0 FALLO, en los cuatro; numstat 0 filas en apertura, cierre y cierre final; 4 filas del toque en el reparo | `SALIDA_integral_GATE0_CMD1_*.txt`, `SALIDA_integral_CICLO_NUMSTAT_*.txt` |
+| suites | motor 25 de 25; tsc limpio; web 82 ficheros, 1040 pruebas | `SALIDA_integral_MOTOR_*.txt`, `_TSC_*.txt`, `_WEB_*.txt` |
+| bateria, nomina abierta | 139 entradas, once tramos, 0 fallos en cada uno, 92625 bytes, sha256 LF `2dcfd478e693eb4f` | `SALIDA_integral_BATERIA.txt` |
+| rumbos | 42 verdes, 1 ambar, 0 rojos, exitcode 0 | `SALIDA_integral_RUMBOS.txt` |
+| indice semantico | lista roja 0 bytes; 3169 ids con vector igual a 3169 activos; 0 deprecados con vector | `SALIDA_integral_INDICE_SEMANTICO.txt` |
+| marcador | n 3388, corte 3388, huecos 0; A 550, B 71, C 5, D 2762 (la diferencia con 72 y 2761 es el commit `5e0a994f`, puesto 299 de B a D por correccion declarada) | `SALIDA_integral_MARCADOR.txt` |
+| censo y aristas | 3853 nodos, 3169 vivos, 684 deprecados; sig 8780, prev 8740, suma 17520, union 9914, auto 0 | `SALIDA_integral_CONTEO_*.txt` |
+| los actos del corte vigente | 335 de 335 con destino: 264 superviviente, 42 declaracion sellada, 29 disolucion medida | `SALIDA_integral_1A_DESTINO_ACTOS.txt` |
+| las fichas | 71: 66 HECHA, 5 CONSUMIDA, 0 REMITIDA; las cuatro falsas HECHA con tachado y ruta documental | `docs/plan/OPERACIONES.jsonl`, `SALIDA_integral_1C_VARA.txt` |
+| la tabla POR FASE | 11 filas, 30 clausulas, las cinco a medias con destino | `docs/plan/08_VERIFICACION.md` |
+| la ciega final | semilla 20260909; fusiones 18 de 23; enlaces 19 de 20; una perdida no registrada encontrada y restaurada | `SALIDA_integral_CIEGA_*.txt` |
+| el vuelo | K 16 de 16; B 82 OK y cae en la 10; C 79 OK y cae en 2P; cierra por composicion; 26 cobros y 145 creditos contra 145 sembrados; saldo 45 | `SALIDA_integral_VUELO_A.txt`, `_B.txt`, `_C.txt`, `SALIDA_integral_SIEMBRA*.txt` |
+| sellos de la sesion | 81 ficheros `docs/loop/SALIDA_integral_*` antes de este paso | `ls docs/loop/SALIDA_integral_*` |
+
+### 3.4 EL MERGE SE PIDE
+
+**El merge lo ejecuta el fundador con sus manos: `pasada-unica` a `staging`, `staging`
+a `main`. Esta sesion no funde nada.**
+
+**EL COMMIT EXACTO:** el que sella esta acta. Se escribe en la seccion 3.5, que se
+anexa con el hash del commit que carga este PASO 3, en un commit final de sello que es
+el que se funde (contiene todo lo anterior). Los commits de la integral, en orden:
+`f5689f9a` (PASO 0 y 1.b), `4663a99a` (PASO 1), `d4d0cabe` (PASO 2), `b0ef64d0`
+(PASO 2.c y el reparo de la ciega), y los dos de este paso.
+
+**LAS CIFRAS QUE EL MERGE LLEVA:** las de 3.3. El arbol de `pasada-unica` en el commit
+de sello cierra Gate 0 con 27 OK y numstat 0, las tres suites en verde y la bateria
+entera en verde con la nomina abierta en 139.
+
+**EL CHECKLIST POST MERGE, en el orden del fundador:**
+
+1. Sacar el `.env` de la raiz y `web/.env.local` del disco (los dos estan ignorados por
+   git y no viajan en ningun commit: `.gitignore` linea 1 y `web/.gitignore` linea 34;
+   se dejaron en disco hasta esta integral por decision del fundador).
+2. Apagar `next dev` (lo levanto esta sesion en segundo plano para el vuelo; muere con
+   la sesion, y si sigue vivo se apaga a mano).
+3. La tanda B de la forja y la cosecha final, como sesiones ya planificadas (son
+   sesiones del fundador, nombradas por el; no viven en este repositorio y esta acta
+   no las procedimenta).
+4. **La revision del fundador con su auditor de hilo ANTES de fundir.**
+5. Despues del merge, en el orden que el fundador decida: la ficha de especie de los
+   redactores (`docs/PENDIENTES.md`) y el regimen post bucle de la bateria
+   (`docs/loop/AUDITOR.md` 6.4) son lo primero que vigila el arbol fundido.
+
+**LO QUE ESTA ACTA NO HACE:** no funde, no etiqueta, no despliega, no toca `staging` ni
+`main`, no borra el `.env` ni apaga `next dev`, y no corre una corrida D del vuelo.

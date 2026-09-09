@@ -17368,7 +17368,25 @@ Y los dos huecos de contenido de la ficha `huecos-de-contenido` de esta misma pa
 
 **Lo que la ficha pide:** una ciega que, para cada par sorteado, muestre tambien **la familia** (los miembros del acto al que pertenecen los dos nodos y los veredictos ya escritos entre ellos), para que la clase B y la clase C se puedan adjudicar con lo mismo que el archivo tuvo delante. **Condicion de cierre:** una ciega de 20 con la tasa de acierto de las B y las C publicada al lado de la de las A y las D.
 
-## Ficha post campaña: `redactor-del-16-cifras-derivadas` (reparo de producto, auditoria integral 9 sep 2026)
+## Ficha post campaña: ~~`redactor-del-16-cifras-derivadas`~~ **`los-redactores-contra-las-guardas-del-producto`** (FICHA DE ESPECIE, reparo de producto, auditoria integral 9 sep 2026)
+
+**REFORMULADA COMO FICHA DE ESPECIE por decision del fundador (punto 1 de
+`docs/loop/paradas/2026-09-09-cierre-integral-final-DECISION.md`): un redactor del producto
+genera, de forma intermitente, lo que una guarda del producto prohibe, con el grafo congelado
+identico al de la corrida K. Dos ejemplares, cada uno con su testigo; el texto de abajo (el primer
+ejemplar, escrito antes de la reformulacion) no se borra.**
+
+| ejemplar | el redactor | la guarda testigo | la serie |
+|---|---|---|---|
+| 1 | el redactor del reporte del 16 (`web/lib/engine/reporteFlow.ts`) escribio *generando $52 de ganancia mensual*, cifra derivada fuera del material | la guarda GIGO de huerfanos (`web/lib/verificadorHuerfanos.ts`), triage en el producto y fallo en el vuelo (`web/scripts/vuelo.ts` 2530 a 2535) | K paso, B cayo, C paso (`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt`, `SALIDA_integral_VUELO_B.txt`, `SALIDA_integral_VUELO_C.txt`) |
+| 2 | el redactor del plan del mundo `risk_management` escribio un item de etapa 2 que pide *un rango de probabilidad en porcentaje (por ejemplo, "30 a 50% de que ocurra en los proximos tres meses")*, donde el banco 7.1 manda severidad en palabras; **ese texto no esta en ningun nodo del catalogo** (`grep` sobre `dataset/nodos/`: cero ficheros) | la puerta de documentos del registro de riesgos (`web/scripts/vuelo.ts` 2780 a 2781: `N/M`, `N de M` o `%` en el markdown de `web/lib/registroProteccion.ts`) | K paso, C cayo (`docs/loop/SALIDA_integral_VUELO_C.txt`, FASE 2P; proyecto `c3b7a003`, plan `9b98e3d8`) |
+
+**La cura probable, en palabras del fundador:** una sola revision, los prompts de los redactores
+contra el banco 7.1 y la calibracion de esas guardas (bloquear contra triage). **Trabajo post
+merge.** Condicion de cierre: tres corridas seguidas del vuelo con las dos guardas en verde tras
+la revision.
+
+### El primer ejemplar, tal como se escribio antes de la reformulacion
 
 **De donde sale.** Decision del fundador, punto 1 de
 `docs/loop/paradas/2026-09-09-cierre-integral-2c-DECISION.md`: el rojo de la verificacion 10 del
