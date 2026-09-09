@@ -1,0 +1,229 @@
+==============================================================================
+VUELTA 218, TAREA 1. LOS REGISTROS
+==============================================================================
+
+1.a. EL RECUENTO CORREGIDO DE LAS DIECISIETE, CON SUS TRES FUENTES LEIDAS
+
+   FUENTE 1, LA CELDA: docs/plan/08_VERIFICACION.md, linea 30, LEIDA DEL FICHERO
+      | **07 ADUANA** | los cuatro controles mecanicos **corriendo en Gate 0** |
+   FUENTE 2, LA FICHA: docs/plan/OPERACIONES.jsonl, linea 33, id_op OP-A-02, fase 07_ADUANA
+      CIFRA clausulas de verificacion de esa ficha: 5 | CIFRA indice de la que decide: 3
+      VERBATIM idx 3: los CINCO controles mecanicos corriendo: auto-arista con resolucion, lista blanca de claves, control posicional del campo fuente, campo fuente canonico, y revision de nomina por dominio
+   FUENTE 3, LA PAGINA DE LA FASE: docs/plan/07_ADUANA.md, linea 80
+      **LOS CINCO CONTROLES MECANICOS QUE LA ACOMPANAN:**
+      EL QUINTO, CON SU ORIGEN: | **revision de toda nomina por el DOMINIO de sus miembros** | control mecanico del 13 ago 2026 |
+
+   LAS DOS CIFRAS ENFRENTADAS, CADA UNA CONTADA DE SU FICHERO:
+   CIFRA que la celda de la pagina 08 pide: 4 | CIFRA que la clausula de la ficha pide: 5
+   la celda dice literalmente 'cuatro controles mecanicos': SI
+   la ficha dice literalmente 'CINCO controles mecanicos': SI
+   QUIEN MANDA, Y NO LO INVENTO YO: la correccion declarada de la vuelta 214 escrita en docs/plan/08_VERIFICACION.md dice que las filas no se inventan, se derivan, y que cada celda se compone de las clausulas de verificacion que las propias fichas traen. MANDA LA FICHA.
+   esa correccion declarada vive en la linea 64 de docs/plan/08_VERIFICACION.md, leida del fichero
+
+   LA TABLA DE LAS DIECISIETE, CONTADA DEL FICHERO SELLADO DE LA 217 Y NO TECLEADA, Y CON LA CORRECCION ENCIMA:
+   CIFRA filas armadas leyendo docs/loop/SALIDA_V217_T1_DIECISIETE.txt: 17 | CIFRA que deberia haber: 17
+   EL REPARTO ANTES DE LA CORRECCION, CONTADO DE ESAS FILAS: CUBRE 12 | A MEDIAS 5 | NO CUBRE 0
+   CORRECCION DECLARADA SOBRE LA FILA 17, 07 ADUANA idx 0: el veredicto viejo era CUBRE y el nuevo es A MEDIAS. EL VIEJO NO SE BORRA, SE ESCRIBE AL LADO.
+   CIFRA filas tocadas por la correccion: 1 | CIFRA que deberia haber: 1
+
+   CIFRA clausulas en CUBRE, RECOMPUTADAS: 11 de 17 | CIFRA que la 217 publico: 12
+   CIFRA clausulas en A MEDIAS, RECOMPUTADAS: 6 de 17 | CIFRA que la 217 publico: 5
+   CIFRA clausulas en NO CUBRE, RECOMPUTADAS: 0 de 17 | CIFRA que la 217 publico: 0
+
+   LA TABLA ENTERA, TRAS LA CORRECCION:
+| # | fila | idx | veredicto | la clausula, VERBATIM |
+|---:|---|---:|---|---|
+| 1 | 0 CODIGO | 0 | CUBRE | cada caso positivo **se cae antes** del arreglo y pasa despues |
+| 2 | 01 FUENTES | 0 | A MEDIAS | ningun nodo de la clase con pasos alterados |
+| 3 | 01 FUENTES | 1 | A MEDIAS | **el material del segundo libro reubicado, no borrado** |
+| 4 | 02 DESTEJIDOS | 0 | CUBRE | los **quince congelados** releidos |
+| 5 | 02 DESTEJIDOS | 1 | A MEDIAS | **cada perdida en el bloque del que proviene** |
+| 6 | 03 FUSIONES | 0 | A MEDIAS | un superviviente por acto, el resto **DEPRECADO CON ALIAS** |
+| 7 | 03 FUSIONES | 1 | CUBRE | `resolverId` devuelve el superviviente |
+| 8 | 04 ENLACES | 0 | CUBRE | cada arista nueva **confirmada por lectura**, no por el instrumento |
+| 9 | 04 ENLACES | 1 | CUBRE | ninguna crea auto-arista tras resolver |
+| 10 | 05 SANEO | 0 | CUBRE | ningun id vivo con tratado extinto |
+| 11 | 05 SANEO | 1 | A MEDIAS | los tres de Incoterms con su version |
+| 12 | 05 SANEO | 2 | CUBRE | ningun nodo cablea `export.gov` |
+| 13 | 05 SANEO | 3 | CUBRE | ninguna de las seis herramientas muertas |
+| 14 | 05 SANEO | 4 | CUBRE | ningun nodo con dos claves de fase |
+| 15 | 05 SANEO | 5 | CUBRE | **ningun nodo se cita a si mismo tras resolver** |
+| 16 | 06 MESAS | 0 | CUBRE | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
+| 17 | 07 ADUANA | 0 | A MEDIAS (CORREGIDA: la 217 publico CUBRE) | los cuatro controles mecanicos **corriendo en Gate 0** |
+
+   LAS SEIS QUE NO DAN CUBRE, CON SU FILA Y SU INDICE:
+   01 FUENTES     idx 0 | A MEDIAS  | ningun nodo de la clase con pasos alterados
+   01 FUENTES     idx 1 | A MEDIAS  | **el material del segundo libro reubicado, no borrado**
+   02 DESTEJIDOS  idx 1 | A MEDIAS  | **cada perdida en el bloque del que proviene**
+   03 FUSIONES    idx 0 | A MEDIAS  | un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+   05 SANEO       idx 1 | A MEDIAS  | los tres de Incoterms con su version
+   07 ADUANA      idx 0 | A MEDIAS  | los cuatro controles mecanicos **corriendo en Gate 0**
+   CIFRA filas que no dan CUBRE, contadas de esa lista: 6 | CIFRA que deberia haber: 6
+
+==============================================================================
+1.b. LAS CUATRO ADJUDICACIONES A FAVOR DE MI LECTURA, CON SU LINEA LEIDA
+==============================================================================
+
+   EL ACTA 217 EMPIEZA EN LA LINEA 77030 de docs/loop/ACTA_AUDITOR.md, LEIDA DEL FICHERO
+   CIFRA adjudicaciones a registrar: 4 | CIFRA que deberia haber: 4
+
+| rotulo | adjudicacion del acta 217 | su linea, LEIDA | clausula | veredicto que se sostiene | por que |
+|---|---|---:|---|---|---|
+| **D.a** | 5.1 | 77231 | 01 FUENTES idx 0 | **A MEDIAS, SIN CAMBIO** | la clausula dice pasos ALTERADOS y alterar es cambiar, no contar |
+| **D.b** | 5.2 | 77242 | 01 FUENTES idx 1 | **A MEDIAS, SIN CAMBIO** | un nodo que sigue declarando dos o mas fuentes no ha reubicado nada |
+| **D.c** | 5.3 | 77250 | 02 DESTEJIDOS idx 1 | **A MEDIAS, SIN CAMBIO** | la LECTURA se adjudica al detector ANCHO, nombrar el bloque cumple la clausula y la formula literal no es la vara, pero el veredicto no sube con un detector mas ancho |
+| **D.d** | 5.4 | 77262 | 03 FUSIONES idx 0 | **A MEDIAS, SIN CAMBIO** | se sostiene bajo LAS DOS lecturas del universo, la ancha con 71 actos sin fundir y la estrecha con las SEIS fusiones de 19 nodos que la remision de la fase 03 dejo enrutadas |
+
+   Y LA QUINTA, LA QUE SI CAMBIA UNA CIFRA: `D.e` se adjudica en la 5.5 del acta 217, linea 77275, y baja la clausula de 07 ADUANA idx 0 de CUBRE a A MEDIAS. Es la correccion de la 1.a.
+
+==============================================================================
+1.c. LAS DOS DISCREPANCIAS DE LA CIEGA, MEDIDAS CONTRA EL GRAFO
+==============================================================================
+
+   EL GRAFO ES EL VIVO Y TODO ID PASA POR EL RESOLUTOR ANTES DE CONTAR (P.1 del banco del plan).
+   CIFRA nodos del grafo vivo: 3853
+
+   CIFRA veredictos en el registro: 3388
+
+   PUESTO 299. entrenamiento_de_gerentes_para_despidos contra proceso_despidos_responsables
+      CIFRA registros con ese puesto: 1 | CIFRA que deberia haber: 1
+      CLASE EN EL ARCHIVO AL ENTRAR: B
+      NODO proceso_despidos_responsables | resuelve a proceso_despidos_responsables | deprecado: NO | CIFRA pasos: 5
+         entregable: Protocolo escrito de despidos con guion para gerentes, cronograma de ejecución y plan de comunicación interna
+         paso  1) Aceptar mentalmente la responsabilidad de la decisión antes de actuar
+         paso  2) Minimizar el tiempo entre la decisión y la ejecución para evitar filtraciones
+         paso  3) Definir el mensaje central: es un fracaso de la empresa, no de las personas despedidas
+         paso  4) Entrenar a cada gerente para que despida personalmente a su propio equipo, explicando la situación, dejando claro que la decisión es innegociable, y detallando los beneficios y apoyo disponibles
+         paso  5) Comunicar a toda la empresa lo sucedido de forma clara y honesta después de ejecutado el despido
+      NODO entrenamiento_de_gerentes_para_despidos | resuelve a entrenamiento_de_gerentes_para_despidos | deprecado: NO | CIFRA pasos: 4
+         entregable: Guion estandarizado y sesión de capacitación para gerentes antes de la ejecución del despido
+         paso  1) Establecer como regla que cada gerente despide a su propio personal
+         paso  2) Capacitar a los gerentes en un guion breve: fallo de empresa, decisión no negociable
+         paso  3) Proveer a los gerentes toda la información de paquetes de beneficios antes de la conversación
+         paso  4) Realizar simulacros o ensayos de la conversación de despido
+      ARISTA, DATO DEL GRAFO Y NO ARGUMENTO (no acusa cuando falta ni exculpa cuando esta): de la madre al hijo NO | del hijo a la madre NO
+      LA VARA ES EL BANCO 9.6.2, COMO SE RECONOCE UN PAR MADRE E HIJO: el hijo cabe entero dentro de UN paso de la madre, y la madre conserva materia propia que el hijo no toca en ningun paso.
+      CONDICION 1, LEIDA Y NO CONTADA: los CUATRO pasos del hijo caen dentro del paso 4 de la madre. EL MAPEO ES LECTURA MIA, UNA TABLA A MANO, Y SE DECLARA QUE NO HAY CASO ROJO AUTOMATICO PARA EL.
+         hijo 1 -> madre 4, 'despida personalmente a su propio equipo'
+         hijo 2 -> madre 4, 'explicando la situacion' y 'la decision es innegociable'
+         hijo 3 -> madre 4, 'detallando los beneficios y apoyo disponibles'
+         hijo 4 -> los simulacros son el DESPLIEGUE de ese paso, que la madre nombra y no ejecuta
+      CONDICION 2: la madre conserva 3 pasos que el hijo no toca, los numeros [1, 2, 5].
+         madre 1) Aceptar mentalmente la responsabilidad de la decisión antes de actuar
+         madre 2) Minimizar el tiempo entre la decisión y la ejecución para evitar filtraciones
+         madre 5) Comunicar a toda la empresa lo sucedido de forma clara y honesta después de ejecutado el despido
+      LA SENAL DE VERIFICACION DEL 9.6.2, LOS ENTREGABLES: la madre entrega tres productos y el hijo entrega el primero de los tres. Es el perfil del 2.215.
+      MI VEREDICTO CONTRA EL GRAFO: LAS DOS CONDICIONES SE CUMPLEN, Y LA REGLA NO ADMITE EL EMPATE. LA CLASE PASA DE B A D.
+
+   PUESTO 1249. cierre_segun_complejidad_venta contra relacion_continua_con_cliente
+      CIFRA registros con ese puesto: 1 | CIFRA que deberia haber: 1
+      CLASE EN EL ARCHIVO AL ENTRAR: D
+      NODO cierre_segun_complejidad_venta | resuelve a cierre_segun_complejidad_venta | deprecado: NO | CIFRA pasos: 12
+         entregable: Una estrategia de ventas diferenciada según el tipo de venta (transaccional vs. consultiva/compleja)
+         paso  1) Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión
+         paso  2) Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción
+         paso  3) Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)
+         paso  4) Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito
+         paso  5) Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan
+         paso  6) Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque
+         paso  7) Construir la relación en base a confianza y transparencia en lugar de tácticas de persuasión
+         paso  8) Diseñar la estrategia de seguimiento entre llamadas, ya que las decisiones importantes ocurren cuando el vendedor no está presente
+         paso  9) Anticipar que el cliente evaluará también la relación con el vendedor, no solo el producto, en decisiones grandes
+         paso 10) Auditar el uso de técnicas de cierre en tu equipo comercial mediante observación de llamadas reales
+         paso 11) Comparar tasas de éxito entre vendedores que usan muchas técnicas de cierre vs. pocas
+         paso 12) Mide la satisfacción post-venta para detectar si tus técnicas de cierre están dañando la relación con el cliente.
+      NODO relacion_continua_con_cliente | resuelve a relacion_continua_con_cliente | deprecado: NO | CIFRA pasos: 4
+         entregable: Plan de relación con el cliente que incluya puntos de contacto durante el ciclo de venta y después de cerrada
+         paso  1) Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo el pitch del producto
+         paso  2) Anticipar y comunicar claramente el soporte post-venta disponible
+         paso  3) Evitar estilos de venta agresivos que dañen la relación de largo plazo
+         paso  4) Planificar puntos de contacto recurrentes con el cliente durante y después de la venta
+      ARISTA, DATO DEL GRAFO Y NO ARGUMENTO: del grande al chico SI | del chico al grande NO
+      LA CIFRA QUE LA RAZON VIEJA PUBLICA, CITADA VERBATIM DEL ARCHIVO: 'Lo compartido es una linea, no uses estilos agresivos, y esta en un paso de cada uno'.
+      esa frase esta en la razon del archivo: SI
+      MEDIDO HOY CONTRA EL GRAFO, ESA CIFRA ES FALSA POR DOS LADOS:
+      CIFRA pasos que la razon vieja enumera de cierre_segun_complejidad_venta: 5 | CIFRA pasos que el nodo trae hoy: 12
+      CIFRA pasos de relacion_continua_con_cliente con contraparte: 3 | CIFRA pasos que trae: 4
+         chico 1 -> grande 7, construir la relacion en base a confianza
+         chico 4 -> grande 8, la estrategia de seguimiento entre llamadas
+         chico 3 -> grande 3 y grande 12, minimizar tecnicas y medir si danan la relacion
+         chico 2 -> SIN contraparte: anticipar y comunicar el soporte post-venta disponible
+      EL MAPEO ES LECTURA MIA, TABLA A MANO, Y NO LLEVA CASO ROJO AUTOMATICO. Lo que si es maquina son las dos cifras de pasos de arriba.
+      LA REGLA QUE DECIDE NO ES LA DEL SOLAPE. El 9.6.2 no aplica en modo madre e hijo, porque su prueba de reconocimiento pide que el chico quepa entero dentro de UN paso del grande y aqui toca CUATRO pasos distintos, el 3, el 7, el 8 y el 12. Manda el 9.6.3: la vara no cuenta cuantos pasos se comparten, pregunta que queda FUERA del solape y en que lado.
+      FUERA DEL SOLAPE, EL GRANDE CONSERVA 8 de sus 12 pasos, y son procedimiento y son la tesis del racimo: 1, 2, 4, 5, 6, 9, 10 y 11.
+      FUERA DEL SOLAPE, EL CHICO CONSERVA su paso 2 y su entregable, un plan con puntos de contacto DURANTE Y DESPUES de la venta, donde el paso 8 del grande solo cubre el seguimiento ENTRE LLAMADAS, o sea durante.
+      Y LA CUENTA DEL RACIMO NO CAMBIA: cuatro lecturas, 520, 1206, 1217 y esta, dejan a relacion_continua_con_cliente ADYACENTE al racimo del cierre y no miembro. El 520 ademas lo declara HIJO CON CASA PROPIA de otra madre.
+         PUESTO 520   clase en el archivo: D
+         PUESTO 1206  clase en el archivo: D
+         PUESTO 1217  clase en el archivo: D
+      MI VEREDICTO CONTRA EL GRAFO: LA CLASE NO CAMBIA, SIGUE SIENDO D. LA RAZON SI SE CORRIGE, Y LO DIGO SIN MAQUILLAJE: con la cifra corregida el margen de esta D es MUCHO MAS ESTRECHO que el que la razon vieja pintaba, y por eso sube marcada como DISCUTIBLE.
+
+==============================================================================
+1.d. LO QUE SE ESCRIBE EN EL REGISTRO DEL CRIBADO, DECLARADO Y SIN TAPAR
+==============================================================================
+
+   DONDE SE ESCRIBE, Y DONDE NO. Se escribe en docs/INTRA_DOMINIO_VEREDICTOS.jsonl, que es el registro del cribado. NO se escribe en el plan: ni el expediente, ni la pagina 08, ni la pagina 07, ni el inventario.
+
+   la adjudicacion 5.7 del acta 217 vive en la linea 77304 de docs/loop/ACTA_AUDITOR.md, leida del fichero
+   la adjudicacion 5.8 del acta 217 vive en la linea 77312 de docs/loop/ACTA_AUDITOR.md, leida del fichero
+
+   EL MARCADOR ANTES DE ESCRIBIR, RECOMPUTADO CON SU COMANDO:
+      | n = 3388 corte = 3388 huecos: [] dups(puesto): 0
+      | pares duplicados (nodo_a,nodo_b,dominio): 0
+      | MARCADOR GLOBAL
+      |   A 550 16.2
+      |   B 72 2.1
+      |   C 5 0.1
+      |   D 2761 81.5
+      | TASA POR DOMINIO
+      |   compras 155 1 0.6
+      |   core 1445 324 22.4
+   TOCADO puesto 299   | clase B -> D | razon vieja dentro de la nueva: SI | bytes de razon 612 -> 3793
+   TOCADO puesto 1249  | clase D -> D | razon vieja dentro de la nueva: SI | bytes de razon 1138 -> 4383
+   CIFRA lineas tocadas: 2 | CIFRA que deberia haber: 2
+   CIFRA lineas cuyo serializado vuelve identico antes de tocarlas: 2 | CIFRA que deberia haber: 2
+   CIFRA lineas del registro que difieren del original: 2 | CIFRA que deberia haber: 2
+   CIFRA lineas del registro antes: 3389 | CIFRA despues: 3389
+   ESCRITO docs/INTRA_DOMINIO_VEREDICTOS.jsonl
+   RELECTURA DEL DISCO: identico a lo juzgado: SI
+   CIFRA veredictos releidos del disco: 3388 | CIFRA que habia: 3388
+
+   EL MARCADOR DESPUES DE ESCRIBIR, RECOMPUTADO CON EL MISMO COMANDO:
+      | n = 3388 corte = 3388 huecos: [] dups(puesto): 0
+      | pares duplicados (nodo_a,nodo_b,dominio): 0
+      | MARCADOR GLOBAL
+      |   A 550 16.2
+      |   B 71 2.1
+      |   C 5 0.1
+      |   D 2762 81.5
+      | TASA POR DOMINIO
+      |   compras 155 1 0.6
+      |   core 1445 324 22.4
+
+   EL MARCADOR, LAS DOS CIFRAS JUNTAS Y NINGUNA TECLEADA:
+      clase A | ANTES 550 | DESPUES 550 | movimiento +0
+      clase B | ANTES 72 | DESPUES 71 | movimiento -1
+      clase C | ANTES 5 | DESPUES 5 | movimiento +0
+      clase D | ANTES 2761 | DESPUES 2762 | movimiento +1
+   EL MOVIMIENTO ES EL QUE LA CORRECCION PREDICE, una B menos y una D mas, y nada mas se mueve: SI
+   los dos recomputos quedan sellados en docs/loop/SALIDA_V218_T1_MARCADOR_ANTES.txt y en docs/loop/SALIDA_V218_T1_MARCADOR_DESPUES.txt
+
+==============================================================================
+1.e. EL PLAN NO SE TOCA, Y SE PRUEBA CON LOS SHA DE ENTRADA Y DE SALIDA
+==============================================================================
+SHA256 DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b disco y 650578474361eb2b LF
+SHA256 DE docs/plan/OPERACIONES.jsonl AL SALIR: 650578474361eb2b disco y 650578474361eb2b LF
+SHA256 DE docs/plan/08_VERIFICACION.md AL ENTRAR: 578eeefab6db2fd4 disco y 578eeefab6db2fd4 LF
+SHA256 DE docs/plan/08_VERIFICACION.md AL SALIR: 578eeefab6db2fd4 disco y 578eeefab6db2fd4 LF
+SHA256 DE docs/plan/07_ADUANA.md AL ENTRAR: 34642304c5f7667f disco y 6f5f91619adec6e0 LF
+SHA256 DE docs/plan/07_ADUANA.md AL SALIR: 34642304c5f7667f disco y 6f5f91619adec6e0 LF
+LOS SEIS SHA DEL PLAN COINCIDEN CON LOS DE LA ENTRADA: SI
+
+Y LA SEDE QUE SI SE MUEVE, DICHA EN VOZ ALTA Y NO ESCONDIDA:
+SHA256 DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 758edf1f5c313c18 disco y 758edf1f5c313c18 LF
+SHA256 DE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR: 4a6f32cf7ea71096 disco y 4a6f32cf7ea71096 LF
+ESA SEDE SE MOVIO A PROPOSITO: SI
+CIFRA bytes de docs/INTRA_DOMINIO_VEREDICTOS.jsonl al salir: 4063556 en disco y 4063556 normalizado a LF
+
+CIFRA comprobaciones que fallan: 0
+VERDE: la TAREA 1 sale limpia.
