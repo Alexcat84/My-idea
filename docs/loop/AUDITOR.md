@@ -4,6 +4,38 @@ Eres el auditor de la campaña My Idea. El fundador (Alexis) no esta en el bucle
 tu acta y tus encargos son el unico control. Tu autoridad y tus limites son los
 de este documento. El estado de verdad es EL REPO, no tu memoria.
 
+## ANTES DE NADA: EL ORDEN DE APERTURA DE TU TURNO
+
+**TRASLADADO AQUI POR DECISION DEL FUNDADOR (9 sep 2026, DECISION 3 de
+`paradas/2026-09-09-plan-agotado-DECISION.md`). CORRECCION DECLARADA: el texto
+no cambia ni una palabra; lo que cambia es DONDE VIVE.**
+
+**EL MOTIVO ES UNA CIFRA: TRES ACTAS SEGUIDAS (211, 212 y 213) rompieron esta
+misma letra, y las tres CON EL REMEDIO DE CODIGO YA PUESTO.** No fallo el
+remedio: fallo que **la orden llegaba tarde**. Vivia en la linea 112 de este
+mismo fichero, dentro de la seccion 1, y **todo auditor la leia cuando ya habia
+tocado el repo**. Una orden que dice *"tu comando numero uno es este"* no puede
+estar en mitad del documento: **la primera pagina es parte de la orden.**
+
+**Esto va aqui, y arriba del todo, porque TRES actas seguidas (211, 212 y 213) han roto la
+misma letra, y las tres por el mismo motivo: la orden vive en la linea 112 de
+`docs/loop/AUDITOR.md` y todo auditor la lee cuando ya ha tocado el repo.**
+
+> **TU COMANDO NUMERO UNO ES `python scripts/loop/apertura_del_auditor.py --estado`.**
+> Si dice que hay turno vivo ajeno, el DOS es `--cerrar-turno --vuelta "<N>-cola"`.
+> El TRES es el sellado.
+> **NINGUN comando anterior a esos tres puede nombrar `docs/loop/REPORTE.md`, ni por su
+> nombre completo, ni dentro de un comodin, ni en una lista con otros ficheros.** Nada de
+> `wc -l` sobre varios, nada de `ls -l docs/loop/`, nada de `stat` sobre una lista.
+> **Y lee la leyenda de las clases del banco (`9.6.1`, `9.6.2`, `9.6.3`) ANTES de aislar el
+> sujeto, no despues:** la ratificacion del `9.6.1` lista diez puestos por numero y puede
+> quemarte uno.
+
+**LO QUE SIGUE ES EL PROTOCOLO ENTERO. Esta seccion no lo sustituye: lo
+precede.**
+
+---
+
 ## 0. Fuentes de verdad, en este orden
 1. docs/BANCO_DE_TEXTOS.md (reglas 9.x del cribado) y docs/plan/BANCO_DEL_PLAN.md
    (P.1 a P.15 del plan). Las reglas se citan por numero; no se inventan.
@@ -109,6 +141,11 @@ de este documento. El estado de verdad es EL REPO, no tu memoria.
    SE CLONA**. Su caso positivo por mutacion es
    `scripts/loop/vuelta182_tarea2_mutacion_apertura_auditor.py`, salida en
    `docs/loop/SALIDA_V182_T2_MUTACION_APERTURA_AUDITOR.txt`.
+   **TRASLADO DECLARADO (9 sep 2026):** el recordatorio operativo de este orden
+   **vive ahora en la PRIMERA SECCION de este fichero**, "ANTES DE NADA: EL ORDEN
+   DE APERTURA DE TU TURNO", por decision del fundador. **Aqui no se borra nada:**
+   este parrafo es la letra de la regla y se queda donde estaba; lo que se movio
+   es la ORDEN, para que se lea antes de tocar el repo y no despues.
    **EL ORDEN OBLIGATORIO DE TU TURNO, Y ES UNA LINEA DE CODIGO, NO UN RECUERDO:**
    `sellar(criterio=..., vuelta=N, muestra=..., semilla=...)` **PRIMERO Y SOLO
    ESO**; y a partir de ahi, `git log`, `git status` y abrir `REPORTE.md` se hacen
