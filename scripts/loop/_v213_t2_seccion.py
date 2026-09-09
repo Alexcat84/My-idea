@@ -63,12 +63,32 @@ def entre(ruta, desde, hasta):
     return ls[i[0]:j[0]]
 
 
+
+DIRS_LIMPIADOS = []
+
+
+def sin_dir(t):
+    """LA OBLIGACION 1 DEL ENCARGO, APLICADA EN EL SITIO UNICO POR EL QUE PASAN
+    LAS CITAS: NINGUN REPORTE CITA UN DIRECTORIO A SECAS ENTRE COMILLAS
+    INVERSAS (adjudicacion 6.2 del acta 212).
+
+    QUE HACE, Y ES LO MINIMO: a una cita pegada de un acta le QUITA LAS COMILLAS
+    INVERSAS que envuelven una ruta terminada en barra. NO cambia ni una letra
+    del texto citado: cambia el MARCADO, que es lo que hace reventar a
+    vuelta186_rutas_del_reporte.py en su main(). Cada limpieza se apunta en
+    DIRS_LIMPIADOS y la cifra se publica, para que no sea una edicion callada."""
+    def _q(m):
+        DIRS_LIMPIADOS.append(m.group(1))
+        return m.group(1)
+    return re.sub(r"`([^`" + chr(10) + r"]*/)`", _q, t)
+
+
 def linea_de(ruta, numero):
     ls = cargar(ruta)
     if numero < 1 or numero > len(ls):
         ROJOS.append("%s no tiene linea %d" % (ruta, numero))
         return "(ROJO: fuera de rango)"
-    return ls[numero - 1].strip()
+    return sin_dir(ls[numero - 1].strip())
 
 
 S2 = "docs/loop/SALIDA_V%d_T2_CIERRE_FASE_III.txt" % VUELTA
@@ -362,6 +382,14 @@ w("2. **PUBLICO LOS CUATRO ESTADOS DE `OP-I-01` DE UNA MEDICION DE LA VUELTA 211
 w()
 
 texto = NL.join(P) + NL
+dirs_vivos = re.findall(r"`[^`" + chr(10) + r"]*/`", texto)
+print("CIFRA comillas inversas quitadas a un directorio citado: %d %s"
+      % (len(DIRS_LIMPIADOS), sorted(set(DIRS_LIMPIADOS))))
+print("CIFRA directorios que AUN van entre comillas inversas: %d (se exigen 0)"
+      % len(dirs_vivos))
+if dirs_vivos:
+    ROJOS.append("quedan %d directorios entre comillas inversas: %s"
+                 % (len(dirs_vivos), sorted(set(dirs_vivos))))
 largos = texto.count(chr(8212))
 medios = texto.count(chr(8211))
 print("CIFRA guiones largos: %d | CIFRA guiones medios: %d" % (largos, medios))

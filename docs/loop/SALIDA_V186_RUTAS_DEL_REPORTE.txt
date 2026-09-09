@@ -1,51 +1,53 @@
 TODA RUTA PUBLICADA EN docs/loop/REPORTE.md, COMPROBADA UNA A UNA
 (vuelta 186; EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
 
-CIFRA rutas distintas halladas en el reporte: 41
-RUTA DEL HUECO DECLARADO, leida de la seccion 9 y no tecleada: docs/loop/SALIDA_V212_BATERIA.txt
+CIFRA rutas distintas halladas en el reporte: 43
+RUTA DEL HUECO DECLARADO, leida de la seccion 9 y no tecleada: docs/loop/SALIDA_V213_BATERIA.txt
 
    OK         dataset/metadata/master_graph.json                             disco  8375817 bytes | LF  8375817 bytes
    OK         docs/BANCO_DE_TEXTOS.md                                        disco   186490 bytes | LF   186490 bytes
    OK         docs/INTRA_DOMINIO_INFORME.md                                  disco   943970 bytes | LF   943970 bytes
    OK         docs/INTRA_DOMINIO_VEREDICTOS.jsonl                            disco  4057130 bytes | LF  4057130 bytes
-   OK         docs/loop/ACTA_AUDITOR.md                                      disco  4936249 bytes | LF  4936249 bytes
-   OK         docs/loop/SALIDA_MARCADOR_AUDITOR_V212_T1B.json                disco      106 bytes | LF      106 bytes
-   OK         docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt                    disco     2235 bytes | LF     2235 bytes
-   OK         docs/loop/SALIDA_V212_APERTURA.txt                             disco     3267 bytes | LF     3267 bytes
-   HUECO      docs/loop/SALIDA_V212_BATERIA.txt                              NO EXISTE, y NO ES CAIDA: es el hueco que la seccion 9 declara
-   OK         docs/loop/SALIDA_V212_HALLAZGO_RUTAS.txt                       disco     2051 bytes | LF     2051 bytes
-   OK         docs/loop/SALIDA_V212_HEAD_APERTURA.txt                        disco       41 bytes | LF       41 bytes
-   OK         docs/loop/SALIDA_V212_T1B_ESCRIBIR.txt                         disco     5361 bytes | LF     5361 bytes
-   OK         docs/loop/SALIDA_V212_T1B_PUESTO_730.txt                       disco    10520 bytes | LF    10520 bytes
-   OK         docs/loop/SALIDA_V212_T1C_OP_F_04_HOR.txt                      disco     6877 bytes | LF     6877 bytes
-   OK         docs/loop/SALIDA_V212_T2_COLA_RELECTURA.txt                    disco    15809 bytes | LF    15809 bytes
-   OK         docs/loop/SALIDA_V212_TALLADOR_CABECERA.txt                    disco     2597 bytes | LF     2577 bytes   <-- DISCO distinto de LF
-   OK         docs/plan/01_FUENTES.md                                        disco   128187 bytes | LF   126666 bytes   <-- DISCO distinto de LF
-   OK         docs/plan/03_FUSIONES.md                                       disco   831759 bytes | LF   826733 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/ACTA_AUDITOR.md                                      disco  4973882 bytes | LF  4973882 bytes
+   OK         docs/loop/SALIDA_V186_RUTAS_DEL_REPORTE.txt                    disco      539 bytes | LF      531 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V211_T2_OP_I_01.txt                           disco     9250 bytes | LF     9250 bytes
+   OK         docs/loop/SALIDA_V213_APERTURA.txt                             disco     3547 bytes | LF     3547 bytes
+   OK         docs/loop/SALIDA_V213_ARREGLAR_ESQUELETO.txt                   disco      731 bytes | LF      719 bytes   <-- DISCO distinto de LF
+   HUECO      docs/loop/SALIDA_V213_BATERIA.txt                              NO EXISTE, y NO ES CAIDA: es el hueco que la seccion 9 declara
+   OK         docs/loop/SALIDA_V213_CICLO_GATE0_APERTURA_CONSOLA.txt         disco      926 bytes | LF      912 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_COMPOSITOR_T2.txt                        disco      298 bytes | LF      293 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_FECHA_MEDIDA.txt                         disco      522 bytes | LF      522 bytes
+   OK         docs/loop/SALIDA_V213_HEAD_APERTURA.txt                        disco       41 bytes | LF       41 bytes
+   OK         docs/loop/SALIDA_V213_T1B_BARRIDO_9_10.txt                     disco     4732 bytes | LF     4669 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_T2_CIERRE_FASE_III.txt                   disco    15822 bytes | LF    15822 bytes
+   OK         docs/loop/SALIDA_V213_T2_NUMSTAT.txt                           disco      322 bytes | LF      322 bytes
+   OK         docs/loop/SALIDA_V213_T2_RECUENTO_95.txt                       disco       54 bytes | LF       53 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_T2_VARA.txt                              disco    17272 bytes | LF    16988 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_TALLADOR_CABECERA.txt                    disco     3275 bytes | LF     3255 bytes   <-- DISCO distinto de LF
+   OK         docs/loop/SALIDA_V213_TALLADOR_RECHAZO.txt                     disco     2034 bytes | LF     2007 bytes   <-- DISCO distinto de LF
+   OK         docs/plan/03_FUSIONES.md                                       disco   833308 bytes | LF   828282 bytes   <-- DISCO distinto de LF
    OK         docs/plan/08_VERIFICACION.md                                   disco    69068 bytes | LF    69068 bytes
+   OK         docs/plan/INVENTARIO.jsonl                                     disco   584554 bytes | LF   584554 bytes
    OK         docs/plan/OPERACIONES.jsonl                                    disco   514452 bytes | LF   514452 bytes
    OK         engine/run_all_tests.py                                        disco     2535 bytes | LF     2457 bytes   <-- DISCO distinto de LF
    OK         scripts/loop/_v205_ciclo_gate0.py                              disco     4359 bytes | LF     4359 bytes
-   OK         scripts/loop/_v212_apertura.py                                 disco     5516 bytes | LF     5516 bytes
-   OK         scripts/loop/_v212_ciclo_gate0.py                              disco     1645 bytes | LF     1645 bytes
-   OK         scripts/loop/_v212_cierre_texto.md                             disco    17682 bytes | LF    17682 bytes
-   OK         scripts/loop/_v212_cierre_texto.py                             disco    22912 bytes | LF    22912 bytes
-   OK         scripts/loop/_v212_esqueleto.py                                disco    11537 bytes | LF    11537 bytes
-   OK         scripts/loop/_v212_hallazgo_rutas.py                           disco     4670 bytes | LF     4670 bytes
-   OK         scripts/loop/_v212_t1_seccion.md                               disco    17298 bytes | LF    17298 bytes
-   OK         scripts/loop/_v212_t1_seccion.py                               disco    20491 bytes | LF    20491 bytes
-   OK         scripts/loop/_v212_t1b_escribir.py                             disco    16742 bytes | LF    16742 bytes
-   OK         scripts/loop/_v212_t1b_puesto_730.py                           disco    19019 bytes | LF    19019 bytes
-   OK         scripts/loop/_v212_t1c_op_f_04_hor.py                          disco    15890 bytes | LF    15890 bytes
-   OK         scripts/loop/_v212_t2_cola_relectura.py                        disco     8805 bytes | LF     8805 bytes
-   OK         scripts/loop/_v212_t2_seccion.md                               disco    16419 bytes | LF    16419 bytes
-   OK         scripts/loop/_v212_t2_seccion.py                               disco    10608 bytes | LF    10608 bytes
+   OK         scripts/loop/_v213_apertura.py                                 disco     5687 bytes | LF     5687 bytes
+   OK         scripts/loop/_v213_arreglar_esqueleto.py                       disco     4288 bytes | LF     4288 bytes
+   OK         scripts/loop/_v213_ciclo_gate0.py                              disco     1645 bytes | LF     1645 bytes
+   OK         scripts/loop/_v213_cierre_texto.md                             disco    19134 bytes | LF    19134 bytes
+   OK         scripts/loop/_v213_cierre_texto.py                             disco    25542 bytes | LF    25542 bytes
+   OK         scripts/loop/_v213_esqueleto.py                                disco    12291 bytes | LF    12291 bytes
+   OK         scripts/loop/_v213_t1_seccion.md                               disco    15500 bytes | LF    15500 bytes
+   OK         scripts/loop/_v213_t1_seccion.py                               disco    19689 bytes | LF    19689 bytes
+   OK         scripts/loop/_v213_t1b_barrido_9_10.py                         disco    15224 bytes | LF    15224 bytes
+   OK         scripts/loop/_v213_t2_cierre_fase_iii.py                       disco    16687 bytes | LF    16687 bytes
+   OK         scripts/loop/_v213_t2_seccion.md                               disco    17850 bytes | LF    17850 bytes
+   OK         scripts/loop/_v213_t2_seccion.py                               disco    18771 bytes | LF    18771 bytes
    OK         scripts/loop/anexar_tarea_al_reporte.py                        disco     6243 bytes | LF     6243 bytes
-   OK         scripts/loop/apertura_del_auditor.py                           disco    59500 bytes | LF    59500 bytes
    OK         scripts/loop/cerrar_reporte.py                                 disco   114466 bytes | LF   114466 bytes
-   OK         scripts/loop/verificar_aristas_vivas.py                        disco     7434 bytes | LF     7434 bytes
+   OK         scripts/loop/vuelta150_3_relectura_expediente.py               disco    60262 bytes | LF    60262 bytes
    OK         scripts/loop/vuelta186_rutas_del_reporte.py                    disco     5887 bytes | LF     5887 bytes
 
-CIFRA rutas en que la cifra de disco NO es la de LF: 4
+CIFRA rutas en que la cifra de disco NO es la de LF: 11
 CIFRA rutas que NO existen o miden cero bytes, SIN CONTAR el hueco declarado: 0
 VEREDICTO: VERDE

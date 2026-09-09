@@ -1,0 +1,26 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 213. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+--- LA TABLA, PARA PEGAR ENTERA EN LA CABECERA DEL REPORTE ---
+
+| | **apertura**, antes de la 1.ª operacion | **cierre, RECOMPUTADO al cierre** |
+|---|---:|---:|
+| censo: nodos / vivos / deprecados | 3.853 / 3.169 / 684 | **3.853 / 3.169 / 684** |
+| Gate 0: veredicto, auto-aristas, duplicadas de titulo, divergentes | OK (auto-aristas 0, duplicadas 0, divergentes 0) | **OK (auto-aristas 0, duplicadas 0, divergentes 0)** |
+| aristas: `nodos_siguientes` / `nodos_previos` / suma / union | 8.780 / 8.740 / 17.520 / 9.914 | **8.780 / 8.740 / 17.520 / 9.914** |
+| motor | 25/25 | **25/25** |
+| web: ficheros / tests | 82 passed (82) / 1.040 passed (1.040) | **82 passed (82) / 1.040 passed (1.040)** |
+| tsc | EXITCODE 0, cero lineas | **EXITCODE 0, cero lineas** |
+| aristas movidas en la vuelta (cierre menos apertura): `nodos_siguientes` / `nodos_previos` / suma / union | (no aplica: la celda de cierre es la resta contra esta apertura) | **+0 / +0 / +0 / +0** |
+| desfase del calibrado rastreado (`PASO_NODO_CALIBRADO.jsonl` distinto del grafo) | 4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente` | **4 fila(s): `dia_cero_defectos_2 -> eliminacion_causas_error_4`, `customer_validation -> establecer_linea_base_mvp`, `dia_cero_defectos_3 -> eliminacion_causas_error_4`, `ganar_comprension_del_cliente -> dia_en_la_vida_del_cliente`** |
+| identidad: rama y commit de apertura (leidos de git, no tecleados) | rama `pasada-unica`, commit del acta `7be7476e` (asunto real leido de git log: 'ACTA DEL AUDITOR, VUELTA 212: NI UNA CIFRA DEL REPORTE DEJA DE REPRODUCIR CON MIS COMANDOS. 18 de 18 parejas de filas calzan con sus tablas, 11 de 11 citas de acta viven en su linea, 7 de 7 sedes reproducen byte y sha256 por las dos convenciones, y las nueve cifras de cerco reproducen al digito descontando el volteo del 730, que verifique yo contra el grafo: la madre enlaza 0 de sus 2 hijos, al hijo le quedan 5 de sus 6 pasos y la vara devuelve D por los dos lados. Su unica caida propia se la acusa el mas duro de lo que los hechos sostienen y lo pruebo en git: ninguna ruta publicada apuntaba al rechazo. NO ACUMULA y su racha de reporte se corta en 0. Ciega 36 de 40, SIN SELLO por mi propia mano: mi comando dos midio REPORTE.md con wc -l, apunte el toque y sellar() cayo en ROJO. Segunda de su racha, con remedio escrito. Nueve adjudicaciones: la P.1 se barre (una linea de 03_FUSIONES.md que ya es falsa), la P.2 espera con su obligacion de dictado puesta, y el tope de sub-tareas vuelve a CINCO medido en git.'), HEAD real de apertura `7be7476e` (sellado antes de la 1.a operacion, leido de git log --diff-filter=A), arboles de `dataset/` IGUALES: VERDE | **rama `pasada-unica`, HEAD de cierre `f74d01cb` (leido de `SALIDA_V213_HEAD_CIERRE.txt`, sellado tras la ultima operacion)** |
+
+--- COMPARACION CONTRA docs/loop/REPORTE.md ---
+
+
+  filas cotejadas: 9 | DISTINTAS: 0 | ausentes: 0
+  CABECERA: IDENTICA AL TALLADOR
+
+FIN

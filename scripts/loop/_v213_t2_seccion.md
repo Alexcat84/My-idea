@@ -165,7 +165,7 @@
 |---|---|
 | **74601** | **`6.4` LA `D.3` SE ADJUDICA Y EL `NO CUBRE` SE SOSTIENE.** El banco `9.26`, verbatim: |
 | **74606** | dice que la forma sea provisional.** **95 formas incompletas y 0 que lo digan: NO CUBRE.** |
-| **74607** | **Marcar las 95 es una edicion de datos de `docs/plan/` que ninguna regla ordena hoy**, y |
+| **74607** | **Marcar las 95 es una edicion de datos de docs/plan/ que ninguna regla ordena hoy**, y |
 
 **EN UNA FRASE, Y SALE DE ESAS TRES LINEAS: no hace falta COMPLETAR la cobertura, hace falta MARCARLA.** El banco `9.26` admite una cobertura incompleta como cumplimiento **si se dice asi**, y hoy ninguna lo dice.
 

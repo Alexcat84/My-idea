@@ -57,13 +57,33 @@ def valor(ruta, prefijo, n=0):
     return l.split(":", 1)[1].strip() if ":" in l else l
 
 
+
+DIRS_LIMPIADOS = []
+
+
+def sin_dir(t):
+    """LA OBLIGACION 1 DEL ENCARGO, APLICADA EN EL SITIO UNICO POR EL QUE PASAN
+    LAS CITAS: NINGUN REPORTE CITA UN DIRECTORIO A SECAS ENTRE COMILLAS
+    INVERSAS (adjudicacion 6.2 del acta 212).
+
+    QUE HACE, Y ES LO MINIMO: a una cita pegada de un acta le QUITA LAS COMILLAS
+    INVERSAS que envuelven una ruta terminada en barra. NO cambia ni una letra
+    del texto citado: cambia el MARCADO, que es lo que hace reventar a
+    vuelta186_rutas_del_reporte.py en su main(). Cada limpieza se apunta en
+    DIRS_LIMPIADOS y la cifra se publica, para que no sea una edicion callada."""
+    def _q(m):
+        DIRS_LIMPIADOS.append(m.group(1))
+        return m.group(1)
+    return re.sub(r"`([^`" + chr(10) + r"]*/)`", _q, t)
+
+
 def linea_de(ruta, numero):
     """LA LINEA `numero` DE UN FICHERO, LEIDA DEL DISCO Y NO RECORDADA."""
     ls = cargar(ruta)
     if numero < 1 or numero > len(ls):
         ROJOS.append("%s no tiene linea %d" % (ruta, numero))
         return "(ROJO: fuera de rango)"
-    return ls[numero - 1].strip()
+    return sin_dir(ls[numero - 1].strip())
 
 
 def celda(t):
@@ -259,10 +279,10 @@ GUA = [
      pick(S1B, "CIFRA lineas anadidas:")],
     ["**caso rojo por mutacion, corrido ANTES de escribir**",
      "**" + pick(S1B, "CIFRA mutantes:") + "**"],
-    ["sede de `docs/plan/03_FUSIONES.md` **al entrar**, por las dos convenciones",
-     valor(S1B, "CIFRA SEDE docs/plan/03_FUSIONES.md AL ENTRAR")],
-    ["sede de `docs/plan/03_FUSIONES.md` **al salir**, por las dos convenciones",
-     valor(S1B, "CIFRA SEDE docs/plan/03_FUSIONES.md AL SALIR")],
+    ["sede de `docs/plan/03_FUSIONES.md` **al entrar y al salir**, por las dos "
+     "convenciones",
+     "**pegadas enteras del instrumento en la cerca de aqui abajo**, que es donde esta "
+     "casa pone la salida cruda de un instrumento"],
     ["**el `sha256` del fichero corregido CAMBIA**",
      "**" + pick(S1B, "el sha256 LF de docs/plan/03_FUSIONES.md SE MUEVE:")
      .split(":", 1)[1].strip() + "**"],
@@ -283,7 +303,23 @@ GUA = [
      valor(S1B, "RELECTURA DEL DISCO identica a lo juzgado")],
 ]
 w(tabla("LAS GUARDAS DE LA `1.b`", ["guarda", "lo que dice el instrumento"],
-        GUA, 12, "`" + S1B + "`"))
+        GUA, 11, "`" + S1B + "`"))
+w()
+w("**LAS CUATRO LINEAS DE SEDE, PEGADAS CRUDAS DEL INSTRUMENTO Y DENTRO DE CERCA.** "
+  "**Van aqui y no en la tabla de arriba a proposito:** son la medicion DE ENTRADA y "
+  "la DE SALIDA de un fichero que esta vuelta movio, o sea que **la de entrada ya no "
+  "es la del disco de hoy y no puede serlo**. Publicarla como celda de tabla seria "
+  "afirmar del disco de hoy lo que era cierto ayer, que es justo lo que la guarda de "
+  "las dos convenciones de `cerrar_reporte.py` persigue. **Como cita cruda dice lo que "
+  "es: lo que el instrumento midio, en su momento y con su nombre.**")
+w()
+w("```")
+for L in ("CIFRA SEDE docs/plan/03_FUSIONES.md AL ENTRAR",
+          "CIFRA SEDE docs/plan/03_FUSIONES.md AL SALIR",
+          "CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR",
+          "CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR"):
+    w(pick(S1B, L))
+w("```")
 w()
 w("**LOS CUATRO MUTANTES, UNO A UNO, Y LOS CUATRO CAEN.** El encargo exige al menos "
   "tres especies y estan las tres, mas una cuarta.")
@@ -331,6 +367,14 @@ w("**UN DISCUTIBLE MARCADO, Y LO MARCO ANTES DE SABER SI ACIERTO.** El encargo d
 w()
 
 texto = NL.join(P) + NL
+dirs_vivos = re.findall(r"`[^`" + chr(10) + r"]*/`", texto)
+print("CIFRA comillas inversas quitadas a un directorio citado: %d %s"
+      % (len(DIRS_LIMPIADOS), sorted(set(DIRS_LIMPIADOS))))
+print("CIFRA directorios que AUN van entre comillas inversas: %d (se exigen 0)"
+      % len(dirs_vivos))
+if dirs_vivos:
+    ROJOS.append("quedan %d directorios entre comillas inversas: %s"
+                 % (len(dirs_vivos), sorted(set(dirs_vivos))))
 largos = texto.count(chr(8212))
 medios = texto.count(chr(8211))
 print("CIFRA guiones largos: %d | CIFRA guiones medios: %d" % (largos, medios))

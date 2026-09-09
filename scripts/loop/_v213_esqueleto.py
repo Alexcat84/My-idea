@@ -148,9 +148,10 @@ texto = """# REPORTE DE LA VUELTA %(v)d (ejecutor). FASE III, EJECUCION. Rama `%
 > queda del plan**.
 >
 > **RIGE LA MORATORIA DE MAQUINARIA** (`AUDITOR.md` 6.3). Ningun arnes, guarda ni
-> lector nuevo, y ninguno reparado. Todo lo que esta vuelta escribe en
-> `scripts/loop/` son ficheros `_v%(v)d_*` **con prefijo de guion bajo, fuera del
-> censo y fuera de la nomina**. La nomina sigue **CONGELADA EN 135** y no se poda.
+> lector nuevo, y ninguno reparado. Todo lo que esta vuelta escribe en el arbol
+> scripts/loop (**sin comillas inversas, por la obligacion 1**) son ficheros
+> `_v%(v)d_*` **con prefijo de guion bajo, fuera del censo y fuera de la nomina**.
+> La nomina sigue **CONGELADA EN 135** y no se poda.
 >
 > **RIGE LA OBLIGACION DE DICTADO DEL `6.6` DEL ACTA 210:** toda cita de un acta
 > anterior lleva **LA LINEA** de `docs/loop/ACTA_AUDITOR.md` donde vive el texto

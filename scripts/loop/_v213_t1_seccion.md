@@ -79,15 +79,14 @@ El acta abre en la linea **74821** de `docs/loop/ACTA_AUDITOR.md`, que es donde 
 
 #### 3. LAS GUARDAS OBLIGATORIAS, TODAS DE SU FICHERO DE SALIDA
 
-**LAS GUARDAS DE LA `1.b`.** **FILAS ARMADAS LEYENDO `docs/loop/SALIDA_V213_T1B_BARRIDO_9_10.txt`: 12; FILAS QUE DEBERIA HABER: 12.**
+**LAS GUARDAS DE LA `1.b`.** **FILAS ARMADAS LEYENDO `docs/loop/SALIDA_V213_T1B_BARRIDO_9_10.txt`: 11; FILAS QUE DEBERIA HABER: 11.**
 
 | guarda | lo que dice el instrumento |
 |---|---|
 | **simulacion en memoria antes de tocar el disco** | **0 fallos** |
 | lineas anadidas y lineas quitadas | CIFRA lineas anadidas: 23 \| CIFRA lineas quitadas: 0 |
 | **caso rojo por mutacion, corrido ANTES de escribir** | **CIFRA mutantes: 4 \| CIFRA mutantes que caen: 4 (se exigen todos)** |
-| sede de `docs/plan/03_FUSIONES.md` **al entrar**, por las dos convenciones | 831759 bytes en disco y 826733 bytes normalizado a LF (NO COINCIDEN), sha256 disco 41f72d59d1b5dc7b y sha256 LF 515fd9ff9541ae8a |
-| sede de `docs/plan/03_FUSIONES.md` **al salir**, por las dos convenciones | 833308 bytes en disco y 828282 bytes normalizado a LF (NO COINCIDEN), sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2 |
+| sede de `docs/plan/03_FUSIONES.md` **al entrar y al salir**, por las dos convenciones | **pegadas enteras del instrumento en la cerca de aqui abajo**, que es donde esta casa pone la salida cruda de un instrumento |
 | **el `sha256` del fichero corregido CAMBIA** | **515fd9ff9541ae8a -> 46c592fa8da942e2 (SI, como se exige)** |
 | **el `sha256` de `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` NO se mueve** | **758edf1f5c313c18 -> 758edf1f5c313c18 (QUIETO, como se exige)** |
 | **el `sha256` de `docs/INTRA_DOMINIO_INFORME.md` NO se mueve** (la 6941 intacta) | **c05b6bcd20188a9c -> c05b6bcd20188a9c (QUIETO, como se exige)** |
@@ -96,6 +95,15 @@ El acta abre en la linea **74821** de `docs/loop/ACTA_AUDITOR.md`, que es donde 
 | `git diff HEAD --numstat` sobre dataset, web y engine | CIFRA filas de numstat de dataset, web y engine : 0 |
 | relectura del disco identica a lo juzgado | SI |
 
+
+**LAS CUATRO LINEAS DE SEDE, PEGADAS CRUDAS DEL INSTRUMENTO Y DENTRO DE CERCA.** **Van aqui y no en la tabla de arriba a proposito:** son la medicion DE ENTRADA y la DE SALIDA de un fichero que esta vuelta movio, o sea que **la de entrada ya no es la del disco de hoy y no puede serlo**. Publicarla como celda de tabla seria afirmar del disco de hoy lo que era cierto ayer, que es justo lo que la guarda de las dos convenciones de `cerrar_reporte.py` persigue. **Como cita cruda dice lo que es: lo que el instrumento midio, en su momento y con su nombre.**
+
+```
+CIFRA SEDE docs/plan/03_FUSIONES.md AL ENTRAR: 831759 bytes en disco y 826733 bytes normalizado a LF (NO COINCIDEN), sha256 disco 41f72d59d1b5dc7b y sha256 LF 515fd9ff9541ae8a
+CIFRA SEDE docs/plan/03_FUSIONES.md AL SALIR: 833308 bytes en disco y 828282 bytes normalizado a LF (NO COINCIDEN), sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2
+CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 4057130 bytes en disco y 4057130 bytes normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR: 4057130 bytes en disco y 4057130 bytes normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+```
 
 **LOS CUATRO MUTANTES, UNO A UNO, Y LOS CUATRO CAEN.** El encargo exige al menos tres especies y estan las tres, mas una cuarta.
 
