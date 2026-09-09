@@ -1,0 +1,111 @@
+==============================================================================
+VUELTA 216, TAREA 3. LA CONSECUENCIA, MEDIDA Y SIN TOCAR UN ESTADO
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b
+
+==============================================================================
+3.a. LAS CATORCE CLAUSULAS, REPARTIDAS POR FICHA
+==============================================================================
+CIFRA FILAS ARMADAS LEYENDO docs/loop/SALIDA_V216_T2_REMEDICION.txt: 14 | CIFRA FILAS QUE DEBERIA HABER: 14
+
+| ficha | linea del expediente | clausulas suyas | en CUBRE | NO en CUBRE | cuales |
+|---|---:|---:|---:|---:|---|
+| `OP-V-01` | 34 | **1** | **1** | 0 | ninguna |
+| `OP-L-01` | 41 | **3** | **3** | 0 | ninguna |
+| `OP-L-02` | 42 | **3** | **3** | 0 | ninguna |
+| `OP-L-03` | 43 | **3** | **3** | 0 | ninguna |
+| `OP-I-01` | 44 | **4** | **3** | 1 | indice 3 en A MEDIAS |
+
+CIFRA FILAS DE FICHA ARMADAS: 5 | CIFRA QUE DEBERIA HABER: 5
+LA SUMA SE COMPRUEBA CONTRA SI MISMA: 14 clausulas repartidas, y las filas de la TAREA 2 son 14.
+
+==============================================================================
+3.b. LA VARA DEL EXPEDIENTE, CORRIDA CON EL HASH DE MI APERTURA
+==============================================================================
+CIFRA hash de MI apertura, leido del sello y no tecleado: c7a0651c1e00de6ae296c71aaac52b71e798fa52
+CIFRA HEAD de ahora mismo, leido de git: dea57d377ac5d24bf7fdbe77c51de6c869ac07ab
+EL COMANDO: scripts/loop/vuelta150_3_relectura_expediente.py --corte c7a0651c1e00de6ae296c71aaac52b71e798fa52
+LA SALIDA: docs/loop/SALIDA_V216_T3_EXPEDIENTE.txt
+CIFRA la salida cita ese mismo corte: SI (se exige SI)
+
+| cifra | LA MIA, medida hoy | la del encargo, del auditor | calzan |
+|---|---:|---:|---|
+| no calzan | **40** | 40 | SI |
+| congeladas declaradas | **24** | 24 | SI |
+| congeladas en silencio | **12** | 12 | SI |
+| en LISTA sin prueba | **3** | 3 | SI |
+| en HECHA sin prueba | **4** | 4 | SI |
+
+CIFRA celdas que NO calzan con la cifra del encargo: 0
+   (cero discrepancias: las cinco cifras calzan una a una, y lo digo con las dos columnas delante en vez de con una sola)
+
+Y LA CIFRA DEL AUDITOR TAMBIEN SE LEE DE SU ACTA, CON SU LINEA, PORQUE UNA CIFRA CITADA DE UN ENCARGO NO ES UNA CIFRA LEIDA:
+   ANCLAJE fichas que no calzan                   | linea 76665 | cifra suya 40
+      CITA: no muerden y los 7 ya caian en la 210**, **0 nuevos**. Expediente **40 de 71 que no calzan**
+   ANCLAJE fichas en HECHA sin ninguna prueba     | linea 76666 | cifra suya 4
+      CITA: y **4 en HECHA sin ninguna prueba**. TAREA 4 con sus **nueve** cifras calzando y el **cero**
+
+LAS CUATRO FICHAS EN HECHA SIN NINGUNA PRUEBA, NOMBRADAS Y CONTADAS DE MI PROPIA SALIDA:
+   HECHA SIN PRUEBA> OP-V-01 (fase 08_VERIFICACION, pruebas positivas: ninguna)
+   HECHA SIN PRUEBA> OP-L-01 (fase 09_LECTURAS_DIRIGIDAS, pruebas positivas: ninguna)
+   HECHA SIN PRUEBA> OP-L-02 (fase 09_LECTURAS_DIRIGIDAS, pruebas positivas: ninguna)
+   HECHA SIN PRUEBA> OP-L-03 (fase 09_LECTURAS_DIRIGIDAS, pruebas positivas: ninguna)
+CIFRA fichas nombradas: 4 | CIFRA que mi propia salida cuenta: 4
+
+==============================================================================
+3.c. LAS DOS VARAS, LADO A LADO, Y NO SE MAQUILLA QUE SEAN LA MISMA
+==============================================================================
+LA VARA DEL EXPEDIENTE MIDE P1, P2 Y P3: grafo, codigo vivo y huella
+en git. LA VARA DE LAS CATORCE FILAS MIDE CLAUSULAS DE VERIFICACION.
+SON DOS VARAS DISTINTAS MIDIENDO COSAS DISTINTAS, Y UNA FICHA PUEDE
+SALIR EN HECHA SIN NINGUNA PRUEBA CON TODAS SUS CLAUSULAS EN CUBRE.
+ESO NO ES UNA CONTRADICCION. Cambiar la vara seria fabricar
+maquinaria, y la moratoria de AUDITOR.md 6.3 lo prohibe.
+
+CIFRA filas leidas de la tabla de las que NO CALZAN, acotada por su propia cabecera: 4
+CIFRA filas leidas de la tabla de las que estan en LISTA SIN NINGUNA PRUEBA: 1
+CIFRA de las CUATRO en HECHA sin prueba que NO aparecen en lo leido: 0 (se exigen 0)
+
+| ficha | VARA 1, la del expediente (P1 P2 P3) | VARA 2, las catorce clausulas |
+|---|---|---|
+| `OP-V-01` | estado `HECHA`, pruebas positivas ninguna, HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo | 1 de 1 clausulas en CUBRE |
+| `OP-L-01` | estado `HECHA`, pruebas positivas ninguna, HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo | 3 de 3 clausulas en CUBRE |
+| `OP-L-02` | estado `HECHA`, pruebas positivas ninguna, HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo | 3 de 3 clausulas en CUBRE |
+| `OP-L-03` | estado `HECHA`, pruebas positivas ninguna, HECHA SIN NINGUNA PRUEBA: el estado afirma mas que el repo | 3 de 3 clausulas en CUBRE |
+| `OP-I-01` | estado `LISTA` SIN NINGUNA PRUEBA, o sea que su estado CALZA con el repo: consumida por otra ficha: no | 3 de 4 clausulas en CUBRE |
+
+CIFRA FILAS ARMADAS EN LA TABLA DE LAS DOS VARAS: 5 | CIFRA QUE DEBERIA HABER: 5
+
+==============================================================================
+3.d. LA CONDICION DE LA PARADA FELIZ, ESCRITA ANTES DE SU RESULTADO
+==============================================================================
+LA CONDICION, VERBATIM DE MI ENCARGO: 'si las CATORCE clausulas
+quedan en CUBRE con su busqueda corrida y su cifra delante, y si el
+cierre integral sale limpio, entonces la campana esta consumada EN LO
+QUE EL BUCLE PUEDE CONSUMAR'.
+
+CIFRA clausulas en CUBRE: 13 | CIFRA que la condicion exige: 14
+CIFRA clausulas que NO estan en CUBRE: 1
+   NO CUBRE LA CONDICION> clausula 14, ficha OP-I-01, indice 3, linea 44 del expediente, veredicto A MEDIAS
+
+LA PRIMERA MITAD DE LA CONDICION SE CUMPLE: NO
+Y POR ESO NO PROPONGO LA PARADA FELIZ: la condicion la escribi antes
+de saber el resultado, y una parada feliz escrita sobre una
+condicion que no se cumple es exactamente la especie de verde
+que esta casa lleva doscientas vueltas cazando.
+
+LO QUE ESTA TAREA NO HACE, Y LO DIGO PARA QUE NO SE BUSQUE: NO
+declara la campana consumada, NO escribe docs/loop/PARA_ALEXIS.md y
+NO pide ningun merge. Quien declara es EL AUDITOR, por la 4.2 del
+acta 203, linea 71543, ratificada por el fundador el 9 sep 2026. Y
+EL BUCLE NO FUNDE RAMAS.
+
+==============================================================================
+LA GUARDA: QUE ESTA TAREA NO MOVIO NI UN CAMPO DE ESTADO
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL SALIR: 650578474361eb2b
+CIFRA los dos sha256 CALZAN: SI (se exige SI)
+CIFRA filas de git diff --numstat sobre el expediente: 0 (se exigen 0)
+
+CIFRA comprobaciones que fallan: 0
+VERDE: la TAREA 3 queda medida.
