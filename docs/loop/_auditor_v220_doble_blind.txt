@@ -1,0 +1,819 @@
+==============================================================================
+SUJETO DE CIEGA, AISLADO ANTES DEL PRIMER COMANDO DE VERIFICACION
+instrumento: scripts/loop/aislador_de_ciega.py
+==============================================================================
+
+CRITERIO ESCRITO (literal, tal como se paso):
+   VUELTA 220, RELECTURA AL DOBLE QUE EL ACTA 219 ME DEJO ESCRITA EN SU ULTIMA LINEA: el tramo del 2571 en adelante, 50 puestos, semilla 2571. EXCLUIDOS por dos motivos distintos y los dos declarados: (a) los 19 puestos de ese tramo que ya entraron en mi ciega principal de esta misma vuelta, para no cobrarme dos veces el mismo puesto; (b) los DOS que la seccion 3 del acta 219 me quemo, 2572 y 3031, que lei DESPUES de declarar mis clases principales y por tanto ya no son ciegos para mi. Dentro del techo de 240 del cinturon de AUDITOR.md 1.2.
+
+CIFRA pares elegidos: 50
+CAMPOS QUE ESTA SALIDA LLEVA (lista blanca): puesto_intra, nodo_a, nodo_b
+
+------------------------------------------------------------------------------
+puesto_intra: 2573
+nodo_a: desarrollar_estrategias_largo_plazo
+nodo_b: desarrollar_metas_anuales
+  pasos de A (desarrollar_estrategias_largo_plazo): 4
+     paso 1: Evalúa las cinco áreas clave: satisfacción de tus clientes, costos de mala calidad, tu cultura, tus procesos internos y cómo te comparas con la competencia
+     paso 2: Analiza los datos para identificar tus fortalezas, debilidades, oportunidades y amenazas
+     paso 3: Define de 4 a 5 estrategias clave que aporten de verdad a tu visión
+     paso 4: Asigna a alguien concreto la responsabilidad de llevar adelante cada estrategia
+  pasos de B (desarrollar_metas_anuales): 5
+     paso 1: Revisa las siete areas clave de metas: producto, competitividad, mejora, costo de mala calidad, procesos, satisfaccion y lealtad del cliente
+     paso 2: Reune propuestas de metas de todas las personas que trabajan contigo, no solo las tuyas
+     paso 3: Filtra y prioriza las metas que entraran en tu plan de negocio
+     paso 4: Basa cada meta en tu desempeño historico, en la comparacion con la competencia o en el desempeño del mercado, según corresponda
+     paso 5: Asegurate de que cada meta sea especifica, medible y tenga un plazo definido
+------------------------------------------------------------------------------
+puesto_intra: 2584
+nodo_a: decide_phase_roadmap
+nodo_b: prepare_phase_roadmap
+  pasos de A (decide_phase_roadmap): 5
+     paso 1: Realizar evaluación de lealtad de cliente
+     paso 2: Identificar fortalezas y problemas de desempeño organizacional
+     paso 3: Entender actitudes de empleados hacia los cambios propuestos
+     paso 4: Realizar análisis de costos de procesos con bajo desempeño (COPQ)
+     paso 5: Definir infraestructura, metodología, metas y objetivos del plan de despliegue
+  pasos de B (prepare_phase_roadmap): 5
+     paso 1: Desplegar el plan creado en la fase Decide
+     paso 2: Identificar flujos de valor y procesos clave que requieren mejora
+     paso 3: Seleccionar proyectos piloto multifuncionales y crear sus charters
+     paso 4: Crear plan de entrenamiento para los equipos
+     paso 5: Comunicar los pasos tomados a toda la organización
+------------------------------------------------------------------------------
+puesto_intra: 2607
+nodo_a: alineacion_estrategica_despliegue
+nodo_b: establecer_vision_organizacional_2
+  pasos de A (alineacion_estrategica_despliegue): 5
+     paso 1: Identificar la misión, visión, valores y politicas actuales de tu negocio
+     paso 2: Verificar la coherencia entre tus metas de largo plazo (estrategias) y tus metas anuales de corto plazo
+     paso 3: Revisar tu mismo, o con la persona que te ayuda a decidir, como se esta desplegando el plan estrategico
+     paso 4: Detectar areas desalineadas entre tu plan estrategico y los proyectos o actividades diarias
+     paso 5: Realinear iniciativas y proyectos con los objetivos estrategicos identificados
+  pasos de B (establecer_vision_organizacional_2): 5
+     paso 1: Dedica tiempo a pensar con claridad hacia dónde quieres llevar tu negocio en los próximos años, y si tienes con quién conversarlo, hazlo
+     paso 2: Redacta una visión simple, directa y medible a 3 o 5 años
+     paso 3: Revisa que la visión contemple beneficios para tus clientes, las personas que trabajan contigo y tus socios
+     paso 4: Evita errores comunes como enfocarte solo en tus socios o crear visiones inalcanzables
+     paso 5: Comparte la visión de forma que sea entendida y compartida por todas las personas que trabajan contigo
+------------------------------------------------------------------------------
+puesto_intra: 2643
+nodo_a: matriz_de_seleccion
+nodo_b: matriz_pugh
+  pasos de A (matriz_de_seleccion): 7
+     paso 1: Acordar criterios de evaluación de alternativas
+     paso 2: Cada miembro del equipo distribuye 100 puntos entre los criterios
+     paso 3: Calcular el promedio de puntos por criterio y acordar los pesos finales
+     paso 4: Listar las alternativas a evaluar
+     paso 5: Calificar cada alternativa según cada criterio (escala 1-5)
+     paso 6: Calcular el promedio de calificación por alternativa
+     paso 7: Discutir resultados y llegar a consenso sobre próximos pasos
+  pasos de B (matriz_pugh): 5
+     paso 1: Definir criterios incluyendo CTQs del cliente y criterios de negocio
+     paso 2: Ponderar los criterios según importancia
+     paso 3: Calificar cada alternativa como mejor (+), peor (-) o igual (s) respecto al datum
+     paso 4: Comparar el número de positivos, negativos e iguales entre alternativas
+     paso 5: Crear una nueva alternativa híbrida que combine las mejores características
+------------------------------------------------------------------------------
+puesto_intra: 2647
+nodo_a: boxplot_resumen_datos
+nodo_b: herramientas_analisis_causa_raiz
+  pasos de A (boxplot_resumen_datos): 6
+     paso 1: Recolectar los datos crudos y ordenarlos de menor a mayor
+     paso 2: Decidir qué tipo de boxplot vas a construir según tu objetivo
+     paso 3: Calcular la mediana, los cuartiles y los valores máximo y mínimo
+     paso 4: Dibujar la caja delimitada por los cuartiles con la mediana marcada dentro
+     paso 5: Extender los bigotes hacia los valores extremos y etiquetar los ejes
+     paso 6: Comparar los boxplots de los distintos grupos para tomar tu decisión
+  pasos de B (herramientas_analisis_causa_raiz): 5
+     paso 1: Recolectar datos cuantitativos relevantes al problema de calidad.
+     paso 2: Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, ranking).
+     paso 3: Construir el gráfico y analizar patrones o anomalías visibles.
+     paso 4: Usar el análisis de Pareto para priorizar los factores más significativos.
+     paso 5: Aplicar estratificación para descomponer los datos por categorías y encontrar focos del problema.
+------------------------------------------------------------------------------
+puesto_intra: 2658
+nodo_a: evaluacion_organizacional_calidad
+nodo_b: medicion_calidad
+  pasos de A (evaluacion_organizacional_calidad): 5
+     paso 1: Definir el alcance de la evaluación (todo tu negocio, un área, una planta o un proceso puntual)
+     paso 2: Revisar el enfoque, el despliegue y los resultados en cada área clave (alineación estratégica, sistema de calidad, medición, procesos, empleados, proveedores, resultados)
+     paso 3: Recopilar información observando, conversando con las personas involucradas y revisando documentos
+     paso 4: Anotar fortalezas y debilidades con el nivel de detalle necesario en cada dimensión
+     paso 5: Integrar lo que encontraste en un análisis FODA de tu negocio
+  pasos de B (medicion_calidad): 8
+     paso 1: Identifica métricas de calidad para cada área de tu negocio, como errores, reprocesos o retrasos
+     paso 2: Revisa las métricas que ya existan y crea nuevas donde falten, incluyendo áreas administrativas
+     paso 3: Involucra a las personas responsables de cada área en la definición de sus propios indicadores
+     paso 4: Registra el estado actual como línea base documentada
+     paso 5: Publica los resultados en gráficos visibles para toda la organización, semanal o mensualmente
+     paso 6: Clasificar los defectos por gravedad, causa y responsabilidad
+     paso 7: Establecer metas de mejora visibles junto a los gráficos
+     paso 8: Asegurar que el ingeniero de calidad revise diariamente los defectos más frecuentes
+------------------------------------------------------------------------------
+puesto_intra: 2659
+nodo_a: auditoria_calidad
+nodo_b: programa_auditoria_calidad
+  pasos de A (auditoria_calidad): 4
+     paso 1: Definir con precisión qué función se auditará y contra qué criterios
+     paso 2: Seleccionar auditores imparciales, idealmente de otras áreas, evitando especialistas con sesgos propios
+     paso 3: Entrenar al equipo auditor y darles tiempo para elaborar un reporte adecuado
+     paso 4: Implementar autoauditorías periódicas por parte de las propias operaciones, verificadas con muestreos externos
+  pasos de B (programa_auditoria_calidad): 4
+     paso 1: Definir si el programa se orientará a cumplimiento, efectividad o ambos
+     paso 2: Decidir si vas a auditar tú mismo tu negocio o si vas a pedirle a alguien externo que lo haga, según lo que necesites lograr
+     paso 3: Establecer el alcance: qué partes de tu negocio, qué líneas de producto, qué sistemas de calidad o qué actividades específicas vas a revisar
+     paso 4: Documentar el propósito y las reglas del programa en un documento que tú mismo apruebes antes de empezar
+------------------------------------------------------------------------------
+puesto_intra: 2663
+nodo_a: consejo_calidad
+nodo_b: consejo_de_calidad
+  pasos de A (consejo_calidad): 6
+     paso 1: Conformar el consejo con miembros del comité de alta dirección
+     paso 2: Publicar y comunicar las responsabilidades del consejo a toda la organización
+     paso 3: Establecer políticas de enfoque al cliente y continuidad del breakthrough
+     paso 4: Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+     paso 5: Definir procesos de selección de proyectos y soporte a equipos
+     paso 6: Establecer métricas de progreso y sistema de reconocimiento
+  pasos de B (consejo_de_calidad): 11
+     paso 1: Reune a las personas clave de tu negocio para formar este espacio de decisión, idealmente miembros del comité de alta dirección, presidido por el máximo responsable del nivel correspondiente
+     paso 2: Capacitense en el método de mejora de calidad que van a usar
+     paso 3: Identifica y prioriza los problemas mas importantes, por ejemplo con un análisis de Pareto
+     paso 4: Elige los proyectos a trabajar y define con claridad el problema y la meta de cada uno
+     paso 5: Asigna los recursos necesarios: capacitación, personas, tiempo y acompañamiento
+     paso 6: Revisa el avance de cada equipo y reconoce los logros, con métricas de progreso y la remoción de obstáculos
+     paso 7: Publicar y comunicar las responsabilidades del consejo a toda la organización
+     paso 8: Establecer políticas de enfoque al cliente y continuidad del breakthrough
+     paso 9: Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+     paso 10: Incluir al director de calidad como miembro del consejo
+     paso 11: Redactar una carta constitutiva con responsabilidades claras del consejo
+------------------------------------------------------------------------------
+puesto_intra: 2674
+nodo_a: juran_quality_by_design
+nodo_b: quality_by_design
+  pasos de A (juran_quality_by_design): 6
+     paso 1: Decide si usarás el modelo de forma continua en tu negocio o para un proyecto puntual
+     paso 2: Establece las metas y objetivos del diseño
+     paso 3: Define el mercado y los clientes objetivo
+     paso 4: Descubre las necesidades del mercado, clientes y sociedad
+     paso 5: Desarrolla las características del nuevo diseño y los procesos necesarios para producirlas
+     paso 6: Desarrolla controles de proceso, documenta cada etapa y transfiere el diseño a operaciones
+  pasos de B (quality_by_design): 4
+     paso 1: Incorpora consideraciones de calidad desde las etapas iniciales del diseño de tu producto
+     paso 2: Define los requisitos operacionales de tu producto antes de empezar a desarrollarlo
+     paso 3: Traduce esos requisitos operacionales en requisitos de diseño concretos
+     paso 4: Valida que tu proceso de producción pueda cumplir consistentemente estos requisitos
+------------------------------------------------------------------------------
+puesto_intra: 2692
+nodo_a: accion_correctiva_5
+nodo_b: mejora_continua_operaciones
+  pasos de A (accion_correctiva_5): 6
+     paso 1: Documenta formalmente cada problema detectado durante la operación, revisión de calidad u otros medios
+     paso 2: Revisa con frecuencia regular, diaria si es posible, los problemas pendientes junto a quien te apoye en calidad
+     paso 3: Crea un chart de acción ítem por ítem que registre problema, gravedad, causa y responsable
+     paso 4: Define acciones que corrijan la causa raíz y prevengan la recurrencia, no solo alivien la presión del momento
+     paso 5: Escala los problemas más sutiles o de largo plazo a un nivel de decisión superior con frecuencia regular, para que no se acepten como normales
+     paso 6: Da seguimiento sistemático a cada ítem hasta su cierre definitivo
+  pasos de B (mejora_continua_operaciones): 6
+     paso 1: Diagnostica la cultura de calidad actual de tu operación
+     paso 2: Clasifica cada problema como esporadico o cronico antes de actuar
+     paso 3: Resuelve de inmediato los problemas esporadicos o urgentes
+     paso 4: Dedica tiempo y esfuerzo enfocado a atacar los problemas cronicos de raiz
+     paso 5: Junta a las personas de otras areas cuando la causa raiz las involucre
+     paso 6: Pide a quien te ayuda con calidad soporte tecnico y capacitación continua
+------------------------------------------------------------------------------
+puesto_intra: 2719
+nodo_a: familia_normas_iso_9000
+nodo_b: principios_gestion_calidad_iso9000
+  pasos de A (familia_normas_iso_9000): 6
+     paso 1: Identificar si el requisito que enfrentas aplica a especificaciones tecnicas del producto o al sistema de gestion
+     paso 2: Analizar el contexto de tu negocio y las necesidades de las partes interesadas segun las clausulas 4.1 y 4.2
+     paso 3: Documentar tu politica y objetivos de calidad alineados con ISO 9001
+     paso 4: Disenar el sistema de gestion documentando procesos con un enfoque basado en riesgos
+     paso 5: Buscar certificacion ante un organismo certificador de terceros
+     paso 6: Someterte a auditorias periodicas de vigilancia para mantener la certificacion
+  pasos de B (principios_gestion_calidad_iso9000): 4
+     paso 1: Evaluar el grado de cumplimiento actual de cada uno de los ocho principios en la organización
+     paso 2: Priorizar los principios con mayor brecha respecto a las necesidades del negocio
+     paso 3: Incorporar estos principios como criterios rectores en el diseño del sistema de gestión de calidad
+     paso 4: Comunicar los principios a todos los niveles de la organización
+------------------------------------------------------------------------------
+puesto_intra: 2735
+nodo_a: mapeo_flujo_valor
+nodo_b: value_non_value_added_analysis
+  pasos de A (mapeo_flujo_valor): 7
+     paso 1: Repasa los conceptos clave de Lean y Value Stream Mapping antes de empezar
+     paso 2: Mapea el estado actual documentando tiempos de ciclo, esperas, inventarios, downtime y capacidad, y el flujo actual de materiales e información en el proceso
+     paso 3: Clasifica cada actividad en valor agregado, no valor agregado pero necesaria, o desperdicio puro
+     paso 4: Diseña y documenta el mapa del estado futuro con las mejoras que quieres lograr
+     paso 5: Implementa los cambios y define mecanismos de control para validar el avance contra el mapa futuro
+     paso 6: Registrar métricas de tiempo de ciclo y costo en cada etapa
+     paso 7: Priorizar los problemas detectados como proyectos de mejora
+  pasos de B (value_non_value_added_analysis): 4
+     paso 1: Listar cada paso del proceso desde el mapa de estado actual
+     paso 2: Preguntar para cada paso: ¿el cliente pagaría por esto?
+     paso 3: Clasificar cada paso como valor agregado, no valor agregado necesario, o desperdicio puro
+     paso 4: Diseñar acciones para reducir o eliminar el desperdicio identificado
+------------------------------------------------------------------------------
+puesto_intra: 2774
+nodo_a: consejo_calidad
+nodo_b: equipo_mejora_calidad
+  pasos de A (consejo_calidad): 6
+     paso 1: Conformar el consejo con miembros del comité de alta dirección
+     paso 2: Publicar y comunicar las responsabilidades del consejo a toda la organización
+     paso 3: Establecer políticas de enfoque al cliente y continuidad del breakthrough
+     paso 4: Vincular consejos corporativos con consejos divisionales o locales si la organización es grande
+     paso 5: Definir procesos de selección de proyectos y soporte a equipos
+     paso 6: Establecer métricas de progreso y sistema de reconocimiento
+  pasos de B (equipo_mejora_calidad): 4
+     paso 1: Convocar representantes de cada departamento de la organización
+     paso 2: Orientar al equipo sobre el contenido y propósito del programa de calidad
+     paso 3: Definir el rol de cada miembro como agente de cambio en su departamento
+     paso 4: Nombrar un presidente o líder del equipo
+------------------------------------------------------------------------------
+puesto_intra: 2782
+nodo_a: planificacion_cero_defectos
+nodo_b: programa_de_mejora_de_calidad
+  pasos de A (planificacion_cero_defectos): 7
+     paso 1: Explicar el concepto ZD a todo el personal supervisor y prepararlos para transmitirlo a sus equipos
+     paso 2: Determinar y preparar los materiales necesarios (cartas, pines, folletos)
+     paso 3: Elegir el método de lanzamiento adecuado a la cultura organizacional
+     paso 4: Definir la política de reconocimiento para el desempeño mejorado
+     paso 5: Establecer un cronograma y ensayar a quienes participarán en el evento
+     paso 6: Planificar el programa de eliminación de causas de error (error-cause-removal) como continuación
+     paso 7: Incluir representación sindical en la planificación desde el inicio
+  pasos de B (programa_de_mejora_de_calidad): 6
+     paso 1: Asume el compromiso personal con la mejora de calidad y comunicalo a las personas con las que trabajas.
+     paso 2: Forma un equipo de mejora de calidad con representantes de cada area de tu negocio.
+     paso 3: Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números.
+     paso 4: Comparte las mediciones para generar conciencia de calidad entre quienes trabajan contigo y aplica un sistema de acción correctiva para resolver los problemas identificados.
+     paso 5: Planifica y ejecuta un día de Cero Defectos, entrena a quienes coordinan equipos, fija metas claras y promueve la eliminación de causas de error.
+     paso 6: Reconoce los logros, crea un espacio de seguimiento de calidad y repite el ciclo completo de los catorce pasos.
+------------------------------------------------------------------------------
+puesto_intra: 2797
+nodo_a: auditoria_sistema_control_calidad_2
+nodo_b: manual_de_calidad
+  pasos de A (auditoria_sistema_control_calidad_2): 6
+     paso 1: Establece un calendario de revisiones periódicas e independientes de tu sistema de control de calidad
+     paso 2: Define las preguntas clave de cada revisión: si el sistema sigue siendo adecuado y si se está siguiendo correctamente
+     paso 3: Verifica el grado real de cumplimiento del sistema en las operaciones diarias
+     paso 4: Clarifica qué acciones tomar cuando los puntos salen de los límites de control
+     paso 5: Establece guías de acción para cuando el producto está fuera de límites estadísticos pero dentro de tolerancia
+     paso 6: Actualiza el manual de calidad y los procedimientos según los hallazgos de la revisión
+  pasos de B (manual_de_calidad): 4
+     paso 1: Redactar los procedimientos core: retroalimentación, capacidad de proceso, calibración, proveedores, información, entrenamiento y auditoría
+     paso 2: Obtener la firma y aprobación oficial del gerente general para dar legitimidad al manual
+     paso 3: Involucrar a la fuerza laboral en la preparación de los procedimientos para asegurar su cumplimiento
+     paso 4: Establecer un cronograma de auditoría periódica de vigencia y conformidad del manual
+------------------------------------------------------------------------------
+puesto_intra: 2835
+nodo_a: abolir_inspeccion_masiva
+nodo_b: reporte_gerencial_diagnostico_calidad
+  pasos de A (abolir_inspeccion_masiva): 6
+     paso 1: Identifica los puntos donde hoy inspeccionas al 100% o 200% y mide su costo junto con el retrabajo asociado
+     paso 2: Analiza la causa raíz de los defectos que detectas en inspección, no te limites a separarlos
+     paso 3: Implementa muestreo aleatorio con números aleatorios en lugar de inspección exhaustiva
+     paso 4: Rediseña tu proceso de producción para construir calidad desde el origen
+     paso 5: Reduce gradualmente la inspección masiva a medida que tu proceso demuestre estar en control estadístico
+     paso 6: Reserva la inspección al 100% solo para casos excepcionales de bajo rendimiento crítico
+  pasos de B (reporte_gerencial_diagnostico_calidad): 5
+     paso 1: Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles
+     paso 2: Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que
+     paso 3: Revisar si pagas por pieza producida y evaluar que impacto tiene eso en la calidad
+     paso 4: Escribir un diagnostico claro para ti mismo con los hallazgos, las causas raiz y las opciones posibles: seguir igual, reducir costos manteniendo los defectos, o rediseñar el sistema
+     paso 5: Eliminar la distinción arbitraria entre defectos mayores y menores, y crear definiciones claras de que cuenta como defecto
+------------------------------------------------------------------------------
+puesto_intra: 2838
+nodo_a: analisis_causa_raiz_diagnostico
+nodo_b: viaje_diagnostico_remedial
+  pasos de A (analisis_causa_raiz_diagnostico): 5
+     paso 1: Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     paso 2: Generar una lista de teorías/hipótesis sobre las causas probables con el equipo
+     paso 3: Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado
+     paso 4: Validar estadísticamente cuál teoría explica la mayoría de los casos
+     paso 5: Confirmar la causa raíz antes de diseñar el remedio
+  pasos de B (viaje_diagnostico_remedial): 8
+     paso 1: Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     paso 2: Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto
+     paso 3: Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado
+     paso 4: Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos
+     paso 5: Diseñar remedios para eliminar las causas
+     paso 6: Probar los remedios bajo condiciones operativas reales
+     paso 7: Gestionar la resistencia predecible al cambio
+     paso 8: Establecer nuevos controles para sostener las ganancias
+------------------------------------------------------------------------------
+puesto_intra: 2853
+nodo_a: dia_cero_defectos
+nodo_b: dia_cero_defectos_3
+  pasos de A (dia_cero_defectos): 3
+     paso 1: Elige una fecha única para el lanzamiento oficial
+     paso 2: Realiza actividades especiales que marquen el cambio de actitud
+     paso 3: Explica el programa a todos el mismo día
+  pasos de B (dia_cero_defectos_3): 5
+     paso 1: Organizar un evento que reúna a todos los empleados al mismo tiempo, con presencia de líderes significativos para ellos.
+     paso 2: Incluir un componente de 'show business': música, discursos breves, premios, para hacer el evento memorable.
+     paso 3: Permitir que los empleados firmen su compromiso (pledge) con sus supervisores y reciban un pin o distintivo.
+     paso 4: Anunciar el inicio inmediato de la fase de eliminación de causas de error (ECR) al día siguiente del evento.
+     paso 5: Reconocer públicamente al equipo organizador y a los participantes destacados.
+------------------------------------------------------------------------------
+puesto_intra: 2858
+nodo_a: mito_departamento_control_calidad
+nodo_b: rol_de_mandos_medios_y_supervisores
+  pasos de A (mito_departamento_control_calidad): 4
+     paso 1: Redefine el rol de quien te ayuda con calidad: es tu asesor, no el único responsable
+     paso 2: Involucrate activamente en las decisiones de calidad, junto con quien compra y quien produce
+     paso 3: Pide reportes que te digan si tu proceso esta estable o tiene algo puntual que atender, no solo el conteo de defectos
+     paso 4: Convierte la mejora de calidad en un proceso de aprendizaje continuo que tu lideras
+  pasos de B (rol_de_mandos_medios_y_supervisores): 4
+     paso 1: Desarrollar habilidades de liderazgo para coordinar equipos que no responden directamente a ti
+     paso 2: Definir con claridad quien detecta y nombra los problemas de calidad
+     paso 3: Fomentar la participación en grupos de trabajo enfocados en resolver temas de calidad
+     paso 4: Evaluar habilidades de liderazgo como la tolerancia a fallas y la flexibilidad ante la ambiguedad
+------------------------------------------------------------------------------
+puesto_intra: 2865
+nodo_a: analisis_flujo_proceso
+nodo_b: mapa_de_proceso_planificacion_control
+  pasos de A (analisis_flujo_proceso): 4
+     paso 1: Elaborar diagrama de flujo del proceso completo
+     paso 2: Dividir el flujo en estaciones de trabajo lógicas
+     paso 3: Documentar para cada estación las operaciones, secuencia, instrumentos y condiciones de proceso
+     paso 4: Usar el documento como base para auditorías y control por parte de inspectores
+  pasos de B (mapa_de_proceso_planificacion_control): 4
+     paso 1: Reunir al equipo multifuncional responsable del proceso
+     paso 2: Diagramar el flujo completo del proceso operativo, incluyendo interrelaciones
+     paso 3: Identificar los puntos donde se ubicarán los sujetos de control
+     paso 4: Validar el diagrama con todos los responsables de cada segmento del proceso
+------------------------------------------------------------------------------
+puesto_intra: 2942
+nodo_a: reconocimiento
+nodo_b: reconocimiento_crosby
+  pasos de A (reconocimiento): 3
+     paso 1: Diseñar un programa de reconocimiento no financiero
+     paso 2: Tratar todos los problemas reportados de manera equitativa
+     paso 3: Reconocer públicamente logros de calidad y cumplimiento de metas
+  pasos de B (reconocimiento_crosby): 4
+     paso 1: Crea una manera de reconocer basada en apreciación real, no en valor monetario
+     paso 2: Evita premios costosos que distorsionen la motivación
+     paso 3: Da reconocimientos regulares y visibles
+     paso 4: Adapta el reconocimiento a la forma de trabajar que tienes con tu gente
+------------------------------------------------------------------------------
+puesto_intra: 2967
+nodo_a: carta_proyecto_calidad
+nodo_b: establecer_proyecto_mejora
+  pasos de A (carta_proyecto_calidad): 4
+     paso 1: Redactar una declaración clara del problema a resolver
+     paso 2: Definir la meta específica y medible del proyecto
+     paso 3: Formalizar la autorización del equipo para actuar sobre el proyecto
+     paso 4: Publicar la carta para otorgar legitimidad y derechos al equipo
+  pasos de B (establecer_proyecto_mejora): 5
+     paso 1: Redactar una declaración de problema clara y específica
+     paso 2: Redactar una declaración de meta con la misma variable y unidad de medida que el problema
+     paso 3: Seleccionar un facilitador o Black Belt para guiar la metodología
+     paso 4: Seleccionar y capacitar al líder del equipo de proyecto
+     paso 5: Lanzar formalmente el equipo con los representantes de las áreas involucradas
+------------------------------------------------------------------------------
+puesto_intra: 2971
+nodo_a: establecer_metas_caracteristicas
+nodo_b: establecer_proyecto_y_metas_diseno
+  pasos de A (establecer_metas_caracteristicas): 5
+     paso 1: Para cada característica que elegiste, define la unidad de medida apropiada
+     paso 2: Determina cómo vas a medir si se cumple la meta
+     paso 3: Establece el valor objetivo (meta) para cada característica
+     paso 4: Verifica que la meta cumpla estos criterios: medible, óptima, legítima, comprensible, aplicable y alcanzable
+     paso 5: Si dividiste el diseño en partes, integra los resultados de cada una
+  pasos de B (establecer_proyecto_y_metas_diseno): 5
+     paso 1: Vincular el proyecto de diseño con tu estrategia de ventas o de negocio
+     paso 2: Redactar un enunciado de meta que incluya el alcance y los resultados que quieres lograr
+     paso 3: Definir quien te va a ayudar en el proyecto y prepararlo para la tarea
+     paso 4: Definir metricas SMART: especificas, medibles, acordadas, realistas y con tiempo definido
+     paso 5: Revisar el avance del proyecto de forma periodica
+------------------------------------------------------------------------------
+puesto_intra: 2977
+nodo_a: distincion_causas_comunes_especiales
+nodo_b: sistema_estable_causas_comunes
+  pasos de A (distincion_causas_comunes_especiales): 4
+     paso 1: Determinar si el trabajo del empleado está en estado de control estadístico usando gráficos de control
+     paso 2: Si está en control, no informar sobre defectos individuales; enfocar el esfuerzo en el sistema
+     paso 3: Si hay una causa especial detectada, ayudar al trabajador a identificarla y eliminarla
+     paso 4: Evitar sanciones a trabajadores por fallas atribuibles al sistema
+  pasos de B (sistema_estable_causas_comunes): 5
+     paso 1: Recolectar datos diarios de defectos o errores durante varias semanas.
+     paso 2: Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable o inestable.
+     paso 3: Clasificar la variación como causa común (del sistema) o causa especial (puntual).
+     paso 4: Si el sistema es estable, identificar qué cambios estructurales, como materiales, herramientas o capacitación, pueden mover su capacidad.
+     paso 5: Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo.
+------------------------------------------------------------------------------
+puesto_intra: 2996
+nodo_a: capacidad_de_proceso_2
+nodo_b: control_estadistico_de_procesos_2
+  pasos de A (capacidad_de_proceso_2): 5
+     paso 1: Seleccionar la unidad a estudiar (persona, máquina, sistema)
+     paso 2: Recolectar datos de desempeño durante un período representativo (aprox. 3 meses)
+     paso 3: Construir cartas de control (run charts, control charts) para visualizar variación
+     paso 4: Determinar si el proceso está dentro de límites aceptables
+     paso 5: Si no lo está, intervenir sobre el sistema (no sobre el individuo)
+  pasos de B (control_estadistico_de_procesos_2): 5
+     paso 1: Recolectar datos de desempeño en muestras (por ejemplo, n=4 o n=5)
+     paso 2: Calcular el promedio y rango de cada muestra
+     paso 3: Establecer límites de control superior e inferior (típicamente 3 sigma) a partir del rango promedio
+     paso 4: Graficar los puntos en el tiempo y observar si permanecen dentro de los límites
+     paso 5: Investigar cualquier punto fuera de los límites como posible causa especial
+------------------------------------------------------------------------------
+puesto_intra: 3004
+nodo_a: desarrollo_de_controles_de_proceso
+nodo_b: mapa_de_proceso_planificacion_control
+  pasos de A (desarrollo_de_controles_de_proceso): 6
+     paso 1: Identificar los controles necesarios evaluando el desempeño real contra las metas.
+     paso 2: Diseñar el bucle de retroalimentación y definir puntos de control en el diagrama de flujo.
+     paso 3: Establecer estándares de control y acciones correctivas ante desviaciones.
+     paso 4: Entrenar a los trabajadores en decisiones de conformidad del producto.
+     paso 5: Planificar y documentar la transferencia formal a operaciones incluyendo metas, procedimientos y capacitación.
+     paso 6: Desarrollar un plan de auditoría para validar que la transferencia fue exitosa.
+  pasos de B (mapa_de_proceso_planificacion_control): 4
+     paso 1: Reunir al equipo multifuncional responsable del proceso
+     paso 2: Diagramar el flujo completo del proceso operativo, incluyendo interrelaciones
+     paso 3: Identificar los puntos donde se ubicarán los sujetos de control
+     paso 4: Validar el diagrama con todos los responsables de cada segmento del proceso
+------------------------------------------------------------------------------
+puesto_intra: 3025
+nodo_a: control_del_proceso_del_proveedor
+nodo_b: planificacion_inicial_calidad
+  pasos de A (control_del_proceso_del_proveedor): 9
+     paso 1: Solicitar al proveedor un plan escrito de control del proceso de manufactura
+     paso 2: Incluir requisitos de SPC para detección temprana de defectos
+     paso 3: Definir tareas especiales y buenas prácticas de manufactura requeridas
+     paso 4: Clasificar la seriedad de los defectos para priorizar esfuerzos
+     paso 5: Establecer estándares sensoriales físicos cuando se requiera juicio humano
+     paso 6: Estandarizar métodos y condiciones de prueba entre proveedor y comprador
+     paso 7: Acordar el significado exacto de los requisitos de desempeño en las especificaciones
+     paso 8: Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente
+     paso 9: Establecer sistema de trazabilidad de lotes
+  pasos de B (planificacion_inicial_calidad): 5
+     paso 1: Revisar el diseño del producto con personal de operaciones antes de su lanzamiento
+     paso 2: Identificar características clave del producto y del proceso (KPCs)
+     paso 3: Clasificar características por importancia (crítica, mayor, menor, incidental)
+     paso 4: Analizar el diagrama de flujo del proceso por estación de trabajo
+     paso 5: Validar la capacidad y los sistemas de medición del proceso
+------------------------------------------------------------------------------
+puesto_intra: 3033
+nodo_a: consejo_de_calidad_y_rol_del_director
+nodo_b: equipo_mejora_calidad_2
+  pasos de A (consejo_de_calidad_y_rol_del_director): 5
+     paso 1: Forma un consejo de calidad con las personas que toman las decisiones importantes en tu negocio
+     paso 2: Define y comunica visión, misión, valores compartidos y tu política de calidad
+     paso 3: Integra las metas de calidad en tus planes de negocio y de desempeño
+     paso 4: Designa responsables para los proyectos clave de calidad
+     paso 5: Revisa el progreso con frecuencia y elimina los obstáculos que encuentres
+  pasos de B (equipo_mejora_calidad_2): 6
+     paso 1: Elige a la persona que va a liderar la mejora de calidad, idealmente alguien con visión de todo el negocio, por ejemplo quien se encarga de marketing u operaciones.
+     paso 2: Identifica quien representa cada área clave de tu negocio: producción o entrega, diseño, compras, atención al cliente, marketing y calidad.
+     paso 3: Asigna a alguien que documente las reuniones, de seguimiento a las acciones y mantenga el impulso del programa.
+     paso 4: Establece una frecuencia regular de reuniones, por ejemplo semanal, con agenda y notas claras.
+     paso 5: Define hasta dónde puede llegar este grupo para proponer y ejecutar acciones correctivas.
+     paso 6: Orientar al equipo sobre el contenido y propósito del programa de calidad
+------------------------------------------------------------------------------
+puesto_intra: 3038
+nodo_a: auditoria_sistema_control_calidad_2
+nodo_b: funciones_del_departamento_de_calidad
+  pasos de A (auditoria_sistema_control_calidad_2): 6
+     paso 1: Establece un calendario de revisiones periódicas e independientes de tu sistema de control de calidad
+     paso 2: Define las preguntas clave de cada revisión: si el sistema sigue siendo adecuado y si se está siguiendo correctamente
+     paso 3: Verifica el grado real de cumplimiento del sistema en las operaciones diarias
+     paso 4: Clarifica qué acciones tomar cuando los puntos salen de los límites de control
+     paso 5: Establece guías de acción para cuando el producto está fuera de límites estadísticos pero dentro de tolerancia
+     paso 6: Actualiza el manual de calidad y los procedimientos según los hallazgos de la revisión
+  pasos de B (funciones_del_departamento_de_calidad): 5
+     paso 1: Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no sea quien fabrica el producto.
+     paso 2: Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.
+     paso 3: No dejes que quien diseñó el producto sea quien haga las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.
+     paso 4: Involucra el control de calidad desde el principio al elegir y desarrollar proveedores, no solo al momento de comprarles.
+     paso 5: Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo.
+------------------------------------------------------------------------------
+puesto_intra: 3055
+nodo_a: benchmarking_mejores_practicas
+nodo_b: clasificacion_benchmarking
+  pasos de A (benchmarking_mejores_practicas): 4
+     paso 1: Identificar procesos clave a comparar (diseño, logística, ventas, etc.)
+     paso 2: Seleccionar organizaciones reconocidas como mejores en clase para esos procesos
+     paso 3: Subcontratar o realizar el estudio de benchmarking comparando prácticas
+     paso 4: Identificar brechas entre el desempeño propio y las mejores prácticas encontradas
+  pasos de B (clasificacion_benchmarking): 4
+     paso 1: Determinar el objeto del benchmarking: función, proceso, unidad de negocio, proyecto o modelo genérico
+     paso 2: Decidir el tipo de participantes: internos, externos, competidores o no competidores
+     paso 3: Seleccionar el modelo de excelencia (ej. Baldridge o EFQM) si se busca un marco holístico de comparación
+     paso 4: Evaluar el nivel de control, costo y tiempo disponible para el tipo de benchmarking elegido
+------------------------------------------------------------------------------
+puesto_intra: 3116
+nodo_a: eliminar_metas_numericas_gerencia
+nodo_b: falacia_meta_numerica_sin_metodo
+  pasos de A (eliminar_metas_numericas_gerencia): 5
+     paso 1: Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto
+     paso 2: Eliminar metas que solo se basen en deseos o presión sin método definido
+     paso 3: Determinar la capacidad real del sistema mediante análisis estadístico antes de fijar cualquier meta
+     paso 4: Reemplazar metas arbitrarias por objetivos de mejora continua con planes de acción específicos
+     paso 5: Reconocer el costo oculto de manejar tu negocio por miedo a los números
+  pasos de B (falacia_meta_numerica_sin_metodo): 5
+     paso 1: Antes de fijar una meta numérica, estudiar el proceso mediante observación de variación natural (temperatura, presión, velocidad, etc.)
+     paso 2: Aplicar el ciclo PDSA (Planificar-Hacer-Estudiar-Actuar) para probar cambios fundamentados en conocimiento técnico
+     paso 3: Usar diseño experimental cuando la observación natural no sea suficiente
+     paso 4: Construir un gráfico de control del indicador para diferenciar causas especiales de mejora real
+     paso 5: Evitar juntas reactivas que buscan explicaciones improvisadas cada vez que se incumple la meta
+------------------------------------------------------------------------------
+puesto_intra: 3132
+nodo_a: costo_de_calidad_3
+nodo_b: modelo_costo_optimo_calidad
+  pasos de A (costo_de_calidad_3): 6
+     paso 1: Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad
+     paso 2: Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, auditorías, cambios de ingeniería, fallos internos, fallos externos, prevención y evaluación, incluyendo tu tiempo o salario, sin minimizar cifras
+     paso 3: Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%
+     paso 4: Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección
+     paso 5: Establece una meta de reducción progresiva del costo de calidad
+     paso 6: Convierte este cálculo en una medición recurrente de cómo va tu gestión de calidad
+  pasos de B (modelo_costo_optimo_calidad): 5
+     paso 1: Grafica las curvas de costo de fallas y de evaluación/prevención en función del nivel de conformidad de tu producto
+     paso 2: Identifica el punto de intersección o mínimo de la curva de costo total de calidad
+     paso 3: Evalúa si existen proyectos de mejora cuyo beneficio supere claramente su costo
+     paso 4: Determina si tu negocio está lejos del punto óptimo o si ya alcanzaste el límite económico de mejora
+     paso 5: Ajusta tu presupuesto de prevención según el análisis de beneficio costo que obtuviste
+------------------------------------------------------------------------------
+puesto_intra: 3166
+nodo_a: despliegue_metas
+nodo_b: planificacion_estrategica_despliegue
+  pasos de A (despliegue_metas): 4
+     paso 1: Dividir las metas estratégicas del consejo en submetas por nivel organizacional
+     paso 2: Solicitar a los niveles de acción que seleccionen proyectos de breakthrough que cumplan las metas
+     paso 3: Negociar y revisar propuestas de recursos entre niveles hasta llegar a acuerdo
+     paso 4: Formalizar qué proyectos se ejecutarán, con qué recursos y bajo qué responsables
+  pasos de B (planificacion_estrategica_despliegue): 7
+     paso 1: Definir la misión organizacional (¿en qué negocio estamos?)
+     paso 2: Formular y publicar una visión del estado futuro deseado
+     paso 3: Generar pocas estrategias clave para cumplir la misión y visión
+     paso 4: Cuantificar metas estratégicas para cada estrategia clave, divididas por horizonte temporal
+     paso 5: Establecer objetivos operativos específicos con responsables asignados
+     paso 6: Ejecutar el proceso de catch ball: circular estrategias hacia abajo, recopilar sugerencias, refinar metas en iteraciones
+     paso 7: Definir métricas y scorecards para dar seguimiento al progreso en todos los niveles
+------------------------------------------------------------------------------
+puesto_intra: 3177
+nodo_a: accion_correctiva
+nodo_b: analisis_causa_raiz_diagnostico
+  pasos de A (accion_correctiva): 5
+     paso 1: Clasificar la no conformidad como esporádica o crónica según su recurrencia.
+     paso 2: Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.
+     paso 3: Reconstruir la cronología de eventos como cambios de turno, mantenimiento o personal nuevo para formular y descartar teorías de causa.
+     paso 4: Restaurar el proceso al estado previo una vez identificada la causa y verificar que el ajuste sea predecible y accesible.
+     paso 5: Para casos crónicos, organizar un proyecto formal de mejora de calidad con análisis de causa raíz o Six Sigma.
+  pasos de B (analisis_causa_raiz_diagnostico): 5
+     paso 1: Realizar análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)
+     paso 2: Generar una lista de teorías/hipótesis sobre las causas probables con el equipo
+     paso 3: Diseñar un mecanismo de recolección de datos que permita correlacionar cada teoría con el defecto observado
+     paso 4: Validar estadísticamente cuál teoría explica la mayoría de los casos
+     paso 5: Confirmar la causa raíz antes de diseñar el remedio
+------------------------------------------------------------------------------
+puesto_intra: 3178
+nodo_a: funciones_del_departamento_de_calidad
+nodo_b: organizacion_independiente_de_calidad
+  pasos de A (funciones_del_departamento_de_calidad): 5
+     paso 1: Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no sea quien fabrica el producto.
+     paso 2: Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.
+     paso 3: No dejes que quien diseñó el producto sea quien haga las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.
+     paso 4: Involucra el control de calidad desde el principio al elegir y desarrollar proveedores, no solo al momento de comprarles.
+     paso 5: Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo.
+  pasos de B (organizacion_independiente_de_calidad): 4
+     paso 1: Ubica a quien se encarga de calidad al mismo nivel que ingenieria, producción y marketing en tu organigrama.
+     paso 2: Asegurate de que esa persona te reporte directamente a ti, no a las areas operativas.
+     paso 3: Elige a alguien capaz de comunicarse, e incluso llamar la atención a otros responsables, sin generar antagonismo.
+     paso 4: Evita que la calidad se convierta en solo una revisión posterior; que prevenga defectos activamente, no que solo los detecte.
+------------------------------------------------------------------------------
+puesto_intra: 3184
+nodo_a: breakthrough_cultural
+nodo_b: normas_culturales_calidad
+  pasos de A (breakthrough_cultural): 5
+     paso 1: Revisar la visión, misión y valores de tu negocio
+     paso 2: Alinear como eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir
+     paso 3: Reforzar de manera constante los nuevos comportamientos con reconocimiento y recompensas
+     paso 4: No dejar a nadie fuera del cambio, ni siquiera a ti mismo
+     paso 5: Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar toma anos
+  pasos de B (normas_culturales_calidad): 4
+     paso 1: Auditar las creencias actuales de la organización respecto a calidad vs. cantidad
+     paso 2: Publicar y comunicar un código de conducta orientado al cliente
+     paso 3: Establecer metas de mejora continua (stretch goals) medibles
+     paso 4: Crear estructuras que permitan detectar y responder rápidamente a tendencias externas
+------------------------------------------------------------------------------
+puesto_intra: 3197
+nodo_a: conciencia_de_calidad_2
+nodo_b: programa_mejora_calidad_14_pasos
+  pasos de A (conciencia_de_calidad_2): 5
+     paso 1: Organizar reuniones regulares entre supervisores y sus equipos para discutir problemas de no conformidad específicos
+     paso 2: Establecer comunicación visual (afiches, boletines internos, eventos) que refuerce el mensaje de calidad
+     paso 3: Asegurar que cada supervisor transmita el mensaje directamente a su gente, no mediante una sola reunión masiva
+     paso 4: Mantener consistencia y cumplir las promesas hechas en las reuniones
+     paso 5: Involucrar a relaciones públicas y personal para apoyar la logística de la campaña de conciencia
+  pasos de B (programa_mejora_calidad_14_pasos): 8
+     paso 1: Comprometerte tú mismo con la calidad, de forma explícita y visible
+     paso 2: Reunir a un pequeño equipo que impulse la mejora, aunque sea de dos o tres personas
+     paso 3: Definir cómo vas a medir la calidad y el costo de la no calidad
+     paso 4: Generar conciencia de calidad en todos los que trabajan contigo
+     paso 5: Aplicar acción correctiva de forma sistemática cuando detectes fallas
+     paso 6: Planificar y llevar a cabo un Día de Cero Defectos
+     paso 7: Fijar metas, eliminar las causas de los errores, reconocer los logros y repetir el ciclo, entrenando a quienes coordinan equipos
+     paso 8: Establece medidas de calidad en todas las areas, incluidas las que no son de producción, y calcula el costo de la calidad con apoyo de quien lleve tus números.
+------------------------------------------------------------------------------
+puesto_intra: 3210
+nodo_a: kaizen_mejora_continua
+nodo_b: lean_manufacturing_tps
+  pasos de A (kaizen_mejora_continua): 5
+     paso 1: Seleccionar un proceso o área con desperdicio identificado en el VSM
+     paso 2: Organizar un evento de mejora rápida (kaizen) con equipo multidisciplinario
+     paso 3: Implementar cambios inmediatos durante el evento (días, no meses)
+     paso 4: Medir el impacto en velocidad y desperdicio antes y después del evento
+     paso 5: Estandarizar la mejora e institucionalizarla en el proceso
+  pasos de B (lean_manufacturing_tps): 6
+     paso 1: Identificar los tipos de desperdicio (muda) presentes en los procesos productivos
+     paso 2: Implementar kaizen (mejora continua) como práctica constante
+     paso 3: Aplicar 6S para mantener un lugar de trabajo limpio y organizado
+     paso 4: Introducir poka-yoke (a prueba de errores) en puntos críticos del proceso
+     paso 5: Establecer sistemas pull mediante kanban para sincronizar la producción con la demanda
+     paso 6: Usar el Heijunka box para nivelar y suavizar el flujo de producción
+------------------------------------------------------------------------------
+puesto_intra: 3226
+nodo_a: criticas_muestreo_aceptacion
+nodo_b: pruebas_destructivas
+  pasos de A (criticas_muestreo_aceptacion): 4
+     paso 1: Deja de usar poco a poco los planes de muestreo por aceptación como tu control final de calidad
+     paso 2: Cambia la inspección de lotes por el control estadístico de tu proceso en tiempo real
+     paso 3: Trabaja junto a tus proveedores para asegurar la calidad desde el origen, no en la revisión final
+     paso 4: Calcula cuánto te cuesta realmente seguir usando el muestreo por aceptación
+  pasos de B (pruebas_destructivas): 4
+     paso 1: Identificar los atributos de calidad que requieren pruebas destructivas.
+     paso 2: Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.
+     paso 3: Verificar que el proceso esté en control estadístico antes de confiar en la calidad del producto.
+     paso 4: Eliminar la práctica de screening de lotes rechazados, ya que no aporta valor en pruebas destructivas.
+------------------------------------------------------------------------------
+puesto_intra: 3247
+nodo_a: consejo_ejecutivo_calidad
+nodo_b: planificacion_estrategica_despliegue_2
+  pasos de A (consejo_ejecutivo_calidad): 5
+     paso 1: Definir quién participa en esta revisión: tú solo o las personas clave que te ayudan
+     paso 2: Fijar la frecuencia de las reuniones, mensual o trimestral
+     paso 3: Si tu negocio crece, replicar esta misma dinámica de revisión en equipos o áreas más pequeñas, conectadas entre sí
+     paso 4: Asignar a este espacio la responsabilidad de vigilar los KPI y de ejecutar el plan estratégico
+     paso 5: Fomentar que las distintas partes de tu negocio colaboren entre sí, en vez de trabajar cada una por su cuenta
+  pasos de B (planificacion_estrategica_despliegue_2): 7
+     paso 1: Definir tu visión, misión, estrategias y metas anuales de forma integrada
+     paso 2: Poner la voz del cliente y las metas de calidad al mismo nivel que las metas financieras
+     paso 3: Reconocer y premiar el desempeño de acuerdo a las metas de mejora que te propongas
+     paso 4: Asegurarte de que participen todos los que te ayudan, sin importar su rol o nivel
+     paso 5: Usar el mismo lenguaje para los términos clave, como calidad, comparación con el mercado o cómo bajas la estrategia a lo concreto
+     paso 6: Enseñar estos conceptos y herramientas a todos los que trabajan contigo, no solo a quien se encarga de la calidad
+     paso 7: Eliminar las iniciativas que no estén alineadas con tu plan estratégico
+------------------------------------------------------------------------------
+puesto_intra: 3283
+nodo_a: como_sabes_que_tu_metodo_sirve
+nodo_b: vuelve_a_medir_despues_del_susto
+  pasos de A (como_sabes_que_tu_metodo_sirve): 4
+     paso 1: Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.
+     paso 2: Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.
+     paso 3: Pregunta: lo que llamé probable ocurrió seguido, y lo improbable casi nunca.
+     paso 4: Si no acierta, cambia de método en vez de repetir uno que solo te da calma.
+  pasos de B (vuelve_a_medir_despues_del_susto): 4
+     paso 1: Después de aplicar una respuesta, mide de nuevo el riesgo: bajó lo suficiente o no.
+     paso 2: Si no bajó a un nivel aceptable, decide qué respuesta adicional le das.
+     paso 3: Cuando un riesgo se materializó o el entorno cambió, actualiza su probabilidad e impacto.
+     paso 4: Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes.
+------------------------------------------------------------------------------
+puesto_intra: 3290
+nodo_a: caza_las_oportunidades_no_solo_amenazas
+nodo_b: el_riesgo_nunca_se_acaba_se_administra
+  pasos de A (caza_las_oportunidades_no_solo_amenazas): 4
+     paso 1: Junto a tu lista de amenazas, abre una lista de oportunidades posibles.
+     paso 2: De cada una estima qué tan probable es y qué premio traería si la tomas.
+     paso 3: Define la señal que te avisaría que la oportunidad llegó y cómo la aprovecharías rápido.
+     paso 4: Reserva algo de tu capacidad para perseguir la oportunidad más prometedora cuando aparezca.
+  pasos de B (el_riesgo_nunca_se_acaba_se_administra): 4
+     paso 1: Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.
+     paso 2: Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.
+     paso 3: Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.
+     paso 4: Sigue arriesgando con valentía, ahora con método debajo del brazo.
+------------------------------------------------------------------------------
+puesto_intra: 3292
+nodo_a: cual_es_tu_mayor_riesgo
+nodo_b: haz_tu_lista_de_lo_que_puede_fallar
+  pasos de A (cual_es_tu_mayor_riesgo): 4
+     paso 1: Escribe, sin pensarlo mucho, cuál crees que es el mayor riesgo de tu proyecto.
+     paso 2: Debajo, escribe con honestidad cómo lo sabes: qué evidencia tienes o si es solo corazonada.
+     paso 3: Si la respuesta es solo corazonada, apunta qué dato te ayudaría a confirmarlo o descartarlo.
+     paso 4: Repite el ejercicio con el segundo y el tercer riesgo más grandes.
+  pasos de B (haz_tu_lista_de_lo_que_puede_fallar): 5
+     paso 1: Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.
+     paso 2: Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.
+     paso 3: Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.
+     paso 4: De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.
+     paso 5: De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.
+------------------------------------------------------------------------------
+puesto_intra: 3341
+nodo_a: evalua_la_gravedad_sin_autoengano
+nodo_b: haz_tu_lista_de_lo_que_puede_fallar
+  pasos de A (evalua_la_gravedad_sin_autoengano): 5
+     paso 1: Repasa tu lista ya ordenada por gravedad y pregúntate, riesgo por riesgo, si le pusiste el nivel que le corresponde o el que te conviene creer.
+     paso 2: Marca los riesgos donde notas que minimizaste algo que no quieres enfrentar.
+     paso 3: Marca los riesgos donde notas que inflaste la gravedad de algo que ya decidiste evitar de todos modos.
+     paso 4: Vuelve a mirar tu orden final y confirma que los tres más graves según el mismo criterio, no según tu miedo, sean los que atenderás primero.
+     paso 5: Si tu orden cambia después de esta revisión, quédate con el nuevo orden aunque incomode.
+  pasos de B (haz_tu_lista_de_lo_que_puede_fallar): 5
+     paso 1: Ponte un tiempo fijo y dedícalo solo a nombrar amenazas, sin evaluarlas todavía ni buscarles solución.
+     paso 2: Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.
+     paso 3: Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.
+     paso 4: De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.
+     paso 5: De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.
+------------------------------------------------------------------------------
+puesto_intra: 3346
+nodo_a: cultura_que_habla_del_riesgo_sin_miedo
+nodo_b: el_pre_mortem_imagina_el_fracaso
+  pasos de A (cultura_que_habla_del_riesgo_sin_miedo): 4
+     paso 1: Date permiso explícito de pensar en lo que puede fallar sin sentirte derrotista.
+     paso 2: No te castigues por traer malas noticias: la mala noticia temprana es un regalo.
+     paso 3: Invita a una persona de confianza a cuestionar tu plan y agradécele los riesgos que encuentre.
+     paso 4: Si tienes o tendrás colaboradores, deja claro que nombrar un riesgo nunca se penaliza.
+  pasos de B (el_pre_mortem_imagina_el_fracaso): 4
+     paso 1: Imagina que estás seis meses en el futuro y tu proyecto fracasó por completo.
+     paso 2: Escribe la historia de por qué fracasó, con detalles, como si ya hubiera pasado.
+     paso 3: Subraya en esa historia cada causa concreta: esos son riesgos que no habías nombrado.
+     paso 4: Pasa esos riesgos nuevos a tu lista y decide qué harías con los más graves.
+------------------------------------------------------------------------------
+puesto_intra: 3352
+nodo_a: cuatro_caminos_ante_un_riesgo
+nodo_b: vuelve_a_medir_despues_del_susto
+  pasos de A (cuatro_caminos_ante_un_riesgo): 4
+     paso 1: Toma tus riesgos más graves y, de cada uno, escribe cuál de los cuatro caminos le conviene.
+     paso 2: Considera primero si puedes evitarlo cambiando de rumbo, la respuesta más contundente.
+     paso 3: Si no, decide si lo reduces, lo transfieres a alguien más, o lo aceptas a conciencia.
+     paso 4: Pesa el costo de la respuesta contra el daño que evitarías: que valga la pena.
+  pasos de B (vuelve_a_medir_despues_del_susto): 4
+     paso 1: Después de aplicar una respuesta, mide de nuevo el riesgo: bajó lo suficiente o no.
+     paso 2: Si no bajó a un nivel aceptable, decide qué respuesta adicional le das.
+     paso 3: Cuando un riesgo se materializó o el entorno cambió, actualiza su probabilidad e impacto.
+     paso 4: Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes.
+------------------------------------------------------------------------------
+puesto_intra: 3369
+nodo_a: fundamentos_gestion_riesgo
+nodo_b: proceso_rmf_siete_pasos
+  pasos de A (fundamentos_gestion_riesgo): 4
+     paso 1: Definir el contexto de riesgo de la organización (misión, activos, entorno).
+     paso 2: Establecer la tolerancia al riesgo organizacional.
+     paso 3: Documentar cómo se evaluará, responderá y monitoreará el riesgo.
+     paso 4: Revisar periódicamente estas cuatro actividades como ciclo continuo.
+  pasos de B (proceso_rmf_siete_pasos): 4
+     paso 1: Familiarizarse con los siete pasos del RMF: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear.
+     paso 2: Asignar responsables para la ejecución de cada paso.
+     paso 3: Planificar una primera ejecución secuencial del proceso completo.
+     paso 4: Establecer mecanismos para revisar y repetir pasos según cambien las circunstancias.
+------------------------------------------------------------------------------
+puesto_intra: 3379
+nodo_a: csf_funcion_govern
+nodo_b: marco_nist_cybersecurity_framework
+  pasos de A (csf_funcion_govern): 7
+     paso 1: Documentar la misión del negocio y qué riesgos de ciberseguridad podrían impedir alcanzarla
+     paso 2: Identificar requisitos legales, regulatorios y contractuales de ciberseguridad aplicables
+     paso 3: Asignar formalmente quién será responsable de desarrollar y ejecutar la estrategia de ciberseguridad
+     paso 4: Evaluar el impacto potencial de perder activos o operaciones críticas
+     paso 5: Evaluar si un seguro de ciberseguridad es apropiado para el negocio
+     paso 6: Evaluar riesgos de proveedores y terceros antes de formalizar relaciones comerciales
+     paso 7: Comunicar y hacer cumplir políticas de gestión de riesgo de ciberseguridad a toda la organización
+  pasos de B (marco_nist_cybersecurity_framework): 3
+     paso 1: Revisar las cinco funciones del framework (Identify, Protect, Detect, Respond, Recover)
+     paso 2: Determinar el estado actual de la empresa en cada función
+     paso 3: Visitar NIST.gov/CyberFramework para más recursos
+------------------------------------------------------------------------------
+puesto_intra: 3382
+nodo_a: fundamentos_gestion_riesgo
+nodo_b: rmf_paso_preparar
+  pasos de A (fundamentos_gestion_riesgo): 4
+     paso 1: Definir el contexto de riesgo de la organización (misión, activos, entorno).
+     paso 2: Establecer la tolerancia al riesgo organizacional.
+     paso 3: Documentar cómo se evaluará, responderá y monitoreará el riesgo.
+     paso 4: Revisar periódicamente estas cuatro actividades como ciclo continuo.
+  pasos de B (rmf_paso_preparar): 5
+     paso 1: Designar a un individuo o equipo responsable de ejecutar el RMF (Tarea P-1).
+     paso 2: Crear una estrategia de gestión de riesgo que exprese la tolerancia al riesgo (Tarea P-2).
+     paso 3: Determinar el alcance de protección del sistema (Tarea P-11).
+     paso 4: Implementar una estrategia de monitoreo continuo (Tarea P-7).
+     paso 5: Evaluar regularmente los riesgos a nivel organizacional y de sistema (Tareas P-3, P-14).
+------------------------------------------------------------------------------
+puesto_intra: 3383
+nodo_a: csf_funcion_protect
+nodo_b: gestion_contrasenas_cui
+  pasos de A (csf_funcion_protect): 7
+     paso 1: Restringir el acceso a información sensible solo a empleados que la necesiten para su trabajo
+     paso 2: Requerir autenticación multifactor (MFA) en todas las cuentas que lo permitan, comenzando por las más sensibles (banca, cuentas de correo, gestores de contraseñas)
+     paso 3: Cambiar las contraseñas predeterminadas de fábrica en todos los dispositivos
+     paso 4: Actualizar y parchear regularmente software y sistemas operativos, habilitando actualizaciones automáticas
+     paso 5: Realizar copias de seguridad periódicas de los datos y probar su restauración
+     paso 6: Configurar cifrado de disco completo en laptops y tablets
+     paso 7: Capacitar al personal para reconocer ataques comunes y realizar higiene cibernética básica
+  pasos de B (gestion_contrasenas_cui): 4
+     paso 1: Definir reglas de complejidad y renovación de contraseñas para la organización.
+     paso 2: Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.
+     paso 3: Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.
+     paso 4: Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas.
+------------------------------------------------------------------------------
+FIN DE LA SALIDA CIEGA. El destape vive en OTRO fichero.
