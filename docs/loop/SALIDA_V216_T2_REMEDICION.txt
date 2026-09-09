@@ -1,0 +1,327 @@
+==============================================================================
+VUELTA 216, TAREA 2. LA RE-MEDICION QUE EL FUNDADOR ORDENO
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b
+
+==============================================================================
+2.a. LAS CATORCE FILAS, SACADAS CON UN INSTRUMENTO Y NO A MANO
+==============================================================================
+CIFRA lineas de docs/plan/08_VERIFICACION.md: 947
+CIFRA FILAS ARMADAS LEYENDO ESA TABLA: 14 | CIFRA FILAS QUE DEBERIA HABER: 14
+
+EL COTEJO DE CADA FILA CONTRA SU SEDE, VERBATIM Y POR SU INDICE:
+FILA  1 | OP-V-01  | indice 8 | linea 34 (leida 34: SI) | VERBATIM CALZA: SI
+        clausula: TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids
+        corregida por: no
+FILA  2 | OP-L-01  | indice 0 | linea 41 (leida 41: SI) | VERBATIM CALZA: SI
+        clausula: ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+        corregida por: indice 3
+FILA  3 | OP-L-01  | indice 1 | linea 41 (leida 41: SI) | VERBATIM CALZA: SI
+        clausula: el marcador del cribado no se mueve: sigue en 2.117
+        corregida por: indice 4
+FILA  4 | OP-L-01  | indice 2 | linea 41 (leida 41: SI) | VERBATIM CALZA: SI
+        clausula: cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+        corregida por: no
+FILA  5 | OP-L-02  | indice 0 | linea 42 (leida 42: SI) | VERBATIM CALZA: SI
+        clausula: las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+        corregida por: no
+FILA  6 | OP-L-02  | indice 1 | linea 42 (leida 42: SI) | VERBATIM CALZA: SI
+        clausula: el marcador del cribado no se mueve: sigue en 2.117
+        corregida por: indice 3
+FILA  7 | OP-L-02  | indice 2 | linea 42 (leida 42: SI) | VERBATIM CALZA: SI
+        clausula: cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+        corregida por: no
+FILA  8 | OP-L-03  | indice 0 | linea 43 (leida 43: SI) | VERBATIM CALZA: SI
+        clausula: ningun acto se funde con un par interno sin veredicto
+        corregida por: indice 3
+FILA  9 | OP-L-03  | indice 1 | linea 43 (leida 43: SI) | VERBATIM CALZA: SI
+        clausula: las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador
+        corregida por: no
+FILA 10 | OP-L-03  | indice 2 | linea 43 (leida 43: SI) | VERBATIM CALZA: SI
+        clausula: cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado
+        corregida por: no
+FILA 11 | OP-I-01  | indice 0 | linea 44 (leida 44: SI) | VERBATIM CALZA: SI
+        clausula: toda entrada lleva su fecha_corte
+        corregida por: no
+FILA 12 | OP-I-01  | indice 1 | linea 44 (leida 44: SI) | VERBATIM CALZA: SI
+        clausula: toda forma con cobertura incompleta va marcada PROVISIONAL
+        corregida por: no
+FILA 13 | OP-I-01  | indice 2 | linea 44 (leida 44: SI) | VERBATIM CALZA: SI
+        clausula: todo hueco va NOMBRADO, nunca rellenado
+        corregida por: no
+FILA 14 | OP-I-01  | indice 3 | linea 44 (leida 44: SI) | VERBATIM CALZA: SI
+        clausula: el inventario se recomputa entero con el disparador de 08_VERIFICACION
+        corregida por: no
+
+CIFRA filas que NO calzan con su sede: 0 (se exigen 0)
+CIFRA filas que la tabla declara CORREGIDAS por una correccion declarada: 4 | CIFRA sin correccion: 10
+LAS CORRECCIONES DECLARADAS NO SON CLAUSULAS DE LA VARA Y NO ENTRAN COMO FILAS (registro R.72 del acta 208). SI SE LEEN, porque la propia tabla dice cual corrige cual, y una clausula corregida se mide POR SU LECTURA CORREGIDA.
+
+==============================================================================
+2.b Y 2.c. LAS CATORCE, MEDIDAS UNA POR UNA, CON SU BUSQUEDA CORRIDA
+==============================================================================
+
+------------------------------------------------------------------------------
+CLAUSULA  1 de 14 | ficha OP-V-01 | indice 8 | linea 34 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids
+------------------------------------------------------------------------------
+   CIFRA la corrida K existe en disco: SI
+   CIFRA bytes exactos de la corrida K: 63756
+   RUTA de la corrida K: docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt
+   CIFRA lineas de la corrida K: 788
+   CIFRA lineas del cuerpo del commit e966d896, que es el que movio el estado: 61
+   PARTE Gate 0 verde                               marca GATE 0 VERDE           | corrida K linea(s) ninguna | commit linea(s) [8] | SOSTENIDA: SI
+      CITA commit 8: 1) GATE 0 VERDE con su CICLO ENTERO y en orden: run_phase1 exitcode 0 y
+   PARTE suite verde                                marca motor 25/25            | corrida K linea(s) ninguna | commit linea(s) [12] | SOSTENIDA: SI
+      CITA commit 12: 2) SUITES: motor 25/25, web 82 ficheros y 1.040 pasadas, tsc exitcode 0.
+   PARTE vuelo completo                             marca 16 de 16 o 16/16       | corrida K linea(s) [7, 784] | commit linea(s) [1, 13] | SOSTENIDA: SI
+      CITA corrida K 7: EXITCODE 0. VUELO COMPLETO: 16/16 VERIFICACIONES OK.
+      CITA commit 1: LA FASE 08 QUEDA CERRADA: el vuelo completo en 16 de 16 con exitcode 0, y los cinco puntos de su verificacion transversal sellados
+   PARTE prueba de rumbos                           marca PRUEBA DE RUMBOS       | corrida K linea(s) ninguna | commit linea(s) [15] | SOSTENIDA: SI
+      CITA commit 15: 4) PRUEBA DE RUMBOS: exitcode 0, 42 verdes / 1 ambar / 0 rojos, 97,7% de
+   PARTE reindexado semantico DESPUES de mover ids  marca d70adc1d               | corrida K linea(s) ninguna | commit linea(s) [18] | SOSTENIDA: SI
+      CITA commit 18: 5) REINDEXADO: del sello d70adc1d al 42223fcc; los 18 vivos sin vector a
+   CIFRA partes de la clausula: 5 | CIFRA sostenidas por cita: 5
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  2 de 14 | ficha OP-L-01 | indice 0 | linea 41 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+------------------------------------------------------------------------------
+   EL SUJETO DE LA CLAUSULA SON LAS ONCE, Y NO SE TECLEAN: se leen de las cabeceras que viven bajo la seccion LAS ONCE, una por una, de docs/plan/LECTURAS_DIRIGIDAS.md, que es la tanda de esta ficha.
+   CIFRA cabeceras LD leidas bajo esa seccion: 11 | CIFRA que la clausula dice: 11
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA pares distintos del archivo: 3388
+   LA COMPARACION ES LITERAL Y POR EL PAR, NUNCA POR NOMBRE SUELTO: se pregunta si el PAR de la lectura dirigida es par de alguna fila del archivo.
+   CIFRA de LAS ONCE que APARECEN en el archivo: 0
+      (la busqueda da CERO, y ese cero es el resultado: se corrio y se publica con su comando delante)
+   Y LA LECTURA ANCHA, PUBLICADA AUNQUE NO SEA EL SUJETO DE LA CLAUSULA, porque el instrumento de la vuelta 203 mide ese otro universo: toda cabecera LD que haya HOY en la pagina.
+   CIFRA cabeceras LD en toda la pagina, contadas hoy: 54
+   CIFRA de esas que tienen fila en el archivo: 1
+      CON FILA> LD-82 (split_testing contra test_ab_precio) en el puesto 643 | su fila la NOMBRA como relectura: SI
+   CIFRA de esas filas que NO son relectura declarada de un puesto ya existente: 0
+   LA CIFRA ONCE DE LA CLAUSULA ES LA DE SU CORTE Y NO LA DE HOY: la pagina siguio creciendo, y eso se dice en vez de callarlo.
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  3 de 14 | ficha OP-L-01 | indice 1 | linea 41 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: el marcador del cribado no se mueve: sigue en 2.117
+------------------------------------------------------------------------------
+   CIFRA marcador del cribado contado hoy, linea a linea de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA que la clausula escribe: 2117 (2.117)
+   LECTURA LITERAL: los dos numeros NO calzan, y se dice antes que nada en vez de resolverse copiando.
+   LECTURA CORREGIDA, QUE ES LA QUE LA PROPIA FICHA FIJO POR CORRECCION DECLARADA: 2.117 es el valor del marcador en la fecha_corte de la ficha, TESTIGO Y NO CONDICION, y lo que la clausula pide es que ESTA operacion no lo mueva.
+   CIFRA escrituras declaradas de OP-L-01 en nodos, preservar, eliminar y aristas_nuevas: 0
+      (con CERO escrituras declaradas la operacion no puede mover el marcador ni queriendo)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  4 de 14 | ficha OP-L-01 | indice 2 | linea 41 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+------------------------------------------------------------------------------
+   EL SUJETO NO SE IMPROVISA: 'cada nomina afectada' son las nominas de los actos y racimos del inventario, por la adjudicacion 6.5 del acta 168 citada en la correccion declarada de esta misma ficha.
+   CIFRA entradas de docs/plan/INVENTARIO.jsonl: 672
+   CIFRA nominas de tipo acto mas racimo: 569
+   CIFRA de esas SIN cobertura escrita al lado: 0
+      (la busqueda de las que faltan da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  5 de 14 | ficha OP-L-02 | indice 0 | linea 42 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+------------------------------------------------------------------------------
+   LAS TRES NOMINAS NO SE TECLEAN: se leen de las cabeceras de la SEGUNDA TANDA de docs/plan/LECTURAS_DIRIGIDAS.md, que es la tanda de esta ficha.
+   CIFRA nominas leidas de esas cabeceras: 3 | CIFRA que la clausula dice: 3
+      NOMINA LEIDA> LOS CUADRANTES DE MERCADO
+      NOMINA LEIDA> LA ECUACION DE VALOR
+      NOMINA LEIDA> LA SUPERVISION DE LA IA
+   LA COBERTURA SE MIDE DE SUS CIFRAS Y NO DE LA PALABRA PROVISIONAL: una entrada puede traer esa palabra dentro de una frase que dice justo lo contrario, y contarla por subcadena seria una sonda mas laxa que su clausula.
+   NOMINA LOS CUADRANTES DE MERCADO    | entrada los cuadrantes de mercado     
+      LECTURA (i), LA DE LA ENTRADA ENTERA: cobertura 0 de 0 al corte 2026-09-04: no hay pares entre un solo nodo. El texto viejo de e | CIERRA: SI
+      LECTURA (ii): la entrada NO declara una nomina aparte, asi que la (i) es la unica y no hay dos universos.
+      FORMA REESCRITA (la entrada guarda su forma vieja al lado): SI
+      ESTA NOMINA CIERRA SU COBERTURA Y REESCRIBE SU FORMA: SI
+   NOMINA LA ECUACION DE VALOR         | entrada la ecuacion de valor          
+      LECTURA (i), LA DE LA ENTRADA ENTERA: cobertura 10 de 10 al corte 2026-09-04, con el resolutor delante por P.1 (5 de la cola, 5  | CIERRA: SI
+      LECTURA (ii): la entrada NO declara una nomina aparte, asi que la (i) es la unica y no hay dos universos.
+      FORMA REESCRITA (la entrada guarda su forma vieja al lado): SI
+      ESTA NOMINA CIERRA SU COBERTURA Y REESCRIBE SU FORMA: SI
+   NOMINA LA SUPERVISION DE LA IA      | entrada la supervision de la IA       
+      LECTURA (i), LA DE LA ENTRADA ENTERA: cobertura 13 de 21 al corte 2026-09-04, con el resolutor delante por P.1 (10 de la cola, 3 | CIERRA: NO
+      LECTURA (ii), LA DE LA NOMINA, DECLARADA POR LA PROPIA ENTRADA: 10 leidos y 0 SIN veredicto | CIERRA: SI
+      FORMA REESCRITA (la entrada guarda su forma vieja al lado): SI
+      ESTA NOMINA CIERRA SU COBERTURA Y REESCRIBE SU FORMA: SI
+   CIFRA nominas halladas en el inventario: 3 de 3
+   CIFRA nominas con cobertura cerrada y forma reescrita: 3 de 3
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  6 de 14 | ficha OP-L-02 | indice 1 | linea 42 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: el marcador del cribado no se mueve: sigue en 2.117
+------------------------------------------------------------------------------
+   CIFRA marcador del cribado contado hoy, linea a linea de docs/INTRA_DOMINIO_VEREDICTOS.jsonl: 3388
+   CIFRA que la clausula escribe: 2117 (2.117)
+   LECTURA LITERAL: los dos numeros NO calzan, y se dice antes que nada en vez de resolverse copiando.
+   LECTURA CORREGIDA, QUE ES LA QUE LA PROPIA FICHA FIJO POR CORRECCION DECLARADA: 2.117 es el valor del marcador en la fecha_corte de la ficha, TESTIGO Y NO CONDICION, y lo que la clausula pide es que ESTA operacion no lo mueva.
+   CIFRA escrituras declaradas de OP-L-02 en nodos, preservar, eliminar y aristas_nuevas: 0
+      (con CERO escrituras declaradas la operacion no puede mover el marcador ni queriendo)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  7 de 14 | ficha OP-L-02 | indice 2 | linea 42 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+------------------------------------------------------------------------------
+   LA SEDE ES LA SECCION DE LA PAGINA QUE LA PROPIA CLAUSULA NOMBRA: EL BACKLOG DOCUMENTADO, con su motivo.
+   CIFRA grupos del backlog leidos de esa tabla: 4
+      GRUPO> **esperan destejido o cirugia**                | pares **126* | motivo escrito: SI
+      GRUPO> **resto sin mesa ni nomina**                   | pares **55** | motivo escrito: SI
+      GRUPO> ~~**sales roadmap**~~ **LEIDOS, 14 ago 2026**  | pares ~~**5* | motivo escrito: SI
+      GRUPO> **junta asesora y seleccion de canal**         | pares 3      | motivo escrito: SI
+   CIFRA grupos SIN motivo escrito: 0
+      (la busqueda de los que faltan da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  8 de 14 | ficha OP-L-03 | indice 0 | linea 43 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: ningun acto se funde con un par interno sin veredicto
+------------------------------------------------------------------------------
+   LA VARA LA FIJA LA CORRECCION DECLARADA DE ESTA MISMA FICHA: un par SIN LEER es el que esta EN COLA Y SIN VEREDICTO, y el recomputo lo cuenta APARTE de fuera_de_cola. Un par que nunca entro a la cola no es lectura pendiente: es propuesta que la semejanza nunca hizo.
+   CIFRA nominas de tipo acto mas racimo: 569
+   CIFRA de esas con cobertura contada en el formato del recomputo: 555
+   CIFRA nominas con pares EN COLA y sin leer: 0
+      (la busqueda da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  9 de 14 | ficha OP-L-03 | indice 1 | linea 43 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador
+------------------------------------------------------------------------------
+   LA CLAUSULA TIENE DOS MITADES Y LAS DOS SE MIDEN, cada una con su busqueda corrida.
+   MITAD 1, NO ENTRAN EN LA COLA. CIFRA cabeceras LD hoy: 54 | CIFRA de esas con fila en el archivo: 1
+      CON FILA> LD-82 (split_testing contra test_ab_precio) en el puesto 643 | su fila la NOMBRA como relectura de un puesto ya existente: SI
+   CIFRA lecturas dirigidas que CREARON puesto nuevo en la cola, que es lo que la clausula prohibe: 0
+      (la busqueda da CERO, y ese cero es el resultado: la que tiene fila la tiene por RELECTURA de un puesto que el cribado ya habia abierto, y su propia razon la nombra)
+   MITAD 2, NO MUEVEN SU MARCADOR. CIFRA marcador contado hoy: 3388 | CIFRA puestos distintos: 3388 | CIFRA puesto maximo: 3388 | CIFRA huecos: 0
+   CIFRA escrituras declaradas de OP-L-03 en nodos, preservar, eliminar y aristas_nuevas: 0
+   LA CIFRA 55 DE LA CLAUSULA ES LA DE SU CORTE (11 ago 2026) Y NO LA DE HOY, y se dice en vez de callarlo.
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 10 de 14 | ficha OP-L-03 | indice 2 | linea 43 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado
+------------------------------------------------------------------------------
+   EL SUJETO SE MIDE Y NO SE SUPONE: son las entradas del inventario que nombran OP-L-03 en su campo de operaciones.
+   CIFRA entradas que nombran OP-L-03: 81
+   CIFRA de esas SIN forma escrita o SIN cobertura al lado: 0
+      (la busqueda de las que faltan da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 11 de 14 | ficha OP-I-01 | indice 0 | linea 44 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: toda entrada lleva su fecha_corte
+------------------------------------------------------------------------------
+   CIFRA entradas de docs/plan/INVENTARIO.jsonl: 672
+   CIFRA entradas SIN fecha_corte: 0
+      (la busqueda de las que faltan da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 12 de 14 | ficha OP-I-01 | indice 1 | linea 44 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: toda forma con cobertura incompleta va marcada PROVISIONAL
+------------------------------------------------------------------------------
+   LA COBERTURA INCOMPLETA SE MIDE DEL PROPIO CAMPO Y NO SE OPINA: es la que dice X de Y pares leidos con X menor que Y.
+   CIFRA entradas con cobertura contada en ese formato: 555
+   CIFRA entradas con cobertura INCOMPLETA: 95
+   CIFRA de esas SIN marca PROVISIONAL: 0
+      (la busqueda de las que faltan da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 13 de 14 | ficha OP-I-01 | indice 2 | linea 44 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: todo hueco va NOMBRADO, nunca rellenado
+------------------------------------------------------------------------------
+   EL VOCABULARIO DE RELLENO Y SU REGLA DE DESCARTE SE IMPORTAN DE _v215_t4_dos_puntos.py, donde nacieron con su correccion declarada dentro. El campo se compara ENTERO, nunca por subcadena.
+   CIFRA entradas examinadas: 672
+   CIFRA campos de texto examinados: 4704
+   CIFRA campos SOSPECHOSOS descartados porque el campo los usa como estado: 6
+   CIFRA campos RELLENADOS de verdad: 0
+   CIFRA campos VACIOS, que no estan nombrados ni rellenados: 0
+      (las dos busquedas dan CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 14 de 14 | ficha OP-I-01 | indice 3 | linea 44 de docs/plan/OPERACIONES.jsonl
+   VERBATIM: el inventario se recomputa entero con el disparador de 08_VERIFICACION
+------------------------------------------------------------------------------
+   LA BUSQUEDA, CON SU COMANDO ESCRITO ANTES DE SU RESULTADO: se recorre TODO el arbol de scripts y por cada fichero .py se pregunta si NOMBRA la vista humana y si ADEMAS la ESCRIBE, con una apertura en modo escritura o una llamada de escritura en la misma linea o en las tres siguientes.
+   CIFRA ficheros .py que NOMBRAN la vista humana: 26
+   CIFRA ficheros .py que la ESCRIBEN: 0
+      (ninguno: la busqueda da CERO, y ese cero es el resultado. La sede que regeneraria la vista humana NO EXISTE en el repo)
+   LA MITAD QUE SI: el fichero fuente esta recomputado, con 672 entradas al corte del marcador de hoy.
+   LA MITAD QUE FALTA: regenerar la vista humana, y no tiene instrumento que la haga.
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+==============================================================================
+2.d. EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION
+==============================================================================
+EL MUTANTE SE FABRICA EN MEMORIA SOBRE UNA COPIA PROFUNDA DE LOS DATOS Y NO SE ESCRIBE EN NINGUNA FICHA.
+
+MUTANTE ROTO  1 | OP-V-01  idx 8 | la corrida K desaparece y el commit se queda mudo    | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  2 | OP-L-01  idx 0 | una lectura dirigida SI aparece en el archivo        | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  3 | OP-L-01  idx 1 | la ficha declara una escritura de nodo               | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  4 | OP-L-01  idx 2 | una nomina se queda sin cobertura al lado            | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  5 | OP-L-02  idx 0 | las dos nominas que hoy calzan dejan de calzar       | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  6 | OP-L-02  idx 1 | la ficha declara una escritura de nodo               | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  7 | OP-L-02  idx 2 | un grupo del backlog se queda sin motivo             | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  8 | OP-L-03  idx 0 | una nomina se queda con pares EN COLA sin leer       | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  9 | OP-L-03  idx 1 | una lectura dirigida SI aparece en el archivo        | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 10 | OP-L-03  idx 2 | un acto de OP-L-03 se queda sin forma                | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 11 | OP-I-01  idx 0 | una entrada se queda sin fecha_corte                 | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 12 | OP-I-01  idx 1 | una incompleta pierde su marca PROVISIONAL           | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 13 | OP-I-01  idx 2 | un campo se rellena con una palabra del vocabulario  | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 14 | OP-I-01  idx 3 | no hay instrumento que escriba la vista humana       | veredicto A MEDIAS  | CAE: SI
+
+CIFRA mutantes rotos: 14 | CIFRA que CAEN (o sea que NO dicen CUBRE): 14
+
+Y EL REVERSO, PORQUE UNA SONDA QUE NUNCA PUEDE DECIR CUBRE TAMPOCO MIDE: las que hoy NO dan CUBRE se prueban tambien con un mutante SANO, y tienen que SUBIR.
+MUTANTE SANO    | OP-I-01  idx 3 | aparece un instrumento que escribe la vista humana   | veredicto CUBRE     | SUBE: SI
+CIFRA mutantes sanos: 1 | CIFRA que SUBEN a CUBRE: 1
+CIFRA clausulas que hoy NO dan CUBRE: 1 | CIFRA de esas con mutante sano probado: 1
+
+==============================================================================
+EL REPARTO, CONTADO DE LO DE ARRIBA Y NO TECLEADO
+==============================================================================
+| clausula | ficha | indice | linea del expediente | veredicto |
+|---:|---|---:|---:|---|
+| 1 | OP-V-01 | 8 | 34 | CUBRE |
+| 2 | OP-L-01 | 0 | 41 | CUBRE |
+| 3 | OP-L-01 | 1 | 41 | CUBRE |
+| 4 | OP-L-01 | 2 | 41 | CUBRE |
+| 5 | OP-L-02 | 0 | 42 | CUBRE |
+| 6 | OP-L-02 | 1 | 42 | CUBRE |
+| 7 | OP-L-02 | 2 | 42 | CUBRE |
+| 8 | OP-L-03 | 0 | 43 | CUBRE |
+| 9 | OP-L-03 | 1 | 43 | CUBRE |
+| 10 | OP-L-03 | 2 | 43 | CUBRE |
+| 11 | OP-I-01 | 0 | 44 | CUBRE |
+| 12 | OP-I-01 | 1 | 44 | CUBRE |
+| 13 | OP-I-01 | 2 | 44 | CUBRE |
+| 14 | OP-I-01 | 3 | 44 | A MEDIAS |
+CIFRA clausulas en CUBRE: 13
+CIFRA clausulas en A MEDIAS: 1
+CIFRA clausulas en NO CUBRE: 0
+CIFRA clausulas en SIN SONDA: 0
+CIFRA clausulas medidas: 14 | CIFRA que deberia haber: 14
+
+==============================================================================
+LA GUARDA: QUE ESTA TAREA NO MOVIO NI UN CAMPO DE ESTADO
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL SALIR: 650578474361eb2b
+CIFRA los dos sha256 CALZAN: SI (se exige SI)
+CIFRA filas de git diff --numstat sobre docs/plan/OPERACIONES.jsonl: 0 (se exigen 0)
+CIFRA filas de git diff --numstat sobre docs/plan/INVENTARIO.jsonl: 0 (se exigen 0)
+CIFRA filas de git diff --numstat sobre docs/plan/08_VERIFICACION.md: 0 (se exigen 0)
+CIFRA filas de git diff --numstat sobre docs/plan/LECTURAS_DIRIGIDAS.md: 0 (se exigen 0)
+
+CIFRA comprobaciones que fallan: 0
+VERDE: la re-medicion queda corrida.
