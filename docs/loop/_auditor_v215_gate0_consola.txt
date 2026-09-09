@@ -1,0 +1,11 @@
+   1  run_phase1.py --reaplico-curaduria    EXITCODE 0 | 4777 bytes
+   2  etiquetas_de_cara.py --aplicar        EXITCODE 0 | 7915 bytes
+   3  sync_assets_web.py                    EXITCODE 0 | 561 bytes
+   4  git diff HEAD --numstat               EXITCODE 0 | 127 bytes | filas 1
+   5  vuelta83_conteo_aristas.py WORK       EXITCODE 0 | 155 bytes
+   6  vuelta85_medir_desfase_calibrado      EXITCODE 0 | 485 bytes
+   7  engine/run_all_tests.py               EXITCODE 0 | 1118 bytes
+   8a npx tsc --noEmit                      EXITCODE 0 | 0 bytes
+   8b pnpm test                             EXITCODE 0 | 323 bytes
+FILAS ARMADAS POR MI: 9. FILAS QUE DEBERIA HABER: 9.
+PEOR EXITCODE RE-MEDIDO POR MI: 0

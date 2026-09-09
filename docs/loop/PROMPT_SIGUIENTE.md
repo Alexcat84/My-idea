@@ -1,136 +1,160 @@
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. VUELTA 215. FASE III, EJECUCION. RAMA pasada-unica.
+SESION EJECUTORA. VUELTA 216. FASE III, EJECUCION. RAMA pasada-unica.
 MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas
 obligatorias por operacion.
 
-ESTA ES LA VUELTA DE BATERIA de la cadencia de cinco (AUDITOR.md 6.1), y
-lleva ademas el CIERRE INTEGRAL del bucle. Las dos cosas caben juntas y lo
-digo antes de que nadie lo discuta: la 6.1 prohibe TRABAJO DE PLAN al lado
-de la bateria, y el cierre integral NO es trabajo de plan, es
-VERIFICACION. No se escribe ni un nodo, ni un veredicto, ni una ficha.
+ESTA NO ES VUELTA DE BATERIA Y NO LA CORRAS. La 215 la corrio entera y yo
+la declare CORRIDA en mi adjudicacion 5.1: once tramos, once salidas
+selladas, 135 entradas contadas por mi. La cadencia de cinco de AUDITOR.md
+6.1 pone la siguiente en la 220. Tu seccion 9 cierra con el HUECO
+DECLARADO Y MEDIDO por el carril de la TAREA 1.b de la vuelta 173, con su
+medicion, su atribucion y su corrida, que es lo que la 6.1 manda en las
+vueltas intermedias.
+
+ESTA VUELTA CORRE LA UNICA COSA QUE LE QUEDA AL PLAN, Y NO ES MIA: LA
+ORDENO EL FUNDADOR EL 9 SEP 2026 Y NADIE LA HA CORRIDO. Su ruta, para que
+la leas y no te fies de mi: docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md,
+DECISION 2, que dice verbatim "las cinco fichas SIN EJECUTAR se re-miden
+contra esas filas (OP-V-01 con su prueba por cita de la corrida K ya
+escrita)". La vuelta 214 CONSTRUYO las filas y las verifique yo en
+docs/plan/08_VERIFICACION.md: CATORCE filas de derivacion, verbatim, para
+las fases 08, 09 y 10. LA RE-MEDICION NO LA HA CORRIDO NADIE, y hasta que
+se corra la campana no se puede declarar consumada, porque hoy CUATRO
+fichas afirman HECHA SIN NINGUNA PRUEBA y esa cifra la medi yo.
 
 EL TOPE DE SUB-TAREAS ES CINCO (acta 212, adjudicacion 6.8, linea 75168 de
-docs/loop/ACTA_AUDITOR.md), y estas cinco lo agotan. SIGUE VIGENTE LA
-MORATORIA DE MAQUINARIA (AUDITOR.md 6.3): no se fabrican arneses, guardas
-ni lectores nuevos, no se toca el lanzador de la bateria, y la nomina
-sigue CONGELADA EN 135. Lo que escribas en el arbol de scripts del bucle
-lleva prefijo _v215_ y muere con la vuelta.
+docs/loop/ACTA_AUDITOR.md, leela). ESTAS SON CUATRO Y NO NECESITAS MAS.
+SIGUE VIGENTE LA MORATORIA DE MAQUINARIA (AUDITOR.md 6.3): no se fabrican
+arneses, guardas ni lectores nuevos, no se repara ninguno de los siete que
+no muerden, no se toca el lanzador de la bateria, y la nomina sigue
+CONGELADA EN 135. Lo que escribas en el arbol de scripts del bucle lleva
+prefijo _v216_ y muere con la vuelta.
 
-MI ACTA DE LA 214 ESTA ESCRITA Y ES LA FUENTE DE LAS ADJUDICACIONES QUE
-SIGUEN. Ninguna de ellas se vuelve a discutir en tu reporte: se aplican.
+Y LA PROHIBICION QUE NO SE NEGOCIA, POR ENCIMA DE TODO LO DEMAS: NINGUNA
+TAREA DE ESTA VUELTA MUEVE EL CAMPO estado DE NINGUNA FICHA. La vara del
+trabajo pendiente es el instrumento y nunca ese campo (recuadro de
+AUDITOR.md 0, decision del fundador del 4 sep 2026). Se mide, se publica y
+se dice. No se escribe.
+
+MI ACTA DE LA 215 ESTA ESCRITA, EMPIEZA EN LA LINEA 76240 de
+docs/loop/ACTA_AUDITOR.md, Y ES LA FUENTE DE LAS ADJUDICACIONES QUE SIGUEN.
+Ninguna se vuelve a discutir en tu reporte: se aplican.
 
 - TAREA 1, LOS REGISTROS, Y VA PRIMERA PORQUE LAS DEMAS SE APOYAN EN ELLA.
-  (1.a) LEE MI ACTA DE LA VUELTA 214 en docs/loop/ACTA_AUDITOR.md, sus
-  secciones 3 y 5, y REGISTRA EN TU REPORTE, con la linea de donde sale
-  cada una, LAS NUEVE ADJUDICACIONES. Las cinco que tienes que aplicar
-  como orden son estas:
-     5.1  LA BATERIA SON ONCE TRAMOS, NO NUEVE. El NUEVE de AUDITOR.md
-          6.1 es la cifra a SU corte y envejecio sola. Se declara corrida
-          cuando LOS ONCE QUE --plan COMPUTE tengan salida sellada DEL
-          MISMO CALIBRE. No reescribes AUDITOR.md: no es tuyo ni es mio.
-     5.2  EL CARRIL --siguiente NO ES SENAL DE ARRANQUE. Lo detallo en la
-          TAREA 2.
-     5.3  EL 2.117 DE LAS CLAUSULAS DE OP-L-01 Y OP-L-02 MANDA POR SU
-          CORTE. La clausula pide que ESA operacion no mueva el marcador,
-          no afirma cuanto vale el marcador. CALZA si no lo mueves, y hoy
-          el marcador esta en 3388. PENDIENTE CERRADO: no lo vuelvas a
-          traer como pendiente de doctrina.
-     5.4  UNA NEGATIVA SI SE PUEDE CITAR. Lo detallo en la TAREA 4.
-     5.5  EL PUNTO 4 DE OP-I-01 NO ESTA ADJUDICADO PORQUE ES MEDICION.
-          Lo detallo en la TAREA 4.
-  (1.b) Y REGISTRA MI HALLAZGO 3.1 CONTRA TU PROPIO REPORTE DE LA 214, que
-  es la unica caida que NO declaraste y la unica que acumula: tu seccion
-  3.1, la del ciclo entero de Gate 0, salio publicada VACIA porque el
-  fichero de consola que tu compositor busca NUNCA EXISTIO. Tu racha de
-  reporte queda en UNO. El remedio va en la TAREA 5 y es bloqueante.
+  (1.a) LEE MI ACTA DE LA VUELTA 215, sus secciones 3, 5 y 6, y REGISTRA EN
+  TU REPORTE, CON LA LINEA DE DONDE SALE CADA UNA, LAS OCHO ADJUDICACIONES
+  DE LA 5.1 A LA 5.8. Los numeros de linea SE LEEN CON UN INSTRUMENTO, NO SE
+  TECLEAN: es la obligacion 6.6 del acta 210, y tu propio lector de la 215
+  (_v215_t1_registros.py) ya prueba que se puede. Las cuatro que te obligan
+  a algo van con DOS COLUMNAS SEPARADAS, el titulo VERBATIM que saque el
+  instrumento y lo que te obliga a hacer, que es lectura tuya y se dice que
+  lo es:
+     5.1 la bateria de la 215 esta CORRIDA, y por eso esta vuelta NO la corre;
+     5.2 el rojo estructural queda como esta impreso y NO se toca el lanzador;
+     5.4 OP-I-01 CIERRA por la DECISION 1 del fundador, y su punto 4 sube
+         NOMBRADO sin bloquear;
+     5.7 la re-medicion de las cinco fichas contra las catorce filas es TU
+         TAREA 2 y es bloqueante.
+  (1.b) REGISTRA MIS DOS CORRECCIONES DECLARADAS, cada una con su cifra:
+  que las fichas en HECHA SIN NINGUNA PRUEBA son CUATRO y no dos (mi 5.8),
+  y que tu racha de caida de reporte VUELVE A CERO (mi 3.1), o sea que no
+  arrastras ninguna.
+  (1.c) Y REGISTRA, SIN DISCUTIRLA, LA UNICA CIFRA MALA DE MI ACTA, QUE ES
+  MIA: mi relectura ciega salio 67 de 80. No te toca hacer nada con ella:
+  te toca que quede escrita en tu reporte, porque el registro de una vuelta
+  no es el escaparate de nadie.
 
-- TAREA 2, LA BATERIA ENTERA, POR TRAMOS, Y SIN EL FALSO VERDE.
-  (2.a) ANTES DE CORRER NADA, PUBLICA DE QUE VUELTA SON LOS SELLOS QUE HAY
-  HOY EN EL ARBOL. Los once ficheros SALIDA_V183_BATERIA_TRAMO_N.txt son
-  de la vuelta 210 y estan fechados el 8 sep 2026: tabula cada uno con su
-  ultimo commit y su fecha LEIDOS DE git log, nunca tecleados. Esta tabla
-  es la que hace distinguible tu corrida nueva, y va ANTES.
-  (2.b) NO USES --siguiente COMO SENAL DE ARRANQUE. Hoy dice que faltan 0
-  tramos y que los once estan sellados, y es falso para esta vuelta: el
-  lanzador nombra sus salidas con el numero de SU PROPIO fichero, el 183,
-  asi que una corrida vieja y una fresca comparten nombre y ese carril no
-  las distingue. CORRE --tramo 1 A --tramo 11, UNO A UNO, Y COMMITEA CADA
-  SALIDA AL TERMINAR SU TRAMO. Una vuelta cortada retoma en el tramo
-  siguiente, que es para lo que existe el regimen.
-  (2.c) LA BATERIA VA ENTERA Y CON SU DOBLE CORRIDA, su reloj y su salida
-  sellada, como manda la 6.1. NO SE AFLOJA NINGUNA GUARDA. Y una salida
-  sellada que mide CERO BYTES NO CUENTA COMO HECHA.
-  (2.d) SI ALGUN ARNES DE LA NOMINA CAE, PARAS Y LO TRAES. Un arnes en
-  rojo en la vuelta del cierre integral no se arregla de paso.
+- TAREA 2, LA RE-MEDICION QUE EL FUNDADOR ORDENO. ES EL CORAZON DE ESTA
+  VUELTA Y ES BLOQUEANTE.
+  (2.a) LEE LAS CATORCE FILAS DE DERIVACION de docs/plan/08_VERIFICACION.md
+  y saca de ellas, CON UN INSTRUMENTO Y NO A MANO, la lista de clausulas a
+  medir: ficha, indice, linea de docs/plan/OPERACIONES.jsonl y el texto
+  VERBATIM. PUBLICA CUANTAS FILAS ARMASTE Y CUANTAS DEBERIA HABER, EN LA
+  MISMA LINEA. Son catorce y si tu instrumento saca otro numero, PARAS.
+  Las correcciones declaradas NO son clausulas de la vara y no entran: lo
+  adjudico el registro R.72 del acta 208 y la propia tabla las lista aparte.
+  (2.b) MIDE CADA UNA DE LAS CATORCE, UNA POR UNA, y publica para cada una
+  CUBRE, A MEDIAS o NO CUBRE CON LA BUSQUEDA CORRIDA Y SU CIFRA DELANTE,
+  incluidas las que dan cero. Una negativa SI se puede citar cuando se
+  corre y se publica su cero con el comando delante: es la 5.4 del acta 214
+  y tu propia TAREA 4 de la 215 ya lo hizo bien. Lo que sigue prohibido es
+  afirmar una busqueda NO corrida.
+  (2.c) OP-V-01 TIENE TRATO PROPIO PORQUE EL FUNDADOR SE LO DIO. Su unica
+  clausula es TRANSVERSAL, indice 8, linea 34, y dice verbatim "Gate 0
+  verde, suite verde, vuelo completo, prueba de rumbos, y reindexado
+  semantico DESPUES de mover ids". La DECISION 2 dice que su prueba va POR
+  CITA DE LA CORRIDA K YA ESCRITA. BUSCA ESA CORRIDA, no la inventes: si la
+  encuentras, cita su ruta, sus bytes exactos y la linea que sostiene cada
+  una de las cinco partes; SI NO LA ENCUENTRAS, ESO TAMBIEN ES UN
+  RESULTADO y se publica con la busqueda que la busco. Ese es exactamente
+  el gesto que la 215 hizo bien con la sede de la vista humana.
+  (2.d) Y EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION: tu medidor
+  tiene que CAER si se le da una clausula que no se cumple. Fabrica el
+  mutante en memoria, sin escribir en ninguna ficha, y publica cuantos caen
+  de cuantos.
 
-- TAREA 3, EL CIERRE INTEGRAL, TODO LO QUE NO NECESITA CREDENCIAL.
-  (3.a) EL CICLO ENTERO DE GATE 0, LOS DOS LADOS, LOS OCHO COMANDOS, con
-  su consola SELLADA (ver TAREA 5) y las dieciocho salidas en disco.
-  (3.b) LAS TRES SUITES: motor, tsc y web, con su exitcode y sus bytes.
-  (3.c) EL INVENTARIO DE LAS 71 FICHAS CONTRA SUS PRUEBAS, corrido con
-  scripts/loop/vuelta150_3_relectura_expediente.py --corte con el hash de
-  tu apertura. PUBLICA LA CIFRA QUE SALGA, no la que te guste: yo la medi
-  hoy en 40 de 71 que NO calzan, y dos de ellas, OP-V-01 y OP-L-01, siguen
-  en HECHA SIN NINGUNA PRUEBA. Si tu cifra difiere de 40, dilo y no la
-  ajustes.
-  (3.d) EL MARCADOR Y EL CENSO RECOMPUTADOS, cada uno con su comando. Los
-  mios de hoy, para que los cotejes y NO para que los copies: marcador
-  3388 filas, A 550, B 72, C 5, D 2761, huecos 0; censo 3853 nodos, 3169
-  vivos, 684 deprecados; aristas 8780 siguientes, 8740 previos, suma
-  17520. Si algo no calza, la discrepancia se declara, no se resuelve
-  copiando.
+- TAREA 3, LA CONSECUENCIA, MEDIDA Y SIN TOCAR UN SOLO estado.
+  (3.a) PUBLICA, FICHA POR FICHA, cuantas de sus clausulas quedan en CUBRE
+  y cuantas no, para las CINCO: OP-V-01, OP-L-01, OP-L-02, OP-L-03 y
+  OP-I-01. Una tabla con su cuenta de filas armadas y de filas que deberia
+  haber.
+  (3.b) VUELVE A CORRER LA VARA, scripts/loop/vuelta150_3_relectura_expediente.py
+  --corte con el hash de TU apertura, y publica si las CUATRO que hoy salen
+  en HECHA SIN NINGUNA PRUEBA siguen igual. Yo mido hoy 40 de 71 que no
+  calzan, 24 congeladas declaradas, 12 en silencio, 3 en LISTA sin prueba y
+  4 en HECHA sin prueba. SI TU CIFRA NO ES LA MIA, LA PUBLICAS TU Y NO
+  COPIAS LA MIA: la discrepancia se declara, nunca se resuelve copiando.
+  (3.c) Y AQUI VA LA GUARDA QUE MAS ME IMPORTA: LA VARA NO SABE DE LAS
+  CATORCE FILAS NUEVAS. Mide P1, P2 y P3, y por eso puede seguir diciendo
+  HECHA SIN NINGUNA PRUEBA sobre una ficha cuyas clausulas acaben de salir
+  todas en CUBRE. ESO NO ES UNA CONTRADICCION Y NO LA MAQUILLES: son dos
+  varas distintas midiendo cosas distintas, y tu trabajo es PUBLICAR LAS
+  DOS LADO A LADO y decir en cual queda cada ficha. Cambiar la vara es
+  fabricar maquinaria y la moratoria lo prohibe.
+  (3.d) NO DECLARES LA CAMPANA CONSUMADA, PASE LO QUE PASE. Lo PROPONES en
+  tu reporte, que es tu sede, con las cifras delante y con la condicion
+  escrita antes de saber el resultado. Quien la declara y quien escribe
+  docs/loop/PARA_ALEXIS.md es EL AUDITOR, por la 4.2 del acta 203, linea
+  71543, ratificada por el fundador el 9 sep 2026. Y EL MERGE NO SE PIDE EN
+  NINGUN CASO: EL BUCLE NO FUNDE RAMAS.
 
-- TAREA 4, LOS DOS PUNTOS QUE OP-I-01 DEJO EN A MEDIAS, Y NO SE CIERRAN
-  A OJO.
-  (4.a) EL PUNTO 3, POR SU NEGATIVA, QUE SI SE PUEDE CITAR. Dijiste que
-  una busqueda negativa no se puede citar y eso no es asi: tu propio
-  reporte publica dos, la de rutas que no existen en 0 y la de tu sonda en
-  0 de 27. Lo que AUDITOR.md 2 prohibe es AFIRMAR UNA BUSQUEDA NO CORRIDA,
-  no publicar la que da cero. CORRE LA BUSQUEDA, publica su CERO CON EL
-  COMANDO DELANTE, y mide el punto contra eso.
-  (4.b) EL PUNTO 4, Y AQUI HAY QUE MEDIR ANTES DE DECIDIR. Su mitad
-  pendiente es regenerar la vista humana, y docs/plan/10_INVENTARIO.md
-  declara en su linea 19 que AHI NO SE REGENERA A PROPOSITO. NO INVENTES
-  LA SEDE: busca cual es el instrumento y cual el fichero que SI la
-  regeneran, publica la busqueda con su comando, y solo entonces di si el
-  punto CUBRE, queda A MEDIAS o NO CUBRE. Si la sede no existe en el repo,
-  eso tambien es un resultado y se dice.
-  (4.c) NO MUEVAS EL CAMPO estado DE NINGUNA FICHA. La vara del trabajo
-  pendiente es el instrumento, nunca el campo, y esa doctrina no se ha
-  movido.
+- TAREA 4, EL CIERRE INTEGRAL Y EL REPORTE.
+  (4.a) EL CICLO ENTERO DE GATE 0 POR LOS DOS LADOS, con su consola SELLADA
+  desde dentro del propio instrumento en el nombre exacto que tu compositor
+  busca. El remedio de la 215 funciono y lo probe yo por mutacion por sus
+  dos puertas, la del fichero ausente y la del fichero de cero bytes:
+  MANTENLO, no lo aflojes. Las tres suites solas con su exitcode y sus
+  bytes. Marcador y censo recomputados cada uno con su comando.
+  (4.b) LAS RUTAS con scripts/loop/vuelta186_rutas_del_reporte.py corrido
+  DESPUES de cerrar el reporte, y LA CABECERA con su tallador y su
+  comparacion, con las filas cotejadas, las distintas y las ausentes.
+  (4.c) CIERRA TU PROPIO REPORTE con scripts/loop/cerrar_reporte.py. La 215
+  lo hizo; con la tuya van dos seguidas, y eso es lo que retira el regimen
+  temporal de la 6.2 por su propio disparador escrito.
+  (4.d) MIS CIFRAS DE HOY, PARA QUE LAS COTEJES Y NO PARA QUE LAS COPIES:
+  marcador 3388 con A 550, B 72, C 5, D 2761 y cero huecos; censo 3853 /
+  3169 / 684; aristas 8780 / 8740 / 17520 / 9914; Gate 0 en 9 comandos con
+  peor exitcode 0; 18 salidas selladas del ciclo, cero ausentes; 48 rutas
+  con cero malas; inventario 672 entradas y 4704 campos de texto. SI ALGUNA
+  NO CALZA, PUBLICAS LA TUYA Y DECLARAS LA DIFERENCIA.
 
-- TAREA 5, TU REPORTE, Y SU SECCION 3.1 ESTA VEZ CON CIFRAS DENTRO.
-  (5.a) SELLA LA CONSOLA DEL CICLO. El ciclo de Gate 0 imprime su consola
-  por stdout y en la 214 nadie la redirigio: por eso tu tabla salio en
-  blanco. Redirigela a los dos ficheros que tu compositor busca, uno por
-  lado, y commitealos.
-  (5.b) Y LO QUE IMPORTA MAS QUE LA CONSOLA: TU COMPOSITOR CAE EN ROJO SI
-  NO LA ENCUENTRA. El de la 214 escribio una fila en blanco y siguio, que
-  es degradacion silenciosa y es exactamente lo que el banco 9 prohibe.
-  Una guarda que no encuentra su fuente REVIENTA, no rellena con un hueco.
-  Esto no fabrica maquinaria: el compositor de cierre lo escribes cada
-  vuelta de todas formas, y lo unico que cambia es que falle ruidoso.
-  (5.c) LA SECCION 9 CIERRA CON LA BATERIA CORRIDA, no con hueco
-  declarado: esta es su vuelta. Si por lo que sea quedara hueco, lleva sus
-  TRES piezas juntas o el instrumento cae en rojo.
-
-Y LO QUE ESTA VUELTA NO ESCRIBE, Y ES BLOQUEANTE: docs/loop/PARA_ALEXIS.md
-NO LO ESCRIBES TU. Tu lo propones en tu reporte, que es tu sede, con las
-cifras delante y diciendo si la condicion se cumple o no. La escritura es
-del AUDITOR de la 215, por la adjudicacion 4.2 del acta 203 (linea 71543
-de docs/loop/ACTA_AUDITOR.md), RATIFICADA POR EL FUNDADOR el 9 sep 2026:
-PROMPT_SIGUIENTE.md, ACTA_AUDITOR.md y PARA_ALEXIS.md son SEDE DEL
-AUDITOR. Tu precision de la 214 sobre esto era correcta y se te abona.
+LO QUE ESTA VUELTA NO HACE, DICHO PARA QUE NO SE BUSQUE: no corre la
+bateria, no repara ninguno de los siete arneses que no muerden, no toca el
+lanzador, no poda ni engorda la nomina, no escribe en
+docs/loop/PROMPT_SIGUIENTE.md, docs/loop/ACTA_AUDITOR.md ni
+docs/loop/PARA_ALEXIS.md, que son sede del auditor, y NO MUEVE NI UN CAMPO
+estado.
 
 LA CONDICION DE LA PARADA FELIZ, ESCRITA ANTES DE SABER SI SE CUMPLE: si
-la bateria da los ONCE tramos en verde y del mismo calibre, si el cierre
-integral sale limpio, y si los dos puntos de la TAREA 4 quedan medidos y
-dichos, entonces la campaña esta consumada EN LO QUE EL BUCLE PUEDE
-CONSUMAR, y el paso siguiente es la AUDITORIA INTEGRAL CON CREDENCIAL Y
-CON EL FUNDADOR DELANTE. NO SE PIDE EL MERGE EN ESA PARADA: el merge de
-pasada-unica es decision del fundador y viene DESPUES de esa auditoria. EL
-BUCLE NO FUNDE RAMAS. Si algo no da verde, se dice cual y con su cifra, y
-no se declara nada consumado.
+las CATORCE clausulas quedan en CUBRE con su busqueda corrida y su cifra
+delante, y si el cierre integral sale limpio, entonces la campana esta
+consumada EN LO QUE EL BUCLE PUEDE CONSUMAR, y el paso siguiente es la
+AUDITORIA INTEGRAL CON CREDENCIAL Y CON EL FUNDADOR DELANTE, que es donde
+suben las cinco cosas que mi acta lista en su seccion 6. SI ALGUNA CLAUSULA
+NO DA CUBRE, SE DICE CUAL Y CON SU CIFRA, y no se declara nada consumado.
+Una parada feliz escrita sobre una condicion que no se cumple es
+exactamente la especie de verde que esta casa lleva doscientas vueltas
+cazando.
 
 Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
 contradice una regla vigente, paras y lo traes. No adivines.
