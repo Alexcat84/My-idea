@@ -1,0 +1,60 @@
+LA TRANSCRIPCION DE ESTE LANZADOR SE ESTA ESCRIBIENDO FUERA DE
+docs/loop/, y se copiara dentro AL TERMINAR: C:\Users\AlexDesk\AppData\Local\Temp\v183_lanzador2_2rqix5e9\lanzador_en_curso.txt
+==============================================================================
+TRAMO 2 DE 11, DE LA BATERIA DE LA VUELTA 183
+==============================================================================
+  lanzador (os.path.basename, no tecleado): vuelta183_bateria_por_tramos.py
+  vuelta (computada del nombre, no tecleada): 183
+  CIFRA literales de vuelta clavados en el fuente: 0
+  CIFRA nomina entera (leida del modulo, no tecleada): 139
+  CIFRA tamano de tramo: 13
+  CIFRA tramos del reparto (computada): 11
+  CIFRA entradas de ESTE tramo: 13
+      vuelta144_3a_mutaciones.py
+      vuelta144_3b_mutacion_negativa.py
+      vuelta144_3c_caso_positivo_1190.py
+      vuelta145_2a_mutacion_ancla_unica.py
+      vuelta145_2b_mutacion_arneses.py
+      vuelta145_2c_mutacion_censo.py
+      vuelta146_2b_mutacion_ausencias.py
+      vuelta147_2c_mutacion_vitalidad.py
+      vuelta147_3d_mutacion_nomina.py
+      vuelta147_3e_simular_a26.py
+      vuelta148_0d_mutacion_corredor.py
+      vuelta148_1a_mutacion_embebido.py
+      vuelta148_2a_mutacion_nomina_commiteada.py
+
+******************************************************************************
+PASOS 1 Y 2. LA GUARDA DEL COMMIT Y LA RESTAURACION, AL ENTRAR AL TRAMO 2
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+******************************************************************************
+PASO 3. LA CORRIDA DEL TRAMO 2
+******************************************************************************
+  inicio (UTC): 2026-09-09T21:34:53Z
+  comando: -u C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\verificar_mutaciones_viejas.py --tramo 2 --tamano-tramo 13
+  fichero de trabajo, FUERA de docs/loop/: C:\Users\AlexDesk\AppData\Local\Temp\v183_tramo2_96947s0p\tramo_en_curso.txt
+  destino final: docs/loop/SALIDA_integral_BATERIA_TRAMO_2.txt
+
+******************************************************************************
+PASO 4. EL SELLADO, MEDIDO ANTES DE NOMBRARLO EN NINGUN SITIO
+        (EJECUTOR.md 1, LA RUTA QUE PROMETE PRUEBA ES CIFRA)
+******************************************************************************
+  docs/loop/SALIDA_integral_BATERIA_TRAMO_2.txt
+  CIFRA bytes en disco: 7680
+  CIFRA bytes normalizado a LF: 7680
+  CIFRA lineas: 118
+  CIFRA sha256 (LF): 294bc2bc9309f5ab
+  CIFRA exitcode del tramo: 0
+  CIFRA duracion en minutos: 7.3
+  inicio (UTC): 2026-09-09T21:34:53Z | fin (UTC): 2026-09-09T21:42:09Z
+
+******************************************************************************
+PASO 5. LA GUARDA DEL COMMIT, OTRA VEZ, AL SALIR DEL TRAMO 2
+******************************************************************************
+  CIFRA filas de `git diff --numstat -- dataset/`: 0
+  LIMPIO AL ENTRAR: cero filas. No hay nada que restaurar.
+
+TRAMO 2 VERDE. Su salida esta sellada, medida y se puede commitear.

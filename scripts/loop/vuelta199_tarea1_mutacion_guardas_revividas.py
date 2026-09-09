@@ -71,6 +71,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -431,6 +432,11 @@ def main():
     w("=" * 78)
 
     t = NL.join(L) + NL
+    # REPRODUCIBLE (auditoria integral, 9 sep 2026): el sufijo aleatorio del
+    # temporal de mkdtemp se imprimia en los motivos publicados y la doble
+    # corrida de la bateria lo veia como salida que NO SE REPITE. Se sustituye
+    # por un rotulo fijo ANTES de sellar; el temporal sigue siendo aleatorio.
+    t = re.sub(r"v199_t1_[A-Za-z0-9_]+", "v199_t1_TEMPORAL", t)
     ruta = os.path.join(LOOP, "SALIDA_V199_T1_GUARDAS_REVIVIDAS.txt")
     io.open(ruta, "w", encoding="utf-8", newline=NL).write(t)
     print(t)

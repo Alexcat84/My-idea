@@ -1,0 +1,64 @@
+COTEJO DE LA CIEGA FINAL (semilla 20260909). Filas: TODAS, no solo las discrepancias.
+
+MITAD 1: FUSIONES (por absorbido)
+| clave | superviviente | absorbido | declarado | esperado (plan) | veredicto |
+|---|---|---|---|---|---|
+| F01 | eliminar_metas_numericas_gerencia | critica_gestion_por_objetivos | ENTERO | ENTERO | COINCIDE |
+| F02 | scorecard_de_seleccion_de_proyectos | scoring_model_scorecard | CON PERDIDA | ENTERO | DISCREPA |
+| F03 | desirability_feasibility_viability | triada_restricciones_diseno | ENTERO | ENTERO | COINCIDE |
+| F04 | design_for_six_sigma_dfss | design_for_six_sigma_dmadv | ENTERO | CON PERDIDA | DISCREPA |
+| F04 | design_for_six_sigma_dfss | design_for_six_sigma_dmadv_2 | ENTERO | CON PERDIDA | DISCREPA |
+| F05 | social_ads_indirect_response | estrategia_anuncios_sociales_respuesta_indirecta | ENTERO | ENTERO | COINCIDE |
+| F06 | rol_tactico_estrategico_oficina | gestion_estrategica_de_calidad_sqm | ENTERO | CON PERDIDA | DISCREPA |
+| F07 | pivote_estrategico | pivote_startup | ENTERO | ENTERO | COINCIDE |
+| F07 | pivote_estrategico | pivotes_e_iteraciones | ENTERO | ENTERO | COINCIDE |
+| F08 | menos_malo_vs_bueno | ser_menos_malo_vs_ser_bueno | ENTERO | ENTERO | COINCIDE |
+| F09 | dia_cero_defectos_2 | dia_cero_defectos_3 | ENTERO | ENTERO | COINCIDE |
+| F10 | technology_platform_evaluation | flexible_go_kill_criteria | ENTERO | ENTERO | COINCIDE |
+| F11 | descubrir_necesidades_del_cliente | descubrir_necesidades_cliente | ENTERO | ENTERO | COINCIDE |
+| F12 | definiciones_operacionales_3 | definiciones_operacionales_4 | ENTERO | ENTERO | COINCIDE |
+| F13 | desarrollo_presentacion_problema | presentacion_problema_tres_columnas | ENTERO | ENTERO | COINCIDE |
+| F14 | content_marketing_blog | blogging_como_canal_de_traccion | ENTERO | ENTERO | COINCIDE |
+| F15 | vision_alineacion_sostenibilidad | liderazgo_ceo_sostenibilidad | ENTERO | ENTERO | COINCIDE |
+| F16 | cultura_de_aprendizaje | ingenieria_cultura_aprendizaje | ENTERO | ENTERO | COINCIDE |
+| F17 | evaluacion_alternativas_solucion | evaluacion_seleccion_alternativas_mejora | ENTERO | ENTERO | COINCIDE |
+| F18 | customer_validation | filosofia_customer_validation | ENTERO | ENTERO | COINCIDE |
+| F18 | customer_validation | introduccion_validacion_clientes | ENTERO | ENTERO | COINCIDE |
+| F19 | pivotar_o_perseverar | decision_pivote_perseverar | ENTERO | CON PERDIDA | DISCREPA |
+| F20 | analisis_reporte_benchmarking | desarrollo_reporte_benchmarking | ENTERO | ENTERO | COINCIDE |
+
+CIFRA absorbidos cotejados: 23 | COINCIDEN: 18 | DISCREPAN: 5
+
+MITAD 2: ENLACES (la madre)
+| clave | puesto | X | Y | declarado | esperado (registro) | veredicto |
+|---|---|---|---|---|---|---|
+| E01 | 1908 | contabilidad_flujo_materiales | eco_eficiencia | Y | Y (madre eco_eficiencia) | COINCIDE |
+| E02 | 1642 | empacar_liquidos_doble_barrera | adaptar_empaque_segun_tipo_de_articulo | Y | Y (madre adaptar_empaque_segun_tipo_de_articulo) | COINCIDE |
+| E03 | 896 | realizar_pruebas_pasa_no_pasa | customer_validation | Y | Y (madre customer_validation) | COINCIDE |
+| E04 | 1464 | ganar_comprension_del_cliente | customer_discovery_get_out_of_building | Y | Y (madre customer_discovery_get_out_of_building) | COINCIDE |
+| E05 | 1650 | adaptar_empaque_segun_tipo_de_articulo | elegir_resistencia_caja_peso | X | X (madre adaptar_empaque_segun_tipo_de_articulo) | COINCIDE |
+| E06 | 1304 | involucramiento_fundador_busqueda_ceo | seleccion_ceo_fundador | Y | Y (madre seleccion_ceo_fundador) | COINCIDE |
+| E07 | 1634 | clasificar_tipo_paquete | hacer_cajas_a_medida_del_pedido | Y | X (madre clasificar_tipo_paquete) | DISCREPA |
+| E08 | 1344 | customer_development_process | filosofia_validacion_clientes | X | X (madre customer_development_process) | COINCIDE |
+| E09 | 1512 | proceso_diseno_modelo_negocio_5_fases | fase_implementacion_modelo | X | X (madre proceso_diseno_modelo_negocio_5_fases) | COINCIDE |
+| E10 | 1649 | clasificar_tipo_paquete | identificar_si_tu_producto_necesita_proteccion_especial | Y | Y (madre identificar_si_tu_producto_necesita_proteccion_especial) | COINCIDE |
+| E11 | 1144 | prompting_por_persona_ia | ingenieria_de_prompts_efectiva | Y | Y (madre ingenieria_de_prompts_efectiva) | COINCIDE |
+| E12 | 1435 | analisis_varianza_financiera | analisis_porcentual_estados_financieros | Y | Y (madre analisis_porcentual_estados_financieros) | COINCIDE |
+| E13 | 1220 | ingenieria_de_prompts_efectiva | disenar_prompts_efectivos_para_ia | X | X (madre ingenieria_de_prompts_efectiva) | COINCIDE |
+| E14 | 1896 | issue_spotting_ambiental | triple_bottom_line | X | X (madre issue_spotting_ambiental) | COINCIDE |
+| E15 | 2057 | metodos_de_pago_internacional | letra_de_cambio_bill_of_exchange | X | X (madre metodos_de_pago_internacional) | COINCIDE |
+| E16 | 1847 | diseno_para_el_medio_ambiente | eco_efectividad_2 | X | X (madre diseno_para_el_medio_ambiente) | COINCIDE |
+| E17 | 1330 | hoja_de_ruta_de_ventas | sales_roadmap_vs_sales_force | Y | Y (madre sales_roadmap_vs_sales_force) | COINCIDE |
+| E18 | 855 | customer_development_process | customer_validation | X | X (madre customer_development_process) | COINCIDE |
+| E19 | 1078 | producto_minimo_viable | customer_discovery | Y | Y (madre customer_discovery) | COINCIDE |
+| E20 | 1336 | cuatro_etapas_llamada_de_ventas | apertura_llamada_venta_grande | X | X (madre cuatro_etapas_llamada_de_ventas) | COINCIDE |
+
+CIFRA enlaces cotejados: 20 | COINCIDEN: 19 | DISCREPAN: 1
+
+LAS DISCREPANCIAS, CON LO QUE EL PLAN O EL REGISTRO DICE:
+   F02 scoring_model_scorecard: declarado CON PERDIDA, plan ENTERO (PLAN_V51_OPU01_LOTE_A.json); perdidas del plan: []; reparto pasos: {"1": "INCISO:1|entre 6 y 10 preguntas sólidas, basadas en investigación|, y usa ", "2": "INCISO:2|del 1 al 5 o del 0 al 10|, por ejemplo ", "3": "CUBIERTO:3", "4": "CUBIERTO:4", "5": "APPEND"}
+   F04 design_for_six_sigma_dmadv: declarado ENTERO, plan CON PERDIDA (PLAN_V71_OPU02_LOTE_G.json); perdidas del plan: ["paso 2 de design_for_six_sigma_dmadv_2 y condicion 3 de design_for_six_sigma_dmadv_2", "paso 3 de design_for_six_sigma_dmadv", "paso 4 de design_for_six_sigma_dmadv", "paso 3 de design_for_six_sigma; reparto pasos: {"1": "CUBIERTO:1", "2": "CUBIERTO:2", "3": "CUBIERTO:3", "4": "CUBIERTO:4", "5": "CUBIERTO:5"}
+   F04 design_for_six_sigma_dmadv_2: declarado ENTERO, plan CON PERDIDA (PLAN_V71_OPU02_LOTE_G.json); perdidas del plan: ["paso 2 de design_for_six_sigma_dmadv_2 y condicion 3 de design_for_six_sigma_dmadv_2", "paso 3 de design_for_six_sigma_dmadv", "paso 4 de design_for_six_sigma_dmadv", "paso 3 de design_for_six_sigma; reparto pasos: {"1": "CUBIERTO:1", "2": "CUBIERTO:2", "3": "CUBIERTO:3", "4": "CUBIERTO:4", "5": "CUBIERTO:5"}
+   F06 gestion_estrategica_de_calidad_sqm: declarado ENTERO, plan CON PERDIDA (PLAN_V62_OPU01_LOTE_A.json); perdidas del plan: ["paso 1 de gestion_estrategica_de_calidad_sqm"]; reparto pasos: {"1": "CUBIERTO:1", "2": "CUBIERTO:1", "3": "APPEND", "4": "CUBIERTO:3"}
+   F19 decision_pivote_perseverar: declarado ENTERO, plan CON PERDIDA (PLAN_V63_OPM03I.json); perdidas del plan: ["paso 1 de decision_pivote_perseverar", "condicion 1 de decision_pivote_perseverar", "condicion 3 de decision_pivote_perseverar"]; reparto pasos: {"1": "CUBIERTO:1", "2": "APPEND", "3": "INCISO:1|las expectativas cuantitativas definidas al inicio| y con ", "4": "INCISO:3|con datos concretos en la sala, no solo con intuición|, "}
+   E07 puesto 1634: declarado Y, registro X (madre clasificar_tipo_paquete, hijo hacer_cajas_a_medida_del_pedido, OP_E_07_DIRECCION_V94.jsonl)

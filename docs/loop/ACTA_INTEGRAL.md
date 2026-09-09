@@ -261,3 +261,222 @@ documentos y no huella en el grafo.
 | 5. la ciega no acierta lo que se decide por barrido de familia | **REMITIDA CON FICHA**: `docs/PENDIENTES.md`, `ciega-por-familia`, con la cifra del acta (nueve de catorce fallos) y su condicion de cierre |
 | 6. las dos clausulas que quedaban | **RESUELTAS** en 1.a (items 1 y 3) |
 | 7. el remedio de dictado de la `C.4` | **ESCRITO** en `docs/loop/EJECUTOR.md`, junto a la regla de la ruta que promete prueba, en las palabras del propio ejecutor: la pareja de bytes es una regla de cifras, venga de una ruta o de un campo |
+
+---
+
+## PASO 2. LA VERIFICACION TECNICA, SELLADA CON EL PREFIJO `_integral_`
+
+Todo lo que sigue se corrio en esta sesion sobre el arbol de `4663a99a` (PASO 1
+commiteado y subido). Los sellos viven en `docs/loop/SALIDA_integral_*.txt`.
+
+### 2.a y 2.b GATE 0 ENTERO POR EL LADO DE APERTURA, Y LAS TRES SUITES
+
+`python scripts/loop/_integral_ciclo_gate0.py APERTURA` (los ocho comandos se
+importan de `_v205_ciclo_gate0.py`; solo cambia el nombre de las salidas). Consola
+en `SALIDA_integral_CICLO_GATE0_APERTURA_CONSOLA.txt`:
+
+| paso | comando | exitcode | lo medido |
+|---:|---|---:|---|
+| 1 | `run_phase1.py --reaplico-curaduria` | 0 | **27 comprobaciones `[OK]`, 0 `[FALLO]`** (las 26 de siempre mas el quinto control de la aduana), 3853 nodos compilados |
+| 2 | `etiquetas_de_cara.py --aplicar` | 0 | |
+| 3 | `sync_assets_web.py` | 0 | |
+| 4 | `git diff HEAD --numstat` sobre `dataset/`, `web/`, `engine/` | 0 | **0 filas**: el ciclo cierra byte a byte con HEAD |
+| 5 | `vuelta83_conteo_aristas.py WORK` | 0 | nodos 3853, vivos 3169, deprecados 684; aristas sig 8780, prev 8740, suma 17520, union 9914, auto 0 |
+| 6 | `vuelta85_medir_desfase_calibrado` | 0 | |
+| 7 | `engine/run_all_tests.py` (suite del motor) | 0 | **25 de 25** |
+| 8a | `npx tsc --noEmit` | 0 | limpio |
+| 8b | `pnpm test` (suite web) | 0 | **82 ficheros, 1040 pruebas** |
+
+El lado de CIERRE se corre al final del PASO 2, despues del vuelo y de la bateria.
+
+### 2.c EL VUELO COMPLETO, CON SU SIEMBRA
+
+**Siembra por el procedimiento sellado** (`docs/PENDIENTES.md`, siembra B del 4 sep
+2026), sellada en `SALIDA_integral_SIEMBRA.txt`: usuario
+`4a05a687-fc7e-4427-8eaf-cc1cc1644678`, saldo antes **45**, RPC `otorgar_creditos`
+con `p_monto` 55, `p_origen` y `p_pack` `siembra_beta`, clave de idempotencia
+**NUEVA** `siembra_vuelo_integral_2026-09-09`, respuesta **100**, saldo despues
+**100** (`total_comprado` 360 sin cambio). `next dev` levantado en esta sesion
+(`localhost:3000` responde 200). El vuelo (`web/scripts/vuelo.ts`) corre mientras
+se escribe esto; su sello y el cotejo del costo contra la corrida K se anexan en
+2.c (continuacion).
+
+### 2.d LA PRUEBA DE RUMBOS
+
+`python scripts/rumbos/prueba_rumbos.py`, sellada en `SALIDA_integral_RUMBOS.txt`:
+**exitcode 0, 42 verdes, 1 ambar, 0 rojos** (97,7 por ciento de 43 en la vara). El
+ambar es el declarado de siempre, con su texto en la salida (*la usuaria habla como
+persona y le responde el nodo escrito en jerga; debe ponerse VERDE tras la fusion y
+re voz del nucleo*): es el mismo ambar de la sesion con credencial, y sigue siendo
+frente de recuperacion post campaña, no rojo.
+
+### 2.e EL INDICE SEMANTICO
+
+`SALIDA_integral_INDICE_SEMANTICO.txt`, medido sobre
+`web/lib/assets/semantic_index.json` (voyage-4-lite, 512 dimensiones) contra el
+grafo: lista roja `docs/plan/INDICE_ROJO_DECLARADO.jsonl` **0 bytes**; ids con
+vector **3169**, vectores **3169**; activos sin vector **0**; deprecados con vector
+**0**; ids del indice que no son nodo **0**; **el censo cuadra** (ids del indice
+igual a activos del grafo). Y Gate 0 lo dice por su lado: `[OK] Todo nodo ACTIVO
+tiene vector en el indice semantico (valor: 0 activos sin vector)`. VERDE.
+
+### 2.f EL ARCHIVO: MARCADOR Y CENSO, Y LA DIFERENCIA INVESTIGADA HASTA SU COMMIT
+
+`python scripts/recomputar_marcador.py 3388`, sellado en
+`SALIDA_integral_MARCADOR.txt`: **n 3388, corte 3388, huecos 0, duplicados 0; A 550,
+B 71, C 5, D 2762**. Censo (comando 5 del ciclo): **3853 nodos, 3169 vivos, 684
+deprecados**. Las cifras del censo calzan con las esperadas.
+
+**La diferencia con lo esperado (B 72, D 2761) se investigo hasta su commit y no es
+una caida:** recontando el marcador en cada commit que toco
+`docs/INTRA_DOMINIO_VEREDICTOS.jsonl` (los ultimos 60, con el ultimo veredicto por
+puesto hasta el 3388), B pasa de 72 a 71 y D de 2761 a 2762 en **`5e0a994f`
+(9 sep 2026, VUELTA 218, TAREA 1)**: el **puesto 299**
+(`entrenamiento_de_gerentes_para_despidos` contra `proceso_despidos_responsables`)
+pasa de B a D por **correccion declarada de la vuelta 218, TAREA 1.c**, con su
+texto viejo entero en la razon. Antes de ese commit, `9140d524` (8 sep, vuelta 212)
+daba A 550, B 72, C 5, D 2761, que es la cifra que la letra del fundador traia. El
+archivo movio un dudoso a distinto con su motivo escrito y el marcador lo refleja;
+la 220 ya publico 71 y 2762.
+
+### 2.g LA CIEGA FINAL
+
+`python scripts/loop/_integral_ciega.py --aislar --semilla 20260909`: la semilla se
+escribio antes de sortear; universo de **296** fusiones ejecutadas (planes sellados
+con superviviente vivo y absorbido deprecado en el grafo) y **156** enlaces de la fase
+04 (`OP_E_06_DIRECCION_V90.jsonl` y `OP_E_07_DIRECCION_V94.jsonl`) con los dos nodos
+vivos. La ciega (`SALIDA_integral_CIEGA.txt`, 966 lineas) trae solo textos: para cada
+fusion, los pasos y condiciones de hoy del superviviente y los del absorbido; para
+cada enlace, los dos nodos barajados como X e Y. El destape se escribio aparte y **no
+se abrio hasta tener las clases escritas** en `SALIDA_integral_CIEGA_DECLARACIONES.json`
+(con mis dudosos marcados delante: F02, F09, F16; E06, E07, E12, E17). Cotejo en
+`SALIDA_integral_CIEGA_COTEJO.txt`, todas las filas:
+
+| mitad | cotejados | coinciden | discrepan |
+|---|---:|---:|---:|
+| fusiones, por absorbido (ENTERO o CON PERDIDA contra la tabla de perdidas del plan) | 23 | 18 | 5 |
+| enlaces, la madre (X o Y contra la lectura registrada) | 20 | 19 | 1 |
+
+**Las seis discrepancias, leidas con el destape delante:**
+
+- **Cuatro son de grano** (F04 dos absorbidos, F06, F19): yo declare ENTERO leyendo a
+  nivel de paso (todos los pasos del absorbido estan cubiertos o anexados en el
+  superviviente, y el reparto del plan lo confirma: `CUBIERTO`, `APPEND`, `INCISO`),
+  y el plan declara perdidas **DE PARAMETRO DE PASO o DE CONDICIONES**: un
+  calificativo, un artefacto intermedio nombrado, una imagen (*optimizar antes de
+  transferir a operaciones*, *el calificativo ACCIONABLES*, *la tierra de los muertos
+  vivientes*). La tabla del plan es mas fina que mi clase, y en las cuatro la tabla
+  tiene razon: esas piezas no estan en el superviviente. No es una fusion mal hecha:
+  es una perdida declarada, enrutada, que mi lectura de dos clases no distingue.
+- **Una va en sentido contrario y es un hallazgo (F02,** `scoring_model_scorecard`
+  en `scorecard_de_seleccion_de_proyectos`): declare CON PERDIDA porque el paso 4 del
+  absorbido dice *usa ese puntaje junto con OTRO INDICADOR DE PRODUCTIVIDAD para
+  ordenar y priorizar* y el superviviente compara puntajes sin ese segundo indicador;
+  el plan (`PLAN_V51_OPU01_LOTE_A.json`) lo da como `CUBIERTO:4` y su tabla de perdidas
+  esta vacia. **Es una perdida de parametro de paso que la tabla no registro.** Se
+  deja nombrada como hallazgo de la ciega, de la misma familia que las cuatro
+  anteriores pero sin registro; su remedio es una entrada mas en la cola ordinaria
+  post campaña, no una parada.
+- **La del enlace (E07, puesto 1634)** era uno de mis cuatro dudosos declarados:
+  `clasificar_tipo_paquete` contra `hacer_cajas_a_medida_del_pedido`; el registro dice
+  que la madre es clasificar y yo lei al reves. Un dudoso que cae es lo que un dudoso
+  es.
+
+**Las tasas, dichas enteras:** 18 de 23 y 19 de 20; contando solo lo que no marque
+como dudoso, 16 de 18 y 16 de 16. Ninguna discrepancia desmiente una fusion ni un
+enlace del archivo: cinco son de grano de la clase y una es un dudoso que cayo.
+
+### 2.b (continuacion) LA BATERIA ENTERA, CON LA NOMINA ABIERTA, Y LO QUE ENSEÑO
+
+**Regimen 6.4:** antes de pedir el merge y en toda sesion que toque `scripts/loop/`
+la bateria corre entera. Se corrio con el lanzador reparado en 1.d
+(`vuelta183_bateria_por_tramos.py --rotulo integral --tramo N`), once tramos,
+salidas `SALIDA_integral_BATERIA_TRAMO_1..11.txt`, compuesta con `--componer` en
+`SALIDA_integral_BATERIA.txt` (92625 bytes en disco y en LF, 1383 lineas, sha256 LF
+`2dcfd478e693eb4f`): **139 entradas corridas exactamente una vez, 0 de la nomina
+sin correr, 0 fuera de la nomina, 0 mas de una vez**, y los once tramos con `CIFRA de
+FALLO: 0 con ancla perdida, 0 que no mordieron, 0 sin reproducir, 0 fuera de la
+nomina, 0 invisibles al censo, 0 SUJETO VIVO`.
+
+**No salio asi a la primera, y se dice entero:**
+
+1. **Corri la primera tanda de tramos (1 a 6) con el vuelo corriendo en la misma
+   maquina.** Los tramos 1 y 2 salieron ROJO con **7 y 1 arneses NO
+   REPRODUCIBLES** (la doble corrida no repitio su salida: los de las vueltas 139 a
+   144, que corren Gate 0 y simulaciones sobre copias), y los tres primeros con **una
+   entrada sin sujeto congelado**. Repetidos SOLOS, los tramos 1, 2 y 3 dan **0 sin
+   reproducir**: la no reproducibilidad era la carga de la maquina, no los arneses.
+   Fue una caida mia de orden (dos corridas pesadas a la vez) y se declara; la
+   consecuencia fue tambien la caida del vuelo A (2.c).
+2. **La entrada sin sujeto congelado era `vuelta197_tarea2_mutacion_orden_del_turno.py`,
+   NO DECIDIBLE porque su texto trae `mkdtemp` y la cadena `REPORTE.md`** (que usa
+   solo como literal dentro de bitacoras fabricadas, sin abrir el fichero vivo). La
+   guarda de la bateria pide que el propio arnes lo declare con el literal `SUJETO
+   CONGELADO`; se declaro en su docstring con el motivo, y
+   `guarda_del_sujeto_congelado()` devuelve vacio.
+3. **El tramo 11 salio ROJO con 2 sin reproducir: las dos entradas nuevas de la 197 y
+   la 199.** Causa medida con dos corridas y `diff`: el sufijo aleatorio del temporal
+   de `mkdtemp` aparecia en los motivos publicados. Reparacion barata: el sufijo se
+   sustituye por un rotulo fijo antes de sellar (el temporal sigue siendo aleatorio);
+   dos corridas seguidas dan 0 lineas distintas y el tramo 11 repetido sale en verde.
+   Los dos arneses fabricados en 1.a (`vuelta221_integral_*`) salieron OK en el tramo
+   11 a la primera.
+
+**El arbol tras la bateria:** `git diff --numstat -- dataset/` da 0 filas al entrar y
+al salir de cada tramo (paso 5 del lanzador); `master_graph.json` aparece en `git
+status` solo por la normalizacion de fin de linea, sin una linea de contenido en el
+diff, y el ciclo de cierre lo mide con su numstat.
+
+### 2.c (continuacion) EL VUELO: LA CORRIDA A CAYO, Y POR QUE
+
+`SALIDA_integral_VUELO_A.txt` (353 lineas, guardada aparte): **exitcode 1** en la
+FASE 2j (el bucle de tracking), segundo ciclo de seguimiento, con el mensaje del
+propio vuelo *TRANSITORIO DEL TRANSPORTE: el stream del plan termino sin NINGUN
+evento terminal y SIN que la garantia de la ruta gritara (eventos recibidos: 0). No
+es la ruta*. Hasta ahi todas las verificaciones anteriores salieron OK. Corrio con
+la bateria (tramos 1 a 6) en la misma maquina, que es la misma causa de los 7 no
+reproducibles del tramo 1. Cobros de la corrida A en el ledger (`credit_transactions`):
+**7 cobros, 35 creditos** (plan_completo 10, seguimiento 5 y 5, mundo_activar 5, 5 y
+5, seguimiento 5), saldo de 100 a 65. Se repite el vuelo SOLO, con siembra B por el
+mismo procedimiento (`SALIDA_integral_SIEMBRA_B.txt`: clave nueva
+`siembra_vuelo_integral_2026-09-09_B`, 35 creditos, saldo 65 a 100). La corrida B se
+anexa al terminar.
+
+### 2.c (continuacion) LA CORRIDA B DEL VUELO, SOLA: CAE EN LA VERIFICACION 10, Y LA CAUSA ES OTRA
+
+`SALIDA_integral_VUELO_B.txt` (510 lineas, guardada aparte; el vuelo se corrio con
+la bateria ya terminada y nada mas en la maquina): **exitcode 1**. Llego mas lejos
+que la A: **82 verificaciones OK** por todas las fases 0, 1, 1b, 2, 2b a 2P y 3 (el
+reporte del 16 menciona el 16 y no dice pieza), y cae en la **FASE 3b**, que es la
+verificacion 10 de las 16: *el reporte del 16 (nunca deberia inventar cifras)
+disparo numero_huerfano*, con el valor **`$52`** y el contexto *ya estarias cuatro
+usuarios por encima del punto de equilibrio, generando $52 de ganancia mensual por
+encima de los costos fijos*.
+
+**Lo que es, leido con el codigo delante:** el redactor del reporte derivo una
+cifra que no esta en el material (cuatro usuarios por encima del equilibrio por
+los 13 de margen), y el verificador de huerfanos (`web/lib/verificadorHuerfanos.ts`,
+`verificarNumerosHuerfanos`, que solo admite numeros del conjunto permitido) la
+registro como `numero_huerfano` en las decisiones de la sesion. En el producto ese
+registro es *señal de triage, no bloquea el reporte* (`web/lib/engine/reporteFlow.ts`,
+linea 89); el vuelo, en cambio, lo trata como fallo (`web/scripts/vuelo.ts`, lineas
+2530 a 2535), porque la vara del vuelo es que ese reporte no invente cifras. La
+corrida K del 4 sep paso esta misma verificacion (`SALIDA_SESION_CREDENCIAL_VUELO_K.txt`,
+linea 780). **No es un transitorio del transporte ni una caida de infraestructura:
+es la salida no determinista del modelo, y la guarda GIGO haciendo lo que existe
+para hacer.**
+
+**El costo, cotejado contra la corrida K:** ledger `credit_transactions`, corrida B:
+**10 cobros, 55 creditos** (plan_completo 10; seguimiento 5, 5 y 5; mundo_activar 5,
+5, 5 y 5; mundo_seguimiento 5; mundo_activar 5), saldo de 100 a 45. La corrida K
+costo 55 creditos en 10 cobros. **Calza cobro a cobro en cifra y en cuenta.** Con la
+corrida A, la sesion gasto 90 creditos en 17 cobros, sembrados con dos claves nuevas
+(55 y 35).
+
+**Lo que la integral NO hace sola:** no corre una corrida C sin el fundador (son
+otros 55 creditos y una decision sobre que significa el rojo), y no afloja la
+verificacion 10. Se para y se pregunta, con las dos lecturas posibles delante:
+(a) tercera corrida para tener un segundo punto de la verificacion 10 en esta
+sesion; (b) tomar el rojo como REPARO de producto (el redactor del reporte deriva
+cifras que la vara prohibe) y decidir si la campaña se declara consumada con ese
+reparo listado y su ficha, o no.

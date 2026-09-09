@@ -3,7 +3,7 @@ VUELTA 197, TAREA 2: CASO POSITIVO POR MUTACION DEL ORDEN DEL TURNO
 ==============================================================================
 
 0) LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES DE FABRICAR NADA
-   EXISTE, 789 bytes | sha256 52a780c072700280
+   EXISTE, 4575 bytes | sha256 57ab2e756c71afc9
 
    AP.RUTA_DEL_TURNO ya NO apunta a la sede de verdad               VERDE
    y AP.LOOP tampoco apunta a docs/loop de verdad                   VERDE
@@ -62,7 +62,7 @@ B) `cerrar_turno()`, EN PROCESOS DE VERDAD, QUE ES DONDE VIVE EL
 B.1) Y EL ORDEN DEL REPORTE TAMBIEN VALE ENTRE PROCESOS, que es la
      unica forma de que no se esquive arrancando otro
    un proceso nuevo, con el sello EN DISCO y sin clases: CAE        VERDE
-      motivo publicado: este turno TIENE SELLO en disco (../../AppData/Local/Temp/v197_orden_turno_gy0q5wrg/SELLO_APERTURA_AUDITOR_VMU
+      motivo publicado: este turno TIENE SELLO en disco (../../AppData/Local/Temp/v197_orden_turno_TEMPORAL/SELLO_APERTURA_AUDITOR_VMU
    declara sus clases en otro proceso: VERDE                        VERDE
    y ahora SI, aunque el turno se cerro en medio                    VERDE
    y lee el texto de verdad                                         VERDE
@@ -95,7 +95,7 @@ D) EL TEMPORAL SE RETIRA (P.16, quien fabrica limpia)
    y AP.LOOP vuelve a docs/loop de verdad                           VERDE
    el fichero del turno del TEMPORAL si quedo borrado               VERDE
    LA SEDE DE VERDAD DEL TURNO, MEDIDA ANTES Y DESPUES:
-   al entrar: EXISTE, 789 bytes | al salir: EXISTE, 789 bytes
+   al entrar: EXISTE, 4575 bytes | al salir: EXISTE, 4575 bytes
    el turno del auditor DE VERDAD no CAMBIO                         VERDE
 
 ==============================================================================

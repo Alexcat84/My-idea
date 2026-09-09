@@ -1,0 +1,11 @@
+INDICE SEMANTICO, AUDITORIA INTEGRAL (9 sep 2026), PASO 2.e
+fuente: web/lib/assets/semantic_index.json (claves ['dimension', 'embeddings', 'ids', 'model']; modelo voyage-4-lite; dimension 512)
+CIFRA lista roja docs/plan/INDICE_ROJO_DECLARADO.jsonl: 0 bytes
+CIFRA nodos del grafo: 3853 | activos 3169 | deprecados 684
+CIFRA ids con vector: 3169 (distintos 3169) | CIFRA vectores: 3169
+CIFRA activos SIN vector: 0 []
+CIFRA deprecados CON vector: 0 []
+CIFRA ids del indice que no son nodo del grafo: 0 []
+CENSO CUADRA (ids del indice == activos del grafo, y vectores == ids): SI
+Gate 0 cmd1 de la apertura, comprobacion del indice: [OK] Todo nodo ACTIVO tiene vector en el indice semantico (valor: 0 activos sin vector)
+VEREDICTO: VERDE

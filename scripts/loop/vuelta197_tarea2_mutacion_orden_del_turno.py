@@ -22,6 +22,14 @@ LAS TRES, Y DE DONDE SALE CADA UNA:
      la misma especie** (195, 196 y 197): recontar el marcador con `json` a mano
      en vez de por `AP.marcador()`. El remedio de memoria ya fallo una vez.
 
+SUJETO CONGELADO (declarado en la auditoria integral, 9 sep 2026, al entrar en la
+nomina de la bateria): todo lo que este arnes lee lo fabrica en un temporal
+(`mkdtemp`, `REPORTE_FABRICADO.md`); la cadena `REPORTE.md` aparece aqui solo
+como LITERAL dentro de las bitacoras fabricadas que se comparan, y este arnes
+NO abre el REPORTE.md vivo. La guarda de sujeto congelado de la bateria veia las
+dos huellas y lo dejaba NO DECIDIBLE; esta declaracion es el remedio que la
+propia guarda pide.
+
 EL CASO ROJO TIENE QUE MORDER, Y AQUI SE PRUEBA LAS DOS DIRECCIONES: de cada
 pieza se comprueba que **SIN el remedio la guarda deja pasar** y **CON el no**.
 `EJECUTOR.md` 1, EL CASO ROJO SE PRUEBA POR MUTACION. **Ningun veredicto es una
@@ -39,6 +47,7 @@ import hashlib
 import io
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -413,6 +422,11 @@ def main():
     w("VEREDICTO: %s" % ("VERDE" if ok else "ROJO"))
     w("=" * 78)
     t = NL.join(L) + NL
+    # REPRODUCIBLE (auditoria integral, 9 sep 2026): el sufijo aleatorio del
+    # temporal de mkdtemp se imprimia en los motivos publicados y la doble
+    # corrida de la bateria lo veia como salida que NO SE REPITE. Se sustituye
+    # por un rotulo fijo ANTES de sellar; el temporal sigue siendo aleatorio.
+    t = re.sub(r"v197_orden_turno_[A-Za-z0-9_]+", "v197_orden_turno_TEMPORAL", t)
     io.open(SALIDA, "w", encoding="utf-8", newline=NL).write(t)
     print(t)
     print("ESCRITO: %s (%d bytes)" % (SALIDA, len(t.encode("utf-8"))))

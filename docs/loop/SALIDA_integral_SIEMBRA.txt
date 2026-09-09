@@ -1,0 +1,9 @@
+SIEMBRA DE CREDITOS PARA EL VUELO DE LA AUDITORIA INTEGRAL (9 sep 2026), PASO 2.c
+procedimiento: el mismo sellado en docs/PENDIENTES.md (siembra B, 4 sep 2026): POST /rest/v1/rpc/otorgar_creditos
+usuario: 4a05a687-fc7e-4427-8eaf-cc1cc1644678 (dev@my-idea.local)
+saldo antes: {"creditos_total": 45, "creditos_usados": 558, "total_comprado": 360}
+llamada: p_monto 55, p_origen siembra_beta, p_pack siembra_beta, p_idempotency_key siembra_vuelo_integral_2026-09-09 (NUEVA)
+respuesta del RPC: 100
+saldo despues: {"creditos_total": 100, "creditos_usados": 558, "total_comprado": 360}
+ledger (None), dos ultimas filas: []
+reloj UTC: 2026-09-09T21:06:56Z

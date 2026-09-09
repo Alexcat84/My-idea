@@ -98,6 +98,7 @@ costo acumulado hasta aqui: $0.1463
 ==============================================================================
   FASE 2b: ensamblando el plan (SSE streaming)
 ==============================================================================
+.............................................................................................................................................
 SSE: 141 deltas de texto recibidos, 0 aviso(s), tiempo total: 116345ms
 evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
 costo_usd (sesion completa, incluye el plan): $0.3041
@@ -271,6 +272,7 @@ OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada
 [seguimiento turno 6] RESPUESTA: Con eso ya tienes el panorama completo de mi negocio; ármame el plan de seguimiento con lo que te conté.
 
 listo_para_plan tras 6 turno(s) de seguimiento.
+.................................................................................................................................................
 OK: plan persistido con etiqueta 'seguimiento' (a38e19b5-8b13-4e40-ac25-0da50c4498ab).
 OK: checklist encadenado (29 items nuevos del plan de seguimiento; hechos previos preservados).
 OK: el replan nace estimado -- 29/29 items del plan de seguimiento traen banda.
@@ -503,3 +505,6 @@ Error: el reporte del 16 (nunca deberia inventar cifras) disparo numero_huerfano
     at faseReporteDigital (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2533:11)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async main (C:\Users\AlexDesk\Documents\I have an idea\web\scripts\vuelo.ts:2904:30)
+
+Transcripcion guardada en C:\Users\AlexDesk\Documents\I have an idea\examples\fase3_0_vuelo_web.txt
+EXITCODE: 1

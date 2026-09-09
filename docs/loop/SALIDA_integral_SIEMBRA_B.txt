@@ -1,0 +1,8 @@
+SIEMBRA B PARA REPETIR EL VUELO DE LA AUDITORIA INTEGRAL (9 sep 2026), PASO 2.c
+motivo: la corrida A del vuelo cayo en FASE 2j por TRANSITORIO DEL TRANSPORTE (stream del plan sin eventos) mientras la bateria corria en la misma maquina; se repite el vuelo SOLO
+saldo antes: {"creditos_total": 65, "creditos_usados": 593, "total_comprado": 360}
+llamada: p_monto 35, p_origen siembra_beta, p_pack siembra_beta, p_idempotency_key siembra_vuelo_integral_2026-09-09_B (NUEVA)
+respuesta del RPC: 100
+saldo despues: {"creditos_total": 100, "creditos_usados": 593, "total_comprado": 360}
+los cobros de la corrida A (ledger credit_transactions, tras la siembra de 55): [{"created_at": "2026-09-09T21:25:07.330217+00:00", "delta": -5, "tipo": "consumo", "concepto": "seguimiento", "saldo_resultante": 65}, {"created_at": "2026-09-09T21:22:47.69439+00:00", "delta": -5, "tipo": "consumo", "concepto": "mundo_activar", "saldo_resultante": 70}, {"created_at": "2026-09-09T21:19:12.797592+00:00", "delta": -5, "tipo": "consumo", "concepto": "mundo_activar", "saldo_resultante": 75}, {"created_at": "2026-09-09T21:16:18.409009+00:00", "delta": -5, "tipo": "consumo", "concepto": "mundo_activar", "saldo_resultante": 80}, {"created_at": "2026-09-09T21:13:55.812433+00:00", "delta": -5, "tipo": "consumo", "concepto": "seguimiento", "saldo_resultante": 85}, {"created_at": "2026-09-09T21:10:33.315436+00:00", "delta": -10, "tipo": "consumo", "concepto": "plan_completo", "saldo_resultante": 90}]
+reloj UTC: 2026-09-09T21:27:35Z

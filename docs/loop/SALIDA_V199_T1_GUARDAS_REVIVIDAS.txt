@@ -4,7 +4,7 @@ PROBADAS EN PROCESOS DISTINTOS SOBRE UN TURNO CERRADO.
 Arnes de partida: scripts/loop/_auditor_v198_guarda_muerta.py
 ==============================================================================
 
-SEDE DE VERDAD AL ENTRAR: 789 bytes, sha256 52a780c072700280
+SEDE DE VERDAD AL ENTRAR: 4575 bytes, sha256 57ab2e756c71afc9
 
 ------------------------------------------------------------------------------
 LAS COPIAS DEL MODULO, Y CADA MUTACION COMPROBADA ANTES DE USARLA
@@ -37,9 +37,9 @@ ESCENARIO CON EL REMEDIO PUESTO. TURNO CERRADO, CUATRO PROCESOS DISTINTOS.
       motivo: el turno ya toco 'git log' antes de sellar. EL SUJETO DE LA CIEGA YA PUDO QUEMARSE, y un sello e
    1.a `vivo.abierto` quedo en TRUE tras sellar                     VERDE
    1.b `leer_reporte()` SIN vuelta CAE EN ROJO                      VERDE
-      motivo: este turno TIENE SELLO en disco (v199_t1_qu3fj68n/base_sano/SELLO_APERTURA_AUDITOR_V199.json) y 
+      motivo: este turno TIENE SELLO en disco (v199_t1_TEMPORAL/base_sano/SELLO_APERTURA_AUDITOR_V199.json) y 
    1.b y el sello que encuentra en disco SIN vuelta es el 199       VERDE
-      sello_mas_reciente_en_disco(): ['C:\\Users\\AlexDesk\\AppData\\Local\\Temp\\v199_t1_qu3fj68n\\base_sano\\SELLO_APERTURA_AUDITOR_V199.json', '199']
+      sello_mas_reciente_en_disco(): ['C:\\Users\\AlexDesk\\AppData\\Local\\Temp\\v199_t1_TEMPORAL\\base_sano\\SELLO_APERTURA_AUDITOR_V199.json', '199']
 
 ------------------------------------------------------------------------------
 EL CASO DE LA PARED: UN TURNO CERRADO **CON SU CONSTANCIA** TIENE QUE
@@ -75,7 +75,7 @@ Si un caso NO cae al quitarle su remedio, ese caso no prueba nada.
       con la mutacion:  sellado en memoria False | puede_leer SIN vuelta True
    1.b EL ESCENARIO ES EL BUENO: la memoria NO tiene sello, solo el VERDE
    1.b CON EL REMEDIO, `leer_reporte()` SIN vuelta CAE EN ROJO      VERDE
-      motivo: este turno TIENE SELLO en disco (v199_t1_qu3fj68n/base_solo_disco/SELLO_APERTURA_AUDITOR
+      motivo: este turno TIENE SELLO en disco (v199_t1_TEMPORAL/base_solo_disco/SELLO_APERTURA_AUDITOR
    MUTACION C: sin el remedio, SIN vuelta DEJA PASAR (el agujero de VERDE
       motivo con la mutacion: este turno NO ha sellado: no hay sujeto elegido, y por eso leer el reporte no puede quem
 
@@ -89,7 +89,7 @@ Si un caso NO cae al quitarle su remedio, ese caso no prueba nada.
    TOTAL: `leer_reporte()` SIN vuelta DEJA PASAR, como midio la 198 VERDE
 
 ------------------------------------------------------------------------------
-SEDE DE VERDAD AL SALIR:  789 bytes, sha256 52a780c072700280
+SEDE DE VERDAD AL SALIR:  4575 bytes, sha256 57ab2e756c71afc9
    LA SEDE DE VERDAD NO SE MOVIO (P.16, leccion de la `C.1` de la 1 VERDE
    el temporal se retira (P.16, quien fabrica limpia)               VERDE
 

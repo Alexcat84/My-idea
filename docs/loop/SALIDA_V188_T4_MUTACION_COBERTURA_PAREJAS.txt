@@ -4,17 +4,17 @@ CASO POSITIVO POR MUTACION DE LA ESCALADA DE LA VUELTA 188
 ==============================================================================
 
 EL SUJETO ES EL FICHERO VIVO scripts/loop/cerrar_reporte.py, IMPORTADO.
-SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 114466 bytes | LF 114466 bytes |
-sha256 LF 639aa76a732ef45a84a57ef6763cd424e6a485a0a356ba1ada769d548020f2cd
+SELLO DEL SUJETO (vuelta 188, TAREA 3.b): disco 115208 bytes | LF 115208 bytes |
+sha256 LF 4cba838b192919e571451b71b498c10dbc6a800025bc52b0301d0ea91c3060ad
 
 LINEAS DEL SUJETO QUE ESTE ARNES JUZGA, CON EL SELLO DE ARRIBA AL LADO:
-   def parejas_publicadas           -> lineas 1331
-   def cobertura_de_parejas         -> lineas 1451
-   def secciones_del_reporte        -> lineas 1530
-   def secciones_fuera_de_orden     -> lineas 1544
-   def piezas_que_faltan            -> lineas 1563
-   PATRON_PAREJA_COMA =             -> lineas 1309
-   VENTANA_RUTA_ARRIBA =            -> lineas 1315
+   def parejas_publicadas           -> lineas 1342
+   def cobertura_de_parejas         -> lineas 1462
+   def secciones_del_reporte        -> lineas 1541
+   def secciones_fuera_de_orden     -> lineas 1555
+   def piezas_que_faltan            -> lineas 1574
+   PATRON_PAREJA_COMA =             -> lineas 1320
+   VENTANA_RUTA_ARRIBA =            -> lineas 1326
 
 CASO A. LAS TRES FORMAS NUEVAS, LEIDAS DE REPORTES REALES Y NO INVENTADAS
    (a1) `normalizado a LF` en SINGULAR y sin repetir bytes   
@@ -69,21 +69,21 @@ CASO C. EL TEXTO REAL DE `git show 9a06b7c8:docs/loop/REPORTE.md`, QUE ES LA PRU
    convierte en falsa la cifra que el reporte publico el dia que se
    escribio, y esa lista NO se teclea: sale de `git diff --name-only`.
       docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt          disco de hoy (2444, 2424)   movida por esta vuelta: no
-      docs/PENDIENTES.md                                   disco de hoy (1190145, 1190145) movida por esta vuelta: SI
-      docs/plan/08_VERIFICACION.md                         disco de hoy (73652, 73652) movida por esta vuelta: SI
+      docs/PENDIENTES.md                                   disco de hoy (1193287, 1193287) movida por esta vuelta: SI
+      docs/plan/08_VERIFICACION.md                         disco de hoy (78056, 78056) movida por esta vuelta: SI
       docs/loop/SELLO_APERTURA_AUDITOR_V188.json           disco de hoy (802, 802)     movida por esta vuelta: no
       docs/loop/_auditor_v188_exclusion.txt                disco de hoy (1372, 1372)   movida por esta vuelta: no
       docs/loop/SALIDA_V184_APERTURA.txt                   disco de hoy (34194, 34194) movida por esta vuelta: no
    CIFRA parejas que NO calzan contra el disco de hoy: 4
-      (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 1190145, 'prosa disco y LF')
-      (196, 'docs/PENDIENTES.md', 'LF', 924954, 1190145, 'prosa disco y LF')
-      (338, 'docs/plan/08_VERIFICACION.md', 'DISCO', 69068, 73652, 'prosa disco y LF')
-      (338, 'docs/plan/08_VERIFICACION.md', 'LF', 69068, 73652, 'prosa disco y LF')
+      (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 1193287, 'prosa disco y LF')
+      (196, 'docs/PENDIENTES.md', 'LF', 924954, 1193287, 'prosa disco y LF')
+      (338, 'docs/plan/08_VERIFICACION.md', 'DISCO', 69068, 78056, 'prosa disco y LF')
+      (338, 'docs/plan/08_VERIFICACION.md', 'LF', 69068, 78056, 'prosa disco y LF')
    CIFRA de esas que son de una ruta QUE ESTA VUELTA MOVIO: 4
-      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 1190145, 'prosa disco y LF')
-      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'LF', 924954, 1190145, 'prosa disco y LF')
-      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (338, 'docs/plan/08_VERIFICACION.md', 'DISCO', 69068, 73652, 'prosa disco y LF')
-      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (338, 'docs/plan/08_VERIFICACION.md', 'LF', 69068, 73652, 'prosa disco y LF')
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'DISCO', 924954, 1193287, 'prosa disco y LF')
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (196, 'docs/PENDIENTES.md', 'LF', 924954, 1193287, 'prosa disco y LF')
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (338, 'docs/plan/08_VERIFICACION.md', 'DISCO', 69068, 78056, 'prosa disco y LF')
+      MOVIDA POR ESTA VUELTA, no es falta del reporte de la 187: (338, 'docs/plan/08_VERIFICACION.md', 'LF', 69068, 78056, 'prosa disco y LF')
    CIFRA de esas que NO tienen esa excusa, que es el veredicto: 0
    ESPERADO SEIS VISTAS Y CERO QUE NO CALCEN SIN EXCUSA -> CALZA
    MUTACION del esperado (exigir alguna que no calce sin excusa): CAE
@@ -93,8 +93,8 @@ CASO C. EL TEXTO REAL DE `git show 9a06b7c8:docs/loop/REPORTE.md`, QUE ES LA PRU
    asi que **la convencion DISCO de un fichero con CRLF NO SE PUEDE
    RECUPERAR DE GIT**. Medido y no supuesto:
       docs/loop/SALIDA_V187_TALLADOR_CABECERA.txt          en git (2424, 2424)   en disco hoy (2444, 2424)
-      docs/PENDIENTES.md                                   en git (924954, 924954) en disco hoy (1190145, 1190145)
-      docs/plan/08_VERIFICACION.md                         en git (69068, 69068) en disco hoy (73652, 73652)
+      docs/PENDIENTES.md                                   en git (924954, 924954) en disco hoy (1193287, 1193287)
+      docs/plan/08_VERIFICACION.md                         en git (69068, 69068) en disco hoy (78056, 78056)
       docs/loop/SELLO_APERTURA_AUDITOR_V188.json           en git (802, 802)     en disco hoy (802, 802)
       docs/loop/_auditor_v188_exclusion.txt                en git (1372, 1372)   en disco hoy (1372, 1372)
       docs/loop/SALIDA_V184_APERTURA.txt                   en git (34194, 34194) en disco hoy (34194, 34194)
