@@ -1,0 +1,69 @@
+==============================================================================
+VUELTA 214, TAREA 2.a. LA VARA DE LAS TRES FASES. MODO --simular
+==============================================================================
+QUIEN LO ORDENA: docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md, DECISION 2
+LAS FILAS SE DERIVAN DE LAS CLAUSULAS DE LAS FICHAS, NO SE INVENTAN.
+
+CIFRA docs/plan/08_VERIFICACION.md AL ENTRAR: 69068 bytes, sha256 76bfebb6b2d8ef72
+CIFRA docs/plan/OPERACIONES.jsonl AL ENTRAR: sha256 650578474361eb2b (este fichero NO se toca en la 2.a)
+
+LAS CINCO FICHAS, CON SUS CLAUSULAS SEPARADAS DE SUS CORRECCIONES:
+   NUMEROS DE FASE QUE LA TABLA VIEJA YA TIENE, LEIDOS DE ELLA: [0, 1, 2, 3, 4, 5, 6, 7]
+   LA REGLA DE EXCLUSION, MECANICA Y SIN OJO: una clausula que
+   ABRE CON EL NUMERO DE UNA FASE QUE YA TIENE FILA no es la vara
+   de SU fase: es la ficha repitiendo una fila que ya existe. Se
+   excluye y se dice. Una clausula SIN numero no se excluye.
+      OP-V-01 indice 0 EXCLUIDA: abre con la fase 0, que ya tiene fila
+      OP-V-01 indice 1 EXCLUIDA: abre con la fase 1, que ya tiene fila
+      OP-V-01 indice 2 EXCLUIDA: abre con la fase 2, que ya tiene fila
+      OP-V-01 indice 3 EXCLUIDA: abre con la fase 3, que ya tiene fila
+      OP-V-01 indice 4 EXCLUIDA: abre con la fase 4, que ya tiene fila
+      OP-V-01 indice 5 EXCLUIDA: abre con la fase 5, que ya tiene fila
+      OP-V-01 indice 6 EXCLUIDA: abre con la fase 6, que ya tiene fila
+      OP-V-01 indice 7 EXCLUIDA: abre con la fase 7, que ya tiene fila
+   OP-V-01 (08_VERIFICACION): 9 clausula(s) de vara, 0 correccion(es) declarada(s), 8 EXCLUIDA(s) por tener fila ya, 1 USADA(s), linea 34
+   OP-L-01 (09_LECTURAS_DIRIGIDAS): 3 clausula(s) de vara, 4 correccion(es) declarada(s), 0 EXCLUIDA(s) por tener fila ya, 3 USADA(s), linea 41
+   OP-L-02 (09_LECTURAS_DIRIGIDAS): 3 clausula(s) de vara, 1 correccion(es) declarada(s), 0 EXCLUIDA(s) por tener fila ya, 3 USADA(s), linea 42
+   OP-L-03 (09_LECTURAS_DIRIGIDAS): 3 clausula(s) de vara, 1 correccion(es) declarada(s), 0 EXCLUIDA(s) por tener fila ya, 3 USADA(s), linea 43
+   OP-I-01 (10_INVENTARIO): 4 clausula(s) de vara, 0 correccion(es) declarada(s), 0 EXCLUIDA(s) por tener fila ya, 4 USADA(s), linea 44
+
+LA TABLA VIEJA, CONTADA DEL FICHERO ANTES DE TOCARLO:
+   CIFRA filas de fase que ya tenia: 8
+      | **0 CODIGO** | cada caso positivo **se cae antes** del arreglo y pasa despues |
+      | **01 FUENTES** | ningun nodo de la clase con pasos alterados; **el material del segundo libro 
+      | **02 DESTEJIDOS** | los **quince congelados** releidos; **cada perdida en el bloque del que pr
+      | **03 FUSIONES** | un superviviente por acto, el resto **DEPRECADO CON ALIAS**; `resolverId` de
+      | **04 ENLACES** | cada arista nueva **confirmada por lectura**, no por el instrumento; ninguna 
+      | **05 SANEO** | ningun id vivo con tratado extinto; los tres de Incoterms con su version; ningu
+      | **06 MESAS** | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
+      | **07 ADUANA** | los cuatro controles mecanicos **corriendo en Gate 0** |
+
+LAS TRES FILAS NUEVAS, ENTERAS:
+   | **08 VERIFICACION** | TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids |
+   | **09 LECTURAS DIRIGIDAS** | ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui; el marcador del cribado no se mueve: sigue en 2.117; cada nomina afectada se re-mide con su cobertura al lado (banco 9.26); las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita; cada grupo del backlog lleva su motivo escrito, no solo su cuenta; ningun acto se funde con un par interno sin veredicto; las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador; cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado |
+   | **10 INVENTARIO** | toda entrada lleva su fecha_corte; toda forma con cobertura incompleta va marcada PROVISIONAL; todo hueco va NOMBRADO, nunca rellenado; el inventario se recomputa entero con el disparador de 08_VERIFICACION |
+
+EL JUICIO ENTERO:
+   las filas viejas de la tabla siguen ENTERAS y sin tocar          VERDE
+      CIFRA filas viejas 8, de ellas intactas 8
+   no se borra NI UNA linea del fichero                             VERDE
+      CIFRA lineas viejas que ya no estan: 0
+   las TRES filas nuevas estan escritas                             VERDE
+      CIFRA filas nuevas compuestas 3, presentes en el texto 3
+   ninguna celda nueva trae UNA PALABRA que no salga de una clausula VERDE
+      CIFRA celdas con texto inventado: 0 []
+   ninguna clausula trae una tuberia que rompa la tabla             VERDE
+      CIFRA celdas con tuberia: 0
+   las tres filas son de las fases 08, 09 y 10                      VERDE
+      etiquetas compuestas: ['08 VERIFICACION', '09 LECTURAS DIRIGIDAS', '10 INVENTARIO']
+   ninguna de las tres fases tenia fila ya                          VERDE
+      CIFRA fases que ya tenian fila: 0 []
+   el bloque nuevo cita la decision POR SU RUTA                     VERDE
+      la ruta aparece en el texto nuevo y no estaba antes
+   el fichero crece y no encoge                                     VERDE
+      CIFRA caracteres antes 69062, despues 73646
+   cero guiones largos y cero guiones medios                        VERDE
+      CIFRA guiones largos mas medios: 0
+   CIFRA comprobaciones que fallan: 0
+
+SIMULACION: NO SE ESCRIBE NADA.

@@ -1,0 +1,246 @@
+==============================================================================
+VUELTA 214, TAREA 2.b. LAS CINCO FICHAS, RE-MEDIDAS CONTRA LA VARA NUEVA
+==============================================================================
+LA VARA SE LEE DE docs/plan/08_VERIFICACION.md, NO SE TECLEA AQUI.
+
+FILA DE LA FASE 08, leida de la linea 31 de docs/plan/08_VERIFICACION.md:
+   TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids
+   CIFRA clausulas de esa fila, contadas por su separador: 1
+
+FILA DE LA FASE 09, leida de la linea 32 de docs/plan/08_VERIFICACION.md:
+   ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui; el marcador del cribado no se mueve: sigue en 2.117; cada nomina afectada se re-mide con su cobertura al lado (banco 9.26); las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita; cada grupo del backlog lleva su motivo escrito, no solo su cuenta; ningun acto se funde con un par interno sin veredicto; las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador; cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado
+   CIFRA clausulas de esa fila, contadas por su separador: 8
+
+FILA DE LA FASE 10, leida de la linea 33 de docs/plan/08_VERIFICACION.md:
+   toda entrada lleva su fecha_corte; toda forma con cobertura incompleta va marcada PROVISIONAL; todo hueco va NOMBRADO, nunca rellenado; el inventario se recomputa entero con el disparador de 08_VERIFICACION
+   CIFRA clausulas de esa fila, contadas por su separador: 4
+
+==============================================================================
+LAS SONDAS, CORRIDAS HOY, ANTES DE REPARTIRLAS POR FICHA
+==============================================================================
+SONDA 1, EL MARCADOR DEL ARCHIVO: 3388 filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl, contadas hoy.
+SONDA 2, LOS PARES DE LECTURA DIRIGIDA: 27 cabeceras `LD-NN` en docs/plan/LECTURAS_DIRIGIDAS.md, y de
+   esos PARES (no de sus nombres sueltos), 0 tienen VEREDICTO en docs/INTRA_DOMINIO_VEREDICTOS.jsonl.
+SONDA 3, LOS CUATRO PUNTOS DE OP-I-01, citados de docs/loop/SALIDA_V214_T1C_OP_I_01.txt: 1=CUBRE, 2=CUBRE, 3=A MEDIAS, 4=A MEDIAS
+SONDA 4, LOS CINCO PUNTOS TRANSVERSALES DE OP-V-01, buscados uno a uno por
+   su marca propia dentro de la nota de la ficha (5105 caracteres), commit
+   que movio el estado, leido de la propia nota: e966d896
+      Gate 0 con su ciclo entero               marca 'Gate 0 con su ciclo entero' presente: SI
+      las tres suites                          marca 'motor 25/25'                presente: SI
+      el vuelo completo en la corrida K        marca '16 de 16 en la corrida K'   presente: SI
+      la prueba de rumbos                      marca 'prueba de rumbos SIN DERIV' presente: SI
+      el reindexado con sus dos sellos         marca 'd70adc1d'                   presente: SI
+
+==============================================================================
+EL RESULTADO, FICHA POR FICHA, QUE ES LO QUE EL ENCARGO PIDE
+==============================================================================
+
+------------------------------------------------------------------------------
+FICHA OP-V-01 . fase 08_VERIFICACION . campo estado LEIDO Y NO USADO COMO VARA: 'HECHA'
+   linea 34 de docs/plan/OPERACIONES.jsonl | se mide contra la fila de la linea 31 de docs/plan/08_VERIFICACION.md
+------------------------------------------------------------------------------
+   CIFRA clausulas de la fila de su fase: 1
+   CIFRA de esas que salen de ESTA ficha: 1
+
+   CLAUSULA: TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids
+      SONDA: PRUEBA POR CITA, que es la cuarta via que la
+      DECISION 5 del fundador del 4 sep 2026 autorizo PARA
+      ESTA FICHA (docs/loop/paradas/2026-09-04-estado-de-las-fichas-DECISION.md).
+      NO SE VUELVE A PRODUCIR LA CORRIDA K: se comprueba que
+      su cita esta escrita en la nota de la ficha, marca a
+      marca. Commit que movio el estado: e966d896.
+      CIFRA marcas buscadas: 5 | CIFRA halladas: 5
+      RESULTADO: **CALZA POR CITA: los cinco puntos estan escritos**
+      Y LO QUE ESTA PRUEBA NO ES, dicho por la propia nota de
+      la ficha: NO cambia el veredicto de la vara del
+      expediente, que sigue midiendo esta ficha como HECHA
+      SIN NINGUNA DE SUS TRES PRUEBAS.
+
+   CIFRA correcciones declaradas de esta ficha, que NO son puntos de
+   la vara (registro R.72 del acta 208): 0
+   REPARTO DE ESTA FICHA: 1 clausula(s) con sonda mecanica y 0
+   documental(es), de 1 que le tocan.
+
+------------------------------------------------------------------------------
+FICHA OP-L-01 . fase 09_LECTURAS_DIRIGIDAS . campo estado LEIDO Y NO USADO COMO VARA: 'HECHA'
+   linea 41 de docs/plan/OPERACIONES.jsonl | se mide contra la fila de la linea 32 de docs/plan/08_VERIFICACION.md
+------------------------------------------------------------------------------
+   CIFRA clausulas de la fila de su fase: 8
+   CIFRA de esas que salen de ESTA ficha: 3
+
+   CLAUSULA: ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui
+      SONDA: MECANICA, Y MIDE EL PAR Y NO LOS NOMBRES
+      SUELTOS. 27 cabeceras LD-NN en docs/plan/LECTURAS_DIRIGIDAS.md; de esos PARES,
+      0 tienen VEREDICTO en docs/INTRA_DOMINIO_VEREDICTOS.jsonl.
+      RESULTADO: **CALZA: ningun par de lectura dirigida tiene veredicto en el archivo, o sea que viven solo en su pagina**
+      LA PRIMERA VERSION DE ESTA SONDA ERA MAS LAXA QUE SU
+      CLAUSULA y salia 27 de 27, o sea una alarma falsa:
+      preguntaba si los dos NOMBRES estaban en el fichero, y
+      eso da que si para casi cualquier par del catalogo.
+      Corregida a comparar el PAR contra nodo_a y nodo_b.
+      Y LA CIFRA ONCE DE LA CLAUSULA NO ES LA DE HOY: el
+      fichero trae 27 cabeceras, porque la pagina siguio
+      creciendo. La clausula es de su corte, y lo digo.
+
+   CLAUSULA: el marcador del cribado no se mueve: sigue en 2.117
+      SONDA: MECANICA. El marcador contado hoy de docs/INTRA_DOMINIO_VEREDICTOS.jsonl da 3388.
+      LA CLAUSULA ESCRIBE 2.117.
+      RESULTADO: **NO CALZA LEIDA A LA LETRA**, y la
+      discrepancia SE DECLARA en vez de resolverse copiando
+      (EJECUTOR.md 2). LAS DOS LECTURAS, y no elijo yo:
+        (i) LITERAL: el marcador de hoy no es el que la
+            clausula escribe, asi que no calza.
+        (ii) DE SU CORTE: la clausula pide que ESTA
+            OPERACION no mueva el marcador, y el marcador
+            se movio porque EL CRIBADO SIGUIO hasta cerrar
+            en su ultimo puesto, no por esta ficha.
+      CUAL DE LAS DOS MANDA ES DOCTRINA QUE NO ESTA
+      ESCRITA: va como PENDIENTE DE DOCTRINA y no se
+      resuelve aqui (EJECUTOR.md 5).
+
+   CLAUSULA: cada nomina afectada se re-mide con su cobertura al lado (banco 9.26)
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 41 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CIFRA correcciones declaradas de esta ficha, que NO son puntos de
+   la vara (registro R.72 del acta 208): 4
+   REPARTO DE ESTA FICHA: 2 clausula(s) con sonda mecanica y 1
+   documental(es), de 3 que le tocan.
+
+------------------------------------------------------------------------------
+FICHA OP-L-02 . fase 09_LECTURAS_DIRIGIDAS . campo estado LEIDO Y NO USADO COMO VARA: 'HECHA'
+   linea 42 de docs/plan/OPERACIONES.jsonl | se mide contra la fila de la linea 32 de docs/plan/08_VERIFICACION.md
+------------------------------------------------------------------------------
+   CIFRA clausulas de la fila de su fase: 8
+   CIFRA de esas que salen de ESTA ficha: 3
+
+   CLAUSULA: el marcador del cribado no se mueve: sigue en 2.117
+      SONDA: MECANICA. El marcador contado hoy de docs/INTRA_DOMINIO_VEREDICTOS.jsonl da 3388.
+      LA CLAUSULA ESCRIBE 2.117.
+      RESULTADO: **NO CALZA LEIDA A LA LETRA**, y la
+      discrepancia SE DECLARA en vez de resolverse copiando
+      (EJECUTOR.md 2). LAS DOS LECTURAS, y no elijo yo:
+        (i) LITERAL: el marcador de hoy no es el que la
+            clausula escribe, asi que no calza.
+        (ii) DE SU CORTE: la clausula pide que ESTA
+            OPERACION no mueva el marcador, y el marcador
+            se movio porque EL CRIBADO SIGUIO hasta cerrar
+            en su ultimo puesto, no por esta ficha.
+      CUAL DE LAS DOS MANDA ES DOCTRINA QUE NO ESTA
+      ESCRITA: va como PENDIENTE DE DOCTRINA y no se
+      resuelve aqui (EJECUTOR.md 5).
+
+   CLAUSULA: las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 42 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CLAUSULA: cada grupo del backlog lleva su motivo escrito, no solo su cuenta
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 42 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CIFRA correcciones declaradas de esta ficha, que NO son puntos de
+   la vara (registro R.72 del acta 208): 1
+   REPARTO DE ESTA FICHA: 1 clausula(s) con sonda mecanica y 2
+   documental(es), de 3 que le tocan.
+
+------------------------------------------------------------------------------
+FICHA OP-L-03 . fase 09_LECTURAS_DIRIGIDAS . campo estado LEIDO Y NO USADO COMO VARA: 'HECHA'
+   linea 43 de docs/plan/OPERACIONES.jsonl | se mide contra la fila de la linea 32 de docs/plan/08_VERIFICACION.md
+------------------------------------------------------------------------------
+   CIFRA clausulas de la fila de su fase: 8
+   CIFRA de esas que salen de ESTA ficha: 3
+
+   CLAUSULA: ningun acto se funde con un par interno sin veredicto
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 43 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CLAUSULA: las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 43 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CLAUSULA: cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado
+      SONDA: DOCUMENTAL. No es mecanizable en esta vuelta y
+      NO SE FABRICA UNA SONDA QUE LA APRUEBE SOLA. Su
+      evidencia vive en el campo `evidencia` de la propia
+      ficha, linea 43 de docs/plan/OPERACIONES.jsonl.
+      RESULTADO: **SIN VEREDICTO MECANICO**, y SE DECLARA
+      QUE NO HAY CASO ROJO AUTOMATICO para esta clausula.
+
+   CIFRA correcciones declaradas de esta ficha, que NO son puntos de
+   la vara (registro R.72 del acta 208): 1
+   REPARTO DE ESTA FICHA: 0 clausula(s) con sonda mecanica y 3
+   documental(es), de 3 que le tocan.
+
+------------------------------------------------------------------------------
+FICHA OP-I-01 . fase 10_INVENTARIO . campo estado LEIDO Y NO USADO COMO VARA: 'LISTA'
+   linea 44 de docs/plan/OPERACIONES.jsonl | se mide contra la fila de la linea 33 de docs/plan/08_VERIFICACION.md
+------------------------------------------------------------------------------
+   CIFRA clausulas de la fila de su fase: 4
+   CIFRA de esas que salen de ESTA ficha: 4
+
+   CLAUSULA: toda entrada lleva su fecha_corte
+      SONDA: MECANICA, POR CITA DE LA TAREA 1 DE ESTA MISMA
+      VUELTA (docs/loop/SALIDA_V214_T1C_OP_I_01.txt), que la midio entera.
+      RESULTADO: **CUBRE**
+
+   CLAUSULA: toda forma con cobertura incompleta va marcada PROVISIONAL
+      SONDA: MECANICA, POR CITA DE LA TAREA 1 DE ESTA MISMA
+      VUELTA (docs/loop/SALIDA_V214_T1C_OP_I_01.txt), que la midio entera.
+      RESULTADO: **CUBRE**
+
+   CLAUSULA: todo hueco va NOMBRADO, nunca rellenado
+      SONDA: MECANICA, POR CITA DE LA TAREA 1 DE ESTA MISMA
+      VUELTA (docs/loop/SALIDA_V214_T1C_OP_I_01.txt), que la midio entera.
+      RESULTADO: **A MEDIAS**
+
+   CLAUSULA: el inventario se recomputa entero con el disparador de 08_VERIFICACION
+      SONDA: MECANICA, POR CITA DE LA TAREA 1 DE ESTA MISMA
+      VUELTA (docs/loop/SALIDA_V214_T1C_OP_I_01.txt), que la midio entera.
+      RESULTADO: **A MEDIAS**
+
+   CIFRA correcciones declaradas de esta ficha, que NO son puntos de
+   la vara (registro R.72 del acta 208): 0
+   REPARTO DE ESTA FICHA: 4 clausula(s) con sonda mecanica y 0
+   documental(es), de 4 que le tocan.
+
+==============================================================================
+EL RESUMEN, CONTADO DE LO DE ARRIBA Y NO TECLEADO
+==============================================================================
+| ficha | fase | clausulas suyas | con sonda mecanica | documentales |
+|---|---|---:|---:|---:|
+| OP-V-01 | 08_VERIFICACION | 1 | 1 | 0 |
+| OP-L-01 | 09_LECTURAS_DIRIGIDAS | 3 | 2 | 1 |
+| OP-L-02 | 09_LECTURAS_DIRIGIDAS | 3 | 1 | 2 |
+| OP-L-03 | 09_LECTURAS_DIRIGIDAS | 3 | 0 | 3 |
+| OP-I-01 | 10_INVENTARIO | 4 | 4 | 0 |
+
+CIFRA fichas re-medidas: 5 (se exigen 5)
+CIFRA clausulas repartidas: 14 | con sonda 8 | documentales 6
+
+LA SUMA SE COMPRUEBA CONTRA SI MISMA: 8 mas 6 = 14, y las repartidas son 14.
+
+CIFRA comprobaciones que fallan: 0
+
+Y LO QUE ESTA TAREA NO HACE: no escribe en docs/plan, no mueve ningun
+campo estado, no toca la vara del expediente y no asciende ninguna ficha.
+VERDE: las cinco quedan re-medidas.

@@ -28,6 +28,9 @@ nada.**
 | **05 SANEO** | ningun id vivo con tratado extinto; los tres de Incoterms con su version; ningun nodo cablea `export.gov`; ninguna de las seis herramientas muertas; ningun nodo con dos claves de fase; **ningun nodo se cita a si mismo tras resolver** |
 | **06 MESAS** | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
 | **07 ADUANA** | los cuatro controles mecanicos **corriendo en Gate 0** |
+| **08 VERIFICACION** | TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids |
+| **09 LECTURAS DIRIGIDAS** | ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui; el marcador del cribado no se mueve: sigue en 2.117; cada nomina afectada se re-mide con su cobertura al lado (banco 9.26); las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita; cada grupo del backlog lleva su motivo escrito, no solo su cuenta; ningun acto se funde con un par interno sin veredicto; las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador; cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado |
+| **10 INVENTARIO** | toda entrada lleva su fecha_corte; toda forma con cobertura incompleta va marcada PROVISIONAL; todo hueco va NOMBRADO, nunca rellenado; el inventario se recomputa entero con el disparador de 08_VERIFICACION |
 
 **CORRECCION DECLARADA (vuelta 122, aditiva, la tabla vieja no se toca): LA
 CELDA DE LA FILA 05 SANEO SE LEE ACOTADA A LAS NOMINAS DE SUS OPERACIONES.**
@@ -53,6 +56,36 @@ medidas hoy por la secuencia numerada `Entrada 1` a `Entrada 7`, la 7 de la
 vuelta 121; su propio bloque `## ` trae 13 encabezados `### ` en total, con 6
 mas que usan otra numeracion, "de herramientas" y "de marco-pais", ajena a esa
 secuencia).
+
+**CORRECCION DECLARADA (vuelta 214, 2026-09-09, ADITIVA: LA TABLA VIEJA NO SE TOCA NI EN UNA LETRA). LAS TRES FILAS QUE FALTABAN, PARA LAS FASES 08, 09 y 10.**
+
+**QUIEN LO ORDENA, POR SU RUTA Y NO DE MEMORIA:** `docs/loop/paradas/2026-09-09-plan-agotado-DECISION.md`, **DECISION 2** del fundador. **El acta 211 ya habia reservado estas filas al fundador en su `6.4`, y el acta 213 midio en su `7.2` que la ausencia era TOTAL y no parcial: la tabla llevaba SIETE filas, de `01 FUENTES` a `07 ADUANA`, y CERO para estas tres.**
+
+**LAS FILAS NO SE INVENTAN, SE DERIVAN, Y CADA UNA VA CON SU CITA.** Cada celda se compone de los textos **VERBATIM** de las clausulas de `verificacion` que las propias fichas traen, leidas hoy de `docs/plan/OPERACIONES.jsonl`. **Ninguna palabra de esas celdas la escribio esta vuelta:** las compuso `scripts/loop/_v214_t2_vara_tres_fases.py` concatenando clausulas, y su juicio cae si una celda trae texto que no salga de una.
+
+**Y LAS CORRECCIONES DECLARADAS NO ENTRAN, PORQUE NUNCA FUERON PUNTOS DE LA VARA:** lo adjudico el registro `R.72` del acta 208, que separo las tres clausulas de los indices 0 a 2 de las cuatro correcciones declaradas de los indices 3 a 6. **Aqui se detectan por su propio encabezado y se listan aparte**, con la clausula que cada una corrige **extraida de su propio texto** y no supuesta.
+
+| fase | de que ficha sale | indice de la clausula | linea de `docs/plan/OPERACIONES.jsonl` | la clausula, VERBATIM | corregida por |
+|---|---|---:|---:|---|---|
+| **08 VERIFICACION** | `OP-V-01` | 8 | 34 | TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids | no |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-01` | 0 | 41 | ninguna de las once aparece en INTRA_DOMINIO_VEREDICTOS.jsonl: viven solo aqui | indice 3 |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-01` | 1 | 41 | el marcador del cribado no se mueve: sigue en 2.117 | indice 4 |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-01` | 2 | 41 | cada nomina afectada se re-mide con su cobertura al lado (banco 9.26) | no |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-02` | 0 | 42 | las tres nominas afectadas quedan con cobertura COMPLETA y su forma reescrita | no |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-02` | 1 | 42 | el marcador del cribado no se mueve: sigue en 2.117 | indice 3 |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-02` | 2 | 42 | cada grupo del backlog lleva su motivo escrito, no solo su cuenta | no |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-03` | 0 | 43 | ningun acto se funde con un par interno sin veredicto | indice 3 |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-03` | 1 | 43 | las 55 lecturas marcadas LECTURA DIRIGIDA: no entran en la cola ni mueven su marcador | no |
+| **09 LECTURAS DIRIGIDAS** | `OP-L-03` | 2 | 43 | cada acto cuya lectura completa cambie su forma se re-mide con su cobertura al lado | no |
+| **10 INVENTARIO** | `OP-I-01` | 0 | 44 | toda entrada lleva su fecha_corte | no |
+| **10 INVENTARIO** | `OP-I-01` | 1 | 44 | toda forma con cobertura incompleta va marcada PROVISIONAL | no |
+| **10 INVENTARIO** | `OP-I-01` | 2 | 44 | todo hueco va NOMBRADO, nunca rellenado | no |
+| **10 INVENTARIO** | `OP-I-01` | 3 | 44 | el inventario se recomputa entero con el disparador de 08_VERIFICACION | no |
+
+**FILAS DE DERIVACION ARMADAS: 14.** Cada una es una clausula de vara de una de las cinco fichas, y las celdas de arriba son su concatenacion.
+
+**LO QUE ESTA CORRECCION NO HACE:** no borra ni tacha ninguna fila vieja, no toca el campo `estado` de ninguna ficha, no mueve ni un veredicto, no toca ni un nodo y no cambia el disparador del recomputo.
+
 
 ---
 
