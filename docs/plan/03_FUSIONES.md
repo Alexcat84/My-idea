@@ -5423,6 +5423,29 @@ comparte carril con el pendiente 3 del acta 67: el cierre de la fase 03**.
 > apuntando al remedio **por su nombre**. **Y hay un CHOQUE encima**, dicho en vez de callado: el
 > puesto **730** declara que la clase queda en `A` **por la lectura vieja del cero-enlazados** y que
 > **si mandara el contenido seria `D`**, y lo deja anotado en vez de elegir.
+>
+> **CORRECCION DECLARADA (8 sep 2026, vuelta 213, TAREA `1.b` del encargo, por el
+> carril del banco `9.10`; adjudicacion `6.1` del acta 212, linea 75082 de
+> `docs/loop/ACTA_AUDITOR.md`, leida hoy). EL TEXTO DE ARRIBA SE QUEDA ENTERO Y SIN
+> TACHAR, Y LO QUE SE CORRIGE ES SU ULTIMA CLAUSULA.** La frase de arriba cierra con
+> *"y lo deja anotado en vez de elegir"*, **y eso YA ES FALSO: la fila eligio.** El
+> puesto **730** (`colaboracion_cadena_suministro` a `efecto_bullwhip`) **paso de `A` a
+> `D` en la VUELTA 212**, con la vara del banco `9.6.1` aplicada en la direccion del
+> `9.6.2`, y el volteo vive en el commit **`9140d524`** (2026-09-08). **NO LO RECUERDO,
+> LO MEDI EN ESTA VUELTA:** `git log -1 --format=%H -- docs/INTRA_DOMINIO_VEREDICTOS.jsonl`
+> devuelve ese commit, la clase del puesto es **`A`** en `9140d524^` y es **`D`** en el
+> disco de hoy.
+>
+> **LO QUE SIGUE SIENDO VERDADERO Y NO SE CORRIGE, PORQUE LA CORRECCION ES ESTRECHA A
+> PROPOSITO:** la primera mitad de la frase, o sea que el puesto **declaraba de si
+> mismo** que la clase quedaba en `A` por la lectura vieja del cero-enlazados y que si
+> mandara el contenido seria `D`. **Eso es lo que paso, y es exactamente lo que hizo que
+> la fila se releyera.**
+>
+> **Y LO QUE NO SE TOCA, DICHO AQUI PARA QUE NADIE LO BARRA DESPUES:**
+> `docs/INTRA_DOMINIO_INFORME.md` linea **6941** *("El puesto 730 es el primer veredicto
+> nuevo emitido despues de que el choque de la seccion 19 quedara escrito")* **NO se
+> corrige**: es un hecho historico y sigue siendo verdadero.
 
 **El `acto 21`, la familia del Punto 4 de Deming:**
 

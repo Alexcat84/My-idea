@@ -1,0 +1,63 @@
+==============================================================================
+VUELTA 213, TAREA 1.b. EL BARRIDO DEL 9.10, Y ES UNA SOLA LINEA
+adjudicacion 6.1 del acta 212 (linea 75082 de docs/loop/ACTA_AUDITOR.md)
+modo: ESCRIBIR
+==============================================================================
+
+PASO 1. LAS SEDES AL ENTRAR, POR LAS DOS CONVENCIONES
+   CIFRA SEDE docs/plan/03_FUSIONES.md AL ENTRAR: 831759 bytes en disco y 826733 bytes normalizado a LF (NO COINCIDEN), sha256 disco 41f72d59d1b5dc7b y sha256 LF 515fd9ff9541ae8a
+   CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 4057130 bytes en disco y 4057130 bytes normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+   CIFRA SEDE docs/INTRA_DOMINIO_INFORME.md AL ENTRAR: 943970 bytes en disco y 943970 bytes normalizado a LF (COINCIDEN), sha256 disco c05b6bcd20188a9c y sha256 LF c05b6bcd20188a9c
+
+PASO 2. LO QUE SE VA A CORREGIR, LEIDO DEL DISCO EN ESTA VUELTA
+   CIFRA lineas del fichero: 9279
+   linea 5424 LEIDA DEL DISCO: > puesto **730** declara que la clase queda en `A` **por la lectura vieja del cero-enlazados** y que
+   linea 5425 LEIDA DEL DISCO: > **si mandara el contenido seria `D`**, y lo deja anotado en vez de elegir.
+   la clausula que envejecio vive en la linea 5425: SI
+
+PASO 3. LA LINEA 6941 DEL INFORME, LEIDA Y NO TOCADA (prohibicion expresa)
+   linea 6941: **El puesto 730** es el primer veredicto nuevo emitido **despues** de que el
+   ESTE FICHERO NO SE ABRE PARA ESCRITURA EN NINGUN CAMINO DE ESTE SCRIPT.
+
+PASO 4. EL VOLTEO DEL 730, LEIDO DE GIT Y DEL ARCHIVO EN ESTA VUELTA
+   CIFRA commit que toco el archivo por ultima vez: 9140d524 (2026-09-08 03:25:53 -0400)
+   CIFRA clase del puesto 730 en 9140d524^: A
+   CIFRA clase del puesto 730 en el disco de hoy: D
+   los dos nodos del puesto: colaboracion_cadena_suministro -> efecto_bullwhip
+
+PASO 5. EL JUICIO SOBRE LA COMPOSICION EN MEMORIA, ANTES DE TOCAR EL DISCO
+   CIFRA lineas anadidas: 23 | CIFRA lineas quitadas: 0
+   CIFRA fallos de la simulacion: 0
+
+PASO 6. EL CASO ROJO POR MUTACION, CORRIDO ANTES DE ESCRIBIR
+   (EJECUTOR.md 1, EL CASO ROJO SE PRUEBA POR MUTACION: se cambia el
+    valor esperado y se comprueba que el caso CAE)
+   MUTANTE A: TAPA EL TEXTO VIEJO (se come tres lineas de la frase)       -> CAE (2 fallo(s))
+        (1) EL TEXTO VIEJO NO ESTA ENTERO: hay 1 bloque(s) que no son insercion (['replace']). Una correccion que tapa lo que corrige no se puede auditar.
+        (2) SE TOCA MAS DE UNA REGION DEL FICHERO: 0 bloque(s) de insercion, y esta tarea es UNA sola.
+   MUTANTE B: TOCA UNA SEGUNDA LINEA DEL FICHERO ademas de insertar       -> CAE (1 fallo(s))
+        (1) EL TEXTO VIEJO NO ESTA ENTERO: hay 1 bloque(s) que no son insercion (['replace']). Una correccion que tapa lo que corrige no se puede auditar.
+   MUTANTE C: ESCRIBE UNA CITA QUE NO CALZA (commit inventado)            -> CAE (1 fallo(s))
+        (8) LA CITA NO CALZA: se cita el commit 0000dead y git dice que el que volteo el puesto 730 es 9140d524.
+   MUTANTE D: AFIRMA UN PASO QUE EL ARCHIVO NO SOSTIENE (clase de hoy fingida en A) -> CAE (1 fallo(s))
+        (9) LA CITA NO CALZA CONTRA EL ARCHIVO: se afirma un paso de A a D y el archivo dice A antes y A hoy.
+   CIFRA mutantes: 4 | CIFRA mutantes que caen: 4 (se exigen todos)
+
+PASO 7. ESCRITO. LAS SEDES AL SALIR, POR LAS DOS CONVENCIONES
+   CIFRA SEDE docs/plan/03_FUSIONES.md AL SALIR: 833308 bytes en disco y 828282 bytes normalizado a LF (NO COINCIDEN), sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2
+   CIFRA SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR: 4057130 bytes en disco y 4057130 bytes normalizado a LF (COINCIDEN), sha256 disco 758edf1f5c313c18 y sha256 LF 758edf1f5c313c18
+   CIFRA SEDE docs/INTRA_DOMINIO_INFORME.md AL SALIR: 943970 bytes en disco y 943970 bytes normalizado a LF (COINCIDEN), sha256 disco c05b6bcd20188a9c y sha256 LF c05b6bcd20188a9c
+
+   el sha256 LF de docs/plan/03_FUSIONES.md SE MUEVE: 515fd9ff9541ae8a -> 46c592fa8da942e2 (SI, como se exige)
+   el sha256 LF de docs/INTRA_DOMINIO_VEREDICTOS.jsonl NO se mueve: 758edf1f5c313c18 -> 758edf1f5c313c18 (QUIETO, como se exige)
+   el sha256 LF de docs/INTRA_DOMINIO_INFORME.md NO se mueve: c05b6bcd20188a9c -> c05b6bcd20188a9c (QUIETO, como se exige)
+
+PASO 8. EL NUMSTAT, ACOTADO Y CONTADO
+   CIFRA filas de numstat de ese fichero           : 1
+      FILA: 23	0	docs/plan/03_FUSIONES.md
+   CIFRA filas de numstat de docs/plan entero      : 1
+      FILA: 23	0	docs/plan/03_FUSIONES.md
+   CIFRA filas de numstat de dataset, web y engine : 0
+
+   RELECTURA DEL DISCO identica a lo juzgado: SI
+VERDE: la 1.b queda ejecutada.
