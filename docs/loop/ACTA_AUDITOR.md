@@ -76683,3 +76683,346 @@ corrido nadie.** **`docs/loop/PARA_ALEXIS.md` NO se escribe y `docs/loop/PROMPT_
 queda ESCRITO Y COMPLETO.**
 
 Esta acta **solo crece por anexion**: el texto viejo sigue entero delante.
+
+---
+
+# ACTA DEL AUDITOR, VUELTA 216 (9 sep 2026, auditor Opus 5)
+
+**HUECO DE ACTA: NO HAY.** La ultima acta escrita cubre la vuelta **215** (cabecera en la
+linea **76240**, leida hoy) y su commit es `c7a0651c`. La vuelta que audito es la **216**,
+inmediatamente posterior. **Cubro una sola vuelta y lo digo antes de nada.**
+
+## 0. ABRO CON MI PROPIA CAIDA, PORQUE LA LETRA ME OBLIGA Y PORQUE YA VAN SEIS
+
+**`0.1` MI CAIDA `C.1`, Y ES NUEVA: ME QUEME EL SUJETO DE LA CIEGA ANTERIOR POR UNA PUERTA
+QUE NINGUNA GUARDA VIGILA.** Antes de sellar abri `docs/loop/_auditor_v215_mis_clases.txt`
+buscando el FORMATO del fichero de clases, y ese fichero **publica la clase de OCHENTA
+puestos, uno por linea**. No es `git log`, no es `git status`, no es `docs/loop/REPORTE.md`
+y no es `docs/INTRA_DOMINIO_VEREDICTOS.jsonl`: **las cuatro puertas de
+`apertura_del_auditor.py` no lo cubren, y por eso el sello salio VERDE con `prohibidos
+tocados antes del sello: 0` sobre un turno que ya se habia quemado 80 puestos.** Eso es
+exactamente **LA GUARDA QUE SE PUBLICA COMO MORDIENDO Y NO MUERDE** mirada desde el unico
+angulo que le queda: la guarda muerde donde mira, y **no mira aqui**.
+
+**LO QUE HICE AL DARME CUENTA, Y ES LA MITAD QUE IMPORTA:** saque los **80** del sorteo
+**ANTES de sellar**, con `--excluir`, junto a los **28** que la leyenda del banco me nombro
+por su numero. **La lista de los 108 vive DENTRO del criterio del sello**
+(`docs/loop/SELLO_APERTURA_AUDITOR_V216.json`, **927** bytes), o sea que **no es una
+promesa mia: es un dato que cualquiera puede leer del disco.** Ninguno de los 108 entro en
+mis 80.
+
+**NO REPARO LA PUERTA QUINTA Y DIGO POR QUE:** seria un lector nuevo y **rige la moratoria
+`AUDITOR.md` 6.3**. Sube NOMBRADA a la seccion 6.
+
+**`0.2` MI CAIDA `C.2`, Y ES LA SEXTA SEGUIDA DE SU FAMILIA: 211, 212, 213, 214, 215 Y 216.**
+La primera seccion de `docs/loop/AUDITOR.md` dice *"TU COMANDO NUMERO UNO ES `python
+scripts/loop/apertura_del_auditor.py --estado`"*. **Mi comando numero uno fue `cat
+docs/loop/AUDITOR.md`**, igual que el de la 215, que lo declaro como su `0.2` en la linea
+**76265**. **Lo rompi y no lo discuto.**
+
+**LO QUE NO ROMPI, MEDIDO Y NO ALEGADO:** la prohibicion dura de esa misma seccion es
+*"NINGUN comando anterior a esos tres puede nombrar `docs/loop/REPORTE.md`"*, y **ninguno de
+mis comandos anteriores al sello lo nombro**: la bitacora del turno salio **vacia** y el
+sello lo publica. Mi comando numero dos fue `--estado`, el tres `--cerrar-turno --vuelta
+216-cola` sobre un turno vivo ajeno que arrastraba `REPORTE.md, git status, git status`, y
+el cuatro el sellado.
+
+**EL REMEDIO QUE ESTA EN MI MANO Y LO EJERZO AQUI, PORQUE DECLARARSE SIN REMEDIAR DEJO DE
+SER GRATIS:** la letra no se puede cumplir sin romperla la primera vez, porque **la unica
+via de enterarse de que la orden existe es leer el fichero que la contiene**. Eso ya subio
+como **punto 4 de la seccion 6 del acta 215** en forma de PREGUNTA. **Hoy deja de ser
+pregunta y sube como ENCARGO AL FUNDADOR CON SU CIFRA: SEIS ACTAS SEGUIDAS.** No toco
+`AUDITOR.md`: es sede de decision del fundador y ademas rige la moratoria.
+
+## 1. LA VERIFICACION, CON MIS COMANDOS Y NO CON SU PALABRA
+
+**HASH VERIFICADO:** rama `pasada-unica`, HEAD `7ce284c1`, arbol limpio salvo mis cuatro
+ficheros sin rastrear. Los sellos de la vuelta dicen apertura `c7a0651c` y cierre
+`cf212ef2`, leidos de `SALIDA_V216_HEAD_APERTURA.txt` y `SALIDA_V216_HEAD_CIERRE.txt`
+(**41** bytes cada uno).
+
+**LO QUE RECOMPUTE YO, CON PYTHON PROPIO SOBRE LOS FICHEROS, NO LEYENDO SU SALIDA:**
+
+| cifra | LA MIA, corrida hoy | la del reporte | calzan |
+|---|---:|---:|---|
+| marcador filas / A / B / C / D | **3388 / 550 / 72 / 5 / 2761** | 3388 / 550 / 72 / 5 / 2761 | SI |
+| marcador puestos distintos / max / huecos | **3388 / 3388 / 0** | 3388 / . / 0 | SI |
+| censo nodos / vivos / deprecados | **3853 / 3169 / 684** | 3853 / 3169 / 684 | SI |
+| aristas siguientes / previos / suma / union | **8780 / 8740 / 17520 / 9914** | 8780 / 8740 / 17520 / 9914 | SI |
+| Gate 0 comando 1, `run_phase1.py --reaplico-curaduria` | **EXITCODE 0, `GATE 0: OK`** | OK | SI |
+| Gate 0 comando 2, `etiquetas_de_cara.py --aplicar` y `git diff --numstat -- dataset/` | **EXITCODE 0, 0 filas** | 0 | SI |
+| suite motor, `engine/run_all_tests.py` | **25/25, EXITCODE 0** | 25/25 | SI |
+| `npx tsc --noEmit` | **EXITCODE 0, cero lineas** | EXITCODE 0 | SI |
+| suite web, `pnpm test` | **82 passed (82) / 1040 passed (1040), EXITCODE 0** | 82 (82) / 1.040 (1.040) | SI |
+| rutas del reporte, `vuelta186_rutas_del_reporte.py` | **VERDE, 0 inexistentes o de cero bytes** | VERDE | SI |
+| inventario: entradas / acto mas racimo / sin `fecha_corte` / que nombran `OP-L-03` | **672 / 569 / 0 / 81** | 672 / 569 / 0 / 81 | SI |
+| vara del expediente, `--corte 7ce284c1...`: no calzan / congeladas declaradas / en silencio / LISTA sin prueba / HECHA sin prueba | **40 / 24 / 12 / 3 / 4** | 40 / 24 / 12 / 3 / 4 | SI |
+| `.py` bajo `scripts/` que nombran `10_INVENTARIO.md` / que la ESCRIBEN | **27 / 0** | 27 / 0 | SI |
+| corrida K: bytes en disco / LF / lineas | **63756 / 63655 / 788** | 63756 / 63655 / 788 | SI |
+| `SALIDA_V214_T2B_REMEDIR_CINCO.txt`: bytes / sonda / documentales / NO CALZA | **14302 / 8 / 6 / 2** | 14302 / 8 / 6 / 2 | SI |
+| bateria de la 215: bytes de su compuesta / commit | **93498 en disco y 93498 LF, `abe21a67`** | 93498 / `abe21a67` | SI |
+| `docs/loop/SALIDA_V216_BATERIA.txt` | **NO EXISTE** (el hueco es el declarado) | no existe | SI |
+
+**LAS CATORCE FILAS DE DERIVACION, COTEJADAS POR MI CONTRA `docs/plan/OPERACIONES.jsonl` Y
+NO CONTRA SU SALIDA.** Lei las lineas **34, 41, 42, 43 y 44** con `json.loads` y compare las
+clausulas por su indice: **14 de 14 calzan VERBATIM, 0 no calzan.** Y los cinco estados que
+su tabla `3.c` publica calzan con el fichero: `OP-V-01`, `OP-L-01`, `OP-L-02` y `OP-L-03` en
+**HECHA**, `OP-I-01` en **LISTA**.
+
+**LAS DIECIOCHO SALIDAS SELLADAS DEL CICLO EXISTEN Y NINGUNA MIDE CERO**, contadas por mi en
+el arbol: nueve por lado, con `8/8a` y `8/8b` separadas. Las dos consolas miden **965** y
+**961** bytes. Las tres suites solas, **1160**, **11** y **334** bytes.
+
+**LOS VEINTIDOS NUMEROS DE LINEA QUE EL REPORTE CITA DEL ACTA LOS LEI YO CON UN INDICE
+PROPIO**: 76240, 76508, 76559, 76573, 76585, 76590, 76599, 76610, 76617, 76628, 76630,
+76640, 76644, 76646, 76648, 76652, 76665, 76666, 76673, 71534, 71543 y 75168. **Los
+veintidos caen donde dice. CERO fallos.**
+
+## 2. LA RELECTURA CIEGA: 72 DE 80, CON SELLO, Y LAS OCHO QUE FALLE SON MIAS
+
+**SUJETO SELLADO ANTES DEL PRIMER COMANDO DE VERIFICACION.** Criterio: *muestra de 80 pares
+sobre el archivo entero, semilla 216, excluidos 108 puestos que se me destaparon antes de
+sellar*. Sello `docs/loop/SELLO_APERTURA_AUDITOR_V216.json`, **927** bytes, `prohibidos
+tocados antes del sello: 0`, ciega **107561** bytes, destape **81052** bytes. Clases
+escritas ANTES del destape en `docs/loop/_auditor_v216_mis_clases.txt` (**15387** bytes) y
+declaradas por el carril del sello de disco: **VERDE**.
+
+**POR DONDE EMPECE, QUE ES LO QUE LA 1.2 MANDA:** por los discutibles marcados del reporte.
+**ESTA VUELTA NO MARCA NINGUN PUESTO**: sus cinco discutibles `D.a` a `D.e` son LECTURAS DE
+CLAUSULA, no veredictos. Los adjudico en la seccion 5 y despues corri la ciega sobre el
+sujeto sellado.
+
+**EL COTEJO: COINCIDEN 72, DISCREPAN 8. TASA 90,0 POR CIENTO.** Mi reparto a ciegas fue
+**A 21, B 0, C 0, D 59**; el del archivo, sobre los mismos 80, **A 13, B 1, D 66**.
+**LAS OCHO DISCREPANCIAS SON TODAS DEL MISMO SIGNO: yo di A y el archivo dio D o B.** No hay
+ni una en el sentido contrario, y eso no es casualidad: **peso el solape y el archivo pesa
+el resto**, que es justo lo que el `9.6.3` prohibe hacer.
+
+| puesto | mia | suya | quien manda, y por que |
+|---:|:---:|:---:|---|
+| **158** | A | **B** | **SUYA.** `B` es la clase del material que se pisa sin cerrar el caso, y su razon lo dice: *"se distinguen en el encuadre... pero el material se pisa"*. Mi `A` fue mas dura que la evidencia |
+| **1246** | A | **D** | **SUYA, y con precedente citado dentro: el puesto 636 separo a este mismo nodo por la misma linea.** Uno disena la prueba y el otro FIJA EL UMBRAL antes y anota tiempo y costo por prueba. Yo llame linea a un procedimiento |
+| **1927** | A | **D** | **SUYA.** No lo vi: `A` valida contra la expectativa del cliente y `B` exige **igualar o superar el desempeno DE LA COMPETENCIA**. Es otra vara, no la misma dos veces |
+| **1948** | A | **D** | **SUYA.** Los dos pasos verbatim me pesaron mas que el resto: uno trae el RITMO DE NEGOCIACION y el otro la ESCALERA DE MERCADOS SIMILARES. Ninguno esta en el otro |
+| **2089** | A | **D** | **SUYA, y es la que peor me deja.** El sufijo `_2` me arrastro, que es el error exacto que el `9.6.3` nombra. El `_2` no enumera: **pone un gobernador de velocidad** que el otro no tiene |
+| **2428** | A | **D** | **SUYA.** Uno GENERA con metodos nombrados (benchmarking, asociacion aleatoria) y el otro ELIGE Y CIERRA con metas medibles. Procedimiento a los dos lados |
+| **2450** | A | **D** | **SUYA.** Uno trae el METODO (clasificar por origen, priorizar con dueno) y el otro las TRES BARRERAS que no se van clasificando. El solape esta DECLARADO en su propia razon |
+| **2978** | A | **D** | **SUYA, y su razon predijo mi error al byte:** *"DISCUTIBLE MARCADO fuerte... quien pese esa estructura compartida sin ver las tres tecnicas propias de accion_correctiva dira A."* **Dije A.** Es la mejor pieza de calibracion del archivo que he visto en una ciega |
+
+**LAS OCHO VAN A FAVOR DEL ARCHIVO. NINGUNA A FAVOR MIO.**
+
+**LO QUE SI ME SALE BIEN Y LO DIGO SIN ADORNARLO:** publique mi ORDEN DE DUDA antes del
+destape, y **seis de mis ocho fallos estan en mis diez primeras dudas** (1246 la 1.a, 2089
+la 2.a, 2978 la 4.a, 2428 la 5.a, 158 la 6.a, 1948 la 10.a). **Mi incertidumbre estaba
+calibrada aunque mi clase no lo estuviera.** Las dos que no anticipe son **1927** y **2450**.
+
+**UNA UNICA OBJECION QUE REGISTRO Y NO COBRO**, porque es de un veredicto cerrado de otra
+vuelta y no de esta: la razon del **2428** dice que fijar metas medibles *"es lo unico del
+par que deja el resultado en algo comprobable"*, y el paso 6 del otro nodo dice *"desarrollar
+caracteristicas y metas DETALLADAS"*. **La clase no cambia; la frase se pasa de rotunda por
+un pelo.** Queda escrito y no acumula.
+
+**LA REGLA DEL CREDITO, APLICADA CON LA LETRA DEL 7 SEP DELANTE.** Las ocho discrepancias
+caen en un tramo **SIN MARCADO**, porque **el reporte de esta vuelta no marco ni un puesto**.
+Por **LA RAIZ** del punto 2 de `paradas/2026-09-07-el-bucle-se-volvio-el-bucle-DECISION.md`,
+*"una discrepancia que aparece en un tramo SIN MARCADO NO ROMPE EL CREDITO DE TANDA"*,
+porque la regla mide si el ejecutor acerto al MARCAR y **aqui no habia vara puesta**.
+**NO HAY RELECTURA AL DOBLE Y NO HAY PARADA POR CREDITO.** Y el cinturon de 240 no se toca:
+lei 80.
+
+**METRICA DE CREDITO ACUMULADA.** La de la 215 vive en las lineas **76495 a 76497** y dice
+relecturas **28**, puestos **635**, caidas **54**, de ellas **10** dentro del marcado y
+**44** fuera. **Con la mia: relecturas 29, puestos 715, caidas 62, de ellas 10 dentro del
+marcado y 52 fuera.** Las ocho van a *fuera* porque el reporte no marco puestos; **digo, sin
+usarlo para bajarme la cifra, que DOS de las ocho venian marcadas por el ARCHIVO y no por el
+reporte** (el 158 por su propia clase `B`, el 2978 por las palabras *DISCUTIBLE MARCADO
+fuerte* dentro de su razon), **y esa es otra marca, de otro autor y de otra vuelta.**
+
+## 3. LO QUE ENCUENTRO YO CONTRA EL REPORTE
+
+**`3.1` CAIDA DE REPORTE, Y ACUMULA: LA CIFRA DE FICHEROS QUE ESTA VUELTA ESCRIBIO EN
+`scripts/` ES 18 Y EL REPORTE PUBLICA 16, DOS VECES.** Vive en su seccion **4** (*"CIFRA
+ficheros del arbol de scripts que esta vuelta escribio: 16"*) y en su **4.a.5** del anexo.
+**MEDIDO POR MI DE DOS FORMAS QUE NO SE APOYAN LA UNA EN LA OTRA:** `ls scripts/loop/`
+filtrando el prefijo da **18**, y `git diff --name-only c7a0651c..7ce284c1 -- scripts/` da
+**los mismos 18**. Los dos que faltan son **`_v216_t4_seccion.md`** y
+**`_v216_cierre_texto.md`**.
+
+**LA CAUSA ES ESTRUCTURAL Y LO DIGO ANTES DE COBRARLA:** el instrumento que cuenta es
+`_v216_t4_cierre.py`, y **corre ANTES de que el cierre escriba sus propios ficheros**. Un
+instrumento no puede medir el artefacto que registra su propia medicion. **Eso explica la
+cifra; no la salva.**
+
+**LO QUE NO SE CAE, Y VA DELANTE PARA QUE NO SE LEA PEOR DE LO QUE ES:** la afirmacion de
+fondo **SE SOSTIENE MEDIDA POR MI**: los **18 de 18** llevan el prefijo `_v216_`, ninguno
+entra en el censo ni en la nomina, y **la nomina sigue congelada en 135**. Lo que cae es la
+CIFRA, no la moratoria.
+
+**COMO CLASIFICA, CON LA LETRA DEL 27 AGO DELANTE:** es **CAIDA DE REPORTE** (vive solo en
+`REPORTE.md` y no mueve ningun dato), y **CUENTA PARA LA RACHA** porque la cifra vive en una
+**CONCLUSION y en una CABECERA de seccion**, no en una lista de rutas ni en prosa de
+acompanamiento. **SU RACHA QUEDA EN UNO.** La 215 se la dejo en CERO por su `3.1`.
+
+**Y LO DIGO EXPRESAMENTE PORQUE CALLARLO SERIA CAIDA MIA (`AUDITOR.md` 1.2, LA ESCALADA SE
+ENCARGA): LA RACHA ES UNO, NO DOS, ASI QUE NO ENCARGO LA OPERACION DE CODIGO DE LA
+ESCALADA.** Si la vuelta siguiente trae otra de la misma especie, llega a dos y la escalada
+va encargada en la misma acta, sin esperar decision nueva.
+
+**`3.2` UNA PRECISION QUE NO ES CAIDA, Y LA MIDO ANTES DE DECIDIRLO.** El reporte publica
+*"docs/plan/08_VERIFICACION.md (947 lineas hoy)"* y `wc -l` da **946**. **No hay cifra
+falsa: hay dos convenciones.** Su instrumento cuenta con `split` sobre el salto de linea, que
+da **947** en un fichero terminado en salto, y `wc -l` cuenta saltos, que da **946**. **La
+prueba de que su convencion es la consistente es que los veintidos numeros de linea que cita
+del acta caen todos donde dice**, y el acta la publica igual (**76686** por `split`, **76685**
+por `splitlines`). **Registrada y NO acumula.** Pero sube a la seccion 6: **la casa obliga a
+publicar los bytes por sus dos convenciones y no obliga a nada con las lineas**, y eso es un
+hueco de la misma especie que el que la regla de los bytes vino a tapar.
+
+## 4. LAS CAIDAS DEL EJECUTOR QUE EL SI DECLARA: TRES, Y NINGUNA ACUMULA
+
+**Las tres las cazo el dentro de su propia vuelta, ninguna llego a publicarse como cifra
+buena, y las tres dejan la version vieja escrita en el codigo.** `C.1` la sonda que quitaba
+todos los articulos y publicaba **2 de 3** nominas donde hay **3 de 3**; `C.2` la marca del
+vuelo completo como el literal `16` a secas, mas laxa que su clausula, cazada por la guarda
+de su propio compositor; `C.3` el compositor que leia cualquier fila con forma de tabla y
+publicaba **estado MESA** donde la ficha esta en **LISTA**.
+
+**LAS TRES SON DE SONDA PROPIA Y NINGUNA MOVIO UN DATO: NO ACUMULAN.** Y la cuarta que el
+declara y decide no contar, el falso rojo de `LECTURAS_DIRIGIDAS.md` comparando un `sha256`
+contra una AUSENCIA de medicion, **le doy la razon en no contarla**: la cazo el propio
+instrumento cayendo en rojo, y **distinguir una ausencia de un movimiento es exactamente lo
+que la casa manda distinguir**.
+
+**LE ABONO ADEMAS SU `2.f`, QUE ES LA MEJOR PIEZA DE SU VUELTA.** Su encargo y mi `5.7` de
+la 215 le dijeron que la re-medicion **no la habia corrido nadie**, y el midio que
+`SALIDA_V214_T2B_REMEDIR_CINCO.txt` existe (**14302** bytes, commit `bb2337a0`) y **lo
+publico contra su propio encargo en vez de callarlo**. Lo verifique: existe y mide eso.
+
+## 5. ADJUDICACIONES
+
+**`5.1` LA RE-MEDICION QUE EL FUNDADOR ORDENO ESTA CORRIDA, Y LA DE LA 214 NO CUENTA COMO
+CORRIDA. ADJUDICADO, Y RESPONDE SU `P.1`.** No hace falta doctrina nueva. La DECISION 2 del
+9 sep dice *"las cinco fichas SIN EJECUTAR **se re-miden** contra esas filas"*, y re-medir
+catorce clausulas no es re-medir ocho. **MEDIDO POR MI EN LA SALIDA DE LA 214: 14 clausulas
+repartidas, 8 con sonda, 6 documentales, y 2 de las 8 en NO CALZA LEIDA A LA LETRA**, o sea
+**ocho de catorce sin veredicto**. La vuelta 216 lleva **14 de 14 con sonda corrida**. **La
+de la 214 es una re-medicion EMPEZADA; la orden se cumple hoy.** Y la letra que lo autoriza
+es la `5.4` del acta 214: *lo prohibido es afirmar una busqueda NO corrida, no publicar la
+que da cero*.
+
+**`5.2` LA CLAUSULA CATORCE NO BLOQUEA, Y RESUELVO UN CHOQUE ENTRE MI ANTECESOR Y EL
+FUNDADOR A FAVOR DEL FUNDADOR.** Mi antecesor puso en el encargo la condicion *"si las
+CATORCE clausulas quedan en CUBRE"*, y en su propia `5.4` (linea **76590**) escribio *"DOY
+`OP-I-01` POR CERRADA POR LA DECISION 1 DEL FUNDADOR, y su punto 4 sube NOMBRADO sin
+bloquear"*. **Las dos no pueden ser ciertas a la vez.** La DECISION 1 del fundador, leida hoy
+por su ruta, dice *"con el punto 2 re-medido a CUBRE, `OP-I-01` cierra"*. **MANDA LA DECISION
+DEL FUNDADOR: la clausula 14 (`OP-I-01` indice 3, A MEDIAS) NO es lo que impide declarar
+nada.** El ejecutor hizo bien en no proponer la parada feliz contra la letra de su encargo:
+**resolver un choque entre dos reglas es mio, no suyo**, y el lo trajo en vez de decidirlo.
+
+**`5.3` SUS CINCO DISCUTIBLES VAN LOS CINCO A SU FAVOR, Y CADA UNO CON LO QUE VERIFIQUE.**
+`D.a`: lei el elemento **4** de la lista `verificacion` de `OP-L-01` en la linea 41 y dice
+literalmente *"EL NUMERAL 2.117 ES EL VALOR DEL MARCADOR EN LA `fecha_corte` DE ESTA FICHA,
+TESTIGO Y NO CONDICION"*; **la lectura corregida es la que manda por P.5, leer la ficha
+entera.** `D.b`: la clausula dice *"las tres NOMINAS"*, y tomar la nomina y no el racimo es
+leer el sujeto que la clausula escribe. `D.c`: el sujeto de *"las once"* son las once, y la
+lectura ancha la publica al lado con su cifra, que es lo contrario de esconderla. `D.d`:
+**lo verifique yo en el archivo**, el puesto **643** es `split_testing` contra
+`test_ab_precio` y su razon abre con *"REESCRITA EL 18 ago 2026 POR LA LECTURA DIRIGIDA
+LD-82"*: **es relectura, no entrada nueva a la cola.** `D.e`: decir que la corrida K
+sostiene por si sola una de las cinco partes y que las otras cuatro las sostiene el commit
+que la sello **es mas estricto que su encargo, no menos**, y lo publico sin que nadie se lo
+pidiera.
+
+**`5.4` SU `P.2` NO ES DOCTRINA NUEVA NI ES PARADA: ES UNA DECISION DE FUNDADOR QUE YA ESTA
+EN LA COLA CORRECTA.** Pregunta si una clausula cuya sede no existe se queda A MEDIAS para
+siempre. **La sede no existe, medido por mi: 27 ficheros `.py` nombran `10_INVENTARIO.md` y
+CERO la escriben.** Fabricar el instrumento es maquinaria y la moratoria lo prohibe; **quien
+levanta la moratoria es el fundador y el sitio es la auditoria integral**, donde ya subio
+como punto 3 de la seccion 6 del acta 215. **No paro el bucle por una pregunta que ya tiene
+sede.**
+
+**`5.5` LA MORATORIA SE RESPETO ENTERA, Y LO SEPARO DE LA CIFRA QUE SE CAE.** **18 de 18**
+ficheros con el prefijo `_v216_`, ninguno en el censo ni en la nomina, **nomina congelada en
+135**, cero arneses nuevos, cero guardas reparadas. **ADJUDICADO A FAVOR DEL EJECUTOR EN EL
+FONDO.** La cifra **16** cae por mi `3.1`, y **el remedio no es codigo, es DICTADO**, que la
+moratoria no prohibe y que esta casa ya usa (la `6.6` del acta 210 y las tres del acta 212,
+las cuatro sin codigo): **OBLIGACION DE DICTADO NUEVA, y va en el encargo: toda cifra de
+"lo que esta vuelta escribio" que se mida ANTES del cierre se publica con su hueco al lado,
+con las dos cifras juntas, la medida y la que el propio cierre anade.**
+
+**`5.6` LA BATERIA NO ES DE ESTA VUELTA Y SU HUECO ESTA BIEN DECLARADO. ADJUDICADO.** La
+cadencia de cinco de la `6.1` pone la siguiente en la **220** y la 215 la corrio entera. Su
+seccion 9 lleva **las tres patas que la letra estrecha exige**, y las verifique una a una:
+**el nombre** (`docs/loop/SALIDA_V216_BATERIA.txt`), **los bytes medidos** (el fichero **no
+existe**, y el instrumento distingue eso de un fichero de cero bytes, que es la distincion
+del fundador del 5 sep) y **la atribucion** (la 215, once tramos, compuesta de **93498**
+bytes en `docs/loop/SALIDA_V183_BATERIA.txt`, commit `abe21a67`, **medido por mi hoy**).
+
+**`5.7` NO DECLARO LA CAMPANA CONSUMADA, Y NO ES POR LA CLAUSULA CATORCE: ES PORQUE FALTA
+UNA MEDICION QUE NADIE HA CORRIDO Y QUE SI SE PUEDE CORRER.** Mi `5.2` acaba de quitar de en
+medio a la clausula 14. Lo que queda en pie es otra cosa, **y la medi yo hoy sobre
+`docs/plan/08_VERIFICACION.md`, seccion POR FASE**: la tabla del criterio de HECHO tiene
+**ONCE filas y TREINTA clausulas**. La DECISION 2 del fundador anadio las de las fases **08,
+09 y 10**, y la vuelta 216 las midio con sonda corrida. **LAS OCHO FILAS DE `0 CODIGO` A
+`07 ADUANA`, CON SUS DIECISIETE CLAUSULAS, NO LAS HA MEDIDO NADIE CON UNA SONDA CORRIDA.**
+Reparto medido por mi: `0 CODIGO` 1, `01 FUENTES` 2, `02 DESTEJIDOS` 2, `03 FUSIONES` 2,
+`04 ENLACES` 2, `05 SANEO` 6, `06 MESAS` 1, `07 ADUANA` 1.
+
+**POR QUE ESTO Y NO OTRA COSA, DICHO SIN ADORNO:** *"campana consumada"* significa que el
+criterio de HECHO da verde, y **el criterio de HECHO es esa tabla entera, no sus tres ultimas
+filas.** Declararla consumada habiendo medido trece de treinta clausulas seria **la especie
+exacta de verde que esta casa lleva doscientas vueltas cazando**, y seria yo quien la
+firmara. **Es medicion, no maquinaria: la moratoria la permite.** Va como TAREA bloqueante de
+la vuelta 217, **y es la ultima puerta**: si las diecisiete cubren y el cierre integral sale
+limpio, **el acta 217 declara la campana consumada y escribe el `PARA_ALEXIS.md` que PIDE el
+merge.**
+
+**`5.8` UNA DIFERENCIA DE CONTEO QUE NO ES ERROR DE NADIE Y LA REGISTRO PARA QUE NADIE LA
+"ARREGLE".** La fila **09 LECTURAS DIRIGIDAS** de la tabla POR FASE lleva **OCHO** clausulas
+concatenadas, y la tabla de derivacion da **NUEVE** para esas mismas tres fichas. **La causa,
+medida:** `OP-L-01` indice 1 y `OP-L-02` indice 1 son **la misma frase al byte** (*"el
+marcador del cribado no se mueve: sigue en 2.117"*), y la concatenacion la escribe una vez
+mientras la derivacion la mantiene dos porque **son de dos fichas distintas**. **Las dos
+cifras son correctas y cuentan cosas distintas.** Que nadie iguale una a la otra.
+
+## 6. LO QUE SUBE A LA AUDITORIA INTEGRAL, NOMBRADO Y CON SU CIFRA
+
+1. **LA QUINTA PUERTA QUE NO EXISTE** (mi `0.1`). Los ficheros `_auditor_v*_mis_clases.txt`
+   publican **80 clases por fichero** y **ninguna de las cuatro puertas de
+   `apertura_del_auditor.py` los vigila**. Me queme el sujeto de la 215 entero y el sello
+   salio verde igual. **No lo reparo: seria lector nuevo y rige la moratoria.**
+2. **LA ORDEN QUE NO SE PUEDE CUMPLIR SIN ROMPERLA LA PRIMERA VEZ** (mi `0.2`). Sube por
+   segunda vez y **ya no como pregunta: SEIS ACTAS SEGUIDAS**, 211 a 216.
+3. **EL PUNTO 4 DE `OP-I-01`**, A MEDIAS, con su sede medida y no encontrada: **27 ficheros
+   `.py` la nombran, 0 la escriben.** Sube igual que en la 215, y mi `5.4` dice por que no
+   es parada.
+4. **LA CONTRADICCION DE LA NOMINA** y **LOS SIETE ARNESES QUE NO MUERDEN**, los dos del acta
+   215 (sus puntos 1 y 2). **Esta vuelta no los toco, que es lo que sus `5.2` y `5.3`
+   ordenan.**
+5. **LAS LINEAS NO TIENEN CONVENCION Y LOS BYTES SI** (mi `3.2`). La casa obliga a publicar
+   todo tamano por sus dos convenciones y **no obliga a nada con los conteos de lineas**, que
+   difieren en uno segun el instrumento. **Hoy no es caida y no la cobro; manana lo sera si
+   alguien coteja dos cifras buenas y concluye que una miente.**
+6. **SI UN ROTULO DE COMANDO CUENTA COMO CIFRA PUBLICADA** (punto 5 del acta 215). Sigue
+   arriba, sin tocar.
+
+## 7. CIERRE
+
+**LA VUELTA 216 CORRIO LA ORDEN DEL FUNDADOR Y LA CORRIO ENTERA.** Catorce clausulas con
+sonda corrida contra ocho de la 214, cero descuadres contra su sede, cierre integral limpio
+por las dieciocho salidas del ciclo y por las tres suites, y **cada cifra que publica calza
+con la que recompute yo**, salvo una. **NO HAY PARADA:** ni por credito (las ocho
+discrepancias caen en tramo sin marcado y la raiz del 7 sep dice que ahi no hay vara que
+romper), ni por doctrina (las dos preguntas del ejecutor se adjudican citando reglas
+escritas), ni por fallo tecnico (Gate 0, motor, tsc y web en verde, corridos por mi).
+
+**Y NO DECLARO LA CAMPANA CONSUMADA, PERO NO POR DONDE EL CREIA.** Su clausula catorce deja
+de bloquear hoy por decision del fundador. **Lo que bloquea es que trece de las treinta
+clausulas del criterio de HECHO estan medidas y diecisiete no**, y esa cuenta la hice yo esta
+vuelta con la pagina delante. **Es una vuelta de trabajo, no una parada.**
+
+**LA PEOR CIFRA DE ESTA JORNADA VUELVE A SER LA MIA, Y VAN DOS ACTAS SEGUIDAS:** mi ciega
+sale **72 de 80**, las **ocho** discrepancias van todas contra mi, **ninguna a mi favor**, y
+las ocho son la misma enfermedad: **pesar el solape en vez del resto.** El archivo me gano
+ocho veces con la vara que yo mismo cite antes de leerlo.
