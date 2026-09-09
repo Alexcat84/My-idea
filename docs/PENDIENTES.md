@@ -17367,3 +17367,35 @@ Y los dos huecos de contenido de la ficha `huecos-de-contenido` de esta misma pa
 **De donde sale.** Acta 219 del auditor, seccion 6, entrada 5 (`docs/loop/ACTA_AUDITOR.md:78049`): *la ciega no puede acertar lo que se decide por barrido de familia*. El archivo decide pares de familia densa **por transitividad sobre veredictos de OTROS puestos**, y desde un par de dos nodos eso no se ve; **nueve de los catorce fallos de la ciega de la 219 son de esa especie**. El rediseño era maquinaria y la moratoria del bucle lo prohibia; la integral corrio su ciega final con el instrumento de siempre y las clases declaradas antes de mirar (`docs/loop/ACTA_INTEGRAL.md`, PASO 2.g).
 
 **Lo que la ficha pide:** una ciega que, para cada par sorteado, muestre tambien **la familia** (los miembros del acto al que pertenecen los dos nodos y los veredictos ya escritos entre ellos), para que la clase B y la clase C se puedan adjudicar con lo mismo que el archivo tuvo delante. **Condicion de cierre:** una ciega de 20 con la tasa de acierto de las B y las C publicada al lado de la de las A y las D.
+
+## Ficha post campaña: `redactor-del-16-cifras-derivadas` (reparo de producto, auditoria integral 9 sep 2026)
+
+**De donde sale.** Decision del fundador, punto 1 de
+`docs/loop/paradas/2026-09-09-cierre-integral-2c-DECISION.md`: el rojo de la verificacion 10 del
+vuelo es **REPARO DE PRODUCTO, no de campaña**. El redactor del reporte del 16 (el reporte digital
+del punto de equilibrio, `web/lib/engine/reporteFlow.ts`) **deriva cifras que la vara del vuelo
+prohibe, de forma intermitente**: con el mismo grafo congelado, la corrida K (4 sep 2026,
+`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt`, linea 780) paso y la corrida B (9 sep 2026,
+`docs/loop/SALIDA_integral_VUELO_B.txt`, linea 504) cayo. Nada de la campaña toca al redactor.
+**No se arregla antes del merge:** seria ensanchar el alcance en la meta.
+
+**La nomina de la ficha:**
+
+| pieza | papel | donde |
+|---|---|---|
+| el redactor del 16 | el sujeto: escribio *generando $52 de ganancia mensual por encima de los costos fijos* (cuatro usuarios sobre el equilibrio por 13 de margen), una cifra que no esta en el material | `web/lib/engine/reporteFlow.ts` |
+| la guarda GIGO de huerfanos | el testigo: registro `numero_huerfano` con valor `$52` y su contexto; en el producto es señal de triage y no bloquea (`reporteFlow.ts`, linea 89); en el vuelo es fallo (`web/scripts/vuelo.ts`, lineas 2530 a 2535) | `web/lib/verificadorHuerfanos.ts` |
+| corrida K | ejemplar que PASA | `docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt` |
+| corrida B | ejemplar que CAE | `docs/loop/SALIDA_integral_VUELO_B.txt` |
+| corrida C | punto adicional | `docs/loop/SALIDA_integral_VUELO_C.txt` (su resultado se anota abajo) |
+
+**Frecuencia medida hasta hoy (se anota, no se estima):** de las corridas que llegaron a la
+verificacion 10 con este grafo, K paso y B cayo. La corrida C (`docs/loop/SALIDA_integral_VUELO_C.txt`) PASO la verificacion 10 y cayo en otro sitio
+(FASE 2P, el registro de riesgos con un `%` escrito por el redactor del plan del mundo): con este
+grafo, la verificacion 10 va una caida de tres corridas que llegaron a ella (K paso, B cayo, C paso).
+
+**Lo que la ficha pide:** decidir, con el fundador delante, si el remedio es en el prompt del
+redactor (prohibir cifras derivadas fuera del material) o en el material (dar al redactor las
+cifras derivadas legitimas, como el excedente sobre el equilibrio, para que no tenga que
+inventarlas), y que el vuelo siga exigiendo cero huerfanos en ese reporte. **Condicion de
+cierre:** tres corridas seguidas del vuelo con la verificacion 10 en verde tras el remedio.

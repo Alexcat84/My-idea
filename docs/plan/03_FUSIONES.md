@@ -9300,3 +9300,29 @@ dependencia queda como REMISION ESCRITA**, que es exactamente lo que esta seccio
 > nodo, ni un alias ni una puerta, no re-lee ningun veredicto, no toca la mesa `OP-M-03` ni sus
 > colisiones, no mueve la linea base del censo, y **no abre la fase 04**. Escribe el cierre y su
 > remision; abrir la fase siguiente es del encargo, no de un registro.
+
+
+---
+
+## LA AUDITORIA INTEGRAL (9 sep 2026): UNA PERDIDA NO REGISTRADA, ENCONTRADA POR LA CIEGA Y RESTAURADA
+
+**De donde sale.** La ciega final de la auditoria integral (`docs/loop/SALIDA_integral_CIEGA_COTEJO.txt`,
+F02; semilla 20260909 escrita antes de sortear) leyo el acto `scorecard_de_seleccion_de_proyectos`
+mas `scoring_model_scorecard` (tramo 1 de `OP-U-01`, lote A de la vuelta 51,
+`docs/loop/PLAN_V51_OPU01_LOTE_A.json`, acto 2) y declaro CON PERDIDA donde el plan decia
+ENTERO: el paso 4 del absorbido pide usar el puntaje **junto con otro indicador de
+productividad** y el reparto lo dio por `CUBIERTO:4` sin que el paso 4 del superviviente lo dijera.
+
+**Lo que se hizo, por decision del fundador (punto 2 de
+`docs/loop/paradas/2026-09-09-cierre-integral-2c-DECISION.md`):**
+
+| pieza | antes | despues |
+|---|---|---|
+| paso 4 de `scorecard_de_seleccion_de_proyectos` | *Compara los puntajes entre proyectos para decidir donde invertir primero* | *Compara los puntajes entre proyectos, **junto con otro indicador de productividad**, para decidir donde invertir primero* (inciso leido del paso 4 del deprecado, que esta integro por diseño) |
+| tabla de perdidas del acto 2 del plan V51 | no existia (reparto `CUBIERTO:4`) | **una entrada DE PARAMETRO DE PASO, por adicion**, con la restauracion escrita y el reparto viejo intacto |
+
+**Lo que NO se hace:** no se reabre la fusion, no se toca el alias ni el deprecado, y las cuatro
+discrepancias DE GRANO de la misma ciega (F04, F06, F19) **se declaran limite del instrumento**
+(una clase de dos valores no distingue perdidas de parametro que el plan si registra) y no
+reabren nada. El ciclo de Gate 0 con las tres suites se corre tras el toque y queda sellado en
+`docs/loop/SALIDA_integral_*_REPARO.txt`.

@@ -1,0 +1,16 @@
+CICLO DE GATE 0 DE LA AUDITORIA INTEGRAL, LADO REPARO, salidas SALIDA_integral_*_REPARO.txt
+=== EL CICLO ENTERO DE GATE 0, LADO CIERRE, NUNCA run_phase1.py A SECAS ===
+   1/8 run_phase1.py --reaplico-curaduria  EXITCODE 0 | 4958 bytes
+   2/8 etiquetas_de_cara.py --aplicar      EXITCODE 0 | 7928 bytes
+   3/8 sync_assets_web.py                  EXITCODE 0 | 574 bytes
+   4/8 git diff HEAD --numstat             EXITCODE 0 | filas 4 | 455 bytes
+       FILA: 1	1	dataset/metadata/master_graph.json
+       FILA: 1	1	dataset/nodos/scorecard_de_seleccion_de_proyectos.json
+       FILA: 2	2	web/lib/assets/manifest.json
+       FILA: 1	1	web/lib/assets/master_graph.json
+   5/8 vuelta83_conteo_aristas.py WORK     EXITCODE 0 | 168 bytes
+   6/8 vuelta85_medir_desfase_calibrado    EXITCODE 0 | 498 bytes
+   7/8 engine/run_all_tests.py             EXITCODE 0 | 1131 bytes
+   8/8a npx tsc --noEmit                   EXITCODE 0 | 7 bytes
+   8/8b pnpm test                          EXITCODE 0 | 336 bytes
+CICLO DE CIERRE COMPLETO. PEOR EXITCODE DE LOS OCHO: 0

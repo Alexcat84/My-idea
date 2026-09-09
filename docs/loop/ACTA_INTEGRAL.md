@@ -480,3 +480,51 @@ verificacion 10. Se para y se pregunta, con las dos lecturas posibles delante:
 sesion; (b) tomar el rojo como REPARO de producto (el redactor del reporte deriva
 cifras que la vara prohibe) y decidir si la campaña se declara consumada con ese
 reparo listado y su ficha, o no.
+
+### 2.c (continuacion) LA DECISION DEL FUNDADOR SOBRE EL VUELO, EL REPARO DE LA CIEGA, Y LA CORRIDA C
+
+**La decision** esta verbatim en
+`docs/loop/paradas/2026-09-09-cierre-integral-2c-DECISION.md`: el rojo de la
+verificacion 10 es REPARO DE PRODUCTO con ficha post campaña (no se arregla antes
+del merge); el hallazgo real de la ciega SE REPARA AHORA; la corrida C se toma como
+punto adicional, y si cae en un sitio NUEVO, se para.
+
+**El reparo de la ciega, hecho (punto 2):**
+
+| pieza | lo que se hizo | prueba |
+|---|---|---|
+| `dataset/nodos/scorecard_de_seleccion_de_proyectos.json`, paso 4 | gana el inciso *junto con otro indicador de productividad*, leido del paso 4 del deprecado `scoring_model_scorecard` (integro por diseño) | `git diff`: una linea |
+| `docs/loop/PLAN_V51_OPU01_LOTE_A.json`, acto 2 | tabla `perdidas` **por adicion** (una entrada DE PARAMETRO DE PASO con la correccion declarada y el reparto viejo intacto), escrita con la serializacion original del plan (indent 1, acentos, CRLF): 10 lineas nuevas y 1 cambiada | `git diff --numstat` |
+| `docs/plan/03_FUSIONES.md` | registro *LA AUDITORIA INTEGRAL (9 sep 2026): UNA PERDIDA NO REGISTRADA, ENCONTRADA POR LA CIEGA Y RESTAURADA*, al final de la pagina | 26 lineas nuevas |
+| las cuatro discrepancias DE GRANO (F04, F06, F19) | declaradas limite del instrumento; no reabren fusiones | acta, 2.g |
+| el ciclo de Gate 0 tras el toque | `_integral_ciclo_gate0.py REPARO`: los ocho comandos exitcode 0, **27 comprobaciones OK**, motor 25 de 25, tsc limpio, web 1040 de 1040, y el numstat trae **exactamente las cuatro filas del toque** (el nodo, `master_graph.json`, y `web/lib/assets/master_graph.json` y `manifest.json` por el sync) | `SALIDA_integral_*_REPARO.txt` |
+
+**La ficha del redactor (punto 1):** `docs/PENDIENTES.md`, ficha post campaña
+`redactor-del-16-cifras-derivadas`, con su nomina (el redactor del 16, la guarda GIGO
+como testigo, las corridas K y B como ejemplares, la C como punto adicional).
+
+**La corrida C, sola, con siembra C (`SALIDA_integral_SIEMBRA_C.txt`, clave nueva
+`siembra_vuelo_integral_2026-09-09_C`, 55 creditos, 45 a 100):**
+`SALIDA_integral_VUELO_C.txt`, **exitcode 1, 79 verificaciones OK**, y **cae en un
+sitio NUEVO**, la FASE 2P (mundos de proteccion), paso 4, la puerta de documentos del
+registro de riesgos: *el registro trae puntajes o porcentajes: la matriz de colores
+volvio por la ventana* (`web/scripts/vuelo.ts`, lineas 2780 a 2781: la guarda cae si el
+markdown del registro trae `N/M`, `N de M` o `%`). **Paso la verificacion 10 esta vez**
+(el reporte del 16 sin huerfanos), o sea que con B y C la frecuencia de la 10 es una
+caida de dos. Costo de la C: **10 cobros, 55 creditos**, calza otra vez con la K.
+
+**La causa, leida en la base y en el codigo, sin adivinar:** el registro
+(`web/lib/registroProteccion.ts`, lineas 153 a 159) imprime por entrada la deteccion,
+la severidad en palabras, el camino, lo que protege y *Tu respuesta: <texto del item
+del plan del mundo>*. En el proyecto `c3b7a003` de la corrida C, el plan del mundo
+`risk_management` (`plan_id 9b98e3d8`, etapa 2) tiene un item cuyo texto dice *escribe
+dos cosas: un rango de probabilidad en porcentaje (por ejemplo, "30 a 50% de que ocurra
+en los proximos tres meses"...)*, con deteccion enlazada (*no tiene estimado de
+probabilidad ni de impacto economico por riesgo*): entra al registro y el `%` dispara la
+guarda. **Ese texto no esta en ningun nodo del catalogo** (`grep` sobre
+`dataset/nodos/`: cero ficheros): lo escribio el redactor del plan del mundo, pidiendo
+un porcentaje donde el banco 7.1 manda severidad en palabras. Es la misma especie que
+el rojo de la 10 (el redactor produce lo que una guarda del producto prohibe, de forma
+intermitente: la K paso esta fase con el mismo grafo) pero en OTRO redactor y OTRA
+guarda. Nada de la campaña toca a ninguno de los dos. **Se para y se trae, como manda
+el punto 1 de la decision.**

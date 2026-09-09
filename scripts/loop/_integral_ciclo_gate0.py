@@ -30,7 +30,11 @@ import _v205_ciclo_gate0 as C   # noqa: E402
 ROTULO = "integral"
 
 
+LADO = None  # el lado de ESTA corrida; el de abajo puede ser REPARO o CIERRE_FINAL
+
+
 def escribir(seg, lado, texto):
+    lado = LADO or lado
     ruta = os.path.join(C.LOOP, "SALIDA_%s_%s_%s.txt" % (ROTULO, seg, lado))
     io.open(ruta, "w", encoding="utf-8", newline=C.NL).write(texto)
     return os.path.getsize(ruta)
@@ -58,13 +62,17 @@ class Tee(object):
 
 def main():
     lado = (sys.argv[1] if len(sys.argv) > 1 else "").upper()
-    if lado not in ("APERTURA", "CIERRE"):
-        print("ROJO: el lado tiene que ser APERTURA o CIERRE.")
+    if lado not in ("APERTURA", "CIERRE", "REPARO", "CIERRE_FINAL"):
+        print("ROJO: el lado tiene que ser APERTURA, CIERRE, REPARO o CIERRE_FINAL.")
         return 1
     consola = os.path.join(C.LOOP, "SALIDA_%s_CICLO_GATE0_%s_CONSOLA.txt" % (ROTULO, lado))
     original = sys.stdout
     tee = Tee(original, consola)
     sys.stdout = tee
+    globals()["LADO"] = lado
+    # el ciclo importado solo admite APERTURA o CIERRE en sys.argv; los lados nuevos
+    # corren como CIERRE por dentro y sellan con SU nombre por escribir()
+    sys.argv[1] = lado if lado in ("APERTURA", "CIERRE") else "CIERRE"
     try:
         print("CICLO DE GATE 0 DE LA AUDITORIA INTEGRAL, LADO %s, salidas SALIDA_%s_*_%s.txt" % (lado, ROTULO, lado))
         rc = C.main()
