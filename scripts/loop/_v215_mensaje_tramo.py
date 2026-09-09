@@ -85,6 +85,34 @@ def reparto(texto):
     return fuera
 
 
+def frase_de_la_caida(D):
+    """SI ALGUN ARNES DE LA NOMINA CAE, LA FRASE LO DICE. PURA: recibe las
+    cifras ya leidas y devuelve (caidos, frase).
+
+    CORRECCION DECLARADA DE ESTA MISMA VUELTA (caida `D.1` de la 215), Y NO
+    TAPA LO QUE CORRIGE. La primera version de este fichero llevaba la frase
+    "Y NO ES UN ARNES DE LA NOMINA QUE CAIGA... y ninguno cae" CLAVADA EN EL
+    TEXTO, al lado de unas cifras que se leian de verdad. En los tramos 1 y 2
+    las dos cosas coincidian y la mentira no molestaba a nadie; EN EL TRAMO 3
+    el medidor leyo NO MORDIO 1 y la prosa siguio diciendo que ninguno cae,
+    o sea LA MISMA ESPECIE que esta casa lleva vueltas cazando: una prosa que
+    contradice a las cifras de su propio parrafo. El mensaje del tramo 3 salio
+    asi y esta en git; no se reescribe, se corrige por declaracion.
+
+    LO QUE MANDA HOY: la frase se COMPUTA de las tres cifras de fallo, y si la
+    suma no es cero DICE QUE CAE Y CUANTOS."""
+    caidos = (int(D["ancla"]) + int(D["no_mordio"]) + int(D["no_repro"]))
+    if caidos == 0:
+        return caidos, ("Y NO ES UN ARNES DE LA NOMINA QUE CAIGA. Lo digo con "
+                        "las tres cifras delante porque la TAREA 2.d de mi "
+                        "encargo manda parar SI ALGUN ARNES DE LA NOMINA CAE, y "
+                        "ninguno cae")
+    return caidos, ("Y AQUI SI CAE UN ARNES DE LA NOMINA, %d, Y NO LO DISIMULO. "
+                    "La TAREA 2.d de mi encargo manda PARAR Y TRAERLO, y va "
+                    "como PARADA en mi reporte con su nombre y su cifra, sin "
+                    "arreglarlo de paso" % caidos)
+
+
 def main():
     n = int(sys.argv[1])
     r = subprocess.run([sys.executable, MEDIDOR, str(n)], cwd=RAIZ,
@@ -121,11 +149,7 @@ def main():
         return 1
     rep = ", ".join("%s %s" % (c, nombre) for nombre, c in filas_rep)
 
-    total = int(valor(medido, "CIFRA entradas que el tramo dice haber corrido: "))
-    _, plan = subprocess.run(
-        ["git", "log", "-1", "--format=%h %ad %s", "--date=short",
-         "--", "docs/loop/SALIDA_V183_BATERIA_TRAMO_%d.txt" % n],
-        cwd=RAIZ, capture_output=True).returncode, ""
+    caidos, frase = frase_de_la_caida(D)
 
     cuerpo = """VUELTA %(v)d, BATERIA TRAMO %(n)d DE 11, SELLADO Y COMMITEADO AL TERMINAR, uno a uno y no todos al final.
 
@@ -133,7 +157,7 @@ def main():
 
 EL CALIBRE DEL TRAMO: %(entradas)s entradas corridas, %(filas)s filas de veredicto, %(rep)s. ANCLA PERDIDA %(ancla)s, NO MORDIO %(no_mordio)s, NO REPRODUCIBLE %(no_repro)s, invisibles al censo %(invisibles)s, SUJETO NO CONGELADO %(sujeto)s, RUIDO DE CONCURRENCIA %(ruido)s ficheros. NO REPRODUCIBLE en %(no_repro)s es la doble corrida diciendo que las dos corridas de las %(entradas)s entradas dan lo mismo.
 
-CLASE DEL VEREDICTO: %(clase)s, Y NO ES UN ARNES DE LA NOMINA QUE CAIGA. Lo digo con las tres cifras delante porque la TAREA 2.d de mi encargo manda parar SI ALGUN ARNES DE LA NOMINA CAE, y ninguno cae: ANCLA PERDIDA %(ancla)s, NO MORDIO %(no_mordio)s, NO REPRODUCIBLE %(no_repro)s. El rojo lo enciende la mirada de la nomina sobre si misma, que corre ENTERA en cada tramo: %(fuera)s arneses que el censo VE, no anteriores a la vara 148, se quedan FUERA de la nomina porque AUDITOR.md 6.3 la congela en 135. Son vuelta197_tarea2_mutacion_orden_del_turno.py y vuelta199_tarea1_mutacion_guardas_revividas.py.
+CLASE DEL VEREDICTO: %(clase)s. %(frase)s: ANCLA PERDIDA %(ancla)s, NO MORDIO %(no_mordio)s, NO REPRODUCIBLE %(no_repro)s. Y ADEMAS, CAIGA O NO CAIGA NADIE, EL ROJO DE ESTE TRAMO ESTA ENCENDIDO POR OTRA COSA: lo enciende la mirada de la nomina sobre si misma, que corre ENTERA en cada tramo: %(fuera)s arneses que el censo VE, no anteriores a la vara 148, se quedan FUERA de la nomina porque AUDITOR.md 6.3 la congela en 135. Son vuelta197_tarea2_mutacion_orden_del_turno.py y vuelta199_tarea1_mutacion_guardas_revividas.py.
 
 Y VA COMO PARADA EN MI REPORTE, POR EJECUTOR.md 5, PORQUE SON DOS REGLAS VIGENTES QUE SE CONTRADICEN Y NO LAS ARREGLO YO: la regla del propio lanzador desde la vuelta 148 dice que UN ARNES ENTRA EN LA NOMINA, y la moratoria del 7 sep 2026 dice que la nomina QUEDA CONGELADA EN 135, ni crece ni se poda. Mientras las dos rijan, este rojo es automatico y no lo apaga ninguna corrida. El precedente esta medido y no recordado: la bateria de la vuelta 210 encendio EXACTAMENTE este rojo, con los DOS MISMOS nombres.
 
@@ -142,7 +166,19 @@ LA VARA DE FRESCURA: el ultimo commit que toco este fichero ANTES de este era %(
 La guarda del commit sobre el arbol del dataset corre al entrar y al salir del tramo, y su cifra queda dentro de la salida sellada.
 
 Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-""" % dict(D, v=VUELTA, n=n, rep=rep)
+""" % dict(D, v=VUELTA, n=n, rep=rep, frase=frase)
+
+    # LA GUARDA QUE PUEDE CAER, Y ES LA QUE ME FALTO EN EL TRAMO 3: la prosa no
+    # puede decir que ninguno cae cuando las cifras dicen que si.
+    dice_ninguno = "ninguno cae" in cuerpo
+    if dice_ninguno and caidos != 0:
+        sys.stderr.write("ROJO: la prosa dice que ninguno cae y las cifras "
+                         "dicen %d. NO se escribe el mensaje.%s" % (caidos, NL))
+        return 1
+    if (not dice_ninguno) and caidos == 0:
+        sys.stderr.write("ROJO: la prosa no dice que ninguno cae y las cifras "
+                         "dicen 0. NO se escribe el mensaje.%s" % NL)
+        return 1
 
     if cuerpo.count(chr(8212)) or cuerpo.count(chr(8211)):
         sys.stderr.write("ROJO: guiones largos o medios en el mensaje.%s" % NL)
