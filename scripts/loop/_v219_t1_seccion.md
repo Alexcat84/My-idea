@@ -1,7 +1,7 @@
 ### TAREA 1. LOS REGISTROS
 
 **LO QUE SE CORRIO, Y SU RUTA CON SUS DOS CONVENCIONES EN LA MISMA LINEA:**
-``docs/loop/SALIDA_V219_T1_REGISTROS.txt``, **13582 bytes en disco y 13582 normalizado a LF**, exitcode 0.
+``docs/loop/SALIDA_V219_T1_REGISTROS.txt``, **13660 bytes en disco y 13660 normalizado a LF**, exitcode 0.
 
 **EL INSTRUMENTO NO ES ARNES NUEVO, Y ESO IMPORTA CON LA MORATORIA ENCIMA.**
 `scripts/loop/_v219_t1_registros.py` lleva prefijo de guion bajo, esta fuera
@@ -55,8 +55,8 @@ y que ademas evito una guarda que se publica como mordiendo sin morder.
 CONTRA EL REGISTRO.**
 
 - CIFRA veredictos en el registro: 3388
-- puesto 299   | clase en el registro HOY: D  | clase que la 218 dejo: D  | CALZA | razon de 3793 bytes | lleva CORRECCION DECLARADA: SI
-- puesto 1249  | clase en el registro HOY: D  | clase que la 218 dejo: D  | CALZA | razon de 4383 bytes | lleva CORRECCION DECLARADA: SI
+- puesto 299   | clase en el registro HOY: D  | clase que la 218 dejo: D  | CALZA | razon de 3793 bytes en disco y 3793 bytes normalizado a LF | lleva CORRECCION DECLARADA: SI
+- puesto 1249  | clase en el registro HOY: D  | clase que la 218 dejo: D  | CALZA | razon de 4383 bytes en disco y 4383 bytes normalizado a LF | lleva CORRECCION DECLARADA: SI
 
 **EL MARCADOR RECOMPUTADO HOY**, sellado en
 ``docs/loop/SALIDA_V219_T1_MARCADOR.txt``, **426 bytes en disco y 426 normalizado a LF**:

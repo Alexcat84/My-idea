@@ -44,6 +44,8 @@ import subprocess
 import sys
 
 NL = chr(10)
+LF = chr(10).encode("ascii")
+CRLF = (chr(13) + chr(10)).encode("ascii")
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOOP = os.path.join(RAIZ, "docs", "loop")
 VUELTA = int(re.search(r"_v(\d+)_", os.path.basename(os.path.abspath(__file__))).group(1))
@@ -242,11 +244,18 @@ def main():
         clase = str(v.get("clase") or "")
         razon = str(v.get("razon") or "")
         ok = clase == clase_esperada
+        # LA PAREJA DE BYTES VA EN LA MISMA LINEA, Y ESTA LINEA NACIO SIN
+        # ELLA. CORRECCION DECLARADA DENTRO DE LA PROPIA VUELTA: la primera
+        # version publicaba "razon de %d bytes" a secas, y la guarda de
+        # cerrar_reporte.py la canto en ROJO como cifra publicada SIN SU
+        # PAREJA, que es la MISMA especie de la caida C.2 de la vuelta 218.
+        # El texto viejo queda escrito aqui y no se borra.
+        cru = razon.encode("utf-8")
         w("      puesto %-5d | clase en el registro HOY: %-2s | clase que la "
-          "218 dejo: %-2s | %s | razon de %d bytes | lleva CORRECCION "
-          "DECLARADA: %s"
+          "218 dejo: %-2s | %s | razon de %d bytes en disco y %d bytes "
+          "normalizado a LF | lleva CORRECCION DECLARADA: %s"
           % (puesto, clase, clase_esperada, "CALZA" if ok else "NO CALZA",
-             len(razon.encode("utf-8")),
+             len(cru), len(cru.replace(CRLF, LF)),
              "SI" if "CORRECCION DECLARADA" in razon else "NO"))
         if not ok:
             fallos += 1
