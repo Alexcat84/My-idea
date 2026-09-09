@@ -1,146 +1,119 @@
+# ENCARGO DE LA VUELTA 219 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+
 Commitea y pushea lo pendiente en la rama activa antes de tocar nada.
-SESION EJECUTORA. VUELTA 218. FASE III, EJECUCION. RAMA pasada-unica.
-MODO DE EJECUCION CONTINUA (AUDITOR.md seccion 3), con las guardas
-obligatorias por operacion.
 
-ESTA NO ES VUELTA DE BATERIA Y NO LA CORRAS. La 215 la corrio entera por sus
-once tramos y yo lo verifique con mi propio instrumento en la vuelta 217: su
-compuesta vive en docs/loop/SALIDA_V183_BATERIA.txt y mide 93498 bytes en
-disco y 93498 normalizado a LF, commit abe21a67. La cadencia de cinco de
-AUDITOR.md 6.1 pone la siguiente en la 220. Tu seccion 9 cierra con el HUECO
-DECLARADO Y MEDIDO por el carril de la TAREA 1.b de la vuelta 173: el nombre,
-los bytes medidos y la atribucion, LAS TRES JUNTAS.
+**LO QUE RIGE, Y NO SE NEGOCIA:**
 
-RIGE LA MORATORIA DE MAQUINARIA (AUDITOR.md 6.3): ningun arnes, guarda ni
-lector nuevo, y ninguno reparado. Las dos tareas de esta vuelta son LECTURA,
-MEDICION y REGISTRO, que es lo que la moratoria protege. La nomina de la
-bateria sigue CONGELADA EN 135 y no se poda.
+- **LA MORATORIA `AUDITOR.md` 6.3 SIGUE PUESTA.** Ningun arnes, guarda ni lector
+  nuevo, y ninguno reparado. **Las dos tareas de esta vuelta son LECTURA, MEDICION y
+  REGISTRO.** Todo lo que escribas en el arbol `scripts/loop` va con prefijo de guion
+  bajo, `_v219_*`, fuera del censo y fuera de la nomina. **La nomina sigue CONGELADA
+  EN 135 y no se poda.**
+- **LA 219 NO ES VUELTA DE BATERIA. LA 220 SI.** La cadencia de cinco de `AUDITOR.md`
+  6.1 lo dice y no es preferencia de nadie. **La seccion 9 cierra con el HUECO
+  DECLARADO Y MEDIDO: el nombre, los bytes medidos y la atribucion, LAS TRES
+  JUNTAS.** Y ojo con la atribucion: **el fichero compuesto de la bateria se llama
+  `docs/loop/SALIDA_V183_BATERIA.txt` aunque su contenido sea el de la vuelta 215**,
+  porque el lanzador es estable y no se clona. **Si lo mides, di las dos cosas.**
+- **NINGUNA TAREA MUEVE EL CAMPO `estado` DE NINGUNA FICHA**, ni toca
+  `docs/plan/08_VERIFICACION.md`, ni el inventario, ni `docs/plan/07_ADUANA.md`.
+  Publica sus `sha256` al entrar y al salir por las dos convenciones, y tienen que
+  coincidir. **La celda de `07 ADUANA` es sede del fundador: NO SE TOCA.**
+- **TODA CITA DE UN ACTA ANTERIOR LLEVA SU NUMERO DE ACTA Y SU LINEA, Y LA LINEA SE
+  LEE DEL FICHERO** (`6.6` del acta 210, linea 74203). **Tu reporte de la 218 lo
+  cumplio 11 de 11 y lo verifique una a una: manten esa cifra.**
+- **LOS TAMANOS EN BYTES EXACTOS**, nunca redondeados, los KB solo entre parentesis y
+  detras del byte (`P.2`). **Cada ruta con sus dos convenciones EN SU MISMA LINEA**,
+  que es la caida `C.2` que tu propia guarda te canto en la 218.
+- **EL TOPE DE SUB-TAREAS ES CINCO** (acta 212, adjudicacion `6.8`, linea 75168).
+  Aqui van **DOS**, porque lo que queda alcanzable por lectura cabe en dos.
 
-EL TOPE DE SUB-TAREAS VUELVE A CINCO y te encargo DOS. El disparador del
-regimen 6.2 lo medi yo en el arbol: la 215, la 216 y la 217 cerraron su propio
-reporte con scripts/loop/cerrar_reporte.py, con sus salidas selladas de 7754,
-6338 y 6493 bytes. TRES SEGUIDAS. Te encargo dos porque lo que le queda al
-plan cabe en dos, no porque el tope obligue.
+---
 
-OBLIGACION DE DICTADO QUE ESTA VUELTA NO PUEDE ROMPER, Y NACE DE UNA CAIDA
-TUYA Y DE UNA MIA A LA VEZ. La regla es el 6.6 del acta 210, que vive en la
-linea 74203 de docs/loop/ACTA_AUDITOR.md y dice: toda cita de un acta anterior
-lleva LA LINEA de docs/loop/ACTA_AUDITOR.md donde vive el texto citado, y la
-linea se LEE, no se recuerda. Tu reporte de la 217 hizo SIETE citas de acta y
-CERO llevaban la linea, y una de ellas atribuyo al acta 217 una adjudicacion
-que vive en el acta 216, linea 76913. Mi propio encargo anterior te la nombro
-como "esta acta", sin numero y sin linea, asi que la mitad de esa caida es
-mia. En esta vuelta: TODA cita de acta lleva su numero de acta Y su linea, y
-la linea la lees del fichero, no la recuerdas. Este encargo lo cumple en cada
-cita que hace.
+## TAREA 1. LOS REGISTROS, Y ES BLOQUEANTE
 
-MI ACTA DE LA VUELTA 217 EMPIEZA EN LA LINEA 77030 de
-docs/loop/ACTA_AUDITOR.md. Todo lo que este encargo cita de ella lleva su
-numero de seccion, y las lineas exactas las lees tu.
+**1.a. ANOTA QUE LAS SEIS ADJUDICACIONES CAYERON DE TU LADO, Y NINGUNA MUEVE UN
+VEREDICTO.** El acta de la vuelta 218 vive desde la linea **77376** de
+`docs/loop/ACTA_AUDITOR.md`. Registra las seis con su rotulo, su numero de
+adjudicacion y su linea leida del fichero:
 
-LO PRIMERO, PORQUE CAMBIA TU CUENTA: UNA DE LAS DIECISIETE BAJA DE CUBRE A A
-MEDIAS POR ADJUDICACION MIA, NO POR MEDICION TUYA. Es la clausula de 07
-ADUANA idx 0, "los cuatro controles mecanicos corriendo en Gate 0". Tu la
-publicaste CUBRE y la marcaste D.e, que fue lo correcto: marcarla. La celda
-pide cuatro, pero la celda quedo vieja. Lo medi en la fuente: la linea 33 de
-docs/plan/OPERACIONES.jsonl es OP-A-02 y su clausula de indice 3 dice VERBATIM
-"los CINCO controles mecanicos corriendo", y docs/plan/07_ADUANA.md en su
-linea 80 titula "LOS CINCO CONTROLES MECANICOS QUE LA ACOMPANAN" y da al
-quinto su origen, control mecanico del 13 ago 2026, o sea posterior a la
-celda. El principio que decide no lo invento yo: la correccion declarada de la
-vuelta 214, escrita en docs/plan/08_VERIFICACION.md, dice que las filas no se
-inventan, se derivan, y que cada celda se compone de las clausulas de
-verificacion que las propias fichas traen. Manda la ficha. El quinto control
-no corre, asi que la clausula NO CUBRE del todo.
+| rotulo | adjudicacion | que se sostiene |
+|---|---|---|
+| `D.1` | `4.1` | puesto 299 en `D`. **Lei los dos nodos del grafo yo mismo y confirmo tu lectura**, y ademas te doy un argumento mejor que el tuyo para tu propia duda: el paso 3 de la madre es **DEFINIR** el mensaje y el paso 2 del hijo es **CAPACITAR** para entregarlo. Definir no es capacitar |
+| `D.2` | `4.2` | puesto 1249 en `D`. El `9.6.3` **cuenta lados y no pasos**, y hay procedimiento en los dos |
+| `D.3` y `P.3` | `4.3` | **escribir en `docs/INTRA_DOMINIO_VEREDICTOS.jsonl` no solo estaba permitido: estaba ordenado** por la `5.7` del acta 217, linea 77304. **NO SE REVIERTE NADA** |
+| `D.4` | `4.4` | **el ANTES es la VISPERA DE LA FASE 01.** `01 FUENTES` idx 0 se sostiene en CUBRE y **el recuento NO vuelve a 12 y 5** |
+| `D.5` | `4.5` | **la clausula exige el HECHO, no la FRASE.** `02 DESTEJIDOS` idx 1 se sostiene en CUBRE |
+| `D.6` | `4.6` | no fabricar el mutante fue la lectura correcta de la moratoria, y ademas evito una guarda que se publica como mordiendo sin morder |
 
-EL RECUENTO CORREGIDO, Y LO ESCRIBES ASI CON CORRECCION DECLARADA: de 12 CUBRE
-y 5 A MEDIAS pasa a 11 CUBRE y 6 A MEDIAS, de 17. Ninguna da NO CUBRE. La
-celda de docs/plan/08_VERIFICACION.md NO SE TOCA: corregirla es sede del
-fundador y sube nombrada a la auditoria integral.
+**NO HAY NINGUNA CORRECCION QUE APLICAR EN ESTA VUELTA.** Ni una clase se mueve, ni
+una cifra se recomputa por adjudicacion mia. **Si tu registro te dice lo contrario,
+paras y lo traes.**
 
-TAREA 1. LOS REGISTROS, Y ES BLOQUEANTE.
+**1.b. PUBLICA EL RECUENTO DE LAS DIECISIETE COMO QUEDA, Y MIDELO, NO LO HEREDES.**
+Al cierre de la 218 son **13 CUBRE, 4 A MEDIAS, 0 NO CUBRE**, y lo reproduje yo byte
+a byte con tu propio lector. Vuelve a medirlo al abrir esta vuelta con el mismo
+instrumento y **publica las dos cifras juntas, la que mides y la que la 218 dejo.**
 
-1.a. Anota en el reporte, con correccion declarada y recomputo, el nuevo
-recuento de las diecisiete: 11 CUBRE, 6 A MEDIAS, 0 NO CUBRE, con la de 07
-ADUANA idx 0 nombrada, su fila, su indice y las dos cifras enfrentadas, la
-celda que dice cuatro y la ficha que dice cinco.
+**1.c. ANOTA LAS SEIS COSAS QUE SUBEN NOMBRADAS A LA AUDITORIA INTEGRAL**, con su
+cifra, tal como las lista la seccion 6 de mi acta. **No las resuelvas: solo tienen
+que quedar escritas donde el fundador las encuentre.**
 
-1.b. Las otras cuatro adjudicaciones de mis discutibles quedan a favor de tu
-lectura y se registran como tales, sin cambiar veredicto: D.a se sostiene en A
-MEDIAS porque la clausula dice "pasos ALTERADOS" y alterar es cambiar, no
-contar; D.b se sostiene porque un nodo que sigue declarando dos o mas fuentes
-no ha reubicado nada; D.c se sostiene en A MEDIAS pero su LECTURA se adjudica
-a tu detector ANCHO, o sea que nombrar el bloque cumple la clausula y la
-formula literal no es la vara; D.d se sostiene bajo las dos lecturas del
-universo y lo mido en mi acta con las dos cifras, 71 actos sin fundir por la
-ancha y las SEIS fusiones con 19 nodos que la remision de la fase 03 dejo
-enrutadas por la estrecha.
+---
 
-1.c. Registra las DOS discrepancias de mi ciega que van a relectura conjunta,
-cada una con su caso y tu veredicto contra el grafo. Son mias contra tuyas y
-las dos se deciden con la vara, no con quien las trae.
-  . PUESTO 299, entrenamiento_de_gerentes_para_despidos contra
-    proceso_despidos_responsables. Tu clase es B. Mi caso: tu propia razon
-    acredita las DOS condiciones que el banco 9.6.2 exige para reconocer un par
-    madre e hijo, que el hijo cabe entero dentro de UN paso de la madre y que
-    la madre conserva materia propia, y la regla no admite el empate cuando las
-    dos se cumplen. El hijo trae guion, informacion de beneficios y simulacros:
-    procedimiento, no linea. Si lo confirmas contra el grafo, es correccion
-    declarada de clase con recomputo del marcador.
-  . PUESTO 1249, cierre_segun_complejidad_venta contra
-    relacion_continua_con_cliente. Tu clase es D y puede seguir siendolo por la
-    via del racimo, que es un argumento que yo no medi. Lo que esta mal medido
-    es la cifra con que la sostienes: tu razon dice que lo compartido es una
-    linea y esta en un paso de cada uno, y yo lo mido del propio fichero de la
-    ciega como TRES de los cuatro pasos, el 1 con el 7, el 4 con el 8 y el 3
-    con el 3 y el 12. Decide con el grafo y con las cuatro lecturas que tu
-    razon nombra, 520, 1206, 1217 y esta. Si la clase no cambia, la razon si se
-    corrige.
+## TAREA 2. LAS DOS CLAUSULAS QUE TODAVIA SE PUEDEN MOVER LEYENDO
 
-TAREA 2. LAS DOS LECTURAS QUE CIERRAN DOS DE LAS SEIS CLAUSULAS, Y SON
-LECTURA, NO INSTRUMENTO NUEVO.
+**DE LAS CUATRO EN A MEDIAS, DOS ESTAN BLOQUEADAS Y LO DIGO PARA QUE NO LAS
+INTENTES.** `07 ADUANA` idx 0 depende de un control que no corre y de una celda que
+es sede del fundador. `03 FUSIONES` idx 0 depende de ejecutar las SEIS fusiones que
+la remision de la fase 03 dejo enrutadas, que es trabajo de plan y no de lectura.
+**Las otras dos si se pueden mover leyendo, y son estas dos.**
 
-2.a. LEE LOS DOS NODOS DE LA CLASE CON TEXTO DISTINTO, los que tu propia sonda
-de 01 FUENTES idx 0 saca al medir contra el grafo previo. Tu razon dice que el
-asunto de un commit es un proxy y no una lectura, y tienes razon: por eso se
-lee. Publica, por cada uno, su id, que dice hoy, que decia en el grafo previo,
-y si la diferencia viene de una operacion de la fase 01 o es anterior a ella.
-Con eso la clausula sube a CUBRE o se queda en A MEDIAS con la causa nombrada,
-y en los dos casos con una lectura detras.
+**2.a. `01 FUENTES` idx 1: "el material del segundo libro reubicado, no borrado".**
+El acta 217, en su linea **77346**, mide **7 menciones que aun declaran un segundo
+libro**. **Reproduce esa cifra con tu propio instrumento antes de nada, y si te da
+otra, publica las dos y para.** Despues, **por cada una de las 7, contesta UNA sola
+pregunta**: el material de ese segundo libro, **esta hoy en algun nodo vivo del
+grafo, o no esta en ninguno?** Publica por mencion: el id del nodo que la declara,
+**que material concreto es**, y **donde vive hoy** (id del nodo vivo, resuelto con el
+resolutor delante) **o la constancia de que no vive en ninguno**.
 
-2.b. LEE LAS CUATRO FICHAS DE 02 DESTEJIDOS QUE TU DETECTOR ESTRECHO NO VE:
-OP-D-01, OP-D-02, OP-D-03 y OP-D-07, sacadas de tu propia salida sellada.
-La lectura contesta una sola pregunta por ficha: la perdida que declara, esta
-escrita en el bloque del que proviene, si o no, con la linea de
-docs/plan/02_DESTEJIDOS.md donde vive. Si las cuatro dan si, la clausula sube a
-CUBRE por lectura y no por detector, que es lo que el banco 9.6.2 manda cuando
-dice que la direccion se verifica leyendo y no contando palabras. Si alguna da
-no, se queda en A MEDIAS con esa ficha nombrada.
+> **LA VARA ES LA MISMA QUE ADJUDIQUE EN LA `4.5` Y NO LA CAMBIES A MITAD:
+> REUBICADO ES UN HECHO COMPROBABLE EN EL GRAFO, NO UNA FRASE ESCRITA EN UNA
+> FICHA.** Si las 7 estan reubicadas, la clausula **sube a CUBRE por lectura**. Si
+> una sola esta borrada sin destino, **la clausula se queda en A MEDIAS y esa una se
+> nombra con su id.** No promedies: **una borrada basta para que no cubra.**
 
-CERO ESCRITURAS EN EL PLAN, Y ESTO NO SE NEGOCIA. Ninguna tarea de esta vuelta
-mueve el campo de estado de ninguna ficha, ni toca docs/plan/08_VERIFICACION.md,
-ni el inventario, ni el expediente, ni docs/plan/07_ADUANA.md. Se lee, se mide,
-se publica y se dice. El sha256 del expediente y el de la pagina 08 se publican
-al entrar y al salir, y tienen que coincidir.
+**2.b. `05 SANEO` idx 1: "los tres de Incoterms con su version".** El acta 217, en su
+linea **77347**, dice que **1 de los 3 esta anotado como trabajo post campana por el
+acta 120**. **Localiza esa anotacion del acta 120 y publica SU LINEA leida del
+fichero**, no de memoria. Despues publica, **por cada uno de los tres**: su id, si
+declara version de Incoterms hoy, cual, y **de donde sale esa version** (el nodo, el
+paso o la ficha que la fija).
 
-NO REPARES scripts/loop/vuelta150_4_tabla_por_fase.py. Lo verifique yo: sale
-con exitcode 1 y AssertionError, la tabla no trae ocho filas, 11. Mi
-adjudicacion dice que la moratoria 6.3 lo cubre por su propia letra, porque un
-arnes en rojo no es una caida de dato. Hiciste bien en no repararlo y en
-decirlo con su corrida delante. Sube nombrado y sin reparar, otra vez.
+> **Y CONTESTA LA PREGUNTA QUE DECIDE LA CLAUSULA, QUE ES DE FRONTERA Y NO DE
+> CONTEO:** un nodo que la campana **difirio a proposito y por decision escrita**,
+> cuenta como incumplimiento de la clausula o como fuera de su alcance? **NO LA
+> DECIDAS TU: mide los tres, escribe tu lectura con su motivo, y MARCALA COMO
+> DISCUTIBLE.** Es exactamente el tipo de frontera que yo adjudico y tu no.
 
-LA CONDICION DE LA PARADA FELIZ, ESCRITA ANTES DE SABER EL RESULTADO: si al
-cerrar esta vuelta las DIECISIETE clausulas quedan en CUBRE, con su busqueda
-corrida y su cifra delante, lo propones y yo declaro. Hoy son ONCE, y las seis
-que faltan tienen trabajo de plan medido detras: 71 actos sin fundir, 7
-menciones que declaran un segundo libro, 1 de los 3 de Incoterms anotado como
-post campana, 4 fichas sin leer y el quinto control de aduana sin correr.
-SI ALGUNA NO DA CUBRE, SE DICE CUAL, CON SU FICHA, SU FILA, SU LINEA Y SU
-CIFRA, y no se declara nada consumado. Una parada feliz escrita sobre una
-condicion que no se cumple es exactamente la especie de verde que esta casa
-lleva doscientas vueltas cazando.
+**2.c. EL RECUENTO SE REHACE AL CIERRE, NO SE HEREDA** (`EJECUTOR.md` 1). Publica
+CUBRE, A MEDIAS y NO CUBRE de las diecisiete **medidos al cerrar la TAREA 2**, con
+la cifra que dejo la TAREA 1 al lado.
 
-Y EL MERGE NO SE PIDE NI SE HACE: EL BUCLE NO FUNDE RAMAS.
+**2.d. LA PARADA FELIZ, Y SU CONDICION NO LA PONES TU:** **si al cerrar esta vuelta
+las DIECISIETE quedan en CUBRE, lo propones**, con su medicion delante y sin
+declarar nada consumado, que declarar es del auditor. **Si no quedan las diecisiete,
+NO lo propones y publicas las que faltan con su fila, su indice y su cifra.**
 
-Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo
-contradice una regla vigente, paras y lo traes. No adivines.
+---
+
+**Marca tus discutibles antes de saber si aciertas, y ponlos donde el reporte manda.**
+
+**Y UNA COSA MAS, QUE ES SOBRE MI Y NO SOBRE TI:** mi acta 218 se cierra con un
+bloque dirigido al auditor de la 219 con sus tres comandos de apertura. **No lo
+borres, no lo muevas y no lo cites en tu reporte.** Esta puesto ahi a proposito y su
+sitio es el final del acta.
+
+Cero guiones largos y cero guiones medios. Deja correr el hook. Si algo contradice
+una regla vigente, paras y lo traes. No adivines.
