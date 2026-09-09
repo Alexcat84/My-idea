@@ -1,0 +1,68 @@
+PASO 0.a. QUE REPORTE HAY EN EL ARBOL, LEIDO DE SU PROPIA CABECERA
+   docs/loop/REPORTE.md -> 63202 bytes
+   primera linea: # REPORTE DE LA VUELTA 213 (ejecutor). FASE III, EJECUCION. Rama `pasada-unica`.
+   vuelta LEIDA (no tecleada): 213
+   coincide con VUELTA menos 1 (213): SI
+
+PASO 0.b. LO QUE MI APERTURA MIDIO SOBRE EL ARCHIVO DEL REPORTE ANTERIOR
+   mi sello dice: CIFRA docs/loop/reportes/REPORTE_V213.md existe al entrar: NO
+   existe AHORA, antes del PASO 0.c: NO
+
+PASO 0.c. LA GUARDA SOBRE EL REPORTE QUE DE VERDAD SE VA A PISAR (213)
+   PASO 0. EL ARCHIVADOR, ENCHUFADO (adjudicacion 6.6 del acta 170)
+      el esqueleto va a PISAR docs/loop/REPORTE.md
+      archivar_reporte.py --vuelta 213 -> EXIT 0
+         | ==============================================================================
+         | ARCHIVADOR DE REPORTES. Vuelta 213.
+         | El texto se lee de git, no del arbol de trabajo.
+         | ==============================================================================
+         |   commit elegido solo (ultimo que toco la ruta): e71df6630e25450e57427cf1cd5c087be5947c1a
+         |   asunto de ese commit: 2026-09-09 00:27:10 -0400	VUELTA 213, CIERRE: EL REPORTE QUEDA CERRADO CON SUS CUATRO PIEZAS Y SUS DOS TAREAS ENTREGADAS. cerrar_reporte.py EXITCODE 0
+         |   vuelta LEIDA de la cabecera del texto: 213
+         |   ESCRITO: docs/loop/reportes/REPORTE_V213.md
+         |   VERDE.
+         |      vuelta            213
+         |      commit de origen  e71df6630e25450e57427cf1cd5c087be5947c1a
+         |      ruta de origen    docs/loop/REPORTE.md
+         |      destino           docs/loop/reportes/REPORTE_V213.md
+         |      bytes             63202
+         |      lineas            599
+         |      sha256 (LF)       0977915e00c63936ca9cbec34496ee95e846ac7787b4e88e3f014a4c1ff2e567
+      docs/loop/reportes/REPORTE_V213.md -> 63202 bytes, sha256 0977915e00c63936
+      vuelta leida de la cabecera del archivo: 213
+      el reporte que se va a pisar -> 63202 bytes, sha256 0977915e00c63936
+      LOS DOS sha256 CALZAN: lo que se va a pisar ya esta guardado
+      VERDE: el reporte anterior esta archivado y lo que se va a
+      pisar esta guardado byte a byte. El esqueleto puede escribir.
+
+LA IDENTIDAD, LEIDA DE GIT Y NO TECLEADA (EJECUTOR.md 1):
+   rama: pasada-unica
+   HEAD en el momento del esqueleto: 89c7bf23dc2aedc6122d774bfa070affde7fda9e
+   asunto (primeros 90): Decision del fundador: las 95 se dicen, la vara de las tres fases se escribe, y el orden d
+
+LO QUE anexar_tarea_al_reporte.py EXIGE, COMPROBADO SOBRE LO COMPUESTO:
+   marca <!-- TABLA DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
+   marca <!-- FIN TABLA DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
+   marca <!-- ANEXO DE TAREAS -->         aparece 1 vez(ces) (se exige 1)
+   marca <!-- FIN ANEXO DE TAREAS -->     aparece 1 vez(ces) (se exige 1)
+   fila de la TAREA 1    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   fila de la TAREA 2    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   fila de la TAREA 3    aparece 1 vez(ces), celdas 4 (se exigen 4), 3.a celda ABIERTA: SI
+   el literal del vacio esta dentro del bloque del anexo: SI
+
+LAS MARCAS QUE cerrar_reporte.py EXIGE EN UN REPORTE SIN CERRAR:
+   '**EL VEREDICTO DE UNA LINEA: SIN ESCRIBIR TODAVIA.**'   -> SI (se esperaba SI)
+   'PENDIENTE DE TALLAR AL CIERRE'                          -> SI (se esperaba SI)
+   '<!-- CABECERA TALLADA -->'                              -> SI (se esperaba SI)
+   '<!-- FIN CABECERA TALLADA -->'                          -> SI (se esperaba SI)
+   '\n## 3.'                                                -> NO (se esperaba NO)
+   '\n## 9.'                                                -> NO (se esperaba NO)
+
+LA GUARDA DE LA C.1 DE LA 213: DIRECTORIOS DE DOS TRAMOS ENTRE COMILLAS INVERSAS
+CIFRA directorios de dos o mas tramos entre comillas inversas: 0
+
+CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+CIFRA comprobaciones que fallan: 0
+ESCRITO docs/loop/REPORTE.md -> 5776 bytes, 77 lineas
+RELECTURA DEL DISCO: identico a lo juzgado: SI
+VERDE: el esqueleto queda tallado.
