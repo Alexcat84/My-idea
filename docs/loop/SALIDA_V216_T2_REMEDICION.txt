@@ -66,7 +66,7 @@ CLAUSULA  1 de 14 | ficha OP-V-01 | indice 8 | linea 34 de docs/plan/OPERACIONES
    VERBATIM: TRANSVERSAL: Gate 0 verde, suite verde, vuelo completo, prueba de rumbos, y reindexado semantico DESPUES de mover ids
 ------------------------------------------------------------------------------
    CIFRA la corrida K existe en disco: SI
-   CIFRA bytes exactos de la corrida K: 63756
+   CIFRA bytes exactos de la corrida K: 63756 bytes en disco y 63655 bytes normalizado a LF
    RUTA de la corrida K: docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt
    CIFRA lineas de la corrida K: 788
    CIFRA lineas del cuerpo del commit e966d896, que es el que movio el estado: 61
@@ -254,7 +254,7 @@ CLAUSULA 14 de 14 | ficha OP-I-01 | indice 3 | linea 44 de docs/plan/OPERACIONES
    VERBATIM: el inventario se recomputa entero con el disparador de 08_VERIFICACION
 ------------------------------------------------------------------------------
    LA BUSQUEDA, CON SU COMANDO ESCRITO ANTES DE SU RESULTADO: se recorre TODO el arbol de scripts y por cada fichero .py se pregunta si NOMBRA la vista humana y si ADEMAS la ESCRIBE, con una apertura en modo escritura o una llamada de escritura en la misma linea o en las tres siguientes.
-   CIFRA ficheros .py que NOMBRAN la vista humana: 26
+   CIFRA ficheros .py que NOMBRAN la vista humana: 27
    CIFRA ficheros .py que la ESCRIBEN: 0
       (ninguno: la busqueda da CERO, y ese cero es el resultado. La sede que regeneraria la vista humana NO EXISTE en el repo)
    LA MITAD QUE SI: el fichero fuente esta recomputado, con 672 entradas al corte del marcador de hoy.

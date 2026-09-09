@@ -63,10 +63,9 @@ que da cero.**
 
 #### 2.c. `OP-V-01` POR CITA DE LA CORRIDA K, QUE SE BUSCO Y SE ENCONTRO
 
-**LA CORRIDA K EXISTE.** Ruta
-`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt`, **63756 bytes exactos**
-y **788 lineas**, medidos hoy. **No se vuelve a producir: se cita**,
-que es lo que la DECISION 2 manda.
+**LA CORRIDA K EXISTE.** Su ruta es
+`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt` y mide **63756 bytes en disco y 63655 bytes normalizado a LF**, con **788 lineas**, medidos
+hoy. **No se vuelve a producir: se cita**, que es lo que la DECISION 2 manda.
 
 **FILAS ARMADAS LEYENDO `docs/loop/SALIDA_V216_T2_REMEDICION.txt`: 5. FILAS QUE DEBERIA HABER: 5**
 (las cinco partes de la clausula transversal). **CIFRA partes sostenidas por
@@ -99,8 +98,8 @@ que SUBIR. **CIFRA mutantes sanos: 1 | CIFRA que SUBEN a CUBRE:
 
 #### 2.e. LA GUARDA: ESTA TAREA NO MOVIO NI UN CAMPO DE ESTADO
 
-**`sha256` LF de `docs/plan/OPERACIONES.jsonl` al ENTRAR: `650578474361eb2b`. Al
-SALIR: `650578474361eb2b`. Los dos CALZAN.** Y cero filas de
+**El `sha256` de `docs/plan/OPERACIONES.jsonl` al ENTRAR, el mismo en disco y normalizado a LF, es `650578474361eb2b`; y al SALIR, tambien el mismo en disco y normalizado a LF, es `650578474361eb2b`. Los dos CALZAN**, porque ese fichero
+no trae ni un retorno de carro. Y cero filas de
 `git diff --numstat` sobre el expediente, el inventario, la vara y la pagina de
 lecturas dirigidas.
 
@@ -108,8 +107,9 @@ lecturas dirigidas.
 
 **MI ENCARGO DICE, Y EL ACTA 215 EN SU `5.7` TAMBIEN, QUE LA RE-MEDICION NO LA
 HA CORRIDO NADIE.** **Medido hoy por mi: existe
-`docs/loop/SALIDA_V214_T2B_REMEDIR_CINCO.txt`, 14302 bytes, commit `bb2337a0`, y es una re-medicion
-de las cinco fichas contra estas mismas catorce clausulas.**
+`docs/loop/SALIDA_V214_T2B_REMEDIR_CINCO.txt`, **14302 bytes en disco y 14302 bytes normalizado a
+LF**, commit `bb2337a0`, y es una re-medicion de las cinco fichas contra
+estas mismas catorce clausulas.**
 
 **NO DISCUTO LA ADJUDICACION Y NO LA NECESITO PARA NADA, porque la orden se
 cumple igual:** aquella re-medicion dejo **6 de catorce sin veredicto

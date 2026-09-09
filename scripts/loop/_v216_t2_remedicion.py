@@ -190,6 +190,8 @@ def cargar():
         "las_once": las_once,
         "ck_existe": ck_existe,
         "ck_bytes": os.path.getsize(CORRIDA_K) if ck_existe else 0,
+        "ck_bytes_lf": (len(io.open(CORRIDA_K, "rb").read()
+                            .replace(b"\r\n", b"\n")) if ck_existe else 0),
         "ck_ls": lineas(CORRIDA_K) if ck_existe else [],
         "commit_ls": git(["show", "-s", "--format=%B", COMMIT_OP_V_01])[1]
                      .replace(chr(13) + NL, NL).split(NL),
@@ -217,7 +219,8 @@ def s_transversal(D):
     c = []
     c.append("CIFRA la corrida K existe en disco: %s"
              % ("SI" if D["ck_existe"] else "NO (ausencia, no cero)"))
-    c.append("CIFRA bytes exactos de la corrida K: %d" % D["ck_bytes"])
+    c.append("CIFRA bytes exactos de la corrida K: %d bytes en disco y %d "
+             "bytes normalizado a LF" % (D["ck_bytes"], D["ck_bytes_lf"]))
     c.append("RUTA de la corrida K: docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt")
     c.append("CIFRA lineas de la corrida K: %d" % len(D["ck_ls"]))
     c.append("CIFRA lineas del cuerpo del commit %s, que es el que movio el "

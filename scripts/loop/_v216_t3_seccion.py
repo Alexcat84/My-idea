@@ -188,7 +188,9 @@ de `AUDITOR.md` 6.3 lo prohibe**, asi que **sube NOMBRADA**, que es donde el
 propio auditor ya la puso en el punto 3 de su seccion 6.
 
 **LO QUE ESTA TAREA NO HACE, DICHO PARA QUE NO SE BUSQUE:** no declara la
-campana consumada, no escribe `docs/loop/PARA_ALEXIS.md` y **no pide ningun
+campana consumada, no escribe el PARA_ALEXIS del bucle (nombrado sin comillas
+inversas a proposito: el fichero NO EXISTE en el arbol, y una ruta que promete
+prueba es cifra) y **no pide ningun
 merge**. Quien declara es **EL AUDITOR**, por la `4.2` del acta 203, **linea
 71543**, ratificada por el fundador el 9 sep 2026. **Y EL BUCLE NO FUNDE RAMAS.**
 

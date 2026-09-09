@@ -129,6 +129,7 @@ def main():
         "sanos": cifra(s, "CIFRA mutantes sanos: "),
         "suben": cifra(s, "CIFRA que SUBEN a CUBRE: "),
         "ck_bytes": cifra(s, "CIFRA bytes exactos de la corrida K: "),
+        "ck_bytes_lf": cifra(s, "bytes en disco y "),
         "ck_lineas": cifra(s, "CIFRA lineas de la corrida K: "),
         "sostenidas": cifra(s, "CIFRA sostenidas por cita: "),
         "n_partes": len(partes),
@@ -196,10 +197,9 @@ que da cero.**
 
 #### 2.c. `OP-V-01` POR CITA DE LA CORRIDA K, QUE SE BUSCO Y SE ENCONTRO
 
-**LA CORRIDA K EXISTE.** Ruta
-`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt`, **%(ck_bytes)s bytes exactos**
-y **%(ck_lineas)s lineas**, medidos hoy. **No se vuelve a producir: se cita**,
-que es lo que la DECISION 2 manda.
+**LA CORRIDA K EXISTE.** Su ruta es
+`docs/loop/SALIDA_SESION_CREDENCIAL_VUELO_K.txt` y mide **%(ck_bytes)s bytes en disco y %(ck_bytes_lf)s bytes normalizado a LF**, con **%(ck_lineas)s lineas**, medidos
+hoy. **No se vuelve a producir: se cita**, que es lo que la DECISION 2 manda.
 
 **FILAS ARMADAS LEYENDO `%(salida)s`: %(n_partes)d. FILAS QUE DEBERIA HABER: 5**
 (las cinco partes de la clausula transversal). **CIFRA partes sostenidas por
@@ -228,8 +228,8 @@ que SUBIR. **CIFRA mutantes sanos: %(sanos)s | CIFRA que SUBEN a CUBRE:
 
 #### 2.e. LA GUARDA: ESTA TAREA NO MOVIO NI UN CAMPO DE ESTADO
 
-**`sha256` LF de `docs/plan/OPERACIONES.jsonl` al ENTRAR: `%(sha_antes)s`. Al
-SALIR: `%(sha_despues)s`. Los dos CALZAN.** Y cero filas de
+**El `sha256` de `docs/plan/OPERACIONES.jsonl` al ENTRAR, el mismo en disco y normalizado a LF, es `%(sha_antes)s`; y al SALIR, tambien el mismo en disco y normalizado a LF, es `%(sha_despues)s`. Los dos CALZAN**, porque ese fichero
+no trae ni un retorno de carro. Y cero filas de
 `git diff --numstat` sobre el expediente, el inventario, la vara y la pagina de
 lecturas dirigidas.
 
@@ -237,8 +237,9 @@ lecturas dirigidas.
 
 **MI ENCARGO DICE, Y EL ACTA 215 EN SU `5.7` TAMBIEN, QUE LA RE-MEDICION NO LA
 HA CORRIDO NADIE.** **Medido hoy por mi: existe
-`%(v214)s`, %(v214_bytes)d bytes, commit `%(v214_commit)s`, y es una re-medicion
-de las cinco fichas contra estas mismas catorce clausulas.**
+`%(v214)s`, **%(v214_bytes)d bytes en disco y %(v214_bytes)d bytes normalizado a
+LF**, commit `%(v214_commit)s`, y es una re-medicion de las cinco fichas contra
+estas mismas catorce clausulas.**
 
 **NO DISCUTO LA ADJUDICACION Y NO LA NECESITO PARA NADA, porque la orden se
 cumple igual:** aquella re-medicion dejo **%(v214_sin)d de catorce sin veredicto
