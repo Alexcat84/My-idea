@@ -1,0 +1,21 @@
+RELOJ DE GIT CONGELADO EN --corte 1522d5dc (1522d5dc). RANGO PROPIO: 1522d5dc..HEAD
+SALIDA DE GATE 0 LEIDA DE: docs/loop/SALIDA_V217_GATE0_CMD1_APERTURA.txt
+FILAS DE LA TABLA POR FASE, LEIDAS DE docs/plan/08_VERIFICACION.md: 11
+  - 0 CODIGO
+  - 01 FUENTES
+  - 02 DESTEJIDOS
+  - 03 FUSIONES
+  - 04 ENLACES
+  - 05 SANEO
+  - 06 MESAS
+  - 07 ADUANA
+  - 08 VERIFICACION
+  - 09 LECTURAS DIRIGIDAS
+  - 10 INVENTARIO
+Traceback (most recent call last):
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta150_4_tabla_por_fase.py", line 625, in <module>
+    main()
+  File "C:\Users\AlexDesk\Documents\I have an idea\scripts\loop\vuelta150_4_tabla_por_fase.py", line 201, in main
+    assert len(filas) == 8, "la tabla no trae ocho filas: %d" % len(filas)
+           ^^^^^^^^^^^^^^^
+AssertionError: la tabla no trae ocho filas: 11

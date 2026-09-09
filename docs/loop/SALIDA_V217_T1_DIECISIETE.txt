@@ -1,0 +1,423 @@
+==============================================================================
+VUELTA 217, TAREA 1. LAS DIECISIETE CLAUSULAS DE LAS FASES 0 A 07
+==============================================================================
+SHA256 DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b disco y 650578474361eb2b LF
+SHA256 DE docs/plan/08_VERIFICACION.md AL ENTRAR: 578eeefab6db2fd4 disco y 578eeefab6db2fd4 LF
+
+==============================================================================
+1.a. LAS FILAS Y SUS CLAUSULAS, SACADAS CON UN INSTRUMENTO
+==============================================================================
+EL LECTOR SE IMPORTA, NO SE CLONA: celdas_de_la_tabla de scripts/loop/vuelta150_4_tabla_por_fase.py.
+CIFRA lineas de ese fichero: 626 | CIFRA lineas ejecutadas al cargarlo: 622. La diferencia es SU ULTIMA LINEA DE ENTRADA, una llamada suelta a main() sin guarda, que se descarta para cargar sus lectores sin correr su tabla. EL FICHERO EN DISCO NO SE TOCA: la moratoria prohibe repararlo y no se repara.
+CIFRA FILAS ARMADAS LEYENDO LA TABLA POR FASE: 11 | CIFRA FILAS QUE DEBERIA HABER: 11
+CIFRA CLAUSULAS ARMADAS EN LA TABLA ENTERA: 30 | CIFRA QUE DEBERIA HABER: 30
+EL PARTIDOR ES EL PUNTO Y COMA DE LA PROPIA PAGINA, no una regla mia.
+
+EL REPARTO POR FILA, CONTADO Y NO TECLEADO:
+  0 CODIGO               clausulas armadas  1 | que deberia haber 1
+  01 FUENTES             clausulas armadas  2 | que deberia haber 2
+  02 DESTEJIDOS          clausulas armadas  2 | que deberia haber 2
+  03 FUSIONES            clausulas armadas  2 | que deberia haber 2
+  04 ENLACES             clausulas armadas  2 | que deberia haber 2
+  05 SANEO               clausulas armadas  6 | que deberia haber 6
+  06 MESAS               clausulas armadas  1 | que deberia haber 1
+  07 ADUANA              clausulas armadas  1 | que deberia haber 1
+  08 VERIFICACION        clausulas armadas  1 | que deberia haber (fuera de las ocho: el encargo no da cifra)
+  09 LECTURAS DIRIGIDAS  clausulas armadas  8 | que deberia haber (fuera de las ocho: el encargo no da cifra)
+  10 INVENTARIO          clausulas armadas  4 | que deberia haber (fuera de las ocho: el encargo no da cifra)
+
+CIFRA FILAS DE 0 CODIGO A 07 ADUANA ARMADAS: 8 | CIFRA QUE DEBERIA HABER: 8
+CIFRA CLAUSULAS DE ESAS OCHO FILAS ARMADAS: 17 | CIFRA QUE DEBERIA HABER: 17
+CIFRA descuadres contra las cifras del encargo: 0
+LAS DOS CIFRAS CALZAN EN LOS CUATRO CONTEOS Y EN LAS OCHO FILAS.
+
+LAS DIECISIETE, VERBATIM, CON SU FILA Y SU INDICE:
+  0 CODIGO         idx 0 | cada caso positivo **se cae antes** del arreglo y pasa despues
+  01 FUENTES       idx 0 | ningun nodo de la clase con pasos alterados
+  01 FUENTES       idx 1 | **el material del segundo libro reubicado, no borrado**
+  02 DESTEJIDOS    idx 0 | los **quince congelados** releidos
+  02 DESTEJIDOS    idx 1 | **cada perdida en el bloque del que proviene**
+  03 FUSIONES      idx 0 | un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+  03 FUSIONES      idx 1 | `resolverId` devuelve el superviviente
+  04 ENLACES       idx 0 | cada arista nueva **confirmada por lectura**, no por el instrumento
+  04 ENLACES       idx 1 | ninguna crea auto-arista tras resolver
+  05 SANEO         idx 0 | ningun id vivo con tratado extinto
+  05 SANEO         idx 1 | los tres de Incoterms con su version
+  05 SANEO         idx 2 | ningun nodo cablea `export.gov`
+  05 SANEO         idx 3 | ninguna de las seis herramientas muertas
+  05 SANEO         idx 4 | ningun nodo con dos claves de fase
+  05 SANEO         idx 5 | **ningun nodo se cita a si mismo tras resolver**
+  06 MESAS         idx 0 | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26)
+  07 ADUANA        idx 0 | los cuatro controles mecanicos **corriendo en Gate 0**
+
+==============================================================================
+1.b Y 1.c. LAS DIECISIETE, MEDIDAS UNA POR UNA, CON SU BUSQUEDA
+==============================================================================
+
+------------------------------------------------------------------------------
+CLAUSULA  1 de 17 | fila 0 CODIGO | indice 0
+   VERBATIM: cada caso positivo **se cae antes** del arreglo y pasa despues
+------------------------------------------------------------------------------
+   EL SUJETO NO SE TECLEA: son las fichas cuyo campo de fase dice 00_CODIGO, leidas del expediente en esta corrida.
+   CIFRA fichas de la fase 00_CODIGO: 7
+   LA CLAUSULA TIENE DOS MITADES Y LAS DOS SE MIDEN: (1) que el caso positivo EXISTA Y CORRA HOY, y (2) que SE CAYERA ANTES del arreglo, que es un hecho historico y solo lo prueba una salida ROJA guardada en el arbol del corte.
+   MITAD 1, POR DOS PIERNAS DECLARADAS: (A) un bloque de prueba del corpus que nombre el id_op; (B) una etiqueta de Gate 0 que case con la marca que la propia ficha declara para su guarda.
+     OP-S-06    PIERNA B: 1 etiqueta(s) de Gate 0 corriendo hoy, estado OK -> Ninguna clave de nodo fuera de la lista blanca del esquema (va
+     OP-S-07    PIERNA B: 1 etiqueta(s) de Gate 0 corriendo hoy, estado OK -> Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista
+     OP-C-01    PIERNA A: 1 fichero(s) de prueba lo nombran -> web/lib/engine/accesosResueltos.test.ts (27 bloques)
+     OP-C-02    PIERNA A: 1 fichero(s) de prueba lo nombran -> web/lib/engine/accesosResueltos.test.ts (27 bloques)
+     OP-C-03    PIERNA A: 1 fichero(s) de prueba lo nombran -> web/lib/engine/accesosResueltos.test.ts (27 bloques)
+     OP-C-04    PIERNA B: 2 etiqueta(s) de Gate 0 corriendo hoy, estado OK,OK -> Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista | Ninguna clave de nodo fuera de la lista blanca del esquema (va
+     OP-C-05    PIERNA B: 2 etiqueta(s) de Gate 0 corriendo hoy, estado OK,OK -> OP-C-05: ninguna lista de aristas de un nodo VIVO tiene dos en | OP-C-05: todo par bidireccional entre nodos VIVOS tiene su ver
+   CIFRA de la MITAD 1, casos positivos que corren hoy: 7 de 7
+   MITAD 2, LA HISTORICA: se busca con git grep SOBRE EL ARBOL DEL CORTE (nunca sobre el arbol de trabajo, que incluiria el papeleo de esta misma vuelta) una salida que nombre el id_op y traiga marca de rojo.
+   CIFRA ficheros de salida en el arbol del corte: 7820
+   CIFRA de esos que traen alguna marca de rojo: 1390
+   GUARDA DE SALIDAS (importada, no clonada): salidas anadidas por esta vuelta 13 | usadas como prueba 50 | INTRUSAS 0
+     OP-S-06    ROJO GUARDADO, 9 salida(s) -> SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt
+     OP-S-07    ROJO GUARDADO, 11 salida(s) -> SALIDA_V150_4_TABLA_POR_FASE.txt, SALIDA_V152_T2_TABLA_POR_FASE.txt
+     OP-C-01    ROJO GUARDADO, 12 salida(s) -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt
+     OP-C-02    ROJO GUARDADO, 12 salida(s) -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt
+     OP-C-03    ROJO GUARDADO, 12 salida(s) -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_4_TABLA_POR_FASE.txt
+     OP-C-04    ROJO GUARDADO, 12 salida(s) -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_2C_SIETE_VERIFICACIONES.txt
+     OP-C-05    ROJO GUARDADO, 44 salida(s) -> SALIDA_V118_TAREA4_1_GUARDAS_FASE0_DETALLE.txt, SALIDA_V150_2C_CASO_POSITIVO_GATE0.txt
+   CIFRA de la MITAD 2, casos positivos con rojo historico guardado: 7 de 7
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  2 de 17 | fila 01 FUENTES | indice 0
+   VERBATIM: ningun nodo de la clase con pasos alterados
+------------------------------------------------------------------------------
+   EL SUJETO ES LA CLASE Y NO LA FASE ENTERA: la clausula dice 'ningun nodo DE LA CLASE', y la clase es LARGO LEGITIMO, cuyo censo es el campo de nodos de OP-F-01 (linea 1 del expediente), leido hoy y no tecleado.
+   CIFRA miembros de la clase: 6 | CIFRA que la ficha declara tras su correccion del 14 ago 2026: 6
+   LA VARA DEL 'ANTES' ES EL GRAFO PREVIO A LA CAMPANA, 36b57d78, y se compara por DOS varas distintas que no se mezclan: el NUMERO de pasos y el TEXTO de los pasos.
+     seleccion_representante_extranjero             pasos antes  9 | pasos hoy  9 | texto identico: NO
+     internacionalizacion_sitio_web_exportacion     pasos antes  9 | pasos hoy  9 | texto identico: SI
+     elaboracion_pro_forma_invoice                  pasos antes  8 | pasos hoy  8 | texto identico: SI
+     elementos_plan_exportacion_ejemplo             pasos antes 13 | pasos hoy 13 | texto identico: NO
+     principios_medicion_efectiva                   pasos antes 10 | pasos hoy 10 | texto identico: SI
+     fmea_analisis_de_modos_de_falla                pasos antes  8 | pasos hoy  8 | texto identico: SI
+   CIFRA miembros con el NUMERO de pasos alterado: 0
+   CIFRA miembros con el TEXTO de algun paso distinto: 2
+   LA ATRIBUCION SE MIDE, NO SE SUPONE: de cada miembro con texto distinto se leen los commits que lo tocaron desde el grafo previo y se cuenta cuantos NOMBRAN una operacion de la fase 01.
+     seleccion_representante_extranjero             commits que lo tocaron: 3
+        commit> a34328b2|VUELTA 148, TAREA 3: OP-S-12 EJECUTADA AL FINAL DE LA PASADA. 925 ENTRADAS DUPLICADAS FUERA, CERO ARI
+        commit> 4542e482|Fase 1 CERRADA: los packs, al 100% de la vara vigente
+        commit> 3cb8a20f|Ciclo del censo COMPLETO: C y D ejecutados, siete packs curados
+     elementos_plan_exportacion_ejemplo             commits que lo tocaron: 5
+        commit> a34328b2|VUELTA 148, TAREA 3: OP-S-12 EJECUTADA AL FINAL DE LA PASADA. 925 ENTRADAS DUPLICADAS FUERA, CERO ARI
+        commit> a1d7269d|VUELTA 57, LOTE B DEL TRAMO 4: CATORCE ACTOS MAS, Y UNA ESPECIE QUE LA CAMPANA NO HABIA VISTO NUNCA, 
+        commit> f0364e94|TANDA 2 CERRADA: el catalogo entero de 555 hallazgos a 56
+   CIFRA commits que tocaron a los de texto distinto: 8 | CIFRA de esos que NOMBRAN una operacion de la fase 01: 0
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+------------------------------------------------------------------------------
+CLAUSULA  3 de 17 | fila 01 FUENTES | indice 1
+   VERBATIM: **el material del segundo libro reubicado, no borrado**
+------------------------------------------------------------------------------
+   EL SUJETO SON LAS FICHAS DE LA FASE 01 QUE CARGAN MATERIAL DE UN SEGUNDO LIBRO, y sus nominas se leen del expediente, no se teclean: OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-WEI, OP-F-04-RAC.
+   CIFRA menciones de nodo en esas nominas: 70 | CIFRA ids distintos: 67
+   CIFRA que el recorte posicional de OP-A-01 publica al 11 ago 2026, citada como contraste y no como fuente: 67 nodos con mas de un libro y 70 declaraciones en segunda posicion.
+   MITAD 'NO BORRADO': un nodo cuenta como NO borrado si sigue existiendo en el grafo, o si su id vive como alias de otro, que es material mudado y no material perdido.
+   CIFRA menciones BORRADAS sin rastro: 0
+      (la busqueda de las borradas da CERO, y ese cero es el resultado: se corrio y se publica)
+   MITAD 'REUBICADO': una mencion esta reubicada cuando su nodo ya NO declara mas de una fuente. La que sigue declarando dos o mas todavia carga el material del segundo libro.
+   CIFRA menciones que TODAVIA declaran mas de una fuente: 7
+      AUN CON DOS O MAS FUENTES> OP-F-03 / principio_calidad_mvp, 2 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-COL / keep_customers_strategy, 2 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-COL / viral_loop_marketing, 3 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-HOR / decision_de_vender_startup, 2 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-HOR / principio_calidad_mvp, 2 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-WEI / coeficiente_viral, 2 fuentes
+      AUN CON DOS O MAS FUENTES> OP-F-04-WEI / viral_loop_marketing, 3 fuentes
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+------------------------------------------------------------------------------
+CLAUSULA  4 de 17 | fila 02 DESTEJIDOS | indice 0
+   VERBATIM: los **quince congelados** releidos
+------------------------------------------------------------------------------
+   EL DETECTOR NO ES MIO: es el de scripts/loop/vuelta45_verificar_opd01_opd02.py, y su regla es que la razon ABRA con NO SE JUZGA, NO PUEDO JUZGAR o CONGELAD.
+   CIFRA filas de docs/INTRA_DOMINIO_VEREDICTOS.jsonl contadas hoy: 3388
+   CIFRA congelados que quedan HOY en el archivo entero: 1 | CIFRA que la clausula nombra: 15
+   CIFRA nodos en las nominas de la fase 02, leidos del expediente: 41
+      CONGELADO> puesto 1190, clase D, formalize_advisory_board contra identificar_consejo_asesores | de la nomina de la fase 02: NO
+   CIFRA congelados que SI son de la nomina de la fase 02: 0 (se exigen 0)
+   LA CIFRA QUINCE ES LA DE SU CORTE Y NO LA DE HOY, y se dice en vez de callarlo: la clausula la escribio cuando quedaban quince.
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  5 de 17 | fila 02 DESTEJIDOS | indice 1
+   VERBATIM: **cada perdida en el bloque del que proviene**
+------------------------------------------------------------------------------
+   EL SUJETO SON LAS FICHAS DE LA FASE 02, leidas del expediente por su campo de fase y no tecleadas.
+   CIFRA fichas de la fase 02: 9
+   LA CLAUSULA TIENE DOS MITADES: (1) que la REGLA DE REPARTO este escrita en la ficha que declara la perdida, y (2) que la operacion tenga REGISTRO DE CIERRE en su pagina.
+   EL DETECTOR DE LA MITAD 1 SE PUBLICA CON SUS DOS ANCHURAS Y EL VEREDICTO SALE DE LA ESTRECHA: la ESTRECHA busca la frase de la regla, 'bloque del que proviene' o 'regla de reparto'; la ANCHA busca que la ficha NOMBRE UN BLOQUE al declarar su perdida. Una ficha puede cumplir la clausula con otras palabras, y por eso la ancha se cuenta; pero contar la ancha como veredicto seria una sonda mas laxa que su clausula.
+     OP-D-01    perdidas declaradas 2 | regla ESTRECHA: NO | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 3 (primera: 3409)
+     OP-D-02    perdidas declaradas 2 | regla ESTRECHA: NO | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 2 (primera: 3585)
+     OP-D-03    perdidas declaradas 2 | regla ESTRECHA: NO | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 3 (primera: 1197)
+     OP-D-04    perdidas declaradas 2 | regla ESTRECHA: SI | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 3 (primera: 1614)
+     OP-D-05    perdidas declaradas 1 | regla ESTRECHA: SI | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 8 (primera: 1765)
+     OP-D-06    perdidas declaradas 3 | regla ESTRECHA: SI | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 5 (primera: 2748)
+     OP-D-07    perdidas declaradas 1 | regla ESTRECHA: NO | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 4 (primera: 4485)
+     OP-D-08    perdidas declaradas 6 | regla ESTRECHA: SI | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 2 (primera: 3931)
+     OP-D-09    perdidas declaradas 5 | regla ESTRECHA: SI | regla ANCHA (nombra un bloque): SI | lineas de registro de cierre en la pagina 02: 2 (primera: 4183)
+   CIFRA fichas con perdida declarada: 9 de 9
+   CIFRA fichas con la regla ESTRECHA escrita: 5 de 9
+   CIFRA fichas que NOMBRAN UN BLOQUE al declarar su perdida (regla ANCHA): 9 de 9
+   CIFRA fichas con registro de cierre en docs/plan/02_DESTEJIDOS.md: 9 de 9
+   CIFRA que la propia pagina 02 publica tras su correccion del 19 ago 2026, citada como contraste: 9 de 9.
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+------------------------------------------------------------------------------
+CLAUSULA  6 de 17 | fila 03 FUSIONES | indice 0
+   VERBATIM: un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+------------------------------------------------------------------------------
+   EL SUJETO SON LOS ACTOS DEL CORTE VIGENTE del inventario, y el corte no se teclea: se toma el MAYOR de los que el propio fichero trae.
+   CIFRA corte vigente leido: 2026-08-13
+   CIFRA actos de ese corte: 335 | CIFRA actos de todos los cortes: 556
+   CIFRA actos con UN SOLO superviviente vivo: 264
+   CIFRA actos con VARIOS miembros vivos, o sea sin fundir todavia: 71
+   CIFRA actos con CERO miembros vivos: 0
+   CIFRA miembros absorbidos de los actos ya fundidos: 324, de ellos CON alias en el superviviente 324 y SIN alias 0
+      (la busqueda de absorbidos sin alias da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+------------------------------------------------------------------------------
+CLAUSULA  7 de 17 | fila 03 FUSIONES | indice 1
+   VERBATIM: `resolverId` devuelve el superviviente
+------------------------------------------------------------------------------
+   EL RESOLUTOR NO ES MIO: se IMPORTA de scripts/loop/vuelta150_4_tabla_por_fase.py, que a su vez replica la cadena de _resolver de Gate 0, copia fiel de resolverId.
+   EL SUJETO SON LOS ABSORBIDOS DE LOS ACTOS QUE YA TIENEN UN SOLO SUPERVIVIENTE: donde no hay superviviente todavia no hay nada que resolver, y eso se dice en vez de contarlo como fallo.
+   CIFRA corte vigente leido: 2026-08-13 | CIFRA actos de ese corte: 335
+   CIFRA actos FUERA de esta vara por no tener superviviente unico: 71
+   CIFRA absorbidos probados por el resolutor: 324
+   CIFRA que resuelven AL superviviente: 324 | CIFRA que NO: 0
+      (la busqueda de los que no resuelven da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  8 de 17 | fila 04 ENLACES | indice 0
+   VERBATIM: cada arista nueva **confirmada por lectura**, no por el instrumento
+------------------------------------------------------------------------------
+   EL SUJETO SON LAS TRES FUENTES DE ARISTA NUEVA QUE LA PROPIA PAGINA 04 NOMBRA EN SU CIERRE: las ESCRITA de OP-E-01, la direccion V90 de OP-E-06 y la direccion V94 de OP-E-07.
+   CIFRA aristas nuevas armadas leyendo las tres fuentes: 296 | CIFRA que el cierre de la pagina 04 publica: 296
+   CIFRA por fuente: OP-E-01 98, OP-E-06 114, OP-E-07 84
+   QUE CUENTA COMO CONFIRMADA POR LECTURA, y se declara antes de medir: la fila cita el FICHERO DE LECTURA del que salio, y ese fichero existe en disco; o la fila cita el PUESTO de un veredicto del archivo, y ese puesto existe.
+   CIFRA ficheros de lectura distintos citados por OP-E-01: 9, de ellos EXISTEN en disco 9
+   CIFRA puestos distintos del archivo: 3388
+   CIFRA aristas nuevas CONFIRMADAS por lectura: 296 | CIFRA SIN confirmar: 0
+      (la busqueda de las no confirmadas da CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA  9 de 17 | fila 04 ENLACES | indice 1
+   VERBATIM: ninguna crea auto-arista tras resolver
+------------------------------------------------------------------------------
+   LA CLAUSULA DICE 'TRAS RESOLVER', asi que la comparacion literal no vale: los dos extremos se pasan por el resolutor y se comparan despues, que es la leccion escrita de OP-S-07.
+   CIFRA aristas nuevas medidas: 296
+   CIFRA aristas nuevas que crean AUTO-ARISTA tras resolver: 0
+      (la busqueda da CERO, y ese cero es el resultado: se corrio y se publica con su comando delante)
+   Y LA GUARDA HERMANA DE GATE 0, CITADA COMO CONTRASTE Y NO COMO FUENTE: [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 10 de 17 | fila 05 SANEO | indice 0
+   VERBATIM: ningun id vivo con tratado extinto
+------------------------------------------------------------------------------
+   LECTURA CORREGIDA, Y LA CORRECCION NO ES MIA: la celda de la fila 05 se lee ACOTADA A LAS NOMINAS DE SUS OPERACIONES (correccion declarada de la vuelta 122, lineas 35 a 58 de docs/plan/08_VERIFICACION.md), citando el punto 2 de la decision del fundador del 28 ago 2026, que saco el barrido global de NAFTA de la campana y dejo VIVA esta fila gemela.
+   CIFRA nodos de la nomina de OP-S-01, leidos del expediente: 2
+     nafta_free_trade_agreements                    vivo: NO | nombra el tratado extinto en id o titulo: SI | resuelve a certificado_de_origen_tratados_libre_comercio
+     certificado_de_origen_tratados_libre_comercio  vivo: SI | nombra el tratado extinto en id o titulo: NO | resuelve a certificado_de_origen_tratados_libre_comercio
+   CIFRA ids VIVOS de la nomina que nombran el tratado extinto: 0
+   Y LA LECTURA GLOBAL, PUBLICADA AUNQUE NO SEA EL SUJETO: CIFRA nodos VIVOS de TODO el catalogo que lo nombran en id o titulo: 0
+      (las dos busquedas dan CERO, y ese cero es el resultado)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 11 de 17 | fila 05 SANEO | indice 1
+   VERBATIM: los tres de Incoterms con su version
+------------------------------------------------------------------------------
+   EL SUJETO SON LOS TRES DE LA NOMINA DE OP-S-02, leidos del expediente (linea 11) y no tecleados.
+   CIFRA nodos de la nomina: 3 | CIFRA que la clausula escribe: 3
+   LECTURA CORREGIDA, Y LA CORRECCION ES DE LA VUELTA 120 Y VIVE EN LA PROPIA FICHA: DOS de los tres estan deprecados, y la version se mide EN SU SUPERVIVIENTE, no en el id muerto.
+     incoterms_reglas_comerciales_internacion vivo: SI | version en el propio nodo: SI | superviviente incoterms_reglas_comerciales_internacionales | ese cita Incoterms: SI | con version: SI
+     terminos_de_venta_incoterms              vivo: NO | version en el propio nodo: NO | superviviente incoterms_reglas_comerciales_internacionales | ese cita Incoterms: SI | con version: SI
+     seguro_de_carga_transporte               vivo: NO | version en el propio nodo: NO | superviviente seguro_exportacion | ese cita Incoterms: NO | con version: NO
+   CIFRA por la LECTURA LITERAL (el propio nodo, vivo y con version): 1 de 3
+   CIFRA por la LECTURA CORREGIDA (su superviviente trae la version): 2 de 3
+   EL QUE NO CUBRE POR NINGUNA DE LAS DOS ES EL TERCERO, y su motivo esta escrito y adjudicado: la cita de Incoterms no viajo completa a una fusion anterior, y el residuo quedo anotado en docs/PENDIENTES.md por el acta 120, sin ejecutarse.
+   VEREDICTO MEDIDO HOY: **A MEDIAS**
+
+------------------------------------------------------------------------------
+CLAUSULA 12 de 17 | fila 05 SANEO | indice 2
+   VERBATIM: ningun nodo cablea `export.gov`
+------------------------------------------------------------------------------
+   CLAUSULA CON CORRECCION DECLARADA, Y SE MIDE POR SU LECTURA CORREGIDA: la correccion de la vuelta 122 dice literalmente que esta clausula esta CUMPLIDA, por OP-S-03. Se remide igual, hoy y con la busqueda corrida, porque una correccion citada no es una medicion.
+   CIFRA nodos de la nomina de OP-S-03: 3
+   CIFRA nodos de la NOMINA que cablean export.gov: 0
+   CIFRA nodos de TODO el catalogo, vivos y deprecados, que lo cablean: 0
+      (las dos busquedas dan CERO, y ese cero es el resultado: se corrieron y se publican)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 13 de 17 | fila 05 SANEO | indice 3
+   VERBATIM: ninguna de las seis herramientas muertas
+------------------------------------------------------------------------------
+   CLAUSULA CON CORRECCION DECLARADA, Y ES LA QUE LA CORRECCION DE LA VUELTA 122 ACOTA: medida A LA LETRA da NO CUBRE por un residuo que el fundador ya saco de la campana. Se mide ACOTADA A LA NOMINA de OP-S-04, y el residuo global se publica al lado en vez de callarse.
+   CIFRA nodos de la nomina de OP-S-04, leidos del expediente (linea 13): 5
+   CIFRA herramientas muertas que la clausula nombra: 6
+     Alexa              en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 1 ['inteligencia_de_anuncios_de_la_competencia']
+     Compete            en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 0 
+     Perfect Audience   en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 0 
+     The Deck           en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 0 
+     oDesk              en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 0 
+     Elance             en la NOMINA: 0 | en nodos VIVOS de todo el catalogo: 0 
+   CIFRA menciones vivas DENTRO de la nomina: 0 (se exigen 0 por la lectura corregida)
+   CIFRA menciones vivas FUERA de la nomina, o sea el residuo global: 1. La correccion lo nombra por su nodo y lo manda a docs/PENDIENTES.md como trabajo post campana.
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 14 de 17 | fila 05 SANEO | indice 4
+   VERBATIM: ningun nodo con dos claves de fase
+------------------------------------------------------------------------------
+   LAS CLAVES NO SE TECLEAN: se computa la union de todas las claves del grafo y se filtran las que tienen pinta de fase.
+   CIFRA claves distintas en todo el grafo: 15
+   CIFRA claves con pinta de fase: 1 -> ['fase_proyecto']
+   CIFRA nodos con MAS DE UNA clave de fase: 0
+      (la busqueda da CERO, y ese cero es el resultado: los dos campos sucios que OP-S-06 nombra, fase_proekto cirilica y fase_project, no viven hoy en el grafo compilado)
+   Y LA GUARDA HERMANA DE GATE 0, CITADA COMO CONTRASTE: [OK] Ninguna clave de nodo fuera de la lista blanca del esquema (valor: 0 renegadas)
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 15 de 17 | fila 05 SANEO | indice 5
+   VERBATIM: **ningun nodo se cita a si mismo tras resolver**
+------------------------------------------------------------------------------
+   LA CLAUSULA DICE 'TRAS RESOLVER' Y POR ESO NO VALE COMPARAR LITERAL: un chequeo literal da CERO sobre un grafo con veintisiete, porque ninguna de las 33 era directa. Es la leccion escrita de OP-S-07 y de OP-C-04.
+   CIFRA nodos del grafo: 3853 | CIFRA VIVOS: 3169
+   CIFRA auto-aristas TRAS RESOLVER sobre nodos vivos: 0
+      (la busqueda da CERO, y ese cero es el resultado)
+   Y LA GUARDA DE GATE 0, CITADA COMO CONTRASTE Y NO COMO FUENTE: [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-arista via alias) (valor: 0 auto-a
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 16 de 17 | fila 06 MESAS | indice 0
+   VERBATIM: cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26)
+------------------------------------------------------------------------------
+   EL SUJETO SON LAS FICHAS DE LA FASE 06, leidas por su campo de fase y no tecleadas.
+   CIFRA fichas de la fase 06: 5
+   QUE CUENTA COMO QUE, Y SE DECLARA ANTES DE MEDIR: la DECISION es el campo de adjudicacion de la ficha; el MOTIVO es su campo de nota; y LA COBERTURA AL LADO no se busca en la ficha sino donde el banco 9.26 la pone, en las nominas del inventario que nombran esa mesa. Contar un 'N de M' cualquiera dentro de la ficha seria una sonda mas laxa que su clausula, porque la frase '5 de 5 mesas completas' aparece en las cinco y no habla de ninguna nomina.
+     OP-M-01    decision escrita: SI | motivo escrito: SI | nominas del inventario que la nombran:  8 | de esas CON cobertura al lado:  8
+        NOMINA> acto sistema_stage_gate | cobertura: 1 de 1 pares leidos; 0 en cola; 0 fuera de col
+        NOMINA> acto asignacion_recursos_en_gates | cobertura: 1 de 1 pares leidos; 0 en cola; 0 fuera de col
+     OP-M-02    decision escrita: SI | motivo escrito: SI | nominas del inventario que la nombran: 11 | de esas CON cobertura al lado: 11
+        NOMINA> figura el nombre que esconde | cobertura: 3 ejemplares
+        NOMINA> figura el forastero por cableado | cobertura: 2 ejemplares
+     OP-M-03    decision escrita: SI | motivo escrito: SI | nominas del inventario que la nombran:  1 | de esas CON cobertura al lado:  1
+        NOMINA> figura frontera de disposicion | cobertura: 5 ejemplares
+     OP-M-04    decision escrita: SI | motivo escrito: SI | nominas del inventario que la nombran:  4 | de esas CON cobertura al lado:  4
+        NOMINA> acto formalizar_junta_asesora | cobertura: 6 de 6 pares: 5 en el archivo y 1 en LD-01
+        NOMINA> racimo la junta asesora | cobertura: 6 de 6
+     OP-M-05    decision escrita: SI | motivo escrito: SI | nominas del inventario que la nombran:  3 | de esas CON cobertura al lado:  3
+        NOMINA> acto customer_development_modelo | cobertura: 16 de 36 pares leidos; 0 en cola; 20 fuera de 
+        NOMINA> acto customer_validation | cobertura: 15 de 21 pares leidos; 0 en cola; 6 fuera de c
+   CIFRA mesas con decision escrita: 5 de 5
+   CIFRA mesas con motivo escrito: 5 de 5
+   CIFRA nominas del inventario de las cinco mesas: 27 | CIFRA de esas CON cobertura al lado: 27 | SIN cobertura: 0
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+------------------------------------------------------------------------------
+CLAUSULA 17 de 17 | fila 07 ADUANA | indice 0
+   VERBATIM: los cuatro controles mecanicos **corriendo en Gate 0**
+------------------------------------------------------------------------------
+   LA CLAUSULA PIDE CUATRO Y LA PAGINA 07 NOMBRA CINCO, y eso se dice delante en vez de resolverlo callando: la tabla LOS CINCO CONTROLES MECANICOS QUE LA ACOMPANAN de docs/plan/07_ADUANA.md trae cinco filas, y la verificacion de OP-A-02 escribe 'los CINCO controles mecanicos corriendo'. El quinto nacio el 13 ago 2026, despues de que se escribiera esta celda.
+   CIFRA etiquetas de Gate 0 leidas de la corrida de esta vuelta: 26
+     auto-arista CON RESOLUCION (OP-C-04)                   marca auto-arista via alias        | etiquetas 1 | [OK] Ningun nodo VIVO se cita a si mismo tras RESOLVER (auto-ar
+     lista blanca de claves del nodo (OP-C-04)              marca lista blanca del esquema     | etiquetas 1 | [OK] Ninguna clave de nodo fuera de la lista blanca del esquema
+     control posicional del campo fuente (OP-A-01)          marca comprobacion posicional      | etiquetas 1 | [OK] OP-A-01: todo nodo VIVO con MAS DE UNA fuente pasa la comp
+     campo fuente CANONICO (OP-S-11)                        marca lista CANONICA de libros     | etiquetas 1 | [OK] OP-A-01 / OP-A-02 (A2.4): el campo `fuente` resuelve contr
+     revision de toda nomina por el DOMINIO de sus miembros marca nomina y dominio             | etiquetas 0 | NINGUNA: la busqueda da CERO y ese cero es el resultado
+   CIFRA controles de la pagina 07 que CORREN hoy en Gate 0: 4 de 5 | CIFRA de esos en verde: 4
+   CIFRA que la clausula pide: 4
+   VEREDICTO MEDIDO HOY: **CUBRE**
+
+==============================================================================
+1.d. EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION
+==============================================================================
+EL MUTANTE SE FABRICA EN MEMORIA SOBRE UNA COPIA PROFUNDA Y NO SE ESCRIBE EN NINGUNA FICHA, NINGUN NODO NI NINGUNA PAGINA.
+
+MUTANTE ROTO  1 | 0 CODIGO         idx 0 | desaparecen las pruebas, las etiquetas y las salid | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  2 | 01 FUENTES       idx 0 | un miembro de la clase queda con un solo paso      | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  3 | 01 FUENTES       idx 1 | un nodo de la nomina se borra sin dejar alias      | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  4 | 02 DESTEJIDOS    idx 0 | aparece un congelado de la nomina de la fase 02    | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  5 | 02 DESTEJIDOS    idx 1 | la pagina 02 se queda sin registros y las fichas s | veredicto A MEDIAS  | CAE: SI
+MUTANTE ROTO  6 | 03 FUSIONES      idx 0 | un superviviente pierde sus alias                  | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  7 | 03 FUSIONES      idx 1 | un absorbido deja de resolver a su superviviente   | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO  8 | 04 ENLACES       idx 0 | una arista nueva cita un puesto que no existe      | veredicto A MEDIAS  | CAE: SI
+MUTANTE ROTO  9 | 04 ENLACES       idx 1 | una arista nueva se cierra sobre si misma          | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 10 | 05 SANEO         idx 0 | el id con el tratado extinto vuelve a estar vivo   | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 11 | 05 SANEO         idx 1 | los supervivientes pierden la version              | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 12 | 05 SANEO         idx 2 | un nodo de la nomina vuelve a cablear el dominio m | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 13 | 05 SANEO         idx 3 | un nodo de la nomina vuelve a nombrar dos muertas  | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 14 | 05 SANEO         idx 4 | un nodo recibe una segunda clave de fase           | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 15 | 05 SANEO         idx 5 | un nodo vivo se cita a si mismo                    | veredicto NO CUBRE  | CAE: SI
+MUTANTE ROTO 16 | 06 MESAS         idx 0 | una nomina de mesa se queda sin cobertura          | veredicto A MEDIAS  | CAE: SI
+MUTANTE ROTO 17 | 07 ADUANA        idx 0 | dos controles dejan de correr en Gate 0            | veredicto A MEDIAS  | CAE: SI
+
+CIFRA mutantes rotos: 17 | CIFRA que CAEN (o sea que NO dicen CUBRE): 17
+
+Y EL REVERSO, PORQUE UNA SONDA QUE NUNCA PUEDE DECIR CUBRE TAMPOCO MIDE: las que hoy NO dan CUBRE llevan ademas un mutante SANO, y tienen que SUBIR.
+MUTANTE SANO    | 01 FUENTES       idx 0 | los seis vuelven al texto del grafo previo         | veredicto CUBRE     | SUBE: SI
+MUTANTE SANO    | 01 FUENTES       idx 1 | las nominas dejan de declarar un segundo libro     | veredicto CUBRE     | SUBE: SI
+MUTANTE SANO    | 03 FUSIONES      idx 0 | los actos sin fundir quedan con un superviviente y | veredicto CUBRE     | SUBE: SI
+MUTANTE SANO    | 05 SANEO         idx 1 | los tres supervivientes traen la version           | veredicto CUBRE     | SUBE: SI
+CIFRA mutantes sanos: 4 | CIFRA que SUBEN a CUBRE: 4
+CIFRA clausulas que hoy NO dan CUBRE: 5 | CIFRA de esas con mutante sano probado: 4
+AVISO: no todas las que no dan CUBRE tienen mutante sano, y se dice en vez de callarlo.
+
+==============================================================================
+EL REPARTO, CONTADO DE LO DE ARRIBA Y NO TECLEADO
+==============================================================================
+CIFRA clausulas en CUBRE     : 12 de 17
+CIFRA clausulas en A MEDIAS  : 5 de 17
+CIFRA clausulas en NO CUBRE  : 0 de 17
+CIFRA clausulas en SIN SONDA : 0 de 17
+
+LA TABLA DE LAS DIECISIETE, FILA A FILA:
+| # | fila | idx | veredicto | la clausula, VERBATIM |
+|---:|---|---:|---|---|
+| 1 | 0 CODIGO | 0 | CUBRE | cada caso positivo **se cae antes** del arreglo y pasa despues |
+| 2 | 01 FUENTES | 0 | A MEDIAS | ningun nodo de la clase con pasos alterados |
+| 3 | 01 FUENTES | 1 | A MEDIAS | **el material del segundo libro reubicado, no borrado** |
+| 4 | 02 DESTEJIDOS | 0 | CUBRE | los **quince congelados** releidos |
+| 5 | 02 DESTEJIDOS | 1 | A MEDIAS | **cada perdida en el bloque del que proviene** |
+| 6 | 03 FUSIONES | 0 | A MEDIAS | un superviviente por acto, el resto **DEPRECADO CON ALIAS** |
+| 7 | 03 FUSIONES | 1 | CUBRE | `resolverId` devuelve el superviviente |
+| 8 | 04 ENLACES | 0 | CUBRE | cada arista nueva **confirmada por lectura**, no por el instrumento |
+| 9 | 04 ENLACES | 1 | CUBRE | ninguna crea auto-arista tras resolver |
+| 10 | 05 SANEO | 0 | CUBRE | ningun id vivo con tratado extinto |
+| 11 | 05 SANEO | 1 | A MEDIAS | los tres de Incoterms con su version |
+| 12 | 05 SANEO | 2 | CUBRE | ningun nodo cablea `export.gov` |
+| 13 | 05 SANEO | 3 | CUBRE | ninguna de las seis herramientas muertas |
+| 14 | 05 SANEO | 4 | CUBRE | ningun nodo con dos claves de fase |
+| 15 | 05 SANEO | 5 | CUBRE | **ningun nodo se cita a si mismo tras resolver** |
+| 16 | 06 MESAS | 0 | CUBRE | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
+| 17 | 07 ADUANA | 0 | CUBRE | los cuatro controles mecanicos **corriendo en Gate 0** |
+CIFRA FILAS DE ESTA TABLA: 17 | CIFRA QUE DEBERIA HABER: 17
+
+LAS QUE NO DAN CUBRE, CON SU FILA, SU INDICE Y SU CIFRA:
+   01 FUENTES       idx 0 | A MEDIAS  | ningun nodo de la clase con pasos alterados
+   01 FUENTES       idx 1 | A MEDIAS  | **el material del segundo libro reubicado, no borrado**
+   02 DESTEJIDOS    idx 1 | A MEDIAS  | **cada perdida en el bloque del que proviene**
+   03 FUSIONES      idx 0 | A MEDIAS  | un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+   05 SANEO         idx 1 | A MEDIAS  | los tres de Incoterms con su version
+
+==============================================================================
+1.e. NO SE ESCRIBIO NADA: LOS DOS SHA, AL ENTRAR Y AL SALIR
+==============================================================================
+SHA256 DE docs/plan/OPERACIONES.jsonl AL SALIR: 650578474361eb2b disco y 650578474361eb2b LF
+SHA256 DE docs/plan/08_VERIFICACION.md AL SALIR: 578eeefab6db2fd4 disco y 578eeefab6db2fd4 LF
+LOS CUATRO SHA COINCIDEN CON LOS DE LA ENTRADA: SI
+
+CIFRA comprobaciones de este instrumento que fallan: 0
+VERDE: la medicion queda corrida.
