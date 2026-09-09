@@ -263,9 +263,14 @@ archivo por maquina: una correccion que tapa lo que corrige no se puede auditar.
 ```
 
 **EL MARCADOR, RECOMPUTADO CON SU COMANDO ANTES Y DESPUES**, `python
-scripts/recomputar_marcador.py 3388`, sellado en ``%(mar_a)s`` (**%(mad)d bytes
-en disco y %(mal)d normalizado a LF**) y en ``%(mar_d)s`` (**%(mdd)d bytes en
-disco y %(mdl)d normalizado a LF**):
+scripts/recomputar_marcador.py 3388`. **CORRECCION DECLARADA DENTRO DE LA PROPIA
+VUELTA: la primera version de este parrafo partia cada pareja de bytes en DOS
+lineas y la guarda del cierre la canto como cifra sin pareja. Cada ruta va ahora
+con sus dos convenciones EN SU MISMA LINEA, que es lo que la guarda pide.** Los
+dos recomputos quedan sellados:
+
+- ``%(mar_a)s``, **%(mad)d bytes en disco y %(mal)d bytes normalizado a LF**
+- ``%(mar_d)s``, **%(mdd)d bytes en disco y %(mdl)d bytes normalizado a LF**
 
 ```
 %(marcador)s

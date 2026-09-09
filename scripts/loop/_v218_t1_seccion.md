@@ -154,9 +154,14 @@ RELECTURA DEL DISCO: identico a lo juzgado: SI
 ```
 
 **EL MARCADOR, RECOMPUTADO CON SU COMANDO ANTES Y DESPUES**, `python
-scripts/recomputar_marcador.py 3388`, sellado en ``docs/loop/SALIDA_V218_T1_MARCADOR_ANTES.txt`` (**446 bytes
-en disco y 426 normalizado a LF**) y en ``docs/loop/SALIDA_V218_T1_MARCADOR_DESPUES.txt`` (**446 bytes en
-disco y 426 normalizado a LF**):
+scripts/recomputar_marcador.py 3388`. **CORRECCION DECLARADA DENTRO DE LA PROPIA
+VUELTA: la primera version de este parrafo partia cada pareja de bytes en DOS
+lineas y la guarda del cierre la canto como cifra sin pareja. Cada ruta va ahora
+con sus dos convenciones EN SU MISMA LINEA, que es lo que la guarda pide.** Los
+dos recomputos quedan sellados:
+
+- ``docs/loop/SALIDA_V218_T1_MARCADOR_ANTES.txt``, **446 bytes en disco y 426 bytes normalizado a LF**
+- ``docs/loop/SALIDA_V218_T1_MARCADOR_DESPUES.txt``, **446 bytes en disco y 426 bytes normalizado a LF**
 
 ```
 clase A | ANTES 550 | DESPUES 550 | movimiento +0
