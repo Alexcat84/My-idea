@@ -76,7 +76,7 @@ SE ESCRIBE.**
 |---|---|---|---|
 | **TAREA 1** | LOS REGISTROS, Y VA PRIMERA PORQUE LAS DEMAS SE APOYAN EN ELLA. Leer el acta de la vuelta 214 en `docs/loop/ACTA_AUDITOR.md`, sus secciones 3 y 5, y REGISTRAR LAS NUEVE ADJUDICACIONES CON LA LINEA DE DONDE SALE CADA UNA, aplicando como orden las cinco que el encargo nombra; y registrar el hallazgo `3.1` del auditor contra el reporte de la 214, que es la unica caida no declarada y la unica que acumula | **CERRADA** | SALIDA_V215_T1_REGISTROS.txt (9 adjudicaciones y 2 hallazgos con su linea), SALIDA_V215_T1_MUTANTES.txt (6 de 6 caen, texto bueno en 0 fallos), SALIDA_V215_COMPOSITOR_T1.txt |
 | **TAREA 2** | LA BATERIA ENTERA, POR TRAMOS, Y SIN EL FALSO VERDE. Publicar ANTES de correr nada de que vuelta son los once sellos que hay en el arbol, con su commit y su fecha leidos de git log; NO usar el carril de la senal de arranque, que hoy publica un verde que no es de esta vuelta; y correr los ONCE tramos uno a uno con su doble corrida, su reloj y su salida sellada, commiteando cada salida al terminar su tramo | **CERRADA, CON DOS PARADAS TRAIDAS** | SALIDA_V215_T2_PLAN.txt, SALIDA_V215_T2_SIGUIENTE_FALSO_VERDE.txt, los ONCE SALIDA_V183_BATERIA_TRAMO_N.txt, SALIDA_V183_BATERIA.txt, SALIDA_V215_T2_TABLA.txt, SALIDA_V215_T2_MUTANTES.txt |
-| **TAREA 3** | EL CIERRE INTEGRAL, TODO LO QUE NO NECESITA CREDENCIAL: el ciclo entero de Gate 0 por los dos lados con su consola SELLADA y sus dieciocho salidas en disco; las tres suites con su exitcode y sus bytes; el inventario de las 71 fichas contra sus pruebas con el hash de la apertura; y el marcador y el censo recomputados, cada uno con su comando y con las cifras del auditor al lado para cotejar y NO para copiar | **ABIERTA, SIN CERRAR** | (la fila la anexa `anexar_tarea_al_reporte.py` al cerrarse la tarea) |
+| **TAREA 3** | EL CIERRE INTEGRAL, TODO LO QUE NO NECESITA CREDENCIAL: el ciclo entero de Gate 0 por los dos lados con su consola SELLADA y sus dieciocho salidas en disco; las tres suites con su exitcode y sus bytes; el inventario de las 71 fichas contra sus pruebas con el hash de la apertura; y el marcador y el censo recomputados, cada uno con su comando y con las cifras del auditor al lado para cotejar y NO para copiar | **CERRADA, CON UNA DISCREPANCIA DECLARADA** | SALIDA_V215_T3_SUITE_MOTOR/TSC/WEB.txt, SALIDA_V215_T3_EXPEDIENTE.txt, SALIDA_V215_T3_EXPEDIENTE_CORTE_AUDITOR.txt, SALIDA_V215_T3_MARCADOR.txt, SALIDA_V215_T3_ARISTAS.txt, SALIDA_V215_CICLO_GATE0_APERTURA_CONSOLA.txt |
 | **TAREA 4** | LOS DOS PUNTOS QUE `OP-I-01` DEJO EN A MEDIAS, Y NO SE CIERRAN A OJO. El punto 3 por su NEGATIVA, que si se puede citar: se corre la busqueda y se publica su CERO con el comando delante. Y el punto 4 midiendo ANTES de decidir: buscar cual es el instrumento y cual el fichero que SI regeneran la vista humana, publicar la busqueda con su comando, y solo entonces decir si CUBRE, queda A MEDIAS o NO CUBRE. SIN mover el campo estado de ninguna ficha | **ABIERTA, SIN CERRAR** | (la fila la anexa `anexar_tarea_al_reporte.py` al cerrarse la tarea) |
 | **TAREA 5** | EL REPORTE, Y SU SECCION 3.1 ESTA VEZ CON CIFRAS DENTRO. Sellar la consola del ciclo de Gate 0 por los dos lados en los nombres que el compositor busca, y sobre todo hacer que EL COMPOSITOR CAIGA EN ROJO SI NO LA ENCUENTRA: el de la 214 escribio una fila en blanco y siguio, que es degradacion silenciosa y es lo que el banco 9 prohibe. Y la seccion 9 cierra con LA BATERIA CORRIDA, no con hueco declarado, porque esta es su vuelta | **ABIERTA, SIN CERRAR** | (la fila la anexa `anexar_tarea_al_reporte.py` al cerrarse la tarea) |
 <!-- FIN TABLA DE TAREAS -->
@@ -278,6 +278,117 @@ dicen lo mismo.**
 casos, 0 que no calzan**, y la cifra que de verdad importa es que los
 casos con caidos distinto de cero en los que la frase **aun diria** *"ninguno
 cae"* son **0**.
+
+### TAREA 3. EL CIERRE INTEGRAL, TODO LO QUE NO NECESITA CREDENCIAL
+
+**LA GUARDA DE ESTA SECCION ES LA QUE ME FALTO EN LA 214, Y VA DELANTE.** El
+compositor mira **las seis fuentes** antes de componer y **CIFRA fuentes
+ausentes: 0**; si faltara una, **REVIENTA y no escribe**, en vez de dejar una
+celda en blanco y seguir. Lo mismo con las cifras: **necesita 25 y le
+faltan 0**.
+
+#### 3.a. EL CICLO ENTERO DE GATE 0, Y POR QUE SUS DOS LADOS NO VAN LOS DOS AQUI
+
+**EL LADO APERTURA CORRIO ANTES DE LA PRIMERA TAREA Y ESTA SELLADO**, con su
+consola en `docs/loop/SALIDA_V215_CICLO_GATE0_APERTURA_CONSOLA.txt` y sus nueve salidas en disco. **PEOR EXITCODE DE LOS
+OCHO, LEIDO DE ESA CONSOLA: 0.**
+
+**EL LADO CIERRE NO SE CORRE AQUI Y DIGO POR QUE, QUE NO ES PEREZA:**
+`EJECUTOR.md` 1 dice que **EL ESTADO AL CIERRE SE MIDE AL CIERRE**, y medirlo en
+mitad de la vuelta y publicarlo como cierre es la caida de la vuelta 28. **El
+lado CIERRE corre al cerrar y sus cifras van en la seccion 3.1**, con las
+DIECIOCHO salidas cotejadas y los dos lados juntos.
+
+#### 3.b. LAS TRES SUITES, CADA UNA CORRIDA SOLA Y SELLADA APARTE
+
+**Son las mismas tres que el ciclo corre en sus puestos 7, 8a y 8b, y aqui van
+CORRIDAS OTRA VEZ Y SOLAS**, para que su cifra no dependa de leer dentro de la
+salida de otro instrumento.
+
+**FILAS ARMADAS: 3. FILAS QUE DEBERIA HABER: 3.**
+
+| suite | comando | exitcode | bytes | salida sellada |
+|---|---|---:|---:|---|
+| **motor** | `engine/run_all_tests.py` | **0** | 1164 | `docs/loop/SALIDA_V215_T3_SUITE_MOTOR.txt` |
+| **tsc** | `npx tsc --noEmit -p tsconfig.json` | **0** | 15 | `docs/loop/SALIDA_V215_T3_SUITE_TSC.txt` |
+| **web** | `pnpm test` | **0** | 338 | `docs/loop/SALIDA_V215_T3_SUITE_WEB.txt` |
+
+#### 3.c. EL INVENTARIO DE LAS 71 FICHAS CONTRA SUS PRUEBAS
+
+**Corrido con `scripts/loop/vuelta150_3_relectura_expediente.py --corte` y el
+hash de MI apertura, `416c7a43`**, que es el que el encargo pide. Salida sellada
+en `docs/loop/SALIDA_V215_T3_EXPEDIENTE.txt`.
+
+**PUBLICO LA CIFRA QUE SALE, NO LA QUE ME GUSTE:**
+
+- **CIFRA fichas del expediente: 71.**
+- **CIFRA fichas que NO CALZAN: 40.**
+- **CIFRA congeladas DECLARADAS: 24 | congeladas EN SILENCIO:
+  12.**
+- **CIFRA fichas en HECHA SIN NINGUNA PRUEBA: 4.**
+- **CIFRA fichas en LISTA sin ninguna prueba: 3.**
+
+**MI CIFRA DE 40 ES LA SUYA, Y NO LA AJUSTO PORQUE NO HACE FALTA.** Lo comprobe
+ademas **con SU corte** (`docs/loop/SALIDA_V215_T3_EXPEDIENTE_CORTE_AUDITOR.txt`, corrido con `--corte 89c7bf23`): da
+**40** que no calzan y **4** en HECHA sin prueba.
+**Los dos cortes dan lo mismo**, o sea que la cifra no depende de cual de los dos
+hashes se use.
+
+**Y AQUI VA UNA DISCREPANCIA QUE DECLARO EN VEZ DE RESOLVER COPIANDO.** El
+encargo dice *"dos de ellas, `OP-V-01` y `OP-L-01`, siguen en HECHA SIN NINGUNA
+PRUEBA"*. **Yo mido 4, no dos**, y las cuatro van con su nombre:
+
+| id_op | fase | veredicto de la vara |
+|---|---|---|
+| `OP-V-01` | 08_VERIFICACION | **HECHA SIN NINGUNA PRUEBA** |
+| `OP-L-01` | 09_LECTURAS_DIRIGIDAS | **HECHA SIN NINGUNA PRUEBA** |
+| `OP-L-02` | 09_LECTURAS_DIRIGIDAS | **HECHA SIN NINGUNA PRUEBA** |
+| `OP-L-03` | 09_LECTURAS_DIRIGIDAS | **HECHA SIN NINGUNA PRUEBA** |
+
+**NO DIGO QUE EL AUDITOR SE EQUIVOQUE Y NO TENGO COMO SABERLO:** las dos que
+nombra estan entre las cuatro, y nombrar dos de cuatro no es afirmar que sean
+dos. **Lo que hago es publicar las cuatro con su nombre**, porque una vuelta que
+copia "dos" de un encargo teniendo cuatro delante es la caida que
+`EJECUTOR.md` 2 prohibe.
+
+#### 3.d. EL MARCADOR Y EL CENSO, RECOMPUTADOS CADA UNO CON SU COMANDO
+
+**MARCADOR**, con `python scripts/recomputar_marcador.py 3388`, sellado en
+`docs/loop/SALIDA_V215_T3_MARCADOR.txt`: **n 3388, corte 3388, A 550, B 72, C 5,
+D 2761, huecos 0, duplicados de puesto 0, pares duplicados
+0.**
+
+**CENSO Y ARISTAS**, con `python scripts/loop/vuelta83_conteo_aristas.py WORK`,
+sellado en `docs/loop/SALIDA_V215_T3_ARISTAS.txt`: **nodos 3853, vivos 3169, deprecados
+684; siguientes 8780, previos 8740, suma 17520.** La union sale
+**9914** y **la publico sin cotejarla**, porque el encargo no da su pareja y
+una cifra sin pareja no se coteja, se dice.
+
+**EL COTEJO CONTRA LAS CIFRAS QUE EL ENCARGO ME DA, PARA COTEJAR Y NO PARA
+COPIAR.** Las suyas viven en `docs/loop/PROMPT_SIGUIENTE.md`, TAREA 3, apartados
+(c) y (d).
+
+**FILAS ARMADAS: 13. FILAS QUE DEBERIA HABER: 13.**
+**CIFRA celdas que NO CALZAN: 0.**
+
+| cifra | la MIA, medida hoy | la del encargo | veredicto |
+|---|---:|---:|---|
+| `A` | **550** | 550 | calza |
+| `B` | **72** | 72 | calza |
+| `C` | **5** | 5 | calza |
+| `D` | **2761** | 2761 | calza |
+| `depre` | **684** | 684 | calza |
+| `huecos` | **0** | 0 | calza |
+| `marcador_n` | **3388** | 3388 | calza |
+| `no_calzan` | **40** | 40 | calza |
+| `nodos` | **3853** | 3853 | calza |
+| `prev` | **8740** | 8740 | calza |
+| `sig` | **8780** | 8780 | calza |
+| `suma` | **17520** | 17520 | calza |
+| `vivos` | **3169** | 3169 | calza |
+
+**LAS 13 CALZAN UNA A UNA, Y NO ME LAS CREI: LAS MEDI.** Es la unica
+manera de que un cotejo signifique algo.
 
 <!-- FIN ANEXO DE TAREAS -->
 
