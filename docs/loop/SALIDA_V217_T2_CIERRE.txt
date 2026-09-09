@@ -1,0 +1,107 @@
+==============================================================================
+VUELTA 217, TAREA 2. EL CIERRE INTEGRAL, MEDIDO DE SUS FICHEROS
+==============================================================================
+
+2.a.1. EL CICLO ENTERO DE GATE 0, LOS DOS LADOS, CON SUS SALIDAS SELLADAS
+   SALIDA docs/loop/SALIDA_V217_GATE0_CMD1_APERTURA.txt    4790 bytes en disco y   4790 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_ETIQUETAS_APERTURA.txt   7928 bytes en disco y   7928 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_SYNC_APERTURA.txt     574 bytes en disco y    574 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_NUMSTAT_APERTURA.txt    140 bytes en disco y    140 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CONTEO_APERTURA.txt         168 bytes en disco y    168 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_DESFASE_CALIBRADO_APERTURA.txt    498 bytes en disco y    498 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_MOTOR_APERTURA.txt         1131 bytes en disco y   1131 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_TSC_APERTURA.txt              7 bytes en disco y      7 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_WEB_APERTURA.txt            336 bytes en disco y    336 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_GATE0_CMD1_CIERRE.txt      4790 bytes en disco y   4790 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_ETIQUETAS_CIERRE.txt   7928 bytes en disco y   7928 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_SYNC_CIERRE.txt       574 bytes en disco y    574 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CICLO_NUMSTAT_CIERRE.txt    140 bytes en disco y    140 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_CONTEO_CIERRE.txt           168 bytes en disco y    168 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_DESFASE_CALIBRADO_CIERRE.txt    498 bytes en disco y    498 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_MOTOR_CIERRE.txt           1131 bytes en disco y   1131 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_TSC_CIERRE.txt                7 bytes en disco y      7 normalizado a LF | EXITCODE dentro: 0
+   SALIDA docs/loop/SALIDA_V217_WEB_CIERRE.txt              336 bytes en disco y    336 normalizado a LF | EXITCODE dentro: 0
+CIFRA salidas selladas del ciclo: 18 | CIFRA que deberia haber: 18
+CIFRA ausentes: 0 | CIFRA de cero bytes: 0
+CIFRA salidas SIN exitcode dentro: 0
+CIFRA peor exitcode de las dieciocho: 0
+
+2.a.2. LAS DOS CONSOLAS DEL CICLO, SELLADAS POR EL PROPIO INSTRUMENTO
+   CONSOLA APERTURA  docs/loop/SALIDA_V217_CICLO_GATE0_APERTURA_CONSOLA.txt | 965 bytes en disco y 965 normalizado a LF | peor exitcode que declara: 0
+   CONSOLA CIERRE    docs/loop/SALIDA_V217_CICLO_GATE0_CIERRE_CONSOLA.txt | 961 bytes en disco y 961 normalizado a LF | peor exitcode que declara: 0
+CIFRA consolas selladas: 2 | CIFRA que deberia haber: 2
+
+2.a.3. LAS TRES SUITES SOLAS, CADA UNA CON SU EXITCODE Y SUS BYTES
+   SUITE motor  docs/loop/SALIDA_V217_T2_SUITE_MOTOR.txt | EXITCODE 0 | 1160 bytes en disco y 1131 normalizado a LF
+   SUITE tsc    docs/loop/SALIDA_V217_T2_SUITE_TSC.txt | EXITCODE 0 | 11 bytes en disco y 11 normalizado a LF
+   SUITE web    docs/loop/SALIDA_V217_T2_SUITE_WEB.txt | EXITCODE 0 | 334 bytes en disco y 334 normalizado a LF
+CIFRA suites corridas solas: 3 | CIFRA que deberia haber: 3
+
+2.a.4. EL MARCADOR Y EL CENSO, RECOMPUTADOS CADA UNO CON SU COMANDO
+   COMANDO 1: python scripts/recomputar_marcador.py 3388 -> docs/loop/SALIDA_V217_T2_MARCADOR.txt
+   COMANDO 2: python scripts/loop/vuelta83_conteo_aristas.py WORK -> docs/loop/SALIDA_V217_T2_ARISTAS.txt
+   MARCADOR: n 3388 | A 550 | B 72 | C 5 | D 2761 | huecos 0
+   CENSO: nodos 3853 vivos 3169 deprecados 684
+   ARISTAS: siguientes 8780 previos 8740 suma 17520 union 9914
+
+2.a.5. LAS CIFRAS DEL AUDITOR, COTEJADAS UNA A UNA Y NO COPIADAS
+   COTEJO marcador n                     | LA MIA 3388     | la del encargo 3388     | CALZA: SI
+   COTEJO marcador A                     | LA MIA 550      | la del encargo 550      | CALZA: SI
+   COTEJO marcador B                     | LA MIA 72       | la del encargo 72       | CALZA: SI
+   COTEJO marcador C                     | LA MIA 5        | la del encargo 5        | CALZA: SI
+   COTEJO marcador D                     | LA MIA 2761     | la del encargo 2761     | CALZA: SI
+   COTEJO marcador huecos                | LA MIA 0        | la del encargo 0        | CALZA: SI
+   COTEJO censo nodos                    | LA MIA 3853     | la del encargo 3853     | CALZA: SI
+   COTEJO censo vivos                    | LA MIA 3169     | la del encargo 3169     | CALZA: SI
+   COTEJO censo deprecados               | LA MIA 684      | la del encargo 684      | CALZA: SI
+   COTEJO aristas siguientes             | LA MIA 8780     | la del encargo 8780     | CALZA: SI
+   COTEJO aristas previos                | LA MIA 8740     | la del encargo 8740     | CALZA: SI
+   COTEJO aristas suma                   | LA MIA 17520    | la del encargo 17520    | CALZA: SI
+   COTEJO aristas union                  | LA MIA 9914     | la del encargo 9914     | CALZA: SI
+   COTEJO Gate 0 peor exitcode           | LA MIA 0        | la del encargo 0        | CALZA: SI
+   COTEJO salidas selladas del ciclo     | LA MIA 18       | la del encargo 18       | CALZA: SI
+   COTEJO salidas ausentes del ciclo     | LA MIA 0        | la del encargo 0        | CALZA: SI
+CIFRA cifras cotejadas: 16 | CIFRA que NO calzan: 0
+
+2.a.6. LAS SEDES QUE LA VUELTA PUDO MOVER, COTEJADAS POR SU sha256
+   SEDE docs/plan/INVENTARIO.jsonl                 | al abrir 43cea06634e6fc1a | al cerrar 43cea06634e6fc1a | QUIETA | 629533 / 629533 bytes | cotejo de los dos sha256
+   SEDE docs/plan/OPERACIONES.jsonl                | al abrir 650578474361eb2b | al cerrar 650578474361eb2b | QUIETA | 517181 / 517181 bytes | cotejo de los dos sha256
+   SEDE docs/plan/08_VERIFICACION.md               | al abrir 578eeefab6db2fd4 | al cerrar 578eeefab6db2fd4 | QUIETA | 73652 / 73652 bytes | cotejo de los dos sha256
+   SEDE docs/plan/10_INVENTARIO.md                 | al abrir NO_MEDIDA_AL_ABRIR | al cerrar 67f464d3d0b9e067 | QUIETA | 34258 / 33845 bytes | NO MEDIDA AL ABRIR (no estaba en la lista del sello de apertura): su quietud se mide con git diff --numstat HEAD, 0 filas
+   SEDE docs/plan/LECTURAS_DIRIGIDAS.md            | al abrir NO_MEDIDA_AL_ABRIR | al cerrar a8ba1749b9a3fa13 | QUIETA | 219178 / 219178 bytes | NO MEDIDA AL ABRIR (no estaba en la lista del sello de apertura): su quietud se mide con git diff --numstat HEAD, 0 filas
+   SEDE docs/INTRA_DOMINIO_VEREDICTOS.jsonl        | al abrir 758edf1f5c313c18 | al cerrar 758edf1f5c313c18 | QUIETA | 4057130 / 4057130 bytes | cotejo de los dos sha256
+   SEDE docs/INTRA_DOMINIO_INFORME.md              | al abrir NO_MEDIDA_AL_ABRIR | al cerrar c05b6bcd20188a9c | QUIETA | 943970 / 943970 bytes | NO MEDIDA AL ABRIR (no estaba en la lista del sello de apertura): su quietud se mide con git diff --numstat HEAD, 0 filas
+   SEDE docs/plan/00_INDICE.md                     | al abrir NO_MEDIDA_AL_ABRIR | al cerrar 2e71336cc2fdc387 | QUIETA | 45278 / 45278 bytes | NO MEDIDA AL ABRIR (no estaba en la lista del sello de apertura): su quietud se mide con git diff --numstat HEAD, 0 filas
+   SEDE docs/BANCO_DE_TEXTOS.md                    | al abrir 8adbd60239509bb4 | al cerrar 8adbd60239509bb4 | QUIETA | 186490 / 186490 bytes | cotejo de los dos sha256
+   SEDE docs/plan/BANCO_DEL_PLAN.md                | al abrir 7836c8976c585143 | al cerrar 7836c8976c585143 | QUIETA | 61554 / 61554 bytes | cotejo de los dos sha256
+   SEDE dataset/metadata/master_graph.json         | al abrir 627cc662296f7f00 | al cerrar 627cc662296f7f00 | QUIETA | 8375817 / 8375817 bytes | cotejo de los dos sha256
+   SEDE docs/loop/ACTA_AUDITOR.md                  | al abrir d1e494504a480ac5 | al cerrar d1e494504a480ac5 | QUIETA | 5092743 / 5092743 bytes | cotejo de los dos sha256
+   SEDE docs/loop/PROMPT_SIGUIENTE.md              | al abrir 88e737f47a3be5b9 | al cerrar 88e737f47a3be5b9 | QUIETA | 9216 / 9216 bytes | cotejo de los dos sha256
+CIFRA sedes cotejadas: 13 | CIFRA que se movieron: 0
+CIFRA sedes cuya quietud se midio por sha256 de apertura: 9 | por git diff, porque la apertura no las nombraba: 4
+
+2.a.7. LA MORATORIA: LO QUE ESTA VUELTA ESCRIBIO EN EL ARBOL DE SCRIPTS
+   TOCADO scripts/loop/_v217_apertura.py                       | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_ciclo_gate0.py                    | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_esqueleto.py                      | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_t1_diecisiete.py                  | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_t1_seccion.md                     | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_t1_seccion.py                     | prefijo _v217_: SI
+   TOCADO scripts/loop/_v217_t2_cierre.py                      | prefijo _v217_: SI
+CIFRA ficheros de scripts que esta vuelta escribio, MEDIDA AHORA: 7 | CIFRA de esos con el prefijo que le toca: 7
+
+2.a.7.bis. EL HUECO DE ESTA MISMA CIFRA, DECLARADO Y NOMBRADO
+   MOTIVO, dicho antes que la cifra: este instrumento corre ANTES de que el cierre escriba sus propios ficheros. La cifra de arriba es exacta en el momento en que se mide y NO es el total de la vuelta.
+   DEL HUECO scripts/loop/_v217_t2_seccion.py                 | ya contado arriba: NO
+   DEL HUECO scripts/loop/_v217_t2_seccion.md                 | ya contado arriba: NO
+   DEL HUECO scripts/loop/_v217_cierre_texto.py               | ya contado arriba: NO
+   DEL HUECO scripts/loop/_v217_cierre_texto.md               | ya contado arriba: NO
+CIFRA MEDIDA AHORA: 7 | CIFRA DEL HUECO QUE EL PROPIO CIERRE ANADE: 4 | CIFRA TOTAL DE LA VUELTA, LAS DOS JUNTAS: 11
+   Y LOS DEL HUECO LLEVAN EL PREFIJO IGUAL: 4 de 4, contado de sus propios nombres.
+
+2.a.8. LA FECHA DE LA VUELTA, MEDIDA Y NO SUPUESTA
+   fecha del commit de apertura, leida de git log: 2026-09-09
+   fecha del commit de ahora mismo, leida de git log: 2026-09-09
+
+CIFRA comprobaciones que fallan: 0
+VERDE: el cierre integral sale limpio.

@@ -15,7 +15,7 @@ la moratoria protege.
 
 **CIFRA lineas de ese fichero: 626 | CIFRA lineas ejecutadas al cargarlo: 622. La diferencia es SU ULTIMA LINEA DE ENTRADA, una llamada suelta a main() sin guarda, que se descarta para cargar sus lectores sin correr su tabla. EL FICHERO EN DISCO NO SE TOCA: la moratoria prohibe repararlo y no se repara.**
 
-## 1.a. LAS FILAS Y SUS CLAUSULAS, SACADAS CON UN INSTRUMENTO Y NO A MANO
+#### 1.a. LAS FILAS Y SUS CLAUSULAS, SACADAS CON UN INSTRUMENTO Y NO A MANO
 
 **LAS CUATRO CIFRAS, CADA UNA CON LA DEL ENCARGO AL LADO Y EN LA MISMA LINEA,
 que es lo que la obligacion de las filas manda:**
@@ -68,7 +68,7 @@ haber):
   07 ADUANA        idx 0 | los cuatro controles mecanicos **corriendo en Gate 0**
 ```
 
-## 1.b Y 1.c. EL VEREDICTO DE CADA UNA, CON SU BUSQUEDA CORRIDA
+#### 1.b Y 1.c. EL VEREDICTO DE CADA UNA, CON SU BUSQUEDA CORRIDA
 
 **LA TABLA SALE DEL FICHERO Y SE CUENTA ANTES DE PUBLICARLA: 17 filas de
 datos leidas, 17 que deberia haber.**
@@ -118,7 +118,7 @@ mencion esta **FUERA de la nomina de `OP-S-04`** y el fundador ya la saco de la
 campana. **Medida acotada da CERO menciones dentro de la nomina, y las dos
 cifras se publican juntas.**
 
-## 1.d. EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION
+#### 1.d. EL CASO ROJO NO SE PROMETE, SE PRUEBA POR MUTACION
 
 **17 mutantes rotos leidos del fichero, 17 que deberia haber, y CAEN
 17 de 17.** Ninguno toca una ficha, un nodo ni una pagina: se fabrican en
@@ -154,7 +154,7 @@ MUTANTE SANO    | 03 FUSIONES      idx 0 | los actos sin fundir quedan con un su
 MUTANTE SANO    | 05 SANEO         idx 1 | los tres supervivientes traen la version           | veredicto CUBRE     | SUBE: SI
 ```
 
-## 1.e. NO SE ESCRIBIO NADA, Y SE PRUEBA CON LOS CUATRO SHA
+#### 1.e. NO SE ESCRIBIO NADA, Y SE PRUEBA CON LOS CUATRO SHA
 
 ```
 SHA256 DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b disco y 650578474361eb2b LF
@@ -166,7 +166,7 @@ LOS CUATRO SHA COINCIDEN CON LOS DE LA ENTRADA: SI
 
 **Ni un campo de estado, ni la pagina 08, ni el inventario, ni el expediente.**
 
-## 1.f. LA DISCREPANCIA CONTRA MI PROPIO ENCARGO, DECLARADA Y NO RESUELTA COPIANDO
+#### 1.f. LA DISCREPANCIA CONTRA MI PROPIO ENCARGO, DECLARADA Y NO RESUELTA COPIANDO
 
 **MI ENCARGO DICE, VERBATIM: "LAS OCHO FILAS DE 0 CODIGO A 07 ADUANA, CON SUS
 DIECISIETE CLAUSULAS, NO LAS HA MEDIDO NADIE CON UNA SONDA CORRIDA". MEDIDO HOY:
@@ -195,7 +195,7 @@ publica y se dice. **Y por lo mismo, para cargar sus lectores sin correr su
 tabla se descarta SU ULTIMA LINEA DE ENTRADA al ejecutarlo en memoria: el
 fichero en disco no se toca ni en un byte.**
 
-## 1.g. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
+#### 1.g. LOS DISCUTIBLES, MARCADOS ANTES DE SABER SI ACIERTO
 
 **Son lectura mia y por eso van aparte** (`EJECUTOR.md` 7). **Cinco.**
 
