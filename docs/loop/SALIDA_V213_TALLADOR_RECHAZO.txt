@@ -1,0 +1,34 @@
+==============================================================================
+LA CABECERA DEL REPORTE, TALLADA. Vuelta 213. Modo fase04.
+Cada celda sale de la salida que la cita; ninguna esta tecleada.
+==============================================================================
+
+  ROJO, 20 celdas no se pudieron leer y NO se talla nada:
+     no existe la salida SALIDA_V213_GATE0_CMD1_CIERRE.txt
+     sin texto para censo (nodos) CIERRE
+     sin texto para censo (vivos) CIERRE
+     sin texto para censo (deprecados) CIERRE
+     sin texto para Gate 0 auto-aristas CIERRE
+     sin texto para Gate 0 duplicadas de titulo CIERRE
+     sin texto para Gate 0 nodos divergentes CIERRE
+     sin texto para veredicto Gate 0 CIERRE
+     no existe la salida SALIDA_V213_CONTEO_CIERRE.txt
+     no se pudo leer las cifras de aristas CIERRE
+     no existe la salida SALIDA_V213_MOTOR_CIERRE.txt
+     sin texto para motor CIERRE
+     no existe la salida SALIDA_V213_WEB_CIERRE.txt
+     no se pudo leer web ficheros CIERRE
+     no se pudo leer web tests CIERRE
+     no existe la salida SALIDA_V213_TSC_CIERRE.txt
+     no existe la salida SALIDA_V213_DESFASE_CALIBRADO_CIERRE.txt
+     sin texto para desfase CIERRE
+     git log --diff-filter=A no trae ningun commit que anada docs/loop/SALIDA_V213_HEAD_APERTURA.txt: no se talla la procedencia del sello
+     no existe el sello SALIDA_V213_HEAD_CIERRE.txt (el ejecutor debe correr `git rev-parse HEAD` tras la ultima operacion, antes de escribir el reporte, y guardarlo ahi)
+     RECHAZO SELLADO EN docs/loop/SALIDA_V213_TALLADOR_RECHAZO.txt (2034 bytes, 20 celdas)
+tima operacion, antes de escribir el reporte, y guardarlo ahi)
+
+QUE ES ESTE FICHERO Y QUE NO ES: es la prueba de que el tallador se
+NEGO A TALLAR y por que. NO es una cabecera, no se pega en ningun
+reporte y no sustituye a la tabla: la tabla solo existe cuando el
+tallador sale VERDE. Esto es lo que queda cuando sale ROJO, para que
+la cifra del rojo se pueda re-verificar despues (acta 176, punto 9.4).
