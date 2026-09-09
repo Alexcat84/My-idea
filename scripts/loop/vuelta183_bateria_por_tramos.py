@@ -94,6 +94,12 @@ if not _M_VUELTA:
     raise SystemExit("ROJO: el nombre %r no dice de que vuelta es este lanzador, "
                      "y el numero NO SE ADIVINA." % LANZADOR)
 VUELTA = int(_M_VUELTA.group(1))
+# EL ROTULO DE LAS SALIDAS (auditoria integral, 9 sep 2026, cola entrada 3): por
+# defecto es "V<vuelta>", o sea el nombre de siempre; con --rotulo <texto> las
+# tres salidas (tramo, transcripcion y compuesta) y --siguiente llevan ese
+# texto, para que una sesion que no es una vuelta (la integral) no selle
+# sobre las salidas de la 183 ni --siguiente mire las de otra corrida.
+ROTULO = "V%d" % VUELTA
 
 sys.path.insert(0, AQUI)
 import guarda_commit_dataset as GUARDA   # noqa: E402
@@ -276,7 +282,7 @@ class Desdoble(object):
 
 
 def nombre_transcripcion(n):
-    return "SALIDA_V%d_LANZADOR_TRAMO_%d.txt" % (VUELTA, n)
+    return "SALIDA_%s_LANZADOR_TRAMO_%d.txt" % (ROTULO, n)
 
 
 def ahora_utc():
@@ -284,13 +290,13 @@ def ahora_utc():
 
 
 def nombre_tramo(n):
-    return "SALIDA_V%d_BATERIA_TRAMO_%d.txt" % (VUELTA, n)
+    return "SALIDA_%s_BATERIA_TRAMO_%d.txt" % (ROTULO, n)
 
 
 def nombre_de_la_compuesta():
     """EL NOMBRE DE LA SALIDA UNICA. Computado igual que los demas, para que la
     pieza que `cerrar_reporte.py` pide con --bateria no dependa de un literal."""
-    return "SALIDA_V%d_BATERIA.txt" % VUELTA
+    return "SALIDA_%s_BATERIA.txt" % ROTULO
 
 
 def medir(ruta):
@@ -678,9 +684,13 @@ def main():
                     help="compone la salida unica de los tramos ya sellados")
     ap.add_argument("--plan", action="store_true",
                     help="imprime el reparto y no corre nada")
+    ap.add_argument("--rotulo", default=None,
+                    help="rotulo de las salidas en vez de V<vuelta> (p. ej. integral)")
     ap.add_argument("--siguiente", action="store_true",
                     help="dice que tramo toca, mirando que salidas selladas hay")
     a = ap.parse_args()
+    if a.rotulo:
+        globals()["ROTULO"] = a.rotulo
     sys.stdout.reconfigure(encoding="utf-8")
 
     # EL GUARDA DE LA CAIDA `E.1`, CORRIDO SOBRE EL PROPIO FUENTE Y ANTES DE

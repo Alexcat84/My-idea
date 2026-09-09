@@ -117,6 +117,11 @@ lo que diga el encargo.
    evidencia de una corrida cuenta como CIFRA PUBLICADA en su sede, y si apunta
    a un fichero inexistente o de CERO BYTES es CAIDA DE CIFRA. Antes de escribir
    una ruta como prueba, se comprueba que el fichero existe y que no esta vacio.
+   LA PAREJA DE BYTES ES UNA REGLA DE CIFRAS, NO DE RUTAS (auditoria integral, 9 sep
+   2026, cola de la 219 entrada 7, en las palabras del propio ejecutor): la
+   pareja de bytes (en disco y normalizados a LF) acompaña a TODA CIFRA DE BYTES
+   publicada, venga de una ruta o de un campo de texto. Un tamaño en bytes sin
+   su pareja es cifra a medias.
    MORATORIA DE MAQUINARIA, Y EL BUCLE VUELVE AL PLAN (7 sep 2026, decision del
    fundador; el regimen entero en AUDITOR.md seccion 6.3). NO SE FABRICAN
    ARNESES, GUARDAS NI LECTORES NUEVOS, salvo las TAREAS 1 y 2 que el acta 198

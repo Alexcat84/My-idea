@@ -1,0 +1,20 @@
+ARNES DE MUTACION DE LA VISTA IMPRESA DEL INVENTARIO (auditoria integral, 9 sep 2026)
+sujeto vivo: scripts/loop/vista_del_inventario.py
+CIFRA entradas del archivo: 672 | sha 43cea06634e6fc1a | CIFRA bytes de la pagina: 45325
+
+(0) CONTRAPRUEBA sin mutar: VERDE. el bloque de la pagina es identico al impreso hoy del archivo (165 lineas)
+(A) EL ARCHIVO CRECE EN MEMORIA (un acto vigente mas): ROJO -> CAE. el bloque de la pagina NO es identico al impreso hoy del archivo: primera linea distinta 11 de 165 (pagina) contra 165 (fresco)
+(B) EL ACTO 'customer_validation_sales_roadmap' PASA DE CERRADO A ABIERTO EN MEMORIA: ROJO -> CAE. el bloque de la pagina NO es identico al impreso hoy del archivo: primera linea distinta 46 de 165 (pagina) contra 165 (fresco)
+(C) LA PAGINA SE TOCA A MANO (dominio 10 -> 11): ROJO -> CAE. el bloque de la pagina NO es identico al impreso hoy del archivo: primera linea distinta 17 de 165 (pagina) contra 165 (fresco)
+(D) EL BLOQUE NO ESTA: ROJO -> CAE. la pagina no trae el bloque entre '<!-- VISTA IMPRESA: INICIO -->' y '<!-- VISTA IMPRESA: FIN -->'
+(E) LAS CIFRAS DEL VOLUMEN IMPRESO CONTRA EL CONTEO DIRECTO DE LA LISTA
+      dominio         impreso 10 | contado 10: PASA | esperado mutado 11: CAE
+      racimo          impreso 13 | contado 13: PASA | esperado mutado 14: CAE
+      acto            impreso 556 | contado 556: PASA | esperado mutado 557: CAE
+      familia_de_ids  impreso 54 | contado 54: PASA | esperado mutado 55: CAE
+      figura          impreso 20 | contado 20: PASA | esperado mutado 21: CAE
+      defecto         impreso 19 | contado 19: PASA | esperado mutado 20: CAE
+
+CERO ESCRITURAS: porcelain antes == despues: True
+CIFRA fallos: 0
+VEREDICTO: VERDE

@@ -167,3 +167,97 @@ sello `_integral_`; aqui solo se midieron los nueve uno a uno.
 Seccion 6, lineas 78024 a 78066, las siete con su numero. Se resuelven o se
 remiten con ficha en el apartado correspondiente de esta acta; ninguna queda sin
 linea.
+
+### 1.a (continuacion) LA DECISION DE ALCANCE Y LOS CINCO ITEMS, RESUELTOS
+
+**La respuesta del fundador** esta verbatim en
+`docs/loop/paradas/2026-09-09-alcance-integral-1a-DECISION.md`: los CINCO
+entran, con el criterio de firma, fabricacion barata o remision declarada con
+ficha. Las cinco celdas de `docs/plan/08_VERIFICACION.md` llevan el texto viejo
+tachado y el nuevo al lado, y el bloque de correccion declarada de la integral
+va debajo del de la vuelta 214; la tabla sigue armando **11 filas y 30
+clausulas** con el mismo reparto (medido con el mismo partidor del lector, el
+punto y coma).
+
+| item | destino | la cifra, corrida en esta sesion |
+|---|---|---|
+| 1. `03 FUSIONES` idx 0 | REESCRITA a los tres destinos y medida | `scripts/loop/_integral_1a_destino_de_los_actos.py`, salida `docs/loop/SALIDA_integral_1A_DESTINO_ACTOS.txt`: **335 de 335 con destino** (SUPERVIVIENTE 264, DECLARACION SELLADA 42, DISOLUCION MEDIDA 29, SIN DESTINO 0); por estado, ABIERTO 17 y 7 y 31, CERRADO 25 y 22 y 233 |
+| 2. `05 SANEO` idx 1 | FIRMADA | adjudicacion 4.5 del acta 219 (`ACTA_AUDITOR.md:77935`) escrita debajo de la tabla, con la decision del 9 sep 2026 citada |
+| 3. `07 ADUANA` idx 0 | FABRICADO | `scripts/loop/verificar_nomina_por_dominio.py` cableado a Gate 0 (`run_phase1.py`, comprobacion `OP-A-02 (quinto control)`): 32 racimos, 171 miembros, 0 fuera de su dominio; arnes `vuelta221_integral_mutacion_nomina_por_dominio.py` VERDE (cuatro mutaciones caen, cero escrituras) |
+| 4. `OP-I-01` idx 2 | REMITIDA CON FICHA | `docs/PENDIENTES.md`, ficha `relleno-de-huecos-del-inventario`, con la nomina de los cinco huecos que el archivo nombra (cuatro dominios sin cribar y el puente de la mesa unida) |
+| 5. `OP-I-01` idx 3 | FABRICADO | `scripts/loop/vista_del_inventario.py` (`--escribir`, `--comprobar`): bloque de 165 lineas al final de `10_INVENTARIO.md`; arnes `vuelta221_integral_mutacion_vista_inventario.py` VERDE (cinco casos caen) |
+
+**Lo que el instrumento del item 1 encontro y como se resolvio, dicho entero.**
+Con el grafo y los 81 planes sellados solos, **7 de los 335 quedaban SIN
+DESTINO** (`obtencion_compromiso`, `influence_map_organizacional`,
+`crowdfunding_legal_exemptions_jobs_act`, `analisis_trafico_competitivo`,
+`cultura_climatica_innovacion`, `hr_calidad_gestion`, `fit_problema_solucion`).
+Se buscaron uno a uno en el expediente y **los siete tienen su declaracion
+sellada en los registros de cierre de `docs/plan/03_FUSIONES.md`, no en un plan
+JSON**: colision de clase medida (lineas 909 y 913), pregunta de politica de
+catalogo congelada en una B (1431), conteos de contenido que chocan (1663),
+pregunta de politica que pide mesa (1927) y los dos actos con dueño FUERA de la
+fase, el 31 y el 37 del `orden_universo` (9272). El instrumento gano una cuarta
+fuente, la pagina, y con ella 335 de 335. **Un matiz que se dice:** cinco de
+esos siete se declararon *se acumula para LA MESA* y `docs/plan/06_MESAS.md`
+no los nombra (medido con grep: cero lineas); su destino es la declaracion con
+motivo, reabrible solo por la cola ordinaria post campaña (decision 2 del cierre
+de la fase 03, `03_FUSIONES.md:9284`). No se paro porque ninguno carece de los
+tres destinos; si el fundador lee esos cinco como trabajo real, son cinco actos
+de dos y tres miembros con su linea citada.
+
+**El quinto control, medido antes de fabricarlo:** el censo trae etiquetas de
+dominio en vocabulario libre (`NUCLEO`, `environmental + nucleo`, `nucleo (3) +
+quality (1)`) y 41 miembros deprecados. Leyendo `NUCLEO` como `core`, `a + b`
+como declaracion transversal (que es lo que `04_ENLACES.md:1045` ya reconoce) y
+resolviendo por alias, quedan **0 fuera de su dominio**; sin normalizar salian
+66. No exigio decision de contenido.
+
+**Una caida propia, cazada por el arnes y declarada:** la primera version de la
+vista clasificaba CERRADO y ABIERTO por la palabra que aparecia, y un estado
+corregido que dice *CERRADO (...). El texto viejo: ABIERTO* salia ABIERTO; el
+caso B del arnes no cayo, se reparo (gana la primera palabra) y la vista dice
+281 CERRADOS y 54 ABIERTOS, que es lo que el instrumento del item 1 tambien
+cuenta.
+
+### 1.c LAS 71 FICHAS, RECONCILIADAS UNA VEZ COMO ACTO DE ARCHIVO
+
+**La vara antes de tocar nada** (`vuelta150_3_relectura_expediente.py --corte
+f5689f9a`, sellada en `docs/loop/SALIDA_integral_1C_VARA.txt`): 71 fichas, 31
+calzan, 40 no calzan (24 congeladas declaradas, 12 en silencio, **4 HECHA sin
+ninguna prueba**: `OP-V-01`, `OP-L-01`, `OP-L-02`, `OP-L-03`; 3 LISTA sin
+prueba, de las que 2 CONSUMIDAS y 1 trabajo real, `OP-I-01`, resuelto en 1.a).
+Las rutas de prueba de las 71 se computaron con las funciones de la propia
+vara (P1 grafo, P2 codigo, P3a git con reloj en el corte, P3b caso positivo, P4
+documental).
+
+**El acto de archivo, aplicado a `docs/plan/OPERACIONES.jsonl` con
+`scratchpad/parche_1c_archivo.py`** (71 lineas reescritas con el serializador
+que reproduce byte a byte las 71 originales, medido antes):
+
+| estado nuevo | fichas | de donde venian |
+|---|---:|---|
+| **HECHA** | 66 | 32 ya HECHA (28 con prueba de grafo, codigo o git; 4 con prueba documental) y 34 LISTA con prueba (congeladas por el registro HECHA no se estrena) |
+| **CONSUMIDA** | 5 | `OP-M-02-MEDIOS`, `OP-M-02-ASSESS`, `OP-M-02-ADMIT`, `OP-M-02-ACTIVATE`, `OP-M-02-ACCOMPLISH`: sus nodos resuelven por P.1 al vivo, consumidas por `OP-U-01` (`docs/loop/SALIDA_V64_CONSUMIDAS.txt`) |
+| **REMITIDA** | 0 | ninguna ficha entera; la unica remision es la clausula idx 2 de `OP-I-01`, que va en su ficha |
+
+Cada nota lleva *ARCHIVO DE CAMPAÑA (...) de X a Y. PRUEBA: ruta*. **Las cuatro
+que afirmaban mas que el repo** llevan el tachado con su motivo: `~~HECHA sin
+ninguna prueba de grafo, codigo ni git~~ HECHA con prueba DOCUMENTAL`, con la
+ruta y los bytes del documento (`docs/AUDITORIA_MOTOR.md` y
+`scripts/rumbos/prueba_rumbos.py`; `docs/plan/LECTURAS_DIRIGIDAS.md`;
+`docs/plan/LD_SALES_ROADMAP.md`; `docs/plan/OP_L_03_LECTURAS.jsonl` y
+`OP_L_03_TRIANGULOS.jsonl`), y el motivo: una mesa de lecturas produce
+documentos y no huella en el grafo.
+
+### 1.d LA COLA DE SIETE, CADA UNA CON SU LINEA
+
+| entrada (acta 219, seccion 6) | destino |
+|---|---|
+| 1. familia `C.1` en nueve, con tres opciones | **RESUELTA POR DECLARACION** en `docs/loop/AUDITOR.md` (correccion declarada bajo el orden de apertura): la familia se cierra con el bucle, sin turnos no hay orden que romper; ninguna de las tres opciones se elige porque su sujeto ya no existe; la letra queda como historia |
+| 2. dos divergencias de la pagina 08 (lineas 28 y 30) | **RESUELTAS** en 1.a: la 28 lleva la firma y la 30 pasa de cuatro a cinco por tachado |
+| 3. `--siguiente` del lanzador no distingue la vuelta | **REPARADA BARATO**: `vuelta183_bateria_por_tramos.py` gana `--rotulo <texto>` (las tres salidas y `--siguiente` llevan el rotulo); medido: `--siguiente --rotulo integral` dice 11 tramos que faltan, y sin rotulo sigue diciendo 0 sobre las de la 183 |
+| 4. `vuelta150_4_tabla_por_fase.py` en rojo por once filas | **REPARADA BARATO**: la vara mide las ocho filas de 0 CODIGO a 07 ADUANA y dice cuales quedan fuera; corrida con `--corte f5689f9a`: exitcode 0, 8 filas, 0 en NO CUMPLE |
+| 5. la ciega no acierta lo que se decide por barrido de familia | **REMITIDA CON FICHA**: `docs/PENDIENTES.md`, `ciega-por-familia`, con la cifra del acta (nueve de catorce fallos) y su condicion de cierre |
+| 6. las dos clausulas que quedaban | **RESUELTAS** en 1.a (items 1 y 3) |
+| 7. el remedio de dictado de la `C.4` | **ESCRITO** en `docs/loop/EJECUTOR.md`, junto a la regla de la ruta que promete prueba, en las palabras del propio ejecutor: la pareja de bytes es una regla de cifras, venga de una ruta o de un campo |

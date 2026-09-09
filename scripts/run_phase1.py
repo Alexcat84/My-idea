@@ -1455,6 +1455,23 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
         f"{len(sin_pasos_con_dos_libros)} sin pasos" + (
             f": {sin_pasos_con_dos_libros[:5]}" if sin_pasos_con_dos_libros else ""),
     ))
+    # 5) EL QUINTO CONTROL DE OP-A-02 (auditoria integral, 9 sep 2026, PASO 1.a
+    #    item 3, decision del fundador): la pagina 07 nombra CINCO controles
+    #    mecanicos y Gate 0 corria CUATRO. Este es "revision de toda nomina por
+    #    el DOMINIO de sus miembros" (control mecanico del 13 ago 2026,
+    #    04_ENLACES.md lineas 1031 a 1033): el censo docs/RACIMOS_MIEMBROS.jsonl
+    #    cruzado contra el grafo. NO SE REIMPLEMENTA NADA: el criterio entero
+    #    vive en scripts/loop/verificar_nomina_por_dominio.py y su caso rojo en
+    #    scripts/loop/vuelta221_integral_mutacion_nomina_por_dominio.py.
+    from verificar_nomina_por_dominio import verificar as _verificar_nomina_por_dominio
+
+    dominio_ok, dominio_fallos, dominio_detalle = _verificar_nomina_por_dominio(nodos=nodos_todos)
+    checks.append((
+        "OP-A-02 (quinto control): toda nomina del censo revisada por el DOMINIO de sus miembros contra el grafo",
+        dominio_ok,
+        f"{dominio_detalle['racimos']} racimos, {dominio_detalle['miembros']} miembros, {len(dominio_fallos)} fuera de su dominio" + (
+            f": {dominio_fallos[:3]}" if dominio_fallos else ""),
+    ))
     # ── FIN OP-A-01 ─────────────────────────────────────────────────────────
 
     seeds = load_entry_seeds()

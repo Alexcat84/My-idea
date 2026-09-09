@@ -34,6 +34,17 @@ misma letra, y las tres por el mismo motivo: la orden vive en la linea 112 de
 **LO QUE SIGUE ES EL PROTOCOLO ENTERO. Esta seccion no lo sustituye: lo
 precede.**
 
+**CORRECCION DECLARADA (auditoria integral, 9 sep 2026, cola de la 219 entrada 1,
+decidida por el fundador al cortar el bucle):** la familia `C.1` (nueve actas
+seguidas rompiendo esta orden de apertura, con tres mediciones de fallo del
+remedio) **se cierra con el bucle**: sin turnos de auditor no hay orden de
+apertura que romper. De las tres opciones que el acta 219 subio (mover los tres
+comandos al principio del encargo, levantar la moratoria solo para esta guarda,
+o retirar la letra) **no se elige ninguna, porque el sujeto que protegian ya no
+existe**; la letra de arriba queda como historia y como orden para cualquier
+bucle futuro, y la caida queda medida en sus actas (211 a 219). Nada de arriba se
+borra.
+
 ---
 
 ## 0. Fuentes de verdad, en este orden

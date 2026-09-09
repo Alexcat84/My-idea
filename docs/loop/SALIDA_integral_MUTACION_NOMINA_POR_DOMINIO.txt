@@ -1,0 +1,25 @@
+ARNES DE MUTACION DEL QUINTO CONTROL DE LA ADUANA (auditoria integral, 9 sep 2026)
+sujeto vivo: scripts/loop/verificar_nomina_por_dominio.py
+CIFRA racimos del censo: 32 | CIFRA nodos del grafo: 3853
+
+(0) CONTRAPRUEBA, sin mutar: VERDE, fallos 0, miembros revisados 171
+
+(A) EL MIEMBRO responsabilidad_prospectiva DEL RACIMO 'No culpar a la persona, arreglar el sistema' (vivo: responsabilidad_prospectiva) PASA EN MEMORIA DEL DOMINIO 'health_safety' AL 'compras'
+      veredicto mutado: ROJO | fallos 2 | nombra racimo y miembro: True -> CAE
+      contraste sin mutar: VERDE
+
+(B) EL MIEMBRO responsabilidad_prospectiva SE CAMBIA POR UN ID QUE NO EXISTE NI COMO ALIAS
+      veredicto mutado: ROJO | fallos 1 | nombra el id sin resolver: True -> CAE
+
+(C) EL RACIMO 'Cradle to cradle' (censado 'environmental + nucleo') PIERDE SU DECLARACION TRANSVERSAL Y QUEDA SOLO 'environmental'
+      veredicto mutado: ROJO | fallos 1 | nombra el racimo: True -> CAE
+
+(D) EL PARSEO DE LA DECLARACION, con su esperado y su esperado mutado
+      'nucleo (3) + quality (1)'           -> ['core', 'quality'] | esperado ['core', 'quality']: PASA | mutado ['MUTADO', 'core', 'quality']: CAE
+      'NUCLEO'                             -> ['core'] | esperado ['core']: PASA | mutado ['MUTADO', 'core']: CAE
+      'quality + environmental + nucleo'   -> ['core', 'environmental', 'quality'] | esperado ['core', 'environmental', 'quality']: PASA | mutado ['MUTADO', 'core', 'environmental', 'quality']: CAE
+      'health_safety'                      -> ['health_safety'] | esperado ['health_safety']: PASA | mutado ['MUTADO', 'health_safety']: CAE
+
+CERO ESCRITURAS: porcelain antes == despues: True
+CIFRA fallos: 0
+VEREDICTO: VERDE

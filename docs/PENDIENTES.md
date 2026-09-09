@@ -17344,3 +17344,26 @@ y **8** huerfanas sobre este mismo cuerpo. **Corre sobre el CUERPO ENTERO y
 reparte por la negrita que atribuye, no por la seccion: se publica como
 contraste y no como numeral.**
 
+## Ficha post campaña: `relleno-de-huecos-del-inventario` (remision de `OP-I-01` idx 2, auditoria integral 9 sep 2026)
+
+**De donde sale.** La clausula idx 2 de `OP-I-01` decia *todo hueco va NOMBRADO, nunca rellenado*. Nombrarlos fue el cumplimiento estructural de la campaña del bucle y esta cumplido; **rellenarlos es trabajo editorial de contenido**, de la misma familia que el barrido de vigencia (`vigencia-del-marco-internacional`, `vigencia-de-herramientas-nombradas`), y el fundador lo remite aqui con su nomina (`docs/loop/ACTA_INTEGRAL.md`, 1.a item 4; `docs/plan/08_VERIFICACION.md`, fila 10, correccion declarada).
+
+**LA NOMINA DE LOS HUECOS, leida de `docs/plan/INVENTARIO.jsonl` el 9 sep 2026 (cinco entradas nombran `HUECO NOMBRADO`):**
+
+| hueco | donde esta nombrado | lo que rellenarlo exige |
+|---|---|---|
+| `quality`, 792 nodos vivos, sin cribado intra | entrada de tipo `dominio`, nota | correr el cribado intra del dominio (leer sus pares, escribir veredictos) |
+| `health_safety`, 283 nodos vivos, sin cribado intra | entrada de tipo `dominio`, nota | idem |
+| `risk_management`, 55 nodos vivos, sin cribado intra | entrada de tipo `dominio`, nota | idem |
+| `seguridad_digital`, 55 nodos vivos, sin cribado intra | entrada de tipo `dominio`, nota | idem |
+| el puente de la mesa unida (`sistema_gates_go_kill` es NODO PUENTE, y falta la lectura que lo desempate) | entrada de tipo `racimo`, *la mesa unida de puertas y portafolio*, nota | una lectura dirigida mas, con el fundador delante |
+
+Y los dos huecos de contenido de la ficha `huecos-de-contenido` de esta misma pagina (la primera contratacion del nucleo y la huella de carbono a escala de taller) **siguen ahi, sin rellenar, por la misma regla**: un hueco documentado vale mas que un nodo fabricado para taparlo.
+
+**Condicion de cierre:** cada fila de la tabla con su cribado corrido o su lectura hecha, y la entrada del inventario re impresa con `scripts/loop/vista_del_inventario.py --escribir`. **No se dispara en la campaña del bucle:** es post campaña.
+
+## Ficha post campaña: `ciega-por-familia` (cola de la integral, entrada 5, 9 sep 2026)
+
+**De donde sale.** Acta 219 del auditor, seccion 6, entrada 5 (`docs/loop/ACTA_AUDITOR.md:78049`): *la ciega no puede acertar lo que se decide por barrido de familia*. El archivo decide pares de familia densa **por transitividad sobre veredictos de OTROS puestos**, y desde un par de dos nodos eso no se ve; **nueve de los catorce fallos de la ciega de la 219 son de esa especie**. El rediseño era maquinaria y la moratoria del bucle lo prohibia; la integral corrio su ciega final con el instrumento de siempre y las clases declaradas antes de mirar (`docs/loop/ACTA_INTEGRAL.md`, PASO 2.g).
+
+**Lo que la ficha pide:** una ciega que, para cada par sorteado, muestre tambien **la familia** (los miembros del acto al que pertenecen los dos nodos y los veredictos ya escritos entre ellos), para que la clase B y la clase C se puedan adjudicar con lo mismo que el archivo tuvo delante. **Condicion de cierre:** una ciega de 20 con la tasa de acierto de las B y las C publicada al lado de la de las A y las D.

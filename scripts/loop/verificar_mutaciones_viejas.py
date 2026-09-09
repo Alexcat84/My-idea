@@ -1096,6 +1096,15 @@ VIEJAS = [
     #     cerrado, con la mutacion que las apaga en una copia temporal.
     ("vuelta197_tarea2_mutacion_orden_del_turno.py", False),
     ("vuelta199_tarea1_mutacion_guardas_revividas.py", False),
+    # LOS ARNESES FABRICADOS EN LA AUDITORIA INTEGRAL (9 sep 2026). El 221 es el
+    # numero de censo que sigue a la 220: la integral no es una vuelta.
+    #   - `vuelta221_integral_mutacion_nomina_por_dominio.py`: el quinto control
+    #     de la aduana (OP-A-02), cableado a Gate 0 en la integral; muta censo y
+    #     grafo en memoria. Cero escrituras.
+    #   - `vuelta221_integral_mutacion_vista_inventario.py`: la vista impresa
+    #     del inventario (OP-I-01 idx 3); muta el inventario en memoria.
+    ("vuelta221_integral_mutacion_nomina_por_dominio.py", False),
+    ("vuelta221_integral_mutacion_vista_inventario.py", False),
 ]
 
 # CASOS DECLARADOS: exit distinto de 0 QUE NO ES UN FALLO DE LA GUARDA, con su

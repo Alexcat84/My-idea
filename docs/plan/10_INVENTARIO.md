@@ -16,7 +16,12 @@ racimo, acto, familia de ids, figura y defecto.
 > discutible 3 de la vuelta 16 (`docs/loop/ACTA_AUDITOR.md` VUELTA 16 seccion 3, y punto 3 de
 > `docs/loop/paradas/2026-08-14-credito-vuelta-16.md`).
 >
-> **LA TABLA NO SE REGENERA AQUI, A PROPOSITO:** la regla de arriba dice que este documento se
+> ~~**LA TABLA NO SE REGENERA AQUI, A PROPOSITO:**~~ **CORRECCION DECLARADA (auditoria integral, 9 sep
+> 2026, decision del fundador, PASO 1.a item 5): desde hoy LA VISTA SE IMPRIME DESDE EL ARCHIVO al
+> final de esta misma pagina, entre las marcas `VISTA IMPRESA: INICIO` y `FIN`, con
+> `scripts/loop/vista_del_inventario.py --escribir`, y `--comprobar` la pone en ROJO cuando el archivo
+> cambia. Las tablas de mano humana de arriba quedan como el retrato de su corte y no se tocan.** El
+> texto viejo sigue: la regla de arriba dice que este documento se
 > recomputa ENTERO con el disparador de `08_VERIFICACION`, y regenerarlo es un trabajo de esa
 > escala, no de esta vuelta. **Lo que se le pone es el aviso, no la cifra nueva en el sitio de la
 > vieja.** Nada se borra: todas las cifras del 2.117 siguen escritas y legibles debajo.
@@ -411,3 +416,168 @@ el catalogo produce y que hay que saber distinguir.**
 > de este documento, esta segunda advertencia se cae sola y la primera hay que reescribirla con
 > el corte nuevo, no borrarla.**
 
+<!-- VISTA IMPRESA: INICIO -->
+
+## LA VISTA IMPRESA DESDE EL ARCHIVO
+
+**Impresa por `scripts/loop/vista_del_inventario.py` desde `docs/plan/INVENTARIO.jsonl`,
+y NUNCA editada a mano: lo que este bloque dice sale del archivo, fila por fila, con la
+`fecha_corte` de cada entrada. Si el archivo cambia, `--comprobar` pone este bloque en ROJO
+hasta que se vuelva a imprimir. La prosa de arriba (avisos, huecos nombrados y
+reconciliaciones) es de mano humana y no se regenera.**
+
+CIFRA entradas leidas: 672 | sha256 del archivo (16 hex): `43cea06634e6fc1a` | corte vigente de los actos: 2026-08-13
+
+### EL VOLUMEN, contado del archivo
+
+| tipo | entradas | de ellas |
+|---|---:|---|
+| **dominio** | **10** |  |
+| **racimo** | **13** |  |
+| **acto** | **556** | 335 vigentes al corte 2026-08-13 y 221 superadas |
+| **familia_de_ids** | **54** |  |
+| **figura** | **20** |  |
+| **defecto** | **19** |  |
+| **TOTAL** | **672** |  |
+
+### POR DOMINIO
+
+| dominio | forma | cobertura | estado | nota | fecha_corte |
+|---|---|---|---|---|---|
+| **compras** | cribado intra | puestos 1 a 155, 155 pares leidos | cribado CERRADO | nodos vivos 46 / A 1 / tasa 0,6%. CERRADO: no entran mas pares de este dominio | 2026-08-11 |
+| **core** | cribado intra | puestos 156 a 1600, 1445 pares leidos | cribado CERRADO | nodos vivos 1618 / A 344 / tasa 23,8%. CERRADO: no entran mas pares de este dominio | 2026-08-11 |
+| **entrega** | cribado intra | puestos 1601 a 1771, 171 pares leidos | cribado CERRADO | nodos vivos 47 / A 2 / tasa 1,2%. CERRADO: no entran mas pares de este dominio | 2026-08-11 |
+| **environmental** | cribado intra | puestos 1772 a 1941, 170 pares leidos | cribado CERRADO | nodos vivos 289 / A 29 / tasa 17,1%. CERRADO: no entran mas pares de este dominio | 2026-08-11 |
+| **exportacion** | cribado intra | puestos 1942 a 2071, 130 pares leidos | cribado CERRADO | nodos vivos 141 / A 15 / tasa 11,5%. CERRADO: no entran mas pares de este dominio | 2026-08-11 |
+| **franquicias** | cribado intra | puestos 2072 a 2117, 46 pares leidos | cribado abierto | nodos vivos 195 / A 9 / tasa 19,6%. ABIERTO y la tasa VA BAJANDO (banco 9.27, la cola del dominio se agota ... | 2026-08-11 |
+| **health_safety** | cribado intra | SIN CRIBAR | pendiente | nodos vivos 283. HUECO NOMBRADO: este dominio no ha entrado al cribado intra. | 2026-08-11 |
+| **quality** | cribado intra | SIN CRIBAR | pendiente | nodos vivos 792. HUECO NOMBRADO: este dominio no ha entrado al cribado intra. | 2026-08-11 |
+| **risk_management** | cribado intra | SIN CRIBAR | pendiente | nodos vivos 55. HUECO NOMBRADO: este dominio no ha entrado al cribado intra. | 2026-08-11 |
+| **seguridad_digital** | cribado intra | SIN CRIBAR | pendiente | nodos vivos 55. HUECO NOMBRADO: este dominio no ha entrado al cribado intra. | 2026-08-11 |
+
+### LOS ACTOS DEL CORTE VIGENTE (2026-08-13)
+
+| | cifra |
+|---|---:|
+| actos | **335** |
+| nodos implicados (suma de miembros) | **854** |
+| CERRADOS | **281** |
+| ABIERTOS | **54** |
+| ni CERRADO ni ABIERTO en su estado | **0** |
+
+**POR TAMANO:**
+
+| miembros | actos |
+|---:|---:|
+| 2 | 244 |
+| 3 | 56 |
+| 4 | 16 |
+| 5 | 7 |
+| 6 | 5 |
+| 7 | 2 |
+| 8 | 1 |
+| 9 | 1 |
+| 10 | 1 |
+| 13 | 1 |
+| 15 | 1 |
+
+**LOS SEIS MAYORES:**
+
+| miembros | el acto | estado | operaciones |
+|---:|---|---|---|
+| 15 | `cultura_de_seguridad_interpretivista_funcionalista` | ABIERTO | OP-U-02 |
+| 13 | `decision_factory_mentality` | ABIERTO | OP-E-04, OP-E-05, OP-M-01, OP-M-01-ESLABONES, OP-M-01-FUSION, OP-M-01-SEXTO, OP-S-07, OP-U-02 |
+| 10 | `causas_comunes_vs_especiales` | ABIERTO | OP-U-02 |
+| 9 | `customer_development_modelo` | ABIERTO | OP-M-05, OP-M-05-EDIFICIO, OP-M-05-INDICE, OP-U-02 |
+| 8 | `build_measure_learn` | ABIERTO | OP-U-02 |
+| 7 | `brainstorming_divergente` | ABIERTO | OP-D-04, OP-F-02, OP-U-02 |
+
+### LOS RACIMOS
+
+| racimo | miembros | forma | cobertura | estado | fecha_corte |
+|---|---:|---|---|---|---|
+| **el efectivo contra la ganancia** | 3 | PURO | 3 de 3 | sano, forma cerrada | 2026-08-11 |
+| **la ecuacion de valor** | 5 | MEZCLADO, con cobertura COMPLETA al corte 2026-09-04: 10 de 10 pare... | 10 de 10 al corte 2026-09-04, con el resolutor ... | repite, forma cerrada | 2026-08-11 |
+| **el sales roadmap** | 6 | MEZCLADO | 15 de 15 (LD-66 a LD-70, 14 ago 2026, vuelta 20... | repite, cobertura COMPLETA (14 ago 2026, vuelta 20, por LD-66 a LD-70; la FORMA sigue M... | 2026-08-11 |
+| **la competencia entre inversores** | 5 | SUB-PURO | 7 de 10 | repite, DEGRADADO y RECONCILIADO el 11 ago 2026, cobertura INCOMPLETA | 2026-08-11 |
+| **la junta asesora** | 4 | MEZCLADO | 6 de 6 | en mesa, forma cerrada | 2026-08-11 |
+| **los cuadrantes de mercado** | 6 | FUNDIDA. Al corte 2026-09-04 la nomina entera resuelve a UN SOLO NO... | 0 de 0 al corte 2026-09-04: no hay pares entre ... | repite, forma cerrada | 2026-08-11 |
+| **build, measure, learn** | 8 | SUB-PURO | 9 de 28 | repite, cobertura INCOMPLETA | 2026-08-11 |
+| **el compromiso contado tres veces** | 3 | PURO | 3 de 3 | sano, forma cerrada | 2026-08-11 |
+| **la seleccion de canal** | 5 | MEZCLADO | 10 de 10 | repite, forma cerrada | 2026-08-11 |
+| **la supervision de la IA** | 10 | PROVISIONAL al corte 2026-09-04, y lo es por el banco 9.26: faltan ... | 13 de 21 al corte 2026-09-04, con el resolutor ... | en mesa, particion PROVISIONAL | 2026-08-13 |
+| **la mesa unida de puertas y portafolio** | 17 | DOS MITADES con frontera declarada, y una sola fusion dentro | 54 de 136 | MESA ADJUDICADA el 12 ago 2026: LAS DOS MITADES QUEDAN, con frontera adoptada | 2026-08-13 |
+| **el racimo del pivote** | 7 | SIETE NODOS A TRES: dos puertas y el acto al que las dos llevan | 13 de 21 | MESA ADJUDICADA el 12 ago 2026: DOS PUERTAS MAS UN ACTO | 2026-08-11 |
+| **la serie de Coleman** | 28 | MEZCLADO | 45 de 378 | MESA ADJUDICADA el 12 ago 2026, siete operaciones hijas | 2026-08-11 |
+
+### LAS FAMILIAS DE IDS
+
+CIFRA familias: 54 | CIFRA ids en ellas: 134
+
+| miembros | familias |
+|---:|---:|
+| 9 | 1 |
+| 5 | 2 |
+| 4 | 2 |
+| 3 | 9 |
+| 2 | 40 |
+
+**LAS CUATRO MAYORES:**
+
+| familia | ids | estado | operaciones | fecha_corte |
+|---|---|---|---|---|
+| `HUGOS-SISTEMAS` | `arquitectura_flexible_soa`, `complejidad_acorde_capacidad_organizacional`, `definicion_objetivos_proyecto_sistema`, `diseno_conceptual_sistema`, `ejecucion_incremental_transicion_tecnologica`, `guias_diseno_sistemas_estrategicos`, `rediseno_tras_fracaso_proyecto`, `requisitos_sistema_retroalimentacion`, `tecnologia_como_medio_no_fin` | VIVA: es el destino escrito de los siete de la tercera cl... | OP-F-03 | 2026-08-14 |
+| `accion_correctiva` | `accion_correctiva`, `accion_correctiva_2`, `accion_correctiva_4`, `accion_correctiva_5`, `accion_correctiva_6` | pendiente, se resuelve por continua o repite | OP-S-09 | 2026-08-11 |
+| `consejo_calidad` | `consejo_calidad`, `consejo_calidad_2`, `consejo_de_calidad`, `consejo_de_calidad_2`, `consejo_de_calidad_3` | pendiente, se resuelve por continua o repite | OP-S-09 | 2026-08-11 |
+| `definiciones_operacionales` | `definiciones_operacionales`, `definiciones_operacionales_2`, `definiciones_operacionales_3`, `definiciones_operacionales_4` | pendiente, se resuelve por continua o repite | OP-S-09 | 2026-08-11 |
+
+### LAS FIGURAS
+
+| figura | ejemplares (cobertura) | estado | fecha_corte |
+|---|---|---|---|
+| **SUBCONJUNTO ESTRICTO** | 23 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **LA VARA EN LOS DOS SENTIDOS (9.22)** | 2 polos, 3 ejemplares del primero y 2 del segundo | sano, doctrina escrita | 2026-08-11 |
+| **ESTRELLA (9.23)** | 9 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **TRIANGULO ABIERTO** | 2 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **EL ESQUELETO COMPARTIDO** | 3 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **LAS DOS ADUANAS** | 5 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **LA BIFURCACION** | 2 ejemplares | sano, doctrina escrita | 2026-08-11 |
+| **LOS DOS PARES QUE NO SE CRUZAN** | 1 ejemplar | sano, doctrina escrita | 2026-08-11 |
+| **LA FIRMA POSICIONAL DEL INJERTO (P.2)** | 67 nodos candidatos, 43 confirmados | sano, doctrina escrita | 2026-08-11 |
+| **LA A DE BLOQUE (P.4)** | 1 ejemplar y 1 contraejemplo | sano, doctrina escrita | 2026-08-11 |
+| **LA COLA DEL DOMINIO SE AGOTA POR DENTRO (9.27)** | 3 dominios medidos | sano, doctrina escrita | 2026-08-11 |
+| **EL PASO DE OFICIO** | medio dominio exportacion | sano, doctrina escrita | 2026-08-11 |
+| **frontera de disposicion** | 5 ejemplares | REGISTRADA en docs/plan/FRONTERAS_DECLARADAS.md | 2026-08-12 |
+| **el nombre que esconde** | 3 ejemplares | ANOTADO como historia, no como recomendacion | 2026-08-12 |
+| **nodo puente** | 3 ejemplares, uno de ellos con TODAS sus lecturas hechas | NOMBRADA como P.10, y RESUELTA como doctrina por P.12 | 2026-08-12 |
+| **la camarilla cerrada por lectura** | 1 ejemplar | FUNDIDA EN EL PLAN el 12 ago 2026, superviviente sistema_... | 2026-08-12 |
+| **la perdida que cambia de dueno** | 15 reclasificadas | REGLA P.13, y pasada corrida el 12 ago 2026 | 2026-08-12 |
+| **cobrar una A sin fundir** | 1 ejemplar | NOMBRADA en el banco del plan | 2026-08-12 |
+| **el superviviente es de la nomina, no del nodo** | 1 ejemplar | REGISTRADO en el banco del plan | 2026-08-12 |
+| **el forastero por cableado** | 2 ejemplares | MEDIDA, y los dos casos con todas sus lecturas hechas | 2026-08-12 |
+
+### LOS DEFECTOS
+
+| defecto | cuantos (cobertura) | estado | operaciones | fecha_corte |
+|---|---|---|---|---|
+| **auto-aristas via alias** | 27 | reparado en el plan | `OP-S-07`, `OP-C-04` | 2026-08-11 |
+| **alias huerfanos** | 77 | reparado en el plan | `OP-S-08` | 2026-08-11 |
+| **campos sucios** | 6 | reparado en el plan | `OP-S-06` | 2026-08-11 |
+| **herramientas muertas** | 6 | reparado en el plan | `OP-S-04`, `OP-S-05` | 2026-08-11 |
+| **marco de un solo pais** | 73 | reparado en el plan | `OP-S-10` | 2026-08-11 |
+| **injertos de fuente** | 67 | reparado en el plan | `OP-F-01`, `OP-F-02`, `OP-F-03`, `OP-F-04-COL`, `OP-F-04-HOR`, `OP-F-04-WEI`, `OP-F-04-RAC` | 2026-08-11 |
+| **grafias no canonicas del campo fuente** | 129 | reparado en el plan | `OP-S-11` | 2026-08-11 |
+| **tratado extinto en id y titulo** | 1 | reparado en el plan | `OP-S-01` | 2026-08-11 |
+| **Incoterms sin version** | 3 | reparado en el plan | `OP-S-02` | 2026-08-11 |
+| **portal caducado export.gov** | 3 | reparado en el plan | `OP-S-03` | 2026-08-11 |
+| **costuras internas confirmadas** | 46 | pendiente | `OP-D-01`, `OP-D-02`, `OP-D-03`, `OP-D-04`, `OP-D-05`, `OP-D-06` | 2026-08-11 |
+| **aristas que faltan** | 477 | pendiente, BOLSA RECALIBRADA y tasa MEDIDA | `OP-E-01`, `OP-E-03` | 2026-08-11 |
+| **racimos con miembro de otro dominio** | 3 | pendiente | `OP-E-02` | 2026-08-11 |
+| **accesos al grafo sin resolver** | 20 | reparado en el plan | `OP-C-01`, `OP-C-02`, `OP-C-03` | 2026-08-11 |
+| **gemelos que el cribado no ve** | 73 | pendiente, se recoge por DIFERENCIA CONTRA LA COLA | `OP-E-03` | 2026-08-11 |
+| **aristas duplicadas tras resolucion** | 1056 | reparado en el plan | `OP-S-12`, `OP-C-05` | 2026-08-11 |
+| **pares que una fusion reabre** | 7 | pendiente, con disparador escrito en 08_VERIFICACION | `OP-U-02` | 2026-08-12 |
+| **error de dejar pasar** | 4,2%, banda 0,7 a 20,2 | MEDIDO el 12 ago 2026, un volteo propuesto a la sesion A | `OP-U-02` | 2026-08-12 |
+| **jerarquias nombradas y sin cablear** | 293 | reparado en el plan | `OP-E-06`, `OP-E-07` | 2026-08-12 |
+
+<!-- VISTA IMPRESA: FIN -->

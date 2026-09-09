@@ -198,7 +198,16 @@ def main():
     print("FILAS DE LA TABLA POR FASE, LEIDAS DE docs/plan/08_VERIFICACION.md: %d" % len(filas))
     for f, _c in filas:
         print("  - %s" % f)
-    assert len(filas) == 8, "la tabla no trae ocho filas: %d" % len(filas)
+    # REPARADO EN LA AUDITORIA INTEGRAL (9 sep 2026, cola entrada 4): desde la
+    # vuelta 214 la tabla trae ONCE filas (08, 09 y 10 anadidas por decision del
+    # fundador) y esta vara mide las OCHO de 0 CODIGO a 07 ADUANA. Se exige que
+    # esas ocho esten, y las demas se dicen y no se miden aqui.
+    OCHO = ["0 CODIGO", "01 FUENTES", "02 DESTEJIDOS", "03 FUSIONES",
+            "04 ENLACES", "05 SANEO", "06 MESAS", "07 ADUANA"]
+    fuera = [f for f, _c in filas if f not in OCHO]
+    print("FILAS FUERA DE LAS OCHO DE ESTA VARA (se dicen, no se miden aqui): %s" % (fuera or "(ninguna)"))
+    filas = [(f, c) for f, c in filas if f in OCHO]
+    assert len(filas) == 8, "la tabla no trae las ocho filas de 0 CODIGO a 07 ADUANA: %d" % len(filas)
 
     F = fichas()
     por_id = {x["id_op"]: x for x in F}
