@@ -1,0 +1,124 @@
+==============================================================================
+VUELTA 215, TAREA 4. LOS DOS PUNTOS DE OP-I-01 QUE QUEDARON A MEDIAS
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL ENTRAR: 650578474361eb2b
+
+==============================================================================
+4.a. EL PUNTO 3, POR SU NEGATIVA, CORRIDA Y CON SU CERO DELANTE
+==============================================================================
+LA CLAUSULA, PEGADA DE LA VISTA HUMANA Y NO PARAFRASEADA:
+   docs/plan/10_INVENTARIO.md linea 8: > como HUECO NOMBRADO, no se rellena.**
+   docs/plan/10_INVENTARIO.md linea 105: > **HUECO NOMBRADO, y es el mayor del inventario: CUATRO DOMINIOS NO HAN ENTRADO
+
+EL COMANDO DE LA BUSQUEDA, ESCRITO ANTES DE SU RESULTADO:
+   por cada entrada de docs/plan/INVENTARIO.jsonl y por cada uno de
+   sus campos de texto, se pregunta si el campo ENTERO, en
+   minusculas y sin espacios de los bordes, es una de estas 23
+   palabras de relleno, y aparte si esta VACIO:
+   VOCABULARIO: n/a, na, tbd, todo, xxx, ???, ?, -, --, ..., por definir, por completar, pendiente, sin datos, sin dato, no disponible, placeholder, lorem ipsum, por determinar, desconocido, ninguno, null, none
+
+CIFRA entradas de docs/plan/INVENTARIO.jsonl: 672
+CIFRA campos de texto examinados: 4704
+LAS DOS CONVENCIONES DE CONTAR LA MARCA, LAS DOS ESCRITAS PORQUE UNA
+SOLA NO SE PUEDE COTEJAR CON LA CIFRA DE LA 214:
+CIFRA entradas que nombran 'HUECO' EN MAYUSCULAS Y TAL CUAL: 5
+CIFRA entradas que lo nombran SIN MIRAR MAYUSCULAS: 119
+   (la vuelta 214 publico 119 con la segunda convencion, la de .upper(), leida hoy en la linea 133 de scripts/loop/_v214_t1c_op_i_01.py)
+CIFRA campos SOSPECHOSOS de relleno, antes de mirar el vocabulario del campo: 6
+CIFRA de esos DESCARTADOS porque el campo los usa como estado: 6
+   DESCARTADO> entrada 7 (health_safety), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+   DESCARTADO> entrada 8 (quality), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+   DESCARTADO> entrada 9 (risk_management), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+   DESCARTADO> entrada 10 (seguridad_digital), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+   DESCARTADO> entrada 320 (costuras internas confirmadas), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+   DESCARTADO> entrada 322 (racimos con miembro de otro dominio), campo estado = 'pendiente'; el mismo campo trae la forma larga 'pendiente, BOLSA RECALIBRADA y tasa MEDIDA'
+CIFRA campos RELLENADOS DE VERDAD, ya descontado el vocabulario: 0
+CIFRA campos VACIOS, que no estan nombrados ni rellenados: 0
+
+EL CASO POSITIVO DE ESTA BUSQUEDA, PORQUE UN CERO QUE NO PUEDE SALIR
+DISTINTO DE CERO NO ES UNA BUSQUEDA (EJECUTOR.md 1, EL CASO ROJO SE
+PRUEBA POR MUTACION). Se le mete a la sonda una entrada FABRICADA EN
+MEMORIA, que NO se escribe en ningun fichero, con un campo de relleno
+y otro vacio, y se comprueba que los caza:
+   CIFRA campos de relleno cazados en la fabricada: 1 ['forma'] (se exige 1)
+   CIFRA campos vacios cazados en la fabricada: 1 ['cobertura'] (se exige 1)
+   Y EL CASO QUE PRUEBA QUE NO ES DEMASIADO LAXA: un campo que
+   CONTIENE un guion dentro de un texto normal NO se cuenta.
+   es_relleno('cribado intra, 155 de 155 pares - CERRADO') = False (se exige False)
+   Y EL TERCERO, QUE ES EL QUE PRUEBA LA CORRECCION `D.2`: la regla
+   del vocabulario tiene que DESCARTAR 'pendiente' en el campo estado
+   Y NO DESCARTARLO en un campo que no trae su forma larga.
+   formas largas de 'pendiente' en el campo estado: 4 (se exige al menos 1)
+   formas largas de 'pendiente' en el campo forma:  0 (se exige 0)
+
+EL VEREDICTO DEL PUNTO 3, MEDIDO Y NO OPINADO
+   LA MITAD AFIRMATIVA: el hueco SI se nombra, en 119 entradas por la
+   convencion de la 214 y en 5 por la estricta.
+   LA MITAD NEGATIVA, YA NO PENDIENTE: CIFRA huecos RELLENADOS en vez
+   de nombrados: 0 (rellenos 0 mas vacios 0).
+   VEREDICTO MEDIDO HOY: **CUBRE**
+   VEREDICTO DE LA VUELTA 214, COMO CONTRASTE: **A MEDIAS**
+   SE MUEVE: SI, de A MEDIAS a CUBRE
+
+==============================================================================
+4.b. EL PUNTO 4: SE BUSCA LA SEDE ANTES DE DECIDIR, NO SE INVENTA
+==============================================================================
+LO QUE LA VISTA HUMANA DECLARA DE SI MISMA, PEGADO Y CON SU LINEA:
+   docs/plan/10_INVENTARIO.md linea 19: > **LA TABLA NO SE REGENERA AQUI, A PROPOSITO:** la regla de arriba dice que este documento se
+   docs/plan/10_INVENTARIO.md linea 121: > **TODA ESTA SECCION ESTA AL CORTE 2.117 Y NO SE REGENERA AQUI. Ver el AVISO de la cabecera.**
+   docs/plan/10_INVENTARIO.md linea 182: > resto de la tabla sigue calzando en su corte. **No se regenera aqui** (disparador de
+
+LA BUSQUEDA, CON SU COMANDO ESCRITO ANTES DE SU RESULTADO:
+   se recorre TODO scripts/ (no solo el arbol del bucle) y por cada
+   fichero .py se pregunta si NOMBRA 10_INVENTARIO.md y si ADEMAS
+   tiene, en la misma linea o en las tres siguientes, una apertura en
+   modo escritura o una llamada de escritura sobre esa ruta.
+
+CIFRA ficheros .py de scripts que NOMBRAN la vista humana: 27
+CIFRA ficheros .py que la ESCRIBEN: 0
+   (ninguno: la busqueda da CERO, y ese cero es el resultado)
+
+LA SEGUNDA MITAD DE LA BUSQUEDA, PORQUE UN FICHERO PUEDE ESCRIBIRSE
+SIN QUE NINGUN SCRIPT LO NOMBRE: DE QUE COMMITS SALE LA VISTA HUMANA,
+LEIDO DE git log SOBRE SU RUTA Y NO TECLEADO.
+CIFRA commits que han tocado la vista humana en toda su historia: 19
+   COMMIT> 6b8fd72b|2026-08-14|Vuelta 18 TAREA 1: los cuatro registros de las adjudicaciones de la vuelta 17
+   COMMIT> 87d453c6|2026-08-14|Vuelta 17 TAREA 1 puntos 1 a 4: la caida remedida, las 221 superadas, el aviso y el hueco
+   COMMIT> b81919e9|2026-08-13|Vuelta 16 TAREA 1 puntos 1 a 3: mesa unida corregida a 54 de 136, bloque humano a 5A/5D, etiqueta OP
+   COMMIT> 3bf9c5f9|2026-08-13|Vuelta 15 TAREA 1: OP-L-03 adjudicado, cobertura racimo IA corregida a 18 de 45, etiqueta OP-I-01 co
+   COMMIT> 06b37af6|2026-08-12|Plan: las cuatro de Adopt y Advocate, y la sesion B sin lecturas pendientes
+   COMMIT> db5a05d0|2026-08-12|Plan: la cosecha de razones de las D, P.14 y P.15, y la sesion B en espera
+
+CIFRA ultimo commit que la toco: 6b8fd72b 2026-08-14
+CIFRA bytes de la vista humana hoy: 34258
+CIFRA bytes de docs/plan/INVENTARIO.jsonl hoy: 629533
+
+EL VEREDICTO DEL PUNTO 4, MEDIDO Y NO OPINADO
+   LA MITAD QUE SI: el archivo fuente se recomputo, y hoy tiene 672
+   entradas al corte de 3388.
+   LA MITAD QUE FALTA: regenerar la vista humana.
+   LA SEDE QUE LA REGENERARIA: CIFRA instrumentos que la escriben: 0.
+   NO EXISTE EN EL REPO, Y ESO TAMBIEN ES UN RESULTADO: la vista
+   humana no la regenera ningun instrumento porque NINGUNO LA
+   ESCRIBE. Los 27 ficheros que la nombran la LEEN o la citan.
+   Su ultima escritura fue a mano, en el commit de arriba.
+   VEREDICTO MEDIDO HOY: **A MEDIAS**, y no por pereza de esta vuelta:
+   la mitad que falta NO TIENE INSTRUMENTO QUE LA HAGA, y
+   fabricarlo es maquinaria nueva bajo la moratoria (AUDITOR.md
+   6.3). SE SUBE NOMBRADO.
+   VEREDICTO DE LA VUELTA 214, COMO CONTRASTE: **A MEDIAS**
+   SE MUEVE: NO, calza con el contraste
+
+==============================================================================
+LA GUARDA DE LA 4.c: QUE NO SE MOVIO NINGUN CAMPO estado
+==============================================================================
+SHA256 LF DE docs/plan/OPERACIONES.jsonl AL SALIR: 650578474361eb2b
+CIFRA los dos sha256 CALZAN: SI (se exige SI)
+CIFRA filas de git diff --numstat sobre el expediente: 0 (se exige 0)
+CIFRA filas de git diff --numstat sobre el inventario: 0 (se exige 0)
+
+EL REPARTO DE LOS DOS PUNTOS, DESPUES DE ESTA VUELTA
+   PUNTO 3: CUBRE (era A MEDIAS)
+   PUNTO 4: A MEDIAS (era A MEDIAS)
+CIFRA comprobaciones que fallan: 0
+VERDE: los dos puntos quedan medidos y dichos, y ningun campo estado se movio.
