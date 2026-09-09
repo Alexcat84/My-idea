@@ -1,0 +1,38 @@
+==============================================================================
+LAS GUARDAS DEL CIERRE, RE CORRIDAS SOBRE EL REPORTE FINAL DE LA 215
+==============================================================================
+docs/loop/REPORTE.md: 149866 bytes, 2326 lineas
+
+CIFRA tramos de la bateria con fichero en disco: 11
+CIFRA tramos sellados EN LA VUELTA 215: 10 [1, 2, 3, 5, 6, 7, 8, 9, 10, 11]
+   tramo 1   -> vuelta 215
+   tramo 2   -> vuelta 215
+   tramo 3   -> vuelta 215
+   tramo 4   -> vuelta None
+   tramo 5   -> vuelta 215
+   tramo 6   -> vuelta 215
+   tramo 7   -> vuelta 215
+   tramo 8   -> vuelta 215
+   tramo 9   -> vuelta 215
+   tramo 10  -> vuelta 215
+   tramo 11  -> vuelta 215
+
+(A) LAS CUATRO PIEZAS, CON piezas_que_faltan() DE cerrar_reporte.py
+CIFRA piezas que faltan: 0
+
+(B) LAS CIFRAS SIN PAREJA, CON cifras_sin_pareja() DE cerrar_reporte.py
+CIFRA cifras publicadas sin su pareja: 0 (se exigen 0)
+
+(C) LAS SECCIONES, CON secciones_del_reporte() DE cerrar_reporte.py
+CIFRA secciones halladas: 10 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+CIFRA secciones de la 3 a la 9 AUSENTES: 0 []
+CIFRA secciones DUPLICADAS: 0 []
+CIFRA secciones FUERA DE ORDEN: 0
+
+(D) LOS GUIONES Y EL VEREDICTO
+CIFRA guiones largos: 0 | CIFRA guiones medios: 0
+CIFRA el reporte AUN dice SIN ESCRIBIR TODAVIA: NO (se exige NO)
+CIFRA el hueco de la cabecera sigue sin rellenar: NO (se exige NO)
+
+CIFRA comprobaciones que fallan: 0
+VERDE: las cuatro piezas estan, no queda ni una cifra sin su pareja, las secciones 3 a 9 estan unicas y en orden, y el veredicto esta escrito.

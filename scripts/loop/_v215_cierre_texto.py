@@ -339,7 +339,7 @@ UNA CIFRA QUE CALZA NO SON LO MISMO** (guarda `D.1` de `cerrar_reporte.py`):
 
 ### 4.2. LO QUE ESTA VUELTA NO HIZO, DICHO PARA QUE NO SE BUSQUE
 
-- **No escribio `docs/loop/PARA_ALEXIS.md`, y no lo escribe.** Es **sede del
+- **No escribio el PARA_ALEXIS del bucle, y no lo escribe.** Es **sede del
   auditor** por la adjudicacion `4.2` del acta 203, **linea 71543**, ratificada
   por el fundador el 9 sep 2026. **Yo lo PROPONGO en mi reporte, que es mi
   sede**, y va al final.
@@ -437,9 +437,9 @@ marcador contra su cifra vieja **quedo CERRADO por la adjudicacion `5.3`, linea
 
 ## 8. MIS CAIDAS PROPIAS, CADA UNA CON SU NOMBRE Y CONTADA UNA SOLA VEZ
 
-**Son DOS, y las dos las cazaron mis propias guardas ANTES de que el veredicto se
-publicara. LA PRIMERA SALIO EN UN COMMIT Y LA CORREGI POR DECLARACION; LA SEGUNDA
-NO LLEGO A SALIR.**
+**Son TRES, y las tres las cazaron mis propias guardas ANTES de que el veredicto se
+publicara. LA PRIMERA SALIO EN UN COMMIT Y LA CORREGI POR DECLARACION; LAS OTRAS
+DOS NO LLEGARON A SALIR.**
 
 - **`D.1` MI PROSA CONTRADECIA A LAS CIFRAS DE SU PROPIO PARRAFO, Y SALIO EN EL
   COMMIT DEL TRAMO 3.** Mi compositor de mensajes de tramo llevaba la frase *"y
@@ -456,6 +456,15 @@ NO LLEGO A SALIR.**
   especie que la `D.7` de la 214**, y esta vez me mordio a mi solo. Remedio: la
   regla del vocabulario del campo, con la forma larga medida en el MISMO campo, y
   **los seis descartes publicados con su nombre**.
+
+- **`C.1` CITE UN FICHERO QUE NO EXISTE COMO SI FUERA RUTA DE PRUEBA, DOS
+  VECES, Y ES EXACTAMENTE LA `C.3` DE LA 214 REPITIENDOSE.** El PARA_ALEXIS del
+  bucle **todavia no esta escrito**, y nombrarlo entre comillas inversas es una
+  ruta que promete prueba apuntando a nada (`EJECUTOR.md` 1, LA RUTA QUE PROMETE
+  PRUEBA ES CIFRA). **Me lo conto la guarda de rutas de este mismo compositor,
+  que conto 2 rutas malas de 22 y NO ESCRIBIO NADA**, y el texto se reescribio
+  sin comillas. **Se registra porque una guarda que muerde y no se cuenta es una
+  guarda que la vuelta siguiente no sabe que existe.**
 
 **Y UNA TERCERA QUE NO CUENTO COMO CAIDA Y DIGO POR QUE, PARA QUE NADIE LA CUENTE
 POR MI:** mi compositor de la TAREA 3 salio en **ROJO** en su primera corrida
@@ -499,7 +508,7 @@ decision del fundador**, porque es la contradiccion de la PARADA 2.
 - **Decidir, o hacer decidir, la PREGUNTA 1**: once tramos del mismo calibre con
   exitcode 1 estructural, **se cuentan como bateria corrida o no**. De esa
   respuesta cuelga si la condicion 1 se puede dar por cumplida.
-- **Y NO ESCRIBIR `docs/loop/PARA_ALEXIS.md` TODAVIA SI LA RESPUESTA NO LLEGA**,
+- **Y NO ESCRIBIR EL PARA_ALEXIS TODAVIA SI LA RESPUESTA NO LLEGA**,
   porque una parada feliz escrita sobre una condicion que no se cumple es
   exactamente la especie de verde que esta casa lleva doscientas vueltas
   cazando. **Si llega y es que si, quien lo escribe es EL AUDITOR de la 215, no

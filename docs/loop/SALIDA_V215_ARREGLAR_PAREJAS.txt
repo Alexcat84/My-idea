@@ -1,0 +1,35 @@
+EL ANTES, CONTADO CON LA PROPIA FUNCION DE cerrar_reporte.py
+CIFRA cifras publicadas sin su pareja ANTES: 4
+   HUERFANA> linea 96, especie bytes, muestra 912: | **TAREA 5** | EL REPORTE, Y SU SECCION 3.1 ESTA VEZ CON CIFRAS DENTRO. Sellar la consola del ciclo
+   HUERFANA> linea 238, especie bytes, muestra 93498: (`docs/loop/SALIDA_V183_BATERIA.txt`, 93498 bytes, 1433 lineas): entradas que
+   HUERFANA> linea 491, especie bytes, muestra 34258: **ultimo es 6b8fd72b 2026-08-14**. **Sus 34258 bytes de hoy son de esa fecha.**
+   HUERFANA> linea 532, especie bytes, muestra 912: **MEDIDO:** `docs/loop/SALIDA_V215_CICLO_GATE0_APERTURA_CONSOLA.txt` existe, mide **912 bytes**, y p
+
+LAS DOS CONVENCIONES DE CADA FICHERO, MEDIDAS Y NO TECLEADAS
+   docs/loop/SALIDA_V215_CICLO_GATE0_APERTURA_CONSOLA.txt -> 912 bytes en disco y 912 bytes normalizado a LF (COINCIDEN)
+      el ancla aparece 1 vez(ces) (se exige 1)
+      SUSTITUIDO: '912 bytes' -> '912 bytes en disco y 912 bytes normalizado a LF'
+   docs/loop/SALIDA_V183_BATERIA.txt -> 93498 bytes en disco y 93498 bytes normalizado a LF (COINCIDEN)
+      el ancla aparece 1 vez(ces) (se exige 1)
+      SUSTITUIDO: '93498 bytes' -> '93498 bytes en disco y 93498 bytes normalizado a LF'
+   docs/plan/10_INVENTARIO.md -> 34258 bytes en disco y 33845 bytes normalizado a LF (NO COINCIDEN)
+      el ancla aparece 1 vez(ces) (se exige 1)
+      SUSTITUIDO: '34258 bytes' -> '34258 bytes en disco y 33845 bytes normalizado a LF'
+   docs/loop/SALIDA_V215_CICLO_GATE0_APERTURA_CONSOLA.txt -> 912 bytes en disco y 912 bytes normalizado a LF (COINCIDEN)
+      el ancla aparece 1 vez(ces) (se exige 1)
+      SUSTITUIDO: '**912 bytes**' -> '**912 bytes en disco y 912 bytes normalizado a LF**'
+
+CIFRA anclas sustituidas: 4 | CIFRA que deberia haber: 4
+CIFRA cifras publicadas sin su pareja DESPUES: 0
+
+CIFRA lineas del reporte ANTES: 2314 | DESPUES: 2314 (se exige que calcen)
+CIFRA lineas que cambian: 4 (se exigen 4)
+   CAMBIA> linea 96
+   CAMBIA> linea 238
+   CAMBIA> linea 491
+   CAMBIA> linea 532
+
+CIFRA comprobaciones que fallan: 0
+ESCRITO docs/loop/REPORTE.md -> 148930 bytes
+RELECTURA DEL DISCO: identico a lo juzgado: SI
+numstat sobre el reporte: 1742	9	docs/loop/REPORTE.md
