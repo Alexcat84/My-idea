@@ -1,0 +1,61 @@
+LOS ONCE TRAMOS DE HOY, CONTADOS DE SUS FICHEROS SELLADOS
+
+| tramo | entradas | OK | CASO DECLARADO | NO MORDIO | ANCLA PERDIDA | NO REPRODUCIBLE | exitcode | minutos | bytes | sha256 |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| **1** | 13 | 11 | 2 | 0 | 0 | 0 | 1 | 0.8 | 9552 | `4de1654fb3bb` |
+| **2** | 13 | 13 | 0 | 0 | 0 | 0 | 1 | 2.9 | 7796 | `8c1f6ce3013b` |
+| **3** | 13 | 12 | 0 | 1 | 0 | 0 | 1 | 3.2 | 8048 | `f17327591699` |
+| **4** | 13 | 13 | 0 | 0 | 0 | 0 | 1 | 1.0 | 7863 | `44f5c01f680b` |
+| **5** | 13 | 10 | 0 | 3 | 0 | 0 | 1 | 0.7 | 8270 | `dbf5328708ad` |
+| **6** | 13 | 11 | 0 | 2 | 0 | 0 | 1 | 0.9 | 8212 | `8072bd87c785` |
+| **7** | 13 | 13 | 0 | 0 | 0 | 0 | 1 | 0.6 | 7896 | `7328143949bc` |
+| **8** | 13 | 13 | 0 | 0 | 0 | 0 | 1 | 0.8 | 7849 | `8aa2ce144943` |
+| **9** | 13 | 12 | 0 | 1 | 0 | 0 | 1 | 0.9 | 8512 | `b733d7eeb028` |
+| **10** | 13 | 13 | 0 | 0 | 0 | 0 | 1 | 1.6 | 8473 | `0ef8f1995e55` |
+| **11** | 5 | 5 | 0 | 0 | 0 | 0 | 1 | 0.3 | 6269 | `c58146cb3792` |
+
+CIFRA filas de tramo armadas: 11 | CIFRA que deberia haber: 11
+CIFRA entradas corridas sumando los once tramos: 135 | CIFRA nomina: 135
+CIFRA OK en los once: 126
+CIFRA CASO DECLARADO en los once: 2
+CIFRA NO MORDIO en los once: 7
+CIFRA ANCLA PERDIDA en los once: 0
+CIFRA NO REPRODUCIBLE en los once: 0
+CIFRA suma de las cinco clases: 135 | CIFRA filas: 135 (se exige que calcen)
+
+LOS ARNESES QUE CAEN HOY, CON SU NOMBRE Y SU TRAMO
+CIFRA arneses de la nomina que CAEN hoy: 7
+CAE tramo 3 | NO MORDIO | vuelta160_tarea6b_mutacion_puerta.py
+CAE tramo 5 | NO MORDIO | vuelta165_tarea6_mutacion_op_l_01.py
+CAE tramo 5 | NO MORDIO | vuelta166_tarea2_mutacion_correccion.py
+CAE tramo 5 | NO MORDIO | vuelta168_tarea1_mutacion_nota.py
+CAE tramo 6 | NO MORDIO | vuelta168_tarea2_mutacion_reconstructor.py
+CAE tramo 6 | NO MORDIO | vuelta171_mutacion_busqueda_acta.py
+CAE tramo 9 | NO MORDIO | vuelta185_tarea1c_mutacion_bateria_continuada.py
+
+EL COTEJO CONTRA LA CORRIDA ANTERIOR DE CADA FICHERO, LEIDA DE git show
+TRAMO 1, corrida anterior: commit ca702058 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 1 DE 11, SELLADO Y COMMITEADO AL TERMINAR, u
+TRAMO 2, corrida anterior: commit 4895fb06 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 2 DE 11, SELLADO Y COMMITEADO AL TERMINAR, u
+TRAMO 3, corrida anterior: commit 3fa5b035 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 3 DE 11, RE CORRIDO SOLO Y RE SELLADO. CORRE
+TRAMO 4, corrida anterior: commit a9a8fff9 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 4 DE 11, RE CORRIDO SOLO Y RE SELLADO: EL RU
+TRAMO 5, corrida anterior: commit 274a0aed del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 5 DE 11, SELLADO Y COMMITEADO AL TERMINAR. T
+TRAMO 6, corrida anterior: commit fc68e550 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 6 DE 11, SELLADO Y COMMITEADO AL TERMINAR. D
+TRAMO 7, corrida anterior: commit 3d79c288 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 7 DE 11, SELLADO Y COMMITEADO AL TERMINAR: T
+TRAMO 8, corrida anterior: commit 97185bc4 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 8 DE 11, SELLADO Y COMMITEADO AL TERMINAR: T
+TRAMO 9, corrida anterior: commit ed74786d del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 9 DE 11, SELLADO Y COMMITEADO AL TERMINAR. Y
+TRAMO 10, corrida anterior: commit 08e9acdd del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 10 DE 11, SELLADO Y COMMITEADO AL TERMINAR: 
+TRAMO 11, corrida anterior: commit 7dfbfdf7 del 2026-09-08, asunto (70) VUELTA 210, BATERIA TRAMO 11 DE 11, SELLADO Y COMMITEADO AL TERMINAR: 
+
+CIFRA arneses que CAEN HOY Y NO CAIAN EN LA CORRIDA ANTERIOR: 0
+CIFRA arneses que CAEN HOY Y YA CAIAN: 7
+REPETIDO tramo 3 | vuelta160_tarea6b_mutacion_puerta.py
+REPETIDO tramo 5 | vuelta165_tarea6_mutacion_op_l_01.py
+REPETIDO tramo 5 | vuelta166_tarea2_mutacion_correccion.py
+REPETIDO tramo 5 | vuelta168_tarea1_mutacion_nota.py
+REPETIDO tramo 6 | vuelta168_tarea2_mutacion_reconstructor.py
+REPETIDO tramo 6 | vuelta171_mutacion_busqueda_acta.py
+REPETIDO tramo 9 | vuelta185_tarea1c_mutacion_bateria_continuada.py
+CIFRA arneses que CAIAN Y HOY NO CAEN: 0
+
+CIFRA comprobaciones que fallan: 0
+VERDE: los once tramos estan, suman la nomina entera, y los caidos van con su nombre y con su cotejo contra la corrida anterior.
