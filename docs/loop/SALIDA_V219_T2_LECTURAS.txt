@@ -1,0 +1,292 @@
+==============================================================================
+TAREA 2 DE LA VUELTA 219: LAS DOS CLAUSULAS QUE TODAVIA SE PUEDEN MOVER LEYENDO
+==============================================================================
+
+LOS SHA256 DE LAS SEDES DEL PLAN, AL ENTRAR, POR LAS DOS CONVENCIONES:
+   docs/plan/OPERACIONES.jsonl: 517181 bytes en disco y 517181 normalizado a LF, sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b
+   docs/plan/08_VERIFICACION.md: 73652 bytes en disco y 73652 normalizado a LF, sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4
+   docs/plan/07_ADUANA.md: 3815 bytes en disco y 3723 normalizado a LF, sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0
+   docs/plan/01_FUENTES.md: 128187 bytes en disco y 126666 normalizado a LF, sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3
+   docs/plan/05_SANEO.md: 39450 bytes en disco y 38699 normalizado a LF, sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806
+   docs/plan/INVENTARIO.jsonl: 629533 bytes en disco y 629533 normalizado a LF, sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a
+
+EL GRAFO DE HOY, MEDIDO Y NO HEREDADO: 3853 nodos en el censo, 3169 vivos.
+EL EXPEDIENTE DE HOY: 71 fichas leidas de docs/plan/OPERACIONES.jsonl.
+
+==============================================================================
+2.a. 01 FUENTES idx 1: EL MATERIAL DEL SEGUNDO LIBRO, REUBICADO O BORRADO
+==============================================================================
+
+   PRIMERO LA CIFRA, REPRODUCIDA CON MI PROPIO INSTRUMENTO Y NO HEREDADA. La sonda es la MISMA que publico el 7, importada y no clonada: s_segundo_libro de scripts/loop/_v217_t1_diecisiete.py.
+      sonda> EL SUJETO SON LAS FICHAS DE LA FASE 01 QUE CARGAN MATERIAL DE UN SEGUNDO LIBRO, y sus nominas se leen del expediente, no se teclean: OP-F-02, OP-F-03, OP-F-04-COL, OP-F-04-HOR, OP-F-04-WEI, OP-F-04-RAC.
+      sonda> CIFRA menciones de nodo en esas nominas: 70 | CIFRA ids distintos: 67
+      sonda> CIFRA que el recorte posicional de OP-A-01 publica al 11 ago 2026, citada como contraste y no como fuente: 67 nodos con mas de un libro y 70 declaraciones en segunda posicion.
+      sonda> MITAD 'NO BORRADO': un nodo cuenta como NO borrado si sigue existiendo en el grafo, o si su id vive como alias de otro, que es material mudado y no material perdido.
+      sonda> CIFRA menciones BORRADAS sin rastro: 0
+      sonda>    (la busqueda de las borradas da CERO, y ese cero es el resultado: se corrio y se publica)
+      sonda> MITAD 'REUBICADO': una mencion esta reubicada cuando su nodo ya NO declara mas de una fuente. La que sigue declarando dos o mas todavia carga el material del segundo libro.
+      sonda> CIFRA menciones que TODAVIA declaran mas de una fuente: 7
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-03 / principio_calidad_mvp, 2 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-COL / keep_customers_strategy, 2 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-COL / viral_loop_marketing, 3 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-HOR / decision_de_vender_startup, 2 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-HOR / principio_calidad_mvp, 2 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-WEI / coeficiente_viral, 2 fuentes
+      sonda>    AUN CON DOS O MAS FUENTES> OP-F-04-WEI / viral_loop_marketing, 3 fuentes
+
+   CIFRA menciones que TODAVIA declaran mas de una fuente, MEDIDA HOY POR MI: 7 | CIFRA que el acta 217 publica en su linea 77346: 7
+      LAS DOS CIFRAS CALZAN. Sigo.
+
+   EL VEREDICTO QUE LA SONDA DA HOY POR SU PROPIO DETECTOR (el estrecho, el que mira si el nodo sigue declarando dos fuentes): A MEDIAS
+   Y ESE NO ES EL DETECTOR QUE EL ENCARGO MANDA USAR. LA VARA ES LA DE LA ADJUDICACION 4.5 DEL ACTA 218: REUBICADO ES UN HECHO COMPROBABLE EN EL GRAFO, NO UNA FRASE ESCRITA EN UNA FICHA. La pregunta, una por mencion: el material de ese segundo libro, ESTA HOY EN ALGUN NODO VIVO DEL GRAFO, o NO ESTA EN NINGUNO?
+
+   LA GUARDA DEL REPARTO DE TANDA A LIBRO, QUE ES MIO Y VA CON GUARDA:
+      OP-F-02      -> Mollick   | la propia ficha (linea 2 del expediente) nombra ese apellido: SI
+      OP-F-03      -> Hugos     | la propia ficha (linea 3 del expediente) nombra ese apellido: SI
+      OP-F-04-COL  -> Coleman   | la propia ficha (linea 37 del expediente) nombra ese apellido: SI
+      OP-F-04-HOR  -> Horowitz  | la propia ficha (linea 38 del expediente) nombra ese apellido: SI
+      OP-F-04-RAC  -> Rackham   | la propia ficha (linea 40 del expediente) nombra ese apellido: SI
+      OP-F-04-WEI  -> Weinberg  | la propia ficha (linea 39 del expediente) nombra ese apellido: SI
+
+   LA PAGINA DONDE VIVEN LOS REGISTROS DE ESTA CLAUSULA, MEDIDA HOY: docs/plan/01_FUENTES.md, 1522 lineas leidas.
+
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-03 | nodo principio_calidad_mvp | libro de la tanda: Hugos
+      el nodo que la declara: principio_calidad_mvp | vivo: SI | resolutor -> principio_calidad_mvp | fuentes hoy: 2 | pasos hoy: 7
+         fuente> The Lean Startup - Eric Ries
+         fuente> The Hard Thing About Hard Things - Ben Horowitz
+      CIFRA pasos medidos hoy: 7 | CIFRA que su registro publica: 7 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 430:
+         | `principio_calidad_mvp` | **1 a 5 / 6 a 10 / 11 a 14** | el tercer bloque: funcionalidades criticas, excluir las secundarias, lanzar la minima viable, iterar con el uso real |
+      EL NODO YA NO DECLARA ESE LIBRO: el material NO esta en el, y hay que decir DONDE ESTA o dar la constancia de que no esta en ninguno.
+      EL ENRUTAMIENTO, LEIDO DE docs/plan/01_FUENTES.md LINEA 500:
+         | `principio_calidad_mvp` | **11 a 14** | `ejecucion_incremental_transicion_tecnologica` | lanzar la minima viable y ampliar con el uso real: **el mismo acto** |
+      EL RECEPTOR, MEDIDO CONTRA EL GRAFO: ejecucion_incremental_transicion_tecnologica | vivo: SI | resolutor -> ejecucion_incremental_transicion_tecnologica | pasos: 16
+      Y EL MATERIAL SE COMPRUEBA ACTO POR ACTO EN SUS PASOS, no por creer al registro:
+         acto 'funcionalidades criticas' -> PASO 9: Identificar las funcionalidades críticas que generan el mayor valor.
+         acto 'excluir las secundarias' -> PASO 10: Excluir deliberadamente características secundarias en la primera versión.
+         acto 'lanzar la minima viable' -> PASO 11: Lanzar la solución mínima viable y monitorear su desempeño.
+         acto 'iterar con el uso real' -> PASO 12: Iterar y mejorar el sistema en función del uso real y feedback.
+      CIFRA actos del material hallados en el receptor: 4 | CIFRA que el registro promete: 4
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-COL | nodo keep_customers_strategy | libro de la tanda: Coleman
+      el nodo que la declara: keep_customers_strategy | vivo: SI | resolutor -> keep_customers_strategy | fuentes hoy: 2 | pasos hoy: 6
+         fuente> The Startup Owner's Manual - Blank, Steve
+         fuente> Never Lose a Customer Again - Joey Coleman
+      CIFRA pasos medidos hoy: 6 | CIFRA que su registro publica: 6 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 1232:
+         | 8 | **`keep_customers_strategy`** | Blank \| **Coleman** | **6** | **NO TIENE FRONTERA**, y es el hallazgo de esta tabla | **el material de Coleman NO es un bloque apendice: esta EMBEBIDO dentro de los pasos.** Ver el registro de abajo |
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (Never Lose a Customer Again - Joey Coleman), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: keep_customers_strategy -> keep_customers_strategy, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-COL | nodo viral_loop_marketing | libro de la tanda: Coleman
+      el nodo que la declara: viral_loop_marketing | vivo: SI | resolutor -> viral_loop_marketing | fuentes hoy: 3 | pasos hoy: 23
+         fuente> The Startup Owner's Manual - Blank, Steve
+         fuente> Never Lose a Customer Again - Joey Coleman
+         fuente> Traction - Gabriel Weinberg
+      CIFRA pasos medidos hoy: 23 | CIFRA que su registro publica: 23 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 828:
+         | **`viral_loop_marketing`** | **`P.20`** mas `P.19` mas `P.18` | **30 a 23**, y **dos pasos que salen** | **UN solo corte**, con la frontera de los tres libros ya publicada arriba. El material del promotor de los tramos **9 a 13, 14 a 17 y 18 a 21** se fundio (**once origenes en seis pasos**); los pasos **12 y 13**, ajenos al objeto, salieron por `P.18` a `experiencias_exclusivas_vip` (**4 a 5 pasos**) y a `comunidad_tribu_marca` (**5 a 6**) |
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (Never Lose a Customer Again - Joey Coleman), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: viral_loop_marketing -> viral_loop_marketing, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-HOR | nodo decision_de_vender_startup | libro de la tanda: Horowitz
+      el nodo que la declara: decision_de_vender_startup | vivo: SI | resolutor -> decision_de_vender_startup | fuentes hoy: 2 | pasos hoy: 15
+         fuente> The Founder's Dilemmas - Wasserman, Noam
+         fuente> The Hard Thing About Hard Things - Ben Horowitz
+      CIFRA pasos medidos hoy: 15 | CIFRA que su registro publica: 15 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 827:
+         | **`decision_de_vender_startup`** | **`P.19`** | **34 a 15** | el peor nodo medido del catalogo. **La repeticion cruzaba la frontera publicada** (`1 a 10` Wasserman, `11 a 34` Horowitz): las parejas **8 con 26** y **9 con 25** tienen un origen a cada lado, que es el caso literal que `P.19` nombra al decir *material de DOS O MAS FUENTES dentro de un nodo* |
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (The Hard Thing About Hard Things - Ben Horowitz), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: decision_de_vender_startup -> decision_de_vender_startup, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-HOR | nodo principio_calidad_mvp | libro de la tanda: Horowitz
+      el nodo que la declara: principio_calidad_mvp | vivo: SI | resolutor -> principio_calidad_mvp | fuentes hoy: 2 | pasos hoy: 7
+         fuente> The Lean Startup - Eric Ries
+         fuente> The Hard Thing About Hard Things - Ben Horowitz
+      CIFRA pasos medidos hoy: 7 | CIFRA que su registro publica: 7 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 1200:
+         **El nodo pasa de 10 pasos a 7 y queda MULTIFUENTE LEGITIMO con la procedencia declarada por
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (The Hard Thing About Hard Things - Ben Horowitz), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: principio_calidad_mvp -> principio_calidad_mvp, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-WEI | nodo coeficiente_viral | libro de la tanda: Weinberg
+      el nodo que la declara: coeficiente_viral | vivo: SI | resolutor -> coeficiente_viral | fuentes hoy: 2 | pasos hoy: 8
+         fuente> The Startup Owner's Manual - Blank, Steve
+         fuente> Traction - Gabriel Weinberg
+      CIFRA pasos medidos hoy: 8 | CIFRA que su registro publica: 8 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 826:
+         | **`coeficiente_viral`** | **`P.19`** | **16 a 8** | los pasos 6 a 11 y 12 a 16 eran la misma cuenta de K de *Traction* dicha dos veces, y los 1 a 3 de Blank el mismo coeficiente. **Fundidos en un procedimiento**: la i, la conversion (agregada o descompuesta en click-through y signup), la K, el tiempo de ciclo, el eslabon debil, el incentivo, la reduccion del ciclo y el monitoreo |
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (Traction - Gabriel Weinberg), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: coeficiente_viral -> coeficiente_viral, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+   MENCION> ficha OP-F-04-WEI | nodo viral_loop_marketing | libro de la tanda: Weinberg
+      el nodo que la declara: viral_loop_marketing | vivo: SI | resolutor -> viral_loop_marketing | fuentes hoy: 3 | pasos hoy: 23
+         fuente> The Startup Owner's Manual - Blank, Steve
+         fuente> Never Lose a Customer Again - Joey Coleman
+         fuente> Traction - Gabriel Weinberg
+      CIFRA pasos medidos hoy: 23 | CIFRA que su registro publica: 23 | CALZA
+      QUE MATERIAL CONCRETO ES, LEIDO DE docs/plan/01_FUENTES.md LINEA 828:
+         | **`viral_loop_marketing`** | **`P.20`** mas `P.19` mas `P.18` | **30 a 23**, y **dos pasos que salen** | **UN solo corte**, con la frontera de los tres libros ya publicada arriba. El material del promotor de los tramos **9 a 13, 14 a 17 y 18 a 21** se fundio (**once origenes en seis pasos**); los pasos **12 y 13**, ajenos al objeto, salieron por `P.18` a `experiencias_exclusivas_vip` (**4 a 5 pasos**) y a `comunidad_tribu_marca` (**5 a 6**) |
+      DONDE VIVE HOY: EN EL PROPIO NODO, que es un nodo VIVO del grafo. El campo fuente sigue declarando el libro de la tanda (Traction - Gabriel Weinberg), que es lo que P.19 punto 2 obliga a dejar intacto cuando el material se funde dentro en vez de salir.
+      RESUELTO CON EL RESOLUTOR DELANTE: viral_loop_marketing -> viral_loop_marketing, y ese nodo esta VIVO.
+   ------------------------------------------------------------------------
+
+   CIFRA menciones cuyo material VIVE en un nodo vivo del grafo: 7 | CIFRA menciones BORRADAS SIN DESTINO: 0 | CIFRA total de menciones: 7
+
+   LA TABLA, ARMADA DE LO MEDIDO ARRIBA Y NO TECLEADA:
+| # | ficha | nodo que la declara | libro de la tanda | vive hoy | donde vive hoy (resuelto) | como |
+|---:|---|---|---|---|---|---|
+| 1 | `OP-F-03` | `principio_calidad_mvp` | Hugos | **VIVE** | `ejecucion_incremental_transicion_tecnologica` | mudado al receptor, los 4 actos comprobados en sus pasos |
+| 2 | `OP-F-04-COL` | `keep_customers_strategy` | Coleman | **VIVE** | `keep_customers_strategy` | fundido DENTRO del propio nodo, fuente intacta |
+| 3 | `OP-F-04-COL` | `viral_loop_marketing` | Coleman | **VIVE** | `viral_loop_marketing` | fundido DENTRO del propio nodo, fuente intacta |
+| 4 | `OP-F-04-HOR` | `decision_de_vender_startup` | Horowitz | **VIVE** | `decision_de_vender_startup` | fundido DENTRO del propio nodo, fuente intacta |
+| 5 | `OP-F-04-HOR` | `principio_calidad_mvp` | Horowitz | **VIVE** | `principio_calidad_mvp` | fundido DENTRO del propio nodo, fuente intacta |
+| 6 | `OP-F-04-WEI` | `coeficiente_viral` | Weinberg | **VIVE** | `coeficiente_viral` | fundido DENTRO del propio nodo, fuente intacta |
+| 7 | `OP-F-04-WEI` | `viral_loop_marketing` | Weinberg | **VIVE** | `viral_loop_marketing` | fundido DENTRO del propio nodo, fuente intacta |
+   CIFRA filas armadas: 7 | CIFRA que deberia haber: 7
+
+   LA VARA, APLICADA SIN PROMEDIAR: si las 7 estan reubicadas, la clausula sube a CUBRE por lectura; UNA SOLA borrada sin destino la deja en A MEDIAS y esa una se nombra con su id.
+   CIFRA borradas sin destino: 0 | CIFRA que la vara tolera: 0
+   VEREDICTO DE 01 FUENTES idx 1: CUBRE
+
+==============================================================================
+2.b. 05 SANEO idx 1: LOS TRES DE INCOTERMS CON SU VERSION
+==============================================================================
+
+   LOS DOS FICHEROS DE LAS CITAS, MEDIDOS HOY: docs/loop/ACTA_AUDITOR.md con 77726 lineas, y docs/PENDIENTES.md con 17347 lineas.
+   CIFRA lineas donde empieza el acta 120: 1 | CIFRA que se exige: 1
+      EL ACTA 120 EMPIEZA EN LA LINEA 41598, LEIDA DEL FICHERO> # ACTA DE LA VUELTA 120 DEL AUDITOR (28 ago 2026, fecha LEIDA DE GIT, Opus 5)
+   CIFRA lineas donde vive la adjudicacion 3.1 del acta 120: 1 | CIFRA que se exige: 1
+      LA ADJUDICACION 3.1 DEL ACTA 120 VIVE EN LA LINEA 41699, Y ESTAS SON SUS LINEAS LEIDAS DEL FICHERO:
+         41699> **3.1 EL DISCUTIBLE (b) NO ES DOCTRINA NUEVA Y NO ES PARADA: SE ADJUDICA CITANDO DOS REGLAS
+         41700> ESCRITAS, Y RATIFICO LA LECTURA DE ALCANCE DEL EJECUTOR.** Fui a la fusion que produjo el
+         41701> superviviente y la lei: `docs/plan/03_FUSIONES.md`, **acto 16 del lote A** (`seguro_exportacion`
+         41702> absorbe `seguro_de_carga_transporte`), **6 piezas: 2 enteras, 3 ya dichas, 1 `INCISO`**, y su
+         41703> unica perdida nombrada es **DE CONDICIONES**, no de pasos. **O sea que el paso 1 se conto como
+         41704> "ya dicha"**, que es exactamente la clase **VIVE DENTRO** de **P.13**: la unidad del reparto es
+         41705> **el paso**, no la palabra, y el parentesis `(Incoterms)` cayo por debajo de esa granularidad.
+         41706> **Por eso no hay perdida sin declarar en la fusion 16, y por eso restituir la palabra NO cabe en
+         41707> `OP-S-02`**, cuyo acto literal es *anadir version a una cita que ya existe*. **Y el resto se
+         41708> resuelve por extension natural del punto 2 de la decision del fundador del 28 ago 2026** (el
+         41709> contenido que la operacion no alcanza **se anota en la ficha y no se ejecuta**, y el punto de
+         41710> `verificacion` se acota por correccion declarada), **que es literalmente lo que ya se hizo con
+         41711> `OP-S-01`**. **Adjudico: `seguro_exportacion` NO se toca; la mitad que falta es LA ANOTACION,
+         41712> que la 120 no escribio, y va como tarea de la 121.** El *"PENDIENTE DE DOCTRINA"* de la nota de
+         41713> `OP-S-02` **queda adjudicado por esta acta** y se corrige por remision, sin borrar el texto.
+
+   Y LA ANOTACION EN SU SEDE, QUE ES DONDE EL ACTA 120 LA MANDO. CIFRA lineas donde vive la SEXTA entrada de docs/PENDIENTES.md: 1 | CIFRA que se exige: 1
+      LA SEXTA ENTRADA VIVE EN LA LINEA 1574 DE docs/PENDIENTES.md, LEIDA DEL FICHERO> ### SEXTA entrada (vuelta 121, adjudicacion del auditor en el acta 120 seccion 3.1 sobre OP-S-02): `seguro_exportacion` perdio la palabra "Incoterms" de su paso 1 en la fusion del `ACTO 16`
+      CIFRA lineas de esa entrada que dicen que el nodo NO se toca: 1 | CIFRA que se exige: 1
+         1597> nodo no se toca en esta vuelta**: queda anotado como trabajo post campaña, igual
+         1598> que las entradas de arriba.
+
+   EL SUJETO SON LOS TRES DE LA NOMINA DE OP-S-02, leidos del expediente (linea 11) y no tecleados. CIFRA nodos de la nomina: 3 | CIFRA que la clausula escribe: 3
+   EL ESTADO DE LA FICHA, LEIDO DEL EXPEDIENTE: HECHA
+
+   ------------------------------------------------------------------------
+   NODO> incoterms_reglas_comerciales_internacionales | vivo: SI | resolutor -> incoterms_reglas_comerciales_internacionales
+      declara version en SU PROPIO texto: SI, Incoterms 2020 (campo resumen_teorico)
+         fragmento> ...Los Incoterms 2020 son reglas estandarizadas que definen responsabilidades, co...
+      su SUPERVIVIENTE es incoterms_reglas_comerciales_internacionales | ese cita Incoterms: SI | y declara version: SI, Incoterms 2020 (campo resumen_teorico)
+      DE DONDE SALE LA VERSION: incoterms_reglas_comerciales_internacionales, campo resumen_teorico
+   ------------------------------------------------------------------------
+   NODO> terminos_de_venta_incoterms | vivo: NO | resolutor -> incoterms_reglas_comerciales_internacionales
+      declara version en SU PROPIO texto: NO
+      su SUPERVIVIENTE es incoterms_reglas_comerciales_internacionales | ese cita Incoterms: SI | y declara version: SI, Incoterms 2020 (campo resumen_teorico)
+         fragmento del superviviente> ...Los Incoterms 2020 son reglas estandarizadas que definen responsabilidades, co...
+      DE DONDE SALE LA VERSION: incoterms_reglas_comerciales_internacionales, campo resumen_teorico
+   ------------------------------------------------------------------------
+   NODO> seguro_de_carga_transporte | vivo: NO | resolutor -> seguro_exportacion
+      declara version en SU PROPIO texto: NO
+      su SUPERVIVIENTE es seguro_exportacion | ese cita Incoterms: NO | y declara version: NO
+      DE DONDE SALE LA VERSION: (ninguno: ni el nodo ni su superviviente la fijan)
+   ------------------------------------------------------------------------
+
+   CIFRA de los tres que llegan a una version de Incoterms, por si mismos o por su superviviente: 2 de 3
+
+   LA TABLA, ARMADA DE LO MEDIDO ARRIBA Y NO TECLEADA:
+| # | nodo de la nomina | declara version hoy | cual | de donde sale | estado del nodo |
+|---:|---|---|---|---|---|
+| 1 | `incoterms_reglas_comerciales_internacionales` | **SI, en el propio nodo** | Incoterms 2020 | incoterms_reglas_comerciales_internacionales, campo resumen_teorico | vivo |
+| 2 | `terminos_de_venta_incoterms` | **SI, por su superviviente** | Incoterms 2020 | incoterms_reglas_comerciales_internacionales, campo resumen_teorico | deprecado, resuelve a incoterms_reglas_comerciales_internacionales |
+| 3 | `seguro_de_carga_transporte` | **NO** | (ninguna) | (ninguno: ni el nodo ni su superviviente la fijan) | deprecado, resuelve a seguro_exportacion |
+   CIFRA filas armadas: 3 | CIFRA que deberia haber: 3
+
+   LA PREGUNTA QUE DECIDE LA CLAUSULA ES DE FRONTERA Y NO DE CONTEO, Y NO LA DECIDO YO: un nodo que la campana DIFIRIO A PROPOSITO Y POR DECISION ESCRITA, cuenta como incumplimiento de la clausula o como fuera de su alcance?
+   LO MEDIDO: 2 de 3 llegan a la version; el que no es el tercero, y su motivo esta escrito en las dos sedes localizadas arriba.
+   MI LECTURA, CON SU MOTIVO Y MARCADA COMO DISCUTIBLE: la escribo en el reporte, en la seccion de discutibles, y NO la aplico al recuento. La clausula se queda donde estaba mientras la frontera no se adjudique.
+   VEREDICTO DE 05 SANEO idx 1 QUE ESTA TAREA APLICA: A MEDIAS (SIN MOVER), y la razon es que la frontera es del auditor y no mia.
+
+==============================================================================
+2.c. EL RECUENTO DE LAS DIECISIETE, REHECHO AL CIERRE DE ESTA TAREA
+==============================================================================
+
+   LA FUENTE DE LAS 17 FILAS ES MI PROPIA CORRIDA DE HOY, sellada en ``docs/loop/SALIDA_V219_T1_RECORRIDA_DEL_LECTOR.txt``.
+   CIFRA filas armadas leyendo ese fichero: 17 | CIFRA que deberia haber: 17
+   EL REPARTO QUE LA TAREA 1 DEJO MEDIDO: CUBRE 13 | A MEDIAS 4 | NO CUBRE 0
+   SUBE POR LECTURA: 01 FUENTES idx 1, de A MEDIAS a CUBRE
+   CIFRA clausulas que esta tarea mueve: 1 | CIFRA que el encargo pone en juego: 2 (y la de 05 SANEO no se mueve porque su frontera es del auditor)
+
+   CIFRA clausulas en CUBRE AL CIERRE DE LA TAREA 2: 14 de 17 | CIFRA que dejo la TAREA 1: 13
+   CIFRA clausulas en A MEDIAS AL CIERRE DE LA TAREA 2: 3 de 17 | CIFRA que dejo la TAREA 1: 4
+   CIFRA clausulas en NO CUBRE AL CIERRE DE LA TAREA 2: 0 de 17 | CIFRA que dejo la TAREA 1: 0
+
+   LA TABLA ENTERA AL CIERRE DE ESTA TAREA:
+| # | fila | idx | veredicto | la clausula, VERBATIM |
+|---:|---|---:|---|---|
+| 1 | 0 CODIGO | 0 | CUBRE | cada caso positivo **se cae antes** del arreglo y pasa despues |
+| 2 | 01 FUENTES | 0 | CUBRE | ningun nodo de la clase con pasos alterados |
+| 3 | 01 FUENTES | 1 | CUBRE (SUBE POR LECTURA: la TAREA 1 la dejo en A MEDIAS) | **el material del segundo libro reubicado, no borrado** |
+| 4 | 02 DESTEJIDOS | 0 | CUBRE | los **quince congelados** releidos |
+| 5 | 02 DESTEJIDOS | 1 | CUBRE | **cada perdida en el bloque del que proviene** |
+| 6 | 03 FUSIONES | 0 | A MEDIAS | un superviviente por acto, el resto **DEPRECADO CON ALIAS** |
+| 7 | 03 FUSIONES | 1 | CUBRE | `resolverId` devuelve el superviviente |
+| 8 | 04 ENLACES | 0 | CUBRE | cada arista nueva **confirmada por lectura**, no por el instrumento |
+| 9 | 04 ENLACES | 1 | CUBRE | ninguna crea auto-arista tras resolver |
+| 10 | 05 SANEO | 0 | CUBRE | ningun id vivo con tratado extinto |
+| 11 | 05 SANEO | 1 | A MEDIAS | los tres de Incoterms con su version |
+| 12 | 05 SANEO | 2 | CUBRE | ningun nodo cablea `export.gov` |
+| 13 | 05 SANEO | 3 | CUBRE | ninguna de las seis herramientas muertas |
+| 14 | 05 SANEO | 4 | CUBRE | ningun nodo con dos claves de fase |
+| 15 | 05 SANEO | 5 | CUBRE | **ningun nodo se cita a si mismo tras resolver** |
+| 16 | 06 MESAS | 0 | CUBRE | cada decision escrita **con su motivo y su cobertura al lado** (banco 9.26) |
+| 17 | 07 ADUANA | 0 | A MEDIAS | los cuatro controles mecanicos **corriendo en Gate 0** |
+   CIFRA filas de la tabla del cierre: 17 | CIFRA que deberia haber: 17
+
+   LAS QUE SIGUEN SIN CUBRIR, CON SU FILA, SU INDICE Y SU CIFRA:
+   03 FUSIONES    idx 0 | A MEDIAS  | un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+   05 SANEO       idx 1 | A MEDIAS  | los tres de Incoterms con su version
+   07 ADUANA      idx 0 | A MEDIAS  | los cuatro controles mecanicos **corriendo en Gate 0**
+   CIFRA clausulas que siguen sin cubrir: 3
+
+==============================================================================
+2.d. LA PARADA FELIZ, MEDIDA CONTRA SU PROPIA LETRA Y NO PROPUESTA A OJO
+==============================================================================
+
+   LA CONDICION PIDE QUE LAS DIECISIETE QUEDEN EN CUBRE.
+   CIFRA en CUBRE: 14 | CIFRA que la condicion exige: 17
+   LA CONDICION SE CUMPLE: NO
+   POR TANTO, LA PARADA FELIZ: NO SE PROPONE, y las que faltan van arriba con su fila, su indice y su cifra
+
+==============================================================================
+ESTA TAREA SOLO LEE, Y SE PRUEBA CON LOS SHA
+==============================================================================
+   docs/plan/OPERACIONES.jsonl AL ENTRAR: sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b
+   docs/plan/OPERACIONES.jsonl AL SALIR:   sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b, 517181 bytes en disco y 517181 normalizado a LF
+   docs/plan/08_VERIFICACION.md AL ENTRAR: sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4
+   docs/plan/08_VERIFICACION.md AL SALIR:   sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4, 73652 bytes en disco y 73652 normalizado a LF
+   docs/plan/07_ADUANA.md AL ENTRAR: sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0
+   docs/plan/07_ADUANA.md AL SALIR:   sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0, 3815 bytes en disco y 3723 normalizado a LF
+   docs/plan/01_FUENTES.md AL ENTRAR: sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3
+   docs/plan/01_FUENTES.md AL SALIR:   sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3, 128187 bytes en disco y 126666 normalizado a LF
+   docs/plan/05_SANEO.md AL ENTRAR: sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806
+   docs/plan/05_SANEO.md AL SALIR:   sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806, 39450 bytes en disco y 38699 normalizado a LF
+   docs/plan/INVENTARIO.jsonl AL ENTRAR: sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a
+   docs/plan/INVENTARIO.jsonl AL SALIR:   sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a, 629533 bytes en disco y 629533 normalizado a LF
+   LOS 12 SHA DE LAS SEDES DEL PLAN COINCIDEN AL ENTRAR Y AL SALIR POR LAS DOS CONVENCIONES: SI
+
+   EL CASO ROJO, DICHO CUAL ES CUAL: la reproduccion del 7, el campo fuente, el resolutor, la cuenta de pasos contra la publicada, los cuatro actos del material mudado dentro de su receptor, las lineas de acta y de PENDIENTES y la version de Incoterms campo a campo CAEN EN ROJO por si solas y estan contadas arriba. LO MIO ES EL REPARTO DE TANDA A LIBRO, que va con guarda que exige que la propia ficha nombre el apellido, Y LA LECTURA DE FRONTERA DE LA 2.b, QUE VA MARCADA COMO DISCUTIBLE: para esa NO HAY CASO ROJO AUTOMATICO y se declara en vez de fabricarse uno que se apruebe solo.
+
+CIFRA comprobaciones que fallan: 0
+VERDE: la TAREA 2 sale limpia.
