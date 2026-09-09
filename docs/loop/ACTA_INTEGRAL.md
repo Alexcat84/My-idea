@@ -637,3 +637,11 @@ entera en verde con la nomina abierta en 139.
 
 **LO QUE ESTA ACTA NO HACE:** no funde, no etiqueta, no despliega, no toca `staging` ni
 `main`, no borra el `.env` ni apaga `next dev`, y no corre una corrida D del vuelo.
+
+### 3.5 EL SELLO: EL COMMIT EXACTO
+
+El PASO 3 de esta acta viaja en el commit **`673fdf4b`** (`673fdf4b7de0a417daa99af60cb355cef7abca84`). **El commit que se funde es el
+que carga esta seccion 3.5**, el siguiente en `pasada-unica`, que contiene a `673fdf4b` y a todos
+los anteriores; su hash es el HEAD de `pasada-unica` al terminar la sesion y se lee con
+`git log -1 --format=%H pasada-unica`. Nada mas cambia entre los dos commits que este parrafo.
+
