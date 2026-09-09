@@ -1,0 +1,231 @@
+==============================================================================
+TAREA 1 DE LA VUELTA 220: LOS REGISTROS. LECTURA, MEDICION Y REGISTRO.
+==============================================================================
+
+LOS SHA256 DE LAS SEDES DEL PLAN, AL ENTRAR, POR LAS DOS CONVENCIONES:
+   docs/plan/OPERACIONES.jsonl: 517181 bytes en disco y 517181 normalizado a LF, sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b
+   docs/plan/08_VERIFICACION.md: 73652 bytes en disco y 73652 normalizado a LF, sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4
+   docs/plan/07_ADUANA.md: 3815 bytes en disco y 3723 normalizado a LF, sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0
+   docs/plan/01_FUENTES.md: 128187 bytes en disco y 126666 normalizado a LF, sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3
+   docs/plan/05_SANEO.md: 39450 bytes en disco y 38699 normalizado a LF, sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806
+   docs/plan/03_FUSIONES.md: 833308 bytes en disco y 828282 normalizado a LF, sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2
+   docs/plan/INVENTARIO.jsonl: 629533 bytes en disco y 629533 normalizado a LF, sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a
+
+EL FICHERO DE LAS CITAS, MEDIDO HOY: docs/loop/ACTA_AUDITOR.md, 78126 lineas leidas.
+CIFRA lineas donde empieza el acta 219: 1 | CIFRA que se exige: 1
+   EL ACTA 219 EMPIEZA EN LA LINEA 77727, y el encargo dice 77727: CALZA
+
+==============================================================================
+1.a. LAS SEIS ADJUDICACIONES DEL ACTA 219, CON SU LINEA LEIDA DEL FICHERO
+==============================================================================
+
+   LA LINEA NO SE TECLEA: se localiza el ancla en docs/loop/ACTA_AUDITOR.md a partir de la linea 77727 y se publica su numero y su texto verbatim.
+
+   ADJUDICACION 4.1  (rotulo TAREA 1 D.1       ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77901, LEIDA DEL FICHERO> **`4.1` TAREA 1 `D.1` A FAVOR: REMEDIR NO ERA RECOMPUTAR.** El encargo dice, literal,
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): remedir no era recomputar: el mismo instrumento es el mismo instrumento, y el auditor ademas re-corrio mi lector y salio identico
+   ADJUDICACION 4.2  (rotulo TAREA 1 D.2       ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77907, LEIDA DEL FICHERO> **`4.2` TAREA 1 `D.2` A FAVOR, Y NO POR SU PALABRA SINO POR MI MEDICION.** Selle el
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): no se adjudico por mi palabra: se midio. Sello del sha256 de nueve ficheros, corrida de _v219_t2_lecturas.py, y CERO se movieron. No es la especie de la C.3 de la 218
+   ADJUDICACION 4.3  (rotulo TAREA 1 D.3       ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77913, LEIDA DEL FICHERO> **`4.3` TAREA 1 `D.3` A FAVOR.** El encargo dice REGISTRA, no RELEE, y la glosa va con
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): la glosa es registro y no lectura mia, y decir esto no lo he vuelto a medir yo se cuenta a favor
+   ADJUDICACION 4.4  (rotulo TAREA 2 D.1       ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77918, LEIDA DEL FICHERO> **`4.4` TAREA 2 `D.1` A FAVOR, Y LA REFUERZO CON UNA PRUEBA QUE EL NO USO.** Subir
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): 01 FUENTES idx 1 se sostiene en CUBRE, con la prueba que yo no use: P.19 punto 2 deja el nodo MULTIFUENTE LEGITIMO y sus dos ejemplares nombrados son coeficiente_viral y decision_de_vender_startup, dos de los cinco de mi tabla
+   ADJUDICACION 4.5  (rotulo TAREA 2 D.2 y P.1 ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77935, LEIDA DEL FICHERO> **`4.5` TAREA 2 `D.2` Y `P.1`, LA FRONTERA: LA ADJUDICO, Y EL TERCERO QUEDA FUERA DEL
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): LA FRONTERA ADJUDICADA: el tercero queda FUERA DEL ALCANCE. El punto de verificacion de 05 SANEO idx 1 se acota POR CORRECCION DECLARADA a los dos nodos que OP-S-02 alcanza, y 05 SANEO idx 1 SUBE A CUBRE
+   ADJUDICACION 4.6  (rotulo TAREA 2 D.3       ) | CIFRA lineas que casan el ancla: 1 | CIFRA que se exige: 1
+      LINEA 77969, LEIDA DEL FICHERO> **`4.6` TAREA 2 `D.3` A FAVOR, CON SU LIMITE ACEPTADO.** El reparto de tanda a libro es
+      LO QUE SOSTIENE (glosa mia, con las palabras del encargo): el reparto de tanda a libro es mio, con su guarda, y decir el limite de la propia guarda es lo contrario de venderla como mordiendo
+
+   CIFRA adjudicaciones localizadas con su linea: 6 | CIFRA que el encargo lista: 6
+
+   LA TABLA DE LAS SEIS, ARMADA DE LO LOCALIZADO ARRIBA Y NO TECLEADA:
+| rotulo | adjudicacion | linea del acta 219, LEIDA DEL FICHERO | que se sostiene |
+|---|---|---:|---|
+| `TAREA 1 D.1` | `4.1` | **77901** | remedir no era recomputar: el mismo instrumento es el mismo instrumento, y el auditor ademas re-corrio mi lector y salio identico |
+| `TAREA 1 D.2` | `4.2` | **77907** | no se adjudico por mi palabra: se midio. Sello del sha256 de nueve ficheros, corrida de _v219_t2_lecturas.py, y CERO se movieron. No es la especie de la C.3 de la 218 |
+| `TAREA 1 D.3` | `4.3` | **77913** | la glosa es registro y no lectura mia, y decir esto no lo he vuelto a medir yo se cuenta a favor |
+| `TAREA 2 D.1` | `4.4` | **77918** | 01 FUENTES idx 1 se sostiene en CUBRE, con la prueba que yo no use: P.19 punto 2 deja el nodo MULTIFUENTE LEGITIMO y sus dos ejemplares nombrados son coeficiente_viral y decision_de_vender_startup, dos de los cinco de mi tabla |
+| `TAREA 2 D.2 y P.1` | `4.5` | **77935** | LA FRONTERA ADJUDICADA: el tercero queda FUERA DEL ALCANCE. El punto de verificacion de 05 SANEO idx 1 se acota POR CORRECCION DECLARADA a los dos nodos que OP-S-02 alcanza, y 05 SANEO idx 1 SUBE A CUBRE |
+| `TAREA 2 D.3` | `4.6` | **77969** | el reparto de tanda a libro es mio, con su guarda, y decir el limite de la propia guarda es lo contrario de venderla como mordiendo |
+   CIFRA filas armadas: 6 | CIFRA que deberia haber: 6
+
+==============================================================================
+1.b. EL RECUENTO NUEVO, CON LAS DOS CIFRAS JUNTAS Y DICIENDO CUAL ES CUAL
+==============================================================================
+
+   PRIMERO SE SELLAN LOS NUEVE FICHEROS, PARA PROBAR QUE EL LECTOR LEE:
+      docs/plan/OPERACIONES.jsonl AL ENTRAR: 517181 bytes en disco y 517181 normalizado a LF, sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b
+      docs/plan/08_VERIFICACION.md AL ENTRAR: 73652 bytes en disco y 73652 normalizado a LF, sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4
+      docs/plan/07_ADUANA.md AL ENTRAR: 3815 bytes en disco y 3723 normalizado a LF, sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0
+      docs/plan/01_FUENTES.md AL ENTRAR: 128187 bytes en disco y 126666 normalizado a LF, sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3
+      docs/plan/05_SANEO.md AL ENTRAR: 39450 bytes en disco y 38699 normalizado a LF, sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806
+      docs/plan/INVENTARIO.jsonl AL ENTRAR: 629533 bytes en disco y 629533 normalizado a LF, sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL ENTRAR: 4066944 bytes en disco y 4063556 normalizado a LF, sha256 disco 07f2f0595c6a8012 y sha256 LF 4a6f32cf7ea71096
+      dataset/metadata/master_graph.json AL ENTRAR: 8375817 bytes en disco y 8375817 normalizado a LF, sha256 disco 627cc662296f7f00 y sha256 LF 627cc662296f7f00
+      docs/loop/SALIDA_V219_T2_LECTURAS.txt AL ENTRAR: 28878 bytes en disco y 28878 normalizado a LF, sha256 disco f5b55ff575d5af1d y sha256 LF f5b55ff575d5af1d
+
+   EL LECTOR RE-CORRIDO HOY POR MI: scripts/loop/_v219_t2_lecturas.py, exitcode 0.
+   MI CORRIDA DE HOY, SELLADA: docs/loop/SALIDA_V220_T1_RECORRIDA_DEL_LECTOR.txt, 28931 bytes en disco y 28931 normalizado a LF
+
+   LOS NUEVE, RE-MEDIDOS DESPUES DE CORRERLO:
+      docs/plan/OPERACIONES.jsonl AL SALIR: 517181 bytes en disco y 517181 normalizado a LF, sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b | NO SE MOVIO
+      docs/plan/08_VERIFICACION.md AL SALIR: 73652 bytes en disco y 73652 normalizado a LF, sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4 | NO SE MOVIO
+      docs/plan/07_ADUANA.md AL SALIR: 3815 bytes en disco y 3723 normalizado a LF, sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0 | NO SE MOVIO
+      docs/plan/01_FUENTES.md AL SALIR: 128187 bytes en disco y 126666 normalizado a LF, sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3 | NO SE MOVIO
+      docs/plan/05_SANEO.md AL SALIR: 39450 bytes en disco y 38699 normalizado a LF, sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806 | NO SE MOVIO
+      docs/plan/INVENTARIO.jsonl AL SALIR: 629533 bytes en disco y 629533 normalizado a LF, sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a | NO SE MOVIO
+      docs/INTRA_DOMINIO_VEREDICTOS.jsonl AL SALIR: 4066944 bytes en disco y 4063556 normalizado a LF, sha256 disco 07f2f0595c6a8012 y sha256 LF 4a6f32cf7ea71096 | NO SE MOVIO
+      dataset/metadata/master_graph.json AL SALIR: 8375817 bytes en disco y 8375817 normalizado a LF, sha256 disco 627cc662296f7f00 y sha256 LF 627cc662296f7f00 | NO SE MOVIO
+      docs/loop/SALIDA_V219_T2_LECTURAS.txt AL SALIR: 28878 bytes en disco y 28878 normalizado a LF, sha256 disco a1729e06763915a8 y sha256 LF a1729e06763915a8 | SE MOVIO
+   CIFRA ficheros que se movieron al correr el lector: 1 | CIFRA de ellos que NO son la propia salida sellada del lector: 0
+
+   CIFRA lineas en que la salida sellada del lector difiere de la que estaba en disco: 1 | CIFRA que la regla admite: 1 (y solo la del conteo del acta)
+      LINEA 157, LA QUE ESTABA> LOS DOS FICHEROS DE LAS CITAS, MEDIDOS HOY: docs/loop/ACTA_AUDITOR.md con 77726 lineas, y docs/PENDIENTES.md con 17347 lineas.
+      LINEA 157, LA DE HOY>     LOS DOS FICHEROS DE LAS CITAS, MEDIDOS HOY: docs/loop/ACTA_AUDITOR.md con 78126 lineas, y docs/PENDIENTES.md con 17347 lineas.
+   CIFRA motivos de ROJO que el juicio devuelve: 0 | CIFRA que se exige: 0
+
+   Y LA SALIDA SELLADA DE LA 219 SE RESTAURA BYTE A BYTE, PORQUE ES EVIDENCIA DE OTRA VUELTA Y NO ES MIA PARA REESCRIBIRLA. Mi corrida de hoy queda sellada en el fichero de la 220, que es donde le toca.
+      docs/loop/SALIDA_V219_T2_LECTURAS.txt TRAS RESTAURAR: 28878 bytes en disco y 28878 normalizado a LF, sha256 disco f5b55ff575d5af1d y sha256 LF f5b55ff575d5af1d | IDENTICA A LA DE ENTRADA
+
+   CIFRA filas de recuento leidas de mi corrida de hoy: 3 | CIFRA que deberia haber: 3
+   CIFRA filas de la tabla de las diecisiete leidas de mi corrida de hoy: 17 | CIFRA que deberia haber: 17
+   COTEJO ENTRE LAS TRES LINEAS DE CIFRA Y LA TABLA CONTADA: CUBRE 14 contra 14 | A MEDIAS 3 contra 3 | NO CUBRE 0 contra 0
+
+   AHORA SE APLICA LA ADJUDICACION 4.5 DEL ACTA 219, Y ES LA UNICA SUBIDA. No la decido yo: la decide el auditor, y aqui solo se aplica.
+      SUBE POR ADJUDICACION 4.5: 05 SANEO idx 1, de A MEDIAS a CUBRE
+   CIFRA clausulas que la adjudicacion mueve: 1 | CIFRA que el acta 219 ordena: 1
+
+   LAS DOS CIFRAS JUNTAS, Y CADA UNA DICE CUAL ES:
+| veredicto | CIFRA que MI LECTOR MIDE HOY, SIN la adjudicacion 4.5 | CIFRA que la ADJUDICACION 4.5 DEJA |
+|---|---:|---:|
+| **CUBRE** | 14 de 17 | **15 de 17** |
+| **A MEDIAS** | 3 de 17 | **2 de 17** |
+| **NO CUBRE** | 0 de 17 | **0 de 17** |
+   CIFRA filas armadas: 3 | CIFRA que deberia haber: 3
+
+   CIFRA clausulas en CUBRE, MEDIDA HOY POR MI LECTOR SIN LA ADJUDICACION: 14 de 17
+   CIFRA clausulas en CUBRE, CON LA ADJUDICACION 4.5 APLICADA: 15 de 17
+   CIFRA clausulas en A MEDIAS, MEDIDA HOY POR MI LECTOR SIN LA ADJUDICACION: 3 de 17
+   CIFRA clausulas en A MEDIAS, CON LA ADJUDICACION 4.5 APLICADA: 2 de 17
+   CIFRA clausulas en NO CUBRE, por las dos: 0 de 17
+
+   Y LAS CIFRAS DEL ENCARGO, CITADAS COMO CONTRASTE Y NO COMO FUENTE: el encargo dice que al cierre de la 219 quedo en 14 CUBRE, 3 A MEDIAS y 0 NO CUBRE, y que con la 4.5 aplicada queda en 15 CUBRE, 2 A MEDIAS y 0 NO CUBRE.
+   MI MEDICION SIN LA ADJUDICACION CALZA CON EL CONTRASTE: SI
+   MI COMPUTO CON LA ADJUDICACION CALZA CON EL CONTRASTE: SI
+
+   LAS QUE QUEDAN DESPUES DE LA ADJUDICACION, CON SU FILA, SU INDICE Y SU CIFRA:
+      03 FUSIONES    idx 0 | A MEDIAS  | un superviviente por acto, el resto **DEPRECADO CON ALIAS**
+      07 ADUANA      idx 0 | A MEDIAS  | los cuatro controles mecanicos **corriendo en Gate 0**
+   CIFRA clausulas que siguen sin cubrir: 2 | CIFRA que el recuento con la adjudicacion exige: 2
+
+   LA CIFRA DE CADA UNA DE LAS DOS QUE QUEDAN, TAL COMO EL ENCARGO LAS DICTA Y COMO LA SECCION 6 DEL ACTA 219 LAS LISTA:
+      03 FUSIONES idx 0: 71 actos sin fundir por la lectura ancha, y SEIS fusiones de 19 nodos por la estrecha.
+      07 ADUANA   idx 0: el quinto control sin correr.
+
+   LO QUE NO SE TOCA, Y SE DICE EN VEZ DE HACERSE: docs/plan/08_VERIFICACION.md NO SE ESCRIBE. La celda es sede del fundador y la divergencia sube nombrada, igual que la de 07 ADUANA. Sus sha256 al entrar y al salir estan en esta misma salida.
+
+==============================================================================
+1.c. LAS SIETE COSAS QUE SUBEN NOMBRADAS A LA AUDITORIA INTEGRAL
+==============================================================================
+
+   CIFRA lineas donde empieza la seccion 6 del acta 219: 1 | CIFRA que se exige: 1
+   LA SECCION 6 EMPIEZA EN LA LINEA 78024
+
+   NO SE RESUELVE NINGUNA. Solo quedan escritas, con su cifra y con la linea del acta donde viven.
+
+   PUNTO 1, LINEA 78026, LEIDO DEL FICHERO:
+      78026> 1. **MI FAMILIA `C.1` EN NUEVE, Y CON TRES MEDICIONES DE FALLO DEL REMEDIO DEL PROPIO
+      78027>    FUNDADOR.** **Es lo mas urgente de esta lista y lo subo con OPCIONES, que es lo que
+      78028>    las actas 216, 217 y 218 no pudieron aportar.** Ninguna esta en mi mano: las tres
+      78029>    son del fundador. **(a)** que la orden deje de ser texto y pase a ser lo primero que
+      78030>    el turno EJECUTA, moviendo los tres comandos de apertura al principio del propio
+      78031>    encargo del auditor y no a un fichero que hay que abrir; **(b)** levantar la
+      78032>    moratoria `6.3` **solo para esta guarda**, para que el turno pueda apuntar los
+      78033>    toques que hoy se le escapan por correr fuera de las funciones instrumentadas;
+      78034>    **(c)** aceptar la caida como coste conocido y **retirar la letra**, porque nueve
+      78035>    actas seguidas rompiendo una regla que nunca ha quemado un sujeto dicen o que la
+      78036>    regla no se puede cumplir o que protege menos de lo que cuesta. **Yo no elijo, pero
+      78037>    digo cual descartaria: la (c) no, mientras nadie mida que el sujeto esta a salvo por
+      78038>    otra via.**
+   PUNTO 2, LINEA 78039, LEIDO DEL FICHERO:
+      78039> 2. **DOS DIVERGENCIAS, YA NO UNA, ENTRE `docs/plan/08_VERIFICACION.md` Y LO
+      78040>    ADJUDICADO.** La **linea 30** dice CUATRO controles y su ficha `OP-A-02` dice CINCO
+      78041>    (sube por tercera acta seguida). La **linea 28** lleva desde hoy el punto de
+      78042>    verificacion de `05 SANEO` idx 1 **acotado por correccion declarada** (`4.5`) y su
+      78043>    texto sin acotar. **Las dos son sede del fundador y las dos siguen sin corregir.**
+   PUNTO 3, LINEA 78044, LEIDO DEL FICHERO:
+      78044> 3. **`--siguiente` DEL LANZADOR DE LA BATERIA NO DISTINGUE LA VUELTA DE LAS SALIDAS QUE
+      78045>    MIRA**, y hoy responde que no falta ningun tramo (seccion `5.1`). **Hermana del
+      78046>    rotulo de `docs/loop/SALIDA_V183_BATERIA.txt`, que dice VUELTA 183 sobre el
+      78047>    contenido de la 215**, y las dos salen de la misma causa: el lanzador es estable y
+      78048>    sus salidas tambien.
+   PUNTO 4, LINEA 78049, LEIDO DEL FICHERO:
+      78049> 4. **`scripts/loop/vuelta150_4_tabla_por_fase.py` en rojo**, `AssertionError: la tabla
+      78050>    no trae ocho filas: 11`, corrido por mi hoy con el corte `a6c9b0aa`. **Queda por
+      78051>    decidir si se repara o si su vara de ocho filas se retira** en favor de la de las
+      78052>    diecisiete clausulas.
+   PUNTO 5, LINEA 78053, LEIDO DEL FICHERO:
+      78053> 5. **LA CIEGA NO PUEDE ACERTAR LO QUE SE DECIDE POR BARRIDO DE FAMILIA, Y ESTA VUELTA
+      78054>    LO MIDE MAS FINO QUE LA 218.** No es solo que las `B` y las `C` vivan de figuras:
+      78055>    es que **el archivo decide pares de familia densa por transitividad sobre veredictos
+      78056>    de OTROS puestos**, y desde un par de dos nodos eso no se ve. **Nueve de mis catorce
+      78057>    fallos son de esa especie.** El rediseno del instrumento es maquinaria y la
+      78058>    moratoria lo prohibe hoy.
+   PUNTO 6, LINEA 78059, LEIDO DEL FICHERO:
+      78059> 6. **LAS DOS CLAUSULAS QUE QUEDAN, CON SU CIFRA:** `03 FUSIONES` idx 0 (**71 actos** sin
+      78060>    fundir por la lectura ancha, **SEIS fusiones de 19 nodos** por la estrecha) y
+      78061>    `07 ADUANA` idx 0 (**el quinto control sin correr**, mas la celda del punto 2).
+   PUNTO 7, LINEA 78062, LEIDO DEL FICHERO:
+      78062> 7. **EL REMEDIO DE DICTADO DE LA `C.4`, EN LAS PALABRAS DEL PROPIO EJECUTOR:** *la
+      78063>    pareja de bytes no es una regla de RUTAS, es una regla de CIFRAS DE BYTES, vengan de
+      78064>    una ruta o de un campo de texto*. **Va en el encargo de la 220 con esas palabras.**
+
+   CIFRA puntos localizados con su linea: 7 | CIFRA que la seccion 6 lista: 7
+
+   LA TABLA, ARMADA DE LO LOCALIZADO Y NO TECLEADA:
+| # | linea del acta 219 | lo que sube, y su cifra |
+|---:|---:|---|
+| 1 | **78026** | la familia C.1 del auditor en NUEVE actas seguidas, con TRES mediciones de fallo del remedio del fundador, y SUBE CON TRES OPCIONES concretas |
+| 2 | **78039** | DOS divergencias, ya no una, entre la pagina 08 del plan y lo adjudicado: la linea 30 dice CUATRO controles y su ficha OP-A-02 dice CINCO (tercera acta seguida), y la linea 28 lleva desde el acta 219 el punto de verificacion de 05 SANEO idx 1 acotado por correccion declarada y su texto sin acotar |
+| 3 | **78044** | el carril del lanzador de la bateria que dice cual tramo toca no distingue la vuelta de las salidas que mira, y hoy responde que no falta ningun tramo; hermano del rotulo de la salida compuesta, que dice VUELTA 183 sobre el contenido de la 215 |
+| 4 | **78049** | scripts/loop/vuelta150_4_tabla_por_fase.py en rojo, AssertionError la tabla no trae ocho filas: 11, y queda por decidir si se repara o si su vara de ocho filas se retira |
+| 5 | **78053** | la ciega no puede acertar lo que el archivo decide por BARRIDO DE FAMILIA, por transitividad sobre veredictos de otros puestos: NUEVE de los catorce fallos del auditor son de esa especie |
+| 6 | **78059** | las DOS clausulas que quedan, con su cifra: 03 FUSIONES idx 0 (71 actos sin fundir por la lectura ancha, SEIS fusiones de 19 nodos por la estrecha) y 07 ADUANA idx 0 (el quinto control sin correr, mas la celda del punto 2) |
+| 7 | **78062** | el remedio de dictado de mi C.4, en mis propias palabras: la pareja de bytes no es una regla de RUTAS, es una regla de CIFRAS DE BYTES, vengan de una ruta o de un campo de texto |
+   CIFRA filas armadas: 7 | CIFRA que deberia haber: 7
+
+   LAS TRES OPCIONES DEL PUNTO 1, QUE SON LO QUE LO HACE DECIDIBLE, EXTRAIDAS DEL PROPIO TEXTO DEL ACTA Y NO RESUMIDAS POR MI:
+   CIFRA opciones halladas en el texto del punto 1: 3 | CIFRA que el encargo exige: 3
+      OPCION (a), VERBATIM DEL ACTA> que la orden deje de ser texto y pase a ser lo primero que el turno EJECUTA, moviendo los tres comandos de apertura al principio del propio encargo del auditor y no a un fichero que hay que abrir
+      OPCION (b), VERBATIM DEL ACTA> levantar la moratoria `6.3` **solo para esta guarda**, para que el turno pueda apuntar los toques que hoy se le escapan por correr fuera de las funciones instrumentadas
+      OPCION (c), VERBATIM DEL ACTA> aceptar la caida como coste conocido y **retirar la letra**, porque nueve actas seguidas rompiendo una regla que nunca ha quemado un sujeto dicen o que la regla no se puede cumplir o que protege menos de lo que cuesta. **Yo no elijo, pero digo cual descartaria: la (c) no, mientras nadie mida que el sujeto esta a salvo por otra via.**
+   Y LO QUE EL AUDITOR ANADE SOBRE SU PROPIA LISTA, TAMBIEN DEL FICHERO: dice que el no elige, pero que descartaria la (c) mientras nadie mida que el sujeto esta a salvo por otra via.
+   CIFRA opciones que ESTA VUELTA resuelve: 0 | CIFRA que el encargo ordena resolver: 0
+
+==============================================================================
+ESTA TAREA SOLO LEE, Y SE PRUEBA CON LOS SHA
+==============================================================================
+   docs/plan/OPERACIONES.jsonl AL ENTRAR: sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b
+   docs/plan/OPERACIONES.jsonl AL SALIR:   sha256 disco 650578474361eb2b y sha256 LF 650578474361eb2b, 517181 bytes en disco y 517181 normalizado a LF
+   docs/plan/08_VERIFICACION.md AL ENTRAR: sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4
+   docs/plan/08_VERIFICACION.md AL SALIR:   sha256 disco 578eeefab6db2fd4 y sha256 LF 578eeefab6db2fd4, 73652 bytes en disco y 73652 normalizado a LF
+   docs/plan/07_ADUANA.md AL ENTRAR: sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0
+   docs/plan/07_ADUANA.md AL SALIR:   sha256 disco 34642304c5f7667f y sha256 LF 6f5f91619adec6e0, 3815 bytes en disco y 3723 normalizado a LF
+   docs/plan/01_FUENTES.md AL ENTRAR: sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3
+   docs/plan/01_FUENTES.md AL SALIR:   sha256 disco 73168452929b3d42 y sha256 LF f965abf6c3ca95c3, 128187 bytes en disco y 126666 normalizado a LF
+   docs/plan/05_SANEO.md AL ENTRAR: sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806
+   docs/plan/05_SANEO.md AL SALIR:   sha256 disco 3f46a4141e63144a y sha256 LF 22e59e0b7a22b806, 39450 bytes en disco y 38699 normalizado a LF
+   docs/plan/03_FUSIONES.md AL ENTRAR: sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2
+   docs/plan/03_FUSIONES.md AL SALIR:   sha256 disco f06d25b41c587316 y sha256 LF 46c592fa8da942e2, 833308 bytes en disco y 828282 normalizado a LF
+   docs/plan/INVENTARIO.jsonl AL ENTRAR: sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a
+   docs/plan/INVENTARIO.jsonl AL SALIR:   sha256 disco 43cea06634e6fc1a y sha256 LF 43cea06634e6fc1a, 629533 bytes en disco y 629533 normalizado a LF
+   LOS 14 SHA DE LAS SEDES DEL PLAN COINCIDEN AL ENTRAR Y AL SALIR POR LAS DOS CONVENCIONES: SI
+
+   EL CASO ROJO, DICHO CUAL ES CUAL: la localizacion de las lineas, la re-corrida del lector, el cotejo de los nueve sha, el cotejo entre las tres lineas de CIFRA y la tabla contada, y la aritmetica de las dos cifras CAEN EN ROJO por si solos y estan contados arriba. LA GLOSA DE CADA ADJUDICACION ES MIA y no tiene nada que mutar: SE DECLARA QUE NO HAY CASO ROJO AUTOMATICO PARA ESA PARTE.
+
+CIFRA comprobaciones que fallan: 0
+VERDE: la TAREA 1 sale limpia.

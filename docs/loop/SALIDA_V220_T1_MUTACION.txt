@@ -1,0 +1,42 @@
+==============================================================================
+PRUEBA DE MUTACION DEL CASO ROJO DE LA TAREA 1 DE LA VUELTA 220
+==============================================================================
+
+EL JUICIO SE IMPORTA, NO SE CLONA: juicio_del_movimiento() de _v220_t1_registros.py
+LA MARCA QUE EL JUICIO USA, LEIDA DEL MODULO Y NO TECLEADA AQUI: 'LOS DOS FICHEROS DE LAS CITAS, MEDIDOS HOY'
+
+CASO 1 VERDE DE CONTROL: solo la salida propia, y solo la linea del conteo del acta
+   ficheros movidos que se le pasan: docs/loop/SALIDA_V219_T2_LECTURAS.txt
+   CIFRA lineas que difieren que se le pasan: 1
+   CIFRA motivos de ROJO que devuelve: 0 | CIFRA que el caso espera: 0
+   EL CASO NO CAE: CALZA
+
+CASO 2 ROJO POR FICHERO AJENO: se movio ademas una sede del plan
+   ficheros movidos que se le pasan: docs/loop/SALIDA_V219_T2_LECTURAS.txt, docs/plan/08_VERIFICACION.md
+   CIFRA lineas que difieren que se le pasan: 1
+   CIFRA motivos de ROJO que devuelve: 1 | CIFRA que el caso espera: 1 o mas
+      motivo> SE MOVIERON FICHEROS QUE NO SON LA SALIDA DEL PROPIO LECTOR, y eso es ROJO sin matices: docs/plan/08_VERIFICACION.md
+   EL CASO CAE: CALZA
+
+CASO 3 ROJO POR DOS LINEAS: la salida propia difiere en dos
+   ficheros movidos que se le pasan: docs/loop/SALIDA_V219_T2_LECTURAS.txt
+   CIFRA lineas que difieren que se le pasan: 2
+   CIFRA motivos de ROJO que devuelve: 1 | CIFRA que el caso espera: 1 o mas
+      motivo> la salida del propio lector difiere en 2 linea(s) y solo se admite UNA, la del conteo del acta
+   EL CASO CAE: CALZA
+
+CASO 4 ROJO POR OTRA LINEA: una sola, pero no la del conteo del acta
+   ficheros movidos que se le pasan: docs/loop/SALIDA_V219_T2_LECTURAS.txt
+   CIFRA lineas que difieren que se le pasan: 1
+   CIFRA motivos de ROJO que devuelve: 1 | CIFRA que el caso espera: 1 o mas
+      motivo> la unica linea que difiere en la salida del propio lector NO es la del conteo del acta
+   EL CASO CAE: CALZA
+
+Y LA MUTACION SOBRE EL VALOR ESPERADO, QUE ES LA QUE PRUEBA QUE ESTO NO
+SE APRUEBA SOLO: si al caso 1 se le exigiera CAER, el arnes tendria que
+decir NO CALZA. Se comprueba aqui mismo:
+   con el valor esperado MUTADO a CAE, el caso 1 NO CALZA, que es lo que se exige
+
+CIFRA casos que CAEN: 3 de 4
+CIFRA comprobaciones que fallan: 0
+VERDE: los cuatro casos se comportan.
