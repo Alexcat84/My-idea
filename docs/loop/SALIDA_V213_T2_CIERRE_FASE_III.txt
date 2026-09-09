@@ -1,0 +1,247 @@
+==============================================================================
+VUELTA 213, TAREA 2. INVENTARIO DE CIERRE DE LA FASE III, DE LAS 71 FICHAS
+LEIDO DEL REPO Y NO DEL CAMPO estado (recuadro 0 de AUDITOR.md)
+==============================================================================
+
+CIFRA sede docs/plan/OPERACIONES.jsonl AL ENTRAR: 514452 bytes, sha256 disco ca1d95b5b3d19e9e, sha256 LF ca1d95b5b3d19e9e
+CIFRA corte con el que corre la vara EN ESTA VUELTA: 7be7476e
+
+CIFRA fichas contadas de docs/plan/OPERACIONES.jsonl: 71
+CIFRA id_op distintos: 71
+
+LAS CUATRO VARAS, INVOCADAS DE SU PROPIO INSTRUMENTO Y NO REESCRITAS AQUI
+   CIFRA P1 con DESTINO CUMPLIDO: 20
+   CIFRA P2 con el id_op en codigo vivo: 20
+   CIFRA P3a con huella en git: 59
+   CIFRA P3b con caso positivo citado y presente: 4
+   CIFRA fichas de tipo MESA con vara documental computable: 6
+   CIFRA de esas con al menos un documento hallado: 5
+
+==============================================================================
+LA GUARDA: MI CELDA DE PRUEBAS CONTRA LA QUE LA VARA PUBLICA EN SU SALIDA
+==============================================================================
+CIFRA filas que la vara IMPRIME en su tabla (docs/loop/SALIDA_V213_T2_VARA.txt): 40
+CIFRA filas cotejadas: 40 | CIFRA que DIFIEREN: 0 (se exigen 0)
+
+==============================================================================
+LA TABLA, UNA FILA POR FICHA, LAS 71 Y SIN CORTAR
+==============================================================================
+La columna `estado` es HISTORICA y se publica como CONTRASTE, nunca como
+fuente: el recuadro 0 de AUDITOR.md lo dice y esta tarea lo obedece.
+
+| id_op | fase | tipo | estado HISTORICO (contraste) | pruebas que dan positivo, de la vara de esta vuelta | veredicto del repo | calza el campo con el repo |
+|---|---|---|---|---|---|---|
+| `OP-F-01` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-F-02` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-F-03` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-D-01` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-D-02` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P1+P2+P3a | EJECUTADA | NO |
+| `OP-D-03` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P3a | EJECUTADA | NO |
+| `OP-D-04` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-D-05` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P1+P3a | EJECUTADA | NO |
+| `OP-D-06` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P3a | EJECUTADA | NO |
+| `OP-S-01` | 05_SANEO | FUSION | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-S-02` | 05_SANEO | VIGENCIA | HECHA | P3a | EJECUTADA | SI |
+| `OP-S-03` | 05_SANEO | VIGENCIA | HECHA | P3a | EJECUTADA | SI |
+| `OP-S-04` | 05_SANEO | HERRAMIENTA | HECHA | P3a | EJECUTADA | SI |
+| `OP-S-05` | 05_SANEO | HERRAMIENTA | HECHA | P3a | EJECUTADA | SI |
+| `OP-S-06` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-S-08` | 05_SANEO | CAMPO_SUCIO | HECHA | P2 | EJECUTADA | SI |
+| `OP-S-07` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-S-09` | 05_SANEO | RENOMBRE_CON_ALIAS | HECHA | P3a | EJECUTADA | SI |
+| `OP-S-10` | 05_SANEO | REENCUADRE_DE_MARCO | HECHA | P3a | EJECUTADA | SI |
+| `OP-C-01` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-C-02` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-C-03` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-C-04` | 00_CODIGO | CAMPO_SUCIO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-U-01` | 03_FUSIONES | FUSION | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-E-01` | 04_ENLACES | ENLACE | LISTA | P3a | EJECUTADA | NO |
+| `OP-E-02` | 04_ENLACES | ENLACE | HECHA | P3a | EJECUTADA | SI |
+| `OP-M-01` | 06_MESAS | MESA ADJUDICADA: LAS DOS MITADES QUEDAN, CON FRONTERA ADOPTADA | HECHA | P3a | EJECUTADA | SI |
+| `OP-M-02` | 06_MESAS | MESA ADJUDICADA: SERIE DECLARADA | HECHA | P3a | EJECUTADA | SI |
+| `OP-M-03` | 06_MESAS | MESA ADJUDICADA: DOS PUERTAS MAS UN ACTO | HECHA | P3a | EJECUTADA | SI |
+| `OP-M-04` | 06_MESAS | MESA ADJUDICADA: DOS FUSIONES MAS UN ENLACE | HECHA | P3a | EJECUTADA | SI |
+| `OP-M-05` | 06_MESAS | MESA ADJUDICADA: DOS ETAPAS, CON FRONTERA REGISTRADA | HECHA | P3a | EJECUTADA | SI |
+| `OP-A-01` | 07_ADUANA | FRONTERA_DECLARADA | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-A-02` | 07_ADUANA | MESA | LISTA | P2+P3a+documental | EJECUTADA | NO |
+| `OP-V-01` | 08_VERIFICACION | MESA | HECHA | documental | SIN EJECUTAR | NO |
+| `OP-U-02` | 03_FUSIONES | FUSION | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-S-11` | 05_SANEO | CAMPO_SUCIO | HECHA | P2+P3a+P3b | EJECUTADA | SI |
+| `OP-F-04-COL` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-F-04-HOR` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-F-04-WEI` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-F-04-RAC` | 01_FUENTES | DECISION_DE_FUENTE | LISTA | P3a | EJECUTADA | NO |
+| `OP-L-01` | 09_LECTURAS_DIRIGIDAS | MESA | HECHA | documental | SIN EJECUTAR | NO |
+| `OP-L-02` | 09_LECTURAS_DIRIGIDAS | MESA | HECHA | ninguna | SIN EJECUTAR | NO |
+| `OP-L-03` | 09_LECTURAS_DIRIGIDAS | MESA | HECHA | documental | SIN EJECUTAR | NO |
+| `OP-I-01` | 10_INVENTARIO | MESA | LISTA | documental | SIN EJECUTAR | SI |
+| `OP-E-03` | 04_ENLACES | LECTURA DIRIGIDA | LISTA | P3b | EJECUTADA | NO |
+| `OP-S-12` | 05_SANEO | SANEO MECANICO | HECHA | P2+P3a | EJECUTADA | SI |
+| `OP-C-05` | 00_CODIGO | GUARDA | HECHA | P2+P3a+P3b | EJECUTADA | SI |
+| `OP-M-02-PROG` | 03_FUSIONES | FUSION DE MESA | LISTA | P1+P3a | EJECUTADA | NO |
+| `OP-M-02-MEDIOS` | 03_FUSIONES | FUSION DE MESA | LISTA | ninguna | CONSUMIDA por OP-U-01 | SI |
+| `OP-M-02-ASSESS` | 03_FUSIONES | FUSION DE MESA | LISTA | P1 | EJECUTADA | NO |
+| `OP-M-02-ADMIT` | 03_FUSIONES | FUSION DE MESA | LISTA | ninguna | CONSUMIDA por OP-U-01 | SI |
+| `OP-M-02-ACTIVATE` | 03_FUSIONES | FUSION DE MESA | LISTA | P1 | EJECUTADA | NO |
+| `OP-M-02-ACCLIMATE` | 03_FUSIONES | FUSION DE MESA | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-02-ACCOMPLISH` | 03_FUSIONES | FUSION DE MESA | LISTA | P1 | EJECUTADA | NO |
+| `OP-D-07` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P2+P3a | EJECUTADA | NO |
+| `OP-M-03-I` | 03_FUSIONES | FUSION DE MESA | LISTA | P1+P3a | EJECUTADA | NO |
+| `OP-M-03-II` | 03_FUSIONES | FUSION DE MESA | LISTA | P1+P3a | EJECUTADA | NO |
+| `OP-M-03-III` | 03_FUSIONES | FUSION DE MESA | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-03-ENLACES` | 04_ENLACES | ENLACE | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-01-FUSION` | 03_FUSIONES | FUSION DE MESA: LA CAMARILLA DE CINCO | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-E-04` | 04_ENLACES | ENLACE | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-E-05` | 04_ENLACES | ENLACE MUTUO | HECHA | P1+P2+P3a | EJECUTADA | SI |
+| `OP-M-01-ESLABONES` | 04_ENLACES | ENLACE | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-05-INDICE` | 03_FUSIONES | FUSION DE MESA | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-05-EDIFICIO` | 03_FUSIONES | FUSION DE MESA | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-05-APERTURA` | 03_FUSIONES | FUSION DE MESA | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-M-01-SEXTO` | 04_ENLACES | ENLACE MAS PODA DEL SOLAPE | HECHA | P1+P3a | EJECUTADA | SI |
+| `OP-E-06` | 04_ENLACES | ENLACE CON EVIDENCIA DE LECTURA | LISTA | P3a | EJECUTADA | NO |
+| `OP-E-07` | 04_ENLACES | LECTURA DIRIGIDA CORTA | LISTA | P3a+P3b | EJECUTADA | NO |
+| `OP-D-08` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P3a | EJECUTADA | NO |
+| `OP-D-09` | 02_DESTEJIDOS | DESTEJIDO | LISTA | P3a | EJECUTADA | NO |
+
+CIFRA filas de la tabla: 71 | CIFRA fichas que deberia haber: 71
+
+==============================================================================
+LAS CUATRO CIFRAS QUE CIERRAN LA SECCION, CADA UNA CONTADA DE LA TABLA
+==============================================================================
+
+1. CIFRA de las 71 que tienen PRUEBA DE EJECUCION en el repo: 64
+2. CIFRA CONSUMIDAS (sin prueba propia, con sus nodos resueltos a un vivo unico): 2
+      CONSUMIDA: OP-M-02-MEDIOS         por OP-U-01
+      CONSUMIDA: OP-M-02-ADMIT          por OP-U-01
+3. CIFRA SIN EJECUTAR: 5, y va su lista entera
+      SIN EJECUTAR: OP-V-01                fase 08_VERIFICACION, tipo MESA, estado historico HECHA
+      SIN EJECUTAR: OP-L-01                fase 09_LECTURAS_DIRIGIDAS, tipo MESA, estado historico HECHA
+      SIN EJECUTAR: OP-L-02                fase 09_LECTURAS_DIRIGIDAS, tipo MESA, estado historico HECHA
+      SIN EJECUTAR: OP-L-03                fase 09_LECTURAS_DIRIGIDAS, tipo MESA, estado historico HECHA
+      SIN EJECUTAR: OP-I-01                fase 10_INVENTARIO, tipo MESA, estado historico LISTA
+4. CIFRA con el campo estado EN DESACUERDO con el repo: 40, y van las dos direcciones con sus dos listas enteras
+   4.a HECHA SIN PRUEBA (el campo afirma mas que el repo): 4
+      HECHA sin prueba: OP-V-01                fase 08_VERIFICACION
+      HECHA sin prueba: OP-L-01                fase 09_LECTURAS_DIRIGIDAS
+      HECHA sin prueba: OP-L-02                fase 09_LECTURAS_DIRIGIDAS
+      HECHA sin prueba: OP-L-03                fase 09_LECTURAS_DIRIGIDAS
+   4.b LISTA CON PRUEBA (el repo dice mas que el campo): 36
+      LISTA con prueba: OP-F-01                pruebas P3a
+      LISTA con prueba: OP-F-02                pruebas P3a
+      LISTA con prueba: OP-F-03                pruebas P3a
+      LISTA con prueba: OP-D-01                pruebas P2+P3a
+      LISTA con prueba: OP-D-02                pruebas P1+P2+P3a
+      LISTA con prueba: OP-D-03                pruebas P3a
+      LISTA con prueba: OP-D-04                pruebas P2+P3a
+      LISTA con prueba: OP-D-05                pruebas P1+P3a
+      LISTA con prueba: OP-D-06                pruebas P3a
+      LISTA con prueba: OP-S-06                pruebas P2+P3a
+      LISTA con prueba: OP-S-07                pruebas P2+P3a
+      LISTA con prueba: OP-C-01                pruebas P2+P3a
+      LISTA con prueba: OP-C-02                pruebas P2+P3a
+      LISTA con prueba: OP-C-03                pruebas P2+P3a
+      LISTA con prueba: OP-C-04                pruebas P2+P3a
+      LISTA con prueba: OP-U-01                pruebas P2+P3a
+      LISTA con prueba: OP-E-01                pruebas P3a
+      LISTA con prueba: OP-A-01                pruebas P2+P3a
+      LISTA con prueba: OP-A-02                pruebas P2+P3a
+      LISTA con prueba: OP-U-02                pruebas P2+P3a
+      LISTA con prueba: OP-F-04-COL            pruebas P3a
+      LISTA con prueba: OP-F-04-HOR            pruebas P2+P3a
+      LISTA con prueba: OP-F-04-WEI            pruebas P3a
+      LISTA con prueba: OP-F-04-RAC            pruebas P3a
+      LISTA con prueba: OP-E-03                pruebas P3b
+      LISTA con prueba: OP-M-02-PROG           pruebas P1+P3a
+      LISTA con prueba: OP-M-02-ASSESS         pruebas P1
+      LISTA con prueba: OP-M-02-ACTIVATE       pruebas P1
+      LISTA con prueba: OP-M-02-ACCOMPLISH     pruebas P1
+      LISTA con prueba: OP-D-07                pruebas P2+P3a
+      LISTA con prueba: OP-M-03-I              pruebas P1+P3a
+      LISTA con prueba: OP-M-03-II             pruebas P1+P3a
+      LISTA con prueba: OP-E-06                pruebas P3a
+      LISTA con prueba: OP-E-07                pruebas P3a+P3b
+      LISTA con prueba: OP-D-08                pruebas P3a
+      LISTA con prueba: OP-D-09                pruebas P3a
+
+   LA CAUTELA DE LA CIFRA 4, PEGADA A ELLA Y NO SUELTA (adjudicacion 6.8
+   del acta 211): si cada ficha va poniendo su campo al dia, la vara del
+   desacuerdo tiende a cero SIN QUE SE HAYA EJECUTADO NADA MAS. La cifra
+   mide cuanto miente el campo, no cuanto trabajo queda. El trabajo que
+   queda es la cifra 3.
+
+   LA SUMA SE COMPRUEBA: 64 con prueba + 2 consumidas + 5 sin ejecutar = 71, y las fichas son 71
+
+==============================================================================
+2.b LA UNICA QUE QUEDA ABIERTA: OP-I-01
+==============================================================================
+CIFRA puntos de `verificacion` de OP-I-01, contados de la ficha: 4
+
+LO QUE LA FICHA SI ESCRIBE Y LO QUE NO, DICHO ANTES DE LA TABLA: la ficha
+escribe LOS PUNTOS y NO escribe su estado. CUBRE, A MEDIAS y NO CUBRE son
+veredictos MEDIDOS, no campos: salen de docs/loop/SALIDA_V211_T2_OP_I_01.txt
+y los ratifico el acta 211 en su 6.3 (linea 74595). No los invento aqui y no
+los atribuyo a la ficha.
+
+CIFRA veredictos leidos de SALIDA_V211_T2_OP_I_01.txt: 4 (se esperan 4)
+
+   PUNTO 1, PEGADO ENTERO DE LA FICHA:
+      toda entrada lleva su fecha_corte
+      ESTADO MEDIDO: CUBRE
+
+   PUNTO 2, PEGADO ENTERO DE LA FICHA:
+      toda forma con cobertura incompleta va marcada PROVISIONAL
+      ESTADO MEDIDO: NO CUBRE
+
+   PUNTO 3, PEGADO ENTERO DE LA FICHA:
+      todo hueco va NOMBRADO, nunca rellenado
+      ESTADO MEDIDO: A MEDIAS
+
+   PUNTO 4, PEGADO ENTERO DE LA FICHA:
+      el inventario se recomputa entero con el disparador de 08_VERIFICACION
+      ESTADO MEDIDO: A MEDIAS
+
+EL PUNTO QUE ESTA EN NO CUBRE, APARTE Y ENTERO:
+   CIFRA puntos en NO CUBRE: 1
+   PUNTO 2: toda forma con cobertura incompleta va marcada PROVISIONAL
+
+QUE HARIA FALTA EXACTAMENTE PARA QUE DEJARA DE ESTARLO, CITANDO LA
+ADJUDICACION 6.4 DEL ACTA 211 CON SU LINEA:
+   linea 74601 de docs/loop/ACTA_AUDITOR.md, leida hoy:
+      **`6.4` LA `D.3` SE ADJUDICA Y EL `NO CUBRE` SE SOSTIENE.** El banco `9.26`, verbatim:
+   linea 74606 de docs/loop/ACTA_AUDITOR.md, leida hoy:
+      dice que la forma sea provisional.** **95 formas incompletas y 0 que lo digan: NO CUBRE.**
+   linea 74607 de docs/loop/ACTA_AUDITOR.md, leida hoy:
+      **Marcar las 95 es una edicion de datos de `docs/plan/` que ninguna regla ordena hoy**, y
+
+   EN UNA FRASE, Y SALE DE ESAS LINEAS: haria falta que las entradas con
+   cobertura incompleta LO DIGAN, o sea que lleven escrita la palabra
+   PROVISIONAL (o su equivalente declarado) en algun campo. El banco 9.26
+   admite una cobertura incompleta como cumplimiento SI SE DICE ASI, y hoy
+   ninguna lo dice. No hace falta completar la cobertura: hace falta
+   MARCARLA.
+
+EL RECUENTO DE LAS ENTRADAS DEL INVENTARIO CON COBERTURA INCOMPLETA,
+HECHO POR MI EN ESTA VUELTA Y NO COPIADO:
+   EL COMANDO QUE LA CUENTA, escrito para que se pueda repetir a mano:
+      python -c "import io,json,re;E=[json.loads(l) for l in io.open('docs/plan/INVENTARIO.jsonl',encoding='utf-8') if l.strip()];p=re.compile(r'^(\d+) de (\d+) pares leidos');m=[p.match(str(d.get('cobertura') or '')) for d in E];print(sum(1 for x in m if x), sum(1 for x in m if x and int(x.group(1))<int(x.group(2))))"
+   CIFRA entradas del inventario: 672
+   CIFRA entradas con cobertura de la forma 'N de M pares leidos': 555
+   CIFRA de esas que estan INCOMPLETAS (N menor que M): 95
+   CIFRA de esas incompletas que llevan PROVISIONAL en algun campo: 0
+   CIFRA entradas del inventario entero que llevan PROVISIONAL: 3
+   CONTRASTE CON LA CIFRA VIEJA: el acta 211 publica 95 en su 6.4 (linea
+   74606). Mi conteo de hoy da 95, o sea que REPRODUCE al digito.
+
+LO QUE DECIDE EL FUNDADOR Y LO QUE NO, EN UNA LINEA: marcar esas 95 entradas
+es EDICION DE DATOS de docs/plan que ninguna regla ordena hoy, y las filas que
+faltan en docs/plan/08_VERIFICACION.md para las fases 09 y 10 CAMBIAN LA FORMA
+DEL PLAN: las dos son suyas y ninguna es del bucle.
+
+==============================================================================
+LA PROHIBICION 1, PROBADA CON EL sha256 Y NO PROMETIDA
+==============================================================================
+CIFRA sede docs/plan/OPERACIONES.jsonl AL SALIR: 514452 bytes, sha256 disco ca1d95b5b3d19e9e, sha256 LF ca1d95b5b3d19e9e
+CIFRA el sha256 LF de docs/plan/OPERACIONES.jsonl es el mismo al entrar y al salir: SI, QUIETO como se exige
+
+CIFRA rojos de esta tarea: 0
+VEREDICTO: VERDE
