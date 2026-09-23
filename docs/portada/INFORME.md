@@ -151,7 +151,7 @@ Medido en el navegador, en bytes (gzip entre paréntesis):
 
 | | Antes (`main`) | Después |
 |---|---|---|
-| JS inicial de la portada | PESO_BASE | 806 480 (220 502) |
+| JS inicial de la portada | 810 395 (221 468) | 806 480 (220 502), unos 4 KB menos |
 | Diferido, motor de líquido (three.js + motor + worker) | — | 592 738 (151 632) |
 | Diferido, respaldo de partículas | — | 26 067 (10 120) |
 | Diferido, imagen fija | — | 19 314 |
