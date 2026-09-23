@@ -68,6 +68,24 @@ export function figuraEn(t: number): number {
   return ciclo % FIGURAS.length;
 }
 
+/**
+ * Giro de la masa sobre su eje vertical (radianes, en [0, 2pi]). Da una
+ * vuelta completa por ciclo mientras es masa: arranca al empezar a
+ * regresar de la figura, cruza el reposo y cierra la vuelta justo cuando
+ * empieza la transformacion. Asi la figura siempre queda de frente y nunca
+ * hay que desenrollar el giro. Arranca y frena suave.
+ */
+export function giroEn(t: number): number {
+  const tc = ((t % DURACION_CICLO) + DURACION_CICLO) % DURACION_CICLO;
+  const inicioRegreso = FASES.reposo + FASES.disgrega + FASES.forma;
+  const ventana = FASES.regresa + FASES.reposo;
+  let u: number;
+  if (tc >= inicioRegreso) u = (tc - inicioRegreso) / ventana;
+  else if (tc < FASES.reposo) u = (tc + FASES.regresa) / ventana;
+  else u = 1;
+  return 2 * Math.PI * suavizar(u);
+}
+
 /** Instantes de referencia de un ciclo, para capturas y pruebas. */
 export const MOMENTOS = {
   reposo: FASES.reposo * 0.5,

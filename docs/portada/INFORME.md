@@ -11,6 +11,8 @@ equipos débiles, sale de `particula-my-idea.html`.
 - Las figuras se forman con **la misma materia**, sin partículas: el
   líquido fluye, se estira y se vuelve la figura.
 - La materia se mueve **más rápido** y de forma **más agresiva**.
+- **Giro más rápido**, y un **contorno inestable**: partes de la materia
+  sobresalen de la silueta y luego vuelven a entrar.
 
 Las partículas quedan solo en el respaldo para equipos que no sostienen el
 líquido.
@@ -45,14 +47,26 @@ su teléfono.
 | `masa/figuras.ts` | Los trazos de las cinco figuras y su campo de distancia con signo (transformada exacta de Felzenszwalb y Huttenlocher, suavizada). |
 | `masa/respaldo.ts` | Respaldo de solo partículas en WebGL1 crudo, sin three.js. |
 | `masa/ciclo.ts`, `encuadre.ts`, `calidad.ts` | Lógica pura: ciclo, encuadre y niveles. |
-| `public/portada/masa-reposo.webp` | La imagen fija (24 KB), renderizada del propio motor en reposo. |
+| `public/portada/masa-reposo.webp` | La imagen fija (20 KB), renderizada del propio motor en reposo. |
 
 ### La materia
 
 **Masa.** Una piel sobre una esfera, con fbm y deformación de dominio en
 dos escalas: una ondulación grande y un temblor fino y rápido. Su reloj va
-×1,7 respecto de la muestra y la amplitud es mayor, para un movimiento más
-vivo y agresivo, sin salir del 96 % del lado menor.
+×1,9 respecto de la muestra.
+
+**Brotes.** Diez partes de la materia salen del contorno como lóbulos
+angostos, crecen, se retraen y a veces se hunden un poco, cada una en su
+dirección y a su ritmo. Así la masa se lee inestable en toda su silueta.
+El desplazamiento total pasa por un límite suave (`tanh`), de modo que
+nada sale del 96 % del lado menor. Para dejarles espacio, el radio base de
+la masa es algo menor: en reposo ocupa 68 % a 79 % según el instante.
+
+**Giro.** Da una vuelta completa por ciclo mientras es masa, hasta unos
+100°/s, con arranque y frenado suaves y un balanceo en los otros ejes. La
+vuelta cierra justo cuando empieza la transformación, así que la figura
+siempre queda de frente sin desenrollarse (`giroEn` en `ciclo.ts`, con
+prueba de continuidad).
 
 **Figura.** Cada trazo del icono se vuelve un tubo de líquido: un campo de
 distancia en 2D (textura de 256 × 256) se extruye en 3D con sección
@@ -114,9 +128,13 @@ Usan Playwright con Chromium sobre la GPU real (ANGLE/D3D11, Intel Iris Xe).
 ### Capturas (`capturas/`, build de producción)
 
 Tres anchos (390, 768 y 1440) por tres momentos del ciclo (reposo, mitad de
-la transformación y figura formada), más un mosaico con las otras cuatro
-figuras, el nivel bajo, el modo sin movimiento y el respaldo de
-partículas. También está la imagen del nivel fijo.
+la transformación y figura formada). Además:
+
+- `mosaico-brotes-reposo.webp`: seis instantes de la masa con sus brotes
+  entrando y saliendo.
+- `mosaico-figuras-y-respaldos.webp`: las otras cuatro figuras, el nivel
+  bajo, el modo sin movimiento y el respaldo de partículas.
+- `nivel-fija-1440.webp`: la imagen del nivel fijo.
 
 Geometría medida sobre los píxeles de cada captura, con el botón oculto
 para medir. Es la caja de lo que brilla, como fracción del lado menor del
@@ -125,20 +143,21 @@ hero:
 
 | Ancho | Momento | Nivel | Caja (ancho × alto) | Desvío del centro | Toca el borde |
 |---|---|---|---|---|---|
-| 390 | reposo | medio | 0,78 × 0,77 | 2 / 2 px | no |
-| 390 | transformación | medio | 0,67 × 0,77 | 10 / 2 px | no |
-| 390 | figura (foco) | medio | 0,74 × 0,83 | 1 / 1 px | no |
-| 768 | reposo | medio | 0,79 × 0,78 | 3 / 2 px | no |
-| 768 | transformación | medio | 0,67 × 0,77 | 26 / 6 px | no |
+| 390 | reposo | medio | 0,68 × 0,74 | 4 / 6 px | no |
+| 390 | transformación | medio | 0,70 × 0,76 | 10 / 10 px | no |
+| 390 | figura (foco) | medio | 0,74 × 0,82 | 0 / 1 px | no |
+| 768 | reposo | medio | 0,69 × 0,74 | 12 / 18 px | no |
+| 768 | transformación | medio | 0,70 × 0,76 | 22 / 21 px | no |
 | 768 | figura (foco) | medio | 0,74 × 0,82 | 1 / 1 px | no |
-| 1440 | reposo | alto | 0,80 × 0,82 | 6 / 7 px | no |
-| 1440 | transformación | alto | 0,70 × 0,80 | 21 / 12 px | no |
-| 1440 | figura (foco) | alto | 0,74 × 0,82 | 1 / 1 px | no |
+| 1440 | reposo | alto | 0,71 × 0,76 | 8 / 17 px | no |
+| 1440 | transformación | alto | 0,72 × 0,77 | 18 / 27 px | no |
+| 1440 | figura (foco) | alto | 0,74 × 0,82 | 1 / 0 px | no |
 
 La figura formada mide el 80 % del lado menor (82 % con el grosor de los
-tubos y su borde luminoso) y queda centrada a ±1 px. La masa es orgánica:
-en reposo mide 77 % a 82 %. A mitad de la transformación se abulta hacia
-un lado, y eso es lo que mueve el centro de su caja.
+tubos y su borde luminoso) y queda centrada a ±1 px. La masa y la
+transformación son asimétricas a propósito: el centro de la masa está
+exactamente en el centro del hero, pero su caja se corre unos píxeles hacia
+donde sale un brote o un lóbulo. Nada toca nunca el borde.
 
 **Consola: sin errores ni avisos** (página y workers) en los tres anchos,
 las cinco figuras, los niveles y el modo sin movimiento. La única
@@ -151,9 +170,9 @@ el lienzo del respaldo. No es un error de shader ni de JavaScript.
 | Perfil | Nivel elegido | fps (mediana) |
 |---|---|---|
 | Escritorio 1440 × 900 (Intel Iris Xe), ciclo en marcha | alto | 60 |
-| Escritorio, congelado en la transformación y en la figura | alto | 60 y 60 |
+| Escritorio, congelado en reposo con brotes y en la transformación | alto | 60 y 60 |
 | Móvil 390 × 844, dpr 3, CPU ×4, ciclo en marcha | medio | 60 |
-| Móvil, congelado en la transformación y en la figura | medio | 60 y 60 |
+| Móvil, congelado en reposo con brotes y en la transformación | medio | 60 y 60 |
 
 Cadena adaptativa comprobada:
 
@@ -173,7 +192,7 @@ Medido en el navegador, en bytes (gzip entre paréntesis):
 | JS inicial de la portada | 810 395 (221 468) | 806 398 (220 476), unos 4 KB menos |
 | Diferido, motor de la materia (three.js + motor + worker) | — | 590 759 (151 522) |
 | Diferido, respaldo de partículas | — | 24 626 (9 913) |
-| Diferido, imagen fija | — | 24 204 |
+| Diferido, imagen fija | — | 20 378 |
 
 three.js y el motor nunca entran en el bundle inicial. Se descargan después
 del evento `load`, en reposo y dentro del worker. Un equipo que cae a
@@ -187,9 +206,9 @@ Medianas de 3 corridas antes y de 5 (móvil) o 3 (escritorio) después:
 | | Puntuación | LCP | TBT | FCP | Speed Index | CLS |
 |---|---|---|---|---|---|---|
 | Móvil antes | 72 | 6,70 s | 216 ms | 1,66 s | 2,44 s | 0 |
-| Móvil después | **77** | 6,62 s | 54 ms | 1,51 s | 1,62 s | 0 |
+| Móvil después | **77** | 6,62 s | 44 ms | 1,51 s | 1,58 s | 0 |
 | Escritorio antes | 97 | 1,26 s | 18 ms | 0,41 s | 0,77 s | 0 |
-| Escritorio después | **97** | 1,23 s | 0 ms | 0,37 s | 0,41 s | 0 |
+| Escritorio después | **97** | 1,23 s | 0 ms | 0,33 s | 0,39 s | 0 |
 
 En esas corridas el Chrome de Lighthouse cargó el motor completo, en el
 worker. El LCP móvil de 6,6 s ya estaba antes y no es de la masa: el

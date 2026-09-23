@@ -13,7 +13,7 @@ const soloAncho = process.argv[5] ? Number(process.argv[5]) : null;
 mkdirSync(salida, { recursive: true });
 
 const CICLO = 9.8;
-const MOMENTOS = { reposo: 1.7, transformacion: 3.4 + 0.95, figura: 3.4 + 1.9 + 1.3 };
+const MOMENTOS = { reposo: 1.2, transformacion: 3.4 + 0.95, figura: 3.4 + 1.9 + 1.3 };
 const VISTAS = [
   { ancho: 390, alto: 844, dpr: 3, movil: true },
   { ancho: 768, alto: 1024, dpr: 2, movil: true },

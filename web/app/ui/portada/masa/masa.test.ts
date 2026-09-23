@@ -5,7 +5,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { MedidorFps, nivelInicial, siguienteNivel, type PistasEquipo } from "./calidad";
-import { DURACION_CICLO, estadoEn, estadoEnCiclo, FASES, figuraEn, MOMENTOS, suavizar } from "./ciclo";
+import { DURACION_CICLO, estadoEn, estadoEnCiclo, FASES, figuraEn, giroEn, MOMENTOS, suavizar } from "./ciclo";
 import {
   distanciaCamara,
   ENVOLTURA_PIEL,
@@ -65,6 +65,29 @@ describe("ciclo", () => {
     expect(figuraEn(9.8 * 5.5)).toBe(0); // foco otra vez
   });
 
+  it("el giro da una vuelta por ciclo y deja la figura de frente", () => {
+    // Ventana del giro: regresa (1.9) + reposo (3.4) = 5.3 s.
+    // Inicio de la transformacion (tc = 3.4): u = (3.4 + 1.9) / 5.3 = 1 -> 2pi (de frente).
+    // Figura formada (tc = 6.6): u = 1 -> 2pi (de frente).
+    // Inicio del regreso (tc = 7.9): u = 0 -> 0 (de frente).
+    // Mitad de la ventana: tc = 7.9 + 2.65 = 10.55 -> tc = 0.75 del ciclo siguiente;
+    //   u = (0.75 + 1.9) / 5.3 = 0.5 -> suavizar(0.5) = 0.5 -> pi.
+    const frente = (a: number) => Math.min(a, 2 * Math.PI - a);
+    expect(frente(giroEn(FASES.reposo))).toBeCloseTo(0, 6);
+    expect(frente(giroEn(MOMENTOS.figuraFormada))).toBeCloseTo(0, 6);
+    expect(frente(giroEn(7.9))).toBeCloseTo(0, 6);
+    expect(giroEn(10.55)).toBeCloseTo(Math.PI, 6);
+  });
+
+  it("el giro es continuo (sin saltos, salvo el 2pi equivalente a 0)", () => {
+    for (let t = 0; t < DURACION_CICLO * 2; t += 0.01) {
+      const a = giroEn(t);
+      const b = giroEn(t + 0.01);
+      const salto = Math.abs(b - a);
+      expect(Math.min(salto, 2 * Math.PI - salto)).toBeLessThan(0.05);
+    }
+  });
+
   it("suavizar recorta fuera de [0, 1]", () => {
     expect(suavizar(-2)).toBe(0);
     expect(suavizar(3)).toBe(1);
@@ -92,8 +115,9 @@ describe("encuadre: centrada y al 80 % del lado menor", () => {
   it("nada se recorta: el limite es 96 % del lado menor y la piel cabe dentro aun en perspectiva", () => {
     // RADIO_LIMITE = 0.48 / 0.8 * 3.0 = 1.8 -> diametro 3.6 -> 3.6 / 3.0 * 0.8 = 0.96 del lado menor
     expect(RADIO_LIMITE).toBeCloseTo(1.8, 10);
-    // piel maxima 1.36 + 0.34 = 1.70; su silueta vista a distancia d se agranda
-    // r * d / sqrt(d^2 - r^2). Escritorio (d = 6.9976): 1.70 * 6.9976 / 6.7879 = 1.7525 < 1.8
+    // piel maxima 1.22 + 0.52 = 1.74 (los brotes pasan por un limite suave que
+    // nunca la supera); su silueta vista a distancia d se agranda
+    // r * d / sqrt(d^2 - r^2). Escritorio (d = 6.9976): 1.74 * 6.9976 / 6.7778 = 1.7964 < 1.8
     const r = RADIO_MASA + ENVOLTURA_PIEL;
     for (const [w, h] of [[1440, 836], [768, 1024], [390, 780]] as const) {
       const d = distanciaCamara(w, h);

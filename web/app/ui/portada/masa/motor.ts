@@ -47,7 +47,7 @@ import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { AJUSTES, MedidorFps, type NivelLiquido } from "./calidad";
-import { estadoEn, figuraEn, MOMENTOS } from "./ciclo";
+import { estadoEn, figuraEn, giroEn, MOMENTOS } from "./ciclo";
 import type { Aviso, ControlMotor, OpcionesMotor } from "./control";
 import { distanciaCamara, FOV_GRADOS, RADIO_MASA } from "./encuadre";
 import { calcularCampos, LADO_CAMPO } from "./figuras";
@@ -245,13 +245,14 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     ponerFigura(figuraEn(t));
     puntero.sx += (puntero.x - puntero.sx) * 0.05;
     puntero.sy += (puntero.y - puntero.sy) * 0.05;
-    // La masa gira con vida; la figura formada mira de frente.
+    // La masa da una vuelta completa por ciclo y se balancea; la vuelta
+    // cierra justo al transformarse, asi la figura formada mira de frente.
     const libre = 1 - e.mezcla;
     const tg = t * VELOCIDAD_MATERIA;
     giro.set(
-      Math.cos(tg * 0.13) * 0.36 * libre + puntero.sy * 0.18,
-      Math.sin(tg * 0.17) * 0.95 * libre + puntero.sx * 0.25,
-      Math.sin(tg * 0.09) * 0.25 * libre,
+      Math.cos(tg * 0.3) * 0.32 * libre + puntero.sy * 0.18,
+      giroEn(t) + Math.sin(tg * 0.37) * 0.25 * libre + puntero.sx * 0.25,
+      Math.sin(tg * 0.23) * 0.22 * libre,
     );
     matrizGiro.makeRotationFromEuler(giro);
     rotInv.setFromMatrix4(matrizGiro).transpose();

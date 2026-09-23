@@ -90,7 +90,7 @@ void main() {
 `;
 
 /** Ritmo de la materia: 1 era el de la muestra; la portada pide mas vida. */
-export const VELOCIDAD_MATERIA = 1.7;
+export const VELOCIDAD_MATERIA = 1.9;
 /** Radio de los tubos de liquido con que se dibuja cada trazo de la figura. */
 export const GROSOR_TUBO = 0.085;
 /** Medio ancho del trazo base (16 px de 512) en unidades de mundo. */
@@ -110,6 +110,7 @@ export function fragmentoLiquido(o: OpcionesLiquido): string {
 #define TUBO ${decimal(GROSOR_TUBO)}
 #define MEDIO_TRAZO ${decimal(MEDIO_TRAZO)}
 #define ALCANCE_FIGURA ${decimal(ALCANCE_FIGURA)}
+#define BROTES 10
 
 uniform float uTiempo;
 // 0 = la masa, 1 = la figura formada con la misma materia.
@@ -148,12 +149,34 @@ vec3 deformacion(vec3 q, float t) {
 #endif
 }
 
-// La piel en dos escalas: ondulacion grande + temblor fino y rapido.
+// Brotes: partes de la materia que salen del contorno, crecen, se retraen
+// y a veces se hunden un poco, cada una en su punto y a su ritmo. Es lo que
+// hace que la masa se lea inestable en toda su silueta.
+float brotes(vec3 q, float t) {
+  vec3 nq = normalize(q);
+  float suma = 0.0;
+  for (int i = 0; i < BROTES; i++) {
+    float fi = float(i);
+    vec3 dir = normalize(vec3(
+      sin(t * (0.23 + 0.05 * fi) + fi * 2.1),
+      cos(t * (0.19 + 0.04 * fi) + fi * 1.3),
+      sin(t * (0.17 + 0.06 * fi) + fi * 3.7)));
+    // Sale de golpe y se retrae; en la otra mitad del pulso se hunde un poco.
+    float pulso = sin(t * (0.9 + 0.17 * fi) + fi * 1.7);
+    float fuerza = pulso > 0.0 ? pulso * pulso : -0.3 * pulso * pulso;
+    suma += fuerza * pow(max(dot(nq, dir), 0.0), 34.0 + 12.0 * mod(fi, 3.0));
+  }
+  return suma * 0.62;
+}
+
+// La piel: ondulacion grande, temblor fino y rapido, y los brotes. El total
+// pasa por un limite suave (tanh) para no salir nunca de la ENVOLTURA.
 float piel(vec3 q, float t) {
   vec3 w = deformacion(q, t);
   float lenta = fbm(q * 0.62 + w * 0.55 + vec3(0.0, 0.0, t * 0.1));
-  float fina = snoise(q * 3.8 + w * 0.3 + vec3(t * 1.1, -t * 0.85, t * 0.6));
-  return lenta * 0.36 + fina * 0.02;
+  float fina = snoise(q * 3.8 + w * 0.3 + vec3(t * 1.3, -t * 1.0, t * 0.7));
+  float crudo = lenta * 0.27 + fina * 0.026 + brotes(q, t);
+  return ENVOLTURA * tanh(crudo / ENVOLTURA);
 }
 
 // Distancia en el plano de la figura al trazo (negativa dentro del trazo).
