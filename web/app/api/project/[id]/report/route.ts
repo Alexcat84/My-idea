@@ -12,14 +12,24 @@
  * pregunta por pregunta al cliente (no se corre en bucle server-side como
  * el CLI) -- cada llamada a esta ruta es un paso, con el progreso
  * persistido en projects.estado_reporte (migration 010) entre pasos.
+ *
+ * AUD-09 (tanda 1, decision del fundador 25 sep 2026): toda llamada a la IA
+ * pasa por el mismo control de cobro y de limites que el resto. Esta ruta
+ * narraba con Sonnet sin doble factor, sin fusible y sin limite diario. Hoy:
+ * doble factor en cada paso; plan del nucleo exigido (Tus Numeros va
+ * INCLUIDO en el plan, PRECIOS.tus_numeros === 0: el plan es su cobro); y el
+ * fusible y el limite diario se cuentan al EMPEZAR una entrevista, no en cada
+ * respuesta de la misma.
  */
 import { NextResponse } from "next/server";
 import type { NumerosProyecto } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerProyecto } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
 
@@ -56,9 +66,19 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json(AVISO_LOGIN, { status: 401 });
   }
 
+  if (await faltaSegundoFactor()) {
+    return NextResponse.json(AVISO_2FA, { status: 403 });
+  }
+
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
     return NextResponse.json({ error: "proyecto no encontrado" }, { status: 404 });
+  }
+  if (!(await obtenerPlanCoreVigente(supabase, projectId))) {
+    return NextResponse.json(
+      { error: "Tus Números viene incluido con tu plan. Arma tu plan primero y aquí te espero." },
+      { status: 409 }
+    );
   }
 
   const client = createAnthropicClient();
@@ -71,6 +91,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         { error: "ya hay una entrevista de reporte en curso; envia 'respuesta' para continuarla" },
         { status: 409 }
       );
+    }
+    // Empezar una entrevista es un arranque: fusible y limite diario ANTES de
+    // tocar la API, igual que session/start y follow.
+    const fusible = await verificarFusibleGlobal(user.email);
+    if (!fusible.permitido) {
+      return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    }
+    const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
+    if (!limite.permitido) {
+      return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
     }
     resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio());
   } else {
