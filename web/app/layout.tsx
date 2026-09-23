@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -7,14 +7,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-// Solo la landing la usa (eslogan en itálica); el diseño del fundador
-// la pide como 'Instrument Serif' y Landing.tsx la lee por la variable.
-const instrument = Instrument_Serif({
-  variable: "--font-serif",
-  weight: "400",
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-});
+// Instrument Serif se fue con la portada nueva: solo la usaba el eslogan en
+// itálica del hero, que la masa reemplazó. Nada más en web/ leía su variable.
 
 export const metadata: Metadata = {
   title: "My Idea",
@@ -36,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${instrument.variable} h-full antialiased`}>
+    <html lang="es" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-ink">
         {children}
         <footer className="px-4 py-2 text-right text-[10px] text-white/25 select-all" aria-label="versión">
