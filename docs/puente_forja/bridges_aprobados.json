@@ -1,0 +1,96 @@
+{
+  "nota": "Puentes del mundo 11 Primer Equipo, horneados el 23 sep 2026 como en todo pack, con el pack entrega (packs/entrega/metadata/bridges_aprobados.json, extraccion del 2026-08-07) como modelo: 15 aprobados, ninguna ancla del nucleo pasa de 2 (max real 2), todas las anclas vivas y de dominio core (ley del ancla). DIFERENCIA DECLARADA con el modelo: alli el score salia de la similitud Voyage de bridges_propuestos.json; aqui los nodos del mundo 11 no tienen vector (el indice se construye en la integracion, con credencial), asi que cada par se eligio POR LECTURA del titulo, la condicion y el entregable de los dos nodos, y el score va null con su motivo escrito. integrar_packs.py consume core y dominio, no el score.",
+  "aprobados": [
+    {
+      "core": "decision_fundador_solo_vs_equipo",
+      "dominio": "responder_tres_preguntas_vocacion_directiva",
+      "score": null,
+      "motivo": "la decision de formar equipo abre la pregunta de si dirigirlo es tu camino"
+    },
+    {
+      "core": "decision_fundador_solo_vs_equipo",
+      "dominio": "aplicar_metodo_ghsmart_contratacion",
+      "score": null,
+      "motivo": "decidido formar equipo, el paso siguiente es contratar al primero con metodo"
+    },
+    {
+      "core": "contratar_por_fortaleza",
+      "dominio": "crear_tarjeta_puntuacion_puesto",
+      "score": null,
+      "motivo": "contratar por fortaleza pide escribir antes que resultados y competencias quieres del puesto"
+    },
+    {
+      "core": "proceso_contratacion_ejecutivos_sin_experiencia",
+      "dominio": "investigar_antes_contratar_lideres",
+      "score": null,
+      "motivo": "el nucleo dice contratar un puesto que no hiciste; el mundo dice como investigar que buscar"
+    },
+    {
+      "core": "evaluacion_fit_cultural",
+      "dominio": "evaluar_cultura_empresa_adjetivos",
+      "score": null,
+      "motivo": "evaluar el encaje cultural empieza por escribir la cultura propia en adjetivos"
+    },
+    {
+      "core": "reuniones_uno_a_uno",
+      "dominio": "montar_reuniones_solas_mentalidad_frecuencia",
+      "score": null,
+      "motivo": "el nucleo nombra la reunion uno a uno; el mundo la monta con frecuencia y agenda"
+    },
+    {
+      "core": "reuniones_uno_a_uno",
+      "dominio": "dirigir_reunion_individual_semanal",
+      "score": null,
+      "motivo": "y la conduce cada semana con cada persona a cargo"
+    },
+    {
+      "core": "cultura_feedback_alta_frecuencia",
+      "dominio": "dar_opinion_especifica_tarea",
+      "score": null,
+      "motivo": "la cultura de opinion frecuente se practica dando opinion concreta de cada tarea"
+    },
+    {
+      "core": "feedback_efectivo_liderazgo",
+      "dominio": "empezar_cultura_franqueza_radical",
+      "score": null,
+      "motivo": "dar opinion como habilidad del fundador; el mundo arranca la cultura pidiendo antes que dando"
+    },
+    {
+      "core": "gestion_desempeno_feedback",
+      "dominio": "recorrer_trece_elementos_proceso_evaluacion_formal",
+      "score": null,
+      "motivo": "el proceso de revisiones del nucleo se disena elemento por elemento"
+    },
+    {
+      "core": "proceso_despidos_responsables",
+      "dominio": "decidir_momento_despedir_persona",
+      "score": null,
+      "motivo": "antes de ejecutar un despido hay que decidir si ha llegado el momento"
+    },
+    {
+      "core": "entrenamiento_gerencial",
+      "dominio": "pasar_direccion_directa_indirecta",
+      "score": null,
+      "motivo": "entrenar a quienes lideran es el paso de dirigir directamente a dirigir por otros"
+    },
+    {
+      "core": "programacion_cultura_empresarial",
+      "dominio": "contrastar_cultura_actual_aspirada",
+      "score": null,
+      "motivo": "disenar la cultura empieza por contrastar la que hay con la que quieres"
+    },
+    {
+      "core": "gestion_empleados_brillantes_problematicos",
+      "dominio": "cortar_efecto_divisor_persona_brillante",
+      "score": null,
+      "motivo": "el empleado brillante y problematico, con el procedimiento para cortar su efecto divisor"
+    },
+    {
+      "core": "decision_egalitaria_vs_jerarquica",
+      "dominio": "repartir_decision_cercanos_hechos",
+      "score": null,
+      "motivo": "elegida la forma de decidir, repartir las decisiones entre los mas cercanos a los hechos"
+    }
+  ],
+  "rechazados": []
+}

@@ -27,9 +27,12 @@ EL MAPEO, CAMPO POR CAMPO, esta explicado en `docs/PUENTE_FORJA.md`. En corto:
   fuentes[].clave           -> fuente   ("Titulo - Autor", orden conservado, " | ")
   ids_alias                 -> ids_alias
   nodos_previos/siguientes  -> nodos_previos/siguientes
-  dominio                   -> dominio  (el valor no existe en My-idea: se informa)
+  dominio                   -> dominio  (gestion_equipos, contratacion y
+                               carrera_profesional a primer_equipo;
+                               proteccion_consumidor fuera, al mundo 10)
   estado 'deprecado'        -> deprecado: true   ('vivo' no escribe nada)
-  (no existe)               -> fase_proyecto    (OBLIGATORIO en My-idea: se informa)
+  (no existe)               -> fase_proyecto    (del registro incremental
+                               docs/puente_forja/fases_mundo11.jsonl)
   (no existe)               -> etiqueta_arbol   (opcional, la UI cae al titulo)
   denominaciones, escala_minima, atribuciones, marco_pais, vigencia,
   fuentes[].fecha           -> SIN DESTINO en el esquema de My-idea. No se
@@ -41,7 +44,7 @@ USO:
   python scripts/importar_forja.py                      # seco, carpeta temporal
   python scripts/importar_forja.py --forja RUTA         # otra copia de la forja
   python scripts/importar_forja.py --salida DIR         # el pack en DIR
-  python scripts/importar_forja.py --fases fases.json   # {node_id: fase}
+  python scripts/importar_forja.py --fases OTRO.jsonl   # otro registro de fases
   python scripts/importar_forja.py --incluir-forja      # tambien el dominio 'forja'
 
 Sale 0 si el pack se pudo construir (aunque el informe traiga huecos: el
@@ -76,6 +79,24 @@ SIN_DESTINO = ("denominaciones", "escala_minima", "atribuciones", "marco_pais",
 # Dominios de la forja que no son contenido del producto: el manual interno de
 # la casa. Quedan fuera del pack salvo --incluir-forja, y se informan.
 DOMINIOS_FUERA = {"forja"}
+
+# DECISIONES DEL FUNDADOR (23 sep 2026, docs/PUENTE_FORJA.md, DECISIONES):
+# EL MUNDO 11 ES UN SOLO DOMINIO, el de la ficha `Primer Equipo` de
+# docs/PENDIENTES.md, escrito `primer_equipo`. Los tres dominios de la forja
+# que son del mundo 11 se mapean a el. `proteccion_consumidor` (las
+# Directrices de la ONU) QUEDA FUERA: su casa es el mundo 10 (Vender), que aun
+# no existe en la app. Un dominio de la forja que no este en ninguna de las
+# tablas es DOMINIO DESCONOCIDO y el informe lo dice.
+DOMINIO_DESTINO = {
+    "gestion_equipos": "primer_equipo",
+    "contratacion": "primer_equipo",
+    "carrera_profesional": "primer_equipo",
+}
+DOMINIOS_A_OTRO_MUNDO = {"proteccion_consumidor": "mundo 10 (Vender), aun no existe en la app"}
+
+# Las entradas horneadas del pack, versionadas en el repo (no en dataset/).
+ENTRADAS = BASE / "docs" / "puente_forja"
+FASES_DEFECTO = ENTRADAS / "fases_mundo11.jsonl"
 
 
 # ---------------------------------------------------------------------------
@@ -135,6 +156,29 @@ def grafia_de(clave, fuentes):
     return None
 
 
+def leer_fases(ruta):
+    """{node_id: fase}. Acepta el registro incremental .jsonl (una linea por id,
+    con `node_id` y `fase_proyecto`) o un .json plano {node_id: fase}."""
+    ruta = Path(ruta)
+    if not ruta.exists():
+        return {}
+    if ruta.suffix == ".jsonl":
+        out = {}
+        for l in io.open(ruta, encoding="utf-8"):
+            if l.strip():
+                d = json.loads(l)
+                out[d["node_id"]] = d["fase_proyecto"]
+        return out
+    return json.load(io.open(ruta, encoding="utf-8"))
+
+
+def dominio_de_nodo_mi(nid):
+    p = DATASET_NODOS / ("%s.json" % nid)
+    if not p.exists():
+        return None
+    return json.loads(p.read_text(encoding="utf-8")).get("dominio")
+
+
 def convertir(n, fuentes, fases):
     """(nodo_my_idea, sidecar, problemas). No toca disco."""
     problemas = []
@@ -150,7 +194,7 @@ def convertir(n, fuentes, fases):
     out = {
         "node_id": n.get("id"),
         "fase_proyecto": fases.get(n.get("id"), ""),
-        "dominio": n.get("dominio"),
+        "dominio": DOMINIO_DESTINO.get(n.get("dominio"), n.get("dominio")),
         "titulo_concepto": n.get("titulo"),
         "fuente": SEP_FUENTE.join(grafias),
         "resumen_teorico": n.get("resumen_teorico"),
@@ -167,6 +211,7 @@ def convertir(n, fuentes, fases):
     if extra:
         problemas.append("campo de la forja fuera de su propio esquema: %s" % extra)
     sidecar = {k: n[k] for k in SIN_DESTINO if k in n}
+    sidecar["dominio_forja"] = n.get("dominio")
     fechas = [f.get("fecha") for f in n.get("fuentes") or []]
     if fechas:
         sidecar["fuentes_fecha"] = fechas
@@ -192,14 +237,15 @@ def vacios(nodo):
 # Informe
 # ---------------------------------------------------------------------------
 
-def construir(forja, salida, fases, incluir_forja):
+def construir(forja, salida, fases, incluir_forja, ruta_fases="", entradas=ENTRADAS):
     nodos, fuentes = leer_forja(forja)
     ids_mi, alias_mi = catalogo_my_idea()
     dominios_mi = dominios_de_my_idea()
     canonicas = canonicas_de_my_idea()
 
     fuera = [n for n in nodos if n.get("dominio") in DOMINIOS_FUERA and not incluir_forja]
-    dentro = [n for n in nodos if n not in fuera]
+    a_otro_mundo = [n for n in nodos if n.get("dominio") in DOMINIOS_A_OTRO_MUNDO]
+    dentro = [n for n in nodos if n not in fuera and n not in a_otro_mundo]
     ids_pack = {n["id"] for n in dentro}
     ids_forja = {n["id"] for n in nodos}
 
@@ -258,6 +304,36 @@ def construir(forja, salida, fases, incluir_forja):
 
     por_dominio = collections.Counter(c["dominio"] for c in convertidos.values())
     dominios_nuevos = sorted(d for d in por_dominio if d not in dominios_mi)
+    sin_mapa = sorted({n.get("dominio") for n in dentro if n.get("dominio") not in DOMINIO_DESTINO})
+
+    # El registro de fases, INCREMENTAL: ids del pack sin fase (los nuevos de la
+    # forja) e ids del registro que ya no estan en el pack (para revisar).
+    ids_sin_fase = sorted(i for i in convertidos if not fases.get(i))
+    ids_fase_huerfanos = sorted(i for i in fases if i not in convertidos)
+
+    # Las entradas horneadas: puentes, semillas y brecha.
+    horneado = {}
+    for nombre in ("bridges_aprobados.json", "entry_seeds.json", "brecha_semillas.json"):
+        rp = Path(entradas) / nombre
+        horneado[nombre] = json.load(io.open(rp, encoding="utf-8")) if rp.exists() else None
+    problemas_puentes = []
+    puentes = (horneado["bridges_aprobados.json"] or {}).get("aprobados") or []
+    por_ancla = collections.Counter(pz.get("core") for pz in puentes)
+    for pz in puentes:
+        c, m = pz.get("core"), pz.get("dominio")
+        if ids_mi.get(c) != "vivo":
+            problemas_puentes.append("ancla %s no es un nodo VIVO de My-idea" % c)
+        elif dominio_de_nodo_mi(c) != "core":
+            problemas_puentes.append("ancla %s no es del nucleo (ley del ancla)" % c)
+        if m not in convertidos:
+            problemas_puentes.append("el nodo del mundo %s no esta en el pack" % m)
+    for c, k in por_ancla.items():
+        if k > 3:
+            problemas_puentes.append("ancla %s con %d puentes (el tope de integrar_packs es 3)" % (c, k))
+    semillas = horneado["entry_seeds.json"] or []
+    semillas_fuera = [s for s in semillas if s not in convertidos]
+    brecha = ((horneado["brecha_semillas.json"] or {}).get("primer_equipo") or {})
+    brecha_fuera = sorted({v for v in brecha.values() if v not in convertidos})
 
     # Escritura del pack (nunca dentro de dataset/).
     salida = Path(salida).resolve()
@@ -273,6 +349,11 @@ def construir(forja, salida, fases, incluir_forja):
     for dom, s in sidecars.items():
         (salida / dom / "metadata" / "forja_campos_sin_destino.json").write_text(
             json.dumps(s, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for dom in por_dominio:
+        for nombre, contenido in horneado.items():
+            if contenido is not None:
+                (salida / dom / "metadata" / nombre).write_text(
+                    json.dumps(contenido, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     # La lista blanca de My-idea, corrida sobre el pack recien escrito.
     sys.path.insert(0, str(BASE / "scripts" / "expansion"))
@@ -290,9 +371,15 @@ def construir(forja, salida, fases, incluir_forja):
     w("   nodos en el pack: %d" % len(convertidos))
     w("   fuera del pack por dominio interno de la forja: %d %s"
       % (len(fuera), [n["id"] for n in fuera]))
+    for dom, casa in sorted(DOMINIOS_A_OTRO_MUNDO.items()):
+        ids_o = [n["id"] for n in a_otro_mundo if n.get("dominio") == dom]
+        w("   fuera del pack por ser de otro mundo (%s, a %s): %d %s" % (dom, casa, len(ids_o), ids_o))
+    for dom_f, k in sorted(collections.Counter(n.get("dominio") for n in dentro).items()):
+        w("   dominio de la forja %-22s %3d nodos, destino %s" % (dom_f, k, DOMINIO_DESTINO.get(dom_f, "(SIN DESTINO)")))
     for dom, k in sorted(por_dominio.items()):
         w("   dominio %-22s %3d nodos" % (dom, k))
     w("   dominios del pack que Gate 0 de My-idea NO admite hoy: %s" % (dominios_nuevos or "(ninguno)"))
+    w("   dominios de la forja SIN destino declarado (desconocidos): %s" % (sin_mapa or "(ninguno)"))
     w("")
     w("2. IDS QUE COLISIONAN CON EL CATALOGO DE MY-IDEA (id vivo, id deprecado o alias): %d" % len(colisiones))
     for nid, motivo in colisiones:
@@ -313,6 +400,12 @@ def construir(forja, salida, fases, incluir_forja):
         w("   SIN RECIPROCA> %s.%s -> %s" % x)
     w("")
     w("4. CAMPOS OBLIGATORIOS DE MY-IDEA VACIOS EN EL PACK")
+    w("   registro de fases leido: %s (%d ids)" % (ruta_fases, len(fases)))
+    w("   ids del pack SIN fase en el registro (los nuevos que faltan por clasificar): %d %s"
+      % (len(ids_sin_fase), ids_sin_fase[:20]))
+    w("   ids del registro que ya NO estan en el pack: %d %s" % (len(ids_fase_huerfanos), ids_fase_huerfanos[:10]))
+    w("   reparto de fases en el pack: %s" % dict(sorted(collections.Counter(
+        c["fase_proyecto"] or "(vacia)" for c in convertidos.values()).items())))
     if not vacios_por_campo:
         w("   (ninguno)")
     for campo, k in sorted(vacios_por_campo.items()):
@@ -336,9 +429,17 @@ def construir(forja, salida, fases, incluir_forja):
         for t, k in tipos.most_common():
             w("      %3d x %s" % (k, t))
     w("")
-    w("8. LO QUE EL PACK NO TRAE Y integrar_packs.py EXIGE")
-    w("   metadata/bridges_aprobados.json: NO (prerequisito humano: 10 a 15 puentes por dominio anclados en el nucleo)")
-    w("   metadata/entry_seeds.json: NO (se hornea a mano por pack)")
+    w("8. LAS ENTRADAS HORNEADAS DEL PACK (docs/puente_forja/, copiadas a <dominio>/metadata/)")
+    w("   bridges_aprobados.json: %s | puentes %d | anclas distintas %d | maximo por ancla %d"
+      % ("SI" if horneado["bridges_aprobados.json"] else "NO", len(puentes), len(por_ancla),
+         max(por_ancla.values()) if por_ancla else 0))
+    for x in problemas_puentes:
+        w("   PUENTE MAL> %s" % x)
+    w("   problemas de puentes: %d" % len(problemas_puentes))
+    w("   entry_seeds.json: %s | semillas %d | fuera del pack %d %s"
+      % ("SI" if horneado["entry_seeds.json"] else "NO", len(semillas), len(semillas_fuera), semillas_fuera))
+    w("   brecha_semillas.json: %s | fases mapeadas %d | nodos fuera del pack %d %s"
+      % ("SI" if horneado["brecha_semillas.json"] else "NO", len(brecha), len(brecha_fuera), brecha_fuera))
     w("   problemas de conversion: %d" % len(problemas))
     for x in problemas[:20]:
         w("   PROBLEMA> %s" % x)
@@ -350,16 +451,17 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--forja", default=str(FORJA_DEFECTO))
     ap.add_argument("--salida", default=None)
-    ap.add_argument("--fases", default=None, help="JSON {node_id: fase_proyecto}")
+    ap.add_argument("--fases", default=str(FASES_DEFECTO),
+                    help="registro de fases (.jsonl incremental o .json {node_id: fase})")
     ap.add_argument("--incluir-forja", action="store_true")
     a = ap.parse_args()
     forja = Path(a.forja).resolve()
     if not (forja / "dataset" / "nodos.jsonl").exists():
         print("ROJO: no encuentro %s" % (forja / "dataset" / "nodos.jsonl"))
         return 2
-    fases = json.load(io.open(a.fases, encoding="utf-8")) if a.fases else {}
+    fases = leer_fases(a.fases)
     salida = a.salida or tempfile.mkdtemp(prefix="puente_forja_")
-    print(construir(forja, salida, fases, a.incluir_forja))
+    print(construir(forja, salida, fases, a.incluir_forja, ruta_fases=a.fases))
     return 0
 
 

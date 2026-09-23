@@ -63,6 +63,12 @@ DOMINIOS_PERMITIDOS = {
     "core", "quality", "health_safety", "environmental",
     "seguridad_digital", "exportacion", "franquicias", "risk_management",
     "compras", "entrega",
+    # EL MUNDO 11, PRIMER EQUIPO (decision del fundador, 23 sep 2026, DECISION 2
+    # de docs/PUENTE_FORJA.md): registrado AQUI para que el pack del puente de la
+    # forja pase el chequeo de dominio. HOY NINGUN NODO DE dataset/ LO LLEVA, asi
+    # que Gate 0 no cambia; la web, los desbloqueos y el pack integrado llegan el
+    # dia de la integracion (integrar_packs.py --ejecutar, con el fundador delante).
+    "primer_equipo",
 }
 
 # Mapa de fusion de duplicados, tal como quedo definido en

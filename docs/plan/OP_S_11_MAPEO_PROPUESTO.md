@@ -139,5 +139,11 @@ Separador elegido para identificar declaraciones dentro de `fuente`: **` | ` (pi
 | Venture Deals | Venture Deals - Brad Feld | MECANICO: agrupa por cadena entera, canonica la propia grafia |  |
 | Venture Deals - Brad Feld | Venture Deals - Brad Feld | MECANICO: agrupa por cadena entera, canonica la propia grafia |  |
 | Winning at New Products - Robert G. Cooper | Winning at New Products - Robert G. Cooper | SIN AGRUPAR (pide decision) |  |
+| Radical Candor: Fully Revised and Updated Edition - Kim Scott | Radical Candor: Fully Revised and Updated Edition - Kim Scott | ENTRADA DECLARADA (23 sep 2026, puente de la forja, mundo 11 Primer Equipo, decision del fundador 3.b en docs/PUENTE_FORJA.md) |  |
+| The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo | ENTRADA DECLARADA (23 sep 2026, puente de la forja, mundo 11 Primer Equipo, decision del fundador 3.b en docs/PUENTE_FORJA.md) |  |
+| Who: The A Method for Hiring - Geoff Smart y Randy Street | Who: The A Method for Hiring - Geoff Smart y Randy Street | ENTRADA DECLARADA (23 sep 2026, puente de la forja, mundo 11 Primer Equipo, decision del fundador 3.b en docs/PUENTE_FORJA.md) |  |
+| High Output Management - Andrew S. Grove | High Output Management - Andrew S. Grove | ENTRADA DECLARADA (23 sep 2026, puente de la forja, mundo 11 Primer Equipo, decision del fundador 3.b en docs/PUENTE_FORJA.md) |  |
 
-TOTAL filas: 129 (92 grafias en grupos mecanicos de 2 o mas, 37 sin agrupar), contra 129 grafias del censo.
+TOTAL filas: 133 (92 grafias en grupos mecanicos de 2 o mas, 37 sin agrupar), contra 129 grafias del censo.
+
+**CORRECCION DECLARADA (23 sep 2026, decision del fundador 3.b del puente de la forja, `docs/PUENTE_FORJA.md`):** este pie decia ciento veintinueve filas, igual que el censo. Pasa a ciento treinta y tres porque la tabla gana **cuatro filas de ENTRADA DECLARADA**, las grafias canonicas de los cuatro libros del mundo 11 (Scott, Zhuo, Smart y Street, Grove), que todavia **no tienen ningun nodo en `dataset/`**: por eso el censo sigue en 129 y las cuatro filas quedan fuera de los grupos mecanicos y de los sin agrupar, que se recomputan del censo. Cuando la integracion meta los nodos, el censo las vera y el pie se recomputa. Las Directrices de la ONU NO entran: sus seis nodos van al mundo 10, fuera de este pack.

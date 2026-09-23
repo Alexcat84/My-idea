@@ -202,3 +202,201 @@ Corridos en `puente-forja` con el importador y la documentacion ya escritos, y s
 | `python engine/run_all_tests.py` | exitcode 0, **25 de 25** |
 | `npx tsc --noEmit` (en `web/`) | exitcode 0, limpio |
 | `pnpm vitest run` (en `web/`) | exitcode 0, **82 ficheros, 1040 pruebas** |
+
+## DECISIONES (fundador, 23 sep 2026) Y SU APLICACION
+
+**Las secciones 1 a 5 de arriba son el seco del 22 sep 2026 y no se reescriben: son el
+retrato de antes de las decisiones.** Lo que sigue manda sobre ellas.
+
+### DECISION 1. Los cinco campos sin destino se quedan en la metadata del pack
+
+> Los cinco campos sin destino (denominaciones, escala_minima, atribuciones, marco_pais,
+> fecha de fuente) se quedan en la metadata del pack: no se crean campos nuevos en My-idea ni
+> se vuelcan al texto. Ficha post campaña en docs/PENDIENTES.md: denominaciones merece campo
+> propio porque alimenta la busqueda del usuario.
+
+**Aplicada.** El importador ya los aparcaba en `<dominio>/metadata/forja_campos_sin_destino.json`
+y sigue igual (ahora con el dominio original de la forja en `dominio_forja`, para no perder el
+rastro del mapeo). Ficha nueva en `docs/PENDIENTES.md`: `denominaciones-campo-propio`, con su
+condicion de cierre (un rumbo que entre por sigla o por termino en otro idioma).
+
+### DECISION 2. El mundo 11 es un solo dominio: `primer_equipo`
+
+> El mundo 11 es un solo dominio, el que ya tiene ficha en My-idea (lee su nombre y usalo).
+> gestion_equipos, contratacion y carrera_profesional se mapean a ese dominio. Los 6 nodos de
+> proteccion_consumidor (ONU) quedan fuera de este pack, como los dos del dominio forja: su casa
+> es el mundo 10 (Vender), que aun no existe en la app; ficha en PENDIENTES.md junto al capitulo
+> 17 de Gerber ya reservado para ese mundo.
+
+**Aplicada.** La ficha de My-idea es *Ficha del futuro mundo `Primer Equipo`*
+(`docs/PENDIENTES.md`); ningun fichero del repo le daba aun un id de dominio, y se escribe
+`primer_equipo`, la misma forma snake_case de los otros diez.
+
+- `scripts/importar_forja.py`: tabla `DOMINIO_DESTINO` (los tres dominios de la forja a
+  `primer_equipo`) y tabla `DOMINIOS_A_OTRO_MUNDO` (`proteccion_consumidor` al mundo 10). Un
+  dominio de la forja fuera de las dos tablas sale en el informe como DESCONOCIDO.
+- `scripts/run_phase1.py`: `primer_equipo` entra en `DOMINIOS_PERMITIDOS`, con su comentario.
+  **Hoy ningun nodo de `dataset/` lo lleva**, asi que Gate 0 no cambia; la web y los
+  desbloqueos del dominio llegan el dia de la integracion.
+- Ficha nueva en `docs/PENDIENTES.md`: *Ficha del futuro mundo 10, `Vender`*, con los seis ids
+  de la ONU y la ruta del capitulo 17 de Gerber.
+
+### DECISION 3.a. La fase de cada nodo, por lectura y en un registro incremental
+
+> La FASE de cada nodo se asigna por lectura contra el criterio de fases que My-idea ya usa
+> (cita el documento), y se guarda en un registro por id (fases_mundo11.jsonl) para que sea
+> INCREMENTAL. Ciega de 20 nodos al azar con semilla escrita al terminar.
+
+**El criterio citado.** `docs/SOP_EXTRACCION_PACKS.md`, linea 52: *`fase_proyecto` solo admite
+las 4 del motor: `ideacion`, `validacion`, `planificacion`, `ejecucion`*; y lineas 88 a 100,
+*Mapeo de fases*: Ideacion a `ideacion`, Validacion a `validacion`, Construccion a
+`planificacion`, Operacion y Crecimiento a `ejecucion`. El motor usa la fase como **la etapa
+del proyecto en la que la persona necesita ese procedimiento** (`engine/prototipo_motor.py`,
+`candidatos_seguimiento`, y `web/lib/engine/evaluacionBrecha.ts`, `ORDEN_FASES`: puntuan mas
+los nodos de la fase actual del proyecto y de la siguiente).
+
+**La vara, escrita ANTES de leer y aplicada a un mundo de equipo:**
+
+| fase | cuando la lleva un nodo del mundo 11 |
+|---|---|
+| `ideacion` | decide si la gestion o el equipo es su camino, o se conoce a si misma, ANTES de sostener un equipo |
+| `validacion` | prueba con evidencia real si algo funciona (se mide, ensaya, diagnostica o contrasta) antes de comprometerse |
+| `planificacion` | monta la estructura antes de usarla: proceso, sistema, plan, tarjeta, calendario o formato (la Construccion del SOP) |
+| `ejecucion` | corre el equipo en el dia a dia o lo hace crecer: conversacion, reunion, decision o gesto en curso (Operacion y Crecimiento) |
+
+**El registro.** `docs/puente_forja/fases_mundo11.jsonl`, una linea por id con `node_id`,
+`fase_proyecto`, `motivo`, `titulo_leido`, `fuente`, `leido_el` y el `criterio` citado. Los 338
+nodos del pack se leyeron uno a uno (titulo, condicion y entregable; los pasos cuando la
+frontera lo pedia). Reparto final: **227 ejecucion, 77 planificacion, 24 validacion, 10
+ideacion**.
+
+**Es incremental.** El importador lee el registro por defecto (`--fases`) y su informe dice
+cuantos ids del pack NO tienen fase (los nuevos que la forja inserte: Grove, Gerber y Marquet
+esta semana) y cuantos ids del registro ya no estan en el pack. Al final de la semana solo se
+leen los ids que salgan en esa lista y se anaden como lineas nuevas; nada de lo ya leido se
+vuelve a clasificar.
+
+**La ciega.** Semilla `20260923`, escrita antes de sortear; 20 nodos del pack al azar;
+`docs/puente_forja/ciega_fases.txt` con solo el texto del nodo, destape aparte, declaraciones
+escritas antes de abrirlo. **18 de 20 coinciden.** Las dos discrepancias son de frontera entre
+fases vecinas y se adjudicaron a la lectura ciega, que aplica la vara mas al pie de la letra:
+`auditar_calendario_reuniones_semana` pasa de planificacion a validacion y
+`pedir_referencias_empleados` de ejecucion a planificacion. Las dos lineas del registro llevan
+su `correccion_declarada` y su `fase_anterior`. Cotejo entero en
+`docs/puente_forja/ciega_fases_cotejo.md`. **Lo que esta ciega mide, dicho entero:** la misma
+sesion leyo el registro y la ciega, asi que mide la estabilidad de la vara y no la
+independencia de dos lectores.
+
+### DECISION 3.b. Los libros a la lista canonica; puentes y semillas horneados
+
+> Los libros entran a la lista canonica de fuentes por correccion declarada; los puentes
+> aprobados y las semillas de entrada del dominio se hornean como en todo pack, citando el pack
+> anterior que sirvio de modelo.
+
+**La lista canonica.** `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` gana cuatro filas de ENTRADA
+DECLARADA, una por libro del mundo 11 (Scott, Zhuo, Smart y Street, Grove), y el pie pasa de
+129 a 133 filas por correccion declarada escrita debajo. La ONU no entra: va al mundo 10. La
+guarda de la cabecera (`scripts/loop/verificar_cabecera_mapeo.py`) sale VERDE antes y despues
+(`filas reales 133 == pie 133`), y la de Gate 0 (`verificar_fuente_canonico.py`) sale limpia
+sobre `dataset/`.
+
+**Puentes, semillas y brecha**, en `docs/puente_forja/` y copiados por el importador a la
+metadata del pack. **El modelo es el pack `entrega`** (`packs/entrega/metadata/`, extraccion
+del 2026-08-07, commit `687f1e7d`):
+
+- `bridges_aprobados.json`: 15 puentes, 13 anclas del nucleo, ninguna con mas de 2, todas vivas
+  y de dominio `core` (ley del ancla). **Diferencia declarada con el modelo:** alli el `score`
+  salia de la similitud Voyage; aqui los nodos del mundo 11 no tienen vector hasta la
+  integracion, asi que cada par se eligio por lectura y el `score` va null con su `motivo`.
+  `integrar_packs.py` consume `core` y `dominio`.
+- `entry_seeds.json`: 8 semillas repartidas por fase, como las 8 de `entrega`.
+- `brecha_semillas.json`: el mapa por fase con la forma de `web/lib/assets/brecha_semillas.json`.
+  **No se cablea a la web hoy**: la web no conoce el dominio; va el dia de la integracion.
+
+### DECISION 4. El seco con todo aplicado
+
+> Esperado 338 nodos al pack (344 menos los 6 de ONU), cero colisiones, cero aristas rotas, cero
+> fases vacias, cero fuentes fuera de lista, cero dominios desconocidos. Gate 0 y suites en
+> verde con dataset/ intacto.
+
+**Cumplido.** El informe entero, con `python scripts/importar_forja.py` sin banderas:
+
+```
+INFORME DEL PUENTE DE LA FORJA A LA APP, MODO SECO
+forja leida: C:\Users\AlexDesk\Documents\forja-nodos
+pack escrito en: <carpeta temporal del sistema, prefijo puente_forja_> (fuera de dataset/)
+
+1. VOLUMEN
+   nodos en la forja: 346
+   nodos en el pack: 338
+   fuera del pack por dominio interno de la forja: 2 ['registrar_fuente_canonica', 'elegir_grafia_clave']
+   fuera del pack por ser de otro mundo (proteccion_consumidor, a mundo 10 (Vender), aun no existe en la app): 6 ['formular_codigo_comercializacion_empresarial', 'verificar_afirmaciones_ambientales_publicidad', 'detectar_abusos_contractuales_consumo', 'examinar_normas_pesos_medidas', 'informar_efectos_ambientales_productos', 'vigilar_practicas_comerciales_perjudiciales']
+   dominio de la forja carrera_profesional      1 nodos, destino primer_equipo
+   dominio de la forja contratacion            59 nodos, destino primer_equipo
+   dominio de la forja gestion_equipos        278 nodos, destino primer_equipo
+   dominio primer_equipo          338 nodos
+   dominios del pack que Gate 0 de My-idea NO admite hoy: (ninguno)
+   dominios de la forja SIN destino declarado (desconocidos): (ninguno)
+
+2. IDS QUE COLISIONAN CON EL CATALOGO DE MY-IDEA (id vivo, id deprecado o alias): 0
+
+3. ARISTAS
+   aristas a ids INEXISTENTES (ni en la forja ni en My-idea): 0
+   aristas a ids de la forja que quedaron FUERA del pack: 0
+   aristas a ids del catalogo de My-idea: 0
+   aristas dentro del pack SIN su reciproca: 0
+
+4. CAMPOS OBLIGATORIOS DE MY-IDEA VACIOS EN EL PACK
+   registro de fases leido: docs/puente_forja/fases_mundo11.jsonl (338 ids)
+   ids del pack SIN fase en el registro (los nuevos que faltan por clasificar): 0 []
+   ids del registro que ya NO estan en el pack: 0 []
+   reparto de fases en el pack: {'ejecucion': 227, 'ideacion': 10, 'planificacion': 77, 'validacion': 24}
+   (ninguno)
+   node_id que no son ascii minuscula: 0 []
+
+5. EL CAMPO fuente CONTRA LA LISTA CANONICA DE MY-IDEA (la que valida Gate 0)
+   142 nodos | Radical Candor: Fully Revised and Updated Edition - Kim Scott | canonica en My-idea: SI
+   136 nodos | The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo | canonica en My-idea: SI
+    59 nodos | Who: The A Method for Hiring - Geoff Smart y Randy Street | canonica en My-idea: SI
+     1 nodos | High Output Management - Andrew S. Grove | canonica en My-idea: SI
+   grafias que Gate 0 rechazaria hoy: 0
+
+6. CAMPOS DE LA FORJA SIN DESTINO EN EL ESQUEMA DE MY-IDEA (viajan en metadata/forja_campos_sin_destino.json)
+   atribuciones       130 nodos
+   denominaciones     338 nodos
+   escala_minima      125 nodos
+   fuentes[].fecha    338 nodos
+   marco_pais           2 nodos
+
+7. LA LISTA BLANCA DE MY-IDEA (scripts/expansion/validar_esquema.py) SOBRE EL PACK
+   primer_equipo          338 nodos,   0 falla(s)
+
+8. LAS ENTRADAS HORNEADAS DEL PACK (docs/puente_forja/, copiadas a <dominio>/metadata/)
+   bridges_aprobados.json: SI | puentes 15 | anclas distintas 13 | maximo por ancla 2
+   problemas de puentes: 0
+   entry_seeds.json: SI | semillas 8 | fuera del pack 0 []
+   brecha_semillas.json: SI | fases mapeadas 8 | nodos fuera del pack 0 []
+   problemas de conversion: 0
+```
+
+**Gate 0 y las suites, con `dataset/` intacto:**
+
+| comando | resultado |
+|---|---|
+| `python scripts/run_phase1.py --reaplico-curaduria` | exitcode 0, **27 comprobaciones OK, 0 FALLO** (con `primer_equipo` ya en la lista de dominios) |
+| `python scripts/etiquetas_de_cara.py --aplicar` | exitcode 0 |
+| `python scripts/sync_assets_web.py` | exitcode 0 |
+| `git diff HEAD --numstat -- dataset/ web/ engine/` | **0 filas**: `dataset/` intacto |
+| `python engine/run_all_tests.py` | exitcode 0, **25 de 25** |
+| `npx tsc --noEmit` (en `web/`) | exitcode 0, limpio |
+| `pnpm vitest run` (en `web/`) | exitcode 0, **82 ficheros, 1040 pruebas** |
+
+### Y LA INTEGRACION REAL SIGUE ESPERANDO
+
+> La integracion real sigue esperando: se hace una sola vez, al final de la semana, con el pack
+> regenerado desde la forja completa y el fundador delante.
+
+Ese dia: se regenera el pack con `scripts/importar_forja.py --salida packs` (el pack cae en `packs/primer_equipo/`)
+desde la forja completa, se clasifican solo los ids nuevos que el informe liste sin fase, se
+corre `integrar_packs.py --ejecutar` con credencial y con el fundador delante, y se cablean el
+dominio, las semillas y la brecha a la web.

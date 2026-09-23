@@ -17417,3 +17417,41 @@ redactor (prohibir cifras derivadas fuera del material) o en el material (dar al
 cifras derivadas legitimas, como el excedente sobre el equilibrio, para que no tenga que
 inventarlas), y que el vuelo siga exigiendo cero huerfanos en ese reporte. **Condicion de
 cierre:** tres corridas seguidas del vuelo con la verificacion 10 en verde tras el remedio.
+
+## Ficha post campaña: `denominaciones-campo-propio` (puente de la forja, decision del fundador 23 sep 2026)
+
+**De donde sale.** `docs/PUENTE_FORJA.md`, DECISION 1: los cinco campos de la forja sin
+destino en My-idea (`denominaciones`, `escala_minima`, `atribuciones`, `marco_pais` y la
+fecha de cada fuente) **se quedan en la metadata del pack**
+(`<dominio>/metadata/forja_campos_sin_destino.json`, nodo por nodo). No se crean campos
+nuevos en My-idea ni se vuelcan al texto del nodo.
+
+**La excepcion que esta ficha guarda:** `denominaciones` **merece campo propio**, porque
+alimenta la busqueda del usuario. Trae tres puertas de busqueda por nodo: el nombre largo,
+la sigla y el termino en otro idioma (medido el 22 sep 2026: 346 nodos con nombre largo,
+345 con termino en otro idioma, 4 con sigla). Hoy la brujula solo busca por el texto del
+nodo y por su vector; un usuario que escribe la sigla o el termino en ingles no llega.
+
+**Lo que la ficha pide, cuando se abra:** un campo en la lista blanca de
+`scripts/expansion/validar_esquema.py`, su paso por `run_phase1.py`, `sync_assets_web.py` y
+el contrato de la web, y que la brujula lo lea. **Condicion de cierre:** un rumbo nuevo en
+la prueba de rumbos que entre por una sigla o por un termino en otro idioma y llegue al
+nodo correcto. Los otros cuatro campos siguen en la metadata hasta nueva decision.
+
+## Ficha del futuro mundo 10, `Vender` (puente de la forja, decision del fundador 23 sep 2026)
+
+**De donde sale.** `docs/PUENTE_FORJA.md`, DECISION 2: el mundo 11 entra como un solo
+dominio, `primer_equipo`, y **los seis nodos del dominio `proteccion_consumidor` de la forja
+(las Directrices de las Naciones Unidas para la Proteccion del Consumidor) QUEDAN FUERA de
+ese pack**: su casa es el mundo 10, `Vender`, que todavia no existe en la app.
+
+**La nomina que ya espera a este mundo:**
+
+| pieza | donde vive hoy |
+|---|---|
+| los seis nodos de la ONU: `formular_codigo_comercializacion_empresarial`, `verificar_afirmaciones_ambientales_publicidad`, `detectar_abusos_contractuales_consumo`, `examinar_normas_pesos_medidas`, `informar_efectos_ambientales_productos`, `vigilar_practicas_comerciales_perjudiciales` | `dataset/nodos.jsonl` de la forja, rama `extraccion-mundo-11`, dominio `proteccion_consumidor` |
+| el capitulo 17 de Gerber, *Your Marketing Strategy*, verbatim, apartado a proposito para este mundo | `OCR/fuentes/mundo_10_reservado/gerber_emyth/17_cap_17_your_marketing_strategy.md`; la forja lo registra en `docs/ESTRENO_DE_LA_ADUANA.md` seccion 1.1 y en `docs/BANDEJA_DE_ENTRADA.md` bajo `gerber_emyth_cap17_reservado` |
+
+**Lo que falta para abrirlo:** el dominio en la app (Gate 0, web y desbloqueos), la fuente de
+la ONU en la lista canonica de `docs/plan/OP_S_11_MAPEO_PROPUESTO.md` (el puente del 23 sep
+no la dio de alta a proposito) y su propio pack desde la forja con `scripts/importar_forja.py`.
