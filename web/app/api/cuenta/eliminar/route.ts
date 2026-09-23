@@ -43,7 +43,13 @@ export async function POST(request: Request) {
       return NextResponse.json(AVISO_2FA, { status: 403 });
     }
   } catch (e) {
-    console.error("[cuenta/eliminar] no se pudo leer user_seguridad:", e);
+    // AUD-09 H16: el borrado es irreversible, así que el candado falla
+    // CERRADO. Sin veredicto de seguridad no se borra nada.
+    console.error("[cuenta/eliminar] no se pudo leer user_seguridad; no se borra:", e);
+    return NextResponse.json(
+      { error: "No pude confirmar la seguridad de tu cuenta, así que no borré nada. Intenta de nuevo en un momento." },
+      { status: 503 }
+    );
   }
 
   const admin = createAdminClient();
