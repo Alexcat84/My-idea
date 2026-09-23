@@ -2,7 +2,9 @@
  * GET /auth/callback — el regreso del OAuth de Google (réplica del patrón
  * del I Ching, adaptada a las dos leyes de la casa):
  *
- * 1. ALLOWLIST DESPUÉS DE AUTENTICAR. Con el código por email la allowlist
+ * 1. ALLOWLIST DESPUÉS DE AUTENTICAR, en los TRES caminos (Google,
+ *    confirmación de registro y recuperación de contraseña). Con el
+ *    código por email la allowlist
  *    filtra antes de enviar el correo; con OAuth el email solo se conoce al
  *    volver de Google. Si el correo no está invitado: sesión fuera y de
  *    vuelta al login con el mensaje amable — jamás un usuario colado.
@@ -60,13 +62,6 @@ export async function GET(request: Request) {
     return responder("/login?enlace=vencido");
   }
 
-  // Recuperación de contraseña (resetPasswordForEmail): el enlace trae
-  // type=recovery. La sesión de recuperación ya está puesta; se fija la
-  // contraseña nueva en /auth/update-password (sin cortesía ni 2FA aquí).
-  if (url.searchParams.get("type") === "recovery") {
-    return responder("/auth/update-password");
-  }
-
   const {
     data: { user: real },
   } = await supabase.auth.getUser();
@@ -106,6 +101,16 @@ export async function GET(request: Request) {
     // El correo viaja de vuelta: la pantalla amable muestra QUÉ correo no
     // está en la lista (canon 15 v2: el dato accionable).
     return responder(`/login?google=no-invitado&correo=${encodeURIComponent(email)}`);
+  }
+
+  // Recuperación de contraseña (resetPasswordForEmail): el enlace trae
+  // type=recovery. La sesión de recuperación ya está puesta; se fija la
+  // contraseña nueva en /auth/update-password (sin cortesía ni 2FA aquí).
+  // AUD-09 H15: este ramal va DESPUÉS de la allowlist. `type` es un parámetro
+  // de la query que controla el cliente; antes retornaba primero y cualquier
+  // code válido abría sesión aunque el correo no estuviera invitado.
+  if (url.searchParams.get("type") === "recovery") {
+    return responder("/auth/update-password");
   }
 
   await bienvenidaTrasLogin(real, anonId);
