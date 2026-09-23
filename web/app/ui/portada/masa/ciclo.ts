@@ -1,0 +1,73 @@
+/**
+ * El ciclo de la masa, en funcion pura del tiempo (segundos).
+ *
+ * Especificacion: la muestra hibrida aprobada por el fundador
+ * (particula-hibrida-my-idea.html). Cuatro fases por ciclo:
+ *   reposo    -> la masa liquida sola, viva, sin particulas;
+ *   disgrega  -> la piel se deshace en particulas que viajan a la figura;
+ *   forma     -> la figura sostenida, con bordes nitidos;
+ *   regresa   -> las particulas vuelven y se funden en la superficie.
+ * Cada ciclo forma la figura siguiente: foco, lente, brujula, escalera, casa.
+ *
+ * Es puro y sin estado para que el mismo instante se pueda reproducir
+ * (capturas, pruebas, cambio de nivel de calidad sin saltos).
+ */
+
+export const FASES = {
+  reposo: 3.4,
+  disgrega: 1.9,
+  forma: 2.6,
+  regresa: 1.9,
+} as const;
+
+export const DURACION_CICLO = FASES.reposo + FASES.disgrega + FASES.forma + FASES.regresa;
+
+export const FIGURAS = ["foco", "lente", "brujula", "escalera", "casa"] as const;
+export type NombreFigura = (typeof FIGURAS)[number];
+
+export interface EstadoCiclo {
+  /** 0 = sin masa, 1 = masa completa. */
+  liquido: number;
+  /** 0 = todas las particulas en la piel, 1 = todas en la figura. */
+  mezcla: number;
+}
+
+export function suavizar(x: number): number {
+  const k = Math.min(Math.max(x, 0), 1);
+  return k * k * (3 - 2 * k);
+}
+
+/** Estado dentro de un ciclo; `tc` en [0, DURACION_CICLO). */
+export function estadoEnCiclo(tc: number): EstadoCiclo {
+  let resto = tc;
+  if (resto < FASES.reposo) return { liquido: 1, mezcla: 0 };
+  resto -= FASES.reposo;
+  if (resto < FASES.disgrega) {
+    const b = resto / FASES.disgrega;
+    return { liquido: 1 - suavizar(b * 1.1), mezcla: suavizar(b) };
+  }
+  resto -= FASES.disgrega;
+  if (resto < FASES.forma) return { liquido: 0, mezcla: 1 };
+  resto -= FASES.forma;
+  const k = resto / FASES.regresa;
+  return { liquido: suavizar((k - 0.45) / 0.55), mezcla: 1 - suavizar(k) };
+}
+
+/** Estado en el tiempo absoluto `t` (segundos desde el arranque). */
+export function estadoEn(t: number): EstadoCiclo {
+  const tc = ((t % DURACION_CICLO) + DURACION_CICLO) % DURACION_CICLO;
+  return estadoEnCiclo(tc);
+}
+
+/** Indice de la figura que forma el ciclo en curso. */
+export function figuraEn(t: number): number {
+  const ciclo = Math.floor(Math.max(t, 0) / DURACION_CICLO);
+  return ciclo % FIGURAS.length;
+}
+
+/** Instantes de referencia de un ciclo, para capturas y pruebas. */
+export const MOMENTOS = {
+  reposo: FASES.reposo * 0.5,
+  mitadDisgregacion: FASES.reposo + FASES.disgrega * 0.5,
+  figuraFormada: FASES.reposo + FASES.disgrega + FASES.forma * 0.5,
+} as const;

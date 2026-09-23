@@ -8,35 +8,52 @@
  * (estilos inline incluidos: este archivo ES el diseño, no un tema de
  * la app — tokens.css sigue siendo la fuente de color de las pantallas
  * de trabajo). La lógica de este archivo transplanta el script interno
- * del diseño: campo de estrellas con fugaces, wordmark "My idea" + foco
- * en ~3400 partículas con ciclo ensamblado → pausa → desintegración →
- * reensamblado con cometa que barre y revela el eslogan letra a letra,
- * repulsión al mouse y onda al click, scroll-spy del nav, tipeo simulado
- * del mockup y reveals al hacer scroll. Con prefers-reduced-motion todo
- * queda quieto: una sola pasada estática del wordmark, sin bucles.
+ * del diseño: scroll-spy del nav, tipeo simulado del mockup y reveals al
+ * hacer scroll. Con prefers-reduced-motion todo queda quieto.
+ *
+ * HERO (portada-particula, decisión del fundador): la masa líquida que se
+ * disgrega en partículas y forma las cinco figuras (ui/portada/HeroMasa).
+ * El lema y su animación desaparecen; el título queda como texto oculto a
+ * la vista (lectores de pantalla y buscadores) y "Comenzar gratis" se
+ * mantiene, discreto, en el borde inferior.
  */
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { HeroMasa } from "./portada/HeroMasa";
 import "./landing.css";
 
 type SeccionId = "inicio" | "acerca" | "como-funciona" | "descargar";
-type ModoEslogan = "shown" | "destroy" | "hidden" | "reveal";
-
-const ESLOGAN = "Transforma tu creatividad en acción";
 const FRASE_DEMO = "Primero la temperatura: si el café llega frío, el empaque ya no importa.";
 const SECCIONES: readonly SeccionId[] = ["inicio", "acerca", "como-funciona", "descargar"];
 
-interface Dispersion {
-  dx: number;
-  dy: number;
-  rot: number;
-  delay: number;
-}
-
-interface EstadoEslogan {
-  mode: ModoEslogan;
-  reveal: number;
-  scatter: Dispersion[];
+/**
+ * Tipeo simulado del mockup, aislado en su propio componente: su estado
+ * cambia cada 55 ms y antes re-renderizaba la landing entera (cientos de
+ * nodos con estilos inline), lo que en un movil se comia el hilo principal
+ * que necesita la masa del hero.
+ */
+function TipeoDemo() {
+  const [typed, setTyped] = useState("");
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      // Sin animación: la frase completa, fuera del render síncrono del
+      // efecto (regla de hooks; el timeout 0 la pinta en el siguiente tick).
+      const inmediato = setTimeout(() => setTyped(FRASE_DEMO), 0);
+      return () => clearTimeout(inmediato);
+    }
+    let ti = 0;
+    let typedLocal = "";
+    const tipeo = setInterval(() => {
+      ti = (ti + 1) % (FRASE_DEMO.length + 46);
+      const sig = FRASE_DEMO.slice(0, Math.min(ti, FRASE_DEMO.length));
+      if (sig !== typedLocal) {
+        typedLocal = sig;
+        setTyped(sig);
+      }
+    }, 55);
+    return () => clearInterval(tipeo);
+  }, []);
+  return <>{typed}</>;
 }
 
 export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {}) {
@@ -51,45 +68,11 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
     }
     window.location.assign("/");
   }
-  const [typed, setTyped] = useState("");
   const [activa, setActiva] = useState<SeccionId>("inicio");
-  const [eslogan, setEslogan] = useState<EstadoEslogan>({ mode: "shown", reveal: 1, scatter: [] });
 
   const colorNav = (id: SeccionId) => (activa === id ? "#F5F6F8" : "#A6A7AD");
   const subrayadoNav = (id: SeccionId) => (activa === id ? "scaleX(1)" : "scaleX(0)");
   const marcarActiva = (id: SeccionId) => setActiva(id);
-
-  // Mismo cálculo que renderVals() en el script del diseño: cada letra
-  // del eslogan con su transform/opacity/filter/transition según el modo.
-  const n = ESLOGAN.length;
-  const sloganChars = Array.from(ESLOGAN, (ch, i) => {
-    let tf = "none";
-    let op = 1;
-    let fl = "none";
-    let tr = "none";
-    if (eslogan.mode === "destroy") {
-      const s = eslogan.scatter[i] ?? { dx: 0, dy: 0, rot: 0, delay: 0 };
-      tf = `translate(${s.dx}px,${s.dy}px) rotate(${s.rot}deg) scale(0.4)`;
-      op = 0;
-      tr = `transform 1.2s cubic-bezier(0.5,0,0.85,0.45) ${s.delay}s, opacity 1.05s ease-in ${s.delay}s`;
-    } else if (eslogan.mode === "hidden") {
-      op = 0;
-    } else if (eslogan.mode === "reveal") {
-      const f = n <= 1 ? 0 : i / (n - 1);
-      if (eslogan.reveal > 0.001 && f <= eslogan.reveal) {
-        const brillando = eslogan.reveal - f < 0.045 && eslogan.reveal < 1;
-        fl = brillando
-          ? "brightness(3.4) saturate(0.55) drop-shadow(0 0 13px rgba(230,240,255,0.95))"
-          : "none";
-        tr = brillando
-          ? "opacity 0.08s ease-out, filter 0.04s linear"
-          : "opacity 0.08s ease-out, filter 0.9s ease-out";
-      } else {
-        op = 0;
-      }
-    }
-    return { ch, tf, op, fl, tr };
-  });
 
   useEffect(() => {
     const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -133,611 +116,9 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
     window.addEventListener("scroll", onSpy, { passive: true });
     onSpy();
 
-    // ===== Tipeo simulado del mockup del hero =====
-    let ti = 0;
-    let typedLocal = "";
-    const tipeo = reducirMovimiento
-      ? null
-      : setInterval(() => {
-          ti = (ti + 1) % (FRASE_DEMO.length + 46);
-          const sig = FRASE_DEMO.slice(0, Math.min(ti, FRASE_DEMO.length));
-          if (sig !== typedLocal) {
-            typedLocal = sig;
-            setTyped(sig);
-          }
-        }, 55);
-    // Sin animación: la frase completa, fuera del render síncrono del
-    // efecto (regla de hooks; el timeout 0 la pinta en el siguiente tick).
-    const tipeoInmediato = reducirMovimiento ? setTimeout(() => setTyped(FRASE_DEMO), 0) : null;
-
-    // ===== Canvas 1: estrellas del hero (idea-canvas) =====
-    let rafEstrellas = 0;
-    let limpiarEstrellas: (() => void) | null = null;
-    {
-      const c = document.getElementById("idea-canvas") as HTMLCanvasElement | null;
-      const ctx = c?.getContext("2d");
-      if (c && ctx) {
-        let w = 0;
-        let h = 0;
-        const ajustar = () => {
-          const dpr = window.devicePixelRatio || 1;
-          w = c.clientWidth;
-          h = c.clientHeight;
-          c.width = Math.max(1, w * dpr);
-          c.height = Math.max(1, h * dpr);
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        };
-        ajustar();
-        window.addEventListener("resize", ajustar);
-
-        interface Estrella {
-          x: number; y: number; vx: number; vy: number; r: number;
-          big: boolean; sp: number; ci: number; ph: number;
-        }
-        const N = 220;
-        const pts: Estrella[] = [];
-        for (let i = 0; i < N; i++) {
-          const big = Math.random() < 0.07;
-          pts.push({
-            x: Math.random() * (w || 1200),
-            y: Math.random() * (h || 700),
-            vx: (Math.random() - 0.5) * 0.05,
-            vy: (Math.random() - 0.5) * 0.05,
-            r: big ? 1.4 + Math.random() * 1.1 : 0.4 + Math.random() * 0.9,
-            big,
-            sp: 0.5 + Math.random() * 1.6,
-            ci: Math.random(),
-            ph: Math.random() * Math.PI * 2,
-          });
-        }
-
-        interface Fugaz { x: number; y: number; vx: number; vy: number; a: number }
-        const fugaces: Fugaz[] = [];
-        let t = 0;
-        let siguienteFugaz = 3 + Math.random() * 4;
-
-        const pintarEstrellas = () => {
-          ctx.clearRect(0, 0, w, h);
-          for (const p of pts) {
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.x < -5) p.x = w + 5;
-            else if (p.x > w + 5) p.x = -5;
-            if (p.y < -5) p.y = h + 5;
-            else if (p.y > h + 5) p.y = -5;
-            const tw = 0.22 + 0.55 * (0.5 + 0.5 * Math.sin(t * p.sp + p.ph));
-            const col = p.ci < 0.7 ? "rgba(205,218,255," : p.ci < 0.9 ? "rgba(150,178,255," : "rgba(255,232,205,";
-            ctx.fillStyle = col + tw + ")";
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fill();
-            if (p.big) {
-              const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 7);
-              g.addColorStop(0, "rgba(160,190,255," + tw * 0.3 + ")");
-              g.addColorStop(1, "rgba(160,190,255,0)");
-              ctx.fillStyle = g;
-              ctx.fillRect(p.x - p.r * 7, p.y - p.r * 7, p.r * 14, p.r * 14);
-            }
-          }
-        };
-
-        const paso = () => {
-          t += 0.016;
-          pintarEstrellas();
-          if (t > siguienteFugaz) {
-            siguienteFugaz = t + 5 + Math.random() * 6;
-            const dir = Math.random() < 0.5 ? 1 : -1;
-            fugaces.push({
-              x: w * 0.1 + Math.random() * w * 0.8,
-              y: Math.random() * h * 0.35,
-              vx: dir * (7 + Math.random() * 4),
-              vy: 3 + Math.random() * 2,
-              a: 0,
-            });
-          }
-          for (let i = fugaces.length - 1; i >= 0; i--) {
-            const s = fugaces[i];
-            s.a += 0.02;
-            s.x += s.vx;
-            s.y += s.vy;
-            if (s.a >= 1 || s.x < -90 || s.x > w + 90 || s.y > h + 60) {
-              fugaces.splice(i, 1);
-              continue;
-            }
-            const fade = Math.sin(Math.min(1, s.a) * Math.PI);
-            const tx = s.x - s.vx * 9;
-            const ty = s.y - s.vy * 9;
-            const g = ctx.createLinearGradient(s.x, s.y, tx, ty);
-            g.addColorStop(0, "rgba(222,233,255," + 0.85 * fade + ")");
-            g.addColorStop(1, "rgba(222,233,255,0)");
-            ctx.strokeStyle = g;
-            ctx.lineWidth = 1.6;
-            ctx.beginPath();
-            ctx.moveTo(s.x, s.y);
-            ctx.lineTo(tx, ty);
-            ctx.stroke();
-            ctx.fillStyle = "rgba(240,246,255," + 0.9 * fade + ")";
-            ctx.beginPath();
-            ctx.arc(s.x, s.y, 1.4, 0, Math.PI * 2);
-            ctx.fill();
-          }
-          rafEstrellas = requestAnimationFrame(paso);
-        };
-        if (reducirMovimiento) {
-          pintarEstrellas(); // una sola pasada quieta
-        } else {
-          rafEstrellas = requestAnimationFrame(paso);
-        }
-        limpiarEstrellas = () => window.removeEventListener("resize", ajustar);
-      }
-    }
-
-    // ===== Canvas 2: wordmark de partículas + cometa (wordmark-canvas) =====
-    let rafWord = 0;
-    let limpiarWord: (() => void) | null = null;
-    {
-      const c = document.getElementById("wordmark-canvas") as HTMLCanvasElement | null;
-      const ctx = c?.getContext("2d");
-      if (c && ctx) {
-        // next/font hashea el nombre de Inter: usar la familia real del body
-        // para que el sampleo del texto use la misma tipografía que la página.
-        const familia = getComputedStyle(document.body).fontFamily || "Inter, sans-serif";
-
-        interface PtWord {
-          tx: number; ty: number; sx: number; sy: number; d: number; ph: number;
-          r: number; ci: number; ox: number; oy: number; d2: number; fx: number; fy: number;
-        }
-        interface Tri { x: number; y: number; s: number; rot: number; vr: number }
-
-        let w = 0;
-        let h = 0;
-        let pts: PtWord[] = [];
-        let tris: Tri[] = [];
-        let links: Array<[number, number]> = [];
-        let mx = -99999;
-        let my = -99999;
-        let t = 0;
-        let fase: "in" | "out" = "in";
-        let pt = 0;
-        let ciclado = false;
-        let cometa: { u: number; trail: Array<{ x: number; y: number }> } | null = null;
-        let bcx = 0;
-        let bcy = 0;
-        let bR = 0;
-        const anillos: Array<{ a: number }> = [];
-        let ultimoAnillo = 0;
-        // espejos locales del estado del eslogan (el bucle rAF no puede
-        // depender de re-renders para leer el valor vigente)
-        let modoLocal: ModoEslogan = "shown";
-        let revealLocal = 1;
-        let timerEslogan: ReturnType<typeof setTimeout> | undefined;
-
-        const dispersarEslogan = () => {
-          clearTimeout(timerEslogan);
-          const scatter: Dispersion[] = [];
-          for (let i = 0; i < ESLOGAN.length; i++) {
-            scatter.push({
-              dx: (Math.random() - 0.5) * 320,
-              dy: (Math.random() - 0.5) * 220 - 50,
-              rot: (Math.random() - 0.5) * 160,
-              delay: Math.random() * 0.3,
-            });
-          }
-          modoLocal = "destroy";
-          setEslogan((e) => ({ ...e, mode: "destroy", scatter }));
-          timerEslogan = setTimeout(() => {
-            modoLocal = "hidden";
-            revealLocal = 0;
-            setEslogan((e) => ({ ...e, mode: "hidden", reveal: 0 }));
-          }, 1600);
-        };
-
-        const empezarReveal = () => {
-          clearTimeout(timerEslogan);
-          modoLocal = "reveal";
-          revealLocal = 0;
-          setEslogan((e) => ({ ...e, mode: "reveal", reveal: 0 }));
-        };
-
-        const muestrear = (gap: number): Array<{ x: number; y: number }> => {
-          const off = document.createElement("canvas");
-          off.width = w;
-          off.height = h;
-          const o = off.getContext("2d")!;
-          o.fillStyle = "#fff";
-          o.textAlign = "center";
-          // El texto se dibuja dentro del área del ancla (layout), aunque
-          // el canvas cubre todo el hero.
-          const ancla = document.getElementById("wordmark-anchor");
-          const cr = c.getBoundingClientRect();
-          const ar = ancla ? ancla.getBoundingClientRect() : cr;
-          const rx = ar.left - cr.left;
-          const ry = ar.top - cr.top;
-          const rw = ar.width;
-          const rh = ar.height;
-          let fs = Math.round(rh * 0.42);
-          o.font = `800 ${fs}px ${familia}`;
-          let tw = Math.max(o.measureText("My").width, o.measureText("idea").width);
-          let R = (rh * 0.45 + fs * 0.74) / 2.62;
-          let gp2 = fs * 0.3;
-          let comp = tw + gp2 + R * 2.3;
-          if (comp > rw * 0.97) {
-            const s = Math.max(0.45, (rw * 0.97 - gp2 - R * 2.3) / tw);
-            fs = Math.round(fs * s);
-            o.font = `800 ${fs}px ${familia}`;
-            tw = Math.max(o.measureText("My").width, o.measureText("idea").width);
-            gp2 = fs * 0.3;
-            R = (rh * 0.45 + fs * 0.74) / 2.62;
-            comp = tw + gp2 + R * 2.3;
-          }
-          const startX = rx + (rw - comp) / 2;
-          const textCx = startX + tw / 2;
-          bcx = startX + tw + gp2 + R * 1.05;
-          bcy = ry + rh * 0.47 - fs * 0.74 + R;
-          bR = R;
-          o.fillText("My", textCx, ry + rh * 0.47);
-          o.fillText("idea", textCx, ry + rh * 0.92);
-          // Foco (bombilla) en trazos simples
-          o.strokeStyle = "#fff";
-          o.lineCap = "round";
-          o.lineWidth = Math.max(3, R * 0.075);
-          o.beginPath();
-          o.arc(bcx, bcy, R, 0.75 * Math.PI, 2.25 * Math.PI, false);
-          o.stroke();
-          o.beginPath();
-          o.moveTo(bcx - R * 0.707, bcy + R * 0.707);
-          o.lineTo(bcx - R * 0.3, bcy + R * 1.18);
-          o.stroke();
-          o.beginPath();
-          o.moveTo(bcx + R * 0.707, bcy + R * 0.707);
-          o.lineTo(bcx + R * 0.3, bcy + R * 1.18);
-          o.stroke();
-          o.beginPath();
-          o.moveTo(bcx - R * 0.32, bcy + R * 1.34);
-          o.lineTo(bcx + R * 0.32, bcy + R * 1.34);
-          o.stroke();
-          o.beginPath();
-          o.moveTo(bcx - R * 0.24, bcy + R * 1.56);
-          o.lineTo(bcx + R * 0.24, bcy + R * 1.56);
-          o.stroke();
-          o.beginPath();
-          o.moveTo(bcx - R * 0.32, bcy + R * 0.6);
-          o.lineTo(bcx - R * 0.16, bcy + R * 0.05);
-          o.lineTo(bcx, bcy + R * 0.5);
-          o.lineTo(bcx + R * 0.16, bcy + R * 0.05);
-          o.lineTo(bcx + R * 0.32, bcy + R * 0.6);
-          o.stroke();
-          const d = o.getImageData(0, 0, w, h).data;
-          const out: Array<{ x: number; y: number }> = [];
-          for (let y = 0; y < h; y += gap) {
-            for (let x = 0; x < w; x += gap) {
-              if (d[(y * w + x) * 4 + 3] > 128) out.push({ x, y });
-            }
-          }
-          return out;
-        };
-
-        const construir = () => {
-          w = c.clientWidth;
-          h = c.clientHeight;
-          if (!w || !h) return;
-          const dpr = window.devicePixelRatio || 1;
-          c.width = w * dpr;
-          c.height = h * dpr;
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-          let gap = Math.max(4, Math.round(w / 180));
-          let objetivo = muestrear(gap);
-          while (objetivo.length > 3400 && gap < 16) {
-            gap += 1;
-            objetivo = muestrear(gap);
-          }
-          pts = objetivo.map((p) => ({
-            tx: p.x,
-            ty: p.y,
-            sx: w / 2 + (Math.random() - 0.5) * w * 1.7,
-            sy: h / 2 + (Math.random() - 0.5) * h * 2.0,
-            d: (p.x / w) * 1.4 + Math.random() * 0.8,
-            ph: Math.random() * 6.283,
-            r: Math.random() < 0.06 ? 2.0 + Math.random() * 1.4 : 1.1 + Math.random() * 1.0,
-            ci: (Math.random() * 5) | 0,
-            ox: 0,
-            oy: 0,
-            d2: 0,
-            fx: 0,
-            fy: 0,
-          }));
-          tris = [];
-          for (let i = 0; i < pts.length; i += 26) {
-            const p = pts[i];
-            tris.push({ x: p.tx, y: p.ty, s: 3 + Math.random() * 6, rot: Math.random() * 6.283, vr: (Math.random() - 0.5) * 0.012 });
-          }
-          links = [];
-          for (let i = 0; i < tris.length; i++) {
-            let b1 = -1;
-            let b2 = -1;
-            let d1 = 1e9;
-            let d2 = 1e9;
-            for (let j = 0; j < tris.length; j++) {
-              if (i === j) continue;
-              const dx = tris[i].x - tris[j].x;
-              const dy = tris[i].y - tris[j].y;
-              const dd = dx * dx + dy * dy;
-              if (dd < d1) {
-                d2 = d1;
-                b2 = b1;
-                d1 = dd;
-                b1 = j;
-              } else if (dd < d2) {
-                d2 = dd;
-                b2 = j;
-              }
-            }
-            if (b1 >= 0) links.push([i, b1]);
-            if (b2 >= 0 && Math.random() < 0.5) links.push([i, b2]);
-          }
-          t = 0;
-          pt = 0;
-          fase = "in";
-          cometa = null;
-          if (modoLocal !== "shown") {
-            modoLocal = "shown";
-            revealLocal = 1;
-            setEslogan((e) => ({ ...e, mode: "shown", reveal: 1 }));
-          }
-        };
-
-        const onResize = () => construir();
-        window.addEventListener("resize", onResize);
-        const host = c.parentElement ?? c;
-        const onMove = (e: MouseEvent) => {
-          const r = c.getBoundingClientRect();
-          mx = e.clientX - r.left;
-          my = e.clientY - r.top;
-        };
-        const onLeave = () => {
-          mx = -99999;
-          my = -99999;
-        };
-        const onClick = (e: MouseEvent) => {
-          const r = c.getBoundingClientRect();
-          const cx = e.clientX - r.left;
-          const cy = e.clientY - r.top;
-          for (const p of pts) {
-            const dx = p.tx - cx;
-            const dy = p.ty - cy;
-            const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-            const f = Math.max(0, 1 - dist / (w * 0.45));
-            p.ox += (dx / dist) * f * 46;
-            p.oy += (dy / dist) * f * 46;
-          }
-        };
-        host.addEventListener("mousemove", onMove);
-        host.addEventListener("mouseleave", onLeave);
-        host.addEventListener("click", onClick);
-
-        const easeOut = (k: number) => 1 - Math.pow(1 - k, 3);
-
-        const paso = () => {
-          t += 0.0166;
-          pt += 0.0166;
-          // Ciclo: ensamblado (lento) -> pausa -> desintegración -> reensamblado
-          if (fase === "in" && pt > 2.2 + 2.0 + 9.0) {
-            fase = "out";
-            pt = 0;
-            ciclado = true;
-            dispersarEslogan();
-            for (const p of pts) {
-              p.d2 = Math.random() * 0.7;
-              p.fx = Math.random() * w;
-              p.fy = Math.random() * h;
-            }
-          } else if (fase === "out" && pt > 0.7 + 1.8 + 4.2) {
-            for (const p of pts) {
-              p.sx = p.fx;
-              p.sy = p.fy;
-            }
-            fase = "in";
-            pt = 0;
-            cometa = { u: 0, trail: [] };
-            empezarReveal();
-          }
-          ctx.clearRect(0, 0, w, h);
-          const pal = ["rgba(150,178,255,", "rgba(122,156,255,", "rgba(77,124,254,", "rgba(214,228,255,", "rgba(111,207,255,"];
-          const gp = fase === "in" ? Math.max(0, Math.min(1, (pt - 2.6) / 1.4)) : Math.max(0, 1 - pt / 0.7);
-          // Resplandor pulsante del foco + anillos de "idea encendida"
-          if (gp > 0 && bR > 0) {
-            const ga = (0.10 + 0.07 * Math.sin(t * 1.3)) * gp;
-            const g = ctx.createRadialGradient(bcx, bcy, 0, bcx, bcy, bR * 1.8);
-            g.addColorStop(0, "rgba(120,160,255," + ga + ")");
-            g.addColorStop(1, "rgba(120,160,255,0)");
-            ctx.fillStyle = g;
-            ctx.fillRect(bcx - bR * 2, bcy - bR * 2, bR * 4, bR * 4);
-            if (gp >= 1 && t - ultimoAnillo > 3.6) {
-              ultimoAnillo = t;
-              anillos.push({ a: 0 });
-            }
-            for (let i = anillos.length - 1; i >= 0; i--) {
-              const rg = anillos[i];
-              rg.a += 0.011;
-              if (rg.a >= 1) {
-                anillos.splice(i, 1);
-                continue;
-              }
-              ctx.strokeStyle = "rgba(120,160,255," + 0.32 * (1 - rg.a) + ")";
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.arc(bcx, bcy, bR * 0.3 + rg.a * bR * 1.5, 0, 6.283);
-              ctx.stroke();
-            }
-          }
-
-          for (const p of pts) {
-            let e2: number;
-            if (fase === "in") {
-              const k = Math.max(0, Math.min(1, (pt - p.d) / 2.0));
-              if (k <= 0 && !ciclado) continue;
-              e2 = k <= 0 ? 0 : easeOut(k);
-            } else {
-              const k = Math.max(0, Math.min(1, (pt - p.d2) / 1.8));
-              e2 = 1 - easeOut(k);
-            }
-            const bx = fase === "in" ? p.sx : p.fx;
-            const by = fase === "in" ? p.sy : p.fy;
-            let hx = 0;
-            let hy = 0;
-            const dxm = p.tx - mx;
-            const dym = p.ty - my;
-            const dm2 = dxm * dxm + dym * dym;
-            if (dm2 < 4900) {
-              const dm = Math.sqrt(dm2) || 1;
-              const f = (1 - dm / 70) * 14;
-              hx = (dxm / dm) * f;
-              hy = (dym / dm) * f;
-            }
-            p.ox *= 0.9;
-            p.oy *= 0.9;
-            const wob = e2 * 1.6 + (ciclado ? (1 - e2) * 9 : 0);
-            const x = bx + (p.tx - bx) * e2 + Math.sin(t * 1.3 + p.ph) * wob + p.ox + hx;
-            const y = by + (p.ty - by) * e2 + Math.cos(t * 1.1 + p.ph) * wob + p.oy + hy;
-            const al = (0.35 + 0.45 * (0.5 + 0.5 * Math.sin(t * 2.2 + p.ph))) * (ciclado ? 0.55 + 0.45 * e2 : 0.25 + 0.75 * e2);
-            ctx.fillStyle = pal[p.ci] + al + ")";
-            ctx.beginPath();
-            ctx.arc(x, y, p.r, 0, 6.283);
-            ctx.fill();
-          }
-
-          // Cometa: órbita en semicírculo y pasada horizontal que revela el eslogan
-          if (cometa) {
-            cometa.u += 0.0166 / 4.6;
-            const u = cometa.u;
-            const crect = c.getBoundingClientRect();
-            const sEl = document.getElementById("slogan-line");
-            let sx0 = w * 0.36;
-            let sx1 = w * 0.64;
-            let syl = h * 0.8;
-            if (sEl) {
-              const sr = sEl.getBoundingClientRect();
-              sx0 = sr.left - crect.left;
-              sx1 = sr.right - crect.left;
-              syl = sr.top - crect.top + sr.height * 0.5;
-            }
-            const Cx = w * 0.5;
-            const xEnd = Math.max(w * 0.05, sx0 - w * 0.18);
-            const Rx = Cx - xEnd;
-            const Ry = Math.max(60, syl * 0.85);
-            const arcPos = (uu: number) => {
-              const th = Math.PI * Math.min(1, uu / 0.6);
-              return { x: Cx + Math.cos(th) * Rx, y: syl - Math.sin(th) * Ry };
-            };
-            const lineK = Math.max(0, (u - 0.5) / 0.5);
-            const lineX = xEnd + lineK * lineK * (w + 90 - xEnd);
-            let cx2: number;
-            let cy2: number;
-            let sc2: number;
-            if (u < 0.5) {
-              const a2 = arcPos(u);
-              cx2 = a2.x;
-              cy2 = a2.y;
-              sc2 = 0.35 + 0.65 * (u / 0.5);
-            } else if (u < 0.6) {
-              const s = (u - 0.5) / 0.1;
-              const ss = s * s * (3 - 2 * s);
-              const a2 = arcPos(u);
-              cx2 = a2.x + (lineX - a2.x) * ss;
-              cy2 = a2.y + (syl - a2.y) * ss;
-              sc2 = 1;
-            } else {
-              cx2 = lineX;
-              cy2 = syl;
-              sc2 = 1;
-            }
-            if (u >= 0.6) {
-              const p2 = Math.max(revealLocal, Math.max(0, Math.min(1, (cx2 - sx0) / Math.max(1, sx1 - sx0))));
-              if (p2 - revealLocal > 0.004 || (p2 >= 1 && revealLocal < 1)) {
-                revealLocal = p2;
-                setEslogan((e) => ({ ...e, reveal: p2 }));
-              }
-            }
-            cometa.trail.push({ x: cx2, y: cy2 });
-            if (cometa.trail.length > 34) cometa.trail.shift();
-            for (let i = 1; i < cometa.trail.length; i++) {
-              const a2 = cometa.trail[i - 1];
-              const b2 = cometa.trail[i];
-              const fa = (i / cometa.trail.length) * 0.8 * sc2;
-              ctx.strokeStyle = "rgba(170,200,255," + fa + ")";
-              ctx.lineWidth = 1.2 + (i / cometa.trail.length) * 4 * sc2;
-              ctx.beginPath();
-              ctx.moveTo(a2.x, a2.y);
-              ctx.lineTo(b2.x, b2.y);
-              ctx.stroke();
-            }
-            const gg = ctx.createRadialGradient(cx2, cy2, 0, cx2, cy2, 34 * sc2);
-            gg.addColorStop(0, "rgba(235,243,255," + 0.95 * sc2 + ")");
-            gg.addColorStop(0.3, "rgba(160,195,255," + 0.55 * sc2 + ")");
-            gg.addColorStop(1, "rgba(160,195,255,0)");
-            ctx.fillStyle = gg;
-            ctx.beginPath();
-            ctx.arc(cx2, cy2, 34 * sc2, 0, 6.283);
-            ctx.fill();
-            ctx.fillStyle = "rgba(255,255,255," + 0.95 * sc2 + ")";
-            ctx.beginPath();
-            ctx.arc(cx2, cy2, 4 * sc2 + 0.8, 0, 6.283);
-            ctx.fill();
-            if (u >= 1) {
-              cometa = null;
-              modoLocal = "shown";
-              revealLocal = 1;
-              setEslogan((e) => ({ ...e, mode: "shown", reveal: 1 }));
-            }
-          }
-          rafWord = requestAnimationFrame(paso);
-        };
-
-        const pintarEstatico = () => {
-          // prefers-reduced-motion: wordmark ensamblado, un solo frame
-          ctx.clearRect(0, 0, w, h);
-          const pal = ["rgba(150,178,255,", "rgba(122,156,255,", "rgba(77,124,254,", "rgba(214,228,255,", "rgba(111,207,255,"];
-          for (const p of pts) {
-            ctx.fillStyle = pal[p.ci] + "0.8)";
-            ctx.beginPath();
-            ctx.arc(p.tx, p.ty, p.r, 0, 6.283);
-            ctx.fill();
-          }
-        };
-
-        const arrancar = () => {
-          construir();
-          if (reducirMovimiento) {
-            pintarEstatico();
-          } else {
-            rafWord = requestAnimationFrame(paso);
-          }
-        };
-        if (document.fonts?.load) {
-          document.fonts.load(`800 100px ${familia}`).then(arrancar, arrancar);
-        } else {
-          arrancar();
-        }
-
-        limpiarWord = () => {
-          window.removeEventListener("resize", onResize);
-          host.removeEventListener("mousemove", onMove);
-          host.removeEventListener("mouseleave", onLeave);
-          host.removeEventListener("click", onClick);
-          clearTimeout(timerEslogan);
-        };
-      }
-    }
-
     return () => {
       io.disconnect();
       window.removeEventListener("scroll", onSpy);
-      if (tipeo) clearInterval(tipeo);
-      if (tipeoInmediato) clearTimeout(tipeoInmediato);
-      cancelAnimationFrame(rafEstrellas);
-      cancelAnimationFrame(rafWord);
-      limpiarEstrellas?.();
-      limpiarWord?.();
     };
   }, []);
 
@@ -764,18 +145,10 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
       </nav>
 
       {/* ============ HERO ============ */}
-      <header id="inicio" style={{ position: "relative", overflow: "hidden", height: "calc(100vh - 64px)", minHeight: "600px", background: "radial-gradient(ellipse 70% 55% at 18% 20%, rgba(52,66,140,0.20), transparent 62%), radial-gradient(ellipse 60% 50% at 82% 70%, rgba(96,70,180,0.14), transparent 62%), radial-gradient(ellipse 90% 70% at 50% 45%, #090B16 0%, #030308 78%)" }}>
-        <canvas id="idea-canvas" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", pointerEvents: "none" }}></canvas>
-        <canvas id="wordmark-canvas" aria-label="My Idea" style={{ animation: "fadeUp 0.9s ease-out 0.15s both", position: "absolute", inset: "0", width: "100%", height: "100%", pointerEvents: "none" }}></canvas>
-        <div style={{ position: "absolute", left: "50%", top: "0", transform: "translateX(-50%)", width: "min(720px,80%)", height: "1px", background: "linear-gradient(90deg,transparent,rgba(77,124,254,0.7),transparent)" }}></div>
-        <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-end", textAlign: "center", padding: "0 24px 68px", boxSizing: "border-box" }}>
-          <div id="wordmark-anchor" style={{ width: "min(97vw,1560px)", aspectRatio: "900/560", maxHeight: "calc(100vh - 250px)", cursor: "pointer" }}></div>
-          <p id="slogan-line" style={{ animation: "fadeUp 0.9s ease-out 0.3s both", fontFamily: "var(--font-serif), Georgia, serif", fontStyle: "italic", fontSize: "clamp(20px,2.6vw,30px)", fontWeight: "400", margin: "14px 0 0", letterSpacing: "0.01em", color: "#4E71D8", cursor: "default", minHeight: "1.3em" }} className="lh3">{sloganChars.map((sc, i) => <span key={i} style={{ display: "inline-block", whiteSpace: "pre", transform: sc.tf, opacity: sc.op, filter: sc.fl, transition: sc.tr }}>{sc.ch}</span>)}</p>
-          <a href="/nueva" style={{ animation: "fadeUp 0.9s ease-out 0.45s both", background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "12px", padding: "15px 34px", fontFamily: "inherit", fontSize: "15.5px", fontWeight: "600", cursor: "pointer", marginTop: "26px", boxShadow: "0 0 32px rgba(77,124,254,0.35)", transition: "background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh4">Comenzar gratis</a>
-        </div>
-        <a href="#acerca" style={{ position: "absolute", left: "50%", bottom: "24px", transform: "translateX(-50%)", color: "#A6A7AD", display: "flex", flexDirection: "column", alignItems: "center", padding: "10px" }} className="lh5">
-          <svg width="18" height="18" viewBox="0 0 12 12"><path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.4" fill="none"></path></svg>
-        </a>
+      <header id="inicio" className="portada-hero">
+        <h1 className="solo-lectores">My Idea: transforma tu creatividad en acción</h1>
+        <HeroMasa />
+        <a href="/nueva" className="portada-cta">Comenzar gratis</a>
       </header>
 
       {/* ============ MARQUEE DE TEMAS ============ */}
@@ -931,7 +304,7 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
                   </div>
                   <div style={{ fontSize: "clamp(15px,1.6vw,17px)", fontWeight: "500", lineHeight: "1.55", color: "#F5F6F8", textWrap: "pretty" }}>De estos dos riesgos, el café que llega frío y el costo del empaque térmico, ¿cuál necesitas resolver PRIMERO para confiar en que el negocio funciona como sistema?</div>
                   <div style={{ background: "#17171B", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "12px", padding: "14px", marginTop: "20px" }}>
-                    <div style={{ fontSize: "13.5px", lineHeight: "1.55", color: "#F5F6F8", minHeight: "44px" }}>{typed}<span style={{ display: "inline-block", width: "1.5px", height: "14px", background: "#4D7CFE", animation: "caretBlink 1s steps(1) infinite", verticalAlign: "-2px", marginLeft: "1px" }}></span></div>
+                    <div style={{ fontSize: "13.5px", lineHeight: "1.55", color: "#F5F6F8", minHeight: "44px" }}><TipeoDemo /><span style={{ display: "inline-block", width: "1.5px", height: "14px", background: "#4D7CFE", animation: "caretBlink 1s steps(1) infinite", verticalAlign: "-2px", marginLeft: "1px" }}></span></div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "10px" }}>
                       <span style={{ width: "32px", height: "32px", borderRadius: "50%", border: "1px solid rgba(255,255,255,0.14)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="#A6A7AD"></rect><path d="M3.5 8a4.5 4.5 0 0 0 9 0" stroke="#A6A7AD" strokeWidth="1.4" fill="none"></path><line x1="8" y1="12.6" x2="8" y2="14.5" stroke="#A6A7AD" strokeWidth="1.4"></line></svg>
