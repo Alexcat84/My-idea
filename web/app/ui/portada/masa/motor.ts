@@ -1,11 +1,15 @@
 /**
  * Motor de la masa con three.js (niveles alto, medio y bajo).
  *
+ * Una sola materia: la masa liquida y las figuras son la misma superficie.
+ * El shader interpola entre la piel de la masa y el campo de distancia de
+ * la figura del ciclo (uMorf), asi el liquido fluye, se estira y se vuelve
+ * foco, lente, brujula, escalera o casa, y despues regresa a masa.
+ *
  * Por fotograma:
- *  1. el liquido se calcula por raymarching en un render target a
+ *  1. la materia se calcula por raymarching en un render target a
  *     resolucion reducida (AJUSTES[nivel].escalaLiquido);
- *  2. la escena principal compone fondo + liquido escalado y encima las
- *     particulas (quads instanciados con estela) a resolucion completa;
+ *  2. se compone sobre el fondo del hero;
  *  3. postprocesado: bloom suave (alto y medio) y acabado con vinieta y
  *     grano que no levantan el negro.
  *
@@ -15,25 +19,25 @@
  * OffscreenCanvas con WebGL2). three.js nunca entra en el bundle inicial.
  */
 import {
-  Group,
+  ClampToEdgeWrapping,
+  DataTexture,
+  DataUtils,
+  Euler,
   HalfFloatType,
-  InstancedBufferAttribute,
-  InstancedBufferGeometry,
-  BufferAttribute,
   LinearFilter,
   LinearSRGBColorSpace,
   Matrix3,
+  Matrix4,
   Mesh,
   NoBlending,
   NoToneMapping,
   OrthographicCamera,
-  PerspectiveCamera,
   PlaneGeometry,
+  RedFormat,
   Scene,
   ShaderMaterial,
   UnsignedByteType,
   Vector2,
-  Vector3,
   WebGLRenderTarget,
   WebGLRenderer,
   type IUniform,
@@ -46,26 +50,19 @@ import { AJUSTES, MedidorFps, type NivelLiquido } from "./calidad";
 import { estadoEn, figuraEn, MOMENTOS } from "./ciclo";
 import type { Aviso, ControlMotor, OpcionesMotor } from "./control";
 import { distanciaCamara, FOV_GRADOS, RADIO_MASA } from "./encuadre";
-import { azarSembrado, muestrearTodas } from "./figuras";
+import { calcularCampos, LADO_CAMPO } from "./figuras";
 import {
   FRAGMENTO_ACABADO,
   FRAGMENTO_COMPOSICION,
-  FRAGMENTO_PARTICULAS,
   fragmentoLiquido,
   UNIFORMES_ACABADO,
   UNIFORMES_COMPOSICION,
   UNIFORMES_LIQUIDO,
-  UNIFORMES_PARTICULAS,
+  VELOCIDAD_MATERIA,
   VERTICE_PANTALLA,
-  verticeParticulas,
 } from "./glsl";
 
 type Uniformes<L extends readonly string[]> = Record<L[number], IUniform>;
-
-/** Segundos hacia atras de donde nace la estela de cada particula. */
-const ESTELA = 0.045;
-/** Radio del grano (px de dispositivo) como fraccion del lado menor. */
-const GRANO_RELATIVO = 0.0021;
 
 const VERTICE_PASADA = /* glsl */ `
 varying vec2 vUv;
@@ -75,18 +72,10 @@ void main() {
 }
 `;
 
-/** Direcciones repartidas por igual sobre la esfera (espiral de Fibonacci). */
-function direccionesFibonacci(n: number): Float32Array {
-  const salida = new Float32Array(n * 3);
-  const oro = Math.PI * (3 - Math.sqrt(5));
-  for (let i = 0; i < n; i++) {
-    const y = 1 - (2 * (i + 0.5)) / n;
-    const r = Math.sqrt(1 - y * y);
-    const ang = i * oro;
-    salida[i * 3] = Math.cos(ang) * r;
-    salida[i * 3 + 1] = y;
-    salida[i * 3 + 2] = Math.sin(ang) * r;
-  }
+/** Campo en media precision: se filtra linealmente en todo WebGL2. */
+function aMediaPrecision(campo: Float32Array): Uint16Array {
+  const salida = new Uint16Array(campo.length);
+  for (let i = 0; i < campo.length; i++) salida[i] = DataUtils.toHalfFloat(campo[i]);
   return salida;
 }
 
@@ -119,16 +108,31 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     renderer.extensions.has("EXT_color_buffer_float") || renderer.extensions.has("EXT_color_buffer_half_float");
   const tipoRt = flotante ? HalfFloatType : UnsignedByteType;
 
-  /* ---------- 1. liquido ---------- */
+  /* ---------- la figura: su campo de distancia en una textura ---------- */
+  const campo = new DataTexture(
+    new Uint16Array(LADO_CAMPO * LADO_CAMPO).fill(DataUtils.toHalfFloat(10)),
+    LADO_CAMPO,
+    LADO_CAMPO,
+    RedFormat,
+    HalfFloatType,
+  );
+  campo.minFilter = LinearFilter;
+  campo.magFilter = LinearFilter;
+  campo.wrapS = ClampToEdgeWrapping;
+  campo.wrapT = ClampToEdgeWrapping;
+  campo.needsUpdate = true;
+
+  /* ---------- 1. la materia ---------- */
   const uLiquido: Uniformes<typeof UNIFORMES_LIQUIDO> = {
     uTiempo: { value: 0 },
-    uLiquido: { value: 1 },
+    uMorf: { value: 0 },
     uRadio: { value: RADIO_MASA },
     uAspecto: { value: 1 },
     uTanMedio: { value: Math.tan((FOV_GRADOS * Math.PI) / 360) },
     uCamZ: { value: 10 },
     uRotInv: { value: new Matrix3() },
     uPixelMundo: { value: 0.001 },
+    uFigura: { value: campo },
   };
   const materialLiquido = new ShaderMaterial({
     vertexShader: VERTICE_PANTALLA,
@@ -151,10 +155,8 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     magFilter: LinearFilter,
   });
 
-  /* ---------- 2. escena principal: composicion + particulas ---------- */
+  /* ---------- 2. composicion sobre el fondo del hero ---------- */
   const escena = new Scene();
-  const camara = new PerspectiveCamera(FOV_GRADOS, 1, 0.1, 100);
-
   const uComposicion: Uniformes<typeof UNIFORMES_COMPOSICION> = {
     uLiquidoTex: { value: rtLiquido.texture },
     uTexelLiquido: { value: new Vector2(1, 1) },
@@ -170,57 +172,11 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
   });
   const planoComposicion = new Mesh(planoGeo, materialComposicion);
   planoComposicion.frustumCulled = false;
-  planoComposicion.renderOrder = 0;
   escena.add(planoComposicion);
-
-  const n = ajustes.particulas;
-  const azar = azarSembrado(7);
-  const azares = new Float32Array(n * 2);
-  for (let i = 0; i < n * 2; i++) azares[i] = azar();
-  const direcciones = direccionesFibonacci(n);
-  const destino = new InstancedBufferAttribute(new Float32Array(n * 3), 3);
-  for (let i = 0; i < n * 3; i++) destino.array[i] = direcciones[i] * RADIO_MASA;
-
-  const geoParticulas = new InstancedBufferGeometry();
-  // position.x: 0 en la cola, 1 en la cabeza; position.y: lado de la estela.
-  geoParticulas.setAttribute("position", new BufferAttribute(new Float32Array([0, -1, 0, 1, -1, 0, 0, 1, 0, 1, 1, 0]), 3));
-  geoParticulas.setIndex([0, 1, 2, 2, 1, 3]);
-  geoParticulas.setAttribute("aDir", new InstancedBufferAttribute(direcciones, 3));
-  geoParticulas.setAttribute("aDestino", destino);
-  geoParticulas.setAttribute("aAzar", new InstancedBufferAttribute(azares, 2));
-  geoParticulas.instanceCount = n;
-
-  const uParticulas: Uniformes<typeof UNIFORMES_PARTICULAS> = {
-    uTiempo: { value: 0 },
-    uTiempoPrevio: { value: 0 },
-    uMezcla: { value: 0 },
-    uMezclaPrevia: { value: 0 },
-    uLiquido: { value: 1 },
-    uLiquidoPrevio: { value: 1 },
-    uRadio: { value: RADIO_MASA },
-    uVis: { value: 1 },
-    uTamPx: { value: 2 },
-    uLienzo: { value: new Vector2(1, 1) },
-    uCamara: { value: new Vector3(0, 0, 10) },
-  };
-  const materialParticulas = new ShaderMaterial({
-    vertexShader: verticeParticulas(ajustes.pasosRizo),
-    fragmentShader: FRAGMENTO_PARTICULAS,
-    uniforms: uParticulas,
-    transparent: true,
-    depthTest: false,
-    depthWrite: false,
-  });
-  const particulas = new Mesh(geoParticulas, materialParticulas);
-  particulas.frustumCulled = false;
-  particulas.renderOrder = 1;
-  const nube = new Group();
-  nube.add(particulas);
-  escena.add(nube);
 
   /* ---------- 3. postprocesado ---------- */
   const composer = new EffectComposer(renderer, new WebGLRenderTarget(1, 1, { type: tipoRt, depthBuffer: false }));
-  composer.addPass(new RenderPass(escena, camara));
+  composer.addPass(new RenderPass(escena, camaraPlano));
   const bloom = ajustes.bloom ? new UnrealBloomPass(new Vector2(256, 256), 0.38, 0.45, 0.62) : null;
   if (bloom) composer.addPass(bloom);
   const uAcabado: Uniformes<typeof UNIFORMES_ACABADO> = {
@@ -247,39 +203,32 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
       Math.max(1, Math.round(ancho * dpr * ajustes.escalaLiquido)),
       Math.max(1, Math.round(alto * dpr * ajustes.escalaLiquido)),
     );
-    const d = distanciaCamara(ancho, alto);
-    camara.aspect = ancho / alto;
-    camara.position.set(0, 0, d);
-    camara.updateProjectionMatrix();
     uLiquido.uAspecto.value = ancho / alto;
-    uLiquido.uCamZ.value = d;
-    uComposicion.uTexelLiquido.value = new Vector2(1 / rtLiquido.width, 1 / rtLiquido.height);
+    uLiquido.uCamZ.value = distanciaCamara(ancho, alto);
     uLiquido.uPixelMundo.value = (2 * uLiquido.uTanMedio.value) / rtLiquido.height;
+    uComposicion.uTexelLiquido.value = new Vector2(1 / rtLiquido.width, 1 / rtLiquido.height);
     const lienzoPx = new Vector2(ancho * dpr, alto * dpr);
     uComposicion.uLienzo.value = lienzoPx;
-    uParticulas.uLienzo.value = lienzoPx;
     acabado.uniforms.uLienzo.value = lienzoPx;
-    uParticulas.uCamara.value = camara.position.clone();
-    uParticulas.uTamPx.value = Math.max(GRANO_RELATIVO * Math.min(ancho, alto) * dpr, 0.9 * dpr);
   };
   ajustar();
 
   /* ---------- figuras ---------- */
-  const figuras: Array<Float32Array | null> = [null, null, null, null, null];
+  const figuras: Array<Uint16Array | null> = [null, null, null, null, null];
   let figuraCargada = -1;
   let destruido = false;
   const ponerFigura = (indice: number) => {
-    const puntos = figuras[indice];
-    if (!puntos || indice === figuraCargada) return;
-    (destino.array as Float32Array).set(puntos);
-    destino.needsUpdate = true;
+    const datos = figuras[indice];
+    if (!datos || indice === figuraCargada) return;
+    (campo.image.data as Uint16Array).set(datos);
+    campo.needsUpdate = true;
     figuraCargada = indice;
   };
-  // El medidor espera a que esten las cinco figuras: su muestreo corre en
-  // el mismo hilo y no es del costo del nivel que se esta midiendo.
+  // El medidor espera a que esten los cinco campos: se calculan en el mismo
+  // hilo y no son del costo del nivel que se esta midiendo.
   let figurasListas = false;
-  void muestrearTodas(n, (i, puntos) => {
-    figuras[i] = puntos;
+  const camposListos = calcularCampos((i, c) => {
+    figuras[i] = aMediaPrecision(c);
   }, () => destruido).then(() => {
     figurasListas = true;
   });
@@ -288,35 +237,31 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
   const puntero = { x: 0, y: 0, sx: 0, sy: 0 };
 
   /* ---------- pintar un instante ---------- */
+  const giro = new Euler();
+  const matrizGiro = new Matrix4();
   const rotInv = new Matrix3();
   const pintar = (t: number) => {
     const e = estadoEn(t);
-    const previo = estadoEn(t - ESTELA);
     ponerFigura(figuraEn(t));
     puntero.sx += (puntero.x - puntero.sx) * 0.05;
     puntero.sy += (puntero.y - puntero.sy) * 0.05;
+    // La masa gira con vida; la figura formada mira de frente.
     const libre = 1 - e.mezcla;
-    nube.rotation.set(
-      Math.cos(t * 0.13) * 0.3 * libre + puntero.sy * 0.18,
-      Math.sin(t * 0.17) * 0.8 * libre + puntero.sx * 0.25,
-      Math.sin(t * 0.09) * 0.2 * libre,
+    const tg = t * VELOCIDAD_MATERIA;
+    giro.set(
+      Math.cos(tg * 0.13) * 0.36 * libre + puntero.sy * 0.18,
+      Math.sin(tg * 0.17) * 0.95 * libre + puntero.sx * 0.25,
+      Math.sin(tg * 0.09) * 0.25 * libre,
     );
-    nube.updateMatrixWorld();
-    rotInv.setFromMatrix4(nube.matrixWorld).transpose();
+    matrizGiro.makeRotationFromEuler(giro);
+    rotInv.setFromMatrix4(matrizGiro).transpose();
     uLiquido.uRotInv.value = rotInv;
     uLiquido.uTiempo.value = t;
-    uLiquido.uLiquido.value = e.liquido;
-    uParticulas.uTiempo.value = t;
-    uParticulas.uTiempoPrevio.value = t - ESTELA;
-    uParticulas.uMezcla.value = e.mezcla;
-    uParticulas.uMezclaPrevia.value = previo.mezcla;
-    uParticulas.uLiquido.value = e.liquido;
-    uParticulas.uLiquidoPrevio.value = previo.liquido;
+    uLiquido.uMorf.value = e.mezcla;
     acabado.uniforms.uTiempo.value = t;
 
     renderer.setRenderTarget(rtLiquido);
-    renderer.clear();
-    if (e.liquido > 0.004) renderer.render(escenaLiquido, camaraPlano);
+    renderer.render(escenaLiquido, camaraPlano);
     renderer.setRenderTarget(null);
     composer.render();
   };
@@ -347,10 +292,9 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     cancelAnimationFrame(raf);
     eventos.removeEventListener("webglcontextlost", alPerderContexto);
     planoGeo.dispose();
-    geoParticulas.dispose();
     materialLiquido.dispose();
     materialComposicion.dispose();
-    materialParticulas.dispose();
+    campo.dispose();
     rtLiquido.dispose();
     bloom?.dispose();
     acabado.dispose();
@@ -389,7 +333,7 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     if (fallo) avisar("fallo", 0);
   }
 
-  /* ---------- compilar sin bloquear el hilo principal ---------- */
+  /* ---------- compilar sin bloquear el hilo ---------- */
   // compileAsync usa KHR_parallel_shader_compile, pero en ANGLE/D3D el
   // trabajo pesado del shader termina en el primer dibujo, y la consulta
   // sincrona que three hace al primer uso del programa SIGUIENTE espera a
@@ -425,13 +369,16 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
   }
   try {
     await renderer.compileAsync(escenaLiquido, camaraPlano);
-    await renderer.compileAsync(escena, camara);
+    await renderer.compileAsync(escena, camaraPlano);
     await renderer.compileAsync(escenaPasadas, camaraPlano);
+    // Con movimiento reducido, o con el ciclo congelado en una figura, esa
+    // figura tiene que estar lista antes del primer fotograma.
+    if (o.reducido || o.tiempoFijo !== null) await camposListos;
     renderer.setRenderTarget(rtLiquido);
     renderer.render(escenaLiquido, camaraPlano);
     renderer.setRenderTarget(null);
     await esperarGpu();
-    if (!destruido) renderer.render(escena, camara);
+    if (!destruido) renderer.render(escena, camaraPlano);
     await esperarGpu();
     if (!destruido) composer.render();
     await esperarGpu();
@@ -444,6 +391,7 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     liberar();
     throw new Error("shader");
   }
+
   if (o.reducido) {
     pintarQuieto();
   } else {

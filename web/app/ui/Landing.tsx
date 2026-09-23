@@ -12,7 +12,7 @@
  * hacer scroll. Con prefers-reduced-motion todo queda quieto.
  *
  * HERO (portada-particula, decisión del fundador): la masa líquida que se
- * disgrega en partículas y forma las cinco figuras (ui/portada/HeroMasa).
+ * transforma, con su misma materia, en las cinco figuras (ui/portada/HeroMasa).
  * El lema y su animación desaparecen; el título queda como texto oculto a
  * la vista (lectores de pantalla y buscadores) y "Comenzar gratis" se
  * mantiene, discreto, en el borde inferior.

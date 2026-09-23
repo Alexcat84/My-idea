@@ -7,7 +7,7 @@
  *  - TAMANO_FIGURA es el lado mayor de cada figura formada (80 %);
  *  - la masa en reposo tiene un diametro medio parecido (RADIO_MASA);
  *  - nada pasa de RADIO_LIMITE (96 % del lado menor): ni la piel agitada
- *    ni las particulas en vuelo.
+ *    ni la materia en plena transformacion.
  */
 
 export const FOV_GRADOS = 30;
@@ -15,7 +15,7 @@ export const FRACCION_LADO_MENOR = 0.8;
 export const TAMANO_FIGURA = 3.0;
 export const RADIO_MASA = 1.36;
 /** Desplazamiento maximo de la piel sobre RADIO_MASA (ver glsl.ts). */
-export const ENVOLTURA_PIEL = 0.3;
+export const ENVOLTURA_PIEL = 0.34;
 export const RADIO_LIMITE = (0.48 / FRACCION_LADO_MENOR) * TAMANO_FIGURA;
 
 /**

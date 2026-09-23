@@ -15,7 +15,7 @@ import {
   RADIO_MASA,
   TAMANO_FIGURA,
 } from "./encuadre";
-import { azarSembrado, normalizarPuntos } from "./figuras";
+import { azarSembrado, distanciaConSigno, distanciaCuadrada, normalizarPuntos } from "./figuras";
 
 describe("ciclo", () => {
   it("dura 9.8 s: 3.4 reposo + 1.9 disgrega + 2.6 forma + 1.9 regresa", () => {
@@ -27,16 +27,16 @@ describe("ciclo", () => {
     expect(estadoEnCiclo(1.7)).toEqual({ liquido: 1, mezcla: 0 });
   });
 
-  it("a mitad de la disgregacion: la masa a medias y la mitad del viaje", () => {
+  it("a mitad de la transformacion: la mitad del camino entre masa y figura", () => {
     // b = 0.5; liquido = 1 - suavizar(0.55); suavizar(0.55) = 0.55^2 * (3 - 1.1)
     //   = 0.3025 * 1.9 = 0.57475  ->  liquido = 0.42525
     // mezcla = suavizar(0.5) = 0.25 * 2 = 0.5
-    const e = estadoEnCiclo(MOMENTOS.mitadDisgregacion);
+    const e = estadoEnCiclo(MOMENTOS.mitadTransformacion);
     expect(e.liquido).toBeCloseTo(0.42525, 5);
     expect(e.mezcla).toBeCloseTo(0.5, 5);
   });
 
-  it("con la figura formada: sin masa y todas las particulas en la figura", () => {
+  it("con la figura formada: toda la materia es figura", () => {
     expect(estadoEnCiclo(MOMENTOS.figuraFormada)).toEqual({ liquido: 0, mezcla: 1 });
   });
 
@@ -92,8 +92,8 @@ describe("encuadre: centrada y al 80 % del lado menor", () => {
   it("nada se recorta: el limite es 96 % del lado menor y la piel cabe dentro aun en perspectiva", () => {
     // RADIO_LIMITE = 0.48 / 0.8 * 3.0 = 1.8 -> diametro 3.6 -> 3.6 / 3.0 * 0.8 = 0.96 del lado menor
     expect(RADIO_LIMITE).toBeCloseTo(1.8, 10);
-    // piel maxima 1.36 + 0.30 = 1.66; su silueta vista a distancia d se agranda
-    // r * d / sqrt(d^2 - r^2). Escritorio (d = 6.9976): 1.66 * 6.9976 / 6.7979 = 1.7088 < 1.8
+    // piel maxima 1.36 + 0.34 = 1.70; su silueta vista a distancia d se agranda
+    // r * d / sqrt(d^2 - r^2). Escritorio (d = 6.9976): 1.70 * 6.9976 / 6.7879 = 1.7525 < 1.8
     const r = RADIO_MASA + ENVOLTURA_PIEL;
     for (const [w, h] of [[1440, 836], [768, 1024], [390, 780]] as const) {
       const d = distanciaCamara(w, h);
@@ -198,5 +198,36 @@ describe("figuras", () => {
     // centrada: la media de un rectangulo lleno cae en el centro
     expect(Math.abs(sx / 4000)).toBeLessThan(0.02);
     expect(Math.abs(sy / 4000)).toBeLessThan(0.03);
+  });
+});
+
+describe("campo de distancia de la figura", () => {
+  // Mascara de 5 x 5 con un solo pixel encendido en el centro (2, 2):
+  //   . . . . .
+  //   . . . . .
+  //   . . X . .
+  //   . . . . .
+  //   . . . . .
+  const lado = 5;
+  const mascara = new Uint8Array(lado * lado);
+  mascara[2 * lado + 2] = 1;
+
+  it("distancia al cuadrado exacta al pixel encendido", () => {
+    // (0,0): dx = 2, dy = 2 -> 4 + 4 = 8;  (2,0): dy = 2 -> 4;  (3,2): dx = 1 -> 1;  (4,3): 4 + 1 = 5
+    const d = distanciaCuadrada(mascara, lado, lado, 1);
+    expect(d[0 * lado + 0]).toBe(8);
+    expect(d[0 * lado + 2]).toBe(4);
+    expect(d[2 * lado + 3]).toBe(1);
+    expect(d[3 * lado + 4]).toBe(5);
+    expect(d[2 * lado + 2]).toBe(0);
+  });
+
+  it("con signo: negativa dentro, positiva fuera, con media celda de ajuste", () => {
+    // Dentro, (2,2): el pixel apagado mas cercano esta a 1 -> -(1 - 0.5) = -0.5
+    // Fuera, (0,2): sqrt(4) - 0.5 = 1.5;  (0,0): sqrt(8) - 0.5 = 2.3284
+    const d = distanciaConSigno(mascara, lado, lado);
+    expect(d[2 * lado + 2]).toBeCloseTo(-0.5, 6);
+    expect(d[2 * lado + 0]).toBeCloseTo(1.5, 6);
+    expect(d[0]).toBeCloseTo(2.3284, 4);
   });
 });

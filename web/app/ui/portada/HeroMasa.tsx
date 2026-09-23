@@ -1,8 +1,8 @@
 "use client";
 
 /**
- * La masa del hero de la portada: un liquido oscuro inestable que se
- * disgrega en particulas, forma una figura y vuelve a fundirse.
+ * La masa del hero de la portada: un liquido oscuro inestable que fluye,
+ * se vuelve una figura con su misma materia y regresa a masa.
  *
  * Este componente no importa three.js ni crea contextos WebGL: decide el
  * nivel de calidad y monta el motor cuando la pagina ya pinto (evento load

@@ -1,9 +1,9 @@
 /**
  * Niveles de calidad y la regla adaptativa.
  *
- *   alto        escritorio: liquido a resolucion reducida y escalado,
- *               mas pasos de raymarching, AO, bloom, mas particulas.
- *   medio       movil: menos pasos, menos octavas, menos particulas.
+ *   alto        escritorio: la materia (masa que se vuelve figura) a
+ *               resolucion reducida y escalada, mas pasos, AO y bloom.
+ *   medio       movil: menos pasos, menos octavas.
  *   bajo        lo minimo con liquido: sin AO ni bloom.
  *   particulas  el respaldo sin liquido (WebGL1, sin three.js).
  *   fija        una imagen quieta, sin WebGL.
@@ -29,9 +29,6 @@ export interface AjustesLiquido {
   escalaLiquido: number;
   /** Tope del devicePixelRatio del lienzo. */
   dprMaximo: number;
-  particulas: number;
-  /** Pasos de integracion del ruido de rizo en el vuelo. */
-  pasosRizo: number;
   bloom: boolean;
   /** Mediana de fps por debajo de la cual el nivel no se sostiene. */
   fpsMinimo: number;
@@ -39,38 +36,32 @@ export interface AjustesLiquido {
 
 export const AJUSTES: Record<NivelLiquido, AjustesLiquido> = {
   alto: {
-    pasos: 72,
+    pasos: 80,
     octavas: 3,
     deformacionCompleta: true,
     muestrasAo: 4,
     escalaLiquido: 0.75,
     dprMaximo: 2,
-    particulas: 14000,
-    pasosRizo: 2,
     bloom: true,
     fpsMinimo: 45,
   },
   medio: {
-    pasos: 44,
+    pasos: 52,
     octavas: 2,
     deformacionCompleta: false,
     muestrasAo: 2,
     escalaLiquido: 0.6,
     dprMaximo: 1.5,
-    particulas: 7000,
-    pasosRizo: 1,
     bloom: true,
     fpsMinimo: 38,
   },
   bajo: {
-    pasos: 30,
+    pasos: 36,
     octavas: 2,
     deformacionCompleta: false,
     muestrasAo: 0,
     escalaLiquido: 0.42,
     dprMaximo: 1,
-    particulas: 4000,
-    pasosRizo: 1,
     bloom: false,
     fpsMinimo: 28,
   },

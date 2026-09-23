@@ -17,17 +17,14 @@ import {
   FONDO_CSS,
   FRAGMENTO_ACABADO,
   FRAGMENTO_COMPOSICION,
-  FRAGMENTO_PARTICULAS,
   FRAGMENTO_RESPALDO,
   fragmentoLiquido,
   UNIFORMES_ACABADO,
   UNIFORMES_COMPOSICION,
   UNIFORMES_LIQUIDO,
-  UNIFORMES_PARTICULAS,
   UNIFORMES_RESPALDO,
   VERTICE_PANTALLA,
   VERTICE_RESPALDO,
-  verticeParticulas,
 } from "./glsl";
 
 const TIPOS = "(?:float|int|bool|void|[bi]?vec[234]|mat[234]|sampler2D|samplerCube)";
@@ -125,14 +122,11 @@ const liquidos = (Object.keys(AJUSTES) as Array<keyof typeof AJUSTES>).map((nive
   nombre: `liquido (${nivel})`,
   fuente: fragmentoLiquido(AJUSTES[nivel]),
 }));
-const particulas = [1, 2].map((pasos) => ({ nombre: `particulas (rizo ${pasos})`, fuente: verticeParticulas(pasos) }));
 
 const TODOS: Array<{ nombre: string; fuente: string; three: boolean }> = [
   ...liquidos.map((s) => ({ ...s, three: true })),
-  ...particulas.map((s) => ({ ...s, three: true })),
   { nombre: "vertice pantalla", fuente: VERTICE_PANTALLA, three: true },
   { nombre: "composicion", fuente: FRAGMENTO_COMPOSICION, three: true },
-  { nombre: "fragmento particulas", fuente: FRAGMENTO_PARTICULAS, three: true },
   { nombre: "acabado", fuente: FRAGMENTO_ACABADO, three: true },
   { nombre: "vertice respaldo", fuente: VERTICE_RESPALDO, three: false },
   { nombre: "fragmento respaldo", fuente: FRAGMENTO_RESPALDO, three: false },
@@ -160,7 +154,6 @@ describe("shaders de la portada: nombres", () => {
 describe("shaders de la portada: uniformes y varyings", () => {
   const casos: Array<[string, string, readonly string[]]> = [
     ...liquidos.map((s): [string, string, readonly string[]] => [s.nombre, s.fuente, UNIFORMES_LIQUIDO]),
-    ...particulas.map((s): [string, string, readonly string[]] => [s.nombre, s.fuente, UNIFORMES_PARTICULAS]),
     ["composicion", FRAGMENTO_COMPOSICION, UNIFORMES_COMPOSICION],
     ["acabado", FRAGMENTO_ACABADO, UNIFORMES_ACABADO],
     ["vertice respaldo", VERTICE_RESPALDO, UNIFORMES_RESPALDO],
@@ -172,7 +165,6 @@ describe("shaders de la portada: uniformes y varyings", () => {
   }
 
   const pares: Array<[string, string, string]> = [
-    ["particulas", verticeParticulas(2), FRAGMENTO_PARTICULAS],
     ["respaldo", VERTICE_RESPALDO, FRAGMENTO_RESPALDO],
     ["liquido", VERTICE_PANTALLA, fragmentoLiquido(AJUSTES.alto)],
     ["composicion", VERTICE_PANTALLA, FRAGMENTO_COMPOSICION],

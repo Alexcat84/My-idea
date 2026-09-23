@@ -1,14 +1,16 @@
 /**
  * Las cinco figuras del ciclo (foco, lente, brujula, escalera, casa),
- * dibujadas con los mismos trazos de las muestras aprobadas y muestreadas
- * en puntos para las particulas.
+ * dibujadas con los mismos trazos de las muestras aprobadas. Dos salidas:
+ *  - campoFigura: un campo de distancia con signo, para que la misma masa
+ *    liquida se transforme en la figura (motor three.js);
+ *  - muestrearFigura: puntos sobre los trazos, para el respaldo de particulas.
  *
  * Diferencia con las muestras: cada figura se centra por su caja y se
  * escala para que su lado mayor mida TAMANO_FIGURA, asi todas quedan
  * centradas exactas y al mismo 80 % del lado menor.
  */
 import { FIGURAS, type NombreFigura } from "./ciclo";
-import { TAMANO_FIGURA } from "./encuadre";
+import { RADIO_LIMITE, TAMANO_FIGURA } from "./encuadre";
 
 type Pincel = CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
 
@@ -90,19 +92,7 @@ export function normalizarPuntos(pixeles: ArrayLike<number>, n: number, azar: ()
   const total = pixeles.length / 2;
   const salida = new Float32Array(n * 3);
   if (total === 0) return salida;
-  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-  for (let i = 0; i < total; i++) {
-    const x = pixeles[i * 2];
-    const y = pixeles[i * 2 + 1];
-    if (x < minX) minX = x;
-    if (x > maxX) maxX = x;
-    if (y < minY) minY = y;
-    if (y > maxY) maxY = y;
-  }
-  // +1: cada pixel ocupa su celda completa
-  const cx = (minX + maxX + 1) / 2;
-  const cy = (minY + maxY + 1) / 2;
-  const escala = TAMANO_FIGURA / Math.max(maxX - minX + 1, maxY - minY + 1);
+  const { cx, cy, escala } = normalizacion(pixeles);
   // Reparto estratificado: se recorre una permutacion de los pixeles y se
   // repite solo si faltan, asi no hay grumos ni huecos por azar.
   const orden = new Uint32Array(total);
@@ -124,33 +114,215 @@ export function normalizarPuntos(pixeles: ArrayLike<number>, n: number, azar: ()
   return salida;
 }
 
-/** Dibuja la figura y devuelve `n` puntos de mundo sobre sus trazos. */
-export function muestrearFigura(nombre: NombreFigura, n: number, semilla: number): Float32Array {
+/**
+ * Centro de la caja de los pixeles encendidos y escala pixel -> mundo que
+ * deja el lado mayor en TAMANO_FIGURA: mundo = (pixel - centro) * escala.
+ */
+export function normalizacion(pixeles: ArrayLike<number>): { cx: number; cy: number; escala: number } {
+  const total = pixeles.length / 2;
+  let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+  for (let i = 0; i < total; i++) {
+    const x = pixeles[i * 2];
+    const y = pixeles[i * 2 + 1];
+    if (x < minX) minX = x;
+    if (x > maxX) maxX = x;
+    if (y < minY) minY = y;
+    if (y > maxY) maxY = y;
+  }
+  // +1: cada pixel ocupa su celda completa
+  return {
+    cx: (minX + maxX + 1) / 2,
+    cy: (minY + maxY + 1) / 2,
+    escala: TAMANO_FIGURA / Math.max(maxX - minX + 1, maxY - minY + 1),
+  };
+}
+
+/**
+ * Dibuja la figura en un lienzo de `lado` px (los trazos estan pensados
+ * para 512) y devuelve su mascara: 1 donde hay trazo.
+ */
+function rasterizar(nombre: NombreFigura, lado: number): Uint8Array {
   // En un worker no hay document: OffscreenCanvas cuando existe.
   let g: Pincel | null;
   if (typeof OffscreenCanvas !== "undefined") {
-    g = new OffscreenCanvas(LADO, LADO).getContext("2d", { willReadFrequently: true });
+    g = new OffscreenCanvas(lado, lado).getContext("2d", { willReadFrequently: true });
   } else {
     const lienzo = document.createElement("canvas");
-    lienzo.width = LADO;
-    lienzo.height = LADO;
+    lienzo.width = lado;
+    lienzo.height = lado;
     g = lienzo.getContext("2d", { willReadFrequently: true });
   }
-  if (!g) return new Float32Array(n * 3);
+  const mascara = new Uint8Array(lado * lado);
+  if (!g) return mascara;
+  g.scale(lado / LADO, lado / LADO);
   g.strokeStyle = "#fff";
   g.fillStyle = "#fff";
   g.lineCap = "round";
   g.lineJoin = "round";
   g.lineWidth = 16;
   TRAZOS[nombre](g);
-  const datos = g.getImageData(0, 0, LADO, LADO).data;
+  const datos = g.getImageData(0, 0, lado, lado).data;
+  for (let i = 0; i < lado * lado; i++) mascara[i] = datos[i * 4 + 3] > 128 ? 1 : 0;
+  return mascara;
+}
+
+function encendidosDe(mascara: Uint8Array, lado: number): number[] {
   const encendidos: number[] = [];
-  for (let y = 0; y < LADO; y++) {
-    for (let x = 0; x < LADO; x++) {
-      if (datos[(y * LADO + x) * 4 + 3] > 128) encendidos.push(x, y);
+  for (let y = 0; y < lado; y++) {
+    for (let x = 0; x < lado; x++) if (mascara[y * lado + x]) encendidos.push(x, y);
+  }
+  return encendidos;
+}
+
+/** Dibuja la figura y devuelve `n` puntos de mundo sobre sus trazos. */
+export function muestrearFigura(nombre: NombreFigura, n: number, semilla: number): Float32Array {
+  return normalizarPuntos(encendidosDe(rasterizar(nombre, LADO), LADO), n, azarSembrado(semilla));
+}
+
+/**
+ * Transformada de distancia euclidea exacta (Felzenszwalb y Huttenlocher),
+ * al cuadrado y en pixeles: para cada pixel, la distancia al pixel mas
+ * cercano donde `mascara` vale `objetivo`.
+ */
+export function distanciaCuadrada(mascara: Uint8Array, ancho: number, alto: number, objetivo: 0 | 1): Float64Array {
+  const INF = 1e20;
+  const d = new Float64Array(ancho * alto);
+  for (let i = 0; i < d.length; i++) d[i] = mascara[i] === objetivo ? 0 : INF;
+  const n = Math.max(ancho, alto);
+  const f = new Float64Array(n);
+  const salida = new Float64Array(n);
+  const v = new Int32Array(n);
+  const z = new Float64Array(n + 1);
+  const pasada = (largo: number) => {
+    let k = 0;
+    v[0] = 0;
+    z[0] = -INF;
+    z[1] = INF;
+    for (let q = 1; q < largo; q++) {
+      let s = (f[q] + q * q - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]);
+      while (s <= z[k]) {
+        k--;
+        s = (f[q] + q * q - (f[v[k]] + v[k] * v[k])) / (2 * q - 2 * v[k]);
+      }
+      k++;
+      v[k] = q;
+      z[k] = s;
+      z[k + 1] = INF;
+    }
+    k = 0;
+    for (let q = 0; q < largo; q++) {
+      while (z[k + 1] < q) k++;
+      salida[q] = (q - v[k]) * (q - v[k]) + f[v[k]];
+    }
+  };
+  for (let x = 0; x < ancho; x++) {
+    for (let y = 0; y < alto; y++) f[y] = d[y * ancho + x];
+    pasada(alto);
+    for (let y = 0; y < alto; y++) d[y * ancho + x] = salida[y];
+  }
+  for (let y = 0; y < alto; y++) {
+    for (let x = 0; x < ancho; x++) f[x] = d[y * ancho + x];
+    pasada(ancho);
+    for (let x = 0; x < ancho; x++) d[y * ancho + x] = salida[x];
+  }
+  return d;
+}
+
+/**
+ * Distancia con signo al borde del trazo, en pixeles: negativa dentro,
+ * positiva fuera, medida entre centros de pixel (media celda de ajuste).
+ */
+export function distanciaConSigno(mascara: Uint8Array, ancho: number, alto: number): Float32Array {
+  const aDentro = distanciaCuadrada(mascara, ancho, alto, 1);
+  const aFuera = distanciaCuadrada(mascara, ancho, alto, 0);
+  const d = new Float32Array(ancho * alto);
+  for (let i = 0; i < d.length; i++) {
+    d[i] = mascara[i] ? -(Math.sqrt(aFuera[i]) - 0.5) : Math.sqrt(aDentro[i]) - 0.5;
+  }
+  return d;
+}
+
+/** Lado del lienzo con que se calcula el campo de cada figura. */
+export const LADO_RASTER_CAMPO = 384;
+/** Lado (en texeles) del campo que se sube a la GPU. */
+export const LADO_CAMPO = 256;
+/** El campo cubre el cuadrado de mundo [-EXTENSION_CAMPO, EXTENSION_CAMPO]^2. */
+export const EXTENSION_CAMPO = RADIO_LIMITE;
+
+/**
+ * Campo de distancia con signo de la figura, en unidades de mundo, sobre
+ * una grilla LADO_CAMPO x LADO_CAMPO que cubre [-EXTENSION_CAMPO, +]^2.
+ * Fila 0 = y minima (como lee la textura en WebGL). Mismo centrado y
+ * escala que las particulas: la figura queda al 80 % del lado menor.
+ */
+export function campoFigura(nombre: NombreFigura): Float32Array {
+  const r = LADO_RASTER_CAMPO;
+  const mascara = rasterizar(nombre, r);
+  const campo = new Float32Array(LADO_CAMPO * LADO_CAMPO);
+  const encendidos = encendidosDe(mascara, r);
+  if (encendidos.length === 0) return campo.fill(EXTENSION_CAMPO);
+  const { cx, cy, escala } = normalizacion(encendidos);
+  const dpx = distanciaConSigno(mascara, r, r);
+  const muestra = (px: number, py: number) => {
+    // bilineal entre centros de pixel; fuera del lienzo se suma lo que falta
+    const x = Math.min(Math.max(px - 0.5, 0), r - 1);
+    const y = Math.min(Math.max(py - 0.5, 0), r - 1);
+    const x0 = Math.floor(x);
+    const y0 = Math.floor(y);
+    const x1 = Math.min(x0 + 1, r - 1);
+    const y1 = Math.min(y0 + 1, r - 1);
+    const fx = x - x0;
+    const fy = y - y0;
+    const a = dpx[y0 * r + x0] * (1 - fx) + dpx[y0 * r + x1] * fx;
+    const b = dpx[y1 * r + x0] * (1 - fx) + dpx[y1 * r + x1] * fx;
+    return a * (1 - fy) + b * fy + Math.hypot(px - 0.5 - x, py - 0.5 - y);
+  };
+  const paso = (2 * EXTENSION_CAMPO) / LADO_CAMPO;
+  for (let j = 0; j < LADO_CAMPO; j++) {
+    const yMundo = -EXTENSION_CAMPO + (j + 0.5) * paso;
+    for (let i = 0; i < LADO_CAMPO; i++) {
+      const xMundo = -EXTENSION_CAMPO + (i + 0.5) * paso;
+      campo[j * LADO_CAMPO + i] = muestra(xMundo / escala + cx, -yMundo / escala + cy) * escala;
     }
   }
-  return normalizarPuntos(encendidos, n, azarSembrado(semilla));
+  // La mascara binaria deja escalones de medio pixel en las curvas; dos
+  // pasadas de un filtro binomial [1 2 1] los alisan sin mover el trazo.
+  suavizar(campo, LADO_CAMPO);
+  suavizar(campo, LADO_CAMPO);
+  return campo;
+}
+
+/** Filtro binomial separable [1 2 1] / 4, con bordes replicados. */
+function suavizar(campo: Float32Array, lado: number): void {
+  const tmp = new Float32Array(campo.length);
+  for (let j = 0; j < lado; j++) {
+    for (let i = 0; i < lado; i++) {
+      const a = campo[j * lado + Math.max(i - 1, 0)];
+      const b = campo[j * lado + i];
+      const c = campo[j * lado + Math.min(i + 1, lado - 1)];
+      tmp[j * lado + i] = (a + 2 * b + c) / 4;
+    }
+  }
+  for (let j = 0; j < lado; j++) {
+    for (let i = 0; i < lado; i++) {
+      const a = tmp[Math.max(j - 1, 0) * lado + i];
+      const b = tmp[j * lado + i];
+      const c = tmp[Math.min(j + 1, lado - 1) * lado + i];
+      campo[j * lado + i] = (a + 2 * b + c) / 4;
+    }
+  }
+}
+
+/** Calcula los cinco campos cediendo el hilo entre uno y otro. */
+export async function calcularCampos(
+  alListo: (indice: number, campo: Float32Array) => void,
+  cancelado: () => boolean,
+): Promise<void> {
+  for (let i = 0; i < FIGURAS.length; i++) {
+    if (cancelado()) return;
+    alListo(i, campoFigura(FIGURAS[i]));
+    await new Promise<void>((resolver) => setTimeout(resolver, 0));
+  }
 }
 
 /**

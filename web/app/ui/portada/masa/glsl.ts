@@ -8,7 +8,8 @@
  * Los colores se escriben en espacio de pantalla (sin conversion de
  * salida): asi el negro del nucleo es el negro que se ve.
  */
-import { ENVOLTURA_PIEL, RADIO_LIMITE } from "./encuadre";
+import { ENVOLTURA_PIEL } from "./encuadre";
+import { EXTENSION_CAMPO } from "./figuras";
 
 /**
  * Ruido simplex 3D de webgl-noise (Ashima Arts / Stefan Gustavson,
@@ -66,11 +67,11 @@ float snoise(vec3 v) {
 const decimal = (x: number) => (Number.isInteger(x) ? x.toFixed(1) : String(x));
 
 /* ------------------------------------------------------------------ */
-/* 1. El liquido: raymarching de una piel con ruido sobre un quad.     */
+/* 1. La materia: raymarching de la masa y de la figura que forma.    */
 /* ------------------------------------------------------------------ */
 
 export const UNIFORMES_LIQUIDO = [
-  "uTiempo", "uLiquido", "uRadio", "uAspecto", "uTanMedio", "uCamZ", "uRotInv", "uPixelMundo",
+  "uTiempo", "uMorf", "uRadio", "uAspecto", "uTanMedio", "uCamZ", "uRotInv", "uPixelMundo", "uFigura",
 ] as const;
 
 export interface OpcionesLiquido {
@@ -88,6 +89,15 @@ void main() {
 }
 `;
 
+/** Ritmo de la materia: 1 era el de la muestra; la portada pide mas vida. */
+export const VELOCIDAD_MATERIA = 1.7;
+/** Radio de los tubos de liquido con que se dibuja cada trazo de la figura. */
+export const GROSOR_TUBO = 0.085;
+/** Medio ancho del trazo base (16 px de 512) en unidades de mundo. */
+const MEDIO_TRAZO = 0.06;
+/** Alcance maximo de la figura con sus tubos y el estiramiento (cota del raymarching). */
+const ALCANCE_FIGURA = 2.4;
+
 export function fragmentoLiquido(o: OpcionesLiquido): string {
   return /* glsl */ `
 #define PASOS ${o.pasos}
@@ -95,9 +105,15 @@ export function fragmentoLiquido(o: OpcionesLiquido): string {
 #define MUESTRAS_AO ${o.muestrasAo}
 #define DEFORMACION_COMPLETA ${o.deformacionCompleta ? 1 : 0}
 #define ENVOLTURA ${decimal(ENVOLTURA_PIEL)}
+#define VELOCIDAD ${decimal(VELOCIDAD_MATERIA)}
+#define EXTENSION ${decimal(EXTENSION_CAMPO)}
+#define TUBO ${decimal(GROSOR_TUBO)}
+#define MEDIO_TRAZO ${decimal(MEDIO_TRAZO)}
+#define ALCANCE_FIGURA ${decimal(ALCANCE_FIGURA)}
 
 uniform float uTiempo;
-uniform float uLiquido;
+// 0 = la masa, 1 = la figura formada con la misma materia.
+uniform float uMorf;
 uniform float uRadio;
 uniform float uAspecto;
 uniform float uTanMedio;
@@ -105,6 +121,8 @@ uniform float uCamZ;
 uniform mat3 uRotInv;
 // Tamano de un pixel del render target a distancia 1 (antialias del borde).
 uniform float uPixelMundo;
+// Distancia con signo al trazo de la figura (mundo), sobre [-EXTENSION, EXTENSION]^2.
+uniform sampler2D uFigura;
 varying vec2 vUv;
 ${RUIDO}
 
@@ -119,9 +137,9 @@ float fbm(vec3 q) {
   return suma;
 }
 
-// Deformacion de dominio: un campo lento y grande que tuerce las coordenadas.
+// Deformacion de dominio: un campo grande que tuerce las coordenadas.
 vec3 deformacion(vec3 q, float t) {
-  vec3 k = q * 0.45 + vec3(0.0, t * 0.04, t * 0.06);
+  vec3 k = q * 0.48 + vec3(0.0, t * 0.05, t * 0.075);
 #if DEFORMACION_COMPLETA
   return vec3(snoise(k), snoise(k + vec3(31.4, 7.7, -2.9)), snoise(k + vec3(-5.1, 19.3, 11.7)));
 #else
@@ -130,31 +148,52 @@ vec3 deformacion(vec3 q, float t) {
 #endif
 }
 
-// La piel en dos escalas: ondulacion lenta y grande + temblor fino y rapido.
+// La piel en dos escalas: ondulacion grande + temblor fino y rapido.
 float piel(vec3 q, float t) {
   vec3 w = deformacion(q, t);
-  float lenta = fbm(q * 0.58 + w * 0.5 + vec3(0.0, 0.0, t * 0.09));
-  float fina = snoise(q * 3.4 + w * 0.25 + vec3(t * 0.9, -t * 0.7, t * 0.5));
-  return lenta * 0.30 + fina * 0.012;
+  float lenta = fbm(q * 0.62 + w * 0.55 + vec3(0.0, 0.0, t * 0.1));
+  float fina = snoise(q * 3.8 + w * 0.3 + vec3(t * 1.1, -t * 0.85, t * 0.6));
+  return lenta * 0.36 + fina * 0.02;
 }
 
-float radioActual() { return uRadio * (0.12 + 0.88 * uLiquido); }
-// La gota chica tiembla en proporcion a su tamano.
-float agitacion() { return (0.35 + 0.65 * uLiquido) * (radioActual() / uRadio); }
+// Distancia en el plano de la figura al trazo (negativa dentro del trazo).
+float trazo(vec2 xy) {
+  vec2 coord = xy / (2.0 * EXTENSION) + 0.5;
+  vec2 fuera = max(abs(xy) - vec2(EXTENSION), 0.0);
+  // textureLod: dentro del bucle del raymarching no hay derivadas fiables.
+  return textureLod(uFigura, coord, 0.0).r + length(fuera);
+}
+
+// La figura como tubos de liquido que siguen el eje de cada trazo.
+float figura(vec3 q) {
+  return length(vec2(max(trazo(q.xy) + MEDIO_TRAZO, 0.0), q.z)) - TUBO;
+}
 
 float mapa(vec3 pw) {
   vec3 q = uRotInv * pw;
-  float rf = radioActual();
-  float amp = agitacion();
-  float base = length(q) - rf;
-  float margen = ENVOLTURA * amp;
-  // Lejos de la piel basta la esfera envolvente (cota inferior segura).
-  if (base > margen + 0.05) return base - margen;
-  return base - piel(q * (uRadio / rf), uTiempo) * amp;
+  float t = uTiempo * VELOCIDAD;
+  float dMasa = 0.0;
+  float dFigura = 0.0;
+  if (uMorf < 0.999) {
+    float base = length(q) - uRadio;
+    // Lejos de la piel basta la esfera envolvente (cota inferior segura).
+    dMasa = base > ENVOLTURA + 0.05 ? base - ENVOLTURA : base - piel(q, t);
+  }
+  if (uMorf > 0.001) {
+    // La figura tambien esta viva: una onda corre por los tubos.
+    dFigura = figura(q) - 0.009 * snoise(q * 2.6 + vec3(t * 1.1, -t * 0.8, t * 0.6));
+  }
+  float d = mix(dMasa, dFigura, uMorf);
+  // En la transformacion la materia se estira y se retuerce.
+  float estiro = 4.0 * uMorf * (1.0 - uMorf);
+  if (estiro > 0.01) d -= estiro * 0.14 * snoise(q * 1.6 + vec3(0.0, t * 0.55, t * 0.4));
+  return d;
 }
 
 vec3 normalPiel(vec3 q) {
-  const vec2 e = vec2(1.0, -1.0) * 0.0035;
+  // En la figura el campo viene de una textura: la normal se toma con un
+  // paso del orden de su celda para que no aparezcan estrias.
+  vec2 e = vec2(1.0, -1.0) * (0.0035 + 0.009 * uMorf);
   return normalize(
     e.xyy * mapa(q + e.xyy) + e.yyx * mapa(q + e.yyx) +
     e.yxy * mapa(q + e.yxy) + e.xxx * mapa(q + e.xxx));
@@ -191,13 +230,12 @@ vec3 entorno(vec3 d) {
 }
 
 void main() {
-  if (uLiquido < 0.004) { gl_FragColor = vec4(0.0); return; }
   vec2 ndc = vUv * 2.0 - 1.0;
   vec3 ro = vec3(0.0, 0.0, uCamZ);
   vec3 rd = normalize(vec3(ndc.x * uAspecto * uTanMedio, ndc.y * uTanMedio, -1.0));
 
-  float rf = radioActual();
-  float limite = rf + ENVOLTURA * agitacion() + 0.45 * (rf / uRadio);
+  float limiteMasa = uRadio + ENVOLTURA + 0.45;
+  float limite = uMorf > 0.001 ? max(limiteMasa, ALCANCE_FIGURA) : limiteMasa;
   float b = dot(ro, rd);
   float c = dot(ro, ro) - limite * limite;
   float h = b * b - c;
@@ -215,21 +253,26 @@ void main() {
     float d = mapa(pos);
     if (d < dMin) { dMin = d; tMin = t; }
     if (d < 0.0008 * t) { toca = true; break; }
-    t += d * 0.65;
+    t += d * 0.6;
     if (t > tFin) break;
   }
 
-  float cobertura = smoothstep(0.0, 0.25, uLiquido);
   if (!toca) {
-    // Aura: la masa ilumina levemente el aire que la rodea. Se mide desde la
-    // distancia del rayo al centro (suave, sin escalones) y se apaga antes
-    // del borde de la esfera envolvente.
-    float cerca = length(cross(ro, rd)) - rf;
-    float g = exp(-max(cerca, 0.0) * 4.2) * 0.30 * cobertura;
-    g *= 1.0 - smoothstep(limite - rf - 0.2, limite - rf, cerca);
+    // Aura: la materia ilumina levemente el aire que la rodea. Para la masa
+    // se mide desde la distancia del rayo al centro (suave, sin escalones);
+    // para la figura, desde lo mas cerca que el rayo paso de sus tubos.
+    float cerca = length(cross(ro, rd)) - uRadio;
+    float gMasa = exp(-max(cerca, 0.0) * 4.2) * 0.30;
+    gMasa *= 1.0 - smoothstep(limiteMasa - uRadio - 0.2, limiteMasa - uRadio, cerca);
+    // El aura de la figura se mide en su plano (analitico, sin escalones).
+    vec3 oq = uRotInv * ro;
+    vec3 dq = uRotInv * rd;
+    vec2 enPlano = (oq + dq * (-oq.z / min(dq.z, -1e-3))).xy;
+    float gFigura = exp(-max(trazo(enPlano) + MEDIO_TRAZO - TUBO, 0.0) * 8.0) * 0.34;
+    float g = mix(gMasa, gFigura, uMorf);
     // Antialias de la silueta: el rayo que roza la piel sin tocarla se
     // lleva una fraccion del borde luminoso, en vez de un escalon.
-    float roce = (1.0 - smoothstep(0.0, 2.5 * tMin * uPixelMundo, dMin)) * cobertura;
+    float roce = 1.0 - smoothstep(0.0, 2.5 * tMin * uPixelMundo, dMin);
     vec3 aura = vec3(0.42, 0.38, 0.72) * g;
     gl_FragColor = vec4(mix(aura, vec3(0.30, 0.28, 0.42), roce), max(g * 0.4, roce));
     return;
@@ -259,8 +302,8 @@ void main() {
   float contraluz = fr * fr * clamp(dot(n, l2) * 0.5 + 0.5, 0.0, 1.0);
 
   // Brillo interior que respira: tenue y de frente, sin aclarar el nucleo.
-  float respiro = 0.5 + 0.5 * sin(uTiempo * 0.85);
-  float venas = 0.5 + 0.5 * snoise(uRotInv * pos * 1.6 + vec3(0.0, uTiempo * 0.15, 0.0));
+  float respiro = 0.5 + 0.5 * sin(uTiempo * 0.85 * VELOCIDAD);
+  float venas = 0.5 + 0.5 * snoise(uRotInv * pos * 1.6 + vec3(0.0, uTiempo * 0.15 * VELOCIDAD, 0.0));
   vec3 interior = vec3(0.13, 0.08, 0.24) * pow(ndv, 3.0) * (0.25 + 0.75 * respiro) * venas * 0.16;
 
   vec3 col = vec3(0.010, 0.009, 0.016) * (0.25 + dif1 * 0.9);
@@ -271,7 +314,7 @@ void main() {
   // Borde luminoso: ceniza arriba y a la izquierda, violeta hacia la contraluz.
   float lado = smoothstep(0.35, 0.85, dot(n, l2) * 0.5 + 0.5);
   col += mix(vec3(0.60, 0.61, 0.70), vec3(0.56, 0.42, 0.98), lado) * pow(fr, 3.0) * 0.45 * ao;
-  gl_FragColor = vec4(col * cobertura, cobertura);
+  gl_FragColor = vec4(col, 1.0);
 }
 `;
 }
@@ -311,165 +354,7 @@ void main() {
 `;
 
 /* ------------------------------------------------------------------ */
-/* 3. Particulas: nacen en la piel, vuelan con rizo, forman la figura. */
-/* ------------------------------------------------------------------ */
-
-export const UNIFORMES_PARTICULAS = [
-  "uTiempo", "uTiempoPrevio", "uMezcla", "uMezclaPrevia", "uLiquido", "uLiquidoPrevio",
-  "uRadio", "uVis", "uTamPx", "uLienzo", "uCamara",
-] as const;
-
-export function verticeParticulas(pasosRizo: number): string {
-  return /* glsl */ `
-#define PASOS_RIZO ${pasosRizo}
-#define RADIO_LIMITE ${decimal(RADIO_LIMITE)}
-
-attribute vec3 aDir;
-attribute vec3 aDestino;
-attribute vec2 aAzar;
-uniform float uTiempo;
-uniform float uTiempoPrevio;
-uniform float uMezcla;
-uniform float uMezclaPrevia;
-uniform float uLiquido;
-uniform float uLiquidoPrevio;
-uniform float uRadio;
-uniform float uVis;
-uniform float uTamPx;
-uniform vec2 uLienzo;
-uniform vec3 uCamara;
-varying vec2 vLocal;
-varying float vLargo;
-varying float vRadioPx;
-varying float vLuz;
-varying float vAlfa;
-${RUIDO}
-
-vec3 potencial(vec3 q) {
-  return vec3(snoise(q), snoise(q + vec3(31.416, -47.853, 12.793)), snoise(q + vec3(-233.145, -113.408, -185.31)));
-}
-
-// Ruido de rizo: rotacional de un potencial, un flujo sin fuentes ni sumideros.
-vec3 rizo(vec3 q) {
-  const float e = 0.08;
-  vec3 p0 = potencial(q);
-  vec3 px = potencial(q + vec3(e, 0.0, 0.0));
-  vec3 py = potencial(q + vec3(0.0, e, 0.0));
-  vec3 pz = potencial(q + vec3(0.0, 0.0, e));
-  return vec3(
-    (py.z - p0.z) - (pz.y - p0.y),
-    (pz.x - p0.x) - (px.z - p0.z),
-    (px.y - p0.y) - (py.x - p0.x)) / e;
-}
-
-float avance(float mezcla) { return clamp(mezcla * 1.6 - aAzar.x * 0.6, 0.0, 1.0); }
-
-vec3 enLaPiel(float liquido, float t) {
-  float rf = uRadio * (0.12 + 0.88 * liquido);
-  float amp = (0.35 + 0.65 * liquido) * (rf / uRadio);
-  return aDir * (rf + snoise(aDir * 0.85 + vec3(0.0, 0.0, t * 0.11)) * 0.16 * amp);
-}
-
-vec3 lugar(float m, float liquido, float t) {
-  float e = m * m * (3.0 - 2.0 * m);
-  vec3 p = mix(enLaPiel(liquido, t), aDestino, e);
-  float vuelo = 4.0 * m * (1.0 - m);
-  if (vuelo > 0.001) {
-    // Integracion del rizo desenrollada (un bucle de una vuelta hace protestar al compilador D3D).
-    vec3 semilla = vec3(aAzar.y * 5.0, t * 0.12, -t * 0.05);
-    float paso = (0.16 / float(PASOS_RIZO)) * vuelo;
-    p += rizo(p * 0.55 + semilla) * paso;
-#if PASOS_RIZO >= 2
-    p += rizo(p * 0.55 + semilla) * paso;
-#endif
-  }
-  // Temblor minimo de la figura sostenida.
-  p += vec3(sin(t * 1.3 + aAzar.y * 40.0), cos(t * 1.1 + aAzar.x * 30.0), 0.0) * 0.004 * e;
-  return p * min(1.0, RADIO_LIMITE / max(length(p), 1e-4));
-}
-
-// 1 si el punto (mundo) queda detras de la masa vista desde la camara.
-float detrasDeLaMasa(vec3 mundo) {
-  if (uLiquido < 0.02) return 0.0;
-  vec3 rd = mundo - uCamara;
-  float dist = length(rd);
-  rd /= dist;
-  float ro = uRadio * (0.12 + 0.88 * uLiquido) * 0.97;
-  float b = dot(uCamara, rd);
-  float c = dot(uCamara, uCamara) - ro * ro;
-  float h = b * b - c;
-  if (h <= 0.0) return 0.0;
-  float entrada = -b - sqrt(h);
-  return smoothstep(0.0, 0.06, dist - entrada);
-}
-
-void main() {
-  float mAhora = avance(uMezcla);
-  float alfa = smoothstep(0.0, 0.10, mAhora) * uVis;
-  vLocal = vec2(0.0);
-  vLargo = 0.0;
-  vRadioPx = 1.0;
-  vLuz = 0.0;
-  vAlfa = 0.0;
-  if (alfa < 0.002) {
-    // Fuera del recorte: sin costo de fragmentos.
-    gl_Position = vec4(2.0, 2.0, 2.0, 1.0);
-    return;
-  }
-  float e = mAhora * mAhora * (3.0 - 2.0 * mAhora);
-  vec3 cabeza = lugar(mAhora, uLiquido, uTiempo);
-  vec3 cola = lugar(avance(uMezclaPrevia), uLiquidoPrevio, uTiempoPrevio);
-  vec4 mundoCabeza = modelMatrix * vec4(cabeza, 1.0);
-  vec4 clipCabeza = projectionMatrix * viewMatrix * mundoCabeza;
-  vec4 clipCola = projectionMatrix * viewMatrix * modelMatrix * vec4(cola, 1.0);
-
-  vec2 pxCabeza = clipCabeza.xy / clipCabeza.w * 0.5 * uLienzo;
-  vec2 pxCola = clipCola.xy / clipCola.w * 0.5 * uLienzo;
-  vec2 delta = pxCabeza - pxCola;
-  float largo = length(delta);
-  vec2 eje = largo > 0.001 ? delta / largo : vec2(1.0, 0.0);
-  vec2 perp = vec2(-eje.y, eje.x);
-  float radio = max(uTamPx * (0.55 + aAzar.x * 0.9) * (uCamara.z / clipCabeza.w), 0.75);
-  // Estelas cortas: nunca mas largas que unas pocas veces el grano.
-  largo = min(largo, radio * 5.0);
-
-  float a = mix(-radio, largo + radio, position.x);
-  vec2 px = pxCabeza - eje * largo + eje * a + perp * position.y * radio;
-  gl_Position = vec4(px / (0.5 * uLienzo) * clipCabeza.w, clipCabeza.z, clipCabeza.w);
-
-  vLocal = vec2(a, position.y * radio);
-  vLargo = largo;
-  vRadioPx = radio;
-  vLuz = mix(0.35, 0.86, e);
-  vAlfa = alfa * (1.0 - detrasDeLaMasa(mundoCabeza.xyz)) * mix(0.75, 0.8, e);
-}
-`;
-}
-
-export const FRAGMENTO_PARTICULAS = /* glsl */ `
-varying vec2 vLocal;
-varying float vLargo;
-varying float vRadioPx;
-varying float vLuz;
-varying float vAlfa;
-
-void main() {
-  if (vAlfa <= 0.0) discard;
-  // Cabeza: un grano redondo de borde nitido en el extremo delantero.
-  float cabeza = 1.0 - smoothstep(vRadioPx * 0.5, vRadioPx, length(vec2(vLocal.x - vLargo, vLocal.y)));
-  // Estela: la capsula hasta la cola, mas fina y apagandose hacia atras.
-  float dx = vLocal.x - clamp(vLocal.x, 0.0, vLargo);
-  float cuerpo = 1.0 - smoothstep(vRadioPx * 0.2, vRadioPx * 0.7, length(vec2(dx, vLocal.y)));
-  float estela = cuerpo * (0.06 + 0.5 * clamp(vLocal.x / max(vLargo, 1e-3), 0.0, 1.0));
-  float a = max(cabeza, estela);
-  if (a <= 0.0) discard;
-  vec3 col = mix(vec3(0.03, 0.03, 0.05), vec3(0.82, 0.84, 0.92), vLuz);
-  gl_FragColor = vec4(col, a * vAlfa);
-}
-`;
-
-/* ------------------------------------------------------------------ */
-/* 4. Acabado: vinieta leve y grano fino que no lavan el negro.        */
+/* 3. Acabado: vinieta leve y grano fino que no lavan el negro.        */
 /* ------------------------------------------------------------------ */
 
 export const UNIFORMES_ACABADO = ["tDiffuse", "uTiempo", "uLienzo", "uGrano", "uVineta"] as const;
@@ -503,7 +388,7 @@ void main() {
 `;
 
 /* ------------------------------------------------------------------ */
-/* 5. Respaldo: solo particulas, WebGL1 crudo (sin three.js).          */
+/* 4. Respaldo: solo particulas, WebGL1 crudo (sin three.js).          */
 /* ------------------------------------------------------------------ */
 
 export const UNIFORMES_RESPALDO = ["uProyeccion", "uModeloVista", "uTiempo", "uMezcla", "uTamPx"] as const;

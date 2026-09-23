@@ -2,11 +2,14 @@
  * El ciclo de la masa, en funcion pura del tiempo (segundos).
  *
  * Especificacion: la muestra hibrida aprobada por el fundador
- * (particula-hibrida-my-idea.html). Cuatro fases por ciclo:
- *   reposo    -> la masa liquida sola, viva, sin particulas;
- *   disgrega  -> la piel se deshace en particulas que viajan a la figura;
- *   forma     -> la figura sostenida, con bordes nitidos;
- *   regresa   -> las particulas vuelven y se funden en la superficie.
+ * (particula-hibrida-my-idea.html), con una decision posterior: la figura
+ * se forma con la misma materia, sin particulas. Cuatro fases por ciclo:
+ *   reposo    -> la masa liquida sola, viva;
+ *   disgrega  -> la masa fluye, se estira y se vuelve la figura;
+ *   forma     -> la figura sostenida, hecha del mismo liquido;
+ *   regresa   -> la figura se funde de vuelta en la masa.
+ * `mezcla` es cuanto de figura hay (0 masa, 1 figura). El respaldo de
+ * particulas (equipos debiles) usa el mismo ciclo con particulas.
  * Cada ciclo forma la figura siguiente: foco, lente, brujula, escalera, casa.
  *
  * Es puro y sin estado para que el mismo instante se pueda reproducir
@@ -26,9 +29,9 @@ export const FIGURAS = ["foco", "lente", "brujula", "escalera", "casa"] as const
 export type NombreFigura = (typeof FIGURAS)[number];
 
 export interface EstadoCiclo {
-  /** 0 = sin masa, 1 = masa completa. */
+  /** Respaldo de particulas: 0 = sin masa, 1 = masa completa. */
   liquido: number;
-  /** 0 = todas las particulas en la piel, 1 = todas en la figura. */
+  /** 0 = la masa, 1 = la figura formada. */
   mezcla: number;
 }
 
@@ -68,6 +71,6 @@ export function figuraEn(t: number): number {
 /** Instantes de referencia de un ciclo, para capturas y pruebas. */
 export const MOMENTOS = {
   reposo: FASES.reposo * 0.5,
-  mitadDisgregacion: FASES.reposo + FASES.disgrega * 0.5,
+  mitadTransformacion: FASES.reposo + FASES.disgrega * 0.5,
   figuraFormada: FASES.reposo + FASES.disgrega + FASES.forma * 0.5,
 } as const;
