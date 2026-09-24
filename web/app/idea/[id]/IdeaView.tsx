@@ -916,6 +916,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
       ? detalle.recorrido.filter((n) => n.modo !== "silencioso").map((n) => n.etiqueta)
       : nodos.filter((n) => !n.atenuado && !n.id.startsWith("etapa-")).map((n) => n.label);
 
+  // AUD-09 M12: el espacio a la vista. Es la llave de Manos a la Obra: cada
+  // espacio monta su propia instancia y su estado (pospuesto, recalcular,
+  // selector de modo) no se contagia al otro.
+  const espacioActivo = vistaMundo && hubDominio ? hubDominio : "core";
+
   const mundosParaObra = unlocks.map((dominio) => {
     const m = detalle.mundos?.find((x) => x.dominio === dominio);
     return {
@@ -1071,6 +1076,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               </button>
             )}
             <ManosALaObra
+              key={espacioActivo}
               projectId={projectId}
               planMd={planMd}
               planCreatedAt={detalle.plan?.created_at ?? itemsCore[0]?.created_at ?? new Date().toISOString()}
@@ -1138,7 +1144,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, false)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
               onRegenerarPlanMundo={(dominio, sid, esSeg) => void regenerarPlan(sid, dominio, esSeg)}
-              soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
+              soloDominio={espacioActivo}
               caraInicial={caraInicial}
               onCaraCambio={actualizarCara}
               proyectoCreatedAt={detalle.idea.created_at ?? null}
