@@ -33,5 +33,4 @@ profesional).
 
 ## 3. Más información
 
-Cómo tratamos tus datos está en la Política de privacidad. Para preguntas, escribe a [correo de
-contacto de privacidad: POR DEFINIR].
+Cómo tratamos tus datos está en la Política de privacidad. Para preguntas, escribe a privacidad@myideaproject.com.

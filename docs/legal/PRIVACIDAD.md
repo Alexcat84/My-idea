@@ -8,7 +8,7 @@
 # Política de privacidad de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Responsable:** [razón social registrada en Quebec, Canadá: POR DEFINIR] ("nosotros"), que opera la
+**Responsable:** [nombre legal del fundador], empresa individual registrada en Quebec, Canadá ("nosotros"), que opera la
 aplicación My Idea.
 
 ## 1. En pocas palabras
@@ -105,10 +105,15 @@ privada y acuerdos con cada proveedor**).
 Tienes derecho a:
 - **Acceder** a tus datos y saber cómo los usamos.
 - **Rectificarlos** si son inexactos o están incompletos.
-- **Borrarlos:** puedes borrar tu cuenta desde el centro de cuenta; con ella se borran tus ideas,
-  planes, tareas, bitácora, números, créditos y datos de seguridad. Algunos registros hoy
-  sobreviven al borrado y estamos corrigiéndolo (ver el inventario, hallazgos B1 a B4): este texto
-  no se publica hasta que ese arreglo esté en producción.
+- **Borrarlos:** puedes borrar tu cuenta desde el centro de cuenta. Al borrarla:
+  - se borran tu cuenta, tus ideas, tus planes, tus tareas y notas, tu bitácora, tus números, tus
+    créditos y reservas, y tus datos de seguridad;
+  - se borran también las ideas que escribiste antes de crear tu cuenta, si aún no habían pasado a
+    ella;
+  - tu correo sale de la lista de invitados de la beta;
+  - tus reembolsos y eventos de pago se **anonimizan**: quedan solo el importe y la fecha, sin
+    ningún vínculo contigo, porque podrían ser registros fiscales (si pueden borrarse del todo es
+    POR VERIFICAR con el profesional).
 - **Portabilidad:** recibir tus datos en un formato estructurado y de uso común. Hoy puedes
   descargar tus documentos (plan, Expediente, bitácora) en markdown; una exportación completa de
   tus datos en formato estructurado es POR VERIFICAR (función a construir).
@@ -138,8 +143,8 @@ salvedades:
 - Los límites de uso guardan tu IP o identificador un máximo de 48 horas.
 - Los registros técnicos del alojamiento y las copias de seguridad de la base se conservan según los
   plazos de esos proveedores (POR VERIFICAR).
-- Las ideas escritas con la identidad invisible, sin crear cuenta, se conservan sin plazo; una
-  política de limpieza es POR VERIFICAR.
+- Las ideas escritas sin crear cuenta (con la identidad invisible) y que nunca pasaron a una cuenta
+  **se borran solas a los 30 días sin actividad**.
 - Si la ley nos obliga a conservar registros de transacciones cuando haya pagos reales, los
   conservaremos anonimizados en la medida permitida (POR VERIFICAR).
 
@@ -152,8 +157,7 @@ hoy no existen por escrito**).
 
 ## 12. Responsable de la protección de los datos personales
 
-El responsable es [nombre del fundador], fundador de My Idea, en [correo de contacto de privacidad:
-POR DEFINIR]. Su título y sus datos de contacto se publican en la app.
+El responsable es [nombre del fundador], fundador de My Idea, en privacidad@myideaproject.com. Su título y sus datos de contacto se publican en la app.
 
 ## 13. Menores
 

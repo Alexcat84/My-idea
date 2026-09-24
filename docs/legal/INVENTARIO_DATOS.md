@@ -40,7 +40,8 @@ de `projects`.
   sin tareas programadas).
 - **Por tiempo:** Upstash hasta 48 h; códigos de 2FA por correo 10 min (los usados quedan); la
   cookie de regreso tras el login 10 min.
-- **Identidades invisibles y sus ideas no adoptadas:** para siempre; nada las borra.
+- **Identidades invisibles y sus ideas no adoptadas:** para siempre hasta el arreglo de
+  `borrado-cuenta`; con él, se borran a los 30 días sin actividad.
 - **Tras borrar la cuenta:** ver §4.
 - **Copias de seguridad de Supabase y retención de logs de Vercel:** POR VERIFICAR (dependen del
   plan contratado).
@@ -72,8 +73,10 @@ huella anti-abuso de la cortesía si hace falta, y llama a `auth.admin.deleteUse
 depende del `ON DELETE CASCADE`.** Se borra con la cuenta: ideas, sesiones, planes, tareas, bitácora,
 números, actas, créditos, reservas y los datos de doble factor.
 
-**Sobrevive al borrado (hallazgos, con prueba en rojo en
-`web/app/api/cuenta/eliminar/borradoCompleto.test.ts`; el arreglo va en su propia tanda):**
+**Sobrevivía al borrado (hallazgos B1 a B4). ARREGLADO en la rama `borrado-cuenta` (decisiones del
+fundador, 26 sep 2026), pendiente de su visto para ir a `main` y de aplicar la migración 044:**
+B3 y B4 se borran; B1 y B2 se anonimizan (queda importe y fecha); las ideas de invitado sin dueño
+se borran solas a los 30 días sin actividad (tarea programada diaria). Lo que se encontró:
 - **B1.** `credit_refund_log`: id de usuario, monto y motivo.
 - **B2.** `revenuecat_webhook_events`: el id de usuario del procesador (hoy sin filas).
 - **B3.** `beta_allowlist`: el correo en claro, con quién invitó y notas.

@@ -9,7 +9,7 @@
 # Términos de uso de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Quién presta el servicio:** [razón social registrada en Quebec, Canadá: POR DEFINIR]
+**Quién presta el servicio:** [nombre legal del fundador], empresa individual registrada en Quebec, Canadá
 ("nosotros").
 
 ## 1. Qué es My Idea
@@ -99,4 +99,4 @@ VERIFICAR con el profesional, según la Carta de la lengua francesa).
 
 ## 12. Contacto
 
-[correo de contacto: POR DEFINIR]
+privacidad@myideaproject.com
