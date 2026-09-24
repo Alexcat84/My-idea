@@ -669,7 +669,59 @@ for libro in LIBROS:
 
 ## 11. Resultados de la fase 2
 
-Pendiente: se escriben despues del sorteo, en un commit posterior.
+### 11.1 El sorteo de la tarea 3: orden y salida literal
+
+Ejecutado despues del commit del pre-registro de la fase 2 (`cfaba6d514cea5ff58bc31c6f8d3b3fd423004a8`, 2026-09-24 06:08:55 -0400), desde la raiz del clon con HEAD en ese commit. Se commitea antes de que ningun lector lea los nodos sorteados:
+
+```
+$ sed -n '/^# INICIO SORTEO FASE 2$/,/^# FIN SORTEO FASE 2$/p' docs/audits/MUESTREO_FIDELIDAD_2026-09.md | PYTHONIOENCODING=utf-8 python -
+python 3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]
+sha256 c36775b8f622c709b6b3ced92c659f74a8f93c9c84023139508e521f219112c6
+libro Chris Voss, Rompe la barrera del no | vivos restantes 17 | sorteados 4
+1	revela_tu_propio_plazo_limite_al_negociar	5
+2	etiqueta_lo_que_piensa_el_proveedor	5
+3	usa_preguntas_de_como_para_negociar_precio	5
+4	preparate_para_marcharte_del_trato	5
+libro Cradle to Cradle - Michael Braungart | vivos restantes 54 | sorteados 4
+5	critica_del_pib_como_metrica_de_progreso	6
+6	gestion_de_aguas_pluviales_con_techos_verdes	4
+7	monocultura_como_paradigma	3
+8	sistema_take_back	4
+libro Edwards et al., Managing Project Risks | vivos restantes 29 | sorteados 4
+9	tecnicas_para_sacar_riesgos_a_la_luz	4
+10	revisa_tus_riesgos_con_un_ritmo	5
+11	reduce_el_riesgo_a_lo_razonable	4
+12	cultura_que_habla_del_riesgo_sin_miedo	4
+libro Hubbard, The Failure of Risk Management | vivos restantes 9 | sorteados 4
+13	piensa_en_rangos_no_en_numeros_unicos	4
+14	la_matriz_de_colores_te_engana	4
+15	calibra_tu_propio_ojo	4
+16	cuidado_con_la_falsa_precision	4
+libro Juran's Quality Handbook_ The C - Joseph A. Defeo | vivos restantes 457 | sorteados 4
+17	desarrollo_expertos_capaces	4
+18	adaptaciones_sectoriales_iso	4
+19	diagrama_de_flujo_proceso_map	8
+20	smed_setup_reduction	5
+libro Requisitos de empaque de los couriers | vivos restantes 2 | sorteados 2
+21	elegir_caja_correcta	5
+22	empacar_liquidos_doble_barrera	5
+libro The Founder's Dilemmas - Wasserman, Noam | vivos restantes 115 | sorteados 4
+23	decision_de_vender_startup	15
+24	leverage_en_negociacion_con_vcs	4
+25	identificacion_brechas_funcionales	4
+26	quemar_las_naves_burning_the_boats	4
+libro The Startup Owner's Manual - Blank, Steve | vivos restantes 166 | sorteados 4
+27	earlyvangelists_ventas_tempranas	4
+28	posicionamiento_de_empresa	5
+29	tipos_de_riesgo_invencion_vs_mercado	4
+30	acquisicion_viral_engineering	7
+```
+
+Couriers tenia 2 vivos restantes: se toman los 2. Los otros siete libros aportan 4 nodos cada uno. Total de la tarea 3: 30 nodos y 148 pasos.
+
+### 11.2 Lectura
+
+Pendiente: la hacen varios agentes lectores en paralelo, con la lista de trabajo y la vara de la seccion 3. Este lector integra.
 
 ## 12. Acuerdo entre lectores (tarea 1)
 
