@@ -21,6 +21,7 @@ import {
   contarNarracionesHoy,
   historialVersionesNumeros,
   insertarVersionNumeros,
+  obtenerPlanCoreVigente,
   obtenerProyecto,
   obtenerVersionNumeros,
   registrarBitacora,
@@ -222,6 +223,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   if (await faltaSegundoFactor()) {
     return NextResponse.json(AVISO_2FA, { status: 403 });
+  }
+
+  // AUD-09 M24: Tus Números va INCLUIDO en el plan (PRECIOS.tus_numeros === 0:
+  // el plan es su cobro). Activar el tablero y narrar con la IA piden plan del
+  // núcleo, igual que /report. El recálculo determinista no: es gratis por ley.
+  if ((body.activar === true || body.narrar === true) && !(await obtenerPlanCoreVigente(supabase, projectId))) {
+    return NextResponse.json(
+      { error: "Tus Números viene incluido con tu plan. Arma tu plan primero y aquí te espero." },
+      { status: 409 }
+    );
   }
 
   const tipoOferta = (proyecto.tipo_oferta ?? null) as TipoOferta;
