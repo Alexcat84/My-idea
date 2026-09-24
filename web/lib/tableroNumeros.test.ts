@@ -113,3 +113,32 @@ describe("cicloDias: el ciclo de caja aparece y sale de faltantes al darlo", () 
     expect(t.faltantes).not.toContain("dias_pago_proveedores");
   });
 });
+
+// AUD-09 H12: una sola cifra con una sola fuente. La palanca de volumen
+// redondeaba las unidades hacia arriba (por encima de la capacidad) y calculaba
+// su propia ganancia; la tabla usaba el escenario de capacidad plena. En la
+// misma pantalla: "45 al mes, te quedan $6.450" contra "44 al mes, $6.300".
+import { armarTablero as armarParaH12 } from "./tableroNumeros";
+
+describe("la palanca de volumen y la fila de capacidad plena dicen lo mismo (AUD-09 H12)", () => {
+  it("unidades y ganancia salen del mismo escenario", () => {
+    // A MANO: costo 180 (materiales, sin horas), precio 350 -> margen 170.
+    //   unidades a capacidad plena: 11 por semana × 4 = 44 (nunca más que la capacidad)
+    //   margen del mes: 44 × 170 = 7.480; menos fijos 1.200 = 6.280
+    //   redondeo humano (paso de 50 desde 1.000): 6.300
+    // Antes la palanca daba 45 (44 redondeado a paso de 5) y 45 × 170 − 1.200 = 6.450.
+    const t = armarParaH12({
+      costo_materiales_unidad: { valor: 180, unidad: null, texto_original: "" },
+      horas_por_unidad: { valor: 0, unidad: null, texto_original: "" },
+      valor_hora: { valor: 0, unidad: null, texto_original: "" },
+      precio_tentativo: { valor: 350, unidad: null, texto_original: "" },
+      costos_fijos_mensuales: { valor: 1200, unidad: null, texto_original: "" },
+      capacidad_semanal: { valor: 11, unidad: null, texto_original: "" },
+    } as never);
+    const fila = t.escenariosFilas.find((f) => f.nombre === "A capacidad plena");
+    expect(fila?.sub).toBe("44 al mes");
+    expect(fila?.ganancia).toBe(6300);
+    expect(t.palancas.volumen.meta).toBe(44);
+    expect(t.palancas.volumen.gananciaResultante).toBe(6300);
+  });
+});

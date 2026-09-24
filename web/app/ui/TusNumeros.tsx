@@ -176,13 +176,38 @@ function Fila({ clave, pct, texto, clase }: { clave: string; pct: number | null;
 }
 
 // ── palancas ───────────────────────────────────────────────────────────────
-function textoPalanca(p: Palanca, u: string): string {
+/** Plural español de la unidad de venta (AUD-09 H12): vocal + s, z -> ces,
+ * consonante + es. En una unidad de varias palabras ("kit de velas") se
+ * pluraliza la primera. */
+export function pluralDe(unidad: string): string {
+  const [primera, ...resto] = unidad.trim().split(" ");
+  if (!primera) return unidad;
+  const plural = /[aeiouáéíóú]$/i.test(primera)
+    ? `${primera}s`
+    : /z$/i.test(primera)
+      ? `${primera.slice(0, -1)}ces`
+      : /s$/i.test(primera)
+        ? primera
+        : `${primera}es`;
+  return [plural, ...resto].join(" ");
+}
+
+export function textoPalanca(p: Palanca, u: string): string {
   const margen = p.margenResultante ? fmt(p.margenResultante.valor) : "—";
   const margenPos = p.margenResultante && medio(p.margenResultante.valor) !== null ? `+${margen}` : margen;
   if (p.clave === "volumen") {
     if (p.bloqueada) return p.razonBloqueo ?? "";
-    const g = p.gananciaResultante != null ? money(p.gananciaResultante) : "—";
-    return `A ${p.meta} ${u}s al mes, tras cubrir tus fijos, te quedan ${g} de ganancia. Es tu palanca más fuerte porque el margen ya es sano.`;
+    // AUD-09 H12: una cifra que no existe no se escribe ("A null", "— de
+    // ganancia"), y el plural es español ("unidades", no "unidads").
+    const cierre = "Es tu palanca más fuerte porque el margen ya es sano.";
+    if (p.meta == null) {
+      return `Cuando me digas cuántas puedes hacer por semana, aquí te digo cuántas al mes te dejan ganancia. ${cierre}`;
+    }
+    const unidades = `${p.meta} ${pluralDe(u)}`;
+    if (p.gananciaResultante == null) {
+      return `A ${unidades} al mes llegas a tu capacidad plena; dime tus gastos fijos del mes y te digo cuánto te queda. ${cierre}`;
+    }
+    return `A ${unidades} al mes, tras cubrir tus fijos, te quedan ${money(p.gananciaResultante)} de ganancia. ${cierre}`;
   }
   if (p.clave === "precio") {
     if (p.modo === "test")

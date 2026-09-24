@@ -20,7 +20,7 @@ import {
   type ValorNumerico,
   type Rango,
 } from "./calculadora";
-import { construirPalancas, redondearHumano, type EstadoNumeros, type Palancas } from "./palancas";
+import { construirPalancas, gananciaNetaDeFijos, type EstadoNumeros, type Palancas } from "./palancas";
 
 function esRango(v: ValorNumerico | null | undefined): v is Rango {
   return typeof v === "object" && v !== null && "min" in v && "max" in v;
@@ -73,7 +73,7 @@ export function construirEscenariosFilas(
   fijos: ValorNumerico | null
 ): FilaEscenario[] {
   const f = medio(fijos) ?? 0;
-  const neto = (contrib: number | null): number | null => (contrib === null ? null : redondearHumano(contrib - f));
+  const neto = (contrib: number | null): number | null => (contrib === null ? null : gananciaNetaDeFijos(contrib, f));
   const esc = reporte.escenarios as unknown as Record<string, unknown>;
   const filas: FilaEscenario[] = [];
   if ("pesimista" in esc) {
