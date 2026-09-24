@@ -14,6 +14,9 @@ import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "
 interface ResultadoVoz {
   soportado: boolean;
   escuchando: boolean;
+  /** AUD-09 B14c: por qué se apagó el dictado, en palabras de persona (null =
+   * nada que decir). Antes se apagaba en silencio. */
+  errorVoz: string | null;
   iniciar: () => void;
   detener: () => void;
 }
@@ -33,7 +36,7 @@ interface Recognition {
   interimResults: boolean;
   onresult: ((e: RecognitionEvent) => void) | null;
   onend: (() => void) | null;
-  onerror: (() => void) | null;
+  onerror: ((e: { error?: string }) => void) | null;
   start: () => void;
   stop: () => void;
 }
@@ -45,6 +48,16 @@ function obtenerConstructor(): (new () => Recognition) | null {
     webkitSpeechRecognition?: new () => Recognition;
   };
   return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
+}
+
+/** AUD-09 B14c: el motivo de un fallo del dictado, en palabras de persona.
+ * null cuando no hay nada que anunciar (no hablar, o detenerlo a propósito). */
+export function mensajeErrorVoz(codigo: string | undefined): string | null {
+  if (codigo === "no-speech" || codigo === "aborted") return null;
+  if (codigo === "not-allowed" || codigo === "service-not-allowed")
+    return "Tu navegador no me dio permiso para usar el micrófono. Puedes escribir, o darle permiso en la configuración del navegador.";
+  if (codigo === "audio-capture") return "No encontré un micrófono. Puedes escribir tu respuesta.";
+  return "El dictado se cortó. Puedes volver a intentarlo o escribir.";
 }
 
 /** `onTexto(nuevoFinal, provisional)`: `nuevoFinal` es SOLO el trozo recién
@@ -60,6 +73,7 @@ export function useSpeech(onTexto: (nuevoFinal: string, provisional: string) => 
     () => false
   );
   const [escuchando, setEscuchando] = useState(false);
+  const [errorVoz, setErrorVoz] = useState<string | null>(null);
   const recRef = useRef<Recognition | null>(null);
   const onTextoRef = useRef(onTexto);
   useEffect(() => {
@@ -75,6 +89,7 @@ export function useSpeech(onTexto: (nuevoFinal: string, provisional: string) => 
   const iniciar = useCallback(() => {
     const Ctor = obtenerConstructor();
     if (!Ctor || recRef.current) return;
+    setErrorVoz(null);
     const rec = new Ctor();
     rec.lang = "es-MX";
     rec.continuous = true;
@@ -98,9 +113,10 @@ export function useSpeech(onTexto: (nuevoFinal: string, provisional: string) => 
       recRef.current = null;
       setEscuchando(false);
     };
-    rec.onerror = () => {
+    rec.onerror = (e) => {
       recRef.current = null;
       setEscuchando(false);
+      setErrorVoz(mensajeErrorVoz(e?.error));
     };
     recRef.current = rec;
     setEscuchando(true);
@@ -109,5 +125,5 @@ export function useSpeech(onTexto: (nuevoFinal: string, provisional: string) => 
 
   useEffect(() => () => recRef.current?.stop(), []);
 
-  return { soportado, escuchando, iniciar, detener };
+  return { soportado, escuchando, errorVoz, iniciar, detener };
 }

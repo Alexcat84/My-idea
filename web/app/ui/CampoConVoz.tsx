@@ -34,7 +34,7 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
     valorRef.current = valor;
   });
 
-  const { soportado, escuchando, iniciar, detener } = useSpeech((nuevoFinal, prov) => {
+  const { soportado, escuchando, errorVoz, iniciar, detener } = useSpeech((nuevoFinal, prov) => {
     const r = fusionarDictado(valorRef.current, sufijoProvisional.current, nuevoFinal, prov);
     sufijoProvisional.current = r.sufijo;
     valorRef.current = r.valor;
@@ -87,6 +87,9 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
           </svg>
         </button>
       )}
+      {/* AUD-09 B14c: si el dictado se apaga por algo (permiso, sin micrófono),
+          se dice en vez de apagarse en silencio. */}
+      {errorVoz && <p className="mt-2 text-[12.5px] text-warn">{errorVoz}</p>}
     </div>
   );
 }
