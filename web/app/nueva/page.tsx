@@ -14,7 +14,7 @@ import { CampoConVoz } from "../ui/CampoConVoz";
 import { BotonHeroe } from "../ui/BotonHeroe";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { leerRechazo } from "@/lib/mensajeServidor";
-import { consumirSSE } from "@/lib/sseCliente";
+import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
 
 type Fase =
@@ -56,32 +56,38 @@ export default function NuevaIdea() {
         setEstado({ fase: "captura", error: (await leerRechazo(res)).mensaje });
         return;
       }
-      let projectId = "";
-      let huboError = false;
+      // AUD-09 H08: la espera termina SIEMPRE con salida. Lo que decide es si
+      // llegó el evento final (done o error), no si llegó "inicio".
+      let terminal = false;
       await consumirSSE(res, ({ evento, data }) => {
-        if (evento === "inicio") {
-          projectId = String((data as { project_id: string }).project_id);
-        } else if (evento === "seccion") {
+        if (evento === "seccion") {
           const s = data as { clave: string; label: string };
           setEtiqueta(s.label);
           setNodos((prev) => [...prev, { id: s.clave, label: s.label }]);
         } else if (evento === "done") {
+          terminal = true;
           const d = data as { project_id: string; data: OrganizadorData };
           window.history.replaceState(null, "", `/idea/${d.project_id}`);
           setEstado({ fase: "resultado", projectId: d.project_id, data: d.data });
         } else if (evento === "error") {
-          huboError = true;
+          terminal = true;
           setEstado({
             fase: "captura",
             error: String((data as { error?: string })?.error ?? "algo se atoró; intenta de nuevo"),
           });
         }
       });
-      if (!projectId && !huboError) {
-        setEstado({ fase: "captura", error: "la conexión se cortó a medio camino; intenta de nuevo" });
+      if (!terminal) {
+        setEstado({ fase: "captura", error: "la conexión se cortó a medio camino; tu texto sigue aquí, intenta de nuevo" });
       }
-    } catch {
-      setEstado({ fase: "captura", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+    } catch (e) {
+      setEstado({
+        fase: "captura",
+        error:
+          e instanceof EsperaAgotadaError
+            ? "esto está tardando más de lo normal; tu texto sigue aquí, intenta de nuevo"
+            : "no pudimos conectar; revisa tu internet e intenta de nuevo",
+      });
     }
   }
 

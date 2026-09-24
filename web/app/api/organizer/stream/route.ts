@@ -30,6 +30,7 @@ import {
 } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
+import { garantizarTerminal } from "@/lib/streamTerminal";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
@@ -101,8 +102,15 @@ export async function POST(request: Request) {
 
   const stream = new ReadableStream({
     async start(controller) {
+      // AUD-09 H08: ningún stream termina en silencio (la misma garantía que la
+      // ruta del plan). Se apunta lo emitido para que el finally sepa si ya
+      // salió un evento final.
+      const emitidos: string[] = [];
+      let terminalEmitido: string | null = null;
       function enviar(evento: string, data: unknown) {
         controller.enqueue(encoder.encode(`event: ${evento}\ndata: ${JSON.stringify(data)}\n\n`));
+        emitidos.push(evento);
+        if (evento === "done" || evento === "error") terminalEmitido = evento;
       }
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
@@ -216,6 +224,7 @@ export async function POST(request: Request) {
         });
       } finally {
         clearInterval(heartbeat);
+        garantizarTerminal({ terminalEmitido, emitidos, sessionId, projectId, enviar });
         controller.close();
       }
     },
