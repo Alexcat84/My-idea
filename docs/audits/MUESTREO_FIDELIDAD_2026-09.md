@@ -583,3 +583,94 @@ Numero de nodo segun el sorteo (6.1). Fuente y capitulo de cada nodo en la secci
 | 30 | `funcion_respond_plan_incidentes` | `IHAI\books\seguridad_digital\cybersecurity_sb_nist-cyber-framework.txt` (FTC) | "4. RESPOND" (L49 a L75) |
 
 El nombre del fichero 2 esta abreviado en la tabla; el completo es `Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt`.
+
+---
+
+# FASE 2 (decision del fundador, 25 sep 2026)
+
+Estado de esta seccion: **PRE-REGISTRO DE LA FASE 2**. Esta version se commitea con la semilla, el metodo y las definiciones de la fase 2 ANTES de sortear y sin resultados. El resultado de la fase 2 ira en un commit posterior que citara el hash de este.
+
+## 8. Politica (literal del fundador)
+
+> los CONTRARIOS se corrigen siempre; los INFERIDOS se toleran en el catalogo existente (la forja ya impide que nazcan nuevos) y no se reescriben en esta campaña.
+
+Este muestreo no corrige nada: solo lista los CONTRARIOS para que se corrijan en otra sesion.
+
+## 9. Encargo de la fase 2 y reparto
+
+1. **Segundo lector ciego** sobre los 22 pasos marcados en la fase 1 (21 INFERIDOS y el CONTRARIO). **No lo hace este lector**, que ya conoce los veredictos: lo hace otro agente que no ve este informe. Su acuerdo con la fase 1 se integra despues, en el hueco de la seccion 12.
+2. **Lectura completa (censo)** de todos los nodos vivos de Reason y de Assembling Tomorrow, paso a paso contra su libro, con la misma vara y las mismas citas que la fase 1.
+3. **Cuatro nodos mas** de cada uno de los otros ocho libros sobre el umbral (Voss, Cradle to Cradle, Juran, Blank, Edwards, Hubbard, couriers y Wasserman), con semilla nueva escrita y commiteada antes de sortear.
+4. **Salida principal:** la lista completa de CONTRARIOS (nodo, paso, cita del libro y que diria el paso fiel) y las tasas actualizadas por libro, con su intervalo.
+
+## 10. Definiciones y metodo de la fase 2 (fijados antes de sortear)
+
+- **Nodo vivo, mundo, paso, libro y criterios FIEL, INFERIDO y CONTRARIO:** los mismos de la fase 1 (secciones 1 y 3), sin cambios. El libro de un nodo es el PRIMER libro de su campo `fuente`.
+- **Fuentes:** las mismas 24 de la seccion 7, y ninguna otra. Para los nodos de couriers se leen ademas las guias originales, que el fundador autorizo en solo lectura en `C:\Users\AlexDesk\Documents\OCR\20260806\`: `dhl_express_packing_guide_en.txt`, `HowToPack_fxcom.txt`, `ISTA_3P_26-26_Overview.txt`, `Packaging_Guidelines.txt` y `packaging_guide_infographic.txt`. Esto vale tambien para el nodo de couriers de la fase 1, que se relee contra los originales.
+- **Tarea 2, censo:** todos los nodos vivos del tag cuyo primer libro sea `Managing the Risks of Organizat - Reason, J. T_` (90 vivos) o `Assembling Tomorrow: A Guide to Designing a Thriving Future` (64 vivos). No hay sorteo. Los 3 nodos de esos libros ya leidos en la fase 1 (`autonomia_dependencia_regulatoria`, `prevalencia_omisiones` y `diseno_etico_de_privacidad`) no se releen: se reusa su veredicto de la fase 1 y se dice.
+- **Tarea 3, sorteo:**
+  - Marco de cada libro: sus nodos vivos (primer libro del campo `fuente`), sin los 30 nodos de la fase 1.
+  - Tamano: 4 por libro. Si un libro tiene menos de 4 vivos restantes, se toman todos y se dice. Se sabe de antemano que couriers (`Requisitos de empaque de los couriers`) tiene 3 vivos, uno ya leido, y le quedan 2.
+  - Orden: los ocho libros en orden de cadena de Python; dentro de cada libro, los `node_id` ordenados; un unico `random.Random(SEED)` recorre los libros en ese orden con `rng.sample`.
+- **Blank:** antes de leer se mira la edicion del txt (portada, copyright y fecha) y se compara con las herramientas que nombran los nodos.
+- **Tasas actualizadas:** por libro, fase 1 mas fase 2 juntas. INFERIDO y CONTRARIO por paso y por nodo, con Wilson al 95 por ciento y el mismo script de la fase 1.
+  - Para Reason y Assembling Tomorrow, la fase 2 es un censo: su tasa es la del catalogo, y el intervalo solo expresa la incertidumbre de la lectura, no la de un muestreo.
+  - Para los otros ocho, la muestra por libro queda en 5 a 6 nodos (couriers: 3). Por eso sus intervalos siguen siendo anchos.
+- **Semilla de la fase 2: `20260925`.** Python 3.12.8.
+- **Orden exacta**, desde la raiz del clon, extrayendo el script de este fichero:
+
+```
+sed -n '/^# INICIO SORTEO FASE 2$/,/^# FIN SORTEO FASE 2$/p' docs/audits/MUESTREO_FIDELIDAD_2026-09.md | PYTHONIOENCODING=utf-8 python -
+```
+
+```python
+# INICIO SORTEO FASE 2
+import hashlib, json, random, sys
+SEED = 20260925
+POR_LIBRO = 4
+RUTA = "dataset/metadata/master_graph.json"
+LIBROS = sorted([
+    "Chris Voss, Rompe la barrera del no",
+    "Cradle to Cradle - Michael Braungart",
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+    "The Startup Owner's Manual - Blank, Steve",
+    "Edwards et al., Managing Project Risks",
+    "Hubbard, The Failure of Risk Management",
+    "Requisitos de empaque de los couriers",
+    "The Founder's Dilemmas - Wasserman, Noam",
+])
+FASE1 = {
+    "accion_correctiva_sistematica", "analisis_trafico_competitivo", "aplicar_regla_fija_de_colchon_de_relleno",
+    "autonomia_dependencia_regulatoria", "brokers_lead_referral_networks", "cinco_principios_guia_transformacion",
+    "clausula_escape_contrato_representante", "decision_conformidad_producto", "diseno_etico_de_privacidad",
+    "domina_lo_que_compras", "embudo_ventas_franquicia", "equipo_dedicado_continuo",
+    "escepticismo_sano_ante_el_riesgo", "estrategia_proactiva_ambiental", "extraer_priorizar_hipotesis",
+    "folleto_franquicia", "funcion_respond_plan_incidentes", "getting_started_system_information_integrity",
+    "identificacion_necesidad_sucesion_ceo", "mejorar_deal_despues_del_hecho", "muestra_puntos_en_comun_antes_de_negociar",
+    "participacion_trabajadores", "plan_de_desastre_y_recuperacion", "playing_with_fire_gap",
+    "prevalencia_omisiones", "pruebas_inadecuadas_prototipos", "saber_hasta_donde_mejorar_servicio",
+    "sistema_de_alarma_de_defectos", "tipos_sitio_web_exportacion", "volverse_nativo_del_lugar",
+}
+print("python", sys.version)
+print("sha256", hashlib.sha256(open(RUTA, "rb").read()).hexdigest())
+g = json.load(open(RUTA, encoding="utf-8"))["nodos"]
+vivos = {nid: n for nid, n in g.items() if not n.get("deprecado")}
+rng = random.Random(SEED)
+k = 0
+for libro in LIBROS:
+    ids = sorted(nid for nid, n in vivos.items() if n["fuente"].split(" | ")[0] == libro and nid not in FASE1)
+    toma = min(POR_LIBRO, len(ids))
+    print("libro", libro, "| vivos restantes", len(ids), "| sorteados", toma)
+    for nid in rng.sample(ids, toma):
+        k += 1
+        print(k, nid, len(vivos[nid]["pasos_accionables"]), sep="\t")
+# FIN SORTEO FASE 2
+```
+
+## 11. Resultados de la fase 2
+
+Pendiente: se escriben despues del sorteo, en un commit posterior.
+
+## 12. Acuerdo entre lectores (tarea 1)
+
+Pendiente: lo integra la sesion cuando el segundo lector ciego entregue su tabla.
