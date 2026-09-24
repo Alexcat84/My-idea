@@ -296,3 +296,27 @@ describe("el ritual se calcula desde HOY cuando el plan es de antes", () => {
     expect(fechas["a"]).toBe("2026-08-14");
   });
 });
+
+// AUD-09 M07 (tanda 5, conteos): el ritual daba fecha también a las tareas hechas
+// y a las retiradas, y les descontaba horas de capacidad: empujaban a las
+// pendientes y quedaban como "Adelantadas". BANCO §5: una retirada jamás cuenta
+// como pendiente.
+describe("el ritual solo fecha lo pendiente", () => {
+  it("una hecha y una retirada no reciben fecha ni gastan capacidad", () => {
+    // A MANO (5 h por semana, M = 3 h): sin la hecha delante, la M pendiente es
+    // la primera del reparto: acumulado 3 -> ceil(3/5) - 1 = 0 -> semana 1 ->
+    // vie 14-ago. Con la hecha contando, habría caído en la semana 2 (21-ago).
+    const { fechas } = calcularFechasRitual(
+      tramo([
+        item({ id: "hecha", etapa: 1, banda: "M", estado: "hecho" }),
+        item({ id: "retirada", etapa: 1, banda: "M", estado: "no_aplica" }),
+        item({ id: "pendiente", etapa: 1, banda: "M" }),
+      ]),
+      { hoy: ANCLA, diaPreferido: null, capacidad: "5-10", empaquetable: true }
+    );
+    expect(fechas["hecha"]).toBeUndefined();
+    expect(fechas["retirada"]).toBeUndefined();
+    expect(fechas["pendiente"]).toBe("2026-08-14");
+  });
+});
+

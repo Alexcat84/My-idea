@@ -82,6 +82,20 @@ describe("POST /api/project/[id]/mover-fecha (Fase 4.7)", () => {
     expect(estadoFalso.bitacora.at(-1)).toMatchObject({ tipo: "fecha_movida", payload: { cascada: 2, delta_dias: 7 } });
   });
 
+  // AUD-09 M06 (tanda 5, conteos): la cascada filtraba por dominio y no por plan:
+  // arrastraba tareas de planes ya reemplazados por un seguimiento ("Hay 5 que
+  // siguen" desde Manos contra "Hay 3" desde el calendario).
+  it("CON cascada: una tarea de un plan REEMPLAZADO no se arrastra", async () => {
+    estadoFalso.checklistItems.push({
+      id: "viejo", project_id: "p1", plan_id: "pl-anterior", dominio: "core", etapa: 3, estado: "pendiente",
+      fecha_base: D("2026-04-02"), fecha_base_origen: "sugerida", fecha_base_original: null,
+    });
+    const res = await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: true }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(fb("viejo")).toBe(D("2026-04-02"));
+    expect((await res.json()).cascada).toBe(2); // it3 e it4, del mismo plan
+  });
+
   it("congela la fecha ORIGINAL en la primera movida y pasa el origen a 'ajustada'", async () => {
     await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: true }), PARAMS);
     const it2 = estadoFalso.checklistItems.find((i) => i.id === "it2")!;

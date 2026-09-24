@@ -809,7 +809,10 @@ export function calcularFechasRitual(
   const hoy = opts.hoy ?? new Date().toISOString();
   const anclaDe = (planCreatedAt: string) =>
     new Date(planCreatedAt).getTime() >= new Date(hoy).getTime() ? planCreatedAt : hoy;
-  for (const g of tramos) {
+  for (const tramo of tramos) {
+    // AUD-09 M07: solo lo pendiente recibe fecha y gasta capacidad. Una hecha o
+    // una retirada no empuja a las demás ni queda como "Adelantada" (BANCO §5).
+    const g = { ...tramo, items: tramo.items.filter((i) => i.estado !== "hecho" && i.estado !== "no_aplica") };
     if (opts.empaquetable) {
       const r = empaquetarFechas({
         ancla: anclaDe(g.planCreatedAt),

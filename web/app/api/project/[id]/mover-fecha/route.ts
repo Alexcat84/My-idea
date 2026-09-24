@@ -22,6 +22,7 @@ import { createClient } from "@/lib/supabase/server";
 export const runtime = "nodejs";
 
 interface ItemFecha {
+  plan_id: string | null;
   id: string;
   dominio: string;
   etapa: number;
@@ -79,7 +80,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // Todo el checklist del proyecto: el objetivo y sus posibles posteriores.
   const { data: filas } = await supabase
     .from("checklist_items")
-    .select("id, dominio, etapa, estado, fecha_base, fecha_base_origen, fecha_base_original")
+    .select("id, plan_id, dominio, etapa, estado, fecha_base, fecha_base_origen, fecha_base_original")
     .eq("project_id", projectId);
   const items = (filas ?? []) as ItemFecha[];
   const objetivo = items.find((i) => i.id === datos.item_id);
@@ -103,6 +104,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         (i) =>
           i.id !== objetivo.id &&
           i.dominio === objetivo.dominio &&
+          // AUD-09 M06: solo del MISMO plan; las de un plan reemplazado no se arrastran.
+          i.plan_id === objetivo.plan_id &&
           i.estado !== "hecho" &&
           i.estado !== "no_aplica" &&
           i.etapa >= objetivo.etapa &&
