@@ -18,8 +18,9 @@ Verificado en código, no en promesas:
   ciclo de caja) con recálculos gratis de por vida por idea.
 - Los documentos: plan, cada seguimiento, expediente completo y bitácora
   (lessons learned) en .md y PDF, gratis por ser tuyos.
-- Los mundos: 7 dominios complementarios (riesgos, calidad, HSEQ, seguridad
-  digital…) con preview diagnóstico GRATIS y plan de dominio pagado.
+- Los mundos: 9 dominios complementarios (riesgos, calidad, HSEQ, seguridad
+  digital, compras, entrega…) con preview diagnóstico GRATIS y plan de dominio
+  pagado.
 - La honestidad como feature: sin cifras inventadas, reembolso ledger-atado,
   precios en una sola fuente.
 

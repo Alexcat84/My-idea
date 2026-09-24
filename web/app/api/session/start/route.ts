@@ -73,7 +73,7 @@ export async function POST(request: Request) {
   }
 
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
-  // plan_completo (5). El descuento ocurre A LA ENTREGA del plan (ruta del
+  // PRECIOS.plan_completo. El descuento ocurre A LA ENTREGA del plan (ruta del
   // plan, idempotente). Rechazo limpio antes del esfuerzo del usuario.
   const saldo = await verificarSaldo(user.id, PRECIOS.plan_completo);
   if (!saldo.alcanza) {

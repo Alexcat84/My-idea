@@ -430,8 +430,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   /** Fase 4.5: la COMPRA. Genera el plan del mundo DESDE la sesión del preview
-   * (sin re-entrevistar) y refresca los mundos al terminar. El cobro (3
-   * créditos) vive en la entrega, dentro de la ruta del plan (ancla ETAPA 2). */
+   * (sin re-entrevistar) y refresca los mundos al terminar. El cobro
+   * (PRECIOS.mundo_activar) vive en la entrega, dentro de la ruta del plan. */
   async function comprarPlanMundo(dominio: string, sid: string) {
     setVistaManos(false);
     setVistaMundo(false);

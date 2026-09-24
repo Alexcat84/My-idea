@@ -1,7 +1,7 @@
 // Fase 4.2 §1 — POST /api/project/[id]/follow con `dominio`: los MUROS del
 // follow de mundo. Todos devuelven antes de tocar el modelo, así que se prueban
-// sin mockearlo: si alguno cayera, la ruta gastaría un arranque (y, cuando la
-// ETAPA 2 despierte, 2 créditos) en algo que no debía pasar.
+// sin mockearlo: si alguno cayera, la ruta gastaría un arranque en algo que no
+// debía pasar.
 //
 // La composición en sí (qué ítems entran, qué dice el bloque) se prueba en las
 // funciones puras — itemsDelUltimoPlanDe y construirBloqueRealidadMundo — y de

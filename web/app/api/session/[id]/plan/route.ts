@@ -76,7 +76,7 @@ const INTERVALO_HEARTBEAT_MS = 15_000;
 
 // Reintento del redactor (hermano del fix del organizador). El plan se genera
 // en el momento de MAYOR inversion emocional del usuario -- acaba de terminar su
-// entrevista -- y pronto sera un momento PAGADO (5 creditos): un hipo transitorio
+// entrevista -- y es un momento PAGADO (PRECIOS.plan_completo): un hipo transitorio
 // de la API no puede costarle su plan. El SDK reintenta la conexion inicial pero
 // NO un fallo a mitad de stream: eso lo cubre esta red.
 const BACKOFFS_PLAN_MS = [0, 1000, 3000];
@@ -196,8 +196,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   }
 
   // ETAPA 2 — VERIFICAR antes de abrir el stream (la unidad facturable de
-  // esta entrega): core inicial 5, core seguimiento 2, mundo inicial 3 (el
-  // preview fue gratis: lo que se compra es EL PLAN), mundo seguimiento 2.
+  // esta entrega) al precio de su concepto en precios.ts (conceptoDelPlan: plan
+  // del nucleo, seguimiento, plan de mundo, seguimiento de mundo; el preview del
+  // mundo fue gratis: lo que se compra es EL PLAN).
   // 402 limpio antes de gastar un token. El descuento va a la ENTREGA.
   const dominioCobro = ((sesion as { dominio?: string }).dominio ?? "core") as string;
   const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento);

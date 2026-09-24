@@ -144,9 +144,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   // ── ANCLA para la ETAPA 2 del frente de cuentas (rama cuentas-y-creditos)
-  // Aqui, y NO antes, va la VERIFICACION de saldo del follow: 2 creditos, TANTO
-  // core como mundo. La fuente de verdad es precios.ts (seguimiento: 2,
-  // mundo_seguimiento: 2) + FLUJO_TRACKING §5 ("2 core / 2 mundo"). Este es el
+  // Aqui, y NO antes, va la VERIFICACION de saldo del follow, TANTO core como
+  // mundo, al precio de precios.ts (seguimiento y mundo_seguimiento; la unica
+  // fuente, FLUJO_TRACKING §5 la refleja). Este es el
   // punto correcto porque, en el caso mundo, el mundo ya se valido (existe, esta
   // activado y esta abierto): verificar antes cobraria un 403 o un 404. El
   // patron es el del plan (session/[id]/plan:309): verificar saldo al inicio y
@@ -154,12 +154,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   //
   // Correccion 2026-07-17: un comentario anterior aqui decia "el follow core no
   // cobra creditos: es el bucle del viaje principal". Eso divergia de precios.ts
-  // (seguimiento: 2) y nadie lo autorizo; el seguimiento core cuesta 2, igual
-  // que el de mundo.
+  // y nadie lo autorizo; el seguimiento core cobra su precio, igual que el de
+  // mundo.
   //
 
-  // ETAPA 2 — VERIFICAR al inicio (no cobrar): el seguimiento cuesta 2 (core
-  // o mundo, precios.ts). El descuento ocurre a la entrega del plan del ciclo.
+  // ETAPA 2 — VERIFICAR al inicio (no cobrar): el seguimiento cobra su precio
+  // de precios.ts (core o mundo). El descuento ocurre a la entrega del plan del ciclo.
   const montoFollow = PRECIOS[dominio === "core" ? "seguimiento" : "mundo_seguimiento"];
   const saldoFollow = await verificarSaldo(user.id, montoFollow);
   if (!saldoFollow.alcanza) {
@@ -343,10 +343,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     modo: "conversado" as const,
   };
 
-  // ── ANCLA para la ETAPA 2 del frente de cuentas: el DESCUENTO de los 2
-  // creditos del follow de mundo va aqui (solo si dominio !== "core"). Este es
-  // el punto de entrega: la sesion existe, la puerta esta elegida y el primer
-  // turno esta listo para el usuario. Ni un credito antes: un follow que muere
-  // en el camino no se cobra.
+  // El follow NO cobra aqui (corregido en la AUD-09: este comentario decia que el
+  // descuento iba en este punto). El cobro del seguimiento, core o mundo, ocurre
+  // a la ENTREGA de su plan, en session/[id]/plan: un follow que muere en el
+  // camino no se cobra.
   return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta]);
 }

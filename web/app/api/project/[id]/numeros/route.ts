@@ -228,8 +228,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const unidad = proyecto.unidad_venta ?? null;
 
   // ETAPA 2 — la compuerta: sin activacion no hay tablero. Activar cuesta
-  // tus_numeros (2), UNA vez por idea; despues, recalculos y correcciones
-  // son gratis por ley.
+  // PRECIOS.tus_numeros (hoy incluido en el plan: 0), UNA vez por idea; despues,
+  // recalculos y correcciones son gratis por ley.
   const yaActivado = proyecto.tus_numeros_activado_at != null;
   if (!yaActivado && body.activar !== true) {
     return NextResponse.json(
@@ -246,7 +246,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     numeros = fundidas;
   }
 
-  // 2) Activacion (ETAPA 2, VIVO): verificar >=2 al activar; consumir 2 a la
+  // 2) Activacion (ETAPA 2, VIVO): verificar PRECIOS.tus_numeros al activar y
+  //    consumirlo a la
   //    entrega de ESTE primer tablero (la respuesta de este request), UNA vez
   //    por idea. Idempotente doble: activarTusNumeros (WHERE IS NULL atomico)
   //    + la clave `numeros:{projectId}` en el ledger. La carrera rara

@@ -35,7 +35,9 @@ export default function PreviewCierre() {
           titulo="Calidad y Confianza no es para esta idea, todavía."
           cuerpo="Activé y exploré este mundo con lo que hay hoy, y no encontré un subproyecto que te sume sin inventarte trabajo. Antes que darte un checklist de relleno, prefiero parar aquí. Este mundo te sigue esperando: puedes volver a entrar cuando tu proyecto crezca."
           porque="Calidad y Confianza brilla cuando ya tienes clientes que vuelven y quieres que vuelvan más; tu idea todavía está buscando al primero que no sea un conocido."
-          creditosDevueltos={3}
+          // AUD-09: el preview de un mundo es gratis y no hay reembolso que
+          // afirmar (BANCO §6.1: un claim de dinero solo con respaldo del ledger).
+          creditosDevueltos={null}
           hayPlan={true}
           onVolverAManos={noop}
           onVolverAIdea={noop}

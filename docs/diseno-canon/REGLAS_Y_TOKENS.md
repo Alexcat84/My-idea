@@ -26,38 +26,51 @@ inline para una idea; escribir ELIMINAR para la cuenta). El 402 sigue en azul
 informativo. Mono (`ui-monospace`) queda reservado a material de seguridad y
 confirmación literal: códigos de rescate, el input de rescate y ELIMINAR.
 
-## 2. Los 5 nombres canónicos de etapa
+## 2. Los 6 hitos canónicos
 
 1. La Chispa
 2. Claridad
 3. La Exploración
 4. Tu Plan
 5. Manos a la Obra
+6. Realizado (la celebración; el verde de terminado solo vive aquí)
 
 ## 3. Créditos: la ley comercial (decidida 2026-07-19)
 
 **Un crédito es un dólar, siempre.** Sin descuentos por volumen: los packs se
 dimensionan por lo que compras con ellos, no por matemática de rebaja. La
-compra con dinero aún no está activa (beta con cortesía): precio a la vista,
-sin botón de compra.
+compra con dinero aún no está activa (beta sin cortesía, con siembra manual
+del fundador): precio a la vista, sin botón de compra.
 
-| Pack | Precio | En palabras de persona |
-|---|---|---|
-| 5 créditos | $4.99 | tu plan completo |
-| 15 créditos | $14.99 | el viaje completo de una idea (destacado: "el más elegido") |
-| 30 créditos | $29.99 | dos ideas trabajadas |
+| Pack | Créditos | Precio | En palabras de persona |
+|---|---|---|---|
+| Recarga | 5 | $4.99 | un seguimiento o un mundo suelto |
+| Básico | 10 | $9.99 | tu plan completo, con tus números incluidos |
+| Premium | 15 | $14.99 | tu plan y tu primer seguimiento (destacado) |
+| Profesional | 30 | $29.99 | el viaje entero de una idea |
 
-Los precios por concepto siguen vivos en `web/lib/precios.ts` (el canon los
-refleja, jamás los define): Claridad gratis, La Exploración 5, plan de un mundo
-3 (su preview gratis), seguimientos 2 y 2, Tus Números 2 (una vez por idea),
-registrar avance gratis. Cortesía de la beta: 20 créditos una sola vez.
+Los precios por concepto viven en `web/lib/precios.ts` (el canon los refleja,
+jamás los define): Claridad gratis, La Exploración (tu plan) 10 con Tus Números
+incluido, plan de un mundo 5 (su preview y su diagnóstico gratis), seguimientos
+5 y 5, registrar avance gratis. La beta no tiene cortesía: el fundador siembra
+créditos a mano.
+
+> **Nota de adopción (AUD-09, 25 sep 2026):** esta sección decía packs de 5, 15
+> y 30, La Exploración 5, mundo 3, seguimientos 2, Tus Números 2 y una cortesía
+> de 20: cifras de antes del Catálogo congruente. Se corrige a favor de
+> `precios.ts`, como pide `AGENTS.md`. **Errata para Design:** los mockups 03
+> (La Exploración a 5), 05, 07, 12, 14, 16, 17, 18, 20 y 23 todavía muestran
+> cifras viejas (seguimientos a 2, mundo a 3, Tus Números a 2, cortesía de 20,
+> reembolsos de 3; en el 23 revisar cuáles son saldos de ejemplo y cuáles
+> precios). Su próxima entrega debe venir alineada de origen con `precios.ts`.
 
 ## 4. Identidad y seguridad (nuevo en lote 4)
 
 - La moneda del lenguaje es "verificación en dos pasos". "2FA", "TOTP" y
   "OTP" no existen en pantalla.
-- Dos puertas al login: código por correo y Google (glifo oficial multicolor,
-  borde hairline, fondo superficie 1). La lista de invitados es una sola.
+- Dos puertas al login: correo con contraseña y Google (glifo oficial
+  multicolor, borde hairline, fondo superficie 1). La lista de invitados es una
+  sola.
 - Métodos del segundo paso: app de autenticación o código por correo. El
   rescate es un código mono de 12 caracteres que abre la cuenta UNA vez; los
   8 se muestran una sola vez, con "Ya los guardé".
@@ -66,8 +79,9 @@ registrar avance gratis. Cortesía de la beta: 20 créditos una sola vez.
 - Los botones dormidos existen: el CTA despierta cuando el código está
   completo o cuando se escribió ELIMINAR. Dormido se dice con opacidad y tono,
   nunca desapareciendo el botón.
-- El centro de créditos SIGUE siendo /potenciadores: en /cuenta el saldo solo
-  se asoma con su puerta ("Ver mi centro de créditos").
+- El centro de créditos vive en /creditos (y los potenciadores en
+  /potenciadores, cada uno en su carril): en /cuenta el saldo solo se asoma con
+  su puerta ("Ver mi centro de créditos").
 
 ## 5. Voz (obligatoria en toda salida al usuario)
 

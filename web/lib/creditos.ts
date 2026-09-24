@@ -11,7 +11,9 @@
  *   de persona), nunca a mitad.
  * - El usuario JAMÁS pierde créditos por un fallo del sistema
  *   (reembolsar_creditos + credit_refund_log).
- * - La cortesía (20) se otorga UNA vez por cuenta (beta_courtesy_log).
+ * - La cortesía de beta está DORMIDA (Catálogo congruente, ANÁLISIS §4): el
+ *   fundador siembra a mano; la maquinaria (una vez por cuenta,
+ *   beta_courtesy_log) queda sin llamador.
  * - Carrera rara (verificó al inicio, otra pestaña gastó antes de la
  *   entrega): entregar y registrar, nunca cobrar de más ni castigar.
  */
@@ -89,7 +91,8 @@ export async function reembolsar(userId: string, monto: number, motivo: string):
   return data as number;
 }
 
-/** La cortesía de beta: 20 créditos, UNA vez por cuenta (beta_courtesy_log). */
+/** La cortesía de beta, DORMIDA y sin llamador (CORTESIA_BETA, UNA vez por
+ * cuenta, beta_courtesy_log). */
 export async function otorgarCortesia(userId: string): Promise<number> {
   const admin = createAdminClient();
   const { data, error } = await admin.rpc("otorgar_cortesia", {
