@@ -16,8 +16,11 @@ mundo 11:
 
 1. **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
    índice semántico guarda el vector del texto viejo; Gate 0 no lo ve rojo
-   porque el vector existe, pero ya no describe el texto nuevo. La lista de
-   nodos corregidos sale de los ficheros de `docs/fidelidad/tandas/`.
+   porque el vector existe, pero ya no describe el texto nuevo. **Lista exacta
+   (24 sep 2026): `docs/fidelidad/credencial/nodos_a_reembeber.txt`**, con su
+   razón en `docs/fidelidad/credencial/LISTAS.md`. Solo entran los nodos con
+   una corrección en título, resumen o condiciones, que es lo que se embebe;
+   una corrección de paso no cambia el vector.
 2. **Al sincronizar `puente-forja` con `main`, regenerar los ficheros derivados
    del grafo** (`master_graph`, las etiquetas de cara reaplicadas, la copia web
    de `sync_assets_web.py`), en vez de fusionarlos a mano: el ciclo es
@@ -26,6 +29,12 @@ mundo 11:
 3. **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
    viejo de esos nodos; su regeneración parcial (`build_question_cache.py
    --patch`) también gasta credencial y va en la misma sesión que el punto 1.
+   Las preguntas nacidas de un resumen corregido por CONTRARIO o por cifra,
+   plazo o norma **ya se retiraron** de la caché (decisión del fundador del 27
+   sep, commit de `fidelidad-cache-1`; registro en
+   `docs/fidelidad/PREGUNTAS_RETIRADAS.json`). **Lista exacta a regenerar:
+   `docs/fidelidad/credencial/preguntas_a_regenerar.txt`**, para
+   `--patch-file`.
 
 ## 0b. La cirugía de costuras se ordena por PARES LIBERADOS (12 ago 2026)
 
