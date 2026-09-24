@@ -34,6 +34,20 @@ if ! python engine/run_all_tests.py > /tmp/_suite_motor.log 2>&1; then
   exit 1
 fi
 
+# LOS TIPOS TAMBIEN (AUD-09, decision del fundador 25 sep 2026): el commit de
+# M24 entro con errores de tsc en su prueba porque este guardian solo corria las
+# suites, y vitest no revisa tipos. Si el commit toca web/, `tsc --noEmit` sobre
+# web/ va ANTES de las suites (falla en segundos, no en minutos).
+if git diff --cached --name-only | grep -q '^web/'; then
+  echo "  [guardian] tipos (tsc)..."
+  if ! (cd web && npx tsc --noEmit > /tmp/_tsc_web.log 2>&1); then
+    echo ""
+    echo "  COMMIT ABORTADO: web/ tiene errores de TIPOS (tsc --noEmit)."
+    head -25 /tmp/_tsc_web.log
+    exit 1
+  fi
+fi
+
 echo "  [guardian] web..."
 if ! (cd web && npx vitest run > /tmp/_suite_web.log 2>&1); then
   echo ""
