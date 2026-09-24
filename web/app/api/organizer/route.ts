@@ -102,7 +102,8 @@ export async function POST(request: Request) {
       PRESUPUESTO_SESION_USD_DEFAULT
     );
     return NextResponse.json(
-      { error: `fallo el organizador con IA: ${e instanceof Error ? e.message : String(e)}`, project_id: projectId },
+      // AUD-09 B07a: el detalle del error va al log (arriba), nunca al cliente.
+      { error: "No pude organizar tu idea en este momento. Intenta de nuevo en un rato.", project_id: projectId },
       { status: 502 }
     );
   }

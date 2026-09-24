@@ -244,6 +244,8 @@ describe("POST /api/session/[id]/plan", () => {
 
     expect(texto).toContain("event: error");
     expect(texto).not.toContain("event: done");
+    // AUD-09 B07a: el evento de error no lleva el mensaje interno al cliente.
+    expect(texto).not.toContain("overload persistente");
     // La sesion sigue viva: el recorrido esta persistido y reintentar re-lanza
     // SOLO la redaccion, sin repetirle la entrevista al usuario.
     expect(estadoFalso.sessions["s1"].closed_at).toBeFalsy();

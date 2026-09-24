@@ -577,7 +577,9 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         // escapaba del catch y el finally cerraba EN SILENCIO. Ese era el
         // camino del cierre mudo de la corrida I.
         try {
-          enviar("error", { error: e instanceof Error ? e.message : String(e) });
+          // AUD-09 B07a: el detalle va al log del servidor, no al cliente.
+          console.error("[plan] la entrega fallo:", e);
+          enviar("error", { error: "No pude terminar de escribir tu plan. Lo que contaste está guardado; intenta de nuevo." });
         } catch (errEmit) {
           console.error("[plan] no se pudo emitir el error al cliente:", errEmit);
         }

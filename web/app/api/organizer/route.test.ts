@@ -198,4 +198,16 @@ describe("POST /api/organizer", () => {
     expect(sesion.closed_at).toBeTruthy();
     expect(estadoFalso.plans).toHaveLength(0);
   });
+
+  // AUD-09 B07a (tanda 7A, seguridad): el 502 devolvía el mensaje interno del
+  // error ("fallo el organizador con IA: <e.message>"). El detalle va al log;
+  // al cliente, palabras de persona.
+  it("el 502 no filtra el mensaje interno del error", async () => {
+    messagesCreateFalso.mockRejectedValueOnce(new Error("fallo de red simulado: clave sk-xxx"));
+    const res = await POST(requestFalso({ texto: "otra idea más" }));
+    expect(res.status).toBe(502);
+    const cuerpo = await res.json();
+    expect(cuerpo.error).not.toContain("fallo de red simulado");
+    expect(cuerpo.error).not.toContain("sk-");
+  });
 });
