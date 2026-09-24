@@ -17417,3 +17417,50 @@ redactor (prohibir cifras derivadas fuera del material) o en el material (dar al
 cifras derivadas legitimas, como el excedente sobre el equilibrio, para que no tenga que
 inventarlas), y que el vuelo siga exigiendo cero huerfanos en ese reporte. **Condicion de
 cierre:** tres corridas seguidas del vuelo con la verificacion 10 en verde tras el remedio.
+
+## Ficha de lectura futura: `callejones-del-grafo` (AUD-09 H13, decisión del fundador 25 sep 2026)
+
+**De dónde sale.** La AUD-09 (`docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`, M55 y
+H13) midió los nodos vivos sin ningún sucesor ofrecible dentro de su dominio más el núcleo.
+Medido otra vez el 25 sep 2026 sobre `web/lib/assets/master_graph.json`: **233 callejones**,
+**37 en ideación o validación**. Por dominio: núcleo 69, quality 57, environmental 30,
+franquicias 26, health_safety 21, entrega 12, exportacion 8, compras 7, seguridad_digital 3.
+
+**Lo que ya se resolvió, y dónde.** Que la entrevista siempre tenga salida es deber del MOTOR,
+no del grafo: un nodo sin sucesor puede ser un final legítimo del contenido. Desde la tanda 4
+de la AUD-09, cuando una entrevista de MUNDO llega a un callejón, `avanzarTurno`
+(`web/lib/engine/recorrido.ts`) elige otra puerta del mismo mundo con `reelegirPuertaDeMundo`,
+la misma lógica de cuando el intérprete decide salir, sin repetir lo ya visitado. La prueba
+de `recorrido.test.ts` recorre los 164 callejones de los mundos y exige salida en todos. En el
+NÚCLEO (69), un callejón sigue llevando a la oferta del plan, donde "Seguimos explorando" busca
+nodos afines por semántica.
+
+**Lo que esta ficha NO autoriza.** El dataset no se tocó para esto y no se toca por esta
+ficha. Si alguno de estos nodos merece una arista real, se escribe **por lectura**, en otra
+campaña, afirmando una continuidad de contenido y no para tapar un hueco del motor.
+
+**Los 37 tempranos, para esa lectura:**
+- núcleo, ideación: `comprender_alineacion_etica_ia`, `critica_del_plan_con_ia`,
+  `ideacion_con_ia_en_la_sesion`, `modelos_negocio_mas_alla_del_lucro`, `patron_inside_out`,
+  `patron_outside_in`, `prompting_alta_variacion`, `ser_buen_jig`.
+- núcleo, validación: `deteccion_efecto_hawthorne`, `diseno_de_comportamiento_sostenible`,
+  `inteligencia_de_anuncios_de_la_competencia`, `puntos_brillantes_antes_del_pivote`.
+- entrega, validación: `medir_satisfaccion_real_del_cliente`,
+  `reconocer_mercancia_peligrosa_disfrazada`.
+- environmental, ideación: `dar_forma_politica_climatica`,
+  `desmaterializacion_producto_servicio`, `disruptores_endocrinos_y_salud_industrial`,
+  `diversidad_activa`, `identificar_eco_riesgos_oportunidades`.
+- environmental, validación: `certificacion_cradle_to_cradle`, `certificaciones_ecoetiquetas`,
+  `realizar_analisis_ciclo_vida`.
+- franquicias: `decision_marca_comun_branding` (ideación); `contribucion_por_unidad_desventaja`,
+  `mejora_valoracion_empresa` (validación).
+- health_safety, validación: `sbrefa_cumplimiento`, `ventana_oportunidad_accidente`.
+- quality: `investigacion_necesidades_consumidor` (ideación);
+  `conformidad_especificacion_aptitud_uso`, `indice_cpk`,
+  `limitaciones_analisis_costo_beneficio`, `mapa_satisfaccion_importancia`,
+  `medidas_productividad_no_mejoran`, `muestreo_con_seguimiento_no_respondientes`,
+  `premio_shingo`, `pruebas_inadecuadas_prototipos`, `sistema_puntuacion_baldrige`
+  (validación).
+
+**Condición de cierre:** cada uno leído y con su veredicto escrito (final legítimo, o arista
+por lectura con su fuente), en una campaña propia.

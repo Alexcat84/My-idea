@@ -454,6 +454,45 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     // (?? [] defiende estados persistidos antes de la Fase 3.3).
     const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
     const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, estado.dominiosDesbloqueados);
+    // AUD-09 H13 (decisión del fundador, 25 sep 2026): que la entrevista de un
+    // MUNDO siempre tenga salida es deber del motor, no del grafo. Un nodo sin
+    // sucesores puede ser un final legítimo del contenido, así que el dataset no
+    // se toca: el motor elige otra puerta del mismo mundo con la misma lógica
+    // que usa cuando el intérprete decide salir, sin repetir lo ya visitado. Solo
+    // si el mundo ya no tiene nada por recorrer, la entrevista pasa al plan.
+    if (nivel1Ids.length === 0 && estado.dominioSesion !== "core" && estado.ruta.length < MAX_DEPTH) {
+      const reeleccion = reelegirPuertaDeMundo({
+        dominio: estado.dominioSesion,
+        graph,
+        estadoVivo: estado.estadoVivoPrevio,
+        perfilSesion: estado.perfilSesion,
+        cubiertos: visitados,
+        descartados: new Set(estado.puertasDescartadas),
+      });
+      if (reeleccion) {
+        const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache);
+        estado = {
+          ...estado,
+          ruta: [...estado.ruta, reeleccion.puertaId],
+          modos: [...estado.modos, "conversado"],
+          preguntaPendiente: pregunta,
+          ultimasPreguntas: [...estado.ultimasPreguntas, pregunta].slice(-3),
+          fallbackEvents: [
+            ...estado.fallbackEvents,
+            {
+              tipo: "puerta_reelegida",
+              dominio: estado.dominioSesion,
+              puerta_descartada: actualId,
+              puerta_nueva: reeleccion.puertaId,
+              motivo: "el nodo no tiene sucesores en este mundo",
+              es_semilla: reeleccion.esSemilla,
+              candidatas_restantes: reeleccion.candidatas,
+            },
+          ],
+        };
+        return { tipo: "pregunta", estado, pregunta, acumulado, nodosNuevos: nodosNuevosDesdeInicio() };
+      }
+    }
     if (nivel1Ids.length === 0 || estado.ruta.length >= MAX_DEPTH) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
       return {

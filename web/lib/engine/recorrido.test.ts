@@ -286,3 +286,70 @@ function clienteConLlamadas(respuestas: unknown[]) {
   });
   return { cliente: { messages: { create } }, llamadas };
 }
+
+// AUD-09 H13 (decisión del fundador, 25 sep 2026): que la entrevista de un
+// mundo siempre tenga salida es deber del MOTOR, no del grafo. Un nodo sin
+// sucesores puede ser un final legítimo del contenido; la entrevista no. Cuando
+// llega a uno, el motor elige otra puerta del mismo mundo con la misma lógica
+// que usa cuando el intérprete decide salir, sin repetir lo ya visitado.
+import { esOfrecible, sucesoresNivel as sucesoresH13 } from "./graph";
+
+function estadoEnMundo(nid: string, dominio: string) {
+  return {
+    ...estadoInicial({
+      actualId: nid,
+      perfilSesion: "vende por internet y quiere ordenar su operación",
+      textoOriginal: "mi idea",
+      dominioSesion: dominio,
+      dominiosDesbloqueados: ["core", dominio],
+    }),
+    preguntaPendiente: "¿Cómo va eso hoy?",
+  };
+}
+
+describe("avanzarTurno: un callejón de un mundo no termina la entrevista (AUD-09 H13)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("la puerta del checklist de cláusulas ya no muere tras una pregunta", async () => {
+    const nid = "ten_un_checklist_de_clausulas_de_contrato";
+    const r = await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado: estadoEnMundo(nid, "compras"),
+      respuestaUsuario: "firmo sin revisar mucho",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-h13",
+    });
+    expect(r.tipo).toBe("pregunta");
+    const nueva = r.estado.ruta[r.estado.ruta.length - 1];
+    expect(nueva).not.toBe(nid);
+    expect(graph[nueva].dominio).toBe("compras");
+    expect(r.estado.fallbackEvents.some((e) => e.tipo === "puerta_reelegida")).toBe(true);
+  });
+
+  it("NINGÚN nodo sin sucesor de los mundos deja la entrevista sin salida", async () => {
+    const callejones = Object.entries(graph)
+      .filter(([nid, n]) => n.dominio && n.dominio !== "core" && esOfrecible(nid, graph, [n.dominio]))
+      .filter(([nid, n]) => sucesoresH13(nid, graph, new Set([nid]), undefined, ["core", n.dominio as string]).length === 0)
+      .map(([nid, n]) => ({ nid, dominio: n.dominio as string }));
+    expect(callejones.length).toBeGreaterThan(50);
+    const sinSalida: string[] = [];
+    for (const c of callejones) {
+      const r = await avanzarTurno({
+        client: {} as never,
+        graph,
+        families,
+        preguntasCache,
+        estado: estadoEnMundo(c.nid, c.dominio),
+        respuestaUsuario: "sigo",
+        acumulado: usoVacio(),
+        dbSessionId: "sess-h13",
+      });
+      const nueva = r.estado.ruta[r.estado.ruta.length - 1];
+      if (r.tipo !== "pregunta" || nueva === c.nid || graph[nueva]?.dominio !== c.dominio) sinSalida.push(`${c.dominio}:${c.nid}`);
+    }
+    expect(sinSalida).toEqual([]);
+  }, 60_000);
+});
