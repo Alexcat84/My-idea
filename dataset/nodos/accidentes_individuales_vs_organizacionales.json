@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona es tanto el agente como la víctima, con causas y consecuencias localizadas (por ejemplo resbalones o caídas) y efectos limitados; y los organizacionales, un fenómeno moderno, raro pero catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que afecta a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
   "pasos_accionables": [
-    "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.",
+    "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
     "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
     "Evitar centrarte únicamente en el error del operador cuando el sistema es tecnológicamente complejo.",
     "Mapear todos los actores del sistema, como operador, fabricante y regulador, que pudieron contribuir al evento.",
@@ -36,6 +36,25 @@
       "node_id": "diferenciacion_accidente_individual_organizacional",
       "titulo": "Diferenciación entre Accidente Individual y Accidente Organizacional",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t10-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.",
+      "texto_nuevo": "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
+      "cita": {
+        "libro": "Managing the Risks of Organizational Accidents - Reason, James",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L323-L323",
+        "frase": "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor, con el texto del arbitro. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. El núcleo del paso, distinguir los eventos como individuales u organizacionales, tiene respaldo en L323 (\"useful to treat them as distinct kinds of event\") y en L194/L250, donde el tipo de accidente cambia hasta dónde debe llegar la investigación. Pero el paso añade dos cosas que el libro no da: una acción concreta sobre los eventos pasados de la organización y, sobre todo, una regla de orden universal (\"antes de iniciar cualquier investigación\"). El libro no fija ese orden en ninguna parte. Además dice que la línea entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener origen organizacional (L323), así que la pertenencia a un tipo depende muchas veces de lo que la investigación descubre (causas múltiples en distintos niveles, L31). Tampoco llega a CONTRARIO, porque ninguna cita prohíbe clasificar antes de investigar. Es un añadido práctico de My Idea. Busqueda en todo el libro: Busqué con Grep en todo el libro \"individual accident\", \"classif\", \"categori\" y leí los pasajes relevantes. L29-L31: definición de los dos tipos (causas múltiples en distintos niveles frente a agente y víctima a la vez). L194 y L250: si fueran accidentes individuales, encontrar los actos inseguros cerraría la investigación; centrarse en ellos no permitiría hallar las causas corregibles de un accidente organizacional. L302 y L310: resumen del capítulo. L323: la frontera entre ambos tipos no siempre es nítida, los accidentes individuales suelen tener origen organizacional, pero es útil tratarlos como tipos de evento distintos. L5578-L5594 y L5641: los cuatro tipos de riesgo agrupados en individuales y organizacionales, y la advertencia de no ver todos los problemas como problemas de la persona. Ningún pasaje manda clasificar los eventos históricos de la organización ni fija que esa clasificación vaya antes de cualquier investigación.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada accidentes_individuales_vs_organizacionales"
     }
   ]
 }
