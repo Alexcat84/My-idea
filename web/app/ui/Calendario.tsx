@@ -293,6 +293,7 @@ export function Calendario({
 
       {detalle && (
         <DetalleActividad
+          modo="fechas"
           item={detalle.item}
           tituloEtapa={detalle.tituloEtapa}
           ocupado={ocupado}

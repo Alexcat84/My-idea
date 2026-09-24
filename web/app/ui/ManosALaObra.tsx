@@ -432,7 +432,8 @@ function FilaItem({
               esta semana
             </span>
           )}
-          {!hecho && !retirada && item.fecha_base && (
+          {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}
+          {!hecho && !retirada && item.fecha_base && modo !== "ritmo" && (
             <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
@@ -2788,6 +2789,7 @@ export function ManosALaObra({
         return (
           <DetalleActividad
             item={vivo}
+            modo={esEspacioCore(vivo.dominio) ? modoCamino : modoDeMundo(vivo.dominio)}
             tituloEtapa={detalleItem.tituloEtapa}
             ocupado={ocupado}
             onCambio={(cambio) => aplicarCambio(vivo, cambio)}

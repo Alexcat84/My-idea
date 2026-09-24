@@ -17,7 +17,7 @@ import { useEffect, useMemo, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
 import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
-import { BANDA, type Banda, type ChecklistEstado } from "@/lib/dbContract";
+import { BANDA, type Banda, type ChecklistEstado, type ModoCamino } from "@/lib/dbContract";
 import { rangoDeBanda } from "@/lib/engine/estimacion";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
 
@@ -56,8 +56,12 @@ export function DetalleActividad({
   protegidaPor = [],
   protege = null,
   onCerrar,
+  modo = null,
 }: {
   item: ItemChecklistUI;
+  /** AUD-09 M38: el modo del espacio de la tarea. A mi ritmo no hay plazos:
+   * sin chip de cumplimiento ni sección de fecha. */
+  modo?: ModoCamino | null;
   tituloEtapa: string;
   ocupado: boolean;
   onCambio: (cambio: CambioItem) => void;
@@ -97,7 +101,8 @@ export function DetalleActividad({
     [itemsDominio, item.id, item.etapa, item.fecha_base]
   );
   const hoyInput = fechaInputLocal(new Date());
-  const chip = chipCumplimiento(item);
+  const conFechas = modo !== "ritmo";
+  const chip = conFechas ? chipCumplimiento(item) : null;
   const notaCambiada = (item.nota ?? "") !== nota.trim();
 
   // BORRADOR (jul 2026, pedido del fundador): en el CAJÓN el estado NO se guarda
@@ -380,7 +385,7 @@ export function DetalleActividad({
           )}
 
           {/* FECHA: solo si el ítem tiene una fecha planificada (modo fechas) */}
-          {item.fecha_base && (
+          {conFechas && item.fecha_base && (
             <div className="mt-6">
               {/* Rótulo "FECHA" y la píldora "cambiar fecha" en la MISMA fila
                   (Design): el rótulo a la izquierda, el disparador arriba-derecha
