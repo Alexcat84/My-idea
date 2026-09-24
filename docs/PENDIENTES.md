@@ -17522,3 +17522,25 @@ con su nota de adopción; las pantallas de Design no se redibujaron desde aquí.
 `precios.ts`. **Condición de cierre:** los diez mockups sin cifras viejas, cotejados contra
 `precios.ts` al adoptar la entrega (el mismo cotejo que `AGENTS.md` exige para el canon).
 
+
+## Ficha de backlog: `aud09-remanentes` (AUD-09, cierre de la campaña, 25 sep 2026)
+
+**Qué.** La campaña de arreglos de la AUD-09 cerró con la tanda 6 (`web-v2.6.4`). Lo que quedó
+fuera del alcance de las tandas que fijó el fundador NO se da por resuelto: vive aquí hasta que
+el fundador lo ordene en otra campaña. El detalle de cada uno (archivo, línea y tramo) está en
+`docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`; su estado, en
+`docs/audits/AUD-09-Acta_de_Cierre.md`.
+
+**Abiertos, MEDIA (29):** M09, M24, M25, M26, M27, M28, M29, M30, M31, M32, M33, M34, M35, M37,
+M38, M39, M40, M41, M42, M43, M44, M45, M46, M47, M48, M49, M50, M52 y M54.
+
+**Parciales:** M22 (queda rechazar sin saldo antes de que el usuario escriba su "qué pasó") y
+B16 (siguen sin pruebas `unlock` y `start`).
+
+**Abiertos, BAJA (13):** B02, B03, B05, B06, B07, B08, B09, B10, B11, B12, B13, B14 y B15.
+
+**Con ficha propia (no se repiten aquí):** M51 y M53 en `puentes-reanclados-sin-tejer`, M55 en
+`callejones-del-grafo`, y los mockups de B01 en `mockups-con-precios-viejos`.
+
+**Condición de cierre:** cada hallazgo arreglado con su prueba en rojo primero, o descartado
+por decisión escrita del fundador, y tachado aquí con su commit.
