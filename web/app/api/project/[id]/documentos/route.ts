@@ -11,6 +11,7 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
+import { actasVigentes } from "@/lib/acta";
 import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
@@ -319,7 +320,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
       titulo: "Análisis del proyecto",
       nombre,
       archivo: nombreArchivo(nombre, "Analisis del proyecto"),
-      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo),
+      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null),
       papel: { analisis },
     });
   }
@@ -382,7 +383,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const num = planes.filter((p) => p.etiqueta === "reporte_numeros").at(-1);
     return num ? sinProcedencia(num.contenido_md) : null;
   })();
-  const informeMd = acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo) : null;
+  const informeMd = acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null) : null;
 
   const baseDoc = {
     nombre,

@@ -8,6 +8,7 @@
  * (hitos sin acciones), hitosCelebracion (con acciones), informe_md.
  */
 import { NextResponse } from "next/server";
+import { actasVigentes } from "@/lib/acta";
 import { calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
@@ -50,8 +51,12 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.find((p) => p.clave === dominio)
       ?.nombre ?? dominio;
 
+  // AUD-09 M04: el acta de cada espacio es la FOTO guardada al cerrar.
+  const actas = await actasVigentes(supabase, projectId);
+
   return NextResponse.json({
     nombre,
+    actas,
     // "Todo separado" (T3): el modo del core, ya dual-read en cargarEntradaAnalytics.
     modo_camino: entrada.modoCamino,
     realizada_at: proyecto.realizada_at ?? null,
@@ -59,6 +64,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     tiene_baseline: analytics.cumplimiento !== null,
     analytics,
     hitosCelebracion: construirHitos(entrada, ahora, true),
-    informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null, nombreMundo),
+    informe_md: informeMarkdown(nombre, analytics, proyecto.realizada_at ?? null, nombreMundo, actas.core ?? null),
   });
 }

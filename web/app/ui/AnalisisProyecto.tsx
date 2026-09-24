@@ -7,6 +7,7 @@
  * rojo. Botón "Descargar mi informe (.md)".
  */
 import { useEffect, useMemo, useState } from "react";
+import type { ActaCierre } from "@/lib/acta";
 import type { Analytics } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { fechaHumanaCorta } from "@/lib/fechas";
@@ -30,6 +31,8 @@ interface Respuesta {
   /** Fase 4.0 §8: el acta de cierre. */
   realizada_at?: string | null;
   cierre_motivo?: string | null;
+  /** AUD-09 M04: el acta de cada espacio (la FOTO guardada al cerrar). */
+  actas?: Record<string, ActaCierre>;
   analytics: Analytics;
   informe_md: string;
 }
@@ -126,6 +129,10 @@ export function AnalisisProyecto({
   const tiene_baseline = esCore ? datos.tiene_baseline : c !== null;
   const realizadaAt = esCore ? datos.realizada_at ?? null : mundo!.completadoAt;
   const cierreMotivo = esCore ? datos.cierre_motivo ?? null : mundo!.cierreMotivo;
+  // AUD-09 M04: el acta sale de la instantánea guardada al cerrar este espacio.
+  // Si el cierre es de antes de la 040 (sin foto), no se inventa un acta: se
+  // muestra el estado actual y se llama así.
+  const acta = realizadaAt ? datos.actas?.[esCore ? "core" : (dominio as string)] ?? null : null;
   const hitos = esCore ? a.hitos : [];
   const nombreEtapa = (n: number) => titulos[n] ?? `Etapa ${n}`;
 
@@ -137,15 +144,38 @@ export function AnalisisProyecto({
 
       {/* Fase 4.0 §8: el acta de cierre encabeza el análisis de un proyecto
           ya cerrado: estado final y el porqué, en la voz del usuario. */}
-      {realizadaAt && (
+      {realizadaAt && acta && (
         <section className="rounded-panel border border-done/40 bg-surface p-5">
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Acta de cierre</p>
           <p className="mt-2 text-[14px]">
-            Cerrado el {fechaHumanaCorta(realizadaAt)} con{" "}
+            Cerrado el {fechaHumanaCorta(acta.cerrada_at)} con{" "}
+            <span className="font-semibold">
+              {acta.instantanea.acciones.hechas} de {acta.instantanea.acciones.total}
+            </span>{" "}
+            acciones. Lo que quedó pendiente sigue en tu historia, tal cual.
+          </p>
+          {acta.cierre_motivo && (
+            <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
+              «{acta.cierre_motivo}»
+            </blockquote>
+          )}
+          {(acta.instantanea.acciones.hechas !== u.accionesVigente.hechas ||
+            acta.instantanea.acciones.total !== u.accionesVigente.total) && (
+            <p className="mt-3 text-[12.5px] text-dim">
+              Estado actual: {u.accionesVigente.hechas} de {u.accionesVigente.total} acciones.
+            </p>
+          )}
+        </section>
+      )}
+      {realizadaAt && !acta && (
+        <section className="rounded-panel border border-done/40 bg-surface p-5">
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Estado actual</p>
+          <p className="mt-2 text-[14px]">
+            Cerrado el {fechaHumanaCorta(realizadaAt)}. Hoy lleva{" "}
             <span className="font-semibold">
               {u.accionesVigente.hechas} de {u.accionesVigente.total}
             </span>{" "}
-            acciones. Lo que quedó pendiente sigue en tu historia, tal cual.
+            acciones.
           </p>
           {cierreMotivo && (
             <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">

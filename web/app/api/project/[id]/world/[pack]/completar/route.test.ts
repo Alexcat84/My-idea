@@ -36,10 +36,13 @@ function sembrar({ completadoAt = null, motivo = null }: { completadoAt?: string
     entrada_original: "vendo macetas",
     session_count: 3,
     realizada_at: null,
+    // columna real de projects: el cierre ahora calcula el acta (AUD-09 M04)
+    created_at: "2026-03-01T00:00:00.000Z",
   };
   estadoFalso.projectUnlocks.push({
     project_id: "p1",
     dominio: "quality",
+    unlocked_at: "2026-03-05T00:00:00.000Z",
     completado_at: completadoAt,
     cierre_motivo: motivo,
   });
@@ -149,4 +152,28 @@ describe("POST world/[pack]/completar (Fase 4.2 §2)", () => {
     expect(res.status).toBe(400);
     expect(unlock().completado_at).toBeNull();
   });
+
+  // AUD-09 M04: el acta en miniatura del mundo también es una FOTO; y volver a
+  // cerrar un mundo ya cerrado no reescribe su fecha (hermano del M08).
+  describe("el cierre del mundo guarda la foto de su acta", () => {
+    it("completar guarda una instantánea con el dominio del mundo", async () => {
+      sembrar();
+      const res = await POST(req({ accion: "completar", motivo: "ya lo tengo" }), PARAMS);
+      expect(res.status).toBe(200);
+      expect(estadoFalso.projectActas).toHaveLength(1);
+      const acta = estadoFalso.projectActas[0] as Record<string, unknown>;
+      expect(acta.dominio).toBe("quality");
+      expect(acta.cierre_motivo).toBe("ya lo tengo");
+      expect(acta.cerrada_at).toBe(unlock().completado_at);
+    });
+
+    it("completar un mundo ya completado conserva su fecha y no toma otra foto", async () => {
+      sembrar({ completadoAt: "2026-05-01T12:00:00.000Z" });
+      const res = await POST(req({ accion: "completar" }), PARAMS);
+      expect(res.status).toBe(200);
+      expect(unlock().completado_at).toBe("2026-05-01T12:00:00.000Z");
+      expect(estadoFalso.projectActas).toHaveLength(0);
+    });
+  });
 });
+

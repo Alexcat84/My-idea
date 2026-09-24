@@ -19,6 +19,8 @@ export interface EstadoFalso {
   bitacora: Record<string, unknown>[];
   /** "Todo separado" (migracion 032): el modo del camino por espacio. */
   projectModos: Record<string, unknown>[];
+  /** AUD-09 M04 (migracion 040): las actas de cierre, una fila por cierre. */
+  projectActas: Record<string, unknown>[];
   contadorProject: number;
   contadorSession: number;
   contadorPlan: number;
@@ -34,6 +36,7 @@ export function estadoFalsoVacio(): EstadoFalso {
     projectUnlocks: [],
     bitacora: [],
     projectModos: [],
+    projectActas: [],
     contadorProject: 0,
     contadorSession: 0,
     contadorPlan: 0,
@@ -188,6 +191,22 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     let rows = estado.projectModos;
     for (const [col, val] of Object.entries(b._filters)) {
       rows = rows.filter((r) => (r as Record<string, unknown>)[col] === val);
+    }
+    return { data: rows, error: null };
+  }
+  if (nombre === "project_actas") {
+    if (b._insert) {
+      const filas = Array.isArray(b._insert) ? b._insert : [b._insert];
+      for (const f of filas) {
+        estado.projectActas.push({ id: `acta-${estado.projectActas.length + 1}`, created_at: new Date().toISOString(), ...f });
+      }
+      return { data: null, error: null };
+    }
+    let rows = estado.projectActas;
+    for (const [col, val] of Object.entries(b._filters)) rows = rows.filter((r) => r[col] === val);
+    if (b._order) {
+      const { col, ascending } = b._order;
+      rows = [...rows].sort((a, c) => (ascending ? 1 : -1) * String(a[col] ?? "").localeCompare(String(c[col] ?? "")));
     }
     return { data: rows, error: null };
   }

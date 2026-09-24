@@ -572,5 +572,22 @@ FROM (
         AND column_name='plan_pagado_at'
     )
 
+
+  UNION ALL
+  -- 040 . las actas de cierre como foto (AUD-09 M04).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '040', 'project_actas (acta de cierre como instantanea) con RLS',
+    EXISTS (
+      SELECT 1 FROM information_schema.tables
+      WHERE table_schema='public' AND table_name='project_actas'
+    )
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_actas' AND column_name='instantanea'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='project_actas' AND policyname='project_actas_own'
+    )
 ) checks
 ORDER BY num;

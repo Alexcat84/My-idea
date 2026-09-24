@@ -16,6 +16,9 @@
  * del proyecto es un acto aparte, del usuario, en su propia pantalla.
  */
 import { NextResponse } from "next/server";
+import { guardarActa, instantaneaDeActa } from "@/lib/acta";
+import { calcularAnalytics } from "@/lib/analytics";
+import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
@@ -64,7 +67,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // El muro de siempre: sin fila en project_unlocks el mundo no existe aquí.
   const { data: unlock } = await supabase
     .from("project_unlocks")
-    .select("id, cierre_motivo")
+    .select("id, cierre_motivo, completado_at")
     .eq("project_id", projectId)
     .eq("dominio", pack)
     .limit(1);
@@ -77,7 +80,34 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const motivoPrevio = (unlock[0] as { cierre_motivo?: string | null }).cierre_motivo ?? null;
 
   const completar = body.accion === "completar";
-  const completadoAt = completar ? new Date().toISOString() : null;
+  // AUD-09: completar un mundo YA completado no reescribe la fecha del primer
+  // cierre (hermano del M08 del proyecto); reabrir la limpia.
+  const completadoPrevio = (unlock[0] as { completado_at?: string | null }).completado_at ?? null;
+  const completadoAt = completar ? (completadoPrevio ?? new Date().toISOString()) : null;
+
+  // AUD-09 M04: el acta en miniatura del mundo es una FOTO. En un cierre NUEVO
+  // se guarda la instantánea ANTES de sellarlo; si no se puede, no se cierra.
+  if (completar && !completadoPrevio && completadoAt) {
+    let analytics;
+    try {
+      analytics = calcularAnalytics(await cargarEntradaAnalytics(supabase, projectId, proyecto));
+    } catch (e) {
+      if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+      throw e;
+    }
+    const guardada = await guardarActa(supabase, projectId, {
+      dominio: pack,
+      cerrada_at: completadoAt,
+      cierre_motivo: motivo ?? motivoPrevio,
+      instantanea: instantaneaDeActa(analytics, pack),
+    });
+    if (!guardada) {
+      return NextResponse.json(
+        { error: `No pude guardar el acta del cierre de "${entrada.nombre}", así que sigue abierto. Intenta de nuevo en un momento.` },
+        { status: 500 }
+      );
+    }
+  }
   const campos: Record<string, unknown> = { completado_at: completadoAt };
   // Solo un cierre CON motivo escribe cierre_motivo. Reabrir jamás lo borra, y
   // cerrar sin escribir nada no pisa el motivo de un cierre anterior.

@@ -15,6 +15,7 @@
  * en ámbar, jamás en rojo (eso lo decide la UI).
  */
 import { esMundoProteccion } from "./espacios";
+import { actaMarkdown, type ActaCierre } from "./acta";
 
 const DIA = 86_400_000;
 
@@ -738,28 +739,33 @@ export function informeMarkdown(
   nombre: string,
   a: Analytics,
   realizadaAt?: string | null,
-  nombreMundo: (dominio: string) => string = (d) => d
+  nombreMundo: (dominio: string) => string = (d) => d,
+  /** AUD-09 M04: el acta del cierre (la foto). Sin ella no hay acta que pintar. */
+  acta?: ActaCierre | null
 ): string {
   const u = a.universal;
   const l: string[] = [];
   l.push(`# Análisis de ${nombre}`);
   l.push("");
   if (realizadaAt) {
-    l.push("## Acta de cierre");
-    l.push(`- Estado final: **Proyecto realizado** el ${realizadaAt.slice(0, 10)}`);
+    // AUD-09 M04: el acta sale de la instantánea guardada al cerrar; lo que se
+    // calcula hoy es el ESTADO ACTUAL y ya no se presenta como acta.
+    if (acta) l.push(...actaMarkdown(acta, nombreMundo));
+    l.push("## Estado actual");
+    l.push(`- Idea realizada el ${realizadaAt.slice(0, 10)}`);
     l.push(
-      `- Acciones al cerrar: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}**` +
+      `- Acciones hoy: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}**` +
         (u.accionesVigente.total > 0
           ? ` (${Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)}%)`
           : "")
     );
     for (const m of a.mundos) {
       const v = m.universal.accionesVigente;
-      const pct = v.total > 0 ? ` (${Math.round((v.hechas / v.total) * 100)}%)` : "";
-      const estado = m.completadoAt ? `completado el ${m.completadoAt.slice(0, 10)}` : "abierta";
-      l.push(`- ${nombreMundo(m.dominio)}: **${v.hechas} de ${v.total}**${pct}, ${estado}`);
+      const pctM = v.total > 0 ? ` (${Math.round((v.hechas / v.total) * 100)}%)` : "";
+      const estado = m.completadoAt ? `completado el ${m.completadoAt.slice(0, 10)}` : "abierto";
+      l.push(`- ${nombreMundo(m.dominio)}: **${v.hechas} de ${v.total}**${pctM}, ${estado}`);
     }
-    if (a.cierreMotivo) {
+    if (!acta && a.cierreMotivo) {
       l.push("");
       l.push("### Por qué la cerraste aquí");
       l.push(`> ${a.cierreMotivo.replace(/\s+/g, " ").trim()}`);

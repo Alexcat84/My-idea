@@ -73,4 +73,57 @@ describe("POST /api/project/[id]/realizar (Fase 3.8)", () => {
     expect((await res.json()).realizada_at).toBeNull();
     expect(estadoFalso.projects["p1"].realizada_at).toBeNull();
   });
+
+  // AUD-09 M04 (decisión del fundador, 25 sep 2026): EL ACTA ES UNA FOTO.
+  describe("el cierre guarda la foto del acta en su propio registro", () => {
+    it("cerrar guarda una instantánea (dominio core) con la fecha y el motivo", async () => {
+      sembrar(null);
+      const res = await POST(req({ accion: "realizar", motivo: "ya vendo cada semana" }), PARAMS);
+      expect(res.status).toBe(200);
+      expect(estadoFalso.projectActas).toHaveLength(1);
+      const acta = estadoFalso.projectActas[0] as Record<string, unknown>;
+      expect(acta.dominio).toBe("core");
+      expect(acta.cierre_motivo).toBe("ya vendo cada semana");
+      expect(acta.cerrada_at).toBe(estadoFalso.projects["p1"].realizada_at);
+      expect((acta.instantanea as { acciones: unknown }).acciones).toEqual({ hechas: 0, total: 0 });
+    });
+
+    it("volver a cerrar tras reabrir guarda OTRA foto al lado, sin pisar la primera", async () => {
+      sembrar(null);
+      await POST(req({ accion: "realizar" }), PARAMS);
+      const primera = { ...(estadoFalso.projectActas[0] as Record<string, unknown>) };
+      await POST(req({ accion: "reabrir" }), PARAMS);
+      await POST(req({ accion: "realizar" }), PARAMS);
+      expect(estadoFalso.projectActas).toHaveLength(2);
+      expect(estadoFalso.projectActas[0]).toEqual(primera);
+    });
+
+    it("cerrar una idea YA cerrada no toma otra foto (no hubo un cierre nuevo)", async () => {
+      sembrar("2026-05-01T12:00:00.000Z");
+      await POST(req({ accion: "realizar" }), PARAMS);
+      expect(estadoFalso.projectActas).toHaveLength(0);
+    });
+
+    it("si la foto no se puede guardar, el cierre no ocurre y se dice (500)", async () => {
+      sembrar(null);
+      const fromReal = supabaseFalso.from.getMockImplementation()!;
+      supabaseFalso.from.mockImplementation((nombre: string) => {
+        const t = fromReal(nombre) as Record<string, unknown>;
+        if (nombre === "project_actas") {
+          t.insert = () => {
+            t.then = (res: (v: unknown) => unknown) =>
+              Promise.resolve({ data: null, error: { message: "la tabla no existe" } }).then(res);
+            return t;
+          };
+        }
+        return t as never;
+      });
+      const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+      const res = await POST(req({ accion: "realizar" }), PARAMS);
+      expect(res.status).toBe(500);
+      expect(estadoFalso.projects["p1"].realizada_at ?? null).toBeNull();
+      errores.mockRestore();
+    });
+  });
 });
+

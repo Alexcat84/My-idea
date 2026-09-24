@@ -16,6 +16,9 @@
  *  - Los ítems pendientes no se tocan: quedan como testigos en la Historia.
  */
 import { NextResponse } from "next/server";
+import { guardarActa, instantaneaDeActa } from "@/lib/acta";
+import { calcularAnalytics } from "@/lib/analytics";
+import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { actualizarProyecto, obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
@@ -60,6 +63,33 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // del primer cierre (la historia no se reescribe). Reabrir sí la limpia: un
   // cierre posterior es un cierre nuevo, y la bitácora guarda los dos.
   const realizadaAt = realizada ? (proyecto.realizada_at ?? new Date().toISOString()) : null;
+
+  // AUD-09 M04 (decisión del fundador, 25 sep 2026): EL ACTA ES UNA FOTO. En
+  // un cierre NUEVO se toma la instantánea y se guarda en su propio registro
+  // (project_actas) ANTES de sellar el cierre: si la foto no se puede guardar,
+  // la idea sigue abierta y se dice. Volver a cerrar tras reabrir guarda otra
+  // foto al lado; cerrar una idea ya cerrada no es un cierre nuevo.
+  if (realizada && !proyecto.realizada_at && realizadaAt) {
+    let analytics;
+    try {
+      analytics = calcularAnalytics(await cargarEntradaAnalytics(supabase, projectId, proyecto));
+    } catch (e) {
+      if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+      throw e;
+    }
+    const guardada = await guardarActa(supabase, projectId, {
+      dominio: "core",
+      cerrada_at: realizadaAt,
+      cierre_motivo: motivo ?? proyecto.cierre_motivo ?? null,
+      instantanea: instantaneaDeActa(analytics, "core"),
+    });
+    if (!guardada) {
+      return NextResponse.json(
+        { error: "No pude guardar el acta de tu cierre, así que tu idea sigue abierta. Intenta de nuevo en un momento." },
+        { status: 500 }
+      );
+    }
+  }
   const campos: Record<string, unknown> = { realizada_at: realizadaAt };
   // §8: solo un cierre CON motivo escribe cierre_motivo. Reabrir jamás lo
   // borra, y cerrar sin escribir nada no pisa el motivo de un cierre anterior.

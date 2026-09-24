@@ -370,13 +370,16 @@ describe("informeMarkdown — acta de cierre (§8)", () => {
     expect(md).not.toContain("## Acta de cierre");
   });
 
-  it("realizado: abre con el acta, el estado final y el porcentaje", () => {
+  it("realizado SIN acta guardada: no se inventa un acta; se muestra el estado actual", () => {
+    // AUD-09 M04: el acta es la FOTO guardada al cerrar (project_actas). Sin
+    // ella, lo que hay es el estado de hoy, y se llama así.
     // accionesVigente = items del plan vigente (p2). En BASE todos los items
     // son de p1, asi que el vigente (p2) tiene 0 de 0 -> sin porcentaje.
     const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
-    expect(md).toContain("## Acta de cierre");
-    expect(md).toContain("**Proyecto realizado** el 2026-05-01");
-    expect(md).toContain("Acciones al cerrar: **0 de 0**");
+    expect(md).not.toContain("## Acta de cierre");
+    expect(md).toContain("## Estado actual");
+    expect(md).toContain("Idea realizada el 2026-05-01");
+    expect(md).toContain("Acciones hoy: **0 de 0**");
   });
 
   it("con motivo, el informe lo cita en la voz del usuario", () => {
@@ -387,9 +390,9 @@ describe("informeMarkdown — acta de cierre (§8)", () => {
     expect(md).toContain("> Ya validé lo que necesitaba saber.");
   });
 
-  it("sin motivo (cerro sin escribir), el acta existe pero no inventa cita", () => {
+  it("sin motivo (cerro sin escribir), el estado actual no inventa cita", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(BASE), iso("2026-05-01"));
-    expect(md).toContain("## Acta de cierre");
+    expect(md).toContain("## Estado actual");
     expect(md).not.toContain("### Por qué la cerraste aquí");
   });
 });
@@ -697,7 +700,7 @@ describe("informeMarkdown — el acta dice cómo quedaron los mundos (Fase 4.2 �
 
   it("un mundo ABIERTO se nombra abierto, con su avance real", () => {
     const md = informeMarkdown("Mi idea", calcularAnalytics(CON_SUBPROYECTO), iso("2026-05-01"), nombres);
-    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), abierta");
+    expect(md).toContain("- Calidad y Confianza: **3 de 4** (75%), abierto");
   });
 
   it("un mundo COMPLETADO se nombra con su fecha de cierre", () => {
