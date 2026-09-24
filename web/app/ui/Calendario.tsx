@@ -23,6 +23,7 @@ import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI
 import { generarIcs } from "@/lib/ics";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { leerRechazo } from "@/lib/mensajeServidor";
 
 // "Todo separado" (T6, D3): el nombre de cara de un espacio para la etiqueta.
 const PACKS_CAL = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
@@ -133,7 +134,8 @@ export function Calendario({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ item_id: itemId, fecha, cascada }),
       });
-      if (!res.ok) return setError("No pudimos mover la fecha.");
+      // AUD-09 M41: el rechazo con razón (hecha, retirada) se muestra tal cual.
+      if (!res.ok) return setError((await leerRechazo(res)).mensaje);
       onRecargarChecklist();
     } catch {
       setError("No pudimos mover la fecha; revisa tu internet.");

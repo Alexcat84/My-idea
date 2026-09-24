@@ -134,3 +134,29 @@ function hacerFallarUpdatesDeChecklist() {
     return tabla as never;
   });
 }
+
+// AUD-09 M41 (tanda 7A, datos): mover-fecha aceptaba tareas HECHAS y las
+// reclasificaba "A tiempo" (su fecha planeada pasaba a coincidir con la real).
+// La fecha de algo hecho es la de realización y se ajusta en la actividad; una
+// retirada primero se reactiva. Ninguna de las dos se mueve aquí.
+describe("mover-fecha no toca lo hecho ni lo retirado (AUD-09 M41)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    sembrar();
+  });
+
+  it("una tarea hecha: 409, su fecha intacta y sin evento", async () => {
+    const res = await POST(req({ item_id: "it1", fecha: D("2026-03-15"), cascada: false }), PARAMS);
+    expect(res.status).toBe(409);
+    expect(fb("it1")).toBe(D("2026-03-10"));
+    expect(estadoFalso.bitacora).toHaveLength(0);
+  });
+
+  it("una tarea retirada: 409, su fecha intacta", async () => {
+    const res = await POST(req({ item_id: "it5", fecha: D("2026-04-09"), cascada: false }), PARAMS);
+    expect(res.status).toBe(409);
+    expect(fb("it5")).toBe(D("2026-04-05"));
+  });
+});
+

@@ -1853,7 +1853,8 @@ export function ManosALaObra({
         body: JSON.stringify({ item_id: itemId, fecha, cascada }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        // AUD-09 M41: el rechazo con razón (hecha, retirada) se muestra tal cual.
+        setError((await leerRechazo(res)).mensaje);
         return;
       }
       onRecargarChecklist();

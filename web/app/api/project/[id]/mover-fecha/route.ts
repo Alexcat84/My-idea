@@ -85,6 +85,20 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const items = (filas ?? []) as ItemFecha[];
   const objetivo = items.find((i) => i.id === datos.item_id);
   if (!objetivo) return NextResponse.json({ error: "actividad no encontrada" }, { status: 404 });
+  // AUD-09 M41: lo hecho y lo retirado no se mueven aquí. Mover lo hecho lo
+  // reclasificaba "A tiempo"; su fecha real se ajusta en la actividad.
+  if (objetivo.estado === "hecho") {
+    return NextResponse.json(
+      { error: "Esta actividad ya está hecha. Si la hiciste en otra fecha, cámbiala desde la actividad." },
+      { status: 409 }
+    );
+  }
+  if (objetivo.estado === "no_aplica") {
+    return NextResponse.json(
+      { error: "Esta actividad está retirada. Reactívala primero para darle una fecha." },
+      { status: 409 }
+    );
+  }
   if (!objetivo.fecha_base) {
     return NextResponse.json({ error: "esta actividad no tiene una fecha que mover" }, { status: 400 });
   }
