@@ -7,6 +7,7 @@
  */
 import { NextResponse } from "next/server";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { leerSaldo } from "@/lib/saldo";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET() {
@@ -21,11 +22,13 @@ export async function GET() {
   if (invisible) {
     return NextResponse.json({ sesion: true, invisible: true, saldo: null });
   }
-  const { data } = await supabase.from("credit_accounts").select("creditos_total").maybeSingle();
+  // AUD-09 M21: si la lectura falla, saldo null (el chip no muestra un 0 falso).
+  const saldo = await leerSaldo(supabase);
   return NextResponse.json({
     sesion: true,
     invisible: false,
     email: user.email ?? null,
-    saldo: (data as { creditos_total: number } | null)?.creditos_total ?? 0,
+    saldo,
+    saldo_disponible: saldo !== null,
   });
 }

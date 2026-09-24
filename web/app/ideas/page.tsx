@@ -13,6 +13,7 @@
 import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
+import { leerSaldo } from "@/lib/saldo";
 import { createClient } from "@/lib/supabase/server";
 import { BorrarIdeaCinta } from "../ui/BorrarIdeaCinta";
 import { BotonSalir } from "../ui/BotonSalir";
@@ -51,8 +52,8 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
   // para cuentas reales: la identidad invisible no tiene ledger.
   let saldo: number | null = null;
   if (!esAnonimo) {
-    const { data: cuenta } = await supabase.from("credit_accounts").select("creditos_total").maybeSingle();
-    saldo = (cuenta as { creditos_total: number } | null)?.creditos_total ?? 0;
+    // AUD-09 M21: lectura única; si falla, null y el chip no aparece (nunca un 0 falso).
+    saldo = await leerSaldo(supabase);
   }
 
   // Fase 3.8: las realizadas reposan al final, bajo su propio encabezado.
