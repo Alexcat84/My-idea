@@ -60,7 +60,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
   const [{ data: sesiones }, { data: planes }, checklistRes] = await Promise.all([
     supabase.from("sessions").select("id, project_id, closed_at, estado_recorrido"),
     supabase.from("plans").select("session_id, etiqueta"),
-    supabase.from("checklist_items").select("project_id, plan_id, dominio, estado, created_at"),
+    supabase.from("checklist_items").select("project_id, plan_id, dominio, estado, created_at, updated_at"),
   ]);
   const checklist = (checklistRes.error ? [] : (checklistRes.data ?? [])) as Array<{
     project_id: string;
@@ -68,7 +68,16 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     dominio: string;
     estado: string;
     created_at: string;
+    updated_at?: string | null;
   }>;
+  // AUD-09 M42: la última acción de cada idea cuenta el trabajo en sus tareas
+  // (marcar, mover fechas, anotar), que no toca projects.updated_at.
+  const ultimaEnTareas = new Map<string, string>();
+  for (const item of checklist) {
+    const t = item.updated_at ?? item.created_at;
+    const actual = ultimaEnTareas.get(item.project_id);
+    if (!actual || t > actual) ultimaEnTareas.set(item.project_id, t);
+  }
 
   // Progreso del plan VIGENTE por proyecto y dominio (el último por fecha):
   // los checklists de planes anteriores son Historia, no el estado actual.
@@ -164,11 +173,13 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     // historial. "una pregunta te espera" cuando el motor tiene el turno.
     // Canon 01: la meta line COMBINA la invitación con el sello, no una u otra
     // ("Una pregunta te espera · última acción ayer 21:26").
+    const tareas = ultimaEnTareas.get(p.id);
+    const ultimaAccion = tareas && tareas > p.updated_at ? tareas : p.updated_at;
     const pista = pensando
       ? esperaPlan.has(p.id)
-        ? `Tu plan está listo para armarse · última acción ${fechaSello(p.updated_at)}`
-        : `Una pregunta te espera · última acción ${fechaSello(p.updated_at)}`
-      : `última acción · ${fechaSello(p.updated_at)}`;
+        ? `Tu plan está listo para armarse · última acción ${fechaSello(ultimaAccion)}`
+        : `Una pregunta te espera · última acción ${fechaSello(ultimaAccion)}`
+      : `última acción · ${fechaSello(ultimaAccion)}`;
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
@@ -181,7 +192,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
       id: p.id,
       nombre: nombreDeIdea(p.titulo, p.entrada_original),
       estado,
-      actualizado: p.updated_at,
+      actualizado: ultimaAccion,
       etapa,
       pensando,
       chips,
