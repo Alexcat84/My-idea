@@ -3,6 +3,30 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
+
+Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice
+su fuente. Las correcciones de fidelidad entran a `main` por tandas
+(`fidelidad-tN`), cada una declarada en el propio nodo (campo `correcciones`,
+con el texto viejo y la cita literal del libro) y con Gate 0 y las dos suites
+en verde. El registro de cada tanda vive en `docs/fidelidad/tandas/`.
+
+Lo que esas tandas **no** pueden hacer solas, y queda para la integración del
+mundo 11:
+
+1. **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
+   índice semántico guarda el vector del texto viejo; Gate 0 no lo ve rojo
+   porque el vector existe, pero ya no describe el texto nuevo. La lista de
+   nodos corregidos sale de los ficheros de `docs/fidelidad/tandas/`.
+2. **Al sincronizar `puente-forja` con `main`, regenerar los ficheros derivados
+   del grafo** (`master_graph`, las etiquetas de cara reaplicadas, la copia web
+   de `sync_assets_web.py`), en vez de fusionarlos a mano: el ciclo es
+   `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar` y
+   `sync_assets_web.py`.
+3. **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
+   viejo de esos nodos; su regeneración parcial (`build_question_cache.py
+   --patch`) también gasta credencial y va en la misma sesión que el punto 1.
+
 ## 0b. La cirugía de costuras se ordena por PARES LIBERADOS (12 ago 2026)
 
 **El dato que cambia la prioridad**, contado del archivo del cribado intra: hay

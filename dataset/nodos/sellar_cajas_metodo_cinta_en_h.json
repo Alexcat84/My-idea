@@ -4,12 +4,12 @@
   "dominio": "entrega",
   "titulo_concepto": "Sellar cajas con el método de cinta en H",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Solo sirve cinta de embalar sensible a la presión, de al menos cinco a siete centímetros de ancho: cinta de papel engomado, celofán, cordel o envolver la caja en papel no resisten el manejo de un courier y se sueltan con el tiempo. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+  "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
   "pasos_accionables": [
     "Compra cinta de embalar sensible a la presión de al menos cinco centímetros de ancho.",
     "Aplica una tira sobre la costura central de la tapa y repite en el fondo de la caja.",
     "Aplica una tira sobre cada costura lateral, arriba y abajo, completando el patrón en H.",
-    "Descarta cinta de papel engomado, celofán, cordel o envoltura de papel como método de sellado.",
+    "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
     "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
   ],
   "entregable_esperado": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
@@ -26,5 +26,40 @@
     "Has tenido paquetes que llegaron abiertos o con las esquinas despegadas.",
     "Envías productos pesados y no sabes si tu sellado actual va a resistir."
   ],
-  "etiqueta_arbol": "Sella cajas con el método H"
+  "etiqueta_arbol": "Sella cajas con el método H",
+  "correcciones": [
+    {
+      "id": "fidelidad-t1-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Descarta cinta de papel engomado, celofán, cordel o envoltura de papel como método de sellado.",
+      "texto_nuevo": "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L181-L185",
+        "frase": "Use pressure-sensitive plastic tape, water-activated paper tape (minimum 60-lb. grade), or water-activated reinforced tape that is at least 2\" wide. / Do not use cellophane tape, duct tape, masking tape, string, or rope to seal packages."
+      },
+      "decision": "Mandato del fundador, regla B: CONTRARIO, version fiel del verificador ciego (fila FX1-013). El paso descartaba la cinta de papel engomado, que la guia admite como cinta de papel activada con agua.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-013"
+    },
+    {
+      "id": "fidelidad-t1-04",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Solo sirve cinta de embalar sensible a la presión, de al menos cinco a siete centímetros de ancho: cinta de papel engomado, celofán, cordel o envolver la caja en papel no resisten el manejo de un courier y se sueltan con el tiempo. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+      "texto_nuevo": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L181-L185",
+        "frase": "Use pressure-sensitive plastic tape, water-activated paper tape (minimum 60-lb. grade), or water-activated reinforced tape that is at least 2\" wide. / Do not use cellophane tape, duct tape, masking tape, string, or rope to seal packages."
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el resumen repetia el CONTRARIO de fidelidad-t1-03 (solo cinta sensible a la presion; papel engomado descartado). Se corrige con la misma cita para que el nodo no lo siga diciendo en otro campo; el resto del resumen no cambia.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-013"
+    }
+  ]
 }

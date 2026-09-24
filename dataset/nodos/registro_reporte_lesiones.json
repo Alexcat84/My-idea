@@ -11,7 +11,7 @@
     "Completa un reporte detallado por cada caso registrable",
     "Prepara el resumen anual y publicalo en el periodo que indique la norma de tu mercado",
     "Envia electronicamente la información requerida a la autoridad correspondiente según tu tamano y sector",
-    "Reporta una fatalidad de inmediato y una hospitalizacion, amputacion o perdida de ojo dentro del plazo corto que fije tu mercado",
+    "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
     "Conserva los registros de lesiones por el tiempo minimo exigido y los registros medicos según corresponda"
   ],
   "entregable_esperado": "Los formularios de registro, reporte de incidente y resumen anual completados, publicados y archivados conforme a los plazos legales de tu mercado.",
@@ -24,5 +24,24 @@
     "Cuando ocurre una lesion o enfermedad laboral que debe registrarse",
     "Cuando debes cumplir con tus obligaciones legales de reporte ante la autoridad laboral"
   ],
-  "etiqueta_arbol": "Registra Lesiones Laborales Correctamente"
+  "etiqueta_arbol": "Registra Lesiones Laborales Correctamente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t1-01",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Reporta una fatalidad de inmediato y una hospitalizacion, amputacion o perdida de ojo dentro del plazo corto que fije tu mercado",
+      "texto_nuevo": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L265",
+        "frase": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours."
+      },
+      "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, se aplica la version fiel del verificador ciego (fila SB2-091), con 'en el libro' cambiado por 'en EE. UU.', que es el ambito de la cita (OSHA). El paso decia 'de inmediato' donde el libro da un plazo en horas.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
+    }
+  ]
 }

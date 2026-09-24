@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir sobre o caja según el tamaño final del paquete",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que cierto tamaño mínimo, se usa sobre o bolsa reforzada; si supera ese tamaño, pasa a caja rígida. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Definir este umbral para tu propio catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "resumen_teorico": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
   "pasos_accionables": [
     "Arma el paquete completo con su protección antes de decidir el contenedor.",
-    "Mide el resultado final: si es menor a un tamaño mínimo que definas, usa sobre o bolsa reforzada; si es mayor, usa caja.",
+    "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
     "Pregunta a tu courier cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
     "Ajusta tu inventario de empaque para tener ambos formatos disponibles según ese umbral."
   ],
@@ -21,5 +21,40 @@
     "No sabes si tu courier acepta sobres reforzados para tu tipo de producto.",
     "Tu catálogo tiene productos de tamaños muy distintos y usas un solo tipo de empaque para todos."
   ],
-  "etiqueta_arbol": "Decide entre sobre o caja"
+  "etiqueta_arbol": "Decide entre sobre o caja",
+  "correcciones": [
+    {
+      "id": "fidelidad-t1-05",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Mide el resultado final: si es menor a un tamaño mínimo que definas, usa sobre o bolsa reforzada; si es mayor, usa caja.",
+      "texto_nuevo": "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L99; L991",
+        "frase": "Place small packages inside a larger outer box. For express shipments smaller than 7\" x 4\" x 2\", use a FedEx Express packaging option / smaller than 7\" x 4\" x 2\" (minimum acceptable package size)"
+      },
+      "decision": "Mandato del fundador, regla B: CONTRARIO, version fiel del verificador ciego (fila FX1-017). El paso dejaba el tamaño minimo a criterio del remitente; la guia lo fija en 7 x 4 x 2 pulgadas.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-017"
+    },
+    {
+      "id": "fidelidad-t1-06",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que cierto tamaño mínimo, se usa sobre o bolsa reforzada; si supera ese tamaño, pasa a caja rígida. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Definir este umbral para tu propio catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+      "texto_nuevo": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L99; L991",
+        "frase": "Place small packages inside a larger outer box. For express shipments smaller than 7\" x 4\" x 2\", use a FedEx Express packaging option / smaller than 7\" x 4\" x 2\" (minimum acceptable package size)"
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el resumen repetia el CONTRARIO de fidelidad-t1-05 (un umbral que define el remitente). Se corrige con la misma cita; el resto del resumen no cambia.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-017"
+    }
+  ]
 }
