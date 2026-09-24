@@ -9,7 +9,7 @@
     "Investigar los métodos de pago preferidos en cada mercado objetivo",
     "Establecer una cuenta de comerciante con un banco para procesar tarjetas de crédito",
     "Evaluar proveedores de pago P2P como PayPal para transacciones internacionales",
-    "Considerar servicios de escrow para transacciones de alto riesgo o alto valor",
+    "Considerar servicios de escrow para reducir el riesgo de fraude en transacciones pequenas con compradores que exigen garantia de envio a cambio del pago anticipado",
     "Definir política de manejo de contracargos (chargebacks)"
   ],
   "entregable_esperado": "Sistema de pagos electrónicos configurado y adaptado a los métodos preferidos del mercado objetivo",
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Si la empresa procesará pagos internacionales a través de su sitio web"
   ],
-  "etiqueta_arbol": "Ofrece Pagos Según el Mercado"
+  "etiqueta_arbol": "Ofrece Pagos Según el Mercado",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-010",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Considerar servicios de escrow para transacciones de alto riesgo o alto valor",
+      "texto_nuevo": "Considerar servicios de escrow para reducir el riesgo de fraude en transacciones pequenas con compradores que exigen garantia de envio a cambio del pago anticipado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L4027; L3335",
+        "frase": "Exporters may select escrow services as a mutually beneficial cash-in-advance option for small transactions with importers who demand assurance that the goods will be sent in exchange for advance payment."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro situa el escrow en transacciones pequenas y como proteccion contra el fraude; el paso lo orienta a transacciones de alto valor, lo que cambia la condicion. Ningun pasaje lo asocia a alto valor.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C016-073"
+    }
+  ]
 }

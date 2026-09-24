@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar una sección de oportunidad de franquicia separada de la sección al consumidor",
     "Incluir mecanismos de captura de contacto visibles a un clic de distancia en cada página, del tipo formularios, descargas, videos",
-    "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte",
+    "Sugerencia de My Idea: Evitar dar información excesiva que permita al prospecto decidir sin contactar, por ejemplo el detalle financiero o de soporte, aunque sí conviene dejar claros los requisitos de inversión para que los no aptos se descarten solos",
     "Optimizar el sitio tanto para consumidores como para marketing de franquicia (SEO)",
     "Usar llamados a la acción claros y persuasivos",
     "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)"
@@ -37,6 +37,25 @@
       "node_id": "sitio_web_captura_leads",
       "titulo": "Diseñar el Sitio Web como Herramienta de Captura de Leads (No de Venta)",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-024",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte",
+      "texto_nuevo": "Sugerencia de My Idea: Evitar dar información excesiva que permita al prospecto decidir sin contactar, por ejemplo el detalle financiero o de soporte, aunque sí conviene dejar claros los requisitos de inversión para que los no aptos se descarten solos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L3212-L3216",
+        "frase": "you want to avoid providing too much information--especially if it could be used to disqualify you in the eyes of your franchisee"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el LECTOR B. La idea base es del libro: no dar tanta informacion que el prospecto decida sin contactar (L3214-L3216 y L3301-L3305: 'without giving them so much information that they can decide without you', 'do not provide too much detailed information on your website'). Pero el 'en especial' del libro es la informacion que podria descartarte ante el prospecto, no una categoria concreta. Busque en todo el libro (website/site junto a financial, support, earnings, Item 19, hold back, too much information, less is more) y ningun pasaje senala la informacion financiera o de soporte como la que hay que retener; lo mas cercano es 'copious information on every aspect of the franchise investment' (L3301), que es general. Ademas el libro pide comunicar de entrada el requisito de inversion y las cualificaciones para que los no aptos se descarten solos (L3206, L3216), asi que el paso fija un objeto que el libro no pone. No llega a CONTRARIO porque el libro no dice que haya que publicar el detalle financiero o de soporte; solo que se comuniquen los requisitos. No es OPERATIVO porque anade un dato concreto (el tipo de informacion a retener) que el libro no respalda. Es PRACTICO: el dato es un formato o contenido de la web, no una cifra ni materia legal.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C012-050"
     }
   ]
 }

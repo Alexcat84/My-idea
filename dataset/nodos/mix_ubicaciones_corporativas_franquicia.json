@@ -7,7 +7,7 @@
   "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
   "pasos_accionables": [
     "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
-    "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
+    "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
     "Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno",
     "Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment",
     "Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados",
@@ -48,6 +48,25 @@
       "node_id": "combinar_crecimiento_corporativo_y_franquicia",
       "titulo": "Combinar Crecimiento Corporativo y Franquiciado como Estrategia Dual",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
+      "texto_nuevo": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1278, L3503, L3511",
+        "frase": "Franchisors with limited capital may want to reserve fewer markets for corporate growth."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon A. La primera mitad del paso (analizar capital y plan de salida para elegir la estrategia) sale de L3511. La coletilla, en cambio, pide garantizar recursos dedicados suficientes a los dos canales, y el libro dice otra cosa. Con capital limitado aconseja reservar menos mercados a lo corporativo (L3511). A los franquiciadores pequenos les aconseja poner lo corporativo en segundo plano uno o dos anos (L1278) y concentrar todos los recursos en la franquicia (L3503). Solo pide asegurar recursos suficientes al programa de franquicia, y eso para empresas grandes (L1278). Busque adequate resources, dedicated resources, both channels y cannibaliz: ningun pasaje apoya repartir recursos suficientes a ambos canales. B leyo como generalizacion lo que el libro limita al canal de franquicia.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-048"
     }
   ]
 }

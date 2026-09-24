@@ -9,7 +9,7 @@
     "Identificar el número de clasificación HS del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
     "Determinar si existe ventaja arancelaria comparando la tasa MFN vs la tasa preferencial del FTA (export.customsinfo.com)",
     "Verificar si el producto contiene insumos no originarios del FTA",
-    "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+    "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
     "Determinar si el contenido extranjero cumple con la regla de cambio arancelario (Tariff Shift) o de contenido de valor regional (RVC)"
   ],
   "entregable_esperado": "Documento con la clasificación HS del producto y determinación preliminar de si califica para beneficios arancelarios bajo el FTA aplicable",
@@ -37,5 +37,24 @@
   "ids_alias": [
     "reglas_de_origen_fta"
   ],
-  "etiqueta_arbol": "Verifica las Reglas de Origen"
+  "etiqueta_arbol": "Verifica las Reglas de Origen",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-011",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+      "texto_nuevo": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L4829-L4829",
+        "frase": "Identify the specific ROO for the final product that you are exporting by consulting the USHTS General Notes or visiting export.gov/fta and locating a ROOs chapter in the final text of a relevant FTA agreement"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La accion coincide con el libro, pero la fuente dada es otro valor: el libro remite a export.gov/fta (y a las General Notes del USHTS), no a trade.gov/fta, que no aparece en todo el libro. Por la regla de otro valor para el mismo dato, es CONTRARIO. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C017-045"
+    }
+  ]
 }

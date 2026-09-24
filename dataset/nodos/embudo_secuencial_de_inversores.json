@@ -10,7 +10,7 @@
     "Determinar qué tipo de inversor es adecuado según el monto y validación necesarios",
     "Planificar una estrategia de fundraising escalonada en el tiempo",
     "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente",
-    "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+    "Sugerencia de My Idea: investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
     "Descarta a los inversores cuyo perfil no coincide con tu etapa actual"
   ],
   "entregable_esperado": "Roadmap de fundraising que indique la secuencia esperada de rondas (F&F, angel, Serie A, etc.) y los hitos necesarios para cada transición",
@@ -39,6 +39,25 @@
       "node_id": "seleccion_etapa_fondo_vc",
       "titulo": "Identificar el Tipo de Inversor Adecuado según tu Etapa",
       "fuente": "Venture Deals"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-038",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+      "texto_nuevo": "Sugerencia de My Idea: investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L2756-L2758",
+        "frase": "VCs raise funds that last a decade (often with an option for short extensions)"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica cómo funcionan los fondos de capital de riesgo, pero nunca recomienda investigar el tamaño del fondo ni el foco de etapa de cada inversor. La búsqueda de fund size y stage focus no encuentra nada.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-093"
     }
   ]
 }

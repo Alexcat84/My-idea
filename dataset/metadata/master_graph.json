@@ -10545,10 +10545,10 @@
       "dominio": "exportacion",
       "titulo_concepto": "Cálculo de Aranceles y Tarifas de Importación",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-      "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de trade.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Identificar el código HS (Sistema Armonizado) de 6 dígitos del producto.",
-        "Consultar la base de datos de aranceles en trade.gov para el país de destino específico.",
+        "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
         "Calcular el impacto de aranceles, tarifas portuarias e impuestos sobre el precio final al consumidor.",
         "Incorporar estos costos en la estrategia de fijación de precios de exportación."
       ],
@@ -10565,7 +10565,42 @@
         "Cuando el usuario necesita determinar el costo final de su producto en un mercado extranjero específico.",
         "Si el usuario está definiendo su estrategia de precios de exportación."
       ],
-      "etiqueta_arbol": "Calcula Aranceles de Importación"
+      "etiqueta_arbol": "Calcula Aranceles de Importación",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-007",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Consultar la base de datos de aranceles en trade.gov para el país de destino específico.",
+          "texto_nuevo": "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L3681-L3681",
+            "frase": "You can calculate tariffs and taxes for most commodities to most countries by signing up to use a special database on export.gov."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro situa la base de datos de aranceles e impuestos en export.gov (L3681) y la base Customs Information en export.customsinfo.com (L4813). trade.gov solo aparece como correo tic@trade.gov (L4891) y en la unidad Industry and Analysis (L2795), nunca como base de aranceles. El libro da otro valor para el mismo dato (donde esta la herramienta), y la regla lo clasifica como CONTRARIO, no ANADIDO como decia A. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-103"
+        },
+        {
+          "id": "fidelidad-t4-008",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de trade.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+          "texto_nuevo": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L3681-L3681",
+            "frase": "You can calculate tariffs and taxes for most commodities to most countries by signing up to use a special database on export.gov."
+          },
+          "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el mismo dato que el paso 1, la base de datos de aranceles en trade.gov. El libro la situa en export.gov (L3681), y por el criterio A15 se quita el dominio. Es CONTRARIO y se corrige igual que el paso.",
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-103"
+        }
+      ]
     },
     "calculo_ebitda": {
       "node_id": "calculo_ebitda",
@@ -11026,7 +11061,7 @@
         "Rechaza a un candidato no apto aunque tenga el dinero, especialmente entre tus primeros 10 franquiciados",
         "Evalúa el impacto a largo plazo de aceptar un franquiciado débil: soporte, litigios y validación negativa",
         "Recuerda que cada franquiciado fallido debe divulgarse en el FDD y será consultado por futuros prospectos",
-        "Revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta"
+        "Sugerencia de My Idea: revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta"
       ],
       "entregable_esperado": "Documento de criterios de calificación de candidatos (perfil ideal) que usas como filtro en cada etapa del proceso de ventas",
       "nodos_previos": [
@@ -11054,6 +11089,25 @@
           "node_id": "calificacion_candidatos_franquicia",
           "titulo": "Calificación de Candidatos a Franquiciados (The Award)",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-020",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta",
+          "texto_nuevo": "Sugerencia de My Idea: revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L4204-L4214; L4264",
+            "frase": "a franchisor who is willing to walk away from the wrong sale will sell the most franchises"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón A. El libro avisa de la tentación de vender a candidatos que no están calificados (L4206-L4208) y propone como remedios involucrar a varias personas en la evaluación, con poder de veto (L4355), escuchar la intuición y aprender de los errores (L4262). Nunca propone llevar ni revisar una tasa propia de aceptación y rechazo. Busqué en todo el libro acceptance, reject, rate, approval, bias y temptation: solo salen las closing rates del proceso de venta (L4208, L4432) y el tema de rechazar al candidato con tacto (L4482), nunca una métrica de aceptación del franquiciador. El paso añade un instrumento de seguimiento concreto, una métrica, que el libro no respalda. Por eso no es una simple concreción como decía B. Es práctico, no legal ni cifra.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C005-104"
         }
       ]
     },
@@ -12045,7 +12099,7 @@
       "pasos_accionables": [
         "Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.",
         "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
-        "Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).",
+        "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
         "Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.",
         "Coordinar con el banco confirmador (en el país del exportador) para la negociación de los documentos y el cobro del pago."
       ],
@@ -12074,7 +12128,26 @@
       "ids_alias": [
         "carta_de_credito"
       ],
-      "etiqueta_arbol": "Usa Carta de Crédito"
+      "etiqueta_arbol": "Usa Carta de Crédito",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-025",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Confirmar la fecha límite de embarque y el plazo de presentación de documentos (usualmente 21 días desde la fecha del B/L).",
+          "texto_nuevo": "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L4089-L4091",
+            "frase": "Documents must be presented by the date specified."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. El libro dice que el plazo de presentacion es el que fija la carta de credito y pide confirmar con el banco que habra tiempo suficiente. Busque en todo el libro 21 days, twenty-one, within y presented within: los 21 dias solo aparecen en la carta de credito de ejemplo (L6787), nunca como plazo habitual. El libro no da otro valor tipico, simplemente no fija ninguno, asi que el usualmente 21 dias es un plazo que el libro no respalda.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-075"
+        }
+      ]
     },
     "carta_de_intencion_loi": {
       "node_id": "carta_de_intencion_loi",
@@ -13543,7 +13616,7 @@
       "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-        "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+        "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
         "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
         "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
         "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador"
@@ -13571,6 +13644,25 @@
           "node_id": "nafta_free_trade_agreements",
           "titulo": "Aprovechamiento de NAFTA y Tratados de Libre Comercio",
           "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-006",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+          "texto_nuevo": "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L2881-L2889",
+            "frase": "Tariffs will be eliminated only on goods that originate in one of the four ways defined in Article 401 of the agreement"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro enumera las cuatro vias del Articulo 401: bienes obtenidos enteramente en la region, bienes que cumplen la regla especifica del Anexo 401, bienes producidos solo con materiales originarios, y bienes con valor regional de 60 o 50 por ciento (L2883-L2889; tambien criterios A a D en L6485). El paso afirma que las cuatro reglas son tariff shift, RVC y wholly obtained: tres elementos, uno de los cuales (el cambio de clasificacion) el libro situa dentro de la regla del Anexo 401 (L6485), y omite la via de materiales exclusivamente originarios. La accion de determinar la regla aplicable si tiene apoyo, pero la enumeracion de la norma queda cambiada respecto al libro, y eso es otro valor para el mismo dato. A reconoce el problema pero lo deja en OPERATIVO.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-045"
         }
       ]
     },
@@ -15247,7 +15339,7 @@
       "resumen_teorico": "Las leyes laborales estatales y federales exigen pagar al menos salario mínimo a empleados de tiempo completo. Muchas startups clasifican incorrectamente a fundadores o ejecutivos tempranos como 'contratistas' para evitar estas obligaciones, lo cual genera riesgo legal si esas personas son en realidad empleados. Una clasificación adecuada de consultores requiere estructurar la relación con criterios específicos: proyectos definidos, pago por proyecto, ausencia de supervisión directa, no provisión de equipo/entrenamiento, permitir trabajar para otros clientes y evitar relaciones terminables a voluntad.",
       "pasos_accionables": [
         "Evaluar si la empresa tiene caja disponible para pagar salarios de mercado",
-        "Si hay caja: clasificar correctamente como empleados y pagar salario mínimo y prestaciones",
+        "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
         "Si no hay caja: estructurar contratos de consultoría con proyectos y pagos definidos por entregable",
         "Evitar supervisión directa, provisión de equipo o exclusividad con los consultores",
         "Consultar con un abogado laboral para minimizar riesgo de reclasificación"
@@ -15263,7 +15355,26 @@
         "Cuando la startup no tiene caja suficiente para pagar salarios completos",
         "Cuando se incorpora personal clave sin compensación monetaria inmediata"
       ],
-      "etiqueta_arbol": "Clasifica Bien a tus Colaboradores"
+      "etiqueta_arbol": "Clasifica Bien a tus Colaboradores",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-030",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Si hay caja: clasificar correctamente como empleados y pagar salario mínimo y prestaciones",
+          "texto_nuevo": "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4728",
+            "frase": "if a company has the cash and the individuals providing services are truly employees, the company should classify them as employees and pay wages and taxes accordingly."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro dice pagar salarios e impuestos si de verdad son empleados; las prestaciones no aparecen en el libro.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-082"
+        }
+      ]
     },
     "clasificacion_de_seriedad_de_defectos": {
       "node_id": "clasificacion_de_seriedad_de_defectos",
@@ -15983,14 +16094,14 @@
       "dominio": "core",
       "titulo_concepto": "Acuerdos para vender junto con los inversionistas o arrastrar a los minoritarios en una venta (Co-Sale y Drag-Along)",
       "fuente": "Venture Deals - Brad Feld",
-      "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. Ambas cláusulas suelen ir juntas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación.",
+      "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
       "pasos_accionables": [
         "Acepta que la cláusula de co-venta va a estar ahí, porque es prácticamente estándar en todo financiamiento de capital de riesgo",
         "Negocia un piso mínimo de acciones que puedas vender sin necesidad de ofrecer co-venta a los inversionistas",
-        "Confirma que ambas cláusulas terminan automáticamente al llegar a una oferta pública inicial calificada",
+        "Confirma que la cláusula de co-venta termina automáticamente al llegar a una oferta pública inicial calificada",
         "Define el umbral de aprobación necesario para activar el arrastre (por ejemplo, mayoría de una serie de inversión determinada)",
         "Deja claras las excepciones razonables al acuerdo de co-venta",
-        "Incluye ambas cláusulas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta"
+        "Sugerencia de My Idea: deja ambas cláusulas por escrito en los acuerdos de la ronda, por ejemplo la co-venta en un acuerdo de co-venta y el arrastre en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta"
       ],
       "entregable_esperado": "Cláusulas de co-venta y de arrastre firmadas por ti y por los inversionistas, con un piso negociado para tus ventas menores y el umbral de aprobación del arrastre claramente definido",
       "condiciones_activacion": [
@@ -16011,7 +16122,59 @@
         "drag_along_agreement",
         "acuerdo_de_co_venta_y_votacion"
       ],
-      "etiqueta_arbol": "Negocia tus Cláusulas de Co-Venta"
+      "etiqueta_arbol": "Negocia tus Cláusulas de Co-Venta",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-027",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Incluye ambas cláusulas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta",
+          "texto_nuevo": "Sugerencia de My Idea: deja ambas cláusulas por escrito en los acuerdos de la ronda, por ejemplo la co-venta en un acuerdo de co-venta y el arrastre en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L5113-L5133",
+            "frase": "The purchase agreement, investor rights agreement, co-sale agreement and voting agreement may be amended"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro recoge la co-venta en un acuerdo de co-venta propio y el arrastre en el acuerdo de votación; no dice que ambas cláusulas vayan en el acuerdo de derechos de los inversionistas. La ubicación documental propuesta es un formato que el libro no respalda.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-017"
+        },
+        {
+          "id": "fidelidad-t4-028",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. Ambas cláusulas suelen ir juntas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación.",
+          "texto_nuevo": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L5113-L5133",
+            "frase": "The purchase agreement, investor rights agreement, co-sale agreement and voting agreement may be amended"
+          },
+          "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el mismo dato que corrige C019-017: que ambas cláusulas van en el acuerdo de derechos de los inversionistas o en el acuerdo de votación. El libro pone la co-venta en un acuerdo de co-venta propio y el arrastre en el acuerdo de votación. Es un ANADIDO práctico y aparece en el resumen_teorico, así que ahí se quita el dato.",
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-017"
+        },
+        {
+          "id": "fidelidad-t4-029",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Confirma que ambas cláusulas terminan automáticamente al llegar a una oferta pública inicial calificada",
+          "texto_nuevo": "Confirma que la cláusula de co-venta termina automáticamente al llegar a una oferta pública inicial calificada",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L1967-L1971",
+            "frase": "This right of co-sale shall not apply to and shall terminate upon a Qualified IPO."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro solo dice que la co-venta termina con una IPO calificada; no dice nada sobre la terminación del drag-along en la IPO, así que extenderlo a ambas cláusulas añade una condición legal.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-046"
+        }
+      ]
     },
     "cobertura_de_intereses": {
       "fase_proyecto": "ejecucion",
@@ -26995,7 +27158,7 @@
         "Evaluar el estado actual de cada uno de los cuatro subcomponentes en tu negocio",
         "Establecer un sistema que recolecte, analice y difunda información de incidentes",
         "Definir indicadores para medir el nivel de cultura informada de tu negocio",
-        "Tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir"
+        "Sugerencia de My Idea: tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir"
       ],
       "entregable_esperado": "Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de accion para fortalecer cada subcomponente",
       "nodos_previos": [
@@ -27016,7 +27179,26 @@
         "Cuando detectas que las medidas tradicionales de seguridad no reducen los accidentes",
         "Al iniciar un diagnostico de seguridad en tu negocio"
       ],
-      "etiqueta_arbol": "Construye una Cultura de Seguridad"
+      "etiqueta_arbol": "Construye una Cultura de Seguridad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-019",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir",
+          "texto_nuevo": "Sugerencia de My Idea: tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L4740-L4777",
+            "frase": "Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica por que los cuatro subcomponentes valen la pena, pero no pide dejar esa justificacion por escrito antes de decidir; el formato escrito es un anadido practico.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C001-020"
+        }
+      ]
     },
     "cultura_de_seguridad_interpretivista_funcionalista": {
       "node_id": "cultura_de_seguridad_interpretivista_funcionalista",
@@ -36096,7 +36278,7 @@
         "Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento",
         "Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas",
         "Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos",
-        "Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital",
+        "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
         "Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control"
       ],
       "entregable_esperado": "Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa",
@@ -36135,7 +36317,26 @@
         "recursos_de_segundo_nivel",
         "sucesion_iniciada_por_fundador"
       ],
-      "etiqueta_arbol": "Elige Entre Riqueza o Control"
+      "etiqueta_arbol": "Elige Entre Riqueza o Control",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-036",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital",
+          "texto_nuevo": "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
+          "cita": {
+            "libro": "The Founder's Dilemmas - Wasserman, Noam",
+            "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+            "lineas": "L3489-L3495",
+            "frase": "Some founders, however, pursue a hybrid path--a mix of control and wealth decisions"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. En el libro, el camino híbrido es una secuencia de decisiones (control primero, riqueza después) que además aumenta el riesgo de fracasar. Las acciones con derechos de voto diferenciados no aparecen en todo el libro: la búsqueda de dual-class y de voting rights solo encuentra derechos de voto extra de los inversores.",
+          "indice": 4,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-018"
+        }
+      ]
     },
     "dilucion_propiedad_por_ronda": {
       "node_id": "dilucion_propiedad_por_ronda",
@@ -38940,7 +39141,7 @@
         "Evaluar cómo el equity split actual influye en el deseo de cada fundador de vender o esperar",
         "Identificar empleados clave cuyos contratos de compensación podrían complicar una venta",
         "Facilitar conversaciones explícitas sobre tolerancia al riesgo antes de que llegue una oferta real",
-        "Establecer mecanismos de decisión (votación, cláusulas de arrastre) para resolver desacuerdos"
+        "Establecer mecanismos de decisión para resolver desacuerdos sobre la venta"
       ],
       "entregable_esperado": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos del exit.",
       "nodos_previos": [
@@ -38955,7 +39156,26 @@
         "Cuando el equipo fundador enfrenta una oferta de adquisición y no hay consenso",
         "Si existen asimetrías significativas de equity entre cofundadores"
       ],
-      "etiqueta_arbol": "Alinea Motivaciones antes del Exit"
+      "etiqueta_arbol": "Alinea Motivaciones antes del Exit",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-037",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Establecer mecanismos de decisión (votación, cláusulas de arrastre) para resolver desacuerdos",
+          "texto_nuevo": "Establecer mecanismos de decisión para resolver desacuerdos sobre la venta",
+          "cita": {
+            "libro": "The Founder's Dilemmas - Wasserman, Noam",
+            "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+            "lineas": "L3809-L3809",
+            "frase": "What are the most effective mechanisms for resolving such divergences (e.g., founder carve-outs or earn-outs)?"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro deja como pregunta abierta qué mecanismos sirven para resolver estas divergencias. Las cláusulas de arrastre solo aparecen como un término de los inversores que los fundadores que priorizan el control deberían resistir (L2988), nunca como un mecanismo entre cofundadores.",
+          "indice": 4,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-032"
+        }
+      ]
     },
     "diversidad_activa": {
       "node_id": "diversidad_activa",
@@ -41723,7 +41943,7 @@
         "Identifica a todos los que reciben acciones con vesting, incluido tú mismo y tus primeros empleados",
         "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
         "Presenta la elección 83(b) ante la autoridad fiscal de tu país dentro de los 30 días posteriores a la entrega de las acciones",
-        "Guarda el comprobante de que la enviaste y de que la recibieron",
+        "Sugerencia de My Idea: guarda el comprobante de que la enviaste y de que la recibieron",
         "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa"
       ],
       "entregable_esperado": "Elecciones 83(b) presentadas y guardadas para ti y para todos los que tienen acciones con vesting",
@@ -41737,7 +41957,26 @@
         "Justo después de que tú o tus primeros empleados reciban acciones con vesting",
         "Antes de cualquier proceso de revisión para una inversión o venta de la empresa"
       ],
-      "etiqueta_arbol": "Elige tu Impuesto a Tiempo"
+      "etiqueta_arbol": "Elige tu Impuesto a Tiempo",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-031",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Guarda el comprobante de que la enviaste y de que la recibieron",
+          "texto_nuevo": "Sugerencia de My Idea: guarda el comprobante de que la enviaste y de que la recibieron",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4700-L4704",
+            "frase": "Potential investors will ask whether all service providers have filed timely 83(b) elections and will often require the company to make a representation in the operative purchase agreement that all such elections have been made."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. A tiene razon. El libro fija el plazo de 30 dias y dice que no se puede corregir. Anade que los inversionistas preguntan si se presento a tiempo y cuenta el caso de una eleccion sin firmar bajo una pila de papeles. En ningun sitio habla de guardar un comprobante de envio ni un acuse de recibo. Busque en todo el libro proof, receipt, certified, acknowledg, evidence, copy y record, y ninguno trata de la 83(b). El comprobante doble de envio y de recepcion es una practica documental que el libro no respalda, asi que no es solo concretar el texto.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C020-043"
+        }
+      ]
     },
     "eleccion_abogado_franquicias": {
       "node_id": "eleccion_abogado_franquicias",
@@ -43167,7 +43406,7 @@
         "Determinar qué tipo de inversor es adecuado según el monto y validación necesarios",
         "Planificar una estrategia de fundraising escalonada en el tiempo",
         "Preparar métricas de tracción específicas para pasar de una etapa de inversor a la siguiente",
-        "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+        "Sugerencia de My Idea: investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
         "Descarta a los inversores cuyo perfil no coincide con tu etapa actual"
       ],
       "entregable_esperado": "Roadmap de fundraising que indique la secuencia esperada de rondas (F&F, angel, Serie A, etc.) y los hitos necesarios para cada transición",
@@ -43196,6 +43435,25 @@
           "node_id": "seleccion_etapa_fondo_vc",
           "titulo": "Identificar el Tipo de Inversor Adecuado según tu Etapa",
           "fuente": "Venture Deals"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-038",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+          "texto_nuevo": "Sugerencia de My Idea: investiga el tamaño de fondo y el foco de etapa de cada inversor que tengas en la mira",
+          "cita": {
+            "libro": "The Founder's Dilemmas - Wasserman, Noam",
+            "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+            "lineas": "L2756-L2758",
+            "frase": "VCs raise funds that last a decade (often with an option for short extensions)"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica cómo funcionan los fondos de capital de riesgo, pero nunca recomienda investigar el tamaño del fondo ni el foco de etapa de cada inversor. La búsqueda de fund size y stage focus no encuentra nada.",
+          "indice": 4,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-093"
         }
       ]
     },
@@ -49385,7 +49643,7 @@
       "resumen_teorico": "El marketing en redes sociales para franquicias no es gratuito ni sencillo; requiere un plan enfocado en generar engagement genuino en lugar de autopromoción. Plataformas como LinkedIn suelen ser más efectivas que Facebook para captación de franquiciados por su capacidad de segmentación profesional. Un blog centralizado suele ser el punto de partida ideal, funcionando como eje de contenido distribuido hacia otros canales sociales. Además de su valor directo en ventas, las señales sociales tienen fuerte correlación positiva con el posicionamiento SEO.",
       "pasos_accionables": [
         "Crear un blog corporativo como hub de contenido relevante para el franquiciado objetivo.",
-        "Seleccionar 2-3 plataformas sociales prioritarias (ej. LinkedIn) según el perfil de audiencia.",
+        "Seleccionar las plataformas sociales prioritarias (ej. LinkedIn) segun el perfil de audiencia.",
         "Definir un calendario de publicación consistente con contenido de valor, no solo promocional.",
         "Usar herramientas de segmentación para conectar con prospectos específicos por industria y ubicación.",
         "Medir el impacto indirecto en SEO además de las conversiones directas."
@@ -49401,7 +49659,26 @@
         "Cuando el franquiciador cuenta con capacidad de generar contenido de forma sostenida.",
         "Cuando se busca reforzar la credibilidad de marca ante potenciales franquiciados."
       ],
-      "etiqueta_arbol": "Conecta en Redes Sociales"
+      "etiqueta_arbol": "Conecta en Redes Sociales",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-021",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Seleccionar 2-3 plataformas sociales prioritarias (ej. LinkedIn) según el perfil de audiencia.",
+          "texto_nuevo": "Seleccionar las plataformas sociales prioritarias (ej. LinkedIn) segun el perfil de audiencia.",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L3906-L3934",
+            "frase": "the key to success is to have and execute a highly focused plan"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide un plan enfocado y senala LinkedIn como mejor opcion, pero no fija un numero de plataformas. Busque two or three, 2-3, three platforms sin hallarlo.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C007-099"
+        }
+      ]
     },
     "estrategia_resegmentacion_mercado": {
       "node_id": "estrategia_resegmentacion_mercado",
@@ -52008,7 +52285,7 @@
         "Revisa tu experiencia previa: países con los que ya hiciste negocios, consultas recibidas y productos más solicitados",
         "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas",
         "Determina el capital disponible para producción y marketing de exportación y el plazo de retorno que esperas",
-        "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp"
+        "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado."
       ],
       "entregable_esperado": "Informe de autoevaluación que identifique tus objetivos, experiencia previa, compromiso gerencial, capacidades y brechas de recursos, sirviendo de base para decidir si procedes con la exportación.",
       "nodos_previos": [
@@ -52033,6 +52310,25 @@
           "node_id": "autoevaluacion_gerencial_exportacion",
           "titulo": "Autoevaluación Gerencial para la Decisión de Exportar",
           "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-009",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp",
+          "texto_nuevo": "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado.",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L539",
+            "frase": "take the export readiness assessment, available at export.gov/begin/assessment.asp."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da otra direccion para la misma evaluacion (export.gov, no trade.gov); trade.gov no aparece en el libro. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C015-038"
         }
       ]
     },
@@ -72940,7 +73236,7 @@
         "Traducir y adaptar el contenido del sitio web al idioma del mercado objetivo",
         "Ajustar elementos culturales (colores, símbolos, imágenes) según el mercado",
         "Configurar precios en la moneda local y métodos de pago preferidos",
-        "Validar la experiencia de usuario localizada con hablantes nativos del mercado"
+        "Sugerencia de My Idea: validar la experiencia de usuario localizada con hablantes nativos del mercado"
       ],
       "entregable_esperado": "Sitio web localizado y/o internacionalizado, adaptado a idioma, cultura y moneda del mercado objetivo",
       "nodos_previos": [
@@ -72952,7 +73248,26 @@
       "condiciones_activacion": [
         "Si la empresa busca audiencias extranjeras con idiomas o culturas distintas al mercado de origen"
       ],
-      "etiqueta_arbol": "Adapta tu Web al Mercado"
+      "etiqueta_arbol": "Adapta tu Web al Mercado",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-026",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Validar la experiencia de usuario localizada con hablantes nativos del mercado",
+          "texto_nuevo": "Sugerencia de My Idea: validar la experiencia de usuario localizada con hablantes nativos del mercado",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L3283-L3291",
+            "frase": "Localization consists of adapting one's website to meet the linguistic, cultural, and commercial requirements of a targeted market."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el LECTOR B. El libro solo enumera los rasgos a considerar al localizar (idioma, matices culturales, pagos, moneda) y no habla de validar ni probar la experiencia de usuario, ni de que lo hagan hablantes nativos. Busque native, native speaker, user experience, usability, test website y translat en todo el libro: lo mas cercano es L4577 (aprender unas palabras del idioma nativo del comprador) y L1287 (comprobar si el nombre traducido significa algo inapropiado), y ninguno respalda una prueba de usabilidad con nativos. El paso anade un metodo y un responsable nuevos, asi que es un anadido practico.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C016-029"
+        }
+      ]
     },
     "lockout_tagout_procedures": {
       "node_id": "lockout_tagout_procedures",
@@ -74615,7 +74930,7 @@
       "resumen_teorico": "Una marca protege el nombre, símbolo o eslogan que identifica tu negocio. El proceso suele incluir tres pasos: buscar si el nombre está disponible, presentar la solicitud, y esperar un periodo de publicación donde otros pueden objetar. En Estados Unidos esto se hace ante el USPTO, y la propiedad de la marca depende de quién la usó primero, no de quién la registró primero. Averigua cómo funciona esto en tu país.",
       "pasos_accionables": [
         "Busca si el nombre que quieres usar está disponible antes de comprometerte con él (en Estados Unidos esto se hace ante el USPTO; averigua cuál es la oficina equivalente en tu país). Pregunta el costo en tu mercado",
-        "Verifica que el nombre de tu negocio no esté ya registrado ante la entidad que lleva ese registro donde vives",
+        "Verifica que el nombre de tu negocio no esté ya registrado ante la entidad que lleva el registro de empresas en la jurisdicción donde constituyes tu empresa",
         "Presenta la solicitud formal de marca ante la oficina correspondiente en tu país. Pregunta el costo en tu mercado",
         "Espera el periodo de publicación, durante el cual otros pueden presentar objeciones a tu solicitud"
       ],
@@ -74630,7 +74945,26 @@
       "condiciones_activacion": [
         "Si necesitas proteger el nombre o la marca de tu producto o negocio"
       ],
-      "etiqueta_arbol": "Registra tu Marca Propia"
+      "etiqueta_arbol": "Registra tu Marca Propia",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-014",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Verifica que el nombre de tu negocio no esté ya registrado ante la entidad que lleva ese registro donde vives",
+          "texto_nuevo": "Verifica que el nombre de tu negocio no esté ya registrado ante la entidad que lleva el registro de empresas en la jurisdicción donde constituyes tu empresa",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4625",
+            "frase": "verification that the corporate name has not already been registered with the secretary of state for the state in which a company is incorporated."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro situa la verificacion del nombre en el registro de la jurisdiccion donde se constituye la empresa, no donde vive el fundador; ambas pueden diferir (una empresa puede constituirse fuera del lugar de residencia). El libro da otro valor para el mismo dato (la jurisdiccion del registro), lo que por la vara es CONTRARIO. Busque en todo el libro 'secretary of state', 'where you live', 'state of residence', 'corporate name' y no hay pasaje que apoye el lugar de residencia. El lector A juzgo otro aspecto (marcas no registradas) y no vio el cambio de jurisdiccion.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C021-076"
+        }
+      ]
     },
     "marco_analisis_mercado_cadena_suministro": {
       "node_id": "marco_analisis_mercado_cadena_suministro",
@@ -75954,7 +76288,7 @@
       "pasos_accionables": [
         "Define qué vas a medir: costo por lead, costo por aplicación, tasa de cierre y velocidad de cierre",
         "Calcula tu costo por venta, pero interprétalo con cuidado si todavía tienes pocos casos",
-        "Usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+        "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
         "Mide tu tasa de captura dividiendo los leads que generas entre los visitantes que llegan a la sección de franquicias de tu sitio",
         "Cada tres meses revisa el desempeño y reemplaza el 10-20% de los canales que peor te funcionan",
         "Haz pruebas A/B en tus páginas de aterrizaje y anuncios pagados, asegurándote de tener suficientes casos antes de sacar conclusiones"
@@ -75971,7 +76305,26 @@
         "Cuando necesitas ajustar el presupuesto de marketing de tus franquicias",
         "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas"
       ],
-      "etiqueta_arbol": "Mide tus Resultados de Marketing"
+      "etiqueta_arbol": "Mide tus Resultados de Marketing",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-022",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+          "texto_nuevo": "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L4056-L4060",
+            "frase": "you could go to TrafficEstimate.com ... you can measure site quality by going to Alexa ... The use of the free Google Analytics program can also help you measure key indicators across PPC campaigns"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro cita TrafficEstimate.com, Alexa y Google Analytics, pero AdRoll no aparece en el libro.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-102"
+        }
+      ]
     },
     "medicion_servicios": {
       "node_id": "medicion_servicios",
@@ -77849,7 +78202,7 @@
         "Investigar los métodos de pago preferidos en cada mercado objetivo",
         "Establecer una cuenta de comerciante con un banco para procesar tarjetas de crédito",
         "Evaluar proveedores de pago P2P como PayPal para transacciones internacionales",
-        "Considerar servicios de escrow para transacciones de alto riesgo o alto valor",
+        "Considerar servicios de escrow para reducir el riesgo de fraude en transacciones pequenas con compradores que exigen garantia de envio a cambio del pago anticipado",
         "Definir política de manejo de contracargos (chargebacks)"
       ],
       "entregable_esperado": "Sistema de pagos electrónicos configurado y adaptado a los métodos preferidos del mercado objetivo",
@@ -77862,7 +78215,26 @@
       "condiciones_activacion": [
         "Si la empresa procesará pagos internacionales a través de su sitio web"
       ],
-      "etiqueta_arbol": "Ofrece Pagos Según el Mercado"
+      "etiqueta_arbol": "Ofrece Pagos Según el Mercado",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-010",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Considerar servicios de escrow para transacciones de alto riesgo o alto valor",
+          "texto_nuevo": "Considerar servicios de escrow para reducir el riesgo de fraude en transacciones pequenas con compradores que exigen garantia de envio a cambio del pago anticipado",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L4027; L3335",
+            "frase": "Exporters may select escrow services as a mutually beneficial cash-in-advance option for small transactions with importers who demand assurance that the goods will be sent in exchange for advance payment."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro situa el escrow en transacciones pequenas y como proteccion contra el fraude; el paso lo orienta a transacciones de alto valor, lo que cambia la condicion. Ningun pasaje lo asocia a alto valor.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C016-073"
+        }
+      ]
     },
     "metricas_accionables": {
       "node_id": "metricas_accionables",
@@ -78824,7 +79196,7 @@
       "resumen_teorico": "Al definir la mezcla entre locales corporativos y franquiciados, cuentas con cuatro estrategias de ubicacion: Home Sweet Home, que reserva el mercado local para ti y franquicia en mercados distantes; Spiking, que abre locales corporativos distantes como vitrina y centro de soporte para futuras franquicias; Cherry Picking, que te reserva los mejores mercados y ubicaciones dejando las secundarias a franquiciados; y Reverse Cherry Picking, que toma para ti las ubicaciones suboptimas y cede las mejores a franquiciados para mejorar la validacion del sistema. Cada estrategia implica distintos niveles de ROI, riesgo, validacion ante futuros franquiciados y velocidad de crecimiento, por lo que la eleccion depende de tu capital disponible y tu plan de salida.",
       "pasos_accionables": [
         "Decide si continuaras abriendo o manteniendo locales corporativos en paralelo al desarrollo de franquicias, lanzando el canal de franquicia como una iniciativa separada que no compita con el desarrollo corporativo",
-        "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
+        "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
         "Selecciona la estrategia de ubicacion, Home Sweet Home, Spiking, Cherry Picking o Reverse Cherry Picking, segun tus objetivos de validacion, riesgo y retorno",
         "Define criterios claros para asignar mercados y ubicaciones entre lo corporativo y lo franquiciado, y para evitar encroachment",
         "Evalua el impacto de la estrategia elegida en la validacion y satisfaccion de futuros franquiciados",
@@ -78865,6 +79237,25 @@
           "node_id": "combinar_crecimiento_corporativo_y_franquicia",
           "titulo": "Combinar Crecimiento Corporativo y Franquiciado como Estrategia Dual",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-002",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, asegurando a los dos canales recursos dedicados suficientes para crecer sin canibalizarse",
+          "texto_nuevo": "Analiza tu capital disponible y tu plan de salida para orientar la eleccion de estrategia, reservando menos mercados a lo corporativo si tu capital es limitado y asegurando recursos suficientes al programa de franquicia",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L1278, L3503, L3511",
+            "frase": "Franchisors with limited capital may want to reserve fewer markets for corporate growth."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon A. La primera mitad del paso (analizar capital y plan de salida para elegir la estrategia) sale de L3511. La coletilla, en cambio, pide garantizar recursos dedicados suficientes a los dos canales, y el libro dice otra cosa. Con capital limitado aconseja reservar menos mercados a lo corporativo (L3511). A los franquiciadores pequenos les aconseja poner lo corporativo en segundo plano uno o dos anos (L1278) y concentrar todos los recursos en la franquicia (L3503). Solo pide asegurar recursos suficientes al programa de franquicia, y eso para empresas grandes (L1278). Busque adequate resources, dedicated resources, both channels y cannibaliz: ningun pasaje apoya repartir recursos suficientes a ambos canales. B leyo como generalizacion lo que el libro limita al canal de franquicia.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-048"
         }
       ]
     },
@@ -80204,7 +80595,7 @@
       "pasos_accionables": [
         "Identificar ubicaciones actuales gestionadas por gerentes contratados que podrían convertirse en franquicias",
         "Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos, incluidos ingresos, gestión de gastos",
-        "Diseñar un esquema de incentivos que replique la motivación de propiedad en las unidades franquiciadas",
+        "Apoyarse en la motivación que da la propiedad al franquiciado, sabiendo que ningún plan de incentivos para gerentes la replica",
         "Documentar innovaciones que podrían surgir de franquiciados (como sucedió con productos de McDonald's)",
         "Reconocer que la falta de control operativo directo no implica menor calidad, sino que requiere mecanismos alternativos de control"
       ],
@@ -80232,6 +80623,25 @@
           "node_id": "mito_control_calidad_corporativo",
           "titulo": "Desmitificando el Control de Calidad Corporativo vs Franquiciado",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-001",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Diseñar un esquema de incentivos que replique la motivación de propiedad en las unidades franquiciadas",
+          "texto_nuevo": "Apoyarse en la motivación que da la propiedad al franquiciado, sabiendo que ningún plan de incentivos para gerentes la replica",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L2476-L2480, L488-L492",
+            "frase": "Even the best profit-sharing plans provide managers with much lower potential rewards and much less is at risk."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon B. Segun el libro, la motivacion del franquiciado nace de su propia inversion y de ser dueno (L488-L492: \"pride in ownership that is difficult to instill in someone without a deep investment\"), y ni el mejor plan de reparto de utilidades la iguala (L2478). Disenar un esquema de incentivos para replicar esa motivacion invierte la tesis. Ademas, en las unidades franquiciadas la propiedad ya existe, y el libro dice que el manual no debe fijar la politica de bonos del franquiciado (L2602). Busque en todo el libro incentive, profit-sharing, bonus y replicate y no hay ningun pasaje que apoye el paso. No es ANADIDO porque el libro dice lo contrario, no solo calla.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-034"
         }
       ]
     },
@@ -81816,9 +82226,9 @@
       "dominio": "core",
       "titulo_concepto": "Acuerdo de Exclusividad (No-Shop Agreement)",
       "fuente": "Venture Deals - Brad Feld",
-      "resumen_teorico": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (comúnmente 30, 60 o 90 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+      "resumen_teorico": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
       "pasos_accionables": [
-        "Define el período de exclusividad (comúnmente 30, 60 o 90 días)",
+        "Define el periodo de exclusividad (normalmente de 45 a 60 dias; a veces puedes lograr que el inversor acepte 30 dias)",
         "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones",
         "Establece la obligación de avisar si alguien más se te acerca durante este periodo",
         "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí"
@@ -81840,7 +82250,42 @@
         "term_sheet_negociacion",
         "clausula_no_shop_adquisicion"
       ],
-      "etiqueta_arbol": "Pacta tu Exclusividad con Inversionistas"
+      "etiqueta_arbol": "Pacta tu Exclusividad con Inversionistas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-012",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Define el período de exclusividad (comúnmente 30, 60 o 90 días)",
+          "texto_nuevo": "Define el periodo de exclusividad (normalmente de 45 a 60 dias; a veces puedes lograr que el inversor acepte 30 dias)",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L2054",
+            "frase": "In all cases, the entrepreneur should bound the no-shop agreement by a time period, which is usually 45 to 60 days, although you can occasionally get a VC to agree to a 30-day no-shop agreement."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da como plazo habitual 45 a 60 dias y ocasionalmente 30; el paso cambia el rango e introduce 90 dias, que el libro no da (en ventas pide rechazar mas de 60).",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C021-022"
+        },
+        {
+          "id": "fidelidad-t4-013",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (comúnmente 30, 60 o 90 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+          "texto_nuevo": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L2054",
+            "frase": "In all cases, the entrepreneur should bound the no-shop agreement by a time period, which is usually 45 to 60 days, although you can occasionally get a VC to agree to a 30-day no-shop agreement."
+          },
+          "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen_teorico repite el mismo plazo CONTRARIO del paso 0 (30, 60 o 90 días). El libro da como habitual de 45 a 60 días y a veces 30 (Venture Deals, L2054). Se corrige igual que el paso.",
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C021-022"
+        }
+      ]
     },
     "no_shop_extension_negotiation": {
       "node_id": "no_shop_extension_negotiation",
@@ -81851,7 +82296,7 @@
       "resumen_teorico": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor gana temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
       "pasos_accionables": [
         "Anticipar la solicitud de extensión del no-shop antes de que expire el periodo original",
-        "Identificar 1-2 concesiones razonables a solicitar a cambio de la extensión (ej. relief de working capital, financiamiento puente)",
+        "Identificar concesiones razonables a solicitar a cambio de la extension (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de mas",
         "Evitar pedir demasiado para no deteriorar el tono de la negociación final",
         "Negociar carve-outs específicos en el no-shop, como financiamientos del sindicato existente, para mantener presión sobre el comprador",
         "Incluir siempre una cláusula de salida automática si el comprador termina el proceso"
@@ -81871,7 +82316,26 @@
         "Cuando el periodo de no-shop está por vencer y el comprador solicita una extensión",
         "Cuando el vendedor busca maximizar el apalancamiento residual antes del cierre"
       ],
-      "etiqueta_arbol": "Negocia la Extensión del Acuerdo"
+      "etiqueta_arbol": "Negocia la Extensión del Acuerdo",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-032",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Identificar 1-2 concesiones razonables a solicitar a cambio de la extensión (ej. relief de working capital, financiamiento puente)",
+          "texto_nuevo": "Identificar concesiones razonables a solicitar a cambio de la extension (ej. alivio del umbral de working capital, financiamiento puente), sin pedir de mas",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4307",
+            "frase": "The seller should be careful not to overreach at this moment"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro menciona esas concesiones y pide no excederse, pero no fija un numero de concesiones; el 1-2 no aparece.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-061"
+        }
+      ]
     },
     "no_usar_triangulo_heinrich": {
       "node_id": "no_usar_triangulo_heinrich",
@@ -90614,7 +91078,7 @@
       "fuente": "Venture Deals - Brad Feld",
       "resumen_teorico": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos e hitos. Idealmente en 10 diapositivas o menos.",
       "pasos_accionables": [
-        "Estructurar el deck en máximo 10-15 slides cubriendo: problema, oportunidad, equipo, competencia, plan, estado actual y financieros",
+        "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamano de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
         "Adaptar la duración y profundidad según la audiencia (3 min, 8 min, 30 min)",
         "Invertir en buen diseño visual, idealmente con ayuda de un diseñador",
         "Preparar una versión para enviar por email y otra para presentar en vivo si son distintas"
@@ -90632,7 +91096,26 @@
         "Cuando un VC pide una reunión o presentación formal",
         "Cuando se prepara para pitch events o reuniones de partnership"
       ],
-      "etiqueta_arbol": "Arma tu Presentación a Inversionistas"
+      "etiqueta_arbol": "Arma tu Presentación a Inversionistas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-015",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Estructurar el deck en máximo 10-15 slides cubriendo: problema, oportunidad, equipo, competencia, plan, estado actual y financieros",
+          "texto_nuevo": "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamano de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L456; L469",
+            "frase": "Most good investor presentations can be done in 10 slides or fewer."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da 10 a 20 paginas como habitual e ideal 10 o menos; el paso fija otro umbral (maximo 10-15).",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-040"
+        }
+      ]
     },
     "presentacion_problema_tres_columnas": {
       "node_id": "presentacion_problema_tres_columnas",
@@ -96506,7 +96989,7 @@
         "Identifica directorios y publicaciones específicas de la industria o de franquicias relevantes para el perfil de franquiciado que buscas",
         "Evalúa el costo por lead y la tasa de cierre esperada, junto con el 'pass around value' de la publicación, antes de invertir",
         "Prioriza ediciones regionales o locales si buscas un despliegue localizado en vez de nacional",
-        "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal",
+        "Sugerencia de My Idea: implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal impreso",
         "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible"
       ],
       "entregable_esperado": "Análisis costo-beneficio de medios impresos disponibles con métricas estimadas frente a otros canales y decisión documentada sobre su inclusión en el presupuesto de marketing.",
@@ -96531,6 +97014,25 @@
           "node_id": "publicidad_impresa_para_franquicias",
           "titulo": "Publicidad Impresa en la Venta de Franquicias",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-023",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal",
+          "texto_nuevo": "Sugerencia de My Idea: implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal impreso",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L3776-L3780",
+            "frase": "Unfortunately, when it comes to print, one of the big problems is measurement."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon A. Sobre el impreso, el libro senala el problema de medicion: el lead acaba contando como busqueda organica o trafico directo. Su respuesta es que el buen marketer haga mas analisis que medir CPM, coste por lead y coste por venta (L3780). No propone codigos ni URL unicas para el impreso. El link coding y las landing pages propias que cita B (L4060-L4064) se refieren a enlaces entrantes online y PPC, no a anuncios impresos. Busque promo code, coupon code, unique url, tracking number, phone number, source code, dedicated y landing page, y no aparece nada aplicado al impreso. Los codigos no salen en ningun sitio. La herramienta es practica y no esta en el libro.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-109"
         }
       ]
     },
@@ -98810,7 +99312,7 @@
         "Revisa si la hoja de términos (term sheet) incluye una cláusula de redención estándar o una redención por cambio adverso, que debes evitar.",
         "Negocia que la redención necesite la aprobación conjunta de todas las clases de inversionistas preferentes, no solo de una clase minoritaria.",
         "Evalúa si tu negocio realmente podría pagar esa recompra si llegara el momento.",
-        "Rechaza cualquier cláusula de redención basada en un cambio material adverso que no esté claramente definido."
+        "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista"
       ],
       "entregable_esperado": "Una cláusula de redención revisada, sin lenguaje de redención por cambio adverso, y con protecciones aprobadas por tu consejo (board).",
       "nodos_previos": [
@@ -98823,7 +99325,26 @@
         "Si quien invierte te pide derechos de redención en la hoja de términos.",
         "Si existe el riesgo de que tu negocio se vuelva estable pero poco atractivo para una venta o salida a bolsa (IPO)."
       ],
-      "etiqueta_arbol": "Conoce tus Derechos de Redención"
+      "etiqueta_arbol": "Conoce tus Derechos de Redención",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-017",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Rechaza cualquier cláusula de redención basada en un cambio material adverso que no esté claramente definido.",
+          "texto_nuevo": "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L1698-L1706; L1717",
+            "frase": "We recommend you never agree to the following term that has recently crept into term sheets"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro rechaza siempre la redencion por cambio adverso; el paso la rechaza solo si no esta claramente definida, abriendo una excepcion que el libro no admite.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-070"
+        }
+      ]
     },
     "redes_de_seguridad_regulatoria": {
       "node_id": "redes_de_seguridad_regulatoria",
@@ -100187,7 +100708,7 @@
         "Identificar el número de clasificación HS del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
         "Determinar si existe ventaja arancelaria comparando la tasa MFN vs la tasa preferencial del FTA (export.customsinfo.com)",
         "Verificar si el producto contiene insumos no originarios del FTA",
-        "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+        "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
         "Determinar si el contenido extranjero cumple con la regla de cambio arancelario (Tariff Shift) o de contenido de valor regional (RVC)"
       ],
       "entregable_esperado": "Documento con la clasificación HS del producto y determinación preliminar de si califica para beneficios arancelarios bajo el FTA aplicable",
@@ -100215,7 +100736,26 @@
       "ids_alias": [
         "reglas_de_origen_fta"
       ],
-      "etiqueta_arbol": "Verifica las Reglas de Origen"
+      "etiqueta_arbol": "Verifica las Reglas de Origen",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-011",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente (trade.gov/fta)",
+          "texto_nuevo": "Consultar la regla de origen específica del producto en el capítulo de ROOs del FTA correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado, o el organismo equivalente en tu mercado",
+          "cita": {
+            "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+            "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+            "lineas": "L4829-L4829",
+            "frase": "Identify the specific ROO for the final product that you are exporting by consulting the USHTS General Notes or visiting export.gov/fta and locating a ROOs chapter in the final text of a relevant FTA agreement"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La accion coincide con el libro, pero la fuente dada es otro valor: el libro remite a export.gov/fta (y a las General Notes del USHTS), no a trade.gov/fta, que no aparece en todo el libro. Por la regla de otro valor para el mismo dato, es CONTRARIO. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C017-045"
+        }
+      ]
     },
     "reglas_deming_consultoria_calidad": {
       "node_id": "reglas_deming_consultoria_calidad",
@@ -101075,10 +101615,10 @@
       "pasos_accionables": [
         "Proyectar el estado de resultados del franquiciante basado en ingresos por regalías, no ventas totales",
         "Comparar la estructura de costos de un franquiciante liviano vs. una operación corporativa completa",
-        "Validar supuestos de rentabilidad con benchmarks de la industria específica",
+        "Tratar con prudencia los supuestos de rentabilidad, porque no hay cifras de referencia fiables del sector para estimar el margen neto del franquiciante",
         "Establecer metas de margen neto para la organización franquiciante"
       ],
-      "entregable_esperado": "Proyección financiera de rentabilidad del franquiciante con benchmarks de industria",
+      "entregable_esperado": "Proyección financiera de rentabilidad del franquiciante con supuestos prudentes, ya que no hay cifras de referencia fiables del sector para estimar su margen neto",
       "nodos_previos": [
         "facilidad_supervision_franquicia"
       ],
@@ -101089,7 +101629,42 @@
       "condiciones_activacion": [
         "Si se está construyendo el modelo financiero del negocio franquiciante"
       ],
-      "etiqueta_arbol": "Aumenta tu Rentabilidad al Franquiciar"
+      "etiqueta_arbol": "Aumenta tu Rentabilidad al Franquiciar",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-004",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Validar supuestos de rentabilidad con benchmarks de la industria específica",
+          "texto_nuevo": "Tratar con prudencia los supuestos de rentabilidad, porque no hay cifras de referencia fiables del sector para estimar el margen neto del franquiciante",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L1466-L1468",
+            "frase": "FYI, there are no reliable figures to use when estimating net margin."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El paso pertenece al nodo sobre la rentabilidad del franquiciante y pide validarla con benchmarks del sector. El libro dice lo contrario: esa rentabilidad es dificil de cuantificar o probar y una comparacion directa es imposible (L347). Tambien dice que los estudios de 40 y 45,6 por ciento tienen poca validez estadistica y estan anticuados (L349), que no hay cifras fiables de margen neto y que la herramienta de la IFA no reune datos suficientes (L1468). Busque en todo el libro pasajes que apoyen el paso. El libro solo usa comparables para otras cosas: los multiplos de venta (L1458), las tarifas de la competencia (L1693, L1705), la formacion (L2775) y el presupuesto de marketing (L3443). Ninguno sirve para validar la rentabilidad. A dice que el paso no fija cifras, pero el problema no es la cifra: el paso presenta como fiable una validacion que el libro dice que no existe.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-063"
+        },
+        {
+          "id": "fidelidad-t4-005",
+          "fecha": "2026-09-24",
+          "campo": "entregable_esperado",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Proyección financiera de rentabilidad del franquiciante con benchmarks de industria",
+          "texto_nuevo": "Proyección financiera de rentabilidad del franquiciante con supuestos prudentes, ya que no hay cifras de referencia fiables del sector para estimar su margen neto",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L1466-L1468",
+            "frase": "FYI, there are no reliable figures to use when estimating net margin."
+          },
+          "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el mismo dato que el paso 2, respaldar la rentabilidad del franquiciante con benchmarks de industria. Segun el libro no hay cifras fiables para estimar el margen neto (L1466-L1468). Es CONTRARIO y se corrige igual que el paso.",
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-063"
+        }
+      ]
     },
     "reparto_inicial_equity": {
       "node_id": "reparto_inicial_equity",
@@ -101693,7 +102268,7 @@
         "Preguntale directamente a tu inversionista que expectativa tiene sobre el capital que tu empresa va a necesitar mas adelante",
         "Investiga cuantas otras empresas tiene en su cartera y cuanta capacidad real de reservas le queda",
         "Presta atención a señales de resistencia a nuevas rondas o presión para vender la empresa",
-        "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital"
+        "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas"
       ],
       "entregable_esperado": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposicion para acompanarte en futuras rondas",
       "nodos_previos": [
@@ -101707,7 +102282,26 @@
         "Cuando necesitas anticipar si tus inversionistas actuales te van a apoyar en rondas futuras",
         "Cuando tu inversionista actual muestra resistencia a que consigas nuevo financiamiento"
       ],
-      "etiqueta_arbol": "Entiende las Reservas de tu Inversor"
+      "etiqueta_arbol": "Entiende las Reservas de tu Inversor",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-016",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital",
+          "texto_nuevo": "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L1101; L3197",
+            "frase": "In a pay-to-play provision, investors must keep investing pro-ratably in future financings (paying) in order to not have their preferred stock converted to common stock"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro define el pay-to-play como una obligacion del inversionista (L1101, L1133: 'It causes the investors to stand up...'), y en ninguna parte del libro obliga al fundador; el paso dice 'terminos que te obligan a seguir poniendo dinero para mantener tus derechos', invirtiendo a quien obliga. Busque 'pay-to-play' en todo el libro y ningun pasaje apoya esa lectura. La relacion con las reservas si esta en L3197 (mas resistencia a nuevas rondas cuando hay pay-to-play), por lo que el texto fiel conserva esa parte.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-045"
+        }
+      ]
     },
     "reset_total_de_expectativas": {
       "node_id": "reset_total_de_expectativas",
@@ -107492,7 +108086,7 @@
         "Verifica que el consultor evalúe tu negocio antes de recomendar franquiciar, como señal de integridad",
         "Busca el nombre de la firma y sus consultores en Google y LinkedIn durante al menos una hora para revisar experiencia y reputación",
         "Solicita y verifica referencias de clientes anteriores comprobando resultados reales, no solo testimonios",
-        "Compara el alcance exacto de los servicios de cada firma, investigación, legal, operaciones, marketing, ventas, no solo el precio",
+        "Compara el alcance exacto de los servicios de cada firma, investigación, planificación estratégica, modelo financiero, operaciones, marketing, ventas, no solo el precio, y contrata lo legal con un abogado de franquicias independiente",
         "Pregunta por el conocimiento institucional acumulado, como costo por lead o tasas de cierre, y si hay revisión por pares en sus decisiones",
         "Prioriza la calidad y expertise del consultor sobre la cercanía geográfica, evaluando también su flexibilidad de precios y modalidades"
       ],
@@ -107520,6 +108114,25 @@
           "node_id": "criterios_seleccion_consultor_franquicia",
           "titulo": "Criterios para Elegir un Consultor de Franquicias",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-003",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Compara el alcance exacto de los servicios de cada firma, investigación, legal, operaciones, marketing, ventas, no solo el precio",
+          "texto_nuevo": "Compara el alcance exacto de los servicios de cada firma, investigación, planificación estratégica, modelo financiero, operaciones, marketing, ventas, no solo el precio, y contrata lo legal con un abogado de franquicias independiente",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L5322-L5423",
+            "frase": "Note: Some consulting firms provide franchise agreements and disclosure documents and will tout the advantages of getting everything done under one roof. In the legal community and elsewhere, this is widely frowned upon."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. Comparar el alcance de los servicios y no solo el precio es fiel (Apples to Apples, L5404-L5406). Pero el paso cuenta lo legal entre los servicios de la consultora que hay que valorar. La lista de Breadth of Services del libro (L5325-L5357) no incluye lo legal. Ademas, el libro dice que las consultoras nunca deben ejercer el derecho (L2377: consulting firms should never practice law) y que ofrecer los documentos legales bajo un mismo techo esta mal visto (L5423). Busque en todo el libro algun pasaje que apoye pedir servicios legales a la consultora (one roof, practice law, legal services) y no hay ninguno. El libro separa al consultor del abogado de franquicias.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-019"
         }
       ]
     },
@@ -111021,7 +111634,7 @@
       "pasos_accionables": [
         "Diseñar una sección de oportunidad de franquicia separada de la sección al consumidor",
         "Incluir mecanismos de captura de contacto visibles a un clic de distancia en cada página, del tipo formularios, descargas, videos",
-        "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte",
+        "Sugerencia de My Idea: Evitar dar información excesiva que permita al prospecto decidir sin contactar, por ejemplo el detalle financiero o de soporte, aunque sí conviene dejar claros los requisitos de inversión para que los no aptos se descarten solos",
         "Optimizar el sitio tanto para consumidores como para marketing de franquicia (SEO)",
         "Usar llamados a la acción claros y persuasivos",
         "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)"
@@ -111050,6 +111663,25 @@
           "node_id": "sitio_web_captura_leads",
           "titulo": "Diseñar el Sitio Web como Herramienta de Captura de Leads (No de Venta)",
           "fuente": "Franchise Your Business - Mark Siebert"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-024",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Evitar dar información excesiva que permita al prospecto autoeliminarse sin contactar, en especial la información financiera o de soporte",
+          "texto_nuevo": "Sugerencia de My Idea: Evitar dar información excesiva que permita al prospecto decidir sin contactar, por ejemplo el detalle financiero o de soporte, aunque sí conviene dejar claros los requisitos de inversión para que los no aptos se descarten solos",
+          "cita": {
+            "libro": "Franchise Your Business - Mark Siebert",
+            "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+            "lineas": "L3212-L3216",
+            "frase": "you want to avoid providing too much information--especially if it could be used to disqualify you in the eyes of your franchisee"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el LECTOR B. La idea base es del libro: no dar tanta informacion que el prospecto decida sin contactar (L3214-L3216 y L3301-L3305: 'without giving them so much information that they can decide without you', 'do not provide too much detailed information on your website'). Pero el 'en especial' del libro es la informacion que podria descartarte ante el prospecto, no una categoria concreta. Busque en todo el libro (website/site junto a financial, support, earnings, Item 19, hold back, too much information, less is more) y ningun pasaje senala la informacion financiera o de soporte como la que hay que retener; lo mas cercano es 'copious information on every aspect of the franchise investment' (L3301), que es general. Ademas el libro pide comunicar de entrada el requisito de inversion y las cualificaciones para que los no aptos se descarten solos (L3206, L3216), asi que el paso fija un objeto que el libro no pone. No llega a CONTRARIO porque el libro no dice que haya que publicar el detalle financiero o de soporte; solo que se comuniquen los requisitos. No es OPERATIVO porque anade un dato concreto (el tipo de informacion a retener) que el libro no respalda. Es PRACTICO: el dato es un formato o contenido de la web, no una cifra ni materia legal.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C012-050"
         }
       ]
     },
@@ -114600,7 +115232,7 @@
       "resumen_teorico": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades o inversionistas, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
       "pasos_accionables": [
         "Identificar emprendedores locales con historial de cofundación de empresas de alto crecimiento",
-        "Formar un núcleo de liderazgo de máximo 10-12 emprendedores comprometidos",
+        "Formar un núcleo de liderazgo con una masa crítica de emprendedores comprometidos, a menudo menos de una docena, abierto a que se sumen más líderes",
         "Diferenciar el rol de apoyo (gobierno, universidades, inversionistas) del rol de liderazgo (emprendedores)",
         "Evitar que actores no emprendedores intenten dirigir la estrategia del ecosistema"
       ],
@@ -114614,7 +115246,26 @@
       "condiciones_activacion": [
         "Si el usuario busca construir o fortalecer un ecosistema emprendedor regional"
       ],
-      "etiqueta_arbol": "Deja Liderar a Emprendedores"
+      "etiqueta_arbol": "Deja Liderar a Emprendedores",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-018",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Formar un núcleo de liderazgo de máximo 10-12 emprendedores comprometidos",
+          "texto_nuevo": "Formar un núcleo de liderazgo con una masa crítica de emprendedores comprometidos, a menudo menos de una docena, abierto a que se sumen más líderes",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L5564-L5594",
+            "frase": "All that is needed is a critical mass of entrepreneurs, often fewer than a dozen, who will provide leadership... The leaders have to be open to having more leaders involved"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da menos de una docena como masa critica suficiente, no como tope, y pide que los lideres esten abiertos a sumar mas lideres; fijar un maximo invierte ese umbral.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-013"
+        }
+      ]
     },
     "tesis_boulder_stack_emprendedor": {
       "node_id": "tesis_boulder_stack_emprendedor",
@@ -118512,9 +119163,9 @@
       "fuente": "Venture Deals - Brad Feld",
       "resumen_teorico": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Estos detalles legales y fiscales varían según el país, así que antes de actuar verifícalos con un profesional en tu mercado.",
       "pasos_accionables": [
-        "Contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+        "Sugerencia de My Idea: contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
         "Consigue la valoración antes de otorgar nuevas opciones sobre acciones a tus empleados",
-        "Actualiza la valoración al menos una vez al año o cuando pase algo importante en tu negocio",
+        "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS o la autoridad equivalente en tu mercado",
         "Guarda la documentación de la valoración por si te auditan"
       ],
       "entregable_esperado": "Una valoración vigente y documentada que respalde el precio al que tus empleados pueden ejercer sus opciones sobre acciones",
@@ -118530,7 +119181,43 @@
         "Cuando vayas a otorgar opciones sobre acciones a tus empleados",
         "Después de cerrar una ronda de financiamiento con inversionistas"
       ],
-      "etiqueta_arbol": "Valora tus Opciones Justamente"
+      "etiqueta_arbol": "Valora tus Opciones Justamente",
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-033",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+          "texto_nuevo": "Sugerencia de My Idea: contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4685-L4687",
+            "frase": "If a company used a professional valuation firm, the valuation would be assumed to be correct... Recently, Carta announced that they'll do 409A valuations"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda usar una firma profesional o Carta, pero no fija que se haga despues de cada ronda de financiamiento; esa frecuencia no aparece.",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-017"
+        },
+        {
+          "id": "fidelidad-t4-035",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Actualiza la valoración al menos una vez al año o cuando pase algo importante en tu negocio",
+          "texto_nuevo": "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS o la autoridad equivalente en tu mercado",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L4685-L4687",
+            "frase": "Originally, these costs were about $5,000 to $15,000 per year"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no fija ninguna periodicidad minima ni causa de actualizacion de la valoracion 409A; el plazo es materia fiscal no respaldada.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-097"
+        }
+      ]
     },
     "valuacion_pre_post_money": {
       "node_id": "valuacion_pre_post_money",
@@ -119732,7 +120419,7 @@
         "Documenta el derecho de la empresa a recomprar las acciones no adquiridas si alguien se va antes de tiempo",
         "Negocia si aplican clausulas de aceleracion ante un cambio de control, prefiriendo la de doble gatillo (cambio de control mas despido sin causa) sobre la de un solo gatillo, ya que esta ultima puede desincentivar a compradores potenciales",
         "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion",
-        "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+        "Sugerencia de My Idea: decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
         "Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa"
       ],
       "entregable_esperado": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
@@ -119779,6 +120466,25 @@
           "node_id": "eleccion_estructura_vesting_founder",
           "titulo": "Cómo repartir las acciones en el tiempo entre fundadores y contrataciones (vesting)",
           "fuente": "The Founder's Dilemmas"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t4-034",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+          "texto_nuevo": "Sugerencia de My Idea: decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+          "cita": {
+            "libro": "Venture Deals - Brad Feld",
+            "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+            "lineas": "L1210-L1212",
+            "frase": "vesting is the mechanism to ensure the equity is earned over time"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro solo trata el vesting por tiempo; no plantea vesting por desempeno para empleados ni fundadores (solo warrants de desempeno para socios estrategicos).",
+          "indice": 7,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-060"
         }
       ]
     },

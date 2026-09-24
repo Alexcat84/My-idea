@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar ubicaciones actuales gestionadas por gerentes contratados que podrían convertirse en franquicias",
     "Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos, incluidos ingresos, gestión de gastos",
-    "Diseñar un esquema de incentivos que replique la motivación de propiedad en las unidades franquiciadas",
+    "Apoyarse en la motivación que da la propiedad al franquiciado, sabiendo que ningún plan de incentivos para gerentes la replica",
     "Documentar innovaciones que podrían surgir de franquiciados (como sucedió con productos de McDonald's)",
     "Reconocer que la falta de control operativo directo no implica menor calidad, sino que requiere mecanismos alternativos de control"
   ],
@@ -36,6 +36,25 @@
       "node_id": "mito_control_calidad_corporativo",
       "titulo": "Desmitificando el Control de Calidad Corporativo vs Franquiciado",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Diseñar un esquema de incentivos que replique la motivación de propiedad en las unidades franquiciadas",
+      "texto_nuevo": "Apoyarse en la motivación que da la propiedad al franquiciado, sabiendo que ningún plan de incentivos para gerentes la replica",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L2476-L2480, L488-L492",
+        "frase": "Even the best profit-sharing plans provide managers with much lower potential rewards and much less is at risk."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon B. Segun el libro, la motivacion del franquiciado nace de su propia inversion y de ser dueno (L488-L492: \"pride in ownership that is difficult to instill in someone without a deep investment\"), y ni el mejor plan de reparto de utilidades la iguala (L2478). Disenar un esquema de incentivos para replicar esa motivacion invierte la tesis. Ademas, en las unidades franquiciadas la propiedad ya existe, y el libro dice que el manual no debe fijar la politica de bonos del franquiciado (L2602). Busque en todo el libro incentive, profit-sharing, bonus y replicate y no hay ningun pasaje que apoye el paso. No es ANADIDO porque el libro dice lo contrario, no solo calla.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-034"
     }
   ]
 }

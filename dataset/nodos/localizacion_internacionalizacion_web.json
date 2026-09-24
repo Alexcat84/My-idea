@@ -9,7 +9,7 @@
     "Traducir y adaptar el contenido del sitio web al idioma del mercado objetivo",
     "Ajustar elementos culturales (colores, símbolos, imágenes) según el mercado",
     "Configurar precios en la moneda local y métodos de pago preferidos",
-    "Validar la experiencia de usuario localizada con hablantes nativos del mercado"
+    "Sugerencia de My Idea: validar la experiencia de usuario localizada con hablantes nativos del mercado"
   ],
   "entregable_esperado": "Sitio web localizado y/o internacionalizado, adaptado a idioma, cultura y moneda del mercado objetivo",
   "nodos_previos": [
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Si la empresa busca audiencias extranjeras con idiomas o culturas distintas al mercado de origen"
   ],
-  "etiqueta_arbol": "Adapta tu Web al Mercado"
+  "etiqueta_arbol": "Adapta tu Web al Mercado",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar la experiencia de usuario localizada con hablantes nativos del mercado",
+      "texto_nuevo": "Sugerencia de My Idea: validar la experiencia de usuario localizada con hablantes nativos del mercado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L3283-L3291",
+        "frase": "Localization consists of adapting one's website to meet the linguistic, cultural, and commercial requirements of a targeted market."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el LECTOR B. El libro solo enumera los rasgos a considerar al localizar (idioma, matices culturales, pagos, moneda) y no habla de validar ni probar la experiencia de usuario, ni de que lo hagan hablantes nativos. Busque native, native speaker, user experience, usability, test website y translat en todo el libro: lo mas cercano es L4577 (aprender unas palabras del idioma nativo del comprador) y L1287 (comprobar si el nombre traducido significa algo inapropiado), y ninguno respalda una prueba de usabilidad con nativos. El paso anade un metodo y un responsable nuevos, asi que es un anadido practico.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C016-029"
+    }
+  ]
 }

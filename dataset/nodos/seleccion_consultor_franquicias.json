@@ -9,7 +9,7 @@
     "Verifica que el consultor evalúe tu negocio antes de recomendar franquiciar, como señal de integridad",
     "Busca el nombre de la firma y sus consultores en Google y LinkedIn durante al menos una hora para revisar experiencia y reputación",
     "Solicita y verifica referencias de clientes anteriores comprobando resultados reales, no solo testimonios",
-    "Compara el alcance exacto de los servicios de cada firma, investigación, legal, operaciones, marketing, ventas, no solo el precio",
+    "Compara el alcance exacto de los servicios de cada firma, investigación, planificación estratégica, modelo financiero, operaciones, marketing, ventas, no solo el precio, y contrata lo legal con un abogado de franquicias independiente",
     "Pregunta por el conocimiento institucional acumulado, como costo por lead o tasas de cierre, y si hay revisión por pares en sus decisiones",
     "Prioriza la calidad y expertise del consultor sobre la cercanía geográfica, evaluando también su flexibilidad de precios y modalidades"
   ],
@@ -37,6 +37,25 @@
       "node_id": "criterios_seleccion_consultor_franquicia",
       "titulo": "Criterios para Elegir un Consultor de Franquicias",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Compara el alcance exacto de los servicios de cada firma, investigación, legal, operaciones, marketing, ventas, no solo el precio",
+      "texto_nuevo": "Compara el alcance exacto de los servicios de cada firma, investigación, planificación estratégica, modelo financiero, operaciones, marketing, ventas, no solo el precio, y contrata lo legal con un abogado de franquicias independiente",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L5322-L5423",
+        "frase": "Note: Some consulting firms provide franchise agreements and disclosure documents and will tout the advantages of getting everything done under one roof. In the legal community and elsewhere, this is widely frowned upon."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. Comparar el alcance de los servicios y no solo el precio es fiel (Apples to Apples, L5404-L5406). Pero el paso cuenta lo legal entre los servicios de la consultora que hay que valorar. La lista de Breadth of Services del libro (L5325-L5357) no incluye lo legal. Ademas, el libro dice que las consultoras nunca deben ejercer el derecho (L2377: consulting firms should never practice law) y que ofrecer los documentos legales bajo un mismo techo esta mal visto (L5423). Busque en todo el libro algun pasaje que apoye pedir servicios legales a la consultora (one roof, practice law, legal services) y no hay ninguno. El libro separa al consultor del abogado de franquicias.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-019"
     }
   ]
 }
