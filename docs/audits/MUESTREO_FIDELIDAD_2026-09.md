@@ -9,6 +9,8 @@ NECESITO AL FUNDADOR (fase 1 mas fase 2, tras la reconciliacion): 8 libros sigue
 - Solo por INFERIDOS por encima del 10 por ciento: Assembling Tomorrow, Voss, Cradle to Cradle y couriers.
 - Salen del umbral Wasserman (8,6 por ciento, al leer Horowitz) y Blank (4,2 por ciento).
 
+FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 191 fichas en la seccion 14, una por INFERIDO: 151 OPERATIVO, 22 ANADIDO, 17 FIEL y 1 CONTRARIO. Cada una trae el pasaje literal del libro que contiene lo correcto, su texto fiel propuesto y un campo vacio para la decision del fundador. Todos los pasajes y frases clave se comprobaron por script (seccion 14.3).
+
 # MUESTREO DE FIDELIDAD: RESUMEN DE LAS DOS FASES
 
 **Politica del fundador (25 sep 2026), literal:**
@@ -68,7 +70,8 @@ NECESITO AL FUNDADOR (fase 1 mas fase 2, tras la reconciliacion): 8 libros sigue
 - Pre-registro de la fase 2: `cfaba6d514cea5ff58bc31c6f8d3b3fd423004a8`.
 - Salida del sorteo de la fase 2: `aff61e8b25583c2ce5a447eebd8a5ae2173f4480`.
 - Primera integracion de la fase 2: `1d0053e3ed0acc6e41867431b01024444ac35109`.
-- Cierre de la particion y de las fichas: el commit que anade este bloque (su hash va en el mensaje de cierre).
+- Cierre de la seccion 13.4 y de las fichas de correccion: `0885863d2ff671dec30094f9f9947511dc9a16fb`.
+- Fichas de todos los INFERIDOS y pasajes literales: el commit que anade este bloque (su hash va en el mensaje de cierre).
 
 ---
 
@@ -1064,6 +1067,10 @@ Son pasos marcados INFERIDO que rozan la contradiccion. Con la vara del pre-regi
 - la frase del libro de cada cita (principal y de apoyo) se comprobo con un script contra la linea indicada del fichero fuente: 0 errores;
 - en cada nodo se busco el dato en el titulo, el resumen, el entregable y los demas pasos. Si otro campo repite el dato, la ficha trae su segmento actual y el corregido (`otro_campo`); si hay otro dato distinto, que este muestreo no juzgo, queda anotado (`nota_...`).
 
+Debajo de cada bloque va LO QUE DICE EL LIBRO:
+- la FRASE CLAVE;
+- el pasaje literal completo de cada linea citada, copiado del txt y comprobado linea a linea por script (formato y comprobacion en las secciones 14.2 y 14.3).
+
 Las mismas fichas estan en `fichas.json`, en el scratchpad de la sesion. Nada de esto se ha aplicado a `dataset/`.
 
 ```
@@ -1084,6 +1091,34 @@ cambio: quita la via de los niveles cognitivos de las omisiones pasadas (que el 
 nota_resumen_teorico: El resumen describe los niveles cognitivos de la Tabla 5.3 como descripcion, no como instruccion: es fiel y no se toca. El paso 3 del mismo nodo tiene su propia ficha (A14) y queda coherente con este.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L2250 "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses"
+
+PASAJE [reason] L2170 a L2170, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2170: From an analytical point of view there are at least two approaches towards a better understanding of maintenance omissions, one seeking to identify the underlying cognitive mechanisms, the other trying to determine what aspects of a task cause it to be especially omission-prone. The former route is made difficult by the fact that an omission can arise within a number of cognitive processes concerned with planning and executing an action, as summarized in Table 5.3. Even when the omission is one’s own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.
+
+PASAJE [reason] L2210 a L2210, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2210: The step is functionally isolated from the preceding actions. Before, the act of removing the previously copied page had been cued by the need to replace it with the next page. In this instance, there is no next page.
+
+PASAJE [reason] L2218 a L2218, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2218: The step occurs close to the end of the task. Studies of absentminded slips in everyday life have shown that such ‘premature exits’ are a common form of omission which can be prompted by a preoccupation with the next task. However, in maintenance work organized around an eight- or twelve-hour shift pattern, there is no guarantee that the individual who starts upon a job will be the one to complete it. And even when the same person performs the whole task, there is always the possibility that he or she may be called away or distracted before the task is finished.
+
+PASAJE [reason] L2222 a L2222, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2222: The last page of the original is concealed under the lid of the photocopier--the out-of-sight-out-of-mind phenomenon.
+
+PASAJE [reason] L2240 a L2240, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2240: Steps involving the installation of multiple items (for example, fastenings, bushes, washes, spacers and so on.)
+
+PASAJE [reason] L2250 a L2250, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2250: Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out.
+
 ```
 FICHA: C2
 tipo: CONTRARIO
@@ -1103,6 +1138,16 @@ otro_campo: resumen_teorico | texto_actual_segmento: La lluvia de ideas suelta, 
 otro_campo: resumen_teorico | texto_actual_segmento: Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas. | texto_corregido_segmento: Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [edwards] L3002 "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!"
+
+PASAJE [edwards] L3000 a L3002, cap. 6 "Approach to Project Risk Identification":
+
+> L3000: More than any other stage of systematic project risk management, risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way. While risk identification brainstorming could be used on its own in a completely unstructured ‘free‐wheeling’ manner, this would hardly accord with an organisation’s desire to be systematic in its risk management. In fact, brainstorming is easier and usually more successful when it is guided in some way, i.e. applied within particular project ‘frames’ or perspectives. ‘Free‐wheeling’ approaches are unlikely to yield consistently adequate results. Unless carefully managed, they can tend to drift away from the intended purpose; take too much (or too little) time; and leave participants feeling irritated and dissatisfied by the process and the results.
+>
+> L3002: Workshop participants should comprise a small group of people, familiar with the stakeholder organisation and its projects, and who are closely involved in the important decision‐making for various aspects of the project. As with the previous stage (context establishment) of project risk management, fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone! We repeat our earlier contention that ‘one‐man band’ approaches to project risk management expose any organisation to the serious threat risk of mismanagement. Ideally, the workshop participants will form a ‘team’ for the purposes of managing risks on the project. How many people should be involved is a matter for the stakeholder organisation to decide. We find we work best with a small group of no more than six or seven, plus someone to act as secretary.
+
 ```
 FICHA: C3
 tipo: CONTRARIO
@@ -1120,6 +1165,22 @@ fuente_apoyo: L2120: "Just by chance, we would expect some to get 8 or 10 but si
 cambio: quita el umbral "menos de nueve de diez"; anade el umbral del libro, menos del 70 por ciento (menos de siete de diez), y el "probablemente"
 nota_resumen_teorico: El resumen dice que una persona calibrada acierta nueve de cada diez veces: describe la meta, que el libro sostiene (L3960), no el umbral de sobreconfianza. No se toca.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [hubbard] L3916 "if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident"
+
+PASAJE [hubbard] L2120 a L2120, cap. 7 "The Limits of Expert Knowledge: Why We Don't Know What We Think We Know about Uncertainty":
+
+> L2120: Exhibit 7.4 shows the distribution of initial test scores for 1,165 individuals prior to taking our calibration training at Hubbard Decision Research. The score is the number of stated intervals that contained the correct answer. The vertical bars represent the percentage of tests that got that number of answers within their stated ranges. The dashed line represents the distribution we would expect to see if all 1,165 individuals were calibrated. As the dashed line shows, the most common result if everyone were calibrated is to get a score of 9 out of 10--that is, ten of the answers fell within the stated range. Just by chance, we would expect some to get 8 or 10 but six or less would be rare. Just 1.28 percent of perfectly calibrated individuals would have been unlucky enough to have only six or fewer answers within their stated ranges.
+
+PASAJE [hubbard] L3916 a L3916, cap. 11 "Starting with What Works":
+
+> L3916: Let's review again your performance on the small tests in chapter 7. Remember, we need to compare your expected results to your actual results. Since the range questions asked for a 90 percent confidence interval (CI), you should expect 90 percent of the actual answers to be within your ranges. However, if you are like most people, you got less than that within your stated bounds at first. Granted, these are very small samples so the test can't be used to measure your calibration precisely, but it's a good approximate measure. Even with this small sample, if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident. If you got less than half within your bounds (as most people do), then you are very overconfident.
+
+PASAJE [hubbard] L3960 a L3960, cap. 11 "Starting with What Works":
+
+> L3960: Take the tests in the appendix and try applying each of the methods listed in this chapter in each test. It will take practice, but if you apply these methods by habit your calibration will improve. The tests in the appendix are longer than the examples in chapter 7 (twenty questions), but the same process of evaluation we used on the small example tests applies. You become calibrated when your expected number correct comes very close to your actual number correct. That is, you are calibrated when you get about 90 percent of the answers within your 90 percent CI for the range questions. For the binary questions, you are calibrated when the sum of the assessed probabilities of being correct is about the same as the actual number correct.
 
 ```
 FICHA: C4
@@ -1140,6 +1201,30 @@ otro_campo: entregable_esperado | texto_actual_segmento: Sistema de calidad cert
 nota_titulo_concepto: El titulo "(cGMP y ISO/TS 16949)" se sostiene: Juran trata las cGMP dentro de "Industry-Specific Adoptions and Extensions of ISO 9000 Standards" (L11337). No se toca.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [juran] L11051 "Certain industry/economic sectors then began developing industrywide quality system standards, based upon the verbatim adoption of ISO 9000, together with industrywide supplemental requirements."
+
+PASAJE [juran] L11036 a L11036, cap. 11 "ISO 9000 Quality Management System":
+
+> L11036: 4. The ISO 14000 is a standard for an environmental management system. It is applicable to any business, regardless of size, location, or industry. The purpose of the standard is to reduce the environmental footprint of a business and to decrease the pollution and the waste a business produces.
+
+PASAJE [juran] L11040 a L11040, cap. 11 "ISO 9000 Quality Management System":
+
+> L11040: 6. AS9100 is a widely adopted and standardized quality management system for the aerospace industry.
+
+PASAJE [juran] L11051 a L11051, cap. 11 "ISO 9000 Quality Management System":
+
+> L11051: Certain industry/economic sectors then began developing industrywide quality system standards, based upon the verbatim adoption of ISO 9000, together with industrywide supplemental requirements. The automotive industry (QS 9000), the pharmaceutical and medical devices industry (cGMPs), government regulatory agencies, and military procurement agencies (AS9100 and the Mission Assurance Provisions, MAP), are adopting this approach in many places worldwide. Even software development uses the CMMI standard of software quality systems created in the early 1990s at Carnegie Mellon University to ensure a common approach to manage software quality. The standards play an important--but not always understood--role in managing for superior quality.
+
+PASAJE [juran] L11378 a L11378, cap. 11 "ISO 9000 Quality Management System":
+
+> L11378: The FDA inspects pharmaceutical manufacturing facilities worldwide using scientifically and cGMP-trained individuals whose job it is to evaluate whether the organization is following cGMP regulations. The FDA also relies upon reports of potentially defective drug products from the public and from the industry. The FDA will often use these reports to identify sites for which an inspection or investigation is needed. Most companies that are inspected are found to be fully compliant with the cGMP regulations.
+
+PASAJE [juran] L11399 a L11399, cap. 11 "ISO 9000 Quality Management System":
+
+> L11399: On December 14, 2006, all QS 9000 certifications were terminated. With QS 9000, the middle certification between ISO 9001 and ISO/TS 16949 were no longer valid; businesses had a choice between either ISO 9001 or TS 16949. QS 9000 is considered to have been superseded by ISO/TS 16949.
+
 ```
 FICHA: C5
 tipo: CONTRARIO
@@ -1159,6 +1244,20 @@ otro_campo: entregable_esperado | texto_actual_segmento: probabilidad y daño en
 nota_resumen_teorico: El resumen dice que "las etiquetas como media significan cosas muy distintas para cada persona": es fiel (L2533). No se toca.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [hubbard] L2136 "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."
+
+PASAJE [hubbard] L2136 a L2136, cap. 7 "The Limits of Expert Knowledge: Why We Don't Know What We Think We Know about Uncertainty":
+
+> L2136: Here is a key lesson so far: the detection of overconfidence is only possible if probabilities are used and compared to real performance of correctly estimating outcomes. How would we know whether someone is overconfident when he tells us there is a medium likelihood of a particular event happening? If the event happens 50 percent of the time, did we confirm that it was a medium likelihood? If we look at all the times a project management office said the risk of a project failure was a 2 on a scale of 1 to 5, and twelve out of forty projects with the same risk score failed, was he right? Ambiguous terms such as this can't be evaluated against real-world observations because, as measurements, they are meaningless. Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.
+
+PASAJE [hubbard] L2533 a L2535, cap. 8 "Worse Than Useless: The Most Popular Risk Assessment Method and Why It Doesn't Work":
+
+> L2533: Budescu found that the respondents' assessments of the meaning of these terms varied widely. More surprisingly, he found they varied widely even when they were given specific guidelines for what these terms meant, as was done in the IPCC report. For example, the word likely was interpreted in different contexts to mean anything from 45 percent to 84 percent. This wide range occurred even though subjects were informed that the guidelines specifically stated that likely should mean “greater than 66 percent” (see exhibit 8.3). The verbal labels a method uses seems to be about as important to how responses are distributed--if not more so--than the defined ranges
+>
+> L2535: Budescu says that this creates an “illusion of communication.” When everyone “agrees” that some event is very unlikely, it turns out they are not agreeing at all. Some would be quite surprised as to how others interpret that term. Apparently, detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.
+
 ```
 FICHA: A1
 tipo: ANADIDO
@@ -1176,6 +1275,14 @@ fuente_apoyo: ninguna
 cambio: quita la secuencia "despues de superar la incomodidad inicial"; anade "mientras permaneces en la incomodidad"
 nota_entregable_esperado: El entregable pide "mínimo 30 a 60 minutos": es otro dato, no juzgado en este muestreo (solo se juzgaron pasos). Queda anotado para revision.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L2688 "But that’s where you need to dwell."
+
+PASAJE [at] L2688 a L2688, cap. 5 "Be Awkward":
+
+> L2688: Awkward moments are opportunities. The lump in your throat, your pained expression, the anxious hmm in your head--none of that feels good. But that’s where you need to dwell. As soon as things feel off, or you don’t understand what’s happening, the natural inclination is to solve, to fix--or to recoil, distract yourself, and move on. Next time, don’t. Michael Barry, a Stanford instructor with boundless curiosity who teaches students how to draw inspiration by observing the real world, points out that good noticing requires you to linger in discomfort. It’s about wading into awkwardness and staying open when something is off--without knowing the way forward.
 
 ```
 FICHA: A2
@@ -1195,6 +1302,14 @@ cambio: quita los horizontes de 10 y 100 anos; deja el de cincuenta, que es el d
 nota_resumen_teorico: El resumen ya dice "en 50 años", que el libro sostiene. No se toca.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L3967 "What would the hidden treasure in your hometown be today? What about in fifty years?"
+
+PASAJE [at] L3967 a L3967, cap. 7 "Disorient Yourself":
+
+> L3967: There are elements of time in treasure maps. Treasure can imply what once was or what might yet be. Treasure implies that if you take the time to look, the reward is worthwhile. What would the hidden treasure in your hometown be today? What about in fifty years? What might happen in that time?
+
 ```
 FICHA: A3
 tipo: ANADIDO
@@ -1212,6 +1327,14 @@ fuente_apoyo: ninguna
 cambio: quita los horizontes "10, 50 y 100 años"; deja la historia especulativa sin horizonte fijo, como el libro
 nota_entregable_esperado: El entregable pide "al menos tres consecuencias": es otro dato, no juzgado en este muestreo. Queda anotado para revision.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L3490 "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story."
+
+PASAJE [at] L3490 a L3490, cap. 6 "Shapeshift":
+
+> L3490: Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.
 
 ```
 FICHA: A4
@@ -1231,6 +1354,18 @@ cambio: quita la cifra "al menos 3 elementos"
 nota_resumen_teorico: El resumen trae otras cifras (59 por ciento, 80 por ciento) que no se juzgaron en este muestreo; el 59 por ciento esta en L3763.
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L3773 "Just as we can make, we can take away--and that’s often a better option."
+
+PASAJE [at] L3754 a L3754, cap. 7 "Disorient Yourself":
+
+> L3754: Removal is a design fundamental. Some of the best designs are subtractions. Some of the most noble goals revolve around removing carbon from the air, the wealth gap, the digital divide. Why is that so hard?
+
+PASAJE [at] L3773 a L3773, cap. 7 "Disorient Yourself":
+
+> L3773: Just as we can make, we can take away--and that’s often a better option. But both cases are really about what you are willing to give.
+
 ```
 FICHA: A5
 tipo: ANADIDO
@@ -1248,6 +1383,16 @@ fuente_apoyo: L191: "Stories are one of the few ways we can get to know what the
 cambio: quita el horizonte "en 10-15 años" y el reparto "del tipo usuarios, empresas, reguladores"
 nota_entregable_esperado: El entregable pide "(1 a 2 páginas)": es otro dato, no juzgado en este muestreo.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L193 "Some have plots and characters."
+
+PASAJE [at] L191 a L193, preliminares:
+
+> L191: The stories interspersed here look at the future as if it has already happened and imagine what might unfold. They are retrospectives of things to come. Stories are one of the few ways we can get to know what the future could feel like before it gets here. These stories don’t shy away from the monumental, messy, and sometimes mundane possibilities ahead.
+>
+> L193: Stories, in this case, is a loose term. We call each of these a “History of the Future.” Some have plots and characters. Others are soft sketches of daily life. Still others are more like articles or opinion pieces rescued from imagined futures. Some might feel far-fetched, others too close to home. They are meant not to predict, but to help you get a feel for what the future may bring and to allow you to muse about what you might do now. One story could inspire you to forge a future movement; another might make you wonder if you should toss out your tech altogether.
 
 ```
 FICHA: A6
@@ -1267,6 +1412,18 @@ cambio: quita las herramientas "escenarios, storyboards" (el libro no las nombra
 otro_campo: entregable_esperado | texto_actual_segmento: Un escenario o storyboard narrativo del producto/servicio | texto_corregido_segmento: Una historia narrativa del producto/servicio
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L3490 "Try a speculative story."
+
+PASAJE [at] L2063 a L2063, cap. 4 "Make-Believe":
+
+> L2063: Afterward, they asked the subjects to describe what had happened. Ninety-seven percent talked about the shapes as if they were characters and added motivation to the motions. Even when asked to just “write down what happened in the picture,” the subjects concocted stories of villains, bullies, love, and hate; characters with genders and agendas, fight scenes, chitchat, and marriage. From simple shapes moving around, people made up stories with drama and intent.
+
+PASAJE [at] L3490 a L3490, cap. 6 "Shapeshift":
+
+> L3490: Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.
+
 ```
 FICHA: A7
 tipo: ANADIDO
@@ -1284,6 +1441,16 @@ fuente_apoyo: L3372: "Investigate twenty, thirty, forty maps of a place"
 cambio: quita la cifra "al menos 3-5"
 otro_campo: entregable_esperado | texto_actual_segmento: Un atlas de 3-5 mapas/diagramas distintos | texto_corregido_segmento: Un atlas de varios mapas/diagramas distintos
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L3374 "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+
+PASAJE [at] L3372 a L3374, cap. 6 "Shapeshift":
+
+> L3372: These two maps are wildly different ways to know this place--both valid. And there are so many other ways you could map Cape Cod: A map of every lighthouse. A map of every mini-golf course. A map of the best route to drive from Harwich Port to Wellfleet. A map of your favorite childhood memories. If you’ve been to Cape Cod (or anywhere else you might know well), you can probably rattle off ten more maps you’d make of it. If you haven’t, you can get to know it more with each new map you examine. Investigate twenty, thirty, forty maps of a place, and eventually you may get a sense of it through the eyes of others.
+>
+> L3374: “Every place deserves an atlas,” says Rebecca Solnit in the opening line of Infinite City: A San Francisco Atlas. Atlases are compilations of many maps, each examining a place through a different viewfinder. Places deserve atlases, but maps are for exploring much more than just places. You can map an idea. You can map a discipline. You can map the mess in your closet. And you can do each in multiple ways. Each map is one lens. Together they make an atlas of whatever idea you’re representing.
 
 ```
 FICHA: A8
@@ -1303,6 +1470,14 @@ cambio: quita las capas "impermeabilizacion" y "drenaje"; deja la composicion qu
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [cradle] L509 "It is a light layer of soil, a growing matrix, covered with plants."
+
+PASAJE [cradle] L509 a L509, cap. 3 "Eco-Effectiveness":
+
+> L509: We have been working with a kind of roofing that responds to all of these issues, including the economic ones. It is a light layer of soil, a growing matrix, covered with plants. It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather, and shields it from the sun's destructive rays, making it last longer. In addition, it makes oxygen, sequesters carbon, captures particulates like soot, and absorbs storm water. And that's not all: it looks far more attractive than naked asphalt and, with the storm-water management, saves money that would be lost to regulatory fees and flood damage. In appropriate locales, it can even be engineered to produce solar-generated electricity.
+
 ```
 FICHA: A9
 tipo: ANADIDO
@@ -1320,6 +1495,18 @@ fuente_apoyo: L2461: "Treatment cost"
 cambio: quita la cifra "dos o tres acciones"
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [edwards] L5749 "brainstorm alternative treatments for the five cases"
+
+PASAJE [edwards] L2461 a L2461, cap. 4 "Project Risk Management Systems and Frameworks":
+
+> L2461: Ref. no Existing treatment Missing controls Treatment plan Re‐assessment Responsibility Action Monitoring Treatment cost
+
+PASAJE [edwards] L5749 a L5749, cap. 9 "Risk Response and Treatment Options":
+
+> L5749: Admittedly, none of these examples demonstrates a risk response treatment that is particularly innovative, and we are sure that readers could do much better with examples from their own project environments! Useful project risk management practice might be gained if you were to step outside of your own comfort zone with a few colleagues and brainstorm alternative treatments for the five cases.
 
 ```
 FICHA: A10
@@ -1339,6 +1526,18 @@ cambio: quita la cifra "dos o tres proyectos"; anade los informes y lecciones de
 nota_resumen_teorico: El resumen dice "mirar proyectos parecidos que fracasaron" sin cifra: no se toca por este dato (si por el CONTRARIO, ficha C2).
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [edwards] L5502 "will have recourse to the knowledge captured from previous projects"
+
+PASAJE [edwards] L3253 a L3253, cap. 6 "Approach to Project Risk Identification":
+
+> L3253: Also in this category may be found official reports such as the findings of inquiries into accidents and disasters. Not always freely available, and probably least often used in project management, their usefulness in project risk identification is usually limited to confirming the presence of particular types of risks, or the circumstances that are likely to give rise to them. Nevertheless, such reports can lead a project stakeholder organisation to review its policies, practices and processes with a view to avoiding particular threat risks and may act as a catalyst for identifying particular types of risks on particular types of projects.
+
+PASAJE [edwards] L5502 a L5502, cap. 9 "Risk Response and Treatment Options":
+
+> L5502: A project stakeholder organisation with a mature approach to risk management will have recourse to the knowledge captured from previous projects (see Chapter 11). The archived risk registers for those projects (or the Organisational Risk Register (ORR) itself) will provide substantial information and guidance about existing controls.
+
 ```
 FICHA: A11
 tipo: ANADIDO
@@ -1356,6 +1555,20 @@ fuente_apoyo: L5063: "Both malevolent damage and the dangerous use of alcohol or
 cambio: quita "criminal, negligente, violacion con o sin mitigacion"; anade las categorias del arbol del libro, con la mitigacion aplicada al abuso de sustancias y el error sin culpa
 nota_limite: La Figura 9.4 del libro no esta en el txt: las categorias se reconstruyen de la prosa (L5053 a L5063). El nombre exacto de cada casilla de la figura puede variar.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L5063 "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised."
+
+PASAJE [reason] L5055 a L5057, cap. 9 "Engineering a Safety Culture":
+
+> L5055: Except when non-compliance has become a largely automatic way of working (as sometimes happens in the case of routine short-cuts), violations involve a conscious decision on the part of the perpetrator to break or bend the rules. However, while the actions may be deliberate, the possible bad consequences are not--in contrast to sabotage in which both the act and the consequences are intended. Most violations will be non-malevolent in terms of intent, so the degree to which they are blameworthy will depend largely on the quality and availability of the relevant procedures. These, as discussed in Chapter 4, are not always appropriate for the particular situation. Where this is judged to be the case--perhaps by a ‘jury’ of the perpetrator’s peers--the problem lies more with the system than with the individual. However, when good procedures were readily accessible but deliberately violated, the question must arise as to whether the behaviour was reckless in the legal sense of the term. Such actions are clearly more culpable than ‘necessary’ violations--that is, non-compliant actions necessary to get the job done when the relevant procedures are either wrong, inappropriate or unworkable.
+>
+> L5057: It seems appropriate to apply Johnston’s substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled, although something like it clearly has a part to play in judging the culpability of system-induced violations (as indicated by the dotted arrow in Figure 9.4). The issue is reasonably straightforward. Could (or has) some well motivated, equally competent and comparably qualified individual make (or made) the same kind of error under those or very similar circumstances? If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless. If the answer is ‘no’, then we have to consider whether there were any system-induced deficiencies in the person’s training, selection or experience. If such latent conditions are not identified, then the possibility of a negligent error must be considered. If they are found, it is likely that the unsafe act was a largely blameless system-induced error.
+
+PASAJE [reason] L5063 a L5063, cap. 9 "Engineering a Safety Culture":
+
+> L5063: So where should the line be drawn on Figure 9.4 between acceptable and unacceptable behaviour? The most obvious point would be between the two substance abuse categories. Both malevolent damage and the dangerous use of alcohol or drugs are wholly unacceptable and should receive very severe sanctions, possibly administered by the courts rather than the organization. Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. The remaining categories should be thought of as blameless--unless they involve aggravating factors not considered here. Experience suggests that the majority of unsafe acts--perhaps 90 per cent or more--fall into this blameless category.
 
 ```
 FICHA: A12
@@ -1375,6 +1588,18 @@ cambio: quita el criterio "revisando errores historicos"; anade el criterio del 
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L2250 "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses"
+
+PASAJE [reason] L2170 a L2170, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2170: From an analytical point of view there are at least two approaches towards a better understanding of maintenance omissions, one seeking to identify the underlying cognitive mechanisms, the other trying to determine what aspects of a task cause it to be especially omission-prone. The former route is made difficult by the fact that an omission can arise within a number of cognitive processes concerned with planning and executing an action, as summarized in Table 5.3. Even when the omission is one’s own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.
+
+PASAJE [reason] L2250 a L2250, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2250: Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out.
+
 ```
 FICHA: A13
 tipo: ANADIDO
@@ -1393,6 +1618,14 @@ cambio: quita el revisor "un mentor o asesor"; deja la mirada externa con el ras
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L4446 "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around."
+
+PASAJE [reason] L4446 a L4446, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4446: Regulators are uniquely placed to function as one of the most effective defences against organizational accidents. They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around. Regulators are specialists in the technology in question. Indeed, many of them have been recruited from the regulated industries. Regulators have been trained and are highly experienced in identifying technical inadequacies and formal systemic weaknesses. And they possess the investigative access and sanctions necessary to enforce their decisions.
+
 ```
 FICHA: A14
 tipo: ANADIDO
@@ -1410,6 +1643,18 @@ fuente_apoyo: L2259: "The simplest coun-termeasure is an appropriate reminder."
 cambio: quita el criterio "mayor tasa de omision historica"; anade el criterio de los rasgos y el recordatorio como primera medida
 nota_pasos_accionables: Se aplica junto con la ficha C1 (paso 2 del mismo nodo).
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L2250 "Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out."
+
+PASAJE [reason] L2250 a L2250, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2250: Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out.
+
+PASAJE [reason] L2259 a L2259, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2259: Although there are a variety of cognitive processes that could contribute to an omission, and their precise nature is often hidden from both the actor and the outside observer, the means of limiting their future occurrence can be relatively straightforward and easy to apply once the error-prone steps have been identified. The simplest coun-termeasure is an appropriate reminder. What characteristics should a good reminder possess? Some suggestions are listed below.
 
 ```
 FICHA: A15
@@ -1430,6 +1675,18 @@ decision_pendiente: Decide el fundador. Nota de conocimiento general, no del lib
 otro_campo: resumen_teorico | texto_actual_segmento: (por ejemplo, AdRoll o Adbeat) | texto_corregido_segmento: A: (por ejemplo, Alexa o Compete). B: se borra el parentesis. C: (por ejemplo, AdRoll o Adbeat, ejemplos del catalogo que no estan en el libro).
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [blank] L8522 "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website"
+
+PASAJE [blank] L8516 a L8516, cap. 4 "Customer Discovery, Phase Two: “Get Out of the Building” to Test the Problem: “Do People Care?”":
+
+> L8516: Use free traffic-measurement tools to compare and understand the traffic generated by each competitive product...
+
+PASAJE [blank] L8522 a L8522, cap. 4 "Customer Discovery, Phase Two: “Get Out of the Building” to Test the Problem: “Do People Care?”":
+
+> L8522: Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website, along with the traffic sources, growth trends, and demographic information where available. Much of this information is available for free, including the keywords driving traffic to the site, specific lists of sites linking to it and, in some cases, demographic and income data on site visitors. Compete.com offers side-by-side comparison of multiple url’s, for example. Visit “answer” sites like Quora.com and start asking questions. This will cause more market information to surface and probably lead to new sources of expertise on product, category or market.
+
 ```
 FICHA: A16
 tipo: ANADIDO
@@ -1447,6 +1704,22 @@ fuente_apoyo: L2065: "we might be doing it to connect with each other."; L2071: 
 cambio: quita la receta "personajes, conflicto y resolucion" (la triada del libro es personajes, conflicto y causas, y la presenta como distorsion); anade la advertencia de que toda historia distorsiona
 nota_entregable_esperado: El entregable ya tiene su correccion en la ficha A6 (storyboard).
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [at] L2075 "Thinking in stories is very useful."
+
+PASAJE [at] L2065 a L2065, cap. 4 "Make-Believe":
+
+> L2065: There are all kinds of theories as to why people use make-believe: It’s an emotional rehearsal to prepare us for trouble down the road. It gives life meaning and keeps us going. It helps us make decisions and predict the future. Its entertaining. It quiets the mind. Most interesting of all, we might be doing it to connect with each other.
+
+PASAJE [at] L2071 a L2071, cap. 4 "Make-Believe":
+
+> L2071: Stories make you feel sure of yourself because they latch on to the human psyche in particular ways--that’s their power and their peril. When you think in stories, your point of view naturally distorts. In your little sensory bubble, stories train your attention on characters, conflict, and causes.
+
+PASAJE [at] L2075 a L2075, cap. 4 "Make-Believe":
+
+> L2075: Thinking in stories is very useful. (This book is filled with them!) Getting down to root causes and people’s motivations (characters) helps unwind complex issues. But it’s still a distortion. Focusing on characters’ concerns conceals collaboration and nonhuman influences like context. Foregrounding conflict clouds connections. Fetishizing singular causes can crowd out unseen possibilities and problems. Getting tangled up in a story can amplify false dichotomies and hide nuance, keeping you from noticing certain elements.
 
 ```
 FICHA: A17
@@ -1466,6 +1739,22 @@ cambio: quita la mentoria; anade la socializacion en premisas de decision y los 
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L5178 "you first have to centralise so that people are socialised to use similar decision premises and assumptions"
+
+PASAJE [reason] L5178 a L5178, cap. 9 "Engineering a Safety Culture":
+
+> L5178: … you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated. This is precisely what culture does. It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations or centralisation by standardisation and hierarchy, both of which require high surveillance. Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.38
+
+PASAJE [reason] L5184 a L5184, cap. 9 "Engineering a Safety Culture":
+
+> L5184: Weick makes another point of considerable relevance here. All hazardous technologies face the problem of requisite variety--the variety that exists in the system exceeds the variety of the people who must control it (see Chapter 4). As a result, ‘they miss important information, their diagnoses are incomplete, and their remedies are short-sighted and can magnify rather than reduce a problem’. But this problem, can be reduced by a culture that encourages ‘war stories’. Since the nature of these systems allows little scope for trial-and-error learning, maintaining reliability depends on developing alternatives for trial and error. These could include imagination, vicarious experience, simulation, stories and story-telling.
+
+PASAJE [reason] L5206 a L5206, cap. 9 "Engineering a Safety Culture":
+
+> L5206: Not all activities in hazardous technologies are carried out in supervised groups. When people are relatively isolated, the onus shifts from group to self-controls. Crucial among these are the techniques designed to enhance hazard awareness and risk perception, These are the measures that seek to promote ‘correct’ rather than merely ‘successful’ performance. A number of hazard evaluation programmes are being developed or have already been implemented. However, as Willem Albert Wagenaar has observed,43 risk appraisal training is of little value once the incorrect actions have become habitual. When this happens, people are not taking risks deliberately, they are running risks in a largely thoughtless and automatic fashion. To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance. By the same token, it is mainly through local supervisory interventions that long-established pattern of incorrect behaviour can be modified.
+
 ```
 FICHA: A18
 tipo: ANADIDO
@@ -1483,6 +1772,14 @@ fuente_apoyo: ninguna
 cambio: quita el responsable "supervisores y gestores" y la formacion como medio; anade la herramienta comun en la instancia disciplinaria
 nota_pasos_accionables: El paso 6 del nodo ("Arma un grupo de confianza que revise los casos difíciles o ambiguos") va en la linea del libro y no se toca.
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L5085 "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted."
+
+PASAJE [reason] L5085 a L5085, cap. 9 "Engineering a Safety Culture":
+
+> L5085: David Marx has recently taken a law degree and one of the most interesting products of this marriage between engineering and the law has been the computerized incident investigator, the Aurora Mishap Management System (AMMS). AMMS has a number of elements. For our present purposes, its most important aspect is a structured methodology for establishing the applicability of disciplinary action. This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted. To date, it has been used in the field of aircraft maintenance by a number of US airlines and has the backing of the Machinists Union.
 
 ```
 FICHA: A19
@@ -1502,6 +1799,14 @@ cambio: quita la comparacion con "estandares del sector"; anade la comparacion c
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L3993 "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent."
+
+PASAJE [reason] L3993 a L3993, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L3993: A theme that links all of the regulatory problems to be discussed here is lack of resources. Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. The SR & QA staff at Marshall Space Center, with oversight responsibility for the rocket booster project, had been cut from around 130 to 84. Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff. Both the director and deputy director of the SR & QA unit had other duties, so that each spent around 10 and 25 per cent of their time on the Shuttle programme, leaving them very little time for safety issues.
+
 ```
 FICHA: A20
 tipo: ANADIDO
@@ -1519,6 +1824,14 @@ fuente_apoyo: L1035: "regulations and procedures share with other feedforward co
 cambio: quita la herramienta "analisis de sensibilidad"; conserva la idea del libro
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L1035 "What proved to be an error in the TMI event turned out to be a vital step at Ginna."
+
+PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
+
+> L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
 
 ```
 FICHA: A21
@@ -1538,6 +1851,18 @@ cambio: quita el mecanismo "verificacion cruzada" contra la desactivacion "unila
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L1085 "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies."
+
+PASAJE [reason] L1085 a L1085, cap. 3 "Dangerous Defences":
+
+> L1085: To those who have been enraged by the repeated wailing of a neighbour’s car alarm while the vehicle stands undisturbed, the idea that alarms can lie will come as no surprise. In everyday life these false alarms can create intense irritation. In hazardous technologies they can cause disaster. It is the ‘cry wolf’ situation. Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies.
+
+PASAJE [reason] L1095 a L1095, cap. 3 "Dangerous Defences":
+
+> L1095: Why was the stick-shaker mechanism disabled on its third activation? We will never know for sure, but it is widely believed among the British commercial pilot community that the crucial reasons were, first, that the flight crew did not believe they were in a stalled state (probably because they were unaware of the droop retraction), and, second, they profoundly mistrusted the stick-shaker warning system. In short, they thought it was indicating falsely. There had not only been several false alarms in the development stages of the recovery system some years earlier but also a number of documented incidents involving the false activation of this system during line operations.
+
 ```
 FICHA: A22
 tipo: ANADIDO
@@ -1555,6 +1880,18 @@ fuente_apoyo: L975: "to sign off on task steps--either before or after the event
 cambio: quita el metodo "auditorias aleatorias"; anade la inspeccion separada que el libro echa en falta
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L971 "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service."
+
+PASAJE [reason] L971 a L971, cap. 3 "Dangerous Defences":
+
+> L971: Are such quality assurance (QA) measures a sufficient guarantee of the airworthiness of an aircraft? These incidents suggest that they are not. The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.
+
+PASAJE [reason] L975 a L975, cap. 3 "Dangerous Defences":
+
+> L975: At an individual level, QA practices offer the hard-pressed engineer a path of least effort: namely, to sign off on task steps--either before or after the event--without actually monitoring the quality of the work. One of the enduring findings of work psychology is that people will be tempted to take short-cuts whenever such opportunities present themselves. It is no accident, therefore, that ‘signing off without checking’ is one of the more common procedural violations to be found in aircraft maintenance.
 
 ### 11.9 Anexo: tabla completa paso a paso de la fase 2
 
@@ -2929,3 +3266,6765 @@ Cada desacuerdo se resolvio releyendo el libro, no las razones de ninguno de los
 
 - **Horowitz, *The Hard Thing About Hard Things*:** `C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt`. Es la segunda fuente de `decision_de_vender_startup` y cierra sus once INFERIDOS (seccion 13.5). La seccion clave es "SHOULD YOU SELL YOUR COMPANY?", L3253 a L3318, mas el relato de la venta de Opsware, L665 a L685.
 - **Dekker, *The Field Guide to Understanding Human Error*:** `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt`. Es la fuente fusionada en `normalizacion_de_la_desviacion`. Cierra tres INFERIDOS del nodo (I154, I156, I158). Los otros tres (I153, I155, I157) siguen como estaban tras buscar en Dekker: I157 sigue siendo ANADIDO: en Dekker "mentors" aparece una sola vez (L4424), como uno de los papeles de las victimas de un accidente, y no como revisor externo.
+
+## 14. FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep)
+
+La decision, literal:
+
+> tambien vamos a documentar literalmente todos los inferidos, luego tomare decisiones por cada uno, pero lo haremos y sabremos en que parte de cada libro y su ubicacion esta lo correcto, asi no dejaremos nada al azar
+
+Y la precision que la acompana, literal:
+
+> que el texto tambien lo escriba literal desde el texto porque lo leere para tomar las decisiones
+
+### 14.1 Que trae cada ficha
+
+**Universo.** Hay una ficha por cada uno de los 191 INFERIDOS de las dos fases, tambien los OPERATIVOS. Cada ficha lleva el `id` de `inferidos_para_partir.tsv`, el fichero que recibio el clasificador ciego. Van ordenadas por libro y, dentro de cada libro, por nodo y paso.
+
+**Clase final**, tras la reconciliacion de la seccion 13.5:
+
+| clase | fichas | que propone la ficha por defecto |
+|---|---:|---|
+| OPERATIVO | 151 | MANTENER (regla del 25 sep: el OPERATIVO se queda). Trae de todos modos su texto fiel, para que el fundador decida |
+| ANADIDO | 22 | APLICAR_FIEL: el texto fiel es el de su ficha de correccion (A1 a A22, seccion 11.8). A15 queda con tres opciones |
+| FIEL | 17 | MANTENER: el libro, o la segunda fuente del nodo, si lo dice (seccion 13.5) |
+| CONTRARIO | 1 | APLICAR_FIEL: el texto fiel es el de la ficha C5 |
+
+**Formato.** Cada ficha tiene dos partes:
+1. Un bloque de campos fijos, una clave por linea (`CLAVE: valor`), pensado para leerse con una maquina.
+2. Debajo, LO QUE DICE EL LIBRO: los pasajes literales.
+
+**Campos del bloque:**
+- `ID`, `NODE_ID`, `FICHERO_NODO`, `CAMPO`, `INDICE_BASE0` e `INDICE_BASE1`: donde esta el paso.
+- `TEXTO_ACTUAL`: el paso tal cual esta en `dataset/nodos/<node_id>.json`.
+- `CLASE_FINAL`, `CLASIFICADORES` (integrador, ciego y si coincidieron) y `RESOLUCION`: si hubo desacuerdo o un cambio de clase, la resolucion con su cita.
+- `FICHA_DE_CORRECCION`: solo en los ANADIDOS y el CONTRARIO.
+- `LIBRO [clave]`: el fichero del libro, uno por cada libro citado en la ficha.
+- `LINEAS`: los rangos de los pasajes.
+- `FRASE_CLAVE`: la frase que se ve de un golpe, copiada literal de su linea.
+- `QUE_ANADE_O_CONCRETA`: en una linea, lo que el paso pone de su parte respecto al libro.
+- `PROPUESTA_POR_DEFECTO` y `TEXTO_FIEL_PROPUESTO`: el paso reescrito para que diga solo lo que dice el libro, listo para pegar. En los FIEL es el mismo texto actual.
+- `DATO_REPETIDO`: si el resumen, el entregable u otro paso repiten lo que el paso anade, el segmento actual y su version fiel. Si no, "ninguno".
+- `DECISION_DEL_FUNDADOR`: vacio, para que lo rellene el fundador. Valores previstos: MANTENER, APLICAR_FIEL u OTRO.
+
+**Claves de los libros:**
+
+| clave | fichero |
+|---|---|
+| reason | `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt` |
+| at | `C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt` |
+| voss | `C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt` |
+| cradle | `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt` |
+| edwards | `C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt` |
+| hubbard | `C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt` |
+| juran | `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt` |
+| wasserman | `C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt` |
+| horowitz | `C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt` |
+| dekker | `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt` |
+| blank | `C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt` |
+| export | `C:\Users\AlexDesk\Documents\I have an idea\books\exportacion\basic-guide-to-exporting_Latest_eg_main_086196.txt` |
+| fedex | `C:\Users\AlexDesk\Documents\OCR\20260806\HowToPack_fxcom.txt` |
+| ups | `C:\Users\AlexDesk\Documents\OCR\20260806\Packaging_Guidelines.txt` |
+| dhl | `C:\Users\AlexDesk\Documents\OCR\20260806\dhl_express_packing_guide_en.txt` |
+| info | `C:\Users\AlexDesk\Documents\OCR\20260806\packaging_guide_infographic.txt` |
+
+### 14.2 Como se copio cada pasaje
+
+- **Parrafos enteros.** En estos ficheros cada parrafo ocupa una linea. El pasaje es el parrafo o los parrafos enteros del rango `Lnnn a Lmmm`, sin cortes con "..." dentro. Si un pasaje trae puntos suspensivos, son del propio libro.
+- **Literal, linea a linea.** Cada linea del rango se copia tal cual, detras del prefijo `> Lnnn: `, en su idioma original. Solo hay tres diferencias con el txt:
+  - la raya del original (U+2014) se transcribe `--`, y el guion medio (U+2013), `-`;
+  - las lineas vacias del rango no se copian;
+  - los espacios y tabuladores del principio y del final de la linea (la sangria) tampoco.
+- **Contexto.** Si el pasaje empieza remitiendo al parrafo anterior ("This image...", "Esa es la razon...", "Thus began..."), se incluyo tambien ese parrafo. Pasa en doce pasajes. Si el pasaje es una lista, se incluye la frase que la presenta.
+- **De donde salen los pasajes:**
+  - de las citas del lector;
+  - en los pasos resueltos en la seccion 13.5, de la cita de la resolucion;
+  - en los ANADIDOS y el CONTRARIO, de las citas de su ficha de correccion.
+  
+  Donde esas citas no bastaban (una cita de "mismo pasaje", una lista sin su frase de entrada), el integrador eligio el rango releyendo el libro.
+- **Capitulo.** Sale de los encabezados de capitulo del propio txt. En Horowitz se da tambien el apartado. Las guias de los couriers no tienen capitulos. La guia de exportacion no tiene el encabezado del capitulo 11 en el cuerpo del txt, asi que se toma del indice (L121) y se da el apartado.
+- **Pasajes en las fichas de correccion.** Las 27 fichas de la seccion 11.8 llevan ahora tambien sus pasajes literales y su FRASE CLAVE, con el mismo formato.
+- **Aviso sobre el visor.** El fichero .md es literal. Algun visor puede dar formato a un asterisco o a un guion bajo del libro, pero el texto del fichero no cambia.
+
+### 14.3 Comprobacion por script
+
+El script compara cada pasaje con el fichero del libro, linea a linea:
+- cada linea copiada tiene que ser identica a la del txt, salvo la raya;
+- tienen que estar todas las lineas no vacias del rango, en orden.
+
+Tambien comprueba:
+- que la FRASE CLAVE de cada ficha, las 191 de esta seccion y las 27 de la 11.8, este literal en su linea;
+- en las 191 fichas de esta seccion, que el `TEXTO_ACTUAL` sea el del nodo en `dataset/` y que cada segmento de `DATO_REPETIDO` este literal en su campo del nodo. En las 27 de la 11.8 eso ya lo comprobo `fichas.py` (seccion 11.8).
+
+Python 3.12.8. Funciones comunes (`fi_comun.py`):
+
+```python
+# Comun a la hoja de trabajo y a las fichas de los 191 INFERIDOS.
+import csv, json, re, os
+H = "C:/Users/AlexDesk/Documents/I have an idea/"
+OCR = "C:/Users/AlexDesk/Documents/OCR/20260806/"
+CLON = "C:/Users/AlexDesk/Documents/my-idea-muestreo/"
+LIB = {
+ 'reason': H + "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+ 'edwards': H + "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+ 'hubbard': H + "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+ 'juran': H + "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+ 'at': H + "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+ 'cradle': H + "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+ 'blank': H + "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+ 'wasserman': H + "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+ 'voss': H + "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+ 'export': H + "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+ 'horowitz': H + "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+ 'dekker': H + "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+ 'dhl': OCR + "dhl_express_packing_guide_en.txt",
+ 'fedex': OCR + "HowToPack_fxcom.txt",
+ 'ista': OCR + "ISTA_3P_26-26_Overview.txt",
+ 'ups': OCR + "Packaging_Guidelines.txt",
+ 'info': OCR + "packaging_guide_infographic.txt",
+}
+FILE2KEY = {'dhl_express_packing_guide_en.txt': 'dhl', 'HowToPack_fxcom.txt': 'fedex', 'ISTA_3P_26-26_Overview.txt': 'ista',
+            'Packaging_Guidelines.txt': 'ups', 'packaging_guide_infographic.txt': 'info'}
+def key_de_fichero(f):
+    for k, v in LIB.items():
+        if os.path.normcase(os.path.normpath(v)) == os.path.normcase(os.path.normpath(f)):
+            return k
+    if 'OCR' in f:
+        return 'couriers'
+    raise KeyError(f)
+_cache = {}
+def lineas(k):
+    if k not in _cache:
+        _cache[k] = [x.rstrip('\r') for x in open(LIB[k], encoding='utf-8').read().split('\n')]
+    return _cache[k]
+def linea(k, n):
+    return lineas(k)[n - 1]
+def transcribe(s):
+    # unica excepcion fijada: la raya se transcribe --, y el guion medio como -
+    return s.replace('\u2014', '--').replace('\u2013', '-')
+def norm(s):
+    s = transcribe(s).replace('\u2019', "'").replace('\u2018', "'").replace('\u201c', '"').replace('\u201d', '"').replace('\u2010', '-')
+    return re.sub(r'\s+', ' ', s).strip()
+# capitulos: (linea de inicio, rotulo)
+def _caps_auto(k, marcas):
+    L = lineas(k); out = []
+    for n, num in marcas:
+        t = [y.strip() for y in L[n:n + 8] if y.strip()][0]
+        out.append((n, 'cap. %s "%s"' % (num, t)))
+    return out
+CAPS = {}
+def capitulo(k, n):
+    if k not in CAPS:
+        CAPS[k] = _caps(k)
+    c = None
+    for a, t in CAPS[k]:
+        if a <= n:
+            c = t
+    return c or 'preliminares'
+def _caps(k):
+    if k == 'reason':
+        m = [(18, 1), (361, 2), (793, 3), (1262, 4), (1805, 5), (2474, 6), (2812, 7), (3910, 8), (4678, 9), (5486, 10)]
+        return _caps_auto(k, m)
+    if k == 'at':
+        return _caps_auto(k, [(223, 1), (684, 2), (1130, 3), (1640, 4), (2665, 5), (3105, 6), (3522, 7), (4095, 8)])
+    if k == 'cradle':
+        return _caps_auto(k, [(94, 1), (277, 2), (410, 3), (567, 4), (696, 5), (889, 6)])
+    if k == 'dekker':
+        return _caps_auto(k, [(239, 1), (717, 2), (967, 3), (2133, 4), (2683, 5), (3030, 6), (3350, 7), (3934, 8)])
+    if k == 'voss':
+        return _caps_auto(k, [(57, 1), (474, 2), (936, 3), (1442, 4), (1954, 5), (2337, 6), (2887, 7), (3285, 8), (3864, 9), (4450, 10)])
+    if k == 'edwards':
+        return _caps_auto(k, [(1, 1), (150, 2), (950, 3), (1997, 4), (2599, 5), (2966, 6), (3380, 7), (4808, 8), (5421, 9), (5873, 10), (6216, 11), (7261, 12), (7750, 13), (8238, 14), (8815, 15), (9490, 16), (9987, 17), (10601, 18), (11377, 19), (11667, 20), (12125, 21)])
+    if k in ('hubbard', 'juran', 'wasserman', 'blank'):
+        L = lineas(k); m = []
+        for i, x in enumerate(L):
+            mm = re.match(r'^(CHAPTER|Chapter) (\w+)$', x.strip())
+            if mm:
+                m.append((i + 1, mm.group(2)))
+        if k == 'hubbard':
+            m = [x for x in m if x[0] < 5000]
+        return _caps_auto(k, m)
+    return []
+def nodo(n):
+    return json.load(open(CLON + 'dataset/nodos/%s.json' % n, encoding='utf-8'))
+```
+
+Comprobacion (`fi_verifica.py`, que se corre sobre este mismo informe):
+
+```python
+# Comprobacion mecanica de las fichas de la seccion 11.8 y de la seccion 14 contra los libros y los nodos.
+# Uso: python fi_verifica.py <scratchpad> <informe.md>
+import sys, re, json
+S, INF = sys.argv[1], sys.argv[2]
+exec(open(S + '/fi_comun.py', encoding='utf-8').read())
+NL = chr(10)
+t = open(INF, encoding='utf-8').read()
+lin = t.split(NL)
+err = []
+# 1. pasajes: cada linea citada identica a la del libro (salvo la raya, --) y todas las lineas no vacias del rango presentes
+npas = nlin = 0
+i = 0
+while i < len(lin):
+    m = re.match(r'^PASAJE \[(\w+)\] L(\d+) a L(\d+), ', lin[i])
+    if not m:
+        i += 1; continue
+    k, a, b = m.group(1), int(m.group(2)), int(m.group(3))
+    npas += 1
+    j = i + 1; vistas = []
+    while j < len(lin) and (lin[j].startswith('>') or not lin[j].strip()):
+        mm = re.match(r'^> L(\d+): (.*)$', lin[j])
+        if mm:
+            n = int(mm.group(1)); vistas.append(n); nlin += 1
+            if not (a <= n <= b):
+                err.append('linea fuera de rango %s L%d' % (k, n))
+            elif mm.group(2) != transcribe(linea(k, n)).strip():
+                err.append('pasaje distinto %s L%d' % (k, n))
+        j += 1
+        if j < len(lin) and lin[j].startswith('PASAJE ['):
+            break
+    esperadas = [n for n in range(a, b + 1) if linea(k, n).strip()]
+    if vistas != esperadas:
+        err.append('rango incompleto %s L%d a L%d' % (k, a, b))
+    i = j
+# 2. frases clave: literales en su linea
+nfr = 0
+for m in re.finditer(r'^FRASE[_ ]CLAVE: \[(\w+)\] L(\d+) "(.*)"$', t, re.M):
+    nfr += 1
+    if m.group(3) not in transcribe(linea(m.group(1), int(m.group(2)))):
+        err.append('frase clave no literal %s L%s' % (m.group(1), m.group(2)))
+# 3. fichas de la seccion 14: texto actual y datos repetidos contra el nodo; recuento por clase
+clases = {}; nfich = 0; nrep = 0
+for blq in re.findall(r'```\n(ID: I\d{3}\n.*?)\n```', t, re.S):
+    c = dict(re.findall(r'^([A-Z_0-9]+): ?(.*)$', blq, re.M))
+    nfich += 1
+    clases[c['CLASE_FINAL']] = clases.get(c['CLASE_FINAL'], 0) + 1
+    nd = nodo(c['NODE_ID'])
+    if nd['pasos_accionables'][int(c['INDICE_BASE0'])] != c['TEXTO_ACTUAL']:
+        err.append('texto actual %s' % c['ID'])
+    if int(c['INDICE_BASE1']) != int(c['INDICE_BASE0']) + 1:
+        err.append('indices %s' % c['ID'])
+    for campo, seg in re.findall(r'^DATO_REPETIDO: (\w+) \| actual: (.*?) \| fiel: ', blq, re.M):
+        nrep += 1
+        v = nd.get(campo); v = v if isinstance(v, str) else ' '.join(v or [])
+        if seg not in v:
+            err.append('dato repetido %s %s' % (c['ID'], campo))
+    if not c.get('TEXTO_FIEL_PROPUESTO') or 'DECISION_DEL_FUNDADOR' not in c:
+        err.append('campos %s' % c['ID'])
+print('fichas de inferidos:', nfich, dict(sorted(clases.items())))
+print('pasajes comprobados:', npas, '| lineas de libro comparadas una a una:', nlin)
+print('frases clave comprobadas:', nfr)
+print('datos repetidos comprobados contra el nodo:', nrep)
+print('rayas y guiones medios en el informe:', t.count(chr(0x2014)), t.count(chr(0x2013)))
+print('errores:', len(err))
+for e in err[:50]:
+    print('  ', e)
+```
+
+Salida literal:
+
+```
+fichas de inferidos: 191 {'ANADIDO': 22, 'CONTRARIO': 1, 'FIEL': 17, 'OPERATIVO': 151}
+pasajes comprobados: 374 | lineas de libro comparadas una a una: 570
+frases clave comprobadas: 218
+datos repetidos comprobados contra el nodo: 43
+rayas y guiones medios en el informe: 0 0
+errores: 0
+```
+
+**Limitaciones.**
+- `QUE_ANADE_O_CONCRETA` y `TEXTO_FIEL_PROPUESTO` son redaccion del integrador. El script comprueba las citas, no el juicio. En los OPERATIVOS, el texto fiel es una propuesta para que el fundador compare; la regla del 25 sep los deja como estan.
+- Algunos pasos de Assembling Tomorrow se apoyan en parte en los relatos de ficcion del libro (I025, I026, I031, I032). Sus pasajes incluyen esos relatos. Cuando el unico apoyo es la ficcion (I031, I032), `QUE_ANADE_O_CONCRETA` lo dice.
+
+### 14.4 Las 191 fichas
+
+### A Basic Guide to Exporting (1 fichas)
+
+#### I001 `tipos_sitio_web_exportacion`, paso 4
+
+```
+ID: I001
+NODE_ID: tipos_sitio_web_exportacion
+FICHERO_NODO: dataset\nodos\tipos_sitio_web_exportacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Definir presupuesto de diseño y mantenimiento según el tipo de sitio elegido
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [export]: C:\Users\AlexDesk\Documents\I have an idea\books\exportacion\basic-guide-to-exporting_Latest_eg_main_086196.txt
+LINEAS: [export] L3209 a L3209
+FRASE_CLAVE: [export] L3209 "design and maintenance are less expensive than for a transactional website"
+QUE_ANADE_O_CONCRETA: la instruccion de fijar un presupuesto de diseno y mantenimiento; el libro solo compara el coste de los tipos de sitio
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener en cuenta, al elegir el tipo de sitio, que el diseño y el mantenimiento de un sitio informacional cuestan menos que los de uno transaccional
+DATO_REPETIDO: entregable_esperado | actual: y presupuesto asociado | fiel: teniendo en cuenta su coste de diseño y mantenimiento
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [export] L3209 a L3209, cap. 11 "Going Online: E-Exporting Tools for Small Businesses" (titulo del indice, L121), apartado "Informational Website" (L3205):
+
+> L3209: Because such a website is often static and does not require the software systems necessary for online transactions, design and maintenance are less expensive than for a transactional website. An informational website is ideal for companies that market products and services that cannot be provided online or goods that cannot be sold online. A modified version of this kind of site permits the buyer to shop online for the best price from competing vendors providing the identical product--for example, authorized car manufacturers. Information on options available for a particular model allows the buyer to visualize the configuration and obtain an estimated price for the vehicle.
+
+### Assembling Tomorrow (64 fichas)
+
+#### I002 `abrazar_la_incomodidad`, paso 4
+
+```
+ID: I002
+NODE_ID: abrazar_la_incomodidad
+FICHERO_NODO: dataset\nodos\abrazar_la_incomodidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Registra los descubrimientos que surgen después de superar la incomodidad inicial.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A1 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2688 a L2688
+FRASE_CLAVE: [at] L2688 "But that’s where you need to dwell."
+QUE_ANADE_O_CONCRETA: quita la secuencia "despues de superar la incomodidad inicial"; anade "mientras permaneces en la incomodidad"
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A1, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Registra los descubrimientos que surgen mientras permaneces en la incomodidad, sin resolverla antes de tiempo.
+NOTA: entregable_esperado | El entregable pide "mínimo 30 a 60 minutos": es otro dato, no juzgado en este muestreo (solo se juzgaron pasos). Queda anotado para revision.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2688 a L2688, cap. 5 "Be Awkward":
+
+> L2688: Awkward moments are opportunities. The lump in your throat, your pained expression, the anxious hmm in your head--none of that feels good. But that’s where you need to dwell. As soon as things feel off, or you don’t understand what’s happening, the natural inclination is to solve, to fix--or to recoil, distract yourself, and move on. Next time, don’t. Michael Barry, a Stanford instructor with boundless curiosity who teaches students how to draw inspiration by observing the real world, points out that good noticing requires you to linger in discomfort. It’s about wading into awkwardness and staying open when something is off--without knowing the way forward.
+
+#### I003 `abrazar_los_bordes_de_la_conciencia`, paso 1
+
+```
+ID: I003
+NODE_ID: abrazar_los_bordes_de_la_conciencia
+FICHERO_NODO: dataset\nodos\abrazar_los_bordes_de_la_conciencia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Antes de definir un problema, listar explícitamente qué perspectivas, sentidos o experiencias NO están representadas en tu equipo o investigación.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1666 a L1666; [at] L3090 a L3090
+FRASE_CLAVE: [at] L1666 "The remedy for this conundrum is to get acquainted with the edges of your awareness"
+QUE_ANADE_O_CONCRETA: la lista explicita de lo no representado y el momento "antes de definir un problema"; el libro pide familiarizarse con los bordes de la propia conciencia y nombrar a quien se deja fuera
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Familiarízate con los bordes de tu conciencia: pregúntate a quién se ha dejado fuera, fíjate y ponle nombre.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1666 a L1666, cap. 4 "Make-Believe":
+
+> L1666: The remedy for this conundrum is to get acquainted with the edges of your awareness. Your ignorance is as much a part of you as your knowledge. Celebrate this gap rather than hide it, and you will reveal a new path for understanding.
+
+PASAJE [at] L3090 a L3090, cap. 5 "Be Awkward":
+
+> L3090: But noticing alone is not enough. Putting a name to the things you find--and the things you might be missing--is essential. This is how observations turn into possibilities. What’s needed but not realized? Where else does nature already have a solution? Who has been left out? Notice it and name it. But even that is just the beginning.
+
+#### I004 `abrazar_los_bordes_de_la_conciencia`, paso 2
+
+```
+ID: I004
+NODE_ID: abrazar_los_bordes_de_la_conciencia
+FICHERO_NODO: dataset\nodos\abrazar_los_bordes_de_la_conciencia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Buscar activamente usuarios, expertos o fuentes con 'burbujas sensoriales' distintas a las tuyas (discapacidad, cultura, edad, especie si aplica).
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1668 a L1668; [at] L1674 a L1674
+FRASE_CLAVE: [at] L1674 "If we can learn to love the search for what we don’t know and can’t sense as much as we cherish what we think we do know, we may find our way to a thriving future"
+QUE_ANADE_O_CONCRETA: buscar personas o fuentes con otras burbujas sensoriales, y la lista "discapacidad, cultura, edad, especie"; el libro pide amar la busqueda de lo que no sabes y no puedes percibir
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Busca nuevas formas de acercarte a lo que no sabes y no puedes percibir, en lugar de rellenar los vacíos.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1668 a L1668, cap. 4 "Make-Believe":
+
+> L1668: People who are visually impaired still see; they just do it in a way that’s more comprehensively informative. Their other senses are so heightened that their mental images of the world convey more about the environment than those who rely too much on sight. While this hyperdevelopment of other senses might happen naturally for the visually impaired, finding new ways to engage with the things one tends to miss requires different kinds of effort for most others.
+
+PASAJE [at] L1674 a L1674, cap. 4 "Make-Believe":
+
+> L1674: If we can learn to love the search for what we don’t know and can’t sense as much as we cherish what we think we do know, we may find our way to a thriving future. Genius is not something you are or have, but something to find. Cultivate a crush on the unknown and joy in the world beyond little sensory and mental slivers. Unfortunately, it’s human nature to do just the opposite. Instead of exploring the expanse of our gaps in new ways, we fill in the blanks to avoid them. But, as the things we make get more complex and less predictable, we might need to get more comfortable with our unavoidable and ever-expanding ignorance.
+
+#### I005 `abrazar_los_bordes_de_la_conciencia`, paso 4
+
+```
+ID: I005
+NODE_ID: abrazar_los_bordes_de_la_conciencia
+FICHERO_NODO: dataset\nodos\abrazar_los_bordes_de_la_conciencia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Iterar el diseño incorporando estas perspectivas ausentes detectadas.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3090 a L3090
+FRASE_CLAVE: [at] L3090 "Who has been left out? Notice it and name it. But even that is just the beginning"
+QUE_ANADE_O_CONCRETA: la iteracion del diseno con las perspectivas ausentes; el libro dice que notar y nombrar es solo el comienzo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Después de notar y nombrar a quién se ha dejado fuera, convierte esas observaciones en posibilidades: nombrarlo es solo el comienzo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3090 a L3090, cap. 5 "Be Awkward":
+
+> L3090: But noticing alone is not enough. Putting a name to the things you find--and the things you might be missing--is essential. This is how observations turn into possibilities. What’s needed but not realized? Where else does nature already have a solution? Who has been left out? Notice it and name it. But even that is just the beginning.
+
+#### I006 `antigoals_framework`, paso 4
+
+```
+ID: I006
+NODE_ID: antigoals_framework
+FICHERO_NODO: dataset\nodos\antigoals_framework.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Define Salvaguardas: mecanismos concretos para detectar y corregir cuando el proyecto se desvía hacia una antimeta
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3668 a L3688
+FRASE_CLAVE: [at] L3682 "Safeguards: how you will make sure things don’t go wrong. (We’ll get into some safeguards in chapter 8, where we call them fail-safes.)"
+QUE_ANADE_O_CONCRETA: el alcance "detectar y corregir desvios hacia una antimeta"; el libro define las salvaguardas como la forma de asegurarte de que las cosas no salgan mal
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Define Salvaguardas: cómo te asegurarás de que las cosas no salgan mal (el libro las llama fail-safes en el capítulo 8).
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3668 a L3688, cap. 7 "Disorient Yourself":
+
+> L3668: Cynthia Savard Saucier and Jonathan Shariat offer a strategy in their book, Tragic Design. They suggest listing four sets of goals for anything you do:
+>
+> L3670: Normal goals: what you are aiming to do.
+>
+> L3674: Nongoals: things that are just out of scope.
+>
+> L3678: Antigoals: what you commit to not doing.
+>
+> L3682: Safeguards: how you will make sure things don’t go wrong. (We’ll get into some safeguards in chapter 8, where we call them fail-safes.)
+>
+> L3688: For now, let’s focus on antigoals: the things you are purposefully not doing. Antigoals are perfect for deliberate disorientation. Like normal goals, antigoals should be broad enough to honor your values and purpose, but specific enough to know when you’ve reached them. They can be anything from not confusing a customer with errant options to not excluding differently abled people from using your design.
+
+#### I007 `antigoals_framework`, paso 5
+
+```
+ID: I007
+NODE_ID: antigoals_framework
+FICHERO_NODO: dataset\nodos\antigoals_framework.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Revisita estas 4 listas periódicamente conforme el proyecto evoluciona
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3663 a L3663; [at] L3978 a L3978
+FRASE_CLAVE: [at] L3663 "Get them all out. Then look at them. Do they help serve your purpose or do they distract you from it?"
+QUE_ANADE_O_CONCRETA: la revision periodica de las cuatro listas; el libro pide sacar todas las metas, mirarlas y preguntarse si sirven al proposito
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Vuelve sobre tus metas: sácalas todas, míralas y pregúntate si sirven a tu propósito o te distraen de él.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3663 a L3663, cap. 7 "Disorient Yourself":
+
+> L3663: The first step is to get your goals on the table. There’s always more than one. Be honest about them, and don’t turn away if they seem to conflict. You might take a job because you believe in a mission and because you want to make money. Get them all out. Then look at them. Do they help serve your purpose or do they distract you from it? You’ll know a goal serves your purpose if it helps you engage more deeply and honestly with your work. Will making more money help you better commit to the work or turn a project from a passion into a transaction? Looking back at Q*bert and the AI, are your goals just points to score or are they the point?
+
+PASAJE [at] L3978 a L3978, cap. 7 "Disorient Yourself":
+
+> L3978: The bumpy ride of history tells us that we will never have it all together, but we can always work to bring things closer to harmony. The prefix re means “back again.” Reconsider. Remove. Reorient. Remake. Revisit. Try again. Second-guess. Lean into the turbulence to counteract its harried flow. Throw yourself off-kilter so you can regain balance. Turn into the skid. Deliberate disorientation works when the world is wonky.
+
+#### I008 `aprender_desde_el_amor_empatia`, paso 2
+
+```
+ID: I008
+NODE_ID: aprender_desde_el_amor_empatia
+FICHERO_NODO: dataset\nodos\aprender_desde_el_amor_empatia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Deja que la relación con las personas se desarrolle con el tiempo, aunque eso rompa un protocolo de investigación estándar.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2882 a L2882; [at] L2888 a L2888; [at] L2896 a L2896
+FRASE_CLAVE: [at] L2882 "On her first week onsite, she violated rule number one"
+QUE_ANADE_O_CONCRETA: la regla sobre personas y protocolos de investigacion; el libro narra como Goodall rompio las reglas de su disciplina y guio su trabajo con empatia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: No dejes la empatía en la puerta: como Goodall, que rompió las reglas de su disciplina al alimentar y nombrar a los chimpancés, deja que el afecto guíe tu forma de observar.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2882 a L2882, cap. 5 "Be Awkward":
+
+> L2882: On her first week onsite, she violated rule number one. She’ll regret it for some time, yet her discovery couldn’t have happened without it. She fed the animals. If you’re out for a walk in the park, you don’t feed the animals. When you’re studying chimps in their natural habitat--you do not feed the animals. But she did.
+
+PASAJE [at] L2888 a L2888, cap. 5 "Be Awkward":
+
+> L2888: Slowly, her mistakes started to pay off, in the way only good mistakes can. Little by little, the chimps snuck over for a nibble. Little by little, they began to lose their fear of her. One in particular, David Greybeard, started to hang out near her camp. One day he waltzed over and sat down on a termite mound. (Termites are delicious.) She watched him pluck a blade of grass, shove it into the top of the mound, and bring it to his lips.
+
+PASAJE [at] L2896 a L2896, cap. 5 "Be Awkward":
+
+> L2896: It also paid off because Goodall did all the wrong things, like naming and feeding the chimps--later, she even held their hands. In short, she didn’t leave her empathy at the door--she led with it. And with love. That was not science. That is not science. Science isn’t mushy. Science is not supposed to include empathy. Empathy clouds objectivity.
+
+#### I009 `aprender_desde_el_amor_empatia`, paso 3
+
+```
+ID: I009
+NODE_ID: aprender_desde_el_amor_empatia
+FICHERO_NODO: dataset\nodos\aprender_desde_el_amor_empatia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Busca inspiración en historias de amor o conexión humana detrás de productos que ya existen (por ejemplo, la máquina de escribir, el teléfono).
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2900 a L2902
+FRASE_CLAVE: [at] L2900 "And they are often inspired by “a mismatch that loved ones faced when something interrupted their connection to each other.”"
+QUE_ANADE_O_CONCRETA: buscar inspiracion en las historias detras de productos existentes; el libro usa esos casos para mostrar que el amor inspira soluciones inclusivas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Deja que el amor te inspire: muchas soluciones inclusivas, como una versión temprana de la máquina de escribir, el correo electrónico o el teléfono, nacieron de un desajuste que sufrían personas queridas.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2900 a L2902, cap. 5 "Be Awkward":
+
+> L2900: Work done well is often a love story. Kat Holmes has spent her career creating inclusive designs--designs that work for as many people as possible, regardless of age, race, or ability. “Love,” she writes in her book, Mismatch, “is a common trait in the creation of inclusive solutions.” And they are often inspired by “a mismatch that loved ones faced when something interrupted their connection to each other.”
+>
+> L2902: Holmes points out that an early version of the typewriter was invented so that a blind countess could send clandestine notes to her inventor lover without having to dictate them to another person--the usual way people without sight put words to page in the early 1800s. Email was in part inspired to connect two people who were hard of hearing. The telephone was too.
+
+#### I010 `aprender_desde_el_amor_empatia`, paso 4
+
+```
+ID: I010
+NODE_ID: aprender_desde_el_amor_empatia
+FICHERO_NODO: dataset\nodos\aprender_desde_el_amor_empatia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Anota los hallazgos que surjan justo en esos momentos de conexión emocional con la gente que observas.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2898 a L2898; [at] L2904 a L2904
+FRASE_CLAVE: [at] L2898 "They motivate you to look, push you to see more fully"
+QUE_ANADE_O_CONCRETA: la instruccion de anotar en esos momentos; el libro dice que la empatia y el amor empujan a mirar y a ver mas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Deja que la empatía y el afecto te empujen a mirar más y a ver con más plenitud.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2898 a L2898, cap. 5 "Be Awkward":
+
+> L2898: But for Jane Goodall, the lauded and revered primatologist, empathy and love are not the enemy of discovery; they are its fuel. They motivate you to look, push you to see more fully. She even goes one step further, saying in a 2020 interview with Krista Tippet: “The cold, scientific approach, I believe, has led to a lot of suffering on this planet.”
+
+PASAJE [at] L2904 a L2904, cap. 5 "Be Awkward":
+
+> L2904: Love inspires. Let it. We’ll never be able to create a fabulous future if we can’t first fall in love with the present.
+
+#### I011 `biomimicry_conexiones_naturales`, paso 1
+
+```
+ID: I011
+NODE_ID: biomimicry_conexiones_naturales
+FICHERO_NODO: dataset\nodos\biomimicry_conexiones_naturales.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Identifica un problema de ineficiencia o desperdicio en tu producto o servicio.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3228 a L3230
+FRASE_CLAVE: [at] L3230 "Its goal is to produce silk fiber as spiders do, to massively cut down on the waste produced by the global fashion industry"
+QUE_ANADE_O_CONCRETA: el punto de partida "un problema de ineficiencia o desperdicio"; el libro pide soltar viejas narrativas y buscar inspiracion en cruces y patrones cotidianos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Deja atrás las viejas narrativas y busca inspiración en cruces, solapamientos y patrones cotidianos, como en la naturaleza, donde el desperdicio de uno es la cena de otro.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3228 a L3230, cap. 6 "Shapeshift":
+
+> L3228: To find ways to thrive, we need to become nimble at working with, not against, differences. Connecting diverse things--be it people, systems, or ideas--can feel like a tall order, but it is not unprecedented. The natural world nimbly connects distinct elements in unexpected ways, such that one thing’s waste is another’s dinner. But these connections are indirect--we may or may not be used to seeing them. Step one is to let go of old narratives and find inspiration in everyday intersections, overlaps, and patterns.
+>
+> L3230: The Biomimicry Institute’s 2021 Ray of Hope prize recipient was an organization called Spintex. Its goal is to produce silk fiber as spiders do, to massively cut down on the waste produced by the global fashion industry. Presently, fiber production for synthetic fabrics like polyester, Lycra, and rayon is an energy-intensive process that requires high heat and water, and produces waste like microplastics. We can make ourselves look fashionable and feel good in these fabrics, but with the speed of fast fashion today, garment waste from all parts of the fashion cycle is a big problem. Spintex is using technology learned from spiders to create new silk that is a thousand times more energy efficient than our current systems. Spider bodies store a liquid protein gel. As they spin their webs, the gel turns solid through the sheer force of being pulled through a small opening. Spintex biomimicked this technology and is developing sustainable, technical fabrics.
+
+#### I012 `buscar_armonia_diseno`, paso 3
+
+```
+ID: I012
+NODE_ID: buscar_armonia_diseno
+FICHERO_NODO: dataset\nodos\buscar_armonia_diseno.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Rediseña por etapas dando prioridad a las relaciones y los procesos vivos por sobre el objeto final ya terminado.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4703 a L4705; [at] L4726 a L4726
+FRASE_CLAVE: [at] L4703 "What we make and do is important; how we make and do it is more important still"
+QUE_ANADE_O_CONCRETA: el rediseno "por etapas"; el libro prioriza el como se hace y trata la armonia como forma de trabajar durante todo el proyecto
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Trata el cómo haces las cosas con tanta seriedad como el producto terminado: la armonía no es solo el resultado de un proyecto, sino una forma de trabajar durante todo el proyecto.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4703 a L4705, cap. 8 "Aim for Imperfection":
+
+> L4703: Happenings feel elusive, but that’s where we live. While the things we make last for a moment, then break, making and using them can take up the whole of our day-to-day. What we make and do is important; how we make and do it is more important still.[*2]
+>
+> L4705: A growing movement in architecture turns the act of design into a moment to nourish and heal the communities it serves. It prioritizes the purpose over the goal and takes the happening as seriously as the finished product.
+
+PASAJE [at] L4726 a L4726, cap. 8 "Aim for Imperfection":
+
+> L4726: Harmony is not just the result of a project but also a way of working throughout a project, a way of existing. One of the great joys of working with creative people is witnessing the things they make to make the things they make.
+
+#### I013 `definir_tesoro_con_perspectiva_temporal`, paso 2
+
+```
+ID: I013
+NODE_ID: definir_tesoro_con_perspectiva_temporal
+FICHERO_NODO: dataset\nodos\definir_tesoro_con_perspectiva_temporal.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Proyecta el ciclo de vida de tu producto/servicio a 10, 50 y 100 años
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A2 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3967 a L3967
+FRASE_CLAVE: [at] L3967 "What would the hidden treasure in your hometown be today? What about in fifty years?"
+QUE_ANADE_O_CONCRETA: quita los horizontes de 10 y 100 anos; deja el de cincuenta, que es el del libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A2, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Proyecta el ciclo de vida de tu producto/servicio: qué sería hoy y qué sería dentro de cincuenta años
+NOTA: resumen_teorico | El resumen ya dice "en 50 años", que el libro sostiene. No se toca.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3967 a L3967, cap. 7 "Disorient Yourself":
+
+> L3967: There are elements of time in treasure maps. Treasure can imply what once was or what might yet be. Treasure implies that if you take the time to look, the reward is worthwhile. What would the hidden treasure in your hometown be today? What about in fifty years? What might happen in that time?
+
+#### I014 `democratizacion_de_herramientas_creativas`, paso 1
+
+```
+ID: I014
+NODE_ID: democratizacion_de_herramientas_creativas
+FICHERO_NODO: dataset\nodos\democratizacion_de_herramientas_creativas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Identifica qué herramientas de bajo costo están disponibles para tu comunidad objetivo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4385 a L4385; [at] L4397 a L4397
+FRASE_CLAVE: [at] L4385 "With the advent of fast, cheap processors, cameras in pockets, and 3D printers, we’re all creators again"
+QUE_ANADE_O_CONCRETA: la instruccion de identificar las herramientas para una comunidad objetivo; el libro constata que las herramientas son baratas y todos somos creadores
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que las herramientas de creación (procesadores rápidos y baratos, cámaras en el bolsillo, impresoras 3D) ya están al alcance de casi todos.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4385 a L4385, cap. 8 "Aim for Imperfection":
+
+> L4385: Design by everybody lasted for eons, but, in the age of industry and mass media, things began to shift, leaving opportunity for only a select few to create at such large scales. Even outside industrial-scale design, there was a sharp line between creatives and normal folk. Not so much anymore. With the advent of fast, cheap processors, cameras in pockets, and 3D printers, we’re all creators again. The tools just look different.
+
+PASAJE [at] L4397 a L4397, cap. 8 "Aim for Imperfection":
+
+> L4397: The tools are getting faster and cheaper by the minute--as of now, ownership of smartphones in the United States is well past 80 percent. Soon the bigger question might not be who has the tools, but who has the time? We need to look at time divides in the same way as digital divides and wealth gaps. Scratch the surface of the research on the homespun industry and it’s bound to reveal some disparities. Who exactly is inventing at home? Who can afford the time and the space to do it? It’s an equity issue.
+
+#### I015 `democratizacion_de_herramientas_creativas`, paso 3
+
+```
+ID: I015
+NODE_ID: democratizacion_de_herramientas_creativas
+FICHERO_NODO: dataset\nodos\democratizacion_de_herramientas_creativas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseña soluciones que reduzcan la barrera de tiempo, no solo la de acceso a tecnología.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4397 a L4397
+FRASE_CLAVE: [at] L4397 "We need to look at time divides in the same way as digital divides and wealth gaps"
+QUE_ANADE_O_CONCRETA: disenar soluciones que reduzcan la brecha de tiempo; el libro la plantea como pregunta de equidad
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mira la brecha de tiempo como miras la brecha digital: pregúntate quién puede permitirse el tiempo y el espacio para crear.
+DATO_REPETIDO: entregable_esperado | actual: con propuestas para reducir ambas | fiel: con la pregunta de quién puede permitirse el tiempo y el espacio para crear
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4397 a L4397, cap. 8 "Aim for Imperfection":
+
+> L4397: The tools are getting faster and cheaper by the minute--as of now, ownership of smartphones in the United States is well past 80 percent. Soon the bigger question might not be who has the tools, but who has the time? We need to look at time divides in the same way as digital divides and wealth gaps. Scratch the surface of the research on the homespun industry and it’s bound to reveal some disparities. Who exactly is inventing at home? Who can afford the time and the space to do it? It’s an equity issue.
+
+#### I016 `disenar_los_detalles_no_lo_inevitable`, paso 4
+
+```
+ID: I016
+NODE_ID: disenar_los_detalles_no_lo_inevitable
+FICHERO_NODO: dataset\nodos\disenar_los_detalles_no_lo_inevitable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1503 a L1507
+FRASE_CLAVE: [at] L1507 "It’s time to decide."
+QUE_ANADE_O_CONCRETA: documentar la justificacion para mantener coherencia; el libro dice que la forma de lo inevitable sigue siendo eleccion y que es momento de decidir
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Decide cómo diseñarlo: aunque la llegada de una tecnología sea inevitable, sus detalles siguen siendo una elección.
+DATO_REPETIDO: entregable_esperado | actual: y la justificación de las elecciones tomadas | fiel: y las elecciones tomadas
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1503 a L1507, cap. 3 "Feelings":
+
+> L1503: Kevin Kelly, buoyant techno-philosopher and founding editor of Wired magazine, likes to point out that though many things are inevitable, their finer details are not. In a 2010 talk in San Francisco, he said, “The [internet] was inevitable, but not what kind of [internet]…We have the choice about whether it’s transparent or open, whether it’s government or non-profit…. Those are the kinds of [things] we do have a choice in, and that matters hugely to us.” The way we design changes everything. What comes to be might be inescapable, but the peculiar way it comes to be doesn’t have to be.
+>
+> L1505: A dozen years later, speaking with Henry Kaestner as generative AI tools went public, Kelly hinted at more emotional ripples on the horizon, “What’s shocking is not that the AIs are so smart, but that things that we thought required a lot of intelligence turned out to be dumber than we thought…. Chess…driving a car…painting…creativity [are] more mechanical than we thought…and we’re going to realize…programming emotional machines is more mechanical than we thought.”
+>
+> L1507: Whether or not emotional machines are inevitable, it’s clear they already manipulate our feelings, and we can still decide how to design them. Will we create them to calm things down or keep stirring things up? Will we use them in service of sales or salvation, manipulation or mentorship? All of the above? It’s time to decide.
+
+#### I017 `disenar_para_sanacion`, paso 5
+
+```
+ID: I017
+NODE_ID: disenar_para_sanacion
+FICHERO_NODO: dataset\nodos\disenar_para_sanacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Involucrar a las comunidades afectadas en el proceso de creación, no solo como usuarios finales sino como co-creadoras de la reparación
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4707 a L4709
+FRASE_CLAVE: [at] L4707 "the designers worked with families and descendants to collect soil from all the sites where the lynchings took place"
+QUE_ANADE_O_CONCRETA: la instruccion general de hacer a las comunidades "co-creadoras de la reparacion"; el libro da casos donde la sanacion va dentro del proceso de creacion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Construir la sanación en el propio proceso de creación, como el memorial de Montgomery, hecho con tierra recogida junto a las familias, o las escuelas de Kéré, que enseñan a la comunidad a construir por sí misma.
+DATO_REPETIDO: entregable_esperado | actual: y un plan de co-creación con la comunidad afectada | fiel: y un proceso de creación que incluya a la comunidad afectada, como en los casos del libro
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4707 a L4709, cap. 8 "Aim for Imperfection":
+
+> L4707: We find it in the collaboration between law professor and justice activist Bryan Stevenson and architects at MASS Design Group on the National Memorial for Peace and Justice in Montgomery, Alabama. The memorial is filled with suspended columns. Each represents a specific, horrific lynching. To connect the history to the communities upended by these horrors, the designers worked with families and descendants to collect soil from all the sites where the lynchings took place. A second set of columns will eventually be distributed to the communities--one at each site. A process for healing is built right into the monument’s making.
+>
+> L4709: Healing is also found in the work of Pritzker prize-winning, Burkinabé-German architect Francis Kéré, who uses simple methods, like mixing concrete and mud, with local materials and local labor to create elegant schools that not only serve the community’s needs but also train the community to build for themselves. His buildings and how they are made typify a sustainable collaboration between people and the environment.
+
+#### I018 `disenar_verbos_no_sustantivos`, paso 4
+
+```
+ID: I018
+NODE_ID: disenar_verbos_no_sustantivos
+FICHERO_NODO: dataset\nodos\disenar_verbos_no_sustantivos.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Ajusta tu diseño priorizando el comportamiento que quieres provocar por encima de la estetica o la funcion aislada del objeto.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L271 a L271; [at] L663 a L663; [at] L4669 a L4671
+FRASE_CLAVE: [at] L663 "The ability to shape all those intangible impacts is the power and responsibility of design"
+QUE_ANADE_O_CONCRETA: la jerarquia del comportamiento sobre la estetica; el libro pide ver lo que el diseno hace, y cuenta la belleza como una forma de armonia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ajusta tu diseño pensando no solo en lo que es, sino en lo que hace: qué acciones y reacciones provoca más allá de sus funciones.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L271 a L271, cap. 1 "Connections":
+
+> L271: The world is made up of ripples of reactions. Or as humanist urban designer Jan Gehl so eloquently put it, “Something happens because something happens because something happens.” Virtuosos in any field develop a sensitivity to what their products go on to produce, an awareness not just of the things they make, but of what those things make happen. A great doctor understands not just treatment, but recovery. Great teachers know more than the contours of their content; they know how it will open minds. Great designers think beyond features and toward the feelings their forms create. The action is in reactions. Everything we make is a response to something and leaves something new to respond to. As a river twists, the earth crumbles away to make a canyon. When we speed up, city streets get wide and straight. Wide streets spawn big signs. And so on. If life were a poem, each verse would be a response. In this way, the story of the world is written in replies.
+
+PASAJE [at] L663 a L663, cap. 1 "Connections":
+
+> L663: Bill Moggridge, a legendary designer with a Santa Claus spirit and a professor-like sophistication, was inclined to remind designers in his orbit, “We design verbs, not nouns.” The more you design, the more you start to see what you make not just in terms of what it is but what it does. You learn to read and write in this vocabulary of outcomes. You see how the shape of a tabletop shapes a conversation, the size of a button changes the size of the audience that finds it, and the ease of taking something apart eases the path to reuse and repair. The ability to shape all those intangible impacts is the power and responsibility of design.
+
+PASAJE [at] L4669 a L4671, cap. 8 "Aim for Imperfection":
+
+> L4669: The best design is harmonious. Harmony can feel intangible and hard to pin down, but you know harmony when you feel it, when you hear it, when you use it. The harmony we’re talking about goes by many names. When the things we make:
+>
+> L4671: Are in harmony with our senses, we call it beauty.
+
+#### I019 `disenio_en_turbulencia`, paso 3
+
+```
+ID: I019
+NODE_ID: disenio_en_turbulencia
+FICHERO_NODO: dataset\nodos\disenio_en_turbulencia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseña mecanismos de reparación rápida en vez de prevención total
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3534 a L3534; [at] L3629 a L3629; [at] L4111 a L4111
+FRASE_CLAVE: [at] L3534 "so that you are ready to repair when your best-laid plans go awry"
+QUE_ANADE_O_CONCRETA: la "reparacion rapida" opuesta a la prevencion; el libro pide estar listo para reparar y prepararse antes, durante y despues de que algo se rompa
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Prepárate para reparar cuando tus planes se tuerzan, antes, durante y después de que algo se rompa, sabiendo que el control total no es la respuesta.
+DATO_REPETIDO: entregable_esperado | actual: protocolo de 'reparación rápida' | fiel: protocolo de reparación
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3534 a L3534, cap. 7 "Disorient Yourself":
+
+> L3534: Control, or even just the illusion of it, feels good. People love it when things make sense and are |o|r|g|a|n|i|z|e|d|. But sometimes it makes sense to lean into the uncertainly-ambiguous-stochastic chaos and practice deliberate disorientation--which is a bag of tricks that help you un-take things for granted and see what you’re missing so that you are ready to repair when your best-laid plans go awry.
+
+PASAJE [at] L3629 a L3629, cap. 7 "Disorient Yourself":
+
+> L3629: There is opportunity and need and danger and opulence and suffering and everything else in the turbulence of our existence. The designs we put into the world will never be perfect, but when we embrace their turbulence they can still be beautiful. Many of us feel calm when our desks, schedules, and lives are organized and when our commute flows as it should, not springing any surprises. But life is never organized. Complete control is not the answer. At best, control comes and goes.
+
+PASAJE [at] L4111 a L4111, cap. 8 "Aim for Imperfection":
+
+> L4111: But you can make the most of the breaks by turning constraints into possibility, leaning into imperfection, and redefining what it means to respond by preparing to heal, not just after, but during and well before breaks happen.
+
+#### I020 `diseno_consecuencias_no_intencionadas`, paso 1
+
+```
+ID: I020
+NODE_ID: diseno_consecuencias_no_intencionadas
+FICHERO_NODO: dataset\nodos\diseno_consecuencias_no_intencionadas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A3 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3490 a L3490
+FRASE_CLAVE: [at] L3490 "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story."
+QUE_ANADE_O_CONCRETA: quita los horizontes "10, 50 y 100 años"; deja la historia especulativa sin horizonte fijo, como el libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A3, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Reúne al equipo y cuenta historias especulativas sobre qué pasaría si tu producto o servicio se usara de forma masiva.
+NOTA: entregable_esperado | El entregable pide "al menos tres consecuencias": es otro dato, no juzgado en este muestreo. Queda anotado para revision.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3490 a L3490, cap. 6 "Shapeshift":
+
+> L3490: Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.
+
+#### I021 `diseno_etico_de_privacidad`, paso 1
+
+```
+ID: I021
+NODE_ID: diseno_etico_de_privacidad
+FICHERO_NODO: dataset\nodos\diseno_etico_de_privacidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Enumera qué datos sensibles recolecta tu sistema (ubicación, salud, comportamiento, emociones).
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1001 a L1003; [at] L1086 a L1086
+FRASE_CLAVE: [at] L1086 "You’d better know what you are going to do with it before you collect it."
+QUE_ANADE_O_CONCRETA: el inventario de datos sensibles del sistema propio; el libro pide saber que se hara con los datos antes de recolectarlos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de recolectar datos, ten claro qué vas a hacer con ellos.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1001 a L1003, cap. 2 "Flow":
+
+> L1001: Data Parts Include People
+>
+> L1003: The actual information being created and collected is a key part of a data flow. This includes everything from heart rates measured by smart watches to photographs taken by traffic cameras to queries entered in a search window. It includes the number of bananas you bought with your airline-miles-earning credit card at the supermarket close to your work and their price per pound. It includes the number of likes and subscribes you got from the video posted on August 13, and the temperature you set on your thermostat when you left home for the day. Anything measurable can become data.
+
+PASAJE [at] L1086 a L1086, cap. 2 "Flow":
+
+> L1086: More than a century ago, way before big and data were words to use together, Mark Twain purportedly said, “Data is like garbage. You’d better know what you are going to do with it before you collect it.” It still holds true. We’ve talked about the varied purposes of data flows already. Data flows make many aspects of our lives easier and more efficient: shopping, navigation, banking, medical breakthroughs, conservation. They help augment our perception, giving us something akin to X-ray vision or enhanced intuition. Scientists use machine learning and big datasets to understand everything from nuclear fusion to cancer and climate change. These help us understand the world in new ways and persevere through tough times.
+
+#### I022 `diseno_etico_de_privacidad`, paso 2
+
+```
+ID: I022
+NODE_ID: diseno_etico_de_privacidad
+FICHERO_NODO: dataset\nodos\diseno_etico_de_privacidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L985 a L985
+FRASE_CLAVE: [at] L985 "it takes work to opt out. It’s rarely (make that never) the default"
+QUE_ANADE_O_CONCRETA: el diseno de mecanismos de opt-out; el libro constata que darse de baja cuesta y casi nunca es la opcion por defecto
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que darse de baja de la recolección de datos cuesta trabajo y casi nunca es la opción por defecto.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L985 a L985, cap. 2 "Flow":
+
+> L985: Some of the above are currently being tracked, and others might be soon. Privacy agreements, internet-use tracking, and the sale of personal information have become more transparent recently, but it takes work to opt out. It’s rarely (make that never) the default.
+
+#### I023 `diseno_etico_de_privacidad`, paso 3
+
+```
+ID: I023
+NODE_ID: diseno_etico_de_privacidad
+FICHERO_NODO: dataset\nodos\diseno_etico_de_privacidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Evalúa el trade-off: ¿qué conveniencia pierde el usuario al optar por no compartir datos?
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1009 a L1009
+FRASE_CLAVE: [at] L1009 "Maybe you want less agency. If the board game you need to buy"
+QUE_ANADE_O_CONCRETA: la evaluacion de diseno del trade-off; el libro lo describe desde el usuario
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que hay usuarios que quieren control sobre sus datos y otros que prefieren menos control a cambio de comodidad y tiempo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1009 a L1009, cap. 2 "Flow":
+
+> L1009: You may find yourself wanting to own your own data, or to at least have agency over who gets to use it. Maybe you opt out of data storage, functionality, and sales “cookies” when you browse certain websites. Or maybe you don’t care. Maybe you want less agency. If the board game you need to buy for your nephew’s birthday can be searched for and purchased in minutes and delivered to your doorstep hours later, you’ve made time for something else. You don’t have to take off work early to go to the store, or you can just relax.
+
+#### I024 `diseno_etico_de_privacidad`, paso 4
+
+```
+ID: I024
+NODE_ID: diseno_etico_de_privacidad
+FICHERO_NODO: dataset\nodos\diseno_etico_de_privacidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Comunica de forma transparente cómo se usan y quién se beneficia de los datos recolectados.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1005 a L1007
+FRASE_CLAVE: [at] L1005 "The owner of the data has significantly more power than the generator"
+QUE_ANADE_O_CONCRETA: la comunicacion transparente; el libro describe el desequilibrio de poder entre quien posee y quien genera los datos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que quien posee los datos tiene mucho más poder que quien los genera: donde se acumulan los datos está el poder.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1005 a L1007, cap. 2 "Flow":
+
+> L1005: People are part of the data flow too. Much of the time, it’s we who are being measured. You are worth something. You have value because you make decisions and purchases, and you are impressionable. The data you generate surveils you and is sold back to you. Sometimes data becomes interconnected with self-worth; think of YouTubers seeking clicks and views. But there’s a gradient when it comes to data flows: The owner of the data has significantly more power than the generator. Your data alone isn’t worth much, but all of our data combined is priceless.
+>
+> L1007: Where data pools lies power. Data creates patterns, patterns become knowledge, knowledge becomes power. Shoshana Zuboff, a Harvard professor who coined the phrase “surveillance capitalism,” said, “We’re used to talking in the twentieth century about concentrations of economic power. Now we have to talk about concentrations of knowledge…. [Knowledge] translates into a new kind of power to shape, tune, herd, and modify our behavior individually and collectively at scale. This is a digital-born form of power that has never before existed.” It has the power to change things.
+
+#### I025 `diseno_para_reuso_responsable`, paso 2
+
+```
+ID: I025
+NODE_ID: diseno_para_reuso_responsable
+FICHERO_NODO: dataset\nodos\diseno_para_reuso_responsable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Investiga si existen o podrían existir tecnologías futuras para reciclar/reutilizar esos materiales
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4049 a L4049; [at] L4074 a L4074
+FRASE_CLAVE: [at] L4074 "As technology evolves, we can use it to core and mine landfills"
+QUE_ANADE_O_CONCRETA: la investigacion para los desechos del propio proyecto; el libro dice que la tecnologia permitira explotar los vertederos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que, con la evolución de la tecnología, lo que hoy se considera basura puede estar cargado de valor, como los vertederos que podrán explotarse.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4049 a L4049, cap. 7 "Disorient Yourself":
+
+> L4049: “That’s where we scavenge. We all know the generations before us never really tried to recycle. They went through the motions at times, yes, but even successful recycling programs were short-lived and essentially just reuse ventures. We’re able to go through hundreds of years of landfill and break down the trash into usable raw materials. We’re mechanically, chemically, and thermally separating out components into their elemental forms. We’re dissociating it, and then it can be used again.”
+
+PASAJE [at] L4074 a L4074, cap. 7 "Disorient Yourself":
+
+> L4074: Responsible reuse is possible. As technology evolves, we can use it to core and mine landfills, the same way we presently use ice cores to examine climate history and sediment cores to hunt for hidden resources like fossil fuels. What is currently deemed trash is likely loaded with value, but who can or should profit from it is a question to reckon with.
+
+#### I026 `diseno_para_reuso_responsable`, paso 3
+
+```
+ID: I026
+NODE_ID: diseno_para_reuso_responsable
+FICHERO_NODO: dataset\nodos\diseno_para_reuso_responsable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Define explícitamente quién debería beneficiarse del valor futuro derivado de tus desechos (comunidad, empresa, gobierno)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4057 a L4057; [at] L4074 a L4074
+FRASE_CLAVE: [at] L4074 "What is currently deemed trash is likely loaded with value, but who can or should profit from it is a question to reckon with"
+QUE_ANADE_O_CONCRETA: definir de antemano quien se beneficia; el libro deja abierta la pregunta
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Plantéate quién puede o debe beneficiarse del valor futuro de los desechos: ¿el municipio que los alberga o quienes vivieron junto a ellos?
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4057 a L4057, cap. 7 "Disorient Yourself":
+
+> L4057: “Composites aside, we’re able to extract value from trash. But who gets that value? Is it the municipality that currently houses the waste? Or the descendants of those who lived in the neighborhoods next to the dumps for generations? The families who dealt with the smells and the eyesores and the leaching chemicals? Those dumps ensured that the people living near them stayed poor. And now we see these shadowy tactics beginning to emerge.”
+
+PASAJE [at] L4074 a L4074, cap. 7 "Disorient Yourself":
+
+> L4074: Responsible reuse is possible. As technology evolves, we can use it to core and mine landfills, the same way we presently use ice cores to examine climate history and sediment cores to hunt for hidden resources like fossil fuels. What is currently deemed trash is likely loaded with value, but who can or should profit from it is a question to reckon with.
+
+#### I027 `diseno_para_reuso_responsable`, paso 4
+
+```
+ID: I027
+NODE_ID: diseno_para_reuso_responsable
+FICHERO_NODO: dataset\nodos\diseno_para_reuso_responsable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documenta estas decisiones éticas como parte de los principios de diseño del proyecto
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4444 a L4444
+FRASE_CLAVE: [at] L4444 "The constraints you follow are your ethics; they get built right into the fabric of the world"
+QUE_ANADE_O_CONCRETA: documentar las decisiones como principios; el libro dice que las restricciones que sigues son tu etica
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Elige con cuidado tus restricciones: lo que decides no hacer importa tanto como lo que haces, y esas restricciones son tu ética.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4444 a L4444, cap. 8 "Aim for Imperfection":
+
+> L4444: The constraints you choose make or break a design’s aesthetics, and they make or break your ethics. When you create, what you choose not to do is as important as what you choose to do. The constraints you follow are your ethics; they get built right into the fabric of the world.
+
+#### I028 `diseno_por_sustraccion`, paso 2
+
+```
+ID: I028
+NODE_ID: diseno_por_sustraccion
+FICHERO_NODO: dataset\nodos\diseno_por_sustraccion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Lista todos los componentes actuales de tu producto/servicio/proceso
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3754 a L3754
+FRASE_CLAVE: [at] L3754 "Removal is a design fundamental"
+QUE_ANADE_O_CONCRETA: la lista de todos los componentes; el libro dice que quitar es un fundamento del diseno
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mira tu producto, servicio o proceso buscando qué quitar: quitar es un fundamento del diseño.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3754 a L3754, cap. 7 "Disorient Yourself":
+
+> L3754: Removal is a design fundamental. Some of the best designs are subtractions. Some of the most noble goals revolve around removing carbon from the air, the wealth gap, the digital divide. Why is that so hard?
+
+#### I029 `diseno_por_sustraccion`, paso 4
+
+```
+ID: I029
+NODE_ID: diseno_por_sustraccion
+FICHERO_NODO: dataset\nodos\diseno_por_sustraccion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Identifica al menos 3 elementos candidatos a eliminar y evalúa el impacto
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A4 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3754 a L3754; [at] L3773 a L3773
+FRASE_CLAVE: [at] L3773 "Just as we can make, we can take away--and that’s often a better option."
+QUE_ANADE_O_CONCRETA: quita la cifra "al menos 3 elementos"
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A4, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Identifica los elementos candidatos a eliminar y evalúa el impacto de quitarlos
+NOTA: resumen_teorico | El resumen trae otras cifras (59 por ciento, 80 por ciento) que no se juzgaron en este muestreo; el 59 por ciento esta en L3763.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3754 a L3754, cap. 7 "Disorient Yourself":
+
+> L3754: Removal is a design fundamental. Some of the best designs are subtractions. Some of the most noble goals revolve around removing carbon from the air, the wealth gap, the digital divide. Why is that so hard?
+
+PASAJE [at] L3773 a L3773, cap. 7 "Disorient Yourself":
+
+> L3773: Just as we can make, we can take away--and that’s often a better option. But both cases are really about what you are willing to give.
+
+#### I030 `diseno_por_sustraccion`, paso 5
+
+```
+ID: I030
+NODE_ID: diseno_por_sustraccion
+FICHERO_NODO: dataset\nodos\diseno_por_sustraccion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Prueba una versión reducida con usuarios reales antes de comprometerte
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3773 a L3773
+FRASE_CLAVE: [at] L3773 "Just as we can make, we can take away--and that’s often a better option"
+QUE_ANADE_O_CONCRETA: la prueba con usuarios reales; el libro dice que quitar suele ser mejor opcion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Considera la versión reducida como una opción real: igual que podemos hacer, podemos quitar, y a menudo es mejor.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3773 a L3773, cap. 7 "Disorient Yourself":
+
+> L3773: Just as we can make, we can take away--and that’s often a better option. But both cases are really about what you are willing to give.
+
+#### I031 `diseno_sistemico_partes_interesadas`, paso 4
+
+```
+ID: I031
+NODE_ID: diseno_sistemico_partes_interesadas
+FICHERO_NODO: dataset\nodos\diseno_sistemico_partes_interesadas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Diseña formas de gobierno del proyecto que limiten el control desproporcionado de quienes tienen intereses económicos particulares.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2576 a L2576; [at] L4479 a L4479
+FRASE_CLAVE: [at] L2576 "It’s the shadow force in the priority engine--the way the funders can exert their own control over the project, and over me"
+QUE_ANADE_O_CONCRETA: el diseno de formas de gobierno que limiten a los financiadores; el libro pide restricciones compartidas y regulacion inteligente, y su relato muestra el control oculto de quienes financian
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Adopta restricciones compartidas que tengan en cuenta los males (coordinación cooperativa, medidas de seguridad, regulación inteligente), atento a que quienes financian pueden ejercer su control como una fuerza oculta.
+DATO_REPETIDO: entregable_esperado | actual: y una propuesta de gobierno que proteja el propósito central de tu proyecto frente a intereses particulares | fiel: y las restricciones compartidas que adoptas frente a intereses particulares
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2576 a L2576, cap. 4 "Make-Believe":
+
+> L2576: “I had no other choice,” she says. “I agreed to the tusk trade and to keeping it hidden when I signed on. I was naïve, and it seemed like a small thing compared to saving the biome. It’s the shadow force in the priority engine--the way the funders can exert their own control over the project, and over me. I see now, that as the mammoth population grows, their power will rise with it. And it will be at the expense of the biome. We must slow down, and the only way is to cut them out.”
+
+PASAJE [at] L4479 a L4479, cap. 8 "Aim for Imperfection":
+
+> L4479: The bigger the things are, the harder they can be to control. So, while a single person or even a single company (with a few grand exceptions) can’t do it all, if you design products, lead a company, are a parent, or just care, you should be eager to adopt shared constraints that take the bads into account. Cooperative coordination, safety measures, and smart regulation make for a good, thriving, imperfect world.
+
+#### I032 `diseno_sistemico_partes_interesadas`, paso 5
+
+```
+ID: I032
+NODE_ID: diseno_sistemico_partes_interesadas
+FICHERO_NODO: dataset\nodos\diseno_sistemico_partes_interesadas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Acepta que priorizar el bien del sistema puede exigirte sacrificar partes individuales de tu proyecto.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2418 a L2420; [at] L2628 a L2628; [at] L2651 a L2651
+FRASE_CLAVE: [at] L2628 "I can make the hard decisions, letting one part of the biome falter for the sake of the broader good"
+QUE_ANADE_O_CONCRETA: la aceptacion como regla; solo lo afirma un personaje de ficcion y el propio relato lo deja en duda
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que estos compromisos son difíciles y tienen costes planetarios y personales; el relato del libro deja abierta la pregunta de si una parte debe sufrir por el bien del conjunto.
+DATO_REPETIDO: resumen_teorico | actual: priorizar el bien colectivo por encima de intereses individuales, y aceptar que toda decisión implica sacrificios | fiel: y asumir que están llenos de concesiones difíciles
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2418 a L2420, cap. 4 "Make-Believe":
+
+> L2418: He holds up his hands in surrender. “All I’m proposing is a minimum one-year pause. You heard Anastasia screaming too. They shouldn’t be suffering for the sake of the biome…and I’m sorry. That’s a lot.”
+>
+> L2420: His point is really the crux of it. Should any one species suffer on behalf of the health of a whole biome? Maybe a mammoth shouldn’t suffer, but what about a mouse? A bush? A fruit fly? A human? Two humans?
+
+PASAJE [at] L2628 a L2628, cap. 4 "Make-Believe":
+
+> L2628: I’m a good biomic designer because I can see the big picture and the details. I can put them together. I can see how the parts of my work make the whole machine run. I can prioritize for the best positive outcomes for the most stakeholders. I can make the hard decisions, letting one part of the biome falter for the sake of the broader good. I know how to play the long game. But I want to do it with her.
+
+PASAJE [at] L2651 a L2651, cap. 4 "Make-Believe":
+
+> L2651: Nonhuman stakeholders--flora and fauna--need a voice in environmental reparations, but humans would still be in control of that voice. These trade-offs are tricky and full of compromises, both planetary and personal.
+
+#### I033 `economia_circular_de_la_imaginacion`, paso 5
+
+```
+ID: I033
+NODE_ID: economia_circular_de_la_imaginacion
+FICHERO_NODO: dataset\nodos\economia_circular_de_la_imaginacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Definir métricas de éxito que no dependan solo de la atención o el engagement, sino del bienestar emocional sostenido de las personas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3638 a L3638; [at] L3655 a L3657
+FRASE_CLAVE: [at] L3638 "it makes sense to calibrate your instruments and reconsider how to tally progress"
+QUE_ANADE_O_CONCRETA: las metricas de "bienestar emocional sostenido"; el libro pide reconsiderar como se mide el progreso y advierte contra convertir la medida en meta
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Reconsidera cómo mides el progreso: los "me gusta" y las visitas son una medida pobre de la conexión, y cuando una medida se convierte en meta deja de ser una buena medida.
+DATO_REPETIDO: entregable_esperado | actual: y al menos dos métricas alternativas a la atención o el engagement | fiel: y una reflexión sobre cómo medir el progreso sin convertir la medida en meta
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3638 a L3638, cap. 7 "Disorient Yourself":
+
+> L3638: As the relationship between people and technology shifts, you must shift along with it. To coexist with turbulence, it makes sense to calibrate your instruments and reconsider how to tally progress.
+
+PASAJE [at] L3655 a L3657, cap. 7 "Disorient Yourself":
+
+> L3655: Nguyen points out that digital interactions are lousy with measures and targets that stand in for values. You might value connecting with others. So you post something on social media. In return, the connection gets tallied by the number of likes and views you get. That might seem like a reasonable representation of connection, but it’s lightweight. One like might come from a person who just did it selfishly so that you would return the favor. Another like might come from someone who really resonated with your post; perhaps it came at just the right time and changed a big life decision they were about to make. You can’t tell the difference--each is just one more heart, thumbs-up, or whatever. You may even end up feeling a lack of connection because you got only two likes.
+>
+> L3657: When we orient ourselves around goals that don’t represent our real values, we can create ripples we’d rather not create. In their book, System Error, which takes a hard look at how optimizing around narrow goals (particularly in big tech) gets in the way of doing good work in the world, Stanford professors Rob Reich, Mehran Sahami, and Jeremy Weinstein explain how trouble ensues when “the metric becomes the goal, and the means justify the end. This is called Goodhart’s Law, which states that when a measure becomes a target, it ceases to be a good measure.”
+
+#### I034 `falacia_del_disenador_affordances`, paso 3
+
+```
+ID: I034
+NODE_ID: falacia_del_disenador_affordances
+FICHERO_NODO: dataset\nodos\falacia_del_disenador_affordances.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseña con flexibilidad, esperando que la gente lo reinterprete según sus propias necesidades.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2923 a L2925; [at] L2949 a L2949
+FRASE_CLAVE: [at] L2925 "We make homes in the flaws. We nestle into the mistakes. We build our future in the gaps"
+QUE_ANADE_O_CONCRETA: la instruccion de disenar con flexibilidad para que lo reinterpreten; el libro explica la falacia del disenador y pide decidir con cuidado si llenar o dejar un hueco
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que tu intención no determina el uso: la gente encuentra lo que hay y lo pone a trabajar; cuando descubras un hueco, decide con cuidado si llenarlo o dejarlo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2923 a L2925, cap. 5 "Be Awkward":
+
+> L2923: Don Ihde, technoscience philosopher and scribe of the ongoing love affair between people and technology, calls this kind of creative reuse the “designer fallacy,” the false idea that a designer’s intent can really determine a design’s use. Instead, people find what’s there and put it to work. If something can be used to do something, it will be. These cues are also called “affordances.” A fence with horizontal backer rails becomes a ladder. A swinging door is also a ride.
+>
+> L2925: There’s something hopeful on display here too: the relentlessness of joy. We make homes in the flaws. We nestle into the mistakes. We build our future in the gaps.
+
+PASAJE [at] L2949 a L2949, cap. 5 "Be Awkward":
+
+> L2949: Being able to see these gaps is not a magic trick, but it is a trick of discovery. It’s a job for attention, not invention. (And maybe a little bit of luck.) And once you find a gap, you shouldn’t let it go, at least not right away. Instead, decide, thoughtfully, whether it’s a gap to fill or one to leave alone.
+
+#### I035 `ficcion_especulativa_como_metodo`, paso 1
+
+```
+ID: I035
+NODE_ID: ficcion_especulativa_como_metodo
+FICHERO_NODO: dataset\nodos\ficcion_especulativa_como_metodo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Elige una tendencia tecnológica o social emergente que se relacione con lo que estás construyendo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2647 a L2647; [at] L3490 a L3490
+FRASE_CLAVE: [at] L3490 "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story"
+QUE_ANADE_O_CONCRETA: elegir una tendencia emergente relacionada con lo que construyes; el libro propone la historia especulativa y la construye a partir de ideas que ya existen
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Parte de ideas que ya existen, como hacen las historias del libro, para imaginar qué podría pasar si sigues cierto camino.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2647 a L2647, cap. 4 "Make-Believe":
+
+> L2647: This story lives in the middle of the book because it hits on concepts that span the sections. Like the other stories, it’s an outgrowth of existing ideas. Pleistocene Park is a real place in Siberia, Russia, not far from Cherskii, founded by Sergey Zimov to restore land that has become tundra back to a mammoth steppe ecosystem, to help expand the permafrost and slow global warming. Pleistocene Park is connected to a nonprofit organization called Revive & Restore, which works with the Church Lab at Harvard University. They are actively engaged in mammoth de-extinction.
+
+PASAJE [at] L3490 a L3490, cap. 6 "Shapeshift":
+
+> L3490: Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.
+
+#### I036 `ficcion_especulativa_como_metodo`, paso 2
+
+```
+ID: I036
+NODE_ID: ficcion_especulativa_como_metodo
+FICHERO_NODO: dataset\nodos\ficcion_especulativa_como_metodo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, en 10-15 años, del tipo usuarios, empresas, reguladores
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A5 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L191 a L193
+FRASE_CLAVE: [at] L193 "Some have plots and characters."
+QUE_ANADE_O_CONCRETA: quita el horizonte "en 10-15 años" y el reparto "del tipo usuarios, empresas, reguladores"
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A5, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real.
+NOTA: entregable_esperado | El entregable pide "(1 a 2 páginas)": es otro dato, no juzgado en este muestreo.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L191 a L193, preliminares:
+
+> L191: The stories interspersed here look at the future as if it has already happened and imagine what might unfold. They are retrospectives of things to come. Stories are one of the few ways we can get to know what the future could feel like before it gets here. These stories don’t shy away from the monumental, messy, and sometimes mundane possibilities ahead.
+>
+> L193: Stories, in this case, is a loose term. We call each of these a “History of the Future.” Some have plots and characters. Others are soft sketches of daily life. Still others are more like articles or opinion pieces rescued from imagined futures. Some might feel far-fetched, others too close to home. They are meant not to predict, but to help you get a feel for what the future may bring and to allow you to muse about what you might do now. One story could inspire you to forge a future movement; another might make you wonder if you should toss out your tech altogether.
+
+#### I037 `ficcion_especulativa_como_metodo`, paso 4
+
+```
+ID: I037
+NODE_ID: ficcion_especulativa_como_metodo
+FICHERO_NODO: dataset\nodos\ficcion_especulativa_como_metodo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías, y antes de definir requisitos del producto
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L193 a L193; [at] L4658 a L4658
+FRASE_CLAVE: [at] L4658 "To heal, we must paint pictures of our futures--those we want to see and those we want to avoid"
+QUE_ANADE_O_CONCRETA: conversar con otros y el momento "antes de definir requisitos"; el libro usa las historias para pensar que hacer ahora
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usa la historia para pensar qué podrías hacer ahora, pintando los futuros que quieres ver y los que quieres evitar.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L193 a L193, preliminares:
+
+> L193: Stories, in this case, is a loose term. We call each of these a “History of the Future.” Some have plots and characters. Others are soft sketches of daily life. Still others are more like articles or opinion pieces rescued from imagined futures. Some might feel far-fetched, others too close to home. They are meant not to predict, but to help you get a feel for what the future may bring and to allow you to muse about what you might do now. One story could inspire you to forge a future movement; another might make you wonder if you should toss out your tech altogether.
+
+PASAJE [at] L4658 a L4658, cap. 8 "Aim for Imperfection":
+
+> L4658: Healing isn’t magic. Neither is design work, and we all design. We all contribute to and build the world in some way. Healing takes time, checkups, and examination from all angles, professions, people, and nature. Healing is looking hard at what’s gone wrong and what’s worked. It’s about building on the old, composting and repurposing as needed, and acknowledging what has stood the test of time and what needs replacement. Healing requires some assembly. To heal, we must paint pictures of our futures--those we want to see and those we want to avoid. It takes practice. What exists in the future you want to design? Don’t forget that what we make makes us back. How would you like to develop from here? What do you hope for your descendants?
+
+#### I038 `ficcion_especulativa_como_metodo`, paso 5
+
+```
+ID: I038
+NODE_ID: ficcion_especulativa_como_metodo
+FICHERO_NODO: dataset\nodos\ficcion_especulativa_como_metodo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Saca de ahí principios de diseño que te ayuden a evitar los riesgos que descubriste en la historia.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L193 a L193
+FRASE_CLAVE: [at] L193 "to allow you to muse about what you might do now"
+QUE_ANADE_O_CONCRETA: la extraccion de principios de diseno; el libro dice que las historias sirven para pensar que hacer ahora
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usa la historia para pensar qué podrías hacer ahora a la vista de lo que el futuro puede traer.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L193 a L193, preliminares:
+
+> L193: Stories, in this case, is a loose term. We call each of these a “History of the Future.” Some have plots and characters. Others are soft sketches of daily life. Still others are more like articles or opinion pieces rescued from imagined futures. Some might feel far-fetched, others too close to home. They are meant not to predict, but to help you get a feel for what the future may bring and to allow you to muse about what you might do now. One story could inspire you to forge a future movement; another might make you wonder if you should toss out your tech altogether.
+
+#### I039 `gestion_decisiones_bajo_carga_emocional`, paso 2
+
+```
+ID: I039
+NODE_ID: gestion_decisiones_bajo_carga_emocional
+FICHERO_NODO: dataset\nodos\gestion_decisiones_bajo_carga_emocional.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Identifica en tu producto o proceso los momentos donde la persona tiene la mente saturada y podría tomar decisiones impulsivas.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1222 a L1222
+FRASE_CLAVE: [at] L1222 "If your brain is full (and whose isn’t?), your emotions have an even bigger effect on your choices"
+QUE_ANADE_O_CONCRETA: localizar en el producto los momentos de mente saturada; el libro describe el efecto de la carga mental sobre las decisiones
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que, cuando la mente está llena, las emociones pesan todavía más en las decisiones.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1222 a L1222, cap. 3 "Feelings":
+
+> L1222: At the moment of decision, feelings and reason fight it out. When the rational parts of the brain have to grapple with a seemingly simple task like remembering seven numbers, the emotional bits have room for a coup. Seven digits is enough to short-circuit reason. With that, feelings are free to nudge the subjects toward comfort food to quell an immediate craving, leaving the healthy, rational choice in the dust. If your brain is full (and whose isn’t?), your emotions have an even bigger effect on your choices.
+
+#### I040 `gestion_decisiones_bajo_carga_emocional`, paso 3
+
+```
+ID: I040
+NODE_ID: gestion_decisiones_bajo_carga_emocional
+FICHERO_NODO: dataset\nodos\gestion_decisiones_bajo_carga_emocional.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: En esos momentos críticos, diseña pausas, simplifica o reduce las opciones que ofreces.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1200 a L1200; [at] L4473 a L4473
+FRASE_CLAVE: [at] L1200 "There are thousands of moments along the circumstances-feelings-ideas loop to pause, reflect, and redirect"
+QUE_ANADE_O_CONCRETA: pausas y reduccion de opciones para el usuario; en el libro las pausas son del creador y el retardo sirve para frenar lo viral
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Aprovecha los momentos del ciclo circunstancias, sentimientos e ideas para pausar, reflexionar y reorientar; y, como se propone para las redes, usa retardos que frenen lo demasiado rápido.
+DATO_REPETIDO: entregable_esperado | actual: con propuestas concretas para reducir la saturación mental o el estrés de la persona en cada uno | fiel: con los momentos en que conviene pausar, reflexionar y reorientar
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1200 a L1200, cap. 3 "Feelings":
+
+> L1200: Instead of accepting the inevitability of each step, you can consider it a chance to change things, to heal parts of the system left broken by designs that came before. There are thousands of moments along the circumstances-feelings-ideas loop to pause, reflect, and redirect.
+
+PASAJE [at] L4473 a L4473, cap. 8 "Aim for Imperfection":
+
+> L4473: Frances Haugen, a data engineer and product manager turned Facebook whistleblower, called for the same in her testimony to Congress, seeking reforms that make “the platforms themselves safer, less twitchy, less reactive, less viral.” Twitchy, reactive, and viral are synonyms for too swift. She, Shirky, and others have suggested changes that might make social media less twitchy, like the inability to share a link you haven’t read, a time delay between when you post and when something shows up, or as Renée DiResta of Stanford’s internet observatory also suggested to the Wall Street Journal, “circuit breakers” that automatically kick in to slow overly viral content.
+
+#### I041 `indice_de_reparabilidad`, paso 5
+
+```
+ID: I041
+NODE_ID: indice_de_reparabilidad
+FICHERO_NODO: dataset\nodos\indice_de_reparabilidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad y publícalo con claridad.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4324 a L4324; [at] L4336 a L4336
+FRASE_CLAVE: [at] L4336 "But who should govern them? Scores on the French index are currently calculated by manufacturers themselves. What are the boundaries of trust?"
+QUE_ANADE_O_CONCRETA: certificar y publicar el puntaje; el libro deja abierta la pregunta de quien debe gobernar el indice
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Plantéate quién debería calcular y gobernar tu puntaje de reparabilidad: en Francia lo calculan los propios fabricantes, y eso plantea hasta dónde llega la confianza.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4324 a L4324, cap. 8 "Aim for Imperfection":
+
+> L4324: In the United States, we tend to fix larger appliances, like refrigerators and washing machines, and some smaller, expensive ones, like mobile phones, to a degree. But for the most part ours is a throwaway culture. The culture of fixing doesn’t extend as far as it does in other countries. In 2021, France enabled the first of its kind “repairability index” legislation. It requires electronics manufacturers to label their products with a repairability score built on the following five parameters:
+
+PASAJE [at] L4336 a L4336, cap. 8 "Aim for Imperfection":
+
+> L4336: What parameters should be in a repairability index for your work? What behavioral shift or business practice might that inspire? The French repairability index is meant to curb the practice of planned obsolescence--things that are designed to be thrown away. But who should govern them? Scores on the French index are currently calculated by manufacturers themselves. What are the boundaries of trust?
+
+#### I042 `llamar_lo_que_falta`, paso 4
+
+```
+ID: I042
+NODE_ID: llamar_lo_que_falta
+FICHERO_NODO: dataset\nodos\llamar_lo_que_falta.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documenta la definición encontrada y cómo cambia tu percepción del problema
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3016 a L3016; [at] L3026 a L3026
+FRASE_CLAVE: [at] L3026 "Making us pause to think about a concept in a way that we might not otherwise have done is exactly the point. It allows us to uncover new layers to our noticing"
+QUE_ANADE_O_CONCRETA: documentar la definicion y el cambio de percepcion; el libro dice que cada definicion nueva es una lente, y cuenta un diccionario que nunca se escribio
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usa la nueva palabra para detenerte a pensar el concepto: cada definición nueva es una lente que te ayuda a ver lo que cuesta poner en palabras.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3016 a L3016, cap. 5 "Be Awkward":
+
+> L3016: In high school, my friend George and I kept an informal dictionary. We’d add new words--phrases too--as they came to us. We never wrote them down, but we referred to them often. I can’t remember many, but one does stick out: “in it,” meaning being so absorbed in a moment that you forget yourself.
+
+PASAJE [at] L3026 a L3026, cap. 5 "Be Awkward":
+
+> L3026: Making us pause to think about a concept in a way that we might not otherwise have done is exactly the point. It allows us to uncover new layers to our noticing. Whether they be comical or informative or serious, exploring definitions and usages for words in other languages--or even in imaginary ones--helps us articulate and understand the human experience. Each new definition is an added lens that helps us see things that are hard to put words to. To see the unseeable, we need new words to describe:
+
+#### I043 `medir_lo_que_importa_no_solo_lo_facil`, paso 3
+
+```
+ID: I043
+NODE_ID: medir_lo_que_importa_no_solo_lo_facil
+FICHERO_NODO: dataset\nodos\medir_lo_que_importa_no_solo_lo_facil.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseña al menos una métrica proxy para capturar un valor intangible relevante para tu modelo de negocio.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3653 a L3653; [at] L3661 a L3661; [at] L2129 a L2129
+FRASE_CLAVE: [at] L3661 "To offset troublesome goals, make more goals."
+QUE_ANADE_O_CONCRETA: "al menos una metrica proxy" para un valor intangible; el libro pide hacer explicitas mas metas y advierte que las medidas son representaciones pobres de la experiencia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Para compensar las métricas que atropellan tus valores, haz explícitas más metas y deja que se contrapesen, recordando que toda medida es una representación pobre de la experiencia.
+DATO_REPETIDO: entregable_esperado | actual: con al menos una métrica nueva propuesta para cerrar la brecha | fiel: con las metas explícitas que la contrapesan
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3653 a L3653, cap. 7 "Disorient Yourself":
+
+> L3653: Things get dicey when goals and purpose, targets and motivations start to blur together. As we gather data, we can conflate the two. The measures we make--such as points in a game, likes on a post, or numbers in a ledger--capture our attention. That’s sometimes useful--and always distorted (just like stories, metaphors, and maps). Measures also highlight and hide. As useful as measurements are, they are also flimsy representations of experience. Putting too much value on a measurement can, like AI Q*bert, change the way we do things and undermine the very values the points, goals, or measurements are meant to represent.
+
+PASAJE [at] L3661 a L3661, cap. 7 "Disorient Yourself":
+
+> L3661: Even well-intended measurements can run roughshod over values.[*1] Does that mean we should leave goals behind us? No. Goals are useful. One counterintuitive way to stop them from getting ahead of us is to lean straight into them. To offset troublesome goals, make more goals. This is what we mean by deliberate disorientation. The answer is embedded in the problem, and you make use of the problem by tilting toward it, not away from it. Make your goals explicit, then let them duke it out.
+
+PASAJE [at] L2129 a L2129, cap. 4 "Make-Believe":
+
+> L2129: Note: The following are 2050’s Noble Currency categories. Since 2027, Noble Currencies have created monetary value in places where traditional currencies fall short. The elements that make up Noble Currency contribute to wealth, health, and prosperity but are hard to measure. Measurement difficulty arises for some from a lack of understanding of the correct metrics; for others, from years of systematized racism, sexism, and classism, or because they are challenging to qualify. The rise of tokenization and badging connected with the proliferation of record-keeping blockchains in the 2020s allowed these elements to be acknowledged and accounted for. Though a wallet full of shopping-worthy peer-issued tokens proved elusive, it has come a long way since. The Noble is now a reserve currency for many nations, and it has given a purse to populations that were otherwise working without compensation.
+
+#### I044 `metas_vs_proposito`, paso 4
+
+```
+ID: I044
+NODE_ID: metas_vs_proposito
+FICHERO_NODO: dataset\nodos\metas_vs_proposito.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Ajusta o complementa las métricas con indicadores cualitativos que capturen mejor el propósito
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3661 a L3661; [at] L3668 a L3682
+FRASE_CLAVE: [at] L3661 "To offset troublesome goals, make more goals"
+QUE_ANADE_O_CONCRETA: los "indicadores cualitativos"; el remedio del libro es anadir metas, no metas, antimetas y salvaguardas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Complementa tus metas con más metas explícitas (metas normales, no metas, antimetas y salvaguardas) y deja que se contrapesen.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3661 a L3661, cap. 7 "Disorient Yourself":
+
+> L3661: Even well-intended measurements can run roughshod over values.[*1] Does that mean we should leave goals behind us? No. Goals are useful. One counterintuitive way to stop them from getting ahead of us is to lean straight into them. To offset troublesome goals, make more goals. This is what we mean by deliberate disorientation. The answer is embedded in the problem, and you make use of the problem by tilting toward it, not away from it. Make your goals explicit, then let them duke it out.
+
+PASAJE [at] L3668 a L3682, cap. 7 "Disorient Yourself":
+
+> L3668: Cynthia Savard Saucier and Jonathan Shariat offer a strategy in their book, Tragic Design. They suggest listing four sets of goals for anything you do:
+>
+> L3670: Normal goals: what you are aiming to do.
+>
+> L3674: Nongoals: things that are just out of scope.
+>
+> L3678: Antigoals: what you commit to not doing.
+>
+> L3682: Safeguards: how you will make sure things don’t go wrong. (We’ll get into some safeguards in chapter 8, where we call them fail-safes.)
+
+#### I045 `narrativa_como_herramienta_de_sentido`, paso 1
+
+```
+ID: I045
+NODE_ID: narrativa_como_herramienta_de_sentido
+FICHERO_NODO: dataset\nodos\narrativa_como_herramienta_de_sentido.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: L2071: "stories train your attention on characters, conflict, and causes." La triada del libro es personajes, conflicto y causas, y la presenta como distorsion (L2075: "But it's still a distortion."); "resolucion" no esta (grep "resolution": solo L2690 y L2696, sobre la incomodidad). Dato anadido: la receta "personajes, conflicto y resolucion".
+FICHA_DE_CORRECCION: A16 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2065 a L2065; [at] L2071 a L2071; [at] L2075 a L2075
+FRASE_CLAVE: [at] L2075 "Thinking in stories is very useful."
+QUE_ANADE_O_CONCRETA: quita la receta "personajes, conflicto y resolucion" (la triada del libro es personajes, conflicto y causas, y la presenta como distorsion); anade la advertencia de que toda historia distorsiona
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A16, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Al presentar un concepto de diseño o prototipo, apóyate en una historia para facilitar la comprensión y la conexión, sin olvidar que toda historia distorsiona.
+NOTA: entregable_esperado | El entregable ya tiene su correccion en la ficha A6 (storyboard).
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2065 a L2065, cap. 4 "Make-Believe":
+
+> L2065: There are all kinds of theories as to why people use make-believe: It’s an emotional rehearsal to prepare us for trouble down the road. It gives life meaning and keeps us going. It helps us make decisions and predict the future. Its entertaining. It quiets the mind. Most interesting of all, we might be doing it to connect with each other.
+
+PASAJE [at] L2071 a L2071, cap. 4 "Make-Believe":
+
+> L2071: Stories make you feel sure of yourself because they latch on to the human psyche in particular ways--that’s their power and their peril. When you think in stories, your point of view naturally distorts. In your little sensory bubble, stories train your attention on characters, conflict, and causes.
+
+PASAJE [at] L2075 a L2075, cap. 4 "Make-Believe":
+
+> L2075: Thinking in stories is very useful. (This book is filled with them!) Getting down to root causes and people’s motivations (characters) helps unwind complex issues. But it’s still a distortion. Focusing on characters’ concerns conceals collaboration and nonhuman influences like context. Foregrounding conflict clouds connections. Fetishizing singular causes can crowd out unseen possibilities and problems. Getting tangled up in a story can amplify false dichotomies and hide nuance, keeping you from noticing certain elements.
+
+#### I046 `narrativa_como_herramienta_de_sentido`, paso 3
+
+```
+ID: I046
+NODE_ID: narrativa_como_herramienta_de_sentido
+FICHERO_NODO: dataset\nodos\narrativa_como_herramienta_de_sentido.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Usar prototipos narrativos (escenarios, storyboards) para probar cómo los usuarios interpretan intenciones y emociones en un diseño.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A6 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2063 a L2063; [at] L3490 a L3490
+FRASE_CLAVE: [at] L3490 "Try a speculative story."
+QUE_ANADE_O_CONCRETA: quita las herramientas "escenarios, storyboards" (el libro no las nombra); anade la historia especulativa, que si propone
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A6, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Usar historias especulativas para explorar cómo interpretan los usuarios las intenciones y emociones en un diseño.
+DATO_REPETIDO: entregable_esperado | actual: Un escenario o storyboard narrativo del producto/servicio | fiel: Una historia narrativa del producto/servicio
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2063 a L2063, cap. 4 "Make-Believe":
+
+> L2063: Afterward, they asked the subjects to describe what had happened. Ninety-seven percent talked about the shapes as if they were characters and added motivation to the motions. Even when asked to just “write down what happened in the picture,” the subjects concocted stories of villains, bullies, love, and hate; characters with genders and agendas, fight scenes, chitchat, and marriage. From simple shapes moving around, people made up stories with drama and intent.
+
+PASAJE [at] L3490 a L3490, cap. 6 "Shapeshift":
+
+> L3490: Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.
+
+#### I047 `pensamiento_de_conexiones_ripple_effect`, paso 3
+
+```
+ID: I047
+NODE_ID: pensamiento_de_conexiones_ripple_effect
+FICHERO_NODO: dataset\nodos\pensamiento_de_conexiones_ripple_effect.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Buscar analogías en sistemas naturales o urbanos que ilustren patrones de adaptación similares a los de tu mercado
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L656 a L658; [at] L3090 a L3090
+FRASE_CLAVE: [at] L3090 "Where else does nature already have a solution?"
+QUE_ANADE_O_CONCRETA: las analogias para patrones de adaptacion del mercado; el libro busca en la naturaleza soluciones y sabiduria
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Pregúntate dónde tiene ya la naturaleza una solución y aprende de la sabiduría de los sistemas naturales para hacer más sabios los tuyos.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L656 a L658, cap. 1 "Connections":
+
+> L656: ‘Cúagilákv (Jess Housty), a community organizer for the Haíɫzaqv people in Bella Bella, British Columbia, Canada, illustrates that point further in her essay “Thriving Together: Salmon, Berries, and People.” A robust salmonberry harvest predicts a strong salmon season, which leads to a thriving, biodiverse community: “In Haíɫzaqv territory, all these elements--people, place, salmon, and salmonberries--can be found surviving or thriving only through our mutual care: we observe the bloom and abundance of flowers and berries as we await the coming salmon, then we Haíɫzaqv, and other mammals of the territory, fertilize those salmonberry bushes with salmon remains so that they will bloom and bear fruit again in a cycle much deeper than any one season.”
+>
+> L658: These are examples of how we can learn from the wisdom of natural systems to make our own systems wiser. And while the state of affairs on our planet is certainly fraught, it’s not entirely dire. Humans have the power to effect plenty of positive change on the planet.
+
+PASAJE [at] L3090 a L3090, cap. 5 "Be Awkward":
+
+> L3090: But noticing alone is not enough. Putting a name to the things you find--and the things you might be missing--is essential. This is how observations turn into possibilities. What’s needed but not realized? Where else does nature already have a solution? Who has been left out? Notice it and name it. But even that is just the beginning.
+
+#### I048 `pensamiento_espacial_mapeo`, paso 1
+
+```
+ID: I048
+NODE_ID: pensamiento_espacial_mapeo
+FICHERO_NODO: dataset\nodos\pensamiento_espacial_mapeo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Selecciona 5 elementos de tu proyecto/idea (datos, features, usuarios, riesgos, etc.)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: L3460: "The minute you move your data, ideas, or anything around in front of you with your hands, you activate your brain in a new way." El cinco es del libro (L3404) y el libro generaliza el ejercicio a datos e ideas; "features, usuarios, riesgos" son ejemplos de contenido, no cifra, plazo, herramienta, responsable, norma ni frecuencia.
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3404 a L3408; [at] L3460 a L3460
+FRASE_CLAVE: [at] L3460 "The minute you move your data, ideas, or anything around in front of you with your hands, you activate your brain in a new way"
+QUE_ANADE_O_CONCRETA: los ejemplos de contenido "features, usuarios, riesgos"; el cinco es del libro, que empieza con objetos fisicos y lo extiende a datos e ideas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Elige cinco elementos que puedas mover con las manos sobre la mesa: el libro empieza con objetos de tu escritorio y extiende el ejercicio a datos e ideas.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3404 a L3408, cap. 6 "Shapeshift":
+
+> L3404: Grab five items from your desk, your purse, the kitchen--wherever you are. Choose things you can hold in your hand.
+>
+> L3408: These five items are your dataset! No trading.
+
+PASAJE [at] L3460 a L3460, cap. 6 "Shapeshift":
+
+> L3460: Both continua and Venn diagrams are ways of seeking out relationships in your data that you may not have noticed otherwise. Importantly, you need to actually move the data around on the table in front of you for new things to pop out. A great fallacy of adulthood is the assumption that we should be able to spot new patterns, think original thoughts, even have epiphanies just by thinking. But we can’t do everything in our heads, no matter how much we try to convince ourselves. The minute you move your data, ideas, or anything around in front of you with your hands, you activate your brain in a new way. New ideas will follow.
+
+#### I049 `pensamiento_espacial_mapeo`, paso 5
+
+```
+ID: I049
+NODE_ID: pensamiento_espacial_mapeo
+FICHERO_NODO: dataset\nodos\pensamiento_espacial_mapeo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Genera múltiples mapas del mismo concepto (al menos 3-5) para construir un 'atlas' de perspectivas
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A7 (seccion 11.8)
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3372 a L3374
+FRASE_CLAVE: [at] L3374 "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+QUE_ANADE_O_CONCRETA: quita la cifra "al menos 3-5"
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A7, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas
+DATO_REPETIDO: entregable_esperado | actual: Un atlas de 3-5 mapas/diagramas distintos | fiel: Un atlas de varios mapas/diagramas distintos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3372 a L3374, cap. 6 "Shapeshift":
+
+> L3372: These two maps are wildly different ways to know this place--both valid. And there are so many other ways you could map Cape Cod: A map of every lighthouse. A map of every mini-golf course. A map of the best route to drive from Harwich Port to Wellfleet. A map of your favorite childhood memories. If you’ve been to Cape Cod (or anywhere else you might know well), you can probably rattle off ten more maps you’d make of it. If you haven’t, you can get to know it more with each new map you examine. Investigate twenty, thirty, forty maps of a place, and eventually you may get a sense of it through the eyes of others.
+>
+> L3374: “Every place deserves an atlas,” says Rebecca Solnit in the opening line of Infinite City: A San Francisco Atlas. Atlases are compilations of many maps, each examining a place through a different viewfinder. Places deserve atlases, but maps are for exploring much more than just places. You can map an idea. You can map a discipline. You can map the mess in your closet. And you can do each in multiple ways. Each map is one lens. Together they make an atlas of whatever idea you’re representing.
+
+#### I050 `prototipar_con_medios_no_convencionales`, paso 6
+
+```
+ID: I050
+NODE_ID: prototipar_con_medios_no_convencionales
+FICHERO_NODO: dataset\nodos\prototipar_con_medios_no_convencionales.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 5
+INDICE_BASE1: 6
+TEXTO_ACTUAL: Extrae las ideas que puedas trasladar al medio final de tu producto
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3921 a L3921; [at] L3939 a L3939
+FRASE_CLAVE: [at] L3939 "we can expose the biases in our thinking, stretch our ideas to new places, and invite more people into our work"
+QUE_ANADE_O_CONCRETA: trasladar las ideas al medio final del producto; el libro da al ejercicio el fin de exponer sesgos, estirar ideas e invitar a mas gente
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usa lo que te reveló el nuevo material para exponer los sesgos de tu forma de pensar, llevar tus ideas a lugares nuevos e invitar a más gente a tu trabajo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3921 a L3921, cap. 7 "Disorient Yourself":
+
+> L3921: Automaker BMW made a concept car out of fabric in 2008. Called the GINA, the car had a frame made of carbon and wire and wore a fabric skin. The fabric had multiple layers--mesh on the bottom with polyurethane-covered Lycra on the outside. This combination made the fabric skin flexible and stretchable and also waterproof and heat resistant. Making the skin out of fabric allowed the inner structure of the car to morph and change shape. Not only did doors pop up, but the hood split open in the middle to reveal the engine, a spoiler emerged in the back, and the front headlights blinked open. The GINA isn’t in production--it lives in BMW’s museum in Germany--but the exercise of making it is no less thought-provoking. A car made of fabric could change its shape to suit different style or performance desires. By eliminating all the extra metal, the car was made much lighter. What would that lightness afford? Would you add different features, make it radically fuel-efficient, or something else?
+
+PASAJE [at] L3939 a L3939, cap. 7 "Disorient Yourself":
+
+> L3939: The next time you want to push the potential of your work, ask yourself: What if it were made from an entirely different material? Pick a material or three. What would each of those materials allow your work to do that it currently does not? Who would it invite into your designs? Who or what would it leave out? We often assume our usual materials of making are the right ones, but by trying on new options, whether in concept or reality, we can expose the biases in our thinking, stretch our ideas to new places, and invite more people into our work.
+
+#### I051 `reconocer_el_sesgo_narrativo`, paso 3
+
+```
+ID: I051
+NODE_ID: reconocer_el_sesgo_narrativo
+FICHERO_NODO: dataset\nodos\reconocer_el_sesgo_narrativo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Busca deliberadamente evidencia que contradiga tu narrativa antes de buscar la que la confirma.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2050 a L2050; [at] L2079 a L2079
+FRASE_CLAVE: [at] L2079 "when you’re not motivated to believe something, you look to dismiss any evidence to the contrary"
+QUE_ANADE_O_CONCRETA: la busqueda deliberada de evidencia contraria y la secuencia "antes de buscar la que la confirma"; el libro describe el razonamiento motivado
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que eres bueno encontrando fallos en las historias de otros y malo en las tuyas: cuando quieres creer algo, te aferras a cualquier prueba que encaje.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2050 a L2050, cap. 4 "Make-Believe":
+
+> L2050: Hiroo’s experience is an extreme case of a very normal reaction--more the rule than an exception. People are pretty good at poking holes in other people’s faulty stories, but they’re lousy at finding weaknesses in their own. In other words, we’re all a lot like Hiroo. We have a knack for finding things where they don’t exist. And if you can’t let go when a story stops working for you, you work to preserve it.
+
+PASAJE [at] L2079 a L2079, cap. 4 "Make-Believe":
+
+> L2079: There’s the problem. People are not wired to let go of beliefs. This motivated reasoning (or “myside” bias) is the more emotional cousin of confirmation bias--and the root of some disheartening data on the human psyche. The gist is this: when you’re emotionally motivated to believe something, you latch on to any evidence--however flimsy--that fits your story. And when you’re not motivated to believe something, you look to dismiss any evidence to the contrary. The mind finds whatever it’s looking for and spins a yarn to block out the rest.
+
+#### I052 `reconocer_sesgo_de_apofenia`, paso 2
+
+```
+ID: I052
+NODE_ID: reconocer_sesgo_de_apofenia
+FICHERO_NODO: dataset\nodos\reconocer_sesgo_de_apofenia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Buscar activamente evidencia que contradiga la hipótesis favorita del equipo, no solo la que la confirma.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1865 a L1865; [at] L2079 a L2079
+FRASE_CLAVE: [at] L1865 "Confirmation bias--accepting data only when it confirms your established belief--can create big societal consequences"
+QUE_ANADE_O_CONCRETA: la busqueda activa de evidencia contraria; el libro describe el sesgo de confirmacion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente el sesgo de confirmación: tendemos a aceptar los datos solo cuando confirman lo que ya creemos y a descartar las pruebas en contra.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1865 a L1865, cap. 4 "Make-Believe":
+
+> L1865: Our brains like to organize and make meaning, whether it’s there or (often) not. Confirmation bias--accepting data only when it confirms your established belief--can create big societal consequences. The continued political polarization in the United States is a confirmation bias machine--you believe only the candidates you want to believe, and rifts deepen.
+
+PASAJE [at] L2079 a L2079, cap. 4 "Make-Believe":
+
+> L2079: There’s the problem. People are not wired to let go of beliefs. This motivated reasoning (or “myside” bias) is the more emotional cousin of confirmation bias--and the root of some disheartening data on the human psyche. The gist is this: when you’re emotionally motivated to believe something, you latch on to any evidence--however flimsy--that fits your story. And when you’re not motivated to believe something, you look to dismiss any evidence to the contrary. The mind finds whatever it’s looking for and spins a yarn to block out the rest.
+
+#### I053 `reconocer_sesgo_de_apofenia`, paso 3
+
+```
+ID: I053
+NODE_ID: reconocer_sesgo_de_apofenia
+FICHERO_NODO: dataset\nodos\reconocer_sesgo_de_apofenia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Distinguir explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1863 a L1863; [at] L2075 a L2075
+FRASE_CLAVE: [at] L1863 "These sensemaking strategies are forms of apophenia--the inclination to see a connection in data or a pattern in randomness"
+QUE_ANADE_O_CONCRETA: la distincion entre correlacion y causalidad; el libro habla de apofenia y del riesgo de fijarse en una sola causa
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Desconfía de las conexiones que ves en los datos: la apofenia es la tendencia a ver una relación donde solo hay azar, y fijarse en una sola causa oculta otras posibilidades.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1863 a L1863, cap. 4 "Make-Believe":
+
+> L1863: These sensemaking strategies are forms of apophenia--the inclination to see a connection in data or a pattern in randomness. Call them delusions, but they feel wonderful. It’s how we see bunnies in clouds. It’s thrilling to spot a relationship between different things, even if you’re wrong. You smile when you see a face staring back at you from the moon, the moss, or your sandwich.
+
+PASAJE [at] L2075 a L2075, cap. 4 "Make-Believe":
+
+> L2075: Thinking in stories is very useful. (This book is filled with them!) Getting down to root causes and people’s motivations (characters) helps unwind complex issues. But it’s still a distortion. Focusing on characters’ concerns conceals collaboration and nonhuman influences like context. Foregrounding conflict clouds connections. Fetishizing singular causes can crowd out unseen possibilities and problems. Getting tangled up in a story can amplify false dichotomies and hide nuance, keeping you from noticing certain elements.
+
+#### I054 `salir_de_la_cabeza_movimiento_espacial`, paso 1
+
+```
+ID: I054
+NODE_ID: salir_de_la_cabeza_movimiento_espacial
+FICHERO_NODO: dataset\nodos\salir_de_la_cabeza_movimiento_espacial.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Antes de tu próxima sesión de ideación, camina o viaja a un lugar nuevo sin usar GPS ni navegación digital
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3944 a L3944; [at] L3952 a L3952
+FRASE_CLAVE: [at] L3952 "If you’re a heavy GPS user of turn-by-turn directions, try this on yourself: Don’t turn it on the next time"
+QUE_ANADE_O_CONCRETA: la secuencia "antes de tu proxima sesion de ideacion"; el libro propone no encender el GPS la proxima vez y explorar lugares distintos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: La próxima vez que te desplaces, no enciendas el GPS y explora lugares distintos: mover el cuerpo en el espacio ayuda a cuestionar supuestos y a generar ideas nuevas.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3944 a L3944, cap. 7 "Disorient Yourself":
+
+> L3944: Understanding is embedded in the world. Our minds are connected to our bodies for a reason. But technology has made it easy to take it easy. Exploring different places piques creativity. (Think of how aware and engaged you are when you travel.) When we move our bodies in space our brains work differently. Getting out of our heads (literally) helps us challenge assumptions and generate new ideas.
+
+PASAJE [at] L3952 a L3952, cap. 7 "Disorient Yourself":
+
+> L3952: When you use GPS, you don’t use your hippocampus as much in the navigation of a space. And without use, this part of the brain declines in its ability to encode landmarks and navigate spatially. The more you use GPS to navigate, the more your own navigational abilities decline. If you’re a heavy GPS user of turn-by-turn directions, try this on yourself: Don’t turn it on the next time. Examine your route on a map ahead of time to determine the path you’d like to take and some landmarks along the way. Even write out instructions to yourself. Then notice how you feel during the journey. Are you more in tune with the place you’re in? Could you do it again? Exercise, storytelling, mapping, design work--it all gets easier with practice.
+
+#### I055 `salir_de_la_cabeza_movimiento_espacial`, paso 4
+
+```
+ID: I055
+NODE_ID: salir_de_la_cabeza_movimiento_espacial
+FICHERO_NODO: dataset\nodos\salir_de_la_cabeza_movimiento_espacial.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Lleva esas observaciones sensoriales de vuelta a tu sesión de diseño como disparadores de ideas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3944 a L3944
+FRASE_CLAVE: [at] L3944 "Getting out of our heads (literally) helps us challenge assumptions and generate new ideas"
+QUE_ANADE_O_CONCRETA: llevar las observaciones a la sesion de diseno como disparadores; el libro dice que salir de la cabeza ayuda a cuestionar supuestos y generar ideas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Sal de tu cabeza, literalmente: moverte por el espacio te ayuda a cuestionar supuestos y a generar ideas nuevas.
+DATO_REPETIDO: entregable_esperado | actual: con al menos 3 insights aplicables al proyecto | fiel: con los insights que surjan para el proyecto
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3944 a L3944, cap. 7 "Disorient Yourself":
+
+> L3944: Understanding is embedded in the world. Our minds are connected to our bodies for a reason. But technology has made it easy to take it easy. Exploring different places piques creativity. (Think of how aware and engaged you are when you travel.) When we move our bodies in space our brains work differently. Getting out of our heads (literally) helps us challenge assumptions and generate new ideas.
+
+#### I056 `ser_buen_jig`, paso 2
+
+```
+ID: I056
+NODE_ID: ser_buen_jig
+FICHERO_NODO: dataset\nodos\ser_buen_jig.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Documentar y compartir los procesos, plantillas o herramientas internas usadas para llegar al resultado, no solo el resultado.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4726 a L4740
+FRASE_CLAVE: [at] L4726 "One of the great joys of working with creative people is witnessing the things they make to make the things they make"
+QUE_ANADE_O_CONCRETA: documentar y compartir procesos y plantillas internas; el libro pide fijarse en lo que se hace para hacer las cosas y ser un buen jig
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Recuerda que todo es producto y plantilla: lo que haces sigue haciendo, y lo que transmites pesa más que lo que logras. Sé un buen jig.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4726 a L4740, cap. 8 "Aim for Imperfection":
+
+> L4726: Harmony is not just the result of a project but also a way of working throughout a project, a way of existing. One of the great joys of working with creative people is witnessing the things they make to make the things they make.
+>
+> L4728: Take woodworking. Doing it right requires inventiveness, patience, and rapidly spinning metal blades--with teeth. To navigate this blend of creativity and danger, carpenters make jigs--contraptions cobbled together from scraps and fasteners. Their job is to guide a piece of wood through a saw, lathe, sander, or drill at just the right angle or in just the right way, repeatedly.
+>
+> L4730: There is beauty in enabling others to be beautiful.
+>
+> L4734: Jigs can be beautiful in their own right--jig making is an art of its own--but at their core, they’re built to build something else, a thing that makes another thing possible.
+>
+> L4736: Is a dandelion the little golden flower that comes in the spring? Or is it the white billowing sphere of cottony seeds? In Life and Habit, nineteenth-century novelist and satirist Samuel Butler quipped, “A hen is only the egg’s way of making another egg.” Life is a mold for life. Everything is a product and a template. Everything is a jig.
+>
+> L4738: If there is one lesson to take from this book it might be this: Be a good jig.
+>
+> L4740: You already are a jig. The things you make and do go on to make and do. The impacts of what you achieve pale in comparison to what you pass on. All this is a shift from a kind of creativity hell-bent on breaking boundaries toward creative work that is adaptive, responsive, and focused on healing and harmony.
+
+#### I057 `ser_buen_jig`, paso 3
+
+```
+ID: I057
+NODE_ID: ser_buen_jig
+FICHERO_NODO: dataset\nodos\ser_buen_jig.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseñar procesos replicables que otros equipos o comunidades puedan adoptar y adaptar.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L4728 a L4740; [at] L4709 a L4709
+FRASE_CLAVE: [at] L4738 "Be a good jig."
+QUE_ANADE_O_CONCRETA: los procesos replicables para otros equipos o comunidades; es una lectura de la metafora del jig que el libro no formula asi
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Sé un buen jig: crea cosas que hagan posibles otras cosas, porque el impacto de lo que logras palidece frente a lo que transmites.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L4728 a L4740, cap. 8 "Aim for Imperfection":
+
+> L4728: Take woodworking. Doing it right requires inventiveness, patience, and rapidly spinning metal blades--with teeth. To navigate this blend of creativity and danger, carpenters make jigs--contraptions cobbled together from scraps and fasteners. Their job is to guide a piece of wood through a saw, lathe, sander, or drill at just the right angle or in just the right way, repeatedly.
+>
+> L4730: There is beauty in enabling others to be beautiful.
+>
+> L4734: Jigs can be beautiful in their own right--jig making is an art of its own--but at their core, they’re built to build something else, a thing that makes another thing possible.
+>
+> L4736: Is a dandelion the little golden flower that comes in the spring? Or is it the white billowing sphere of cottony seeds? In Life and Habit, nineteenth-century novelist and satirist Samuel Butler quipped, “A hen is only the egg’s way of making another egg.” Life is a mold for life. Everything is a product and a template. Everything is a jig.
+>
+> L4738: If there is one lesson to take from this book it might be this: Be a good jig.
+>
+> L4740: You already are a jig. The things you make and do go on to make and do. The impacts of what you achieve pale in comparison to what you pass on. All this is a shift from a kind of creativity hell-bent on breaking boundaries toward creative work that is adaptive, responsive, and focused on healing and harmony.
+
+PASAJE [at] L4709 a L4709, cap. 8 "Aim for Imperfection":
+
+> L4709: Healing is also found in the work of Pritzker prize-winning, Burkinabé-German architect Francis Kéré, who uses simple methods, like mixing concrete and mud, with local materials and local labor to create elegant schools that not only serve the community’s needs but also train the community to build for themselves. His buildings and how they are made typify a sustainable collaboration between people and the environment.
+
+#### I058 `shapeshifting_diversidad`, paso 3
+
+```
+ID: I058
+NODE_ID: shapeshifting_diversidad
+FICHERO_NODO: dataset\nodos\shapeshifting_diversidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Experimenta con prototipos diversos en paralelo en lugar de converger prematuramente en una sola solución
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3136 a L3136; [at] L3142 a L3142
+FRASE_CLAVE: [at] L3142 "It’s shapeshifting through prototyping, finding a solution through trial and error"
+QUE_ANADE_O_CONCRETA: "en paralelo" y "convergencia prematura"; el libro habla de buscar por ensayo y error con variedad frente al monocultivo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Busca la solución por ensayo y error con variedad, como el CARBAP con su colección de bananos, en lugar de cambiar un monocultivo por otro.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3136 a L3136, cap. 6 "Shapeshift":
+
+> L3136: Faced with the destruction of the world’s banana supply, growers reacted by swapping one monoculture for another.[*1] Instead of diversifying banana supply, which is certainly more logistically and operationally complex, the Cavendish subbed in. Cavendish can be picked green and travels well too. It isn’t as flavorful as the Gros Michel, but it was (initially) resistant to Panama disease.
+
+PASAJE [at] L3142 a L3142, cap. 6 "Shapeshift":
+
+> L3142: Farther south, the Centre Africain de Recherches sur Bananiers et Plantain (CARBAP) is also home to the world’s largest field-grown banana collection. CARBAP’s plants are shared with farmers so they may experiment with and test them among their own crops in their plots. They’re trying to develop a new variety that’s resistant to disease but also appealing to eat. It’s shapeshifting through prototyping, finding a solution through trial and error.
+
+#### I059 `shapeshifting_diversidad`, paso 4
+
+```
+ID: I059
+NODE_ID: shapeshifting_diversidad
+FICHERO_NODO: dataset\nodos\shapeshifting_diversidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documenta cómo la diversidad de inputs cambió o mejoró la calidad de las decisiones tomadas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3146 a L3146
+FRASE_CLAVE: [at] L3146 "Researchers at Tufts University studying mock trial teams have shown that diverse teams also catch errors earlier"
+QUE_ANADE_O_CONCRETA: documentar el efecto de la diversidad en las decisiones; el libro dice que los equipos diversos detectan antes los errores
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ten presente que los equipos diversos detectan antes los errores: las múltiples perspectivas ayudan a sacar los problemas a la luz antes de decidir.
+DATO_REPETIDO: entregable_esperado | actual: y cómo enriquecieron la solución | fiel: y los problemas que ayudaron a detectar antes de decidir
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3146 a L3146, cap. 6 "Shapeshift":
+
+> L3146: Biodiversity and cultural diversity make natural systems resilient. They help systems thrive by filtering and nurturing. When it comes to problem solving, increased cultural diversity is like being able to autocorrect and shapeshift all in one. Social scientists at INSEAD in France and Columbia Business School in the United States have found that people who have close relationships with people from cultures other than their own tend to be more creative, producing both more ideas and more novel ones. Researchers at Tufts University studying mock trial teams have shown that diverse teams also catch errors earlier. Multiple perspectives encourage discernment (particularly among white group members) and help expose issues before decisions get made.
+
+#### I060 `suenos_completos_diseno_responsable`, paso 3
+
+```
+ID: I060
+NODE_ID: suenos_completos_diseno_responsable
+FICHERO_NODO: dataset\nodos\suenos_completos_diseno_responsable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Redacta tu declaración de misión incluyendo tanto la ambición como los límites/salvaguardas conocidos.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L3668 a L3668; [at] L3692 a L3692; [at] L4190 a L4190
+FRASE_CLAVE: [at] L4190 "Call them full dreams; dreams that are grand but not singular"
+QUE_ANADE_O_CONCRETA: la redaccion de una declaracion de mision; el libro pide suenos completos y metas y antimetas lado a lado
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Formula un sueño completo: grande, pero sin ignorar sus propios inconvenientes, con metas y antimetas conviviendo lado a lado.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L3668 a L3668, cap. 7 "Disorient Yourself":
+
+> L3668: Cynthia Savard Saucier and Jonathan Shariat offer a strategy in their book, Tragic Design. They suggest listing four sets of goals for anything you do:
+
+PASAJE [at] L3692 a L3692, cap. 7 "Disorient Yourself":
+
+> L3692: Jennifer Doudna is the biochemist who, along with Emmanuelle Charpentier, won the Nobel Prize in Chemistry for their work developing the cheap and reliable CRISPR-Cas9 DNA editing tool. Their discovery has been used to research everything from curing diseases with gene therapy to possibly bringing back extinct species. Doudna is a champion of the work and a realist concerned about its use. Despite helping discover and apply the breakthrough, she quickly supported a pause on clinical applications of human germline editing--gene edits in eggs and sperm that could be passed down across generations. And she wrote a book on both the promise and the peril that CRISPR could unleash. Doudna shows that goals and antigoals can and should live side by side.
+
+PASAJE [at] L4190 a L4190, cap. 8 "Aim for Imperfection":
+
+> L4190: Like our sensory slivers and limited points of view, our dreams are lopsided too. We need new kinds of dreams. Big, broad dreams that aim high but don’t ignore their own downsides. Call them full dreams; dreams that are grand but not singular, dreams with enough room for everyone else’s dreams too.
+
+#### I061 `tecnica_cambio_de_perspectiva_escala`, paso 1
+
+```
+ID: I061
+NODE_ID: tecnica_cambio_de_perspectiva_escala
+FICHERO_NODO: dataset\nodos\tecnica_cambio_de_perspectiva_escala.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Tomar el problema o sistema que se está diseñando y visualizarlo en una escala radicalmente distinta (macro: años/décadas/planeta; micro: segundo a segundo, célula a célula).
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: L1018: "The place of data flows allows us to see macroscopic trends of microscopic information." y L1016 (datos desde dentro del cuerpo). La escala micro esta en el libro, aunque en otro capitulo; "segundo a segundo, celula a celula" son ejemplos en la misma direccion.
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1815 a L1815; [at] L1823 a L1825; [at] L1016 a L1018
+FRASE_CLAVE: [at] L1018 "The place of data flows allows us to see macroscopic trends of microscopic information"
+QUE_ANADE_O_CONCRETA: los ejemplos "segundo a segundo, celula a celula"; la escala micro esta en el libro (L1016, L1018)
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mira el problema desde una escala radicalmente distinta: tan lejos como la imagen del punto azul pálido o tan cerca como los datos de dentro del cuerpo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1815 a L1815, cap. 4 "Make-Believe":
+
+> L1815: Both images are decades-long records of what was, is, and might be. When you see how a river moves from this vantage point, thousands of feet above, you can sense its energy. You can see where it wants to go and get a feel for how it travels in ways very different from when you are floating in an inner tube. Most of us don’t often experience rivers from this angle, so the shift in perspective offers a new insight on how to engage with the landscape.
+
+PASAJE [at] L1823 a L1825, cap. 4 "Make-Believe":
+
+> L1823: A light streak. A speck of something. It’s Earth as seen from beyond Neptune’s orbit, taken by the Voyager 1 spacecraft on February 14, 1990. This image was a defining moment for many. Earth is just a speck in a streak; one tiny aberration in an otherwise empty image.[*3] But we all know how much happens in that little pixel. It’s our lives and our families and everything we fight for and celebrate and complain about. It’s our educations and houseplants and cows and the smell of freshly baked bread.
+>
+> L1825: This image pulls us billions of miles away from our day-to-day. It’s about as zoomed out as we can get. And from this perspective we’re beyond interconnected; we’re a blur. Our planet isn’t infinite. We don’t have an easy escape route if we wreck our current hostess. This image inspired the book Pale Blue Dot by Carl Sagan, conceived by him and Carolyn Porco, a member of Voyager’s imaging team.
+
+PASAJE [at] L1016 a L1018, cap. 2 "Flow":
+
+> L1016: At the microscopic end of the place spectrum, data can be collected from inside our bodies. You can analyze your genetic information with a company like 23andMe or Ancestry and from a saliva sample determine if you’re destined for certain genetic diseases or if you have relatives in West Africa. Your biomarkers like genetic codes can also link you to crime scenes or be of benefit to others in medical studies or clinical trials. You can learn a lot by opting in to these biomarker data flows, and your data can contribute to a larger understanding that may help people.
+>
+> L1018: I’m currently a participant in the Promise Study, which aims to make multiple myeloma a preventable cancer. It’s currently an incurable cancer of the plasma cells, but with research that studies the blood of people with close relatives who have had the disease and those who are at high risk for other reasons, doctors hope to be able to identify ways to not only cure it but also prevent it. My blood samples are analyzed and studied in conjunction with fifty thousand others. It’s a data flow I’ve opted in to not only to learn about my own risk factors (I lost my father to this disease) but also because the potential for prevention for everyone is incredible. The place of data flows allows us to see macroscopic trends of microscopic information.
+
+#### I062 `tecnica_cambio_de_perspectiva_escala`, paso 3
+
+```
+ID: I062
+NODE_ID: tecnica_cambio_de_perspectiva_escala
+FICHERO_NODO: dataset\nodos\tecnica_cambio_de_perspectiva_escala.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Usar visualizaciones de datos históricos o patrones de largo plazo (mapas, líneas de tiempo) para revelar tendencias ocultas.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1811 a L1815; [at] L1018 a L1018
+FRASE_CLAVE: [at] L1815 "Both images are decades-long records of what was, is, and might be."
+QUE_ANADE_O_CONCRETA: las visualizaciones de datos historicos y lineas de tiempo como instruccion; el libro muestra el mapa historico del Misisipi como registro de decadas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mira registros de décadas, como los mapas históricos del río Misisipi, para ver lo que fue, lo que es y lo que podría ser.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1811 a L1815, cap. 4 "Make-Believe":
+
+> L1811: Abstract art. A color gradient. A historical record. Nutrients and floods and a predictor of the future. It’s the meandering path of a section of the Mississippi River.
+>
+> L1813: The first image, by Daniel Coe of the Washington Geological Survey, was made with LiDAR.[*2] It’s a modern re-creation of the famous map hand drawn by Harold Fisk in 1944, on the right.
+>
+> L1815: Both images are decades-long records of what was, is, and might be. When you see how a river moves from this vantage point, thousands of feet above, you can sense its energy. You can see where it wants to go and get a feel for how it travels in ways very different from when you are floating in an inner tube. Most of us don’t often experience rivers from this angle, so the shift in perspective offers a new insight on how to engage with the landscape.
+
+PASAJE [at] L1018 a L1018, cap. 2 "Flow":
+
+> L1018: I’m currently a participant in the Promise Study, which aims to make multiple myeloma a preventable cancer. It’s currently an incurable cancer of the plasma cells, but with research that studies the blood of people with close relatives who have had the disease and those who are at high risk for other reasons, doctors hope to be able to identify ways to not only cure it but also prevent it. My blood samples are analyzed and studied in conjunction with fifty thousand others. It’s a data flow I’ve opted in to not only to learn about my own risk factors (I lost my father to this disease) but also because the potential for prevention for everyone is incredible. The place of data flows allows us to see macroscopic trends of microscopic information.
+
+#### I063 `tecnica_cambio_de_perspectiva_escala`, paso 4
+
+```
+ID: I063
+NODE_ID: tecnica_cambio_de_perspectiva_escala
+FICHERO_NODO: dataset\nodos\tecnica_cambio_de_perspectiva_escala.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documentar los nuevos insights que emergen del cambio de escala y contrastarlos con la visión original del equipo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L1833 a L1833
+FRASE_CLAVE: [at] L1833 "What feels newly insignificant to you from this perspective? What becomes more important?"
+QUE_ANADE_O_CONCRETA: documentar los insights y contrastarlos con la vision del equipo; el libro solo hace las dos preguntas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Pregúntate qué se vuelve insignificante desde esa nueva perspectiva y qué se vuelve más importante.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L1833 a L1833, cap. 4 "Make-Believe":
+
+> L1833: Carolyn Porco reflected on these images in a 2020 piece in Scientific American: “The significance of images like this--our home seen at significant remove as a mere point of blue light--lies in the uncorrupted, unpoliticized view they offer us of ourselves, a view of all of us together on one tiny dot of a planet, alone in the blackness of space.” What feels newly insignificant to you from this perspective? What becomes more important?
+
+#### I064 `tratar_las_historias_como_herramientas`, paso 1
+
+```
+ID: I064
+NODE_ID: tratar_las_historias_como_herramientas
+FICHERO_NODO: dataset\nodos\tratar_las_historias_como_herramientas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Antes de lanzar una prueba de validación, define explícitamente qué resultado haría que abandones o cambies tu hipótesis actual.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2092 a L2092
+FRASE_CLAVE: [at] L2092 "Ride them and see where they take you. When they break down, tune them up or trade them in"
+QUE_ANADE_O_CONCRETA: fijar de antemano el resultado que haria abandonar la hipotesis; el libro trata las historias como vehiculos que se ajustan o se cambian cuando fallan
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Trata tus historias como herramientas, no como verdades: úsalas para ver adónde te llevan y, cuando fallen, ajústalas o cámbialas.
+DATO_REPETIDO: entregable_esperado | actual: Criterios de decisión (pivot/persevere) documentados antes de cada ciclo de validación, junto con un registro de hipótesis descartadas y por qué. | fiel: Un registro de las historias o hipótesis que ajustaste o cambiaste cuando dejaron de funcionar, y por qué.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2092 a L2092, cap. 4 "Make-Believe":
+
+> L2092: The problem with doxa-like stories and beliefs is that people treat them as monuments to revere rather than what Aristotle hinted at: vehicles to get you from here to there, or gap fillers. You don’t have to pretend your car is your destination to trust that it will get you somewhere. Yet we’re inclined to imagine that our stories are the absolute truth. Stories are tools, not truths. They are ways to play with possibility. Ride them and see where they take you. When they break down, tune them up or trade them in.
+
+#### I065 `tratar_las_historias_como_herramientas`, paso 4
+
+```
+ID: I065
+NODE_ID: tratar_las_historias_como_herramientas
+FICHERO_NODO: dataset\nodos\tratar_las_historias_como_herramientas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Practica comunicar los cambios de dirección (pivotes) como evolución natural, no como fracaso.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [at]: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+LINEAS: [at] L2092 a L2092
+FRASE_CLAVE: [at] L2092 "When they break down, tune them up or trade them in"
+QUE_ANADE_O_CONCRETA: la comunicacion de los pivotes; el libro no trata como comunicar los cambios de direccion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Cuando una historia deje de funcionar, ajústala o cámbiala sin tratarla como un monumento: las historias son vehículos, no destinos.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [at] L2092 a L2092, cap. 4 "Make-Believe":
+
+> L2092: The problem with doxa-like stories and beliefs is that people treat them as monuments to revere rather than what Aristotle hinted at: vehicles to get you from here to there, or gap fillers. You don’t have to pretend your car is your destination to trust that it will get you somewhere. Yet we’re inclined to imagine that our stories are the absolute truth. Stories are tools, not truths. They are ways to play with possibility. Ride them and see where they take you. When they break down, tune them up or trade them in.
+
+### Blank (1 fichas)
+
+#### I191 `analisis_trafico_competitivo`, paso 1
+
+```
+ID: I191
+NODE_ID: analisis_trafico_competitivo
+FICHERO_NODO: dataset\nodos\analisis_trafico_competitivo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A15 (seccion 11.8)
+LIBRO [blank]: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+LINEAS: [blank] L8516 a L8516; [blank] L8522 a L8522
+FRASE_CLAVE: [blank] L8522 "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website"
+QUE_ANADE_O_CONCRETA: A pone Alexa y Compete (dato del libro); B quita los nombres; C conserva AdRoll y Adbeat con la declaracion de que no son del libro
+PROPUESTA_POR_DEFECTO: DECIDE EL FUNDADOR (tres opciones, ficha A15)
+TEXTO_FIEL_PROPUESTO: OPCION A (nombres del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres, la que recomienda la sesion): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico. OPCION C (los actuales, declarando que no son del libro): Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat (ejemplos del catálogo, no del libro).
+DATO_REPETIDO: resumen_teorico | actual: (por ejemplo, AdRoll o Adbeat) | fiel: A: (por ejemplo, Alexa o Compete). B: se borra el parentesis. C: (por ejemplo, AdRoll o Adbeat, ejemplos del catalogo que no estan en el libro).
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [blank] L8516 a L8516, cap. 4 "Customer Discovery, Phase Two: “Get Out of the Building” to Test the Problem: “Do People Care?”":
+
+> L8516: Use free traffic-measurement tools to compare and understand the traffic generated by each competitive product...
+
+PASAJE [blank] L8522 a L8522, cap. 4 "Customer Discovery, Phase Two: “Get Out of the Building” to Test the Problem: “Do People Care?”":
+
+> L8522: Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website, along with the traffic sources, growth trends, and demographic information where available. Much of this information is available for free, including the keywords driving traffic to the site, specific lists of sites linking to it and, in some cases, demographic and income data on site visitors. Compete.com offers side-by-side comparison of multiple url’s, for example. Visit “answer” sites like Quora.com and start asking questions. This will cause more market information to surface and probably lead to new sources of expertise on product, category or market.
+
+### Cradle to Cradle (10 fichas)
+
+#### I076 `cinco_principios_guia_transformacion`, paso 2
+
+```
+ID: I076
+NODE_ID: cinco_principios_guia_transformacion
+FICHERO_NODO: dataset\nodos\cinco_principios_guia_transformacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Definir métricas de 'buen crecimiento' que incluyan impacto restaurador social y ambiental, no solo financiero.
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: L908: "Their primary agenda was to create a set of goals, strategies, and ways of measuring progress" con "socially, economically, and ecologically informed standards to measure the quality of air, habitat, community, energy use, employee relations, architecture, and, not least of all, production."
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L908 a L908
+FRASE_CLAVE: [cradle] L908 "Their primary agenda was to create a set of goals, strategies, and ways of measuring progress"
+QUE_ANADE_O_CONCRETA: nada: el libro lo dice (L908, estandares sociales, economicos y ecologicos para medir el progreso)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L908 a L908, cap. 6 "Putting Eco-Effectiveness":
+
+> L908: The first step was to create a "Rouge Room" in the basement of the company's headquarters, where the design team-- which included representatives of all sectors of the company, along with outsiders like chemists, toxicologists, biologists, regulatory specialists, and union representatives--could come together. Their primary agenda was to create a set of goals, strategies, and ways of measuring progress, but they also just needed a setting that rendered visible their thinking process and encouraged them to raise the difficult questions. The walls were covered with working documents positioned under giant labels so that anyone walking through could see what was being considered in the way of socially, economically, and ecologically informed standards to measure the quality of air, habitat, community, energy use, employee relations, architecture, and, not least of all, production. Hundreds of employees came to the Rouge Room ( jokingly referred to as a "peace room," as opposed to a "war room") during the process for structured meetings or simply to meet (often for other purposes) in a place suffused with so many of Ford's newly articulated intentions.
+
+#### I077 `critica_del_pib_como_metrica_de_progreso`, paso 1
+
+```
+ID: I077
+NODE_ID: critica_del_pib_como_metrica_de_progreso
+FICHERO_NODO: dataset\nodos\critica_del_pib_como_metrica_de_progreso.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Listar los indicadores de éxito actuales de tu proyecto, financieros, sociales y ambientales
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L229 a L229; [cradle] L871 a L871
+FRASE_CLAVE: [cradle] L871 "Businesses calculate their conventional economic profitability and add to that what they perceive to be the social benefits"
+QUE_ANADE_O_CONCRETA: la instruccion de listar los indicadores actuales; el libro critica medir la salud del negocio en lo economico y sumar despues lo social y lo ambiental
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Revisa cómo mides hoy el éxito de tu proyecto: si empiezas por lo económico y añades lo social y lo ambiental como algo secundario.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L229 a L229, cap. 1 "A Question of Design":
+
+> L229: The GDP as a measure of progress emerged during an era when natural resources still seemed unlimited and "quality of life" meant high economic standards of living. But if prosperity is judged only by increased economic activity, then car accidents, hospital visits, illnesses (such as cancer), and toxic spills are all signs of prosperity. Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure that says economic life is good. Countries all over the world are trying to boost their level of economic activity so they, too, can grab a share of the "progress" that mea-surements like the GDP propound. But in the race for economic progress, social activity, ecological impact, cultural activity, and long-term effects can be overlooked.
+
+PASAJE [cradle] L871 a L871, cap. 5 "Respect Diversity":
+
+> L871: The conventional design criteria are a tripod: cost, aesthetics, and performance. Can we profit from it? the company asks. Will the customer find it attractive? And will it work? Champions of "sustainable development" like to use a "triple bottom line" approach based on the tripod of Ecology, Equity, and Economy. This approach has had a major positive effect on efforts to incorporate sustainability concerns into corporate accountability. But in practice we find that it often appears to center only on economic considerations, with social or ecological benefits considered as an afterthought rather than given equal weight at the outset. Businesses calculate their conventional economic profitability and add to that what they perceive to be the social benefits, with, perhaps, some reduction in environmental damage-- lower emissions, fewer materials sent to a landfill, reduced materials in the product itself. In other words, they assess their health as they always have--economically--and then tack on bonus points for eco-efficiency, reduced accidents or product liabilities, jobs created, and philanthropy.
+
+#### I078 `critica_del_pib_como_metrica_de_progreso`, paso 4
+
+```
+ID: I078
+NODE_ID: critica_del_pib_como_metrica_de_progreso
+FICHERO_NODO: dataset\nodos\critica_del_pib_como_metrica_de_progreso.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Evaluar el verdadero costo beneficio de la actividad económica que estás generando
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L229 a L229; [cradle] L495 a L495
+FRASE_CLAVE: [cradle] L229 "Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure"
+QUE_ANADE_O_CONCRETA: el marco de "costo beneficio"; el libro enumera las perdidas que una cifra economica simple esconde
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evaluar qué pérdidas (recursos, salud, calidad de vida, entorno) acompañan a la actividad económica que estás generando y que una cifra económica simple no muestra
+DATO_REPETIDO: resumen_teorico | actual: y a revisar el verdadero costo beneficio detrás de cifras de crecimiento económico o actividad generada. | fiel: y a mirar las pérdidas que una cifra simple de crecimiento económico o actividad generada no muestra.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L229 a L229, cap. 1 "A Question of Design":
+
+> L229: The GDP as a measure of progress emerged during an era when natural resources still seemed unlimited and "quality of life" meant high economic standards of living. But if prosperity is judged only by increased economic activity, then car accidents, hospital visits, illnesses (such as cancer), and toxic spills are all signs of prosperity. Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure that says economic life is good. Countries all over the world are trying to boost their level of economic activity so they, too, can grab a share of the "progress" that mea-surements like the GDP propound. But in the race for economic progress, social activity, ecological impact, cultural activity, and long-term effects can be overlooked.
+
+PASAJE [cradle] L495 a L495, cap. 3 "Eco-Effectiveness":
+
+> L495: Some people use the term nature's services to refer to the processes by which, without human help, water and air are purified; erosion, floods, and drought are mitigated; materials are detoxified and decomposed; soil is created and its fertility renewed; ecological equilibrium and diversity are maintained; climate is stabilized; and, not least, aesthetic and spiritual satisfaction is provided to us. We don't like this focus on services, since nature does not do any of these things just to serve people. But it is useful to think of these processes as part of a dynamic interdependence, in which many different organisms and systems support one another in multiple ways. The consequences of growth--increases in insects, microorganisms, birds, water cycling, and nutrient flows--tend toward the positive kind that enrich the vitality of the whole ecosystem. The consequences of a new strip mall, on the other hand, while they may have some immediate local benefits ( jobs, more money circulating through the local economy) and may even boost the country's overall GDP, are gained at the expense of a decline in overall quality of life--increased traffic, asphalt, pollution, and waste--that ultimately undermines even some of the mall's ostensible benefits.
+
+#### I079 `critica_del_pib_como_metrica_de_progreso`, paso 5
+
+```
+ID: I079
+NODE_ID: critica_del_pib_como_metrica_de_progreso
+FICHERO_NODO: dataset\nodos\critica_del_pib_como_metrica_de_progreso.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Proponer métricas complementarias que capturen salud ecológica, cultural y social
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: L918: "The health of the site is measured not in terms of meeting minimum government-imposed standards but with respect to things like the number of earthworms per cubic foot of soil"; L908 (estandares sociales, economicos y ecologicos).
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L908 a L908; [cradle] L918 a L918
+FRASE_CLAVE: [cradle] L918 "The health of the site is measured not in terms of meeting minimum government-imposed standards but with respect to things like the number of earthworms per cubic foot of soil"
+QUE_ANADE_O_CONCRETA: nada: el libro lo dice (L918, la salud del sitio medida por lombrices, aves e insectos; L908, estandares sociales, economicos y ecologicos)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L908 a L908, cap. 6 "Putting Eco-Effectiveness":
+
+> L908: The first step was to create a "Rouge Room" in the basement of the company's headquarters, where the design team-- which included representatives of all sectors of the company, along with outsiders like chemists, toxicologists, biologists, regulatory specialists, and union representatives--could come together. Their primary agenda was to create a set of goals, strategies, and ways of measuring progress, but they also just needed a setting that rendered visible their thinking process and encouraged them to raise the difficult questions. The walls were covered with working documents positioned under giant labels so that anyone walking through could see what was being considered in the way of socially, economically, and ecologically informed standards to measure the quality of air, habitat, community, energy use, employee relations, architecture, and, not least of all, production. Hundreds of employees came to the Rouge Room ( jokingly referred to as a "peace room," as opposed to a "war room") during the process for structured meetings or simply to meet (often for other purposes) in a place suffused with so many of Ford's newly articulated intentions.
+
+PASAJE [cradle] L918 a L918, cap. 6 "Putting Eco-Effectiveness":
+
+> L918: Ford's design team said, "Let's assume the worst." When it found that there was indeed contamination at several of its plant sites, Ford negotiated with the government to experiment with treating its soil in a new way. It would remove and bury only the top layer of soil, then clean the deeper layers. It has been exploring innovative cleanup methods such as phytoremediation, a process that uses green plants to remove toxins from soil, and mycoremediation, or cleaning soil with mushrooms and fungi. From Rouge Room conception to implementation on the site, the approach is framed in positive, proactive terms-- not "clean up" but "create healthy soil," for example. The phytoremediating plants are chosen for their indigenous as well as their toxin-cleansing properties. The health of the site is measured not in terms of meeting minimum government-imposed standards but with respect to things like the number of earthworms per cubic foot of soil, the diversity of birds and insects on the land and of aquatic species in a nearby river, and the attractiveness of the site to local residents. The work is governed by a compelling goal: creating a factory site where Ford employees' own children could safely play.
+
+#### I080 `critica_del_pib_como_metrica_de_progreso`, paso 6
+
+```
+ID: I080
+NODE_ID: critica_del_pib_como_metrica_de_progreso
+FICHERO_NODO: dataset\nodos\critica_del_pib_como_metrica_de_progreso.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 5
+INDICE_BASE1: 6
+TEXTO_ACTUAL: Rediseñar tu cuadro de indicadores para evitar incentivos perversos
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L229 a L229; [cradle] L873 a L873
+FRASE_CLAVE: [cradle] L873 "If businesses are not using triple bottom line analysis as a strategic design tool, they are missing a rich opportunity"
+QUE_ANADE_O_CONCRETA: el "cuadro de indicadores" y los "incentivos perversos"; el libro pide usar las preguntas de economia, equidad y ecologia como herramienta de diseno desde el principio
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Plantea desde el inicio del diseño las preguntas de economía, equidad y ecología ("triple top line"), en lugar de añadirlas después.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L229 a L229, cap. 1 "A Question of Design":
+
+> L229: The GDP as a measure of progress emerged during an era when natural resources still seemed unlimited and "quality of life" meant high economic standards of living. But if prosperity is judged only by increased economic activity, then car accidents, hospital visits, illnesses (such as cancer), and toxic spills are all signs of prosperity. Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure that says economic life is good. Countries all over the world are trying to boost their level of economic activity so they, too, can grab a share of the "progress" that mea-surements like the GDP propound. But in the race for economic progress, social activity, ecological impact, cultural activity, and long-term effects can be overlooked.
+
+PASAJE [cradle] L873 a L873, cap. 5 "Respect Diversity":
+
+> L873: If businesses are not using triple bottom line analysis as a strategic design tool, they are missing a rich opportunity. The real magic results when industry begins with all these questions, addressing them up front as "triple top line" questions rather than turning to them after the fact. Used as a design tool, the fractal allows the designer to create value in all three sectors. In fact, often a project that begins with pronounced concerns of Ecology or Equity (How do I create habitat? How can I create jobs?) can turn out to be tremendously productive financially in ways that would never have been imagined if you'd started from a purely economic perspective.
+
+#### I081 `gestion_de_aguas_pluviales_con_techos_verdes`, paso 1
+
+```
+ID: I081
+NODE_ID: gestion_de_aguas_pluviales_con_techos_verdes
+FICHERO_NODO: dataset\nodos\gestion_de_aguas_pluviales_con_techos_verdes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Evaluar la viabilidad estructural de instalar un techo verde en el edificio
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L509 a L509; [cradle] L924 a L924
+FRASE_CLAVE: [cradle] L509 "It is a light layer of soil, a growing matrix, covered with plants"
+QUE_ANADE_O_CONCRETA: la "viabilidad estructural"; el libro describe el techo como una capa ligera y pide que cada solucion responda a las circunstancias locales
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evaluar si un techo verde responde a las circunstancias locales del edificio y de su clima
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L509 a L509, cap. 3 "Eco-Effectiveness":
+
+> L509: We have been working with a kind of roofing that responds to all of these issues, including the economic ones. It is a light layer of soil, a growing matrix, covered with plants. It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather, and shields it from the sun's destructive rays, making it last longer. In addition, it makes oxygen, sequesters carbon, captures particulates like soot, and absorbs storm water. And that's not all: it looks far more attractive than naked asphalt and, with the storm-water management, saves money that would be lost to regulatory fees and flood damage. In appropriate locales, it can even be engineered to produce solar-generated electricity.
+
+PASAJE [cradle] L924 a L924, cap. 6 "Putting Eco-Effectiveness":
+
+> L924: Ford sees River Rouge as a laboratory where it can test ideas it hopes will translate into a new way of designing for manufacture worldwide. Considering, for example, that the company alone owns approximately 200 million square feet of roofing around the world, successful innovations could be quickly implemented at industry-transforming scale. The specific solutions must grow out of and respond to local circumstances, however. A green roof might work in St. Petersburg, Florida, but not in St. Petersburg, Russia. Already the work at River Rouge has led to a review of other Ford plants where windmills and solar collectors could make economic sense if they are conceived as products of service within a total energy package. The company's overarching decision is to become native to each place. From that decision, local solutions follow, are adopted and adapted elsewhere as appropriate, and are continually revised and refined, effecting a profound process of change that may ultimately embrace every aspect of what a company makes and how it is produced, marketed, sold, and cycled on. A redesigned automobile factory may ultimately result in an entirely new notion of what an automobile is. It will take time to transform an industry so large, with such a complex infrastructure, but perhaps we will live to see a new automobile disassembly plant at the site of the first modern assembly plant.
+
+#### I082 `gestion_de_aguas_pluviales_con_techos_verdes`, paso 2
+
+```
+ID: I082
+NODE_ID: gestion_de_aguas_pluviales_con_techos_verdes
+FICHERO_NODO: dataset\nodos\gestion_de_aguas_pluviales_con_techos_verdes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Seleccionar especies vegetales nativas o adaptadas al clima local
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: L449: "A layer of native grasses covers the building's roof, making it more attractive to songbirds and absorbing water runoff"; L924: "The specific solutions must grow out of and respond to local circumstances, however."
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L449 a L449; [cradle] L924 a L924
+FRASE_CLAVE: [cradle] L449 "A layer of native grasses covers the building's roof, making it more attractive to songbirds and absorbing water runoff"
+QUE_ANADE_O_CONCRETA: nada: el libro lo dice (L449, hierbas nativas en el techo; L924, soluciones locales)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L449 a L449, cap. 3 "Eco-Effectiveness":
+
+> L449: Here's how we imagine the cherry tree would do it: during the daytime, light pours in. Views of the outdoors through large, untinted windows are plentiful--each of the occupants has five views from wherever he or she happens to sit. Delicious, affordable food and beverages are available to employees in a café that opens onto a sun-filled courtyard. In the office space, each of them controls the flow of fresh air and the temperature of their personal breathing zones. The windows open. The cooling system maximizes natural airflows, as in a hacienda: at night, the system flushes the building with cool evening air, bringing the temperature down and clearing the rooms of stale air and toxins. A layer of native grasses covers the building's roof, making it more attractive to songbirds and absorbing water runoff, while at the same time protecting the roof from thermal shock and ultraviolet degradation.
+
+PASAJE [cradle] L924 a L924, cap. 6 "Putting Eco-Effectiveness":
+
+> L924: Ford sees River Rouge as a laboratory where it can test ideas it hopes will translate into a new way of designing for manufacture worldwide. Considering, for example, that the company alone owns approximately 200 million square feet of roofing around the world, successful innovations could be quickly implemented at industry-transforming scale. The specific solutions must grow out of and respond to local circumstances, however. A green roof might work in St. Petersburg, Florida, but not in St. Petersburg, Russia. Already the work at River Rouge has led to a review of other Ford plants where windmills and solar collectors could make economic sense if they are conceived as products of service within a total energy package. The company's overarching decision is to become native to each place. From that decision, local solutions follow, are adopted and adapted elsewhere as appropriate, and are continually revised and refined, effecting a profound process of change that may ultimately embrace every aspect of what a company makes and how it is produced, marketed, sold, and cycled on. A redesigned automobile factory may ultimately result in an entirely new notion of what an automobile is. It will take time to transform an industry so large, with such a complex infrastructure, but perhaps we will live to see a new automobile disassembly plant at the site of the first modern assembly plant.
+
+#### I083 `gestion_de_aguas_pluviales_con_techos_verdes`, paso 3
+
+```
+ID: I083
+NODE_ID: gestion_de_aguas_pluviales_con_techos_verdes
+FICHERO_NODO: dataset\nodos\gestion_de_aguas_pluviales_con_techos_verdes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseñar el sistema de capas (impermeabilización, sustrato, drenaje, vegetación)
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A8 (seccion 11.8)
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L509 a L509
+FRASE_CLAVE: [cradle] L509 "It is a light layer of soil, a growing matrix, covered with plants."
+QUE_ANADE_O_CONCRETA: quita las capas "impermeabilizacion" y "drenaje"; deja la composicion que da el libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A8, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Diseñar el techo como una capa ligera de suelo y sustrato de cultivo cubierta de plantas
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L509 a L509, cap. 3 "Eco-Effectiveness":
+
+> L509: We have been working with a kind of roofing that responds to all of these issues, including the economic ones. It is a light layer of soil, a growing matrix, covered with plants. It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather, and shields it from the sun's destructive rays, making it last longer. In addition, it makes oxygen, sequesters carbon, captures particulates like soot, and absorbs storm water. And that's not all: it looks far more attractive than naked asphalt and, with the storm-water management, saves money that would be lost to regulatory fees and flood damage. In appropriate locales, it can even be engineered to produce solar-generated electricity.
+
+#### I084 `gestion_de_aguas_pluviales_con_techos_verdes`, paso 4
+
+```
+ID: I084
+NODE_ID: gestion_de_aguas_pluviales_con_techos_verdes
+FICHERO_NODO: dataset\nodos\gestion_de_aguas_pluviales_con_techos_verdes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Calcular ahorro en costos de climatización y gestión de aguas pluviales
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L509 a L509; [cradle] L920 a L920
+FRASE_CLAVE: [cradle] L509 "It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather"
+QUE_ANADE_O_CONCRETA: la instruccion de calcular el ahorro; el libro afirma los ahorros sin pedir el calculo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Considerar el ahorro que da el techo verde: refrigeración y aislamiento gratuitos, y el dinero que no se pierde en tasas regulatorias ni en daños por inundación
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L509 a L509, cap. 3 "Eco-Effectiveness":
+
+> L509: We have been working with a kind of roofing that responds to all of these issues, including the economic ones. It is a light layer of soil, a growing matrix, covered with plants. It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather, and shields it from the sun's destructive rays, making it last longer. In addition, it makes oxygen, sequesters carbon, captures particulates like soot, and absorbs storm water. And that's not all: it looks far more attractive than naked asphalt and, with the storm-water management, saves money that would be lost to regulatory fees and flood damage. In appropriate locales, it can even be engineered to produce solar-generated electricity.
+
+PASAJE [cradle] L920 a L920, cap. 6 "Putting Eco-Effectiveness":
+
+> L920: As the company looked at its new sustainability manufacturing agenda, it found more and more opportunities to improve environmental performance without conflicting with financial objectives, and these successes justified taking on more ambitious environmental challenges. Storm-water management and quality was a good start, because it is often taken for granted and appears to be inexpensive. But Ford discovered that stormwater management could be very expensive; regulations emerging from the Clean Water Act required new concrete pipes and treatment plants, threatening to cost the company up to $48 million. Instead, when the new plant is finished, it will have a green roof capable of holding two inches of rainwater, and porous parking lots that can also absorb and store water. Then the storm water will seep into a constructed marsh for purification by the plants, microbes, fungi, and other biota that live there. From the marsh the water will travel through swales-- ditches full of native plants--on to the river, clear and clean. The storm water will take three days to seep to the river instead of heading there at once in a fierce, messy washout requiring quick, drastic measures. Instead of simply being a huge invisible liability, storm-water management is treated as a visible and enjoyable asset. The eco-effective approach cleans the water and the air, provides habitat, and enhances the beauty of the landscape while it saves the company a great deal of money-- as much as $35 million by one estimation.
+
+#### I085 `volverse_nativo_del_lugar`, paso 1
+
+```
+ID: I085
+NODE_ID: volverse_nativo_del_lugar
+FICHERO_NODO: dataset\nodos\volverse_nativo_del_lugar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Estudiar prácticas tradicionales o indígenas de manejo de recursos aplicables a la región del proyecto
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [cradle]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Environmental\Cradle to Cradle - Michael Braungart.txt
+LINEAS: [cradle] L537 a L537
+FRASE_CLAVE: [cradle] L537 "this particular form of forestry is not necessarily universal in its potential applications"
+QUE_ANADE_O_CONCRETA: la instruccion de estudiar practicas indigenas de la region; el libro da el ejemplo de los menominee y avisa de que su metodo no es universal
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Estudiar ejemplos como la silvicultura de los menominee, que obtiene recursos del bosque dejándolo prosperar, sin suponer que su método sirve en todas partes
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [cradle] L537 a L537, cap. 3 "Eco-Effectiveness":
+
+> L537: The Menominee tribe of Wisconsin, wood harvesters for many generations, use a logging method that lets them profit from nature while allowing it to thrive. Conventional logging operations are focused on producing a certain amount of carbohydrate (wood pulp) for use. This agenda is single-purpose and utilitarian: it does not count how many species of birds the forest may harbor, or how its slopes stay stable, or what occasions for recreation and respite--as well as resources--it provides and could continue to provide to future generations. The Menominee often cut only the weaker trees, leaving the strong mother trees and enough of the upper canopy for squirrels and other arboreal animals to continuously inhabit. This strategy has been enormously productive; it has allowed the forest to thrive while supplying the tribe with commercial resources. In 1870 the Menominee counted 1.3 billion standing board feet of timber--what in the timber industry is tellingly known as "stumpage"--on a 235,000-acre reservation. Over the years they have harvested 2.25 billion feet, yet today they have 1.7 billion standing feet--a slight increase. One might say they have figured out what the forest can productively offer them instead of considering only what they want. (It's important to note here that this particular form of forestry is not necessarily universal in its potential applications. In some instances-- including restorative work, in which you might remove a monocultural forest to plant a more diverse system--clearcutting appears to be a successful management tool. As the Forest Stewardship Council notes, there are no absolutes about method.)
+
+### Edwards (8 fichas)
+
+#### I086 `cultura_que_habla_del_riesgo_sin_miedo`, paso 1
+
+```
+ID: I086
+NODE_ID: cultura_que_habla_del_riesgo_sin_miedo
+FICHERO_NODO: dataset\nodos\cultura_que_habla_del_riesgo_sin_miedo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Date permiso explícito de pensar en lo que puede fallar sin sentirte derrotista.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L4607 a L4607; [edwards] L10416 a L10416
+FRASE_CLAVE: [edwards] L4607 "It may also gently free workshop participants from overly rigid attitudes towards risk management. At its very best, scenario testing is capable of exposing projects that should have been avoided but perhaps were too enticing or over‐optimistic"
+QUE_ANADE_O_CONCRETA: la instruccion intrapersonal de "darse permiso"; el libro acoge la emocion en el analisis de riesgos, con cuidado de que no derive en negatividad excesiva
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Piensa en lo que puede fallar dejando que la emoción entre en el análisis, pero sin que se convierta en negatividad excesiva.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L4607 a L4607, cap. 7 "Project Risk Identification Tools":
+
+> L4607: The benefit of scenario testing, in a risk identification workshop in the earliest stage of a project, is that it can help to more easily place the project context establishment process (Chapter 5) into a risk frame. It may also gently free workshop participants from overly rigid attitudes towards risk management. At its very best, scenario testing is capable of exposing projects that should have been avoided but perhaps were too enticing or over‐optimistic in their expectations for that stakeholder!
+
+PASAJE [edwards] L10416 a L10416, cap. 17 "Strategic Risk Management":
+
+> L10416: In Chapter 2, we noted that risk is a psycho‐social construct. Following this, we argue that strategic risk management should have an emotional engagement for those who participate in it. In many organisations, a ‘management’ view may preside whereby emotion is deliberately excluded or rejected in strategic thinking, on the grounds of avoiding subjectivity or of ensuring greater effectiveness and efficiency in making and implementing strategic decisions. While we agree that decision‐making should be carried out dispassionately as far as possible, we do advocate that emotion be welcomed into the discussion and allowed to make a controlled contribution to it. Passion has its place in any human endeavour, and totally excluding it in a vital area of management then risks creating a ‘mechanistic’ approach that in the long‐term benefits neither the organisation’s risk management nor the people involved in it. Used constructively, emotion has much to offer to strategic risk management. However, caution must be exercised so that it does not develop into excessive negativity, particularly since threat risks dominate much of an organisation’s risk management effort.
+
+#### I087 `cultura_que_habla_del_riesgo_sin_miedo`, paso 2
+
+```
+ID: I087
+NODE_ID: cultura_que_habla_del_riesgo_sin_miedo
+FICHERO_NODO: dataset\nodos\cultura_que_habla_del_riesgo_sin_miedo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: No te castigues por traer malas noticias: la mala noticia temprana es un regalo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L6791 a L6791; [edwards] L7152 a L7152
+FRASE_CLAVE: [edwards] L7152 "the people involved will only feel comfortable about communicating and sharing such knowledge if a genuine culture of non‐blaming exists in the organisation"
+QUE_ANADE_O_CONCRETA: la version intrapersonal ("no te castigues") y "la mala noticia temprana es un regalo"; el libro pide una cultura sin culpas para que se compartan errores y conocimiento
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evita buscar culpables de los fallos: solo en una cultura sin culpas se comparten los errores y lo que se sabe.
+DATO_REPETIDO: entregable_esperado | actual: y la mala noticia temprana se agradece | fiel: y compartir un error nunca se castiga
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L6791 a L6791, cap. 11 "Project Risk Knowledge Management":
+
+> L6791: Organisational culture is not a direct knowledge creation tool, but works indirectly by encouraging sharing and feedback and by avoiding any over‐emphasis on seeking to assign blame for failure. Positive organisational cultures also influence knowledge creation through the development of trust. This is discussed in Chapter 12 (Cultural Shaping of Risk).
+
+PASAJE [edwards] L7152 a L7152, cap. 11 "Project Risk Knowledge Management":
+
+> L7152: It is also important for an organisation to learn from its mistakes, but the people involved will only feel comfortable about communicating and sharing such knowledge if a genuine culture of non‐blaming exists in the organisation. Employees should be encouraged to share the full extent of their tacit knowledge, and organisations should openly acknowledge the value of such contributions.
+
+#### I088 `cultura_que_habla_del_riesgo_sin_miedo`, paso 3
+
+```
+ID: I088
+NODE_ID: cultura_que_habla_del_riesgo_sin_miedo
+FICHERO_NODO: dataset\nodos\cultura_que_habla_del_riesgo_sin_miedo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Invita a una persona de confianza a cuestionar tu plan y agradécele los riesgos que encuentre.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L3002 a L3002; [edwards] L3924 a L3924; [edwards] L7152 a L7152
+FRASE_CLAVE: [edwards] L3002 "Workshop participants should comprise a small group of people, familiar with the stakeholder organisation and its projects"
+QUE_ANADE_O_CONCRETA: la "persona de confianza" y el agradecimiento; el libro pide un grupo pequeno que conozca el proyecto y la revision por otra persona
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Haz que otra persona que conozca el proyecto revise los riesgos que identificaste, y reconoce abiertamente el valor de lo que aporte.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L3002 a L3002, cap. 6 "Approach to Project Risk Identification":
+
+> L3002: Workshop participants should comprise a small group of people, familiar with the stakeholder organisation and its projects, and who are closely involved in the important decision‐making for various aspects of the project. As with the previous stage (context establishment) of project risk management, fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone! We repeat our earlier contention that ‘one‐man band’ approaches to project risk management expose any organisation to the serious threat risk of mismanagement. Ideally, the workshop participants will form a ‘team’ for the purposes of managing risks on the project. How many people should be involved is a matter for the stakeholder organisation to decide. We find we work best with a small group of no more than six or seven, plus someone to act as secretary.
+
+PASAJE [edwards] L3924 a L3924, cap. 7 "Project Risk Identification Tools":
+
+> L3924: One observation from this example is that, while preparation of the safety hazard record might be the work of one person, it is subject to review by another - presumably someone with appropriate knowledge and authority. In practice, the initial preparation of the record is, more often than not, the product of a team effort.
+
+PASAJE [edwards] L7152 a L7152, cap. 11 "Project Risk Knowledge Management":
+
+> L7152: It is also important for an organisation to learn from its mistakes, but the people involved will only feel comfortable about communicating and sharing such knowledge if a genuine culture of non‐blaming exists in the organisation. Employees should be encouraged to share the full extent of their tacit knowledge, and organisations should openly acknowledge the value of such contributions.
+
+#### I089 `plan_de_desastre_y_recuperacion`, paso 4
+
+```
+ID: I089
+NODE_ID: plan_de_desastre_y_recuperacion
+FICHERO_NODO: dataset\nodos\plan_de_desastre_y_recuperacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L6075 a L6075; [edwards] L6140 a L6174
+FRASE_CLAVE: [edwards] L6075 "Emergency response and recovery plans and procedures should be pre‐planned, agreed upon with staff and through consultation with external agencies, formalised, rehearsed"
+QUE_ANADE_O_CONCRETA: el lugar donde guardar el plan; el libro pide planes preparados, formalizados y ensayados, con recursos de respaldo disponibles
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Formaliza el plan, ensáyalo y ten disponibles de antemano los respaldos y recursos que necesita.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L6075 a L6075, cap. 10 "Risk Monitoring and Control":
+
+> L6075: Control measures for extreme risks may involve people throughout the whole stakeholder organisation and beyond. Emergency response and recovery plans and procedures should be pre‐planned, agreed upon with staff and through consultation with external agencies, formalised, rehearsed, practised on a randomly arranged and informed basis and stress‐tested. Control instruments should be checked and tested frequently with ‘sign‐off’ procedures implemented. Backup personnel and other resources should be readily available. Adequate public relations measures should be in place and tested.
+
+PASAJE [edwards] L6140 a L6174, cap. 10 "Risk Monitoring and Control":
+
+> L6140: Since even the best PRMS cannot prevent all risk events from happening, project stakeholder organisations need to prepare and maintain plans to deal with the more severe risks they face, especially those where the consequences could be considered critical or disastrous.
+>
+> L6142: Many issues are involved here, some of which include:
+>
+> L6144: Assignment (or re‐assignment) of responsibility for co‐ordination and action.
+>
+> L6146: Recruitment and training of emergency teams (and reserves for them).
+>
+> L6148: Acquiring/dedicating suitable and sufficient resources and equipment.
+>
+> L6150: Defining key places or routes for access, exit or congregation.
+>
+> L6152: Defining key system control points.
+>
+> L6154: Rehearsing general staff in emergency procedures.
+>
+> L6156: Alerting of emergency services and external specialists.
+>
+> L6158: Provision of adequate communication facilities.
+>
+> L6160: Supplies, equipment and spare parts logistics.
+>
+> L6162: Psychological and counselling facilities for project staff (and affected members of the public).
+>
+> L6164: Public relations; the press and other news media.
+>
+> L6166: Statutory reporting requirements.
+>
+> L6168: Preservation and collection of evidence.
+>
+> L6170: Alternative arrangements for project delivery or completion (designing deliberate resilience and redundancy measures into the project).
+>
+> L6174: Contemporary crises and disasters have convinced us of the need for more extensive consideration of these issues. They are dealt with in Chapter 15 (Planning for Crisis Response and Disaster Recovery).
+
+#### I090 `reduce_el_riesgo_a_lo_razonable`, paso 2
+
+```
+ID: I090
+NODE_ID: reduce_el_riesgo_a_lo_razonable
+FICHERO_NODO: dataset\nodos\reduce_el_riesgo_a_lo_razonable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Lista dos o tres acciones concretas de reducción y su costo aproximado.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A9 (seccion 11.8)
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L2461 a L2461; [edwards] L5749 a L5749
+FRASE_CLAVE: [edwards] L5749 "brainstorm alternative treatments for the five cases"
+QUE_ANADE_O_CONCRETA: quita la cifra "dos o tres acciones"
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A9, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L2461 a L2461, cap. 4 "Project Risk Management Systems and Frameworks":
+
+> L2461: Ref. no Existing treatment Missing controls Treatment plan Re‐assessment Responsibility Action Monitoring Treatment cost
+
+PASAJE [edwards] L5749 a L5749, cap. 9 "Risk Response and Treatment Options":
+
+> L5749: Admittedly, none of these examples demonstrates a risk response treatment that is particularly innovative, and we are sure that readers could do much better with examples from their own project environments! Useful project risk management practice might be gained if you were to step outside of your own comfort zone with a few colleagues and brainstorm alternative treatments for the five cases.
+
+#### I091 `reduce_el_riesgo_a_lo_razonable`, paso 3
+
+```
+ID: I091
+NODE_ID: reduce_el_riesgo_a_lo_razonable
+FICHERO_NODO: dataset\nodos\reduce_el_riesgo_a_lo_razonable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: L5797: el principio ALARP, "set 'As Low As Reasonably Practical'"; L5677: retener sin tratar si el tratamiento "is unlikely to be effective or delivers a negative benefit/cost ratio". El criterio del paso va en esa direccion. No es CONTRARIO: el paso no manda parar con un riesgo inaceptable que un tratamiento eficaz aun podria bajar (L5818).
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L5668 a L5668; [edwards] L5677 a L5677; [edwards] L5797 a L5797; [edwards] L5818 a L5818
+FRASE_CLAVE: [edwards] L5668 "Risk reduction exploration may continue iteratively until the point is reached where the residual amount of a risk is acceptable"
+QUE_ANADE_O_CONCRETA: el criterio de parar cuando gastar mas ya casi no baja el riesgo; el libro para cuando el riesgo residual es aceptable segun un nivel fijado por estrategia (ALARP)
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Sigue reduciendo hasta que el riesgo residual quede en el nivel aceptable que fijaste de antemano, tan bajo como sea razonablemente practicable.
+DATO_REPETIDO: resumen_teorico | actual: Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable | fiel: Ese punto, donde el riesgo residual queda en el nivel aceptable fijado de antemano, es el límite razonable
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L5668 a L5668, cap. 9 "Risk Response and Treatment Options":
+
+> L5668: Risk reduction exploration may continue iteratively until the point is reached where the residual amount of a risk is acceptable (in terms of a strategically‐determined level) and can be retained by the project stakeholder organisation. This means that more than one return to the risk analysis stage may be required.
+
+PASAJE [edwards] L5677 a L5677, cap. 9 "Risk Response and Treatment Options":
+
+> L5677: A decision to retain a threat risk without any mitigating action should only be made upon an informed basis; after appropriate assessment has been carried out and it is found that any treatment is unlikely to be effective or delivers a negative benefit/cost ratio.
+
+PASAJE [edwards] L5797 a L5797, cap. 9 "Risk Response and Treatment Options":
+
+> L5797: Frequently, such strategies are based upon retaining (without treatment) as few risks as possible; and using avoidance or transfer mechanisms for as many extremely severe risks as possible. This aim is achieved through an ‘ALARP’ principle, whereby the severity point, beyond which other risk treatments will be considered more effective, is set ‘As Low As Reasonably Practical’. At the other end of the scale, the ‘Avoid’ and ‘Transfer’ options are intended to embrace as many ‘High’ and ‘Extreme’ severity threat risks as possible. Figure 9.1 illustrates the strategies. The number of intervals for each severity rating category corresponds to the number of cells for that group shown in Table 8.7 (Chapter 8).
+
+PASAJE [edwards] L5818 a L5818, cap. 9 "Risk Response and Treatment Options":
+
+> L5818: If re‐assessment does not demonstrate that the treated risk now falls within the organisation’s strategic limits for retention, further treatment must be considered.
+
+#### I092 `revisa_tus_riesgos_con_un_ritmo`, paso 5
+
+```
+ID: I092
+NODE_ID: revisa_tus_riesgos_con_un_ritmo
+FICHERO_NODO: dataset\nodos\revisa_tus_riesgos_con_un_ritmo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Cuando la etapa se calme, baja la frecuencia de nuevo a un ritmo tranquilo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L5966 a L5968
+FRASE_CLAVE: [edwards] L5966 "monitoring frequency will also be influenced by the dynamics of the project"
+QUE_ANADE_O_CONCRETA: la instruccion de bajar la frecuencia; el libro dice que la frecuencia depende de la dinamica y sube en los periodos intensos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Ajusta la frecuencia a la dinámica del proyecto: como regla general, revisión mensual, y más seguida en los periodos de más riesgo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L5966 a L5968, cap. 10 "Risk Monitoring and Control":
+
+> L5966: The nature and frequency of project risk monitoring required will be influenced by the type of project and the individual characteristics of each risk. Earlier we proposed that monitoring intensity, in terms of both nature and frequency, should increase commensurately with risk severity. We also noted that monitoring frequency will also be influenced by the dynamics of the project.
+>
+> L5968: As a general principle, we would advocate monthly risk monitoring meetings for projects where the post‐design implementation stage is longer than 12 months, particularly where the risk‐related matters can be combined with, or follow, monthly progress meetings. For projects of shorter duration, fortnightly meetings may be more appropriate; while in some types of projects, or periods where project activities are particularly risk‐intense, weekly or even daily meetings may be needed. Events projects can present great difficulty for risk monitoring and control since the event itself may last only a few hours or a few days. In practice, this calls for more intense risk management during the lead‐up to the event and probably continuous monitoring of high and extreme‐severity risks during the event itself.
+
+#### I093 `tecnicas_para_sacar_riesgos_a_la_luz`, paso 3
+
+```
+ID: I093
+NODE_ID: tecnicas_para_sacar_riesgos_a_la_luz
+FICHERO_NODO: dataset\nodos\tecnicas_para_sacar_riesgos_a_la_luz.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A10 (seccion 11.8)
+LIBRO [edwards]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\Managing Project Risks - Peter J. Edwards.txt
+LINEAS: [edwards] L3253 a L3253; [edwards] L5502 a L5502
+FRASE_CLAVE: [edwards] L5502 "will have recourse to the knowledge captured from previous projects"
+QUE_ANADE_O_CONCRETA: quita la cifra "dos o tres proyectos"; anade los informes y lecciones de proyectos previos
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A10, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Estudia proyectos parecidos que fracasaron, sus informes y lecciones, y anota por qué cayeron.
+NOTA: resumen_teorico | El resumen dice "mirar proyectos parecidos que fracasaron" sin cifra: no se toca por este dato (si por el CONTRARIO, ficha C2).
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [edwards] L3253 a L3253, cap. 6 "Approach to Project Risk Identification":
+
+> L3253: Also in this category may be found official reports such as the findings of inquiries into accidents and disasters. Not always freely available, and probably least often used in project management, their usefulness in project risk identification is usually limited to confirming the presence of particular types of risks, or the circumstances that are likely to give rise to them. Nevertheless, such reports can lead a project stakeholder organisation to review its policies, practices and processes with a view to avoiding particular threat risks and may act as a catalyst for identifying particular types of risks on particular types of projects.
+
+PASAJE [edwards] L5502 a L5502, cap. 9 "Risk Response and Treatment Options":
+
+> L5502: A project stakeholder organisation with a mature approach to risk management will have recourse to the knowledge captured from previous projects (see Chapter 11). The archived risk registers for those projects (or the Organisational Risk Register (ORR) itself) will provide substantial information and guidance about existing controls.
+
+### Hubbard (6 fichas)
+
+#### I094 `calibra_tu_propio_ojo`, paso 1
+
+```
+ID: I094
+NODE_ID: calibra_tu_propio_ojo
+FICHERO_NODO: dataset\nodos\calibra_tu_propio_ojo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L2076 a L2076; [hubbard] L3916 a L3916; [hubbard] L3960 a L3960; [hubbard] L3978 a L3978; [hubbard] L4770 a L4770
+FRASE_CLAVE: [hubbard] L2076 "Try another calibration test to see how well you do with ranges. For exhibit 7.3, provide both an upper bound and a lower bound. Remember that the range should be wide enough that you believe there is a 90 percent chance that the answer will be between your bounds"
+QUE_ANADE_O_CONCRETA: "tus proximas diez estimaciones" reales; el libro calibra con tests de respuesta conocida y aparte registra los pronosticos para compararlos con lo que ocurra
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Haz tests de calibración con preguntas de respuesta conocida, dando para cada una un rango con noventa por ciento de confianza, y registra tus pronósticos reales para compararlos con lo que ocurra.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L2076 a L2076, cap. 7 "The Limits of Expert Knowledge: Why We Don't Know What We Think We Know about Uncertainty":
+
+> L2076: Try another calibration test to see how well you do with ranges. For exhibit 7.3, provide both an upper bound and a lower bound. Remember that the range should be wide enough that you believe there is a 90 percent chance that the answer will be between your bounds. When you are finished, you can check your answers at the end of the chapter.
+
+PASAJE [hubbard] L3916 a L3916, cap. 11 "Starting with What Works":
+
+> L3916: Let's review again your performance on the small tests in chapter 7. Remember, we need to compare your expected results to your actual results. Since the range questions asked for a 90 percent confidence interval (CI), you should expect 90 percent of the actual answers to be within your ranges. However, if you are like most people, you got less than that within your stated bounds at first. Granted, these are very small samples so the test can't be used to measure your calibration precisely, but it's a good approximate measure. Even with this small sample, if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident. If you got less than half within your bounds (as most people do), then you are very overconfident.
+
+PASAJE [hubbard] L3960 a L3960, cap. 11 "Starting with What Works":
+
+> L3960: Take the tests in the appendix and try applying each of the methods listed in this chapter in each test. It will take practice, but if you apply these methods by habit your calibration will improve. The tests in the appendix are longer than the examples in chapter 7 (twenty questions), but the same process of evaluation we used on the small example tests applies. You become calibrated when your expected number correct comes very close to your actual number correct. That is, you are calibrated when you get about 90 percent of the answers within your 90 percent CI for the range questions. For the binary questions, you are calibrated when the sum of the assessed probabilities of being correct is about the same as the actual number correct.
+
+PASAJE [hubbard] L3978 a L3978, cap. 11 "Starting with What Works":
+
+> L3978: Repetition and feedback: Take several tests in succession, assessing how well you did after each one and attempting to improve your performance in the next one. Continue to track performance after training is complete.
+
+PASAJE [hubbard] L4770 a L4770, cap. 12 "Improving the Model":
+
+> L4770: Tracking: Documenting forecasts in your model (including variables forecasted within the model) so they can be compared to real outcomes when they occur
+
+#### I095 `cuidado_con_la_falsa_precision`, paso 1
+
+```
+ID: I095
+NODE_ID: cuidado_con_la_falsa_precision
+FICHERO_NODO: dataset\nodos\cuidado_con_la_falsa_precision.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L3383 a L3383; [hubbard] L3389 a L3389; [hubbard] L3680 a L3680; [hubbard] L4768 a L4768
+FRASE_CLAVE: [hubbard] L3383 "I asked them questions about where they got their data from and about quality control on their models"
+QUE_ANADE_O_CONCRETA: rastrear el origen de cada numero; el libro pide calibrar las estimaciones subjetivas, medir donde mas vale la informacion y contrastar con la realidad
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: En cualquier cálculo de riesgo, revisa de dónde salen sus datos: calibra las estimaciones subjetivas y mide más donde la información vale más.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L3383 a L3383, cap. 10 "Where Even the Quants Go Wrong: Common and Fundamental Errors in Quantitative Models":
+
+> L3383: I asked them questions about where they got their data from and about quality control on their models. Here is what I found:
+
+PASAJE [hubbard] L3389 a L3389, cap. 10 "Where Even the Quants Go Wrong: Common and Fundamental Errors in Quantitative Models":
+
+> L3389: Although 75 percent of models used some existing historical data, only 35 percent of the models reviewed used any original empirical measurements gathered specifically for the model. Furthermore, only 4 percent ever conducted an additional empirical measurement to reduce uncertainty where the model is the most sensitive. In contrast, I find that, based on sensitivity analysis and computing the value of further measurements, all but three of the over 150 models I've personally developed in the last twenty years required further measurement. It appears that most modelers assume that they can model only on subjective estimates and the existing data they are given. The idea of conducting original empirical research is almost completely absent from Monte Carlo modeling.
+
+PASAJE [hubbard] L3680 a L3680, cap. 10 "Where Even the Quants Go Wrong: Common and Fundamental Errors in Quantitative Models":
+
+> L3680: The uncertain variables with the highest EVPI (highest value for further measurement) tend to be those that the organization almost never measures, and the variables they have been measuring have, on average, the lowest EVPI.
+
+PASAJE [hubbard] L4768 a L4768, cap. 12 "Improving the Model":
+
+> L4768: Constantly testing your model by seeing how well it matches history is absolutely essential. This requires tracking and/or backtesting of models. Tracking is simply recording forecasts and comparing them with eventual outcomes. Look at a set of project cost estimates produced by a model. How well did they match reality? Backtesting is similar to tracking except that with backtesting the real-world events used to test the model may have predated when the model was built. In other words, you test the model against data you already had. For the same model which estimates project costs, you don't have to wait until current projects are done. You can look at past models. These tests are necessary to have any confidence in modeling at all. However, even though this testing is not difficult to implement, the survey of models in chapter 10 showed it is rarely done. There is simply very little incentive for analysts or management to go back and check models against reality.
+
+#### I096 `cuidado_con_la_falsa_precision`, paso 2
+
+```
+ID: I096
+NODE_ID: cuidado_con_la_falsa_precision
+FICHERO_NODO: dataset\nodos\cuidado_con_la_falsa_precision.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Marca los datos que en realidad inventaste o supusiste sin base.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L979 a L981; [hubbard] L3385 a L3385
+FRASE_CLAVE: [hubbard] L981 "There is nothing mathematically invalid about using a subjective input to a calculation"
+QUE_ANADE_O_CONCRETA: marcar los datos "inventados"; el libro considera valida la estimacion subjetiva si esta calibrada
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Identifica qué datos son estimaciones subjetivas y calíbralas: usar una estimación subjetiva no es inválido si está calibrada.
+DATO_REPETIDO: entregable_esperado | actual: con el origen de cada dato marcado y los supuestos inventados señalados, redondeado con honestidad | fiel: con las estimaciones subjetivas calibradas y expresadas en rangos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L979 a L981, cap. 4 "Getting Started: A Simple Straw Man Quantitative Model":
+
+> L979: I need to briefly address some perceived obstacles to using a method like this. Some may object to the idea of subjectively assessing probabilities. Some analysts who had no problem saying likelihood was a 4 on a scale of 1 to 5 or a medium on a verbal scale will argue that there are requirements for quantitative probabilities that make quantification infeasible. Somehow, the problems that were not an issue using more ambiguous methods are major roadblocks when attempting to state meaningful probabilities.
+>
+> L981: This is a common misunderstanding. There is nothing mathematically invalid about using a subjective input to a calculation. In fact, as we will see, there are problems in statistics that can only be solved by using a probabilistically expressed prior state of uncertainty. And these are actually the very situations most relevant to decision-making in any field, especially risk management. Later, we will discuss the sources supporting this approach, including some very large empirical studies demonstrating its validity. Additionally, we will show how readers can measure and improve their own skills at assessing probabilities using a short series of exercises that can help them continue to improve it over time. We call this calibrated probability assessment, and we will show that there is quite a bit of research backing up the validity of this approach. For now, just recognize that most experts can be trained to subjectively assess probabilities and that this skill is objectively measurable (as ironic as that sounds).
+
+PASAJE [hubbard] L3385 a L3385, cap. 10 "Where Even the Quants Go Wrong: Common and Fundamental Errors in Quantitative Models":
+
+> L3385: There were a lot of subjective estimates but no calibration of probabilities. An overwhelming majority of those surveyed--89 percent--used some subjective estimates in models. On average, the percentage of variables in all models that were subjective estimates was 44 percent. However, not one of the modelers ever used--or had even heard of--calibration training. As discussed in chapter 7, this would mean that almost all estimates were overconfident and all of the models understated risks. In fact, the most uncertain variables that had bigger impacts on the output were the most likely to rely on expert estimates.
+
+#### I097 `cuidado_con_la_falsa_precision`, paso 3
+
+```
+ID: I097
+NODE_ID: cuidado_con_la_falsa_precision
+FICHERO_NODO: dataset\nodos\cuidado_con_la_falsa_precision.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: No presentes más decimales de los que tus datos aguantan: redondea con honestidad.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "decimal": una sola vez (L3918, sobre probabilidades escritas como decimales); ni apoyo ni contradiccion. El paso va en la direccion del libro contra la falsa certeza (L3478: "A range has a chance of being right whereas a point estimate will almost always be wrong."); no trae dato.
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L3478 a L3478; [hubbard] L3918 a L3918
+FRASE_CLAVE: [hubbard] L3478 "A range has a chance of being right whereas a point estimate will almost always be wrong"
+QUE_ANADE_O_CONCRETA: los decimales y el redondeo; el libro combate la falsa certeza con rangos, no con redondeo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Expresa tus estimaciones como rangos, no como un número único: un rango puede acertar, un número único casi siempre falla.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L3478 a L3478, cap. 10 "Where Even the Quants Go Wrong: Common and Fundamental Errors in Quantitative Models":
+
+> L3478: Usually, big oil does a good job of quantifying risks. As Hoye puts it, “There are enormous risks in oil, huge capital outlays, and multiple years before a payoff. The success rates are one-in-eight in exploratory projects. And that's the good rate.” But the strong incentive to model risks well may be undercut when the results are communicated. “Oil companies are dealing with an asset they cannot touch, but they have to make public pronouncements of the value of these assets,” says Hoye. Perhaps the best way to deal with it is to share the actual uncertainty of the distribution with investors. A range has a chance of being right whereas a point estimate will almost always be wrong.
+
+PASAJE [hubbard] L3918 a L3918, cap. 11 "Starting with What Works":
+
+> L3918: Also, recall that for the true/false questions, you said you were 50, 60, 70, 80, 90, or 100 percent confident. Convert each of the percentages you circled to a decimal (i.e., 0.5, 0.6, … 1.0) and add them up. Let's say your confidence in your answers was 1, .5, .9, .6, .7, .8, .8, 1, .9, .7 making your total 7.9. So your expected number correct was 7.9. Again, 10 is a small sample, but if your expected number correct is, say, 8.7 and your actual correct was 6, you may be overconfident.
+
+#### I098 `escepticismo_sano_ante_el_riesgo`, paso 4
+
+```
+ID: I098
+NODE_ID: escepticismo_sano_ante_el_riesgo
+FICHERO_NODO: dataset\nodos\escepticismo_sano_ante_el_riesgo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Prefiere una nota simple y honesta a un tablero vistoso que no puedas comprobar.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L607 a L607; [hubbard] L946 a L946; [hubbard] L2808 a L2808
+FRASE_CLAVE: [hubbard] L607 "the mere appearance of structure and formality in risk management is pleasing to some"
+QUE_ANADE_O_CONCRETA: la "nota simple"; la alternativa del libro son modelos cuantitativos simples que se pueden comprobar
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Prefiere un modelo cuantitativo simple, que puedas comprobar contra la realidad, a un método que solo aparenta estructura y formalidad.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L607 a L607, cap. 3 "How Do We Know What Works?":
+
+> L607: An analysis placebo produces the feeling that some analytical method has improved decisions and estimates even when it has not. Placebo means “to please” and, no doubt, the mere appearance of structure and formality in risk management is pleasing to some. In fact, the analogy to a placebo is going a bit too easy on risk management. In medical research, there can actually be a positive physiological effect from a mere placebo beyond the mere perception of benefit. But when we use the term in the context of risk management we mean there literally is no benefit other than the perception of benefit. Several studies in very different domains show how it is possible for any of us to be susceptible to this effect:
+
+PASAJE [hubbard] L946 a L946, cap. 4 "Getting Started: A Simple Straw Man Quantitative Model":
+
+> L946: Plotting likelihood and impact scores on a risk matrix Use the quantitative likelihood and impact to generate a loss exceedance curve--a quantitative approach to expressing risk--using a simple Monte Carlo simulation done in a spreadsheet.
+
+PASAJE [hubbard] L2808 a L2808, cap. 8 "Worse Than Useless: The Most Popular Risk Assessment Method and Why It Doesn't Work":
+
+> L2808: Another JDM researcher I wrote about in How to Measure Anything, was Robyn Dawes at Carnegie Mellon University. In 1979, he wrote a paper titled, “The Robust Beauty of Improper Linear Models.”11 He showed that even very simple models can improve on results from unaided judges. But, similar to Brunswik, Dawes invents no predefined ordinal scales for his models, and his claims of effectiveness are based on real measurements. The methods of both researchers allow several factors to be added up to get a value for something we are trying to evaluate--risks of a construction project, applicants for a job, or diagnoses of cancer patients. And in both methods the factors are items that a judge thinks should be considered in the evaluation.
+
+#### I099 `la_matriz_de_colores_te_engana`, paso 3
+
+```
+ID: I099
+NODE_ID: la_matriz_de_colores_te_engana
+FICHERO_NODO: dataset\nodos\la_matriz_de_colores_te_engana.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.
+CLASE_FINAL: CONTRARIO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: L2136: "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."; L2533: "he found they varied widely even when they were given specific guidelines for what these terms meant"; L2535: "detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice." El paso manda conservar la etiqueta y darle un rango, que es lo que el libro prueba que no funciona.
+FICHA_DE_CORRECCION: C5 (seccion 11.8)
+LIBRO [hubbard]: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+LINEAS: [hubbard] L2136 a L2136; [hubbard] L2533 a L2535
+FRASE_CLAVE: [hubbard] L2136 "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."
+QUE_ANADE_O_CONCRETA: quita la etiqueta "probabilidad media" con un rango aclarado (lo que el libro prueba que no basta); anade la probabilidad explicita en porcentaje
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha C5, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.
+DATO_REPETIDO: entregable_esperado | actual: probabilidad y daño en palabras y cifras honestas | fiel: probabilidad en porcentaje y daño en cifras honestas
+NOTA: resumen_teorico | El resumen dice que "las etiquetas como media significan cosas muy distintas para cada persona": es fiel (L2533). No se toca.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [hubbard] L2136 a L2136, cap. 7 "The Limits of Expert Knowledge: Why We Don't Know What We Think We Know about Uncertainty":
+
+> L2136: Here is a key lesson so far: the detection of overconfidence is only possible if probabilities are used and compared to real performance of correctly estimating outcomes. How would we know whether someone is overconfident when he tells us there is a medium likelihood of a particular event happening? If the event happens 50 percent of the time, did we confirm that it was a medium likelihood? If we look at all the times a project management office said the risk of a project failure was a 2 on a scale of 1 to 5, and twelve out of forty projects with the same risk score failed, was he right? Ambiguous terms such as this can't be evaluated against real-world observations because, as measurements, they are meaningless. Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.
+
+PASAJE [hubbard] L2533 a L2535, cap. 8 "Worse Than Useless: The Most Popular Risk Assessment Method and Why It Doesn't Work":
+
+> L2533: Budescu found that the respondents' assessments of the meaning of these terms varied widely. More surprisingly, he found they varied widely even when they were given specific guidelines for what these terms meant, as was done in the IPCC report. For example, the word likely was interpreted in different contexts to mean anything from 45 percent to 84 percent. This wide range occurred even though subjects were informed that the guidelines specifically stated that likely should mean “greater than 66 percent” (see exhibit 8.3). The verbal labels a method uses seems to be about as important to how responses are distributed--if not more so--than the defined ranges
+>
+> L2535: Budescu says that this creates an “illusion of communication.” When everyone “agrees” that some event is very unlikely, it turns out they are not agreeing at all. Some would be quite surprised as to how others interpret that term. Apparently, detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.
+
+### Juran (4 fichas)
+
+#### I100 `sistema_de_alarma_de_defectos`, paso 2
+
+```
+ID: I100
+NODE_ID: sistema_de_alarma_de_defectos
+FICHERO_NODO: dataset\nodos\sistema_de_alarma_de_defectos.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Establecer un cronograma común entre comprador y proveedor
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [juran]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+LINEAS: [juran] L23867 a L23867
+FRASE_CLAVE: [juran] L23867 "Under many contracts, the buyer and supplier are yoked to a common timetable for completion of the final product. Usually, a separate department (e.g., materials management) presides over major aspects of scheduling"
+QUE_ANADE_O_CONCRETA: establecer el cronograma como tarea del sistema de alarmas; el libro da el cronograma comun por existente (lo lleva otro departamento) y pide montar las alarmas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Montar las señales de alarma dentro del cronograma común que el contrato fija entre comprador y proveedor
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [juran] L23867 a L23867, cap. 23 "Managing Quality in the Supply Chain":
+
+> L23867: 12. Establishment of a system of timely response to alarm signals resulting from defects. Under many contracts, the buyer and supplier are yoked to a common timetable for completion of the final product. Usually, a separate department (e.g., materials management) presides over major aspects of scheduling. However, upper management properly looks to the people associated with the quality function to set up alarm signals to detect quality failures and to act positively on these signals to avoid deterioration, whether in quality, cost, or delivery.
+
+#### I101 `sistema_de_alarma_de_defectos`, paso 4
+
+```
+ID: I101
+NODE_ID: sistema_de_alarma_de_defectos
+FICHERO_NODO: dataset\nodos\sistema_de_alarma_de_defectos.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documentar tiempos de respuesta esperados
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [juran]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+LINEAS: [juran] L23867 a L23867
+FRASE_CLAVE: [juran] L23867 "Establishment of a system of timely response to alarm signals"
+QUE_ANADE_O_CONCRETA: documentar tiempos de respuesta; el libro pide un sistema de respuesta oportuna
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Asegurar una respuesta oportuna a cada señal de alarma
+DATO_REPETIDO: entregable_esperado | actual: y tiempos de respuesta definidos | fiel: y respuesta oportuna a cada alarma
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [juran] L23867 a L23867, cap. 23 "Managing Quality in the Supply Chain":
+
+> L23867: 12. Establishment of a system of timely response to alarm signals resulting from defects. Under many contracts, the buyer and supplier are yoked to a common timetable for completion of the final product. Usually, a separate department (e.g., materials management) presides over major aspects of scheduling. However, upper management properly looks to the people associated with the quality function to set up alarm signals to detect quality failures and to act positively on these signals to avoid deterioration, whether in quality, cost, or delivery.
+
+#### I102 `smed_setup_reduction`, paso 1
+
+```
+ID: I102
+NODE_ID: smed_setup_reduction
+FICHERO_NODO: dataset\nodos\smed_setup_reduction.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Documentar el proceso actual de cambio/setup
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [juran]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+LINEAS: [juran] L13214 a L13226; [juran] L13574 a L13582
+FRASE_CLAVE: [juran] L13574 "The primary steps to faster changeovers include"
+QUE_ANADE_O_CONCRETA: documentar el proceso completo de cambio; el libro no lo pone entre los pasos de SMED y, antes de un evento kaizen, recoge tiempos de setup y de cambio por operacion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Registrar el tiempo de preparación (setup) y de cambio de cada operación
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [juran] L13214 a L13226, cap. 14 "Lean Techniques and the Shingo Prize":
+
+> L13214: 1. One to three weeks prior to conducting the event the expert assembles the team, facilitates development of a charter and gathers as much data as possible surrounding the area to be improved. The type of data depends on the area selected but typically includes a manufacturing area of focus:
+>
+> L13216: • Process flow diagrams for each product or product family (if available)
+>
+> L13218: • Yields by operation
+>
+> L13220: • Setup time by operation
+>
+> L13222: • Changeover time by operation
+>
+> L13224: • Average WIP (work in progress) inventory levels between operations
+>
+> L13226: • Average materials inventory
+
+PASAJE [juran] L13574 a L13582, cap. 14 "Lean Techniques and the Shingo Prize":
+
+> L13574: The primary steps to faster changeovers include
+>
+> L13576: • Move as much of the work of change over from internal activity (which requires production to stop) to external activity (which can be completed without stopping production)
+>
+> L13578: • Streamline the internal activity with the same principles as production: minimizing motion and travel, adjacency, and balancing. Then streamline external activity
+>
+> L13580: • Eliminate the need for adjustments and trial runs
+>
+> L13582: • Streamline external activity
+
+#### I103 `smed_setup_reduction`, paso 4
+
+```
+ID: I103
+NODE_ID: smed_setup_reduction
+FICHERO_NODO: dataset\nodos\smed_setup_reduction.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Simplificar y estandarizar las actividades internas restantes
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [juran]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+LINEAS: [juran] L13574 a L13584
+FRASE_CLAVE: [juran] L13578 "Streamline the internal activity with the same principles as production: minimizing motion and travel, adjacency, and balancing. Then streamline external activity"
+QUE_ANADE_O_CONCRETA: "estandarizar"; el libro dice agilizar la actividad interna, y despues la externa
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Agilizar la actividad interna restante con los principios de producción (menos movimiento y traslado, cercanía, equilibrio) y después agilizar la externa
+DATO_REPETIDO: entregable_esperado | actual: con procedimiento estandarizado | fiel: con la actividad interna y externa agilizadas
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [juran] L13574 a L13584, cap. 14 "Lean Techniques and the Shingo Prize":
+
+> L13574: The primary steps to faster changeovers include
+>
+> L13576: • Move as much of the work of change over from internal activity (which requires production to stop) to external activity (which can be completed without stopping production)
+>
+> L13578: • Streamline the internal activity with the same principles as production: minimizing motion and travel, adjacency, and balancing. Then streamline external activity
+>
+> L13580: • Eliminate the need for adjustments and trial runs
+>
+> L13582: • Streamline external activity
+>
+> L13584: Although originally developed for changing capital equipment configurations for different product runs, the same principles have been applied to improving lead times for service and knowledge work--for example, staging the data for insurance underwriters so that they can began a new case immediately rather than having to retrieve the needed data, minimizing the time for a customer service representative to open a new case by prepopulating key fields in the case documentation, or organizing all audit data in a standard format to facilitate switching from one study to another.
+
+### Reason (71 fichas)
+
+#### I104 `accidentes_organizacionales_por_mantenimiento`, paso 3
+
+```
+ID: I104
+NODE_ID: accidentes_organizacionales_por_mantenimiento
+FICHERO_NODO: dataset\nodos\accidentes_organizacionales_por_mantenimiento.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Comparar estos patrones con las prácticas actuales de la organización
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1934 a L1934
+FRASE_CLAVE: [reason] L1934 "they are themselves the consequences of upstream organizational factors or latent conditions"
+QUE_ANADE_O_CONCRETA: la comparacion con las practicas propias; el libro concluye que los errores de mantenimiento son consecuencia de factores organizacionales previos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tratar cada error de mantenimiento de estos casos no como causa aislada, sino como consecuencia de factores organizacionales o condiciones latentes previas
+DATO_REPETIDO: entregable_esperado | actual: aplicado al contexto organizacional propio | fiel: centrado en las condiciones latentes organizacionales detrás de cada caso
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1934 a L1934, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L1934: In these brief accounts of maintenance-induced organizational accidents, we have deliberately sacrificed detail for scope. The intention was to convey something of the extent to which maintenance errors have been implicated in a wide range of accidents across different domains. But it must be emphazised that maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.
+
+#### I105 `accidentes_organizacionales_por_mantenimiento`, paso 4
+
+```
+ID: I105
+NODE_ID: accidentes_organizacionales_por_mantenimiento
+FICHERO_NODO: dataset\nodos\accidentes_organizacionales_por_mantenimiento.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Usar los casos como material de capacitación y sensibilización para personal técnico y gerencial
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1934 a L1934
+FRASE_CLAVE: [reason] L1934 "The intention was to convey something of the extent to which maintenance errors have been implicated in a wide range of accidents across different domains."
+QUE_ANADE_O_CONCRETA: el uso como material de capacitacion; el libro usa los casos para mostrar el alcance de los errores de mantenimiento
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usar los casos para mostrar hasta qué punto los errores de mantenimiento han intervenido en accidentes de muchos dominios, como consecuencia de factores organizacionales previos
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1934 a L1934, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L1934: In these brief accounts of maintenance-induced organizational accidents, we have deliberately sacrificed detail for scope. The intention was to convey something of the extent to which maintenance errors have been implicated in a wide range of accidents across different domains. But it must be emphazised that maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.
+
+#### I106 `arbol_decision_culpabilidad`, paso 6
+
+```
+ID: I106
+NODE_ID: arbol_decision_culpabilidad
+FICHERO_NODO: dataset\nodos\arbol_decision_culpabilidad.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 5
+INDICE_BASE1: 6
+TEXTO_ACTUAL: Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A11 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5055 a L5057; [reason] L5063 a L5063
+FRASE_CLAVE: [reason] L5063 "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised."
+QUE_ANADE_O_CONCRETA: quita "criminal, negligente, violacion con o sin mitigacion"; anade las categorias del arbol del libro, con la mitigacion aplicada al abuso de sustancias y el error sin culpa
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A11, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa
+NOTA: limite | La Figura 9.4 del libro no esta en el txt: las categorias se reconstruyen de la prosa (L5053 a L5063). El nombre exacto de cada casilla de la figura puede variar.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5055 a L5057, cap. 9 "Engineering a Safety Culture":
+
+> L5055: Except when non-compliance has become a largely automatic way of working (as sometimes happens in the case of routine short-cuts), violations involve a conscious decision on the part of the perpetrator to break or bend the rules. However, while the actions may be deliberate, the possible bad consequences are not--in contrast to sabotage in which both the act and the consequences are intended. Most violations will be non-malevolent in terms of intent, so the degree to which they are blameworthy will depend largely on the quality and availability of the relevant procedures. These, as discussed in Chapter 4, are not always appropriate for the particular situation. Where this is judged to be the case--perhaps by a ‘jury’ of the perpetrator’s peers--the problem lies more with the system than with the individual. However, when good procedures were readily accessible but deliberately violated, the question must arise as to whether the behaviour was reckless in the legal sense of the term. Such actions are clearly more culpable than ‘necessary’ violations--that is, non-compliant actions necessary to get the job done when the relevant procedures are either wrong, inappropriate or unworkable.
+>
+> L5057: It seems appropriate to apply Johnston’s substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled, although something like it clearly has a part to play in judging the culpability of system-induced violations (as indicated by the dotted arrow in Figure 9.4). The issue is reasonably straightforward. Could (or has) some well motivated, equally competent and comparably qualified individual make (or made) the same kind of error under those or very similar circumstances? If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless. If the answer is ‘no’, then we have to consider whether there were any system-induced deficiencies in the person’s training, selection or experience. If such latent conditions are not identified, then the possibility of a negligent error must be considered. If they are found, it is likely that the unsafe act was a largely blameless system-induced error.
+
+PASAJE [reason] L5063 a L5063, cap. 9 "Engineering a Safety Culture":
+
+> L5063: So where should the line be drawn on Figure 9.4 between acceptable and unacceptable behaviour? The most obvious point would be between the two substance abuse categories. Both malevolent damage and the dangerous use of alcohol or drugs are wholly unacceptable and should receive very severe sanctions, possibly administered by the courts rather than the organization. Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. The remaining categories should be thought of as blameless--unless they involve aggravating factors not considered here. Experience suggests that the majority of unsafe acts--perhaps 90 per cent or more--fall into this blameless category.
+
+#### I107 `auftragssystem_supervision_autonoma`, paso 4
+
+```
+ID: I107
+NODE_ID: auftragssystem_supervision_autonoma
+FICHERO_NODO: dataset\nodos\auftragssystem_supervision_autonoma.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Complementar la formación inicial con acompañamiento continuo en el terreno para consolidar los comportamientos correctos
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5206 a L5208
+FRASE_CLAVE: [reason] L5206 "To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance"
+QUE_ANADE_O_CONCRETA: el acompanamiento continuo para formar al propio supervisor; en el libro es la guia del supervisor en el terreno la que consolida la formacion inicial de los trabajadores
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Invertir en la calidad, la motivación y la experiencia de quien supervisa, que es quien consolida en el terreno la formación inicial de los trabajadores en percepción del riesgo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5206 a L5208, cap. 9 "Engineering a Safety Culture":
+
+> L5206: Not all activities in hazardous technologies are carried out in supervised groups. When people are relatively isolated, the onus shifts from group to self-controls. Crucial among these are the techniques designed to enhance hazard awareness and risk perception, These are the measures that seek to promote ‘correct’ rather than merely ‘successful’ performance. A number of hazard evaluation programmes are being developed or have already been implemented. However, as Willem Albert Wagenaar has observed,43 risk appraisal training is of little value once the incorrect actions have become habitual. When this happens, people are not taking risks deliberately, they are running risks in a largely thoughtless and automatic fashion. To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance. By the same token, it is mainly through local supervisory interventions that long-established pattern of incorrect behaviour can be modified.
+>
+> L5208: In summary, high-reliability organizations are able to shift from centralized control to a decentralized mode in which the guidance of local operations depends largely upon the professionalism of first-line supervisors. Paradoxically perhaps, the success of this transformation depends on the prior establishment of a strong and disciplined hierarchical culture. It is the shared values and assumptions created by this culture that permit the coordination of decentralized work groups. Effective teams, capable of operating autonomously when the circumstances demand it, need high-quality leaders. This, in turn, requires that the organization invest heavily in the quality, motivation and experience of its first-line supervisors.
+
+#### I108 `autonomia_dependencia_regulatoria`, paso 3
+
+```
+ID: I108
+NODE_ID: autonomia_dependencia_regulatoria
+FICHERO_NODO: dataset\nodos\autonomia_dependencia_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Establecer mecanismos de verificación independientes que no dependan únicamente de la información proporcionada por el regulado
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4261 a L4261; [reason] L4271 a L4271
+FRASE_CLAVE: [reason] L4261 "regulators tend to become dependent upon the regulated organizations to help them acquire and interpret information"
+QUE_ANADE_O_CONCRETA: los mecanismos de verificacion independientes; el libro describe la dependencia del regulador respecto del regulado
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que lo que el regulador sabe de un problema de seguridad puede estar condicionado por lo que el regulado decide comunicar y por cómo lo presenta
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4261 a L4261, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4261: In an effort to work around these obstacles, regulators tend to become dependent upon the regulated organizations to help them acquire and interpret information. Such interdependence can undermine the regulatory process in various ways. The regulator’s knowledge of the nature and severity of a safety problem can be manipulated by what the regulated organization chooses to communicate and how this material is presented. Regulators, being human beings, tend to establish personal relationships with the regulated--they get to like the people they oversee and come to sympathize with their problems on a personal level--and this sometimes compromises their ability to identify, report or sanction violations.
+
+PASAJE [reason] L4271 a L4271, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4271: The Move Towards Self-regulation
+
+#### I109 `autonomia_dependencia_regulatoria`, paso 4
+
+```
+ID: I109
+NODE_ID: autonomia_dependencia_regulatoria
+FICHERO_NODO: dataset\nodos\autonomia_dependencia_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Evaluar si las sanciones actuales reflejan compromiso/negociación en lugar de cumplimiento real de la normativa
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4265 a L4265
+FRASE_CLAVE: [reason] L4265 "To interpret the consequences of this negotiation and bargaining (e.g., the ‘slap-on-the-wrist’ sanction or no sanction at all) as regulatory ‘failures’ is to miss the point"
+QUE_ANADE_O_CONCRETA: la evaluacion de las sanciones frente al "cumplimiento real"; el libro dice que el compromiso es un patron sistematico, no un fallo regulatorio
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Entender que las sanciones leves, o su ausencia, suelen reflejar la negociación propia de la dependencia mutua entre regulador y regulado: un patrón sistemático, no un fallo regulatorio
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4265 a L4265, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4265: Situations of mutual dependence are likely to engender continual negotiation and bargaining rather than adversarial tactics, as each party tries to control the other’s use of resources and conserve its own. To interpret the consequences of this negotiation and bargaining (e.g., the ‘slap-on-the-wrist’ sanction or no sanction at all) as regulatory ‘failures’ is to miss the point. Compromise is an enforcement pattern systematically generated by the structure of inter-organizational regulatory relations.25
+
+#### I110 `clasificacion_riesgos_por_dominio`, paso 2
+
+```
+ID: I110
+NODE_ID: clasificacion_riesgos_por_dominio
+FICHERO_NODO: dataset\nodos\clasificacion_riesgos_por_dominio.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5605 a L5605; [reason] L5611 a L5611
+FRASE_CLAVE: [reason] L5611 "Comparison of estimates of the four risk types across domains"
+QUE_ANADE_O_CONCRETA: las "referencias historicas" como base de la comparacion; el libro compara estimaciones de los cuatro tipos de riesgo entre dominios (Tabla 10.1)
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Comparar las estimaciones de los cuatro tipos de riesgo de tu dominio con las de otros dominios, atento a los riesgos que la historia muestra que se pasan por alto
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5605 a L5605, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5605: The history of modern technology is rich in instances of risk managers being caught with their eyes on the wrong ball. In transport systems, for example, the traditional emphasis has been upon the safety of the passengers or cargo, and on the risks posed by the fallibility of those at the sharp end--the pilots, the train drivers, and the ships’ crews. Only relatively recently, for instance, have airlines become aware of the risks associated with maintenance, or of the enormous losses caused by personal injuries to ground-based staff--amounting to $30 million per year in some large US carriers. It took the Clapham Junction disaster to make British Rail aware of the risks associated with technical work on the signalling system. And only in its aftermath did they begin to record the personal injury accidents sustained by their infrastructure staff (for example, shunters and track workers). Yet this was an organization with a 160-year tradition of safety innovation in both the engineering and the human spheres (where human equated to driver or signalman). Only in the last decade has the nuclear power industry started to appreciate the risks associated with low-power and shutdown conditions. The training and procedures for control room operators were almost exclusively geared to handling emergencies in the more typical full-power situation. It took the King’s Cross Underground tragedy to reveal that stations, as well as trains, could be dangerous places for passengers and staff. And it took the Cullen Inquiry to make many North Sea oil and gas operators aware of formal safety assessment techniques, though they had long been a staple item on the risk management agenda for the military and for the nuclear power and chemical process industries.
+
+PASAJE [reason] L5611 a L5611, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5611: Comparison of estimates of the four risk types across domains Domain of operation Personal injury risks Errors of key operators Latent conditions Third-party risks
+
+#### I111 `clasificacion_riesgos_por_dominio`, paso 4
+
+```
+ID: I111
+NODE_ID: clasificacion_riesgos_por_dominio
+FICHERO_NODO: dataset\nodos\clasificacion_riesgos_por_dominio.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5639 a L5641; [reason] L5907 a L5907
+FRASE_CLAVE: [reason] L5641 "The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them"
+QUE_ANADE_O_CONCRETA: priorizar segun el riesgo predominante; el libro pide contramedidas distintas a distintos niveles a la vez y recuerda que el riesgo latente es alto en todos los dominios
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Aplicar contramedidas distintas a cada tipo de riesgo y a cada nivel del sistema a la vez, no solo a las lesiones personales, recordando que el riesgo de condiciones latentes es alto en todos los dominios
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5639 a L5641, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5639: Even if readers do not agree with the particular risk estimates given in Table 10.1, one thing remains hard to dispute--there is less variability between domains for the risks associated with latent conditions than for the other risk types. All domains must be assessed as at least ‘high’ in this regard. The reasons for this are not difficult to find. The further one moves from a domain’s front-line operations, the more alike organizations become. Technical systems of whatever kind inevitably share a large number of common processes: forecasting, planning, scheduling, budgeting, specifying new equipment (and sometimes designing and building it), operating, maintaining, managing, communicating and the like. And it is within these processes that the seeds of future disasters are sown--irrespective of the domain. In summary, all hazardous domains are threatened by organizational accidents, but their individual accident risks are extremely variable. Nevertheless, the person model remains the most widely used approach to safety management.
+>
+> L5641: In addition there is a marked asymmetry of application between the person model on the one hand, and the engineering and organizational models on the other. Whereas the latter two approaches can be usefully applied to limiting personal injury risks (and hence preventing individual accidents), the person model is not at all helpful in dealing with key operator error risks, latent conditions or third-party risks--all of which fall squarely into the province of organizational accidents. Indeed, its predominance in the minds of many technical managers is a definite barrier to improved safety. When applied to the appropriate risks, both the person approach and its tools have shown themselves to be valuable. The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them. When all you possess is a hammer, then almost everything looks like a nail. Or, to put it more directly, when the person model is the only approach with which you feel comfortable, then every problem seems to be a person problem.
+
+PASAJE [reason] L5907 a L5907, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5907: Such conflicts that exist arise mainly from the predominance of the person model in situations that demand a closer consideration of technical and systemic factors. Whereas the engineering and organizational models can be usefully applied to the reduction of individual accidents, the person model alone (and especially the mindset that goes with it) has very limited value in domains where the risks are mainly derived from the insidious accumulation of latent conditions and their rare conjunctions with local triggers to defeat the multi-layered defences. This does not mean, of course, that we should ignore the personal injury risks or the behaviour of individuals and teams. But it does mean that risk managers should be aware of the broader systemic origins of organizational accidents and of the variety of techniques now available to thwart their development. Effective risk management requires the application of different countermeasures targeted at different levels of the system at the same time--and all the time. It takes only one organizational accident to put an end to all worries about the bottom line.
+
+#### I112 `cognisance_organizacional`, paso 4
+
+```
+ID: I112
+NODE_ID: cognisance_organizacional
+FICHERO_NODO: dataset\nodos\cognisance_organizacional.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Capacitar a mandos técnicos para entender que la seguridad es proceso, no solo producto
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2583 a L2583
+FRASE_CLAVE: [reason] L2583 "This is something that can afflict technical managers assigned to safety jobs"
+QUE_ANADE_O_CONCRETA: la capacitacion como medio; el libro senala el sintoma en los mandos tecnicos y explica que las medidas de seguridad son producto y proceso
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Hacer que los mandos técnicos traten las medidas de seguridad como proceso además de producto: hay que vigilarlas, preocuparse por ellas, afinarlas y ajustarlas
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2583 a L2583, cap. 6 "Navigating the Safety Space":
+
+> L2583: Neither commitment nor competence will suffice unless the organization has a correct awareness--or cognisance--of the dangers that threaten its operations. Two features are symptomatic of organizations lacking this necessary level of cognisance. The first is the positional paradox--where those at the top of the organization, possessing the largest degree of decisional autonomy, blame most of their safety problems on the personal shortcomings of those at the sharp end who, for the most part, simply follow procedures and work with the equipment provided. The second symptom is the tick-off phenomenon. This is something that can afflict technical managers assigned to safety jobs. They treat safety measures like pieces of equipment. They put them in place, then tick them off as another job done. Most pieces of equipment do what they are supposed to do. Switch them on and they function as specified. But safety measures involve both a product and a process. Simply implementing them is not enough. They have to be watched, worried about, tuned and adjusted. Items of equipment are nearly all product and very little process. However, safety measures are more like religion--there is a great deal of praying (process), but few miracles (product).
+
+#### I113 `compensacion_de_riesgo`, paso 2
+
+```
+ID: I113
+NODE_ID: compensacion_de_riesgo
+FICHERO_NODO: dataset\nodos\compensacion_de_riesgo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Establecer políticas que impidan que las ganancias de protección se traduzcan en mayor exposición al riesgo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L96 a L96
+FRASE_CLAVE: [reason] L96 "protective gains are frequently converted into productive advantages"
+QUE_ANADE_O_CONCRETA: las politicas como instrumento; el libro describe el fenomeno de la compensacion del riesgo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Vigilar que las ganancias de protección no se conviertan en ventajas productivas que dejen la protección igual o peor que antes del accidente.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L96 a L96, cap. 1 "Hazards, Defences and Losses":
+
+> L96: Improvements in protection are often put in place during the period immediately following a bad event. Although the aim is to avoid a repetition of an accident, it is soon appreciated that the improved defences confer productive advantages. Mine owners in the early nineteenth century, for example, quickly realized that the invention of the Davy lamp permitted coal to be extracted from areas previously considered too dangerous because of the presence of combustible gases. Ship owners soon discovered that marine radar allowed their merchant vessels to travel at greater speed through crowded or confined seaways. In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse. The incidence of mine explosions increased dramatically in the years following the introduction of the Davy lamp, and the history of marine accidents is littered with radar-assisted collisions--to name but two of the many examples of accidents brought about by sacrificing protective benefits for productive gains. This process has been termed ‘risk compensation’ or ‘risk homeostasis’.3
+
+#### I114 `compensacion_de_riesgo`, paso 3
+
+```
+ID: I114
+NODE_ID: compensacion_de_riesgo
+FICHERO_NODO: dataset\nodos\compensacion_de_riesgo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Monitorear indicadores de margen de seguridad tras la implementación de nuevas tecnologías protectoras.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L96 a L96
+FRASE_CLAVE: [reason] L96 "Ship owners soon discovered that marine radar allowed their merchant vessels to travel at greater speed through crowded or confined seaways."
+QUE_ANADE_O_CONCRETA: los "indicadores de margen de seguridad"; el libro describe como las mejoras de proteccion se usaron para producir mas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tras introducir una mejora de protección, observar si se está usando para producir más o ir más rápido, como pasó con la lámpara Davy y el radar marino.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L96 a L96, cap. 1 "Hazards, Defences and Losses":
+
+> L96: Improvements in protection are often put in place during the period immediately following a bad event. Although the aim is to avoid a repetition of an accident, it is soon appreciated that the improved defences confer productive advantages. Mine owners in the early nineteenth century, for example, quickly realized that the invention of the Davy lamp permitted coal to be extracted from areas previously considered too dangerous because of the presence of combustible gases. Ship owners soon discovered that marine radar allowed their merchant vessels to travel at greater speed through crowded or confined seaways. In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse. The incidence of mine explosions increased dramatically in the years following the introduction of the Davy lamp, and the history of marine accidents is littered with radar-assisted collisions--to name but two of the many examples of accidents brought about by sacrificing protective benefits for productive gains. This process has been termed ‘risk compensation’ or ‘risk homeostasis’.3
+
+#### I115 `condiciones_latentes_largo_plazo`, paso 1
+
+```
+ID: I115
+NODE_ID: condiciones_latentes_largo_plazo
+FICHERO_NODO: dataset\nodos\condiciones_latentes_largo_plazo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Revisar el historial de diseño original de infraestructuras críticas, no solo su mantenimiento actual.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L563 a L563; [reason] L584 a L584
+FRASE_CLAVE: [reason] L563 "The subsequent investigation"
+QUE_ANADE_O_CONCRETA: la revision del historial de diseno como practica; en el libro los planos originales se usaron despues del accidente, y el caso era casi indetectable antes
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que una condición latente puede venir del diseño original y seguir oculta durante décadas aunque el mantenimiento mejore lo de arriba; en Nakina la revelaron los planos originales, después del accidente.
+DATO_REPETIDO: resumen_teorico | actual: Esto resalta que las auditorías de riesgo deben considerar el historial de diseño original de la infraestructura, no solo su mantenimiento reciente. | fiel: Esto muestra que una condición latente puede venir del diseño original aunque el mantenimiento haya mejorado lo de arriba, y que puede ser casi indetectable antes del accidente.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L563 a L563, cap. 2 "Defeating the Defences":
+
+> L563: The subsequent investigation, carried out by the Canadian Transport Safety Board, established from the original plans that the roadbed had been located on the corner of an existing beaver pond. The rails had been laid across a beaver dam--an unstable mix of silt and peat. Although the upper portions of the roadbed had been maintained and upgraded over the ensuing decades, the basic instability of their foundations had not been rectified.
+
+PASAJE [reason] L584 a L584, cap. 2 "Defeating the Defences":
+
+> L584: In all three events, the essential process of checking and reviewing the defences broke down. In the train derailment, the underlying problem was virtually undiscoverable before the event. It is thus a very special case. More usually, latent weaknesses in defences are potentially--or even actually--evident prior to a bad outcome. The first two case studies revealed one very common reason why defensive weaknesses are not detected and repaired: the people involved had forgotten to be afraid.
+
+#### I116 `condiciones_latentes_largo_plazo`, paso 2
+
+```
+ID: I116
+NODE_ID: condiciones_latentes_largo_plazo
+FICHERO_NODO: dataset\nodos\condiciones_latentes_largo_plazo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L565 a L565
+FRASE_CLAVE: [reason] L565 "Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers"
+QUE_ANADE_O_CONCRETA: la instruccion de identificar de antemano esas interacciones; el libro narra los disparadores locales del caso Nakina
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que los accidentes organizacionales nacen de la interacción de condiciones latentes con disparadores locales, como en Nakina la política de matar castores y un verano muy lluvioso
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L565 a L565, cap. 2 "Defeating the Defences":
+
+> L565: Organizational accidents involve the interaction of latent conditions with local triggering factors. Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers in the vicinity of rail tracks--to minimize the problems of flooding and washouts of railway infrastructure associated with beaver activity. This meant that the longstanding dam was no longer maintained by the beavers. Second, it had been an unusually wet summer and water had built up behind the dam supersaturating the nearby roadbed. The unattended beaver dam, gradually weakened under the increasing pressure of the accumulated water, collapsed when a critical mass of the subgrade sludge was washed into the bed of the pond.
+
+#### I117 `condiciones_latentes_largo_plazo`, paso 3
+
+```
+ID: I117
+NODE_ID: condiciones_latentes_largo_plazo
+FICHERO_NODO: dataset\nodos\condiciones_latentes_largo_plazo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Incluir en las auditorías de riesgo el análisis de decisiones de diseño tomadas décadas atrás.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L584 a L584
+FRASE_CLAVE: [reason] L584 "In the train derailment, the underlying problem was virtually undiscoverable before the event. It is thus a very special case"
+QUE_ANADE_O_CONCRETA: la auditoria de decisiones de diseno de hace decadas; el libro dice que ese caso era casi indetectable y que lo habitual es que las debilidades latentes se vean antes
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Revisar y comprobar las defensas de forma continua: lo habitual es que sus debilidades latentes sean detectables antes del accidente (Nakina, casi indetectable, es una excepción).
+DATO_REPETIDO: entregable_esperado | actual: Informe de auditoría histórica de infraestructura crítica identificando condiciones latentes de origen antiguo. | fiel: Informe de revisión de las defensas de la infraestructura crítica, identificando sus debilidades latentes.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L584 a L584, cap. 2 "Defeating the Defences":
+
+> L584: In all three events, the essential process of checking and reviewing the defences broke down. In the train derailment, the underlying problem was virtually undiscoverable before the event. It is thus a very special case. More usually, latent weaknesses in defences are potentially--or even actually--evident prior to a bad outcome. The first two case studies revealed one very common reason why defensive weaknesses are not detected and repaired: the people involved had forgotten to be afraid.
+
+#### I118 `conflicto_de_objetivos_en_organismos_reguladores`, paso 1
+
+```
+ID: I118
+NODE_ID: conflicto_de_objetivos_en_organismos_reguladores
+FICHERO_NODO: dataset\nodos\conflicto_de_objetivos_en_organismos_reguladores.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Evaluar si el organismo regulador o el área de seguridad interna depende financiera o jerárquicamente de las áreas que audita
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4109 a L4109; [reason] L4163 a L4165
+FRASE_CLAVE: [reason] L4165 "it was an enterprise agency that was financed, in part, by those it regulated. As a result, the ACAA was quite naturally concerned with sustaining the commercial viability of its client operators in the commuter sector"
+QUE_ANADE_O_CONCRETA: la extension al area de seguridad interna y a la dependencia jerarquica; el libro identifica la financiacion por los regulados como origen del conflicto de la ACAA
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evaluar si el regulador se financia, en parte, con los que regula: en el caso de la ACAA eso lo llevó a proteger la viabilidad comercial de los operadores antes que la seguridad
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4109 a L4109, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4109: Conflicting goals. The activities of the ACAA’s Safety and Standards Division appeared to be biased towards promoting the viability of the operator (Monarch Air--a small commuter airline in commercial difficulties) rather than serving the safety needs of the travelling public.
+
+PASAJE [reason] L4163 a L4165, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4163: Deregulation of the aviation industry in Australia had produced a commuter sector, or third-tier of airlines, comprising a large number of single-pilot, single-plane operators ferrying up to a dozen passengers in and out of Australia’s regional centres. Most of them operated under the relatively lax rules governing charter operations. Unlike the United States, where new operators must establish that they have sufficient resources to maintain their aircraft, it was the case in Australia that ‘those who could beg, borrow or steal a decent enough plane can become their very own airline magnate’.18
+>
+> L4165: This might have been a manageable situation had the ACAA the resources and the overriding aim of maintaining aviation safety, but it was an enterprise agency that was financed, in part, by those it regulated. As a result, the ACAA was quite naturally concerned with sustaining the commercial viability of its client operators in the commuter sector. It was this goal conflict that eventually--and probably inevitably--brought about its demise.
+
+#### I119 `conflicto_de_objetivos_en_organismos_reguladores`, paso 3
+
+```
+ID: I119
+NODE_ID: conflicto_de_objetivos_en_organismos_reguladores
+FICHERO_NODO: dataset\nodos\conflicto_de_objetivos_en_organismos_reguladores.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Establecer canales de reporte independientes para el personal de seguridad
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L3989 a L3989; [reason] L4908 a L4908
+FRASE_CLAVE: [reason] L3989 "the SR & QA did not establish an adequate means for reporting Shuttle problems up the NASA hierarchy"
+QUE_ANADE_O_CONCRETA: los canales "para el personal de seguridad" como remedio del conflicto del regulador; el libro habla de medios para que los problemas suban por la jerarquia y de receptores de reportes independientes de la direccion operativa
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Establecer un medio adecuado para que los problemas de seguridad suban por la jerarquía, y que quien reciba los reportes sea independiente de la dirección operativa
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L3989 a L3989, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L3989: The Commission found three problem-reporting failures. First, the SR & QA did not establish an adequate means for reporting Shuttle problems up the NASA hierarchy. Second, they failed to create a precise set of requirements for reporting inflight anomalies. Third, they failed to detect violations of problem-reporting requirements.
+
+PASAJE [reason] L4908 a L4908, cap. 9 "Engineering a Safety Culture":
+
+> L4908: Another important measure for engendering trust is to separate the organization receiving the reports from both the regulatory body and from the employing company. As in the case of ASRS, the system analysts should ideally have no legal or operational authority over the potential reporters. Reporting systems run by disinterested third parties--such as universities--can also help to earn the trust of reporters. If, like BASIS, the reporting system is internal to a company, the receiving department should be perceived as being completely independent of operational management, thus giving the necessary assurance of confidentiality.
+
+#### I120 `conflicto_de_objetivos_en_organismos_reguladores`, paso 4
+
+```
+ID: I120
+NODE_ID: conflicto_de_objetivos_en_organismos_reguladores
+FICHERO_NODO: dataset\nodos\conflicto_de_objetivos_en_organismos_reguladores.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Revisar decisiones históricas de tolerancia a incumplimientos para detectar sesgos de conflicto de interés
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4133 a L4133; [reason] L4188 a L4190
+FRASE_CLAVE: [reason] L4133 "the ACAA appeared to be reluctant to take decisive action to improve Monarch’s operating standards"
+QUE_ANADE_O_CONCRETA: la revision historica como metodo; el libro narra tolerancias pasadas de los reguladores
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Estar atento a la reticencia del regulador a actuar con decisión ante deficiencias conocidas, como la ACAA con Monarch o la NRC durante diez años
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4133 a L4133, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4133: Poor operating procedures. The Safety Regulation and Standards Division lacked the procedures to ensure that Monarch continued to meet the standards required of an AOC holder. Although deficiencies in Monarch’s flight operations had been identified a few months before the accident, the ACAA appeared to be reluctant to take decisive action to improve Monarch’s operating standards. In the absence of a coordinated monitoring strategy, a number of meetings with Monarch had failed to achieve the significant improvements required.
+
+PASAJE [reason] L4188 a L4190, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4188: To control these risks, Federal regulations required that older plants, without up-to-date cooling systems, move only one-third of the rods into the pool. In the plant in question, one of its senior engineers discovered that all the hot fuel was being dumped into the pool at once. It also turned out that this practice had been going on for at least 20 years. Instead of allowing the required 250-hour cooling down period, the fuel was being moved just 65 hours after shutdown. By this device, the plant reduced the downtime for each refuelling by two weeks, saving around seven million dollars for the replacement power costs.
+>
+> L4190: Thus began a three-year struggle to put matters right. For 18 months the engineer’s supervisors denied that the problem existed and refused to report it to the NRC. Eventually, the management called in outside consultants to prove the engineer wrong, but they ended up by agreeing with him. Finally, the engineer took the issue directly to the NRC and discovered that the nuclear regulators had known about this practice for at least 10 years without acting to halt it. The NRC argued that the practice was widespread and was safe so long as the plant’s cooling system was designed to handle the heat load--although this was not the case for the plant in question. It was also discovered that plants in three other states had similar fuel-pool problems.
+
+#### I121 `confusion_de_modos_automatizacion`, paso 4
+
+```
+ID: I121
+NODE_ID: confusion_de_modos_automatizacion
+FICHERO_NODO: dataset\nodos\confusion_de_modos_automatizacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Implementar retroalimentación clara y visible ante cada cambio de modo del sistema, reduciendo la carga cognitiva en momentos de alta demanda
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L942 a L942
+FRASE_CLAVE: [reason] L942 "In both cases, the causes can be traced to ‘clumsy’ automation"
+QUE_ANADE_O_CONCRETA: la retroalimentacion visible como solucion; el libro diagnostica la confusion de modos como fruto de una automatizacion torpe
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Revisar si la automatización es "torpe": si deja que el operador evalúe mal el modo activo o no note una transición de modo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L942 a L942, cap. 3 "Dangerous Defences":
+
+> L942: In summary, mode confusions can occur for one of two main reasons: either the user makes a wrong assessment of the active mode at a particular time or the user fails to notice transitions in mode status. The first is a failure of perception (or interpretation), the second is a failure of attention. In both cases, the causes can be traced to ‘clumsy’ automation. In their efforts to compensate for the unreliability of human performance, the designers of automated control systems have unwittingly created opportunities for new error types that can be even more serious than those they were seeking to avoid.
+
+#### I122 `cultura_como_mecanismo_descentralizacion`, paso 3
+
+```
+ID: I122
+NODE_ID: cultura_como_mecanismo_descentralizacion
+FICHERO_NODO: dataset\nodos\cultura_como_mecanismo_descentralizacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Evaluar si las operaciones descentralizadas mantienen coherencia con los objetivos centrales sin necesidad de supervisión directa
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5178 a L5178
+FRASE_CLAVE: [reason] L5178 "when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance"
+QUE_ANADE_O_CONCRETA: la evaluacion de la coherencia; el libro describe ese resultado de la cultura
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Recordar que, cuando la coordinación se logra con premisas de decisión compartidas, las operaciones descentralizadas son equivalentes y coordinadas, y el cumplimiento se da sin vigilancia
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5178 a L5178, cap. 9 "Engineering a Safety Culture":
+
+> L5178: … you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated. This is precisely what culture does. It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations or centralisation by standardisation and hierarchy, both of which require high surveillance. Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.38
+
+#### I123 `cultura_como_mecanismo_descentralizacion`, paso 4
+
+```
+ID: I123
+NODE_ID: cultura_como_mecanismo_descentralizacion
+FICHERO_NODO: dataset\nodos\cultura_como_mecanismo_descentralizacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "mentor|coach|apprentic": solo "stagecoach" (L238 a L242). El libro transmite la cultura por socializacion en premisas de decision (L5178), relatos o "war stories" (L5184) y formacion. Dato anadido: la mentoria como mecanismo.
+FICHA_DE_CORRECCION: A17 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5178 a L5178; [reason] L5184 a L5184; [reason] L5206 a L5206
+FRASE_CLAVE: [reason] L5178 "you first have to centralise so that people are socialised to use similar decision premises and assumptions"
+QUE_ANADE_O_CONCRETA: quita la mentoria; anade la socializacion en premisas de decision y los relatos, que son los mecanismos del libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A17, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Diseñar mecanismos de transmisión cultural (socialización en premisas de decisión compartidas, formación, relatos de experiencias) en lugar de solo reglas escritas
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5178 a L5178, cap. 9 "Engineering a Safety Culture":
+
+> L5178: … you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated. This is precisely what culture does. It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations or centralisation by standardisation and hierarchy, both of which require high surveillance. Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.38
+
+PASAJE [reason] L5184 a L5184, cap. 9 "Engineering a Safety Culture":
+
+> L5184: Weick makes another point of considerable relevance here. All hazardous technologies face the problem of requisite variety--the variety that exists in the system exceeds the variety of the people who must control it (see Chapter 4). As a result, ‘they miss important information, their diagnoses are incomplete, and their remedies are short-sighted and can magnify rather than reduce a problem’. But this problem, can be reduced by a culture that encourages ‘war stories’. Since the nature of these systems allows little scope for trial-and-error learning, maintaining reliability depends on developing alternatives for trial and error. These could include imagination, vicarious experience, simulation, stories and story-telling.
+
+PASAJE [reason] L5206 a L5206, cap. 9 "Engineering a Safety Culture":
+
+> L5206: Not all activities in hazardous technologies are carried out in supervised groups. When people are relatively isolated, the onus shifts from group to self-controls. Crucial among these are the techniques designed to enhance hazard awareness and risk perception, These are the measures that seek to promote ‘correct’ rather than merely ‘successful’ performance. A number of hazard evaluation programmes are being developed or have already been implemented. However, as Willem Albert Wagenaar has observed,43 risk appraisal training is of little value once the incorrect actions have become habitual. When this happens, people are not taking risks deliberately, they are running risks in a largely thoughtless and automatic fashion. To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance. By the same token, it is mainly through local supervisory interventions that long-established pattern of incorrect behaviour can be modified.
+
+#### I124 `cultura_de_aprendizaje`, paso 4
+
+```
+ID: I124
+NODE_ID: cultura_de_aprendizaje
+FICHERO_NODO: dataset\nodos\cultura_de_aprendizaje.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Institucionalizar la revisión periódica de lecciones aprendidas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2638 a L2638; [reason] L2654 a L2654
+FRASE_CLAVE: [reason] L2654 "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework"
+QUE_ANADE_O_CONCRETA: la revision periodica institucionalizada; el libro pide analizar varios sucesos del dominio con un marco de clasificacion comun
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Analizar varios sucesos del mismo dominio con un marco de clasificación común, para aprender las lecciones correctas y elegir qué procesos medir de forma regular
+DATO_REPETIDO: entregable_esperado | actual: Proceso institucionalizado de revisión y aplicación de lecciones aprendidas | fiel: Análisis de varios sucesos del dominio con un marco común, y aplicación de sus lecciones
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2638 a L2638, cap. 6 "Navigating the Safety Space":
+
+> L2638: Navigational aids fall into two main categories: reactive measures that can only be applied after the occurrence of an event, and proactive measures that can be used before an event to assess the ‘safety health’ of the system as a whole. Effective safety management requires the use of both of these measures. We need to learn the right lessons from past events, and then translate this knowledge into enhanced resistance. At the same time, we must make visible to those who manage and operate the system the latent conditions and resident pathogens that are an inevitable part of any complex technology, no matter how well managed, and that experience has shown can provide the ingredients for future organizational accidents.
+
+PASAJE [reason] L2654 a L2654, cap. 6 "Navigating the Safety Space":
+
+> L2654: To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations. Moreover, these patterns also indicate which of the local or organizational factors is playing a regular part in contributing to adverse events. This, in turn, guides the selection of which organizational processes to sample proactively on a regular basis. There are many possible candidates for regular assessment, but few organizations have the resources to sample them all, nor would it be appropriate to do so. The analysis of multiple events tells us which of many possible processes are the most likely to provide a valid and cost-effective measure of current safety health.
+
+#### I125 `cultura_de_seguridad_componentes`, paso 4
+
+```
+ID: I125
+NODE_ID: cultura_de_seguridad_componentes
+FICHERO_NODO: dataset\nodos\cultura_de_seguridad_componentes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Tener claro y por escrito por que vale la pena invertir en estos cuatro pilares antes de decidir
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: "Por escrito" es una forma de documentar, como los demas pasos "documenta" que los dos clasificadores dieron OPERATIVO; no es cifra, plazo, herramienta, responsable, norma ni frecuencia. Direccion: L2765: "investment in safety is good business".
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2765 a L2765
+FRASE_CLAVE: [reason] L2765 "investment in safety is good business"
+QUE_ANADE_O_CONCRETA: "por escrito" y "antes de decidir"; el libro argumenta que la inversion en seguridad es buen negocio y que la cultura ideal merece el esfuerzo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener claro por qué vale la pena: la inversión en seguridad es buen negocio, y una cultura de seguridad ideal, aunque difícil de lograr, es una meta que merece el esfuerzo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2765 a L2765, cap. 6 "Navigating the Safety Space":
+
+> L2765: History shows that the cause of safety flourishes in the aftermath of disaster, albeit briefly. Must we conclude that it takes catastrophes of the magnitude of Piper Alpha, Chernobyl, or Bhopal before politicians and top managers understand that investment in safety is good business? Do organizations have to fall over the edge before they know where it is? Are accidents, even the more frequent small ones, necessary to calibrate the effectiveness of safety measures? Are companies doomed to fighting the last fire or trying to prevent the last crash? The answer must be yes--if complex hazardous organizations continue to rely principally on outcome measures in order to navigate the safety space.
+
+#### I126 `cultura_flexible`, paso 2
+
+```
+ID: I126
+NODE_ID: cultura_flexible
+FICHERO_NODO: dataset\nodos\cultura_flexible.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Diseñar protocolos que permitan transferir autoridad a expertos técnicos durante emergencias
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4769 a L4769; [reason] L5178 a L5178
+FRASE_CLAVE: [reason] L4769 "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot"
+QUE_ANADE_O_CONCRETA: el diseno de protocolos de traspaso; en el libro el traspaso al experto es una propiedad cultural que exige respeto ganado con formacion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Preparar a la organización para que, ante una emergencia, el control pase a los expertos en la tarea presentes en el lugar, lo que exige respeto por su experiencia, ganado con una fuerte inversión en formación
+DATO_REPETIDO: entregable_esperado | actual: Protocolo de gestión de crisis con reglas claras de transferencia temporal de autoridad a expertos operativos | fiel: Una organización capaz de pasar el control a los expertos en la tarea durante la emergencia y de volver después al modo jerárquico
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4769 a L4769, cap. 9 "Engineering a Safety Culture":
+
+> L4769: The evidence shows that high-reliability organizations--domain leaders in health, safety and environmental issues--possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. A flexible culture takes a number of forms, but in many cases it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed. Such adaptability is an essential feature of the crisis-prepared organization and, as before, depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.
+
+PASAJE [reason] L5178 a L5178, cap. 9 "Engineering a Safety Culture":
+
+> L5178: … you first have to centralise so that people are socialised to use similar decision premises and assumptions so that when they operate their own units, these decentralised operations are equivalent and coordinated. This is precisely what culture does. It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. More important, when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance. This is in sharp contrast to centralisation by rules and regulations or centralisation by standardisation and hierarchy, both of which require high surveillance. Furthermore, neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.38
+
+#### I127 `cultura_flexible`, paso 4
+
+```
+ID: I127
+NODE_ID: cultura_flexible
+FICHERO_NODO: dataset\nodos\cultura_flexible.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Establecer criterios claros de cuándo revertir al modo jerárquico normal
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4769 a L4769; [reason] L5174 a L5174
+FRASE_CLAVE: [reason] L4769 "and then reverts back to the traditional bureaucratic mode once the emergency has passed"
+QUE_ANADE_O_CONCRETA: los "criterios claros" para decidir la vuelta; el libro describe la vuelta al modo jerarquico cuando pasa la emergencia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Volver al modo jerárquico habitual una vez pasada la emergencia, cuando baja el ritmo de las operaciones
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4769 a L4769, cap. 9 "Engineering a Safety Culture":
+
+> L4769: The evidence shows that high-reliability organizations--domain leaders in health, safety and environmental issues--possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. A flexible culture takes a number of forms, but in many cases it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed. Such adaptability is an essential feature of the crisis-prepared organization and, as before, depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.
+
+PASAJE [reason] L5174 a L5174, cap. 9 "Engineering a Safety Culture":
+
+> L5174: When the high-tempo period slackens off, authority reverts seamlessly to its previous bureaucratic, rank-determined form. A very similar type of flexibility was evident in an anecdote which I came across concerning one of the most highly rated US Army units of the Korean War. The senior NCOs of the unit recognized that they lacked the qualities to lead men in action. When the unit went into combat, local command passed to a small group of enlisted men. Afterwards, these ‘combat leaders’ were quite happy to follow the orders of the NCOs, whose skills in everyday soldiering they fully recognized.
+
+#### I128 `cultura_flexible_organizacional`, paso 2
+
+```
+ID: I128
+NODE_ID: cultura_flexible_organizacional
+FICHERO_NODO: dataset\nodos\cultura_flexible_organizacional.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Entrenar al personal para reconocer cuándo ceder autoridad jerárquica a la experticia técnica
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4769 a L4769; [reason] L5164 a L5164
+FRASE_CLAVE: [reason] L5164 "Hierarchical rank defers to technical expertise often held by those of lower formal rank"
+QUE_ANADE_O_CONCRETA: entrenar a reconocer cuando ceder; el libro describe que el rango cede ante la pericia al subir el ritmo y pide invertir en formacion para ganar respeto
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Invertir en formación para que la jerarquía respete la pericia técnica y le ceda la autoridad cuando sube el ritmo de las operaciones
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4769 a L4769, cap. 9 "Engineering a Safety Culture":
+
+> L4769: The evidence shows that high-reliability organizations--domain leaders in health, safety and environmental issues--possess the ability to reconfigure themselves in the face of high-tempo operations or certain kinds of danger. A flexible culture takes a number of forms, but in many cases it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot, and then reverts back to the traditional bureaucratic mode once the emergency has passed. Such adaptability is an essential feature of the crisis-prepared organization and, as before, depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.
+
+PASAJE [reason] L5164 a L5164, cap. 9 "Engineering a Safety Culture":
+
+> L5164: Authority patterns shift to a basis of functional skill. Collegial authority (and decision patterns) overlay bureaucratic ones as the tempo of operations increases. Formal rank and status decline as a reason for obedience. Hierarchical rank defers to technical expertise often held by those of lower formal rank. Chiefs (senior non-commissioned officers) advise commanders, gently direct lieutenants and cow ensigns. Criticality, hazards, and sophistication of operations prompt a kind of functional discipline, a professionalization of the work teams. Feedback and (sometimes conflictual) negotiations increase in importance; feedback about ‘how goes it’ is sought and valued.36
+
+#### I129 `cultura_justa`, paso 2
+
+```
+ID: I129
+NODE_ID: cultura_justa
+FICHERO_NODO: dataset\nodos\cultura_justa.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4765 a L4765; [reason] L4987 a L4987
+FRASE_CLAVE: [reason] L4987 "The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts to which the attribution of blame is neither appropriate nor useful"
+QUE_ANADE_O_CONCRETA: "dejarla por escrito"; el libro pide que todos tengan clara la linea
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Dejar claro para todos dónde está la línea entre los errores normales y los pocos actos verdaderamente temerarios, negligentes o maliciosos
+DATO_REPETIDO: entregable_esperado | actual: Política de cultura justa documentada | fiel: Política de cultura justa conocida por todos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4765 a L4765, cap. 9 "Engineering a Safety Culture":
+
+> L4765: An effective reporting culture depends, in turn, on how the organization handles blame and punishment. A ‘no-blame’ culture is neither feasible nor desirable. A small proportion of human unsafe acts are egregious (for example, substance abuse, reckless non-compliance, sabotage and so on) and warrant sanctions, severe ones in some cases. A blanket amnesty on all unsafe acts would lack credibility in the eyes of the workforce. More importantly, it would be seen to oppose natural justice. What is needed is a just culture, an atmosphere of trust in which people are encouraged, even rewarded, for providing essential safety-related information--but in which they are also clear about where the line must be drawn between acceptable and unacceptable behaviour.
+
+PASAJE [reason] L4987 a L4987, cap. 9 "Engineering a Safety Culture":
+
+> L4987: A wholly just culture is almost certainly an unattainable ideal. However, an organization in which the majority of its members share the belief that justice will usually be dispensed is within the bounds of possibility. Two things are clear at the outset. First, it would be quite unacceptable to punish all errors and unsafe acts regardless of their origins and circumstances. Second, it would be equally unacceptable to give a blanket immunity from sanctions to all actions that could, or did, contribute to organizational accidents. While this book has strongly emphasized the situational and systemic factors leading to the catastrophic breakdown of hazardous technologies, it would be naïve not to recognize that, on some relatively rare occasions, accidents can happen as the result of the unreasonably reckless, negligent or even malevolent behaviour of particular individuals. The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts to which the attribution of blame is neither appropriate nor useful.
+
+#### I130 `cultura_justa`, paso 3
+
+```
+ID: I130
+NODE_ID: cultura_justa
+FICHERO_NODO: dataset\nodos\cultura_justa.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Capacitar a supervisores y gestores en la aplicación consistente de estos criterios
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "supervisors and managers|training supervisors": 0. L5085: la consistencia la da "a structured methodology ... used by an organization's disciplinary review board". Dato anadido: el responsable "supervisores y gestores".
+FICHA_DE_CORRECCION: A18 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5085 a L5085
+FRASE_CLAVE: [reason] L5085 "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted."
+QUE_ANADE_O_CONCRETA: quita el responsable "supervisores y gestores" y la formacion como medio; anade la herramienta comun en la instancia disciplinaria
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A18, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Aplicar estos criterios de forma consistente con una herramienta estructurada común, como el árbol de decisión de culpabilidad, en la instancia que revise las acciones disciplinarias
+NOTA: pasos_accionables | El paso 6 del nodo ("Arma un grupo de confianza que revise los casos difíciles o ambiguos") va en la linea del libro y no se toca.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5085 a L5085, cap. 9 "Engineering a Safety Culture":
+
+> L5085: David Marx has recently taken a law degree and one of the most interesting products of this marriage between engineering and the law has been the computerized incident investigator, the Aurora Mishap Management System (AMMS). AMMS has a number of elements. For our present purposes, its most important aspect is a structured methodology for establishing the applicability of disciplinary action. This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted. To date, it has been used in the field of aircraft maintenance by a number of US airlines and has the backing of the Machinists Union.
+
+#### I131 `diseno_recordatorios_efectivos_2`, paso 1
+
+```
+ID: I131
+NODE_ID: diseno_recordatorios_efectivos_2
+FICHERO_NODO: dataset\nodos\diseno_recordatorios_efectivos_2.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Identifica los pasos de tarea propensos a omisión revisando errores históricos
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A12 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2170 a L2170; [reason] L2250 a L2250
+FRASE_CLAVE: [reason] L2250 "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses"
+QUE_ANADE_O_CONCRETA: quita el criterio "revisando errores historicos"; anade el criterio del libro, los rasgos contados de antemano
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A12, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Identifica de antemano los pasos de tarea propensos a omisión contando sus rasgos: paso aislado, cerca del final, oculto o con varios elementos iguales
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2170 a L2170, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2170: From an analytical point of view there are at least two approaches towards a better understanding of maintenance omissions, one seeking to identify the underlying cognitive mechanisms, the other trying to determine what aspects of a task cause it to be especially omission-prone. The former route is made difficult by the fact that an omission can arise within a number of cognitive processes concerned with planning and executing an action, as summarized in Table 5.3. Even when the omission is one’s own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.
+
+PASAJE [reason] L2250 a L2250, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2250: Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out.
+
+#### I132 `diseno_recordatorios_efectivos_2`, paso 4
+
+```
+ID: I132
+NODE_ID: diseno_recordatorios_efectivos_2
+FICHERO_NODO: dataset\nodos\diseno_recordatorios_efectivos_2.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2299 a L2299
+FRASE_CLAVE: [reason] L2299 "The presence of reminders is not a guaranteed solution to the omission problem"
+QUE_ANADE_O_CONCRETA: la prueba previa en el flujo real; el libro dice que el recordatorio no es solucion garantizada, pero ayuda
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Recuerda que el recordatorio no garantiza eliminar las omisiones, aunque sí ayuda a reducirlas mucho
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2299 a L2299, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2299: The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen19--it will certainly help to bring about a substantial reduction in their numbers. Consider, for example, what the impact of the reminder shown in Figure 5.3 might be upon the likelihood of you leaving behind the last page of the original.
+
+#### I133 `diseno_recordatorios_efectivos_2`, paso 5
+
+```
+ID: I133
+NODE_ID: diseno_recordatorios_efectivos_2
+FICHERO_NODO: dataset\nodos\diseno_recordatorios_efectivos_2.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Revisa periódicamente su efectividad y ajústalo según lo que observes en la práctica
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2299 a L2299
+FRASE_CLAVE: [reason] L2299 "in the spirit of kaizen"
+QUE_ANADE_O_CONCRETA: la revision periodica de la efectividad; el libro solo invoca el espiritu de kaizen
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mejora el recordatorio poco a poco, con espíritu de kaizen: no es una solución garantizada, pero reduce mucho las omisiones
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2299 a L2299, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2299: The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen19--it will certainly help to bring about a substantial reduction in their numbers. Consider, for example, what the impact of the reminder shown in Figure 5.3 might be upon the likelihood of you leaving behind the last page of the original.
+
+#### I134 `enfoques_definicion_riesgo_aceptable`, paso 2
+
+```
+ID: I134
+NODE_ID: enfoques_definicion_riesgo_aceptable
+FICHERO_NODO: dataset\nodos\enfoques_definicion_riesgo_aceptable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Justificar la elección del enfoque frente a partes interesadas y reguladores
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4388 a L4388
+FRASE_CLAVE: [reason] L4388 "it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body"
+QUE_ANADE_O_CONCRETA: justificar la eleccion del enfoque ante partes interesadas; el libro pide demostrar al regulador que los peligros estan identificados y controlados
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Demostrar al regulador, con una evaluación formal de seguridad (Safety Case), que los peligros mayores están identificados y tienen controles adecuados
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4388 a L4388, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4388: I am satisfied that operators of installations … should be required to carry out a formal safety assessment of major hazards, the purpose of which would be to demonstrate that the potential major hazards of the installation and the risks to the personnel thereon have been identified and appropriate controls provided. This is to assure the operators that their operations are safe. However it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body. The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.33
+
+#### I135 `enfoques_definicion_riesgo_aceptable`, paso 3
+
+```
+ID: I135
+NODE_ID: enfoques_definicion_riesgo_aceptable
+FICHERO_NODO: dataset\nodos\enfoques_definicion_riesgo_aceptable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Establecer criterios cuantitativos o cualitativos de riesgo aceptable acordes al enfoque elegido
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4278 a L4292
+FRASE_CLAVE: [reason] L4288 "The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better"
+QUE_ANADE_O_CONCRETA: la instruccion de fijar criterios propios; el libro solo describe como define la seguridad cada enfoque
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Conocer cómo define la seguridad cada enfoque: ALARP, riesgo comparativo, de minimis (riesgo trivial, 10^-6 o mejor) y riesgo cero
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4278 a L4292, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4278: ●
+>
+> L4280: The feasibility or ALARP approach (risks to be kept as low as reasonably practicable)--safety exists at the point beyond which it is neither technologically nor commercially feasible for the organization to do more.
+>
+> L4282: ●
+>
+> L4284: The comparative risk approach--safety is determined on the basis of comparisons to other risks that the society voluntarily accepts (for example, choice of air travel, road transport, smoking and so on).
+>
+> L4286: ●
+>
+> L4288: The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better.
+>
+> L4290: ●
+>
+> L4292: The zero-risk approach--safety exists only when there is no risk of an accident with harmful consequences.
+
+#### I136 `enfoques_definicion_riesgo_aceptable`, paso 4
+
+```
+ID: I136
+NODE_ID: enfoques_definicion_riesgo_aceptable
+FICHERO_NODO: dataset\nodos\enfoques_definicion_riesgo_aceptable.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Revisar periódicamente el estándar de riesgo aceptable conforme evoluciona la tecnología y las expectativas sociales
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4296 a L4296
+FRASE_CLAVE: [reason] L4296 "as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk, except for interruptions during times of economic distress or high unemployment"
+QUE_ANADE_O_CONCRETA: la revision periodica del estandar propio; el libro describe que el estandar se mueve con la sociedad
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que el nivel de seguridad aceptable se mueve: a medida que la sociedad progresa exige más seguridad, salvo en épocas de crisis económica o de mucho desempleo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4296 a L4296, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4296: Irrespective of the concept invoked to define what safety is at a particular point in time, as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk, except for interruptions during times of economic distress or high unemployment.27
+
+#### I137 `errores_como_consecuencia`, paso 4
+
+```
+ID: I137
+NODE_ID: errores_como_consecuencia
+FICHERO_NODO: dataset\nodos\errores_como_consecuencia.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Entrenar a investigadores de accidentes para reconocer el sesgo de atribución fundamental
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2907 a L2909
+FRASE_CLAVE: [reason] L2907 "Psychologists call it the fundamental attribution error"
+QUE_ANADE_O_CONCRETA: el entrenamiento de los investigadores; el libro explica el sesgo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Al investigar, tener presente el error fundamental de atribución: tendemos a explicar el mal desempeño de otros por su carácter, cuando ellos lo explican por la situación
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2907 a L2909, cap. 7 "A Practical Guide to Error Management":
+
+> L2907: So why are people so ready to accept human error as an explanation rather than as something that needs explaining? The answer is deeply rooted in human nature. Psychologists call it the fundamental attribution error.3
+>
+> L2909: When we see or hear of someone performing badly, we attribute this to some enduring aspect of the individual’s personality. We say that he or she is careless, silly, stupid, incompetent, reckless or thoughtless. But if you were to ask the person in question why they are behaving in this fashion, they would almost certainly point to the local situation and say they had no choice--circumstances forced them to do it that way. The reality, of course, lies somewhere in between.
+
+#### I138 `fallo_regulatorio_por_recursos_insuficientes`, paso 2
+
+```
+ID: I138
+NODE_ID: fallo_regulatorio_por_recursos_insuficientes
+FICHERO_NODO: dataset\nodos\fallo_regulatorio_por_recursos_insuficientes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "industry standard|benchmark|industry norm": 0. El libro da ratios de casos (L3993: "about 2 per cent of NASA's 22 000 staff") y los juzga frente a recortes y carga. Dato anadido: la norma externa "estandares del sector".
+FICHA_DE_CORRECCION: A19 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L3993 a L3993
+FRASE_CLAVE: [reason] L3993 "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent."
+QUE_ANADE_O_CONCRETA: quita la comparacion con "estandares del sector"; anade la comparacion con la propia evolucion tras los recortes, que es la que hace el libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A19, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L3993 a L3993, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L3993: A theme that links all of the regulatory problems to be discussed here is lack of resources. Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. The SR & QA staff at Marshall Space Center, with oversight responsibility for the rocket booster project, had been cut from around 130 to 84. Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff. Both the director and deputy director of the SR & QA unit had other duties, so that each spent around 10 and 25 per cent of their time on the Shuttle programme, leaving them very little time for safety issues.
+
+#### I139 `fallo_regulatorio_por_recursos_insuficientes`, paso 4
+
+```
+ID: I139
+NODE_ID: fallo_regulatorio_por_recursos_insuficientes
+FICHERO_NODO: dataset\nodos\fallo_regulatorio_por_recursos_insuficientes.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Presentar a la dirección un caso de negocio sobre el riesgo de subdotación en funciones de seguridad
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4523 a L4523
+FRASE_CLAVE: [reason] L4523 "if regulators are to be other than convenient scapegoats, they will have to be provided with the legislation, the resources and the tools to do their jobs effectively"
+QUE_ANADE_O_CONCRETA: el "caso de negocio" ante la direccion; el libro pide dar a los reguladores legislacion, recursos y herramientas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Dotar a quien vigila la seguridad de la legislación, los recursos y las herramientas que necesita para hacer bien su trabajo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4523 a L4523, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4523: Given the current trend of searching for increasingly more remote contributions to organizational accidents, it is inevitable that the regulator’s alleged deficiencies should be judged by those with 20:20 hindsight as making significant contributions to a major disaster. The regulators’ position vis à vis the affected organization means that they are likely to attract blame from all directions. Standing as they do on the organizational borders of all hazardous technologies, their sphere of responsibility is bound to be implicated in a wide variety of contributing factors. However, if regulators are to be other than convenient scapegoats, they will have to be provided with the legislation, the resources and the tools to do their jobs effectively. They are potentially one of the most important defences against organizational accidents
+
+#### I140 `fijar_causa_ultimo_accidente_riesgo_siguiente`, paso 1
+
+```
+ID: I140
+NODE_ID: fijar_causa_ultimo_accidente_riesgo_siguiente
+FICHERO_NODO: dataset\nodos\fijar_causa_ultimo_accidente_riesgo_siguiente.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1035 a L1035; [reason] L1145 a L1145
+FRASE_CLAVE: [reason] L1035 "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems"
+QUE_ANADE_O_CONCRETA: la evaluacion previa de escenarios alternativos para cada regla; el libro advierte que nadie puede prever todos los escenarios y que el arreglo del ultimo accidente puede contribuir al siguiente
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de implementar una nueva regla o dispositivo tras un incidente, tener presente que nadie puede prever todos los escenarios de fallo y que una medida contra la causa del último accidente puede contribuir al siguiente
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
+
+> L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
+
+PASAJE [reason] L1145 a L1145, cap. 3 "Dangerous Defences":
+
+> L1145: Measures designed to eliminate a conspicuous cause of some previous accident can contribute to the next one.
+
+#### I141 `fijar_causa_ultimo_accidente_riesgo_siguiente`, paso 2
+
+```
+ID: I141
+NODE_ID: fijar_causa_ultimo_accidente_riesgo_siguiente
+FICHERO_NODO: dataset\nodos\fijar_causa_ultimo_accidente_riesgo_siguiente.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "sensitivity analys": 0. La idea de fondo si esta (L1035). Dato anadido: la herramienta "analisis de sensibilidad".
+FICHA_DE_CORRECCION: A20 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1035 a L1035
+FRASE_CLAVE: [reason] L1035 "What proved to be an error in the TMI event turned out to be a vital step at Ginna."
+QUE_ANADE_O_CONCRETA: quita la herramienta "analisis de sensibilidad"; conserva la idea del libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A20, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Revisar cómo funcionaría cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
+
+> L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
+
+#### I142 `fijar_causa_ultimo_accidente_riesgo_siguiente`, paso 3
+
+```
+ID: I142
+NODE_ID: fijar_causa_ultimo_accidente_riesgo_siguiente
+FICHERO_NODO: dataset\nodos\fijar_causa_ultimo_accidente_riesgo_siguiente.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1035 a L1035
+FRASE_CLAVE: [reason] L1035 "cannot universally proscribe particular types of human response"
+QUE_ANADE_O_CONCRETA: las revisiones periodicas; el libro dice que no se puede prohibir de forma universal un tipo de respuesta
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: No imponer una regla post-accidente como si valiera en todos los casos: la misma acción fue un error en TMI y un paso vital en Ginna
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
+
+> L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
+
+#### I143 `gestion_falsas_alarmas`, paso 2
+
+```
+ID: I143
+NODE_ID: gestion_falsas_alarmas
+FICHERO_NODO: dataset\nodos\gestion_falsas_alarmas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1141 a L1141
+FRASE_CLAVE: [reason] L1141 "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon"
+QUE_ANADE_O_CONCRETA: el rediseno de las alarmas; el libro describe el efecto de las falsas alarmas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que las alarmas con fama de dar avisos falsos se atienden menos cuando la emergencia es real
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1141 a L1141, cap. 3 "Dangerous Defences":
+
+> L1141: Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.
+
+#### I144 `gestion_falsas_alarmas`, paso 3
+
+```
+ID: I144
+NODE_ID: gestion_falsas_alarmas
+FICHERO_NODO: dataset\nodos\gestion_falsas_alarmas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "cross-check|double-check|two-person": solo L4972, ajeno (un copiloto que no vigilo al capitan). Dato anadido: el mecanismo "verificacion cruzada" contra la desactivacion "unilateral".
+FICHA_DE_CORRECCION: A21 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1085 a L1085; [reason] L1095 a L1095
+FRASE_CLAVE: [reason] L1085 "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies."
+QUE_ANADE_O_CONCRETA: quita el mecanismo "verificacion cruzada" contra la desactivacion "unilateral"; conserva el fin del libro: no desactivar por desconfianza
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A21, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Establecer protocolos para que una alarma crítica no se desactive solo porque se desconfía de ella
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1085 a L1085, cap. 3 "Dangerous Defences":
+
+> L1085: To those who have been enraged by the repeated wailing of a neighbour’s car alarm while the vehicle stands undisturbed, the idea that alarms can lie will come as no surprise. In everyday life these false alarms can create intense irritation. In hazardous technologies they can cause disaster. It is the ‘cry wolf’ situation. Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies.
+
+PASAJE [reason] L1095 a L1095, cap. 3 "Dangerous Defences":
+
+> L1095: Why was the stick-shaker mechanism disabled on its third activation? We will never know for sure, but it is widely believed among the British commercial pilot community that the crucial reasons were, first, that the flight crew did not believe they were in a stalled state (probably because they were unaware of the droop retraction), and, second, they profoundly mistrusted the stick-shaker warning system. In short, they thought it was indicating falsely. There had not only been several false alarms in the development stages of the recovery system some years earlier but also a number of documented incidents involving the false activation of this system during line operations.
+
+#### I145 `gestion_falsas_alarmas`, paso 4
+
+```
+ID: I145
+NODE_ID: gestion_falsas_alarmas
+FICHERO_NODO: dataset\nodos\gestion_falsas_alarmas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Capacitar al personal sobre los riesgos de desactivar alarmas por desconfianza histórica
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1093 a L1095
+FRASE_CLAVE: [reason] L1095 "they profoundly mistrusted the stick-shaker warning system"
+QUE_ANADE_O_CONCRETA: la capacitacion como medio; el libro narra el caso del Trident
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente el caso del Trident: la tripulación desconectó el avisador de pérdida porque desconfiaba de él tras varias falsas alarmas, y la emergencia era real
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1093 a L1095, cap. 3 "Dangerous Defences":
+
+> L1093: The FDR evidence revealed that both the stick-shaker and the stick-pusher mechanisms came into play as soon as the aircraft approached the stalling speed. The aircraft’s nose pitched down, but with the elevator trim unadjusted, the aircraft had become tail heavy. As a result the nose pitched up again and eight seconds after the first stick push, the stall recovery system operated a second time. Three seconds later, the same pattern repeated itself, and once again the stick-pusher forced the nose down. At this stage, someone on the flight deck made a fatal error. The stick warning mechanism was turned off. The nose of the aircraft pitched up in excess of 30 degrees and entered a true stall. It then descended vertically and hit the ground 22 seconds later.
+>
+> L1095: Why was the stick-shaker mechanism disabled on its third activation? We will never know for sure, but it is widely believed among the British commercial pilot community that the crucial reasons were, first, that the flight crew did not believe they were in a stalled state (probably because they were unaware of the droop retraction), and, second, they profoundly mistrusted the stick-shaker warning system. In short, they thought it was indicating falsely. There had not only been several false alarms in the development stages of the recovery system some years earlier but also a number of documented incidents involving the false activation of this system during line operations.
+
+#### I146 `inspecciones_superficiales_y_muestreo_incompleto`, paso 1
+
+```
+ID: I146
+NODE_ID: inspecciones_superficiales_y_muestreo_incompleto
+FICHERO_NODO: dataset\nodos\inspecciones_superficiales_y_muestreo_incompleto.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Desarrollar checklists estandarizados para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4027 a L4027; [reason] L4033 a L4033
+FRASE_CLAVE: [reason] L4027 "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures"
+QUE_ANADE_O_CONCRETA: el desarrollo de checklists estandarizadas; el libro narra que la lista existia y el inspector no la tenia, y cita al director de seguridad que no quiere listas fijas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Asegurar que quien inspecciona tenga la lista de verificación que ya existe para evaluar los permisos de trabajo y sepa usar esos procedimientos
+DATO_REPETIDO: entregable_esperado | actual: Checklist de auditoría de seguridad estandarizado | fiel: Inspecciones con las listas de verificación existentes a mano
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4027 a L4027, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4027: It was the report on this last visit that contrasted so starkly with the Inquiry findings. In particular, it accepted that Occidental had ‘tidied up’ the weaknesses in the permit-to-work scheme and shift handovers, when deficiencies in these areas were subsequently found to be major contributors to the disaster. A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures. He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.
+
+PASAJE [reason] L4033 a L4033, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4033: [An inspection is] essentially a sampling exercise. The inspector samples and audits the state of the equipment and management procedures. He talks to personnel and seeks to obtain an over-all picture of how well the installation is being operated, maintained and managed. An inspector must exercise his professional judgement in determining the scope and depth of the inspection and is selected, trained and supervised by line management to this end. He is not given a fixed list of procedures, equipment and items which he must tick off in the form of a check list. This could create considerable difficulties given the variety of operations, working procedures and installations involved. In addition, it would lead to operators anticipating those areas in which an inspector always checked.
+
+#### I147 `inspecciones_superficiales_y_muestreo_incompleto`, paso 2
+
+```
+ID: I147
+NODE_ID: inspecciones_superficiales_y_muestreo_incompleto
+FICHERO_NODO: dataset\nodos\inspecciones_superficiales_y_muestreo_incompleto.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Asignar tiempo suficiente para auditorías completas en lugar de inspecciones rápidas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4027 a L4027; [reason] L4039 a L4039; [reason] L4043 a L4043
+FRASE_CLAVE: [reason] L4027 "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection"
+QUE_ANADE_O_CONCRETA: la instruccion de asignar tiempo; el libro describe la falta de tiempo como deficiencia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Dar a la inspección el tiempo que exige: en Piper Alpha el inspector dedicó 10 horas a lo que requería una auditoría completa de dos a tres días
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4027 a L4027, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4027: It was the report on this last visit that contrasted so starkly with the Inquiry findings. In particular, it accepted that Occidental had ‘tidied up’ the weaknesses in the permit-to-work scheme and shift handovers, when deficiencies in these areas were subsequently found to be major contributors to the disaster. A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures. He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.
+
+PASAJE [reason] L4039 a L4039, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4039: Even after making allowance for the fact that the inspections were based on sampling, it was clear to me that they were superficial to the point of being of little use as a test of safety on the platform. They did not reveal a number of clear cut and readily ascertainable deficiencies. While the effectiveness of the inspections has been affected by persistent undermanning and inadequate guidance, the evidence led me to question, in a fundamental sense, whether the type of inspection practised by the Department of Energy could be an effective means of assessing or monitoring the management of safety by operators.
+
+PASAJE [reason] L4043 a L4043, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4043: Lord Cullen then devoted a large part of the second volume of the Inquiry report to recommending a new mode of regulation, which has subsequently been implemented. This is discussed later in this chapter.
+
+#### I148 `inspecciones_superficiales_y_muestreo_incompleto`, paso 3
+
+```
+ID: I148
+NODE_ID: inspecciones_superficiales_y_muestreo_incompleto
+FICHERO_NODO: dataset\nodos\inspecciones_superficiales_y_muestreo_incompleto.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Capacitar a los inspectores en el uso de procedimientos de permiso de trabajo y sistemas críticos
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4027 a L4027; [reason] L4176 a L4176; [reason] L4448 a L4448
+FRASE_CLAVE: [reason] L4027 "nor was he experienced in the use of such procedures"
+QUE_ANADE_O_CONCRETA: la capacitacion en permisos de trabajo y sistemas criticos; el libro senala la falta de formacion de los inspectores como deficiencia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Asegurar que los inspectores tengan formación en los equipos y procedimientos que supervisan: su falta de formación fue un factor en varios accidentes
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4027 a L4027, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4027: It was the report on this last visit that contrasted so starkly with the Inquiry findings. In particular, it accepted that Occidental had ‘tidied up’ the weaknesses in the permit-to-work scheme and shift handovers, when deficiencies in these areas were subsequently found to be major contributors to the disaster. A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures. He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection.
+
+PASAJE [reason] L4176 a L4176, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4176: An investigation by the New York Times--based on government documents and interviews with inspectors, agency officials and industry experts--identified what the Times regarded as two major shortcomings in the FAA’s inspection system.19 First, inspectors did not appear to be held accountable for not discovering or pursuing deficiencies that were later implicated in fatal accidents. The FAA’s failure to deal aggressively with lax oversight was identified by the National Transport Safety Board (NTSB), the US air accident investigator, as a factor in three fatal airline crashes as well as an accident involving one of the FAA’s own aircraft. Second, a significant number of inspectors still lacked training on the planes and equipment they were required to oversee. For example, many inspectors said they were assigned to overseeing a fleet of Boeing 737s without ever receiving training on the aircraft. In the year 1994-95, only a handful of the 143 inspectors who oversaw pilots flying a widely used turboprop plane, the ATR, were fully qualified to fly that type of plane themselves. This lack of regulator training was cited by the NTSB as a factor in three airline accidents since 1983.
+
+PASAJE [reason] L4448 a L4448, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4448: What regulators often lack, however, are the tools, training and the resources to confront the all-important human and organizational factors and to monitor the insidious accumulation of the latent conditions that can subsequently combine to penetrate the system’s defences. The same also applies to the policy-makers. The past decade has seen isolated flurries of post-disaster legislation, when what was needed were the statutory and regulatory structures necessary to forestall future accidents rather than trying to prevent the previous ones.
+
+#### I149 `ironias_de_la_automatizacion`, paso 3
+
+```
+ID: I149
+NODE_ID: ironias_de_la_automatizacion
+FICHERO_NODO: dataset\nodos\ironias_de_la_automatizacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L848 a L848
+FRASE_CLAVE: [reason] L848 "even the best motivated people have trouble maintaining vigilance for long periods of time"
+QUE_ANADE_O_CONCRETA: el diseno de sistemas de monitoreo compensatorios; el libro describe el limite humano de la vigilancia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que incluso las personas más motivadas mantienen mal la vigilancia durante mucho tiempo, y por eso están mal preparadas para detectar condiciones anormales muy raras
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L848 a L848, cap. 3 "Dangerous Defences":
+
+> L848: In highly automated systems, the task of the human operator is to monitor the system to ensure that the ‘automatics’ are working as they should. But it is well known that even the best motivated people have trouble maintaining vigilance for long periods of time. They are thus ill-suited to watch out for these very rare abnormal conditions.
+
+#### I150 `legislacion_especifica_vs_accidente_organizacional`, paso 4
+
+```
+ID: I150
+NODE_ID: legislacion_especifica_vs_accidente_organizacional
+FICHERO_NODO: dataset\nodos\legislacion_especifica_vs_accidente_organizacional.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Revisar casos históricos de éxito regulatorio para extraer principios aplicables al contexto actual
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4221 a L4223; [reason] L4246 a L4246
+FRASE_CLAVE: [reason] L4223 "We will look briefly at some of these success stories in order to redress the balance"
+QUE_ANADE_O_CONCRETA: la revision de exitos para extraer principios; el libro repasa los exitos para equilibrar el juicio y concluye que no se trasladan a los accidentes organizacionales
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que los éxitos regulatorios del pasado atacaron peligros concretos y bien conocidos, y que esa especificidad no existe para los accidentes organizacionales
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4221 a L4223, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4221: In short, regulators are in an impossible position. They are being asked to prevent organizational accidents in high-technology domains when the aetiology of these rare and complex events is still little understood--as this book has tried to make plain.
+>
+> L4223: But it was not always the case. Some of the most dramatic reductions in accident rates--usually involving individuals facing clearly defined hazards in particular situations--have been brought about by the introduction of safety-related legislation combined with effective regulation and enforcement. We will look briefly at some of these success stories in order to redress the balance.
+
+PASAJE [reason] L4246 a L4246, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4246: Unfortunately, the same degree of specificity--or even understanding--does not exist for organizational accidents. So, the question remains: how can regulators function more effectively to limit the occurrence of these catastrophic yet infrequent events? To address this question, we first need to consider the nature of the regulatory process and then look at how key events, such as the UK’s Health and Safety at Work Act (1974) and the Cullen Report on Piper Alpha, have changed the way in which safety laws are framed and enforced.
+
+#### I151 `limite_busqueda_causas_pendulo`, paso 4
+
+```
+ID: I151
+NODE_ID: limite_busqueda_causas_pendulo
+FICHERO_NODO: dataset\nodos\limite_busqueda_causas_pendulo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Evitar diluir la responsabilidad organizacional atribuyendo todo a fuerzas sociales incontrolables
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L263 a L263; [reason] L5748 a L5748
+FRASE_CLAVE: [reason] L263 "Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons"
+QUE_ANADE_O_CONCRETA: la idea de "diluir la responsabilidad"; el libro limita el analisis a lo que los gestores pueden controlar y deja aparte la responsabilidad
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Centrar el análisis en lo que los gestores del sistema pueden cambiar y controlar; los fallos económicos y sociales más remotos quedan fuera de su alcance
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L263 a L263, cap. 1 "Hazards, Defences and Losses":
+
+> L263: Since time and causality are seamless, they have no natural breakpoints, only artificially imposed ones. Accident analysts, just like historians, are limited by their resources and by the availability of reliable evidence. Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons: to establish what occurred and to stop something like it happening in the future. Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control. A sad little story will help to make this point clearer.
+
+PASAJE [reason] L5748 a L5748, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5748: While it is clear that the present situation represents a significant advance over knee-jerk ‘human error’ attributions, some concerns need to be expressed about the theoretical and the practical utility of this ever-spreading quest for contributing factors. We seem to have reached, or even exceeded, the point of diminishing returns, particularly when it comes to risk management. We also need to find some workable middle ground that acknowledges both the psychological and the contextual influences on human performance, as well as the interactions between active failures and the latent conditions that serve, on rare occasions, to breach the system’s defences. Chapter 5, for instance, presented a strong case for giving much closer attention to maintenance activities. Models of accident causation can only be judged by the extent to which their applications enhance system safety. The economic and societal shortcomings, identified--for example--by Legasov (see Chapter 1), are beyond the reach of system managers. From their perspective, such problems are given and immutable, but our main interest must be in the changeable and the controllable.
+
+#### I152 `motores_de_seguridad_3cs`, paso 5
+
+```
+ID: I152
+NODE_ID: motores_de_seguridad_3cs
+FICHERO_NODO: dataset\nodos\motores_de_seguridad_3cs.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognicion
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2577 a L2577
+FRASE_CLAVE: [reason] L2577 "These driving forces are: commitment, competence and cognisance--‘the three Cs’"
+QUE_ANADE_O_CONCRETA: el "plan"; el libro presenta los tres motores como terreno de la alta direccion
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Fortalecer, como tarea propia de la dirección, los tres motores de la seguridad: compromiso, competencia y conciencia de los peligros
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2577 a L2577, cap. 6 "Navigating the Safety Space":
+
+> L2577: Three ingredients are vital for driving the safety engine, all of them the province of top management--or what the organizational theorist, Mintzberg, has termed the strategic apex of the system.3 These driving forces are: commitment, competence and cognisance--‘the three Cs’.
+
+#### I153 `normalizacion_de_la_desviacion`, paso 2
+
+```
+ID: I153
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L3965 a L3967; [reason] L4010 a L4010
+FRASE_CLAVE: [reason] L3965 "While the Presidential Commission was shocked by NASA’s frequent use of the phrase ‘acceptable risk’"
+QUE_ANADE_O_CONCRETA: la revision del lenguaje propio; el libro describe etiquetas tranquilizadoras como sintoma
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Fíjate en las etiquetas tranquilizadoras que usas para riesgos que se repiten, como "riesgo aceptable", "anomalía" o "conatos" en los casos del libro
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L3965 a L3967, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L3965: What drove NASA inexorably towards the tragic outcome was the insidious erosion of the standards against which they regulated themselves. While the Presidential Commission was shocked by NASA’s frequent use of the phrase ‘acceptable risk’, Vaughan’s analysis reveals that flying with ‘acceptable risks’ was an integral part of NASA’s culture--or, indeed, of any aviation culture. In fact, the ‘acceptable risks’ on the space shuttle filled six volumes.
+>
+> L3967: At NASA, problems were the norm. The word ‘anomaly’ was part of everyday talk …. The whole shuttle system operated on the assumption that deviation could be controlled but not eliminated.
+
+PASAJE [reason] L4010 a L4010, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4010: In the years preceding the disaster, fires on London Underground had been commonplace, though usually of a very minor nature--cardboard cartons and the like. They were given the comforting label of ‘smoulderings’. Confident that these apparently trivial events were being adequately covered by the routine inspections of the London Fire Brigade, the Railway Inspectorate decided, three years before the King’s Cross disaster, that it no longer wanted to receive copies of such reports from the Fire Brigade. As Fennell put it, the Chief Inspector’ … [now] conceded that this was an unfortunate decision’.
+
+#### I154 `normalizacion_de_la_desviacion`, paso 3
+
+```
+ID: I154
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: Dekker L2934: "On-time performance can be the expected norm, for example, even if we borrow from safety to achieve it."
+LIBRO [dekker]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt
+LINEAS: [dekker] L2932 a L2934
+FRASE_CLAVE: [dekker] L2934 "On-time performance can be the expected norm, for example, even if we borrow from safety to achieve it"
+QUE_ANADE_O_CONCRETA: nada: Dekker lo dice (L2934)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [dekker] L2932 a L2934, cap. 5 "Understanding Your Accident Model":
+
+> L2932: We will look at safety culture in more detail in later chapters. But for now, if we say that a safety culture is a culture that allows the boss to hear bad news, then the hard problem here is to decide what is bad news.
+>
+> L2934: An entire operation or organization can shift its idea of what is normative, and thus shift what counts as bad news. On-time performance can be the expected norm, for example, even if we borrow from safety to achieve it. In such cases, the hurried nature of a departure or arrival is not bad news that is worth reporting (or worth listening to, for that matter). It is the norm that everyone tries to adhere to since it satisfies other important organizational goals (customer service, financial gain) without obviously compromising safety. From the inside, drift may become invisible.
+
+#### I155 `normalizacion_de_la_desviacion`, paso 4
+
+```
+ID: I155
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2658 a L2658; [reason] L3971 a L3971
+FRASE_CLAVE: [reason] L3971 "it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last"
+QUE_ANADE_O_CONCRETA: los "puntos de control en tu calendario" para cuestionar desviaciones; el libro pide comprobaciones regulares de las defensas y de los signos vitales, y advierte que cuesta ver cuando empezo a torcerse todo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Haz comprobaciones regulares de tus defensas y de tus signos vitales de seguridad, porque en la normalización de la desviación es muy difícil ver cuándo empezaron a torcerse las cosas
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2658 a L2658, cap. 6 "Navigating the Safety Space":
+
+> L2658: The most important navigational aids, however, lie on the right-hand side of Table 6.1. They are the proactive process measures that can be applied before a bad event. Their purpose is to provide regular checks both on the system’s defences and on its ‘vital signs’ at the workplace and organizational levels. Just as in medicine, there is no single comprehensive measure of safety health. It involves sampling a subset of a potentially larger collection of indices reflecting the current state of various organizational processes. The number of such diagnostic checks ranges typically from around eight to 16 and will vary from one type of system to another and their purpose is to identify those two or three processes that are in most urgent need of attention. The frequency with which these checks are carried out will depend upon the rate at which the process in question is likely to change. Workplace factors change more rapidly than organizational ones, and so need to be monitored at more frequent intervals.
+
+PASAJE [reason] L3971 a L3971, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L3971: In short, NASA had created a closed culture that, in Diane Vaughan’s words, ‘normalized deviance’. What seemed to the outside world like reckless risk-taking was to NASA managers a reasonable and sensible way of doing their jobs. The worrying fact about this and other organizational accidents is that it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last.
+
+#### I156 `normalizacion_de_la_desviacion`, paso 5
+
+```
+ID: I156
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: Dekker L2941: "A group's construction of risk can persist even in the face of continued (and worsening) signals of potential danger."
+LIBRO [dekker]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt
+LINEAS: [dekker] L2941 a L2941
+FRASE_CLAVE: [dekker] L2941 "A group’s construction of risk can persist even in the face of continued (and worsening) signals of potential danger"
+QUE_ANADE_O_CONCRETA: nada: Dekker lo dice (L2941)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [dekker] L2941 a L2941, cap. 5 "Understanding Your Accident Model":
+
+> L2941: Diane Vaughan called this process of drift “normalization of deviance.” A group’s construction of risk can persist even in the face of continued (and worsening) signals of potential danger. This can go on until something goes wrong, which (as Turner would have predicted) reveals the gap between the presence of risk and how it was believed to be under control. Small departures from an earlier established norm are often not worth remarking or reporting on. Such incrementalism contributes to normalization. It helps the organization learn the wrong thing:12
+
+#### I157 `normalizacion_de_la_desviacion`, paso 6
+
+```
+ID: I157
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 5
+INDICE_BASE1: 6
+TEXTO_ACTUAL: Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A13 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4446 a L4446
+FRASE_CLAVE: [reason] L4446 "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around."
+QUE_ANADE_O_CONCRETA: quita el revisor "un mentor o asesor"; deja la mirada externa con el rasgo que le da el libro
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A13, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Busca una mirada externa, cercana a tu operación pero ajena a ella, que detecte las prácticas a las que ya te acostumbraste
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4446 a L4446, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4446: Regulators are uniquely placed to function as one of the most effective defences against organizational accidents. They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around. Regulators are specialists in the technology in question. Indeed, many of them have been recruited from the regulated industries. Regulators have been trained and are highly experienced in identifying technical inadequacies and formal systemic weaknesses. And they possess the investigative access and sanctions necessary to enforce their decisions.
+
+#### I158 `normalizacion_de_la_desviacion`, paso 7
+
+```
+ID: I158
+NODE_ID: normalizacion_de_la_desviacion
+FICHERO_NODO: dataset\nodos\normalizacion_de_la_desviacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 6
+INDICE_BASE1: 7
+TEXTO_ACTUAL: Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: Dekker L2932: "if we say that a safety culture is a culture that allows the boss to hear bad news, then the hard problem here is to decide what is bad news."; L2941: "Small departures from an earlier established norm are often not worth remarking or reporting on."
+LIBRO [dekker]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt
+LINEAS: [dekker] L2932 a L2932; [dekker] L2941 a L2941
+FRASE_CLAVE: [dekker] L2932 "if we say that a safety culture is a culture that allows the boss to hear bad news, then the hard problem here is to decide what is bad news"
+QUE_ANADE_O_CONCRETA: nada: Dekker lo dice (L2932, lo dificil es decidir que es una mala noticia; L2941, las pequenas desviaciones no se reportan)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [dekker] L2932 a L2932, cap. 5 "Understanding Your Accident Model":
+
+> L2932: We will look at safety culture in more detail in later chapters. But for now, if we say that a safety culture is a culture that allows the boss to hear bad news, then the hard problem here is to decide what is bad news.
+
+PASAJE [dekker] L2941 a L2941, cap. 5 "Understanding Your Accident Model":
+
+> L2941: Diane Vaughan called this process of drift “normalization of deviance.” A group’s construction of risk can persist even in the face of continued (and worsening) signals of potential danger. This can go on until something goes wrong, which (as Turner would have predicted) reveals the gap between the presence of risk and how it was believed to be under control. Small departures from an earlier established norm are often not worth remarking or reporting on. Such incrementalism contributes to normalization. It helps the organization learn the wrong thing:12
+
+#### I159 `planificacion_recuperacion_post_accidente`, paso 4
+
+```
+ID: I159
+NODE_ID: planificacion_recuperacion_post_accidente
+FICHERO_NODO: dataset\nodos\planificacion_recuperacion_post_accidente.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Probar (testear) el plan de recuperación mediante simulacros antes de que ocurra un evento real
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5894 a L5896
+FRASE_CLAVE: [reason] L5896 "Furthermore, 80 per cent of disaster recovery plans do not work the first time"
+QUE_ANADE_O_CONCRETA: los simulacros; el libro da la cifra de planes que fallan la primera vez y pone como ejemplo un plan probado en un atentado real anterior
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que el 80 por ciento de los planes de recuperación no funciona la primera vez: el plan del banco que reabrió tras el atentado de Bishopsgate ya se había puesto a prueba en un atentado anterior
+DATO_REPETIDO: entregable_esperado | actual: probado mediante simulacro | fiel: probado
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5894 a L5896, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5894: The real question, of course, is not what safety costs us, but what it saves. This book has described how organizational accidents arise and has outlined practical measures for reducing the likelihood of their occurrence. But such accidents can afflict even the best run systems. It is therefore not enough simply to plan for their prevention, it is also essential to plan for post-accident business recovery in order to minimize these huge losses. Dan Stover18 gives us an example of what an effective loss recovery procedure can achieve. The consequences of the massive Bishopsgate bombing in the City of London in 1993 were shared by many organizations. Among these, the Saudi International Bank, was open for business as usual the following Monday. This bank had in place a well conceived loss recovery programme that had been tested by the bombing in the nearby St Mary Axe. The total cost of this bombing was estimated at £1.5 billion.
+>
+> L5896: Finally, a sobering thought: four out of five organizations suffering a major disaster without recovery procedures never reopen for business. Furthermore, 80 per cent of disaster recovery plans do not work the first time.19 Recent studies20 have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans. In addition, such organizations have a flexible and adaptive structure and are low on both rationalizations and denial. As Denis Smith of Durham University Business School put it, ‘Any denial of the mainstream nature of crisis management is a manifestation of a crisis-prone culture and, as such, becomes a suitable case for treatment’.21
+
+#### I160 `prevalencia_omisiones`, paso 3
+
+```
+ID: I160
+NODE_ID: prevalencia_omisiones
+FICHERO_NODO: dataset\nodos\prevalencia_omisiones.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador ANADIDO; ciego ANADIDO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+FICHA_DE_CORRECCION: A14 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2250 a L2250; [reason] L2259 a L2259
+FRASE_CLAVE: [reason] L2250 "Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out."
+QUE_ANADE_O_CONCRETA: quita el criterio "mayor tasa de omision historica"; anade el criterio de los rasgos y el recordatorio como primera medida
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A14, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Enfocar las intervenciones de mejora en los pasos con más rasgos que provocan omisiones, empezando por recordatorios adecuados
+NOTA: pasos_accionables | Se aplica junto con la ficha C1 (paso 2 del mismo nodo).
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2250 a L2250, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2250: Maintenance activities are highly proceduralized. It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out.
+
+PASAJE [reason] L2259 a L2259, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2259: Although there are a variety of cognitive processes that could contribute to an omission, and their precise nature is often hidden from both the actor and the outside observer, the means of limiting their future occurrence can be relatively straightforward and easy to apply once the error-prone steps have been identified. The simplest coun-termeasure is an appropriate reminder. What characteristics should a good reminder possess? Some suggestions are listed below.
+
+#### I161 `prevalencia_omisiones`, paso 4
+
+```
+ID: I161
+NODE_ID: prevalencia_omisiones
+FICHERO_NODO: dataset\nodos\prevalencia_omisiones.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Establecer métricas de seguimiento de omisiones por tipo de tarea
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L2089 a L2105
+FRASE_CLAVE: [reason] L2089 "He also identified the activities most often associated with omissions"
+QUE_ANADE_O_CONCRETA: las metricas de seguimiento por tipo de tarea; el libro da las actividades mas asociadas a omisiones segun Rasmussen
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Conocer qué actividades se asocian con más omisiones: en los datos de Rasmussen, reparación y modificación (41%), prueba y calibración (33%), control de inventario (9%) y operación y control manual (6%)
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L2089 a L2105, cap. 5 "Maintenance can Seriously Damage your System":
+
+> L2089: He also identified the activities most often associated with omissions, as listed below.
+>
+> L2091: ●
+>
+> L2093: Repair and modification (41%)
+>
+> L2095: ●
+>
+> L2097: Test and calibration (33%)
+>
+> L2099: ●
+>
+> L2101: Inventory control (9%)
+>
+> L2103: ●
+>
+> L2105: Manual operation and control (6%).
+
+#### I162 `produccion_y_proteccion`, paso 2
+
+```
+ID: I162
+NODE_ID: produccion_y_proteccion
+FICHERO_NODO: dataset\nodos\produccion_y_proteccion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Identificar si la organización está operando por debajo de la 'zona de paridad' entre producción y protección.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L65 a L65; [reason] L77 a L77
+FRASE_CLAVE: [reason] L65 "low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone"
+QUE_ANADE_O_CONCRETA: tratar el operar por debajo de la paridad como senal de alarma; el libro dice que las actividades de bajo peligro pueden operar ahi y que el peligro es el extremo
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Identificar si el nivel de protección corresponde a los peligros de tus operaciones: las actividades de bajo peligro pueden operar por debajo de la zona de paridad; las de alto peligro deben operar por encima
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L65 a L65, cap. 1 "Hazards, Defences and Losses":
+
+> L65: While the productive aspects of an organization are fairly well understood and their associated processes relatively transparent, the protective functions are both more varied and more subtle. Figure 1.2 introduces some of the issues involved in the complex relationship between production and protection. In an ideal world, the level of protection should match the hazards of the productive operations--the parity zone.2 The more extensive the productive operations, the greater is the hazard exposure and so also is the need for corresponding protection. But different types of production--and hence different organizations--vary in the severity of their operational hazards. Thus, low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.
+
+PASAJE [reason] L77 a L77, cap. 1 "Hazards, Defences and Losses":
+
+> L77: At the other extreme, in the bottom right-hand corner, the available protection falls far short of that needed for productive safety, and organizations operating in this zone face a very high risk of suffering a catastrophic accident (which probably also means going out of business). These obviously dangerous zones are generally avoided, if only because they are unacceptable to both the regulators and the shareholders. Our main concern is with how organizations navigate the space bounded by these two extremes.
+
+#### I163 `quality_control_vs_quality_assurance`, paso 4
+
+```
+ID: I163
+NODE_ID: quality_control_vs_quality_assurance
+FICHERO_NODO: dataset\nodos\quality_control_vs_quality_assurance.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Implementar auditorías aleatorias sobre el trabajo firmado como conforme
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: grep "random (audit|check|sampl)|spot check": 0. Lo que el libro echa en falta es la inspeccion separada y el personal de QA (L971). Dato anadido: el metodo "auditorias aleatorias".
+FICHA_DE_CORRECCION: A22 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L971 a L971; [reason] L975 a L975
+FRASE_CLAVE: [reason] L971 "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service."
+QUE_ANADE_O_CONCRETA: quita el metodo "auditorias aleatorias"; anade la inspeccion separada que el libro echa en falta
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A22, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Comprobar mediante una inspección separada el trabajo firmado como conforme, en lugar de fiarse solo de la firma
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L971 a L971, cap. 3 "Dangerous Defences":
+
+> L971: Are such quality assurance (QA) measures a sufficient guarantee of the airworthiness of an aircraft? These incidents suggest that they are not. The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.
+
+PASAJE [reason] L975 a L975, cap. 3 "Dangerous Defences":
+
+> L975: At an individual level, QA practices offer the hard-pressed engineer a path of least effort: namely, to sign off on task steps--either before or after the event--without actually monitoring the quality of the work. One of the enduring findings of work psychology is that people will be tempted to take short-cuts whenever such opportunities present themselves. It is no accident, therefore, that ‘signing off without checking’ is one of the more common procedural violations to be found in aircraft maintenance.
+
+#### I164 `redes_de_seguridad_regulatoria`, paso 1
+
+```
+ID: I164
+NODE_ID: redes_de_seguridad_regulatoria
+FICHERO_NODO: dataset\nodos\redes_de_seguridad_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Mapear todas las capas de defensa regulatoria existentes en la organización (manuales, auditorías, certificaciones, listas de equipo mínimo)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4060 a L4084
+FRASE_CLAVE: [reason] L4060 "The result of these constraints was that the air carrier inspection and monitoring safety net failed"
+QUE_ANADE_O_CONCRETA: el mapeo de las capas de la propia organizacion; el libro enumera las capas que fallaron en Dryden
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Revisar capas como las que fallaron en Dryden: guía a los operadores, auditorías, manuales aprobados, lista de equipo mínimo y normas de operación claras
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4060 a L4084, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4060: Featuring prominently among these causal factors were the shortcomings identified at many different levels of the regulator, Transport Canada. This agency was not in a happy position at the time of the crash, being caught in a classic double bind. Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced. Transport Canada was also trapped within a bureaucratic nightmare: for example, approval of budget increases required separate cases to be submitted to 11 levels of the appropriate Ministry Safety initiatives had been consistently downgraded or denied for several years. The result of these constraints was that the air carrier inspection and monitoring safety net failed. Several factors relating to Transport Canada were identified by the Moshansky Inquiry as contributing to the Dryden crash. These included:
+>
+> L4062: ●
+>
+> L4064: lack of guidance to air carriers on the need for deicing,
+>
+> L4066: ●
+>
+> L4068: no audit of F-28 operations,
+>
+> L4070: ●
+>
+> L4072: no approved Airplane Operating Manual or Flight Operations Manual,
+>
+> L4074: ●
+>
+> L4076: no Minimum Equipment List six months after the aircraft had entered service,
+>
+> L4078: ●
+>
+> L4080: incomplete, conflicting and ambiguous air navigation orders (the operating regulations),
+>
+> L4082: ●
+>
+> L4084: Dispatcher training and certification entirely in the hands of the air carriers--the dispatcher responsible for the F-28 flights on that day was underqualified, prepared an incorrect flight release, did not notify the crew of freezing rain at Dryden, and failed to advise the crew that an overflight of Dryden was indicated.
+
+#### I165 `redes_de_seguridad_regulatoria`, paso 2
+
+```
+ID: I165
+NODE_ID: redes_de_seguridad_regulatoria
+FICHERO_NODO: dataset\nodos\redes_de_seguridad_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Verificar el estado real de cada capa (¿existe el manual aprobado? ¿está actualizado? ¿se audita realmente?)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4072 a L4072; [reason] L4088 a L4088
+FRASE_CLAVE: [reason] L4088 "Had the regulator been more diligent in scrutinising the F-28 implementation at Air Ontario, many of the operational deficiencies that had a bearing on the crash of flight 1363 could have been avoided"
+QUE_ANADE_O_CONCRETA: la verificacion capa por capa (existe, esta actualizado, se audita); el libro exige al regulador mas diligencia en el caso Dryden
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Examinar con diligencia cómo se implanta cada operación: en Dryden, un regulador más diligente habría evitado muchas deficiencias, como la falta de un manual de operaciones aprobado
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4072 a L4072, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4072: no approved Airplane Operating Manual or Flight Operations Manual,
+
+PASAJE [reason] L4088 a L4088, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4088: Transport Canada, as the regulator, had a duty to prevent the serious operational deficiencies in the F-28 programme …. Had the regulator been more diligent in scrutinising the F-28 implementation at Air Ontario, many of the operational deficiencies that had a bearing on the crash of flight 1363 could have been avoided.
+
+#### I166 `redes_de_seguridad_regulatoria`, paso 3
+
+```
+ID: I166
+NODE_ID: redes_de_seguridad_regulatoria
+FICHERO_NODO: dataset\nodos\redes_de_seguridad_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Identificar puntos donde múltiples capas dependen de los mismos recursos limitados
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4060 a L4060; [reason] L4092 a L4092
+FRASE_CLAVE: [reason] L4060 "Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced"
+QUE_ANADE_O_CONCRETA: identificar capas que dependen de los mismos recursos; el libro describe la doble atadura de mas carga con menos personal
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Vigilar la doble atadura del caso Dryden: más carga de trabajo con menos personas cualificadas para cubrirla hizo fallar la red de inspección y vigilancia
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4060 a L4060, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4060: Featuring prominently among these causal factors were the shortcomings identified at many different levels of the regulator, Transport Canada. This agency was not in a happy position at the time of the crash, being caught in a classic double bind. Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced. Transport Canada was also trapped within a bureaucratic nightmare: for example, approval of budget increases required separate cases to be submitted to 11 levels of the appropriate Ministry Safety initiatives had been consistently downgraded or denied for several years. The result of these constraints was that the air carrier inspection and monitoring safety net failed. Several factors relating to Transport Canada were identified by the Moshansky Inquiry as contributing to the Dryden crash. These included:
+
+PASAJE [reason] L4092 a L4092, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4092: There can be little doubt that these regulatory failings arose from deep-rooted systemic failures rather than from the inadequate performance of individuals at the ‘sharp end’. The source problems lay high up in Transport Canada and in the financial climate imposed by the government of the time. The operational regulators who testified at the Inquiry were very forthright in their condemnation of both the existing regulations and the ‘chronic inaction’ of Transport Canada’s senior management. The Inquiry also acknowledged11 that, for the most part, Transport Canada was staffed by ‘competent and dedicated persons who are sincerely doing their best to ensure a safe air transportation system for the public, at times under trying and frustrating circumstances’.
+
+#### I167 `redes_de_seguridad_regulatoria`, paso 4
+
+```
+ID: I167
+NODE_ID: redes_de_seguridad_regulatoria
+FICHERO_NODO: dataset\nodos\redes_de_seguridad_regulatoria.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Diseñar redundancia real entre capas de control para evitar fallas simultáneas
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L154 a L154; [reason] L821 a L821
+FRASE_CLAVE: [reason] L821 "the provision of redundant and diverse defences has greatly reduced the numbers of adverse events. They have, however, radically changed both the nature of the accidents"
+QUE_ANADE_O_CONCRETA: el diseno de redundancia entre capas de control; el libro reconoce que las defensas redundantes reducen sucesos, pero advierte de sus peligros
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Apreciar a la vez las ventajas y los peligros de las defensas redundantes y en capas: reducen los sucesos adversos, pero cambian la naturaleza de los accidentes que sí ocurren
+DATO_REPETIDO: entregable_esperado | actual: y plan de refuerzo de redundancias críticas | fiel: y las ventajas y los peligros de sus defensas en capas
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L154 a L154, cap. 1 "Hazards, Defences and Losses":
+
+> L154: Implicit in the ordering of this list is the idea of ‘defences-in-depth’--successive layers of protection, one behind the other, each guarding against the possible breakdown of the one in front. When understanding, awareness and procedural guidance fail to keep potential victims away from hazards, alarms and warnings alert them to the imminent danger and direct the system controllers (or engineered safety features) to restore the system to a safe state. Should this not be achieved, physical barriers stand between potential losses and the hazards. Other defences act to contain and eliminate the hazards. Should all of these prior defences fail, then escape and rescue measures are brought into play.
+
+PASAJE [reason] L821 a L821, cap. 3 "Dangerous Defences":
+
+> L821: This chapter considers some of these defence-related ironies and paradoxes as they apply to systems that are vulnerable to organizational accidents. At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events. They have, however, radically changed both the nature of the accidents that do happen and the character of the systems they protect--most particularly, they have transformed the relationship between the system’s human and technical components. It is essential, therefore, that those who manage and operate complex technologies should appreciate both the advantages and the dangers of their multi-layered defences.
+
+#### I168 `safety_culture_engineering`, paso 4
+
+```
+ID: I168
+NODE_ID: safety_culture_engineering
+FICHERO_NODO: dataset\nodos\safety_culture_engineering.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Medir el compromiso mediante comunicación basada en confianza mutua y percepción compartida de importancia de la seguridad
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4730 a L4730; [reason] L4734 a L4734
+FRASE_CLAVE: [reason] L4730 "Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure"
+QUE_ANADE_O_CONCRETA: "medir el compromiso"; el libro da esos rasgos como caracteristicas de una cultura de seguridad positiva
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Reconocer una cultura de seguridad positiva por sus rasgos: comunicación basada en la confianza mutua, percepción compartida de la importancia de la seguridad y confianza en la eficacia de las medidas preventivas
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4730 a L4730, cap. 9 "Engineering a Safety Culture":
+
+> L4730: The safety culture of an organization is the product of individual and group values, attitudes, competencies, and patterns of behaviour that determine the commitment to, and the style and proficiency of, an organization’s health and safety programmes. Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure.11
+
+PASAJE [reason] L4734 a L4734, cap. 9 "Engineering a Safety Culture":
+
+> L4734: While remaining in sympathy with this definition, this chapter emphasizes the critical importance of an effective safety information system--the principal basis of an informed culture. It must be stressed again that our primary concern in this book is not with traditional health and safety measures that are directed, for the most part, at the prevention of individual work accidents. Our focus is upon the limitation of organizational accidents, and it is this that has shaped the arguments set out below.
+
+#### I169 `self_regulation_deregulation_tradeoffs`, paso 1
+
+```
+ID: I169
+NODE_ID: self_regulation_deregulation_tradeoffs
+FICHERO_NODO: dataset\nodos\self_regulation_deregulation_tradeoffs.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Evaluar si la organización tiene la madurez para autorregularse
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4429 a L4429
+FRASE_CLAVE: [reason] L4429 "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’"
+QUE_ANADE_O_CONCRETA: evaluar la "madurez" para autorregularse; el libro valora en general que la organizacion asuma la responsabilidad
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4429 a L4429, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4429: Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’ in the struggle to limit the occurrence of organizational accidents. So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations. Most technological operations, even very complex ones, are relatively simple in comparison to the task of maintaining safe working conditions. As noted in Chapter 4, there are not enough trees in the rain forests to carry all the procedures necessary to guarantee safe operations. Safety, as we have seen, is a ‘dynamic non-event’ that depends crucially upon a clear understanding of the interactions between many different underlying processes. The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’. The process is more valuable than the product. And, as the Cullen Report notes, many operators have found the exercise of producing a Safety Case valuable: ‘Often it would be the first time that a report had been made of the major hazard aspects of the organization. Many stated that the exercise had led them to make changes in their approach and improvements to systems and procedures.35
+
+#### I170 `self_regulation_deregulation_tradeoffs`, paso 4
+
+```
+ID: I170
+NODE_ID: self_regulation_deregulation_tradeoffs
+FICHERO_NODO: dataset\nodos\self_regulation_deregulation_tradeoffs.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Balancear la reducción de carga regulatoria con el mantenimiento de la vigilancia efectiva
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L4416 a L4418
+FRASE_CLAVE: [reason] L4416 "the upsurge within Britain of an ‘ideology of deregulation’"
+QUE_ANADE_O_CONCRETA: la pauta de "balancear"; el libro describe como la desregulacion vino con recortes y menos inspecciones
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tener presente que la desregulación suele venir con recortes del presupuesto del regulador y menos inspecciones, como pasó en Gran Bretaña
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L4416 a L4418, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4416: One further development is worth a brief mention--the upsurge within Britain of an ‘ideology of deregulation’. In 1992 the Prime Minister made a speech urging UK regulators to take a more relaxed approach to enforcing the ‘excessive detail’ of EU regulations. Three months later, the Secretary of State for Trade and Industry set up two inquiries into ‘red tape’. One was to look into opportunities for lessening the ‘burden’ of EU regulations, and the second was tasked with reviewing, simplifying and, where possible, abolishing some 7000 regulations on business. Within two months, the HSE announced its plans to review over 400 health and safety regulations with the intention of lessening their burden upon small businesses. Meanwhile, Parliament passed the Contracting Out and Deregulation Bill, granting the Secretary of State for Employment new powers to repeal safety legislation.
+>
+> L4418: Running in parallel with these moves towards deregulation, there has been--predictably--a steady erosion of the HSC/HSE’s budget. This amounted to reductions of 2.6 per cent and 5 per cent in successive years, a fall of some £15 million. Equally predictably, an all-party Parliamentary committee has recently criticized the HSE for conducting too few inspections and, most particularly, for failing to meet its targets with regard to examining outstanding Safety Cases called for under the CIMAH regulations relating to hazardous installations.
+
+#### I171 `senales_alerta_no_atendidas`, paso 1
+
+```
+ID: I171
+NODE_ID: senales_alerta_no_atendidas
+FICHERO_NODO: dataset\nodos\senales_alerta_no_atendidas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Establecer un registro centralizado de anomalías o señales de alerta reportadas por distintas áreas.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L520 a L550
+FRASE_CLAVE: [reason] L520 "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm"
+QUE_ANADE_O_CONCRETA: el "registro centralizado"; el libro dice que las senales, juntas, debian haber hecho saltar la alarma
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Mirar las señales de alerta en conjunto: ninguna basta por sí sola, pero juntas deberían hacer saltar la alarma, como en Barings.
+DATO_REPETIDO: entregable_esperado | actual: Sistema o registro de señales de alerta con seguimiento y cierre documentado. | fiel: Una revisión conjunta de las señales de alerta, que no se quede en cada una por separado.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L520 a L550, cap. 2 "Defeating the Defences":
+
+> L520: The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS’s unauthorized activities. The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore. These indicators included the following:
+>
+> L524: ●
+>
+> L526: The lack of segregation between the front and back offices identified by the internal audit carried out in July and August of 1994.
+>
+> L528: ●
+>
+> L530: The high level of funding required to finance BFS’s trading activities.
+>
+> L532: ●
+>
+> L534: The unreconciled balance of funds transferred from London to Singapore for margins.
+>
+> L536: ●
+>
+> L538: The very high apparent profits relative to the low level of risk as perceived by Baring’s management in London.
+>
+> L540: ●
+>
+> L542: The discovery of an apparent receivable of approximately £50 million from one of BFS’s customers, Spear, Leeds & Kellogg, that had been faked by Leeson in December 1994.
+>
+> L544: ●
+>
+> L546: A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.
+>
+> L548: ●
+>
+> L550: And a further letter from SIMEX to BFS, dated 27 January 1995, seeking reassurance that BFS was able to fund its margin calls in the event of an adverse market move. This was communicated to London, but was not acted upon for the reasons given earlier.
+
+#### I172 `senales_alerta_no_atendidas`, paso 2
+
+```
+ID: I172
+NODE_ID: senales_alerta_no_atendidas
+FICHERO_NODO: dataset\nodos\senales_alerta_no_atendidas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Definir umbrales o combinaciones de señales que disparen automáticamente una revisión de riesgo.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L520 a L550
+FRASE_CLAVE: [reason] L520 "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm"
+QUE_ANADE_O_CONCRETA: los umbrales y el disparo automatico; el libro dice que las senales, juntas, debian haber hecho saltar la alarma
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Tratar la combinación de señales como una alarma, aunque ninguna por sí sola lo sea.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L520 a L550, cap. 2 "Defeating the Defences":
+
+> L520: The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS’s unauthorized activities. The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore. These indicators included the following:
+>
+> L524: ●
+>
+> L526: The lack of segregation between the front and back offices identified by the internal audit carried out in July and August of 1994.
+>
+> L528: ●
+>
+> L530: The high level of funding required to finance BFS’s trading activities.
+>
+> L532: ●
+>
+> L534: The unreconciled balance of funds transferred from London to Singapore for margins.
+>
+> L536: ●
+>
+> L538: The very high apparent profits relative to the low level of risk as perceived by Baring’s management in London.
+>
+> L540: ●
+>
+> L542: The discovery of an apparent receivable of approximately £50 million from one of BFS’s customers, Spear, Leeds & Kellogg, that had been faked by Leeson in December 1994.
+>
+> L544: ●
+>
+> L546: A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.
+>
+> L548: ●
+>
+> L550: And a further letter from SIMEX to BFS, dated 27 January 1995, seeking reassurance that BFS was able to fund its margin calls in the event of an adverse market move. This was communicated to London, but was not acted upon for the reasons given earlier.
+
+#### I173 `senales_alerta_no_atendidas`, paso 3
+
+```
+ID: I173
+NODE_ID: senales_alerta_no_atendidas
+FICHERO_NODO: dataset\nodos\senales_alerta_no_atendidas.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Asignar responsabilidad clara de seguimiento a cada señal de alerta hasta su cierre.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L494 a L494; [reason] L546 a L550
+FRASE_CLAVE: [reason] L546 "A letter sent by SIMEX to BFS"
+QUE_ANADE_O_CONCRETA: un responsable para cada senal hasta su cierre; el libro narra avisos que no se enviaron o no se atendieron y una supervision que nadie asumia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evitar que las señales se pierdan entre oficinas o queden como responsabilidad de otro: en Barings, avisos clave no llegaron a Londres o no se atendieron, y nadie supervisaba de cerca a Leeson.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L494 a L494, cap. 2 "Defeating the Defences":
+
+> L494: The confusion surrounding Leeson’s dual role as settlements clerk and trader lies at the heart of the Barings collapse. Just as a lighted cigarette fell through the cracks in the wooden escalator to cause the King’s Cross Underground fire, so Leeson fell through the cracks in the Barings’ matrix management structure. In this, each of the business ventures--banking, equity broking, trading and so on--formed the verticals of the matrix, while the various offices and regional structures scattered around the world formed the horizontals. The theory was that any one individual was connected both to local management and to the London office. The reality in this case was that Leeson’s activities were not closely monitored by anyone. Leeson’s immediate bosses in Singapore not only failed to grasp the extent of his job specification, they were also reluctant to supervise him. He was always regarded as someone else’s responsibility. His reporting lines were either blurred or non-existent. This problem was not helped by the top management in Singapore being located on the twenty-fourth floor of the new Ocean Tower block, while Leeson worked on the fourteenth floor.
+
+PASAJE [reason] L546 a L550, cap. 2 "Defeating the Defences":
+
+> L546: A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.
+>
+> L548: ●
+>
+> L550: And a further letter from SIMEX to BFS, dated 27 January 1995, seeking reassurance that BFS was able to fund its margin calls in the event of an adverse market move. This was communicated to London, but was not acted upon for the reasons given earlier.
+
+#### I174 `violaciones_procedimentales_por_sobreespecificacion`, paso 3
+
+```
+ID: I174
+NODE_ID: violaciones_procedimentales_por_sobreespecificacion
+FICHERO_NODO: dataset\nodos\violaciones_procedimentales_por_sobreespecificacion.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Consultar con trabajadores experimentados sobre violaciones rutinarias necesarias para operar
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L1012 a L1012; [reason] L3163 a L3163; [reason] L5136 a L5156
+FRASE_CLAVE: [reason] L1012 "Most experienced workers know approximately where the ‘edge’ between safety and disaster lies"
+QUE_ANADE_O_CONCRETA: la consulta sobre "violaciones rutinarias necesarias"; el libro valora el saber de quienes hacen el trabajo y su iniciativa para senalar fallos en los procedimientos
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Aprovechar lo que saben quienes hacen el trabajo sobre qué es seguro y qué es peligroso, y su iniciativa para señalar fallos en los procedimientos y proponer cambios
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L1012 a L1012, cap. 3 "Dangerous Defences":
+
+> L1012: The important issue in many hazardous technologies is not whether to violate, but when to violate--or perhaps, more importantly, when to comply. When proscribed actions are necessary in order to get the job done, then the rules will be violated. Nearly all hazardous operations involve making actions that lie outside the prescribed boundaries yet remain within the limits of what would be judged as acceptable practice by people sharing comparable skills. Most experienced workers know approximately where the ‘edge’ between safety and disaster lies and do not exceed it, except in extreme circumstances. What they do not always appreciate, however, is where they currently are in relation to that edge. There are times when it is prudent to retreat within the narrow boundaries of permitted action or even to stop operations altogether. Deciding when to do this, though, is a matter of delicate and sometimes fallible judgement.
+
+PASAJE [reason] L3163 a L3163, cap. 7 "A Practical Guide to Error Management":
+
+> L3163: The Tripod-Delta assessments for any particular type of operation (for example, drilling, seismic, engineering, road transport, shipping and the like) are derived from checklists based upon specific indicators--or symptoms--of the presence and degree of each GFT. These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. Those on the spot have vital (and usually untapped) knowledge about what is safe and what is dangerous in a particular type of work. Tripod-Delta is tailored specifically for their use, thus ensuring that they see the information provided as relevant to their job. This means that the instruments are built and owned by those actually carrying out the core business.
+
+PASAJE [reason] L5136 a L5156, cap. 9 "Engineering a Safety Culture":
+
+> L5136: The people in these organizations know almost everything technical about what they are doing--and fear being lulled into supposing that they have prepared for any contingency. Yet even a minute failure of intelligence, a bit of uncertainty, can trigger disaster. They are driven to use a proactive, preventative decision making strategy. Analysis and search come before as well as after errors. They try to be synoptic while knowing that they can never fully achieve it. In the attempt to avoid the pitfalls in this struggle, decision making patterns appear to support apparently contradictory production-enhancing and error-reduction strategies. The patterns encourage
+>
+> L5142: ●
+>
+> L5144: reporting errors without encouraging a lax attitude toward the commission of errors;
+>
+> L5146: ●
+>
+> L5148: initiative to identify flaws in SOPs and nominate and validate changes in those that prove to be inadequate;
+>
+> L5150: ●
+>
+> L5152: error avoidance without stifling initiative or (creating) operator rigidity; and
+>
+> L5154: ●
+>
+> L5156: mutual monitoring without counter-productive loss of operator confidence, autonomy and trust.35
+
+### Voss (10 fichas)
+
+#### I066 `etiqueta_lo_que_piensa_el_proveedor`, paso 4
+
+```
+ID: I066
+NODE_ID: etiqueta_lo_que_piensa_el_proveedor
+FICHERO_NODO: dataset\nodos\etiqueta_lo_que_piensa_el_proveedor.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Anota la información nueva que surja de esa corrección, suele revelar su verdadera prioridad.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L1241 a L1243; [voss] L1320 a L1320
+FRASE_CLAVE: [voss] L1243 "las etiquetas te ayudan a destapar e identificar la emoción primaria que impulsa casi todos los comportamientos del interlocutor"
+QUE_ANADE_O_CONCRETA: la instruccion de anotar lo que surja; el libro dice que la etiqueta destapa la emocion que mueve al otro, no pide tomar nota
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Fíjate en lo que revela esa corrección: las etiquetas ayudan a destapar la emoción que impulsa el comportamiento de la otra parte.
+DATO_REPETIDO: entregable_esperado | actual: Una lista de las verdaderas prioridades o límites del proveedor, obtenida sin preguntarlas directamente. | fiel: Las verdaderas preocupaciones del proveedor, destapadas con etiquetas sin preguntarlas directamente.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L1241 a L1243, cap. 3 "No sientas su dolor, etiquétalo":
+
+> L1241: El obstáculo no era encontrar el proyecto adecuado para la mujer. No es que fuera una donante difícil de complacer y tremendamente quisquillosa. El obstáculo real era que la mujer necesitaba sentirse comprendida, y saber que la persona que manejaba su dinero sabía por qué estaba en esa oficina y entendía los recuerdos que dirigían sus acciones.
+>
+> L1243: Esa es la razón por la que las etiquetas son tan útiles y tienen tanto poder para transformar el estado de cualquier conversación. Al escarbar bajo lo que parece una montaña de objeciones, detalles y cuestiones de logística, las etiquetas te ayudan a destapar e identificar la emoción primaria que impulsa casi todos los comportamientos del interlocutor, la emoción que, una vez reconocida, parece resolver milagrosamente todo lo demás.
+
+PASAJE [voss] L1320 a L1320, cap. 3 "No sientas su dolor, etiquétalo":
+
+> L1320: Al etiquetar los miedos y pedir su aportación, Anna pudo sonsacarles un dato importante sobre los temores de ABC, concretamente que ABC esperaba que aquel fuera un contrato muy beneficioso porque creía que la empresa de Anna estaba obteniendo muchos beneficios con ese proyecto.
+
+#### I067 `etiqueta_lo_que_piensa_el_proveedor`, paso 5
+
+```
+ID: I067
+NODE_ID: etiqueta_lo_que_piensa_el_proveedor
+FICHERO_NODO: dataset\nodos\etiqueta_lo_que_piensa_el_proveedor.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Usa esa información para ajustar tu siguiente oferta o pregunta.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L1320 a L1322
+FRASE_CLAVE: [voss] L1320 "Anna pudo sonsacarles un dato importante sobre los temores de ABC"
+QUE_ANADE_O_CONCRETA: la regla general de ajustar la siguiente oferta o pregunta; el libro lo muestra en un ejemplo, donde el dato destapado da un punto de entrada
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Usa lo que destape la etiqueta como punto de entrada para seguir la conversación.
+DATO_REPETIDO: resumen_teorico | actual: te sirve para ajustar tu siguiente oferta o pregunta | fiel: te da un punto de entrada para seguir la conversación
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L1320 a L1322, cap. 3 "No sientas su dolor, etiquétalo":
+
+> L1320: Al etiquetar los miedos y pedir su aportación, Anna pudo sonsacarles un dato importante sobre los temores de ABC, concretamente que ABC esperaba que aquel fuera un contrato muy beneficioso porque creía que la empresa de Anna estaba obteniendo muchos beneficios con ese proyecto.
+>
+> L1322: Esto le dio a Mark un punto de entrada, y explicó que las nuevas exigencias del cliente habían convertido los beneficios en pérdidas, lo que significaba que Anna y él tenían que recortar aún más los fondos de ABC, a tres personas. Angela, una de las representantes de ABC, tragó saliva.
+
+#### I068 `muestra_puntos_en_comun_antes_de_negociar`, paso 1
+
+```
+ID: I068
+NODE_ID: muestra_puntos_en_comun_antes_de_negociar
+FICHERO_NODO: dataset\nodos\muestra_puntos_en_comun_antes_de_negociar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: En la primera conversación, dedica unos minutos a preguntas personales antes de entrar en cifras.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L4787 a L4789
+FRASE_CLAVE: [voss] L4789 "en muchas culturas los negociadores invierten mucho tiempo en construir estos puntos de compenetración antes de empezar a pensar siquiera en la oferta"
+QUE_ANADE_O_CONCRETA: el medio, "preguntas personales" durante "unos minutos"; el libro pide invertir tiempo en construir compenetracion antes de la oferta
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de entrar en cifras, dedica tiempo a construir puntos de compenetración con la otra parte.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L4787 a L4789, cap. 10 "Encuentra el cisne negro":
+
+> L4787: Cuando la otra parte muestra actitudes, creencias, ideas e incluso formas de vestir similares a las nuestras, tiende a gustarnos más y solemos confiar más en ella. Similitudes tan superficiales como la pertenencia a un mismo club o haber acudido al mismo instituto hacen que la compenetración aumente.
+>
+> L4789: Esa es la razón por la que en muchas culturas los negociadores invierten mucho tiempo en construir estos puntos de compenetración antes de empezar a pensar siquiera en la oferta. Ambas partes saben que la información que recopilen puede ser vital para cerrar eficazmente un trato y para construir ventajas. Un poco como cuando los perros dan vueltas unos en torno a otros olisqueándose el trasero.
+
+#### I069 `muestra_puntos_en_comun_antes_de_negociar`, paso 4
+
+```
+ID: I069
+NODE_ID: muestra_puntos_en_comun_antes_de_negociar
+FICHERO_NODO: dataset\nodos\muestra_puntos_en_comun_antes_de_negociar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Evita fingir similitud que no existe, porque se nota y rompe la confianza.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L688 a L688; [voss] L1711 a L1713
+FRASE_CLAVE: [voss] L1713 "ser «amable» como forma de simpatía fingida es a menudo igual de infructuoso"
+QUE_ANADE_O_CONCRETA: la advertencia contra fingir similitud; el libro advierte contra la simpatia fingida y usa la similitud como tecnica (el reflejo)
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evita la simpatía fingida: ser amable por fórmula suele ser infructuoso.
+DATO_REPETIDO: resumen_teorico | actual: No se trata de fingir una cercanía que no existe, porque eso se nota y rompe la confianza en lugar de construirla. | fiel: No se trata de ser amable por fórmula: la simpatía fingida suele ser infructuosa.
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L688 a L688, cap. 2 "Sé un espejo":
+
+> L688: Es un fenómeno (y ahora una técnica) que se basa en un principio biológico muy básico pero también profundo: tememos aquello que es diferente y nos atrae lo que es similar a nosotros. Como dice el dicho, Dios los cría y ellos se juntan. Cuando se pone en práctica de forma consciente, la técnica del reflejo es, pues, el arte de insinuar que existe una similitud con la otra persona. «Confía en mí. Tú y yo... nos parecemos», le dice el reflejo al inconsciente del otro.
+
+PASAJE [voss] L1711 a L1713, cap. 4 "Cuidado con el «sí». Domina el «no»":
+
+> L1711: Como hemos visto a partir de mi charla con Daryl, no conseguirás convencerlos a través de la lógica de que están a salvo, ni de que tienen el control. Las necesidades primarias son urgentes e ilógicas, así que arrinconarlas mediante argumentos solo conseguirá que tu interlocutor se escabulla dando un «sí» de engaño.
+>
+> L1713: Y ser «amable» como forma de simpatía fingida es a menudo igual de infructuoso. Vivimos en una época que celebra la amabilidad bajo diversos nombres. Se nos impele a ser amables y a respetar los sentimientos de los demás todo el tiempo y en cada situación.
+
+#### I070 `preparate_para_marcharte_del_trato`, paso 3
+
+```
+ID: I070
+NODE_ID: preparate_para_marcharte_del_trato
+FICHERO_NODO: dataset\nodos\preparate_para_marcharte_del_trato.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Si dependes demasiado de este acuerdo, busca al menos una alternativa antes de sentarte a negociar.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L4255 a L4255; [voss] L4610 a L4610; [voss] L5225 a L5225
+FRASE_CLAVE: [voss] L4255 "No debes depender excesivamente de un acuerdo"
+QUE_ANADE_O_CONCRETA: la instruccion de buscar "al menos una alternativa" antes de sentarse; el libro pide no depender de un acuerdo y recela de preparar la BATNA
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: No dependas excesivamente de este acuerdo: si hay otros interesados, cuentas con más ventaja.
+DATO_REPETIDO: resumen_teorico | actual: tener al menos una alternativa en mente | fiel: no depender excesivamente de un solo acuerdo
+DATO_REPETIDO: entregable_esperado | actual: y al menos una alternativa lista antes de negociar | fiel: antes de negociar, sin depender excesivamente de un solo acuerdo
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L4255 a L4255, cap. 9 "Regatea":
+
+> L4255: Una vez que tengas claro cuál es tu balance deseado, debes estar dispuesto a abandonar la negociación. No debes depender excesivamente de un acuerdo.
+
+PASAJE [voss] L4610 a L4610, cap. 10 "Encuentra el cisne negro":
+
+> L4610: La ventaja está constituida por un montón de elementos, como el tiempo, la necesidad y la competición. Si necesitas vender tu casa ahora mismo, cuentas con menos ventaja que si no tienes fecha límite. Si quieres venderla pero no tienes que hacerlo, cuentas con más. Y si hay varias personas interesadas en ella, mejor.
+
+PASAJE [voss] L5225 a L5225, cap. 10 "Encuentra el cisne negro":
+
+> L5225: El problema de la BATNA es que hace que los negociadores tiren a la baja. Los investigadores han demostrado que el ser humano tiene una capacidad limitada para mantener la concentración en situaciones complejas y estresantes, como es el caso de las negociaciones. Por tanto, una vez que la negociación está en marcha, tendemos a gravitar hacia el punto que tiene mayor significación psicológica para nosotros.
+
+#### I071 `preparate_para_marcharte_del_trato`, paso 5
+
+```
+ID: I071
+NODE_ID: preparate_para_marcharte_del_trato
+FICHERO_NODO: dataset\nodos\preparate_para_marcharte_del_trato.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Si cruzas tu límite, agradece el tiempo y retírate sin quemar la relación para el futuro.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L4255 a L4255; [voss] L4261 a L4261
+FRASE_CLAVE: [voss] L4255 "debes estar dispuesto a abandonar la negociación"
+QUE_ANADE_O_CONCRETA: la forma de retirarse ("agradece el tiempo"); el libro pide estar dispuesto a irse y mantener la colaboracion al poner limites
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Si se cruza tu límite, abandona la negociación con firmeza pero con empatía, sin ver nunca a tu interlocutor como un enemigo.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L4255 a L4255, cap. 9 "Regatea":
+
+> L4255: Una vez que tengas claro cuál es tu balance deseado, debes estar dispuesto a abandonar la negociación. No debes depender excesivamente de un acuerdo.
+
+PASAJE [voss] L4261 a L4261, cap. 9 "Regatea":
+
+> L4261: Antes de seguir, debo remarcar la importancia de mantener una relación de colaboración incluso cuando estemos poniendo los límites. Tu respuesta debe expresarse siempre en una forma de poner límites que resulte firme pero empática --es decir, amor duro--, no en forma de odio ni de violencia. La ira y otras emociones fuertes pueden ser eficaces en raras ocasiones, pero solo como actos calculados, nunca como un ataque personal. En cualquier sesión de regateo cuerpo a cuerpo, el principio que hay que tener siempre presente es que nunca debemos ver a nuestro interlocutor como un enemigo.
+
+#### I072 `revela_tu_propio_plazo_limite_al_negociar`, paso 1
+
+```
+ID: I072
+NODE_ID: revela_tu_propio_plazo_limite_al_negociar
+FICHERO_NODO: dataset\nodos\revela_tu_propio_plazo_limite_al_negociar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Antes de negociar, define tu fecha límite real, no una inventada por ansiedad.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L2412 a L2414
+FRASE_CLAVE: [voss] L2412 "Los plazos y las fechas límite son, con frecuencia, arbitrarios y casi siempre flexibles"
+QUE_ANADE_O_CONCRETA: la instruccion de fijar de antemano la fecha limite real; el libro advierte que los plazos suelen ser arbitrarios, flexibles e imaginarios
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de negociar, recuerda que los plazos suelen ser arbitrarios y flexibles: no dejes que un plazo imaginario te presione.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L2412 a L2414, cap. 6 "Moldea su realidad":
+
+> L2412: Sí, he empleado el término «imaginario». A lo largo de mi carrera en el sector privado, siempre que he tenido ocasión he preguntado a todos los empresarios y ejecutivos con los que he trabajado si habían presenciado o participado alguna vez en alguna reunión en la que el incumplimiento de una fecha límite hubiera tenido repercusiones negativas. De entre esos cientos de clientes, solo hubo uno que, tras pensar con detenimiento en la cuestión, respondió afirmativamente. Los plazos y las fechas límite son, con frecuencia, arbitrarios y casi siempre flexibles, y su incumplimiento rara vez desencadena las consecuencias que creemos (o que se nos ha hecho creer) que tendrá.
+>
+> L2414: Los plazos límite son, de hecho, el hombre del saco de las negociaciones, una criatura que es producto casi exclusivo de nuestra imaginación y cuya presión suele hacernos muy flacos favores. El mantra con el que aleccionamos a nuestros clientes es «no hacer ningún trato es mejor que hacer un mal trato». Si los clientes consiguen interiorizar esa máxima y convencerse de que disponen del tiempo que necesitan para llevar la negociación a buen puerto, su paciencia se convierte en un arma formidable.
+
+#### I073 `revela_tu_propio_plazo_limite_al_negociar`, paso 3
+
+```
+ID: I073
+NODE_ID: revela_tu_propio_plazo_limite_al_negociar
+FICHERO_NODO: dataset\nodos\revela_tu_propio_plazo_limite_al_negociar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Pregunta directamente si el proveedor también tiene un plazo propio.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L2422 a L2424; [voss] L2438 a L2438
+FRASE_CLAVE: [voss] L2438 "«Ellos conocían mis plazos, pero yo no conocía los suyos»"
+QUE_ANADE_O_CONCRETA: el medio, preguntar directamente; en el libro el plazo del otro se averigua escuchando y observando su patron
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Averigua si el proveedor también tiene un plazo propio, escuchando con atención cómo actúa.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L2422 a L2424, cap. 6 "Moldea su realidad":
+
+> L2422: Al principio esto no parecía tener mucho sentido. Sin embargo, al escuchar detenidamente a los secuestradores e interrogar a los rehenes que rescatábamos, descubrimos algo que tenía que habernos parecido obvio: los delitos no tenían una motivación política, en absoluto. Estos secuestradores de andar por casa querían que se les pagase antes del viernes para salir de juerga el fin de semana.
+>
+> L2424: Una vez que averiguamos el patrón de los secuestradores y supimos del particular plazo que se imponían a sí mismos, pasamos a contar con una información extremadamente valiosa a la hora de inclinar la balanza hacia nuestro lado.
+
+PASAJE [voss] L2438 a L2438, cap. 6 "Moldea su realidad":
+
+> L2438: Cohen aterrizó en Estados Unidos con la deprimente sensación de que habían jugado con él y de que había cedido demasiado terreno en la negociación por la presión de la marcha. Si pudiera dar marcha atrás, ¿volvería a decirles cuánto tiempo tenía? No, explica Cohen, porque eso les dio una ventaja que él no tenía: «Ellos conocían mis plazos, pero yo no conocía los suyos».
+
+#### I074 `revela_tu_propio_plazo_limite_al_negociar`, paso 4
+
+```
+ID: I074
+NODE_ID: revela_tu_propio_plazo_limite_al_negociar
+FICHERO_NODO: dataset\nodos\revela_tu_propio_plazo_limite_al_negociar.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Usa el tiempo restante para acelerar el intercambio de concesiones, sin ceder todo de golpe.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L2444 a L2444; [voss] L2448 a L2448
+FRASE_CLAVE: [voss] L2448 "cuando un oponente conoce tu plazo límite, entra antes en el verdadero juego del intercambio de concesiones"
+QUE_ANADE_O_CONCRETA: la instruccion "sin ceder todo de golpe"; el libro describe el efecto de revelar el plazo, no esa regla
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Aprovecha que, al conocer tu plazo, el proveedor entra antes en el verdadero intercambio de concesiones.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L2444 a L2444, cap. 6 "Moldea su realidad":
+
+> L2444: De hecho, el profesor Don A. Moore, de la Haas School of Business de la Universidad de California en Berkeley, afirma que ocultar un deadline coloca al negociador en la peor posición posible. En su investigación, Moore ha averiguado que esa ocultación incrementa de manera dramática el riesgo de que se produzca un compás de espera de difícil resolución. Eso se debe a que estar bajo la presión de un límite nos obliga a acelerar las concesiones mientras la otra parte, que piensa que aún tiene tiempo, se muestra firme y pide más.
+
+PASAJE [voss] L2448 a L2448, cap. 6 "Moldea su realidad":
+
+> L2448: Moore descubrió que cuando los negociadores comunican sus plazos a la contraparte, consiguen cerrar mejores tratos. Es cierto. En primer lugar, al comunicar su tope, reduces el riesgo de impasse. En segundo lugar, cuando un oponente conoce tu plazo límite, entra antes en el verdadero juego del intercambio de concesiones.
+
+#### I075 `usa_preguntas_de_como_para_negociar_precio`, paso 3
+
+```
+ID: I075
+NODE_ID: usa_preguntas_de_como_para_negociar_precio
+FICHERO_NODO: dataset\nodos\usa_preguntas_de_como_para_negociar_precio.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Guarda silencio después de preguntar y deja que la otra parte piense su respuesta.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [voss]: C:\Users\AlexDesk\Documents\I have an idea\txt\Procurenment\Rompe la barrera del no_ 9 prin - Chris Voss.txt
+LINEAS: [voss] L1430 a L1430; [voss] L3443 a L3443; [voss] L3903 a L3903
+FRASE_CLAVE: [voss] L1430 "Haz pausas. Después de haber etiquetado una barrera o reflejado una afirmación, deja que se asiente. No te preocupes, la otra parte se encargará de llenar el silencio"
+QUE_ANADE_O_CONCRETA: la regla de callar tras la pregunta de "como"; el libro prescribe la pausa tras etiquetas y reflejos, y dice que el "como" obliga al otro a pensar y explicar
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Después de preguntar, deja que la otra parte piense y explique cómo se puede hacer; ella se encargará de llenar el silencio.
+DATO_REPETIDO: resumen_teorico | actual: Guarda silencio después de preguntar, deja que piensen, | fiel: Después de preguntar, deja que piensen y expliquen cómo se puede hacer,
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [voss] L1430 a L1430, cap. 3 "No sientas su dolor, etiquétalo":
+
+> L1430: • Haz pausas. Después de haber etiquetado una barrera o reflejado una afirmación, deja que se asiente. No te preocupes, la otra parte se encargará de llenar el silencio.
+
+PASAJE [voss] L3443 a L3443, cap. 8 "Garantiza la ejecución":
+
+> L3443: Al margen de ser una forma de decir «no», otra de las ventajas de preguntar «¿cómo?» es que fuerza a la otra parte, de manera literal, a pensar y explicar cómo se puede llevar a cabo el acuerdo. Un acuerdo no vale para nada sin una buena implementación. Y una implementación deficiente es un cáncer que se come todos los beneficios.
+
+PASAJE [voss] L3903 a L3903, cap. 9 "Regatea":
+
+> L3903: Volvió a caer en un silencio pero no piqué el anzuelo. Dejé que se prolongara el silencio. Y entonces, con un suspiro, volvió a salir.
+
+### Wasserman (14 fichas)
+
+#### I177 `decision_de_vender_startup`, paso 2
+
+```
+ID: I177
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Analiza las amenazas de mediano plazo que pueden erosionar el valor de tu empresa: cambios en la industria que golpeen tu modelo de negocio, competidores que se combinen o se fusionen, y cambios tecnológicos disruptivos que te obligarían a reinvertir mucho tiempo sin retorno inmediato
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3288: "it became clear that BMC was going to buy either Opsware or BladeLogic"; L3294: "the market itself was transforming due to an underlying technological shift: virtualization... This meant deferring earnings for a very long time."
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3286 a L3294
+FRASE_CLAVE: [horowitz] L3294 "This meant deferring earnings for a very long time."
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (consolidacion del mercado, L3288 a L3292; cambio tecnologico que obliga a diferir ganancias, L3294)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3286 a L3294, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE LOGICAL":
+
+> L3286: Once we grew to several hundred customers and expanded into data center automation, we were still number one and were more valuable stand-alone than any of the prior acquisition offers. At that point both Opsware and our main competitor, BladeLogic, had developed into full-fledged companies (worldwide sales forces, built-out professional services, etc.). This was significant, because it meant that a large company could buy one of us and potentially execute successfully (big enterprise companies can’t generally succeed with small acquisitions, because too much of the important intellectual property is the sales methodology, and big companies can’t build that).
+>
+> L3288: At this point, it became clear that BMC was going to buy either Opsware or BladeLogic. As a result, the calculus, or whether Opsware was going to be number one in the market, needed to be redefined as follows:
+>
+> L3290: 1. We had to be number one in the systems and network management market rather than the data center automation market, because like the word processor market, the data center automation market was going to be subsumed by a larger market that contained it.
+>
+> L3292: 2. In order to be number one, we had to beat BMC and BladeLogic together, which was a significantly more difficult opponent than either company stand-alone.
+>
+> L3294: Finally, the market itself was transforming due to an underlying technological shift: virtualization. Virtualization meant that the entire market needed to be retooled, so we were embarking on a new R&D race to build the best management for virtualized environments. This meant deferring earnings for a very long time.
+
+#### I178 `decision_de_vender_startup`, paso 6
+
+```
+ID: I178
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 5
+INDICE_BASE1: 6
+TEXTO_ACTUAL: Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3278: "(a) is this market really much bigger (more than an order of magnitude) than has been exploited to date? and (b) are we going to be number one?"; L3280: "What is the market, really, and who are the competitors going to be?"
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3274 a L3280
+FRASE_CLAVE: [horowitz] L3278 "is this market really much bigger (more than an order of magnitude) than has been exploited to date? and (b) are we going to be number one?"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3278, L3280)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3274 a L3280, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE LOGICAL":
+
+> L3274: When analyzing whether you should sell your company, a good basic rule of thumb is if (a) you are very early on in a very large market and (b) you have a good chance of being number one in that market, then you should remain stand-alone. The reason is that nobody will be able to afford to pay what you are worth, because nobody can give you that much forward credit. For an easy-to-understand example, consider Google. When they were very early, they reportedly received multiple acquisition offers for more than $1 billion. These were considered very rich offers at the time and they amounted to a gigantic multiple. However, given the size of the ultimate market, it did not make sense for Google to sell. In fact, it didn’t make sense for Google to sell to any suitor at any price that the buyer could have paid. Why? Because the market that Google was pursuing was actually bigger than the markets that all of the potential buyers owned and Google had built a nearly invincible product lead that enabled them to be number one.
+>
+> L3276: Contrast this situation with Pointcast. Pointcast was one of the first Internet applications to catch fire. They were the buzz of Silicon Valley and the technology industry in general. They received billion-dollar acquisition offers that they passed on. Then, due to flaws in their product architecture, their customers started to turn off their application. Overnight, their market collapsed and never returned. They were ultimately sold for a relatively tiny amount.
+>
+> L3278: So, the judgment that you have to make is (a) is this market really much bigger (more than an order of magnitude) than has been exploited to date? and (b) are we going to be number one? If the answer to either (a) or (b) is no, then you should consider selling. If the answers to both are yes, then selling would mean selling yourself and your employees short.
+>
+> L3280: Unfortunately, these questions are not as simple to answer as I’ve made them out to be. In order to get the answer right, you also have to answer the question “What is the market, really, and who are the competitors going to be?” Was Google in the search market or the portal market? In retrospect, they were in the search market, but most people thought they were in the portal market at the time. Yahoo was a tough competitor in the portal market, but not so much in the search market. If Google had really been in the portal market, then selling might have been a good idea. Pointcast thought that their market was much larger than it turned out to be. Interestingly, Pointcast’s own product execution (or lack thereof) caused their market to shrink.
+
+#### I179 `decision_de_vender_startup`, paso 7
+
+```
+ID: I179
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 6
+INDICE_BASE1: 7
+TEXTO_ACTUAL: Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3264 a L3268: "Talent and/or technology... Product... Business, when a company is acquired for its actual business".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3260 a L3270
+FRASE_CLAVE: [horowitz] L3262 "it is useful to think about technology acquisitions in three categories"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3262 a L3270)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3260 a L3270, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "TYPES OF ACQUISITIONS":
+
+> L3260: TYPES OF ACQUISITIONS
+>
+> L3262: For the purpose of this discussion, it is useful to think about technology acquisitions in three categories:
+>
+> L3264: 1. Talent and/or technology, when a company is acquired purely for its technology and/or its people. These kinds of deals typically range between $5 million and $50 million.
+>
+> L3266: 2. Product, when a company is acquired for its product, but not its business. The acquirer plans to sell the product roughly as it is, but will do so primarily with its own sales and marketing capability. These kinds of deals typically range between $25 million and $250 million.
+>
+> L3268: 3. Business, when a company is acquired for its actual business (revenue and earnings). The acquirer values the entire operation (product, sales, and marketing), not just the people, technology, or products. These deals are typically valued (at least in part) by their financial metrics and can be extremely large (such as Microsoft’s $30 billion-plus offer for Yahoo).
+>
+> L3270: My take on the subject is most applicable to business acquisitions, with some relevance to product acquisitions, and will be fairly useless if you are selling people and/or technology.
+
+#### I180 `decision_de_vender_startup`, paso 8
+
+```
+ID: I180
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 7
+INDICE_BASE1: 8
+TEXTO_ACTUAL: Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3296: "run a short process to understand the interest in the M&A market"; L3298: "we were at a local maxima in terms of the market price".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3296 a L3298
+FRASE_CLAVE: [horowitz] L3296 "run a short process to understand the interest in the M&A market"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3296, L3298)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3296 a L3298, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE LOGICAL":
+
+> L3296: Based on all these factors, it made sense for us to at least consider the possibility of acquisition and run a short process to understand the interest in the M&A market.
+>
+> L3298: Through that process, eleven companies made acquisition offers of some form. This told me that we were at a local maxima in terms of the market price for Opsware. In other words, the set of potential buyers was convinced that the market was very important, and there was no extra premium that we could hope to achieve through better awareness. In the end, based on a lot of analysis and soul-searching, I determined that the current local maxima was higher than we could expect to achieve in the next three to five years and I sold the company to Hewlett-Packard for $1.65 billion. I think and hope that was the right decision.
+
+#### I181 `decision_de_vender_startup`, paso 9
+
+```
+ID: I181
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 8
+INDICE_BASE1: 9
+TEXTO_ACTUAL: Define un precio mínimo aceptable basado en el valor real de tu negocio, no en la primera oferta que te hagan ni en el extra que te ofrezcan sobre el precio actual
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L673: "the highest bids representing a 38 percent premium over the current stock price. Although this was considered a good premium, I did not feel right selling"; L679: "I decided that the right price to sell the company would be $14 per share".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L673 a L679
+FRASE_CLAVE: [horowitz] L679 "I decided that the right price to sell the company would be $14 per share"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L673 a L679)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L673 a L679, cap. 3 "THIS TIME WITH FEELING", apartado "THE ULTIMATE DECISION":
+
+> L673: With that strategy in hand, we generated a broad set of bids, all between $10 and $11 per share, with the highest bids representing a 38 percent premium over the current stock price. Although this was considered a good premium, I did not feel right selling the company for $11 per share. The team had worked too hard, we’d accomplished too much, and we were too good a company. The risks of staying stand-alone were substantial, but I still wanted to bet on the team. I recommended to the board that we not sell.
+>
+> L675: The board was surprised, but supportive. Still, they had a fiduciary responsibility to shareholders to ask the tough questions. “If you’re unwilling to sell at eleven dollars per share, is there a price at which you would sell?” I had to think about that one. I had promised the team that if we got to be the number-one company in a big market, we would not sell. We were number one, but how big was the market? Did the team really want to continue or was it just me who wanted to continue? How could I know without panicking the company? And thus began a series of very long talks with myself.
+>
+> L677: It was an argument to the death, and it was me against me. On the one hand, I argued that virtualization created an explosion of virtual server instances, making what we did more essential than ever. In the next breath, I retorted that while that may have been true, the architectural changes would make our market position vulnerable. I battled myself for weeks before concluding that things were changing fast enough that we’d need to make major changes to our product architecture in order to stay on top. The key to answering the ultimate question was knowing the state of the team. Were they up for yet another giant challenge or were they at the end of a very long road? I decided to bring my direct reports into the loop and ask them what they thought. The answers came back clear: Everyone, with the exception of one person who felt that the opportunity in front of us was still quite large, opted for the sale. Now it was just a matter of price. But what price?
+>
+> L679: After a long discussion with John O’Farrell, I decided that the right price to sell the company would be $14 per share, or about $1.6 billion. I took that number back to the board. They thought the number was extremely high and that it was unlikely we’d be able to generate a bid at that level, but they were supportive nonetheless. I called back all the potential acquirers and let them know that we would only entertain bids of $14 or more. There were no takers.
+
+#### I182 `decision_de_vender_startup`, paso 10
+
+```
+ID: I182
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 9
+INDICE_BASE1: 10
+TEXTO_ACTUAL: Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L679: "I called back all the potential acquirers and let them know that we would only entertain bids of $14 or more. There were no takers."; L681: "I held firm".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L679 a L683
+FRASE_CLAVE: [horowitz] L679 "I called back all the potential acquirers and let them know that we would only entertain bids of $14 or more. There were no takers."
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L679 a L683)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L679 a L683, cap. 3 "THIS TIME WITH FEELING", apartado "THE ULTIMATE DECISION":
+
+> L679: After a long discussion with John O’Farrell, I decided that the right price to sell the company would be $14 per share, or about $1.6 billion. I took that number back to the board. They thought the number was extremely high and that it was unlikely we’d be able to generate a bid at that level, but they were supportive nonetheless. I called back all the potential acquirers and let them know that we would only entertain bids of $14 or more. There were no takers.
+>
+> L681: More than a month passed without a word, and I figured the M&A talks had ended. I began refocusing on how to make the necessary changes to keep us competitive. And then I received a call from Bob Beauchamp, the CEO of BMC Software. He offered $13.25 per share. I held firm: “Bob, that’s great, but the number is fourteen dollars per share.” Bob said that he’d have to think about it. He called back two days later and offered $14 per share. Wow. The dog had caught the bus.
+>
+> L683: John and I immediately called back all the other suitors to let them know that we had an offer that we planned to take. Hewlett-Packard was still interested and offered $13.50 per share in an effort to make sure that I wasn’t bluffing. I responded that as a public company CEO, I couldn’t take a lower offer. HP eventually offered $14.25 or $1.65 billion in cash. We had a deal.
+
+#### I183 `decision_de_vender_startup`, paso 11
+
+```
+ID: I183
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 10
+INDICE_BASE1: 11
+TEXTO_ACTUAL: Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3298: "the current local maxima was higher than we could expect to achieve in the next three to five years".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3298 a L3298
+FRASE_CLAVE: [horowitz] L3298 "the current local maxima was higher than we could expect to achieve in the next three to five years"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3298)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3298 a L3298, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE LOGICAL":
+
+> L3298: Through that process, eleven companies made acquisition offers of some form. This told me that we were at a local maxima in terms of the market price for Opsware. In other words, the set of potential buyers was convinced that the market was very important, and there was no extra premium that we could hope to achieve through better awareness. In the end, based on a lot of analysis and soul-searching, I determined that the current local maxima was higher than we could expect to achieve in the next three to five years and I sold the company to Hewlett-Packard for $1.65 billion. I think and hope that was the right decision.
+
+#### I184 `decision_de_vender_startup`, paso 12
+
+```
+ID: I184
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 11
+INDICE_BASE1: 12
+TEXTO_ACTUAL: Define criterios objetivos y fáciles de comunicar sobre cuándo mantendrías tu empresa independiente y cuándo la venderías, y comunícalos a tu equipo de forma consistente para evitar que sientan que los traicionaste
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3314: "If the company achieves product-market fit in a very large market and has an excellent chance to be number one, then the company will likely remain independent. If not, it will likely be sold."; y "the employee may feel betrayed if the company is ever sold".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3314 a L3314
+FRASE_CLAVE: [horowitz] L3314 "If the company achieves product-market fit in a very large market and has an excellent chance to be number one, then the company will likely remain independent. If not, it will likely be sold."
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3314)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3314 a L3314, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE EMOTIONAL":
+
+> L3314: Be clear with the company. One question that every startup CEO gets from her employees is “Are you selling the company?” This is an incredibly difficult question. If she says nothing, the employee will likely interpret this to mean the company is for sale. If she says “at the right price,” the employee will wonder what that price is and may even ask. If the company ever reaches that price, the employee will assume the company will be sold. If she dodges the question with the standard “the company is not for sale,” the employee may feel betrayed if the company is ever sold. More important, the CEO may feel like she is betraying the employee and that feeling will influence her decision-making process. One way to avoid these traps is to describe the analysis in the prior section: If the company achieves product-market fit in a very large market and has an excellent chance to be number one, then the company will likely remain independent. If not, it will likely be sold. This is one good method to describe the interests of the investors in a way that’s not at odds with the interests of the employees, and it is true.
+
+#### I185 `decision_de_vender_startup`, paso 13
+
+```
+ID: I185
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 12
+INDICE_BASE1: 13
+TEXTO_ACTUAL: Separa la decisión estratégica y la discusión sobre vender de tu situación financiera personal
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3312: "so that the decision to keep or sell the company isn't a direct response to the CEO's personal financial situation".
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3310 a L3312
+FRASE_CLAVE: [horowitz] L3312 "so that the decision to keep or sell the company isn’t a direct response to the CEO’s personal financial situation"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3312)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3310 a L3312, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE EMOTIONAL":
+
+> L3310: A few keys on muting the emotions:
+>
+> L3312: Get paid (a salary). Most venture capitalists like entrepreneurs that are “all in,” meaning the entrepreneur has everything invested in the company and will have very little to show for her efforts if it does not succeed. As part of this, they prefer the founding CEO to have a very low salary. In general, this is a good idea, because the temptation to walk away when things go poorly is intense and total financial commitment helps him to keep his other commitments. However, once the company starts to become a company rather than an idea it makes sense to pay the CEO at market. More specifically, once the company has a business (as defined above) and becomes an attractive acquisition target, it makes sense to pay the CEO, so that the decision to keep or sell the company isn’t a direct response to the CEO’s personal financial situation, as in “I don’t think that we should sell the company, but I live in an eight-hundred-fifty-square-foot apartment with my husband and two kids and it’s that or divorce.”
+
+#### I186 `decision_de_vender_startup`, paso 14
+
+```
+ID: I186
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 13
+INDICE_BASE1: 14
+TEXTO_ACTUAL: Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador PENDIENTE; ciego OPERATIVO; acuerdo NO
+RESOLUCION: Horowitz L3258: "selling your company is always emotional and deeply personal."; L675: "The board was surprised, but supportive."; L671: "John and I called Michael Ovitz to get some advice."
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LINEAS: [horowitz] L3256 a L3258; [horowitz] L671 a L677
+FRASE_CLAVE: [horowitz] L3258 "But selling your company is always emotional and deeply personal."
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3256 a L3258, la parte emocional; L671 a L677, el consejo y los asesores)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3256 a L3258, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "SHOULD YOU SELL YOUR COMPANY?":
+
+> L3256: One of the most difficult decisions that a CEO ever makes is whether to sell her company. Logically, determining whether selling a company will be better in the long term than continuing to run it stand-alone involves a huge number of factors, most of which are speculative or unknown. And if you are the founder, the logical part is the easy part.
+>
+> L3258: The task would be far simpler if there were no emotion involved. But selling your company is always emotional and deeply personal.
+
+PASAJE [horowitz] L671 a L677, cap. 3 "THIS TIME WITH FEELING", apartado "THE ULTIMATE DECISION":
+
+> L671: To get things started, John and I called Michael Ovitz to get some advice. We felt one of the potential bidders, Oracle, would be the least likely to bid high, because it was extremely disciplined in its financial analysis. We conveyed this to Michael and questioned whether we should pursue Oracle at all. His reply was priceless: “Well, boys, if you are going to have a dog race, then you are going to need a rabbit. And Oracle will be one hell of a rabbit.”
+>
+> L673: With that strategy in hand, we generated a broad set of bids, all between $10 and $11 per share, with the highest bids representing a 38 percent premium over the current stock price. Although this was considered a good premium, I did not feel right selling the company for $11 per share. The team had worked too hard, we’d accomplished too much, and we were too good a company. The risks of staying stand-alone were substantial, but I still wanted to bet on the team. I recommended to the board that we not sell.
+>
+> L675: The board was surprised, but supportive. Still, they had a fiduciary responsibility to shareholders to ask the tough questions. “If you’re unwilling to sell at eleven dollars per share, is there a price at which you would sell?” I had to think about that one. I had promised the team that if we got to be the number-one company in a big market, we would not sell. We were number one, but how big was the market? Did the team really want to continue or was it just me who wanted to continue? How could I know without panicking the company? And thus began a series of very long talks with myself.
+>
+> L677: It was an argument to the death, and it was me against me. On the one hand, I argued that virtualization created an explosion of virtual server instances, making what we did more essential than ever. In the next breath, I retorted that while that may have been true, the architectural changes would make our market position vulnerable. I battled myself for weeks before concluding that things were changing fast enough that we’d need to make major changes to our product architecture in order to stay on top. The key to answering the ultimate question was knowing the state of the team. Were they up for yet another giant challenge or were they at the end of a very long road? I decided to bring my direct reports into the loop and ask them what they thought. The answers came back clear: Everyone, with the exception of one person who felt that the opportunity in front of us was still quite large, opted for the sale. Now it was just a matter of price. But what price?
+
+#### I187 `decision_de_vender_startup`, paso 15
+
+```
+ID: I187
+NODE_ID: decision_de_vender_startup
+FICHERO_NODO: dataset\nodos\decision_de_vender_startup.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 14
+INDICE_BASE1: 15
+TEXTO_ACTUAL: Ajusta tu salario como CEO a valores de mercado una vez que tu empresa se convierta en un negocio real y consolidado, y en un objetivo atractivo de adquisición
+CLASE_FINAL: FIEL
+CLASIFICADORES: integrador OPERATIVO; ciego ANADIDO; acuerdo NO
+RESOLUCION: Horowitz L3312: "once the company has a business (as defined above) and becomes an attractive acquisition target, it makes sense to pay the CEO"; Wasserman L1894.
+LIBRO [horowitz]: C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt
+LIBRO [wasserman]: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
+LINEAS: [horowitz] L3312 a L3312; [wasserman] L1894 a L1894
+FRASE_CLAVE: [horowitz] L3312 "once the company has a business (as defined above) and becomes an attractive acquisition target, it makes sense to pay the CEO"
+QUE_ANADE_O_CONCRETA: nada: Horowitz lo dice (L3312), y Wasserman va en la misma direccion (L1894)
+PROPUESTA_POR_DEFECTO: MANTENER (el libro lo dice)
+TEXTO_FIEL_PROPUESTO: igual al texto actual: el libro lo dice
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [horowitz] L3312 a L3312, cap. 8 "FIRST RULE OF ENTREPRENEURSHIP: THERE ARE NO RULES", apartado "THE EMOTIONAL":
+
+> L3312: Get paid (a salary). Most venture capitalists like entrepreneurs that are “all in,” meaning the entrepreneur has everything invested in the company and will have very little to show for her efforts if it does not succeed. As part of this, they prefer the founding CEO to have a very low salary. In general, this is a good idea, because the temptation to walk away when things go poorly is intense and total financial commitment helps him to keep his other commitments. However, once the company starts to become a company rather than an idea it makes sense to pay the CEO at market. More specifically, once the company has a business (as defined above) and becomes an attractive acquisition target, it makes sense to pay the CEO, so that the decision to keep or sell the company isn’t a direct response to the CEO’s personal financial situation, as in “I don’t think that we should sell the company, but I live in an eight-hundred-fifty-square-foot apartment with my husband and two kids and it’s that or divorce.”
+
+PASAJE [wasserman] L1894 a L1894, cap. SIX "REWARD DILEMMAS: EQUITY SPLITS AND CASH COMPENSATION":
+
+> L1894: However, a founder’s power to negotiate a raise should increase over time. As a startup grows and its founders are forced to cede more and more ownership to investors and employees, we might expect them to become less profoundly attached--less like stewards and more like agents. Boards would then do well to adjust by closing the compensation gap between founders and nonfounding executives; that is, relying less on attachment/stewardship and more on compensation/agency. This is, in effect, what happened at Lynx. When the startup was several years old, the founders finally were able to negotiate a bigger slice of the rewards through an equity carve-out. My empirical results reinforce the notion that the founder discount shrinks as the startup grows. By the time startups grow to 100 employees, there is no significant difference between founder and nonfounder compensation. This evaporation of the founder discount is consistent with the disappearance of both its voluntary and involuntary causes.
+
+#### I188 `playing_with_fire_gap`, paso 3
+
+```
+ID: I188
+NODE_ID: playing_with_fire_gap
+FICHERO_NODO: dataset\nodos\playing_with_fire_gap.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Calcular la brecha entre ambos factores para cada relación de cofundador
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [wasserman]: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
+LINEAS: [wasserman] L1133 a L1133
+FRASE_CLAVE: [wasserman] L1133 "For each type of relationship, the greater the distance between the two factors, the more the cofounders are “playing with fire.”"
+QUE_ANADE_O_CONCRETA: el calculo de la brecha para cada par de cofundadores; el libro compara tipos de relacion previa
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Estimar, según el tipo de relación previa entre los cofundadores, la distancia entre ambos factores: cuanto mayor, más se está jugando con fuego
+DATO_REPETIDO: entregable_esperado | actual: por cada par de cofundadores | fiel: según el tipo de relación previa entre los cofundadores
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [wasserman] L1133 a L1133, cap. FOUR "RELATIONSHIP DILEMMAS: FLOCKING TOGETHER AND PLAYING WITH FIRE":
+
+> L1133: Figure 4.3 shows how these two factors--“damage if relationship blows up” and “likelihood of discussing ‘elephants’ ”--vary with the type of prior relationship the cofounders have. For each type of relationship, the greater the distance between the two factors, the more the cofounders are “playing with fire.” The Playing-with-Fire Gap is greatest for cofounders with a prior social relationship. They are the least likely to deal with the elephants in the room and will suffer the most damage if business tensions undo their social relationships; yet their failure to deal with the elephants makes such business tensions all the more likely. They are, indeed, playing with fire.
+
+#### I189 `quemar_las_naves_burning_the_boats`, paso 2
+
+```
+ID: I189
+NODE_ID: quemar_las_naves_burning_the_boats
+FICHERO_NODO: dataset\nodos\quemar_las_naves_burning_the_boats.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Definir de antemano criterios objetivos de éxito/fracaso (pivotar o perseverar)
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [wasserman]: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
+LINEAS: [wasserman] L2687 a L2687; [wasserman] L2698 a L2698
+FRASE_CLAVE: [wasserman] L2698 "Indeed, objective observers might question whether such persistence is virtue or vice"
+QUE_ANADE_O_CONCRETA: los "criterios objetivos de exito o fracaso"; el libro pide cortafuegos y hablar de los peores escenarios, y duda de la persistencia forzada
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de aceptar dinero de amigos y familia, pon cortafuegos y habla explícitamente de los peores escenarios: la persistencia forzada puede ser virtud o vicio
+DATO_REPETIDO: entregable_esperado | actual: Documento personal o discusión con mentor sobre criterios de decisión objetivos para continuar o pivotar el negocio | fiel: Una conversación explícita sobre los peores escenarios antes de aceptar financiación de amigos y familia
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [wasserman] L2687 a L2687, cap. NINE "INVESTOR DILEMMAS: ADDING VALUE, ADDING RISKS":
+
+> L2687: Pulling together these considerations, one serial entrepreneur offered this rule of thumb: “If your family comes from a business background and are well-informed about finances and they know to keep business and friendship strictly apart, you should utilize them. However, there are clearly too many ifs, ands, or buts in this scenario, so founders would be well advised to search for financing in other places.” Just as cofounding with friends and family should be accompanied by carefully constructed firewalls and explicit discussions about worst-case scenarios, so too should any financing from friends and family, or else founders should resist the temptation to take such money.
+
+PASAJE [wasserman] L2698 a L2698, cap. NINE "INVESTOR DILEMMAS: ADDING VALUE, ADDING RISKS":
+
+> L2698: Similarly, Tim Westergren, founder of Pandora Radio, persisted with his startup long after others might have called it quits, in large part because he could not face the idea of losing the money invested by his cofounders’ friends or reneging on the $1 million in salary deferrals the company owed its employees, most of them personal friends of the founders. As Tim explained, “I’ve brought everyone into it and can’t turn back. My persistence might look like a virtue, but I have to put myself through this because of all the people I’ve involved who I have ties to.” Indeed, objective observers might question whether such persistence is virtue or vice, skewing founders’ incentives and possibly leading them to throw away years of their lives, or to throw good money after bad.
+
+#### I190 `quemar_las_naves_burning_the_boats`, paso 4
+
+```
+ID: I190
+NODE_ID: quemar_las_naves_burning_the_boats
+FICHERO_NODO: dataset\nodos\quemar_las_naves_burning_the_boats.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Evaluar si el nivel de riesgo asumido es proporcional al potencial de retorno
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [wasserman]: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
+LINEAS: [wasserman] L2702 a L2704
+FRASE_CLAVE: [wasserman] L2702 "Instead of taking prudent risks to maximize your chance for succeeding, you live constantly on the edge in a world of ‘possible success.’"
+QUE_ANADE_O_CONCRETA: la proporcion entre riesgo y retorno; el libro habla de riesgos prudentes frente a vivir al limite, y de la aversion al riesgo que trae el dinero familiar
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Evaluar si estás tomando riesgos prudentes o viviendo al límite, y si el dinero de tu familia te está volviendo demasiado adverso al riesgo
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [wasserman] L2702 a L2704, cap. NINE "INVESTOR DILEMMAS: ADDING VALUE, ADDING RISKS":
+
+> L2702: An experienced startup advisor takes a more negative view, comparing “burning the boats” to “entrepreneurial suicide.” He explains, “If one sets oneself up in situations where you must ‘succeed or die,’ then your fundamental motivation must be called into question. . . . Instead of taking prudent risks to maximize your chance for succeeding, you live constantly on the edge in a world of ‘possible success.’ If this is the case, then the business is your ‘addiction’ that you’re asking your friends and family to support. Further, founders and entrepreneurs should have a ‘safe haven’ if they are to have any hope to survive the rigors of the startup company lifestyle. Where do you go for physical/psychic nourishment and comfort when the world is crashing in on you? Family serves this purpose often and best. ‘Burning your boats’ undermines this support structure and thus is setting oneself up for failure.”
+>
+> L2704: For other founders, taking money from friends and family may make them more risk-averse than they might otherwise have been, which can result in a lower exit value. An experienced investor explained, “When an entrepreneur has all of their own personal wealth or their family’s wealth tied up in a deal, they are more likely to be risk-averse and more likely to sell out at a smaller number.” Founders who prefer a higher-probability small exit to a lower-probability large exit would see this as a good thing.
+
+### couriers (2 fichas)
+
+#### I175 `aplicar_regla_fija_de_colchon_de_relleno`, paso 4
+
+```
+ID: I175
+NODE_ID: aplicar_regla_fija_de_colchon_de_relleno
+FICHERO_NODO: dataset\nodos\aplicar_regla_fija_de_colchon_de_relleno.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [info]: C:\Users\AlexDesk\Documents\OCR\20260806\packaging_guide_infographic.txt
+LIBRO [dhl]: C:\Users\AlexDesk\Documents\OCR\20260806\dhl_express_packing_guide_en.txt
+LIBRO [ups]: C:\Users\AlexDesk\Documents\OCR\20260806\Packaging_Guidelines.txt
+LINEAS: [info] L15 a L17; [dhl] L315 a L315; [ups] L83 a L83
+FRASE_CLAVE: [info] L15 "Leave at least 5-6 cm distance between the contents and the walls of"
+QUE_ANADE_O_CONCRETA: la instruccion de anotar la regla en un lugar visible; las guias solo fijan la distancia
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Deja siempre al menos 5 a 6 cm entre el contenido y las paredes de la caja, como piden las guías de los couriers.
+DATO_REPETIDO: entregable_esperado | actual: Una regla escrita de cinco a seis centímetros | fiel: Una regla de cinco a seis centímetros
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [info] L15 a L17, guia sin capitulos:
+
+> L15: Leave at least 5-6 cm distance between the contents and the walls of
+>
+> L17: If you are shipping heavy items, use strong packing wrapped separately.
+
+PASAJE [dhl] L315 a L315, guia sin capitulos:
+
+> L315: 6cm Distance ▪ Always place items being shipped in the center of the box with at least 6cm of separation from any external walls or corners. ▪ Take this into consideration when determining the size of box relative to the size of the contents.
+
+PASAJE [ups] L83 a L83, guia sin capitulos:
+
+> L83: - Place at least two inches of paper between contents and outer box.
+
+#### I176 `elegir_caja_correcta`, paso 4
+
+```
+ID: I176
+NODE_ID: elegir_caja_correcta
+FICHERO_NODO: dataset\nodos\elegir_caja_correcta.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Pregunta a tu courier cual es su formula de peso por volumen antes de armar el envio.
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
+RESOLUCION: no hubo desacuerdo
+LIBRO [fedex]: C:\Users\AlexDesk\Documents\OCR\20260806\HowToPack_fxcom.txt
+LIBRO [info]: C:\Users\AlexDesk\Documents\OCR\20260806\packaging_guide_infographic.txt
+LINEAS: [fedex] L79 a L87; [info] L93 a L103
+FRASE_CLAVE: [fedex] L81 "Dimensional weight applies when the package is relatively light compared with its volume."
+QUE_ANADE_O_CONCRETA: el medio, preguntar al courier; las guias dan ellas mismas la formula, cada una con su divisor
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Antes de armar el envío, calcula el peso volumétrico con la fórmula de tu courier (largo por ancho por alto, entre su divisor) y compáralo con el peso real: se cobra el mayor.
+DATO_REPETIDO: resumen_teorico | actual: conviene preguntar directamente a tu courier cual es su metodo para calcular el peso por volumen, porque esa cifra cambia entre empresas y se actualiza con el tiempo | fiel: conviene calcular el peso por volumen con la formula de tu courier, porque el divisor cambia entre empresas
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [fedex] L79 a L87, guia sin capitulos:
+
+> L79: Calculating Dimensional Weight
+>
+> L81: Dimensional weight applies when the package is relatively light compared with its volume. If the dimensional weight exceeds the actual weight, charges based on the dimensional weight will be assessed. To calculate it:
+>
+> L83: - Multiply length by width by height in inches.
+>
+> L85: - Divide by 139 for U.S., Puerto Rico, and international shipments.
+>
+> L87: - Compare the dimensional weight and actual weight. Your chargeable weight is the greater of the actual weight or the dimensional weight.
+
+PASAJE [info] L93 a L103, guia sin capitulos:
+
+> L93: How do I determine the dimensional weight of my package?
+>
+> L95: You will need them when you create your shipment
+>
+> L97: Dimensional weight = (L x W x H )
+>
+> L99: 5000
+>
+> L101: It compares the actual weight of the package to its dimensional weight and to its minimum billable weight.
+>
+> L103: The greater of the three is the the billable weight and should be used to calculate the rate
