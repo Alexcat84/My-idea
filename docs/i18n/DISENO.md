@@ -135,10 +135,10 @@ o por la decisión D3, no por el catálogo.
 
 | es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
 |---|---|---|---|---|---|---|---|---|---|---|
-| La Chispa | The Spark | A Faísca | L'Étincelle | Der Funke | La Scintilla | ひらめき | 灵感火花 | 불꽃 | الشرارة | चिंगारी |
+| La Chispa | The Spark | A Faísca | L'Étincelle | Der Funke | La Scintilla | ひらめき | 灵光一闪 | 불꽃 | الشرارة | चिंगारी |
 | Claridad | Clarity | Clareza | Clarté | Klarheit | Chiarezza | 明確化 | 清晰 | 명확함 | الوضوح | स्पष्टता |
 | La Exploración | The Exploration | A Exploração | L'Exploration | Die Erkundung | L'Esplorazione | 探求 | 探索 | 탐색 | الاستكشاف | अन्वेषण |
-| Tu Plan | Your Plan | Seu Plano | Ton plan | Dein Plan | Il tuo piano | あなたのプラン | 你的计划 | 나의 계획 | خطتك | आपकी योजना |
+| Tu Plan | Your Plan | Seu Plano | Ton plan | Dein Plan | Il tuo piano | あなたのプラン | 你的计划 | 나의 계획 | خطتكم | आपकी योजना |
 | Manos a la Obra | Get to Work | Mãos à Obra | À l'ouvrage | Ans Werk | Mani all'opera | 実行 | 动手做 | 실행하기 | إلى العمل | काम पर |
 | Realizado | Achieved | Realizado | Réalisé | Verwirklicht | Realizzato | 実現 | 已实现 | 실현 | تحقّق | साकार |
 
@@ -150,10 +150,10 @@ o por la decisión D3, no por el catálogo.
 | Seguridad y Personas | Safety & People | Segurança e Pessoas | Sécurité et personnes | Sicherheit & Menschen | Sicurezza e Persone | 安全と人 | 安全与人 | 안전과 사람 | السلامة والناس | सुरक्षा और लोग |
 | Ambiente y Futuro | Environment & Future | Ambiente e Futuro | Environnement et avenir | Umwelt & Zukunft | Ambiente e Futuro | 環境と未来 | 环境与未来 | 환경과 미래 | البيئة والمستقبل | पर्यावरण और भविष्य |
 | Seguridad Digital | Digital Security | Segurança Digital | Sécurité numérique | Digitale Sicherheit | Sicurezza Digitale | デジタルセキュリティ | 数字安全 | 디지털 보안 | الأمن الرقمي | डिजिटल सुरक्षा |
-| Vender al Mundo | Sell to the World | Vender para o Mundo | Vendre au monde | Weltweit verkaufen | Vendere al Mondo | 世界に売る | 卖向世界 | 세계로 팔기 | البيع للعالم | दुनिया को बेचें |
+| Vender al Mundo | Sell to the World | Vender para o Mundo | Vendre au monde | Weltweit verkaufen | Vendere al Mondo | 世界に売る | 卖向世界 | 세계로 팔기 | البيع للعالم | दुनिया को बेचना |
 | Multiplica tu Negocio | Multiply Your Business | Multiplique seu Negócio | Multiplie ton entreprise | Vervielfache dein Geschäft | Moltiplica la tua Attività | ビジネスを広げる | 让生意倍增 | 사업 확장 | ضاعف عملك | अपना व्यवसाय बढ़ाएँ |
 | Riesgos Bajo Control | Risks Under Control | Riscos sob Controle | Risques sous contrôle | Risiken im Griff | Rischi sotto Controllo | リスクを管理下に | 风险可控 | 위험 관리 | المخاطر تحت السيطرة | जोखिम नियंत्रण में |
-| Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton achat juste | Richtig einkaufen | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤك الصحيح | आपकी सही खरीद |
+| Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton achat juste | Richtig einkaufen | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤكم الصحيح | आपकी सही खरीद |
 | Del Taller a sus Manos | From Workshop to Customer | Da Oficina às Mãos Deles | De l'atelier à leurs mains | Von der Werkstatt in ihre Hände | Dal Laboratorio alle loro Mani | 工房からお客様の手へ | 从作坊到客户手中 | 공방에서 고객의 손까지 | من الورشة إلى أيديهم | कार्यशाला से उनके हाथों तक |
 
 (El mundo 11, `primer_equipo`, está registrado en el Gate 0 pero aún no integrado en la app: su
@@ -164,21 +164,48 @@ nombre entra al glosario cuando se integre.)
 | es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
 |---|---|---|---|---|---|---|---|---|---|---|
 | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea |
-| Tus Números | Your Numbers | Seus Números | Tes chiffres | Deine Zahlen | I tuoi numeri | あなたの数字 | 你的数字 | 나의 숫자 | أرقامك | आपके आंकड़े |
-| Potencia tu idea | Power up your idea | Potencialize sua ideia | Propulse ton idée | Gib deiner Idee Kraft | Potenzia la tua idea | アイデアを強化 | 为你的想法赋能 | 아이디어 강화 | عزّز فكرتك | अपने विचार को सशक्त करें |
+| Tus Números | Your Numbers | Seus Números | Tes chiffres | Deine Zahlen | I tuoi numeri | あなたの数字 | 你的数字 | 나의 숫자 | أرقامكم | आपके आंकड़े |
+| Potencia tu idea | Power up your idea | Potencialize sua ideia | Propulse ton idée | Gib deiner Idee Kraft | Potenzia la tua idea | アイデアを強化 | 为你的想法赋能 | 아이디어 강화 | عزّزوا فكرتكم | अपने विचार को सशक्त करें |
 | Ciclo de profundización | Deepening Cycle | Ciclo de aprofundamento | Cycle d'approfondissement | Vertiefungszyklus | Ciclo di approfondimento | 深掘りサイクル | 深化循环 | 심화 사이클 | دورة التعمّق | गहराई चक्र |
 | Expediente | Full Record | Dossiê | Dossier | Gesamtakte | Fascicolo | 全記録 | 完整档案 | 전체 기록 | الملف الكامل | पूरा ब्यौरा |
 | Bitácora | Logbook | Diário de bordo | Journal de bord | Logbuch | Diario di bordo | 活動ログ | 日志 | 기록장 | سجلّ الرحلة | लॉगबुक |
 | Cierre honesto | Honest Close | Encerramento honesto | Clôture honnête | Ehrlicher Abschluss | Chiusura onesta | 正直な締めくくり | 坦诚收尾 | 솔직한 마무리 | إغلاق صادق | ईमानदार समापन |
 | Mundos | Worlds | Mundos | Mondes | Welten | Mondi | ワールド | 世界 | 월드 | العوالم | दुनियाएँ |
-| Créditos | Credits | Créditos | Crédits | Credits | Crediti | クレジット | 点数 | 크레딧 | رصيد | क्रेडिट |
-| Tu viaje (el núcleo) | Your Journey | Sua Jornada | Ton parcours | Deine Reise | Il tuo viaggio | あなたの旅 | 你的旅程 | 나의 여정 | رحلتك | आपकी यात्रा |
+| Créditos | Credits | Créditos | Crédits | Guthaben | Crediti | ポイント | 点数 | 크레딧 | رصيد | क्रेडिट |
+| Tu viaje (el núcleo) | Your Journey | Sua Jornada | Ton parcours | Deine Reise | Il tuo viaggio | あなたの旅 | 你的旅程 | 나의 여정 | رحلتكم | आपकी यात्रा |
 | A mi ritmo | At my own pace | No meu ritmo | À mon rythme | In meinem Tempo | Al mio ritmo | 自分のペースで | 按我的节奏 | 내 속도대로 | على وتيرتي | अपनी गति से |
 | Con fechas | With dates | Com datas | Avec des dates | Mit Terminen | Con date | 日付あり | 按日期 | 날짜와 함께 | مع مواعيد | तारीखों के साथ |
 
 Los nombres de las recargas (Recarga, Básico, Premium, Profesional) y los cinco estados de una tarea
 (pendiente, empezado, en proceso, hecho, no aplica) entran al catálogo como texto de interfaz, no
 como marca: se traducen en F3 con el mismo glosario.
+
+### Revisión de naturalidad (segundo modelo, 26 sep 2026)
+
+Un segundo modelo revisó el glosario idioma por idioma. Los cuatro términos que fijó el fundador
+no se tocaron.
+
+**Aplicado (evidente):**
+- de "Credits" → **"Guthaben"**: era la única entrada que dejaba la palabra en inglés; "Guthaben"
+  es el término alemán para saldo prepago.
+- ja "クレジット" → **"ポイント"**: クレジット se lee como tarjeta de crédito; las apps japonesas usan
+  ポイント para saldo prepago.
+- zh "灵感火花" → **"灵光一闪"**: el primero es un compuesto artificial; el segundo es la expresión
+  establecida ("chispazo de inspiración").
+- hi "दुनिया को बेचें" → **"दुनिया को बेचना"**: era la única entrada en imperativo; los nombres de
+  mundo van en forma nominal.
+- ar, todo el glosario: el posesivo e imperativo masculino singular (ـك) pasa al **plural neutro**
+  (ـكم): خطتكم، أرقامكم، رحلتكم، شراؤكم الصحيح، عزّزوا فكرتكم. Es la regla D7: formas neutras primero.
+
+**Discutible, para el fundador:**
+- en "The Exploration" → "Exploration" (sin artículo, como "Clarity").
+- fr "Ton achat juste" → "Ton bon achat" ("faire un bon achat" es la colocación natural).
+- de "Gesamtakte" → "Dossier" ("Akte" suena a expediente burocrático).
+- de "Gib deiner Idee Kraft" → "Stärke deine Idee" (más corto e idiomático).
+- it "Mani all'opera" → "Al lavoro" (el revisor lo ve como calco del español).
+- ja "明確化" → "明確さ" (cualidad y no proceso, como "Claridad").
+- ko "전체 기록" → "전체 자료" (para no compartir raíz con "기록장", la bitácora).
+- hi "काम पर" → "काम शुरू करें" (para que suene a llamada a la acción).
 
 ## 7. Decisiones del fundador (26 sep 2026)
 
