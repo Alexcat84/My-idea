@@ -59,7 +59,7 @@ import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
-import { cadenciaRealSemanas, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
+import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 
@@ -1579,17 +1579,18 @@ export function ManosALaObra({
   // Fase 4.0 §1[8]: el ciclo N+1 aprende la VELOCIDAD real del N. La duración
   // real por etapa la calcula analytics.ts (§6: la única calculadora del
   // tiempo); aquí solo se deriva la cadencia. /analisis es cero-LLM, cero costo.
-  const [cadenciaSemanas, setCadenciaSemanas] = useState(1);
+  // AUD-09 M11: la cadencia de CADA espacio (su propia duración por etapa). El
+  // ritual de un mundo ya no hereda el ritmo del núcleo.
+  const [cadencias, setCadencias] = useState<Record<string, number>>({});
+  const cadenciaSemanas = cadencias.core ?? 1;
   useEffect(() => {
     let vivo = true;
     (async () => {
       try {
         const res = await fetch(`/api/project/${projectId}/analisis`);
         if (!res.ok) return;
-        const d = (await res.json()) as {
-          analytics?: { universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } };
-        };
-        if (vivo) setCadenciaSemanas(cadenciaRealSemanas(d.analytics?.universal?.duracionPorEtapa ?? []));
+        const d = (await res.json()) as { analytics?: Parameters<typeof cadenciasPorEspacio>[0] };
+        if (vivo) setCadencias(cadenciasPorEspacio(d.analytics ?? {}));
       } catch {
         /* sin datos: se queda la cadencia por defecto (1 semana por etapa) */
       }
@@ -2307,7 +2308,7 @@ export function ManosALaObra({
                           planId={grupo?.plan_id ?? null}
                           hayFechas={hayFechasMundo}
                           grupos={gruposMundo}
-                          cadenciaSemanas={cadenciaSemanas}
+                          cadenciaSemanas={cadencias[mundo.dominio] ?? 1}
                           tieneTareasConFecha={tareasMundo.length > 0}
                           mostrarSelector={mostrarSelectorModo}
                           guardandoModo={guardandoModo}

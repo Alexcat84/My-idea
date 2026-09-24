@@ -134,3 +134,15 @@ export function sugerirFechasBase(opts: {
     return { id: it.id, fecha: fechaInputLocal(objetivo) };
   });
 }
+
+/** AUD-09 M11: la cadencia de CADA espacio, aprendida de su propia duración real
+ * por etapa (analytics: la capa universal del núcleo y la de cada mundo). "Cero
+ * mezcla de medidas": el ritual de un mundo no hereda el ritmo del núcleo. */
+export function cadenciasPorEspacio(analytics: {
+  universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> };
+  mundos?: Array<{ dominio: string; universal?: { duracionPorEtapa?: Array<{ etapa: number; dias: number }> } }>;
+}): Record<string, number> {
+  const out: Record<string, number> = { core: cadenciaRealSemanas(analytics.universal?.duracionPorEtapa ?? []) };
+  for (const m of analytics.mundos ?? []) out[m.dominio] = cadenciaRealSemanas(m.universal?.duracionPorEtapa ?? []);
+  return out;
+}
