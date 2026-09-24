@@ -17569,8 +17569,12 @@ M35 por texto); OTRO se queda en esta ficha.
 - El guardián de commit corre `tsc --noEmit` sobre `web/` cuando el commit la toca, con la
   prueba de que un error de tipos aborta (`1bcbf33b`).
 
-**Tanda 7B, pendiente (confianza):** M28, M29, M31, M33, M37, M38, M39, M40, M42, M43, M47,
-M48, B03a, B05, B10, B14c y M35 por texto.
+**Tanda 7B, hecha (confianza)**, cada uno con su prueba en rojo primero, sin migraciones:
+M31 `a42a312d` (más el punto del fundador: el saldo del encabezado muestra lo disponible y
+dice lo reservado), M28 `2bf59bae`, M29 `24a900ab`, M33 `d64051f0`, M37 `6876156f`, M38
+`e95686b8`, M39 `c5c0ec60`, M40 `c97f38c1`, M42 `fa45f9fc`, M43 `9436b833`, M47 `f5fe191c`,
+M48 `7eefed19`, B03a `9543b64b`, B05 `d45fdff9`, B10 `b55ed305`, B14c `8f60e5d2` y M35 por
+texto `1243c826`.
 
 **Se quedan aquí (OTRO):** M44, M45, M46, M52, M54, B02, B03b, B06, B07b, B08, B09, B11, B13,
 B14d, B15 y B16.
