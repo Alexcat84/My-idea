@@ -42,7 +42,6 @@ export interface AnalisisPapelData {
     pctATiempo: number;
     pctTardias: number;
     desviacionMediaDias: number;
-    porDominio: Array<{ nombre: string; adelantadas: number; aTiempo: number; tardias: number; completado: boolean }>;
     /** Barras "plan vs real" por etapa para el Gantt (días desde la chispa). */
     porEtapa: Array<{ etapa: number; baseInicio: number; baseFin: number | null; realInicio: number | null; realFin: number | null }>;
   };
@@ -199,40 +198,6 @@ function Esfuerzo({ series }: { series: Array<{ etapa: number; total: number; he
           </div>
         </div>
       ))}
-    </div>
-  );
-}
-
-/** Barra apilada de cumplimiento por mundo. */
-function PorMundo({ filas }: { filas: AnalisisPapelData["cumplimiento"] extends null ? never : NonNullable<AnalisisPapelData["cumplimiento"]>["porDominio"] }) {
-  if (filas.length === 0) return null;
-  return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-      {filas.map((f) => {
-        const total = f.adelantadas + f.aTiempo + f.tardias;
-        if (total === 0) return null;
-        const seg = [
-          { n: f.adelantadas, c: VERDE },
-          { n: f.aTiempo, c: AZUL },
-          { n: f.tardias, c: AMBAR },
-        ].filter((s) => s.n > 0);
-        return (
-          <div key={f.nombre}>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12.5, marginBottom: 5 }}>
-              <span style={{ color: TINTA }}>
-                {f.nombre}
-                {f.completado && <span style={{ color: VERDE, fontWeight: 600, fontSize: 11, marginLeft: 8 }}>Completado</span>}
-              </span>
-              <span style={{ color: TER, fontVariantNumeric: "tabular-nums" }}>{total}</span>
-            </div>
-            <div style={{ display: "flex", gap: 2, height: 12, borderRadius: 999, background: "#EDEFF3", overflow: "hidden" }}>
-              {seg.map((s, i) => (
-                <div key={i} style={{ width: `${(s.n / total) * 100}%`, minWidth: 3, background: s.c }} />
-              ))}
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 }
@@ -456,16 +421,9 @@ export function ContenidoAnalisis({ nombre, datos }: { nombre: string; datos: An
             <RepartoDonut adelantadas={c.adelantadas} aTiempo={c.aTiempo} tardias={c.tardias} />
           </Tarjeta>
           <GanttPapel porEtapa={c.porEtapa} dias={datos.cifras.dias} cerrada={datos.cerrada} />
-          {c.porDominio.length > 1 && (
-            <Tarjeta titulo="Cumplimiento por mundo" nota="Verde adelantadas, azul a tiempo, ámbar tardías.">
-              <PorMundo filas={c.porDominio} />
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px", marginTop: 14 }}>
-                <Chip color={VERDE} texto="adelantadas" />
-                <Chip color={AZUL} texto="a tiempo" />
-                <Chip color={AMBAR} texto="tardías" />
-              </div>
-            </Tarjeta>
-          )}
+          {/* AUD-09 M05: sin "Cumplimiento por mundo". Cero mezcla de medidas
+              (BANCO §7.1, D1 de PLAN_TODO_SEPARADO): cada mundo tiene su propio
+              análisis en su espacio. */}
         </div>
       )}
     </div>

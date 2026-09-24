@@ -293,7 +293,6 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
             fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString()),
           }
         : null;
-    const nombreDom = (dom: string) => (dom === "core" ? "Tu viaje principal" : nombreMundo(dom));
     const analisis: AnalisisPapelData = {
       cerrada: Boolean(realizadaAt),
       avance: { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total },
@@ -313,13 +312,6 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
             pctTardias: c.pctTardias,
             desviacionMediaDias: c.desviacionMediaDias,
             porEtapa: c.porEtapa,
-            porDominio: c.porDominio.map((d) => ({
-              nombre: nombreDom(d.dominio),
-              adelantadas: d.adelantadas,
-              aTiempo: d.aTiempo,
-              tardias: d.tardias,
-              completado: analytics.mundos.some((m) => m.dominio === d.dominio && m.completadoAt),
-            })),
           }
         : null,
     };
