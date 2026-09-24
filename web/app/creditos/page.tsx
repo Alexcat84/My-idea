@@ -197,11 +197,7 @@ export default async function Creditos() {
                   className={`flex flex-col items-center gap-4 rounded-panel border p-6 text-center ${s.caja}`}
                   style={{ background: s.fondo }}
                 >
-                  {pack.destacado && (
-                    <span className="absolute -top-2.5 left-1/2 flex h-[22px] -translate-x-1/2 items-center rounded-full bg-accent px-3 text-[11px] font-extrabold text-[#04102C]">
-                      El más elegido
-                    </span>
-                  )}
+                  {/* AUD-09 B03a: sin la chapa de "más elegido" (ningún dato la respalda). */}
                   <span
                     className={`flex h-[54px] w-[54px] items-center justify-center rounded-full border text-[20px] font-extrabold tabular-nums ${s.ficha}`}
                   >

@@ -729,7 +729,9 @@ function TarjetaModo({
     {
       modo: "fechas",
       titulo: "Con fechas y recordatorios",
-      desc: "Te sugiero un calendario; tú lo ajustas. Yo te recuerdo.",
+      // AUD-09 B03a: sin prometer recordatorios propios (no los hay; los
+      // avisos son los del calendario al que te suscribes).
+      desc: "Te sugiero un calendario; tú lo ajustas.",
       icono: iconoCalendario,
     },
   ];
