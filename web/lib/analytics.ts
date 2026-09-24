@@ -768,7 +768,9 @@ export function informeMarkdown(
   }
   l.push("## Lo que construiste");
   l.push(`- Duración total: **${u.duracionTotalDias} días**`);
-  l.push(`- Acciones completadas: **${u.accionesHechas}** de **${u.accionesVigente.total}** activas`);
+  // AUD-09 M02: X de N del MISMO ciclo (antes mezclaba las hechas de todos los
+  // ciclos con el total del vigente: "22 de 25").
+  l.push(`- Acciones completadas: **${u.accionesVigente.hechas}** de **${u.accionesVigente.total}** activas`);
   l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
   l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
   l.push(`- Ciclos de plan: **${u.ciclosDePlan}** · Mundos: **${u.mundos}**`);

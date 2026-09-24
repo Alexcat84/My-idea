@@ -497,3 +497,22 @@ export function nombreArchivo(nombreIdea: string, titulo: string): string {
   const sufijo = limpio(titulo) || "documento";
   return `${base}-${sufijo}`.toLowerCase();
 }
+
+/** AUD-09 M02/M03: las tareas del CICLO VIGENTE de cada espacio (el último plan
+ * de ciclo: inicial, completo o seguimiento). El tablero cuenta solo ese ciclo;
+ * los documentos también, o dicen "22 de 53" donde el tablero dice "3 de 25".
+ * Los ciclos anteriores viven en sus propias secciones del Expediente. Pura. */
+export function accionesDelCicloVigente<T extends { plan_id?: string | null; dominio: string | null }>(
+  acciones: T[],
+  planes: ReadonlyArray<{ id: string; dominio: string | null; etiqueta: string; created_at: string }>
+): T[] {
+  const vigente = new Map<string, { id: string; t: number }>();
+  for (const p of planes) {
+    if (!["inicial", "completo", "seguimiento"].includes(p.etiqueta)) continue;
+    const d = p.dominio || "core";
+    const t = new Date(p.created_at).getTime();
+    const actual = vigente.get(d);
+    if (!actual || t > actual.t) vigente.set(d, { id: p.id, t });
+  }
+  return acciones.filter((a) => a.plan_id != null && vigente.get(a.dominio || "core")?.id === a.plan_id);
+}

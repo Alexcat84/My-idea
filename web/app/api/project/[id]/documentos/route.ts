@@ -35,6 +35,7 @@ import {
   type AccionExpediente,
   type CicloExpediente,
   type MundoExpediente,
+  accionesDelCicloVigente,
 } from "@/lib/expediente";
 import { nombreDeIdea } from "@/lib/ideas";
 import { sinProcedencia } from "@/lib/planParser";
@@ -55,6 +56,8 @@ type FilaPlan = {
 };
 type FilaSesion = { id: string; created_at: string; tipo: string; dominio: string | null };
 type FilaAccion = {
+  /** AUD-09 M02: el plan de la tarea, para quedarse con el ciclo vigente. */
+  plan_id?: string | null;
   dominio: string | null;
   etapa: number;
   texto: string;
@@ -68,7 +71,7 @@ type FilaAccion = {
  * se reintenta sin esa columna si aún no está). Compartido por el expediente y el
  * Reporte de un mundo, que luego filtran por dominio. */
 async function cargarAcciones(supabase: Awaited<ReturnType<typeof createClient>>, projectId: string): Promise<FilaAccion[]> {
-  const COLS = "dominio, etapa, texto, estado, completed_at, fecha_base, orden";
+  const COLS = "plan_id, dominio, etapa, texto, estado, completed_at, fecha_base, orden";
   const con = await supabase
     .from("checklist_items")
     .select(`${COLS}, no_aplica_motivo`)
@@ -181,7 +184,8 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // Scopeado: la secuencia del mundo NO se auto-etiqueta (ya estás en su espacio).
     const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3).join("\n");
 
-    const accionesMundo = (await cargarAcciones(supabase, projectId))
+    // AUD-09 M02: solo el ciclo vigente del mundo (los anteriores son sus ciclos).
+    const accionesMundo = accionesDelCicloVigente(await cargarAcciones(supabase, projectId), planes)
       .filter((i) => i.dominio === dominio)
       .map(aAccion);
 
@@ -213,7 +217,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     }
     const { data: filasMundo, error: errRegistro } = await supabase
       .from("checklist_items")
-      .select("id, texto, etapa, orden, estado, protege_item, deteccion, probabilidad, dolor, camino")
+      .select("id, plan_id, texto, etapa, orden, estado, protege_item, deteccion, probabilidad, dolor, camino")
       .eq("project_id", projectId)
       .eq("dominio", dominio);
     if (errRegistro) {
@@ -229,7 +233,12 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
       indice: a.indice,
       titulo: a.titulo,
     }));
-    const entradas = armarRegistro((filasMundo ?? []) as unknown as FilaRespuesta[], actividades);
+    // AUD-09 M03: el Registro del ciclo vigente, igual que la pantalla.
+    const filasVigentes = accionesDelCicloVigente(
+      (filasMundo ?? []).map((f) => ({ ...f, dominio })) as Array<{ plan_id: string | null; dominio: string }>,
+      planes
+    );
+    const entradas = armarRegistro(filasVigentes as unknown as FilaRespuesta[], actividades);
     const nombreDom = nombreMundo(dominio);
     const generado = new Date().toISOString();
     return NextResponse.json({
@@ -337,7 +346,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   }
 
   // ── Expediente completo ────────────────────────────────────────────────
-  const todasAcciones = await cargarAcciones(supabase, projectId);
+  // AUD-09 M02: el Expediente cuenta el ciclo vigente de cada espacio, como el
+  // tablero; los ciclos anteriores viven en sus propias secciones.
+  const todasAcciones = accionesDelCicloVigente(await cargarAcciones(supabase, projectId), planes);
   // Solo el viaje principal en la sección de acciones del core: las de un mundo
   // van dentro de SU sección (cada cosa en su carril).
   const acciones: AccionExpediente[] = todasAcciones.filter((i) => esCore(i.dominio)).map(aAccion);
@@ -421,7 +432,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
           ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
           : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
         dias: u.duracionTotalDias,
-        accionesCumplidas: u.accionesHechas,
+        accionesCumplidas: u.accionesVigente.hechas,
         hitos: analytics.hitos
           .filter((h) => h.tipo !== "accion")
           .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
