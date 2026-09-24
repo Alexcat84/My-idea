@@ -144,6 +144,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio: string;
+    /** AUD-09 H01: al recargar, la pantalla sabe si es un seguimiento (plan del
+     * ciclo, a su precio) o un preview de mundo (diagnóstico gratis). */
+    es_seguimiento: boolean;
     ruta: Array<{ id: string; etiqueta: string; modo: string }>;
     /** El recorrido conversado ya persistido: al reentrar a la idea, la UI lo
      * vuelve a pintar en vez de arrancar en blanco. */
@@ -169,6 +172,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       // vista vacia (ni pregunta ni tarjeta).
       listo_para_plan: rec.fase === "listo_para_plan" || rec.fase === "esperando_profundizar",
       dominio: s.dominio ?? "core",
+      es_seguimiento: rec.esSeguimiento === true,
       ruta: rec.ruta.map((nid, i) => ({
         id: nid,
         // Solo la etiqueta de cara: el nombre técnico del concepto no sale

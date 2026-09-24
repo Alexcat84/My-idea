@@ -32,6 +32,7 @@ import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
+import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
@@ -74,6 +75,8 @@ interface DetalleIdea {
     pregunta: string | null;
     listo_para_plan: boolean;
     dominio?: string;
+    /** AUD-09 H01: el tipo de la sesión decide qué ofrece el final y a qué precio. */
+    es_seguimiento?: boolean;
     ruta: Array<{ id: string; etiqueta: string; modo: string }>;
     /** El recorrido conversado ya guardado: se repinta al reentrar. */
     turnos?: Array<{ pregunta: string; respuesta: string }>;
@@ -200,6 +203,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const contadorNodos = useRef(0);
   const [dominioEntrevista, setDominioEntrevista] = useState<string>("core");
+  // AUD-09 H01: el espacio Y el tipo de la sesión deciden el final de la
+  // entrevista (plan o diagnóstico) y su precio, con la misma regla del cobro.
+  const [esSeguimientoEntrevista, setEsSeguimientoEntrevista] = useState(false);
+  const fin = finDeEntrevista(dominioEntrevista, esSeguimientoEntrevista);
 
   // --- plan ---
   const [generandoPlan, setGenerandoPlan] = useState(false);
@@ -344,7 +351,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   /** Fase 4.5: la entrevista del preview terminó. Se redacta el diagnóstico
    * (gratis, Sonnet) y el escaparate vive en la sección del mundo en Manos. */
   async function verDiagnostico() {
-    if (!sessionId || dominioEntrevista === "core") return;
+    if (!sessionId || !fin.esDiagnostico) return;
     setEnviando(true);
     setError(null);
     try {
@@ -380,13 +387,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaManos(false);
     setVistaMundo(false);
     setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(false);
     setPlanMd(null);
     await generarPlan(sid);
     await refrescarDetalle();
   }
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
-  function entrarASesionNueva(data: RespuestaTurno, dominio: string) {
+  function entrarASesionNueva(data: RespuestaTurno, dominio: string, esSeguimiento: boolean) {
     setCierre(null);
     setNodos([]);
     contadorNodos.current = 0;
@@ -399,6 +407,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaManos(false);
     setVistaMundo(false);
     setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(esSeguimiento);
     planPedidoRef.current = false;
     procesarTurno(data);
   }
@@ -510,6 +519,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setPregunta(d.entrevista.pregunta);
           setListoParaPlan(d.entrevista.listo_para_plan);
           setDominioEntrevista(d.entrevista.dominio ?? "core");
+          setEsSeguimientoEntrevista(d.entrevista.es_seguimiento === true);
           setNodos(d.entrevista.ruta.map(nodoArbolDesdeRuta));
           contadorNodos.current = d.entrevista.ruta.length;
           // El recorrido conversado ya guardado: al reentrar a la idea se
@@ -1031,8 +1041,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     : prev
                 );
               }}
-              onSeguimientoIniciado={(data) => entrarASesionNueva(data as RespuestaTurno, "core")}
-              onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio)}
+              onSeguimientoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, true)}
+              onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, false)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
               soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
               caraInicial={caraInicial}
@@ -1135,7 +1145,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     }}
                     className="mt-5 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                   >
-                    Armar mi plan · {PRECIOS.plan_completo} créditos
+                    Armar mi plan · {fin.costo} créditos
                   </BotonHeroe>
                 </div>
               )}
@@ -1179,12 +1189,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       escaparate). El plan se compra después, desde él. */}
                   {temasPendientes === null ? (
                     <BotonHeroe
-                      onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                      onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                       disabled={enviando}
                       className="mt-6 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                     >
-                      {dominioEntrevista === "core"
-                        ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
+                      {!fin.esDiagnostico
+                        ? `Generar mi plan · ${fin.costo} créditos`
                         : enviando
                           ? "Redactando tu diagnóstico…"
                           : "Ver mi diagnóstico · gratis"}
@@ -1200,19 +1210,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         Seguimos explorando
                       </button>
                       <button
-                        onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                        onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                         disabled={enviando}
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        {dominioEntrevista === "core"
-                          ? `Generar mi plan · ${PRECIOS.plan_completo} créditos`
-                          : "Ver mi diagnóstico"}
+                        {!fin.esDiagnostico ? `Generar mi plan · ${fin.costo} créditos` : "Ver mi diagnóstico"}
                       </button>
                     </div>
                   )}
                   <p className="mt-4 text-center text-xs text-dim opacity-80">
-                    {dominioEntrevista === "core" ? (
+                    {!fin.esDiagnostico ? (
                       // La promesa del cobro, en el momento de decidir (canon de
                       // creditos): se descuenta A LA ENTREGA, y si algo falla no
                       // se cobra. El precio va en el boton; esto es la garantia.
@@ -1228,10 +1236,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
               {puedeGenerarPlan && pregunta && !tarjetaContextoFinal && (
                 <button
-                  onClick={() => (dominioEntrevista === "core" ? setTarjetaContextoFinal(true) : void verDiagnostico())}
+                  onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                   className="self-start text-sm text-dim hover:text-ink"
                 >
-                  {dominioEntrevista === "core"
+                  {!fin.esDiagnostico
                     ? "Generar mi plan con lo que ya conté"
                     : "Ver mi diagnóstico con lo que ya conté"}
                 </button>

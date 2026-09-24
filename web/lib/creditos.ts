@@ -16,7 +16,7 @@
  *   entrega): entregar y registrar, nunca cobrar de más ni castigar.
  */
 import { createAdminClient } from "./supabase/admin";
-import { PRECIOS, type ConceptoPrecio } from "./precios";
+import type { ConceptoPrecio } from "./precios";
 
 /**
  * CORTESIA_BETA — DORMIDA desde la fase "Catálogo congruente" (ANÁLISIS §4/§8.3).
@@ -100,22 +100,10 @@ export async function otorgarCortesia(userId: string): Promise<number> {
   return data as number;
 }
 
-/**
- * La regla de concepto del plan (CUENTAS_DISENO §5, actualizada por la 4.5):
- *   core + inicial/completo  → plan_completo (5)
- *   core + seguimiento       → seguimiento (2)
- *   mundo + inicial/completo → mundo_activar (3)  ← el preview fue GRATIS;
- *                              lo que se compra es el PLAN, a la entrega.
- *   mundo + seguimiento      → mundo_seguimiento (2)
- */
-export function conceptoDelPlan(dominio: string, esSeguimiento: boolean): ConceptoPrecio {
-  if (dominio === "core") return esSeguimiento ? "seguimiento" : "plan_completo";
-  return esSeguimiento ? "mundo_seguimiento" : "mundo_activar";
-}
-
-export function montoDelPlan(dominio: string, esSeguimiento: boolean): number {
-  return PRECIOS[conceptoDelPlan(dominio, esSeguimiento)];
-}
+// La regla de concepto del plan vive en precios.ts (fuente única: la usan el
+// cobro del servidor Y el precio que pinta la pantalla, AUD-09 H01). Se
+// re-exporta aquí para no mover a quien ya la importaba desde creditos.
+export { conceptoDelPlan, montoDelPlan } from "./precios";
 
 /** El 402 en palabras de persona (la compuerta del canon 07). */
 export function mensajeSaldoInsuficiente(creditos: number, costo: number): string {

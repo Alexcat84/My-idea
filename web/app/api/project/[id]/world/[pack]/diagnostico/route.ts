@@ -86,6 +86,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!estadoPersistido) {
     return NextResponse.json({ error: "el preview no tiene recorrido que diagnosticar" }, { status: 409 });
   }
+  // AUD-09 H01: un ciclo de seguimiento del mundo termina en su PLAN, nunca en
+  // un diagnóstico. Sin esta guarda, recargar a mitad del ciclo convertía la
+  // sesión en un diagnóstico nuevo y pisaba el resumen y la sesión del preview.
+  if (estadoPersistido.recorrido.esSeguimiento) {
+    return NextResponse.json(
+      { error: "Este es un ciclo de seguimiento: termina en tu plan, no en un diagnóstico." },
+      { status: 409 }
+    );
+  }
 
   const graph = cargarGrafo();
   const material = materialDiagnostico(

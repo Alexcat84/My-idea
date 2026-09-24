@@ -203,7 +203,9 @@ interface Props {
     banda?: Banda | null;
   }) => void;
   /** el follow devolvió el primer turno: el padre entra a la entrevista */
-  onSeguimientoIniciado: (turno: unknown) => void;
+  /** AUD-09 H01: el dominio viaja con el turno; la pantalla de la entrevista
+   * pinta el precio del seguimiento DE ESE espacio, no el del núcleo. */
+  onSeguimientoIniciado: (turno: unknown, dominio: string) => void;
   /** POST world/start devolvió el primer turno del mundo */
   onMundoIniciado: (turno: unknown, dominio: string) => void;
   /** Fase 4.5: comprar el plan del mundo desde su escaparate (el diagnóstico).
@@ -1908,7 +1910,7 @@ export function ManosALaObra({
         setErrorRitual(res.status === 429 || res.status === 402 ? String(data.error) : ERROR_GENERICO);
         return;
       }
-      onSeguimientoIniciado(data);
+      onSeguimientoIniciado(data, dominio);
     } catch {
       setErrorRitual("no pudimos conectar; revisa tu internet e intenta de nuevo");
     } finally {

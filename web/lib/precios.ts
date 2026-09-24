@@ -20,6 +20,26 @@ export const PRECIOS = {
 export type ConceptoPrecio = keyof typeof PRECIOS;
 
 /**
+ * La regla de concepto del plan (CUENTAS_DISENO §5, actualizada por la 4.5):
+ *   core + inicial/completo  → plan_completo
+ *   core + seguimiento       → seguimiento
+ *   mundo + inicial/completo → mundo_activar  ← el preview fue GRATIS;
+ *                              lo que se compra es el PLAN, a la entrega.
+ *   mundo + seguimiento      → mundo_seguimiento
+ * Vive aquí, junto a los precios, porque es PURA y la usan los dos lados: el
+ * cobro del servidor y el precio que pinta la pantalla (AUD-09 H01: la
+ * pantalla tecleaba plan_completo y anunciaba 10 donde se cobraban 5).
+ */
+export function conceptoDelPlan(dominio: string, esSeguimiento: boolean): ConceptoPrecio {
+  if (dominio === "core") return esSeguimiento ? "seguimiento" : "plan_completo";
+  return esSeguimiento ? "mundo_seguimiento" : "mundo_activar";
+}
+
+export function montoDelPlan(dominio: string, esSeguimiento: boolean): number {
+  return PRECIOS[conceptoDelPlan(dominio, esSeguimiento)];
+}
+
+/**
  * Recargas de créditos (fase "Catálogo congruente", jul 2026). Congruencia
  * EXACTA: cada pack ES un paquete real de trabajo. Los créditos son FUNGIBLES
  * (una sola billetera): los packs se narran por lo que "alcanza para", JAMÁS

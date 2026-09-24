@@ -45,12 +45,16 @@ describe("1. el header nunca abandona al usuario a mitad de pantalla", () => {
 });
 
 describe("2. lo que cuesta, se dice donde se decide", () => {
-  it("los botones del plan del NÚCLEO llevan su precio (la asimetría que se cerró)", () => {
+  it("los botones del fin de entrevista llevan su precio, leído de la regla del cobro", () => {
     const fuente = leer("idea/[id]/IdeaView.tsx");
+    // AUD-09 H01: antes este contrato exigía PRECIOS.plan_completo tecleado, y
+    // eso era el fallo: un seguimiento anunciaba 10 y se cobraba 5. El precio
+    // sale de finDeEntrevista(dominio, esSeguimiento), la misma regla del cobro.
+    expect(fuente).toContain("finDeEntrevista(dominioEntrevista, esSeguimientoEntrevista)");
     // el que dispara el cobro
-    expect(fuente).toContain("Armar mi plan · {PRECIOS.plan_completo} créditos");
+    expect(fuente).toContain("Armar mi plan · {fin.costo} créditos");
     // y los que llevan a él
-    expect(fuente).toContain("Generar mi plan · ${PRECIOS.plan_completo} créditos");
+    expect(fuente).toContain("Generar mi plan · ${fin.costo} créditos");
   });
 
   it("el botón del plan de un MUNDO sigue llevando el suyo", () => {
