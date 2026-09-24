@@ -646,7 +646,9 @@ export async function comprimirEstadoVivo(
       componente: "estado_vivo",
     });
     return { estadoVivo: r.texto.trim(), acumulado: r.acumulado };
-  } catch {
+  } catch (e) {
+    // AUD-09 M17: el respaldo (concatenar) sigue, pero la caída deja rastro.
+    console.error("[estado_vivo] la compresión falló; se concatena sin comprimir:", e);
     const estadoVivo = estadoAnterior ? `${estadoAnterior}\n${perfilSesionNueva}`.trim() : perfilSesionNueva;
     return { estadoVivo, acumulado };
   }

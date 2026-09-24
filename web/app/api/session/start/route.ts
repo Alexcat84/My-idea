@@ -135,12 +135,28 @@ export async function POST(request: Request) {
   const clasificacion = await clasificarEntrada(client, texto, entrySeeds, graph, acumulado);
   acumulado = clasificacion.acumulado;
 
-  const estado = estadoInicial({
+  const estadoBase = estadoInicial({
     actualId: clasificacion.puertaId,
     perfilSesion: clasificacion.perfilSesion,
     textoOriginal: texto,
     dominiosDesbloqueados: dominios,
   });
+  // AUD-09 M17: si la clasificación cayó a su respaldo, queda como evento de la
+  // sesión (caja de vidrio), no solo en el log.
+  const estado = clasificacion.fallback
+    ? {
+        ...estadoBase,
+        fallbackEvents: [
+          ...estadoBase.fallbackEvents,
+          {
+            tipo: "fallback_auto" as const,
+            nodo_actual: "clasificacion",
+            candidato_elegido: clasificacion.puertaId,
+            motivo: clasificacion.fallback,
+          },
+        ],
+      }
+    : estadoBase;
 
   const resultado = await avanzarTurno({
     client,

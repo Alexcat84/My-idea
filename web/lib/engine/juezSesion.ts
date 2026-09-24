@@ -73,7 +73,10 @@ export async function evaluarCalidadSesion(
     });
     const calidad = parsearJson<VeredictoJuez>(r.texto);
     return { calidad, acumulado: r.acumulado };
-  } catch {
+  } catch (e) {
+    // AUD-09 M17: el juez es muestreado y su ausencia es honesta (null), pero
+    // su caída deja rastro.
+    console.error("[juez] no se pudo evaluar la sesión:", e);
     return { calidad: null, acumulado };
   }
 }
