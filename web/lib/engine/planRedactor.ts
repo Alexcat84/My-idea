@@ -43,7 +43,7 @@ import { detectarFaltaDeAcentos } from "../detectorAcentos";
 /** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
  * redacción con IA (el ensamblado offline). Ese plan no se cobra. */
 export const AVISO_VERSION_BASICA =
-  "Esta es una versión básica de tu plan: la armé sin la redacción con IA porque esta conversación llegó a su tope de trabajo. No se te cobró.";
+  "Esta es una versión básica de tu plan: la armé sin la redacción con IA porque esta conversación llegó a su tope de trabajo. No se te cobró. Puedes regenerarlo completo desde lo que ya me contaste: solo se cobra si la IA lo entrega.";
 
 /** El aviso de un plan ya guardado, derivado del evento que la ruta del plan
  * deja en las decisiones de su sesión: tras recargar, el aviso sigue ahí. */

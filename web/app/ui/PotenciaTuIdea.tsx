@@ -197,7 +197,9 @@ export function PotenciaTuIdea({
           const progreso = progresoMundos[p.clave] ?? null;
           const comprado = estado === "plan_comprado";
           const bloqueado = estado === "bloqueado";
-          const destacado = comprado || estado === "diagnostico_listo";
+          // AUD-09: un plan básico no es una compra; el mundo espera su plan completo.
+          const basico = estado === "plan_basico";
+          const destacado = comprado || basico || estado === "diagnostico_listo";
           return (
             <button
               key={p.clave}
@@ -224,6 +226,10 @@ export function PotenciaTuIdea({
                 ) : comprado ? (
                   <span className="inline-flex shrink-0 items-center rounded-full border border-accent/45 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
                     Activo{progreso ? <> · <span className="text-done">{progreso.hechos}/{progreso.total}</span></> : ""}
+                  </span>
+                ) : basico ? (
+                  <span className="inline-flex shrink-0 items-center rounded-full border border-accent/50 bg-accent/15 px-2.5 py-[3px] text-[10.5px] font-bold text-accent">
+                    Plan básico
                   </span>
                 ) : estado === "diagnostico_listo" ? (
                   /* El estado protagonista: el escaparate espera. */
@@ -263,6 +269,8 @@ export function PotenciaTuIdea({
                        ruta, interpolada con el nombre del mundo (fuente única
                        en espacios.ts). */
                     murallaSinPlan(p.nombre)
+                  ) : basico ? (
+                    <>Tu plan básico te espera · el completo: {PRECIOS.mundo_activar} créditos, solo si la IA lo entrega</>
                   ) : estado === "diagnostico_listo" ? (
                     <>
                       Tu diagnóstico te espera · su plan: {PRECIOS.mundo_activar} créditos

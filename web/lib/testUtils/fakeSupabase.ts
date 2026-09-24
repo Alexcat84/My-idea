@@ -148,7 +148,7 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
     // se identifica por el par, igual que su UNIQUE en la 016.
     let rows = estado.projectUnlocks;
     for (const [col, val] of Object.entries(b._filters)) {
-      rows = rows.filter((r) => r[col] === val);
+      rows = rows.filter((r) => (val === null ? (r[col] ?? null) === null : r[col] === val));
     }
     if (b._update) {
       for (const fila of rows) Object.assign(fila, b._update);
@@ -218,6 +218,12 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
       return builder;
     },
     eq(col: string, val: unknown) {
+      builder._filters[col] = val;
+      return builder;
+    },
+    // AUD-09: `.is(col, null)` (el sello idempotente WHERE ... IS NULL). Se
+    // guarda como filtro; project_unlocks lo lee con "ausente cuenta como null".
+    is(col: string, val: unknown) {
       builder._filters[col] = val;
       return builder;
     },

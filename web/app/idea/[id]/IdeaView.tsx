@@ -34,7 +34,7 @@ import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
-import { PRECIOS } from "@/lib/precios";
+import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { Stepper } from "../../ui/Stepper";
@@ -68,7 +68,7 @@ interface DetalleIdea {
   };
   organizador: { contenido_md: string; created_at?: string | null } | null;
   /** AUD-09 H02: aviso del plan armado sin IA (null si fue redactado). */
-  plan: { etiqueta: string; contenido_md: string; created_at: string; aviso?: string | null } | null;
+  plan: { etiqueta: string; contenido_md: string; created_at: string; aviso?: string | null; session_id?: string } | null;
   reporte: { contenido_md: string; created_at: string } | null;
   reporte_en_curso: { pregunta: string } | null;
   entrevista: {
@@ -96,7 +96,9 @@ interface DetalleIdea {
     resumen_md?: string | null;
     resumen_at?: string | null;
     plan_pagado_at?: string | null;
-    plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+    /** AUD-09 (migración 039): la marca del plan básico (no es sello de pago). */
+    plan_basico_at?: string | null;
+    plan: { etiqueta: string; contenido_md: string; created_at: string; session_id?: string } | null;
   }>;
   historial?: PlanHistorial[];
 }
@@ -215,6 +217,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [planMd, setPlanMd] = useState<string | null>(null);
   // AUD-09 H02: el plan armado sin IA llega con su aviso honesto (no se cobró).
   const [avisoPlan, setAvisoPlan] = useState<string | null>(null);
+  // AUD-09: la sesión del plan a la vista y si es de seguimiento, para
+  // regenerarlo si es básico (sesión nueva; se cobra solo si la IA entrega).
+  const [planSesionId, setPlanSesionId] = useState<string | null>(null);
+  const [planEsSeguimiento, setPlanEsSeguimiento] = useState(false);
   // Fix (retry del stream del plan): si la redaccion muere tras los reintentos
   // del servidor, se guarda con que reintentarla. La sesion y el recorrido YA
   // estan persistidos: reintentar re-lanza SOLO la redaccion, nunca la entrevista.
@@ -413,6 +419,40 @@ export function IdeaView({ projectId }: { projectId: string }) {
     await refrescarDetalle();
   }
 
+  /** AUD-09 (decisión del fundador, 25 sep 2026): regenerar un plan básico.
+   * El servidor prepara una SESIÓN NUEVA con presupuesto completo desde el
+   * perfil ya capturado (sin repetir la entrevista); el plan sale por la ruta
+   * de siempre, que cobra solo si la IA entrega. El plan nuevo pasa a vigente
+   * y el básico queda archivado con sus tareas. */
+  async function regenerarPlan(sid: string, dominio: string, esSeguimiento: boolean) {
+    setError(null);
+    setEnviando(true);
+    let nueva: string | null = null;
+    try {
+      const res = await fetch(`/api/session/${sid}/regenerar`, { method: "POST" });
+      if (!res.ok) {
+        await mostrarRechazo(res, `/idea/${projectId}`);
+        return;
+      }
+      nueva = ((await res.json()) as { session_id: string }).session_id;
+    } catch {
+      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      return;
+    } finally {
+      setEnviando(false);
+    }
+    const planPrevio = planMd;
+    setVistaManos(false);
+    setVistaMundo(false);
+    setDominioEntrevista(dominio);
+    setEsSeguimientoEntrevista(esSeguimiento);
+    setSessionId(nueva);
+    setPlanMd(null);
+    const r = await generarPlan(nueva);
+    if (r === "rechazado") setPlanMd(planPrevio);
+    await refrescarDetalle();
+  }
+
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
   function entrarASesionNueva(data: RespuestaTurno, dominio: string, esSeguimiento: boolean) {
     setCierre(null);
@@ -490,9 +530,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
               setNodos((prev) => [...prev, { id: `etapa-${prev.length}`, label: titulo }]);
             }
           } else if (evento === "done") {
-            const d = data as { markdown: string; aviso?: string | null };
+            const d = data as { markdown: string; aviso?: string | null; session_id?: string };
             setPlanMd(d.markdown);
             setAvisoPlan(d.aviso ?? null);
+            setPlanSesionId(d.session_id ?? null);
+            setPlanEsSeguimiento(esSeguimientoEntrevista);
             // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
             void cargarChecklist();
           } else if (evento === "error") {
@@ -513,7 +555,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       }
       return "entregado_o_fallido" as const;
     },
-    [generandoPlan, cargarChecklist, projectId]
+    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
@@ -540,6 +582,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
           setAvisoPlan(d.plan.aviso ?? null);
+          setPlanSesionId(d.plan.session_id ?? null);
+          setPlanEsSeguimiento(d.plan.etiqueta === "seguimiento");
           void cargarChecklist();
         }
         if (d.entrevista) {
@@ -863,6 +907,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       resumenAt: m?.resumen_at ?? null,
       previewSessionId: m?.preview_session_id ?? null,
       planPagadoAt: m?.plan_pagado_at ?? null,
+      planBasicoAt: m?.plan_basico_at ?? null,
     };
   });
 
@@ -1070,6 +1115,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onSeguimientoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, true)}
               onMundoIniciado={(data, dominio) => entrarASesionNueva(data as RespuestaTurno, dominio, false)}
               onComprarPlanMundo={(dominio, sid) => void comprarPlanMundo(dominio, sid)}
+              onRegenerarPlanMundo={(dominio, sid, esSeg) => void regenerarPlan(sid, dominio, esSeg)}
               soloDominio={vistaMundo && hubDominio ? hubDominio : "core"}
               caraInicial={caraInicial}
               onCaraCambio={actualizarCara}
@@ -1310,9 +1356,18 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
               {/* AUD-09 H02: un plan armado sin IA se dice, no se esconde. */}
               {avisoPlan && planMd && (
-                <p role="status" className="rounded-panel border border-hairline bg-surface p-4 text-sm text-warn">
-                  {avisoPlan}
-                </p>
+                <div role="status" className="rounded-panel border border-hairline bg-surface p-4">
+                  <p className="text-sm text-warn">{avisoPlan}</p>
+                  {planSesionId && (
+                    <BotonHeroe
+                      onClick={() => void regenerarPlan(planSesionId, dominioEntrevista, planEsSeguimiento)}
+                      disabled={enviando || generandoPlan}
+                      className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
+                    >
+                      {`Regenerar mi plan · ${montoDelPlan(dominioEntrevista, planEsSeguimiento)} créditos`}
+                    </BotonHeroe>
+                  )}
+                </div>
               )}
 
               {/* Plan como documento (canon 05) */}

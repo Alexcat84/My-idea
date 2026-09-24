@@ -53,7 +53,7 @@ import {
 import { generarIcs } from "@/lib/ics";
 import { fechaHumana, fechaHumanaCorta, fechaInputLocal, fechaSello, isoDesdeInputLocal } from "@/lib/fechas";
 import { Markdown } from "./Markdown";
-import { PRECIOS } from "@/lib/precios";
+import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { dominiosDelRitual, ESPACIO_CORE, esEspacioCore, esMundoProteccion, mundosDelEspacio } from "@/lib/espacios";
 import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
@@ -140,7 +140,7 @@ interface MundoInfo {
   dominio: string;
   nombre: string;
   promesa: string;
-  plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+  plan: { etiqueta: string; contenido_md: string; created_at: string; session_id?: string } | null;
   /** Fase 4.2: el usuario dio este mundo por completado. null = abierto. */
   completadoAt?: string | null;
   /** Fase 4.5 (preview): el diagnóstico persistido (el escaparate) y la
@@ -149,6 +149,9 @@ interface MundoInfo {
   resumenAt?: string | null;
   previewSessionId?: string | null;
   planPagadoAt?: string | null;
+  /** AUD-09 (migración 039): el mundo recibió un plan básico (sin IA, no
+   * cobrado). No es una compra: se ofrece "Generar el plan completo". */
+  planBasicoAt?: string | null;
 }
 
 interface Props {
@@ -212,6 +215,9 @@ interface Props {
   /** Fase 4.5: comprar el plan del mundo desde su escaparate (el diagnóstico).
    * El padre genera el plan DESDE la sesión del preview, sin re-entrevistar. */
   onComprarPlanMundo: (dominio: string, sessionId: string) => void;
+  /** AUD-09: regenera el plan básico de un mundo (sesión nueva; se cobra solo
+   * si la IA entrega). */
+  onRegenerarPlanMundo: (dominio: string, sessionId: string, esSeguimiento: boolean) => void;
   /** Campaña "Espacios": esta misma vista sirve UN espacio. Sin la prop →
    * comportamiento histórico (core + mundos apilados). `"core"` → solo el core
    * (los mundos viven en su hub). Un dominio de mundo → solo la sección de ESE
@@ -1475,6 +1481,7 @@ export function ManosALaObra({
   onSeguimientoIniciado,
   onMundoIniciado,
   onComprarPlanMundo,
+  onRegenerarPlanMundo,
   soloDominio,
   caraInicial,
   onCaraCambio,
@@ -2200,6 +2207,33 @@ export function ManosALaObra({
                   Manos a la Obra{grupo ? ` · ${c.hechos}/${c.total}` : ""}
                 </span>
               </div>
+
+              {/* AUD-09: un plan básico no es una compra. Se dice, y en lugar del
+                  sello de compra aparece la regeneración (sesión nueva desde lo
+                  ya contado; se cobra solo si la IA entrega). */}
+              {mundo.planBasicoAt && !mundo.planPagadoAt && mundo.plan?.session_id && (
+                <div className="mt-4 rounded-panel border border-hairline bg-surface p-4">
+                  <p className="text-sm text-warn">
+                    El plan de {mundo.nombre} es una versión básica: se armó sin la redacción con IA y no se te cobró.
+                  </p>
+                  <p className="mt-2 text-[12.5px] text-dim">
+                    Esto usará{" "}
+                    <span className="font-semibold text-ink">
+                      {montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento")} créditos
+                    </span>{" "}
+                    de tu saldo, solo si la IA lo entrega.
+                  </p>
+                  <BotonHeroe
+                    onClick={() =>
+                      mundo.plan?.session_id &&
+                      onRegenerarPlanMundo(mundo.dominio, mundo.plan.session_id, mundo.plan.etiqueta === "seguimiento")
+                    }
+                    className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
+                  >
+                    Generar el plan completo · {montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento")} créditos
+                  </BotonHeroe>
+                </div>
+              )}
 
               {grupo ? (
                 esHub ? (

@@ -140,12 +140,20 @@ export interface EventoAnclajeProteccion {
   motivo?: string;
 }
 
+/** AUD-09: la sesión nace para regenerar un plan básico; apunta a la sesión
+ * de origen (la que queda archivada con su plan y sus tareas). */
+export interface EventoRegeneracionPlanBasico {
+  tipo: "regeneracion_plan_basico";
+  desde_sesion: string;
+}
+
 export type EventoInterprete =
   | EventoFallback
   | EventoDecisionTurno
   | EventoPuertaReelegida
   | EventoMundoIncompatible
-  | EventoAnclajeProteccion;
+  | EventoAnclajeProteccion
+  | EventoRegeneracionPlanBasico;
 
 /** Reparo 1 (cadena estricta): ver docstring de _reparar_camino_cadena. */
 function repararCaminoCadena(actualId: string, camino: string[], graph: Grafo, visitados: Set<string>): string[] {

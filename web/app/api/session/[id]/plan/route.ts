@@ -455,16 +455,34 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, esta
         // entrega es ADEMAS la compra del mundo: se sella plan_pagado_at
         // (idempotente, WHERE IS NULL) + telemetria preview_a_compra (§6).
+        // AUD-09, decision del fundador (25 sep 2026): UN SELLO DE PAGO SOLO
+        // EXISTE SI HUBO PAGO. Un plan basico (sin IA, no cobrado) no sella la
+        // compra: se marca con su propio campo, plan_basico_at (migracion 039),
+        // y el mundo ofrece "Generar el plan completo". Tampoco sella la
+        // carrera rara (se entrego sin poder cobrar).
         if (dominioSesion !== "core") {
-          await supabase
-            .from("project_unlocks")
-            .update({ plan_pagado_at: new Date().toISOString() })
-            .eq("project_id", projectId)
-            .eq("dominio", dominioSesion)
-            .is("plan_pagado_at", null);
-          // Un plan basico no se cobro: no cuenta como compra en la telemetria.
-          if (!versionBasica) {
-            await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+          const ahora = new Date().toISOString();
+          if (versionBasica) {
+            const { error: errBasico } = await supabase
+              .from("project_unlocks")
+              .update({ plan_basico_at: ahora })
+              .eq("project_id", projectId)
+              .eq("dominio", dominioSesion);
+            if (errBasico) {
+              console.error("[plan] no se pudo marcar el plan basico del mundo (¿falta la migracion 039?):", errBasico);
+            }
+          } else if (cobroAplicado) {
+            await supabase
+              .from("project_unlocks")
+              .update({ plan_pagado_at: ahora })
+              .eq("project_id", projectId)
+              .eq("dominio", dominioSesion)
+              .is("plan_pagado_at", null);
+            // La compra es la primera entrega pagada; un ciclo de seguimiento
+            // no es una compra (AUD-09 M36).
+            if (!recorrido.esSeguimiento) {
+              await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+            }
           }
         }
         enviar("done", {

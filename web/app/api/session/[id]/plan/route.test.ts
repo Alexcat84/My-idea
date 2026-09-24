@@ -293,6 +293,43 @@ describe("POST /api/session/[id]/plan", () => {
     expect(estadoFalso.sessions["s1"].presupuesto_excedido).toBe(true);
   });
 
+  // AUD-09, decision del fundador (25 sep 2026): UN SELLO DE PAGO SOLO EXISTE
+  // SI HUBO PAGO. Un plan basico de mundo no escribe plan_pagado_at; se marca
+  // con su propio campo (plan_basico_at) y el mundo ofrece el plan completo.
+  function sembrarMundo(acumulado: Record<string, unknown>) {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.projectUnlocks.push({ project_id: "p1", dominio: "quality", resumen_md: "diag", plan_pagado_at: null });
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      dominio: "quality",
+      closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado },
+    };
+  }
+  const acumuladoAgotado = {
+    ...acumuladoVacio,
+    uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } },
+  };
+
+  it("un plan BASICO de mundo no sella la compra: se marca con plan_basico_at", async () => {
+    sembrarMundo(acumuladoAgotado);
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const fila = estadoFalso.projectUnlocks[0];
+    expect(fila.plan_pagado_at ?? null).toBeNull();
+    expect(fila.plan_basico_at).toBeTruthy();
+    expect(estadoFalso.bitacora.some((e) => e.tipo === "preview_a_compra")).toBe(false);
+  });
+
+  it("un plan de mundo redactado con IA y cobrado SI sella la compra", async () => {
+    sembrarMundo(acumuladoVacio);
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    expect(estadoFalso.projectUnlocks[0].plan_pagado_at).toBeTruthy();
+  });
+
   it("un plan redactado con IA SI se cobra, sin aviso de version basica", async () => {
     vi.mocked(cobrar).mockClear();
     estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };

@@ -555,5 +555,22 @@ FROM (
         AND conname = 'credit_transactions_tipo_check'
     )
 
+
+  UNION ALL
+  -- 039 . la marca propia del plan basico de un mundo (AUD-09).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '039', 'project_unlocks.plan_basico_at (plan basico de mundo, no es sello de pago)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks'
+        AND column_name='plan_basico_at'
+    )
+    -- y el sello de pago sigue en su lugar: la 039 es aditiva
+    AND EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='project_unlocks'
+        AND column_name='plan_pagado_at'
+    )
+
 ) checks
 ORDER BY num;

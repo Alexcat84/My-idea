@@ -77,13 +77,27 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     resumen_md?: string | null;
     resumen_at?: string | null;
     plan_pagado_at?: string | null;
+    /** AUD-09 (migración 039): la marca del plan básico (no es sello de pago). */
+    plan_basico_at?: string | null;
   };
   let unlocksRaw: FilaUnlock[] = [];
   try {
-    const { data, error } = await supabase
+    const COLS_028 = "dominio, completado_at, cierre_motivo, preview_at, preview_session_id, resumen_md, resumen_at, plan_pagado_at";
+    // Con la 039, la marca del plan básico; sin ella, el mismo select de la 028
+    // (la app tolera la migración pendiente, pero el mundo no puede ofrecer el
+    // plan completo hasta aplicarla).
+    const con039 = await supabase
       .from("project_unlocks")
-      .select("dominio, completado_at, cierre_motivo, preview_at, preview_session_id, resumen_md, resumen_at, plan_pagado_at")
+      .select(`${COLS_028}, plan_basico_at`)
       .eq("project_id", projectId);
+    let data: unknown[] | null = con039.data;
+    let error = con039.error;
+    if (error) {
+      console.error("[idea] sin plan_basico_at en project_unlocks (¿falta la migracion 039?):", error.message);
+      const sin039 = await supabase.from("project_unlocks").select(COLS_028).eq("project_id", projectId);
+      data = sin039.data;
+      error = sin039.error;
+    }
     if (!error) unlocksRaw = (data ?? []) as FilaUnlock[];
     else {
       // Pre-028: reintento sin las columnas del preview; pre-026, solo dominio.
@@ -118,7 +132,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       resumen_md: u.resumen_md ?? null,
       resumen_at: u.resumen_at ?? null,
       plan_pagado_at: u.plan_pagado_at ?? null,
+      plan_basico_at: u.plan_basico_at ?? null,
       plan: planMundo && {
+        // AUD-09: la sesión del plan, para regenerarlo si es básico.
+        session_id: planMundo.session_id,
         etiqueta: planMundo.etiqueta,
         contenido_md: planMundo.contenido_md,
         created_at: planMundo.created_at,
@@ -248,6 +265,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     },
     organizador: organizador && { contenido_md: organizador.contenido_md, created_at: organizador.created_at },
     plan: plan && {
+      session_id: plan.session_id,
       etiqueta: plan.etiqueta,
       contenido_md: plan.contenido_md,
       created_at: plan.created_at,

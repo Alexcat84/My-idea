@@ -118,6 +118,20 @@ corre si hubo texto del redactor) y `AVISO_VERSION_BASICA` en
 `web/lib/engine/planRedactor.ts`. Nace de la AUD-09 (hallazgo H02), donde ese
 plan se cobraba completo y el aviso nunca llegaba a la pantalla.
 
+**Regenerar el plan básico (25 sep 2026).** Es una SESIÓN NUEVA con su
+presupuesto completo, que parte del perfil ya capturado (sin repetir la
+entrevista): `POST /api/session/[id]/regenerar` la prepara y el plan sale por
+la ruta de siempre. Se cobra el precio normal SOLO si la IA entrega; si vuelve
+a fallar, otra vez gratis con el mismo aviso. El plan nuevo pasa a vigente y el
+básico queda archivado con sus tareas, visible en el historial (el mecanismo de
+reemplazo de planes de siempre: el último plan del espacio manda).
+
+**Un sello de pago solo existe si hubo pago (25 sep 2026).** El plan básico de
+un mundo NO escribe `plan_pagado_at`: se marca con su propio campo,
+`project_unlocks.plan_basico_at` (migración 039), y el mundo ofrece "Generar el
+plan completo", que es la regeneración de arriba. Tampoco sella la compra la
+carrera rara (plan entregado sin poder cobrar).
+
 ## 5. SENSIBILIDAD LATAM (para decidir después, no ahora)
 $14.99 USD es accesible-premium en MX/CO/CL, caro en CentAm/BO/VE. Opciones
 en reserva: precios regionales vía las tiendas (Play/App Store los soportan

@@ -12,7 +12,9 @@
  *    violaciones gruesas para el vuelo y los tests.
  */
 
-export type EstadoMundo = "bloqueado" | "abierto" | "diagnostico_listo" | "plan_comprado";
+// AUD-09: "plan_basico" = el mundo recibió un plan armado sin IA (no cobrado).
+// No es una compra: el mundo ofrece "Generar el plan completo".
+export type EstadoMundo = "bloqueado" | "abierto" | "diagnostico_listo" | "plan_basico" | "plan_comprado";
 
 /** Lo que la maquina necesita de la fila de project_unlocks (null = sin fila). */
 export interface UnlockPreview {
@@ -20,6 +22,8 @@ export interface UnlockPreview {
   resumen_md?: string | null;
   resumen_at?: string | null;
   plan_pagado_at?: string | null;
+  /** AUD-09 (migración 039): la marca del plan básico. No es sello de pago. */
+  plan_basico_at?: string | null;
 }
 
 /**
@@ -32,6 +36,7 @@ export function estadoMundo(unlock: UnlockPreview | null | undefined, hayPlanCor
   if (!hayPlanCore) return "bloqueado";
   if (!unlock) return "abierto";
   if (unlock.plan_pagado_at) return "plan_comprado";
+  if (unlock.plan_basico_at) return "plan_basico";
   if (unlock.resumen_md && unlock.resumen_at) return "diagnostico_listo";
   return "abierto";
 }
