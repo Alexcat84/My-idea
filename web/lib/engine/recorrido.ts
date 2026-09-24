@@ -525,14 +525,17 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
 
     if (resultado.accion === "salir") {
       // ── Fase 4.3: EL MUNDO NUNCA ABANDONA ──
-      // En una sesion de mundo, 'salir' NO cierra. El usuario pago por explorar
+      // En una sesion de mundo, 'salir' NO cierra. El usuario eligio explorar
       // ESTE mundo; que la semilla que eligio evaluacionBrecha (ciega al perfil,
       // V2) no encajara no es problema suyo. La brujula re-elige entre las demas
       // semillas del dominio y sus vecinos, descartando la RAMA rechazada.
       // Quien juzga el perfil sigue siendo el interprete: si tambien rechaza la
       // puerta nueva, se vuelve a re-elegir. La brujula propone, el interprete
-      // dispone, y solo cuando no queda ninguna hay cierre -- honesto y con
-      // reembolso.
+      // dispone, y solo cuando no queda ninguna hay cierre honesto. El cierre
+      // no borra nada (AUD-09 H04): la fila del mundo se queda, con su sello de
+      // compra, su cierre y su diagnostico si los tiene. El preview es gratis y
+      // el cobro solo ocurre a la entrega de un plan, asi que no hay reembolso
+      // que hacer aqui.
       if (estado.dominioSesion !== "core") {
         const rechazada = ramaDe(actualId, graph);
         const descartados = new Set<string>([...estado.puertasDescartadas, ...rechazada]);

@@ -42,6 +42,8 @@ export function estadoFalsoVacio(): EstadoFalso {
 
 interface Builder {
   _insert?: Record<string, unknown> | Record<string, unknown>[];
+  /** AUD-09: `.delete()` (hoy solo lo resuelve project_unlocks). */
+  _delete?: boolean;
   _update?: Record<string, unknown>;
   _upsert?: Record<string, unknown>;
   _filters: Record<string, unknown>;
@@ -154,6 +156,10 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
       for (const fila of rows) Object.assign(fila, b._update);
       return { data: null, error: null };
     }
+    if (b._delete) {
+      estado.projectUnlocks = estado.projectUnlocks.filter((r) => !rows.includes(r));
+      return { data: null, error: null };
+    }
     if (b._single) return { data: rows[0] ?? null, error: rows[0] ? null : { message: "no encontrado" } };
     return { data: rows, error: null };
   }
@@ -208,6 +214,10 @@ function crearTabla(nombre: string, estado: EstadoFalso) {
     },
     update(payload: Record<string, unknown>) {
       builder._update = payload;
+      return builder;
+    },
+    delete() {
+      builder._delete = true;
       return builder;
     },
     upsert(payload: Record<string, unknown>) {

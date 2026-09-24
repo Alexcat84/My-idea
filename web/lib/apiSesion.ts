@@ -58,6 +58,23 @@ function cierreMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
   };
 }
 
+/** AUD-09 H04: el cierre de un CICLO DE SEGUIMIENTO de un mundo ya trabajado.
+ * No dice que el mundo "no es para esta idea" (lo es: el usuario ya tiene su
+ * plan) ni manda a volver a entrar: dice el hecho, que este ciclo no encontró
+ * una puerta nueva, y que lo que ya tiene sigue intacto. */
+function cierreSeguimientoMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
+  const nombre =
+    (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
+    "este mundo";
+  return {
+    titulo: `En este ciclo no encontré una puerta nueva en ${nombre}.`,
+    cuerpo:
+      "Revisé lo que me contaste y no encontré algo nuevo que valga un plan en este mundo sin " +
+      "inventarte trabajo. Tu plan y tu avance en este mundo siguen intactos: puedes seguir con " +
+      "ellos y volver a contarme cuando haya novedades.",
+  };
+}
+
 export async function responderResultadoTurno(
   supabase: SupabaseClient,
   projectId: string,
@@ -107,8 +124,8 @@ export async function responderResultadoTurno(
     // compatible con el perfil (el motor ya re-eligio todo lo que pudo).
     const cierre = resultado.cierreMundo;
     // Fase 4.3.2: DOS cosas distintas, que la regla de claims obliga a separar.
-    //  (1) `unlock_revertido` — HECHO real: se borra la fila y el usuario puede
-    //      volver a entrar al mundo. No es una afirmación de dinero.
+    //  (1) `unlock_revertido` — HECHO real. Desde la AUD-09 (H04) siempre false:
+    //      la fila del mundo no se borra jamás.
     //  (2) `creditos_devueltos` — AFIRMACIÓN DE DINERO: cuántos créditos se le
     //      devolvieron. Solo puede tener valor si un evento del ledger lo
     //      respalda. En beta la activación es gratis (no hubo consumo): null.
@@ -124,20 +141,27 @@ export async function responderResultadoTurno(
     // respalda, no se afirma.
     const creditosDevueltos: number | null = null;
     if (cierre) {
-      // Revertir el unlock: real hoy, sin ledger. El mundo vuelve a estar
-      // disponible para reintentarlo cuando el proyecto crezca.
-      await supabase.from("project_unlocks").delete().eq("project_id", projectId).eq("dominio", cierre.dominio);
+      // AUD-09 H04 (decisión del fundador, 25 sep 2026: NADA SE BORRA JAMÁS).
+      // Antes aquí se BORRABA la fila del mundo: en el seguimiento de un mundo
+      // ya pagado se iban el sello de compra, el cierre y el diagnóstico. La
+      // fila se queda; volver a entrar ya lo permite world/start mientras no
+      // haya diagnóstico, y con diagnóstico rigen sus reglas de siempre.
       await registrarBitacora(supabase, projectId, "mundo_incompatible", {
         mundo: cierre.dominio,
         motivo: cierre.motivo,
-        unlock_revertido: true,
+        es_seguimiento: resultado.estado.esSeguimiento === true,
+        unlock_revertido: false,
         creditos_devueltos: creditosDevueltos,
       });
     }
 
     // Canon 12: el cierre estructurado. El "porque" es el motivo REAL del
     // interprete (glass box), no prosa generica; null si no lo hubo.
-    const cierreTexto = cierre ? cierreMundoTexto(cierre.dominio) : CIERRE_CAMINO;
+    const cierreTexto = !cierre
+      ? CIERRE_CAMINO
+      : resultado.estado.esSeguimiento
+        ? cierreSeguimientoMundoTexto(cierre.dominio)
+        : cierreMundoTexto(cierre.dominio);
     const porque = cierre ? cierre.motivo : resultado.cierreCamino?.motivo ?? null;
 
     return NextResponse.json({
@@ -158,7 +182,8 @@ export async function responderResultadoTurno(
       // que un consumidor viejo que solo lea `mensaje` no se rompa ni se quede mudo.
       mensaje: cierreTexto.cuerpo,
       dominio: cierre?.dominio ?? null,
-      unlock_revertido: Boolean(cierre),
+      // AUD-09 H04: la fila del mundo ya no se borra jamás.
+      unlock_revertido: false,
       // El claim de dinero: null en beta. La UI solo muestra la línea de
       // reembolso si esto trae un número.
       creditos_devueltos: creditosDevueltos,
