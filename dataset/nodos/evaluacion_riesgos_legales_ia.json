@@ -7,9 +7,9 @@
   "resumen_teorico": "Los modelos de inteligencia artificial generativa se entrenan con grandes cantidades de datos que muchas veces incluyen material con derechos de autor, usado sin permiso explícito de quienes lo crearon. Qué tan legal es esto depende del país donde operes: en la Unión Europea las reglas son más estrictas, en Estados Unidos más flexibles, y en Japón está permitido de forma explícita. Antes de construir un producto o servicio basado en IA generativa, tienes que entender los riesgos legales y éticos que esto implica, sobre todo si lo que genera la IA podría reproducir contenido protegido o traerte responsabilidad legal.",
   "pasos_accionables": [
     "Investiga qué dice la ley de tu país sobre los datos usados para entrenar la IA",
-    "Revisa los términos de servicio del proveedor de IA para saber quién es dueño de lo que se genera y quién responde legalmente por eso",
+    "Revisa los acuerdos del proveedor de IA y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
     "Evalúa si usar ese contenido podría infringir derechos de autor de terceros",
-    "Consulta con un abogado antes de vender productos basados en contenido generado por IA",
+    "Antes de vender productos basados en contenido generado por IA, ten en cuenta que todavía no está claro si ese contenido está protegido por derechos de autor",
     "Define tus propias reglas internas sobre el uso ético de la IA en tu negocio"
   ],
   "entregable_esperado": "Un informe claro de los riesgos legales y éticos, con tus propias reglas de uso de IA ya definidas.",
@@ -22,5 +22,41 @@
   "condiciones_activacion": [
     "Cuando piensas vender un producto o servicio que use directamente lo que genera una IA"
   ],
-  "etiqueta_arbol": "Evalúa los Riesgos de IA"
+  "etiqueta_arbol": "Evalúa los Riesgos de IA",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-036",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consulta con un abogado antes de vender productos basados en contenido generado por IA",
+      "texto_nuevo": "Antes de vender productos basados en contenido generado por IA, ten en cuenta que todavía no está claro si ese contenido está protegido por derechos de autor",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1024",
+        "frase": "Right now, it is unclear whether the AI’s output is protected by copyright."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro señala la incertidumbre legal pero no recomienda consultar a un abogado (buscado attorney, legal advice, lawyer: solo aparece en el caso Schwartz y otros ejemplos).",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-038"
+    },
+    {
+      "id": "fidelidad-t9-038",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa los términos de servicio del proveedor de IA para saber quién es dueño de lo que se genera y quién responde legalmente por eso",
+      "texto_nuevo": "Revisa los acuerdos del proveedor de IA y decide cuánto confías en ellos, sabiendo que hoy no está claro si lo que genera la IA está protegido por derechos de autor",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L401-L401",
+        "frase": "But you have to decide how much you trust these agreements."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. Los acuerdos de L401 son las promesas de privacidad de los modos privados, no terminos de servicio que asignen la propiedad del resultado. L1024 solo dice que hoy no esta claro si lo que produce la IA esta protegido por derechos de autor. Busque terms of, agreement, liab, ownership, who owns y legal risk en todo el libro: no hay ningun pasaje que diga que los terminos del proveedor fijan quien es dueno de lo generado ni quien responde legalmente. El paso mete materia legal (propiedad y responsabilidad legal) que el libro no respalda, asi que no es solo una concrecion. El libro no dice lo contrario, asi que tampoco es CONTRARIO. Es materia legal, por eso el tipo es LEGAL_CIFRA.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-050"
+    }
+  ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "El empaque no es un accesorio: es la forma física con la que tu producto realmente viaja y se almacena. Una caja que ajusta perfecto al contenido no deja espacio para protegerlo con relleno, y una caja demasiado grande desperdicia espacio, encarece el transporte por peso volumétrico y permite que el producto se mueva durante el trayecto. El tamaño correcto equilibra protección, facilidad de manejo y costo, y las formas cúbicas suelen aprovechar mejor el espacio que las cilíndricas. Pensar la caja como parte del producto que se mueve, y no como un detalle final, ayuda a calcular el tamaño adecuado para cada pedido en vez de usar siempre el mismo empaque.",
   "pasos_accionables": [
     "Mide las tres dimensiones del producto antes de elegir la caja.",
-    "Suma entre 5 y 6 cm por lado para dejar espacio al relleno protector.",
-    "Evita usar un solo tamaño de caja para todos tus pedidos: ten al menos tres tamaños disponibles.",
+    "Deja espacio por lado para el relleno protector, sin sobredimensionar la caja.",
+    "Evita usar un solo tamaño de caja para todos tus pedidos: ten varios tamaños disponibles.",
     "Prefiere formas cúbicas sobre cilíndricas cuando el producto lo permita, porque aprovechan mejor el espacio de transporte.",
     "Revisa el peso volumétrico que cobra tu courier antes de decidir el tamaño final."
   ],
-  "entregable_esperado": "Una tabla simple con dos o tres tamaños de caja asignados a tus productos o rangos de pedido.",
+  "entregable_esperado": "Una tabla simple con varios tamaños de caja asignados a tus productos o rangos de pedido.",
   "nodos_previos": [
     "elegir_resistencia_caja_peso",
     "clasificar_tipo_paquete"
@@ -27,5 +27,57 @@
     "Notas que pagas de más en el courier por peso volumétrico aunque tu producto es liviano.",
     "El producto llega dañado porque se movió dentro de una caja demasiado grande."
   ],
-  "etiqueta_arbol": "Elige el tamaño justo de caja"
+  "etiqueta_arbol": "Elige el tamaño justo de caja",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-052",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Suma entre 5 y 6 cm por lado para dejar espacio al relleno protector.",
+      "texto_nuevo": "Deja espacio por lado para el relleno protector, sin sobredimensionar la caja.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L12107",
+        "frase": "minimizing the cubic measurements of the cartons, thus reducing transport costs, as well as minimizing the use of void fill materials"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no da ninguna medida de holgura por lado; la cifra de 5 a 6 cm no aparece.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-042"
+    },
+    {
+      "id": "fidelidad-t9-056",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita usar un solo tamaño de caja para todos tus pedidos: ten al menos tres tamaños disponibles.",
+      "texto_nuevo": "Evita usar un solo tamaño de caja para todos tus pedidos: ten varios tamaños disponibles.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L12107",
+        "frase": "The latter machines avoid the need to hold various sizes of cartons"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro habla de tener varios tamanos de caja, pero no fija un minimo de tres.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-110"
+    },
+    {
+      "id": "fidelidad-t9-057",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una tabla simple con dos o tres tamaños de caja asignados a tus productos o rangos de pedido.",
+      "texto_nuevo": "Una tabla simple con varios tamaños de caja asignados a tus productos o rangos de pedido.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L12107",
+        "frase": "The latter machines avoid the need to hold various sizes of cartons"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Es la misma cifra de tamaños de caja que corrige C131-110 (ANADIDO de cifra): el libro habla de tener varios tamaños de caja, pero no fija cuántos. El entregable repite un número concreto, así que se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-110"
+    }
+  ]
 }

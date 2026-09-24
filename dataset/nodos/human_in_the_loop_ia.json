@@ -9,7 +9,7 @@
     "Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti",
     "Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real",
     "Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez",
-    "Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto"
+    "Sugerencia de My Idea: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto"
   ],
   "entregable_esperado": "Un protocolo escrito de cómo usas la IA, que diga con claridad qué decisiones necesitan tu revisión obligatoria antes de aplicarse",
   "nodos_previos": [
@@ -26,5 +26,24 @@
     "Cuando empiezas a meter IA en las decisiones de tu negocio",
     "Cuando notas que estás dependiendo demasiado de lo que la IA te da sin revisarlo"
   ],
-  "etiqueta_arbol": "Sé el Humano en el Circuito"
+  "etiqueta_arbol": "Sé el Humano en el Circuito",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-041",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto",
+      "texto_nuevo": "Sugerencia de My Idea: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L716-L722",
+        "frase": "AI cannot easily be used for mission-critical tasks requiring precision or accuracy."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide que seas tú quien revise y verifique con cuidado las tareas críticas, pero no propone una doble revisión como regla. Ese formato de control es nuevo (se buscó 'double' y 'second review').",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C128-023"
+    }
+  ]
 }

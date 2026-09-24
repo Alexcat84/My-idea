@@ -9,7 +9,7 @@
     "Separa lo que tienes en bodega segun su funcion: para vender, para producir, para reponer piezas o consumibles de operacion.",
     "Identifica cuanto de ese stock es reserva de seguridad y cuanto es exceso sin proposito claro.",
     "Decide una meta concreta: dias de stock, numero de rotaciones al ano, o nivel de disponibilidad para tus clientes.",
-    "Revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
+    "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta."
   ],
   "entregable_esperado": "Una lista de tu inventario dividido por tipo, con una meta numerica escrita para cada categoria relevante.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Compras sin saber si estas por encima o por debajo de lo que tu negocio necesita.",
     "Quieres liberar capital atrapado en mercaderia sin arriesgarte a quedarte sin stock."
   ],
-  "etiqueta_arbol": "Clasifica tu inventario y su meta"
+  "etiqueta_arbol": "Clasifica tu inventario y su meta",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-059",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada pocos meses si tu inventario real se acerca o se aleja de esa meta.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "L4418-L4422",
+        "frase": "Your company should have a 'zero-tolerance' inventory policy. That is, it will not accept any inventory over a stated target."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide una meta pero no fija una frecuencia de revision.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-114"
+    }
+  ]
 }

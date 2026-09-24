@@ -10,7 +10,7 @@
     "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
     "Para piezas pesadas, usa caja de doble pared y confirma que no exceda el límite de peso impreso en la caja.",
     "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
-    "Documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
+    "Sugerencia de My Idea: documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
   ],
   "entregable_esperado": "Una guía breve por categoría de producto con el método de empaque que le corresponde.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
     "Has recibido reclamos por fugas o roturas en categorías específicas de tu catálogo.",
     "No sabes si tu caja actual soporta el peso del producto que estás enviando."
   ],
-  "etiqueta_arbol": "Adapta el empaque a cada artículo"
+  "etiqueta_arbol": "Adapta el empaque a cada artículo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-065",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas.",
+      "texto_nuevo": "Sugerencia de My Idea: documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas.",
+      "cita": {
+        "libro": "Guia visual de empaque",
+        "fichero": "I have an idea/txt/Supply chain/packaging_guide_infographic.txt",
+        "lineas": "L45-L67",
+        "frase": "Specialty items"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. La guia describe como empacar cada articulo especial: liquidos, pesados de mas de 25 kg, irregulares y fragiles (L45-L67). En todo el fichero (129 lineas) no hay nada sobre documentar un procedimiento por categoria ni sobre estandarizarlo. Busque document, record, checklist, procedure y each time, sin resultado. Documentar el procedimiento es un formato que pone el paso.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-046"
+    }
+  ]
 }

@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Anota los tres o cuatro motivos de devolución más comunes en tu negocio.",
     "Define para cada motivo un destino por defecto: revender, reparar, reciclar o devolver al proveedor.",
-    "Al recibir una devolución, revísala y asígnale destino dentro de las primeras 48 horas.",
+    "Al recibir una devolución, revísala y asígnale destino cuanto antes, para que no se acumule.",
     "Separa físicamente lo que ya tiene destino decidido de lo que sigue en evaluación.",
-    "Revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz."
+    "Sugerencia de My Idea: revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz."
   ],
   "entregable_esperado": "Una tabla corta de motivo de devolución con su destino, visible donde recibes las devoluciones.",
   "nodos_previos": [
@@ -23,5 +23,41 @@
     "Vendes ropa u otro producto con tasa alta de devolución.",
     "Notas que el dinero de productos devueltos tarda semanas en volver a moverse."
   ],
-  "etiqueta_arbol": "Decide rápido qué hacer con devoluciones"
+  "etiqueta_arbol": "Decide rápido qué hacer con devoluciones",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-055",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al recibir una devolución, revísala y asígnale destino dentro de las primeras 48 horas.",
+      "texto_nuevo": "Al recibir una devolución, revísala y asígnale destino cuanto antes, para que no se acumule.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L12261",
+        "frase": "It is important that these decisions are taken quickly so that returned goods do not build up and take a lot of space in the warehouse."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide decidir rapido pero no fija un plazo de 48 horas.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-092"
+    },
+    {
+      "id": "fidelidad-t9-058",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L12261",
+        "frase": "The handling of returns must therefore be carried out effectively"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no fija revision mensual de motivos de devolucion.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-111"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Las capacidades de la IA mejoran de forma exponencial y constante; el modelo actual siempre será el más limitado que se use en el futuro. Este principio invita a planificar el negocio asumiendo mejoras continuas en las herramientas de IA, evitando descartar la tecnología por sus limitaciones actuales y manteniéndose abierto a integrar nuevas versiones y agentes autónomos de IA en los procesos del negocio.",
   "pasos_accionables": [
-    "Revisar trimestralmente qué nuevas capacidades de IA podrían aplicarse al negocio",
+    "Sugerencia de My Idea: Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
     "Documentar las limitaciones actuales de la IA usada para reevaluarlas periódicamente",
     "Diseñar procesos flexibles que puedan incorporar mejoras de IA sin rediseño total",
     "Explorar agentes de IA semi-autónomos para tareas repetitivas a medida que maduran"
@@ -23,5 +23,24 @@
     "Al planificar la hoja de ruta tecnológica de la startup",
     "Cuando el equipo descarta la IA por limitaciones observadas en una versión específica"
   ],
-  "etiqueta_arbol": "Espera una IA Cada Vez Mejor"
+  "etiqueta_arbol": "Espera una IA Cada Vez Mejor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-040",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar trimestralmente qué nuevas capacidades de IA podrían aplicarse al negocio",
+      "texto_nuevo": "Sugerencia de My Idea: Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1032",
+        "frase": "You will want to keep an eye on the growing capabilities of AI in the future to see how opportunities to automate tasks might grow."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide vigilar las nuevas capacidades de la IA, pero no fija ninguna frecuencia. No aparece trimestre ni periodicidad alguna (se buscó 'quarter').",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C128-019"
+    }
+  ]
 }

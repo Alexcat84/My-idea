@@ -10,7 +10,7 @@
     "Mide el porcentaje de aciertos de cada paso por separado durante un mes.",
     "Multiplica esos porcentajes entre si para obtener el resultado combinado real.",
     "Compara esa cifra combinada con lo que le prometes al cliente y ajusta tus metas.",
-    "Repite la medicion cada mes para ver si el numero combinado mejora."
+    "Sugerencia de My Idea: repite la medicion cada mes para ver si el numero combinado mejora."
   ],
   "entregable_esperado": "Una cifra unica que representa el porcentaje real de pedidos perfectos, no el promedio de metricas sueltas.",
   "nodos_previos": [
@@ -22,5 +22,24 @@
     "Mides varias cosas por separado pero nunca las juntas en un solo numero.",
     "Quieres saber si tu servicio real es tan bueno como crees."
   ],
-  "etiqueta_arbol": "Multiplica tus métricas, no las sumes"
+  "etiqueta_arbol": "Multiplica tus métricas, no las sumes",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-054",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repite la medicion cada mes para ver si el numero combinado mejora.",
+      "texto_nuevo": "Sugerencia de My Idea: repite la medicion cada mes para ver si el numero combinado mejora.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L2935-L2939",
+        "frase": "involving a systematic and continuous concentration on monitoring and control"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide seguimiento continuo pero no fija una frecuencia mensual.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-082"
+    }
+  ]
 }

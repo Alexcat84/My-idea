@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Crítica de tu Plan con IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir. El resultado no se acepta tal cual: se destila en riesgos con su mitigación.",
+  "resumen_teorico": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir.",
   "pasos_accionables": [
     "Describir el plan o modelo de negocio a la IA con suficiente detalle",
     "Pedir 10 formas específicas en que el plan podría fallar",
     "Solicitar una visión de éxito alternativa",
-    "Invocar 2-3 personajes conocidos (emprendedores, líderes) para que critiquen el plan en su propia voz",
-    "Sintetizar los hallazgos en un documento de riesgos y mitigaciones"
+    "Invocar a tres personajes conocidos (emprendedores, líderes, artistas o filósofos) para que critiquen el plan en su propia voz",
+    "Sugerencia de My Idea: sintetizar los hallazgos en un documento de riesgos y mitigaciones"
   ],
   "entregable_esperado": "Un documento de riesgos y mitigaciones construido con las críticas que la IA le hizo a tu plan",
   "nodos_previos": [
@@ -20,5 +20,57 @@
   "condiciones_activacion": [
     "Cuando ya hay un plan o modelo de negocio escrito y conviene encontrarle los fallos antes de invertir en él"
   ],
-  "etiqueta_arbol": "Deja que la IA te Critique"
+  "etiqueta_arbol": "Deja que la IA te Critique",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-008",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Invocar 2-3 personajes conocidos (emprendedores, líderes) para que critiquen el plan en su propia voz",
+      "texto_nuevo": "Invocar a tres personajes conocidos (emprendedores, líderes, artistas o filósofos) para que critiquen el plan en su propia voz",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1216",
+        "frase": "And, to make it interesting, ask three famous figures to criticize your plan."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro fija tres personajes famosos; el paso cambia la cifra a 2-3.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-068"
+    },
+    {
+      "id": "fidelidad-t9-031",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sintetizar los hallazgos en un documento de riesgos y mitigaciones",
+      "texto_nuevo": "Sugerencia de My Idea: sintetizar los hallazgos en un documento de riesgos y mitigaciones",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1216",
+        "frase": "Any plan benefits from feedback, even if it just gives you permission to discuss what might go wrong."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide las formas de fallar, una visión de éxito y la crítica de personajes famosos, pero no habla de sintetizarlo en un documento de riesgos y mitigaciones (buscado mitigat, risk: solo aparece en otros contextos).",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-012"
+    },
+    {
+      "id": "fidelidad-t9-032",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir. El resultado no se acepta tal cual: se destila en riesgos con su mitigación.",
+      "texto_nuevo": "Casi todo el uso de la IA en el negocio va en una dirección: tú le pides y la revisas. Aquí la dirección se invierte y se usa a la IA como crítico del plan propio, que es donde más rinde y donde menos duele equivocarse. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas de fallar, una versión alternativa del éxito, y la voz de personas conocidas que dirían lo que nadie del equipo se atreve a decir.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1216",
+        "frase": "Any plan benefits from feedback, even if it just gives you permission to discuss what might go wrong."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el dato del paso 4 (sintetizar lo que salga en riesgos con su mitigación), que el libro no plantea. Es un ANADIDO práctico, así que se quita del resumen. El entregable no se toca.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-012"
+    }
+  ]
 }

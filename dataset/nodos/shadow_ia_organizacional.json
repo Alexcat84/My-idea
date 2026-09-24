@@ -11,7 +11,7 @@
     "Identificar a los usuarios más avanzados de IA en la organización (pueden estar en cualquier nivel jerárquico)",
     "Recompensar la innovación con IA en vez de amenazar puestos de trabajo, para incentivar la transparencia, con incentivos tangibles (bonos, reconocimientos) para quienes descubran usos innovadores de IA",
     "Comunicar explícitamente que el uso de IA no resultará en despidos automáticos",
-    "Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados"
+    "Sugerencia de My Idea: Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados"
   ],
   "entregable_esperado": "Una política interna de IA que fomente la transparencia y capture buenas prácticas de empleados",
   "nodos_previos": [
@@ -41,6 +41,25 @@
       "node_id": "shadow_ai_use_organizacional",
       "titulo": "Uso Oculto de IA (Shadow AI)",
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-042",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados",
+      "texto_nuevo": "Sugerencia de My Idea: Realizar encuestas anónimas para detectar el nivel real de adopción de IA entre empleados",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1097",
+        "frase": "when I conducted a bit of an unscientific Twitter poll, over half of generative AI users reported using the technology without telling anyone"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro constata el uso oculto de la IA, pero no recomienda encuestas anónimas para medirlo. Esa herramienta es nueva (se buscaron 'anonym' y 'survey').",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C128-041"
     }
   ]
 }

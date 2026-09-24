@@ -6,7 +6,7 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Solemos sobreestimar el efecto de una tecnología en el corto plazo y subestimarlo en el largo plazo. Esta ley ayuda a los líderes a calibrar expectativas realistas sobre el impacto de la IA en empleos e industrias, evitando pánico a corto plazo o complacencia a largo plazo.",
   "pasos_accionables": [
-    "Establecer horizontes de evaluación a corto (1 año), mediano (3 años) y largo plazo (5-10 años) para el impacto de IA en el negocio",
+    "Establecer horizontes de evaluación a corto, mediano y largo plazo para el impacto de IA en el negocio",
     "Evitar decisiones drásticas de recorte de personal basadas en proyecciones de corto plazo",
     "Revisar y actualizar periódicamente las expectativas conforme avanza la tecnología"
   ],
@@ -21,5 +21,24 @@
     "Al planificar estrategias de adopción de IA a largo plazo",
     "Si hay presión interna para tomar decisiones drásticas basadas en IA"
   ],
-  "etiqueta_arbol": "Calibra tus Expectativas Tecnológicas"
+  "etiqueta_arbol": "Calibra tus Expectativas Tecnológicas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-035",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer horizontes de evaluación a corto (1 año), mediano (3 años) y largo plazo (5-10 años) para el impacto de IA en el negocio",
+      "texto_nuevo": "Establecer horizontes de evaluación a corto, mediano y largo plazo para el impacto de IA en el negocio",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1167",
+        "frase": "We tend to overestimate the effect of a technology in the short run and underestimate the effect in the long run."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro cita la Ley de Amara sin fijar horizontes; los plazos de 1, 3 y 5 a 10 años no están (buscado three years, five years, horizon: sin ese uso).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-030"
+    }
+  ]
 }

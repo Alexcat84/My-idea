@@ -7,7 +7,7 @@
   "resumen_teorico": "Antes de que una tecnología o una decisión de diseño exista, puedes contarte una historia sobre cómo sería vivir con ella. Imagina escenarios extremos, llevados al límite, para descubrir tensiones y dilemas que hoy no ves: qué pasaría si existiera un sistema que puntuara el comportamiento de la gente, o una forma de criar hijos entre varias personas, o una donación genética regulada. Este ejercicio te ayuda a anticipar efectos secundarios no deseados y a cuestionar si lo que estás construyendo realmente representa progreso.",
   "pasos_accionables": [
     "Elige una tendencia tecnológica o social emergente que se relacione con lo que estás construyendo.",
-    "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, en 10-15 años, del tipo usuarios, empresas, reguladores",
+    "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, del tipo usuarios, empresas, reguladores",
     "Identifica qué tensiones éticas, sociales o de fondo aparecen en ese escenario.",
     "Usa la historia para conversar con quien te acompaña o con las personas involucradas, y anticipar consecuencias que no querrías, y antes de definir requisitos del producto",
     "Saca de ahí principios de diseño que te ayuden a evitar los riesgos que descubriste en la historia."
@@ -39,6 +39,25 @@
       "node_id": "historia_del_futuro_escenarios_especulativos",
       "titulo": "Historia del Futuro: Escenarios Especulativos como Herramienta de Diseño",
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-013",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, en 10-15 años, del tipo usuarios, empresas, reguladores",
+      "texto_nuevo": "Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, del tipo usuarios, empresas, reguladores",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L189-L193",
+        "frase": "They are meant not to predict, but to help you get a feel for what the future may bring and to allow you to muse about what you might do now."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro propone historias del futuro con o sin personajes, pero no fija ningun horizonte temporal para el ejercicio; el plazo de 10-15 anos no aparece (busque ten/fifteen/10/15 years). Los 'setenta anos' de la introduccion son un recurso narrativo, no un horizonte prescrito.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C114-003"
     }
   ]
 }

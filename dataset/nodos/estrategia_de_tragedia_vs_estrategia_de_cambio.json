@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Reconocer explícitamente los impactos negativos conocidos del modelo actual de negocio/producto",
     "Convocar a los tomadores de decisión para definir un compromiso formal de cambio",
-    "Establecer una fecha y responsables para iniciar el rediseño (evitar la 'negligencia de mañana')",
+    "Sugerencia de My Idea: establecer una fecha, idealmente hoy mismo, y responsables para iniciar el rediseño (evitar la 'negligencia de mañana')",
     "Comunicar internamente la decisión como una postura estratégica, no solo de cumplimiento"
   ],
   "entregable_esperado": "Declaración de compromiso organizacional con fecha de inicio de la estrategia de cambio",
@@ -23,5 +23,24 @@
     "Si la organización ya identificó impactos negativos pero no ha decidido actuar",
     "Si se requiere justificar ante liderazgo por qué 'seguir igual' ya no es una opción neutral"
   ],
-  "etiqueta_arbol": "Elige Cambiar, No Ignorar"
+  "etiqueta_arbol": "Elige Cambiar, No Ignorar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer una fecha y responsables para iniciar el rediseño (evitar la 'negligencia de mañana')",
+      "texto_nuevo": "Sugerencia de My Idea: establecer una fecha, idealmente hoy mismo, y responsables para iniciar el rediseño (evitar la 'negligencia de mañana')",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L267-L269",
+        "frase": "We say that point is today, and negligence starts tomorrow."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro situa en hoy el momento de decidir el cambio, pero no dice que haya que fijar una fecha ni nombrar responsables para empezar el rediseno. Busque en todo el libro responsib, deadline, timeline, accountab y schedule: solo aparecen en otros sentidos, como la responsabilidad intergeneracional o los 'immediate deadlines' vistos como obstaculo (L928). El equipo de Ford fija 'goals, strategies, and ways of measuring progress' (L908), sin fechas ni responsables. El mecanismo de fecha y responsables es una herramienta de gestion que el libro no respalda. No fija ningun valor de plazo concreto, asi que es PRACTICO.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C121-121"
+    }
+  ]
 }
