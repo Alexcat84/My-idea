@@ -183,13 +183,21 @@ export function textoProtege(e: EntradaRegistro): string {
  * Mismo contenido que la pantalla, del mismo armador: el papel y la pantalla no
  * pueden contar cosas distintas.
  */
+/**
+ * AUD-09 M48: el registro vacío. Solo se muestra (pantalla y papel) cuando el
+ * mundo ya tiene su plan, así que vacío significa que el enlace con las
+ * actividades del núcleo falló; antes decía "se llenará con el plan". Fuente
+ * única para pantalla y papel.
+ */
+export const REGISTRO_VACIO =
+  "No alcancé a enlazar este plan con tus actividades: sus respuestas están en tu plan, pero este registro quedó vacío.";
+
 export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[]): string {
   const l: string[] = [];
   l.push(`## Registro de ${nombreMundo}`);
   l.push("");
   if (entradas.length === 0) {
-    l.push("Este registro se llenará con el plan de este mundo: cada cosa que detecte");
-    l.push("quedará aquí junto a la respuesta que la atiende.");
+    l.push(REGISTRO_VACIO);
     l.push("");
     return l.join("\n");
   }

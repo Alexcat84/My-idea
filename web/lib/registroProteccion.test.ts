@@ -174,9 +174,11 @@ describe("EL CAMINO en la fila: se muestra cuando existe, se calla cuando no", (
 });
 
 describe("RUIDO CERO: el mundo sin enlaces todavía", () => {
-  it("el registro vacío dice honesto que se llenará con su plan", () => {
+  // AUD-09 M48: el registro solo se muestra con el plan ya entregado; vacío es
+  // que el enlace falló (antes decía "se llenará con el plan", que era falso).
+  it("el registro vacío dice que el enlace no se armó", () => {
     const md = registroMarkdown("Riesgos Bajo Control", []);
-    expect(md).toContain("se llenará con el plan de este mundo");
+    expect(md).toContain("No alcancé a enlazar este plan con tus actividades");
     // y no finge filas ni encabezados de tabla vacíos
     expect(md).not.toContain("###");
   });

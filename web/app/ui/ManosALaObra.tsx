@@ -46,6 +46,7 @@ import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
 import {
   armarRegistro,
   PALABRA_CAMINO,
+  REGISTRO_VACIO,
   resolverProtegido,
   severidadEnPalabras,
   textoProtege,
@@ -1188,9 +1189,9 @@ function IconoCara({ cara }: { cara: Cara }) {
  * mundo (el registro de riesgos, el de peligros, el inventario de activos)
  * instanciada sobre las actividades reales de la persona.
  *
- * Ruido cero: solo aparece en los mundos de PROTECCIÓN, y si todavía no hay
- * enlaces dice honesto que se llenará con su plan, en vez de pintar una tabla
- * vacía que parezca rota.
+ * Ruido cero: solo aparece en los mundos de PROTECCIÓN y con su plan ya
+ * entregado; si no hay enlaces, dice que el enlace no se armó (AUD-09 M48), en
+ * vez de pintar una tabla vacía que parezca rota.
  */
 function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; entradas: EntradaRegistro[] }) {
   return (
@@ -1198,8 +1199,8 @@ function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; en
       <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Registro de {nombreMundo}</p>
       {entradas.length === 0 ? (
         <p className="mt-2.5 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">
-          Este registro se llenará con el plan de este mundo: cada cosa que detecte quedará aquí junto a la
-          respuesta que la atiende.
+          {/* AUD-09 M48: el plan ya llegó; vacío = el enlace falló. */}
+          {REGISTRO_VACIO}
         </p>
       ) : (
         <ul className="mt-3 flex flex-col gap-2.5">
