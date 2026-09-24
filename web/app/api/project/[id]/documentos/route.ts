@@ -41,6 +41,7 @@ import {
 import { nombreDeIdea } from "@/lib/ideas";
 import { sinProcedencia } from "@/lib/planParser";
 import { createClient } from "@/lib/supabase/server";
+import { resumenCaminoExpediente } from "@/lib/resumenExpediente";
 
 export const runtime = "nodejs";
 
@@ -422,23 +423,24 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   // Design), en su propia página. Los datos del resumen salen de analytics.
   const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null });
   const u = analytics.universal;
-  const c = analytics.cumplimiento;
+  // AUD-09 M39: el "Cómo te fue" habla con los datos (modo y cumplimiento), no
+  // con un veredicto fijo.
+  const camino = resumenCaminoExpediente({
+    cerrada: Boolean(realizadaAt),
+    modo: analytics.modoCamino,
+    cumplimiento: analytics.cumplimiento,
+  });
   const resumen = acciones.length
     ? {
         cerrada: Boolean(realizadaAt),
         cierreMotivo: proyecto.cierre_motivo ?? null,
-        intro: realizadaAt
-          ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
-          : "Vas por buen camino. Esto es lo que llevas hasta aquí.",
+        intro: camino.intro,
         dias: u.duracionTotalDias,
         accionesCumplidas: u.accionesVigente.hechas,
         hitos: analytics.hitos
           .filter((h) => h.tipo !== "accion")
           .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
-        loQueMovio:
-          c && c.replanificaciones > 0
-            ? `Frente a tu plan inicial te moviste ${c.desviacionVsInicialDias >= 0 ? "+" : ""}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} replanificación${c.replanificaciones === 1 ? "" : "es"}. Ajustar el mapa fue parte del método.`
-            : "Mantuviste tu ritmo cerca de tu plan a lo largo del camino.",
+        loQueMovio: camino.loQueMovio,
         loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
       }
     : null;
