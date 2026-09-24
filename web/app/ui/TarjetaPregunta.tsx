@@ -12,7 +12,8 @@ interface Props {
   cintillo?: string | null;
   pregunta: string;
   enviando: boolean;
-  onEnviar: (respuesta: string) => void;
+  /** AUD-09 M27: true si el turno llegó; solo entonces se vacía el campo. */
+  onEnviar: (respuesta: string) => Promise<boolean>;
   textoBoton?: string;
 }
 
@@ -42,10 +43,10 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
         />
       </div>
       <button
-        onClick={() => {
+        onClick={async () => {
           if (!respuesta.trim() || enviando) return;
-          onEnviar(respuesta);
-          setRespuesta("");
+          // AUD-09 M27: si el turno falla, lo escrito se queda en el campo.
+          if (await onEnviar(respuesta)) setRespuesta("");
         }}
         disabled={!respuesta.trim() || enviando}
         className="mt-3 rounded-cinta border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"

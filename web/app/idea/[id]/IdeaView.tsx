@@ -692,8 +692,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectId]);
 
-  async function responder(respuesta: string) {
-    if (!sessionId || !pregunta) return;
+  // AUD-09 M27: devuelve si el turno llegó; la tarjeta vacía el campo solo
+  // entonces (si falla, lo escrito se queda para reintentar).
+  async function responder(respuesta: string): Promise<boolean> {
+    if (!sessionId || !pregunta) return false;
     setEnviando(true);
     setError(null);
     const preguntaActual = pregunta;
@@ -705,12 +707,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
       });
       if (!res.ok) {
         await mostrarRechazo(res, `/idea/${projectId}`);
-        return;
+        return false;
       }
       setRecorrido((prev) => [...prev, { pregunta: preguntaActual, respuesta }]);
       procesarTurno((await res.json()) as RespuestaTurno);
+      return true;
     } catch {
       setError("no pudimos enviar tu respuesta; revisa tu internet e intenta de nuevo");
+      return false;
     } finally {
       setEnviando(false);
     }
