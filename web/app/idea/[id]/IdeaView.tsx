@@ -188,6 +188,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // AUD-09 M31: el chip del saldo se vuelve a pedir cuando esta vista cambia el
+  // saldo (al empezar una sesión aparta; al entregarse el plan cobra).
+  const [versionSaldo, setVersionSaldo] = useState(0);
+  const avisarSaldo = () => setVersionSaldo((v) => v + 1);
 
   // --- entrevista ---
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -363,7 +367,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
         return;
       }
       if (!inicio.ok) await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
-      else procesarTurno((await inicio.json()) as RespuestaTurno);
+      else {
+        procesarTurno((await inicio.json()) as RespuestaTurno);
+        avisarSaldo();
+      }
     } catch {
       setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
     } finally {
@@ -469,6 +476,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         return;
       }
       nueva = ((await res.json()) as { session_id: string }).session_id;
+      avisarSaldo();
     } catch {
       setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
       return;
@@ -489,6 +497,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
   function entrarASesionNueva(data: RespuestaTurno, dominio: string, esSeguimiento: boolean) {
+    avisarSaldo();
     setCierre(null);
     setNodos([]);
     contadorNodos.current = 0;
@@ -573,6 +582,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               setNodos((prev) => [...prev, { id: `etapa-${prev.length}`, label: titulo }]);
             }
           } else if (evento === "done") {
+            avisarSaldo();
             const d = data as { markdown: string; aviso?: string | null; session_id?: string };
             if (dominioPlan === "core") {
               setPlanMd(d.markdown);
@@ -680,6 +690,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
             await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
           } else {
             procesarTurno((await inicio.json()) as RespuestaTurno);
+            avisarSaldo();
           }
           setEnviando(false);
         }
@@ -1021,7 +1032,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         </div>
         <span className="flex-1" />
         {/* ETAPA 2: el saldo, discreto (canon 07). Solo con cuenta real. */}
-        <ChipSaldo />
+        <ChipSaldo version={versionSaldo} />
         <div className="hidden md:block">
           <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} />
         </div>
@@ -1520,6 +1531,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                             await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
                           } else {
                             procesarTurno((await inicio.json()) as RespuestaTurno);
+                            avisarSaldo();
                           }
                         } catch {
                           setError("no pudimos conectar; revisa tu internet e intenta de nuevo");

@@ -22,7 +22,9 @@ import Link from "next/link";
 import { mundosVisibles } from "@/lib/catalogoMundos";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { PACKS, PRECIOS } from "@/lib/precios";
+import { apartadoDe } from "@/lib/creditos";
 import { leerSaldo } from "@/lib/saldo";
+import { textoChipSaldo } from "@/lib/textoSaldo";
 import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
@@ -120,6 +122,19 @@ export default async function Creditos() {
   // AUD-09 M21: lectura única; si falla, null y se dice (nunca un 0 falso).
   let saldo: number | null = 0;
   if (cuentaReal) saldo = await leerSaldo(supabase);
+  // AUD-09 M31: lo reservado por una sesión en curso (M25). La barra dice lo
+  // disponible; el héroe, el saldo y cuánto está reservado. Si las reservas no
+  // se leen, no se inventa un disponible.
+  let reservados: number | null = 0;
+  if (cuentaReal && user && saldo !== null) {
+    try {
+      reservados = await apartadoDe(user.id);
+    } catch (e) {
+      console.error("[creditos] no se pudieron leer las reservas:", e);
+      reservados = null;
+    }
+  }
+  const textoSaldo = saldo !== null && reservados !== null ? textoChipSaldo(Math.max(0, saldo - reservados), reservados) : null;
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -133,7 +148,7 @@ export default async function Creditos() {
         <div className="flex items-center gap-2 rounded-full border border-accent/35 bg-accent/[0.08] px-3 py-1.5">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" />
           <span className="text-[12.5px] font-semibold tabular-nums text-[#DCE7FF]">
-            {saldo === null ? "saldo no disponible" : `${saldo} créditos`}
+            {textoSaldo ? `${textoSaldo.principal} disponibles` : "saldo no disponible"}
           </span>
         </div>
       </header>
@@ -159,6 +174,7 @@ export default async function Creditos() {
                 <span className="text-[18px] text-dim">créditos</span>
               </div>
             )}
+            {textoSaldo?.reservados && <p className="text-[13px] text-dim">{textoSaldo.reservados}</p>}
           </div>
           <p className="mt-4 max-w-md text-center text-[12.5px] leading-relaxed text-dim">
             {cuentaReal

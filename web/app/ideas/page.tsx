@@ -13,10 +13,10 @@
 import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
-import { leerSaldo } from "@/lib/saldo";
 import { createClient } from "@/lib/supabase/server";
 import { BorrarIdeaCinta } from "../ui/BorrarIdeaCinta";
 import { BotonSalir } from "../ui/BotonSalir";
+import { ChipSaldo } from "../ui/ChipSaldo";
 import { Saludo } from "../ui/Saludo";
 import { StepperMini } from "../ui/Stepper";
 
@@ -48,13 +48,6 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
   // ambos, "Salir" les dejaría las ideas huérfanas — no se muestra.
   const esAnonimo = (auth.user?.is_anonymous ?? true) || auth.user?.user_metadata?.invitado === true;
 
-  // ETAPA 2: el saldo del chip (canon 07), leído con RLS own-select. Solo
-  // para cuentas reales: la identidad invisible no tiene ledger.
-  let saldo: number | null = null;
-  if (!esAnonimo) {
-    // AUD-09 M21: lectura única; si falla, null y el chip no aparece (nunca un 0 falso).
-    saldo = await leerSaldo(supabase);
-  }
 
   // Fase 3.8: las realizadas reposan al final, bajo su propio encabezado.
   const activas = ideas.filter((i) => !i.realizada);
@@ -68,15 +61,9 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
           My <span className="text-accent">Idea</span>
         </Link>
         <span className="flex-1" />
-        {saldo !== null && (
-          <Link
-            href="/creditos"
-            className={`inline-flex shrink-0 items-center rounded-full border px-3 py-1 text-[12px] font-semibold ${saldo === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70"}`}
-            title="Tus créditos"
-          >
-            {saldo} {saldo === 1 ? "crédito" : "créditos"}
-          </Link>
-        )}
+        {/* AUD-09 M31: el chip de siempre (una sola fuente): muestra lo
+            disponible y, si hay, lo reservado para una sesión en curso. */}
+        {!esAnonimo && <ChipSaldo />}
         {!esAnonimo && <BotonSalir />}
         {/* Configuración de cuenta: engranaje en la esquina, siempre visible
             (también con 0 ideas). Lleva al centro de cuenta (/cuenta). */}

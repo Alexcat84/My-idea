@@ -26,9 +26,16 @@ describe("leerSaldo", () => {
   });
 });
 
-describe("las tres superficies leen el saldo por la lectura única", () => {
+describe("las superficies leen el saldo por la lectura única", () => {
   const app = path.join(__dirname, "..", "app");
-  for (const rel of ["api/account/saldo/route.ts", "ideas/page.tsx", "creditos/page.tsx"]) {
+  // AUD-09 M31: /ideas ya no lee el saldo por su cuenta: pinta el ChipSaldo,
+  // que lo pide a la ruta del saldo (la de abajo, con la lectura única).
+  it("ideas/page.tsx delega en el chip, sin lectura propia", () => {
+    const f = readFileSync(path.join(app, "ideas/page.tsx"), "utf8");
+    expect(f).toMatch(/<ChipSaldo \/>/);
+    expect(f).not.toMatch(/creditos_total/);
+  });
+  for (const rel of ["api/account/saldo/route.ts", "creditos/page.tsx"]) {
     it(rel, () => {
       const f = readFileSync(path.join(app, rel), "utf8");
       expect(f).toMatch(/leerSaldo\(/);

@@ -3,44 +3,54 @@
 /**
  * ChipSaldo — ETAPA 2 (canon 07): el saldo de créditos, discreto, en el
  * header. Solo aparece con cuenta real (la identidad invisible no tiene
- * ledger). Se refresca al montarse y cuando la página lo pide vía la prop
- * `saldo` (las entregas devuelven creditos_restantes).
+ * ledger).
+ *
+ * AUD-09 M31 (decisión del fundador, 25 sep 2026): muestra lo DISPONIBLE (el
+ * saldo menos lo reservado por una sesión en curso) y, si hay reserva activa,
+ * lo dice. Se vuelve a pedir cada vez que la página sube `version` (al empezar
+ * una sesión, al entregarse un plan): antes se quedaba con el número de la
+ * carga y, tras cobrar un plan, seguía mostrando el saldo previo.
  */
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { textoChipSaldo } from "@/lib/textoSaldo";
 
-export function ChipSaldo({ saldo: saldoProp }: { saldo?: number | null }) {
-  const [saldoFetch, setSaldoFetch] = useState<number | null>(null);
+export { textoChipSaldo };
+
+export function ChipSaldo({ version = 0 }: { version?: number }) {
+  const [estado, setEstado] = useState<{ disponible: number; reservados: number } | null>(null);
 
   useEffect(() => {
-    if (typeof saldoProp === "number") return; // el padre manda el saldo
     let vivo = true;
     fetch("/api/account/saldo")
       .then((r) => (r.ok ? r.json() : null))
-      .then((d: { invisible?: boolean; saldo?: number | null } | null) => {
-        if (vivo && d && !d.invisible && typeof d.saldo === "number") setSaldoFetch(d.saldo);
+      .then((d: { invisible?: boolean; disponible?: number | null; reservados?: number | null } | null) => {
+        if (!vivo || !d || d.invisible) return;
+        // Sin un disponible cierto no se pinta un número (AUD-09 M21).
+        if (typeof d.disponible === "number") setEstado({ disponible: d.disponible, reservados: d.reservados ?? 0 });
+        else setEstado(null);
       })
       .catch(() => {});
     return () => {
       vivo = false;
     };
-  }, [saldoProp]);
+  }, [version]);
 
-  // El prop (si viene) manda; si no, lo que trajo el fetch.
-  const saldo = typeof saldoProp === "number" ? saldoProp : saldoFetch;
-
-  if (saldo === null) return null;
+  if (estado === null) return null;
+  const t = textoChipSaldo(estado.disponible, estado.reservados);
   // Canon 20 (lote 3): el cero va en GRIS, no en azul: informa sin presionar
   // ni alarmar; la puerta al frente es /creditos (el saldo es dinero, no
   // potenciadores: no mezclar procesos).
-  const claseTono = saldo === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70";
+  const claseTono =
+    estado.disponible === 0 ? "border-hairline text-dim hover:border-white/25" : "border-accent/40 text-accent hover:border-accent/70";
   return (
     <Link
       href="/creditos"
       className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-[12px] font-semibold ${claseTono}`}
-      title="Tus créditos"
+      title={t.reservados ? `${t.principal} disponibles · ${t.reservados}` : "Tus créditos"}
     >
-      {saldo} {saldo === 1 ? "crédito" : "créditos"}
+      {t.principal}
+      {t.reservados && <span className="font-normal text-dim">· {t.reservados}</span>}
     </Link>
   );
 }
