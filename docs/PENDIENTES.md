@@ -2593,6 +2593,8 @@ distingue; (3) esta.
   buscando sobre el master entero. Los 22 mal anclados se re-anclaron (0 podados: todos
   superaban el piso calibrado), el proponedor ya solo mira candidatos de dominio `core`, y la
   aserción pasó de "packs pendientes" a **todos los puentes en cada corrida**.
+  **REPARO de la AUD-09 (25 sep 2026):** el re-anclaje quedó en el ARCHIVO de puentes, no en el
+  grafo servido. Ver la ficha `puentes-reanclados-sin-tejer`, al final de este documento.
 
 ---
 
@@ -17435,6 +17437,10 @@ de `recorrido.test.ts` recorre los 164 callejones de los mundos y exige salida e
 NÚCLEO (69), un callejón sigue llevando a la oferta del plan, donde "Seguimos explorando" busca
 nodos afines por semántica.
 
+**Decisión del fundador (25 sep 2026): el callejón del núcleo se queda como está.** Ofrecer el
+plan con la salida "Seguimos explorando" es el paso natural del núcleo; el motor no reelige
+puertas ahí como lo hace en los mundos.
+
 **Lo que esta ficha NO autoriza.** El dataset no se tocó para esto y no se toca por esta
 ficha. Si alguno de estos nodos merece una arista real, se escribe **por lectura**, en otra
 campaña, afirmando una continuidad de contenido y no para tapar un hueco del motor.
@@ -17464,3 +17470,31 @@ campaña, afirmando una continuidad de contenido y no para tapar un hueco del mo
 
 **Condición de cierre:** cada uno leído y con su veredicto escrito (final legítimo, o arista
 por lectura con su fuente), en una campaña propia.
+
+## Ficha para la integración: `puentes-reanclados-sin-tejer` (AUD-09 M51 y M53, decisión del fundador 25 sep 2026)
+
+**Por qué va a la integración y no a otra sesión.** Son DATO DEL GRAFO. Por su doctrina, la
+única sesión que puede tocar `dataset/` es la de integración; la rama de arreglos de la AUD-09
+no lo toca.
+
+**Lo que midió la AUD-09** (tramo F, `docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`):
+- `scripts/reanclar_puentes.py` (commit `ff3da85f`) solo escribió `bridges_aprobados.json` y
+  `docs/_reanclaje_puentes.json`; ningún nodo cambió. Puentes aprobados contra aristas reales
+  núcleo a mundo en el grafo servido: compras 13 y 8, entrega 15 y 9, risk_management 13 y 2.
+  Los 22 sin tejer coinciden uno a uno con los cambios de `_reanclaje_puentes.json`.
+- Siguen vivas las aristas viejas de mundo a mundo (por ejemplo
+  `calificacion_de_calidad_de_proveedores` (quality) a `lleva_scorecard_desempeno_proveedor`,
+  `identificacion_de_riesgos` (quality) a `evalua_la_gravedad_sin_autoengano`), y desde el
+  núcleo Riesgos solo tiene dos puertas reales. El puente correctivo
+  `matriz_probabilidad_impacto` a `evalua_la_gravedad_sin_autoengano` no existe en el grafo.
+- Ningún guardián lo ve: `validar_anclas_de_todos_los_puentes` (`integrar_packs.py`) y el
+  chequeo de puentes de `run_phase1.py` leen el archivo, no las aristas.
+- Hermano (M53): la ley del ancla dice máximo 2 puentes por ancla y
+  `reglas_gestion_riesgo_gambling` ancla 3 (`packs/risk_management/metadata/bridges_aprobados.json`);
+  `integrar_packs.py` solo falla con más de 3. Y hay 61 aristas núcleo a mundo fuera de todo
+  `bridges_aprobados` (48 hacia quality, 7 hacia health_safety, 6 hacia environmental).
+
+**Lo que pide la ficha, en la integración:** tejer en el grafo los puentes que el archivo ya
+aprueba (y retirar las aristas viejas que reemplazan), un guardián que compare archivo contra
+aristas, y el tope de la ley del ancla en 2. **Condición de cierre:** aprobados igual a
+aristas reales en cada mundo, y el guardián en verde sobre el grafo servido.
