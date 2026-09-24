@@ -186,7 +186,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       return NextResponse.json({ error: "no pudimos abrir el mundo, intenta de nuevo" }, { status: 500 });
     }
   } else if (!unlock.plan_pagado_at) {
-    await supabase.from("project_unlocks").update({ preview_at: ahoraIso }).eq("id", unlock.id);
+    const { error: errEscritura1 } = await supabase.from("project_unlocks").update({ preview_at: ahoraIso }).eq("id", unlock.id);
+    if (errEscritura1) {
+      console.error("[app/api/project/[id]/world/[pack]/start/route.ts] update project_unlocks fallo:", errEscritura1);
+    }
   }
 
   const mensaje = `Exploración del mundo "${entrada.nombre}" (${entrada.promesa}) para mi idea. Contexto actual: ${
@@ -226,12 +229,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // La sesión del preview queda amarrada a la fila: la compra genera el plan
   // DESDE ella sin re-entrevistar. Telemetría §6: preview_iniciado.
   if (!unlock?.plan_pagado_at) {
-    await supabase
+    const { error: errEscritura2 } = await supabase
       .from("project_unlocks")
       .update({ preview_session_id: sessionId })
       .eq("project_id", projectId)
       .eq("dominio", pack)
       .is("plan_pagado_at", null);
+    if (errEscritura2) {
+      console.error("[app/api/project/[id]/world/[pack]/start/route.ts] update project_unlocks fallo:", errEscritura2);
+    }
     await registrarBitacora(supabase, projectId, "preview_iniciado", { mundo: pack });
   }
 

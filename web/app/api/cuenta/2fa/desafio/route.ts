@@ -92,11 +92,15 @@ export async function POST(request: Request) {
       verified = true;
       const usado = hashes.find((h) => !consumo.remainingHashes.includes(h));
       if (usado) {
-        await admin
+        const { error: errEscritura1 } = await admin
           .from("two_factor_recovery_codes")
           .update({ used_at: new Date().toISOString() })
           .eq("user_id", userId)
           .eq("code_hash", usado);
+        if (errEscritura1) {
+          console.error("[app/api/cuenta/2fa/desafio/route.ts] update two_factor_recovery_codes fallo; no se da por superado el desafio:", errEscritura1);
+          return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+        }
       }
     }
   }
@@ -124,11 +128,15 @@ export async function POST(request: Request) {
     const esperado = hashEmailCode(emailCode, codeSecret).toLowerCase();
     if (secureEqualHex(esperado, String(fila.code_hash).trim().toLowerCase())) {
       verified = true;
-      await admin
+      const { error: errEscritura2 } = await admin
         .from("two_factor_email_codes")
         .update({ consumed_at: new Date().toISOString() })
         .eq("id", fila.id as string)
         .eq("user_id", userId);
+      if (errEscritura2) {
+        console.error("[app/api/cuenta/2fa/desafio/route.ts] update two_factor_email_codes fallo; no se da por superado el desafio:", errEscritura2);
+        return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+      }
     }
   }
 
@@ -136,10 +144,11 @@ export async function POST(request: Request) {
     await registrarIntento2FA(userId, ip, false);
     return NextResponse.json({ error: "Ese código no coincide. Vuelve a intentarlo." }, { status: 401 });
   }
-  await registrarIntento2FA(userId, ip, true, sesion.sessionId);
-
+  // AUD-09 (tanda 5): el paso de TOTP (anti-repetición) se escribe ANTES de dar
+  // el desafío por superado. Si esa escritura falla, el código podría volver a
+  // usarse: se falla cerrado y el desafío no cuenta como superado.
   if (verifiedTotpStep !== null) {
-    await admin
+    const { error: errEscritura3 } = await admin
       .from("user_seguridad")
       .update({
         totp_last_used_step: verifiedTotpStep,
@@ -147,7 +156,13 @@ export async function POST(request: Request) {
         updated_at: new Date().toISOString(),
       })
       .eq("user_id", userId);
+    if (errEscritura3) {
+      console.error("[app/api/cuenta/2fa/desafio/route.ts] update user_seguridad fallo; no se da por superado el desafio:", errEscritura3);
+      return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+    }
   }
+
+  await registrarIntento2FA(userId, ip, true, sesion.sessionId);
 
   return NextResponse.json({ ok: true });
 }

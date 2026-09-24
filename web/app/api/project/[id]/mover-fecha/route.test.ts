@@ -90,4 +90,33 @@ describe("POST /api/project/[id]/mover-fecha (Fase 4.7)", () => {
     expect(it2.fecha_base_origen).toBe("ajustada");
     expect(it3.fecha_base_original).toBe(D("2026-03-25")); // también congela la suya
   });
+
+  it("si la escritura falla: 500 honesto, sin 'ok' y sin evento en la bitácora (AUD-09)", async () => {
+    hacerFallarUpdatesDeChecklist();
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const res = await POST(req({ item_id: "it2", fecha: D("2026-03-27"), cascada: false }), PARAMS);
+    expect(res.status).toBe(500);
+    expect(estadoFalso.bitacora.some((e) => e.tipo === "fecha_movida")).toBe(false);
+    expect(errores).toHaveBeenCalled();
+    errores.mockRestore();
+  });
 });
+
+// AUD-09 (tanda 5): toda escritura que falla deja rastro. Si el update de
+// checklist_items falla, la ruta ya no responde "ok" ni registra en la bitácora.
+function hacerFallarUpdatesDeChecklist() {
+  const fromReal = supabaseFalso.from.getMockImplementation()!;
+  supabaseFalso.from.mockImplementation((nombre: string) => {
+    const tabla = fromReal(nombre) as Record<string, unknown>;
+    if (nombre === "checklist_items") {
+      const update = tabla.update as (p: unknown) => unknown;
+      tabla.update = (p: unknown) => {
+        update(p);
+        tabla.then = (res: (v: unknown) => unknown) =>
+          Promise.resolve({ data: null, error: { message: "la base no responde" } }).then(res);
+        return tabla;
+      };
+    }
+    return tabla as never;
+  });
+}

@@ -371,10 +371,14 @@ export async function registrarBitacora(
   tipo: string,
   payload: Record<string, unknown> = {}
 ): Promise<void> {
+  // La bitácora nunca bloquea la acción del usuario, pero su falla deja rastro
+  // (AUD-09 tanda 5): supabase-js no lanza, devuelve { error }, y antes ese
+  // error se perdía sin síntoma, incluido el registro de un cobro_carrera.
   try {
-    await supabase.from("project_bitacora").insert({ project_id: projectId, tipo, payload });
-  } catch {
-    /* la bitácora nunca bloquea la acción del usuario */
+    const { error } = await supabase.from("project_bitacora").insert({ project_id: projectId, tipo, payload });
+    if (error) console.error(`[bitacora] no se registro "${tipo}" en ${projectId}:`, error);
+  } catch (e) {
+    console.error(`[bitacora] no se registro "${tipo}" en ${projectId}:`, e);
   }
 }
 

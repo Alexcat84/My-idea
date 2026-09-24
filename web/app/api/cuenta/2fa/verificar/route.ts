@@ -96,11 +96,15 @@ export async function POST(request: Request) {
       verified = true;
       const usado = hashes.find((h) => !consumo.remainingHashes.includes(h));
       if (usado) {
-        await admin
+        const { error: errEscritura1 } = await admin
           .from("two_factor_recovery_codes")
           .update({ used_at: new Date().toISOString() })
           .eq("user_id", userId)
           .eq("code_hash", usado);
+        if (errEscritura1) {
+          console.error("[app/api/cuenta/2fa/verificar/route.ts] update two_factor_recovery_codes fallo; no se da por superado el desafio:", errEscritura1);
+          return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+        }
       }
     }
   }

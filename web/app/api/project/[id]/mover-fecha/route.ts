@@ -112,10 +112,25 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     : [];
 
   // Aplica: el objetivo a su nueva fecha; cada posterior corre el MISMO delta.
-  await supabase.from("checklist_items").update(cambioFecha(objetivo, datos.fecha)).eq("id", objetivo.id).eq("project_id", projectId);
+  // AUD-09 (tanda 5): toda escritura que falla deja rastro; antes se respondía
+  // "ok" y la bitácora registraba un movimiento que no se guardó.
+  let fallos = 0;
+  const { error: errEscritura1 } = await supabase.from("checklist_items").update(cambioFecha(objetivo, datos.fecha)).eq("id", objetivo.id).eq("project_id", projectId);
+  if (errEscritura1) {
+    console.error("[app/api/project/[id]/mover-fecha/route.ts] update checklist_items fallo:", errEscritura1);
+    fallos += 1;
+  }
   for (const p of posteriores) {
     const nueva = new Date(Date.parse(p.fecha_base!) + deltaMs).toISOString();
-    await supabase.from("checklist_items").update(cambioFecha(p, nueva)).eq("id", p.id).eq("project_id", projectId);
+    const { error: errEscritura2 } = await supabase.from("checklist_items").update(cambioFecha(p, nueva)).eq("id", p.id).eq("project_id", projectId);
+    if (errEscritura2) {
+      console.error("[app/api/project/[id]/mover-fecha/route.ts] update checklist_items fallo:", errEscritura2);
+      fallos += 1;
+    }
+  }
+
+  if (fallos > 0) {
+    return NextResponse.json({ error: "No pude guardar todas tus fechas. Intenta de nuevo: lo que quedó guardado se corrige al reintentar.", fallidas: fallos }, { status: 500 });
   }
 
   await registrarBitacora(supabase, projectId, "fecha_movida", {

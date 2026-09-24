@@ -493,12 +493,15 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
               console.error("[plan] no se pudo marcar el plan basico del mundo (¿falta la migracion 039?):", errBasico);
             }
           } else if (cobroAplicado) {
-            await supabase
+            const { error: errEscritura1 } = await supabase
               .from("project_unlocks")
               .update({ plan_pagado_at: ahora })
               .eq("project_id", projectId)
               .eq("dominio", dominioSesion)
               .is("plan_pagado_at", null);
+            if (errEscritura1) {
+              console.error("[app/api/session/[id]/plan/route.ts] update project_unlocks fallo:", errEscritura1);
+            }
             // La compra es la primera entrega pagada; un ciclo de seguimiento
             // no es una compra (AUD-09 M36).
             if (!recorrido.esSeguimiento) {

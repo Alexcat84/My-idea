@@ -122,7 +122,10 @@ export async function POST(request: Request) {
   const envio = await enviarPorResend({ apiKey, from, to: sesion.user.email, codigo });
   if (!envio.ok) {
     console.error("[2fa/email/enviar] Resend fallo:", envio.status, envio.message);
-    await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+    const { error: errEscritura1 } = await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+    if (errEscritura1) {
+      console.error("[app/api/cuenta/2fa/email/enviar/route.ts] delete two_factor_email_codes fallo:", errEscritura1);
+    }
     return NextResponse.json(
       { error: "No pudimos enviar el correo. Intenta de nuevo en un momento." },
       { status: 502 }

@@ -83,6 +83,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   );
 
   const ahora = new Date().toISOString();
+  // AUD-09 (tanda 5): toda escritura que falla deja rastro. Antes estos updates
+  // no miraban su error y la ruta respondía "confirmadas: N" aunque no se
+  // hubiera guardado nada.
+  let fallos = 0;
   for (const f of datos.fechas) {
     const prev = prevPorId.get(f.item_id);
     const cambios: Record<string, unknown> = {
@@ -93,7 +97,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (prev?.fecha_base && !prev.fecha_base_original) {
       cambios.fecha_base_original = prev.fecha_base;
     }
-    await supabase.from("checklist_items").update(cambios).eq("id", f.item_id).eq("project_id", projectId);
+    const { error: errEscritura1 } = await supabase.from("checklist_items").update(cambios).eq("id", f.item_id).eq("project_id", projectId);
+    if (errEscritura1) {
+      console.error("[app/api/project/[id]/baseline/route.ts] update checklist_items fallo:", errEscritura1);
+      fallos += 1;
+    }
+  }
+
+  if (fallos > 0) {
+    return NextResponse.json({ error: "No pude guardar todas tus fechas. Intenta de nuevo: lo que quedó guardado se corrige al reintentar.", fallidas: fallos }, { status: 500 });
   }
 
   // Sella la baseline del ciclo. RLS de plans (user_id) garantiza propiedad.

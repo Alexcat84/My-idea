@@ -46,8 +46,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
   }
 
-  await admin.from("two_factor_recovery_codes").delete().eq("user_id", userId);
-  await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+  const { error: errEscritura1 } = await admin.from("two_factor_recovery_codes").delete().eq("user_id", userId);
+  if (errEscritura1) {
+    console.error("[app/api/cuenta/2fa/desactivar/route.ts] delete two_factor_recovery_codes fallo:", errEscritura1);
+  }
+  const { error: errEscritura2 } = await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
+  if (errEscritura2) {
+    console.error("[app/api/cuenta/2fa/desactivar/route.ts] delete two_factor_email_codes fallo:", errEscritura2);
+  }
   await registrarIntento2FA(userId, ipDelRequest(request), true, sesion.sessionId);
 
   return NextResponse.json({ ok: true });
