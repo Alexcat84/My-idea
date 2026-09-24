@@ -18,7 +18,7 @@
  * calendario se recalculó distinto.
  */
 import { NextResponse } from "next/server";
-import { CAPACIDAD_SEMANAL, MODO_CAMINO, type CapacidadSemanal, type ModoCamino } from "@/lib/dbContract";
+import { CAPACIDAD_SEMANAL, MODO_CAMINO, PACK_CLICKS_PACK, type CapacidadSemanal, type ModoCamino } from "@/lib/dbContract";
 import { ESPACIO_CORE, esEspacioCore } from "@/lib/espacios";
 import {
   guardarCapacidadEspacio,
@@ -66,6 +66,12 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const nuevo = body.modo_camino as ModoCamino | undefined;
   const nuevaCapacidad = body.capacidad_semanal as CapacidadSemanal | undefined;
   const dominio = typeof body.dominio === "string" && body.dominio ? body.dominio : ESPACIO_CORE;
+  // AUD-09 B12: solo el núcleo o un mundo del catálogo. project_modos.dominio no
+  // tiene CHECK a propósito (la lista de mundos crece con cada integración y una
+  // migración por mundo sería frágil): la puerta vive aquí.
+  if (!esEspacioCore(dominio) && !(PACK_CLICKS_PACK as readonly string[]).includes(dominio)) {
+    return NextResponse.json({ error: "ese espacio no existe" }, { status: 400 });
+  }
 
   const supabase = await createClient();
   const {

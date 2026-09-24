@@ -156,3 +156,27 @@ describe("PATCH capacidad_semanal (Scheduler F2): las horas por semana del espac
     expect(capacidadDe("quality")).toBe("10-20");
   });
 });
+
+// AUD-09 B12 (tanda 7A, seguridad): /modo aceptaba CUALQUIER dominio y lo
+// escribía en project_modos (sin CHECK en la base): un espacio inventado nacía
+// con su modo. Solo el núcleo o un mundo del catálogo.
+describe("/modo valida el espacio (AUD-09 B12)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("un dominio inventado: 400 y no se escribe nada", async () => {
+    sembrarProyecto();
+    const res = await PATCH(req({ modo_camino: "fechas", dominio: "mundo_inventado" }), PARAMS);
+    expect(res.status).toBe(400);
+    expect(modoDe("mundo_inventado")).toBeUndefined();
+  });
+
+  it("un mundo del catálogo sí", async () => {
+    sembrarProyecto();
+    const res = await PATCH(req({ modo_camino: "fechas", dominio: "quality" }), PARAMS);
+    expect(res.status).toBe(200);
+  });
+});
+

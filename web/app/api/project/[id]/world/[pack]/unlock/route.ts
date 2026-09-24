@@ -11,7 +11,9 @@
 import { NextResponse } from "next/server";
 import { PRECIOS } from "@/lib/precios";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { obtenerProyecto } from "@/lib/db";
+import { obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
+import { murallaSinPlan } from "@/lib/espacios";
+import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { createClient } from "@/lib/supabase/server";
 
@@ -34,9 +36,17 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
   if (!user) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
+  // AUD-09 B12: las mismas puertas que el arranque del mundo (world/start):
+  // cuenta real y plan del núcleo. Sin ellas no se abre nada.
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+  }
+  if (!(await obtenerPlanCoreVigente(supabase, projectId))) {
+    return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
   }
 
   const { error } = await supabase.from("project_unlocks").insert({
