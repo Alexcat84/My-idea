@@ -16,6 +16,7 @@ import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { leerRechazo } from "@/lib/mensajeServidor";
 import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
+import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -192,6 +193,8 @@ export default function NuevaIdea() {
           >
             Explorar estas suposiciones
           </BotonHeroe>
+          {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
+          <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">{AVISO_PRECIO_EXPLORACION}</p>
         </div>
       </main>
     );

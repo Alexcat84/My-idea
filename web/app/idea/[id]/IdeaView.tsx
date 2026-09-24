@@ -41,6 +41,7 @@ import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { urlSinParametro } from "@/lib/urlSinParametro";
+import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -1522,6 +1523,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     >
                       Explorar estas suposiciones
                     </BotonHeroe>
+                    {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
+                    <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
+                      {AVISO_PRECIO_EXPLORACION}
+                    </p>
                   </div>
                 </>
               )}
