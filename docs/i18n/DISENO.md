@@ -1,0 +1,230 @@
+# My Idea multilingüe: diseño (F0)
+
+**Fecha:** 26 sep 2026. **Rama:** `i18n`, desde `main` en `dc5f5e65`. **Estado:** F0 solo lectura;
+nada de código cambió. El glosario de marca (§6) espera la aprobación del fundador antes de F2.
+
+## 1. Lo que pide el fundador
+
+- Idioma base **español**. Once idiomas, los de theoriginaliching: `es, en, pt, fr, de, it, ja, zh,
+  ko, ar, hi`.
+- **El grafo sigue en español** como fuente única: no se traduce ningún nodo. La IA responde en el
+  idioma del usuario, apoyándose en los nodos en español.
+- El usuario escribe o dicta en **cualquier idioma**: se detecta, se guarda el texto original tal
+  cual, el proyecto recuerda su idioma y todo lo que la app le devuelve sale en ese idioma.
+- Patrón theoriginaliching: preferencia en cookie, idioma del navegador solo en la primera visita
+  (mapeado al soportado más cercano), y un auditor que falla si falta una clave en algún idioma.
+
+## 2. Lo que hay hoy (el inventario)
+
+**No existe ningún sistema de idiomas.** Ni librería, ni catálogo, ni detección. `<html lang="es">`
+fijo (`app/layout.tsx`), dictado en `es-MX` (`lib/useSpeech.ts`), y ningún `Intl`: fechas, números y
+dinero están escritos a mano en español (`lib/fechas.ts`, `money()` de `TusNumeros`, `pesos()` de
+`numerosVivo`, el separador de miles es el punto).
+
+| superficie | tamaño medido | dónde vive |
+|---|---|---|
+| Textos de pantalla (`app/**/*.tsx`) | ~1.050 cadenas distintas en 58 archivos (~1.180 con repetidas); al unir frases partidas por `<em>`/`<br>`, ~850 a 900 claves | los más grandes: `ManosALaObra` 161, `TusNumeros` 96, `Landing` 54, `Calendario` 63, `IdeaView` 53, `login` 48, `DetalleActividad` 45, `AnalisisPapel` 45, `creditos` 40 |
+| Textos de `lib/` que llegan a pantalla | ~410 cadenas en ~40 archivos (sin contar prompts) | `bloqueRealidad` 54, `bitacoraCliente` 40, `expediente` 39, `readiness` 38, `reporte` 32, `engine/constants` 25, `analytics` 23, `hitosEspacio` 15 |
+| Mensajes del servidor al usuario | ~100 distintos en 41 rutas, más ~15 constantes compartidas (`mensajeSaldoInsuficiente`, `mensajeLimite`, `MENSAJE_FUSIBLE`, `AVISO_LOGIN`, `AVISO_2FA`, `murallaSinPlan`, `MENSAJE_LECTURA_FALLIDA`, `AVISO_VERSION_BASICA`, `ERROR_GENERICO`...) | `cuenta/2fa/*` ~51, `documentos` 13, `session/[id]/plan` 13, `checklist` 10 a 15, `follow` 11 |
+| Correos | **1 en código** (código de 2FA por correo, Resend por `fetch`); **3 plantillas de Supabase** (confirmar cuenta, reenviar, recuperar contraseña) configuradas en el tablero de Supabase, fuera del repo | `api/cuenta/2fa/email/enviar/route.ts` |
+| Documentos (PDF) | No hay librería de PDF: el PDF es `window.print()` de los componentes de papel. Generadores en markdown ~220 cadenas; componentes de papel ~90 | `expediente.ts`, `reporte.ts`, `bitacoraCliente.ts`, `analytics.ts`, `acta.ts`, `registroProteccion.ts`, `AnalisisPapel`, `Descargas`, `GraficosAnalisis`, `GanttCumplimiento`, `ResumenPapel`, `BitacoraPapel`, `PlanDocumento` |
+| Textos legales | **No existen.** Los enlaces "Privacidad" y "Términos" de la portada apuntan a `#`. Hay materia prima en BANCO §4, §5 y §7 (~1.000 palabras) | `app/ui/Landing.tsx` |
+| SEO | 2 bloques de metadatos (layout y portada). Sin `generateMetadata`, OpenGraph, `robots`, `sitemap` ni `manifest` | `app/layout.tsx`, `app/page.tsx` |
+| Calendario | `PRODID ...//ES`, "Etapa N · idea", "Tu viaje", "Calendario no encontrado."; los textos de las tareas vienen de la base (generados en español) | `lib/ics.ts`, `api/calendar/feed/[token]` |
+| Prompts de la IA | 12 sincronizados desde `engine/prototipo_motor.py` a `web/lib/assets/prompts.json` + 3 nativos en `web/lib/prompts.ts`. **Ninguno pide responder en el idioma del usuario**; solo 4 fijan el español de forma explícita (`SYSTEM_PLAN` reglas 13 y 14, `SYSTEM_ESTADO_VIVO`, `SYSTEM_REPORTE`, `SYSTEM_DIAGNOSTICO_MUNDO`); los demás salen en español porque el prompt y el grafo lo están | ver §5 |
+| Contenido del grafo que llega **sin pasar por la IA** | `etiqueta_arbol` en 3.169 nodos activos (~95 mil caracteres) en el riel y el cintillo; **3.569 preguntas** en `preguntas_cache.json` (~871 mil caracteres) que se muestran tal cual en la primera pregunta de un mundo, en la reelección de puerta y cuando el intérprete no adapta; 9 mundos (`nombre` y `promesa`) en `packs_catalog.json`; 65 semillas en `packs_entry_seeds.json` | ver decisión D3 |
+| Guardias que fijan frases en español | ~83 archivos de prueba con ~395 aserciones de texto (el mayor: `expediente.test` 34, `bloqueRealidad.test` 34, `accesosResueltos.test` 20, `DetalleActividad.test` 19) | pasan a correr por idioma (F6) |
+
+**Conteo para el catálogo:** ~1.300 a 1.450 claves de interfaz (pantalla + `lib` + servidor), cada
+una en 11 idiomas: unas 15.000 cadenas. Aparte, el contenido (grafo, preguntas, planes) va por la IA
+o por la decisión D3, no por el catálogo.
+
+## 3. Arquitectura propuesta (calco del I Ching, con el español de base)
+
+### 3.1 El catálogo
+- **Sin librería** (igual que el I Ching, que prohíbe `next-intl` en su `CLAUDE.md`): un módulo
+  propio `web/lib/i18n/` con `locales.ts` (`LOCALES = [es, en, pt, fr, de, it, ja, zh, ko, ar, hi]`,
+  **`LOCALE_BASE = "es"`**), `interpolar()` para `{{clave}}`, y catálogos TypeScript por área
+  (`mensajes/manos.ts`, `mensajes/numeros.ts`, `mensajes/servidor.ts`...), cada uno un
+  `Record<Locale, T>` completo con su getter.
+- **El tipo es el primer auditor:** si falta un idioma o una clave, no compila (el guardián de
+  commit ya corre tsc).
+- **El auditor** (`scripts/auditor_i18n.ts`, en la suite y en el guardián) cierra lo que el I Ching
+  dejó abierto: prohíbe `Partial<Record<Locale`; exige las mismas claves en los 11 idiomas; exige los
+  mismos `{{marcadores}}` en cada traducción; prohíbe cadenas vacías; exige que las marcas del
+  glosario marcadas "no se traducen" aparezcan intactas; y exige que la lista `hreflang` sea igual a
+  `LOCALES`.
+- **Plurales y géneros** por funciones de formato con `Intl.PluralRules` (los "crédito/créditos" de
+  hoy), no por concatenación.
+
+### 3.2 Cómo se elige el idioma de la interfaz
+- **Sin idioma en la URL** (patrón I Ching): una sola ruta, el idioma en la cookie `myidea_idioma`
+  (`path=/; max-age=1 año; samesite=lax`, legible por el cliente).
+- **Primera visita:** `proxy.ts` (donde ya vive la identidad invisible), sin cookie, negocia el
+  `Accept-Language` (orden por `q`, subetiqueta primaria: `pt-BR→pt`, `zh-TW→zh`, `fr-CA→fr`) y
+  **cae al español** si no hay coincidencia. Después manda la cookie.
+- Selector de idioma con cada nombre en su propia escritura ("日本語", "العربية"). Cambiar escribe la
+  cookie, pone `lang`/`dir` en `<html>` y refresca.
+- **Servidor:** las rutas leen la cookie para sus mensajes.
+
+### 3.3 Dos idiomas distintos: el de la interfaz y el del proyecto
+- **Idioma de interfaz:** preferencia del usuario (cookie). Manda en botones, menús y mensajes.
+- **Idioma del proyecto:** se detecta del texto original de la idea y se guarda en el proyecto
+  (columna nueva `projects.idioma`, migración en F5). Manda en todo lo que genera la IA y en los
+  documentos de ese proyecto.
+- Ver D2: qué pasa cuando no coinciden.
+
+### 3.4 Formatos
+- `web/lib/i18n/formato.ts`: fechas (`fechaHumana`, `fechaSello`, "hace N min"), números, porcentajes
+  y dinero con `Intl.DateTimeFormat`, `Intl.NumberFormat` y `Intl.RelativeTimeFormat` por idioma. Se
+  reescriben los ~49 usos de `lib/fechas.ts` y los `money()` / `pesos()` / `toFixed(1)` sobre esa base.
+  En español el resultado debe salir idéntico al de hoy (prueba de F2).
+- `zh` se etiqueta `zh-Hans`; `fr` neutral, válido para Quebec (sin giros exclusivos de Francia).
+
+### 3.5 Escrituras especiales
+- **Árabe:** `dir="rtl"` en `<html>` solo para `ar`. Hay 69 clases físicas de dirección en 24
+  archivos (`ml-`, `mr-`, `pl-`, `pr-`, `left-`, `right-`, `text-left`, `rounded-l`...), que pasan a
+  las lógicas de Tailwind 4 (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`, `text-start`); los
+  gráficos (Gantt, línea de avance) se revisan uno por uno.
+- **Tipografías:** Noto Sans JP, SC, KR y Devanagari con `next/font`, cargadas en el layout **solo**
+  cuando la cookie elige ese idioma.
+
+### 3.6 SEO
+- Metadatos por idioma con `generateMetadata`. `hreflang` para los 11 más `x-default`. Ver D9 (con
+  el idioma en cookie, el buscador solo ve el idioma por defecto).
+
+## 4. Correos, documentos y textos legales
+- **Correo de 2FA:** asunto y cuerpo desde el catálogo, en el idioma de la cookie.
+- **Correos de Supabase:** ver D4.
+- **Documentos:** los componentes de papel usan el catálogo como la pantalla. Los generadores de
+  markdown (`expediente`, `acta`, `registro`, `bitácora`, informe) reciben el idioma **del proyecto**.
+- **Legales:** ver D5.
+
+## 5. La IA en el idioma del usuario (F5)
+- **Detección:** como el I Ching (`detect-input-language.ts`): primero el alfabeto (árabe,
+  devanagari, hangul, kana, han), luego palabras vacías en alfabeto latino, y en empate el idioma de
+  la interfaz. El dictado arranca con el idioma de la interfaz; el texto dictado pasa por la misma
+  detección.
+- **Los prompts:** cada prompt que produce texto para el usuario gana una regla final,
+  `IDIOMA DE SALIDA: responde solo en {idioma}; los nodos que recibes están en español, úsalos como
+  fuente y exprésalos en {idioma}`, y las reglas que hoy dicen "español" pasan a "el idioma de
+  salida". Los que producen JSON interno no cambian. Se editan en `engine/` y se sincronizan (la
+  fase F5 es la que autoriza tocar `engine/`).
+- **Lo que hoy se rompería:** los analizadores que leen encabezados en español de la salida de la
+  IA (`checklist.ts` con `## Etapa N:` y `**Esta semana:**`, `planParser.ts`, el título de la
+  sección económica, `previewMundos.ts`, las listas de palabras de `readiness.ts`, el detector de
+  acentos). F5 cambia esos marcadores por **marcadores neutros** que la IA escribe siempre igual y la
+  pantalla pinta en su idioma.
+- **Generadores sin IA** que necesitan plantilla por idioma: `ensamblarOffline` (el plan básico),
+  `reporteOffline`, `construirBloqueRealidad`, `componerMensajeSeguimiento`, `construirMarkdown` de la
+  Claridad, `TEXTO_FAMILIA_FALTANTE`, `AVISO_VERSION_BASICA`, `decisionPorPalabras`.
+- **El buscador:** Voyage `voyage-4-lite`, que es multilingüe. El índice (`semantic_index.json`) está
+  hecho con el texto en español de los nodos; la consulta es el texto crudo del usuario. F1 mide si
+  una idea en coreano recupera los mismos nodos que en español.
+
+## 6. Glosario de marca (PROPUESTA, para aprobar)
+
+**Reglas propuestas:**
+- **"My Idea" no se traduce** en ningún idioma.
+- Registro: el tú del español se mantiene donde el idioma lo admite en una app (`fr` tu, `de` du,
+  `it` tu, `pt` você); `ja` cortés (です/ます), `ko` 해요체, `ar` árabe estándar moderno, `hi` आप.
+- Las variantes: `pt` de Brasil, `zh` simplificado, `fr` neutral válido para Quebec.
+
+### Las etapas (el paso a paso tiene seis hitos: las cinco etapas y Realizado)
+
+| es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
+|---|---|---|---|---|---|---|---|---|---|---|
+| La Chispa | The Spark | A Faísca | L'Étincelle | Der Funke | La Scintilla | ひらめき | 灵感火花 | 불꽃 | الشرارة | चिंगारी |
+| Claridad | Clarity | Clareza | Clarté | Klarheit | Chiarezza | 明確化 | 清晰 | 명확함 | الوضوح | स्पष्टता |
+| La Exploración | The Exploration | A Exploração | L'Exploration | Die Erkundung | L'Esplorazione | 探求 | 探索 | 탐색 | الاستكشاف | अन्वेषण |
+| Tu Plan | Your Plan | Seu Plano | Ton plan | Dein Plan | Il tuo piano | あなたのプラン | 你的计划 | 나의 계획 | خطتك | आपकी योजना |
+| Manos a la Obra | Hands On | Mãos à Obra | À l'ouvrage | Ans Werk | Mani all'opera | 実行 | 动手做 | 실행하기 | إلى العمل | काम पर |
+| Realizado | Achieved | Realizado | Réalisé | Verwirklicht | Realizzato | 実現 | 已实现 | 실현 | تحقّق | साकार |
+
+### Los nueve mundos
+
+| es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Calidad y Confianza | Quality & Trust | Qualidade e Confiança | Qualité et confiance | Qualität & Vertrauen | Qualità e Fiducia | 品質と信頼 | 质量与信任 | 품질과 신뢰 | الجودة والثقة | गुणवत्ता और भरोसा |
+| Seguridad y Personas | Safety & People | Segurança e Pessoas | Sécurité et personnes | Sicherheit & Menschen | Sicurezza e Persone | 安全と人 | 安全与人 | 안전과 사람 | السلامة والناس | सुरक्षा और लोग |
+| Ambiente y Futuro | Environment & Future | Ambiente e Futuro | Environnement et avenir | Umwelt & Zukunft | Ambiente e Futuro | 環境と未来 | 环境与未来 | 환경과 미래 | البيئة والمستقبل | पर्यावरण और भविष्य |
+| Seguridad Digital | Digital Security | Segurança Digital | Sécurité numérique | Digitale Sicherheit | Sicurezza Digitale | デジタルセキュリティ | 数字安全 | 디지털 보안 | الأمن الرقمي | डिजिटल सुरक्षा |
+| Vender al Mundo | Sell to the World | Vender para o Mundo | Vendre au monde | Weltweit verkaufen | Vendere al Mondo | 世界に売る | 卖向世界 | 세계로 팔기 | البيع للعالم | दुनिया को बेचें |
+| Multiplica tu Negocio | Multiply Your Business | Multiplique seu Negócio | Multiplie ton entreprise | Vervielfache dein Geschäft | Moltiplica la tua Attività | ビジネスを広げる | 让生意倍增 | 사업 확장 | ضاعف عملك | अपना व्यवसाय बढ़ाएँ |
+| Riesgos Bajo Control | Risks Under Control | Riscos sob Controle | Risques sous contrôle | Risiken im Griff | Rischi sotto Controllo | リスクを管理下に | 风险可控 | 위험 관리 | المخاطر تحت السيطرة | जोखिम नियंत्रण में |
+| Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton achat juste | Dein richtiger Einkauf | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤك الصحيح | आपकी सही खरीद |
+| Del Taller a sus Manos | From Workshop to Their Hands | Da Oficina às Mãos Deles | De l'atelier à leurs mains | Von der Werkstatt in ihre Hände | Dal Laboratorio alle loro Mani | 工房からお客様の手へ | 从作坊到客户手中 | 공방에서 고객의 손까지 | من الورشة إلى أيديهم | कार्यशाला से उनके हाथों तक |
+
+(El mundo 11, `primer_equipo`, está registrado en el Gate 0 pero aún no integrado en la app: su
+nombre entra al glosario cuando se integre.)
+
+### Conceptos propios
+
+| es | en | pt | fr | de | it | ja | zh | ko | ar | hi |
+|---|---|---|---|---|---|---|---|---|---|---|
+| My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea |
+| Tus Números | Your Numbers | Seus Números | Tes chiffres | Deine Zahlen | I tuoi numeri | あなたの数字 | 你的数字 | 나의 숫자 | أرقامك | आपके आंकड़े |
+| Potencia tu idea | Power up your idea | Potencialize sua ideia | Booste ton idée | Gib deiner Idee Kraft | Potenzia la tua idea | アイデアを強化 | 为你的想法赋能 | 아이디어 강화 | عزّز فكرتك | अपने विचार को सशक्त करें |
+| Ciclo de profundización | Deepening Cycle | Ciclo de aprofundamento | Cycle d'approfondissement | Vertiefungszyklus | Ciclo di approfondimento | 深掘りサイクル | 深化循环 | 심화 사이클 | دورة التعمّق | गहराई चक्र |
+| Expediente | Full Record | Dossiê | Dossier | Gesamtakte | Fascicolo | 全記録 | 完整档案 | 전체 기록 | الملف الكامل | पूरा ब्यौरा |
+| Bitácora | Logbook | Diário de bordo | Journal de bord | Logbuch | Diario di bordo | 活動ログ | 日志 | 기록장 | سجلّ الرحلة | लॉगबुक |
+| Cierre honesto | Honest Close | Encerramento honesto | Clôture honnête | Ehrlicher Abschluss | Chiusura onesta | 正直な締めくくり | 坦诚收尾 | 솔직한 마무리 | إغلاق صادق | ईमानदार समापन |
+| Mundos | Worlds | Mundos | Mondes | Welten | Mondi | ワールド | 世界 | 월드 | العوالم | दुनियाएँ |
+| Créditos | Credits | Créditos | Crédits | Credits | Crediti | クレジット | 点数 | 크레딧 | رصيد | क्रेडिट |
+| Tu viaje (el núcleo) | Your Journey | Sua Jornada | Ton parcours | Deine Reise | Il tuo viaggio | あなたの旅 | 你的旅程 | 나의 여정 | رحلتك | आपकी यात्रा |
+| A mi ritmo | At my own pace | No meu ritmo | À mon rythme | In meinem Tempo | Al mio ritmo | 自分のペースで | 按我的节奏 | 내 속도대로 | على وتيرتي | अपनी गति से |
+| Con fechas | With dates | Com datas | Avec des dates | Mit Terminen | Con date | 日付あり | 按日期 | 날짜와 함께 | مع مواعيد | तारीखों के साथ |
+
+Los nombres de las recargas (Recarga, Básico, Premium, Profesional) y los cinco estados de una tarea
+(pendiente, empezado, en proceso, hecho, no aplica) entran al catálogo como texto de interfaz, no
+como marca: se traducen en F3 con el mismo glosario.
+
+## 7. Decisiones que tocan al fundador
+
+- **D1. El glosario de §6.** Aprobarlo, corregirlo o marcar qué términos quedan en español en todos
+  los idiomas (como "My Idea").
+- **D2. Idioma de interfaz frente a idioma del proyecto.** Propuesta: la interfaz sigue la
+  preferencia; lo que genera la IA y los documentos siguen el idioma del proyecto. Ejemplo: alguien
+  con la app en español escribe una idea en coreano; los botones siguen en español y su plan sale en
+  coreano. La alternativa es que abrir un proyecto cambie también la interfaz a su idioma.
+- **D3. El contenido del grafo que llega sin pasar por la IA** (el grafo no se traduce):
+  - **Etiquetas del riel** (3.169, ~95 mil caracteres). Propuesta: una traducción **derivada** de
+    las etiquetas, en archivos aparte por idioma (`etiquetas_<idioma>.json`), generada una vez con
+    la IA y revisable; el grafo no se toca. Costo estimado: unos 10 dólares para los 10 idiomas.
+    Alternativa: mostrar las etiquetas en español.
+  - **Preguntas en caché** (3.569, ~871 mil caracteres). Propuesta: fuera del español, **toda**
+    pregunta pasa por la IA para adaptarla al idioma (el intérprete ya corre en cada turno; se suma
+    la primera pregunta de un mundo y la reelección de puerta); la caché queda solo para el español.
+    Alternativa: traducir la caché (unos 40 dólares por los 10 idiomas, más mantenimiento cada vez
+    que cambie el grafo).
+- **D4. Los correos de Supabase** (confirmar, reenviar, recuperar) tienen una plantilla única en el
+  tablero de Supabase. Para enviarlos en 11 idiomas: activar el "Send Email Hook" de Supabase y que
+  la app los mande por Resend con el catálogo (necesita que el fundador lo configure en Supabase).
+  Alternativa: dejarlos en español o en una plantilla bilingüe.
+- **D5. Los textos legales no existen.** F6 no puede traducir lo que no hay: el fundador aporta y
+  aprueba el texto base en español (términos, privacidad, cookies), y su jurisdicción. La traducción
+  de un texto legal por IA conviene revisarla con alguien del país.
+- **D6. La moneda de Tus Números.** Hoy es "$" genérico. Propuesta para F3: separadores y formato
+  por idioma con `Intl`, manteniendo el símbolo "$" hasta que se decida si el usuario elige su
+  moneda.
+- **D7. Variantes y registro:** `pt` de Brasil, `zh` simplificado, árabe estándar moderno (y cómo
+  tratar el género gramatical al dirigirse al usuario), `fr` neutral válido para Quebec, y el
+  registro de §6.
+- **D8. El canon de textos.** BANCO_DE_TEXTOS sigue siendo el canon en español; para los otros
+  idiomas, el catálogo es el canon y las guardias de frases prohibidas corren sobre cada uno (F6).
+- **D9. SEO sin idioma en la URL.** Con el idioma en cookie, el buscador ve un solo idioma (el que
+  negocie su `Accept-Language`, casi siempre inglés o el de por defecto) y los `hreflang` apuntan a
+  la misma dirección, que es una señal débil. Alternativa: aceptar `?lang=xx` en la URL para enlaces
+  compartibles e indexables, y que los `hreflang` apunten a esas variantes.
+
+## 8. Plan por fases
+
+| fase | qué | toca | quién hace falta |
+|---|---|---|---|
+| F0 | este documento | solo `docs/` | glosario y decisiones: el fundador |
+| F1 | 20 ideas × 11 idiomas contra `buscarAfines`; acuerdo por idioma con la versión en español (solape de los primeros 10 nodos); si alguno recupera mal, se mide también traducir la consulta al español antes de buscar | un script de medición, sin cambios en la app | el fundador con la clave de Voyage |
+| F2 | `lib/i18n/`, auditor, cookie y negociación en `proxy.ts`, formatos con `Intl`, y **todos** los textos extraídos al catálogo en español; la app se ve idéntica (capturas antes y después) | `web/` | visto en la vista previa |
+| F3 | las otras 10 traducciones con el glosario; formatos por idioma | catálogos | visto |
+| F4 | árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | `web/` | visto |
+| F5 | detección del idioma de la idea, `projects.idioma` (migración), prompts con idioma de salida, marcadores neutros en el plan, plantillas por idioma de los generadores sin IA, y D3; prueba: una idea en coreano y otra en árabe dan plan y respuestas en su idioma con los nodos correctos | `web/`, `engine/` (prompts), `supabase/` | visto; migración la aplica el fundador |
+| F6 | correos (D4), documentos, legales (D5), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | `web/` | visto |
