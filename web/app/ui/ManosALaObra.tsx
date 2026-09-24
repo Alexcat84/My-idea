@@ -1010,6 +1010,10 @@ function RitualFechas({
   }
 
   function aceptar() {
+    // AUD-09 M40: la pregunta arranca en el chip por defecto y la pantalla lo
+    // muestra elegido; si el usuario no lo tocó, se guarda aquí (antes el
+    // espacio seguía "sin declarar" aunque se viera elegido).
+    if (preguntarCapacidad && capacidad == null) onCapacidad?.(capacidadLocal);
     onAceptar(
       items.map((it) => ({
         item_id: it.id,
