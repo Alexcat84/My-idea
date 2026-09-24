@@ -121,6 +121,19 @@ describe("POST follow con dominio — los muros del mundo (Fase 4.2)", () => {
     expect(String((await res.json()).error)).toContain("Primero explora");
   });
 
+  it("sin saldo responde 402 SIN gastar el límite diario ni el fusible (AUD-09)", async () => {
+    sembrarProyecto();
+    const { verificarSaldo } = await import("@/lib/creditos");
+    const rl = await import("@/lib/rateLimit");
+    vi.mocked(rl.verificarLimiteDiario).mockClear();
+    vi.mocked(rl.verificarFusibleGlobal).mockClear();
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 0 });
+    const res = await POST(req({ detalles: "avancé", enfoque: null }), PARAMS);
+    expect(res.status).toBe(402);
+    expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
+    expect(rl.verificarFusibleGlobal).not.toHaveBeenCalled();
+  });
+
   it("401 si no hay usuario, sea cual sea el dominio", async () => {
     sembrarProyecto();
     supabaseFalso.auth.getUser.mockResolvedValueOnce({ data: { user: null } });

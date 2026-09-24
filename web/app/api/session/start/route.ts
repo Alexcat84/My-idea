@@ -72,16 +72,6 @@ export async function POST(request: Request) {
     return NextResponse.json(AVISO_2FA, { status: 403 });
   }
 
-  // Fusible global ANTES de cobrar creditos y de tocar la API.
-  const fusible = await verificarFusibleGlobal(user.email);
-  if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
-  }
-  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
-  if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
-  }
-
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
   // plan_completo (5). El descuento ocurre A LA ENTREGA del plan (ruta del
   // plan, idempotente). Rechazo limpio antes del esfuerzo del usuario.
@@ -91,6 +81,18 @@ export async function POST(request: Request) {
       { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo), saldo: saldo.creditos },
       { status: 402 }
     );
+  }
+
+  // AUD-09 (tanda 2): el fusible y el límite diario se cuentan DESPUÉS del
+  // saldo. Antes cada clic sin saldo gastaba un arranque del día y un cupo del
+  // fusible sin que nada ocurriera. Siguen antes de tocar la API.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
+  if (!limite.permitido) {
+    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
   const graph = cargarGrafo();

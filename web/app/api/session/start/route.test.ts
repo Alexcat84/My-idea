@@ -33,6 +33,15 @@ vi.mock("@/lib/seguridad", async (importOriginal) => ({
   faltaSegundoFactor: async () => false,
 }));
 
+// AUD-09 (tanda 2): el fusible y el límite diario se observan para probar que
+// un rechazo por saldo no los gasta. Por defecto permiten.
+vi.mock("@/lib/rateLimit", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/rateLimit")>()),
+  identidadLimite: () => "id",
+  verificarFusibleGlobal: vi.fn(async () => ({ permitido: true })),
+  verificarLimiteDiario: vi.fn(async () => ({ permitido: true })),
+}));
+
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));
@@ -105,6 +114,18 @@ describe("POST /api/session/start", () => {
     expect(cuerpo.limite).toBe(4000);
     expect(cuerpo.error).toContain("4000");
     expect(cuerpo.error).not.toContain("'texto'");
+  });
+
+  it("sin saldo responde 402 SIN gastar el límite diario ni el fusible (AUD-09)", async () => {
+    const { verificarSaldo } = await import("@/lib/creditos");
+    const rl = await import("@/lib/rateLimit");
+    vi.mocked(rl.verificarLimiteDiario).mockClear();
+    vi.mocked(rl.verificarFusibleGlobal).mockClear();
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 0 });
+    const res = await POST(requestFalso({ texto: "mi idea" }));
+    expect(res.status).toBe(402);
+    expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
+    expect(rl.verificarFusibleGlobal).not.toHaveBeenCalled();
   });
 
   it("401 si no hay usuario autenticado", async () => {

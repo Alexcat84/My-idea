@@ -147,15 +147,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // (seguimiento: 2) y nadie lo autorizo; el seguimiento core cuesta 2, igual
   // que el de mundo.
   //
-  // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
-  const fusible = await verificarFusibleGlobal(user.email);
-  if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
-  }
-  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
-  if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
-  }
 
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): el seguimiento cuesta 2 (core
   // o mundo, precios.ts). El descuento ocurre a la entrega del plan del ciclo.
@@ -166,6 +157,17 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       { error: mensajeSaldoInsuficiente(saldoFollow.creditos, montoFollow), saldo: saldoFollow.creditos },
       { status: 402 }
     );
+  }
+
+  // AUD-09 (tanda 2): fusible y límite diario DESPUÉS del saldo (un rechazo por
+  // saldo ya no gasta el arranque del día) y siempre antes de tocar la API.
+  const fusible = await verificarFusibleGlobal(user.email);
+  if (!fusible.permitido) {
+    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+  }
+  const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
+  if (!limite.permitido) {
+    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
   // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con
