@@ -8,6 +8,11 @@
 // hardcodea números. 1 crédito = 1 USD sigue siendo el ancla del ledger, pero
 // NO se le vende al usuario como eslogan. Pagos reales (pasarelas) llegan en la
 // ETAPA 3: por ahora los endpoints validan contra estas constantes.
+//
+// Cuándo se cobra (decisión del fundador, 25 sep 2026): se verifica el saldo
+// al empezar y se cobra al final, SOLO si se entregó lo prometido. Un plan
+// armado sin IA no se cobra: se entrega gratis con un aviso honesto
+// (docs/ANALISIS_PRECIOS.md §4, "Cuándo se cobra: solo lo entregado").
 export const PRECIOS = {
   organizador: 0, // Claridad: el gancho freemium, siempre gratis y sin cuenta
   plan_completo: 10, // Tu Plan (La Exploración) e INCLUYE Tus Números (ver tus_numeros: 0 y §7.1)

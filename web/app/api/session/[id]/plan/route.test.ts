@@ -42,6 +42,7 @@ vi.mock("@/lib/anthropicClient", () => ({
 }));
 
 import { POST } from "./route";
+import { cobrar } from "@/lib/creditos";
 
 function ctxFalso(id: string) {
   return { params: Promise.resolve({ id }) };
@@ -251,13 +252,61 @@ describe("POST /api/session/[id]/plan", () => {
     };
 
     const res = await POST(requestFalso(), ctxFalso("s1"));
-    const texto = await res.text();
-    expect(texto).toContain("event: aviso");
-    const match = texto.match(/event: done\ndata: (.+)\n\n/);
-    expect(match).toBeTruthy();
-    expect(JSON.parse(match![1]).markdown).toContain("# Tu plan de accion");
+    const done = await leerEventoDone(res);
+    // AUD-09 H02: el aviso ya no es un evento interno que la pantalla ignoraba;
+    // viaja en el done, marcado como version basica.
+    expect(done.version_basica).toBe(true);
+    expect(String(done.markdown)).toContain("# Tu plan de accion");
     expect(estadoFalso.sessions["s1"].closed_at).toBeTruthy();
     // Ni un solo intento al modelo: el presupuesto se corta ANTES.
     expect(messagesStreamFalso).not.toHaveBeenCalled();
+  });
+
+  // AUD-09 H02, politica del fundador (25 sep 2026): se verifica al empezar y
+  // se cobra al final SOLO si se entrego lo prometido. Un plan armado sin IA
+  // no es lo prometido: se entrega gratis, con un aviso honesto en pantalla.
+  // Antes se cobraba completo y el aviso (un evento que la pantalla ignoraba)
+  // hablaba en jerga interna.
+  it("un plan armado sin IA NO se cobra y lleva su aviso honesto en el done", async () => {
+    vi.mocked(cobrar).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase(),
+        acumulado: {
+          ...acumuladoVacio,
+          uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } },
+        },
+      },
+    };
+
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const done = await leerEventoDone(res);
+    expect(cobrar).not.toHaveBeenCalled();
+    expect(done.version_basica).toBe(true);
+    expect(done.creditos_restantes).toBeNull();
+    expect(String(done.aviso)).toMatch(/no se te cobró/i);
+    // El techo SI se cruzo: la sesion lo registra (antes quedaba en false).
+    expect(estadoFalso.sessions["s1"].presupuesto_excedido).toBe(true);
+  });
+
+  it("un plan redactado con IA SI se cobra, sin aviso de version basica", async () => {
+    vi.mocked(cobrar).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    const done = await leerEventoDone(res);
+    // Calculo a mano: nucleo, primera entrevista -> plan_completo = 10.
+    expect(cobrar).toHaveBeenCalledWith("user-fake", "plan_completo", 10, "plan:s1");
+    expect(done.version_basica).toBe(false);
   });
 });

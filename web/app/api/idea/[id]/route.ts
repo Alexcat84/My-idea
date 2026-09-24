@@ -10,6 +10,7 @@ import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
 import { obtenerCapacidadesPorEspacio, obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { ESPACIO_CORE } from "@/lib/espacios";
 import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
+import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
@@ -32,7 +33,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
 
   const { data: sesiones } = await supabase
     .from("sessions")
-    .select("id, closed_at, estado_recorrido, created_at, dominio")
+    .select("id, closed_at, estado_recorrido, created_at, dominio, decisiones")
     .eq("project_id", projectId)
     .order("created_at", { ascending: true });
 
@@ -246,7 +247,16 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
       created_at: proyecto.created_at,
     },
     organizador: organizador && { contenido_md: organizador.contenido_md, created_at: organizador.created_at },
-    plan: plan && { etiqueta: plan.etiqueta, contenido_md: plan.contenido_md, created_at: plan.created_at },
+    plan: plan && {
+      etiqueta: plan.etiqueta,
+      contenido_md: plan.contenido_md,
+      created_at: plan.created_at,
+      // AUD-09 H02: un plan armado sin IA conserva su aviso tras recargar.
+      aviso: avisoDelPlan(
+        ((sesiones ?? []) as Array<{ id: string; decisiones?: unknown }>).find((x) => x.id === plan.session_id)
+          ?.decisiones
+      ),
+    },
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },
     reporte_en_curso: reporteEnCurso,
     entrevista,

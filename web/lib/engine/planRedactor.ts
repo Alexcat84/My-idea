@@ -39,6 +39,21 @@ import {
 } from "../verificadorHuerfanos";
 import { detectarFaltaDeAcentos } from "../detectorAcentos";
 
+
+/** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
+ * redacción con IA (el ensamblado offline). Ese plan no se cobra. */
+export const AVISO_VERSION_BASICA =
+  "Esta es una versión básica de tu plan: la armé sin la redacción con IA porque esta conversación llegó a su tope de trabajo. No se te cobró.";
+
+/** El aviso de un plan ya guardado, derivado del evento que la ruta del plan
+ * deja en las decisiones de su sesión: tras recargar, el aviso sigue ahí. */
+export function avisoDelPlan(decisiones: unknown): string | null {
+  if (!Array.isArray(decisiones)) return null;
+  return decisiones.some((e) => (e as { tipo?: unknown } | null)?.tipo === "plan_version_basica")
+    ? AVISO_VERSION_BASICA
+    : null;
+}
+
 export { SECCION_ECONOMICA_TITULO };
 
 export interface MaterialNodo {

@@ -107,6 +107,17 @@ La allowlist SIGUE siendo la puerta de acceso (beta por invitación); lo que
 muere es el regalo automático al primer login. La cortesía PÚBLICA
 post-lanzamiento sigue siendo decisión pendiente, a tomar con telemetría.
 
+### Cuándo se cobra: solo lo entregado (decisión del fundador, 25 sep 2026)
+Se verifica el saldo al EMPEZAR y se cobra al FINAL, solo si se entregó lo
+prometido. **Un plan armado sin IA no se cobra**: cuando la redacción con IA
+no ocurre (hoy, el único caso es el tope de trabajo de la conversación), el
+plan se ensambla sin narrar, se entrega gratis y la pantalla lo dice con un
+aviso honesto: es una versión básica y no se cobró. El aviso sigue ahí al
+recargar. En código: `web/app/api/session/[id]/plan/route.ts` (el cobro solo
+corre si hubo texto del redactor) y `AVISO_VERSION_BASICA` en
+`web/lib/engine/planRedactor.ts`. Nace de la AUD-09 (hallazgo H02), donde ese
+plan se cobraba completo y el aviso nunca llegaba a la pantalla.
+
 ## 5. SENSIBILIDAD LATAM (para decidir después, no ahora)
 $14.99 USD es accesible-premium en MX/CO/CL, caro en CentAm/BO/VE. Opciones
 en reserva: precios regionales vía las tiendas (Play/App Store los soportan

@@ -118,6 +118,11 @@ canon visual las **reflejan**, jamás las definen (ver `AGENTS.md`).
   el sistema falla a mitad.
 - Hoy los chips de créditos son display; ETAPA 2 de cuentas los vuelve
   reales. Este documento no cambia eso: solo fija DÓNDE se cablea.
+- **Solo se cobra lo entregado (decisión del fundador, 25 sep 2026):** un
+  plan armado sin IA (el ensamblado sin narrar, cuando la conversación llegó
+  a su tope de trabajo) se entrega gratis, marcado como versión básica y con
+  un aviso honesto en pantalla. El detalle vive en `docs/ANALISIS_PRECIOS.md`
+  §4, "Cuándo se cobra: solo lo entregado".
 
 ## 6. REGLAS TRANSVERSALES
 - `analytics.ts` es la única calculadora del tiempo: Análisis, Celebración,

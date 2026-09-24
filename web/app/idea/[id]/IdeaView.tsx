@@ -67,7 +67,8 @@ interface DetalleIdea {
     created_at?: string | null;
   };
   organizador: { contenido_md: string; created_at?: string | null } | null;
-  plan: { etiqueta: string; contenido_md: string; created_at: string } | null;
+  /** AUD-09 H02: aviso del plan armado sin IA (null si fue redactado). */
+  plan: { etiqueta: string; contenido_md: string; created_at: string; aviso?: string | null } | null;
   reporte: { contenido_md: string; created_at: string } | null;
   reporte_en_curso: { pregunta: string } | null;
   entrevista: {
@@ -212,6 +213,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [generandoPlan, setGenerandoPlan] = useState(false);
   const [etiquetaEtapa, setEtiquetaEtapa] = useState<string | undefined>();
   const [planMd, setPlanMd] = useState<string | null>(null);
+  // AUD-09 H02: el plan armado sin IA llega con su aviso honesto (no se cobró).
+  const [avisoPlan, setAvisoPlan] = useState<string | null>(null);
   // Fix (retry del stream del plan): si la redaccion muere tras los reintentos
   // del servidor, se guarda con que reintentarla. La sesion y el recorrido YA
   // estan persistidos: reintentar re-lanza SOLO la redaccion, nunca la entrevista.
@@ -426,6 +429,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setListoParaPlan(false);
       setError(null);
       setPlanFallido(null);
+      setAvisoPlan(null);
       try {
         // Phase 3.7.2: el contexto final opcional viaja al redactor.
         const res = await fetch(`/api/session/${sid}/plan`, {
@@ -465,8 +469,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
               setNodos((prev) => [...prev, { id: `etapa-${prev.length}`, label: titulo }]);
             }
           } else if (evento === "done") {
-            const d = data as { markdown: string };
+            const d = data as { markdown: string; aviso?: string | null };
             setPlanMd(d.markdown);
+            setAvisoPlan(d.aviso ?? null);
             // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
             void cargarChecklist();
           } else if (evento === "error") {
@@ -512,6 +517,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         if (d.idea.realizada_at && !quiereManos && !quiereAnalisis) setVistaCelebracion(true);
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
+          setAvisoPlan(d.plan.aviso ?? null);
           void cargarChecklist();
         }
         if (d.entrevista) {
@@ -1280,6 +1286,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     ))}
                   </ol>
                 </Acordeon>
+              )}
+
+              {/* AUD-09 H02: un plan armado sin IA se dice, no se esconde. */}
+              {avisoPlan && planMd && (
+                <p role="status" className="rounded-panel border border-hairline bg-surface p-4 text-sm text-warn">
+                  {avisoPlan}
+                </p>
               )}
 
               {/* Plan como documento (canon 05) */}

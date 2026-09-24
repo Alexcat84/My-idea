@@ -10,9 +10,14 @@
  * una cosecha silenciosa del vecindario del grafo (cosecharVecindario).
  * La llamada a Claude se transmite por texto (heartbeat cada 15s para
  * sobrevivir a proxies/Vercel mientras el modelo "piensa" -- mismo patron
- * ya resuelto en el proyecto I Ching para sus WebViews). Si la llamada
- * falla (red o presupuesto), cae al ensamblado offline sin narrar, igual
- * que el CLI.
+ * ya resuelto en el proyecto I Ching para sus WebViews). Un fallo de red se
+ * reintenta y, agotado, LANZA (error honesto, la sesion queda abierta para
+ * reintentar). Solo el presupuesto de sesion agotado cae al ensamblado offline.
+ *
+ * AUD-09 H02, politica del fundador (25 sep 2026): se verifica saldo al
+ * empezar y se cobra al final SOLO si se entrego lo prometido. Un plan armado
+ * sin IA (el ensamblado offline) NO se cobra: se entrega gratis, marcado como
+ * version basica y con un aviso honesto que la pantalla muestra.
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
@@ -54,6 +59,7 @@ import { esMundoProteccion } from "@/lib/espacios";
 import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
+  AVISO_VERSION_BASICA,
   comprimirEstadoVivo,
   extraerTitulo,
   filtrarDeltaAntesDeAutodeclaracion,
@@ -244,7 +250,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           (texto) => enviar("delta", { texto }),
           () => enviar("reinicio", { motivo: "reintentando la redaccion" })
         );
-        if (avisoFallback) enviar("aviso", { mensaje: avisoFallback });
+        // AUD-09 H02: sin texto del redactor, el plan sale del ensamblado
+        // offline. No es lo prometido: no se cobra y se dice en pantalla.
+        const versionBasica = rawTexto === null;
 
         // Fase 3.1 (caja de vidrio): eventos propios del ensamblado del
         // plan (autodeclaracion_fallida, coherencia_cobertura_corregida,
@@ -255,6 +263,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         const eventosPlan: Record<string, unknown>[] = [];
         if (contextoFinal) {
           eventosPlan.push({ tipo: "contexto_final_usuario", texto: contextoFinal });
+        }
+        if (versionBasica) {
+          eventosPlan.push({ tipo: "plan_version_basica", motivo: avisoFallback });
         }
         const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
         const numerosParaPlan = {
@@ -277,7 +288,9 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           recorrido.estadoVivoPrevio,
           recorrido.perfilSesion,
           conceptosTitulos,
-          acumuladoTrasRedactor
+          // El unico camino offline es el techo de la sesion: queda registrado
+          // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
+          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor
         );
 
         const nodosConTipo: NodoConTipo[] = [
@@ -426,7 +439,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // devuelve -1 con el plan ya persistido -> ENTREGAR Y REGISTRAR, nunca
         // cobrar de mas ni castigar (la regla sagrada).
         let creditosRestantes: number | null = null;
-        if (montoCobro > 0) {
+        if (montoCobro > 0 && !versionBasica) {
           const resultadoCobro = await cobrar(user.id, conceptoCobro, montoCobro, `plan:${sessionId}`);
           if (resultadoCobro === -1) {
             await registrarBitacora(supabase, projectId, "cobro_carrera", {
@@ -449,7 +462,10 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             .eq("project_id", projectId)
             .eq("dominio", dominioSesion)
             .is("plan_pagado_at", null);
-          await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+          // Un plan basico no se cobro: no cuenta como compra en la telemetria.
+          if (!versionBasica) {
+            await registrarBitacora(supabase, projectId, "preview_a_compra", { mundo: dominioSesion });
+          }
         }
         enviar("done", {
           project_id: projectId,
@@ -459,6 +475,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           costo_usd: costoAcumuladoUsd(acumuladoConJuez),
           // El chip refresca su saldo con la entrega (patron del I Ching).
           creditos_restantes: creditosRestantes,
+          version_basica: versionBasica,
+          aviso: versionBasica ? AVISO_VERSION_BASICA : null,
         });
         cobroAplicado = null; // el done salio: la entrega llego a su dueño
       } catch (e) {
