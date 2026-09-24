@@ -6,9 +6,9 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "Los humanos atribuimos automáticamente motivaciones, personalidades e intenciones incluso a formas geométricas simples en movimiento (estudio de Heider y Simmel, 1944). Esto demuestra que estamos programados para crear historias que den sentido a estímulos ambiguos. En diseño, esto se puede aprovechar deliberadamente para comunicar conceptos complejos a través de narrativas (storytelling), pero también representa un riesgo: las personas pueden aferrarse a una historia incluso cuando deja de ser útil o verdadera (como el caso de Hiroo Onoda).",
   "pasos_accionables": [
-    "Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.",
+    "Sugerencia de My Idea: al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y la conexión emocional, sin olvidar que toda historia distorsiona.",
     "Revisar periódicamente si la 'historia' que el equipo o los usuarios se cuentan sobre el problema sigue siendo válida o se ha vuelto una narrativa defensiva que impide el cambio.",
-    "Usar prototipos narrativos (escenarios, storyboards) para probar cómo los usuarios interpretan intenciones y emociones en un diseño."
+    "Sugerencia de My Idea: usar prototipos narrativos, como escenarios o storyboards, para probar cómo interpretan los usuarios las intenciones y emociones en un diseño."
   ],
   "entregable_esperado": "Un escenario o storyboard narrativo del producto/servicio que comunique la propuesta de valor de forma emocionalmente resonante, junto con una revisión crítica de si la narrativa del equipo sigue alineada con la evidencia.",
   "nodos_previos": [
@@ -25,5 +25,41 @@
     "Cuando el equipo lleva mucho tiempo apegado a una misma explicación del problema sin cuestionarla.",
     "En sesiones de prototipado rápido donde se busca generar empatía con el usuario final."
   ],
-  "etiqueta_arbol": "Cuenta Historias para Dar Sentido"
+  "etiqueta_arbol": "Cuenta Historias para Dar Sentido",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-04",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar prototipos narrativos (escenarios, storyboards) para probar cómo los usuarios interpretan intenciones y emociones en un diseño.",
+      "texto_nuevo": "Sugerencia de My Idea: usar prototipos narrativos, como escenarios o storyboards, para probar cómo interpretan los usuarios las intenciones y emociones en un diseño.",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3490",
+        "frase": "Try a speculative story."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Añadido práctico de herramienta: el libro no nombra escenarios ni storyboards (solo propone la historia especulativa, L3490: \"Try a speculative story.\"). Se reescribe como sugerencia de My Idea sin atribuirla al autor. El dato se repite en entregable_esperado ('Un escenario o storyboard narrativo'), pero en PRACTICO el entregable se deja; el resumen_teorico no lo contiene ('storytelling' es otra cosa), así que no hay segmentos.",
+      "indice": 2,
+      "auditoria": "muestreo A6"
+    },
+    {
+      "id": "fidelidad-t3-14",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.",
+      "texto_nuevo": "Sugerencia de My Idea: al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y la conexión emocional, sin olvidar que toda historia distorsiona.",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L2075",
+        "frase": "Thinking in stories is very useful.\"; L2075: \"But it’s still a distortion."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La receta \"personajes, conflicto y resolución\" es un formato añadido; Doorley dice que pensar en historias es útil pero distorsiona, y que centrarse en personajes y conflicto oculta matices (L2075). Se reescribe como sugerencia de My Idea y se conserva la advertencia del libro. El storyboard del entregable no es este dato y queda.",
+      "indice": 0,
+      "auditoria": "muestreo A16"
+    }
+  ]
 }

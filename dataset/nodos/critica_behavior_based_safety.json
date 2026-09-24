@@ -11,7 +11,7 @@
     "Elimina prácticas que estigmaticen a trabajadores lesionados, como identificadores visibles frente al resto del equipo",
     "Evalúa si las políticas posteriores a un incidente, como pruebas de drogas obligatorias, desincentivan el reporte",
     "Sustituye las métricas basadas en tasas de incidentes por métricas de proceso o de condiciones de seguridad",
-    "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
+    "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
   ],
   "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño.",
   "nodos_previos": [
@@ -39,6 +39,25 @@
       "node_id": "riesgos_programas_seguridad_conductual",
       "titulo": "Riesgos de los Programas de Seguridad Basados en Comportamiento",
       "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-50",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "texto_nuevo": "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L3525-L3525",
+        "frase": "the union representative asked a subsequent group to write “yes” on a piece of paper if they were afraid to report injuries."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Método añadido: el libro no propone entrevistas anónimas. Cuenta que un representante sindical pidió a los trabajadores escribir 'sí' en un papel, sin identificarse, si tenían miedo de reportar lesiones (Dekker L3525). Como herramienta o formato práctico, se reescribe como sugerencia de My Idea. Ni el resumen_teorico ni el entregable repiten el dato.",
+      "indice": 5,
+      "auditoria": "tramo1 DK1-059"
     }
   ]
 }

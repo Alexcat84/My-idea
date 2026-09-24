@@ -11,7 +11,7 @@
     "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
     "Aplicar la prueba de sustitución con un jurado de pares",
     "Revisar historial previo de actos inseguros de la persona",
-    "Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema"
+    "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa"
   ],
   "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Después de un accidente o incidente grave donde se identificó un acto inseguro individual",
     "Cuando se debe decidir si aplicar sanciones disciplinarias"
   ],
-  "etiqueta_arbol": "Evalúa la Culpa con Claridad"
+  "etiqueta_arbol": "Evalúa la Culpa con Claridad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-10",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema",
+      "texto_nuevo": "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L5063",
+        "frase": "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Materia legal: la clasificación de culpabilidad (y dónde cae la sanción) se reemplaza por las categorías del árbol de Reason; el libro aplica la mitigación al abuso de sustancias, no a las violaciones (L5063: \"Between 'substance abuse with mitigation' and 'possible negligent error' lies a grey area\"), y habla de violación temeraria en sentido legal (L5055) y de error sin culpa e inducido por el sistema (L5057). El \"sabotaje/criminal\" del resumen_teorico no se toca: el libro lo respalda (L5043: \"we are likely to be in the realm of criminal behaviour\").",
+      "indice": 5,
+      "auditoria": "muestreo A11"
+    }
+  ]
 }

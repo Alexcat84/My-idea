@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
     "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
-    "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+    "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
     "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
   ],
   "entregable_esperado": "Una lista de riesgos sacada con varias técnicas, cada uno escrito como frase completa de causa y efecto.",
@@ -78,6 +78,23 @@
       },
       "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
       "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+    },
+    {
+      "id": "fidelidad-t3-09",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+      "texto_nuevo": "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5502",
+        "frase": "will have recourse to the knowledge captured from previous projects"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres proyectos' no está en el libro; se quita sin añadir nada más. No se añaden 'informes y lecciones', que era la propuesta de la ficha, para no introducir un dato nuevo. Cita del libro: L2678: \"What unsuccessful aspects of past projects are likely to arise in this one?\"; L5502: \"will have recourse to the knowledge captured from previous projects\". El resumen_teorico no lleva la cifra; no hay segmentos.",
+      "indice": 2,
+      "auditoria": "muestreo A10"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
     "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, cerca del final, oculto, con varios elementos iguales)",
-    "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+    "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
     "Establecer métricas de seguimiento de omisiones por tipo de tarea"
   ],
   "entregable_esperado": "Reporte de clasificación de errores de mantenimiento con identificación de patrones de omisión",
@@ -43,6 +43,23 @@
       "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C1 del muestreo, que reconcilia al lector y al clasificador ciego. quita la via de los niveles cognitivos de las omisiones pasadas (que el libro desaconseja, L2170); anade la via de los rasgos de la tarea, contados de antemano (L2250)",
       "indice": 1,
       "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C1"
+    },
+    {
+      "id": "fidelidad-t3-13",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+      "texto_nuevo": "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L2250",
+        "frase": "Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El criterio de priorización por tasa histórica es un añadido práctico; el libro prioriza por los rasgos que provocan omisiones, identificados de antemano (L2250), y ese criterio del libro ya está en el paso [1] del mismo nodo. Se reescribe como sugerencia de My Idea. La cifra 34-64% del resumen es otro dato, no este.",
+      "indice": 2,
+      "auditoria": "muestreo A14"
     }
   ]
 }

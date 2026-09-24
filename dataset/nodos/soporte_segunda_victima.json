@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Implementar protocolos de primeros auxilios psicológicos tras incidentes graves",
     "Realizar debriefings estructurados con los trabajadores involucrados",
-    "Ofrecer seguimiento a mediano y largo plazo a los afectados",
+    "Ofrecer seguimiento a los afectados",
     "Permitir que la segunda víctima participe en el proceso de investigación sin temor a represalias"
   ],
   "entregable_esperado": "Programa formal de soporte psicológico y organizacional para trabajadores involucrados en incidentes",
@@ -23,5 +23,24 @@
     "Cuando un trabajador está involucrado en un incidente que causó daño a terceros",
     "Cuando se diseñan políticas de bienestar laboral post-incidente"
   ],
-  "etiqueta_arbol": "Apoya a la Segunda Víctima"
+  "etiqueta_arbol": "Apoya a la Segunda Víctima",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-54",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofrecer seguimiento a mediano y largo plazo a los afectados",
+      "texto_nuevo": "Ofrecer seguimiento a los afectados",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L656-L658",
+        "frase": "Strong social and organizational support systems for second victims (psychological first aid, debriefings, follow-up), have proven critical to contain the negative consequences"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Plazo añadido: el libro nombra el seguimiento ('follow-up') como parte del apoyo a las segundas víctimas, sin horizonte temporal (Dekker L656-L658: \"psychological first aid, debriefings, follow-up\"). Se quita 'a mediano y largo plazo'. El resumen_teorico dice 'seguimiento' sin plazo y el entregable no lo menciona, así que no hay dato repetido.",
+      "indice": 2,
+      "auditoria": "tramo1 DK4-019"
+    }
+  ]
 }

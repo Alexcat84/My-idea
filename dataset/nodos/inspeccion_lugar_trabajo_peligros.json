@@ -4,14 +4,14 @@
   "dominio": "health_safety",
   "titulo_concepto": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía, excavaciones, zonas de acopio o trabajo en altura. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+  "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
   "pasos_accionables": [
-    "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo excavaciones, acopio, altura y mantenimiento",
+    "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
     "Involucra a otros trabajadores en la inspección si es posible",
     "Documenta hallazgos con fotos o video para su corrección posterior",
     "Usa listas de verificación por categoría de riesgo como eléctrico, incendio o ergonomía",
     "Evalúa cambios propuestos en procesos o equipos antes de implementarlos",
-    "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
+    "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
   ],
   "entregable_esperado": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
   "nodos_previos": [
@@ -39,6 +39,74 @@
       "node_id": "inspeccion_sitio_peligros",
       "titulo": "Inspección Regular del Sitio de Trabajo para Identificar Peligros",
       "fuente": "OSHA3886"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-28",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo excavaciones, acopio, altura y mantenimiento",
+      "texto_nuevo": "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L505-L509",
+        "frase": "Include all areas and activities in these inspections, such as storage and warehousing, facility and equipment maintenance, purchasing and office functions"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es el alcance práctico de la inspección. Excavaciones y trabajo en altura son categorías de obra que OSHA3885 no lista (L505 a L509 y la lista de categorías de L513 a L537). No es cifra, plazo ni norma, así que se reescribe como sugerencia de My Idea. En el resumen se quita el dato de la lista de categorías.",
+      "indice": 0,
+      "auditoria": "tramo1 O56-068"
+    },
+    {
+      "id": "fidelidad-t3-29",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía, excavaciones, zonas de acopio o trabajo en altura. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "texto_nuevo": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L505-L509",
+        "frase": "Include all areas and activities in these inspections, such as storage and warehousing, facility and equipment maintenance, purchasing and office functions"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 O56-068"
+    },
+    {
+      "id": "fidelidad-t3-30",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+      "texto_nuevo": "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L501",
+        "frase": "; L537: \"Before changing operations, workstations, or workflow; making major organizational changes; or introducing new equipment, materials, or processes, seek the input of workers and evaluate the planned changes"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La llegada de nuevos oficios es un disparador práctico que OSHA3885 no nombra. El libro habla de cambios en operaciones, puestos o procesos, desgaste de equipos y equipos, materiales o procesos nuevos (L501, L537). Se reescribe como sugerencia de My Idea. En el resumen se quita el dato. El paso [4] y el resto del resumen ya recogen lo que dice el libro.",
+      "indice": 5,
+      "auditoria": "tramo1 O56-042"
+    },
+    {
+      "id": "fidelidad-t3-31",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "texto_nuevo": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L501",
+        "frase": "; L537: \"Before changing operations, workstations, or workflow; making major organizational changes; or introducing new equipment, materials, or processes, seek the input of workers and evaluate the planned changes"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 O56-042"
     }
   ]
 }

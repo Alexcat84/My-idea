@@ -7,7 +7,7 @@
   "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, o sobre el impacto, para que si ocurre duela menos, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
   "pasos_accionables": [
     "De un riesgo grave, decide si atacas su probabilidad, su impacto, o ambos.",
-    "Lista dos o tres acciones concretas de reducción y su costo aproximado.",
+    "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
     "Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.",
     "Anota el riesgo residual que aceptas quedarte, para no olvidar que sigue ahí."
   ],
@@ -25,5 +25,24 @@
     "cuando no sabes hasta dónde vale la pena gastar en protegerte",
     "cuando blindas riesgos menores y descuidas los graves"
   ],
-  "etiqueta_arbol": "Reduce el Riesgo a lo Razonable"
+  "etiqueta_arbol": "Reduce el Riesgo a lo Razonable",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-08",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista dos o tres acciones concretas de reducción y su costo aproximado.",
+      "texto_nuevo": "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5749",
+        "frase": "brainstorm alternative treatments for the five cases"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres acciones' no está en el libro; se quita. El libro pide plantear tratamientos alternativos sin número fijo (L5749: \"brainstorm alternative treatments for the five cases\") y recuerda que toda respuesta tiene un costo (L5438: \"Any response to, and treatment of, a project risk is likely to incur costs\"). No se repite en otros campos.",
+      "indice": 1,
+      "auditoria": "muestreo A9"
+    }
+  ]
 }

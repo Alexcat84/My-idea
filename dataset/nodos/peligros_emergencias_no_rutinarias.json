@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+  "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
   "pasos_accionables": [
     "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
-    "Listar tareas no rutinarias como mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos o vertidos de concreto",
+    "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
     "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
     "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria",
-    "Actualizar el plan de emergencia cuando no exista uno vigente"
+    "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia"
   ],
   "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
   "nodos_previos": [
@@ -39,6 +39,58 @@
       "node_id": "peligros_emergencias_no_rutinarias_2",
       "titulo": "Identificación de Peligros en Emergencias y Tareas No Rutinarias",
       "fuente": "OSHA3886"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-32",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Listar tareas no rutinarias como mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos o vertidos de concreto",
+      "texto_nuevo": "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L593",
+        "frase": "; L605-L607: \"Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities, also present potential hazards."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso atribuye a la guia de OSHA ejemplos que no trae: izajes criticos y vertidos de concreto. Como es materia normativa de seguridad, se quitan y se dejan solo los ejemplos del libro (L593: 'Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities'). Los mismos ejemplos anadidos aparecen en el resumen_teorico y tambien se quitan ahi.",
+      "indice": 1,
+      "auditoria": "tramo1 O56-044"
+    },
+    {
+      "id": "fidelidad-t3-33",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "texto_nuevo": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L593",
+        "frase": "; L605-L607: \"Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities, also present potential hazards."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 O56-044"
+    },
+    {
+      "id": "fidelidad-t3-34",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Actualizar el plan de emergencia cuando no exista uno vigente",
+      "texto_nuevo": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L735-L741",
+        "frase": "Develop or modify plans to control hazards that may arise in emergency situations."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). La condicion 'cuando no exista uno vigente' no esta en el libro y deja el paso sin sentido: no se puede actualizar un plan que no existe. Es la condicion que dispara una obligacion del plan de emergencia, asi que se reemplaza por lo que dice el libro (L739: 'Develop or modify plans to control hazards that may arise in emergency situations'). No aparece en ningun otro campo.",
+      "indice": 4,
+      "auditoria": "tramo1 O56-026"
     }
   ]
 }

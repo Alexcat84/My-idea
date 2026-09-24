@@ -9,7 +9,7 @@
     "Antes de añadir una función o elemento, pregúntate qué podrías quitar para lograr el mismo objetivo",
     "Lista todos los componentes actuales de tu producto/servicio/proceso",
     "Para cada componente, pregúntate: ¿qué pasaría si esto no existiera?",
-    "Identifica al menos 3 elementos candidatos a eliminar y evalúa el impacto",
+    "Identifica los elementos candidatos a eliminar y evalúa el impacto de quitarlos",
     "Prueba una versión reducida con usuarios reales antes de comprometerte"
   ],
   "entregable_esperado": "Lista de elementos candidatos a eliminar del diseño, con una versión prototipo simplificada",
@@ -25,5 +25,24 @@
     "Cuando el equipo solo propone añadir features sin considerar quitar",
     "En fase de refinamiento de un MVP"
   ],
-  "etiqueta_arbol": "Simplifica Quitando lo Innecesario"
+  "etiqueta_arbol": "Simplifica Quitando lo Innecesario",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica al menos 3 elementos candidatos a eliminar y evalúa el impacto",
+      "texto_nuevo": "Identifica los elementos candidatos a eliminar y evalúa el impacto de quitarlos",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3773",
+        "frase": "Just as we can make, we can take away--and that’s often a better option."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'al menos 3 elementos' no está en el libro; se quita. Cita L3773: \"Just as we can make, we can take away--and that's often a better option.\". El entregable ya habla de 'lista de elementos candidatos' sin cifra; no hay segmentos repetidos.",
+      "indice": 3,
+      "auditoria": "muestreo A4"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "Clasificar los materiales combustibles del área de trabajo para elegir el tipo correcto de extintor",
     "Instalar extintores en ubicaciones accesibles según NFPA 10",
     "Realizar inspección visual mensual y registrar los resultados",
-    "Programar mantenimiento anual certificado",
+    "Programar el mantenimiento anual de los extintores y dejarlo registrado",
     "Capacitar a trabajadores designados en el uso de extintores anualmente"
   ],
   "entregable_esperado": "Registro de inspección y mantenimiento de extintores, con capacitación documentada",
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Si el negocio cuenta con extintores portátiles y designa trabajadores para usarlos"
   ],
-  "etiqueta_arbol": "Gestiona tus Extintores"
+  "etiqueta_arbol": "Gestiona tus Extintores",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-36",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Programar mantenimiento anual certificado",
+      "texto_nuevo": "Programar el mantenimiento anual de los extintores y dejarlo registrado",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L549",
+        "frase": "Fire extinguishers receive an annual maintenance check, and the maintenance is recorded."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso anade que el mantenimiento sea 'certificado', una exigencia normativa que el libro no pone. El libro pide un mantenimiento anual que quede registrado (L549: 'annual maintenance check, and the maintenance is recorded'). Ni el resumen ni el entregable repiten 'certificado'.",
+      "indice": 3,
+      "auditoria": "tramo1 SB1-089"
+    }
+  ]
 }

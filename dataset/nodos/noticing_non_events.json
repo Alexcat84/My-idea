@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
     "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
-    "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+    "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
     "Revisar incidentes pasados en busca de 'sorpresas de automatización' como indicador de este riesgo"
   ],
   "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
@@ -20,5 +20,24 @@
     "Cuando se diseñan sistemas de monitoreo de procesos automatizados de larga duración",
     "Cuando se investiga un incidente donde el sistema continuó una acción no deseada sin ser detectado a tiempo"
   ],
-  "etiqueta_arbol": "Nota lo que No Cambia"
+  "etiqueta_arbol": "Nota lo que No Cambia",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-53",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+      "texto_nuevo": "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L2335-L2348",
+        "frase": "Something that is not happening is not a good trigger for human (or even machine) intervention."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida: el libro no propone alertas por ausencia de cambio. Dice que a las personas, y también a las máquinas, les cuesta notar los no-eventos (Dekker L2335-L2348: \"Something that is not happening is not a good trigger for human (or even machine) intervention.\"). También avisa de que los avisos automáticos saturan el puesto. Se reescribe como sugerencia de My Idea. El resumen_teorico no menciona alertas y no hay nada que quitar. El entregable ('Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos') repite la idea y, por la regla PRACTICO, se deja. Aviso para la sesión principal: el paso 0 del mismo nodo ('Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado') lleva la misma idea y no está en esta lista.",
+      "indice": 2,
+      "auditoria": "tramo1 DK3-088"
+    }
+  ]
 }

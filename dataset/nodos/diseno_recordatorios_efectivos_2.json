@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
   "pasos_accionables": [
-    "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
+    "Sugerencia de My Idea: identifica los pasos de tarea propensos a omisión revisando errores históricos",
     "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y check",
     "Evalúa si conviene sumar criterios secundarios como bloquear el avance o confirmar la finalización",
     "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
@@ -35,6 +35,25 @@
       "node_id": "diseno_recordatorios_efectivos",
       "titulo": "Diseño de Recordatorios Efectivos contra Omisiones",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-11",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
+      "texto_nuevo": "Sugerencia de My Idea: identifica los pasos de tarea propensos a omisión revisando errores históricos",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L2250",
+        "frase": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El método (revisar errores históricos) es un añadido práctico; el libro identifica esos pasos de antemano contando sus rasgos (L2250). No contradice al libro, se reescribe como sugerencia de My Idea sin atribuirlo al autor. El dato no aparece en resumen_teorico ni en entregable_esperado.",
+      "indice": 0,
+      "auditoria": "muestreo A12"
     }
   ]
 }

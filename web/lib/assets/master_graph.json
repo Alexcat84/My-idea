@@ -5712,7 +5712,7 @@
         "Determinar si hubo violación consciente de procedimientos existentes y adecuados",
         "Aplicar la prueba de sustitución con un jurado de pares",
         "Revisar historial previo de actos inseguros de la persona",
-        "Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema"
+        "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa"
       ],
       "entregable_esperado": "Informe de investigación de incidente con clasificación de culpabilidad usando el árbol de decisión",
       "nodos_previos": [
@@ -5725,7 +5725,26 @@
         "Después de un accidente o incidente grave donde se identificó un acto inseguro individual",
         "Cuando se debe decidir si aplicar sanciones disciplinarias"
       ],
-      "etiqueta_arbol": "Evalúa la Culpa con Claridad"
+      "etiqueta_arbol": "Evalúa la Culpa con Claridad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-10",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Clasificar el acto en: criminal, negligente, violación con o sin mitigación, o error inducido por el sistema",
+          "texto_nuevo": "Clasificar el acto en: sabotaje, abuso de sustancias (con o sin atenuantes), posible violación temeraria, violación inducida por el sistema, posible error negligente, error inducido por el sistema o error sin culpa",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L5063",
+            "frase": "Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Materia legal: la clasificación de culpabilidad (y dónde cae la sanción) se reemplaza por las categorías del árbol de Reason; el libro aplica la mitigación al abuso de sustancias, no a las violaciones (L5063: \"Between 'substance abuse with mitigation' and 'possible negligent error' lies a grey area\"), y habla de violación temeraria en sentido legal (L5055) y de error sin culpa e inducido por el sistema (L5057). El \"sabotaje/criminal\" del resumen_teorico no se toca: el libro lo respalda (L5043: \"we are likely to be in the realm of criminal behaviour\").",
+          "indice": 5,
+          "auditoria": "muestreo A11"
+        }
+      ]
     },
     "areas_riesgo_primario": {
       "node_id": "areas_riesgo_primario",
@@ -9636,7 +9655,7 @@
         "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
         "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
         "Revisar si existen incentivos que fomenten el subreporte de incidentes",
-        "Evaluar la proporción de indicadores adelantados vs indicadores rezagados (lagging) en uso",
+        "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
         "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
       ],
       "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
@@ -9651,7 +9670,26 @@
         "Cuando la organización tiene un departamento de seguridad numeroso pero desconectado de operaciones",
         "Cuando se sospecha subreporte de incidentes por presión de indicadores"
       ],
-      "etiqueta_arbol": "Evita el Exceso de Trámites"
+      "etiqueta_arbol": "Evita el Exceso de Trámites",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-49",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Evaluar la proporción de indicadores adelantados vs indicadores rezagados (lagging) en uso",
+          "texto_nuevo": "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L3111",
+            "frase": "; L2970: \"Safety bureaucracies are often organized around lagging indicators: measuring that which has already been. The predictive value of most lagging indicators is known to be poor."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Métrica o herramienta añadida: el libro no menciona indicadores adelantados ni ninguna proporción entre adelantados y rezagados. Solo dice que las burocracias de seguridad se organizan en torno a indicadores rezagados de poco valor predictivo (Dekker L3111). Se reescribe como sugerencia de My Idea. El resumen_teorico solo habla de los indicadores retrasados, que sí están en el libro, así que no repite el dato. El entregable tampoco.",
+          "indice": 3,
+          "auditoria": "tramo1 DK1-073"
+        }
+      ]
     },
     "busca_el_riesgo_antes_de_que_te_busque": {
       "node_id": "busca_el_riesgo_antes_de_que_te_busque",
@@ -16468,12 +16506,12 @@
       "dominio": "entrega",
       "titulo_concepto": "Colocar y usar etiquetas de manejo correctamente",
       "fuente": "Guia de empaque para envios (FedEx)",
-      "resumen_teorico": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Las etiquetas de manejo especial, como 'fragil' o 'este lado arriba', ayudan a que el personal preste atencion, pero ningun courier garantiza que se respete la orientacion durante el viaje: son una ayuda, no una promesa. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "resumen_teorico": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientacion durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posicion preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
       "pasos_accionables": [
         "Pega la etiqueta de envio en la cara mas grande y plana de la caja.",
         "Deja la etiqueta completamente visible, sin cinta ni papeles encima.",
         "Quita o tapa cualquier etiqueta de un envio anterior si reutilizas la caja.",
-        "Agrega una etiqueta de 'fragil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+        "Sugerencia de My Idea: agrega una etiqueta de 'fragil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
         "Refuerza el acolchado interno en vez de confiar solo en la etiqueta de manejo."
       ],
       "entregable_esperado": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan al courier.",
@@ -16490,7 +16528,42 @@
         "Envias algo fragil y quieres avisar al courier sin depender solo de eso.",
         "Has tenido paquetes retrasados porque la etiqueta quedo tapada o mal puesta."
       ],
-      "etiqueta_arbol": "Pon la etiqueta donde se vea"
+      "etiqueta_arbol": "Pon la etiqueta donde se vea",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-25",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Agrega una etiqueta de 'fragil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+          "texto_nuevo": "Sugerencia de My Idea: agrega una etiqueta de 'fragil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+          "cita": {
+            "libro": "HowToPack_fxcom",
+            "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+            "lineas": "L201-L201",
+            "frase": "While we cannot ensure compliance with markings such as \"Up\" arrows or \"This End Up,\" properly placing the shipping label increases your chance for the preferred orientation."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La etiqueta de 'fragil' es un añadido práctico de formato que la guía de FedEx no recomienda ni menciona. Se reescribe como sugerencia de My Idea con el mismo estilo sin tildes del nodo. En el resumen se quita. Esa frase también afirmaba sin respaldo que estas etiquetas 'ayudan a que el personal preste atencion', así que se reescribe con lo que dice el libro (L201).",
+          "indice": 3,
+          "auditoria": "tramo1 FX1-022"
+        },
+        {
+          "id": "fidelidad-t3-26",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Las etiquetas de manejo especial, como 'fragil' o 'este lado arriba', ayudan a que el personal preste atencion, pero ningun courier garantiza que se respete la orientacion durante el viaje: son una ayuda, no una promesa. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+          "texto_nuevo": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rapido. La regla comun es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automatico en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientacion durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posicion preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+          "cita": {
+            "libro": "HowToPack_fxcom",
+            "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+            "lineas": "L201-L201",
+            "frase": "While we cannot ensure compliance with markings such as \"Up\" arrows or \"This End Up,\" properly placing the shipping label increases your chance for the preferred orientation."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 FX1-022"
+        }
+      ]
     },
     "combinacion_humano_ia_decision": {
       "node_id": "combinacion_humano_ia_decision",
@@ -17865,7 +17938,7 @@
       "pasos_accionables": [
         "Elaborar inventario completo de químicos peligrosos en el lugar de trabajo",
         "Mantener SDS actualizadas y accesibles para todos los trabajadores",
-        "Etiquetar correctamente los contenedores según el sistema GHS",
+        "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
         "Capacitar a los trabajadores antes de su asignación inicial y ante nuevos riesgos",
         "Revisar y actualizar periódicamente el programa de comunicación de riesgos"
       ],
@@ -17880,7 +17953,26 @@
       "condiciones_activacion": [
         "Si el negocio maneja, almacena o utiliza cualquier químico peligroso"
       ],
-      "etiqueta_arbol": "Comunica los Riesgos Químicos"
+      "etiqueta_arbol": "Comunica los Riesgos Químicos",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-35",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Etiquetar correctamente los contenedores según el sistema GHS",
+          "texto_nuevo": "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L743-L745",
+            "frase": "Labels are kept on shipped containers; including: product identifier, signal word, hazard statement(s), pictogram(s), precautionary statement(s), and supplier information."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso cita una norma, 'sistema GHS', que el libro no nombra. Se reemplaza por los elementos de la etiqueta que el libro enumera (L743). El resumen solo dice 'etiquetado adecuado', asi que no repite el dato.",
+          "indice": 2,
+          "auditoria": "tramo1 SB1-098"
+        }
+      ]
     },
     "comunicacion_del_riesgo": {
       "node_id": "comunicacion_del_riesgo",
@@ -25158,7 +25250,7 @@
         "Elimina prácticas que estigmaticen a trabajadores lesionados, como identificadores visibles frente al resto del equipo",
         "Evalúa si las políticas posteriores a un incidente, como pruebas de drogas obligatorias, desincentivan el reporte",
         "Sustituye las métricas basadas en tasas de incidentes por métricas de proceso o de condiciones de seguridad",
-        "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
+        "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
       ],
       "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño.",
       "nodos_previos": [
@@ -25186,6 +25278,25 @@
           "node_id": "riesgos_programas_seguridad_conductual",
           "titulo": "Riesgos de los Programas de Seguridad Basados en Comportamiento",
           "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-50",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+          "texto_nuevo": "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L3525-L3525",
+            "frase": "the union representative asked a subsequent group to write “yes” on a piece of paper if they were afraid to report injuries."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Método añadido: el libro no propone entrevistas anónimas. Cuenta que un representante sindical pidió a los trabajadores escribir 'sí' en un papel, sin identificarse, si tenían miedo de reportar lesiones (Dekker L3525). Como herramienta o formato práctico, se reescribe como sugerencia de My Idea. Ni el resumen_teorico ni el entregable repiten el dato.",
+          "indice": 5,
+          "auditoria": "tramo1 DK1-059"
         }
       ]
     },
@@ -26563,7 +26674,7 @@
         "Identificar los supuestos y premisas de decisión compartidos que guían al personal en situaciones no estandarizadas",
         "Fomentar la socialización temprana del personal en estos valores compartidos antes de otorgar autonomía operativa",
         "Evaluar si las operaciones descentralizadas mantienen coherencia con los objetivos centrales sin necesidad de supervisión directa",
-        "Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas"
+        "Sugerencia de My Idea: diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas"
       ],
       "entregable_esperado": "Documento de valores y supuestos compartidos de la organización que sirvan como base para la toma de decisiones descentralizada",
       "nodos_previos": [
@@ -26580,7 +26691,26 @@
         "Cuando el exceso de reglas y supervisión resulta ineficiente o costoso",
         "Cuando se enfrentan emergencias sin precedente que las normas no cubren"
       ],
-      "etiqueta_arbol": "Deja que la Cultura Coordine"
+      "etiqueta_arbol": "Deja que la Cultura Coordine",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-15",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas",
+          "texto_nuevo": "Sugerencia de My Idea: diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L5178",
+            "frase": "you first have to centralise so that people are socialised to use similar decision premises and assumptions"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La mentoría como mecanismo es un añadido práctico; el libro habla de socializar a las personas en premisas de decisión compartidas (L5178), algo que ya recoge el paso [1] del nodo. Se reescribe como sugerencia de My Idea. El dato no aparece en otros campos.",
+          "indice": 3,
+          "auditoria": "muestreo A17"
+        }
+      ]
     },
     "cultura_de_aprendizaje": {
       "node_id": "cultura_de_aprendizaje",
@@ -27093,7 +27223,7 @@
       "pasos_accionables": [
         "Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable",
         "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito",
-        "Capacitar a supervisores y gestores en la aplicación consistente de estos criterios",
+        "Sugerencia de My Idea: capacitar a supervisores y gestores en la aplicación consistente de estos criterios",
         "Comunicar estas políticas a toda la organización para generar confianza",
         "Evitar tanto la amnistía total como el castigo indiscriminado de todos los errores",
         "Arma un grupo de confianza que revise los casos difíciles o ambiguos"
@@ -27134,6 +27264,25 @@
           "node_id": "cultura_justa_organizacional",
           "titulo": "Cultura Justa (Just Culture)",
           "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-16",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Capacitar a supervisores y gestores en la aplicación consistente de estos criterios",
+          "texto_nuevo": "Sugerencia de My Idea: capacitar a supervisores y gestores en la aplicación consistente de estos criterios",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L5085",
+            "frase": "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Los responsables (supervisores y gestores) y la formación como medio son un añadido práctico; el libro logra la consistencia con una herramienta estructurada común en manos de la junta disciplinaria (L5085). Se reescribe como sugerencia de My Idea. El dato no aparece en otros campos.",
+          "indice": 2,
+          "auditoria": "muestreo A18"
         }
       ]
     },
@@ -32081,7 +32230,7 @@
       "resumen_teorico": "Lo que hoy consideramos basura o tesoro depende del momento histórico y de quién lo evalúa. Los barcos hundidos que se convirtieron en terrenos valiosos en San Francisco ilustran cómo el valor de las cosas cambia con el tiempo. Al diseñar, es crucial preguntarse qué será 'tesoro' o 'basura' en 50 años, y diseñar productos y sistemas cuya descomposición futura genere valor interconectado en lugar de desechos destructivos.",
       "pasos_accionables": [
         "Pregunta: ¿qué elementos de mi diseño podrían considerarse basura en el futuro, y cuáles tesoro?",
-        "Proyecta el ciclo de vida de tu producto/servicio a 10, 50 y 100 años",
+        "Proyecta el ciclo de vida de tu producto/servicio: qué sería hoy y qué sería dentro de cincuenta años",
         "Identifica qué recursos o subproductos de tu diseño podrían tener valor futuro no evidente hoy",
         "Ajusta el diseño para que su descomposición o final de vida genere valor reutilizable, no desecho tóxico"
       ],
@@ -32096,7 +32245,26 @@
         "Cuando el proyecto involucra materiales físicos o recursos con impacto ambiental a largo plazo",
         "En fases de diseño de producto donde se define el ciclo de vida completo"
       ],
-      "etiqueta_arbol": "El Valor Cambia con el Tiempo"
+      "etiqueta_arbol": "El Valor Cambia con el Tiempo",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-01",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Proyecta el ciclo de vida de tu producto/servicio a 10, 50 y 100 años",
+          "texto_nuevo": "Proyecta el ciclo de vida de tu producto/servicio: qué sería hoy y qué sería dentro de cincuenta años",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3967",
+            "frase": "What would the hidden treasure in your hometown be today? What about in fifty years?"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: los horizontes de 10 y 100 años no están en el libro; se reemplazan por el único horizonte que da el libro. Cita L3967: \"What would the hidden treasure in your hometown be today? What about in fifty years?\". El resumen_teorico ya dice 50 años, coherente con el libro; no hay segmentos repetidos.",
+          "indice": 1,
+          "auditoria": "muestreo A2"
+        }
+      ]
     },
     "definir_tu_propio_pedido_perfecto": {
       "node_id": "definir_tu_propio_pedido_perfecto",
@@ -36500,7 +36668,7 @@
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
       "resumen_teorico": "Todo diseño, por bien intencionado que sea, puede generar efectos secundarios imprevistos a lo largo del tiempo (ambientales, sociales, psicológicos) que superan el control del creador original. Este concepto invita a los diseñadores y emprendedores a incorporar de forma proactiva el ejercicio de imaginar escenarios futuros extremos (positivos y negativos) de su creación, y a diseñar con humildad, previendo mecanismos de corrección, reversión o mitigación antes de escalar una solución.",
       "pasos_accionables": [
-        "Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.",
+        "Reúne al equipo y cuenta historias especulativas sobre qué pasaría si tu producto o servicio se usara de forma masiva.",
         "Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control. Incluye a quien no está en la sala de diseño pero será afectado",
         "Pregunta explícitamente: '¿Qué pasaría si esto se usa de forma opuesta a la intención original?'",
         "Diseña salvaguardas, límites de uso o 'mecanismos de reversión' incorporados desde el inicio.",
@@ -36538,6 +36706,25 @@
           "node_id": "diseno_fugitivo_runaway_design",
           "titulo": "Diseño Fugitivo (Runaway Design)",
           "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-02",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.",
+          "texto_nuevo": "Reúne al equipo y cuenta historias especulativas sobre qué pasaría si tu producto o servicio se usara de forma masiva.",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3490",
+            "frase": "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: los horizontes '10, 50 y 100 años' no están en el libro; se quitan y se deja la historia especulativa sin horizonte fijo. Cita L3490: \"Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.\". El dato no se repite en resumen_teorico ni entregable.",
+          "indice": 0,
+          "auditoria": "muestreo A3"
         }
       ]
     },
@@ -37883,7 +38070,7 @@
         "Antes de añadir una función o elemento, pregúntate qué podrías quitar para lograr el mismo objetivo",
         "Lista todos los componentes actuales de tu producto/servicio/proceso",
         "Para cada componente, pregúntate: ¿qué pasaría si esto no existiera?",
-        "Identifica al menos 3 elementos candidatos a eliminar y evalúa el impacto",
+        "Identifica los elementos candidatos a eliminar y evalúa el impacto de quitarlos",
         "Prueba una versión reducida con usuarios reales antes de comprometerte"
       ],
       "entregable_esperado": "Lista de elementos candidatos a eliminar del diseño, con una versión prototipo simplificada",
@@ -37899,7 +38086,26 @@
         "Cuando el equipo solo propone añadir features sin considerar quitar",
         "En fase de refinamiento de un MVP"
       ],
-      "etiqueta_arbol": "Simplifica Quitando lo Innecesario"
+      "etiqueta_arbol": "Simplifica Quitando lo Innecesario",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-03",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Identifica al menos 3 elementos candidatos a eliminar y evalúa el impacto",
+          "texto_nuevo": "Identifica los elementos candidatos a eliminar y evalúa el impacto de quitarlos",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3773",
+            "frase": "Just as we can make, we can take away--and that’s often a better option."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'al menos 3 elementos' no está en el libro; se quita. Cita L3773: \"Just as we can make, we can take away--and that's often a better option.\". El entregable ya habla de 'lista de elementos candidatos' sin cifra; no hay segmentos repetidos.",
+          "indice": 3,
+          "auditoria": "muestreo A4"
+        }
+      ]
     },
     "diseno_producto_cadena_suministro": {
       "node_id": "diseno_producto_cadena_suministro",
@@ -37994,7 +38200,7 @@
       "fuente": "Managing the Risks of Organizat - Reason, J. T_",
       "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
       "pasos_accionables": [
-        "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
+        "Sugerencia de My Idea: identifica los pasos de tarea propensos a omisión revisando errores históricos",
         "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y check",
         "Evalúa si conviene sumar criterios secundarios como bloquear el avance o confirmar la finalización",
         "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
@@ -38023,6 +38229,25 @@
           "node_id": "diseno_recordatorios_efectivos",
           "titulo": "Diseño de Recordatorios Efectivos contra Omisiones",
           "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-11",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
+          "texto_nuevo": "Sugerencia de My Idea: identifica los pasos de tarea propensos a omisión revisando errores históricos",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L2250",
+            "frase": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El método (revisar errores históricos) es un añadido práctico; el libro identifica esos pasos de antemano contando sus rasgos (L2250). No contradice al libro, se reescribe como sugerencia de My Idea sin atribuirlo al autor. El dato no aparece en resumen_teorico ni en entregable_esperado.",
+          "indice": 0,
+          "auditoria": "muestreo A12"
         }
       ]
     },
@@ -53600,7 +53825,7 @@
         "Clasificar los materiales combustibles del área de trabajo para elegir el tipo correcto de extintor",
         "Instalar extintores en ubicaciones accesibles según NFPA 10",
         "Realizar inspección visual mensual y registrar los resultados",
-        "Programar mantenimiento anual certificado",
+        "Programar el mantenimiento anual de los extintores y dejarlo registrado",
         "Capacitar a trabajadores designados en el uso de extintores anualmente"
       ],
       "entregable_esperado": "Registro de inspección y mantenimiento de extintores, con capacitación documentada",
@@ -53613,7 +53838,26 @@
       "condiciones_activacion": [
         "Si el negocio cuenta con extintores portátiles y designa trabajadores para usarlos"
       ],
-      "etiqueta_arbol": "Gestiona tus Extintores"
+      "etiqueta_arbol": "Gestiona tus Extintores",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-36",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Programar mantenimiento anual certificado",
+          "texto_nuevo": "Programar el mantenimiento anual de los extintores y dejarlo registrado",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L549",
+            "frase": "Fire extinguishers receive an annual maintenance check, and the maintenance is recorded."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso anade que el mantenimiento sea 'certificado', una exigencia normativa que el libro no pone. El libro pide un mantenimiento anual que quede registrado (L549: 'annual maintenance check, and the maintenance is recorded'). Ni el resumen ni el entregable repiten 'certificado'.",
+          "indice": 3,
+          "auditoria": "tramo1 SB1-089"
+        }
+      ]
     },
     "extraer_priorizar_hipotesis": {
       "node_id": "extraer_priorizar_hipotesis",
@@ -54143,7 +54387,7 @@
       "resumen_teorico": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
       "pasos_accionables": [
         "Calcular la carga de trabajo real de los equipos de seguridad/calidad frente a su dotación actual",
-        "Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector",
+        "Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes",
         "Identificar funciones de supervisión que se han visto reducidas o eliminadas por recortes",
         "Presentar a la dirección un caso de negocio sobre el riesgo de subdotación en funciones de seguridad"
       ],
@@ -54158,7 +54402,26 @@
         "Cuando se han reducido plantillas de seguridad o calidad en los últimos años",
         "Cuando el personal de supervisión reporta sobrecarga de tareas no relacionadas con su función principal"
       ],
-      "etiqueta_arbol": "Vigila los Recursos del Regulador"
+      "etiqueta_arbol": "Vigila los Recursos del Regulador",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-17",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector",
+          "texto_nuevo": "Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L3993",
+            "frase": "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent.\"; L3993: \"Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Remite a una norma o cifra de referencia (\"estándares del sector\") que el libro no da; el libro mide el ratio y su caída tras los recortes (L3993: \"NASA reduced its safety and quality control personnel by 71 per cent\"; \"about 2 per cent of NASA's 22 000 staff\"). Se reemplaza por lo que hace el libro. El dato no aparece en otros campos.",
+          "indice": 1,
+          "auditoria": "muestreo A19"
+        }
+      ]
     },
     "fallos_activos_condiciones_latentes": {
       "node_id": "fallos_activos_condiciones_latentes",
@@ -55724,8 +55987,8 @@
       "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto demuestra que los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
       "pasos_accionables": [
         "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
-        "Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos",
-        "Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal",
+        "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+        "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
         "Capacitar a operadores en el juicio situacional, no solo en el cumplimiento ciego de la nueva regla"
       ],
       "entregable_esperado": "Protocolo de revisión de nuevas medidas correctivas con análisis de escenarios contraproducentes",
@@ -55739,7 +56002,43 @@
         "Cuando se está por implementar una nueva regla o dispositivo tras investigar un accidente",
         "Si la organización opera sistemas complejos y fuertemente acoplados"
       ],
-      "etiqueta_arbol": "Cuidado con las Soluciones Riesgosas"
+      "etiqueta_arbol": "Cuidado con las Soluciones Riesgosas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-18",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos",
+          "texto_nuevo": "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L1035",
+            "frase": "What proved to be an error in the TMI event turned out to be a vital step at Ginna."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El \"análisis de sensibilidad\" es una herramienta añadida; el libro sostiene la idea de fondo con el caso TMI y Ginna (L1035). Se reescribe como sugerencia de My Idea y se conserva la razón del libro. El entregable habla de análisis de escenarios, no de este dato, y queda.",
+          "indice": 1,
+          "auditoria": "muestreo A20"
+        },
+        {
+          "id": "fidelidad-t3-21",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal",
+          "texto_nuevo": "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L1575",
+            "frase": "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una frecuencia (revisiones periódicas), que es práctica, y queda como sugerencia de My Idea. El fin original, 'verificar su aplicabilidad universal', se cambia porque el libro dice que ningún conjunto de procedimientos será nunca universalmente aplicable (L1575). El dato no se repite en el resumen ni en el entregable.",
+          "indice": 2,
+          "auditoria": "muestreo A25"
+        }
+      ]
     },
     "filosofia_customer_validation": {
       "node_id": "filosofia_customer_validation",
@@ -59720,7 +60019,7 @@
       "pasos_accionables": [
         "Evaluar la viabilidad estructural de instalar un techo verde en el edificio",
         "Seleccionar especies vegetales nativas o adaptadas al clima local",
-        "Diseñar el sistema de capas (impermeabilización, sustrato, drenaje, vegetación)",
+        "Sugerencia de My Idea: diseñar el sistema de capas del techo (impermeabilización, sustrato, drenaje y vegetación).",
         "Calcular ahorro en costos de climatización y gestión de aguas pluviales"
       ],
       "entregable_esperado": "Plan técnico de instalación de techo verde con estimación de beneficios ambientales y económicos.",
@@ -59735,7 +60034,26 @@
       "ids_alias": [
         "gestión_de_aguas_pluviales_con_techos_verdes"
       ],
-      "etiqueta_arbol": "Instala un Techo Verde"
+      "etiqueta_arbol": "Instala un Techo Verde",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-07",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Diseñar el sistema de capas (impermeabilización, sustrato, drenaje, vegetación)",
+          "texto_nuevo": "Sugerencia de My Idea: diseñar el sistema de capas del techo (impermeabilización, sustrato, drenaje y vegetación).",
+          "cita": {
+            "libro": "Cradle to Cradle - Michael Braungart",
+            "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+            "lineas": "L509",
+            "frase": "It is a light layer of soil, a growing matrix, covered with plants."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Añadido práctico de ejecución técnica: el libro describe el techo solo como \"a light layer of soil, a growing matrix, covered with plants\" (L509) y no nombra impermeabilización ni drenaje. No es cifra ni norma: es un detalle constructivo útil, así que se reescribe como sugerencia de My Idea sin atribuirlo al autor, en vez de borrar la impermeabilización y el drenaje, que en la práctica son necesarios. No se repite en resumen_teorico ni entregable.",
+          "indice": 2,
+          "auditoria": "muestreo A8"
+        }
+      ]
     },
     "gestion_de_conflictos_cofundadores": {
       "node_id": "gestion_de_conflictos_cofundadores",
@@ -60418,7 +60736,7 @@
       "pasos_accionables": [
         "Auditar la tasa de falsas alarmas de los sistemas de advertencia críticos",
         "Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad",
-        "Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada",
+        "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
         "Capacitar al personal sobre los riesgos de desactivar alarmas por desconfianza histórica"
       ],
       "entregable_esperado": "Reporte de confiabilidad de sistemas de alarma con plan de reducción de falsos positivos",
@@ -60431,7 +60749,26 @@
         "Cuando existen antecedentes de alarmas falsas frecuentes en el sistema",
         "Si el personal ha mostrado desconfianza o desactivación de sistemas de advertencia"
       ],
-      "etiqueta_arbol": "No Ignores Falsas Alarmas"
+      "etiqueta_arbol": "No Ignores Falsas Alarmas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-19",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada",
+          "texto_nuevo": "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L1085",
+            "frase": "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La verificación cruzada contra la desactivación unilateral es un mecanismo añadido; el libro solo describe el riesgo de que las falsas alarmas hagan perder la confianza e ignorar avisos reales (L1085). Se reescribe como sugerencia de My Idea y se conserva el fin del libro. El dato no aparece en otros campos.",
+          "indice": 2,
+          "auditoria": "muestreo A21"
+        }
+      ]
     },
     "gestion_fluctuaciones_cambiarias_clientes": {
       "node_id": "gestion_fluctuaciones_cambiarias_clientes",
@@ -66878,13 +67215,13 @@
       "dominio": "health_safety",
       "titulo_concepto": "Plan de Control de Infecciones",
       "fuente": "SMALL_BUSINESS",
-      "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal, y capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+      "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal (tambien frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitacion sobre exposicion a animales. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
       "pasos_accionables": [
         "Evalua los riesgos de exposicion a agentes infecciosos en tu negocio.",
         "Pon en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies.",
         "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
         "Ten a mano el equipo de proteccion necesario según el riesgo: guantes, proteccion ocular, mascarillas o respiradores certificados.",
-        "Si tu trabajo o el de quien te ayuda implica contacto con animales, mosquitos o garrapatas, capacitate cada año sobre estos riesgos y consigue ropa protectora y repelente cuando aplique.",
+        "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
         "Define una politica de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
       ],
       "entregable_esperado": "Un plan de control de infecciones por escrito, con la evaluacion de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
@@ -66909,6 +67246,41 @@
           "node_id": "plan_de_control_de_infecciones",
           "titulo": "Plan de Control de Infecciones en el Lugar de Trabajo",
           "fuente": "SMALL_BUSINESS"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-37",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Si tu trabajo o el de quien te ayuda implica contacto con animales, mosquitos o garrapatas, capacitate cada año sobre estos riesgos y consigue ropa protectora y repelente cuando aplique.",
+          "texto_nuevo": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L921-L925",
+            "frase": "Train workers who may encounter animals as part of their job duties at least annually on how to protect themselves"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso extiende a mosquitos y garrapatas la periodicidad anual que el libro solo exige para la capacitacion sobre animales (L921). Para mosquitos y garrapatas el libro pide ropa protectora y repelente (L923-L925). Se reemplaza por lo que dice el libro y la capacitacion anual queda solo para animales. El resumen_teorico repite el dato ('capacitacion sobre ... vectores como mosquitos y garrapatas, y enfermedades respiratorias'). Se corrige ahi tambien: vectores y enfermedades respiratorias pasan a proteccion, como en el libro (ropa, repelente, mascarillas, L923-L927).",
+          "indice": 4,
+          "auditoria": "tramo1 SB1-005"
+        },
+        {
+          "id": "fidelidad-t3-38",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal, y capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+          "texto_nuevo": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal (tambien frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitacion sobre exposicion a animales. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L921-L925",
+            "frase": "Train workers who may encounter animals as part of their job duties at least annually on how to protect themselves"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 SB1-005"
         }
       ]
     },
@@ -67677,14 +68049,14 @@
       "dominio": "health_safety",
       "titulo_concepto": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
       "fuente": "OSHA3885",
-      "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía, excavaciones, zonas de acopio o trabajo en altura. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
       "pasos_accionables": [
-        "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo excavaciones, acopio, altura y mantenimiento",
+        "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
         "Involucra a otros trabajadores en la inspección si es posible",
         "Documenta hallazgos con fotos o video para su corrección posterior",
         "Usa listas de verificación por categoría de riesgo como eléctrico, incendio o ergonomía",
         "Evalúa cambios propuestos en procesos o equipos antes de implementarlos",
-        "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
+        "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
       ],
       "entregable_esperado": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
       "nodos_previos": [
@@ -67712,6 +68084,74 @@
           "node_id": "inspeccion_sitio_peligros",
           "titulo": "Inspección Regular del Sitio de Trabajo para Identificar Peligros",
           "fuente": "OSHA3886"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-28",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo excavaciones, acopio, altura y mantenimiento",
+          "texto_nuevo": "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L505-L509",
+            "frase": "Include all areas and activities in these inspections, such as storage and warehousing, facility and equipment maintenance, purchasing and office functions"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es el alcance práctico de la inspección. Excavaciones y trabajo en altura son categorías de obra que OSHA3885 no lista (L505 a L509 y la lista de categorías de L513 a L537). No es cifra, plazo ni norma, así que se reescribe como sugerencia de My Idea. En el resumen se quita el dato de la lista de categorías.",
+          "indice": 0,
+          "auditoria": "tramo1 O56-068"
+        },
+        {
+          "id": "fidelidad-t3-29",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía, excavaciones, zonas de acopio o trabajo en altura. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+          "texto_nuevo": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L505-L509",
+            "frase": "Include all areas and activities in these inspections, such as storage and warehousing, facility and equipment maintenance, purchasing and office functions"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 O56-068"
+        },
+        {
+          "id": "fidelidad-t3-30",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+          "texto_nuevo": "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L501",
+            "frase": "; L537: \"Before changing operations, workstations, or workflow; making major organizational changes; or introducing new equipment, materials, or processes, seek the input of workers and evaluate the planned changes"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La llegada de nuevos oficios es un disparador práctico que OSHA3885 no nombra. El libro habla de cambios en operaciones, puestos o procesos, desgaste de equipos y equipos, materiales o procesos nuevos (L501, L537). Se reescribe como sugerencia de My Idea. En el resumen se quita el dato. El paso [4] y el resto del resumen ya recogen lo que dice el libro.",
+          "indice": 5,
+          "auditoria": "tramo1 O56-042"
+        },
+        {
+          "id": "fidelidad-t3-31",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos, llegada de nuevos oficios o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+          "texto_nuevo": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L501",
+            "frase": "; L537: \"Before changing operations, workstations, or workflow; making major organizational changes; or introducing new equipment, materials, or processes, seek the input of workers and evaluate the planned changes"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 O56-042"
         }
       ]
     },
@@ -69066,7 +69506,7 @@
         "Documentar hallazgos como causas, contribuciones y riesgos por separado",
         "Dedicar una sección sustancial del informe a acciones de seguridad preventivas, y comunicar los hallazgos de forma que honren la experiencia humana en lugar de reducirla a una lista de errores",
         "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles",
-        "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+        "Sugerencia de My Idea: involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
         "Entrevistar a los involucrados para entender su percepción y objetivos en el momento"
       ],
       "entregable_esperado": "Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización",
@@ -69105,6 +69545,25 @@
           "node_id": "perspectiva_dentro_del_tunel",
           "titulo": "Perspectiva desde Dentro del Túnel",
           "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-51",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+          "texto_nuevo": "Sugerencia de My Idea: involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L1522-L1522",
+            "frase": "either from talking to the people, if still possible, or their colleagues"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Fuentes de información añadidas: el libro solo habla de hablar con las personas implicadas o con sus colegas para respaldar las interpretaciones con evidencia convergente (Dekker L1522). No nombra a familiares ni a testigos cercanos. Como recomendación práctica de método, se reescribe como sugerencia de My Idea. El resumen_teorico y el entregable no repiten el dato. Queda como alternativa la versión fiel del verificador: 'Involucrar a colegas que conozcan los detalles del trabajo para respaldar con evidencia convergente el relato del evento'.",
+          "indice": 5,
+          "auditoria": "tramo1 DK3-051"
         }
       ]
     },
@@ -69411,7 +69870,7 @@
       "pasos_accionables": [
         "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
         "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
-        "Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros."
+        "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar."
       ],
       "entregable_esperado": "Plan de entrenamiento y diseño de interfaz que aborde explícitamente las ironías de la automatización identificadas en los procesos de la organización.",
       "nodos_previos": [
@@ -69424,7 +69883,26 @@
         "Cuando se introduce o evalúa tecnología automatizada en procesos críticos de seguridad.",
         "Cuando se diseñan programas de capacitación para operadores de sistemas automatizados."
       ],
-      "etiqueta_arbol": "Cuidado al Automatizar Tareas"
+      "etiqueta_arbol": "Cuidado al Automatizar Tareas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-22",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros.",
+          "texto_nuevo": "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar.",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L848",
+            "frase": "even the best motivated people have trouble maintaining vigilance for long periods of time"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una herramienta (sistemas de monitoreo compensatorios). El libro da el diagnóstico (L848) y pone el remedio en la formación (L856). Se reescribe como sugerencia de My Idea, con el aviso del libro sobre los dispositivos nuevos (L1033). El resumen solo recoge el diagnóstico del libro. El entregable ('diseño de interfaz') se deja, como manda la regla para PRACTICO.",
+          "indice": 2,
+          "auditoria": "muestreo A26"
+        }
+      ]
     },
     "iso_31000_gestion_riesgo": {
       "node_id": "iso_31000_gestion_riesgo",
@@ -71348,7 +71826,7 @@
       "pasos_accionables": [
         "Antes de implementar nueva tecnología, identificar qué expectativas de desempeño se elevarán como consecuencia",
         "Monitorear si las ganancias de eficiencia se traducen en mayor carga de trabajo o mayores exigencias operativas",
-        "Establecer límites organizacionales que eviten explotar al máximo cada mejora tecnológica sin margen de seguridad"
+        "Sugerencia de My Idea: establecer límites organizacionales que eviten explotar al máximo cada mejora tecnológica sin margen de seguridad"
       ],
       "entregable_esperado": "Informe de impacto organizacional que anticipe cómo la nueva tecnología modificará las exigencias de desempeño sobre los operadores",
       "nodos_previos": [
@@ -71363,7 +71841,26 @@
         "Cuando se introduce nueva tecnología o automatización con la promesa de reducir carga de trabajo",
         "Cuando se evalúan mejoras de eficiencia en sistemas de alto riesgo"
       ],
-      "etiqueta_arbol": "Anticipa el Límite de tus Sistemas"
+      "etiqueta_arbol": "Anticipa el Límite de tus Sistemas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-52",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Establecer límites organizacionales que eviten explotar al máximo cada mejora tecnológica sin margen de seguridad",
+          "texto_nuevo": "Sugerencia de My Idea: establecer límites organizacionales que eviten explotar al máximo cada mejora tecnológica sin margen de seguridad",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L2384-L2388",
+            "frase": "every system always operates at its capacity. Improvements in the form of new technology get stretched in some way"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Medida práctica añadida: el libro describe la ley de Hirschhorn, según la cual todo sistema opera a su capacidad y las mejoras tecnológicas se estiran hasta devolver al operador al borde (Dekker L2384-L2388). No prescribe límites organizacionales. Se reescribe como sugerencia de My Idea, sin atribuirla al autor. El resumen_teorico solo describe la ley y el entregable habla de un informe de impacto, así que ninguno repite el dato.",
+          "indice": 2,
+          "auditoria": "tramo1 DK3-012"
+        }
+      ]
     },
     "licencia_exportacion_regulaciones": {
       "node_id": "licencia_exportacion_regulaciones",
@@ -72932,13 +73429,13 @@
       "dominio": "health_safety",
       "titulo_concepto": "Manejo Seguro de Químicos Peligrosos en el Lugar de Trabajo",
       "fuente": "SMALL_BUSINESS",
-      "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en áreas ventiladas o aisladas para sustancias tóxicas.",
+      "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
       "pasos_accionables": [
         "Instalar estaciones de lavado de ojos y duchas de seguridad donde se manejen químicos",
         "Proveer EPP adecuado (guantes, protección ocular, respiradores)",
         "Establecer procedimientos estándar para limpieza de derrames químicos",
         "Implementar monitoreo médico/biológico para trabajadores expuestos a sustancias específicas",
-        "Almacenar sustancias tóxicas en áreas aisladas o ventiladas"
+        "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan"
       ],
       "entregable_esperado": "Procedimientos operativos estándar (SOP) para manejo y derrame de químicos, con EPP asignado",
       "nodos_previos": [
@@ -72950,7 +73447,42 @@
       "condiciones_activacion": [
         "Si los trabajadores manipulan directamente sustancias químicas peligrosas"
       ],
-      "etiqueta_arbol": "Maneja tus Químicos con Cuidado"
+      "etiqueta_arbol": "Maneja tus Químicos con Cuidado",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-39",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Almacenar sustancias tóxicas en áreas aisladas o ventiladas",
+          "texto_nuevo": "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L807",
+            "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote or isolated locations when not in use."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). 'O ventiladas' abre una alternativa de almacenamiento que el libro no admite. El libro exige lugares remotos o aislados cuando no se usan (L807). Es una norma de seguridad, asi que se reemplaza por lo que dice el libro. El resumen_teorico repite el dato y se corrige igual.",
+          "indice": 4,
+          "auditoria": "tramo1 SB1-077"
+        },
+        {
+          "id": "fidelidad-t3-40",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en áreas ventiladas o aisladas para sustancias tóxicas.",
+          "texto_nuevo": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L807",
+            "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote or isolated locations when not in use."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 SB1-077"
+        }
+      ]
     },
     "manejo_empleados_en_adquisicion": {
       "node_id": "manejo_empleados_en_adquisicion",
@@ -80474,9 +81006,9 @@
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
       "resumen_teorico": "Los humanos atribuimos automáticamente motivaciones, personalidades e intenciones incluso a formas geométricas simples en movimiento (estudio de Heider y Simmel, 1944). Esto demuestra que estamos programados para crear historias que den sentido a estímulos ambiguos. En diseño, esto se puede aprovechar deliberadamente para comunicar conceptos complejos a través de narrativas (storytelling), pero también representa un riesgo: las personas pueden aferrarse a una historia incluso cuando deja de ser útil o verdadera (como el caso de Hiroo Onoda).",
       "pasos_accionables": [
-        "Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.",
+        "Sugerencia de My Idea: al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y la conexión emocional, sin olvidar que toda historia distorsiona.",
         "Revisar periódicamente si la 'historia' que el equipo o los usuarios se cuentan sobre el problema sigue siendo válida o se ha vuelto una narrativa defensiva que impide el cambio.",
-        "Usar prototipos narrativos (escenarios, storyboards) para probar cómo los usuarios interpretan intenciones y emociones en un diseño."
+        "Sugerencia de My Idea: usar prototipos narrativos, como escenarios o storyboards, para probar cómo interpretan los usuarios las intenciones y emociones en un diseño."
       ],
       "entregable_esperado": "Un escenario o storyboard narrativo del producto/servicio que comunique la propuesta de valor de forma emocionalmente resonante, junto con una revisión crítica de si la narrativa del equipo sigue alineada con la evidencia.",
       "nodos_previos": [
@@ -80493,7 +81025,43 @@
         "Cuando el equipo lleva mucho tiempo apegado a una misma explicación del problema sin cuestionarla.",
         "En sesiones de prototipado rápido donde se busca generar empatía con el usuario final."
       ],
-      "etiqueta_arbol": "Cuenta Historias para Dar Sentido"
+      "etiqueta_arbol": "Cuenta Historias para Dar Sentido",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-04",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Usar prototipos narrativos (escenarios, storyboards) para probar cómo los usuarios interpretan intenciones y emociones en un diseño.",
+          "texto_nuevo": "Sugerencia de My Idea: usar prototipos narrativos, como escenarios o storyboards, para probar cómo interpretan los usuarios las intenciones y emociones en un diseño.",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3490",
+            "frase": "Try a speculative story."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Añadido práctico de herramienta: el libro no nombra escenarios ni storyboards (solo propone la historia especulativa, L3490: \"Try a speculative story.\"). Se reescribe como sugerencia de My Idea sin atribuirla al autor. El dato se repite en entregable_esperado ('Un escenario o storyboard narrativo'), pero en PRACTICO el entregable se deja; el resumen_teorico no lo contiene ('storytelling' es otra cosa), así que no hay segmentos.",
+          "indice": 2,
+          "auditoria": "muestreo A6"
+        },
+        {
+          "id": "fidelidad-t3-14",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.",
+          "texto_nuevo": "Sugerencia de My Idea: al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y la conexión emocional, sin olvidar que toda historia distorsiona.",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L2075",
+            "frase": "Thinking in stories is very useful.\"; L2075: \"But it’s still a distortion."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La receta \"personajes, conflicto y resolución\" es un formato añadido; Doorley dice que pensar en historias es útil pero distorsiona, y que centrarse en personajes y conflicto oculta matices (L2075). Se reescribe como sugerencia de My Idea y se conserva la advertencia del libro. El storyboard del entregable no es este dato y queda.",
+          "indice": 0,
+          "auditoria": "muestreo A16"
+        }
+      ]
     },
     "naturaleza_capital_de_riesgo_vc": {
       "node_id": "naturaleza_capital_de_riesgo_vc",
@@ -81560,7 +82128,7 @@
         "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de margenes de seguridad",
         "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
         "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
-        "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+        "Sugerencia de My Idea: busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
         "Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'",
         "Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas"
       ],
@@ -81598,6 +82166,25 @@
           "node_id": "drift_hacia_el_fallo_2",
           "titulo": "Drift into Failure (Normalización de la Desviación)",
           "fuente": "The Field Guide to Understandin - Dekker, Sidney;"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-12",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+          "texto_nuevo": "Sugerencia de My Idea: busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L4446",
+            "frase": "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El tipo de revisor (mentor o asesor) es un añadido práctico; el libro habla de una mirada cercana a la operación pero ajena a ella, la de los reguladores (L4446). Se reescribe como sugerencia de My Idea. El dato no se repite en otros campos.",
+          "indice": 5,
+          "auditoria": "muestreo A13"
         }
       ]
     },
@@ -81643,7 +82230,7 @@
       "pasos_accionables": [
         "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
         "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
-        "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+        "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
         "Revisar incidentes pasados en busca de 'sorpresas de automatización' como indicador de este riesgo"
       ],
       "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
@@ -81655,7 +82242,26 @@
         "Cuando se diseñan sistemas de monitoreo de procesos automatizados de larga duración",
         "Cuando se investiga un incidente donde el sistema continuó una acción no deseada sin ser detectado a tiempo"
       ],
-      "etiqueta_arbol": "Nota lo que No Cambia"
+      "etiqueta_arbol": "Nota lo que No Cambia",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-53",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+          "texto_nuevo": "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L2335-L2348",
+            "frase": "Something that is not happening is not a good trigger for human (or even machine) intervention."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida: el libro no propone alertas por ausencia de cambio. Dice que a las personas, y también a las máquinas, les cuesta notar los no-eventos (Dekker L2335-L2348: \"Something that is not happening is not a good trigger for human (or even machine) intervention.\"). También avisa de que los avisos automáticos saturan el puesto. Se reescribe como sugerencia de My Idea. El resumen_teorico no menciona alertas y no hay nada que quitar. El entregable ('Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos') repite la idea y, por la regla PRACTICO, se deja. Aviso para la sesión principal: el paso 0 del mismo nodo ('Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado') lleva la misma idea y no está en esta lista.",
+          "indice": 2,
+          "auditoria": "tramo1 DK3-088"
+        }
+      ]
     },
     "nueva_vision_organizacion_linea_seguridad": {
       "node_id": "nueva_vision_organizacion_linea_seguridad",
@@ -84456,13 +85062,13 @@
       "dominio": "health_safety",
       "titulo_concepto": "Identificación de Peligros en Situaciones de Emergencia y No Rutinarias",
       "fuente": "OSHA3885",
-      "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+      "resumen_teorico": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
       "pasos_accionables": [
         "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
-        "Listar tareas no rutinarias como mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos o vertidos de concreto",
+        "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
         "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
         "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria",
-        "Actualizar el plan de emergencia cuando no exista uno vigente"
+        "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia"
       ],
       "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
       "nodos_previos": [
@@ -84491,6 +85097,58 @@
           "node_id": "peligros_emergencias_no_rutinarias_2",
           "titulo": "Identificación de Peligros en Emergencias y Tareas No Rutinarias",
           "fuente": "OSHA3886"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-32",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Listar tareas no rutinarias como mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos o vertidos de concreto",
+          "texto_nuevo": "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L593",
+            "frase": "; L605-L607: \"Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities, also present potential hazards."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso atribuye a la guia de OSHA ejemplos que no trae: izajes criticos y vertidos de concreto. Como es materia normativa de seguridad, se quitan y se dejan solo los ejemplos del libro (L593: 'Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities'). Los mismos ejemplos anadidos aparecen en el resumen_teorico y tambien se quitan ahi.",
+          "indice": 1,
+          "auditoria": "tramo1 O56-044"
+        },
+        {
+          "id": "fidelidad-t3-33",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo, izajes críticos, vertidos de concreto) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+          "texto_nuevo": "Las emergencias (incendios, derrames químicos, colapsos estructurales, desastres naturales o climáticos) y las tareas no rutinarias (mantenimiento infrecuente, arranques o paradas de equipo) presentan peligros distintos a las operaciones diarias y deben identificarse y planificarse con anticipación. Estos escenarios varían según el tipo de instalación, el material manejado y la ubicación del proyecto. Requieren planes o procedimientos de respuesta específicos que permitan actuar de forma segura cuando ocurran, ya sea por su baja frecuencia, su alto riesgo o lo imprevisible de su aparición. Antes de ejecutar cualquier tarea no rutinaria, es fundamental revisar el análisis de peligros correspondiente con quienes la realizarán.",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L593",
+            "frase": "; L605-L607: \"Nonroutine or infrequent tasks, including maintenance and startup/shutdown activities, also present potential hazards."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 O56-044"
+        },
+        {
+          "id": "fidelidad-t3-34",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Actualizar el plan de emergencia cuando no exista uno vigente",
+          "texto_nuevo": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia",
+          "cita": {
+            "libro": "OSHA3885",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+            "lineas": "L735-L741",
+            "frase": "Develop or modify plans to control hazards that may arise in emergency situations."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). La condicion 'cuando no exista uno vigente' no esta en el libro y deja el paso sin sentido: no se puede actualizar un plan que no existe. Es la condicion que dispara una obligacion del plan de emergencia, asi que se reemplaza por lo que dice el libro (L739: 'Develop or modify plans to control hazards that may arise in emergency situations'). No aparece en ningun otro campo.",
+          "indice": 4,
+          "auditoria": "tramo1 O56-026"
         }
       ]
     },
@@ -84667,9 +85325,9 @@
         "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante",
         "Repite el ejercicio con el mismo dataset pero un criterio de ordenamiento distinto",
         "Crea un diagrama de Venn amorfo con dos elementos y articula qué comparten en la superposición",
-        "Genera múltiples mapas del mismo concepto (al menos 3-5) para construir un 'atlas' de perspectivas"
+        "Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas"
       ],
-      "entregable_esperado": "Un atlas de 3-5 mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+      "entregable_esperado": "Un atlas de varios mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
       "nodos_previos": [
         "search_for_business_model",
         "metaforas_para_pensar",
@@ -84684,7 +85342,42 @@
         "Cuando se necesita entender un problema complejo desde múltiples ángulos antes de idear soluciones",
         "Si el usuario cree que ya conoce bien un tema pero necesita cuestionar sus supuestos"
       ],
-      "etiqueta_arbol": "Mapea para Ver Patrones"
+      "etiqueta_arbol": "Mapea para Ver Patrones",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-05",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Genera múltiples mapas del mismo concepto (al menos 3-5) para construir un 'atlas' de perspectivas",
+          "texto_nuevo": "Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3374",
+            "frase": "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'al menos 3-5' no está en el libro, que habla de muchos mapas sin mínimo (L3374: \"Each map is one lens. Together they make an atlas of whatever idea you're representing.\"; L3372 menciona incluso \"twenty, thirty, forty maps\"). Se quita, y se quita igual en el entregable_esperado, donde se repite.",
+          "indice": 4,
+          "auditoria": "muestreo A7"
+        },
+        {
+          "id": "fidelidad-t3-06",
+          "fecha": "2026-09-24",
+          "campo": "entregable_esperado",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Un atlas de 3-5 mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+          "texto_nuevo": "Un atlas de varios mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+          "cita": {
+            "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+            "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+            "lineas": "L3374",
+            "frase": "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo entregable_esperado del nodo; se cambia solo el segmento.",
+          "auditoria": "muestreo A7"
+        }
+      ]
     },
     "pensamiento_h2h": {
       "node_id": "pensamiento_h2h",
@@ -85556,7 +86249,7 @@
       "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
       "pasos_accionables": [
         "Inspeccionar todas las aberturas de piso existentes en la instalación",
-        "Instalar cubiertas o barandillas que soporten el doble de la carga máxima esperada",
+        "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
         "Colocar rodapiés alrededor de los bordes de las aberturas permanentes de piso donde pueda pasar gente por debajo de la abertura",
         "Verificar que las rejillas permitan el tránsito seguro de personas y equipos"
       ],
@@ -85588,6 +86281,23 @@
           "decision": "Mandato del fundador, regla B: CONTRARIO, version fiel del verificador ciego (fila SB2-119). El paso ponia la condicion en quien transita por arriba; el libro la pone en quien puede pasar por debajo.",
           "indice": 2,
           "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-119"
+        },
+        {
+          "id": "fidelidad-t3-41",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Instalar cubiertas o barandillas que soporten el doble de la carga máxima esperada",
+          "texto_nuevo": "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L1477-L1481",
+            "frase": "Covers including skylight screens, are able to withstand, without failure, twice the maximum intended load that may be imposed on the cover at any one time."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es una cifra normativa: el paso aplica tambien a las barandillas la exigencia del doble de la carga maxima, y el libro la pone solo para las cubiertas (L1481). La proteccion con cubierta, barandilla o equivalente viene de L1477. El resumen_teorico ya lo dice bien y no se toca.",
+          "indice": 1,
+          "auditoria": "tramo1 SB2-004"
         }
       ]
     },
@@ -90297,7 +91007,7 @@
       "pasos_accionables": [
         "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
         "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, cerca del final, oculto, con varios elementos iguales)",
-        "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+        "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
         "Establecer métricas de seguimiento de omisiones por tipo de tarea"
       ],
       "entregable_esperado": "Reporte de clasificación de errores de mantenimiento con identificación de patrones de omisión",
@@ -90332,6 +91042,23 @@
           "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C1 del muestreo, que reconcilia al lector y al clasificador ciego. quita la via de los niveles cognitivos de las omisiones pasadas (que el libro desaconseja, L2170); anade la via de los rasgos de la tarea, contados de antemano (L2250)",
           "indice": 1,
           "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C1"
+        },
+        {
+          "id": "fidelidad-t3-13",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+          "texto_nuevo": "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L2250",
+            "frase": "Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El criterio de priorización por tasa histórica es un añadido práctico; el libro prioriza por los rasgos que provocan omisiones, identificados de antemano (L2250), y ese criterio del libro ya está en el paso [1] del mismo nodo. Se reescribe como sugerencia de My Idea. La cifra 34-64% del resumen es otro dato, no este.",
+          "indice": 2,
+          "auditoria": "muestreo A14"
         }
       ]
     },
@@ -91549,7 +92276,7 @@
         "Preguntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
         "Envia la muestra marcada como paquete de prueba segun sus instrucciones.",
         "Espera el resultado y ajusta grosor de caja o relleno segun lo que senalen.",
-        "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
+        "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno."
       ],
       "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.",
       "nodos_previos": [
@@ -91565,7 +92292,26 @@
         "Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.",
         "Vas a cambiar de proveedor de cajas o de material de relleno y no sabes si sigue funcionando igual."
       ],
-      "etiqueta_arbol": "Prueba tu empaque antes de escalar"
+      "etiqueta_arbol": "Prueba tu empaque antes de escalar",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-27",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+          "texto_nuevo": "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+          "cita": {
+            "libro": "HowToPack_fxcom",
+            "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+            "lineas": "L879-L879",
+            "frase": "We encourage you to submit a sample of your packaging for testing and evaluation."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Repetir la prueba al cambiar de proveedor es una frecuencia o disparador práctico que la guía no dice (L879 solo anima a enviar una muestra). Se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
+          "indice": 4,
+          "auditoria": "tramo1 FX1-015"
+        }
+      ]
     },
     "problem_recognition_scale": {
       "node_id": "problem_recognition_scale",
@@ -93451,8 +94197,8 @@
       "pasos_accionables": [
         "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
         "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
-        "Si alguien de tu equipo cree haber sufrido represalias, ayúdalo a presentar la queja ante la autoridad de tu mercado dentro del plazo legal",
-        "Documenta cualquier acción disciplinaria de forma objetiva, dejando claro que no está relacionada con haber denunciado algo"
+        "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+        "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
       ],
       "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda reportar sin miedo",
       "nodos_previos": [
@@ -93466,7 +94212,43 @@
         "Cuando alguien de tu equipo reporta un peligro o presenta una queja de seguridad",
         "Cuando estás armando las reglas internas de tu negocio"
       ],
-      "etiqueta_arbol": "Protege a Quien Denuncia"
+      "etiqueta_arbol": "Protege a Quien Denuncia",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-42",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Si alguien de tu equipo cree haber sufrido represalias, ayúdalo a presentar la queja ante la autoridad de tu mercado dentro del plazo legal",
+          "texto_nuevo": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L1861",
+            "frase": "Workers who believe an employer has retaliated against them for exercising their safety and health rights should contact their local OSHA office right away. A worker must file a retaliation complaint with OSHA within 30 calendar days"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal: el paso pone en el empleador la tarea de ayudar a presentar la queja. El libro deja la queja en manos del trabajador, que debe contactar a la autoridad de inmediato y dentro de un plazo en dias calendario (L1861, 30 dias en EE. UU.). Se reemplaza por lo que dice el libro. Pongo 'suele ser corto' en vez de 'es corto', igual que el resumen, porque la cifra de 30 dias es de EE. UU. El resumen no repite el dato anadido.",
+          "indice": 2,
+          "auditoria": "tramo1 SB2-103"
+        },
+        {
+          "id": "fidelidad-t3-43",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Documenta cualquier acción disciplinaria de forma objetiva, dejando claro que no está relacionada con haber denunciado algo",
+          "texto_nuevo": "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L1857-L1859",
+            "frase": "Protection from retaliation means that an employer cannot retaliate by taking \"adverse action\" against workers, such as: ... Disciplining ... falsely accusing the employee of poor performance"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal: el consejo de documentar las sanciones para desligarlas de la denuncia no esta en el libro y puede leerse como forma de justificar una represalia. El libro cuenta sancionar ('Disciplining') y acusar falsamente de bajo rendimiento entre las represalias prohibidas (L1857-L1859). Quitarlo sin mas dejaria el paso vacio, asi que se reemplaza por lo que dice el libro. No aparece en otros campos.",
+          "indice": 3,
+          "auditoria": "tramo1 SB2-084"
+        }
+      ]
     },
     "programa_proteccion_respiratoria": {
       "node_id": "programa_proteccion_respiratoria",
@@ -93863,11 +94645,11 @@
       "dominio": "health_safety",
       "titulo_concepto": "Programas Cooperativos de OSHA (Asociaciones Estratégicas, Alianzas, VPP)",
       "fuente": "SMALL_BUSINESS",
-      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, a un Programa de Alianzas para recibir información de cumplimiento, o a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+      "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
       "pasos_accionables": [
         "Revisa si tu negocio cumple los criterios para participar en VPP",
         "Contacta la Oficina de Área o Regional de OSHA que corresponda a tu zona para explorar una Asociación Estratégica",
-        "Busca establecer una Alianza con asociaciones comerciales o sindicatos relevantes para tu actividad",
+        "Aprovecha la información y los recursos de cumplimiento que OSHA, o la autoridad equivalente en tu mercado, comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
         "Si optas por VPP, prepara tu solicitud y ten en cuenta que habrá una evaluación en el lugar de trabajo"
       ],
       "entregable_esperado": "Solicitud o acuerdo de participación en un programa cooperativo de OSHA",
@@ -93882,7 +94664,42 @@
         "Cuando ya tienes un sistema de gestión de seguridad funcionando y maduro",
         "Cuando buscas un reconocimiento externo de tus buenas prácticas de seguridad"
       ],
-      "etiqueta_arbol": "Colabora con Programas de Seguridad"
+      "etiqueta_arbol": "Colabora con Programas de Seguridad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-44",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Busca establecer una Alianza con asociaciones comerciales o sindicatos relevantes para tu actividad",
+          "texto_nuevo": "Aprovecha la información y los recursos de cumplimiento que OSHA, o la autoridad equivalente en tu mercado, comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L1851",
+            "frase": "Through the Alliance Program, OSHA works with organizations such as trade and professional associations, labor unions, educational institutions, community and faith-based groups, and government agencies"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia normativa, sobre la estructura de un programa oficial: el paso presenta la Alianza como un acuerdo entre tu negocio y asociaciones o sindicatos. En el libro, la Alianza es entre OSHA y esas organizaciones, para compartir informacion y recursos de cumplimiento (L1851). Se reemplaza por lo que dice el libro y se anade 'o la autoridad equivalente en tu mercado' porque el texto nombra OSHA. El resumen_teorico repite el dato ('sumarte ... a un Programa de Alianzas') y se corrige igual.",
+          "indice": 2,
+          "auditoria": "tramo1 SB2-078"
+        },
+        {
+          "id": "fidelidad-t3-45",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, a un Programa de Alianzas para recibir información de cumplimiento, o a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+          "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L1851",
+            "frase": "Through the Alliance Program, OSHA works with organizations such as trade and professional associations, labor unions, educational institutions, community and faith-based groups, and government agencies"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 SB2-078"
+        }
+      ]
     },
     "programas_estatales_locales_financiamiento_exportacion": {
       "node_id": "programas_estatales_locales_financiamiento_exportacion",
@@ -96341,7 +97158,7 @@
         "Revisar si la organización cuenta con una función de inspección independiente para tareas críticas de seguridad",
         "Evaluar los riesgos de permitir el autochequeo ('sign-off') sin verificación externa",
         "Establecer disponibilidad de personal de aseguramiento de calidad en todos los turnos, incluidos nocturnos",
-        "Implementar auditorías aleatorias sobre el trabajo firmado como conforme"
+        "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma."
       ],
       "entregable_esperado": "Política de aseguramiento de calidad con mecanismos de verificación independiente definidos",
       "nodos_previos": [
@@ -96354,7 +97171,26 @@
         "Cuando la organización ha migrado de inspección centralizada a autoevaluación del trabajador",
         "Si existen antecedentes de trabajo mal ejecutado firmado como conforme"
       ],
-      "etiqueta_arbol": "Distingue Controlar de Asegurar Calidad"
+      "etiqueta_arbol": "Distingue Controlar de Asegurar Calidad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-20",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Implementar auditorías aleatorias sobre el trabajo firmado como conforme",
+          "texto_nuevo": "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma.",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L971",
+            "frase": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es un método (auditorías aleatorias) que Reason no propone. El libro solo señala que faltaba una inspección separada (L971). Es un añadido práctico y se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
+          "indice": 3,
+          "auditoria": "muestreo A22"
+        }
+      ]
     },
     "quality_management_maturity_grid": {
       "node_id": "quality_management_maturity_grid",
@@ -98473,7 +99309,7 @@
       "resumen_teorico": "Reducir un riesgo no significa llevarlo a cero, que suele ser imposible o carísimo, sino bajarlo hasta donde el esfuerzo todavía vale la pena. Ese punto, donde gastar un poco más ya casi no reduce el peligro, es el límite razonable: pasarte de ahí es quemar recursos que rendirían más en otro lado. La idea es actuar sobre la probabilidad, para que el riesgo ocurra menos, o sobre el impacto, para que si ocurre duela menos, y quedarte conscientemente con el riesgo residual que sobra. Para el emprendedor con recursos limitados, esta disciplina evita dos extremos igual de malos: obsesionarse con blindar un riesgo menor, y no hacer nada ante uno grave. Reduce hasta lo razonable, registra lo que queda, y sigue.",
       "pasos_accionables": [
         "De un riesgo grave, decide si atacas su probabilidad, su impacto, o ambos.",
-        "Lista dos o tres acciones concretas de reducción y su costo aproximado.",
+        "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
         "Detente cuando gastar más ya casi no baje el riesgo: ese es el límite razonable.",
         "Anota el riesgo residual que aceptas quedarte, para no olvidar que sigue ahí."
       ],
@@ -98491,7 +99327,26 @@
         "cuando no sabes hasta dónde vale la pena gastar en protegerte",
         "cuando blindas riesgos menores y descuidas los graves"
       ],
-      "etiqueta_arbol": "Reduce el Riesgo a lo Razonable"
+      "etiqueta_arbol": "Reduce el Riesgo a lo Razonable",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-08",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Lista dos o tres acciones concretas de reducción y su costo aproximado.",
+          "texto_nuevo": "Lista las acciones concretas de reducción posibles y el costo aproximado de cada una.",
+          "cita": {
+            "libro": "Managing Project Risks - Peter J. Edwards",
+            "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+            "lineas": "L5749",
+            "frase": "brainstorm alternative treatments for the five cases"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres acciones' no está en el libro; se quita. El libro pide plantear tratamientos alternativos sin número fijo (L5749: \"brainstorm alternative treatments for the five cases\") y recuerda que toda respuesta tiene un costo (L5438: \"Any response to, and treatment of, a project risk is likely to incur costs\"). No se repite en otros campos.",
+          "indice": 1,
+          "auditoria": "muestreo A9"
+        }
+      ]
     },
     "reducir_devoluciones_mejorando_informacion_previa": {
       "node_id": "reducir_devoluciones_mejorando_informacion_previa",
@@ -107488,12 +108343,12 @@
       "fuente": "Managing the Risks of Organizat - Reason, J. T_",
       "resumen_teorico": "Analiza el movimiento hacia la autorregulación (donde las organizaciones asumen la responsabilidad de demostrar prácticas seguras) frente a la desregulación (reducción de la carga regulatoria). Si bien la autorregulación fuerza a las organizaciones a comprender profundamente sus riesgos sociotécnicos, plantea un dilema para los reguladores: ahora deben evaluar la adecuación de Safety Cases variables y generales, en lugar de verificar cumplimiento con reglas fijas, lo que exige competencias en factores humanos y organizacionales que muchos reguladores no poseen.",
       "pasos_accionables": [
-        "Evaluar si la organización tiene la madurez para autorregularse",
+        "Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad",
         "Identificar brechas de competencia del regulador en factores humanos/organizacionales",
         "Establecer criterios claros para juzgar la adecuación de un Safety Case",
         "Balancear la reducción de carga regulatoria con el mantenimiento de la vigilancia efectiva"
       ],
-      "entregable_esperado": "Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización",
+      "entregable_esperado": "Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador",
       "nodos_previos": [
         "safety_case_evaluacion_formal"
       ],
@@ -107504,7 +108359,42 @@
         "Cuando se diseña un marco regulatorio o de cumplimiento interno",
         "Cuando existe presión política o económica para reducir regulaciones de seguridad"
       ],
-      "etiqueta_arbol": "Evalúa Autorregulación o Desregulación"
+      "etiqueta_arbol": "Evalúa Autorregulación o Desregulación",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-23",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Evaluar si la organización tiene la madurez para autorregularse",
+          "texto_nuevo": "Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L4429",
+            "frase": "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal y regulatoria: el libro trata la autorregulación como un impulso legislativo ('this legislative drive towards self-regulation', L4431) que traslada a las organizaciones la carga de la seguridad (L4429). No es algo a lo que se accede por madurez. Se reemplaza por lo que dice el libro, y el entregable se ajusta igual, con el segmento propuesto en la ficha. El resumen no contiene el dato.",
+          "indice": 0,
+          "auditoria": "muestreo A27"
+        },
+        {
+          "id": "fidelidad-t3-24",
+          "fecha": "2026-09-24",
+          "campo": "entregable_esperado",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización",
+          "texto_nuevo": "Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L4429",
+            "frase": "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo entregable_esperado del nodo; se cambia solo el segmento.",
+          "auditoria": "muestreo A27"
+        }
+      ]
     },
     "sellar_cajas_metodo_cinta_en_h": {
       "node_id": "sellar_cajas_metodo_cinta_en_h",
@@ -109887,12 +110777,12 @@
       "dominio": "health_safety",
       "titulo_concepto": "Sistemas contra incendios: alarmas y rociadores",
       "fuente": "SMALL_BUSINESS",
-      "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que certificarlos y probarlos cada año, y contratar a alguien calificado para el mantenimiento. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+      "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y contratar a alguien calificado para las pruebas y el mantenimiento de los rociadores. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
       "pasos_accionables": [
-        "Certifica y prueba tu sistema de alarma contra incendios una vez al año",
+        "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
         "Contrata a alguien calificado para el mantenimiento de los rociadores automáticos",
         "Revisa cada cierto tiempo las válvulas de control y los manómetros del sistema de rociadores",
-        "Inspecciona y prueba una vez al año las mangueras y válvulas contra incendio"
+        "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio"
       ],
       "entregable_esperado": "Certificación vigente y registros de las pruebas de tus sistemas contra incendios y alarma",
       "nodos_previos": [
@@ -109906,7 +110796,59 @@
       "condiciones_activacion": [
         "Si tu local tiene instalados sistemas fijos de rociadores o alarmas contra incendios"
       ],
-      "etiqueta_arbol": "Mantén tus Sistemas Contra Incendios"
+      "etiqueta_arbol": "Mantén tus Sistemas Contra Incendios",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-46",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Certifica y prueba tu sistema de alarma contra incendios una vez al año",
+          "texto_nuevo": "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L581",
+            "frase": "Fire alarm system has been certified, is in proper working condition, and is tested annually."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Plazo añadido en materia de cumplimiento: el libro no pide certificar una vez al año. Pide que la alarma esté certificada, funcione bien y se pruebe cada año (SMALL_BUSINESS L581: \"Fire alarm system has been certified, is in proper working condition, and is tested annually.\"). Se reemplaza por lo que dice el libro. El mismo dato se repite en el resumen_teorico: 'certificarlos y probarlos cada año' se aplica a la alarma, los rociadores y las mangueras. Se corrige con los datos del libro: alarma certificada y probada cada año (L581), mangueras inspeccionadas con regularidad y probadas cada año (L591), pruebas y mantenimiento de los rociadores a cargo de alguien calificado (L583). Este segmento cubre también el dato de D42. El entregable ('Certificación vigente') no fija frecuencia y se deja como está.",
+          "indice": 0,
+          "auditoria": "tramo1 SB2-092"
+        },
+        {
+          "id": "fidelidad-t3-47",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que certificarlos y probarlos cada año, y contratar a alguien calificado para el mantenimiento. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+          "texto_nuevo": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y contratar a alguien calificado para las pruebas y el mantenimiento de los rociadores. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L581",
+            "frase": "Fire alarm system has been certified, is in proper working condition, and is tested annually."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+          "auditoria": "tramo1 SB2-092"
+        },
+        {
+          "id": "fidelidad-t3-48",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Inspecciona y prueba una vez al año las mangueras y válvulas contra incendio",
+          "texto_nuevo": "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L591",
+            "frase": "Standpipes, fire hoses, and fire hose valves, are inspected regularly and tested annually."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Frecuencia añadida en materia de cumplimiento: el libro pide inspeccionar con regularidad y probar una vez al año, no inspeccionar una vez al año (SMALL_BUSINESS L591: \"Standpipes, fire hoses, and fire hose valves, are inspected regularly and tested annually.\"). Se reemplaza por lo que dice el libro. El dato repetido en el resumen_teorico va en el segmento de D41, que corrige toda la frase ('certificarlos y probarlos cada año'). Así no hay dos segmentos sobre el mismo trozo de texto.",
+          "indice": 3,
+          "auditoria": "tramo1 SB2-020"
+        }
+      ]
     },
     "sistemas_organizacionales_ia": {
       "node_id": "sistemas_organizacionales_ia",
@@ -110502,7 +111444,7 @@
       "pasos_accionables": [
         "Implementar protocolos de primeros auxilios psicológicos tras incidentes graves",
         "Realizar debriefings estructurados con los trabajadores involucrados",
-        "Ofrecer seguimiento a mediano y largo plazo a los afectados",
+        "Ofrecer seguimiento a los afectados",
         "Permitir que la segunda víctima participe en el proceso de investigación sin temor a represalias"
       ],
       "entregable_esperado": "Programa formal de soporte psicológico y organizacional para trabajadores involucrados en incidentes",
@@ -110517,7 +111459,26 @@
         "Cuando un trabajador está involucrado en un incidente que causó daño a terceros",
         "Cuando se diseñan políticas de bienestar laboral post-incidente"
       ],
-      "etiqueta_arbol": "Apoya a la Segunda Víctima"
+      "etiqueta_arbol": "Apoya a la Segunda Víctima",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-54",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Ofrecer seguimiento a mediano y largo plazo a los afectados",
+          "texto_nuevo": "Ofrecer seguimiento a los afectados",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L656-L658",
+            "frase": "Strong social and organizational support systems for second victims (psychological first aid, debriefings, follow-up), have proven critical to contain the negative consequences"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Plazo añadido: el libro nombra el seguimiento ('follow-up') como parte del apoyo a las segundas víctimas, sin horizonte temporal (Dekker L656-L658: \"psychological first aid, debriefings, follow-up\"). Se quita 'a mediano y largo plazo'. El resumen_teorico dice 'seguimiento' sin plazo y el entregable no lo menciona, así que no hay dato repetido.",
+          "indice": 2,
+          "auditoria": "tramo1 DK4-019"
+        }
+      ]
     },
     "sorprender_cliente_estrategico": {
       "node_id": "sorprender_cliente_estrategico",
@@ -111881,7 +112842,7 @@
         "Revisar los procedimientos existentes e identificar dónde asumen linealidad, predictibilidad o controlabilidad",
         "Realizar observaciones de campo para contrastar el trabajo real (interleaving de tareas) contra el trabajo prescrito",
         "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes",
-        "Capacitar a los equipos en el manejo de omisiones derivadas de la intercalación de tareas no practicadas"
+        "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas"
       ],
       "entregable_esperado": "Documento de rediseño de procedimientos que contemple explícitamente la gestión de tareas concurrentes e interrupciones",
       "nodos_previos": [
@@ -111894,7 +112855,26 @@
         "Cuando se redactan o auditan procedimientos operativos estándar (SOP) para entornos complejos",
         "Cuando ocurren errores de omisión atribuidos a 'no seguir el procedimiento'"
       ],
-      "etiqueta_arbol": "Cuestiona tus Procedimientos Fijos"
+      "etiqueta_arbol": "Cuestiona tus Procedimientos Fijos",
+      "correcciones": [
+        {
+          "id": "fidelidad-t3-55",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Capacitar a los equipos en el manejo de omisiones derivadas de la intercalación de tareas no practicadas",
+          "texto_nuevo": "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas",
+          "cita": {
+            "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+            "lineas": "L2447-L2449",
+            "frase": "Interleaving unpracticed tasks, particularly those that involve novel or unexpected aspects leads often to errors of omission."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida (capacitación): el libro constata que intercalar tareas no practicadas lleva a menudo a errores de omisión y que las personas subestiman su vulnerabilidad al error en esas circunstancias (Dekker L2447-L2449). No propone capacitar a los equipos. Se reescribe como sugerencia de My Idea. El resumen_teorico y el entregable no mencionan la capacitación.",
+          "indice": 3,
+          "auditoria": "tramo1 DK4-051"
+        }
+      ]
     },
     "sustitucion_quimica_sinergetica": {
       "node_id": "sustitucion_quimica_sinergetica",
@@ -112763,7 +113743,7 @@
       "pasos_accionables": [
         "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
         "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
-        "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+        "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
         "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
       ],
       "entregable_esperado": "Una lista de riesgos sacada con varias técnicas, cada uno escrito como frase completa de causa y efecto.",
@@ -112833,6 +113813,23 @@
           },
           "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
           "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+        },
+        {
+          "id": "fidelidad-t3-09",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+          "texto_nuevo": "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
+          "cita": {
+            "libro": "Managing Project Risks - Peter J. Edwards",
+            "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+            "lineas": "L5502",
+            "frase": "will have recourse to the knowledge captured from previous projects"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres proyectos' no está en el libro; se quita sin añadir nada más. No se añaden 'informes y lecciones', que era la propuesta de la ficha, para no introducir un dato nuevo. Cita del libro: L2678: \"What unsuccessful aspects of past projects are likely to arise in this one?\"; L5502: \"will have recourse to the knowledge captured from previous projects\". El resumen_teorico no lleva la cifra; no hay segmentos.",
+          "indice": 2,
+          "auditoria": "muestreo A10"
         }
       ]
     },

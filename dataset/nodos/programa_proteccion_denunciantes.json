@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
     "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
-    "Si alguien de tu equipo cree haber sufrido represalias, ayúdalo a presentar la queja ante la autoridad de tu mercado dentro del plazo legal",
-    "Documenta cualquier acción disciplinaria de forma objetiva, dejando claro que no está relacionada con haber denunciado algo"
+    "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+    "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
   ],
   "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda reportar sin miedo",
   "nodos_previos": [
@@ -23,5 +23,41 @@
     "Cuando alguien de tu equipo reporta un peligro o presenta una queja de seguridad",
     "Cuando estás armando las reglas internas de tu negocio"
   ],
-  "etiqueta_arbol": "Protege a Quien Denuncia"
+  "etiqueta_arbol": "Protege a Quien Denuncia",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-42",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si alguien de tu equipo cree haber sufrido represalias, ayúdalo a presentar la queja ante la autoridad de tu mercado dentro del plazo legal",
+      "texto_nuevo": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1861",
+        "frase": "Workers who believe an employer has retaliated against them for exercising their safety and health rights should contact their local OSHA office right away. A worker must file a retaliation complaint with OSHA within 30 calendar days"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal: el paso pone en el empleador la tarea de ayudar a presentar la queja. El libro deja la queja en manos del trabajador, que debe contactar a la autoridad de inmediato y dentro de un plazo en dias calendario (L1861, 30 dias en EE. UU.). Se reemplaza por lo que dice el libro. Pongo 'suele ser corto' en vez de 'es corto', igual que el resumen, porque la cifra de 30 dias es de EE. UU. El resumen no repite el dato anadido.",
+      "indice": 2,
+      "auditoria": "tramo1 SB2-103"
+    },
+    {
+      "id": "fidelidad-t3-43",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta cualquier acción disciplinaria de forma objetiva, dejando claro que no está relacionada con haber denunciado algo",
+      "texto_nuevo": "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1857-L1859",
+        "frase": "Protection from retaliation means that an employer cannot retaliate by taking \"adverse action\" against workers, such as: ... Disciplining ... falsely accusing the employee of poor performance"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal: el consejo de documentar las sanciones para desligarlas de la denuncia no esta en el libro y puede leerse como forma de justificar una represalia. El libro cuenta sancionar ('Disciplining') y acusar falsamente de bajo rendimiento entre las represalias prohibidas (L1857-L1859). Quitarlo sin mas dejaria el paso vacio, asi que se reemplaza por lo que dice el libro. No aparece en otros campos.",
+      "indice": 3,
+      "auditoria": "tramo1 SB2-084"
+    }
+  ]
 }

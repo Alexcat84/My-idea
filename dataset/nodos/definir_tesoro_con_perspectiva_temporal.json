@@ -7,7 +7,7 @@
   "resumen_teorico": "Lo que hoy consideramos basura o tesoro depende del momento histórico y de quién lo evalúa. Los barcos hundidos que se convirtieron en terrenos valiosos en San Francisco ilustran cómo el valor de las cosas cambia con el tiempo. Al diseñar, es crucial preguntarse qué será 'tesoro' o 'basura' en 50 años, y diseñar productos y sistemas cuya descomposición futura genere valor interconectado en lugar de desechos destructivos.",
   "pasos_accionables": [
     "Pregunta: ¿qué elementos de mi diseño podrían considerarse basura en el futuro, y cuáles tesoro?",
-    "Proyecta el ciclo de vida de tu producto/servicio a 10, 50 y 100 años",
+    "Proyecta el ciclo de vida de tu producto/servicio: qué sería hoy y qué sería dentro de cincuenta años",
     "Identifica qué recursos o subproductos de tu diseño podrían tener valor futuro no evidente hoy",
     "Ajusta el diseño para que su descomposición o final de vida genere valor reutilizable, no desecho tóxico"
   ],
@@ -22,5 +22,24 @@
     "Cuando el proyecto involucra materiales físicos o recursos con impacto ambiental a largo plazo",
     "En fases de diseño de producto donde se define el ciclo de vida completo"
   ],
-  "etiqueta_arbol": "El Valor Cambia con el Tiempo"
+  "etiqueta_arbol": "El Valor Cambia con el Tiempo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-01",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyecta el ciclo de vida de tu producto/servicio a 10, 50 y 100 años",
+      "texto_nuevo": "Proyecta el ciclo de vida de tu producto/servicio: qué sería hoy y qué sería dentro de cincuenta años",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3967",
+        "frase": "What would the hidden treasure in your hometown be today? What about in fifty years?"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: los horizontes de 10 y 100 años no están en el libro; se reemplazan por el único horizonte que da el libro. Cita L3967: \"What would the hidden treasure in your hometown be today? What about in fifty years?\". El resumen_teorico ya dice 50 años, coherente con el libro; no hay segmentos repetidos.",
+      "indice": 1,
+      "auditoria": "muestreo A2"
+    }
+  ]
 }

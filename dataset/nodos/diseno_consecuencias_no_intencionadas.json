@@ -6,7 +6,7 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "Todo diseño, por bien intencionado que sea, puede generar efectos secundarios imprevistos a lo largo del tiempo (ambientales, sociales, psicológicos) que superan el control del creador original. Este concepto invita a los diseñadores y emprendedores a incorporar de forma proactiva el ejercicio de imaginar escenarios futuros extremos (positivos y negativos) de su creación, y a diseñar con humildad, previendo mecanismos de corrección, reversión o mitigación antes de escalar una solución.",
   "pasos_accionables": [
-    "Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.",
+    "Reúne al equipo y cuenta historias especulativas sobre qué pasaría si tu producto o servicio se usara de forma masiva.",
     "Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control. Incluye a quien no está en la sala de diseño pero será afectado",
     "Pregunta explícitamente: '¿Qué pasaría si esto se usa de forma opuesta a la intención original?'",
     "Diseña salvaguardas, límites de uso o 'mecanismos de reversión' incorporados desde el inicio.",
@@ -44,6 +44,25 @@
       "node_id": "diseno_fugitivo_runaway_design",
       "titulo": "Diseño Fugitivo (Runaway Design)",
       "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúne al equipo y plantea escenarios especulativos a 10, 50 y 100 años sobre el uso masivo de tu producto o servicio.",
+      "texto_nuevo": "Reúne al equipo y cuenta historias especulativas sobre qué pasaría si tu producto o servicio se usara de forma masiva.",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3490",
+        "frase": "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: los horizontes '10, 50 y 100 años' no están en el libro; se quitan y se deja la historia especulativa sin horizonte fijo. Cita L3490: \"Are you trying to understand what might transpire if you go down a certain road? Try a speculative story.\". El dato no se repite en resumen_teorico ni entregable.",
+      "indice": 0,
+      "auditoria": "muestreo A3"
     }
   ]
 }

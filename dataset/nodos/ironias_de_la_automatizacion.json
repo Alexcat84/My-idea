@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
     "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
-    "Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros."
+    "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar."
   ],
   "entregable_esperado": "Plan de entrenamiento y diseño de interfaz que aborde explícitamente las ironías de la automatización identificadas en los procesos de la organización.",
   "nodos_previos": [
@@ -21,5 +21,24 @@
     "Cuando se introduce o evalúa tecnología automatizada en procesos críticos de seguridad.",
     "Cuando se diseñan programas de capacitación para operadores de sistemas automatizados."
   ],
-  "etiqueta_arbol": "Cuidado al Automatizar Tareas"
+  "etiqueta_arbol": "Cuidado al Automatizar Tareas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-22",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros.",
+      "texto_nuevo": "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L848",
+        "frase": "even the best motivated people have trouble maintaining vigilance for long periods of time"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una herramienta (sistemas de monitoreo compensatorios). El libro da el diagnóstico (L848) y pone el remedio en la formación (L856). Se reescribe como sugerencia de My Idea, con el aviso del libro sobre los dispositivos nuevos (L1033). El resumen solo recoge el diagnóstico del libro. El entregable ('diseño de interfaz') se deja, como manda la regla para PRACTICO.",
+      "indice": 2,
+      "auditoria": "muestreo A26"
+    }
+  ]
 }
