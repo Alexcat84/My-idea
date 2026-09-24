@@ -13,8 +13,8 @@
     "Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders",
     "Decide con rapidez y sin miedo al fracaso si toca pivotar",
     "Distingue con claridad entre un ajuste menor y un cambio sustancial",
-    "Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
-    "Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio"
+    "Sugerencia de My Idea: usa un lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
+    "Sugerencia de My Idea: documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio"
   ],
   "entregable_esperado": "Documento de pivote que explique: la estrategia original, la evidencia que la invalidó, la nueva hipótesis de valor y los primeros resultados métricos post-pivote",
   "nodos_previos": [
@@ -69,6 +69,42 @@
       "node_id": "pivotes_e_iteraciones",
       "titulo": "Cambiar de rumbo o solo ajustar (pivotes e iteraciones)",
       "fuente": "The Startup Owner's Manual - Blank, Steve"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-049",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio",
+      "texto_nuevo": "Sugerencia de My Idea: documenta cada cambio de rumbo como una nueva versión de tu lienzo de modelo de negocio",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L1960-L1962",
+        "frase": "A pivot is a special kind of change designed to test a new fundamental hypothesis about the product, business model, and engine of growth."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no menciona el lienzo de modelo de negocio (canvas) ni pide documentar cada pivote como version de el; busque canvas, lienzo y Osterwalder sin resultados.",
+      "indice": 8,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C102-017"
+    },
+    {
+      "id": "fidelidad-t8-050",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa tu lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
+      "texto_nuevo": "Sugerencia de My Idea: usa un lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L1960-L2058",
+        "frase": "Pivots come in different flavors. ... A pivot is a special kind of change designed to test a new fundamental hypothesis about the product, business model, and engine of growth."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro ubica el cambio con su catalogo de pivotes, no con un lienzo de modelo de negocio; busque canvas, lienzo y Osterwalder sin resultados.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C102-034"
     }
   ]
 }

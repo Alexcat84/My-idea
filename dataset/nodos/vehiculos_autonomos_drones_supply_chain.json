@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Drones y Vehículos Autónomos en la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Antes de implementarlos conviene revisar el marco regulatorio local, ya que las normas sobre drones y vehículos autónomos varían y pueden condicionar dónde y cómo operarlos. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
+  "resumen_teorico": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
   "pasos_accionables": [
     "Identifica los tramos de tu cadena de suministro con alto volumen repetitivo (fábrica-almacén, almacén-cliente) que podrían automatizarse",
-    "Revisa el marco regulatorio local para el uso de drones y vehículos autónomos antes de avanzar",
+    "Revisa en qué tramos de tu cadena de suministro encajaría cada tipo de dron o vehículo sin conductor antes de avanzar",
     "Evalúa qué tipo de vehículo autónomo conviene para cada tramo: terrestre para grandes volúmenes, aéreo para entregas rápidas de última milla",
     "Diseña o contrata un sistema central que programe y coordine la actividad de los vehículos",
     "Lanza un piloto en una ruta o área geográfica limitada y mide su desempeño antes de escalar"
@@ -36,6 +36,41 @@
       "node_id": "drones_autonomous_vehicles",
       "titulo": "Drones y Vehículos Autónomos en Logística",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-032",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa el marco regulatorio local para el uso de drones y vehículos autónomos antes de avanzar",
+      "texto_nuevo": "Revisa en qué tramos de tu cadena de suministro encajaría cada tipo de dron o vehículo sin conductor antes de avanzar",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L2234-L2243",
+        "frase": "A drone is essentially any driverless vehicle that is remotely controlled or can operate autonomously."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. La seccion de drones no habla de regulacion. Busque regulat, legal, FAA y pilot en todo el libro, y la regulacion solo sale en otros contextos (sostenibilidad, contratos). El paso anade materia legal que el libro no trata.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C092-007"
+    },
+    {
+      "id": "fidelidad-t8-033",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Antes de implementarlos conviene revisar el marco regulatorio local, ya que las normas sobre drones y vehículos autónomos varían y pueden condicionar dónde y cómo operarlos. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
+      "texto_nuevo": "Un dron es cualquier vehículo sin conductor que opera de forma remota o autónoma, ya sea volando, caminando, conduciendo, flotando o nadando. Puedes usarlo para mover productos en distintos tramos de tu cadena de suministro: camiones autónomos entre fábricas y almacenes, o drones aéreos y furgonetas autónomas para la entrega final al cliente. Todos se pueden conectar a un sistema central que programa y coordina sus rutas. Bien aplicada, esta tecnología te ayuda a reducir costos y tiempos de entrega en tramos con alto volumen repetitivo.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L2234-L2243",
+        "frase": "A drone is essentially any driverless vehicle that is remotely controlled or can operate autonomously."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la materia legal añadida (revisar el marco regulatorio local de drones y vehículos autónomos) que el libro no trata; ANADIDO de materia legal, se quita igual que en el paso 1.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C092-007"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar las funciones core que generan el valor diferencial de tu negocio",
     "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
-    "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y que sean APIs abiertas para facilitar integraciones futuras",
+    "Sugerencia de My Idea: conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
     "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
     "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente",
     "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS)."
@@ -37,6 +37,25 @@
       "node_id": "arquitectura_flexible_soa",
       "titulo": "Aprovechar Aplicaciones Existentes (SOA/EAI/API)",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-025",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y que sean APIs abiertas para facilitar integraciones futuras",
+      "texto_nuevo": "Sugerencia de My Idea: conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L4285-L4287",
+        "frase": "Their systems architecture is cloud-based, and they use APIs to connect with other software-as-a-service providers as needed."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Conectar via APIs en vez de desarrollar internamente esta en el libro, pero la exigencia de que sean APIs abiertas no aparece en ninguna parte (buscado open API, open standard, openly).",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C088-016"
     }
   ]
 }

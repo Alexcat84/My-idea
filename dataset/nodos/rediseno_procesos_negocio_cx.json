@@ -14,7 +14,7 @@
     "Diagnosticar si los empleados saben que la experiencia del cliente es parte de su trabajo",
     "Diseñar un programa de capacitación peer-to-peer a gran escala con plazos definidos",
     "Unificar las herramientas internas de información del cliente para reducir errores y fricción",
-    "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas",
+    "Sugerencia de My Idea: consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas",
     "Rediseñar procesos clave (ej: agendamiento, atención telefónica) para resolución en un solo contacto",
     "Implementar compensaciones automáticas cuando la empresa incumple su promesa de servicio",
     "Medir el impacto con métricas antes/después (volumen de llamadas, tasa de resolución en primer contacto)",
@@ -51,6 +51,25 @@
       "node_id": "rediseno_procesos_negocio_cliente",
       "titulo": "Rediseño de Procesos de Negocio para Eliminar Fricciones Autoinfligidas",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-059",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas",
+      "texto_nuevo": "Sugerencia de My Idea: consolidar herramientas internas dispersas en un sistema unificado de gestión de cuentas",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L6300",
+        "frase": "In short order, Comcast shifted from using twelve different agent tools in the onboarding and account management process to using just four."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon B. El libro respalda simplificar las herramientas internas (Comcast paso de doce a cuatro), pero no habla de consolidarlas en un unico sistema unificado de gestion de cuentas. Busque single system, one system, unified, CRM en todo el libro: el CRM aparece como herramienta para registrar datos del cliente (L1842, L5533), no como sistema unico que sustituya las herramientas de los agentes. No lo marco CONTRARIO porque el libro no desaconseja unificar; el cuatro es el resultado del caso, no un umbral prescrito. El sistema unificado es una herramienta anadida.",
+      "indice": 8,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-047"
     }
   ]
 }

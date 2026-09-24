@@ -9,7 +9,7 @@
     "Pide a la persona que envíe la agenda de la reunión con anticipación",
     "Deja que hable el 90% del tiempo mientras tú escuchas",
     "Usa preguntas abiertas para sacar a la luz problemas u oportunidades que no se dijeron",
-    "Cancela la reunión si no tiene temas pendientes",
+    "Deja que la persona cancele la reunion si no tiene temas pendientes",
     "Da seguimiento a los temas planteados en las próximas reuniones"
   ],
   "entregable_esperado": "Un calendario recurrente de 1:1 con cada persona que trabaja contigo y un registro de los temas tratados y los acuerdos",
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Cuando tu equipo crece y la comunicación informal deja de ser suficiente"
   ],
-  "etiqueta_arbol": "Escucha a tu Equipo Individualmente"
+  "etiqueta_arbol": "Escucha a tu Equipo Individualmente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cancela la reunión si no tiene temas pendientes",
+      "texto_nuevo": "Deja que la persona cancele la reunion si no tiene temas pendientes",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2198-L2198",
+        "frase": "A good practice is to have the employee send you the agenda in advance. This will give her a chance to cancel the meeting if nothing is pressing. It also makes clear that it is her meeting"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. En el libro quien puede cancelar es el empleado, porque la reunion es suya; el paso, dirigido al gerente, le traslada esa decision.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-067"
+    }
+  ]
 }

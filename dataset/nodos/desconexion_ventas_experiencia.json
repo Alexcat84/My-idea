@@ -9,7 +9,7 @@
     "Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso",
     "Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
     "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
-    "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes",
+    "Sugerencia de My Idea: crea un protocolo claro de traspaso, por ejemplo una reunión conjunta entre el cliente, quien vendió y quien sigue atendiéndolo, empezando por tus clientes más importantes",
     "De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando"
   ],
   "entregable_esperado": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta",
@@ -35,6 +35,25 @@
       "node_id": "traspaso_ventas_cuentas",
       "titulo": "Que lo que prometes al vender sea lo que realmente entregas",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-057",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crea un protocolo claro de traspaso: una reunion conjunta entre el cliente, quien vendio y quien sigue atendiendolo, empezando por tus clientes más importantes",
+      "texto_nuevo": "Sugerencia de My Idea: crea un protocolo claro de traspaso, por ejemplo una reunión conjunta entre el cliente, quien vendió y quien sigue atendiéndolo, empezando por tus clientes más importantes",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L2594-L2615",
+        "frase": "This smooth handoff allows the salesperson to repeat the expectations of the new customer and personally introduce the customer to the account manager who will be in charge of the experience from then on."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda un traspaso fluido en el que el vendedor presenta al cliente a su gestor, pero lo hace con un video. No propone una reunión conjunta de los tres ni empezar por los clientes más importantes; busqué joint, three-way y variantes sin resultado.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C107-079"
     }
   ]
 }

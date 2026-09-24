@@ -7,7 +7,7 @@
   "resumen_teorico": "David Kelley lo llama 'pensar con las manos'. Consiste en dar forma tangible a una idea lo más rápido y económico posible para poder evaluarla, refinarla y avanzar hacia la mejor solución. Los prototipos tempranos deben ser rápidos, rudimentarios y baratos, usando materiales encontrados (cartón, cinta, clips) en lugar de invertir en acabados costosos que generen apego prematuro a una idea mediocre.",
   "pasos_accionables": [
     "Seleccionar materiales baratos y accesibles (cartón, cinta, objetos cotidianos)",
-    "Construir una representación física mínima de la idea en minutos u horas, no semanas",
+    "Construir una representacion fisica minima de la idea cuanto antes, con la meta de tenerla lista al final del primer dia o, como mucho, de la primera semana",
     "Usar el prototipo como herramienta de discusión con el equipo o usuarios",
     "Evitar invertir en acabados o detalles antes de validar la idea funcional",
     "Iterar rápidamente basándose en la retroalimentación obtenida"
@@ -59,5 +59,24 @@
     "Cuando el equipo necesita evaluar rápidamente múltiples direcciones en paralelo",
     "Si el usuario tiene una idea abstracta que requiere validación tangible temprana"
   ],
-  "etiqueta_arbol": "Prototipa Rápido y Barato"
+  "etiqueta_arbol": "Prototipa Rápido y Barato",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-024",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Construir una representación física mínima de la idea en minutos u horas, no semanas",
+      "texto_nuevo": "Construir una representacion fisica minima de la idea cuanto antes, con la meta de tenerla lista al final del primer dia o, como mucho, de la primera semana",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L698-L698",
+        "frase": "One way to motivate early-stage prototyping is to set a goal: to have a prototype ready by the end of the first week or even the first day. ... In the most creative organizations, it can happen within a few days."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El paso fija el plazo en minutos u horas y excluye expresamente las semanas. El libro da otro valor para ese mismo dato: meta de primer prototipo al final de la primera semana o incluso del primer dia, y en las organizaciones mas creativas en pocos dias (L698); ademas elogia un primer prototipo hecho en solo una semana (L1061). Busque minutes, hours, few days, weeks en todo el libro: solo la anecdota Gyrus (L614) muestra un prototipo inmediato, y no convierte los minutos en norma ni descarta la semana. Por la vara, un plazo cambiado respecto al libro es CONTRARIO, no ANADIDO como decia el lector A.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C112-070"
+    }
+  ]
 }

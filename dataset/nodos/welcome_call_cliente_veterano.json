@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar un grupo de clientes activos y entusiastas dispuestos a apoyar la incorporación de nuevos miembros",
     "Crear un 'comité de bienvenida' formal con capacitación breve sobre qué comunicar",
-    "Programar una llamada o interacción de 15-20 minutos entre el cliente veterano y el nuevo cliente poco después de la compra",
+    "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse",
     "Recoger feedback del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso"
   ],
   "entregable_esperado": "Programa formalizado de bienvenida entre pares (comité de clientes veteranos) con guion o lineamientos básicos",
@@ -29,5 +29,24 @@
     "Cuando el negocio tiene un componente de comunidad o membresía",
     "Cuando existen clientes leales dispuestos a embajadorizar la marca"
   ],
-  "etiqueta_arbol": "Deja que un Cliente Reciba"
+  "etiqueta_arbol": "Deja que un Cliente Reciba",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Programar una llamada o interacción de 15-20 minutos entre el cliente veterano y el nuevo cliente poco después de la compra",
+      "texto_nuevo": "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L2843-L2845",
+        "frase": "Immediately after joining the membership, a new CADRE member is introduced by email to a veteran member of the Welcome Committee. The veteran member welcomes the new member via email and then requests a twenty-minute telephone call to get to know the new person."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da una duración concreta de veinte minutos y el paso la cambia a un rango de 15 a 20. El libro también pone la llamada justo después de unirse, con una presentación previa por email. No hay pasaje que respalde el rango de 15 minutos.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-019"
+    }
+  ]
 }

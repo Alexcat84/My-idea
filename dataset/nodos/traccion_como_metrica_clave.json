@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define qué métrica concreta representará 'tracción' para tu negocio (usuarios, ingresos, transacciones).",
     "Establece una cifra objetivo específica y una tasa de crecimiento esperada, no solo una dirección general.",
-    "Mide y reporta esta métrica de forma recurrente (semanal/mensual) desde el inicio del proyecto."
+    "Sugerencia de My Idea: mide y reporta esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto."
   ],
   "entregable_esperado": "Definición documentada de la métrica de tracción principal y su meta cuantitativa (goal numérico).",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Cuando el usuario ya tiene un MVP o producto lanzado y necesita medir si está funcionando",
     "Cuando se necesita levantar inversión y se requiere evidencia de demanda"
   ],
-  "etiqueta_arbol": "Demuestra Demanda Real con Datos"
+  "etiqueta_arbol": "Demuestra Demanda Real con Datos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-055",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide y reporta esta métrica de forma recurrente (semanal/mensual) desde el inicio del proyecto.",
+      "texto_nuevo": "Sugerencia de My Idea: mide y reporta esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "I have an idea/books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "L84, L789",
+        "frase": "Quantify traction subgoals and put them on a calendar so you can properly monitor your progress over time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide seguir el progreso en el tiempo, pero no fija una frecuencia semanal o mensual para medir y reportar la métrica.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C106-080"
+    }
+  ]
 }

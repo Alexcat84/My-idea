@@ -10,8 +10,8 @@
     "Automatizar con IA/algoritmos las tareas repetitivas de monitoreo y registro de datos.",
     "Asignar a personas las tareas de excepción, negociación y resolución de problemas complejos.",
     "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.",
-    "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
-    "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+    "Sugerencia de My Idea: recompensar a los empleados que identifiquen y automaticen con IA las tareas aburridas",
+    "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada segun riesgo, importancia personal y capacidad actual de la IA",
     "Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio"
   ],
   "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
@@ -55,6 +55,42 @@
       "node_id": "framework_tareas_ia_humano",
       "titulo": "Framework de Clasificación de Tareas: Just Me, Delegadas y Automatizadas",
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+      "texto_nuevo": "Sugerencia de My Idea: clasificar cada tarea en Just Me, Delegada o Automatizada segun riesgo, importancia personal y capacidad actual de la IA",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L5849-L5853",
+        "frase": "Computers and AI are best used to automate the rote, repetitious activities that humans find to be dull and boring."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro reparte tareas entre rutinarias (IA) y creativas (personas); el marco Just Me, Delegada, Automatizada y sus criterios no aparecen en el libro.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-068"
+    },
+    {
+      "id": "fidelidad-t8-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recompensar a empleados que identifiquen y automaticen tareas aburridas con IA",
+      "texto_nuevo": "Sugerencia de My Idea: recompensar a los empleados que identifiquen y automaticen con IA las tareas aburridas",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L5849-L5879",
+        "frase": "First motivate people by providing them with monetary or psychological rewards for achieving predefined performance targets."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro recompensa el logro de metas de desempeno, no la identificacion y automatizacion de tareas aburridas con IA; esa practica no esta en el libro.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-078"
     }
   ]
 }

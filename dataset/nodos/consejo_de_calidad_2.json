@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (supervisores, encargados de calidad, personal operativo) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+  "resumen_teorico": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
   "pasos_accionables": [
-    "Formar el consejo de calidad con representantes voluntarios de distintas areas operativas.",
+    "Formar el consejo de calidad con las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango.",
     "Permitir que el consejo elija su propia dirección, independiente de la jerarquia formal.",
     "Programar reuniones periodicas donde puedas presentar avances y responder preguntas abiertamente.",
     "Mantener la autonomia del consejo respecto a ti (por ejemplo, financiamiento propio de actividades sociales) para preservar su caracter genuino."
@@ -22,5 +22,40 @@
     "Cuando buscas sostener el programa de calidad en el tiempo con participación genuina del personal operativo.",
     "Cuando quieres demostrar compromiso visible con la mejora de calidad."
   ],
-  "etiqueta_arbol": "Autogestiona tu Consejo de Calidad"
+  "etiqueta_arbol": "Autogestiona tu Consejo de Calidad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-010",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Formar el consejo de calidad con representantes voluntarios de distintas areas operativas.",
+      "texto_nuevo": "Formar el consejo de calidad con las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L3377-L3387",
+        "frase": "Purpose: To bring together the professional quality people for planned communication on a regular basis."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro define quien forma el consejo: los profesionales de calidad (L3377, L3381: 'So bring the quality control people together regularly') y, en el resumen del paso, tambien los presidentes de equipo ('The quality professionals and team chairpersons should be brought together regularly', L1643). Lo unico que pide sobre la membresia es no restringirla por rango (L3387). El paso cambia el valor de ese mismo dato por 'representantes voluntarios de distintas areas operativas', y por la regla eso es CONTRARIO, no ANADIDO. Busque council y volunt en todo el libro: ningun pasaje apoya esa composicion. 'Voluntary' solo aparece para la firma del compromiso ZD (L3013). En la cena del consejo de HPA los miembros son personal de calidad, como el supervisor de inspeccion de recepcion (L2397).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C098-050"
+    },
+    {
+      "id": "fidelidad-t8-011",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (supervisores, encargados de calidad, personal operativo) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "texto_nuevo": "El consejo de calidad es un espacio permanente y autogestionado por quienes trabajan contigo (las personas que evaluan la calidad del trabajo y quienes encabezan los equipos de mejora, sin restringirlo por rango) que funciona con independencia de ti como directivo, incluso manteniendo costumbres simbolicas (como pagar cada quien sus propias bebidas) para preservar su autonomia. Sirve como espacio de comunicación entre tu y el personal operativo, donde puedes explicar la visión del programa de calidad y responder preguntas directamente, reforzando tu compromiso visible.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L3377-L3387",
+        "frase": "Purpose: To bring together the professional quality people for planned communication on a regular basis."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la composicion del consejo que corrige C098-050 (personal operativo de distintas areas). Segun el libro, el consejo lo forman los profesionales de calidad y los presidentes de equipo, sin restringirlo por rango (L3377-L3387, L1643).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C098-050"
+    }
+  ]
 }

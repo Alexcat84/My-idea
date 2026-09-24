@@ -14,7 +14,7 @@
     "Evalúa si está acostumbrado a actuar por iniciativa propia o si espera que le asignen las tareas",
     "Pregúntale qué hará en su primer mes contigo y desconfía si solo habla de 'aprender'",
     "Verifica que tenga conciencia real de en qué se diferencia su rol anterior de este nuevo",
-    "Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si la única motivación es la participación accionaria (equity)",
+    "Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si su motivación principal es la participación accionaria (equity)",
     "Busca a alguien motivado por crear más que por administrar"
   ],
   "entregable_esperado": "Guía de entrevista con preguntas y señales específicas para detectar el tipo de ambición del candidato ejecutivo.",
@@ -39,6 +39,25 @@
       "node_id": "screening_ambicion_organizacional",
       "titulo": "Filtro de Ambición por la Compañía vs. Ambición Personal",
       "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si la única motivación es la participación accionaria (equity)",
+      "texto_nuevo": "Pregúntale por qué quiere unirse a un negocio pequeño y desconfía si su motivación principal es la participación accionaria (equity)",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L1547-L1549",
+        "frase": "Why do you want to join a small company? Beware of equity being the primary motivation."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón B. El libro pone el umbral en que el equity sea la motivación principal. El paso solo desconfía si es la única, un umbral más laxo que deja pasar al candidato cuyo motivo principal es el equity aunque tenga otros. Busqué en todo el libro algún pasaje que hable de la motivación 'única' y no lo hay. La vara dice que un umbral cambiado es CONTRARIO. A lo dio por literal, y no lo es.",
+      "indice": 8,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-056"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Change by Design, Revised and U - Tim Brown",
   "resumen_teorico": "La fase de inspiración de un proyecto requiere un equipo pequeño y enfocado que establezca el marco general del concepto; solo más adelante, en la fase de implementación, el equipo crece significativamente ('llegan los ejércitos'). Aumentar el tamaño del equipo central demasiado pronto reduce la velocidad y eficiencia porque la comunicación interna consume más tiempo que el proceso creativo mismo. Las redes interdependientes de equipos pequeños (apoyadas por tecnología de colaboración) permiten abordar problemas complejos sin perder la efectividad de los grupos reducidos.",
   "pasos_accionables": [
-    "Mantener el equipo central de concepto pequeño (4-6 personas) durante la fase de inspiración e ideación temprana",
+    "Mantener el equipo central de concepto pequeno y enfocado durante la fase de inspiracion e ideacion temprana",
     "Expandir el equipo solo cuando el proyecto entra en fase de implementación y ejecución a gran escala",
     "Considerar redes de equipos pequeños interconectados (en vez de un único equipo gigante) para problemas complejos y distribuidos",
     "Usar herramientas de colaboración remota (videollamadas siempre activas, wikis, mensajería instantánea) para conectar equipos dispersos geográficamente"
@@ -25,5 +25,24 @@
     "Al planificar la estructura organizacional de un proyecto de innovación",
     "Si el proyecto está creciendo en complejidad y se considera agrandar el equipo prematuramente"
   ],
-  "etiqueta_arbol": "Equipo Chico Primero, Grande Después"
+  "etiqueta_arbol": "Equipo Chico Primero, Grande Después",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-064",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantener el equipo central de concepto pequeño (4-6 personas) durante la fase de inspiración e ideación temprana",
+      "texto_nuevo": "Mantener el equipo central de concepto pequeno y enfocado durante la fase de inspiracion e ideacion temprana",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L265-L267",
+        "frase": "the inspiration phase, by contrast, requires a small, focused group whose job is to establish the overall framework."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide un grupo pequeno y enfocado en la fase de inspiracion, pero no fija un numero. La cifra de 4 a 6 personas no aparece: se busco en numero y en letra.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C111-025"
+    }
+  ]
 }

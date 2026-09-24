@@ -7,7 +7,7 @@
   "resumen_teorico": "Para que la información de productos sea utilizable globalmente, se requiere un protocolo de identificación estándar. GS1 unificó los sistemas UPC y EAN en el Global Trade Item Number (GTIN), y lo extendió con el Electronic Product Code (EPC), que añade un número de serie único a cada ítem individual, permitiendo rastrear su historial de movimiento a través de la red EPCglobal.",
   "pasos_accionables": [
     "Registrar la organización en GS1 para obtener un código de gestor (manager code)",
-    "Etiquetar los productos con GTIN/EPC según el estándar correspondiente a la región (13 o 14 dígitos)",
+    "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 digitos (el 'UPC de 14 digitos' en Norteamerica o el 'EAN de 13 digitos mas digito de control' en Europa)",
     "Integrar los sistemas internos con la red EPCglobal para consulta y actualización en tiempo real",
     "Mantener actualizada la base de datos de códigos EPC conforme los productos se mueven en la cadena"
   ],
@@ -22,5 +22,24 @@
     "Cuando la empresa opera en múltiples países y necesita interoperabilidad de datos de producto",
     "Si se requiere trazabilidad detallada del historial de cada unidad de producto"
   ],
-  "etiqueta_arbol": "Estandariza la Identificación de Productos"
+  "etiqueta_arbol": "Estandariza la Identificación de Productos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Etiquetar los productos con GTIN/EPC según el estándar correspondiente a la región (13 o 14 dígitos)",
+      "texto_nuevo": "Etiquetar los productos con GTIN/EPC usando el esquema unificado de 14 digitos (el 'UPC de 14 digitos' en Norteamerica o el 'EAN de 13 digitos mas digito de control' en Europa)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L2369-L2371",
+        "frase": "which refers to the fact that there is now just one unified 14-digit numbering scheme"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que UPC y EAN se unificaron en un solo esquema GTIN de 14 digitos (el EAN de 13 digitos mas digito de control); el paso presenta 13 o 14 digitos como opciones segun la region, cambiando el dato.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C089-009"
+    }
+  ]
 }

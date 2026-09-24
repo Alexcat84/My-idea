@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Define métricas claras de necesidad real de talento antes de escalar la contratación agresivamente.",
     "Anticipa la infraestructura física y de procesos (oficinas, HR, onboarding) necesaria para el ritmo de contratación planeado.",
-    "Establece planes de contingencia (freeze de contratación, ajuste de burn rate) ante señales de desaceleración del mercado.",
-    "Evalúa constantemente el ratio de gasto por empleado versus ingresos generados.",
+    "Sugerencia de My Idea: establece planes de contingencia (freeze de contratación, ajuste de burn rate) ante señales de desaceleración del mercado.",
+    "Sugerencia de My Idea: evalúa con regularidad el gasto por empleado frente a los ingresos generados.",
     "Detecta el momento en que sumar personas te genera más trabajo del que ahorra; ahí toca ceder terreno",
     "Agrega especialización solo cuando la curva de aprendizaje de la gente nueva se vuelve muy empinada",
     "Evalúa si tu negocio necesita una nueva forma de organizarse o procesos más formales",
@@ -28,5 +28,41 @@
     "Cuando la empresa recibe financiamiento significativo y siente presión competitiva para escalar rápido.",
     "Cuando el ritmo de contratación supera la capacidad de la infraestructura organizacional existente."
   ],
-  "etiqueta_arbol": "Contrata Rápido con Cuidado"
+  "etiqueta_arbol": "Contrata Rápido con Cuidado",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-035",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece planes de contingencia (freeze de contratación, ajuste de burn rate) ante señales de desaceleración del mercado.",
+      "texto_nuevo": "Sugerencia de My Idea: establece planes de contingencia (freeze de contratación, ajuste de burn rate) ante señales de desaceleración del mercado.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L418-L454",
+        "frase": "I told John that he and I needed to execute a contingency plan, and we needed to get started immediately. This would be a two-person project to start, and we needed everyone else focused on the task at hand--reducing Loudcloud's cash burn."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón B en el veredicto. Tener un plan B ante señales del mercado (Exodus, L418) y reducir el gasto de caja (L454) sí está en el libro. Busqué 'freeze', 'hiring freeze', 'stop hiring', 'slow hiring' y 'burn rate' en todo el libro y no aparecen. Ante la caída, lo que hace Horowitz es rebajar la previsión de gastos y despedir al 15 por ciento (L412), no congelar contrataciones. El freeze de contratación es una medida concreta que añade el paso. No es concreción, como dice A. Al ser una herramienta, va como sugerencia.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-017"
+    },
+    {
+      "id": "fidelidad-t8-039",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa constantemente el ratio de gasto por empleado versus ingresos generados.",
+      "texto_nuevo": "Sugerencia de My Idea: evalúa con regularidad el gasto por empleado frente a los ingresos generados.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L318",
+        "frase": "It quoted a Yankee Group analyst positing that we had “lost something like $1 million dollars per employee over the last 12 months,”"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El gasto por empleado solo aparece en una crítica de la prensa. Busqué 'per employee' y 'revenue per' en todo el libro y el autor nunca recomienda seguir ese ratio frente a los ingresos.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-094"
+    }
+  ]
 }

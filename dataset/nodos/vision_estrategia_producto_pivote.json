@@ -6,7 +6,7 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Los planes de negocio tradicionales se diseñan como el lanzamiento de un cohete: instrucciones precisas donde un pequeño error inicial puede causar un fracaso catastrófico. El método Lean Startup propone en cambio 'conducir' el negocio usando un volante llamado el ciclo Construir-Medir-Aprender, que permite ajustes constantes. Toda startup tiene una visión (el destino, un negocio próspero y transformador) que rara vez cambia; una estrategia (modelo de negocio, hoja de ruta de producto, visión de competencia y clientes) que puede cambiar mediante un 'pivote'; y un producto, resultado de esa estrategia, que cambia constantemente mediante la 'sintonización del motor' (optimización continua).",
   "pasos_accionables": [
-    "Define la visión de largo plazo del proyecto (el destino inalterable).",
+    "Define la visión de largo plazo del proyecto (el destino, que rara vez cambia).",
     "Formula una estrategia inicial: modelo de negocio, hoja de ruta de producto, cliente objetivo y postura frente a competidores.",
     "Distingue explícitamente entre ajustes menores (tuning/optimización) y cambios de rumbo mayores (pivotes) en tu estrategia.",
     "Establece el ciclo Construir-Medir-Aprender como mecanismo de dirección continua en vez de seguir un plan rígido.",
@@ -30,5 +30,24 @@
     "Cuando el usuario confunde cambios de producto con cambios de estrategia o visión.",
     "Si el usuario no sabe cuándo debe pivotar."
   ],
-  "etiqueta_arbol": "Conduce en Vez de Lanzar"
+  "etiqueta_arbol": "Conduce en Vez de Lanzar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-014",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Define la visión de largo plazo del proyecto (el destino inalterable).",
+      "texto_nuevo": "Define la visión de largo plazo del proyecto (el destino, que rara vez cambia).",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L271-L275",
+        "frase": "However, the overarching vision rarely changes."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro dice que la vision rara vez cambia, no que nunca cambie. Lo refuerzan otros pasajes: la vision puede resultar equivocada (L1849), y Wealthfront aprendio algo esencial sobre su vision y la afino al pivotar (L1914). Busque en todo el libro 'unchang', 'immutable', 'never change' y variantes, y ningun pasaje respalda una vision inalterable. Pasar de rara vez a nunca cambia la frecuencia que da el libro e invierte su matiz, asi que no es una concrecion en la misma direccion.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C103-096"
+    }
+  ]
 }
