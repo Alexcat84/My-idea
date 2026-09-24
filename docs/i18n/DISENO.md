@@ -1,7 +1,7 @@
 # My Idea multilingüe: diseño (F0)
 
-**Fecha:** 26 sep 2026. **Rama:** `i18n`, desde `main` en `dc5f5e65`. **Estado:** F0 solo lectura;
-nada de código cambió. El glosario de marca (§6) espera la aprobación del fundador antes de F2.
+**Fecha:** 26 sep 2026. **Rama:** `i18n`, desde `main` en `dc5f5e65`. **Estado:** F0 cerrada; el
+fundador aprobó el glosario y las decisiones D1 a D9 (§7). F1 espera la clave de Voyage.
 
 ## 1. Lo que pide el fundador
 
@@ -58,8 +58,9 @@ o por la decisión D3, no por el catálogo.
   hoy), no por concatenación.
 
 ### 3.2 Cómo se elige el idioma de la interfaz
-- **Sin idioma en la URL** (patrón I Ching): una sola ruta, el idioma en la cookie `myidea_idioma`
-  (`path=/; max-age=1 año; samesite=lax`, legible por el cliente).
+- **La preferencia vive en la cookie** `myidea_idioma` (`path=/; max-age=1 año; samesite=lax`,
+  legible por el cliente), como en el I Ching. **D9:** además, `?lang=xx` en la URL manda en esa
+  visita y actualiza la cookie; los `hreflang` apuntan a esas variantes.
 - **Primera visita:** `proxy.ts` (donde ya vive la identidad invisible), sin cookie, negocia el
   `Accept-Language` (orden por `q`, subetiqueta primaria: `pt-BR→pt`, `zh-TW→zh`, `fr-CA→fr`) y
   **cae al español** si no hay coincidencia. Después manda la cookie.
@@ -122,7 +123,7 @@ o por la decisión D3, no por el catálogo.
   hecho con el texto en español de los nodos; la consulta es el texto crudo del usuario. F1 mide si
   una idea en coreano recupera los mismos nodos que en español.
 
-## 6. Glosario de marca (PROPUESTA, para aprobar)
+## 6. Glosario de marca (APROBADO por el fundador el 26 sep 2026, con sus ajustes; pendiente la revisión de naturalidad antes de F3)
 
 **Reglas propuestas:**
 - **"My Idea" no se traduce** en ningún idioma.
@@ -138,7 +139,7 @@ o por la decisión D3, no por el catálogo.
 | Claridad | Clarity | Clareza | Clarté | Klarheit | Chiarezza | 明確化 | 清晰 | 명확함 | الوضوح | स्पष्टता |
 | La Exploración | The Exploration | A Exploração | L'Exploration | Die Erkundung | L'Esplorazione | 探求 | 探索 | 탐색 | الاستكشاف | अन्वेषण |
 | Tu Plan | Your Plan | Seu Plano | Ton plan | Dein Plan | Il tuo piano | あなたのプラン | 你的计划 | 나의 계획 | خطتك | आपकी योजना |
-| Manos a la Obra | Hands On | Mãos à Obra | À l'ouvrage | Ans Werk | Mani all'opera | 実行 | 动手做 | 실행하기 | إلى العمل | काम पर |
+| Manos a la Obra | Get to Work | Mãos à Obra | À l'ouvrage | Ans Werk | Mani all'opera | 実行 | 动手做 | 실행하기 | إلى العمل | काम पर |
 | Realizado | Achieved | Realizado | Réalisé | Verwirklicht | Realizzato | 実現 | 已实现 | 실현 | تحقّق | साकार |
 
 ### Los nueve mundos
@@ -152,8 +153,8 @@ o por la decisión D3, no por el catálogo.
 | Vender al Mundo | Sell to the World | Vender para o Mundo | Vendre au monde | Weltweit verkaufen | Vendere al Mondo | 世界に売る | 卖向世界 | 세계로 팔기 | البيع للعالم | दुनिया को बेचें |
 | Multiplica tu Negocio | Multiply Your Business | Multiplique seu Negócio | Multiplie ton entreprise | Vervielfache dein Geschäft | Moltiplica la tua Attività | ビジネスを広げる | 让生意倍增 | 사업 확장 | ضاعف عملك | अपना व्यवसाय बढ़ाएँ |
 | Riesgos Bajo Control | Risks Under Control | Riscos sob Controle | Risques sous contrôle | Risiken im Griff | Rischi sotto Controllo | リスクを管理下に | 风险可控 | 위험 관리 | المخاطر تحت السيطرة | जोखिम नियंत्रण में |
-| Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton achat juste | Dein richtiger Einkauf | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤك الصحيح | आपकी सही खरीद |
-| Del Taller a sus Manos | From Workshop to Their Hands | Da Oficina às Mãos Deles | De l'atelier à leurs mains | Von der Werkstatt in ihre Hände | Dal Laboratorio alle loro Mani | 工房からお客様の手へ | 从作坊到客户手中 | 공방에서 고객의 손까지 | من الورشة إلى أيديهم | कार्यशाला से उनके हाथों तक |
+| Tu Compra Correcta | The Right Purchase | Sua Compra Certa | Ton achat juste | Richtig einkaufen | Il tuo Acquisto Giusto | 正しい仕入れ | 正确采购 | 올바른 구매 | شراؤك الصحيح | आपकी सही खरीद |
+| Del Taller a sus Manos | From Workshop to Customer | Da Oficina às Mãos Deles | De l'atelier à leurs mains | Von der Werkstatt in ihre Hände | Dal Laboratorio alle loro Mani | 工房からお客様の手へ | 从作坊到客户手中 | 공방에서 고객의 손까지 | من الورشة إلى أيديهم | कार्यशाला से उनके हाथों तक |
 
 (El mundo 11, `primer_equipo`, está registrado en el Gate 0 pero aún no integrado en la app: su
 nombre entra al glosario cuando se integre.)
@@ -164,7 +165,7 @@ nombre entra al glosario cuando se integre.)
 |---|---|---|---|---|---|---|---|---|---|---|
 | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea | My Idea |
 | Tus Números | Your Numbers | Seus Números | Tes chiffres | Deine Zahlen | I tuoi numeri | あなたの数字 | 你的数字 | 나의 숫자 | أرقامك | आपके आंकड़े |
-| Potencia tu idea | Power up your idea | Potencialize sua ideia | Booste ton idée | Gib deiner Idee Kraft | Potenzia la tua idea | アイデアを強化 | 为你的想法赋能 | 아이디어 강화 | عزّز فكرتك | अपने विचार को सशक्त करें |
+| Potencia tu idea | Power up your idea | Potencialize sua ideia | Propulse ton idée | Gib deiner Idee Kraft | Potenzia la tua idea | アイデアを強化 | 为你的想法赋能 | 아이디어 강화 | عزّز فكرتك | अपने विचार को सशक्त करें |
 | Ciclo de profundización | Deepening Cycle | Ciclo de aprofundamento | Cycle d'approfondissement | Vertiefungszyklus | Ciclo di approfondimento | 深掘りサイクル | 深化循环 | 심화 사이클 | دورة التعمّق | गहराई चक्र |
 | Expediente | Full Record | Dossiê | Dossier | Gesamtakte | Fascicolo | 全記録 | 完整档案 | 전체 기록 | الملف الكامل | पूरा ब्यौरा |
 | Bitácora | Logbook | Diário de bordo | Journal de bord | Logbuch | Diario di bordo | 活動ログ | 日志 | 기록장 | سجلّ الرحلة | लॉगबुक |
@@ -179,43 +180,35 @@ Los nombres de las recargas (Recarga, Básico, Premium, Profesional) y los cinco
 (pendiente, empezado, en proceso, hecho, no aplica) entran al catálogo como texto de interfaz, no
 como marca: se traducen en F3 con el mismo glosario.
 
-## 7. Decisiones que tocan al fundador
+## 7. Decisiones del fundador (26 sep 2026)
 
-- **D1. El glosario de §6.** Aprobarlo, corregirlo o marcar qué términos quedan en español en todos
-  los idiomas (como "My Idea").
-- **D2. Idioma de interfaz frente a idioma del proyecto.** Propuesta: la interfaz sigue la
-  preferencia; lo que genera la IA y los documentos siguen el idioma del proyecto. Ejemplo: alguien
-  con la app en español escribe una idea en coreano; los botones siguen en español y su plan sale en
-  coreano. La alternativa es que abrir un proyecto cambie también la interfaz a su idioma.
-- **D3. El contenido del grafo que llega sin pasar por la IA** (el grafo no se traduce):
-  - **Etiquetas del riel** (3.169, ~95 mil caracteres). Propuesta: una traducción **derivada** de
-    las etiquetas, en archivos aparte por idioma (`etiquetas_<idioma>.json`), generada una vez con
-    la IA y revisable; el grafo no se toca. Costo estimado: unos 10 dólares para los 10 idiomas.
-    Alternativa: mostrar las etiquetas en español.
-  - **Preguntas en caché** (3.569, ~871 mil caracteres). Propuesta: fuera del español, **toda**
-    pregunta pasa por la IA para adaptarla al idioma (el intérprete ya corre en cada turno; se suma
-    la primera pregunta de un mundo y la reelección de puerta); la caché queda solo para el español.
-    Alternativa: traducir la caché (unos 40 dólares por los 10 idiomas, más mantenimiento cada vez
-    que cambie el grafo).
-- **D4. Los correos de Supabase** (confirmar, reenviar, recuperar) tienen una plantilla única en el
-  tablero de Supabase. Para enviarlos en 11 idiomas: activar el "Send Email Hook" de Supabase y que
-  la app los mande por Resend con el catálogo (necesita que el fundador lo configure en Supabase).
-  Alternativa: dejarlos en español o en una plantilla bilingüe.
-- **D5. Los textos legales no existen.** F6 no puede traducir lo que no hay: el fundador aporta y
-  aprueba el texto base en español (términos, privacidad, cookies), y su jurisdicción. La traducción
-  de un texto legal por IA conviene revisarla con alguien del país.
-- **D6. La moneda de Tus Números.** Hoy es "$" genérico. Propuesta para F3: separadores y formato
-  por idioma con `Intl`, manteniendo el símbolo "$" hasta que se decida si el usuario elige su
-  moneda.
-- **D7. Variantes y registro:** `pt` de Brasil, `zh` simplificado, árabe estándar moderno (y cómo
-  tratar el género gramatical al dirigirse al usuario), `fr` neutral válido para Quebec, y el
-  registro de §6.
-- **D8. El canon de textos.** BANCO_DE_TEXTOS sigue siendo el canon en español; para los otros
-  idiomas, el catálogo es el canon y las guardias de frases prohibidas corren sobre cada uno (F6).
-- **D9. SEO sin idioma en la URL.** Con el idioma en cookie, el buscador ve un solo idioma (el que
-  negocie su `Accept-Language`, casi siempre inglés o el de por defecto) y los `hreflang` apuntan a
-  la misma dirección, que es una señal débil. Alternativa: aceptar `?lang=xx` en la URL para enlaces
-  compartibles e indexables, y que los `hreflang` apunten a esas variantes.
+- **D1. Glosario APROBADO** con cuatro ajustes, ya aplicados en §6: en inglés "Get to Work" (no
+  "Hands On") y "From Workshop to Customer"; en francés "Propulse ton idée" (sin anglicismos: el
+  mercado francés es Quebec); en alemán "Richtig einkaufen". **Antes de F3**, un segundo modelo
+  revisa la naturalidad del glosario en cada idioma y lista lo que cambiaría: lo evidente se aplica,
+  lo discutible sube al fundador.
+- **D2. APROBADA.** La interfaz sigue la preferencia del usuario; el plan y los documentos siguen el
+  idioma del proyecto.
+- **D3. APROBADAS las dos.** Las etiquetas del riel van en una traducción **derivada** por idioma
+  (archivos aparte, el grafo no se toca), y fuera del español las preguntas las adapta la IA. **El
+  auditor exige etiqueta en cada idioma para todo nodo vivo**; al cambiar el grafo, se regeneran
+  solo las que falten.
+- **D4. SÍ al Send Email Hook** de Supabase, con Resend y el catálogo. Los pasos exactos de
+  configuración en Supabase se entregan al fundador cuando llegue esa fase (F6).
+- **D5. Textos legales:** borradores en español de Términos, Privacidad y Cookies para un negocio
+  registrado en Quebec, Canadá, marcados **BORRADOR PENDIENTE DE REVISIÓN PROFESIONAL**, en
+  `docs/legal/`, construidos sobre un **inventario de datos** (`docs/legal/INVENTARIO_DATOS.md`) y con
+  la comprobación del **borrado real** de la cuenta. Los enlaces de la app **no** apuntan a ellos hasta
+  que el fundador los apruebe. La versión francesa será obligatoria.
+- **D6. APROBADA** la propuesta (formato por idioma con `Intl`, símbolo "$" por ahora). La moneda por
+  proyecto es **función futura**, con su ficha en PENDIENTES.
+- **D7. APROBADA:** `pt` de Brasil, `zh` simplificado, `fr` neutral válido para Quebec y el registro
+  de §6. En árabe, **formas neutras primero**, y el masculino gramatical solo cuando no haya
+  alternativa.
+- **D8. APROBADA.** BANCO_DE_TEXTOS es el canon en español; en los otros idiomas, el catálogo; las
+  guardias de frases prohibidas corren sobre cada uno.
+- **D9. SÍ a `?lang=xx` en la URL**, con los `hreflang` apuntando a esas variantes (la cookie sigue
+  siendo la preferencia; el parámetro manda sobre ella en esa visita y la actualiza).
 
 ## 8. Plan por fases
 

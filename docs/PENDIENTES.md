@@ -17603,3 +17603,14 @@ nuevo, la protección cae en la etapa correcta; si esa etapa tiene varias tareas
 nodos, cae en la primera. Se acepta por ahora. **Condición de cierre:** si algún día hace falta
 más precisión, guardar los nodos POR TAREA al nacer el plan (el redactor declarándolos por
 tarea, o una lectura que los asigne), y que `resolverProtegido` los use sin más cambios.
+
+## Ficha de función futura: `moneda-por-proyecto` (i18n, decisión D6 del fundador, 26 sep 2026)
+
+**Qué.** Tus Números muestra hoy el dinero con un "$" genérico. Con la app en 11 idiomas, los
+separadores y el formato salen por idioma con `Intl` (F3), pero el símbolo sigue siendo "$".
+
+**Lo que pide la ficha.** Que cada proyecto elija su moneda (por defecto, la que sugiera el idioma
+del proyecto) y que Tus Números, el Expediente y los documentos la usen.
+
+**Condición de cierre:** la moneda elegida se guarda en el proyecto y se pinta en todas las cifras
+de dinero, con su prueba por idioma.
