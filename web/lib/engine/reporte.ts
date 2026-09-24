@@ -189,6 +189,9 @@ export function reporteOffline(resultados: ReporteCalculado): string {
 export interface ResultadoNarracion {
   contenido: string;
   acumulado: UsoAcumulado;
+  /** AUD-09 M20: true si la IA no narró y el contenido es el ensamblado sin
+   * narrar. Quien llama decide qué hacer, pero nunca lo presenta como narración. */
+  sinIA: boolean;
 }
 
 /** UNA llamada Sonnet narra los resultados YA CALCULADOS por
@@ -212,8 +215,10 @@ export async function narrarReporte(
       componente: "reporte",
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
     });
-    return { contenido: r.texto.trim() + REPORTE_DISCLAIMER, acumulado: r.acumulado };
-  } catch {
-    return { contenido: reporteOffline(resultados) + REPORTE_DISCLAIMER, acumulado };
+    return { contenido: r.texto.trim() + REPORTE_DISCLAIMER, acumulado: r.acumulado, sinIA: false };
+  } catch (e) {
+    // AUD-09 M20: antes este catch era mudo. Deja rastro y se marca.
+    console.error("[reporte] la narracion con IA fallo; queda el ensamblado sin narrar:", e);
+    return { contenido: reporteOffline(resultados) + REPORTE_DISCLAIMER, acumulado, sinIA: true };
   }
 }

@@ -83,6 +83,8 @@ async function generarContenidoReporte(
     const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado);
     contenido = r.contenido;
     acumuladoFinal = r.acumulado;
+    // AUD-09 M20: el reporte sin IA deja su evento (caja de vidrio).
+    if (r.sinIA) registrarEvento({ tipo: "narracion_sin_ia" });
     numerosPermitidos = cerraduraAritmetica(new Set([...numerosDeCalculadora(resultados), ...numerosDeclarados(numeros)]));
   }
   // Fase 3.1 (caja de vidrio): automatiza la vara de auditoria "ningun

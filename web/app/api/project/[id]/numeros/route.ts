@@ -313,8 +313,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       } else {
         const client = createAnthropicClient();
         const r = await narrarReporte(client, tablero.reporte, numeros, tipoOferta, usoVacio());
-        narracion = r.contenido;
-        narracionAt = new Date().toISOString();
+        if (r.sinIA) {
+          // AUD-09 M20: un texto sin IA no es una narración. No se guarda como
+          // tal (así tampoco cuenta contra el tope diario) y se dice.
+          mensaje =
+            "No pude narrar tus números en este momento. Tu tablero y tus cifras están al día; intenta narrar de nuevo en un rato.";
+        } else {
+          narracion = r.contenido;
+          narracionAt = new Date().toISOString();
+        }
         void costoAcumuladoUsd(r.acumulado); // presupuesto propio del reporte, no el de sesion
       }
     }

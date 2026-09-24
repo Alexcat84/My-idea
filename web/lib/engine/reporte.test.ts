@@ -115,3 +115,30 @@ describe("reporteOffline", () => {
     expect(md).toContain("capacidad_semanal");
   });
 });
+
+// AUD-09 M20 (tanda 5, fallas silenciosas): si la narración con IA fallaba,
+// narrarReporte caía a reporteOffline con un catch mudo, y Tus Números guardaba
+// ese texto como "narración" y lo contaba contra el tope diario, sin evento.
+import { vi } from "vitest";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+import type Anthropic from "@anthropic-ai/sdk";
+import { narrarReporte as narrarM20 } from "./reporte";
+import { calcularReporte as calcularM20 } from "../calculadora";
+import { usoVacio as usoVacioM20 } from "../costmeter";
+
+describe("narrarReporte: la narración que falla lo dice (AUD-09 M20)", () => {
+  it("marca sinIA y deja rastro en el log cuando la IA no responde", async () => {
+    const errores = vi.spyOn(console, "error").mockImplementation(() => {});
+    const cliente = { messages: { create: async () => { throw new Error("sin red"); } } } as unknown as Anthropic;
+    const r = await narrarM20(cliente, calcularM20({}, null), {}, null, usoVacioM20());
+    expect(r.sinIA).toBe(true);
+    expect(errores).toHaveBeenCalled();
+    errores.mockRestore();
+  });
+
+  it("Tus Números no guarda como narración un texto sin IA", () => {
+    const ruta = readFileSync(path.join(__dirname, "..", "..", "app", "api", "project", "[id]", "numeros", "route.ts"), "utf8");
+    expect(ruta).toMatch(/r\.sinIA/);
+  });
+});
