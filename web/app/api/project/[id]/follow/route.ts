@@ -98,6 +98,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!proyecto) {
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
+  // AUD-09 (tanda 5): con la idea REALIZADA no se paga un seguimiento del
+  // núcleo, igual que un mundo completado no se replanifica. Cerrar es
+  // reversible de un toque, así que esto no encierra a nadie. Va antes del
+  // saldo y de los límites: nadie gasta nada en un rechazo.
+  if (dominio === "core" && proyecto.realizada_at) {
+    return NextResponse.json(
+      { error: "Diste tu idea por realizada. Reábrela si quieres seguir trabajándola." },
+      { status: 409 }
+    );
+  }
 
   // Fase 4.2: el mundo debe existir, estar activado y estar ABIERTO. Igual que
   // world/start, esto va ANTES de cobrar el arranque: nadie quema una consulta

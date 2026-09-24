@@ -140,6 +140,20 @@ describe("POST follow con dominio — los muros del mundo (Fase 4.2)", () => {
     expect((await POST(req({ dominio: "quality" }), PARAMS)).status).toBe(401);
   });
 
+  // AUD-09 (tanda 5, dinero): con la idea realizada no se puede pagar un
+  // seguimiento del nucleo. Antes follow no miraba realizada_at (si lo hacia
+  // con un mundo completado): se cobraba un ciclo despues del cierre y nacia un
+  // "ciclo N" posterior a REALIZADA en el timeline.
+  it("409 si la idea esta REALIZADA: el nucleo no se replanifica cerrado, y no se verifica saldo", async () => {
+    sembrarProyecto();
+    estadoFalso.projects["p1"].realizada_at = "2026-09-01T10:00:00Z";
+    const { verificarSaldo } = await import("@/lib/creditos");
+    vi.mocked(verificarSaldo).mockClear();
+    const res = await POST(req({ detalles: "algo" }), PARAMS);
+    expect(res.status).toBe(409);
+    expect(verificarSaldo).not.toHaveBeenCalled();
+  });
+
   it("un mundo COMPLETADO no bloquea el follow CORE (son subproyectos distintos)", async () => {
     sembrarProyecto();
     estadoFalso.projectUnlocks.push({

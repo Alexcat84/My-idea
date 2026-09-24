@@ -56,7 +56,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   const realizada = body.accion === "realizar";
-  const realizadaAt = realizada ? new Date().toISOString() : null;
+  // AUD-09 (tanda 5): volver a cerrar una idea YA cerrada no reescribe la fecha
+  // del primer cierre (la historia no se reescribe). Reabrir sí la limpia: un
+  // cierre posterior es un cierre nuevo, y la bitácora guarda los dos.
+  const realizadaAt = realizada ? (proyecto.realizada_at ?? new Date().toISOString()) : null;
   const campos: Record<string, unknown> = { realizada_at: realizadaAt };
   // §8: solo un cierre CON motivo escribe cierre_motivo. Reabrir jamás lo
   // borra, y cerrar sin escribir nada no pisa el motivo de un cierre anterior.

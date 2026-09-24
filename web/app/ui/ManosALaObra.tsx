@@ -1500,6 +1500,9 @@ export function ManosALaObra({
   organizadorAt,
   realizadaAt,
 }: Props) {
+  // AUD-09 (tanda 5): con la idea realizada, el núcleo no ofrece un seguimiento
+  // pagado ni un segundo cierre (el mundo ya lo hacía con !completado).
+  const nucleoCerrado = Boolean(realizadaAt);
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
   const [ritual, setRitual] = useState(false);
@@ -2093,7 +2096,7 @@ export function ManosALaObra({
             puerta principal al seguimiento quedaba enterrada. Esta tarjeta es
             lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
             cada viewport, en su sitio. El azul dispara al motor a repensar. */}
-        {core && cCore.total > 0 && !ritual && (
+        {core && cCore.total > 0 && !ritual && !nucleoCerrado && (
           <div className="lg:hidden">
             <TarjetaAcceso
               icono="ciclo"
@@ -2608,26 +2611,34 @@ export function ManosALaObra({
             ya subió arriba con su propia). La tarjeta entera abre el ritual
             (setRitual); "volver a la entrevista" queda como enlace aparte. Orden
             (recorrido del fundador): sube sobre "realizar", que cierra el aside. */}
-        <div className="hidden lg:block">
-          <TarjetaAcceso
-            icono="ciclo"
-            titulo="Ciclo de profundización"
-            descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
-            onClick={() => setRitual(true)}
-          />
-          {entrevistaAbierta && (
-            <button
-              onClick={onVolverEntrevista}
-              className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
-            >
-              Volver a la entrevista
-            </button>
-          )}
-        </div>
+        {!nucleoCerrado && (
+          <div className="hidden lg:block">
+            <TarjetaAcceso
+              icono="ciclo"
+              titulo="Ciclo de profundización"
+              descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
+              onClick={() => setRitual(true)}
+            />
+            {entrevistaAbierta && (
+              <button
+                onClick={onVolverEntrevista}
+                className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
+              >
+                Volver a la entrevista
+              </button>
+            )}
+          </div>
+        )}
+        {nucleoCerrado && (
+          <p className="text-[12.5px] text-dim">
+            Tu idea está realizada: el ciclo de profundización vuelve si la reabres desde su celebración.
+          </p>
+        )}
         {/* La acción "realizar" como TARJETA HERMANA — la tarjeta ENTERA abre el
             acta de cierre (el mismo mini-ritual). Va AL FINAL del aside (recorrido
             del fundador): cerrar la idea es el último paso, no uno del medio. */}
         {cCore.total > 0 &&
+          !nucleoCerrado &&
           (!confirmandoRealizar ? (
             <TarjetaAcceso
               icono="realizar"

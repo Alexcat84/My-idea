@@ -56,6 +56,16 @@ describe("POST /api/project/[id]/realizar (Fase 3.8)", () => {
     expect(estadoFalso.projects["p1"].realizada_at).toBeTruthy();
   });
 
+  // AUD-09 (tanda 5, dinero e historia): volver a cerrar una idea YA cerrada no
+  // reescribe la fecha del primer cierre ("la historia no se reescribe").
+  it("realizar una idea ya realizada conserva la fecha del primer cierre", async () => {
+    sembrar("2026-05-01T12:00:00.000Z");
+    const res = await POST(req({ accion: "realizar" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect((await res.json()).realizada_at).toBe("2026-05-01T12:00:00.000Z");
+    expect(estadoFalso.projects["p1"].realizada_at).toBe("2026-05-01T12:00:00.000Z");
+  });
+
   it("reabrir pone realizada_at a null", async () => {
     sembrar("2026-05-01T12:00:00.000Z");
     const res = await POST(req({ accion: "reabrir" }), PARAMS);
