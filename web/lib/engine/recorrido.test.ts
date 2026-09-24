@@ -353,3 +353,37 @@ describe("avanzarTurno: un callejón de un mundo no termina la entrevista (AUD-0
     expect(sinSalida).toEqual([]);
   }, 60_000);
 });
+
+// AUD-09 M16 (tanda 5, mezcla núcleo y mundos): la entrevista de un mundo
+// filtraba sus sucesores con TODOS los dominios desbloqueados (núcleo + cada
+// mundo previsualizado): la de Calidad podía derivar hacia Riesgos por una arista
+// vieja de mundo a mundo. Una sesión de mundo camina su mundo (y el núcleo).
+describe("avanzarTurno: la entrevista de un mundo no cruza a otro mundo (AUD-09 M16)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("al intérprete le llegan solo el núcleo y el mundo de la sesión", async () => {
+    interpretarMultiSaltoFalso.mockResolvedValueOnce({ resultado: null, acumulado: usoVacio(), eventos: [] });
+    const estado = {
+      ...estadoInicial({
+        actualId: "identificacion_de_riesgos",
+        perfilSesion: "p",
+        textoOriginal: "t",
+        dominioSesion: "quality",
+        dominiosDesbloqueados: ["core", "quality", "risk_management"],
+      }),
+      preguntaPendiente: "¿Cómo identificas tus riesgos?",
+    };
+    await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado,
+      respuestaUsuario: "los anoto",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-m16",
+    });
+    const args = interpretarMultiSaltoFalso.mock.calls[0]?.[0] as { dominiosDesbloqueados?: string[] } | undefined;
+    expect(args?.dominiosDesbloqueados).toEqual(["core", "quality"]);
+  });
+});

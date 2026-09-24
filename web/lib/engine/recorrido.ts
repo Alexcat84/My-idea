@@ -95,6 +95,16 @@ export interface EstadoRecorrido {
   sigamosDirigido: SigamosDirigidoState | null;
 }
 
+/** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
+ * MUNDO son el núcleo y ese mundo, nunca otro mundo previsualizado (una arista
+ * vieja de mundo a mundo llevaba la entrevista de Calidad a Riesgos). En el
+ * núcleo, los desbloqueados de siempre. */
+export function dominiosDelRecorrido(estado: Pick<EstadoRecorrido, "dominioSesion" | "dominiosDesbloqueados">): string[] {
+  // Estados guardados antes de dominioSesion lo traen vacío: son del núcleo.
+  const dominio = estado.dominioSesion ?? "core";
+  return dominio !== "core" ? ["core", dominio] : estado.dominiosDesbloqueados ?? ["core"];
+}
+
 export function estadoInicial(params: {
   actualId: string;
   perfilSesion: string;
@@ -210,7 +220,7 @@ async function temasPendientesDeLaMesa(
       const afines = await buscarAfines(FAMILIA_QUERY_BRUJULA[familia] ?? familia, visitados, {
         k: 10,
         graph,
-        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+        dominiosDesbloqueados: dominiosDelRecorrido(estado),
       });
       const deLaFamilia = afines
         .map((c) => c.id)
@@ -341,7 +351,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const afines = await buscarAfines(query, visitados, {
       k: 20,
       graph,
-      dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      dominiosDesbloqueados: dominiosDelRecorrido(estado),
     });
     let candidatosFamilia = afines.map((c) => c.id).filter((nid) => familiasFaltantesKeys.includes(families[nid] ?? "general"));
     // Phase 3.7.2: con la ruta completa, "Seguimos explorando" sigue
@@ -351,7 +361,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       const afinesPerfil = await buscarAfines(estado.perfilSesion || estado.textoOriginal, visitados, {
         k: 6,
         graph,
-        dominiosDesbloqueados: estado.dominiosDesbloqueados,
+        dominiosDesbloqueados: dominiosDelRecorrido(estado),
       });
       candidatosFamilia = afinesPerfil.map((c) => c.id);
     }
@@ -362,7 +372,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         (nid) =>
           !visitados.has(nid) &&
           familiasFaltantesKeys.includes(families[nid] ?? "general") &&
-          esOfrecible(nid, graph, estado.dominiosDesbloqueados)
+          esOfrecible(nid, graph, dominiosDelRecorrido(estado))
       );
     }
     const elegidos = candidatosFamilia.slice(0, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO);
@@ -453,7 +463,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     // Paridad modo_seguir: cubiertos de sesiones previas + ruta actual
     // (?? [] defiende estados persistidos antes de la Fase 3.3).
     const visitados = new Set([...(estado.nodosCubiertosPrevios ?? []), ...estado.ruta]);
-    const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, estado.dominiosDesbloqueados);
+    const nivel1Ids = sucesoresNivel(actualId, graph, visitados, undefined, dominiosDelRecorrido(estado));
     // AUD-09 H13 (decisión del fundador, 25 sep 2026): que la entrevista de un
     // MUNDO siempre tenga salida es deber del motor, no del grafo. Un nodo sin
     // sucesores puede ser un final legítimo del contenido, así que el dataset no
@@ -520,7 +530,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       historialMensajes: estado.historialMensajes,
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
-      dominiosDesbloqueados: estado.dominiosDesbloqueados,
+      dominiosDesbloqueados: dominiosDelRecorrido(estado),
     });
     acumulado = resultadoInterprete.acumulado;
     if (resultadoInterprete.historialMensajes) {

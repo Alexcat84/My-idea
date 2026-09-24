@@ -57,6 +57,7 @@ import { estimarLoteMayoria } from "@/lib/engine/estimacion";
 import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
 import { esMundoProteccion } from "@/lib/espacios";
 import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
+import { dominiosDelRecorrido } from "@/lib/engine/recorrido";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
   AVISO_VERSION_BASICA,
@@ -256,7 +257,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           recorrido.prioridadDeclarada,
           recorrido.esSeguimiento,
           recorrido.estadoVivoPrevio,
-          recorrido.dominiosDesbloqueados ?? null
+          // AUD-09 M16: la cosecha de un plan de mundo no recoge nodos de otro mundo.
+          recorrido.dominiosDesbloqueados ? dominiosDelRecorrido(recorrido) : null
         );
 
         const { rawTexto, acumulado: acumuladoTrasRedactor, avisoFallback } = await generarTextoPlan(
