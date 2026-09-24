@@ -17,6 +17,7 @@ import { leerRechazo } from "@/lib/mensajeServidor";
 import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
 import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
+import { CODIGO_CIERRE_SIN_TERMINAL } from "@/lib/streamTerminal";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -72,9 +73,15 @@ export default function NuevaIdea() {
           setEstado({ fase: "resultado", projectId: d.project_id, data: d.data });
         } else if (evento === "error") {
           terminal = true;
+          // AUD-09: un cierre mudo llega como código + identificador (la causa
+          // interna se queda en el servidor): aquí se dice en palabras de persona.
+          const d = data as { error?: string; codigo?: string; id?: string };
           setEstado({
             fase: "captura",
-            error: String((data as { error?: string })?.error ?? "algo se atoró; intenta de nuevo"),
+            error:
+              d?.codigo === CODIGO_CIERRE_SIN_TERMINAL
+                ? `La conexión se cortó antes de terminar. Tu texto sigue aquí; intenta de nuevo (referencia ${d.id ?? "sin id"}).`
+                : String(d?.error ?? "algo se atoró; intenta de nuevo"),
           });
         }
       });

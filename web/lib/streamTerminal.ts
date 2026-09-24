@@ -29,6 +29,10 @@
 
 export const MOTIVO_CIERRE_SIN_TERMINAL = "cierre sin terminal";
 
+/** AUD-09 (decisión del fundador, 25 sep 2026): lo ÚNICO que llega al cliente,
+ * junto a un identificador de correlación. La causa interna solo va al log. */
+export const CODIGO_CIERRE_SIN_TERMINAL = "cierre_sin_terminal";
+
 export interface CierreSinTerminal {
   /** null si aún no salió ningún terminal; "done" o "error" si ya salió. */
   terminalEmitido: string | null;
@@ -49,7 +53,12 @@ export interface CierreSinTerminal {
 export function garantizarTerminal(c: CierreSinTerminal): boolean {
   if (c.terminalEmitido) return false;
 
+  // El identificador de correlación: el cliente lo recibe y el log lo lleva,
+  // así un reporte del usuario encuentra su causa completa en el servidor.
+  const id = crypto.randomUUID();
   const detalle = {
+    id,
+    motivo: MOTIVO_CIERRE_SIN_TERMINAL,
     session_id: c.sessionId,
     project_id: c.projectId ?? null,
     emitidos: c.emitidos,
@@ -62,11 +71,9 @@ export function garantizarTerminal(c: CierreSinTerminal): boolean {
   // intenta igual (si el canal vive, el cliente se entera) y su fallo se
   // absorbe: el log de arriba ya dejó el síntoma.
   try {
-    c.enviar("error", {
-      error: MOTIVO_CIERRE_SIN_TERMINAL,
-      motivo: MOTIVO_CIERRE_SIN_TERMINAL,
-      ...detalle,
-    });
+    // Al cliente: solo el código y el identificador (la causa, la sesión y
+    // los eventos emitidos se quedan en el log de arriba).
+    c.enviar("error", { codigo: CODIGO_CIERRE_SIN_TERMINAL, id });
   } catch {
     /* el canal está roto: el log del servidor es la prueba */
   }
