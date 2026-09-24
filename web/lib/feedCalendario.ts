@@ -47,3 +47,56 @@ export function usuarioDeToken(token: string): string | null {
   if (esperada.length !== recibida.length) return null;
   return timingSafeEqual(esperada, recibida) ? userId : null;
 }
+
+// ─── AUD-09 H11: qué avisa el calendario suscrito ───────────────────────────
+
+export interface ItemFeed {
+  id: string;
+  plan_id: string | null;
+  dominio: string | null;
+  estado: string;
+  texto: string | null;
+  etapa: number;
+  fecha_base: string | null;
+}
+
+export interface PlanFeed {
+  id: string;
+  dominio: string | null;
+  created_at: string;
+  etiqueta: string;
+}
+
+const ETIQUETAS_DE_PLAN = ["inicial", "completo", "seguimiento"];
+const dominioDe = (d: string | null | undefined) => (!d ? "core" : d);
+
+/**
+ * El teléfono solo recibe recordatorios de lo que el usuario sigue queriendo
+ * con fechas: el plan VIGENTE de cada espacio (el último; los reemplazados ya
+ * no avisan), nunca un espacio en modo "a mi ritmo" (BANCO §5: sin fechas no
+ * hay recordatorios), nunca un mundo completado, y silencio entero para una
+ * idea realizada. De lo que queda, solo lo pendiente con fecha. Pura.
+ */
+export function itemsQueAvisan(opts: {
+  realizada: boolean;
+  items: ItemFeed[];
+  planes: PlanFeed[];
+  modos: Record<string, "ritmo" | "fechas">;
+  mundosCompletados: string[];
+}): ItemFeed[] {
+  if (opts.realizada) return [];
+  const vigente: Record<string, PlanFeed> = {};
+  for (const p of opts.planes) {
+    if (!ETIQUETAS_DE_PLAN.includes(p.etiqueta)) continue;
+    const d = dominioDe(p.dominio);
+    if (!vigente[d] || new Date(p.created_at).getTime() > new Date(vigente[d].created_at).getTime()) vigente[d] = p;
+  }
+  return opts.items.filter((i) => {
+    const d = dominioDe(i.dominio);
+    if (!i.fecha_base || i.estado === "hecho" || i.estado === "no_aplica") return false;
+    if (!vigente[d] || i.plan_id !== vigente[d].id) return false;
+    if (opts.modos[d] === "ritmo") return false;
+    if (d !== "core" && opts.mundosCompletados.includes(d)) return false;
+    return true;
+  });
+}
