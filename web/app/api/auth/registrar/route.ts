@@ -7,7 +7,8 @@
  * adopción corren al confirmar (bienvenidaTrasLogin), no aquí.
  */
 import { NextResponse } from "next/server";
-import { estaEnAllowlist } from "@/lib/cuentas";
+import { estaEnAllowlist, registrarAdopcionPendiente } from "@/lib/cuentas";
+import { esInvitadoInvisible } from "@/lib/identidad";
 import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
@@ -49,6 +50,12 @@ export async function POST(request: Request) {
 
   const origen = new URL(request.url).origin;
   const supabase = await createClient();
+  // AUD-09 H07: la identidad invisible que ESTE navegador trae (la cookie es la
+  // prueba de posesión), para anotarla en la cuenta nueva.
+  const {
+    data: { user: previo },
+  } = await supabase.auth.getUser();
+  const anonId = previo && esInvitadoInvisible(previo) ? previo.id : null;
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
@@ -72,6 +79,18 @@ export async function POST(request: Request) {
   const identities = data.user?.identities ?? [];
   if (identities.length === 0) {
     return NextResponse.json({ creado: true, yaExistia: true, invitado: true });
+  }
+
+  // AUD-09 H07: la adopción queda anotada en la cuenta nueva (app_metadata, que
+  // solo escribe el servidor), así la confirmación desde CUALQUIER navegador
+  // adopta las ideas del invitado. Si no se puede anotar, se dice fuerte; en el
+  // mismo navegador la cookie sigue sirviendo.
+  if (anonId && data.user?.id) {
+    try {
+      await registrarAdopcionPendiente(data.user.id, anonId);
+    } catch (e) {
+      console.error(`[registrar] no se pudo anotar la adopcion pendiente de ${anonId}:`, e);
+    }
   }
 
   // Cuenta NUEVA (se envió el correo de confirmación): si el registro vino de

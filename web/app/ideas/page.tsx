@@ -10,6 +10,7 @@
  * Al visitante nuevo (cero ideas) se le lleva directo a la captura.
  * "Salir" solo aparece para cuentas con email.
  */
+import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
@@ -34,7 +35,9 @@ function Chip({ chip }: { chip: ChipCinta }) {
   );
 }
 
-export default async function MisIdeas() {
+export default async function MisIdeas({ searchParams }: { searchParams: Promise<{ adopcion?: string }> }) {
+  // AUD-09 H07: la adopción de las ideas del invitado quedó pendiente: se dice.
+  const { adopcion } = await searchParams;
   const supabase = await createClient();
   const [ideas, { data: auth }] = await Promise.all([
     listarIdeasConEstado(supabase),
@@ -95,6 +98,11 @@ export default async function MisIdeas() {
         <h1 className="anima-plan-in text-2xl font-bold tracking-tight">
           <Saludo />
         </h1>
+        {adopcion === "pendiente" && (
+          <p role="status" className="mt-4 rounded-panel border border-hairline bg-surface p-4 text-sm text-warn">
+            {MENSAJE_ADOPCION_PENDIENTE}
+          </p>
+        )}
 
         {vacio ? (
           /* Estado vacío (cuenta real, aún sin ideas): jamás saltar a /nueva

@@ -103,6 +103,14 @@ export async function GET(request: Request) {
     return responder(`/login?google=no-invitado&correo=${encodeURIComponent(email)}`);
   }
 
+  // AUD-09 H07: la adopción corre en TODO camino de sesión, también en la
+  // recuperación. Si queda pendiente (se reintentó y siguió fallando), el
+  // destino lo dice para que la pantalla lo muestre: nada se pierde en silencio.
+  const { pendientes } = await bienvenidaTrasLogin(real, anonId);
+  const conAviso = (ruta: string) =>
+    pendientes > 0 ? `${ruta}${ruta.includes("?") ? "&" : "?"}adopcion=pendiente` : ruta;
+  const destinoFinal = conAviso(destino);
+
   // Recuperación de contraseña (resetPasswordForEmail): el enlace trae
   // type=recovery. La sesión de recuperación ya está puesta; se fija la
   // contraseña nueva en /auth/update-password (sin cortesía ni 2FA aquí).
@@ -110,10 +118,8 @@ export async function GET(request: Request) {
   // de la query que controla el cliente; antes retornaba primero y cualquier
   // code válido abría sesión aunque el correo no estuviera invitado.
   if (url.searchParams.get("type") === "recovery") {
-    return responder("/auth/update-password");
+    return responder(conAviso("/auth/update-password"));
   }
-
-  await bienvenidaTrasLogin(real, anonId);
 
   // Centro de cuenta: con 2FA activo, el login sigue con el desafío en la
   // pantalla de login (la sesión ya existe; el motor pagado queda gateado
@@ -122,12 +128,12 @@ export async function GET(request: Request) {
   try {
     const seguridad = await estadoSeguridad(real.id);
     if (seguridad.habilitado) {
-      const nextParam = destino !== "/ideas" ? `&next=${encodeURIComponent(destino)}` : "";
+      const nextParam = destinoFinal !== "/ideas" ? `&next=${encodeURIComponent(destinoFinal)}` : "";
       return responder(`/login?desafio=1&metodo=${seguridad.metodo ?? "totp"}${nextParam}`);
     }
   } catch (e) {
     console.error("[google] no se pudo leer user_seguridad:", e);
   }
 
-  return responder(destino);
+  return responder(destinoFinal);
 }

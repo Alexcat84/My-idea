@@ -32,6 +32,7 @@ import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
+import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { montoDelPlan, PRECIOS } from "@/lib/precios";
@@ -566,7 +567,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
       try {
         const res = await fetch(`/api/idea/${projectId}`);
         if (!res.ok) {
-          setError(res.status === 404 ? "esa idea no existe o no es tuya" : ERROR_GENERICO);
+          // AUD-09 H07: si la adopción de las ideas del invitado quedó
+          // pendiente, esa es la razón y se dice (no "no es tuya").
+          setError(
+            res.status === 404
+              ? searchParams.get("adopcion") === "pendiente"
+                ? MENSAJE_ADOPCION_PENDIENTE
+                : "esa idea no existe o no es tuya"
+              : ERROR_GENERICO
+          );
           setCargando(false);
           return;
         }

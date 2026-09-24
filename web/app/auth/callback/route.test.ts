@@ -7,7 +7,8 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 let invitado = true;
 const estaEnAllowlist = vi.fn(async () => invitado);
-const bienvenidaTrasLogin = vi.fn(async () => undefined);
+let pendientes = 0;
+const bienvenidaTrasLogin = vi.fn(async () => ({ pendientes }));
 vi.mock("@/lib/cuentas", () => ({
   estaEnAllowlist: (...a: unknown[]) => estaEnAllowlist(...(a as [])),
   bienvenidaTrasLogin: (...a: unknown[]) => bienvenidaTrasLogin(...(a as [])),
@@ -41,6 +42,7 @@ function destino(res: Response): string {
 describe("GET /auth/callback: la allowlist vale para todo camino de sesión", () => {
   beforeEach(() => {
     invitado = true;
+    pendientes = 0;
     estaEnAllowlist.mockClear();
     bienvenidaTrasLogin.mockClear();
     signOut.mockClear();
@@ -58,6 +60,18 @@ describe("GET /auth/callback: la allowlist vale para todo camino de sesión", ()
     const res = await GET(new Request("http://test/auth/callback?code=abc&type=recovery"));
     expect(signOut).not.toHaveBeenCalled();
     expect(destino(res)).toBe("/auth/update-password");
+  });
+
+  // AUD-09 H07: la recuperación también es un camino de sesión: adopta.
+  it("recuperación con un correo invitado: adopta las ideas del invitado", async () => {
+    await GET(new Request("http://test/auth/callback?code=abc&type=recovery"));
+    expect(bienvenidaTrasLogin).toHaveBeenCalled();
+  });
+
+  it("si la adopción queda pendiente, el destino lo dice (adopcion=pendiente)", async () => {
+    pendientes = 1;
+    const res = await GET(new Request("http://test/auth/callback?code=abc"));
+    expect(destino(res)).toMatch(/[?&]adopcion=pendiente/);
   });
 
   it("login normal con un correo NO invitado sigue rechazado", async () => {

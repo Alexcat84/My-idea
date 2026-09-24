@@ -67,19 +67,22 @@ export async function POST(request: Request) {
   const {
     data: { user: real },
   } = await supabase.auth.getUser();
-  if (real) await bienvenidaTrasLogin(real, anonId);
+  // AUD-09 H07: si la adopción queda pendiente, la respuesta lo dice para que la
+  // pantalla lo muestre (y el próximo ingreso lo reintenta).
+  const { pendientes } = real ? await bienvenidaTrasLogin(real, anonId) : { pendientes: 0 };
+  const adopcion_pendiente = pendientes > 0;
 
   // Centro de cuenta: con 2FA, el login sigue con el desafío.
   if (real) {
     try {
       const seguridad = await estadoSeguridad(real.id);
       if (seguridad.habilitado) {
-        return NextResponse.json({ ok: true, requiere2FA: true, metodo: seguridad.metodo ?? "totp" });
+        return NextResponse.json({ ok: true, requiere2FA: true, metodo: seguridad.metodo ?? "totp", adopcion_pendiente });
       }
     } catch (e) {
       console.error("[entrar] no se pudo leer user_seguridad:", e);
     }
   }
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, adopcion_pendiente });
 }

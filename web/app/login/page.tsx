@@ -103,7 +103,11 @@ function LoginForm() {
         setEstado({ fase: "desafio", metodo: data.metodo === "email" ? "email" : "totp", rescate: false });
         return;
       }
-      router.push(destino);
+      // AUD-09 H07: si la adopción de las ideas del invitado quedó pendiente,
+      // el destino lo dice para que la pantalla lo muestre.
+      router.push(
+        data.adopcion_pendiente ? `${destino}${destino.includes("?") ? "&" : "?"}adopcion=pendiente` : destino
+      );
       router.refresh();
     } catch {
       setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
