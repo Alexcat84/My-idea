@@ -10,7 +10,7 @@
  * plantilla: se falla ruidoso y el usuario reintenta (BANCO §9).
  */
 import type Anthropic from "@anthropic-ai/sdk";
-import { llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
+import { llamarClaude, MODEL, sumarUso, usoVacio, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_DIAGNOSTICO_MUNDO } from "../prompts";
 import { etiquetaArbol, type Grafo } from "./graph";
 import type { EstadoRecorrido } from "./recorrido";
@@ -68,16 +68,21 @@ export interface ResultadoDiagnostico {
  * UNA llamada Sonnet redacta el diagnostico. Sin respaldo degradado a
  * proposito: un escaparate mediocre vende peor que un "intenta de nuevo"
  * honesto. El llamador decide el mensaje del fallo.
+ *
+ * AUD-09 H06: el tope propio se mide contra el gasto del DIAGNOSTICO (desde
+ * cero), no contra el de toda la entrevista; antes una entrevista de 0,10 USD
+ * o mas lo dejaba bloqueado para siempre. El gasto se suma despues al de la
+ * sesion, asi el registro de costos sigue completo.
  */
 export async function redactarDiagnostico(
   client: Anthropic,
   material: MaterialDiagnostico,
   acumulado: UsoAcumulado
 ): Promise<ResultadoDiagnostico> {
-  const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL, acumulado, {
+  const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL, usoVacio(), {
     maxTokens: 700,
     componente: "diagnostico",
     presupuestoUsd: PRESUPUESTO_DIAGNOSTICO_USD,
   });
-  return { resumen: r.texto.trim(), acumulado: r.acumulado };
+  return { resumen: r.texto.trim(), acumulado: sumarUso(acumulado, r.acumulado) };
 }
