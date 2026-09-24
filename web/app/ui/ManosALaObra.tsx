@@ -46,6 +46,7 @@ import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
 import {
   armarRegistro,
   PALABRA_CAMINO,
+  resolverProtegido,
   severidadEnPalabras,
   textoProtege,
   type EntradaRegistro,
@@ -85,6 +86,10 @@ export interface ItemChecklistUI {
   /** Mundos de protección (P2): el enlace con la actividad del núcleo que esta
    * respuesta protege, su detección y su severidad. null fuera de protección. */
   protege_item?: string | null;
+  /** AUD-09 M15: los nodos de la tarea (037) y los de lo protegido (041). La
+   * protección apunta al nodo: se resuelve contra el plan vigente del núcleo. */
+  nodos_origen?: string[] | null;
+  protege_nodos?: string[] | null;
   deteccion?: string | null;
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
@@ -1643,13 +1648,19 @@ export function ManosALaObra({
   // del MISMO armador que usó el enlazador. El enlace se resuelve por id, así
   // que el número es solo cómo se nombra hoy: si el plan cambió, el registro
   // muestra la posición actual y no una congelada que ya no existe.
-  const actividadesNucleo = useMemo(
-    () =>
-      armarSnapshot(
-        itemsCore.map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, orden: i.orden, estado: i.estado }))
-      ).actividades.map((a) => ({ id: a.id, indice: a.indice, titulo: a.titulo })),
-    [itemsCore]
-  );
+  //
+  // AUD-09 M15: cada actividad lleva sus nodos, porque la protección apunta al
+  // NODO (resolverProtegido): un ciclo nuevo del núcleo renace las tareas con
+  // ids nuevos y el id viejo ya no está. `idsPlanNucleo` son TODOS los ids del
+  // plan vigente, retiradas incluidas: una retirada no se muda por nodo a una
+  // hermana de etapa.
+  const actividadesNucleo = useMemo(() => {
+    const nodosPorId = new Map(itemsCore.map((i) => [i.id, i.nodos_origen ?? null]));
+    return armarSnapshot(
+      itemsCore.map((i) => ({ id: i.id, texto: i.texto, etapa: i.etapa, orden: i.orden, estado: i.estado }))
+    ).actividades.map((a) => ({ id: a.id, indice: a.indice, titulo: a.titulo, nodos_origen: nodosPorId.get(a.id) ?? null }));
+  }, [itemsCore]);
+  const idsPlanNucleo = useMemo(() => new Set(itemsCore.map((i) => i.id)), [itemsCore]);
   // P5: las ANCLAS de precedencia por mundo de protección — para cada respuesta
   // enlazada, la fecha VIGENTE de lo que protege y su etiqueta (#N · título)
   // para el aviso. Solo existen si lo protegido tiene fecha: sin fecha del
@@ -1661,9 +1672,10 @@ export function ManosALaObra({
     for (const p of checklist.planes) {
       if (!esMundoProteccion(p.dominio)) continue;
       for (const it of p.etapas.flatMap((e) => e.items)) {
-        if (!it.protege_item) continue;
-        const nucleo = corePorId.get(it.protege_item);
-        const idx = indicePorId.get(it.protege_item);
+        const idVigente = resolverProtegido(it, actividadesNucleo, idsPlanNucleo);
+        if (!idVigente) continue;
+        const nucleo = corePorId.get(idVigente);
+        const idx = indicePorId.get(idVigente);
         if (!nucleo?.fecha_base || !idx) continue;
         (out[p.dominio] ??= {})[it.id] = {
           fecha: nucleo.fecha_base,
@@ -1672,7 +1684,7 @@ export function ManosALaObra({
       }
     }
     return out;
-  }, [checklist, itemsCore, actividadesNucleo]);
+  }, [checklist, itemsCore, actividadesNucleo, idsPlanNucleo]);
 
   const cCore = conteo(itemsCore);
   const tituloPlan = planMd.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? null;
@@ -2339,7 +2351,8 @@ export function ManosALaObra({
                             nombreMundo={mundo.nombre}
                             entradas={armarRegistro(
                               grupo.etapas.flatMap((e) => e.items),
-                              actividadesNucleo
+                              actividadesNucleo,
+                              idsPlanNucleo
                             )}
                           />
                         )}
@@ -2730,19 +2743,24 @@ export function ManosALaObra({
         //    SIEMPRE visible (regla anti-silencio de la adjudicación 4) y, si
         //    lo protegido se retiró, diciéndolo.
         const nombreMundoDe = (dom: string) => mundos.find((m) => m.dominio === dom)?.nombre ?? dom;
+        //  AUD-09 M15: lo protegido se resuelve contra el plan VIGENTE del
+        //  núcleo (itemsCore, retiradas incluidas para que el chip lo diga), por
+        //  id y si no por nodo. Si ya no está, el chip lo dice en claro.
+        const apuntaA = (i: ItemChecklistUI) => Boolean(i.protege_item || i.protege_nodos?.length);
         const protegidaPor = esEspacioCore(vivo.dominio)
           ? todos
-              .filter((i) => esMundoProteccion(i.dominio) && i.protege_item === vivo.id && i.estado !== "no_aplica")
+              .filter((i) => esMundoProteccion(i.dominio) && i.estado !== "no_aplica" && resolverProtegido(i, itemsCore) === vivo.id)
               .map((i) => ({ respuesta: i.texto, mundo: nombreMundoDe(i.dominio) }))
           : [];
-        const objetivo = vivo.protege_item ? todos.find((i) => i.id === vivo.protege_item) ?? null : null;
+        const idObjetivo = resolverProtegido(vivo, itemsCore);
+        const objetivo = idObjetivo ? itemsCore.find((i) => i.id === idObjetivo) ?? null : null;
         const protege =
-          esMundoProteccion(vivo.dominio) && (vivo.protege_item || vivo.deteccion)
+          esMundoProteccion(vivo.dominio) && (apuntaA(vivo) || vivo.deteccion)
             ? {
                 titulo: objetivo?.texto ?? null,
                 deteccion: vivo.deteccion ?? null,
                 retirada: objetivo?.estado === "no_aplica",
-                sistemica: !vivo.protege_item,
+                sistemica: !apuntaA(vivo),
               }
             : null;
         return (

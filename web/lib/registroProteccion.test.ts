@@ -207,3 +207,68 @@ describe("pantalla y papel salen del MISMO armador", () => {
     expect(md).toContain("Consigue un proveedor alterno y pide su cotización");
   });
 });
+
+// AUD-09 M15 (decisión del fundador, 25 sep 2026): la protección apunta al NODO
+// de la tarea, no al id de la tarea de un ciclo. Hoy, un seguimiento del núcleo
+// inserta tareas con ids nuevos y todo el registro pasa a "la actividad que
+// protegía ya no está en tu plan", y las anclas de fecha desaparecen sin aviso.
+import { resolverProtegido } from "./registroProteccion";
+
+describe("la protección sobrevive a un ciclo nuevo del núcleo (AUD-09 M15)", () => {
+  // Ciclo 1: la respuesta protegía la tarea "c1-a" (nodo precio_de_venta).
+  // Ciclo 2 (vigente): la misma tarea renace como "c2-a" con el mismo nodo.
+  const vigente = [
+    { id: "c2-a", indice: 1, titulo: "Fija tu precio de venta", nodos_origen: ["precio_de_venta"] },
+    { id: "c2-b", indice: 2, titulo: "Consigue tu primer cliente", nodos_origen: ["primer_cliente"] },
+  ];
+
+  it("se resuelve contra el plan vigente por el nodo, aunque el id del ciclo viejo ya no exista", () => {
+    const [e] = armarRegistro(
+      [{ id: "r1", texto: "Revisa el costo antes", etapa: 1, orden: 1, estado: "pendiente", protege_item: "c1-a", protege_nodos: ["precio_de_venta"] }],
+      vigente
+    );
+    expect(e.protege?.id).toBe("c2-a");
+    expect(e.protegidaDesaparecida).toBe(false);
+  });
+
+  it("si el nodo ya no está en el plan vigente, se dice en claro", () => {
+    const [e] = armarRegistro(
+      [{ id: "r1", texto: "Algo", etapa: 1, orden: 1, estado: "pendiente", protege_item: "c1-z", protege_nodos: ["nodo_que_se_fue"] }],
+      vigente
+    );
+    expect(e.protege).toBeNull();
+    expect(e.protegidaDesaparecida).toBe(true);
+    expect(textoProtege(e)).toBe("la actividad que protegía ya no está en tu plan");
+  });
+
+  it("resolverProtegido: sin nodos (filas viejas) se resuelve por id, como antes", () => {
+    expect(resolverProtegido({ protege_item: "c2-b", protege_nodos: null }, vigente)).toBe("c2-b");
+    expect(resolverProtegido({ protege_item: "c1-a", protege_nodos: null }, vigente)).toBeNull();
+  });
+
+  // nodos_origen se guarda por ETAPA: dos tareas de la misma etapa comparten
+  // nodos. Dentro del MISMO ciclo el id sigue vivo y manda; el nodo solo
+  // resuelve cuando el id ya no está en el plan vigente.
+  it("en el mismo ciclo manda el id, aunque otra tarea de la etapa comparta el nodo", () => {
+    const mismaEtapa = [
+      { id: "c2-a", nodos_origen: ["precio_de_venta"] },
+      { id: "c2-z", nodos_origen: ["precio_de_venta"] },
+    ];
+    expect(resolverProtegido({ protege_item: "c2-z", protege_nodos: ["precio_de_venta"] }, mismaEtapa)).toBe("c2-z");
+  });
+
+  // Las actividades del registro vienen SIN las retiradas. Si la protegida se
+  // retiró en el MISMO ciclo, su id sigue en el plan vigente: el nodo no puede
+  // mudarla a una hermana de etapa (sería afirmar una protección que nadie hizo).
+  it("una protegida retirada en el mismo ciclo no salta a otra tarea de su etapa", () => {
+    const sinRetiradas = [{ id: "c2-a", indice: 1, titulo: "Fija tu precio de venta", nodos_origen: ["precio_de_venta"] }];
+    const idsDelPlan = new Set(["c2-a", "c2-retirada"]);
+    const [e] = armarRegistro(
+      [{ id: "r1", texto: "Algo", etapa: 1, orden: 1, estado: "pendiente", protege_item: "c2-retirada", protege_nodos: ["precio_de_venta"] }],
+      sinRetiradas,
+      idsDelPlan
+    );
+    expect(e.protege).toBeNull();
+    expect(e.protegidaDesaparecida).toBe(true);
+  });
+});

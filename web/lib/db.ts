@@ -621,17 +621,20 @@ export async function obtenerItemsDePlan(
   supabase: SupabaseClient,
   projectId: string,
   planId: string
-): Promise<Array<{ id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null }>> {
-  const columnas = "id, texto, etapa, orden, estado, fecha_base, banda";
+): Promise<Array<{ id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null; nodos_origen?: string[] | null }>> {
+  // AUD-09 M15: nodos_origen viaja para que el enlace de protección guarde los
+  // nodos de lo protegido y el registro resuelva por nodo.
+  const columnas = "id, texto, etapa, orden, estado, fecha_base, banda, nodos_origen";
   const leer = (cols: string) =>
     supabase.from("checklist_items").select(cols).eq("project_id", projectId).eq("plan_id", planId);
   let { data, error } = await leer(columnas);
-  // Resiliencia de columnas (patron del GET del checklist): si 'banda' aun no
-  // existiera, el snapshot se arma sin ella en vez de caerse entero.
-  if (error) ({ data, error } = await leer(columnas.replace(", banda", "")));
+  // Resiliencia de columnas (patron del GET del checklist): si una columna nueva
+  // aun no existiera, el snapshot se arma sin ella en vez de caerse entero.
+  if (error) ({ data, error } = await leer(columnas.replace(", nodos_origen", "")));
+  if (error) ({ data, error } = await leer(columnas.replace(", banda, nodos_origen", "")));
   if (error) throw error;
   return (data ?? []) as unknown as Array<{
-    id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null;
+    id: string; texto: string; etapa: number; orden: number; estado: string; fecha_base: string | null; banda: string | null; nodos_origen?: string[] | null;
   }>;
 }
 
@@ -652,6 +655,8 @@ export async function insertarChecklist(
     // respuesta protege, su deteccion y su severidad en palabras. Ausente en
     // todo lo que no sea un plan de proteccion.
     protege_item?: string | null;
+    /** AUD-09 M15 (migración 041): los nodos de lo protegido. */
+    protege_nodos?: string[] | null;
     deteccion?: string | null;
     probabilidad?: string | null;
     dolor?: string | null;
@@ -685,6 +690,7 @@ export async function insertarChecklist(
       ...(i.protege_item !== undefined || i.deteccion !== undefined
         ? {
             protege_item: i.protege_item ?? null,
+            protege_nodos: i.protege_nodos ?? null,
             deteccion: i.deteccion ?? null,
             probabilidad: i.probabilidad ?? null,
             dolor: i.dolor ?? null,

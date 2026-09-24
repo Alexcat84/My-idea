@@ -16,6 +16,7 @@
  */
 import { esMundoProteccion } from "./espacios";
 import { actaMarkdown, type ActaCierre } from "./acta";
+import { resolverProtegido } from "./registroProteccion";
 
 const DIA = 86_400_000;
 
@@ -41,6 +42,11 @@ export interface ItemAnalytics {
    * usa el carril; ausentes en lecturas viejas (la degradación los deja fuera). */
   id?: string;
   protege_item?: string | null;
+  /** AUD-09 M15: los nodos de la tarea (037) y, en una respuesta de protección,
+   * los de lo que protege (041). El carril resuelve por nodo contra el plan
+   * vigente del núcleo cuando el id es de un ciclo anterior. */
+  nodos_origen?: string[] | null;
+  protege_nodos?: string[] | null;
   /** Fase 4.1 (V3b): null = core. Los items de mundo YA no se excluyen en la
    * entrada; la capa universal los ignora (sus etapas colisionarian con las del
    * core y le moverian el ritmo al viaje principal) y el desglose los cuenta. */
@@ -616,11 +622,24 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   // tienen una fecha que dibujar (la vigente, o la real si ya se hicieron): una
   // respuesta sin fecha vive en el registro, no en un eje de tiempo. Las
   // retiradas no se dibujan (misma regla que el resto del Gantt).
-  const porIdCore = new Map(itemsCore.filter((i) => i.id).map((i) => [i.id as string, i]));
+  //
+  // AUD-09 M15: lo protegido se resuelve contra el plan VIGENTE del núcleo (el
+  // más reciente que tiene tareas), por id y si no por nodo (resolverProtegido).
+  // Anclar a la tarea de un ciclo viejo sería dibujar la protección donde el
+  // usuario ya no trabaja.
+  const planVigente = [...entrada.planesCore]
+    .sort((a, b) => a.created_at.localeCompare(b.created_at))
+    .filter((p) => itemsCore.some((i) => i.plan_id === p.id))
+    .at(-1);
+  const vigentesCore = itemsCore
+    .filter((i) => i.id && i.plan_id === planVigente?.id)
+    .map((i) => ({ ...i, id: i.id as string }));
+  const porIdCore = new Map(vigentesCore.map((i) => [i.id, i]));
   const carrilProteccion: MarcaCarril[] = entrada.items
-    .filter((i) => esMundoProteccion(i.dominio) && i.protege_item && i.estado !== "no_aplica")
+    .filter((i) => esMundoProteccion(i.dominio) && (i.protege_item || i.protege_nodos?.length) && i.estado !== "no_aplica")
     .flatMap((i) => {
-      const protegido = porIdCore.get(i.protege_item as string);
+      const idVigente = resolverProtegido(i, vigentesCore);
+      const protegido = idVigente ? porIdCore.get(idVigente) : undefined;
       const fecha = i.completed_at ?? i.fecha_base;
       if (!protegido || !fecha) return [];
       return [

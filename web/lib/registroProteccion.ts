@@ -24,6 +24,9 @@ export interface FilaRespuesta {
   orden: number;
   estado: string;
   protege_item?: string | null;
+  /** AUD-09 M15 (migración 041): los NODOS de la tarea protegida. La
+   * protección apunta al nodo, no al id de la tarea de un ciclo. */
+  protege_nodos?: string[] | null;
   deteccion?: string | null;
   probabilidad?: Probabilidad | null;
   dolor?: Dolor | null;
@@ -35,6 +38,42 @@ export interface ActividadProtegida {
   id: string;
   indice: number;
   titulo: string;
+  /** Los nodos de la tarea (checklist_items.nodos_origen), para resolver la
+   * protección por nodo en el plan vigente (AUD-09 M15). */
+  nodos_origen?: string[] | null;
+}
+
+/**
+ * AUD-09 M15 (decisión del fundador, 25 sep 2026): a qué tarea del plan VIGENTE
+ * del núcleo apunta una respuesta de protección. Apunta al NODO de la tarea: un
+ * ciclo nuevo inserta tareas con ids nuevos, y por id la protección quedaba
+ * huérfana sin aviso. Orden: (1) si el id sigue en el plan vigente, ese (el
+ * mismo ciclo no se mueve); (2) si no, la tarea vigente que comparte más nodos
+ * (a igualdad, la primera del plan). Límite declarado: nodos_origen se guarda
+ * por ETAPA (migración 037), así que en un ciclo nuevo la resolución es exacta
+ * a nivel de etapa, no de tarea. Filas sin nodos (antes de la 037/041): solo por
+ * id. `idsDelPlan` (opcional): TODOS los ids del plan vigente, retiradas
+ * incluidas; si el id está ahí pero no en `vigente`, la tarea se retiró en este
+ * ciclo y el nodo NO la muda a una hermana de etapa. Devuelve el id de la tarea
+ * vigente, o null si ya no está. Pura.
+ */
+export function resolverProtegido(
+  r: { protege_item?: string | null; protege_nodos?: string[] | null },
+  vigente: ReadonlyArray<{ id: string; nodos_origen?: string[] | null }>,
+  idsDelPlan?: ReadonlySet<string>
+): string | null {
+  if (r.protege_item && vigente.some((a) => a.id === r.protege_item)) return r.protege_item;
+  if (r.protege_item && idsDelPlan?.has(r.protege_item)) return null;
+  const nodos = r.protege_nodos ?? [];
+  if (nodos.length > 0) {
+    let mejor: { id: string; comunes: number } | null = null;
+    for (const a of vigente) {
+      const comunes = (a.nodos_origen ?? []).filter((n) => nodos.includes(n)).length;
+      if (comunes > 0 && (!mejor || comunes > mejor.comunes)) mejor = { id: a.id, comunes };
+    }
+    return mejor?.id ?? null;
+  }
+  return null;
 }
 
 export interface EntradaRegistro {
@@ -104,15 +143,20 @@ export function severidadEnPalabras(e: {
  */
 export function armarRegistro(
   respuestas: FilaRespuesta[],
-  actividadesNucleo: ActividadProtegida[]
+  actividadesNucleo: ActividadProtegida[],
+  /** AUD-09 M15: todos los ids del plan vigente del núcleo, retiradas incluidas
+   * (ver resolverProtegido). Sin él, una retirada podría mudarse por nodo. */
+  idsDelPlan?: ReadonlySet<string>
 ): EntradaRegistro[] {
   const porId = new Map(actividadesNucleo.map((a) => [a.id, a]));
   return respuestas
-    .filter((r) => r.deteccion || r.protege_item || r.probabilidad || r.dolor)
+    .filter((r) => r.deteccion || r.protege_item || r.protege_nodos?.length || r.probabilidad || r.dolor)
     .slice()
     .sort((a, b) => a.etapa - b.etapa || a.orden - b.orden)
     .map((r) => {
-      const protege = r.protege_item ? porId.get(r.protege_item) ?? null : null;
+      const apuntaA = Boolean(r.protege_item || r.protege_nodos?.length);
+      const idVigente = resolverProtegido(r, actividadesNucleo, idsDelPlan);
+      const protege = idVigente ? porId.get(idVigente) ?? null : null;
       return {
         id: r.id,
         deteccion: r.deteccion ?? null,
@@ -122,7 +166,7 @@ export function armarRegistro(
         respuesta: r.texto,
         estado: r.estado,
         protege,
-        protegidaDesaparecida: Boolean(r.protege_item) && !porId.has(r.protege_item as string),
+        protegidaDesaparecida: apuntaA && protege === null,
       };
     });
 }

@@ -45,6 +45,10 @@ interface ItemChecklist {
   // detección y su severidad en palabras. Solo los planes de protección los
   // traen; en el resto son null.
   protege_item: string | null;
+  // AUD-09 M15: los nodos de la tarea y los de lo protegido (041): la
+  // protección se resuelve por nodo contra el plan vigente del núcleo.
+  nodos_origen: string[] | null;
+  protege_nodos: string[] | null;
   deteccion: string | null;
   probabilidad: string | null;
   dolor: string | null;
@@ -54,12 +58,12 @@ interface ItemChecklist {
 }
 
 const COLUMNAS =
-  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, created_at, updated_at";
+  "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, nodos_origen, protege_nodos, created_at, updated_at";
 
 /** Las columnas que llegaron con una migración posterior al primer despliegue.
  * Si el código se adelanta a la migración, se leen null en vez de caerse la
  * lectura entera del checklist (patrón de project_unlocks, pre-026). */
-const COLUMNAS_NUEVAS = [", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
+const COLUMNAS_NUEVAS = [", nodos_origen, protege_nodos", ", camino", ", protege_item, deteccion, probabilidad, dolor", ", banda, espera_externa"];
 
 /** Un timestamp ISO válido y no futuro (tolera 1 min de desfase de reloj). */
 function fechaIsoValida(valor: unknown): string | null {
@@ -118,6 +122,8 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     banda: i.banda ?? null,
     espera_externa: i.espera_externa ?? null,
     protege_item: i.protege_item ?? null,
+    nodos_origen: i.nodos_origen ?? null,
+    protege_nodos: i.protege_nodos ?? null,
     deteccion: i.deteccion ?? null,
     probabilidad: i.probabilidad ?? null,
     dolor: i.dolor ?? null,

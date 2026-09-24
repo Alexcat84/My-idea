@@ -589,5 +589,13 @@ FROM (
       SELECT 1 FROM pg_policies
       WHERE schemaname='public' AND tablename='project_actas' AND policyname='project_actas_own'
     )
+  UNION ALL
+  -- 041 . la proteccion apunta al nodo de la tarea (AUD-09 M15).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '041', 'checklist_items.protege_nodos (proteccion por nodo)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='checklist_items' AND column_name='protege_nodos'
+    )
 ) checks
 ORDER BY num;

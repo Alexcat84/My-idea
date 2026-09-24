@@ -81,7 +81,17 @@ export async function cargarEntradaAnalytics(
   // se recorta y el Análisis sigue; el carril simplemente sale vacío.
   const COLS_ITEMS = "id, plan_id, dominio, etapa, estado, destacado, texto, completed_at, fecha_base, fecha_base_original, protege_item";
   const COLS_VIEJAS = COLS_ITEMS.replace("id, ", "").replace(", protege_item", "");
-  const candidatas = [`${COLS_ITEMS}, no_aplica_motivo`, COLS_ITEMS, `${COLS_VIEJAS}, no_aplica_motivo`, COLS_VIEJAS];
+  // AUD-09 M15: nodos_origen (037) y protege_nodos (041) resuelven la
+  // protección por nodo contra el plan vigente. Si la 041 aún no se aplicó, se
+  // lee sin protege_nodos y el carril resuelve por id, como antes.
+  const candidatas = [
+    `${COLS_ITEMS}, nodos_origen, protege_nodos, no_aplica_motivo`,
+    `${COLS_ITEMS}, nodos_origen, no_aplica_motivo`,
+    `${COLS_ITEMS}, no_aplica_motivo`,
+    COLS_ITEMS,
+    `${COLS_VIEJAS}, no_aplica_motivo`,
+    COLS_VIEJAS,
+  ];
   let itemsRaw: unknown[] | null = null;
   let ultimoErrorItems: unknown = null;
   for (const cols of candidatas) {
@@ -113,6 +123,10 @@ export async function cargarEntradaAnalytics(
       // adelante vive en analyticsEntrada.test.ts.
       id: i.id,
       protege_item: i.protege_item ?? null,
+      // AUD-09 M15: los nodos de la tarea y los de lo protegido (misma lección
+      // de arriba: opcionales en ItemAnalytics, así que el cruce los vigila).
+      nodos_origen: i.nodos_origen ?? null,
+      protege_nodos: i.protege_nodos ?? null,
       dominio: i.dominio,
       etapa: i.etapa,
       estado: i.estado,

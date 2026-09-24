@@ -216,11 +216,12 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     if (!esMundoProteccion(dominio) || ciclosDeDominio(dominio).length === 0) {
       return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
     }
-    const { data: filasMundo, error: errRegistro } = await supabase
-      .from("checklist_items")
-      .select("id, plan_id, texto, etapa, orden, estado, protege_item, deteccion, probabilidad, dolor, camino")
-      .eq("project_id", projectId)
-      .eq("dominio", dominio);
+    const COLS_REGISTRO = "id, plan_id, texto, etapa, orden, estado, protege_item, protege_nodos, deteccion, probabilidad, dolor, camino";
+    const leerRegistro = (cols: string) =>
+      supabase.from("checklist_items").select(cols).eq("project_id", projectId).eq("dominio", dominio);
+    let { data: filasMundo, error: errRegistro } = await leerRegistro(COLS_REGISTRO);
+    // Si la 041 aún no se aplicó, se lee sin protege_nodos (resuelve por id).
+    if (errRegistro) ({ data: filasMundo, error: errRegistro } = await leerRegistro(COLS_REGISTRO.replace(", protege_nodos", "")));
     if (errRegistro) {
       // Fallar ruidoso (BANCO §9): sin registro a medias ni plantilla.
       return NextResponse.json({ error: "no pudimos leer tu registro; intenta de nuevo en un momento" }, { status: 500 });
@@ -229,17 +230,22 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // enlazador: pantalla, papel y enlace comparten numeración.
     const planCore = await obtenerPlanCoreVigente(supabase, projectId);
     const filasNucleo = planCore ? await obtenerItemsDePlan(supabase, projectId, planCore) : [];
+    // AUD-09 M15: con sus nodos (la protección se resuelve por nodo contra
+    // este plan) y con los ids de TODO el plan, retiradas incluidas.
+    const nodosPorId = new Map(filasNucleo.map((f) => [f.id, f.nodos_origen ?? null]));
     const actividades = armarSnapshot(filasNucleo as unknown as FilaChecklistSnapshot[]).actividades.map((a) => ({
       id: a.id,
       indice: a.indice,
       titulo: a.titulo,
+      nodos_origen: nodosPorId.get(a.id) ?? null,
     }));
+    const idsDelPlan = new Set(filasNucleo.map((f) => f.id));
     // AUD-09 M03: el Registro del ciclo vigente, igual que la pantalla.
     const filasVigentes = accionesDelCicloVigente(
-      (filasMundo ?? []).map((f) => ({ ...f, dominio })) as Array<{ plan_id: string | null; dominio: string }>,
+      ((filasMundo ?? []) as unknown as Array<Record<string, unknown>>).map((f) => ({ ...f, dominio })) as Array<{ plan_id: string | null; dominio: string }>,
       planes
     );
-    const entradas = armarRegistro(filasVigentes as unknown as FilaRespuesta[], actividades);
+    const entradas = armarRegistro(filasVigentes as unknown as FilaRespuesta[], actividades, idsDelPlan);
     const nombreDom = nombreMundo(dominio);
     const generado = new Date().toISOString();
     return NextResponse.json({

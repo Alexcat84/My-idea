@@ -792,4 +792,36 @@ describe("carrilProteccion (P4): lectura pura que jamás toca las medidas", () =
     const huerfana = { ...RESPUESTA, protege_item: "no-existe" };
     expect(calcularAnalytics({ ...CORE_CON_ID, items: [...CORE_CON_ID.items, huerfana] }).carrilProteccion).toEqual([]);
   });
+
+  // AUD-09 M15: la protección apunta al NODO. Un ciclo nuevo del núcleo (p3)
+  // renace la tarea con otro id y en otra etapa; la marca se ancla a la tarea
+  // del plan VIGENTE que comparte el nodo, no a la del ciclo viejo.
+  describe("con un ciclo nuevo del núcleo (AUD-09 M15)", () => {
+    const CICLO_NUEVO: EntradaAnalytics = {
+      ...CORE_CON_ID,
+      planesCore: [
+        ...CORE_CON_ID.planesCore,
+        { id: "p3", etiqueta: "seguimiento", created_at: iso("2026-04-10"), baseline_confirmada_at: null },
+      ],
+      items: [
+        ...CORE_CON_ID.items.map((i) => (i.id === "core-3" ? { ...i, nodos_origen: ["precio_de_venta"] } : i)),
+        { id: "c3-1", plan_id: "p3", etapa: 3, estado: "pendiente", destacado: false, texto: "Fija tu precio", completed_at: null, fecha_base: iso("2026-04-25"), fecha_base_original: null, nodos_origen: ["precio_de_venta"] },
+      ],
+    };
+    // A MANO: fecha base de la respuesta 20-abr; chispa 01-mar → 31 días de
+    // marzo + 19 de abril = 50 días. Etapa: la de c3-1 en el plan vigente = 3.
+    const RESP_CICLO = { ...RESPUESTA, fecha_base: iso("2026-04-20"), protege_item: "core-3", protege_nodos: ["precio_de_venta"] };
+
+    it("la marca se ancla a la tarea vigente del mismo nodo (etapa 3, día 50)", () => {
+      const carril = calcularAnalytics({ ...CICLO_NUEVO, items: [...CICLO_NUEVO.items, RESP_CICLO] }).carrilProteccion;
+      expect(carril).toEqual([
+        { etapa: 3, dia: 50, hecho: false, dominio: "risk_management", texto: "Consigue un proveedor alterno" },
+      ]);
+    });
+
+    it("si el nodo no está en el plan vigente, no se ancla a la tarea del ciclo viejo", () => {
+      const huerfana = { ...RESP_CICLO, protege_nodos: ["nodo_que_se_fue"] };
+      expect(calcularAnalytics({ ...CICLO_NUEVO, items: [...CICLO_NUEVO.items, huerfana] }).carrilProteccion).toEqual([]);
+    });
+  });
 });

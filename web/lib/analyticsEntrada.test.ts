@@ -110,6 +110,22 @@ describe("la costura entre la entrada REAL y el carril de protección", () => {
   });
 });
 
+// AUD-09 M15: la protección apunta al NODO. Los dos campos que lo cargan
+// (nodos_origen de la tarea del núcleo, protege_nodos de la respuesta) tienen
+// que sobrevivir al mapeo de la entrada, o el carril vuelve a resolver solo
+// por id y se queda con la tarea de un ciclo viejo.
+describe("la entrada lleva los nodos de la protección (AUD-09 M15)", () => {
+  it("nodos_origen y protege_nodos sobreviven al mapeo", async () => {
+    const filas = [
+      { ...FILAS_ITEMS[0], nodos_origen: ["precio_de_venta"] },
+      { ...FILAS_ITEMS[1], protege_nodos: ["precio_de_venta"] },
+    ];
+    const entrada = await cargarEntradaAnalytics(supabaseFalso(filas), PID, PROYECTO, "2026-03-20T12:00:00Z");
+    expect(entrada.items.find((i) => i.id === ITEM_CORE)?.nodos_origen).toEqual(["precio_de_venta"]);
+    expect(entrada.items.find((i) => i.id === ITEM_RIESGO)?.protege_nodos).toEqual(["precio_de_venta"]);
+  });
+});
+
 // AUD-09 M18 (tanda 5, fallas silenciosas): una lectura que fallaba se tomaba
 // como "no hay nada" y el Análisis, la Celebración o el bloque de realidad del
 // seguimiento salían en cero, presentados como verdad. Ahora falla en voz alta.

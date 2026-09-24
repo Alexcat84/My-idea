@@ -52,7 +52,7 @@ import {
   type NodoConTipo,
 } from "@/lib/db";
 import { derivarChecklist } from "@/lib/engine/checklist";
-import { enlazarPlanProteccion } from "@/lib/engine/enlazador";
+import { enlazarPlanProteccion, nodosDeLoProtegido } from "@/lib/engine/enlazador";
 import { estimarLoteMayoria } from "@/lib/engine/estimacion";
 import { armarSnapshot, type FilaChecklistSnapshot } from "@/lib/engine/snapshotProyecto";
 import { esMundoProteccion } from "@/lib/espacios";
@@ -396,6 +396,9 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           itemsChecklist = itemsChecklist.map((it, i) => ({
             ...it,
             protege_item: enlace.enlaces[i]?.protege_item ?? null,
+            // AUD-09 M15: y los NODOS de lo protegido, para que la protección
+            // sobreviva al próximo ciclo del núcleo (ids nuevos, mismo nodo).
+            protege_nodos: nodosDeLoProtegido(enlace.enlaces[i]?.protege_item ?? null, filasNucleo),
             deteccion: enlace.enlaces[i]?.deteccion ?? null,
             probabilidad: enlace.enlaces[i]?.probabilidad ?? null,
             dolor: enlace.enlaces[i]?.dolor ?? null,
