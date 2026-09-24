@@ -17545,6 +17545,26 @@ B16 (siguen sin pruebas `unlock` y `start`).
 **Condición de cierre:** cada hallazgo arreglado con su prueba en rojo primero, o descartado
 por decisión escrita del fundador, y tachado aquí con su commit.
 
+**Triaje del fundador (25 sep 2026).** Cada remanente se clasificó en DINERO, DATOS,
+SEGURIDAD, CONFIANZA u OTRO. Tanda 7A = dinero, datos y seguridad; tanda 7B = confianza (más
+M35 por texto); OTRO se queda en esta ficha.
+
+**Tanda 7A, hecha** (cada uno con su prueba en rojo primero; rama `arreglos-aud09`):
+- Dinero: M24 `60389f57`, M25 `9b280470` (reserva de créditos, migración 042), M22
+  `8a73d772` (la parte que quedaba), M30 `ede226a3`, M32 `45406c0f`, B14a `66672721`.
+- Datos: M09 `2cd655aa`, M26 `00623953` (reproducido antes de arreglar), M27 `f52a99cc`, M34
+  `72037406`, M41 `ac8f5376`, B14b `f39a8746`.
+- Seguridad: M49 `b5ad1b20` (por texto), M50 `7d8c9e3f` (migración 043), B07a `87e7d081`,
+  B12 `e10fd538`.
+- Queda a decisión del fundador (hermano de B07a): `lib/streamTerminal.ts` manda por el canal
+  la causa de un cierre mudo, y su prueba lo fija a propósito para diagnosticar.
+
+**Tanda 7B, pendiente (confianza):** M28, M29, M31, M33, M37, M38, M39, M40, M42, M43, M47,
+M48, B03a, B05, B10, B14c y M35 por texto.
+
+**Se quedan aquí (OTRO):** M44, M45, M46, M52, M54, B02, B03b, B06, B07b, B08, B09, B11, B13,
+B14d, B15 y B16.
+
 **Funciones futuras (regla del fundador, 25 sep 2026: cuando una función falta, el texto
 no puede prometerla).** Se corrigió el texto a lo que el producto hace hoy; la función queda
 aquí para cuando se decida construirla:
