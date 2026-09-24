@@ -127,6 +127,23 @@
   "regenerar": "build_question_cache.py --patch-file en la sesion con credencial"
  },
  {
+  "node_id": "entrega_por_partes_para_exponer_el_riesgo",
+  "pregunta_retirada": "Cuando empiezas a entregar esas primeras versiones pequeñas, ¿cómo sabes si algo está realmente en peligro o si todavía tienes tiempo de arreglarlo? ¿Qué señales te dirían que un riesgo se convirtió en un problema que ya no puedes controlar?",
+  "candidatos": [
+   "tus_alertas_tempranas"
+  ],
+  "motivo": "la pregunta se genero con los 400 primeros caracteres del resumen_teorico (build_question_cache.generar_pregunta) y la correccion de ese resumen empieza dentro de ellos: la pregunta nacio del texto viejo",
+  "correcciones": [
+   {
+    "id": "fidelidad-t11-06",
+    "veredicto": "CONTRARIO",
+    "primer_caracter_cambiado": 286,
+    "tanda": "fidelidad-t11"
+   }
+  ],
+  "regenerar": "build_question_cache.py --patch-file en la sesion con credencial"
+ },
+ {
   "node_id": "future_scenarios_planning",
   "pregunta_retirada": "Ahora que has imaginado esos posibles futuros, ¿qué es lo que más te preocupa o te gustaría entender mejor: cómo tu idea compite y se posiciona frente a lo que ya existe en tu sector, cómo podrías evolucionar y adaptar lo que haces en diferentes momentos, o cómo los cambios que ves afectarían a las personas que trabajan contigo?",
   "candidatos": [
