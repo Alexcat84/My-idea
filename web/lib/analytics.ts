@@ -514,6 +514,21 @@ export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): An
 const ETIQUETAS_CICLO_PLAN = ["inicial", "completo", "seguimiento"];
 
 /**
+ * AUD-09 M37: los mundos que CUENTAN (tienen su plan), con la fecha de su primer
+ * plan. Abrir un mundo es un clic gratis que crea su fila; eso no es activarlo:
+ * no es hito, no suma en "Mundos" y no sale en el acta.
+ */
+export function mundosConPlan(entrada: Pick<EntradaAnalytics, "planesMundo">): Map<string, string> {
+  const primera = new Map<string, string>();
+  for (const p of entrada.planesMundo ?? []) {
+    if (!ETIQUETAS_CICLO_PLAN.includes(p.etiqueta)) continue;
+    const actual = primera.get(p.dominio);
+    if (!actual || p.created_at < actual) primera.set(p.dominio, p.created_at);
+  }
+  return primera;
+}
+
+/**
  * La CAPA DE CUMPLIMIENTO de un tramo (T3 "todo separado"): extraída VERBATIM del
  * cuerpo de calcularAnalytics para que un MUNDO se mida con la MISMA vara que el
  * core — su Gantt de ventanas honestas, sus tardías, sus replanificaciones.
@@ -603,7 +618,8 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
   // el desglose por dominio del cumplimiento.
   const itemsCore = entrada.items.filter(esItemCore);
   // Fase 4.2: la misma capa que mide un mundo (capaUniversalDe) mide el core.
-  const universal = capaUniversalDe(itemsCore, entrada.planesCore, chispa, fin, entrada.mundos.length);
+  // AUD-09 M37: "Mundos" cuenta los que tienen su plan, no los solo abiertos.
+  const universal = capaUniversalDe(itemsCore, entrada.planesCore, chispa, fin, mundosConPlan(entrada).size);
 
   // Capa de cumplimiento: solo si algún plan tiene baseline confirmada.
   let cumplimiento: CapaCumplimiento | null = null;
@@ -687,8 +703,11 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
     const subtitulo = i === 0 ? (p.baseline_confirmada_at ? "con línea base" : undefined) : "replanificado con lo aprendido";
     hitos.push({ fecha: p.created_at, tipo: "plan", etiqueta: `Tu Plan · ciclo ${i + 1}`, subtitulo });
   });
+  // AUD-09 M37: el hito es el primer plan del mundo, no el clic que lo abrió.
+  const conPlan = mundosConPlan(entrada);
   for (const m of entrada.mundos) {
-    hitos.push({ fecha: m.unlocked_at, tipo: "mundo", etiqueta: "Mundo activado", dominio: m.dominio });
+    const activadoAt = conPlan.get(m.dominio);
+    if (activadoAt) hitos.push({ fecha: activadoAt, tipo: "mundo", etiqueta: "Mundo activado", dominio: m.dominio });
     // Fase 4.2: un mundo cerrado deja su hito en el timeline del PROYECTO —
     // con su motivo discreto de subtítulo si el usuario escribió uno. El
     // nombre humano lo pone la pantalla desde el catálogo; aquí solo la clave.
@@ -778,7 +797,8 @@ export function informeMarkdown(
           ? ` (${Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)}%)`
           : "")
     );
-    for (const m of a.mundos) {
+    // AUD-09 M37: solo los mundos con su plan (un mundo solo abierto no es "0 de 0").
+    for (const m of a.mundos.filter((x) => x.universal.ciclosDePlan > 0)) {
       const v = m.universal.accionesVigente;
       const pctM = v.total > 0 ? ` (${Math.round((v.hechas / v.total) * 100)}%)` : "";
       const estado = m.completadoAt ? `completado el ${m.completadoAt.slice(0, 10)}` : "abierto";

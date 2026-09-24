@@ -33,7 +33,8 @@ export function instantaneaDeActa(a: Analytics, dominio: string): InstantaneaAct
       acciones: { ...u.accionesVigente },
       retiradas: u.retiradas.length,
       ciclos: u.ciclosDePlan,
-      mundos: a.mundos.map((m) => ({
+      // AUD-09 M37: solo los mundos con su plan (abrir uno no lo activa).
+      mundos: a.mundos.filter((m) => m.universal.ciclosDePlan > 0).map((m) => ({
         dominio: m.dominio,
         hechas: m.universal.accionesVigente.hechas,
         total: m.universal.accionesVigente.total,

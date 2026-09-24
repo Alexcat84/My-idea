@@ -26,6 +26,7 @@ import {
   resumenEspacioMd,
   type EntradaAnalytics,
 } from "./analytics";
+import { instantaneaDeActa } from "./acta";
 
 function iso(d: string) {
   return `${d}T12:00:00Z`;
@@ -40,6 +41,8 @@ const BASE: EntradaAnalytics = {
     { id: "p2", etiqueta: "seguimiento", created_at: iso("2026-04-01"), baseline_confirmada_at: null },
   ],
   mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20") }],
+  // AUD-09 M37: el mundo CUENTA porque tiene su plan (el mismo día en que se abrió).
+  planesMundo: [{ id: "pq1", etiqueta: "completo", created_at: iso("2026-03-20"), baseline_confirmada_at: null, dominio: "quality" }],
   items: [
     { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "A", completed_at: iso("2026-03-10"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
     { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "B", completed_at: iso("2026-03-13"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
@@ -823,5 +826,33 @@ describe("carrilProteccion (P4): lectura pura que jamás toca las medidas", () =
       const huerfana = { ...RESP_CICLO, protege_nodos: ["nodo_que_se_fue"] };
       expect(calcularAnalytics({ ...CICLO_NUEVO, items: [...CICLO_NUEVO.items, huerfana] }).carrilProteccion).toEqual([]);
     });
+  });
+});
+
+// AUD-09 M37 (tanda 7B, confianza): un clic en la tarjeta de un mundo crea su
+// fila (abrirlo es gratis) y ya contaba como "Mundo activado" en la
+// Celebración, sumaba en "Mundos: N" y salía en el acta como "0 de 0, abierto".
+// Un mundo cuenta cuando tiene SU plan; su hito lleva la fecha de ese plan.
+describe("un mundo cuenta cuando tiene su plan (AUD-09 M37)", () => {
+  const SOLO_CLIC: EntradaAnalytics = { ...BASE, mundos: [{ dominio: "quality", unlocked_at: iso("2026-03-20") }], planesMundo: [] };
+  const CON_PLAN: EntradaAnalytics = {
+    ...SOLO_CLIC,
+    planesMundo: [{ id: "pm1", etiqueta: "completo", created_at: iso("2026-03-25"), baseline_confirmada_at: null, dominio: "quality" }],
+  };
+
+  it("un mundo solo abierto no es un hito, no suma y no sale en el acta", () => {
+    const a = calcularAnalytics(SOLO_CLIC);
+    expect(a.hitos.some((h) => h.tipo === "mundo")).toBe(false);
+    expect(a.universal.mundos).toBe(0);
+    expect(instantaneaDeActa(a, "core").mundos).toEqual([]);
+    expect(informeMarkdown("Mi idea", a, iso("2026-05-01"), (d) => d)).not.toContain("quality");
+  });
+
+  it("con su plan: hito con la fecha del plan (25-mar), suma 1 y sale en el acta", () => {
+    const a = calcularAnalytics(CON_PLAN);
+    const hito = a.hitos.find((h) => h.tipo === "mundo");
+    expect(hito?.fecha).toBe(iso("2026-03-25"));
+    expect(a.universal.mundos).toBe(1);
+    expect(instantaneaDeActa(a, "core").mundos.map((m) => m.dominio)).toEqual(["quality"]);
   });
 });
