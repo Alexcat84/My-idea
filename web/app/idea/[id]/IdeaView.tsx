@@ -33,6 +33,7 @@ import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
 import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
+import { estadoEspacio } from "@/lib/esperaEspacio";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { montoDelPlan, PRECIOS } from "@/lib/precios";
@@ -49,6 +50,8 @@ const NOTA_SILENCIOSO = "cubierto por lo que contaste";
 /** Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre. Esto es la red
  * por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así, la
  * pantalla habla. Jamás muda. */
+/** AUD-09 H09: la carga del checklist no espera para siempre. */
+const LIMITE_CHECKLIST_MS = 20_000;
 const MENSAJE_CIERRE_RESPALDO =
   "Hasta aquí puedo acompañarte por este camino. Tu idea queda guardada tal como está.";
 
@@ -262,12 +265,22 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [origenDocumentos, setOrigenDocumentos] = useState<"manos" | "celebracion">("manos");
   const [realizadaAt, setRealizadaAt] = useState<string | null>(null);
 
+  // AUD-09 H09: la carga del checklist tiene tiempo límite y, si falla, deja un
+  // mensaje con reintento. Antes se tragaba el fallo y la vista se quedaba en
+  // "Cargando tu espacio…" para siempre.
+  const [errorChecklist, setErrorChecklist] = useState<string | null>(null);
   const cargarChecklist = useCallback(async () => {
+    setErrorChecklist(null);
+    const control = new AbortController();
+    const limite = setTimeout(() => control.abort(), LIMITE_CHECKLIST_MS);
     try {
-      const res = await fetch(`/api/project/${projectId}/checklist`);
+      const res = await fetch(`/api/project/${projectId}/checklist`, { signal: control.signal });
       if (res.ok) setChecklist((await res.json()) as ChecklistData);
+      else setErrorChecklist((await leerRechazo(res)).mensaje);
     } catch {
-      /* el checklist es progresivo: sin él, la vista Manos avisa sola */
+      setErrorChecklist("no pudimos cargar tu espacio; revisa tu internet e intenta de nuevo");
+    } finally {
+      clearTimeout(limite);
     }
   }, [projectId]);
 
@@ -1133,12 +1146,27 @@ export function IdeaView({ projectId }: { projectId: string }) {
               realizadaAt={realizadaAt}
             />
           </>
-        ) : vistaManos || vistaMundo ? (
-          // Campaña "Espacios": Manos/Mundo ya está pedido pero planMd/checklist
-          // aún cargan. NO caer a la vista del plan como fallback: eso causaba el
-          // parpadeo plan→Manos al abrir una idea. Un placeholder discreto hasta
-          // que la vista real esté lista.
-          <p className="px-1 py-20 text-dim">Cargando tu espacio…</p>
+        ) : (vistaManos || vistaMundo) &&
+          estadoEspacio({ hayPlan: Boolean(planMd), hayChecklist: Boolean(checklist), errorChecklist }) !== "sin_plan" ? (
+          // Campaña "Espacios": Manos/Mundo ya está pedido pero el checklist aún
+          // carga. NO caer a la vista del plan como fallback: eso causaba el
+          // parpadeo plan→Manos al abrir una idea. AUD-09 H09: la espera tiene
+          // salida. Sin plan no hay espacio que esperar (se cae a la vista de la
+          // idea, con su Claridad y su camino al plan), y si el checklist falló,
+          // se dice y se ofrece reintentar.
+          errorChecklist ? (
+            <div className="px-1 py-20">
+              <p className="text-sm text-warn">{errorChecklist}</p>
+              <button
+                onClick={() => void cargarChecklist()}
+                className="mt-4 rounded-[10px] border border-hairline px-4 py-2 text-sm text-ink hover:border-white/25"
+              >
+                Intentar de nuevo
+              </button>
+            </div>
+          ) : (
+            <p className="px-1 py-20 text-dim">Cargando tu espacio…</p>
+          )
         ) : (
           // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
           // recorrido se cortaban ("Identifica tus Supue…"); hay espacio de
