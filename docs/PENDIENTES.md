@@ -17441,6 +17441,11 @@ nodos afines por semántica.
 plan con la salida "Seguimos explorando" es el paso natural del núcleo; el motor no reelige
 puertas ahí como lo hace en los mundos.
 
+**Decisión del fundador (25 sep 2026) sobre el M16: una entrevista de mundo PUEDE pasar por
+nodos del núcleo** (los mundos están anclados al núcleo por la ley del ancla). Lo que queda
+cortado es el paso de un mundo a OTRO mundo: `dominiosDelRecorrido`
+(`web/lib/engine/recorrido.ts`) da, en una sesión de mundo, el núcleo y ese mundo.
+
 **Lo que esta ficha NO autoriza.** El dataset no se tocó para esto y no se toca por esta
 ficha. Si alguno de estos nodos merece una arista real, se escribe **por lectura**, en otra
 campaña, afirmando una continuidad de contenido y no para tapar un hueco del motor.
@@ -17498,3 +17503,22 @@ no lo toca.
 aprueba (y retirar las aristas viejas que reemplazan), un guardián que compare archivo contra
 aristas, y el tope de la ley del ancla en 2. **Condición de cierre:** aprobados igual a
 aristas reales en cada mundo, y el guardián en verde sobre el grafo servido.
+
+## Ficha para la próxima entrega de Design: `mockups-con-precios-viejos` (AUD-09, decisión del fundador 25 sep 2026)
+
+**Qué.** Varios mockups del canon visual (`docs/diseno-canon/`) todavía muestran cifras de
+antes del Catálogo congruente: La Exploración a 5, seguimientos a 2, plan de mundo a 3, Tus
+Números a 2, cortesía de 20 y reembolsos de 3. Los precios viven en `web/lib/precios.ts` y
+nada más los define (`AGENTS.md`); por eso es ERRATA de la entrega, no cambio de política.
+
+**Cuáles** (medido el 24 sep 2026): 03 (La Exploración a 5), 05, 07, 12, 14, 16, 17, 18, 20 y
+23. En el 23, revisar cuáles cifras son saldos de ejemplo (por ejemplo el chip "20 créditos")
+y cuáles son precios.
+
+**Lo que ya se hizo.** El canon de TEXTO (`REGLAS_Y_TOKENS.md` §3) se corrigió en la AUD-09
+con su nota de adopción; las pantallas de Design no se redibujaron desde aquí.
+
+**Lo que pide la ficha.** Que la próxima entrega de Design venga alineada de origen con
+`precios.ts`. **Condición de cierre:** los diez mockups sin cifras viejas, cotejados contra
+`precios.ts` al adoptar la entrega (el mismo cotejo que `AGENTS.md` exige para el canon).
+
