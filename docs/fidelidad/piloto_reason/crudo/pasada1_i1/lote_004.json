@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_004",
+  "intento": 0,
+  "usd": 0.16057200000000002,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 21.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33258,
+  "tokens_out": 1377,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PAEA054\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [596, 608, 628, 648, 4765], \"razon\": \"Westrum clasifica culturas por cómo tratan a los mensajeros o whistle-blowers: disparados, escuchados o entrenados y recompensados. Evaluarlo en la práctica sigue esa distinción directamente.\"},\n  {\"id\": \"P60F478\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2948, 2961, 3829, 5907, 1129, 5641], \"razon\": \"El libro favorece lo situacional solo en una fuerza laboral capacitada y bienintencionada. Para violaciones pide cambiar normas y cultura, y aplicar contramedidas simultáneas en varios niveles; el paso omite esas condiciones.\"},\n  {\"id\": \"P1595B5\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3784, 293], \"razon\": \"Tripod-Beta parte del resultado final, una pérdida, y trabaja hacia atrás hasta las defensas fallidas y el peligro.\"},\n  {\"id\": \"P7E82FD\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [118, 120, 126, 150, 158, 107, 2650], \"razon\": \"El libro clasifica las defensas por siete funciones y por modo duro o blando, y sugiere revisar dónde hay agujeros. Mapearlas es una extensión coherente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PAEA054",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    596,
+    608,
+    628,
+    648,
+    4765
+   ],
+   "razon": "Westrum clasifica culturas por cómo tratan a los mensajeros o whistle-blowers: disparados, escuchados o entrenados y recompensados. Evaluarlo en la práctica sigue esa distinción directamente."
+  },
+  {
+   "id": "P60F478",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2948,
+    2961,
+    3829,
+    5907,
+    1129,
+    5641
+   ],
+   "razon": "El libro favorece lo situacional solo en una fuerza laboral capacitada y bienintencionada. Para violaciones pide cambiar normas y cultura, y aplicar contramedidas simultáneas en varios niveles; el paso omite esas condiciones."
+  },
+  {
+   "id": "P1595B5",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "Tripod-Beta parte del resultado final, una pérdida, y trabaja hacia atrás hasta las defensas fallidas y el peligro."
+  },
+  {
+   "id": "P7E82FD",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    118,
+    120,
+    126,
+    150,
+    158,
+    107,
+    2650
+   ],
+   "razon": "El libro clasifica las defensas por siete funciones y por modo duro o blando, y sugiere revisar dónde hay agujeros. Mapearlas es una extensión coherente."
+  }
+ ]
+}

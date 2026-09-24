@@ -1,0 +1,64 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_091",
+  "intento": 0,
+  "usd": 0.15837199999999999,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33448,
+  "tokens_out": 1229,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA3C55A\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5061, 5057, 5063], \"razon\": \"El libro incluye 'Any previous?', pero el historial no necesariamente afecta la culpabilidad del acto actual. Solo indica formación correctiva u orientación de carrera. El paso omite esa condición y podría usarse para culpar.\"},\n  {\"id\": \"P51B55A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [423, 451, 401], \"razon\": \"El libro señala como grieta latente la ausencia de un procedimiento formal de traspaso de línea a base, con traspaso solo verbal y sin documentación de etapa.\"},\n  {\"id\": \"P8A5749\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [3199, 3209, 3163, 3384], \"razon\": \"220 ítems (20 por GFT) y frecuencia trimestral ajustable coinciden con el libro. Matiz: los ítems rotan en cada aplicación y los crean especialistas. Una checklist fija podría desviarse.\"},\n  {\"id\": \"P076CAA\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4769, 5208], \"razon\": \"El libro dice que el respeto por la primera línea debe ganarse con una inversión importante en formación, e invertir mucho en los supervisores de primera línea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA3C55A",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5061,
+    5057,
+    5063
+   ],
+   "razon": "El libro incluye 'Any previous?', pero el historial no necesariamente afecta la culpabilidad del acto actual. Solo indica formación correctiva u orientación de carrera. El paso omite esa condición y podría usarse para culpar."
+  },
+  {
+   "id": "P51B55A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    423,
+    451,
+    401
+   ],
+   "razon": "El libro señala como grieta latente la ausencia de un procedimiento formal de traspaso de línea a base, con traspaso solo verbal y sin documentación de etapa."
+  },
+  {
+   "id": "P8A5749",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    3199,
+    3209,
+    3163,
+    3384
+   ],
+   "razon": "220 ítems (20 por GFT) y frecuencia trimestral ajustable coinciden con el libro. Matiz: los ítems rotan en cada aplicación y los crean especialistas. Una checklist fija podría desviarse."
+  },
+  {
+   "id": "P076CAA",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4769,
+    5208
+   ],
+   "razon": "El libro dice que el respeto por la primera línea debe ganarse con una inversión importante en formación, e invertir mucho en los supervisores de primera línea."
+  }
+ ]
+}

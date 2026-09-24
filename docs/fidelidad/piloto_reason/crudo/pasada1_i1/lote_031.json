@@ -1,0 +1,65 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_031",
+  "intento": 0,
+  "usd": 0.15154,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33580,
+  "tokens_out": 861,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P26B359\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3706, 3710, 3714, 3718, 3722], \"razon\": \"El libro describe cómo combinar las influencias: listar combinaciones, evaluar cada una, aplicar un factor de ponderación conjunto y sumar las probabilidades condicionales ponderadas.\"},\n  {\"id\": \"P384B21\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3829, 2716, 2922, 5077], \"razon\": \"El libro dice que las violaciones se abordan mejor cambiando normas, creencias, actitudes y cultura. Reserva la sanción para los pocos casos graves. Que el paso omita la mejora de procedimientos no lo contradice.\"},\n  {\"id\": \"PD10C0A\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5200], \"razon\": \"El libro recomienda equipos diversos en especialidad y experiencia. Advierte que los grupos de personas similares ven cosas similares y carecen de variedad requerida. El paso aconseja lo contrario.\"},\n  {\"id\": \"PEB7EF1\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5053, 5057, 5063], \"razon\": \"El árbol de decisión incluye la pregunta sobre sustancias no autorizadas en el momento del acto inseguro. Distingue además el consumo con atenuantes.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P26B359",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3706,
+    3710,
+    3714,
+    3718,
+    3722
+   ],
+   "razon": "El libro describe cómo combinar las influencias: listar combinaciones, evaluar cada una, aplicar un factor de ponderación conjunto y sumar las probabilidades condicionales ponderadas."
+  },
+  {
+   "id": "P384B21",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3829,
+    2716,
+    2922,
+    5077
+   ],
+   "razon": "El libro dice que las violaciones se abordan mejor cambiando normas, creencias, actitudes y cultura. Reserva la sanción para los pocos casos graves. Que el paso omita la mejora de procedimientos no lo contradice."
+  },
+  {
+   "id": "PD10C0A",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5200
+   ],
+   "razon": "El libro recomienda equipos diversos en especialidad y experiencia. Advierte que los grupos de personas similares ven cosas similares y carecen de variedad requerida. El paso aconseja lo contrario."
+  },
+  {
+   "id": "PEB7EF1",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5053,
+    5057,
+    5063
+   ],
+   "razon": "El árbol de decisión incluye la pregunta sobre sustancias no autorizadas en el momento del acto inseguro. Distingue además el consumo con atenuantes."
+  }
+ ]
+}

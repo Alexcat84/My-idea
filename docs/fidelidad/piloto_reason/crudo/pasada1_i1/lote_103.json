@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_103",
+  "intento": 0,
+  "usd": 0.159364,
+  "turnos": 1,
+  "duracion_s": 16.8,
+  "pared_s": 18.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32456,
+  "tokens_out": 1477,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC1DC3A\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [967, 971, 975, 2994], \"razon\": \"El libro señala que, sin inspección independiente ni personal de QA, se firma trabajo inconcluso. Las auditorías aleatorias refuerzan la verificación en la misma dirección, sin choque.\"},\n  {\"id\": \"P9CA71A\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3965, 3967, 3971], \"razon\": \"Vaughan presenta 'acceptable risk' y 'anomaly' como lenguaje normal y cultural, no como minimización deliberada. El matiz podría chocar con culpar al lenguaje.\"},\n  {\"id\": \"PB7462D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [204, 580, 582, 2767, 5781], \"razon\": \"El libro afirma que eliminar proactivamente las condiciones latentes es la mejor vía, priorizando las más urgentes porque contribuyen a múltiples accidentes futuros.\"},\n  {\"id\": \"P8C0A1A\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4221, 4223, 4244, 4219], \"razon\": \"El libro dice que esos éxitos regulatorios valen para accidentes individuales con peligros conocidos, y que su especificidad no se transfiere a accidentes organizacionales. Extraer principios aplicables contradice esa limitación.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC1DC3A",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    967,
+    971,
+    975,
+    2994
+   ],
+   "razon": "El libro señala que, sin inspección independiente ni personal de QA, se firma trabajo inconcluso. Las auditorías aleatorias refuerzan la verificación en la misma dirección, sin choque."
+  },
+  {
+   "id": "P9CA71A",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3965,
+    3967,
+    3971
+   ],
+   "razon": "Vaughan presenta 'acceptable risk' y 'anomaly' como lenguaje normal y cultural, no como minimización deliberada. El matiz podría chocar con culpar al lenguaje."
+  },
+  {
+   "id": "PB7462D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    204,
+    580,
+    582,
+    2767,
+    5781
+   ],
+   "razon": "El libro afirma que eliminar proactivamente las condiciones latentes es la mejor vía, priorizando las más urgentes porque contribuyen a múltiples accidentes futuros."
+  },
+  {
+   "id": "P8C0A1A",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4221,
+    4223,
+    4244,
+    4219
+   ],
+   "razon": "El libro dice que esos éxitos regulatorios valen para accidentes individuales con peligros conocidos, y que su especificidad no se transfiere a accidentes organizacionales. Extraer principios aplicables contradice esa limitación."
+  }
+ ]
+}

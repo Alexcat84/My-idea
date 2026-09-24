@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_017",
+  "intento": 0,
+  "usd": 0.14532799999999998,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32442,
+  "tokens_out": 778,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PB0C59C\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2890, 2892], \"razon\": \"El libro señala como defecto de la gestión de errores habitual no distinguir bien entre factores causales aleatorios y sistemáticos. El paso recoge esa recomendación implícita.\"},\n{\"id\": \"PD48BA0\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5041, 5043, 5055, 1539], \"razon\": \"El libro indica que las preguntas clave del árbol de decisión tratan de la intención. Si acción y consecuencia fueron intencionadas, se trata de sabotaje o conducta criminal.\"},\n{\"id\": \"P2728DF\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2977, 3817, 2905, 4987, 5077], \"razon\": \"El libro dice que el castigo tiene eficacia limitada y que el error exige explicar su contexto. También admite sancionar a los pocos culpables, y el paso no elimina esa sanción.\"},\n{\"id\": \"PDFAB93\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2596, 2598, 582, 5781, 3209], \"razon\": \"El libro compara la gestión de seguridad con un programa de fitness a largo plazo. Pide medir y mejorar regularmente los procesos, de forma continua.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PB0C59C",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2890,
+    2892
+   ],
+   "razon": "El libro señala como defecto de la gestión de errores habitual no distinguir bien entre factores causales aleatorios y sistemáticos. El paso recoge esa recomendación implícita."
+  },
+  {
+   "id": "PD48BA0",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5041,
+    5043,
+    5055,
+    1539
+   ],
+   "razon": "El libro indica que las preguntas clave del árbol de decisión tratan de la intención. Si acción y consecuencia fueron intencionadas, se trata de sabotaje o conducta criminal."
+  },
+  {
+   "id": "P2728DF",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2977,
+    3817,
+    2905,
+    4987,
+    5077
+   ],
+   "razon": "El libro dice que el castigo tiene eficacia limitada y que el error exige explicar su contexto. También admite sancionar a los pocos culpables, y el paso no elimina esa sanción."
+  },
+  {
+   "id": "PDFAB93",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2596,
+    2598,
+    582,
+    5781,
+    3209
+   ],
+   "razon": "El libro compara la gestión de seguridad con un programa de fitness a largo plazo. Pide medir y mejorar regularmente los procesos, de forma continua."
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_005",
+  "intento": 0,
+  "usd": 0.158728,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 16.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33612,
+  "tokens_out": 1214,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P04CB03\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [990, 992, 1006, 1571, 1573, 1724], \"razon\": \"Va en la dirección del libro (reglas malas, sobreespecificación). Pero el libro dice que los procedimientos nunca cubrirán toda la variedad; redactar más reglas por cada condición podría recrear la sobreespecificación.\"},\n  {\"id\": \"P3C6EAE\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5834, 5892], \"razon\": \"El libro dice que al costo de un accidente hay que sumar daño a la reputación, pérdida de negocio, dificultades de reclutamiento y baja moral.\"},\n  {\"id\": \"PADA820\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [192, 198, 202, 425, 427, 3784], \"razon\": \"La Tabla 2.1 del libro resume por separado fallas activas y condiciones latentes; Tripod-Beta también separa fallas activas y latentes por cada defensa fallida.\"},\n  {\"id\": \"P5481DB\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4314, 2748, 2581], \"razon\": \"Robens: las buenas intenciones del consejo sirven de poco si los mandos inferiores solo atienden la producción. El libro sitúa las tres C en toda la organización.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P04CB03",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    990,
+    992,
+    1006,
+    1571,
+    1573,
+    1724
+   ],
+   "razon": "Va en la dirección del libro (reglas malas, sobreespecificación). Pero el libro dice que los procedimientos nunca cubrirán toda la variedad; redactar más reglas por cada condición podría recrear la sobreespecificación."
+  },
+  {
+   "id": "P3C6EAE",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5834,
+    5892
+   ],
+   "razon": "El libro dice que al costo de un accidente hay que sumar daño a la reputación, pérdida de negocio, dificultades de reclutamiento y baja moral."
+  },
+  {
+   "id": "PADA820",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    192,
+    198,
+    202,
+    425,
+    427,
+    3784
+   ],
+   "razon": "La Tabla 2.1 del libro resume por separado fallas activas y condiciones latentes; Tripod-Beta también separa fallas activas y latentes por cada defensa fallida."
+  },
+  {
+   "id": "P5481DB",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4314,
+    2748,
+    2581
+   ],
+   "razon": "Robens: las buenas intenciones del consejo sirven de poco si los mandos inferiores solo atienden la producción. El libro sitúa las tres C en toda la organización."
+  }
+ ]
+}

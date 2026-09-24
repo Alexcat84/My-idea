@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_063",
+  "intento": 0,
+  "usd": 0.160376,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33434,
+  "tokens_out": 1332,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P9DECCD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5641, 5643, 5649, 5675, 5907], \"razon\": \"El libro dice que el modelo de persona no sirve para errores de operadores clave, condiciones latentes ni riesgos a terceros, y explica por qué seduce.\"},\n  {\"id\": \"P289002\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2720, 3332, 2724], \"razon\": \"El libro enumera esos factores locales como medibles (MESH los evalúa). El paso no los presenta como prioridad sobre los factores organizacionales.\"},\n  {\"id\": \"P4D51E7\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4502, 4500, 3075, 2724, 2905], \"razon\": \"El libro dice que eliminar las instancias una por una no mejora la salud de seguridad; la reparación local es un bucle subordinado y hay que curar las causas de fondo.\"},\n  {\"id\": \"P317177\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5037, 5057, 5063, 2905, 5907, 5641], \"razon\": \"El libro da criterios de culpabilidad (prueba de sustitución), pero siempre exige buscar causas sistémicas; separar persona y sistema puede llevar a omitir el sistema.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P9DECCD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5641,
+    5643,
+    5649,
+    5675,
+    5907
+   ],
+   "razon": "El libro dice que el modelo de persona no sirve para errores de operadores clave, condiciones latentes ni riesgos a terceros, y explica por qué seduce."
+  },
+  {
+   "id": "P289002",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2720,
+    3332,
+    2724
+   ],
+   "razon": "El libro enumera esos factores locales como medibles (MESH los evalúa). El paso no los presenta como prioridad sobre los factores organizacionales."
+  },
+  {
+   "id": "P4D51E7",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4502,
+    4500,
+    3075,
+    2724,
+    2905
+   ],
+   "razon": "El libro dice que eliminar las instancias una por una no mejora la salud de seguridad; la reparación local es un bucle subordinado y hay que curar las causas de fondo."
+  },
+  {
+   "id": "P317177",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5037,
+    5057,
+    5063,
+    2905,
+    5907,
+    5641
+   ],
+   "razon": "El libro da criterios de culpabilidad (prueba de sustitución), pero siempre exige buscar causas sistémicas; separar persona y sistema puede llevar a omitir el sistema."
+  }
+ ]
+}

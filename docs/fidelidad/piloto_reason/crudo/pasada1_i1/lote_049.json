@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_049",
+  "intento": 0,
+  "usd": 0.151256,
+  "turnos": 1,
+  "duracion_s": 10.8,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33139,
+  "tokens_out": 935,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P30BA1D\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5582, 5639, 5641, 2876, 2905, 2973, 1820], \"razon\": \"El libro dice que un error aislado difícilmente causa un accidente organizacional y que el riesgo universal son las condiciones latentes. Critica centrarse en fallos activos del personal de primera línea.\"},\n  {\"id\": \"P30FF84\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2888, 2905, 2909, 2924, 5661], \"razon\": \"El libro rechaza términos culpabilizadores como 'carelessness' y explica el error fundamental de atribución. Un acto descuidado no implica una persona descuidada.\"},\n  {\"id\": \"PB907F0\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [3163, 3199, 3213, 3224], \"razon\": \"Los indicadores de Tripod-Delta los crean especialistas de la tarea que trabajan en el día a día. El instrumento es bottom-up y pertenece a quienes hacen el trabajo central, no a expertos externos.\"},\n  {\"id\": \"P1212A5\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2594, 2596, 2598, 3055], \"razon\": \"El libro critica las metas de reducción de accidentes y aconseja medir y mejorar regularmente los procesos manejables, como diseño, entrenamiento, procedimientos y mantenimiento.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P30BA1D",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5582,
+    5639,
+    5641,
+    2876,
+    2905,
+    2973,
+    1820
+   ],
+   "razon": "El libro dice que un error aislado difícilmente causa un accidente organizacional y que el riesgo universal son las condiciones latentes. Critica centrarse en fallos activos del personal de primera línea."
+  },
+  {
+   "id": "P30FF84",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2888,
+    2905,
+    2909,
+    2924,
+    5661
+   ],
+   "razon": "El libro rechaza términos culpabilizadores como 'carelessness' y explica el error fundamental de atribución. Un acto descuidado no implica una persona descuidada."
+  },
+  {
+   "id": "PB907F0",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    3163,
+    3199,
+    3213,
+    3224
+   ],
+   "razon": "Los indicadores de Tripod-Delta los crean especialistas de la tarea que trabajan en el día a día. El instrumento es bottom-up y pertenece a quienes hacen el trabajo central, no a expertos externos."
+  },
+  {
+   "id": "P1212A5",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2594,
+    2596,
+    2598,
+    3055
+   ],
+   "razon": "El libro critica las metas de reducción de accidentes y aconseja medir y mejorar regularmente los procesos manejables, como diseño, entrenamiento, procedimientos y mantenimiento."
+  }
+ ]
+}

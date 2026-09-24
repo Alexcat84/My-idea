@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_096",
+  "intento": 0,
+  "usd": 0.14967999999999998,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31275,
+  "tokens_out": 1229,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P408735\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [198, 202, 580, 2724, 5559, 5781], \"razon\": \"El libro sitúa el origen de las condiciones latentes en decisiones de niveles superiores (diseño, capacitación, recursos, dotación) y recomienda identificarlas y corregirlas proactivamente.\"},\n{\"id\": \"P8B4DE5\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [2107, 2170, 2250, 2491], \"razon\": \"El libro no habla de métricas de seguimiento. Prefiere identificar de antemano los pasos propensos a omisión mediante análisis de tareas; contar resultados negativos tiene límites como indicador.\"},\n{\"id\": \"P82616F\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [819, 2656, 2671, 2675], \"razon\": \"El libro presenta incidentes y casi-accidentes como 'free lessons' que vacunan al sistema, revelando fortalezas y debilidades de sus defensas.\"},\n{\"id\": \"PD18BD9\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [565, 567, 569, 5779, 5781], \"razon\": \"El paso pone el foco en disparadores locales (fauna, clima). El libro dice que estos son difíciles de anticipar y que la mejor vía es atacar la condición latente, aquí el diseño original.\"}]",
+ "parseado": [
+  {
+   "id": "P408735",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    198,
+    202,
+    580,
+    2724,
+    5559,
+    5781
+   ],
+   "razon": "El libro sitúa el origen de las condiciones latentes en decisiones de niveles superiores (diseño, capacitación, recursos, dotación) y recomienda identificarlas y corregirlas proactivamente."
+  },
+  {
+   "id": "P8B4DE5",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    2107,
+    2170,
+    2250,
+    2491
+   ],
+   "razon": "El libro no habla de métricas de seguimiento. Prefiere identificar de antemano los pasos propensos a omisión mediante análisis de tareas; contar resultados negativos tiene límites como indicador."
+  },
+  {
+   "id": "P82616F",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    819,
+    2656,
+    2671,
+    2675
+   ],
+   "razon": "El libro presenta incidentes y casi-accidentes como 'free lessons' que vacunan al sistema, revelando fortalezas y debilidades de sus defensas."
+  },
+  {
+   "id": "PD18BD9",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    565,
+    567,
+    569,
+    5779,
+    5781
+   ],
+   "razon": "El paso pone el foco en disparadores locales (fauna, clima). El libro dice que estos son difíciles de anticipar y que la mejor vía es atacar la condición latente, aquí el diseño original."
+  }
+ ]
+}

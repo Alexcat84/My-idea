@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_092",
+  "intento": 0,
+  "usd": 0.155656,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32894,
+  "tokens_out": 1204,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA8F90B\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2905, 293, 2944, 5748, 582, 291], \"razon\": \"El libro pide explicar el error por su contexto, pero advierte rendimientos decrecientes al buscar factores contribuyentes y recursos limitados. 'Cadena completa' para 'cada error' podría chocar.\"},\n  {\"id\": \"PA67B45\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2936, 2957, 2924], \"razon\": \"El libro enumera literalmente entre los hechos para romper el ciclo que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato del individuo.\"},\n  {\"id\": \"P66FA63\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [198, 202, 200, 293, 582, 5748], \"razon\": \"El origen en decisiones superiores está respaldado. Pero el libro describe una relación muchos-a-muchos, dice que no siempre son malas decisiones y pide priorizar las peores, no rastrear cada una.\"},\n  {\"id\": \"P6325AC\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3623, 3629, 3633, 3637, 3829, 4433], \"razon\": \"Paso vago. 'Cumplimiento normativo' puede leerse como cumplimiento legal o regulatorio, no como las condiciones productoras de violación de procedimientos seguros del nodo. Posible desvío del sentido.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA8F90B",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2905,
+    293,
+    2944,
+    5748,
+    582,
+    291
+   ],
+   "razon": "El libro pide explicar el error por su contexto, pero advierte rendimientos decrecientes al buscar factores contribuyentes y recursos limitados. 'Cadena completa' para 'cada error' podría chocar."
+  },
+  {
+   "id": "PA67B45",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2936,
+    2957,
+    2924
+   ],
+   "razon": "El libro enumera literalmente entre los hechos para romper el ciclo que las acciones humanas están casi siempre limitadas por factores fuera del control inmediato del individuo."
+  },
+  {
+   "id": "P66FA63",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    198,
+    202,
+    200,
+    293,
+    582,
+    5748
+   ],
+   "razon": "El origen en decisiones superiores está respaldado. Pero el libro describe una relación muchos-a-muchos, dice que no siempre son malas decisiones y pide priorizar las peores, no rastrear cada una."
+  },
+  {
+   "id": "P6325AC",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3623,
+    3629,
+    3633,
+    3637,
+    3829,
+    4433
+   ],
+   "razon": "Paso vago. 'Cumplimiento normativo' puede leerse como cumplimiento legal o regulatorio, no como las condiciones productoras de violación de procedimientos seguros del nodo. Posible desvío del sentido."
+  }
+ ]
+}

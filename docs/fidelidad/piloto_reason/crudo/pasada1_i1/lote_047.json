@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_047",
+  "intento": 0,
+  "usd": 0.15449200000000002,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32078,
+  "tokens_out": 1309,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE7E2F5\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [584, 594, 5134, 4753, 4757], \"razon\": \"El libro presenta la 'chronic unease' como el precio de la seguridad y advierte contra 'olvidar tener miedo'. Aconseja mantener la cautela, sobre todo con datos de incidentes.\"},\n  {\"id\": \"PDB8354\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [3393, 3395, 3587, 3589, 3591, 3623], \"razon\": \"Williams y HEART emparejan la actividad con conductas genéricas de violación (Tabla 7.3) para asignar probabilidades nominales. Clasificar según esas categorías sigue ese método.\"},\n  {\"id\": \"P22FCF7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [401, 423, 451], \"razon\": \"El libro señala como grieta que no hubiera procedimiento de traspaso ni 'stage sheets' y que el briefing fuera verbal y no escrito.\"},\n  {\"id\": \"PF25D58\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [864, 868, 908, 922, 934, 942], \"razon\": \"Woods y Sarter señalan los modos múltiples y la mayor flexibilidad como fuentes de confusión. Inventariar los modos va en esa dirección y no choca con el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE7E2F5",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    584,
+    594,
+    5134,
+    4753,
+    4757
+   ],
+   "razon": "El libro presenta la 'chronic unease' como el precio de la seguridad y advierte contra 'olvidar tener miedo'. Aconseja mantener la cautela, sobre todo con datos de incidentes."
+  },
+  {
+   "id": "PDB8354",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    3393,
+    3395,
+    3587,
+    3589,
+    3591,
+    3623
+   ],
+   "razon": "Williams y HEART emparejan la actividad con conductas genéricas de violación (Tabla 7.3) para asignar probabilidades nominales. Clasificar según esas categorías sigue ese método."
+  },
+  {
+   "id": "P22FCF7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    401,
+    423,
+    451
+   ],
+   "razon": "El libro señala como grieta que no hubiera procedimiento de traspaso ni 'stage sheets' y que el briefing fuera verbal y no escrito."
+  },
+  {
+   "id": "PF25D58",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    864,
+    868,
+    908,
+    922,
+    934,
+    942
+   ],
+   "razon": "Woods y Sarter señalan los modos múltiples y la mayor flexibilidad como fuentes de confusión. Inventariar los modos va en esa dirección y no choca con el libro."
+  }
+ ]
+}
