@@ -1,8 +1,13 @@
-CONTRARIOS: 4 en total, 1 de la fase 1 y 3 de la fase 2: `prevalencia_omisiones` paso 2 (Reason), `tecnicas_para_sacar_riesgos_a_la_luz` paso 1 (Edwards), `calibra_tu_propio_ojo` paso 3 (Hubbard) y `adaptaciones_sectoriales_iso` paso 4 (Juran). Por la politica del fundador, los cuatro se corrigen; los INFERIDOS se toleran. Lista completa, con cita y paso fiel, en la seccion 11.4.
+CONTRARIOS: 5 en total: `prevalencia_omisiones` paso 2 (Reason), `tecnicas_para_sacar_riesgos_a_la_luz` paso 1 (Edwards), `calibra_tu_propio_ojo` paso 3 (Hubbard), `adaptaciones_sectoriales_iso` paso 4 (Juran) y `la_matriz_de_colores_te_engana` paso 3 (Hubbard). Se corrigen siempre. Lista y fichas en las secciones 11.4 y 11.8.
 
-ANADIDOS: 15 pasos INFERIDO-ANADIDO a corregir (regla del fundador del 25 sep), mas 6 PENDIENTES de decision en `decision_de_vender_startup`, cuya segunda fuente (Horowitz) no esta entre las permitidas. Los otros 170 INFERIDOS son OPERATIVOS y se quedan. Lista y fichas de correccion listas para aplicar en las secciones 11.4 y 11.8; particion completa en la seccion 13.
+ANADIDOS: 22 pasos INFERIDO-ANADIDO a corregir: 10 de Reason, 8 de Assembling Tomorrow, 2 de Edwards, 1 de Cradle to Cradle y 1 de Blank. Lista en la seccion 11.4b; fichas con el texto corregido en la seccion 11.8. Los otros 151 INFERIDOS son OPERATIVOS y se quedan.
 
-NECESITO AL FUNDADOR (fase 1 mas fase 2): 9 libros siguen sobre el umbral del encargo. Cuatro tienen un CONTRARIO: Reason, Edwards, Hubbard y Juran. Cinco pasan solo por INFERIDOS por encima del 10 por ciento: Assembling Tomorrow, Voss, Cradle to Cradle, Wasserman y couriers. Blank baja al 4,2 por ciento (1 de 24) y sale del umbral.
+PENDIENTES DE DECISION DEL FUNDADOR: 1. Es `analisis_trafico_competitivo` paso 1 (Blank, AdRoll y Adbeat), ficha A15, con tres opciones. Los seis pendientes de `decision_de_vender_startup` se cerraron al leer Horowitz: el libro los respalda y pasan a FIEL.
+
+NECESITO AL FUNDADOR (fase 1 mas fase 2, tras la reconciliacion): 8 libros siguen sobre el umbral del encargo.
+- Con algun CONTRARIO: Reason, Edwards, Hubbard (con dos) y Juran.
+- Solo por INFERIDOS por encima del 10 por ciento: Assembling Tomorrow, Voss, Cradle to Cradle y couriers.
+- Salen del umbral Wasserman (8,6 por ciento, al leer Horowitz) y Blank (4,2 por ciento).
 
 # MUESTREO DE FIDELIDAD: RESUMEN DE LAS DOS FASES
 
@@ -17,41 +22,53 @@ NECESITO AL FUNDADOR (fase 1 mas fase 2): 9 libros siguen sobre el umbral del en
 >
 > Los CONTRARIOS siguen siendo la prioridad absoluta.
 
-Este informe no corrige nada en `dataset/`. Para cada CONTRARIO y cada ANADIDO trae una ficha de correccion completa (seccion 11.8): el texto actual, el texto corregido listo para pegar, y la linea del libro que lo sostiene. Asi la tanda de correcciones no tiene que volver a abrir los libros.
+**Este informe no toca `dataset/`.** Para cada CONTRARIO y cada ANADIDO trae una ficha de correccion completa (seccion 11.8), para que la tanda de correcciones no tenga que volver a abrir los libros:
+- el texto actual;
+- el texto corregido, listo para pegar;
+- la linea del libro que lo sostiene, comprobada por script;
+- los otros campos del nodo que repiten el dato.
 
-**Fase 2 en pocas lineas.** Se leyeron 838 pasos mas, de 182 nodos:
-- el censo de los vivos de Reason (90 nodos y 403 pasos, contando los 2 de la fase 1) y de Assembling Tomorrow (64 nodos y 295 pasos);
-- 4 nodos mas de cada uno de los otros ocho libros sobre el umbral (couriers solo tenia 2 vivos restantes);
-- la relectura del nodo de couriers de la fase 1 contra las guias originales, que da los mismos cuatro veredictos.
+**Fase 2 en pocas lineas.**
+- **Lectura:** 838 pasos mas, de 182 nodos. Es el censo de los vivos de Reason (90 nodos y 403 pasos, contando los 2 de la fase 1) y de Assembling Tomorrow (64 nodos y 295 pasos), mas 4 nodos de cada uno de los otros ocho libros sobre el umbral (couriers, 2) y la relectura del nodo de couriers de la fase 1 contra las guias originales. Leyeron siete lectores en paralelo mas el integrador.
+- **Tarea 1:** el segundo lector ciego coincide en 21 de 22 pasos. `folleto_franquicia` paso 3 se adjudica FIEL (Siebert L3380).
+- **Particion OPERATIVO/ANADIDO:** la hicieron dos clasificadores, el integrador y uno ciego. Coinciden en 167 de 191 (87,4 por ciento; kappa 0,54, IC95 0,39 a 0,67). Los 24 desacuerdos se resolvieron releyendo el libro (seccion 13.5).
+- **Fuentes nuevas:** con Horowitz y Dekker, autorizadas por el fundador en solo lectura, y con tres citas de Cradle to Cradle que nadie habia visto, 17 INFERIDOS pasan a FIEL. Uno sube a CONTRARIO.
 
-Leyeron siete lectores en paralelo mas el integrador, con la vara de la seccion 3. Sale lo siguiente:
-- **Contrarios nuevos:** 3, cada uno comprobado por el integrador contra el libro.
-- **Tarea 1:** el segundo lector ciego coincide con la fase 1 en 21 de los 22 pasos marcados. El unico desacuerdo se adjudica a su favor: `folleto_franquicia` paso 3 pasa a FIEL, con la linea 3380 de Siebert. Con ese cambio, la tasa global de la fase 1 queda en 20 INFERIDOS de 138 pasos, 14,5 por ciento (Wilson 95: 9,6 a 21,3).
+**Cuatro veredictos, definitivos.**
+- **Muestra aleatoria de la fase 1** (138 pasos; es el unico estimador del catalogo):
 
-**Cuatro veredictos (regla del 25 sep).** En la muestra aleatoria de la fase 1, el unico estimador del catalogo (138 pasos): FIEL 117 (84,8 por ciento, Wilson 95: 77,9 a 89,8), INFERIDO-OPERATIVO 18 (13,0 por ciento, 8,4 a 19,7), INFERIDO-ANADIDO 2 (1,4 por ciento, 0,4 a 5,1) y CONTRARIO 1 (0,7 por ciento, 0,1 a 4,0). En todo lo leido en las dos fases (972 pasos, que no es muestra del catalogo): 777 FIEL, 170 OPERATIVOS, 15 ANADIDOS, 4 CONTRARIOS y 6 PENDIENTES. El detalle por libro, por mundo y global esta en la seccion 13.3.
+| veredicto | pasos | por ciento | Wilson 95 |
+|---|---:|---:|---|
+| FIEL | 118 | 85,5 | 78,7 a 90,4 |
+| INFERIDO-OPERATIVO | 17 | 12,3 | 7,8 a 18,8 |
+| INFERIDO-ANADIDO | 2 | 1,4 | 0,4 a 5,1 |
+| CONTRARIO | 1 | 0,7 | 0,1 a 4,0 |
 
-**Tasas actualizadas de los diez libros que pasaban el umbral** (fase 1 mas fase 2, Wilson al 95 por ciento; el detalle completo, con los 23 libros, esta en la seccion 11.5):
+- **Todo lo leido en las dos fases** (972 pasos; no es muestra del catalogo): 794 FIEL, 151 OPERATIVOS, 22 ANADIDOS y 5 CONTRARIOS.
+- El detalle por libro, por mundo y global esta en la seccion 13.3.
 
-| libro | nodos | pasos | INFERIDO por paso | CONTRARIO por paso | nodos con algun INFERIDO | nodos con algun CONTRARIO | umbral |
+**Tasas definitivas de los libros que pasaban el umbral** (fase 1 mas fase 2, Wilson al 95 por ciento):
+
+| libro | nodos | pasos | INFERIDO por paso (OPERATIVO mas ANADIDO) | de ellos ANADIDO | CONTRARIO por paso | nodos con algun INFERIDO | umbral |
 |---|---:|---:|---|---|---|---|---|
-| Reason (censo) | 90 | 403 | 71/403 = 17,6% [14,2, 21,6] | 1/403 = 0,2% [0,0, 1,4] | 37/90 = 41,1% [31,5, 51,4] | 1/90 = 1,1% [0,2, 6,0] | SI (y CONTRARIO) |
-| Assembling Tomorrow (censo) | 64 | 295 | 64/295 = 21,7% [17,4, 26,7] | 0/295 [0,0, 1,3] | 37/64 = 57,8% [45,6, 69,1] | 0/64 [0,0, 5,7] | SI |
-| Voss | 5 | 24 | 10/24 = 41,7% [24,5, 61,2] | 0/24 [0,0, 13,8] | 5/5 [56,6, 100] | 0/5 [0,0, 43,4] | SI |
-| Cradle to Cradle | 6 | 24 | 10/24 = 41,7% [24,5, 61,2] | 0/24 [0,0, 13,8] | 4/6 [30,0, 90,3] | 0/6 [0,0, 39,0] | SI |
-| Edwards | 5 | 21 | 8/21 = 38,1% [20,8, 59,1] | 1/21 = 4,8% [0,8, 22,7] | 5/5 [56,6, 100] | 1/5 [3,6, 62,4] | SI (y CONTRARIO) |
-| Hubbard | 5 | 20 | 6/20 = 30,0% [14,5, 51,9] | 1/20 = 5,0% [0,9, 23,6] | 4/5 [37,6, 96,4] | 1/5 [3,6, 62,4] | SI (y CONTRARIO) |
-| Juran | 6 | 29 | 4/29 = 13,8% [5,5, 30,6] | 1/29 = 3,4% [0,6, 17,2] | 2/6 [9,7, 70,0] | 1/6 [3,0, 56,4] | SI (y CONTRARIO) |
-| Wasserman | 6 | 35 | 14/35 = 40,0% [25,6, 56,4] | 0/35 [0,0, 9,9] | 3/6 [18,8, 81,2] | 0/6 [0,0, 39,0] | SI |
-| Wasserman sin `decision_de_vender_startup` (fuente doble, ver 11.7) | 5 | 20 | 3/20 = 15,0% [5,2, 36,0] | 0/20 [0,0, 16,1] | 2/5 [11,8, 76,9] | 0/5 [0,0, 43,4] | SI |
-| couriers | 3 | 14 | 2/14 = 14,3% [4,0, 39,9] | 0/14 [0,0, 21,5] | 2/3 [20,8, 93,9] | 0/3 [0,0, 56,1] | SI |
-| Blank | 5 | 24 | 1/24 = 4,2% [0,7, 20,2] | 0/24 [0,0, 13,8] | 1/5 [3,6, 62,4] | 0/5 [0,0, 43,4] | no |
+| Reason (censo) | 90 | 403 | 68/403 = 16,9% [13,5, 20,8] | 10/403 = 2,5% [1,4, 4,5] | 1/403 = 0,2% [0,0, 1,4] | 37/90 [31,5, 51,4] | SI (y CONTRARIO) |
+| Assembling Tomorrow (censo) | 64 | 295 | 64/295 = 21,7% [17,4, 26,7] | 8/295 = 2,7% [1,4, 5,3] | 0/295 [0,0, 1,3] | 37/64 [45,6, 69,1] | SI |
+| Voss | 5 | 24 | 10/24 = 41,7% [24,5, 61,2] | 0/24 [0,0, 13,8] | 0/24 [0,0, 13,8] | 5/5 [56,6, 100] | SI |
+| Cradle to Cradle | 6 | 24 | 7/24 = 29,2% [14,9, 49,2] | 1/24 = 4,2% [0,7, 20,2] | 0/24 [0,0, 13,8] | 3/6 [18,8, 81,2] | SI |
+| Edwards | 5 | 21 | 8/21 = 38,1% [20,8, 59,1] | 2/21 = 9,5% [2,7, 28,9] | 1/21 = 4,8% [0,8, 22,7] | 5/5 [56,6, 100] | SI (y CONTRARIO) |
+| Hubbard | 5 | 20 | 5/20 = 25,0% [11,2, 46,9] | 0/20 [0,0, 16,1] | 2/20 = 10,0% [2,8, 30,1] | 3/5 [23,1, 88,2] | SI (y dos CONTRARIOS) |
+| Juran | 6 | 29 | 4/29 = 13,8% [5,5, 30,6] | 0/29 [0,0, 11,7] | 1/29 = 3,4% [0,6, 17,2] | 2/6 [9,7, 70,0] | SI (y CONTRARIO) |
+| couriers | 3 | 14 | 2/14 = 14,3% [4,0, 39,9] | 0/14 [0,0, 21,5] | 0/14 [0,0, 21,5] | 2/3 [20,8, 93,9] | SI |
+| Wasserman | 6 | 35 | 3/35 = 8,6% [3,0, 22,4] | 0/35 [0,0, 9,9] | 0/35 [0,0, 9,9] | 2/6 [9,7, 70,0] | no |
+| Blank | 5 | 24 | 1/24 = 4,2% [0,7, 20,2] | 1/24 = 4,2% [0,7, 20,2] | 0/24 [0,0, 13,8] | 1/5 [3,6, 62,4] | no |
 
 **Hashes de la rama `muestreo-fidelidad`:**
 - Pre-registro de la fase 1: `c038586dc3e64e2b998c78b64a517b55905785c5`.
 - Resultado de la fase 1: `23e5908edda5c094cd694c111c4084d6c5c624c3`.
 - Pre-registro de la fase 2: `cfaba6d514cea5ff58bc31c6f8d3b3fd423004a8`.
 - Salida del sorteo de la fase 2: `aff61e8b25583c2ce5a447eebd8a5ae2173f4480`.
-- Resultado de la fase 2: el commit que anade este bloque (su hash va en el mensaje de cierre).
+- Primera integracion de la fase 2: `1d0053e3ed0acc6e41867431b01024444ac35109`.
+- Cierre de la particion y de las fichas: el commit que anade este bloque (su hash va en el mensaje de cierre).
 
 ---
 
@@ -838,7 +855,7 @@ En los dos libros del censo, los lectores que se repartieron el mismo libro dan 
 - **Edwards (tarea 3):** 4 nodos, 17 pasos, 7 INFERIDOS y 1 CONTRARIO (`tecnicas_para_sacar_riesgos_a_la_luz` paso 1).
 - **Hubbard (tarea 3):** 4 nodos, 16 pasos, 5 INFERIDOS y 1 CONTRARIO (`calibra_tu_propio_ojo` paso 3).
 - **Juran (tarea 3):** 4 nodos, 21 pasos, 2 INFERIDOS y 1 CONTRARIO (`adaptaciones_sectoriales_iso` paso 4).
-- **Wasserman (tarea 3):** 4 nodos, 27 pasos y 13 INFERIDOS. De esos 13, 11 son de un solo nodo, `decision_de_vender_startup` (15 pasos), cuya fuente es doble (Wasserman y Horowitz) y solo se leyo contra Wasserman (seccion 11.7).
+- **Wasserman (tarea 3):** 4 nodos, 27 pasos y 13 INFERIDOS en la lectura. De esos 13, 11 son de un solo nodo, `decision_de_vender_startup` (15 pasos), cuya fuente es doble (Wasserman y Horowitz). Al leer Horowitz, autorizado despues, los 11 pasan a FIEL (seccion 13.5), y Wasserman baja a 3 de 35.
 - **Blank (tarea 3).**
   - 4 nodos y 20 pasos, todos FIEL.
   - Edicion: el txt es el de 2012 (prefacio "Pescadero, Calif., March 2012", L119). Ninguno de los 4 nodos nuevos nombra herramientas o datos que falten en ese texto.
@@ -857,6 +874,7 @@ El integrador comprobo cada cita contra el libro antes de publicarla (lineas del
 | 2 | `tecnicas_para_sacar_riesgos_a_la_luz` (risk_management). Edwards et al., Managing Project Risks, cap. 6, "6.2 Approach to Risk Identification" | 1. Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione. | L3002: "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone! We repeat our earlier contention that 'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement."; L3000: "'Free-wheeling' approaches are unlikely to yield consistently adequate results." | Texto corregido (ficha C2): Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo. | Fase 2, lector B1 |
 | 3 | `calibra_tu_propio_ojo` (risk_management). Hubbard, The Failure of Risk Management, cap. 7 "The Limits of Expert Knowledge" y cap. 11 "Starting with What Works" | 3. Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado. | L3916: "Even with this small sample, if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident."; L2120: "the most common result if everyone were calibrated is to get a score of 9 out of 10... Just by chance, we would expect some to get 8 or 10 but six or less would be rare." Matiz: L3960 dice "you are calibrated when you get about 90 percent of the answers within your 90 percent CI", que apoya la meta pero no el umbral de sobreconfianza con diez preguntas. | Texto corregido (ficha C3): Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado. | Fase 2, lector B2 |
 | 4 | `adaptaciones_sectoriales_iso` (quality). Juran's Quality Handbook, cap. 11 "ISO 9000 Quality Management System" | 4. Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000 | L11036: "The ISO 14000 is a standard for an environmental management system. It is applicable to any business, regardless of size, location, or industry."; L11038: "cGMP refers to the Current Good Manufacturing Practice regulations enforced by the U.S. Food and Drug Administration (FDA)."; L11378: "The FDA inspects pharmaceutical manufacturing facilities worldwide... to evaluate whether the organization is following cGMP regulations."; L11399: "businesses had a choice between either ISO 9001 or TS 16949." | Texto corregido (ficha C4): Certifica bajo la norma sectorial de tu industria cuando exista, por ejemplo ISO/TS 16949 en automocion o AS9100 en aeroespacial; las cGMP no se certifican: las verifica la FDA inspeccionando | Fase 2, lector B2 |
+| 5 | `la_matriz_de_colores_te_engana` (risk_management). Hubbard, The Failure of Risk Management, cap. 7 "The Limits of Expert Knowledge" y cap. 8 "Worse Than Useless" | 3. Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir. | L2136: "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."; L2533: "he found they varied widely even when they were given specific guidelines for what these terms meant"; L2535: "detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice." | Texto corregido (ficha C5): No digas probabilidad media: di la probabilidad que estimas, como un porcentaje. | Fase 2: caso al limite del lector B2 que el clasificador ciego senalo; confirmado por el integrador en la seccion 13.5 |
 
 ### 11.4b Lista completa de ANADIDOS a corregir (regla del 25 sep)
 
@@ -878,24 +896,28 @@ Son los INFERIDOS que afirman un dato concreto que el libro no respalda. Cada un
 | 12 | A12 | `diseno_recordatorios_efectivos_2` (health_safety, Reason) | 1 | Identifica los pasos de tarea propensos a omisión revisando errores históricos | el criterio "revisando errores historicos" | L2250: "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses" | Identifica de antemano los pasos de tarea propensos a omisión contando sus rasgos: paso aislado, cerca del final, oculto o con varios elementos iguales |
 | 13 | A13 | `normalizacion_de_la_desviacion` (health_safety, Reason) | 6 | Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna | el revisor "un mentor o asesor" | L4446: "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around." | Busca una mirada externa, cercana a tu operación pero ajena a ella, que detecte las prácticas a las que ya te acostumbraste |
 | 14 | A14 | `prevalencia_omisiones` (health_safety, Reason) | 3 | Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica | el criterio "mayor tasa de omision historica" | L2250: "Having identified error-prone steps, remedial actions can then be taken to reduce the likelihood of these steps being left out." | Enfocar las intervenciones de mejora en los pasos con más rasgos que provocan omisiones, empezando por recordatorios adecuados |
-| 15 | A15 | `analisis_trafico_competitivo` (core, Blank) | 1 | Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat | las herramientas "AdRoll o Adbeat" | L8522: "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website" | OPCION A (dato del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico. |
+| 15 | A15 | `analisis_trafico_competitivo` (core, Blank) | 1 | Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat | las herramientas "AdRoll o Adbeat" | L8522: "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website" | OPCION A (nombres del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres, la que recomienda la sesion): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico. OPCION C (los actuales, declarando que no son del libro): Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat (ejemplos del catálogo, no del libro). |
+| 16 | A16 | `narrativa_como_herramienta_de_sentido` (core, Assembling Tomorrow) | 1 | Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional. | L2071: "stories train your attention on characters, conflict, and causes." La triada del libro es personajes, conflicto y causas, y la presenta como distorsion (L2075: "But it's still a distortion."); "resolucion" no esta (grep "resolution": solo L2690 y L2696, sobre la incomodidad). Dato anadido: la receta "personajes, conflicto y resolucion". | L2075: "Thinking in stories is very useful." | Al presentar un concepto de diseño o prototipo, apóyate en una historia para facilitar la comprensión y la conexión, sin olvidar que toda historia distorsiona. |
+| 17 | A17 | `cultura_como_mecanismo_descentralizacion` (health_safety, Reason) | 4 | Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas | grep "mentor/coach/apprentic": solo "stagecoach" (L238 a L242). El libro transmite la cultura por socializacion en premisas de decision (L5178), relatos o "war stories" (L5184) y formacion. Dato anadido: la mentoria como mecanismo. | L5178: "you first have to centralise so that people are socialised to use similar decision premises and assumptions" | Diseñar mecanismos de transmisión cultural (socialización en premisas de decisión compartidas, formación, relatos de experiencias) en lugar de solo reglas escritas |
+| 18 | A18 | `cultura_justa` (health_safety, Reason) | 3 | Capacitar a supervisores y gestores en la aplicación consistente de estos criterios | grep "supervisors and managers/training supervisors": 0. L5085: la consistencia la da "a structured methodology ... used by an organization's disciplinary review board". Dato anadido: el responsable "supervisores y gestores". | L5085: "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted." | Aplicar estos criterios de forma consistente con una herramienta estructurada común, como el árbol de decisión de culpabilidad, en la instancia que revise las acciones disciplinarias |
+| 19 | A19 | `fallo_regulatorio_por_recursos_insuficientes` (health_safety, Reason) | 2 | Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector | grep "industry standard/benchmark/industry norm": 0. El libro da ratios de casos (L3993: "about 2 per cent of NASA's 22 000 staff") y los juzga frente a recortes y carga. Dato anadido: la norma externa "estandares del sector". | L3993: "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent." | Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes |
+| 20 | A20 | `fijar_causa_ultimo_accidente_riesgo_siguiente` (health_safety, Reason) | 2 | Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos | grep "sensitivity analys": 0. La idea de fondo si esta (L1035). Dato anadido: la herramienta "analisis de sensibilidad". | L1035: "What proved to be an error in the TMI event turned out to be a vital step at Ginna." | Revisar cómo funcionaría cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro |
+| 21 | A21 | `gestion_falsas_alarmas` (health_safety, Reason) | 3 | Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada | grep "cross-check/double-check/two-person": solo L4972, ajeno (un copiloto que no vigilo al capitan). Dato anadido: el mecanismo "verificacion cruzada" contra la desactivacion "unilateral". | L1085: "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies." | Establecer protocolos para que una alarma crítica no se desactive solo porque se desconfía de ella |
+| 22 | A22 | `quality_control_vs_quality_assurance` (health_safety, Reason) | 4 | Implementar auditorías aleatorias sobre el trabajo firmado como conforme | grep "random (audit/check/sampl)/spot check": 0. Lo que el libro echa en falta es la inspeccion separada y el personal de QA (L971). Dato anadido: el metodo "auditorias aleatorias". | L971: "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service." | Comprobar mediante una inspección separada el trabajo firmado como conforme, en lugar de fiarse solo de la firma |
 
-### 11.4c PENDIENTES DE DECISION: `decision_de_vender_startup`
+### 11.4c PENDIENTES DE DECISION DEL FUNDADOR
 
-Este nodo cita dos libros, Wasserman y Horowitz (*The Hard Thing About Hard Things*), y solo Wasserman esta entre las fuentes permitidas. Seis de sus pasos traen datos que Wasserman no respalda, pero que pueden venir de Horowitz. No se cuentan como ANADIDOS: quedan como PENDIENTES, con dos opciones cada uno. La opcion A mantiene el paso si Horowitz lo respalda; la opcion B deja solo lo que sostiene Wasserman. Fichas P1 a P6 en la seccion 11.8.
+Queda uno: `analisis_trafico_competitivo` paso 1 (Blank), ficha A15, con tres opciones (seccion 11.8).
 
-| # | ficha | paso | texto actual | dato no respaldado por Wasserman | opcion B (solo Wasserman) y su cita |
-|---:|---|---:|---|---|---|
-| 1 | P1 | 6 | Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno | al menos diez veces mas grande y "jugador numero uno" | Evalúa con honestidad tu mercado real y tus competidores futuros, sin una imagen demasiado optimista del potencial de tu empresa (L3954: "They may have unduly rosy pictures of the startup’s potential, causing them to underestimate their upcoming growth challenges, to misread the competitive landscape") |
-| 2 | P2 | 7 | Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo | la clasificacion "talento y tecnologia, producto o negocio completo" | Averigua qué quiere el comprador, retener a tu equipo o reemplazarlo, porque eso cambia la estructura que te conviene: pago en efectivo o pago condicionado a resultados (earn-out) (L4002: "For an acquirer planning to replace the startup’s management with its own people, a cash-only deal often makes sense.") |
-| 3 | P3 | 8 | Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento | el "proceso corto y discreto de sondeo de M&A con varios compradores" | Si hay más de un comprador interesado, compara sus ofertas: precio, forma de pago y qué pasa contigo después de la venta (L4004: "the founders faced competing offers from two wireless companies") |
-| 4 | P4 | 10 | Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato | comunica ese precio con firmeza a todos los compradores y sostenlo, dispuesto a esperar | Sostén tu precio mínimo, pero ten presente el riesgo de esperar una oferta mejor que nunca llegue (L3954: "or to anticipate a better offer that never materializes") |
-| 5 | P5 | 11 | Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente | el horizonte "3 o 5 anos" | Compara las ofertas de adquisición con el valor que crees poder construir si sigues independiente (L3952: "Some believe they can still build significant value by remaining independent.") |
-| 6 | P6 | 14 | Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional | el responsable "tu consejo (board) y asesores de confianza" | Toma la decisión con análisis financiero y estratégico, reconociendo el peso que tienen en ella tu optimismo y tu apego a la empresa (L3954: "other founders’ decisions are driven by their optimism and passion") |
+Los seis pendientes de la primera integracion (`decision_de_vender_startup`, P1 a P6) se cerraron al leer Horowitz, que respalda cada paso (seccion 13.5). Pasan a FIEL y no llevan ficha.
+
+| ficha | nodo | paso | texto actual | opciones | nota |
+|---|---|---:|---|---|---|
+| A15 | `analisis_trafico_competitivo` | 1 | Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat | OPCION A (nombres del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres, la que recomienda la sesion): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico. OPCION C (los actuales, declarando que no son del libro): Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat (ejemplos del catálogo, no del libro). | Decide el fundador. Nota de conocimiento general, no del libro: Compete cerro en 2016 y Alexa en 2022, asi que la opcion A deja un paso fiel con herramientas que ya no existen. La sesion recomienda la B. |
 
 ### 11.5 Tasas actualizadas por libro (fase 1 mas fase 2) y script
 
-Se usa un solo veredicto por paso: el de la fase 1 para sus 138 pasos y el de la fase 2 para los demas. La relectura de couriers coincide con la fase 1 y no se cuenta dos veces. `folleto_franquicia` paso 3 queda adjudicado a FIEL (seccion 12).
+**Estas son las tasas de INFERIDO y CONTRARIO antes de reconciliar la particion (seccion 13).** Las definitivas, con los cuatro veredictos y con los cambios de la seccion 13.5 (17 INFERIDOS que pasan a FIEL, 1 que sube a CONTRARIO), estan en la seccion 13.3 y en el resumen. Aqui se usa un solo veredicto por paso: el de la fase 1 para sus 138 pasos y el de la fase 2 para los demas. La relectura de couriers coincide con la fase 1 y no se cuenta dos veces. `folleto_franquicia` paso 3 queda adjudicado a FIEL (seccion 12).
 
 Python 3.12.8. Script:
 
@@ -1004,13 +1026,17 @@ control wilson(2,10) (0.0567, 0.5098)
 
 Son pasos marcados INFERIDO que rozan la contradiccion. Con la vara del pre-registro no llegan a CONTRARIO, porque no hay una cita que los niegue de frente. Se listan para quien corrija:
 
-- **`arbol_decision_culpabilidad` paso 6** (Reason, R1; en la particion de la seccion 13 queda como ANADIDO, ficha A11). El paso da las categorias "criminal, negligente, violación con o sin mitigación, o error inducido por el sistema". En el libro, la mitigacion califica al abuso de sustancias, no a la violacion (L5053). Ademas falta la categoria del error sin culpa, donde cae "perhaps 90 per cent or more" (L5063).
+- **`arbol_decision_culpabilidad` paso 6** (Reason, R1). En la seccion 13 queda como ANADIDO (ficha A11): la mitigacion califica al abuso de sustancias, no a la violacion (L5053), y falta el error sin culpa, "perhaps 90 per cent or more" (L5063). Los dos clasificadores lo vieron rozando CONTRARIO; no llega, porque clasificar por culpabilidad es del libro (L5039).
 - **`redes_de_seguridad_regulatoria` paso 4** (Reason, R2). "Diseñar redundancia real entre capas de control" frente a L821, que advierte de los peligros de las defensas multicapa.
-- **`la_matriz_de_colores_te_engana` paso 3** (Hubbard, B2). El paso pide aclarar el rango de "probabilidad media". El libro manda sustituir la etiqueta por una probabilidad explicita (L2136: "there is no reason to ever use anything else") y advierte que definir rangos para las etiquetas no evita la mala interpretacion (L2617, L2533).
+- **`la_matriz_de_colores_te_engana` paso 3** (Hubbard): era caso al limite y en la seccion 13.5 **sube a CONTRARIO** (ficha C5).
 - **`preparate_para_marcharte_del_trato` paso 3** (Voss, B1). "Busca al menos una alternativa antes de sentarte" frente a L5225: "El problema de la BATNA es que hace que los negociadores tiren a la baja." El libro recela de preparar la BATNA, pero no prohibe tener alternativas.
 - **`medir_lo_que_importa_no_solo_lo_facil` paso 3** (Assembling Tomorrow, A2). "Diseña al menos una métrica proxy" frente a L3653, que advierte contra dar demasiado valor a una medida.
 - **`disenio_en_turbulencia` paso 3** (Assembling Tomorrow, A1). "Reparación rápida en vez de prevención total" frente a L4111, que pide prepararse "well before breaks happen".
 - **`economia_circular_de_la_imaginacion` paso 5** (Assembling Tomorrow, A1). Definir metricas de bienestar frente a L3657, que advierte contra convertir medidas en metas.
+- **Señalados por el clasificador ciego de la particion como rozando CONTRARIO, y que quedan como ANADIDO u OPERATIVO tras releer el libro (seccion 13.5):**
+  - `abrazar_la_incomodidad` paso 4: "despues de superar" frente a "linger in discomfort", L2688; ANADIDO, ficha A1;
+  - `narrativa_como_herramienta_de_sentido` paso 1: la triada con "resolucion" frente a "characters, conflict, and causes", L2071; ANADIDO, ficha A16;
+  - `reduce_el_riesgo_a_lo_razonable` paso 3: OPERATIVO, en la direccion de ALARP, L5797.
 - **De la fase 1 y del lector ciego:**
   - `autonomia_dependencia_regulatoria` paso 4 (Reason, L4265: leer la sancion blanda como fallo "is to miss the point");
   - `escepticismo_sano_ante_el_riesgo` paso 4 (Hubbard: su alternativa es un modelo cuantitativo simple, L946, no una nota);
@@ -1021,15 +1047,16 @@ Son pasos marcados INFERIDO que rozan la contradiccion. Con la vara del pre-regi
 
 1. **Un solo lector por paso.** Siete lectores mas el integrador, sin segundo juez salvo en los 22 pasos de la tarea 1. La consistencia entre lectores del mismo libro es buena (seccion 11.2), pero no se midio el acuerdo paso a paso.
 2. **El integrador no era ciego.** Leyo 40 nodos y 2 pasos de Reason conociendo los veredictos de la fase 1 de los 2 nodos de Reason ya leidos; esos 2 nodos no se releyeron. Los siete lectores no vieron ningun veredicto de la fase 1.
-3. **`decision_de_vender_startup` tiene fuente doble** (`The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Things - Ben Horowitz`) y solo se juzgo contra Wasserman: el libro de Horowitz no esta entre las fuentes permitidas. Sus 11 INFERIDOS (de 15 pasos) pueden estar en Horowitz. Por eso Wasserman se da tambien sin ese nodo: 3 de 20, 15,0 por ciento.
+3. **`decision_de_vender_startup` tiene fuente doble** (Wasserman y Horowitz). En la lectura solo se juzgo contra Wasserman. Despues el fundador autorizo Horowitz en solo lectura, y sus 11 INFERIDOS se releyeron contra el: los 11 pasan a FIEL (seccion 13.5).
 4. **Blank** es la edicion de 2012. No hay otra edicion entre las fuentes para contrastar las herramientas que nombra el nodo de la fase 1.
 5. **Couriers** se leyo contra las cinco guias originales, no contra la extraccion. La relectura del nodo de la fase 1 confirma sus cuatro veredictos.
 6. **Un incidente del lector B3:** vio por error unas 20 lineas del txt de Lindstrom con un grep sobre *.txt y no las uso.
-7. **La particion de los INFERIDOS la hizo un solo clasificador**, el integrador (seccion 13). Un segundo clasificador ciego la repite; el acuerdo va en el hueco de la seccion 13.4.
+7. **Particion con dos clasificadores.** La hicieron el integrador y un clasificador ciego. Hubo 24 desacuerdos, y los resolvio el integrador releyendo el libro, no las razones de ninguno de los dos (seccion 13.5). No hubo un tercer juez.
 8. **Censos frente a muestras.** Los censos (Reason, Assembling Tomorrow) no tienen error de muestreo, pero si de lectura. Las muestras de los otros ocho libros son pequenas y dirigidas (se eligieron porque pasaban el umbral), asi que su tasa puede estar sesgada hacia arriba por regresion a la media en la fase 1.
 9. **Un error de la fase 1 que avisa.** La adjudicacion de `folleto_franquicia` paso 3 a FIEL corrige un error de la fase 1: no se busco hasta L3380. Es justo el tipo de error que la regla "busca antes de marcar INFERIDO" debia evitar, y sugiere que la tasa de INFERIDOS puede estar algo inflada, aunque el lector ciego confirmo 20 de los otros 21 marcados.
+10. **Fuentes autorizadas despues de la lectura.** Horowitz (para `decision_de_vender_startup`) y Dekker (fuente fusionada en `normalizacion_de_la_desviacion`) se leyeron solo para los pasos INFERIDO de esos nodos. Los pasos FIEL de esos nodos no se releyeron contra ellos.
 
-### 11.8 Fichas de correccion (CONTRARIOS, ANADIDOS y PENDIENTES)
+### 11.8 Fichas de correccion (CONTRARIOS y ANADIDOS; A15 con decision pendiente)
 
 **Formato fijo**, una ficha por bloque y una clave por linea, pensado para leerse con una maquina:
 - el indice del paso va contado desde 0 y desde 1;
@@ -1111,6 +1138,25 @@ fuente_apoyo: L11040: "AS9100 is a widely adopted and standardized quality manag
 cambio: quita ISO 14000 (norma ambiental para cualquier sector, no sectorial de calidad) y la certificacion bajo cGMP (las verifica la FDA por inspeccion); anade ISO/TS 16949 y deja AS9100 como ejemplos de norma sectorial certificable
 otro_campo: entregable_esperado | texto_actual_segmento: Sistema de calidad certificado bajo la norma sectorial especifica de tu industria | texto_corregido_segmento: Sistema de calidad conforme a la norma sectorial de tu industria, certificado cuando la norma lo permite (ISO/TS 16949, AS9100) y preparado para la inspeccion de la FDA si te aplican las cGMP
 nota_titulo_concepto: El titulo "(cGMP y ISO/TS 16949)" se sostiene: Juran trata las cGMP dentro de "Industry-Specific Adoptions and Extensions of ISO 9000 Standards" (L11337). No se toca.
+```
+
+```
+FICHA: C5
+tipo: CONTRARIO
+estado: LISTA PARA APLICAR
+node_id: la_matriz_de_colores_te_engana
+fichero_nodo: dataset/nodos/la_matriz_de_colores_te_engana.json
+campo: pasos_accionables
+indice_base0: 2
+indice_base1: 3
+texto_actual: Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.
+texto_corregido: No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Risk Management\The Failure of Risk Management_ - Douglas W. Hubbard.txt
+fuente_principal: L2136: "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."
+fuente_apoyo: L2533: "he found they varied widely even when they were given specific guidelines for what these terms meant"; L2535: "detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice."
+cambio: quita la etiqueta "probabilidad media" con un rango aclarado (lo que el libro prueba que no basta); anade la probabilidad explicita en porcentaje
+otro_campo: entregable_esperado | texto_actual_segmento: probabilidad y daño en palabras y cifras honestas | texto_corregido_segmento: probabilidad en porcentaje y daño en cifras honestas
+nota_resumen_teorico: El resumen dice que "las etiquetas como media significan cosas muy distintas para cada persona": es fiel (L2533). No se toca.
 ```
 
 ```
@@ -1368,133 +1414,145 @@ nota_pasos_accionables: Se aplica junto con la ficha C1 (paso 2 del mismo nodo).
 ```
 FICHA: A15
 tipo: ANADIDO
-estado: PENDIENTE DE DECISION
+estado: PENDIENTE DE DECISION DEL FUNDADOR
 node_id: analisis_trafico_competitivo
 fichero_nodo: dataset/nodos/analisis_trafico_competitivo.json
 campo: pasos_accionables
 indice_base0: 0
 indice_base1: 1
 texto_actual: Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat
-texto_corregido: OPCION A (dato del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico.
+texto_corregido: OPCION A (nombres del libro): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición como Alexa o Compete. OPCION B (sin nombres, la que recomienda la sesion): Buscar y comparar tráfico de competidores con herramientas gratuitas de medición de tráfico. OPCION C (los actuales, declarando que no son del libro): Buscar y comparar tráfico de competidores con herramientas como AdRoll o Adbeat (ejemplos del catálogo, no del libro).
 fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
 fuente_principal: L8522: "Use free traffic-measurement tools like Alexa and Compete to compare and understand the traffic generated by each competitive product or website"
-fuente_apoyo: ninguna
-cambio: quita "AdRoll o Adbeat" (no estan en el libro); opcion A anade Alexa y Compete, opcion B no nombra herramientas
-decision_pendiente: La regla manda usar el dato del libro (opcion A). Pero, por conocimiento general y no por el libro, Compete cerro en 2016 y Alexa en 2022: la opcion A dejaria un paso fiel con herramientas que ya no existen. Decide el fundador.
-otro_campo: resumen_teorico | texto_actual_segmento: (por ejemplo, AdRoll o Adbeat) | texto_corregido_segmento: OPCION A: (por ejemplo, Alexa o Compete). OPCION B: se borra el parentesis.
+fuente_apoyo: L8516: "Use free traffic-measurement tools to compare and understand the traffic generated by each competitive product"
+cambio: A pone Alexa y Compete (dato del libro); B quita los nombres; C conserva AdRoll y Adbeat con la declaracion de que no son del libro
+decision_pendiente: Decide el fundador. Nota de conocimiento general, no del libro: Compete cerro en 2016 y Alexa en 2022, asi que la opcion A deja un paso fiel con herramientas que ya no existen. La sesion recomienda la B.
+otro_campo: resumen_teorico | texto_actual_segmento: (por ejemplo, AdRoll o Adbeat) | texto_corregido_segmento: A: (por ejemplo, Alexa o Compete). B: se borra el parentesis. C: (por ejemplo, AdRoll o Adbeat, ejemplos del catalogo que no estan en el libro).
 ```
 
 ```
-FICHA: P1
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
+FICHA: A16
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: narrativa_como_herramienta_de_sentido
+fichero_nodo: dataset/nodos/narrativa_como_herramienta_de_sentido.json
 campo: pasos_accionables
-indice_base0: 5
-indice_base1: 6
-texto_actual: Redefine cuál es tu mercado real (no el que crees que es) y quiénes serán tus competidores futuros, evalúa con honestidad su tamaño y cómo va a evolucionar, si es al menos diez veces más grande que el que ya explotaste, y qué probabilidades reales tienes de convertirte en el jugador número uno
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Evalúa con honestidad tu mercado real y tus competidores futuros, sin una imagen demasiado optimista del potencial de tu empresa
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L3954: "They may have unduly rosy pictures of the startup’s potential, causing them to underestimate their upcoming growth challenges, to misread the competitive landscape"
-fuente_apoyo: ninguna
-cambio: opcion B quita "al menos diez veces más grande" y "jugador número uno"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
+indice_base0: 0
+indice_base1: 1
+texto_actual: Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y conexión emocional.
+texto_corregido: Al presentar un concepto de diseño o prototipo, apóyate en una historia para facilitar la comprensión y la conexión, sin olvidar que toda historia distorsiona.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\Assembling Tomorrow_ A Guide to - Scott Doorley.txt
+fuente_principal: L2075: "Thinking in stories is very useful."; L2075: "But it’s still a distortion."
+fuente_apoyo: L2065: "we might be doing it to connect with each other."; L2071: "stories train your attention on characters, conflict, and causes."
+cambio: quita la receta "personajes, conflicto y resolucion" (la triada del libro es personajes, conflicto y causas, y la presenta como distorsion); anade la advertencia de que toda historia distorsiona
+nota_entregable_esperado: El entregable ya tiene su correccion en la ficha A6 (storyboard).
+```
+
+```
+FICHA: A17
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: cultura_como_mecanismo_descentralizacion
+fichero_nodo: dataset/nodos/cultura_como_mecanismo_descentralizacion.json
+campo: pasos_accionables
+indice_base0: 3
+indice_base1: 4
+texto_actual: Diseñar mecanismos de transmisión cultural (formación, mentoría) en lugar de solo reglas escritas
+texto_corregido: Diseñar mecanismos de transmisión cultural (socialización en premisas de decisión compartidas, formación, relatos de experiencias) en lugar de solo reglas escritas
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L5178: "you first have to centralise so that people are socialised to use similar decision premises and assumptions"
+fuente_apoyo: L5184: "this problem, can be reduced by a culture that encourages ‘war stories’"; L5206: "To be effective, such training must occur in the initial phase of employment"
+cambio: quita la mentoria; anade la socializacion en premisas de decision y los relatos, que son los mecanismos del libro
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
 ```
-FICHA: P2
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
+FICHA: A18
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: cultura_justa
+fichero_nodo: dataset/nodos/cultura_justa.json
 campo: pasos_accionables
-indice_base0: 6
-indice_base1: 7
-texto_actual: Clasifica la posible adquisición: es por talento y tecnología, por producto o por el negocio completo
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Averigua qué quiere el comprador, retener a tu equipo o reemplazarlo, porque eso cambia la estructura que te conviene: pago en efectivo o pago condicionado a resultados (earn-out)
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L4002: "For an acquirer planning to replace the startup’s management with its own people, a cash-only deal often makes sense."
+indice_base0: 2
+indice_base1: 3
+texto_actual: Capacitar a supervisores y gestores en la aplicación consistente de estos criterios
+texto_corregido: Aplicar estos criterios de forma consistente con una herramienta estructurada común, como el árbol de decisión de culpabilidad, en la instancia que revise las acciones disciplinarias
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L5085: "This investigative tool is used by an organization’s disciplinary review board to aid their decision-making. It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted."
 fuente_apoyo: ninguna
-cambio: opcion B quita la clasificacion "talento y tecnología, producto o negocio completo"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
+cambio: quita el responsable "supervisores y gestores" y la formacion como medio; anade la herramienta comun en la instancia disciplinaria
+nota_pasos_accionables: El paso 6 del nodo ("Arma un grupo de confianza que revise los casos difíciles o ambiguos") va en la linea del libro y no se toca.
+```
+
+```
+FICHA: A19
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: fallo_regulatorio_por_recursos_insuficientes
+fichero_nodo: dataset/nodos/fallo_regulatorio_por_recursos_insuficientes.json
+campo: pasos_accionables
+indice_base0: 1
+indice_base1: 2
+texto_actual: Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector
+texto_corregido: Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L3993: "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent."; L3993: "Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff."
+fuente_apoyo: ninguna
+cambio: quita la comparacion con "estandares del sector"; anade la comparacion con la propia evolucion tras los recortes, que es la que hace el libro
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
 ```
-FICHA: P3
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
+FICHA: A20
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: fijar_causa_ultimo_accidente_riesgo_siguiente
+fichero_nodo: dataset/nodos/fijar_causa_ultimo_accidente_riesgo_siguiente.json
 campo: pasos_accionables
-indice_base0: 7
-indice_base1: 8
-texto_actual: Corre un proceso corto y discreto de sondeo de fusiones y adquisiciones (M&A) con varios compradores potenciales, para detectar cuál es el precio máximo que el mercado te puede dar en este momento
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Si hay más de un comprador interesado, compara sus ofertas: precio, forma de pago y qué pasa contigo después de la venta
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L4004: "the founders faced competing offers from two wireless companies"
-fuente_apoyo: ninguna
-cambio: opcion B quita el "proceso corto y discreto de sondeo de M&A con varios compradores"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
+indice_base0: 1
+indice_base1: 2
+texto_actual: Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos
+texto_corregido: Revisar cómo funcionaría cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L1035: "What proved to be an error in the TMI event turned out to be a vital step at Ginna."
+fuente_apoyo: L1035: "regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions"
+cambio: quita la herramienta "analisis de sensibilidad"; conserva la idea del libro
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
 ```
-FICHA: P4
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
+FICHA: A21
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: gestion_falsas_alarmas
+fichero_nodo: dataset/nodos/gestion_falsas_alarmas.json
 campo: pasos_accionables
-indice_base0: 9
-indice_base1: 10
-texto_actual: Comunica ese precio con firmeza a todos los compradores potenciales y sostenlo, dispuesto a esperar aunque no lleguen ofertas de inmediato
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Sostén tu precio mínimo, pero ten presente el riesgo de esperar una oferta mejor que nunca llegue
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L3954: "or to anticipate a better offer that never materializes"
-fuente_apoyo: ninguna
-cambio: opcion B quita "comunícalo con firmeza a todos los compradores y sostenlo, dispuesto a esperar"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
+indice_base0: 2
+indice_base1: 3
+texto_actual: Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada
+texto_corregido: Establecer protocolos para que una alarma crítica no se desactive solo porque se desconfía de ella
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L1085: "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies."
+fuente_apoyo: L1095: "they profoundly mistrusted the stick-shaker warning system. In short, they thought it was indicating falsely."
+cambio: quita el mecanismo "verificacion cruzada" contra la desactivacion "unilateral"; conserva el fin del libro: no desactivar por desconfianza
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
 ```
-FICHA: P5
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
+FICHA: A22
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: quality_control_vs_quality_assurance
+fichero_nodo: dataset/nodos/quality_control_vs_quality_assurance.json
 campo: pasos_accionables
-indice_base0: 10
-indice_base1: 11
-texto_actual: Compara las ofertas de adquisición contra tu proyección de valor a 3 o 5 años si sigues independiente
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Compara las ofertas de adquisición con el valor que crees poder construir si sigues independiente
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L3952: "Some believe they can still build significant value by remaining independent."
-fuente_apoyo: ninguna
-cambio: opcion B quita el horizonte "3 o 5 años"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
-otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
-```
-
-```
-FICHA: P6
-tipo: PENDIENTE (fuente doble no leida)
-estado: PENDIENTE DE DECISION
-node_id: decision_de_vender_startup
-fichero_nodo: dataset/nodos/decision_de_vender_startup.json
-campo: pasos_accionables
-indice_base0: 13
-indice_base1: 14
-texto_actual: Toma la decisión con análisis financiero y estratégico: reconoce abiertamente la parte emocional que hay en vender y consulta con tu consejo (board) y asesores de confianza para equilibrarla con el análisis racional
-texto_corregido: OPCION A: mantener el paso tal como esta si el libro de Horowitz lo respalda. OPCION B (solo con Wasserman): Toma la decisión con análisis financiero y estratégico, reconociendo el peso que tienen en ella tu optimismo y tu apego a la empresa
-fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\txt\The Founder's Dilemmas - Wasserman, Noam.txt
-fuente_principal: L3954: "other founders’ decisions are driven by their optimism and passion"
-fuente_apoyo: ninguna
-cambio: opcion B quita el responsable "tu consejo (board) y asesores de confianza"; opcion A no cambia nada
-decision_pendiente: El nodo cita dos libros (Wasserman y Horowitz) y solo Wasserman esta entre las fuentes permitidas. Para decidir hace falta leer The Hard Thing About Hard Things; sin ese texto no se puede afirmar que el dato sea anadido.
+indice_base0: 3
+indice_base1: 4
+texto_actual: Implementar auditorías aleatorias sobre el trabajo firmado como conforme
+texto_corregido: Comprobar mediante una inspección separada el trabajo firmado como conforme, en lugar de fiarse solo de la firma
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L971: "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service."
+fuente_apoyo: L975: "to sign off on task steps--either before or after the event--without actually monitoring the quality of the work"
+cambio: quita el metodo "auditorias aleatorias"; anade la inspeccion separada que el libro echa en falta
 otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
 ```
 
@@ -2388,11 +2446,11 @@ Una fila por paso leido en la fase 2 (838 filas). Tarea 2 = censo; 3 = sorteo; 3
 
 **Limite de diseno.** El ciego solo releyo los 22 pasos marcados. Por eso puede confirmar o rebajar marcas (INFERIDO a FIEL), pero no mide los INFERIDOS ni los CONTRARIOS que se hubieran escapado entre los 116 pasos que la fase 1 dio por FIEL. Para medir eso haria falta una relectura ciega de una muestra de pasos FIEL.
 
-**Casos que el ciego senalo como dificiles** (los dejo INFERIDO): `autonomia_dependencia_regulatoria` paso 4, que roza CONTRARIO por la cita de Vaughan en L4265; `analisis_trafico_competitivo` paso 1, porque AdRoll es una plataforma de anuncios (en la seccion 13 queda como ANADIDO, ficha A15); `escepticismo_sano_ante_el_riesgo` paso 4; `sistema_de_alarma_de_defectos` paso 2. Estan en la seccion 11.6.
+**Casos que el ciego senalo como dificiles** (los dejo INFERIDO): `autonomia_dependencia_regulatoria` paso 4, que roza CONTRARIO por la cita de Vaughan en L4265; `analisis_trafico_competitivo` paso 1, porque AdRoll es una plataforma de anuncios; `escepticismo_sano_ante_el_riesgo` paso 4; `sistema_de_alarma_de_defectos` paso 2. Estan en la seccion 11.6.
 
 ## 13. Particion de los INFERIDOS en OPERATIVO y ANADIDO (regla del fundador del 25 sep)
 
-### 13.1 Regla y como se aplico
+### 13.1 Regla, universo y como se aplico
 
 La regla, literal:
 
@@ -2401,223 +2459,230 @@ La regla, literal:
 >
 > Los CONTRARIOS siguen siendo la prioridad absoluta.
 
-**Universo.** Son los 191 pasos INFERIDO de las dos fases, contando cada paso una vez: los 20 de la fase 1, tras adjudicar `folleto_franquicia` paso 3 a FIEL, y los 171 de la fase 2. La relectura de couriers no duplica su fila. La lista sin particion (`inferidos_para_partir.tsv`, en el scratchpad) se entrego antes de clasificar, para que un segundo clasificador ciego la reparta por su cuenta.
+**Universo.** Son los 191 pasos INFERIDO de las dos fases, contando cada paso una vez: los 20 de la fase 1, tras la adjudicacion de `folleto_franquicia` paso 3, y los 171 de la fase 2.
 
-**Criterio aplicado por el integrador**, releyendo el libro en la duda y no la razon del lector:
-- **Es ANADIDO** si el paso afirma un dato concreto que el libro no trae: una cifra ("al menos 3", "dos o tres"), un plazo u horizonte ("10, 50 y 100 anos", "10-15 anos", "3 o 5 anos"), una herramienta ("AdRoll", "storyboards"), una pieza tecnica ("impermeabilizacion, drenaje"), un responsable ("mentor o asesor", "consejo") o una norma. Tambien lo es si afirma un criterio o una secuencia concretos que cambian la direccion del libro: "revisando errores historicos", cuando el libro manda contar rasgos de antemano; "despues de superar la incomodidad", cuando el libro manda quedarse en ella.
-- **Es OPERATIVO** si el paso anade una accion en la direccion del libro sin dato nuevo: documentar, revisar, probar, comunicar o formar. Una frecuencia vaga ("periodicamente") no cuenta como dato, y tampoco los ejemplos que el propio libro da.
-- **Es PENDIENTE** si el dato no esta en el libro leido, pero el nodo cita otro libro que no esta entre las fuentes permitidas. Es el caso de los seis pasos de `decision_de_vender_startup` (Horowitz).
-- **Busqueda.** Para cada ANADIDO se busco el dato en todo el libro, no solo en el capitulo. La busqueda (grep o lectura) se anota en la tabla.
+**Dos clasificadores:**
+- **El integrador** partio la lista primero (particion inicial, commit `1d0053e3`).
+- **Un clasificador ciego** la partio despues por su cuenta, sin ver la particion del integrador. Partio de `inferidos_para_partir.tsv`, entregado antes de clasificar.
 
-Resultado: **170 OPERATIVOS, 15 ANADIDOS y 6 PENDIENTES.**
+**Criterio del integrador:**
+- **ANADIDO** es el paso que afirma un dato concreto que el libro no trae: una cifra, un plazo u horizonte, una herramienta o metodo con nombre, una pieza tecnica, un responsable o una norma. Tambien lo es el que afirma un criterio o una secuencia concretos que cambian la direccion del libro.
+- **OPERATIVO** es el paso que anade una accion en la direccion del libro sin dato nuevo: documentar, dejar por escrito, revisar, probar, comunicar o formar. Una frecuencia vaga ("periodicamente") no cuenta como dato. Tampoco cuentan los ejemplos de contenido, ni los ejemplos que da el propio libro.
+- **Busqueda:** cada ANADIDO se busco en todo el libro, no solo en el capitulo.
+
+**Resultado final**, tras la reconciliacion (seccion 13.5) y las fuentes nuevas (seccion 13.6):
+- **151 OPERATIVOS**, que se quedan;
+- **22 ANADIDOS**, que se corrigen (fichas A1 a A22);
+- **1 CONTRARIO**, que sube de INFERIDO (ficha C5);
+- **17 FIEL**, porque el libro, o la segunda fuente del nodo, si lo dice.
 
 ### 13.2 Tabla de la particion (191 filas)
 
-Columnas: `id` (el mismo del fichero entregado al clasificador ciego), nodo, paso, clase, y el dato anadido o la cita que marca la direccion (en los OPERATIVOS se usa la primera cita del lector, comprobada en la seccion 11.2), mas la busqueda hecha.
+Columnas: `id` (el del fichero entregado al clasificador ciego), nodo, paso, clase del integrador en la particion inicial, clase del ciego y clase final (en negrita si cambia respecto a la del integrador). La ultima columna trae una de tres cosas: el dato anadido, la cita que marca la direccion (en los OPERATIVOS se usa la primera cita del lector, comprobada en la seccion 11.2) o la resolucion con su cita.
 
-| id | node_id | paso | clase | dato anadido o direccion | busqueda |
-|---|---|---:|---|---|---|
-| I001 | `tipos_sitio_web_exportacion` | 4 | **OPERATIVO** | direccion: L3209: "design and maintenance are less expensive than for a transactional website" |  |
-| I002 | `abrazar_la_incomodidad` | 4 | **ANADIDO** | la secuencia "despues de superar la incomodidad inicial"; el libro pide quedarse en ella | lectura del pasaje L2688 y de la seccion de la incomodidad; el libro dice "that's where you need to dwell" y "good noticing requires you to linger in discomfort" |
-| I003 | `abrazar_los_bordes_de_la_conciencia` | 1 | **OPERATIVO** | direccion: L1666: "The remedy for this conundrum is to get acquainted with the edges of your awareness." |  |
-| I004 | `abrazar_los_bordes_de_la_conciencia` | 2 | **OPERATIVO** | direccion: L1674: "If we can learn to love the search for what we don’t know and can’t sense as much as we cherish what we think we do know, we may find our way to a thriving future." |  |
-| I005 | `abrazar_los_bordes_de_la_conciencia` | 4 | **OPERATIVO** | direccion: L3090: "Who has been left out? Notice it and name it. But even that is just the beginning." |  |
-| I006 | `antigoals_framework` | 4 | **OPERATIVO** | direccion: L3682: "Safeguards: how you will make sure things don’t go wrong. (We’ll get into some safeguards in chapter 8, where we call them fail-safes.)" |  |
-| I007 | `antigoals_framework` | 5 | **OPERATIVO** | direccion: L3663: "Get them all out. Then look at them. Do they help serve your purpose or do they distract you from it?" |  |
-| I008 | `aprender_desde_el_amor_empatia` | 2 | **OPERATIVO** | direccion: L2882: "On her first week onsite, she violated rule number one." |  |
-| I009 | `aprender_desde_el_amor_empatia` | 3 | **OPERATIVO** | direccion: L2900: "And they are often inspired by “a mismatch that loved ones faced when something interrupted their connection to each other.”" |  |
-| I010 | `aprender_desde_el_amor_empatia` | 4 | **OPERATIVO** | direccion: L2898: "They motivate you to look, push you to see more fully." |  |
-| I011 | `biomimicry_conexiones_naturales` | 1 | **OPERATIVO** | direccion: L3230: "Its goal is to produce silk fiber as spiders do, to massively cut down on the waste produced by the global fashion industry." |  |
-| I012 | `buscar_armonia_diseno` | 3 | **OPERATIVO** | direccion: L4703: "What we make and do is important; how we make and do it is more important still." |  |
-| I013 | `definir_tesoro_con_perspectiva_temporal` | 2 | **ANADIDO** | los horizontes "10 y 100 anos" (el libro solo pregunta por cincuenta) | grep "ten years/hundred years/fifty years" en todo el libro: solo "fifty years" en L3967 |
-| I014 | `democratizacion_de_herramientas_creativas` | 1 | **OPERATIVO** | direccion: L4385: "With the advent of fast, cheap processors, cameras in pockets, and 3D printers, we’re all creators again." |  |
-| I015 | `democratizacion_de_herramientas_creativas` | 3 | **OPERATIVO** | direccion: L4397: "We need to look at time divides in the same way as digital divides and wealth gaps." |  |
-| I016 | `disenar_los_detalles_no_lo_inevitable` | 4 | **OPERATIVO** | direccion: L1507: "It’s time to decide." |  |
-| I017 | `disenar_para_sanacion` | 5 | **OPERATIVO** | direccion: L4707: "the designers worked with families and descendants to collect soil from all the sites where the lynchings took place." |  |
-| I018 | `disenar_verbos_no_sustantivos` | 4 | **OPERATIVO** | direccion: L663: "The ability to shape all those intangible impacts is the power and responsibility of design." |  |
-| I019 | `disenio_en_turbulencia` | 3 | **OPERATIVO** | direccion: L3534: "so that you are ready to repair when your best-laid plans go awry." |  |
-| I020 | `diseno_consecuencias_no_intencionadas` | 1 | **ANADIDO** | los horizontes "10, 50 y 100 anos" | grep "ten years/hundred years/fifty years": solo "fifty years" en L3967, en otro contexto (tesoro); L3490 no fija horizonte |
-| I021 | `diseno_etico_de_privacidad` | 1 | **OPERATIVO** | direccion: L1086: "Data is like garbage. You'd better know what you are going to do with it before you collect it." |  |
-| I022 | `diseno_etico_de_privacidad` | 2 | **OPERATIVO** | direccion: L985: "it takes work to opt out. It's rarely (make that never) the default." |  |
-| I023 | `diseno_etico_de_privacidad` | 3 | **OPERATIVO** | direccion: L1009: "Maybe you want less agency. If the board game you need to buy... can be searched for and purchased in minutes... you've made time for something else." |  |
-| I024 | `diseno_etico_de_privacidad` | 4 | **OPERATIVO** | direccion: L1005: "The owner of the data has significantly more power than the generator" |  |
-| I025 | `diseno_para_reuso_responsable` | 2 | **OPERATIVO** | direccion: L4074: "As technology evolves, we can use it to core and mine landfills" |  |
-| I026 | `diseno_para_reuso_responsable` | 3 | **OPERATIVO** | direccion: L4074: "What is currently deemed trash is likely loaded with value, but who can or should profit from it is a question to reckon with." |  |
-| I027 | `diseno_para_reuso_responsable` | 4 | **OPERATIVO** | direccion: L4444: "The constraints you follow are your ethics; they get built right into the fabric of the world." |  |
-| I028 | `diseno_por_sustraccion` | 2 | **OPERATIVO** | direccion: L3754: "Removal is a design fundamental." |  |
-| I029 | `diseno_por_sustraccion` | 4 | **ANADIDO** | la cifra "al menos 3 elementos" | lectura de la seccion Remove (L3754 a L3773) y grep "three/at least": ninguna cifra minima |
-| I030 | `diseno_por_sustraccion` | 5 | **OPERATIVO** | direccion: L3773: "Just as we can make, we can take away--and that’s often a better option." |  |
-| I031 | `diseno_sistemico_partes_interesadas` | 4 | **OPERATIVO** | direccion: L2576 (ficcion): "It’s the shadow force in the priority engine--the way the funders can exert their own control over the project, and over me." |  |
-| I032 | `diseno_sistemico_partes_interesadas` | 5 | **OPERATIVO** | direccion: L2628 (ficcion, voz de la narradora): "I can make the hard decisions, letting one part of the biome falter for the sake of the broader good." |  |
-| I033 | `economia_circular_de_la_imaginacion` | 5 | **OPERATIVO** | direccion: L3638: "it makes sense to calibrate your instruments and reconsider how to tally progress." |  |
-| I034 | `falacia_del_disenador_affordances` | 3 | **OPERATIVO** | direccion: L2925: "We make homes in the flaws. We nestle into the mistakes. We build our future in the gaps." |  |
-| I035 | `ficcion_especulativa_como_metodo` | 1 | **OPERATIVO** | direccion: L3490: "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story." |  |
-| I036 | `ficcion_especulativa_como_metodo` | 2 | **ANADIDO** | el horizonte "10-15 anos" y el reparto "usuarios, empresas, reguladores" | grep de anos en el libro: habla de los proximos setenta anos (L204); no hay 10-15 anos ni ese reparto |
-| I037 | `ficcion_especulativa_como_metodo` | 4 | **OPERATIVO** | direccion: L4658: "To heal, we must paint pictures of our futures--those we want to see and those we want to avoid." |  |
-| I038 | `ficcion_especulativa_como_metodo` | 5 | **OPERATIVO** | direccion: L193: "to allow you to muse about what you might do now." |  |
-| I039 | `gestion_decisiones_bajo_carga_emocional` | 2 | **OPERATIVO** | direccion: L1222: "If your brain is full (and whose isn’t?), your emotions have an even bigger effect on your choices." |  |
-| I040 | `gestion_decisiones_bajo_carga_emocional` | 3 | **OPERATIVO** | direccion: L1200: "There are thousands of moments along the circumstances-feelings-ideas loop to pause, reflect, and redirect." |  |
-| I041 | `indice_de_reparabilidad` | 5 | **OPERATIVO** | direccion: L4336: "But who should govern them? Scores on the French index are currently calculated by manufacturers themselves. What are the boundaries of trust?" |  |
-| I042 | `llamar_lo_que_falta` | 4 | **OPERATIVO** | direccion: L3026: "Making us pause to think about a concept in a way that we might not otherwise have done is exactly the point. It allows us to uncover new layers to our noticing." |  |
-| I043 | `medir_lo_que_importa_no_solo_lo_facil` | 3 | **OPERATIVO** | direccion: L3661: "To offset troublesome goals, make more goals." |  |
-| I044 | `metas_vs_proposito` | 4 | **OPERATIVO** | direccion: L3661: "To offset troublesome goals, make more goals." |  |
-| I045 | `narrativa_como_herramienta_de_sentido` | 1 | **OPERATIVO** | direccion: L2071: "stories train your attention on characters, conflict, and causes." |  |
-| I046 | `narrativa_como_herramienta_de_sentido` | 3 | **ANADIDO** | las herramientas "escenarios, storyboards" | grep "storyboard": 0 resultados; grep "scenario": 0 resultados |
-| I047 | `pensamiento_de_conexiones_ripple_effect` | 3 | **OPERATIVO** | direccion: L3090: "Where else does nature already have a solution?" |  |
-| I048 | `pensamiento_espacial_mapeo` | 1 | **OPERATIVO** | direccion: L3404: "Grab five items from your desk, your purse, the kitchen--wherever you are. Choose things you can hold in your hand." |  |
-| I049 | `pensamiento_espacial_mapeo` | 5 | **ANADIDO** | la cifra "al menos 3-5 mapas" | lectura de L3372 y L3374: el libro habla de atlas y de "twenty, thirty, forty maps"; ninguna cifra de 3 a 5 |
-| I050 | `prototipar_con_medios_no_convencionales` | 6 | **OPERATIVO** | direccion: L3939: "we can expose the biases in our thinking, stretch our ideas to new places, and invite more people into our work." |  |
-| I051 | `reconocer_el_sesgo_narrativo` | 3 | **OPERATIVO** | direccion: L2079: "when you’re not motivated to believe something, you look to dismiss any evidence to the contrary." |  |
-| I052 | `reconocer_sesgo_de_apofenia` | 2 | **OPERATIVO** | direccion: L1865: "Confirmation bias--accepting data only when it confirms your established belief--can create big societal consequences." |  |
-| I053 | `reconocer_sesgo_de_apofenia` | 3 | **OPERATIVO** | direccion: L1863: "These sensemaking strategies are forms of apophenia--the inclination to see a connection in data or a pattern in randomness." |  |
-| I054 | `salir_de_la_cabeza_movimiento_espacial` | 1 | **OPERATIVO** | direccion: L3952: "If you’re a heavy GPS user of turn-by-turn directions, try this on yourself: Don’t turn it on the next time." |  |
-| I055 | `salir_de_la_cabeza_movimiento_espacial` | 4 | **OPERATIVO** | direccion: L3944: "Getting out of our heads (literally) helps us challenge assumptions and generate new ideas." |  |
-| I056 | `ser_buen_jig` | 2 | **OPERATIVO** | direccion: L4726: "One of the great joys of working with creative people is witnessing the things they make to make the things they make." |  |
-| I057 | `ser_buen_jig` | 3 | **OPERATIVO** | direccion: L4728: "Their job is to guide a piece of wood through a saw, lathe, sander, or drill at just the right angle or in just the right way, repeatedly." |  |
-| I058 | `shapeshifting_diversidad` | 3 | **OPERATIVO** | direccion: L3142: "It’s shapeshifting through prototyping, finding a solution through trial and error." |  |
-| I059 | `shapeshifting_diversidad` | 4 | **OPERATIVO** | direccion: L3146: "Researchers at Tufts University studying mock trial teams have shown that diverse teams also catch errors earlier." |  |
-| I060 | `suenos_completos_diseno_responsable` | 3 | **OPERATIVO** | direccion: L4190: "Call them full dreams; dreams that are grand but not singular" |  |
-| I061 | `tecnica_cambio_de_perspectiva_escala` | 1 | **OPERATIVO** | direccion: L1825: "This image pulls us billions of miles away from our day-to-day. It’s about as zoomed out as we can get." |  |
-| I062 | `tecnica_cambio_de_perspectiva_escala` | 3 | **OPERATIVO** | direccion: L1815: "Both images are decades-long records of what was, is, and might be." |  |
-| I063 | `tecnica_cambio_de_perspectiva_escala` | 4 | **OPERATIVO** | direccion: L1833: "What feels newly insignificant to you from this perspective? What becomes more important?" |  |
-| I064 | `tratar_las_historias_como_herramientas` | 1 | **OPERATIVO** | direccion: L2092: "Ride them and see where they take you. When they break down, tune them up or trade them in." |  |
-| I065 | `tratar_las_historias_como_herramientas` | 4 | **OPERATIVO** | direccion: L2092: "When they break down, tune them up or trade them in." |  |
-| I066 | `etiqueta_lo_que_piensa_el_proveedor` | 4 | **OPERATIVO** | direccion: L1243: "las etiquetas te ayudan a destapar e identificar la emoción primaria que impulsa casi todos los comportamientos del interlocutor" |  |
-| I067 | `etiqueta_lo_que_piensa_el_proveedor` | 5 | **OPERATIVO** | direccion: L1320: "Anna pudo sonsacarles un dato importante sobre los temores de ABC" |  |
-| I068 | `muestra_puntos_en_comun_antes_de_negociar` | 1 | **OPERATIVO** | direccion: L4789: "en muchas culturas los negociadores invierten mucho tiempo en construir estos puntos de compenetración antes de empezar a pensar siquiera en la oferta" |  |
-| I069 | `muestra_puntos_en_comun_antes_de_negociar` | 4 | **OPERATIVO** | direccion: L1713: "ser «amable» como forma de simpatía fingida es a menudo igual de infructuoso" |  |
-| I070 | `preparate_para_marcharte_del_trato` | 3 | **OPERATIVO** | direccion: L4255: "No debes depender excesivamente de un acuerdo." |  |
-| I071 | `preparate_para_marcharte_del_trato` | 5 | **OPERATIVO** | direccion: L4255: "debes estar dispuesto a abandonar la negociación" |  |
-| I072 | `revela_tu_propio_plazo_limite_al_negociar` | 1 | **OPERATIVO** | direccion: L2412: "Los plazos y las fechas límite son, con frecuencia, arbitrarios y casi siempre flexibles" |  |
-| I073 | `revela_tu_propio_plazo_limite_al_negociar` | 3 | **OPERATIVO** | direccion: L2438: "«Ellos conocían mis plazos, pero yo no conocía los suyos»" |  |
-| I074 | `revela_tu_propio_plazo_limite_al_negociar` | 4 | **OPERATIVO** | direccion: L2448: "cuando un oponente conoce tu plazo límite, entra antes en el verdadero juego del intercambio de concesiones" |  |
-| I075 | `usa_preguntas_de_como_para_negociar_precio` | 3 | **OPERATIVO** | direccion: L1430: "Haz pausas. Después de haber etiquetado una barrera o reflejado una afirmación, deja que se asiente. No te preocupes, la otra parte se encargará de llenar el silencio." |  |
-| I076 | `cinco_principios_guia_transformacion` | 2 | **OPERATIVO** | direccion: L1038: "Restore. Strive for " |  |
-| I077 | `critica_del_pib_como_metrica_de_progreso` | 1 | **OPERATIVO** | direccion: L871: "Businesses calculate their conventional economic profitability and add to that what they perceive to be the social benefits" |  |
-| I078 | `critica_del_pib_como_metrica_de_progreso` | 4 | **OPERATIVO** | direccion: L229: "Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure" |  |
-| I079 | `critica_del_pib_como_metrica_de_progreso` | 5 | **OPERATIVO** | direccion: L1087: "For an in-depth discussion of the GDP's failures and a presentation of new measurements for progress, see Clifford Cobb, Ted Halsted, and Jonathan Rowe" |  |
-| I080 | `critica_del_pib_como_metrica_de_progreso` | 6 | **OPERATIVO** | direccion: L873: "If businesses are not using triple bottom line analysis as a strategic design tool, they are missing a rich opportunity." |  |
-| I081 | `gestion_de_aguas_pluviales_con_techos_verdes` | 1 | **OPERATIVO** | direccion: L509: "It is a light layer of soil, a growing matrix, covered with plants." |  |
-| I082 | `gestion_de_aguas_pluviales_con_techos_verdes` | 2 | **OPERATIVO** | direccion: L924: "The specific solutions must grow out of and respond to local circumstances, however." |  |
-| I083 | `gestion_de_aguas_pluviales_con_techos_verdes` | 3 | **ANADIDO** | las capas "impermeabilizacion" y "drenaje" | grep "waterproof/drainage/membrane": solo aparecen para el papel del libro (L433) y el suelo de las hormigas (L493); el techo es "a light layer of soil, a growing matrix, covered with plants" (L509) |
-| I084 | `gestion_de_aguas_pluviales_con_techos_verdes` | 4 | **OPERATIVO** | direccion: L509: "It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather" |  |
-| I085 | `volverse_nativo_del_lugar` | 1 | **OPERATIVO** | direccion: L537: el libro da el ejemplo de los Menominee, y advierte: "this particular form of forestry is not necessarily universal in its potential applications". No pide estudiar practicas indigenas de la reg |  |
-| I086 | `cultura_que_habla_del_riesgo_sin_miedo` | 1 | **OPERATIVO** | direccion: L4607: "It may also gently free workshop participants from overly rigid attitudes towards risk management. At its very best, scenario testing is capable of exposing projects that should have been avoided but perhaps were too enticing or over-optimistic" |  |
-| I087 | `cultura_que_habla_del_riesgo_sin_miedo` | 2 | **OPERATIVO** | direccion: L7152: "the people involved will only feel comfortable about communicating and sharing such knowledge if a genuine culture of non-blaming exists in the organisation" |  |
-| I088 | `cultura_que_habla_del_riesgo_sin_miedo` | 3 | **OPERATIVO** | direccion: L3002: "Workshop participants should comprise a small group of people, familiar with the stakeholder organisation and its projects" |  |
-| I089 | `plan_de_desastre_y_recuperacion` | 4 | **OPERATIVO** | direccion: L6075 (planes "formalised, rehearsed" |  |
-| I090 | `reduce_el_riesgo_a_lo_razonable` | 2 | **ANADIDO** | la cifra "dos o tres acciones" | grep "two or three": ninguna recomendacion con esa cifra; el libro habla de generar tratamientos alternativos (L5749) |
-| I091 | `reduce_el_riesgo_a_lo_razonable` | 3 | **OPERATIVO** | direccion: L5668: "Risk reduction exploration may continue iteratively until the point is reached where the residual amount of a risk is acceptable (in terms of a strategically-determined level) and can be retained by the project stakeholder organisation." |  |
-| I092 | `revisa_tus_riesgos_con_un_ritmo` | 5 | **OPERATIVO** | direccion: L5966: "monitoring frequency will also be influenced by the dynamics of the project" |  |
-| I093 | `tecnicas_para_sacar_riesgos_a_la_luz` | 3 | **ANADIDO** | la cifra "dos o tres proyectos" | grep "two or three": ninguna recomendacion con esa cifra; el libro usa informes y conocimiento de proyectos previos (L3253, L5502) |
-| I094 | `calibra_tu_propio_ojo` | 1 | **OPERATIVO** | direccion: L2076: "Try another calibration test to see how well you do with ranges. For exhibit 7.3, provide both an upper bound and a lower bound. Remember that the range should be wide enough that you believe there is a 90 percent chance that the answer will be between your bounds." |  |
-| I095 | `cuidado_con_la_falsa_precision` | 1 | **OPERATIVO** | direccion: L3383: "I asked them questions about where they got their data from and about quality control on their models." |  |
-| I096 | `cuidado_con_la_falsa_precision` | 2 | **OPERATIVO** | direccion: L981: "There is nothing mathematically invalid about using a subjective input to a calculation." |  |
-| I097 | `cuidado_con_la_falsa_precision` | 3 | **OPERATIVO** | direccion: L3478: "A range has a chance of being right whereas a point estimate will almost always be wrong." |  |
-| I098 | `escepticismo_sano_ante_el_riesgo` | 4 | **OPERATIVO** | direccion: L607: "the mere appearance of structure and formality in risk management is pleasing to some" |  |
-| I099 | `la_matriz_de_colores_te_engana` | 3 | **OPERATIVO** | direccion: L930: "instead of using the scales such as high, medium, low, or 1 to 5, experts learn how to subjectively assess the actual quantities behind those scales" |  |
-| I100 | `sistema_de_alarma_de_defectos` | 2 | **OPERATIVO** | direccion: L23867: "Under many contracts, the buyer and supplier are yoked to a common timetable for completion of the final product. Usually, a separate department (e.g., materials management) presides over major aspects of scheduling." |  |
-| I101 | `sistema_de_alarma_de_defectos` | 4 | **OPERATIVO** | direccion: L23867: "Establishment of a system of timely response to alarm signals" |  |
-| I102 | `smed_setup_reduction` | 1 | **OPERATIVO** | direccion: L13574: "The primary steps to faster changeovers include" |  |
-| I103 | `smed_setup_reduction` | 4 | **OPERATIVO** | direccion: L13578: "Streamline the internal activity with the same principles as production: minimizing motion and travel, adjacency, and balancing. Then streamline external activity" |  |
-| I104 | `accidentes_organizacionales_por_mantenimiento` | 3 | **OPERATIVO** | direccion: L1934 (mismo pasaje). El libro no pide comparar los patrones con las practicas propias. |  |
-| I105 | `accidentes_organizacionales_por_mantenimiento` | 4 | **OPERATIVO** | direccion: L1934 (mismo pasaje). El libro no propone usar los casos como material de capacitacion. |  |
-| I106 | `arbol_decision_culpabilidad` | 6 | **ANADIDO** | la lista de categorias "criminal, negligente, violacion con o sin mitigacion, error inducido por el sistema" | lectura de L5039 a L5063: la mitigacion califica al abuso de sustancias, no a la violacion; las violaciones se dividen en temerarias e inducidas por el sistema; falta el error sin culpa, "perhaps 90 per cent or more" |
-| I107 | `auftragssystem_supervision_autonoma` | 4 | **OPERATIVO** | direccion: L5206: "To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance." |  |
-| I108 | `autonomia_dependencia_regulatoria` | 3 | **OPERATIVO** | direccion: L4261: "regulators tend to become dependent upon the regulated organizations to help them acquire and interpret information" |  |
-| I109 | `autonomia_dependencia_regulatoria` | 4 | **OPERATIVO** | direccion: L4265 (cita de Vaughan): "To interpret the consequences of this negotiation and bargaining (e.g., the 'slap-on-the-wrist' sanction or no sanction at all) as regulatory 'failures' is to miss the point." |  |
-| I110 | `clasificacion_riesgos_por_dominio` | 2 | **OPERATIVO** | direccion: L5611: "Comparison of estimates of the four risk types across domains" |  |
-| I111 | `clasificacion_riesgos_por_dominio` | 4 | **OPERATIVO** | direccion: L5641: "The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them." |  |
-| I112 | `cognisance_organizacional` | 4 | **OPERATIVO** | direccion: L2583: "This is something that can afflict technical managers assigned to safety jobs." |  |
-| I113 | `compensacion_de_riesgo` | 2 | **OPERATIVO** | direccion: L96 (mismo pasaje). El libro describe el fenomeno; no propone politicas que lo impidan. |  |
-| I114 | `compensacion_de_riesgo` | 3 | **OPERATIVO** | direccion: L96 (mismo pasaje). No hay indicadores de margen tras nuevas tecnologias protectoras. |  |
-| I115 | `condiciones_latentes_largo_plazo` | 1 | **OPERATIVO** | direccion: L563: "The subsequent investigation... established from the original plans that the roadbed had been located on the corner of an existing beaver pond." |  |
-| I116 | `condiciones_latentes_largo_plazo` | 2 | **OPERATIVO** | direccion: L565: "Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers... Second, it had been an unusually wet summer" |  |
-| I117 | `condiciones_latentes_largo_plazo` | 3 | **OPERATIVO** | direccion: L584: "In the train derailment, the underlying problem was virtually undiscoverable before the event. It is thus a very special case." |  |
-| I118 | `conflicto_de_objetivos_en_organismos_reguladores` | 1 | **OPERATIVO** | direccion: L4165: "it was an enterprise agency that was financed, in part, by those it regulated. As a result, the ACAA was quite naturally concerned with sustaining the commercial viability of its client operators in the commuter sector." |  |
-| I119 | `conflicto_de_objetivos_en_organismos_reguladores` | 3 | **OPERATIVO** | direccion: L3989: "the SR & QA did not establish an adequate means for reporting Shuttle problems up the NASA hierarchy" |  |
-| I120 | `conflicto_de_objetivos_en_organismos_reguladores` | 4 | **OPERATIVO** | direccion: L4133: "the ACAA appeared to be reluctant to take decisive action to improve Monarch’s operating standards" |  |
-| I121 | `confusion_de_modos_automatizacion` | 4 | **OPERATIVO** | direccion: L942: "In both cases, the causes can be traced to 'clumsy' automation." |  |
-| I122 | `cultura_como_mecanismo_descentralizacion` | 3 | **OPERATIVO** | direccion: L5178: "when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance." |  |
-| I123 | `cultura_como_mecanismo_descentralizacion` | 4 | **OPERATIVO** | direccion: L5178: "This is in sharp contrast to centralisation by rules and regulations or centralisation by standardisation and hierarchy, both of which require high surveillance." |  |
-| I124 | `cultura_de_aprendizaje` | 4 | **OPERATIVO** | direccion: L2654: "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework." |  |
-| I125 | `cultura_de_seguridad_componentes` | 4 | **OPERATIVO** | direccion: L4749: "Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for." |  |
-| I126 | `cultura_flexible` | 2 | **OPERATIVO** | direccion: L4769: "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot" |  |
-| I127 | `cultura_flexible` | 4 | **OPERATIVO** | direccion: L4769: "and then reverts back to the traditional bureaucratic mode once the emergency has passed." |  |
-| I128 | `cultura_flexible_organizacional` | 2 | **OPERATIVO** | direccion: L5164: "Hierarchical rank defers to technical expertise often held by those of lower formal rank." |  |
-| I129 | `cultura_justa` | 2 | **OPERATIVO** | direccion: L4987: "The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts to which the attribution of blame is neither appropriate nor useful." |  |
-| I130 | `cultura_justa` | 3 | **OPERATIVO** | direccion: L5085: "It applies a common and consistent approach to the issue of determining whether or not disciplinary action is warranted." |  |
-| I131 | `diseno_recordatorios_efectivos_2` | 1 | **ANADIDO** | el criterio "revisando errores historicos" | lectura de L2170 a L2250: el libro identifica los pasos "in advance" por sus rasgos y dice que las omisiones pasadas de otros pueden ser imposibles de reconstruir |
-| I132 | `diseno_recordatorios_efectivos_2` | 4 | **OPERATIVO** | direccion: L2299: "The presence of reminders is not a guaranteed solution to the omission problem." |  |
-| I133 | `diseno_recordatorios_efectivos_2` | 5 | **OPERATIVO** | direccion: L2299: "in the spirit of kaizen" |  |
-| I134 | `enfoques_definicion_riesgo_aceptable` | 2 | **OPERATIVO** | direccion: L4388: "it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body." |  |
-| I135 | `enfoques_definicion_riesgo_aceptable` | 3 | **OPERATIVO** | direccion: L4288: "The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better." |  |
-| I136 | `enfoques_definicion_riesgo_aceptable` | 4 | **OPERATIVO** | direccion: L4296: "as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk, except for interruptions during times of economic distress or high unemployment." |  |
-| I137 | `errores_como_consecuencia` | 4 | **OPERATIVO** | direccion: L2907: "Psychologists call it the fundamental attribution error." |  |
-| I138 | `fallo_regulatorio_por_recursos_insuficientes` | 2 | **OPERATIVO** | direccion: L3993: "Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff." |  |
-| I139 | `fallo_regulatorio_por_recursos_insuficientes` | 4 | **OPERATIVO** | direccion: L4523: "if regulators are to be other than convenient scapegoats, they will have to be provided with the legislation, the resources and the tools to do their jobs effectively." |  |
-| I140 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 1 | **OPERATIVO** | direccion: L1035: "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems" |  |
-| I141 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 2 | **OPERATIVO** | direccion: L1035 (mismo pasaje). No hay analisis de sensibilidad de nuevas regulaciones. |  |
-| I142 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 3 | **OPERATIVO** | direccion: L1035: "cannot universally proscribe particular types of human response" |  |
-| I143 | `gestion_falsas_alarmas` | 2 | **OPERATIVO** | direccion: L1141: "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon" |  |
-| I144 | `gestion_falsas_alarmas` | 3 | **OPERATIVO** | direccion: L1093: "The stick warning mechanism was turned off." |  |
-| I145 | `gestion_falsas_alarmas` | 4 | **OPERATIVO** | direccion: L1095: "they profoundly mistrusted the stick-shaker warning system" |  |
-| I146 | `inspecciones_superficiales_y_muestreo_incompleto` | 1 | **OPERATIVO** | direccion: L4027: "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures." |  |
-| I147 | `inspecciones_superficiales_y_muestreo_incompleto` | 2 | **OPERATIVO** | direccion: L4027: "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection." |  |
-| I148 | `inspecciones_superficiales_y_muestreo_incompleto` | 3 | **OPERATIVO** | direccion: L4027: "nor was he experienced in the use of such procedures" |  |
-| I149 | `ironias_de_la_automatizacion` | 3 | **OPERATIVO** | direccion: L848: "even the best motivated people have trouble maintaining vigilance for long periods of time" |  |
-| I150 | `legislacion_especifica_vs_accidente_organizacional` | 4 | **OPERATIVO** | direccion: L4223: "We will look briefly at some of these success stories in order to redress the balance." |  |
-| I151 | `limite_busqueda_causas_pendulo` | 4 | **OPERATIVO** | direccion: L263: "Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons" |  |
-| I152 | `motores_de_seguridad_3cs` | 5 | **OPERATIVO** | direccion: L2577: "These driving forces are: commitment, competence and cognisance--'the three Cs'." |  |
-| I153 | `normalizacion_de_la_desviacion` | 2 | **OPERATIVO** | direccion: L3965: "While the Presidential Commission was shocked by NASA’s frequent use of the phrase ‘acceptable risk’" |  |
-| I154 | `normalizacion_de_la_desviacion` | 3 | **OPERATIVO** | direccion: L3965: "What drove NASA inexorably towards the tragic outcome was the insidious erosion of the standards against which they regulated themselves." |  |
-| I155 | `normalizacion_de_la_desviacion` | 4 | **OPERATIVO** | direccion: L3971: "it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last" |  |
-| I156 | `normalizacion_de_la_desviacion` | 5 | **OPERATIVO** | direccion: L3153: "Organization. This concerns organizational deficiencies that blur safety responsibilities and allow warning signs to be overlooked." |  |
-| I157 | `normalizacion_de_la_desviacion` | 6 | **ANADIDO** | el revisor "un mentor o asesor" | grep "mentor": 0 resultados; la mirada externa del libro es la del regulador (L4446) |
-| I158 | `normalizacion_de_la_desviacion` | 7 | **OPERATIVO** | direccion: L608: "Messengers (whistle-blowers) are ‘shot’." |  |
-| I159 | `planificacion_recuperacion_post_accidente` | 4 | **OPERATIVO** | direccion: L5896: "Furthermore, 80 per cent of disaster recovery plans do not work the first time." |  |
-| I160 | `prevalencia_omisiones` | 3 | **ANADIDO** | el criterio "mayor tasa de omision historica" | lectura de L2170 a L2259: el criterio del libro son los rasgos que provocan omisiones, contados de antemano |
-| I161 | `prevalencia_omisiones` | 4 | **OPERATIVO** | direccion: L2089 a L2097 (Rasmussen: actividades asociadas a omisiones, "Repair and modification (41%)", etc.). El libro no propone metricas de seguimiento de omisiones por tipo de tarea. |  |
-| I162 | `produccion_y_proteccion` | 2 | **OPERATIVO** | direccion: L65: "low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone" |  |
-| I163 | `quality_control_vs_quality_assurance` | 4 | **OPERATIVO** | direccion: L971 (mismo pasaje). El libro no propone auditorias aleatorias sobre el trabajo firmado. |  |
-| I164 | `redes_de_seguridad_regulatoria` | 1 | **OPERATIVO** | direccion: L4060: "The result of these constraints was that the air carrier inspection and monitoring safety net failed." |  |
-| I165 | `redes_de_seguridad_regulatoria` | 2 | **OPERATIVO** | direccion: L4088: "Had the regulator been more diligent in scrutinising the F-28 implementation at Air Ontario, many of the operational deficiencies that had a bearing on the crash of flight 1363 could have been avoided." |  |
-| I166 | `redes_de_seguridad_regulatoria` | 3 | **OPERATIVO** | direccion: L4060: "Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced." |  |
-| I167 | `redes_de_seguridad_regulatoria` | 4 | **OPERATIVO** | direccion: L821: "the provision of redundant and diverse defences has greatly reduced the numbers of adverse events. They have, however, radically changed both the nature of the accidents" |  |
-| I168 | `safety_culture_engineering` | 4 | **OPERATIVO** | direccion: L4730: "Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure." |  |
-| I169 | `self_regulation_deregulation_tradeoffs` | 1 | **OPERATIVO** | direccion: L4429: "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’" |  |
-| I170 | `self_regulation_deregulation_tradeoffs` | 4 | **OPERATIVO** | direccion: L4416: "the upsurge within Britain of an ‘ideology of deregulation’" |  |
-| I171 | `senales_alerta_no_atendidas` | 1 | **OPERATIVO** | direccion: L520: "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm" |  |
-| I172 | `senales_alerta_no_atendidas` | 2 | **OPERATIVO** | direccion: L520 (mismo pasaje). No hay umbrales ni combinaciones que disparen revisiones. |  |
-| I173 | `senales_alerta_no_atendidas` | 3 | **OPERATIVO** | direccion: L546: "A letter sent by SIMEX to BFS... This was not passed on to London at the time" |  |
-| I174 | `violaciones_procedimentales_por_sobreespecificacion` | 3 | **OPERATIVO** | direccion: L1012: "Most experienced workers know approximately where the ‘edge’ between safety and disaster lies" |  |
-| I175 | `aplicar_regla_fija_de_colchon_de_relleno` | 4 | **OPERATIVO** | direccion: L30: "Nodo: " |  |
-| I176 | `elegir_caja_correcta` | 4 | **OPERATIVO** | direccion: HowToPack_fxcom.txt L81: "Dimensional weight applies when the package is relatively light compared with its volume." |  |
-| I177 | `decision_de_vender_startup` | 2 | **OPERATIVO** | direccion: L3976: "Founders may also worry that changes in the industry will threaten the startup's core business. [...] To do that, we either needed to invest heavily in our software or find companies we could buy to fill those holes." |  |
-| I178 | `decision_de_vender_startup` | 6 | **PENDIENTE** | al menos diez veces mas grande y "jugador numero uno" | grep "ten times/10x/10 times/number one" en Wasserman: sin respaldo (el unico "number one" es el numero de empleado de Wozniak, L1122); posible origen: Horowitz, fuente no autorizada |
-| I179 | `decision_de_vender_startup` | 7 | **PENDIENTE** | la clasificacion "talento y tecnologia, producto o negocio completo" | Wasserman clasifica la estructura de la venta (efectivo o earn-out, L4002); posible origen: Horowitz |
-| I180 | `decision_de_vender_startup` | 8 | **PENDIENTE** | el "proceso corto y discreto de sondeo de M&A con varios compradores" | Wasserman solo describe ofertas competidoras en un caso (L4004); posible origen: Horowitz |
-| I181 | `decision_de_vender_startup` | 9 | **OPERATIVO** | direccion: L3956: "founders who signed term sheets with liquidation preferences that prevent them from getting any proceeds from the sale until the investors get back the capital they invested will usually resist mightily any offers below that amount" |  |
-| I182 | `decision_de_vender_startup` | 10 | **PENDIENTE** | comunica ese precio con firmeza a todos los compradores y sostenlo, dispuesto a esperar | Wasserman advierte del riesgo de esperar una oferta mejor que no llega (L3954); posible origen: Horowitz |
-| I183 | `decision_de_vender_startup` | 11 | **PENDIENTE** | el horizonte "3 o 5 anos" | grep "three to five years/3 to 5 years" en Wasserman: 0; compara con el valor de seguir independiente sin horizonte (L3952); posible origen: Horowitz |
-| I184 | `decision_de_vender_startup` | 12 | **OPERATIVO** | direccion: L4042: "Key nonfounding employees can also hold up the acquisition if they are not aligned with the rest of the team." |  |
-| I185 | `decision_de_vender_startup` | 13 | **OPERATIVO** | direccion: L4012: "For the Lynx founders, accepting an earn-out would conflict with their major reason for exiting in the first place: They were burned out after years of riding the entrepreneurial roller coaster, and they wanted out." |  |
-| I186 | `decision_de_vender_startup` | 14 | **PENDIENTE** | el responsable "tu consejo (board) y asesores de confianza" | Wasserman describe el peso emocional (L3950, L3954) sin pedir consultar al consejo; posible origen: Horowitz |
-| I187 | `decision_de_vender_startup` | 15 | **OPERATIVO** | direccion: L1884: "However, when the founders later sought a raise to bring their salaries more in line with industry norms (well over $100,000), their board would grant them only $90,000." |  |
-| I188 | `playing_with_fire_gap` | 3 | **OPERATIVO** | direccion: L1133: "For each type of relationship, the greater the distance between the two factors, the more the cofounders are " |  |
-| I189 | `quemar_las_naves_burning_the_boats` | 2 | **OPERATIVO** | direccion: L2698: "Indeed, objective observers might question whether such persistence is virtue or vice" |  |
-| I190 | `quemar_las_naves_burning_the_boats` | 4 | **OPERATIVO** | direccion: L2702: "Instead of taking prudent risks to maximize your chance for succeeding, you live constantly on the edge in a world of ‘possible success.’" |  |
-| I191 | `analisis_trafico_competitivo` | 1 | **ANADIDO** | las herramientas "AdRoll o Adbeat" | grep "adroll/adbeat" en todo el txt: 0 resultados; el libro nombra Alexa y Compete (L8522) |
+| id | node_id | paso | integrador | ciego | clase final | dato anadido, direccion o resolucion |
+|---|---|---:|---|---|---|---|
+| I001 | `tipos_sitio_web_exportacion` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3209: "design and maintenance are less expensive than for a transactional website" |
+| I002 | `abrazar_la_incomodidad` | 4 | ANADIDO | ANADIDO | ANADIDO | la secuencia "despues de superar la incomodidad inicial"; el libro pide quedarse en ella |
+| I003 | `abrazar_los_bordes_de_la_conciencia` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1666: "The remedy for this conundrum is to get acquainted with the edges of your awareness." |
+| I004 | `abrazar_los_bordes_de_la_conciencia` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1674: "If we can learn to love the search for what we don’t know and can’t sense as much as we cherish what we think we do know, we may find our way to a thriving future." |
+| I005 | `abrazar_los_bordes_de_la_conciencia` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3090: "Who has been left out? Notice it and name it. But even that is just the beginning." |
+| I006 | `antigoals_framework` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3682: "Safeguards: how you will make sure things don’t go wrong. (We’ll get into some safeguards in chapter 8, where we call them fail-safes.)" |
+| I007 | `antigoals_framework` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3663: "Get them all out. Then look at them. Do they help serve your purpose or do they distract you from it?" |
+| I008 | `aprender_desde_el_amor_empatia` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2882: "On her first week onsite, she violated rule number one." |
+| I009 | `aprender_desde_el_amor_empatia` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2900: "And they are often inspired by “a mismatch that loved ones faced when something interrupted their connection to each other.”" |
+| I010 | `aprender_desde_el_amor_empatia` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2898: "They motivate you to look, push you to see more fully." |
+| I011 | `biomimicry_conexiones_naturales` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3230: "Its goal is to produce silk fiber as spiders do, to massively cut down on the waste produced by the global fashion industry." |
+| I012 | `buscar_armonia_diseno` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4703: "What we make and do is important; how we make and do it is more important still." |
+| I013 | `definir_tesoro_con_perspectiva_temporal` | 2 | ANADIDO | ANADIDO | ANADIDO | los horizontes "10 y 100 anos" (el libro solo pregunta por cincuenta) |
+| I014 | `democratizacion_de_herramientas_creativas` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4385: "With the advent of fast, cheap processors, cameras in pockets, and 3D printers, we’re all creators again." |
+| I015 | `democratizacion_de_herramientas_creativas` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4397: "We need to look at time divides in the same way as digital divides and wealth gaps." |
+| I016 | `disenar_los_detalles_no_lo_inevitable` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1507: "It’s time to decide." |
+| I017 | `disenar_para_sanacion` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4707: "the designers worked with families and descendants to collect soil from all the sites where the lynchings took place." |
+| I018 | `disenar_verbos_no_sustantivos` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L663: "The ability to shape all those intangible impacts is the power and responsibility of design." |
+| I019 | `disenio_en_turbulencia` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3534: "so that you are ready to repair when your best-laid plans go awry." |
+| I020 | `diseno_consecuencias_no_intencionadas` | 1 | ANADIDO | ANADIDO | ANADIDO | los horizontes "10, 50 y 100 anos" |
+| I021 | `diseno_etico_de_privacidad` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1086: "Data is like garbage. You'd better know what you are going to do with it before you collect it." |
+| I022 | `diseno_etico_de_privacidad` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L985: "it takes work to opt out. It's rarely (make that never) the default." |
+| I023 | `diseno_etico_de_privacidad` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1009: "Maybe you want less agency. If the board game you need to buy... can be searched for and purchased in minutes... you've made time for something else." |
+| I024 | `diseno_etico_de_privacidad` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1005: "The owner of the data has significantly more power than the generator" |
+| I025 | `diseno_para_reuso_responsable` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4074: "As technology evolves, we can use it to core and mine landfills" |
+| I026 | `diseno_para_reuso_responsable` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4074: "What is currently deemed trash is likely loaded with value, but who can or should profit from it is a question to reckon with." |
+| I027 | `diseno_para_reuso_responsable` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4444: "The constraints you follow are your ethics; they get built right into the fabric of the world." |
+| I028 | `diseno_por_sustraccion` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3754: "Removal is a design fundamental." |
+| I029 | `diseno_por_sustraccion` | 4 | ANADIDO | ANADIDO | ANADIDO | la cifra "al menos 3 elementos" |
+| I030 | `diseno_por_sustraccion` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3773: "Just as we can make, we can take away--and that’s often a better option." |
+| I031 | `diseno_sistemico_partes_interesadas` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2576 (ficcion): "It’s the shadow force in the priority engine--the way the funders can exert their own control over the project, and over me." |
+| I032 | `diseno_sistemico_partes_interesadas` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2628 (ficcion, voz de la narradora): "I can make the hard decisions, letting one part of the biome falter for the sake of the broader good." |
+| I033 | `economia_circular_de_la_imaginacion` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3638: "it makes sense to calibrate your instruments and reconsider how to tally progress." |
+| I034 | `falacia_del_disenador_affordances` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2925: "We make homes in the flaws. We nestle into the mistakes. We build our future in the gaps." |
+| I035 | `ficcion_especulativa_como_metodo` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3490: "Are you trying to understand what might transpire if you go down a certain road? Try a speculative story." |
+| I036 | `ficcion_especulativa_como_metodo` | 2 | ANADIDO | ANADIDO | ANADIDO | el horizonte "10-15 anos" y el reparto "usuarios, empresas, reguladores" |
+| I037 | `ficcion_especulativa_como_metodo` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4658: "To heal, we must paint pictures of our futures--those we want to see and those we want to avoid." |
+| I038 | `ficcion_especulativa_como_metodo` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L193: "to allow you to muse about what you might do now." |
+| I039 | `gestion_decisiones_bajo_carga_emocional` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1222: "If your brain is full (and whose isn’t?), your emotions have an even bigger effect on your choices." |
+| I040 | `gestion_decisiones_bajo_carga_emocional` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1200: "There are thousands of moments along the circumstances-feelings-ideas loop to pause, reflect, and redirect." |
+| I041 | `indice_de_reparabilidad` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4336: "But who should govern them? Scores on the French index are currently calculated by manufacturers themselves. What are the boundaries of trust?" |
+| I042 | `llamar_lo_que_falta` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3026: "Making us pause to think about a concept in a way that we might not otherwise have done is exactly the point. It allows us to uncover new layers to our noticing." |
+| I043 | `medir_lo_que_importa_no_solo_lo_facil` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3661: "To offset troublesome goals, make more goals." |
+| I044 | `metas_vs_proposito` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3661: "To offset troublesome goals, make more goals." |
+| I045 | `narrativa_como_herramienta_de_sentido` | 1 | OPERATIVO | ANADIDO | **ANADIDO** | L2071: "stories train your attention on characters, conflict, and causes." La triada del libro es personajes, conflicto y causas, y la presenta como distorsion (L2075: "But it's still a distortion."); "resolucion" no esta (grep "resolution": solo L2690 y L2696, sobre la incomodidad). Dato anadido: la receta "personajes, conflicto y resolucion". |
+| I046 | `narrativa_como_herramienta_de_sentido` | 3 | ANADIDO | ANADIDO | ANADIDO | las herramientas "escenarios, storyboards" |
+| I047 | `pensamiento_de_conexiones_ripple_effect` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3090: "Where else does nature already have a solution?" |
+| I048 | `pensamiento_espacial_mapeo` | 1 | OPERATIVO | ANADIDO | OPERATIVO | L3460: "The minute you move your data, ideas, or anything around in front of you with your hands, you activate your brain in a new way." El cinco es del libro (L3404) y el libro generaliza el ejercicio a datos e ideas; "features, usuarios, riesgos" son ejemplos de contenido, no cifra, plazo, herramienta, responsable, norma ni frecuencia. |
+| I049 | `pensamiento_espacial_mapeo` | 5 | ANADIDO | ANADIDO | ANADIDO | la cifra "al menos 3-5 mapas" |
+| I050 | `prototipar_con_medios_no_convencionales` | 6 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3939: "we can expose the biases in our thinking, stretch our ideas to new places, and invite more people into our work." |
+| I051 | `reconocer_el_sesgo_narrativo` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2079: "when you’re not motivated to believe something, you look to dismiss any evidence to the contrary." |
+| I052 | `reconocer_sesgo_de_apofenia` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1865: "Confirmation bias--accepting data only when it confirms your established belief--can create big societal consequences." |
+| I053 | `reconocer_sesgo_de_apofenia` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1863: "These sensemaking strategies are forms of apophenia--the inclination to see a connection in data or a pattern in randomness." |
+| I054 | `salir_de_la_cabeza_movimiento_espacial` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3952: "If you’re a heavy GPS user of turn-by-turn directions, try this on yourself: Don’t turn it on the next time." |
+| I055 | `salir_de_la_cabeza_movimiento_espacial` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3944: "Getting out of our heads (literally) helps us challenge assumptions and generate new ideas." |
+| I056 | `ser_buen_jig` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4726: "One of the great joys of working with creative people is witnessing the things they make to make the things they make." |
+| I057 | `ser_buen_jig` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4728: "Their job is to guide a piece of wood through a saw, lathe, sander, or drill at just the right angle or in just the right way, repeatedly." |
+| I058 | `shapeshifting_diversidad` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3142: "It’s shapeshifting through prototyping, finding a solution through trial and error." |
+| I059 | `shapeshifting_diversidad` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3146: "Researchers at Tufts University studying mock trial teams have shown that diverse teams also catch errors earlier." |
+| I060 | `suenos_completos_diseno_responsable` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4190: "Call them full dreams; dreams that are grand but not singular" |
+| I061 | `tecnica_cambio_de_perspectiva_escala` | 1 | OPERATIVO | ANADIDO | OPERATIVO | L1018: "The place of data flows allows us to see macroscopic trends of microscopic information." y L1016 (datos desde dentro del cuerpo). La escala micro esta en el libro, aunque en otro capitulo; "segundo a segundo, celula a celula" son ejemplos en la misma direccion. |
+| I062 | `tecnica_cambio_de_perspectiva_escala` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1815: "Both images are decades-long records of what was, is, and might be." |
+| I063 | `tecnica_cambio_de_perspectiva_escala` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1833: "What feels newly insignificant to you from this perspective? What becomes more important?" |
+| I064 | `tratar_las_historias_como_herramientas` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2092: "Ride them and see where they take you. When they break down, tune them up or trade them in." |
+| I065 | `tratar_las_historias_como_herramientas` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2092: "When they break down, tune them up or trade them in." |
+| I066 | `etiqueta_lo_que_piensa_el_proveedor` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1243: "las etiquetas te ayudan a destapar e identificar la emoción primaria que impulsa casi todos los comportamientos del interlocutor" |
+| I067 | `etiqueta_lo_que_piensa_el_proveedor` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1320: "Anna pudo sonsacarles un dato importante sobre los temores de ABC" |
+| I068 | `muestra_puntos_en_comun_antes_de_negociar` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4789: "en muchas culturas los negociadores invierten mucho tiempo en construir estos puntos de compenetración antes de empezar a pensar siquiera en la oferta" |
+| I069 | `muestra_puntos_en_comun_antes_de_negociar` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1713: "ser «amable» como forma de simpatía fingida es a menudo igual de infructuoso" |
+| I070 | `preparate_para_marcharte_del_trato` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4255: "No debes depender excesivamente de un acuerdo." |
+| I071 | `preparate_para_marcharte_del_trato` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4255: "debes estar dispuesto a abandonar la negociación" |
+| I072 | `revela_tu_propio_plazo_limite_al_negociar` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2412: "Los plazos y las fechas límite son, con frecuencia, arbitrarios y casi siempre flexibles" |
+| I073 | `revela_tu_propio_plazo_limite_al_negociar` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2438: "«Ellos conocían mis plazos, pero yo no conocía los suyos»" |
+| I074 | `revela_tu_propio_plazo_limite_al_negociar` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2448: "cuando un oponente conoce tu plazo límite, entra antes en el verdadero juego del intercambio de concesiones" |
+| I075 | `usa_preguntas_de_como_para_negociar_precio` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1430: "Haz pausas. Después de haber etiquetado una barrera o reflejado una afirmación, deja que se asiente. No te preocupes, la otra parte se encargará de llenar el silencio." |
+| I076 | `cinco_principios_guia_transformacion` | 2 | OPERATIVO | OPERATIVO | **FIEL** | L908: "Their primary agenda was to create a set of goals, strategies, and ways of measuring progress" con "socially, economically, and ecologically informed standards to measure the quality of air, habitat, community, energy use, employee relations, architecture, and, not least of all, production." |
+| I077 | `critica_del_pib_como_metrica_de_progreso` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L871: "Businesses calculate their conventional economic profitability and add to that what they perceive to be the social benefits" |
+| I078 | `critica_del_pib_como_metrica_de_progreso` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L229: "Loss of resources, cultural depletion, negative social and environmental effects, reduction of quality of life--these ills can all be taking place, an entire region can be in decline, yet they are negated by a simplistic economic figure" |
+| I079 | `critica_del_pib_como_metrica_de_progreso` | 5 | OPERATIVO | OPERATIVO | **FIEL** | L918: "The health of the site is measured not in terms of meeting minimum government-imposed standards but with respect to things like the number of earthworms per cubic foot of soil"; L908 (estandares sociales, economicos y ecologicos). |
+| I080 | `critica_del_pib_como_metrica_de_progreso` | 6 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L873: "If businesses are not using triple bottom line analysis as a strategic design tool, they are missing a rich opportunity." |
+| I081 | `gestion_de_aguas_pluviales_con_techos_verdes` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L509: "It is a light layer of soil, a growing matrix, covered with plants." |
+| I082 | `gestion_de_aguas_pluviales_con_techos_verdes` | 2 | OPERATIVO | OPERATIVO | **FIEL** | L449: "A layer of native grasses covers the building's roof, making it more attractive to songbirds and absorbing water runoff"; L924: "The specific solutions must grow out of and respond to local circumstances, however." |
+| I083 | `gestion_de_aguas_pluviales_con_techos_verdes` | 3 | ANADIDO | ANADIDO | ANADIDO | las capas "impermeabilizacion" y "drenaje" |
+| I084 | `gestion_de_aguas_pluviales_con_techos_verdes` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L509: "It maintains the roof at a stable temperature, providing free evaporative cooling in hot weather and insulation in cold weather" |
+| I085 | `volverse_nativo_del_lugar` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L537: el libro da el ejemplo de los Menominee, y advierte: "this particular form of forestry is not necessarily universal in its potential applications". No pide estudiar practicas indigenas de la reg |
+| I086 | `cultura_que_habla_del_riesgo_sin_miedo` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4607: "It may also gently free workshop participants from overly rigid attitudes towards risk management. At its very best, scenario testing is capable of exposing projects that should have been avoided but perhaps were too enticing or over-optimistic" |
+| I087 | `cultura_que_habla_del_riesgo_sin_miedo` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L7152: "the people involved will only feel comfortable about communicating and sharing such knowledge if a genuine culture of non-blaming exists in the organisation" |
+| I088 | `cultura_que_habla_del_riesgo_sin_miedo` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3002: "Workshop participants should comprise a small group of people, familiar with the stakeholder organisation and its projects" |
+| I089 | `plan_de_desastre_y_recuperacion` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L6075 (planes "formalised, rehearsed" |
+| I090 | `reduce_el_riesgo_a_lo_razonable` | 2 | ANADIDO | ANADIDO | ANADIDO | la cifra "dos o tres acciones" |
+| I091 | `reduce_el_riesgo_a_lo_razonable` | 3 | OPERATIVO | ANADIDO | OPERATIVO | L5797: el principio ALARP, "set 'As Low As Reasonably Practical'"; L5677: retener sin tratar si el tratamiento "is unlikely to be effective or delivers a negative benefit/cost ratio". El criterio del paso va en esa direccion. No es CONTRARIO: el paso no manda parar con un riesgo inaceptable que un tratamiento eficaz aun podria bajar (L5818). |
+| I092 | `revisa_tus_riesgos_con_un_ritmo` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5966: "monitoring frequency will also be influenced by the dynamics of the project" |
+| I093 | `tecnicas_para_sacar_riesgos_a_la_luz` | 3 | ANADIDO | ANADIDO | ANADIDO | la cifra "dos o tres proyectos" |
+| I094 | `calibra_tu_propio_ojo` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2076: "Try another calibration test to see how well you do with ranges. For exhibit 7.3, provide both an upper bound and a lower bound. Remember that the range should be wide enough that you believe there is a 90 percent chance that the answer will be between your bounds." |
+| I095 | `cuidado_con_la_falsa_precision` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3383: "I asked them questions about where they got their data from and about quality control on their models." |
+| I096 | `cuidado_con_la_falsa_precision` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L981: "There is nothing mathematically invalid about using a subjective input to a calculation." |
+| I097 | `cuidado_con_la_falsa_precision` | 3 | OPERATIVO | ANADIDO | OPERATIVO | grep "decimal": una sola vez (L3918, sobre probabilidades escritas como decimales); ni apoyo ni contradiccion. El paso va en la direccion del libro contra la falsa certeza (L3478: "A range has a chance of being right whereas a point estimate will almost always be wrong."); no trae dato. |
+| I098 | `escepticismo_sano_ante_el_riesgo` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L607: "the mere appearance of structure and formality in risk management is pleasing to some" |
+| I099 | `la_matriz_de_colores_te_engana` | 3 | OPERATIVO | ANADIDO | **CONTRARIO** | L2136: "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else."; L2533: "he found they varied widely even when they were given specific guidelines for what these terms meant"; L2535: "detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice." El paso manda conservar la etiqueta y darle un rango, que es lo que el libro prueba que no funciona. |
+| I100 | `sistema_de_alarma_de_defectos` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L23867: "Under many contracts, the buyer and supplier are yoked to a common timetable for completion of the final product. Usually, a separate department (e.g., materials management) presides over major aspects of scheduling." |
+| I101 | `sistema_de_alarma_de_defectos` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L23867: "Establishment of a system of timely response to alarm signals" |
+| I102 | `smed_setup_reduction` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L13574: "The primary steps to faster changeovers include" |
+| I103 | `smed_setup_reduction` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L13578: "Streamline the internal activity with the same principles as production: minimizing motion and travel, adjacency, and balancing. Then streamline external activity" |
+| I104 | `accidentes_organizacionales_por_mantenimiento` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1934 (mismo pasaje). El libro no pide comparar los patrones con las practicas propias. |
+| I105 | `accidentes_organizacionales_por_mantenimiento` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1934 (mismo pasaje). El libro no propone usar los casos como material de capacitacion. |
+| I106 | `arbol_decision_culpabilidad` | 6 | ANADIDO | ANADIDO | ANADIDO | la lista de categorias "criminal, negligente, violacion con o sin mitigacion, error inducido por el sistema" |
+| I107 | `auftragssystem_supervision_autonoma` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5206: "To be effective, such training must occur in the initial phase of employment and then be consolidated and extended by on-the-spot supervisory guidance." |
+| I108 | `autonomia_dependencia_regulatoria` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4261: "regulators tend to become dependent upon the regulated organizations to help them acquire and interpret information" |
+| I109 | `autonomia_dependencia_regulatoria` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4265 (cita de Vaughan): "To interpret the consequences of this negotiation and bargaining (e.g., the 'slap-on-the-wrist' sanction or no sanction at all) as regulatory 'failures' is to miss the point." |
+| I110 | `clasificacion_riesgos_por_dominio` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5611: "Comparison of estimates of the four risk types across domains" |
+| I111 | `clasificacion_riesgos_por_dominio` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5641: "The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them." |
+| I112 | `cognisance_organizacional` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2583: "This is something that can afflict technical managers assigned to safety jobs." |
+| I113 | `compensacion_de_riesgo` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L96 (mismo pasaje). El libro describe el fenomeno; no propone politicas que lo impidan. |
+| I114 | `compensacion_de_riesgo` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L96 (mismo pasaje). No hay indicadores de margen tras nuevas tecnologias protectoras. |
+| I115 | `condiciones_latentes_largo_plazo` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L563: "The subsequent investigation... established from the original plans that the roadbed had been located on the corner of an existing beaver pond." |
+| I116 | `condiciones_latentes_largo_plazo` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L565: "Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers... Second, it had been an unusually wet summer" |
+| I117 | `condiciones_latentes_largo_plazo` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L584: "In the train derailment, the underlying problem was virtually undiscoverable before the event. It is thus a very special case." |
+| I118 | `conflicto_de_objetivos_en_organismos_reguladores` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4165: "it was an enterprise agency that was financed, in part, by those it regulated. As a result, the ACAA was quite naturally concerned with sustaining the commercial viability of its client operators in the commuter sector." |
+| I119 | `conflicto_de_objetivos_en_organismos_reguladores` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3989: "the SR & QA did not establish an adequate means for reporting Shuttle problems up the NASA hierarchy" |
+| I120 | `conflicto_de_objetivos_en_organismos_reguladores` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4133: "the ACAA appeared to be reluctant to take decisive action to improve Monarch’s operating standards" |
+| I121 | `confusion_de_modos_automatizacion` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L942: "In both cases, the causes can be traced to 'clumsy' automation." |
+| I122 | `cultura_como_mecanismo_descentralizacion` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5178: "when centralisation occurs via decision premises and assumptions, compliance occurs without surveillance." |
+| I123 | `cultura_como_mecanismo_descentralizacion` | 4 | OPERATIVO | ANADIDO | **ANADIDO** | grep "mentor/coach/apprentic": solo "stagecoach" (L238 a L242). El libro transmite la cultura por socializacion en premisas de decision (L5178), relatos o "war stories" (L5184) y formacion. Dato anadido: la mentoria como mecanismo. |
+| I124 | `cultura_de_aprendizaje` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2654: "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework." |
+| I125 | `cultura_de_seguridad_componentes` | 4 | OPERATIVO | ANADIDO | OPERATIVO | Por escrito es una forma de documentar, como los demas pasos "documenta" que los dos clasificadores dieron OPERATIVO; no es cifra, plazo, herramienta, responsable, norma ni frecuencia. Direccion: L2765: "investment in safety is good business". |
+| I126 | `cultura_flexible` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4769: "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot" |
+| I127 | `cultura_flexible` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4769: "and then reverts back to the traditional bureaucratic mode once the emergency has passed." |
+| I128 | `cultura_flexible_organizacional` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5164: "Hierarchical rank defers to technical expertise often held by those of lower formal rank." |
+| I129 | `cultura_justa` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4987: "The difficulty lies in discriminating between these few truly ‘bad behaviours’ and the vast majority of unsafe acts to which the attribution of blame is neither appropriate nor useful." |
+| I130 | `cultura_justa` | 3 | OPERATIVO | ANADIDO | **ANADIDO** | grep "supervisors and managers/training supervisors": 0. L5085: la consistencia la da "a structured methodology ... used by an organization's disciplinary review board". Dato anadido: el responsable "supervisores y gestores". |
+| I131 | `diseno_recordatorios_efectivos_2` | 1 | ANADIDO | ANADIDO | ANADIDO | el criterio "revisando errores historicos" |
+| I132 | `diseno_recordatorios_efectivos_2` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2299: "The presence of reminders is not a guaranteed solution to the omission problem." |
+| I133 | `diseno_recordatorios_efectivos_2` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2299: "in the spirit of kaizen" |
+| I134 | `enfoques_definicion_riesgo_aceptable` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4388: "it is also a legitimate expectation of the workforce and the public that operators should be required to demonstrate this to the regulatory body." |
+| I135 | `enfoques_definicion_riesgo_aceptable` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4288: "The de minimis approach--safety exists when the risks are regarded as trivial, commonly taken as 10−6 or better." |
+| I136 | `enfoques_definicion_riesgo_aceptable` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4296: "as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk, except for interruptions during times of economic distress or high unemployment." |
+| I137 | `errores_como_consecuencia` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2907: "Psychologists call it the fundamental attribution error." |
+| I138 | `fallo_regulatorio_por_recursos_insuficientes` | 2 | OPERATIVO | ANADIDO | **ANADIDO** | grep "industry standard/benchmark/industry norm": 0. El libro da ratios de casos (L3993: "about 2 per cent of NASA's 22 000 staff") y los juzga frente a recortes y carga. Dato anadido: la norma externa "estandares del sector". |
+| I139 | `fallo_regulatorio_por_recursos_insuficientes` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4523: "if regulators are to be other than convenient scapegoats, they will have to be provided with the legislation, the resources and the tools to do their jobs effectively." |
+| I140 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1035: "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems" |
+| I141 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 2 | OPERATIVO | ANADIDO | **ANADIDO** | grep "sensitivity analys": 0. La idea de fondo si esta (L1035). Dato anadido: la herramienta "analisis de sensibilidad". |
+| I142 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1035: "cannot universally proscribe particular types of human response" |
+| I143 | `gestion_falsas_alarmas` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1141: "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon" |
+| I144 | `gestion_falsas_alarmas` | 3 | OPERATIVO | ANADIDO | **ANADIDO** | grep "cross-check/double-check/two-person": solo L4972, ajeno (un copiloto que no vigilo al capitan). Dato anadido: el mecanismo "verificacion cruzada" contra la desactivacion "unilateral". |
+| I145 | `gestion_falsas_alarmas` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1095: "they profoundly mistrusted the stick-shaker warning system" |
+| I146 | `inspecciones_superficiales_y_muestreo_incompleto` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures." |
+| I147 | `inspecciones_superficiales_y_muestreo_incompleto` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection." |
+| I148 | `inspecciones_superficiales_y_muestreo_incompleto` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "nor was he experienced in the use of such procedures" |
+| I149 | `ironias_de_la_automatizacion` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L848: "even the best motivated people have trouble maintaining vigilance for long periods of time" |
+| I150 | `legislacion_especifica_vs_accidente_organizacional` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4223: "We will look briefly at some of these success stories in order to redress the balance." |
+| I151 | `limite_busqueda_causas_pendulo` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L263: "Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons" |
+| I152 | `motores_de_seguridad_3cs` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2577: "These driving forces are: commitment, competence and cognisance--'the three Cs'." |
+| I153 | `normalizacion_de_la_desviacion` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3965: "While the Presidential Commission was shocked by NASA’s frequent use of the phrase ‘acceptable risk’" |
+| I154 | `normalizacion_de_la_desviacion` | 3 | OPERATIVO | OPERATIVO | **FIEL** | Dekker L2934: "On-time performance can be the expected norm, for example, even if we borrow from safety to achieve it." |
+| I155 | `normalizacion_de_la_desviacion` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L3971: "it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last" |
+| I156 | `normalizacion_de_la_desviacion` | 5 | OPERATIVO | OPERATIVO | **FIEL** | Dekker L2941: "A group's construction of risk can persist even in the face of continued (and worsening) signals of potential danger." |
+| I157 | `normalizacion_de_la_desviacion` | 6 | ANADIDO | ANADIDO | ANADIDO | el revisor "un mentor o asesor" |
+| I158 | `normalizacion_de_la_desviacion` | 7 | OPERATIVO | OPERATIVO | **FIEL** | Dekker L2932: "if we say that a safety culture is a culture that allows the boss to hear bad news, then the hard problem here is to decide what is bad news."; L2941: "Small departures from an earlier established norm are often not worth remarking or reporting on." |
+| I159 | `planificacion_recuperacion_post_accidente` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L5896: "Furthermore, 80 per cent of disaster recovery plans do not work the first time." |
+| I160 | `prevalencia_omisiones` | 3 | ANADIDO | ANADIDO | ANADIDO | el criterio "mayor tasa de omision historica" |
+| I161 | `prevalencia_omisiones` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2089 a L2097 (Rasmussen: actividades asociadas a omisiones, "Repair and modification (41%)", etc.). El libro no propone metricas de seguimiento de omisiones por tipo de tarea. |
+| I162 | `produccion_y_proteccion` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L65: "low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone" |
+| I163 | `quality_control_vs_quality_assurance` | 4 | OPERATIVO | ANADIDO | **ANADIDO** | grep "random (audit/check/sampl)/spot check": 0. Lo que el libro echa en falta es la inspeccion separada y el personal de QA (L971). Dato anadido: el metodo "auditorias aleatorias". |
+| I164 | `redes_de_seguridad_regulatoria` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4060: "The result of these constraints was that the air carrier inspection and monitoring safety net failed." |
+| I165 | `redes_de_seguridad_regulatoria` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4088: "Had the regulator been more diligent in scrutinising the F-28 implementation at Air Ontario, many of the operational deficiencies that had a bearing on the crash of flight 1363 could have been avoided." |
+| I166 | `redes_de_seguridad_regulatoria` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4060: "Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced." |
+| I167 | `redes_de_seguridad_regulatoria` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L821: "the provision of redundant and diverse defences has greatly reduced the numbers of adverse events. They have, however, radically changed both the nature of the accidents" |
+| I168 | `safety_culture_engineering` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4730: "Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure." |
+| I169 | `self_regulation_deregulation_tradeoffs` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4429: "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’" |
+| I170 | `self_regulation_deregulation_tradeoffs` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4416: "the upsurge within Britain of an ‘ideology of deregulation’" |
+| I171 | `senales_alerta_no_atendidas` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L520: "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm" |
+| I172 | `senales_alerta_no_atendidas` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L520 (mismo pasaje). No hay umbrales ni combinaciones que disparen revisiones. |
+| I173 | `senales_alerta_no_atendidas` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L546: "A letter sent by SIMEX to BFS... This was not passed on to London at the time" |
+| I174 | `violaciones_procedimentales_por_sobreespecificacion` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1012: "Most experienced workers know approximately where the ‘edge’ between safety and disaster lies" |
+| I175 | `aplicar_regla_fija_de_colchon_de_relleno` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L30: "Nodo: " |
+| I176 | `elegir_caja_correcta` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: HowToPack_fxcom.txt L81: "Dimensional weight applies when the package is relatively light compared with its volume." |
+| I177 | `decision_de_vender_startup` | 2 | OPERATIVO | ANADIDO | **FIEL** | Horowitz L3288: "it became clear that BMC was going to buy either Opsware or BladeLogic"; L3294: "the market itself was transforming due to an underlying technological shift: virtualization... This meant deferring earnings for a very long time." |
+| I178 | `decision_de_vender_startup` | 6 | PENDIENTE | ANADIDO | **FIEL** | Horowitz L3278: "(a) is this market really much bigger (more than an order of magnitude) than has been exploited to date? and (b) are we going to be number one?"; L3280: "What is the market, really, and who are the competitors going to be?" |
+| I179 | `decision_de_vender_startup` | 7 | PENDIENTE | ANADIDO | **FIEL** | Horowitz L3264 a L3268: "Talent and/or technology... Product... Business, when a company is acquired for its actual business". |
+| I180 | `decision_de_vender_startup` | 8 | PENDIENTE | ANADIDO | **FIEL** | Horowitz L3296: "run a short process to understand the interest in the M&A market"; L3298: "we were at a local maxima in terms of the market price". |
+| I181 | `decision_de_vender_startup` | 9 | OPERATIVO | ANADIDO | **FIEL** | Horowitz L673: "the highest bids representing a 38 percent premium over the current stock price. Although this was considered a good premium, I did not feel right selling"; L679: "I decided that the right price to sell the company would be $14 per share". |
+| I182 | `decision_de_vender_startup` | 10 | PENDIENTE | ANADIDO | **FIEL** | Horowitz L679: "I called back all the potential acquirers and let them know that we would only entertain bids of $14 or more. There were no takers."; L681: "I held firm". |
+| I183 | `decision_de_vender_startup` | 11 | PENDIENTE | ANADIDO | **FIEL** | Horowitz L3298: "the current local maxima was higher than we could expect to achieve in the next three to five years". |
+| I184 | `decision_de_vender_startup` | 12 | OPERATIVO | ANADIDO | **FIEL** | Horowitz L3314: "If the company achieves product-market fit in a very large market and has an excellent chance to be number one, then the company will likely remain independent. If not, it will likely be sold."; y "the employee may feel betrayed if the company is ever sold". |
+| I185 | `decision_de_vender_startup` | 13 | OPERATIVO | ANADIDO | **FIEL** | Horowitz L3312: "so that the decision to keep or sell the company isn't a direct response to the CEO's personal financial situation". |
+| I186 | `decision_de_vender_startup` | 14 | PENDIENTE | OPERATIVO | **FIEL** | Horowitz L3258: "selling your company is always emotional and deeply personal."; L675: "The board was surprised, but supportive."; L671: "John and I called Michael Ovitz to get some advice." |
+| I187 | `decision_de_vender_startup` | 15 | OPERATIVO | ANADIDO | **FIEL** | Horowitz L3312: "once the company has a business (as defined above) and becomes an attractive acquisition target, it makes sense to pay the CEO"; Wasserman L1894. |
+| I188 | `playing_with_fire_gap` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1133: "For each type of relationship, the greater the distance between the two factors, the more the cofounders are " |
+| I189 | `quemar_las_naves_burning_the_boats` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2698: "Indeed, objective observers might question whether such persistence is virtue or vice" |
+| I190 | `quemar_las_naves_burning_the_boats` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2702: "Instead of taking prudent risks to maximize your chance for succeeding, you live constantly on the edge in a world of ‘possible success.’" |
+| I191 | `analisis_trafico_competitivo` | 1 | ANADIDO | ANADIDO | ANADIDO | las herramientas "AdRoll o Adbeat" |
 
-### 13.3 Tasas de los cuatro veredictos, por libro, por mundo y globales (Wilson 95, por paso y por nodo)
+### 13.3 Tasas definitivas de los cuatro veredictos, por libro, por mundo y globales (Wilson 95, por paso y por nodo)
 
 Python 3.12.8. Script:
 
 ```python
-# Tasas de los cuatro veredictos (FIEL, INFERIDO-OPERATIVO, INFERIDO-ANADIDO, CONTRARIO) con Wilson 95,
-# por paso y por nodo; global, por mundo y por libro. PENDIENTE = INFERIDO de fuente doble no leida (Horowitz), aparte.
+# Tasas DEFINITIVAS de los cuatro veredictos (FIEL, INFERIDO-OPERATIVO, INFERIDO-ANADIDO, CONTRARIO) con Wilson 95,
+# por paso y por nodo; global, por mundo y por libro, e INFERIDO total (OPERATIVO mas ANADIDO) por libro.
 # Entradas: veredictos de la fase 1 (notas_0*.tsv; folleto_franquicia 3 adjudicado FIEL), de la fase 2 (f2_*.tsv)
-# y la particion de los INFERIDOS (particion.tsv, ids en _ids_inferidos.json).
+# y la particion FINAL reconciliada de los INFERIDOS (particion_final.tsv, ids en _ids_inferidos.json).
 import csv, glob, json, math, re, sys
 from collections import defaultdict
 S = sys.argv[1]
@@ -2639,8 +2704,8 @@ for f in sorted(glob.glob(S + '/f2_*.tsv')):
             if (n, int(j)) not in V:
                 V[(n, int(j))] = [v, 2]
 ids = json.load(open(S + '/_ids_inferidos.json', encoding='utf-8'))
-clase = {r[0]: r[4] for r in list(csv.reader(open(S + '/particion.tsv', encoding='utf-8'), delimiter='\t'))[1:]}
-CAT = {'OPERATIVO': 'INF-OPERATIVO', 'ANADIDO': 'INF-ANADIDO', 'PENDIENTE': 'INF-PENDIENTE'}
+clase = {r[0]: r[6] for r in list(csv.reader(open(S + '/particion_final.tsv', encoding='utf-8'), delimiter='\t'))[1:]}
+CAT = {'OPERATIVO': 'INF-OPERATIVO', 'ANADIDO': 'INF-ANADIDO', 'CONTRARIO': 'CONTRARIO', 'FIEL': 'FIEL'}
 for k, v in V.items():
     if v[0] == 'INFERIDO':
         v[0] = CAT[clase[ids['%s|%d' % k]]]
@@ -2660,7 +2725,10 @@ def fila(nombre, claves):
         nodos[c[0]].append(V[c][0])
     n = len(pasos); m = len(nodos)
     partes = [f"{o} {pct(pasos.count(o), n)}" for o in ORDEN if o != 'INF-PENDIENTE' or pasos.count(o)]
+    inf = sum(1 for p in pasos if p.startswith('INF-'))
+    partes.append(f"INFERIDO total {pct(inf, n)}")
     pn = [f"nodos con {o} {pct(sum(1 for v in nodos.values() if o in v), m)}" for o in ('INF-ANADIDO', 'CONTRARIO')]
+    pn.append(f"nodos con algun INFERIDO {pct(sum(1 for v in nodos.values() if any(x.startswith('INF-') for x in v)), m)}")
     print(f"{nombre} | nodos {m} | pasos {n} | " + ' | '.join(partes) + ' | ' + ' | '.join(pn))
 def libro(n):
     return g[n]['fuente'].split(' | ')[0]
@@ -2691,63 +2759,173 @@ Salida literal:
 
 ```
 == A. MUESTRA DE LA FASE 1 (138 pasos; unico estimador del catalogo)
-global fase 1 | nodos 30 | pasos 138 | FIEL 117/138 84.8% [77.9, 89.8] | INF-OPERATIVO 18/138 13.0% [8.4, 19.7] | INF-ANADIDO 2/138 1.4% [0.4, 5.1] | CONTRARIO 1/138 0.7% [0.1, 4.0] | nodos con INF-ANADIDO 2/30 6.7% [1.8, 21.3] | nodos con CONTRARIO 1/30 3.3% [0.6, 16.7]
-mundo compras | nodos 2 | pasos 9 | FIEL 7/9 77.8% [45.3, 93.7] | INF-OPERATIVO 2/9 22.2% [6.3, 54.7] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-mundo core | nodos 7 | pasos 30 | FIEL 24/30 80.0% [62.7, 90.5] | INF-OPERATIVO 5/30 16.7% [7.3, 33.6] | INF-ANADIDO 1/30 3.3% [0.6, 16.7] | CONTRARIO 0/30 0.0% [0.0, 11.4] | nodos con INF-ANADIDO 1/7 14.3% [2.6, 51.3] | nodos con CONTRARIO 0/7 0.0% [0.0, 35.4]
-mundo entrega | nodos 2 | pasos 9 | FIEL 8/9 88.9% [56.5, 98.0] | INF-OPERATIVO 1/9 11.1% [2.0, 43.5] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-mundo environmental | nodos 3 | pasos 11 | FIEL 9/11 81.8% [52.3, 94.9] | INF-OPERATIVO 2/11 18.2% [5.1, 47.7] | INF-ANADIDO 0/11 0.0% [0.0, 25.9] | CONTRARIO 0/11 0.0% [0.0, 25.9] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1]
-mundo exportacion | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-mundo franquicias | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1]
-mundo health_safety | nodos 3 | pasos 14 | FIEL 9/14 64.3% [38.8, 83.7] | INF-OPERATIVO 3/14 21.4% [7.6, 47.6] | INF-ANADIDO 1/14 7.1% [1.3, 31.5] | CONTRARIO 1/14 7.1% [1.3, 31.5] | nodos con INF-ANADIDO 1/3 33.3% [6.1, 79.2] | nodos con CONTRARIO 1/3 33.3% [6.1, 79.2]
-mundo quality | nodos 4 | pasos 21 | FIEL 19/21 90.5% [71.1, 97.3] | INF-OPERATIVO 2/21 9.5% [2.7, 28.9] | INF-ANADIDO 0/21 0.0% [0.0, 15.5] | CONTRARIO 0/21 0.0% [0.0, 15.5] | nodos con INF-ANADIDO 0/4 0.0% [0.0, 49.0] | nodos con CONTRARIO 0/4 0.0% [0.0, 49.0]
-mundo risk_management | nodos 2 | pasos 8 | FIEL 6/8 75.0% [40.9, 92.9] | INF-OPERATIVO 2/8 25.0% [7.1, 59.1] | INF-ANADIDO 0/8 0.0% [0.0, 32.4] | CONTRARIO 0/8 0.0% [0.0, 32.4] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-mundo seguridad_digital | nodos 2 | pasos 10 | FIEL 10/10 100.0% [72.2, 100.0] | INF-OPERATIVO 0/10 0.0% [0.0, 27.8] | INF-ANADIDO 0/10 0.0% [0.0, 27.8] | CONTRARIO 0/10 0.0% [0.0, 27.8] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
+global fase 1 | nodos 30 | pasos 138 | FIEL 118/138 85.5% [78.7, 90.4] | INF-OPERATIVO 17/138 12.3% [7.8, 18.8] | INF-ANADIDO 2/138 1.4% [0.4, 5.1] | CONTRARIO 1/138 0.7% [0.1, 4.0] | INFERIDO total 19/138 13.8% [9.0, 20.5] | nodos con INF-ANADIDO 2/30 6.7% [1.8, 21.3] | nodos con CONTRARIO 1/30 3.3% [0.6, 16.7] | nodos con algun INFERIDO 12/30 40.0% [24.6, 57.7]
+mundo compras | nodos 2 | pasos 9 | FIEL 7/9 77.8% [45.3, 93.7] | INF-OPERATIVO 2/9 22.2% [6.3, 54.7] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | INFERIDO total 2/9 22.2% [6.3, 54.7] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
+mundo core | nodos 7 | pasos 30 | FIEL 24/30 80.0% [62.7, 90.5] | INF-OPERATIVO 5/30 16.7% [7.3, 33.6] | INF-ANADIDO 1/30 3.3% [0.6, 16.7] | CONTRARIO 0/30 0.0% [0.0, 11.4] | INFERIDO total 6/30 20.0% [9.5, 37.3] | nodos con INF-ANADIDO 1/7 14.3% [2.6, 51.3] | nodos con CONTRARIO 0/7 0.0% [0.0, 35.4] | nodos con algun INFERIDO 3/7 42.9% [15.8, 75.0]
+mundo entrega | nodos 2 | pasos 9 | FIEL 8/9 88.9% [56.5, 98.0] | INF-OPERATIVO 1/9 11.1% [2.0, 43.5] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | INFERIDO total 1/9 11.1% [2.0, 43.5] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
+mundo environmental | nodos 3 | pasos 11 | FIEL 10/11 90.9% [62.3, 98.4] | INF-OPERATIVO 1/11 9.1% [1.6, 37.7] | INF-ANADIDO 0/11 0.0% [0.0, 25.9] | CONTRARIO 0/11 0.0% [0.0, 25.9] | INFERIDO total 1/11 9.1% [1.6, 37.7] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 1/3 33.3% [6.1, 79.2]
+mundo exportacion | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | INFERIDO total 1/12 8.3% [1.5, 35.4] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
+mundo franquicias | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 0/3 0.0% [0.0, 56.1]
+mundo health_safety | nodos 3 | pasos 14 | FIEL 9/14 64.3% [38.8, 83.7] | INF-OPERATIVO 3/14 21.4% [7.6, 47.6] | INF-ANADIDO 1/14 7.1% [1.3, 31.5] | CONTRARIO 1/14 7.1% [1.3, 31.5] | INFERIDO total 4/14 28.6% [11.7, 54.6] | nodos con INF-ANADIDO 1/3 33.3% [6.1, 79.2] | nodos con CONTRARIO 1/3 33.3% [6.1, 79.2] | nodos con algun INFERIDO 2/3 66.7% [20.8, 93.9]
+mundo quality | nodos 4 | pasos 21 | FIEL 19/21 90.5% [71.1, 97.3] | INF-OPERATIVO 2/21 9.5% [2.7, 28.9] | INF-ANADIDO 0/21 0.0% [0.0, 15.5] | CONTRARIO 0/21 0.0% [0.0, 15.5] | INFERIDO total 2/21 9.5% [2.7, 28.9] | nodos con INF-ANADIDO 0/4 0.0% [0.0, 49.0] | nodos con CONTRARIO 0/4 0.0% [0.0, 49.0] | nodos con algun INFERIDO 1/4 25.0% [4.6, 69.9]
+mundo risk_management | nodos 2 | pasos 8 | FIEL 6/8 75.0% [40.9, 92.9] | INF-OPERATIVO 2/8 25.0% [7.1, 59.1] | INF-ANADIDO 0/8 0.0% [0.0, 32.4] | CONTRARIO 0/8 0.0% [0.0, 32.4] | INFERIDO total 2/8 25.0% [7.1, 59.1] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 2/2 100.0% [34.2, 100.0]
+mundo seguridad_digital | nodos 2 | pasos 10 | FIEL 10/10 100.0% [72.2, 100.0] | INF-OPERATIVO 0/10 0.0% [0.0, 27.8] | INF-ANADIDO 0/10 0.0% [0.0, 27.8] | CONTRARIO 0/10 0.0% [0.0, 27.8] | INFERIDO total 0/10 0.0% [0.0, 27.8] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 0/2 0.0% [0.0, 65.8]
 == B. FASE 1 MAS FASE 2, POR LIBRO
-A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-Assembling Tomorrow: A Guide to Designing a Thriving Future | nodos 64 | pasos 295 | FIEL 231/295 78.3% [73.3, 82.6] | INF-OPERATIVO 57/295 19.3% [15.2, 24.2] | INF-ANADIDO 7/295 2.4% [1.2, 4.8] | CONTRARIO 0/295 0.0% [0.0, 1.3] | nodos con INF-ANADIDO 7/64 10.9% [5.4, 20.9] | nodos con CONTRARIO 0/64 0.0% [0.0, 5.7]
-Chris Voss, Rompe la barrera del no | nodos 5 | pasos 24 | FIEL 14/24 58.3% [38.8, 75.5] | INF-OPERATIVO 10/24 41.7% [24.5, 61.2] | INF-ANADIDO 0/24 0.0% [0.0, 13.8] | CONTRARIO 0/24 0.0% [0.0, 13.8] | nodos con INF-ANADIDO 0/5 0.0% [0.0, 43.4] | nodos con CONTRARIO 0/5 0.0% [0.0, 43.4]
-Cradle to Cradle - Michael Braungart | nodos 6 | pasos 24 | FIEL 14/24 58.3% [38.8, 75.5] | INF-OPERATIVO 9/24 37.5% [21.2, 57.3] | INF-ANADIDO 1/24 4.2% [0.7, 20.2] | CONTRARIO 0/24 0.0% [0.0, 13.8] | nodos con INF-ANADIDO 1/6 16.7% [3.0, 56.4] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0]
-Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC) | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Edwards et al., Managing Project Risks | nodos 5 | pasos 21 | FIEL 12/21 57.1% [36.5, 75.5] | INF-OPERATIVO 6/21 28.6% [13.8, 50.0] | INF-ANADIDO 2/21 9.5% [2.7, 28.9] | CONTRARIO 1/21 4.8% [0.8, 22.7] | nodos con INF-ANADIDO 2/5 40.0% [11.8, 76.9] | nodos con CONTRARIO 1/5 20.0% [3.6, 62.4]
-Franchise Your Business - Mark Siebert | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1]
-Hubbard, The Failure of Risk Management | nodos 5 | pasos 20 | FIEL 13/20 65.0% [43.3, 81.9] | INF-OPERATIVO 6/20 30.0% [14.5, 51.9] | INF-ANADIDO 0/20 0.0% [0.0, 16.1] | CONTRARIO 1/20 5.0% [0.9, 23.6] | nodos con INF-ANADIDO 0/5 0.0% [0.0, 43.4] | nodos con CONTRARIO 1/5 20.0% [3.6, 62.4]
-Juran's Quality Handbook_ The C - Joseph A. Defeo | nodos 6 | pasos 29 | FIEL 24/29 82.8% [65.5, 92.4] | INF-OPERATIVO 4/29 13.8% [5.5, 30.6] | INF-ANADIDO 0/29 0.0% [0.0, 11.7] | CONTRARIO 1/29 3.4% [0.6, 17.2] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 1/6 16.7% [3.0, 56.4]
-Managing the Risks of Organizat - Reason, J. T_ | nodos 90 | pasos 403 | FIEL 331/403 82.1% [78.1, 85.6] | INF-OPERATIVO 67/403 16.6% [13.3, 20.6] | INF-ANADIDO 4/403 1.0% [0.4, 2.5] | CONTRARIO 1/403 0.2% [0.0, 1.4] | nodos con INF-ANADIDO 4/90 4.4% [1.7, 10.9] | nodos con CONTRARIO 1/90 1.1% [0.2, 6.0]
-NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-OSHA3885 | nodos 1 | pasos 6 | FIEL 6/6 100.0% [61.0, 100.0] | INF-OPERATIVO 0/6 0.0% [0.0, 39.0] | INF-ANADIDO 0/6 0.0% [0.0, 39.0] | CONTRARIO 0/6 0.0% [0.0, 39.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Quality is free _ the art of making quality certain -- Philip B_ Crosby | nodos 1 | pasos 9 | FIEL 9/9 100.0% [70.1, 100.0] | INF-OPERATIVO 0/9 0.0% [0.0, 29.9] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Requisitos de empaque de los couriers | nodos 3 | pasos 14 | FIEL 12/14 85.7% [60.1, 96.0] | INF-OPERATIVO 2/14 14.3% [4.0, 39.9] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1]
-Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-The Founder's Dilemmas - Wasserman, Noam | nodos 6 | pasos 35 | FIEL 21/35 60.0% [43.6, 74.4] | INF-OPERATIVO 8/35 22.9% [12.1, 39.0] | INF-ANADIDO 0/35 0.0% [0.0, 9.9] | CONTRARIO 0/35 0.0% [0.0, 9.9] | INF-PENDIENTE 6/35 17.1% [8.1, 32.7] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0]
-The Green to Gold Business Play - Daniel C. Esty | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-The Startup Owner's Manual - Blank, Steve | nodos 5 | pasos 24 | FIEL 23/24 95.8% [79.8, 99.3] | INF-OPERATIVO 0/24 0.0% [0.0, 13.8] | INF-ANADIDO 1/24 4.2% [0.7, 20.2] | CONTRARIO 0/24 0.0% [0.0, 13.8] | nodos con INF-ANADIDO 1/5 20.0% [3.6, 62.4] | nodos con CONTRARIO 0/5 0.0% [0.0, 43.4]
-Value Proposition Design | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Venture Deals - Brad Feld | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
-Winning at New Products - Robert G. Cooper | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3]
+A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | INFERIDO total 1/12 8.3% [1.5, 35.4] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
+Assembling Tomorrow: A Guide to Designing a Thriving Future | nodos 64 | pasos 295 | FIEL 231/295 78.3% [73.3, 82.6] | INF-OPERATIVO 56/295 19.0% [14.9, 23.8] | INF-ANADIDO 8/295 2.7% [1.4, 5.3] | CONTRARIO 0/295 0.0% [0.0, 1.3] | INFERIDO total 64/295 21.7% [17.4, 26.7] | nodos con INF-ANADIDO 7/64 10.9% [5.4, 20.9] | nodos con CONTRARIO 0/64 0.0% [0.0, 5.7] | nodos con algun INFERIDO 37/64 57.8% [45.6, 69.1]
+Chris Voss, Rompe la barrera del no | nodos 5 | pasos 24 | FIEL 14/24 58.3% [38.8, 75.5] | INF-OPERATIVO 10/24 41.7% [24.5, 61.2] | INF-ANADIDO 0/24 0.0% [0.0, 13.8] | CONTRARIO 0/24 0.0% [0.0, 13.8] | INFERIDO total 10/24 41.7% [24.5, 61.2] | nodos con INF-ANADIDO 0/5 0.0% [0.0, 43.4] | nodos con CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con algun INFERIDO 5/5 100.0% [56.6, 100.0]
+Cradle to Cradle - Michael Braungart | nodos 6 | pasos 24 | FIEL 17/24 70.8% [50.8, 85.1] | INF-OPERATIVO 6/24 25.0% [12.0, 44.9] | INF-ANADIDO 1/24 4.2% [0.7, 20.2] | CONTRARIO 0/24 0.0% [0.0, 13.8] | INFERIDO total 7/24 29.2% [14.9, 49.2] | nodos con INF-ANADIDO 1/6 16.7% [3.0, 56.4] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0] | nodos con algun INFERIDO 3/6 50.0% [18.8, 81.2]
+Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC) | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Edwards et al., Managing Project Risks | nodos 5 | pasos 21 | FIEL 12/21 57.1% [36.5, 75.5] | INF-OPERATIVO 6/21 28.6% [13.8, 50.0] | INF-ANADIDO 2/21 9.5% [2.7, 28.9] | CONTRARIO 1/21 4.8% [0.8, 22.7] | INFERIDO total 8/21 38.1% [20.8, 59.1] | nodos con INF-ANADIDO 2/5 40.0% [11.8, 76.9] | nodos con CONTRARIO 1/5 20.0% [3.6, 62.4] | nodos con algun INFERIDO 5/5 100.0% [56.6, 100.0]
+Franchise Your Business - Mark Siebert | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 0/3 0.0% [0.0, 56.1]
+Hubbard, The Failure of Risk Management | nodos 5 | pasos 20 | FIEL 13/20 65.0% [43.3, 81.9] | INF-OPERATIVO 5/20 25.0% [11.2, 46.9] | INF-ANADIDO 0/20 0.0% [0.0, 16.1] | CONTRARIO 2/20 10.0% [2.8, 30.1] | INFERIDO total 5/20 25.0% [11.2, 46.9] | nodos con INF-ANADIDO 0/5 0.0% [0.0, 43.4] | nodos con CONTRARIO 2/5 40.0% [11.8, 76.9] | nodos con algun INFERIDO 3/5 60.0% [23.1, 88.2]
+Juran's Quality Handbook_ The C - Joseph A. Defeo | nodos 6 | pasos 29 | FIEL 24/29 82.8% [65.5, 92.4] | INF-OPERATIVO 4/29 13.8% [5.5, 30.6] | INF-ANADIDO 0/29 0.0% [0.0, 11.7] | CONTRARIO 1/29 3.4% [0.6, 17.2] | INFERIDO total 4/29 13.8% [5.5, 30.6] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 1/6 16.7% [3.0, 56.4] | nodos con algun INFERIDO 2/6 33.3% [9.7, 70.0]
+Managing the Risks of Organizat - Reason, J. T_ | nodos 90 | pasos 403 | FIEL 334/403 82.9% [78.9, 86.2] | INF-OPERATIVO 58/403 14.4% [11.3, 18.2] | INF-ANADIDO 10/403 2.5% [1.4, 4.5] | CONTRARIO 1/403 0.2% [0.0, 1.4] | INFERIDO total 68/403 16.9% [13.5, 20.8] | nodos con INF-ANADIDO 10/90 11.1% [6.1, 19.3] | nodos con CONTRARIO 1/90 1.1% [0.2, 6.0] | nodos con algun INFERIDO 37/90 41.1% [31.5, 51.4]
+NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+OSHA3885 | nodos 1 | pasos 6 | FIEL 6/6 100.0% [61.0, 100.0] | INF-OPERATIVO 0/6 0.0% [0.0, 39.0] | INF-ANADIDO 0/6 0.0% [0.0, 39.0] | CONTRARIO 0/6 0.0% [0.0, 39.0] | INFERIDO total 0/6 0.0% [0.0, 39.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | INFERIDO total 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Quality is free _ the art of making quality certain -- Philip B_ Crosby | nodos 1 | pasos 9 | FIEL 9/9 100.0% [70.1, 100.0] | INF-OPERATIVO 0/9 0.0% [0.0, 29.9] | INF-ANADIDO 0/9 0.0% [0.0, 29.9] | CONTRARIO 0/9 0.0% [0.0, 29.9] | INFERIDO total 0/9 0.0% [0.0, 29.9] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Requisitos de empaque de los couriers | nodos 3 | pasos 14 | FIEL 12/14 85.7% [60.1, 96.0] | INF-OPERATIVO 2/14 14.3% [4.0, 39.9] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 2/14 14.3% [4.0, 39.9] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 2/3 66.7% [20.8, 93.9]
+Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+The Founder's Dilemmas - Wasserman, Noam | nodos 6 | pasos 35 | FIEL 32/35 91.4% [77.6, 97.0] | INF-OPERATIVO 3/35 8.6% [3.0, 22.4] | INF-ANADIDO 0/35 0.0% [0.0, 9.9] | CONTRARIO 0/35 0.0% [0.0, 9.9] | INFERIDO total 3/35 8.6% [3.0, 22.4] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0] | nodos con algun INFERIDO 2/6 33.3% [9.7, 70.0]
+The Green to Gold Business Play - Daniel C. Esty | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | INFERIDO total 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+The Startup Owner's Manual - Blank, Steve | nodos 5 | pasos 24 | FIEL 23/24 95.8% [79.8, 99.3] | INF-OPERATIVO 0/24 0.0% [0.0, 13.8] | INF-ANADIDO 1/24 4.2% [0.7, 20.2] | CONTRARIO 0/24 0.0% [0.0, 13.8] | INFERIDO total 1/24 4.2% [0.7, 20.2] | nodos con INF-ANADIDO 1/5 20.0% [3.6, 62.4] | nodos con CONTRARIO 0/5 0.0% [0.0, 43.4] | nodos con algun INFERIDO 1/5 20.0% [3.6, 62.4]
+Value Proposition Design | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Venture Deals - Brad Feld | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
+Winning at New Products - Robert G. Cooper | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | INFERIDO total 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
 == C. FASE 1 MAS FASE 2, POR MUNDO (mezcla censos y muestras dirigidas: descriptivo)
-mundo compras | nodos 6 | pasos 29 | FIEL 19/29 65.5% [47.3, 80.1] | INF-OPERATIVO 10/29 34.5% [19.9, 52.7] | INF-ANADIDO 0/29 0.0% [0.0, 11.7] | CONTRARIO 0/29 0.0% [0.0, 11.7] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0]
-mundo core | nodos 78 | pasos 368 | FIEL 289/368 78.5% [74.1, 82.4] | INF-OPERATIVO 65/368 17.7% [14.1, 21.9] | INF-ANADIDO 8/368 2.2% [1.1, 4.2] | CONTRARIO 0/368 0.0% [0.0, 1.0] | INF-PENDIENTE 6/368 1.6% [0.7, 3.5] | nodos con INF-ANADIDO 8/78 10.3% [5.3, 19.0] | nodos con CONTRARIO 0/78 0.0% [0.0, 4.7]
-mundo entrega | nodos 4 | pasos 19 | FIEL 17/19 89.5% [68.6, 97.1] | INF-OPERATIVO 2/19 10.5% [2.9, 31.4] | INF-ANADIDO 0/19 0.0% [0.0, 16.8] | CONTRARIO 0/19 0.0% [0.0, 16.8] | nodos con INF-ANADIDO 0/4 0.0% [0.0, 49.0] | nodos con CONTRARIO 0/4 0.0% [0.0, 49.0]
-mundo environmental | nodos 7 | pasos 28 | FIEL 18/28 64.3% [45.8, 79.3] | INF-OPERATIVO 9/28 32.1% [17.9, 50.7] | INF-ANADIDO 1/28 3.6% [0.6, 17.7] | CONTRARIO 0/28 0.0% [0.0, 12.1] | nodos con INF-ANADIDO 1/7 14.3% [2.6, 51.3] | nodos con CONTRARIO 0/7 0.0% [0.0, 35.4]
-mundo exportacion | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
-mundo franquicias | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1]
-mundo health_safety | nodos 91 | pasos 409 | FIEL 337/409 82.4% [78.4, 85.8] | INF-OPERATIVO 67/409 16.4% [13.1, 20.3] | INF-ANADIDO 4/409 1.0% [0.4, 2.5] | CONTRARIO 1/409 0.2% [0.0, 1.4] | nodos con INF-ANADIDO 4/91 4.4% [1.7, 10.8] | nodos con CONTRARIO 1/91 1.1% [0.2, 6.0]
-mundo quality | nodos 8 | pasos 42 | FIEL 37/42 88.1% [75.0, 94.8] | INF-OPERATIVO 4/42 9.5% [3.8, 22.1] | INF-ANADIDO 0/42 0.0% [0.0, 8.4] | CONTRARIO 1/42 2.4% [0.4, 12.3] | nodos con INF-ANADIDO 0/8 0.0% [0.0, 32.4] | nodos con CONTRARIO 1/8 12.5% [2.2, 47.1]
-mundo risk_management | nodos 10 | pasos 41 | FIEL 25/41 61.0% [45.7, 74.3] | INF-OPERATIVO 12/41 29.3% [17.6, 44.5] | INF-ANADIDO 2/41 4.9% [1.3, 16.1] | CONTRARIO 2/41 4.9% [1.3, 16.1] | nodos con INF-ANADIDO 2/10 20.0% [5.7, 51.0] | nodos con CONTRARIO 2/10 20.0% [5.7, 51.0]
-mundo seguridad_digital | nodos 2 | pasos 10 | FIEL 10/10 100.0% [72.2, 100.0] | INF-OPERATIVO 0/10 0.0% [0.0, 27.8] | INF-ANADIDO 0/10 0.0% [0.0, 27.8] | CONTRARIO 0/10 0.0% [0.0, 27.8] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8]
+mundo compras | nodos 6 | pasos 29 | FIEL 19/29 65.5% [47.3, 80.1] | INF-OPERATIVO 10/29 34.5% [19.9, 52.7] | INF-ANADIDO 0/29 0.0% [0.0, 11.7] | CONTRARIO 0/29 0.0% [0.0, 11.7] | INFERIDO total 10/29 34.5% [19.9, 52.7] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 0/6 0.0% [0.0, 39.0] | nodos con algun INFERIDO 5/6 83.3% [43.6, 97.0]
+mundo core | nodos 78 | pasos 368 | FIEL 300/368 81.5% [77.2, 85.2] | INF-OPERATIVO 59/368 16.0% [12.6, 20.1] | INF-ANADIDO 9/368 2.4% [1.3, 4.6] | CONTRARIO 0/368 0.0% [0.0, 1.0] | INFERIDO total 68/368 18.5% [14.8, 22.8] | nodos con INF-ANADIDO 8/78 10.3% [5.3, 19.0] | nodos con CONTRARIO 0/78 0.0% [0.0, 4.7] | nodos con algun INFERIDO 40/78 51.3% [40.4, 62.1]
+mundo entrega | nodos 4 | pasos 19 | FIEL 17/19 89.5% [68.6, 97.1] | INF-OPERATIVO 2/19 10.5% [2.9, 31.4] | INF-ANADIDO 0/19 0.0% [0.0, 16.8] | CONTRARIO 0/19 0.0% [0.0, 16.8] | INFERIDO total 2/19 10.5% [2.9, 31.4] | nodos con INF-ANADIDO 0/4 0.0% [0.0, 49.0] | nodos con CONTRARIO 0/4 0.0% [0.0, 49.0] | nodos con algun INFERIDO 2/4 50.0% [15.0, 85.0]
+mundo environmental | nodos 7 | pasos 28 | FIEL 21/28 75.0% [56.6, 87.3] | INF-OPERATIVO 6/28 21.4% [10.2, 39.5] | INF-ANADIDO 1/28 3.6% [0.6, 17.7] | CONTRARIO 0/28 0.0% [0.0, 12.1] | INFERIDO total 7/28 25.0% [12.7, 43.4] | nodos con INF-ANADIDO 1/7 14.3% [2.6, 51.3] | nodos con CONTRARIO 0/7 0.0% [0.0, 35.4] | nodos con algun INFERIDO 3/7 42.9% [15.8, 75.0]
+mundo exportacion | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | INFERIDO total 1/12 8.3% [1.5, 35.4] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
+mundo franquicias | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 0/3 0.0% [0.0, 56.1]
+mundo health_safety | nodos 91 | pasos 409 | FIEL 340/409 83.1% [79.2, 86.4] | INF-OPERATIVO 58/409 14.2% [11.1, 17.9] | INF-ANADIDO 10/409 2.4% [1.3, 4.4] | CONTRARIO 1/409 0.2% [0.0, 1.4] | INFERIDO total 68/409 16.6% [13.3, 20.5] | nodos con INF-ANADIDO 10/91 11.0% [6.1, 19.1] | nodos con CONTRARIO 1/91 1.1% [0.2, 6.0] | nodos con algun INFERIDO 37/91 40.7% [31.1, 50.9]
+mundo quality | nodos 8 | pasos 42 | FIEL 37/42 88.1% [75.0, 94.8] | INF-OPERATIVO 4/42 9.5% [3.8, 22.1] | INF-ANADIDO 0/42 0.0% [0.0, 8.4] | CONTRARIO 1/42 2.4% [0.4, 12.3] | INFERIDO total 4/42 9.5% [3.8, 22.1] | nodos con INF-ANADIDO 0/8 0.0% [0.0, 32.4] | nodos con CONTRARIO 1/8 12.5% [2.2, 47.1] | nodos con algun INFERIDO 2/8 25.0% [7.1, 59.1]
+mundo risk_management | nodos 10 | pasos 41 | FIEL 25/41 61.0% [45.7, 74.3] | INF-OPERATIVO 11/41 26.8% [15.7, 41.9] | INF-ANADIDO 2/41 4.9% [1.3, 16.1] | CONTRARIO 3/41 7.3% [2.5, 19.4] | INFERIDO total 13/41 31.7% [19.6, 47.0] | nodos con INF-ANADIDO 2/10 20.0% [5.7, 51.0] | nodos con CONTRARIO 3/10 30.0% [10.8, 60.3] | nodos con algun INFERIDO 8/10 80.0% [49.0, 94.3]
+mundo seguridad_digital | nodos 2 | pasos 10 | FIEL 10/10 100.0% [72.2, 100.0] | INF-OPERATIVO 0/10 0.0% [0.0, 27.8] | INF-ANADIDO 0/10 0.0% [0.0, 27.8] | CONTRARIO 0/10 0.0% [0.0, 27.8] | INFERIDO total 0/10 0.0% [0.0, 27.8] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 0/2 0.0% [0.0, 65.8]
 == D. TODO LO LEIDO (972 pasos; NO es estimador del catalogo)
-todo lo leido | nodos 211 | pasos 972 | FIEL 777/972 79.9% [77.3, 82.3] | INF-OPERATIVO 170/972 17.5% [15.2, 20.0] | INF-ANADIDO 15/972 1.5% [0.9, 2.5] | CONTRARIO 4/972 0.4% [0.2, 1.1] | INF-PENDIENTE 6/972 0.6% [0.3, 1.3] | nodos con INF-ANADIDO 15/211 7.1% [4.4, 11.4] | nodos con CONTRARIO 4/211 1.9% [0.7, 4.8]
-recuento: {'INF-OPERATIVO': 170, 'FIEL': 777, 'INF-ANADIDO': 15, 'CONTRARIO': 4, 'INF-PENDIENTE': 6}
+todo lo leido | nodos 211 | pasos 972 | FIEL 794/972 81.7% [79.1, 84.0] | INF-OPERATIVO 151/972 15.5% [13.4, 17.9] | INF-ANADIDO 22/972 2.3% [1.5, 3.4] | CONTRARIO 5/972 0.5% [0.2, 1.2] | INFERIDO total 173/972 17.8% [15.5, 20.3] | nodos con INF-ANADIDO 21/211 10.0% [6.6, 14.7] | nodos con CONTRARIO 5/211 2.4% [1.0, 5.4] | nodos con algun INFERIDO 98/211 46.4% [39.8, 53.2]
+recuento: {'INF-OPERATIVO': 151, 'FIEL': 794, 'INF-ANADIDO': 22, 'CONTRARIO': 5}
 control wilson(2,10) (0.0567, 0.5098)
 ```
 
 **Como leer las tablas.**
-- **Bloque A** (muestra aleatoria de la fase 1) es el unico estimador del catalogo. En el, el ANADIDO es raro: 2 de 138 pasos, 1,4 por ciento (Wilson 95: 0,4 a 5,1). Casi todo lo INFERIDO es OPERATIVO: 18 de 138.
-- **Bloques B y C** mezclan censos (Reason, Assembling Tomorrow) y muestras dirigidas. Son descriptivos.
+- **Bloque A** (muestra aleatoria de la fase 1) es el unico estimador del catalogo:
+
+| veredicto | pasos | por ciento | Wilson 95 |
+|---|---:|---:|---|
+| FIEL | 118 de 138 | 85,5 | 78,7 a 90,4 |
+| INFERIDO-OPERATIVO | 17 | 12,3 | 7,8 a 18,8 |
+| INFERIDO-ANADIDO | 2 | 1,4 | 0,4 a 5,1 |
+| CONTRARIO | 1 | 0,7 | 0,1 a 4,0 |
+
+- **Bloques B y C** mezclan censos (Reason, Assembling Tomorrow) y muestras dirigidas: son descriptivos.
 - **Bloque D** es todo lo leido y no representa al catalogo.
 
-### 13.4 Acuerdo con el segundo clasificador ciego de la particion
+### 13.4 Acuerdo entre las dos particiones (antes de reconciliar)
 
-**HUECO:** pendiente del segundo clasificador ciego. La sesion le entrego `inferidos_para_partir.tsv` (191 filas, sin esta particion). Aqui iran el acuerdo bruto, el kappa si el n lo permite, la tabla de desacuerdos con su resolucion tras releer el libro, y la unificacion de las fichas con los datos y lineas que el aporte.
+Se compara la particion inicial del integrador con la del clasificador ciego. En la inicial, los seis pasos PENDIENTES de `decision_de_vender_startup` cuentan como una tercera categoria. El intervalo del kappa sale de un bootstrap de 5.000 remuestreos (semilla 20260925). Script y salida:
+
+```python
+# Acuerdo entre la particion del integrador (particion.tsv, antes de reconciliar) y la del clasificador ciego.
+import csv, math, random, collections, sys
+Z = 1.959964
+mine = {r[0]: (r[4], r[2]) for r in list(csv.reader(open('particion.tsv', encoding='utf-8'), delimiter='\t'))[1:]}
+bl = {}
+for f in ['particion_ciega_P1.tsv', 'particion_ciega_P2.tsv', 'particion_ciega_P3.tsv']:
+    for r in list(csv.reader(open(f, encoding='utf-8'), delimiter='\t'))[1:]:
+        if r and r[0].startswith('I'):
+            bl[r[0]] = r[3]
+def kappa(pares):
+    n = len(pares); po = sum(a == b for a, b in pares) / n
+    cats = {x for p in pares for x in p}
+    pe = sum((sum(a == c for a, _ in pares) / n) * (sum(b == c for _, b in pares) / n) for c in cats)
+    return (po - pe) / (1 - pe) if pe < 1 else float('nan')
+def wilson(k, n):
+    p = k / n; d = 1 + Z * Z / n; c = (p + Z * Z / (2 * n)) / d
+    h = Z * math.sqrt(p * (1 - p) / n + Z * Z / (4 * n * n)) / d
+    return max(0, c - h), min(1, c + h)
+def informe(nombre, ids):
+    pares = [(mine[i][0], bl[i]) for i in ids]
+    n = len(pares); k = sum(a == b for a, b in pares)
+    a, b = wilson(k, n); kp = kappa(pares)
+    rng = random.Random(20260925); ks = []
+    for _ in range(5000):
+        m = [pares[rng.randrange(n)] for _ in range(n)]
+        v = kappa(m)
+        if not math.isnan(v):
+            ks.append(v)
+    ks.sort()
+    ic = f"[{ks[int(0.025*len(ks))]:.2f}, {ks[int(0.975*len(ks))]:.2f}]" if len(ks) > 100 else "no calculable"
+    print(f"{nombre} | n {n} | acuerdo {k}/{n} = {100*k/n:.1f}% [{100*a:.1f}, {100*b:.1f}] | kappa {kp:.2f} IC95 bootstrap {ic}")
+todos = sorted(mine)
+informe("global (P del integrador cuenta como categoria propia)", todos)
+informe("global sin decision_de_vender_startup (fuente doble)", [i for i in todos if not (mine[i][1].startswith("The Founder") and int(i[1:]) >= 177 and int(i[1:]) <= 187)])
+por = collections.defaultdict(list)
+for i in todos:
+    por[mine[i][1]].append(i)
+for b in sorted(por):
+    informe(b, por[b])
+print("matriz integrador x ciego:", collections.Counter((mine[i][0], bl[i]) for i in todos))
+```
+
+```
+global (P del integrador cuenta como categoria propia) | n 191 | acuerdo 167/191 = 87.4% [82.0, 91.4] | kappa 0.54 IC95 bootstrap [0.39, 0.67]
+global sin decision_de_vender_startup (fuente doble) | n 180 | acuerdo 167/180 = 92.8% [88.0, 95.7] | kappa 0.66 IC95 bootstrap [0.48, 0.82]
+A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | n 1 | acuerdo 1/1 = 100.0% [20.7, 100.0] | kappa nan IC95 bootstrap no calculable
+Assembling Tomorrow: A Guide to Designing a Thriving Future | n 64 | acuerdo 61/64 = 95.3% [87.1, 98.4] | kappa 0.80 IC95 bootstrap [0.53, 1.00]
+Chris Voss, Rompe la barrera del no | n 10 | acuerdo 10/10 = 100.0% [72.2, 100.0] | kappa nan IC95 bootstrap no calculable
+Cradle to Cradle - Michael Braungart | n 10 | acuerdo 10/10 = 100.0% [72.2, 100.0] | kappa 1.00 IC95 bootstrap [1.00, 1.00]
+Edwards et al., Managing Project Risks | n 8 | acuerdo 7/8 = 87.5% [52.9, 97.8] | kappa 0.71 IC95 bootstrap [0.00, 1.00]
+Hubbard, The Failure of Risk Management | n 6 | acuerdo 4/6 = 66.7% [30.0, 90.3] | kappa 0.00 IC95 bootstrap [0.00, 0.00]
+Juran's Quality Handbook_ The C - Joseph A. Defeo | n 4 | acuerdo 4/4 = 100.0% [51.0, 100.0] | kappa nan IC95 bootstrap no calculable
+Managing the Risks of Organizat - Reason, J. T_ | n 71 | acuerdo 64/71 = 90.1% [81.0, 95.1] | kappa 0.49 IC95 bootstrap [0.14, 0.79]
+Requisitos de empaque de los couriers | n 2 | acuerdo 2/2 = 100.0% [34.2, 100.0] | kappa nan IC95 bootstrap no calculable
+The Founder's Dilemmas - Wasserman, Noam | n 14 | acuerdo 3/14 = 21.4% [7.6, 47.6] | kappa 0.06 IC95 bootstrap [-0.08, 0.19]
+The Startup Owner's Manual - Blank, Steve | n 1 | acuerdo 1/1 = 100.0% [20.7, 100.0] | kappa nan IC95 bootstrap no calculable
+matriz integrador x ciego: Counter({('OPERATIVO', 'OPERATIVO'): 152, ('OPERATIVO', 'ANADIDO'): 18, ('ANADIDO', 'ANADIDO'): 15, ('PENDIENTE', 'ANADIDO'): 5, ('PENDIENTE', 'OPERATIVO'): 1})
+```
+
+**Lectura.**
+- **Global:** acuerdo bruto de 167 de 191 (87,4 por ciento; Wilson 95: 82,0 a 91,4) y kappa 0,54 (IC95: 0,39 a 0,67).
+- **Sin el nodo de fuente doble**, que el integrador habia dejado PENDIENTE: 167 de 180 (92,8 por ciento) y kappa 0,66 (IC95: 0,48 a 0,82).
+- **Por libro:** en Assembling Tomorrow el acuerdo es alto (kappa 0,80); en Reason, moderado (kappa 0,49). En los libros con pocos INFERIDOS, el kappa no se puede calcular o no dice nada.
+- **Direccion de los desacuerdos:** todos van en el mismo sentido. El ciego marca ANADIDO donde el integrador marco OPERATIVO (18 casos), mas los PENDIENTES. Ningun ANADIDO del integrador fue OPERATIVO para el ciego: el ciego fue mas estricto.
+
+### 13.5 Resolucion de los desacuerdos y reclasificaciones (releyendo el libro)
+
+Cada desacuerdo se resolvio releyendo el libro, no las razones de ninguno de los dos clasificadores. La cita de cada resolucion esta en la tabla 13.2, y un script la comprobo contra la linea del libro: 37 fragmentos, 0 errores.
+
+- **Siete pasan a ANADIDO** (el ciego tenia razon). Cada uno tiene ficha nueva:
+  - I045 `narrativa_como_herramienta_de_sentido` paso 1: la receta "personajes, conflicto y resolucion"; la triada del libro es "characters, conflict, and causes" y la presenta como distorsion (L2071, L2075). Ficha A16.
+  - I123 `cultura_como_mecanismo_descentralizacion` paso 4: la mentoria. Ficha A17.
+  - I130 `cultura_justa` paso 3: "supervisores y gestores". Ficha A18.
+  - I138 `fallo_regulatorio_por_recursos_insuficientes` paso 2: "estandares del sector". Ficha A19.
+  - I141 `fijar_causa_ultimo_accidente_riesgo_siguiente` paso 2: "analisis de sensibilidad". Ficha A20.
+  - I144 `gestion_falsas_alarmas` paso 3: "verificacion cruzada". Ficha A21.
+  - I163 `quality_control_vs_quality_assurance` paso 4: "auditorias aleatorias". Ficha A22.
+- **Cinco quedan OPERATIVOS**, con cita que marca la direccion y sin dato nuevo:
+  - I048: ejemplos de contenido; el cinco es del libro.
+  - I061: la escala micro esta en el libro, L1018.
+  - I091: en la direccion de ALARP, L5797, y de L5677.
+  - I097: el libro no habla de decimales, ni a favor ni en contra, y el paso va contra la falsa certeza.
+  - I125: "por escrito" es documentar.
+- **Uno sube a CONTRARIO:** I099 `la_matriz_de_colores_te_engana` paso 3. El libro prueba que dar rangos a las etiquetas verbales no basta (L2533, L2535) y manda usar probabilidades explicitas (L2136). Ficha C5.
+- **Los seis PENDIENTES del integrador**, y los otros cinco INFERIDOS de `decision_de_vender_startup` (I177 a I187), **pasan a FIEL** al leer Horowitz: tipos de adquisicion (L3264 a L3268), mercado "more than an order of magnitude" y "number one" (L3278), "short process" de M&A (L3296), precio sostenido ante todos los compradores (L679, L681), "three to five years" (L3298), salario de mercado para que la decision no dependa de la situacion financiera del CEO (L3312), criterio comunicado al equipo y riesgo de que se sienta traicionado (L3314).
+- **Pasan a FIEL con citas que nadie habia visto:**
+  - Cradle to Cradle: I076 (L908), I079 (L918) e I082 (L449, hierbas nativas en el techo). I076 era un INFERIDO de la fase 1.
+  - Dekker, fuente fusionada en `normalizacion_de_la_desviacion`: I154 (L2934, la puntualidad como norma "even if we borrow from safety"), I156 (L2941) e I158 (L2932, L2941).
+- **Posibles CONTRARIOS senalados por el ciego que no llegan a serlo tras releer:**
+  - I002 y I045: ANADIDOS; el libro no prohibe lo que el paso hace, lo situa de otro modo.
+  - I106: ANADIDO; clasificar por culpabilidad es del libro, L5039, y lo equivocado es la lista de categorias.
+  - I091: OPERATIVO.
+  - I182 e I185: FIEL con Horowitz (L679 y L681; L3312).
+
+**Hecho que la particion deja a la vista.** De los 191 INFERIDOS, 17 eran FIEL con una cita que el lector no encontro. Es el 8,9 por ciento, y confirma lo que la tarea 1 ya apuntaba: la tasa de INFERIDO de la lectura estaba algo inflada.
+
+### 13.6 Fuentes que faltaban, autorizadas despues por el fundador (solo lectura)
+
+- **Horowitz, *The Hard Thing About Hard Things*:** `C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt`. Es la segunda fuente de `decision_de_vender_startup` y cierra sus once INFERIDOS (seccion 13.5). La seccion clave es "SHOULD YOU SELL YOUR COMPANY?", L3253 a L3318, mas el relato de la venta de Opsware, L665 a L685.
+- **Dekker, *The Field Guide to Understanding Human Error*:** `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt`. Es la fuente fusionada en `normalizacion_de_la_desviacion`. Cierra tres INFERIDOS del nodo (I154, I156, I158). Los otros tres (I153, I155, I157) siguen como estaban tras buscar en Dekker: I157 sigue siendo ANADIDO: en Dekker "mentors" aparece una sola vez (L4424), como uno de los papeles de las victimas de un accidente, y no como revisor externo.
