@@ -96,6 +96,7 @@ const corto = (s: string, max = 90) => {
 const EVENTOS_NARRABLES = new Set([
   "modo_camino",
   "item_estado",
+  "item_hecho",
   "item_no_aplica",
   "item_reactivada",
   "fecha_movida",
@@ -109,7 +110,7 @@ const EVENTOS_NARRABLES = new Set([
 ]);
 
 /** Eventos ligados a un ÍTEM (su dominio se deriva del ítem o de la estampa). */
-const EVENTOS_DE_ITEM = new Set(["item_estado", "item_no_aplica", "item_reactivada", "fecha_hecho_movida", "nota_escrita", "fecha_movida"]);
+const EVENTOS_DE_ITEM = new Set(["item_estado", "item_hecho", "item_no_aplica", "item_reactivada", "fecha_hecho_movida", "nota_escrita", "fecha_movida"]);
 /** Eventos ligados a un MUNDO (su dominio es `payload.mundo`). */
 const EVENTOS_DE_MUNDO = new Set(["mundo_completado", "preview_iniciado", "preview_completado", "preview_a_compra"]);
 
@@ -180,8 +181,12 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
 
   // Cada acción marcada HECHA, con su fecha de realización. El espacio va en el
   // `dominio` de la entrada (etiqueta estructural), no en el texto.
+  // AUD-09 M34: la marca nace del evento item_hecho (se narra abajo) y así
+  // desmarcar no la borra. Solo los ítems SIN evento (hechos antes de que el
+  // evento existiera) se siguen derivando de completed_at, sin duplicar.
+  const hechosConEvento = new Set(d.eventos.filter((e) => e.tipo === "item_hecho").map((e) => String(e.payload?.item)));
   for (const it of d.items)
-    if (it.completed_at)
+    if (it.completed_at && !hechosConEvento.has(it.id))
       push(it.completed_at, `Marcaste hecha «${corto(it.texto)}».`, "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────
@@ -218,6 +223,10 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
         else if (p.a === "pendiente") pushE(e.created_at, `Devolviste ${ref(p.item)} a pendiente.`);
         break;
       }
+      case "item_hecho":
+        // Con su fecha de realización (la que el usuario dijo), no la del clic.
+        pushE(typeof p.completed_at === "string" ? p.completed_at : e.created_at, `Marcaste hecha ${ref(p.item)}.`);
+        break;
       case "item_no_aplica":
         pushE(e.created_at, `Retiraste ${ref(p.item)}${cita(p.motivo)}`, "retirada");
         break;

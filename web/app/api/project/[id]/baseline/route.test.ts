@@ -123,3 +123,23 @@ function hacerFallarUpdatesDeChecklist() {
     return tabla as never;
   });
 }
+
+// AUD-09 M34 (tanda 7A, datos): cada recálculo volvía a sellar
+// baseline_confirmada_at con la hora nueva, y la bitácora ("Aceptaste tus
+// fechas: tu línea base quedó sellada") perdía la fecha del primer sello. Nada
+// se reescribe: el sello es el del primer cierre de fechas.
+describe("re-confirmar no pisa el primer sello (AUD-09 M34)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("la segunda confirmación conserva la fecha del primer sello", async () => {
+    sembrar();
+    (estadoFalso.plans[0] as Record<string, unknown>).baseline_confirmada_at = "2026-03-01T12:00:00.000Z";
+    const res = await POST(req({ plan_id: "plan-1", fechas: [{ item_id: "it1", fecha: "2026-04-10T12:00:00.000Z", origen: "ajustada" }] }), PARAMS);
+    expect(res.status).toBe(200);
+    expect((estadoFalso.plans[0] as Record<string, unknown>).baseline_confirmada_at).toBe("2026-03-01T12:00:00.000Z");
+    expect((await res.json()).baseline_confirmada_at).toBe("2026-03-01T12:00:00.000Z");
+  });
+});

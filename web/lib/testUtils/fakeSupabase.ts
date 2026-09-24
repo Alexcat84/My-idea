@@ -108,9 +108,13 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
       return { data: b._single ? { id } : [{ id }], error: null };
     }
     if (b._update) {
-      // Fase 3.8: la ruta baseline sella plans.baseline_confirmada_at.
-      const id = b._filters.id as string | undefined;
-      const fila = estado.plans.find((r) => (r as { id?: string }).id === id);
+      // Fase 3.8: la ruta baseline sella plans.baseline_confirmada_at. AUD-09
+      // M34: se respetan TODOS los filtros (un null del .is() casa con ausente).
+      const fila = estado.plans.find((r) =>
+        Object.entries(b._filters).every(([c, v]) =>
+          v === null ? (r as Record<string, unknown>)[c] == null : (r as Record<string, unknown>)[c] === v
+        )
+      );
       if (fila) Object.assign(fila, b._update);
       return { data: null, error: null };
     }

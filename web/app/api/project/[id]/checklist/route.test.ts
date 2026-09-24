@@ -197,7 +197,15 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(ult()).toMatchObject({ tipo: "item_estado", payload: { a: "en_proceso" } });
   });
 
-  it("marcar HECHO no registra item_estado (su entrada nace de completed_at)", async () => {
+  // AUD-09 M34: marcar HECHO deja su propio evento (item_hecho), con la fecha de
+  // realización: si luego se desmarca, la historia no se borra.
+  it("marcar HECHO registra item_hecho con su fecha de realización", async () => {
+    sembrarItem();
+    await PATCH(req({ item_id: "it1", estado: "hecho", completed_at: "2026-03-20" }), PARAMS);
+    expect(ult()).toMatchObject({ tipo: "item_hecho", payload: { item: "it1", completed_at: "2026-03-20T00:00:00.000Z" } });
+  });
+
+  it("marcar HECHO no registra item_estado (su entrada es item_hecho)", async () => {
     sembrarItem();
     await PATCH(req({ item_id: "it1", estado: "hecho" }), PARAMS);
     expect(estadoFalso.bitacora.some((b) => (b as { tipo: string }).tipo === "item_estado")).toBe(false);

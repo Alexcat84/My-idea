@@ -413,9 +413,19 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   // Fase 4.8 (bitácora completa): cada decisión del usuario deja rastro.
   if (prev) {
     const nuevoEstado = data.estado as ChecklistEstado;
+    // AUD-09 M34: marcar HECHO deja su propio evento, con la fecha de
+    // realización. Antes la bitácora lo derivaba del completed_at vivo y
+    // desmarcar lo borraba de la historia.
+    if (cambios.estado !== undefined && nuevoEstado === "hecho" && prev.estado !== "hecho") {
+      await registrarBitacora(supabase, projectId, "item_hecho", {
+        item: itemId,
+        dominio: dom,
+        completed_at: (data.completed_at as string | null) ?? null,
+      });
+    }
     // Cambio de estado que NO es el cruce de 'no_aplica' (ya registrado arriba)
-    // ni 'hecho' (su entrada nace de completed_at, no se duplica): empezar,
-    // poner en proceso o volver a pendiente son decisiones que cuentan.
+    // ni 'hecho' (su evento es item_hecho): empezar, poner en proceso o volver a
+    // pendiente son decisiones que cuentan.
     if (
       cambios.estado !== undefined &&
       nuevoEstado !== prev.estado &&

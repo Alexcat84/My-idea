@@ -269,3 +269,34 @@ describe("bitacoraMarkdown", () => {
     expect(md).toContain("Tu historia apenas empieza");
   });
 });
+
+// AUD-09 M34 (tanda 7A, datos): "Marcaste hecha" salía del completed_at VIVO:
+// desmarcar lo borraba y la bitácora olvidaba que se hizo. Ahora nace del evento
+// item_hecho; los ítems viejos (sin evento) se siguen derivando, sin duplicar.
+describe("desmarcar no borra la historia (AUD-09 M34)", () => {
+  it("una acción hecha y luego devuelta a pendiente conserva su 'Marcaste hecha'", () => {
+    const e = construirBitacora(
+      datos({
+        items: [{ id: "a2", texto: "Habla con cinco personas", completed_at: null, dominio: "core" }],
+        eventos: [
+          { tipo: "item_hecho", payload: { item: "a2", dominio: "core", completed_at: "2026-01-10T15:00:00Z" }, created_at: "2026-01-10T15:00:05Z" },
+          { tipo: "item_estado", payload: { item: "a2", dominio: "core", de: "hecho", a: "pendiente" }, created_at: "2026-01-11T09:00:00Z" },
+        ],
+      })
+    );
+    const textos = e.map((x) => x.texto);
+    expect(textos).toContain("Marcaste hecha «Habla con cinco personas».");
+    expect(textos).toContain("Devolviste «Habla con cinco personas» a pendiente.");
+    expect(e.find((x) => x.texto.startsWith("Marcaste hecha"))?.fecha).toBe("2026-01-10T15:00:00Z");
+  });
+
+  it("un ítem hecho CON evento no se narra dos veces", () => {
+    const e = construirBitacora(
+      datos({
+        items: [{ id: "a1", texto: "Publica el video de tu producto", completed_at: "2026-01-10T15:00:00Z", dominio: "core" }],
+        eventos: [{ tipo: "item_hecho", payload: { item: "a1", dominio: "core", completed_at: "2026-01-10T15:00:00Z" }, created_at: "2026-01-10T15:00:05Z" }],
+      })
+    );
+    expect(e.filter((x) => x.texto.startsWith("Marcaste hecha"))).toHaveLength(1);
+  });
+});

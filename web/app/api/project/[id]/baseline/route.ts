@@ -109,10 +109,19 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   // Sella la baseline del ciclo. RLS de plans (user_id) garantiza propiedad.
+  // AUD-09 M34: el sello es el del PRIMER cierre de fechas. Re-confirmar (un
+  // recálculo) ya no lo pisa: la bitácora conserva cuándo quedó sellada.
+  const { data: planPrevio } = await supabase.from("plans").select("baseline_confirmada_at").eq("id", datos.plan_id);
+  const selloPrevio =
+    ((planPrevio ?? []) as Array<{ baseline_confirmada_at?: string | null }>)[0]?.baseline_confirmada_at ?? null;
+  if (selloPrevio) {
+    return NextResponse.json({ ok: true, baseline_confirmada_at: selloPrevio, confirmadas: datos.fechas.length });
+  }
   const { error: errorPlan } = await supabase
     .from("plans")
     .update({ baseline_confirmada_at: ahora })
-    .eq("id", datos.plan_id);
+    .eq("id", datos.plan_id)
+    .is("baseline_confirmada_at", null);
   if (errorPlan) {
     return NextResponse.json({ error: "no pudimos sellar la línea base" }, { status: 500 });
   }
