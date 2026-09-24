@@ -330,6 +330,44 @@ describe("POST /api/session/[id]/plan", () => {
     expect(estadoFalso.projectUnlocks[0].plan_pagado_at).toBeTruthy();
   });
 
+  // AUD-09 H05: PREVIEW_MUNDOS_PLAN §4, "si el proyecto cambio de ciclo entre
+  // preview y compra, el plan se genera con el estado vivo ACTUAL". La compra
+  // usaba el perfil congelado del preview y, al comprimir sin estado anterior,
+  // pisaba projects.estado_vivo (lo aprendido en el ciclo del nucleo se perdia)
+  // y ponia la fase del proyecto en la del ultimo nodo del mundo.
+  it("comprar un mundo tras un ciclo del nucleo usa el estado vivo ACTUAL y no lo pisa", async () => {
+    estadoFalso.projects["p1"] = {
+      id: "p1",
+      session_count: 3,
+      titulo: null,
+      numeros_proyecto: {},
+      estado_vivo: "E2: ya vende 30 macetas al mes tras el seguimiento",
+      fase_actual: "ejecucion",
+    };
+    estadoFalso.projectUnlocks.push({ project_id: "p1", dominio: "quality", resumen_md: "diag", plan_pagado_at: null });
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      dominio: "quality",
+      closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase({ perfilSesion: "E1: vende 12 macetas al mes." }),
+        acumulado: acumuladoVacio,
+      },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join("\n")));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    // el redactor recibio el estado actual
+    const payload = JSON.stringify(messagesStreamFalso.mock.calls[0][0]);
+    expect(payload).toContain("E2: ya vende 30 macetas");
+    // el estado vivo del proyecto conserva lo del ciclo del nucleo
+    const proyecto = estadoFalso.projects["p1"] as Record<string, unknown>;
+    expect(String(proyecto.estado_vivo)).toContain("E2: ya vende 30 macetas");
+    // y la fase del proyecto es la del nucleo, no la del mundo
+    expect(proyecto.fase_actual).toBe("ejecucion");
+  });
+
   it("un plan redactado con IA SI se cobra, sin aviso de version basica", async () => {
     vi.mocked(cobrar).mockClear();
     estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };

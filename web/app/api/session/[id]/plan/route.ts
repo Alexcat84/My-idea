@@ -231,6 +231,22 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
       try {
+        // AUD-09 H05 (PREVIEW_MUNDOS_PLAN §4): el estado vivo ACTUAL del
+        // proyecto, leído en el momento del plan. En la compra de un mundo el
+        // perfil de la sesión se congeló en el preview; si el proyecto cambió
+        // de ciclo desde entonces, el redactor debe ver la realidad de hoy.
+        const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
+        const estadoVivoActual = (proyectoParaPlan?.estado_vivo as string | null) ?? null;
+        if (
+          dominioCobro !== "core" &&
+          !recorrido.esSeguimiento &&
+          estadoVivoActual &&
+          !(recorrido.perfilSesion ?? "").includes(estadoVivoActual)
+        ) {
+          recorrido.perfilSesion = `${recorrido.perfilSesion ?? ""}
+Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActual}`.trim();
+        }
+
         const preparacion = prepararPlan(
           recorrido.ruta,
           graph,
@@ -267,7 +283,6 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (versionBasica) {
           eventosPlan.push({ tipo: "plan_version_basica", motivo: avisoFallback });
         }
-        const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
         const numerosParaPlan = {
           ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
           ...recorrido.numerosDetectadosSesion,
@@ -285,7 +300,10 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
         const { estadoVivo, acumulado: acumuladoFinal } = await comprimirEstadoVivo(
           client,
-          recorrido.estadoVivoPrevio,
+          // AUD-09 H05: el estado anterior es el del proyecto HOY (antes, en la
+          // compra de un mundo, llegaba null y la compresión pisaba lo que el
+          // ciclo del núcleo había aprendido).
+          estadoVivoActual ?? recorrido.estadoVivoPrevio,
           recorrido.perfilSesion,
           conceptosTitulos,
           // El unico camino offline es el techo de la sesion: queda registrado
@@ -423,7 +441,10 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
 
         const proyecto = await obtenerProyecto(supabase, projectId);
         const faseFinal = faseDeNodo(recorrido.ruta[recorrido.ruta.length - 1], graph);
-        const camposProyecto: Record<string, unknown> = { estado_vivo: estadoVivo, fase_actual: faseFinal };
+        const camposProyecto: Record<string, unknown> = { estado_vivo: estadoVivo };
+        // La fase del proyecto es la del núcleo: un plan de mundo no la mueve
+        // a la fase de su último nodo (AUD-09 H05).
+        if (dominioCobro === "core") camposProyecto.fase_actual = faseFinal;
         const titulo = extraerTitulo(resultado.markdown);
         if (titulo && !proyecto?.titulo) camposProyecto.titulo = titulo;
         await actualizarProyecto(supabase, projectId, camposProyecto);
