@@ -35,6 +35,22 @@ vi.mock("@/lib/seguridad", async (importOriginal) => ({
   faltaSegundoFactor: async () => false,
 }));
 
+// AUD-09 M26: para reproducir una falla ENTRE guardar el plan y cerrar la
+// sesión, insertarChecklist puede fallar una vez a pedido (por defecto, real).
+let fallarChecklistUnaVez = false;
+vi.mock("@/lib/db", async (importOriginal) => {
+  const real = await importOriginal<typeof import("@/lib/db")>();
+  return {
+    ...real,
+    insertarChecklist: async (...a: Parameters<typeof real.insertarChecklist>) => {
+      if (fallarChecklistUnaVez) {
+        fallarChecklistUnaVez = false;
+        throw new Error("falla simulada al escribir el checklist");
+      }
+      return real.insertarChecklist(...a);
+    },
+  };
+});
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));
@@ -441,3 +457,33 @@ describe("POST /api/session/[id]/plan: reserva de créditos (AUD-09 M25)", () =>
     expect(messagesStreamFalso).not.toHaveBeenCalled();
   });
 });
+
+// AUD-09 M26 (tanda 7A, datos): la sospecha era que, si algo falla ENTRE
+// guardarPlan y cerrarSesion, el reintento crea un segundo plan y su checklist.
+// Decisión del fundador: primero reproducirlo; si no se reproduce, se documenta
+// y no se toca el código. Esta prueba es la reproducción.
+describe("reintento tras una falla entre guardar el plan y cerrar la sesión (AUD-09 M26)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+  });
+
+  it("el reintento no deja dos planes de la misma sesión", async () => {
+    fallarChecklistUnaVez = true;
+    const primero = await (await POST(requestFalso(), ctxFalso("s1"))).text();
+    expect(primero).toMatch(/event: error/);
+    // la sesión sigue abierta: el usuario puede reintentar
+    expect(estadoFalso.sessions["s1"].closed_at).toBeNull();
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    const planesDeLaSesion = estadoFalso.plans.filter((p) => (p as { session_id?: string }).session_id === "s1");
+    expect(planesDeLaSesion).toHaveLength(1);
+  });
+});
+

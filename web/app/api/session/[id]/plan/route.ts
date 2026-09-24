@@ -47,7 +47,8 @@ import {
   actualizarProyecto,
   cerrarSesion,
   guardarEstadoSesion,
-  guardarPlan,
+  contarItemsDePlan,
+  guardarPlanDeSesion,
   insertarChecklist,
   mergeNumerosProyecto,
   obtenerItemsDePlan,
@@ -358,7 +359,10 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         // Fase 3.5: el plan hereda la procedencia de dominio de su sesión
         // (core para todo lo normal; el pack cuando la sesión es de mundo).
         const dominioSesion = ((sesion as { dominio?: string }).dominio ?? "core") as string;
-        const planId = await guardarPlan(
+        // AUD-09 M26: idempotente por sesión. Un reintento tras una falla
+        // entre guardar el plan y cerrar la sesión reusa ese plan en vez de
+        // crear un segundo (reproducido en la prueba antes del arreglo).
+        const { planId, yaExistia: planYaExistia } = await guardarPlanDeSesion(
           supabase,
           user.id,
           sessionId,
@@ -438,8 +442,12 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
             ...(enlace.fallo ? { texto: enlace.fallo } : {}),
           });
         }
-        await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
-          resultado.nodosPorEtapa);
+        // Si el plan ya existía y su checklist alcanzó a escribirse, no se
+        // duplica (AUD-09 M26).
+        if (!planYaExistia || (await contarItemsDePlan(supabase, projectId, planId)) === 0) {
+          await insertarChecklist(supabase, projectId, planId, itemsChecklist, dominioSesion,
+            resultado.nodosPorEtapa);
+        }
 
         const eventosSesion = [...recorrido.fallbackEvents, ...eventosPlan];
         const { calidad, acumulado: acumuladoConJuez } = await evaluarCalidadSesion(

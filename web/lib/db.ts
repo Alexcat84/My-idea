@@ -595,6 +595,53 @@ export async function guardarPlan(
   return data.id as string;
 }
 
+/**
+ * AUD-09 M26: la entrega del plan es IDEMPOTENTE POR SESIÓN. Si una entrega
+ * anterior de esta misma sesión alcanzó a guardar su plan y falló antes de
+ * cerrar la sesión, el reintento REUSA ese plan (con el texto de esta entrega,
+ * la única que llega al usuario) en vez de crear un segundo. `yaExistia` dice
+ * si hay que mirar su checklist antes de escribirlo.
+ */
+export async function guardarPlanDeSesion(
+  supabase: SupabaseClient,
+  userId: string,
+  sessionId: string,
+  etiqueta: PlanEtiqueta,
+  contenidoMd: string,
+  conceptosUsados: number,
+  familiasCubiertas: string[],
+  dominio: string = "core"
+): Promise<{ planId: string; yaExistia: boolean }> {
+  const { data: previos, error: errPrevio } = await supabase
+    .from("plans")
+    .select("id")
+    .eq("session_id", sessionId)
+    .eq("etiqueta", etiqueta);
+  if (errPrevio) throw errPrevio;
+  const previo = ((previos ?? []) as Array<{ id: string }>)[0];
+  if (!previo) {
+    const planId = await guardarPlan(supabase, userId, sessionId, etiqueta, contenidoMd, conceptosUsados, familiasCubiertas, dominio);
+    return { planId, yaExistia: false };
+  }
+  const { error } = await supabase
+    .from("plans")
+    .update({ contenido_md: contenidoMd, conceptos_usados: conceptosUsados, familias_cubiertas: familiasCubiertas })
+    .eq("id", previo.id);
+  if (error) throw error;
+  return { planId: previo.id, yaExistia: true };
+}
+
+/** AUD-09 M26: cuántas tareas tiene ya un plan (0 = su checklist no se escribió). */
+export async function contarItemsDePlan(supabase: SupabaseClient, projectId: string, planId: string): Promise<number> {
+  const { data, error } = await supabase
+    .from("checklist_items")
+    .select("id")
+    .eq("project_id", projectId)
+    .eq("plan_id", planId);
+  if (error) throw error;
+  return (data ?? []).length;
+}
+
 /** Fase 3.3: persiste el checklist derivado de un plan recién guardado.
  * Solo los planes de entrevista (inicial|completo|seguimiento) derivan
  * checklist; organizador y reporte_numeros NO llegan aquí. */
