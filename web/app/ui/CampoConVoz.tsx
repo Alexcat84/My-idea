@@ -34,12 +34,19 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
     valorRef.current = valor;
   });
 
-  const { soportado, escuchando, errorVoz, iniciar, detener } = useSpeech((nuevoFinal, prov) => {
-    const r = fusionarDictado(valorRef.current, sufijoProvisional.current, nuevoFinal, prov);
-    sufijoProvisional.current = r.sufijo;
-    valorRef.current = r.valor;
-    onCambio(r.valor);
-  });
+  const { soportado, escuchando, errorVoz, iniciar, detener } = useSpeech(
+    (nuevoFinal, prov) => {
+      const r = fusionarDictado(valorRef.current, sufijoProvisional.current, nuevoFinal, prov);
+      sufijoProvisional.current = r.sufijo;
+      valorRef.current = r.valor;
+      onCambio(r.valor);
+    },
+    // El navegador cortó la sesión y el dictado se reanuda: lo provisional de
+    // la sesión vieja queda fijo en el campo (la nueva empieza de cero).
+    () => {
+      sufijoProvisional.current = "";
+    }
+  );
 
   // Detener NO descarta lo oído: queda en el campo (y si el navegador manda el
   // final tardío, reemplaza a su provisional).
