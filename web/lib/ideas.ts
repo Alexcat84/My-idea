@@ -10,6 +10,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { nombreDeMundo } from "./catalogoMundos";
 import { listarProyectos } from "./db";
+import { estadoEntrevista } from "./entrevistaAbierta";
 import { fechaSello } from "./fechas";
 import { esActivo, type ChecklistEstado } from "./dbContract";
 
@@ -97,6 +98,8 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
 
   const proyectoDeSesion = new Map<string, string>();
   const entrevistaAbierta = new Set<string>();
+  // AUD-09 M29: qué espera cada idea con entrevista abierta (la regla única).
+  const esperaPlan = new Set<string>();
   for (const s of (sesiones ?? []) as Array<{
     id: string;
     project_id: string;
@@ -104,7 +107,9 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     estado_recorrido: unknown;
   }>) {
     proyectoDeSesion.set(s.id, s.project_id);
-    if (!s.closed_at && s.estado_recorrido) entrevistaAbierta.add(s.project_id);
+    const abierta = estadoEntrevista(s);
+    if (abierta) entrevistaAbierta.add(s.project_id);
+    if (abierta === "listo_para_plan") esperaPlan.add(s.project_id);
   }
 
   const etiquetasPorProyecto = new Map<string, Set<string>>();
@@ -160,7 +165,9 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     // Canon 01: la meta line COMBINA la invitación con el sello, no una u otra
     // ("Una pregunta te espera · última acción ayer 21:26").
     const pista = pensando
-      ? `Una pregunta te espera · última acción ${fechaSello(p.updated_at)}`
+      ? esperaPlan.has(p.id)
+        ? `Tu plan está listo para armarse · última acción ${fechaSello(p.updated_at)}`
+        : `Una pregunta te espera · última acción ${fechaSello(p.updated_at)}`
       : `última acción · ${fechaSello(p.updated_at)}`;
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.

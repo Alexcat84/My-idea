@@ -14,6 +14,7 @@ import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
+import { estadoEntrevista } from "@/lib/entrevistaAbierta";
 
 export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -176,11 +177,10 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     estado_recorrido: EstadoSesionPersistido | null;
     dominio?: string | null;
   }>).reverse()) {
-    if (s.closed_at || !s.estado_recorrido) continue;
+    // AUD-09 M29: la regla única de "entrevista abierta" (la misma de /ideas).
     // Fase 4.5: una sesión con recorrido en fase 'cerrada' pero sin closed_at
-    // es un preview con diagnóstico listo (esperando compra). NO es una
-    // entrevista abierta: su cara es el escaparate del mundo, no una pregunta.
-    if (s.estado_recorrido.recorrido.fase === "cerrada") continue;
+    // es un preview con diagnóstico listo (esperando compra): no cuenta.
+    if (!estadoEntrevista(s) || !s.estado_recorrido) continue;
     const rec = s.estado_recorrido.recorrido;
     entrevista = {
       session_id: s.id,
