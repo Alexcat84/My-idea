@@ -29,7 +29,7 @@ import {
 import { crearSesion, guardarEstadoSesion, obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
@@ -93,7 +93,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
   }
 
   const tipo = ((sesion as { tipo?: string }).tipo ?? (esSeguimiento ? "seguimiento" : "inicial")) as Parameters<

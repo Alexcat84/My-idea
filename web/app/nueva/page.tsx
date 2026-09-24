@@ -118,11 +118,13 @@ export default function NuevaIdea() {
     return (
       <main className="mx-auto flex w-full max-w-xl flex-1 flex-col items-center justify-center px-4 py-12 text-center">
         <p className="text-lg">{estado.mensaje}</p>
+        {/* AUD-09 B05: a la portada "a ver planes" no había nada que ver; las
+            ideas guardadas sí te esperan. */}
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/ideas")}
           className="mt-8 rounded-cinta border border-hairline bg-surface px-5 py-3 text-dim hover:text-ink"
         >
-          Ver planes
+          Ir a mis ideas
         </button>
       </main>
     );

@@ -31,7 +31,7 @@ import {
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { garantizarTerminal } from "@/lib/streamTerminal";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
   }
 
   const graph = cargarGrafo();

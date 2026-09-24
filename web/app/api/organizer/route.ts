@@ -20,7 +20,7 @@ import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -56,7 +56,7 @@ export async function POST(request: Request) {
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
   }
 
   const graph = cargarGrafo();

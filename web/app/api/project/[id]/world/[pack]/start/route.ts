@@ -45,7 +45,7 @@ import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -169,7 +169,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
   }
 
   // Fase 4.5: la fila nace (o refresca su preview) GRATIS. Es la presencia del

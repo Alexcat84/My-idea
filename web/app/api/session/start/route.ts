@@ -25,7 +25,7 @@ import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
   }
 
   const graph = cargarGrafo();

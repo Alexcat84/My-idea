@@ -28,7 +28,7 @@ import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
@@ -100,7 +100,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
     const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
     if (!limite.permitido) {
-      return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
+      return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
     }
     resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio());
   } else {

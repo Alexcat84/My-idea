@@ -45,7 +45,7 @@ vi.mock("@/lib/supabase/server", () => ({
 vi.mock("@/lib/rateLimit", () => ({
   identidadLimite: () => "id",
   MENSAJE_FUSIBLE: "fusible",
-  MENSAJE_LIMITE: "limite",
+  mensajeLimite: () => "limite",
   verificarFusibleGlobal: vi.fn(async () => ({ permitido: true })),
   verificarLimiteDiario: vi.fn(async () => ({ permitido: true })),
 }));
