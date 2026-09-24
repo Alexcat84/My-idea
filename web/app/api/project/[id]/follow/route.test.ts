@@ -50,6 +50,7 @@ vi.mock("@/lib/rateLimit", () => ({
   verificarLimiteDiario: vi.fn(async () => ({ permitido: true })),
 }));
 
+import * as ruta from "./route";
 import { POST } from "./route";
 
 function req(body: unknown) {
@@ -200,5 +201,48 @@ describe("POST follow: reserva de créditos (AUD-09 M25)", () => {
     expect(res.status).toBe(402);
     expect(Object.values(estadoFalso.sessions)).toHaveLength(0);
     expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
+  });
+});
+
+// AUD-09 M22 (tanda 7A, dinero): el canon §5 pide rechazar ANTES de que el
+// usuario escriba su "qué pasó". El ritual se abría sin consultar el saldo y el
+// 402 llegaba después de escribir. GET follow responde si alcanza, sin gastar el
+// límite del día ni apartar nada.
+describe("GET follow: ¿alcanza para el ritual? (AUD-09 M22)", () => {
+  const pedirGet = (q = "") =>
+    (ruta as unknown as { GET: (r: Request, p: typeof PARAMS) => Promise<Response> }).GET(
+      new Request(`http://x/api/project/p1/follow${q}`),
+      PARAMS
+    );
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("existe", () => {
+    expect(typeof (ruta as Record<string, unknown>).GET).toBe("function");
+  });
+
+  it("sin saldo: 402 con el mensaje de siempre, sin gastar el límite ni reservar", async () => {
+    sembrarProyecto();
+    const { verificarSaldo, reservarCreditos } = await import("@/lib/creditos");
+    const rl = await import("@/lib/rateLimit");
+    vi.mocked(rl.verificarLimiteDiario).mockClear();
+    vi.mocked(reservarCreditos).mockClear();
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 2, apartados: 0 });
+    const res = await pedirGet();
+    expect(res.status).toBe(402);
+    // A MANO: núcleo, seguimiento -> PRECIOS.seguimiento = 5.
+    expect((await res.json()).error).toBe("Te quedan 2 créditos; esto cuesta 5. Tu trabajo queda guardado tal como está.");
+    expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
+    expect(reservarCreditos).not.toHaveBeenCalled();
+  });
+
+  it("con saldo: 200 con el costo del seguimiento de ese espacio", async () => {
+    sembrarProyecto();
+    const res = await pedirGet("?dominio=quality");
+    expect(res.status).toBe(200);
+    // A MANO: mundo, seguimiento -> PRECIOS.mundo_seguimiento = 5.
+    expect(await res.json()).toEqual({ alcanza: true, costo: 5 });
   });
 });

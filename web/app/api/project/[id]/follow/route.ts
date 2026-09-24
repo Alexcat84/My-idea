@@ -58,6 +58,40 @@ import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
+/**
+ * AUD-09 M22: ¿alcanza el saldo para el ritual de este espacio? El canon §5
+ * pide rechazar ANTES de que el usuario escriba su "qué pasó"; Manos a la Obra
+ * pregunta aquí antes de abrir el formulario. Solo mira: no gasta el límite del
+ * día ni aparta créditos (eso lo hace el POST, al empezar de verdad).
+ */
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id: projectId } = await params;
+  const dominio = new URL(request.url).searchParams.get("dominio") || "core";
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) {
+    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  }
+  if (esInvitadoInvisible(user)) {
+    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+  }
+  const proyecto = await obtenerProyecto(supabase, projectId);
+  if (!proyecto) {
+    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+  }
+  const costo = PRECIOS[dominio === "core" ? "seguimiento" : "mundo_seguimiento"];
+  const saldo = await verificarSaldo(user.id, costo);
+  if (!saldo.alcanza) {
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(saldo.creditos, costo, saldo.apartados), saldo: saldo.creditos },
+      { status: 402 }
+    );
+  }
+  return NextResponse.json({ alcanza: true, costo });
+}
+
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
 

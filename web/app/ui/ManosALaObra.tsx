@@ -1924,6 +1924,30 @@ export function ManosALaObra({
     }
   }
 
+  // AUD-09 M22: el ritual se abre DESPUÉS de preguntar si alcanza el saldo
+  // (canon §5: rechazar antes de que el usuario escriba su "qué pasó"). GET
+  // follow solo mira: no gasta el límite ni aparta créditos. Sin conexión se
+  // abre igual y el envío dirá lo que haga falta.
+  async function abrirRitual(dominio: string) {
+    setError(null);
+    setErrorRitual(null);
+    try {
+      const res = await fetch(`/api/project/${projectId}/follow?dominio=${encodeURIComponent(dominio)}`);
+      if (res.status === 401) {
+        window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
+        return;
+      }
+      if (!res.ok) {
+        setError((await leerRechazo(res)).mensaje);
+        return;
+      }
+    } catch {
+      // sin conexión: se abre igual
+    }
+    if (dominio === "core") setRitual(true);
+    else setRitualMundo(dominio);
+  }
+
   // Fase 4.2: el mismo follow para el viaje principal y para un mundo. El
   // `dominio` viaja al servidor y allí manda sobre los ítems, el bloque de
   // realidad y la puerta; aquí solo se dice de quién es el ritual.
@@ -2119,7 +2143,7 @@ export function ManosALaObra({
               icono="ciclo"
               titulo="Ciclo de profundización"
               descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
-              onClick={() => setRitual(true)}
+              onClick={() => void abrirRitual("core")}
             />
             {entrevistaAbierta && (
               <button
@@ -2538,10 +2562,7 @@ export function ManosALaObra({
                         icono="ciclo"
                         titulo="Ciclo de profundización"
                         descripcion={`¿La realidad te cambió el plan de ${mundo.nombre}? Cuéntame qué pasó y lo recalculo desde donde estás.`}
-                        onClick={() => {
-                          setRitualMundo(mundo.dominio);
-                          setErrorRitual(null);
-                        }}
+                        onClick={() => void abrirRitual(mundo.dominio)}
                       />
                       <TarjetaAcceso
                         icono="realizar"
@@ -2636,7 +2657,7 @@ export function ManosALaObra({
               icono="ciclo"
               titulo="Ciclo de profundización"
               descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
-              onClick={() => setRitual(true)}
+              onClick={() => void abrirRitual("core")}
             />
             {entrevistaAbierta && (
               <button
