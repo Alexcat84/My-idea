@@ -81,11 +81,12 @@ def evaluar_ruta(ruta, families):
     es_completa = tiene_accion and tiene_viabilidad and len(ruta) >= MIN_NODOS_COMPLETA
     faltantes = []
     if not tiene_accion:
-        faltantes.append("validar con clientes reales (entrevistas, MVP, pruebas de usuario)")
+        # AUD-09 M33: paridad con TEXTO_FAMILIA_FALTANTE de la web (español llano, con tildes).
+        faltantes.append("validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)")
     if not tiene_viabilidad:
-        faltantes.append("si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)")
+        faltantes.append("si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)")
     if len(ruta) < MIN_NODOS_COMPLETA:
-        faltantes.append("mas profundidad en el recorrido")
+        faltantes.append("más profundidad en el recorrido")
     return {
         "es_completa": es_completa,
         "tiene_accion_clientes": tiene_accion,

@@ -612,9 +612,10 @@ export function finalizarPlan(
     cosecha: cosechaIds.length,
   });
   if (!evaluacionCobertura.es_completa) {
-    partes.push("", "## Lo que este plan aun no cubre", "");
+    partes.push("", "## Lo que este plan aún no cubre", "");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);
-    partes.push("", "Para profundizar, continua la conversacion en esta misma sesion.");
+    // AUD-09 M33: sin la invitación a "continuar en esta misma sesión": la
+    // sesión ya está cerrada (el camino sigue es el Ciclo de profundización).
   }
 
   return {

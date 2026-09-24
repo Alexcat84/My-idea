@@ -2210,8 +2210,10 @@ def cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, priori
 
 
 _TEXTO_FAMILIA_FALTANTE = {
-    "accion_clientes": "validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)",
-    "viabilidad_economica": "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)",
+    # AUD-09 M33: paridad con TEXTO_FAMILIA_FALTANTE de la web.
+    "accion_clientes": "validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)",
+    "viabilidad_economica": "si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)",
+    "profundidad": "más profundidad en el recorrido",
 }
 
 SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?"
@@ -2458,7 +2460,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
                           f"{len(ruta)} de tu recorrido conversado y {len(cosecha_ids)} "
                           f"del vecindario relacionado del grafo._"]
     if not evaluacion_cobertura["es_completa"]:
-        partes += ["", "## Lo que este plan aun no cubre", ""]
+        partes += ["", "## Lo que este plan aún no cubre", ""]
         for f in evaluacion_cobertura["familias_faltantes"]:
             partes.append(f"- {f}")
         partes += ["", f"Para profundizar, continua la sesion: "

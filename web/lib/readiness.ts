@@ -9,6 +9,7 @@
  * para paridad y para poder reclasificar si el dataset cambia.
  */
 import nodeFamiliesJson from "./assets/node_families.json";
+import { TEXTO_FAMILIA_FALTANTE } from "./engine/constants";
 
 export const MIN_NODOS_COMPLETA = 5;
 
@@ -96,10 +97,10 @@ export function evaluarRuta(ruta: string[], families: Record<string, Familia>): 
   const tieneViabilidad = familiasEnRuta.has("viabilidad_economica");
   const esCompleta = tieneAccion && tieneViabilidad && ruta.length >= MIN_NODOS_COMPLETA;
   const faltantes: string[] = [];
-  if (!tieneAccion) faltantes.push("validar con clientes reales (entrevistas, MVP, pruebas de usuario)");
-  if (!tieneViabilidad)
-    faltantes.push("si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)");
-  if (ruta.length < MIN_NODOS_COMPLETA) faltantes.push("mas profundidad en el recorrido");
+  // AUD-09 M33: los textos de la fuente única (constants.ts).
+  if (!tieneAccion) faltantes.push(TEXTO_FAMILIA_FALTANTE.accion_clientes);
+  if (!tieneViabilidad) faltantes.push(TEXTO_FAMILIA_FALTANTE.viabilidad_economica);
+  if (ruta.length < MIN_NODOS_COMPLETA) faltantes.push(TEXTO_FAMILIA_FALTANTE.profundidad);
   return {
     es_completa: esCompleta,
     tiene_accion_clientes: tieneAccion,

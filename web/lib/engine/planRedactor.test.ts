@@ -169,7 +169,7 @@ describe("corregirCoherenciaCobertura: 3a reincidencia del bug etiqueta/contenid
       es_completa: false,
       tiene_accion_clientes: true,
       tiene_viabilidad_economica: false,
-      familias_faltantes: ["si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)"],
+      familias_faltantes: ["si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)"],
     };
     const eventos: Record<string, unknown>[] = [];
     const corregida = corregirCoherenciaCobertura(evaluacionMala, cuerpo, true, (e) => eventos.push(e));
@@ -301,7 +301,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea");
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).toContain("# Mi Plan");
   });
 
@@ -313,7 +313,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const resultado = finalizarPlan(rawModelo, prep, ruta, families, "mi idea");
     expect(resultado.evaluacionCobertura.es_completa).toBe(false);
     expect(resultado.markdown).toContain("_Plan inicial_");
-    expect(resultado.markdown).toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).toContain("Lo que este plan aún no cubre");
   });
 
   it("rawTextoModelo=null usa el respaldo offline con el material principal", () => {
@@ -335,7 +335,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
 
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).not.toContain("===JSON===");
     expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });
   });
@@ -353,7 +353,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
 
     expect(resultado.evaluacionCobertura.es_completa).toBe(true);
     expect(resultado.markdown).toContain("_Plan completo_");
-    expect(resultado.markdown).not.toContain("Lo que este plan aun no cubre");
+    expect(resultado.markdown).not.toContain("Lo que este plan aún no cubre");
     expect(resultado.markdown).not.toContain("===JSON===");
     expect(resultado.markdown).not.toContain("familias_tratadas");
     expect(eventos).toContainEqual({ tipo: "autodeclaracion_fallida" });

@@ -12,9 +12,13 @@ export const MAX_COSECHA_PRIORIDAD = 8;
 
 export const SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?";
 
+// AUD-09 M33: lo que el plan aún no cubre, en español llano y con tildes (sin
+// "MVP"). Fuente única: la usan readiness.ts y el redactor; paridad con
+// engine/plan_readiness.py y engine/prototipo_motor.py.
 export const TEXTO_FAMILIA_FALTANTE: Record<string, string> = {
-  accion_clientes: "validar con clientes reales (entrevistas, MVP, pruebas de usuario, una venta o preventa real)",
-  viabilidad_economica: "si tu idea puede sostenerse economicamente (costos, precios, punto de equilibrio)",
+  accion_clientes: "validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)",
+  viabilidad_economica: "si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)",
+  profundidad: "más profundidad en el recorrido",
 };
 
 export type CampoNumericoProyecto =
