@@ -162,3 +162,69 @@ avance rápido a `1ba09965` con el tag `web-v2.6.4`, y sello en vivo de www.myid
 y 29 abiertos; BAJA 2 cerrados, 1 parcial y 13 abiertos. El límite de M15 (nodos por etapa) quedó
 aceptado por el fundador, con su condición de cierre en la ficha `aud09-remanentes`, donde viven
 también los remanentes para su triaje.
+
+## TANDAS 7A Y 7B
+
+Después del cierre, el fundador triajó los remanentes (25 sep 2026) en DINERO, DATOS, SEGURIDAD,
+CONFIANZA y OTRO. Las cuatro primeras clases fueron las tandas 7A y 7B, con las mismas reglas
+(prueba en rojo primero, suites en verde, sin tocar `dataset/`, visto del fundador en la vista
+previa). Migraciones de la 7A: 042 (`credit_reservas`, reserva de créditos) y 043
+(`totp_secret_pendiente`), aplicadas por el fundador. La 7B no tuvo migraciones.
+
+### Tanda 7A: dinero, datos y seguridad (tag `web-v2.6.5`, `main` en `271c5187`)
+
+| hallazgo | qué quedó | commit |
+|---|---|---|
+| M24 | Tus Números pide plan para activar y narrar | `60389f57` |
+| M25 | reserva de créditos al empezar, cobro al entregar, liberación si no hay cobro (042); política en `ANALISIS_PRECIOS §4` | `9b280470` |
+| M22 | el ritual consulta el saldo antes de abrirse (lo que quedaba del parcial) | `8a73d772` |
+| M30 | `?entrevista=1` se consume al arrancar | `ede226a3` |
+| M32 | aviso de precio antes de explorar, con la cifra de `precios.ts` | `45406c0f` |
+| B14a | el respaldo de la decisión del plan no corta por una subcadena ("playa"); paridad Python | `66672721` |
+| M09 | la Celebración solo con el cierre; sin cambio de estado no hay rastro | `2cd655aa` |
+| M26 | reproducido y arreglado: la entrega del plan es idempotente por sesión | `00623953` |
+| M27 | la respuesta escrita no se pierde si el turno falla | `f52a99cc` |
+| M34 | la bitácora no reescribe la historia (evento `item_hecho`; primer sello de la línea base) | `72037406` |
+| M41 | mover-fecha no toca lo hecho ni lo retirado | `ac8f5376` |
+| B14b | el dictado provisional no se pierde | `f39a8746` |
+| M49 | el texto del doble factor dice lo que protege (cobros y borrados) | `b5ad1b20` |
+| M50 | re-enrolar el autenticador no desarma el candado (043); su rojo, corrido contra `b5ad1b20`, consta en la ficha | `7d8c9e3f` |
+| B07a | el mensaje interno de un error no viaja al cliente | `87e7d081` |
+| B12 | `/modo` valida el espacio; `unlock` pide cuenta real y plan | `e10fd538` |
+
+Decisiones del fundador tras la 7A, también en `web-v2.6.6`: la reserva de 2 horas se queda;
+`streamTerminal` manda al cliente solo un código y un identificador de correlación (`3e037783`);
+el guardián de commit corre `tsc --noEmit` sobre `web/` (`1bcbf33b`), con la prueba de que un
+error de tipos aborta; y la constancia del rojo de M50 (`2b35bdc3`).
+
+### Tanda 7B: confianza (tag `web-v2.6.6`, `main` en `1adfb9d0`)
+
+| hallazgo | qué quedó | commit |
+|---|---|---|
+| M31 | el saldo del encabezado muestra lo disponible y dice lo reservado para la sesión en curso; se refresca | `a42a312d` |
+| M28 | la idea sin Claridad dice "Sin ordenar" y ofrece ordenarla, reusando la misma idea | `2bf59bae` |
+| M29 | una sola regla de "entrevista abierta" | `24a900ab` |
+| M33 | el plan no invita a una sesión cerrada; sin "MVP"; con tildes; paridad Python | `d64051f0` |
+| M37 | un mundo cuenta cuando tiene su plan | `6876156f` |
+| M38 | a mi ritmo no se habla de plazos | `e95686b8` |
+| M39 | el "Cómo te fue" del Expediente habla con los datos | `c5c0ec60` |
+| M40 | la capacidad que se ve elegida se guarda | `c97f38c1` |
+| M42 | la última acción cuenta el trabajo en las tareas | `fa45f9fc` |
+| M43 | sin gastos fijos no se muestra una ganancia que no es neta | `9436b833` |
+| M47 | `/creditos` no promete la vista global eliminada | `f5fe191c` |
+| M48 | el registro de protección vacío dice que el enlace falló | `7eefed19` |
+| B03a | "el mismo día" en vez de "el día antes"; fuera "Yo te recuerdo" y "El más elegido" | `9543b64b` |
+| B05 | el límite dice su número real y lleva a las ideas | `d45fdff9` |
+| B10 | una etapa (`etapaDeIdea`), una fecha de "Tu Plan" y un nombre de la idea | `b55ed305` |
+| B14c | el micrófono dice por qué se apagó | `8f60e5d2` |
+| M35 | por texto: el Expediente dice exactamente lo que incluye | `1243c826` |
+
+### Estado final de la campaña
+
+**Todo lo de DINERO, DATOS, SEGURIDAD y CONFIANZA quedó CERRADO en producción** (`web-v2.6.5`
+y `web-v2.6.6`), incluidos los dos parciales de su clase (M22 en la 7A; B16 es de OTRO). Lo de
+OTRO (M44, M45, M46, M52, M54, B02, B03b, B06, B07b, B08, B09, B11, B13, B14d, B15 y B16) y las
+funciones futuras (doble factor al entrar, volver a enlazar un registro de protección, Tus
+Números dentro del Expediente, y guardar los nodos por tarea del límite de M15) quedan en la
+ficha `aud09-remanentes` de `docs/PENDIENTES.md`, cada uno con su condición de cierre. La campaña
+de arreglos de la AUD-09 termina aquí.
