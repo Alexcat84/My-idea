@@ -17556,8 +17556,18 @@ M35 por texto); OTRO se queda en esta ficha.
   `72037406`, M41 `ac8f5376`, B14b `f39a8746`.
 - Seguridad: M49 `b5ad1b20` (por texto), M50 `7d8c9e3f` (migración 043), B07a `87e7d081`,
   B12 `e10fd538`.
-- Queda a decisión del fundador (hermano de B07a): `lib/streamTerminal.ts` manda por el canal
-  la causa de un cierre mudo, y su prueba lo fija a propósito para diagnosticar.
+- **Constancia del rojo de M50 (decisión del fundador, 25 sep 2026).** Su prueba
+  (`reenrolarSinPerderCandado.test.ts`) se corrió contra el código ANTERIOR al arreglo
+  (`b5ad1b20`, restaurando solo las tres fuentes que tocó `7d8c9e3f`): **3 de 3 en rojo**.
+  Enrolar: `expected undefined to be 'enc(NUEVO)'` (el secreto no quedaba pendiente).
+  Verificar: `expected 400 to be 200`. Código de rescate en alta: `expected 400 to be 401`;
+  esta cae por una razón vecina (el código viejo no conocía el pendiente y respondía "primero
+  genera tu QR"), así que prueba el rojo pero no el caso exacto.
+- `streamTerminal` (hermano de B07a), decisión del fundador: la causa interna sale del mensaje
+  al cliente; el servidor la registra completa con un identificador de correlación y al
+  cliente solo llegan el código y ese identificador (`3e037783`).
+- El guardián de commit corre `tsc --noEmit` sobre `web/` cuando el commit la toca, con la
+  prueba de que un error de tipos aborta (`1bcbf33b`).
 
 **Tanda 7B, pendiente (confianza):** M28, M29, M31, M33, M37, M38, M39, M40, M42, M43, M47,
 M48, B03a, B05, B10, B14c y M35 por texto.
