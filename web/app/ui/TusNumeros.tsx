@@ -307,7 +307,14 @@ function Escenarios({ t }: { t: Tablero }) {
             <span className="block text-[12px] font-normal text-dim">{f.sub}</span>
           </div>
           <div className={`text-right text-[15px] font-bold ${f.ganancia != null && f.ganancia < 0 ? "text-warn" : f.ganancia != null && f.ganancia > 0 ? "text-done" : ""}`}>
-            {f.ganancia != null ? money(f.ganancia) : "—"}
+            {f.ganancia != null ? (
+              money(f.ganancia)
+            ) : f.sinCifra ? (
+              // AUD-09 M43: sin fijos no hay ganancia neta: se dice qué falta.
+              <span className="text-[12px] font-normal text-dim">{f.sinCifra}</span>
+            ) : (
+              "—"
+            )}
           </div>
         </div>
       ))}

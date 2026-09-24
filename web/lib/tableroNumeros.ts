@@ -57,6 +57,9 @@ export interface FilaEscenario {
    * ya redondeada. Es lo que el canon llama "Ganancia del mes" (el techo sano
    * de kits da $3.900 = 30 x 170 - 1.200), no la contribucion a secas. */
   ganancia: number | null;
+  /** AUD-09 M43: por qué no hay cifra, en palabras (solo cuando faltan los
+   * fijos: sin ellos no hay ganancia NETA que mostrar). */
+  sinCifra?: string;
 }
 
 /**
@@ -72,24 +75,29 @@ export function construirEscenariosFilas(
   margenUnit: ValorNumerico | null,
   fijos: ValorNumerico | null
 ): FilaEscenario[] {
-  const f = medio(fijos) ?? 0;
-  const neto = (contrib: number | null): number | null => (contrib === null ? null : gananciaNetaDeFijos(contrib, f));
+  // AUD-09 M43: sin fijos no hay ganancia NETA. Antes se tomaban como 0 y la
+  // fila mostraba la contribución bajo "Ganancia" (la palanca de volumen ya
+  // daba null en el mismo caso: dos cifras para lo mismo, H12).
+  const f = medio(fijos);
+  const neto = (contrib: number | null): number | null =>
+    contrib === null || f === null ? null : gananciaNetaDeFijos(contrib, f);
+  const sinFijos = f === null ? { sinCifra: "falta tu gasto fijo del mes" } : {};
   const esc = reporte.escenarios as unknown as Record<string, unknown>;
   const filas: FilaEscenario[] = [];
   if ("pesimista" in esc) {
     const p = esc.pesimista as { unidades_mes?: number; margen_mensual?: number | null } | null;
     const b = esc.base as { unidades_mes?: number; margen_mensual?: number | null } | null;
-    if (p) filas.push({ nombre: "Pesimista", sub: `${p.unidades_mes} al mes`, ganancia: neto(p.margen_mensual ?? null) });
+    if (p) filas.push({ nombre: "Pesimista", sub: `${p.unidades_mes} al mes`, ganancia: neto(p.margen_mensual ?? null), ...sinFijos });
     const uv = medio(valorCampo(numeros, "unidades_vendidas"));
     const mu = medio(margenUnit);
     if (uv !== null && mu !== null) {
-      filas.push({ nombre: "Tu ritmo de hoy", sub: `${uv} al mes`, ganancia: neto(uv * mu) });
+      filas.push({ nombre: "Tu ritmo de hoy", sub: `${uv} al mes`, ganancia: neto(uv * mu), ...sinFijos });
     }
-    if (b) filas.push({ nombre: "A capacidad plena", sub: `${b.unidades_mes} al mes`, ganancia: neto(b.margen_mensual ?? null) });
+    if (b) filas.push({ nombre: "A capacidad plena", sub: `${b.unidades_mes} al mes`, ganancia: neto(b.margen_mensual ?? null), ...sinFijos });
   } else {
     for (const [k, etq] of [["50%", "mitad de tu meta"], ["100%", "tu meta"], ["200%", "el doble"]] as const) {
       const e = esc[k] as { unidades?: number; margen_total?: number | null } | null;
-      if (e) filas.push({ nombre: etq, sub: `${e.unidades} al mes`, ganancia: neto(e.margen_total ?? null) });
+      if (e) filas.push({ nombre: etq, sub: `${e.unidades} al mes`, ganancia: neto(e.margen_total ?? null), ...sinFijos });
     }
   }
   return filas;

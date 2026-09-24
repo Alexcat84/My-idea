@@ -93,6 +93,19 @@ describe("escenariosFilas: ganancia NETA de fijos, y base solo si hay volumen de
   });
 });
 
+// AUD-09 M43 (tanda 7B, confianza): sin costos fijos, la tabla tomaba los fijos
+// como 0 y pintaba la CONTRIBUCIÓN bajo "Ganancia", que se lee como neta de
+// fijos. KITS sin fijos: capacidad plena 30 ; contribución 30 x 170 = 5100 ; la
+// ganancia neta NO se puede calcular (faltan los fijos): sin cifra, y se dice.
+// Es la misma regla de la palanca de volumen (H12: una sola cifra).
+describe("sin fijos no hay ganancia neta que mostrar (AUD-09 M43)", () => {
+  it("kits sin fijos: la fila no inventa la ganancia y dice qué falta", () => {
+    const t = armarTablero(numeros({ costo_materiales_unidad: 100, horas_por_unidad: 4, valor_hora: 20, precio_tentativo: 350, capacidad_semanal: 7.5 }));
+    const plena = t.escenariosFilas.find((f) => f.nombre === "A capacidad plena");
+    expect(plena).toEqual({ nombre: "A capacidad plena", sub: "30 al mes", ganancia: null, sinCifra: "falta tu gasto fijo del mes" });
+  });
+});
+
 describe("cicloDias: el ciclo de caja aparece y sale de faltantes al darlo", () => {
   const base = { costo_materiales_unidad: 30, horas_por_unidad: 2, valor_hora: 6, precio_tentativo: 38, costos_fijos_mensuales: 200, capacidad_semanal: 5 };
 
