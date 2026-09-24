@@ -371,13 +371,30 @@ export function IdeaView({ projectId }: { projectId: string }) {
 
   /** Fase 4.5: re-lee el detalle sin tocar el resto del estado (para refrescar
    * mundos tras un diagnóstico o una compra). */
-  async function refrescarDetalle() {
+  async function refrescarDetalle(): Promise<DetalleIdea | null> {
     try {
       const res = await fetch(`/api/idea/${projectId}`);
-      if (res.ok) setDetalle((await res.json()) as DetalleIdea);
+      if (!res.ok) return null;
+      const d = (await res.json()) as DetalleIdea;
+      setDetalle(d);
+      return d;
     } catch {
-      /* silencioso: el refresco es cortesía, no la acción principal */
+      /* el refresco es cortesía, no la acción principal */
+      return null;
     }
+  }
+
+  /** AUD-09 M13: tras entregarse el plan de un MUNDO, la vista del núcleo vuelve
+   * a su propio plan (recargado) y el usuario aterriza en el espacio del mundo,
+   * donde vive ese plan. Antes el plan del mundo ocupaba el lugar de "Tu Plan". */
+  async function volverAlMundo(dominio: string) {
+    const det = await refrescarDetalle();
+    setPlanMd(det?.plan?.contenido_md ?? null);
+    setAvisoPlan(det?.plan?.aviso ?? null);
+    setPlanSesionId(det?.plan?.session_id ?? null);
+    setPlanEsSeguimiento(det?.plan?.etiqueta === "seguimiento");
+    void cargarChecklist();
+    irAMundo(dominio);
   }
 
   /** Fase 4.5: la entrevista del preview terminó. Se redacta el diagnóstico
@@ -422,16 +439,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setEsSeguimientoEntrevista(false);
     const planPrevio = planMd;
     setPlanMd(null);
-    const r = await generarPlan(sid);
+    const r = await generarPlan(sid, undefined, { dominio, esSeguimiento: false });
     if (r === "rechazado") {
       // AUD-09 H03: sin saldo (u otro rechazo con razón) la compra no ocurre:
       // el plan del núcleo vuelve a su lugar y se regresa al espacio del mundo.
       setListoParaPlan(false);
       setPlanMd(planPrevio);
       setVistaMundo(true);
-      return;
     }
-    await refrescarDetalle();
+    // Entregado: volverAlMundo (dentro de generarPlan) ya recargó el plan del
+    // núcleo y llevó al espacio del mundo (AUD-09 M13).
   }
 
   /** AUD-09 (decisión del fundador, 25 sep 2026): regenerar un plan básico.
@@ -463,9 +480,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setEsSeguimientoEntrevista(esSeguimiento);
     setSessionId(nueva);
     setPlanMd(null);
-    const r = await generarPlan(nueva);
+    const r = await generarPlan(nueva, undefined, { dominio, esSeguimiento });
     if (r === "rechazado") setPlanMd(planPrevio);
-    await refrescarDetalle();
+    else if (dominio === "core") await refrescarDetalle();
   }
 
   /** Una sesión NUEVA (seguimiento o mundo) reinicia el riel y entra a la entrevista. */
@@ -488,8 +505,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   const generarPlan = useCallback(
-    async (sid: string, contextoExtra?: string): Promise<"rechazado" | "entregado_o_fallido" | "ocupado"> => {
+    async (
+      sid: string,
+      contextoExtra?: string,
+      // AUD-09 M13: el espacio del plan viaja explícito. Quien llama justo
+      // después de cambiar el estado vería el valor viejo del closure.
+      destino?: { dominio: string; esSeguimiento: boolean }
+    ): Promise<"rechazado" | "entregado_o_fallido" | "ocupado"> => {
       if (generandoPlan) return "ocupado";
+      const dominioPlan = destino?.dominio ?? dominioEntrevista;
+      const esSeguimientoPlan = destino?.esSeguimiento ?? esSeguimientoEntrevista;
+      let entregadoEnMundo = false;
       planPedidoRef.current = true;
       setGenerandoPlan(true);
       setPregunta(null);
@@ -546,12 +572,16 @@ export function IdeaView({ projectId }: { projectId: string }) {
             }
           } else if (evento === "done") {
             const d = data as { markdown: string; aviso?: string | null; session_id?: string };
-            setPlanMd(d.markdown);
-            setAvisoPlan(d.aviso ?? null);
-            setPlanSesionId(d.session_id ?? null);
-            setPlanEsSeguimiento(esSeguimientoEntrevista);
-            // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
-            void cargarChecklist();
+            if (dominioPlan === "core") {
+              setPlanMd(d.markdown);
+              setAvisoPlan(d.aviso ?? null);
+              setPlanSesionId(d.session_id ?? null);
+              setPlanEsSeguimiento(esSeguimientoPlan);
+              // El plan nuevo derivó SU checklist al persistirse (3.3): refrescar.
+              void cargarChecklist();
+            } else {
+              entregadoEnMundo = true;
+            }
           } else if (evento === "error") {
             setError(
               "no pudimos terminar de escribir tu plan; lo que contaste está guardado, así que no hay que repetir nada"
@@ -568,9 +598,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setGenerandoPlan(false);
         setEtiquetaEtapa(undefined);
       }
+      if (entregadoEnMundo) await volverAlMundo(dominioPlan);
       return "entregado_o_fallido" as const;
     },
-    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista]
+    // volverAlMundo se redefine en cada render y solo usa setters y rutas del
+    // proyecto: incluirlo solo recrearía generarPlan en cada render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista, dominioEntrevista]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
