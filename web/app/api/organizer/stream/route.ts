@@ -19,7 +19,7 @@ import {
   usoVacio,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan, obtenerProyecto } from "@/lib/db";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import {
   construirMarkdown,
@@ -71,6 +71,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "no autenticado" }, { status: 401 });
   }
 
+  // AUD-09 M28: ordenar una idea que YA existe (su organizador falló antes y
+  // quedó sin Claridad). Se reusa la misma idea en vez de crear otra; solo si es
+  // del usuario (RLS) y si de verdad no tiene su Claridad.
+  const idPedido = (body as { project_id?: unknown } | null)?.project_id;
+  let ideaExistente: string | null = null;
+  if (typeof idPedido === "string" && idPedido) {
+    if (!(await obtenerProyecto(supabase, idPedido))) {
+      return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    }
+    const { data: sesionesIdea } = await supabase.from("sessions").select("id").eq("project_id", idPedido);
+    const ids = ((sesionesIdea ?? []) as Array<{ id: string }>).map((s) => s.id);
+    const { data: organizadores } = ids.length
+      ? await supabase.from("plans").select("id").in("session_id", ids).eq("etiqueta", "organizador")
+      : { data: [] };
+    if ((organizadores ?? []).length > 0) {
+      return NextResponse.json({ error: "Esta idea ya está ordenada." }, { status: 409 });
+    }
+    ideaExistente = idPedido;
+  }
+
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
@@ -94,7 +114,7 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = await crearProyecto(supabase, user.id, texto);
+  const projectId = ideaExistente ?? (await crearProyecto(supabase, user.id, texto));
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();

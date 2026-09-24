@@ -131,10 +131,13 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
 
     let etapa: number;
     const pensando = entrevistaAbierta.has(p.id);
+    // AUD-09 M28: sin organizador no hay Claridad (su IA falló): se queda en la
+    // Chispa y se dice "Sin ordenar", no "Con claridad".
+    const ordenada = etiquetas.has("organizador");
     if (enObra) etapa = 5;
     else if (conPlan) etapa = 4;
     else if (pensando) etapa = 3;
-    else etapa = 2; // hay proyecto ⇒ hubo Chispa; con organizador es Claridad
+    else etapa = ordenada ? 2 : 1; // hay proyecto ⇒ hubo Chispa; con organizador es Claridad
 
     const chips: ChipCinta[] = [];
     if (etapa === 5 && core) {
@@ -148,7 +151,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     } else if (conPlan) {
       chips.push({ texto: "Con plan", tono: "azul" });
     } else {
-      chips.push({ texto: "Con claridad", tono: "neutro" });
+      chips.push({ texto: ordenada ? "Con claridad" : "Sin ordenar", tono: "neutro" });
     }
 
     // Fase 4.3.1: la pista ANCLA la idea en el calendario (fechaSello) en vez

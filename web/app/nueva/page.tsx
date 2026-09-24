@@ -8,7 +8,7 @@
  * /idea/<id> para que un refresh caiga en la vista persistida.
  */
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { BotonHeroe } from "../ui/BotonHeroe";
@@ -31,6 +31,21 @@ export default function NuevaIdea() {
   const [estado, setEstado] = useState<Fase>({ fase: "captura" });
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
   const [etiqueta, setEtiqueta] = useState<string | undefined>();
+  // AUD-09 M28: /nueva?idea=<id> ordena una idea que ya existe y quedó sin su
+  // Claridad (el organizador falló). Se trae su texto y se reusa la misma idea.
+  const [ideaAReordenar, setIdeaAReordenar] = useState<string | null>(null);
+  useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("idea");
+    if (!id) return;
+    fetch(`/api/idea/${id}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { idea?: { entrada_original?: string } } | null) => {
+        if (!d?.idea?.entrada_original) return;
+        setTexto(d.idea.entrada_original);
+        setIdeaAReordenar(id);
+      })
+      .catch(() => {});
+  }, []);
 
   async function enviar() {
     if (!texto.trim()) return;
@@ -46,7 +61,7 @@ export default function NuevaIdea() {
       const res = await fetch("/api/organizer/stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ texto }),
+        body: JSON.stringify(ideaAReordenar ? { texto, project_id: ideaAReordenar } : { texto }),
       });
       if (res.status === 429) {
         const data = await res.json();

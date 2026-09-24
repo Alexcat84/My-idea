@@ -1508,6 +1508,24 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   como los demás y vive PRIMERO en la grilla "Potencia tu idea"
                   (regla del fundador: sin trato distinto). */}
 
+              {/* AUD-09 M28: la idea quedó guardada pero su organizador falló (no
+                  hay Claridad). Antes la página abría vacía y sin salida: ahora
+                  se dice y se ofrece ordenarla, reusando esta misma idea. */}
+              {!entrevistaActiva && !planMd && !generandoPlan && !detalle.organizador && (
+                <div className="rounded-panel border border-hairline bg-surface p-6">
+                  <p className="text-[15px] font-semibold">Tu idea quedó guardada, pero no alcancé a ordenarla.</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">
+                    «{detalle.idea.entrada_original}»
+                  </p>
+                  <Link
+                    href={`/nueva?idea=${projectId}`}
+                    className="mt-4 inline-flex rounded-[10px] border border-accent/50 px-5 py-2.5 text-[14px] font-semibold text-accent hover:bg-accent/10"
+                  >
+                    Ordenarla ahora
+                  </Link>
+                </div>
+              )}
+
               {/* Claridad persistida (canon 03) cuando no hay nada más activo */}
               {!entrevistaActiva && !planMd && !generandoPlan && detalle.organizador && (
                 <>
