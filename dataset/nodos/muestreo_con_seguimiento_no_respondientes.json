@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
     "Enviar el cuestionario únicamente a esa muestra.",
-    "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+    "Sugerencia de My Idea: realizar seguimiento activo a quienes no respondan dentro de la muestra, con entrevista personal o, si no es posible, por teléfono.",
     "Calcular los intervalos de confianza de los resultados obtenidos.",
     "Aplicar el mismo método a estudios futuros sobre cualquier producto con lista de compradores disponible."
   ],
@@ -21,5 +21,24 @@
     "Si la tasa de respuesta de una encuesta de satisfacción de clientes es baja (ej. 50%).",
     "Si se requiere validar la voz del cliente con rigor estadístico antes de tomar decisiones de producto."
   ],
-  "etiqueta_arbol": "Busca a Quien no Responde"
+  "etiqueta_arbol": "Busca a Quien no Responde",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-047",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar seguimiento activo (entrevista personal o telefónica) a quienes no respondan dentro de la muestra.",
+      "texto_nuevo": "Sugerencia de My Idea: realizar seguimiento activo a quienes no respondan dentro de la muestra, con entrevista personal o, si no es posible, por teléfono.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L5011-L5011",
+        "frase": "then to follow up by personal interview with the nonrespondents"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro fija el medio de seguimiento: entrevista personal a quienes no responden dentro de la muestra. Busque telephone y phone en todo el libro y la via telefonica nunca aparece como forma de seguir a los no respondientes (solo sale en otros contextos: companias telefonicas, operadoras, quejas). El seguimiento personal es fiel, pero la opcion telefonica es un canal o herramienta que el libro no pone. No es solo concretar: anade otro medio.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-014"
+    }
+  ]
 }

@@ -12,7 +12,7 @@
     "Compara p contra el punto de equilibrio: si p es menor, elimina la inspeccion; si p es mayor, aplica inspeccion al 100%",
     "Evita planes de muestreo intermedios cuando p este consistentemente de un lado del punto de equilibrio",
     "Si manejas varias piezas o proveedores, ordena los terminos ki menos K por pi de mayor a menor y aplica la regla a cada una",
-    "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado",
+    "Seleccionar la estrategia de inspeccion segun el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante esta en caos.",
     "Anota tu decisión y sigue revisando con cartas de control para comprobar que la fracción de defectos se mantenga estable."
   ],
   "entregable_esperado": "Tabla de costos comparativos que documente, por cada componente o proveedor, la politica de inspeccion aplicada (cero o cien por ciento) con base en datos reales de costos y calidad entrante.",
@@ -67,6 +67,25 @@
       "node_id": "regla_todo_o_nada_inspeccion",
       "titulo": "Decide si inspeccionar todo o nada (regla de costos k1/k2)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-020",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Seleccionar la estrategia de inspección (ninguna, muestreo, 100%) según el resultado",
+      "texto_nuevo": "Seleccionar la estrategia de inspeccion segun el resultado: ninguna si p es menor que k1/k2, 100% si es mayor; el muestreo solo cabe con las reglas de Joyce Orsini cuando la calidad entrante esta en caos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L10165-L10175",
+        "frase": "adoption of any plan of inspection other than the all-or-none rules runs the risk of increase of overall cost... any inspection whatever in the region to the left of the breakeven point (p < k1/k2) will increase total cost"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Segun el resultado de comparar p con k1/k2 el libro solo admite ninguna inspeccion o 100%; incluir el muestreo como opcion contradice la regla todo o nada. El muestreo solo aparece con las reglas de Joyce Orsini en estado de caos.",
+      "indice": 6,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-096"
     }
   ]
 }

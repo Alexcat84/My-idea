@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Amplía tu lista de contactos a por lo menos 10 clientes potenciales (más si es consumo)",
     "Usa preguntas de presupuesto: pregúntale '¿lo usarías si fuera gratis?' y '¿quién tiene el presupuesto?'",
-    "Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría",
+    "Explora los límites de precio proponiendo una cifra muy alta, toma la primera cifra que te dé el cliente como su presupuesto y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
     "Pregunta qué canal de distribución prefiere: tienda física, en línea, directo o a través de un distribuidor",
     "Pregunta cómo es el proceso interno de aprobación de compra de quien te compra",
     "Anota cada entrevista en una ficha (report card) con el mismo formato para poder comparar"
@@ -31,5 +31,24 @@
     "Cuando ya tienes una presentación de tu solución validada y necesitas evidencia de que la gente pagaría por ella",
     "Cuando vendes a través de un socio o distribuidor y necesitas entender cómo funciona su negocio"
   ],
-  "etiqueta_arbol": "Valida tu Solución con Clientes"
+  "etiqueta_arbol": "Valida tu Solución con Clientes",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-006",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Explora los límites de precio proponiendo una cifra muy alta y ajustando hacia abajo hasta encontrar lo que de verdad pagaría",
+      "texto_nuevo": "Explora los límites de precio proponiendo una cifra muy alta, toma la primera cifra que te dé el cliente como su presupuesto y después empuja hacia arriba preguntando qué haría falta para que pagara el doble o el triple",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L20852-L20862",
+        "frase": "Once you get a first number, ask, \"How much more would you expect to pay for professional services...\" Then push and see whether they would spend those extra dollars every year or ask, \"What would we have to do to get you to spend twice that? Three times that?\""
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro coincide con el paso en proponer una cifra muy alta (\"Would you pay $1 million for our software?\"), pero no es el fundador quien baja la cifra: es el cliente quien responde con su primera cifra, que el libro toma como su presupuesto inmediato (L20852). Despues el libro manda empujar hacia arriba: servicios profesionales, gasto recurrente cada anio, el doble, el triple (L20862). El paso cambia la secuencia y pide ir bajando paso a paso hasta dar con lo que pagaria. Busque con Grep en todo el libro pasajes que apoyen bajar el precio de forma progresiva (lower the price, price down, work down, would you pay, how much would you pay) y no hay ninguno: el unico pasaje sobre los limites de precio es este, y va hacia arriba. El LECTOR A se quedo con la primera frase y no leyo la continuacion en L20862.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-013"
+    }
+  ]
 }

@@ -5,7 +5,7 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "El posicionamiento de producto es el esfuerzo por controlar la percepción pública de cómo un producto se compara con la competencia. Se formaliza en un resumen de posicionamiento de producto de una sola página, que se redacta inicialmente durante el descubrimiento de clientes y se refina con retroalimentación real obtenida de decenas o cientos de entrevistas durante la validación de clientes. Este documento mantiene consistente todo el material de marketing (fichas técnicas, presentaciones, sitio web) y sirve como referencia para toda comunicación futura.",
   "pasos_accionables": [
-    "Revisar la declaración de posicionamiento inicial creada durante el descubrimiento de clientes",
+    "Revisar la declaración de posicionamiento inicial creada al comienzo de la validación de clientes",
     "Contrastarla con las reacciones reales de los clientes durante la validación: ¿resonó?, ¿fue creíble y efectiva?",
     "Volver a contactar clientes si la razón de compra no quedó clara",
     "Incorporar la retroalimentación de clientes y de socios de canal",
@@ -30,5 +30,24 @@
     "posicionamiento_de_empresa",
     "comunicacion_transparente_en_crisis"
   ],
-  "etiqueta_arbol": "Posiciona tu Producto con Claridad"
+  "etiqueta_arbol": "Posiciona tu Producto con Claridad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Revisar la declaración de posicionamiento inicial creada durante el descubrimiento de clientes",
+      "texto_nuevo": "Revisar la declaración de posicionamiento inicial creada al comienzo de la validación de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L12455-L12495",
+        "frase": "Return to the simple, single-phrase positioning statement you developed at the outset of customer validation"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenía razón el lector A. El paso sitúa la declaración de posicionamiento inicial en el descubrimiento de clientes, pero el libro dice dos veces que esa declaración se crea al comienzo de la validación: L12466 y L10740, \"core product-positioning statement developed in Step 1 of customer validation\". Se redacta en la fase 1 de validación, \"Get Ready to Sell: Craft Positioning Statement\" (L10222-L10226), \"in light of what you've learned in customer discovery\". L12457 lo confirma: la primera versión se escribió al crear la presentación de ventas, que también es de validación. El lector B se apoya en los briefs de posicionamiento por tipo de mercado del descubrimiento (L6095, L6341-L6355) y en \"updates the positioning briefs developed earlier\". Pero esos briefs son otro objeto, no la declaración de una sola frase que nombra el paso. El paso cambia la secuencia del libro, y la vara dice que eso es CONTRARIO.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-082"
+    }
+  ]
 }

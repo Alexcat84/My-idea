@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Dedica una sesión de reflexión estratégica enfocada exclusivamente en definir tus arenas de innovación",
     "Analiza previamente el mercado, las tendencias, la competencia y tus propias competencias centrales",
-    "Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
+    "Genera una lista amplia de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
     "Evalúa cada arena según su atractivo de mercado, tu fortaleza para competir en ella y si representa una oportunidad real de crecimiento y no solo un área familiar o madura",
     "Busca especialmente mercados emergentes o de rápido crecimiento con grandes problemas sin resolver",
-    "Selecciona y prioriza de 2 a 4 arenas específicas como foco final"
+    "Selecciona y prioriza unas pocas arenas específicas como foco final"
   ],
-  "entregable_esperado": "Una lista corta (2 a 4) de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
+  "entregable_esperado": "Una lista corta de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
   "nodos_previos": [
     "analisis_competitivo",
     "evaluacion_competencias_centrales",
@@ -47,6 +47,58 @@
       "node_id": "arenas_estrategicas",
       "titulo": "Definición de Arenas Estratégicas (Campos de Batalla)",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-042",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Selecciona y prioriza de 2 a 4 arenas específicas como foco final",
+      "texto_nuevo": "Selecciona y prioriza unas pocas arenas específicas como foco final",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L7977-L7977",
+        "frase": "identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide foco en pocas arenas y muestra ejemplos con tres o cuatro, pero no fija un rango de 2 a 4 como regla. Busque two to four, three to five y variantes sin encontrarlo aplicado a arenas.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-061"
+    },
+    {
+      "id": "fidelidad-t7-043",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista corta (2 a 4) de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
+      "texto_nuevo": "Una lista corta de arenas estratégicas definidas con claridad y priorizadas, que guiarán tu búsqueda de ideas y desarrollo de nuevos productos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L7977-L7977",
+        "frase": "identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el rango de 2 a 4 arenas que la ficha C080-061 quita del paso 5 (ANADIDO de cifra). El libro pide foco en pocas arenas pero no fija ese rango; se deja la lista corta sin cifra.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-061"
+    },
+    {
+      "id": "fidelidad-t7-044",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Genera una lista amplia (12 o más) de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
+      "texto_nuevo": "Genera una lista amplia de arenas potenciales usando dimensiones como clientes, sectores, productos y tecnologías, evitando definiciones demasiado amplias",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L7977-L7977",
+        "frase": "The OSB construction-materials firm, one of the examples above, identified a total of twelve new potential strategic arenas in their strategy development, and ended up choosing only three as target arenas."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon B. Diverger con una lista amplia (L7975-L7977), usar dimensiones como grupos de clientes, sectores, categorias de producto y tecnologias (L8179-L8190) y evitar definiciones demasiado amplias (caso OSB, L7895) si son del libro. Pero el doce solo sale como resultado de dos ejemplos (OSB en L7977, Chempro en L8307 y L8320). Busque twelve, 12, dozen, long list y broad list: el libro nunca lo propone como minimo ni como referencia. Convertirlo en \"12 o más\" es una cifra normativa que el libro no respalda. No es CONTRARIO porque el libro no da otro minimo distinto.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-094"
     }
   ]
 }
