@@ -259,10 +259,31 @@ export async function detectarDecisionPlan(
   } catch {
     // fallo la interpretacion: cae al detector simple de palabras clave
   }
-  const low = respuesta.trim().toLowerCase();
-  const positivas = ["ya", "ahora", "dame", "listo", "asi esta bien", "así está bien"];
-  const decision = positivas.some((p) => low.includes(p)) ? "generar_ya" : "continuar";
-  return { decision, acumulado: acumuladoActualizado };
+  return { decision: decisionPorPalabras(respuesta), acumulado: acumuladoActualizado };
+}
+
+/**
+ * AUD-09 B14a: el respaldo por palabras cuando la IA no pudo leer la respuesta.
+ * Antes buscaba SUBCADENAS ("playa" contiene "ya") y cortaba la exploración.
+ * Frases explícitas a cualquier largo; palabras sueltas solo enteras y en una
+ * respuesta de hasta 3 palabras (una decisión, no una respuesta). En la duda,
+ * seguir: el usuario siempre tiene el botón para pedir su plan. Paridad con
+ * _decision_por_palabras de engine/prototipo_motor.py.
+ */
+export function decisionPorPalabras(respuesta: string): "generar_ya" | "continuar" {
+  const plano = respuesta
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const frases = ["dame mi plan", "dame el plan", "genera mi plan", "genera el plan", "asi esta bien", "con esto alcanza"];
+  if (frases.some((f) => ` ${plano} `.includes(` ${f} `))) return "generar_ya";
+  const palabras = plano ? plano.split(" ") : [];
+  const sueltas = ["ya", "listo", "ahora", "dale"];
+  if (palabras.length > 0 && palabras.length <= 3 && palabras.some((w) => sueltas.includes(w))) return "generar_ya";
+  return "continuar";
 }
 
 /** Port de pregunta_dirigida: pregunta adaptada para un nodo elegido por

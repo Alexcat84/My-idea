@@ -2009,8 +2009,27 @@ def _detectar_decision_plan(respuesta):
                 return data["decision"]
         except Exception as e:
             print(f"  (fallo la interpretacion, uso deteccion simple: {e})")
-    low = respuesta.strip().lower()
-    if any(p in low for p in ("ya", "ahora", "dame", "listo", "asi esta bien", "así está bien")):
+    return _decision_por_palabras(respuesta)
+
+
+def _decision_por_palabras(respuesta):
+    """AUD-09 B14a: el respaldo por palabras cuando la IA no pudo leer la
+    respuesta. Antes buscaba SUBCADENAS ('playa' contiene 'ya'). Frases
+    explicitas a cualquier largo; palabras sueltas solo enteras y en una
+    respuesta de hasta 3 palabras. En la duda, seguir. Paridad con
+    decisionPorPalabras de web/lib/engine/recorrido.ts."""
+    import re as _re
+    import unicodedata as _ud
+    plano = _ud.normalize("NFD", (respuesta or "").lower())
+    plano = "".join(c for c in plano if _ud.category(c) != "Mn")
+    plano = _re.sub(r"[^a-z0-9\s]", " ", plano)
+    plano = _re.sub(r"\s+", " ", plano).strip()
+    frases = ("dame mi plan", "dame el plan", "genera mi plan", "genera el plan", "asi esta bien", "con esto alcanza")
+    if any(f" {f} " in f" {plano} " for f in frases):
+        return "generar_ya"
+    palabras = plano.split(" ") if plano else []
+    sueltas = ("ya", "listo", "ahora", "dale")
+    if 0 < len(palabras) <= 3 and any(w in sueltas for w in palabras):
         return "generar_ya"
     return "continuar"
 
