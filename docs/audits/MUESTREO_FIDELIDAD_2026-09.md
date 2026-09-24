@@ -1,6 +1,6 @@
 CONTRARIOS: 5 en total: `prevalencia_omisiones` paso 2 (Reason), `tecnicas_para_sacar_riesgos_a_la_luz` paso 1 (Edwards), `calibra_tu_propio_ojo` paso 3 (Hubbard), `adaptaciones_sectoriales_iso` paso 4 (Juran) y `la_matriz_de_colores_te_engana` paso 3 (Hubbard). Se corrigen siempre. Lista y fichas en las secciones 11.4 y 11.8.
 
-ANADIDOS: 22 pasos INFERIDO-ANADIDO a corregir: 10 de Reason, 8 de Assembling Tomorrow, 2 de Edwards, 1 de Cradle to Cradle y 1 de Blank. Lista en la seccion 11.4b; fichas con el texto corregido en la seccion 11.8. Los otros 151 INFERIDOS son OPERATIVOS y se quedan.
+ANADIDOS: 27 pasos INFERIDO-ANADIDO a corregir: 15 de Reason, 8 de Assembling Tomorrow, 2 de Edwards, 1 de Cradle to Cradle y 1 de Blank. Lista en la seccion 11.4b; fichas con el texto corregido en la seccion 11.8. Cinco de ellos (A23 a A27) salen del tercer lector ciego sobre 18 pasos de Reason (seccion 13.7). Los otros 151 INFERIDOS son OPERATIVOS y se quedan.
 
 PENDIENTES DE DECISION DEL FUNDADOR: 1. Es `analisis_trafico_competitivo` paso 1 (Blank, AdRoll y Adbeat), ficha A15, con tres opciones. Los seis pendientes de `decision_de_vender_startup` se cerraron al leer Horowitz: el libro los respalda y pasan a FIEL.
 
@@ -9,7 +9,9 @@ NECESITO AL FUNDADOR (fase 1 mas fase 2, tras la reconciliacion): 8 libros sigue
 - Solo por INFERIDOS por encima del 10 por ciento: Assembling Tomorrow, Voss, Cradle to Cradle y couriers.
 - Salen del umbral Wasserman (8,6 por ciento, al leer Horowitz) y Blank (4,2 por ciento).
 
-FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 191 fichas en la seccion 14, una por INFERIDO: 151 OPERATIVO, 22 ANADIDO, 17 FIEL y 1 CONTRARIO. Cada una trae el pasaje literal del libro que contiene lo correcto, su texto fiel propuesto y un campo vacio para la decision del fundador. Todos los pasajes y frases clave se comprobaron por script (seccion 14.3).
+TERCER LECTOR CIEGO (18 pasos de Reason, seccion 13.7): cambian 8 pasos. Frente a un lector con la vara de cuatro veredictos, el muestreo resulto algo blando con los ANADIDOS, y sus cifras de ANADIDO deben leerse como un minimo.
+
+FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 196 fichas en la seccion 14, una por INFERIDO: 151 OPERATIVO, 27 ANADIDO, 17 FIEL y 1 CONTRARIO. Cada una trae el pasaje literal del libro que contiene lo correcto, su texto fiel propuesto y un campo vacio para la decision del fundador. Todos los pasajes y frases clave se comprobaron por script (seccion 14.3).
 
 # MUESTREO DE FIDELIDAD: RESUMEN DE LAS DOS FASES
 
@@ -34,6 +36,7 @@ FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 191 fichas en 
 - **Lectura:** 838 pasos mas, de 182 nodos. Es el censo de los vivos de Reason (90 nodos y 403 pasos, contando los 2 de la fase 1) y de Assembling Tomorrow (64 nodos y 295 pasos), mas 4 nodos de cada uno de los otros ocho libros sobre el umbral (couriers, 2) y la relectura del nodo de couriers de la fase 1 contra las guias originales. Leyeron siete lectores en paralelo mas el integrador.
 - **Tarea 1:** el segundo lector ciego coincide en 21 de 22 pasos. `folleto_franquicia` paso 3 se adjudica FIEL (Siebert L3380).
 - **Particion OPERATIVO/ANADIDO:** la hicieron dos clasificadores, el integrador y uno ciego. Coinciden en 167 de 191 (87,4 por ciento; kappa 0,54, IC95 0,39 a 0,67). Los 24 desacuerdos se resolvieron releyendo el libro (seccion 13.5).
+- **Tercer lector ciego:** dirimio 18 pasos de Reason que un piloto automatico, en otra rama, marco como CONTRARIO. Resultado: ninguno es CONTRARIO. Cambian 8 pasos: 5 FIEL pasan a INFERIDO (2 a ANADIDO y 3 a OPERATIVO) y 3 OPERATIVOS pasan a ANADIDO (seccion 13.7). El muestreo resulto algo blando con los ANADIDOS.
 - **Fuentes nuevas:** con Horowitz y Dekker, autorizadas por el fundador en solo lectura, y con tres citas de Cradle to Cradle que nadie habia visto, 17 INFERIDOS pasan a FIEL. Uno sube a CONTRARIO.
 
 **Cuatro veredictos, definitivos.**
@@ -46,14 +49,14 @@ FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 191 fichas en 
 | INFERIDO-ANADIDO | 2 | 1,4 | 0,4 a 5,1 |
 | CONTRARIO | 1 | 0,7 | 0,1 a 4,0 |
 
-- **Todo lo leido en las dos fases** (972 pasos; no es muestra del catalogo): 794 FIEL, 151 OPERATIVOS, 22 ANADIDOS y 5 CONTRARIOS.
+- **Todo lo leido en las dos fases** (972 pasos; no es muestra del catalogo): 789 FIEL, 151 OPERATIVOS, 27 ANADIDOS y 5 CONTRARIOS.
 - El detalle por libro, por mundo y global esta en la seccion 13.3.
 
 **Tasas definitivas de los libros que pasaban el umbral** (fase 1 mas fase 2, Wilson al 95 por ciento):
 
 | libro | nodos | pasos | INFERIDO por paso (OPERATIVO mas ANADIDO) | de ellos ANADIDO | CONTRARIO por paso | nodos con algun INFERIDO | umbral |
 |---|---:|---:|---|---|---|---|---|
-| Reason (censo) | 90 | 403 | 68/403 = 16,9% [13,5, 20,8] | 10/403 = 2,5% [1,4, 4,5] | 1/403 = 0,2% [0,0, 1,4] | 37/90 [31,5, 51,4] | SI (y CONTRARIO) |
+| Reason (censo) | 90 | 403 | 73/403 = 18,1% [14,7, 22,2] | 15/403 = 3,7% [2,3, 6,0] | 1/403 = 0,2% [0,0, 1,4] | 41/90 [35,7, 55,8] | SI (y CONTRARIO) |
 | Assembling Tomorrow (censo) | 64 | 295 | 64/295 = 21,7% [17,4, 26,7] | 8/295 = 2,7% [1,4, 5,3] | 0/295 [0,0, 1,3] | 37/64 [45,6, 69,1] | SI |
 | Voss | 5 | 24 | 10/24 = 41,7% [24,5, 61,2] | 0/24 [0,0, 13,8] | 0/24 [0,0, 13,8] | 5/5 [56,6, 100] | SI |
 | Cradle to Cradle | 6 | 24 | 7/24 = 29,2% [14,9, 49,2] | 1/24 = 4,2% [0,7, 20,2] | 0/24 [0,0, 13,8] | 3/6 [18,8, 81,2] | SI |
@@ -71,7 +74,8 @@ FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep): 191 fichas en 
 - Salida del sorteo de la fase 2: `aff61e8b25583c2ce5a447eebd8a5ae2173f4480`.
 - Primera integracion de la fase 2: `1d0053e3ed0acc6e41867431b01024444ac35109`.
 - Cierre de la seccion 13.4 y de las fichas de correccion: `0885863d2ff671dec30094f9f9947511dc9a16fb`.
-- Fichas de todos los INFERIDOS y pasajes literales: el commit que anade este bloque (su hash va en el mensaje de cierre).
+- Fichas de todos los INFERIDOS y pasajes literales: `0eae7f57c9225b6063fb7ed08680d227d00e8d41`.
+- Tercer lector ciego sobre 18 pasos de Reason: el commit que anade este bloque (su hash va en el mensaje de cierre).
 
 ---
 
@@ -907,6 +911,11 @@ Son los INFERIDOS que afirman un dato concreto que el libro no respalda. Cada un
 | 20 | A20 | `fijar_causa_ultimo_accidente_riesgo_siguiente` (health_safety, Reason) | 2 | Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos | grep "sensitivity analys": 0. La idea de fondo si esta (L1035). Dato anadido: la herramienta "analisis de sensibilidad". | L1035: "What proved to be an error in the TMI event turned out to be a vital step at Ginna." | Revisar cómo funcionaría cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro |
 | 21 | A21 | `gestion_falsas_alarmas` (health_safety, Reason) | 3 | Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada | grep "cross-check/double-check/two-person": solo L4972, ajeno (un copiloto que no vigilo al capitan). Dato anadido: el mecanismo "verificacion cruzada" contra la desactivacion "unilateral". | L1085: "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies." | Establecer protocolos para que una alarma crítica no se desactive solo porque se desconfía de ella |
 | 22 | A22 | `quality_control_vs_quality_assurance` (health_safety, Reason) | 4 | Implementar auditorías aleatorias sobre el trabajo firmado como conforme | grep "random (audit/check/sampl)/spot check": 0. Lo que el libro echa en falta es la inspeccion separada y el personal de QA (L971). Dato anadido: el metodo "auditorias aleatorias". | L971: "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service." | Comprobar mediante una inspección separada el trabajo firmado como conforme, en lugar de fiarse solo de la firma |
+| 23 | A23 | `accidentes_individuales_vs_organizacionales` (health_safety, Reason) | 1 | Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación. | la condicion "antes de iniciar cualquier investigacion" | L323: "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event." | Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales, sabiendo que la línea no siempre es fácil de trazar y que los accidentes individuales suelen tener también orígenes organizacionales. |
+| 24 | A24 | `documentacion_mantenimiento_linea_base` (health_safety, Reason) | 2 | Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad. | la norma universal "toda tarea, sin importar su origen" | L417: "The line and base environments thus require different kinds of planning and supportive work packs." | Cuando una tarea pase de mantenimiento de línea a base, asegurar que llegue con la documentación de apoyo y las advertencias de seguridad que base necesita, porque cada entorno requiere un paquete de trabajo distinto. |
+| 25 | A25 | `fijar_causa_ultimo_accidente_riesgo_siguiente` (health_safety, Reason) | 3 | Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal | Tercer lector (13.7). L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable." El fin "verificar su aplicabilidad universal" choca con eso y las "revisiones periodicas" son un mecanismo y una frecuencia que el libro no pone. Ficha A25. | L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable." | No imponer una regla post-accidente como si valiera en todos los casos: la misma acción fue un error en TMI y un paso vital en Ginna, y ningún conjunto de procedimientos será nunca universalmente aplicable. |
+| 26 | A26 | `ironias_de_la_automatizacion` (health_safety, Reason) | 3 | Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros. | Tercer lector (13.7). L856: el remedio del libro es la formacion ("may need the greatest investment in operator training"); L1033: "introducing new engineered defensive features adds complexity to the system." Dato anadido: la herramienta "sistemas de monitoreo que compensen". Ficha A26. | L848: "even the best motivated people have trouble maintaining vigilance for long periods of time" | Tener presente que incluso las personas más motivadas mantienen mal la vigilancia durante mucho tiempo, y que añadir dispositivos defensivos nuevos añade complejidad y componentes que también pueden fallar. |
+| 27 | A27 | `self_regulation_deregulation_tradeoffs` (health_safety, Reason) | 1 | Evaluar si la organización tiene la madurez para autorregularse | Tercer lector (13.7). L4429: la autorregulacion "has to represent an enormous" ventaja y se exige a todas las organizaciones; grep "matur": sin resultado pertinente. Dato anadido: el criterio de "la madurez para autorregularse". Ficha A27. | L4429: "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations." | Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad |
 
 ### 11.4c PENDIENTES DE DECISION DEL FUNDADOR
 
@@ -1893,6 +1902,158 @@ PASAJE [reason] L975 a L975, cap. 3 "Dangerous Defences":
 
 > L975: At an individual level, QA practices offer the hard-pressed engineer a path of least effort: namely, to sign off on task steps--either before or after the event--without actually monitoring the quality of the work. One of the enduring findings of work psychology is that people will be tempted to take short-cuts whenever such opportunities present themselves. It is no accident, therefore, that ‘signing off without checking’ is one of the more common procedural violations to be found in aircraft maintenance.
 
+```
+FICHA: A23
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: accidentes_individuales_vs_organizacionales
+fichero_nodo: dataset/nodos/accidentes_individuales_vs_organizacionales.json
+campo: pasos_accionables
+indice_base0: 0
+indice_base1: 1
+texto_actual: Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.
+texto_corregido: Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales, sabiendo que la línea no siempre es fácil de trazar y que los accidentes individuales suelen tener también orígenes organizacionales.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L323: "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+fuente_apoyo: L323: "Individual accidents can, and usually do, have organizational origins."; L275: "runs bottom-up in causation, and top-down in investigation."
+cambio: quita la condicion "antes de iniciar cualquier investigacion" (en el libro la naturaleza del accidente sale de la investigacion); anade la advertencia del libro sobre la linea dificil de trazar
+otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L323 "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+
+PASAJE [reason] L275 a L275, cap. 1 "Hazards, Defences and Losses":
+
+> L275: The principal stages involved in the development of an organizational accident are shown in Figure 1.6. This model seeks to link the various contributing elements into a coherent sequence that runs bottom-up in causation, and top-down in investigation.
+
+PASAJE [reason] L323 a L323, cap. 1 "Hazards, Defences and Losses":
+
+> L323: Individual accidents can, and usually do, have organizational origins. Indeed, as Andy Pearce of Shell Expro has pointed out, an offshore fatality is typically the result of a chain of at least seven distinct failures. Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event.
+
+```
+FICHA: A24
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: documentacion_mantenimiento_linea_base
+fichero_nodo: dataset/nodos/documentacion_mantenimiento_linea_base.json
+campo: pasos_accionables
+indice_base0: 1
+indice_base1: 2
+texto_actual: Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad.
+texto_corregido: Cuando una tarea pase de mantenimiento de línea a base, asegurar que llegue con la documentación de apoyo y las advertencias de seguridad que base necesita, porque cada entorno requiere un paquete de trabajo distinto.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L417: "The line and base environments thus require different kinds of planning and supportive work packs."
+fuente_apoyo: L419: "Nor were there any of the customary warnings--highlighted in the maintenance manual--that the safety of the aircraft would be seriously jeopardized if the reassembly work was not completed as specified."; L417: "The job cards therefore give only a brief description of the work to be performed."
+cambio: quita la norma universal "toda tarea, sin importar su origen" (el libro dice que linea y base requieren paquetes distintos); anade el traspaso de linea a base, que es donde el libro situa la falta de tarjetas y advertencias
+otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L417 "The line and base environments thus require different kinds of planning and supportive work packs."
+
+PASAJE [reason] L417 a L419, cap. 2 "Defeating the Defences":
+
+> L417: The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description of the work to be performed. In sharp contrast, planning for base maintenance work starts several weeks before the event and is delivered as a massive work pack that includes considerable supporting and explanatory documentation. Life on the line is full of surprises, while that in base maintenance is far more regular and predictable.
+>
+> L419: The 750-hour borescope inspection was designated as a line maintenance task, and the paperwork included none of the step-by-step task cards and maintenance manual sections normally supplied with a base maintenance work pack. It only contained references to the detailed documentation that was available elsewhere. The line engineer was familiar with the job and did not feel it necessary to draw this additional information, so the work pack that he handed over to the base controller was relatively sparse in comparison with the usual base maintenance documentation. In particular, the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack. Nor were there any of the customary warnings--highlighted in the maintenance manual--that the safety of the aircraft would be seriously jeopardized if the reassembly work was not completed as specified.
+
+```
+FICHA: A25
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: fijar_causa_ultimo_accidente_riesgo_siguiente
+fichero_nodo: dataset/nodos/fijar_causa_ultimo_accidente_riesgo_siguiente.json
+campo: pasos_accionables
+indice_base0: 2
+indice_base1: 3
+texto_actual: Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal
+texto_corregido: No imponer una regla post-accidente como si valiera en todos los casos: la misma acción fue un error en TMI y un paso vital en Ginna, y ningún conjunto de procedimientos será nunca universalmente aplicable.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable."
+fuente_apoyo: L1035: "What proved to be an error in the TMI event turned out to be a vital step at Ginna."; L1035: "cannot universally proscribe particular types of human response"
+cambio: quita las "revisiones periodicas" y el fin de "verificar su aplicabilidad universal" (el libro dice que ninguna regla es universal); anade la leccion de TMI y Ginna
+otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L1575 "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable."
+
+PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
+
+> L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
+
+PASAJE [reason] L1575 a L1575, cap. 4 "The Human Contribution":
+
+> L1575: This does not mean, of course, that organizations should give up the attempt to formulate safety rules. Not only are such rules important for guiding safe behaviour in relation to identified and understood hazards, they also constitute an important record of the organization’s learning about its operational dangers. Since people change faster than jobs, such a record is crucial for the dissemination of safety knowledge throughout the system. But the requisite variety problem means that this collection of safe operating procedures will never be wholly comprehensive nor universally applicable.
+
+```
+FICHA: A26
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: ironias_de_la_automatizacion
+fichero_nodo: dataset/nodos/ironias_de_la_automatizacion.json
+campo: pasos_accionables
+indice_base0: 2
+indice_base1: 3
+texto_actual: Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros.
+texto_corregido: Tener presente que incluso las personas más motivadas mantienen mal la vigilancia durante mucho tiempo, y que añadir dispositivos defensivos nuevos añade complejidad y componentes que también pueden fallar.
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L848: "even the best motivated people have trouble maintaining vigilance for long periods of time"
+fuente_apoyo: L1033: "introducing new engineered defensive features adds complexity to the system. In particular, it adds components which themselves can fail."; L856: "it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training"
+cambio: quita la herramienta "sistemas de monitoreo que compensen" (el remedio del libro es la formacion, L856, y avisa de que los dispositivos nuevos anaden fallos, L1033); conserva el diagnostico del libro
+otros_campos_del_nodo: ninguno (se busco el dato en titulo, resumen, entregable y los demas pasos)
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L848 "even the best motivated people have trouble maintaining vigilance for long periods of time"
+
+PASAJE [reason] L848 a L848, cap. 3 "Dangerous Defences":
+
+> L848: In highly automated systems, the task of the human operator is to monitor the system to ensure that the ‘automatics’ are working as they should. But it is well known that even the best motivated people have trouble maintaining vigilance for long periods of time. They are thus ill-suited to watch out for these very rare abnormal conditions.
+
+PASAJE [reason] L856 a L856, cap. 3 "Dangerous Defences":
+
+> L856: And, as Bainbridge pointed out, ‘Perhaps the final irony is that it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training’.
+
+PASAJE [reason] L1033 a L1033, cap. 3 "Dangerous Defences":
+
+> L1033: These examples illustrate some of the potential dangers that can ensue from what, on the face it, appear to be perfectly sensible attempts to ‘fix’ the causes of previous accidents. There are two main problems. As the case of the takeoff monitor showed, introducing new engineered defensive features adds complexity to the system. In particular, it adds components which themselves can fail. Moreover, in this case as in the more modern varieties of automation, attempts to distance pilots from the direct control loop can create unforeseen types of human error.
+
+```
+FICHA: A27
+tipo: ANADIDO
+estado: LISTA PARA APLICAR
+node_id: self_regulation_deregulation_tradeoffs
+fichero_nodo: dataset/nodos/self_regulation_deregulation_tradeoffs.json
+campo: pasos_accionables
+indice_base0: 0
+indice_base1: 1
+texto_actual: Evaluar si la organización tiene la madurez para autorregularse
+texto_corregido: Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad
+fuente_fichero: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+fuente_principal: L4429: "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+fuente_apoyo: L4429: "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous"; L4433: "that can vary widely from organization to organization (according to their means)"
+cambio: quita el criterio nuevo "la madurez para autorregularse" (el libro trata la autorregulacion como un mandato y una gran ventaja, no como algo a lo que se accede por madurez); anade la responsabilidad que el libro pide asumir
+otro_campo: entregable_esperado | texto_actual_segmento: Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización | texto_corregido_segmento: Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+FRASE CLAVE: [reason] L4429 "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+
+PASAJE [reason] L4429 a L4429, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4429: Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’ in the struggle to limit the occurrence of organizational accidents. So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations. Most technological operations, even very complex ones, are relatively simple in comparison to the task of maintaining safe working conditions. As noted in Chapter 4, there are not enough trees in the rain forests to carry all the procedures necessary to guarantee safe operations. Safety, as we have seen, is a ‘dynamic non-event’ that depends crucially upon a clear understanding of the interactions between many different underlying processes. The long-term safety benefits of being forced to grapple with these enormously difficult--and still unresolved--sociotechnical issues are undoubtedly greater than any number of purely technical ‘fixes’. The process is more valuable than the product. And, as the Cullen Report notes, many operators have found the exercise of producing a Safety Case valuable: ‘Often it would be the first time that a report had been made of the major hazard aspects of the organization. Many stated that the exercise had led them to make changes in their approach and improvements to systems and procedures.35
+
+PASAJE [reason] L4433 a L4433, cap. 8 "The Regulator’s Unhappy Lot":
+
+> L4433: Traditionally, regulators worked to ensure compliance with safety rules laid down by some legislative authority. No matter how fragmented, obsolescent or externalized these rules were, they nonetheless represented an agreed standard--at least at that time--against which to determine whether or not a particular work practice or hazardous installation was in violation of this or that regulation. In the new self-determining climate, regulators are still required to look out for deviations, but of quite a different kind. Now they have to inspect for departures from a Safety Case that is expressed in far more general terms, that can vary widely from organization to organization (according to their means) and for which they must take some direct responsibility--since it would not exist as a frame of reference had the regulatory authority not approved it in the first place. As we have seen, spotting, monitoring and sanctioning violations were difficult enough in the past, but now the responsibility placed upon the regulator is very great indeed. Not only do they have to police compliance with a variety of Safety Cases, they also need a very clear idea of what constitutes an adequate Safety Case, and this is by no means an easy task in our present limited state of knowledge.
+
 ### 11.9 Anexo: tabla completa paso a paso de la fase 2
 
 Una fila por paso leido en la fase 2 (838 filas). Tarea 2 = censo; 3 = sorteo; 3b = relectura de couriers. `integrador` = este lector; R1, R2, A1, A2, B1, B2 y B3 = los lectores en paralelo. En las citas, la raya del original va como `--`.
@@ -2807,11 +2968,13 @@ La regla, literal:
 - **OPERATIVO** es el paso que anade una accion en la direccion del libro sin dato nuevo: documentar, dejar por escrito, revisar, probar, comunicar o formar. Una frecuencia vaga ("periodicamente") no cuenta como dato. Tampoco cuentan los ejemplos de contenido, ni los ejemplos que da el propio libro.
 - **Busqueda:** cada ANADIDO se busco en todo el libro, no solo en el capitulo.
 
-**Resultado final**, tras la reconciliacion (seccion 13.5) y las fuentes nuevas (seccion 13.6):
-- **151 OPERATIVOS**, que se quedan;
-- **22 ANADIDOS**, que se corrigen (fichas A1 a A22);
+**Resultado de la particion**, tras la reconciliacion (seccion 13.5) y las fuentes nuevas (seccion 13.6), sobre los 191:
+- **148 OPERATIVOS**, que se quedan;
+- **25 ANADIDOS**, que se corrigen (fichas A1 a A22, y A25 a A27 tras el tercer lector);
 - **1 CONTRARIO**, que sube de INFERIDO (ficha C5);
 - **17 FIEL**, porque el libro, o la segunda fuente del nodo, si lo dice.
+
+**Resultado final**, con el tercer lector ciego (seccion 13.7), que anade 5 pasos antes FIEL (I192 a I196) y lleva 3 OPERATIVOS a ANADIDO: **196 INFERIDOS o antes INFERIDOS: 151 OPERATIVOS, 27 ANADIDOS (A1 a A27), 1 CONTRARIO y 17 FIEL.**
 
 ### 13.2 Tabla de la particion (191 filas)
 
@@ -2960,14 +3123,14 @@ Columnas: `id` (el del fichero entregado al clasificador ciego), nodo, paso, cla
 | I139 | `fallo_regulatorio_por_recursos_insuficientes` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4523: "if regulators are to be other than convenient scapegoats, they will have to be provided with the legislation, the resources and the tools to do their jobs effectively." |
 | I140 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1035: "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems" |
 | I141 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 2 | OPERATIVO | ANADIDO | **ANADIDO** | grep "sensitivity analys": 0. La idea de fondo si esta (L1035). Dato anadido: la herramienta "analisis de sensibilidad". |
-| I142 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1035: "cannot universally proscribe particular types of human response" |
+| I142 | `fijar_causa_ultimo_accidente_riesgo_siguiente` | 3 | OPERATIVO | OPERATIVO | **ANADIDO** | Tercer lector (13.7). L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable." El fin "verificar su aplicabilidad universal" choca con eso y las "revisiones periodicas" son un mecanismo y una frecuencia que el libro no pone. Ficha A25. |
 | I143 | `gestion_falsas_alarmas` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1141: "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon" |
 | I144 | `gestion_falsas_alarmas` | 3 | OPERATIVO | ANADIDO | **ANADIDO** | grep "cross-check/double-check/two-person": solo L4972, ajeno (un copiloto que no vigilo al capitan). Dato anadido: el mecanismo "verificacion cruzada" contra la desactivacion "unilateral". |
 | I145 | `gestion_falsas_alarmas` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L1095: "they profoundly mistrusted the stick-shaker warning system" |
 | I146 | `inspecciones_superficiales_y_muestreo_incompleto` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures." |
 | I147 | `inspecciones_superficiales_y_muestreo_incompleto` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "He failed to inspect Occidental’s Operating Procedures manual in connection with the permit-to-work system because he felt he did not have the time to carry out a full audit, requiring two to three days. In the event, he was only able to devote 10 hours to his inspection." |
 | I148 | `inspecciones_superficiales_y_muestreo_incompleto` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4027: "nor was he experienced in the use of such procedures" |
-| I149 | `ironias_de_la_automatizacion` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L848: "even the best motivated people have trouble maintaining vigilance for long periods of time" |
+| I149 | `ironias_de_la_automatizacion` | 3 | OPERATIVO | OPERATIVO | **ANADIDO** | Tercer lector (13.7). L856: el remedio del libro es la formacion ("may need the greatest investment in operator training"); L1033: "introducing new engineered defensive features adds complexity to the system." Dato anadido: la herramienta "sistemas de monitoreo que compensen". Ficha A26. |
 | I150 | `legislacion_especifica_vs_accidente_organizacional` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4223: "We will look briefly at some of these success stories in order to redress the balance." |
 | I151 | `limite_busqueda_causas_pendulo` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L263: "Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons" |
 | I152 | `motores_de_seguridad_3cs` | 5 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L2577: "These driving forces are: commitment, competence and cognisance--'the three Cs'." |
@@ -2987,7 +3150,7 @@ Columnas: `id` (el del fichero entregado al clasificador ciego), nodo, paso, cla
 | I166 | `redes_de_seguridad_regulatoria` | 3 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4060: "Deregulation had resulted in a greatly increased workload. At the same time, spending cuts imposed by the Canadian government meant that the number of people available and qualified to carry out these extended responsibilities was very much reduced." |
 | I167 | `redes_de_seguridad_regulatoria` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L821: "the provision of redundant and diverse defences has greatly reduced the numbers of adverse events. They have, however, radically changed both the nature of the accidents" |
 | I168 | `safety_culture_engineering` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4730: "Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure." |
-| I169 | `self_regulation_deregulation_tradeoffs` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4429: "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’" |
+| I169 | `self_regulation_deregulation_tradeoffs` | 1 | OPERATIVO | OPERATIVO | **ANADIDO** | Tercer lector (13.7). L4429: la autorregulacion "has to represent an enormous" ventaja y se exige a todas las organizaciones; grep "matur": sin resultado pertinente. Dato anadido: el criterio de "la madurez para autorregularse". Ficha A27. |
 | I170 | `self_regulation_deregulation_tradeoffs` | 4 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L4416: "the upsurge within Britain of an ‘ideology of deregulation’" |
 | I171 | `senales_alerta_no_atendidas` | 1 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L520: "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm" |
 | I172 | `senales_alerta_no_atendidas` | 2 | OPERATIVO | OPERATIVO | OPERATIVO | direccion: L520 (mismo pasaje). No hay umbrales ni combinaciones que disparen revisiones. |
@@ -3013,13 +3176,14 @@ Columnas: `id` (el del fichero entregado al clasificador ciego), nodo, paso, cla
 
 ### 13.3 Tasas definitivas de los cuatro veredictos, por libro, por mundo y globales (Wilson 95, por paso y por nodo)
 
-Python 3.12.8. Script:
+Python 3.12.8. Script (incluye los cambios del tercer lector ciego, seccion 13.7):
 
 ```python
 # Tasas DEFINITIVAS de los cuatro veredictos (FIEL, INFERIDO-OPERATIVO, INFERIDO-ANADIDO, CONTRARIO) con Wilson 95,
 # por paso y por nodo; global, por mundo y por libro, e INFERIDO total (OPERATIVO mas ANADIDO) por libro.
 # Entradas: veredictos de la fase 1 (notas_0*.tsv; folleto_franquicia 3 adjudicado FIEL), de la fase 2 (f2_*.tsv)
-# y la particion FINAL reconciliada de los INFERIDOS (particion_final.tsv, ids en _ids_inferidos.json).
+# y la particion FINAL reconciliada de los INFERIDOS (particion_final.tsv, ids en _ids_inferidos.json),
+# mas los cinco pasos FIEL que el tercer lector ciego llevo a INFERIDO (tercer_nuevos.tsv, seccion 13.7).
 import csv, glob, json, math, re, sys
 from collections import defaultdict
 S = sys.argv[1]
@@ -3046,6 +3210,9 @@ CAT = {'OPERATIVO': 'INF-OPERATIVO', 'ANADIDO': 'INF-ANADIDO', 'CONTRARIO': 'CON
 for k, v in V.items():
     if v[0] == 'INFERIDO':
         v[0] = CAT[clase[ids['%s|%d' % k]]]
+for r in list(csv.reader(open(S + '/tercer_nuevos.tsv', encoding='utf-8'), delimiter='	'))[1:]:
+    assert V[(r[1], int(r[3]))][0] == 'FIEL'
+    V[(r[1], int(r[3]))][0] = CAT[r[6]]
 ORDEN = ['FIEL', 'INF-OPERATIVO', 'INF-ANADIDO', 'CONTRARIO', 'INF-PENDIENTE']
 def wilson(k, n):
     p = k / n; d = 1 + Z * Z / n
@@ -3118,7 +3285,7 @@ Edwards et al., Managing Project Risks | nodos 5 | pasos 21 | FIEL 12/21 57.1% [
 Franchise Your Business - Mark Siebert | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 0/3 0.0% [0.0, 56.1]
 Hubbard, The Failure of Risk Management | nodos 5 | pasos 20 | FIEL 13/20 65.0% [43.3, 81.9] | INF-OPERATIVO 5/20 25.0% [11.2, 46.9] | INF-ANADIDO 0/20 0.0% [0.0, 16.1] | CONTRARIO 2/20 10.0% [2.8, 30.1] | INFERIDO total 5/20 25.0% [11.2, 46.9] | nodos con INF-ANADIDO 0/5 0.0% [0.0, 43.4] | nodos con CONTRARIO 2/5 40.0% [11.8, 76.9] | nodos con algun INFERIDO 3/5 60.0% [23.1, 88.2]
 Juran's Quality Handbook_ The C - Joseph A. Defeo | nodos 6 | pasos 29 | FIEL 24/29 82.8% [65.5, 92.4] | INF-OPERATIVO 4/29 13.8% [5.5, 30.6] | INF-ANADIDO 0/29 0.0% [0.0, 11.7] | CONTRARIO 1/29 3.4% [0.6, 17.2] | INFERIDO total 4/29 13.8% [5.5, 30.6] | nodos con INF-ANADIDO 0/6 0.0% [0.0, 39.0] | nodos con CONTRARIO 1/6 16.7% [3.0, 56.4] | nodos con algun INFERIDO 2/6 33.3% [9.7, 70.0]
-Managing the Risks of Organizat - Reason, J. T_ | nodos 90 | pasos 403 | FIEL 334/403 82.9% [78.9, 86.2] | INF-OPERATIVO 58/403 14.4% [11.3, 18.2] | INF-ANADIDO 10/403 2.5% [1.4, 4.5] | CONTRARIO 1/403 0.2% [0.0, 1.4] | INFERIDO total 68/403 16.9% [13.5, 20.8] | nodos con INF-ANADIDO 10/90 11.1% [6.1, 19.3] | nodos con CONTRARIO 1/90 1.1% [0.2, 6.0] | nodos con algun INFERIDO 37/90 41.1% [31.5, 51.4]
+Managing the Risks of Organizat - Reason, J. T_ | nodos 90 | pasos 403 | FIEL 329/403 81.6% [77.6, 85.1] | INF-OPERATIVO 58/403 14.4% [11.3, 18.2] | INF-ANADIDO 15/403 3.7% [2.3, 6.0] | CONTRARIO 1/403 0.2% [0.0, 1.4] | INFERIDO total 73/403 18.1% [14.7, 22.2] | nodos con INF-ANADIDO 14/90 15.6% [9.5, 24.4] | nodos con CONTRARIO 1/90 1.1% [0.2, 6.0] | nodos con algun INFERIDO 41/90 45.6% [35.7, 55.8]
 NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | nodos 1 | pasos 5 | FIEL 5/5 100.0% [56.6, 100.0] | INF-OPERATIVO 0/5 0.0% [0.0, 43.4] | INF-ANADIDO 0/5 0.0% [0.0, 43.4] | CONTRARIO 0/5 0.0% [0.0, 43.4] | INFERIDO total 0/5 0.0% [0.0, 43.4] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
 OSHA3885 | nodos 1 | pasos 6 | FIEL 6/6 100.0% [61.0, 100.0] | INF-OPERATIVO 0/6 0.0% [0.0, 39.0] | INF-ANADIDO 0/6 0.0% [0.0, 39.0] | CONTRARIO 0/6 0.0% [0.0, 39.0] | INFERIDO total 0/6 0.0% [0.0, 39.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
 Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | nodos 1 | pasos 4 | FIEL 4/4 100.0% [51.0, 100.0] | INF-OPERATIVO 0/4 0.0% [0.0, 49.0] | INF-ANADIDO 0/4 0.0% [0.0, 49.0] | CONTRARIO 0/4 0.0% [0.0, 49.0] | INFERIDO total 0/4 0.0% [0.0, 49.0] | nodos con INF-ANADIDO 0/1 0.0% [0.0, 79.3] | nodos con CONTRARIO 0/1 0.0% [0.0, 79.3] | nodos con algun INFERIDO 0/1 0.0% [0.0, 79.3]
@@ -3138,13 +3305,13 @@ mundo entrega | nodos 4 | pasos 19 | FIEL 17/19 89.5% [68.6, 97.1] | INF-OPERATI
 mundo environmental | nodos 7 | pasos 28 | FIEL 21/28 75.0% [56.6, 87.3] | INF-OPERATIVO 6/28 21.4% [10.2, 39.5] | INF-ANADIDO 1/28 3.6% [0.6, 17.7] | CONTRARIO 0/28 0.0% [0.0, 12.1] | INFERIDO total 7/28 25.0% [12.7, 43.4] | nodos con INF-ANADIDO 1/7 14.3% [2.6, 51.3] | nodos con CONTRARIO 0/7 0.0% [0.0, 35.4] | nodos con algun INFERIDO 3/7 42.9% [15.8, 75.0]
 mundo exportacion | nodos 2 | pasos 12 | FIEL 11/12 91.7% [64.6, 98.5] | INF-OPERATIVO 1/12 8.3% [1.5, 35.4] | INF-ANADIDO 0/12 0.0% [0.0, 24.2] | CONTRARIO 0/12 0.0% [0.0, 24.2] | INFERIDO total 1/12 8.3% [1.5, 35.4] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 1/2 50.0% [9.5, 90.5]
 mundo franquicias | nodos 3 | pasos 14 | FIEL 14/14 100.0% [78.5, 100.0] | INF-OPERATIVO 0/14 0.0% [0.0, 21.5] | INF-ANADIDO 0/14 0.0% [0.0, 21.5] | CONTRARIO 0/14 0.0% [0.0, 21.5] | INFERIDO total 0/14 0.0% [0.0, 21.5] | nodos con INF-ANADIDO 0/3 0.0% [0.0, 56.1] | nodos con CONTRARIO 0/3 0.0% [0.0, 56.1] | nodos con algun INFERIDO 0/3 0.0% [0.0, 56.1]
-mundo health_safety | nodos 91 | pasos 409 | FIEL 340/409 83.1% [79.2, 86.4] | INF-OPERATIVO 58/409 14.2% [11.1, 17.9] | INF-ANADIDO 10/409 2.4% [1.3, 4.4] | CONTRARIO 1/409 0.2% [0.0, 1.4] | INFERIDO total 68/409 16.6% [13.3, 20.5] | nodos con INF-ANADIDO 10/91 11.0% [6.1, 19.1] | nodos con CONTRARIO 1/91 1.1% [0.2, 6.0] | nodos con algun INFERIDO 37/91 40.7% [31.1, 50.9]
+mundo health_safety | nodos 91 | pasos 409 | FIEL 335/409 81.9% [77.9, 85.3] | INF-OPERATIVO 58/409 14.2% [11.1, 17.9] | INF-ANADIDO 15/409 3.7% [2.2, 6.0] | CONTRARIO 1/409 0.2% [0.0, 1.4] | INFERIDO total 73/409 17.8% [14.4, 21.9] | nodos con INF-ANADIDO 14/91 15.4% [9.4, 24.2] | nodos con CONTRARIO 1/91 1.1% [0.2, 6.0] | nodos con algun INFERIDO 41/91 45.1% [35.2, 55.3]
 mundo quality | nodos 8 | pasos 42 | FIEL 37/42 88.1% [75.0, 94.8] | INF-OPERATIVO 4/42 9.5% [3.8, 22.1] | INF-ANADIDO 0/42 0.0% [0.0, 8.4] | CONTRARIO 1/42 2.4% [0.4, 12.3] | INFERIDO total 4/42 9.5% [3.8, 22.1] | nodos con INF-ANADIDO 0/8 0.0% [0.0, 32.4] | nodos con CONTRARIO 1/8 12.5% [2.2, 47.1] | nodos con algun INFERIDO 2/8 25.0% [7.1, 59.1]
 mundo risk_management | nodos 10 | pasos 41 | FIEL 25/41 61.0% [45.7, 74.3] | INF-OPERATIVO 11/41 26.8% [15.7, 41.9] | INF-ANADIDO 2/41 4.9% [1.3, 16.1] | CONTRARIO 3/41 7.3% [2.5, 19.4] | INFERIDO total 13/41 31.7% [19.6, 47.0] | nodos con INF-ANADIDO 2/10 20.0% [5.7, 51.0] | nodos con CONTRARIO 3/10 30.0% [10.8, 60.3] | nodos con algun INFERIDO 8/10 80.0% [49.0, 94.3]
 mundo seguridad_digital | nodos 2 | pasos 10 | FIEL 10/10 100.0% [72.2, 100.0] | INF-OPERATIVO 0/10 0.0% [0.0, 27.8] | INF-ANADIDO 0/10 0.0% [0.0, 27.8] | CONTRARIO 0/10 0.0% [0.0, 27.8] | INFERIDO total 0/10 0.0% [0.0, 27.8] | nodos con INF-ANADIDO 0/2 0.0% [0.0, 65.8] | nodos con CONTRARIO 0/2 0.0% [0.0, 65.8] | nodos con algun INFERIDO 0/2 0.0% [0.0, 65.8]
 == D. TODO LO LEIDO (972 pasos; NO es estimador del catalogo)
-todo lo leido | nodos 211 | pasos 972 | FIEL 794/972 81.7% [79.1, 84.0] | INF-OPERATIVO 151/972 15.5% [13.4, 17.9] | INF-ANADIDO 22/972 2.3% [1.5, 3.4] | CONTRARIO 5/972 0.5% [0.2, 1.2] | INFERIDO total 173/972 17.8% [15.5, 20.3] | nodos con INF-ANADIDO 21/211 10.0% [6.6, 14.7] | nodos con CONTRARIO 5/211 2.4% [1.0, 5.4] | nodos con algun INFERIDO 98/211 46.4% [39.8, 53.2]
-recuento: {'INF-OPERATIVO': 151, 'FIEL': 794, 'INF-ANADIDO': 22, 'CONTRARIO': 5}
+todo lo leido | nodos 211 | pasos 972 | FIEL 789/972 81.2% [78.6, 83.5] | INF-OPERATIVO 151/972 15.5% [13.4, 17.9] | INF-ANADIDO 27/972 2.8% [1.9, 4.0] | CONTRARIO 5/972 0.5% [0.2, 1.2] | INFERIDO total 178/972 18.3% [16.0, 20.9] | nodos con INF-ANADIDO 25/211 11.8% [8.2, 16.9] | nodos con CONTRARIO 5/211 2.4% [1.0, 5.4] | nodos con algun INFERIDO 102/211 48.3% [41.7, 55.1]
+recuento: {'INF-OPERATIVO': 151, 'FIEL': 789, 'INF-ANADIDO': 27, 'CONTRARIO': 5}
 control wilson(2,10) (0.0567, 0.5098)
 ```
 
@@ -3267,6 +3434,54 @@ Cada desacuerdo se resolvio releyendo el libro, no las razones de ninguno de los
 - **Horowitz, *The Hard Thing About Hard Things*:** `C:\Users\AlexDesk\Documents\I have an idea\books\General\liderazgo_y_crisis\The Hard Thing About Hard Thing - Ben Horowitz.txt`. Es la segunda fuente de `decision_de_vender_startup` y cierra sus once INFERIDOS (seccion 13.5). La seccion clave es "SHOULD YOU SELL YOUR COMPANY?", L3253 a L3318, mas el relato de la venta de Opsware, L665 a L685.
 - **Dekker, *The Field Guide to Understanding Human Error*:** `C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\The Field Guide to Understandin - Dekker, Sidney;.txt`. Es la fuente fusionada en `normalizacion_de_la_desviacion`. Cierra tres INFERIDOS del nodo (I154, I156, I158). Los otros tres (I153, I155, I157) siguen como estaban tras buscar en Dekker: I157 sigue siendo ANADIDO: en Dekker "mentors" aparece una sola vez (L4424), como uno de los papeles de las victimas de un accidente, y no como revisor externo.
 
+### 13.7 Tercer lector ciego sobre 18 pasos de Reason (anadido aprobado por el fundador)
+
+**De donde salen los 18 pasos.** Un piloto automatico, en otra rama (`fidelidad-total`), marco como CONTRARIO 18 pasos de Reason. Un tercer lector ciego los dirimio con la vara de cuatro veredictos, sin ver este informe. Su resultado: 0 CONTRARIO, 4 FIEL, 8 INFERIDO-OPERATIVO y 6 INFERIDO-ANADIDO.
+
+Cada diferencia con este informe se resolvio releyendo el libro, no las razones de ningun lector. Las citas estan en la tabla y en las fichas, y un script las comprobo.
+
+| # | nodo y paso | este informe (antes) | tercer lector | clase final | resolucion, con la cita del libro |
+|---:|---|---|---|---|---|
+| 1 | `accidentes_individuales_vs_organizacionales` p1 | FIEL | ANADIDO | **ANADIDO** (A23, I192) | La condicion "antes de iniciar cualquier investigacion" no esta en el libro y choca con el: L323 "Although it is not always easy to draw a hard and fast line between individual and organizational accidents", y el modelo "runs bottom-up in causation, and top-down in investigation" (L275). No es CONTRARIO: el libro no prohibe clasificar |
+| 2 | `documentacion_mantenimiento_linea_base` p2 | FIEL | ANADIDO | **ANADIDO** (A24, I193) | "Toda tarea, sin importar su origen" es una norma universal que el libro no pone: L417 "The line and base environments thus require different kinds of planning and supportive work packs." La falta de tarjetas y advertencias (L419) esta en el traspaso de linea a base. No es CONTRARIO: el libro no dice que una tarea de linea no deba llevar advertencias |
+| 3 | `efectos_recompensa_castigo` p3 | FIEL | OPERATIVO | **OPERATIVO** (I194) | L5077 respalda sancionar, de forma visible, a los pocos que cometen actos flagrantes: "Severe sanctions for the few can protect the innocence of the many." El "solo" deja fuera el sabotaje y el abuso de sustancias, que el libro tambien sanciona (L5063); es concrecion en la misma direccion, sin dato nuevo |
+| 4 | `falla_sistemica_vs_error_individual` p4 | FIEL | OPERATIVO | **OPERATIVO** (I195) | L277 "the causal story starts with the organizational factors". "Documentar la cadena completa" concreta en la misma direccion; por el criterio de la seccion 13.1, documentar es OPERATIVO |
+| 5 | `limite_busqueda_causas_pendulo` p5 | FIEL | OPERATIVO | **OPERATIVO** (I196) | L263: la evidencia fiable limita el analisis, pero el criterio que recomienda el libro es lo controlable ("limiting the scope of the analysis to those things over which the people involved ... might reasonably be expected to exercise some control"). "Priorizar" la evidencia sube su peso sin dato nuevo |
+| 6 | `fijar_causa_ultimo_accidente_riesgo_siguiente` p3 | OPERATIVO | ANADIDO | **ANADIDO** (A25, I142) | El fin "verificar su aplicabilidad universal" contradice el criterio del libro, L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable". Ademas, las revisiones periodicas son un mecanismo y una frecuencia que el libro no pone. La particion lo habia dejado OPERATIVO por tratar la frecuencia vaga como no-dato; releido, el criterio cambia la direccion del libro |
+| 7 | `ironias_de_la_automatizacion` p3 | OPERATIVO | ANADIDO | **ANADIDO** (A26, I149) | "Sistemas de monitoreo que compensen" es una herramienta que el libro no da. Su remedio es la formacion (L856, "may need the greatest investment in operator training") y avisa de que los dispositivos nuevos anaden fallos (L1033, "adds components which themselves can fail") |
+| 8 | `self_regulation_deregulation_tradeoffs` p1 | OPERATIVO | ANADIDO | **ANADIDO** (A27, I169) | "La madurez para autorregularse" es un criterio nuevo (grep "matur": sin resultado pertinente). Para el libro, la autorregulacion es una exigencia legal y "an enormous 'plus'" (L4429), no algo a lo que se accede por madurez |
+| 9 | `gestion_falsas_alarmas` p3 | ANADIDO (A21) | ANADIDO | **ANADIDO** (A21), confirmado | L1085 y L1095: el libro narra que la tripulacion desconecto el aviso por desconfianza, pero no propone ningun protocolo de verificacion cruzada |
+| 10 | `arbol_decision_culpabilidad` p6 | ANADIDO (A11) | OPERATIVO | **ANADIDO** (A11), se mantiene | La lista de categorias del paso no es la del libro. En el libro la mitigacion va con el abuso de sustancias (L5053, "'substance abuse with mitigation'"), las violaciones se graduan en temerarias frente a inducidas por el sistema (L5055, L5057), y falta la categoria sin culpa, donde cae "perhaps 90 per cent or more" (L5063). "Violacion con o sin mitigacion" es una categoria que el libro no tiene |
+| 11 | `prevalencia_omisiones` p3 | ANADIDO (A14) | OPERATIVO | **ANADIDO** (A14), se mantiene | El libro elige los pasos por sus rasgos y de antemano, L2250: "identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features". Ademas, desaconseja reconstruir las omisiones pasadas de otros (L2170: "the underlying reasons may be impossible to discover"). Que el libro use datos historicos para describir que se omite (L2127) no hace de la tasa historica su criterio de seleccion; el paso 2 del mismo nodo es CONTRARIO (C1) por lo mismo |
+
+Los otros 7 pasos coinciden en clase:
+- **FIEL:** `reporte_casi_accidentes` p2, `efectos_recompensa_castigo` p2, `ida_diagrama_influencia` p3, `racional_mantenimiento_preventivo_correctivo` p2.
+- **OPERATIVO:** `self_regulation_deregulation_tradeoffs` p4, `redes_de_seguridad_regulatoria` p4, `clasificacion_riesgos_por_dominio` p4.
+
+En los 18, ni el tercer lector ni este informe encuentran un CONTRARIO: la marca del piloto automatico no se sostiene en ninguno.
+
+**Cuantos pasos cambian: 8 de los 18.**
+- Cinco que el muestreo dio FIEL pasan a INFERIDO: dos a ANADIDO (A23, A24) y tres a OPERATIVO.
+- Tres OPERATIVOS de la particion pasan a ANADIDO (A25, A26, A27).
+- Los cinco nuevos INFERIDOS reciben los ids I192 a I196 y sus fichas en la seccion 14. No entran en la particion de 191 ni en su kappa (seccion 13.4), que se calcularon antes.
+
+**Declaracion.** Frente a un lector con la vara de cuatro veredictos, el muestreo resulto algo blando con los ANADIDOS:
+- en 18 pasos de Reason, dejo en FIEL dos pasos que anaden una condicion o una norma;
+- en OPERATIVO, tres que anaden un criterio, una herramienta o un mecanismo.
+
+La direccion del sesgo es la misma que marco el clasificador ciego en la seccion 13.4. El lector y el integrador aceptaron como concrecion cosas que el libro no pone. Por eso las cifras de ANADIDO de este informe deben leerse como un minimo: en Reason pasan de 10 a 15 al releer solo 18 pasos, y los otros 385 pasos de Reason no tuvieron esta tercera lectura. En la otra direccion, el tercer lector dio OPERATIVO dos pasos que este informe mantiene ANADIDO (filas 10 y 11), con la cita que lo decide.
+
+**Efecto en las cifras:**
+- **ANADIDOS:** 22 pasan a 27; de ellos, 15 son de Reason.
+- **Sin cambios:** los CONTRARIOS (5) y los PENDIENTES DE DECISION DEL FUNDADOR (1).
+- **Todo lo leido:** 789 FIEL, 151 OPERATIVOS, 27 ANADIDOS y 5 CONTRARIOS.
+- **Reason:**
+  - INFERIDO por paso: 73/403 = 18,1% [14,7, 22,2];
+  - ANADIDO: 15/403 = 3,7% [2,3, 6,0];
+  - nodos con algun INFERIDO: 41/90.
+- **La muestra aleatoria de la fase 1 no cambia:** ninguno de los 8 pasos es de la fase 1.
+- Las tasas completas estan en la seccion 13.3, recalculadas con `tasas6.py`.
+
 ## 14. FICHAS DE TODOS LOS INFERIDOS (decision del fundador del 25 sep)
 
 La decision, literal:
@@ -3279,14 +3494,14 @@ Y la precision que la acompana, literal:
 
 ### 14.1 Que trae cada ficha
 
-**Universo.** Hay una ficha por cada uno de los 191 INFERIDOS de las dos fases, tambien los OPERATIVOS. Cada ficha lleva el `id` de `inferidos_para_partir.tsv`, el fichero que recibio el clasificador ciego. Van ordenadas por libro y, dentro de cada libro, por nodo y paso.
+**Universo.** Hay una ficha por cada uno de los 196 INFERIDOS de las dos fases, tambien los OPERATIVOS: los 191 de la particion y los 5 pasos antes FIEL que el tercer lector ciego llevo a INFERIDO (I192 a I196, seccion 13.7). Las 191 primeras llevan el `id` de `inferidos_para_partir.tsv`, el fichero que recibio el clasificador ciego. Van ordenadas por libro y, dentro de cada libro, por nodo y paso.
 
-**Clase final**, tras la reconciliacion de la seccion 13.5:
+**Clase final**, tras la reconciliacion de la seccion 13.5 y el tercer lector de la 13.7:
 
 | clase | fichas | que propone la ficha por defecto |
 |---|---:|---|
 | OPERATIVO | 151 | MANTENER (regla del 25 sep: el OPERATIVO se queda). Trae de todos modos su texto fiel, para que el fundador decida |
-| ANADIDO | 22 | APLICAR_FIEL: el texto fiel es el de su ficha de correccion (A1 a A22, seccion 11.8). A15 queda con tres opciones |
+| ANADIDO | 27 | APLICAR_FIEL: el texto fiel es el de su ficha de correccion (A1 a A27, seccion 11.8). A15 queda con tres opciones |
 | FIEL | 17 | MANTENER: el libro, o la segunda fuente del nodo, si lo dice (seccion 13.5) |
 | CONTRARIO | 1 | APLICAR_FIEL: el texto fiel es el de la ficha C5 |
 
@@ -3343,7 +3558,7 @@ Y la precision que la acompana, literal:
   
   Donde esas citas no bastaban (una cita de "mismo pasaje", una lista sin su frase de entrada), el integrador eligio el rango releyendo el libro.
 - **Capitulo.** Sale de los encabezados de capitulo del propio txt. En Horowitz se da tambien el apartado. Las guias de los couriers no tienen capitulos. La guia de exportacion no tiene el encabezado del capitulo 11 en el cuerpo del txt, asi que se toma del indice (L121) y se da el apartado.
-- **Pasajes en las fichas de correccion.** Las 27 fichas de la seccion 11.8 llevan ahora tambien sus pasajes literales y su FRASE CLAVE, con el mismo formato.
+- **Pasajes en las fichas de correccion.** Las 32 fichas de la seccion 11.8 llevan ahora tambien sus pasajes literales y su FRASE CLAVE, con el mismo formato.
 - **Aviso sobre el visor.** El fichero .md es literal. Algun visor puede dar formato a un asterisco o a un guion bajo del libro, pero el texto del fichero no cambia.
 
 ### 14.3 Comprobacion por script
@@ -3353,8 +3568,8 @@ El script compara cada pasaje con el fichero del libro, linea a linea:
 - tienen que estar todas las lineas no vacias del rango, en orden.
 
 Tambien comprueba:
-- que la FRASE CLAVE de cada ficha, las 191 de esta seccion y las 27 de la 11.8, este literal en su linea;
-- en las 191 fichas de esta seccion, que el `TEXTO_ACTUAL` sea el del nodo en `dataset/` y que cada segmento de `DATO_REPETIDO` este literal en su campo del nodo. En las 27 de la 11.8 eso ya lo comprobo `fichas.py` (seccion 11.8).
+- que la FRASE CLAVE de cada ficha, las 196 de esta seccion y las 32 de la 11.8, este literal en su linea;
+- en las 196 fichas de esta seccion, que el `TEXTO_ACTUAL` sea el del nodo en `dataset/` y que cada segmento de `DATO_REPETIDO` este literal en su campo del nodo. En las 32 de la 11.8 eso ya lo comprobo `fichas.py` (seccion 11.8).
 
 Python 3.12.8. Funciones comunes (`fi_comun.py`):
 
@@ -3523,10 +3738,10 @@ for e in err[:50]:
 Salida literal:
 
 ```
-fichas de inferidos: 191 {'ANADIDO': 22, 'CONTRARIO': 1, 'FIEL': 17, 'OPERATIVO': 151}
-pasajes comprobados: 374 | lineas de libro comparadas una a una: 570
-frases clave comprobadas: 218
-datos repetidos comprobados contra el nodo: 43
+fichas de inferidos: 196 {'ANADIDO': 27, 'CONTRARIO': 1, 'FIEL': 17, 'OPERATIVO': 151}
+pasajes comprobados: 396 | lineas de libro comparadas una a una: 596
+frases clave comprobadas: 228
+datos repetidos comprobados contra el nodo: 44
 rayas y guiones medios en el informe: 0 0
 errores: 0
 ```
@@ -3535,7 +3750,7 @@ errores: 0
 - `QUE_ANADE_O_CONCRETA` y `TEXTO_FIEL_PROPUESTO` son redaccion del integrador. El script comprueba las citas, no el juicio. En los OPERATIVOS, el texto fiel es una propuesta para que el fundador compare; la regla del 25 sep los deja como estan.
 - Algunos pasos de Assembling Tomorrow se apoyan en parte en los relatos de ficcion del libro (I025, I026, I031, I032). Sus pasajes incluyen esos relatos. Cuando el unico apoyo es la ficcion (I031, I032), `QUE_ANADE_O_CONCRETA` lo dice.
 
-### 14.4 Las 191 fichas
+### 14.4 Las 196 fichas
 
 ### A Basic Guide to Exporting (1 fichas)
 
@@ -6747,7 +6962,41 @@ PASAJE [juran] L13574 a L13584, cap. 14 "Lean Techniques and the Shingo Prize":
 >
 > L13584: Although originally developed for changing capital equipment configurations for different product runs, the same principles have been applied to improving lead times for service and knowledge work--for example, staging the data for insurance underwriters so that they can began a new case immediately rather than having to retrieve the needed data, minimizing the time for a customer service representative to open a new case by prepopulating key fields in the case documentation, or organizing all audit data in a standard format to facilitate switching from one study to another.
 
-### Reason (71 fichas)
+### Reason (76 fichas)
+
+#### I192 `accidentes_individuales_vs_organizacionales`, paso 1
+
+```
+ID: I192
+NODE_ID: accidentes_individuales_vs_organizacionales
+FICHERO_NODO: dataset\nodos\accidentes_individuales_vs_organizacionales.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 0
+INDICE_BASE1: 1
+TEXTO_ACTUAL: Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: lector de la fase 2 FIEL; tercer lector ciego INFERIDO-ANADIDO; no entro en la particion de 191 (seccion 13.7)
+RESOLUCION: Tercer lector (13.7). L323: "Although it is not always easy to draw a hard and fast line between individual and organizational accidents"; L275: "top-down in investigation". Ficha A23.
+FICHA_DE_CORRECCION: A23 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L275 a L275; [reason] L323 a L323
+FRASE_CLAVE: [reason] L323 "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+QUE_ANADE_O_CONCRETA: quita la condicion "antes de iniciar cualquier investigacion" (en el libro la naturaleza del accidente sale de la investigacion); anade la advertencia del libro sobre la linea dificil de trazar
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A23, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales, sabiendo que la línea no siempre es fácil de trazar y que los accidentes individuales suelen tener también orígenes organizacionales.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L275 a L275, cap. 1 "Hazards, Defences and Losses":
+
+> L275: The principal stages involved in the development of an organizational accident are shown in Figure 1.6. This model seeks to link the various contributing elements into a coherent sequence that runs bottom-up in causation, and top-down in investigation.
+
+PASAJE [reason] L323 a L323, cap. 1 "Hazards, Defences and Losses":
+
+> L323: Individual accidents can, and usually do, have organizational origins. Indeed, as Andy Pearce of Shell Expro has pointed out, an offshore fatality is typically the result of a chain of at least seven distinct failures. Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event.
 
 #### I104 `accidentes_organizacionales_por_mantenimiento`, paso 3
 
@@ -7697,6 +7946,71 @@ PASAJE [reason] L2299 a L2299, cap. 5 "Maintenance can Seriously Damage your Sys
 
 > L2299: The presence of reminders is not a guaranteed solution to the omission problem. But--in the spirit of kaizen19--it will certainly help to bring about a substantial reduction in their numbers. Consider, for example, what the impact of the reminder shown in Figure 5.3 might be upon the likelihood of you leaving behind the last page of the original.
 
+#### I193 `documentacion_mantenimiento_linea_base`, paso 2
+
+```
+ID: I193
+NODE_ID: documentacion_mantenimiento_linea_base
+FICHERO_NODO: dataset\nodos\documentacion_mantenimiento_linea_base.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 1
+INDICE_BASE1: 2
+TEXTO_ACTUAL: Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad.
+CLASE_FINAL: ANADIDO
+CLASIFICADORES: lector de la fase 2 FIEL; tercer lector ciego INFERIDO-ANADIDO; no entro en la particion de 191 (seccion 13.7)
+RESOLUCION: Tercer lector (13.7). L417: "The line and base environments thus require different kinds of planning and supportive work packs." Ficha A24.
+FICHA_DE_CORRECCION: A24 (seccion 11.8)
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L417 a L419
+FRASE_CLAVE: [reason] L417 "The line and base environments thus require different kinds of planning and supportive work packs."
+QUE_ANADE_O_CONCRETA: quita la norma universal "toda tarea, sin importar su origen" (el libro dice que linea y base requieren paquetes distintos); anade el traspaso de linea a base, que es donde el libro situa la falta de tarjetas y advertencias
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A24, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Cuando una tarea pase de mantenimiento de línea a base, asegurar que llegue con la documentación de apoyo y las advertencias de seguridad que base necesita, porque cada entorno requiere un paquete de trabajo distinto.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L417 a L419, cap. 2 "Defeating the Defences":
+
+> L417: The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description of the work to be performed. In sharp contrast, planning for base maintenance work starts several weeks before the event and is delivered as a massive work pack that includes considerable supporting and explanatory documentation. Life on the line is full of surprises, while that in base maintenance is far more regular and predictable.
+>
+> L419: The 750-hour borescope inspection was designated as a line maintenance task, and the paperwork included none of the step-by-step task cards and maintenance manual sections normally supplied with a base maintenance work pack. It only contained references to the detailed documentation that was available elsewhere. The line engineer was familiar with the job and did not feel it necessary to draw this additional information, so the work pack that he handed over to the base controller was relatively sparse in comparison with the usual base maintenance documentation. In particular, the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack. Nor were there any of the customary warnings--highlighted in the maintenance manual--that the safety of the aircraft would be seriously jeopardized if the reassembly work was not completed as specified.
+
+#### I194 `efectos_recompensa_castigo`, paso 3
+
+```
+ID: I194
+NODE_ID: efectos_recompensa_castigo
+FICHERO_NODO: dataset\nodos\efectos_recompensa_castigo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 2
+INDICE_BASE1: 3
+TEXTO_ACTUAL: Aplicar sanciones consistentes y visibles solo a casos de negligencia grave o reincidencia comprobada
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: lector de la fase 2 FIEL; tercer lector ciego INFERIDO-OPERATIVO; no entro en la particion de 191 (seccion 13.7)
+RESOLUCION: Tercer lector (13.7). L5077 respalda sancionar a pocos, de forma visible, por imprudencia o negligencia repetida; "consistentes" y el "solo" (que deja fuera el sabotaje y el abuso de sustancias, sancionados en L5063) son concrecion propia en la misma direccion.
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L5063 a L5063; [reason] L5077 a L5077
+FRASE_CLAVE: [reason] L5077 "Severe sanctions for the few can protect the innocence of the many."
+QUE_ANADE_O_CONCRETA: "consistentes" y el "solo" que deja fuera el sabotaje y el abuso de sustancias, que el libro tambien sanciona con severidad (L5063); sancionar a pocos, de forma visible, por imprudencia o negligencia repetida es del libro (L5077)
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Reservar las sanciones severas para los pocos que cometen actos inseguros flagrantes (sabotaje, abuso de sustancias, imprudencia o negligencia repetidas), de forma que se vea dónde está el límite de lo aceptable.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L5063 a L5063, cap. 9 "Engineering a Safety Culture":
+
+> L5063: So where should the line be drawn on Figure 9.4 between acceptable and unacceptable behaviour? The most obvious point would be between the two substance abuse categories. Both malevolent damage and the dangerous use of alcohol or drugs are wholly unacceptable and should receive very severe sanctions, possibly administered by the courts rather than the organization. Between ‘substance abuse with mitigation’ and ‘possible negligent error’ lies a grey area in which careful judgement must be exercised. The remaining categories should be thought of as blameless--unless they involve aggravating factors not considered here. Experience suggests that the majority of unsafe acts--perhaps 90 per cent or more--fall into this blameless category.
+
+PASAJE [reason] L5077 a L5077, cap. 9 "Engineering a Safety Culture":
+
+> L5077: But there are other factors that argue strongly in favour of punishing the few who commit egregious unsafe acts. In most organizations the people in the front line know very well who the ‘cowboys’ and the habitual rule-benders are. Seeing them get away with it on a daily basis does little for morale or for the credibility of the disciplinary system. Watching them getting their ‘come-uppance’ is not only satisfying, it also serves to reinforce where the boundaries of acceptable behaviour lie. Moreover, outsiders are not the only potential victims. Justified dismissal protects the offender’s colleagues. Perhaps more than other possible victims, they are likely to be endangered by the person’s repeated recklessness or negligence. Their departure makes the work environment a safer place and also encourages the workforce to perceive the organizational culture as just. Justice works two ways. Severe sanctions for the few can protect the innocence of the many.
+
 #### I134 `enfoques_definicion_riesgo_aceptable`, paso 2
 
 ```
@@ -7828,6 +8142,43 @@ PASAJE [reason] L2907 a L2909, cap. 7 "A Practical Guide to Error Management":
 > L2907: So why are people so ready to accept human error as an explanation rather than as something that needs explaining? The answer is deeply rooted in human nature. Psychologists call it the fundamental attribution error.3
 >
 > L2909: When we see or hear of someone performing badly, we attribute this to some enduring aspect of the individual’s personality. We say that he or she is careless, silly, stupid, incompetent, reckless or thoughtless. But if you were to ask the person in question why they are behaving in this fashion, they would almost certainly point to the local situation and say they had no choice--circumstances forced them to do it that way. The reality, of course, lies somewhere in between.
+
+#### I195 `falla_sistemica_vs_error_individual`, paso 4
+
+```
+ID: I195
+NODE_ID: falla_sistemica_vs_error_individual
+FICHERO_NODO: dataset\nodos\falla_sistemica_vs_error_individual.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 3
+INDICE_BASE1: 4
+TEXTO_ACTUAL: Documentar la cadena completa de decisiones organizacionales que condujeron al incidente
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: lector de la fase 2 FIEL; tercer lector ciego INFERIDO-OPERATIVO; no entro en la particion de 191 (seccion 13.7)
+RESOLUCION: Tercer lector (13.7). Remontar la historia causal a los factores organizacionales es del libro (L277); "documentar" y "la cadena completa" son concrecion en la misma direccion.
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L275 a L279; [reason] L5748 a L5748
+FRASE_CLAVE: [reason] L277 "the causal story starts with the organizational factors"
+QUE_ANADE_O_CONCRETA: "documentar" y "la cadena completa"; el libro remonta la historia causal a los factores organizacionales y avisa de los rendimientos decrecientes de buscar causas cada vez mas remotas
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Remontar la historia causal del incidente hasta los factores organizacionales (decisiones estratégicas y procesos como planificar, presupuestar o comunicar), hasta donde los gestores puedan ejercer algún control.
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L275 a L279, cap. 1 "Hazards, Defences and Losses":
+
+> L275: The principal stages involved in the development of an organizational accident are shown in Figure 1.6. This model seeks to link the various contributing elements into a coherent sequence that runs bottom-up in causation, and top-down in investigation.
+>
+> L277: Accepting the time-frame discussed earlier, the causal story starts with the organizational factors: strategic decisions, generic organizational processes--forecasting, budgeting, allocating resources, planning, scheduling, communicating, managing, auditing, and the like. These processes will be coloured and shaped by the corporate culture, or the unspoken attitudes and unwritten rules concerning the way an organization carries out its business (see Chapter 9 for a further discussion of organizational culture).
+>
+> L279: The consequences of these activities are then communicated throughout the organization to individual workplaces--control rooms, flight decks, air traffic control centres, maintenance facilities and so on--where they reveal themselves as factors likely to promote unsafe acts. These include undue time pressure, inadequate tools and equipment, poor human-machine interfaces, insufficient training, under-manning, poor supervisor-worker ratios, low pay, low status, macho culture, unworkable or ambiguous procedures, poor communications and the like.
+
+PASAJE [reason] L5748 a L5748, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5748: While it is clear that the present situation represents a significant advance over knee-jerk ‘human error’ attributions, some concerns need to be expressed about the theoretical and the practical utility of this ever-spreading quest for contributing factors. We seem to have reached, or even exceeded, the point of diminishing returns, particularly when it comes to risk management. We also need to find some workable middle ground that acknowledges both the psychological and the contextual influences on human performance, as well as the interactions between active failures and the latent conditions that serve, on rare occasions, to breach the system’s defences. Chapter 5, for instance, presented a strong case for giving much closer attention to maintenance activities. Models of accident causation can only be judged by the extent to which their applications enhance system safety. The economic and societal shortcomings, identified--for example--by Legasov (see Chapter 1), are beyond the reach of system managers. From their perspective, such problems are given and immutable, but our main interest must be in the changeable and the controllable.
 
 #### I138 `fallo_regulatorio_por_recursos_insuficientes`, paso 2
 
@@ -7961,15 +8312,16 @@ CAMPO: pasos_accionables
 INDICE_BASE0: 2
 INDICE_BASE1: 3
 TEXTO_ACTUAL: Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal
-CLASE_FINAL: OPERATIVO
+CLASE_FINAL: ANADIDO
 CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
-RESOLUCION: no hubo desacuerdo
+RESOLUCION: Tercer lector (13.7). L1575: "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable." El fin "verificar su aplicabilidad universal" choca con eso y las "revisiones periodicas" son un mecanismo y una frecuencia que el libro no pone. Ficha A25.
+FICHA_DE_CORRECCION: A25 (seccion 11.8)
 LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
-LINEAS: [reason] L1035 a L1035
-FRASE_CLAVE: [reason] L1035 "cannot universally proscribe particular types of human response"
+LINEAS: [reason] L1035 a L1035; [reason] L1575 a L1575
+FRASE_CLAVE: [reason] L1575 "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable."
 QUE_ANADE_O_CONCRETA: las revisiones periodicas; el libro dice que no se puede prohibir de forma universal un tipo de respuesta
-PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
-TEXTO_FIEL_PROPUESTO: No imponer una regla post-accidente como si valiera en todos los casos: la misma acción fue un error en TMI y un paso vital en Ginna
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A25, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: No imponer una regla post-accidente como si valiera en todos los casos: la misma acción fue un error en TMI y un paso vital en Ginna, y ningún conjunto de procedimientos será nunca universalmente aplicable.
 DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
 DECISION_DEL_FUNDADOR: 
 ```
@@ -7979,6 +8331,10 @@ LO QUE DICE EL LIBRO (pasaje literal):
 PASAJE [reason] L1035 a L1035, cap. 3 "Dangerous Defences":
 
 > L1035: The second problem, illustrated by the Ginna event, is that regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response. What proved to be an error in the TMI event turned out to be a vital step at Ginna. As we shall see in Chapter 4, regulations and procedures share with other feedforward control devices the problem of being insensitive to local conditions.
+
+PASAJE [reason] L1575 a L1575, cap. 4 "The Human Contribution":
+
+> L1575: This does not mean, of course, that organizations should give up the attempt to formulate safety rules. Not only are such rules important for guiding safe behaviour in relation to identified and understood hazards, they also constitute an important record of the organization’s learning about its operational dangers. Since people change faster than jobs, such a record is crucial for the dissemination of safety knowledge throughout the system. But the requisite variety problem means that this collection of safe operating procedures will never be wholly comprehensive nor universally applicable.
 
 #### I143 `gestion_falsas_alarmas`, paso 2
 
@@ -8191,15 +8547,16 @@ CAMPO: pasos_accionables
 INDICE_BASE0: 2
 INDICE_BASE1: 3
 TEXTO_ACTUAL: Diseñar sistemas de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros.
-CLASE_FINAL: OPERATIVO
+CLASE_FINAL: ANADIDO
 CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
-RESOLUCION: no hubo desacuerdo
+RESOLUCION: Tercer lector (13.7). L856: el remedio del libro es la formacion ("may need the greatest investment in operator training"); L1033: "introducing new engineered defensive features adds complexity to the system." Dato anadido: la herramienta "sistemas de monitoreo que compensen". Ficha A26.
+FICHA_DE_CORRECCION: A26 (seccion 11.8)
 LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
-LINEAS: [reason] L848 a L848
+LINEAS: [reason] L848 a L848; [reason] L856 a L856; [reason] L1033 a L1033
 FRASE_CLAVE: [reason] L848 "even the best motivated people have trouble maintaining vigilance for long periods of time"
 QUE_ANADE_O_CONCRETA: el diseno de sistemas de monitoreo compensatorios; el libro describe el limite humano de la vigilancia
-PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
-TEXTO_FIEL_PROPUESTO: Tener presente que incluso las personas más motivadas mantienen mal la vigilancia durante mucho tiempo, y por eso están mal preparadas para detectar condiciones anormales muy raras
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A26, seccion 11.8)
+TEXTO_FIEL_PROPUESTO: Tener presente que incluso las personas más motivadas mantienen mal la vigilancia durante mucho tiempo, y que añadir dispositivos defensivos nuevos añade complejidad y componentes que también pueden fallar.
 DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
 DECISION_DEL_FUNDADOR: 
 ```
@@ -8209,6 +8566,14 @@ LO QUE DICE EL LIBRO (pasaje literal):
 PASAJE [reason] L848 a L848, cap. 3 "Dangerous Defences":
 
 > L848: In highly automated systems, the task of the human operator is to monitor the system to ensure that the ‘automatics’ are working as they should. But it is well known that even the best motivated people have trouble maintaining vigilance for long periods of time. They are thus ill-suited to watch out for these very rare abnormal conditions.
+
+PASAJE [reason] L856 a L856, cap. 3 "Dangerous Defences":
+
+> L856: And, as Bainbridge pointed out, ‘Perhaps the final irony is that it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training’.
+
+PASAJE [reason] L1033 a L1033, cap. 3 "Dangerous Defences":
+
+> L1033: These examples illustrate some of the potential dangers that can ensue from what, on the face it, appear to be perfectly sensible attempts to ‘fix’ the causes of previous accidents. There are two main problems. As the case of the takeoff monitor showed, introducing new engineered defensive features adds complexity to the system. In particular, it adds components which themselves can fail. Moreover, in this case as in the more modern varieties of automation, attempts to distance pilots from the direct control loop can create unforeseen types of human error.
 
 #### I150 `legislacion_especifica_vs_accidente_organizacional`, paso 4
 
@@ -8264,6 +8629,39 @@ FRASE_CLAVE: [reason] L263 "Leaving aside legal concerns with responsibility, ac
 QUE_ANADE_O_CONCRETA: la idea de "diluir la responsabilidad"; el libro limita el analisis a lo que los gestores pueden controlar y deja aparte la responsabilidad
 PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
 TEXTO_FIEL_PROPUESTO: Centrar el análisis en lo que los gestores del sistema pueden cambiar y controlar; los fallos económicos y sociales más remotos quedan fuera de su alcance
+DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DECISION_DEL_FUNDADOR: 
+```
+
+LO QUE DICE EL LIBRO (pasaje literal):
+
+PASAJE [reason] L263 a L263, cap. 1 "Hazards, Defences and Losses":
+
+> L263: Since time and causality are seamless, they have no natural breakpoints, only artificially imposed ones. Accident analysts, just like historians, are limited by their resources and by the availability of reliable evidence. Leaving aside legal concerns with responsibility, accident investigations are carried out for two main reasons: to establish what occurred and to stop something like it happening in the future. Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control. A sad little story will help to make this point clearer.
+
+PASAJE [reason] L5748 a L5748, cap. 10 "Reconciling the Different Approaches to Safety Management":
+
+> L5748: While it is clear that the present situation represents a significant advance over knee-jerk ‘human error’ attributions, some concerns need to be expressed about the theoretical and the practical utility of this ever-spreading quest for contributing factors. We seem to have reached, or even exceeded, the point of diminishing returns, particularly when it comes to risk management. We also need to find some workable middle ground that acknowledges both the psychological and the contextual influences on human performance, as well as the interactions between active failures and the latent conditions that serve, on rare occasions, to breach the system’s defences. Chapter 5, for instance, presented a strong case for giving much closer attention to maintenance activities. Models of accident causation can only be judged by the extent to which their applications enhance system safety. The economic and societal shortcomings, identified--for example--by Legasov (see Chapter 1), are beyond the reach of system managers. From their perspective, such problems are given and immutable, but our main interest must be in the changeable and the controllable.
+
+#### I196 `limite_busqueda_causas_pendulo`, paso 5
+
+```
+ID: I196
+NODE_ID: limite_busqueda_causas_pendulo
+FICHERO_NODO: dataset\nodos\limite_busqueda_causas_pendulo.json
+CAMPO: pasos_accionables
+INDICE_BASE0: 4
+INDICE_BASE1: 5
+TEXTO_ACTUAL: Priorizar la calidad y disponibilidad de evidencia confiable al fijar los límites del análisis
+CLASE_FINAL: OPERATIVO
+CLASIFICADORES: lector de la fase 2 FIEL; tercer lector ciego INFERIDO-OPERATIVO; no entro en la particion de 191 (seccion 13.7)
+RESOLUCION: Tercer lector (13.7). En L263 la evidencia fiable es un limite de hecho y el criterio que el libro recomienda es lo controlable; "priorizar" la evidencia sube su peso sin dato nuevo ni contradiccion.
+LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
+LINEAS: [reason] L263 a L263; [reason] L5748 a L5748
+FRASE_CLAVE: [reason] L263 "Accident analysts, just like historians, are limited by their resources and by the availability of reliable evidence."
+QUE_ANADE_O_CONCRETA: "priorizar" la evidencia; en el libro la evidencia fiable es un limite de hecho, y el criterio que recomienda es lo que los gestores pueden controlar
+PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+TEXTO_FIEL_PROPUESTO: Al fijar los límites del análisis, tener en cuenta que están limitados por los recursos y por la evidencia fiable disponible, y centrarlos en lo que los gestores del sistema pueden controlar.
 DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
 DECISION_DEL_FUNDADOR: 
 ```
@@ -8870,16 +9268,17 @@ CAMPO: pasos_accionables
 INDICE_BASE0: 0
 INDICE_BASE1: 1
 TEXTO_ACTUAL: Evaluar si la organización tiene la madurez para autorregularse
-CLASE_FINAL: OPERATIVO
+CLASE_FINAL: ANADIDO
 CLASIFICADORES: integrador OPERATIVO; ciego OPERATIVO; acuerdo SI
-RESOLUCION: no hubo desacuerdo
+RESOLUCION: Tercer lector (13.7). L4429: la autorregulacion "has to represent an enormous" ventaja y se exige a todas las organizaciones; grep "matur": sin resultado pertinente. Dato anadido: el criterio de "la madurez para autorregularse". Ficha A27.
+FICHA_DE_CORRECCION: A27 (seccion 11.8)
 LIBRO [reason]: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Health and Safety\Managing the Risks of Organizat - Reason, J. T_.txt
 LINEAS: [reason] L4429 a L4429
-FRASE_CLAVE: [reason] L4429 "Any measure that shifts the onus for maintaining safe work practices on to the organizations directly concerned has to represent an enormous ‘plus’"
+FRASE_CLAVE: [reason] L4429 "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
 QUE_ANADE_O_CONCRETA: evaluar la "madurez" para autorregularse; el libro valora en general que la organizacion asuma la responsabilidad
-PROPUESTA_POR_DEFECTO: MANTENER (regla del 25 sep: el OPERATIVO se queda; el fundador decide)
+PROPUESTA_POR_DEFECTO: APLICAR_FIEL (ficha A27, seccion 11.8)
 TEXTO_FIEL_PROPUESTO: Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad
-DATO_REPETIDO: ninguno en resumen_teorico, entregable_esperado ni otros pasos
+DATO_REPETIDO: entregable_esperado | actual: Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización | fiel: Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador
 DECISION_DEL_FUNDADOR: 
 ```
 
