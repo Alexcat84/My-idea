@@ -34,7 +34,7 @@ import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
@@ -71,13 +71,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const enfoque = typeof body.enfoque === "string" ? body.enfoque : null;
   // Fase 4.2: sin dominio, el follow es el de siempre (el viaje core).
   const dominio = typeof body.dominio === "string" && body.dominio ? body.dominio : "core";
-  for (const [campo, valor] of [
-    ["detalles", detalles],
-    ["enfoque", enfoque],
-  ] as const) {
+  for (const valor of [detalles, enfoque]) {
     if (valor && valor.length > MAX_LARGO_TEXTO_USUARIO) {
       return NextResponse.json(
-        { error: `'${campo}' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+        { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
         { status: 400 }
       );
     }

@@ -33,6 +33,7 @@ import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
+import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
@@ -44,7 +45,6 @@ import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
 
 const NOTA_SILENCIOSO = "cubierto por lo que contaste";
-const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 /** Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre. Esto es la red
  * por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así, la
  * pantalla habla. Jamás muda. */
@@ -314,6 +314,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
     }
   }
 
+  /** AUD-09 H03: el rechazo del servidor llega tal cual (saldo, doble factor,
+   * texto largo, fusible, límites). El genérico solo si no dio razón. Con el
+   * doble factor pendiente, se abre el desafío y se vuelve a `volverA`. */
+  async function mostrarRechazo(res: Response, volverA: string) {
+    const r = await leerRechazo(res);
+    setError(r.mensaje);
+    if (r.tipo === "segundo_factor") void irAlDesafio(volverA);
+  }
+
   /** Canon 12: "Explorar otro ángulo" tras un cierre de camino core: relanza
    * la exploración sobre la misma idea (mismo flujo que el CTA de Claridad). */
   async function explorar() {
@@ -330,8 +339,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
         return;
       }
-      if (inicio.status === 429) setError(((await inicio.json()) as { error: string }).error);
-      else if (!inicio.ok) setError(ERROR_GENERICO);
+      if (!inicio.ok) await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
       else procesarTurno((await inicio.json()) as RespuestaTurno);
     } catch {
       setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
@@ -391,8 +399,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaMundo(false);
     setDominioEntrevista(dominio);
     setEsSeguimientoEntrevista(false);
+    const planPrevio = planMd;
     setPlanMd(null);
-    await generarPlan(sid);
+    const r = await generarPlan(sid);
+    if (r === "rechazado") {
+      // AUD-09 H03: sin saldo (u otro rechazo con razón) la compra no ocurre:
+      // el plan del núcleo vuelve a su lugar y se regresa al espacio del mundo.
+      setListoParaPlan(false);
+      setPlanMd(planPrevio);
+      setVistaMundo(true);
+      return;
+    }
     await refrescarDetalle();
   }
 
@@ -416,8 +433,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   const generarPlan = useCallback(
-    async (sid: string, contextoExtra?: string) => {
-      if (generandoPlan) return;
+    async (sid: string, contextoExtra?: string): Promise<"rechazado" | "entregado_o_fallido" | "ocupado"> => {
+      if (generandoPlan) return "ocupado";
       planPedidoRef.current = true;
       setGenerandoPlan(true);
       setPregunta(null);
@@ -438,10 +455,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
           body: JSON.stringify(contextoExtra ? { contexto_final: contextoExtra } : {}),
         });
         if (!res.ok || !res.body) {
-          setError(ERROR_GENERICO);
+          // AUD-09 H03: el rechazo (saldo, doble factor) se dice tal cual, y la
+          // oferta del plan vuelve: la entrevista ya hecha no se pierde detrás
+          // de la Claridad ni se reabre otra exploración.
+          await mostrarRechazo(res, `/idea/${projectId}`);
           setGenerandoPlan(false);
+          setListoParaPlan(true);
           planPedidoRef.current = false;
-          return;
+          return "rechazado" as const;
         }
         // Árbol de etapas: cada encabezado "## " que llega por el stream
         // REAL enciende un punto (regla de oro: cero teatro).
@@ -490,8 +511,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setGenerandoPlan(false);
         setEtiquetaEtapa(undefined);
       }
+      return "entregado_o_fallido" as const;
     },
-    [generandoPlan, cargarChecklist]
+    [generandoPlan, cargarChecklist, projectId]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
@@ -546,10 +568,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
             router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
-          if (inicio.status === 429) {
-            setError(((await inicio.json()) as { error: string }).error);
-          } else if (!inicio.ok) {
-            setError(ERROR_GENERICO);
+          if (!inicio.ok) {
+            await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
           } else {
             procesarTurno((await inicio.json()) as RespuestaTurno);
           }
@@ -576,7 +596,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         body: JSON.stringify({ respuesta }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        await mostrarRechazo(res, `/idea/${projectId}`);
         return;
       }
       setRecorrido((prev) => [...prev, { pregunta: preguntaActual, respuesta }]);
@@ -603,7 +623,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         body: JSON.stringify({ respuesta: "__seguimos_explorando__" }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        await mostrarRechazo(res, `/idea/${projectId}`);
         setListoParaPlan(true);
         return;
       }
@@ -1348,10 +1368,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
             router.push(loginConNext(`/idea/${projectId}?entrevista=1`));
             return;
           }
-          if (inicio.status === 429) {
-                            setError(((await inicio.json()) as { error: string }).error);
-                          } else if (!inicio.ok) {
-                            setError(ERROR_GENERICO);
+          if (!inicio.ok) {
+                            await mostrarRechazo(inicio, `/idea/${projectId}?entrevista=1`);
                           } else {
                             procesarTurno((await inicio.json()) as RespuestaTurno);
                           }

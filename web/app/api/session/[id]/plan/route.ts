@@ -161,12 +161,12 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "sesion no encontrada" }, { status: 404 });
   }
   if (sesion.closed_at) {
-    return NextResponse.json({ error: "la sesion ya esta cerrada" }, { status: 409 });
+    return NextResponse.json({ error: "Esta conversación ya terminó. Recarga la página para ver lo último." }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido as EstadoSesionPersistido | null;
   if (!estadoPersistido) {
     return NextResponse.json(
-      { error: "la sesion no tiene un turno pendiente; llama a /api/session/start primero" },
+      { error: "Esta conversación no tiene nada pendiente. Recarga la página para seguir donde quedaste." },
       { status: 409 }
     );
   }

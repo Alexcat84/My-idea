@@ -12,6 +12,8 @@ import { useState } from "react";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { BotonHeroe } from "../ui/BotonHeroe";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
+import { leerRechazo } from "@/lib/mensajeServidor";
 import { consumirSSE } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
 
@@ -30,6 +32,12 @@ export default function NuevaIdea() {
 
   async function enviar() {
     if (!texto.trim()) return;
+    // AUD-09 H03: el límite se dice antes de enviar, con su número, y el texto
+    // se queda en el campo para recortarlo.
+    if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
+      setEstado({ fase: "captura", error: MENSAJE_TEXTO_LARGO });
+      return;
+    }
     setEstado({ fase: "generando" });
     setNodos([]);
     try {
@@ -44,7 +52,8 @@ export default function NuevaIdea() {
         return;
       }
       if (!res.ok || !res.body) {
-        setEstado({ fase: "captura", error: "algo se atoró de nuestro lado; intenta de nuevo en un momento" });
+        // AUD-09 H03: el rechazo con razón (fusible, texto largo) se dice tal cual.
+        setEstado({ fase: "captura", error: (await leerRechazo(res)).mensaje });
         return;
       }
       let projectId = "";

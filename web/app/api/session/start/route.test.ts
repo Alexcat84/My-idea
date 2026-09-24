@@ -99,6 +99,12 @@ describe("POST /api/session/start", () => {
   it("rechaza texto que supera el maximo de 4000 caracteres", async () => {
     const res = await POST(requestFalso({ texto: "a".repeat(4001) }));
     expect(res.status).toBe(400);
+    // AUD-09 H03: el rechazo dice su límite en palabras de persona (antes
+    // "'texto' supera el maximo...", que la pantalla cambiaba por el genérico).
+    const cuerpo = await res.json();
+    expect(cuerpo.limite).toBe(4000);
+    expect(cuerpo.error).toContain("4000");
+    expect(cuerpo.error).not.toContain("'texto'");
   });
 
   it("401 si no hay usuario autenticado", async () => {

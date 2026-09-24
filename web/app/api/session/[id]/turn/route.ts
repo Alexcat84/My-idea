@@ -11,7 +11,7 @@
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno } from "@/lib/engine/recorrido";
@@ -34,7 +34,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   if (respuesta.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: `'respuesta' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }
@@ -52,18 +52,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: "sesion no encontrada" }, { status: 404 });
   }
   if (sesion.closed_at) {
-    return NextResponse.json({ error: "la sesion ya esta cerrada" }, { status: 409 });
+    return NextResponse.json({ error: "Esta conversación ya terminó. Recarga la página para ver lo último." }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido as EstadoSesionPersistido | null;
   if (!estadoPersistido) {
     return NextResponse.json(
-      { error: "la sesion no tiene un turno pendiente; llama a /api/session/start primero" },
+      { error: "Esta conversación no tiene nada pendiente. Recarga la página para seguir donde quedaste." },
       { status: 409 }
     );
   }
   if (estadoPersistido.recorrido.fase === "cerrada" || estadoPersistido.recorrido.fase === "listo_para_plan") {
     return NextResponse.json(
-      { error: `la sesion esta en fase '${estadoPersistido.recorrido.fase}', no espera una respuesta nueva` },
+      { error: "Esta conversación no tiene nada pendiente. Recarga la página para seguir donde quedaste.", fase: estadoPersistido.recorrido.fase },
       { status: 409 }
     );
   }

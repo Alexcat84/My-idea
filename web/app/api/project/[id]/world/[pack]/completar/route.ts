@@ -17,7 +17,7 @@
  */
 import { NextResponse } from "next/server";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
@@ -43,7 +43,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const motivoCrudo = typeof body.motivo === "string" ? body.motivo.trim() : null;
   if (motivoCrudo && motivoCrudo.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: `'motivo' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }

@@ -24,7 +24,7 @@
 import { NextResponse } from "next/server";
 import type { NumerosProyecto } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
@@ -49,7 +49,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   if (typeof respuesta === "string" && respuesta.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: `'respuesta' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }

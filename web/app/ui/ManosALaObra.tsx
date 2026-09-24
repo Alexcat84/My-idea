@@ -61,6 +61,7 @@ import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciaRealSemanas, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
+import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 
 export interface ItemChecklistUI {
   id: string;
@@ -227,7 +228,6 @@ interface Props {
   realizadaAt?: string | null; // Realizada
 }
 
-const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 /** Recuerda que el usuario ya usó el selector de estado (pista de primer uso). */
 const CLAVE_PISTA_ESTADO = "mi-idea:selector-estado-usado";
 
@@ -1898,18 +1898,21 @@ export function ManosALaObra({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ detalles, enfoque, dominio }),
       });
-      const data = await res.json();
-      if (res.status === 401 && data.login_requerido) {
+      if (res.status === 401) {
         // ETAPA 2 (la frontera): cuenta real para el seguimiento. Al volver,
         // reanuda en Manos a la Obra (donde vive el ritual de seguimiento).
         window.location.assign(loginConNext(`/idea/${projectId}?vista=manos`));
         return;
       }
       if (!res.ok) {
-        // 429 (limite) y 402 (saldo) hablan en palabras de persona: se muestran.
-        setErrorRitual(res.status === 429 || res.status === 402 ? String(data.error) : ERROR_GENERICO);
+        // AUD-09 H03: todo rechazo con razón (saldo, límite, fusible, los muros
+        // del mundo, doble factor, texto largo) se muestra tal cual.
+        const r = await leerRechazo(res);
+        setErrorRitual(r.mensaje);
+        if (r.tipo === "segundo_factor") void irAlDesafio(`/idea/${projectId}?vista=manos`);
         return;
       }
+      const data = await res.json();
       onSeguimientoIniciado(data, dominio);
     } catch {
       setErrorRitual("no pudimos conectar; revisa tu internet e intenta de nuevo");
@@ -1931,7 +1934,7 @@ export function ManosALaObra({
         body: JSON.stringify({ accion, motivo: accion === "completar" ? motivoMundo.trim() || null : null }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        setError((await leerRechazo(res)).mensaje);
         return;
       }
       const data = (await res.json()) as { completado_at?: string | null };

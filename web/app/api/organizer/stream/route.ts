@@ -10,7 +10,7 @@
  */
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_TEXTO_USUARIO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   MODEL_HAIKU,
@@ -57,7 +57,7 @@ export async function POST(request: Request) {
   }
   if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: `'texto' supera el maximo de ${MAX_LARGO_TEXTO_USUARIO} caracteres` },
+      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }

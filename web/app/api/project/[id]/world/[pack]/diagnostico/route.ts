@@ -75,16 +75,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     sessionId = (unlockRows?.[0] as { preview_session_id?: string | null } | undefined)?.preview_session_id ?? null;
   }
   if (!sessionId) {
-    return NextResponse.json({ error: "no hay un preview de este mundo en curso" }, { status: 409 });
+    return NextResponse.json({ error: "No encontré la exploración de este mundo. Vuelve a explorarlo desde su espacio." }, { status: 409 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion || sesion.project_id !== projectId || ((sesion as { dominio?: string }).dominio ?? "core") !== pack) {
-    return NextResponse.json({ error: "esa sesion no es el preview de este mundo" }, { status: 409 });
+    return NextResponse.json({ error: "No encontré la exploración de este mundo. Vuelve a explorarlo desde su espacio." }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido;
   if (!estadoPersistido) {
-    return NextResponse.json({ error: "el preview no tiene recorrido que diagnosticar" }, { status: 409 });
+    return NextResponse.json({ error: "Esta exploración todavía no tiene respuestas que diagnosticar." }, { status: 409 });
   }
   // AUD-09 H01: un ciclo de seguimiento del mundo termina en su PLAN, nunca en
   // un diagnóstico. Sin esta guarda, recargar a mitad del ciclo convertía la
