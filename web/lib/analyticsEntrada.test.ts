@@ -109,3 +109,30 @@ describe("la costura entre la entrada REAL y el carril de protección", () => {
     expect(a.carrilProteccion).toHaveLength(0);
   });
 });
+
+// AUD-09 M18 (tanda 5, fallas silenciosas): una lectura que fallaba se tomaba
+// como "no hay nada" y el Análisis, la Celebración o el bloque de realidad del
+// seguimiento salían en cero, presentados como verdad. Ahora falla en voz alta.
+import { LecturaFallidaError } from "./analyticsEntrada";
+
+function supabaseQueFallaEn(tablaQueFalla: string) {
+  const builder = (tabla: string) => {
+    const b: Record<string, unknown> = {};
+    for (const m of ["select", "eq", "in", "order", "limit", "is"]) b[m] = () => b;
+    b.then = (res: (v: unknown) => unknown) =>
+      Promise.resolve(tabla === tablaQueFalla ? { data: null, error: { message: "no responde" } } : { data: [], error: null }).then(res);
+    return b;
+  };
+  return { from: (t: string) => builder(t) } as never;
+}
+
+describe("cargarEntradaAnalytics no convierte una lectura fallida en ceros (AUD-09 M18)", () => {
+  const proyecto = { id: "p1", created_at: "2026-09-01T00:00:00Z", realizada_at: null, modo_camino: null } as never;
+  for (const tabla of ["sessions", "checklist_items"]) {
+    it(`si falla la lectura de ${tabla}, lanza LecturaFallidaError`, async () => {
+      await expect(cargarEntradaAnalytics(supabaseQueFallaEn(tabla), "p1", proyecto)).rejects.toBeInstanceOf(
+        LecturaFallidaError
+      );
+    });
+  }
+});

@@ -43,7 +43,7 @@ import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
-import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
 import { construirBloqueRealidad, construirBloqueRealidadMundo } from "@/lib/engine/bloqueRealidad";
 import { candidatosSeguimiento, seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
@@ -224,7 +224,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // Fase 4.2: el bloque de un MUNDO se mide con la misma vara pero con SUS
   // datos (analyticsDeMundo: sus items, contra sus fechas, desde su unlock), y
   // del proyecto solo lleva una linea de contexto rotulada.
-  const entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
+  // AUD-09 M18: una lectura fallida se dice (503), no se pinta en cero.
+  let entradaAnalytics: Awaited<ReturnType<typeof cargarEntradaAnalytics>>;
+  try {
+    entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
+  } catch (e) {
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+    throw e;
+  }
   const analytics = calcularAnalytics(entradaAnalytics);
   let bloqueRealidad: string | null;
   if (dominio === "core") {

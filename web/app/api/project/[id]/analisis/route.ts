@@ -10,7 +10,7 @@
 import { NextResponse } from "next/server";
 import { calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
 import { obtenerProyecto } from "@/lib/db";
 import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
@@ -33,7 +33,14 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
   }
 
   const ahora = new Date().toISOString();
-  const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
+  // AUD-09 M18: una lectura fallida se dice (503), no se pinta en cero.
+  let entrada: Awaited<ReturnType<typeof cargarEntradaAnalytics>>;
+  try {
+    entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
+  } catch (e) {
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+    throw e;
+  }
 
   const analytics = calcularAnalytics(entrada);
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);

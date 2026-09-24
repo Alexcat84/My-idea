@@ -15,7 +15,7 @@ import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { cargarEntradaAnalytics } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerItemsDePlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
@@ -75,16 +75,18 @@ async function cargarAcciones(supabase: Awaited<ReturnType<typeof createClient>>
     .eq("project_id", projectId)
     .order("etapa", { ascending: true })
     .order("orden", { ascending: true });
-  const raw = con.error
-    ? (
-        await supabase
-          .from("checklist_items")
-          .select(COLS)
-          .eq("project_id", projectId)
-          .order("etapa", { ascending: true })
-          .order("orden", { ascending: true })
-      ).data
-    : con.data;
+  let raw: unknown[] | null = con.data;
+  if (con.error) {
+    const sin030 = await supabase
+      .from("checklist_items")
+      .select(COLS)
+      .eq("project_id", projectId)
+      .order("etapa", { ascending: true })
+      .order("orden", { ascending: true });
+    // AUD-09 M18: si tampoco la lectura mínima responde, no es "sin tareas".
+    if (sin030.error) throw new LecturaFallidaError("las tareas", sin030.error);
+    raw = sin030.data;
+  }
   return ((raw ?? []) as FilaAccion[]).map((i) => ({ ...i, no_aplica_motivo: i.no_aplica_motivo ?? null }));
 }
 
@@ -97,7 +99,7 @@ const aAccion = (i: FilaAccion): AccionExpediente => ({
   noAplicaMotivo: i.no_aplica_motivo ?? null,
 });
 
-export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+async function generarDocumentos(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
 
   const supabase = await createClient();
@@ -112,19 +114,21 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
   }
 
-  const { data: sesionesRaw } = await supabase
+  const { data: sesionesRaw, error: errSesiones } = await supabase
     .from("sessions")
     .select("id, created_at, tipo, dominio")
     .eq("project_id", projectId);
+  if (errSesiones) throw new LecturaFallidaError("las sesiones", errSesiones);
   const sesiones = (sesionesRaw ?? []) as FilaSesion[];
   const idsSesiones = sesiones.map((s) => s.id);
-  const { data: planesRaw } = idsSesiones.length
+  const { data: planesRaw, error: errPlanes } = idsSesiones.length
     ? await supabase
         .from("plans")
         .select("id, etiqueta, contenido_md, created_at, dominio, baseline_confirmada_at")
         .in("session_id", idsSesiones)
         .order("created_at", { ascending: true })
-    : { data: [] };
+    : { data: [], error: null };
+  if (errPlanes) throw new LecturaFallidaError("los planes", errPlanes);
   const planes = (planesRaw ?? []) as FilaPlan[];
 
   const ciclos: CicloExpediente[] = planes
@@ -339,18 +343,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const acciones: AccionExpediente[] = todasAcciones.filter((i) => esCore(i.dominio)).map(aAccion);
 
   let unlocks: Array<{ dominio: string; completado_at?: string | null }> = [];
-  try {
-    const { data, error } = await supabase
-      .from("project_unlocks")
-      .select("dominio, completado_at")
-      .eq("project_id", projectId);
-    if (!error) unlocks = (data ?? []) as typeof unlocks;
-    else {
-      const { data: previo } = await supabase.from("project_unlocks").select("dominio").eq("project_id", projectId);
-      unlocks = (previo ?? []) as typeof unlocks;
-    }
-  } catch {
-    unlocks = [];
+  const conCierre = await supabase.from("project_unlocks").select("dominio, completado_at").eq("project_id", projectId);
+  if (!conCierre.error) unlocks = (conCierre.data ?? []) as typeof unlocks;
+  else {
+    const previo = await supabase.from("project_unlocks").select("dominio").eq("project_id", projectId);
+    // AUD-09 M18: si tampoco la lectura mínima responde, no es "sin mundos".
+    if (previo.error) throw new LecturaFallidaError("los mundos", previo.error);
+    unlocks = (previo.data ?? []) as typeof unlocks;
   }
 
   const ahora = new Date().toISOString();
@@ -441,4 +440,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     markdown,
     papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });
+}
+
+/** AUD-09 M18: una lectura fallida en cualquier punto de los documentos se dice
+ * (503 con el mismo mensaje honesto), nunca se descarga un papel con ceros. */
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
+  try {
+    return await generarDocumentos(request, { params });
+  } catch (e) {
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+    throw e;
+  }
 }
