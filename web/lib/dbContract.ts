@@ -65,6 +65,18 @@ export type ChecklistEstado = (typeof CHECKLIST_ESTADO)[number];
 export const ESTADOS_ACTIVOS = CHECKLIST_ESTADO.filter((e) => e !== "no_aplica");
 export const esActivo = (estado: ChecklistEstado) => estado !== "no_aplica";
 
+/** AUD-09 M01: la cuenta honesta ÚNICA del avance (BANCO §5, "X de N activas").
+ * El denominador son las ACTIVAS; las retiradas (no_aplica) salen del avance y
+ * se cuentan aparte. La usan el encabezado, los chips, /ideas y Manos a la Obra. */
+export function cuentaHonesta(items: ReadonlyArray<{ estado: string }>): { hechos: number; total: number; retiradas: number } {
+  const activas = items.filter((i) => i.estado !== "no_aplica");
+  return {
+    hechos: activas.filter((i) => i.estado === "hecho").length,
+    total: activas.length,
+    retiradas: items.length - activas.length,
+  };
+}
+
 /** Dominios válidos de sessions/plans/checklist_items (Fase 3.5, migration
  * 016): core + packs. Sin fila en project_unlocks, un dominio de pack no
  * existe para el motor. */

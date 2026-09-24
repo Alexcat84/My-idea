@@ -24,7 +24,7 @@ import { PlanDocumento } from "./PlanDocumento";
 import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
 import {
   CAPACIDAD_SEMANAL,
-  esActivo,
+  cuentaHonesta,
   type Banda,
   type Camino,
   type CapacidadSemanal,
@@ -255,11 +255,12 @@ export function grupoVigente(checklist: ChecklistData, dominio: string) {
 /** Cuentas honestas (gestor de estados): el denominador son las ACTIVAS; las
  * retiradas (no_aplica) salen del avance y se cuentan aparte. */
 function conteo(items: ItemChecklistUI[]) {
-  const activas = items.filter((i) => esActivo(i.estado));
+  // AUD-09 M01: la misma cuenta que el encabezado y /ideas (dbContract).
+  const { hechos, total, retiradas } = cuentaHonesta(items);
   return {
-    hechos: activas.filter((i) => i.estado === "hecho").length,
-    total: activas.length,
-    retiradas: items.length - activas.length,
+    hechos,
+    total,
+    retiradas,
   };
 }
 

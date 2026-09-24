@@ -11,6 +11,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { nombreDeMundo } from "./catalogoMundos";
 import { listarProyectos } from "./db";
 import { fechaSello } from "./fechas";
+import { esActivo, type ChecklistEstado } from "./dbContract";
 
 export type EstadoIdea = "Organizada" | "En entrevista" | "Con plan" | "En seguimiento";
 
@@ -84,8 +85,12 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     if (!progreso.has(item.project_id)) progreso.set(item.project_id, new Map());
     const porDominio = progreso.get(item.project_id)!;
     const r = porDominio.get(item.dominio) ?? { total: 0, hechos: 0, empezoAlguno: false };
-    r.total += 1;
-    if (item.estado === "hecho") r.hechos += 1;
+    // AUD-09 M01: las retiradas no cuentan en el total (la cuenta honesta de
+    // dbContract.cuentaHonesta, "X de N activas").
+    if (esActivo(item.estado as ChecklistEstado)) {
+      r.total += 1;
+      if (item.estado === "hecho") r.hechos += 1;
+    }
     if (item.estado !== "pendiente") r.empezoAlguno = true;
     porDominio.set(item.dominio, r);
   }

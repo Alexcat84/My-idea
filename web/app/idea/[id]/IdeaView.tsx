@@ -33,6 +33,7 @@ import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
 import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
+import { cuentaHonesta } from "@/lib/dbContract";
 import { estadoEspacio } from "@/lib/esperaEspacio";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
@@ -861,16 +862,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Progreso real del checklist (para stepper, chips y fila de potenciadores).
   const coreVigente = checklist ? grupoVigente(checklist, "core") : null;
   const itemsCore = coreVigente?.etapas.flatMap((e) => e.items) ?? [];
-  const hechosCore = itemsCore.filter((i) => i.estado === "hecho").length;
+  // AUD-09 M01: la cuenta honesta única (las retiradas no cuentan en el total).
+  const cuentaCore = cuentaHonesta(itemsCore);
   const enObra = itemsCore.some((i) => i.estado !== "pendiente") || detalle.plan?.etiqueta === "seguimiento";
   const unlocks = detalle.unlocks ?? [];
   const progresoMundos: Record<string, { hechos: number; total: number } | null> = {};
   for (const u of unlocks) {
     const g = checklist ? grupoVigente(checklist, u) : null;
     const items = g?.etapas.flatMap((e) => e.items) ?? [];
-    progresoMundos[u] = g
-      ? { hechos: items.filter((i) => i.estado === "hecho").length, total: items.length }
-      : null;
+    progresoMundos[u] = g ? (({ hechos, total }) => ({ hechos, total }))(cuentaHonesta(items)) : null;
   }
 
   // Etapa canónica para el stepper: solo verdad del motor.
@@ -890,7 +890,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         : "La Exploración · en curso…";
   } else if (vistaManos || enObra) {
     etapaStepper = 5;
-    etiquetaStepper = itemsCore.length > 0 ? `Manos a la Obra · ${hechosCore}/${itemsCore.length}` : "Manos a la Obra";
+    etiquetaStepper = cuentaCore.total > 0 ? `Manos a la Obra · ${cuentaCore.hechos}/${cuentaCore.total}` : "Manos a la Obra";
   } else if (planMd) {
     etapaStepper = 4;
     etiquetaStepper = "Tu Plan · listo";
