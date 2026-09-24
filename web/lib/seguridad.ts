@@ -50,23 +50,30 @@ export interface EstadoSeguridad {
   habilitado: boolean;
   metodo: "totp" | "email" | null;
   totpSecret: string | null;
+  /** AUD-09 M50: el secreto de un alta en curso, aún sin verificar. */
+  totpSecretPendiente: string | null;
   totpLastUsedStep: number | null;
 }
 
 /** Fila de user_seguridad del usuario (o el estado virgen si no existe). */
 export async function estadoSeguridad(userId: string): Promise<EstadoSeguridad> {
   const admin = createAdminClient();
-  const { data, error } = await admin
-    .from("user_seguridad")
-    .select("two_factor_enabled, two_factor_method, totp_secret, totp_last_used_step")
-    .eq("user_id", userId)
-    .maybeSingle();
+  const COLS = "two_factor_enabled, two_factor_method, totp_secret, totp_last_used_step, totp_secret_pendiente";
+  const leer = (cols: string) => admin.from("user_seguridad").select(cols).eq("user_id", userId).maybeSingle();
+  let { data, error } = await leer(COLS);
+  // Sin la migración 043 se lee sin el pendiente (el candado sigue igual).
+  if (error && /totp_secret_pendiente/.test(error.message ?? "")) {
+    console.error("[seguridad] falta la migracion 043 (totp_secret_pendiente):", error.message);
+    ({ data, error } = await leer(COLS.replace(", totp_secret_pendiente", "")));
+  }
   if (error) throw error;
+  const fila = data as Record<string, unknown> | null;
   return {
-    habilitado: Boolean(data?.two_factor_enabled),
-    metodo: (data?.two_factor_method as "totp" | "email" | null) ?? null,
-    totpSecret: (data?.totp_secret as string | null) ?? null,
-    totpLastUsedStep: (data?.totp_last_used_step as number | null) ?? null,
+    habilitado: Boolean(fila?.two_factor_enabled),
+    metodo: (fila?.two_factor_method as "totp" | "email" | null) ?? null,
+    totpSecret: (fila?.totp_secret as string | null) ?? null,
+    totpSecretPendiente: (fila?.totp_secret_pendiente as string | null) ?? null,
+    totpLastUsedStep: (fila?.totp_last_used_step as number | null) ?? null,
   };
 }
 

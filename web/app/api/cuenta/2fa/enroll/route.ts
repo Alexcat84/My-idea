@@ -36,11 +36,12 @@ export async function POST() {
 
   const enrollment = await createTotpEnrollment(sesion.user.email);
   const admin = createAdminClient();
+  // AUD-09 M50: el secreto nuevo ESPERA su primer código. El método y el
+  // secreto vigentes no se tocan hasta verificar: abandonar el QR ya no deja el
+  // candado pidiendo un autenticador que nunca se configuró.
   const { error } = await admin.from("user_seguridad").upsert({
     user_id: sesion.user.id,
-    two_factor_method: "totp",
-    totp_secret: encryptTotpSecret(enrollment.secret, encryptionKey),
-    totp_last_used_step: null,
+    totp_secret_pendiente: encryptTotpSecret(enrollment.secret, encryptionKey),
     updated_at: new Date().toISOString(),
   });
   if (error) {

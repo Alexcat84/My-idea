@@ -609,5 +609,13 @@ FROM (
       WHERE routine_schema='public' AND routine_name='reservar_creditos'
         AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
     )
+  UNION ALL
+  -- 043 . re-enrolar el autenticador no desarma el candado (AUD-09 M50).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '043', 'user_seguridad.totp_secret_pendiente (alta de autenticador en espera)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='user_seguridad' AND column_name='totp_secret_pendiente'
+    )
 ) checks
 ORDER BY num;

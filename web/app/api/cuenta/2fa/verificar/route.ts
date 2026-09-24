@@ -54,7 +54,11 @@ export async function POST(request: Request) {
   if (estado.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
     return NextResponse.json(AVISO_2FA, { status: 403 });
   }
-  if (!estado.totpSecret) {
+  // AUD-09 M50: se verifica contra el secreto EN ESPERA si hay un alta en curso
+  // (y sin el guard de replay del secreto viejo); si no, contra el vigente.
+  const secretoCifrado = estado.totpSecretPendiente ?? estado.totpSecret;
+  const esAltaNueva = estado.totpSecretPendiente !== null;
+  if (!secretoCifrado) {
     return NextResponse.json({ error: "primero genera tu código QR (paso anterior)" }, { status: 400 });
   }
   const encryptionKey = process.env.TOTP_ENCRYPTION_KEY;
@@ -69,12 +73,12 @@ export async function POST(request: Request) {
   if (token.length === 6) {
     let secreto: string;
     try {
-      secreto = decryptTotpSecret(estado.totpSecret, encryptionKey);
+      secreto = decryptTotpSecret(secretoCifrado, encryptionKey);
     } catch {
       console.error("[2fa/verificar] no se pudo descifrar el secreto (¿cambió TOTP_ENCRYPTION_KEY?)");
       return NextResponse.json({ error: "algo se atoró de nuestro lado; intenta más tarde" }, { status: 500 });
     }
-    const r = verifyTotpTokenWithReplayGuard(secreto, token, { lastUsedStep: estado.totpLastUsedStep });
+    const r = verifyTotpTokenWithReplayGuard(secreto, token, { lastUsedStep: esAltaNueva ? null : estado.totpLastUsedStep });
     if (r.replayed) {
       return NextResponse.json({ error: "Ese código ya se usó. Espera el siguiente y escríbelo." }, { status: 401 });
     }
@@ -84,7 +88,9 @@ export async function POST(request: Request) {
 
   const admin = createAdminClient();
 
-  if (!verified && typeof body.recoveryCode === "string" && body.recoveryCode.trim()) {
+  // En un alta nueva solo cuenta un código de la app nueva: un código de
+  // rescate no prueba que el autenticador quedó configurado (AUD-09 M50).
+  if (!verified && !esAltaNueva && typeof body.recoveryCode === "string" && body.recoveryCode.trim()) {
     const { data: codes } = await admin
       .from("two_factor_recovery_codes")
       .select("code_hash")
@@ -123,6 +129,10 @@ export async function POST(request: Request) {
     .update({
       two_factor_enabled: true,
       two_factor_method: "totp",
+      // AUD-09 M50: solo un código del autenticador nuevo lo vuelve vigente.
+      ...(esAltaNueva && verifiedTotpStep !== null
+        ? { totp_secret: estado.totpSecretPendiente, totp_secret_pendiente: null }
+        : {}),
       totp_verified_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
       ...(verifiedTotpStep !== null ? { totp_last_used_step: verifiedTotpStep } : {}),
