@@ -85,3 +85,16 @@ describe("Tus Números pide plan para activar y narrar (AUD-09 M24)", () => {
     expect(res.status).toBe(200);
   });
 });
+
+// AUD-09 B10 (tanda 7B, confianza): Tus Números se titulaba con el título crudo
+// de la idea y, cuando no lo había, decía siempre "Tu idea". Ahora usa el mismo
+// nombre que /ideas (nombreDeIdea: el título, o las primeras palabras de la idea).
+describe("Tus Números nombra la idea como /ideas (AUD-09 B10)", () => {
+  it("sin título, las primeras palabras de la idea", async () => {
+    estadoFalso.projects["p1"] = { id: "p1", titulo: null, entrada_original: "vendo macetas de cemento", numeros_proyecto: {}, tus_numeros_activado_at: "2026-09-01T00:00:00Z" };
+    planCore = "plan-core-1";
+    const d = await (await POST(req({}), ctx)).json();
+    expect(d.titulo).toBe("vendo macetas de cemento");
+  });
+});
+

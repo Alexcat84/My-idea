@@ -300,3 +300,21 @@ describe("desmarcar no borra la historia (AUD-09 M34)", () => {
     expect(e.filter((x) => x.texto.startsWith("Marcaste hecha"))).toHaveLength(1);
   });
 });
+
+// AUD-09 B10 (tanda 7B, confianza): "Recibiste tu plan" tomaba el primer plan
+// que llegaba de la base (sin orden), y "Tu avance" el más antiguo: con dos
+// planes (por ejemplo, tras regenerar) decían fechas distintas. Ahora el más
+// antiguo, igual que "Tu avance".
+describe("Tu Plan tiene una sola fecha (AUD-09 B10)", () => {
+  it("con los planes en desorden, 'Recibiste tu plan' es el más antiguo", () => {
+    const e = construirBitacora(
+      datos({
+        planes: [
+          { etiqueta: "completo", created_at: "2026-01-20T10:00:00Z", dominio: "core", baseline_confirmada_at: null },
+          { etiqueta: "completo", created_at: "2026-01-05T10:00:00Z", dominio: "core", baseline_confirmada_at: null },
+        ],
+      })
+    );
+    expect(e.find((x) => x.texto === "Recibiste tu plan.")?.fecha).toBe("2026-01-05T10:00:00Z");
+  });
+});

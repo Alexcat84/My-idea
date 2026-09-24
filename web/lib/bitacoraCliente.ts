@@ -141,13 +141,17 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
   push(d.creadaAt, "Encendiste la chispa y escribiste tu idea.", "hito", "La Chispa");
 
-  const coreOrg = d.planes.find((p) => esCore(p.dominio) && p.etiqueta === "organizador");
+  // AUD-09 B10: el MÁS ANTIGUO de cada clase (los datos llegan sin orden): así
+  // "Recibiste tu plan" dice la misma fecha que "Tu Plan · ciclo 1" de Tu avance.
+  const masAntiguo = <T extends { created_at: string }>(xs: T[]): T | undefined =>
+    [...xs].sort((a, b) => a.created_at.localeCompare(b.created_at))[0];
+  const coreOrg = masAntiguo(d.planes.filter((p) => esCore(p.dominio) && p.etiqueta === "organizador"));
   push(coreOrg?.created_at, "Ordenaste tu idea y ganaste claridad.", "hito", "Tu idea ordenada");
 
-  const explora = d.sesiones.find((s) => esCore(s.dominio) && s.tipo === "inicial");
+  const explora = masAntiguo(d.sesiones.filter((s) => esCore(s.dominio) && s.tipo === "inicial"));
   push(explora?.created_at, "Empezaste a explorar tu idea, pregunta por pregunta.");
 
-  const corePlan = d.planes.find((p) => esCore(p.dominio) && (p.etiqueta === "completo" || p.etiqueta === "inicial"));
+  const corePlan = masAntiguo(d.planes.filter((p) => esCore(p.dominio) && (p.etiqueta === "completo" || p.etiqueta === "inicial")));
   push(corePlan?.created_at, "Recibiste tu plan.", "hito", "Tu Plan");
 
   // Seguimientos (recálculos del plan), numerados por orden cronológico.

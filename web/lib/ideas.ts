@@ -11,6 +11,7 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 import { nombreDeMundo } from "./catalogoMundos";
 import { listarProyectos } from "./db";
 import { estadoEntrevista } from "./entrevistaAbierta";
+import { etapaDeIdea } from "./etapaIdea";
 import { fechaSello } from "./fechas";
 import { esActivo, type ChecklistEstado } from "./dbContract";
 
@@ -58,7 +59,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
   // RLS limita las consultas al usuario autenticado. El checklist puede no
   // existir aún (pre-migración 015): se tolera con lista vacía.
   const [{ data: sesiones }, { data: planes }, checklistRes] = await Promise.all([
-    supabase.from("sessions").select("id, project_id, closed_at, estado_recorrido"),
+    supabase.from("sessions").select("id, project_id, closed_at, estado_recorrido, dominio"),
     supabase.from("plans").select("session_id, etiqueta"),
     supabase.from("checklist_items").select("project_id, plan_id, dominio, estado, created_at, updated_at"),
   ]);
@@ -109,6 +110,9 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
   const entrevistaAbierta = new Set<string>();
   // AUD-09 M29: qué espera cada idea con entrevista abierta (la regla única).
   const esperaPlan = new Set<string>();
+  // AUD-09 B10: qué clase de sesión está abierta (la regla única de la etapa).
+  const explorandoNucleo = new Set<string>();
+  const seguimientoAbierto = new Set<string>();
   for (const s of (sesiones ?? []) as Array<{
     id: string;
     project_id: string;
@@ -118,6 +122,11 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     proyectoDeSesion.set(s.id, s.project_id);
     const abierta = estadoEntrevista(s);
     if (abierta) entrevistaAbierta.add(s.project_id);
+    const deNucleo = !(s as { dominio?: string | null }).dominio || (s as { dominio?: string | null }).dominio === "core";
+    if (abierta && deNucleo) {
+      const esSeg = (s.estado_recorrido as { recorrido?: { esSeguimiento?: boolean } }).recorrido?.esSeguimiento === true;
+      (esSeg ? seguimientoAbierto : explorandoNucleo).add(s.project_id);
+    }
     if (abierta === "listo_para_plan") esperaPlan.add(s.project_id);
   }
 
@@ -143,15 +152,18 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     const core = porDominio.get("core");
     const enObra = Boolean(core?.empezoAlguno) || etiquetas.has("seguimiento");
 
-    let etapa: number;
     const pensando = entrevistaAbierta.has(p.id);
     // AUD-09 M28: sin organizador no hay Claridad (su IA falló): se queda en la
     // Chispa y se dice "Sin ordenar", no "Con claridad".
     const ordenada = etiquetas.has("organizador");
-    if (enObra) etapa = 5;
-    else if (conPlan) etapa = 4;
-    else if (pensando) etapa = 3;
-    else etapa = ordenada ? 2 : 1; // hay proyecto ⇒ hubo Chispa; con organizador es Claridad
+    // AUD-09 B10: la regla única de la etapa (la misma del encabezado de la idea).
+    const etapa = etapaDeIdea({
+      conPlan,
+      enObra,
+      explorandoNucleo: explorandoNucleo.has(p.id),
+      seguimientoAbierto: seguimientoAbierto.has(p.id),
+      ordenada,
+    });
 
     const chips: ChipCinta[] = [];
     if (etapa === 5 && core) {

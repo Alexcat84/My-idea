@@ -28,6 +28,8 @@ import {
   ultimaVersionNumeros,
 } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+// AUD-09 B10: el mismo nombre de la idea que /ideas (no el título crudo).
+import { nombreDeIdea } from "@/lib/ideas";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { narrarReporte } from "@/lib/engine/reporte";
@@ -149,7 +151,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (proyecto.tus_numeros_activado_at == null) {
     return NextResponse.json({
       project_id: projectId,
-      titulo: proyecto.titulo,
+      titulo: nombreDeIdea(proyecto.titulo ?? null, proyecto.entrada_original ?? ""),
       unidad: proyecto.unidad_venta ?? null,
       activado: false,
       compuerta: true,
@@ -169,7 +171,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     const calculo = version.calculo as Record<string, unknown> & { veredicto?: unknown };
     return NextResponse.json({
       project_id: projectId,
-      titulo: proyecto.titulo,
+      titulo: nombreDeIdea(proyecto.titulo ?? null, proyecto.entrada_original ?? ""),
       unidad: proyecto.unidad_venta ?? null,
       historico: true,
       tablero: calculo, // el snapshot ES el tablero (calculo = {...tablero, veredicto})
@@ -189,7 +191,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   return NextResponse.json({
     project_id: projectId,
-    titulo: proyecto.titulo,
+    titulo: nombreDeIdea(proyecto.titulo ?? null, proyecto.entrada_original ?? ""),
     unidad: proyecto.unidad_venta ?? null,
     tablero,
     veredicto,
@@ -359,7 +361,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   return NextResponse.json({
     project_id: projectId,
-    titulo: proyecto.titulo,
+    titulo: nombreDeIdea(proyecto.titulo ?? null, proyecto.entrada_original ?? ""),
     unidad,
     tablero,
     veredicto,

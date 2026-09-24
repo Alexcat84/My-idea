@@ -42,6 +42,7 @@ import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { urlSinParametro } from "@/lib/urlSinParametro";
 import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
+import { etapaDeIdea } from "@/lib/etapaIdea";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -931,7 +932,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
     progresoMundos[u] = g ? (({ hechos, total }) => ({ hechos, total }))(cuentaHonesta(items)) : null;
   }
 
-  // Etapa canónica para el stepper: solo verdad del motor.
+  // Etapa canónica para el stepper: solo verdad del motor. AUD-09 B10: la
+  // regla única (etapaDeIdea, la misma de /ideas); un seguimiento abierto ya no
+  // vuelve a "La Exploración", y una sesión de mundo no hace retroceder el viaje.
+  const entrevistaDeNucleo = entrevistaActiva && dominioEntrevista === "core";
+  const etapaBase = etapaDeIdea({
+    conPlan: Boolean(planMd || detalle.plan),
+    enObra: vistaManos || enObra,
+    explorandoNucleo: entrevistaDeNucleo && !esSeguimientoEntrevista,
+    seguimientoAbierto: entrevistaDeNucleo && esSeguimientoEntrevista,
+    ordenada: Boolean(detalle.organizador),
+  });
   let etapaStepper: number;
   let pensandoStepper = false;
   let etiquetaStepper: string | undefined;
@@ -940,20 +951,22 @@ export function IdeaView({ projectId }: { projectId: string }) {
     pensandoStepper = true;
     etiquetaStepper = "Tu Plan · en camino…";
   } else if (entrevistaActiva) {
-    etapaStepper = 3;
+    etapaStepper = etapaBase;
     pensandoStepper = Boolean(pregunta) || enviando;
     etiquetaStepper =
       dominioEntrevista !== "core"
         ? `${NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista} · en curso…`
-        : "La Exploración · en curso…";
-  } else if (vistaManos || enObra) {
+        : esSeguimientoEntrevista
+          ? "Ciclo de profundización · en curso…"
+          : "La Exploración · en curso…";
+  } else if (etapaBase === 5) {
     etapaStepper = 5;
     etiquetaStepper = cuentaCore.total > 0 ? `Manos a la Obra · ${cuentaCore.hechos}/${cuentaCore.total}` : "Manos a la Obra";
-  } else if (planMd) {
+  } else if (etapaBase === 4) {
     etapaStepper = 4;
     etiquetaStepper = "Tu Plan · listo";
   } else {
-    etapaStepper = 2;
+    etapaStepper = etapaBase;
     etiquetaStepper = detalle.organizador ? "Claridad · lista" : undefined;
   }
 
