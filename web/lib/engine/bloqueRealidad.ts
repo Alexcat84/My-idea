@@ -103,7 +103,10 @@ export function construirBloqueRealidad(a: Analytics): string | null {
 export function construirBloqueRealidadMundo(
   aMundo: AnalyticsMundo,
   aProyecto: Analytics,
-  nombreMundo: string
+  nombreMundo: string,
+  /** AUD-09 M10: el modo DEL MUNDO (project_modos). Cada espacio tiene el suyo;
+   * antes se leía el del núcleo y el motor recibía un modo ajeno. */
+  modoMundo: "ritmo" | "fechas" | null
 ): string | null {
   const u = aMundo.universal;
   if (!u.planVigenteAt && u.accionesHechas === 0) return null;
@@ -138,7 +141,7 @@ export function construirBloqueRealidadMundo(
   // Cumplimiento: el del MUNDO, contra las fechas de SUS ítems. Misma regla del
   // modo que el core — sin fechas no se juzga contra un calendario.
   const c = aMundo.cumplimiento;
-  if (aProyecto.modoCamino === "fechas" && c && c.totalConFecha > 0) {
+  if (modoMundo === "fechas" && c && c.totalConFecha > 0) {
     L.push(
       `- Cumplimiento de este mundo contra las fechas que acepté: ${c.aTiempo} a tiempo, ` +
         `${c.adelantadas} adelantadas, ${c.tardias} tardías (de ${c.totalConFecha} con fecha); desviación media de ` +
@@ -156,7 +159,7 @@ export function construirBloqueRealidadMundo(
         `- Moví la fecha de ${PLURAL(c.replanificados.length, "acción", "acciones")} de este mundo: ${cuales.join("; ")}.`
       );
     }
-  } else if (aProyecto.modoCamino === "ritmo") {
+  } else if (modoMundo === "ritmo") {
     L.push("- Elegí llevar esto a mi ritmo, sin fechas: no hay nada que medir contra un calendario.");
   }
 

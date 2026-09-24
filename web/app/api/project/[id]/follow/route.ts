@@ -37,7 +37,7 @@ import catalogo from "@/lib/assets/packs_catalog.json";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
-import { crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
+import { obtenerModosPorEspacio, crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
@@ -238,7 +238,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     bloqueRealidad = construirBloqueRealidad(analytics);
   } else {
     const aMundo = analyticsDeMundo(entradaAnalytics, dominio);
-    bloqueRealidad = aMundo ? construirBloqueRealidadMundo(aMundo, analytics, nombreMundo) : null;
+    // AUD-09 M10: el modo del MUNDO (project_modos), no el del núcleo.
+    const modoMundo = (await obtenerModosPorEspacio(supabase, projectId))[dominio] ?? null;
+    bloqueRealidad = aMundo ? construirBloqueRealidadMundo(aMundo, analytics, nombreMundo, modoMundo) : null;
   }
 
   const mensaje = componerMensajeSeguimiento({ items, detalles, enfoque, bloqueRealidad });
