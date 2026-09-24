@@ -6,7 +6,7 @@
   "fuente": "Edwards et al., Managing Project Risks",
   "resumen_teorico": "El pre-mortem es la técnica más honesta para sacar riesgos que nadie se atreve a decir en voz alta. En vez de preguntar qué podría salir mal, das un salto al futuro y supones que el proyecto ya fracasó rotundamente; desde ahí, cuentas la historia de por qué fracasó. Ese cambio de marco desactiva el optimismo obligatorio: como el fracaso ya es un hecho imaginado, tu mente deja de defenderlo y empieza a buscar culpables reales. Aparecen así los riesgos que la actitud de yo-puedo-con-todo mantenía escondidos. Para el emprendedor solo, que no tiene a nadie que juegue al abogado del diablo, imaginar el fracaso a propósito es la forma más rápida de ver sus propios puntos ciegos.",
   "pasos_accionables": [
-    "Imagina que estás seis meses en el futuro y tu proyecto fracasó por completo.",
+    "Imagina que estas en el futuro y tu proyecto fracaso por completo.",
     "Escribe la historia de por qué fracasó, con detalles, como si ya hubiera pasado.",
     "Subraya en esa historia cada causa concreta: esos son riesgos que no habías nombrado.",
     "Pasa esos riesgos nuevos a tu lista y decide qué harías con los más graves."
@@ -24,5 +24,24 @@
     "cuando nadie a tu alrededor te cuestiona el plan",
     "cuando quieres sacar los riesgos incómodos que nadie diría en voz alta"
   ],
-  "etiqueta_arbol": "Imagina Que Ya Fracasaste"
+  "etiqueta_arbol": "Imagina Que Ya Fracasaste",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-039",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Imagina que estás seis meses en el futuro y tu proyecto fracasó por completo.",
+      "texto_nuevo": "Imagina que estas en el futuro y tu proyecto fracaso por completo.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L4593-L4597",
+        "frase": "if there were to be a similar situation today (or if this type of event were to happen whilst undertaking the project), how would our involvement in the project be affected"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Imaginar un hecho hipotetico para buscar riesgos cabe en la prueba de escenarios del libro, pero el horizonte de seis meses no aparece (busque six months, 6 months).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-062"
+    }
+  ]
 }

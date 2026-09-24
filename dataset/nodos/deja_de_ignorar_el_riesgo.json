@@ -6,10 +6,10 @@
   "fuente": "DeMarco y Lister, Waltzing with Bears",
   "resumen_teorico": "Hay una trampa muy común: para mantenerse positivo, uno decide no pensar en lo que podría salir feo. Es la versión extrema del yo-puedo-con-todo, y es peligrosa porque casi nadie ignora todos los riesgos, solo los más graves, justo los que no tiene idea de cómo enfrentar. Nombrar en voz alta lo que puede fallar se siente como pesimismo o falta de fe, y por eso se calla. Pero permitir un poco de pensamiento negativo, a propósito y a tiempo, es la única forma de no ser emboscado. Como emprendedor solo no tienes un equipo que te avise: tu optimismo puede ser tu punto ciego. Mirar de frente lo que puede salir mal no te vuelve derrotista, te vuelve dueño de tu proyecto.",
   "pasos_accionables": [
-    "Dedica quince minutos, a propósito, a escribir lo que preferirías no pensar de tu proyecto.",
+    "Dedica un rato, a propósito, a escribir lo que preferirías no pensar de tu proyecto.",
     "De tu lista de miedos, marca los que estás ignorando justo porque no sabes cómo resolverlos.",
     "Elige el más feo de esos y dedícale una idea, aunque sea pequeña, de qué harías si pasa.",
-    "Date permiso de pensar en negativo un rato cada semana, sin culpa: es parte del trabajo."
+    "Sugerencia de My Idea: date permiso de pensar en negativo un rato cada semana, sin culpa: es parte del trabajo."
   ],
   "entregable_esperado": "Una lista honesta de los riesgos que estabas evitando mirar, con una primera reacción escrita para el más grave.",
   "nodos_previos": [
@@ -26,5 +26,41 @@
     "cuando solo tienes plan para los riesgos que sabes resolver, e ignoras los demás",
     "cuando sientes que nombrar un problema posible es de mala vibra"
   ],
-  "etiqueta_arbol": "Deja de Ignorar el Riesgo"
+  "etiqueta_arbol": "Deja de Ignorar el Riesgo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-059",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Date permiso de pensar en negativo un rato cada semana, sin culpa: es parte del trabajo.",
+      "texto_nuevo": "Sugerencia de My Idea: date permiso de pensar en negativo un rato cada semana, sin culpa: es parte del trabajo.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L274-L274",
+        "frase": "When you put a structure of risk management in place, you authorize people to think negatively, at least part of the time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El permiso para pensar en negativo está en el libro; la frecuencia 'cada semana' no aparece.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-034"
+    },
+    {
+      "id": "fidelidad-t5-063",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dedica quince minutos, a propósito, a escribir lo que preferirías no pensar de tu proyecto.",
+      "texto_nuevo": "Dedica un rato, a propósito, a escribir lo que preferirías no pensar de tu proyecto.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L274-L274",
+        "frase": "you authorize people to think negatively, at least part of the time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide dedicar un tiempo a pensar en negativo, pero no fija quince minutos; esa duración no aparece como indicación en el libro (solo sale en el ejemplo del corredor).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-098"
+    }
+  ]
 }

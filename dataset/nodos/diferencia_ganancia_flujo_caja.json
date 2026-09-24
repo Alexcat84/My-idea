@@ -7,7 +7,7 @@
   "resumen_teorico": "Uno de los errores más peligrosos que puedes cometer es pensar que si tu negocio es rentable (muestra ganancias en tus reportes) ya tienes suficiente efectivo disponible. Puedes estar duplicando tus ventas cada año y mostrar ganancias en tus números, y aun así quedarte sin efectivo si no gestionas bien tu flujo de caja, sobre todo cuando estás creciendo rápido y necesitas capital de trabajo. Entender esta diferencia es crítico para que tu negocio sobreviva.",
   "pasos_accionables": [
     "Revisa el reporte de flujo de caja de tu negocio por separado del estado de resultados, no asumas que son lo mismo",
-    "Proyecta tu flujo de caja a 12 o 18 meses considerando cuánto esperas crecer en ventas",
+    "Proyecta tu flujo de caja a 12 meses considerando cuanto esperas crecer en ventas",
     "Calcula cuánto efectivo gastas cada mes si tu negocio todavía no genera flujo de caja positivo",
     "Identifica el momento en que crecer en ventas podría dejarte sin liquidez",
     "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica",
@@ -15,7 +15,7 @@
     "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico",
     "Mira cuánto tardan tus clientes en pagarte y cuánto tardas tú en pagarle a tus proveedores."
   ],
-  "entregable_esperado": "Una proyección de flujo de caja a 12 o 18 meses que te anticipe posibles momentos en los que te falte efectivo",
+  "entregable_esperado": "Una proyección de flujo de caja a 12 meses que te anticipe posibles momentos en los que te falte efectivo",
   "nodos_previos": [
     "fundamentos_inteligencia_financiera",
     "lectura_balance_general"
@@ -47,6 +47,41 @@
       "node_id": "profit_vs_cash",
       "titulo": "Ganar dinero en el papel no es lo mismo que tener el dinero en la mano (utilidad vs. efectivo)",
       "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-024",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proyecta tu flujo de caja a 12 o 18 meses considerando cuánto esperas crecer en ventas",
+      "texto_nuevo": "Proyecta tu flujo de caja a 12 meses considerando cuanto esperas crecer en ventas",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L3441-L3441",
+        "frase": "A forecast of cash flow, sometimes for as much as twelve months."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tenia razon el LECTOR A. El libro habla de proyectar el flujo de caja hasta doce meses (L3441) y el ano (L3625, 'project an income statement ... for the year'). Busque 'eighteen', '18 month' y '18-month' en todo el libro: aparece solo en la anecdota inicial (L56, L60, L62, L124), donde dieciocho meses es el plazo que tardaria la empresa en quedarse sin caja, y el amigo lo vio con los ratios, no con una proyeccion a ese horizonte. Asi que el horizonte de 18 meses no tiene respaldo, en contra de lo que dice B. Tampoco es CONTRARIO: el paso conserva los 12 meses del libro, y el 'as much as twelve months' describe lo que pide el banquero, no un tope que el libro fije. El 18 es un plazo anadido.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-081"
+    },
+    {
+      "id": "fidelidad-t5-025",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una proyección de flujo de caja a 12 o 18 meses que te anticipe posibles momentos en los que te falte efectivo",
+      "texto_nuevo": "Una proyección de flujo de caja a 12 meses que te anticipe posibles momentos en los que te falte efectivo",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L3441-L3441",
+        "frase": "A forecast of cash flow, sometimes for as much as twelve months."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el horizonte de 18 meses, que es un ANADIDO de plazo sin respaldo (el libro habla de proyectar hasta doce meses, L3441). Se corrige igual que el paso 1: se deja solo el horizonte de 12 meses.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-081"
     }
   ]
 }

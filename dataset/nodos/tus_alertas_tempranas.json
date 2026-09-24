@@ -9,7 +9,7 @@
     "De cada riesgo que vas a manejar, define la señal más temprana de que está empezando.",
     "Elige señales que puedas ver de verdad, no cosas que solo notarías cuando ya es tarde.",
     "Anota junto a cada alerta qué harás en cuanto se encienda.",
-    "Revisa esas señales con la misma frecuencia con que revisas tu proyecto."
+    "Vigila esas señales de forma continua, sin bajar la guardia, para activar tu plan de contingencia a tiempo si se encienden."
   ],
   "entregable_esperado": "Una lista de tus riesgos manejados, cada uno con su señal de alerta temprana y la acción que dispara.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "cuando tienes planes de emergencia pero no sabes cuándo activarlos",
     "cuando un riesgo se volvió problema sin que lo vieras venir"
   ],
-  "etiqueta_arbol": "Tus Alertas Tempranas"
+  "etiqueta_arbol": "Tus Alertas Tempranas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-016",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Revisa esas señales con la misma frecuencia con que revisas tu proyecto.",
+      "texto_nuevo": "Vigila esas señales de forma continua, sin bajar la guardia, para activar tu plan de contingencia a tiempo si se encienden.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L622-L624",
+        "frase": "For each managed risk, you need to choose one or more early indications of materialization. Then, watch them like a hawk so you can activate your contingency plan in a timely manner, if necessary."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro fija el ritmo de vigilancia de los indicadores: 'like a hawk' (L624) y 'continuous monitoring of transition indicators' (L1160). El paso da otro valor para ese mismo dato, la frecuencia de revision del proyecto, que puede ser mucho menor. Busque en todo el libro (weekly, periodic, monthly, status meeting, risk review, regularly) y ningun pasaje ata la vigilancia de indicadores a la revision del proyecto. Como el libro da otro valor para la misma frecuencia, por la vara es CONTRARIO y no ANADIDO.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-023"
+    }
+  ]
 }

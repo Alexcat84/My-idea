@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define el precio objetivo real que quieres pagar o cobrar antes de hablar con la otra parte.",
     "Calcula tu primera oferta bastante alejada de ese objetivo, dejando margen para moverte.",
-    "Prepara dos o tres subidas graduales, cada vez más pequeñas, en vez de una sola concesión grande.",
+    "Prepara tres subidas graduales, cada vez más pequeñas (al 85 %, 95 % y 100 % de tu objetivo), en vez de una sola concesión grande.",
     "Usa preguntas abiertas entre cada oferta para que la otra parte hable antes de que tú vuelvas a mover el número.",
     "Cierra con una cifra específica y no redonda, y añade un pequeño extra que no cuesta dinero."
   ],
@@ -26,5 +26,24 @@
     "Sientes que si abres con tu precio real perderás margen para negociar.",
     "Quieres evitar terminar aceptando el punto medio sin haber buscado algo mejor."
   ],
-  "etiqueta_arbol": "Sube tu oferta en tramos"
+  "etiqueta_arbol": "Sube tu oferta en tramos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-006",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Prepara dos o tres subidas graduales, cada vez más pequeñas, en vez de una sola concesión grande.",
+      "texto_nuevo": "Prepara tres subidas graduales, cada vez más pequeñas (al 85 %, 95 % y 100 % de tu objetivo), en vez de una sola concesión grande.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L4296-L4300",
+        "frase": "Calcula tres tramos de aumentos decrecientes (de 85 %, 95 % y 100 %)."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El modelo Ackerman fija tres tramos decrecientes (85 %, 95 % y 100 %; también en L4444). Decir 'dos o tres' cambia la secuencia del libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-014"
+    }
+  ]
 }

@@ -10,7 +10,7 @@
     "Ordena esos objetivos de mayor a menor prioridad y marca cuales podrias soltar sin problema.",
     "Busca o pregunta directamente quien toma las decisiones del lado del proveedor.",
     "Averigua como le va al negocio del proveedor: su industria, su competencia, sus dificultades actuales.",
-    "Redacta la agenda de la reunion de negociacion y enviala con un dia de anticipacion.",
+    "Redacta la agenda de la reunión de negociación y envíala con tiempo para que el proveedor la revise y comente, de modo que la versión final quede publicada al menos un día antes.",
     "Abre tu la reunion el dia acordado para marcar el ritmo de la conversacion."
   ],
   "entregable_esperado": "Una lista priorizada de objetivos de negociacion junto con una agenda escrita lista para enviar al proveedor.",
@@ -29,5 +29,24 @@
     "Vas a negociar con alguien que te va a seguir vendiendo en el futuro y no quieres quemar la relacion.",
     "No conoces bien el negocio de tu proveedor y te cuesta entender por que insiste en ciertas condiciones."
   ],
-  "etiqueta_arbol": "Prepara tu postura antes de negociar"
+  "etiqueta_arbol": "Prepara tu postura antes de negociar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Redacta la agenda de la reunion de negociacion y enviala con un dia de anticipacion.",
+      "texto_nuevo": "Redacta la agenda de la reunión de negociación y envíala con tiempo para que el proveedor la revise y comente, de modo que la versión final quede publicada al menos un día antes.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L4983",
+        "frase": "Make sure to allow enough time for the supplier to thoroughly review the agenda, make comments/changes, and get back to you in time to pub lish the agenda at least one day before the negotiations begin."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, un dia antes es el minimo para publicar la agenda definitiva, despues de que el proveedor la haya revisado. Mandarla solo un dia antes altera el plazo y se salta esa revision.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-079"
+    }
+  ]
 }

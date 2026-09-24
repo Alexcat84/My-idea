@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar qué inversiones en I+D o software generan ingresos futuros y podrían amortizarse.",
     "Documentar criterios de factibilidad técnica antes de decidir amortizar vs. gastar.",
-    "Registrar patentes y propiedad intelectual en el balance según su vida útil legal.",
+    "Registrar patentes y propiedad intelectual en el balance y amortizarlas a lo largo de su vida útil, es decir, la vida del flujo de ingresos que generan.",
     "Ser conservador: si hay duda, expensar en el periodo actual en vez de inflar ganancias."
   ],
   "entregable_esperado": "Política contable clara sobre tratamiento de I+D e intangibles, documentada y consistente.",
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Si la empresa invierte en desarrollo de software, patentes o marcas y necesita decidir cómo reflejarlo contablemente"
   ],
-  "etiqueta_arbol": "Valora tus Activos Intangibles"
+  "etiqueta_arbol": "Valora tus Activos Intangibles",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Registrar patentes y propiedad intelectual en el balance según su vida útil legal.",
+      "texto_nuevo": "Registrar patentes y propiedad intelectual en el balance y amortizarlas a lo largo de su vida útil, es decir, la vida del flujo de ingresos que generan.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L1313-L1326",
+        "frase": "So these investments are considered intangible assets and should be amortized over the life of the revenue stream they generate."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro fija la amortizacion de patentes y PI en su vida util o la vida del flujo de ingresos, no en la vida legal (L826: la patente puede valer casi cero tras un par de anos); el paso cambia el plazo.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-086"
+    }
+  ]
 }

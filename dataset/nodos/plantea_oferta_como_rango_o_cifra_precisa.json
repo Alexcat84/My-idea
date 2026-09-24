@@ -6,7 +6,7 @@
   "fuente": "Chris Voss, Rompe la barrera del no",
   "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Ambas formas transmiten que hiciste un cálculo cuidadoso, en vez de improvisar un número al azar, y dejan menos margen para que te empujen hacia abajo. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales. Esto importa especialmente cuando no conoces con certeza el valor de mercado de lo que negocias.",
   "pasos_accionables": [
-    "Antes de dar tu precio, calcula un rango donde el número más bajo sea el que realmente aceptarías.",
+    "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir.",
     "Si prefieres dar una sola cifra, hazla específica y no redonda.",
     "Practica decir el rango o la cifra en voz alta antes de la reunión para que suene natural, no improvisado.",
     "Si te preguntan por qué esa cifra exacta, ten lista una explicación breve basada en tus costos o en el mercado."
@@ -25,5 +25,24 @@
     "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando.",
     "Quieres dar la impresión de haber calculado bien tu oferta, no de haber tirado un número al azar."
   ],
-  "etiqueta_arbol": "Ofrece rangos, no cifras redondas"
+  "etiqueta_arbol": "Ofrece rangos, no cifras redondas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-015",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de dar tu precio, calcula un rango donde el número más bajo sea el que realmente aceptarías.",
+      "texto_nuevo": "Antes de dar tu precio, calcula un rango donde el número más bajo sea la cifra que de verdad quieres conseguir.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L2676-L2682",
+        "frase": "cuya cifra inferior era precisamente la que de hecho tenían pensado cobrar"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón A. El libro pone en el extremo bajo del rango la cifra que de verdad quieres conseguir (L2680), y avisa de que el otro 'se aferrará a la cifra más baja' (L2682). En sus ejemplos el extremo bajo es un objetivo ambicioso: Jerry, 130.000 frente a los 110.000 que pedía (L2676-L2678), y Ángel, que cobra el extremo bajo de su rango (L2838-L2842). El paso lo cambia por 'el que realmente aceptarías', que es tu mínimo. El libro desaconseja justo eso: si te centras en el mínimo, eso es lo que conseguirás (L5241). El umbral cambiado hace el paso CONTRARIO. La lectura benévola de B no la sostiene la palabra 'aceptarías'.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-083"
+    }
+  ]
 }

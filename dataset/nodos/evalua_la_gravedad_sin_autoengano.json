@@ -9,7 +9,7 @@
     "Repasa tu lista ya ordenada por gravedad y pregúntate, riesgo por riesgo, si le pusiste el nivel que le corresponde o el que te conviene creer.",
     "Marca los riesgos donde notas que minimizaste algo que no quieres enfrentar.",
     "Marca los riesgos donde notas que inflaste la gravedad de algo que ya decidiste evitar de todos modos.",
-    "Vuelve a mirar tu orden final y confirma que los tres más graves según el mismo criterio, no según tu miedo, sean los que atenderás primero.",
+    "Vuelve a mirar tu orden final y confirma que los mas graves segun el mismo criterio, no segun tu miedo, sean los que atenderas primero.",
     "Si tu orden cambia después de esta revisión, quédate con el nuevo orden aunque incomode."
   ],
   "entregable_esperado": "Tu lista de riesgos ya ordenada por gravedad, revisada y corregida de sesgos, con los más graves confirmados como los primeros que vas a atender.",
@@ -27,5 +27,24 @@
     "cuando notas que le bajas gravedad a un riesgo solo porque no quieres lidiar con él",
     "cuando trabajas solo y no tienes a nadie que cuestione cómo calificaste cada riesgo"
   ],
-  "etiqueta_arbol": "Evalúa la Gravedad Sin Autoengaño"
+  "etiqueta_arbol": "Evalúa la Gravedad Sin Autoengaño",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-042",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vuelve a mirar tu orden final y confirma que los tres más graves según el mismo criterio, no según tu miedo, sean los que atenderás primero.",
+      "texto_nuevo": "Vuelve a mirar tu orden final y confirma que los mas graves segun el mismo criterio, no segun tu miedo, sean los que atenderas primero.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L4904-L4904",
+        "frase": "The outcome of qualitative risk analysis should be a list of project threat risks that the stakeholder organisation faces, categorised according to type and grouped or ranked in terms of the level of severity they represent."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro prioriza por severidad con un criterio uniforme, pero no fija un corte de tres riesgos (el unico numero de priorizacion es diez en el Caso A, L5192, y no como regla).",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-125"
+    }
+  ]
 }

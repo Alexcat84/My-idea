@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Regla fundamental: muchos números en un estado de resultados reflejan estimaciones y supuestos, no hechos objetivos. Los contadores deciden qué incluir, cómo estimarlo y cuándo reconocerlo. Entender esto es la base de la inteligencia financiera del emprendedor.",
   "pasos_accionables": [
-    "Asumir que ninguna cifra financiera es 100% objetiva; siempre hay juicio detrás.",
+    "Asumir que muchas cifras financieras reflejan estimaciones y supuestos, no hechos objetivos; el efectivo es la excepcion, una cifra dura.",
     "Preguntar sistemáticamente al equipo contable sobre el origen y supuestos de cada cifra relevante.",
     "Desarrollar el hábito de cuestionar constructivamente los reportes financieros propios."
   ],
@@ -23,5 +23,24 @@
   "condiciones_activacion": [
     "Cuando el usuario empieza a interactuar con contadores o finanzas por primera vez"
   ],
-  "etiqueta_arbol": "Cuestiona los Supuestos Contables"
+  "etiqueta_arbol": "Cuestiona los Supuestos Contables",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Asumir que ninguna cifra financiera es 100% objetiva; siempre hay juicio detrás.",
+      "texto_nuevo": "Asumir que muchas cifras financieras reflejan estimaciones y supuestos, no hechos objetivos; el efectivo es la excepcion, una cifra dura.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L1918-L1918",
+        "frase": "Since cash is real money, there are no assumptions and estimates incorporated in the numbers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro sostiene que muchas cifras reflejan estimaciones y supuestos (L560) y que las de rentabilidad no son del todo objetivas (L2478, 'None of these numbers is wholly objective'). Pero excluye expresamente el efectivo: en L1918 dice que no incorpora supuestos ni estimaciones, en L1200 que es 'one of the few line items that are not subject to accountants' discretion' y en L3290 que 'Cash is a hard number, not easily subject to manipulation'. Busque en todo el libro apoyo a la idea de que ninguna cifra es objetiva y solo hay generalizaciones limitadas a 'many numbers' o a las cifras de rentabilidad. El paso dice que ninguna cifra es objetiva y que siempre hay juicio, lo que invierte la distincion que el libro sostiene. A lo marco como OPERATIVO aun reconociendo la exclusion del efectivo, y eso no encaja con la vara.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-077"
+    }
+  ]
 }

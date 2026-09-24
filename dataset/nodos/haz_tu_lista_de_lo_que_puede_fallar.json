@@ -10,7 +10,7 @@
     "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
     "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo.",
     "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto.",
-    "De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
+    "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
   ],
   "entregable_esperado": "La lista inicial de riesgos nombrados sin filtro, separada en dos grupos: los que pasan al registro para atenderse y los que se dejan marcados como observados.",
   "nodos_previos": [
@@ -30,5 +30,24 @@
     "cuando te censuras al pensar en riesgos porque suenan pesimistas o exagerados",
     "cuando no sabes distinguir cuáles riesgos merecen acción y cuáles puedes dejar pasar por ahora"
   ],
-  "etiqueta_arbol": "Lista de lo Que Puede Fallar"
+  "etiqueta_arbol": "Lista de lo Que Puede Fallar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-060",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.",
+      "texto_nuevo": "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L600-L602",
+        "frase": "The risk still belongs on your risk list (since you still need to watch it), but it should be explicitly noted as a project assumption."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el LECTOR B. El libro hace el triaje (L146) y solo manda mantener en la lista, marcados como supuesto del proyecto, los riesgos que pertenecen a niveles superiores (L602). A los de consecuencias minimas los manda ignorar (L427-L429), y del tipo asteroide dice que ni siquiera vale la pena ponerlos en la lista (L412). En ningun sitio crea un estado 'observado' frente a 'activo' para todo lo que se descarta. Ese formato de marcado es invencion practica. No es CONTRARIO porque L602 apoya en parte mantener en la lista y marcar lo que no gestionas. El analogo que cita el LECTOR A cubre solo una clase de riesgos y otro rotulo.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-066"
+    }
+  ]
 }

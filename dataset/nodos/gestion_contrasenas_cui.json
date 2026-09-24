@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
   "pasos_accionables": [
-    "Definir reglas de complejidad y renovación de contraseñas para la organización.",
+    "Sugerencia de My Idea: definir reglas de contrasenas para la organizacion que incluyan criterios de complejidad y de renovacion.",
     "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
     "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
     "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas."
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos."
   ],
-  "etiqueta_arbol": "Protege tus Contraseñas Correctamente"
+  "etiqueta_arbol": "Protege tus Contraseñas Correctamente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-043",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir reglas de complejidad y renovación de contraseñas para la organización.",
+      "texto_nuevo": "Sugerencia de My Idea: definir reglas de contrasenas para la organizacion que incluyan criterios de complejidad y de renovacion.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "I have an idea/books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "L415-L417",
+        "frase": "Define password rules for your organization."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro solo pide definir reglas de contrasenas y mantener una lista de contrasenas comprometidas; no habla de complejidad ni de renovacion. Busque complex, expir, rotat, renew y change sin hallazgos pertinentes.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C032-044"
+    }
+  ]
 }

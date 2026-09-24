@@ -9,7 +9,7 @@
     "Evaluar objetivamente si un cofundador está escalando con las necesidades del startup",
     "Revisar acuerdos legales previos (no competencia, PI) antes de cofundar con excompañeros",
     "Planificar una salida ordenada y con términos claros si un cofundador debe dejar el equipo",
-    "Consultar con un abogado especializado en startups sobre riesgos legales de rotación",
+    "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
     "Documentar el impacto en equity y roles cuando ocurre una salida"
   ],
   "entregable_esperado": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
@@ -28,5 +28,24 @@
     "Si existe riesgo legal por acuerdos previos con empleadores",
     "Cuando el equipo necesita 'diversity shock' para reactivar la creatividad"
   ],
-  "etiqueta_arbol": "Cuando un Fundador se Va"
+  "etiqueta_arbol": "Cuando un Fundador se Va",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consultar con un abogado especializado en startups sobre riesgos legales de rotación",
+      "texto_nuevo": "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L1193",
+        "frase": "Before deciding to cofound (or hire), each founder should make sure he or she is familiar with the other's agreements and the potential problems they may pose."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razón B. L1193 cita la observación del abogado Bill Schnoor sobre acuerdos de no competencia, de no solicitación y de propiedad intelectual. Pero el paso que recomienda el libro es que cada fundador conozca los acuerdos del otro, no que consulte a un abogado. Busqué en todo el libro (lawyer, attorney, counsel, legal advice, noncompete, nonsolicitation, abogado). Solo encontré L485, L1193, L1520 (Evan contrata abogados, como ejemplo) y L1744 (poner el acuerdo por escrito por cuenta propia o con abogado). Ninguno recomienda consultar a un abogado especializado en startups por los riesgos de la rotación. El paso añade un responsable concreto en materia legal, así que es ANADIDO de tipo LEGAL_CIFRA. A se equivocó al tratarlo como una concreción sin dato nuevo.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-107"
+    }
+  ]
 }
