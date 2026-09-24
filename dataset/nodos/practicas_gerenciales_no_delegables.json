@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Conjunto de responsabilidades que tu no puedes delegar si quieres sostener mejoras reales de desempeño: liderar tu mismo el esfuerzo de mejora, dar tiempo real a quien trabaja en ello, montar la estructura minima necesaria, asignar los recursos, revisar el avance de los proyectos y quitar obstaculos o resistencias cuando el progreso se estanca.",
   "pasos_accionables": [
-    "Asumir tu mismo, o la persona que te ayuda de confianza, el liderazgo de la iniciativa de mejora, sin dejarlo flotando",
+    "Asumir tu mismo, personalmente, el liderazgo de la iniciativa de mejora, sin delegarlo ni dejarlo flotando",
     "Definir con claridad cuanto tiempo real se dedica a trabajar en la mejora y respetarlo",
     "Montar la estructura minima necesaria: quien hace que y quien le da seguimiento",
     "Asignar los recursos que el proyecto necesita, sea tiempo, gente o dinero",
@@ -25,5 +25,24 @@
     "Cuando arrancas una iniciativa de mejora seria en tu negocio",
     "Cuando los proyectos de mejora no tienen tiempo, apoyo real ni seguimiento sostenido"
   ],
-  "etiqueta_arbol": "Asume tus Responsabilidades Gerenciales"
+  "etiqueta_arbol": "Asume tus Responsabilidades Gerenciales",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Asumir tu mismo, o la persona que te ayuda de confianza, el liderazgo de la iniciativa de mejora, sin dejarlo flotando",
+      "texto_nuevo": "Asumir tu mismo, personalmente, el liderazgo de la iniciativa de mejora, sin delegarlo ni dejarlo flotando",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L5704-L5708",
+        "frase": "In every such organization, the upper managers took charge of the initiative and personally carried out certain nondelegable roles."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que el liderazgo de la mejora es indelegable y lo ejerce personalmente la alta direccion (L5154: no se conocen excepciones); el paso permite delegarlo en otra persona.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-073"
+    }
+  ]
 }

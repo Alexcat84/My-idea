@@ -11,7 +11,7 @@
     "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
     "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
     "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema",
-    "Usar el resultado para planificar mantenimiento preventivo o garantías"
+    "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantias, sin confundir el MTBF con la vida util del producto"
   ],
   "entregable_esperado": "Cálculo de confiabilidad del producto para un tiempo específico de operación, con MTBF documentado",
   "nodos_previos": [
@@ -35,6 +35,25 @@
       "node_id": "distribucion_exponencial",
       "titulo": "Distribución Exponencial para Análisis de Confiabilidad",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-014",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el resultado para planificar mantenimiento preventivo o garantías",
+      "texto_nuevo": "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantias, sin confundir el MTBF con la vida util del producto",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L20150-L20198",
+        "frase": "MTBF is a useful measure of reliability, but it is not correct for all applications."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica la formula y como interpretar el MTBF, pero no la vincula a planificar mantenimiento preventivo ni garantias; advierte ademas que el MTBF no es la vida de servicio ni el momento de reemplazo.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C048-078"
     }
   ]
 }

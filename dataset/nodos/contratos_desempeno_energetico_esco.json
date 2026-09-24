@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta util cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiendote modernizar tus sistemas energeticos minimizando el riesgo financiero en mejoras de gran escala.",
   "pasos_accionables": [
-    "Investigar y evaluar ESCOs certificadas disponibles en tu region",
+    "Investigar y evaluar ESCOs disponibles en tu region",
     "Solicitar una evaluacion inicial de oportunidades de eficiencia energetica",
     "Negociar el contrato de desempeño energetico con garantias de ahorro",
     "Definir el alcance de auditoria, implementacion y mantenimiento a cargo del ESCO",
@@ -35,6 +35,25 @@
       "node_id": "contratacion_desempeno_energetico_esco",
       "titulo": "Contratación de Desempeño Energético mediante ESCOs",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investigar y evaluar ESCOs certificadas disponibles en tu region",
+      "texto_nuevo": "Investigar y evaluar ESCOs disponibles en tu region",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L2776-L2776",
+        "frase": "Consider hiring an ESCO to identify, evaluate, and possibly even implement energy-saving retrofits"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro recomienda contratar una ESCO pero no exige ninguna certificacion; no hay referencia a ESCOs certificadas ni acreditadas en el libro.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C060-108"
     }
   ]
 }

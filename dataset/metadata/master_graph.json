@@ -5630,7 +5630,7 @@
         "Elige una prueba piloto con meta modesta y retorno rápido",
         "Define metas que puedas medir y las métricas para seguir el progreso",
         "Documenta lo que aprendas para escalarlo a futuros proyectos",
-        "Evalúa qué le importa más a tus clientes: costo, cuánto control mantienes tú y qué tan fácil es escalarlo"
+        "Para priorizar el rediseno, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse"
       ],
       "entregable_esperado": "Una prueba piloto de rediseño definida, con metas, métricas y un plan para documentar lo que aprendas",
       "nodos_previos": [
@@ -5644,7 +5644,26 @@
         "Si nunca has hecho un rediseño ecológico y necesitas un punto de partida de bajo riesgo",
         "Si detectas altos niveles de desperdicio o toxicidad en tu producto"
       ],
-      "etiqueta_arbol": "Empieza con un Piloto Pequeño"
+      "etiqueta_arbol": "Empieza con un Piloto Pequeño",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-007",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Evalúa qué le importa más a tus clientes: costo, cuánto control mantienes tú y qué tan fácil es escalarlo",
+          "texto_nuevo": "Para priorizar el rediseno, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse",
+          "cita": {
+            "libro": "The Green to Gold Business Play - Daniel C. Esty",
+            "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+            "lineas": "L3679-L3683",
+            "frase": "The key to successful design is meeting the full array of customer expectations: quality, price, and environmental impact."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro dice qué espera el cliente (L3679: calidad, precio e impacto ambiental). Aparte da una lista de preguntas para priorizar entre opciones de rediseno (L3683), y en ella \"What's within your control?\" y \"Which results could be scalable?\" son criterios de la empresa, no preferencias del cliente. El paso dice que al cliente le importan el costo, el control que tú mantienes y la facilidad de escalar. Así da otro contenido a un dato que el libro fija, y eso cae en la regla de dato cambiado. Busqué en todo el libro (matter most to, customers care/want/value, scalab, within your control) y ningún pasaje dice que al cliente le importen el control o la escalabilidad. L5269 habla de qué temas de sostenibilidad importan al cliente, no de esto. El LECTOR A reconoce la mezcla, pero la tiene por concreción, y no lo es: cambia de quién es cada criterio.",
+          "indice": 4,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C059-016"
+        }
+      ]
     },
     "aprendizaje_institucionalizado_benchmarking": {
       "node_id": "aprendizaje_institucionalizado_benchmarking",
@@ -7187,7 +7206,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "La Auditoría del Presidente es una práctica en la que el líder máximo de la organización participa personalmente en la revisión de los procesos de gestión de calidad. Esta participación directa envía un mensaje poderoso sobre la prioridad de la calidad en la organización y aumenta la probabilidad de que se tomen acciones correctivas, ya que simplifica la comunicación hacia los niveles superiores.",
       "pasos_accionables": [
-        "Programar una auditoría anual liderada personalmente por el presidente o CEO",
+        "Sugerencia de My Idea: Programar una auditoría anual liderada personalmente por el presidente o CEO",
         "Definir las preguntas fundamentales que la auditoría debe abordar a nivel organizacional",
         "Involucrar a las funciones principales de la organización en el proceso de auditoría",
         "Comunicar los resultados a toda la organización para reforzar la prioridad de la calidad",
@@ -7204,7 +7223,26 @@
         "Cuando se busca reforzar el compromiso visible del liderazgo con la calidad",
         "Cuando auditorías previas no han generado el impacto organizacional esperado"
       ],
-      "etiqueta_arbol": "Involúcrate en la Auditoría de Calidad"
+      "etiqueta_arbol": "Involúcrate en la Auditoría de Calidad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-010",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Programar una auditoría anual liderada personalmente por el presidente o CEO",
+          "texto_nuevo": "Sugerencia de My Idea: Programar una auditoría anual liderada personalmente por el presidente o CEO",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L9362-L9362",
+            "frase": "Audits conducted by executives at the highest levels of the organization where the president personally participates are usually called \"The President's Audit\""
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro describe la auditoría del presidente pero no fija frecuencia; busqué annual, yearly, once a year, each year junto a audit y solo aparece para auditorías de producto de productos simples (L10360).",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C039-049"
+        }
+      ]
     },
     "auditoria_producto": {
       "node_id": "auditoria_producto",
@@ -8579,7 +8617,7 @@
         "Identificar las prácticas líderes que permiten ese desempeño superior",
         "Desarrollar e implementar planes de acción de mejora basados en lo que encontraste",
         "Evaluar los resultados y replicar el aprendizaje en tu negocio",
-        "Subcontratar o realizar el estudio de benchmarking comparando prácticas"
+        "Evaluar el propio proceso de benchmarking y, si hace falta, ajustar sus objetivos y alcance (incluido si el estudio lo haras tu o un tercero) antes de repetir el ciclo"
       ],
       "entregable_esperado": "Informe de benchmarking con las brechas de desempeño cuantificadas, las prácticas líderes identificadas y un plan de acción de mejora que tú decides poner en marcha",
       "nodos_previos": [
@@ -8605,6 +8643,25 @@
           "node_id": "benchmarking_mejores_practicas",
           "titulo": "Benchmarking de Mejores Prácticas",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-001",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Subcontratar o realizar el estudio de benchmarking comparando prácticas",
+          "texto_nuevo": "Evaluar el propio proceso de benchmarking y, si hace falta, ajustar sus objetivos y alcance (incluido si el estudio lo haras tu o un tercero) antes de repetir el ciclo",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L17355-L17569",
+            "frase": "The first step is to recognize the need for benchmarking, to clearly understand what is to be benchmarked and why, to determine the benchmarking methodology that is going to deliver the analysis required, and to identify who is to be benchmarked."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. Que el estudio lo haga un tercero o la propia organizacion esta en el libro (L17141, L17156, L17160, L17171), asi que el contenido del paso tiene respaldo. El fallo es la secuencia. Los pasos 1 a 7 del nodo siguen el ciclo de 7 pasos de Juran (L17355): planificacion, recogida de datos, analisis, practicas lideres, planes, implantacion y evaluacion. Elegir la metodologia y a quien se compara se decide en el primer paso (L17368), y la recogida y la comparacion van justo despues (L17390). Tras evaluar y replicar, el libro solo pide evaluar el propio proceso y ajustar objetivos y alcance antes de repetirlo (L17569). Colocar como paso 8, despues de evaluar resultados, la realizacion o subcontratacion del estudio invierte ese orden, y la vara califica una secuencia cambiada como CONTRARIO. Ningun pasaje del libro pone la realizacion del estudio despues de la evaluacion.",
+          "indice": 7,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C040-091"
         }
       ]
     },
@@ -9945,14 +10002,14 @@
       "dominio": "environmental",
       "titulo_concepto": "Evaluación de Materialidad del Negocio",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-      "resumen_teorico": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para tu negocio, es decir, cuáles son verdaderamente relevantes frente a la sobrecarga de posibles iniciativas ambientales o sociales sin criterio de priorización. Evalúas el potencial de cada issue para impactar costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debes revisar de forma regular, ya sea anualmente o cada 3 a 4 años, para mantener la priorización alineada con los cambios del negocio y su entorno.",
+      "resumen_teorico": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para tu negocio, es decir, cuáles son verdaderamente relevantes frente a la sobrecarga de posibles iniciativas ambientales o sociales sin criterio de priorización. Evalúas el potencial de cada issue para impactar costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debes revisar de forma regular, con una actualización anual y una reevaluación más completa cada 3 a 4 años, para mantener la priorización alineada con los cambios del negocio y su entorno.",
       "pasos_accionables": [
         "Lista todos los issues de sostenibilidad identificados previamente que sean relevantes para tu industria",
         "Evalúa cada issue contra los 9 factores de impacto competitivo: costos, proveedores, clientes, diferenciación, barreras de entrada, innovación, crecimiento, stakeholders y regulación",
         "Crea un scorecard de materialidad clasificando cada issue según su impacto potencial",
         "Prioriza los issues con mayor potencial de impacto en tu posición competitiva para enfoque inmediato",
         "Complementa con el análisis externo de stakeholders",
-        "Programa una revisión periódica de la priorización, ya sea anual o cada 3 a 4 años"
+        "Programa una actualización anual de la priorización y una reevaluación más completa cada 3 a 4 años"
       ],
       "entregable_esperado": "Scorecard de materialidad con issues de sostenibilidad priorizados según su impacto potencial en la posición competitiva del negocio",
       "nodos_previos": [
@@ -9978,6 +10035,41 @@
           "node_id": "evaluacion_materialidad_empresarial",
           "titulo": "Evaluación de Materialidad Empresarial",
           "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-008",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Programa una revisión periódica de la priorización, ya sea anual o cada 3 a 4 años",
+          "texto_nuevo": "Programa una actualización anual de la priorización y una reevaluación más completa cada 3 a 4 años",
+          "cita": {
+            "libro": "The Green to Gold Business Play - Daniel C. Esty",
+            "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+            "lineas": "L1436",
+            "frase": "Most companies need to plan to do some degree of updating every year with more thorough reassessments undertaken every three to four years."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pide las dos cosas, una actualizacion anual y una reevaluacion completa cada 3 a 4 años; presentarlas como opciones alternativas permite quedarse sin la revision anual.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C059-087"
+        },
+        {
+          "id": "fidelidad-t6-009",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para tu negocio, es decir, cuáles son verdaderamente relevantes frente a la sobrecarga de posibles iniciativas ambientales o sociales sin criterio de priorización. Evalúas el potencial de cada issue para impactar costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debes revisar de forma regular, ya sea anualmente o cada 3 a 4 años, para mantener la priorización alineada con los cambios del negocio y su entorno.",
+          "texto_nuevo": "Framework basado en las fuerzas competitivas de Michael Porter para evaluar qué tan material es cada issue de sostenibilidad para tu negocio, es decir, cuáles son verdaderamente relevantes frente a la sobrecarga de posibles iniciativas ambientales o sociales sin criterio de priorización. Evalúas el potencial de cada issue para impactar costos y riesgos operativos, relaciones con proveedores, lealtad del cliente, diferenciación de producto, barreras de entrada, oportunidades de innovación, tasa de crecimiento de la industria, prioridades de stakeholders y políticas gubernamentales. Es un proceso iterativo que debes revisar de forma regular, con una actualización anual y una reevaluación más completa cada 3 a 4 años, para mantener la priorización alineada con los cambios del negocio y su entorno.",
+          "cita": {
+            "libro": "The Green to Gold Business Play - Daniel C. Esty",
+            "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+            "lineas": "L1436",
+            "frase": "Most companies need to plan to do some degree of updating every year with more thorough reassessments undertaken every three to four years."
+          },
+          "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el mismo dato CONTRARIO del paso 5 (revisión anual o cada 3 a 4 años como alternativas). El libro (L1436) pide las dos cosas: una actualización cada año y una reevaluación más completa cada 3 a 4 años. Se corrige igual que el paso.",
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C059-087"
         }
       ]
     },
@@ -18550,7 +18642,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Una política es una guía para la acción gerencial. Las políticas de calidad publicadas suelen declarar la intención de satisfacer las necesidades del cliente, igualar o superar a la competencia y comprometerse con la mejora continua. Deben ser aprobadas al más alto nivel y sujetas a auditoría (p.ej. bajo ISO 9000).",
       "pasos_accionables": [
-        "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad",
+        "Redactar politicas de calidad que cubran necesidades del cliente, competitividad y mejora continua",
         "Obtener aprobación al más alto nivel ejecutivo",
         "Establecer mecanismos de auditoría para verificar el cumplimiento de las políticas",
         "Comunicar las políticas a toda la organización como guía de decisiones diarias",
@@ -18582,6 +18674,25 @@
           "node_id": "politica_calidad_organizacional",
           "titulo": "Política de Calidad Organizacional",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-011",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad",
+          "texto_nuevo": "Redactar politicas de calidad que cubran necesidades del cliente, competitividad y mejora continua",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L8948-L8954",
+            "frase": "most published quality policies declare the intention to meet the needs of customers. ... Most published policies include language relative to competitiveness in quality ... A third frequent area of published quality policy relates to quality improvement"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro nombra tres areas habituales de la politica (necesidades del cliente, competitividad, mejora) y referencias a clientes internos; no incluye la reduccion de costos de mala calidad como contenido de la politica. Se busco policy junto a cost of poor quality sin hallarlo.",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C041-113"
         }
       ]
     },
@@ -22136,7 +22247,7 @@
       "fuente": "The Green to Gold Business Play - Daniel C. Esty",
       "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta util cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiendote modernizar tus sistemas energeticos minimizando el riesgo financiero en mejoras de gran escala.",
       "pasos_accionables": [
-        "Investigar y evaluar ESCOs certificadas disponibles en tu region",
+        "Investigar y evaluar ESCOs disponibles en tu region",
         "Solicitar una evaluacion inicial de oportunidades de eficiencia energetica",
         "Negociar el contrato de desempeño energetico con garantias de ahorro",
         "Definir el alcance de auditoria, implementacion y mantenimiento a cargo del ESCO",
@@ -22165,6 +22276,25 @@
           "node_id": "contratacion_desempeno_energetico_esco",
           "titulo": "Contratación de Desempeño Energético mediante ESCOs",
           "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-023",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Investigar y evaluar ESCOs certificadas disponibles en tu region",
+          "texto_nuevo": "Investigar y evaluar ESCOs disponibles en tu region",
+          "cita": {
+            "libro": "The Green to Gold Business Play - Daniel C. Esty",
+            "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+            "lineas": "L2776-L2776",
+            "frase": "Consider hiring an ESCO to identify, evaluate, and possibly even implement energy-saving retrofits"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro recomienda contratar una ESCO pero no exige ninguna certificacion; no hay referencia a ESCOs certificadas ni acreditadas en el libro.",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C060-108"
         }
       ]
     },
@@ -22455,7 +22585,7 @@
         "Determinar el punto más temprano de prueba para detectar causas asignables",
         "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
         "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
-        "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
+        "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
         "Establecer un sistema simple y confiable de recolección de datos",
         "Calcular límites de control y definir instrucciones de interpretación y acción",
         "Graficar los datos e interpretar los resultados"
@@ -22496,6 +22626,25 @@
           "node_id": "control_estadistico_de_procesos_2",
           "titulo": "Control Estadístico de Procesos mediante Gráficos de Control",
           "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-012",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
+          "texto_nuevo": "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L18669-L18669",
+            "frase": "rational subgroups should be chosen so that the units within a subgroup have the greatest chance of being alike and the units between subgroups have the greatest chance of being different."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro define el subgrupo racional pero no recomienda n=4 ni n=5. Busque subgroup size, four or five, 4 or 5, n = 4 y n = 5, sin resultado. Su unico ejemplo usa seis unidades por subgrupo, como ilustracion y no como recomendacion.",
+          "indice": 6,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C042-043"
         }
       ]
     },
@@ -30153,7 +30302,7 @@
         "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental.",
         "Analiza la urgencia y la economía de reparar frente a usar el producto tal cual.",
         "Consulta las medidas de aptitud del cliente, aunque difieran de las tuyas.",
-        "Define un criterio de delegación: resuelve tú mismo los casos menores y escala a un especialista o comité los de alto impacto, documentando la decisión para evitar buscar culpables."
+        "Define un criterio de delegación: si hay poco dinero en juego, delega la decisión en quien lleva la calidad o en un especialista; si hay mucho, tómala tú con tus personas clave, y trata la pérdida como una oportunidad de mejora sin buscar culpables."
       ],
       "entregable_esperado": "Informe de análisis de aptitud para el uso con recomendación de disposición del lote no conforme y criterio de delegación según el impacto de la decisión.",
       "nodos_previos": [
@@ -30180,6 +30329,25 @@
           "node_id": "decision_aptitud_para_uso",
           "titulo": "Decisión de Aptitud para el Uso (Fitness for Purpose)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-002",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Define un criterio de delegación: resuelve tú mismo los casos menores y escala a un especialista o comité los de alto impacto, documentando la decisión para evitar buscar culpables.",
+          "texto_nuevo": "Define un criterio de delegación: si hay poco dinero en juego, delega la decisión en quien lleva la calidad o en un especialista; si hay mucho, tómala tú con tus personas clave, y trata la pérdida como una oportunidad de mejora sin buscar culpables.",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L24416",
+            "frase": "If the amount of money at stake is small, this decision will be delegated to a staff specialist, to the quality manager, or to some continuing decision-making committee such as a material review board. If the amount at stake is large, the decision will usually be made by a team of upper managers."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro reparte la decisión al revés que el paso. Cuando hay poco dinero en juego, la decisión va a un especialista, al responsable de calidad o a un comité. Cuando hay mucho, la toma un equipo de la alta dirección. El paso invierte ese reparto: el directivo resuelve los casos menores y los de alto impacto van a un especialista. El capítulo 6 (L8223) solo respalda en parte reservar las decisiones clave a un órgano formal y delegar el resto; nunca manda los casos de alto impacto a un especialista. Lo de no buscar culpables sí lo respalda el libro (L8242). Redaccion en la voz de la casa por la baranda residuo_corporativo (scripts/censo_duplicacion.py): el comite y el equipo de la alta direccion del libro pasan a quien lleva la calidad y a ti con tus personas clave, con la misma logica de delegar segun el dinero en juego.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C043-100"
         }
       ]
     },
@@ -45368,7 +45536,7 @@
         "Estudiar los principios centrales de cada uno de los cinco gurús de la calidad",
         "Evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
         "Seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
-        "Documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad"
+        "Sugerencia de My Idea: documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad"
       ],
       "entregable_esperado": "Documento de análisis comparativo de enfoques de calidad con la selección justificada del marco a adoptar",
       "nodos_previos": [
@@ -45382,7 +45550,26 @@
         "Al iniciar el diseño de un sistema de gestión de calidad desde cero",
         "Cuando la organización busca fundamentos teóricos para justificar su enfoque de calidad"
       ],
-      "etiqueta_arbol": "Compara a los Gurús de Calidad"
+      "etiqueta_arbol": "Compara a los Gurús de Calidad",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-013",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad",
+          "texto_nuevo": "Sugerencia de My Idea: documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L205-L219",
+            "frase": "The approaches of these gurus have similarities as well as differences--particularly in the relative emphasis on managerial, statistical, technological, and behavioral elements. This book draws upon the contributions of these and other experts."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón el lector B. El libro compara a los cinco gurús y dice que se apoya en todos, con Juran como base (L209). No pide elegir un enfoque ni documentar esa elección con su justificación. La cita del lector A (L2038) habla de la declaración de la política de calidad en los manuales, no de registrar una base filosófica elegida entre gurús, así que no sostiene el paso. Busqué en todo el libro philosophy, document y la política de calidad, y no hay ningún pasaje que pida ese registro. Lo que se añade es un formato, un documento de elección y justificación, por eso el tipo es PRACTICO.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C046-112"
+        }
+      ]
     },
     "engineering_as_marketing": {
       "node_id": "engineering_as_marketing",
@@ -58154,7 +58341,7 @@
         "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
         "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
         "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema",
-        "Usar el resultado para planificar mantenimiento preventivo o garantías"
+        "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantias, sin confundir el MTBF con la vida util del producto"
       ],
       "entregable_esperado": "Cálculo de confiabilidad del producto para un tiempo específico de operación, con MTBF documentado",
       "nodos_previos": [
@@ -58178,6 +58365,25 @@
           "node_id": "distribucion_exponencial",
           "titulo": "Distribución Exponencial para Análisis de Confiabilidad",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-014",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Usar el resultado para planificar mantenimiento preventivo o garantías",
+          "texto_nuevo": "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantias, sin confundir el MTBF con la vida util del producto",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L20150-L20198",
+            "frase": "MTBF is a useful measure of reliability, but it is not correct for all applications."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica la formula y como interpretar el MTBF, pero no la vincula a planificar mantenimiento preventivo ni garantias; advierte ademas que el MTBF no es la vida de servicio ni el momento de reemplazo.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C048-078"
         }
       ]
     },
@@ -63775,7 +63981,7 @@
       "resumen_teorico": "Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.",
       "pasos_accionables": [
         "Identificar las múltiples características de calidad correlacionadas del producto",
-        "Calcular la matriz de covarianza entre las características",
+        "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
         "Construir el estadístico multivariado (por ejemplo, T² de Hotelling)",
         "Establecer límites de control multivariados apropiados",
         "Monitorear el estadístico combinado en lugar de gráficos independientes"
@@ -63793,7 +63999,26 @@
         "Cuando el producto tiene múltiples características de calidad correlacionadas",
         "Cuando el monitoreo independiente de características genera conclusiones distorsionadas"
       ],
-      "etiqueta_arbol": "Vigila Varias Variables a la Vez"
+      "etiqueta_arbol": "Vigila Varias Variables a la Vez",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-015",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Calcular la matriz de covarianza entre las características",
+          "texto_nuevo": "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L20690-L20693",
+            "frase": "Multivariate control charts and statistics (e.g., Hotelling's T2 charts, multivariate EWMA) address this issue. See Montgomery (2000, Section 8.4) for a highly useful discussion."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo nombra el T2 de Hotelling y el EWMA multivariado y remite a Montgomery; no da ningun procedimiento de calculo. Busque en todo el libro 'covarian', 'covariance matrix', 'variance-covariance', 'Hotelling', 'matrix of': la unica aparicion de covarianza es MANOVA/MANCOVA (L20051), ajena a los graficos de control. Calcular la matriz de covarianza es una tecnica concreta que el libro no aporta; aunque sea correcta e intrinseca al T2, es un dato tecnico nuevo, no una concrecion del texto.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C049-092"
+        }
+      ]
     },
     "graficos_control_tiradas_cortas": {
       "node_id": "graficos_control_tiradas_cortas",
@@ -66283,7 +66508,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Un riesgo es cualquier cosa que puede salir mal y resultar en una pérdida. Antes de gestionar o mitigar riesgos es indispensable identificarlos de forma sistemática, porque suelen permanecer invisibles mientras las condiciones son favorables y solo se manifiestan bajo condiciones adversas. El primer paso es reunir conocimiento amplio sobre tu negocio, sus sistemas, personas y procesos, y examinar de forma crítica qué puede fallar en cada uno. Usa el sombrero negro de los Seis Sombreros de pensar para cuestionar cada respuesta y evitar quedarte solo con lo obvio. Revisar fallas pasadas ayuda a completar la lista. El resultado debe documentarse por completo antes de pasar a evaluar la probabilidad o el impacto de cada riesgo.",
       "pasos_accionables": [
-        "Reúne conocimiento amplio de tu negocio consultando por teléfono a quienes conocen sus sistemas, personas y procesos, o revisando tú mismo cada área si trabajas solo.",
+        "Sugerencia de My Idea: reune conocimiento amplio de tu negocio consultando, por ejemplo por telefono, a quienes conocen sus sistemas, personas y procesos, o revisando tu mismo cada area si trabajas solo.",
         "Elabora una lista de actividades, sistemas y procesos usados en tu negocio.",
         "Pregunta sistemáticamente qué puede salir mal para cada elemento de la lista.",
         "Aplica el sombrero negro de los Seis Sombreros de pensar para cuestionar críticamente cada respuesta y evitar quedarte con lo superficial.",
@@ -66318,6 +66543,25 @@
           "node_id": "gestion_riesgo_identificacion",
           "titulo": "Identificación de Riesgos Operacionales",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-016",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Reúne conocimiento amplio de tu negocio consultando por teléfono a quienes conocen sus sistemas, personas y procesos, o revisando tú mismo cada área si trabajas solo.",
+          "texto_nuevo": "Sugerencia de My Idea: reune conocimiento amplio de tu negocio consultando, por ejemplo por telefono, a quienes conocen sus sistemas, personas y procesos, o revisando tu mismo cada area si trabajas solo.",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L12206-L12211",
+            "frase": "form a multifunctional crisis team with broad knowledge of your business, your systems, your people and your processes."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide formar un equipo multifuncional con conocimiento amplio; consultar por telefono (y revisar solo cada area) es un medio que el libro no menciona.",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C049-112"
         }
       ]
     },
@@ -80630,7 +80874,7 @@
       "pasos_accionables": [
         "Diseñar encuesta basada en las cinco dimensiones SERVQUAL",
         "Aplicar la encuesta a clientes reales del servicio",
-        "Comparar expectativas vs. percepciones por dimensión",
+        "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
         "Priorizar mejoras en las dimensiones con mayor brecha"
       ],
       "entregable_esperado": "Reporte de brechas de calidad percibida por dimensión SERVQUAL",
@@ -80643,7 +80887,26 @@
       "condiciones_activacion": [
         "Cuando se necesite medir la calidad percibida por el cliente en un servicio intangible"
       ],
-      "etiqueta_arbol": "Mide la Calidad de tu Servicio"
+      "etiqueta_arbol": "Mide la Calidad de tu Servicio",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-017",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Comparar expectativas vs. percepciones por dimensión",
+          "texto_nuevo": "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L21983-L21995",
+            "frase": "One approach to measuring service quality is the SERVQUAL model (Zeithaml et al., 1990). This model identifies five dimensions of quality"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. SERVQUAL solo aparece una vez en el libro (L21983), que se limita a enumerar las cinco dimensiones. Busque con Grep en todo el libro expectations junto a perception, perceived, compare o gap, y ningun pasaje describe comparar expectativas con percepciones. Las menciones de percepcion del cliente (L3631, L21868, L22009) no tratan ese metodo. La comparacion expectativas frente a percepciones es un metodo de medicion concreto que el libro no respalda; no es una simple concrecion de medir por dimension. Es de tipo PRACTICO porque el dato es un metodo o formato de medicion, no una cifra ni una norma.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-088"
+        }
+      ]
     },
     "modelo_shingo_evaluacion_excelencia": {
       "node_id": "modelo_shingo_evaluacion_excelencia",
@@ -86875,7 +87138,7 @@
         "Evalúa cada especificación o nivel de precisión contra su verdadero impacto en la satisfacción de tu cliente",
         "Elimina inversión en refinamientos, procesos o controles que no sean perceptibles ni valorados por el cliente",
         "Reserva el estándar de perfección únicamente para los atributos críticos de seguridad o salud",
-        "Define tus propios criterios de 'fit for purpose' para detectar sobreingeniería antes de invertir recursos"
+        "Define los criterios de 'fit for purpose' a partir de lo que el cliente valora para detectar sobreingeniería antes de invertir recursos"
       ],
       "entregable_esperado": "Matriz de criticidad de atributos de calidad (crítico de seguridad vs no crítico) con recomendaciones de inversión y especificaciones revisadas.",
       "nodos_previos": [
@@ -86899,6 +87162,25 @@
           "node_id": "perfeccionismo_vs_valor_2",
           "titulo": "Perfeccionismo como Desperdicio de Valor (Contextos Críticos vs Desperdicio)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-003",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Define tus propios criterios de 'fit for purpose' para detectar sobreingeniería antes de invertir recursos",
+          "texto_nuevo": "Define los criterios de 'fit for purpose' a partir de lo que el cliente valora para detectar sobreingeniería antes de invertir recursos",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L3201; L265; L972",
+            "frase": "Who gets to decide what \"fitness\" means? Who decides what \"purpose\" means? The user decides what \"use\" means, and the user decides what \"fitness\" means. Any other answer is bound to lead to argument and misunderstanding. Providers rarely win here."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector A, y hay una cita mas fuerte que la suya. El libro deja claro que la aptitud y el proposito los define el usuario y que cualquier otra respuesta lleva a malentendidos (L3201, L265). Tambien dice que los planificadores no deben sustituir las necesidades del cliente por su propio criterio tecnico (L3610). El paso manda definir criterios propios de fit for purpose, y eso invierte quien decide. Busque con Grep pasajes que dejen esa definicion al proveedor. L8138 (criterios de trabajo para quien no conoce la aptitud de uso) se refiere a especificaciones derivadas de la aptitud, no a definirla. L24412 insiste en que valen las medidas del usuario y no las del fabricante. Detectar el perfeccionismo si esta en el libro (L972), pero el criterio debe salir del cliente.",
+          "indice": 4,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-111"
         }
       ]
     },
@@ -90639,7 +90921,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "Conjunto de responsabilidades que tu no puedes delegar si quieres sostener mejoras reales de desempeño: liderar tu mismo el esfuerzo de mejora, dar tiempo real a quien trabaja en ello, montar la estructura minima necesaria, asignar los recursos, revisar el avance de los proyectos y quitar obstaculos o resistencias cuando el progreso se estanca.",
       "pasos_accionables": [
-        "Asumir tu mismo, o la persona que te ayuda de confianza, el liderazgo de la iniciativa de mejora, sin dejarlo flotando",
+        "Asumir tu mismo, personalmente, el liderazgo de la iniciativa de mejora, sin delegarlo ni dejarlo flotando",
         "Definir con claridad cuanto tiempo real se dedica a trabajar en la mejora y respetarlo",
         "Montar la estructura minima necesaria: quien hace que y quien le da seguimiento",
         "Asignar los recursos que el proyecto necesita, sea tiempo, gente o dinero",
@@ -90658,7 +90940,26 @@
         "Cuando arrancas una iniciativa de mejora seria en tu negocio",
         "Cuando los proyectos de mejora no tienen tiempo, apoyo real ni seguimiento sostenido"
       ],
-      "etiqueta_arbol": "Asume tus Responsabilidades Gerenciales"
+      "etiqueta_arbol": "Asume tus Responsabilidades Gerenciales",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-004",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Asumir tu mismo, o la persona que te ayuda de confianza, el liderazgo de la iniciativa de mejora, sin dejarlo flotando",
+          "texto_nuevo": "Asumir tu mismo, personalmente, el liderazgo de la iniciativa de mejora, sin delegarlo ni dejarlo flotando",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L5704-L5708",
+            "frase": "In every such organization, the upper managers took charge of the initiative and personally carried out certain nondelegable roles."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que el liderazgo de la mejora es indelegable y lo ejerce personalmente la alta direccion (L5154: no se conocen excepciones); el paso permite delegarlo en otra persona.",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-073"
+        }
+      ]
     },
     "practicas_manufactura_justo_a_tiempo": {
       "node_id": "practicas_manufactura_justo_a_tiempo",
@@ -90696,9 +90997,9 @@
       "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.",
       "pasos_accionables": [
         "Centrar el proceso entre los límites de especificación al iniciar",
-        "Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites",
-        "Tomar muestras periódicas de tres piezas consecutivas",
-        "Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado",
+        "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) segun la distancia a los limites de especificacion",
+        "Sugerencia de My Idea: tomar muestras periodicas de tres piezas consecutivas",
+        "Corregir el proceso cuando las mediciones indiquen un cambio en el centrado o la dispersion que pueda producir piezas fuera de especificacion",
         "Ajustar el proceso y reiniciar el monitoreo"
       ],
       "entregable_esperado": "Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales",
@@ -90712,7 +91013,60 @@
         "Cuando se requiere un método de control simple y rápido en planta",
         "Cuando el enfoque debe ser en conformidad con especificación más que en control estadístico puro"
       ],
-      "etiqueta_arbol": "Usa el Pre-Control Estadístico"
+      "etiqueta_arbol": "Usa el Pre-Control Estadístico",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-018",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Tomar muestras periódicas de tres piezas consecutivas",
+          "texto_nuevo": "Sugerencia de My Idea: tomar muestras periodicas de tres piezas consecutivas",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L20605-L20610",
+            "frase": "It requires no plotting and no computations, and it needs only three measurements to give control information."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El unico pasaje de PRE-Control en el libro (L20605-L20610) dice que bastan tres mediciones, sin decir como se toman. Busque en todo el libro consecutive, three pieces, three units, periodic sampling y pre-control: consecutive solo aparece en estudios de capacidad (L20891), independencia de mediciones (L20968) y lotes de muestreo (L25083), nunca en PRE-Control. Que las piezas sean consecutivas y el muestreo periodico es una regla de muestreo concreta que el libro no da; no es una simple concrecion de tres mediciones, por eso no es OPERATIVO. No es CONTRARIO porque el libro no fija otro valor para ese dato.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-002"
+        },
+        {
+          "id": "fidelidad-t6-019",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado",
+          "texto_nuevo": "Corregir el proceso cuando las mediciones indiquen un cambio en el centrado o la dispersion que pueda producir piezas fuera de especificacion",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L20605-L20610",
+            "frase": "It requires no plotting and no computations, and it needs only three measurements to give control information."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no menciona zonas amarillas ni ninguna regla de dos de tres; solo dice que PRE-Control detecta cambios en el centrado o en la dispersion.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-092"
+        },
+        {
+          "id": "fidelidad-t6-020",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites",
+          "texto_nuevo": "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) segun la distancia a los limites de especificacion",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L20605-L20610",
+            "frase": "It requires no plotting and no computations, and it needs only three measurements"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no describe zonas de colores verde, amarilla y roja; es un formato de la tecnica que no aparece en el texto.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-105"
+        }
+      ]
     },
     "precios_todos_los_dias_bajos": {
       "node_id": "precios_todos_los_dias_bajos",
@@ -105972,7 +106326,7 @@
       "resumen_teorico": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora directamente en las decisiones clave, y cada proyecto que dirige debe generar un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
       "pasos_accionables": [
         "Elige a alguien con potencial de liderazgo y conocimiento técnico para que asuma el rol de Black Belt",
-        "Dale una capacitación intensiva en 4 sesiones semanales, con intervalos para que aplique lo aprendido en la práctica",
+        "Dale una capacitación intensiva en 4 sesiones de una semana completa cada una, con intervalos de 4 a 5 semanas entre ellas para que aplique lo aprendido en la práctica",
         "Asígnale proyectos con un objetivo de retorno mínimo de $250,000",
         "Acuerda con esa persona cómo te va a asesorar en la priorización y el lanzamiento de proyectos",
         "Definir responsabilidades de coordinación entre equipos y análisis complejos",
@@ -106005,6 +106359,25 @@
           "node_id": "rol_black_belt",
           "titulo": "Rol del Black Belt en Six Sigma (Especialista en Breakthrough)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-005",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Dale una capacitación intensiva en 4 sesiones semanales, con intervalos para que aplique lo aprendido en la práctica",
+          "texto_nuevo": "Dale una capacitación intensiva en 4 sesiones de una semana completa cada una, con intervalos de 4 a 5 semanas entre ellas para que aplique lo aprendido en la práctica",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L14078",
+            "frase": "usually delivered in four weeklong sessions with 4- to 5-week intervening intervals"
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR A. El libro dice cuatro sesiones de una semana entera, separadas por intervalos de 4 a 5 semanas. En espanol, 'sesiones semanales' se lee como una sesion por semana: cambia la duracion de cada sesion y el ritmo de la formacion. Busque en todo el libro algo que apoye sesiones con frecuencia semanal y no hay nada. L7264 habla de hasta seis semanas de formacion, y L14213 de un periodo de practica entre las semanas de formacion, lo que respalda 'para que aplique lo aprendido' pero no la frecuencia semanal. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C055-070"
         }
       ]
     },
@@ -109428,7 +109801,7 @@
       "pasos_accionables": [
         "Identifica qué partes de tu negocio son el corazón que no debes soltar",
         "Para cada actividad que consideres soltar, revisa qué tan bien la haces hoy, cuánta capacidad tienes, cuánto cuesta y si cumples los plazos",
-        "Antes de decidir, mira esa actividad como una oportunidad de mejorar su calidad y compara con dejarla como está",
+        "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
         "Piensa cómo afecta esto el ánimo y la lealtad de las personas que trabajan contigo"
       ],
       "entregable_esperado": "Tu decisión de hacerlo tú mismo o subcontratarlo, con la lista de lo que es el corazón de tu negocio y lo que sí puedes soltar",
@@ -109443,7 +109816,26 @@
         "Cuando estés evaluando subcontratar algo que hoy haces internamente",
         "Cuando busques bajar costos o mejorar la calidad usando a alguien de afuera"
       ],
-      "etiqueta_arbol": "Decide Hacer o Comprar"
+      "etiqueta_arbol": "Decide Hacer o Comprar",
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-006",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Antes de decidir, mira esa actividad como una oportunidad de mejorar su calidad y compara con dejarla como está",
+          "texto_nuevo": "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L23645",
+            "frase": "Perhaps we should first study the entire activity to be outsourced as a quality improvement project ... and the necessary internal changes would be made. The result (quality and costs) could then be compared to those of outside suppliers."
+          },
+          "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pide estudiar y mejorar la actividad internamente y comparar el resultado con los proveedores externos; el paso cambia el termino de comparacion a dejarla como esta.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C056-026"
+        }
+      ]
     },
     "seleccion_mensajeros_creibles": {
       "node_id": "seleccion_mensajeros_creibles",
@@ -111882,7 +112274,7 @@
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
       "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, y medir el impacto de tus resoluciones en la lealtad de marca, fortalece la confianza a largo plazo.",
       "pasos_accionables": [
-        "Define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+        "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
         "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
         "Prepárate y capacítate tú mismo en cómo responder reclamos con empatía y rapidez",
         "Pide activamente retroalimentación a tus clientes después de una compra o servicio para detectar insatisfacción antes de perderlos",
@@ -111917,6 +112309,25 @@
           "node_id": "gestion_de_quejas_y_fidelizacion",
           "titulo": "Gestión de Quejas y su Impacto en la Fidelización",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-021",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+          "texto_nuevo": "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L914-L920",
+            "frase": "A response center staffed to provide 24/7 access by consumers"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El canal 24 horas y la linea gratuita estan en el libro, pero WhatsApp es una herramienta que el libro no menciona (buscado whatsapp).",
+          "indice": 0,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-024"
         }
       ]
     },
@@ -112645,7 +113056,7 @@
       "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
       "pasos_accionables": [
         "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
-        "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+        "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
         "Mide la magnitud real de los síntomas con datos, no con impresiones.",
         "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
         "Implementa un remedio dirigido específicamente a esa causa raíz.",
@@ -112735,6 +113146,25 @@
           "node_id": "six_sigma_dmaic_2",
           "titulo": "Six Sigma - Metodología DMAIC",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t6-022",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+          "texto_nuevo": "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L5036-L5040",
+            "frase": "Define the problem. (Champions and management do this.)"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide definir el problema con una declaracion del problema, pero 'diez segundos' es una cifra que no aparece (buscado ten seconds, 10 seconds).",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-114"
         }
       ]
     },

@@ -7,7 +7,7 @@
   "resumen_teorico": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal de Juran para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo, usando métricas cuantificables en cada fase para saber si realmente estás progresando o solo dando vueltas alrededor del síntoma.",
   "pasos_accionables": [
     "Selecciona el problema concreto que vas a resolver y date un plazo para arrancar el proyecto.",
-    "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+    "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
     "Mide la magnitud real de los síntomas con datos, no con impresiones.",
     "Analiza la información recolectada hasta encontrar la causa raíz, no solo el síntoma visible.",
     "Implementa un remedio dirigido específicamente a esa causa raíz.",
@@ -97,6 +97,25 @@
       "node_id": "six_sigma_dmaic_2",
       "titulo": "Six Sigma - Metodología DMAIC",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define el problema con claridad, en una frase que puedas explicar a cualquiera en diez segundos.",
+      "texto_nuevo": "Define el problema con claridad, en una frase que puedas explicar a cualquiera.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L5036-L5040",
+        "frase": "Define the problem. (Champions and management do this.)"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide definir el problema con una declaracion del problema, pero 'diez segundos' es una cifra que no aparece (buscado ten seconds, 10 seconds).",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-114"
     }
   ]
 }

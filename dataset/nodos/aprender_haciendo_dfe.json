@@ -10,7 +10,7 @@
     "Elige una prueba piloto con meta modesta y retorno rápido",
     "Define metas que puedas medir y las métricas para seguir el progreso",
     "Documenta lo que aprendas para escalarlo a futuros proyectos",
-    "Evalúa qué le importa más a tus clientes: costo, cuánto control mantienes tú y qué tan fácil es escalarlo"
+    "Para priorizar el rediseno, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse"
   ],
   "entregable_esperado": "Una prueba piloto de rediseño definida, con metas, métricas y un plan para documentar lo que aprendas",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Si nunca has hecho un rediseño ecológico y necesitas un punto de partida de bajo riesgo",
     "Si detectas altos niveles de desperdicio o toxicidad en tu producto"
   ],
-  "etiqueta_arbol": "Empieza con un Piloto Pequeño"
+  "etiqueta_arbol": "Empieza con un Piloto Pequeño",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-007",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evalúa qué le importa más a tus clientes: costo, cuánto control mantienes tú y qué tan fácil es escalarlo",
+      "texto_nuevo": "Para priorizar el rediseno, evalúa qué le importa más a tus clientes, cuánto valor añade y a qué costo, qué está bajo tu control y qué resultados podrían escalarse",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L3679-L3683",
+        "frase": "The key to successful design is meeting the full array of customer expectations: quality, price, and environmental impact."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro dice qué espera el cliente (L3679: calidad, precio e impacto ambiental). Aparte da una lista de preguntas para priorizar entre opciones de rediseno (L3683), y en ella \"What's within your control?\" y \"Which results could be scalable?\" son criterios de la empresa, no preferencias del cliente. El paso dice que al cliente le importan el costo, el control que tú mantienes y la facilidad de escalar. Así da otro contenido a un dato que el libro fija, y eso cae en la regla de dato cambiado. Busqué en todo el libro (matter most to, customers care/want/value, scalab, within your control) y ningún pasaje dice que al cliente le importen el control o la escalabilidad. L5269 habla de qué temas de sostenibilidad importan al cliente, no de esto. El LECTOR A reconoce la mezcla, pero la tiene por concreción, y no lo es: cambia de quién es cada criterio.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C059-016"
+    }
+  ]
 }

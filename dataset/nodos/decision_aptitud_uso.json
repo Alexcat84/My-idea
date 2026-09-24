@@ -11,7 +11,7 @@
     "Evalúa los riesgos de seguridad, integridad estructural o impacto ambiental.",
     "Analiza la urgencia y la economía de reparar frente a usar el producto tal cual.",
     "Consulta las medidas de aptitud del cliente, aunque difieran de las tuyas.",
-    "Define un criterio de delegación: resuelve tú mismo los casos menores y escala a un especialista o comité los de alto impacto, documentando la decisión para evitar buscar culpables."
+    "Define un criterio de delegación: si hay poco dinero en juego, delega la decisión en quien lleva la calidad o en un especialista; si hay mucho, tómala tú con tus personas clave, y trata la pérdida como una oportunidad de mejora sin buscar culpables."
   ],
   "entregable_esperado": "Informe de análisis de aptitud para el uso con recomendación de disposición del lote no conforme y criterio de delegación según el impacto de la decisión.",
   "nodos_previos": [
@@ -38,6 +38,25 @@
       "node_id": "decision_aptitud_para_uso",
       "titulo": "Decisión de Aptitud para el Uso (Fitness for Purpose)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Define un criterio de delegación: resuelve tú mismo los casos menores y escala a un especialista o comité los de alto impacto, documentando la decisión para evitar buscar culpables.",
+      "texto_nuevo": "Define un criterio de delegación: si hay poco dinero en juego, delega la decisión en quien lleva la calidad o en un especialista; si hay mucho, tómala tú con tus personas clave, y trata la pérdida como una oportunidad de mejora sin buscar culpables.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L24416",
+        "frase": "If the amount of money at stake is small, this decision will be delegated to a staff specialist, to the quality manager, or to some continuing decision-making committee such as a material review board. If the amount at stake is large, the decision will usually be made by a team of upper managers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro reparte la decisión al revés que el paso. Cuando hay poco dinero en juego, la decisión va a un especialista, al responsable de calidad o a un comité. Cuando hay mucho, la toma un equipo de la alta dirección. El paso invierte ese reparto: el directivo resuelve los casos menores y los de alto impacto van a un especialista. El capítulo 6 (L8223) solo respalda en parte reservar las decisiones clave a un órgano formal y delegar el resto; nunca manda los casos de alto impacto a un especialista. Lo de no buscar culpables sí lo respalda el libro (L8242). Redaccion en la voz de la casa por la baranda residuo_corporativo (scripts/censo_duplicacion.py): el comite y el equipo de la alta direccion del libro pasan a quien lleva la calidad y a ti con tus personas clave, con la misma logica de delegar segun el dinero en juego.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C043-100"
     }
   ]
 }
