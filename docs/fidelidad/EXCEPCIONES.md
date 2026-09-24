@@ -1,48 +1,60 @@
 # EXCEPCIONES DE LA CAMPANIA DE FIDELIDAD
 
-Lo que la regla B del fundador no resuelve limpio va aqui, **sin corregir**, para que lo decida el fundador. Cada entrada trae el nodo, el texto vigente, por que la regla no lo resuelve y la cita del libro. Nada de esto se ha tocado en dataset/.
+Lo que la regla del fundador no resolvio limpio va aqui, **sin corregir**, para que lo decida el fundador. **Ninguna es un CONTRARIO** en la lectura final. Cada entrada trae el texto vigente, los veredictos que tuvo y por que la regla no lo resuelve. DECISION_DEL_FUNDADOR en blanco.
 
-Nota: los nodos de Reason y de Assembling Tomorrow se vuelven a leer enteros en la busqueda de la campania; si su verificador y su arbitro los resuelven como CONTRARIO, se corrigen por la regla de CONTRARIO y salen de esta lista, y se dice.
+## A. Resuelta por la campania
 
-## De la tanda fidelidad-t3 (regla B sobre los ANADIDOS ya fichados)
+- `ficcion_especulativa_como_metodo` paso 2 (antes D05, tanda t3): la campania lo leyo ANADIDO con texto limpio y quedo corregido en fidelidad-t9-013.
 
-### D01: `abrazar_la_incomodidad`, pasos_accionables paso 4
+## B. Veredictos que no coinciden entre fases (ninguno CONTRARIO)
 
-- **Ficha:** muestreo A1
+### `abrazar_la_incomodidad` paso 4 (Assembling Tomorrow)
+
 - **Texto vigente:** Registra los descubrimientos que surgen después de superar la incomodidad inicial.
-- **Por que la regla no lo resuelve:** El dato no es cifra, plazo, norma ni materia legal, ni tampoco herramienta, frecuencia o formato: es una secuencia conceptual (registrar lo que surge 'después de superar la incomodidad') que invierte la idea del libro, que pide quedarse en ella sin resolverla (L2688: "But that's where you need to dwell."; "good noticing requires you to linger in discomfort."; L2690: "discomfort without resolution"). La regla B de AÑADIDO no lo resuelve limpio; roza CONTRARIO. Propuesta para el fundador: reclasificar como CONTRARIO y aplicar el texto fiel 'Registra los descubrimientos que surgen mientras permaneces en la incomodidad, sin resolverla antes de tiempo.'
-- **Cita:** L2688: "But that’s where you need to dwell."; L2688: "good noticing requires you to linger in discomfort."
+- **Veredictos:** muestreo: ANADIDO (A1); regla B de t3: EXCEPCION, roza CONTRARIO (el libro pide "linger in discomfort", L2688; el paso registra lo que surge "despues de superar" la incomodidad); campania (lector y verificador ciego): OPERATIVO
+- **Texto fiel propuesto en su dia:** Registra los descubrimientos que surgen mientras permaneces en la incomodidad, sin resolverla antes de tiempo.
 - **DECISION_DEL_FUNDADOR:** 
 
-### D05: `ficcion_especulativa_como_metodo`, pasos_accionables paso 2
+### `accidentes_individuales_vs_organizacionales` paso 1 (Reason)
 
-- **Ficha:** muestreo A5
-- **Texto vigente:** Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real, en 10-15 años, del tipo usuarios, empresas, reguladores
-- **Por que la regla no lo resuelve:** El dato mezcla dos añadidos de naturaleza distinta: una cifra ('en 10-15 años', LEGAL_CIFRA) y un reparto de personajes ('del tipo usuarios, empresas, reguladores'), que no es cifra ni legal y que como mucho sería un añadido práctico de formato. La regla manda EXCEPCION cuando el dato mezcla las dos cosas. Si el fundador decide tratarlo entero como eliminación, el texto fiel sería 'Proyecta esa tendencia hacia el futuro contando una historia concreta, con personajes y con un dilema real.' (L193: "Some have plots and characters."); el libro no fija horizonte ni reparto.
-- **Cita:** L193: "Some have plots and characters."
-- **DECISION_DEL_FUNDADOR:** 
-
-### D22: `accidentes_individuales_vs_organizacionales`, pasos_accionables paso 1
-
-- **Ficha:** muestreo A23
 - **Texto vigente:** Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación.
-- **Por que la regla no lo resuelve:** Lo añadido es una condición de orden, 'antes de iniciar cualquier investigación'. No es cifra, plazo, norma ni materia legal. Tampoco es herramienta, frecuencia ni formato. Reescribirlo como sugerencia de My Idea seguiría pidiendo al cliente clasificar sin investigar, y eso choca con la lógica del libro: la línea entre accidente individual y organizacional no es fácil de trazar, y los accidentes individuales suelen tener origen organizacional (L323). Candidato para el fundador: el texto_fiel_propuesto de la ficha.
-- **Cita:** L323: "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event."
+- **Veredictos:** muestreo con tercer lector: ANADIDO (A23, la condicion "antes de iniciar cualquier investigacion"); regla B de t3: EXCEPCION (condicion de orden, ni cifra ni herramienta); campania: OPERATIVO
 - **DECISION_DEL_FUNDADOR:** 
 
-### D23: `documentacion_mantenimiento_linea_base`, pasos_accionables paso 2
+### `documentacion_mantenimiento_linea_base` paso 2 (Reason)
 
-- **Ficha:** muestreo A24
 - **Texto vigente:** Asegurar que toda tarea, sin importar su origen, incluya documentación completa y advertencias de seguridad.
-- **Por que la regla no lo resuelve:** Lo añadido es una regla interna universal ('toda tarea, sin importar su origen, incluya documentación completa'). No es norma legal, y la palabra 'norma' de la regla es ambigua para este caso. Tampoco es un añadido práctico limpio: convertirlo en sugerencia seguiría proponiendo el mismo paquete completo para todo, y el libro dice que línea y base requieren paquetes de trabajo distintos (L417). Candidato para el fundador: el texto_fiel_propuesto de la ficha, centrado en el traspaso de línea a base.
-- **Cita:** L417: "The line and base environments thus require different kinds of planning and supportive work packs."
+- **Veredictos:** muestreo con tercer lector: ANADIDO (A24, "toda tarea, sin importar su origen" frente a L417, linea y base piden planes distintos); regla B de t3: EXCEPCION (regla interna universal, ni norma legal ni herramienta); campania: OPERATIVO
 - **DECISION_DEL_FUNDADOR:** 
 
-### D48: `sesgo_retrospectivo_hindsight_2`, pasos_accionables paso 3
+### `sesgo_retrospectivo_hindsight_2` paso 3 (Dekker)
 
-- **Ficha:** tramo1 DK4-035
 - **Texto vigente:** Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes
-- **Por que la regla no lo resuelve:** El dato añadido ('sin olvidar el volumen de información disperso entre los participantes') no es cifra, plazo, norma ni materia legal, y tampoco es herramienta, frecuencia ni formato. Es un matiz conceptual que desvía la noción de observabilidad del libro. Según el libro, la observabilidad depende de la interfaz y de las tareas, metas, intereses, conocimientos y cultura que se entrelazan en quien mira (Dekker L1728-L1734), no del volumen de información repartido entre participantes. Reescribirlo como 'Sugerencia de My Idea' no tiene sentido en un paso conceptual, y la regla no cubre este tipo de añadido. Propuesta fiel disponible para el fundador: 'Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, dado cómo se presentaba la información y las tareas, metas, intereses y conocimientos que tenías entre manos a la vez'. El resumen_teorico ya es fiel y no repite el dato.
-- **Cita:** L1728-L1734: "data observability: what would have been observable given the features of the interface and the multiple interleaving tasks, goals, interests, knowledge and even culture of the people looking at it."
+- **Veredictos:** tramo 1: ANADIDO (DK4-035); regla B de t3: EXCEPCION (el dato "sin olvidar el volumen de informacion disperso entre los participantes" no es cifra ni herramienta, es un matiz conceptual)
+- **DECISION_DEL_FUNDADOR:** 
+
+## C. Cita no literal por el escaneo de la fuente (ANADIDOS practicos)
+
+Las guias de empaque escaneadas (infografia visual y guia de DHL) mezclan columnas en el texto: la frase que respalda la lectura existe, pero partida en trozos no contiguos, asi que no hay cita literal que el script pueda comprobar. Son ANADIDOS practicos (pasarian a "Sugerencia de My Idea"); no contradicen nada.
+
+### `adaptar_empaque_segun_tipo_de_articulo` paso 2 (Guia visual de empaque)
+
+- **Texto vigente:** Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.
+- **Propuesta de la regla:** Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.
+- **Frase del lector:** Sufficient and careful packaging is key when shipping any type of liquids, such as beverages. (L47-L55)
+- **DECISION_DEL_FUNDADOR:** 
+
+### `adaptar_empaque_segun_tipo_de_articulo` paso 4 (Guia visual de empaque)
+
+- **Texto vigente:** Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.
+- **Propuesta de la regla:** Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.
+- **Frase del lector:** Be sure to use a new double-wall corrugated cardboard box (L61-L67)
+- **DECISION_DEL_FUNDADOR:** 
+
+### `revisar_necesidades_de_empaque` paso 3 (DHL Express, Guia de empaque)
+
+- **Texto vigente:** Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.
+- **Propuesta de la regla:** Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.
+- **Frase del lector:** Extra cushioning and protection may be required for high value goods (L51-L53)
 - **DECISION_DEL_FUNDADOR:** 
 

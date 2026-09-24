@@ -36,6 +36,7 @@ def norm(s):
     for a, b in ((chr(0x2019), "'"), (chr(0x2018), "'"), (chr(0x201c), '"'), (chr(0x201d), '"'), (RAYA, '--'), (MEDIO, '-'), (chr(0x2011), '-'), (chr(0x2010), '-')):
         s = s.replace(a, b)
     s = re.sub(r'(?<=[a-z\.])\d{1,2}(?= [A-Z])', '', s)
+    s = s.replace("'", '"')
     return ' '.join(s.split()).lower()
 
 
@@ -82,7 +83,7 @@ for r in res:
             continue
         # pasaje literal por script, en el primer fichero del libro que contenga la frase clave
         pasaje, fichero_ok, literal = '', ficheros[0] if ficheros else '', False
-        trozos = [t.strip(' "') for t in re.split(r'\.\.\.|' + chr(0x2026) + r'| / ', re.sub(r'\(L\d+[^)]*\)', ' ', x.get('frase_clave', ''))) if len(t.strip(' "')) > 8]
+        trozos = [t.strip(' "') for t in re.split(r'\[\.\.\.\]|\.\.\.|' + chr(0x2026) + r'| / ', re.sub(r'\(L\d+[^)]*\)', ' ', x.get('frase_clave', ''))) if len(t.strip(' "')) > 8]
         for f in ficheros:
             t = texto_libro(f)
             if trozos and all(norm(tr) in norm('\n'.join(t)) for tr in trozos):
