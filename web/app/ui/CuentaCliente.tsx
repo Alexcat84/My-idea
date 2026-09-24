@@ -308,7 +308,7 @@ export function CuentaCliente({ email }: { email: string }) {
         ) : (
           <div>
             <p className="text-sm text-dim">
-              Un segundo paso al entrar protege tu cuenta. Es opcional y puedes apagarlo cuando quieras.
+              Te pide un segundo paso antes de usar tus créditos y antes de borrar una idea o tu cuenta. Es opcional y puedes apagarlo cuando quieras.
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
             <div className="mt-3 flex flex-wrap gap-3">

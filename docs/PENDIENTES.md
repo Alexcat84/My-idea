@@ -17545,6 +17545,14 @@ B16 (siguen sin pruebas `unlock` y `start`).
 **Condición de cierre:** cada hallazgo arreglado con su prueba en rojo primero, o descartado
 por decisión escrita del fundador, y tachado aquí con su commit.
 
+**Funciones futuras (regla del fundador, 25 sep 2026: cuando una función falta, el texto
+no puede prometerla).** Se corrigió el texto a lo que el producto hace hoy; la función queda
+aquí para cuando se decida construirla:
+- **Doble factor al entrar (M49).** Hoy el candado cubre usar créditos y borrar una idea o la
+  cuenta; el centro de cuenta ya lo dice así (tanda 7A). El mockup 23 del canon todavía
+  promete "Un segundo paso al entrar protege tu cuenta": errata para la próxima entrega de
+  Design. **Condición de cierre:** el desafío también al iniciar sesión, o el canon alineado.
+
 **Límite aceptado de M15 (decisión del fundador, 25 sep 2026).** La protección apunta al nodo
 de la tarea (`d28ffe0e`), pero `checklist_items.nodos_origen` se guarda por ETAPA (migración
 037: el redactor autodeclara nodos por etapa y cada tarea hereda los de la suya). En un ciclo
