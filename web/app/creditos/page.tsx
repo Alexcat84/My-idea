@@ -75,7 +75,9 @@ const INCLUYE_PLAN: [string, string][] = [
 const INCLUYE_MUNDO: [string, string][] = [
   ["Su plan y su Manos a la obra:", "las etapas, tareas y fechas de ese frente, listas para ejecutar igual que tu viaje."],
   ["Todo lo del mundo, por separado:", "su avance, sus documentos y su bitácora, solo de ese frente."],
-  ["Y suma al general:", "cada mundo se refleja también en la vista completa de tu proyecto. Ves el frente solo, o el panorama entero."],
+  // AUD-09 M47: la vista global que se prometía aquí ya no existe (BANCO
+  // §7.1); la única lectura de la idea entera es el Expediente.
+  ["Y queda en tu Expediente:", "el único documento que reúne tu idea entera, con cada mundo en su propia sección."],
   ["Un mismo proyecto:", "no es otra cuenta ni otra idea."],
 ];
 
