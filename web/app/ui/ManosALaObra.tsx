@@ -2586,7 +2586,8 @@ export function ManosALaObra({
             icono="bitacora"
             titulo="Mi bitácora"
             descripcion="La historia de tu viaje, paso a paso: cada decisión que has tomado."
-            onClick={() => onVerBitacora?.()}
+            // AUD-09 M14: la bitácora del núcleo, no la global (BANCO §7.1).
+            onClick={() => onVerBitacora?.("core")}
           />
         )}
         {onVerCalendario && modoCamino === "fechas" && hayFechas && (

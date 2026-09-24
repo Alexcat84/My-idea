@@ -778,12 +778,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // Fase 4.8: la bitácora como página en vivo. Se llega desde las páginas de
   // desarrollo (el plan, Manos a la Obra, los mundos); "Volver" regresa a donde
   // se estaba.
-  function irABitacora(dominio?: string) {
+  // AUD-09 M14: la bitácora se lee por espacio; sin dominio es la del núcleo (lo
+  // global es solo el Expediente, BANCO §7.1).
+  function irABitacora(dominio: string = "core") {
     setOrigenBitacora(vistaManos || enObra ? "manos" : "plan");
     setVistaBitacora(true);
-    // "Todo separado" (T4): con dominio, la bitácora del mundo (filtro de servidor).
-    setVistaDominio(dominio ?? null);
-    const q = dominio ? `?vista=bitacora&dominio=${dominio}` : "?vista=bitacora";
+    // "Todo separado" (T4): la bitácora del espacio (filtro de servidor).
+    setVistaDominio(dominio);
+    const q = `?vista=bitacora&dominio=${dominio}`;
     router.replace(`/idea/${projectId}${q}`, { scroll: false });
   }
   function volverDeBitacora() {

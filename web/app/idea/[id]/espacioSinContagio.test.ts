@@ -29,3 +29,15 @@ describe("el plan de un mundo no ocupa el lugar del plan del núcleo", () => {
     expect(f).toMatch(/generarPlan\(sid, undefined, \{ dominio, esSeguimiento: false \}\)/);
   });
 });
+
+// AUD-09 M14: "Mi bitácora" del núcleo pedía la bitácora GLOBAL y mezclaba los
+// mundos. BANCO §7.1: hasta la bitácora se lee por espacio; lo global es solo el
+// Expediente.
+describe("la bitácora del núcleo es del núcleo", () => {
+  it("Manos a la Obra y la vista del plan piden la bitácora de su espacio", () => {
+    const manos = readFileSync(path.join(__dirname, "..", "..", "ui", "ManosALaObra.tsx"), "utf8");
+    expect(manos).toMatch(/onClick=\{\(\) => onVerBitacora\?\.\("core"\)\}/);
+    const vista = readFileSync(path.join(__dirname, "IdeaView.tsx"), "utf8");
+    expect(vista).toMatch(/function irABitacora\(dominio: string = "core"\)/);
+  });
+});
