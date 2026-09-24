@@ -6,7 +6,8 @@
  * (fallback limpio: en Firefox simplemente no aparece). La transcripción
  * entra en vivo al campo y es editable antes de enviar.
  */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import { fusionarDictado } from "@/lib/fusionarDictado";
 import { useSpeech } from "@/lib/useSpeech";
 
 interface Props {
@@ -20,7 +21,10 @@ interface Props {
 }
 
 export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus, deshabilitado, id }: Props) {
-  const [provisional, setProvisional] = useState("");
+  // AUD-09 B14b: lo provisional vive DENTRO del valor (así enviar o detener a
+  // mitad de frase no lo pierde); esto recuerda qué parte del final lo es, para
+  // que el siguiente trozo del dictado lo reemplace en vez de duplicarlo.
+  const sufijoProvisional = useRef("");
   // El valor VIVO: el dictado agrega sobre lo que hay AHORA, aunque el
   // usuario haya corregido a mano mientras hablaba. (Antes se guardaba una
   // "base" al arrancar el micrófono y se recomponía desde ella; si el
@@ -31,18 +35,20 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
   });
 
   const { soportado, escuchando, iniciar, detener } = useSpeech((nuevoFinal, prov) => {
-    const trozo = nuevoFinal.trim();
-    if (trozo) {
-      const actual = valorRef.current;
-      onCambio(actual ? `${actual} ${trozo}` : trozo);
-    }
-    setProvisional(prov);
+    const r = fusionarDictado(valorRef.current, sufijoProvisional.current, nuevoFinal, prov);
+    sufijoProvisional.current = r.sufijo;
+    valorRef.current = r.valor;
+    onCambio(r.valor);
   });
 
+  // Detener NO descarta lo oído: queda en el campo (y si el navegador manda el
+  // final tardío, reemplaza a su provisional).
   function alternarMicrofono() {
-    setProvisional("");
     if (escuchando) detener();
-    else iniciar();
+    else {
+      sufijoProvisional.current = "";
+      iniciar();
+    }
   }
 
   return (
@@ -53,9 +59,10 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
         autoFocus={autoFocus}
         disabled={deshabilitado}
         placeholder={placeholder}
-        value={provisional ? `${valor}${valor ? " " : ""}${provisional}` : valor}
+        value={valor}
         onChange={(e) => {
-          setProvisional("");
+          // lo que el usuario escribe es suyo: nada de ahí es provisional
+          sufijoProvisional.current = "";
           onCambio(e.target.value);
         }}
         className="w-full resize-y rounded-panel border border-hairline bg-surface px-4 py-3 text-base leading-relaxed text-ink placeholder:text-dim disabled:opacity-60"
