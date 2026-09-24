@@ -202,9 +202,11 @@ export function indiceDeDocumentos(
       clave: CLAVE_EXPEDIENTE,
       tipo: "expediente",
       titulo: "Expediente completo",
+      // AUD-09 M35: dice exactamente lo que incluye (antes "Todo tu
+      // desarrollo", y el tablero vivo de Tus Números no entra aquí).
       subtitulo: realizadaAt
-        ? "Todo tu desarrollo, de la idea al cierre"
-        : "Todo tu desarrollo hasta hoy, en un solo documento",
+        ? "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, de la idea al cierre"
+        : "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, hasta hoy",
       fecha: realizadaAt,
     });
     // Fase 3 (tanda 5): un Reporte por cada mundo — su plan, su avance y su cómo

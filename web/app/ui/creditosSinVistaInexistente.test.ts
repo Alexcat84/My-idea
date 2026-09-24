@@ -15,6 +15,6 @@ describe("/creditos no promete una vista que no existe (AUD-09 M47)", () => {
     expect(creditos).not.toMatch(/el panorama entero/);
   });
   it("dice lo que hay: el Expediente reúne la idea y cada mundo", () => {
-    expect(creditos).toMatch(/\["Y queda en tu Expediente:", "el único documento que reúne tu idea entera, con cada mundo en su propia sección\."\]/);
+    expect(creditos).toMatch(/\["Y queda en tu Expediente:", "el único documento que reúne tu idea, tu plan y cada mundo, cada uno en su propia sección\."\]/);
   });
 });

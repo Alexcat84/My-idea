@@ -17583,6 +17583,11 @@ aquí para cuando se decida construirla:
   promete "Un segundo paso al entrar protege tu cuenta": errata para la próxima entrega de
   Design. **Condición de cierre:** el desafío también al iniciar sesión, o el canon alineado.
 
+- **Tus Números dentro del Expediente (M35, decisión del fundador).** El tablero vivo de Tus
+  Números escribe en `project_numeros_versiones` y el Expediente no lo lee (solo el reporte
+  viejo de `/report`). El Expediente ya dice exactamente lo que incluye (tanda 7B).
+  **Condición de cierre:** el Expediente lee la versión vigente del tablero, o se decide que
+  Tus Números vive solo en su tablero.
 - **Volver a enlazar un registro de protección (M48).** Si el enlace falla al entregar el
   plan, el registro dice ahora que quedó vacío (tanda 7B); no hay reintento. **Condición de
   cierre:** un "volver a enlazar" que corra el enlazador sobre el plan ya entregado.

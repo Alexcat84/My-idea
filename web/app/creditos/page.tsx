@@ -77,7 +77,7 @@ const INCLUYE_MUNDO: [string, string][] = [
   ["Todo lo del mundo, por separado:", "su avance, sus documentos y su bitácora, solo de ese frente."],
   // AUD-09 M47: la vista global que se prometía aquí ya no existe (BANCO
   // §7.1); la única lectura de la idea entera es el Expediente.
-  ["Y queda en tu Expediente:", "el único documento que reúne tu idea entera, con cada mundo en su propia sección."],
+  ["Y queda en tu Expediente:", "el único documento que reúne tu idea, tu plan y cada mundo, cada uno en su propia sección."],
   ["Un mismo proyecto:", "no es otra cuenta ni otra idea."],
 ];
 
