@@ -31,7 +31,16 @@ import {
   registrarUso,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { cobrar, conceptoDelPlan, mensajeSaldoInsuficiente, montoDelPlan, reembolsar, verificarSaldo } from "@/lib/creditos";
+import {
+  cobrar,
+  conceptoDelPlan,
+  mensajeSaldoInsuficiente,
+  montoDelPlan,
+  reembolsar,
+  reservarCreditos,
+  resolverReserva,
+  verificarSaldo,
+} from "@/lib/creditos";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import {
@@ -203,11 +212,22 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
   const dominioCobro = ((sesion as { dominio?: string }).dominio ?? "core") as string;
   const conceptoCobro = conceptoDelPlan(dominioCobro, recorrido.esSeguimiento);
   const montoCobro = montoDelPlan(dominioCobro, recorrido.esSeguimiento);
+  //
+  // AUD-09 M25: la verificación es la RESERVA de esta entrega (clave
+  // plan:{sessionId}, la misma del cobro). Si la sesión ya reservó al empezar,
+  // se renueva sin contarse a sí misma; una compra de mundo reserva aquí. Otra
+  // sesión con el saldo apartado ya no pasa. Se marca cobrada al cobrar y se
+  // libera al final si no hubo cobro (plan sin IA, carrera, fallo).
+  const claveReserva = `plan:${sessionId}`;
   if (montoCobro > 0) {
-    const saldoPlan = await verificarSaldo(user.id, montoCobro);
-    if (!saldoPlan.alcanza) {
+    const reserva = await reservarCreditos(user.id, claveReserva, conceptoCobro, montoCobro);
+    if (!reserva.reservado) {
+      const saldoPlan = await verificarSaldo(user.id, montoCobro, claveReserva);
       return NextResponse.json(
-        { error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro), saldo: saldoPlan.creditos },
+        {
+          error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro, saldoPlan.apartados),
+          saldo: saldoPlan.creditos,
+        },
         { status: 402 }
       );
     }
@@ -230,6 +250,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
       // ETAPA 2: el cobro aplicado en ESTA entrega (para la red de reembolso
       // del catch). null = aun no se cobra, o el done ya salio.
       let cobroAplicado: { monto: number; concepto: string } | null = null;
+      // AUD-09 M25: si la reserva de esta entrega terminó cobrada.
+      let reservaCobrada = false;
       const heartbeat = setInterval(() => controller.enqueue(encoder.encode(": heartbeat\n\n")), INTERVALO_HEARTBEAT_MS);
 
       try {
@@ -477,6 +499,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           } else {
             creditosRestantes = resultadoCobro;
             cobroAplicado = { monto: montoCobro, concepto: conceptoCobro };
+            reservaCobrada = true;
+            await resolverReserva(claveReserva, "cobrada");
           }
         }
         // Fase 4.5 (PREVIEW_MUNDOS_PLAN §5.3): para una sesion de MUNDO, esta
@@ -551,6 +575,9 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         }
       } finally {
         clearInterval(heartbeat);
+        // AUD-09 M25: sin cobro (plan sin IA, carrera o fallo), lo apartado se
+        // suelta; un reintento de la entrega vuelve a reservar.
+        if (montoCobro > 0 && !reservaCobrada) await resolverReserva(claveReserva, "liberada");
         // NINGUN STREAM TERMINA EN SILENCIO: si no salio done ni error,
         // esto grita por el log del servidor y lo intenta por el canal.
         garantizarTerminal({

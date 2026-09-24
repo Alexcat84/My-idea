@@ -18,7 +18,14 @@
  */
 import { NextResponse } from "next/server";
 import { usoVacio } from "@/lib/costmeter";
-import { mensajeSaldoInsuficiente, montoDelPlan, verificarSaldo } from "@/lib/creditos";
+import {
+  conceptoDelPlan,
+  mensajeSaldoInsuficiente,
+  montoDelPlan,
+  reservarCreditos,
+  resolverReserva,
+  verificarSaldo,
+} from "@/lib/creditos";
 import { crearSesion, guardarEstadoSesion, obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
@@ -65,12 +72,27 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       { status: 402 }
     );
   }
+  // AUD-09 M25: la sesión nueva RESERVA su precio al empezar, con la clave de
+  // su cobro (id generado aquí); si otra sesión ya apartó el saldo, 402 sin
+  // crear nada. Un rechazo posterior suelta la reserva.
+  const nuevaId = crypto.randomUUID();
+  const claveReserva = `plan:${nuevaId}`;
+  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan(dominio, esSeguimiento), costo);
+  if (!reserva.reservado) {
+    const ahora = await verificarSaldo(user.id, costo, claveReserva);
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(ahora.creditos, costo, ahora.apartados), saldo: ahora.creditos },
+      { status: 402 }
+    );
+  }
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
+    await resolverReserva(claveReserva, "liberada");
     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
+    await resolverReserva(claveReserva, "liberada");
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
@@ -84,7 +106,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     tipo,
     "regeneracion del plan basico",
     null,
-    dominio
+    dominio,
+    { id: nuevaId }
   );
   await guardarEstadoSesion(supabase, nueva, {
     recorrido: {

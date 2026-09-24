@@ -37,7 +37,9 @@ vi.mock("@/lib/db", async (importOriginal) => ({
   historialVersionesNumeros: async () => [],
 }));
 
-import { POST } from "./route";
+import { POST as POSTRuta } from "./route";
+
+const POST = async (r: Request, c: { params: Promise<{ id: string }> }) => (await POSTRuta(r, c))!;
 
 const ctx = { params: Promise.resolve({ id: "p1" }) };
 const req = (body: unknown) =>

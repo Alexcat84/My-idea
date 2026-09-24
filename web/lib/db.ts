@@ -389,13 +389,17 @@ export async function crearSesion(
   tipo: SessionTipo,
   mensajeEntrada: string,
   puertaEntrada: string | null = null,
-  dominio: string = "core"
+  dominio: string = "core",
+  // AUD-09 M25: el id ya generado por la ruta, cuando la reserva de créditos
+  // (clave plan:{id}) se hace ANTES de crear la sesión.
+  opciones: { id?: string } = {}
 ): Promise<string> {
   const proyecto = await obtenerProyecto(supabase, projectId);
   const posicion = (proyecto?.session_count ?? 0) + 1;
   const { data, error } = await supabase
     .from("sessions")
     .insert({
+      ...(opciones.id ? { id: opciones.id } : {}),
       project_id: projectId,
       user_id: userId,
       session_position: posicion,

@@ -24,6 +24,9 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     cobrar: vi.fn(async () => 15),
     reembolsar: vi.fn(async () => 20),
     otorgarCortesia: vi.fn(async () => 20),
+    // AUD-09 M25: la reserva de créditos (migración 042).
+    reservarCreditos: vi.fn(async () => ({ reservado: true, disponible: 10 })),
+    resolverReserva: vi.fn(async () => undefined),
   };
 });
 // El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
@@ -202,5 +205,50 @@ describe("POST /api/session/start", () => {
     expect(res.status).toBe(502);
     const sesion = Object.values(estadoFalso.sessions)[0] as Record<string, unknown>;
     expect(sesion.closed_at).toBeNull();
+  });
+});
+
+// AUD-09 M25 (tanda 7A, dinero): la verificación del inicio no apartaba nada;
+// con saldo para UNA exploración se abrían varias en paralelo y solo la primera
+// se cobraba. Ahora se RESERVA al empezar, con la clave del cobro.
+describe("POST /api/session/start: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    clasificarEntradaFalso.mockReset().mockResolvedValue({
+      puertaId: "design_thinking_fundamentos",
+      perfilSesion: "perfil inicial",
+      acumulado: acumuladoFalso,
+    });
+    avanzarTurnoFalso.mockReset().mockResolvedValue({
+      tipo: "pregunta",
+      estado: { fase: "esperando_respuesta", ruta: ["design_thinking_fundamentos"] },
+      pregunta: "¿qué vendes?",
+      acumulado: acumuladoFalso,
+      nodosNuevos: [],
+    });
+  });
+
+  it("reserva el precio del plan con la clave del cobro de ESA sesión", async () => {
+    const { reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockClear();
+    const res = await POST(requestFalso({ texto: "quiero vender macetas" }));
+    expect(res.status).toBe(200);
+    const { session_id } = await res.json();
+    // A MANO: núcleo, primera entrevista -> plan_completo = 10.
+    expect(reservarCreditos).toHaveBeenCalledWith(expect.any(String), `plan:${session_id}`, "plan_completo", 10);
+  });
+
+  it("si otra sesión ya apartó el saldo: 402 sin crear idea ni sesión, sin IA", async () => {
+    const { reservarCreditos, verificarSaldo } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockResolvedValueOnce({ reservado: false, disponible: 0 });
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: true, creditos: 10 });
+    vi.mocked(verificarSaldo).mockResolvedValueOnce({ alcanza: false, creditos: 10, apartados: 10 });
+    const res = await POST(requestFalso({ texto: "quiero vender macetas" }));
+    expect(res.status).toBe(402);
+    expect((await res.json()).error).toContain("apartados");
+    expect(Object.values(estadoFalso.projects)).toHaveLength(0);
+    expect(Object.values(estadoFalso.sessions)).toHaveLength(0);
+    expect(clasificarEntradaFalso).not.toHaveBeenCalled();
   });
 });

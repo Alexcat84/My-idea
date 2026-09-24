@@ -36,11 +36,11 @@ import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
+import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { obtenerModosPorEspacio, crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
-import { PRECIOS } from "@/lib/precios";
+import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
@@ -169,14 +169,32 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     );
   }
 
+  // AUD-09 M25 (decisión del fundador, 25 sep 2026): RESERVA al empezar, con
+  // la clave del cobro de la sesión que va a nacer (id generado aquí). Si otra
+  // sesión ya apartó el saldo, 402 antes de crear nada ni gastar el límite. Todo
+  // rechazo posterior de esta ruta suelta la reserva.
+  const sessionIdNueva = crypto.randomUUID();
+  const claveReserva = `plan:${sessionIdNueva}`;
+  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan(dominio, true), montoFollow);
+  if (!reserva.reservado) {
+    const ahora = await verificarSaldo(user.id, montoFollow, claveReserva);
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(ahora.creditos, montoFollow, ahora.apartados), saldo: ahora.creditos },
+      { status: 402 }
+    );
+  }
+  const soltarReserva = () => resolverReserva(claveReserva, "liberada");
+
   // AUD-09 (tanda 2): fusible y límite diario DESPUÉS del saldo (un rechazo por
   // saldo ya no gasta el arranque del día) y siempre antes de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
+    await soltarReserva();
     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
+    await soltarReserva();
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
@@ -205,11 +223,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let { data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo`);
   if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(COLS_FOLLOW));
   if (errorItems) {
+    await soltarReserva();
     return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
   }
   const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio);
   // Un mundo sin checklist propio no tiene nada que seguir: primero se explora.
   if (dominio !== "core" && items.length === 0) {
+    await soltarReserva();
     return NextResponse.json(
       { error: `Primero explora "${nombreMundo}" — su seguimiento nace de su plan.` },
       { status: 409 }
@@ -229,6 +249,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   try {
     entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
   } catch (e) {
+    await soltarReserva();
     if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
     throw e;
   }
@@ -284,6 +305,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // — un nodo CORE — y el plan del mundo saldría explorando el viaje
     // principal. Antes que eso, se dice la verdad.
     if (hayPuerta.length === 0) {
+      await soltarReserva();
       return NextResponse.json(
         { error: `Ya recorriste todas las puertas de "${nombreMundo}".` },
         { status: 409 }
@@ -294,7 +316,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // El mensaje compuesto es el mensaje_entrada de la sesión: bitácora.
   // La sesión nace con el dominio del mundo: su plan lo hereda y deriva su
   // checklist con él (session/[id]/plan:260), encadenado en el grupo del mundo.
-  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio);
+  const sessionId = await crearSesion(supabase, user.id, projectId, "seguimiento", mensaje, null, dominio, { id: sessionIdNueva });
 
   const client = createAnthropicClient();
   const acumulado = usoVacio();

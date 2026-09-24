@@ -133,6 +133,25 @@ un mundo NO escribe `plan_pagado_at`: se marca con su propio campo,
 plan completo", que es la regeneración de arriba. Tampoco sella la compra la
 carrera rara (plan entregado sin poder cobrar).
 
+**La reserva de créditos (decisión del fundador, 25 sep 2026).** Verificar al
+empezar ya no solo mira el saldo: lo APARTA. Al empezar la sesión (exploración,
+seguimiento o regeneración) se reserva el precio de su plan con la misma clave
+de su cobro (`plan:{sessionId}`); la entrega renueva esa reserva antes de gastar
+un token (y una compra de mundo reserva ahí), la marca cobrada al cobrar y la
+libera si no cobra: plan sin IA, carrera, fallo, o una sesión que termina sin
+plan. El disponible es el saldo menos lo apartado por otras sesiones en curso,
+así que con saldo para UNA entrega ya no se abren varias en paralelo (antes
+todas se entregaban y solo la primera se cobraba: la "carrera rara" duraba toda
+la generación). Una reserva vence a las 2 horas (`MINUTOS_RESERVA`): una sesión
+abandonada no aparta créditos para siempre. **La promesa visible no cambia:**
+mismos precios, se cobra al final y solo lo entregado; el único texto nuevo es
+el 402 cuando hay saldo apartado ("Tienes X créditos y Y ya están apartados para
+un plan que tienes en curso"). La reserva no mueve el saldo: el cobro sigue
+siendo el de siempre, atómico e idempotente. En código: migración 042
+(`credit_reservas`, `reservar_creditos`, `resolver_reserva`) y
+`reservarCreditos` / `resolverReserva` en `web/lib/creditos.ts`. Nace de la
+AUD-09 (hallazgo M25).
+
 ## 5. SENSIBILIDAD LATAM (para decidir después, no ahora)
 $14.99 USD es accesible-premium en MX/CO/CL, caro en CentAm/BO/VE. Opciones
 en reserva: precios regionales vía las tiendas (Play/App Store los soportan

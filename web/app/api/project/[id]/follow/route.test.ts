@@ -25,6 +25,9 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     cobrar: vi.fn(async () => 15),
     reembolsar: vi.fn(async () => 20),
     otorgarCortesia: vi.fn(async () => 20),
+    // AUD-09 M25: la reserva de créditos (migración 042).
+    reservarCreditos: vi.fn(async () => ({ reservado: true, disponible: 10 })),
+    resolverReserva: vi.fn(async () => undefined),
   };
 });
 // El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
@@ -166,5 +169,36 @@ describe("POST follow con dominio — los muros del mundo (Fase 4.2)", () => {
     const res = await POST(req({ detalles: "algo" }), PARAMS).catch(() => null);
     expect(res?.status).not.toBe(403);
     expect(res?.status).not.toBe(409);
+  });
+});
+
+// AUD-09 M25 (tanda 7A, dinero): el seguimiento reserva su precio al empezar,
+// con la clave del cobro de la sesión nueva; si otra sesión ya apartó el saldo,
+// 402 sin crear sesión ni gastar el límite del día.
+describe("POST follow: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("reserva el precio del seguimiento del núcleo con la clave plan:{sesión}", async () => {
+    sembrarProyecto();
+    const { reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockClear();
+    await POST(req({ detalles: "avancé" }), PARAMS).catch(() => null);
+    // A MANO: núcleo, seguimiento -> PRECIOS.seguimiento = 5.
+    expect(reservarCreditos).toHaveBeenCalledWith(expect.any(String), expect.stringMatching(/^plan:/), "seguimiento", 5);
+  });
+
+  it("si la reserva no alcanza: 402 sin crear sesión ni gastar el límite", async () => {
+    sembrarProyecto();
+    const { reservarCreditos } = await import("@/lib/creditos");
+    const rl = await import("@/lib/rateLimit");
+    vi.mocked(rl.verificarLimiteDiario).mockClear();
+    vi.mocked(reservarCreditos).mockResolvedValueOnce({ reservado: false, disponible: 0 });
+    const res = await POST(req({ detalles: "avancé" }), PARAMS);
+    expect(res.status).toBe(402);
+    expect(Object.values(estadoFalso.sessions)).toHaveLength(0);
+    expect(rl.verificarLimiteDiario).not.toHaveBeenCalled();
   });
 });

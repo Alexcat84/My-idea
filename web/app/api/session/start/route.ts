@@ -17,14 +17,14 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
-import { mensajeSaldoInsuficiente, verificarSaldo } from "@/lib/creditos";
+import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
 import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
-import { PRECIOS } from "@/lib/precios";
+import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { identidadLimite, MENSAJE_FUSIBLE, MENSAJE_LIMITE, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -83,15 +83,34 @@ export async function POST(request: Request) {
     );
   }
 
+  // AUD-09 M25 (decisión del fundador, 25 sep 2026): RESERVA al empezar. El
+  // precio del plan se aparta con la clave de su cobro (plan:{sessionId}), con
+  // el id de la sesión generado aquí: si otra sesión ya apartó el saldo, el
+  // rechazo llega antes de crear nada. Se cobra a la entrega; se libera si no
+  // hay entrega cobrable.
+  const sessionIdNueva = crypto.randomUUID();
+  const claveReserva = `plan:${sessionIdNueva}`;
+  const reserva = await reservarCreditos(user.id, claveReserva, conceptoDelPlan("core", false), PRECIOS.plan_completo);
+  if (!reserva.reservado) {
+    const ahora = await verificarSaldo(user.id, PRECIOS.plan_completo, claveReserva);
+    return NextResponse.json(
+      { error: mensajeSaldoInsuficiente(ahora.creditos, PRECIOS.plan_completo, ahora.apartados), saldo: ahora.creditos },
+      { status: 402 }
+    );
+  }
+
   // AUD-09 (tanda 2): el fusible y el límite diario se cuentan DESPUÉS del
   // saldo. Antes cada clic sin saldo gastaba un arranque del día y un cupo del
-  // fusible sin que nada ocurriera. Siguen antes de tocar la API.
+  // fusible sin que nada ocurriera. Siguen antes de tocar la API. Si rechazan,
+  // la reserva se suelta.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
+    await resolverReserva(claveReserva, "liberada");
     return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
+    await resolverReserva(claveReserva, "liberada");
     return NextResponse.json({ error: MENSAJE_LIMITE }, { status: 429 });
   }
 
@@ -109,13 +128,14 @@ export async function POST(request: Request) {
     // no existe o no es de este usuario -- misma respuesta en ambos casos.
     const proyecto = await obtenerProyecto(supabase, projectIdSolicitado);
     if (!proyecto) {
+      await resolverReserva(claveReserva, "liberada");
       return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
     }
     projectId = projectIdSolicitado;
   } else {
     projectId = await crearProyecto(supabase, user.id, texto);
   }
-  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto);
+  const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto, null, "core", { id: sessionIdNueva });
 
   // Fase 3.5: dominios recorribles del proyecto (core + unlocks). Un
   // proyecto recién creado no tiene unlocks; y si project_unlocks aún no

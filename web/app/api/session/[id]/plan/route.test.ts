@@ -23,6 +23,9 @@ vi.mock("@/lib/creditos", async (importOriginal) => {
     cobrar: vi.fn(async () => 15),
     reembolsar: vi.fn(async () => 20),
     otorgarCortesia: vi.fn(async () => 20),
+    // AUD-09 M25: la reserva de créditos (migración 042).
+    reservarCreditos: vi.fn(async () => ({ reservado: true, disponible: 10 })),
+    resolverReserva: vi.fn(async () => undefined),
   };
 });
 // El gate 2FA tiene su propia cobertura (dosFactores.test + el vuelo de
@@ -383,5 +386,58 @@ describe("POST /api/session/[id]/plan", () => {
     // Calculo a mano: nucleo, primera entrevista -> plan_completo = 10.
     expect(cobrar).toHaveBeenCalledWith("user-fake", "plan_completo", 10, "plan:s1");
     expect(done.version_basica).toBe(false);
+  });
+});
+
+// AUD-09 M25 (tanda 7A, dinero): la entrega renueva la reserva de SU sesión
+// (clave plan:{sessionId}) antes de gastar un token, la marca COBRADA al cobrar
+// y la LIBERA cuando no cobra (plan sin IA).
+describe("POST /api/session/[id]/plan: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(async () => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+    const c = await import("@/lib/creditos");
+    vi.mocked(c.reservarCreditos).mockClear();
+    vi.mocked(c.resolverReserva).mockClear();
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+  });
+
+  it("con IA: renueva la reserva de su clave, cobra y la marca cobrada", async () => {
+    const { reservarCreditos, resolverReserva } = await import("@/lib/creditos");
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    // A MANO: núcleo, primera entrevista -> plan_completo = 10.
+    expect(reservarCreditos).toHaveBeenCalledWith("user-fake", "plan:s1", "plan_completo", 10);
+    expect(resolverReserva).toHaveBeenCalledWith("plan:s1", "cobrada");
+  });
+
+  it("sin IA (plan básico): no cobra y LIBERA la reserva", async () => {
+    const { resolverReserva } = await import("@/lib/creditos");
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: {
+        recorrido: estadoRecorridoBase(),
+        acumulado: { ...acumuladoVacio, uso: { "claude-sonnet-4-6": { in: 0, out: 10_000_000, cache_read: 0, cache_write: 0 } } },
+      },
+    };
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    expect(resolverReserva).toHaveBeenCalledWith("plan:s1", "liberada");
+  });
+
+  it("si el saldo ya está apartado por otra sesión: 402 antes de gastar un token", async () => {
+    const { reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(reservarCreditos).mockResolvedValueOnce({ reservado: false, disponible: 0 });
+    estadoFalso.sessions["s1"] = {
+      id: "s1", project_id: "p1", closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    expect(res.status).toBe(402);
+    expect(messagesStreamFalso).not.toHaveBeenCalled();
   });
 });

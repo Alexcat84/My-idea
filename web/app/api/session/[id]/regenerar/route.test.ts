@@ -17,9 +17,11 @@ vi.mock("@/lib/seguridad", async (importOriginal) => ({
   faltaSegundoFactor: async () => false,
 }));
 const verificarSaldo = vi.fn(async () => ({ alcanza: true, creditos: 20 }));
+const reservarCreditos = vi.fn(async () => ({ reservado: true, disponible: 10 }));
 vi.mock("@/lib/creditos", async (importOriginal) => ({
   ...(await importOriginal<typeof import("@/lib/creditos")>()),
   verificarSaldo: (...a: unknown[]) => verificarSaldo(...(a as [])),
+  reservarCreditos: (...a: unknown[]) => reservarCreditos(...(a as [])),
 }));
 const verificarLimiteDiario = vi.fn(async () => ({ permitido: true }));
 vi.mock("@/lib/rateLimit", async (importOriginal) => ({
@@ -118,5 +120,31 @@ describe("POST /api/session/[id]/regenerar", () => {
     const nueva = estadoFalso.sessions[cuerpo.session_id] as Record<string, unknown>;
     expect(nueva.dominio).toBe("quality");
     expect(nueva.tipo).toBe("seguimiento");
+  });
+});
+
+// AUD-09 M25: la regeneración es una sesión nueva y reserva su precio al empezar.
+describe("POST /api/session/[id]/regenerar: reserva de créditos (AUD-09 M25)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    verificarSaldo.mockReset().mockImplementation(async () => ({ alcanza: true, creditos: 20 }));
+    reservarCreditos.mockReset().mockImplementation(async () => ({ reservado: true, disponible: 10 }));
+  });
+
+  it("reserva el precio con la clave del cobro de la sesión nueva", async () => {
+    sembrar({ basico: true });
+    const res = await pedir();
+    const { session_id } = await res.json();
+    // A MANO: núcleo, primera entrevista -> plan_completo = 10.
+    expect(reservarCreditos).toHaveBeenCalledWith(expect.any(String), `plan:${session_id}`, "plan_completo", 10);
+  });
+
+  it("si otra sesión ya apartó el saldo: 402 sin crear sesión", async () => {
+    sembrar({ basico: true });
+    reservarCreditos.mockImplementation(async () => ({ reservado: false, disponible: 0 }));
+    const res = await pedir();
+    expect(res.status).toBe(402);
+    expect(Object.keys(estadoFalso.sessions)).toEqual(["s-basico"]);
   });
 });

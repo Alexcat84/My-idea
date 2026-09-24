@@ -10,6 +10,7 @@ import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import catalogo from "./assets/packs_catalog.json";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
+import { resolverReserva } from "./creditos";
 import {
   cerrarSesion,
   guardarEstadoSesion,
@@ -119,6 +120,9 @@ export async function responderResultadoTurno(
     );
     await mergeNumerosProyecto(supabase, projectId, resultado.estado.numerosDetectadosSesion);
     await mergeTipoOferta(supabase, projectId, resultado.estado.tipoOfertaSesion, resultado.estado.unidadVentaSesion);
+    // AUD-09 M25: sin plan no hay cobro; lo que la sesión apartó al empezar se
+    // suelta ya (si no apartó nada, no hace nada).
+    await resolverReserva(`plan:${sessionId}`, "liberada");
 
     // Fase 4.3 §1: un mundo solo cierra cuando NINGUNA de sus puertas era
     // compatible con el perfil (el motor ya re-eligio todo lo que pudo).

@@ -82,7 +82,10 @@ function resolverTabla(nombre: string, estado: EstadoFalso, b: Builder) {
   if (nombre === "sessions") {
     if (b._insert) {
       estado.contadorSession++;
-      const id = `session-${estado.contadorSession}`;
+      // AUD-09 M25: la ruta puede traer el id ya generado (la reserva de
+      // créditos se hace con él ANTES de crear la sesión).
+      const idDado = Array.isArray(b._insert) ? undefined : (b._insert.id as string | undefined);
+      const id = idDado ?? `session-${estado.contadorSession}`;
       estado.sessions[id] = { id, ruta: [], costo_usd: 0, presupuesto_excedido: false, closed_at: null, estado_recorrido: null, ...b._insert };
       return { data: b._single ? { id } : [{ id }], error: null };
     }

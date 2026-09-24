@@ -597,5 +597,17 @@ FROM (
       SELECT 1 FROM information_schema.columns
       WHERE table_schema='public' AND table_name='checklist_items' AND column_name='protege_nodos'
     )
+  UNION ALL
+  -- 042 . reserva de creditos al empezar la sesion (AUD-09 M25).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '042', 'credit_reservas + reservar_creditos + resolver_reserva (service-role-only)',
+    EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='credit_reservas')
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='reservar_creditos' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='resolver_reserva' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='reservar_creditos'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
 ) checks
 ORDER BY num;
