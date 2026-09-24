@@ -60,6 +60,60 @@ export function mensajeErrorVoz(codigo: string | undefined): string | null {
   return "El dictado se cortó. Puedes volver a intentarlo o escribir.";
 }
 
+/**
+ * Lo que ya se entregó en ESTA sesión del reconocedor: cuántas frases finales
+ * (por índice) y el texto final acumulado. Se reinicia en cada sesión.
+ */
+export interface EstadoVoz {
+  finalesEmitidos: number;
+  finalAcumulado: string;
+}
+
+export function estadoVozInicial(): EstadoVoz {
+  return { finalesEmitidos: 0, finalAcumulado: "" };
+}
+
+const normalizar = (t: string) => t.toLocaleLowerCase().replace(/\s+/g, " ").trim();
+
+/** Si `texto` empieza con todo lo ya dicho en la sesión (el reconocedor lo
+ * acumuló), devuelve solo lo nuevo. */
+function sinLoYaDicho(texto: string, yaDicho: string): string {
+  if (!yaDicho) return texto;
+  const t = texto.trim();
+  if (normalizar(t).startsWith(normalizar(yaDicho))) return t.slice(yaDicho.trim().length);
+  return texto;
+}
+
+/**
+ * Lee UN evento del reconocedor y entrega cada cosa una sola vez. Chrome, sobre
+ * todo en Android, no siempre sigue el estándar: (A) reenvía en cada evento las
+ * frases ya cerradas (resultIndex se queda en 0 y la lista crece), o (B) manda
+ * cada frase final ACUMULANDO las anteriores. Antes se volvían a pegar y el
+ * texto se duplicaba solo hasta el tope. Pura.
+ */
+export function leerResultados(
+  results: ArrayLike<{ isFinal: boolean; transcript: string }>,
+  resultIndex: number,
+  estado: EstadoVoz
+): { nuevoFinal: string; provisional: string; estado: EstadoVoz } {
+  let { finalesEmitidos, finalAcumulado } = estado;
+  let nuevoFinal = "";
+  let provisional = "";
+  for (let i = Math.min(resultIndex, finalesEmitidos); i < results.length; i++) {
+    const r = results[i];
+    if (r.isFinal) {
+      if (i < finalesEmitidos) continue; // (A) ya entregada
+      const nuevo = sinLoYaDicho(r.transcript, finalAcumulado); // (B)
+      nuevoFinal += nuevo;
+      finalAcumulado = nuevo === r.transcript ? `${finalAcumulado} ${r.transcript}`.trim() : r.transcript.trim();
+      finalesEmitidos = i + 1;
+    } else {
+      provisional += r.transcript;
+    }
+  }
+  return { nuevoFinal, provisional: sinLoYaDicho(provisional, finalAcumulado), estado: { finalesEmitidos, finalAcumulado } };
+}
+
 /** El navegador cierra la sesión de reconocimiento tras una pausa, un corte de
  * red o al minuto, aunque sea continua. Si el usuario no la detuvo y el error no
  * es definitivo, se reanuda sola; si se corta en seguida (menos de
@@ -119,6 +173,7 @@ export function useSpeech(
     const Ctor = obtenerConstructor();
     if (!Ctor) return;
     const inicioSesion = Date.now();
+    let estadoSesion = estadoVozInicial();
     const rec = new Ctor();
     rec.lang = "es-MX";
     rec.continuous = true;
@@ -129,14 +184,15 @@ export function useSpeech(
       // reenviaba el transcript entero en cada evento, y el llamador lo
       // volvía a pegar (texto duplicado al editar, y la respuesta anterior
       // reapareciendo en la pregunta siguiente). Incremental = una sola vez.
-      let nuevoFinal = "";
-      let provisional = "";
-      for (let i = e.resultIndex; i < e.results.length; i++) {
-        const r = e.results[i];
-        if (r.isFinal) nuevoFinal += r[0].transcript;
-        else provisional += r[0].transcript;
-      }
-      onTextoRef.current(nuevoFinal, provisional);
+      // Y cada frase una sola vez aunque el navegador la reenvíe o la acumule
+      // (leerResultados).
+      const lista = Array.from({ length: e.results.length }, (_, k) => ({
+        isFinal: e.results[k].isFinal,
+        transcript: e.results[k][0].transcript,
+      }));
+      const r = leerResultados(lista, e.resultIndex, estadoSesion);
+      estadoSesion = r.estado;
+      onTextoRef.current(r.nuevoFinal, r.provisional);
     };
     rec.onend = () => {
       if (recRef.current !== rec) return; // una sesión vieja o ya detenida
