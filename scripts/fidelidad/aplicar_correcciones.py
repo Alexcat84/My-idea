@@ -26,7 +26,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
 CAMPOS = {"pasos_accionables", "resumen_teorico", "entregable_esperado"}
-PROHIBIDOS = ("—", "–")
+PROHIBIDOS = (chr(0x2014), chr(0x2013))
 
 
 def validar(c, nodo):
@@ -82,6 +82,24 @@ def main(argv):
             if c.get("auditoria"):
                 registro["auditoria"] = c["auditoria"]
             nodo.setdefault("correcciones", []).append(registro)
+    # LAS BARANDAS DE LA CASA (scripts/censo_duplicacion.py): una correccion no
+    # puede dejar en el nodo una baranda que antes no tenia (por ejemplo, una sigla
+    # como FDA u OSHA sin la formula de localizacion). Nace de la tanda fidelidad-t1,
+    # que salio a produccion con una sigla sin localizar porque nadie la miraba.
+    if not fallas:
+        sys.path.insert(0, str(BASE / "scripts"))
+        try:
+            import censo_duplicacion
+        except ImportError:
+            censo_duplicacion = None
+        if censo_duplicacion is not None:
+            for nid, nodo in nodos.items():
+                ruta = NODOS / ("%s.json" % nid)
+                antes = censo_duplicacion.revisar_barandas(json.loads(ruta.read_text(encoding="utf-8")))
+                ya = {(b["baranda"], b.get("cita")) for b in antes}
+                for b in censo_duplicacion.revisar_barandas(nodo):
+                    if (b["baranda"], b.get("cita")) not in ya:
+                        fallas.append("%s: la correccion deja la baranda %s: %s" % (nid, b["baranda"], b.get("cita")))
     if fallas:
         print("TANDA RECHAZADA, no se escribio nada:")
         for f in fallas:

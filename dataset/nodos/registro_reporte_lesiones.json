@@ -11,7 +11,7 @@
     "Completa un reporte detallado por cada caso registrable",
     "Prepara el resumen anual y publicalo en el periodo que indique la norma de tu mercado",
     "Envia electronicamente la información requerida a la autoridad correspondiente según tu tamano y sector",
-    "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
+    "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
     "Conserva los registros de lesiones por el tiempo minimo exigido y los registros medicos según corresponda"
   ],
   "entregable_esperado": "Los formularios de registro, reporte de incidente y resumen anual completados, publicados y archivados conforme a los plazos legales de tu mercado.",
@@ -40,6 +40,23 @@
         "frase": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours."
       },
       "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, se aplica la version fiel del verificador ciego (fila SB2-091), con 'en el libro' cambiado por 'en EE. UU.', que es el ambito de la cita (OSHA). El paso decia 'de inmediato' donde el libro da un plazo en horas.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
+    },
+    {
+      "id": "fidelidad-t2-10",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
+      "texto_nuevo": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L265",
+        "frase": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours."
+      },
+      "decision": "Ajuste de fidelidad-t1-01, que ya estaba en produccion: su redaccion \"(en EE. UU., 8 horas ante OSHA)\" nombraba la sigla sin la formula de localizacion que exige la baranda de la casa dato_local_cableado (scripts/censo_duplicacion.py). Mismos plazos del libro, ahora localizados. Falta de la sesion, declarada: la baranda no esta en las suites para este nodo y la tanda 1 salio sin pasarla.",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
     }

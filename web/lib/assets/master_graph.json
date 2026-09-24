@@ -1797,9 +1797,9 @@
         "Identifica la norma sectorial especifica que te aplica (cGMP, ISO/TS 16949 u otra según tu mercado)",
         "Mapea los requisitos sectoriales adicionales sobre la base de ISO 9001",
         "Actualiza tus procesos y tecnologia para cumplir con el caracter actualizado que exigen regulaciones como cGMP",
-        "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000"
+        "Certifica bajo la norma sectorial de tu industria cuando exista, por ejemplo ISO/TS 16949 en automocion o AS9100 en aeroespacial; las cGMP no se certifican: las verifica por inspeccion la FDA en Estados Unidos, o la autoridad equivalente en tu mercado"
       ],
-      "entregable_esperado": "Sistema de calidad certificado bajo la norma sectorial especifica de tu industria",
+      "entregable_esperado": "Sistema de calidad conforme a la norma sectorial de tu industria, certificado cuando la norma lo permite (ISO/TS 16949, AS9100) y preparado para la inspeccion de la FDA, o la autoridad equivalente en tu mercado, si te aplican las cGMP",
       "nodos_previos": [
         "conformidad_comercio_internacional",
         "familia_normas_iso_9000"
@@ -1818,6 +1818,43 @@
           "node_id": "estandares_especificos_industria",
           "titulo": "Estándares de Calidad Específicos por Industria (Adopciones ISO 9000)",
           "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+        }
+      ],
+      "correcciones": [
+        {
+          "id": "fidelidad-t2-06",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Certifica bajo la norma sectorial correspondiente en lugar de quedarte solo con ISO 9001 generico, por ejemplo AS9100, cGMP, ISO 14000",
+          "texto_nuevo": "Certifica bajo la norma sectorial de tu industria cuando exista, por ejemplo ISO/TS 16949 en automocion o AS9100 en aeroespacial; las cGMP no se certifican: las verifica por inspeccion la FDA en Estados Unidos, o la autoridad equivalente en tu mercado",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L11051",
+            "frase": "Certain industry/economic sectors then began developing industrywide quality system standards, based upon the verbatim adoption of ISO 9000, together with industrywide supplemental requirements.",
+            "apoyo": "L11040: \"AS9100 is a widely adopted and standardized quality management system for the aerospace industry.\"; L11399: \"businesses had a choice between either ISO 9001 or TS 16949.\"; L11378: \"The FDA inspects pharmaceutical manufacturing facilities worldwide using scientifically and cGMP-trained individuals\"; L11036: \"The ISO 14000 is a standard for an environmental management system. It is applicable to any business, regardless of size, location, or industry.\""
+          },
+          "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C4 del muestreo, que reconcilia al lector y al clasificador ciego. quita ISO 14000 (norma ambiental para cualquier sector, no sectorial de calidad) y la certificacion bajo cGMP (las verifica la FDA por inspeccion); anade ISO/TS 16949 y deja AS9100 como ejemplos de norma sectorial certificable Redaccion localizada por la baranda de la casa dato_local_cableado (scripts/censo_duplicacion.py): la FDA se nombra con su pais y el equivalente de tu mercado.",
+          "indice": 3,
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C4"
+        },
+        {
+          "id": "fidelidad-t2-07",
+          "fecha": "2026-09-24",
+          "campo": "entregable_esperado",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Sistema de calidad certificado bajo la norma sectorial especifica de tu industria",
+          "texto_nuevo": "Sistema de calidad conforme a la norma sectorial de tu industria, certificado cuando la norma lo permite (ISO/TS 16949, AS9100) y preparado para la inspeccion de la FDA, o la autoridad equivalente en tu mercado, si te aplican las cGMP",
+          "cita": {
+            "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+            "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+            "lineas": "L11051",
+            "frase": "Certain industry/economic sectors then began developing industrywide quality system standards, based upon the verbatim adoption of ISO 9000, together with industrywide supplemental requirements.",
+            "apoyo": "L11040: \"AS9100 is a widely adopted and standardized quality management system for the aerospace industry.\"; L11399: \"businesses had a choice between either ISO 9001 or TS 16949.\"; L11378: \"The FDA inspects pharmaceutical manufacturing facilities worldwide using scientifically and cGMP-trained individuals\"; L11036: \"The ISO 14000 is a standard for an environmental management system. It is applicable to any business, regardless of size, location, or industry.\""
+          },
+          "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo entregable_esperado repetia lo que corrige la ficha C4. Se cambia solo el segmento; el resto no cambia. Localizado por la baranda dato_local_cableado.",
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C4"
         }
       ]
     },
@@ -10631,7 +10668,7 @@
       "pasos_accionables": [
         "En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.",
         "Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.",
-        "Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.",
+        "Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado.",
         "Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho."
       ],
       "entregable_esperado": "Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.",
@@ -10648,7 +10685,27 @@
         "cuando decides mucho por corazonada y quieres que sea confiable",
         "cuando das rangos tan estrechos que casi siempre te quedas corto"
       ],
-      "etiqueta_arbol": "Calibra tu Propio Ojo"
+      "etiqueta_arbol": "Calibra tu Propio Ojo",
+      "correcciones": [
+        {
+          "id": "fidelidad-t2-05",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.",
+          "texto_nuevo": "Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado.",
+          "cita": {
+            "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+            "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+            "lineas": "L3916",
+            "frase": "if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident",
+            "apoyo": "L2120: \"Just by chance, we would expect some to get 8 or 10 but six or less would be rare.\"; L3960: \"you are calibrated when you get about 90 percent of the answers within your 90 percent CI\""
+          },
+          "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C3 del muestreo, que reconcilia al lector y al clasificador ciego. quita el umbral \"menos de nueve de diez\"; anade el umbral del libro, menos del 70 por ciento (menos de siete de diez), y el \"probablemente\"",
+          "indice": 2,
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C3"
+        }
+      ]
     },
     "calibracion_intensidad_celebracion": {
       "node_id": "calibracion_intensidad_celebracion",
@@ -70321,10 +70378,10 @@
       "pasos_accionables": [
         "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
         "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
-        "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+        "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
         "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
       ],
-      "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+      "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad en porcentaje y daño en cifras honestas.",
       "nodos_previos": [
         "cuan_probable_y_cuanto_doleria",
         "escepticismo_sano_ante_el_riesgo"
@@ -70338,7 +70395,44 @@
         "cuando calificas riesgos con puntajes que luego sumas o multiplicas",
         "cuando un tablero de riesgo te da calma pero no sabrías defender sus números"
       ],
-      "etiqueta_arbol": "La Matriz de Colores Te Engaña"
+      "etiqueta_arbol": "La Matriz de Colores Te Engaña",
+      "correcciones": [
+        {
+          "id": "fidelidad-t2-08",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+          "texto_nuevo": "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
+          "cita": {
+            "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+            "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+            "lineas": "L2136",
+            "frase": "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.",
+            "apoyo": "L2533: \"he found they varied widely even when they were given specific guidelines for what these terms meant\"; L2535: \"detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.\""
+          },
+          "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C5 del muestreo, que reconcilia al lector y al clasificador ciego. quita la etiqueta \"probabilidad media\" con un rango aclarado (lo que el libro prueba que no basta); anade la probabilidad explicita en porcentaje",
+          "indice": 2,
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C5"
+        },
+        {
+          "id": "fidelidad-t2-09",
+          "fecha": "2026-09-24",
+          "campo": "entregable_esperado",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+          "texto_nuevo": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad en porcentaje y daño en cifras honestas.",
+          "cita": {
+            "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+            "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+            "lineas": "L2136",
+            "frase": "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.",
+            "apoyo": "L2533: \"he found they varied widely even when they were given specific guidelines for what these terms meant\"; L2535: \"detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.\""
+          },
+          "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo entregable_esperado repetia lo que corrige la ficha C5. Se cambia solo el segmento; el resto no cambia.",
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C5"
+        }
+      ]
     },
     "landing_page_mvp": {
       "node_id": "landing_page_mvp",
@@ -90202,7 +90296,7 @@
       "resumen_teorico": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores según diversos estudios (Rasmussen, INPO, aerolíneas). Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
       "pasos_accionables": [
         "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
-        "Identificar en qué nivel cognitivo (planificación, almacenamiento, ejecución, monitoreo) ocurren las omisiones más frecuentes",
+        "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, cerca del final, oculto, con varios elementos iguales)",
         "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
         "Establecer métricas de seguimiento de omisiones por tipo de tarea"
       ],
@@ -90219,7 +90313,27 @@
         "Cuando se investiga la causa raíz de fallas repetidas de mantenimiento",
         "Cuando se diseña un sistema de prevención de errores humanos en tareas técnicas"
       ],
-      "etiqueta_arbol": "Cuida los Pasos Que Olvidas"
+      "etiqueta_arbol": "Cuida los Pasos Que Olvidas",
+      "correcciones": [
+        {
+          "id": "fidelidad-t2-01",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Identificar en qué nivel cognitivo (planificación, almacenamiento, ejecución, monitoreo) ocurren las omisiones más frecuentes",
+          "texto_nuevo": "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, cerca del final, oculto, con varios elementos iguales)",
+          "cita": {
+            "libro": "Managing the Risks of Organizat - Reason, J. T_",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+            "lineas": "L2250",
+            "frase": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses",
+            "apoyo": "L2170: \"The task analysis route, on the other hand, is more promising\"; L2210: \"The step is functionally isolated from the preceding actions\"; L2218: \"The step occurs close to the end of the task\"; L2222: \"the out-of-sight-out-of-mind phenomenon\"; L2240: \"Steps involving the installation of multiple items\""
+          },
+          "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C1 del muestreo, que reconcilia al lector y al clasificador ciego. quita la via de los niveles cognitivos de las omisiones pasadas (que el libro desaconseja, L2170); anade la via de los rasgos de la tarea, contados de antemano (L2250)",
+          "indice": 1,
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C1"
+        }
+      ]
     },
     "prevencion_control_peligros": {
       "node_id": "prevencion_control_peligros",
@@ -98854,7 +98968,7 @@
         "Completa un reporte detallado por cada caso registrable",
         "Prepara el resumen anual y publicalo en el periodo que indique la norma de tu mercado",
         "Envia electronicamente la información requerida a la autoridad correspondiente según tu tamano y sector",
-        "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
+        "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
         "Conserva los registros de lesiones por el tiempo minimo exigido y los registros medicos según corresponda"
       ],
       "entregable_esperado": "Los formularios de registro, reporte de incidente y resumen anual completados, publicados y archivados conforme a los plazos legales de tu mercado.",
@@ -98883,6 +98997,23 @@
             "frase": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours."
           },
           "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, se aplica la version fiel del verificador ciego (fila SB2-091), con 'en el libro' cambiado por 'en EE. UU.', que es el ambito de la cita (OSHA). El paso decia 'de inmediato' donde el libro da un plazo en horas.",
+          "indice": 5,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
+        },
+        {
+          "id": "fidelidad-t2-10",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado (en EE. UU., 8 horas ante OSHA) y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en EE. UU., 24 horas)",
+          "texto_nuevo": "Reporta a la autoridad una fatalidad laboral dentro de las pocas horas que fije tu mercado y una hospitalizacion, amputacion o perdida de un ojo dentro del plazo corto que fije tu mercado (en Estados Unidos son 8 y 24 horas ante OSHA, o la autoridad equivalente en tu mercado)",
+          "cita": {
+            "libro": "SMALL_BUSINESS",
+            "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+            "lineas": "L265",
+            "frase": "All work-related fatalities are reported to OSHA within 8 hours. All work-related in-patient hospitalizations, amputations, and loss of an eye are reported to OSHA within 24 hours."
+          },
+          "decision": "Ajuste de fidelidad-t1-01, que ya estaba en produccion: su redaccion \"(en EE. UU., 8 horas ante OSHA)\" nombraba la sigla sin la formula de localizacion que exige la baranda de la casa dato_local_cableado (scripts/censo_duplicacion.py). Mismos plazos del libro, ahora localizados. Falta de la sesion, declarada: la baranda no esta en las suites para este nodo y la tanda 1 salio sin pasarla.",
           "indice": 5,
           "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
         }
@@ -112628,9 +112759,9 @@
       "dominio": "risk_management",
       "titulo_concepto": "Técnicas de Identificación de Riesgos",
       "fuente": "Edwards et al., Managing Project Risks",
-      "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas suelta, sola o con alguien de confianza, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+      "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
       "pasos_accionables": [
-        "Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione.",
+        "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
         "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
         "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
         "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
@@ -112649,7 +112780,61 @@
         "cuando anotas riesgos como palabras sueltas y luego no sabes qué querías decir",
         "cuando no tienes equipo que aporte miradas distintas sobre lo que puede fallar"
       ],
-      "etiqueta_arbol": "Saca los Riesgos a la Luz"
+      "etiqueta_arbol": "Saca los Riesgos a la Luz",
+      "correcciones": [
+        {
+          "id": "fidelidad-t2-02",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione.",
+          "texto_nuevo": "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
+          "cita": {
+            "libro": "Managing Project Risks - Peter J. Edwards",
+            "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+            "lineas": "L3002",
+            "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+            "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+          },
+          "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C2 del muestreo, que reconcilia al lector y al clasificador ciego. quita \"solo o con alguien de confianza\"; anade el grupo pequeno de personas que conozcan el proyecto y la lluvia de ideas guiada",
+          "indice": 0,
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+        },
+        {
+          "id": "fidelidad-t2-03",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas suelta, sola o con alguien de confianza, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+          "texto_nuevo": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+          "cita": {
+            "libro": "Managing Project Risks - Peter J. Edwards",
+            "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+            "lineas": "L3002",
+            "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+            "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+          },
+          "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+        },
+        {
+          "id": "fidelidad-t2-04",
+          "fecha": "2026-09-24",
+          "campo": "resumen_teorico",
+          "veredicto": "CONTRARIO",
+          "texto_anterior": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+          "texto_nuevo": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
+          "cita": {
+            "libro": "Managing Project Risks - Peter J. Edwards",
+            "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+            "lineas": "L3002",
+            "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+            "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+          },
+          "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
+          "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+        }
+      ]
     },
     "tecnologia_como_medio_no_fin": {
       "node_id": "tecnologia_como_medio_no_fin",

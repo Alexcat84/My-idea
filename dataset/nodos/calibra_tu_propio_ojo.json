@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "En tus próximas diez estimaciones, da rangos con noventa por ciento de confianza.",
     "Cuando sepas el resultado real, cuenta cuántas veces cayó dentro de tu rango.",
-    "Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.",
+    "Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado.",
     "Usa la prueba de la apuesta: si por dinero ampliarías el rango, es que era muy estrecho."
   ],
   "entregable_esperado": "Un registro de tus estimaciones con rango y su resultado real, que muestra qué tan calibrado estás.",
@@ -25,5 +25,25 @@
     "cuando decides mucho por corazonada y quieres que sea confiable",
     "cuando das rangos tan estrechos que casi siempre te quedas corto"
   ],
-  "etiqueta_arbol": "Calibra tu Propio Ojo"
+  "etiqueta_arbol": "Calibra tu Propio Ojo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t2-05",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si aciertas menos de nueve de diez, amplía tus rangos: estás sobreconfiado.",
+      "texto_nuevo": "Si aciertas menos de siete de diez, amplía tus rangos: probablemente estás sobreconfiado.",
+      "cita": {
+        "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+        "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "L3916",
+        "frase": "if you are getting less than 70 percent of the answers within bounds, then you are probably overconfident",
+        "apoyo": "L2120: \"Just by chance, we would expect some to get 8 or 10 but six or less would be rare.\"; L3960: \"you are calibrated when you get about 90 percent of the answers within your 90 percent CI\""
+      },
+      "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C3 del muestreo, que reconcilia al lector y al clasificador ciego. quita el umbral \"menos de nueve de diez\"; anade el umbral del libro, menos del 70 por ciento (menos de siete de diez), y el \"probablemente\"",
+      "indice": 2,
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C3"
+    }
+  ]
 }

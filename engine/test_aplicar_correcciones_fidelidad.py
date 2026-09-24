@@ -56,6 +56,13 @@ def montar(tmp):
     repo = Path(tmp)
     (repo / "scripts" / "fidelidad").mkdir(parents=True)
     shutil.copy(APLICADOR, repo / "scripts" / "fidelidad" / "aplicar_correcciones.py")
+    for util in ("censo_duplicacion.py", "etiquetas_de_cara.py"):
+        if (BASE / "scripts" / util).exists():
+            shutil.copy(BASE / "scripts" / util, repo / "scripts" / util)
+    (repo / "dataset" / "metadata").mkdir(parents=True)
+    fp = BASE / "dataset" / "metadata" / "falsos_positivos_adjudicados.json"
+    if fp.exists():
+        shutil.copy(fp, repo / "dataset" / "metadata" / fp.name)
     (repo / "dataset" / "nodos").mkdir(parents=True)
     ruta = repo / "dataset" / "nodos" / (NODO["node_id"] + ".json")
     ruta.write_text(json.dumps(NODO, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -86,8 +93,10 @@ def main():
     # NEGATIVOS: cada uno rechazado y sin escribir nada
     for nombre, mala in (
         ("texto anterior que no es el vigente", correccion(texto_anterior="Otra cosa")),
-        ("texto nuevo con guion largo", correccion(texto_nuevo="Reporta — en 8 horas")),
+        ("texto nuevo con guion largo", correccion(texto_nuevo="Reporta " + chr(0x2014) + " en 8 horas")),
         ("cita sin frase", correccion(cita={"libro": "Test", "lineas": "L1", "frase": ""})),
+        ("una sigla sin localizar (baranda dato_local_cableado)",
+         correccion(id="mala-02", indice=0, texto_anterior="Paso uno", texto_nuevo="Reporta a la OSHA en 8 horas")),
     ):
         with tempfile.TemporaryDirectory() as tmp:
             repo, ruta = montar(tmp)
