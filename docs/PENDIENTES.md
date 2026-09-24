@@ -17544,3 +17544,11 @@ B16 (siguen sin pruebas `unlock` y `start`).
 
 **Condición de cierre:** cada hallazgo arreglado con su prueba en rojo primero, o descartado
 por decisión escrita del fundador, y tachado aquí con su commit.
+
+**Límite aceptado de M15 (decisión del fundador, 25 sep 2026).** La protección apunta al nodo
+de la tarea (`d28ffe0e`), pero `checklist_items.nodos_origen` se guarda por ETAPA (migración
+037: el redactor autodeclara nodos por etapa y cada tarea hereda los de la suya). En un ciclo
+nuevo, la protección cae en la etapa correcta; si esa etapa tiene varias tareas con los mismos
+nodos, cae en la primera. Se acepta por ahora. **Condición de cierre:** si algún día hace falta
+más precisión, guardar los nodos POR TAREA al nacer el plan (el redactor declarándolos por
+tarea, o una lectura que los asigne), y que `resolverProtegido` los use sin más cambios.

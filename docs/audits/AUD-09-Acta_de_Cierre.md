@@ -15,16 +15,15 @@ staging, y el paso a `main` por la mano del fundador tras su visto en la vista p
 | 3 | pérdida de datos: H04, H05, H06, H07 | `5150b93e`, tag `web-v2.6.2` |
 | 4 | atascos, fechas y números: H08 a H13 | `5150b93e`, tag `web-v2.6.2` |
 | 5 | medias por tema y barrido de precios | `046076c5`, tag `web-v2.6.3` |
-| 6 | gobierno (`8b295aad`), acta como foto (M04), protección por nodo (M15), esta acta | pendiente del visto: `web-v2.6.4` |
+| 6 | gobierno (`8b295aad`), acta como foto (M04), protección por nodo (M15), esta acta | `1ba09965`, tag `web-v2.6.4` |
 
-**Migraciones de la campaña:** 039 (`plan_basico_at`, aplicada por el fundador), 040
-(`project_actas`) y 041 (`protege_nodos`). La 040 y la 041 se aplican ANTES del paso de la
-tanda 6 a `main`; su bloque está en `my_idea_check_migraciones.sql`.
+**Migraciones de la campaña:** 039 (`plan_basico_at`), 040 (`project_actas`) y 041
+(`protege_nodos`), las tres aplicadas por el fundador; su bloque está en
+`my_idea_check_migraciones.sql`.
 
 ## Estados
 
 - **CERRADO:** arreglado con su prueba y en producción.
-- **EN STAGING:** arreglado con su prueba; entra a producción con `web-v2.6.4`.
 - **PARCIAL:** una parte cerrada, el resto abierto y nombrado.
 - **EN PENDIENTES:** es dato del grafo o de Design, y no código de esta campaña; vive en su ficha.
 - **ABIERTO:** quedó fuera del alcance de las tandas que fijó el fundador. Ningún abierto se
@@ -51,14 +50,14 @@ tanda 6 a `main`; su bloque está en `my_idea_check_migraciones.sql`.
 | H15 | la recuperación se saltaba la lista de la beta | `b87c0a1b` | CERRADO |
 | H16 | borrar la cuenta fallaba abierto sin doble factor | `09decc95` | CERRADO |
 
-## 2. MEDIA (20 cerrados, 2 en staging, 1 parcial, 3 en pendientes, 29 abiertos)
+## 2. MEDIA (22 cerrados, 1 parcial, 3 en pendientes, 29 abiertos)
 
 | hallazgo | qué | commit | estado |
 |---|---|---|---|
 | M01 | las retiradas contaban en el total | `37ceaa43` | CERRADO |
 | M02 | Expediente y Reporte sumaban todos los ciclos | `1e6b3f5c` | CERRADO |
 | M03 | el Registro de protección leía todos los ciclos | `1e6b3f5c` | CERRADO |
-| M04 | el acta de cierre se recalculaba en vivo | `215bb40d` (foto en `project_actas`, migración 040; la vista en vivo se llama "Estado actual") | EN STAGING |
+| M04 | el acta de cierre se recalculaba en vivo | `215bb40d` (foto en `project_actas`, migración 040; la vista en vivo se llama "Estado actual") | CERRADO |
 | M05 | el PDF conservaba el "Cumplimiento por mundo" | `040d9d48` | CERRADO |
 | M06 | la cascada de mover fecha arrastraba planes reemplazados | `041d75d7` | CERRADO |
 | M07 | el ritual repartía fechas a hechas y retiradas | `041d75d7` | CERRADO |
@@ -69,7 +68,7 @@ tanda 6 a `main`; su bloque está en `my_idea_check_migraciones.sql`.
 | M12 | una sola instancia de Manos a la Obra para los dos espacios | `1b96d5a4` | CERRADO |
 | M13 | el plan de un mundo ocupaba "Tu Plan" | `17e0bd28` | CERRADO |
 | M14 | "Mi bitácora" del núcleo mezclaba mundos | `e775ff09` | CERRADO |
-| M15 | un ciclo nuevo del núcleo dejaba la protección huérfana | `d28ffe0e` (la protección apunta al nodo; migración 041), `059945cf` (la escritura tolera la 041 ausente) | EN STAGING |
+| M15 | un ciclo nuevo del núcleo dejaba la protección huérfana | `d28ffe0e` (la protección apunta al nodo; migración 041), `059945cf` (la escritura tolera la 041 ausente) | CERRADO |
 | M16 | la sesión de un mundo cruzaba a otro mundo | `736796a0`; decisión del fundador en `8b295aad` (puede pasar por el núcleo, el corte es entre mundos) | CERRADO |
 | M17 | los respaldos del motor callaban | `31c30162` | CERRADO |
 | M18 | una lectura fallida se pintaba en cero | `aa3c3402` | CERRADO |
@@ -153,3 +152,13 @@ de gravedad ALTA quedaron cerrados en producción, igual que las medias de diner
 silenciosas, conteos y mezcla de espacios que el fundador puso en las tandas. Lo abierto no se
 da por resuelto: queda nombrado arriba y en la ficha `aud09-remanentes` de `docs/PENDIENTES.md`,
 para que el fundador lo ordene en otra campaña.
+
+## CIERRE
+
+**AUD-09 CERRADA el 25 sep 2026.** Visto del fundador a la tanda 6 (el acta es foto del cierre y
+el segundo cierre agrega otra sin pisar la primera), migraciones 040 y 041 aplicadas, `main` por
+avance rápido a `1ba09965` con el tag `web-v2.6.4`, y sello en vivo de www.myideaproject.com en
+`1ba0996`. Balance final: ALTA 16 de 16 cerrados; MEDIA 22 cerrados, 1 parcial, 3 con ficha propia
+y 29 abiertos; BAJA 2 cerrados, 1 parcial y 13 abiertos. El límite de M15 (nodos por etapa) quedó
+aceptado por el fundador, con su condición de cierre en la ficha `aud09-remanentes`, donde viven
+también los remanentes para su triaje.
