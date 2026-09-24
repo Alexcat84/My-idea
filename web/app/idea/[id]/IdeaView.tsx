@@ -40,6 +40,7 @@ import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor"
 import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
+import { urlSinParametro } from "@/lib/urlSinParametro";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -659,6 +660,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
         } else if (quiereEntrevista && !d.plan) {
           // Arranque: la entrevista sobre ESTA idea (el motor nunca
           // re-pregunta la idea inicial: se la mandamos como contexto).
+          // AUD-09 M30: el parámetro se CONSUME aquí. Si se quedaba en la URL,
+          // recargar tras un cierre honesto arrancaba otra exploración y gastaba
+          // un arranque del día sin que nadie lo pidiera.
+          router.replace(urlSinParametro(`/idea/${projectId}`, searchParams.toString(), "entrevista"));
           setEnviando(true);
           const inicio = await fetch("/api/session/start", {
             method: "POST",
