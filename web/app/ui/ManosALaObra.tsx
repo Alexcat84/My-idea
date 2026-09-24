@@ -793,14 +793,25 @@ export function calcularFechasRitual(
      * FALLBACK (sin bandas) no ancla: el sugeridor viejo no sabe de enlaces,
      * y se declara aquí en vez de fingirse. */
     anclas?: Record<string, { fecha: string; etiqueta: string }>;
+    /** AUD-09 H10: el "hoy" del cálculo (inyectable para las pruebas; por
+     * defecto, ahora). */
+    hoy?: string;
   }
 ): { fechas: Record<string, string>; noLlegan: Record<string, string> } {
   const fechas: Record<string, string> = {};
   const noLlegan: Record<string, string> = {};
+  // AUD-09 H10: el ancla es la fecha MÁS RECIENTE entre la creación del plan y
+  // hoy. Antes era siempre la creación: recalcular un plan de hace semanas
+  // re-empaquetaba lo pendiente desde su semana 1 y el calendario nacía
+  // vencido, contra la regla de empaquetado.ts ("ninguna fecha del ritual
+  // puede nacer vencida"). Un plan recién creado no cambia.
+  const hoy = opts.hoy ?? new Date().toISOString();
+  const anclaDe = (planCreatedAt: string) =>
+    new Date(planCreatedAt).getTime() >= new Date(hoy).getTime() ? planCreatedAt : hoy;
   for (const g of tramos) {
     if (opts.empaquetable) {
       const r = empaquetarFechas({
-        ancla: g.planCreatedAt,
+        ancla: anclaDe(g.planCreatedAt),
         capacidad: opts.capacidad,
         diaPreferido: opts.diaPreferido,
         factores: opts.factoresPorDominio?.[g.dominio],
@@ -821,7 +832,7 @@ export function calcularFechasRitual(
       }
     } else {
       for (const f of sugerirFechasBase({
-        planCreatedAt: g.planCreatedAt,
+        planCreatedAt: anclaDe(g.planCreatedAt),
         diaPreferido: opts.diaPreferido,
         cadenciaSemanas: opts.cadenciaSemanas,
         items: g.items.map((i) => ({ id: i.id, etapa: i.etapa, destacado: i.destacado })),

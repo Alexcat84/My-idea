@@ -52,6 +52,7 @@ describe("el ritual EMPAQUETA cuando todas las tareas tienen banda", () => {
     // A MANO: M(3 h) → acumulado 3 → ceil(3/5)-1 = 0 → semana 1 → vie 14-ago.
     //         M(3 h) → acumulado 6 → ceil(6/5)-1 = 1 → semana 2 → vie 21-ago.
     const { fechas: f } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: true,
@@ -63,6 +64,7 @@ describe("el ritual EMPAQUETA cuando todas las tareas tienen banda", () => {
   it("la capacidad MANDA: con 20+ las mismas dos tareas caben en la misma semana", () => {
     // A MANO, 20 h/sem: acumulados 3 y 6 → las dos ceil(x/20)-1 = 0 → semana 1.
     const { fechas: f } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: ANCLA,
       diaPreferido: null,
       capacidad: "20+",
       empaquetable: true,
@@ -78,7 +80,7 @@ describe("FALLBACK: con una sola tarea sin banda, el tramo entero vuelve al suge
     // aunque una sea una XL de 16 h. Es el comportamiento histórico, intacto.
     const { fechas: f } = calcularFechasRitual(
       tramo([item({ id: "a", etapa: 1, banda: "XL" }), item({ id: "b", etapa: 1, banda: null })]),
-      { diaPreferido: null, capacidad: "2-5", empaquetable: false }
+      { hoy: ANCLA, diaPreferido: null, capacidad: "2-5", empaquetable: false }
     );
     expect(f["a"]).toBe("2026-08-14");
     expect(f["b"]).toBe("2026-08-14");
@@ -86,15 +88,17 @@ describe("FALLBACK: con una sola tarea sin banda, el tramo entero vuelve al suge
 
   it("en el fallback la capacidad elegida NO cambia ninguna fecha", () => {
     const items = [item({ id: "a", etapa: 1, banda: null }), item({ id: "b", etapa: 2, banda: null })];
-    const { fechas: lento } = calcularFechasRitual(tramo(items), { diaPreferido: null, capacidad: "2-5", empaquetable: false });
-    const { fechas: rapido } = calcularFechasRitual(tramo(items), { diaPreferido: null, capacidad: "20+", empaquetable: false });
+    const { fechas: lento } = calcularFechasRitual(tramo(items), {
+      hoy: ANCLA, diaPreferido: null, capacidad: "2-5", empaquetable: false });
+    const { fechas: rapido } = calcularFechasRitual(tramo(items), {
+      hoy: ANCLA, diaPreferido: null, capacidad: "20+", empaquetable: false });
     expect(lento).toEqual(rapido);
   });
 
   it("el fallback sigue respetando la cadencia aprendida del ciclo previo", () => {
     // A MANO: con cadenciaSemanas = 2, la etapa 1 cae a 1x2 = 2 semanas → vie 21-ago
     // (el aprendizaje de la Fase 4.0 no se pierde por la llegada del scheduler).
-    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), { hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: false,
@@ -119,7 +123,8 @@ describe("cada tramo cuenta desde SU plan (un mundo activado después no hereda 
         items: [item({ id: "m", etapa: 1, banda: "M", dominio: "quality" })],
       },
     ];
-    const { fechas: f } = calcularFechasRitual(tramos, { diaPreferido: null, capacidad: "5-10", empaquetable: true });
+    const { fechas: f } = calcularFechasRitual(tramos, {
+      hoy: ANCLA, diaPreferido: null, capacidad: "5-10", empaquetable: true });
     expect(f["c"]).toBe("2026-08-14");
     expect(f["m"]).toBe("2026-08-28");
   });
@@ -131,6 +136,7 @@ describe("F4 — el multiplicador personal entra por el mismo cable, y solo dond
     //   a: 6 h  → ceil(6/5)-1  = 1 → semana 2 → vie 21-ago
     //   b: 12 h → ceil(12/5)-1 = 2 → semana 3 → vie 28-ago
     const { fechas: f } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: true,
@@ -155,6 +161,7 @@ describe("F4 — el multiplicador personal entra por el mismo cable, y solo dond
       },
     ];
     const { fechas: f } = calcularFechasRitual(tramos, {
+      hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: true,
@@ -165,8 +172,10 @@ describe("F4 — el multiplicador personal entra por el mismo cable, y solo dond
   });
 
   it("sin factores el reparto es idéntico al de siempre (cero invención)", () => {
-    const { fechas: base } = calcularFechasRitual(tramo(DOS_M), { diaPreferido: null, capacidad: "5-10", empaquetable: true });
+    const { fechas: base } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: ANCLA, diaPreferido: null, capacidad: "5-10", empaquetable: true });
     const { fechas: vacio } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: true,
@@ -176,7 +185,7 @@ describe("F4 — el multiplicador personal entra por el mismo cable, y solo dond
   });
 
   it("en el FALLBACK el factor no pinta nada (el sugeridor viejo no sabe de bandas)", () => {
-    const { fechas: conFactor } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+    const { fechas: conFactor } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), { hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: false,
@@ -189,7 +198,7 @@ describe("F4 — el multiplicador personal entra por el mismo cable, y solo dond
 describe("el día de cierre aprendido se conserva en los dos caminos", () => {
   it("empaquetando: con diaPreferido sábado, la entrega cae en sábado", () => {
     // A MANO: sábado = 6 → semana 1 → 15-ago.
-    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: "M" })]), {
+    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: "M" })]), { hoy: ANCLA,
       diaPreferido: 6,
       capacidad: "5-10",
       empaquetable: true,
@@ -198,7 +207,7 @@ describe("el día de cierre aprendido se conserva en los dos caminos", () => {
   });
 
   it("en el fallback también", () => {
-    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), {
+    const { fechas: f } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: null })]), { hoy: ANCLA,
       diaPreferido: 6,
       capacidad: "5-10",
       empaquetable: false,
@@ -212,7 +221,7 @@ describe("P5 — las anclas viajan por el mismo cable, con su aviso etiquetado",
     // A MANO, capacidad 5: B (ancla vie 28-ago) gana prioridad → vie 14-ago.
     const r = calcularFechasRitual(
       tramo([item({ id: "a", etapa: 1, banda: "M" }), item({ id: "b", etapa: 1, banda: "M" })]),
-      {
+      { hoy: ANCLA,
         diaPreferido: null,
         capacidad: "5-10",
         empaquetable: true,
@@ -226,7 +235,7 @@ describe("P5 — las anclas viajan por el mismo cable, con su aviso etiquetado",
   it("cuando no llega, el aviso sale con la ETIQUETA de lo protegido (#N · título)", () => {
     // A MANO, capacidad 5: ancla 18-ago → deseada 11-ago; lo mejor posible es
     // el vie 14-ago → no llega, y el aviso nombra a quién protege.
-    const r = calcularFechasRitual(tramo([item({ id: "b", etapa: 1, banda: "M" })]), {
+    const r = calcularFechasRitual(tramo([item({ id: "b", etapa: 1, banda: "M" })]), { hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: true,
@@ -237,7 +246,7 @@ describe("P5 — las anclas viajan por el mismo cable, con su aviso etiquetado",
   });
 
   it("el FALLBACK no ancla (declarado): sin bandas, ni prioridad ni avisos", () => {
-    const r = calcularFechasRitual(tramo([item({ id: "b", etapa: 1, banda: null })]), {
+    const r = calcularFechasRitual(tramo([item({ id: "b", etapa: 1, banda: null })]), { hoy: ANCLA,
       diaPreferido: null,
       capacidad: "5-10",
       empaquetable: false,
@@ -245,5 +254,45 @@ describe("P5 — las anclas viajan por el mismo cable, con su aviso etiquetado",
     });
     expect(r.fechas["b"]).toBe("2026-08-14");
     expect(r.noLlegan).toEqual({});
+  });
+});
+
+// AUD-09 H10: "Recalcular pendientes" (y el primer ritual de un plan viejo)
+// anclaba siempre en la creación del plan: lo pendiente se re-empaquetaba desde
+// la semana 1 del plan y el calendario recién recalculado nacía vencido.
+describe("el ritual se calcula desde HOY cuando el plan es de antes", () => {
+  it("un plan de agosto recalculado el 23 de septiembre no da fechas vencidas", () => {
+    // A MANO: el ancla es la fecha más reciente entre la creación del plan
+    // (lun 03-ago) y hoy (mié 23-sep) = mié 23-sep. La primera etapa arranca en
+    // la semana SIGUIENTE a la del ancla (empaquetado.ts): lun 28-sep. Así que
+    // ninguna fecha puede caer antes del 28-sep; con el ancla vieja, la M caía
+    // el vie 14-ago, cinco semanas vencida.
+    const { fechas } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1, banda: "M" })]), {
+      hoy: "2026-09-23T10:00:00",
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+    });
+    expect(fechas["a"] >= "2026-09-28").toBe(true);
+  });
+
+  it("el camino sin bandas (sugeridor) también parte de hoy", () => {
+    const { fechas } = calcularFechasRitual(tramo([item({ id: "a", etapa: 1 })]), {
+      hoy: "2026-09-23T10:00:00",
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: false,
+    });
+    expect(fechas["a"] >= "2026-09-23").toBe(true);
+  });
+
+  it("un plan recién creado no cambia: el ancla sigue siendo su creación", () => {
+    const { fechas } = calcularFechasRitual(tramo(DOS_M), {
+      hoy: "2026-08-03T09:00:00",
+      diaPreferido: null,
+      capacidad: "5-10",
+      empaquetable: true,
+    });
+    expect(fechas["a"]).toBe("2026-08-14");
   });
 });
