@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_033",
+  "intento": 0,
+  "usd": 0.16428800000000002,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34062,
+  "tokens_out": 1402,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB664DD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4987, 4765], \"razon\": \"El libro rechaza expresamente castigar todos los errores y rechaza también la inmunidad general ante sanciones.\"},\n  {\"id\": \"P50E0CB\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4368], \"razon\": \"Coincide casi literalmente con L4368, pero omite 'where possible' en la sustitución. Esa condición se pierde; conviene revisar el matiz.\"},\n  {\"id\": \"PA27233\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1095, 1141, 1149], \"razon\": \"El libro diagnostica el efecto 'cry wolf', pero no prescribe rediseñar alarmas. Además advierte que añadir defensas aumenta la complejidad. El remedio no tiene cobertura directa.\"},\n  {\"id\": \"PF6489E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5132, 5162, 5182, 4769], \"razon\": \"El libro describe la fuerte dependencia de SOPs y la flexibilidad de las HRO. Evaluarla es una concreción neutral, sin choque aparente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB664DD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4987,
+    4765
+   ],
+   "razon": "El libro rechaza expresamente castigar todos los errores y rechaza también la inmunidad general ante sanciones."
+  },
+  {
+   "id": "P50E0CB",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4368
+   ],
+   "razon": "Coincide casi literalmente con L4368, pero omite 'where possible' en la sustitución. Esa condición se pierde; conviene revisar el matiz."
+  },
+  {
+   "id": "PA27233",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    1149
+   ],
+   "razon": "El libro diagnostica el efecto 'cry wolf', pero no prescribe rediseñar alarmas. Además advierte que añadir defensas aumenta la complejidad. El remedio no tiene cobertura directa."
+  },
+  {
+   "id": "PF6489E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5132,
+    5162,
+    5182,
+    4769
+   ],
+   "razon": "El libro describe la fuerte dependencia de SOPs y la flexibilidad de las HRO. Evaluarla es una concreción neutral, sin choque aparente."
+  }
+ ]
+}

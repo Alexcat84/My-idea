@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_017",
+  "intento": 0,
+  "usd": 0.168944,
+  "turnos": 1,
+  "duracion_s": 19.8,
+  "pared_s": 20.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33701,
+  "tokens_out": 1707,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P4AF311\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4161, 4165, 4194], \"razon\": \"El libro señala la financiación parcial por los regulados y el conflicto entre funciones comerciales y de vigilancia. La extensión al área interna y a la dependencia jerárquica va en la misma dirección.\"},\n {\"id\": \"P55E59C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2944, 2905, 293], \"razon\": \"El libro dice literalmente que los errores tienen causas personales, de tarea, situacionales y organizacionales, y que hay que buscarlas en el contexto.\"},\n {\"id\": \"P97C06F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [1044, 1050, 1068, 1072], \"razon\": \"El libro indica que los accidentes graves ocurren cuando se viola la independencia supuesta entre capas (caso Bhopal) y advierte de los fallos de modo común.\"},\n {\"id\": \"P4357F9\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1539, 2716, 5043, 5055, 5057, 4765], \"razon\": \"Coincide con el árbol de culpabilidad, pero la dicotomía simplifica. Según el libro, la mayoría de las violaciones no son malévolas, pueden ser necesarias o inducidas por el sistema y su culpa depende de los procedimientos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P4AF311",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4161,
+    4165,
+    4194
+   ],
+   "razon": "El libro señala la financiación parcial por los regulados y el conflicto entre funciones comerciales y de vigilancia. La extensión al área interna y a la dependencia jerárquica va en la misma dirección."
+  },
+  {
+   "id": "P55E59C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2944,
+    2905,
+    293
+   ],
+   "razon": "El libro dice literalmente que los errores tienen causas personales, de tarea, situacionales y organizacionales, y que hay que buscarlas en el contexto."
+  },
+  {
+   "id": "P97C06F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    1044,
+    1050,
+    1068,
+    1072
+   ],
+   "razon": "El libro indica que los accidentes graves ocurren cuando se viola la independencia supuesta entre capas (caso Bhopal) y advierte de los fallos de modo común."
+  },
+  {
+   "id": "P4357F9",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1539,
+    2716,
+    5043,
+    5055,
+    5057,
+    4765
+   ],
+   "razon": "Coincide con el árbol de culpabilidad, pero la dicotomía simplifica. Según el libro, la mayoría de las violaciones no son malévolas, pueden ser necesarias o inducidas por el sistema y su culpa depende de los procedimientos."
+  }
+ ]
+}

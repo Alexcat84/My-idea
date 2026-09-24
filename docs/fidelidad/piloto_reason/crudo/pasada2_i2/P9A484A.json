@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P9A484A",
+  "intento": 0,
+  "usd": 0.17207999999999998,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38360,
+  "tokens_out": 932,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9A484A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1033, 1035, 1145, 973], \"cita\": \"Measures designed to eliminate a conspicuous cause of some previous accident can contribute to the next one. ... regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems\", \"datos_sin_respaldo\": [], \"razon\": \"El libro advierte que los 'fixes' pueden causar el próximo accidente y pide cautela con las nuevas defensas. El paso concreta esa advertencia en una revisión previa de efectos contraproducentes, sin prometer prever todos los escenarios ni sustituir la mejora proactiva. No aporta cifras, plazos, herramientas ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P9A484A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1033,
+   1035,
+   1145,
+   973
+  ],
+  "cita": "Measures designed to eliminate a conspicuous cause of some previous accident can contribute to the next one. ... regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems",
+  "datos_sin_respaldo": [],
+  "razon": "El libro advierte que los 'fixes' pueden causar el próximo accidente y pide cautela con las nuevas defensas. El paso concreta esa advertencia en una revisión previa de efectos contraproducentes, sin prometer prever todos los escenarios ni sustituir la mejora proactiva. No aporta cifras, plazos, herramientas ni responsables.",
+  "paso_fiel": ""
+ }
+}

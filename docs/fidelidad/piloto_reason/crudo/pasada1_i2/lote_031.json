@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_031",
+  "intento": 0,
+  "usd": 0.152244,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33041,
+  "tokens_out": 1004,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P02CE17\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3230, 3332], \"razon\": \"El libro no corrige sesgos individuales identificando al encuestado: agrega datos de muchos para que se cancelen y preserva el anonimato; MESH usa acceso anónimo.\"},\n  {\"id\": \"PF531FC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4765, 4798, 4824, 5077], \"razon\": \"El libro rechaza la cultura de 'no culpa' total: pide cultura justa con límites claros y sanciones para actos atroces. 'Sin represalias' sin condición podría invertirlo.\"},\n  {\"id\": \"P178331\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2485, 2487, 2489, 2520], \"razon\": \"El libro distingue medidas de proceso y de resultado y critica depender de las de resultado; auditar para clasificarlas concreta esa idea.\"},\n  {\"id\": \"P0C8893\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [1842, 2342, 2346, 2354], \"razon\": \"La figura 5.6 compara el riesgo por mantenimiento descuidado con el riesgo de error durante el mantenimiento; importan las proporciones relativas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P02CE17",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3230,
+    3332
+   ],
+   "razon": "El libro no corrige sesgos individuales identificando al encuestado: agrega datos de muchos para que se cancelen y preserva el anonimato; MESH usa acceso anónimo."
+  },
+  {
+   "id": "PF531FC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4765,
+    4798,
+    4824,
+    5077
+   ],
+   "razon": "El libro rechaza la cultura de 'no culpa' total: pide cultura justa con límites claros y sanciones para actos atroces. 'Sin represalias' sin condición podría invertirlo."
+  },
+  {
+   "id": "P178331",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2485,
+    2487,
+    2489,
+    2520
+   ],
+   "razon": "El libro distingue medidas de proceso y de resultado y critica depender de las de resultado; auditar para clasificarlas concreta esa idea."
+  },
+  {
+   "id": "P0C8893",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    1842,
+    2342,
+    2346,
+    2354
+   ],
+   "razon": "La figura 5.6 compara el riesgo por mantenimiento descuidado con el riesgo de error durante el mantenimiento; importan las proporciones relativas."
+  }
+ ]
+}

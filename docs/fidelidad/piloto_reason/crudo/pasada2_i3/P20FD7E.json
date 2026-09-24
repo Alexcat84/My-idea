@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P20FD7E",
+  "intento": 0,
+  "usd": 0.208928,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48587,
+  "tokens_out": 729,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P20FD7E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [596, 600, 5272], \"cita\": \"He identified three types of culture--pathological, bureaucratic and generative--and their principal characteristics are summarized in Table 2.2.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"La tabla 2.2 existe en el libro y resume las características de cada cultura, así que no es una herramienta añadida. El libro no la propone como instrumento de diagnóstico; usarla así concreta el texto en su misma dirección. La advertencia de L5272 va contra la complacencia, no contra clasificar la cultura. El paso no la contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P20FD7E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   596,
+   600,
+   5272
+  ],
+  "cita": "He identified three types of culture--pathological, bureaucratic and generative--and their principal characteristics are summarized in Table 2.2.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "La tabla 2.2 existe en el libro y resume las características de cada cultura, así que no es una herramienta añadida. El libro no la propone como instrumento de diagnóstico; usarla así concreta el texto en su misma dirección. La advertencia de L5272 va contra la complacencia, no contra clasificar la cultura. El paso no la contradice.",
+  "paso_fiel": ""
+ }
+}

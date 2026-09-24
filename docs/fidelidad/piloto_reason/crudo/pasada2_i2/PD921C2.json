@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD921C2",
+  "intento": 0,
+  "usd": 0.157112,
+  "turnos": 1,
+  "duracion_s": 8.8,
+  "pared_s": 9.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35873,
+  "tokens_out": 681,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD921C2\", \"veredicto\": \"CONTRARIO\", \"lineas\": [1558, 1630, 1724], \"cita\": \"Similarly, compliance is not automatically ‘correct’, nor a violation incorrect. It all depends on the local conditions and the adequacy of the procedures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que el cumplimiento no es automáticamente correcto: depende de las condiciones locales y de la calidad del procedimiento. Además define la 'mispliance', el cumplimiento erróneo de reglas inadecuadas. El paso da por correcto todo cumplimiento verificado, invierte esa tesis y choca con el propio nodo, que trata de reglas sobreespecificadas.\", \"paso_fiel\": \"Evaluar el desempeño de cada tarea según si la acción fue adecuada al riesgo en las condiciones locales y según la calidad del procedimiento, sin dar por correcto el cumplimiento por sí mismo, ya que seguir una regla inadecuada puede ser un cumplimiento erróneo.\"}\n```",
+ "parseado": {
+  "id": "PD921C2",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   1558,
+   1630,
+   1724
+  ],
+  "cita": "Similarly, compliance is not automatically ‘correct’, nor a violation incorrect. It all depends on the local conditions and the adequacy of the procedures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que el cumplimiento no es automáticamente correcto: depende de las condiciones locales y de la calidad del procedimiento. Además define la 'mispliance', el cumplimiento erróneo de reglas inadecuadas. El paso da por correcto todo cumplimiento verificado, invierte esa tesis y choca con el propio nodo, que trata de reglas sobreespecificadas.",
+  "paso_fiel": "Evaluar el desempeño de cada tarea según si la acción fue adecuada al riesgo en las condiciones locales y según la calidad del procedimiento, sin dar por correcto el cumplimiento por sí mismo, ya que seguir una regla inadecuada puede ser un cumplimiento erróneo."
+ }
+}

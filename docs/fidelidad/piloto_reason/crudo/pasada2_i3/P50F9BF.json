@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P50F9BF",
+  "intento": 0,
+  "usd": 0.219396,
+  "turnos": 1,
+  "duracion_s": 6.9,
+  "pared_s": 7.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52619,
+  "tokens_out": 446,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P50F9BF\", \"veredicto\": \"FIEL\", \"lineas\": [4476], \"cita\": \"The regulator rates the relative contributions of each O & M factor to each instance on a five-point scale, where 1 = very little influence and 5 = very considerable influence.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda de forma literal la escala de cinco puntos: 1 es muy poca influencia y 5 es influencia muy considerable. El paso omite que califica el regulador y que se hace por cada instancia, y suaviza los extremos de la escala. Son diferencias de detalle, no de dirección, y ningún dato carece de respaldo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P50F9BF",
+  "veredicto": "FIEL",
+  "lineas": [
+   4476
+  ],
+  "cita": "The regulator rates the relative contributions of each O & M factor to each instance on a five-point scale, where 1 = very little influence and 5 = very considerable influence.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda de forma literal la escala de cinco puntos: 1 es muy poca influencia y 5 es influencia muy considerable. El paso omite que califica el regulador y que se hace por cada instancia, y suaviza los extremos de la escala. Son diferencias de detalle, no de dirección, y ningún dato carece de respaldo.",
+  "paso_fiel": ""
+ }
+}

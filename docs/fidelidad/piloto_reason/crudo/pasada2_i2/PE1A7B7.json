@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE1A7B7",
+  "intento": 0,
+  "usd": 0.116716,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 22719,
+  "tokens_out": 1292,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE1A7B7\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [852, 856, 868], \"cita\": \"Skills need to be practised continuously in order to preserve them. [...] flight crews must not only know which mode they are in, but also how the FMS selects new modes. [...] during periods of high mental workload.\", \"datos_sin_respaldo\": [\"cada seis meses\", \"sesión de simulador\"], \"razon\": \"El libro respalda que las tripulaciones practiquen de forma continuada y entiendan cómo el FMS cambia de modo, sobre todo con alta carga de trabajo (L852, L856, L868). No lo contradice: no presenta la formación como ineficaz. Pero no fija ninguna frecuencia semestral ni menciona el simulador como herramienta.\", \"paso_fiel\": \"Entrenar de forma continuada a las tripulaciones en cómo el FMS selecciona y cambia de modo, incluidas las transiciones durante las fases de alta carga de trabajo, para preservar las habilidades que la automatización deja sin ejercitar.\"}\n```",
+ "parseado": {
+  "id": "PE1A7B7",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   852,
+   856,
+   868
+  ],
+  "cita": "Skills need to be practised continuously in order to preserve them. [...] flight crews must not only know which mode they are in, but also how the FMS selects new modes. [...] during periods of high mental workload.",
+  "datos_sin_respaldo": [
+   "cada seis meses",
+   "sesión de simulador"
+  ],
+  "razon": "El libro respalda que las tripulaciones practiquen de forma continuada y entiendan cómo el FMS cambia de modo, sobre todo con alta carga de trabajo (L852, L856, L868). No lo contradice: no presenta la formación como ineficaz. Pero no fija ninguna frecuencia semestral ni menciona el simulador como herramienta.",
+  "paso_fiel": "Entrenar de forma continuada a las tripulaciones en cómo el FMS selecciona y cambia de modo, incluidas las transiciones durante las fases de alta carga de trabajo, para preservar las habilidades que la automatización deja sin ejercitar."
+ }
+}

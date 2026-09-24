@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3B8FB1",
+  "intento": 0,
+  "usd": 0.221844,
+  "turnos": 1,
+  "duracion_s": 6.0,
+  "pared_s": 7.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53536,
+  "tokens_out": 385,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P3B8FB1\", \"veredicto\": \"FIEL\", \"lineas\": [4478, 4494], \"cita\": \"The purpose of the profile is to identify those two or three factors most in need of reform by the organization (and subsequent close monitoring by the regulator).\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro fija el propósito del Perfil: identificar los dos o tres factores que más necesitan reforma (L4494), y la califica de urgente, porque ninguna organización puede resolver todos sus problemas a la vez (L4478). La cifra 2-3 y la inmediatez están respaldadas.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P3B8FB1",
+  "veredicto": "FIEL",
+  "lineas": [
+   4478,
+   4494
+  ],
+  "cita": "The purpose of the profile is to identify those two or three factors most in need of reform by the organization (and subsequent close monitoring by the regulator).",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro fija el propósito del Perfil: identificar los dos o tres factores que más necesitan reforma (L4494), y la califica de urgente, porque ninguna organización puede resolver todos sus problemas a la vez (L4478). La cifra 2-3 y la inmediatez están respaldadas.",
+  "paso_fiel": ""
+ }
+}

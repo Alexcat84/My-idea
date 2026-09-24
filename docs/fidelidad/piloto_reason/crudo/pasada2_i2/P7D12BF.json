@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P7D12BF",
+  "intento": 0,
+  "usd": 0.156292,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34933,
+  "tokens_out": 828,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7D12BF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977], \"cita\": \"To do this, we need to ask three questions. [...] It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro plantea las mismas tres preguntas: contacto directo, criticidad y frecuencia. Pero las aplica a tres clases universales de actividad en tecnologías peligrosas (control normal, control de emergencia y mantenimiento), no tarea por tarea en cualquier negocio. El paso baja la herramienta a cada tarea, en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7D12BF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977
+  ],
+  "cita": "To do this, we need to ask three questions. [...] It would be reasonable to expect that an activity scoring ‘high’ on all three of these questions is the one most likely to be associated with human performance problems.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro plantea las mismas tres preguntas: contacto directo, criticidad y frecuencia. Pero las aplica a tres clases universales de actividad en tecnologías peligrosas (control normal, control de emergencia y mantenimiento), no tarea por tarea en cualquier negocio. El paso baja la herramienta a cada tarea, en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

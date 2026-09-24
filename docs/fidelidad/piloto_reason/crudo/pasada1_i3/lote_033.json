@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_033",
+  "intento": 0,
+  "usd": 0.15514,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 13.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33850,
+  "tokens_out": 987,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5D9850\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [194, 196, 293, 2876, 2905, 4105], \"razon\": \"El libro pide ir de los actos inseguros hacia las condiciones locales, organizacionales y regulatorias. El error es consecuencia, no causa final.\"},\n  {\"id\": \"P9B201F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5184, 5186, 5196], \"razon\": \"Weick, citado por Reason, recomienda una cultura de 'war stories' y de comunicación cara a cara para reducir la brecha de variedad requerida.\"},\n  {\"id\": \"PBF11AC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [293, 2650, 181, 310], \"razon\": \"La investigación examina cómo y cuándo fallaron las defensas, y cada evento muestra una trayectoria a través de ellas. El paso lo concreta como secuencia temporal.\"},\n  {\"id\": \"PD0F918\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"un solo fallo\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5031, 5035, 4987, 5037, 5063], \"razon\": \"El paso reproduce el criterio de Lord Denning, que Reason rechaza como 'hang them all'. Propone en su lugar el test de sustitución; castigar todo error es inaceptable.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5D9850",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    194,
+    196,
+    293,
+    2876,
+    2905,
+    4105
+   ],
+   "razon": "El libro pide ir de los actos inseguros hacia las condiciones locales, organizacionales y regulatorias. El error es consecuencia, no causa final."
+  },
+  {
+   "id": "P9B201F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5186,
+    5196
+   ],
+   "razon": "Weick, citado por Reason, recomienda una cultura de 'war stories' y de comunicación cara a cara para reducir la brecha de variedad requerida."
+  },
+  {
+   "id": "PBF11AC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    293,
+    2650,
+    181,
+    310
+   ],
+   "razon": "La investigación examina cómo y cuándo fallaron las defensas, y cada evento muestra una trayectoria a través de ellas. El paso lo concreta como secuencia temporal."
+  },
+  {
+   "id": "PD0F918",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "un solo fallo"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5031,
+    5035,
+    4987,
+    5037,
+    5063
+   ],
+   "razon": "El paso reproduce el criterio de Lord Denning, que Reason rechaza como 'hang them all'. Propone en su lugar el test de sustitución; castigar todo error es inaceptable."
+  }
+ ]
+}

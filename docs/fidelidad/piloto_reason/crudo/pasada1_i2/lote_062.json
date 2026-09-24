@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_062",
+  "intento": 0,
+  "usd": 0.172712,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 21.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33283,
+  "tokens_out": 1979,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD4E442\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1004, 1006, 1354], \"razon\": \"El libro describe cómo se acumulan reglas tras cada accidente y reducen el margen de acción. Revisar ese historial concreta esa idea en la misma dirección.\"},\n  {\"id\": \"P087D20\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"la persona que supervisa el trabajo\"], \"clase\": \"FIEL\", \"lineas\": [5204, 5208, 4769], \"razon\": \"L5204 pide seleccionar supervisores con amplia experiencia y conocimiento de los peligros del lugar. El paso omite la formación, que el libro exige junto a la selección.\"},\n  {\"id\": \"P27C786\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5164, 5174, 5176, 5178, 5182, 5208, 4769], \"razon\": \"Según Weick y el libro, la transición depende de una cultura jerárquica previa y de valores compartidos, no de reglas. 'Diseñar mecanismos' puede omitir esa condición previa.\"},\n  {\"id\": \"P321681\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2948, 2961, 2998, 3825, 3829, 5499, 5742, 5907], \"razon\": \"Coincide con el enfoque situacional. Pero el libro pide actuar en varios niveles a la vez y destaca los factores organizacionales; fijar la tarea como 'primera línea' podría invertir la prioridad.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD4E442",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1004,
+    1006,
+    1354
+   ],
+   "razon": "El libro describe cómo se acumulan reglas tras cada accidente y reducen el margen de acción. Revisar ese historial concreta esa idea en la misma dirección."
+  },
+  {
+   "id": "P087D20",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "la persona que supervisa el trabajo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5204,
+    5208,
+    4769
+   ],
+   "razon": "L5204 pide seleccionar supervisores con amplia experiencia y conocimiento de los peligros del lugar. El paso omite la formación, que el libro exige junto a la selección."
+  },
+  {
+   "id": "P27C786",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5164,
+    5174,
+    5176,
+    5178,
+    5182,
+    5208,
+    4769
+   ],
+   "razon": "Según Weick y el libro, la transición depende de una cultura jerárquica previa y de valores compartidos, no de reglas. 'Diseñar mecanismos' puede omitir esa condición previa."
+  },
+  {
+   "id": "P321681",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2948,
+    2961,
+    2998,
+    3825,
+    3829,
+    5499,
+    5742,
+    5907
+   ],
+   "razon": "Coincide con el enfoque situacional. Pero el libro pide actuar en varios niveles a la vez y destaca los factores organizacionales; fijar la tarea como 'primera línea' podría invertir la prioridad."
+  }
+ ]
+}

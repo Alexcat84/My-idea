@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P14D5C4",
+  "intento": 0,
+  "usd": 0.230584,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50486,
+  "tokens_out": 1432,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P14D5C4\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [1035, 1031], \"cita\": \"regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.\", \"datos_sin_respaldo\": [\"análisis de sensibilidad\"], \"tambien_anadido\": false, \"razon\": \"El libro señala que las reglas post-accidente son insensibles a las condiciones locales. El caso Ginna muestra que una regla correcta tras TMI fue contraproducente en otro contexto. Revisar las regulaciones en distintos contextos va en esa dirección y no contradice al libro. Pero el libro no propone ningún 'análisis de sensibilidad' como herramienta. Además advierte que no se pueden prever todos los escenarios.\", \"paso_fiel\": \"Antes de adoptar una nueva regulación tras un accidente, examinar en qué otras situaciones operativas podría resultar contraproducente, sabiendo que no se pueden prever todos los escenarios de fallo y que las reglas son insensibles a las condiciones locales.\"}\n```",
+ "parseado": {
+  "id": "P14D5C4",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   1035,
+   1031
+  ],
+  "cita": "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.",
+  "datos_sin_respaldo": [
+   "análisis de sensibilidad"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro señala que las reglas post-accidente son insensibles a las condiciones locales. El caso Ginna muestra que una regla correcta tras TMI fue contraproducente en otro contexto. Revisar las regulaciones en distintos contextos va en esa dirección y no contradice al libro. Pero el libro no propone ningún 'análisis de sensibilidad' como herramienta. Además advierte que no se pueden prever todos los escenarios.",
+  "paso_fiel": "Antes de adoptar una nueva regulación tras un accidente, examinar en qué otras situaciones operativas podría resultar contraproducente, sabiendo que no se pueden prever todos los escenarios de fallo y que las reglas son insensibles a las condiciones locales."
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P0729D7",
+  "intento": 0,
+  "usd": 0.20813600000000002,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46544,
+  "tokens_out": 1098,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0729D7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5503, 5603, 5639, 5905, 5907], \"cita\": \"In some measure at least, all of these risks are present in all hazardous operations. In that sense, all three safety management models are applicable. But some risks are more salient than others, and the balance between the risks varies from domain to domain\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda que los tres modelos coexistan y que el peso de cada riesgo varíe según el dominio (L5503, L5603, L5905). El paso mantiene los tres modelos, así que no relega el organizacional. Recuerda que las condiciones latentes son altas en todo dominio (L5639) y que hacen falta contramedidas simultáneas (L5907). No añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0729D7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5503,
+   5603,
+   5639,
+   5905,
+   5907
+  ],
+  "cita": "In some measure at least, all of these risks are present in all hazardous operations. In that sense, all three safety management models are applicable. But some risks are more salient than others, and the balance between the risks varies from domain to domain",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda que los tres modelos coexistan y que el peso de cada riesgo varíe según el dominio (L5503, L5603, L5905). El paso mantiene los tres modelos, así que no relega el organizacional. Recuerda que las condiciones latentes son altas en todo dominio (L5639) y que hacen falta contramedidas simultáneas (L5907). No añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

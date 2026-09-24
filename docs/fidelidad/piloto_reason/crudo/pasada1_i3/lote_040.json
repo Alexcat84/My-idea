@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_040",
+  "intento": 0,
+  "usd": 0.166532,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33928,
+  "tokens_out": 1541,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE72A42\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"participación de pares\", \"procedimientos de apelación\"], \"clase\": \"FIEL\", \"lineas\": [5266, 5055, 5234, 5270], \"razon\": \"El libro pregunta literalmente si participan pares y representantes sindicales en el juicio disciplinario y si hay apelación interna. El paso omite sindicatos sin contradecir.\"},\n  {\"id\": \"P966EA1\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"ISO 45001\", \"factores de gestión, técnicos, procedimentales y de formación\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2726, 2734, 2738, 2742, 2746, 2748, 2750], \"razon\": \"El libro exige muestrear las seis dimensiones; el paso omite cultura, que el libro sitúa en el núcleo, y factores específicos de seguridad. ISO 45001 no aparece en el libro (1997).\"},\n  {\"id\": \"P6646B7\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"gerencia en todos los niveles\", \"dirección\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4308, 4314, 2748, 2577], \"razon\": \"Robens: las buenas intenciones del consejo son inútiles si los mandos inferiores solo piensan en producción. El paso concreta esa idea sin quitar el papel de la alta dirección.\"},\n  {\"id\": \"P9E8044\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"loss costing\", \"HSE-Chevron\"], \"clase\": \"FIEL\", \"lineas\": [5790, 5832, 5250], \"razon\": \"El libro describe el estudio conjunto HSE-Chevron: incidentes menores sumaron £1 millón en 13 semanas. También pregunta qué sistema existe para costear pérdidas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE72A42",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "participación de pares",
+    "procedimientos de apelación"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5266,
+    5055,
+    5234,
+    5270
+   ],
+   "razon": "El libro pregunta literalmente si participan pares y representantes sindicales en el juicio disciplinario y si hay apelación interna. El paso omite sindicatos sin contradecir."
+  },
+  {
+   "id": "P966EA1",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "ISO 45001",
+    "factores de gestión, técnicos, procedimentales y de formación"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2726,
+    2734,
+    2738,
+    2742,
+    2746,
+    2748,
+    2750
+   ],
+   "razon": "El libro exige muestrear las seis dimensiones; el paso omite cultura, que el libro sitúa en el núcleo, y factores específicos de seguridad. ISO 45001 no aparece en el libro (1997)."
+  },
+  {
+   "id": "P6646B7",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "gerencia en todos los niveles",
+    "dirección"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4308,
+    4314,
+    2748,
+    2577
+   ],
+   "razon": "Robens: las buenas intenciones del consejo son inútiles si los mandos inferiores solo piensan en producción. El paso concreta esa idea sin quitar el papel de la alta dirección."
+  },
+  {
+   "id": "P9E8044",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "loss costing",
+    "HSE-Chevron"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5790,
+    5832,
+    5250
+   ],
+   "razon": "El libro describe el estudio conjunto HSE-Chevron: incidentes menores sumaron £1 millón en 13 semanas. También pregunta qué sistema existe para costear pérdidas."
+  }
+ ]
+}

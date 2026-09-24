@@ -1,0 +1,128 @@
+{
+ "coste": {
+  "etapa": "traduccion_i2",
+  "clave": "lote_000",
+  "intento": 0,
+  "usd": 0.043823999999999995,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 15.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3656,
+  "tokens_out": 1460,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PC78276\",\n    \"consultas\": [\n      \"allocating resources to protection versus production goals\",\n      \"parity between production and protection in hazardous operations\",\n      \"budget pressures reduce safety resources in high-hazard technologies\"\n    ],\n    \"nodo\": \"balance between production and protection in organizations\"\n  },\n  {\n    \"id\": \"P8234A9\",\n    \"consultas\": [\n      \"independent inspection of maintenance work versus self-certification\",\n      \"quality control inspectors replaced by quality assurance sign-off\",\n      \"technician signs off own work without independent check\"\n    ],\n    \"nodo\": \"quality control versus quality assurance TQM\"\n  },\n  {\n    \"id\": \"P14DCA6\",\n    \"consultas\": [\n      \"control shifts to task experts on the spot during emergencies\",\n      \"high-reliability organizations reconfigure from hierarchical to flatter structure\",\n      \"reverting to bureaucratic mode after high-tempo operations\"\n    ],\n    \"nodo\": \"flexible culture in high-reliability organizations\"\n  },\n  {\n    \"id\": \"P6DEAAD\",\n    \"consultas\": [\n      \"omission-prone task steps identified and flagged with reminders\",\n      \"reminders for steps likely to be omitted in maintenance\",\n      \"checklist cues to prevent omissions near end of task\"\n    ],\n    \"nodo\": \"identifying task steps prone to omission errors\"\n  },\n  {\n    \"id\": \"P83ED59\",\n    \"consultas\": [\n      \"proactive measurement of organizational factors and workplace factors\",\n      \"measuring management, procedures, training, and technical factors\",\n      \"process measures versus outcome measures of safety health\"\n    ],\n    \"nodo\": \"priorities for proactive process measurement\"\n  },\n  {\n    \"id\": \"P4E5EBC\",\n    \"consultas\": [\n      \"regulator understaffed and underfunded fails to oversee operators\",\n      \"government accountability for inadequate regulatory surveillance resources\",\n      \"regulatory failure blamed at senior levels not front-line inspectors\"\n    ],\n    \"nodo\": \"regulatory failure due to insufficient resources\"\n  },\n  {\n    \"id\": \"P9ADE10\",\n    \"consultas\": [\n      \"line maintenance work package handed over to base maintenance\",\n      \"task cards and documentation gaps during shift handover\",\n      \"incomplete paperwork when job transferred between maintenance teams\"\n    ],\n    \"nodo\": \"differences between line and base maintenance documentation\"\n  },\n  {\n    \"id\": \"PF51157\",\n    \"consultas\": [\n      \"uninsured indirect costs of accidents iceberg model\",\n      \"damage to company reputation and morale after accidents\",\n      \"insured costs are only fraction of total accident losses\"\n    ],\n    \"nodo\": \"iceberg model of hidden accident costs\"\n  },\n  {\n    \"id\": \"P1C2534\",\n    \"consultas\": [\n      \"Barings warning signs ignored by senior management\",\n      \"audit committee failed to integrate scattered warning signals\",\n      \"individually insignificant indicators collectively signaling danger at Barings\"\n    ],\n    \"nodo\": \"ignored warning signs in organizational accidents\"\n  },\n  {\n    \"id\": \"PE1A7B7\",\n    \"consultas\": [\n      \"mode confusion in automated flight management systems\",\n      \"Woods and Sarter mode awareness and transitions on flightdeck\",\n      \"training pilots on automation surprises during high workload\"\n    ],\n    \"nodo\": \"mode confusion in automated control systems\"\n  },\n  {\n    \"id\": \"P210F94\",\n    \"consultas\": [\n      \"maintenance largest source of human performance problems nuclear\",\n      \"hands-on contact, criticality, and frequency of maintenance tasks\",\n      \"prioritizing maintenance activities with highest error potential\"\n    ],\n    \"nodo\": \"maintenance as largest source of human failures\"\n  },\n  {\n    \"id\": \"P555401\",\n    \"consultas\": [\n      \"Tripod-Delta hardware general failure type indicators\",\n      \"poor quality or aging tools and equipment as GFT\",\n      \"Tripod-Delta checklist questions on hardware condition\"\n    ],\n    \"nodo\": \"Tripod-Delta general failure types GFTs\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PC78276",
+   "consultas": [
+    "allocating resources to protection versus production goals",
+    "parity between production and protection in hazardous operations",
+    "budget pressures reduce safety resources in high-hazard technologies"
+   ],
+   "nodo": "balance between production and protection in organizations"
+  },
+  {
+   "id": "P8234A9",
+   "consultas": [
+    "independent inspection of maintenance work versus self-certification",
+    "quality control inspectors replaced by quality assurance sign-off",
+    "technician signs off own work without independent check"
+   ],
+   "nodo": "quality control versus quality assurance TQM"
+  },
+  {
+   "id": "P14DCA6",
+   "consultas": [
+    "control shifts to task experts on the spot during emergencies",
+    "high-reliability organizations reconfigure from hierarchical to flatter structure",
+    "reverting to bureaucratic mode after high-tempo operations"
+   ],
+   "nodo": "flexible culture in high-reliability organizations"
+  },
+  {
+   "id": "P6DEAAD",
+   "consultas": [
+    "omission-prone task steps identified and flagged with reminders",
+    "reminders for steps likely to be omitted in maintenance",
+    "checklist cues to prevent omissions near end of task"
+   ],
+   "nodo": "identifying task steps prone to omission errors"
+  },
+  {
+   "id": "P83ED59",
+   "consultas": [
+    "proactive measurement of organizational factors and workplace factors",
+    "measuring management, procedures, training, and technical factors",
+    "process measures versus outcome measures of safety health"
+   ],
+   "nodo": "priorities for proactive process measurement"
+  },
+  {
+   "id": "P4E5EBC",
+   "consultas": [
+    "regulator understaffed and underfunded fails to oversee operators",
+    "government accountability for inadequate regulatory surveillance resources",
+    "regulatory failure blamed at senior levels not front-line inspectors"
+   ],
+   "nodo": "regulatory failure due to insufficient resources"
+  },
+  {
+   "id": "P9ADE10",
+   "consultas": [
+    "line maintenance work package handed over to base maintenance",
+    "task cards and documentation gaps during shift handover",
+    "incomplete paperwork when job transferred between maintenance teams"
+   ],
+   "nodo": "differences between line and base maintenance documentation"
+  },
+  {
+   "id": "PF51157",
+   "consultas": [
+    "uninsured indirect costs of accidents iceberg model",
+    "damage to company reputation and morale after accidents",
+    "insured costs are only fraction of total accident losses"
+   ],
+   "nodo": "iceberg model of hidden accident costs"
+  },
+  {
+   "id": "P1C2534",
+   "consultas": [
+    "Barings warning signs ignored by senior management",
+    "audit committee failed to integrate scattered warning signals",
+    "individually insignificant indicators collectively signaling danger at Barings"
+   ],
+   "nodo": "ignored warning signs in organizational accidents"
+  },
+  {
+   "id": "PE1A7B7",
+   "consultas": [
+    "mode confusion in automated flight management systems",
+    "Woods and Sarter mode awareness and transitions on flightdeck",
+    "training pilots on automation surprises during high workload"
+   ],
+   "nodo": "mode confusion in automated control systems"
+  },
+  {
+   "id": "P210F94",
+   "consultas": [
+    "maintenance largest source of human performance problems nuclear",
+    "hands-on contact, criticality, and frequency of maintenance tasks",
+    "prioritizing maintenance activities with highest error potential"
+   ],
+   "nodo": "maintenance as largest source of human failures"
+  },
+  {
+   "id": "P555401",
+   "consultas": [
+    "Tripod-Delta hardware general failure type indicators",
+    "poor quality or aging tools and equipment as GFT",
+    "Tripod-Delta checklist questions on hardware condition"
+   ],
+   "nodo": "Tripod-Delta general failure types GFTs"
+  }
+ ]
+}

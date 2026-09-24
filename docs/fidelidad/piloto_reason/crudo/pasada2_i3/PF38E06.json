@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF38E06",
+  "intento": 0,
+  "usd": 0.19949999999999998,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45360,
+  "tokens_out": 903,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF38E06\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [248, 273, 263, 271], \"cita\": \"It was an organizational accident whose origins could be traced far back into many parts of the air cargo system, from the operator to the manufacturer, and--by implication--to the regulator.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro rastrea las contribuciones hasta el operador, el fabricante y el regulador (L248). Añade que otros actores del sistema 'may have some part to play' (L273). Las reglas de parada (L263, L271) excluyen factores sociales remotos e inmanejables, no a estos actores. Mapearlos concreta el libro en su misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF38E06",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   248,
+   273,
+   263,
+   271
+  ],
+  "cita": "It was an organizational accident whose origins could be traced far back into many parts of the air cargo system, from the operator to the manufacturer, and--by implication--to the regulator.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro rastrea las contribuciones hasta el operador, el fabricante y el regulador (L248). Añade que otros actores del sistema 'may have some part to play' (L273). Las reglas de parada (L263, L271) excluyen factores sociales remotos e inmanejables, no a estos actores. Mapearlos concreta el libro en su misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

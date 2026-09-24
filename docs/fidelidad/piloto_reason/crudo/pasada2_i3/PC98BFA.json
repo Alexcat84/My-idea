@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC98BFA",
+  "intento": 0,
+  "usd": 0.138188,
+  "turnos": 1,
+  "duracion_s": 9.8,
+  "pared_s": 10.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30472,
+  "tokens_out": 815,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC98BFA\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4946, 4948, 4954, 4968], \"cita\": \"More open questions about the reporter's perceptions, judgements, decisions and actions are not subject to this limitation and give the reporter a greater chance to tell the full story. This method is more effective in gathering all the information about an incident, but takes longer\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro exige facilidad de reporte y presenta las preguntas abiertas como más eficaces. BA las adoptó con buen resultado y la carga analítica pasó al analista. 'Cuando sea posible' recoge el límite de recursos analíticos. No invierte ninguna recomendación ni añade datos; concreta el balance en la misma dirección que el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC98BFA",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4946,
+   4948,
+   4954,
+   4968
+  ],
+  "cita": "More open questions about the reporter's perceptions, judgements, decisions and actions are not subject to this limitation and give the reporter a greater chance to tell the full story. This method is more effective in gathering all the information about an incident, but takes longer",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro exige facilidad de reporte y presenta las preguntas abiertas como más eficaces. BA las adoptó con buen resultado y la carga analítica pasó al analista. 'Cuando sea posible' recoge el límite de recursos analíticos. No invierte ninguna recomendación ni añade datos; concreta el balance en la misma dirección que el libro.",
+  "paso_fiel": ""
+ }
+}

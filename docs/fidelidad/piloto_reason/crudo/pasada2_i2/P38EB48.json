@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P38EB48",
+  "intento": 0,
+  "usd": 0.17527600000000002,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39119,
+  "tokens_out": 940,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P38EB48\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2598, 5639], \"cita\": \"managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents. … regular 'health checks' of the basic organizational processes (proactive measures)\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide medir con regularidad los procesos genéricos mediante 'health checks' proactivos, y aplicarlo en cualquier dominio (L5639). 'Periódicas' traduce 'regularly' y no fija una frecuencia nueva. 'Auditorías' concreta el chequeo sin añadir herramienta ni responsable. Va en la misma dirección; solo omite la mejora posterior, que cubren otros pasos del nodo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P38EB48",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2598,
+   5639
+  ],
+  "cita": "managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents. … regular 'health checks' of the basic organizational processes (proactive measures)",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide medir con regularidad los procesos genéricos mediante 'health checks' proactivos, y aplicarlo en cualquier dominio (L5639). 'Periódicas' traduce 'regularly' y no fija una frecuencia nueva. 'Auditorías' concreta el chequeo sin añadir herramienta ni responsable. Va en la misma dirección; solo omite la mejora posterior, que cubren otros pasos del nodo.",
+  "paso_fiel": ""
+ }
+}

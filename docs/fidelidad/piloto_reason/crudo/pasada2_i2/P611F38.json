@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P611F38",
+  "intento": 0,
+  "usd": 0.192952,
+  "turnos": 1,
+  "duracion_s": 7.0,
+  "pared_s": 8.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45593,
+  "tokens_out": 529,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P611F38\", \"veredicto\": \"FIEL\", \"lineas\": [293, 4105], \"cita\": \"For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta su propio modelo de causalidad (Fig. 1.6) como guía de investigación. Pide establecer, en cada defensa vulnerada, las fallas activas y las condiciones latentes. BASI lo adoptó como marco para ese fin (L4105). El 'modelo de Reason' es el del propio libro. L5748 advierte de rendimientos decrecientes, pero no contradice el paso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P611F38",
+  "veredicto": "FIEL",
+  "lineas": [
+   293,
+   4105
+  ],
+  "cita": "For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta su propio modelo de causalidad (Fig. 1.6) como guía de investigación. Pide establecer, en cada defensa vulnerada, las fallas activas y las condiciones latentes. BASI lo adoptó como marco para ese fin (L4105). El 'modelo de Reason' es el del propio libro. L5748 advierte de rendimientos decrecientes, pero no contradice el paso.",
+  "paso_fiel": ""
+ }
+}

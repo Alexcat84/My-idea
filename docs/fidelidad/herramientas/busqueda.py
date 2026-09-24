@@ -29,10 +29,12 @@ SIS_TRAD = ("Eres un bibliotecario que prepara busquedas en un libro en ingles d
             "(James Reason, 1997). Respondes SOLO con JSON valido.")
 
 def _items():
-    return C.lee_jsonl(os.path.join(C.PIL, "items_mezclados.jsonl"))
+    return C.lee_jsonl(os.path.join(C.PIL, f"items_mezclados_i{C.INTENTO}.jsonl"))
 
 def traducir():
-    items = _items()
+    ruta = os.path.join(C.PIL, f"consultas_traducidas_i{C.INTENTO}.json")
+    previas = json.load(open(ruta, encoding="utf-8")) if os.path.exists(ruta) else {}
+    items = [it for it in _items() if it["id"] not in previas]
     lotes = [items[i:i + LOTE_TRAD] for i in range(0, len(items), LOTE_TRAD)]
     def uno(ix_lote):
         ix, lote = ix_lote
@@ -44,15 +46,15 @@ nombres propios, siglas). Cada consulta de 4 a 12 palabras. Ademas, una consulta
 {cuerpo}
 
 Responde SOLO con un array JSON: [{{"id": "...", "consultas": ["...", "...", "..."], "nodo": "..."}}]"""
-        datos, _ = C.llama("traduccion", f"lote_{ix:03d}", SIS_TRAD, prompt)
+        datos, _ = C.llama("traduccion" + ("" if C.INTENTO == "1" else f"_i{C.INTENTO}"), f"lote_{ix:03d}", SIS_TRAD, prompt)
         return datos
-    out = {}
+    out = dict(previas)
     with ThreadPoolExecutor(C.MAX_PAR) as ex:
         for datos in ex.map(uno, enumerate(lotes)):
             for d in datos: out[d["id"]] = d
-    faltan = [it["id"] for it in items if it["id"] not in out]
+    faltan = [it["id"] for it in _items() if it["id"] not in out]
     assert not faltan, faltan
-    C.escribe_json(os.path.join(C.PIL, "consultas_traducidas.json"), out)
+    C.escribe_json(ruta, out)
     print(len(out), "items con consultas")
 
 def libro_numerado():
@@ -61,7 +63,7 @@ def libro_numerado():
 
 def oro():
     items = _items()
-    clave = json.load(open(os.path.join(C.PRU, "CLAVE_CIEGA.json"), encoding="utf-8"))["clave"]
+    clave = json.load(open(os.path.join(C.PRU, f"CLAVE_CIEGA_i{C.INTENTO}.json"), encoding="utf-8"))["clave"]
     reales = [it for it in items if clave[it["id"]]["tipo"] == "real"
               and not (clave[it["id"]]["nodo"] == "prevalencia_omisiones" and clave[it["id"]]["paso_idx"] == 1)]
     muestra = random.Random(40).sample(reales, 40)
@@ -80,7 +82,7 @@ Si el libro no trata el asunto, lista vacia.
 
 Responde SOLO con un array JSON: [{{"id": "...", "lineas": [n, ...]}}]"""
     datos, coste = C.llama("oro", "muestra40", "Eres un lector experto y minucioso. Respondes SOLO con JSON valido.", prompt, timeout=3000)
-    C.escribe_json(os.path.join(C.PIL, "oro_busqueda.json"), {d["id"]: d["lineas"] for d in datos})
+    C.escribe_json(os.path.join(C.PIL, f"oro_busqueda_i{C.INTENTO}.json"), {d["id"]: d["lineas"] for d in datos})
     print(len(datos), coste)
 
 # ── RECUPERACION ────────────────────────────────────────────────────────────
@@ -116,13 +118,13 @@ def recuperar_item(it, metodo, k, consultas=None):
 
 def vara():
     items = _items()
-    clave = json.load(open(os.path.join(C.PRU, "CLAVE_CIEGA.json"), encoding="utf-8"))["clave"]
-    oro_ = json.load(open(os.path.join(C.PIL, "oro_busqueda.json"), encoding="utf-8"))
+    clave = json.load(open(os.path.join(C.PRU, f"CLAVE_CIEGA_i{C.INTENTO}.json"), encoding="utf-8"))["clave"]
+    oro_ = json.load(open(os.path.join(C.PIL, f"oro_busqueda_i{C.INTENTO}.json"), encoding="utf-8"))
     v = {}
     for it in items:
         o = clave[it["id"]]
         if o["tipo"] == "sintetico":
-            v[it["id"]] = ("sintetico", o["lineas"])
+            v[it["id"]] = ("sintetico" if o.get("clase", "CONTRARIO") == "CONTRARIO" else "anadido", o["lineas"])
         elif o["nodo"] == "prevalencia_omisiones" and o["paso_idx"] == 1:
             v[it["id"]] = ("conocido", [1943, 2170])
         elif it["id"] in oro_ and oro_[it["id"]]:
@@ -133,12 +135,12 @@ def medir():
     frags, _ = indice()
     pos = {f["id"]: (f["l_ini"], f["l_fin"]) for f in frags}
     items, v = vara()
-    cons = json.load(open(os.path.join(C.PIL, "consultas_traducidas.json"), encoding="utf-8"))
+    cons = json.load(open(os.path.join(C.PIL, f"consultas_traducidas_i{C.INTENTO}.json"), encoding="utf-8"))
     byid = {it["id"]: it for it in items}
-    ks = [3, 5, 8, 10, 12, 15]
+    ks = [3, 5, 8, 10, 12, 15, 20]
     tabla = {}
     for metodo in ("A", "B", "C", "D"):
-        for grupo in ("sintetico", "conocido", "real"):
+        for grupo in ("sintetico", "anadido", "conocido", "real"):
             ids = [i for i, (g, _) in v.items() if g == grupo]
             fila = {}
             for k in ks:
@@ -149,7 +151,7 @@ def medir():
                     alguno += bool(cub); todas += cub == set(v[i][1])
                 fila[k] = {"alguna_linea": f"{alguno}/{len(ids)}", "todas_las_lineas": f"{todas}/{len(ids)}"}
             tabla[f"{metodo}:{grupo}"] = fila
-    C.escribe_json(os.path.join(C.PIL, "MEDIDA_BUSQUEDA.json"), tabla)
+    C.escribe_json(os.path.join(C.PIL, f"MEDIDA_BUSQUEDA_i{C.INTENTO}.json"), tabla)
     for kk, fila in tabla.items():
         print(kk, {k: f["alguna_linea"] + " (" + f["todas_las_lineas"] + ")" for k, f in fila.items()})
 

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PFECFB3",
+  "intento": 0,
+  "usd": 0.216892,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46548,
+  "tokens_out": 1535,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PFECFB3\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [263, 273, 293, 3973], \"cita\": \"For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. [...] Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro manda remontar de cada condición local a los factores organizacionales previos, y muestra en Challenger una serie de decisiones que llevan al desastre. 'Completa' se ciñe a decisiones organizacionales, que es justo el límite manejable que fija la regla de parada. No lleva a lo que el libro desaconseja (causas sociales remotas tipo Legasov). No añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PFECFB3",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   263,
+   273,
+   293,
+   3973
+  ],
+  "cita": "For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. [...] Both of these ends are best satisfied by limiting the scope of the analysis to those things over which the people involved--and most particularly the system managers--might reasonably be expected to exercise some control.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro manda remontar de cada condición local a los factores organizacionales previos, y muestra en Challenger una serie de decisiones que llevan al desastre. 'Completa' se ciñe a decisiones organizacionales, que es justo el límite manejable que fija la regla de parada. No lleva a lo que el libro desaconseja (causas sociales remotas tipo Legasov). No añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC94C93",
+  "intento": 0,
+  "usd": 0.192988,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 21.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38877,
+  "tokens_out": 1874,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC94C93\", \"veredicto\": \"CONTRARIO\", \"lineas\": [848, 856, 942, 1033, 1141], \"cita\": \"In their efforts to compensate for the unreliability of human performance, the designers of automated control systems have unwittingly created opportunities for new error types that can be even more serious than those they were seeking to avoid.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala que vigilar condiciones raras durante mucho tiempo es una limitación humana (L848). Pero presenta como contraproducente el diseño que compensa la falibilidad humana: crea errores nuevos (L942), añade complejidad y fallos (L1033) y genera falsas alarmas (L1141). Su remedio es invertir en entrenamiento del operador (L856). El paso propone como vía justo lo que el libro advierte.\", \"paso_fiel\": \"Asumir que los operadores rinden mal vigilando durante largos periodos condiciones anómalas muy raras. En lugar de confiar en sistemas añadidos que compensen esa limitación, que pueden crear errores nuevos, más complejidad y falsas alarmas, invertir en el entrenamiento del operador.\"}\n```",
+ "parseado": {
+  "id": "PC94C93",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   848,
+   856,
+   942,
+   1033,
+   1141
+  ],
+  "cita": "In their efforts to compensate for the unreliability of human performance, the designers of automated control systems have unwittingly created opportunities for new error types that can be even more serious than those they were seeking to avoid.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala que vigilar condiciones raras durante mucho tiempo es una limitación humana (L848). Pero presenta como contraproducente el diseño que compensa la falibilidad humana: crea errores nuevos (L942), añade complejidad y fallos (L1033) y genera falsas alarmas (L1141). Su remedio es invertir en entrenamiento del operador (L856). El paso propone como vía justo lo que el libro advierte.",
+  "paso_fiel": "Asumir que los operadores rinden mal vigilando durante largos periodos condiciones anómalas muy raras. En lugar de confiar en sistemas añadidos que compensen esa limitación, que pueden crear errores nuevos, más complejidad y falsas alarmas, invertir en el entrenamiento del operador."
+ }
+}

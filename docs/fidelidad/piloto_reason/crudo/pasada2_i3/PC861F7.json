@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC861F7",
+  "intento": 0,
+  "usd": 0.20777600000000002,
+  "turnos": 1,
+  "duracion_s": 10.8,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47874,
+  "tokens_out": 814,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PC861F7\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5892], \"cita\": \"To these should also be added such intangibles as damage to the company's reputation (probably reflected in the share price), loss of business, recruitment difficulties and a general lowering of morale.\", \"datos_sin_respaldo\": [\"medicion mediante la variacion del Net Promoter Score de los clientes tras el evento\"], \"tambien_anadido\": false, \"razon\": \"El libro pide sumar el daño reputacional al coste de los accidentes, así que el paso va en su misma dirección y no es contrario. Pero lo trata como un intangible, probablemente reflejado en la cotización, y no menciona el Net Promoter Score ni ninguna encuesta a clientes: esa herramienta de medición es un añadido.\", \"paso_fiel\": \"Añadir al coste de cada accidente el daño a la reputación de la empresa como coste intangible (probablemente reflejado en la cotización), junto con la pérdida de negocio, las dificultades de contratación y la bajada de moral.\"}",
+ "parseado": {
+  "id": "PC861F7",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5892
+  ],
+  "cita": "To these should also be added such intangibles as damage to the company's reputation (probably reflected in the share price), loss of business, recruitment difficulties and a general lowering of morale.",
+  "datos_sin_respaldo": [
+   "medicion mediante la variacion del Net Promoter Score de los clientes tras el evento"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro pide sumar el daño reputacional al coste de los accidentes, así que el paso va en su misma dirección y no es contrario. Pero lo trata como un intangible, probablemente reflejado en la cotización, y no menciona el Net Promoter Score ni ninguna encuesta a clientes: esa herramienta de medición es un añadido.",
+  "paso_fiel": "Añadir al coste de cada accidente el daño a la reputación de la empresa como coste intangible (probablemente reflejado en la cotización), junto con la pérdida de negocio, las dificultades de contratación y la bajada de moral."
+ }
+}

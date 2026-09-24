@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P807357",
+  "intento": 0,
+  "usd": 0.162568,
+  "turnos": 1,
+  "duracion_s": 10.3,
+  "pared_s": 11.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36732,
+  "tokens_out": 782,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P807357\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1095, 1141], \"cita\": \"Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. […] Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala que las falsas alarmas destruyen la confianza en la alarma y hacen que se ignore o se desactive, como en el Trident. No prescribe rediseñar, pero reducir falsos positivos sin perder sensibilidad concreta ese diagnóstico en su misma dirección. Sus avisos sobre los 'fixes' se refieren a añadir componentes, no a corregir alarmas poco fiables. No aporta datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P807357",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1085,
+   1095,
+   1141
+  ],
+  "cita": "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. […] Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala que las falsas alarmas destruyen la confianza en la alarma y hacen que se ignore o se desactive, como en el Trident. No prescribe rediseñar, pero reducir falsos positivos sin perder sensibilidad concreta ese diagnóstico en su misma dirección. Sus avisos sobre los 'fixes' se refieren a añadir componentes, no a corregir alarmas poco fiables. No aporta datos nuevos.",
+  "paso_fiel": ""
+ }
+}

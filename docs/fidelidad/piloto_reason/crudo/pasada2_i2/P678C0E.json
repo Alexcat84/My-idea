@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P678C0E",
+  "intento": 0,
+  "usd": 0.168372,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37318,
+  "tokens_out": 955,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P678C0E\", \"veredicto\": \"FIEL\", \"lineas\": [293, 310, 2652, 2654], \"cita\": \"The inquiry begins with the bad outcome (what happened) and then considers how and when the defences failed. For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro prescribe investigar eventos pasados identificando qué defensas fallaron y qué huecos se alinearon (L293, L310), y el cap. 2 lo aplica a un cuasi-accidente. L2652-2654 no lo contradice: critica fijarse en fallos individuales aislados, no analizar la combinación de huecos. El paso habla de accidentes en plural y no invierte nada.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P678C0E",
+  "veredicto": "FIEL",
+  "lineas": [
+   293,
+   310,
+   2652,
+   2654
+  ],
+  "cita": "The inquiry begins with the bad outcome (what happened) and then considers how and when the defences failed. For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro prescribe investigar eventos pasados identificando qué defensas fallaron y qué huecos se alinearon (L293, L310), y el cap. 2 lo aplica a un cuasi-accidente. L2652-2654 no lo contradice: critica fijarse en fallos individuales aislados, no analizar la combinación de huecos. El paso habla de accidentes en plural y no invierte nada.",
+  "paso_fiel": ""
+ }
+}

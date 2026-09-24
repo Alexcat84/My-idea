@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_048",
+  "intento": 0,
+  "usd": 0.168428,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 19.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33127,
+  "tokens_out": 1796,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA8F9BB\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2687, 4948, 4814, 5250], \"razon\": \"El libro respalda estimar el costo potencial de cada evento para alertar a la alta direccion. Pero pedirlo en cada reporte puede cargar al informante y chocar con la facilidad de reporte.\"},\n  {\"id\": \"P5EEA12\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1133, 1058, 1060, 1062, 162], \"razon\": \"Va en la direccion del libro: las defensas se convierten en ventaja productiva y ocultan fallas. El libro no usa el termino 'complacencia'.\"},\n  {\"id\": \"P655A2F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4814, 4946, 4948, 4954], \"razon\": \"El libro dice que las preguntas especificas facilitan completar el formulario. Las abiertas llevan mas tiempo y exigen mas recursos de analisis. El paso omite esa disyuntiva.\"},\n  {\"id\": \"PCEFBDB\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3825, 2716, 1006, 2724], \"razon\": \"Coincide con que los errores se combaten mejorando la informacion. Pero el libro advierte que endurecer procedimientos aumenta las violaciones y prioriza los factores organizacionales.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA8F9BB",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2687,
+    4948,
+    4814,
+    5250
+   ],
+   "razon": "El libro respalda estimar el costo potencial de cada evento para alertar a la alta direccion. Pero pedirlo en cada reporte puede cargar al informante y chocar con la facilidad de reporte."
+  },
+  {
+   "id": "P5EEA12",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1133,
+    1058,
+    1060,
+    1062,
+    162
+   ],
+   "razon": "Va en la direccion del libro: las defensas se convierten en ventaja productiva y ocultan fallas. El libro no usa el termino 'complacencia'."
+  },
+  {
+   "id": "P655A2F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4814,
+    4946,
+    4948,
+    4954
+   ],
+   "razon": "El libro dice que las preguntas especificas facilitan completar el formulario. Las abiertas llevan mas tiempo y exigen mas recursos de analisis. El paso omite esa disyuntiva."
+  },
+  {
+   "id": "PCEFBDB",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3825,
+    2716,
+    1006,
+    2724
+   ],
+   "razon": "Coincide con que los errores se combaten mejorando la informacion. Pero el libro advierte que endurecer procedimientos aumenta las violaciones y prioriza los factores organizacionales."
+  }
+ ]
+}

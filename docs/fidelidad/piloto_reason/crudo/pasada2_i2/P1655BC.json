@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P1655BC",
+  "intento": 0,
+  "usd": 0.206376,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47994,
+  "tokens_out": 720,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1655BC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1840, 1851, 1934], \"cita\": \"There is every reason to suppose that similar patterns of occurrence are present in all hazardous technologies. Regardless of the domain, maintenance-related activities share a large number of common characteristics\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta casos de varios dominios para mostrar patrones comunes de fallo de mantenimiento y sus condiciones latentes. No manda estudiarlos, pero el paso concreta esa lectura en su misma dirección. La restricción al sector propio solo lo aparta en el detalle: el libro no desaconseja estudiar casos del propio sector, y los casos de mantenimiento de otros dominios siguen siendo relevantes.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1655BC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1840,
+   1851,
+   1934
+  ],
+  "cita": "There is every reason to suppose that similar patterns of occurrence are present in all hazardous technologies. Regardless of the domain, maintenance-related activities share a large number of common characteristics",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta casos de varios dominios para mostrar patrones comunes de fallo de mantenimiento y sus condiciones latentes. No manda estudiarlos, pero el paso concreta esa lectura en su misma dirección. La restricción al sector propio solo lo aparta en el detalle: el libro no desaconseja estudiar casos del propio sector, y los casos de mantenimiento de otros dominios siguen siendo relevantes.",
+  "paso_fiel": ""
+ }
+}

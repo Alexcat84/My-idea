@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_006",
+  "intento": 0,
+  "usd": 0.15889599999999998,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32059,
+  "tokens_out": 1533,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC32719\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5037, 5057, 5059], \"razon\": \"'Negativa' es ambiguo. En L5057, un 'no' lleva a revisar formación y selección, y luego a posible negligencia. El paso omite esa secuencia y la condición previa sobre sustancias y violaciones deliberadas.\"},\n  {\"id\": \"P31955F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"escalas de calificación de 1 (casi nunca) a 5 (muy frecuente)\", \"sobre un periodo definido\"], \"clase\": \"FIEL\", \"lineas\": [3226, 3228, 3332], \"razon\": \"El libro describe la escala de 1 (hardly at all) a 5 (very often indeed) sobre un periodo corto y claramente definido, aplicada en Review y MESH.\"},\n  {\"id\": \"P37482A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2918, 2920, 2922, 5641, 5661, 5675], \"razon\": \"Concreta la crítica del libro al ciclo de culpa y al modelo de persona, en su misma dirección. El paso solo pide detectar el patrón; no manda abolir toda culpa.\"},\n  {\"id\": \"P807357\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [1085, 1095, 1141, 1145, 1149], \"razon\": \"El libro describe el efecto 'cry wolf', pero no prescribe rediseñar alarmas. Además advierte que las nuevas defensas y los arreglos añaden complejidad y pueden causar accidentes.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC32719",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5037,
+    5057,
+    5059
+   ],
+   "razon": "'Negativa' es ambiguo. En L5057, un 'no' lleva a revisar formación y selección, y luego a posible negligencia. El paso omite esa secuencia y la condición previa sobre sustancias y violaciones deliberadas."
+  },
+  {
+   "id": "P31955F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "escalas de calificación de 1 (casi nunca) a 5 (muy frecuente)",
+    "sobre un periodo definido"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3226,
+    3228,
+    3332
+   ],
+   "razon": "El libro describe la escala de 1 (hardly at all) a 5 (very often indeed) sobre un periodo corto y claramente definido, aplicada en Review y MESH."
+  },
+  {
+   "id": "P37482A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2918,
+    2920,
+    2922,
+    5641,
+    5661,
+    5675
+   ],
+   "razon": "Concreta la crítica del libro al ciclo de culpa y al modelo de persona, en su misma dirección. El paso solo pide detectar el patrón; no manda abolir toda culpa."
+  },
+  {
+   "id": "P807357",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    1145,
+    1149
+   ],
+   "razon": "El libro describe el efecto 'cry wolf', pero no prescribe rediseñar alarmas. Además advierte que las nuevas defensas y los arreglos añaden complejidad y pueden causar accidentes."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD47D3A",
+  "intento": 0,
+  "usd": 0.170836,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 15.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36224,
+  "tokens_out": 1297,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD47D3A\", \"veredicto\": \"CONTRARIO\", \"lineas\": [417, 419, 421, 423, 451], \"cita\": \"The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que línea y base requieren paquetes distintos y acepta tarjetas breves en línea. Sitúa la brecha en el traspaso sin procedimiento formal ni hojas de etapa (L423, L451). Además advierte que los manuales son difíciles de usar (L421). Exigir documentación completa en toda tarea, sin importar su origen, convierte en regla universal lo que el libro limita al traspaso.\", \"paso_fiel\": \"Cuando una tarea de línea se traspase a personal de base, asegurar que vaya acompañada de hojas de etapa escritas con el trabajo ya hecho y de las tarjetas de tarea, las referencias del manual y las advertencias de reensamblaje que ese personal espera encontrar.\"}\n```",
+ "parseado": {
+  "id": "PD47D3A",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   417,
+   419,
+   421,
+   423,
+   451
+  ],
+  "cita": "The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que línea y base requieren paquetes distintos y acepta tarjetas breves en línea. Sitúa la brecha en el traspaso sin procedimiento formal ni hojas de etapa (L423, L451). Además advierte que los manuales son difíciles de usar (L421). Exigir documentación completa en toda tarea, sin importar su origen, convierte en regla universal lo que el libro limita al traspaso.",
+  "paso_fiel": "Cuando una tarea de línea se traspase a personal de base, asegurar que vaya acompañada de hojas de etapa escritas con el trabajo ya hecho y de las tarjetas de tarea, las referencias del manual y las advertencias de reensamblaje que ese personal espera encontrar."
+ }
+}

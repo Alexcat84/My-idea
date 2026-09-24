@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE96D62",
+  "intento": 0,
+  "usd": 0.087104,
+  "turnos": 1,
+  "duracion_s": 11.7,
+  "pared_s": 12.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 16961,
+  "tokens_out": 963,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE96D62\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2568, 2598, 2658], \"cita\": \"these need to be assessed directly using process measures--indices that gauge the general ‘safety health’ of the system as a whole by sampling various vital signs on a regular basis. Only in this way can we navigate the safety space\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide medir con regularidad los procesos ('on a regular basis', 'regular health checks') para fijar la posición y navegar el espacio de seguridad. 'Periódicas' no fija ninguna frecuencia concreta. El paso no propone usar tasas de accidentes. Concreta la idea del libro en su misma dirección, aunque no explicita que la revisión se haga con medidas de proceso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE96D62",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2520,
+   2568,
+   2598,
+   2658
+  ],
+  "cita": "these need to be assessed directly using process measures--indices that gauge the general ‘safety health’ of the system as a whole by sampling various vital signs on a regular basis. Only in this way can we navigate the safety space",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide medir con regularidad los procesos ('on a regular basis', 'regular health checks') para fijar la posición y navegar el espacio de seguridad. 'Periódicas' no fija ninguna frecuencia concreta. El paso no propone usar tasas de accidentes. Concreta la idea del libro en su misma dirección, aunque no explicita que la revisión se haga con medidas de proceso.",
+  "paso_fiel": ""
+ }
+}

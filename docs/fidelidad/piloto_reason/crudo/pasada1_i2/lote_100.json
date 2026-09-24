@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_100",
+  "intento": 0,
+  "usd": 0.169976,
+  "turnos": 1,
+  "duracion_s": 16.9,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33879,
+  "tokens_out": 1723,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7F8C0F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5043, 1539, 5055, 5063], \"razon\": \"El libro dice que las preguntas clave del árbol tratan de la intención. Si acto y consecuencia fueron intencionados, es sabotaje o conducta criminal.\"},\n  {\"id\": \"P46B69A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2281, 2289, 2293, 2311], \"razon\": \"El libro presenta 'compel' y 'confirm' como criterios secundarios que aplican en muchas situaciones, 'when warranted or possible'. Evaluar si conviene sumarlos respeta esa condición.\"},\n  {\"id\": \"P002A4F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"siete funciones defensivas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [120, 126, 130, 134, 138, 142, 146, 150, 158, 308], \"razon\": \"L120-150 enumera siete funciones. Pero L308 las resume con otra lista y L118 dice que una defensa sirve 'una o más' funciones. Conviene verificar la cifra y si hay que clasificar cada defensa en una sola.\"},\n  {\"id\": \"P75ECED\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5208, 4769, 5174, 5182], \"razon\": \"Weick respalda cumplir sin vigilancia gracias a la cultura. Pero el libro exige antes centralizar y socializar, invertir en supervisores de primera línea y limita la descentralización a emergencias. El paso omite esas condiciones.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7F8C0F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5043,
+    1539,
+    5055,
+    5063
+   ],
+   "razon": "El libro dice que las preguntas clave del árbol tratan de la intención. Si acto y consecuencia fueron intencionados, es sabotaje o conducta criminal."
+  },
+  {
+   "id": "P46B69A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2281,
+    2289,
+    2293,
+    2311
+   ],
+   "razon": "El libro presenta 'compel' y 'confirm' como criterios secundarios que aplican en muchas situaciones, 'when warranted or possible'. Evaluar si conviene sumarlos respeta esa condición."
+  },
+  {
+   "id": "P002A4F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "siete funciones defensivas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    120,
+    126,
+    130,
+    134,
+    138,
+    142,
+    146,
+    150,
+    158,
+    308
+   ],
+   "razon": "L120-150 enumera siete funciones. Pero L308 las resume con otra lista y L118 dice que una defensa sirve 'una o más' funciones. Conviene verificar la cifra y si hay que clasificar cada defensa en una sola."
+  },
+  {
+   "id": "P75ECED",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5208,
+    4769,
+    5174,
+    5182
+   ],
+   "razon": "Weick respalda cumplir sin vigilancia gracias a la cultura. Pero el libro exige antes centralizar y socializar, invertir en supervisores de primera línea y limita la descentralización a emergencias. El paso omite esas condiciones."
+  }
+ ]
+}

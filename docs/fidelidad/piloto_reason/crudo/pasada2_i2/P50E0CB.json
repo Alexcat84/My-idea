@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P50E0CB",
+  "intento": 0,
+  "usd": 0.209764,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49486,
+  "tokens_out": 591,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P50E0CB\", \"veredicto\": \"FIEL\", \"lineas\": [4360, 4368], \"cita\": \"Controlling exposure to substances by means of ventilation, improved facilities for washing, and using less hazardous substances where possible.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso reproduce casi literalmente el segundo punto del 'rolling procedure' de COSHH. Omite 'where possible', pero el libro no desaconseja la sustitución: solo la sujeta a que sea factible. Esa omisión es una diferencia de detalle, no una inversión ni una generalización que lleve a hacer algo desaconsejado. 'Instalaciones de higiene' equivale a 'improved facilities for washing'.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P50E0CB",
+  "veredicto": "FIEL",
+  "lineas": [
+   4360,
+   4368
+  ],
+  "cita": "Controlling exposure to substances by means of ventilation, improved facilities for washing, and using less hazardous substances where possible.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso reproduce casi literalmente el segundo punto del 'rolling procedure' de COSHH. Omite 'where possible', pero el libro no desaconseja la sustitución: solo la sujeta a que sea factible. Esa omisión es una diferencia de detalle, no una inversión ni una generalización que lleve a hacer algo desaconsejado. 'Instalaciones de higiene' equivale a 'improved facilities for washing'.",
+  "paso_fiel": ""
+ }
+}

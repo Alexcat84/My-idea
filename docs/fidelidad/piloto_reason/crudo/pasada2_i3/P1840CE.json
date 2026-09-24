@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1840CE",
+  "intento": 0,
+  "usd": 0.204596,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45609,
+  "tokens_out": 1108,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1840CE\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1945, 1991, 1993, 1995, 2161], \"cita\": \"Such breakdowns of performance problems by activity can be very revealing […] Maintenance-related work--scoring 'high' on all three criteria--emerges as the activity most likely to generate human performance problems of one kind or another. To what extent is this prediction borne out by the available evidence?\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro predice con las tres preguntas que el mantenimiento será la mayor fuente y luego contrasta esa predicción con informes de eventos, desglosados por actividad. El paso aplica ese mismo método al historial propio y va en la misma dirección. No invierte ninguna prioridad ni añade cifras, plazos ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1840CE",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1945,
+   1991,
+   1993,
+   1995,
+   2161
+  ],
+  "cita": "Such breakdowns of performance problems by activity can be very revealing […] Maintenance-related work--scoring 'high' on all three criteria--emerges as the activity most likely to generate human performance problems of one kind or another. To what extent is this prediction borne out by the available evidence?",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro predice con las tres preguntas que el mantenimiento será la mayor fuente y luego contrasta esa predicción con informes de eventos, desglosados por actividad. El paso aplica ese mismo método al historial propio y va en la misma dirección. No invierte ninguna prioridad ni añade cifras, plazos ni herramientas.",
+  "paso_fiel": ""
+ }
+}

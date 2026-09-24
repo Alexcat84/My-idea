@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAB30D9",
+  "intento": 0,
+  "usd": 0.17463599999999999,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37494,
+  "tokens_out": 1233,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PAB30D9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2585, 2650, 105], \"cita\": \"For them, a lengthy period without a bad accident does not signal the coming of peace. They see it, correctly, as a period of heightened danger and so reform and strengthen their defences accordingly. ... Regular checks reveal where holes exist now and where they are most likely to appear next.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide comprobaciones regulares de las defensas ('regular checks', L2650), lo que respalda 'periódicas'. También pide ver un periodo sin accidentes como de mayor peligro y reforzar las defensas (L2585, L105). 'Obligatorias' solo concreta la misma dirección y no añade ninguna cifra, norma ni frecuencia concreta. No es contrario: la crítica a la sobreespecificación (cap. 3) se refiere a los procedimientos operativos, no a revisar defensas.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PAB30D9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2585,
+   2650,
+   105
+  ],
+  "cita": "For them, a lengthy period without a bad accident does not signal the coming of peace. They see it, correctly, as a period of heightened danger and so reform and strengthen their defences accordingly. ... Regular checks reveal where holes exist now and where they are most likely to appear next.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide comprobaciones regulares de las defensas ('regular checks', L2650), lo que respalda 'periódicas'. También pide ver un periodo sin accidentes como de mayor peligro y reforzar las defensas (L2585, L105). 'Obligatorias' solo concreta la misma dirección y no añade ninguna cifra, norma ni frecuencia concreta. No es contrario: la crítica a la sobreespecificación (cap. 3) se refiere a los procedimientos operativos, no a revisar defensas.",
+  "paso_fiel": ""
+ }
+}

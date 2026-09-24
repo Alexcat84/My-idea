@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P958A29",
+  "intento": 0,
+  "usd": 0.18227200000000002,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41418,
+  "tokens_out": 830,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P958A29\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2658, 2748, 2750, 5270], \"cita\": \"What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors. [...] Measurements that are not used to guide the enhancement of system 'fitness' are not worth taking.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide medir la cultura con un conjunto de índices de proceso muestreados con regularidad (L2658, L2748, L2750) y propone él mismo preguntas diagnósticas (L5240-L5266). Solo advierte que tener los componentes no basta (L5270); no desaconseja medir. El paso concreta esto sin añadir cifras ni herramientas. Matiz: no hay una medida única, sino varios índices.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P958A29",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2658,
+   2748,
+   2750,
+   5270
+  ],
+  "cita": "What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors. [...] Measurements that are not used to guide the enhancement of system 'fitness' are not worth taking.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide medir la cultura con un conjunto de índices de proceso muestreados con regularidad (L2658, L2748, L2750) y propone él mismo preguntas diagnósticas (L5240-L5266). Solo advierte que tener los componentes no basta (L5270); no desaconseja medir. El paso concreta esto sin añadir cifras ni herramientas. Matiz: no hay una medida única, sino varios índices.",
+  "paso_fiel": ""
+ }
+}

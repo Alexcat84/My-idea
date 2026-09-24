@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF62CCE",
+  "intento": 0,
+  "usd": 0.16536,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34965,
+  "tokens_out": 1275,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF62CCE\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5894, 5834, 5892, 5907], \"cita\": \"The real question, of course, is not what safety costs us, but what it saves.\", \"datos_sin_respaldo\": [\"análisis costo-beneficio (como herramienta formal)\", \"antes de decidir (como condición previa a la decisión)\"], \"tambien_anadido\": false, \"razon\": \"El libro pide medir la seguridad por lo que ahorra: pérdidas de 5 a 50 veces lo asegurado y accidentes mayores que muy pocas organizaciones soportan. Comparar prevención con coste potencial va en esa dirección, así que no es contrario. Pero el libro no prescribe un análisis costo-beneficio formal ni lo pone como requisito previo a decidir.\", \"paso_fiel\": \"Valorar la inversión en prevención por lo que ahorra, contando los costes ocultos no asegurados y el coste potencial de un accidente mayor, y no por lo que cuesta.\"}\n```",
+ "parseado": {
+  "id": "PF62CCE",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5894,
+   5834,
+   5892,
+   5907
+  ],
+  "cita": "The real question, of course, is not what safety costs us, but what it saves.",
+  "datos_sin_respaldo": [
+   "análisis costo-beneficio (como herramienta formal)",
+   "antes de decidir (como condición previa a la decisión)"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro pide medir la seguridad por lo que ahorra: pérdidas de 5 a 50 veces lo asegurado y accidentes mayores que muy pocas organizaciones soportan. Comparar prevención con coste potencial va en esa dirección, así que no es contrario. Pero el libro no prescribe un análisis costo-beneficio formal ni lo pone como requisito previo a decidir.",
+  "paso_fiel": "Valorar la inversión en prevención por lo que ahorra, contando los costes ocultos no asegurados y el coste potencial de un accidente mayor, y no por lo que cuesta."
+ }
+}

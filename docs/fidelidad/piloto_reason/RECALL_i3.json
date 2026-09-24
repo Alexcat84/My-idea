@@ -1,0 +1,539 @@
+{
+ "intento": "3",
+ "recall_pasada1_sinteticos": "16/16",
+ "recall_pasada1_conocido": "1/1",
+ "recall_final_sinteticos": "16/16",
+ "recall_final_conocido": "1/1",
+ "recall_pasada1_anadidos": "12/12",
+ "recall_final_anadidos": "10/12",
+ "recall_final_anadidos_con_doble_etiqueta": "12/12",
+ "reales": 403,
+ "reales_marcados_p1": 229,
+ "tasa_marcado_reales": 0.568,
+ "clases_p1_reales": {
+  "INFERIDO-OPERATIVO": 172,
+  "FIEL": 157,
+  "POSIBLE_CONTRARIO": 50,
+  "INFERIDO-ANADIDO": 14,
+  "SIN_COBERTURA": 10
+ },
+ "veredictos_p2_reales": {
+  "INFERIDO-OPERATIVO": 128,
+  "FIEL": 63,
+  "INFERIDO-ANADIDO": 24,
+  "CONTRARIO": 14
+ },
+ "reales_marca_contradecir": 170,
+ "reales_marca_dato": 109,
+ "reales_solo_marca_dato": 59,
+ "anadidos_reales": [
+  {
+   "nodo": "costos_ocultos_accidentes_iceberg",
+   "paso": 2,
+   "id": "PF62CCE"
+  },
+  {
+   "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+   "paso": 2,
+   "id": "P14D5C4"
+  },
+  {
+   "nodo": "fallo_regulatorio_por_recursos_insuficientes",
+   "paso": 2,
+   "id": "PDBED6D"
+  },
+  {
+   "nodo": "cultura_de_seguridad_componentes",
+   "paso": 4,
+   "id": "P148951"
+  },
+  {
+   "nodo": "diseno_recordatorios_efectivos_2",
+   "paso": 1,
+   "id": "P781E87"
+  },
+  {
+   "nodo": "normalizacion_de_la_desviacion",
+   "paso": 4,
+   "id": "P6C0A42"
+  },
+  {
+   "nodo": "clasificacion_riesgos_por_dominio",
+   "paso": 2,
+   "id": "P0C5D88"
+  },
+  {
+   "nodo": "arbol_decision_culpabilidad",
+   "paso": 6,
+   "id": "P965DAA"
+  },
+  {
+   "nodo": "fallas_activas_condiciones_latentes",
+   "paso": 6,
+   "id": "P863D48"
+  },
+  {
+   "nodo": "cultura_justa",
+   "paso": 3,
+   "id": "P8F0A58"
+  },
+  {
+   "nodo": "espacio_de_seguridad",
+   "paso": 4,
+   "id": "PE7F8DF"
+  },
+  {
+   "nodo": "prevalencia_omisiones",
+   "paso": 3,
+   "id": "P0E7328"
+  },
+  {
+   "nodo": "cultura_flexible",
+   "paso": 2,
+   "id": "P9D6E40"
+  },
+  {
+   "nodo": "safety_culture_engineering",
+   "paso": 4,
+   "id": "P325F5D"
+  },
+  {
+   "nodo": "modelo_queso_suizo",
+   "paso": 3,
+   "id": "PF0F6EA"
+  },
+  {
+   "nodo": "normalizacion_de_la_desviacion",
+   "paso": 6,
+   "id": "PEAFFAB"
+  },
+  {
+   "nodo": "riesgo_error_humano_en_mantenimiento",
+   "paso": 3,
+   "id": "P41836E"
+  },
+  {
+   "nodo": "conflicto_de_objetivos_en_organismos_reguladores",
+   "paso": 3,
+   "id": "P5EA355"
+  },
+  {
+   "nodo": "cultura_como_mecanismo_descentralizacion",
+   "paso": 4,
+   "id": "PC207C2"
+  },
+  {
+   "nodo": "accidentes_organizacionales_por_mantenimiento",
+   "paso": 4,
+   "id": "PE0F0BD"
+  },
+  {
+   "nodo": "quality_control_vs_quality_assurance",
+   "paso": 4,
+   "id": "PF3488D"
+  },
+  {
+   "nodo": "cultura_justa",
+   "paso": 2,
+   "id": "P44D1D5"
+  },
+  {
+   "nodo": "riesgo_error_humano_en_mantenimiento",
+   "paso": 4,
+   "id": "P813A63"
+  },
+  {
+   "nodo": "planificacion_recuperacion_post_accidente",
+   "paso": 4,
+   "id": "PD76F0C"
+  }
+ ],
+ "contrarios_reales": [
+  {
+   "nodo": "gestion_falsas_alarmas",
+   "paso": 3,
+   "id": "P4C7E22"
+  },
+  {
+   "nodo": "efectos_recompensa_castigo",
+   "paso": 2,
+   "id": "P3EF940"
+  },
+  {
+   "nodo": "ida_diagrama_influencia",
+   "paso": 3,
+   "id": "P1DBB41"
+  },
+  {
+   "nodo": "clasificacion_riesgos_por_dominio",
+   "paso": 4,
+   "id": "PD1D609"
+  },
+  {
+   "nodo": "documentacion_mantenimiento_linea_base",
+   "paso": 2,
+   "id": "P1C7808"
+  },
+  {
+   "nodo": "limite_busqueda_causas_pendulo",
+   "paso": 5,
+   "id": "P3E6A38"
+  },
+  {
+   "nodo": "efectos_recompensa_castigo",
+   "paso": 3,
+   "id": "P397AE3"
+  },
+  {
+   "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+   "paso": 3,
+   "id": "P8CD568"
+  },
+  {
+   "nodo": "ironias_de_la_automatizacion",
+   "paso": 3,
+   "id": "PC94C93"
+  },
+  {
+   "nodo": "prevalencia_omisiones",
+   "paso": 2,
+   "id": "P510F55"
+  },
+  {
+   "nodo": "racional_mantenimiento_preventivo_correctivo",
+   "paso": 2,
+   "id": "PD8744D"
+  },
+  {
+   "nodo": "accidentes_individuales_vs_organizacionales",
+   "paso": 1,
+   "id": "PA0A4EE"
+  },
+  {
+   "nodo": "redes_de_seguridad_regulatoria",
+   "paso": 4,
+   "id": "PE0017C"
+  },
+  {
+   "nodo": "self_regulation_deregulation_tradeoffs",
+   "paso": 4,
+   "id": "P301706"
+  }
+ ],
+ "detalle_vara": [
+  {
+   "sid": "S01",
+   "id": "PF36A73",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S02",
+   "id": "PD0F918",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S03",
+   "id": "P661559",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S04",
+   "id": "P1CC77D",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S05",
+   "id": "P3DA05A",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "lista fija de equipos y procedimientos",
+    "marcar en todas las visitas",
+    "igual para todas las instalaciones"
+   ]
+  },
+  {
+   "sid": "S06",
+   "id": "P270A27",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "meta central de cero accidentes",
+    "control directo del conteo de incidentes de cada periodo"
+   ]
+  },
+  {
+   "sid": "S07",
+   "id": "P4C2D56",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S08",
+   "id": "P742855",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "equipo central de expertos externos",
+    "sin involucrar al personal operativo"
+   ]
+  },
+  {
+   "sid": "S09",
+   "id": "P5A956E",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S10",
+   "id": "P4B1703",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S11",
+   "id": "P4632AF",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S12",
+   "id": "P1E07B6",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S13",
+   "id": "P1EB846",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S14",
+   "id": "P2F57E1",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S15",
+   "id": "P59A204",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "S16",
+   "id": "P08C9B3",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  },
+  {
+   "sid": "A01",
+   "id": "P70B606",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "al menos el 8% del presupuesto operativo"
+   ]
+  },
+  {
+   "sid": "A02",
+   "id": "P30581C",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "Comité de Auditoría del directorio"
+   ]
+  },
+  {
+   "sid": "A03",
+   "id": "P5A7ED6",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "al menos 48 horas antes"
+   ]
+  },
+  {
+   "sid": "A04",
+   "id": "P1C43D9",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "cada seis meses",
+    "sesión de simulador"
+   ]
+  },
+  {
+   "sid": "A05",
+   "id": "P8F4846",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "norma ISO 55001"
+   ]
+  },
+  {
+   "sid": "A06",
+   "id": "P1FC70D",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "IBM Maximo"
+   ]
+  },
+  {
+   "sid": "A07",
+   "id": "PF312D4",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "SafetyCulture",
+    "listas digitales"
+   ]
+  },
+  {
+   "sid": "A08",
+   "id": "P966EA1",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "ISO 45001",
+    "estructura de solo cuatro factores (gestión, técnicos, procedimentales y de formación) como organización de la medición"
+   ]
+  },
+  {
+   "sid": "A09",
+   "id": "PB7907F",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": true,
+   "datos_sin_respaldo": [
+    "más de 10 años"
+   ]
+  },
+  {
+   "sid": "A10",
+   "id": "PFB439E",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "viceministro de transporte"
+   ]
+  },
+  {
+   "sid": "A11",
+   "id": "P64B6DF",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "Sistema de Comando de Incidentes"
+   ]
+  },
+  {
+   "sid": "A12",
+   "id": "PC861F7",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": [
+    "medicion mediante la variacion del Net Promoter Score de los clientes tras el evento"
+   ]
+  },
+  {
+   "sid": "conocido",
+   "id": "P510F55",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO",
+   "tambien_anadido": false,
+   "datos_sin_respaldo": []
+  }
+ ],
+ "coste_pasada1": {
+  "llamadas": 108,
+  "usd": 18.0853,
+  "turnos": 108,
+  "segundos_api": 1954.2,
+  "tokens_in": 3599924,
+  "tokens_out": 184281
+ },
+ "coste_pasada2": {
+  "llamadas": 257,
+  "usd": 46.4265,
+  "turnos": 257,
+  "segundos_api": 3154.9,
+  "tokens_in": 10346425,
+  "tokens_out": 252038
+ }
+}

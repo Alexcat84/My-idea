@@ -1,0 +1,39 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF312D4",
+  "intento": 0,
+  "usd": 0.112924,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 19.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20691,
+  "tokens_out": 1508,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF312D4\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2250, 2259, 2267, 2279, 2289, 2293, 2311], \"cita\": \"It should be located as closely as possible in both time and distance to the to-be-remembered (TBR) task step (contiguous). ... It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check).\", \"datos_sin_respaldo\": [\"SafetyCulture\", \"listas digitales\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda poner remedios a los pasos propensos a omisión (L2250). Un recordatorio que permita marcar ítems (check), bloquear el avance (compel) y confirmar lo hecho (confirm) cumple sus criterios. Llamarlo 'first aid' no lo desaconseja. La confirmación al cierre se aparta en detalle de la contigüidad, pero no contradice el libro. SafetyCulture y el formato digital no aparecen en el libro.\", \"paso_fiel\": \"Asociar a cada paso propenso a omisión un recordatorio visible, situado junto al paso y en el momento de hacerlo, que permita al técnico marcar cada acción o ítem y confirmar que se completó antes de seguir.\"}\n```",
+ "parseado": {
+  "id": "PF312D4",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2250,
+   2259,
+   2267,
+   2279,
+   2289,
+   2293,
+   2311
+  ],
+  "cita": "It should be located as closely as possible in both time and distance to the to-be-remembered (TBR) task step (contiguous). ... It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check).",
+  "datos_sin_respaldo": [
+   "SafetyCulture",
+   "listas digitales"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda poner remedios a los pasos propensos a omisión (L2250). Un recordatorio que permita marcar ítems (check), bloquear el avance (compel) y confirmar lo hecho (confirm) cumple sus criterios. Llamarlo 'first aid' no lo desaconseja. La confirmación al cierre se aparta en detalle de la contigüidad, pero no contradice el libro. SafetyCulture y el formato digital no aparecen en el libro.",
+  "paso_fiel": "Asociar a cada paso propenso a omisión un recordatorio visible, situado junto al paso y en el momento de hacerlo, que permita al técnico marcar cada acción o ítem y confirmar que se completó antes de seguir."
+ }
+}

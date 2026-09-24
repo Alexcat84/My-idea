@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P488B64",
+  "intento": 0,
+  "usd": 0.17623999999999998,
+  "turnos": 1,
+  "duracion_s": 7.4,
+  "pared_s": 8.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41620,
+  "tokens_out": 488,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P488B64\", \"veredicto\": \"FIEL\", \"lineas\": [2687], \"cita\": \"But, for this to occur, the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide difundir ampliamente los datos de casi accidentes, sobre todo en los escalones superiores de la organización. 'Alta gerencia' traduce bien 'upper echelons'. Que el libro aluda a los responsables financieros ('bean counters') solo precisa a quién dentro de esa alta gerencia; no contradice el paso ni añade ningún dato.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P488B64",
+  "veredicto": "FIEL",
+  "lineas": [
+   2687
+  ],
+  "cita": "But, for this to occur, the data need to be disseminated widely, particularly among the bean counters in the upper echelons of the organization.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide difundir ampliamente los datos de casi accidentes, sobre todo en los escalones superiores de la organización. 'Alta gerencia' traduce bien 'upper echelons'. Que el libro aluda a los responsables financieros ('bean counters') solo precisa a quién dentro de esa alta gerencia; no contradice el paso ni añade ningún dato.",
+  "paso_fiel": ""
+ }
+}

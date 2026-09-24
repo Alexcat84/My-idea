@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P46F68E",
+  "intento": 0,
+  "usd": 0.22023600000000002,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51559,
+  "tokens_out": 700,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P46F68E\", \"veredicto\": \"FIEL\", \"lineas\": [3230, 3232, 3332, 3382], \"cita\": \"One answer is to pool data from a large number of people to create an average picture at any one time. [...] Such a method also helps to preserve the anonymity of the respondents. [...] The assessments are made directly on to a computer. Each assessor logs on anonymously\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda los tres elementos del paso. Agrupar los datos en un promedio también preserva el anonimato, y lo dice de Review y MESH en conjunto. Ambos usan un programa informático que analiza y archiva los datos. En MESH cada evaluador entra de forma anónima y ve los promedios del área. No hay generalización indebida ni datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P46F68E",
+  "veredicto": "FIEL",
+  "lineas": [
+   3230,
+   3232,
+   3332,
+   3382
+  ],
+  "cita": "One answer is to pool data from a large number of people to create an average picture at any one time. [...] Such a method also helps to preserve the anonymity of the respondents. [...] The assessments are made directly on to a computer. Each assessor logs on anonymously",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda los tres elementos del paso. Agrupar los datos en un promedio también preserva el anonimato, y lo dice de Review y MESH en conjunto. Ambos usan un programa informático que analiza y archiva los datos. En MESH cada evaluador entra de forma anónima y ve los promedios del área. No hay generalización indebida ni datos nuevos.",
+  "paso_fiel": ""
+ }
+}

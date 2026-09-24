@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1C7808",
+  "intento": 0,
+  "usd": 0.172376,
+  "turnos": 1,
+  "duracion_s": 17.0,
+  "pared_s": 18.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36314,
+  "tokens_out": 1356,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1C7808\", \"veredicto\": \"CONTRARIO\", \"lineas\": [417, 419, 423, 451, 453], \"cita\": \"The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma que línea y base requieren paquetes de trabajo distintos, con fichas breves en línea. El paso impone documentación completa a toda tarea, sin importar su origen, y convierte en regla general lo que el libro condiciona al entorno. El fallo que señala el libro es el traspaso sin procedimiento ni hojas de etapa (L423, L451).\", \"paso_fiel\": \"Cuando una tarea de línea se traspase a personal de base, acompañarla de hojas de etapa escritas con el trabajo ya realizado y asegurar que quien la recibe disponga de las tarjetas de tarea, las advertencias del manual y un medio para firmar los trabajos de restitución.\"}\n```",
+ "parseado": {
+  "id": "P1C7808",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   417,
+   419,
+   423,
+   451,
+   453
+  ],
+  "cita": "The line and base environments thus require different kinds of planning and supportive work packs. In the case of line maintenance, the paperwork is generated just before the work is due to be done and is subject to change according to operational needs. The job cards therefore give only a brief description",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma que línea y base requieren paquetes de trabajo distintos, con fichas breves en línea. El paso impone documentación completa a toda tarea, sin importar su origen, y convierte en regla general lo que el libro condiciona al entorno. El fallo que señala el libro es el traspaso sin procedimiento ni hojas de etapa (L423, L451).",
+  "paso_fiel": "Cuando una tarea de línea se traspase a personal de base, acompañarla de hojas de etapa escritas con el trabajo ya realizado y asegurar que quien la recibe disponga de las tarjetas de tarea, las advertencias del manual y un medio para firmar los trabajos de restitución."
+ }
+}

@@ -1,0 +1,378 @@
+{
+ "intento": "2",
+ "recall_pasada1_sinteticos": "16/16",
+ "recall_pasada1_conocido": "1/1",
+ "recall_final_sinteticos": "16/16",
+ "recall_final_conocido": "1/1",
+ "recall_pasada1_anadidos": "12/12",
+ "recall_final_anadidos": "11/12",
+ "reales": 403,
+ "reales_marcados_p1": 228,
+ "tasa_marcado_reales": 0.566,
+ "clases_p1_reales": {
+  "FIEL": 154,
+  "INFERIDO-OPERATIVO": 185,
+  "POSIBLE_CONTRARIO": 46,
+  "SIN_COBERTURA": 7,
+  "INFERIDO-ANADIDO": 11
+ },
+ "veredictos_p2_reales": {
+  "INFERIDO-OPERATIVO": 145,
+  "FIEL": 58,
+  "CONTRARIO": 11,
+  "INFERIDO-ANADIDO": 14
+ },
+ "reales_marca_contradecir": 173,
+ "reales_marca_dato": 106,
+ "reales_solo_marca_dato": 55,
+ "anadidos_reales": [
+  {
+   "nodo": "safety_culture_engineering",
+   "paso": 4,
+   "id": "P64EAD0"
+  },
+  {
+   "nodo": "accidentes_organizacionales_por_mantenimiento",
+   "paso": 4,
+   "id": "PD486A8"
+  },
+  {
+   "nodo": "diseno_recordatorios_efectivos_2",
+   "paso": 1,
+   "id": "PAF72E6"
+  },
+  {
+   "nodo": "riesgo_error_humano_en_mantenimiento",
+   "paso": 4,
+   "id": "PE60EC2"
+  },
+  {
+   "nodo": "gestion_falsas_alarmas",
+   "paso": 3,
+   "id": "P4C2C14"
+  },
+  {
+   "nodo": "cultura_de_seguridad_componentes",
+   "paso": 4,
+   "id": "P76BA17"
+  },
+  {
+   "nodo": "conflicto_de_objetivos_en_organismos_reguladores",
+   "paso": 3,
+   "id": "PB83FCC"
+  },
+  {
+   "nodo": "quality_control_vs_quality_assurance",
+   "paso": 4,
+   "id": "P72FB54"
+  },
+  {
+   "nodo": "normalizacion_de_la_desviacion",
+   "paso": 6,
+   "id": "P8C2D4F"
+  },
+  {
+   "nodo": "cultura_justa",
+   "paso": 3,
+   "id": "P91F9B2"
+  },
+  {
+   "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+   "paso": 2,
+   "id": "PCE0109"
+  },
+  {
+   "nodo": "cultura_flexible",
+   "paso": 2,
+   "id": "PE2A05E"
+  },
+  {
+   "nodo": "prevalencia_omisiones",
+   "paso": 3,
+   "id": "P78E883"
+  },
+  {
+   "nodo": "fallo_regulatorio_por_recursos_insuficientes",
+   "paso": 2,
+   "id": "PA1F7E0"
+  }
+ ],
+ "contrarios_reales": [
+  {
+   "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+   "paso": 3,
+   "id": "P4F01DC"
+  },
+  {
+   "nodo": "reporte_casi_accidentes",
+   "paso": 2,
+   "id": "PF531FC"
+  },
+  {
+   "nodo": "falla_sistemica_vs_error_individual",
+   "paso": 4,
+   "id": "P33A5CF"
+  },
+  {
+   "nodo": "racional_mantenimiento_preventivo_correctivo",
+   "paso": 2,
+   "id": "P861199"
+  },
+  {
+   "nodo": "efectos_recompensa_castigo",
+   "paso": 3,
+   "id": "P091B3B"
+  },
+  {
+   "nodo": "prevalencia_omisiones",
+   "paso": 2,
+   "id": "PD1F5ED"
+  },
+  {
+   "nodo": "limite_busqueda_causas_pendulo",
+   "paso": 5,
+   "id": "P508499"
+  },
+  {
+   "nodo": "self_regulation_deregulation_tradeoffs",
+   "paso": 1,
+   "id": "P944E0A"
+  },
+  {
+   "nodo": "accidentes_individuales_vs_organizacionales",
+   "paso": 1,
+   "id": "P50730B"
+  },
+  {
+   "nodo": "documentacion_mantenimiento_linea_base",
+   "paso": 2,
+   "id": "PD47D3A"
+  },
+  {
+   "nodo": "ironias_de_la_automatizacion",
+   "paso": 3,
+   "id": "PB9559F"
+  }
+ ],
+ "detalle_vara": [
+  {
+   "sid": "S01",
+   "id": "P24D894",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S02",
+   "id": "P5DBF55",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S03",
+   "id": "P2DFCE0",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S04",
+   "id": "P3421E1",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S05",
+   "id": "P83AEC8",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S06",
+   "id": "P1A7FF4",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S07",
+   "id": "PE4B704",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S08",
+   "id": "P2358D5",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S09",
+   "id": "P67A52A",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S10",
+   "id": "PB11C35",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S11",
+   "id": "P5A3EEA",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S12",
+   "id": "PD921C2",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S13",
+   "id": "P02CE17",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S14",
+   "id": "PD2B557",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S15",
+   "id": "P6C1ADC",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "S16",
+   "id": "P1D20A1",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "A01",
+   "id": "PC78276",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A02",
+   "id": "P1C2534",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A03",
+   "id": "P9ADE10",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A04",
+   "id": "PE1A7B7",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A05",
+   "id": "P8234A9",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A06",
+   "id": "P210F94",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A07",
+   "id": "P6DEAAD",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A08",
+   "id": "P83ED59",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  },
+  {
+   "sid": "A09",
+   "id": "P555401",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A10",
+   "id": "P4E5EBC",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A11",
+   "id": "P14DCA6",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "A12",
+   "id": "PF51157",
+   "p1_clase": "INFERIDO-ANADIDO",
+   "p1_marca": true,
+   "p2": "INFERIDO-ANADIDO"
+  },
+  {
+   "sid": "conocido",
+   "id": "PD1F5ED",
+   "p1_clase": "POSIBLE_CONTRARIO",
+   "p1_marca": true,
+   "p2": "CONTRARIO"
+  }
+ ],
+ "coste_pasada1": {
+  "llamadas": 108,
+  "usd": 18.0585,
+  "turnos": 108,
+  "segundos_api": 1929.4,
+  "tokens_in": 3599952,
+  "tokens_out": 182935
+ },
+ "coste_pasada2": {
+  "llamadas": 256,
+  "usd": 46.1442,
+  "turnos": 256,
+  "segundos_api": 2947.7,
+  "tokens_in": 10328585,
+  "tokens_out": 241495
+ }
+}

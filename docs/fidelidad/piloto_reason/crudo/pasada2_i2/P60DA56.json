@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P60DA56",
+  "intento": 0,
+  "usd": 0.212596,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49049,
+  "tokens_out": 820,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P60DA56\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 546, 584, 4010, 686], \"cita\": \"The Bank of England report identified a number of warning signs that should have alerted Barings management … A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro enumera señales de alerta desatendidas o no transmitidas (Barings, 'smoulderings' de King's Cross, fallos de reporte del Challenger). También afirma que las debilidades suelen ser evidentes antes del accidente (L584). El sesgo retrospectivo (L686) matiza, pero no desaconseja revisar señales. El paso concreta esto sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P60DA56",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   546,
+   584,
+   4010,
+   686
+  ],
+  "cita": "The Bank of England report identified a number of warning signs that should have alerted Barings management … A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro enumera señales de alerta desatendidas o no transmitidas (Barings, 'smoulderings' de King's Cross, fallos de reporte del Challenger). También afirma que las debilidades suelen ser evidentes antes del accidente (L584). El sesgo retrospectivo (L686) matiza, pero no desaconseja revisar señales. El paso concreta esto sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

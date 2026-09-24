@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P4C2C14",
+  "intento": 0,
+  "usd": 0.185588,
+  "turnos": 1,
+  "duracion_s": 16.5,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39057,
+  "tokens_out": 1468,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4C2C14\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [1085, 1089, 1095, 1141, 1035], \"cita\": \"Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.\", \"datos_sin_respaldo\": [\"protocolos que impidan la desactivación unilateral de alarmas\", \"verificación cruzada obligatoria antes de desactivar\"], \"razon\": \"El libro atribuye la desactivación del stick-shaker a la desconfianza causada por falsas alarmas, y en el Trident ya había un piloto monitor. No propone candados procedimentales ni verificación cruzada. Tampoco los prohíbe: solo advierte, en general, contra proscribir respuestas humanas concretas. Por eso el paso añade una norma sin respaldo, pero no llega a contradecir al libro.\", \"paso_fiel\": \"Corregir las causas de las falsas activaciones de las alarmas críticas para que no adquieran fama de indicar peligros inexistentes y los operadores no las ignoren o desactiven ante una emergencia real.\"}\n```",
+ "parseado": {
+  "id": "P4C2C14",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   1085,
+   1089,
+   1095,
+   1141,
+   1035
+  ],
+  "cita": "Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.",
+  "datos_sin_respaldo": [
+   "protocolos que impidan la desactivación unilateral de alarmas",
+   "verificación cruzada obligatoria antes de desactivar"
+  ],
+  "razon": "El libro atribuye la desactivación del stick-shaker a la desconfianza causada por falsas alarmas, y en el Trident ya había un piloto monitor. No propone candados procedimentales ni verificación cruzada. Tampoco los prohíbe: solo advierte, en general, contra proscribir respuestas humanas concretas. Por eso el paso añade una norma sin respaldo, pero no llega a contradecir al libro.",
+  "paso_fiel": "Corregir las causas de las falsas activaciones de las alarmas críticas para que no adquieran fama de indicar peligros inexistentes y los operadores no las ignoren o desactiven ante una emergencia real."
+ }
+}

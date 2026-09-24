@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PFAC933",
+  "intento": 0,
+  "usd": 0.231892,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52423,
+  "tokens_out": 1110,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PFAC933\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4720], \"cita\": \"One such ‘bad’ culture is characterized by what psychologists have termed learned helplessness, describing a condition in which people learn that attempts to change their situation are fruitless so that they simply give up trying ... People feel helpless in the face of ever-present dangers\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe la indefensión aprendida como cultura disfuncional que alimenta el ciclo de la culpa. Esa cultura se manifiesta en que las personas dejan de intentar cambiar su situación ante peligros constantes. Detectar sus síntomas en el personal concreta el diagnóstico en la misma dirección, no culpa al individuo y no añade cifras, plazos ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PFAC933",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4714,
+   4720
+  ],
+  "cita": "One such ‘bad’ culture is characterized by what psychologists have termed learned helplessness, describing a condition in which people learn that attempts to change their situation are fruitless so that they simply give up trying ... People feel helpless in the face of ever-present dangers",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe la indefensión aprendida como cultura disfuncional que alimenta el ciclo de la culpa. Esa cultura se manifiesta en que las personas dejan de intentar cambiar su situación ante peligros constantes. Detectar sus síntomas en el personal concreta el diagnóstico en la misma dirección, no culpa al individuo y no añade cifras, plazos ni herramientas.",
+  "paso_fiel": ""
+ }
+}

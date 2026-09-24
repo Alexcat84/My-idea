@@ -1,0 +1,40 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3DA05A",
+  "intento": 0,
+  "usd": 0.22894399999999998,
+  "turnos": 1,
+  "duracion_s": 21.5,
+  "pared_s": 23.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46976,
+  "tokens_out": 2052,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3DA05A\", \"veredicto\": \"CONTRARIO\", \"lineas\": [4027, 4033, 4037, 4039, 4388, 4433, 4435], \"cita\": \"He is not given a fixed list of procedures, equipment and items which he must tick off… This could create considerable difficulties given the variety of operations, working procedures and installations involved. In addition, it would lead to operators anticipating those areas…\", \"datos_sin_respaldo\": [\"lista fija de equipos y procedimientos\", \"marcar en todas las visitas\", \"igual para todas las instalaciones\"], \"tambien_anadido\": true, \"razon\": \"El libro recoge dos objeciones a una lista fija y uniforme que nadie rebate: la variedad de instalaciones y que los operadores anticipen lo revisado. Cullen critica la superficialidad, no pide listas uniformes; su remedio es un Safety Case propio de cada instalación. Los checklists solo aparecen para áreas concretas, como el permiso de trabajo.\", \"paso_fiel\": \"Dotar a cada inspector de los checklists específicos existentes (por ejemplo, el de evaluación del sistema de permisos de trabajo) y formarlo en su uso, adaptando el alcance de cada inspección al Safety Case de la instalación, sin imponer una lista fija idéntica para todas que los operadores puedan anticipar.\"}\n```",
+ "parseado": {
+  "id": "P3DA05A",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   4027,
+   4033,
+   4037,
+   4039,
+   4388,
+   4433,
+   4435
+  ],
+  "cita": "He is not given a fixed list of procedures, equipment and items which he must tick off… This could create considerable difficulties given the variety of operations, working procedures and installations involved. In addition, it would lead to operators anticipating those areas…",
+  "datos_sin_respaldo": [
+   "lista fija de equipos y procedimientos",
+   "marcar en todas las visitas",
+   "igual para todas las instalaciones"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro recoge dos objeciones a una lista fija y uniforme que nadie rebate: la variedad de instalaciones y que los operadores anticipen lo revisado. Cullen critica la superficialidad, no pide listas uniformes; su remedio es un Safety Case propio de cada instalación. Los checklists solo aparecen para áreas concretas, como el permiso de trabajo.",
+  "paso_fiel": "Dotar a cada inspector de los checklists específicos existentes (por ejemplo, el de evaluación del sistema de permisos de trabajo) y formarlo en su uso, adaptando el alcance de cada inspección al Safety Case de la instalación, sin imponer una lista fija idéntica para todas que los operadores puedan anticipar."
+ }
+}

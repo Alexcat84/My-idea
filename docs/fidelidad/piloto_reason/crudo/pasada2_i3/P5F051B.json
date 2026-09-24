@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5F051B",
+  "intento": 0,
+  "usd": 0.156632,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 14.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33373,
+  "tokens_out": 1157,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5F051B\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [323, 250, 252, 293], \"cita\": \"Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event. [...] such an approach would entirely fail to find the remediable causes of an organizational accident.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro trata los accidentes organizacionales como un tipo distinto. Dice que el análisis centrado en la persona no encuentra sus causas y describe una investigación propia, de arriba abajo, por defensas, condiciones locales y factores organizacionales (L293). La frontera difusa y el marco común (L2654) matizan, pero no contradicen. El paso lo concreta sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5F051B",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   323,
+   250,
+   252,
+   293
+  ],
+  "cita": "Although it is not always easy to draw a hard and fast line between individual and organizational accidents, this book argues that it is useful to treat them as distinct kinds of event. [...] such an approach would entirely fail to find the remediable causes of an organizational accident.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro trata los accidentes organizacionales como un tipo distinto. Dice que el análisis centrado en la persona no encuentra sus causas y describe una investigación propia, de arriba abajo, por defensas, condiciones locales y factores organizacionales (L293). La frontera difusa y el marco común (L2654) matizan, pero no contradicen. El paso lo concreta sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

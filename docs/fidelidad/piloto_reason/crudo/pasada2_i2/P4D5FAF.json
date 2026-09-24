@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P4D5FAF",
+  "intento": 0,
+  "usd": 0.24835200000000002,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 10.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58818,
+  "tokens_out": 654,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4D5FAF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5208], \"cita\": \"It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. ... neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro (Weick) sostiene que la cultura coordina las operaciones descentralizadas mediante supuestos y premisas de decisión compartidos, más útiles que las reglas ante lo imprevisto. Identificarlos es un primer paso para socializarlos, en la misma dirección y sin datos nuevos. La normalización de la desviación en NASA y la diversidad de los equipos no desaconsejan identificar estas premisas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P4D5FAF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5208
+  ],
+  "cita": "It creates a homogeneous set of assumptions and decision premises which, when they are invoked on a local and decentralised basis, preserve co-ordination and centralisation. ... neither rules nor standardisation are well equipped to deal with emergencies for which there is no precedent.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro (Weick) sostiene que la cultura coordina las operaciones descentralizadas mediante supuestos y premisas de decisión compartidos, más útiles que las reglas ante lo imprevisto. Identificarlos es un primer paso para socializarlos, en la misma dirección y sin datos nuevos. La normalización de la desviación en NASA y la diversidad de los equipos no desaconsejan identificar estas premisas.",
+  "paso_fiel": ""
+ }
+}

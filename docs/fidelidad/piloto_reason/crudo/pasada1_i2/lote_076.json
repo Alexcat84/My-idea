@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_076",
+  "intento": 0,
+  "usd": 0.17572,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35315,
+  "tokens_out": 1723,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P181684\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 538, 668, 686, 1085, 3153], \"razon\": \"El libro dice que las señales en conjunto debían alertar. Pero advierte del sesgo retrospectivo y de las falsas alarmas; disparos automáticos por umbral no están respaldados.\"},\n  {\"id\": \"P6D2E5E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"tabla de características de Westrum\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [596, 600, 660, 666, 5272], \"razon\": \"La tabla existe, pero el libro la usa para describir, no como instrumento de diagnóstico. Advierte que quien cree tener buena cultura casi seguro se equivoca: riesgo de autodiagnóstico complaciente.\"},\n  {\"id\": \"P56A561\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [852, 856, 5184], \"razon\": \"El libro dice que las habilidades requieren práctica continua y que los sistemas exitosos necesitan más inversión en entrenamiento. La simulación aparece como alternativa al aprendizaje por ensayo y error.\"},\n  {\"id\": \"PE1A7B7\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cada seis meses\", \"sesión de simulador\", \"FMS\", \"fases de alta carga de trabajo\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [868, 872, 942, 2724], \"razon\": \"El libro no fija ninguna periodicidad ni sesiones de simulador. Atribuye la confusión de modos a la automatización torpe (diseño) y prioriza los factores organizacionales; el entrenamiento del operador podría no ser la vía que respalda.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P181684",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    538,
+    668,
+    686,
+    1085,
+    3153
+   ],
+   "razon": "El libro dice que las señales en conjunto debían alertar. Pero advierte del sesgo retrospectivo y de las falsas alarmas; disparos automáticos por umbral no están respaldados."
+  },
+  {
+   "id": "P6D2E5E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "tabla de características de Westrum"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    596,
+    600,
+    660,
+    666,
+    5272
+   ],
+   "razon": "La tabla existe, pero el libro la usa para describir, no como instrumento de diagnóstico. Advierte que quien cree tener buena cultura casi seguro se equivoca: riesgo de autodiagnóstico complaciente."
+  },
+  {
+   "id": "P56A561",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    852,
+    856,
+    5184
+   ],
+   "razon": "El libro dice que las habilidades requieren práctica continua y que los sistemas exitosos necesitan más inversión en entrenamiento. La simulación aparece como alternativa al aprendizaje por ensayo y error."
+  },
+  {
+   "id": "PE1A7B7",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cada seis meses",
+    "sesión de simulador",
+    "FMS",
+    "fases de alta carga de trabajo"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    868,
+    872,
+    942,
+    2724
+   ],
+   "razon": "El libro no fija ninguna periodicidad ni sesiones de simulador. Atribuye la confusión de modos a la automatización torpe (diseño) y prioriza los factores organizacionales; el entrenamiento del operador podría no ser la vía que respalda."
+  }
+ ]
+}

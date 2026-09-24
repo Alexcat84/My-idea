@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_106",
+  "intento": 0,
+  "usd": 0.172816,
+  "turnos": 1,
+  "duracion_s": 18.5,
+  "pared_s": 19.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34584,
+  "tokens_out": 1724,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P74653F\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"20-30% del personal operativo\"], \"clase\": \"FIEL\", \"lineas\": [3332, 3232, 3228], \"razon\": \"El 20-30% vale solo para factores locales de MESH, con selección aleatoria. En Review evalúan supervisores y en MESH los factores organizacionales los califican gerentes técnicos: generalizarlo es un matiz.\"},\n  {\"id\": \"PB9559F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [848, 856, 942, 1033, 1085, 1141, 1149], \"razon\": \"El libro describe la mala vigilancia como problema. Advierte que compensar con más sistemas añade complejidad, falsas alarmas y errores nuevos, y apunta a invertir en entrenamiento del operador.\"},\n  {\"id\": \"P160A9E\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Failure State Profile\", \"software\"], \"clase\": \"FIEL\", \"lineas\": [3199, 3203, 3209], \"razon\": \"El software de Tripod-Delta analiza la checklist y genera el Failure State Profile, un gráfico de barras de los 11 GFTs.\"},\n  {\"id\": \"P3B72BA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3965, 3967, 3971, 3973], \"razon\": \"El libro señala el uso cotidiano de 'acceptable risk' y 'anomaly', pero dice que volar con riesgos aceptables es parte normal de la cultura aeronáutica. Leerlo como minimización es un matiz.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P74653F",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "20-30% del personal operativo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3332,
+    3232,
+    3228
+   ],
+   "razon": "El 20-30% vale solo para factores locales de MESH, con selección aleatoria. En Review evalúan supervisores y en MESH los factores organizacionales los califican gerentes técnicos: generalizarlo es un matiz."
+  },
+  {
+   "id": "PB9559F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    848,
+    856,
+    942,
+    1033,
+    1085,
+    1141,
+    1149
+   ],
+   "razon": "El libro describe la mala vigilancia como problema. Advierte que compensar con más sistemas añade complejidad, falsas alarmas y errores nuevos, y apunta a invertir en entrenamiento del operador."
+  },
+  {
+   "id": "P160A9E",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Failure State Profile",
+    "software"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3199,
+    3203,
+    3209
+   ],
+   "razon": "El software de Tripod-Delta analiza la checklist y genera el Failure State Profile, un gráfico de barras de los 11 GFTs."
+  },
+  {
+   "id": "P3B72BA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3965,
+    3967,
+    3971,
+    3973
+   ],
+   "razon": "El libro señala el uso cotidiano de 'acceptable risk' y 'anomaly', pero dice que volar con riesgos aceptables es parte normal de la cultura aeronáutica. Leerlo como minimización es un matiz."
+  }
+ ]
+}

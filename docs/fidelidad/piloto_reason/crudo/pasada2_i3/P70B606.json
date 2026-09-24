@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P70B606",
+  "intento": 0,
+  "usd": 0.170148,
+  "turnos": 1,
+  "duracion_s": 13.2,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36472,
+  "tokens_out": 1213,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P70B606\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [65, 67], \"cita\": \"Thus, low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.\", \"datos_sin_respaldo\": [\"al menos el 8% del presupuesto operativo\"], \"tambien_anadido\": false, \"razon\": \"El libro pide que la protección se ajuste al peligro y que las operaciones de alto peligro estén por encima de la paridad. El paso va en esa dirección y fija solo un mínimo, así que no es contrario. Pero el libro no da ninguna cifra ni base presupuestaria: el 8% es inventado.\", \"paso_fiel\": \"Dotar a las operaciones de mayor peligrosidad de un nivel de protección acorde con sus peligros, situándolas por encima de la zona de paridad entre producción y protección.\"}\n```",
+ "parseado": {
+  "id": "P70B606",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   65,
+   67
+  ],
+  "cita": "Thus, low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.",
+  "datos_sin_respaldo": [
+   "al menos el 8% del presupuesto operativo"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro pide que la protección se ajuste al peligro y que las operaciones de alto peligro estén por encima de la paridad. El paso va en esa dirección y fija solo un mínimo, así que no es contrario. Pero el libro no da ninguna cifra ni base presupuestaria: el 8% es inventado.",
+  "paso_fiel": "Dotar a las operaciones de mayor peligrosidad de un nivel de protección acorde con sus peligros, situándolas por encima de la zona de paridad entre producción y protección."
+ }
+}

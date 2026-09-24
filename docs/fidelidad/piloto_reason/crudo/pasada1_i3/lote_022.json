@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_022",
+  "intento": 0,
+  "usd": 0.167808,
+  "turnos": 1,
+  "duracion_s": 19.0,
+  "pared_s": 20.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33417,
+  "tokens_out": 1707,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P42EA99\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2837, 3393, 3623, 3625, 3629, 3633, 3637, 3641, 3645, 3649, 3653, 3657, 3659], \"razon\": \"El libro presenta las VPCs con factores de ponderación genéricos y pide detectar y evaluar factores productores de violación. El paso aplica esa idea a la propia operación, sin cifras nuevas.\"},\n  {\"id\": \"P934AB5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3829, 2716, 4724, 5499, 5077], \"razon\": \"L3829 apoya el cambio de normas y cultura, pero el paso omite la otra vía: mejorar los procedimientos. Además, L4724 dice que cambiar valores es casi imposible y L5499 prioriza soluciones técnicas.\"},\n  {\"id\": \"PB81BA1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5041, 5043, 5057, 1618, 1569], \"razon\": \"El árbol de decisión pregunta por la violación deliberada, y el libro distingue las violaciones inducidas por el sistema y las de reglas inadecuadas. El paso conserva la condición de procedimientos adecuados.\"},\n  {\"id\": \"PCF5CC2\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [263, 271, 5742, 5748], \"razon\": \"El libro afirma que los factores económicos y societales quedan fuera del alcance de los gestores, son 'given and immutable', y que interesa lo cambiable y controlable.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P42EA99",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2837,
+    3393,
+    3623,
+    3625,
+    3629,
+    3633,
+    3637,
+    3641,
+    3645,
+    3649,
+    3653,
+    3657,
+    3659
+   ],
+   "razon": "El libro presenta las VPCs con factores de ponderación genéricos y pide detectar y evaluar factores productores de violación. El paso aplica esa idea a la propia operación, sin cifras nuevas."
+  },
+  {
+   "id": "P934AB5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3829,
+    2716,
+    4724,
+    5499,
+    5077
+   ],
+   "razon": "L3829 apoya el cambio de normas y cultura, pero el paso omite la otra vía: mejorar los procedimientos. Además, L4724 dice que cambiar valores es casi imposible y L5499 prioriza soluciones técnicas."
+  },
+  {
+   "id": "PB81BA1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5041,
+    5043,
+    5057,
+    1618,
+    1569
+   ],
+   "razon": "El árbol de decisión pregunta por la violación deliberada, y el libro distingue las violaciones inducidas por el sistema y las de reglas inadecuadas. El paso conserva la condición de procedimientos adecuados."
+  },
+  {
+   "id": "PCF5CC2",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    263,
+    271,
+    5742,
+    5748
+   ],
+   "razon": "El libro afirma que los factores económicos y societales quedan fuera del alcance de los gestores, son 'given and immutable', y que interesa lo cambiable y controlable."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P555401",
+  "intento": 0,
+  "usd": 0.132956,
+  "turnos": 1,
+  "duracion_s": 16.4,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 25369,
+  "tokens_out": 1574,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P555401\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [3097, 3209], \"cita\": \"Hardware. This relates to the quality and availability of tools and equipment. Its principal components would include policies and responsibilities for purchase, quality of stock system, quality of supply, theft and loss of equipment, short-term renting, compliance to specifications, age of equipment, non-standard use of equipment\", \"datos_sin_respaldo\": [\"umbral de más de 10 años de antigüedad\", \"reemplazo sistemático de herramientas y equipos por su edad\"], \"razon\": \"El libro cuenta la edad del equipo como un componente del GFT Hardware, así que la dirección del paso es coherente. Pero no da ningún umbral de 10 años ni manda reemplazar por edad. Además, L3209 pide gestionar el perfil y actuar sobre los 2-3 peores GFTs. Es un matiz, no una contradicción: el libro no desaconseja renovar equipos viejos.\", \"paso_fiel\": \"Si Hardware aparece entre los 2-3 GFTs más críticos del Failure State Profile, revisar la calidad y disponibilidad de herramientas y equipos (incluidas su antigüedad, las políticas de compra y el cumplimiento de especificaciones) y planificar acciones remediales sobre esos procesos.\"}\n```",
+ "parseado": {
+  "id": "P555401",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   3097,
+   3209
+  ],
+  "cita": "Hardware. This relates to the quality and availability of tools and equipment. Its principal components would include policies and responsibilities for purchase, quality of stock system, quality of supply, theft and loss of equipment, short-term renting, compliance to specifications, age of equipment, non-standard use of equipment",
+  "datos_sin_respaldo": [
+   "umbral de más de 10 años de antigüedad",
+   "reemplazo sistemático de herramientas y equipos por su edad"
+  ],
+  "razon": "El libro cuenta la edad del equipo como un componente del GFT Hardware, así que la dirección del paso es coherente. Pero no da ningún umbral de 10 años ni manda reemplazar por edad. Además, L3209 pide gestionar el perfil y actuar sobre los 2-3 peores GFTs. Es un matiz, no una contradicción: el libro no desaconseja renovar equipos viejos.",
+  "paso_fiel": "Si Hardware aparece entre los 2-3 GFTs más críticos del Failure State Profile, revisar la calidad y disponibilidad de herramientas y equipos (incluidas su antigüedad, las políticas de compra y el cumplimiento de especificaciones) y planificar acciones remediales sobre esos procesos."
+ }
+}

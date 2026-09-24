@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P82A6FB",
+  "intento": 0,
+  "usd": 0.248216,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57599,
+  "tokens_out": 891,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P82A6FB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4296, 4500, 4388], \"cita\": \"Irrespective of the concept invoked to define what safety is at a particular point in time, as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta la seguridad suficiente como un objetivo móvil que se endurece hacia el riesgo cero conforme progresa la sociedad. También describe un ciclo de aprendizaje que actualiza los estándares y Safety Cases que se revisan a intervalos regulares. 'Periódicamente' no fija ninguna frecuencia concreta. El paso no propone rebajar el estándar, así que concreta al libro en su misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P82A6FB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4296,
+   4500,
+   4388
+  ],
+  "cita": "Irrespective of the concept invoked to define what safety is at a particular point in time, as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta la seguridad suficiente como un objetivo móvil que se endurece hacia el riesgo cero conforme progresa la sociedad. También describe un ciclo de aprendizaje que actualiza los estándares y Safety Cases que se revisan a intervalos regulares. 'Periódicamente' no fija ninguna frecuencia concreta. El paso no propone rebajar el estándar, así que concreta al libro en su misma dirección.",
+  "paso_fiel": ""
+ }
+}

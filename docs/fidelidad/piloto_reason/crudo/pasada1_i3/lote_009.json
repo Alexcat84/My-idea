@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_009",
+  "intento": 0,
+  "usd": 0.169388,
+  "turnos": 1,
+  "duracion_s": 16.5,
+  "pared_s": 17.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33957,
+  "tokens_out": 1678,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0AA3DB\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"LTIF\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5497, 5501, 5517, 5641, 5905, 5907], \"razon\": \"El libro distingue tres modelos, cada uno con sus métricas, y asocia LTIF y lesiones personales al modelo de persona. Diagnosticar cuál predomina concreta eso sin invertirlo.\"},\n  {\"id\": \"PD78711\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 668, 686, 1085, 1095], \"razon\": \"El libro dice que las señales juntas debían alertar, pero advierte del sesgo retrospectivo y de las falsas alarmas. Los disparos automáticos no están respaldados; revisar el matiz.\"},\n  {\"id\": \"PE21999\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"primera línea\"], \"clase\": \"FIEL\", \"lineas\": [4769, 5208], \"razon\": \"El libro dice que el respeto debe ganarse con una gran inversión en formación. Matiz: pone el énfasis en los supervisores de primera línea y habla de respeto, no de confianza.\"},\n  {\"id\": \"P2DAD5F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4765, 4987, 4989, 5063], \"razon\": \"El libro pone como prerrequisito un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0AA3DB",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "LTIF"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5497,
+    5501,
+    5517,
+    5641,
+    5905,
+    5907
+   ],
+   "razon": "El libro distingue tres modelos, cada uno con sus métricas, y asocia LTIF y lesiones personales al modelo de persona. Diagnosticar cuál predomina concreta eso sin invertirlo."
+  },
+  {
+   "id": "PD78711",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    668,
+    686,
+    1085,
+    1095
+   ],
+   "razon": "El libro dice que las señales juntas debían alertar, pero advierte del sesgo retrospectivo y de las falsas alarmas. Los disparos automáticos no están respaldados; revisar el matiz."
+  },
+  {
+   "id": "PE21999",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "primera línea"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4769,
+    5208
+   ],
+   "razon": "El libro dice que el respeto debe ganarse con una gran inversión en formación. Matiz: pone el énfasis en los supervisores de primera línea y habla de respeto, no de confianza."
+  },
+  {
+   "id": "P2DAD5F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4765,
+    4987,
+    4989,
+    5063
+   ],
+   "razon": "El libro pone como prerrequisito un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables."
+  }
+ ]
+}

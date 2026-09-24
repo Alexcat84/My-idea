@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD3488C",
+  "intento": 0,
+  "usd": 0.249316,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57214,
+  "tokens_out": 1023,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PD3488C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4928, 4478, 3209], \"cita\": \"Action monitored--preventive measures have been implemented and their effects are being monitored. […] A succession of these profiles will allow both the regulator and the regulated to track the progress of remedial efforts.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda vigilar los efectos de las medidas ya implantadas (categoría 'Action monitored' de BA) y seguir el progreso de las reformas con perfiles sucesivos. También habla de mejora continua (L3209). 'Seguimiento continuo' no contradice los chequeos regulares y no introduce una frecuencia concreta. El paso concreta en la misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PD3488C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4928,
+   4478,
+   3209
+  ],
+  "cita": "Action monitored--preventive measures have been implemented and their effects are being monitored. […] A succession of these profiles will allow both the regulator and the regulated to track the progress of remedial efforts.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda vigilar los efectos de las medidas ya implantadas (categoría 'Action monitored' de BA) y seguir el progreso de las reformas con perfiles sucesivos. También habla de mejora continua (L3209). 'Seguimiento continuo' no contradice los chequeos regulares y no introduce una frecuencia concreta. El paso concreta en la misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

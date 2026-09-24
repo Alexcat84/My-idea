@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0DC9D9",
+  "intento": 0,
+  "usd": 0.147452,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 15.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30768,
+  "tokens_out": 1219,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0DC9D9\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [65, 67, 77], \"cita\": \"low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso solo pide ubicar a la organizacion respecto a la zona de paridad, algo que el libro plantea (L65). No afirma que estar debajo sea siempre malo ni ordena actuar en contra del libro. Matiz: debajo de paridad solo es problema en actividades de alto peligro; el riesgo catastrofico es el extremo inferior derecho (L77).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0DC9D9",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   65,
+   67,
+   77
+  ],
+  "cita": "low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso solo pide ubicar a la organizacion respecto a la zona de paridad, algo que el libro plantea (L65). No afirma que estar debajo sea siempre malo ni ordena actuar en contra del libro. Matiz: debajo de paridad solo es problema en actividades de alto peligro; el riesgo catastrofico es el extremo inferior derecho (L77).",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_088",
+  "intento": 0,
+  "usd": 0.15794,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34030,
+  "tokens_out": 1091,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PC1A888\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5206, 5208, 5204], \"razon\": \"El libro dice que la formación inicial debe consolidarse y ampliarse con guía de supervisión en el terreno. Coincide con el paso.\"},\n {\"id\": \"P2FEFBC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2556, 2566, 2568, 105], \"razon\": \"El libro pide entender las fuerzas que actúan sobre la organización. Describe la deriva hacia la vulnerabilidad por complacencia y por desviar atención a producción.\"},\n {\"id\": \"P82786D\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4402, 4388], \"razon\": \"La FSA incluye como segundo paso evaluar los riesgos asociados a los peligros identificados. El paso coincide literalmente.\"},\n {\"id\": \"P835B74\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Condiciones Productoras de Error (EPCs)\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397], \"razon\": \"HEART pide consultar la lista de EPC y decidir cuáles afectan la actividad. Es el paso clave. Se marca el término técnico del método.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PC1A888",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5206,
+    5208,
+    5204
+   ],
+   "razon": "El libro dice que la formación inicial debe consolidarse y ampliarse con guía de supervisión en el terreno. Coincide con el paso."
+  },
+  {
+   "id": "P2FEFBC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2556,
+    2566,
+    2568,
+    105
+   ],
+   "razon": "El libro pide entender las fuerzas que actúan sobre la organización. Describe la deriva hacia la vulnerabilidad por complacencia y por desviar atención a producción."
+  },
+  {
+   "id": "P82786D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4402,
+    4388
+   ],
+   "razon": "La FSA incluye como segundo paso evaluar los riesgos asociados a los peligros identificados. El paso coincide literalmente."
+  },
+  {
+   "id": "P835B74",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Condiciones Productoras de Error (EPCs)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "HEART pide consultar la lista de EPC y decidir cuáles afectan la actividad. Es el paso clave. Se marca el término técnico del método."
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P27CC26",
+  "intento": 0,
+  "usd": 0.160172,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36668,
+  "tokens_out": 675,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P27CC26\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1991, 2250], \"cita\": \"It would be reasonable to expect that an activity scoring 'high' on all three of these questions is the one most likely to be associated with human performance problems.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"Las tres condiciones (contacto directo, criticidad, frecuencia) son las tres preguntas del libro, que marca como más propensa a fallos la actividad alta en las tres. El libro las aplica a clases de actividad; llevarlas a tareas concretas lo concreta en la misma dirección y no contradice la prioridad de reinstalación y omisiones. Así se acerca a L2250.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P27CC26",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977,
+   1991,
+   2250
+  ],
+  "cita": "It would be reasonable to expect that an activity scoring 'high' on all three of these questions is the one most likely to be associated with human performance problems.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "Las tres condiciones (contacto directo, criticidad, frecuencia) son las tres preguntas del libro, que marca como más propensa a fallos la actividad alta en las tres. El libro las aplica a clases de actividad; llevarlas a tareas concretas lo concreta en la misma dirección y no contradice la prioridad de reinstalación y omisiones. Así se acerca a L2250.",
+  "paso_fiel": ""
+ }
+}

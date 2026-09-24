@@ -7,7 +7,12 @@ metodo de busqueda elegido. Marca todo lo que PODRIA ser contrario.
 PASADA 2 (Opus 5.5, a fondo, --effort high): un item por llamada, solo los
 marcados, con el nodo completo, los capitulos enteros donde caen sus mejores
 fragmentos y el resto de fragmentos recuperados. Decide FIEL, INFERIDO o
-CONTRARIO con cita de linea.
+CONTRARIO con cita de linea (intento 1).
+
+Desde el intento 2 (anadido del fundador, 25 sep 2026): la pasada 1 pone dos
+marcas (podria contradecir; trae dato concreto) y la pasada 2 decide entre
+cuatro veredictos: CONTRARIO, INFERIDO-ANADIDO, INFERIDO-OPERATIVO, FIEL.
+El intento lo fija la variable FIDEL_INTENTO y el argumento, que deben casar.
 
 Ningun prompt sabe que hay sinteticos. uso:
   python pasadas.py p1 <intento>   |   python pasadas.py p2 <intento>
@@ -53,6 +58,59 @@ Responde SOLO con un array JSON, un objeto por item y en el mismo orden:
 [{"id": "...", "clase": "FIEL|INFERIDO|POSIBLE_CONTRARIO|SIN_COBERTURA", "marca": true|false,
   "lineas": [numeros de las lineas del libro en que te apoyas], "razon": "maximo 30 palabras"}]"""
 
+# ── INTENTO 2 EN ADELANTE: anadido del fundador (25 sep 2026) ────────────────
+# Cuatro veredictos; la pasada 1 lleva dos marcas; todo paso con cualquiera va a la 2.
+DEFINICIONES_2 = """Veredictos (definiciones del fundador):
+- CONTRARIO: el paso aconseja lo que el libro desaconseja o contradice. Incluye: invertir una recomendacion del
+  libro; mandar como via principal por un camino que el libro presenta como dificil, poco prometedor, ineficaz o
+  contraproducente; invertir una prioridad, un orden o una causalidad que el libro afirma; convertir en regla
+  general algo que el libro limita o condiciona; quitar una condicion esencial, de modo que seguir el paso lleve a
+  hacer lo que el libro desaconseja.
+- INFERIDO-ANADIDO: afirma algo concreto que el libro no respalda (una cifra, un plazo, una herramienta, un
+  responsable, una norma, una frecuencia).
+- INFERIDO-OPERATIVO: concreta lo que el libro dice, en su misma direccion, sin datos nuevos.
+- FIEL: el libro dice lo que el paso aconseja.
+Si un paso cumple varias, manda la primera de esta lista (CONTRARIO antes que INFERIDO-ANADIDO, y este antes que
+INFERIDO-OPERATIVO)."""
+
+INSTR1_2 = """Para cada item, lee el paso como lo leeria un cliente que lo va a ejecutar, y contrastalo con los
+fragmentos del libro (cada linea empieza con su numero Lnnn). Pon DOS marcas independientes:
+- podria_contradecir = true si hay cualquier indicio de choque con algun fragmento, aunque sea parcial o de matiz,
+  o si los fragmentos no tratan el asunto del paso y no puedes descartar que el libro diga otra cosa. Ante la duda, true.
+- dato_concreto = true si el paso trae CUALQUIER dato concreto: un numero, porcentaje o cifra; un plazo o una
+  frecuencia; el nombre de una herramienta, programa, metodo con nombre propio, norma, estandar o ley; o un rol,
+  cargo o responsable concreto de hacerlo. Da igual si el libro lo trae o no: la pasada siguiente lo comprueba.
+Ademas, una clase provisional: FIEL, INFERIDO-OPERATIVO, INFERIDO-ANADIDO, POSIBLE_CONTRARIO o SIN_COBERTURA.
+
+Responde SOLO con un array JSON, un objeto por item y en el mismo orden:
+[{"id": "...", "podria_contradecir": true|false, "dato_concreto": true|false, "datos": ["los datos concretos, literales"],
+  "clase": "...", "lineas": [numeros de las lineas del libro en que te apoyas], "razon": "maximo 30 palabras"}]"""
+
+INSTR2_2 = """Decide el veredicto del PASO A JUZGAR (no de los otros pasos del nodo, que solo son contexto):
+CONTRARIO, INFERIDO-ANADIDO, INFERIDO-OPERATIVO o FIEL. Busca en todo el contexto del libro lo que dice sobre ese
+asunto, incluido lo que matiza, limita o desaconseja. Comprueba cada dato concreto del paso (cifra, plazo,
+frecuencia, herramienta, norma, responsable o rol): si el libro no lo respalda, el paso es INFERIDO-ANADIDO (salvo
+que ademas sea CONTRARIO). Cita la linea o lineas que deciden el veredicto y copia literalmente el trozo decisivo
+(maximo 50 palabras, en el idioma del libro). Si es CONTRARIO o INFERIDO-ANADIDO, escribe en espanol como deberia
+decir el paso para ser fiel al libro (mismo estilo: una frase accionable).
+
+Responde SOLO con un objeto JSON:
+{"id": "...", "veredicto": "CONTRARIO|INFERIDO-ANADIDO|INFERIDO-OPERATIVO|FIEL", "lineas": [n, ...],
+ "cita": "texto literal del libro", "datos_sin_respaldo": ["solo si INFERIDO-ANADIDO"], "razon": "maximo 60 palabras",
+ "paso_fiel": "solo si CONTRARIO o INFERIDO-ANADIDO; si no, cadena vacia"}"""
+
+# Ajuste del intento 3 (tras el intento 2: el anadido sintetico A08 salio CONTRARIO,
+# con el dato inventado visto en la razon pero no en datos_sin_respaldo, porque la
+# instruccion lo pedia "solo si INFERIDO-ANADIDO"). Ahora los datos sin respaldo se
+# listan SIEMPRE, y un CONTRARIO que ademas inventa un dato lleva tambien_anadido.
+INSTR2_3 = INSTR2_2.replace(
+    '"datos_sin_respaldo": ["solo si INFERIDO-ANADIDO"]',
+    '"datos_sin_respaldo": ["todo dato concreto del paso que el libro no respalda, sea cual sea el veredicto"], "tambien_anadido": true|false').replace(
+    "si el libro no lo respalda, el paso es INFERIDO-ANADIDO (salvo\nque ademas sea CONTRARIO).",
+    "si el libro no lo respalda, el paso es INFERIDO-ANADIDO (salvo\nque ademas sea CONTRARIO). Lista SIEMPRE esos datos sin respaldo, aunque el veredicto sea CONTRARIO, y en ese\n"
+    "caso pon tambien_anadido = true: el paso se corregira por las dos cosas.")
+assert INSTR2_3 != INSTR2_2 and "tambien_anadido = true" in INSTR2_3
+
 INSTR2 = """Decide el veredicto del PASO A JUZGAR (no de los otros pasos del nodo, que solo son contexto):
 FIEL, INFERIDO o CONTRARIO. Busca en todo el contexto del libro lo que dice sobre ese asunto, incluido lo que
 matiza, limita o desaconseja. Cita la linea o lineas que deciden el veredicto y copia literalmente el trozo
@@ -65,7 +123,7 @@ Responde SOLO con un objeto JSON:
 
 def _datos():
     items = B._items()
-    cons = json.load(open(os.path.join(C.PIL, "consultas_traducidas.json"), encoding="utf-8"))
+    cons = json.load(open(os.path.join(C.PIL, f"consultas_traducidas_i{C.INTENTO}.json"), encoding="utf-8"))
     frags, _ = B.indice()
     fx = {f["id"]: f for f in frags}
     return items, cons, frags, fx
@@ -85,7 +143,8 @@ def p1(intento):
             txt = "\n\n".join(f"[cap. {f['cap']}, L{f['l_ini']}-L{f['l_fin']}]\n{f['texto']}" for f in fs)
             bloques.append(f"### ITEM {it['id']}\nNodo: {it['titulo']}\nResumen del nodo: {it['resumen']}\n"
                            f"PASO: {it['paso']}\nFragmentos del libro:\n{txt}")
-        prompt = DEFINICIONES + "\n\n" + INSTR1 + "\n\n" + "\n\n".join(bloques)
+        defs, instr = (DEFINICIONES, INSTR1) if intento == "1" else (DEFINICIONES_2, INSTR1_2)
+        prompt = defs + "\n\n" + instr + "\n\n" + "\n\n".join(bloques)
         esperados = [it["id"] for it in lote]
         for rep in range(3):
             datos, _ = C.llama(f"pasada1_i{intento}", f"lote_{ix:03d}" + (f"_r{rep}" if rep else ""), SIS1, prompt)
@@ -97,8 +156,12 @@ def p1(intento):
     with ThreadPoolExecutor(C.MAX_PAR) as ex:
         for datos in ex.map(uno, enumerate(lotes)):
             for d in datos:
-                if d.get("clase") in ("POSIBLE_CONTRARIO", "SIN_COBERTURA"):
-                    d["marca"] = True
+                if intento == "1":
+                    if d.get("clase") in ("POSIBLE_CONTRARIO", "SIN_COBERTURA"):
+                        d["marca"] = True
+                else:
+                    d["marca"] = bool(d.get("podria_contradecir") or d.get("dato_concreto")
+                                      or d.get("clase") in ("POSIBLE_CONTRARIO", "SIN_COBERTURA", "INFERIDO-ANADIDO"))
                 out[d["id"]] = d
     C.escribe_json(os.path.join(C.PIL, f"pasada1_i{intento}.json"), out)
     n = sum(1 for d in out.values() if d["marca"])
@@ -126,10 +189,17 @@ def p2(intento):
     def uno(it):
         ctx, caps = _contexto2(it, cons, frags, fx)
         otros = "\n".join(f"- {p}" for p in it["otros_pasos"])
-        prompt = (DEFINICIONES + "\n\n" + INSTR2 + f"\n\n=== NODO ===\nTitulo: {it['titulo']}\nResumen: {it['resumen']}\n"
+        a = r1[it["id"]]
+        if intento == "1":
+            defs, instr, sosp = DEFINICIONES, INSTR2, f"{a.get('clase')}: {a.get('razon','')}"
+        else:
+            defs, instr = DEFINICIONES_2, (INSTR2_2 if intento == "2" else INSTR2_3)
+            sosp = (f"clase {a.get('clase')}; podria_contradecir={a.get('podria_contradecir')}; "
+                    f"dato_concreto={a.get('dato_concreto')} {a.get('datos') or ''}; {a.get('razon','')}")
+        prompt = (defs + "\n\n" + instr + f"\n\n=== NODO ===\nTitulo: {it['titulo']}\nResumen: {it['resumen']}\n"
                   f"Entregable: {it['entregable']}\nOtros pasos del nodo (contexto):\n{otros}\n\n"
                   f"=== PASO A JUZGAR (id {it['id']}) ===\n{it['paso']}\n\n"
-                  f"Sospecha del filtro previo (puede estar equivocada): {r1[it['id']].get('clase')}: {r1[it['id']].get('razon','')}\n\n"
+                  f"Sospecha del filtro previo (puede estar equivocada): {sosp}\n\n"
                   f"=== CONTEXTO DEL LIBRO (cada linea empieza con Lnnn) ===\n{ctx}")
         datos, _ = C.llama(f"pasada2_i{intento}", it["id"], SIS2, prompt, effort="high")
         if isinstance(datos, list): datos = datos[0]
@@ -143,4 +213,5 @@ def p2(intento):
     print("pasada 2:", len(out), "juzgados", collections.Counter(d["veredicto"] for d in out.values()))
 
 if __name__ == "__main__":
+    assert sys.argv[2] == C.INTENTO, "FIDEL_INTENTO y el argumento no casan"
     {"p1": p1, "p2": p2}[sys.argv[1]](sys.argv[2])

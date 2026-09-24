@@ -1,0 +1,91 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_032",
+  "intento": 0,
+  "usd": 0.163248,
+  "turnos": 1,
+  "duracion_s": 17.2,
+  "pared_s": 18.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32802,
+  "tokens_out": 1602,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P27CC26\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"las tres condiciones\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1987, 1991, 1834, 1838, 2250], \"razon\": \"El libro aplica los tres criterios a clases de actividad, no a tareas sueltas. Filtrar tareas así podría desatender la reinstalación y las omisiones, que el libro prioriza.\"},\n  {\"id\": \"P2D16F2\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Failure State Profile\", \"software\"], \"clase\": \"FIEL\", \"lineas\": [3199, 3203, 3209], \"razon\": \"El software de Tripod-Delta genera el Failure State Profile, un gráfico de barras de los 11 GFTs, a partir del checklist completado.\"},\n  {\"id\": \"P436702\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1056, 1058, 1060, 1133, 1137, 586], \"razon\": \"Concreta en su misma dirección lo que dice el libro: las defensas ocultan errores, sus ganancias se convierten en producción y se 'olvida tener miedo'.\"},\n  {\"id\": \"PB3AE8F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2638, 2658, 2767, 5775, 5781, 580, 196], \"razon\": \"El libro recomienda chequeos proactivos regulares de procesos organizacionales y condiciones latentes. El error humano es consecuencia, no causa principal.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P27CC26",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "las tres condiciones"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1987,
+    1991,
+    1834,
+    1838,
+    2250
+   ],
+   "razon": "El libro aplica los tres criterios a clases de actividad, no a tareas sueltas. Filtrar tareas así podría desatender la reinstalación y las omisiones, que el libro prioriza."
+  },
+  {
+   "id": "P2D16F2",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Failure State Profile",
+    "software"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3199,
+    3203,
+    3209
+   ],
+   "razon": "El software de Tripod-Delta genera el Failure State Profile, un gráfico de barras de los 11 GFTs, a partir del checklist completado."
+  },
+  {
+   "id": "P436702",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1056,
+    1058,
+    1060,
+    1133,
+    1137,
+    586
+   ],
+   "razon": "Concreta en su misma dirección lo que dice el libro: las defensas ocultan errores, sus ganancias se convierten en producción y se 'olvida tener miedo'."
+  },
+  {
+   "id": "PB3AE8F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2638,
+    2658,
+    2767,
+    5775,
+    5781,
+    580,
+    196
+   ],
+   "razon": "El libro recomienda chequeos proactivos regulares de procesos organizacionales y condiciones latentes. El error humano es consecuencia, no causa principal."
+  }
+ ]
+}

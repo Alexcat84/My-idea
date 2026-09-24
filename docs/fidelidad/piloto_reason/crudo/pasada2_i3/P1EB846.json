@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1EB846",
+  "intento": 0,
+  "usd": 0.114192,
+  "turnos": 1,
+  "duracion_s": 7.3,
+  "pared_s": 8.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26838,
+  "tokens_out": 342,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P1EB846\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3230, 3332], \"cita\": \"One answer is to pool data from a large number of people to create an average picture at any one time. In this way, biased views of either kind cancel one another out. Such a method also helps to preserve the anonymity of the respondents\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro resuelve el sesgo individual agrupando datos de muchas personas para que los sesgos se cancelen y preservando el anonimato (en MESH cada evaluador entra de forma anonima). El paso invierte esa solucion: identifica a cada encuestado para corregirlo, lo que rompe el anonimato y va contra la cultura de minima culpa.\", \"paso_fiel\": \"Agrupar de forma anonima las calificaciones de muchos encuestados para obtener un perfil promedio en el que los sesgos individuales se cancelen, sin identificar ni corregir a nadie.\"}",
+ "parseado": {
+  "id": "P1EB846",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3230,
+   3332
+  ],
+  "cita": "One answer is to pool data from a large number of people to create an average picture at any one time. In this way, biased views of either kind cancel one another out. Such a method also helps to preserve the anonymity of the respondents",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro resuelve el sesgo individual agrupando datos de muchas personas para que los sesgos se cancelen y preservando el anonimato (en MESH cada evaluador entra de forma anonima). El paso invierte esa solucion: identifica a cada encuestado para corregirlo, lo que rompe el anonimato y va contra la cultura de minima culpa.",
+  "paso_fiel": "Agrupar de forma anonima las calificaciones de muchos encuestados para obtener un perfil promedio en el que los sesgos individuales se cancelen, sin identificar ni corregir a nadie."
+ }
+}

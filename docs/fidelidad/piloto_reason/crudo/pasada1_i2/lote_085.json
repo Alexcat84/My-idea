@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_085",
+  "intento": 0,
+  "usd": 0.174116,
+  "turnos": 1,
+  "duracion_s": 21.6,
+  "pared_s": 22.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32669,
+  "tokens_out": 2172,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P6A033B\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [2720, 2724, 2654, 2750, 2596, 3097, 3330],\n    \"razon\": \"La prioridad organizacional es fiel. Pero 'liderazgo' figura como factor local, 'gestión del cambio' no aparece y el libro pide elegir procesos por análisis de eventos y muestrear las seis dimensiones.\"\n  },\n  {\n    \"id\": \"P5B81E3\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2716, 4765, 5041, 5043, 5055, 5057, 2922],\n    \"razon\": \"El libro distingue errores y violaciones al juzgar la culpabilidad. Matiz: muchas violaciones son 'necesarias' e inducidas por el sistema; tratar 'deliberada' como culpable sin más chocaría con L5055.\"\n  },\n  {\n    \"id\": \"P793C15\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2320, 2322, 2340],\n    \"razon\": \"El libro define la carga esperada (componentes débiles identificados en diseño) y la no esperada. Clasificar concreta esa distinción, aunque el libro no lo prescribe explícitamente.\"\n  },\n  {\n    \"id\": \"PC70249\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4360, 4372],\n    \"razon\": \"COSHH incluye probar equipos respiratorios y ventilación y llevar registros cuidadosos. 'Periódicamente' encaja con el procedimiento continuo, sin frecuencia concreta.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P6A033B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2720,
+    2724,
+    2654,
+    2750,
+    2596,
+    3097,
+    3330
+   ],
+   "razon": "La prioridad organizacional es fiel. Pero 'liderazgo' figura como factor local, 'gestión del cambio' no aparece y el libro pide elegir procesos por análisis de eventos y muestrear las seis dimensiones."
+  },
+  {
+   "id": "P5B81E3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2716,
+    4765,
+    5041,
+    5043,
+    5055,
+    5057,
+    2922
+   ],
+   "razon": "El libro distingue errores y violaciones al juzgar la culpabilidad. Matiz: muchas violaciones son 'necesarias' e inducidas por el sistema; tratar 'deliberada' como culpable sin más chocaría con L5055."
+  },
+  {
+   "id": "P793C15",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2320,
+    2322,
+    2340
+   ],
+   "razon": "El libro define la carga esperada (componentes débiles identificados en diseño) y la no esperada. Clasificar concreta esa distinción, aunque el libro no lo prescribe explícitamente."
+  },
+  {
+   "id": "PC70249",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4372
+   ],
+   "razon": "COSHH incluye probar equipos respiratorios y ventilación y llevar registros cuidadosos. 'Periódicamente' encaja con el procedimiento continuo, sin frecuencia concreta."
+  }
+ ]
+}

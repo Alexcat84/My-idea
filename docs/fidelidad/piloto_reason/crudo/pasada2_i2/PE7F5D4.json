@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE7F5D4",
+  "intento": 0,
+  "usd": 0.20052,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43835,
+  "tokens_out": 1259,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE7F5D4\", \"veredicto\": \"FIEL\", \"lineas\": [5037, 5057], \"cita\": \"If the answer is 'probably not' then, as Johnston put it, '… apportioning blame has no material role to play, other than to obscure systemic deficiencies and to blame one of the victims'.\", \"datos_sin_respaldo\": [], \"razon\": \"En el nodo, la pregunta previa es si habrían actuado de manera diferente. Una respuesta negativa equivale al 'probably not' de L5037: culpar es inapropiado y taparía deficiencias sistémicas. L5057 dice lo mismo con la pregunta invertida: si el par habría cometido el mismo error, es 'system-induced'. No hay inversión ni dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE7F5D4",
+  "veredicto": "FIEL",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "cita": "If the answer is 'probably not' then, as Johnston put it, '… apportioning blame has no material role to play, other than to obscure systemic deficiencies and to blame one of the victims'.",
+  "datos_sin_respaldo": [],
+  "razon": "En el nodo, la pregunta previa es si habrían actuado de manera diferente. Una respuesta negativa equivale al 'probably not' de L5037: culpar es inapropiado y taparía deficiencias sistémicas. L5057 dice lo mismo con la pregunta invertida: si el par habría cometido el mismo error, es 'system-induced'. No hay inversión ni dato nuevo.",
+  "paso_fiel": ""
+ }
+}

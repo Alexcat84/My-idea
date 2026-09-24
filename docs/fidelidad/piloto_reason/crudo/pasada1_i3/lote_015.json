@@ -1,0 +1,78 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_015",
+  "intento": 0,
+  "usd": 0.167616,
+  "turnos": 1,
+  "duracion_s": 19.7,
+  "pared_s": 20.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33034,
+  "tokens_out": 1774,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P1FA678\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4802, 4818, 4888, 4906], \"razon\": \"El libro lista la confidencialidad o des-identificación como factor clave de confianza y recomienda des-identificar después de recibir el reporte, no el anonimato total.\"},\n  {\"id\": \"PCE624D\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3382, 3230, 3332], \"razon\": \"En MESH cada evaluador ve su propio diagrama de barras y luego el promedio del área. El libro lo da como ejemplo de MESH; el paso lo extiende también a Review.\"},\n  {\"id\": \"PBE26DC\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"junta directiva\", \"reuniones regulares de alto nivel\"], \"clase\": \"FIEL\", \"lineas\": [5242, 5246, 5270], \"razon\": \"Reproduce dos preguntas literales del libro. El libro dice 'todas' las reuniones regulares del consejo, o su equivalente de alto nivel.\"},\n  {\"id\": \"P31A85E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"en cada reporte\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2687, 4814, 4948], \"razon\": \"El libro solo constata que la dirección presta atención al costo estimado de cada evento. Si el reportante tiene que hacer la estimación, choca con la facilidad de reporte.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P1FA678",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4802,
+    4818,
+    4888,
+    4906
+   ],
+   "razon": "El libro lista la confidencialidad o des-identificación como factor clave de confianza y recomienda des-identificar después de recibir el reporte, no el anonimato total."
+  },
+  {
+   "id": "PCE624D",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3382,
+    3230,
+    3332
+   ],
+   "razon": "En MESH cada evaluador ve su propio diagrama de barras y luego el promedio del área. El libro lo da como ejemplo de MESH; el paso lo extiende también a Review."
+  },
+  {
+   "id": "PBE26DC",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "junta directiva",
+    "reuniones regulares de alto nivel"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5242,
+    5246,
+    5270
+   ],
+   "razon": "Reproduce dos preguntas literales del libro. El libro dice 'todas' las reuniones regulares del consejo, o su equivalente de alto nivel."
+  },
+  {
+   "id": "P31A85E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "en cada reporte"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2687,
+    4814,
+    4948
+   ],
+   "razon": "El libro solo constata que la dirección presta atención al costo estimado de cada evento. Si el reportante tiene que hacer la estimación, choca con la facilidad de reporte."
+  }
+ ]
+}

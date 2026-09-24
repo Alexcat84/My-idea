@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5B81E3",
+  "intento": 0,
+  "usd": 0.206632,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46038,
+  "tokens_out": 1124,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5B81E3\", \"veredicto\": \"FIEL\", \"lineas\": [2716, 5039, 5043, 1275], \"cita\": \"Different unsafe acts require different kinds of management (see Chapter 7). Errors are essentially information-processing problems and require the provision of better information [...]. Violations, on the other hand, have their origins in motivational, attitudinal, group and cultural factors\", \"datos_sin_respaldo\": [], \"razon\": \"El libro separa errores de violaciones y pide gestionarlos de forma distinta (L2716, L1275). Para juzgar la culpabilidad, antes de responder, usa la intención como discriminador clave (L5039, L5043). El paso no equipara 'deliberada' con culpable, así que no choca con L5055, que gradúa las violaciones según la calidad de los procedimientos. No añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5B81E3",
+  "veredicto": "FIEL",
+  "lineas": [
+   2716,
+   5039,
+   5043,
+   1275
+  ],
+  "cita": "Different unsafe acts require different kinds of management (see Chapter 7). Errors are essentially information-processing problems and require the provision of better information [...]. Violations, on the other hand, have their origins in motivational, attitudinal, group and cultural factors",
+  "datos_sin_respaldo": [],
+  "razon": "El libro separa errores de violaciones y pide gestionarlos de forma distinta (L2716, L1275). Para juzgar la culpabilidad, antes de responder, usa la intención como discriminador clave (L5039, L5043). El paso no equipara 'deliberada' con culpable, así que no choca con L5055, que gradúa las violaciones según la calidad de los procedimientos. No añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

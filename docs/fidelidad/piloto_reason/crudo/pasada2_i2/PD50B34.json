@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD50B34",
+  "intento": 0,
+  "usd": 0.22172,
+  "turnos": 1,
+  "duracion_s": 6.1,
+  "pared_s": 7.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53440,
+  "tokens_out": 398,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PD50B34\", \"veredicto\": \"FIEL\", \"lineas\": [4478, 4494], \"cita\": \"The purpose of the profile is to identify those two or three factors most in need of reform by the organization (and subsequent close monitoring by the regulator).\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija la cifra de dos o tres factores (L4494). También dice que el perfil señala los factores 'most in need of urgent reform' y que ninguna organización puede con todos sus problemas a la vez (L4478). Priorizar 2-3 factores para reforma inmediata coincide con la fuente. El seguimiento del regulador corresponde a otros pasos del nodo.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PD50B34",
+  "veredicto": "FIEL",
+  "lineas": [
+   4478,
+   4494
+  ],
+  "cita": "The purpose of the profile is to identify those two or three factors most in need of reform by the organization (and subsequent close monitoring by the regulator).",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija la cifra de dos o tres factores (L4494). También dice que el perfil señala los factores 'most in need of urgent reform' y que ninguna organización puede con todos sus problemas a la vez (L4478). Priorizar 2-3 factores para reforma inmediata coincide con la fuente. El seguimiento del regulador corresponde a otros pasos del nodo.",
+  "paso_fiel": ""
+ }
+}

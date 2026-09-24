@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1CC77D",
+  "intento": 0,
+  "usd": 0.166612,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37268,
+  "tokens_out": 877,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1CC77D\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5701, 5639], \"cita\": \"Regardless of the personal hazards of the workplace, all organizations are vulnerable to latent conditions ... The same basic principles and countermeasures are as applicable to a bank or an insurance company as they are to chemical process plants and oil companies.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma que las condiciones latentes afectan a todas las organizaciones, con independencia del riesgo de lesiones personales. Nacen en procesos comunes como presupuesto, planificación y gestión. Además, critica asociar la seguridad solo a las lesiones físicas. Excluir finanzas y administración invierte esa tesis.\", \"paso_fiel\": \"Extender el análisis de condiciones latentes a todas las áreas y procesos de la organización, incluidos finanzas, presupuesto y administración, sin limitarlo a las áreas con riesgo de lesiones físicas.\"}\n```",
+ "parseado": {
+  "id": "P1CC77D",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5701,
+   5639
+  ],
+  "cita": "Regardless of the personal hazards of the workplace, all organizations are vulnerable to latent conditions ... The same basic principles and countermeasures are as applicable to a bank or an insurance company as they are to chemical process plants and oil companies.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma que las condiciones latentes afectan a todas las organizaciones, con independencia del riesgo de lesiones personales. Nacen en procesos comunes como presupuesto, planificación y gestión. Además, critica asociar la seguridad solo a las lesiones físicas. Excluir finanzas y administración invierte esa tesis.",
+  "paso_fiel": "Extender el análisis de condiciones latentes a todas las áreas y procesos de la organización, incluidos finanzas, presupuesto y administración, sin limitarlo a las áreas con riesgo de lesiones físicas."
+ }
+}

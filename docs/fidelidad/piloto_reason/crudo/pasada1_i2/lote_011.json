@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_011",
+  "intento": 0,
+  "usd": 0.17293999999999998,
+  "turnos": 1,
+  "duracion_s": 19.0,
+  "pared_s": 19.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34545,
+  "tokens_out": 1738,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDA2ADB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [83, 105, 2566, 2585], \"razon\": \"El libro dice que en períodos sin accidentes la inversión en protección y el mantenimiento de defensas declinan. Auditarlo concreta esa advertencia en su misma dirección.\"},\n  {\"id\": \"PF973D7\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2583, 2994, 3199, 4033], \"razon\": \"Por la coma, el cliente puede leer 'tratar como checklist' como orden. Además, el libro define el tic como 'poner y tachar' y no condena los checklists, que usa y valora.\"},\n  {\"id\": \"P00FE6C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2823, 2845, 2849, 158], \"razon\": \"El libro define la contención de errores e incluye medidas para mejorar la detección y la tolerancia del sistema. Las barreras son defensas descritas en el cap. 1.\"},\n  {\"id\": \"PC305B4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784, 293], \"razon\": \"En Tripod-Beta el analista trabaja hacia atrás desde la pérdida para determinar la defensa fallida; el libro lo dice literalmente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDA2ADB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    83,
+    105,
+    2566,
+    2585
+   ],
+   "razon": "El libro dice que en períodos sin accidentes la inversión en protección y el mantenimiento de defensas declinan. Auditarlo concreta esa advertencia en su misma dirección."
+  },
+  {
+   "id": "PF973D7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2583,
+    2994,
+    3199,
+    4033
+   ],
+   "razon": "Por la coma, el cliente puede leer 'tratar como checklist' como orden. Además, el libro define el tic como 'poner y tachar' y no condena los checklists, que usa y valora."
+  },
+  {
+   "id": "P00FE6C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2823,
+    2845,
+    2849,
+    158
+   ],
+   "razon": "El libro define la contención de errores e incluye medidas para mejorar la detección y la tolerancia del sistema. Las barreras son defensas descritas en el cap. 1."
+  },
+  {
+   "id": "PC305B4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "En Tripod-Beta el analista trabaja hacia atrás desde la pérdida para determinar la defensa fallida; el libro lo dice literalmente."
+  }
+ ]
+}

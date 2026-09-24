@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P02F6BD",
+  "intento": 0,
+  "usd": 0.18366,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41200,
+  "tokens_out": 943,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P02F6BD\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2669, 2693, 4914, 4974], \"cita\": \"they span the gamut from benign events in which one or more of the defences prevented a potentially bad outcome as planned, to ones that missed being catastrophic by only a hair's breadth. The former provide useful proactive information about system resilience, while the latter are indistinguishable from fully-fledged accidents\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda los sistemas de reporte de casi accidentes (L2693) y separa los eventos benignos, que dan información proactiva, de los que casi fueron catastróficos, que son reactivos (L2669). BASIS clasifica los eventos por riesgo (L4914). El paso convierte esa distinción en una acción, en la misma dirección. No contradice la confianza, que cubre otro paso del nodo, ni añade datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P02F6BD",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2669,
+   2693,
+   4914,
+   4974
+  ],
+  "cita": "they span the gamut from benign events in which one or more of the defences prevented a potentially bad outcome as planned, to ones that missed being catastrophic by only a hair's breadth. The former provide useful proactive information about system resilience, while the latter are indistinguishable from fully-fledged accidents",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda los sistemas de reporte de casi accidentes (L2693) y separa los eventos benignos, que dan información proactiva, de los que casi fueron catastróficos, que son reactivos (L2669). BASIS clasifica los eventos por riesgo (L4914). El paso convierte esa distinción en una acción, en la misma dirección. No contradice la confianza, que cubre otro paso del nodo, ni añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

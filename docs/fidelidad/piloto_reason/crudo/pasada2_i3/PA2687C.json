@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PA2687C",
+  "intento": 0,
+  "usd": 0.154664,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35026,
+  "tokens_out": 728,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA2687C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977], \"cita\": \"To do this, we need to ask three questions. The 'hands on' question... The criticality question... The frequency question... It would be reasonable to expect that an activity scoring 'high' on all three of these questions is the one most likely to be associated with human performance problems.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro propone esas mismas tres preguntas (contacto directo, criticidad, frecuencia) para estimar qué actividad genera más problemas de desempeño humano. Aplicarlas tarea por tarea concreta el método en su misma dirección. El libro también analiza pasos concretos (L2250) y lo extiende a todas las tecnologías peligrosas (L1840). 'Tres cosas' está respaldado. Nada se invierte ni se condiciona.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA2687C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977
+  ],
+  "cita": "To do this, we need to ask three questions. The 'hands on' question... The criticality question... The frequency question... It would be reasonable to expect that an activity scoring 'high' on all three of these questions is the one most likely to be associated with human performance problems.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro propone esas mismas tres preguntas (contacto directo, criticidad, frecuencia) para estimar qué actividad genera más problemas de desempeño humano. Aplicarlas tarea por tarea concreta el método en su misma dirección. El libro también analiza pasos concretos (L2250) y lo extiende a todas las tecnologías peligrosas (L1840). 'Tres cosas' está respaldado. Nada se invierte ni se condiciona.",
+  "paso_fiel": ""
+ }
+}

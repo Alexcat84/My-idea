@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P510F55",
+  "intento": 0,
+  "usd": 0.172244,
+  "turnos": 1,
+  "duracion_s": 13.7,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36776,
+  "tokens_out": 1257,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P510F55\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2170, 2250, 2259], \"cita\": \"Even when the omission is one's own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El paso manda por la vía cognitiva: localizar el nivel (planificación, almacenamiento, ejecución, monitoreo) de omisiones históricas cometidas por otros. El libro dice que esos mecanismos pueden ser imposibles de descubrir y que suelen quedar ocultos (L2259). Considera más prometedor el análisis de tareas: identificar los pasos con rasgos que provocan omisiones (L2250). El paso invierte la vía que el libro recomienda.\", \"paso_fiel\": \"Analizar los pasos de cada procedimiento de mantenimiento para contar cuántos rasgos que provocan omisiones reúne cada uno (aislado funcionalmente, cerca del final, oculto a la vista, con múltiples elementos, con cambios recientes...), en lugar de intentar averiguar el mecanismo cognitivo de cada omisión pasada.\"}\n```",
+ "parseado": {
+  "id": "P510F55",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2170,
+   2250,
+   2259
+  ],
+  "cita": "Even when the omission is one's own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El paso manda por la vía cognitiva: localizar el nivel (planificación, almacenamiento, ejecución, monitoreo) de omisiones históricas cometidas por otros. El libro dice que esos mecanismos pueden ser imposibles de descubrir y que suelen quedar ocultos (L2259). Considera más prometedor el análisis de tareas: identificar los pasos con rasgos que provocan omisiones (L2250). El paso invierte la vía que el libro recomienda.",
+  "paso_fiel": "Analizar los pasos de cada procedimiento de mantenimiento para contar cuántos rasgos que provocan omisiones reúne cada uno (aislado funcionalmente, cerca del final, oculto a la vista, con múltiples elementos, con cambios recientes...), en lugar de intentar averiguar el mecanismo cognitivo de cada omisión pasada."
+ }
+}

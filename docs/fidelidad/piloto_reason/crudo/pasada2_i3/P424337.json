@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P424337",
+  "intento": 0,
+  "usd": 0.232064,
+  "turnos": 1,
+  "duracion_s": 21.5,
+  "pared_s": 22.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49016,
+  "tokens_out": 1800,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P424337\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [821, 1044, 1050, 1068, 1137], \"cita\": \"At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro no desaconseja la redundancia: afirma que ha reducido mucho los eventos adversos (L821). También exige que el fallo de una capa no se relacione con el de otras (L1044, L1050), que es justo lo que busca el paso. Advierte de opacidad y fallos de modo común, pero eso lo cubren los demás pasos del nodo. No aporta datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P424337",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   821,
+   1044,
+   1050,
+   1068,
+   1137
+  ],
+  "cita": "At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro no desaconseja la redundancia: afirma que ha reducido mucho los eventos adversos (L821). También exige que el fallo de una capa no se relacione con el de otras (L1044, L1050), que es justo lo que busca el paso. Advierte de opacidad y fallos de modo común, pero eso lo cubren los demás pasos del nodo. No aporta datos nuevos.",
+  "paso_fiel": ""
+ }
+}

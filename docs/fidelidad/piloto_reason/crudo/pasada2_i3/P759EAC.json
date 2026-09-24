@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P759EAC",
+  "intento": 0,
+  "usd": 0.18369200000000002,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41508,
+  "tokens_out": 883,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P759EAC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2748, 2750, 2520, 5236, 5270], \"cita\": \"What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro no desaconseja medir. Pide medir con regularidad procesos de salud de seguridad, con la cultura como dimension central (L2748-2750). La advertencia de L5236-5270 es contra dar la cultura por lograda solo por tener los componentes, y responde con preguntas que funcionan como indicadores. El paso concreta esto en su misma direccion y sin datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P759EAC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2748,
+   2750,
+   2520,
+   5236,
+   5270
+  ],
+  "cita": "What matters is that a principled attempt is made to sample each of the six main dimensions identified above: culture, training, management, safety-related issues, procedures and technical factors.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro no desaconseja medir. Pide medir con regularidad procesos de salud de seguridad, con la cultura como dimension central (L2748-2750). La advertencia de L5236-5270 es contra dar la cultura por lograda solo por tener los componentes, y responde con preguntas que funcionan como indicadores. El paso concreta esto en su misma direccion y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

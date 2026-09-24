@@ -1,0 +1,86 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_032",
+  "intento": 0,
+  "usd": 0.171276,
+  "turnos": 1,
+  "duracion_s": 22.2,
+  "pared_s": 23.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32944,
+  "tokens_out": 1975,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0BEACF\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5603, 5611, 5639, 5701, 4284], \"razon\": \"El libro compara dominios en la Tabla 10.1, pero no prescribe compararse con dominios similares ni con referencias históricas. Advierte que las condiciones latentes son altas en todos; compararse con pares podría subestimarlas.\"},\n  {\"id\": \"P81DA9C\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"5 criterios universales\"], \"clase\": \"FIEL\", \"lineas\": [2259, 2263, 2267, 2271, 2275, 2279, 2281], \"razon\": \"El libro enumera los cinco criterios universales de un buen recordatorio: conspicuo, contiguo, contexto, contenido y check. Los presenta tras identificar los pasos propensos a omisión.\"},\n  {\"id\": \"PD50B34\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"2-3 factores\"], \"clase\": \"FIEL\", \"lineas\": [4478, 4494, 3209, 3382], \"razon\": \"El perfil sirve para identificar los dos o tres factores que más necesitan reforma urgente, porque ninguna organización puede con todos a la vez.\"},\n  {\"id\": \"PE313C8\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451, 401, 1914, 4025, 4027], \"razon\": \"La ausencia de un procedimiento formal de traspaso línea/base fue una grieta latente; Piper Alpha muestra fallos en el relevo de turno. El libro no manda auditar explícitamente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0BEACF",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5603,
+    5611,
+    5639,
+    5701,
+    4284
+   ],
+   "razon": "El libro compara dominios en la Tabla 10.1, pero no prescribe compararse con dominios similares ni con referencias históricas. Advierte que las condiciones latentes son altas en todos; compararse con pares podría subestimarlas."
+  },
+  {
+   "id": "P81DA9C",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "5 criterios universales"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2259,
+    2263,
+    2267,
+    2271,
+    2275,
+    2279,
+    2281
+   ],
+   "razon": "El libro enumera los cinco criterios universales de un buen recordatorio: conspicuo, contiguo, contexto, contenido y check. Los presenta tras identificar los pasos propensos a omisión."
+  },
+  {
+   "id": "PD50B34",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "2-3 factores"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4478,
+    4494,
+    3209,
+    3382
+   ],
+   "razon": "El perfil sirve para identificar los dos o tres factores que más necesitan reforma urgente, porque ninguna organización puede con todos a la vez."
+  },
+  {
+   "id": "PE313C8",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    423,
+    451,
+    401,
+    1914,
+    4025,
+    4027
+   ],
+   "razon": "La ausencia de un procedimiento formal de traspaso línea/base fue una grieta latente; Piper Alpha muestra fallos en el relevo de turno. El libro no manda auditar explícitamente."
+  }
+ ]
+}

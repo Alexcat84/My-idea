@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6A033B",
+  "intento": 0,
+  "usd": 0.165064,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36541,
+  "tokens_out": 945,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6A033B\", \"veredicto\": \"FIEL\", \"lineas\": [2724, 2734, 2750], \"cita\": \"Clearly, then, organizational factors represent the priority area for process measurement. ... management factors (for example, management of change, leadership and administration, communication, hiring and placement, purchasing controls, incompatibilities between production and protection and so on)\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija los factores organizacionales como prioridad de medicion (L2724). Los ejemplos del paso son literales del cluster de gestion (L2734): gestion del cambio, liderazgo, comunicacion y compras. Contra la sospecha del filtro, 'gestion del cambio' si aparece y 'liderazgo' tambien figura como factor de gestion. Los ejemplos ilustran; el paso no excluye las otras dimensiones (L2750).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6A033B",
+  "veredicto": "FIEL",
+  "lineas": [
+   2724,
+   2734,
+   2750
+  ],
+  "cita": "Clearly, then, organizational factors represent the priority area for process measurement. ... management factors (for example, management of change, leadership and administration, communication, hiring and placement, purchasing controls, incompatibilities between production and protection and so on)",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija los factores organizacionales como prioridad de medicion (L2724). Los ejemplos del paso son literales del cluster de gestion (L2734): gestion del cambio, liderazgo, comunicacion y compras. Contra la sospecha del filtro, 'gestion del cambio' si aparece y 'liderazgo' tambien figura como factor de gestion. Los ejemplos ilustran; el paso no excluye las otras dimensiones (L2750).",
+  "paso_fiel": ""
+ }
+}

@@ -19,6 +19,8 @@ FUENTE = "Managing the Risks of Organizat - Reason, J. T_"
 CLAUDE = r"C:\Users\AlexDesk\AppData\Roaming\npm\node_modules\@anthropic-ai\claude-code\bin\claude.exe"
 MODELO = "claude-opus-5-5"   # mandato del fundador: todo con Opus 5.5
 MAX_PAR = 4                  # nunca mas de 4 procesos claude -p a la vez
+# Intento activo de la prueba a ciegas (cada intento tiene su mezcla y su clave).
+INTENTO = os.environ.get("FIDEL_INTENTO", "2")
 
 os.makedirs(WORK, exist_ok=True)
 

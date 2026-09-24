@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_105",
+  "intento": 0,
+  "usd": 0.173124,
+  "turnos": 1,
+  "duracion_s": 20.9,
+  "pared_s": 21.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33431,
+  "tokens_out": 1970,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P701BF6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5896], \"razon\": \"El libro dice que las organizaciones preparadas tienen poca negación y racionalización, y que la negación merece tratamiento. Evaluarla y reducirla concreta eso sin añadir datos.\"},\n {\"id\": \"P301706\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4060, 4182, 4416, 4418, 4448], \"razon\": \"El libro presenta la desregulación como dañina (Dryden, FAA, recortes HSE). El paso trata reducir la carga regulatoria como meta legítima a equilibrar, cosa que el libro no avala.\"},\n {\"id\": \"PDEABD4\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397], \"razon\": \"El libro multiplica la probabilidad nominal por una proporción juzgada de cada EPC. Calcular la probabilidad ajustada sigue esa dirección; los fragmentos no dan la fórmula exacta para combinar varias EPCs.\"},\n {\"id\": \"P77F7BB\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3232, 3332, 3382], \"razon\": \"En MESH los evaluadores entran de forma anónima en un programa y ven promedios del lugar de trabajo. Review también usa un programa informático, aunque no se dice que sea anónimo.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P701BF6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5896
+   ],
+   "razon": "El libro dice que las organizaciones preparadas tienen poca negación y racionalización, y que la negación merece tratamiento. Evaluarla y reducirla concreta eso sin añadir datos."
+  },
+  {
+   "id": "P301706",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4060,
+    4182,
+    4416,
+    4418,
+    4448
+   ],
+   "razon": "El libro presenta la desregulación como dañina (Dryden, FAA, recortes HSE). El paso trata reducir la carga regulatoria como meta legítima a equilibrar, cosa que el libro no avala."
+  },
+  {
+   "id": "PDEABD4",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "El libro multiplica la probabilidad nominal por una proporción juzgada de cada EPC. Calcular la probabilidad ajustada sigue esa dirección; los fragmentos no dan la fórmula exacta para combinar varias EPCs."
+  },
+  {
+   "id": "P77F7BB",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3232,
+    3332,
+    3382
+   ],
+   "razon": "En MESH los evaluadores entran de forma anónima en un programa y ven promedios del lugar de trabajo. Review también usa un programa informático, aunque no se dice que sea anónimo."
+  }
+ ]
+}

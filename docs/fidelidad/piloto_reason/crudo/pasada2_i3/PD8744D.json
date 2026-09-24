@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD8744D",
+  "intento": 0,
+  "usd": 0.199288,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43247,
+  "tokens_out": 1315,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD8744D\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2322, 2340, 2354, 2369], \"cita\": \"Unfortunately, this orthodoxy presumes that all--or at least most--maintenance activities are essentially benign. But suppose preventive maintenance did not always prevent failure and that corrective maintenance did not always correct it.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe el cálculo del óptimo por suma de costos (Fig. 5.5) como la 'visión ortodoxa' y la critica porque supone que el mantenimiento es benigno. El paso fija el nivel óptimo solo con curvas de costo y omite el riesgo de error humano. Seguirlo conduce justo a lo que el libro desaconseja (L2354, L2369).\", \"paso_fiel\": \"Calcular las curvas de costo de mantenimiento preventivo y correctivo solo como punto de partida, y fijar el nivel de mantenimiento teniendo en cuenta además el riesgo de error humano que introduce cada intervención, sin tomar el mínimo de costo como nivel óptimo.\"}\n```",
+ "parseado": {
+  "id": "PD8744D",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2322,
+   2340,
+   2354,
+   2369
+  ],
+  "cita": "Unfortunately, this orthodoxy presumes that all--or at least most--maintenance activities are essentially benign. But suppose preventive maintenance did not always prevent failure and that corrective maintenance did not always correct it.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe el cálculo del óptimo por suma de costos (Fig. 5.5) como la 'visión ortodoxa' y la critica porque supone que el mantenimiento es benigno. El paso fija el nivel óptimo solo con curvas de costo y omite el riesgo de error humano. Seguirlo conduce justo a lo que el libro desaconseja (L2354, L2369).",
+  "paso_fiel": "Calcular las curvas de costo de mantenimiento preventivo y correctivo solo como punto de partida, y fijar el nivel de mantenimiento teniendo en cuenta además el riesgo de error humano que introduce cada intervención, sin tomar el mínimo de costo como nivel óptimo."
+ }
+}

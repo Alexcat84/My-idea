@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC40AA8",
+  "intento": 0,
+  "usd": 0.22976,
+  "turnos": 1,
+  "duracion_s": 7.7,
+  "pared_s": 8.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54665,
+  "tokens_out": 555,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC40AA8\", \"veredicto\": \"FIEL\", \"lineas\": [3784], \"cita\": \"Preconditions are likely to be the product of identifiable latent failures. Once again, they are described and the associated GFTs identified. ... As the analyst progresses, he or she will link the causally related nodes and boxes by lines on the computer screen.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que en Tripod-Beta las precondiciones proceden de fallos latentes. Esos fallos se describen, se identifican sus GFTs asociados y los nodos causalmente relacionados se unen con líneas. El paso aconseja lo mismo y en la misma dirección. El único dato concreto, los GFTs, está en el libro (11 GFTs de Tripod).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC40AA8",
+  "veredicto": "FIEL",
+  "lineas": [
+   3784
+  ],
+  "cita": "Preconditions are likely to be the product of identifiable latent failures. Once again, they are described and the associated GFTs identified. ... As the analyst progresses, he or she will link the causally related nodes and boxes by lines on the computer screen.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que en Tripod-Beta las precondiciones proceden de fallos latentes. Esos fallos se describen, se identifican sus GFTs asociados y los nodos causalmente relacionados se unen con líneas. El paso aconseja lo mismo y en la misma dirección. El único dato concreto, los GFTs, está en el libro (11 GFTs de Tripod).",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3B92CF",
+  "intento": 0,
+  "usd": 0.155284,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31991,
+  "tokens_out": 1366,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3B92CF\", \"veredicto\": \"FIEL\", \"lineas\": [2487, 2489, 2765, 5688, 5690], \"cita\": \"The answer must be yes--if complex hazardous organizations continue to rely principally on outcome measures in order to navigate the safety space. [...] A low LTI rate [...] reveals very little about the likelihood of an organizational accident.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que las medidas de resultado, incluidas las LTI (L2487), no son fiables como indicador de la seguridad intrinseca. Tambien desaconseja apoyarse principalmente en ellas (L2765). El paso no elimina el LTIF: solo le quita el papel de unico o principal. Asi se conserva su valor cuando es alto (L5688) y no generaliza la condicion. LTIF figura en el libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3B92CF",
+  "veredicto": "FIEL",
+  "lineas": [
+   2487,
+   2489,
+   2765,
+   5688,
+   5690
+  ],
+  "cita": "The answer must be yes--if complex hazardous organizations continue to rely principally on outcome measures in order to navigate the safety space. [...] A low LTI rate [...] reveals very little about the likelihood of an organizational accident.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que las medidas de resultado, incluidas las LTI (L2487), no son fiables como indicador de la seguridad intrinseca. Tambien desaconseja apoyarse principalmente en ellas (L2765). El paso no elimina el LTIF: solo le quita el papel de unico o principal. Asi se conserva su valor cuando es alto (L5688) y no generaliza la condicion. LTIF figura en el libro.",
+  "paso_fiel": ""
+ }
+}

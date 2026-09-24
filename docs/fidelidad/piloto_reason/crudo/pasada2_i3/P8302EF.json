@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8302EF",
+  "intento": 0,
+  "usd": 0.16289199999999998,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34378,
+  "tokens_out": 1269,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8302EF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [213, 1435, 1539, 181, 293], \"cita\": \"Active failures can create gaps in the defences in at least two ways. First, front-line personnel may deliberately disable certain defences in order to achieve local operational objectives. ... Second, front-line operators may unwittingly fail in their role as one of the system’s most important lines of defence.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro distingue explícitamente entre huecos creados deliberadamente y huecos creados sin querer, y asocia esa distinción a 'unwitting error or a deliberate violation' (L1435). La etiqueta del paso concreta esa distinción en la misma dirección. Omite matices del libro: hay violaciones erróneas, hay retiradas legítimas en mantenimiento y hay huecos latentes. Es una diferencia de detalle, no una inversión.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8302EF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   213,
+   1435,
+   1539,
+   181,
+   293
+  ],
+  "cita": "Active failures can create gaps in the defences in at least two ways. First, front-line personnel may deliberately disable certain defences in order to achieve local operational objectives. ... Second, front-line operators may unwittingly fail in their role as one of the system’s most important lines of defence.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro distingue explícitamente entre huecos creados deliberadamente y huecos creados sin querer, y asocia esa distinción a 'unwitting error or a deliberate violation' (L1435). La etiqueta del paso concreta esa distinción en la misma dirección. Omite matices del libro: hay violaciones erróneas, hay retiradas legítimas en mantenimiento y hay huecos latentes. Es una diferencia de detalle, no una inversión.",
+  "paso_fiel": ""
+ }
+}
