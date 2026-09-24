@@ -671,33 +671,47 @@ export async function insertarChecklist(
   nodosPorEtapa?: Record<string, string[]> | null
 ): Promise<void> {
   if (items.length === 0) return;
-  const { error } = await supabase.from("checklist_items").insert(
-    items.map((i) => ({
-      project_id: projectId,
-      plan_id: planId,
-      dominio,
-      etapa: i.etapa,
-      orden: i.orden,
-      texto: i.texto,
-      destacado: i.destacado,
-      banda: i.banda ?? null,
-      espera_externa: i.espera_externa ?? null,
-      // La autodeclaracion es por ETAPA, no por item: este item hereda los
-      // nodos de SU etapa. Documentado como limite en docs/SENSORES_DEL_PANEL.
-      nodos_origen: nodosPorEtapa?.[String(i.etapa)] ?? null,
-      // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
-      // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
-      ...(i.protege_item !== undefined || i.deteccion !== undefined
-        ? {
-            protege_item: i.protege_item ?? null,
-            protege_nodos: i.protege_nodos ?? null,
-            deteccion: i.deteccion ?? null,
-            probabilidad: i.probabilidad ?? null,
-            dolor: i.dolor ?? null,
-            camino: i.camino ?? null,
-          }
-        : {}),
-    }))
-  );
+  const filas = items.map((i) => ({
+    project_id: projectId,
+    plan_id: planId,
+    dominio,
+    etapa: i.etapa,
+    orden: i.orden,
+    texto: i.texto,
+    destacado: i.destacado,
+    banda: i.banda ?? null,
+    espera_externa: i.espera_externa ?? null,
+    // La autodeclaracion es por ETAPA, no por item: este item hereda los
+    // nodos de SU etapa. Documentado como limite en docs/SENSORES_DEL_PANEL.
+    nodos_origen: nodosPorEtapa?.[String(i.etapa)] ?? null,
+    // Solo viajan si el plan es de proteccion: en los demas ni siquiera se
+    // nombran, para no escribir cuatro nulls por item en cada plan de la casa.
+    ...(i.protege_item !== undefined || i.deteccion !== undefined
+      ? {
+          protege_item: i.protege_item ?? null,
+          protege_nodos: i.protege_nodos ?? null,
+          deteccion: i.deteccion ?? null,
+          probabilidad: i.probabilidad ?? null,
+          dolor: i.dolor ?? null,
+          camino: i.camino ?? null,
+        }
+      : {}),
+  }));
+  let { error } = await supabase.from("checklist_items").insert(filas);
+  // AUD-09 M15: protege_nodos llega con la 041. Si el código corre antes de
+  // aplicarla, el plan de protección no se cae: se inserta sin esa columna (la
+  // protección se resolverá por id, como antes) y queda el síntoma en el log.
+  if (error && filas.some((f) => "protege_nodos" in f) && /protege_nodos/.test(error.message ?? "")) {
+    console.error("[insertarChecklist] falta la migracion 041 (protege_nodos); se inserta sin los nodos de lo protegido:", error.message);
+    ({ error } = await supabase
+      .from("checklist_items")
+      .insert(
+        filas.map((f) => {
+          const resto: Record<string, unknown> = { ...f };
+          delete resto.protege_nodos;
+          return resto;
+        })
+      ));
+  }
   if (error) throw error;
 }
