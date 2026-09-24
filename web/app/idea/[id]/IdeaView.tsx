@@ -635,9 +635,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
         setModos(d.idea.modos ?? {});
         setCapacidades(d.idea.capacidades ?? {});
         setRealizadaAt(d.idea.realizada_at ?? null);
-        // Una idea ya realizada abre en su Celebración (salvo que la URL
-        // pida otra vista explícita).
-        if (d.idea.realizada_at && !quiereManos && !quiereAnalisis) setVistaCelebracion(true);
+        // Una idea ya realizada abre en su Celebración, salvo que la URL pida
+        // CUALQUIER vista explícita (AUD-09 M09: antes solo miraba Manos y
+        // Análisis, y recargar el hub de un mundo abierto caía en la Celebración).
+        if (d.idea.realizada_at && !searchParams.get("vista")) setVistaCelebracion(true);
         if (d.plan) {
           setPlanMd(d.plan.contenido_md);
           setAvisoPlan(d.plan.aviso ?? null);
@@ -1062,7 +1063,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
             dominio={vistaDominio ?? undefined}
             nombreEspacio={mundosParaObra.find((m) => m.dominio === vistaDominio)?.nombre}
           />
-        ) : vistaCelebracion ? (
+        ) : vistaCelebracion && realizadaAt ? (
+          // AUD-09 M09: la Celebración solo existe con el cierre. Sin él, un
+          // ?vista=celebracion cae a la vista de siempre (y su "Reabrir" ya no
+          // puede escribir una reapertura falsa).
           <Celebracion
             projectId={projectId}
             onVerAnalisis={() => irAAnalisis()}

@@ -59,6 +59,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   const realizada = body.accion === "realizar";
+  // AUD-09 M09: una acción que no cambia el estado no deja historia. Reabrir lo
+  // que no está cerrado escribía una reapertura falsa; cerrar lo ya cerrado,
+  // otro "realizada" (y podía pisar el motivo del primer cierre).
+  if (realizada === Boolean(proyecto.realizada_at)) {
+    return NextResponse.json({
+      realizada_at: proyecto.realizada_at ?? null,
+      cierre_motivo: proyecto.cierre_motivo ?? null,
+    });
+  }
   // AUD-09 (tanda 5): volver a cerrar una idea YA cerrada no reescribe la fecha
   // del primer cierre (la historia no se reescribe). Reabrir sí la limpia: un
   // cierre posterior es un cierre nuevo, y la bitácora guarda los dos.

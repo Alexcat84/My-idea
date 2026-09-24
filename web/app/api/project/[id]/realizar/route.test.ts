@@ -127,3 +127,30 @@ describe("POST /api/project/[id]/realizar (Fase 3.8)", () => {
   });
 });
 
+// AUD-09 M09 (tanda 7A, datos): una acción que no cambia nada no deja historia.
+// "Reabrir" una idea que no estaba cerrada (la Celebración se abría por URL sin
+// cierre) escribía una reapertura falsa en la bitácora; cerrar lo ya cerrado
+// dejaba otro "realizada" y podía pisar el motivo del primer cierre.
+describe("sin cambio de estado no hay rastro (AUD-09 M09)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+  });
+
+  it("reabrir una idea que no está cerrada no escribe una reapertura", async () => {
+    sembrar(null);
+    const res = await POST(req({ accion: "reabrir" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(estadoFalso.bitacora.filter((e) => e.tipo === "realizada")).toHaveLength(0);
+  });
+
+  it("cerrar una idea ya cerrada no escribe otro cierre ni pisa su motivo", async () => {
+    sembrar("2026-05-01T12:00:00.000Z");
+    estadoFalso.projects["p1"].cierre_motivo = "el motivo del primer cierre";
+    const res = await POST(req({ accion: "realizar", motivo: "otro motivo" }), PARAMS);
+    expect(res.status).toBe(200);
+    expect(estadoFalso.bitacora.filter((e) => e.tipo === "realizada")).toHaveLength(0);
+    expect(estadoFalso.projects["p1"].cierre_motivo).toBe("el motivo del primer cierre");
+  });
+});
+
