@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Plan Básico de Respuesta a Incidentes para CUI",
+  "etiqueta": "Ten Listo tu Plan de Incidentes",
+  "resumen": "Antes de que ocurra un incidente, tu empresa necesita un plan básico de respuesta, coordinado y ajustado a tu negocio. Ese plan debe nombrar a un responsable de desarrollarlo y mantenerlo, listar a todas las personas que pueden participar en la respuesta con sus datos de contacto, roles y responsabilidades, y dejar escrito qué, cuándo y cómo debes reportar según las leyes, regulaciones, contratos, acuerdos o políticas que te apliquen. La mayoría de los contratos federales traen sus propios requisitos de reporte y notificación, y esos requisitos tienen que quedar dentro del plan.",
+  "entregable": "Plan de respuesta a incidentes con un responsable designado, una tabla de contactos (líder del negocio, contacto técnico, policía estatal, representante local del FBI, banco, asesor legal y seguro) y el procedimiento para notificar al gobierno federal dentro de las 72 horas siguientes a detectar el incidente.",
+  "condiciones": [
+   "Si tu empresa procesa CUI y todavía no tiene un plan escrito para responder ante un incidente de seguridad",
+   "Cuando firmas un contrato federal que incluye requisitos de reporte y notificación de incidentes"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "435-437",
+  "cita": "most federal contracts will include specific reporting and notification requirements that should be included in the Incident Response Plan",
+  "dato": "notificar al gobierno federal dentro de las 72 horas siguientes a detectar el incidente",
+  "explicacion": "El libro solo dice que los contratos federales traen sus propios requisitos de reporte y notificación y que deben incluirse en el plan; no fija ningún plazo. Grep en todo el libro: no aparece 'hour' ni '72 h' ni ningún plazo de notificación (el único '72' está dentro de 'SP 800-172'). El plazo de 72 horas es un añadido de norma."
+ },
+ {
+  "titulo": "Cofundar con Amigos o Familia: la Estabilidad del Equipo",
+  "etiqueta": "Ojo al Fundar con Amigos",
+  "resumen": "Fundar con amigos o familiares parece la opción cómoda, pero los datos muestran que cada relación social previa dentro del equipo (sin haber trabajado juntos antes) aumenta la probabilidad de que un cofundador se vaya. Los equipos de excompañeros de trabajo son claramente los más estables, y los de amigos o familia, aunque son más estables que los equipos de desconocidos, quedan por debajo de ellos. Durante los primeros seis meses no se nota diferencia, pero pasada esa luna de miel las tensiones profesionales empiezan a meterse en la relación personal, porque cuesta convertir una amistad en una relación de trabajo con jefes y subordinados.",
+  "entregable": "Un acuerdo escrito entre tú y tus cofundadores que defina roles, autoridad y cómo se tomarán las decisiones, conversado antes de empezar aunque ya se conozcan de toda la vida.",
+  "condiciones": [
+   "Si vas a fundar con un amigo cercano, tu pareja o un familiar",
+   "Si tú y tus cofundadores nunca han trabajado juntos profesionalmente"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "1047",
+  "cita": "Most surprising, teams with prior social relationships were even less stable than teams of strangers.",
+  "dato": "aunque son más estables que los equipos de desconocidos",
+  "explicacion": "El libro dice lo opuesto: los equipos con relaciones sociales previas (amigos o familia) fueron incluso menos estables que los equipos de desconocidos. El resumen invierte la comparación. El resto (excompañeros más estables, seis meses sin diferencia, línea 1058) es fiel."
+ },
+ {
+  "titulo": "Quién Elige al Director Independiente de tu Junta",
+  "etiqueta": "Negocia el Voto Decisivo",
+  "resumen": "Con cada ronda de financiamiento el inversor líder suele pedir un asiento en tu junta; a veces se agrega un asiento nuevo, pero lo más común es que reemplace a un fundador o a un inversor ángel para que la junta no crezca demasiado. Muchas juntas se arman con igual número de internos y externos más un director independiente, que no es inversor importante, ejecutivo ni fundador. Como los fundadores suelen votar juntos y los inversores también, ese director independiente termina siendo el voto decisivo, así que la negociación sobre quién lo elige es clave: cuando lo eligen los inversores, es mucho menos probable que esté alineado contigo.",
+  "entregable": "Estructura de la junta acordada por escrito, con cuántos asientos van a fundadores, a inversores y al director independiente, y quién tiene derecho a nominar a ese director.",
+  "condiciones": [
+   "Si estás por levantar tu ronda B, que es cuando los fundadores suelen pasar a ser minoría en la junta",
+   "Si tu junta queda con el mismo número de fundadores que de inversores"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "2920",
+  "cita": "after the A-round of financing, founders were already a minority within the average board, holding 34% of the seats, while outside directors already held 59%.",
+  "dato": "Si estás por levantar tu ronda B, que es cuando los fundadores suelen pasar a ser minoría en la junta",
+  "explicacion": "El libro sitúa la pérdida de la mayoría ya después de la ronda A (34% de los asientos para fundadores); tras la ronda B bajan aún más, al 21%. La condición mueve ese momento a la ronda B, cambiando la secuencia que da el libro. El resumen (líneas 2920 y 2932) es fiel."
+ },
+ {
+  "titulo": "Elige y Vigila los Indicadores de Transición de tus Riesgos",
+  "etiqueta": "Vigila las Señales Tempranas",
+  "resumen": "Para cada riesgo que decides gestionar, eliges una o más señales tempranas de que se está materializando y las vigilas de cerca para activar tu plan de contingencia a tiempo. La señal más temprana no siempre es la mejor: puede darte falsas alarmas, y la que casi nunca falla puede llegar demasiado tarde para servirte. Elegir el indicador exige pesar la urgencia contra el costo de reaccionar ante una falsa alarma. Revisa tus indicadores al menos cada quince días y anota en tu lista de riesgos lo que observaste.",
+  "entregable": "Tu lista de riesgos con un indicador de transición asignado a cada riesgo gestionado y el plan de contingencia que activa cada uno.",
+  "condiciones": [
+   "Cuando ya tienes una lista de riesgos pero no sabes cómo te darás cuenta de que uno está ocurriendo",
+   "Si sueles enterarte de los problemas cuando ya es tarde para reaccionar"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Síntesis del método aplicado al emprendedor individual (Waltzing with Bears)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Risk Management\\Waltzing with bears _ managing risk on software projects.txt",
+  "lineas": "624-634",
+  "cita": "For each managed risk, you need to choose one or more early indications of materialization. Then, watch them like a hawk so you can activate your contingency plan in a timely manner, if necessary.",
+  "dato": "Revisa tus indicadores al menos cada quince días",
+  "explicacion": "El libro pide vigilar los indicadores de cerca ('like a hawk') y habla de monitoreo continuo, pero no fija ninguna frecuencia de revisión. Grep en todo el libro: no aparecen 'two weeks', 'fortnight', 'biweekly', 'every other week' ni 'fifteen days'. El plazo de quince días es un añadido."
+ }
+]

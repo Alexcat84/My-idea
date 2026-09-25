@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Momento del Reparto de Equity entre Cofundadores",
+  "etiqueta": "Elige Cuándo Repartir el Equity",
+  "resumen": "Los fundadores pueden repartir el equity al fundar o más adelante. En la muestra de Wasserman, el 73% de los equipos lo reparte en el primer mes, cuando aún hay gran incertidumbre sobre las capacidades y el compromiso de cada uno, como les pasó a los fundadores de UpDown. Como ese primer reparto es solo un punto de partida, corregir un reparto desacertado unos meses después suele resultar sencillo y sin tensiones en el equipo.",
+  "entregable": "Acuerdo de reparto de equity que documente las contribuciones esperadas de cada cofundador y el momento elegido para cerrarlo.",
+  "condiciones": [
+   "Cuando los cofundadores se plantean repartir el equity en las primeras semanas",
+   "Si todavía no conocen bien las capacidades y el compromiso de cada uno"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "1533",
+  "cita": "Such mistakes can be very painful to correct. | The anchoring effect (and legally binding nature) of UpDown’s early one-page equity-split agreement caused major tension within the team when one of the founders wanted to renegotiate the split a few months later.",
+  "dato": "corregir un reparto desacertado unos meses después suele resultar sencillo y sin tensiones en el equipo",
+  "explicacion": "El libro dice lo contrario: los errores del reparto temprano son muy dolorosos de corregir, porque el ancla psicológica inicial pesa mucho en las negociaciones posteriores, y en UpDown intentar renegociar unos meses después causó una tensión grave en el equipo. El resto del nodo es fiel (73% en el primer mes, incertidumbre, caso UpDown)."
+ },
+ {
+  "titulo": "Vesting Autoimpuesto entre Cofundadores",
+  "etiqueta": "Pacta el Vesting entre Socios",
+  "resumen": "El vesting obliga a cada fundador a ganarse su participación con el tiempo o al cumplir hitos; quien se va antes pierde la parte no consolidada, que vuelve al startup o a los cofundadores. Funciona como unas 'esposas doradas' y permite comprobar si un cofundador piensa quedarse a largo plazo. Aun así, los equipos suelen resistirse a adoptarlo hasta que lo exigen sus primeros inversores externos. Un vesting por tiempo demasiado corto afloja esas esposas antes de que el startup esté construido.",
+  "entregable": "Acuerdo de vesting entre cofundadores con calendario de cuatro años, cliff de un año y cláusula de recompra de las acciones no consolidadas en un plazo de 90 días desde la salida del fundador.",
+  "condiciones": [
+   "Cuando el equipo fundador va a firmar su reparto de equity",
+   "Si hay dudas sobre si algún cofundador se dedicará a tiempo completo"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "1826 (y 1955 para los cuatro años y el cliff, que sí están)",
+  "cita": "Founders who leave a startup before their equity has fully vested must relinquish the unvested portion to the startup or to their cofounders",
+  "dato": "en un plazo de 90 días desde la salida del fundador",
+  "explicacion": "El libro dice que el fundador que se va antes de consolidar pierde la parte no consolidada, y la nota de la línea 1955 da el calendario típico de cuatro años con cliff de un año, pero no fija ningún plazo para recomprar o recuperar esas acciones. Grep en todo el libro: no aparecen '90 days', 'ninety' ni 'repurchase'. El plazo de 90 días es un añadido."
+ },
+ {
+  "titulo": "Salida del Fundador tras su Reemplazo como CEO",
+  "etiqueta": "Prevé tu Lugar tras el Relevo",
+  "resumen": "La sucesión del fundador-CEO puede iniciarla el propio fundador, el consejo o terceros como inversores sin asiento en él. Las sucesiones que dispara el consejo suelen ser las más tensas porque el fundador se resiste. Tras la decisión, cerca de un tercio de los fundadores reemplazados abandona el equipo directivo en el primer mes (37% cuando la inicia el consejo, 24% cuando la inicia el fundador); los otros dos tercios siguen como ejecutivos no CEO mientras se busca al nuevo CEO.",
+  "entregable": "Plan de transición que defina si el fundador reemplazado seguirá en el equipo directivo, con qué rol y cómo se organizará la búsqueda del nuevo CEO.",
+  "condiciones": [
+   "Cuando el fundador-CEO se plantea iniciar él mismo su relevo, que es la vía más habitual de sucesión",
+   "Si el consejo ha decidido reemplazar al fundador-CEO y hay que definir si seguirá en el equipo directivo"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "3090 (y 3183 para las cifras del resumen)",
+  "cita": "In my dataset, founder-initiated changes were relatively uncommon, accounting for only 27% of succession events.",
+  "dato": "que es la vía más habitual de sucesión",
+  "explicacion": "El libro dice que los relevos iniciados por el fundador son poco frecuentes (27%) y que el 73% los inicia el consejo u otra parte. La primera condición lo invierte al presentar el relevo iniciado por el fundador como la vía más habitual. El resumen es fiel a las líneas 3090 y 3183."
+ },
+ {
+  "titulo": "Financiamiento de Amigos y Familia: Riesgo Relacional",
+  "etiqueta": "Protege tus Relaciones al Financiarte",
+  "resumen": "El dinero de amigos y familia es fácil de conseguir y da una sensación inicial de confianza, pero pone en riesgo relaciones cruciales si el startup fracasa. Suelen invertir poco, aportan poco capital humano o social y no mejoran la credibilidad ante clientes u otros inversores. Una salida es tratar el aporte como un regalo sin expectativa de devolución, aunque por normativa fiscal cualquier aporte familiar superior a 15.000 dólares tributa como donación si no se documenta como inversión.",
+  "entregable": "Acuerdo escrito con cada amigo o familiar que aporte dinero, aclarando si es inversión o regalo y qué pasa si el startup fracasa.",
+  "condiciones": [
+   "Cuando el founder considera pedir capital semilla a amigos o familiares",
+   "Si no ha conseguido convencer a inversores profesionales y recurre a su círculo cercano"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "2681 (y 2664, 2672 para el resto del resumen)",
+  "cita": "One way around this can be to treat an investment from a friend or relative as a gift rather than an investment; that is, with no particular expectation of being paid back.",
+  "dato": "por normativa fiscal cualquier aporte familiar superior a 15.000 dólares tributa como donación si no se documenta como inversión",
+  "explicacion": "El libro propone tratar el aporte como un regalo, pero no menciona ninguna norma fiscal ni umbral. Grep en todo el libro: no aparecen 'gift tax', '15,000' ni '$15'; 'gift' solo sale en las líneas 564, 1064 y 2681, sin ninguna consecuencia fiscal. La norma y la cifra son un añadido."
+ }
+]

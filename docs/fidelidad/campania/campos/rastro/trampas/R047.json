@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Regla de Todo o Nada para la Inspección de Material Entrante (Punto de Equilibrio k1/k2)",
+  "etiqueta": "Decide Si Inspeccionar Todo o Nada",
+  "resumen": "Para minimizar el coste total medio de inspeccionar lo que te llega de tus proveedores, compara la fracción defectuosa de los lotes con el punto de equilibrio k1/k2, donde k1 es el coste de inspeccionar una pieza y k2 el coste de desmontar, reparar, volver a montar y probar un conjunto que falla porque entró una pieza defectuosa en la línea. Si el peor lote que puede llegar queda por debajo de ese punto, no inspecciones; si el mejor lote queda por encima, inspecciona el 100 por ciento. Tratar un caso como si fuera el otro maximiza el coste total. No inspeccionar no significa ir a ciegas: necesitas cartas de control, idealmente llevadas junto con el proveedor, para saber en qué caso estás.",
+  "entregable": "Una regla de decisión documentada para cada pieza comprada, con sus costes k1 y k2 calculados: inspección al 100 por ciento cuando el peor lote esperado quede por debajo del punto de equilibrio k1/k2 y ninguna inspección cuando el mejor lote quede por encima, apoyada en cartas de control compartidas con el proveedor",
+  "condiciones": [
+   "Cuando inspeccionas por muestreo los lotes que te envían tus proveedores sin saber si eso te ahorra dinero",
+   "Cuando una pieza defectuosa que entra en tu línea provoca reparaciones caras del producto montado"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "9271-9277",
+  "cita": "Case 1: The worst lot to come in will have fraction defective less than k1/k2. In this case,",
+  "dato": "inspección al 100 por ciento cuando el peor lote esperado quede por debajo del punto de equilibrio k1/k2 y ninguna inspección cuando el mejor lote quede por encima",
+  "explicacion": "El libro da la regla al revés: si el peor lote queda por debajo de k1/k2 (Caso 1) la regla es no inspeccionar (línea 9273, \"No inspection\"), y si el mejor lote queda por encima (Caso 2, línea 9275) la regla es inspeccionar el 100 por ciento (línea 9277). El entregable invierte los dos casos, que según la línea 9281 es justo lo que maximiza el coste total. El resumen del nodo da la regla correcta."
+ },
+ {
+  "titulo": "Formación hasta Alcanzar el Control Estadístico",
+  "etiqueta": "Forma Hasta Llegar al Control",
+  "resumen": "La formación de una persona nueva en un puesto debe seguir hasta que su trabajo alcance el estado de control estadístico; una vez que la curva de aprendizaje se aplana, una carta de control te dirá si ha llegado a ese estado y cuándo. Mientras su trabajo no esté en control, más formación le ayudará. Cuando lo alcance, habrá completado su aprendizaje de ese trabajo, se haya formado bien o mal, y cualquier mejora posterior depende de cambios en el sistema que son responsabilidad tuya: materiales más uniformes, mejor mantenimiento o cambios en el proceso. Con buena formación sí puede aprender muy bien otro tipo de trabajo.",
+  "entregable": "Un plan de formación para cada persona nueva, con una carta de control de su trabajo que marque el momento en que alcanza el control estadístico",
+  "condiciones": [
+   "Cuando incorporas a una persona nueva a un puesto y necesitas decidir hasta cuándo formarla",
+   "Cuando el trabajo de una persona ya está en control estadístico y quieres seguir mejorándolo reforzando su formación con el mismo método"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "6054-6058",
+  "cita": "It is obviously of the utmost importance to train new people, when they come on to a job, to do the job well. Once the learning curve levels off, a control chart will indicate whether and when a person has reached the state of statistical control (see Ch. 11). When he reaches it, continuation of training by the same method will accomplish nothing.",
+  "dato": "Cuando el trabajo de una persona ya está en control estadístico y quieres seguir mejorándolo reforzando su formación con el mismo método",
+  "explicacion": "La segunda condición presenta como vía de mejora seguir formando con el mismo método a quien ya alcanzó el control estadístico. El libro dice lo contrario: al llegar a ese estado, seguir formando por el mismo método no conseguirá nada (línea 6056), y en la línea 6054 que no es económico dar más formación del mismo tipo. La cita está entera en la línea 6056."
+ },
+ {
+  "titulo": "Abandono de los Planes de Aceptación por Muestreo (Military Standard 105D)",
+  "etiqueta": "Abandona las Tablas de Aceptación",
+  "resumen": "Planes como la Military Standard 105D o las tablas Dodge-Romig aceptan o rechazan lotes según lo que aparezca en una muestra. Aunque la ley federal estadounidense obliga a usarlos en los contratos con el Departamento de Defensa, solo pueden aumentar los costes: la 105D te obliga a fijar un AQL y no usa ninguna cifra de costes, así que puede llevarte a un plan cuyo coste total es el doble que el de inspeccionar el 100 por ciento. Si los usas como auditoría del producto final al salir por la puerta, garantizan que algunos clientes recibirán producto defectuoso. La mayoría de sus aplicaciones son puro trámite para cumplir un contrato.",
+  "entregable": "Una revisión de todos tus contratos de compra y venta que usan tablas de aceptación, con su sustitución por la regla de todo o nada basada en costes y en cartas de control",
+  "condiciones": [
+   "Si sigues usando Military Standard 105D o planes Dodge-Romig para comprar o vender materiales",
+   "Cuando tus contratos exigen planes de muestreo por lotes que no usan ninguna cifra de costes"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "9741",
+  "cita": "Most applications of the Dodge–Romig plans of acceptance and of Military Standard 105D are, I fear, pro forma, merely conforming to the requirements of a contract, drawn up by people without qualifications for drawing up a plan, and carried out by another group of people equally qualified.",
+  "dato": "Aunque la ley federal estadounidense obliga a usarlos en los contratos con el Departamento de Defensa",
+  "explicacion": "El libro nunca dice que una ley obligue a usar estos planes ni menciona al Departamento de Defensa; solo habla de requisitos de un contrato (línea 9741). Grep en todo el libro: \"Department of Defense\", \"Defense Department\", \"federal law\" y \"required by law\" no aparecen; \"by law\" solo aparece en la línea 120, sobre los servicios públicos, y \"mandatory\" solo en la línea 7014, sobre normas voluntarias. Es un requisito legal añadido. El resto del resumen es fiel a las líneas 2877, 9722 y 9741."
+ },
+ {
+  "titulo": "Una Sola Firma Responsable en Formularios Administrativos",
+  "etiqueta": "Deja una Sola Firma Responsable",
+  "resumen": "Cuando un formulario exige dos firmas, nadie es responsable de que sea correcto y los problemas están garantizados. En una empresa con novecientas personas en nómina que cometían mil quinientos errores diarios en las tarjetas de horas, bastó con exigir solo la firma del empleado, hacerle responsable de su tarjeta y pasar los cálculos al departamento de nómina: los problemas desaparecieron en una semana. En compras, devolver de inmediato al comprador cualquier orden incompleta o incorrecta bajó las irregularidades de 3 de cada 4 a 3 de cada 100 en dos semanas.",
+  "entregable": "Formulario rediseñado con una sola firma, la de quien lo rellena, los cálculos trasladados al departamento que lo procesa y los pagos de nómina emitidos en un plazo máximo de 48 horas tras el cierre de la semana",
+  "condiciones": [
+   "Cuando un formulario interno requiere varias firmas y aun así llega lleno de errores",
+   "Cuando tu equipo administrativo dedica mucho tiempo a corregir formularios que rellenan otros"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "4704-4718",
+  "cita": "A company had trouble with mistakes on payroll cards. There were nine hundred people on the payroll, making fifteen hundred mistakes every day (not a bad production record). The payroll department, because of so many mistakes, succeeded only with great effort to get cheques to the employees four days after the close of the week.",
+  "dato": "los pagos de nómina emitidos en un plazo máximo de 48 horas tras el cierre de la semana",
+  "explicacion": "El libro solo dice que antes del cambio los cheques salían con mucho esfuerzo cuatro días después del cierre de la semana (línea 4704) y que los problemas desaparecieron en una semana (línea 4718). No fija ningún plazo de pago tras el cambio. Grep en todo el libro: \"48 hours\", \"forty-eight\", \"48-hour\" y \"two days after\" no aparecen, y \"48\" solo sale en contextos ajenos (pregunta 48, figura 48, tarifas postales). Es un plazo añadido."
+ }
+]

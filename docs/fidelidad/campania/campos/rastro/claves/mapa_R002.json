@@ -1,0 +1,315 @@
+{
+ "R002-001": {
+  "real": true,
+  "node_id": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-002": {
+  "real": true,
+  "node_id": "evaluacion_cultura_seguridad_completa",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-003": {
+  "real": true,
+  "node_id": "errores_como_consecuencia",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-004": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-005": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Confidencialidad en los Sistemas de Reporte de Incidentes",
+   "etiqueta": "Protege a Quien Reporta",
+   "resumen": "La confianza es la base de un programa de reporte de incidentes: sin ella, los informes serán selectivos o directamente no llegarán. Un solo caso de alguien sancionado a raíz de su reporte puede detener el flujo de reportes útiles. Para garantizar la confidencialidad, la vía más viable es exigir que los reportes se presenten totalmente anónimos desde el origen, ya que retirar las identidades en una etapa posterior deja al informante expuesto. Los criterios de confidencialidad deben ser conocidos y comprendidos por todos los posibles informantes.",
+   "entregable": "Política de confidencialidad del sistema de reporte, con los criterios de protección del informante publicados para toda la plantilla.",
+   "condiciones": [
+    "Al diseñar o relanzar un sistema interno de reporte de incidentes",
+    "Cuando el volumen de reportes cae o los informes omiten la información clave sobre factores humanos"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "4888",
+   "cita": "The most obvious way of ensuring confidentiality is to have the reports filed anonymously. But, as O’Leary and Chappell point out, this is not always possible or even desirable.",
+   "dato": "la vía más viable es exigir que los reportes se presenten totalmente anónimos desde el origen, ya que retirar las identidades en una etapa posterior deja al informante expuesto",
+   "explicacion": "El libro dice lo contrario: el anonimato total no siempre es posible ni deseable (los analistas no pueden contactar al informante, los directivos desprecian los reportes anónimos, en empresas pequeñas es casi imposible) y en la línea 4906 concluye que retirar las identidades en una etapa posterior, como hace ASRS, es probablemente el medio más viable de mantener la confidencialidad."
+  }
+ },
+ "R002-006": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-007": {
+  "real": true,
+  "node_id": "regulatory_process_model",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-008": {
+  "real": true,
+  "node_id": "fallo_regulatorio_por_recursos_insuficientes",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-009": {
+  "real": true,
+  "node_id": "quality_control_vs_quality_assurance",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-010": {
+  "real": true,
+  "node_id": "seduccion_modelo_persona",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-011": {
+  "real": true,
+  "node_id": "gestion_falsas_alarmas",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-012": {
+  "real": true,
+  "node_id": "racional_mantenimiento_preventivo_correctivo",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-013": {
+  "real": true,
+  "node_id": "redes_de_seguridad_regulatoria",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-014": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Gestión de Perfiles de Tipos Generales de Falla (Tripod-Delta)",
+   "etiqueta": "Ataca tus Peores Fallas de Fondo",
+   "resumen": "Tripod-Delta mide de forma proactiva los Tipos Generales de Falla (GFT), los factores situacionales y organizacionales que provocan los accidentes. A partir de listas de indicadores creados por los especialistas de cada tarea, genera un Perfil de Estado de Falla que muestra la preocupación relativa por cada uno de los 11 GFT. La clave es gestionar los perfiles y no los indicadores sueltos, porque los indicadores son solo síntomas: la línea de mando revisa los perfiles de su área y planifica acciones correctoras para los dos o tres GFT peores de cada sesión de medición.",
+   "entregable": "Plan de remediación de los dos o tres GFT peores del perfil, con cada acción implantada y cerrada en un plazo máximo de 30 días desde la sesión de medición.",
+   "condiciones": [
+    "Tras cada sesión de medición proactiva de la salud de seguridad de un centro de trabajo",
+    "Cuando se intenta corregir indicadores de uno en uno sin mejorar los factores de fondo"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "3209",
+   "cita": "Line management’s task is to review the Failure State Profiles for their respective areas and to plan and implement remedial actions for the two to three ‘worst’ GFTs obtained on any one testing occasion.",
+   "dato": "con cada acción implantada y cerrada en un plazo máximo de 30 días desde la sesión de medición",
+   "explicacion": "El libro pide planificar e implantar acciones para los dos o tres GFT peores, pero no fija ningún plazo de cierre. Grep en todo el libro: no aparece '30 days', 'thirty days' ni 'within ... days' referido a Tripod; solo dice que las sesiones suelen ser trimestrales (línea 3199), que no es un plazo de cierre de acciones. El plazo de 30 días es inventado."
+  }
+ },
+ "R002-015": {
+  "real": true,
+  "node_id": "segregacion_funciones_trading_settlement",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-016": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-017": {
+  "real": true,
+  "node_id": "riesgo_error_humano_en_mantenimiento",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-018": {
+  "real": true,
+  "node_id": "heart_metodo_evaluacion_error_humano",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-019": {
+  "real": true,
+  "node_id": "fallas_activas_condiciones_latentes",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-020": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-021": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-022": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-023": {
+  "real": true,
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-024": {
+  "real": true,
+  "node_id": "safety_case_evaluacion_formal",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-025": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-026": {
+  "real": true,
+  "node_id": "erosion_de_defensas_por_ausencia_de_accidentes",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-027": {
+  "real": true,
+  "node_id": "safety_culture_engineering",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-028": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-029": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-030": {
+  "real": true,
+  "node_id": "produccion_y_proteccion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-031": {
+  "real": true,
+  "node_id": "reporte_casi_accidentes",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-032": {
+  "real": true,
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-033": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-034": {
+  "real": true,
+  "node_id": "ironias_de_la_automatizacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-035": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Juicio de Culpabilidad con la Prueba de Sustitución",
+   "etiqueta": "Pregunta si Otro Habría Fallado",
+   "resumen": "Ante un accidente en el que están implicados los actos inseguros de una persona, se la sustituye mentalmente por otra del mismo ámbito, con calificación y experiencia comparables, y se pregunta si habría actuado de otro modo. Para responder se consulta a un jurado de al menos cinco colegas de la misma especialidad: si responden que otra persona igual de competente podría haber cometido el mismo error, este es probablemente no culpable. Si la respuesta es no, se examina si hubo deficiencias del sistema en la formación, la selección o la experiencia antes de considerar un error negligente.",
+   "entregable": "Protocolo de evaluación de culpabilidad que aplique la prueba de sustitución una vez descartados el consumo de sustancias y el incumplimiento deliberado.",
+   "condiciones": [
+    "Tras un accidente o incidente grave en el que se señalan los actos inseguros de una persona concreta",
+    "Antes de decidir una sanción disciplinaria"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "5057",
+   "cita": "If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+   "dato": "un jurado de al menos cinco colegas de la misma especialidad",
+   "explicacion": "El libro habla de un 'jurado' de pares sin fijar ningún número mínimo de miembros. Grep en todo el libro de 'jury' y 'peers': solo aparecen en las líneas 5037, 5057 y 5266, ninguna con cifra; no aparece 'five colleagues' ni 'five peers'. El mínimo de cinco colegas es inventado."
+  }
+ },
+ "R002-036": {
+  "real": true,
+  "node_id": "gestion_de_errores",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-037": {
+  "real": true,
+  "node_id": "riesgo_actividades_mantenimiento",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-038": {
+  "real": true,
+  "node_id": "review_mesh_evaluacion_por_calificacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-039": {
+  "real": true,
+  "node_id": "prueba_sustitucion_johnston",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-040": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Recordatorios para Pasos Propensos a la Omisión",
+   "etiqueta": "Recuerda los Pasos que Se Olvidan",
+   "resumen": "Las omisiones son el tipo de error más frecuente en el montaje y la instalación. Algunos pasos son especialmente propensos a omitirse: los aislados funcionalmente de las acciones anteriores, los que quedan fuera de la vista, los que implican instalar varios elementos o los introducidos por cambios recientes en la práctica. Una vez identificados, la contramedida más sencilla es un buen recordatorio: llamativo, cercano en tiempo y lugar al paso, con información de cuándo, dónde y qué hacer, y que permita verificar el número de acciones o elementos.",
+   "entregable": "Recordatorios colocados en los pasos de mayor riesgo de omisión de cada procedimiento de mantenimiento, que cumplan los cinco criterios universales de un buen recordatorio.",
+   "condiciones": [
+    "Cuando un paso debe ejecutarse al inicio de la tarea, antes de alcanzar su objetivo principal",
+    "Al redactar o revisar procedimientos de montaje e instalación en mantenimiento"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "condiciones",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "2218",
+   "cita": "The step occurs close to the end of the task.",
+   "dato": "Cuando un paso debe ejecutarse al inicio de la tarea, antes de alcanzar su objetivo principal",
+   "explicacion": "El libro señala como rasgos que hacen propenso a omitirse un paso justo lo contrario: que ocurre cerca del final de la tarea (línea 2218, las 'salidas prematuras') y que llega después de haber alcanzado el objetivo principal pero antes de terminar la tarea (línea 2214). La condición invierte la secuencia."
+  }
+ },
+ "R002-041": {
+  "real": true,
+  "node_id": "modelo_accidente_organizacional",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-042": {
+  "real": true,
+  "node_id": "modelo_queso_suizo",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-043": {
+  "real": true,
+  "node_id": "limitaciones_ltif_indicador",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-044": {
+  "real": true,
+  "node_id": "medidas_reactivas_proactivas",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-045": {
+  "real": true,
+  "node_id": "espacio_de_seguridad",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-046": {
+  "real": true,
+  "node_id": "falla_sistemica_vs_error_individual",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-047": {
+  "real": true,
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-048": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R002-049": {
+  "real": true,
+  "node_id": "prevalencia_omisiones",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ }
+}

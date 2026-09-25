@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Ubicación Óptima del Stock de Seguridad a lo Largo de la Cadena",
+  "etiqueta": "Coloca tu Stock donde Rinde",
+  "resumen": "Cuando cada etapa de la cadena acumula su propio stock de seguridad para garantizar su nivel de servicio, el resultado no es óptimo y se acumula demasiado inventario. Aguas abajo el inventario vale más; aguas arriba vale menos, pero el stock cercano al cliente final garantiza mejor servicio. Las simulaciones muestran que se puede reducir el stock de seguridad un 30 % o más y subir el nivel de servicio entre un 10 y un 20 %, recortando el stock de seguridad en la etapa final, la más cercana al cliente, y concentrándolo en las etapas intermedias, donde su valor es menor.",
+  "entregable": "Mapa de la cadena con la cantidad de stock de seguridad asignada a cada etapa y el nivel de servicio objetivo para el cliente final, validado con simulación",
+  "condiciones": [
+   "Cuando cada eslabón de la cadena fija su stock de seguridad por su cuenta",
+   "Si el inventario total de la cadena crece sin que mejore el servicio al cliente final"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "2507",
+  "cita": "Simulation shows this performance is achieved by reducing the safety stocks in the intermediate stages of the supply chain while increasing them in the final stage of the supply chain so as to increase service levels for the end customer.",
+  "dato": "recortando el stock de seguridad en la etapa final, la más cercana al cliente, y concentrándolo en las etapas intermedias, donde su valor es menor",
+  "explicacion": "El libro dice lo contrario: la mejora se logra reduciendo el stock de seguridad en las etapas intermedias y aumentándolo en la etapa final, cerca del cliente. El resumen invierte la dirección de la redistribución."
+ },
+ {
+  "titulo": "Equilibrio entre Eficiencia y Riesgo en la Cadena de Suministro",
+  "etiqueta": "Equilibra Costo y Resiliencia",
+  "resumen": "Gestionar el riesgo de la cadena de suministro es un equilibrio continuo entre alto desempeño al menor costo y las precauciones para responder a los eventos más probables o más dañinos. Eliminar instalaciones, vehículos y rutas duplicadas, reducir proveedores y bajar el stock de seguridad abarata la operación, pero aumenta la gravedad de las disrupciones y reduce las opciones de respuesta. Tener proveedores e instalaciones duplicadas y más stock de seguridad da capacidad de respuesta, a costa de mayores costos operativos y menor rentabilidad.",
+  "entregable": "Matriz de riesgos críticos de la cadena con el costo de cada precaución (proveedor alterno, instalación duplicada, stock adicional) frente al daño que evita",
+  "condiciones": [
+   "Cuando la cadena depende de un solo proveedor para una pieza crítica",
+   "Cuando se busca que la cadena resista mejor las disrupciones reduciendo proveedores duplicados y el stock de seguridad"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "3830",
+  "cita": "To the extent that you do have duplicate suppliers, facilities, and vehicles as well as higher safety stocks, your supply chain will be better able to respond to disruptive events and keep on running.",
+  "dato": "Cuando se busca que la cadena resista mejor las disrupciones reduciendo proveedores duplicados y el stock de seguridad",
+  "explicacion": "El libro afirma que la resistencia a disrupciones viene de tener proveedores duplicados y más stock de seguridad; reducirlos aumenta el riesgo (línea 3828). La condición presenta la reducción como vía para ganar resiliencia, la consecuencia opuesta."
+ },
+ {
+  "titulo": "Cantidad Económica de Pedido (EOQ)",
+  "etiqueta": "Calcula Cuánto Pedir",
+  "resumen": "Según la estructura de costos de la empresa, existe una cantidad de pedido que es la más rentable: la cantidad económica de pedido (EOQ), que se calcula con el uso anual, el costo por pedido, el costo unitario y el costo anual de mantener inventario. Un artículo caro y de alto uso lleva pedidos pequeños y frecuentes; uno barato y de bajo uso, pedidos grandes y menos frecuentes. Como pequeños cambios en el EOQ no afectan mucho el costo total, conviene redondearlo al tamaño estándar de pedido más cercano, por ejemplo la caja.",
+  "entregable": "Tabla de EOQ por producto, redondeada al tamaño estándar de empaque y recalculada cada seis meses",
+  "condiciones": [
+   "Cuando la empresa compra inventario en lotes y no sabe qué cantidad pedir de cada producto",
+   "Si los costos de pedir y de mantener inventario no se han comparado por artículo"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "888",
+  "cita": "The EOQ for different products changes over time, so a company needs an ongoing measurement process to keep the numbers accurate and up to date.",
+  "dato": "recalculada cada seis meses",
+  "explicacion": "El libro solo pide un proceso de medición continuo para mantener el EOQ al día; no da ninguna periodicidad. Grep de 'six months', '6 months', 'semiannual' y 'twice a year' no encuentra nada sobre el EOQ (el único '2–6 months' de la línea 4651 es sobre construir sistemas). El plazo semestral es inventado."
+ },
+ {
+  "titulo": "Inventario Estacional con Capacidad Productiva Fija",
+  "etiqueta": "Anticipa tu Temporada Alta",
+  "resumen": "Cuando la capacidad productiva es fija y cara de ampliar, y la demanda futura la va a superar, conviene producir en los periodos de baja demanda y acumular inventario para cubrir los picos. Una vez conocida la demanda anual, se calcula el calendario más eficiente para usar esa capacidad. Esto exige pronósticos precisos, porque el inventario acumulado puede volverse obsoleto o disparar los costos de mantenerlo, y obliga al fabricante a ofrecer incentivos de precio para que los distribuidores compren y almacenen el producto mucho antes de que llegue la demanda.",
+  "entregable": "Plan anual de producción nivelada con el inventario estacional previsto por mes y los incentivos de precio para distribuidores",
+  "condiciones": [
+   "Cuando la demanda de temporada supera la capacidad productiva fija del negocio",
+   "Si los distribuidores pueden comprometer sus pedidos de temporada con al menos 60 días de anticipación"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+  "lineas": "876",
+  "cita": "Managing seasonal inventory also calls for manufacturers to offer price incentives to persuade distributors to purchase the product and put it in their warehouses well before demand for it occurs.",
+  "dato": "con al menos 60 días de anticipación",
+  "explicacion": "El libro solo dice que los distribuidores compren 'well before demand', sin fijar plazo. Grep de '60 days', 'sixty' y '45' no da ningún plazo de compromiso de pedidos de temporada (los '60' del libro son porcentajes, décadas o iteraciones de software de 30-60-90 días). El umbral de 60 días es inventado."
+ }
+]

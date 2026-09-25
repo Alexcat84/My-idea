@@ -1,0 +1,489 @@
+# Lote R042: 49 nodos a leer contra su libro (titulo, etiqueta, resumen, entregable, condiciones)
+
+### R042-001
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Cuándo Inspeccionar por Muestra en Lugar de al 100%
+- etiqueta: Decide Cuándo Muestrear
+- resumen: El muestreo de aceptación evalúa una parte del producto de un lote para aceptar o rechazar el lote completo. Su ventaja principal es la economía, y además reduce el daño por manejo, acorta el tiempo de disposición del lote y minimiza la monotonía y los errores de la inspección al 100%. Sus desventajas son los riesgos de muestreo, mayores costos administrativos y menos información sobre el producto. Funciona mejor cuando va precedido de un programa de prevención que ya logra un nivel aceptable de conformidad.
+- entregable: Criterio documentado de cuándo aplicar muestreo de aceptación y cuándo inspección al 100% para cada tipo de producto entrante
+- condiciones:
+  - condiciones[0]: Cuando el costo de inspeccionar es bajo en relación con el daño que causa dejar pasar un producto defectuoso
+  - condiciones[1]: Cuando la inspección es destructiva
+  - condiciones[2]: Cuando la inspección al 100% es monótona y provoca errores de inspección
+
+### R042-002
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Normalización de Datos en Benchmarking (Comparación Justa)
+- etiqueta: Compara tus Datos con Justicia
+- resumen: El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (escala, contrato, regulación, geografía). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF) y el Índice de Calidad Juran (JQI), útiles cuando la normalización simple por unidad no basta. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.
+- entregable: Conjunto de datos normalizados y validados, con índices comparables (CF, JQI) que permiten comparaciones justas entre sitios o unidades.
+- condiciones:
+  - condiciones[0]: Cuando necesitas comparar el desempeño de unidades, procesos o sujetos con diferencias significativas de tamaño, diseño o contexto
+  - condiciones[1]: Cuando las comparaciones directas de desempeño te llevan a conclusiones inconsistentes o erróneas
+
+### R042-003
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación Inicial de Calidad en Manufactura
+- etiqueta: Planifica la Calidad desde el Inicio
+- resumen: La planificación de calidad en manufactura inicia con la revisión del diseño del producto y del proceso para identificar características clave, determinar su importancia relativa, analizar el diagrama de flujo del proceso, evaluar capacidad y control del proceso, aplicar error-proofing, y validar sistemas de medición, buscando prevenir defectos y minimizar variabilidad.
+- entregable: Documento de plan de control de proceso con características clave identificadas y clasificadas
+- condiciones:
+  - condiciones[0]: Cuando se diseña o transfiere un nuevo producto a manufactura y se requiere planificación de calidad previa
+
+### R042-004
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Cómo integrar la calidad en tu plan de negocio
+- etiqueta: Alinea Calidad con tu Estrategia
+- resumen: Es el proceso sistemático mediante el cual tú defines tus metas de largo plazo relacionadas con la calidad y los clientes, integrándolas de forma equitativa con las metas financieras, de la gente que trabaja contigo, marketing y desarrollo, en un solo plan de negocio cohesivo. Ese plan luego se baja a metas más pequeñas, proyectos y acciones concretas en cada área. Integrarlo evita que tengas planes que se contradicen entre sí (dinero contra calidad) y asegura que elimines o cambies las actividades que no estén alineadas con tus metas.
+- entregable: Un plan estratégico anual único que integra tus metas de calidad, financieras y operativas, con proyectos concretos y quién se encarga de cada uno
+- condiciones:
+  - condiciones[0]: Cuando tienes planes de calidad y planes financieros que no se hablan entre sí
+  - condiciones[1]: Cuando buscas una ventaja competitiva que dure, a través de hacer las cosas muy bien
+  - condiciones[2]: Al empezar a transformar tu negocio usando la calidad como base
+
+### R042-005
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Oficina de Calidad y Excelencia (Quality and Excellence Office)
+- etiqueta: Crea tu Oficina de Calidad
+- resumen: Es la función organizacional responsable de asegurar que se diseñen, controlen y mejoren continuamente el producto, el proceso y las personas para satisfacer las necesidades cambiantes de los clientes. Debe actuar como un habilitador (enabler) tanto a nivel táctico como estratégico, integrando recursos que tradicionalmente estaban dispersos en departamentos paralelos, y hablando el 'lenguaje del dinero' además del 'lenguaje de las cosas' para influir en la dirección ejecutiva.
+- entregable: Documento de misión, estructura organizacional y matriz de responsabilidades (directas/indirectas) de la Oficina de Calidad
+- condiciones:
+  - condiciones[0]: Cuando la organización necesita centralizar o reestructurar su función de calidad
+  - condiciones[1]: Cuando existen departamentos paralelos de calidad con resultados mediocres
+  - condiciones[2]: Si se busca dar un rol estratégico a la función de calidad más allá de inspección
+
+### R042-006
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Responsabilidades No Delegables para Sostener las Mejoras
+- etiqueta: Asume tus Responsabilidades Gerenciales
+- resumen: Conjunto de responsabilidades que tu no puedes delegar si quieres sostener mejoras reales de desempeño: liderar tu mismo el esfuerzo de mejora, dar tiempo real a quien trabaja en ello, montar la estructura minima necesaria, asignar los recursos, revisar el avance de los proyectos y quitar obstaculos o resistencias cuando el progreso se estanca.
+- entregable: Liderazgo de la mejora claramente asumido, con tiempo y recursos definidos y un calendario para revisar el avance
+- condiciones:
+  - condiciones[0]: Cuando arrancas una iniciativa de mejora seria en tu negocio
+  - condiciones[1]: Cuando los proyectos de mejora no tienen tiempo, apoyo real ni seguimiento sostenido
+
+### R042-007
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Índices de Calidad para Planes de Muestreo (AQL, LQL, IQL, AOQL)
+- etiqueta: Fija tus Niveles de Calidad
+- resumen: Existen varios índices para definir niveles de calidad aceptable en el muestreo de aceptación: AQL (nivel de calidad aceptable, máximo porcentaje de no conformidad tolerable como promedio de proceso), LQL (nivel límite de calidad, define calidad insatisfactoria, también llamado LTPD), IQL (nivel de indiferencia, con probabilidad de aceptación de 0.5) y AOQL (límite de calidad promedio de salida, el peor punto posible en la calidad de salida tras inspección). Estos índices permiten diseñar planes de muestreo con riesgos cuantificables para productor y consumidor.
+- entregable: Documento con los índices de calidad (AQL, LQL, AOQL) definidos y justificados para el producto o proceso a inspeccionar
+- condiciones:
+  - condiciones[0]: Cuando se necesita diseñar o evaluar un esquema de inspección por muestreo de lotes
+  - condiciones[1]: Si existe negociación de calidad aceptable entre comprador y proveedor
+
+### R042-008
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Benchmarking Continuo
+- etiqueta: Vigila tu Progreso Constantemente
+- resumen: El benchmarking debe realizarse de forma continua, no como un evento único, por dos razones principales: permite a la organización monitorear su propia tendencia de desempeño a lo largo del tiempo y determinar la efectividad de sus iniciativas de mejora, y reconoce que los competidores también mejoran constantemente, por lo que el estándar de comparación (benchmark) está en movimiento permanente.
+- entregable: Sistema de benchmarking recurrente con métricas comparativas históricas
+- condiciones:
+  - condiciones[0]: Cuando la organización ya implementó mejoras derivadas de un primer benchmarking y desea sostener el avance
+
+### R042-009
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Organización de Equipos para la Calidad en Servicios
+- etiqueta: Organiza Equipos para la Calidad
+- resumen: Tus acciones pesan mas que tus palabras: quienes te acompañan observan lo que haces, no solo lo que dices sobre la calidad. Conviene crear un espacio fijo de revisión, aunque sea contigo y una o dos personas mas, que se reuna con regularidad. Los equipos, sean puntuales, permanentes o autodirigidos, son un mecanismo comun para impulsar la mejora, como muestran los casos de American Express, Ritz-Carlton y Kaiser Permanente con sus equipos de calidad en el trabajo diario.
+- entregable: Una estructura clara de responsabilidades de calidad, con roles definidos y un mecanismo fijo de revisión
+- condiciones:
+  - condiciones[0]: Cuando arrancas un programa de calidad en tu negocio de servicios
+  - condiciones[1]: Si necesitas repartir la toma de decisiones operativas entre quienes te ayudan
+
+### R042-010
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Cómo planear un estudio para saber si tu proceso es capaz de cumplir lo que promete
+- etiqueta: Planifica tu Estudio de Capacidad
+- resumen: Antes de ponerte a recolectar datos, aclara para qué quieres el estudio y qué pasos necesitas dar para lograrlo. Si tu proceso es complicado o buscas un nivel de defectos muy bajo (partes por millón), conviene seguir una secuencia de nueve pasos que va desde describir el proceso hasta armar el plan de análisis de los datos.
+- entregable: Un plan escrito del estudio de capacidad, listo para ponerlo en marcha
+- condiciones:
+  - condiciones[0]: Cuando necesitas un estudio formal de capacidad para un proceso complicado
+  - condiciones[1]: Cuando buscas cumplir un nivel de defectos muy bajo, medido en partes por millón
+
+### R042-011
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planes de Muestreo de Aceptación
+- etiqueta: Define tus Criterios de Muestreo
+- resumen: Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). El diseño debe balancear el costo de clasificación (sorting) versus muestreo, considerando también el error de medición.
+- entregable: Plan de muestreo documentado con niveles de aceptación, tamaños de muestra y criterios de rechazo
+- condiciones:
+  - condiciones[0]: Cuando se requiere inspeccionar lotes de producto entrante de un proveedor
+
+### R042-012
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación de Calidad de la Cadena de Suministro (Sourcing Process)
+- etiqueta: Organiza tu Cadena de Suministro
+- resumen: Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad histórica de compras, identificar commodities críticos, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.
+- entregable: Estrategia de sourcing aprobada por la dirección con plan de implementación
+- condiciones:
+  - condiciones[0]: Cuando se diseña la estrategia global de abastecimiento de una organización
+
+### R042-013
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Precisión y Exactitud de los Sensores de Medición
+- etiqueta: Calibra Precisión y Exactitud
+- resumen: La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. La exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.
+- entregable: Plan de calibración y mantenimiento de sensores con métricas de precisión y exactitud documentadas
+- condiciones:
+  - condiciones[0]: Cuando se depende de mediciones humanas para evaluar calidad (inspección, auditoría)
+  - condiciones[1]: Cuando se detectan inconsistencias en los datos de medición recolectados
+
+### R042-014
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelo SERVQUAL para Medición de Calidad de Servicio
+- etiqueta: Mide la Calidad de tu Servicio
+- resumen: SERVQUAL es un modelo que identifica cinco dimensiones para medir la calidad percibida en servicios: tangibles (apariencia física), confiabilidad (desempeño consistente), capacidad de respuesta (rapidez), garantía (confianza) y empatía (atención personalizada). Permite cuantificar aspectos que tradicionalmente eran evaluados de forma cualitativa.
+- entregable: Reporte de brechas de calidad percibida por dimensión SERVQUAL
+- condiciones:
+  - condiciones[0]: Cuando se necesite medir la calidad percibida por el cliente en un servicio intangible
+
+### R042-015
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Muestreo de Aceptación
+- etiqueta: Acepta o Rechaza por Muestra
+- resumen: Proceso de evaluar una porción de producto en un lote para decidir aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo excesivo y minimiza errores por monotonía, aunque implica riesgos de muestreo (rechazar buenos lotes o aceptar malos).
+- entregable: Plan de muestreo de aceptación documentado con n, c, y niveles de riesgo definidos
+- condiciones:
+  - condiciones[0]: Cuando el costo de inspección 100% es alto respecto al daño potencial
+  - condiciones[1]: Cuando la inspección es destructiva o genera monotonía
+
+### R042-016
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelo Shingo de Evaluación de Excelencia Operacional
+- etiqueta: Evalúa tu Excelencia Operacional
+- resumen: El Modelo Shingo evalua tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos tipicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.
+- entregable: Evaluación completa con una valoración por dimensión y plan de cierre de brechas de madurez
+- condiciones:
+  - condiciones[0]: Cuando quieres prepararte formalmente para aplicar a un premio de excelencia operacional
+  - condiciones[1]: Cuando necesitas una autoevaluación estructurada de tu nivel de madurez organizacional
+  - condiciones[2]: Cuando quieres priorizar acciones de mejora en las dimensiones con menor valoración
+
+### R042-017
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Plan de Control
+- etiqueta: Sostén tus Mejoras de Calidad
+- resumen: El plan de control se usa para sostener las ganancias obtenidas de un proyecto de mejora de calidad. Especifica las variables de control a monitorear, cómo medirlas y las acciones a tomar según criterios explícitos, asegurando el máximo uso del autocontrol.
+- entregable: Plan de control documentado con variables, mediciones, responsables y acciones correctivas definidas
+- condiciones:
+  - condiciones[0]: Cuando se ha completado una mejora de proceso y se necesita sostener los resultados en el tiempo
+  - condiciones[1]: Cuando el equipo requiere claridad sobre responsabilidades ante desviaciones
+
+### R042-018
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Premio Shingo (Shingo Prize)
+- etiqueta: Aspira al Premio Shingo
+- resumen: Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean de una organización.
+- entregable: Postulación documentada al Premio Shingo con evidencia de prácticas Lean implementadas
+- condiciones:
+  - condiciones[0]: Cuando la organización ha implementado Lean de forma madura y busca validación externa
+  - condiciones[1]: Cuando se desea benchmarking formal frente a estándares de excelencia operativa
+
+### R042-019
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Los Ocho Desperdicios de Lean (Ohno)
+- etiqueta: Reduce el Desperdicio en tu Proceso
+- resumen: Taiichi Ohno identifico siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Identificar estos desperdicios es el primer paso para aplicar Lean tanto en manufactura como en servicios. Debes enfocarte en reducir o eliminar estos desperdicios, tipicamente mediante eventos de mejora rápida tipo Kaizen, cuantificando su impacto para saber donde concentrar tu esfuerzo antes de rediseñar cualquier paso del proceso.
+- entregable: Lista de desperdicios identificados por categoria, priorizados con plan de acción y metricas de seguimiento.
+- condiciones:
+  - condiciones[0]: Cuando inicias un análisis o proyecto Lean de un proceso productivo o de servicio
+  - condiciones[1]: Cuando necesitas un diagnostico detallado de ineficiencias en tu proceso
+  - condiciones[2]: Cuando organizas un evento de mejora rápida para tu negocio
+
+### R042-020
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Sensores Humanos y Tecnológicos: Precisión, Exactitud y Mantenimiento
+- etiqueta: Elige y Cuida tus Sensores
+- resumen: La precisión de un sensor es su capacidad de repetir sus resultados en pruebas sucesivas, y en los sensores tecnológicos suele ser alta y fácil de cuantificar. Las personas que actúan como sensores (inspectores, auditores, supervisores, evaluadores) son notoriamente menos precisas, así que conviene entender sus límites antes de decidir con sus datos. La exactitud se ajusta con facilidad recalibrando conforme a la norma ISO 10012, pero la precisión tiene un límite propio del diseño y superarlo exige rediseñar el sensor. Como el mal uso o el mantenimiento inadecuado pueden bajar la precisión por debajo de su capacidad, al elegir cada sensor conviene prever calendarios de mantenimiento y listas de verificación.
+- entregable: Inventario de sensores humanos y tecnológicos con sus límites de precisión, su calendario de mantenimiento y la lista de verificación de cada revisión
+- condiciones:
+  - condiciones[0]: Cuando tomas decisiones con datos que vienen de inspectores, auditores o evaluadores
+  - condiciones[1]: Cuando un instrumento da resultados que no se repiten en mediciones sucesivas
+
+### R042-021
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación Estratégica y Despliegue (Catch Ball)
+- etiqueta: Despliega tu Estrategia en Metas
+- resumen: Proceso estructurado que va desde definir la misión y visión organizacional hasta traducir estrategias clave en metas cuantificadas y objetivos operativos específicos. El despliegue ocurre mediante un proceso iterativo de comunicación bidireccional (catch ball) donde las estrategias se circulan hacia abajo en la jerarquía y las ideas/sugerencias regresan hacia arriba, refinando las metas hasta que son precisas, prácticas y cuentan con dueños asignados.
+- entregable: Plan estratégico desplegado con metas cuantificadas, objetivos operativos, dueños asignados y sistema de métricas de seguimiento (scorecard)
+- condiciones:
+  - condiciones[0]: Cuando la organización necesita alinear todos los niveles jerárquicos hacia objetivos comunes
+  - condiciones[1]: Cuando se busca pasar de 'buena' a 'excelente' en desempeño organizacional
+
+### R042-022
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación de Inspección
+- etiqueta: Define tus Puntos de Inspección
+- resumen: Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.
+- entregable: Mapa de estaciones de inspección con instrucciones y recursos asignados.
+- condiciones:
+  - condiciones[0]: Al diseñar o rediseñar un sistema de control de calidad para un proceso productivo o de servicio.
+
+### R042-023
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Metodología de Medición del Costo de Mala Calidad
+- etiqueta: Mide el Costo de tus Errores
+- resumen: Consiste en cuatro pasos para medir el costo de la mala calidad de forma práctica y útil para decidir qué hacer: (1) Identificar las actividades que resultan de la mala calidad mediante lluvia de ideas y conversaciones con quienes conocen bien el negocio; (2) Decidir cómo estimar los costos, usando el enfoque de recursos totales o el de costo unitario; (3) Recolectar datos y estimar costos siguiendo buenas prácticas de recolección (formularios simples, capacitación de quienes recolectan, revisión de los resultados); (4) Analizar los resultados y decidir los siguientes pasos, como elegir qué mejorar primero. No se necesita precisión contable exacta, solo estimaciones consistentes y sin sesgo.
+- entregable: Un listado priorizado de actividades relacionadas con la mala calidad junto con sus estimaciones de costo, listo para elegir en qué mejorar primero
+- condiciones:
+  - condiciones[0]: Cuando necesitas datos concretos sobre dónde se generan los costos de mala calidad en tu negocio
+  - condiciones[1]: Cuando estás preparando la selección de mejoras a implementar (Six Sigma u otro método)
+
+### R042-024
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación de la Inspección
+- etiqueta: Planifica tus Puntos de Inspección
+- resumen: Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).
+- entregable: Plan de inspección documentado con estaciones, instrucciones, clasificación de características y de defectos
+- condiciones:
+  - condiciones[0]: Cuando se diseña un nuevo proceso de manufactura
+  - condiciones[1]: Cuando se requiere formalizar los puntos de control de calidad en producción
+
+### R042-025
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Exactitud de la Inspección Humana y Efecto de la Monotonía
+- etiqueta: Cuida la Precisión de tus Inspectores
+- resumen: La exactitud de la inspección depende de lo completa que sea la planificación de la inspección, del sesgo y la precisión de los instrumentos y del nivel de error humano. Los errores son especialmente altos en tareas muy monótonas, como revisar frascos de alimentos buscando partículas extrañas o revisar equipaje en un control de seguridad. La monotonía que hace que un inspector pase por alto defectos aparece solo tras jornadas largas de inspección, y con inspección monótona se detecta entre el 80 y el 90 por ciento de los defectos. Por eso una inspección al 100 por ciento que es monótona no es efectiva al 100 por ciento; la automatización elimina ese error humano.
+- entregable: Diagnóstico de las tareas de inspección monótonas con su tasa estimada de detección y propuesta de automatización o rediseño de las más críticas
+- condiciones:
+  - condiciones[0]: Cuando confías en una inspección al 100 por ciento hecha por personas para frenar todos los defectos
+  - condiciones[1]: Cuando siguen llegando defectos al cliente a pesar de inspeccionar cada unidad
+
+### R042-026
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Predicción de Confiabilidad Durante el Diseño
+- etiqueta: Predice la Confiabilidad en Diseño
+- resumen: Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales).
+- entregable: Reporte de predicción de confiabilidad del sistema con diagramas de bloques funcionales y de confiabilidad, y banco de datos de partes documentado
+- condiciones:
+  - condiciones[0]: Cuando se está en fase de diseño de un producto y se requiere anticipar su confiabilidad antes de la producción
+
+### R042-027
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelo de Costo Óptimo de Calidad
+- etiqueta: Encuentra tu Punto Óptimo de Calidad
+- resumen: Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo esto no siempre es económicamente viable. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.
+- entregable: Un análisis gráfico y numérico que muestre si alcanzaste el óptimo económico de calidad o si aún existen oportunidades de mejora rentables, con recomendaciones de inversión.
+- condiciones:
+  - condiciones[0]: Cuando necesites decidir cuánto invertir en prevención versus aceptar cierto nivel de fallas
+  - condiciones[1]: Al evaluar si tu esfuerzo de mejora de calidad ya llegó a su límite económico
+  - condiciones[2]: Cuando quieras definir el nivel de inversión en calidad que te resulta más rentable
+
+### R042-028
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación para Recolección y Análisis de Datos
+- etiqueta: Planifica tu Recolección de Datos
+- resumen: El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. Involucra 17 pasos que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.
+- entregable: Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados
+- condiciones:
+  - condiciones[0]: Antes de iniciar cualquier esfuerzo de recolección de datos para resolver un problema de calidad
+  - condiciones[1]: Cuando se detecta que la organización practica 'buceo de datos' sin un objetivo claro
+
+### R042-029
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Necesidad del Cliente de Ser Mantenido Informado
+- etiqueta: Mantén Informado a tu Cliente
+- resumen: Los clientes que enfrentan incertidumbre (retrasos, fallas de servicio) requieren ser informados activamente, incluso si no pueden hacer nada al respecto. La falta de información genera antagonismo hacia la organización, mientras que mantenerlos informados reduce ansiedad y mejora la percepción del servicio. También existe el riesgo ético/legal de ocultar deliberadamente no conformidades a los clientes.
+- entregable: Protocolo de comunicación de incidencias/retrasos hacia el cliente
+- condiciones:
+  - condiciones[0]: Cuando ocurren fallas, retrasos o no conformidades que afectan al cliente
+  - condiciones[1]: Cuando se detecta un patrón de quejas relacionado con falta de comunicación
+
+### R042-030
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Optimización de Características y Metas del Producto
+- etiqueta: Afina las Metas de tu Producto
+- resumen: Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados y superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.
+- entregable: Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas
+- condiciones:
+  - condiciones[0]: Cuando el diseño preliminar del producto está completo y se necesita ajustar antes de finalizarlo
+  - condiciones[1]: Si existen conflictos entre necesidades del cliente y restricciones del proveedor
+
+### R042-031
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelo de Madurez de Capacidades (CMM/CMMI)
+- etiqueta: Evalúa la Madurez de tus Procesos
+- resumen: El CMM (y su evolución CMMI) es un modelo desarrollado por el SEI de Carnegie Mellon para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Se basa en observación empírica de organizaciones y permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.
+- entregable: Informe de evaluación de madurez de procesos (nivel CMM/CMMI) con plan de mejora hacia el siguiente nivel
+- condiciones:
+  - condiciones[0]: Cuando la organización desarrolla software o sistemas y necesita mejorar la madurez de sus procesos
+  - condiciones[1]: Cuando se requiere calificar como proveedor ante contratos gubernamentales o de defensa
+
+### R042-032
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Poka-Yoke (A Prueba de Errores)
+- etiqueta: Previene el Error en su Origen
+- resumen: Técnica Lean que consiste en diseñar mecanismos o procedimientos que hacen imposible o muy difícil que ocurra un error humano en el proceso, previniendo defectos en su origen en lugar de detectarlos después de producidos.
+- entregable: Mecanismo o procedimiento implementado que previene físicamente la ocurrencia de un error específico
+- condiciones:
+  - condiciones[0]: Cuando se detectan defectos recurrentes causados por error humano
+  - condiciones[1]: Cuando la inspección posterior no es suficiente para garantizar calidad
+
+### R042-033
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Tu política de calidad y cómo la refuerzas con quién sumas a tu equipo
+- etiqueta: Refuerza tu Política de Calidad
+- resumen: Es la decisión que dejas clara por escrito sobre qué pesa más para ti: la calidad o la cantidad de lo que entregas. Esa decisión solo tiene valor si se refleja en a quién eliges sumar a tu negocio, cómo lo recibes y qué le explicas desde el primer día. Si dices una cosa y en la práctica premias otra, tu palabra pierde credibilidad.
+- entregable: Una política de calidad escrita, reflejada en cómo eliges e integras a quien trabaja contigo
+- condiciones:
+  - condiciones[0]: Cuando no tienes una declaración clara de qué significa calidad para tu negocio
+  - condiciones[1]: Cuando lo que dices valorar no coincide con lo que en verdad haces en la práctica
+
+### R042-034
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelo de Transformación de Juran (Cinco Breakthroughs)
+- etiqueta: Logra los Cinco Grandes Cambios
+- resumen: Modelo que establece que para lograr una Cultura de Excelencia sostenible, una organización debe lograr cinco breakthroughs (rupturas/avances): (1) Liderazgo y gestión, (2) Organización y estructura, (3) Desempeño actual, (4) Cultura, (5) Sostenibilidad ágil. Sin estos avances, los resultados de mejora pueden ser buenos a corto plazo pero no sostenibles. El cambio debe ser intencional y sistemático, no producto del azar, ya que el cambio por 'casualidad' no es predecible ni sostenible.
+- entregable: Roadmap de transformación organizacional con los cinco breakthroughs, brechas identificadas y proyectos asociados a cada uno
+- condiciones:
+  - condiciones[0]: Cuando la organización busca alcanzar un estado de excelencia sostenible a largo plazo
+  - condiciones[1]: Cuando mejoras puntuales anteriores no lograron sostenerse en el tiempo
+
+### R042-035
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Tablas de Muestreo Dodge–Romig (LTPD y AOQL)
+- etiqueta: Usa Tablas de Muestreo Precisas
+- resumen: Las tablas Dodge-Romig ofrecen planes de muestreo por atributos rectificantes, es decir, asumen que todos los lotes rechazados son inspeccionados al 100% y los defectuosos son reemplazados por unidades aceptables. Existen dos enfoques: LTPD (protege calidad lote a lote) y AOQL (protege calidad promedio a largo plazo). Se usan cuando se prioriza la protección contra mala calidad ya sea a nivel de lote individual o en el promedio de muchos lotes.
+- entregable: Plan de muestreo rectificante Dodge-Romig seleccionado con parámetros de LTPD/AOQL definidos
+- condiciones:
+  - condiciones[0]: Cuando es factible y deseable la inspección 100% de lotes rechazados
+  - condiciones[1]: Si se requiere protección tanto lote a lote como en el largo plazo
+
+### R042-036
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Necesidades de Uso Amigable (User-Friendly)
+- etiqueta: Simplifica el Uso para Todos
+- resumen: Dado que muchos usuarios son 'amateurs' respecto a la tecnología del producto, es necesario diseñar productos, servicios y documentación (manuales, formularios) que sean simples, no ambiguos y comprensibles, además de garantizar compatibilidad amplia entre sistemas/productos.
+- entregable: Documentación y/o interfaz validada mediante pruebas de usabilidad con usuarios reales
+- condiciones:
+  - condiciones[0]: Cuando el producto/servicio requiere instrucciones o manuales complejos
+  - condiciones[1]: Cuando existen quejas relacionadas con la dificultad de uso o comprensión
+
+### R042-037
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Los Pocos Vitales y los Muchos Útiles
+- etiqueta: Prioriza tus Proyectos Vitales
+- resumen: Principio de Pareto aplicado a la selección de proyectos: los 'pocos vitales' son proyectos grandes que generan el mayor impacto financiero y de liderazgo, mientras que los 'muchos útiles' tienen efecto menor en resultados financieros pero gran impacto en relaciones humanas y participación del empleado. Ambos tipos son necesarios y pueden ejecutarse simultáneamente asignando diferentes personas a cada uno, evitando el error de solo hacer proyectos de 'apagar incendios' que no atacan el desperdicio crónico.
+- entregable: Cartera balanceada de proyectos vitales y útiles con responsables asignados
+- condiciones:
+  - condiciones[0]: Cuando la organización ha ejecutado muchos proyectos sin impacto visible en resultados
+  - condiciones[1]: Cuando se busca balancear participación del empleado con resultados financieros
+
+### R042-038
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Necesidades Declaradas vs Necesidades Reales del Cliente
+- etiqueta: Descubre la Necesidad Real
+- resumen: Los clientes expresan sus necesidades en su propio lenguaje, comúnmente en forma de bienes/productos, cuando su necesidad real es el servicio que dicho bien provee. La preocupación por vender bienes puede desviar la atención de las necesidades reales del cliente (ej: 'Marketing Myopia' de Levitt: los ferrocarriles fallaron por enfocarse en trenes en vez de en transporte).
+- entregable: Documento de traducción de necesidades declaradas a necesidades reales del cliente
+- condiciones:
+  - condiciones[0]: Cuando el enfoque organizacional está centrado en el producto y no en el servicio subyacente
+  - condiciones[1]: Cuando se busca innovar más allá de las especificaciones actuales del producto
+
+### R042-039
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Pirámide de Control (Delegación de Responsabilidades)
+- etiqueta: Delega tu Control en Niveles
+- resumen: Como no puedes controlar todo tu negocio de manera directa, el control se reparte en tres niveles: lo que se controla solo con tecnología, sin que nadie tenga que intervenir; lo que puede autocontrolar la persona que te ayuda, dándole criterio propio; y los pocos asuntos realmente vitales que decides tú. Tu tarea es enfocarte solo en esas pocas decisiones vitales y soltar el resto con reglas claras.
+- entregable: Un esquema simple con lo que se automatiza, lo que decide quien te ayuda y lo que decides tú
+- condiciones:
+  - condiciones[0]: Cuando tienes demasiados frentes para controlar todo tú mismo
+  - condiciones[1]: Si estás saturado de decisiones pequeñas que no cambian el rumbo del negocio
+
+### R042-040
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Inspección Rectificante con Tablas Dodge-Romig
+- etiqueta: Protege tu Calidad Lote a Lote
+- resumen: Las tablas de Dodge y Romig ofrecen cuatro conjuntos de planes por atributos, de muestreo simple o doble, que ponen el énfasis en la calidad lote a lote (LTPD) o en la calidad promedio a largo plazo (AOQL). A diferencia de ANSI/ASQC Z1.4, asumen que todo lote rechazado se inspecciona al 100% y que los defectuosos se reemplazan por unidades aceptables. Los planes LTPD dan una probabilidad de aceptación de 0.1 a un lote con calidad LTPD, y los planes AOQL aseguran que la calidad promedio de muchos lotes no supere el AOQL.
+- entregable: Plan de muestreo rectificante Dodge-Romig con su LTPD y su AOQL definidos, aplicable a lotes de al menos 500 unidades
+- condiciones:
+  - condiciones[0]: Cuando puedes inspeccionar al 100% los lotes rechazados y reemplazar las unidades defectuosas
+  - condiciones[1]: Cuando necesitas proteger la calidad promedio que sale hacia tu cliente a lo largo de muchos lotes
+
+### R042-041
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Ajusta a fondo tu proceso y cada una de sus partes
+- etiqueta: Optimiza tus Procesos y Subprocesos
+- resumen: Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar tanto el proceso completo como cada parte de él por separado. Busca el mejor equilibrio entre costo, tiempo y calidad, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.
+- entregable: Tu diseño de proceso ajustado, documentado y listo para probar cuánto puede rendir.
+- condiciones:
+  - condiciones[0]: Cuando ya tienes el diseño básico de tu proceso y necesitas refinarlo
+
+### R042-042
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Perfeccionismo como Desperdicio de Valor (Cuándo la Perfección Sí Vale)
+- etiqueta: Sabe Cuándo Buscar la Perfección
+- resumen: Existe un impulso humano instintivo hacia la precisión y la perfección que en ciertos contextos, como seguridad alimentaria, salud, energía nuclear o aviación, resulta indispensable y necesario. Sin embargo, en la mayoría de las demás situaciones, perseguir la perfección más allá de lo que aporta valor real, estético o tecnológico se convierte en 'perfeccionismo': un consumo de materiales, energía y recursos que agrega costo sin aumentar la aptitud del producto para su propósito ni la satisfacción del cliente. Evitar este desperdicio requiere un análisis de 'fit for purpose' que distinga con claridad los atributos críticos de los que no lo son, evitando así la sobreingeniería y sus costos innecesarios.
+- entregable: Matriz de criticidad de atributos de calidad (crítico de seguridad vs no crítico) con recomendaciones de inversión y especificaciones revisadas.
+- condiciones:
+  - condiciones[0]: Cuando inviertes recursos significativos en mejorar atributos no críticos
+  - condiciones[1]: Cuando notas altos costos sin mejora perceptible en la satisfacción del cliente
+  - condiciones[2]: Cuando tiendes a sobre especificar tu producto más allá de lo que el cliente requiere
+
+### R042-043
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación Económica Conjunta con Proveedores (Value Engineering y Costo Total de Propiedad)
+- etiqueta: Analiza el Valor con Proveedores
+- resumen: Se centra en analizar el valor del producto comprado (ingeniería de valor) en lugar de solo la conformidad con especificación, y en calcular el costo total de propiedad incluyendo inspección de entrada, rechazos y costos de uso, ya que el precio más bajo no siempre resulta en el menor costo total.
+- entregable: Análisis de costo total de propiedad comparativo entre proveedores candidatos
+- condiciones:
+  - condiciones[0]: Cuando se comparan ofertas de proveedores para una decisión de compra
+
+### R042-044
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Normas Culturales para la Transformación de Calidad
+- etiqueta: Construye tu Cultura de Calidad
+- resumen: Conjunto de creencias organizacionales que facilitan la transformación cultural hacia la calidad: priorizar calidad sobre cantidad, compromiso fanático con el cliente, búsqueda de metas ambiciosas y mejora continua, código de conducta ético orientado al cliente, y creencia en la necesidad de cambio adaptativo continuo.
+- entregable: Documento de normas culturales de calidad integrado en el manual organizacional
+- condiciones:
+  - condiciones[0]: Cuando se busca institucionalizar una cultura de calidad sostenible
+  - condiciones[1]: Cuando las mejoras puntuales no se traducen en cambio cultural duradero
+
+### R042-045
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Planificación de una Auditoría Individual
+- etiqueta: Planifica cada Auditoría a Fondo
+- resumen: Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y la conformación del equipo auditor liderado por un auditor líder.
+- entregable: Plan de auditoría específico con cronograma, equipo asignado y checklist preliminar
+- condiciones:
+  - condiciones[0]: Cuando se va a realizar una auditoría específica dentro del programa general
+
+### R042-046
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Cómo organizar el mando y la sucesión en un negocio familiar (gobierno corporativo)
+- etiqueta: Organiza el Gobierno Familiar
+- resumen: Si tu negocio es familiar, como más del 70% de las organizaciones registradas en el mundo, necesitas pensar el mando de otra manera, sobre todo cuando te acercas al momento de dejar el timón. Busca ayuda externa de alguien que conozca el tema para armar un plan maestro que incluya un consejo familiar, una junta directiva profesional y la entrada gradual de familiares, gerentes clave y directores externos independientes con la formación necesaria.
+- entregable: Un plan maestro de sucesión y de mando familiar, con el consejo familiar y la junta directiva ya definidos
+- condiciones:
+  - condiciones[0]: Cuando empiezas a planear tu retiro de un negocio familiar
+  - condiciones[1]: Cuando hay varias generaciones de tu familia metidas en la gestión del negocio
+  - condiciones[2]: Cuando tu junta actual solo firma sin supervisar de verdad
+
+### R042-047
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Organizaciones Paralelas para Crear Cambio
+- etiqueta: Crea Estructuras Paralelas de Cambio
+- resumen: Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales que los procedimientos normales no pueden abordar. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).
+- entregable: Carta de equipo (project charter) para cada organización paralela creada, con misión y duración definida
+- condiciones:
+  - condiciones[0]: Cuando se requiere abordar un problema o cambio que no puede resolverse dentro de la estructura de línea regular
+  - condiciones[1]: Al lanzar iniciativas Six Sigma, Lean o kaizen
+
+### R042-048
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: PRE-Control
+- etiqueta: Usa el Pre-Control Estadístico
+- resumen: PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.
+- entregable: Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales
+- condiciones:
+  - condiciones[0]: Cuando se requiere un método de control simple y rápido en planta
+  - condiciones[1]: Cuando el enfoque debe ser en conformidad con especificación más que en control estadístico puro
+
+### R042-049
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Necesidades Psicológicas y Culturales del Cliente
+- etiqueta: Atiende lo Emocional del Cliente
+- resumen: Más allá de las características técnicas, las necesidades del cliente incluyen aspectos psicológicos (estatus, sentido de bienestar) y culturales (preservación de estatus, hábitos). Estas necesidades explican por qué productos técnicamente idénticos pueden venderse a precios muy diferentes según el empaque, entorno de venta o experiencia asociada.
+- entregable: Perfil de necesidades psicológicas/culturales del segmento de cliente objetivo
+- condiciones:
+  - condiciones[0]: Cuando existe resistencia al cambio sin justificación técnica clara
+  - condiciones[1]: Cuando productos técnicamente idénticos tienen diferencias de precio o percepción significativas

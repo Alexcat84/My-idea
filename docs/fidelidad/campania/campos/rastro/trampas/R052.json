@@ -1,0 +1,75 @@
+[
+ {
+  "titulo": "Reducir las entregas fallidas con alternativas al domicilio",
+  "etiqueta": "Evita las entregas fallidas",
+  "resumen": "Cuando el cliente no está en casa al pasar la furgoneta, se le deja un aviso y la entrega queda pendiente. Lo habitual es que el transportista haga un solo reintento y, si vuelve a fallar, el paquete regresa directamente a tu bodega sin pasar por un punto de recogida. Esto frustra al cliente y encarece cada pedido. Ofrecer alternativas como recoger en tienda, dejar el paquete con un vecino designado, en una tienda de barrio o en un casillero reduce esos viajes perdidos. El cliente suele resistirse a pagar por estas opciones, así que conviene presentarlas como una comodidad y no como un cargo extra.",
+  "entregable": "Una lista de dos o tres alternativas de entrega para cuando el cliente no esté en casa, con el costo de cada una.",
+  "condiciones": [
+   "Tus paquetes vuelven porque el cliente no estaba en casa cuando llegó el repartidor",
+   "Tus clientes se quejan de tener que esperar todo el día a que llegue su pedido"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+  "lineas": "234",
+  "cita": "Two return visits are usually made and failure on the last visit means that the product is taken to a distribution centre/warehouse",
+  "dato": "Lo habitual es que el transportista haga un solo reintento y, si vuelve a fallar, el paquete regresa directamente a tu bodega sin pasar por un punto de recogida.",
+  "explicacion": "El libro dice que normalmente se hacen dos visitas de reintento y que, si la última falla, el producto va a un centro de distribución o almacén desde donde el cliente tiene que recogerlo. El resumen cambia la secuencia (un solo reintento) y la consecuencia (vuelve al remitente en vez de quedar para recogida del cliente). El resto del nodo es fiel: el aviso al cliente, la frustración y el costo, las alternativas (tienda, vecinos designados, tiendas locales, casilleros) y la resistencia a pagar ('customers are loathe to pay for this service') están en la misma línea 234."
+ },
+ {
+  "titulo": "Decidir el destino de cada producto devuelto",
+  "etiqueta": "Clasifica tus devoluciones",
+  "resumen": "Cuando un producto vuelve, no basta con guardarlo otra vez en el estante. Hay que revisarlo uno por uno y decidir si se revende como nuevo, se reacondiciona, se repara más a fondo, se reconstruye o se recicla, y en qué punto de tu cadena vuelve a entrar. Esta revisión consume mucha mano de obra, porque cada producto se evalúa por separado, y el producto devuelto suele valer algo menos que el original. En algunos casos, como ciertos libros, sale más barato destruir el devuelto y reponerlo que revisarlo, y algunas tiendas prefieren vender las devoluciones con descuento en otro canal en vez de a precio completo.",
+  "entregable": "Una tabla simple con los destinos posibles de tus devoluciones y el criterio para enviar cada producto a uno u otro.",
+  "condiciones": [
+   "Acumulas productos devueltos en un rincón sin saber qué hacer con ellos",
+   "Recibes devoluciones fuera del plazo legal de 14 días y no sabes si debes aceptarlas",
+   "Revendes como nuevo todo lo que vuelve sin revisarlo antes"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+  "lineas": "224",
+  "cita": "When a product is returned, a whole management decision system will need to be implemented in order to assess into which of the categories above the product falls and where in the supply chain it should be reinserted.",
+  "dato": "fuera del plazo legal de 14 días",
+  "explicacion": "El capítulo no da ningún plazo legal de devolución: Grep en todo el libro no encuentra '14 d', 'fourteen', 'days', 'legal', 'cooling', 'withdraw', 'consumer rights' ni 'distance selling'. La única norma que cita es la directiva WEEE (línea 228), que trata de retirar gratis el aparato eléctrico viejo, no de plazos de devolución. El resto del nodo es fiel: las cinco opciones de destino (líneas 218 a 222), la evaluación una por una que exige mucha mano de obra (línea 224), el valor más bajo del devuelto, el caso de los libros y la reventa por canales de descuento (línea 226)."
+ },
+ {
+  "titulo": "Preparar las preguntas de implicación antes de cada llamada",
+  "etiqueta": "Planifica tus preguntas de implicación",
+  "resumen": "Las preguntas de implicación exploran las consecuencias de un problema del cliente y lo hacen parecer lo bastante serio como para justificar una acción. Son las más difíciles de formular: en la llamada promedio estudiada, solo una de cada veinte preguntas era de implicación. La razón principal por la que se hacen tan pocas es que no se preparan antes. Un método simple consiste en anotar un problema probable del cliente, pensar qué otras dificultades podría causar y escribir las preguntas que se desprenden de cada una.",
+  "entregable": "Una lista de los problemas probables del cliente para llevar a la llamada, dejando que las preguntas de implicación surjan de forma natural durante la conversación.",
+  "condiciones": [
+   "Ofreces tu solución en cuanto el cliente menciona un problema",
+   "Tus clientes reconocen el problema pero no lo ven tan grave como para comprar"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "SPIN Selling - Neil Rackham",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\ventas\\SPIN Selling - Neil Rackham.txt",
+  "lineas": "1765",
+  "cita": "Good questions won’t just spring into your mind while you’re talking with a customer. Unless you plan your questions in advance, you won’t think of them during the call.",
+  "dato": "dejando que las preguntas de implicación surjan de forma natural durante la conversación",
+  "explicacion": "El libro dice lo contrario: las buenas preguntas no surgen solas durante la conversación, y si no se planifican antes no se te ocurrirán en la llamada. Incluso los más hábiles tienen dificultades con las preguntas de implicación si no las prepararon. El entregable deja las preguntas a la improvisación y solo prepara los problemas, cuando el método del libro (líneas 1752 a 1763) termina en escribir las preguntas antes de la llamada. El resto es fiel: una de cada veinte preguntas y la falta de planificación como causa principal (línea 1744), y el método de tres pasos (líneas 1752 a 1763)."
+ },
+ {
+  "titulo": "Distinguir Avances de Continuaciones al cerrar la llamada",
+  "etiqueta": "Busca Avances, no Continuaciones",
+  "resumen": "En ventas grandes pocas llamadas terminan en un pedido firme, así que el objetivo realista del cierre suele ser un Avance: una acción concreta del cliente que acerca la venta a la decisión, como asistir a una demostración o presentarte a alguien de mayor nivel. Una Continuación, en cambio, termina con elogios o con un 'volvamos a vernos' sin ninguna acción acordada, y conviene contarla como una llamada sin éxito. Si una misma oportunidad acumula tres Continuaciones seguidas, lo sensato es darla por perdida y dejar de visitarla. Planificar cada llamada con un objetivo de acción concreto, y no solo con 'recoger información' o 'crear relación', es lo que distingue a los vendedores con mejores resultados.",
+  "entregable": "Un objetivo de Avance concreto y por escrito para cada una de tus próximas llamadas de venta.",
+  "condiciones": [
+   "Sales de las reuniones con elogios del cliente pero sin ningún siguiente paso acordado",
+   "Tus objetivos de llamada son del tipo recoger información o crear una buena relación"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "SPIN Selling - Neil Rackham",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\ventas\\SPIN Selling - Neil Rackham.txt",
+  "lineas": "845",
+  "cita": "Teach your people the difference between Continuations and Advances, and help them become dissatisfied with setting call objectives that result only in a Continuation.",
+  "dato": "Si una misma oportunidad acumula tres Continuaciones seguidas, lo sensato es darla por perdida y dejar de visitarla.",
+  "explicacion": "El libro no da ningún umbral de Continuaciones para abandonar una oportunidad. Su consejo es aprender a distinguir Continuaciones de Avances y sentirse insatisfecho con los objetivos que solo llevan a Continuaciones, es decir, convertirlas en Avances (líneas 771 y 845), no descartar la cuenta. Grep en todo el libro no encuentra 'three continuation', 'consecutive', 'in a row', 'write off' ni 'give up on'; el único 'three times' (líneas 2646 y 2657) es la regla de probar una conducta nueva al menos tres veces y no tiene relación. El resto es fiel: pocos pedidos en ventas grandes y el Avance como objetivo normal del cierre (líneas 739 y 753), las Continuaciones clasificadas como no exitosas (línea 765) y los objetivos de acción frente a 'recoger información' (líneas 854 y 856)."
+ }
+]

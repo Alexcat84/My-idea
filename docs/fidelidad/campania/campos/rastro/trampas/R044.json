@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "SMED: Reducción del Tiempo de Cambio de Formato",
+  "etiqueta": "Acorta tus Cambios de Formato",
+  "resumen": "SMED (single minute exchange of die) es un conjunto de técnicas para realizar el preparado y cambio de equipos en menos de 10 minutos, o reducirlo drásticamente respecto al nivel actual. Toyota, apoyada en el trabajo de Shigeo Shingo, bajó el cambio de sus prensas de estampado de cuatro horas a tres minutos. Sus beneficios son menos inventario, más capacidad y rendimiento, mejor entrega a tiempo y más flexibilidad para producir una gama amplia de productos a menor costo.",
+  "entregable": "Plan de cambio rápido que primero racionaliza la actividad interna (movimientos, recorridos, equilibrado) y solo después traslada a actividad externa el trabajo que pueda hacerse sin parar la producción, eliminando al final ajustes y pruebas",
+  "condiciones": [
+   "Cuando los cambios de producto o de proceso detienen la línea durante mucho tiempo",
+   "Si los tiempos largos de preparación obligan a producir en lotes grandes y a acumular inventario"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "13574-13580",
+  "cita": "• Move as much of the work of change over from internal activity (which requires production to stop) to external activity (which can be completed without stopping production)",
+  "dato": "primero racionaliza la actividad interna (movimientos, recorridos, equilibrado) y solo después traslada a actividad externa el trabajo que pueda hacerse sin parar la producción",
+  "explicacion": "El libro enumera como primer paso trasladar la mayor parte posible del trabajo interno a externo y, después, racionalizar la actividad interna (línea 13578: 'Streamline the internal activity... Then streamline external activity'). El entregable invierte la secuencia."
+ },
+ {
+  "titulo": "Proveedor Único versus Múltiples Proveedores",
+  "etiqueta": "Decide Cuántos Proveedores Tener",
+  "resumen": "Varios proveedores aportan competencia, que puede traducirse en mejor calidad, menor costo, mejor servicio y mínima interrupción del suministro ante huelgas u otras catástrofes. Un proveedor único recibe un contrato mayor y le da más importancia, simplifica la comunicación y deja más tiempo para trabajar de cerca con él. La tendencia es reducir la base de proveedores (reducciones del 50 al 70 por ciento desde 1980), con fuente única para algunas compras y menos proveedores para otras. En ambos casos la selección se basa en reputación, pruebas de calificación del diseño, inspección de la planta y datos de calidad del proveedor.",
+  "entregable": "Matriz de decisión por categoría de compra (fuente única o múltiple) con los criterios de selección del proveedor documentados",
+  "condiciones": [
+   "Cuando una categoría de compra tiene más de cinco proveedores activos y se evalúa reducir la base",
+   "Si se busca una asociación estrecha con un proveedor clave"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "23653-23662",
+  "cita": "A clear trend has emerged. Organizations are significantly reducing the number of multiple suppliers. Since about 1980, reductions of 50 to 70 percent in the supplier base have become common.",
+  "dato": "más de cinco proveedores activos",
+  "explicacion": "El libro habla de reducir el número de proveedores (50 a 70 por ciento) pero no fija ningún umbral de cantidad de proveedores por categoría. Grep de 'five suppliers', '5 suppliers' sin resultados; el umbral de cinco es inventado."
+ },
+ {
+  "titulo": "Efecto del Manejo de Quejas en las Ventas",
+  "etiqueta": "Atiende las Quejas de tus Clientes",
+  "resumen": "Las quejas tratan sobre todo de la insatisfacción con el producto, pero afectan también la capacidad de vender. Según la investigación citada, de los clientes insatisfechos cerca del 70 por ciento presenta una queja; quienes no lo hacen creen que no vale la pena, que no servirá de nada o no saben cómo quejarse. Más del 40 por ciento de los que se quejan quedan descontentos con la respuesta del proveedor. Las ventas futuras y la lealtad de marca dependen mucho de cómo se actúa sobre las quejas, y un enfoque organizado de manejo de quejas da un alto retorno sobre la inversión.",
+  "entregable": "Sistema organizado de manejo de quejas con centro de respuesta accesible las 24 horas o línea gratuita, personal capacitado y solicitud activa de quejas",
+  "condiciones": [
+   "Cuando se sospecha que muchos clientes insatisfechos se van sin quejarse",
+   "Si las quejas recibidas no se registran ni se responden de forma sistemática"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "3711",
+  "cita": "of the customers who were dissatisfied with products, nearly 70 percent did not complain.",
+  "dato": "de los clientes insatisfechos cerca del 70 por ciento presenta una queja",
+  "explicacion": "El libro dice que cerca del 70 por ciento de los clientes insatisfechos NO se queja; el resumen invierte el dato y afirma que ese 70 por ciento sí presenta queja."
+ },
+ {
+  "titulo": "Takt Time y Producción en Flujo",
+  "etiqueta": "Marca el Ritmo del Cliente",
+  "resumen": "La producción en flujo exige producir al ritmo de compra del cliente y, si hace falta, fabricar cada producto cada día para cumplir los pedidos. Ese ritmo o 'drumbeat' lo fija el takt time, el tiempo que refleja la tasa a la que el cliente compra una unidad. Para ser práctico, el takt puede modificarse según la variabilidad del proceso, llamándolo takt de celda, de máquina o práctico; aun planificados, esos modificadores siguen siendo desperdicio. Con el takt calculado se determina la dotación de personal y se atacan las restricciones, como los cambios largos, para ir hacia el flujo pieza a pieza.",
+  "entregable": "Cálculo de takt time a partir de la demanda del periodo, con takt práctico limitado a un margen no mayor al 15 por ciento sobre el takt teórico y dotación de personal derivada",
+  "condiciones": [
+   "Cuando la producción se programa por absorción de gastos y no por la demanda real del cliente",
+   "Si la demanda varía y hay que ajustar recursos al ritmo de compra"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "13375",
+  "cita": "To be practical, takt time may need to be modified, depending on the variability of the process. When modifying takt time beyond the simple equation, another name should be used, such as cell takt, machine takt, or practical takt. Although modifiers may be planned, they are still waste, or planned waste.",
+  "dato": "con takt práctico limitado a un margen no mayor al 15 por ciento sobre el takt teórico",
+  "explicacion": "El libro permite modificar el takt según la variabilidad y lo califica de desperdicio planificado, pero no fija ningún límite porcentual. Grep de '15 percent' y '15%' solo aparece en contextos ajenos al takt (costos, reparaciones, soldadura); el tope del 15 por ciento es inventado."
+ }
+]

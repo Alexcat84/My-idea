@@ -1,0 +1,316 @@
+{
+ "R035-001": {
+  "real": true,
+  "node_id": "anatomia_proceso_arbol_ensamble",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-002": {
+  "real": true,
+  "node_id": "articular_etica_valores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-003": {
+  "real": true,
+  "node_id": "analisis_flujo_proceso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-004": {
+  "real": true,
+  "node_id": "autocontrol_planificacion_servicio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-005": {
+  "real": true,
+  "node_id": "auditoria_sistema_control_calidad_2",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-006": {
+  "real": true,
+  "node_id": "accion_correctiva",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-007": {
+  "real": true,
+  "node_id": "analisis_flujo_proceso_servicio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-008": {
+  "real": true,
+  "node_id": "analisis_datos_atributos",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-009": {
+  "real": true,
+  "node_id": "analisis_reporte_benchmarking",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-010": {
+  "real": true,
+  "node_id": "analisis_vendibilidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-011": {
+  "real": true,
+  "node_id": "analisis_sintomas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-012": {
+  "real": true,
+  "node_id": "benchmarking_estrategia",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-013": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Causas Especiales vs Causas Comunes",
+   "etiqueta": "Separa Causas Especiales y Comunes",
+   "resumen": "Antes de interpretar una diferencia en tus datos, distingue su tipo de causa. Las causas especiales suelen ser esporádicas y nacer de una sola variable, por lo que es relativamente fácil diagnosticarlas y remediarlas. Las causas comunes suelen ser crónicas y surgen de la interacción entre muchas variables menores, lo que las hace difíciles de diagnosticar y de remediar. Las causas comunes son materia del control de calidad y las especiales de la mejora de calidad, así que confundirlas te lleva a aplicar el proceso equivocado.",
+   "entregable": "Clasificación de cada desviación relevante como causa especial o común, con el proceso asignado para atacarla.",
+   "condiciones": [
+    "Cuando ves variaciones en tus resultados y no sabes si reaccionar de inmediato o abrir un proyecto.",
+    "Cuando tu equipo apaga incendios una y otra vez sin que el nivel de desperdicio baje."
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7973",
+   "cita": "Special causes are the subject of quality control; common causes are the subject of quality improvement.",
+   "dato": "Las causas comunes son materia del control de calidad y las especiales de la mejora de calidad",
+   "explicacion": "El libro asigna las causas especiales al control de calidad y las comunes a la mejora de calidad; el resumen invierte la asignación, lo que manda los problemas crónicos al control y los esporádicos a proyectos de mejora."
+  }
+ },
+ "R035-014": {
+  "real": true,
+  "node_id": "analisis_pareto_proyectos_elefante",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-015": {
+  "real": true,
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-016": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Diagnóstico del Cambio Esporádico",
+   "etiqueta": "Descubre Qué Cambió",
+   "resumen": "Un problema esporádico es el resultado de un cambio adverso, así que el diagnóstico busca qué cambió y el remedio consiste en eliminar ese cambio y restaurar la conformidad. Usa autopsias forenses del producto y del proceso, compara productos y datos del proceso antes y después de que empezara el problema, y reconstruye la cronología de las 72 horas previas y posteriores al cambio: rotación de turnos, empleados nuevos, acciones de mantenimiento, códigos de fecha y tiempos de ciclo. Con eso descartas teorías y dejas vivas las que merecen prueba. Casi siempre el remedio es volver a lo que se hacía antes.",
+   "entregable": "Línea de tiempo del incidente con los eventos del proceso y del producto, y las teorías de causa descartadas o pendientes de prueba.",
+   "condiciones": [
+    "Cuando un proceso que venía funcionando bien empieza de pronto a sacar producto no conforme.",
+    "Cuando no sabes si detener el proceso o seguir operando mientras buscas la causa."
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8276",
+   "cita": "Reconstruction of the chronology, which consists of logging on a time scale (of hours, days, etc.) (1) the events that took place in the process before and after the sporadic change",
+   "dato": "reconstruye la cronología de las 72 horas previas y posteriores al cambio",
+   "explicacion": "El libro pide registrar la cronología en una escala de tiempo (horas, días, etc.) antes y después del cambio, sin fijar ventana; las 72 horas son un plazo inventado. Grep en todo el libro: '72 hours' y 'seventy-two' no aparecen."
+  }
+ },
+ "R035-017": {
+  "real": true,
+  "node_id": "auditoria_negocio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-018": {
+  "real": true,
+  "node_id": "benchmarking_proceso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-019": {
+  "real": true,
+  "node_id": "analisis_pareto_de_proveedores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-020": {
+  "real": true,
+  "node_id": "auditoria_presidente",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-021": {
+  "real": true,
+  "node_id": "aprobacion_alta_direccion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-022": {
+  "real": true,
+  "node_id": "analisis_beneficio_costo",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-023": {
+  "real": true,
+  "node_id": "autocontrol_empoderamiento",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-024": {
+  "real": true,
+  "node_id": "analisis_licitaciones_no_ganadas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-025": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Auditorías de Vigilancia para Mantener el Registro",
+   "etiqueta": "Mantén Viva tu Certificación",
+   "resumen": "Obtener el certificado de un registrador no es el final: para conservar el estatus de registrado, la organización debe superar auditorías de vigilancia periódicas del mismo registrador, que suelen hacerse cada seis meses. Estas auditorías pueden ser menos exhaustivas que la auditoría completa inicial; en ese caso se repite una auditoría completa cada cierto número de años. La vigilancia continua da a la organización un motivo permanente para mantener su sistema de calidad en plena conformidad y seguir mejorándolo.",
+   "entregable": "Calendario de auditorías de vigilancia semestrales y de la auditoría completa de recertificación cada tres años, con responsables de preparar la evidencia de cada una.",
+   "condiciones": [
+    "Cuando acabas de obtener la certificación ISO 9001 y necesitas conservarla.",
+    "Cuando el sistema de calidad empieza a relajarse entre una auditoría y la siguiente."
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11242",
+   "cita": "Surveillance audits are often conducted semiannually. They may be less comprehensive than the full audit. If so, a full audit is performed every few years.",
+   "dato": "la auditoría completa de recertificación cada tres años",
+   "explicacion": "El libro solo dice que la auditoría completa se repite cada pocos años (every few years), sin fijar plazo; el ciclo de recertificación de tres años es un plazo normativo añadido. Grep en todo el libro: 'three years', 'recertif' y 'triennial' (salvo una asamblea de la IAQ sin relación) no aparecen; '3 years' solo sale en contextos ajenos (metas, lista de fallas, proyectos)."
+  }
+ },
+ "R035-026": {
+  "real": true,
+  "node_id": "aspectos_legales_eticos_benchmarking",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-027": {
+  "real": true,
+  "node_id": "acreditacion_organismos_certificadores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-028": {
+  "real": true,
+  "node_id": "analisis_capacidad_proceso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-029": {
+  "real": true,
+  "node_id": "auditorias_calidad_proceso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-030": {
+  "real": true,
+  "node_id": "adaptaciones_sectoriales_iso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-031": {
+  "real": true,
+  "node_id": "adopciones_industria_especifica_iso9000",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-032": {
+  "real": true,
+  "node_id": "autocontrol_y_controlabilidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-033": {
+  "real": true,
+  "node_id": "analisis_competitivo_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-034": {
+  "real": true,
+  "node_id": "analisis_de_sistemas_de_medicion_msa",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-035": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Autoinspección del Operario (Self-Inspection)",
+   "etiqueta": "Delega la Inspección al Operario",
+   "resumen": "La autoinspección delega en la fuerza de trabajo las decisiones sobre el producto: si cumple las metas de calidad y qué destino darle. Es distinta del autocontrol, que trata decisiones sobre el proceso. Exige que la calidad sea la prioridad número uno, confianza mutua entre dirección y operarios, que se cumplan los criterios de autocontrol, especificaciones inequívocamente claras y un proceso que permita asignar responsabilidad clara de decisión. Conviene empezar por casos simples, como un operario a cargo de una sola máquina, y dejar las líneas largas de varios pasos para cuando haya experiencia. Un área independiente audita periódicamente una muestra para verificar que el criterio de aceptación sigue siendo válido.",
+   "entregable": "Lista de verificación de los criterios de autoinspección cumplidos por proceso, con los operarios certificados y el plan de auditoría por muestreo de sus decisiones.",
+   "condiciones": [
+    "Cuando la inspección en un departamento separado retrasa la retroalimentación a producción durante días.",
+    "Cuando tu proceso todavía no es estable y quieres que cada operario filtre su propio producto mientras lo estabilizas.",
+    "Cuando quieres dar más sentido de propiedad del trabajo a quien opera la máquina."
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "condiciones",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23099",
+   "cita": "Self-inspection should apply only to products and processes that are stabilized and meet specifications and only to personnel who have demonstrated their competence.",
+   "dato": "Cuando tu proceso todavía no es estable y quieres que cada operario filtre su propio producto mientras lo estabilizas.",
+   "explicacion": "El libro dice que la autoinspección solo debe aplicarse a productos y procesos estabilizados que cumplen especificaciones (y además en control estadístico); la condición la activa justo en el caso contrario, con un proceso inestable."
+  }
+ },
+ "R035-036": {
+  "real": true,
+  "node_id": "alineacion_estrategica_despliegue",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-037": {
+  "real": true,
+  "node_id": "analisis_regresion_correlacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-038": {
+  "real": true,
+  "node_id": "auditoria_de_proceso",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-039": {
+  "real": true,
+  "node_id": "analisis_identificacion_mejores_practicas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-040": {
+  "real": true,
+  "node_id": "analisis_valor",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-041": {
+  "real": true,
+  "node_id": "auditorias_gerenciales_periodicas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-042": {
+  "real": true,
+  "node_id": "auto_inspeccion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-043": {
+  "real": true,
+  "node_id": "aprendizaje_institucionalizado_benchmarking",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-044": {
+  "real": true,
+  "node_id": "auditoria_de_producto",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-045": {
+  "real": true,
+  "node_id": "auditorias_vigilancia_certificacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-046": {
+  "real": true,
+  "node_id": "analisis_capacidad_procesos",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-047": {
+  "real": true,
+  "node_id": "benchmarking_7_pasos_juran",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-048": {
+  "real": true,
+  "node_id": "auditoria_de_producto_2",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R035-049": {
+  "real": true,
+  "node_id": "auditorias_primera_segunda_tercera_parte",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ }
+}

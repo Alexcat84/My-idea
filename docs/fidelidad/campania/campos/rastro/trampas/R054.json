@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Reducir el ralentí de la flota de vehículos",
+  "etiqueta": "Apaga Motores al Detenerte",
+  "resumen": "Dejar los motores encendidos con el vehículo parado gasta combustible y emite contaminación sin ningún beneficio. Según el Environmental Defense Fund, mantener un vehículo al ralentí más de un minuto consume más combustible y emite más contaminación que volver a arrancarlo. Puedes reducirlo adoptando políticas de no ralentí, creando zonas de no ralentí en lugares como las zonas de carga e instalando dispositivos que dan calefacción, aire acondicionado y electricidad con el motor apagado.",
+  "entregable": "Política de no ralentí aprobada, con zonas de no ralentí señalizadas en las áreas de carga",
+  "condiciones": [
+   "Si tu empresa opera una flota de vehículos o camiones de reparto",
+   "Si tus conductores suelen esperar con el motor encendido en las zonas de carga"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+  "lineas": "4819",
+  "cita": "According to the Environmental Defense Fund, idling for over 10 seconds uses more gas and emits more global warming pollution than restarting a vehicle.",
+  "dato": "más de un minuto",
+  "explicacion": "El libro pone el umbral en 10 segundos: a partir de ahí el ralentí gasta más que volver a arrancar. El resumen lo sube a más de un minuto y cambia el umbral que da el libro. Es un contrario de umbral."
+ },
+ {
+  "titulo": "Subir la temperatura de los pasillos fríos del centro de datos",
+  "etiqueta": "Ajusta el Frío de tus Servidores",
+  "resumen": "Muchos centros de datos mantienen los pasillos fríos con consignas de temperatura antiguas, más bajas de lo necesario, que disparan el consumo de las unidades de aire acondicionado de la sala (CRAC). Subir la consigna reduce ese consumo y puede permitir que los serpentines de agua trabajen a mayor temperatura. Hazlo con cuidado, teniendo en cuenta que se reduce el margen de seguridad si falla la refrigeración, y acompáñalo de contención para separar el aire frío de suministro del aire caliente de retorno.",
+  "entregable": "Consigna de los pasillos fríos del centro de datos fijada en 68 a 72 F (20 a 22 C), con el margen de seguridad ante fallos de refrigeración revisado",
+  "condiciones": [
+   "Si tienes un centro de datos propio con pasillos fríos y calientes",
+   "Si el aire acondicionado de la sala de servidores pesa mucho en tu factura eléctrica"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "entregable",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+  "lineas": "3362",
+  "cita": "Raise thermostats in data center “cold aisles” from the older 68 to 72 degrees Fahrenheit (20 to 22 degrees Celsius) to 77 to 80 degrees Fahrenheit (25 to 27 degrees Celsius)",
+  "dato": "fijada en 68 a 72 F (20 a 22 C)",
+  "explicacion": "Para el libro, 68 a 72 F (20 a 22 C) es la consigna antigua de la que hay que salir; la meta es 77 a 80 F (25 a 27 C). El entregable da como resultado final la consigna antigua, que es lo contrario de lo que pide el libro."
+ },
+ {
+  "titulo": "Imprimir a doble cara por defecto y reducir el papel",
+  "etiqueta": "Configura la Impresión a Doble Cara",
+  "resumen": "Mucho de lo que se imprime no hacía falta: según Xerox, más del 40 por ciento de las impresiones se tira en menos de 24 horas. Configura todas las impresoras y copiadoras para imprimir a doble cara por defecto, anima a ajustar márgenes y usar letra más pequeña, pon recordatorios junto a la impresora y considera un sistema de PIN o tarjeta para recoger los trabajos en las impresoras compartidas.",
+  "entregable": "Todas las impresoras y copiadoras configuradas a doble cara por defecto, con recordatorios visibles junto a cada equipo",
+  "condiciones": [
+   "Si tu oficina tiene más de 50 empleados que comparten impresoras",
+   "Si nadie ha revisado cuánto papel se imprime y se tira en tu oficina"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "condiciones",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+  "lineas": "2337",
+  "cita": "setting all printers and copiers to print “double-sided” as a default.",
+  "dato": "más de 50 empleados",
+  "explicacion": "El libro recomienda imprimir a doble cara por defecto en cualquier empresa y no pone ningún mínimo de plantilla. La única plantilla que cita es un ejemplo ilustrativo de 5.000 empleados, en la línea 2339. He buscado con grep '50 employees', 'fifty employees', 'more than N employees' y 'employees or more', y no aparece ninguno. El umbral de 50 empleados es una cifra añadida."
+ },
+ {
+  "titulo": "Consolidar servidores con virtualización",
+  "etiqueta": "Virtualiza tus Servidores",
+  "resumen": "La mayoría de las empresas mantiene servidores de sobra para aguantar picos inesperados, y eso deja muy baja la utilización media. La virtualización permite ejecutar varias instancias de servidor en una sola máquina y moverlas con facilidad de una a otra, lo que permite consolidar servidores físicos y ahorrar energía. Según un informe de Forrester, se pueden consolidar hasta 10 servidores físicos en uno, y la inversión suele recuperarse en unos 8 meses.",
+  "entregable": "Plan de consolidación con el inventario de servidores físicos, su utilización medida y los que pasarán a máquinas virtuales",
+  "condiciones": [
+   "Si tus servidores funcionan muy por debajo de su carga máxima",
+   "Si mantienes servidores de reserva solo para picos de uso"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "The Green to Gold Business Play - Daniel C. Esty",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Environmental\\The Green to Gold Business Play - Daniel C. Esty.txt",
+  "lineas": "3342",
+  "cita": "companies utilizing virtualization software find they can consolidate as many as 10 physical servers into one and improve server utilization by as much as 85 percent.",
+  "dato": "la inversión suele recuperarse en unos 8 meses",
+  "explicacion": "Para la virtualización, el libro solo da la consolidación de hasta 10 servidores en uno y la mejora de utilización de hasta el 85 por ciento. No da ningún plazo de recuperación de la inversión. Con grep, 'eight months' y '8-month' no aparecen, y '8 months' solo sale dentro de '18 months', en contextos ajenos (tren motriz de camiones en la línea 4975 y metas del programa en la 6596). El plazo de 8 meses es añadido."
+ }
+]
