@@ -71,10 +71,10 @@ de `projects`.
 `/api/cuenta/eliminar` pide la palabra "ELIMINAR" (y el doble factor si está activo), guarda la
 huella anti-abuso de la cortesía si hace falta, y llama a `auth.admin.deleteUser`. **Todo lo demás
 depende del `ON DELETE CASCADE`.** Se borra con la cuenta: ideas, sesiones, planes, tareas, bitácora,
-números, actas, créditos, reservas y los datos de doble factor.
+números, actas, saldo de créditos, reservas y los datos de doble factor.
 
-**Sobrevivía al borrado (hallazgos B1 a B4). ARREGLADO en la rama `borrado-cuenta` (decisiones del
-fundador, 26 sep 2026), pendiente de su visto para ir a `main` y de aplicar la migración 044:**
+**Sobrevivía al borrado (hallazgos B1 a B4). ARREGLADO y en producción (decisiones del fundador,
+26 sep 2026; `main` 8d890b3e, web-v2.6.9, migración 044 aplicada):**
 B3 y B4 se borran; B1 y B2 se anonimizan (queda importe y fecha); las ideas de invitado sin dueño
 se borran solas a los 30 días sin actividad (tarea programada diaria). Lo que se encontró:
 - **B1.** `credit_refund_log`: id de usuario, monto y motivo.
@@ -89,9 +89,12 @@ se borran solas a los 30 días sin actividad (tarea programada diaria). Lo que s
 - Los registros de Vercel, según su retención.
 - Las copias ya enviadas a Anthropic, Voyage y Resend, según sus políticas.
 
-**Nota contable:** borrar la cuenta borra también el historial de créditos. Si alguna obligación
-fiscal o de consumo exige conservar registros de transacciones cuando haya pagos reales, habrá que
-conservarlos anonimizados (POR VERIFICAR con un profesional).
+**B5, historial de créditos (decisión del fundador, 27 sep 2026):** el `ON DELETE CASCADE` de
+`credit_transactions` se llevaba el historial entero. Ahora queda **anónimo**, igual que B1 y B2: el
+monto (`delta`, con su `tipo`: compra, consumo o devolución) y la fecha; `user_id`,
+`saldo_resultante`, `concepto`, `origen` e `idempotency_key` quedan en NULL antes de borrar la
+cuenta (migración 045, `main` ad8b2059, web-v2.6.10). **Los registros fiscales de las ventas los
+conserva el procesador de pagos.**
 
 ## 5. Navegador
 
@@ -117,8 +120,11 @@ depende del navegador.
 3. Retención de las copias de seguridad de Supabase y de los registros de Vercel.
 4. El procesador de pagos, cuando se active.
 5. La base legal para conservar la huella hash de la cortesía tras el borrado.
-6. Si hay obligación de conservar registros de transacciones (fiscal o de consumo) cuando existan
-   pagos reales.
+6. ~~Si hay obligación de conservar registros de transacciones~~ RESUELTO por decisión del
+   fundador (27 sep 2026): el historial queda anónimo y los registros fiscales de las ventas los
+   conserva el procesador de pagos (§4, B5).
 7. Dónde procesa el audio el navegador al dictar.
 8. Que `next/font` no llame a Google en el despliegue real.
-9. La razón social registrada en Quebec y el correo de contacto de privacidad.
+9. Que el nombre legal (Alexis Adalberto Antonio García Hurtado, empresa individual) coincida exactamente con el registro en
+   Revenu Québec (lo confirma el fundador). El correo de privacidad ya está decidido:
+   privacidad@myideaproject.com.

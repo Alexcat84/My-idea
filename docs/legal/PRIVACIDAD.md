@@ -8,7 +8,7 @@
 # Política de privacidad de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Responsable:** [nombre legal del fundador], empresa individual registrada en Quebec, Canadá ("nosotros"), que opera la
+**Responsable:** Alexis Adalberto Antonio García Hurtado, empresa individual registrada en Quebec, Canadá (el nombre debe coincidir exactamente con el registro en Revenu Québec: POR VERIFICAR por el fundador) ("nosotros"), que opera la
 aplicación My Idea.
 
 ## 1. En pocas palabras
@@ -106,14 +106,14 @@ Tienes derecho a:
 - **Acceder** a tus datos y saber cómo los usamos.
 - **Rectificarlos** si son inexactos o están incompletos.
 - **Borrarlos:** puedes borrar tu cuenta desde el centro de cuenta. Al borrarla:
-  - se borran tu cuenta, tus ideas, tus planes, tus tareas y notas, tu bitácora, tus números, tus
-    créditos y reservas, y tus datos de seguridad;
+  - se borran tu cuenta, tus ideas, tus planes, tus tareas y notas, tu bitácora, tus números, tu
+    saldo de créditos y tus reservas, y tus datos de seguridad;
   - se borran también las ideas que escribiste antes de crear tu cuenta, si aún no habían pasado a
     ella;
   - tu correo sale de la lista de invitados de la beta;
-  - tus reembolsos y eventos de pago se **anonimizan**: quedan solo el importe y la fecha, sin
-    ningún vínculo contigo, porque podrían ser registros fiscales (si pueden borrarse del todo es
-    POR VERIFICAR con el profesional).
+  - tu historial de créditos, tus reembolsos y tus eventos de pago se **anonimizan**: queda solo
+    el monto (con su tipo: compra, consumo o devolución) y la fecha, sin ningún vínculo contigo.
+    Los registros fiscales de las ventas los conserva el procesador de pagos.
 - **Portabilidad:** recibir tus datos en un formato estructurado y de uso común. Hoy puedes
   descargar tus documentos (plan, Expediente, bitácora) en markdown; una exportación completa de
   tus datos en formato estructurado es POR VERIFICAR (función a construir).
@@ -130,9 +130,10 @@ máximo de 30 días (plazo POR VERIFICAR con el profesional).
   acción se abandona. **Solo se cobra si la IA entrega** lo prometido; un plan armado sin IA se
   entrega sin cobro. Si algo falla después de un cobro, se reembolsa.
 - Guardamos tus movimientos de créditos (cobros, reservas, reembolsos) mientras tu cuenta exista.
+  Si la borras, quedan anónimos: solo el monto, su tipo y la fecha, sin vínculo contigo.
 - Durante la beta, los créditos se otorgan manualmente y la compra con dinero no está activa. Cuando
-  se active, el procesador de pagos tratará los datos de pago; nosotros no guardamos números de
-  tarjeta (POR VERIFICAR al integrar el procesador).
+  se active, el procesador de pagos tratará los datos de pago y conservará los registros fiscales de
+  las ventas; nosotros no guardamos números de tarjeta (POR VERIFICAR al integrar el procesador).
 
 ## 10. Conservación
 
@@ -145,8 +146,9 @@ salvedades:
   plazos de esos proveedores (POR VERIFICAR).
 - Las ideas escritas sin crear cuenta (con la identidad invisible) y que nunca pasaron a una cuenta
   **se borran solas a los 30 días sin actividad**.
-- Si la ley nos obliga a conservar registros de transacciones cuando haya pagos reales, los
-  conservaremos anonimizados en la medida permitida (POR VERIFICAR).
+- Tu historial de créditos, tus reembolsos y tus eventos de pago no se borran: quedan anónimos
+  (solo el monto, su tipo y la fecha, sin vínculo contigo). Los registros fiscales de las ventas los
+  conserva el procesador de pagos.
 
 ## 11. Incidentes de seguridad
 
@@ -157,7 +159,7 @@ hoy no existen por escrito**).
 
 ## 12. Responsable de la protección de los datos personales
 
-El responsable es [nombre del fundador], fundador de My Idea, en privacidad@myideaproject.com. Su título y sus datos de contacto se publican en la app.
+El responsable es Alexis Adalberto Antonio García Hurtado, fundador de My Idea, en privacidad@myideaproject.com. Su título y sus datos de contacto se publican en la app.
 
 ## 13. Menores
 

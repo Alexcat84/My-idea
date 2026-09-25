@@ -9,7 +9,7 @@
 # Términos de uso de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Quién presta el servicio:** [nombre legal del fundador], empresa individual registrada en Quebec, Canadá
+**Quién presta el servicio:** Alexis Adalberto Antonio García Hurtado, empresa individual registrada en Quebec, Canadá (nombre a confirmar contra el registro en Revenu Québec: POR VERIFICAR por el fundador)
 ("nosotros").
 
 ## 1. Qué es My Idea
