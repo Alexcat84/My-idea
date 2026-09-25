@@ -27,6 +27,7 @@ import {
   type Familia,
 } from "../readiness";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { neutralizarRotulos } from "../i18n/rotulosPlan";
 import { interpolar } from "../i18n/interpolar";
 import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
@@ -523,8 +524,11 @@ export function ensamblarOffline(
     if (perfilSesion) out.push(interpolar(t.loQueSabemos, { perfil: perfilSesion }));
     out.push("");
   }
+  // i18n F5: la etapa nace con el MARCADOR NEUTRO (el que leen checklist.ts y
+  // planParser.ts); la pantalla lo pinta en el idioma de quien lee.
+  const etapaNeutra = elegir(MOTOR_PLAN, LOCALE_BASE).offline.etapa;
   material.forEach((m, i) => {
-    out.push(interpolar(t.etapa, { n: i + 1, concepto: m.concepto }));
+    out.push(interpolar(etapaNeutra, { n: i + 1, concepto: m.concepto }));
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
     if (m.entregable) out.push(`  ${interpolar(t.puntoDeControl, { entregable: m.entregable })}`);
     out.push("");
@@ -568,14 +572,14 @@ export function finalizarPlan(
   numerosProyecto?: unknown,
   idioma: Locale = LOCALE_BASE
 ): ResultadoEnsamblado {
-  const t = elegir(MOTOR_PLAN, idioma);
   const { cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico, payload } = preparacion;
 
   let cuerpo: string;
   let autodeclaracion: AutodeclaracionPlan | null = null;
   if (rawTextoModelo !== null) {
     const parsed = parsearAutodeclaracion(rawTextoModelo);
-    cuerpo = parsed.cuerpo;
+    // i18n F5: si la IA tradujo algún rótulo de estructura, vuelve al neutro.
+    cuerpo = neutralizarRotulos(parsed.cuerpo);
     autodeclaracion = parsed.autodeclaracion;
   } else {
     cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);
@@ -613,12 +617,16 @@ export function finalizarPlan(
 
   // Fase 3.9 (D11): salida sin acentos (el prompt va sin tildes y el modelo lo
   // imita). Un solo evento con la muestra de palabras sospechosas.
-  const sinAcentos = detectarFaltaDeAcentos(cuerpo);
+  // i18n F5: el detector conoce palabras del español; en otro idioma no aplica.
+  const sinAcentos = idioma === LOCALE_BASE ? detectarFaltaDeAcentos(cuerpo) : [];
   if (sinAcentos.length > 0) {
     registrarEvento?.({ tipo: "salida_sin_acentos", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
   }
 
-  const etiqueta = evaluacionCobertura.es_completa ? t.etiquetaCompleto : t.etiquetaInicial;
+  // i18n F5: la etiqueta y el encabezado de lo que falta son MARCADORES NEUTROS
+  // (los lee planParser.ts); lo que falta, en el idioma del plan.
+  const neutro = elegir(MOTOR_PLAN, LOCALE_BASE);
+  const etiqueta = evaluacionCobertura.es_completa ? neutro.etiquetaCompleto : neutro.etiquetaInicial;
   const totalConceptos = ruta.length + cosechaIds.length;
   const partes: string[] = [`_${etiqueta}_`, "", cuerpo];
   // CONFIDENCIAL: la cobertura de conceptos (recorrido + vecindario del
@@ -632,7 +640,7 @@ export function finalizarPlan(
     cosecha: cosechaIds.length,
   });
   if (!evaluacionCobertura.es_completa) {
-    partes.push("", t.noCubre, "");
+    partes.push("", neutro.noCubre, "");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);
     // AUD-09 M33: sin la invitación a "continuar en esta misma sesión": la
     // sesión ya está cerrada (el camino sigue es el Ciclo de profundización).

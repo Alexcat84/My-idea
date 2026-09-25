@@ -24,7 +24,10 @@ describe("el cierre del plan no invita a una sesión cerrada (AUD-09 M33)", () =
     expect(redactor).not.toMatch(/continua la conversacion/);
     expect(catalogoRedactor).not.toMatch(/continua la conversacion/);
     expect(MOTOR_PLAN.es.noCubre).toBe("## Lo que este plan aún no cubre");
-    expect(redactor).toMatch(/partes\.push\("", t\.noCubre, ""\)/);
+    // i18n F5: el encabezado es un MARCADOR NEUTRO (lo lee planParser.ts): sale
+    // del catálogo en español siempre, y la pantalla lo pinta en su idioma.
+    expect(redactor).toMatch(/partes\.push\("", neutro\.noCubre, ""\)/);
+    expect(redactor).toMatch(/const neutro = elegir\(MOTOR_PLAN, LOCALE_BASE\)/);
   });
 
   it("lo que falta cubrir, en español llano y con tildes", () => {

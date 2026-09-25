@@ -11,6 +11,8 @@
  *    jamas plan encubierto. Esta guardia no redacta (eso es del prompt); caza
  *    violaciones gruesas para el vuelo y los tests.
  */
+import { ACTIVE_LOCALES } from "../i18n/config";
+import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
 
 // AUD-09: "plan_basico" = el mundo recibió un plan armado sin IA (no cobrado).
 // No es una compra: el mundo ofrece "Generar el plan completo".
@@ -64,9 +66,13 @@ export function violacionesFronteraPreview(md: string): string[] {
   const violaciones: string[] = [];
   const texto = md.toLowerCase();
 
-  if (/esta semana/.test(texto)) violaciones.push('"esta semana" (accion calendarizada)');
+  // i18n F5: "esta semana" y las etapas numeradas, en cualquiera de los once
+  // (la IA escribe el diagnóstico en el idioma de la idea).
+  const estaSemana = ACTIVE_LOCALES.some((l) => texto.includes(rotulosPlan(l).estaSemana.toLowerCase()));
+  if (estaSemana) violaciones.push('"esta semana" (accion calendarizada)');
   if (/entregable/.test(texto)) violaciones.push('"entregable" (estructura de plan)');
-  if (/^#+\s*etapa\b/im.test(md) || /\betapa\s+\d/.test(texto)) violaciones.push("etapas numeradas (secuencia de ejecucion)");
+  if (/^#+\s*etapa\b/im.test(md) || /\betapa\s+\d/.test(texto) || /^## Etapa \d/m.test(neutralizarRotulos(md)))
+    violaciones.push("etapas numeradas (secuencia de ejecucion)");
   if (/^\s*(paso|dia|semana)\s+\d+\s*[:.]/im.test(md)) violaciones.push("pasos/dias numerados (secuencia de ejecucion)");
   // Tres o mas items de lista NUMERADA consecutivos = una secuencia de
   // ejecucion disfrazada (los bullets tematicos "- tema" son legitimos).

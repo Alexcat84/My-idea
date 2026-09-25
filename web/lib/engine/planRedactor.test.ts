@@ -393,3 +393,46 @@ describe("comprimirEstadoVivo", () => {
     expect(r.estadoVivo).toBe("perfil nuevo");
   });
 });
+
+// i18n F5 (DISENO §5): el plan se GUARDA con los marcadores neutros (los
+// rótulos de estructura en español) y el contenido en el idioma de la idea.
+// Si la IA tradujo un rótulo, vuelve al neutro antes de guardar; lo que arma
+// el código (la etiqueta, el encabezado de lo que falta, las etapas del plan
+// sin IA) nace neutro.
+import { textosFamiliaFaltante as familiaFaltanteI18n } from "./constants";
+
+describe("finalizarPlan y ensamblarOffline: marcadores neutros (i18n F5)", () => {
+  const ruta = ["design_thinking_fundamentos"];
+
+  it("rótulos traducidos por la IA vuelven al neutro; la etiqueta y lo que falta, neutros con el contenido en coreano", () => {
+    const prep = prepararPlan(ruta, graph, families, "idea", "perfil", null, false, null);
+    const raw = "# 계획\n\n## 1단계: 수요 확인\n\n**이번 주:** 전화하세요.\n\n" + '===JSON===\n{"familias_tratadas": ["accion_clientes"]}';
+    const r = finalizarPlan(raw, prep, ruta, families, "idea", undefined, undefined, "ko");
+    expect(r.markdown).toContain("## Etapa 1: 수요 확인");
+    expect(r.markdown).toContain("**Esta semana:** 전화하세요.");
+    expect(r.markdown.startsWith("_Plan inicial_")).toBe(true);
+    expect(r.markdown).toContain("## Lo que este plan aún no cubre");
+    // El contenido de lo que falta sí va en el idioma de la idea.
+    expect(r.markdown).toContain(`- ${familiaFaltanteI18n("ko").viabilidad_economica}`);
+  });
+
+  it("el plan sin IA en coreano: etapas con el marcador neutro, el resto en coreano", () => {
+    const material: MaterialNodo[] = [
+      { id: "x", concepto: "기초", pasos: ["하나"], entregable: "문서", es_viabilidad_economica: false },
+    ];
+    const md = ensamblarOffline(material, null, "", "ko");
+    expect(md).toContain("## Etapa 1: 기초");
+    expect(md).not.toContain("1단계");
+  });
+});
+
+describe("el detector de acentos solo mira planes en español (i18n F5)", () => {
+  it("un plan en portugués con 'analise' no deja el evento salida_sin_acentos", () => {
+    const ruta = ["design_thinking_fundamentos"];
+    const prep = prepararPlan(ruta, graph, families, "ideia", "perfil", null, false, null);
+    const raw = "# Plano\n\n## Etapa 1: Faça a analise do mercado e a logica dos numeros\n\nConteúdo." + '\n===JSON===\n{"familias_tratadas": []}';
+    const eventos: Record<string, unknown>[] = [];
+    finalizarPlan(raw, prep, ruta, families, "ideia", (e) => eventos.push(e), undefined, "pt");
+    expect(eventos.some((e) => e.tipo === "salida_sin_acentos")).toBe(false);
+  });
+});

@@ -19,6 +19,10 @@ const es = {
   etiquetaCompleto: "Plan completo",
   etiquetaInicial: "Plan inicial",
   noCubre: "## Lo que este plan aún no cubre",
+  /** i18n F5: rótulos del plan que pinta lib/i18n/rotulosPlan.ts (el neutro es
+   * el español: "**El lunes que viene:**" y la sección económica). */
+  elLunes: "El lunes que viene",
+  seccionEconomica: "¿Puede sostenerse tu idea? Los números en simple",
 };
 
 const en: typeof es = {
@@ -35,6 +39,8 @@ const en: typeof es = {
   etiquetaCompleto: "Full plan",
   etiquetaInicial: "Initial plan",
   noCubre: "## What this plan doesn't cover yet",
+  elLunes: "Next Monday",
+  seccionEconomica: "Can your idea sustain itself? The numbers, simply put",
 };
 
 const fr: typeof es = {
@@ -50,6 +56,8 @@ const fr: typeof es = {
   etiquetaCompleto: "Plan complet",
   etiquetaInicial: "Plan initial",
   noCubre: "## Ce que ce plan ne couvre pas encore",
+  elLunes: "Lundi prochain",
+  seccionEconomica: "Ton idée peut-elle tenir la route? Les chiffres en clair",
 };
 
 const pt: typeof es = {
@@ -65,6 +73,8 @@ const pt: typeof es = {
   etiquetaCompleto: "Plano completo",
   etiquetaInicial: "Plano inicial",
   noCubre: "## O que este plano ainda não cobre",
+  elLunes: "Na próxima segunda-feira",
+  seccionEconomica: "Sua ideia se sustenta? Os números de um jeito simples",
 };
 
 const de: typeof es = {
@@ -80,6 +90,8 @@ const de: typeof es = {
   etiquetaCompleto: "Vollständiger Plan",
   etiquetaInicial: "Erster Plan",
   noCubre: "## Was dieser Plan noch nicht abdeckt",
+  elLunes: "Nächsten Montag",
+  seccionEconomica: "Kann sich deine Idee tragen? Die Zahlen, einfach erklärt",
 };
 
 const it: typeof es = {
@@ -95,6 +107,8 @@ const it: typeof es = {
   etiquetaCompleto: "Piano completo",
   etiquetaInicial: "Piano iniziale",
   noCubre: "## Cosa questo piano non copre ancora",
+  elLunes: "Lunedì prossimo",
+  seccionEconomica: "La tua idea può reggersi? I numeri in parole semplici",
 };
 
 const ja: typeof es = {
@@ -110,6 +124,8 @@ const ja: typeof es = {
   etiquetaCompleto: "完全版プラン",
   etiquetaInicial: "最初のプラン",
   noCubre: "## このプランがまだカバーしていないこと",
+  elLunes: "次の月曜日",
+  seccionEconomica: "あなたのアイデアは続けていけますか？ 数字をわかりやすく",
 };
 
 const zh: typeof es = {
@@ -125,6 +141,8 @@ const zh: typeof es = {
   etiquetaCompleto: "完整计划",
   etiquetaInicial: "初始计划",
   noCubre: "## 这份计划还没涵盖的内容",
+  elLunes: "下周一",
+  seccionEconomica: "你的想法能持续下去吗？ 用简单的话看数字",
 };
 
 const ko: typeof es = {
@@ -140,6 +158,8 @@ const ko: typeof es = {
   etiquetaCompleto: "전체 계획",
   etiquetaInicial: "초기 계획",
   noCubre: "## 이 계획이 아직 다루지 않는 것",
+  elLunes: "다음 월요일",
+  seccionEconomica: "아이디어가 지속될 수 있을까요? 쉽게 보는 숫자",
 };
 
 const ar: typeof es = {
@@ -155,6 +175,8 @@ const ar: typeof es = {
   etiquetaCompleto: "الخطة الكاملة",
   etiquetaInicial: "الخطة الأولى",
   noCubre: "## ما لا تغطيه هذه الخطة بعد",
+  elLunes: "يوم الإثنين القادم",
+  seccionEconomica: "هل يمكن أن تستمر فكرتكم؟ الأرقام ببساطة",
 };
 
 const hi: typeof es = {
@@ -170,6 +192,8 @@ const hi: typeof es = {
   etiquetaCompleto: "पूरी योजना",
   etiquetaInicial: "शुरुआती योजना",
   noCubre: "## यह योजना अभी क्या कवर नहीं करती",
+  elLunes: "अगले सोमवार",
+  seccionEconomica: "क्या आपका विचार टिक सकता है? आंकड़े आसान भाषा में",
 };
 
 export const MOTOR_PLAN: PorIdioma<typeof es> = { es, en, fr, pt, de, it, ja, zh, ko, ar, hi };

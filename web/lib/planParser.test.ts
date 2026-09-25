@@ -118,3 +118,48 @@ describe("sinProcedencia (confidencialidad, BANCO §5)", () => {
     expect(JSON.stringify(plan)).not.toMatch(/se aliment/i);
   });
 });
+
+// i18n F5: el plan guardado lleva los marcadores neutros (en español). La
+// pantalla los pinta en el idioma de quien lee: la etiqueta, el título de la
+// sección de números, el de lo que falta y la etiqueta de los pasos.
+import { parsearPlan as parsearI18n } from "./planParser";
+import { rotulosPlan } from "./i18n/rotulosPlan";
+
+describe("parsearPlan: los marcadores neutros se pintan en el idioma de quien lee (i18n F5)", () => {
+  const md = [
+    "_Plan inicial_",
+    "",
+    "# 계획",
+    "",
+    "## Etapa 1: 수요 확인",
+    "",
+    "**Pasos para construir:**",
+    "1. 하나",
+    "",
+    "**Esta semana:** 둘",
+    "",
+    "## ¿Puede sostenerse tu idea? Los números en simple",
+    "",
+    "셋",
+    "",
+    "## Lo que este plan aún no cubre",
+    "- 넷",
+  ].join("\n");
+
+  it("en inglés", () => {
+    const p = parsearI18n(md, "en");
+    const r = rotulosPlan("en");
+    expect(p.etiqueta).toBe(r.etiquetaInicial);
+    expect(p.secciones[0]).toMatchObject({ numero: "01", titulo: "수요 확인", tipo: "etapa", estaSemana: "둘" });
+    expect(p.secciones[0].bloquesPasos[0].label).toBe(r.pasos);
+    expect(p.secciones[1]).toMatchObject({ titulo: r.seccionEconomica, tipo: "cierre" });
+    expect(p.secciones[2]).toMatchObject({ titulo: r.noCubre, tipo: "cierre" });
+  });
+
+  it("en español queda como siempre", () => {
+    const p = parsearI18n(md, "es");
+    expect(p.etiqueta).toBe("Plan inicial");
+    expect(p.secciones[0].bloquesPasos[0].label).toBe("Pasos para construir");
+    expect(p.secciones[1].titulo).toBe("¿Puede sostenerse tu idea? Los números en simple");
+  });
+});

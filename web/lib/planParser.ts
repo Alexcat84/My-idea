@@ -12,6 +12,7 @@
  */
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { PLAN_DOCUMENTO } from "./i18n/mensajes/planDocumento";
+import { pintarRotulo } from "./i18n/rotulosPlan";
 
 export type TipoSeccion = "etapa" | "cierre" | "otro";
 
@@ -64,7 +65,9 @@ function recortarBloque(cuerpo: string, etiqueta: RegExp): { valor: string | nul
 export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: Locale = LOCALE_BASE): Seccion {
   const mEtapa = tituloCrudo.match(/^Etapa\s+(\d+)\s*[:.·-]?\s*(.*)$/i);
   const numero = mEtapa ? mEtapa[1].padStart(2, "0") : null;
-  const titulo = (mEtapa ? mEtapa[2].trim() : tituloCrudo) || tituloCrudo;
+  // i18n F5: los títulos que son marcadores neutros (la sección de números, lo
+  // que falta) se pintan en el idioma de quien lee.
+  const titulo = (mEtapa ? mEtapa[2].trim() : pintarRotulo(tituloCrudo, "encabezado", idioma)) || tituloCrudo;
   const esCierre = /sosten|n[úu]meros|no cubr|qu[ée] sigue/i.test(tituloCrudo);
 
   let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
@@ -94,7 +97,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
   for (const linea of cuerpo.split("\n")) {
     const lab = linea.match(/^\s*\*\*\s*([^*]*[Pp]asos[^*]*?)\s*:?\s*\*\*\s*(.*)$/);
     if (lab) {
-      bloque = { label: lab[1].trim(), pasos: [] };
+      bloque = { label: pintarRotulo(lab[1].trim(), "negrita", idioma), pasos: [] };
       bloquesPasos.push(bloque);
       if (lab[2]?.trim()) bloque.pasos.push(lab[2].trim());
       continue;
@@ -170,7 +173,7 @@ export function parsearPlan(md: string, idioma: Locale = LOCALE_BASE): PlanParse
   for (const linea of md.split("\n")) {
     const l = linea.trim();
     if (!etiqueta && /^_Plan (completo|inicial|de seguimiento|seguimiento)_$/i.test(l)) {
-      etiqueta = l.replaceAll("_", "");
+      etiqueta = pintarRotulo(l.replaceAll("_", ""), "etiqueta", idioma);
       continue;
     }
     // La procedencia se descarta: es interna (ver sinProcedencia).

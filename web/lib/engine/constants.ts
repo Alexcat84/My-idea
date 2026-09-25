@@ -26,7 +26,7 @@ export const ROTULOS_PLAN: readonly string[] = [
   "**Entregable:**",
   "**Esta semana:**",
   "**El lunes que viene:**",
-  `## ${SECCION_ECONOMICA_TITULO} Los numeros en simple`,
+  `## ${SECCION_ECONOMICA_TITULO} Los números en simple`,
   "===JSON===",
 ];
 
