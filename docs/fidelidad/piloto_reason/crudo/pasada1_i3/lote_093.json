@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_093",
+  "intento": 0,
+  "usd": 0.169788,
+  "turnos": 1,
+  "duracion_s": 19.3,
+  "pared_s": 20.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33032,
+  "tokens_out": 1883,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PD2D225\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5037, 5041, 5057, 5063, 5641, 5907, 2909], \"razon\": \"El libro da criterios (substitution test, arbol de culpabilidad). Pero pide contramedidas en todos los niveles a la vez, y un criterio binario persona/sistema podria chocar con eso.\"},\n  {\"id\": \"P20C50B\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Safety Case\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4388, 4394, 4414, 4358], \"razon\": \"La FSA termina decidiendo que opciones seleccionar y se presenta como Safety Case con los controles adecuados. El paso concreta esto en la misma direccion.\"},\n  {\"id\": \"P7E4761\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [105, 594, 2585, 4753, 4757, 5134], \"razon\": \"El libro pide no olvidar tener miedo, mantener una inquietud cronica y ver los periodos sin accidentes como de mayor peligro.\"},\n  {\"id\": \"PA62D7F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5272, 4749, 4695, 2585], \"razon\": \"La cultura de seguridad se persigue pero rara vez se alcanza, y el proceso importa mas que el producto. El 'nunca' del paso endurece levemente el 'rarely' del libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PD2D225",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5037,
+    5041,
+    5057,
+    5063,
+    5641,
+    5907,
+    2909
+   ],
+   "razon": "El libro da criterios (substitution test, arbol de culpabilidad). Pero pide contramedidas en todos los niveles a la vez, y un criterio binario persona/sistema podria chocar con eso."
+  },
+  {
+   "id": "P20C50B",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Safety Case"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4388,
+    4394,
+    4414,
+    4358
+   ],
+   "razon": "La FSA termina decidiendo que opciones seleccionar y se presenta como Safety Case con los controles adecuados. El paso concreta esto en la misma direccion."
+  },
+  {
+   "id": "P7E4761",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    105,
+    594,
+    2585,
+    4753,
+    4757,
+    5134
+   ],
+   "razon": "El libro pide no olvidar tener miedo, mantener una inquietud cronica y ver los periodos sin accidentes como de mayor peligro."
+  },
+  {
+   "id": "PA62D7F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5272,
+    4749,
+    4695,
+    2585
+   ],
+   "razon": "La cultura de seguridad se persigue pero rara vez se alcanza, y el proceso importa mas que el producto. El 'nunca' del paso endurece levemente el 'rarely' del libro."
+  }
+ ]
+}

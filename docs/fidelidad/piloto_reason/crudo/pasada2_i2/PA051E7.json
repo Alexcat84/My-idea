@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA051E7",
+  "intento": 0,
+  "usd": 0.11045200000000001,
+  "turnos": 1,
+  "duracion_s": 5.1,
+  "pared_s": 6.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26283,
+  "tokens_out": 266,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PA051E7\", \"veredicto\": \"FIEL\", \"lineas\": [3395], \"cita\": \"HEART provides a set of generic task types with their associated nominal error probabilities. They are listed in Table 7.2. The starting point for the HEART analysis is to match the activity to be evaluated to one of the generic tasks listed in Table 7.2.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro fija como primer paso de HEART hacer corresponder la actividad a evaluar con una de las tareas genericas de la Tabla 7.2. El paso lo dice igual. Sus datos concretos (HEART y Tabla 7.2) aparecen literalmente en el libro. No hay cifras, plazos ni roles añadidos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PA051E7",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395
+  ],
+  "cita": "HEART provides a set of generic task types with their associated nominal error probabilities. They are listed in Table 7.2. The starting point for the HEART analysis is to match the activity to be evaluated to one of the generic tasks listed in Table 7.2.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro fija como primer paso de HEART hacer corresponder la actividad a evaluar con una de las tareas genericas de la Tabla 7.2. El paso lo dice igual. Sus datos concretos (HEART y Tabla 7.2) aparecen literalmente en el libro. No hay cifras, plazos ni roles añadidos.",
+  "paso_fiel": ""
+ }
+}

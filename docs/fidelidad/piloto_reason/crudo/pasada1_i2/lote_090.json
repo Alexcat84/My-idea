@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_090",
+  "intento": 0,
+  "usd": 0.162324,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33046,
+  "tokens_out": 1507,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PBC8A48\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"especialistas de tarea (task specialists)\", \"por tipo de operación\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [3163, 3199, 3213, 3224],\n    \"razon\": \"El libro dice que task specialists en 'syndicates' crean los indicadores por tipo de operación. Advierte que el proceso es largo y costoso, pero no lo desaconseja.\"\n  },\n  {\n    \"id\": \"P10E7DF\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4802, 4818, 4888, 4906, 4908],\n    \"razon\": \"La confidencialidad o des-identificación es el segundo factor del libro. Prefiere des-identificar después y no el anonimato total; el paso no impone anonimato.\"\n  },\n  {\n    \"id\": \"P45934A\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4695, 4448, 83],\n    \"razon\": \"Según el libro, las conversiones dramáticas tras un accidente suelen ser efímeras. La cultura surge gradualmente de medidas prácticas persistentes.\"\n  },\n  {\n    \"id\": \"PF89864\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2905, 293, 1934, 2909, 5748],\n    \"razon\": \"El libro lo respalda. Pero en L5748 advierte rendimientos decrecientes de esa búsqueda y pide equilibrio con factores psicológicos; conviene revisar el matiz de 'sistemáticamente'.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PBC8A48",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "especialistas de tarea (task specialists)",
+    "por tipo de operación"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3163,
+    3199,
+    3213,
+    3224
+   ],
+   "razon": "El libro dice que task specialists en 'syndicates' crean los indicadores por tipo de operación. Advierte que el proceso es largo y costoso, pero no lo desaconseja."
+  },
+  {
+   "id": "P10E7DF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4802,
+    4818,
+    4888,
+    4906,
+    4908
+   ],
+   "razon": "La confidencialidad o des-identificación es el segundo factor del libro. Prefiere des-identificar después y no el anonimato total; el paso no impone anonimato."
+  },
+  {
+   "id": "P45934A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4695,
+    4448,
+    83
+   ],
+   "razon": "Según el libro, las conversiones dramáticas tras un accidente suelen ser efímeras. La cultura surge gradualmente de medidas prácticas persistentes."
+  },
+  {
+   "id": "PF89864",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    293,
+    1934,
+    2909,
+    5748
+   ],
+   "razon": "El libro lo respalda. Pero en L5748 advierte rendimientos decrecientes de esa búsqueda y pide equilibrio con factores psicológicos; conviene revisar el matiz de 'sistemáticamente'."
+  }
+ ]
+}

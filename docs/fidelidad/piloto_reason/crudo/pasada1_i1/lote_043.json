@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_043",
+  "intento": 0,
+  "usd": 0.157964,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32656,
+  "tokens_out": 1367,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7F649A\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [4163, 4429, 4431, 4433, 4435], \"razon\": \"Los fragmentos presentan la autorregulación como un gran avance y centran las dificultades en el regulador. No tratan evaluar la madurez de la organización antes de autorregularse.\"},\n  {\"id\": \"P2FE058\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3784, 293], \"razon\": \"Tripod-Beta: tras identificar la defensa fallida, se establece por qué falló, lo que puede deberse a fallos activos o latentes.\"},\n  {\"id\": \"P16473D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 308, 4105, 5557], \"razon\": \"El libro aplica su modelo de causalidad para identificar fallos activos y condiciones latentes en cada defensa vulnerada; BASI lo adoptó con ese fin.\"},\n  {\"id\": \"P317DCD\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4716, 4720, 2884, 2922], \"razon\": \"El libro describe rituales repetidos para reducir ansiedad, como 'write another procedure' o 'blame and train', que no mejoran la resistencia del sistema. Detectarlos sigue esa dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7F649A",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    4163,
+    4429,
+    4431,
+    4433,
+    4435
+   ],
+   "razon": "Los fragmentos presentan la autorregulación como un gran avance y centran las dificultades en el regulador. No tratan evaluar la madurez de la organización antes de autorregularse."
+  },
+  {
+   "id": "P2FE058",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3784,
+    293
+   ],
+   "razon": "Tripod-Beta: tras identificar la defensa fallida, se establece por qué falló, lo que puede deberse a fallos activos o latentes."
+  },
+  {
+   "id": "P16473D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    308,
+    4105,
+    5557
+   ],
+   "razon": "El libro aplica su modelo de causalidad para identificar fallos activos y condiciones latentes en cada defensa vulnerada; BASI lo adoptó con ese fin."
+  },
+  {
+   "id": "P317DCD",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4716,
+    4720,
+    2884,
+    2922
+   ],
+   "razon": "El libro describe rituales repetidos para reducir ansiedad, como 'write another procedure' o 'blame and train', que no mejoran la resistencia del sistema. Detectarlos sigue esa dirección."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_021",
+  "intento": 0,
+  "usd": 0.15727200000000002,
+  "turnos": 1,
+  "duracion_s": 15.1,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32328,
+  "tokens_out": 1398,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P02EE20\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3670, 3674, 3678, 3682, 3686, 3688, 3690], \"razon\": \"El libro describe los cuatro niveles e indica identificar los factores de cada nivel mediante discusión estructurada con expertos. Admite fusionar los niveles PIF e influyente, lo que no contradice el paso.\"},\n  {\"id\": \"P44E8EB\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"220 ítems\", \"20 por GFT\", \"trimestral\"], \"clase\": \"FIEL\", \"lineas\": [3163, 3199, 3209, 3224], \"razon\": \"Cifras y frecuencia respaldadas. Matiz: el software arma cada lista desde bases de indicadores locales y pocos ítems se repiten; una lista fija o genérica chocaría. El plazo trimestral es ajustable.\"},\n  {\"id\": \"PBDBA61\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [2259, 2281, 2299, 2311], \"razon\": \"Los fragmentos no mencionan probar o pilotar recordatorios antes de generalizarlos. No se puede descartar que el libro diga otra cosa.\"},\n  {\"id\": \"P4EC0BD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [1842, 2340, 2342, 2354], \"razon\": \"El libro compara explícitamente el riesgo por mantenimiento descuidado con el riesgo de error durante el mantenimiento; importa la proporción relativa entre ambos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P02EE20",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3670,
+    3674,
+    3678,
+    3682,
+    3686,
+    3688,
+    3690
+   ],
+   "razon": "El libro describe los cuatro niveles e indica identificar los factores de cada nivel mediante discusión estructurada con expertos. Admite fusionar los niveles PIF e influyente, lo que no contradice el paso."
+  },
+  {
+   "id": "P44E8EB",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "220 ítems",
+    "20 por GFT",
+    "trimestral"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3163,
+    3199,
+    3209,
+    3224
+   ],
+   "razon": "Cifras y frecuencia respaldadas. Matiz: el software arma cada lista desde bases de indicadores locales y pocos ítems se repiten; una lista fija o genérica chocaría. El plazo trimestral es ajustable."
+  },
+  {
+   "id": "PBDBA61",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    2259,
+    2281,
+    2299,
+    2311
+   ],
+   "razon": "Los fragmentos no mencionan probar o pilotar recordatorios antes de generalizarlos. No se puede descartar que el libro diga otra cosa."
+  },
+  {
+   "id": "P4EC0BD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    1842,
+    2340,
+    2342,
+    2354
+   ],
+   "razon": "El libro compara explícitamente el riesgo por mantenimiento descuidado con el riesgo de error durante el mantenimiento; importa la proporción relativa entre ambos."
+  }
+ ]
+}

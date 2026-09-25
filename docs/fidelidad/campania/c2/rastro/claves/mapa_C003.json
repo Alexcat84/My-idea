@@ -1,0 +1,672 @@
+{
+ "C003-001": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-002": {
+  "real": true,
+  "node_id": "prueba_sustitucion_johnston",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-003": {
+  "real": true,
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-004": {
+  "real": true,
+  "node_id": "produccion_y_proteccion",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-005": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Jurado de Pares en la Evaluación de Culpabilidad",
+   "resumen": "Para decidir si un error es culpable o inducido por el sistema, Reason propone preguntar a pares comparables si, en esas mismas circunstancias, habrían podido cometer el mismo acto inseguro. Si la respuesta es sí, el error es probablemente sin culpa y el análisis debe mirar al sistema.",
+   "texto": "Convocar un panel de al menos tres pares del mismo dominio, con calificación y experiencia comparables, para responder si habrían podido cometer el mismo error en esas circunstancias",
+   "tipo": "ANADIDO",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L5057",
+   "cita": "If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+   "dato": "al menos tres pares",
+   "explicacion": "El libro habla de un 'jury' of peers (L5057) y de preguntar a los pares del individuo (L5037), pero nunca fija un número mínimo de pares. Grep de 'three peers', 'peers' y 'panel' en todo el texto: 'peers' solo aparece en L5037, L5057 y L5266 sin cifra, y 'panel' solo en L2159 y L5884, en contextos ajenos. La cifra de tres es inventada."
+  }
+ },
+ "C003-006": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-007": {
+  "real": true,
+  "node_id": "prevalencia_omisiones",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-008": {
+  "real": true,
+  "node_id": "medidas_reactivas_proactivas",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-009": {
+  "real": true,
+  "node_id": "modelo_accidente_organizacional",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-010": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-011": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Ironías de la Automatización: Entrenamiento y Fiabilidad del Sistema",
+   "resumen": "Bainbridge advierte que automatizar no elimina el papel humano: lo desplaza hacia las tareas residuales más difíciles e impredecibles. Cuanto menos interviene el operador, menos practica las habilidades que necesitará justo en la emergencia, por lo que la relación entre fiabilidad del automatismo y preparación del operador debe gestionarse de forma deliberada.",
+   "texto": "Reducir la inversión en entrenamiento de operadores en los sistemas automatizados más fiables, donde la intervención manual casi nunca es necesaria, y concentrarla en los sistemas con fallos frecuentes",
+   "tipo": "CONTRARIO",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L856",
+   "cita": "Perhaps the final irony is that it is the most successful automated systems with rare need for manual intervention which may need the greatest investment in operator training",
+   "dato": "",
+   "explicacion": "El libro, citando a Bainbridge, dice que son precisamente los sistemas automatizados más exitosos, con rara necesidad de intervención manual, los que pueden requerir la mayor inversión en entrenamiento (ver también L852: el operador se descualifica en las habilidades que justifican su presencia). El paso aconseja lo contrario: recortar entrenamiento justo en esos sistemas."
+  }
+ },
+ "C003-012": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-013": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-014": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-015": {
+  "real": true,
+  "node_id": "modelo_queso_suizo",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-016": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-017": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-018": {
+  "real": true,
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-019": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-020": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-021": {
+  "real": true,
+  "node_id": "ironias_de_la_automatizacion",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-022": {
+  "real": true,
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-023": {
+  "real": true,
+  "node_id": "prevalencia_omisiones",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-024": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-025": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 8,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-026": {
+  "real": true,
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-027": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-028": {
+  "real": true,
+  "node_id": "modelo_queso_suizo",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-029": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-030": {
+  "real": true,
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-031": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-032": {
+  "real": true,
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-033": {
+  "real": true,
+  "node_id": "produccion_y_proteccion",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-034": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-035": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 6,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-036": {
+  "real": true,
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-037": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-038": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-039": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-040": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-041": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-042": {
+  "real": true,
+  "node_id": "ironias_de_la_automatizacion",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-043": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-044": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-045": {
+  "real": true,
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-046": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-047": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-048": {
+  "real": true,
+  "node_id": "limitaciones_ltif_indicador",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-049": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-050": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-051": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-052": {
+  "real": true,
+  "node_id": "medidas_reactivas_proactivas",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-053": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 6,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-054": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-055": {
+  "real": true,
+  "node_id": "modelo_queso_suizo",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-056": {
+  "real": true,
+  "node_id": "ida_diagrama_influencia",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-057": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-058": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Preparación para Crisis y Recuperación del Negocio",
+   "resumen": "Incluso los sistemas mejor gestionados pueden sufrir un accidente organizacional. Las organizaciones preparadas para crisis planifican varios tipos de crisis, vinculan sus planes de crisis con la recuperación del negocio y mantienen baja la negación y la racionalización.",
+   "texto": "Certificar el plan de recuperación de negocio conforme a la norma ISO 22301 y vincularlo formalmente al plan de gestión de crisis",
+   "tipo": "ANADIDO",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L5896",
+   "cita": "Recent studies20 have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans.",
+   "dato": "norma ISO 22301",
+   "explicacion": "El libro respalda vincular los planes de crisis con los de recuperación del negocio, pero no menciona ninguna norma ni certificación. Grep de '22301', 'BS 25999' y 'business continuity' en todo el texto: cero resultados. La norma con nombre es un añadido."
+  }
+ },
+ "C003-059": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-060": {
+  "real": true,
+  "node_id": "produccion_y_proteccion",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-061": {
+  "real": true,
+  "node_id": "modelo_accidente_organizacional",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-062": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-063": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-064": {
+  "real": true,
+  "node_id": "legislacion_especifica_vs_accidente_organizacional",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-065": {
+  "real": true,
+  "node_id": "prueba_sustitucion_johnston",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-066": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-067": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 7,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-068": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-069": {
+  "real": true,
+  "node_id": "limitaciones_ltif_indicador",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-070": {
+  "real": true,
+  "node_id": "modelo_accidente_organizacional",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-071": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-072": {
+  "real": true,
+  "node_id": "limite_busqueda_causas_pendulo",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-073": {
+  "real": true,
+  "node_id": "prevalencia_omisiones",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-074": {
+  "real": true,
+  "node_id": "modelo_accidente_organizacional",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-075": {
+  "real": true,
+  "node_id": "inspecciones_superficiales_y_muestreo_incompleto",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-076": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-077": {
+  "real": true,
+  "node_id": "limitaciones_ltif_indicador",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-078": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-079": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-080": {
+  "real": true,
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-081": {
+  "real": true,
+  "node_id": "medidas_reactivas_proactivas",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-082": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 6,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-083": {
+  "real": true,
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-084": {
+  "real": true,
+  "node_id": "meda_analisis_error_mantenimiento",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-085": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-086": {
+  "real": true,
+  "node_id": "motores_de_seguridad_3cs",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-087": {
+  "real": true,
+  "node_id": "ironias_de_la_automatizacion",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-088": {
+  "real": true,
+  "node_id": "metas_de_seguridad_correctas",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-089": {
+  "real": true,
+  "node_id": "modelos_gestion_seguridad",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-090": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "LTIF y Vulnerabilidad a Accidentes Organizacionales",
+   "resumen": "Las estadísticas de lesiones personales y el riesgo de accidente organizacional comparten raíces sistémicas, pero su relación no es simétrica. Saber leer qué dice y qué no dice el LTIF evita conclusiones equivocadas sobre la salud del sistema.",
+   "texto": "Tomar un LTIF bajo y estable (del orden de 2 a 5 por millón de horas trabajadas) como señal fiable de que la exposición a accidentes organizacionales está bajo control",
+   "tipo": "CONTRARIO",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L5688",
+   "cita": "The relationship is an asymmetrical one. An unusually high LTIF is almost certainly the consequence of a ‘sick’ system that could indeed be imminently liable to an organizational accident. But the reverse is not necessarily true.",
+   "dato": "",
+   "explicacion": "El libro dice que un LTIF alto sí señala un sistema enfermo, pero lo inverso no es cierto: en la misma línea añade que una tasa baja de LTI, del orden de 2 a 5 por millón de horas, revela muy poco sobre la probabilidad de un accidente organizacional (y L5690: son ruido más que señal). El paso invierte la asimetría y usa el LTIF bajo, con el mismo umbral del libro, como garantía."
+  }
+ },
+ "C003-091": {
+  "real": true,
+  "node_id": "prueba_sustitucion_johnston",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-092": {
+  "real": true,
+  "node_id": "limitaciones_ltif_indicador",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-093": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-094": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-095": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-096": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "paso": 4,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-097": {
+  "real": true,
+  "node_id": "prueba_sustitucion_johnston",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-098": {
+  "real": true,
+  "node_id": "planificacion_recuperacion_post_accidente",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-099": {
+  "real": true,
+  "node_id": "medicion_proactiva_procesos",
+  "paso": 5,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-100": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-101": {
+  "real": true,
+  "node_id": "normalizacion_de_la_desviacion",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-102": {
+  "real": true,
+  "node_id": "medidas_reactivas_proactivas",
+  "paso": 1,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-103": {
+  "real": true,
+  "node_id": "prevalencia_omisiones",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-104": {
+  "real": true,
+  "node_id": "principios_gestion_error",
+  "paso": 3,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "C003-105": {
+  "real": true,
+  "node_id": "medidas_proceso_vs_resultado",
+  "paso": 2,
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ }
+}

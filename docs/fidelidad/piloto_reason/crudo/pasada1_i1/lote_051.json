@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_051",
+  "intento": 0,
+  "usd": 0.15464799999999998,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 12.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33537,
+  "tokens_out": 1025,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P41A4E4\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2208, 2210, 2214, 2218, 2222, 2224, 2228, 2232, 2240, 2244, 2250], \"razon\": \"El libro propone identificar de antemano los pasos vulnerables contando las características que provocan omisiones en cada paso discreto.\"},\n  {\"id\": \"PCCD65C\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4109, 4161, 4165, 4194, 4908], \"razon\": \"El libro señala el conflicto de un regulador financiado por sus regulados y valora la independencia. Extenderlo al área interna sigue la misma dirección.\"},\n  {\"id\": \"PBEF22B\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [409, 413, 435, 967, 971, 973, 975, 3465], \"razon\": \"El libro advierte que el autochequeo sin inspección separada permitió firmar como aptos trabajos inacabados y lo trata como una brecha de protección.\"},\n  {\"id\": \"PDBA388\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2487, 2489, 2495, 2520, 2765, 5690], \"razon\": \"El libro distingue medidas de proceso y de resultado y critica depender de las de resultado. Clasificar los indicadores actuales es un paso previo coherente con eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P41A4E4",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2208,
+    2210,
+    2214,
+    2218,
+    2222,
+    2224,
+    2228,
+    2232,
+    2240,
+    2244,
+    2250
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables contando las características que provocan omisiones en cada paso discreto."
+  },
+  {
+   "id": "PCCD65C",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4109,
+    4161,
+    4165,
+    4194,
+    4908
+   ],
+   "razon": "El libro señala el conflicto de un regulador financiado por sus regulados y valora la independencia. Extenderlo al área interna sigue la misma dirección."
+  },
+  {
+   "id": "PBEF22B",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    409,
+    413,
+    435,
+    967,
+    971,
+    973,
+    975,
+    3465
+   ],
+   "razon": "El libro advierte que el autochequeo sin inspección separada permitió firmar como aptos trabajos inacabados y lo trata como una brecha de protección."
+  },
+  {
+   "id": "PDBA388",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2487,
+    2489,
+    2495,
+    2520,
+    2765,
+    5690
+   ],
+   "razon": "El libro distingue medidas de proceso y de resultado y critica depender de las de resultado. Clasificar los indicadores actuales es un paso previo coherente con eso."
+  }
+ ]
+}

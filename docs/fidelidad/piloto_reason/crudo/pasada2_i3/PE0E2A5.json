@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE0E2A5",
+  "intento": 0,
+  "usd": 0.115176,
+  "turnos": 1,
+  "duracion_s": 9.8,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24759,
+  "tokens_out": 807,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE0E2A5\", \"veredicto\": \"FIEL\", \"lineas\": [3163, 3199], \"cita\": \"These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] The indicators are created by task specialists working in syndicates.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que los indicadores de Tripod-Delta los crean especialistas de tarea que trabajan en grupos (syndicates). Esos especialistas son quienes gestionan y operan a diario cada actividad concreta, y hay una base de datos por GFT y por tipo de operación. El equipo por tipo de operación que pide el paso corresponde a esos grupos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE0E2A5",
+  "veredicto": "FIEL",
+  "lineas": [
+   3163,
+   3199
+  ],
+  "cita": "These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] The indicators are created by task specialists working in syndicates.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que los indicadores de Tripod-Delta los crean especialistas de tarea que trabajan en grupos (syndicates). Esos especialistas son quienes gestionan y operan a diario cada actividad concreta, y hay una base de datos por GFT y por tipo de operación. El equipo por tipo de operación que pide el paso corresponde a esos grupos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_072",
+  "intento": 0,
+  "usd": 0.158496,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32914,
+  "tokens_out": 1342,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P1C2534\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Comité de Auditoría del directorio\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [520, 504, 668, 686, 4215], \"razon\": \"El libro pide integrar señales, pero no asigna a un Comité de Auditoría. Advierte del sesgo retrospectivo: una señal solo avisa si sabes qué desastre vendrá. La auditoría interna tampoco las vio.\"},\n  {\"id\": \"P1A4CBF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2652, 2654, 2656, 2648], \"razon\": \"El libro recomienda analizar varios eventos del mismo dominio con un marco clasificatorio común, en lugar de casos aislados.\"},\n  {\"id\": \"P3B695C\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Safety Case\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4388, 4394, 4414, 4336, 4340, 4358], \"razon\": \"La FSA termina en la decisión sobre opciones y se presenta como Safety Case con controles adecuados. El paso lo concreta sin datos nuevos.\"},\n  {\"id\": \"P269DA3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [271, 273, 5742, 5748], \"razon\": \"Reason pide centrarse en lo cambiable y controlable dentro de la organización, porque los factores sociales quedan fuera del alcance de los gestores. El paso reformula esto como responsabilidad, en la misma dirección.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P1C2534",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Comité de Auditoría del directorio"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    520,
+    504,
+    668,
+    686,
+    4215
+   ],
+   "razon": "El libro pide integrar señales, pero no asigna a un Comité de Auditoría. Advierte del sesgo retrospectivo: una señal solo avisa si sabes qué desastre vendrá. La auditoría interna tampoco las vio."
+  },
+  {
+   "id": "P1A4CBF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2652,
+    2654,
+    2656,
+    2648
+   ],
+   "razon": "El libro recomienda analizar varios eventos del mismo dominio con un marco clasificatorio común, en lugar de casos aislados."
+  },
+  {
+   "id": "P3B695C",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Safety Case"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4388,
+    4394,
+    4414,
+    4336,
+    4340,
+    4358
+   ],
+   "razon": "La FSA termina en la decisión sobre opciones y se presenta como Safety Case con controles adecuados. El paso lo concreta sin datos nuevos."
+  },
+  {
+   "id": "P269DA3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    271,
+    273,
+    5742,
+    5748
+   ],
+   "razon": "Reason pide centrarse en lo cambiable y controlable dentro de la organización, porque los factores sociales quedan fuera del alcance de los gestores. El paso reformula esto como responsabilidad, en la misma dirección."
+  }
+ ]
+}

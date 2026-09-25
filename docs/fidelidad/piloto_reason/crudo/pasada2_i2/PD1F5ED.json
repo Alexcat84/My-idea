@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD1F5ED",
+  "intento": 0,
+  "usd": 0.17718,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36665,
+  "tokens_out": 1526,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD1F5ED\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2170, 1943, 2250, 2259], \"cita\": \"Even when the omission is one’s own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.\", \"datos_sin_respaldo\": [], \"razon\": \"El paso manda atribuir un nivel cognitivo a omisiones históricas ajenas. El libro dice que esa vía es difícil, a veces imposible, y difícil de aplicar para no especialistas. Prefiere el análisis de tareas: identificar los pasos propensos a omisión por sus rasgos y ponerles recordatorios. El paso toma como vía principal la que el libro desaconseja.\", \"paso_fiel\": \"Identificar los pasos de la tarea más propensos a omisión según sus rasgos (aislados funcionalmente, posteriores al objetivo principal, cercanos al final, ocultos a la vista, con múltiples elementos a instalar) en lugar de intentar averiguar el nivel cognitivo de cada omisión pasada.\"}\n```",
+ "parseado": {
+  "id": "PD1F5ED",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2170,
+   1943,
+   2250,
+   2259
+  ],
+  "cita": "Even when the omission is one’s own, the underlying mechanisms are not easy to establish, but when the omission is made by another person at some time in the past, the underlying reasons may be impossible to discover. The task analysis route, on the other hand, is more promising.",
+  "datos_sin_respaldo": [],
+  "razon": "El paso manda atribuir un nivel cognitivo a omisiones históricas ajenas. El libro dice que esa vía es difícil, a veces imposible, y difícil de aplicar para no especialistas. Prefiere el análisis de tareas: identificar los pasos propensos a omisión por sus rasgos y ponerles recordatorios. El paso toma como vía principal la que el libro desaconseja.",
+  "paso_fiel": "Identificar los pasos de la tarea más propensos a omisión según sus rasgos (aislados funcionalmente, posteriores al objetivo principal, cercanos al final, ocultos a la vista, con múltiples elementos a instalar) en lugar de intentar averiguar el nivel cognitivo de cada omisión pasada."
+ }
+}

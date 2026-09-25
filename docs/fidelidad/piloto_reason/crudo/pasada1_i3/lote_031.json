@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_031",
+  "intento": 0,
+  "usd": 0.173488,
+  "turnos": 1,
+  "duracion_s": 21.0,
+  "pared_s": 22.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33937,
+  "tokens_out": 1887,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF6696F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [171, 181, 374, 1072, 2650], \"razon\": \"El libro respalda las comprobaciones periódicas de huecos (L2650). Pero un mapa único de huecos 'conocidos' choca en matiz con huecos en flujo constante (L181) y con grietas pequeñas inadvertidas (L374).\"},\n  {\"id\": \"PDBED6D\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"ratio de personal de seguridad respecto al total de la organización\", \"estándares del sector\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [3993, 2579, 4454, 4060, 4121], \"razon\": \"El libro cita el 2% de NASA como ejemplo, sin proponer comparar ratios con estándares. Además insiste en la calidad del personal, no solo la cantidad (L2579). El nodo trata de reguladores.\"},\n  {\"id\": \"P688228\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [648, 666, 4765, 5067, 5270], \"razon\": \"La cultura generativa entrena y recompensa a los mensajeros (L648). La cultura justa premia la información de seguridad (L4765). La imaginación requisita exige diversidad de pensamiento (L666). El paso lo formaliza en la misma dirección.\"},\n  {\"id\": \"PB804D4\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2922, 3817, 4720, 5063, 2948, 2884], \"razon\": \"Va en la dirección del libro. Pero 'como única respuesta' admite sancionar errores recurrentes, mientras el libro dice que culpar apenas afecta los errores y los considera casi siempre sin culpa (L3817, L5063).\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF6696F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    171,
+    181,
+    374,
+    1072,
+    2650
+   ],
+   "razon": "El libro respalda las comprobaciones periódicas de huecos (L2650). Pero un mapa único de huecos 'conocidos' choca en matiz con huecos en flujo constante (L181) y con grietas pequeñas inadvertidas (L374)."
+  },
+  {
+   "id": "PDBED6D",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "ratio de personal de seguridad respecto al total de la organización",
+    "estándares del sector"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    3993,
+    2579,
+    4454,
+    4060,
+    4121
+   ],
+   "razon": "El libro cita el 2% de NASA como ejemplo, sin proponer comparar ratios con estándares. Además insiste en la calidad del personal, no solo la cantidad (L2579). El nodo trata de reguladores."
+  },
+  {
+   "id": "P688228",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    648,
+    666,
+    4765,
+    5067,
+    5270
+   ],
+   "razon": "La cultura generativa entrena y recompensa a los mensajeros (L648). La cultura justa premia la información de seguridad (L4765). La imaginación requisita exige diversidad de pensamiento (L666). El paso lo formaliza en la misma dirección."
+  },
+  {
+   "id": "PB804D4",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2922,
+    3817,
+    4720,
+    5063,
+    2948,
+    2884
+   ],
+   "razon": "Va en la dirección del libro. Pero 'como única respuesta' admite sancionar errores recurrentes, mientras el libro dice que culpar apenas afecta los errores y los considera casi siempre sin culpa (L3817, L5063)."
+  }
+ ]
+}

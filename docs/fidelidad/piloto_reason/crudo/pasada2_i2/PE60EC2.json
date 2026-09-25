@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE60EC2",
+  "intento": 0,
+  "usd": 0.16692,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36725,
+  "tokens_out": 1001,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE60EC2\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2311, 2356, 2369], \"cita\": \"A third and more fundamental solution would be to design out the need for ‘hands on’ human contact during maintenance inspections.\", \"datos_sin_respaldo\": [\"sistemas de autodiagnóstico como medio para eliminar el contacto humano\"], \"razon\": \"El libro respalda eliminar por diseño el contacto manual en las inspecciones, así que el paso va en su dirección y no es contrario. Pero el libro no propone el autodiagnóstico como medio para lograrlo. Las técnicas diagnósticas solo aparecen como algo que no elimina el riesgo del contacto humano regular (L2356).\", \"paso_fiel\": \"Explorar el rediseño de sistemas y componentes para eliminar la necesidad de contacto manual directo durante las inspecciones de mantenimiento.\"}\n```",
+ "parseado": {
+  "id": "PE60EC2",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2311,
+   2356,
+   2369
+  ],
+  "cita": "A third and more fundamental solution would be to design out the need for ‘hands on’ human contact during maintenance inspections.",
+  "datos_sin_respaldo": [
+   "sistemas de autodiagnóstico como medio para eliminar el contacto humano"
+  ],
+  "razon": "El libro respalda eliminar por diseño el contacto manual en las inspecciones, así que el paso va en su dirección y no es contrario. Pero el libro no propone el autodiagnóstico como medio para lograrlo. Las técnicas diagnósticas solo aparecen como algo que no elimina el riesgo del contacto humano regular (L2356).",
+  "paso_fiel": "Explorar el rediseño de sistemas y componentes para eliminar la necesidad de contacto manual directo durante las inspecciones de mantenimiento."
+ }
+}

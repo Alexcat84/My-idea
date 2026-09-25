@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PABF5B1",
+  "intento": 0,
+  "usd": 0.223984,
+  "turnos": 1,
+  "duracion_s": 5.2,
+  "pared_s": 6.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54851,
+  "tokens_out": 229,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PABF5B1\", \"veredicto\": \"FIEL\", \"lineas\": [4364], \"cita\": \"Making a list of all hazardous substances, identifying points of use and carrying out risk assessments--using outside experts, if necessary.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro enumera entre los pasos del 'rolling procedure' COSHH realizar evaluaciones de riesgo recurriendo a expertos externos si es necesario. El dato concreto 'expertos externos' esta respaldado literalmente ('outside experts'), con la misma condicion ('si es necesario'). No anade ni invierte nada.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PABF5B1",
+  "veredicto": "FIEL",
+  "lineas": [
+   4364
+  ],
+  "cita": "Making a list of all hazardous substances, identifying points of use and carrying out risk assessments--using outside experts, if necessary.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro enumera entre los pasos del 'rolling procedure' COSHH realizar evaluaciones de riesgo recurriendo a expertos externos si es necesario. El dato concreto 'expertos externos' esta respaldado literalmente ('outside experts'), con la misma condicion ('si es necesario'). No anade ni invierte nada.",
+  "paso_fiel": ""
+ }
+}

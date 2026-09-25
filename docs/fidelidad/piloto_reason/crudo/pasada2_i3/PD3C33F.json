@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD3C33F",
+  "intento": 0,
+  "usd": 0.101076,
+  "turnos": 1,
+  "duracion_s": 8.6,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 22019,
+  "tokens_out": 650,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD3C33F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [908, 922, 864], \"cita\": \"increase the potential for confusion through enhanced flexibility (i.e., many possible levels and types of automation). … they possess multiple modes\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala los modos múltiples y la flexibilidad como propiedades que favorecen la confusión de modos (L908, L922), y en L864 ilustra cuántos modos tiene un FMS. Contar los modos de cada sistema es un primer paso de diagnóstico en esa misma dirección. No desaconseja ni invierte nada, y las transiciones se tratan en otros pasos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD3C33F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   908,
+   922,
+   864
+  ],
+  "cita": "increase the potential for confusion through enhanced flexibility (i.e., many possible levels and types of automation). … they possess multiple modes",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala los modos múltiples y la flexibilidad como propiedades que favorecen la confusión de modos (L908, L922), y en L864 ilustra cuántos modos tiene un FMS. Contar los modos de cada sistema es un primer paso de diagnóstico en esa misma dirección. No desaconseja ni invierte nada, y las transiciones se tratan en otros pasos.",
+  "paso_fiel": ""
+ }
+}

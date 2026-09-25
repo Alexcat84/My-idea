@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_069",
+  "intento": 0,
+  "usd": 0.15024400000000002,
+  "turnos": 1,
+  "duracion_s": 8.3,
+  "pared_s": 9.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34521,
+  "tokens_out": 608,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P4B9E29\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2866, 2896], \"razon\": \"El libro critica que las practicas de EM no se basen en el conocimiento actual de factores humanos; el paso aconseja lo mismo en positivo.\"}, {\"id\": \"P3A50D3\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"personal de aseguramiento de calidad\", \"todos los turnos, incluidos nocturnos\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [967, 971, 443, 449], \"razon\": \"El libro señala como factor la ausencia de personal de QA de noche. Extender la presencia a todos los turnos concreta esa leccion; no se da como recomendacion explicita.\"}, {\"id\": \"PC111EA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3706, 3710, 3714, 3718, 3722], \"razon\": \"El libro describe como se combinan las combinaciones de influencias: ponderacion conjunta por producto de probabilidades y suma de las probabilidades condicionales ponderadas.\"}, {\"id\": \"P5DBF55\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"un solo fallo\", \"despedir al responsable\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5029, 5031, 5035, 4987, 5037, 5063], \"razon\": \"El paso adopta la regla de Lord Denning, que el libro rechaza como 'hang them all'. El libro pide juzgar la culpabilidad con el test de sustitucion.\"}]",
+ "parseado": [
+  {
+   "id": "P4B9E29",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2866,
+    2896
+   ],
+   "razon": "El libro critica que las practicas de EM no se basen en el conocimiento actual de factores humanos; el paso aconseja lo mismo en positivo."
+  },
+  {
+   "id": "P3A50D3",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "personal de aseguramiento de calidad",
+    "todos los turnos, incluidos nocturnos"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    967,
+    971,
+    443,
+    449
+   ],
+   "razon": "El libro señala como factor la ausencia de personal de QA de noche. Extender la presencia a todos los turnos concreta esa leccion; no se da como recomendacion explicita."
+  },
+  {
+   "id": "PC111EA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3706,
+    3710,
+    3714,
+    3718,
+    3722
+   ],
+   "razon": "El libro describe como se combinan las combinaciones de influencias: ponderacion conjunta por producto de probabilidades y suma de las probabilidades condicionales ponderadas."
+  },
+  {
+   "id": "P5DBF55",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "un solo fallo",
+    "despedir al responsable"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5029,
+    5031,
+    5035,
+    4987,
+    5037,
+    5063
+   ],
+   "razon": "El paso adopta la regla de Lord Denning, que el libro rechaza como 'hang them all'. El libro pide juzgar la culpabilidad con el test de sustitucion."
+  }
+ ]
+}

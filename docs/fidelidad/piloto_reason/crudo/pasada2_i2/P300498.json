@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P300498",
+  "intento": 0,
+  "usd": 0.156552,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35463,
+  "tokens_out": 735,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P300498\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 1573, 1663], \"cita\": \"these additions to the 'rule book' becoming increasingly restrictive, often reducing the range of permitted actions to far less than those necessary to get the job done under anything but optimal conditions.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no manda rediseñar procedimientos, pero sí culpa del problema a reglas pensadas solo para condiciones óptimas (L990). También señala que faltan procedimientos para estados atípicos (L1663). El paso no pretende cubrir toda la variabilidad, lo que chocaría con L1573. Pide ajustar las reglas a condiciones no ideales, en la dirección del libro y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P300498",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   990,
+   1573,
+   1663
+  ],
+  "cita": "these additions to the 'rule book' becoming increasingly restrictive, often reducing the range of permitted actions to far less than those necessary to get the job done under anything but optimal conditions.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no manda rediseñar procedimientos, pero sí culpa del problema a reglas pensadas solo para condiciones óptimas (L990). También señala que faltan procedimientos para estados atípicos (L1663). El paso no pretende cubrir toda la variabilidad, lo que chocaría con L1573. Pide ajustar las reglas a condiciones no ideales, en la dirección del libro y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Productividad en Operaciones de Manufactura",
+  "resumen": "La productividad relaciona el output con los recursos de entrada. Medirla bien es el punto de partida para revisar las unidades de medida de los procesos clave de manufactura y detectar dónde se pierde capacidad.",
+  "texto": "Calcular la productividad con el output total producido, aceptable y no aceptable, para reflejar todo el esfuerzo de la operación",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L23213",
+  "cita": "Surprisingly, some organizations still mistakenly calculate only one measure of output, i.e., the total (acceptable and nonacceptable). Clearly, the pertinent output measure is that which is usable by customers (i.e., acceptable output).",
+  "explicacion": "El libro califica de error calcular la productividad con el output total (aceptable y no aceptable) y dice que la medida pertinente es solo el output aceptable, el que el cliente puede usar. El paso recomienda justo el error que el libro señala."
+ },
+ {
+  "titulo": "Reglas de Cambio en el Muestreo de Aceptación (Normal, Estricta, Reducida)",
+  "resumen": "Los sistemas de muestreo por atributos como ANSI/ASQC Z1.4 prevén pasar de inspección normal a estricta cuando la calidad empeora y a reducida cuando el historial del proveedor es bueno, ajustando el tamaño de muestra según el desempeño.",
+  "texto": "Pasar a inspección reducida cuando los últimos 5 lotes en inspección normal hayan sido aceptados",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L25085",
+  "cita": "The preceding 10 lots must have had a normal inspection with all lots accepted.",
+  "explicacion": "El libro exige que los 10 lotes anteriores hayan pasado inspección normal y todos hayan sido aceptados antes de pasar a inspección reducida. El paso rebaja ese umbral a 5 lotes, con lo que la inspección se relaja antes de lo que permite la norma."
+ },
+ {
+  "titulo": "Metodología 6S (Sort, Set in order, Shine, Standardize, Sustain, Safety)",
+  "resumen": "Las 6S son una herramienta Lean para conseguir un lugar de trabajo limpio y ordenado que previene defectos y accidentes y elimina el tiempo perdido buscando herramientas, documentos y materiales.",
+  "texto": "Sort: marca con etiqueta roja todo lo que no hayas usado en los últimos 30 días y retíralo de tu área",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L13388",
+  "cita": "• Sort. Remove all items from the workplace that are not needed for current operations.",
+  "dato": "Etiqueta roja y umbral de 30 días sin uso",
+  "explicacion": "El libro solo pide retirar lo que no se necesite para las operaciones actuales. No habla de etiquetas rojas ni da un plazo de 30 días sin uso: Grep no encuentra 'red tag', 'red-tag' ni '30 days' en todo el texto."
+ },
+ {
+  "titulo": "Efectividad Global del Equipo (OEE) en TPM y RCM",
+  "resumen": "El OEE es la medida más completa de la mejora en confiabilidad: recoge el efecto acumulado de las pérdidas por condición del equipo en disponibilidad, eficiencia y calidad, y complementa el TPM y el RCM.",
+  "texto": "Calcular el OEE de cada equipo crítico según la norma ISO 22400 para medir sus pérdidas de disponibilidad, eficiencia y calidad",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L13623",
+  "cita": "The most encompassing is overall equipment effectiveness (OEE). This measures the cumulative effect of all losses due to equipment condition–machine availability, machine efficiency, and machine quality performance.",
+  "dato": "Norma ISO 22400 para el cálculo del OEE",
+  "explicacion": "El libro presenta el OEE y su cálculo (Figura 14.12) pero no lo vincula a ninguna norma. Grep no encuentra '22400' ni 'ISO 22' en todo el texto, así que la norma con nombre es un añadido."
+ }
+]

@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_057",
+  "intento": 0,
+  "usd": 0.166956,
+  "turnos": 1,
+  "duracion_s": 18.2,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32889,
+  "tokens_out": 1770,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PCD8D6B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2724, 2596, 580, 5639, 2734], \"razon\": \"El libro hace de los factores organizacionales la prioridad; si no cambian, mejorar la primera linea es casi inutil. 'Tanto como' iguala prioridades y podria rebajar esa jerarquia.\"},\n {\"id\": \"PB03810\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2356, 1995, 1934, 2907, 5748], \"razon\": \"El libro usa datos de fallos humanos frente a tecnicos, pero dice que el error humano es consecuencia de factores organizacionales. Separar 'humano vs tecnico' podria contrariar ese enfoque.\"},\n {\"id\": \"P5A8B13\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5196, 5184, 5186], \"razon\": \"Coincide con la cultura cara a cara de Weick, pero la cita contempla sustitutos de la conversacion, como el correo electronico. Anteponerlo siempre a canales impersonales es un posible matiz.\"},\n {\"id\": \"P4AE3EA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3829, 2716, 4724], \"razon\": \"L3829 respalda cambiar normas, creencias y actitudes ante violaciones. L4724 dice que cambiar valores colectivos es casi imposible y recomienda cambiar practicas: hay tension de matiz.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PCD8D6B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2724,
+    2596,
+    580,
+    5639,
+    2734
+   ],
+   "razon": "El libro hace de los factores organizacionales la prioridad; si no cambian, mejorar la primera linea es casi inutil. 'Tanto como' iguala prioridades y podria rebajar esa jerarquia."
+  },
+  {
+   "id": "PB03810",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2356,
+    1995,
+    1934,
+    2907,
+    5748
+   ],
+   "razon": "El libro usa datos de fallos humanos frente a tecnicos, pero dice que el error humano es consecuencia de factores organizacionales. Separar 'humano vs tecnico' podria contrariar ese enfoque."
+  },
+  {
+   "id": "P5A8B13",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5196,
+    5184,
+    5186
+   ],
+   "razon": "Coincide con la cultura cara a cara de Weick, pero la cita contempla sustitutos de la conversacion, como el correo electronico. Anteponerlo siempre a canales impersonales es un posible matiz."
+  },
+  {
+   "id": "P4AE3EA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3829,
+    2716,
+    4724
+   ],
+   "razon": "L3829 respalda cambiar normas, creencias y actitudes ante violaciones. L4724 dice que cambiar valores colectivos es casi imposible y recomienda cambiar practicas: hay tension de matiz."
+  }
+ ]
+}

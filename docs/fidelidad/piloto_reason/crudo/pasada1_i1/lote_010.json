@@ -1,0 +1,66 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_010",
+  "intento": 0,
+  "usd": 0.15444400000000003,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32286,
+  "tokens_out": 1265,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P333DB4\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5503, 5594, 5641, 5905, 5907], \"razon\": \"El libro pide coexistencia de los tres modelos. Pero 'según riesgo predominante' podría llevar a apoyarse solo en el modelo persona; el libro pide contramedidas simultáneas en todos los niveles.\"},\n {\"id\": \"P1175AD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5254, 5258, 2579], \"razon\": \"El libro pregunta literalmente por presupuesto, personal y niveles jerárquicos que separan del CEO al responsable de la información de seguridad.\"},\n {\"id\": \"P2ED8C2\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5894, 5896], \"razon\": \"El 80% de los planes falla la primera vez y el banco saudí tenía un plan ya probado. Ensayarlo antes es extensión coherente, aunque el libro no menciona simulacros.\"},\n {\"id\": \"P96BA13\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [83, 96, 1076, 1133], \"razon\": \"El libro describe cómo las mejoras de protección se convierten en ventaja productiva. Revisar si ocurre es una extensión directa sin choque.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P333DB4",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5503,
+    5594,
+    5641,
+    5905,
+    5907
+   ],
+   "razon": "El libro pide coexistencia de los tres modelos. Pero 'según riesgo predominante' podría llevar a apoyarse solo en el modelo persona; el libro pide contramedidas simultáneas en todos los niveles."
+  },
+  {
+   "id": "P1175AD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5254,
+    5258,
+    2579
+   ],
+   "razon": "El libro pregunta literalmente por presupuesto, personal y niveles jerárquicos que separan del CEO al responsable de la información de seguridad."
+  },
+  {
+   "id": "P2ED8C2",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El 80% de los planes falla la primera vez y el banco saudí tenía un plan ya probado. Ensayarlo antes es extensión coherente, aunque el libro no menciona simulacros."
+  },
+  {
+   "id": "P96BA13",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    83,
+    96,
+    1076,
+    1133
+   ],
+   "razon": "El libro describe cómo las mejoras de protección se convierten en ventaja productiva. Revisar si ocurre es una extensión directa sin choque."
+  }
+ ]
+}

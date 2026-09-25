@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PFB439E",
+  "intento": 0,
+  "usd": 0.157784,
+  "turnos": 1,
+  "duracion_s": 17.3,
+  "pared_s": 18.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31531,
+  "tokens_out": 1583,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PFB439E\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4092, 4521, 4523], \"cita\": \"The source problems lay high up in Transport Canada and in the financial climate imposed by the government of the time. The operational regulators who testified at the Inquiry were very forthright in their condemnation of both the existing regulations and the 'chronic inaction' of Transport Canada's senior management.\", \"datos_sin_respaldo\": [\"viceministro de transporte\"], \"tambien_anadido\": false, \"razon\": \"El libro sitúa el origen de los fallos regulatorios arriba: alta dirección de Transport Canada y clima financiero del gobierno. No en el inspector individual (L4521). No es contrario. Pero el libro no nombra a un viceministro ni propone pedir cuentas a un cargo concreto. Su remedio es dar al regulador legislación, recursos y herramientas (L4523). El rol es añadido.\", \"paso_fiel\": \"Atribuir la inacción y la falta de recursos en la supervisión a su origen en la alta dirección del organismo regulador y en las restricciones presupuestarias impuestas desde arriba, no a los inspectores de primera línea, y dotar al regulador de la legislación, los recursos y las herramientas para hacer su trabajo.\"}\n```",
+ "parseado": {
+  "id": "PFB439E",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4092,
+   4521,
+   4523
+  ],
+  "cita": "The source problems lay high up in Transport Canada and in the financial climate imposed by the government of the time. The operational regulators who testified at the Inquiry were very forthright in their condemnation of both the existing regulations and the 'chronic inaction' of Transport Canada's senior management.",
+  "datos_sin_respaldo": [
+   "viceministro de transporte"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro sitúa el origen de los fallos regulatorios arriba: alta dirección de Transport Canada y clima financiero del gobierno. No en el inspector individual (L4521). No es contrario. Pero el libro no nombra a un viceministro ni propone pedir cuentas a un cargo concreto. Su remedio es dar al regulador legislación, recursos y herramientas (L4523). El rol es añadido.",
+  "paso_fiel": "Atribuir la inacción y la falta de recursos en la supervisión a su origen en la alta dirección del organismo regulador y en las restricciones presupuestarias impuestas desde arriba, no a los inspectores de primera línea, y dotar al regulador de la legislación, los recursos y las herramientas para hacer su trabajo."
+ }
+}

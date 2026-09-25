@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_035",
+  "intento": 0,
+  "usd": 0.177244,
+  "turnos": 1,
+  "duracion_s": 22.7,
+  "pared_s": 23.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33286,
+  "tokens_out": 2205,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P9C556E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4033, 4039, 3199, 158, 4464], \"razon\": \"Cullen critica inspecciones sin checklist. Pero el libro recoge objeciones a listas fijas (anticipación, variedad) y Tripod rota ítems. El paso además desplaza la checklist de la inspección a los procesos.\"},\n  {\"id\": \"P148951\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [4695, 4749, 5234, 2579], \"razon\": \"Los fragmentos no tratan una justificación escrita previa. El libro presenta la cultura como algo que emerge gradualmente de prácticas y como más que la suma de sus partes; 'por escrito' y 'antes de decidir' no están respaldados.\"},\n  {\"id\": \"P64B51E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2823, 2833, 2837, 3813, 3825, 2994, 2996], \"razon\": \"El libro define la reducción de errores y aconseja mejorar tareas, información y condiciones. El entrenamiento figura como medida válida, aunque el libro no lo desarrolla.\"},\n  {\"id\": \"P767674\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4276, 4296, 4318, 4388, 4410], \"razon\": \"El libro vincula lo 'seguro' con lo que la sociedad considera aceptable y con el deber legal de lo razonablemente practicable. El paso presupone una elección libre del enfoque. El Safety Case sí exige demostrar ante el regulador.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P9C556E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4027,
+    4033,
+    4039,
+    3199,
+    158,
+    4464
+   ],
+   "razon": "Cullen critica inspecciones sin checklist. Pero el libro recoge objeciones a listas fijas (anticipación, variedad) y Tripod rota ítems. El paso además desplaza la checklist de la inspección a los procesos."
+  },
+  {
+   "id": "P148951",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4695,
+    4749,
+    5234,
+    2579
+   ],
+   "razon": "Los fragmentos no tratan una justificación escrita previa. El libro presenta la cultura como algo que emerge gradualmente de prácticas y como más que la suma de sus partes; 'por escrito' y 'antes de decidir' no están respaldados."
+  },
+  {
+   "id": "P64B51E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2823,
+    2833,
+    2837,
+    3813,
+    3825,
+    2994,
+    2996
+   ],
+   "razon": "El libro define la reducción de errores y aconseja mejorar tareas, información y condiciones. El entrenamiento figura como medida válida, aunque el libro no lo desarrolla."
+  },
+  {
+   "id": "P767674",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4276,
+    4296,
+    4318,
+    4388,
+    4410
+   ],
+   "razon": "El libro vincula lo 'seguro' con lo que la sociedad considera aceptable y con el deber legal de lo razonablemente practicable. El paso presupone una elección libre del enfoque. El Safety Case sí exige demostrar ante el regulador."
+  }
+ ]
+}

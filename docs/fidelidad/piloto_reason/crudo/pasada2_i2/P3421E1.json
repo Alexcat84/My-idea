@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P3421E1",
+  "intento": 0,
+  "usd": 0.155656,
+  "turnos": 1,
+  "duracion_s": 5.7,
+  "pared_s": 6.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37174,
+  "tokens_out": 348,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P3421E1\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5701, 5639, 5633], \"cita\": \"In part, the problem is due to the close association in people’s minds between safety and personal injury risks... The same basic principles and countermeasures are as applicable to a bank or an insurance company as they are to chemical process plants and oil companies.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que las condiciones latentes son un riesgo universal, alto también en servicios financieros (L5633), y que se siembran en procesos comunes como presupuestar y gestionar (L5639). Critica expresamente asociar seguridad solo con lesiones físicas (L5701). Limitar el análisis a áreas con riesgo físico y excluir finanzas y administración invierte esa recomendación.\", \"paso_fiel\": \"Extender el análisis de condiciones latentes a todas las áreas de la organización, incluidas finanzas y administración, aunque no tengan riesgo de lesiones físicas.\"}",
+ "parseado": {
+  "id": "P3421E1",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5701,
+   5639,
+   5633
+  ],
+  "cita": "In part, the problem is due to the close association in people’s minds between safety and personal injury risks... The same basic principles and countermeasures are as applicable to a bank or an insurance company as they are to chemical process plants and oil companies.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que las condiciones latentes son un riesgo universal, alto también en servicios financieros (L5633), y que se siembran en procesos comunes como presupuestar y gestionar (L5639). Critica expresamente asociar seguridad solo con lesiones físicas (L5701). Limitar el análisis a áreas con riesgo físico y excluir finanzas y administración invierte esa recomendación.",
+  "paso_fiel": "Extender el análisis de condiciones latentes a todas las áreas de la organización, incluidas finanzas y administración, aunque no tengan riesgo de lesiones físicas."
+ }
+}

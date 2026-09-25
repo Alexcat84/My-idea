@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_053",
+  "intento": 0,
+  "usd": 0.15718,
+  "turnos": 1,
+  "duracion_s": 12.4,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34030,
+  "tokens_out": 1053,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P4D13DF\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [580, 198, 5639, 2596], \"razon\": \"L580 enumera exactamente esos procesos organizacionales básicos como fuente de las condiciones latentes que amenazan la seguridad del sistema.\"},\n{\"id\": \"PD018B7\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [415, 417, 419, 451], \"razon\": \"El libro señala la diferencia de prácticas entre línea y base como grieta sutil. Revisarla es una extensión directa, sin choque con ningún fragmento.\"},\n{\"id\": \"PC564E1\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [2687, 4814, 4948], \"razon\": \"L2687 respalda estimar el coste por evento para la dirección. Duda: exigirlo en cada reporte podría cargar al informante, contra la facilidad de reportar (L4814).\"},\n{\"id\": \"P1020AF\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2720, 2724, 3097, 3330], \"razon\": \"Priorizar lo organizacional es fiel (L2724). Pero el libro clasifica el liderazgo como factor local (L2720) y las compras bajo Hardware. La gestión del cambio no aparece en los fragmentos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P4D13DF",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    580,
+    198,
+    5639,
+    2596
+   ],
+   "razon": "L580 enumera exactamente esos procesos organizacionales básicos como fuente de las condiciones latentes que amenazan la seguridad del sistema."
+  },
+  {
+   "id": "PD018B7",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    415,
+    417,
+    419,
+    451
+   ],
+   "razon": "El libro señala la diferencia de prácticas entre línea y base como grieta sutil. Revisarla es una extensión directa, sin choque con ningún fragmento."
+  },
+  {
+   "id": "PC564E1",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    2687,
+    4814,
+    4948
+   ],
+   "razon": "L2687 respalda estimar el coste por evento para la dirección. Duda: exigirlo en cada reporte podría cargar al informante, contra la facilidad de reportar (L4814)."
+  },
+  {
+   "id": "P1020AF",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2720,
+    2724,
+    3097,
+    3330
+   ],
+   "razon": "Priorizar lo organizacional es fiel (L2724). Pero el libro clasifica el liderazgo como factor local (L2720) y las compras bajo Hardware. La gestión del cambio no aparece en los fragmentos."
+  }
+ ]
+}

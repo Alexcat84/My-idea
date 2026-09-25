@@ -1,0 +1,37 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PEAFFAB",
+  "intento": 0,
+  "usd": 0.255324,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57976,
+  "tokens_out": 1171,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEAFFAB\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4446, 3971, 4190, 4257, 4261, 4523], \"cita\": \"They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around.\", \"datos_sin_respaldo\": [\"mentor\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda la mirada externa contra la desviación normalizada: el regulador está en el borde pero fuera del sistema, NASA era una cultura cerrada, y los consultores externos confirmaron el problema (L4190). No es contrario: advierte de la información filtrada y la dependencia, pero no desaconseja la revisión externa. La figura del mentor no aparece en el libro.\", \"paso_fiel\": \"Busca una revisión externa independiente, como un asesor ajeno a tu operación, que vea las prácticas a las que te has acostumbrado, y dale acceso real a tu información en lugar de una versión filtrada.\"}\n```",
+ "parseado": {
+  "id": "PEAFFAB",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4446,
+   3971,
+   4190,
+   4257,
+   4261,
+   4523
+  ],
+  "cita": "They are located close to the boundaries of the regulated system, but they are not of it. This grants them the perspective to identify unsatisfactory practices and poor equipment that the organization has grown accustomed to or works around.",
+  "datos_sin_respaldo": [
+   "mentor"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda la mirada externa contra la desviación normalizada: el regulador está en el borde pero fuera del sistema, NASA era una cultura cerrada, y los consultores externos confirmaron el problema (L4190). No es contrario: advierte de la información filtrada y la dependencia, pero no desaconseja la revisión externa. La figura del mentor no aparece en el libro.",
+  "paso_fiel": "Busca una revisión externa independiente, como un asesor ajeno a tu operación, que vea las prácticas a las que te has acostumbrado, y dale acceso real a tu información en lugar de una versión filtrada."
+ }
+}

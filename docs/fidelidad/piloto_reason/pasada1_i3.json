@@ -1,0 +1,7059 @@
+{
+ "P6707DD": {
+  "id": "P6707DD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2944,
+   2948,
+   2985,
+   2905
+  ],
+  "razon": "El libro dice que los malos eventos vienen más de situaciones y actividades propensas al error que de personas propensas. Revisar si hay asociación a puesto o situación concreta esa idea.",
+  "marca": false
+ },
+ "P8E44B9": {
+  "id": "P8E44B9",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Tabla 7.3"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3587,
+   3589,
+   3591,
+   3623
+  ],
+  "razon": "Williams creó una lista de conductas genéricas de violación en la Tabla 7.3. El paso no aplica el ajuste x1.4 para hombres, pero eso no contradice el libro.",
+  "marca": true
+ },
+ "P7FB035": {
+  "id": "P7FB035",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3395,
+   3547,
+   3549
+  ],
+  "razon": "HEART asigna la actividad a un tipo de tarea genérico de la Tabla 7.2, que lleva asociada su probabilidad nominal de error. El paso coincide con el libro.",
+  "marca": false
+ },
+ "P670E1F": {
+  "id": "P670E1F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   393,
+   413,
+   443,
+   445,
+   447
+  ],
+  "razon": "El libro señala como condición latente que no había forma eficaz de vigilar y ajustar la plantilla a la carga, sobre todo en turnos de noche. El paso lo concreta en una auditoría.",
+  "marca": false
+ },
+ "P254025": {
+  "id": "P254025",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   81,
+   3965,
+   3967,
+   3971,
+   3973,
+   3985,
+   3989,
+   5134,
+   4761,
+   4765
+  ],
+  "razon": "El libro describe la erosión gradual y la normalización de la desviación, y valora vigilar e investigar errores menores. El paso concreta esa dirección sin añadir datos.",
+  "marca": false
+ },
+ "P200A86": {
+  "id": "P200A86",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "auditorías periódicas"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   277,
+   580,
+   582,
+   2596,
+   2598,
+   5639,
+   5701
+  ],
+  "razon": "El libro pide medir regularmente los procesos genéricos y hacer 'health checks' en cualquier dominio. 'Periódicas' es una frecuencia vaga que conviene verificar.",
+  "marca": true
+ },
+ "P16D9FE": {
+  "id": "P16D9FE",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4221,
+   4223,
+   4244,
+   4246,
+   4219
+  ],
+  "razon": "El libro dice que esos éxitos regulatorios valían para accidentes individuales con peligros bien conocidos y que su especificidad no se traslada a accidentes organizacionales. El paso sugiere extrapolar esos principios.",
+  "marca": true
+ },
+ "P8154D3": {
+  "id": "P8154D3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2583,
+   1060,
+   2909,
+   5641
+  ],
+  "razon": "La paradoja posicional es un síntoma de falta de cognisance: los directivos culpan al personal de primera línea. Evaluar esa atribución coincide con lo que dice el libro.",
+  "marca": false
+ },
+ "P3CFB19": {
+  "id": "P3CFB19",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "personal de aseguramiento de calidad",
+   "todos los turnos, incluidos nocturnos"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   967,
+   971,
+   443
+  ],
+  "razon": "El libro critica que no hubiera personal de QA disponible de noche. Ojo: considera insuficiente el QA sin inspección separada; el paso solo cubre la disponibilidad.",
+  "marca": true
+ },
+ "P791B97": {
+  "id": "P791B97",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "periódicamente",
+   "seis dimensiones",
+   "cultura, entrenamiento, gestión, temas de seguridad, procedimientos y factores técnicos"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2750,
+   2702,
+   2596,
+   2748
+  ],
+  "razon": "L2750 pide muestrear las seis dimensiones y L2702 pide evaluaciones regulares. El paso omite que la medición debe guiar acciones remediales.",
+  "marca": true
+ },
+ "P8B5DEF": {
+  "id": "P8B5DEF",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "2-3 GFTs",
+   "GFTs (Tripod-Delta)"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3209,
+   3199,
+   3382,
+   3384
+  ],
+  "razon": "L3209: la dirección de línea planifica e implementa acciones para los 2-3 peores GFTs. El paso omite implementar e informar a los evaluadores (L3384).",
+  "marca": true
+ },
+ "P5CFF94": {
+  "id": "P5CFF94",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "hojas de traspaso (stage sheets)",
+   "por escrito en lugar de brief verbales"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   423,
+   451,
+   401,
+   459
+  ],
+  "razon": "Coincide con L423/L451. Pero L459 anuncia que el capítulo 3 discute si cambiar procedimientos fue la respuesta adecuada, y L423 relativiza su prioridad; eso no está cubierto.",
+  "marca": true
+ },
+ "PAE9C80": {
+  "id": "PAE9C80",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   196,
+   250,
+   252,
+   5582,
+   5641
+  ],
+  "razon": "El libro dice que en sistemas complejos los actos inseguros son consecuencias. Una investigación centrada en la persona no encuentra causas remediables. Coincide con el paso.",
+  "marca": false
+ },
+ "P2913A0": {
+  "id": "P2913A0",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4765,
+   4798,
+   4824,
+   4832,
+   4836,
+   4854,
+   4987
+  ],
+  "razon": "El libro limita la indemnidad («as far as practicable»): excluye actos deliberados, delitos y actos egregios. El paso omite esos límites, y 'honestos' no los recoge; podría leerse como amnistía.",
+  "marca": true
+ },
+ "P06E841": {
+  "id": "P06E841",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "periódica"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2598,
+   2654,
+   4757,
+   4773
+  ],
+  "razon": "El libro pide chequeos regulares y extraer conclusiones del sistema de información. 'Periódica' es una frecuencia genérica, en la misma dirección que el libro; conviene verificarla.",
+  "marca": true
+ },
+ "P732A2F": {
+  "id": "P732A2F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4765,
+   4987,
+   5063
+  ],
+  "razon": "El libro declara inaceptable tanto castigar todos los errores como dar inmunidad general. Es exactamente lo que dice el paso.",
+  "marca": false
+ },
+ "P591FB7": {
+  "id": "P591FB7",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   275,
+   285,
+   107,
+   50
+  ],
+  "razon": "El libro indica que la investigación empieza por el mal resultado y luego examina cómo y cuándo fallaron las defensas.",
+  "marca": false
+ },
+ "P02A2A5": {
+  "id": "P02A2A5",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   990,
+   992,
+   1006,
+   1571,
+   1573,
+   1712,
+   1724,
+   5204
+  ],
+  "razon": "Coincide con la crítica a las reglas pensadas solo para condiciones óptimas. Pero el libro dice que los procedimientos nunca cubren toda la variabilidad y apunta a formación y supervisores.",
+  "marca": true
+ },
+ "P424337": {
+  "id": "P424337",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   821,
+   1044,
+   1056,
+   1058,
+   1068,
+   1072,
+   1076,
+   1133,
+   1137,
+   1149
+  ],
+  "razon": "El nodo trata la falacia de las defensas en profundidad. El paso propone añadir redundancia como remedio, cuando el libro advierte que aumenta la opacidad, las fallas de modo común y la falsa seguridad.",
+  "marca": true
+ },
+ "PBCABD4": {
+  "id": "PBCABD4",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5204,
+   4769,
+   5208
+  ],
+  "razon": "El libro dice que la autoridad del supervisor nace del respeto del equipo y del apoyo de la dirección. El paso concreta ese apoyo, sin sustituir el respeto ganado.",
+  "marca": false
+ },
+ "P59B010": {
+  "id": "P59B010",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "doble verificación",
+   "inspecciones independientes posteriores al reensamblaje",
+   "antes de la puesta en servicio"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   409,
+   413,
+   969,
+   971,
+   973,
+   1068,
+   1072,
+   2250,
+   2259,
+   2961
+  ],
+  "razon": "El libro respalda la inspección independiente. Pero advierte que la redundancia defensiva vuelve opaco el sistema y privilegia recordatorios y enfoque situacional sobre supervisión; revisar el matiz.",
+  "marca": true
+ },
+ "PCB4EEE": {
+  "id": "PCB4EEE",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4765,
+   4818,
+   4820,
+   4906
+  ],
+  "razon": "Difundir criterios va en la línea del libro. Pero el libro dice que la confianza se gana con indemnidad, confidencialidad y separación, y tarda; comunicar no basta.",
+  "marca": true
+ },
+ "P5DC4B8": {
+  "id": "P5DC4B8",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4109,
+   4161,
+   4165
+  ],
+  "razon": "El libro relata la separación de las funciones comerciales y de vigilancia del ACAA (CASA / Air Services) como respuesta al conflicto inherente. Lo describe más que recomendarlo explícitamente.",
+  "marca": false
+ },
+ "P4A1977": {
+  "id": "P4A1977",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "process safety indicators",
+   "LTIF"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   5688,
+   5690,
+   5907,
+   3053
+  ],
+  "razon": "El libro propone eventos precursores y chequeos de procesos subyacentes, sin abandonar lesiones personales. El término 'process safety indicators' no aparece en el libro.",
+  "marca": true
+ },
+ "PC32719": {
+  "id": "PC32719",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5037,
+   5057,
+   5059
+  ],
+  "razon": "'Negativa' es ambiguo. En L5057, un 'no' lleva a revisar formación y selección, y luego a posible negligencia. El paso omite esa secuencia y la condición previa sobre sustancias y violaciones deliberadas.",
+  "marca": true
+ },
+ "P31955F": {
+  "id": "P31955F",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "escalas de calificación de 1 (casi nunca) a 5 (muy frecuente)",
+   "sobre un periodo definido"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3226,
+   3228,
+   3332
+  ],
+  "razon": "El libro describe la escala de 1 (hardly at all) a 5 (very often indeed) sobre un periodo corto y claramente definido, aplicada en Review y MESH.",
+  "marca": true
+ },
+ "P37482A": {
+  "id": "P37482A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2918,
+   2920,
+   2922,
+   5641,
+   5661,
+   5675
+  ],
+  "razon": "Concreta la crítica del libro al ciclo de culpa y al modelo de persona, en su misma dirección. El paso solo pide detectar el patrón; no manda abolir toda culpa.",
+  "marca": false
+ },
+ "P807357": {
+  "id": "P807357",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   1085,
+   1095,
+   1141,
+   1145,
+   1149
+  ],
+  "razon": "El libro describe el efecto 'cry wolf', pero no prescribe rediseñar alarmas. Además advierte que las nuevas defensas y los arreglos añaden complejidad y pueden causar accidentes.",
+  "marca": true
+ },
+ "P29E58D": {
+  "id": "P29E58D",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "5 criterios universales",
+   "conspicuo, contiguo, contextual, contenido y check"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2259,
+   2263,
+   2267,
+   2271,
+   2275,
+   2279,
+   2281
+  ],
+  "razon": "El libro enumera exactamente esos cinco criterios universales del buen recordatorio. Advierte además que los recordatorios son 'primeros auxilios', no una solución permanente, pero el paso no lo contradice.",
+  "marca": true
+ },
+ "PB3B30D": {
+  "id": "PB3B30D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4280,
+   4284,
+   4288,
+   4292,
+   4296,
+   4318
+  ],
+  "razon": "El libro solo describe los enfoques según lo que la tecnología o la sociedad considera seguro. No prescribe que la organización elija uno, y el ALARP viene impuesto por ley (HSW). Conviene revisar ese matiz.",
+  "marca": true
+ },
+ "PFB439E": {
+  "id": "PFB439E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "viceministro de transporte"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   200,
+   4060,
+   4092,
+   4448,
+   4521,
+   4523
+  ],
+  "razon": "El libro sitúa el origen arriba y en el gobierno, pero no pide pedir cuentas a un cargo concreto. Rechaza buscar chivos expiatorios y propone dar recursos y legislación. El rol concreto es añadido.",
+  "marca": true
+ },
+ "P380B99": {
+  "id": "P380B99",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4388,
+   4398,
+   4328
+  ],
+  "razon": "Cullen exige demostrar que se identificaron los peligros mayores potenciales, y la FSA empieza por identificar los peligros. El paso coincide con el libro.",
+  "marca": false
+ },
+ "P604623": {
+  "id": "P604623",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2868,
+   2890,
+   2892
+  ],
+  "razon": "El libro critica que las prácticas de gestión de errores no distingan bien entre factores de error aleatorios y sistemáticos; el paso pide hacer esa distinción.",
+  "marca": false
+ },
+ "PD120F5": {
+  "id": "PD120F5",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   413,
+   435,
+   967,
+   969,
+   971,
+   973,
+   975,
+   3465
+  ],
+  "razon": "El libro advierte que firmar el propio trabajo sin inspección independiente elimina una oportunidad de detectar errores; el paso pide evaluar ese riesgo.",
+  "marca": false
+ },
+ "P47F9B1": {
+  "id": "P47F9B1",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   415,
+   417,
+   419,
+   451,
+   453
+  ],
+  "razon": "El libro señala la diferencia de prácticas entre línea y base como una grieta sutil del sistema; revisarla concreta esa lección en la misma dirección.",
+  "marca": false
+ },
+ "P195D07": {
+  "id": "P195D07",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4366,
+   4368
+  ],
+  "razon": "Coincide con COSHH, pero omite 'where possible' en la sustitución por sustancias menos peligrosas: el paso vuelve incondicional una medida que la fuente condiciona.",
+  "marca": true
+ },
+ "P0AA3DB": {
+  "id": "P0AA3DB",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "LTIF"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5497,
+   5501,
+   5517,
+   5641,
+   5905,
+   5907
+  ],
+  "razon": "El libro distingue tres modelos, cada uno con sus métricas, y asocia LTIF y lesiones personales al modelo de persona. Diagnosticar cuál predomina concreta eso sin invertirlo.",
+  "marca": true
+ },
+ "PD78711": {
+  "id": "PD78711",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   668,
+   686,
+   1085,
+   1095
+  ],
+  "razon": "El libro dice que las señales juntas debían alertar, pero advierte del sesgo retrospectivo y de las falsas alarmas. Los disparos automáticos no están respaldados; revisar el matiz.",
+  "marca": true
+ },
+ "PE21999": {
+  "id": "PE21999",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "primera línea"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4769,
+   5208
+  ],
+  "razon": "El libro dice que el respeto debe ganarse con una gran inversión en formación. Matiz: pone el énfasis en los supervisores de primera línea y habla de respeto, no de confianza.",
+  "marca": true
+ },
+ "P2DAD5F": {
+  "id": "P2DAD5F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4765,
+   4987,
+   4989,
+   5063
+  ],
+  "razon": "El libro pone como prerrequisito un conjunto acordado de principios para trazar la línea entre acciones aceptables e inaceptables.",
+  "marca": false
+ },
+ "PE5F4D8": {
+  "id": "PE5F4D8",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5184,
+   5186,
+   5196,
+   2687,
+   4757
+  ],
+  "razon": "Va en la direccion de las historias de guerra y de difundir cuasi-accidentes. Matiz: el libro valora la conversacion cara a cara y teme sustitutos de la charla; el paso ademas restringe a casos exitosos.",
+  "marca": true
+ },
+ "PCC4967": {
+  "id": "PCC4967",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4695
+  ],
+  "razon": "El libro dice que las conversiones dramaticas tras un accidente suelen ser efimeras. La cultura surge de medidas practicas persistentes.",
+  "marca": false
+ },
+ "P1CBD1D": {
+  "id": "P1CBD1D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   546,
+   550,
+   4757,
+   5254,
+   668,
+   686,
+   688
+  ],
+  "razon": "Concreta la idea de que las senales en conjunto debian alertar y el sistema de informacion de seguridad. Matiz: el libro advierte que las senales solo parecen avisos en retrospectiva.",
+  "marca": true
+ },
+ "P992DFD": {
+  "id": "P992DFD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   291,
+   3784
+  ],
+  "razon": "El libro dice literalmente que, por cada defensa vulnerada, hay que establecer que fallas activas y condiciones latentes intervinieron.",
+  "marca": false
+ },
+ "P8D6F24": {
+  "id": "P8D6F24",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3784
+  ],
+  "razon": "El libro dice que, ante un fallo activo, probablemente hay precondiciones en el lugar de trabajo que se identifican y describen. El paso lo recoge literalmente.",
+  "marca": false
+ },
+ "P7164BD": {
+  "id": "P7164BD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   868,
+   918,
+   942
+  ],
+  "razon": "El libro atribuye la confusión de modos a no percibir las transiciones y a una automatización que oculta eventos. Evaluar el diseño concreta esto sin datos nuevos.",
+  "marca": false
+ },
+ "P3186F1": {
+  "id": "P3186F1",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   4429,
+   4431,
+   4433,
+   4435
+  ],
+  "razon": "El libro no trata la 'madurez para autorregularse'. Presenta la autorregulación como un gran avance para las organizaciones y sitúa las dificultades en el regulador. El paso añade una condición no respaldada.",
+  "marca": true
+ },
+ "P26886B": {
+  "id": "P26886B",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "razon": "Coincide con la prueba de sustitución, pero omite condiciones esenciales: sustituto comparable, juzgar según lo percibido en tiempo real y aplicarla tras descartar sustancias o incumplimiento deliberado. Hay riesgo de sesgo retrospectivo.",
+  "marca": true
+ },
+ "P204BF2": {
+  "id": "P204BF2",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2594,
+   2596,
+   2598,
+   3055
+  ],
+  "razon": "El libro desaconseja metas de reducción de resultados negativos y pide medir y mejorar procesos manejables (diseño, entrenamiento, procedimientos, mantenimiento). Coincide.",
+  "marca": false
+ },
+ "PF62CCE": {
+  "id": "PF62CCE",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "análisis costo-beneficio"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   5822,
+   5892,
+   5894,
+   81,
+   692,
+   40
+  ],
+  "razon": "El libro dice que importa lo que la seguridad ahorra, no lo que cuesta. No pide un análisis costo-beneficio previo; condicionar la decisión a él podría justificar recortar protección.",
+  "marca": true
+ },
+ "P8382A1": {
+  "id": "P8382A1",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "cuatro tipos de riesgo"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5572,
+   5578,
+   5582,
+   5586,
+   5590,
+   5603,
+   5639
+  ],
+  "razon": "El libro define cuatro áreas de riesgo presentes en todo dominio, con distinto peso según el dominio. Mapearlas por dominio sigue la misma dirección.",
+  "marca": true
+ },
+ "P602C1A": {
+  "id": "P602C1A",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "mandos técnicos"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2583,
+   2577,
+   2748
+  ],
+  "razon": "El libro atribuye el tick-off a los gerentes técnicos y dice que la seguridad es producto y proceso. No prescribe capacitación; el paso concreta la idea sin invertirla.",
+  "marca": true
+ },
+ "P3EA3DA": {
+  "id": "P3EA3DA",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   83,
+   96,
+   105,
+   1076,
+   1133
+  ],
+  "razon": "El libro describe como las ganancias protectoras se convierten en ventaja productiva y erosionan el margen. Monitorizar ese margen concreta la advertencia en su misma direccion.",
+  "marca": false
+ },
+ "P4C7E22": {
+  "id": "P4C7E22",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   866,
+   1085,
+   1089,
+   1095,
+   1141,
+   1145,
+   1149
+  ],
+  "razon": "El libro atribuye el problema a la falta de fiabilidad de la alarma. Advierte que las medidas contra la causa del accidente anterior y las barreras rigidas pueden causar el siguiente. El Trident ya tenia un piloto monitor.",
+  "marca": true
+ },
+ "P9297F3": {
+  "id": "P9297F3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1058,
+   2638,
+   2650,
+   2767,
+   2853,
+   5775,
+   5781
+  ],
+  "razon": "El libro apoya identificar condiciones latentes proactivamente. Pero las considera inevitables, ya presentes y en proceso continuo; 'antes de que se acumulen' puede suponer un matiz distinto.",
+  "marca": true
+ },
+ "P524B00": {
+  "id": "P524B00",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4464,
+   4466,
+   4502
+  ],
+  "razon": "Las visitas de sitio generan instancias de incumplimiento, que son los datos brutos del proceso regulatorio. Registrarlas es el primer paso del modelo.",
+  "marca": false
+ },
+ "P8CB129": {
+  "id": "P8CB129",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3965,
+   3971,
+   3985,
+   520,
+   977,
+   668,
+   686,
+   4215
+  ],
+  "razon": "Coincide con la erosion de estandares y las señales ignoradas, pero el libro advierte que las alertas solo se reconocen como tales a posteriori (sesgo retrospectivo).",
+  "marca": true
+ },
+ "P34CBAB": {
+  "id": "P34CBAB",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4466,
+   4476,
+   4478,
+   4502
+  ],
+  "razon": "El libro indica evaluar la contribucion de cada factor O&M a cada instancia local detectada en las visitas.",
+  "marca": false
+ },
+ "P4B1703": {
+  "id": "P4B1703",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   81,
+   83,
+   105,
+   306,
+   1543,
+   1638,
+   2493
+  ],
+  "razon": "Para el libro, los atajos sin consecuencias erosionan los margenes y las violaciones exitosas generan exceso de confianza. Validarlos invierte esa advertencia.",
+  "marca": true
+ },
+ "P8814C2": {
+  "id": "P8814C2",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5497,
+   5641,
+   5688,
+   5690,
+   5692,
+   5907
+  ],
+  "razon": "El libro advierte que centrarse solo en lesiones personales (LTIF) oculta los riesgos organizacionales. El paso concreta ese diagnostico sin añadir datos.",
+  "marca": false
+ },
+ "P1FA678": {
+  "id": "P1FA678",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4802,
+   4818,
+   4888,
+   4906
+  ],
+  "razon": "El libro lista la confidencialidad o des-identificación como factor clave de confianza y recomienda des-identificar después de recibir el reporte, no el anonimato total.",
+  "marca": false
+ },
+ "PCE624D": {
+  "id": "PCE624D",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3382,
+   3230,
+   3332
+  ],
+  "razon": "En MESH cada evaluador ve su propio diagrama de barras y luego el promedio del área. El libro lo da como ejemplo de MESH; el paso lo extiende también a Review.",
+  "marca": false
+ },
+ "PBE26DC": {
+  "id": "PBE26DC",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "junta directiva",
+   "reuniones regulares de alto nivel"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5242,
+   5246,
+   5270
+  ],
+  "razon": "Reproduce dos preguntas literales del libro. El libro dice 'todas' las reuniones regulares del consejo, o su equivalente de alto nivel.",
+  "marca": true
+ },
+ "P31A85E": {
+  "id": "P31A85E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "en cada reporte"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2687,
+   4814,
+   4948
+  ],
+  "razon": "El libro solo constata que la dirección presta atención al costo estimado de cada evento. Si el reportante tiene que hacer la estimación, choca con la facilidad de reporte.",
+  "marca": true
+ },
+ "PE6C357": {
+  "id": "PE6C357",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "análisis geotécnicos o de ingeniería profundos"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   567,
+   584,
+   582
+  ],
+  "razon": "El libro dice que en Nakina solo un análisis geotécnico lo habría detectado, pero lo trata como caso muy especial. Con recursos limitados, prioriza. El paso lo vuelve regla general.",
+  "marca": true
+ },
+ "P759EAC": {
+  "id": "P759EAC",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5234,
+   5272,
+   2583,
+   2748,
+   4757
+  ],
+  "razon": "El libro advierte contra contar elementos o marcar casillas; la cultura es más que la suma de sus partes y el proceso importa más que el producto. Medir con indicadores puede chocar.",
+  "marca": true
+ },
+ "PC98BFA": {
+  "id": "PC98BFA",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4946,
+   4948,
+   4954
+  ],
+  "razon": "El libro dice que las preguntas específicas facilitan completar el formulario. Las abiertas cuentan la historia completa pero llevan más tiempo y recursos. El paso omite ese equilibrio.",
+  "marca": true
+ },
+ "P70C2EA": {
+  "id": "P70C2EA",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4695,
+   5272
+  ],
+  "razon": "El libro dice que la cultura de seguridad surge de aplicar medidas prácticas de forma persistente, como aprendizaje colectivo, y que el proceso importa más que el producto.",
+  "marca": false
+ },
+ "P4AF311": {
+  "id": "P4AF311",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4109,
+   4161,
+   4165,
+   4194
+  ],
+  "razon": "El libro señala la financiación parcial por los regulados y el conflicto entre funciones comerciales y de vigilancia. La extensión al área interna y a la dependencia jerárquica va en la misma dirección.",
+  "marca": false
+ },
+ "P55E59C": {
+  "id": "P55E59C",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2944,
+   2905,
+   293
+  ],
+  "razon": "El libro dice literalmente que los errores tienen causas personales, de tarea, situacionales y organizacionales, y que hay que buscarlas en el contexto.",
+  "marca": false
+ },
+ "P97C06F": {
+  "id": "P97C06F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   1044,
+   1050,
+   1068,
+   1072
+  ],
+  "razon": "El libro indica que los accidentes graves ocurren cuando se viola la independencia supuesta entre capas (caso Bhopal) y advierte de los fallos de modo común.",
+  "marca": false
+ },
+ "P4357F9": {
+  "id": "P4357F9",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1539,
+   2716,
+   5043,
+   5055,
+   5057,
+   4765
+  ],
+  "razon": "Coincide con el árbol de culpabilidad, pero la dicotomía simplifica. Según el libro, la mayoría de las violaciones no son malévolas, pueden ser necesarias o inducidas por el sistema y su culpa depende de los procedimientos.",
+  "marca": true
+ },
+ "P2A74C2": {
+  "id": "P2A74C2",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2880,
+   2884,
+   2922,
+   2961,
+   3817,
+   4765,
+   4987,
+   5077
+  ],
+  "razon": "El libro respalda no culpar como vía principal. Matiz: rechaza la cultura 'no-blame' y exige sancionar actos atroces. Un cliente podría leer que no debe sancionar nunca.",
+  "marca": true
+ },
+ "P3EF940": {
+  "id": "P3EF940",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5063,
+   5065,
+   5067,
+   5077,
+   4765
+  ],
+  "razon": "El libro dice que el castigo diferido no mejora la conducta, pero defiende sancionar a los pocos culpables graves. Evitar sanciones tardías podría llevar a no sancionarlos, contra L5077.",
+  "marca": true
+ },
+ "P3F642A": {
+  "id": "P3F642A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   277,
+   279,
+   2724,
+   263,
+   273
+  ],
+  "razon": "El libro pide, para cada condición local, preguntar qué factores organizacionales upstream contribuyeron. Limita el análisis a lo controlable por los gestores.",
+  "marca": false
+ },
+ "P53DB2A": {
+  "id": "P53DB2A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4280,
+   4284,
+   4288,
+   4292,
+   4296,
+   3965,
+   2769
+  ],
+  "razon": "El libro enumera enfoques pero no manda fijar criterios. Advierte que la erosión de los 'riesgos aceptables' llevó al Challenger. Sitúa la meta en la resistencia intrínseca, no en umbrales.",
+  "marca": true
+ },
+ "P70361F": {
+  "id": "P70361F",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5176,
+   5178,
+   5182,
+   5208,
+   4769
+  ],
+  "razon": "Concuerda con cumplimiento sin vigilancia (L5178). Pero el libro condiciona: descentralización temporal, cultura jerárquica previa y fuerte dependencia de supervisores de primera línea; 'sin supervisión directa' podría chocar.",
+  "marca": true
+ },
+ "P2BDE69": {
+  "id": "P2BDE69",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4714,
+   4720
+  ],
+  "razon": "El libro describe la indefensión aprendida como cultura disfuncional que impulsa el ciclo de la culpa; detectar sus síntomas concreta esa idea en la misma dirección.",
+  "marca": false
+ },
+ "P0DC5C7": {
+  "id": "P0DC5C7",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2583
+  ],
+  "razon": "El libro define el tick-off: medidas tratadas como equipo que se instala y se marca como hecho, cuando requieren vigilarse y ajustarse como proceso.",
+  "marca": false
+ },
+ "PD938FB": {
+  "id": "PD938FB",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4406,
+   4410,
+   4414
+  ],
+  "razon": "El tercer paso de la FSA es considerar formas alternativas de gestionar los riesgos; el paso lo reproduce.",
+  "marca": false
+ },
+ "P896D3F": {
+  "id": "P896D3F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2585,
+   306,
+   83,
+   594
+  ],
+  "razon": "El libro dice que un largo periodo sin accidentes graves es de mayor peligro y que las organizaciones conscientes refuerzan sus defensas en consecuencia.",
+  "marca": false
+ },
+ "P7CD64F": {
+  "id": "P7CD64F",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "requisite variety"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5184,
+   5200,
+   666
+  ],
+  "razon": "Weick, citado por Reason: equipos de personas diversas tienen más requisite variety y ven más al juntar observaciones. Término técnico nombrado, a verificar.",
+  "marca": true
+ },
+ "PD3C33F": {
+  "id": "PD3C33F",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   922,
+   908,
+   868,
+   942,
+   856
+  ],
+  "razon": "El libro señala los modos múltiples como fuente de confusión, pero no propone auditarlos contándolos. Enfatiza transiciones de modo y entrenamiento; solo contar modos podría desviar el foco.",
+  "marca": true
+ },
+ "P50F9BF": {
+  "id": "P50F9BF",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "escala de 1 (poca influencia) a 5 (influencia considerable)",
+   "1",
+   "5"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4476,
+   4478,
+   4494
+  ],
+  "razon": "El regulador califica la contribución de cada factor O&M en escala de cinco puntos, 1 muy poca y 5 muy considerable influencia. El paso omite que califica el regulador.",
+  "marca": true
+ },
+ "P02EE20": {
+  "id": "P02EE20",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3670,
+   3674,
+   3678,
+   3682,
+   3686,
+   3688,
+   3690
+  ],
+  "razon": "El libro describe los cuatro niveles e indica identificar los factores de cada nivel mediante discusión estructurada con expertos. Admite fusionar los niveles PIF e influyente, lo que no contradice el paso.",
+  "marca": false
+ },
+ "P44E8EB": {
+  "id": "P44E8EB",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "220 ítems",
+   "20 por GFT",
+   "trimestral"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3163,
+   3199,
+   3209,
+   3224
+  ],
+  "razon": "Cifras y frecuencia respaldadas. Matiz: el software arma cada lista desde bases de indicadores locales y pocos ítems se repiten; una lista fija o genérica chocaría. El plazo trimestral es ajustable.",
+  "marca": true
+ },
+ "PBDBA61": {
+  "id": "PBDBA61",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   2259,
+   2281,
+   2299,
+   2311
+  ],
+  "razon": "Los fragmentos no mencionan probar o pilotar recordatorios antes de generalizarlos. No se puede descartar que el libro diga otra cosa.",
+  "marca": true
+ },
+ "P4EC0BD": {
+  "id": "P4EC0BD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   1842,
+   2340,
+   2342,
+   2354
+  ],
+  "razon": "El libro compara explícitamente el riesgo por mantenimiento descuidado con el riesgo de error durante el mantenimiento; importa la proporción relativa entre ambos.",
+  "marca": false
+ },
+ "P42EA99": {
+  "id": "P42EA99",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2837,
+   3393,
+   3623,
+   3625,
+   3629,
+   3633,
+   3637,
+   3641,
+   3645,
+   3649,
+   3653,
+   3657,
+   3659
+  ],
+  "razon": "El libro presenta las VPCs con factores de ponderación genéricos y pide detectar y evaluar factores productores de violación. El paso aplica esa idea a la propia operación, sin cifras nuevas.",
+  "marca": false
+ },
+ "P934AB5": {
+  "id": "P934AB5",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3829,
+   2716,
+   4724,
+   5499,
+   5077
+  ],
+  "razon": "L3829 apoya el cambio de normas y cultura, pero el paso omite la otra vía: mejorar los procedimientos. Además, L4724 dice que cambiar valores es casi imposible y L5499 prioriza soluciones técnicas.",
+  "marca": true
+ },
+ "PB81BA1": {
+  "id": "PB81BA1",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5041,
+   5043,
+   5057,
+   1618,
+   1569
+  ],
+  "razon": "El árbol de decisión pregunta por la violación deliberada, y el libro distingue las violaciones inducidas por el sistema y las de reglas inadecuadas. El paso conserva la condición de procedimientos adecuados.",
+  "marca": false
+ },
+ "PCF5CC2": {
+  "id": "PCF5CC2",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   263,
+   271,
+   5742,
+   5748
+  ],
+  "razon": "El libro afirma que los factores económicos y societales quedan fuera del alcance de los gestores, son 'given and immutable', y que interesa lo cambiable y controlable.",
+  "marca": false
+ },
+ "P8060E3": {
+  "id": "P8060E3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2320,
+   2322,
+   2340,
+   2342,
+   2354,
+   2367
+  ],
+  "razon": "El libro define ambas cargas, pero la no esperada son fallos imprevistos, no clasificables de antemano. Además el libro cuestiona la visión ortodoxa: el mantenimiento mismo introduce errores.",
+  "marca": true
+ },
+ "P567904": {
+  "id": "P567904",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "cuatro subcomponentes"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4777,
+   5234,
+   5270,
+   4695
+  ],
+  "razon": "El libro lista cuatro subcomponentes, pero advierte que repasarlos uno a uno no basta: la cultura es más que la suma de sus partes.",
+  "marca": true
+ },
+ "PE4A0A0": {
+  "id": "PE4A0A0",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3737,
+   3745
+  ],
+  "razon": "El libro dice que MEDA aporta análisis computarizado de tendencias para la organización de mantenimiento.",
+  "marca": false
+ },
+ "PF63738": {
+  "id": "PF63738",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1991,
+   1995,
+   2161,
+   963,
+   975,
+   1840,
+   2311,
+   2340,
+   2367
+  ],
+  "razon": "El libro prioriza el mantenimiento, pero critica el control de calidad por inspección. Además, más contacto manual e inspecciones aumentan el error. Su remedio es eliminar ese contacto desde el diseño.",
+  "marca": true
+ },
+ "P3110CA": {
+  "id": "P3110CA",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   81,
+   83,
+   3965,
+   3971,
+   3973
+  ],
+  "razon": "El libro describe atajos de seguridad por plazos que se vuelven hábito, la erosión gradual de márgenes y estándares, y decisiones incrementales no percibidas como tales.",
+  "marca": false
+ },
+ "P08C9B3": {
+  "id": "P08C9B3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   520,
+   668,
+   674,
+   678,
+   686,
+   688,
+   692
+  ],
+  "razon": "El libro advierte del sesgo retrospectivo: una señal solo es advertencia si se sabe qué desastre vendrá. Además, ninguna señal aislada bastaba. El paso invierte ese criterio.",
+  "marca": true
+ },
+ "PE0E2A5": {
+  "id": "PE0E2A5",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "especialistas de tarea (task specialists)",
+   "por tipo de operación"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3163,
+   3199,
+   3213
+  ],
+  "razon": "Los indicadores de Tripod-Delta los crean especialistas de tarea que trabajan en grupos, para cada tipo de operación.",
+  "marca": true
+ },
+ "P96889B": {
+  "id": "P96889B",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   202,
+   291,
+   425,
+   427,
+   3784
+  ],
+  "razon": "El libro usa una tabla que resume fallas activas y condiciones latentes (Tabla 2.1). Nota: puede haber condiciones latentes sin falla activa asociada.",
+  "marca": false
+ },
+ "P664440": {
+  "id": "P664440",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   3153,
+   686,
+   4215
+  ],
+  "razon": "El libro pide integrar las señales en conjunto y advierte que en previsión rara vez se reconocen como avisos. El seguimiento señal por señal puede chocar con ese matiz.",
+  "marca": true
+ },
+ "P4C52F6": {
+  "id": "P4C52F6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   580,
+   5639,
+   2596
+  ],
+  "razon": "L580 enumera literalmente esos procesos organizacionales genéricos como fuentes de condiciones latentes.",
+  "marca": false
+ },
+ "P2E3BAA": {
+  "id": "P2E3BAA",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "Formarla (la persona que supervisa en el terreno)"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5204,
+   5208,
+   1450,
+   4769
+  ],
+  "razon": "El libro respalda formar supervisores para actuar sin SOPs, pero condiciona la descentralización a ciertas circunstancias, a una cultura jerárquica disciplinada y a su autoridad y experiencia.",
+  "marca": true
+ },
+ "P4C2D56": {
+  "id": "P4C2D56",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2716,
+   3825,
+   3829,
+   3623
+  ],
+  "razon": "El libro dice que la información en el puesto sirve para errores. Las violaciones son motivacionales y se abordan con normas, actitudes, cultura y procedimientos creíbles, 'al corazón, no a la cabeza'.",
+  "marca": true
+ },
+ "P74E059": {
+  "id": "P74E059",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5162,
+   5164,
+   5170,
+   5174,
+   5178,
+   5208
+  ],
+  "razon": "Sigue la idea del libro (pasar a modo plano en picos de ritmo), pero el libro dice que la jerarquia disciplinada previa es condicion del exito, no un obstaculo.",
+  "marca": true
+ },
+ "PBBD983": {
+  "id": "PBBD983",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4478,
+   4494,
+   4512
+  ],
+  "razon": "El libro dice que inspecciones posteriores generan nuevos perfiles y que su sucesion permite seguir el progreso de las reformas.",
+  "marca": false
+ },
+ "P14D5C4": {
+  "id": "P14D5C4",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "análisis de sensibilidad"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   1031,
+   1033,
+   1035,
+   3209
+  ],
+  "razon": "El libro no menciona analisis de sensibilidad. Sostiene que no se pueden prever todos los escenarios y privilegia la mejora proactiva de procesos sobre los 'fixes'.",
+  "marca": true
+ },
+ "P301D6A": {
+  "id": "P301D6A",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "16 RPFs",
+   "8 factores organizacionales"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3232,
+   3298,
+   3300,
+   3332
+  ],
+  "razon": "El libro describe 16 RPF en Review, y en MESH ocho factores organizacionales fijos mas factores locales que varian segun el lugar de trabajo.",
+  "marca": true
+ },
+ "P475953": {
+  "id": "P475953",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2520,
+   2535,
+   2596,
+   2654,
+   2583
+  ],
+  "razon": "La lista coincide con L2596. Pero el paso omite que el libro pide elegir qué procesos medir a partir del análisis de múltiples eventos, no medirlos todos (L2654).",
+  "marca": true
+ },
+ "P2248BC": {
+  "id": "P2248BC",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   3747,
+   3755,
+   1943,
+   2170
+  ],
+  "razon": "Los fragmentos no muestran la sección de MEDA que tipifica el error ni sus categorías. El libro advierte que las taxonomías causales son difíciles de aplicar para no especialistas.",
+  "marca": true
+ },
+ "PAAE376": {
+  "id": "PAAE376",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5132,
+   5162,
+   5164,
+   5182,
+   1724
+  ],
+  "razon": "El libro describe la fuerte dependencia de SOPs en las HRO durante la operación rutinaria. Evaluar esa dependencia concreta el tema sin dar una dirección contraria.",
+  "marca": false
+ },
+ "P450D15": {
+  "id": "P450D15",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2487,
+   2489,
+   2495,
+   2520,
+   2765,
+   5688,
+   5690
+  ],
+  "razon": "El libro distingue medidas de proceso y de resultado y critica depender de las de resultado. Auditar cuáles se usan operativiza esa idea sin añadir datos.",
+  "marca": false
+ },
+ "P2CDAC6": {
+  "id": "P2CDAC6",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "al menos cinco tipos distintos de escenarios de crisis"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5896,
+   5894
+  ],
+  "razon": "El libro dice que las organizaciones preparadas para crisis planifican para al menos cinco tipos de crisis. 'Relevantes al negocio' es un matiz menor en la misma dirección.",
+  "marca": true
+ },
+ "P270A27": {
+  "id": "P270A27",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "cero accidentes",
+   "cada período"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2594,
+   2596,
+   2598,
+   2489,
+   5692
+  ],
+  "razon": "El libro dice que la meta no es cero accidentes y que no hay que intentar controlar directamente los incidentes, sino medir y mejorar los procesos. El paso invierte ambas cosas.",
+  "marca": true
+ },
+ "P63A7A8": {
+  "id": "P63A7A8",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "periódicamente"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4296,
+   3965
+  ],
+  "razon": "El libro dice que la seguridad es un objetivo móvil hacia el riesgo cero. Pero revisar sin fijar la dirección podría permitir la erosión de estándares que el libro critica en el caso NASA. La frecuencia no la trae el libro.",
+  "marca": true
+ },
+ "P5AFB82": {
+  "id": "P5AFB82",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5572,
+   5603,
+   5690,
+   5907
+  ],
+  "razon": "El libro distingue cuatro tipos de riesgo y pide contramedidas distintas para cada nivel, además de comprobar precursores y procesos. El paso lo concreta sin añadir datos.",
+  "marca": false
+ },
+ "P953981": {
+  "id": "P953981",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1943,
+   2109,
+   2111,
+   2113,
+   2117,
+   2121,
+   2125
+  ],
+  "razon": "Reason clasificó 122 fallos de mantenimiento con exactamente esas categorías, y el libro avala clasificar por consecuencias. No recomienda hacerlo explícitamente, pero va en la misma dirección.",
+  "marca": false
+ },
+ "PAA0AD8": {
+  "id": "PAA0AD8",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Perfil de Factores Organizacionales"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4476,
+   4478,
+   4492,
+   4494
+  ],
+  "razon": "El libro dice literalmente que las calificaciones se suman sobre todas las instancias para generar el Organizational Factor Profile.",
+  "marca": true
+ },
+ "P1DBB41": {
+  "id": "P1DBB41",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3690,
+   3692,
+   3704,
+   3706,
+   3714,
+   3718,
+   3722
+  ],
+  "razon": "La escala graduada se aplica a los nodos hoja. Los factores con varias influencias se derivan combinando condicionales, no asignándoles una razón directa. 'A cada factor' generaliza y omite el facilitador experto.",
+  "marca": true
+ },
+ "PBB83F3": {
+  "id": "PBB83F3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   204,
+   582,
+   2767,
+   5775,
+   5781
+  ],
+  "razon": "El libro afirma que identificar y eliminar condiciones latentes de forma proactiva es la mejor vía, y que conviene priorizar las más urgentes con recursos limitados.",
+  "marca": false
+ },
+ "P1E4D5A": {
+  "id": "P1E4D5A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   443,
+   447,
+   3993,
+   4121,
+   5254
+  ],
+  "razon": "El libro señala la falta de medios para ajustar la dotación a la carga de trabajo y los recortes de personal de seguridad. El paso lo concreta en la misma dirección.",
+  "marca": false
+ },
+ "PD9E0F6": {
+  "id": "PD9E0F6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2487,
+   2520,
+   2638,
+   2648,
+   2650
+  ],
+  "razon": "El libro pide combinar medidas reactivas y proactivas, y medir la 'salud de seguridad' con indicadores de proceso, no solo con resultados negativos.",
+  "marca": false
+ },
+ "P5FE948": {
+  "id": "P5FE948",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4215,
+   4257,
+   4259,
+   4261,
+   4265,
+   4446
+  ],
+  "razon": "Coherente con el riesgo de depender del regulado. Pero el libro dice que las visitas solo dan vistazos aislados y que el compromiso es estructural, no un fallo. Conviene revisar el matiz.",
+  "marca": true
+ },
+ "PBD0948": {
+  "id": "PBD0948",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   990,
+   992,
+   1006,
+   1012,
+   1547,
+   2720,
+   5055
+  ],
+  "razon": "El libro describe cómo la sobreespecificación hace imposible la tarea sin violar el procedimiento. Identificar esas tareas concreta el diagnóstico en la misma dirección.",
+  "marca": false
+ },
+ "PF6696F": {
+  "id": "PF6696F",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   171,
+   181,
+   374,
+   1072,
+   2650
+  ],
+  "razon": "El libro respalda las comprobaciones periódicas de huecos (L2650). Pero un mapa único de huecos 'conocidos' choca en matiz con huecos en flujo constante (L181) y con grietas pequeñas inadvertidas (L374).",
+  "marca": true
+ },
+ "PDBED6D": {
+  "id": "PDBED6D",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "ratio de personal de seguridad respecto al total de la organización",
+   "estándares del sector"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   3993,
+   2579,
+   4454,
+   4060,
+   4121
+  ],
+  "razon": "El libro cita el 2% de NASA como ejemplo, sin proponer comparar ratios con estándares. Además insiste en la calidad del personal, no solo la cantidad (L2579). El nodo trata de reguladores.",
+  "marca": true
+ },
+ "P688228": {
+  "id": "P688228",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   648,
+   666,
+   4765,
+   5067,
+   5270
+  ],
+  "razon": "La cultura generativa entrena y recompensa a los mensajeros (L648). La cultura justa premia la información de seguridad (L4765). La imaginación requisita exige diversidad de pensamiento (L666). El paso lo formaliza en la misma dirección.",
+  "marca": false
+ },
+ "PB804D4": {
+  "id": "PB804D4",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2922,
+   3817,
+   4720,
+   5063,
+   2948,
+   2884
+  ],
+  "razon": "Va en la dirección del libro. Pero 'como única respuesta' admite sancionar errores recurrentes, mientras el libro dice que culpar apenas afecta los errores y los considera casi siempre sin culpa (L3817, L5063).",
+  "marca": true
+ },
+ "P27CC26": {
+  "id": "P27CC26",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "las tres condiciones"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977,
+   1987,
+   1991,
+   1834,
+   1838,
+   2250
+  ],
+  "razon": "El libro aplica los tres criterios a clases de actividad, no a tareas sueltas. Filtrar tareas así podría desatender la reinstalación y las omisiones, que el libro prioriza.",
+  "marca": true
+ },
+ "P2D16F2": {
+  "id": "P2D16F2",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Failure State Profile",
+   "software"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3199,
+   3203,
+   3209
+  ],
+  "razon": "El software de Tripod-Delta genera el Failure State Profile, un gráfico de barras de los 11 GFTs, a partir del checklist completado.",
+  "marca": true
+ },
+ "P436702": {
+  "id": "P436702",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1056,
+   1058,
+   1060,
+   1133,
+   1137,
+   586
+  ],
+  "razon": "Concreta en su misma dirección lo que dice el libro: las defensas ocultan errores, sus ganancias se convierten en producción y se 'olvida tener miedo'.",
+  "marca": false
+ },
+ "PB3AE8F": {
+  "id": "PB3AE8F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2638,
+   2658,
+   2767,
+   5775,
+   5781,
+   580,
+   196
+  ],
+  "razon": "El libro recomienda chequeos proactivos regulares de procesos organizacionales y condiciones latentes. El error humano es consecuencia, no causa principal.",
+  "marca": false
+ },
+ "P5D9850": {
+  "id": "P5D9850",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   194,
+   196,
+   293,
+   2876,
+   2905,
+   4105
+  ],
+  "razon": "El libro pide ir de los actos inseguros hacia las condiciones locales, organizacionales y regulatorias. El error es consecuencia, no causa final.",
+  "marca": false
+ },
+ "P9B201F": {
+  "id": "P9B201F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5184,
+   5186,
+   5196
+  ],
+  "razon": "Weick, citado por Reason, recomienda una cultura de 'war stories' y de comunicación cara a cara para reducir la brecha de variedad requerida.",
+  "marca": false
+ },
+ "PBF11AC": {
+  "id": "PBF11AC",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   293,
+   2650,
+   181,
+   310
+  ],
+  "razon": "La investigación examina cómo y cuándo fallaron las defensas, y cada evento muestra una trayectoria a través de ellas. El paso lo concreta como secuencia temporal.",
+  "marca": false
+ },
+ "PD0F918": {
+  "id": "PD0F918",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "un solo fallo"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5031,
+   5035,
+   4987,
+   5037,
+   5063
+  ],
+  "razon": "El paso reproduce el criterio de Lord Denning, que Reason rechaza como 'hang them all'. Propone en su lugar el test de sustitución; castigar todo error es inaceptable.",
+  "marca": true
+ },
+ "PF962A8": {
+  "id": "PF962A8",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   181,
+   213,
+   293,
+   310,
+   5779,
+   5781
+  ],
+  "razon": "Correcto al investigar. Como prevención, el libro dice que los agujeros se mueven, los disparadores locales son difíciles de anticipar y la mejor vía es eliminar condiciones latentes.",
+  "marca": true
+ },
+ "P466B2C": {
+  "id": "P466B2C",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   840,
+   844,
+   852
+  ],
+  "razon": "Según Bainbridge, al humano le quedan las tareas no automatizables, sobre todo restaurar el sistema tras fallos imprevistos. El paso lo concreta en la misma dirección.",
+  "marca": false
+ },
+ "P7E4AD9": {
+  "id": "P7E4AD9",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2909,
+   2948,
+   2961,
+   2977,
+   3825,
+   3829,
+   5041,
+   5499,
+   5641
+  ],
+  "razon": "Omite que el libro favorece el enfoque situacional y avisa del error de atribución. Dejar criterios propios puede llevar a centrarse en la persona, que el libro desaconseja.",
+  "marca": true
+ },
+ "P4DCA53": {
+  "id": "P4DCA53",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2556,
+   2568,
+   2579,
+   4749
+  ],
+  "razon": "El libro cita presiones públicas y regulatorias, además de accidentes, como impulso a la seguridad, y la cultura de seguridad como motor duradero.",
+  "marca": false
+ },
+ "P9C556E": {
+  "id": "P9C556E",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4033,
+   4039,
+   3199,
+   158,
+   4464
+  ],
+  "razon": "Cullen critica inspecciones sin checklist. Pero el libro recoge objeciones a listas fijas (anticipación, variedad) y Tripod rota ítems. El paso además desplaza la checklist de la inspección a los procesos.",
+  "marca": true
+ },
+ "P148951": {
+  "id": "P148951",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   4695,
+   4749,
+   5234,
+   2579
+  ],
+  "razon": "Los fragmentos no tratan una justificación escrita previa. El libro presenta la cultura como algo que emerge gradualmente de prácticas y como más que la suma de sus partes; 'por escrito' y 'antes de decidir' no están respaldados.",
+  "marca": true
+ },
+ "P64B51E": {
+  "id": "P64B51E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2823,
+   2833,
+   2837,
+   3813,
+   3825,
+   2994,
+   2996
+  ],
+  "razon": "El libro define la reducción de errores y aconseja mejorar tareas, información y condiciones. El entrenamiento figura como medida válida, aunque el libro no lo desarrolla.",
+  "marca": false
+ },
+ "P767674": {
+  "id": "P767674",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4276,
+   4296,
+   4318,
+   4388,
+   4410
+  ],
+  "razon": "El libro vincula lo 'seguro' con lo que la sociedad considera aceptable y con el deber legal de lo razonablemente practicable. El paso presupone una elección libre del enfoque. El Safety Case sí exige demostrar ante el regulador.",
+  "marca": true
+ },
+ "P781E87": {
+  "id": "P781E87",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2170,
+   2224,
+   2228,
+   2232,
+   2236,
+   2240,
+   2244,
+   2248,
+   2250,
+   2127
+  ],
+  "razon": "El libro identifica pasos propensos por análisis de tarea (rasgos provocadores de omisión) y ve difícil reconstruir omisiones pasadas ajenas; el paso propone como vía principal los errores históricos.",
+  "marca": true
+ },
+ "P1C21B7": {
+  "id": "P1C21B7",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5077,
+   5055,
+   3829,
+   5641,
+   2922,
+   2948
+  ],
+  "razon": "El libro respalda sancionar actos atroces, pero valora el modelo personal para riesgos de lesión personal. 'Repetida' podría incluir errores repetidos, lo que alimentaría el ciclo de culpa.",
+  "marca": true
+ },
+ "P5A956E": {
+  "id": "P5A956E",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4502,
+   4500,
+   3075,
+   2872,
+   2876
+  ],
+  "razon": "El libro dice que eliminar las instancias una a una no mejora la salud de seguridad; las reparaciones locales quedan en un bucle subordinado. El paso invierte la prioridad.",
+  "marca": true
+ },
+ "PF77D84": {
+  "id": "PF77D84",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4378,
+   4380
+  ],
+  "razon": "El procedimiento COSHH que describe el libro incluye literalmente la vigilancia de salud de los empleados expuestos al riesgo.",
+  "marca": false
+ },
+ "P2A95E2": {
+  "id": "P2A95E2",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "puesto relacionado con seguridad"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5258,
+   2579,
+   5270
+  ],
+  "razon": "El libro plantea literalmente esa pregunta: si un nombramiento de seguridad premia el talento o es un destierro para gente agotada.",
+  "marca": true
+ },
+ "P4683EB": {
+  "id": "P4683EB",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "listas de verificación",
+   "obligatorias",
+   "firma paso a paso"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   409,
+   413,
+   2250,
+   2994,
+   2977
+  ],
+  "razon": "El libro pide identificar los pasos propensos a omisión. No prescribe checklists firmadas y muestra que las firmas se dan sin inspección real. Obligar a todo puede chocar.",
+  "marca": true
+ },
+ "P713B0A": {
+  "id": "P713B0A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   198,
+   200,
+   202,
+   293,
+   271,
+   273,
+   582,
+   5748
+  ],
+  "razon": "Rastrear hacia arriba coincide con el libro, pero hacerlo con cada condición choca con los rendimientos decrecientes, los límites manejables y la priorización. Además, no siempre hay una mala decisión.",
+  "marca": true
+ },
+ "P488A68": {
+  "id": "P488A68",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3825,
+   2716,
+   1006,
+   3829,
+   2724
+  ],
+  "razon": "Los errores se combaten con mejor información, en esa misma dirección. Pero añadir procedimientos puede sobreespecificar y generar violaciones, y los factores organizacionales son la prioridad.",
+  "marca": true
+ },
+ "P82F303": {
+  "id": "P82F303",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2936,
+   2957,
+   2924
+  ],
+  "razon": "El paso reproduce casi literalmente el primer hecho básico que el libro propone reconocer para romper el ciclo de la culpa.",
+  "marca": false
+ },
+ "P2E55A4": {
+  "id": "P2E55A4",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   105,
+   83,
+   2566,
+   2585
+  ],
+  "razon": "El libro dice que en periodos sin accidentes cae la inversión y el mantenimiento de defensas. Auditarla concreta esa idea, en su misma dirección.",
+  "marca": false
+ },
+ "PD1D609": {
+  "id": "PD1D609",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5603,
+   5639,
+   5701,
+   5907
+  ],
+  "razon": "Priorizar por el riesgo predominante del dominio puede relegar las condiciones latentes. El libro dice que son altas en todos los dominios y pide contramedidas simultáneas en todos los niveles.",
+  "marca": true
+ },
+ "PDB837E": {
+  "id": "PDB837E",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   1085,
+   1095,
+   1141,
+   2948,
+   2884
+  ],
+  "razon": "El libro no propone capacitar. Presenta la desconfianza como consecuencia de falsas alarmas reales y privilegia cambiar situaciones antes que personas. Capacitar como vía principal podría chocar con eso.",
+  "marca": true
+ },
+ "PB08D27": {
+  "id": "PB08D27",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5894,
+   5896
+  ],
+  "razon": "El libro afirma que las organizaciones preparadas para crisis vinculan estrechamente los planes de crisis con los de recuperación del negocio.",
+  "marca": false
+ },
+ "P1C7808": {
+  "id": "P1C7808",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   417,
+   419,
+   421,
+   453
+  ],
+  "razon": "El libro dice que línea y base requieren paquetes distintos, con fichas breves en línea. Exigir documentación completa en toda tarea generaliza, y L421 señala que los manuales son difíciles de usar.",
+  "marca": true
+ },
+ "PEF7A3F": {
+  "id": "PEF7A3F",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   423,
+   451,
+   1914,
+   4027,
+   459
+  ],
+  "razon": "Coincide con la falta de procedimiento de traspaso línea-base. Pero L423 lo matiza (traspasos raros) y L459 anuncia que el cap. 3 cuestiona cambiar procedimientos como respuesta.",
+  "marca": true
+ },
+ "PDB2725": {
+  "id": "PDB2725",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3722,
+   3724
+  ],
+  "razon": "El libro suma las probabilidades incondicionales, pero solo de los factores de influencia inmediatos. El paso omite esa condición y podría llevar a sumar todos los nodos.",
+  "marca": true
+ },
+ "PE72A42": {
+  "id": "PE72A42",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "participación de pares",
+   "procedimientos de apelación"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5266,
+   5055,
+   5234,
+   5270
+  ],
+  "razon": "El libro pregunta literalmente si participan pares y representantes sindicales en el juicio disciplinario y si hay apelación interna. El paso omite sindicatos sin contradecir.",
+  "marca": true
+ },
+ "P966EA1": {
+  "id": "P966EA1",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "ISO 45001",
+   "factores de gestión, técnicos, procedimentales y de formación"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2726,
+   2734,
+   2738,
+   2742,
+   2746,
+   2748,
+   2750
+  ],
+  "razon": "El libro exige muestrear las seis dimensiones; el paso omite cultura, que el libro sitúa en el núcleo, y factores específicos de seguridad. ISO 45001 no aparece en el libro (1997).",
+  "marca": true
+ },
+ "P6646B7": {
+  "id": "P6646B7",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "gerencia en todos los niveles",
+   "dirección"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4308,
+   4314,
+   2748,
+   2577
+  ],
+  "razon": "Robens: las buenas intenciones del consejo son inútiles si los mandos inferiores solo piensan en producción. El paso concreta esa idea sin quitar el papel de la alta dirección.",
+  "marca": true
+ },
+ "P9E8044": {
+  "id": "P9E8044",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "loss costing",
+   "HSE-Chevron"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5790,
+   5832,
+   5250
+  ],
+  "razon": "El libro describe el estudio conjunto HSE-Chevron: incidentes menores sumaron £1 millón en 13 semanas. También pregunta qué sistema existe para costear pérdidas.",
+  "marca": true
+ },
+ "PE6FCD2": {
+  "id": "PE6FCD2",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   478,
+   494,
+   504,
+   526
+  ],
+  "razon": "El libro exige separar a quien opera (trading) de quien verifica (settlement). El paso lo generaliza a autorizar y aprobar el propio trabajo, en la misma dirección.",
+  "marca": false
+ },
+ "P219A19": {
+  "id": "P219A19",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4394,
+   4406,
+   4410,
+   4414
+  ],
+  "razon": "El análisis costo-beneficio de las alternativas es literalmente el cuarto paso de la FSA descrita por la MSA.",
+  "marca": false
+ },
+ "P67C7EA": {
+  "id": "P67C7EA",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4364
+  ],
+  "razon": "El primer paso del procedimiento continuo de COSHH es listar todas las sustancias peligrosas e identificar sus puntos de uso.",
+  "marca": false
+ },
+ "PADF710": {
+  "id": "PADF710",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "HAZOP",
+   "PRA",
+   "análisis de tareas cognitivas"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5544,
+   5546,
+   5559,
+   5905
+  ],
+  "razon": "El libro cita HAZOPS, PRA y análisis de tareas cognitivas como herramientas del modelo de ingeniería, centrado en los desajustes humano-máquina.",
+  "marca": true
+ },
+ "P857B98": {
+  "id": "P857B98",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5603,
+   5639,
+   5641,
+   4296
+  ],
+  "razon": "El libro dice que el peso de cada riesgo cambia con la tecnología y la sociedad. El paso concreta esa revisión en la misma dirección, sin datos nuevos.",
+  "marca": false
+ },
+ "P7B9342": {
+  "id": "P7B9342",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   225,
+   3965,
+   3967,
+   3971,
+   3985,
+   3989
+  ],
+  "razon": "Coincide con el libro: NASA normalizó las anomalías y no recopiló la tendencia de erosión de las juntas tóricas. Auditar las anomalías toleradas va en esa dirección.",
+  "marca": false
+ },
+ "PE59408": {
+  "id": "PE59408",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4773,
+   2579,
+   2581,
+   5219,
+   2583
+  ],
+  "razon": "La cultura de aprendizaje exige voluntad de implantar reformas y compromiso de recursos. Matiz: el libro advierte que implantar no basta, hay que seguir vigilando y ajustando (tick-off).",
+  "marca": false
+ },
+ "P2EE4EC": {
+  "id": "P2EE4EC",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "periódicamente"
+  ],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   2299,
+   2311
+  ],
+  "razon": "Los fragmentos no tratan la revisión de recordatorios. El libro los llama 'primeros auxilios' y prefiere soluciones de diseño; ajustarlos sin fin podría desviar de eso. 'Periódicamente' es una frecuencia.",
+  "marca": true
+ },
+ "P9059FF": {
+  "id": "P9059FF",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   65,
+   67,
+   77,
+   79,
+   2568
+  ],
+  "razon": "El libro pide que la protección iguale el peligro productivo (zona de paridad). Mapear ambos concreta esa idea. Advierte que las medidas de protección son difíciles de interpretar.",
+  "marca": false
+ },
+ "P1840CE": {
+  "id": "P1840CE",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1840,
+   1991,
+   1995,
+   2161,
+   2487,
+   5586
+  ],
+  "razon": "El libro presenta el mantenimiento como la mayor fuente en todas las tecnologías peligrosas. El paso lo condiciona a confirmarlo con el historial de errores, una medida de resultado poco fiable que puede ocultar condiciones latentes.",
+  "marca": true
+ },
+ "PD3488C": {
+  "id": "PD3488C",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "seguimiento continuo"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2598,
+   3209,
+   4478,
+   4494,
+   4714
+  ],
+  "razon": "El libro sigue el progreso de las reformas con perfiles sucesivos y chequeos regulares. 'Continuo' puede no coincidir con los chequeos periódicos que describe.",
+  "marca": true
+ },
+ "P4613B1": {
+  "id": "P4613B1",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Sección 1-3",
+   "MEDA",
+   "aerolínea",
+   "tipo de evento",
+   "naturaleza del fallo"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3747,
+   3751,
+   3755,
+   3759
+  ],
+  "razon": "Las secciones 1 a 3 de MEDA responden a 'qué ocurrió': aerolínea, naturaleza del evento y clasificación del fallo. Coincide con el libro.",
+  "marca": true
+ },
+ "P2D5D9B": {
+  "id": "P2D5D9B",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   196,
+   5641,
+   5907,
+   2876,
+   2880
+  ],
+  "razon": "El libro critica el predominio del modelo persona y centrarse en fallos activos sin ver causas latentes; el paso lo convierte en diagnóstico, misma dirección.",
+  "marca": false
+ },
+ "PF6310C": {
+  "id": "PF6310C",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2823,
+   2845,
+   2849,
+   808,
+   1129,
+   1149
+  ],
+  "razon": "El libro respalda la contención, la detección y la tolerancia. El cap. 3 advierte que las barreras añaden complejidad y pueden fallar o desplazar errores; revisar ese matiz.",
+  "marca": true
+ },
+ "PE96D62": {
+  "id": "PE96D62",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "revisiones periódicas"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2520,
+   2547,
+   2598,
+   2658,
+   2765
+  ],
+  "razon": "El libro pide chequeos regulares de procesos, con frecuencia según el ritmo de cambio de cada uno. Si la revisión usa tasas de accidentes, que revelan poco, contradice el libro.",
+  "marca": true
+ },
+ "P8F6304": {
+  "id": "P8F6304",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5892,
+   5834,
+   5894
+  ],
+  "razon": "El libro enumera como costes intangibles el daño reputacional, la pérdida de negocio y las dificultades de reclutamiento. El paso pide estimarlos en el análisis, en la misma dirección.",
+  "marca": false
+ },
+ "P6C0A42": {
+  "id": "P6C0A42",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "puntos de control periódicos",
+   "en tu calendario"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   81,
+   105,
+   3965,
+   3971,
+   3973
+  ],
+  "razon": "El libro describe la erosión gradual y lo difícil que es detectarla. No prescribe revisiones periódicas agendadas: la frecuencia y el calendario son añadidos, aunque van en su misma dirección.",
+  "marca": true
+ },
+ "P7F384E": {
+  "id": "P7F384E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5037,
+   5055,
+   5057
+  ],
+  "razon": "El libro propone preguntar a los pares y usar un 'jurado' de pares con formación y experiencia comparables al implicado.",
+  "marca": false
+ },
+ "P2F57E1": {
+  "id": "P2F57E1",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1840,
+   2340,
+   2342,
+   2354,
+   1114
+  ],
+  "razon": "El libro dice que el riesgo de error crece con la actividad de mantenimiento y que el mantenimiento puede dañar el sistema. Afirmar que cada intervención reduce el riesgo invierte esa causalidad.",
+  "marca": true
+ },
+ "P9430BD": {
+  "id": "P9430BD",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4109,
+   4133,
+   4165,
+   4184,
+   4265,
+   668
+  ],
+  "razon": "La dirección coincide con el caso ACAA. Pero el libro advierte del sesgo retrospectivo y dice que el compromiso regulatorio es estructural, no un 'fallo'. El matiz requiere revisión.",
+  "marca": true
+ },
+ "P30581C": {
+  "id": "P30581C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "Comité de Auditoría del directorio"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   520,
+   504,
+   668,
+   686,
+   4215,
+   3153
+  ],
+  "razon": "L520 respalda revisar las señales en conjunto. El libro no asigna la tarea a un Comité de Auditoría, la auditoría de Barings falló (L504) y advierte del sesgo retrospectivo (L668, L686, L4215).",
+  "marca": true
+ },
+ "P661559": {
+  "id": "P661559",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5200,
+   666,
+   5184,
+   5178
+  ],
+  "razon": "El libro recomienda equipos divergentes en especialidad y experiencia. Los equipos homogéneos 'ven cosas muy similares' y carecen de variedad requerida (L5200). El paso invierte la recomendación.",
+  "marca": true
+ },
+ "P5A7ED6": {
+  "id": "P5A7ED6",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "al menos 48 horas antes",
+   "tarjetas paso a paso",
+   "firmas de reensamblaje"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   417,
+   419,
+   423,
+   451,
+   453,
+   401
+  ],
+  "razon": "Las tarjetas y firmas aparecen en L419 y L453. El plazo de 48 h no está en el libro y choca con el papeleo de línea, generado justo antes (L417), y con traspasos imprevistos (L401, L423).",
+  "marca": true
+ },
+ "PF8D883": {
+  "id": "PF8D883",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   310,
+   1056,
+   1068,
+   1072,
+   1114,
+   1123,
+   1149,
+   2650
+  ],
+  "razon": "Romper la alineación sigue L310 y L2650. Pero reforzar o añadir capas puede aumentar la complejidad y la opacidad ('fallacy of defences-in-depth', L1056, L1072, L1149).",
+  "marca": true
+ },
+ "P83934F": {
+  "id": "P83934F",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5742,
+   5740,
+   5748,
+   263,
+   271,
+   293
+  ],
+  "razon": "Coincide con L5742. Matiz: Reason llama 'altamente especulativos' esos valores y pide un 'término medio' que no descuide lo psicológico/proximal. Priorizar podría excluir niveles.",
+  "marca": true
+ },
+ "P3114FB": {
+  "id": "P3114FB",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Tipos Generales de Fallo (GFTs)"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3784,
+   3782
+  ],
+  "razon": "L3784: las precondiciones son producto de fallos latentes identificables y se identifican los GFTs asociados. Coincide con el paso.",
+  "marca": true
+ },
+ "P13167E": {
+  "id": "P13167E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2224,
+   2250,
+   2259
+  ],
+  "razon": "L2250: identificar de antemano los pasos más vulnerables contando sus rasgos provocadores de omisión. El paso los etiqueta como 'críticos', que es una concreción operativa.",
+  "marca": false
+ },
+ "PF4ACB1": {
+  "id": "PF4ACB1",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "entrenamiento recurrente",
+   "escenarios de fallo simulado"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   852,
+   856
+  ],
+  "razon": "El libro pide práctica continua y mayor inversión en entrenamiento (L852, L856). No menciona simulación de fallos ni programas recurrentes: es un método añadido, aunque va en la misma dirección.",
+  "marca": true
+ },
+ "P6FA9F5": {
+  "id": "P6FA9F5",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1021,
+   1033,
+   1035,
+   3209,
+   4448
+  ],
+  "razon": "El libro dice que reguladores y diseñadores no pueden prever todos los escenarios. Propone mejorar procesos de forma proactiva, no confiar en anticipar escenarios de cada 'fix' reactivo.",
+  "marca": true
+ },
+ "P20FD7E": {
+  "id": "P20FD7E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "tabla de características de Westrum"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   596,
+   600,
+   666,
+   5272,
+   5236
+  ],
+  "razon": "La tabla es descriptiva, no un instrumento de diagnóstico. El libro advierte que quien cree tener buena cultura casi seguro se equivoca: riesgo de autodiagnóstico sesgado.",
+  "marca": true
+ },
+ "P3B8FB1": {
+  "id": "P3B8FB1",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "2-3"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4478,
+   4494,
+   3209,
+   3382
+  ],
+  "razon": "El libro indica identificar los dos o tres factores más necesitados de reforma urgente mediante el Perfil de Factores Organizacionales.",
+  "marca": true
+ },
+ "P23A118": {
+  "id": "P23A118",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "la dirección",
+   "caso de negocio"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2579,
+   3993,
+   4523,
+   5250,
+   5254,
+   5219
+  ],
+  "razon": "El libro respalda la falta de recursos, pero habla de calidad y calibre, no solo de cantidad. No trata el 'caso de negocio' y el nodo se refiere a reguladores, no a la propia organización.",
+  "marca": true
+ },
+ "P78D885": {
+  "id": "P78D885",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "grupo de confianza"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5055,
+   5057,
+   5063
+  ],
+  "razon": "El libro habla de un 'jurado' de pares del implicado para la zona gris. Un 'grupo de confianza' sin exigir pares podría apartarse del test de sustitución.",
+  "marca": true
+ },
+ "PB3955F": {
+  "id": "PB3955F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2648,
+   2652,
+   2654
+  ],
+  "razon": "El libro pide revelar patrones recurrentes de causa-efecto en condiciones locales y organizacionales analizando muchos eventos con un marco común.",
+  "marca": false
+ },
+ "P3E6A38": {
+  "id": "P3E6A38",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   263,
+   5748
+  ],
+  "razon": "El libro presenta la evidencia disponible como una limitación. Su criterio para fijar límites es lo que los gestores pueden controlar; el paso invierte esa prioridad.",
+  "marca": true
+ },
+ "PFEB781": {
+  "id": "PFEB781",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "EPC",
+   "probabilidad nominal"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "razon": "El libro dice literalmente que la probabilidad nominal se multiplica por una proporción juzgada del factor EPC correspondiente.",
+  "marca": true
+ },
+ "P0A8A46": {
+  "id": "P0A8A46",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2905,
+   2876,
+   2880,
+   2944,
+   2948,
+   4824,
+   5037
+  ],
+  "razon": "El libro sostiene que el error humano es consecuencia, no causa, y que hay que buscar factores situacionales y organizacionales. El paso lo concreta aplicándolo a los registros de incidentes.",
+  "marca": false
+ },
+ "P90EE23": {
+  "id": "P90EE23",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2652,
+   2654,
+   2656
+  ],
+  "razon": "El libro lo recomienda, pero limitado a eventos 'domain-related' o 'from the same domain'. El paso omite esa condición y podría llevar a mezclar incidentes heterogéneos.",
+  "marca": true
+ },
+ "P84E638": {
+  "id": "P84E638",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5690,
+   2669,
+   2693,
+   2769,
+   4974
+  ],
+  "razon": "El libro considera los eventos precursores (fugas, near-misses) más diagnósticos y valora los sistemas de reporte. 'Fallas de equipos' es una concreción en la misma dirección.",
+  "marca": false
+ },
+ "P58BE34": {
+  "id": "P58BE34",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "permisos de trabajo"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1914,
+   441,
+   451,
+   1896,
+   1869,
+   580,
+   4027
+  ],
+  "razon": "Los casos del libro muestran esas condiciones latentes (permisos de trabajo y relevo de turno en Piper Alpha, reparaciones no estándar). 'En cada caso' generaliza un poco, pero va en la misma dirección.",
+  "marca": true
+ },
+ "P0729D7": {
+  "id": "P0729D7",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5503,
+   5594,
+   5603,
+   5639,
+   5641,
+   5905,
+   5907
+  ],
+  "razon": "Coexistencia respaldada, pero ponderar según riesgo predominante puede relegar el modelo organizacional; el libro dice que las condiciones latentes son altas en todo dominio y pide contramedidas simultáneas siempre.",
+  "marca": true
+ },
+ "P0C5D88": {
+  "id": "P0C5D88",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   79,
+   4284,
+   5603,
+   5639
+  ],
+  "razon": "El libro compara dominios con estimaciones (Tabla 10.1), no con referencias históricas. Avisa que el perfil cambia y que la protección exitosa se mide mal por ausencia de sucesos.",
+  "marca": true
+ },
+ "P6E6ED3": {
+  "id": "P6E6ED3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   975,
+   2250,
+   2259,
+   2279,
+   2289,
+   2293
+  ],
+  "razon": "El libro recomienda recordatorios con criterio 'check' para pasos propensos a omisión. Matiz: si 'verificaciones' se lee como firmas de conformidad, el libro advierte que se firma sin comprobar.",
+  "marca": true
+ },
+ "PADB492": {
+  "id": "PADB492",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   2724,
+   2905,
+   5748,
+   5781
+  ],
+  "razon": "El libro respalda buscar los factores locales y organizacionales. Matiz: advierte rendimientos decrecientes en la búsqueda creciente de factores y pide centrarse en lo modificable y controlable.",
+  "marca": true
+ },
+ "P0CDCB1": {
+  "id": "P0CDCB1",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   29,
+   31,
+   4219,
+   4221,
+   4223,
+   4244
+  ],
+  "razon": "El libro distingue accidentes individuales con peligros bien conocidos de accidentes organizacionales poco comprendidos; clasificar el riesgo concreta esa distinción en la misma dirección.",
+  "marca": false
+ },
+ "P40761F": {
+  "id": "P40761F",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "11 GFTs",
+   "sí/no"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3093,
+   3163,
+   3173,
+   3199,
+   3209,
+   3224
+  ],
+  "razon": "El paso omite que los indicadores deben crearlos especialistas de la tarea en grupos. También omite que es costoso y que se gestionan perfiles, no indicadores sueltos. Revisar.",
+  "marca": true
+ },
+ "P56F333": {
+  "id": "P56F333",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   419,
+   2028,
+   2226,
+   2250
+  ],
+  "razon": "El libro valora las fichas paso a paso con firmas y las acciones sobre pasos propensos a omisión. Numerar y verificar la reinstalación concreta eso sin datos nuevos.",
+  "marca": false
+ },
+ "P010E76": {
+  "id": "P010E76",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "EPCs"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3395,
+   3397,
+   3659,
+   2652
+  ],
+  "razon": "HEART aplica una proporción juzgada de cada EPC presente. Priorizar por el multiplicador bruto quita esa condición y la de presencia real en la tarea.",
+  "marca": true
+ },
+ "P813BCC": {
+  "id": "P813BCC",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5692,
+   5688,
+   5690
+  ],
+  "razon": "El libro dice que los carteles de horas sin LTI transmiten que el sitio es seguro, y no lo es. El paso va en la misma direccion.",
+  "marca": false
+ },
+ "PA2687C": {
+  "id": "PA2687C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "tres cosas"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977,
+   1840,
+   2250
+  ],
+  "razon": "El libro aplica las tres preguntas a clases de actividad en tecnologias peligrosas. El paso las extiende a 'cada tarea de tu negocio': posible generalizacion.",
+  "marca": true
+ },
+ "P9FD331": {
+  "id": "P9FD331",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2489,
+   2491,
+   2547,
+   2520,
+   5688
+  ],
+  "razon": "El libro afirma que los datos de resultado son poco fiables cuando las tasas son bajas (mas ruido que senal).",
+  "marca": false
+ },
+ "PC774FF": {
+  "id": "PC774FF",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3395,
+   3397,
+   3659
+  ],
+  "razon": "HEART pide consultar las EPC y decidir cuales afectan a la actividad. El paso lo concreta sin datos nuevos, aunque omite asignar antes la tarea generica.",
+  "marca": false
+ },
+ "P965DAA": {
+  "id": "P965DAA",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5041,
+   5043,
+   5053,
+   5055,
+   5057,
+   5063
+  ],
+  "razon": "En el libro la 'mitigación' califica el abuso de sustancias, no las violaciones. El paso omite sustancias y el error sin culpa (≈90%); forzaría clasificar como culpables actos que el libro considera exculpables.",
+  "marca": true
+ },
+ "P886214": {
+  "id": "P886214",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3965,
+   3967,
+   3971
+  ],
+  "razon": "El libro señala 'acceptable risk' y 'anomaly' como habla cotidiana que normalizaba la desviación. Identificar ese lenguaje concreta lo dicho, en la misma dirección.",
+  "marca": false
+ },
+ "PE5110A": {
+  "id": "PE5110A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4974,
+   4906,
+   3989
+  ],
+  "razon": "El libro concluye que quienes reportan deben tener muy claro qué constituye un incidente, lo que no siempre es intuitivo.",
+  "marca": false
+ },
+ "P863D48": {
+  "id": "P863D48",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "registro de condiciones latentes conocidas",
+   "de forma continua"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2638,
+   2658,
+   2767,
+   3079,
+   4448,
+   5775,
+   5781
+  ],
+  "razon": "El libro pide revisar proactiva y continuamente las condiciones latentes antes del evento. El registro como herramienta es una concreción; el libro prioriza medir procesos y eliminarlas.",
+  "marca": true
+ },
+ "P8551CB": {
+  "id": "P8551CB",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   271,
+   273,
+   5742,
+   5748
+  ],
+  "razon": "El libro dice que los factores sociales y economicos quedan fuera del alcance de los gestores y que interesa lo cambiable y controlable. El paso va en esa direccion.",
+  "marca": false
+ },
+ "P3B92CF": {
+  "id": "P3B92CF",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "LTIF"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5688,
+   5690,
+   5692,
+   2487
+  ],
+  "razon": "Coincide con el libro, pero este limita la critica a LTIF bajos; un LTIF alto si indica un sistema enfermo. Hay que revisar si el paso generaliza esa condicion.",
+  "marca": true
+ },
+ "PD9CE2F": {
+  "id": "PD9CE2F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3784,
+   293
+  ],
+  "razon": "Tripod-Beta empieza por el resultado final, una perdida o dano a un target, y trabaja hacia atras.",
+  "marca": false
+ },
+ "PAD8E33": {
+  "id": "PAD8E33",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5043,
+   1539,
+   5055
+  ],
+  "razon": "Para el libro, las preguntas clave del arbol son de intencion: si accion y consecuencias fueron intencionadas, se trata de conducta criminal o sabotaje.",
+  "marca": false
+ },
+ "PF0B55E": {
+  "id": "PF0B55E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "entre 8 y 16"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2654,
+   2658
+  ],
+  "razon": "El libro da 8-16 como rango típico que varía según el sistema, con fin de hallar 2-3 procesos urgentes; el paso lo fija como rango y omite ese fin.",
+  "marca": true
+ },
+ "PEF9B2A": {
+  "id": "PEF9B2A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2089,
+   2170,
+   2250,
+   2520
+  ],
+  "razon": "El libro prefiere identificar de antemano pasos propensos a omisión y advierte que medir resultados solo muestra la cara negativa; contar omisiones podría chocar.",
+  "marca": true
+ },
+ "P8F4846": {
+  "id": "P8F4846",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "ISO 55001"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   435,
+   967,
+   969,
+   971,
+   975
+  ],
+  "razon": "El libro respalda la inspección independiente frente a firmar el propio trabajo, pero no menciona ISO 55001, que además es posterior a 1997.",
+  "marca": true
+ },
+ "PD1360D": {
+  "id": "PD1360D",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2598,
+   4757,
+   4773,
+   4868
+  ],
+  "razon": "El libro pide un sistema que recoja, analice y difunda incidentes y chequeos proactivos regulares; el paso lo concreta sin datos nuevos.",
+  "marca": false
+ },
+ "PCD8D6B": {
+  "id": "PCD8D6B",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2724,
+   2596,
+   580,
+   5639,
+   2734
+  ],
+  "razon": "El libro hace de los factores organizacionales la prioridad; si no cambian, mejorar la primera linea es casi inutil. 'Tanto como' iguala prioridades y podria rebajar esa jerarquia.",
+  "marca": true
+ },
+ "PB03810": {
+  "id": "PB03810",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2356,
+   1995,
+   1934,
+   2907,
+   5748
+  ],
+  "razon": "El libro usa datos de fallos humanos frente a tecnicos, pero dice que el error humano es consecuencia de factores organizacionales. Separar 'humano vs tecnico' podria contrariar ese enfoque.",
+  "marca": true
+ },
+ "P5A8B13": {
+  "id": "P5A8B13",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5196,
+   5184,
+   5186
+  ],
+  "razon": "Coincide con la cultura cara a cara de Weick, pero la cita contempla sustitutos de la conversacion, como el correo electronico. Anteponerlo siempre a canales impersonales es un posible matiz.",
+  "marca": true
+ },
+ "P4AE3EA": {
+  "id": "P4AE3EA",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3829,
+   2716,
+   4724
+  ],
+  "razon": "L3829 respalda cambiar normas, creencias y actitudes ante violaciones. L4724 dice que cambiar valores colectivos es casi imposible y recomienda cambiar practicas: hay tension de matiz.",
+  "marca": true
+ },
+ "PCF97A3": {
+  "id": "PCF97A3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   594,
+   586,
+   4753,
+   4757,
+   5134,
+   848
+  ],
+  "razon": "El libro respalda la chronic unease, pero advierte que cuesta sostenerla y que la vía es reunir datos (L4757). L848 limita la vigilancia prolongada. Revisar el matiz.",
+  "marca": true
+ },
+ "P276A3A": {
+  "id": "P276A3A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2577,
+   2581,
+   4757
+  ],
+  "razon": "L2581 define la competencia por la calidad del sistema de información: si recoge, difunde y actúa sobre la información correcta. El paso lo reproduce.",
+  "marca": false
+ },
+ "P9FCBF6": {
+  "id": "P9FCBF6",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1842,
+   2311,
+   2320,
+   2342,
+   2358,
+   2369
+  ],
+  "razon": "Va en la dirección del libro, que asigna el remedio a diseñadores y fabricantes. Si el operador reduce mantenimiento por su cuenta arriesga la negligencia de mantenimiento (L2320). El modelo es especulativo (L2342).",
+  "marca": true
+ },
+ "P8F0A58": {
+  "id": "P8F0A58",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "supervisores y gestores"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   4989,
+   5037,
+   5057,
+   5085,
+   5063
+  ],
+  "razon": "El libro no habla de capacitar a supervisores. Pide principios acordados, un jurado de pares (L5057) y una junta disciplinaria con AMMS (L5085). El paso traslada el juicio a gestores.",
+  "marca": true
+ },
+ "P61AC75": {
+  "id": "P61AC75",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2322,
+   2340,
+   2342,
+   2369
+  ],
+  "razon": "El libro critica la vision solo economica y pesa el riesgo de descuido frente al de error del mantenimiento. El paso concreta esa direccion sin datos nuevos.",
+  "marca": false
+ },
+ "P55C46E": {
+  "id": "P55C46E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "revisiones periódicas obligatorias"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   105,
+   2566,
+   2585,
+   2650,
+   4259
+  ],
+  "razon": "El libro apoya chequeos regulares, pero pide reforzar defensas precisamente en periodos sin accidentes. 'Independientemente del historial' y 'obligatorias' pueden desviar ese matiz o añadir norma.",
+  "marca": true
+ },
+ "PA855EC": {
+  "id": "PA855EC",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2208,
+   2214,
+   2218,
+   2222,
+   2224,
+   2250
+  ],
+  "razon": "El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisiones. Es exactamente lo que aconseja el paso.",
+  "marca": false
+ },
+ "P79C8B7": {
+  "id": "P79C8B7",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5176,
+   5178,
+   5208
+  ],
+  "razon": "El libro condiciona la transicion a una cultura jerarquica previa, a valores compartidos y a formar supervisores. Dice ademas que las reglas no sirven en emergencias sin precedente; 'diseñar mecanismos' podria omitir esas condiciones.",
+  "marca": true
+ },
+ "PA7E54A": {
+  "id": "PA7E54A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2750,
+   3382,
+   4478
+  ],
+  "razon": "L2750 fija dos propósitos para cada medición: identificar los procesos más preocupantes y seguir la efectividad de medidas correctivas previas. El paso lo repite.",
+  "marca": false
+ },
+ "P4546D9": {
+  "id": "P4546D9",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2596,
+   582,
+   3211
+  ],
+  "razon": "El libro dice que la gestión de seguridad no es un añadido sino parte esencial del negocio central, y que la seguridad no es un asunto separado.",
+  "marca": false
+ },
+ "P8FF92D": {
+  "id": "P8FF92D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   565,
+   567,
+   569,
+   5779,
+   5781,
+   5748
+  ],
+  "razon": "Generaliza desde Nakina. El libro trata castores y lluvia como disparadores locales difíciles de anticipar y prioriza la condición latente de construcción. El foco del paso podría desviarse.",
+  "marca": true
+ },
+ "PCD439A": {
+  "id": "PCD439A",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Sección 5a",
+   "MEDA"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3747,
+   3737
+  ],
+  "razon": "L3747: la Sección 5a de MEDA señala las defensas que fallaron. El paso coincide.",
+  "marca": true
+ },
+ "PE7F8DF": {
+  "id": "PE7F8DF",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "monitoreo continuo"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2520,
+   2568,
+   2598,
+   2638,
+   2658,
+   2765
+  ],
+  "razon": "'En vez de' reacción puede leerse como abandonar medidas reactivas; el libro exige ambas (L2638). Además habla de chequeos regulares cuya frecuencia depende del proceso, no de monitoreo continuo.",
+  "marca": true
+ },
+ "P0E7328": {
+  "id": "P0E7328",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2170,
+   2250,
+   2872
+  ],
+  "razon": "El libro identifica de antemano los pasos vulnerables contando sus rasgos que provocan omisión, no por tasa histórica. Priorizar el historial reactivo puede invertir el enfoque proactivo.",
+  "marca": true
+ },
+ "PAD2648": {
+  "id": "PAD2648",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2905,
+   1934,
+   196
+  ],
+  "razon": "El libro dice literalmente que identificar un error es el inicio de la búsqueda de causas, no el final.",
+  "marca": false
+ },
+ "P9D6E40": {
+  "id": "P9D6E40",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "protocolos",
+   "expertos técnicos"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5208
+  ],
+  "razon": "Va en la dirección del libro, pero omite condiciones esenciales: volver al modo jerárquico, invertir en formación y tener antes una cultura jerárquica fuerte. Además usa 'protocolos formales' donde el libro describe un cambio cultural.",
+  "marca": true
+ },
+ "P19EA5A": {
+  "id": "P19EA5A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   856,
+   868,
+   908,
+   942,
+   872
+  ],
+  "razon": "El libro pide conocer los modos y la logica de seleccion (L868), pero lo llama 'tall order' y atribuye la causa al diseño torpe. Formarse en todos los modos como via principal podria chocar.",
+  "marca": true
+ },
+ "P64B6DF": {
+  "id": "P64B6DF",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "Sistema de Comando de Incidentes"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   4769,
+   5164,
+   5174,
+   5178,
+   5208
+  ],
+  "razon": "El libro no menciona ese sistema. Atribuye la flexibilidad a una cultura previa, a la formacion y al respeto. Weick dice que las reglas o la estandarizacion sirven poco ante emergencias sin precedente.",
+  "marca": true
+ },
+ "P3B331C": {
+  "id": "P3B331C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "inspectores",
+   "procedimientos de permiso de trabajo"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4025,
+   4027,
+   4033,
+   4039,
+   4043
+  ],
+  "razon": "El inspector carecia de experiencia en permisos de trabajo (L4027). Pero Cullen cuestiona de raiz ese tipo de inspeccion y propone otro modo de regulacion: formar inspectores podria no bastar.",
+  "marca": true
+ },
+ "PDCDF93": {
+  "id": "PDCDF93",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "hot washups"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5134
+  ],
+  "razon": "El libro describe las investigaciones inmediatas ('hot washups' de la US Navy) que se hacen cuando ocurren errores en las organizaciones de alta confiabilidad.",
+  "marca": true
+ },
+ "P42CB0F": {
+  "id": "P42CB0F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3704,
+   3706,
+   3710,
+   3714,
+   3718,
+   3722
+  ],
+  "razon": "El libro describe listar combinaciones de factores, ponderarlas con un factor conjunto y combinarlas mediante probabilidades condicionales para obtener la probabilidad incondicional.",
+  "marca": false
+ },
+ "P325F5D": {
+  "id": "P325F5D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4730,
+   4734,
+   4757,
+   4820
+  ],
+  "razon": "La definicion de la HSC trata la confianza mutua y la percepcion compartida como rasgos de la cultura, no como forma de medir el compromiso. Reason prioriza el sistema de informacion de seguridad.",
+  "marca": true
+ },
+ "PF0F6EA": {
+  "id": "PF0F6EA",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "monitoreo continuo",
+   "en cada capa defensiva"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   181,
+   2650,
+   2658,
+   2767,
+   1033,
+   5781
+  ],
+  "razon": "El libro propone chequeos regulares de una muestra de indicadores, con frecuencia segun el ritmo de cambio, y centrarse en 2-3 procesos. El paso pide continuo y en cada capa.",
+  "marca": true
+ },
+ "PB49850": {
+  "id": "PB49850",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "supervisor"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   413,
+   435,
+   421
+  ],
+  "razon": "El libro señala que firmar el propio trabajo incompleto elimina una oportunidad de detectar el error. No prescribe prohibirlo, pero el paso va en la misma direccion.",
+  "marca": true
+ },
+ "P8F3C61": {
+  "id": "P8F3C61",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5061,
+   5057,
+   5063
+  ],
+  "razon": "El libro incluye la pregunta 'Any previous?', pero aclara que el historial no pesa necesariamente en la culpabilidad del acto actual. Solo indica formación correctiva. El paso omite esa condición.",
+  "marca": true
+ },
+ "P40FAEF": {
+  "id": "P40FAEF",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   50,
+   107,
+   213,
+   2650
+  ],
+  "razon": "El libro indica investigar partiendo del resultado y examinar cada defensa vulnerada o eludida. Luego se buscan fallos activos y condiciones latentes.",
+  "marca": false
+ },
+ "P742855": {
+  "id": "P742855",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "equipo central de expertos externos"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3163,
+   3199,
+   3213,
+   3224
+  ],
+  "razon": "El libro dice que los indicadores los crean especialistas de la tarea que trabajan en la operación diaria, en sindicatos, de abajo arriba. El paso lo invierte al excluir al personal operativo.",
+  "marca": true
+ },
+ "PCD1593": {
+  "id": "PCD1593",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3079,
+   3199,
+   3382,
+   2750,
+   3209
+  ],
+  "razon": "El libro pide medir los GFT regularmente, con sesiones trimestrales y software que analiza tendencias en el tiempo. También pide seguir la evolución de los perfiles.",
+  "marca": false
+ },
+ "P19BB31": {
+  "id": "P19BB31",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   204,
+   225,
+   252,
+   2765,
+   5775,
+   5781
+  ],
+  "razon": "Va en la línea de identificar condiciones latentes de forma proactiva. Posible matiz: L2765 critica aprender solo del último accidente. Comparar con casos históricos podría derivar en eso.",
+  "marca": true
+ },
+ "P1A6F1A": {
+  "id": "P1A6F1A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2170,
+   2250,
+   2998
+  ],
+  "razon": "El libro propone analizar la tarea y contar los rasgos que favorecen la omisión en cada paso discreto. Desglosar la tarea en pasos es el requisito previo.",
+  "marca": false
+ },
+ "PBF2347": {
+  "id": "PBF2347",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4693,
+   4695,
+   4724,
+   5270
+  ],
+  "razon": "El libro dice que la cultura organizacional se forma por prácticas compartidas y centra en ellas el cambio. Identificar las actuales concreta ese enfoque.",
+  "marca": false
+ },
+ "P46FD2B": {
+  "id": "P46FD2B",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5053,
+   5057,
+   5063
+  ],
+  "razon": "El árbol de decisión incluye la pregunta de si había alcohol o drogas al cometer el acto. El libro matiza la atenuación por medicación, sin contradecir el paso.",
+  "marca": false
+ },
+ "P75176E": {
+  "id": "P75176E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "trabajadores experimentados"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1006,
+   1012,
+   1541,
+   1543,
+   1547,
+   5055
+  ],
+  "razon": "El libro no manda consultar. Además separa violaciones rutinarias (atajos por mínimo esfuerzo) de necesarias, y el paso las mezcla. Advierte que los expertos no siempre saben dónde está el borde.",
+  "marca": true
+ },
+ "P478FB8": {
+  "id": "P478FB8",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "Safety Case"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4340,
+   4388,
+   4358
+  ],
+  "razon": "El libro respalda actualizar ante cambios significativos. Cullen añade actualizar a intervalos regulares, y el paso lo omite; quien lo siga podría no revisar si no hay cambios.",
+  "marca": true
+ },
+ "PEAFFAB": {
+  "id": "PEAFFAB",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "mentor",
+   "asesor"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   3971,
+   4446,
+   4257,
+   4259,
+   668
+  ],
+  "razon": "El libro señala la cultura cerrada y el valor de un regulador externo. Mentor o asesor es añadido. Además limita cuánto puede ver un externo (filtrado de información, sesgo retrospectivo).",
+  "marca": true
+ },
+ "P41836E": {
+  "id": "P41836E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "poka-yoke"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   2311,
+   2369,
+   2356,
+   1840
+  ],
+  "razon": "El libro propone piezas instalables solo correctamente como solución duradera, pero llama más fundamental eliminar el contacto manual. Priorizarlas podría invertir el orden. Poka-yoke no aparece.",
+  "marca": true
+ },
+ "PE60316": {
+  "id": "PE60316",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1573,
+   4221,
+   4244,
+   4274,
+   4431,
+   4435,
+   4500
+  ],
+  "razon": "El libro apoya ir más allá de lo prescriptivo. Pero L4435 dice que los factores humanos y organizacionales no se conocen del todo y esas disciplinas aún no han dado resultados. Hay matiz de dificultad.",
+  "marca": true
+ },
+ "P397AE3": {
+  "id": "P397AE3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4765,
+   4987,
+   5027,
+   5063,
+   5065,
+   5077
+  ],
+  "razon": "Al decir 'solo', excluye sabotaje, abuso de sustancias e imprudencia, que el libro sanciona severamente. Además, el libro sitúa la negligencia en una zona gris de menor culpabilidad.",
+  "marca": true
+ },
+ "P20F495": {
+  "id": "P20F495",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   478,
+   494,
+   504,
+   526
+  ],
+  "razon": "El libro enuncia el principio de separar trading y settlement, y critica el doble rol de Leeson. El paso lo generaliza a mapear roles, en la misma dirección.",
+  "marca": false
+ },
+ "P05EFC4": {
+  "id": "P05EFC4",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4433,
+   4435,
+   4462,
+   4500
+  ],
+  "razon": "El libro dice que definir un Safety Case adecuado no es fácil y que sus factores quizá sean incognoscibles. Rechaza el checklist superficial y propone un ciclo de aprendizaje porque los criterios rara vez se conocen de antemano.",
+  "marca": true
+ },
+ "P37313C": {
+  "id": "P37313C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "inspectores",
+   "personal de la empresa regulada"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4261,
+   4211,
+   4194,
+   4125,
+   4265
+  ],
+  "razon": "L4261 respalda el riesgo de captura, pero L4125 critica la falta de relación cercana y L4265 dice que el compromiso no es un fallo. Choque de matiz.",
+  "marca": true
+ },
+ "P7CB431": {
+  "id": "P7CB431",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "ante cada cambio de modo"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   868,
+   918,
+   942,
+   896,
+   1149,
+   1141
+  ],
+  "razon": "El libro diagnostica transiciones de modo no percibidas, pero no prescribe esa solución. Alertas en cada cambio podrían añadir complejidad o carga (L1149, L1141). No se puede descartar.",
+  "marca": true
+ },
+ "P77A683": {
+  "id": "P77A683",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1145,
+   459,
+   1133,
+   2638,
+   2650,
+   2648,
+   582
+  ],
+  "razon": "L1145 advierte que eliminar la causa del accidente previo puede contribuir al siguiente. El libro prioriza las condiciones latentes y organizacionales sobre reparar la capa concreta que falló.",
+  "marca": true
+ },
+ "P1CC77D": {
+  "id": "P1CC77D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   5701,
+   5639,
+   5633,
+   225,
+   580,
+   692
+  ],
+  "razon": "El libro afirma que las condiciones latentes son universales y aplicables a bancos y aseguradoras (Barings). Excluir finanzas y administración invierte su tesis.",
+  "marca": true
+ },
+ "P8CD568": {
+  "id": "P8CD568",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "revisiones periódicas"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1021,
+   1031,
+   1033,
+   1035
+  ],
+  "razon": "El libro dice que no se pueden prever todos los escenarios ni prescribir respuestas universales. Verificar 'aplicabilidad universal' sugiere que es alcanzable. La periodicidad no figura en el libro.",
+  "marca": true
+ },
+ "PF45FAD": {
+  "id": "PF45FAD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5250,
+   5790,
+   5832,
+   5834,
+   5892
+  ],
+  "razon": "El libro promueve el 'loss costing' y pregunta qué sistema existe para costear pérdidas. Detalla costos indirectos no asegurados de 5 a 50 veces lo recuperado.",
+  "marca": false
+ },
+ "P930BD6": {
+  "id": "P930BD6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4693,
+   4695,
+   4722,
+   4724,
+   5270
+  ],
+  "razon": "El libro respalda cambiar la cultura introduciendo nuevas medidas y prácticas. Matiz: advierte que poseer los componentes 'externos' no basta por sí solo.",
+  "marca": false
+ },
+ "PC0A424": {
+  "id": "PC0A424",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   4769,
+   5174,
+   5178,
+   5208
+  ],
+  "razon": "El libro describe una reversión 'seamless', basada en cultura y premisas compartidas, no en reglas. Weick advierte que las reglas no sirven en emergencias. No habla de criterios explícitos.",
+  "marca": true
+ },
+ "P8EEF9E": {
+  "id": "P8EEF9E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5182,
+   5208
+  ],
+  "razon": "El libro dice que la cultura crea supuestos y premisas homogéneos que coordinan la acción descentralizada ante lo imprevisto. Identificarlos concreta esa idea en su misma dirección.",
+  "marca": false
+ },
+ "P503ACB": {
+  "id": "P503ACB",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2720,
+   2724,
+   293
+  ],
+  "razon": "El libro enumera esos factores locales, pero prioriza los organizacionales. Documentar solo lo local, sin subir a lo organizacional, podría invertir esa prioridad.",
+  "marca": true
+ },
+ "P1F10A7": {
+  "id": "P1F10A7",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "análisis genuino de causas raíz"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4714,
+   4716,
+   4720,
+   2905,
+   2944
+  ],
+  "razon": "El libro dice que la evitación de ansiedad alimenta el ciclo de culpa y que el error es el inicio de la búsqueda de causas. 'Causas raíz' podría ser un método con nombre.",
+  "marca": true
+ },
+ "P30B790": {
+  "id": "P30B790",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2281,
+   2287,
+   2289,
+   2293
+  ],
+  "razon": "El libro presenta 'compel' (cuando procede o es posible) y 'confirm' como criterios secundarios aplicables en muchas situaciones. Evaluar si conviene sumarlos respeta esa condición.",
+  "marca": false
+ },
+ "PC4FBE3": {
+  "id": "PC4FBE3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5894,
+   5896
+  ],
+  "razon": "El libro exige planificar la recuperación post-accidente. Cita un programa ya puesto a prueba y que el 80% de los planes fallan la primera vez. 'Específico' es concreción propia.",
+  "marca": false
+ },
+ "P646C78": {
+  "id": "P646C78",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5037,
+   5057,
+   668
+  ],
+  "razon": "El test pide juzgar según cómo se percibieron los hechos en tiempo real y preguntar a los pares 'dadas las circunstancias de entonces'. Evita el sesgo retrospectivo.",
+  "marca": false
+ },
+ "P857031": {
+  "id": "P857031",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4025,
+   4027,
+   4014,
+   692
+  ],
+  "razon": "El inspector aceptó que Occidental había 'tidied up' deficiencias que persistían. El libro critica no verificar la implantación de las mejoras acordadas. Va en la misma dirección.",
+  "marca": false
+ },
+ "PD8E378": {
+  "id": "PD8E378",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2577,
+   2579
+  ],
+  "razon": "El libro plantea si la organización busca ser modelo de buenas prácticas o solo mantenerse un paso por delante de los reguladores. Es un componente motivacional del compromiso.",
+  "marca": false
+ },
+ "PCAD467": {
+  "id": "PCAD467",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2520,
+   2596,
+   2598,
+   2658
+  ],
+  "razon": "El libro pide medidas de proceso que muestreen regularmente los signos vitales del sistema. Su frecuencia dependera de cuanto cambie cada proceso. El paso no fija frecuencia ni pide medirlo todo.",
+  "marca": false
+ },
+ "PA1165A": {
+  "id": "PA1165A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   65,
+   67,
+   77
+  ],
+  "razon": "El libro admite operar por debajo de la zona de paridad en actividades de bajo peligro. El paso lo trata como senal de subproteccion; el riesgo real esta en el extremo inferior derecho.",
+  "marca": true
+ },
+ "PDF1A9C": {
+  "id": "PDF1A9C",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1543,
+   3623,
+   3625,
+   3629,
+   3633,
+   3637,
+   3829
+  ],
+  "razon": "Evaluar el contexto de cumplimiento concreta el analisis de condiciones productoras de violacion (deteccion, inconveniencia, autoridad). Es vago pero va en la misma direccion del libro.",
+  "marca": false
+ },
+ "P43926F": {
+  "id": "P43926F",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "siete funciones defensivas"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   118,
+   120,
+   126,
+   130,
+   134,
+   138,
+   142,
+   146,
+   150,
+   154,
+   158,
+   308
+  ],
+  "razon": "El libro enumera siete funciones defensivas y clasifica las defensas en duras y blandas. Mapear todas las capas es una concrecion operativa en la misma direccion.",
+  "marca": true
+ },
+ "PDEDCBB": {
+  "id": "PDEDCBB",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5170,
+   5174,
+   5178,
+   5208
+  ],
+  "razon": "El libro pide invertir en formación, pero la delegación depende de una cultura jerárquica previa y valores compartidos. El paso omite esa condición y la reduce a reconocer el momento.",
+  "marca": true
+ },
+ "P3DA05A": {
+  "id": "P3DA05A",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "cada inspector",
+   "lista fija de equipos y procedimientos",
+   "en todas las visitas",
+   "igual para todas las instalaciones"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4027,
+   4033,
+   4039,
+   4464,
+   4494
+  ],
+  "razon": "Según el libro, una lista fija igual para todas crea dificultades por la variedad y permite anticipar la inspección. Cullen cuestiona el tipo de inspección, no pide listas uniformes.",
+  "marca": true
+ },
+ "PF312D4": {
+  "id": "PF312D4",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "SafetyCulture",
+   "listas digitales",
+   "el técnico",
+   "antes de cerrar la tarea"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   2218,
+   2250,
+   2263,
+   2267,
+   2279,
+   2289,
+   2293,
+   2311
+  ],
+  "razon": "SafetyCulture no aparece en el libro. Confirmar al cierre choca con el recordatorio contiguo al paso, y el libro llama primeros auxilios a los recordatorios.",
+  "marca": true
+ },
+ "PFECFB3": {
+  "id": "PFECFB3",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   261,
+   263,
+   275,
+   277,
+   293,
+   2981,
+   3955
+  ],
+  "razon": "El libro apoya remontar a los factores organizacionales, pero limita el alcance a lo que los gestores pueden controlar. 'Cadena completa' puede contradecir esa regla de parada.",
+  "marca": true
+ },
+ "P669901": {
+  "id": "P669901",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2598,
+   2769
+  ],
+  "razon": "El libro afirma que avanzar hacia más seguridad no es difícil y que sostener las mejoras es muy difícil. 'Comunicar' solo lo concreta, en la misma dirección.",
+  "marca": false
+ },
+ "P1EB846": {
+  "id": "P1EB846",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3230,
+   3332
+  ],
+  "razon": "El libro agrega datos de muchas personas para que los sesgos se cancelen, preservando el anonimato; en MESH el acceso es anónimo. El paso exige identificar y corregir a cada encuestado.",
+  "marca": true
+ },
+ "P35AEF7": {
+  "id": "P35AEF7",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2520,
+   2547,
+   2568,
+   2638,
+   2765
+  ],
+  "razon": "El libro pide medidas reactivas y proactivas, pero advierte que las de resultado dicen muy poco con tasas bajas. 'Complementaria' podría leerse como igual peso.",
+  "marca": true
+ },
+ "P4632AF": {
+  "id": "P4632AF",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   852,
+   856
+  ],
+  "razon": "Invierte a Bainbridge: los sistemas automatizados más exitosos, con rara intervención manual, son los que más inversión en entrenamiento requieren.",
+  "marca": true
+ },
+ "P22F704": {
+  "id": "P22F704",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Sección 4",
+   "checklist de factores contribuyentes"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3747,
+   3763
+  ],
+  "razon": "El libro describe la Sección 4 como checklist de factores contribuyentes. El paso omite 'para cada error de Sección 3', resume la lista y usa 'capacitación' por 'qualifications and skills'.",
+  "marca": true
+ },
+ "P462462": {
+  "id": "P462462",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4060,
+   4068,
+   4072,
+   4027,
+   4259
+  ],
+  "razon": "Dryden: faltaban auditoría y manual aprobado; Piper Alpha: se aceptó sin verificar. Verificar el estado real va en la misma dirección. 'Actualizado' es concreción propia.",
+  "marca": false
+ },
+ "PF019CD": {
+  "id": "PF019CD",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3395,
+   3397,
+   3401,
+   3405,
+   3659,
+   2837,
+   2841,
+   5742
+  ],
+  "razon": "El ranking de EPCs existe, pero HEART pondera por proporción juzgada. El libro prioriza los factores organizacionales que generan los EPCs. Priorizar solo por multiplicador podría invertir esa prioridad.",
+  "marca": true
+ },
+ "P668F81": {
+  "id": "P668F81",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4384
+  ],
+  "razon": "El paso COSHH es literal: formar a los empleados en la naturaleza de los riesgos y las precauciones que deben tomar.",
+  "marca": false
+ },
+ "P5EA355": {
+  "id": "P5EA355",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "personal de seguridad"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4806,
+   4908,
+   3989,
+   4161,
+   4165
+  ],
+  "razon": "El libro respalda canales de reporte independientes. Pero su remedio al conflicto regulador es separar estructuralmente la agencia (L4161). El paso concreta un rol no explícito.",
+  "marca": true
+ },
+ "PC207C2": {
+  "id": "PC207C2",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "mentoría"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5182,
+   5204,
+   5208,
+   4769,
+   4693
+  ],
+  "razon": "Weick y Reason exigen centralizar primero, con una cultura jerárquica disciplinada y confianza en los SOPs. El paso podría leerse como relegar las reglas. La mentoría no aparece.",
+  "marca": true
+ },
+ "PC085CB": {
+  "id": "PC085CB",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5254,
+   5258,
+   2579,
+   5270
+  ],
+  "razon": "El libro pregunta literalmente qué presupuesto, cuánto personal y a cuántos niveles del CEO está quien recopila y analiza la información de seguridad.",
+  "marca": false
+ },
+ "P2D03A8": {
+  "id": "P2D03A8",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "en cada auditoría"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5775,
+   5781,
+   2750,
+   2638,
+   3209,
+   3075
+  ],
+  "razon": "El libro apoya identificar y seguir las condiciones latentes. Pero Tripod aconseja gestionar perfiles y no indicadores sueltos. El paso añade una frecuencia ligada a auditorías.",
+  "marca": true
+ },
+ "P2B8458": {
+  "id": "P2B8458",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   252,
+   411,
+   2961,
+   2965,
+   3813,
+   5499
+  ],
+  "razon": "El libro repite que no podemos cambiar la condición humana pero sí las condiciones de trabajo. La falibilidad es inevitable, aunque moderable hasta cierto punto.",
+  "marca": false
+ },
+ "PC94C93": {
+  "id": "PC94C93",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   848,
+   942,
+   1033,
+   1085,
+   1141,
+   1149
+  ],
+  "razon": "El libro constata la baja vigilancia, pero advierte que diseñar sistemas para compensar la falibilidad humana crea errores nuevos, complejidad y falsas alarmas. No recomienda esta vía.",
+  "marca": true
+ },
+ "P19A050": {
+  "id": "P19A050",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   582,
+   2767,
+   5775,
+   5781
+  ],
+  "razon": "El libro pide un proceso continuo. Pero el paso omite que no se pueden eliminar todas: hay que priorizar las más urgentes con recursos limitados.",
+  "marca": true
+ },
+ "PD1CFE0": {
+  "id": "PD1CFE0",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4223,
+   4244,
+   4246,
+   4302,
+   4236,
+   1558
+  ],
+  "razon": "El libro respalda la legislación dirigida a actos inseguros concretos cuando los peligros son bien conocidos. Pero parte de sus ejemplos son dispositivos técnicos y critica la regulación prescriptiva fragmentada.",
+  "marca": true
+ },
+ "P63558F": {
+  "id": "P63558F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2977,
+   2981,
+   3817,
+   4987,
+   5077,
+   5641,
+   5667,
+   5675
+  ],
+  "razon": "El libro dice que culpar sirve de poco y corta la busqueda causal. Admite sancionar a pocos egregios; el paso no elimina el castigo, solo impide que sustituya al analisis.",
+  "marca": false
+ },
+ "PE0F0BD": {
+  "id": "PE0F0BD",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "personal técnico y gerencial"
+  ],
+  "clase": "SIN_COBERTURA",
+  "lineas": [
+   1820,
+   1842,
+   1934,
+   5517
+  ],
+  "razon": "El libro usa los casos para mostrar causas organizacionales, no para capacitar. Trata la formacion como contramedida del modelo de persona y apunta a remedios de diseno y organizacion.",
+  "marca": true
+ },
+ "P8861B3": {
+  "id": "P8861B3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2977,
+   4765,
+   4820,
+   5067,
+   5077
+  ],
+  "razon": "El libro vincula las sanciones con la moral, el resentimiento y la confianza, en ambos sentidos. Evaluar ese impacto concreta lo que dice, en la misma direccion.",
+  "marca": false
+ },
+ "P1E07B6": {
+  "id": "P1E07B6",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1006,
+   1558,
+   1630,
+   1724,
+   5055
+  ],
+  "razon": "El libro afirma que el cumplimiento no es automaticamente correcto (mispliance). Con malas reglas, violar puede ser lo correcto; el paso lo convierte en regla general.",
+  "marca": true
+ },
+ "P004CB3": {
+  "id": "P004CB3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2884,
+   2922,
+   2977,
+   3817
+  ],
+  "razon": "El libro critica apoyarse en exhortaciones y sanciones: tienen eficacia muy limitada y pueden hacer más daño que bien. El paso va en la misma dirección.",
+  "marca": false
+ },
+ "PF3488D": {
+  "id": "PF3488D",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "auditorías aleatorias"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   967,
+   971,
+   975,
+   3465
+  ],
+  "razon": "El libro señala la falta de inspección independiente y de personal de QA. No menciona auditorías aleatorias, y un muestreo podría sustituir indebidamente la inspección separada.",
+  "marca": true
+ },
+ "PF38E06": {
+  "id": "PF38E06",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   248,
+   261,
+   263,
+   293
+  ],
+  "razon": "El libro rastrea causas hasta el operador, el fabricante y el regulador, pero pide reglas de parada: limitar el análisis a lo controlable. 'Todos los actores' puede chocar con ese límite.",
+  "marca": true
+ },
+ "P14A42A": {
+  "id": "P14A42A",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   819,
+   2671,
+   2675,
+   2679
+  ],
+  "razon": "El libro presenta los casi-accidentes como 'free lessons' que vacunan al sistema, si se sacan conclusiones correctas y se actúa sobre ellas.",
+  "marca": false
+ },
+ "P143447": {
+  "id": "P143447",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4376
+  ],
+  "razon": "El libro lista literalmente, entre los pasos del procedimiento continuo COSHH: monitorear la exposicion mediante tecnicas validas de higiene ocupacional.",
+  "marca": false
+ },
+ "P0ED8F8": {
+  "id": "P0ED8F8",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "EPC",
+   "peso multiplicador"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3395,
+   3397,
+   3401
+  ],
+  "razon": "El libro multiplica por una proporcion juzgada del factor EPC, no por el factor completo. Omite ademas el paso previo de asignar tarea generica HEART.",
+  "marca": true
+ },
+ "P2E8DCC": {
+  "id": "P2E8DCC",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   261,
+   263,
+   5712,
+   5742,
+   5748
+  ],
+  "razon": "El libro pide limitar el analisis a lo que los gestores pueden controlar y senala rendimientos decrecientes remediales de los factores remotos.",
+  "marca": false
+ },
+ "P44D1D5": {
+  "id": "P44D1D5",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4989,
+   5027,
+   5041,
+   5057,
+   5063,
+   4987
+  ],
+  "razon": "El libro deja el error negligente en zona gris de juicio caso a caso, no al otro lado de la linea. Pide principios acordados; 'por escrito' no consta.",
+  "marca": true
+ },
+ "P02F6BD": {
+  "id": "P02F6BD",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2669,
+   2689,
+   4757,
+   4761,
+   4765,
+   4792,
+   4820,
+   4974
+  ],
+  "razon": "El libro respalda el sistema y la distinción benigno/casi catastrófico, pero el paso omite confianza, cultura justa, confidencialidad y definición clara de incidente. Sin ellas el sistema fracasa.",
+  "marca": true
+ },
+ "PE86490": {
+  "id": "PE86490",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4693,
+   4706,
+   5178,
+   5182,
+   5208
+  ],
+  "razon": "Coincide con Weick y L5208 sobre valores y supuestos compartidos. Choca en matiz con L4693: la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores.",
+  "marca": true
+ },
+ "P76CBB7": {
+  "id": "P76CBB7",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "periódicamente"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4372
+  ],
+  "razon": "El procedimiento continuo COSHH incluye probar equipos respiratorios y ventilación y registrar cuidadosamente los resultados. 'Periódicamente' es una frecuencia genérica, sin cifra en el libro.",
+  "marca": true
+ },
+ "P49A470": {
+  "id": "P49A470",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "EPCs",
+   "lista rankeada de EPCs"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3395,
+   3397,
+   3659
+  ],
+  "razon": "El método HEART consulta la lista jerarquizada de EPCs para decidir qué condiciones afectan a la tarea. El libro presenta esa lista como herramienta valiosa.",
+  "marca": true
+ },
+ "P70B606": {
+  "id": "P70B606",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "al menos el 8% del presupuesto operativo",
+   "líneas de producción clasificadas como de alto peligro"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   65,
+   67,
+   77,
+   79
+  ],
+  "razon": "El libro no da ninguna cifra. Pide que la protección iguale al peligro (paridad) y un porcentaje fijo podría chocar con ese ajuste. La cifra 8% es inventada.",
+  "marca": true
+ },
+ "PEF9867": {
+  "id": "PEF9867",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "grupo de expertos del dominio"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3690,
+   3692
+  ],
+  "razon": "El libro dice que el diagrama se desarrolla mediante discusión estructurada con un grupo de expertos del dominio, guiado por un facilitador experimentado.",
+  "marca": true
+ },
+ "P510F55": {
+  "id": "P510F55",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2170,
+   1943,
+   2259
+  ],
+  "razon": "El libro dice que la vía cognitiva es difícil y que sus mecanismos pueden ser imposibles de descubrir. Considera más prometedor el análisis de tareas. El paso manda por la vía desaconsejada.",
+  "marca": true
+ },
+ "P488B64": {
+  "id": "P488B64",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "alta gerencia"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2687,
+   4757
+  ],
+  "razon": "El libro pide difundir ampliamente los datos de casi accidentes, especialmente en los niveles superiores de la organización.",
+  "marca": true
+ },
+ "PAE1F52": {
+  "id": "PAE1F52",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5184,
+   5186,
+   5196,
+   5200
+  ],
+  "razon": "El libro valora explícitamente las 'war stories', la narración de historias y la comunicación cara a cara. Los espacios formales e informales solo concretan esa idea.",
+  "marca": false
+ },
+ "P3F0BAE": {
+  "id": "P3F0BAE",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   194,
+   196,
+   291,
+   293,
+   5781
+  ],
+  "razon": "Coincide con L293, pero el libro advierte no detenerse en los actos inseguros, que son consecuencias. Además, no siempre existen: L291 admite accidentes solo por condiciones latentes.",
+  "marca": true
+ },
+ "P41B898": {
+  "id": "P41B898",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   158,
+   308,
+   1056,
+   1058,
+   1149
+  ],
+  "razon": "El libro clasifica las defensas en duras y blandas, pero no propone evaluar su balance ni define un balance deseable. No hay respaldo directo para este paso.",
+  "marca": true
+ },
+ "P24D3C7": {
+  "id": "P24D3C7",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   415,
+   423,
+   451,
+   1914,
+   4027
+  ],
+  "razon": "El libro señala como condición latente la ausencia de un procedimiento formal de traspaso línea/base. También señala traspasos de turno deficientes (Piper Alpha).",
+  "marca": false
+ },
+ "PA54069": {
+  "id": "PA54069",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   293,
+   275,
+   285,
+   279
+  ],
+  "razon": "El libro indica que, para cada acto inseguro identificado, la investigación debe considerar qué condiciones locales pudieron moldearlo o provocarlo. Es el sentido descendente de la investigación en la Figura 1.6.",
+  "marca": false
+ },
+ "PA8007C": {
+  "id": "PA8007C",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4257,
+   4259,
+   4261,
+   4215
+  ],
+  "razon": "El libro describe esos límites: autonomía, información filtrada, visitas que dan vistazos aislados, tamaño, complejidad, jerga y ofuscación. El paso convierte esa descripción en una acción, en la misma dirección.",
+  "marca": false
+ },
+ "P312C65": {
+  "id": "P312C65",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Sección 5b"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3771,
+   3747
+  ],
+  "razon": "La Sección 5b de MEDA pregunta qué medidas correctivas se han tomado o debieron tomarse a nivel local para prevenir la recurrencia del incidente.",
+  "marca": true
+ },
+ "P8AC6FF": {
+  "id": "P8AC6FF",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3384,
+   4910,
+   4810
+  ],
+  "razon": "Según el libro, el éxito de Review y MESH depende de que los evaluadores vean actuar a la dirección. La dirección debe informar siempre del progreso de las correcciones; si no, el sistema muere.",
+  "marca": false
+ },
+ "PADC3B0": {
+  "id": "PADC3B0",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   563,
+   567,
+   569,
+   580,
+   584
+  ],
+  "razon": "El libro llama a Nakina 'caso muy especial', casi indetectable sin análisis geotécnico. No recomienda revisar historiales de diseño; el paso generaliza desde ese caso.",
+  "marca": true
+ },
+ "P5622AE": {
+  "id": "P5622AE",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   596,
+   608,
+   628,
+   648,
+   4761,
+   4765,
+   4786
+  ],
+  "razon": "Westrum clasifica las culturas según cómo tratan a los mensajeros. El capítulo 9 liga la cultura de reporte a la confianza y a no castigar.",
+  "marca": false
+ },
+ "P8D2363": {
+  "id": "P8D2363",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "listas de equipo mínimo"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   158,
+   4060,
+   4064,
+   4068,
+   4072,
+   4076,
+   4084
+  ],
+  "razon": "El caso Dryden enumera capas regulatorias fallidas, incluida la Minimum Equipment List. Mapearlas concreta el libro en su dirección, aunque allí se atribuyen al regulador.",
+  "marca": true
+ },
+ "PC9F867": {
+  "id": "PC9F867",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2577,
+   2583,
+   5641
+  ],
+  "razon": "El libro define la paradoja posicional: la cúpula culpa al personal de primera línea. Detectarla es parte de la cognisance.",
+  "marca": false
+ },
+ "P355FAD": {
+  "id": "P355FAD",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "investigadores de accidentes"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2907,
+   2909,
+   2880,
+   5661,
+   196
+  ],
+  "razon": "El libro describe el error fundamental de atribución y critica centrarse en lo personal. No habla de entrenar investigadores: el paso concreta en la misma dirección.",
+  "marca": true
+ },
+ "P813A63": {
+  "id": "P813A63",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "sistemas de autodiagnóstico"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   2311,
+   2356,
+   2369,
+   1816,
+   1114,
+   1129
+  ],
+  "razon": "El libro propone eliminar el contacto manual por diseño, no con autodiagnóstico. Además advierte que automatizar y añadir dispositivos traslada errores y añade complejidad.",
+  "marca": true
+ },
+ "P5F87B8": {
+  "id": "P5F87B8",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1085,
+   1095,
+   1141
+  ],
+  "razon": "El libro advierte que las falsas alarmas frecuentes minan la confianza. Auditar su tasa concreta esa idea en la misma dirección, sin datos nuevos.",
+  "marca": false
+ },
+ "P8302EF": {
+  "id": "P8302EF",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   213,
+   181,
+   1539,
+   219,
+   308,
+   196
+  ],
+  "razon": "El libro distingue deliberado de involuntario, pero no equipara deliberado con violación: hay retiradas legítimas y violaciones erróneas. Los huecos también vienen de condiciones latentes, no solo de fallos activos.",
+  "marca": true
+ },
+ "P5F051B": {
+  "id": "P5F051B",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   323,
+   2652,
+   2654,
+   5503,
+   5907,
+   40
+  ],
+  "razon": "El libro trata ambos accidentes como distintos. Pero la línea entre ellos no es nítida, pide un marco clasificatorio común y ve los accidentes organizacionales difíciles de prever. Hay matiz.",
+  "marca": true
+ },
+ "P14BC39": {
+  "id": "P14BC39",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   198,
+   200,
+   202,
+   2720,
+   2724,
+   5559,
+   5781
+  ],
+  "razon": "El libro dice que las condiciones latentes nacen de decisiones de alto nivel: recursos, diseño, formación, dotación. Pide identificarlas y corregirlas.",
+  "marca": false
+ },
+ "PD54138": {
+  "id": "PD54138",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   668,
+   686,
+   3985,
+   3989,
+   3991,
+   3153,
+   5692
+  ],
+  "razon": "Apoyan el paso los avisos ignorados (Barings, SR&QA). Pero el libro advierte del sesgo retrospectivo: una señal solo es aviso si sabes qué desastre vendrá.",
+  "marca": true
+ },
+ "P6DCB9A": {
+  "id": "P6DCB9A",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3782,
+   3784,
+   3794
+  ],
+  "razon": "El libro dice que el software genera el árbol y un borrador de informe para edición final. Pero exige antes verificar la lógica y resolver anomalías; el paso lo omite.",
+  "marca": true
+ },
+ "PC1A888": {
+  "id": "PC1A888",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5206,
+   5208,
+   5204
+  ],
+  "razon": "El libro dice que la formación inicial debe consolidarse y ampliarse con guía de supervisión en el terreno. Coincide con el paso.",
+  "marca": false
+ },
+ "P2FEFBC": {
+  "id": "P2FEFBC",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2556,
+   2566,
+   2568,
+   105
+  ],
+  "razon": "El libro pide entender las fuerzas que actúan sobre la organización. Describe la deriva hacia la vulnerabilidad por complacencia y por desviar atención a producción.",
+  "marca": false
+ },
+ "P82786D": {
+  "id": "P82786D",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4402,
+   4388
+  ],
+  "razon": "La FSA incluye como segundo paso evaluar los riesgos asociados a los peligros identificados. El paso coincide literalmente.",
+  "marca": false
+ },
+ "P835B74": {
+  "id": "P835B74",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Condiciones Productoras de Error (EPCs)"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "razon": "HEART pide consultar la lista de EPC y decidir cuáles afectan la actividad. Es el paso clave. Se marca el término técnico del método.",
+  "marca": true
+ },
+ "P75AD3E": {
+  "id": "P75AD3E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   83,
+   96,
+   1076,
+   1133,
+   306
+  ],
+  "razon": "El libro afirma que las mejoras de protección suelen convertirse en ventaja productiva. El paso concreta revisar ese fenómeno, en la misma dirección.",
+  "marca": false
+ },
+ "P50D307": {
+  "id": "P50D307",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4757,
+   2581,
+   2687,
+   4761
+  ],
+  "razon": "El libro pide un sistema de información que recolecte, analice y difunda datos de incidentes y casi accidentes, además de controles proactivos. El paso omite esos controles, sin contradecir.",
+  "marca": false
+ },
+ "P055E9D": {
+  "id": "P055E9D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4765,
+   4798,
+   4824,
+   4854,
+   5077,
+   5144
+  ],
+  "razon": "'Sin represalias' absoluto puede leerse como no-blame o amnistía total. El libro lo rechaza: la indemnidad es 'as far as practicable', con límites, y exige sancionar actos atroces.",
+  "marca": true
+ },
+ "PF0826B": {
+  "id": "PF0826B",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2944,
+   2957,
+   2961,
+   2841,
+   2922,
+   3763
+  ],
+  "razon": "El libro dice que los errores tienen causas múltiples y favorece el enfoque situacional sobre la culpa. Analizar la cadena causal antes de responder concreta eso sin añadir datos.",
+  "marca": false
+ },
+ "P3D9626": {
+  "id": "P3D9626",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4027,
+   4033,
+   4039,
+   3213
+  ],
+  "razon": "Tiene apoyo: el inspector no hizo la auditoría completa por falta de tiempo. Pero Cullen cuestiona el tipo de inspección en sí, y el libro defiende el muestreo deliberado (Tripod-Delta).",
+  "marca": true
+ },
+ "P897966": {
+  "id": "P897966",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2948,
+   2961,
+   3829,
+   5907,
+   2998
+  ],
+  "razon": "El libro prioriza la situación sobre la persona solo en plantillas capacitadas y bienintencionadas. Las violaciones piden cambiar la cultura y las contramedidas deben aplicarse a todos los niveles a la vez.",
+  "marca": true
+ },
+ "PE30B61": {
+  "id": "PE30B61",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2577,
+   2579,
+   2581,
+   2583,
+   2748,
+   5692
+  ],
+  "razon": "El libro exige los tres elementos juntos, impulsados por la alta dirección y arraigados en la cultura. El paso los concreta en un plan, en la misma dirección.",
+  "marca": false
+ },
+ "PC861F7": {
+  "id": "PC861F7",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Net Promoter Score",
+   "cada accidente"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   5892
+  ],
+  "razon": "El libro trata el daño reputacional como intangible, reflejado probablemente en la cotización. El NPS es una métrica que el libro no menciona.",
+  "marca": true
+ },
+ "P8F2224": {
+  "id": "P8F2224",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3784,
+   293,
+   291
+  ],
+  "razon": "L3784 respalda distinguir si el fallo es activo o latente. Pero L293 pide establecer ambos por defensa; el 'o' excluyente podría hacer que el cliente se quede en uno.",
+  "marca": true
+ },
+ "P7EB986": {
+  "id": "P7EB986",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5200,
+   5190,
+   666
+  ],
+  "razon": "L5200 recomienda grupos de personas divergentes (especialidad, experiencia, género) porque colectivamente ven más; el paso coincide.",
+  "marca": false
+ },
+ "PE20459": {
+  "id": "PE20459",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2716,
+   1945,
+   3825,
+   3829
+  ],
+  "razon": "L2716 valora la naturaleza y variedad de los actos inseguros vinculada al tipo de actividad, y distingue errores de violaciones por su distinto manejo.",
+  "marca": false
+ },
+ "P4E0E8D": {
+  "id": "P4E0E8D",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4810,
+   4910,
+   4912
+  ],
+  "razon": "L4810 y L4910 piden retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante.",
+  "marca": false
+ },
+ "P4F5D8C": {
+  "id": "P4F5D8C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "jurado de pares",
+   "prueba de sustitución"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5037,
+   5055,
+   5057
+  ],
+  "razon": "El libro respalda la prueba con un 'jurado' de pares, pero la sitúa después de descartar sustancias e incumplimiento deliberado. El paso omite ese orden.",
+  "marca": true
+ },
+ "P54D718": {
+  "id": "P54D718",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   580,
+   2547,
+   2596,
+   2652,
+   2654
+  ],
+  "razon": "El libro pide analizar varios eventos con un marco común y usa procesos conocidos genéricamente. Advierte contra centrarse en sucesos aislados y contra depender del historial propio cuando hay pocos accidentes.",
+  "marca": true
+ },
+ "P0B8BBB": {
+  "id": "P0B8BBB",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "HEART",
+   "Tabla 7.2"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   3395,
+   3547,
+   3549
+  ],
+  "razon": "El libro dice literalmente que el punto de partida es asignar la actividad a una tarea genérica de la Tabla 7.2.",
+  "marca": true
+ },
+ "P3D36EF": {
+  "id": "P3D36EF",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2250,
+   2340,
+   2342,
+   2369
+  ],
+  "razon": "El libro sostiene que el mantenimiento preventivo y el correctivo pueden introducir errores, y que se pueden identificar de antemano los pasos propensos a error. El paso lo concreta en la misma dirección.",
+  "marca": false
+ },
+ "PD2D225": {
+  "id": "PD2D225",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5037,
+   5041,
+   5057,
+   5063,
+   5641,
+   5907,
+   2909
+  ],
+  "razon": "El libro da criterios (substitution test, arbol de culpabilidad). Pero pide contramedidas en todos los niveles a la vez, y un criterio binario persona/sistema podria chocar con eso.",
+  "marca": true
+ },
+ "P20C50B": {
+  "id": "P20C50B",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "Safety Case"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4388,
+   4394,
+   4414,
+   4358
+  ],
+  "razon": "La FSA termina decidiendo que opciones seleccionar y se presenta como Safety Case con los controles adecuados. El paso concreta esto en la misma direccion.",
+  "marca": true
+ },
+ "P7E4761": {
+  "id": "P7E4761",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   105,
+   594,
+   2585,
+   4753,
+   4757,
+   5134
+  ],
+  "razon": "El libro pide no olvidar tener miedo, mantener una inquietud cronica y ver los periodos sin accidentes como de mayor peligro.",
+  "marca": false
+ },
+ "PA62D7F": {
+  "id": "PA62D7F",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5272,
+   4749,
+   4695,
+   2585
+  ],
+  "razon": "La cultura de seguridad se persigue pero rara vez se alcanza, y el proceso importa mas que el producto. El 'nunca' del paso endurece levemente el 'rarely' del libro.",
+  "marca": false
+ },
+ "P1C43D9": {
+  "id": "P1C43D9",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "cada seis meses",
+   "sesión de simulador",
+   "FMS",
+   "fases de alta carga de trabajo"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   852,
+   856,
+   868,
+   872,
+   942,
+   2724
+  ],
+  "razon": "El libro respalda invertir en entrenamiento (Bainbridge), pero no fija simuladores ni frecuencia semestral. Además atribuye la confusión de modos al diseño torpe y prioriza lo organizacional.",
+  "marca": true
+ },
+ "P190509": {
+  "id": "P190509",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   213,
+   310,
+   2652,
+   2654,
+   4105
+  ],
+  "razon": "Concreta el uso del modelo: identificar qué huecos de fallos activos y latentes se alinearon. El libro recomienda analizar varios eventos con un marco común.",
+  "marca": false
+ },
+ "PB7907F": {
+  "id": "PB7907F",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "más de 10 años"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3097,
+   3209,
+   3073,
+   2724
+  ],
+  "razon": "La edad del equipo es componente del GFT Hardware, pero la cifra es añadida. El libro pide gestionar perfiles, no arreglar indicadores sueltos, que rara vez cura la causa.",
+  "marca": true
+ },
+ "PFA7EB5": {
+  "id": "PFA7EB5",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   4806,
+   4818,
+   4908
+  ],
+  "razon": "El libro enumera literalmente como factor clave separar el departamento que recoge los reportes de quienes pueden imponer sanciones.",
+  "marca": false
+ },
+ "PDFAF6D": {
+  "id": "PDFAF6D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2520,
+   2535,
+   2547,
+   2568,
+   2598,
+   2658
+  ],
+  "razon": "El libro respalda fijar la posicion actual. Pero el paso no dice con que medirla, y el libro advierte que las tasas de accidentes revelan poco; exige medidas de proceso.",
+  "marca": true
+ },
+ "P10FA63": {
+  "id": "P10FA63",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2596,
+   2598,
+   2654,
+   2658,
+   2767
+  ],
+  "razon": "'Para cada proceso' choca con el libro: medir todos no es posible ni apropiado; se muestrea un subconjunto (8-16) para hallar los 2-3 mas urgentes.",
+  "marca": true
+ },
+ "P00D72E": {
+  "id": "P00D72E",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "20-30% del personal operativo"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   3228,
+   3232,
+   3332
+  ],
+  "razon": "El 20-30% aleatorio vale solo para factores locales en MESH. Los factores organizacionales los califican gerentes tecnicos y en Review, supervisores. El libro dice aleatoria, no 'representativa'.",
+  "marca": true
+ },
+ "P9B9392": {
+  "id": "P9B9392",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4274,
+   4306,
+   4308,
+   4433
+  ],
+  "razon": "Concreta la autorregulacion: la ley fija objetivos y el operador define los medios con mejor organizacion interna de seguridad. Va en la misma direccion del libro.",
+  "marca": false
+ },
+ "PC2A10D": {
+  "id": "PC2A10D",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "periódicamente"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   478,
+   488,
+   494,
+   504,
+   506,
+   526,
+   4259
+  ],
+  "razon": "El libro no pide auditar roles duales. En Barings el rol dual estaba asignado, no oculto, y la auditoría lo detectó sin corregirlo. Auditar sin actuar repite el fallo.",
+  "marca": true
+ },
+ "P0DAF10": {
+  "id": "P0DAF10",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   1522,
+   1539,
+   2716,
+   3821,
+   3825,
+   3829,
+   5043
+  ],
+  "razon": "El libro distingue errores de violaciones, pero dice que las violaciones pueden ser deliberadas o erróneas. Igualar violación con intencional simplifica esa matiz.",
+  "marca": true
+ },
+ "PC1F559": {
+  "id": "PC1F559",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2866,
+   2896,
+   2961
+  ],
+  "razon": "El libro critica que la gestión de errores ignore el conocimiento actual de factores humanos y de las ciencias del comportamiento. El paso recoge esa recomendación.",
+  "marca": false
+ },
+ "P1D6384": {
+  "id": "P1D6384",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "gestión del cambio",
+   "liderazgo",
+   "comunicación",
+   "compras"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2720,
+   2724,
+   2750,
+   2654,
+   3097,
+   3330
+  ],
+  "razon": "Priorizar factores organizacionales es fiel. Pero el libro clasifica el liderazgo como factor local, no trae gestión del cambio y pide muestrear las seis dimensiones de forma equilibrada.",
+  "marca": true
+ },
+ "PD72F0E": {
+  "id": "PD72F0E",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4257,
+   4261,
+   4263,
+   4265
+  ],
+  "razon": "El paso trata el compromiso como desvío frente al cumplimiento real. Vaughan/Reason dicen que verlo como 'fallo' regulatorio es no entender: es un patrón estructural sistemático.",
+  "marca": true
+ },
+ "PF699C6": {
+  "id": "PF699C6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3993,
+   4039,
+   4060,
+   4121,
+   4418
+  ],
+  "razon": "El libro documenta recortes de personal y presupuesto que redujeron la supervisión (NASA, Transport Canada, ACAA, HSE). El paso lo concreta en la misma dirección.",
+  "marca": false
+ },
+ "PB7B2FD": {
+  "id": "PB7B2FD",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4274,
+   4302,
+   4306,
+   4320
+  ],
+  "razon": "El libro distingue leyes que especifican medios de leyes orientadas a objetivos (Factories Act frente a HSW Act). El paso operativiza esa distinción como diagnóstico, sin datos nuevos.",
+  "marca": false
+ },
+ "PB13F74": {
+  "id": "PB13F74",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   67,
+   83,
+   96,
+   1133,
+   1354,
+   4525
+  ],
+  "razon": "El libro describe la compensación de riesgo pero no propone 'políticas' como remedio. Además es escéptico con las reglas reactivas y advierte del exceso de protección. Remedio sin cobertura.",
+  "marca": true
+ },
+ "PF36A73": {
+  "id": "PF36A73",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   83,
+   96,
+   105,
+   306,
+   1076,
+   1133
+  ],
+  "razon": "El libro describe convertir mejoras de protección en ventaja productiva como compensación de riesgo peligrosa que lleva a accidentes; el paso aconseja justamente hacerlo.",
+  "marca": true
+ },
+ "PD8744D": {
+  "id": "PD8744D",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   2322,
+   2340,
+   2342
+  ],
+  "razon": "El paso adopta el cálculo de costo óptimo, la visión ortodoxa que el libro critica por suponer mantenimiento benigno e ignorar el riesgo de error humano.",
+  "marca": true
+ },
+ "PE3CD95": {
+  "id": "PE3CD95",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2583,
+   2585
+  ],
+  "razon": "Concreta el 'tick-off phenomenon': las medidas deben vigilarse y ajustarse, no solo marcarse como hechas. El libro no habla de auditar, pero va en su dirección.",
+  "marca": false
+ },
+ "P1FC70D": {
+  "id": "P1FC70D",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "IBM Maximo"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   1963,
+   1967,
+   1971,
+   1975,
+   1977,
+   1991
+  ],
+  "razon": "Los tres criterios (contacto directo, criticidad, frecuencia) son del libro, pero la herramienta IBM Maximo no aparece en él.",
+  "marca": true
+ },
+ "P92D1D9": {
+  "id": "P92D1D9",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "décadas atrás"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   198,
+   559,
+   563,
+   567,
+   569,
+   580,
+   582
+  ],
+  "razon": "Nakina: la causa raíz era la construcción de 1916 y las inspecciones externas no la detectaban. El libro no prescribe auditar el diseño antiguo, pero va en esa dirección.",
+  "marca": true
+ },
+ "PFE71E8": {
+  "id": "PFE71E8",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "diseñadores y fabricantes"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2311,
+   2369,
+   2342
+  ],
+  "razon": "El libro pide que diseñadores y fabricantes conozcan la falibilidad humana, sobre todo en mantenimiento y reensamblaje. El paso lo amplía a todo el ciclo de vida.",
+  "marca": true
+ },
+ "P6258D6": {
+  "id": "P6258D6",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5178,
+   5182,
+   5208,
+   4693
+  ],
+  "razon": "Weick apoya socializar antes de descentralizar. Pero Reason dice que la cultura organizacional se forma sobre todo por prácticas compartidas, no por valores; el paso centra en valores.",
+  "marca": true
+ },
+ "P3FDEDE": {
+  "id": "P3FDEDE",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   808,
+   821,
+   1076,
+   1114,
+   1129
+  ],
+  "razon": "El libro afirma que las defensas pueden introducir peligros nuevos y pide comprender sus ventajas y riesgos. Revisar cada capa concreta esa idea en la misma dirección.",
+  "marca": false
+ },
+ "P60ECCE": {
+  "id": "P60ECCE",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4302,
+   4308,
+   4761
+  ],
+  "razon": "Robens pide mayor implicación de los trabajadores frente al modelo Factories Act. Concretarlo en diseño e implementación va en la misma dirección y no añade datos.",
+  "marca": false
+ },
+ "P39948D": {
+  "id": "P39948D",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1044,
+   1068,
+   1072,
+   4060
+  ],
+  "razon": "El libro dice que los accidentes surgen al violarse la independencia entre capas, y Dryden muestra fallos simultáneos por recortes de recursos. El paso concreta esa idea.",
+  "marca": false
+ },
+ "PF2C6F9": {
+  "id": "PF2C6F9",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   582,
+   2767,
+   4478,
+   5781
+  ],
+  "razon": "El libro dice casi literalmente que, con recursos limitados, hay que atacar las condiciones latentes más urgentes en cada período, sin resolverlas todas de una vez.",
+  "marca": false
+ },
+ "PCF71F4": {
+  "id": "PCF71F4",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2654,
+   204,
+   1934,
+   1851
+  ],
+  "razon": "El libro recomienda analizar varios eventos del propio dominio con un marco común para revelar patrones. El paso omite ese marco común, pero sigue la misma dirección.",
+  "marca": false
+ },
+ "P7F6EE6": {
+  "id": "P7F6EE6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4716,
+   4720,
+   2884,
+   2922
+  ],
+  "razon": "El libro describe rituales y reacciones repetidas ('write another procedure', 'blame and train') que no hacen el sistema más resistente. El paso solo pide detectarlas, en la misma dirección.",
+  "marca": false
+ },
+ "P13280F": {
+  "id": "P13280F",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "inmediato"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5067,
+   4765
+  ],
+  "razon": "Las recompensas funcionan si son cercanas en tiempo y lugar a la conducta. 'Inmediato' concreta lo temporal pero omite el lugar; conviene verificar la condición.",
+  "marca": true
+ },
+ "PFDD033": {
+  "id": "PFDD033",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   118,
+   120,
+   2656,
+   5771,
+   3161
+  ],
+  "razon": "El libro enumera funciones defensivas y pide revelar defensas débiles o ausentes. Advierte que añadir defensas aumenta la complejidad, pero el paso solo identifica.",
+  "marca": false
+ },
+ "P123778": {
+  "id": "P123778",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "regulador"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4435,
+   4448
+  ],
+  "razon": "El libro confirma la brecha, pero matiza: la escasez de expertos en factores humanos es 'probably rightly so' y el ratio 80:20 no lo resolvería. Riesgo de sugerir la solución opuesta.",
+  "marca": true
+ },
+ "PA89584": {
+  "id": "PA89584",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   990,
+   992,
+   1006,
+   1354
+  ],
+  "razon": "El libro describe la acumulación aditiva de reglas tras cada accidente. Revisar ese historial concreta el diagnóstico en la misma dirección, aunque el libro no lo prescribe explícitamente.",
+  "marca": false
+ },
+ "P46A49E": {
+  "id": "P46A49E",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "función de inspección independiente"
+  ],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   967,
+   969,
+   971,
+   973,
+   975
+  ],
+  "razon": "El libro advierte que suprimir la inspección independiente dejó pasar trabajos mal firmados. Verificar su existencia va en la misma dirección. Revisar el alcance de 'tareas críticas'.",
+  "marca": true
+ },
+ "PB90A4B": {
+  "id": "PB90A4B",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "modelo de Reason"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   183,
+   293,
+   308,
+   343,
+   4105,
+   5748,
+   5757
+  ],
+  "razon": "El libro apoya distinguir fallos activos y condiciones latentes. Matiz: prefiere 'condiciones' a 'fallas' latentes y advierte rendimientos decrecientes y límites a lo controlable.",
+  "marca": true
+ },
+ "P505914": {
+  "id": "P505914",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1031,
+   1035,
+   1618,
+   1638,
+   1652,
+   1724,
+   1726,
+   5132
+  ],
+  "razon": "Ginna respalda que las reglas son insensibles al contexto. Pero el libro advierte que las violaciones exitosas generan misvenciones (Chernobyl) y no prescribe esa capacitación.",
+  "marca": true
+ },
+ "PAF37D4": {
+  "id": "PAF37D4",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   808,
+   832,
+   868,
+   1114,
+   1129,
+   31,
+   302
+  ],
+  "razon": "El libro afirma que las defensas crean peligros imprevistos y que la automatización cambió la relación humano-sistema, con nuevas vulnerabilidades como la confusión de modos.",
+  "marca": false
+ },
+ "PD82131": {
+  "id": "PD82131",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5557,
+   5559,
+   5781,
+   5905,
+   5907,
+   293
+  ],
+  "razon": "El modelo organizacional trata la integridad de las defensas y las condiciones latentes. El libro recomienda identificarlas y eliminarlas de forma proactiva y combinar los modelos.",
+  "marca": false
+ },
+ "P28784A": {
+  "id": "P28784A",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "la persona que supervisa el trabajo"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   5204,
+   5208,
+   4769
+  ],
+  "razon": "El libro pide seleccionar y formar supervisores de primera línea con amplia experiencia y conocedores del lugar y sus peligros. El paso omite la formación, pero no contradice.",
+  "marca": true
+ },
+ "PA0A4EE": {
+  "id": "PA0A4EE",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "antes de iniciar cualquier investigación"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   323,
+   5684,
+   293,
+   2652,
+   2654,
+   1934
+  ],
+  "razon": "El libro dice que la línea no es tajante y que los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar puede cerrar prematuramente el análisis organizacional.",
+  "marca": true
+ },
+ "PAB7472": {
+  "id": "PAB7472",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3784,
+   293
+  ],
+  "razon": "El libro indica partir de la pérdida y retroceder para determinar la defensa o defensas fallidas y el peligro. Es lo mismo que pide el paso.",
+  "marca": false
+ },
+ "PE0017C": {
+  "id": "PE0017C",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   1044,
+   1068,
+   1072,
+   1133,
+   1149,
+   4060,
+   4092
+  ],
+  "razon": "El libro advierte que añadir redundancia aumenta la complejidad, la opacidad y las fallas de modo común. En Dryden atribuye la falla a causas sistémicas, no a falta de redundancia.",
+  "marca": true
+ },
+ "PC08D12": {
+  "id": "PC08D12",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2905,
+   196,
+   1934,
+   5641,
+   293
+  ],
+  "razon": "El libro dice que el error es consecuencia y no causa, y que identificarlo es el inicio de la búsqueda. Solo matiza los rendimientos decrecientes de factores remotos (L5742).",
+  "marca": false
+ },
+ "P4D3FA3": {
+  "id": "P4D3FA3",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   5641,
+   5643,
+   5675,
+   5907,
+   3817
+  ],
+  "razon": "El libro señala que el modelo de persona no sirve para condiciones latentes ni riesgos de terceros. Aun así, lo reconoce valioso para lesiones personales.",
+  "marca": false
+ },
+ "P701BF6": {
+  "id": "P701BF6",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5896
+  ],
+  "razon": "El libro dice que las organizaciones preparadas tienen poca negación y racionalización, y que la negación merece tratamiento. Evaluarla y reducirla concreta eso sin añadir datos.",
+  "marca": false
+ },
+ "P301706": {
+  "id": "P301706",
+  "podria_contradecir": true,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   4060,
+   4182,
+   4416,
+   4418,
+   4448
+  ],
+  "razon": "El libro presenta la desregulación como dañina (Dryden, FAA, recortes HSE). El paso trata reducir la carga regulatoria como meta legítima a equilibrar, cosa que el libro no avala.",
+  "marca": true
+ },
+ "PDEABD4": {
+  "id": "PDEABD4",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "razon": "El libro multiplica la probabilidad nominal por una proporción juzgada de cada EPC. Calcular la probabilidad ajustada sigue esa dirección; los fragmentos no dan la fórmula exacta para combinar varias EPCs.",
+  "marca": false
+ },
+ "P77F7BB": {
+  "id": "P77F7BB",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   3232,
+   3332,
+   3382
+  ],
+  "razon": "En MESH los evaluadores entran de forma anónima en un programa y ven promedios del lugar de trabajo. Review también usa un programa informático, aunque no se dice que sea anónimo.",
+  "marca": false
+ },
+ "P74F627": {
+  "id": "P74F627",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2596,
+   582,
+   5781,
+   3209,
+   2750
+  ],
+  "razon": "El libro compara la gestión de seguridad con un programa de fitness a largo plazo y pide medir y mejorar los procesos de forma regular y continua.",
+  "marca": false
+ },
+ "P89298F": {
+  "id": "P89298F",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "frecuencia de cada chequeo"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   2658
+  ],
+  "razon": "L2658 dice lo mismo: la frecuencia depende de lo rápido que cambia el proceso, y los factores del lugar de trabajo se vigilan más a menudo que los organizacionales.",
+  "marca": true
+ },
+ "PBB41CB": {
+  "id": "PBB41CB",
+  "podria_contradecir": false,
+  "dato_concreto": true,
+  "datos": [
+   "expertos externos"
+  ],
+  "clase": "FIEL",
+  "lineas": [
+   4360,
+   4364
+  ],
+  "razon": "Recoge casi literalmente el paso COSHH de L4364: evaluaciones de riesgo con expertos externos si hace falta. Es la norma que describe el libro.",
+  "marca": true
+ },
+ "PA5654E": {
+  "id": "PA5654E",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "FIEL",
+  "lineas": [
+   2905,
+   2909,
+   2888,
+   2924,
+   2948
+  ],
+  "razon": "El libro critica atribuir el error a rasgos personales como el descuido o la incompetencia. El 'únicamente' respeta que la realidad está en un punto intermedio.",
+  "marca": false
+ },
+ "P89D6D0": {
+  "id": "P89D6D0",
+  "podria_contradecir": false,
+  "dato_concreto": false,
+  "datos": [],
+  "clase": "INFERIDO-OPERATIVO",
+  "lineas": [
+   409,
+   1834,
+   1838,
+   2028,
+   2060,
+   2129,
+   2131,
+   2139,
+   2161,
+   3745
+  ],
+  "razon": "El libro afirma que la instalación y las omisiones predominan (tapas, fijaciones). Analizar históricos concreta ese análisis, cercano a la tendencia MEDA, sin datos nuevos.",
+  "marca": false
+ },
+ "P59A204": {
+  "id": "P59A204",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "los pocos operadores que controlan el sistema"
+  ],
+  "clase": "POSIBLE_CONTRARIO",
+  "lineas": [
+   204,
+   1820,
+   2594,
+   2876,
+   2880,
+   2905,
+   2973,
+   2985,
+   5582,
+   5639,
+   5641,
+   5907
+  ],
+  "razon": "El libro dice que un error aislado rara vez causa un accidente organizacional. Pide centrarse en condiciones latentes y actuar en todos los niveles; los actos inseguros no pueden eliminarse.",
+  "marca": true
+ },
+ "PD76F0C": {
+  "id": "PD76F0C",
+  "podria_contradecir": true,
+  "dato_concreto": true,
+  "datos": [
+   "simulacros",
+   "antes de que ocurra un evento real"
+  ],
+  "clase": "INFERIDO-ANADIDO",
+  "lineas": [
+   5894,
+   5896,
+   1674,
+   1678
+  ],
+  "razon": "El libro dice que el 80% de los planes fallan la primera vez, pero el plan del banco se probó con un atentado real. No menciona simulacros; queda sin cobertura directa.",
+  "marca": true
+ }
+}

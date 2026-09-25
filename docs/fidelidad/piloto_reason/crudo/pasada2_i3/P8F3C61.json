@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8F3C61",
+  "intento": 0,
+  "usd": 0.14332,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31375,
+  "tokens_out": 891,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8F3C61\", \"veredicto\": \"FIEL\", \"lineas\": [5061], \"cita\": \"the last major question at the top right-hand corner of Figure 9.4 could be rephrased as 'Any previous?'. ... If the person in question has a previous history of unsafe acts, it does not necessarily bear upon the culpability of the error committed on this particular occasion\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro incluye expresamente 'Any previous?' como pregunta del árbol de la Figura 9.4, y el paso se limita a revisar ese historial. No manda agravar la culpa por él, así que no invierte nada. Omitir que el historial apunta sobre todo a formación correctiva o reorientación profesional es una diferencia de detalle, no una contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8F3C61",
+  "veredicto": "FIEL",
+  "lineas": [
+   5061
+  ],
+  "cita": "the last major question at the top right-hand corner of Figure 9.4 could be rephrased as 'Any previous?'. ... If the person in question has a previous history of unsafe acts, it does not necessarily bear upon the culpability of the error committed on this particular occasion",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro incluye expresamente 'Any previous?' como pregunta del árbol de la Figura 9.4, y el paso se limita a revisar ese historial. No manda agravar la culpa por él, así que no invierte nada. Omitir que el historial apunta sobre todo a formación correctiva o reorientación profesional es una diferencia de detalle, no una contradicción.",
+  "paso_fiel": ""
+ }
+}

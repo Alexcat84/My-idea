@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5239D3",
+  "intento": 0,
+  "usd": 0.15717599999999998,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33539,
+  "tokens_out": 1151,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5239D3\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [293, 198, 273], \"cita\": \"For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. Any one local condition could be the product of a number of different organizational factors\", \"datos_sin_respaldo\": [], \"razon\": \"El libro manda rastrear aguas arriba cada condición hasta decisiones de gerentes y diseñadores (L198, L293), dentro de lo controlable (L273). El singular 'la decisión' simplifica la relación de muchos a muchos, pero no invierte la recomendación ni lleva a lo que el libro desaconseja. Es una desviación de detalle, no un contrario, y no añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5239D3",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   293,
+   198,
+   273
+  ],
+  "cita": "For each of these local conditions, we then go on to ask what upstream organizational factors could have contributed to it. Any one local condition could be the product of a number of different organizational factors",
+  "datos_sin_respaldo": [],
+  "razon": "El libro manda rastrear aguas arriba cada condición hasta decisiones de gerentes y diseñadores (L198, L293), dentro de lo controlable (L273). El singular 'la decisión' simplifica la relación de muchos a muchos, pero no invierte la recomendación ni lleva a lo que el libro desaconseja. Es una desviación de detalle, no un contrario, y no añade datos.",
+  "paso_fiel": ""
+ }
+}

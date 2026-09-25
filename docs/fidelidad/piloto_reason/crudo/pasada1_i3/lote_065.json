@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_065",
+  "intento": 0,
+  "usd": 0.163008,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33482,
+  "tokens_out": 1454,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P19BB31\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [204, 225, 252, 2765, 5775, 5781], \"razon\": \"Va en la línea de identificar condiciones latentes de forma proactiva. Posible matiz: L2765 critica aprender solo del último accidente. Comparar con casos históricos podría derivar en eso.\"},\n  {\"id\": \"P1A6F1A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2170, 2250, 2998], \"razon\": \"El libro propone analizar la tarea y contar los rasgos que favorecen la omisión en cada paso discreto. Desglosar la tarea en pasos es el requisito previo.\"},\n  {\"id\": \"PBF2347\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4693, 4695, 4724, 5270], \"razon\": \"El libro dice que la cultura organizacional se forma por prácticas compartidas y centra en ellas el cambio. Identificar las actuales concreta ese enfoque.\"},\n  {\"id\": \"P46FD2B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5053, 5057, 5063], \"razon\": \"El árbol de decisión incluye la pregunta de si había alcohol o drogas al cometer el acto. El libro matiza la atenuación por medicación, sin contradecir el paso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P19BB31",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    204,
+    225,
+    252,
+    2765,
+    5775,
+    5781
+   ],
+   "razon": "Va en la línea de identificar condiciones latentes de forma proactiva. Posible matiz: L2765 critica aprender solo del último accidente. Comparar con casos históricos podría derivar en eso."
+  },
+  {
+   "id": "P1A6F1A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2170,
+    2250,
+    2998
+   ],
+   "razon": "El libro propone analizar la tarea y contar los rasgos que favorecen la omisión en cada paso discreto. Desglosar la tarea en pasos es el requisito previo."
+  },
+  {
+   "id": "PBF2347",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4693,
+    4695,
+    4724,
+    5270
+   ],
+   "razon": "El libro dice que la cultura organizacional se forma por prácticas compartidas y centra en ellas el cambio. Identificar las actuales concreta ese enfoque."
+  },
+  {
+   "id": "P46FD2B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5053,
+    5057,
+    5063
+   ],
+   "razon": "El árbol de decisión incluye la pregunta de si había alcohol o drogas al cometer el acto. El libro matiza la atenuación por medicación, sin contradecir el paso."
+  }
+ ]
+}

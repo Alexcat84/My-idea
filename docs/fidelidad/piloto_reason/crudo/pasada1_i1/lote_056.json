@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_056",
+  "intento": 0,
+  "usd": 0.162156,
+  "turnos": 1,
+  "duracion_s": 16.3,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33254,
+  "tokens_out": 1457,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P700F28\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4109, 4133, 4165, 4161, 4215], \"razon\": \"El libro describe el sesgo de la ACAA y su reticencia a actuar, pero no prescribe revisar decisiones pasadas. L4215 advierte contra juzgar con retrospectiva lo que el regulador solo podía prever.\"},\n {\"id\": \"PC27DB8\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3794, 3784], \"razon\": \"El software genera el árbol de incidente y, una vez resueltas las anomalías lógicas, un borrador de informe para edición final en un procesador de texto.\"},\n {\"id\": \"P060124\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4769, 5174, 5178, 5208], \"razon\": \"El libro dice que la autoridad revierte 'sin fisuras' al bajar el ritmo, y que la coordinación descansa en la cultura, no en reglas. Fijar criterios formales de reversión no aparece y podría chocar con ese matiz.\"},\n {\"id\": \"P9CFAF6\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2311, 2356, 2367, 2369], \"razon\": \"El libro propone eliminar por diseño el contacto manual en inspecciones y sistemas que detecten piezas faltantes. El autodiagnóstico es una extensión coherente.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P700F28",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4109,
+    4133,
+    4165,
+    4161,
+    4215
+   ],
+   "razon": "El libro describe el sesgo de la ACAA y su reticencia a actuar, pero no prescribe revisar decisiones pasadas. L4215 advierte contra juzgar con retrospectiva lo que el regulador solo podía prever."
+  },
+  {
+   "id": "PC27DB8",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3794,
+    3784
+   ],
+   "razon": "El software genera el árbol de incidente y, una vez resueltas las anomalías lógicas, un borrador de informe para edición final en un procesador de texto."
+  },
+  {
+   "id": "P060124",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4769,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro dice que la autoridad revierte 'sin fisuras' al bajar el ritmo, y que la coordinación descansa en la cultura, no en reglas. Fijar criterios formales de reversión no aparece y podría chocar con ese matiz."
+  },
+  {
+   "id": "P9CFAF6",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2311,
+    2356,
+    2367,
+    2369
+   ],
+   "razon": "El libro propone eliminar por diseño el contacto manual en inspecciones y sistemas que detecten piezas faltantes. El autodiagnóstico es una extensión coherente."
+  }
+ ]
+}

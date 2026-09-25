@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Validar la vida a fatiga antes de liberar un diseño",
+  "resumen": "Cuando un diseño debe cumplir una vida mínima a fatiga, se ensaya una muestra pequeña de piezas hasta el fallo y se comparan los ciclos obtenidos con la especificación. El gráfico Weibull de esos datos permite estimar qué porcentaje de la población fallaría por debajo del mínimo especificado y decidir si el diseño está listo para producción.",
+  "texto": "Si todas las piezas ensayadas superan la vida mínima especificada, liberar el diseño a producción sin necesidad de extrapolar",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L11950",
+  "cita": "Thus the small sample (all within specifications) gives a deceptive result, but the Weibull plot acts as an alarm signal by highlighting a potential problem and the risks associated with it.",
+  "explicacion": "El libro presenta justo ese caso (siete ejes, todos por encima de 8000 ciclos) como una trampa: el diseño parece adecuado, pero al extrapolar la distribución ajustada sale que cerca del 2.3 por ciento de la población fallaría antes de 8000 ciclos, y hasta un 11 por ciento con un 95 por ciento de confianza. Por eso recomienda revisar el diseño antes de liberarlo. El paso aconseja lo contrario: liberar sin extrapolar."
+ },
+ {
+  "titulo": "Acordar los hallazgos de auditoría con la supervisión de línea",
+  "resumen": "Antes de que un hallazgo de auditoría llegue a la alta dirección, el auditor repasa con la supervisión de línea los hechos observados, es decir, los síntomas visibles de cada deficiencia. Así el reporte se apoya en hechos aceptados por ambas partes y la discusión se centra en las causas y las recomendaciones.",
+  "texto": "Envía a la alta dirección los hallazgos aunque la supervisión de línea no los haya aceptado todavía, y revísalos con ella después",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L10155",
+  "cita": "The facts should be agreed on before the item enters a report that will go to higher management.",
+  "explicacion": "El libro pide que los hechos se acuerden con la supervisión de línea antes de que el hallazgo entre en un reporte para la alta dirección. El paso invierte el orden: primero se reporta a la dirección y luego se revisa con la línea."
+ },
+ {
+  "titulo": "Probabilidad acumulada de Poisson en el muestreo de lotes",
+  "resumen": "Para decidir si se acepta un lote de un proveedor se toma una muestra aleatoria y se calcula np con la fracción defectuosa histórica del proveedor. Las probabilidades acumuladas de Poisson dan la probabilidad de encontrar r o menos defectuosos en la muestra. La probabilidad de un valor exacto de r se obtiene restando dos probabilidades acumuladas.",
+  "texto": "Consultar la probabilidad acumulada de r o menos defectuosos en las tablas de Molina con el valor de np",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L11988",
+  "cita": "Table C in App. II gives cumulative Poisson probabilities directly, that is, the probability of r or fewer occurrences in n trials of an event having probability p.",
+  "dato": "tablas de Molina (herramienta con nombre)",
+  "explicacion": "El libro sí indica que se busque la probabilidad acumulada en una tabla usando np, pero la tabla que da es la Table C del Apéndice II (y, para otros cálculos, programas como Minitab o Excel). Las tablas de Molina no aparecen en ninguna parte del texto: Grep de 'molina' en todo el libro da 0 coincidencias."
+ },
+ {
+  "titulo": "Cierre del proyecto DFSS: scorecard final e informe retrospectivo",
+  "resumen": "Al terminar la fase Verify de DMADV, el equipo de diseño completa el scorecard final del diseño y registra y archiva los hallazgos clave para consultarlos más adelante. Luego redacta un informe final que repasa cómo se ejecutó el proyecto, con lo que salió bien y lo que no, para aprender de los errores y mejorar la secuencia DFSS.",
+  "texto": "Escribe el informe final con las lecciones aprendidas dentro de los 30 días siguientes al arranque de producción",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L16465",
+  "cita": "The team should complete a final report that includes a look back at the execution of the project.",
+  "dato": "plazo de 30 días tras el arranque de producción",
+  "explicacion": "El libro pide un informe final que repase la ejecución del proyecto, pero no le pone plazo. Incluso advierte que algunas pruebas de campo pueden no terminar antes del lanzamiento. Grep de '30 days', 'thirty' y 'within 30' en todo el libro no encuentra ningún plazo de 30 días: solo aparecen 'within 30 minutes' (L12391, gestión de crisis) y 'Thirty-two percent' (L6291)."
+ }
+]

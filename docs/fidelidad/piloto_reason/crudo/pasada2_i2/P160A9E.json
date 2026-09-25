@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P160A9E",
+  "intento": 0,
+  "usd": 0.109512,
+  "turnos": 1,
+  "duracion_s": 5.0,
+  "pared_s": 6.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26148,
+  "tokens_out": 246,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P160A9E\", \"veredicto\": \"FIEL\", \"lineas\": [3199, 3203], \"cita\": \"Once completed, the data are analysed by the software which generates a Failure State Profile--a bar chart--showing the relative cause for concern for each of the 11 GFTs (see Figure 7.4).\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice expresamente que el software de Tripod-Delta analiza la checklist completada y genera el Failure State Profile, un grafico de barras de los 11 GFTs. Tanto el entregable como la herramienta (software, en PC) estan respaldados literalmente; no hay dato nuevo ni contradiccion.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P160A9E",
+  "veredicto": "FIEL",
+  "lineas": [
+   3199,
+   3203
+  ],
+  "cita": "Once completed, the data are analysed by the software which generates a Failure State Profile--a bar chart--showing the relative cause for concern for each of the 11 GFTs (see Figure 7.4).",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice expresamente que el software de Tripod-Delta analiza la checklist completada y genera el Failure State Profile, un grafico de barras de los 11 GFTs. Tanto el entregable como la herramienta (software, en PC) estan respaldados literalmente; no hay dato nuevo ni contradiccion.",
+  "paso_fiel": ""
+ }
+}

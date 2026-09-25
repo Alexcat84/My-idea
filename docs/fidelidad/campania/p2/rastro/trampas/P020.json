@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Gestión y Retención de CUI al Cierre de Contratos",
+  "resumen": "El CUI debe gestionarse y conservarse conforme a las leyes, órdenes ejecutivas, directivas, regulaciones y requisitos operativos aplicables. Definir qué pasa con el CUI cuando termina un contrato federal limita la superficie de ataque de los sistemas no federales y el riesgo de que la información se vea comprometida.",
+  "texto": "Conservar el CUI en los sistemas propios una vez concluido el contrato, como respaldo ante futuras auditorías",
+  "tipo": "CONTRARIO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L717",
+  "cita": "Retaining CUI on nonfederal systems after contracts or agreements have concluded increases the attack surface for those systems and the risk of the information being compromised.",
+  "explicacion": "El libro advierte que retener CUI en sistemas no federales después de concluir contratos o acuerdos aumenta la superficie de ataque y el riesgo de compromiso. El paso recomienda justo esa retención y la presenta como buena práctica de auditoría."
+ },
+ {
+  "titulo": "Control del Personal de Mantenimiento Externo",
+  "resumen": "Solo las personas u organizaciones autorizadas deben realizar mantenimiento de hardware o software en sistemas que procesan CUI. Para terceros conviene emitir credenciales temporales, y el equipo de mantenimiento que contenga CUI no debe salir de las instalaciones sin sanitizarse o destruirse.",
+  "texto": "Emitir credenciales temporales de un solo uso a técnicos externos, con vigencia máxima de 24 horas",
+  "tipo": "ANADIDO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L489",
+  "cita": "Consider issuing temporary credentials to external parties, which may be for one-time use or for very limited time periods.",
+  "dato": "vigencia máxima de 24 horas",
+  "explicacion": "El libro sugiere credenciales temporales de un solo uso o por periodos muy limitados, pero nunca fija un plazo. Grep en todo el texto: no aparece 'hour' ni 'hours', y '24' solo aparece dentro de '2024' (L199). El umbral de 24 horas es inventado."
+ },
+ {
+  "titulo": "Momento del Reparto de Equity entre Cofundadores",
+  "resumen": "Cuándo repartir la participación importa tanto como cuánto. Repartir demasiado pronto, con el negocio aún difuso y el equipo cambiando, lleva a renegociar una y otra vez; repartir tarde puede dejar a un cofundador clave sin claridad. Si un evento externo obliga a adelantar el reparto, el componente dinámico gana aún más importancia.",
+  "texto": "Negociar el reparto de la participación en cuanto se forme el equipo, aunque el modelo de negocio y los roles aún no estén definidos",
+  "tipo": "CONTRARIO",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "L1905",
+  "cita": "Splitting the equity too early is a recipe for continual renegotiation. If the business is still amorphous and the team composition is in flux, the founders should hold off negotiating the equity split.",
+  "explicacion": "El libro dice que, si el negocio sigue difuso y la composición del equipo está cambiando, los fundadores deben esperar para negociar el reparto, porque repartir demasiado pronto lleva a renegociar sin fin. El paso invierte esa condición y pide repartir precisamente en ese momento."
+ },
+ {
+  "titulo": "Composición del Board y Director Independiente",
+  "resumen": "Muchos boards de startups tienen el mismo número de internos y externos más un asiento para un director independiente que no es gran inversionista, ejecutivo ni fundador, y que actúa como voto decisivo. Los boards pares sin desempate corren un riesgo evidente de bloqueo, y quién elige al independiente se convierte en una negociación clave.",
+  "texto": "Incluir en el board un director independiente con un mandato de dos años renovable que actúe como voto de desempate",
+  "tipo": "ANADIDO",
+  "libro": "The Founder's Dilemmas - Wasserman, Noam",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+  "lineas": "L2932",
+  "cita": "Many boards have equal numbers of insiders and outsiders, with one additional seat held by an independent director (i.e., a director who is not a major investor, current executive, or founder).",
+  "dato": "mandato de dos años renovable",
+  "explicacion": "El libro respalda un director independiente como voto decisivo en un board dividido, pero no le fija ningún mandato. Grep en todo el texto: 'two-year' solo sale en títulos técnicos de dos años (L248, L386, L800) y 'every two years', 'term of two' o 'renew' no aparecen. El único plazo de board que da el libro es 'one-year terms' para cofundadores que no son CEO (L1412), no para el independiente."
+ }
+]

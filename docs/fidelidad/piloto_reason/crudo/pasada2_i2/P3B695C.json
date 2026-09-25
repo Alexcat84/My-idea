@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P3B695C",
+  "intento": 0,
+  "usd": 0.14526,
+  "turnos": 1,
+  "duracion_s": 9.5,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32640,
+  "tokens_out": 735,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3B695C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4388, 4394, 4414], \"cita\": \"demonstrate that the potential major hazards of the installation and the risks to the personnel thereon have been identified and appropriate controls provided. ... The presentation of the formal safety assessment should take the form of a Safety Case ... Decisions on which options to select.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que la FSA termina con la decisión sobre qué opciones seleccionar. También dice que se presenta como Safety Case, que demuestra que existen controles adecuados. Documentar en el Safety Case la decisión y los controles concreta esto en la misma dirección. No añade cifras, plazos, herramientas ni responsables. 'Safety Case' es término del propio libro.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3B695C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4388,
+   4394,
+   4414
+  ],
+  "cita": "demonstrate that the potential major hazards of the installation and the risks to the personnel thereon have been identified and appropriate controls provided. ... The presentation of the formal safety assessment should take the form of a Safety Case ... Decisions on which options to select.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que la FSA termina con la decisión sobre qué opciones seleccionar. También dice que se presenta como Safety Case, que demuestra que existen controles adecuados. Documentar en el Safety Case la decisión y los controles concreta esto en la misma dirección. No añade cifras, plazos, herramientas ni responsables. 'Safety Case' es término del propio libro.",
+  "paso_fiel": ""
+ }
+}

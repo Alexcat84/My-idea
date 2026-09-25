@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P56B062",
+  "intento": 0,
+  "usd": 0.1923,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43250,
+  "tokens_out": 965,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P56B062\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2654, 2658], \"cita\": \"managers should regularly measure and improve those processes [...] that are known to be implicated in the occurrence of organizational accidents. / these patterns also indicate which of the local or organizational factors is playing a regular part [...] This, in turn, guides the selection of which organizational processes to sample proactively on a regular basis.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide medir con regularidad los procesos implicados en accidentes. Los que revela el análisis de sucesos previos son justo los que conviene muestrear. 'Cada proceso identificado' remite a ese subconjunto ya filtrado, no a todos los candidatos que L2654 desaconseja muestrear. 'Periódicos' concreta los chequeos regulares sin fijar frecuencia. No añade cifras, plazos ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P56B062",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2654,
+   2658
+  ],
+  "cita": "managers should regularly measure and improve those processes [...] that are known to be implicated in the occurrence of organizational accidents. / these patterns also indicate which of the local or organizational factors is playing a regular part [...] This, in turn, guides the selection of which organizational processes to sample proactively on a regular basis.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide medir con regularidad los procesos implicados en accidentes. Los que revela el análisis de sucesos previos son justo los que conviene muestrear. 'Cada proceso identificado' remite a ese subconjunto ya filtrado, no a todos los candidatos que L2654 desaconseja muestrear. 'Periódicos' concreta los chequeos regulares sin fijar frecuencia. No añade cifras, plazos ni herramientas.",
+  "paso_fiel": ""
+ }
+}

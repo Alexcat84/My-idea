@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P4F01DC",
+  "intento": 0,
+  "usd": 0.18326,
+  "turnos": 1,
+  "duracion_s": 17.2,
+  "pared_s": 18.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38070,
+  "tokens_out": 1549,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4F01DC\", \"veredicto\": \"CONTRARIO\", \"lineas\": [1031, 1035, 1145], \"cita\": \"regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que ninguna regla post-accidente puede ser de aplicación universal, porque no se pueden prever todos los escenarios. La regla post-TMI prolongó la emergencia en Ginna. El paso da por alcanzable esa universalidad y busca confirmarla. Seguirlo llevaría a tratar como universal una regla sin sensibilidad a las condiciones locales. Es justo lo que el libro desaconseja.\", \"paso_fiel\": \"Revisar las reglas post-accidente para identificar los contextos operativos en que podrían ser contraproducentes, sin darlas nunca por universalmente aplicables, ya que no pueden preverse todos los escenarios de fallo.\"}\n```",
+ "parseado": {
+  "id": "P4F01DC",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   1031,
+   1035,
+   1145
+  ],
+  "cita": "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que ninguna regla post-accidente puede ser de aplicación universal, porque no se pueden prever todos los escenarios. La regla post-TMI prolongó la emergencia en Ginna. El paso da por alcanzable esa universalidad y busca confirmarla. Seguirlo llevaría a tratar como universal una regla sin sensibilidad a las condiciones locales. Es justo lo que el libro desaconseja.",
+  "paso_fiel": "Revisar las reglas post-accidente para identificar los contextos operativos en que podrían ser contraproducentes, sin darlas nunca por universalmente aplicables, ya que no pueden preverse todos los escenarios de fallo."
+ }
+}

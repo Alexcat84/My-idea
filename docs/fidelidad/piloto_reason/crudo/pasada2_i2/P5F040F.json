@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P5F040F",
+  "intento": 0,
+  "usd": 0.203992,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 11.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46448,
+  "tokens_out": 910,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5F040F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5503, 5603, 5641, 5905], \"cita\": \"In some measure at least, all of these risks are present in all hazardous operations. In that sense, all three safety management models are applicable. But some risks are more salient than others, and the balance between the risks varies from domain to domain\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide que los tres modelos coexistan (L5503, L5905) y aplicar cada uno a sus riesgos (L5641), con un equilibrio que varía según el dominio (L5603). El paso lo concreta en esa dirección y no manda elegir un solo modelo, así que no es contrario. Tampoco añade cifras, herramientas ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5F040F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5503,
+   5603,
+   5641,
+   5905
+  ],
+  "cita": "In some measure at least, all of these risks are present in all hazardous operations. In that sense, all three safety management models are applicable. But some risks are more salient than others, and the balance between the risks varies from domain to domain",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide que los tres modelos coexistan (L5503, L5905) y aplicar cada uno a sus riesgos (L5641), con un equilibrio que varía según el dominio (L5603). El paso lo concreta en esa dirección y no manda elegir un solo modelo, así que no es contrario. Tampoco añade cifras, herramientas ni responsables.",
+  "paso_fiel": ""
+ }
+}

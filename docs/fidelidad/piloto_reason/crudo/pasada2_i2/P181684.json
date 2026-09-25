@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P181684",
+  "intento": 0,
+  "usd": 0.165408,
+  "turnos": 1,
+  "duracion_s": 9.4,
+  "pared_s": 10.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37767,
+  "tokens_out": 717,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P181684\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 582], \"cita\": \"The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que las señales, aunque aisladas no bastan, en conjunto debían activar la alarma, y pide hacer visibles las condiciones latentes. Definir combinaciones que disparen una revisión concreta eso sin cifras ni herramientas nuevas. Las advertencias sobre falsas alarmas y sesgo retrospectivo matizan, pero no desaconsejan revisar ante señales combinadas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P181684",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   582
+  ],
+  "cita": "The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que las señales, aunque aisladas no bastan, en conjunto debían activar la alarma, y pide hacer visibles las condiciones latentes. Definir combinaciones que disparen una revisión concreta eso sin cifras ni herramientas nuevas. Las advertencias sobre falsas alarmas y sesgo retrospectivo matizan, pero no desaconsejan revisar ante señales combinadas.",
+  "paso_fiel": ""
+ }
+}

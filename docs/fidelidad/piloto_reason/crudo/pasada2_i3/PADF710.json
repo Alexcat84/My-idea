@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PADF710",
+  "intento": 0,
+  "usd": 0.174508,
+  "turnos": 1,
+  "duracion_s": 10.8,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39407,
+  "tokens_out": 844,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PADF710\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5544, 5546, 2994, 5905], \"cita\": \"they emerge from human-machine mismatches, or poor human engineering ... The practical applications of this approach include: hazard operability studies (HAZOPS), hazard analysis studies (HAZANS), probabilistic risk assessment (PRA), ... cognitive task analyses, ergonomic guidelines\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro atribuye al modelo de ingeniería los errores derivados de desajustes humano-máquina. Cita HAZOPS, PRA y el análisis de tareas cognitivas entre sus aplicaciones y los considera parte esencial del instrumental (L2994, L5905). El paso lo convierte en instrucción de uso ligada a esos desajustes, en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PADF710",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5544,
+   5546,
+   2994,
+   5905
+  ],
+  "cita": "they emerge from human-machine mismatches, or poor human engineering ... The practical applications of this approach include: hazard operability studies (HAZOPS), hazard analysis studies (HAZANS), probabilistic risk assessment (PRA), ... cognitive task analyses, ergonomic guidelines",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro atribuye al modelo de ingeniería los errores derivados de desajustes humano-máquina. Cita HAZOPS, PRA y el análisis de tareas cognitivas entre sus aplicaciones y los considera parte esencial del instrumental (L2994, L5905). El paso lo convierte en instrucción de uso ligada a esos desajustes, en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

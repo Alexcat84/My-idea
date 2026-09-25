@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_035",
+  "intento": 0,
+  "usd": 0.1489,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32910,
+  "tokens_out": 863,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P7E0DE5\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5043, 5053, 5055, 5057, 5063], \"razon\": \"La mitigacion en el libro aplica al abuso de sustancias, no a violaciones (temerarias vs inducidas). El paso omite error sin culpa, donde el libro ubica ~90% de actos.\"},\n {\"id\": \"P1FB9FE\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4380], \"razon\": \"El libro lista literalmente la vigilancia de salud de empleados expuestos como paso del procedimiento continuo COSHH.\"},\n {\"id\": \"P7EAD3A\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4478, 4512], \"razon\": \"Las inspecciones posteriores generan nuevos perfiles; su sucesion permite al regulador y al regulado seguir el progreso de las reformas.\"},\n {\"id\": \"P50AAA9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2598, 2769], \"razon\": \"El libro afirma que avanzar hacia mas seguridad no es dificil, pero sostener las mejoras es muy dificil, y que es la parte mas dura.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P7E0DE5",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5043,
+    5053,
+    5055,
+    5057,
+    5063
+   ],
+   "razon": "La mitigacion en el libro aplica al abuso de sustancias, no a violaciones (temerarias vs inducidas). El paso omite error sin culpa, donde el libro ubica ~90% de actos."
+  },
+  {
+   "id": "P1FB9FE",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4380
+   ],
+   "razon": "El libro lista literalmente la vigilancia de salud de empleados expuestos como paso del procedimiento continuo COSHH."
+  },
+  {
+   "id": "P7EAD3A",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4478,
+    4512
+   ],
+   "razon": "Las inspecciones posteriores generan nuevos perfiles; su sucesion permite al regulador y al regulado seguir el progreso de las reformas."
+  },
+  {
+   "id": "P50AAA9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2598,
+    2769
+   ],
+   "razon": "El libro afirma que avanzar hacia mas seguridad no es dificil, pero sostener las mejoras es muy dificil, y que es la parte mas dura."
+  }
+ ]
+}

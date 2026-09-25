@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8F4846",
+  "intento": 0,
+  "usd": 0.164908,
+  "turnos": 1,
+  "duracion_s": 8.4,
+  "pared_s": 9.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38292,
+  "tokens_out": 587,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8F4846\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [413, 967, 971, 973], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [\"norma ISO 55001\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda la dirección del paso. Muestra que la firma del propio trabajo sin inspección separada dejó pasar trabajos inacabados, y advierte que abolir la inspección independiente sirve a fines comerciales. En cambio, el libro no menciona la ISO 55001, que además es de 2014, posterior al libro. Ese dato es añadido.\", \"paso_fiel\": \"Exigir inspección independiente en las tareas críticas de mantenimiento, sin aceptar solo la firma de quien ejecutó el trabajo.\"}\n```",
+ "parseado": {
+  "id": "P8F4846",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   413,
+   967,
+   971,
+   973
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [
+   "norma ISO 55001"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda la dirección del paso. Muestra que la firma del propio trabajo sin inspección separada dejó pasar trabajos inacabados, y advierte que abolir la inspección independiente sirve a fines comerciales. En cambio, el libro no menciona la ISO 55001, que además es de 2014, posterior al libro. Ese dato es añadido.",
+  "paso_fiel": "Exigir inspección independiente en las tareas críticas de mantenimiento, sin aceptar solo la firma de quien ejecutó el trabajo."
+ }
+}

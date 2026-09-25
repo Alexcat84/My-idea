@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_024",
+  "intento": 0,
+  "usd": 0.17275200000000002,
+  "turnos": 1,
+  "duracion_s": 21.7,
+  "pared_s": 23.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33028,
+  "tokens_out": 2032,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P33AEEC\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"tres condiciones\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1987, 1991, 1834, 1838, 2028], \"razon\": \"El libro aplica los tres criterios a clases de actividad, no a tareas individuales; dentro del mantenimiento, el foco es el reensamblaje y las omisiones. Hay posible cambio de escala.\"},\n  {\"id\": \"PD90C82\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5178, 5182, 5208], \"razon\": \"El libro pide inversión en formación y respeto por la experticia, pero condiciona la flexibilidad a una cultura jerárquica previa y a supervisores de primera línea. El paso omite esa condición.\"},\n  {\"id\": \"P9D1334\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2652, 2654, 580, 2547], \"razon\": \"Coincide en identificar procesos implicados, pero el libro advierte contra centrarse en eventos aislados. Pide analizar varios eventos del dominio y los procesos ya conocidos, no solo el historial propio.\"},\n  {\"id\": \"PA74371\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2638, 2658, 2767, 5775, 5781, 580, 196], \"razon\": \"El libro respalda revisiones proactivas y regulares de procesos y defensas para detectar condiciones latentes antes del evento, más allá de los errores del frente.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P33AEEC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "tres condiciones"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1987,
+    1991,
+    1834,
+    1838,
+    2028
+   ],
+   "razon": "El libro aplica los tres criterios a clases de actividad, no a tareas individuales; dentro del mantenimiento, el foco es el reensamblaje y las omisiones. Hay posible cambio de escala."
+  },
+  {
+   "id": "PD90C82",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5178,
+    5182,
+    5208
+   ],
+   "razon": "El libro pide inversión en formación y respeto por la experticia, pero condiciona la flexibilidad a una cultura jerárquica previa y a supervisores de primera línea. El paso omite esa condición."
+  },
+  {
+   "id": "P9D1334",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2596,
+    2652,
+    2654,
+    580,
+    2547
+   ],
+   "razon": "Coincide en identificar procesos implicados, pero el libro advierte contra centrarse en eventos aislados. Pide analizar varios eventos del dominio y los procesos ya conocidos, no solo el historial propio."
+  },
+  {
+   "id": "PA74371",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2638,
+    2658,
+    2767,
+    5775,
+    5781,
+    580,
+    196
+   ],
+   "razon": "El libro respalda revisiones proactivas y regulares de procesos y defensas para detectar condiciones latentes antes del evento, más allá de los errores del frente."
+  }
+ ]
+}

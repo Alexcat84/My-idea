@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P19BB31",
+  "intento": 0,
+  "usd": 0.21212,
+  "turnos": 1,
+  "duracion_s": 12.1,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48150,
+  "tokens_out": 976,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P19BB31\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1840, 1934, 204, 4464], \"cita\": \"There is every reason to suppose that similar patterns of occurrence are present in all hazardous technologies. ... maintenance errors ... are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que los patrones se repiten en todas las tecnologías y que las mismas condiciones latentes contribuyen a distintos accidentes (L204). También propone revisar el permiso de trabajo y el relevo de turno (L4464). Contrastar esos patrones con las prácticas actuales los concreta proactivamente. L2765 critica depender de medidas de resultado, no esta comparación. No añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P19BB31",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1840,
+   1934,
+   204,
+   4464
+  ],
+  "cita": "There is every reason to suppose that similar patterns of occurrence are present in all hazardous technologies. ... maintenance errors ... are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que los patrones se repiten en todas las tecnologías y que las mismas condiciones latentes contribuyen a distintos accidentes (L204). También propone revisar el permiso de trabajo y el relevo de turno (L4464). Contrastar esos patrones con las prácticas actuales los concreta proactivamente. L2765 critica depender de medidas de resultado, no esta comparación. No añade datos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD76F0C",
+  "intento": 0,
+  "usd": 0.219,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48760,
+  "tokens_out": 1198,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD76F0C\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [5894, 5896], \"cita\": \"This bank had in place a well conceived loss recovery programme that had been tested by the bombing in the nearby St Mary Axe. ... Furthermore, 80 per cent of disaster recovery plans do not work the first time.\", \"datos_sin_respaldo\": [\"simulacros\"], \"tambien_anadido\": false, \"razon\": \"Probar el plan antes de depender de él va en la dirección del libro: el 80% de los planes fallan la primera vez y el del banco funcionó porque ya se había probado. No es contrario. Pero el libro no menciona simulacros para planes de recuperación: la prueba citada fue un atentado real. La herramienta es un añadido.\", \"paso_fiel\": \"Asegurarse de que el plan de recuperación haya sido puesto a prueba antes de tener que depender de él, sabiendo que el 80% de los planes de recuperación no funcionan la primera vez.\"}\n```",
+ "parseado": {
+  "id": "PD76F0C",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   5894,
+   5896
+  ],
+  "cita": "This bank had in place a well conceived loss recovery programme that had been tested by the bombing in the nearby St Mary Axe. ... Furthermore, 80 per cent of disaster recovery plans do not work the first time.",
+  "datos_sin_respaldo": [
+   "simulacros"
+  ],
+  "tambien_anadido": false,
+  "razon": "Probar el plan antes de depender de él va en la dirección del libro: el 80% de los planes fallan la primera vez y el del banco funcionó porque ya se había probado. No es contrario. Pero el libro no menciona simulacros para planes de recuperación: la prueba citada fue un atentado real. La herramienta es un añadido.",
+  "paso_fiel": "Asegurarse de que el plan de recuperación haya sido puesto a prueba antes de tener que depender de él, sabiendo que el 80% de los planes de recuperación no funcionan la primera vez."
+ }
+}

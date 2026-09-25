@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_007",
+  "intento": 0,
+  "usd": 0.16550399999999998,
+  "turnos": 1,
+  "duracion_s": 19.9,
+  "pared_s": 21.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32581,
+  "tokens_out": 1759,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P564506\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"periódicamente\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [478, 494, 504, 506, 526, 4259], \"razon\": \"El libro condena el rol dual, pero no prescribe auditorías periódicas. Muestra una auditoría que detectó la falta de segregación sin corregirla y advierte que las inspecciones periódicas dan visiones aisladas.\"},\n  {\"id\": \"PA54514\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"en cada período\"], \"clase\": \"FIEL\", \"lineas\": [582, 2767, 4478], \"razon\": \"Casi literal de L582: recursos siempre limitados, atender en un período dado las condiciones latentes más urgentes, no resolverlo todo de una vez.\"},\n  {\"id\": \"PB9A3D1\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [204, 582, 2767, 5781, 5907, 5748], \"razon\": \"Concuerda con L204, L582 y L5781. Pero si se lee como priorizar lo latente frente a lo activo, choca en matiz con L5907: contramedidas en todos los niveles a la vez.\"},\n  {\"id\": \"P0022D7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 275, 2724], \"razon\": \"L293: para cada condición local se pregunta qué factores organizacionales upstream pudieron contribuir a ella.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P564506",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    494,
+    504,
+    506,
+    526,
+    4259
+   ],
+   "razon": "El libro condena el rol dual, pero no prescribe auditorías periódicas. Muestra una auditoría que detectó la falta de segregación sin corregirla y advierte que las inspecciones periódicas dan visiones aisladas."
+  },
+  {
+   "id": "PA54514",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "en cada período"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    582,
+    2767,
+    4478
+   ],
+   "razon": "Casi literal de L582: recursos siempre limitados, atender en un período dado las condiciones latentes más urgentes, no resolverlo todo de una vez."
+  },
+  {
+   "id": "PB9A3D1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    204,
+    582,
+    2767,
+    5781,
+    5907,
+    5748
+   ],
+   "razon": "Concuerda con L204, L582 y L5781. Pero si se lee como priorizar lo latente frente a lo activo, choca en matiz con L5907: contramedidas en todos los niveles a la vez."
+  },
+  {
+   "id": "P0022D7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    275,
+    2724
+   ],
+   "razon": "L293: para cada condición local se pregunta qué factores organizacionales upstream pudieron contribuir a ella."
+  }
+ ]
+}

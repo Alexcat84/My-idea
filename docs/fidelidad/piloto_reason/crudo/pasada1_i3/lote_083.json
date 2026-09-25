@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_083",
+  "intento": 0,
+  "usd": 0.164412,
+  "turnos": 1,
+  "duracion_s": 16.6,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33153,
+  "tokens_out": 1590,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PAE1F52\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5184, 5186, 5196, 5200], \"razon\": \"El libro valora explícitamente las 'war stories', la narración de historias y la comunicación cara a cara. Los espacios formales e informales solo concretan esa idea.\"},\n{\"id\": \"P3F0BAE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [194, 196, 291, 293, 5781], \"razon\": \"Coincide con L293, pero el libro advierte no detenerse en los actos inseguros, que son consecuencias. Además, no siempre existen: L291 admite accidentes solo por condiciones latentes.\"},\n{\"id\": \"P41B898\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [158, 308, 1056, 1058, 1149], \"razon\": \"El libro clasifica las defensas en duras y blandas, pero no propone evaluar su balance ni define un balance deseable. No hay respaldo directo para este paso.\"},\n{\"id\": \"P24D3C7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [415, 423, 451, 1914, 4027], \"razon\": \"El libro señala como condición latente la ausencia de un procedimiento formal de traspaso línea/base. También señala traspasos de turno deficientes (Piper Alpha).\"}]\n```",
+ "parseado": [
+  {
+   "id": "PAE1F52",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5186,
+    5196,
+    5200
+   ],
+   "razon": "El libro valora explícitamente las 'war stories', la narración de historias y la comunicación cara a cara. Los espacios formales e informales solo concretan esa idea."
+  },
+  {
+   "id": "P3F0BAE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    194,
+    196,
+    291,
+    293,
+    5781
+   ],
+   "razon": "Coincide con L293, pero el libro advierte no detenerse en los actos inseguros, que son consecuencias. Además, no siempre existen: L291 admite accidentes solo por condiciones latentes."
+  },
+  {
+   "id": "P41B898",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    158,
+    308,
+    1056,
+    1058,
+    1149
+   ],
+   "razon": "El libro clasifica las defensas en duras y blandas, pero no propone evaluar su balance ni define un balance deseable. No hay respaldo directo para este paso."
+  },
+  {
+   "id": "P24D3C7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    415,
+    423,
+    451,
+    1914,
+    4027
+   ],
+   "razon": "El libro señala como condición latente la ausencia de un procedimiento formal de traspaso línea/base. También señala traspasos de turno deficientes (Piper Alpha)."
+  }
+ ]
+}

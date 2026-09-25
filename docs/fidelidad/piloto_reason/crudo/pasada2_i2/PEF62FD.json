@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PEF62FD",
+  "intento": 0,
+  "usd": 0.14968,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32710,
+  "tokens_out": 942,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PEF62FD\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583, 5692], \"cita\": \"This is something that can afflict technical managers assigned to safety jobs. They treat safety measures like pieces of equipment. They put them in place, then tick them off as another job done. [...] But safety measures involve both a product and a process. Simply implementing them is not enough.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro atribuye el 'tick-off' a los mandos técnicos y afirma que las medidas son producto y proceso (L2583). Pide dotar a la dirección de una conciencia informada de los riesgos (L5692). 'Capacitar' concreta ese remedio en la misma dirección, sin cifras, plazos ni herramientas nuevas. El libro no desaconseja formar a directivos, así que no es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PEF62FD",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2583,
+   5692
+  ],
+  "cita": "This is something that can afflict technical managers assigned to safety jobs. They treat safety measures like pieces of equipment. They put them in place, then tick them off as another job done. [...] But safety measures involve both a product and a process. Simply implementing them is not enough.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro atribuye el 'tick-off' a los mandos técnicos y afirma que las medidas son producto y proceso (L2583). Pide dotar a la dirección de una conciencia informada de los riesgos (L5692). 'Capacitar' concreta ese remedio en la misma dirección, sin cifras, plazos ni herramientas nuevas. El libro no desaconseja formar a directivos, así que no es contrario.",
+  "paso_fiel": ""
+ }
+}

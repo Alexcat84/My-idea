@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD4F27D",
+  "intento": 0,
+  "usd": 0.21684799999999999,
+  "turnos": 1,
+  "duracion_s": 21.8,
+  "pared_s": 22.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46032,
+  "tokens_out": 1636,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD4F27D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5043, 5053, 5055, 5057, 5063], \"cita\": \"when good procedures were readily accessible but deliberately violated, the question must arise as to whether the behaviour was reckless [...] Such actions are clearly more culpable than 'necessary' violations [...] it is likely that the unsafe act was a largely blameless system-induced error.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro ordena clasificar cada acto en categorías graduadas: malévolo o criminal, violación temeraria frente a violación inducida por el sistema, error negligente y error inducido por el sistema, este último casi sin culpa. El paso aplica mal la etiqueta de 'mitigación', que en el libro es del abuso de sustancias, y omite dos categorías. Aun así conserva salida no culpable y va en la misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD4F27D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5043,
+   5053,
+   5055,
+   5057,
+   5063
+  ],
+  "cita": "when good procedures were readily accessible but deliberately violated, the question must arise as to whether the behaviour was reckless [...] Such actions are clearly more culpable than 'necessary' violations [...] it is likely that the unsafe act was a largely blameless system-induced error.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro ordena clasificar cada acto en categorías graduadas: malévolo o criminal, violación temeraria frente a violación inducida por el sistema, error negligente y error inducido por el sistema, este último casi sin culpa. El paso aplica mal la etiqueta de 'mitigación', que en el libro es del abuso de sustancias, y omite dos categorías. Aun así conserva salida no culpable y va en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_052",
+  "intento": 0,
+  "usd": 0.14822800000000003,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32537,
+  "tokens_out": 904,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8BE1A0\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [990, 992, 1006, 1547, 5055], \"razon\": \"El libro afirma que la acumulación de reglas reduce las acciones permitidas por debajo de lo necesario y que la única forma de hacer esos trabajos es violar el procedimiento.\"},\n  {\"id\": \"PCFD6D5\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [1085, 1095, 1141, 866, 4720], \"razon\": \"El libro atribuye el problema a la desconfianza creada por falsas alarmas; no propone protocolos contra la desactivación y advierte sobre añadir procedimientos y defensas rígidas.\"},\n  {\"id\": \"PA514F3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [808, 830, 832, 868, 1033, 1129], \"razon\": \"El libro sostiene que las defensas y la automatización alteran la relación humano-sistema y crean nuevos tipos de error y vulnerabilidades.\"},\n  {\"id\": \"PFFD0B9\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2170, 2259, 1943], \"razon\": \"El libro dice que la vía cognitiva es difícil y a veces imposible de establecer, y considera más prometedor el análisis de tareas propensas a omisión.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8BE1A0",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    990,
+    992,
+    1006,
+    1547,
+    5055
+   ],
+   "razon": "El libro afirma que la acumulación de reglas reduce las acciones permitidas por debajo de lo necesario y que la única forma de hacer esos trabajos es violar el procedimiento."
+  },
+  {
+   "id": "PCFD6D5",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    1085,
+    1095,
+    1141,
+    866,
+    4720
+   ],
+   "razon": "El libro atribuye el problema a la desconfianza creada por falsas alarmas; no propone protocolos contra la desactivación y advierte sobre añadir procedimientos y defensas rígidas."
+  },
+  {
+   "id": "PA514F3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    808,
+    830,
+    832,
+    868,
+    1033,
+    1129
+   ],
+   "razon": "El libro sostiene que las defensas y la automatización alteran la relación humano-sistema y crean nuevos tipos de error y vulnerabilidades."
+  },
+  {
+   "id": "PFFD0B9",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2170,
+    2259,
+    1943
+   ],
+   "razon": "El libro dice que la vía cognitiva es difícil y a veces imposible de establecer, y considera más prometedor el análisis de tareas propensas a omisión."
+  }
+ ]
+}

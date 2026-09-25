@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P742855",
+  "intento": 0,
+  "usd": 0.109564,
+  "turnos": 1,
+  "duracion_s": 6.4,
+  "pared_s": 7.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 25431,
+  "tokens_out": 392,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P742855\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3163, 3199, 3213, 3224], \"cita\": \"These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] This means that the instruments are built and owned by those actually carrying out the core business.\", \"datos_sin_respaldo\": [\"equipo central de expertos externos\", \"sin involucrar al personal operativo\"], \"tambien_anadido\": true, \"razon\": \"El libro dice que los indicadores los crean especialistas de la tarea que participan en la operacion diaria, trabajando en grupos (syndicates). La herramienta es bottom-up y los usuarios la reconocen como relevante porque la hicieron personas como ellos. Encargarla a expertos externos sin el personal operativo invierte esa recomendacion.\", \"paso_fiel\": \"Encargar la redaccion de los indicadores de cada tipo de falla general a especialistas de la tarea, personas que gestionan y ejecutan a diario cada tipo de operacion, trabajando en grupos, para que los instrumentos sean suyos.\"}",
+ "parseado": {
+  "id": "P742855",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3163,
+   3199,
+   3213,
+   3224
+  ],
+  "cita": "These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] This means that the instruments are built and owned by those actually carrying out the core business.",
+  "datos_sin_respaldo": [
+   "equipo central de expertos externos",
+   "sin involucrar al personal operativo"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro dice que los indicadores los crean especialistas de la tarea que participan en la operacion diaria, trabajando en grupos (syndicates). La herramienta es bottom-up y los usuarios la reconocen como relevante porque la hicieron personas como ellos. Encargarla a expertos externos sin el personal operativo invierte esa recomendacion.",
+  "paso_fiel": "Encargar la redaccion de los indicadores de cada tipo de falla general a especialistas de la tarea, personas que gestionan y ejecutan a diario cada tipo de operacion, trabajando en grupos, para que los instrumentos sean suyos."
+ }
+}

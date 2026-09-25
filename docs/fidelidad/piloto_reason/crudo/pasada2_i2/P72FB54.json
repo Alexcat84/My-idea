@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P72FB54",
+  "intento": 0,
+  "usd": 0.169156,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38364,
+  "tokens_out": 785,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P72FB54\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [967, 971, 975, 413], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [\"auditorías aleatorias (muestreo aleatorio como mecanismo de verificación)\"], \"razon\": \"El libro critica firmar sin comprobar y la falta de inspección separada y de personal de QA disponible. Por eso respalda verificar el trabajo firmado, en la misma dirección que el paso. Pero nunca propone auditorías, ni menos aleatorias: ese mecanismo y su carácter muestral son añadidos. No es contrario, pues no desaconseja muestrear.\", \"paso_fiel\": \"Someter el trabajo firmado como conforme a una verificación separada, mediante inspección independiente o personal de aseguramiento de calidad disponible, en lugar de aceptar que el propio ejecutor firme su trabajo sin comprobación.\"}\n```",
+ "parseado": {
+  "id": "P72FB54",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   967,
+   971,
+   975,
+   413
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [
+   "auditorías aleatorias (muestreo aleatorio como mecanismo de verificación)"
+  ],
+  "razon": "El libro critica firmar sin comprobar y la falta de inspección separada y de personal de QA disponible. Por eso respalda verificar el trabajo firmado, en la misma dirección que el paso. Pero nunca propone auditorías, ni menos aleatorias: ese mecanismo y su carácter muestral son añadidos. No es contrario, pues no desaconseja muestrear.",
+  "paso_fiel": "Someter el trabajo firmado como conforme a una verificación separada, mediante inspección independiente o personal de aseguramiento de calidad disponible, en lugar de aceptar que el propio ejecutor firme su trabajo sin comprobación."
+ }
+}

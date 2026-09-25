@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P95998E",
+  "intento": 0,
+  "usd": 0.222256,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 15.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48914,
+  "tokens_out": 1330,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P95998E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [821, 154, 1050, 1056], \"cita\": \"At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no desaconseja la redundancia: dice que ha reducido mucho los sucesos adversos y describe cada capa como protección ante el fallo de la anterior. Advierte de sus riesgos (modo común, opacidad, complacencia), pero sin rechazarla. El paso concreta esa filosofía en su misma dirección, sin datos nuevos; otros pasos del nodo cubren las advertencias.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P95998E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   821,
+   154,
+   1050,
+   1056
+  ],
+  "cita": "At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no desaconseja la redundancia: dice que ha reducido mucho los sucesos adversos y describe cada capa como protección ante el fallo de la anterior. Advierte de sus riesgos (modo común, opacidad, complacencia), pero sin rechazarla. El paso concreta esa filosofía en su misma dirección, sin datos nuevos; otros pasos del nodo cubren las advertencias.",
+  "paso_fiel": ""
+ }
+}

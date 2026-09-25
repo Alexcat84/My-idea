@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P08C9B3",
+  "intento": 0,
+  "usd": 0.17053200000000002,
+  "turnos": 1,
+  "duracion_s": 11.7,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38558,
+  "tokens_out": 815,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P08C9B3\", \"veredicto\": \"CONTRARIO\", \"lineas\": [668, 686, 520, 411], \"cita\": \"Knowing how events turned out--what psychologists have called outcome knowledge--profoundly biases our judgement of the actions of those on the spot. ... some prior indication of disaster is only truly a warning if you know what kind of disaster you will suffer.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro advierte contra juzgar al personal con conocimiento del desenlace, porque sobreestima lo que otros sabían. Tambien dice que una señal solo es advertencia si se conoce el desastre. En Barings ninguna señal bastaba sola; debian alarmar a la organizacion en conjunto. Lo que importa es el sistema, no por que alguien no previo.\", \"paso_fiel\": \"Revisar las señales previas en conjunto para entender por qué la organización no las integró ni actuó sobre ellas, sin juzgar al personal con la ventaja de la retrospectiva.\"}\n```",
+ "parseado": {
+  "id": "P08C9B3",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   668,
+   686,
+   520,
+   411
+  ],
+  "cita": "Knowing how events turned out--what psychologists have called outcome knowledge--profoundly biases our judgement of the actions of those on the spot. ... some prior indication of disaster is only truly a warning if you know what kind of disaster you will suffer.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro advierte contra juzgar al personal con conocimiento del desenlace, porque sobreestima lo que otros sabían. Tambien dice que una señal solo es advertencia si se conoce el desastre. En Barings ninguna señal bastaba sola; debian alarmar a la organizacion en conjunto. Lo que importa es el sistema, no por que alguien no previo.",
+  "paso_fiel": "Revisar las señales previas en conjunto para entender por qué la organización no las integró ni actuó sobre ellas, sin juzgar al personal con la ventaja de la retrospectiva."
+ }
+}

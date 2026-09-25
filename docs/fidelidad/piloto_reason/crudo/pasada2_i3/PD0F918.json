@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD0F918",
+  "intento": 0,
+  "usd": 0.148004,
+  "turnos": 1,
+  "duracion_s": 16.5,
+  "pared_s": 17.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29871,
+  "tokens_out": 1426,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD0F918\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5031, 5035, 5037, 4987, 5063], \"cita\": \"This ‘hang them all’ judgement is unsatisfactory in many respects. It ignores the ubiquity of error as well as the situational factors that promote it. ... A much sounder guideline is Neil Johnston’s substitution test.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El paso convierte en regla el criterio de Lord Denning (L5031): un solo fallo justifica el despido. Reason lo rechaza explícitamente (L5035) y propone el test de sustitución (L5037). Además, castigar todos los errores sin mirar su origen es inaceptable (L4987), y el 90% de los actos inseguros son no culpables (L5063). El umbral 'un solo fallo' procede del libro, que lo cita para rechazarlo; no es un dato añadido.\", \"paso_fiel\": \"Ante un fallo en una tarea crítica para la seguridad, aplicar el test de sustitución y el árbol de culpabilidad antes de sancionar, y reservar las sanciones severas, como el despido, para los actos egregios (sabotaje, abuso de sustancias, incumplimiento temerario o negligencia).\"}\n```",
+ "parseado": {
+  "id": "PD0F918",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5031,
+   5035,
+   5037,
+   4987,
+   5063
+  ],
+  "cita": "This ‘hang them all’ judgement is unsatisfactory in many respects. It ignores the ubiquity of error as well as the situational factors that promote it. ... A much sounder guideline is Neil Johnston’s substitution test.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El paso convierte en regla el criterio de Lord Denning (L5031): un solo fallo justifica el despido. Reason lo rechaza explícitamente (L5035) y propone el test de sustitución (L5037). Además, castigar todos los errores sin mirar su origen es inaceptable (L4987), y el 90% de los actos inseguros son no culpables (L5063). El umbral 'un solo fallo' procede del libro, que lo cita para rechazarlo; no es un dato añadido.",
+  "paso_fiel": "Ante un fallo en una tarea crítica para la seguridad, aplicar el test de sustitución y el árbol de culpabilidad antes de sancionar, y reservar las sanciones severas, como el despido, para los actos egregios (sabotaje, abuso de sustancias, incumplimiento temerario o negligencia)."
+ }
+}

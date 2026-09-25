@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Prueba de sustitución antes de asignar culpa",
+  "resumen": "Antes de sancionar a alguien por un acto inseguro conviene preguntarse si otra persona del mismo oficio, con la misma formacion y experiencia, habria actuado distinto en esas mismas circunstancias. La prueba se hace una vez descartados el consumo de sustancias y la violacion deliberada de procedimientos, y se apoya en un jurado de pares que conozca el trabajo real. Su respuesta separa el error que nace del sistema del que es de verdad culpable, y evita que la sancion tape las fallas de fondo que van a producir el siguiente incidente.",
+  "texto": "Si el jurado de pares confirma que otro tecnico igual de competente habria cometido el mismo error, trata el acto como negligente y pasa a la sancion.",
+  "tipo": "CONTRARIO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L5057",
+  "cita": "If the answer given by a ‘jury’ of peers is ‘yes’, then the error is probably blameless.",
+  "dato": "",
+  "explicacion": "El libro dice lo contrario. Si los pares responden que sí, que una persona comparable habria cometido el mismo error, el error probablemente no merece culpa. La negligencia solo entra en juego cuando la respuesta es 'no' y además no aparecen deficiencias del sistema en la formacion, la seleccion o la experiencia (misma linea L5057). El paso invierte la condicion y convierte en sancionable justo el caso que el libro trata como error del sistema."
+ },
+ {
+  "titulo": "Empacar productos fragiles con el metodo de doble caja",
+  "resumen": "Un producto fragil viaja mas seguro dentro de dos cajas que dentro de una. Primero se envuelve la pieza y se ajusta en una caja interior de carton corrugado, que se cierra con cinta en H. Despues esa caja se mete en una caja exterior mas grande, con acolchado arriba, abajo y a los costados, para que los golpes del manejo se absorban antes de llegar al producto. El tamaño de la caja exterior y el grosor del relleno que queda entre ambas son los que deciden si el metodo funciona o si la caja interior termina golpeando las paredes.",
+  "texto": "Elige una caja exterior apenas un par de centimetros mas grande que la interior, para que no quede holgura entre ambas.",
+  "tipo": "CONTRARIO",
+  "libro": "Guia de empaque para envios (FedEx)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Supply chain\\HowToPack_fxcom.txt",
+  "lineas": "L151",
+  "cita": "- Use a second box that is at least 6\" longer, wider, and deeper than the inner box.",
+  "dato": "",
+  "explicacion": "La guia pide que la caja exterior sea al menos 6 pulgadas (unos 15 cm) mas larga, ancha y profunda que la interior, y en L157 exige 3 pulgadas de acolchado entre las dos cajas por arriba, por abajo y por todos los lados (tambien L101: 'Double-box fragile items with 3\" of cushioning in and around the smaller box.'). El paso cambia ese umbral a un par de centimetros y presenta como ventaja no dejar holgura, cuando el libro pide justamente ese espacio para el relleno."
+ },
+ {
+  "titulo": "Retroalimentación rápida a quien reporta incidentes",
+  "resumen": "Pocas cosas matan tanto un sistema de reportes como la sensacion de que reportar no sirve para nada. Los programas que funcionan le devuelven a la comunidad que reporta informacion util, rapida y comprensible: alertas inmediatas cuando un reporte revela un peligro que sigue activo, boletines con los problemas encontrados y las mejoras hechas gracias a los reportes, y reconocimiento colectivo a quienes contribuyen. Esa devolucion es la que sostiene la motivacion para seguir reportando, junto con la confianza que dan la indemnidad y la confidencialidad.",
+  "texto": "Devuelve a cada informante una respuesta con la accion tomada sobre su reporte en un plazo maximo de 72 horas.",
+  "tipo": "ANADIDO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L4910",
+  "cita": "Both the ASRS and BASIS place great emphasis on the rapid feedback of meaningful information to their respective communities.",
+  "dato": "plazo maximo de 72 horas para responder a cada informante",
+  "explicacion": "El paso va en la direccion del libro, que pide una retroalimentacion rapida y util (L4810, L4910), pero el libro no da ningun plazo para responder a cada informante. Grep sin resultados para '72 hours', 'seventy', 'three days' en ese sentido y 'acknowledg' aplicado a reportes. Las unicas cifras de tiempo cercanas son otras: los 10 dias que tiene el piloto para presentar su reporte ante NASA (L4844) y el boletin mensual Flywise (L4914). Ademas, el libro describe la retroalimentacion como dirigida a la comunidad (alertas, boletines, Callback) y no como una respuesta individual con plazo."
+ },
+ {
+  "titulo": "Investigar errores de mantenimiento con MEDA",
+  "resumen": "MEDA es una herramienta creada por Boeing junto con la FAA para investigar errores de mantenimiento de forma estandarizada. Se organiza en cinco secciones: las tres primeras documentan que paso, la cuarta recorre una lista de factores contribuyentes (informacion, equipo, diseño, capacitacion, entorno, supervision, comunicacion), la 5a identifica que defensas fallaron y la 5b define medidas correctivas locales. Los datos se cargan despues a un analisis de tendencias de toda la organizacion, para que el aprendizaje no se quede en el caso puntual.",
+  "texto": "Completa el checklist de factores contribuyentes de la Seccion 4 dentro de las 48 horas siguientes al evento, para cada error identificado.",
+  "tipo": "ANADIDO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L3763",
+  "cita": "Section 4 takes the form of a contributing factors checklist that must be completed for each of the errors identified in Section 3.",
+  "dato": "plazo de 48 horas despues del evento para completar la Seccion 4",
+  "explicacion": "El libro respalda que la Seccion 4 es un checklist de factores contribuyentes que se completa para cada error identificado en la Seccion 3, pero no fija ningun plazo para hacerlo. Grep de '48' y 'forty-eight' en todo el texto: solo aparece en cifras ajenas (1481 muertes en L2309, 4817 estaciones de reparacion en L4180, una nota al pie en L5281) y nunca como '48 hours'. El plazo de 48 horas es un dato inventado."
+ }
+]

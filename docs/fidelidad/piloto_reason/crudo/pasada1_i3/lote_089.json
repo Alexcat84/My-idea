@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_089",
+  "intento": 0,
+  "usd": 0.155844,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32766,
+  "tokens_out": 1239,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P75AD3E\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [83, 96, 1076, 1133, 306],\n    \"razon\": \"El libro afirma que las mejoras de protección suelen convertirse en ventaja productiva. El paso concreta revisar ese fenómeno, en la misma dirección.\"\n  },\n  {\n    \"id\": \"P50D307\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4757, 2581, 2687, 4761],\n    \"razon\": \"El libro pide un sistema de información que recolecte, analice y difunda datos de incidentes y casi accidentes, además de controles proactivos. El paso omite esos controles, sin contradecir.\"\n  },\n  {\n    \"id\": \"P055E9D\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4765, 4798, 4824, 4854, 5077, 5144],\n    \"razon\": \"'Sin represalias' absoluto puede leerse como no-blame o amnistía total. El libro lo rechaza: la indemnidad es 'as far as practicable', con límites, y exige sancionar actos atroces.\"\n  },\n  {\n    \"id\": \"PF0826B\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2944, 2957, 2961, 2841, 2922, 3763],\n    \"razon\": \"El libro dice que los errores tienen causas múltiples y favorece el enfoque situacional sobre la culpa. Analizar la cadena causal antes de responder concreta eso sin añadir datos.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P75AD3E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    83,
+    96,
+    1076,
+    1133,
+    306
+   ],
+   "razon": "El libro afirma que las mejoras de protección suelen convertirse en ventaja productiva. El paso concreta revisar ese fenómeno, en la misma dirección."
+  },
+  {
+   "id": "P50D307",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4757,
+    2581,
+    2687,
+    4761
+   ],
+   "razon": "El libro pide un sistema de información que recolecte, analice y difunda datos de incidentes y casi accidentes, además de controles proactivos. El paso omite esos controles, sin contradecir."
+  },
+  {
+   "id": "P055E9D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4765,
+    4798,
+    4824,
+    4854,
+    5077,
+    5144
+   ],
+   "razon": "'Sin represalias' absoluto puede leerse como no-blame o amnistía total. El libro lo rechaza: la indemnidad es 'as far as practicable', con límites, y exige sancionar actos atroces."
+  },
+  {
+   "id": "PF0826B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2944,
+    2957,
+    2961,
+    2841,
+    2922,
+    3763
+   ],
+   "razon": "El libro dice que los errores tienen causas múltiples y favorece el enfoque situacional sobre la culpa. Analizar la cadena causal antes de responder concreta eso sin añadir datos."
+  }
+ ]
+}

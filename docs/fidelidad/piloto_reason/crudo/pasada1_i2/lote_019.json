@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_019",
+  "intento": 0,
+  "usd": 0.159072,
+  "turnos": 1,
+  "duracion_s": 16.8,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31668,
+  "tokens_out": 1620,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PE6ED86\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [478, 494, 504, 526], \"razon\": \"El libro califica de principio básico separar trading y settlement y señala el doble rol de Leeson como causa central. Mapear roles concreta ese principio en la misma dirección.\"},\n{\"id\": \"PCD16AA\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [67, 81, 96, 105, 1133], \"razon\": \"El libro describe la compensación de riesgo como peligro, pero no prescribe políticas. Presenta producción y protección como equilibrio a navegar; un 'impedir' absoluto podría generalizar en exceso.\"},\n{\"id\": \"PE3B923\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [856, 868, 942, 2961], \"razon\": \"El libro exige conocer los modos y cómo los selecciona el FMS, pero lo llama 'tall order' y atribuye la causa al diseño torpe. La formación como vía principal y 'todos los modos' merecen revisión.\"},\n{\"id\": \"P085C9C\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [2250, 2259, 2299, 2311], \"razon\": \"Los fragmentos no mencionan pilotar ni probar los recordatorios antes de generalizarlos. Solo dan criterios y los tratan como 'primeros auxilios'. No se puede descartar que el libro diga otra cosa.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PE6ED86",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    494,
+    504,
+    526
+   ],
+   "razon": "El libro califica de principio básico separar trading y settlement y señala el doble rol de Leeson como causa central. Mapear roles concreta ese principio en la misma dirección."
+  },
+  {
+   "id": "PCD16AA",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    67,
+    81,
+    96,
+    105,
+    1133
+   ],
+   "razon": "El libro describe la compensación de riesgo como peligro, pero no prescribe políticas. Presenta producción y protección como equilibrio a navegar; un 'impedir' absoluto podría generalizar en exceso."
+  },
+  {
+   "id": "PE3B923",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    856,
+    868,
+    942,
+    2961
+   ],
+   "razon": "El libro exige conocer los modos y cómo los selecciona el FMS, pero lo llama 'tall order' y atribuye la causa al diseño torpe. La formación como vía principal y 'todos los modos' merecen revisión."
+  },
+  {
+   "id": "P085C9C",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    2250,
+    2259,
+    2299,
+    2311
+   ],
+   "razon": "Los fragmentos no mencionan pilotar ni probar los recordatorios antes de generalizarlos. Solo dan criterios y los tratan como 'primeros auxilios'. No se puede descartar que el libro diga otra cosa."
+  }
+ ]
+}

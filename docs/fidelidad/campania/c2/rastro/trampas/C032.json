@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Protección del Perímetro del Sistema (System Boundary Protection)",
+  "resumen": "Consiste en monitorear, controlar y proteger las comunicaciones en los límites externos e internos clave del sistema que procesa CUI, separando las redes internas de las públicas y limitando las conexiones externas a interfaces gestionadas.",
+  "texto": "Permitir el tráfico de red por defecto y bloquear por excepción solo el que se identifique como sospechoso.",
+  "tipo": "CONTRARIO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L675",
+  "cita": "Deny network communications traffic by default. Only allow network communications traffic by exception.",
+  "dato": "",
+  "explicacion": "El libro manda denegar todo el tráfico por defecto y permitirlo solo por excepción. El paso invierte la regla: permite por defecto y bloquea por excepción."
+ },
+ {
+  "titulo": "Gestión y Retención de CUI (Information Management and Retention)",
+  "resumen": "Consiste en establecer políticas y procedimientos para gestionar y retener el CUI conforme a leyes, directivas, regulaciones y requisitos operativos, reduciendo la exposición de la información una vez que deja de ser necesaria.",
+  "texto": "Conservar una copia del CUI en los sistemas propios tras concluir el contrato, como respaldo ante futuras consultas de la agencia federal.",
+  "tipo": "CONTRARIO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L717",
+  "cita": "Retaining CUI on nonfederal systems after contracts or agreements have concluded increases the attack surface for those systems and the risk of the information being compromised.",
+  "dato": "",
+  "explicacion": "El libro advierte que retener CUI en sistemas no federales después de concluir el contrato aumenta la superficie de ataque y el riesgo de compromiso. El paso recomienda justo esa retención como buena práctica."
+ },
+ {
+  "titulo": "Plan de Respuesta a Incidentes con CUI (Incident Response)",
+  "resumen": "Consiste en preparar antes de que ocurra un incidente un plan básico de respuesta con un responsable, una lista de contactos con roles y las obligaciones de comunicación y reporte que exigen leyes, regulaciones y contratos.",
+  "texto": "Reportar al Departamento de Defensa cualquier incidente que afecte al CUI en un plazo máximo de 72 horas desde su detección.",
+  "tipo": "ANADIDO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L437",
+  "cita": "Also, most federal contracts will include specific reporting and notification requirements that should be included in the Incident Response Plan",
+  "dato": "Plazo de reporte de 72 horas al Departamento de Defensa",
+  "explicacion": "El libro solo dice que los requisitos de reporte y notificación los fijan las leyes, regulaciones y sobre todo los contratos federales. No da ningún plazo ni designa al Departamento de Defensa como destinatario. Grep sin coincidencias para 'hour', 'day' o '72' (solo aparece dentro de '172')."
+ },
+ {
+  "titulo": "Auditoría y Responsabilidad (Audit and Accountability)",
+  "resumen": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para investigar actividad no autorizada, asegurando que las acciones de cada usuario puedan rastrearse hasta él.",
+  "texto": "Retener los registros de auditoría durante al menos tres años para cumplir con SP 800-171.",
+  "tipo": "ANADIDO",
+  "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\NIST.SP.1318.txt",
+  "lineas": "L353",
+  "cita": "Are we retaining audit records for a period consistent with the business records retention policy?",
+  "dato": "Retención mínima de tres años exigida por SP 800-171",
+  "explicacion": "El libro vincula la retención a la política de retención de registros del propio negocio y a regulaciones sectoriales, sin fijar ningún periodo. La cifra de tres años y su atribución a SP 800-171 no aparecen. Grep sin coincidencias para 'year' (el único 'three' está en L161 y se refiere a tres cursos online)."
+ }
+]

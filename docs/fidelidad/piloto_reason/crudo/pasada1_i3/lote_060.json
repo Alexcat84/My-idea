@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_060",
+  "intento": 0,
+  "usd": 0.15987600000000002,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33064,
+  "tokens_out": 1381,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA7E54A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2750, 3382, 4478], \"razon\": \"L2750 fija dos propósitos para cada medición: identificar los procesos más preocupantes y seguir la efectividad de medidas correctivas previas. El paso lo repite.\"},\n  {\"id\": \"P4546D9\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2596, 582, 3211], \"razon\": \"El libro dice que la gestión de seguridad no es un añadido sino parte esencial del negocio central, y que la seguridad no es un asunto separado.\"},\n  {\"id\": \"P8FF92D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [565, 567, 569, 5779, 5781, 5748], \"razon\": \"Generaliza desde Nakina. El libro trata castores y lluvia como disparadores locales difíciles de anticipar y prioriza la condición latente de construcción. El foco del paso podría desviarse.\"},\n  {\"id\": \"PCD439A\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Sección 5a\", \"MEDA\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3737], \"razon\": \"L3747: la Sección 5a de MEDA señala las defensas que fallaron. El paso coincide.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA7E54A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2750,
+    3382,
+    4478
+   ],
+   "razon": "L2750 fija dos propósitos para cada medición: identificar los procesos más preocupantes y seguir la efectividad de medidas correctivas previas. El paso lo repite."
+  },
+  {
+   "id": "P4546D9",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2596,
+    582,
+    3211
+   ],
+   "razon": "El libro dice que la gestión de seguridad no es un añadido sino parte esencial del negocio central, y que la seguridad no es un asunto separado."
+  },
+  {
+   "id": "P8FF92D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    565,
+    567,
+    569,
+    5779,
+    5781,
+    5748
+   ],
+   "razon": "Generaliza desde Nakina. El libro trata castores y lluvia como disparadores locales difíciles de anticipar y prioriza la condición latente de construcción. El foco del paso podría desviarse."
+  },
+  {
+   "id": "PCD439A",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 5a",
+    "MEDA"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3737
+   ],
+   "razon": "L3747: la Sección 5a de MEDA señala las defensas que fallaron. El paso coincide."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PCD8D6B",
+  "intento": 0,
+  "usd": 0.179896,
+  "turnos": 1,
+  "duracion_s": 19.2,
+  "pared_s": 20.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36669,
+  "tokens_out": 1661,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCD8D6B\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2724, 5639, 5907], \"cita\": \"Clearly, then, organizational factors represent the priority area for process measurement. ... Effective risk management requires the application of different countermeasures targeted at different levels of the system at the same time--and all the time.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide inspeccionar diseño, formación y especificación o compra de equipos junto con la primera línea, y pone los factores organizacionales como prioridad. 'Tanto como' se queda corto en el peso, pero va en la misma dirección: saca los procesos de soporte del olvido, sin subordinarlos. Es una diferencia de grado, no un contrario, y no añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCD8D6B",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2724,
+   5639,
+   5907
+  ],
+  "cita": "Clearly, then, organizational factors represent the priority area for process measurement. ... Effective risk management requires the application of different countermeasures targeted at different levels of the system at the same time--and all the time.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide inspeccionar diseño, formación y especificación o compra de equipos junto con la primera línea, y pone los factores organizacionales como prioridad. 'Tanto como' se queda corto en el peso, pero va en la misma dirección: saca los procesos de soporte del olvido, sin subordinarlos. Es una diferencia de grado, no un contrario, y no añade datos.",
+  "paso_fiel": ""
+ }
+}

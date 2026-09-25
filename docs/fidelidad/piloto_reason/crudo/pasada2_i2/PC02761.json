@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC02761",
+  "intento": 0,
+  "usd": 0.2255,
+  "turnos": 1,
+  "duracion_s": 11.6,
+  "pared_s": 12.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 51525,
+  "tokens_out": 970,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC02761\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4714, 4716, 4720, 2905, 3209], \"cita\": \"while the familiar reactions to incidents and events, such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant to future organizational accidents, they at least serve the anxiety-reducing function of being seen to do something\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que las reacciones de evitación de ansiedad alimentan el ciclo de culpa sin mejorar el sistema. También pide buscar las causas en el contexto (L2905) y actuar sobre los procesos causales subyacentes, no con parches reactivos (L3209). 'Causas raíz' concreta esa búsqueda de causas del lugar de trabajo y la organización. No es una herramienta nueva ni empuja a causas remotas, así que no choca con L5742.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC02761",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4714,
+   4716,
+   4720,
+   2905,
+   3209
+  ],
+  "cita": "while the familiar reactions to incidents and events, such as ‘write another procedure’ and ‘blame and train,’ may not actually make the system more resistant to future organizational accidents, they at least serve the anxiety-reducing function of being seen to do something",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que las reacciones de evitación de ansiedad alimentan el ciclo de culpa sin mejorar el sistema. También pide buscar las causas en el contexto (L2905) y actuar sobre los procesos causales subyacentes, no con parches reactivos (L3209). 'Causas raíz' concreta esa búsqueda de causas del lugar de trabajo y la organización. No es una herramienta nueva ni empuja a causas remotas, así que no choca con L5742.",
+  "paso_fiel": ""
+ }
+}

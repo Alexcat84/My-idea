@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_045",
+  "intento": 0,
+  "usd": 0.16373200000000002,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32828,
+  "tokens_out": 1621,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDAC2D3\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4974, 4906, 2669], \"razon\": \"El libro concluye que los potenciales informantes deben tener muy claro qué constituye un incidente, porque no siempre es intuitivo.\"},\n  {\"id\": \"P012736\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [409, 1834, 1838, 2028, 2030, 2060, 2069, 2131, 2139, 2159, 2161, 2311], \"razon\": \"El libro respalda que predominan los errores de instalación. Matiz: dice que no hace falta insistir, que faltan datos de aviación y prioriza el rediseño. El paso está truncado.\"},\n  {\"id\": \"P5E5E59\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4695, 5272, 4693, 5781], \"razon\": \"El libro dice que la cultura surge de la aplicación persistente de medidas prácticas, como proceso de aprendizaje colectivo, y que importa más el proceso que el producto.\"},\n  {\"id\": \"PD82F07\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2720, 2724, 4502, 198], \"razon\": \"El libro enumera esos factores locales, pero los ve como expresiones locales y fija la prioridad en los factores organizacionales. Seguido de forma aislada, el paso invertiría esa prioridad.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDAC2D3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4974,
+    4906,
+    2669
+   ],
+   "razon": "El libro concluye que los potenciales informantes deben tener muy claro qué constituye un incidente, porque no siempre es intuitivo."
+  },
+  {
+   "id": "P012736",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    409,
+    1834,
+    1838,
+    2028,
+    2030,
+    2060,
+    2069,
+    2131,
+    2139,
+    2159,
+    2161,
+    2311
+   ],
+   "razon": "El libro respalda que predominan los errores de instalación. Matiz: dice que no hace falta insistir, que faltan datos de aviación y prioriza el rediseño. El paso está truncado."
+  },
+  {
+   "id": "P5E5E59",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4695,
+    5272,
+    4693,
+    5781
+   ],
+   "razon": "El libro dice que la cultura surge de la aplicación persistente de medidas prácticas, como proceso de aprendizaje colectivo, y que importa más el proceso que el producto."
+  },
+  {
+   "id": "PD82F07",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2720,
+    2724,
+    4502,
+    198
+   ],
+   "razon": "El libro enumera esos factores locales, pero los ve como expresiones locales y fija la prioridad en los factores organizacionales. Seguido de forma aislada, el paso invertiría esa prioridad."
+  }
+ ]
+}

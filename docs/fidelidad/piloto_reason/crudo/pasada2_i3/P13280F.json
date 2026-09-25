@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P13280F",
+  "intento": 0,
+  "usd": 0.141904,
+  "turnos": 1,
+  "duracion_s": 8.3,
+  "pared_s": 9.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32596,
+  "tokens_out": 576,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P13280F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5067, 4765], \"cita\": \"Rewards are the most powerful means of changing behaviour, but they are only effective if delivered close in time and place to the behaviour that is desired.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta la recompensa como el medio más poderoso, siempre que llegue cerca en tiempo y lugar de la conducta. 'Inmediato' concreta 'close in time' sin aportar datos nuevos. No nombrar el lugar no invierte el consejo. Diseñar un sistema de reconocimiento es una puesta en práctica en la misma dirección, sin herramienta ni cifra añadida.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P13280F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5067,
+   4765
+  ],
+  "cita": "Rewards are the most powerful means of changing behaviour, but they are only effective if delivered close in time and place to the behaviour that is desired.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta la recompensa como el medio más poderoso, siempre que llegue cerca en tiempo y lugar de la conducta. 'Inmediato' concreta 'close in time' sin aportar datos nuevos. No nombrar el lugar no invierte el consejo. Diseñar un sistema de reconocimiento es una puesta en práctica en la misma dirección, sin herramienta ni cifra añadida.",
+  "paso_fiel": ""
+ }
+}

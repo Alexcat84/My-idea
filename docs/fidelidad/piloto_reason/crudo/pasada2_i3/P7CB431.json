@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P7CB431",
+  "intento": 0,
+  "usd": 0.1977,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43400,
+  "tokens_out": 1205,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7CB431\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [868, 918, 942, 3101, 3449, 3453, 3825], \"cita\": \"the user fails to notice transitions in mode status. … they can hide interesting events, changes and anomalies … the failure of designed items to provide feedback to the user (the evaluation gulf) … Poor, ambiguous or ill-matched system feedback (× 4)\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro atribuye la confusión de modos a transiciones no percibidas y a la automatización que oculta cambios. Señala como fallos de diseño y condiciones de error la falta de retroalimentación. Propone combatir los errores mejorando la información disponible en el puesto. El paso concreta esa dirección. No son falsas alarmas (L1141), así que no contradice el libro. 'Ante cada cambio' es la lectura natural.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7CB431",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   868,
+   918,
+   942,
+   3101,
+   3449,
+   3453,
+   3825
+  ],
+  "cita": "the user fails to notice transitions in mode status. … they can hide interesting events, changes and anomalies … the failure of designed items to provide feedback to the user (the evaluation gulf) … Poor, ambiguous or ill-matched system feedback (× 4)",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro atribuye la confusión de modos a transiciones no percibidas y a la automatización que oculta cambios. Señala como fallos de diseño y condiciones de error la falta de retroalimentación. Propone combatir los errores mejorando la información disponible en el puesto. El paso concreta esa dirección. No son falsas alarmas (L1141), así que no contradice el libro. 'Ante cada cambio' es la lectura natural.",
+  "paso_fiel": ""
+ }
+}

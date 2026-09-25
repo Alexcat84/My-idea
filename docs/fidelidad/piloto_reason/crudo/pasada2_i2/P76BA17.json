@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P76BA17",
+  "intento": 0,
+  "usd": 0.183488,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41117,
+  "tokens_out": 951,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P76BA17\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4749, 2579, 4689], \"cita\": \"an ideal safety culture is the engine that continues to propel the system towards the goal of maximum safety health, regardless of the leadership's personality or current commercial concerns. Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for.\", \"datos_sin_respaldo\": [\"por escrito\", \"antes de decidir\"], \"razon\": \"El libro sí explica por qué merece la pena la cultura de seguridad: es el motor que perdura sin depender del CEO y explica gran parte de la diferencia de riesgo entre aerolíneas. No es contrario, porque no desaconseja entender esa justificación. Pero no pide documentarla por escrito ni la pone como condición previa a decidir.\", \"paso_fiel\": \"Tener claro por qué vale la pena perseguir estos cuatro pilares: juntos forman el motor que empuja al negocio hacia la máxima resistencia a sus peligros, aunque sea un ideal difícil de alcanzar.\"}\n```",
+ "parseado": {
+  "id": "P76BA17",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4749,
+   2579,
+   4689
+  ],
+  "cita": "an ideal safety culture is the engine that continues to propel the system towards the goal of maximum safety health, regardless of the leadership's personality or current commercial concerns. Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for.",
+  "datos_sin_respaldo": [
+   "por escrito",
+   "antes de decidir"
+  ],
+  "razon": "El libro sí explica por qué merece la pena la cultura de seguridad: es el motor que perdura sin depender del CEO y explica gran parte de la diferencia de riesgo entre aerolíneas. No es contrario, porque no desaconseja entender esa justificación. Pero no pide documentarla por escrito ni la pone como condición previa a decidir.",
+  "paso_fiel": "Tener claro por qué vale la pena perseguir estos cuatro pilares: juntos forman el motor que empuja al negocio hacia la máxima resistencia a sus peligros, aunque sea un ideal difícil de alcanzar."
+ }
+}

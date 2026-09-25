@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P02CE17",
+  "intento": 0,
+  "usd": 0.1134,
+  "turnos": 1,
+  "duracion_s": 5.9,
+  "pared_s": 7.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26730,
+  "tokens_out": 324,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P02CE17\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3230, 3332], \"cita\": \"One answer is to pool data from a large number of people to create an average picture at any one time. In this way, biased views of either kind cancel one another out. Such a method also helps to preserve the anonymity of the respondents\", \"datos_sin_respaldo\": [], \"razon\": \"El libro resuelve el sesgo agregando las respuestas de muchas personas para que los sesgos se cancelen y para preservar el anonimato. En MESH cada evaluador entra de forma anónima (L3332). El paso manda identificar a cada encuestado y corregirlo individualmente, lo que invierte el método y rompe el anonimato que el libro protege.\", \"paso_fiel\": \"Agregar y promediar las calificaciones de muchos evaluadores anónimos para que los sesgos individuales se compensen, sin identificar ni corregir a ningún encuestado.\"}",
+ "parseado": {
+  "id": "P02CE17",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3230,
+   3332
+  ],
+  "cita": "One answer is to pool data from a large number of people to create an average picture at any one time. In this way, biased views of either kind cancel one another out. Such a method also helps to preserve the anonymity of the respondents",
+  "datos_sin_respaldo": [],
+  "razon": "El libro resuelve el sesgo agregando las respuestas de muchas personas para que los sesgos se cancelen y para preservar el anonimato. En MESH cada evaluador entra de forma anónima (L3332). El paso manda identificar a cada encuestado y corregirlo individualmente, lo que invierte el método y rompe el anonimato que el libro protege.",
+  "paso_fiel": "Agregar y promediar las calificaciones de muchos evaluadores anónimos para que los sesgos individuales se compensen, sin identificar ni corregir a ningún encuestado."
+ }
+}

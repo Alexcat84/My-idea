@@ -1,0 +1,90 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_105",
+  "intento": 0,
+  "usd": 0.17420799999999997,
+  "turnos": 1,
+  "duracion_s": 21.2,
+  "pared_s": 22.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32912,
+  "tokens_out": 2128,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB4FECE\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"gestor de riesgo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [263, 271, 273, 5742, 5748], \"razon\": \"El libro dice que los factores económicos y societales están fuera del alcance de los gestores: son 'given and immutable'. El paso lo vuelve acción explícita, en la misma dirección.\"},\n  {\"id\": \"P88E7EF\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"momentos regulares\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2598, 2654, 4757, 4773, 4868], \"razon\": \"El libro pide un sistema de información que recoja, analice y difunda datos, con chequeos regulares y reuniones mensuales (BA). El paso formaliza eso sin contradecirlo.\"},\n  {\"id\": \"P27B0BE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2577, 2579, 2581, 2583, 2748, 2866, 5692], \"razon\": \"Los tres motores son responsabilidad de la alta dirección y deben combinarse. El libro critica la gestión fragmentada y no planificada. Hacer un plan concreta esa idea.\"},\n  {\"id\": \"PEF0787\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"11 GFTs\", \"sí/no\", \"Tripod-Delta\"], \"clase\": \"FIEL\", \"lineas\": [3163, 3173, 3199, 3209, 3224], \"razon\": \"El libro describe indicadores sí/no por GFT y por tipo de operación. El paso omite que los crean especialistas de la tarea y que se gestionan perfiles, no indicadores sueltos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB4FECE",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "gestor de riesgo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    263,
+    271,
+    273,
+    5742,
+    5748
+   ],
+   "razon": "El libro dice que los factores económicos y societales están fuera del alcance de los gestores: son 'given and immutable'. El paso lo vuelve acción explícita, en la misma dirección."
+  },
+  {
+   "id": "P88E7EF",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "momentos regulares"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2598,
+    2654,
+    4757,
+    4773,
+    4868
+   ],
+   "razon": "El libro pide un sistema de información que recoja, analice y difunda datos, con chequeos regulares y reuniones mensuales (BA). El paso formaliza eso sin contradecirlo."
+  },
+  {
+   "id": "P27B0BE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2577,
+    2579,
+    2581,
+    2583,
+    2748,
+    2866,
+    5692
+   ],
+   "razon": "Los tres motores son responsabilidad de la alta dirección y deben combinarse. El libro critica la gestión fragmentada y no planificada. Hacer un plan concreta esa idea."
+  },
+  {
+   "id": "PEF0787",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "11 GFTs",
+    "sí/no",
+    "Tripod-Delta"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3163,
+    3173,
+    3199,
+    3209,
+    3224
+   ],
+   "razon": "El libro describe indicadores sí/no por GFT y por tipo de operación. El paso omite que los crean especialistas de la tarea y que se gestionan perfiles, no indicadores sueltos."
+  }
+ ]
+}

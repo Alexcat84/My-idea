@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_097",
+  "intento": 0,
+  "usd": 0.171968,
+  "turnos": 1,
+  "duracion_s": 20.5,
+  "pared_s": 21.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32677,
+  "tokens_out": 2063,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P9A484A\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [1021, 1033, 1035, 3209],\n    \"razon\": \"El libro dice que no se pueden prever todos los escenarios de fallo ni prohibir respuestas universalmente. Prefiere la mejora proactiva de procesos a los 'fixes' reactivos. Anticipar escenarios puede sobrestimarse.\"\n  },\n  {\n    \"id\": \"PA2E067\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5206, 5204, 5208],\n    \"razon\": \"El libro dice que la formación inicial debe consolidarse y ampliarse con guía supervisora sobre el terreno. Matiz: L5206 trata de trabajadores relativamente aislados y de formación en percepción de riesgo.\"\n  },\n  {\n    \"id\": \"P616D00\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"Tabla 7.3\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [3395, 3589, 3591, 3623],\n    \"razon\": \"El método HEART/VPC de Williams empareja la actividad con comportamientos genéricos de violación de la Tabla 7.3 para obtener probabilidades nominales. El paso lo concreta sin datos nuevos.\"\n  },\n  {\n    \"id\": \"P78E883\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [2170, 2224, 2250, 2259],\n    \"razon\": \"El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión, vía análisis de tarea. El paso se basa en tasas históricas, un enfoque reactivo que podría ignorar pasos propensos aún no fallidos.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P9A484A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1021,
+    1033,
+    1035,
+    3209
+   ],
+   "razon": "El libro dice que no se pueden prever todos los escenarios de fallo ni prohibir respuestas universalmente. Prefiere la mejora proactiva de procesos a los 'fixes' reactivos. Anticipar escenarios puede sobrestimarse."
+  },
+  {
+   "id": "PA2E067",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5206,
+    5204,
+    5208
+   ],
+   "razon": "El libro dice que la formación inicial debe consolidarse y ampliarse con guía supervisora sobre el terreno. Matiz: L5206 trata de trabajadores relativamente aislados y de formación en percepción de riesgo."
+  },
+  {
+   "id": "P616D00",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Tabla 7.3"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3589,
+    3591,
+    3623
+   ],
+   "razon": "El método HEART/VPC de Williams empareja la actividad con comportamientos genéricos de violación de la Tabla 7.3 para obtener probabilidades nominales. El paso lo concreta sin datos nuevos."
+  },
+  {
+   "id": "P78E883",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    2224,
+    2250,
+    2259
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables contando sus rasgos que provocan omisión, vía análisis de tarea. El paso se basa en tasas históricas, un enfoque reactivo que podría ignorar pasos propensos aún no fallidos."
+  }
+ ]
+}

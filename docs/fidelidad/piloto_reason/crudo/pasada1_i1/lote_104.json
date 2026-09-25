@@ -1,0 +1,53 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_104",
+  "intento": 0,
+  "usd": 0.112308,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24702,
+  "tokens_out": 675,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P6A5C2B\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [65, 67, 77], \"razon\": \"El libro dice que operar por debajo de la paridad es legítimo en actividades de bajo peligro. Lo peligroso es la subprotección extrema. El paso trata 'debajo de paridad' como el problema sin esa condición.\"},\n{\"id\": \"P837E56\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [263, 5742, 5748], \"razon\": \"El libro propone limitar el análisis a lo que los gestores pueden controlar y señala rendimientos decrecientes en los factores remotos para la remediación.\"},\n{\"id\": \"PA8E860\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4406, 4410, 4414], \"razon\": \"La FSA incluye explícitamente considerar formas alternativas de gestionar los riesgos identificados.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P6A5C2B",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    65,
+    67,
+    77
+   ],
+   "razon": "El libro dice que operar por debajo de la paridad es legítimo en actividades de bajo peligro. Lo peligroso es la subprotección extrema. El paso trata 'debajo de paridad' como el problema sin esa condición."
+  },
+  {
+   "id": "P837E56",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    263,
+    5742,
+    5748
+   ],
+   "razon": "El libro propone limitar el análisis a lo que los gestores pueden controlar y señala rendimientos decrecientes en los factores remotos para la remediación."
+  },
+  {
+   "id": "PA8E860",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4406,
+    4410,
+    4414
+   ],
+   "razon": "La FSA incluye explícitamente considerar formas alternativas de gestionar los riesgos identificados."
+  }
+ ]
+}

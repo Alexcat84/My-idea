@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P3784E2",
+  "intento": 0,
+  "usd": 0.206988,
+  "turnos": 1,
+  "duracion_s": 11.2,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47002,
+  "tokens_out": 949,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3784E2\", \"veredicto\": \"FIEL\", \"lineas\": [594, 4753, 5134, 4757], \"cita\": \"If eternal vigilance is the price of liberty, then chronic unease is the price of safety. Studies of high-reliability organizations [...] indicate that the people who operate and manage them tend to assume that each day will be a bad day and act accordingly.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta la chronic unease como el precio de la seguridad. Advierte contra olvidar tener miedo (L584, L4753) y contra quedar adormecido (L5136). L848 no aplica: trata de la vigilancia perceptiva al supervisar automatismos, no de la actitud organizativa. El libro aconseja sostenerla con datos (L4757), pero el paso no fija ningún medio contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3784E2",
+  "veredicto": "FIEL",
+  "lineas": [
+   594,
+   4753,
+   5134,
+   4757
+  ],
+  "cita": "If eternal vigilance is the price of liberty, then chronic unease is the price of safety. Studies of high-reliability organizations [...] indicate that the people who operate and manage them tend to assume that each day will be a bad day and act accordingly.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta la chronic unease como el precio de la seguridad. Advierte contra olvidar tener miedo (L584, L4753) y contra quedar adormecido (L5136). L848 no aplica: trata de la vigilancia perceptiva al supervisar automatismos, no de la actitud organizativa. El libro aconseja sostenerla con datos (L4757), pero el paso no fija ningún medio contrario.",
+  "paso_fiel": ""
+ }
+}

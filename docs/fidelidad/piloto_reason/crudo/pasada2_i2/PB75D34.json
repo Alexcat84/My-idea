@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB75D34",
+  "intento": 0,
+  "usd": 0.190492,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 12.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43023,
+  "tokens_out": 920,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB75D34\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2598, 2654, 4773, 5217], \"cita\": \"it requires a safety information system that is not only capable of revealing the right conclusions about past events (reactive measures), but that also facilitates regular ‘health checks’ of the basic organizational processes (proactive measures) which are then used to guide targeted remedial actions.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide sacar conclusiones correctas de eventos pasados y hacer chequeos regulares (L2598, L2654), y define la cultura de aprendizaje como extraer esas conclusiones (L4773, L5217). 'Periódica' concreta ese 'regular' sin fijar frecuencia. No es contrario: no propone analizar eventos aislados ni renunciar a actuar, y la implementación de reformas está en otros pasos del nodo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB75D34",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2598,
+   2654,
+   4773,
+   5217
+  ],
+  "cita": "it requires a safety information system that is not only capable of revealing the right conclusions about past events (reactive measures), but that also facilitates regular ‘health checks’ of the basic organizational processes (proactive measures) which are then used to guide targeted remedial actions.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide sacar conclusiones correctas de eventos pasados y hacer chequeos regulares (L2598, L2654), y define la cultura de aprendizaje como extraer esas conclusiones (L4773, L5217). 'Periódica' concreta ese 'regular' sin fijar frecuencia. No es contrario: no propone analizar eventos aislados ni renunciar a actuar, y la implementación de reformas está en otros pasos del nodo.",
+  "paso_fiel": ""
+ }
+}

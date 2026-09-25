@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_101",
+  "intento": 0,
+  "usd": 0.163628,
+  "turnos": 1,
+  "duracion_s": 16.2,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32627,
+  "tokens_out": 1656,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P2B7EFE\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2716, 2250, 2170, 2109, 2089], \"razon\": \"El libro dice que contar actos inseguros es casi imposible y valora mas su naturaleza por actividad; propone identificar de antemano pasos propensos a omision, no medir recuentos.\"},\n  {\"id\": \"P8A1187\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2638, 2598, 2568, 2658, 2765, 2769], \"razon\": \"El libro exige combinar medidas reactivas y proactivas; 'en vez de' puede leerse como abandonar el aprendizaje de sucesos y cuasi-accidentes. El libro pide chequeos regulares, no continuos.\"},\n  {\"id\": \"PFC0D67\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"escala de 1 (poca influencia) a 5 (influencia considerable)\"], \"clase\": \"FIEL\", \"lineas\": [4476, 4478], \"razon\": \"Coincide con el libro: el regulador puntua 1-5 cada factor O&M. El paso omite que se puntua por cada instancia y luego se suma.\"},\n  {\"id\": \"P906B50\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [808, 821, 1114, 1129, 1076], \"razon\": \"Concreta la tesis del libro: las defensas pueden crear peligros nuevos o trasladar errores. No sugiere eliminar defensas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P2B7EFE",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2716,
+    2250,
+    2170,
+    2109,
+    2089
+   ],
+   "razon": "El libro dice que contar actos inseguros es casi imposible y valora mas su naturaleza por actividad; propone identificar de antemano pasos propensos a omision, no medir recuentos."
+  },
+  {
+   "id": "P8A1187",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2638,
+    2598,
+    2568,
+    2658,
+    2765,
+    2769
+   ],
+   "razon": "El libro exige combinar medidas reactivas y proactivas; 'en vez de' puede leerse como abandonar el aprendizaje de sucesos y cuasi-accidentes. El libro pide chequeos regulares, no continuos."
+  },
+  {
+   "id": "PFC0D67",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "escala de 1 (poca influencia) a 5 (influencia considerable)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4476,
+    4478
+   ],
+   "razon": "Coincide con el libro: el regulador puntua 1-5 cada factor O&M. El paso omite que se puntua por cada instancia y luego se suma."
+  },
+  {
+   "id": "P906B50",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    808,
+    821,
+    1114,
+    1129,
+    1076
+   ],
+   "razon": "Concreta la tesis del libro: las defensas pueden crear peligros nuevos o trasladar errores. No sugiere eliminar defensas."
+  }
+ ]
+}

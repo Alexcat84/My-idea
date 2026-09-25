@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF3488D",
+  "intento": 0,
+  "usd": 0.173928,
+  "turnos": 1,
+  "duracion_s": 11.6,
+  "pared_s": 12.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38467,
+  "tokens_out": 1003,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF3488D\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [967, 971, 975, 3465], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [\"auditorías aleatorias (muestreo al azar como mecanismo de verificación)\"], \"tambien_anadido\": false, \"razon\": \"El libro respalda verificar de forma independiente el trabajo firmado: critica la falta de inspección separada y de personal de QA, y que se firme sin comprobar. No menciona auditorías aleatorias ni muestreo. El paso va en la misma dirección y no sustituye la inspección separada, así que no es contrario, pero añade una herramienta concreta.\", \"paso_fiel\": \"Someter el trabajo firmado como conforme a una verificación independiente (inspección separada o personal de QA disponible) para que nadie certifique su propio trabajo sin comprobarlo.\"}\n```",
+ "parseado": {
+  "id": "PF3488D",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   967,
+   971,
+   975,
+   3465
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [
+   "auditorías aleatorias (muestreo al azar como mecanismo de verificación)"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro respalda verificar de forma independiente el trabajo firmado: critica la falta de inspección separada y de personal de QA, y que se firme sin comprobar. No menciona auditorías aleatorias ni muestreo. El paso va en la misma dirección y no sustituye la inspección separada, así que no es contrario, pero añade una herramienta concreta.",
+  "paso_fiel": "Someter el trabajo firmado como conforme a una verificación independiente (inspección separada o personal de QA disponible) para que nadie certifique su propio trabajo sin comprobarlo."
+ }
+}

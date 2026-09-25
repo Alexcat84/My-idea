@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P77A683",
+  "intento": 0,
+  "usd": 0.17021999999999998,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36265,
+  "tokens_out": 1258,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P77A683\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2638, 2650, 1145, 821], \"cita\": \"We need to learn the right lessons from past events, and then translate this knowledge into enhanced resistance. [...] Each event shows a partial or complete trajectory through the defences.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda aprender de cada suceso y convertirlo en mayor resistencia, viendo la trayectoria por las defensas (L2638, L2650). L1145 y L1021-1035 solo advierten que algunos arreglos del fallo llamativo pueden a veces contribuir al siguiente accidente; no prohíbe reforzar defensas (L821). Es un matiz, no un contrario. El paso no aporta datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P77A683",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2638,
+   2650,
+   1145,
+   821
+  ],
+  "cita": "We need to learn the right lessons from past events, and then translate this knowledge into enhanced resistance. [...] Each event shows a partial or complete trajectory through the defences.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda aprender de cada suceso y convertirlo en mayor resistencia, viendo la trayectoria por las defensas (L2638, L2650). L1145 y L1021-1035 solo advierten que algunos arreglos del fallo llamativo pueden a veces contribuir al siguiente accidente; no prohíbe reforzar defensas (L821). Es un matiz, no un contrario. El paso no aporta datos nuevos.",
+  "paso_fiel": ""
+ }
+}

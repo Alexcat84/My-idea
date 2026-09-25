@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE0017C",
+  "intento": 0,
+  "usd": 0.2484,
+  "turnos": 1,
+  "duracion_s": 28.6,
+  "pared_s": 30.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49575,
+  "tokens_out": 2505,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE0017C\", \"veredicto\": \"CONTRARIO\", \"lineas\": [1068, 1072, 1137, 4092, 4502], \"cita\": \"Redundant defensive back-ups increase the interactive complexity of high-technology organizations and thus increase the likelihood of unforeseeable common-mode failures. ... human errors at the ‘sharp end’, in the maintenance sector and in the managerial domains are uniquely capable of creating failures that can affect a number of defensive layers simultaneously.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El paso presenta la redundancia como remedio contra las fallas simultáneas. El libro afirma lo contrario: la redundancia aumenta la complejidad, la opacidad y las fallas de modo común. Los fallos humanos y de gestión anulan la independencia entre capas. En Dryden las capas cayeron juntas por causas sistémicas comunes, y el remedio del libro es reformar esos factores de origen.\", \"paso_fiel\": \"Identificar y corregir las causas sistémicas comunes (falta de recursos, presiones comerciales, inacción de la dirección) que pueden hacer fallar varias capas a la vez, sin confiar en que añadir redundancia lo evite, porque aumenta la complejidad y la opacidad del sistema.\"}\n```",
+ "parseado": {
+  "id": "PE0017C",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   1068,
+   1072,
+   1137,
+   4092,
+   4502
+  ],
+  "cita": "Redundant defensive back-ups increase the interactive complexity of high-technology organizations and thus increase the likelihood of unforeseeable common-mode failures. ... human errors at the ‘sharp end’, in the maintenance sector and in the managerial domains are uniquely capable of creating failures that can affect a number of defensive layers simultaneously.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El paso presenta la redundancia como remedio contra las fallas simultáneas. El libro afirma lo contrario: la redundancia aumenta la complejidad, la opacidad y las fallas de modo común. Los fallos humanos y de gestión anulan la independencia entre capas. En Dryden las capas cayeron juntas por causas sistémicas comunes, y el remedio del libro es reformar esos factores de origen.",
+  "paso_fiel": "Identificar y corregir las causas sistémicas comunes (falta de recursos, presiones comerciales, inacción de la dirección) que pueden hacer fallar varias capas a la vez, sin confiar en que añadir redundancia lo evite, porque aumenta la complejidad y la opacidad del sistema."
+ }
+}

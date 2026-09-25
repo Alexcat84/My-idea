@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PAF72E6",
+  "intento": 0,
+  "usd": 0.20574,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44710,
+  "tokens_out": 1345,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PAF72E6\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2250, 2170, 1945], \"cita\": \"It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses.\", \"datos_sin_respaldo\": [\"método: revisar errores históricos como forma de identificar los pasos propensos a omisión\"], \"razon\": \"El libro identifica los pasos propensos de antemano, contando los rasgos provocadores de omisión de cada paso. No propone el historial de errores para eso. No es contrario: lo difícil es averiguar las causas cognitivas de omisiones pasadas (L2170), no registrar qué se omitió. El libro valora esos datos (L1945) y los usa (L2127-L2159).\", \"paso_fiel\": \"Identifica de antemano los pasos de tarea propensos a omisión contando cuántos rasgos provocadores de omisión reúne cada uno: aislado funcionalmente, posterior al objetivo principal, cercano al final, oculto a la vista, con varios elementos que instalar o recién cambiado.\"}\n```",
+ "parseado": {
+  "id": "PAF72E6",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2250,
+   2170,
+   1945
+  ],
+  "cita": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses.",
+  "datos_sin_respaldo": [
+   "método: revisar errores históricos como forma de identificar los pasos propensos a omisión"
+  ],
+  "razon": "El libro identifica los pasos propensos de antemano, contando los rasgos provocadores de omisión de cada paso. No propone el historial de errores para eso. No es contrario: lo difícil es averiguar las causas cognitivas de omisiones pasadas (L2170), no registrar qué se omitió. El libro valora esos datos (L1945) y los usa (L2127-L2159).",
+  "paso_fiel": "Identifica de antemano los pasos de tarea propensos a omisión contando cuántos rasgos provocadores de omisión reúne cada uno: aislado funcionalmente, posterior al objetivo principal, cercano al final, oculto a la vista, con varios elementos que instalar o recién cambiado."
+ }
+}

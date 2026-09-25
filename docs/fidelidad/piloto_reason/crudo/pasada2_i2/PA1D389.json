@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA1D389",
+  "intento": 0,
+  "usd": 0.23664,
+  "turnos": 1,
+  "duracion_s": 27.1,
+  "pared_s": 28.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46500,
+  "tokens_out": 2532,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA1D389\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2948, 4987, 5061, 5063, 5077], \"cita\": \"on some relatively rare occasions, accidents can happen as the result of the unreasonably reckless, negligent or even malevolent behaviour of particular individuals. […] If the person in question has a previous history of unsafe acts, […] it does indicate the necessity for corrective training\", \"datos_sin_respaldo\": [], \"razon\": \"El libro limita la culpa y las sanciones a pocos actos atroces o reiterados (temeridad, sabotaje, sustancias, 'cowboys' habituales). Los demás actos, en torno al 90%, son sin culpa y se abordan por la situación. El paso concreta esa línea en la misma dirección. Solo se aparta en el detalle: no menciona la negligencia ni el reentrenamiento del propenso a errores repetidos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA1D389",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2948,
+   4987,
+   5061,
+   5063,
+   5077
+  ],
+  "cita": "on some relatively rare occasions, accidents can happen as the result of the unreasonably reckless, negligent or even malevolent behaviour of particular individuals. […] If the person in question has a previous history of unsafe acts, […] it does indicate the necessity for corrective training",
+  "datos_sin_respaldo": [],
+  "razon": "El libro limita la culpa y las sanciones a pocos actos atroces o reiterados (temeridad, sabotaje, sustancias, 'cowboys' habituales). Los demás actos, en torno al 90%, son sin culpa y se abordan por la situación. El paso concreta esa línea en la misma dirección. Solo se aparta en el detalle: no menciona la negligencia ni el reentrenamiento del propenso a errores repetidos.",
+  "paso_fiel": ""
+ }
+}

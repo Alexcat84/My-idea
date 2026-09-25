@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBC3B0A",
+  "intento": 0,
+  "usd": 0.16270400000000002,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36606,
+  "tokens_out": 814,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBC3B0A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5775, 2750, 2598], \"cita\": \"Resident ‘pathogens’ within the workplace and the organization can be identified and removed before the event. [...] First, to identify those processes giving the greatest cause for concern at that time. Second, to track the effectiveness of previous remedial measures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide revisiones periódicas de salud, identificar patógenos residentes y seguir la eficacia de las medidas correctoras. Documentar y dar seguimiento concreta eso en la misma dirección. 'Dar seguimiento' no excluye eliminar, que el nodo cubre en otro paso. 'En cada auditoría' no añade cifra ni frecuencia nueva. No es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBC3B0A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5775,
+   2750,
+   2598
+  ],
+  "cita": "Resident ‘pathogens’ within the workplace and the organization can be identified and removed before the event. [...] First, to identify those processes giving the greatest cause for concern at that time. Second, to track the effectiveness of previous remedial measures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide revisiones periódicas de salud, identificar patógenos residentes y seguir la eficacia de las medidas correctoras. Documentar y dar seguimiento concreta eso en la misma dirección. 'Dar seguimiento' no excluye eliminar, que el nodo cubre en otro paso. 'En cada auditoría' no añade cifra ni frecuencia nueva. No es contrario.",
+  "paso_fiel": ""
+ }
+}

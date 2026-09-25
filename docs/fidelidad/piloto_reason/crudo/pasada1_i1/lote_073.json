@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_073",
+  "intento": 0,
+  "usd": 0.158448,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32437,
+  "tokens_out": 1435,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P96EA88\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3163, 3199, 3213], \"razon\": \"El libro dice que los indicadores de cada tipo de operación los crean especialistas de tarea en grupos (syndicates), a partir de su conocimiento práctico. El paso lo refleja.\"},\n  {\"id\": \"PA79238\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5688, 5690, 5692], \"razon\": \"Reason critica los carteles de horas sin LTI: transmiten que el sitio es seguro, y no lo es, y desalientan el reporte. Un LTIF bajo dice poco del riesgo organizacional.\"},\n  {\"id\": \"PF1F24F\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [3825, 2716, 1006, 3829, 2724], \"razon\": \"Los errores se abordan mejorando la información (L3825). Matiz: sobreespecificar procedimientos genera violaciones (L1006), y los factores organizacionales son prioritarios. Conviene verificar cómo se entiende 'procedimientos'.\"},\n  {\"id\": \"P55CCDB\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3985, 3989, 3991, 520, 3153, 668, 686], \"razon\": \"El libro muestra señales no difundidas ni reportadas (O-rings, Barings). Pero advierte del sesgo retrospectivo: una advertencia solo lo es si se sabe qué desastre viene. Revisar ese matiz.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P96EA88",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3163,
+    3199,
+    3213
+   ],
+   "razon": "El libro dice que los indicadores de cada tipo de operación los crean especialistas de tarea en grupos (syndicates), a partir de su conocimiento práctico. El paso lo refleja."
+  },
+  {
+   "id": "PA79238",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5688,
+    5690,
+    5692
+   ],
+   "razon": "Reason critica los carteles de horas sin LTI: transmiten que el sitio es seguro, y no lo es, y desalientan el reporte. Un LTIF bajo dice poco del riesgo organizacional."
+  },
+  {
+   "id": "PF1F24F",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    3825,
+    2716,
+    1006,
+    3829,
+    2724
+   ],
+   "razon": "Los errores se abordan mejorando la información (L3825). Matiz: sobreespecificar procedimientos genera violaciones (L1006), y los factores organizacionales son prioritarios. Conviene verificar cómo se entiende 'procedimientos'."
+  },
+  {
+   "id": "P55CCDB",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3985,
+    3989,
+    3991,
+    520,
+    3153,
+    668,
+    686
+   ],
+   "razon": "El libro muestra señales no difundidas ni reportadas (O-rings, Barings). Pero advierte del sesgo retrospectivo: una advertencia solo lo es si se sabe qué desastre viene. Revisar ese matiz."
+  }
+ ]
+}

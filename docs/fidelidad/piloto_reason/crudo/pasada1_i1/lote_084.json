@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_084",
+  "intento": 0,
+  "usd": 0.161276,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33389,
+  "tokens_out": 1386,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PA5EF9A\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [1963, 1967, 1971, 1975, 1977, 1991], \"razon\": \"El libro usa las mismas tres preguntas (contacto directo, criticidad, frecuencia) para evaluar actividades; aplicarlas a cada tarea del negocio es una extensión coherente.\"},\n {\"id\": \"PE3FF73\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2596], \"razon\": \"El libro dice literalmente que la gestión de seguridad no es un añadido, sino parte esencial del negocio central del sistema.\"},\n {\"id\": \"PEBA2F9\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5894, 5896], \"razon\": \"El libro exige planificar la recuperación post-accidente, cita un programa ya probado y advierte que el 80% de los planes fallan la primera vez.\"},\n {\"id\": \"PCDA2EB\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5190, 5196], \"razon\": \"El libro valora una cultura que favorece la comunicación cara a cara. El correo aparece solo como posible sustituto, no como preferido. Restringirlo a temas complejos es una extensión coherente.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PA5EF9A",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1991
+   ],
+   "razon": "El libro usa las mismas tres preguntas (contacto directo, criticidad, frecuencia) para evaluar actividades; aplicarlas a cada tarea del negocio es una extensión coherente."
+  },
+  {
+   "id": "PE3FF73",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2596
+   ],
+   "razon": "El libro dice literalmente que la gestión de seguridad no es un añadido, sino parte esencial del negocio central del sistema."
+  },
+  {
+   "id": "PEBA2F9",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5894,
+    5896
+   ],
+   "razon": "El libro exige planificar la recuperación post-accidente, cita un programa ya probado y advierte que el 80% de los planes fallan la primera vez."
+  },
+  {
+   "id": "PCDA2EB",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5190,
+    5196
+   ],
+   "razon": "El libro valora una cultura que favorece la comunicación cara a cara. El correo aparece solo como posible sustituto, no como preferido. Restringirlo a temas complejos es una extensión coherente."
+  }
+ ]
+}

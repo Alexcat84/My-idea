@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_063",
+  "intento": 0,
+  "usd": 0.17259200000000002,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34763,
+  "tokens_out": 1677,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P42CB0F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3704, 3706, 3710, 3714, 3718, 3722], \"razon\": \"El libro describe listar combinaciones de factores, ponderarlas con un factor conjunto y combinarlas mediante probabilidades condicionales para obtener la probabilidad incondicional.\"},\n{\"id\": \"P325F5D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4730, 4734, 4757, 4820], \"razon\": \"La definicion de la HSC trata la confianza mutua y la percepcion compartida como rasgos de la cultura, no como forma de medir el compromiso. Reason prioriza el sistema de informacion de seguridad.\"},\n{\"id\": \"PF0F6EA\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"monitoreo continuo\", \"en cada capa defensiva\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [181, 2650, 2658, 2767, 1033, 5781], \"razon\": \"El libro propone chequeos regulares de una muestra de indicadores, con frecuencia segun el ritmo de cambio, y centrarse en 2-3 procesos. El paso pide continuo y en cada capa.\"},\n{\"id\": \"PB49850\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"supervisor\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [413, 435, 421], \"razon\": \"El libro señala que firmar el propio trabajo incompleto elimina una oportunidad de detectar el error. No prescribe prohibirlo, pero el paso va en la misma direccion.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P42CB0F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3704,
+    3706,
+    3710,
+    3714,
+    3718,
+    3722
+   ],
+   "razon": "El libro describe listar combinaciones de factores, ponderarlas con un factor conjunto y combinarlas mediante probabilidades condicionales para obtener la probabilidad incondicional."
+  },
+  {
+   "id": "P325F5D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4730,
+    4734,
+    4757,
+    4820
+   ],
+   "razon": "La definicion de la HSC trata la confianza mutua y la percepcion compartida como rasgos de la cultura, no como forma de medir el compromiso. Reason prioriza el sistema de informacion de seguridad."
+  },
+  {
+   "id": "PF0F6EA",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "monitoreo continuo",
+    "en cada capa defensiva"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    181,
+    2650,
+    2658,
+    2767,
+    1033,
+    5781
+   ],
+   "razon": "El libro propone chequeos regulares de una muestra de indicadores, con frecuencia segun el ritmo de cambio, y centrarse en 2-3 procesos. El paso pide continuo y en cada capa."
+  },
+  {
+   "id": "PB49850",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "supervisor"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    413,
+    435,
+    421
+   ],
+   "razon": "El libro señala que firmar el propio trabajo incompleto elimina una oportunidad de detectar el error. No prescribe prohibirlo, pero el paso va en la misma direccion."
+  }
+ ]
+}

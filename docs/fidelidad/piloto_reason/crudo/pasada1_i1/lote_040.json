@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_040",
+  "intento": 0,
+  "usd": 0.147784,
+  "turnos": 1,
+  "duracion_s": 11.6,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32081,
+  "tokens_out": 973,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PEFE33D\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [248, 261, 263, 4521, 4523], \"razon\": \"Mapear 'todos' los actores choca en matiz con las reglas de parada: el libro limita el alcance a lo que los gestores pueden controlar y advierte contra usar al regulador como chivo expiatorio.\"},\n {\"id\": \"PE6DD97\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [990, 992, 1006, 1354], \"razon\": \"El libro describe cómo se acumulan procedimientos tras cada incidente y reducen la acción permitida; revisar ese historial sigue la misma dirección.\"},\n {\"id\": \"P0F2797\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2598, 4478, 4484, 4494, 4500, 4714], \"razon\": \"El libro pide seguir el progreso de las reformas con perfiles sucesivos, supervisarlas y evitar repetir medidas sin comprobar su efectividad real.\"},\n {\"id\": \"P0EEADD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [79, 2487, 2520, 2638, 2866], \"razon\": \"El libro exige combinar medidas reactivas y proactivas y critica depender solo de indicadores de resultado negativos.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PEFE33D",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    248,
+    261,
+    263,
+    4521,
+    4523
+   ],
+   "razon": "Mapear 'todos' los actores choca en matiz con las reglas de parada: el libro limita el alcance a lo que los gestores pueden controlar y advierte contra usar al regulador como chivo expiatorio."
+  },
+  {
+   "id": "PE6DD97",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    990,
+    992,
+    1006,
+    1354
+   ],
+   "razon": "El libro describe cómo se acumulan procedimientos tras cada incidente y reducen la acción permitida; revisar ese historial sigue la misma dirección."
+  },
+  {
+   "id": "P0F2797",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2598,
+    4478,
+    4484,
+    4494,
+    4500,
+    4714
+   ],
+   "razon": "El libro pide seguir el progreso de las reformas con perfiles sucesivos, supervisarlas y evitar repetir medidas sin comprobar su efectividad real."
+  },
+  {
+   "id": "P0EEADD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    79,
+    2487,
+    2520,
+    2638,
+    2866
+   ],
+   "razon": "El libro exige combinar medidas reactivas y proactivas y critica depender solo de indicadores de resultado negativos."
+  }
+ ]
+}

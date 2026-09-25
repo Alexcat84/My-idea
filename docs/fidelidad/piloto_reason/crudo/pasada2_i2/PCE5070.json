@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCE5070",
+  "intento": 0,
+  "usd": 0.168412,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38453,
+  "tokens_out": 730,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCE5070\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 546, 688, 5254], \"cita\": \"no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore. [...] Who collates, analyses and disseminates information relating to organizational safety?\", \"datos_sin_respaldo\": [], \"razon\": \"El libro atribuye el fallo a señales dispersas que juntas debían alarmar (la carta de SIMEX no llegó a Londres; 'spread of information over the participants') y exige que alguien recopile la información de seguridad. Un registro centralizado concreta eso sin datos nuevos. El aviso sobre el sesgo retrospectivo explica por qué se ignoran las señales, pero no desaconseja recopilarlas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCE5070",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   546,
+   688,
+   5254
+  ],
+  "cita": "no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm in both London and Singapore. [...] Who collates, analyses and disseminates information relating to organizational safety?",
+  "datos_sin_respaldo": [],
+  "razon": "El libro atribuye el fallo a señales dispersas que juntas debían alarmar (la carta de SIMEX no llegó a Londres; 'spread of information over the participants') y exige que alguien recopile la información de seguridad. Un registro centralizado concreta eso sin datos nuevos. El aviso sobre el sesgo retrospectivo explica por qué se ignoran las señales, pero no desaconseja recopilarlas.",
+  "paso_fiel": ""
+ }
+}

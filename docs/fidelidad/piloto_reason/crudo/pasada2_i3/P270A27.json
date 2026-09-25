@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P270A27",
+  "intento": 0,
+  "usd": 0.131988,
+  "turnos": 1,
+  "duracion_s": 7.2,
+  "pared_s": 8.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30782,
+  "tokens_out": 443,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P270A27\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2594, 2596, 2598], \"cita\": \"Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes... the only attainable goal for safety management is not zero accidents, but to reach that region of the safety space associated with maximum resistance--and then staying there.\", \"datos_sin_respaldo\": [\"meta central de cero accidentes\", \"control directo del conteo de incidentes de cada periodo\"], \"tambien_anadido\": true, \"razon\": \"El libro dice que la unica meta alcanzable no es cero accidentes. Tambien dice que intentar controlar directamente incidentes y accidentes es inutil, porque gran parte de su varianza causal escapa a la organizacion. El paso invierte ambas cosas y convierte en via principal lo que el libro desaconseja.\", \"paso_fiel\": \"Fijar como meta de seguridad alcanzar la region de maxima resistencia del espacio de seguridad y mantenerse en ella, midiendo y mejorando regularmente los procesos manejables (diseno, formacion, procedimientos, mantenimiento, planificacion, comunicacion) en lugar de intentar controlar directamente el conteo de accidentes.\"}",
+ "parseado": {
+  "id": "P270A27",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2594,
+   2596,
+   2598
+  ],
+  "cita": "Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes... the only attainable goal for safety management is not zero accidents, but to reach that region of the safety space associated with maximum resistance--and then staying there.",
+  "datos_sin_respaldo": [
+   "meta central de cero accidentes",
+   "control directo del conteo de incidentes de cada periodo"
+  ],
+  "tambien_anadido": true,
+  "razon": "El libro dice que la unica meta alcanzable no es cero accidentes. Tambien dice que intentar controlar directamente incidentes y accidentes es inutil, porque gran parte de su varianza causal escapa a la organizacion. El paso invierte ambas cosas y convierte en via principal lo que el libro desaconseja.",
+  "paso_fiel": "Fijar como meta de seguridad alcanzar la region de maxima resistencia del espacio de seguridad y mantenerse en ella, midiendo y mejorando regularmente los procesos manejables (diseno, formacion, procedimientos, mantenimiento, planificacion, comunicacion) en lugar de intentar controlar directamente el conteo de accidentes."
+ }
+}

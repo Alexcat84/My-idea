@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P44D1D5",
+  "intento": 0,
+  "usd": 0.22004400000000002,
+  "turnos": 1,
+  "duracion_s": 22.1,
+  "pared_s": 23.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45566,
+  "tokens_out": 1889,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P44D1D5\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4987, 4989, 5063], \"cita\": \"A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions. ... Between 'substance abuse with mitigation' and 'possible negligent error' lies a grey area in which careful judgement must be exercised.\", \"datos_sin_respaldo\": [\"dejarla por escrito\"], \"tambien_anadido\": false, \"razon\": \"El libro pide principios acordados para trazar la línea. También sitúa lo temerario, negligente o malévolo entre los pocos 'bad behaviours' (L4987), así que no es contrario. Matiza que el error negligente cae en una zona gris que exige juicio. El libro no menciona dejar la línea por escrito: ese formato es un dato añadido.\", \"paso_fiel\": \"Acordar principios claros para trazar la línea entre la gran mayoría de actos inseguros sin culpa y los pocos comportamientos inaceptables (temerarios, negligentes o malévolos), y reservar a juicio cuidadoso los casos de la zona gris.\"}\n```",
+ "parseado": {
+  "id": "P44D1D5",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4987,
+   4989,
+   5063
+  ],
+  "cita": "A prerequisite for engineering a just culture is an agreed set of principles for drawing the line between acceptable and unacceptable actions. ... Between 'substance abuse with mitigation' and 'possible negligent error' lies a grey area in which careful judgement must be exercised.",
+  "datos_sin_respaldo": [
+   "dejarla por escrito"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro pide principios acordados para trazar la línea. También sitúa lo temerario, negligente o malévolo entre los pocos 'bad behaviours' (L4987), así que no es contrario. Matiza que el error negligente cae en una zona gris que exige juicio. El libro no menciona dejar la línea por escrito: ese formato es un dato añadido.",
+  "paso_fiel": "Acordar principios claros para trazar la línea entre la gran mayoría de actos inseguros sin culpa y los pocos comportamientos inaceptables (temerarios, negligentes o malévolos), y reservar a juicio cuidadoso los casos de la zona gris."
+ }
+}

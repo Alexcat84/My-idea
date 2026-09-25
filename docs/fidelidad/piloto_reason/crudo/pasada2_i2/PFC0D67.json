@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PFC0D67",
+  "intento": 0,
+  "usd": 0.218752,
+  "turnos": 1,
+  "duracion_s": 6.6,
+  "pared_s": 7.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52503,
+  "tokens_out": 437,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PFC0D67\", \"veredicto\": \"FIEL\", \"lineas\": [4476], \"cita\": \"The regulator rates the relative contributions of each O & M factor to each instance on a five-point scale, where 1 = very little influence and 5 = very considerable influence.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice exactamente esto: el regulador califica la contribución de cada factor O&M en una escala de cinco puntos, de 1 a 5, con esos mismos anclajes. El paso no menciona que se califica por instancia, pero esa omisión no invierte ni condiciona nada, y los pasos vecinos cubren la vinculación y la suma.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PFC0D67",
+  "veredicto": "FIEL",
+  "lineas": [
+   4476
+  ],
+  "cita": "The regulator rates the relative contributions of each O & M factor to each instance on a five-point scale, where 1 = very little influence and 5 = very considerable influence.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice exactamente esto: el regulador califica la contribución de cada factor O&M en una escala de cinco puntos, de 1 a 5, con esos mismos anclajes. El paso no menciona que se califica por instancia, pero esa omisión no invierte ni condiciona nada, y los pasos vecinos cubren la vinculación y la suma.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,326 @@
+{
+ "FX1-001": {
+  "real": true,
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-002": {
+  "real": true,
+  "node_id": "acolchado_segun_forma",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-003": {
+  "real": true,
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-004": {
+  "real": true,
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-005": {
+  "real": true,
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-006": {
+  "real": true,
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-007": {
+  "real": true,
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-008": {
+  "real": true,
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-009": {
+  "real": true,
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-010": {
+  "real": true,
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-011": {
+  "real": true,
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-012": {
+  "real": true,
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-013": {
+  "real": true,
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-014": {
+  "real": true,
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-015": {
+  "real": true,
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-016": {
+  "real": true,
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-017": {
+  "real": true,
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-018": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "clave": "FX",
+  "trampa": {
+   "titulo": "Enviar productos congelados con hielo seco",
+   "resumen": "Mantener un producto congelado durante el trayecto depende de dos cosas: suficiente refrigerante y un recipiente aislante que conserve el frio. El hielo seco es el refrigerante mas comun para congelados, pero es mercancia peligrosa en transporte aereo y exige marcas y etiquetas especificas en la caja exterior. La preparacion tipica es congelar el producto antes de empacarlo, preenfriar la hielera de espuma, embolsar lo que pueda derretirse, rodear el producto con hielo seco por arriba y por los lados, rellenar los huecos para que nada se mueva y meter la hielera en una caja de carton corrugado bien sellada. Seguir este orden reduce el riesgo de que el producto llegue descongelado o de que el envio sea rechazado por marcado incompleto.",
+   "texto": "Cierra y sella por completo la bolsa interior antes de tapar la hielera, para que el frio del hielo seco no se escape.",
+   "tipo": "CONTRARIO",
+   "lineas": "L363 a L367",
+   "cita": "Close the liner bag (if used) but do not completely seal it, as the carbon dioxide gas created by the dry ice must be allowed to vent.",
+   "dato": "",
+   "explicacion": "El libro pide cerrar la bolsa interior SIN sellarla del todo, porque el gas de dioxido de carbono que libera el hielo seco tiene que poder salir; ademas advierte que el hielo seco nunca debe ir en un recipiente hermetico por riesgo de acumulacion de presion y ruptura (L367). El paso invierte la condicion y la justifica con una razon verosimil (conservar el frio)."
+  }
+ },
+ "FX1-019": {
+  "real": true,
+  "node_id": "acolchado_segun_forma",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-020": {
+  "real": true,
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-021": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "clave": "FX",
+  "trampa": {
+   "titulo": "Empacar plantulas y esquejes en bandeja",
+   "resumen": "Las plantulas y los esquejes en bandeja son de lo mas dificil de enviar: son fragiles, no se pueden fijar uno por uno y cualquier movimiento los saca de su celda. La solucion habitual es una bandeja de carton corrugado con una almohadilla superior que presione suavemente las plantas contra la bandeja plastica, y opcionalmente una malla plastica encima. La humedad del sustrato tambien cuenta: si esta muy seco, los esquejes se salen de la bandeja; si esta muy mojado, el carton se ablanda. Aun con buen empaque es normal que algunas plantas se suelten y que caiga algo de tierra, asi que conviene planear un pequeno margen de perdida al preparar cada pedido.",
+   "texto": "Ajusta la humedad del sustrato entre 40 y 50 por ciento antes de cerrar la bandeja con la almohadilla superior.",
+   "tipo": "ANADIDO",
+   "lineas": "L563 a L565",
+   "cita": "If the soil is too dry, plugs are more likely to spill out of the plastic tray. If the soil is too wet, the corrugated tray may weaken from the moisture.",
+   "dato": "Rango de humedad del sustrato de 40 a 50 por ciento",
+   "explicacion": "El libro solo advierte de los dos extremos (tierra muy seca o muy mojada) sin dar ninguna cifra de humedad. Grep en todo el texto: no aparecen '40%', '50%' ni 'percent'; el unico porcentaje del libro es el 30% de carga de baterias de litio (L1635). El rango es inventado."
+  }
+ },
+ "FX1-022": {
+  "real": true,
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-023": {
+  "real": true,
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-024": {
+  "real": true,
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-025": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "clave": "FX",
+  "trampa": {
+   "titulo": "Empacar volantes y placas flexibles de motor",
+   "resumen": "Los volantes de inercia y las placas flexibles son piezas metalicas pesadas y compactas que, si se mueven dentro de la caja, terminan perforando el carton o golpeando otros paquetes. Se empacan en cajas de carton corrugado de doble o triple pared, eligiendo la resistencia segun el peso de la pieza, y se rellenan todos los huecos con cacahuates de relleno u otro material para que no haya juego. Las cajas que superan cierto peso llevan ademas etiquetas de 'pesado' para advertir al personal de manejo. Ajustar la caja al peso real de cada pieza evita roturas del empaque y lesiones de quien la carga.",
+   "texto": "Si la pieza pesa mas de 40 libras, pasa de caja de doble pared a caja de triple pared corrugada.",
+   "tipo": "ANADIDO",
+   "lineas": "L1259 a L1261",
+   "cita": "Pack flexplates and flywheels with adequate dunnage such as loosefill peanuts to fill void spaces in double- or triple- corrugated boxes, depending on the weight of the part. Apply \"heavy\" stickers to boxes exceeding 75 lbs.",
+   "dato": "Umbral de 40 libras para pasar de doble a triple pared",
+   "explicacion": "El libro dice que la eleccion entre doble y triple pared depende del peso de la pieza, pero no fija ningun umbral; la unica cifra del pasaje es 75 libras, y es para la etiqueta de 'heavy', no para el tipo de caja. Grep en todo el texto: 'triple' solo aparece en L1261 y no existe '40 lb' ni ' 40 ' en ningun lugar. El umbral es inventado."
+  }
+ },
+ "FX1-026": {
+  "real": true,
+  "node_id": "acolchado_segun_forma",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-027": {
+  "real": true,
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-028": {
+  "real": true,
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-029": {
+  "real": true,
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-030": {
+  "real": true,
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-031": {
+  "real": true,
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-032": {
+  "real": true,
+  "node_id": "acolchado_segun_forma",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-033": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "clave": "FX",
+  "trampa": {
+   "titulo": "Sobreempacar equipos en su caja original",
+   "resumen": "La caja original de un equipo electronico esta pensada para un solo viaje, y cada reuso la debilita. Por eso, si vas a volver a enviar una computadora o un periferico en su empaque de fabrica, conviene meter esa caja dentro de otra mas grande y rodearla de material de relleno. Antes de hacerlo, revisa que las piezas de espuma y la caja original esten completas y sin roturas, repara con cinta ancha lo que haga falta y usa todos los componentes originales. Luego deja un espacio uniforme alrededor de la caja interior, llenalo con material que amortigue y sella la caja exterior por arriba y por abajo. Este sobreempaque devuelve al envio la resistencia que la caja original ya perdio.",
+   "texto": "Llena el fondo de la caja exterior con 3 pulgadas de papel arrugado antes de centrar la caja original.",
+   "tipo": "CONTRARIO",
+   "lineas": "L717 a L721",
+   "cita": "Fill the bottom of the box with 3\" of packing material (e.g., air-cellular cushioning material such as Bubble Wrap® or loosefill peanuts). Do not use crushed paper.",
+   "dato": "",
+   "explicacion": "El libro da el mismo umbral de 3 pulgadas pero prohibe expresamente el papel arrugado como relleno para el sobreempaque de equipos de computo; pide plastico de burbujas o cacahuates de relleno. El paso conserva la cifra correcta y cambia solo el material por el que el libro desaconseja, lo que lo hace sutil (en otros capitulos el papel periodico arrugado si se admite, L123)."
+  }
+ },
+ "FX1-034": {
+  "real": true,
+  "node_id": "acolchado_segun_forma",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-035": {
+  "real": true,
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-036": {
+  "real": true,
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-037": {
+  "real": true,
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-038": {
+  "real": true,
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-039": {
+  "real": true,
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-040": {
+  "real": true,
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-041": {
+  "real": true,
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-042": {
+  "real": true,
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-043": {
+  "real": true,
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "paso": 5,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-044": {
+  "real": true,
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-045": {
+  "real": true,
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "paso": 3,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-046": {
+  "real": true,
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "paso": 1,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-047": {
+  "real": true,
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "paso": 4,
+  "libro": "Guia de empaque para envios (FedEx)"
+ },
+ "FX1-048": {
+  "real": true,
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "paso": 2,
+  "libro": "Guia de empaque para envios (FedEx)"
+ }
+}

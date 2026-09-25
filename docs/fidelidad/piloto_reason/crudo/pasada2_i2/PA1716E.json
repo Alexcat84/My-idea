@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA1716E",
+  "intento": 0,
+  "usd": 0.14990799999999999,
+  "turnos": 1,
+  "duracion_s": 7.9,
+  "pared_s": 9.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34302,
+  "tokens_out": 635,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA1716E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2650, 171, 181], \"cita\": \"Defences, barriers and safeguards Each event shows a partial or complete trajectory through the defences. Regular checks reveal where holes exist now and where they are most likely to appear next.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda comprobar dónde hay huecos en cada capa (L2650; cada capa tiene huecos, L171). Mapear capas y huecos conocidos concreta eso sin datos nuevos. No es contrario: no afirma que los huecos sean estáticos ni excluye grietas pequeñas o desconocidas. Solo omite el matiz dinámico (L181), que el nodo recoge con el monitoreo continuo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA1716E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2650,
+   171,
+   181
+  ],
+  "cita": "Defences, barriers and safeguards Each event shows a partial or complete trajectory through the defences. Regular checks reveal where holes exist now and where they are most likely to appear next.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda comprobar dónde hay huecos en cada capa (L2650; cada capa tiene huecos, L171). Mapear capas y huecos conocidos concreta eso sin datos nuevos. No es contrario: no afirma que los huecos sean estáticos ni excluye grietas pequeñas o desconocidas. Solo omite el matiz dinámico (L181), que el nodo recoge con el monitoreo continuo.",
+  "paso_fiel": ""
+ }
+}

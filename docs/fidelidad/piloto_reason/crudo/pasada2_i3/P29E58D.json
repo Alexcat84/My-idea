@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P29E58D",
+  "intento": 0,
+  "usd": 0.093468,
+  "turnos": 1,
+  "duracion_s": 7.7,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20537,
+  "tokens_out": 566,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P29E58D\", \"veredicto\": \"FIEL\", \"lineas\": [2261, 2263, 2267, 2271, 2275, 2279, 2281], \"cita\": \"It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check). These five characteristics are universal criteria for a good reminder. They are applicable in virtually all situations.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro enumera exactamente cinco criterios universales del buen recordatorio: conspicuous, contiguous, context, content y check. Dice que se aplican en casi todas las situaciones. La cifra y los nombres están respaldados. La advertencia de que los recordatorios son 'first aid' y no una solución permanente no contradice el paso de diseñarlos así.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P29E58D",
+  "veredicto": "FIEL",
+  "lineas": [
+   2261,
+   2263,
+   2267,
+   2271,
+   2275,
+   2279,
+   2281
+  ],
+  "cita": "It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check). These five characteristics are universal criteria for a good reminder. They are applicable in virtually all situations.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro enumera exactamente cinco criterios universales del buen recordatorio: conspicuous, contiguous, context, content y check. Dice que se aplican en casi todas las situaciones. La cifra y los nombres están respaldados. La advertencia de que los recordatorios son 'first aid' y no una solución permanente no contradice el paso de diseñarlos así.",
+  "paso_fiel": ""
+ }
+}

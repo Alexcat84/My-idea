@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P46A49E",
+  "intento": 0,
+  "usd": 0.150328,
+  "turnos": 1,
+  "duracion_s": 8.6,
+  "pared_s": 9.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34647,
+  "tokens_out": 587,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P46A49E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [965, 971, 973], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service. … the abolition of an independent inspection function (for most jobs, at least) confers at least two commercial advantages.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como riesgo suprimir la inspección independiente y lo aplica a trabajos cuya calidad afecta directamente a la seguridad (L965). No manda expresamente revisar si existe, pero el paso concreta esa advertencia en la misma dirección. 'Función de inspección independiente' y el alcance a tareas críticas de seguridad están respaldados.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P46A49E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   965,
+   971,
+   973
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service. … the abolition of an independent inspection function (for most jobs, at least) confers at least two commercial advantages.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como riesgo suprimir la inspección independiente y lo aplica a trabajos cuya calidad afecta directamente a la seguridad (L965). No manda expresamente revisar si existe, pero el paso concreta esa advertencia en la misma dirección. 'Función de inspección independiente' y el alcance a tareas críticas de seguridad están respaldados.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P109EB6",
+  "intento": 0,
+  "usd": 0.23564,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 54465,
+  "tokens_out": 889,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P109EB6\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2342, 2356, 1995], \"cita\": \"it is not the absolute value that matters, but the relative proportions of the maintenance neglect and maintenance error risks ... all of the most common contributing factors are associated with human rather than 'unaided' technical failures.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro compara el riesgo de fallo técnico no asistido con el de error humano de mantenimiento y usa datos históricos (paradas de motor, Tabla 5.2). No manda hacer este análisis, pero el paso lo concreta en su misma dirección y sin datos nuevos. No es contrario: comparar proporciones no trata el error como causa final (L2905).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P109EB6",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2342,
+   2356,
+   1995
+  ],
+  "cita": "it is not the absolute value that matters, but the relative proportions of the maintenance neglect and maintenance error risks ... all of the most common contributing factors are associated with human rather than 'unaided' technical failures.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro compara el riesgo de fallo técnico no asistido con el de error humano de mantenimiento y usa datos históricos (paradas de motor, Tabla 5.2). No manda hacer este análisis, pero el paso lo concreta en su misma dirección y sin datos nuevos. No es contrario: comparar proporciones no trata el error como causa final (L2905).",
+  "paso_fiel": ""
+ }
+}

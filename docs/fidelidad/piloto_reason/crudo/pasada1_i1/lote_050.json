@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_050",
+  "intento": 0,
+  "usd": 0.156088,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34397,
+  "tokens_out": 925,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P1297B7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4466, 4476, 4478], \"razon\": \"El regulador evalúa, en escala de 1 a 5, cuánto contribuye cada factor O&M a cada instancia. Vincular instancias con sus factores subyacentes coincide con el modelo.\"},\n{\"id\": \"PA6BD3F\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [323, 196, 293, 2652, 2654, 1934], \"razon\": \"El libro dice que la línea entre ambos tipos es difusa y que los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar puede cortar prematuramente la búsqueda de causas organizacionales.\"},\n{\"id\": \"PC2189B\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5204, 4769, 5208], \"razon\": \"La autoridad personal del supervisor proviene del respeto del equipo y del apoyo de la dirección. El respaldo explícito coincide con el libro.\"},\n{\"id\": \"PC58BC8\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5266, 5270, 5055], \"razon\": \"Reason pregunta literalmente si participan pares y representantes sindicales en el juicio disciplinario y si existe un procedimiento interno de apelación.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P1297B7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4466,
+    4476,
+    4478
+   ],
+   "razon": "El regulador evalúa, en escala de 1 a 5, cuánto contribuye cada factor O&M a cada instancia. Vincular instancias con sus factores subyacentes coincide con el modelo."
+  },
+  {
+   "id": "PA6BD3F",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    323,
+    196,
+    293,
+    2652,
+    2654,
+    1934
+   ],
+   "razon": "El libro dice que la línea entre ambos tipos es difusa y que los accidentes individuales suelen tener origen organizacional. Clasificar antes de investigar puede cortar prematuramente la búsqueda de causas organizacionales."
+  },
+  {
+   "id": "PC2189B",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5204,
+    4769,
+    5208
+   ],
+   "razon": "La autoridad personal del supervisor proviene del respeto del equipo y del apoyo de la dirección. El respaldo explícito coincide con el libro."
+  },
+  {
+   "id": "PC58BC8",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5266,
+    5270,
+    5055
+   ],
+   "razon": "Reason pregunta literalmente si participan pares y representantes sindicales en el juicio disciplinario y si existe un procedimiento interno de apelación."
+  }
+ ]
+}

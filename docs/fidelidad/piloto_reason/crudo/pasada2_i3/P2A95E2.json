@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2A95E2",
+  "intento": 0,
+  "usd": 0.18223599999999998,
+  "turnos": 1,
+  "duracion_s": 5.9,
+  "pared_s": 6.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44174,
+  "tokens_out": 277,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P2A95E2\", \"veredicto\": \"FIEL\", \"lineas\": [5258, 2579], \"cita\": \"Is a safety-related appointment seen as rewarding talent (a good career move) or as an organizational oubliette for spent forces?\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro plantea literalmente esta pregunta de diagnóstico: si un nombramiento de seguridad se percibe como recompensa al talento o como destierro para gente agotada. L2579 lo refuerza: en algunas empresas son vía rápida de carrera y en otras, aparcamiento para ejecutivos quemados. 'Puesto relacionado con seguridad' traduce 'safety-related appointment' y no añade ningún dato.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P2A95E2",
+  "veredicto": "FIEL",
+  "lineas": [
+   5258,
+   2579
+  ],
+  "cita": "Is a safety-related appointment seen as rewarding talent (a good career move) or as an organizational oubliette for spent forces?",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro plantea literalmente esta pregunta de diagnóstico: si un nombramiento de seguridad se percibe como recompensa al talento o como destierro para gente agotada. L2579 lo refuerza: en algunas empresas son vía rápida de carrera y en otras, aparcamiento para ejecutivos quemados. 'Puesto relacionado con seguridad' traduce 'safety-related appointment' y no añade ningún dato.",
+  "paso_fiel": ""
+ }
+}

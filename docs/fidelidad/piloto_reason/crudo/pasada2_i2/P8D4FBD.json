@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P8D4FBD",
+  "intento": 0,
+  "usd": 0.185376,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41209,
+  "tokens_out": 1027,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8D4FBD\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4777, 5270, 2750], \"cita\": \"four critical subcomponents of a safety culture: a reporting culture, a just culture, a flexible culture and a learning culture. […] if it is to achieve anything approaching a satisfactory ‘is’ state, it first has to ‘have’ the essential components.\", \"datos_sin_respaldo\": [], \"razon\": \"Los cuatro subcomponentes están en L4777, y el libro pide evaluar regularmente la cultura (L2750). El aviso de L5270 dice que tener las partes no basta, pero no desaconseja evaluarlas: exige tenerlas primero. El paso no afirma que evaluarlas equivalga a tener cultura de seguridad. Concreta el libro en su misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8D4FBD",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4777,
+   5270,
+   2750
+  ],
+  "cita": "four critical subcomponents of a safety culture: a reporting culture, a just culture, a flexible culture and a learning culture. […] if it is to achieve anything approaching a satisfactory ‘is’ state, it first has to ‘have’ the essential components.",
+  "datos_sin_respaldo": [],
+  "razon": "Los cuatro subcomponentes están en L4777, y el libro pide evaluar regularmente la cultura (L2750). El aviso de L5270 dice que tener las partes no basta, pero no desaconseja evaluarlas: exige tenerlas primero. El paso no afirma que evaluarlas equivalga a tener cultura de seguridad. Concreta el libro en su misma dirección.",
+  "paso_fiel": ""
+ }
+}

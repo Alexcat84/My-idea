@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC18660",
+  "intento": 0,
+  "usd": 0.140952,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31268,
+  "tokens_out": 794,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC18660\", \"veredicto\": \"FIEL\", \"lineas\": [5061], \"cita\": \"the last major question at the top right-hand corner of Figure 9.4 could be rephrased as 'Any previous?'. ... If the person in question has a previous history of unsafe acts, it does not necessarily bear upon the culpability of the error\", \"datos_sin_respaldo\": [], \"razon\": \"El árbol de la Figura 9.4 incluye la pregunta 'Any previous?' sobre el historial de actos inseguros. El paso solo manda revisarlo y no afirma que ese historial determine la culpabilidad. El libro le asigna otro uso, formación correctiva u orientación profesional. Ese matiz es un detalle omitido, no una inversión, y no añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC18660",
+  "veredicto": "FIEL",
+  "lineas": [
+   5061
+  ],
+  "cita": "the last major question at the top right-hand corner of Figure 9.4 could be rephrased as 'Any previous?'. ... If the person in question has a previous history of unsafe acts, it does not necessarily bear upon the culpability of the error",
+  "datos_sin_respaldo": [],
+  "razon": "El árbol de la Figura 9.4 incluye la pregunta 'Any previous?' sobre el historial de actos inseguros. El paso solo manda revisarlo y no afirma que ese historial determine la culpabilidad. El libro le asigna otro uso, formación correctiva u orientación profesional. Ese matiz es un detalle omitido, no una inversión, y no añade datos.",
+  "paso_fiel": ""
+ }
+}

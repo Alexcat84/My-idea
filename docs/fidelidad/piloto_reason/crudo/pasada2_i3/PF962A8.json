@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF962A8",
+  "intento": 0,
+  "usd": 0.158628,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35942,
+  "tokens_out": 743,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF962A8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [293, 310, 2650, 291], \"cita\": \"The inquiry begins with the bad outcome (what happened) and then considers how and when the defences failed. For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"En el nodo el paso es de investigación a posteriori. El libro manda establecer, en cada defensa rota, qué fallas activas y condiciones latentes intervinieron y cuándo. Esos huecos se 'alinean' en la ventana de oportunidad (L310), y cada suceso muestra una trayectoria (L2650). El paso lo concreta sin datos nuevos. Solo omite que a veces no hay fallas activas (L291), un matiz de detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF962A8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   293,
+   310,
+   2650,
+   291
+  ],
+  "cita": "The inquiry begins with the bad outcome (what happened) and then considers how and when the defences failed. For each breached or bypassed defence, it is necessary to establish what active failures and latent conditions were involved.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "En el nodo el paso es de investigación a posteriori. El libro manda establecer, en cada defensa rota, qué fallas activas y condiciones latentes intervinieron y cuándo. Esos huecos se 'alinean' en la ventana de oportunidad (L310), y cada suceso muestra una trayectoria (L2650). El paso lo concreta sin datos nuevos. Solo omite que a veces no hay fallas activas (L291), un matiz de detalle.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P010E76",
+  "intento": 0,
+  "usd": 0.176472,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39943,
+  "tokens_out": 835,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P010E76\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3393, 3395, 3397, 3659], \"cita\": \"The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro ordena las EPCs por su multiplicador ('rank order of effect') y valora ese ranking para saber qué factores pesan más. Priorizar la intervención según él va en la misma dirección. Omitir aquí la proporción juzgada es un matiz de detalle: los otros pasos ya la aplican y el libro no desaconseja priorizar así. No añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P010E76",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3393,
+   3395,
+   3397,
+   3659
+  ],
+  "cita": "The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro ordena las EPCs por su multiplicador ('rank order of effect') y valora ese ranking para saber qué factores pesan más. Priorizar la intervención según él va en la misma dirección. Omitir aquí la proporción juzgada es un matiz de detalle: los otros pasos ya la aplican y el libro no desaconseja priorizar así. No añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

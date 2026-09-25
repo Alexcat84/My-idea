@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_070",
+  "intento": 0,
+  "usd": 0.16242800000000002,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33367,
+  "tokens_out": 1448,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P3E1754\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [158, 308, 162, 1058], \"razon\": \"El libro clasifica las defensas en duras y blandas. Evaluar su balance es una extension razonable y no choca con la advertencia sobre el ocultamiento de fallas.\"},\n{\"id\": \"P514409\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5178, 5182, 5204, 5208, 4693, 4769], \"razon\": \"Weick apoya la socializacion frente a las reglas. Pero Reason exige primero una cultura jerarquica disciplinada, confianza en los SOP y practicas compartidas mas que valores. La mentoria no aparece.\"},\n{\"id\": \"P58F852\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [4749, 4777, 2583, 5219, 5234], \"razon\": \"El libro no habla de justificar por escrito antes de decidir. Advierte contra el 'tick-off' y presenta la cultura como mas que la suma de sus partes: posible choque de matiz.\"},\n{\"id\": \"P018B84\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5603, 5639, 5701, 4284], \"razon\": \"El libro dice que el balance de riesgos cambia con la tecnologia y la sociedad, y que las condiciones latentes son altas en todo dominio. Compararse con referencias historicas podria subestimarlas.\"}]",
+ "parseado": [
+  {
+   "id": "P3E1754",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    158,
+    308,
+    162,
+    1058
+   ],
+   "razon": "El libro clasifica las defensas en duras y blandas. Evaluar su balance es una extension razonable y no choca con la advertencia sobre el ocultamiento de fallas."
+  },
+  {
+   "id": "P514409",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5178,
+    5182,
+    5204,
+    5208,
+    4693,
+    4769
+   ],
+   "razon": "Weick apoya la socializacion frente a las reglas. Pero Reason exige primero una cultura jerarquica disciplinada, confianza en los SOP y practicas compartidas mas que valores. La mentoria no aparece."
+  },
+  {
+   "id": "P58F852",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    4749,
+    4777,
+    2583,
+    5219,
+    5234
+   ],
+   "razon": "El libro no habla de justificar por escrito antes de decidir. Advierte contra el 'tick-off' y presenta la cultura como mas que la suma de sus partes: posible choque de matiz."
+  },
+  {
+   "id": "P018B84",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5603,
+    5639,
+    5701,
+    4284
+   ],
+   "razon": "El libro dice que el balance de riesgos cambia con la tecnologia y la sociedad, y que las condiciones latentes son altas en todo dominio. Compararse con referencias historicas podria subestimarlas."
+  }
+ ]
+}
