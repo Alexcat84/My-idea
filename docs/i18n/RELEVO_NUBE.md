@@ -22,7 +22,7 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
 | **F0** diseño, inventario, glosario, decisiones | **HECHA** | `cf55b1b2` (diseño), `06c1a06e` (decisiones D1-D9), `d2ce48df` (inventario de datos y borradores legales), `80d0a38f` (glosario y legales con las decisiones) |
 | **F1** medición del buscador multilingüe | **HECHA** | `0debace9`; informe `docs/i18n/F1_BUSCADOR.md` |
 | **F2** base de idiomas + todos los textos al catálogo en español, la app idéntica | **HECHA, CON VISTO DEL FUNDADOR, EN PRODUCCIÓN** | `6a887b99` (base), `124113cb` (extracción), `1b495e32` (hilo del idioma), `20c0250e` (informe `docs/i18n/F2_INFORME.md`); en `main` con `9361c569`, etiqueta `web-v2.7.0` |
-| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **EN CURSO** (nube): hecho lo que no depende del idioma; espera al fundador para empezar a traducir (§9) | `73811801` (formatos por idioma y los cuatro arreglos que F2 dejó para F3) |
+| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **EN CURSO** (nube): hecho lo que no depende del idioma; decisiones del fundador del 24 sep en §9 | `73811801` (formatos por idioma y los cuatro arreglos que F2 dejó para F3) |
 | **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | por hacer | — |
 | **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3 | por hacer | — |
 | **F6** correos (D4), documentos, legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
@@ -108,7 +108,7 @@ cd web && pnpm install --frozen-lockfile
 | auditor de claves (catálogos) | `npx vitest run lib/i18n` (auditor: mismas claves, `{{marcadores}}` y etiquetas en cada idioma, nada vacío, "My Idea" intacto; `hiloIdioma.test.ts`: nadie muestra una constante base teniendo el idioma) |
 | extracción idéntica | `npx tsx scripts/i18n/extraccion_identica.ts [base]` (lo que salga del código debe estar letra por letra en un catálogo; hoy da 1 falso positivo conocido en `app/api/project/[id]/documentos/route.ts`, la plantilla anidada de "Quedan N acciones…") |
 | suite del motor | desde la raíz: `python engine/run_all_tests.py` (27 de 27) |
-| Gate 0 | desde la raíz: `python scripts/run_phase1.py` (necesita `pip install rapidfuzz numpy`) → debe decir `GATE 0: OK`; **al 25 sep 2026 dice `FALLIDO` por esa misma diferencia** (el control "los dos master_graph dicen lo mismo" cuenta 71 nodos divergentes, todos `etiqueta_arbol`; se arregla con `etiquetas_de_cara.py --aplicar` y `sync_assets_web.py`, que tocan `dataset/`: le toca a la otra sesión). **Aviso:** regenera `dataset/metadata/master_graph.json` y hoy deja 72 etiquetas cambiadas ("Mapa" → "Canvas"): es una diferencia PREVIA entre el grafo compilado y los nodos fuente, de la otra sesión. **No se commitea**: restaurar con `git checkout -- dataset/metadata/master_graph.json`. |
+| Gate 0 | desde la raíz, **SIEMPRE este ciclo y en este orden** (corrección del fundador, 24 sep 2026): `python scripts/etiquetas_de_cara.py --aplicar` → `python scripts/sync_assets_web.py` → `python scripts/run_phase1.py --reaplico-curaduria` → debe decir `GATE 0: OK`. Después, si `dataset/metadata/master_graph.json` quedó modificado sin tocarlo a propósito: `git checkout -- dataset/metadata/master_graph.json` (no se commitea). Necesita `pip install rapidfuzz numpy`. **Correr `run_phase1.py` solo, sin el paso de etiquetas, da un falso `FALLIDO`** ("71 nodos divergentes", todos `etiqueta_arbol`): no es un rojo de `main`, es el ciclo a medias. |
 
 Las suites no necesitan claves: ningún test cambia de veredicto según haya o no secretos
 (AGENTS.md).
@@ -173,5 +173,13 @@ Las suites no necesitan claves: ningún test cambia de veredicto según haya o n
   servidor acepta la del idioma y siempre "ELIMINAR").
 - **Un error más del español, no corregido:** `pluralDe("kit")` da "kites" (se suma a la lista de
   `F2_INFORME.md`).
-- **Espera al fundador** (§8 punto 3): si la tanda de errores del español va antes de traducir, y si
-  se traduce `en` primero o por grupos.
+- **Decisiones del fundador (24 sep 2026), respuesta a ese punto de espera:**
+  a. **Primero los errores del español:** la tanda de `F2_INFORME.md` más "kites", con prueba en rojo
+     donde aplique, antes de traducir cualquier texto afectado.
+  b. **Traducción por grupos:** primero **inglés completo** → vista previa → visto; después
+     **francés** (neutro, válido para Quebec, sin anglicismos) → visto; después los **otros ocho
+     juntos**, cada uno con la revisión de naturalidad de un segundo modelo (lo evidente se aplica, lo
+     discutible sube al fundador).
+  c. **Cifras latinas en todos los idiomas, árabe incluido: APROBADO.**
+- **Gate 0:** el `FALLIDO` que anoté arriba era el ciclo a medias (ver §4, el orden exacto); con el
+  ciclo completo da `GATE 0: OK`.
