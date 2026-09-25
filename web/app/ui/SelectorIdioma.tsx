@@ -8,7 +8,8 @@
  * Es OPCIONAL (decisión del fundador, 25 sep 2026): el idioma lo pone solo la
  * cookie o el navegador; esto es para cambiarlo a mano. `compacto` es la
  * versión de cabecera, a la derecha de toda pantalla: el globo y el código
- * ("ES"), con el menú nativo encima (al tocarlo se ven los nombres enteros).
+ * ("ES"), sin recuadro (decisión del fundador, 25 sep 2026: algo más sutil),
+ * con el menú nativo encima (al tocarlo se ven los nombres enteros).
  */
 import { ACTIVE_LOCALES, elegir, NOMBRE_IDIOMA, type ActiveLocale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
@@ -54,7 +55,7 @@ export function SelectorIdioma({
       <label
         title={t.etiqueta}
         className={
-          "relative flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-hairline px-2.5 text-[12px] font-semibold uppercase tracking-[0.6px] text-dim hover:border-white/25 hover:text-ink " +
+          "relative flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2 text-[12px] font-semibold uppercase tracking-[0.6px] text-dim transition-colors hover:bg-white/[0.06] hover:text-ink focus-within:bg-white/[0.06] focus-within:text-ink " +
           (className ?? "")
         }
         style={style}
