@@ -22,10 +22,10 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
 | **F0** diseño, inventario, glosario, decisiones | **HECHA** | `cf55b1b2` (diseño), `06c1a06e` (decisiones D1-D9), `d2ce48df` (inventario de datos y borradores legales), `80d0a38f` (glosario y legales con las decisiones) |
 | **F1** medición del buscador multilingüe | **HECHA** | `0debace9`; informe `docs/i18n/F1_BUSCADOR.md` |
 | **F2** base de idiomas + todos los textos al catálogo en español, la app idéntica | **HECHA, CON VISTO DEL FUNDADOR, EN PRODUCCIÓN** | `6a887b99` (base), `124113cb` (extracción), `1b495e32` (hilo del idioma), `20c0250e` (informe `docs/i18n/F2_INFORME.md`); en `main` con `9361c569`, etiqueta `web-v2.7.0` |
-| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **HECHA, APROBADA por el fundador (25 sep 2026)**; pendiente el merge a `main` | `73811801` … `ed8dd15a` (ver `git log`); informes `F3_INFORME_EN.md` y `F3_INFORME_OTROS.md` |
-| **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | **HECHA, PENDIENTE DEL VISTO** (`F4_INFORME.md`) | ver `git log` |
-| **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3 | por hacer | — |
-| **F6** correos (D4), documentos, legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
+| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **HECHA, CON VISTO DEL FUNDADOR, EN `main`** (sin interruptor, decisión del 25 sep 2026) | `73811801` … `ed8dd15a`; informes `F3_INFORME_EN.md` y `F3_INFORME_OTROS.md`; en `main` con `434a9c1b`, etiqueta `web-v2.8.0` |
+| **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | **HECHA, CON VISTO DEL FUNDADOR (25 sep 2026), EN `main`** | `434a9c1b` (`F4_INFORME.md`); `main` avanzó por avance rápido `9361c569..434a9c1b` |
+| **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3; **más** los idiomas fuera de los once y el conteo anónimo (decisión del 25 sep 2026) | **EN CURSO** en `i18n` (ver §10) | — |
+| **F6** correos (D4), documentos, la elisión del italiano ("l'8 marzo", decisión del 25 sep 2026), legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
 
 ### Lo que F2 dejó construido (y cómo se usa)
 - `web/lib/i18n/config.ts`: `LOCALES` (11), **`ACTIVE_LOCALES = ["es"]`** (los que se sirven hoy),
@@ -191,3 +191,17 @@ Las suites no necesitan claves: ningún test cambia de veredicto según haya o n
   seguir con todos hasta terminar). Informe con los discutibles de cada idioma, los errores del
   español que quedan para el fundador y lo pendiente para F4: `F3_INFORME_OTROS.md`. Cómo se
   traduce o corrige un idioma sin chocar: `scripts/i18n/traducir.ts` (exportar, validar, aplicar).
+
+## 10. F3 y F4 en `main`; F5 en curso (25 sep 2026)
+- **Visto del fundador a F4 (25 sep 2026). Decisión:** F3 y F4 pasan a `main` **sin interruptor**
+  (no hay usuarios activos hasta que termine el proyecto de idiomas). `main` avanzó por avance
+  rápido a `434a9c1b`, con suites, tsc, lint, build y Gate 0 en verde antes.
+- **La etiqueta `web-v2.8.0`** existe anotada en el clon de la nube, sobre `434a9c1b`, pero el proxy
+  de git de la nube rechaza empujar etiquetas (HTTP 403; las ramas sí pasan). La crea el fundador:
+  `git fetch origin && git tag -a web-v2.8.0 434a9c1b -m "i18n F3 y F4" && git push origin web-v2.8.0`,
+  o en GitHub → Releases con la etiqueta `web-v2.8.0` sobre `434a9c1b`. El sello en vivo
+  (`v·434a9c1`) lo comprueba el fundador: la nube no alcanza producción.
+- **"il 8 marzo" en italiano** (la elisión "l'8 marzo") va a **F6**.
+- **F5** sigue en la rama `i18n`, con dos añadidos del fundador: los **idiomas fuera de los once**
+  (una idea escrita en otro idioma) y el **conteo anónimo** de los idiomas en que se escribe. La
+  migración queda escrita con su nombre y la aplica el fundador en Supabase.
