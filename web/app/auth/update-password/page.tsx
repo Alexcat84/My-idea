@@ -13,7 +13,8 @@ import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { CLAVE_NUEVA } from "@/lib/i18n/mensajes/acceso";
 import { createClient } from "@/lib/supabase/client";
-import { validarPassword } from "@/lib/password";
+import { LARGO_MINIMO, validarPassword } from "@/lib/password";
+import { interpolar } from "@/lib/i18n/interpolar";
 
 export default function UpdatePassword() {
   const idioma = useIdioma();
@@ -96,7 +97,7 @@ export default function UpdatePassword() {
               onChange={(e) => setConfirmar(e.target.value)}
               className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
             />
-            <p className="text-xs text-dim">{t.reglas}</p>
+            <p className="text-xs text-dim">{interpolar(t.reglas, { n: LARGO_MINIMO })}</p>
             {error && <p className="text-sm text-warn">{error}</p>}
             <button
               type="submit"

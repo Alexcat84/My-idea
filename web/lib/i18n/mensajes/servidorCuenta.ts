@@ -5,11 +5,11 @@ import type { PorIdioma } from "../config";
 
 const es = {
   comun: {
-    cuerpoInvalido: "cuerpo invalido",
+    cuerpoInvalido: "cuerpo inválido",
     necesitasCuenta: "necesitas tu cuenta para esto",
     algoSeAtoro: "algo se atoró; intenta de nuevo",
-    algoSeAtoroMomento: "algo se atoro de nuestro lado; intenta de nuevo en un momento",
-    correoInvalido: "escribe un correo valido",
+    algoSeAtoroMomento: "algo se atoró de nuestro lado; intenta de nuevo en un momento",
+    correoInvalido: "escribe un correo válido",
   },
   entrar: {
     faltanDatos: "escribe tu correo y tu contraseña",

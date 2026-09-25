@@ -34,7 +34,7 @@ const es = {
     sinFecha: "esta actividad no tiene una fecha que mover",
   },
   realizar: {
-    accionInvalida: "accion inválida; usa 'realizar' o 'reabrir'",
+    accionInvalida: "acción inválida; usa 'realizar' o 'reabrir'",
     noPudeGuardarActa:
       "No pude guardar el acta de tu cierre, así que tu idea sigue abierta. Intenta de nuevo en un momento.",
   },
@@ -46,8 +46,8 @@ const es = {
   },
   numeros: {
     cifrasNoObjeto: "'numeros' debe ser un objeto de campo: valor",
-    valorInvalido: "el valor de '{{campo}}' debe ser un numero >= 0 o un rango {min, max}",
-    versionNoExiste: "esa version no existe",
+    valorInvalido: "el valor de '{{campo}}' debe ser un número >= 0 o un rango {min, max}",
+    versionNoExiste: "esa versión no existe",
     activaUnaVez: "Tus Números se activa una vez por idea.",
     noNarroInconsistente:
       "No narro una conclusión con estos datos: revisa el guardián de datos y corrige la cifra que no cuadra.",
@@ -56,8 +56,8 @@ const es = {
   },
   reporte: {
     proyectoNoEncontrado: "proyecto no encontrado",
-    respuestaInvalida: "'respuesta' debe ser un string no vacio",
-    entrevistaEnCurso: "ya hay una entrevista de reporte en curso; envia 'respuesta' para continuarla",
+    respuestaInvalida: "'respuesta' debe ser un string no vacío",
+    entrevistaEnCurso: "ya hay una entrevista de reporte en curso; envía 'respuesta' para continuarla",
     sinEntrevista: "no hay una entrevista de reporte en curso; llama sin 'respuesta' para iniciarla",
   },
   bitacora: {

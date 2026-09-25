@@ -3,7 +3,7 @@ import type { PorIdioma } from "../config";
 
 const es = {
   meta: {
-    titulo: "My Idea: Transforma tu creatividad en acción",
+    titulo: "My Idea: transforma tu creatividad en acción",
     descripcion:
       "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, recibe tu plan y ejecútalo.",
   },
@@ -93,7 +93,7 @@ const es = {
   pie: {
     privacidad: "Privacidad",
     terminos: "Términos",
-    derechos: "© 2026 My Idea",
+    derechos: "© {{ano}} My Idea",
   },
 };
 

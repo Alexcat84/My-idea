@@ -13,7 +13,7 @@ const es = {
   creditos: "créditos",
   heroe: {
     tuSaldo: "Tu saldo",
-    noPudeLeer: "No pude leer tu saldo en este momento. Recarga la página en un rato.",
+    noPudeLeer: "No pudimos leer tu saldo en este momento. Recarga la página en un rato.",
     garantiaCuenta:
       "Se verifica tu saldo al inicio de cada acción y se descuenta a la entrega. Si algo falla a mitad, no se cobra nada.",
     sinCuenta: "Tus créditos viven en tu cuenta. Entra o crea la tuya para sumar y usar créditos.",

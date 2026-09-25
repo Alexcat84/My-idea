@@ -4,9 +4,9 @@ import type { PorIdioma } from "../config";
 const es = {
   noAutenticado: "no autenticado",
   ideaNoEncontrada: "idea no encontrada",
-  sesionNoEncontrada: "sesion no encontrada",
-  cuerpoInvalido: "cuerpo invalido",
-  cuerpoInvalidoJson: "cuerpo invalido, se esperaba JSON",
+  sesionNoEncontrada: "sesión no encontrada",
+  cuerpoInvalido: "cuerpo inválido",
+  cuerpoInvalidoJson: "cuerpo inválido, se esperaba JSON",
   cuerpoJsonInvalido: "cuerpo JSON inválido",
   mundoNoExiste: "ese mundo no existe",
   faltaTexto: "falta 'texto'",

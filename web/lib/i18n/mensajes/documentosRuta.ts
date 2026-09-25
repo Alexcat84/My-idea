@@ -10,12 +10,17 @@ const es = {
   tituloBitacora: "Tu bitácora",
   archivoBitacora: "Tu bitacora",
   tituloAnalisis: "Análisis del proyecto",
-  archivoAnalisis: "Analisis del proyecto",
+  archivoAnalisis: "Análisis del proyecto",
   tituloExpediente: "Expediente completo",
   hitoRealizado: "Realizado",
-  loQuePendiente: "Quedan {{n}} acciones por delante. Nada se borró: siguen en tu expediente.",
-  loQuePendienteConRetiradas:
-    "Quedan {{n}} acciones por delante y {{retiradas}} que retiraste con su motivo. Nada se borró: siguen en tu expediente.",
+  loQuePendiente: {
+    one: "Queda {{n}} acción por delante. Nada se borró: sigue en tu expediente.",
+    other: "Quedan {{n}} acciones por delante. Nada se borró: siguen en tu expediente.",
+  },
+  loQuePendienteConRetiradas: {
+    one: "Queda {{n}} acción por delante y {{retiradas}} que retiraste con su motivo. Nada se borró: siguen en tu expediente.",
+    other: "Quedan {{n}} acciones por delante y {{retiradas}} que retiraste con su motivo. Nada se borró: siguen en tu expediente.",
+  },
 };
 
 export const DOCUMENTOS_RUTA: PorIdioma<typeof es> = { es };

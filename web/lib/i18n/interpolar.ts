@@ -16,8 +16,14 @@ export function interpolar(texto: string, valores: Record<string, string | numbe
  * (Intl.PluralRules): en español "one" y "other"; otros idiomas usan más. */
 export type FormasPlural = { one: string; other: string } & Partial<Record<"zero" | "two" | "few" | "many", string>>;
 
+/** La forma plural que toca a `n`, sin interpolar (para frases con más
+ * marcadores que `{{n}}`). */
+export function formaPlural(idioma: Locale, n: number, formas: FormasPlural): string {
+  const categoria = new Intl.PluralRules(idioma).select(n) as keyof FormasPlural;
+  return formas[categoria] ?? formas.other;
+}
+
 /** Elige la forma plural y le pone la cantidad en `{{n}}`. */
 export function plural(idioma: Locale, n: number, formas: FormasPlural): string {
-  const categoria = new Intl.PluralRules(idioma).select(n) as keyof FormasPlural;
-  return interpolar(formas[categoria] ?? formas.other, { n });
+  return interpolar(formaPlural(idioma, n, formas), { n });
 }

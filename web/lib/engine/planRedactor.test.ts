@@ -244,7 +244,7 @@ describe("ensamblarOffline / extraerTitulo", () => {
 
   it("arma un markdown con etapas y pasos numerados", () => {
     const md = ensamblarOffline(material, "perfil x", "mi idea original");
-    expect(md).toContain("# Tu plan de accion");
+    expect(md).toContain("# Tu plan de acción");
     expect(md).toContain("Punto de partida: mi idea original");
     expect(md).toContain("## Etapa 1: Fundamentos");
     expect(md).toContain("1.1 paso uno");
@@ -320,7 +320,7 @@ describe("prepararPlan + finalizarPlan: extremo a extremo con un texto de modelo
     const ruta = ["design_thinking_fundamentos"];
     const prep = prepararPlan(ruta, graph, families, "mi idea", "perfil", null, false, null);
     const resultado = finalizarPlan(null, prep, ruta, families, "mi idea");
-    expect(resultado.markdown).toContain("# Tu plan de accion");
+    expect(resultado.markdown).toContain("# Tu plan de acción");
   });
 
   it("Hotfix v2.2.1 4(a): con el bloque ===JSON=== ausente por completo, las familias se derivan de los encabezados y la etiqueta es correcta", () => {

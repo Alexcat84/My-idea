@@ -277,7 +277,7 @@ describe("POST /api/session/[id]/plan", () => {
     // AUD-09 H02: el aviso ya no es un evento interno que la pantalla ignoraba;
     // viaja en el done, marcado como version basica.
     expect(done.version_basica).toBe(true);
-    expect(String(done.markdown)).toContain("# Tu plan de accion");
+    expect(String(done.markdown)).toContain("# Tu plan de acción");
     expect(estadoFalso.sessions["s1"].closed_at).toBeTruthy();
     // Ni un solo intento al modelo: el presupuesto se corta ANTES.
     expect(messagesStreamFalso).not.toHaveBeenCalled();

@@ -37,6 +37,29 @@ describe("pluralDe por idioma (i18n F3)", () => {
     expect(pluralDe("caja de velas", "es")).toBe("cajas de velas");
     expect(pluralDe("mes", "es")).toBe("mes");
   });
+  // Decisión del fundador (24 sep 2026), tanda de errores del español: "kit"
+  // daba "kites" y "camión" daba "camiónes". Reglas de la RAE, a mano:
+  //   - consonante final distinta de l, r, n, d, z, j, s, x, ch, y, m -> +s
+  //     (kit -> kits, club -> clubs, chip -> chips, robot -> robots);
+  //   - vocal tónica con tilde + n/s pierde la tilde al sumar sílaba
+  //     (camión -> camiones, botón -> botones, compás -> compases);
+  //   - lo demás, como antes (vela -> velas, pan -> panes, reloj -> relojes,
+  //     rey -> reyes, álbum -> álbumes, luz -> luces, mes -> mes).
+  it("español: los extranjerismos en consonante suman -s y la tilde aguda se va al crecer (tanda de errores)", () => {
+    expect(pluralDe("kit", "es")).toBe("kits");
+    expect(pluralDe("kit de velas", "es")).toBe("kits de velas");
+    expect(pluralDe("club", "es")).toBe("clubs");
+    expect(pluralDe("chip", "es")).toBe("chips");
+    expect(pluralDe("robot", "es")).toBe("robots");
+    expect(pluralDe("camión", "es")).toBe("camiones");
+    expect(pluralDe("botón", "es")).toBe("botones");
+    expect(pluralDe("compás", "es")).toBe("compases");
+    expect(pluralDe("reloj", "es")).toBe("relojes");
+    expect(pluralDe("rey", "es")).toBe("reyes");
+    expect(pluralDe("álbum", "es")).toBe("álbumes");
+    expect(pluralDe("luz", "es")).toBe("luces");
+    expect(pluralDe("unidad", "es")).toBe("unidades");
+  });
   it("inglés: +s, +es tras s/x/z/ch/sh, consonante+y -> ies; con 'of' la primera palabra, si no la última", () => {
     expect(pluralDe("candle", "en")).toBe("candles");
     expect(pluralDe("box", "en")).toBe("boxes");

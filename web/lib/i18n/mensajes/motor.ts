@@ -21,11 +21,11 @@ const es = {
   preguntaTipoOferta: "¿Qué vendes exactamente y cómo se cobra?",
   /** graph.ts obtenerPregunta: la pregunta de un nodo sin pregunta en el caché. */
   preguntaGenerica:
-    'Pensando en "{{titulo}}", cuentame en tus palabras donde estas parado ahora mismo con tu idea y que es lo que mas te preocupa o te entusiasma.',
+    'Pensando en "{{titulo}}", cuéntame en tus palabras dónde estás parado ahora mismo con tu idea y qué es lo que más te preocupa o te entusiasma.',
   /** recorrido.ts: el nombre humano de una familia cuando la brújula no responde. */
   temaFamilia: {
     accionClientes: "Salir a validar con clientes",
-    viabilidadEconomica: "Tus numeros de verdad",
+    viabilidadEconomica: "Tus números de verdad",
   },
   /** estimacion.ts rangoDeBanda: el rango en palabras de cada banda de esfuerzo. */
   rangoBanda: {

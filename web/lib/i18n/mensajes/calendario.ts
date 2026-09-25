@@ -42,7 +42,7 @@ const es = {
   semanaSiguiente: "Semana siguiente",
   vistas: { mes: "Mes", semana: "Semana", agenda: "Agenda" },
   bandaVencidas: {
-    one: "Una fecha ya pasó y sigue abierta. Puedes moverlas al día que te sirva.",
+    one: "Una fecha ya pasó y sigue abierta. Puedes moverla al día que te sirva.",
     other: "{{n}} fechas ya pasaron y siguen abiertas. Puedes moverlas al día que te sirva.",
   },
   estadisticasTitulo: "Tus estadísticas",

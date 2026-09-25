@@ -9,7 +9,7 @@ const es = {
   /** El plan armado sin la IA (ensamblarOffline). "## Etapa N:" es además el
    * marcador que lee checklist.ts. */
   offline: {
-    titulo: "# Tu plan de accion",
+    titulo: "# Tu plan de acción",
     contexto: "## Contexto",
     puntoDePartida: "Punto de partida: {{texto}}",
     loQueSabemos: "Lo que sabemos de tu idea: {{perfil}}",

@@ -3,7 +3,7 @@
 import type { PorIdioma } from "../config";
 
 const es = {
-  preparando: "Preparando...",
+  preparando: "Preparando…",
   errorCargar: "No pudimos cargar tus documentos. Vuelve a intentarlo en un momento.",
   errorPreparar: "No pudimos preparar ese documento. Vuelve a intentarlo en un momento.",
   esteMundo: "este mundo",
@@ -15,7 +15,7 @@ const es = {
   descripcionMundo: "Los documentos de este mundo: su reporte y lo que deje cada fase de su camino, en .md o en PDF.",
   descripcion:
     "Cada fase de tu camino deja su propio documento. Llévatelos en .md para editarlos o en PDF para leerlos e imprimirlos.",
-  cargando: "Cargando...",
+  cargando: "Cargando…",
   reportesGlobales: "Reportes globales",
   global: "Global",
   sinExpediente: "Tu expediente completo aparecerá aquí cuando tengas tu plan.",

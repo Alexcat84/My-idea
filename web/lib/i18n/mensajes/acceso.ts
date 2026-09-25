@@ -40,7 +40,7 @@ const esLogin = {
   noInvitado: {
     titulo: "My Idea está en beta privada.",
     texto:
-      "Ese correo aún no está en la lista de invitados, entres con tu contraseña o con Google: la lista es la misma. Si alguien te invitó, pídele que confirme el correo que registró.",
+      "Ese correo aún no está en la lista de invitados (es la misma lista para entrar con contraseña o con Google). Si alguien te invitó, pídele que confirme el correo que registró.",
     otroCorreo: "Probar con otro correo",
   },
   entrar: "Entrar",
@@ -51,7 +51,7 @@ const esLogin = {
   placeholderCorreo: "tu@correo.com",
   etiquetaContrasena: "Contraseña",
   placeholderContrasena: "Tu contraseña",
-  reglasContrasena: "Al menos 8 caracteres, una mayúscula y un número.",
+  reglasContrasena: "Al menos {{n}} caracteres, una mayúscula y un número.",
   reenviarConfirmacion: "Reenviarme el correo de confirmación",
   unMomento: "Un momento…",
   crearMiCuenta: "Crear mi cuenta",
@@ -64,7 +64,7 @@ export const LOGIN: PorIdioma<typeof esLogin> = { es: esLogin };
 
 const esClaveNueva = {
   noCoinciden: "Las dos contraseñas no coinciden.",
-  enlaceVencido: "Ese enlace ya venció o se usó. Pide uno nuevo desde 'Olvidé mi contraseña'.",
+  enlaceVencido: "Ese enlace ya venció o ya se usó. Pide uno nuevo desde 'Olvidé mi contraseña'.",
   noActualizo: "No pudimos actualizar tu contraseña; intenta de nuevo.",
   conectarInternet: "no pudimos conectar; revisa tu internet e intenta de nuevo",
   lema: "Elige tu nueva contraseña.",
@@ -73,7 +73,7 @@ const esClaveNueva = {
   placeholderNueva: "Nueva contraseña",
   etiquetaRepetir: "Repetir contraseña",
   placeholderRepetir: "Repite tu contraseña",
-  reglas: "Al menos 8 caracteres, una mayúscula y un número.",
+  reglas: "Al menos {{n}} caracteres, una mayúscula y un número.",
   guardando: "Guardando…",
   guardar: "Guardar contraseña",
 };

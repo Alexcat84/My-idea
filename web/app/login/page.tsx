@@ -15,7 +15,8 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { LOGIN } from "@/lib/i18n/mensajes/acceso";
 import { rico } from "@/lib/i18n/rico";
 import { destinoPostLogin } from "@/lib/nextSeguro";
-import { validarPassword } from "@/lib/password";
+import { LARGO_MINIMO, validarPassword } from "@/lib/password";
+import { interpolar } from "@/lib/i18n/interpolar";
 
 type Estado =
   | { fase: "form"; modo: "entrar" | "crear"; error?: string; sinConfirmar?: boolean; aviso?: string }
@@ -433,7 +434,7 @@ function LoginForm() {
         className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
       />
       {modo === "crear" && (
-        <p className="text-xs text-dim">{t.reglasContrasena}</p>
+        <p className="text-xs text-dim">{interpolar(t.reglasContrasena, { n: LARGO_MINIMO })}</p>
       )}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
       {estado.sinConfirmar && (

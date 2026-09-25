@@ -23,7 +23,10 @@ const es = {
     pistaPlanListo: "Tu plan está listo para armarse · última acción {{fecha}}",
     pistaPregunta: "Una pregunta te espera · última acción {{fecha}}",
     pistaUltimaAccion: "última acción · {{fecha}}",
-    resumenRealizada: "realizada {{fecha}} · {{dias}} días de la chispa al proyecto",
+    resumenRealizada: {
+      one: "realizada {{fecha}} · {{dias}} día de la chispa al proyecto",
+      other: "realizada {{fecha}} · {{dias}} días de la chispa al proyecto",
+    },
   },
   haceCuanto: {
     ahoraMismo: "ahora mismo",

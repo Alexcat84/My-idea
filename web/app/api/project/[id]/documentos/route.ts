@@ -12,7 +12,7 @@
  */
 import { NextResponse } from "next/server";
 import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
-import { interpolar } from "@/lib/i18n/interpolar";
+import { formaPlural, interpolar } from "@/lib/i18n/interpolar";
 import { DOCUMENTOS_RUTA } from "@/lib/i18n/mensajes/documentosRuta";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
@@ -441,6 +441,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     modo: analytics.modoCamino,
     cumplimiento: analytics.cumplimiento,
   });
+  const pendientes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
   const resumen = acciones.length
     ? {
         cerrada: Boolean(realizadaAt),
@@ -453,11 +454,11 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
           .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? tDoc.hitoRealizado : h.etiqueta })),
         loQueMovio: camino.loQueMovio,
         loQuePendiente: u.retiradas.length
-          ? interpolar(tDoc.loQuePendienteConRetiradas, {
-              n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas),
+          ? interpolar(formaPlural(idioma, pendientes, tDoc.loQuePendienteConRetiradas), {
+              n: pendientes,
               retiradas: u.retiradas.length,
             })
-          : interpolar(tDoc.loQuePendiente, { n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas) }),
+          : interpolar(formaPlural(idioma, pendientes, tDoc.loQuePendiente), { n: pendientes }),
       }
     : null;
 

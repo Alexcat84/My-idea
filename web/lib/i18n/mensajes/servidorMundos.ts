@@ -14,7 +14,7 @@ const es = {
     noPudimosAbrir: "no pudimos abrir el mundo, intenta de nuevo",
   },
   completar: {
-    accionInvalida: "accion inválida; usa 'completar' o 'reabrir'",
+    accionInvalida: "acción inválida; usa 'completar' o 'reabrir'",
     noPudeGuardarActa:
       'No pude guardar el acta del cierre de "{{mundo}}", así que sigue abierto. Intenta de nuevo en un momento.',
     noPudimosGuardar: "no pudimos guardar; intenta de nuevo",

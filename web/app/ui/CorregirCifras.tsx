@@ -13,10 +13,11 @@
  * tu foto de caja; si no, sigues sin ellos.
  */
 import { useEffect, useRef, useState } from "react";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { CORREGIR_CIFRAS } from "@/lib/i18n/mensajes/corregirCifras";
+import { pluralDe } from "@/lib/pluralUnidad";
 
 type Valor = number | { min: number; max: number };
 type TextosCorregir = (typeof CORREGIR_CIFRAS)["es"];
@@ -41,7 +42,8 @@ const CAMPOS_CICLO: Campo[] = [
   { clave: "dias_pago_proveedores", porque: "dias_pago_proveedores" },
 ];
 
-const etiquetaDe = (t: TextosCorregir, clave: ClaveCampo, u: string) => interpolar(t.campos[clave], { u });
+const etiquetaDe = (t: TextosCorregir, clave: ClaveCampo, u: string, idioma: Locale) =>
+  interpolar(t.campos[clave], { u, unidades: pluralDe(u, idioma) });
 
 const TODOS = [...CAMPOS_CORE, ...CAMPOS_CICLO];
 
@@ -62,10 +64,11 @@ function CampoInput({
   valor: string;
   onCambio: (v: string) => void;
 }) {
-  const t = elegir(CORREGIR_CIFRAS, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(CORREGIR_CIFRAS, idioma);
   return (
     <label className="flex flex-col gap-1.5 text-[13px]">
-      <span className="text-dim">{etiquetaDe(t, campo.clave, u)}</span>
+      <span className="text-dim">{etiquetaDe(t, campo.clave, u, idioma)}</span>
       <input
         id={`corregir-${campo.clave}`}
         inputMode="decimal"
@@ -95,7 +98,8 @@ export function CorregirCifras({
   onGuardado: (payload: unknown) => void;
   onCancelar: () => void;
 }) {
-  const t = elegir(CORREGIR_CIFRAS, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(CORREGIR_CIFRAS, idioma);
   const u = unidad || t.unidadPorDefecto;
   const [valores, setValores] = useState<Record<string, string>>(() =>
     Object.fromEntries(TODOS.map((c) => [c.clave, aTexto(declaradas[c.clave])]))
@@ -125,7 +129,7 @@ export function CorregirCifras({
       if (!Number.isFinite(n) || n < 0) {
         // `valores` nace de TODOS: cada clave tiene su campo.
         const campo = TODOS.find((c) => c.clave === clave)!;
-        setError(interpolar(t.errorNumero, { campo: etiquetaDe(t, campo.clave, u) }));
+        setError(interpolar(t.errorNumero, { campo: etiquetaDe(t, campo.clave, u, idioma) }));
         setGuardando(false);
         return;
       }

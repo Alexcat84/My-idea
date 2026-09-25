@@ -5,12 +5,12 @@ import type { PorIdioma } from "../config";
 const es = {
   calculadora: {
     equilibrioSinMargenRango:
-      "el margen por unidad no es positivo en todo el rango; no hay punto de equilibrio posible asi",
-    equilibrioSinMargen: "el margen por unidad no es positivo; no hay punto de equilibrio posible con estos numeros",
+      "el margen por unidad no es positivo en todo el rango; no hay punto de equilibrio posible así",
+    equilibrioSinMargen: "el margen por unidad no es positivo; no hay punto de equilibrio posible con estos números",
     gigoMargen:
-      "con estos numeros el margen por unidad es {{pct}}%, muy por debajo de -100% -- es mas probable que alguna cifra este en la unidad equivocada (por ejemplo, un presupuesto mensual leido como costo por unidad, o un plazo en meses leido como horas) que que cada venta pierda esa cantidad de dinero",
+      "con estos números el margen por unidad es {{pct}}%, muy por debajo de -100%: lo más probable es que alguna cifra esté en la unidad equivocada (por ejemplo, un presupuesto mensual leído como costo por unidad, o un plazo en meses leído como horas), no que cada venta pierda esa cantidad de dinero",
     gigoPrecio:
-      "el precio declarado es menos del 5% del costo unitario calculado -- revisa si el precio y el costo estan expresados en la misma unidad (por pieza, por mes, etc.)",
+      "el precio declarado es menos del 5% del costo unitario calculado: revisa si el precio y el costo están expresados en la misma unidad (por pieza, por mes, etc.)",
   },
   palancas: {
     volumenBloqueado:

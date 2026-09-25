@@ -15,7 +15,7 @@ import { etapaDeIdea } from "./etapaIdea";
 import { fechaSello } from "./fechas";
 import { esActivo, type ChecklistEstado } from "./dbContract";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
-import { interpolar } from "./i18n/interpolar";
+import { formaPlural, interpolar } from "./i18n/interpolar";
 import { MIS_IDEAS } from "./i18n/mensajes/misIdeas";
 
 export type EstadoIdea = "Organizada" | "En entrevista" | "Con plan" | "En seguimiento";
@@ -201,11 +201,11 @@ export async function listarIdeasConEstado(supabase: SupabaseClient, idioma: Loc
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
     const realizada = Boolean(realizadaAt);
+    const dias = realizadaAt
+      ? Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))
+      : 0;
     const resumenRealizada = realizadaAt
-      ? interpolar(t.resumenRealizada, {
-          fecha: fechaSello(realizadaAt, undefined, idioma),
-          dias: Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000)),
-        })
+      ? interpolar(formaPlural(idioma, dias, t.resumenRealizada), { fecha: fechaSello(realizadaAt, undefined, idioma), dias })
       : undefined;
 
     return {
