@@ -7,4 +7,10 @@ const es = {
   generando: "generando…",
 };
 
-export const ARBOL_PENSANTE: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  fueUnSalto: "a jump in topic",
+  generandoCon: "generating: {{etiqueta}}",
+  generando: "generating…",
+};
+
+export const ARBOL_PENSANTE: PorIdioma<typeof es> = { es, en };

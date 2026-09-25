@@ -35,4 +35,36 @@ const es = {
   cancelar: "Cancelar",
 };
 
-export const CORREGIR_CIFRAS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  unidadPorDefecto: "unit",
+  campos: {
+    costo_materiales_unidad: "Material cost per {{u}}",
+    horas_por_unidad: "Hours of work per {{u}}",
+    valor_hora: "What an hour of your time is worth",
+    precio_tentativo: "Price you sell each {{u}} for",
+    capacidad_semanal: "Number of {{unidades}} you make per week",
+    costos_fijos_mensuales: "Your monthly fixed costs",
+    unidades_vendidas: "Number of {{unidades}} you sell per month (or your goal)",
+    dias_inventario: "Days your money sits in inventory",
+    dias_cobro_clientes: "Days it takes you to get paid",
+    dias_pago_proveedores: "Days you take to pay your suppliers",
+  },
+  porque: {
+    dias_inventario: "it affects when the money comes back to your pocket",
+    dias_cobro_clientes: "getting paid late squeezes your cash",
+    dias_pago_proveedores: "paying later eases your cash",
+  },
+  errorNumero: 'Check "{{campo}}": it has to be a number, 0 or higher.',
+  errorGuardar: "we couldn't save your figures",
+  errorConectar: "we couldn't connect; check your internet and try again",
+  titulo: "Correct your figures",
+  intro:
+    "Adjust what changed and recalculate. Recalculating is free and unlimited; your earlier versions stay saved with their date.",
+  cicloTitulo: "Your cash cycle (optional)",
+  cicloIntro: "If you have them, they sharpen your cash picture; if not, carry on without them.",
+  calculando: "Calculating…",
+  volverACalcular: "Recalculate",
+  cancelar: "Cancel",
+};
+
+export const CORREGIR_CIFRAS: PorIdioma<typeof es> = { es, en };

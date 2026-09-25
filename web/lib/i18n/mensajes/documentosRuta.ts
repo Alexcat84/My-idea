@@ -23,4 +23,26 @@ const es = {
   },
 };
 
-export const DOCUMENTOS_RUTA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  noEncontrado: "document not found",
+  noPudimosLeerRegistro: "we couldn't read your register; try again in a moment",
+  tituloReporte: "{{mundo}} report",
+  tituloRegistro: "{{mundo}} register",
+  encabezadoRegistro: "> {{nombre}} · {{mundo}} register · {{fecha}}",
+  tituloBitacora: "Your Logbook",
+  archivoBitacora: "Your Logbook",
+  tituloAnalisis: "Project analysis",
+  archivoAnalisis: "Project analysis",
+  tituloExpediente: "Full Record",
+  hitoRealizado: "Achieved",
+  loQuePendiente: {
+    one: "{{n}} action is still ahead. Nothing was deleted: it's still in your Full Record.",
+    other: "{{n}} actions are still ahead. Nothing was deleted: they're still in your Full Record.",
+  },
+  loQuePendienteConRetiradas: {
+    one: "{{n}} action is still ahead, plus {{retiradas}} you set aside with your reason. Nothing was deleted: they're still in your Full Record.",
+    other: "{{n}} actions are still ahead, plus {{retiradas}} you set aside with your reason. Nothing was deleted: they're still in your Full Record.",
+  },
+};
+
+export const DOCUMENTOS_RUTA: PorIdioma<typeof es> = { es, en };

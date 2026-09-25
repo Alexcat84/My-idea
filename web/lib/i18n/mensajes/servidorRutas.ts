@@ -20,4 +20,23 @@ const es = {
   tusNumerosConPlan: "Tus Números viene incluido con tu plan. Arma tu plan primero y aquí te espero.",
 };
 
-export const RUTAS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  noAutenticado: "not authenticated",
+  ideaNoEncontrada: "idea not found",
+  sesionNoEncontrada: "session not found",
+  cuerpoInvalido: "invalid body",
+  cuerpoInvalidoJson: "invalid body, expected JSON",
+  cuerpoJsonInvalido: "invalid JSON body",
+  mundoNoExiste: "that world doesn't exist",
+  faltaTexto: "missing 'texto'",
+  projectIdNoString: "'project_id' must be a string",
+  noPudimosLeerChecklist: "we couldn't read your checklist",
+  noPudeGuardarFechas:
+    "I couldn't save all your dates. Try again: whatever did get saved will be corrected when you retry.",
+  mundoNoActivado: 'The world "{{mundo}}" isn\'t activated for this idea yet.',
+  conversacionTerminada: "This conversation has already ended. Reload the page to see the latest.",
+  conversacionSinPendiente: "This conversation has nothing pending. Reload the page to pick up where you left off.",
+  tusNumerosConPlan: "Your Numbers comes included with your plan. Build your plan first and I'll be waiting for you here.",
+};
+
+export const RUTAS: PorIdioma<typeof es> = { es, en };

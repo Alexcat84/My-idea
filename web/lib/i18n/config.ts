@@ -15,8 +15,9 @@
 export const LOCALES = ["es", "en", "pt", "fr", "de", "it", "ja", "zh", "ko", "ar", "hi"] as const;
 export type Locale = (typeof LOCALES)[number];
 
-/** Los idiomas servidos hoy (F2: solo el español). */
-export const ACTIVE_LOCALES = ["es"] as const satisfies readonly Locale[];
+/** Los idiomas servidos hoy (F3: el inglés primero, decisión del fundador del
+ * 24 sep 2026; luego el francés y después los otros ocho). */
+export const ACTIVE_LOCALES = ["es", "en"] as const satisfies readonly Locale[];
 export type ActiveLocale = (typeof ACTIVE_LOCALES)[number];
 
 /** El idioma en que se escribe todo (y el que recibe quien no pide otro). */

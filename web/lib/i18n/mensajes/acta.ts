@@ -13,4 +13,14 @@ const es = {
   tituloPorQue: "### Por qué la cerraste aquí",
 };
 
-export const ACTA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  titulo: "## Closing record",
+  cerradaEl: "- Closed on {{fecha}}",
+  accionesAlCerrar: "- Actions at close: **{{hechas}} of {{total}}**{{pct}}",
+  mundo: "- {{mundo}}: **{{hechas}} of {{total}}**{{pct}}, {{estado}}",
+  completadoEl: "completed on {{fecha}}",
+  abierto: "open",
+  tituloPorQue: "### Why you closed it here",
+};
+
+export const ACTA: PorIdioma<typeof es> = { es, en };

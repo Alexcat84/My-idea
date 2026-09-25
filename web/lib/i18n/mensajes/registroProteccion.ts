@@ -34,4 +34,35 @@ const es = {
   },
 };
 
-export const REGISTRO_PROTECCION: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  probabilidad: {
+    poco_probable: "unlikely",
+    probable: "likely",
+    muy_probable: "very likely",
+  },
+  dolor: {
+    poco: "would hurt a little",
+    bastante: "would hurt quite a bit",
+    mucho: "would hurt a lot",
+  },
+  camino: {
+    evitar: "avoid it",
+    mitigar: "reduce it",
+    transferir: "hand it off to someone else",
+    aceptar: "accept it with your eyes open",
+  },
+  severidad: "{{probabilidad}} and {{dolor}}",
+  protegidaDesaparecida: "the activity it protected is no longer in your plan",
+  negocioEntero: "your whole business",
+  registroVacio:
+    "I couldn't link this plan to your activities: its answers are in your plan, but this register came out empty.",
+  documento: {
+    titulo: "## {{mundo}} register",
+    queTanSerio: "How serious: {{severidad}}.",
+    elCamino: "The path: {{camino}}.",
+    queProtege: "What it protects: {{protege}}.",
+    tuRespuesta: "Your response: {{respuesta}}",
+  },
+};
+
+export const REGISTRO_PROTECCION: PorIdioma<typeof es> = { es, en };

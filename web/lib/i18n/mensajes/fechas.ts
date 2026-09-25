@@ -21,4 +21,24 @@ const es = {
   momento: "{{fecha}}, {{hora}}",
 };
 
-export const FECHAS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  meses: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  dias: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  haceUnMomento: "just now",
+  haceMin: "{{n}} min ago",
+  hoyHora: "today {{hora}}",
+  ayerHora: "yesterday {{hora}}",
+  haceDias: "{{n}} days ago",
+  hoy: "today",
+  ayer: "yesterday",
+  /** "March 20" */
+  diaDeMes: "{{mes}} {{d}}",
+  /** "March 20, 2026" */
+  diaDeMesAno: "{{mes}} {{d}}, {{ano}}",
+  /** "Friday, March 20" */
+  diaSemanaDeMes: "{{dia}}, {{mes}} {{d}}",
+  /** "July 18, 14:32" */
+  momento: "{{fecha}}, {{hora}}",
+};
+
+export const FECHAS: PorIdioma<typeof es> = { es, en };

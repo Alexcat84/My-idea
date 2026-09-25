@@ -303,7 +303,7 @@ export default async function Creditos() {
               </span>
 
               <div className="flex flex-col gap-3.5">
-                {mundosVisibles().map((mundo) => (
+                {mundosVisibles(false, idioma).map((mundo) => (
                   <div key={mundo.clave} className="flex flex-col gap-0.5">
                     <span className="text-[13.5px] font-bold text-ink">{mundo.nombre}</span>
                     <span className="text-[12.5px] leading-snug text-dim [text-wrap:pretty]">{mundo.promesa}</span>

@@ -22,4 +22,22 @@ const es = {
   },
 };
 
-export const MOTOR_ORGANIZADOR: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  secciones: {
+    idea_en_una_frase: "In one sentence",
+    etapa_detectada: "Detected stage",
+    lo_que_ya_tienes_claro: "What you're already clear on",
+    lo_que_estas_asumiendo_sin_saberlo: "What you're assuming without realizing it",
+    areas_que_cubriria_tu_plan_completo: "Areas of your full plan",
+  },
+  markdown: {
+    titulo: "# Your idea organizer",
+    enUnaFrase: "**In one sentence:** {{frase}}",
+    etapaDetectada: "**Detected stage:** {{etapa}}",
+    yaTienesClaro: "## What you're already clear on",
+    estasAsumiendo: "## What you're assuming without realizing it",
+    areasDelPlan: "## Areas your full plan would cover",
+  },
+};
+
+export const MOTOR_ORGANIZADOR: PorIdioma<typeof es> = { es, en };

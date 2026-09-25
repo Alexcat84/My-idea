@@ -52,4 +52,50 @@ const es = {
   },
 };
 
-export const CUENTA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  misIdeas: "My ideas",
+  tuCuenta: "Your account",
+  errores: {
+    atoro: "something got stuck; try again",
+    enviarCodigo: "we couldn't send the code; try again",
+    desactivarSinDesafio: "To turn it off, log in again and pass the challenge first.",
+  },
+  codigoEnviadoA: "We sent a code to {{email}}.",
+  desactivada: "Two-step verification turned off.",
+  tuIdentidad: "Your identity",
+  seguridad: {
+    titulo: "Security · two-step verification",
+    leyendo: "Checking your security settings…",
+    activadaCompleta: "Two-step verification turned on.",
+    guardaRescate:
+      "Keep these recovery codes somewhere safe. Each one unlocks your account ONCE if you lose your usual method, and they won't be shown again.",
+    yaGuarde: "I've saved them",
+    activada: "On",
+    codigoPorCorreo: "code by email",
+    appAutenticacion: "authenticator app",
+    alEntrar: "When you log in, on top of your usual sign-in we'll ask you for {{que}}.",
+    unCodigoCorreo: "a code sent to your email",
+    elCodigoApp: "the code from your app",
+    desactivar: "Turn off two-step verification",
+    pasoEscanear: "1. Scan this code with your authenticator app (Google Authenticator, 1Password, Authy…).",
+    altQr: "QR code for your authenticator app",
+    pasoEscribir: "2. Type the 6-digit code the app shows you.",
+    verificando: "Verifying…",
+    activar: "Turn on",
+    cancelar: "Cancel",
+    queHace:
+      "It asks you for a second step before you use your credits and before you delete an idea or your account. It's optional, and you can turn it off whenever you want.",
+    activarApp: "Turn on with an authenticator app",
+    activarCorreo: "Turn on with a code by email",
+  },
+  peligro: {
+    titulo: "Danger zone",
+    borrarTuCuenta: "Delete your account",
+    borrarTexto:
+      "Everything gets deleted: your ideas, your plans, your history, and your credits. There's no going back. To confirm, type <palabra/>.",
+    etiquetaPalabra: "Type the word to confirm",
+    borrarParaSiempre: "Delete my account forever",
+  },
+};
+
+export const CUENTA: PorIdioma<typeof es> = { es, en };

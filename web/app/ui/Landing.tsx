@@ -23,6 +23,7 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { PORTADA } from "@/lib/i18n/mensajes/portada";
 import { createClient } from "@/lib/supabase/client";
 import { interpolar } from "@/lib/i18n/interpolar";
+import { SelectorIdioma } from "./SelectorIdioma";
 import { HeroMasa } from "./portada/HeroMasa";
 import "./landing.css";
 
@@ -429,6 +430,7 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.privacidad}</a>
             <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.terminos}</a>
           </div>
+          <SelectorIdioma style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
           <span style={{ fontSize: "14.5px", color: "#A6A7AD" }}>{interpolar(t.pie.derechos, { ano: new Date().getFullYear() })}</span>
         </div>
       </footer>

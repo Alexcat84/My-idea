@@ -18,6 +18,8 @@ const es = {
     loQueQuedoPendiente: "Lo que quedó pendiente",
     /** los meses abreviados del mapa de hitos ("3 may") */
     meses: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+    /** la fecha corta: "3 feb" (i18n F3: el orden lo pone cada idioma) */
+    fechaCorta: "{{d}} {{mes}}",
   },
   bitacora: {
     rango:
@@ -30,4 +32,30 @@ const es = {
   pieMiBitacora: "Mi bitácora",
 };
 
-export const DOCUMENTOS_PAPEL: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  resumen: {
+    comoTeFue: "How it went",
+    tuProgreso: "Your progress so far",
+    diasDeCamino: "days on the road",
+    accionesCumplidas: "actions completed",
+    hitosAlcanzados: "milestones reached",
+    tuViajeCompleto: "Your whole journey",
+    cierre: "This is where your idea ends and your project begins",
+    sigueEnMarcha:
+      "Your idea is still underway. When you call it achieved, your close will be here, in your own words.",
+    loQueMasTeMovio: "What moved your journey forward the most",
+    loQueQuedoPendiente: "What's still open",
+    meses: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    fechaCorta: "{{mes}} {{d}}",
+  },
+  bitacora: {
+    rango:
+      "From {{desde}} to {{hasta}}, day by day, just as it was recorded. If you moved a date, the original is still here: nothing gets rewritten.",
+    laSecuencia: "The sequence of your journey",
+    pie: "This is your story just as it was recorded, day by day. You can download it separately whenever you like.",
+  },
+  pieExpediente: "Full Record",
+  pieMiBitacora: "My Logbook",
+};
+
+export const DOCUMENTOS_PAPEL: PorIdioma<typeof es> = { es, en };

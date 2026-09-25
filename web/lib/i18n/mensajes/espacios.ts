@@ -16,4 +16,17 @@ const es = {
   },
 };
 
-export const ESPACIOS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  murallaSinPlan: "First generate your idea's plan: your {{mundo}} world will be built on top of it.",
+  cambiador: {
+    aria: "Your project's spaces",
+    tuViaje: "Your Journey",
+    anadirMundo: "Add a world",
+    mundo: "World",
+  },
+  caras: {
+    aria: "The views of this space",
+  },
+};
+
+export const ESPACIOS: PorIdioma<typeof es> = { es, en };

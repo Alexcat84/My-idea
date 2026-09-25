@@ -39,6 +39,7 @@ import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
@@ -173,7 +174,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       .limit(1);
     if (!unlock || unlock.length === 0) {
       return NextResponse.json(
-        { error: interpolar(r.mundoNoActivado, { mundo: nombreMundo }) },
+        { error: interpolar(r.mundoNoActivado, { mundo: nombreDeMundo(dominio, idioma) }) },
         { status: 403 }
       );
     }
@@ -181,7 +182,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // reversible de un toque, así que esto no encierra a nadie.
     if ((unlock[0] as { completado_at?: string | null }).completado_at) {
       return NextResponse.json(
-        { error: interpolar(t.mundoCompletado, { mundo: nombreMundo }) },
+        { error: interpolar(t.mundoCompletado, { mundo: nombreDeMundo(dominio, idioma) }) },
         { status: 409 }
       );
     }
@@ -275,7 +276,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (dominio !== "core" && items.length === 0) {
     await soltarReserva();
     return NextResponse.json(
-      { error: interpolar(t.primeroExplora, { mundo: nombreMundo }) },
+      { error: interpolar(t.primeroExplora, { mundo: nombreDeMundo(dominio, idioma) }) },
       { status: 409 }
     );
   }
@@ -351,7 +352,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (hayPuerta.length === 0) {
       await soltarReserva();
       return NextResponse.json(
-        { error: interpolar(t.puertasRecorridas, { mundo: nombreMundo }) },
+        { error: interpolar(t.puertasRecorridas, { mundo: nombreDeMundo(dominio, idioma) }) },
         { status: 409 }
       );
     }

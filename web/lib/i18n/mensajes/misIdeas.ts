@@ -39,4 +39,41 @@ const es = {
   },
 };
 
-export const MIS_IDEAS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  tuCuenta: "Your account",
+  vacioTitulo: "Your ideas are waiting for you",
+  vacioTexto: "You haven't saved any yet. Tell me your first one, whatever it is and however it comes out, and we'll work on it together, step by step.",
+  iniciarNuevaIdea: "Start a new idea",
+  capturaRapida: "Tell me a new idea, or where you're at with it…",
+  tusIdeas: "Your ideas · {{n}}",
+  realizadas: "Achieved · {{n}}",
+  proyecto: "Project",
+  potenciarTitulo: "Power up my ideas",
+  potenciarTexto: "Your Numbers and the worlds, for whichever idea you choose.",
+  cintas: {
+    manosALaObra: "Get to Work · {{hechos}}/{{total}}",
+    mundoProgreso: "{{mundo}} · {{hechos}}/{{total}}",
+    enExploracion: "Exploring",
+    conPlan: "Has a plan",
+    conClaridad: "Has clarity",
+    sinOrdenar: "Unsorted",
+    pistaPlanListo: "Your plan is ready to be built · last activity {{fecha}}",
+    pistaPregunta: "A question is waiting for you · last activity {{fecha}}",
+    pistaUltimaAccion: "last activity · {{fecha}}",
+    resumenRealizada: {
+      one: "achieved {{fecha}} · {{dias}} day from spark to project",
+      other: "achieved {{fecha}} · {{dias}} days from spark to project",
+    },
+  },
+  haceCuanto: {
+    ahoraMismo: "just now",
+    haceMin: "{{n}} min ago",
+    haceHoras: "{{n}} h ago",
+    ayer: "yesterday",
+    haceDias: "{{n}} days ago",
+    haceUnMes: "a month ago",
+    haceMeses: "{{n}} months ago",
+  },
+};
+
+export const MIS_IDEAS: PorIdioma<typeof es> = { es, en };

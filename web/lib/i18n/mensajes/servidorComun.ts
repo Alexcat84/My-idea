@@ -28,4 +28,23 @@ const es = {
   avisoLogin: "Para explorar tu idea necesitas tu cuenta. Entra con tu correo y seguimos justo donde quedaste.",
 };
 
-export const SERVIDOR_COMUN: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  errorGenerico: "something got stuck on our end; try again in a moment",
+  textoLargo: "Your text is over {{limite}} characters. Trim it a little and we'll keep going.",
+  ideaLarga: "Your idea is over 12,000 characters. Trim it a little and we'll keep going.",
+  adopcionPendiente:
+    "Some ideas you wrote before logging in haven't reached your account yet. I retry every time you log in; nothing was lost.",
+  limiteDiario:
+    "You've reached today's beta limit ({{arranques}} a day). Your ideas are saved. Come back tomorrow and we'll pick up where we left off.",
+  arranques: { one: "{{n}} start", other: "{{n}} starts" },
+  fusible: "We're at capacity for today; your ideas will be waiting for you tomorrow.",
+  saldoInsuficiente: "You have {{creditos}} left; this costs {{costo}}. Your work is saved just as it is.",
+  saldoInsuficienteConApartados:
+    "You have {{creditos}}, and {{apartados}} for a plan you have in progress; this costs {{costo}}. Your work is saved just as it is.",
+  creditos: { one: "{{n}} credit", other: "{{n}} credits" },
+  apartados: { one: "{{n}} is already set aside", other: "{{n}} are already set aside" },
+  aviso2FA: "Your account has two-step verification. Confirm your second factor and we'll pick up right where you left off.",
+  avisoLogin: "To explore your idea, you need your account. Log in with your email and we'll pick up right where you left off.",
+};
+
+export const SERVIDOR_COMUN: PorIdioma<typeof es> = { es, en };

@@ -39,6 +39,11 @@ function faltas(texto: string): string[] {
     ...(/\bque que\b/i.test(t) ? ["que que"] : []),
     ...(/\}\}s\b/.test(t) ? ["{{…}}s"] : []),
     ...(/\.\.\./.test(t) ? ["..."] : []),
+    // Halladas al traducir al inglés (F3): la voz prohíbe la raya y la jerga
+    // cruda (BANCO §3), y los términos del glosario van con su mayúscula.
+    ...(/[—–]/.test(t) ? ["—"] : []),
+    ...(/\bMVP\b/.test(t) ? ["MVP"] : []),
+    ...(/Manos a la obra/.test(t) ? ["Manos a la obra"] : []),
   ];
 }
 
@@ -52,6 +57,8 @@ describe("ortografía del español en los catálogos", () => {
     expect(faltas("'numeros' debe ser un objeto")).toEqual([]);
     expect(faltas("Vender más, por ahora, no")).toEqual([]);
     expect(faltas("accion inválida")).toEqual(["accion"]);
+    expect(faltas("explora — su plan")).toEqual(["—"]);
+    expect(faltas("<b>Manos a la obra:</b>")).toEqual(["Manos a la obra"]);
     expect(faltas("Etapa {{etapa}}: {{dias}} días")).toEqual([]);
   });
 

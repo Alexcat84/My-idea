@@ -8,6 +8,7 @@ import { elegir, LOCALE_BASE, type PorIdioma } from "./config";
 
 const PALABRA: PorIdioma<string> = {
   es: "ELIMINAR",
+  en: "DELETE",
 };
 
 /** La palabra a escribir en el idioma de la interfaz (ya en mayúsculas). */

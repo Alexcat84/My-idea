@@ -25,6 +25,7 @@ import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { usoVacio } from "@/lib/costmeter";
 import {
   crearSesion,
@@ -108,7 +109,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // evaluar sobre nada, así que se dice en persona y se ofrece el camino, en
     // vez de generar un plan genérico. Copy ÚNICO e interpolado: el mundo se
     // nombra, para que la frase diga de qué se está hablando.
-    return NextResponse.json({ error: murallaSinPlan(entrada.nombre, idioma) }, { status: 409 });
+    return NextResponse.json({ error: murallaSinPlan(nombreDeMundo(entrada.clave, idioma), idioma) }, { status: 409 });
   }
   const planCoreMasNuevo = planesCore[0] as { id: string; created_at: string };
   const planCoreMasNuevoAt = planCoreMasNuevo.created_at;
@@ -130,7 +131,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } | null;
   if (unlock && !unlock.plan_pagado_at && !puedeRePreview(unlock, planCoreMasNuevoAt)) {
     return NextResponse.json(
-      { error: interpolar(t.diagnosticoListo, { mundo: entrada.nombre }) },
+      { error: interpolar(t.diagnosticoListo, { mundo: nombreDeMundo(entrada.clave, idioma) }) },
       { status: 409 }
     );
   }

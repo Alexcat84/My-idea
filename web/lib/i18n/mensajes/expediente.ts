@@ -77,4 +77,77 @@ const es = {
   },
 };
 
-export const EXPEDIENTE: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  ciclos: {
+    tuPlan: "Your Plan",
+    tuPlanSubtitulo: "The plan you started with",
+    seguimiento: "Follow-up {{n}}",
+    seguimientoSubtitulo: "What happened and the recalculated plan",
+  },
+  indice: {
+    analisisTitulo: "Project analysis",
+    analisisSubtitulo: "Your pace, your stages and your follow-through, calculated from what you did",
+    bitacoraTitulo: "Your logbook",
+    bitacoraSubtitulo: "The story of your idea, step by step, from the start to today",
+    expedienteTitulo: "Full Record",
+    expedienteSubtituloCerrado:
+      "Your idea, your plan and its cycles, your progress, each world and your logbook, from the idea to the close",
+    expedienteSubtituloEnMarcha: "Your idea, your plan and its cycles, your progress, each world and your logbook, up to today",
+    reporteTitulo: "Report for {{mundo}}",
+    reporteSubtitulo: "The plan, the progress and how this world went for you",
+    registroTitulo: "{{mundo}} register",
+    registroSubtitulo: "What this world spotted and the response that handles it, based on your real plan",
+  },
+  acciones: {
+    completaste: "You completed **{{hechas}} of {{total}}** active actions.",
+    etapa: "Stage {{n}}",
+    tablaEncabezado: "| Action | When |",
+    hechoEl: "[done on {{fecha}}](#f-hecho)",
+    previstoPara: "[planned for {{fecha}}](#f-prev)",
+    sinFecha: "no date",
+    retiradas: "Set aside (don't apply): {{n}}",
+    retiradasExplicacion:
+      "Tasks you decided don't fit this idea. They aren't pending or failures: they're part of your judgment.",
+  },
+  expediente: {
+    loQueHiciste: "What you did",
+    tuAvance: "Your progress",
+    comoTeFue: "How it went",
+    tuProgreso: "How far you've come",
+    generado: "> Full Record · generated on {{fecha}}",
+    empezaste: "**You started** on {{fecha}}",
+    estadoRealizado: "**Status** Project achieved on {{fecha}}",
+    estadoEnMarcha: "**Status** Underway",
+    tituloContenido: "## Contents",
+    // El índice ("## Contents") lista estos mismos títulos sin el "## ".
+    tituloIdeaEscrita: "## Your idea, as you wrote it",
+    tituloIdeaOrdenada: "## Your idea, organized",
+    tituloNumeros: "## Your Numbers",
+    mundoTerminado: "_You called it finished on {{fecha}}_",
+    tituloPorQueCerraste: "## Why you closed it here",
+    tituloSecuencia: "## The sequence of your journey",
+  },
+  reporteMundo: {
+    titulo: "# Report for {{mundo}}",
+    generado: "> {{idea}} · generated on {{fecha}}",
+    estadoTerminado: "**Status** Finished on {{fecha}}",
+    tituloSecuencia: "## The sequence of this world",
+  },
+  archivo: {
+    ideaPorOmision: "my-idea",
+    documentoPorOmision: "document",
+  },
+  resumenCamino: {
+    introCerrada: "You started with an idea and made it all the way to the close. This is what the road left you.",
+    introEnMarcha: "This is where you are so far.",
+    movioReplanificando:
+      "Compared to your first plan, you shifted {{desviacion}} days on average across {{replanificaciones}}. Adjusting the map was part of the method.",
+    replanificaciones: { one: "{{n}} plan update", other: "{{n}} plan updates" },
+    movioConFechas:
+      "Of your {{total}} dated actions, {{aTiempo}} landed on time, {{adelantadas}} early and {{tardias}} later than planned.",
+    movioARitmo: "You moved at your own pace, with no dates to measure yourself against.",
+    movioSinFechas: "You haven't locked in your dates yet, so there's no plan to measure your pace against.",
+  },
+};
+
+export const EXPEDIENTE: PorIdioma<typeof es> = { es, en };

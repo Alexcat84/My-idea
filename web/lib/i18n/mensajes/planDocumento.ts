@@ -23,4 +23,22 @@ const es = {
   losNumerosQueNecesitas: "Los números que necesitas",
 };
 
-export const PLAN_DOCUMENTO: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  estaSemana: "This week",
+  empezarConEsto: "Start with this",
+  pasos: "Steps",
+  entregable: "Deliverable",
+  generadoDeTuRecorrido: "Generated from your path",
+  etapas: { one: "{{n}} stage", other: "{{n}} stages" },
+  metaEtapas: "{{etapas}} · each bar shows its deliverable; expand it for the steps and the action",
+  tuPrimeraAccion: "Your first action",
+  miBitacora: "My Logbook",
+  historiaDeTuViaje: "The story of your journey, step by step.",
+  verMiBitacora: "See my Logbook",
+  construidoConTuRecorrido: "Built from your path",
+  notaRecalculo:
+    "Something changed in the real world? Go back to the interview whenever you like: the plan recalculates from wherever you are.",
+  losNumerosQueNecesitas: "The numbers you need",
+};
+
+export const PLAN_DOCUMENTO: PorIdioma<typeof es> = { es, en };

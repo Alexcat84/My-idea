@@ -9,4 +9,12 @@ const es = {
   tituloBorrar: "Borrar idea",
 };
 
-export const BORRAR_IDEA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  borrarla: "Delete it?",
+  si: "Yes",
+  no: "No",
+  ariaBorrar: "Delete the idea {{nombre}}",
+  tituloBorrar: "Delete idea",
+};
+
+export const BORRAR_IDEA: PorIdioma<typeof es> = { es, en };

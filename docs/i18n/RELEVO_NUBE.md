@@ -22,7 +22,7 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
 | **F0** diseño, inventario, glosario, decisiones | **HECHA** | `cf55b1b2` (diseño), `06c1a06e` (decisiones D1-D9), `d2ce48df` (inventario de datos y borradores legales), `80d0a38f` (glosario y legales con las decisiones) |
 | **F1** medición del buscador multilingüe | **HECHA** | `0debace9`; informe `docs/i18n/F1_BUSCADOR.md` |
 | **F2** base de idiomas + todos los textos al catálogo en español, la app idéntica | **HECHA, CON VISTO DEL FUNDADOR, EN PRODUCCIÓN** | `6a887b99` (base), `124113cb` (extracción), `1b495e32` (hilo del idioma), `20c0250e` (informe `docs/i18n/F2_INFORME.md`); en `main` con `9361c569`, etiqueta `web-v2.7.0` |
-| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **EN CURSO** (nube): hecho lo que no depende del idioma; decisiones del fundador del 24 sep en §9 | `73811801` (formatos por idioma y los cuatro arreglos que F2 dejó para F3) |
+| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **EN CURSO** (nube). Errores del español corregidos; **inglés completo, pendiente del visto** (`F3_INFORME_EN.md`); después el francés y luego los otros ocho | `73811801` (formatos y arreglos previos), `bcff9f8e` (errores del español), el commit del inglés (ver `git log`) |
 | **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | por hacer | — |
 | **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3 | por hacer | — |
 | **F6** correos (D4), documentos, legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
@@ -183,3 +183,7 @@ Las suites no necesitan claves: ningún test cambia de veredicto según haya o n
   c. **Cifras latinas en todos los idiomas, árabe incluido: APROBADO.**
 - **Gate 0:** el `FALLIDO` que anoté arriba era el ciclo a medias (ver §4, el orden exacto); con el
   ciclo completo da `GATE 0: OK`.
+- **Inglés (grupo 1): hecho, pendiente del visto.** Informe en `F3_INFORME_EN.md` (qué sigue en
+  español a propósito hasta F5, elecciones de traducción, errores del español). Convenciones y
+  términos fijos para los siguientes idiomas: `F3_CONVENCIONES.md`. Siguiente: el **francés** (neutro,
+  válido para Quebec, sin anglicismos), solo después del visto del inglés.

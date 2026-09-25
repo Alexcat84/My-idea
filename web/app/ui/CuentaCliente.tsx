@@ -15,6 +15,8 @@ import { interpolar } from "@/lib/i18n/interpolar";
 import { CUENTA } from "@/lib/i18n/mensajes/cuenta";
 import { rico } from "@/lib/i18n/rico";
 import { palabraEliminar } from "@/lib/i18n/palabraEliminar";
+import { SELECTOR_IDIOMA } from "@/lib/i18n/mensajes/selectorIdioma";
+import { SelectorIdioma } from "./SelectorIdioma";
 import { createClient } from "@/lib/supabase/client";
 
 
@@ -228,6 +230,10 @@ export function CuentaCliente({ email }: { email: string }) {
     <>
       <Seccion titulo={t.tuIdentidad}>
         <p className="text-[15px] font-semibold">{email}</p>
+      </Seccion>
+
+      <Seccion titulo={elegir(SELECTOR_IDIOMA, idioma).etiqueta}>
+        <SelectorIdioma className="text-[15px] font-semibold text-ink" />
       </Seccion>
 
       <Seccion titulo={t.seguridad.titulo}>

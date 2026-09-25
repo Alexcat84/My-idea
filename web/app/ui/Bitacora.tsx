@@ -16,18 +16,13 @@
 import { partirMotivo } from "@/lib/i18n/comillas";
 import { useEffect, useState } from "react";
 import { etiquetaEspacio, proyectoTieneMundos, type EntradaBitacora } from "@/lib/bitacoraCliente";
-import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { BITACORA } from "@/lib/i18n/mensajes/bitacora";
 
-/** dominio (clave) → nombre de cara del mundo; "core" lo resuelve etiquetaEspacio. */
-const NOMBRE_MUNDO: Record<string, string> = Object.fromEntries(
-  (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.map((p) => [p.clave, p.nombre]),
-);
-const nombreMundo = (d: string) => NOMBRE_MUNDO[d] ?? d;
 
 const AZUL = "#4D7CFE";
 const CELESTE = "#8FB3F5";
@@ -302,7 +297,7 @@ export function Bitacora({
                 vista POR ESPACIO (T4) ya es de un solo espacio: no etiqueta. */}
             <LineaBitacora
               entradas={entradas}
-              etiquetar={dominio ? undefined : (e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradas), nombreMundo, idioma)}
+              etiquetar={dominio ? undefined : (e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradas), (d) => nombreDeMundo(d, idioma), idioma)}
             />
 
             <p className="mt-9 border-t border-hairline pt-5 text-[12.5px] leading-relaxed text-dim">

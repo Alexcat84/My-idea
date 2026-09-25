@@ -52,4 +52,53 @@ const es = {
   },
 };
 
-export const MOTOR_NUMEROS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  calculadora: {
+    equilibrioSinMargenRango:
+      "the margin per unit isn't positive across the whole range; there's no possible break-even point like this",
+    equilibrioSinMargen: "the margin per unit isn't positive; there's no possible break-even point with these numbers",
+    gigoMargen:
+      "with these numbers the margin per unit is {{pct}}%, far below -100%: most likely some figure is in the wrong unit (for example, a monthly budget read as a cost per unit, or a timeframe in months read as hours), not that each sale loses that much money",
+    gigoPrecio:
+      "the price you entered is less than 5% of the calculated unit cost: check that the price and the cost are in the same unit (per piece, per month, etc.)",
+  },
+  palancas: {
+    volumenBloqueado:
+      "With your margin in the red, more volume only makes the loss bigger. Fix the margin first; once it's in the green, this is where you'll see how many units a month you need for your goal.",
+  },
+  escenarios: {
+    sinFijos: "your monthly fixed costs are missing",
+    pesimista: "Pessimistic",
+    tuRitmo: "Your current pace",
+    capacidadPlena: "At full capacity",
+    alMes: "{{n}} a month",
+    adopcion: {
+      "50%": "half your goal",
+      "100%": "your goal",
+      "200%": "double your goal",
+    },
+  },
+  vivo: {
+    topeRenarracion:
+      "That's the limit for fresh readings today. Your numbers and your changes are saved, recalculating is still unlimited, and tomorrow you can ask for a new reading.",
+    cicloPositivo: "Your money takes about {{d}} days to come back to your pocket from the moment you pay for materials.",
+    cicloCero: "Your money comes back the same day: you get paid right when you pay.",
+    cicloNegativo: "You get paid before you pay: your cash works in your favor, with about {{d}} days of breathing room.",
+    unidadPorDefecto: "unit",
+    datos:
+      "I'm still missing some figures to give you the full picture: once you fill in what's missing, you'll see clearly here whether each {{u}} leaves you a profit.",
+    perdidaAcento: "{{monto}} more than you charge",
+    perdida:
+      "Right now, each {{u}} you sell costs you {{acento}}: the problem isn't selling more, it's that your price doesn't yet cover what it costs you to make it.",
+    ajusteAcento: "{{monto}} per {{u}}",
+    ajustePct: " ({{pct}}%)",
+    ajuste:
+      "Each {{u}} leaves you {{acento}}{{pct}}: that's already profit, but a thin margin, so it's worth strengthening before you grow.",
+    sanoAcento: "{{monto}} clear",
+    sanoCola:
+      ", and selling {{equilibrio}} a month already covers your {{fijos}} in fixed costs: from there on, every {{u}} is profit",
+    sano: "Each {{u}} leaves you {{acento}}{{cola}}.",
+  },
+};
+
+export const MOTOR_NUMEROS: PorIdioma<typeof es> = { es, en };

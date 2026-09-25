@@ -12,4 +12,14 @@ const es = {
   },
 };
 
-export const SESION: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  salir: "Log out",
+  saludo: {
+    manana: "Good morning",
+    tarde: "Good afternoon",
+    noche: "Good evening",
+    neutro: "Hi",
+  },
+};
+
+export const SESION: PorIdioma<typeof es> = { es, en };

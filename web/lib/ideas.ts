@@ -174,7 +174,7 @@ export async function listarIdeasConEstado(supabase: SupabaseClient, idioma: Loc
       chips.push({ texto: interpolar(t.manosALaObra, { hechos: core.hechos, total: core.total }), tono: "verde" });
       for (const [dominio, r] of porDominio) {
         if (dominio === "core") continue;
-        chips.push({ texto: interpolar(t.mundoProgreso, { mundo: nombreDeMundo(dominio), hechos: r.hechos, total: r.total }), tono: "verde" });
+        chips.push({ texto: interpolar(t.mundoProgreso, { mundo: nombreDeMundo(dominio, idioma), hechos: r.hechos, total: r.total }), tono: "verde" });
       }
     } else if (pensando) {
       chips.push({ texto: t.enExploracion, tono: "azul" });

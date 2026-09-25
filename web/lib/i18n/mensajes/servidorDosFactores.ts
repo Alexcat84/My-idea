@@ -28,4 +28,30 @@ const es = {
   },
 };
 
-export const SERVIDOR_DOS_FACTORES: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  necesitasCuentaSeguridad: "you need your account to set up security",
+  demasiadosIntentos: "Too many attempts. Wait 15 minutes and try again.",
+  verificacionNoDisponible: "verification isn't available right now",
+  dosPasosNoDisponible: "two-step verification isn't available right now",
+  correoNoDisponible: "email codes aren't available right now",
+  algoSeAtoroMasTarde: "something got stuck on our end; try again later",
+  codigoYaUsado: "That code was already used. Wait for the next one and type it in.",
+  noPudeConfirmar: "I couldn't confirm your code; try again in a moment.",
+  sinCodigoVigente: "Request a new code: there isn't an active one.",
+  codigoVencido: "That code has expired. Request a new one.",
+  noCoincide: "That code doesn't match. Try again.",
+  noCoincideApp: "That code doesn't match. Check your authenticator app and type it again.",
+  primeroQr: "generate your QR code first (previous step)",
+  seisDigitos: "the code is 6 digits",
+  demasiadosEnvios: "Too many codes sent. Wait a few minutes and request it again.",
+  noPudimosEnviar: "We couldn't send the email. Try again in a moment.",
+  correo: {
+    asunto: "{{codigo}} is your My Idea verification code",
+    texto:
+      "Your verification code is {{codigo}}. It expires in {{minutos}} minutes. If this wasn't you, ignore this email: no one can get in without this code.",
+    htmlTuCodigo: "Your verification code is:",
+    htmlVence: "It expires in {{minutos}} minutes. If this wasn't you, ignore this email: no one can get in without this code.",
+  },
+};
+
+export const SERVIDOR_DOS_FACTORES: PorIdioma<typeof es> = { es, en };

@@ -12,14 +12,17 @@ import { idiomaDeRequest } from "./servidor";
 describe("config", () => {
   it("once idiomas de la marca; en F2 solo el español está activo", () => {
     expect(LOCALES).toEqual(["es", "en", "pt", "fr", "de", "it", "ja", "zh", "ko", "ar", "hi"]);
-    expect(ACTIVE_LOCALES).toEqual(["es"]);
+    // F3: el inglés primero (decisión del fundador, 24 sep 2026).
+    expect(ACTIVE_LOCALES).toEqual(["es", "en"]);
     expect(LOCALE_BASE).toBe("es");
   });
   it("un idioma no activo cae al español", () => {
-    expect(normalizarIdioma("en")).toBe("es");
+    expect(normalizarIdioma("fr")).toBe("es");
+    expect(normalizarIdioma("en")).toBe("en");
     expect(normalizarIdioma("xx")).toBe("es");
     expect(normalizarIdioma(undefined)).toBe("es");
-    expect(elegir({ es: { hola: "Hola" } }, "fr")).toEqual({ hola: "Hola" });
+    expect(elegir({ es: { hola: "Hola" }, en: { hola: "Hello" } }, "fr")).toEqual({ hola: "Hola" });
+    expect(elegir({ es: { hola: "Hola" }, en: { hola: "Hello" } }, "en")).toEqual({ hola: "Hello" });
   });
   it("el dictado por voz sigue el idioma de la interfaz; en español, es-MX como siempre", () => {
     // Casos a mano: la variante de cada idioma, fijada por el diseño.
@@ -59,8 +62,10 @@ describe("negociación del idioma", () => {
   });
   it("primera visita: del navegador si está activo, si no el español; y se escribe la cookie", () => {
     expect(negociarIdioma({ acceptLanguage: "es-MX,es;q=0.9" })).toEqual({ idioma: "es", escribirCookie: true });
-    // en F2 el inglés no está activo: cae al español
-    expect(negociarIdioma({ acceptLanguage: "en-US" })).toEqual({ idioma: "es", escribirCookie: true });
+    // F3: el inglés ya está activo; el francés todavía no, cae al español
+    expect(negociarIdioma({ acceptLanguage: "en-US" })).toEqual({ idioma: "en", escribirCookie: true });
+    expect(negociarIdioma({ acceptLanguage: "fr-CA,fr;q=0.9" })).toEqual({ idioma: "es", escribirCookie: true });
+    expect(negociarIdioma({ acceptLanguage: "fr-CA,en;q=0.8" })).toEqual({ idioma: "en", escribirCookie: true });
   });
   it("con cookie: manda la cookie y no se reescribe", () => {
     expect(negociarIdioma({ cookie: "es", acceptLanguage: "en" })).toEqual({ idioma: "es", escribirCookie: false });
@@ -70,6 +75,7 @@ describe("negociación del idioma", () => {
     expect(negociarIdioma({ parametroUrl: "es", cookie: null })).toEqual({ idioma: "es", escribirCookie: true });
     // un ?lang= que no está activo se ignora
     expect(negociarIdioma({ parametroUrl: "zz", cookie: "es" })).toEqual({ idioma: "es", escribirCookie: false });
+    expect(negociarIdioma({ parametroUrl: "en", cookie: "es" })).toEqual({ idioma: "en", escribirCookie: true });
   });
   it("proxy.ts negocia y escribe la cookie, también en la portada pública", () => {
     const proxy = readFileSync(path.join(__dirname, "..", "..", "proxy.ts"), "utf8");

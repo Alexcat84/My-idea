@@ -22,9 +22,9 @@ import { SuscripcionCalendario } from "./SuscripcionCalendario";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
 import { generarIcs } from "@/lib/ics";
 import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
-import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { leerRechazo } from "@/lib/mensajeServidor";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar, plural } from "@/lib/i18n/interpolar";
 import { rico } from "@/lib/i18n/rico";
@@ -32,9 +32,8 @@ import { CALENDARIO } from "@/lib/i18n/mensajes/calendario";
 import { FECHAS } from "@/lib/i18n/mensajes/fechas";
 
 // "Todo separado" (T6, D3): el nombre de cara de un espacio para la etiqueta.
-const PACKS_CAL = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
 const esCoreCal = (d: string | null | undefined) => !d || d === "core";
-const nombreEspacioCal = (d: string, tuViaje: string) => (esCoreCal(d) ? tuViaje : PACKS_CAL.find((p) => p.clave === d)?.nombre ?? d);
+const nombreEspacioCal = (d: string, tuViaje: string, idioma: Locale) => (esCoreCal(d) ? tuViaje : nombreDeMundo(d, idioma));
 /** un ítem del calendario que recuerda de qué espacio es (para etiquetar). */
 type ItemCal = ItemChecklistUI & { _dominio: string };
 
@@ -124,7 +123,7 @@ export function Calendario({
   // La etiqueta [Espacio] SOLO donde hay MEZCLA: el global con mundos. El
   // scopeado (T4b) ya es de un espacio y no etiqueta; sin mundos, ruido cero.
   const etiquetaDe = (dom: string): string | undefined =>
-    esScoped || !hayMundos ? undefined : nombreEspacioCal(dom, t.tuViaje);
+    esScoped || !hayMundos ? undefined : nombreEspacioCal(dom, t.tuViaje, idioma);
 
   async function moverFecha(itemId: string, fecha: string, cascada: boolean) {
     setError(null);

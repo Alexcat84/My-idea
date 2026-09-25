@@ -46,6 +46,7 @@ import { etapaDeIdea } from "@/lib/etapaIdea";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { mundo as mundoDe, nombreDeMundo } from "@/lib/catalogoMundos";
 import type { CapacidadSemanal, ChecklistEstado } from "@/lib/dbContract";
 import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
@@ -156,13 +157,6 @@ function nodoArbolDesdeRuta(
     nota: n.modo === "silencioso" ? notaSilencioso : undefined,
   };
 }
-
-const NOMBRE_MUNDO = Object.fromEntries(
-  (catalogo as { packs: Array<{ clave: string; nombre: string; promesa: string }> }).packs.map((p) => [
-    p.clave,
-    { nombre: p.nombre, promesa: p.promesa },
-  ])
-);
 
 export function IdeaView({ projectId }: { projectId: string }) {
   const idioma = useIdioma();
@@ -964,7 +958,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     pensandoStepper = Boolean(pregunta) || enviando;
     etiquetaStepper =
       dominioEntrevista !== "core"
-        ? interpolar(t.stepper.mundoEnCurso, { mundo: NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista })
+        ? interpolar(t.stepper.mundoEnCurso, { mundo: nombreDeMundo(dominioEntrevista, idioma) })
         : esSeguimientoEntrevista
           ? t.stepper.profundizacionEnCurso
           : t.stepper.exploracionEnCurso;
@@ -1008,8 +1002,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
     const m = detalle.mundos?.find((x) => x.dominio === dominio);
     return {
       dominio,
-      nombre: NOMBRE_MUNDO[dominio]?.nombre ?? dominio,
-      promesa: NOMBRE_MUNDO[dominio]?.promesa ?? "",
+      nombre: nombreDeMundo(dominio, idioma),
+      promesa: mundoDe(dominio, idioma)?.promesa ?? "",
       plan: m?.plan ?? null,
       completadoAt: m?.completado_at ?? null,
       // Fase 4.5: el escaparate del preview viaja a la sección del mundo.

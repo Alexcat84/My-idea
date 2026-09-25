@@ -23,4 +23,23 @@ const es = {
   volver: "volver",
 };
 
-export const ESTADOS_TAREA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  etiquetas: {
+    pendiente: "not started",
+    empezado: "just started",
+    en_proceso: "in progress",
+    hecho: "done",
+    no_aplica: "doesn't apply",
+  },
+  tituloDisparador: "Status: {{estado}} · tap to choose",
+  ariaDisparador: "{{estado}}. Tap to choose the status",
+  cerrarMenu: "Close the status menu",
+  comoVa: "How's this task going?",
+  porQueNoAplica: "Why doesn't it apply?",
+  paraTuMemoria: "Just for your own memory. You can leave it blank.",
+  placeholderMotivo: "It doesn't apply to this idea because…",
+  retirarTarea: "Set task aside",
+  volver: "back",
+};
+
+export const ESTADOS_TAREA: PorIdioma<typeof es> = { es, en };

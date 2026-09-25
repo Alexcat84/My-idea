@@ -28,4 +28,29 @@ const es = {
   },
 };
 
-export const SERVIDOR_CUENTA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  comun: {
+    cuerpoInvalido: "invalid body",
+    necesitasCuenta: "you need your account for this",
+    algoSeAtoro: "something got stuck; try again",
+    algoSeAtoroMomento: "something got stuck on our end; try again in a moment",
+    correoInvalido: "enter a valid email",
+  },
+  entrar: {
+    faltanDatos: "enter your email and password",
+    sinConfirmar: "You haven't confirmed your email yet. Check your inbox (and your spam) or request a new link.",
+    credencialesMalas: "Incorrect email or password.",
+  },
+  registrar: {
+    demasiadosIntentos: "Too many attempts for now. Wait a few minutes and try again.",
+    noPudimosCrear: "we couldn't create your account; try again in a moment",
+  },
+  eliminar: {
+    escribeEliminar: 'To delete your account, type the word "{{palabra}}" exactly as shown.',
+    seguridadSinConfirmar:
+      "I couldn't verify your account's security, so I didn't delete anything. Try again in a moment.",
+    noPudeBorrarTodo: "I couldn't delete all your data, so your account is unchanged. Try again in a moment.",
+  },
+};
+
+export const SERVIDOR_CUENTA: PorIdioma<typeof es> = { es, en };

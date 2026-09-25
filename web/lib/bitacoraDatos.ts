@@ -6,7 +6,7 @@
  * MISMA historia. Cero motor, cero créditos.
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
-import catalogo from "./assets/packs_catalog.json";
+import { nombreDeMundo } from "./catalogoMundos";
 import { LOCALE_BASE, type Locale } from "./i18n/config";
 import {
   construirBitacora,
@@ -30,8 +30,7 @@ export async function cargarEntradasBitacora(
    * interfaz; los documentos quedan en el base hasta F5, D2). */
   idioma: Locale = LOCALE_BASE
 ): Promise<EntradaBitacora[]> {
-  const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
-  const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
+  const nombreMundo = (dominio: string) => nombreDeMundo(dominio, idioma);
 
   const { data: sesionesRaw } = await supabase
     .from("sessions")

@@ -53,4 +53,55 @@ const es = {
   botonCancelar: "Cancelar",
 };
 
-export const DETALLE_ACTIVIDAD: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  chip: {
+    aTiempo: "On time",
+    tardia: { one: "Late · {{n}} day", other: "Late · {{n}} days" },
+    adelantada: { one: "Early · {{n}} day", other: "Early · {{n}} days" },
+  },
+  dialogo: "Activity details",
+  cerrar: "Close",
+  cerrarDetalle: "Close the details",
+  etapa: "Stage {{n}}",
+  protegida: "Protected",
+  protege: "Protects:",
+  protegeRetirada: "the activity it protected was set aside",
+  protegeSistemica: "your whole business",
+  protegeFueraDelPlan: "an activity that's no longer in your plan",
+  estado: "Status",
+  elegirEstado: "Choose a status",
+  porQueNoAplica: "Why doesn't it apply? Just for your own memory (optional).",
+  placeholderMotivo: "It doesn't apply to this idea because…",
+  cuandoLoHiciste: "When did you do it?",
+  cuandoLoHicisteAria: "When you did it",
+  esfuerzo: "Effort",
+  corregir: "adjust",
+  dependeDeTerceros: "· depends on others",
+  estimadoConEspera:
+    "This is an estimate of your own work. This task depends on other people getting back to you, so start it early: your date already includes a cushion for that wait, and the time they take isn't counted against you.",
+  estimado: "This is an estimate to guide you. If it doesn't fit your reality, adjust it.",
+  cuantoTeToma: "How long does it really take you?",
+  cancelarEdicion: "cancel",
+  fecha: "Date",
+  cambiarFecha: "change date",
+  diasDespues: { one: "{{n}} day later", other: "{{n}} days later" },
+  diasAntes: { one: "{{n}} day earlier", other: "{{n}} days earlier" },
+  nuevaFecha: "New date: <b>{{fecha}}</b>.",
+  hayPosteriores: {
+    one: "There's <b>{{n}}</b> pending activity after this one.",
+    other: "There are <b>{{n}}</b> pending activities after this one.",
+  },
+  lasMuevo: "Should I move them too, {{rumbo}} each?",
+  moverTodas: "Yes, move them all",
+  soloEsta: "Just this one",
+  nuevaFechaObjetivo: "New target date",
+  yaLaMoviste: "You already moved it: the original date ({{fecha}}) stays in your history.",
+  siLaMueves: "If you move it, the original date stays in your history. Nothing gets rewritten.",
+  tuNota: "Your note",
+  placeholderNota: "Anything you need to remember about this action…",
+  notaGratis: "Saving your note is free, always.",
+  guardar: "Save",
+  botonCancelar: "Cancel",
+};
+
+export const DETALLE_ACTIVIDAD: PorIdioma<typeof es> = { es, en };

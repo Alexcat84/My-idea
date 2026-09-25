@@ -21,4 +21,20 @@ const es = {
   noCubre: "## Lo que este plan aún no cubre",
 };
 
-export const MOTOR_PLAN: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  avisoVersionBasica:
+    "This is a basic version of your plan: I put it together without the AI write-up because this conversation reached its work limit. You weren't charged. You can regenerate the full plan from what you already told me: you're only charged if the AI delivers it.",
+  offline: {
+    titulo: "# Your action plan",
+    contexto: "## Context",
+    puntoDePartida: "Starting point: {{texto}}",
+    loQueSabemos: "What we know about your idea: {{perfil}}",
+    etapa: "## Stage {{n}}: {{concepto}}",
+    puntoDeControl: "Checkpoint: {{entregable}}",
+  },
+  etiquetaCompleto: "Full plan",
+  etiquetaInicial: "Initial plan",
+  noCubre: "## What this plan doesn't cover yet",
+};
+
+export const MOTOR_PLAN: PorIdioma<typeof es> = { es, en };

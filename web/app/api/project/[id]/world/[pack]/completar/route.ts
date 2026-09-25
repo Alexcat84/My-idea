@@ -25,6 +25,7 @@ import { guardarActa, instantaneaDeActa } from "@/lib/acta";
 import { calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
@@ -81,7 +82,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     .limit(1);
   if (!unlock || unlock.length === 0) {
     return NextResponse.json(
-      { error: interpolar(r.mundoNoActivado, { mundo: entrada.nombre }) },
+      { error: interpolar(r.mundoNoActivado, { mundo: nombreDeMundo(entrada.clave, idioma) }) },
       { status: 403 }
     );
   }
@@ -111,7 +112,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     });
     if (!guardada) {
       return NextResponse.json(
-        { error: interpolar(t.noPudeGuardarActa, { mundo: entrada.nombre }) },
+        { error: interpolar(t.noPudeGuardarActa, { mundo: nombreDeMundo(entrada.clave, idioma) }) },
         { status: 500 }
       );
     }

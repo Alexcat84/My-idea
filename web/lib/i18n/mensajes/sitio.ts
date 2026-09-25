@@ -7,4 +7,9 @@ const es = {
   etiquetaVersion: "versión",
 };
 
-export const SITIO: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  descripcion: "The space where your ideas get worked out.",
+  etiquetaVersion: "version",
+};
+
+export const SITIO: PorIdioma<typeof es> = { es, en };

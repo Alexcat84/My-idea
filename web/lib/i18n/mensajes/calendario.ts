@@ -91,4 +91,94 @@ const es = {
   },
 };
 
-export const CALENDARIO: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  tuViaje: "Your Journey",
+  /** cabeceras de la rejilla, de lunes a domingo */
+  diasCortos: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
+  /** los meses abreviados del título de la semana */
+  mesesCortos: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  grupos: {
+    vencidas: "Date passed, still open",
+    hoy: "Today",
+    manana: "Tomorrow",
+    semana: "This week",
+    proxima: "Next week",
+    adelante: "Further ahead",
+  },
+  relativo: {
+    hoy: "today",
+    manana: "tomorrow",
+    ayer: "yesterday",
+    haceDias: "{{n}} days ago",
+    enDias: "in {{n}} days",
+  },
+  errorMoverFecha: "We couldn't move the date; check your internet connection.",
+  errorGuardarCambio: "We couldn't save the change.",
+  errorGuardarInternet: "We couldn't save; check your internet connection.",
+  etapa: "Stage {{n}}",
+  /** el nombre de la idea en la descripción de los eventos del .ics descargado */
+  nombreIdeaIcs: "My idea",
+  /** "Apr 20 to Apr 26" */
+  rangoSemana: "{{m1}} {{d1}} to {{m2}} {{d2}}",
+  loQueViene: "What's coming up",
+  volver: "← Back",
+  calendarioDe: "Calendar for {{nombre}}",
+  esteMundo: "this world",
+  tuCalendario: "Your calendar",
+  mesAnterior: "Previous month",
+  semanaAnterior: "Previous week",
+  hoyBoton: "Today",
+  mesSiguiente: "Next month",
+  semanaSiguiente: "Next week",
+  vistas: { mes: "Month", semana: "Week", agenda: "Agenda" },
+  bandaVencidas: {
+    one: "One date has passed and is still open. You can move it to a day that works for you.",
+    other: "{{n}} dates have passed and are still open. You can move them to a day that works for you.",
+  },
+  estadisticasTitulo: "Your stats",
+  estadisticasTexto: "Your progress, your pace and your follow-through, in charts. Here you plan; there you see how it's going.",
+  verAnalisis: "See the analysis",
+  sinTareasAdelante: "You don't have any dated tasks ahead. Once you give your tasks dates, you'll see here what's up next and when.",
+  sinFecha: {
+    one: "Beyond these, <b>{{n}}</b> task still has no date.",
+    other: "Beyond these, <b>{{n}}</b> tasks still have no date.",
+  },
+  ponerlesFecha: "Give them dates",
+  verDetalle: "See the details",
+  verDetalleTarea: "See the task details",
+  marcarHecha: "Mark done",
+  ponerleFechaNueva: "Give it a new date",
+  moverFecha: "Move date",
+  detalle: "Details",
+  conNota: "(with a note)",
+  yaPaso: "date passed",
+  /** la marca de vencida tras la etapa, en el panel del día */
+  puntoYaPaso: "· date passed",
+  hecha: "Done",
+  mover: "Move",
+  sinTareasDia: "No dated tasks on this day. Tap another day to see its tasks.",
+  verDia: "See day {{n}}",
+  masChips: "+{{n}} more",
+  leyenda: { prevista: "Planned", hecha: "Done", yaPaso: "Date passed", hoy: "Today" },
+  arrastraParaMover: "drag to move",
+  /** el mismo aviso al final del title de una tarjeta de la semana */
+  puntoArrastraParaMover: "· drag to move",
+  marcarPrimeraHecha: "Mark the first one done",
+  suscripcion: {
+    titulo: "Sync with my calendar",
+    comoFunciona: "How syncing works",
+    cerrar: "Close",
+    info: "You subscribe just once. After that, your dates show up in the calendar you already use (Google, Apple, Outlook…) and update on their own when you change something here. Your calendar reminds you of each task on the day it's due.",
+    infoRefresco: "They don't show up instantly: your calendar refreshes every so often (sometimes minutes, sometimes hours). If you want to see them right now, download the file.",
+    subtitulo: "Keep your dates in the calendar you already use.",
+    suscribir: "Subscribe in my calendar",
+    creaCuenta: "Create your account to subscribe in your calendar.",
+    descargar: "Download the file (.ics)",
+  },
+  ics: {
+    /** la descripción de cada evento: "Stage 2 · My idea" */
+    descripcion: "Stage {{n}} · {{idea}}",
+  },
+};
+
+export const CALENDARIO: PorIdioma<typeof es> = { es, en };

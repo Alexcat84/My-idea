@@ -15,6 +15,7 @@ import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { PRECIOS } from "@/lib/precios";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { murallaSinPlan } from "@/lib/espacios";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
@@ -53,7 +54,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
   if (!(await obtenerPlanCoreVigente(supabase, projectId))) {
-    return NextResponse.json({ error: murallaSinPlan(entrada.nombre, idioma) }, { status: 409 });
+    return NextResponse.json({ error: murallaSinPlan(nombreDeMundo(entrada.clave, idioma), idioma) }, { status: 409 });
   }
 
   const { error } = await supabase.from("project_unlocks").insert({

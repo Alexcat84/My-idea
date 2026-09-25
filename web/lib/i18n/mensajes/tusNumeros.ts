@@ -121,4 +121,121 @@ const es = {
   corregirGratis: "Corregir mis cifras · gratis",
 };
 
-export const TUS_NUMEROS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  rango: "{{min}} to {{max}}",
+  unidadPorDefecto: "unit",
+  tiles: {
+    teCuestaCada: "what each {{u}} costs you",
+    precioHoy: "the price you sell it for today",
+    margenPorPieza: "margin per piece",
+    noHay: "None",
+    puntoEquilibrio: "break-even point",
+  },
+  barra: {
+    teCuesta: "It costs you",
+    cobras: "You charge",
+    enPerdida:
+      "The bar for what it costs you is longer than the bar for what you charge. That piece sticking out is <b>the loss you cover out of your own pocket on every sale</b>. As long as it looks like this, selling more only makes the hole bigger.",
+    conMargen:
+      "The bar for what you charge is the long one, and what it costs you doesn't reach it. That extra space is <b>your margin</b>. Here, selling more really does bring you closer to your goal.",
+  },
+  palanca: {
+    cierreVolumen: "It's your strongest lever because your margin is already healthy.",
+    volumenSinMeta:
+      "Once you tell me how many you can make per week, I'll tell you here how many a month leave you a profit. {{cierre}}",
+    volumenSinGanancia:
+      "At {{unidades}} a month you hit full capacity; tell me your monthly fixed costs and I'll tell you how much you keep. {{cierre}}",
+    volumenConGanancia: "At {{unidades}} a month, after covering your fixed costs, you keep {{ganancia}} in profit. {{cierre}}",
+    precioTest:
+      "Try raising it to {{meta}} (10% more): your margin goes up to {{margen}} per {{u}}. Test it on one batch before raising it across the board.",
+    precioVentas: ", and you cover your fixed costs with about {{n}} sales",
+    precioArreglo: "At {{meta}}, your margin becomes {{margen}} per {{u}}{{ventas}}.",
+    costoTest: "Try bringing the cost down to {{meta}} (10% less): that leaves you {{margen}} per {{u}}, without touching the price.",
+    costoArreglo: "Bringing the cost down to {{meta}} leaves you {{margen}} per {{u}}, without touching the price.",
+    nombrePrecio: "Raise the price to",
+    nombreCosto: "Lower the cost to",
+    nombreVolumen: "Sell each month",
+    hoyCobras: "today you charge {{v}}",
+    hoyTeCuesta: "today it costs you {{v}}",
+    badgeMeta: "your goal",
+    badgeDirecta: "the most direct",
+    bloqueadaTitulo: "Selling more: not for now",
+    bloqueadaTexto:
+      "<b>With your margin in the red, more volume only makes the loss bigger.</b> Fix the margin first with lever 1 or 2; once it's in the green, I'll tell you here how many you need to reach your goal.",
+    unidadesSufijo: "{{unidades}}",
+    porUnidad: "per {{u}}",
+    acentoMargen: "{{margen}} per {{u}}",
+    acentoGanancia: "{{ganancia}} in profit",
+    tituloSano: "Three ways to get more out of these numbers",
+    tituloArreglo: "Three ways to make these numbers work",
+  },
+  escenarios: {
+    escenario: "Scenario",
+    ganancia: "Profit",
+  },
+  faltantes: {
+    costo_materiales_unidad: { texto: "Material cost per unit", porque: "it's the basis for knowing what each one costs you" },
+    horas_por_unidad: { texto: "Your time per unit, valued in money", porque: "if you paid yourself for the time it takes, the real cost goes up" },
+    valor_hora: { texto: "What an hour of your work is worth", porque: "without it, there's no way to put a price on your time" },
+    precio_tentativo: { texto: "The price you sell at", porque: "without a price, there's no margin to calculate" },
+    capacidad_semanal: { texto: "How many you can make in a week", porque: "it sets the real ceiling on what you can produce" },
+    costos_fijos_mensuales: { texto: "Your monthly fixed costs", porque: "it's what you pay every month, whether you sell or not" },
+    unidades_vendidas: { texto: "How many you sell a month, or your goal", porque: "without it, there are no sales scenarios" },
+    precio_pagado_real: { texto: "What you've actually been paid", porque: "the real price can differ from the one you set" },
+    dias_inventario: { texto: "Days your money sits in inventory", porque: "it affects when the money comes back to your pocket" },
+    dias_cobro_clientes: { texto: "Days it takes you to get paid", porque: "getting paid late squeezes your cash" },
+    dias_pago_proveedores: { texto: "Days you take to pay your suppliers", porque: "paying later eases your cash" },
+  },
+  anadir: "Add →",
+  todoLoEsencial: "You have all the essentials. Nice work.",
+  leyGratis: "Adding or correcting figures is always free: your dashboard recalculates instantly.",
+  secciones: {
+    deUnVistazo: "At a glance",
+    barraDeLaVerdad: "The truth bar",
+    escenarios: "Scenarios, at today's price",
+    faltantes: "The numbers you're missing",
+    cicloDeCaja: "Your cash cycle",
+    versionesAnteriores: "Earlier versions",
+  },
+  dias: "days",
+  guardianTitulo: "Data guardian.",
+  guardianTexto:
+    "These numbers are only as good as the figures you entered. When you add the missing ones, the real number may change. This doesn't replace formal accounting or tax advice.",
+  tonos: {
+    perdida: "loss",
+    ajuste: "thin margin",
+    sano: "healthy",
+    datos: "missing data",
+  },
+  ver: "View →",
+  errorCargar: "we couldn't load your numbers",
+  calculando: "Crunching your numbers…",
+  misIdeas: "My ideas /",
+  tuIdea: "Your idea",
+  volverAlPlan: "← Back to your plan",
+  compuerta: {
+    eyebrow: "Your Numbers",
+    titulo: "Your real figures, turned into decisions",
+    texto:
+      "Margin, break-even point, three calculated levers, and scenarios, built on the figures you give. They come included with your plan. You activate them once per idea; after that, correct your figures and recalculate whenever you like.",
+    errorActivar: "we couldn't activate Your Numbers; try again",
+    errorConectar: "we couldn't connect; check your internet and try again",
+    activando: "Activating…",
+    sacarConCosto: "Get my numbers · {{n}} credits",
+    activarIncluido: "Activate my numbers · included with your plan",
+  },
+  insigniaIncluido: "Your Numbers · included",
+  historico: {
+    viendo: "You're viewing your numbers from {{momento}}",
+    volverAHoy: "Back to today",
+  },
+  losNumerosDe: "The numbers for {{titulo}}",
+  tuIdeaMinuscula: "your idea",
+  recienActualizado: "just updated",
+  calculadoPorCodigo: "Calculated by code, from your figures",
+  tusNumerosDeHoy: "Your numbers TODAY",
+  calculadoConCifrasDel: "· calculated with your figures from {{sello}}",
+  corregirGratis: "Correct my figures · free",
+};
+
+export const TUS_NUMEROS: PorIdioma<typeof es> = { es, en };

@@ -88,4 +88,90 @@ const es = {
   },
 };
 
-export const BITACORA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  pagina: {
+    /** los números en palabra del subtítulo del día, del 1 al 10 */
+    numeros: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"],
+    primerDia: "the day it all began",
+    momentosDia: "{{n}} moments on this day",
+    cierre: "This is where your idea ends and your project begins.",
+    errorCarga: "We couldn't load your logbook. Try again in a moment.",
+    cargando: "Loading your logbook…",
+    /** "from July 3, 2026 to August 9, 2026" */
+    rango: "from {{desde}} to {{hasta}}",
+    volver: "← Back",
+    tuHistoria: "Your story",
+    bitacoraDe: "Logbook for {{nombre}}",
+    esteMundo: "this world",
+    miBitacora: "The logbook of my journey",
+    vacia: "Your story is just beginning. Every step you take will be kept here: every status you change, every date you move, every note.",
+    pie: "This is your story exactly as it was recorded, day by day. Nothing gets rewritten: if you moved a date, the original is still here.",
+  },
+  espacio: {
+    errorCarga: "We couldn't load this space's logbook.",
+    cargando: "Loading this space's logbook…",
+    tuBitacora: "Your logbook",
+    /** nombre del archivo .md descargado */
+    archivo: "Logbook for {{nombre}}",
+    vacia: "This space doesn't have a logbook yet. As soon as you record something here (a status, a date, a note), its story will start being saved.",
+  },
+  historia: {
+    unaActividad: "an activity",
+    /** una actividad citada: “Call a customer” */
+    refCita: "“{{texto}}”",
+    /** el motivo del usuario al final de una línea, o el punto si no dio motivo */
+    motivoCita: ": “{{motivo}}”",
+    punto: ".",
+    chispa: "You lit the spark and wrote down your idea.",
+    chispaTitulo: "The Spark",
+    ordenaste: "You organized your idea and gained clarity.",
+    ordenasteTitulo: "Your idea, organized",
+    explorar: "You started exploring your idea, question by question.",
+    plan: "You got your plan.",
+    planTitulo: "Your Plan",
+    seguimiento: "You told me what happened and I recalculated your plan (follow-up {{n}}).",
+    seguimientoTitulo: "Follow-up {{n}}",
+    lineaBase: "You accepted your dates: your baseline is now locked in.",
+    lineaBaseTitulo: "Your baseline",
+    numeros: "You calculated Your Numbers.",
+    numerosVersion: "You calculated Your Numbers (version {{n}}).",
+    numerosTitulo: "Your Numbers",
+    planMundo: "Your plan for {{mundo}} was created.",
+    modoFechas: "with dates and reminders",
+    modoRitmo: "at your own pace",
+    cambiasteModo: "You changed how you move forward: {{modo}}.",
+    elegisteModo: "You chose to travel your path {{modo}}.",
+    empezaste: "You started {{ref}}.",
+    enProceso: "You set {{ref}} to in progress.",
+    aPendiente: "You set {{ref}} back to not started.",
+    marcasteHecha: "You marked {{ref}} done.",
+    /** la hecha derivada de completed_at (ítems sin evento) */
+    marcasteHechaCita: "You marked “{{texto}}” done.",
+    retiraste: "You set {{ref}} aside{{cita}}",
+    reactivaste: "You brought {{ref}} back.",
+    ajustasteFechaHecho: "You adjusted the date you finished {{ref}}.",
+    anotaste: "You added a note to {{ref}}.",
+    diasDespues: { one: "{{n}} day later", other: "{{n}} days later" },
+    diasAntes: { one: "{{n}} day earlier", other: "{{n}} days earlier" },
+    colaCascada: " and the {{n}} after it, each {{rumbo}}.",
+    movisteFecha: "You moved the date of {{ref}}{{cola}}",
+    reabristeMundo: "You reopened the {{mundo}} world.",
+    completasteMundo: "You completed the {{mundo}} world{{cita}}",
+    exploraste: "You explored the {{mundo}} world for free.",
+    diagnostico: "Your diagnosis for {{mundo}} is ready.",
+    sumaste: "You added the full plan for {{mundo}}.",
+    reabristeIdea: "You reopened your idea to keep working on it.",
+    realizadaCita: "You marked your idea as achieved{{cita}}",
+    realizada: "You marked your idea as achieved.",
+    realizadoTitulo: "Achieved",
+    tuViaje: "Your Journey",
+  },
+  documento: {
+    titulo: "# The story of {{nombre}}",
+    generada: "> Generated on {{fecha}}",
+    vacia: "Your story is just beginning. Every step you take will be kept here.",
+    rango: "> From {{desde}} to {{hasta}}",
+  },
+};
+
+export const BITACORA: PorIdioma<typeof es> = { es, en };

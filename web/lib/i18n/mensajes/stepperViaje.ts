@@ -7,4 +7,9 @@ const es = {
   ariaEtapa: "Etapa {{etapa}} de {{total}}: {{nombre}}",
 };
 
-export const STEPPER_VIAJE: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  etapas: ["The Spark", "Clarity", "Exploration", "Your Plan", "Get to Work", "Achieved"],
+  ariaEtapa: "Stage {{etapa}} of {{total}}: {{nombre}}",
+};
+
+export const STEPPER_VIAJE: PorIdioma<typeof es> = { es, en };

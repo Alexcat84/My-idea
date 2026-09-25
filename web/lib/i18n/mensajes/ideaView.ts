@@ -74,4 +74,76 @@ const es = {
   },
 };
 
-export const IDEA_VIEW: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  notaSilencioso: "covered by what you shared",
+  cierreRespaldo: "This is as far as I can go with you down this road. Your idea stays saved just as it is.",
+  errores: {
+    cargarEspacio: "we couldn't load your space; check your internet connection and try again",
+    sinConexion: "we couldn't connect; check your internet connection and try again",
+    planSinTerminar:
+      "we couldn't finish writing your plan; everything you shared is saved, so you won't have to repeat anything",
+    planConexionCortada: "the connection dropped while we were building your plan; your path is saved",
+    ideaNoExiste: "that idea doesn't exist or isn't yours",
+    cargarIdea: "we couldn't load your idea; check your internet connection and try again",
+    enviarRespuesta: "we couldn't send your answer; check your internet connection and try again",
+    continuar: "we couldn't continue; check your internet connection and try again",
+  },
+  cargandoIdea: "Loading your idea…",
+  volverAMisIdeas: "Back to my ideas",
+  stepper: {
+    planEnCamino: "Your Plan · on its way…",
+    mundoEnCurso: "{{mundo}} · in progress…",
+    profundizacionEnCurso: "Deepening Cycle · in progress…",
+    exploracionEnCurso: "Exploration · in progress…",
+    manosConProgreso: "Get to Work · {{hechos}}/{{total}}",
+    manos: "Get to Work",
+    planListo: "Your Plan · ready",
+    claridadLista: "Clarity · ready",
+  },
+  misIdeas: "My ideas /",
+  proyecto: "Project",
+  intentarDeNuevo: "Try again",
+  verElPlan: "← See the plan",
+  cargandoEspacio: "Loading your space…",
+  recorridoDeLaIdea: "Your idea's path",
+  enviar: "Send",
+  pensandoPregunta: "Thinking up the next question…",
+  contextoFinal: {
+    pregunta: "Anything else you'd like your plan to take into account?",
+    placeholder: "Optional: type it or dictate it…",
+    armarPlan: "Build my plan · {{n}} credits",
+  },
+  oferta: {
+    suficiente: "Enough to move forward",
+    tuRecorrido: "Your path so far",
+    alcanza: "What you've told me is enough: on to your plan.",
+    puedoArmar: "With what you've told me, I can build your plan.",
+    siQuieres: "If you'd like, we can keep exploring:",
+    cubrimos: "We covered the essentials from start to finish.",
+    generarPlan: "Generate my plan · {{n}} credits",
+    redactandoDiagnostico: "Writing your diagnosis…",
+    verDiagnosticoGratis: "See my diagnosis · free",
+    seguimosExplorando: "Keep exploring",
+    verDiagnostico: "See my diagnosis",
+    garantia: "They're deducted when your plan is delivered. If anything fails, you aren't charged a thing.",
+    diagnosticoGratis: "The diagnosis is free. Its plan, if you want it: {{n}} credits.",
+    generarConLoContado: "Generate my plan with what I've shared",
+    diagnosticoConLoContado: "See my diagnosis with what I've shared",
+  },
+  generando: {
+    enCamino: "Your Plan · on its way",
+    escribiendo: "Writing: {{etapa}}",
+    armando: "Building your plan stage by stage.",
+    nota: "Each stage lights up on your path once it's truly written.",
+  },
+  recorridoConteo: "Path ({{n}})",
+  regenerarPlan: "Regenerate my plan · {{n}} credits",
+  pasarAManos: "Move on to Get to Work",
+  sinOrdenar: {
+    titulo: "Your idea is saved, but I didn't get to organize it.",
+    cita: "“{{texto}}”",
+    ordenarAhora: "Organize it now",
+  },
+};
+
+export const IDEA_VIEW: PorIdioma<typeof es> = { es, en };

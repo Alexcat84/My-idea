@@ -8,15 +8,16 @@
  * la bitácora; se movió aquí porque es un análisis real, no un registro).
  */
 import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { HITOS } from "@/lib/i18n/mensajes/hitos";
 
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
 
-function fechaMapa(iso: string, meses: readonly string[]): string {
+function fechaMapa(iso: string, t: { meses: readonly string[]; fechaCorta: string }): string {
   const d = new Date(iso);
-  return `${d.getDate()} ${meses[d.getMonth()]}`;
+  return interpolar(t.fechaCorta, { d: d.getDate(), mes: t.meses[d.getMonth()] });
 }
 
 export interface HitoMapa {
@@ -67,7 +68,7 @@ export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: bool
                       }}
                     />
                   </div>
-                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha, t.meses)}</div>
+                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha, t)}</div>
                   <div className="mt-1 text-[12.5px] font-semibold leading-[1.35]" style={{ color: esCierre ? VERDE : "#F5F6F8" }}>
                     {h.nombre}
                   </div>

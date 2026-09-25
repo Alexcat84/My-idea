@@ -14,4 +14,16 @@ const es = {
   },
 };
 
-export const VOZ: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  detenerDictado: "Stop dictating",
+  dictarPorVoz: "Dictate with your voice",
+  errores: {
+    sinPermiso:
+      "Your browser didn't give me permission to use the microphone. You can type instead, or allow it in your browser settings.",
+    sinMicrofono: "I couldn't find a microphone. You can type your answer.",
+    silencioLargo: "I turned off the microphone because I stopped hearing you. Tap it to keep dictating.",
+    cortado: "Dictation cut out. You can try again or type instead.",
+  },
+};
+
+export const VOZ: PorIdioma<typeof es> = { es, en };

@@ -23,4 +23,25 @@ const es = {
   continuar: "Continuar",
 };
 
-export const NUEVA_IDEA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  errores: {
+    conexionCortadaRef:
+      "The connection dropped before we could finish. Your text is still here; try again (reference {{id}}).",
+    sinId: "no id",
+    atorado: "something got stuck; try again",
+    cortadaAMedioCamino: "the connection dropped halfway through; your text is still here, try again",
+    tardando: "this is taking longer than usual; your text is still here, try again",
+    sinConexion: "we couldn't connect; check your internet connection and try again",
+  },
+  irAMisIdeas: "Go to my ideas",
+  organizando: "Organizing your idea…",
+  etiquetaChispa: "New idea · The Spark",
+  cuentameTuIdea: "Tell me your idea",
+  subtitulo: "Type it or dictate it just as you have it in mind. That's all it takes.",
+  placeholder: "I want to deliver specialty coffee to homes in my neighborhood…",
+  intentarDeNuevo: "Try again",
+  sinPlantillas: "No templates or forms. Just your idea, in your own words.",
+  continuar: "Continue",
+};
+
+export const NUEVA_IDEA: PorIdioma<typeof es> = { es, en };

@@ -132,7 +132,7 @@ const es = {
   /** las tres caras del espacio */
   caras: {
     plan: "Plan",
-    manos: "Manos a la obra",
+    manos: "Manos a la Obra",
     avance: "Tu avance",
   },
 
@@ -238,4 +238,221 @@ const es = {
   },
 };
 
-export const MANOS_A_LA_OBRA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  cambiar: "change",
+  todaviaNo: "Not yet",
+  cerrando: "Closing…",
+  etapaN: "Stage {{n}}",
+
+  fila: {
+    verDetalle: "See the details of this activity",
+    noAplica: "doesn't apply",
+    noAplicaConMotivo: "doesn't apply · {{motivo}}",
+    estaSemana: "this week",
+    paraEl: "due {{fecha}}",
+    hechoEl: "done on {{fecha}}",
+    cambiarFecha: "change date",
+    cambiarLaFecha: "Change the date:",
+    ariaCambiarFecha: "Change the date you did it",
+    listo: "done",
+  },
+
+  ritual: {
+    encabezado: "Continue my idea · {{paso}} of 3",
+    encabezadoMundo: "Continue {{mundo}} · {{paso}} of 3",
+    cerrar: "Close",
+    aunNoArrancas: "Haven't gotten started yet? Tell me what's changed since we put the plan together.",
+    aunNoArrancasMundo: "Haven't gotten started on {{mundo}} yet? Tell me what's changed since we put its plan together.",
+    realidadSeMueve:
+      "Sometimes reality moves before you do: a supplier falls through, something breaks down, a new opportunity shows up. If you've already done something, mark it above and I'll take it into account.",
+    teCuento: "Let me tell you",
+    checklistEsHistoria: "Your checklist is your story: does it show what you've done so far?",
+    llevasHechas:
+      "You've done {{hechos}} of {{total}} actions. Adjust anything above that needs it. I'll build the “what's happened” from that, so you don't have to write it twice.",
+    llevasHechasMundo:
+      "You've done {{hechos}} of {{total}} {{mundo}} actions. Adjust anything above that needs it. I'll build the “what's happened” from that, so you don't have to write it twice.",
+    asiVaSigamos: "That's where it stands, let's keep going",
+    algoMas: "Anything else I should know?",
+    fueraDelChecklist: "What happened outside the checklist: a surprise, a change, something you discovered. Optional.",
+    placeholderDetalles: "Tell me in your own words, type or dictate…",
+    seguir: "Next",
+    atras: "Back",
+    haciaDonde: "Where should we go deeper?",
+    siAlgoTeQuita: "If something is keeping you up at night or needs solving soon, say it here. If not, I'll guide you based on your progress.",
+    placeholderEnfoque: "What matters most to me right now is… (type or dictate)",
+    pensando: "Thinking…",
+    botonMiIdea: "Continue my idea · {{n}} credits",
+    botonMundo: "Continue this world · {{n}} credits",
+    noEstoySeguro: "I'm not sure",
+    garantiaCobro: "Credits come off only once it's delivered. If something fails, you aren't charged anything.",
+  },
+
+  modo: {
+    pregunta: "How do you want to move along your path?",
+    ritmoTitulo: "At my own pace",
+    ritmoDesc: "Mark your progress as it happens. No dates, no pressure.",
+    fechasTitulo: "With dates and reminders",
+    fechasDesc: "I'll suggest a schedule; you adjust it.",
+    elegirEste: "Choose this one",
+    puedesCambiar: "You can switch modes anytime.",
+    actual: "Mode: <b>{{modo}}</b>",
+    aMiRitmo: "at my own pace",
+    conFechas: "with dates",
+  },
+
+  capacidad: {
+    "2-5": "2 to 5 hours",
+    "5-10": "5 to 10 hours",
+    "10-20": "10 to 20 hours",
+    "20+": "More than 20 hours",
+  },
+
+  fechas: {
+    tituloRecalcular: "Recalculate your pending dates",
+    tituloPoner: "Put dates on your path",
+    propongo: "Here are the dates I suggest, in plain words; adjust any you like. The time of day is optional.",
+    preguntaCapacidad: "How many hours a week can you give this space?",
+    reparto:
+      "I spread the weeks according to the work each task takes, and I plan around the low end of what you give me: if you end up with time to spare, you'll be ahead. You can change it anytime.",
+    moverEtapa: "Move this stage by a week",
+    avisoAncla: "This safeguard doesn't land before {{protegido}}: move it, or accept the risk with your eyes open.",
+    ariaFecha: "Date for: {{tarea}}",
+    guardando: "Saving…",
+    aceptar: "Accept these dates",
+    ponerlasDespues: "Set them later",
+    sinFechas: "Without dates, I won't be able to remind you of anything.",
+  },
+
+  registro: {
+    titulo: "{{mundo}} register",
+    camino: "The path: <v/>",
+    protege: "Protects: <v/>",
+    tuRespuesta: "Your answer: <v/>",
+  },
+
+  capacidadEspacio: {
+    leDas: "You give it <b>{{horas}}</b> a week.",
+    preguntaAhora: "How many hours a week can you give it now?",
+    nuevasHoras: "The new hours kick in when you tap Recalculate pending dates.",
+  },
+
+  panel: {
+    ponerFechasAhora: "Set dates now",
+    fechasActivas: "<b>Dates on.</b> Your path has a baseline.",
+    anadirCalendario: "Add to my calendar",
+    recalcularPendientes: "Recalculate pending dates",
+  },
+
+  errores: {
+    guardarEleccion: "we couldn't save your choice; check your connection and try again",
+    guardarHoras: "we couldn't save your hours per week; check your connection and try again",
+    guardarFechas: "we couldn't save your dates; check your connection and try again",
+    moverFecha: "we couldn't move the date; check your connection and try again",
+    guardar: "we couldn't save; check your connection and try again",
+    guardarCambio: "we couldn't save the change; check your connection and try again",
+    conectar: "we couldn't connect; check your connection and try again",
+  },
+
+  caras: {
+    plan: "Plan",
+    manos: "Get to Work",
+    avance: "Your progress",
+  },
+
+  nucleo: {
+    tuViajePrincipal: "Your main journey",
+    avanza: "Your idea is moving forward in the real world",
+    tuPlan: "Your plan",
+    miIdea: "My idea",
+    tuViaje: "Your Journey",
+    volverEntrevista: "Back to the interview",
+    tuViajeCore: "Your core journey · <b>{{hechos}}/{{total}}</b>",
+    pistaEstado: "Tap a task's circle to choose its status (done, in progress, doesn't apply…).",
+    sinChecklist: "Your checklist grows out of your plan: generate your plan and its actions will show up here.",
+    historia: "History ({{n}})",
+    planHistoria: "Plan {{etiqueta}} · {{cuando}}",
+    planEtiqueta: "Plan {{etiqueta}}",
+  },
+
+  mundo: {
+    completado: "Completed",
+    activoConteo: "Active world · {{hechos}}/{{total}}",
+    listoParaGenerar: "Ready to generate your plan",
+    activo: "Active world",
+    porExplorar: "Still to explore",
+    terminado: "You called it done {{cuando}}.",
+    terminadoConPendientes: "You called it done {{cuando}}. Whatever was left pending is still here: it's part of your story.",
+    exploracion: "Exploration",
+    plan: "Plan",
+    manos: "Get to Work",
+    manosConteo: "Get to Work · {{hechos}}/{{total}}",
+    planBasico: "The {{mundo}} plan is a basic version: it was put together without AI writing, and you weren't charged for it.",
+    usaraSiEntrega: "This will use <b>{{n}} credits</b> from your balance, only if the AI delivers it.",
+    generarCompleto: "Generate the full plan · {{n}} credits",
+    tuDiagnostico: "Your diagnosis",
+    elPlanDe: "The {{mundo}} plan",
+    usara: "This will use <b>{{n}} credits</b> from your balance.",
+    generarMiPlan: "Generate my {{mundo}} plan · {{n}} credits",
+    preparando: "Getting your world ready…",
+    explorar: "Explore this world",
+    reabriendo: "Reopening…",
+    reabrir: "Reopen this world",
+    siVuelves: "If you come back to it, your checklist will be waiting just as you left it.",
+    disteTerminado: "Are you calling {{mundo}} done? You can reopen it anytime.",
+    llevas: "You've done {{hechos}} of {{total}} actions in this world. Any still pending are kept just as they are. Closing this world doesn't close your idea.",
+    llevasPct:
+      "You've done {{hechos}} of {{total}} actions in this world ({{pct}}%). Any still pending are kept just as they are. Closing this world doesn't close your idea.",
+    porQueCierras: "Why are you closing it here? <s>(optional, just for your own memory)</s>",
+    placeholderMotivo: "I'm closing it because…",
+    siTerminado: "Yes, I'm calling it done",
+    cicloDesc: "Did reality change your {{mundo}} plan? Tell me what happened and I'll recalculate from where you are.",
+    cerrarTitulo: "Are you calling {{mundo}} done?",
+    cerrarDesc:
+      "Mark it as completed when it feels closed. Anything still pending is kept; you can reopen it anytime.",
+    bitacoraTitulo: "{{mundo}} Logbook",
+    bitacoraDesc: "The story of this world, step by step: every decision you've made here.",
+    calendarioTitulo: "{{mundo}} calendar",
+    calendarioDesc: "What's coming up in this world, day by day. Its dates, looking ahead.",
+    analisisTitulo: "{{mundo}} analysis",
+    analisisDesc: "The pace, the stages and the follow-through of this world, calculated from what you did.",
+    documentosTitulo: "{{mundo}} documents",
+    documentosDesc: "This world's report and whatever each phase of its path leaves behind, as .md or PDF.",
+  },
+
+  tarjetas: {
+    cicloTitulo: "Deepening Cycle",
+    cicloDesc: "Did reality change your plan? Tell me what happened and I'll recalculate from where you are.",
+    bitacoraTitulo: "My Logbook",
+    bitacoraDesc: "The story of your journey, step by step: every decision you've made.",
+    calendarioTitulo: "Your calendar",
+    calendarioDesc: "What's coming up, day by day. Take your dates to your phone's calendar.",
+    analisisTitulo: "Project analysis",
+    analisisDesc: "Your pace, your stages and your follow-through, calculated from what you did.",
+    documentosTitulo: "Your documents",
+    documentosDesc: "Your plan, every Follow-up and the complete Full Record, as .md or PDF.",
+    realizarTitulo: "Is your idea a project yet?",
+    realizarDesc: "When it feels real, close it. You don't need to finish the whole checklist.",
+  },
+
+  cierre: {
+    realizada: "Your idea is achieved: the Deepening Cycle comes back if you reopen it from its celebration.",
+    cierraTuIdea: "This closes your idea, and your project is born. You can reopen it anytime.",
+    llevas: "You've done {{hechos}} of {{total}} actions. Any still pending are kept just as they are: they're part of your story.",
+    llevasPct:
+      "You've done {{hechos}} of {{total}} actions ({{pct}}%). Any still pending are kept just as they are: they're part of your story.",
+    porQueCierras: "Why are you closing it here? <s>(optional, just for your own memory)</s>",
+    placeholderMotivo: "I'm closing it because…",
+    siProyecto: "Yes, it's a project",
+  },
+
+  ritmo: {
+    titulo: "Pace",
+    ultimaAccion: "Last action",
+    aunNinguna: "none yet",
+    desde: "Started Get to Work",
+    ciclosAjuste: "Adjustment cycles",
+    pausa: "Take a break whenever you need to. When you come back, your checklist will be waiting exactly where you left off.",
+  },
+};
+
+export const MANOS_A_LA_OBRA: PorIdioma<typeof es> = { es, en };

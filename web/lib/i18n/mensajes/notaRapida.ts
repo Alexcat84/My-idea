@@ -12,4 +12,15 @@ const es = {
   quitar: "quitar",
 };
 
-export const NOTA_RAPIDA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  verOEditar: "View or edit your note",
+  anadir: "Add a note",
+  cerrarNota: "Close the note",
+  tuNota: "Your note",
+  placeholder: "Anything you need to remember…",
+  guardar: "Save",
+  cerrar: "close",
+  quitar: "remove",
+};
+
+export const NOTA_RAPIDA: PorIdioma<typeof es> = { es, en };

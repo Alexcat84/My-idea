@@ -53,4 +53,53 @@ const es = {
   },
 };
 
-export const REPORTE: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  /** la unidad de venta cuando el usuario no dio ninguna (va dentro de las preguntas) */
+  unidadPorOmision: "unit",
+  preguntas: {
+    servicio: {
+      costo_materiales_unidad:
+        "How much does each {{u}} cost you directly (supplies, materials you use, etc.)? A rough number is fine; if you don't have one, answer 0.",
+      horas_por_unidad: "How many hours of work does each {{u}} take you?",
+      valor_hora: "How much is an hour of your work worth to you (what you feel you should earn per hour)?",
+      precio_tentativo: "What price do you charge (or would you charge) for each {{u}}?",
+      capacidad_semanal: "In a normal week, how many can you take on, counting each {{u}}?",
+      costos_fijos_mensuales: "Do you have monthly fixed costs (rent, tools, etc.)? If so, how much do they add up to per month?",
+    },
+    digital: {
+      costos_fijos_mensuales:
+        "How much do you spend each month on fixed infrastructure costs (hosting, APIs, tools, subscriptions)?",
+      costo_materiales_unidad:
+        "Do you have any variable cost for each {{u}} (for example, API cost per use)? If it's practically zero, answer 0.",
+      precio_tentativo: "At what price or average revenue do you sell (or would you sell) each {{u}}?",
+      unidades_vendidas: "How many do you have today, counting each {{u}}, or what would be a realistic monthly goal?",
+    },
+    productoFisico: {
+      costo_materiales_unidad: "Roughly how much do you spend on materials for each {{u}}? A rough number is fine.",
+      horas_por_unidad: "How many hours of work does each {{u}} take you, from start to finish?",
+      valor_hora: "How much is an hour of your work worth to you (what you feel you should earn per hour)?",
+      precio_tentativo: "What price would you sell (or do you sell) each {{u}} for?",
+      capacidad_semanal: "In a normal week, how many can you make, counting each {{u}}?",
+      costos_fijos_mensuales: "Do you have monthly fixed costs (rent, tools, etc.)? If so, how much do they add up to per month?",
+    },
+  },
+  tusNumerosHoy: "## Your numbers today",
+  gigo: {
+    algoNoCuadra: "Before calculating anything, I found something in these numbers that doesn't add up:",
+    noVoyACalcular:
+      "I'm not going to calculate margin or break-even point with these numbers: the result would be a figure that sounds precise but is wrong, and that's worse than having no calculation at all. I'd rather tell you honestly.",
+    losNumerosQueDiste: "## The numbers you gave",
+    losQueTeFaltanComo: "## The numbers you're missing (and how to get them)",
+    revisa:
+      "Check whether any of the numbers above is in a different unit than the report expected (for example, a monthly expense entered as a cost per unit, or a timeframe in months entered as hours), correct it, and generate the report again with the corrected figure.",
+  },
+  offline: {
+    costo: "- Cost per unit: {{valor}}",
+    margen: "- Margin per unit: {{valor}} ({{porcentaje}}%)",
+    equilibrio: "- Break-even point: {{valor}} units/month",
+    techo: "- Monthly revenue ceiling: {{ingreso}} ({{unidades}} units/month)",
+    losQueTeFaltan: "## The numbers you're missing",
+  },
+};
+
+export const REPORTE: PorIdioma<typeof es> = { es, en };

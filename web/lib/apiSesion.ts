@@ -8,7 +8,7 @@
  */
 import { NextResponse } from "next/server";
 import type { SupabaseClient } from "@supabase/supabase-js";
-import catalogo from "./assets/packs_catalog.json";
+import { mundo } from "./catalogoMundos";
 import { costoAcumuladoUsd, PRESUPUESTO_SESION_USD_DEFAULT, type UsoAcumulado } from "./costmeter";
 import { resolverReserva } from "./creditos";
 import {
@@ -48,9 +48,7 @@ function cierreCaminoTexto(idioma: Locale): { titulo: string; cuerpo: string } {
  * reembolso que anunciar en el cuerpo. */
 function cierreMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
   const t = elegir(SERVIDOR_SESION, idioma).cierre;
-  const nombre =
-    (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
-    t.mundoSinNombre;
+  const nombre = mundo(dominio, idioma)?.nombre ?? t.mundoSinNombre;
   return {
     titulo: interpolar(t.mundoTitulo, { nombre }),
     cuerpo: t.mundoCuerpo,
@@ -63,9 +61,7 @@ function cierreMundoTexto(dominio: string, idioma: Locale): { titulo: string; cu
  * una puerta nueva, y que lo que ya tiene sigue intacto. */
 function cierreSeguimientoMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
   const t = elegir(SERVIDOR_SESION, idioma).cierre;
-  const nombre =
-    (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
-    t.seguimientoSinNombre;
+  const nombre = mundo(dominio, idioma)?.nombre ?? t.seguimientoSinNombre;
   return {
     titulo: interpolar(t.seguimientoTitulo, { nombre }),
     cuerpo: t.seguimientoCuerpo,

@@ -11,6 +11,7 @@
  * que no tape el texto. Se monta oculto y la hoja de impresión lo enciende.
  */
 import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
@@ -22,9 +23,9 @@ const SEC = "#4B4E55";
 const TER = "#6B6E75";
 const HILO = "#DFE1E6";
 
-function fechaMapa(iso: string, meses: readonly string[]): string {
+function fechaMapa(iso: string, t: { meses: readonly string[]; fechaCorta: string }): string {
   const d = new Date(iso);
-  return `${d.getUTCDate()} ${meses[d.getUTCMonth()]}`;
+  return interpolar(t.fechaCorta, { d: d.getUTCDate(), mes: t.meses[d.getUTCMonth()] });
 }
 
 export interface HitoResumen {
@@ -116,7 +117,7 @@ export function ContenidoResumen({
                         const verde = cerrada && i === N - 1;
                         return (
                           <div key={i} style={{ textAlign: "center" }}>
-                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha, t.meses)}</div>
+                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha, t)}</div>
                             <div style={{ fontSize: 12.5, fontWeight: verde ? 700 : 600, marginTop: 2, lineHeight: 1.35, color: verde ? VERDE : TINTA }}>{h.nombre}</div>
                           </div>
                         );

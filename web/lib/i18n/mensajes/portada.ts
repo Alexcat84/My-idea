@@ -69,7 +69,7 @@ const es = {
     titulo: "No es un chatbot, es tu espacio de trabajo",
     barra: "Cafetería de especialidad a domicilio · Entrevista",
     enCurso: "en curso…",
-    categoria: "Calidad y Diseño en el MVP",
+    categoria: "Calidad y diseño en tu primera versión",
     pregunta:
       "De estos dos riesgos, el café que llega frío y el costo del empaque térmico, ¿cuál necesitas resolver PRIMERO para confiar en que el negocio funciona como sistema?",
     fraseDemo: "Primero la temperatura: si el café llega frío, el empaque ya no importa.",
@@ -97,4 +97,99 @@ const es = {
   },
 };
 
-export const PORTADA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  meta: {
+    titulo: "My Idea: turn your creativity into action",
+    descripcion:
+      "Entrepreneurs don't lack ideas. What they lack is a serious sounding board. Share yours, get your plan, and put it to work.",
+  },
+  nav: {
+    inicio: "Home",
+    acercaDe: "About",
+    comoFunciona: "How it works",
+    app: "App",
+  },
+  salir: "Log out",
+  iniciarSesion: "Log in",
+  misIdeas: "My ideas",
+  comenzar: "Get started",
+  comenzarGratis: "Start for free",
+  tituloOculto: "My Idea: turn your creativity into action",
+  etapas: {
+    chispa: "The Spark",
+    claridad: "Clarity",
+    exploracion: "Exploration",
+    plan: "Your Plan",
+    manos: "Get to Work",
+  },
+  recorridoDeLaIdea: "Your idea's journey",
+  marquesina: {
+    unaAccion: "One action for this week",
+    proyectoVivo: "Your living project",
+  },
+  acerca: {
+    titulo: "Entrepreneurs don't lack ideas. What they lack is a serious sounding board",
+    parrafo1:
+      "My Idea was born from that belief. We built a knowledge engine that asks like a good mentor and structures like a good consultant: it listens to your context, doesn't recycle templates, and knows when what you've shared already covers a stage.",
+    parrafo2:
+      "What you get isn't a conversation that fades away: it's a living project. Pause, act in the real world, and come back whenever you want. My Idea works out where you stand and shows you the exact next steps, all the way to the finish line. And if your project calls for it, it grows with specialized modules.",
+  },
+  como: {
+    titulo: "From idea to the real world",
+    cuentameTuIdea: "Tell me your idea, or where you are with it",
+    paso1: {
+      titulo: "Describe your idea",
+      texto: "Write it or say it, just as you picture it. That's all it takes.",
+    },
+    paso2: {
+      demo: "generating…",
+      titulo: "Add more detail",
+      texto:
+        "No templates: a tailored interview evolves in real time with the nature of your idea and speaks your language, with no technical barriers.",
+    },
+    paso3: {
+      demo: "This week",
+      titulo: "Get your plan",
+      texto:
+        "A detailed plan with stages, experiments, and concrete actions to carry it out. This is where your roadmap comes together.",
+    },
+    paso4: {
+      demo: "exact next step",
+      titulo: "Act and come back",
+      texto:
+        "Pause, take action in the real world, and come back: the plan works out where you are and shows you the exact steps to the finish line.",
+    },
+  },
+  mockup: {
+    titulo: "It's not a chatbot, it's your workspace",
+    barra: "Specialty coffee delivery · Interview",
+    enCurso: "in progress…",
+    categoria: "Quality and design in your first version",
+    pregunta:
+      "Of these two risks, coffee that arrives cold and the cost of insulated packaging, which one do you need to solve FIRST to trust that the business works as a system?",
+    fraseDemo: "Temperature first: if the coffee arrives cold, the packaging doesn't matter anymore.",
+    enviar: "Send",
+  },
+  banda: {
+    titulo: "From spark to reality",
+    texto:
+      "Five stages carry your idea from the first spark to seeing it work in the real world. At every one, you know where you are and what comes next.",
+  },
+  descargar: {
+    etiqueta: "The app",
+    titulo: "Keep it in your pocket",
+    texto: "The best answers come to you away from your desk.",
+    googlePlay: "Get it on Google Play",
+    dictar: "you can also just say it",
+  },
+  cta: {
+    titulo: "This is where your idea ends and your project begins",
+  },
+  pie: {
+    privacidad: "Privacy",
+    terminos: "Terms",
+    derechos: "© {{ano}} My Idea",
+  },
+};
+
+export const PORTADA: PorIdioma<typeof es> = { es, en };

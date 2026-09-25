@@ -40,4 +40,30 @@ const es = {
   errorSnapshotIlegible: "no pudimos leer las actividades de tu plan; intenta de nuevo en un momento",
 };
 
-export const MOTOR: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  familiaFaltante: {
+    accion_clientes:
+      "validating with real customers (conversations, a simple first version of your product, user testing, a real sale or pre-sale)",
+    viabilidad_economica: "whether your idea can sustain itself financially (costs, prices, break-even point)",
+    profundidad: "more depth in the path you explored",
+  },
+  reporteDisclaimer:
+    "\n\n---\n_Estimates based on the figures you provided; they don't replace formal accounting or tax advice, which vary by country._",
+  preguntaTipoOferta: "What exactly do you sell, and how do you charge for it?",
+  preguntaGenerica:
+    'Thinking about "{{titulo}}", tell me in your own words where you stand with your idea right now and what worries or excites you most.',
+  temaFamilia: {
+    accionClientes: "Go validate with customers",
+    viabilidadEconomica: "Your real numbers",
+  },
+  rangoBanda: {
+    S: "~1 h",
+    M: "~2-4 h",
+    L: "a full day",
+    XL: "several days",
+  },
+  checklistEstaSemana: "This week",
+  errorSnapshotIlegible: "we couldn't read your plan's activities; try again in a moment",
+};
+
+export const MOTOR: PorIdioma<typeof es> = { es, en };

@@ -41,9 +41,14 @@ describe("el auditor de idiomas", () => {
   });
 
   it("detecta las fallas (no aprueba en falso)", () => {
-    expect(auditarCatalogo("ok", { es: { a: "Hola {{n}}", b: ["x"], c: { d: "<b>sí</b>" } } })).toEqual([]);
-    expect(auditarCatalogo("vacio", { es: { a: " " } })).toEqual(["vacio.a [es]: cadena vacía"]);
+    expect(
+      auditarCatalogo("ok", {
+        es: { a: "Hola {{n}}", b: ["x"], c: { d: "<b>sí</b>" } },
+        en: { a: "Hi {{n}}", b: ["x"], c: { d: "<b>yes</b>" } },
+      })
+    ).toEqual([]);
+    expect(auditarCatalogo("vacio", { es: { a: " " }, en: { a: "x" } })).toEqual(["vacio.a [es]: cadena vacía"]);
     expect(auditarCatalogo("sinBase", { en: { a: "x" } })).toContain("sinBase: falta el idioma base (es)");
-    expect(auditarCatalogo("numero", { es: { a: 3 } })).toEqual(["numero.a [es]: tipo no admitido en un catálogo (number)"]);
+    expect(auditarCatalogo("numero", { es: { a: 3 }, en: { a: "x" } })).toContain("numero.a [es]: tipo no admitido en un catálogo (number)");
   });
 });

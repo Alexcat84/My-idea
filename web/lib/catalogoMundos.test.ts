@@ -118,3 +118,35 @@ describe("el mecanismo de ocultar, para el próximo mundo", () => {
     expect(leer("app/idea/[id]/IdeaView.tsx")).toContain('searchParams.get("ver") === "ocultos"');
   });
 });
+
+// i18n F3: el nombre y la promesa de cada mundo en el idioma de la interfaz
+// (glosario, DISENO §6). El español del catálogo de idiomas es COPIA del JSON
+// y esta prueba impide que se separen; los nombres en inglés son los del
+// glosario, escritos aquí a mano.
+describe("mundos por idioma (i18n F3)", () => {
+  it("el español del catálogo de idiomas es exactamente el de packs_catalog.json", () => {
+    for (const m of MUNDOS) {
+      expect(mundo(m.clave, "es")?.nombre, m.clave).toBe(m.nombre);
+      expect(mundo(m.clave, "es")?.promesa, m.clave).toBe(m.promesa);
+    }
+  });
+  it("en inglés, los nombres del glosario", () => {
+    const esperado: Record<string, string> = {
+      quality: "Quality & Trust",
+      health_safety: "Safety & People",
+      environmental: "Environment & Future",
+      seguridad_digital: "Digital Security",
+      exportacion: "Sell to the World",
+      franquicias: "Multiply Your Business",
+      risk_management: "Risks Under Control",
+      compras: "The Right Purchase",
+      entrega: "From Workshop to Customer",
+    };
+    for (const m of MUNDOS) expect(nombreDeMundo(m.clave, "en"), m.clave).toBe(esperado[m.clave]);
+    expect(mundosVisibles(false, "en").map((m) => m.nombre)).toContain("Quality & Trust");
+  });
+  it("sin idioma, el español de siempre; una clave desconocida se devuelve tal cual", () => {
+    expect(nombreDeMundo("quality")).toBe("Calidad y Confianza");
+    expect(nombreDeMundo("no_existe", "en")).toBe("no_existe");
+  });
+});

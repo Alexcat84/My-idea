@@ -12,4 +12,11 @@ const es = {
   profesional: { nombre: "Profesional", alcanza: "el viaje entero de una idea" },
 };
 
-export const PACKS_RECARGA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  recarga: { nombre: "Top-up", alcanza: "one follow-up or a single world" },
+  basico: { nombre: "Basic", alcanza: "your full plan, with your numbers included" },
+  premium: { nombre: "Premium", alcanza: "your plan and your first follow-up" },
+  profesional: { nombre: "Professional", alcanza: "an idea's whole journey" },
+};
+
+export const PACKS_RECARGA: PorIdioma<typeof es> = { es, en };

@@ -61,4 +61,61 @@ const es = {
   lecturaFallida: "No pude leer tu avance en este momento; intenta de nuevo en un rato.",
 };
 
-export const ANALYTICS_INFORME: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  hitos: {
+    laChispa: "The Spark",
+    laIdeaNace: "Your idea is born",
+    claridad: "Clarity",
+    tuIdeaOrganizada: "Your idea, organized",
+    conLineaBase: "with a baseline",
+    replanificado: "replanned with what you learned",
+    tuPlanCiclo: "Your Plan · cycle {{n}}",
+    mundoActivado: "World activated",
+    mundoCompletado: "World completed",
+    accionCompletada: "Action completed",
+    realizada: "ACHIEVED",
+    cumplimiento: {
+      a_tiempo: "planned · on time",
+      adelantada: "planned · early",
+      tardia: "planned · late",
+    },
+  },
+  md: {
+    duracion: "- Duration: **{{n}} days**",
+    accionesActivas: "- Actions completed: **{{hechas}} of {{total}}** active",
+    ritmo: "- Pace: **{{n}} actions per week**",
+    racha: "- Longest streak: **{{n}} days**",
+    retiradas: "- Set aside (don't apply): **{{n}}**",
+    cumplimiento:
+      "- On-time record: **{{aTiempo}} on time, {{adelantadas}} early, {{tardias}} late** (out of {{total}} with a date)",
+    titulo: "# Analysis of {{nombre}}",
+    estadoActual: "## Current status",
+    ideaRealizada: "- Idea achieved on {{fecha}}",
+    accionesHoy: "- Actions today: **{{hechas}} of {{total}}**",
+    pct: " ({{pct}}%)",
+    mundoCompletadoEl: "completed on {{fecha}}",
+    mundoAbierto: "open",
+    mundoLinea: "- {{mundo}}: **{{hechas}} of {{total}}**{{pct}}, {{estado}}",
+    porQueLaCerraste: "### Why you closed it here",
+    loQueConstruiste: "## What you built",
+    duracionTotal: "- Total duration: **{{n}} days**",
+    accionesCompletadas: "- Actions completed: **{{hechas}}** of **{{total}}** active",
+    ciclosYMundos: "- Plan cycles: **{{ciclos}}** · Worlds: **{{mundos}}**",
+    retiradasTitulo: "### Set aside (don't apply): {{n}}",
+    duracionPorEtapa: "### Actual duration by stage",
+    etapaDias: "- Stage {{etapa}}: {{dias}} days",
+    cumplimientoTitulo: "## On-time record (against your dates)",
+    aTiempo: "- On time: **{{n}}** ({{pct}}%)",
+    adelantadas: "- Early: **{{n}}** ({{pct}}%)",
+    tardias: "- Late: **{{n}}** ({{pct}}%)",
+    desviacionVigente: "- Average deviation from your current plan: **{{signo}}{{dias}} days**",
+    frentePlanInicial:
+      "- Compared with your original plan: **{{signo}}{{dias}} days** of average deviation · **{{n}}** plan updates.",
+    replanificarEsMetodo:
+      "Replanning is part of the method. Your current plan follows your real pace; adjusting the map isn't failing.",
+    hitos: "## Milestones",
+  },
+  lecturaFallida: "I couldn't read your progress right now; try again in a little while.",
+};
+
+export const ANALYTICS_INFORME: PorIdioma<typeof es> = { es, en };

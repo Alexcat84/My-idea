@@ -28,4 +28,31 @@ const es = {
   },
 };
 
-export const SERVIDOR_MUNDOS: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  unlock: {
+    noPudimosActivar: "we couldn't activate the world, try again",
+  },
+  start: {
+    diagnosticoListo:
+      'Your "{{mundo}}" diagnosis is ready: you can reread it and generate its plan whenever you want. ' +
+      "When your project moves on to its next cycle, you'll be able to explore it again for free.",
+    puertasRecorridas: "You've already been through every door in this world.",
+    preparando: "This world is still being prepared. You'll be able to explore it very soon.",
+    noPudimosAbrir: "we couldn't open the world, try again",
+  },
+  completar: {
+    accionInvalida: "invalid action; use 'completar' or 'reabrir'",
+    noPudeGuardarActa:
+      'I couldn\'t save the closing record for "{{mundo}}", so it\'s still open. Try again in a moment.',
+    noPudimosGuardar: "we couldn't save; try again",
+  },
+  diagnostico: {
+    sinExploracion: "I couldn't find this world's exploration. Explore it again from its space.",
+    sinRespuestas: "This exploration doesn't have any answers to diagnose yet.",
+    esSeguimiento: "This is a follow-up cycle: it ends in your plan, not in a diagnosis.",
+    noPudimosRedactar: "we couldn't write your diagnosis; try again in a moment",
+    noPudimosGuardar: "we couldn't save your diagnosis; try again",
+  },
+};
+
+export const SERVIDOR_MUNDOS: PorIdioma<typeof es> = { es, en };

@@ -148,7 +148,7 @@ export function PotenciaTuIdea({
   // nueve estan publicados, asi que esto no filtra nada; el filtro sigue en
   // pie para el proximo mundo que nazca, que entrara oculto hasta que el
   // fundador lo camine.
-  const packs = mundosVisibles(mostrarOcultos) as unknown as Pack[];
+  const packs = mundosVisibles(mostrarOcultos, idioma) as unknown as Pack[];
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN): abrir un mundo es GRATIS, siempre. Lo que
   // se compra es su PLAN, a la entrega (ancla ETAPA 2 en la ruta del plan).

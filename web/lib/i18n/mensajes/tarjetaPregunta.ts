@@ -7,4 +7,10 @@ const es = {
   pensando: "Pensando…",
 };
 
-export const TARJETA_PREGUNTA: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  placeholder: "Tell me in your own words…",
+  responder: "Answer",
+  pensando: "Thinking…",
+};
+
+export const TARJETA_PREGUNTA: PorIdioma<typeof es> = { es, en };

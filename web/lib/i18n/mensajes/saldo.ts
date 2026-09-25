@@ -8,4 +8,11 @@ const es = {
   tituloChip: "Tus créditos",
 };
 
-export const SALDO: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  creditos: { one: "{{n}} credit", other: "{{n}} credits" },
+  reservados: { one: "{{n}} reserved for your current session", other: "{{n}} reserved for your current session" },
+  tituloConReserva: "{{saldo}} available · {{reservados}}",
+  tituloChip: "Your credits",
+};
+
+export const SALDO: PorIdioma<typeof es> = { es, en };

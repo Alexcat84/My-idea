@@ -41,7 +41,7 @@ const es = {
   follow: {
     ideaRealizada: "Diste tu idea por realizada. Reábrela si quieres seguir trabajándola.",
     mundoCompletado: 'Diste "{{mundo}}" por completado. Reábrelo si quieres seguir trabajándolo.',
-    primeroExplora: 'Primero explora "{{mundo}}" — su seguimiento nace de su plan.',
+    primeroExplora: 'Primero explora "{{mundo}}": su seguimiento nace de su plan.',
     puertasRecorridas: 'Ya recorriste todas las puertas de "{{mundo}}".',
   },
   numeros: {
@@ -72,4 +72,75 @@ const es = {
   },
 };
 
-export const SERVIDOR_PROYECTO: PorIdioma<typeof es> = { es };
+const en: typeof es = {
+  borrar: {
+    algoSeAtoro: "something got stuck; try again",
+  },
+  baseline: {
+    faltaPlanOFechas: "missing plan_id or malformed dates",
+    noPudimosSellar: "we couldn't lock in the baseline",
+  },
+  modo: {
+    modoInvalido: "invalid modo_camino; use one of: {{opciones}}",
+    capacidadInvalida: "invalid capacidad_semanal; use one of: {{opciones}}",
+    nadaQueActualizar: "nothing to update: send modo_camino and/or capacidad_semanal",
+    espacioNoExiste: "that space doesn't exist",
+  },
+  checklist: {
+    faltaItemId: "missing item_id",
+    estadoInvalido: "invalid estado; use one of: {{opciones}}",
+    notaInvalida: "nota must be text or null",
+    completedAtInvalido: "completed_at must be an ISO date not in the future, or null",
+    motivoInvalido: "no_aplica_motivo must be text or null",
+    bandaInvalida: "invalid banda; use one of: {{opciones}}",
+    fechaBaseInvalida: "fecha_base must be an ISO date or null",
+    nadaQueActualizar: "nothing to update: send estado, nota, completed_at, no_aplica_motivo, fecha_base and/or banda",
+    itemNoEncontrado: "item not found",
+  },
+  moverFecha: {
+    faltaItemOFecha: "missing item_id or malformed date",
+    actividadNoEncontrada: "activity not found",
+    yaHecha: "This activity is already done. If you did it on a different date, change it from the activity itself.",
+    retirada: "This activity is set aside. Bring it back first to give it a date.",
+    sinFecha: "this activity doesn't have a date to move",
+  },
+  realizar: {
+    accionInvalida: "invalid action; use 'realizar' or 'reabrir'",
+    noPudeGuardarActa:
+      "I couldn't save the closing record for your idea, so it's still open. Try again in a moment.",
+  },
+  follow: {
+    ideaRealizada: "You marked your idea as achieved. Reopen it if you want to keep working on it.",
+    mundoCompletado: 'You marked "{{mundo}}" as completed. Reopen it if you want to keep working on it.',
+    primeroExplora: 'Explore "{{mundo}}" first: its follow-up grows out of its plan.',
+    puertasRecorridas: 'You\'ve already been through every door in "{{mundo}}".',
+  },
+  numeros: {
+    cifrasNoObjeto: "'numeros' must be an object of field: value",
+    valorInvalido: "the value of '{{campo}}' must be a number >= 0 or a range {min, max}",
+    versionNoExiste: "that version doesn't exist",
+    activaUnaVez: "Your Numbers is activated once per idea.",
+    noNarroInconsistente:
+      "I won't narrate a conclusion from this data: check the data guardian and fix the figure that doesn't add up.",
+    noPudeNarrar:
+      "I couldn't narrate your numbers right now. Your dashboard and your figures are up to date; try narrating again in a little while.",
+  },
+  reporte: {
+    proyectoNoEncontrado: "project not found",
+    respuestaInvalida: "'respuesta' must be a non-empty string",
+    entrevistaEnCurso: "there's already a report interview in progress; send 'respuesta' to continue it",
+    sinEntrevista: "there's no report interview in progress; call without 'respuesta' to start one",
+  },
+  bitacora: {
+    tituloEspacio: "# {{espacio}} Logbook",
+  },
+  calendario: {
+    noEncontrado: "Calendar not found.",
+    tuViaje: "Your Journey",
+  },
+  packs: {
+    packDesconocido: "unknown pack",
+  },
+};
+
+export const SERVIDOR_PROYECTO: PorIdioma<typeof es> = { es, en };
