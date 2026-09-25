@@ -26,7 +26,10 @@ import {
   type EvaluacionCobertura,
   type Familia,
 } from "../readiness";
-import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, TEXTO_FAMILIA_FALTANTE } from "./constants";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { interpolar } from "../i18n/interpolar";
+import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
+import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
 import { esOfrecible, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
@@ -42,15 +45,15 @@ import { detectarFaltaDeAcentos } from "../detectorAcentos";
 
 /** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
  * redacción con IA (el ensamblado offline). Ese plan no se cobra. */
-export const AVISO_VERSION_BASICA =
-  "Esta es una versión básica de tu plan: la armé sin la redacción con IA porque esta conversación llegó a su tope de trabajo. No se te cobró. Puedes regenerarlo completo desde lo que ya me contaste: solo se cobra si la IA lo entrega.";
+// i18n F2: el texto vive en el catálogo MOTOR_PLAN; la constante es el valor base.
+export const AVISO_VERSION_BASICA = elegir(MOTOR_PLAN, LOCALE_BASE).avisoVersionBasica;
 
 /** El aviso de un plan ya guardado, derivado del evento que la ruta del plan
  * deja en las decisiones de su sesión: tras recargar, el aviso sigue ahí. */
-export function avisoDelPlan(decisiones: unknown): string | null {
+export function avisoDelPlan(decisiones: unknown, idioma: Locale = LOCALE_BASE): string | null {
   if (!Array.isArray(decisiones)) return null;
   return decisiones.some((e) => (e as { tipo?: unknown } | null)?.tipo === "plan_version_basica")
-    ? AVISO_VERSION_BASICA
+    ? elegir(MOTOR_PLAN, idioma).avisoVersionBasica
     : null;
 }
 
@@ -348,13 +351,17 @@ export interface CoberturaPlan {
  * que evaluarRuta, pero a partir de lo que el REDACTOR declaro que el
  * plan realmente trata -- la UNICA fuente para la etiqueta del plan y la
  * seccion "no cubre", coherente por construccion. */
-export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionPlan | null): CoberturaPlan {
+export function evaluacionDesdeAutodeclaracion(
+  autodeclaracion: AutodeclaracionPlan | null,
+  idioma: Locale = LOCALE_BASE
+): CoberturaPlan {
   const tratadas = new Set(autodeclaracion?.familias_tratadas ?? []);
   const tieneAccion = tratadas.has("accion_clientes");
   const tieneViabilidad = tratadas.has("viabilidad_economica");
+  const textoFaltante = textosFamiliaFaltante(idioma);
   const faltantes = ["accion_clientes", "viabilidad_economica"]
     .filter((f) => !tratadas.has(f))
-    .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
+    .map((f) => textoFaltante[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
     tiene_accion_clientes: tieneAccion,
@@ -377,7 +384,7 @@ export function evaluacionDesdeAutodeclaracion(autodeclaracion: AutodeclaracionP
  * seccion fija de sostenibilidad (regla 4), la misma senal que ya usa
  * corregirCoherenciaCobertura.
  */
-export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
+export function familiasDesdeEncabezados(cuerpo: string, idioma: Locale = LOCALE_BASE): CoberturaPlan {
   const encabezados = cuerpo
     .split("\n")
     .filter((linea) => linea.trim().startsWith("#"))
@@ -386,9 +393,10 @@ export function familiasDesdeEncabezados(cuerpo: string): CoberturaPlan {
   const tieneAccion = coincideKeyword(textoEncabezados, KEYWORDS_ACCION_CLIENTES);
   const tieneViabilidad =
     cuerpo.includes(SECCION_ECONOMICA_TITULO) || coincideKeyword(textoEncabezados, KEYWORDS_VIABILIDAD_ECONOMICA);
+  const textoFaltante = textosFamiliaFaltante(idioma);
   const faltantes = (["accion_clientes", "viabilidad_economica"] as const)
     .filter((f) => (f === "accion_clientes" ? !tieneAccion : !tieneViabilidad))
-    .map((f) => TEXTO_FAMILIA_FALTANTE[f]);
+    .map((f) => textoFaltante[f]);
   return {
     es_completa: tieneAccion && tieneViabilidad,
     tiene_accion_clientes: tieneAccion,
@@ -408,7 +416,8 @@ export function corregirCoherenciaCobertura(
   evaluacionCobertura: CoberturaPlan,
   cuerpo: string,
   tieneMaterialEconomico: boolean,
-  registrarEvento?: (evento: Record<string, unknown>) => void
+  registrarEvento?: (evento: Record<string, unknown>) => void,
+  idioma: Locale = LOCALE_BASE
 ): CoberturaPlan {
   const seccionPresente = tieneMaterialEconomico && cuerpo.includes(SECCION_ECONOMICA_TITULO);
   if (seccionPresente && !evaluacionCobertura.tiene_viabilidad_economica) {
@@ -417,7 +426,7 @@ export function corregirCoherenciaCobertura(
       ...evaluacionCobertura,
       tiene_viabilidad_economica: true,
       familias_faltantes: evaluacionCobertura.familias_faltantes.filter(
-        (f) => f !== TEXTO_FAMILIA_FALTANTE.viabilidad_economica
+        (f) => f !== textosFamiliaFaltante(idioma).viabilidad_economica
       ),
       es_completa: evaluacionCobertura.tiene_accion_clientes,
     };
@@ -497,18 +506,24 @@ export function extraerSeccionEconomica(cuerpo: string): string {
 
 /** Port de _ensamblar_offline: respaldo sin IA (fallo de red/presupuesto
  * en la llamada al redactor) -- concatena el material sin narrar. */
-export function ensamblarOffline(material: MaterialNodo[], perfilSesion: string | null, textoOriginal: string): string {
-  const out: string[] = ["# Tu plan de accion", ""];
+export function ensamblarOffline(
+  material: MaterialNodo[],
+  perfilSesion: string | null,
+  textoOriginal: string,
+  idioma: Locale = LOCALE_BASE
+): string {
+  const t = elegir(MOTOR_PLAN, idioma).offline;
+  const out: string[] = [t.titulo, ""];
   if (textoOriginal || perfilSesion) {
-    out.push("## Contexto");
-    if (textoOriginal) out.push(`Punto de partida: ${textoOriginal}`);
-    if (perfilSesion) out.push(`Lo que sabemos de tu idea: ${perfilSesion}`);
+    out.push(t.contexto);
+    if (textoOriginal) out.push(interpolar(t.puntoDePartida, { texto: textoOriginal }));
+    if (perfilSesion) out.push(interpolar(t.loQueSabemos, { perfil: perfilSesion }));
     out.push("");
   }
   material.forEach((m, i) => {
-    out.push(`## Etapa ${i + 1}: ${m.concepto}`);
+    out.push(interpolar(t.etapa, { n: i + 1, concepto: m.concepto }));
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
-    if (m.entregable) out.push(`  Punto de control: ${m.entregable}`);
+    if (m.entregable) out.push(`  ${interpolar(t.puntoDeControl, { entregable: m.entregable })}`);
     out.push("");
   });
   return out.join("\n");
@@ -547,8 +562,10 @@ export function finalizarPlan(
   families: Record<string, Familia>,
   textoOriginal: string,
   registrarEvento?: (evento: Record<string, unknown>) => void,
-  numerosProyecto?: unknown
+  numerosProyecto?: unknown,
+  idioma: Locale = LOCALE_BASE
 ): ResultadoEnsamblado {
+  const t = elegir(MOTOR_PLAN, idioma);
   const { cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico, payload } = preparacion;
 
   let cuerpo: string;
@@ -558,19 +575,19 @@ export function finalizarPlan(
     cuerpo = parsed.cuerpo;
     autodeclaracion = parsed.autodeclaracion;
   } else {
-    cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal);
+    cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);
   }
 
   let evaluacionCobertura: CoberturaPlan;
   if (autodeclaracion !== null) {
-    evaluacionCobertura = evaluacionDesdeAutodeclaracion(autodeclaracion);
+    evaluacionCobertura = evaluacionDesdeAutodeclaracion(autodeclaracion, idioma);
   } else {
     // Hotfix v2.2.1: ver familiasDesdeEncabezados -- jamas se degrada la
     // etiqueta solo porque el JSON de cola se corto.
-    evaluacionCobertura = familiasDesdeEncabezados(cuerpo);
+    evaluacionCobertura = familiasDesdeEncabezados(cuerpo, idioma);
     registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
-  evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento);
+  evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento, idioma);
   verificarProcedenciaEtapas(autodeclaracion, ruta, cosechaIds, registrarEvento);
 
   // Fase 3.1 (caja de vidrio): igual que en el reporte, pero acotado a la
@@ -598,7 +615,7 @@ export function finalizarPlan(
     registrarEvento?.({ tipo: "salida_sin_acentos", muestra: sinAcentos.slice(0, 12), total: sinAcentos.length });
   }
 
-  const etiqueta = evaluacionCobertura.es_completa ? "Plan completo" : "Plan inicial";
+  const etiqueta = evaluacionCobertura.es_completa ? t.etiquetaCompleto : t.etiquetaInicial;
   const totalConceptos = ruta.length + cosechaIds.length;
   const partes: string[] = [`_${etiqueta}_`, "", cuerpo];
   // CONFIDENCIAL: la cobertura de conceptos (recorrido + vecindario del
@@ -612,7 +629,7 @@ export function finalizarPlan(
     cosecha: cosechaIds.length,
   });
   if (!evaluacionCobertura.es_completa) {
-    partes.push("", "## Lo que este plan aún no cubre", "");
+    partes.push("", t.noCubre, "");
     for (const f of evaluacionCobertura.familias_faltantes) partes.push(`- ${f}`);
     // AUD-09 M33: sin la invitación a "continuar en esta misma sesión": la
     // sesión ya está cerrada (el camino sigue es el Ciclo de profundización).

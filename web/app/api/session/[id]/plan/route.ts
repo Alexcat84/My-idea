@@ -21,6 +21,10 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { garantizarTerminal } from "@/lib/streamTerminal";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import {
@@ -41,8 +45,8 @@ import {
   resolverReserva,
   verificarSaldo,
 } from "@/lib/creditos";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import {
   actualizarProyecto,
   cerrarSesion,
@@ -151,33 +155,36 @@ async function generarTextoPlan(
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: sessionId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).plan;
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): generar un plan es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionId);
   if (!sesion) {
-    return NextResponse.json({ error: "sesion no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.sesionNoEncontrada }, { status: 404 });
   }
   if (sesion.closed_at) {
-    return NextResponse.json({ error: "Esta conversación ya terminó. Recarga la página para ver lo último." }, { status: 409 });
+    return NextResponse.json({ error: r.conversacionTerminada }, { status: 409 });
   }
   const estadoPersistido = sesion.estado_recorrido as EstadoSesionPersistido | null;
   if (!estadoPersistido) {
     return NextResponse.json(
-      { error: "Esta conversación no tiene nada pendiente. Recarga la página para seguir donde quedaste." },
+      { error: r.conversacionSinPendiente },
       { status: 409 }
     );
   }
@@ -226,7 +233,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
       const saldoPlan = await verificarSaldo(user.id, montoCobro, claveReserva);
       return NextResponse.json(
         {
-          error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro, saldoPlan.apartados),
+          error: mensajeSaldoInsuficiente(saldoPlan.creditos, montoCobro, saldoPlan.apartados, idioma),
           saldo: saldoPlan.creditos,
         },
         { status: 402 }
@@ -579,7 +586,7 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         try {
           // AUD-09 B07a: el detalle va al log del servidor, no al cliente.
           console.error("[plan] la entrega fallo:", e);
-          enviar("error", { error: "No pude terminar de escribir tu plan. Lo que contaste está guardado; intenta de nuevo." });
+          enviar("error", { error: t.noPudeTerminar });
         } catch (errEmit) {
           console.error("[plan] no se pudo emitir el error al cliente:", errEmit);
         }

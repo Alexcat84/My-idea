@@ -7,6 +7,10 @@
  */
 import type { NumerosProyecto } from "./calculadora";
 import type { Tablero } from "./tableroNumeros";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { dinero } from "./i18n/formato";
+import { interpolar } from "./i18n/interpolar";
+import { MOTOR_NUMEROS } from "./i18n/mensajes/motorNumeros";
 
 /** Re-narraciones del modelo por idea por dia. Es un FRENO de costo, no un
  * cobro: el recalculo determinista es gratis e ilimitado siempre. Ajustable
@@ -14,14 +18,14 @@ import type { Tablero } from "./tableroNumeros";
 export const TOPE_RENARRACION_DIA = 5;
 
 /** En palabras de persona cuando se alcanza el tope (amarre del fundador):
- * espejo, sin regano, y deja claro que nada se pierde. */
-export const MENSAJE_TOPE_RENARRACION =
-  "Por hoy llegamos al límite de relecturas. Tus números y tus cambios quedan guardados, el recálculo sigue disponible sin límite, y mañana puedes pedir una relectura nueva.";
+ * espejo, sin regano, y deja claro que nada se pierde. El texto vive en el
+ * catálogo; la constante es su valor base (quien la muestra elige por idioma). */
+export const MENSAJE_TOPE_RENARRACION = elegir(MOTOR_NUMEROS, LOCALE_BASE).vivo.topeRenarracion;
 
-/** Formatea un entero de dinero al estilo del canon: "$1.200", "$170". */
-function pesos(n: number): string {
-  const r = Math.round(Math.abs(n));
-  return "$" + String(r).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+/** Un entero de dinero al estilo del canon, SIN signo: "$1.200", "$170" (el
+ * valor absoluto: la frase ya dice si es pérdida). dinero() de formato.ts. */
+function pesos(n: number, idioma: Locale): string {
+  return dinero(idioma, Math.abs(n));
 }
 
 function medio(v: number | { min: number; max: number } | null | undefined): number | null {
@@ -52,12 +56,13 @@ export function cifrasCambiaron(actuales: NumerosProyecto, previas: NumerosProye
  * pagar y la caja trabaja a tu favor (nunca "malo": es un dato, no una falta).
  * null si aún faltan los datos.
  */
-export function fraseCicloCaja(dias: number | null): string | null {
+export function fraseCicloCaja(dias: number | null, idioma: Locale = LOCALE_BASE): string | null {
   if (dias === null || dias === undefined) return null;
+  const t = elegir(MOTOR_NUMEROS, idioma).vivo;
   const d = Math.round(dias);
-  if (d > 0) return `Tu dinero tarda unos ${d} días en volver a tu bolsillo desde que pagas los materiales.`;
-  if (d === 0) return "Tu dinero vuelve el mismo día: cobras justo cuando pagas.";
-  return `Cobras antes de pagar: tu caja trabaja a favor, con unos ${Math.abs(d)} días de holgura.`;
+  if (d > 0) return interpolar(t.cicloPositivo, { d });
+  if (d === 0) return t.cicloCero;
+  return interpolar(t.cicloNegativo, { d: Math.abs(d) });
 }
 
 export interface Veredicto {
@@ -72,8 +77,9 @@ export interface Veredicto {
  * voz respeta el BANCO: sin guiones largos, con acentos, espejo jamas regano
  * (una perdida es un dato, nunca una falta). Ambar = perdida (nunca rojo).
  */
-export function veredictoNumeros(tablero: Tablero, unidad?: string | null): Veredicto {
-  const u = unidad || "unidad";
+export function veredictoNumeros(tablero: Tablero, unidad?: string | null, idioma: Locale = LOCALE_BASE): Veredicto {
+  const t = elegir(MOTOR_NUMEROS, idioma).vivo;
+  const u = unidad || t.unidadPorDefecto;
   const margen = medio(tablero.margen);
   const margenPct = medio(tablero.margenPct);
   const equilibrio = medio(tablero.puntoEquilibrio);
@@ -82,39 +88,39 @@ export function veredictoNumeros(tablero: Tablero, unidad?: string | null): Vere
   if (tablero.estado === "datos" || margen === null) {
     return {
       tono: "datos",
-      frase: `Aún me faltan cifras para darte el panorama: cuando completes lo que falta, aquí verás con claridad si cada ${u} te deja ganancia.`,
+      frase: interpolar(t.datos, { u }),
       acento: null,
     };
   }
 
   if (tablero.estado === "perdida") {
-    const acento = `${pesos(margen)} más de lo que cobras`;
+    const acento = interpolar(t.perdidaAcento, { monto: pesos(margen, idioma) });
     return {
       tono: "perdida",
-      frase: `Hoy, cada ${u} que vendes te cuesta ${acento}: no es problema de vender más, es que el precio todavía no cubre lo que te cuesta hacerla.`,
+      frase: interpolar(t.perdida, { u, acento }),
       acento,
     };
   }
 
   if (tablero.estado === "ajuste") {
-    const acento = `${pesos(margen)} por ${u}`;
-    const pct = margenPct !== null ? ` (${margenPct}%)` : "";
+    const acento = interpolar(t.ajusteAcento, { monto: pesos(margen, idioma), u });
+    const pct = margenPct !== null ? interpolar(t.ajustePct, { pct: String(margenPct) }) : "";
     return {
       tono: "ajuste",
-      frase: `Cada ${u} te deja ${acento}${pct}: ya es ganancia, pero un margen delgado, así que conviene reforzarlo antes de crecer.`,
+      frase: interpolar(t.ajuste, { u, acento, pct }),
       acento,
     };
   }
 
   // sano
-  const acento = `${pesos(margen)} limpios`;
+  const acento = interpolar(t.sanoAcento, { monto: pesos(margen, idioma) });
   const cola =
     equilibrio !== null && fijos !== null
-      ? `, y con vender ${equilibrio} al mes ya cubres tus ${pesos(fijos)} de gasto fijo: de ahí en adelante, cada ${u} es ganancia`
+      ? interpolar(t.sanoCola, { equilibrio: String(equilibrio), fijos: pesos(fijos, idioma), u })
       : "";
   return {
     tono: "sano",
-    frase: `Cada ${u} te deja ${acento}${cola}.`,
+    frase: interpolar(t.sano, { u, acento, cola }),
     acento,
   };
 }

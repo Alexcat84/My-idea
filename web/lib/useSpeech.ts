@@ -11,6 +11,8 @@
  */
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { textoDeSesion, type ResultadoVoz as ResultadoDictado } from "./dictado";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { VOZ } from "./i18n/mensajes/voz";
 
 interface ResultadoVoz {
   soportado: boolean;
@@ -53,13 +55,13 @@ function obtenerConstructor(): (new () => Recognition) | null {
 
 /** AUD-09 B14c: el motivo de un fallo del dictado, en palabras de persona.
  * null cuando no hay nada que anunciar (no hablar, o detenerlo a propósito). */
-export function mensajeErrorVoz(codigo: string | undefined): string | null {
+export function mensajeErrorVoz(codigo: string | undefined, idioma: Locale = LOCALE_BASE): string | null {
+  const t = elegir(VOZ, idioma).errores;
   if (codigo === "no-speech" || codigo === "aborted") return null;
-  if (codigo === "not-allowed" || codigo === "service-not-allowed")
-    return "Tu navegador no me dio permiso para usar el micrófono. Puedes escribir, o darle permiso en la configuración del navegador.";
-  if (codigo === "audio-capture") return "No encontré un micrófono. Puedes escribir tu respuesta.";
-  if (codigo === SILENCIO_LARGO) return "Apagué el micrófono porque dejé de oírte. Tócalo para seguir dictando.";
-  return "El dictado se cortó. Puedes volver a intentarlo o escribir.";
+  if (codigo === "not-allowed" || codigo === "service-not-allowed") return t.sinPermiso;
+  if (codigo === "audio-capture") return t.sinMicrofono;
+  if (codigo === SILENCIO_LARGO) return t.silencioLargo;
+  return t.cortado;
 }
 
 /** Cada sesión del reconocedor es UNA frase (continuous = false: el modo que
@@ -101,7 +103,9 @@ export function useSpeech(
   onTexto: (textoSesion: string) => void,
   /** Se llama justo antes de cada sesión nueva (al iniciar y al reanudar): lo
    * de la sesión anterior queda fijo en el campo. */
-  alNuevaSesion?: () => void
+  alNuevaSesion?: () => void,
+  /** El idioma de los mensajes de error del dictado (i18n F2). */
+  idioma: Locale = LOCALE_BASE
 ): ResultadoVoz {
   // Hydration-safe: false en el server, la verdad del navegador en el
   // cliente, sin setState-en-effect (el soporte es estático por navegador).
@@ -115,9 +119,11 @@ export function useSpeech(
   const recRef = useRef<Recognition | null>(null);
   const onTextoRef = useRef(onTexto);
   const alNuevaSesionRef = useRef(alNuevaSesion);
+  const idiomaRef = useRef(idioma);
   useEffect(() => {
     onTextoRef.current = onTexto;
     alNuevaSesionRef.current = alNuevaSesion;
+    idiomaRef.current = idioma;
   });
   // El estado de la reanudación: si el usuario lo detuvo, el último error
   // definitivo, los cortes rápidos seguidos y cuándo se oyó voz por última vez.
@@ -174,10 +180,10 @@ export function useSpeech(
       }
       recRef.current = null;
       setEscuchando(false);
-      if (errorFatalRef.current) setErrorVoz(mensajeErrorVoz(errorFatalRef.current));
+      if (errorFatalRef.current) setErrorVoz(mensajeErrorVoz(errorFatalRef.current, idiomaRef.current));
       else if (detenidoRef.current) return;
-      else if (silencioMs >= SILENCIO_MAX_MS) setErrorVoz(mensajeErrorVoz(SILENCIO_LARGO));
-      else setErrorVoz(mensajeErrorVoz("network"));
+      else if (silencioMs >= SILENCIO_MAX_MS) setErrorVoz(mensajeErrorVoz(SILENCIO_LARGO, idiomaRef.current));
+      else setErrorVoz(mensajeErrorVoz("network", idiomaRef.current));
     };
     rec.onerror = (e) => {
       // Lo definitivo (sin permiso, sin micrófono) para; lo demás (una pausa,
@@ -191,7 +197,7 @@ export function useSpeech(
     } catch {
       recRef.current = null;
       setEscuchando(false);
-      setErrorVoz(mensajeErrorVoz("network"));
+      setErrorVoz(mensajeErrorVoz("network", idiomaRef.current));
     }
   }, []);
 

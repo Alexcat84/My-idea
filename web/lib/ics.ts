@@ -8,6 +8,10 @@
  * una alarma al inicio. El UID es estable por tarea: volver a añadir ACTUALIZA
  * el evento en vez de duplicarlo. Es puro (sin DOM, sin red): fácil de testear.
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { CALENDARIO } from "./i18n/mensajes/calendario";
+
 export interface TareaIcs {
   id: string;
   texto: string;
@@ -62,16 +66,21 @@ function selloUtc(d: Date): string {
   )}${dosDig(d.getUTCMinutes())}${dosDig(d.getUTCSeconds())}Z`;
 }
 
-/** Devuelve el texto de un archivo .ics con un evento por tarea. */
-export function generarIcs({
-  nombreIdea,
-  tareas,
-  ahora = new Date(),
-}: {
-  nombreIdea: string;
-  tareas: TareaIcs[];
-  ahora?: Date;
-}): string {
+/** Devuelve el texto de un archivo .ics con un evento por tarea. La estructura
+ * (PRODID con //ES, UID) no depende del idioma: solo la descripción visible. */
+export function generarIcs(
+  {
+    nombreIdea,
+    tareas,
+    ahora = new Date(),
+  }: {
+    nombreIdea: string;
+    tareas: TareaIcs[];
+    ahora?: Date;
+  },
+  idioma: Locale = LOCALE_BASE
+): string {
+  const tx = elegir(CALENDARIO, idioma).ics;
   const stamp = selloUtc(ahora);
   const l: string[] = [
     "BEGIN:VCALENDAR",
@@ -92,7 +101,7 @@ export function generarIcs({
       // El prefijo "[Espacio] " va en el TÍTULO; el UID (arriba) no cambia, así
       // que Google/Apple ACTUALIZAN el evento en vez de duplicarlo (Nivel 1).
       `SUMMARY:${escapar(t.espacio ? `[${t.espacio}] ${t.texto}` : t.texto)}`,
-      `DESCRIPTION:${escapar(`Etapa ${t.etapa} · ${t.nombreIdea ?? nombreIdea}`)}`,
+      `DESCRIPTION:${escapar(interpolar(tx.descripcion, { n: t.etapa, idea: t.nombreIdea ?? nombreIdea }))}`,
       "BEGIN:VALARM",
       "ACTION:DISPLAY",
       `DESCRIPTION:${escapar(t.texto)}`,

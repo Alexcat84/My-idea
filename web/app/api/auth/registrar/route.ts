@@ -7,6 +7,9 @@
  * adopción corren al confirmar (bienvenidaTrasLogin), no aquí.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { estaEnAllowlist, registrarAdopcionPendiente } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
@@ -14,11 +17,12 @@ import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const t = elegir(SERVIDOR_CUENTA, idiomaDeRequest(request));
   let body: { email?: unknown; password?: unknown; next?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.cuerpoInvalido }, { status: 400 });
   }
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
@@ -28,7 +32,7 @@ export async function POST(request: Request) {
   // URL). /auth/callback la lee al confirmar. Validado como ruta interna.
   const next = destinoPostLogin(typeof body.next === "string" ? body.next : null);
   if (!email || !email.includes("@") || email.length > 254) {
-    return NextResponse.json({ error: "escribe un correo valido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.correoInvalido }, { status: 400 });
   }
   const problema = validarPassword(password);
   if (problema) return NextResponse.json({ error: problema }, { status: 400 });
@@ -39,7 +43,7 @@ export async function POST(request: Request) {
     invitado = await estaEnAllowlist(email);
   } catch {
     return NextResponse.json(
-      { error: "algo se atoro de nuestro lado; intenta de nuevo en un momento" },
+      { error: t.comun.algoSeAtoroMomento },
       { status: 500 }
     );
   }
@@ -65,12 +69,12 @@ export async function POST(request: Request) {
     const msg = error.message.toLowerCase();
     if (msg.includes("rate") && msg.includes("limit")) {
       return NextResponse.json(
-        { error: "Demasiados intentos por ahora. Espera unos minutos y vuelve a intentar." },
+        { error: t.registrar.demasiadosIntentos },
         { status: 429 }
       );
     }
     console.error("[registrar] signUp fallo:", error.message);
-    return NextResponse.json({ error: "no pudimos crear tu cuenta; intenta de nuevo en un momento" }, { status: 500 });
+    return NextResponse.json({ error: t.registrar.noPudimosCrear }, { status: 500 });
   }
 
   // signUp con un correo YA registrado no da error: devuelve un usuario con

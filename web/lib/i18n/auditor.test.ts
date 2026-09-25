@@ -17,7 +17,8 @@ function archivos(dir: string): string[] {
 }
 
 describe("el auditor de idiomas", () => {
-  it("todos los catálogos pasan", async () => {
+  // carga todos los catálogos: con la máquina ocupada pasa de los 5 s por omisión
+  it("todos los catálogos pasan", { timeout: 60_000 }, async () => {
     const fallas: string[] = [];
     let catalogos = 0;
     for (const archivo of archivos(DIR)) {

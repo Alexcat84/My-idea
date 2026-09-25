@@ -13,6 +13,10 @@
  */
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
 const AZUL = "#3B6BE8";
@@ -66,20 +70,24 @@ function conMotivo(texto: string, color: string) {
 /** El CONTENIDO de la bitácora (sin andamio), para componerlo en el Expediente
  * o como documento suelto. */
 export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
+  const t = elegir(DOCUMENTOS_PAPEL, useIdioma()).bitacora;
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
     entradas.length > 0
-      ? `Del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}, día por día, tal como quedó registrado. Si moviste una fecha, la original sigue aquí: nada se reescribe.`
+      ? interpolar(t.rango, {
+          desde: fechaHumanaConAno(entradas[0].fecha),
+          hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha),
+        })
       : "";
 
   return (
               <div data-cuerpo-papel>
                 <p style={{ margin: 0, fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>
-                  La secuencia de tu viaje
+                  {t.laSecuencia}
                 </p>
                 <h3 style={{ margin: "22px 0 0", fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 27, fontWeight: 700, letterSpacing: "-0.3px", color: TINTA }}>
-                  La secuencia de tu viaje
+                  {t.laSecuencia}
                 </h3>
                 {rango && <p style={{ margin: "12px 0 0", fontSize: 14.5, lineHeight: 1.7, color: "#4B4E55" }}>{rango}</p>}
 
@@ -134,7 +142,7 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                 </div>
 
                 <p style={{ margin: "26px 0 0", fontSize: 12.5, lineHeight: 1.6, color: TERCIARIA }}>
-                  Esta es tu historia tal como quedó registrada, día por día. Puedes descargarla aparte cuando quieras.
+                  {t.pie}
                 </p>
               </div>
   );
@@ -145,7 +153,7 @@ export function BitacoraPapel({
   nombreIdea,
   oculto,
   pagina,
-  pieTitulo = "Mi bitácora",
+  pieTitulo,
 }: {
   entradas: EntradaBitacora[];
   nombreIdea: string;
@@ -155,8 +163,9 @@ export function BitacoraPapel({
   /** el rótulo del pie (por defecto "Mi bitácora"; "Expediente" al componer) */
   pieTitulo?: string;
 }) {
+  const t = elegir(DOCUMENTOS_PAPEL, useIdioma());
   return (
-    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={pieTitulo} oculto={oculto}>
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={pieTitulo ?? t.pieMiBitacora} oculto={oculto}>
       <FilaPapel pagina={pagina}>
         <ContenidoBitacora entradas={entradas} />
       </FilaPapel>

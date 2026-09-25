@@ -4,6 +4,9 @@
  * (SSE, usado por la UI con el árbol que piensa). Una sola definición
  * del shape, del markdown y de las secciones detectables en el stream.
  */
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { interpolar } from "../i18n/interpolar";
+import { MOTOR_ORGANIZADOR } from "../i18n/mensajes/motorOrganizador";
 import { limpiarGuiones } from "../voz";
 
 
@@ -28,13 +31,24 @@ export interface OrganizadorData {
  * literal (el modelo acaba de empezar a escribir esa sección), jamás un
  * temporizador.
  */
-export const SECCIONES_ORGANIZADOR: ReadonlyArray<{ clave: keyof OrganizadorData; label: string }> = [
-  { clave: "idea_en_una_frase", label: "En una frase" },
-  { clave: "etapa_detectada", label: "Etapa detectada" },
-  { clave: "lo_que_ya_tienes_claro", label: "Lo que ya tienes claro" },
-  { clave: "lo_que_estas_asumiendo_sin_saberlo", label: "Lo que estás asumiendo sin saberlo" },
-  { clave: "areas_que_cubriria_tu_plan_completo", label: "Áreas de tu plan completo" },
+const ORDEN_SECCIONES: ReadonlyArray<keyof OrganizadorData> = [
+  "idea_en_una_frase",
+  "etapa_detectada",
+  "lo_que_ya_tienes_claro",
+  "lo_que_estas_asumiendo_sin_saberlo",
+  "areas_que_cubriria_tu_plan_completo",
 ];
+
+/** Las secciones con su nombre en un idioma (catálogo MOTOR_ORGANIZADOR). */
+export function seccionesOrganizador(
+  idioma: Locale = LOCALE_BASE
+): ReadonlyArray<{ clave: keyof OrganizadorData; label: string }> {
+  const t = elegir(MOTOR_ORGANIZADOR, idioma).secciones;
+  return ORDEN_SECCIONES.map((clave) => ({ clave, label: t[clave] }));
+}
+
+// i18n F2: los nombres viven en el catálogo; la constante es el valor base.
+export const SECCIONES_ORGANIZADOR = seccionesOrganizador();
 
 /**
  * Sin guiones largos, campo por campo.
@@ -59,20 +73,21 @@ export function limpiarOrganizador(data: OrganizadorData): OrganizadorData {
   };
 }
 
-export function construirMarkdown(data: OrganizadorData): string {
+export function construirMarkdown(data: OrganizadorData, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(MOTOR_ORGANIZADOR, idioma).markdown;
   const out: string[] = [
-    "# Organizador de tu idea",
+    t.titulo,
     "",
-    `**En una frase:** ${data.idea_en_una_frase ?? ""}`,
+    interpolar(t.enUnaFrase, { frase: data.idea_en_una_frase ?? "" }),
     "",
-    `**Etapa detectada:** ${data.etapa_detectada ?? ""}`,
+    interpolar(t.etapaDetectada, { etapa: data.etapa_detectada ?? "" }),
     "",
-    "## Lo que ya tienes claro",
+    t.yaTienesClaro,
   ];
   for (const b of data.lo_que_ya_tienes_claro ?? []) out.push(`- ${b}`);
-  out.push("", "## Lo que estás asumiendo sin saberlo");
+  out.push("", t.estasAsumiendo);
   for (const b of data.lo_que_estas_asumiendo_sin_saberlo ?? []) out.push(`- ${b}`);
-  out.push("", "## Áreas que cubriría tu plan completo");
+  out.push("", t.areasDelPlan);
   for (const b of data.areas_que_cubriria_tu_plan_completo ?? []) out.push(`- ${b}`);
   return out.join("\n");
 }

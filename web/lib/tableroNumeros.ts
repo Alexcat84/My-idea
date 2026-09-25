@@ -21,6 +21,9 @@ import {
   type Rango,
 } from "./calculadora";
 import { construirPalancas, gananciaNetaDeFijos, type EstadoNumeros, type Palancas } from "./palancas";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { MOTOR_NUMEROS } from "./i18n/mensajes/motorNumeros";
 
 function esRango(v: ValorNumerico | null | undefined): v is Rango {
   return typeof v === "object" && v !== null && "min" in v && "max" in v;
@@ -73,31 +76,34 @@ export function construirEscenariosFilas(
   numeros: NumerosProyecto,
   reporte: ReporteCalculado,
   margenUnit: ValorNumerico | null,
-  fijos: ValorNumerico | null
+  fijos: ValorNumerico | null,
+  idioma: Locale = LOCALE_BASE
 ): FilaEscenario[] {
+  const t = elegir(MOTOR_NUMEROS, idioma).escenarios;
+  const alMes = (n: number | undefined) => interpolar(t.alMes, { n: String(n) });
   // AUD-09 M43: sin fijos no hay ganancia NETA. Antes se tomaban como 0 y la
   // fila mostraba la contribución bajo "Ganancia" (la palanca de volumen ya
   // daba null en el mismo caso: dos cifras para lo mismo, H12).
   const f = medio(fijos);
   const neto = (contrib: number | null): number | null =>
     contrib === null || f === null ? null : gananciaNetaDeFijos(contrib, f);
-  const sinFijos = f === null ? { sinCifra: "falta tu gasto fijo del mes" } : {};
+  const sinFijos = f === null ? { sinCifra: t.sinFijos } : {};
   const esc = reporte.escenarios as unknown as Record<string, unknown>;
   const filas: FilaEscenario[] = [];
   if ("pesimista" in esc) {
     const p = esc.pesimista as { unidades_mes?: number; margen_mensual?: number | null } | null;
     const b = esc.base as { unidades_mes?: number; margen_mensual?: number | null } | null;
-    if (p) filas.push({ nombre: "Pesimista", sub: `${p.unidades_mes} al mes`, ganancia: neto(p.margen_mensual ?? null), ...sinFijos });
+    if (p) filas.push({ nombre: t.pesimista, sub: alMes(p.unidades_mes), ganancia: neto(p.margen_mensual ?? null), ...sinFijos });
     const uv = medio(valorCampo(numeros, "unidades_vendidas"));
     const mu = medio(margenUnit);
     if (uv !== null && mu !== null) {
-      filas.push({ nombre: "Tu ritmo de hoy", sub: `${uv} al mes`, ganancia: neto(uv * mu), ...sinFijos });
+      filas.push({ nombre: t.tuRitmo, sub: alMes(uv), ganancia: neto(uv * mu), ...sinFijos });
     }
-    if (b) filas.push({ nombre: "A capacidad plena", sub: `${b.unidades_mes} al mes`, ganancia: neto(b.margen_mensual ?? null), ...sinFijos });
+    if (b) filas.push({ nombre: t.capacidadPlena, sub: alMes(b.unidades_mes), ganancia: neto(b.margen_mensual ?? null), ...sinFijos });
   } else {
-    for (const [k, etq] of [["50%", "mitad de tu meta"], ["100%", "tu meta"], ["200%", "el doble"]] as const) {
+    for (const k of ["50%", "100%", "200%"] as const) {
       const e = esc[k] as { unidades?: number; margen_total?: number | null } | null;
-      if (e) filas.push({ nombre: etq, sub: `${e.unidades} al mes`, ganancia: neto(e.margen_total ?? null), ...sinFijos });
+      if (e) filas.push({ nombre: t.adopcion[k], sub: alMes(e.unidades), ganancia: neto(e.margen_total ?? null), ...sinFijos });
     }
   }
   return filas;
@@ -149,14 +155,15 @@ function valorCampo(numeros: NumerosProyecto, campo: string): ValorNumerico | nu
 export function armarTablero(
   numeros: NumerosProyecto,
   tipoOferta?: TipoOferta,
-  opciones?: { pisoMargenSano?: number; testPrecioSano?: number }
+  opciones?: { pisoMargenSano?: number; testPrecioSano?: number },
+  idioma: Locale = LOCALE_BASE
 ): Tablero {
-  const reporte = calcularReporte(numeros, tipoOferta);
-  const palancas = construirPalancas(numeros, tipoOferta, opciones);
+  const reporte = calcularReporte(numeros, tipoOferta, idioma);
+  const palancas = construirPalancas(numeros, tipoOferta, opciones, idioma);
   const costoUnitario = costoUnitarioTotal(numeros, tipoOferta).valor;
   const precio = valorCampo(numeros, "precio_tentativo");
   const margen = margenUnitario(numeros, tipoOferta);
-  const equilibrio = puntoEquilibrioUnidadesMes(numeros, tipoOferta);
+  const equilibrio = puntoEquilibrioUnidadesMes(numeros, tipoOferta, idioma);
 
   return {
     estado: palancas.estado,
@@ -170,9 +177,9 @@ export function armarTablero(
     barra: barraVerdad(medio(costoUnitario), medio(precio)),
     palancas,
     reporte,
-    escenariosFilas: construirEscenariosFilas(numeros, reporte, margen.valor, valorCampo(numeros, "costos_fijos_mensuales")),
+    escenariosFilas: construirEscenariosFilas(numeros, reporte, margen.valor, valorCampo(numeros, "costos_fijos_mensuales"), idioma),
     cicloDias: typeof reporte.ciclo_conversion_efectivo.valor === "number" ? reporte.ciclo_conversion_efectivo.valor : null,
     faltantes: faltantesDeReporte(reporte),
-    gigo: detectarInconsistenciaGigo(numeros, tipoOferta),
+    gigo: detectarInconsistenciaGigo(numeros, tipoOferta, idioma),
   };
 }

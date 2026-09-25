@@ -13,6 +13,9 @@
 // al empezar y se cobra al final, SOLO si se entregó lo prometido. Un plan
 // armado sin IA no se cobra: se entrega gratis con un aviso honesto
 // (docs/ANALISIS_PRECIOS.md §4, "Cuándo se cobra: solo lo entregado").
+import { elegir, LOCALE_BASE } from "./i18n/config";
+import { PACKS_RECARGA } from "./i18n/mensajes/packsRecarga";
+
 export const PRECIOS = {
   organizador: 0, // Claridad: el gancho freemium, siempre gratis y sin cuenta
   plan_completo: 10, // Tu Plan (La Exploración) e INCLUYE Tus Números (ver tus_numeros: 0 y §7.1)
@@ -52,10 +55,15 @@ export function montoDelPlan(dominio: string, esSeguimiento: boolean): number {
  * (ANÁLISIS §7). El chip de saldo + el precio en cada compuerta son el contador
  * honesto. La compra con dinero sigue DORMIDA hasta que despierten las pasarelas
  * (ETAPA 3); este catálogo alimenta la pantalla y, cuando despierten, RevenueCat.
+ *
+ * i18n F2: el nombre y el "alcanza para" son texto visible y nacen en el
+ * catálogo (lib/i18n/mensajes/packsRecarga.ts, por `clave`); aquí quedan en
+ * el idioma base para quien los lea directo. Las cifras NO salen de aquí.
  */
+const TEXTO_PACKS = elegir(PACKS_RECARGA, LOCALE_BASE);
 export const PACKS = [
-  { nombre: "Recarga", creditos: 5, usd: 4.99, alcanza: "un seguimiento o un mundo suelto", destacado: false },
-  { nombre: "Básico", creditos: 10, usd: 9.99, alcanza: "tu plan completo, con tus números incluidos", destacado: false },
-  { nombre: "Premium", creditos: 15, usd: 14.99, alcanza: "tu plan y tu primer seguimiento", destacado: true },
-  { nombre: "Profesional", creditos: 30, usd: 29.99, alcanza: "el viaje entero de una idea", destacado: false },
+  { clave: "recarga", nombre: TEXTO_PACKS.recarga.nombre, creditos: 5, usd: 4.99, alcanza: TEXTO_PACKS.recarga.alcanza, destacado: false },
+  { clave: "basico", nombre: TEXTO_PACKS.basico.nombre, creditos: 10, usd: 9.99, alcanza: TEXTO_PACKS.basico.alcanza, destacado: false },
+  { clave: "premium", nombre: TEXTO_PACKS.premium.nombre, creditos: 15, usd: 14.99, alcanza: TEXTO_PACKS.premium.alcanza, destacado: true },
+  { clave: "profesional", nombre: TEXTO_PACKS.profesional.nombre, creditos: 30, usd: 29.99, alcanza: TEXTO_PACKS.profesional.alcanza, destacado: false },
 ] as const;

@@ -13,6 +13,10 @@ import { useEffect, useState } from "react";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import type { Analytics, Hito } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { CELEBRACION } from "@/lib/i18n/mensajes/celebracion";
 
 /** El mundo se nombra como el usuario lo conoce, jamás por su clave técnica. */
 const NOMBRE_DOMINIO: Record<string, string> = Object.fromEntries(
@@ -39,8 +43,6 @@ interface Respuesta {
   analytics: Analytics;
   hitosCelebracion: Hito[];
 }
-
-const ERROR = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 
 function colorHito(h: Hito): string {
   if (h.tipo === "realizada") return "var(--done)";
@@ -166,8 +168,11 @@ export function Celebracion({
   onReabierto: () => void;
   onVolverIdeas: () => void;
 }) {
+  const idioma = useIdioma();
+  const t = elegir(CELEBRACION, idioma);
   const [datos, setDatos] = useState<Respuesta | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  // La clave del error (no el texto): se pinta en el idioma de la pantalla.
+  const [error, setError] = useState<"error" | "errorCargar" | "errorReabrir" | null>(null);
   const [terminado, setTerminado] = useState(false);
   const [reabriendo, setReabriendo] = useState(false);
 
@@ -177,12 +182,12 @@ export function Celebracion({
       try {
         const res = await fetch(`/api/project/${projectId}/analisis`);
         if (!res.ok) {
-          if (vivo) setError(ERROR);
+          if (vivo) setError("error");
           return;
         }
         if (vivo) setDatos((await res.json()) as Respuesta);
       } catch {
-        if (vivo) setError("no pudimos cargar tu celebración; revisa tu internet e intenta de nuevo");
+        if (vivo) setError("errorCargar");
       }
     })();
     return () => {
@@ -199,16 +204,16 @@ export function Celebracion({
         body: JSON.stringify({ accion: "reabrir" }),
       });
       if (res.ok) onReabierto();
-      else setError(ERROR);
+      else setError("error");
     } catch {
-      setError("no pudimos reabrir tu idea; revisa tu internet e intenta de nuevo");
+      setError("errorReabrir");
     } finally {
       setReabriendo(false);
     }
   }
 
-  if (error) return <p className="text-sm text-warn">{error}</p>;
-  if (!datos) return <p className="text-dim">Preparando tu celebración…</p>;
+  if (error) return <p className="text-sm text-warn">{t[error]}</p>;
+  if (!datos) return <p className="text-dim">{t.preparando}</p>;
 
   const u = datos.analytics.universal;
   const c = datos.analytics.cumplimiento;
@@ -217,9 +222,9 @@ export function Celebracion({
     <div className="mx-auto flex max-w-2xl flex-col gap-8">
       {/* héroe: nace el proyecto (el pill + pulso al terminar) */}
       <header className="relative overflow-visible text-center">
-        <p className="text-[11px] font-semibold uppercase tracking-[1.6px] text-done">Realizada</p>
+        <p className="text-[11px] font-semibold uppercase tracking-[1.6px] text-done">{t.realizada}</p>
         <h2 className="mt-3 text-2xl font-bold leading-tight tracking-tight sm:text-[30px] [text-wrap:balance]">
-          Aquí acaba tu idea y nace tu proyecto
+          {t.heroe}
         </h2>
         <p className="mt-2 text-[15px] text-dim">{datos.nombre}</p>
         <div className="relative mt-4 inline-flex items-center justify-center">
@@ -238,7 +243,7 @@ export function Celebracion({
             <svg width="11" height="11" viewBox="0 0 12 12" aria-hidden>
               <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
             </svg>
-            Proyecto
+            {t.proyecto}
           </span>
         </div>
       </header>
@@ -252,7 +257,7 @@ export function Celebracion({
         {terminado && datos.cierre_motivo && (
           <figure className="anima-plan-in mx-auto mt-6 max-w-md border-t border-hairline pt-5 text-center">
             <figcaption className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Por qué la cerraste aquí
+              {t.porQueCerraste}
             </figcaption>
             <blockquote className="text-[14px] leading-[1.7] text-ink [text-wrap:pretty]">
               «{datos.cierre_motivo}»
@@ -264,34 +269,34 @@ export function Celebracion({
       {/* estadísticas reales */}
       <section>
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-          Estadísticas de {datos.nombre}
+          {interpolar(t.estadisticasDe, { nombre: datos.nombre })}
         </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           <div className="rounded-panel border border-hairline bg-surface p-5">
             <p className="text-3xl font-bold">{u.duracionTotalDias}</p>
-            <p className="mt-1 text-[12px] text-dim">días desde la chispa</p>
+            <p className="mt-1 text-[12px] text-dim">{t.diasDesdeLaChispa}</p>
           </div>
           <div className="rounded-panel border border-hairline bg-surface p-5">
             <p className="text-3xl font-bold">{u.ciclosDePlan}</p>
-            <p className="mt-1 text-[12px] text-dim">ciclos de plan</p>
+            <p className="mt-1 text-[12px] text-dim">{t.ciclosDePlan}</p>
           </div>
           <div className="rounded-panel border border-hairline bg-surface p-5">
             <p className="text-3xl font-bold">
-              {u.accionesVigente.hechas} <span className="text-lg font-semibold text-dim">de {u.accionesVigente.total}</span>
+              {u.accionesVigente.hechas} <span className="text-lg font-semibold text-dim">{interpolar(t.deTotal, { total: u.accionesVigente.total })}</span>
             </p>
-            <p className="mt-1 text-[12px] text-dim">acciones</p>
+            <p className="mt-1 text-[12px] text-dim">{t.acciones}</p>
           </div>
           <div className="rounded-panel border border-hairline bg-surface p-5">
             <p className="text-3xl font-bold">{u.mundos}</p>
-            <p className="mt-1 text-[12px] text-dim">{u.mundos === 1 ? "mundo activado" : "mundos activados"}</p>
+            <p className="mt-1 text-[12px] text-dim">{plural(idioma, u.mundos, t.mundosActivados)}</p>
           </div>
         </div>
         {/* línea de cumplimiento: SOLO con baseline confirmada */}
         {datos.tiene_baseline && c && (
           <p className="mt-4 flex flex-wrap gap-x-5 gap-y-1 text-[13.5px]">
-            <span className="font-semibold text-done">{c.aTiempo} a tiempo</span>
-            <span className="font-semibold text-accent">{c.adelantadas} adelantadas</span>
-            <span className="font-semibold text-warn">{c.tardias} tardías</span>
+            <span className="font-semibold text-done">{interpolar(t.aTiempo, { n: c.aTiempo })}</span>
+            <span className="font-semibold text-accent">{interpolar(t.adelantadas, { n: c.adelantadas })}</span>
+            <span className="font-semibold text-warn">{interpolar(t.tardias, { n: c.tardias })}</span>
           </p>
         )}
       </section>
@@ -299,17 +304,17 @@ export function Celebracion({
       {/* acciones */}
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
         <button onClick={onVerAnalisis} className="text-[14px] font-semibold text-accent hover:underline">
-          Ver análisis completo →
+          {t.verAnalisis}
         </button>
         {/* Fase 4.6: al cerrar es cuando más se quiere el expediente entero. */}
         <button onClick={onVerDocumentos} className="text-[14px] font-semibold text-accent hover:underline">
-          Descargar tu expediente →
+          {t.descargarExpediente}
         </button>
         <button onClick={onVolverIdeas} className="text-[14px] text-dim hover:text-ink">
-          Volver a mis ideas
+          {t.volverAMisIdeas}
         </button>
         <button onClick={reabrir} disabled={reabriendo} className="text-[14px] text-dim hover:text-ink disabled:opacity-50">
-          {reabriendo ? "Reabriendo…" : "Reabrir esta idea"}
+          {reabriendo ? t.reabriendo : t.reabrir}
         </button>
       </div>
     </div>

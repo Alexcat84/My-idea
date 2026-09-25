@@ -3,7 +3,16 @@
  * ui/PlanDocumento.tsx para poder probarlo). PURO: sin React, sin DOM.
  * Respeta el markdown REAL del motor: no inventa estructura, solo pliega la
  * que viene, y rescata la que el modelo emitio en prosa densa.
+ *
+ * i18n F2: los literales en español de las expresiones regulares ("Etapa",
+ * "Esta semana", "El lunes", "Entregable", "Pasos", "_Plan completo_", "Este
+ * plan se alimentó") son CLAVES DE LECTURA del markdown que escribe el motor,
+ * no texto de pantalla: no van al catálogo. Solo va la etiqueta que el parser
+ * agrega ("Los números que necesitas").
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { PLAN_DOCUMENTO } from "./i18n/mensajes/planDocumento";
+
 export type TipoSeccion = "etapa" | "cierre" | "otro";
 
 /** Fase 3.9 C8: un bloque de pasos con su sub-encabezado (o null si la lista
@@ -52,7 +61,7 @@ function recortarBloque(cuerpo: string, etiqueta: RegExp): { valor: string | nul
   return { valor: m[0].trim(), resto };
 }
 
-export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion {
+export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: Locale = LOCALE_BASE): Seccion {
   const mEtapa = tituloCrudo.match(/^Etapa\s+(\d+)\s*[:.·-]?\s*(.*)$/i);
   const numero = mEtapa ? mEtapa[1].padStart(2, "0") : null;
   const titulo = (mEtapa ? mEtapa[2].trim() : tituloCrudo) || tituloCrudo;
@@ -138,7 +147,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
           const hasta = i + 1 < marcas.length ? marcas[i + 1].inicio : descripcion.length;
           return `**${mk.label}:** ${descripcion.slice(mk.fin, hasta).trim()}`;
         });
-        bloquesPasos.push({ label: "Los números que necesitas", pasos: items });
+        bloquesPasos.push({ label: elegir(PLAN_DOCUMENTO, idioma).losNumerosQueNecesitas, pasos: items });
         descripcion = descripcion.slice(0, marcas[0].inicio).trim();
       }
     }
@@ -155,7 +164,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string): Seccion 
   };
 }
 
-export function parsearPlan(md: string): PlanParseado {
+export function parsearPlan(md: string, idioma: Locale = LOCALE_BASE): PlanParseado {
   let etiqueta: string | null = null;
   const cuerpo: string[] = [];
   for (const linea of md.split("\n")) {
@@ -194,7 +203,7 @@ export function parsearPlan(md: string): PlanParseado {
     else intro.push(linea);
   }
 
-  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido));
+  const secciones = rawSecc.map((s) => parsearSeccion(s.titulo, s.contenido, idioma));
   const introTxt = intro.join("\n").replace(/\n---\s*$/g, "").trim();
   return { etiqueta, titulo, intro: introTxt, secciones };
 }

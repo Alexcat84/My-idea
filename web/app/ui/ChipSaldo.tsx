@@ -13,11 +13,17 @@
  */
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { SALDO } from "@/lib/i18n/mensajes/saldo";
 import { textoChipSaldo } from "@/lib/textoSaldo";
 
 export { textoChipSaldo };
 
 export function ChipSaldo({ version = 0 }: { version?: number }) {
+  const idioma = useIdioma();
+  const t = elegir(SALDO, idioma);
   const [estado, setEstado] = useState<{ disponible: number; reservados: number } | null>(null);
 
   useEffect(() => {
@@ -37,7 +43,7 @@ export function ChipSaldo({ version = 0 }: { version?: number }) {
   }, [version]);
 
   if (estado === null) return null;
-  const t = textoChipSaldo(estado.disponible, estado.reservados);
+  const texto = textoChipSaldo(estado.disponible, estado.reservados, idioma);
   // Canon 20 (lote 3): el cero va en GRIS, no en azul: informa sin presionar
   // ni alarmar; la puerta al frente es /creditos (el saldo es dinero, no
   // potenciadores: no mezclar procesos).
@@ -47,10 +53,10 @@ export function ChipSaldo({ version = 0 }: { version?: number }) {
     <Link
       href="/creditos"
       className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-[12px] font-semibold ${claseTono}`}
-      title={t.reservados ? `${t.principal} disponibles · ${t.reservados}` : "Tus créditos"}
+      title={texto.reservados ? interpolar(t.tituloConReserva, { saldo: texto.principal, reservados: texto.reservados }) : t.tituloChip}
     >
-      {t.principal}
-      {t.reservados && <span className="font-normal text-dim">· {t.reservados}</span>}
+      {texto.principal}
+      {texto.reservados && <span className="font-normal text-dim">· {texto.reservados}</span>}
     </Link>
   );
 }

@@ -19,9 +19,12 @@
  *   B3. el correo sale de beta_allowlist.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { huellaDeEmail } from "@/lib/cuentas";
 import {
-  AVISO_2FA,
+  aviso2FA,
   desafioSuperadoEnSesion,
   estadoSeguridad,
   sesionRealDeCookies,
@@ -29,19 +32,21 @@ import {
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_CUENTA, idioma);
   const sesion = await sesionRealDeCookies();
   if (!sesion) {
-    return NextResponse.json({ error: "necesitas tu cuenta para esto" }, { status: 401 });
+    return NextResponse.json({ error: t.comun.necesitasCuenta }, { status: 401 });
   }
   let body: { confirmacion?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.cuerpoInvalido }, { status: 400 });
   }
   if (String(body.confirmacion ?? "").trim().toUpperCase() !== "ELIMINAR") {
     return NextResponse.json(
-      { error: 'Para borrar tu cuenta escribe la palabra "ELIMINAR" tal cual.' },
+      { error: t.eliminar.escribeEliminar },
       { status: 400 }
     );
   }
@@ -50,14 +55,14 @@ export async function POST(request: Request) {
   try {
     const seguridad = await estadoSeguridad(userId);
     if (seguridad.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
-      return NextResponse.json(AVISO_2FA, { status: 403 });
+      return NextResponse.json(aviso2FA(idioma), { status: 403 });
     }
   } catch (e) {
     // AUD-09 H16: el borrado es irreversible, así que el candado falla
     // CERRADO. Sin veredicto de seguridad no se borra nada.
     console.error("[cuenta/eliminar] no se pudo leer user_seguridad; no se borra:", e);
     return NextResponse.json(
-      { error: "No pude confirmar la seguridad de tu cuenta, así que no borré nada. Intenta de nuevo en un momento." },
+      { error: t.eliminar.seguridadSinConfirmar },
       { status: 503 }
     );
   }
@@ -81,14 +86,14 @@ export async function POST(request: Request) {
         // Sin huella no se borra: borrar dejaría la puerta del re-otorgo
         // abierta (dinero). Ruidoso y reintentable.
         console.error("[cuenta/eliminar] fallo la huella de cortesia:", huellaError.message);
-        return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+        return NextResponse.json({ error: t.comun.algoSeAtoro }, { status: 500 });
       }
     }
   }
 
   const fallo = (paso: string, detalle: unknown) => {
     console.error(`[cuenta/eliminar] fallo ${paso}; no se borra la cuenta:`, detalle);
-    return NextResponse.json({ error: "No pude borrar todos tus datos, así que tu cuenta sigue igual. Intenta de nuevo en un momento." }, { status: 500 });
+    return NextResponse.json({ error: t.eliminar.noPudeBorrarTodo }, { status: 500 });
   };
 
   // B4: las identidades invisibles pendientes de adopción (y sus ideas).
@@ -135,7 +140,7 @@ export async function POST(request: Request) {
   const { error: deleteError } = await admin.auth.admin.deleteUser(userId);
   if (deleteError) {
     console.error("[cuenta/eliminar] fallo el borrado:", deleteError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: t.comun.algoSeAtoro }, { status: 500 });
   }
 
   console.log(`[cuenta/eliminar] cuenta ${userId.slice(0, 8)}… borrada por su dueño`);

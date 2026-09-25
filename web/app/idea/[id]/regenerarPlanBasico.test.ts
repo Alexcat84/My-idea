@@ -6,6 +6,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { estadoMundo } from "@/lib/engine/previewMundos";
 import { AVISO_VERSION_BASICA } from "@/lib/engine/planRedactor";
+import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
 
 const app = path.join(__dirname, "..", "..");
 const leer = (rel: string) => readFileSync(path.join(app, rel), "utf8");
@@ -27,7 +28,9 @@ describe("el plan básico de un mundo no es una compra", () => {
   });
   it("el espacio del mundo ofrece Generar el plan completo, apuntando a la regeneración", () => {
     const manos = leer("ui/ManosALaObra.tsx");
-    expect(manos).toContain("Generar el plan completo");
+    // i18n F2: la frase vive en el catálogo y el componente usa su clave.
+    expect(MANOS_A_LA_OBRA.es.mundo.generarCompleto).toContain("Generar el plan completo");
+    expect(manos).toContain("t.mundo.generarCompleto");
     expect(manos).toMatch(/onRegenerarPlanMundo\(/);
   });
 });
@@ -40,6 +43,11 @@ describe("el plan básico del núcleo se puede regenerar", () => {
   it("IdeaView ofrece regenerar junto al aviso y llama a la ruta de regeneración", () => {
     const vista = leer("idea/[id]/IdeaView.tsx");
     expect(vista).toMatch(/\/regenerar`/);
-    expect(vista).toMatch(/Regenerar mi plan · \$\{/);
+    // i18n F2: el texto vive en el catálogo con su {{n}}; la vista le pone el
+    // precio de la misma regla del cobro (montoDelPlan).
+    expect(readFileSync(path.join(app, "..", "lib", "i18n", "mensajes", "ideaView.ts"), "utf8")).toContain(
+      'regenerarPlan: "Regenerar mi plan · {{n}} créditos"'
+    );
+    expect(vista).toMatch(/interpolar\(t\.regenerarPlan, \{ n: montoDelPlan\(/);
   });
 });

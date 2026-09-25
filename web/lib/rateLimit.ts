@@ -25,6 +25,9 @@
  * completo), los límites se desactivan con un aviso en consola: nunca
  * deben romper el flujo por configuración faltante.
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar, plural } from "./i18n/interpolar";
+import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 
 const LIMITE_DIARIO_DEFAULT = 5;
 const FUSIBLE_DEFAULT = 30;
@@ -124,11 +127,9 @@ export async function limitarPorClave(clave: string, ttlSegundos: number, limite
 /** Mensajes en palabras de persona (el usuario web nunca ve maquinaria). */
 // AUD-09 B05: el límite dice su número REAL (sale de LIMITE_ARRANQUES_DIA);
 // antes el texto decía "5" fijo aunque el entorno dijera otra cosa.
-export function mensajeLimite(limite: number): string {
-  return (
-    `Por hoy alcanzaste el límite de la beta (${limite} ${limite === 1 ? "arranque" : "arranques"} al día). ` +
-    "Tus ideas quedan guardadas. Vuelve mañana y seguimos donde quedamos."
-  );
+export function mensajeLimite(limite: number, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(SERVIDOR_COMUN, idioma);
+  return interpolar(t.limiteDiario, { arranques: plural(idioma, limite, t.arranques) });
 }
 
-export const MENSAJE_FUSIBLE = "Estamos a capacidad por hoy; tus ideas te esperan mañana.";
+export const MENSAJE_FUSIBLE = elegir(SERVIDOR_COMUN, LOCALE_BASE).fusible;

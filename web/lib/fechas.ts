@@ -4,22 +4,16 @@
  * real (§2) y la línea base (§4) leen de aquí. Todo local (getDay/getDate):
  * la "fecha del calendario" que el usuario ve, no un instante UTC.
  */
-const MESES = [
-  "enero",
-  "febrero",
-  "marzo",
-  "abril",
-  "mayo",
-  "junio",
-  "julio",
-  "agosto",
-  "septiembre",
-  "octubre",
-  "noviembre",
-  "diciembre",
-] as const;
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { FECHAS } from "./i18n/mensajes/fechas";
 
-const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"] as const;
+/** "20 de marzo" (con el año solo si `conAno`), en el idioma pedido. */
+function diaDeMes(d: Date, idioma: Locale, conAno = false): string {
+  const t = elegir(FECHAS, idioma);
+  const mes = t.meses[d.getMonth()];
+  return conAno ? interpolar(t.diaDeMesAno, { d: d.getDate(), mes, ano: d.getFullYear() }) : interpolar(t.diaDeMes, { d: d.getDate(), mes });
+}
 
 /**
  * Sello de tiempo del historial (Fase 4.3.1; formato híbrido desde 4.3.2): la
@@ -36,23 +30,23 @@ const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "
  * Local a propósito (getHours/getDate): la fecha del reloj del usuario, no un
  * instante UTC. `ahora` es inyectable para tests deterministas.
  */
-export function fechaSello(iso: string, ahora: Date = new Date()): string {
+export function fechaSello(iso: string, ahora: Date = new Date(), idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(FECHAS, idioma);
   const d = new Date(iso);
   const min = Math.floor((ahora.getTime() - d.getTime()) / 60_000);
-  if (min < 2) return "hace un momento";
-  if (min < 60) return `hace ${min} min`;
+  if (min < 2) return t.haceUnMomento;
+  if (min < 60) return interpolar(t.haceMin, { n: min });
   const hh = String(d.getHours()).padStart(2, "0");
   const mm = String(d.getMinutes()).padStart(2, "0");
-  if (d.toDateString() === ahora.toDateString()) return `hoy ${hh}:${mm}`;
+  if (d.toDateString() === ahora.toDateString()) return interpolar(t.hoyHora, { hora: `${hh}:${mm}` });
   const ayer = new Date(ahora);
   ayer.setDate(ahora.getDate() - 1);
-  if (d.toDateString() === ayer.toDateString()) return `ayer ${hh}:${mm}`;
+  if (d.toDateString() === ayer.toDateString()) return interpolar(t.ayerHora, { hora: `${hh}:${mm}` });
   // Diferencia en días DE CALENDARIO (no ventanas de 24h): 2..6 días => relativo.
   const soloFecha = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
   const dias = Math.round((soloFecha(ahora) - soloFecha(d)) / 86_400_000);
-  if (dias < 7) return `hace ${dias} días`;
-  const base = `${d.getDate()} de ${MESES[d.getMonth()]}`;
-  return d.getFullYear() === ahora.getFullYear() ? base : `${base} de ${d.getFullYear()}`;
+  if (dias < 7) return interpolar(t.haceDias, { n: dias });
+  return diaDeMes(d, idioma, d.getFullYear() !== ahora.getFullYear());
 }
 
 /**
@@ -63,18 +57,19 @@ export function fechaSello(iso: string, ahora: Date = new Date()): string {
  * para no chocar con un "hace N días 14:32". El diferenciador de la fila es el
  * contenido (veredicto, margen), no el reloj; la hora solo separa gemelas.
  */
-export function selloVersion(iso: string, ahora: Date = new Date(), conHora = false): string {
+export function selloVersion(iso: string, ahora: Date = new Date(), conHora = false, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(FECHAS, idioma);
   const d = new Date(iso);
   const ayer = new Date(ahora);
   ayer.setDate(ahora.getDate() - 1);
   let fecha: string;
-  if (d.toDateString() === ahora.toDateString()) fecha = "hoy";
-  else if (d.toDateString() === ayer.toDateString()) fecha = "ayer";
+  if (d.toDateString() === ahora.toDateString()) fecha = t.hoy;
+  else if (d.toDateString() === ayer.toDateString()) fecha = t.ayer;
   else {
     const soloFecha = (x: Date) => new Date(x.getFullYear(), x.getMonth(), x.getDate()).getTime();
     const dias = Math.round((soloFecha(ahora) - soloFecha(d)) / 86_400_000);
-    const abs = d.getFullYear() === ahora.getFullYear() ? `${d.getDate()} de ${MESES[d.getMonth()]}` : `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
-    fecha = !conHora && dias >= 2 && dias < 7 ? `hace ${dias} días` : abs;
+    const abs = diaDeMes(d, idioma, d.getFullYear() !== ahora.getFullYear());
+    fecha = !conHora && dias >= 2 && dias < 7 ? interpolar(t.haceDias, { n: dias }) : abs;
   }
   if (!conHora) return fecha;
   const hh = String(d.getHours()).padStart(2, "0");
@@ -87,33 +82,31 @@ export function selloVersion(iso: string, ahora: Date = new Date(), conHora = fa
  * no es el actual). Es lo que dice la banda de una versión histórica abierta:
  * dentro del documento del pasado, el registro consta en absoluto, no relativo.
  */
-export function momentoAbsoluto(iso: string, ahora: Date = new Date()): string {
+export function momentoAbsoluto(iso: string, ahora: Date = new Date(), idioma: Locale = LOCALE_BASE): string {
   const d = new Date(iso);
   const hh = String(d.getHours()).padStart(2, "0");
   const mm = String(d.getMinutes()).padStart(2, "0");
-  const base = `${d.getDate()} de ${MESES[d.getMonth()]}`;
-  const conAno = d.getFullYear() === ahora.getFullYear() ? base : `${base} de ${d.getFullYear()}`;
-  return `${conAno}, ${hh}:${mm}`;
+  const fecha = diaDeMes(d, idioma, d.getFullYear() !== ahora.getFullYear());
+  return interpolar(elegir(FECHAS, idioma).momento, { fecha, hora: `${hh}:${mm}` });
 }
 
 /** "viernes 20 de marzo" — la fecha en palabras del canon 10. */
-export function fechaHumana(iso: string): string {
+export function fechaHumana(iso: string, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(FECHAS, idioma);
   const d = new Date(iso);
-  return `${DIAS[d.getDay()]} ${d.getDate()} de ${MESES[d.getMonth()]}`;
+  return interpolar(t.diaSemanaDeMes, { dia: t.dias[d.getDay()], d: d.getDate(), mes: t.meses[d.getMonth()] });
 }
 
 /** "20 de marzo" — versión corta, sin día de la semana. */
-export function fechaHumanaCorta(iso: string): string {
-  const d = new Date(iso);
-  return `${d.getDate()} de ${MESES[d.getMonth()]}`;
+export function fechaHumanaCorta(iso: string, idioma: Locale = LOCALE_BASE): string {
+  return diaDeMes(new Date(iso), idioma);
 }
 
 /** "20 de marzo de 2026" — con año, para documentos que se guardan y se
  * releen fuera de la app (el expediente, los planes descargados): ahí "20 de
  * marzo" a secas no dice de qué año se está hablando. */
-export function fechaHumanaConAno(iso: string): string {
-  const d = new Date(iso);
-  return `${d.getDate()} de ${MESES[d.getMonth()]} de ${d.getFullYear()}`;
+export function fechaHumanaConAno(iso: string, idioma: Locale = LOCALE_BASE): string {
+  return diaDeMes(new Date(iso), idioma, true);
 }
 
 /**

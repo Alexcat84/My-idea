@@ -11,6 +11,9 @@ vi.mock("@/lib/supabase/server", () => ({
 
 import { GET } from "./route";
 
+// i18n F2: la ruta lee el idioma de su Request (la cookie), como en producción.
+const peticion = () => new Request("http://test/api/projects");
+
 describe("GET /api/projects", () => {
   beforeEach(() => {
     estadoFalso = estadoFalsoVacio();
@@ -19,7 +22,7 @@ describe("GET /api/projects", () => {
 
   it("401 si no hay usuario autenticado", async () => {
     supabaseFalso.auth.getUser.mockResolvedValueOnce({ data: { user: null } });
-    const res = await GET();
+    const res = await GET(peticion());
     expect(res.status).toBe(401);
   });
 
@@ -44,7 +47,7 @@ describe("GET /api/projects", () => {
       updated_at: "2026-06-01T00:00:00.000Z",
     };
 
-    const res = await GET();
+    const res = await GET(peticion());
     expect(res.status).toBe(200);
     const body = await res.json();
     expect(body.proyectos).toHaveLength(2);
@@ -54,7 +57,7 @@ describe("GET /api/projects", () => {
   });
 
   it("lista vacia si el usuario no tiene proyectos", async () => {
-    const res = await GET();
+    const res = await GET(peticion());
     const body = await res.json();
     expect(body.proyectos).toEqual([]);
   });

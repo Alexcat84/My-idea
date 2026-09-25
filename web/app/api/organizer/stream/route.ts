@@ -9,6 +9,10 @@
  * existiendo para vuelo.ts/probar.ts).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
 import {
@@ -46,15 +50,18 @@ const BACKOFFS_MS = [0, 1000, 3000];
 class OrganizadorTruncado extends Error {}
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).organizador;
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
@@ -68,7 +75,7 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   // AUD-09 M28: ordenar una idea que YA existe (su organizador falló antes y
@@ -78,7 +85,7 @@ export async function POST(request: Request) {
   let ideaExistente: string | null = null;
   if (typeof idPedido === "string" && idPedido) {
     if (!(await obtenerProyecto(supabase, idPedido))) {
-      return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+      return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
     }
     const { data: sesionesIdea } = await supabase.from("sessions").select("id").eq("project_id", idPedido);
     const ids = ((sesionesIdea ?? []) as Array<{ id: string }>).map((s) => s.id);
@@ -86,7 +93,7 @@ export async function POST(request: Request) {
       ? await supabase.from("plans").select("id").in("session_id", ids).eq("etiqueta", "organizador")
       : { data: [] };
     if ((organizadores ?? []).length > 0) {
-      return NextResponse.json({ error: "Esta idea ya está ordenada." }, { status: 409 });
+      return NextResponse.json({ error: t.yaOrdenada }, { status: 409 });
     }
     ideaExistente = idPedido;
   }
@@ -98,7 +105,7 @@ export async function POST(request: Request) {
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   const graph = cargarGrafo();
@@ -214,9 +221,7 @@ export async function POST(request: Request) {
           console.error("[organizer] fallo definitivo", { projectId, truncado, error: ultimoError });
           await cerrar().catch(() => {});
           enviar("error", {
-            error: truncado
-              ? "tu idea trae mucho y se pasó de lo que puedo organizar de una sola vez; recórtala un poco o cuéntamela por partes e intenta de nuevo"
-              : "no pudimos organizar tu idea en este momento; tu texto quedó guardado, intenta de nuevo",
+            error: truncado ? t.truncado : t.noPudimosOrganizar,
             project_id: projectId,
             reintentable: true,
           });
@@ -238,7 +243,7 @@ export async function POST(request: Request) {
         console.error("[organizer] error inesperado", { projectId, error: e });
         await cerrar().catch(() => {});
         enviar("error", {
-          error: "no pudimos organizar tu idea en este momento; tu texto quedó guardado, intenta de nuevo",
+          error: t.noPudimosOrganizar,
           project_id: projectId,
           reintentable: true,
         });

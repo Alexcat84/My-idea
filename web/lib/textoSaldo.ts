@@ -3,12 +3,18 @@
  * puede gastar. Una sola fuente para el chip del encabezado (cliente) y la
  * barra de /creditos (servidor). Pura.
  */
-export function textoChipSaldo(disponible: number, reservados: number): { principal: string; reservados: string | null } {
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { plural } from "./i18n/interpolar";
+import { SALDO } from "./i18n/mensajes/saldo";
+
+export function textoChipSaldo(
+  disponible: number,
+  reservados: number,
+  idioma: Locale = LOCALE_BASE
+): { principal: string; reservados: string | null } {
+  const t = elegir(SALDO, idioma);
   return {
-    principal: `${disponible} ${disponible === 1 ? "crédito" : "créditos"}`,
-    reservados:
-      reservados > 0
-        ? `${reservados} ${reservados === 1 ? "reservado" : "reservados"} para tu sesión en curso`
-        : null,
+    principal: plural(idioma, disponible, t.creditos),
+    reservados: reservados > 0 ? plural(idioma, reservados, t.reservados) : null,
   };
 }

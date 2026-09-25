@@ -12,6 +12,10 @@
  * si no. Los hitos de un espacio NO incluyen los de otro (ley de lib/espacios).
  */
 
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { HITOS } from "./i18n/mensajes/hitos";
+
 export type TipoHito = "chispa" | "claridad" | "plan" | "diagnostico" | "cierre";
 
 export interface HitoEspacio {
@@ -41,7 +45,8 @@ export interface EntradaAvanceMundo {
 
 export type EntradaAvance = EntradaAvanceCore | EntradaAvanceMundo;
 
-export function hitosDeEspacio(entrada: EntradaAvance): HitoEspacio[] {
+export function hitosDeEspacio(entrada: EntradaAvance, idioma: Locale = LOCALE_BASE): HitoEspacio[] {
+  const t = elegir(HITOS, idioma);
   const hitos: HitoEspacio[] = [];
   const arranque = (tipo: TipoHito, etiqueta: string, subtitulo: string, fecha?: string | null) => {
     // Solo si ya ocurrió (trae fecha): no se dibuja un arranque sin fecha, ni se
@@ -50,12 +55,12 @@ export function hitosDeEspacio(entrada: EntradaAvance): HitoEspacio[] {
   };
 
   if (entrada.espacio === "core") {
-    arranque("chispa", "La Chispa", "La idea nace", entrada.chispaAt);
-    arranque("claridad", "Claridad", "Tu idea, organizada", entrada.claridadAt);
-    arranque("plan", "Tu Plan", "Tu plan de acción, listo", entrada.planAt);
+    arranque("chispa", t.core.chispa, t.core.chispaSub, entrada.chispaAt);
+    arranque("claridad", t.core.claridad, t.core.claridadSub, entrada.claridadAt);
+    arranque("plan", t.core.plan, t.core.planSub, entrada.planAt);
   } else {
-    arranque("diagnostico", "Tu diagnóstico", "El primer vistazo de este frente", entrada.diagnosticoAt);
-    arranque("plan", `El plan de ${entrada.nombre}`, "Listo para ejecutar", entrada.planAt);
+    arranque("diagnostico", t.mundo.diagnostico, t.mundo.diagnosticoSub, entrada.diagnosticoAt);
+    arranque("plan", interpolar(t.mundo.plan, { mundo: entrada.nombre }), t.mundo.planSub, entrada.planAt);
   }
 
   // El cierre: el destino. Siempre presente; verde si ya cerró, gris si falta.
@@ -63,16 +68,16 @@ export function hitosDeEspacio(entrada: EntradaAvance): HitoEspacio[] {
   if (entrada.espacio === "core") {
     hitos.push({
       tipo: "cierre",
-      etiqueta: cierreAt ? "Realizada" : "El cierre",
-      subtitulo: cierreAt ? "Aquí nace tu proyecto" : "Cuando lo sientas real",
+      etiqueta: cierreAt ? t.core.realizada : t.core.cierre,
+      subtitulo: cierreAt ? t.core.realizadaSub : t.core.cierreSub,
       fecha: cierreAt ?? null,
       alcanzado: Boolean(cierreAt),
     });
   } else {
     hitos.push({
       tipo: "cierre",
-      etiqueta: cierreAt ? "Cerrado" : "El cierre",
-      subtitulo: cierreAt ? "Diste este frente por terminado" : "Cuando lo des por terminado",
+      etiqueta: cierreAt ? t.mundo.cerrado : t.mundo.cierre,
+      subtitulo: cierreAt ? t.mundo.cerradoSub : t.mundo.cierreSub,
       fecha: cierreAt ?? null,
       alcanzado: Boolean(cierreAt),
     });

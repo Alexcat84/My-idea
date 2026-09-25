@@ -50,7 +50,7 @@ beforeEach(() => {
 
 describe("re-enrolar no desarma el candado vigente (AUD-09 M50)", () => {
   it("enrolar guarda el secreto nuevo como PENDIENTE y no toca el método ni el secreto vigente", async () => {
-    const res = await enrolar();
+    const res = await enrolar(new Request("http://x", { method: "POST" }));
     expect(res.status).toBe(200);
     const w = escrituras.at(-1)!.payload;
     expect(w.totp_secret_pendiente).toBe("enc(NUEVO)");

@@ -15,6 +15,9 @@
  */
 import { esMundoProteccion } from "./espacios";
 import { fechaHumanaConAno } from "./fechas";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { EXPEDIENTE } from "./i18n/mensajes/expediente";
 
 /** Un ciclo del viaje: el plan original o cada seguimiento posterior. */
 export interface CicloExpediente {
@@ -154,15 +157,19 @@ export function rebajarTitulos(md: string, niveles: number): string {
  * uno posterior es un seguimiento numerado. El orden es cronológico, así que
  * la posición manda; la etiqueta de base de datos no se le enseña a nadie.
  */
-export function titulosDeCiclos(ciclos: CicloExpediente[]): Array<{ ciclo: CicloExpediente; titulo: string; subtitulo: string }> {
+export function titulosDeCiclos(
+  ciclos: CicloExpediente[],
+  idioma: Locale = LOCALE_BASE
+): Array<{ ciclo: CicloExpediente; titulo: string; subtitulo: string }> {
+  const t = elegir(EXPEDIENTE, idioma).ciclos;
   return ciclos.map((ciclo, i) => {
     if (i === 0) {
-      return { ciclo, titulo: "Tu Plan", subtitulo: "El plan con el que arrancaste" };
+      return { ciclo, titulo: t.tuPlan, subtitulo: t.tuPlanSubtitulo };
     }
     return {
       ciclo,
-      titulo: `Seguimiento ${i}`,
-      subtitulo: "Lo que pasó y el plan recalculado",
+      titulo: interpolar(t.seguimiento, { n: i }),
+      subtitulo: t.seguimientoSubtitulo,
     };
   });
 }
@@ -173,8 +180,10 @@ export function indiceDeDocumentos(
   ciclos: CicloExpediente[],
   realizadaAt: string | null,
   mundos: Array<{ dominio: string; nombre: string }> = [],
+  idioma: Locale = LOCALE_BASE,
 ): DocumentoIndice[] {
-  const docs: DocumentoIndice[] = titulosDeCiclos(ciclos).map(({ ciclo, titulo, subtitulo }) => ({
+  const t = elegir(EXPEDIENTE, idioma).indice;
+  const docs: DocumentoIndice[] = titulosDeCiclos(ciclos, idioma).map(({ ciclo, titulo, subtitulo }) => ({
     clave: claveDeCiclo(ciclo.planId),
     tipo: "ciclo" as const,
     titulo,
@@ -187,26 +196,24 @@ export function indiceDeDocumentos(
     docs.push({
       clave: CLAVE_ANALISIS,
       tipo: "analisis",
-      titulo: "Análisis del proyecto",
-      subtitulo: "Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste",
+      titulo: t.analisisTitulo,
+      subtitulo: t.analisisSubtitulo,
       fecha: null,
     });
     docs.push({
       clave: CLAVE_BITACORA,
       tipo: "bitacora",
-      titulo: "Tu bitácora",
-      subtitulo: "La historia de tu idea, paso a paso, del inicio a hoy",
+      titulo: t.bitacoraTitulo,
+      subtitulo: t.bitacoraSubtitulo,
       fecha: null,
     });
     docs.push({
       clave: CLAVE_EXPEDIENTE,
       tipo: "expediente",
-      titulo: "Expediente completo",
+      titulo: t.expedienteTitulo,
       // AUD-09 M35: dice exactamente lo que incluye (antes "Todo tu
       // desarrollo", y el tablero vivo de Tus Números no entra aquí).
-      subtitulo: realizadaAt
-        ? "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, de la idea al cierre"
-        : "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, hasta hoy",
+      subtitulo: realizadaAt ? t.expedienteSubtituloCerrado : t.expedienteSubtituloEnMarcha,
       fecha: realizadaAt,
     });
     // Fase 3 (tanda 5): un Reporte por cada mundo — su plan, su avance y su cómo
@@ -215,8 +222,8 @@ export function indiceDeDocumentos(
       docs.push({
         clave: claveDeReporte(m.dominio),
         tipo: "reporte",
-        titulo: `Reporte de ${m.nombre}`,
-        subtitulo: "El plan, el avance y el cómo te fue de este mundo",
+        titulo: interpolar(t.reporteTitulo, { mundo: m.nombre }),
+        subtitulo: t.reporteSubtitulo,
         fecha: null,
         espacio: m.nombre,
       });
@@ -227,8 +234,8 @@ export function indiceDeDocumentos(
         docs.push({
           clave: claveDeRegistro(m.dominio),
           tipo: "registro",
-          titulo: `Registro de ${m.nombre}`,
-          subtitulo: "Lo que este mundo detectó y la respuesta que lo atiende, sobre tu plan real",
+          titulo: interpolar(t.registroTitulo, { mundo: m.nombre }),
+          subtitulo: t.registroSubtitulo,
           fecha: null,
           espacio: m.nombre,
         });
@@ -248,7 +255,8 @@ export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpedi
   return l.join("\n");
 }
 
-export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3): string[] {
+export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3, idioma: Locale = LOCALE_BASE): string[] {
+  const t = elegir(EXPEDIENTE, idioma).acciones;
   const l: string[] = [];
   const alm = "#".repeat(nivelEtapa);
   // Cuentas honestas (gestor de estados): el avance se mide sobre las ACTIVAS;
@@ -256,35 +264,35 @@ export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3): s
   const activas = acciones.filter((a) => a.estado !== "no_aplica");
   const retiradas = acciones.filter((a) => a.estado === "no_aplica");
   const hechas = activas.filter((a) => a.estado === "hecho");
-  l.push(`Completaste **${hechas.length} de ${activas.length}** acciones activas.`);
+  l.push(interpolar(t.completaste, { hechas: hechas.length, total: activas.length }));
   l.push("");
   const etapas = [...new Set(activas.map((a) => a.etapa))].sort((a, b) => a - b);
   for (const etapa of etapas) {
-    l.push(`${alm} Etapa ${etapa}`);
+    l.push(`${alm} ${interpolar(t.etapa, { n: etapa })}`);
     l.push("");
     // Las fechas se ORDENAN en una tabla, con su propia columna "Cuándo": antes
     // colgaban al final de cada línea y se leían como un desorden. La fecha va
     // como enlace-centinela para que el PDF la pinte: lo HECHO en verde
     // (cumplimiento) y lo PREVISTO en azul (planificación). El retraso no se
     // castiga: nunca rojo. En .md la tabla se lee igual de bien.
-    l.push("| Acción | Cuándo |");
+    l.push(t.tablaEncabezado);
     l.push("| :-- | :-- |");
     for (const a of activas.filter((x) => x.etapa === etapa)) {
       const check = a.estado === "hecho" ? "✓ " : "";
       const texto = a.texto.replace(/\s+/g, " ").trim().replace(/\|/g, "\\|");
       const cuando = a.completedAt
-        ? `[hecho el ${fechaHumanaConAno(a.completedAt)}](#f-hecho)`
+        ? interpolar(t.hechoEl, { fecha: fechaHumanaConAno(a.completedAt) })
         : a.fechaBase
-          ? `[previsto para el ${fechaHumanaConAno(a.fechaBase)}](#f-prev)`
-          : "sin fecha";
+          ? interpolar(t.previstoPara, { fecha: fechaHumanaConAno(a.fechaBase) })
+          : t.sinFecha;
       l.push(`| ${check}${texto} | ${cuando} |`);
     }
     l.push("");
   }
   if (retiradas.length) {
-    l.push(`${alm} Retiradas (no aplican): ${retiradas.length}`);
+    l.push(`${alm} ${interpolar(t.retiradas, { n: retiradas.length })}`);
     l.push("");
-    l.push("Tareas que decidiste que no corren para esta idea. No son pendientes ni fracasos: son parte de tu criterio.");
+    l.push(t.retiradasExplicacion);
     l.push("");
     for (const a of retiradas) {
       const motivo = a.noAplicaMotivo ? ` (${a.noAplicaMotivo.replace(/\s+/g, " ").trim()})` : "";
@@ -300,52 +308,55 @@ export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3): s
  * orden, el registro de lo que hiciste y cuándo, tus números, los mundos que
  * trabajaste y, si la cerraste, cómo te fue.
  */
-export function expedienteMarkdown(d: DatosExpediente): string {
+export function expedienteMarkdown(d: DatosExpediente, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(EXPEDIENTE, idioma).expediente;
   const l: string[] = [];
   // Claves de sección según el estado del proyecto (lo pidió el fundador: cada
   // punto de control con su clave clara). Mientras hay camino por delante NO se
   // habla en pasado: el registro de acciones es "Tu avance", y el resumen es
   // "Tu progreso hasta aquí". Solo al cerrar cambian a la voz de cierre.
-  const tituloAcciones = d.realizadaAt ? "Lo que hiciste" : "Tu avance";
-  const tituloResumen = d.realizadaAt ? "Cómo te fue" : "Tu progreso hasta aquí";
+  const tituloAcciones = d.realizadaAt ? t.loQueHiciste : t.tuAvance;
+  const tituloResumen = d.realizadaAt ? t.comoTeFue : t.tuProgreso;
 
   l.push(`# ${d.nombre}`);
   l.push("");
-  l.push(`> Expediente completo · generado el ${fechaHumanaConAno(d.generadoAt)}`);
+  l.push(interpolar(t.generado, { fecha: fechaHumanaConAno(d.generadoAt) }));
   l.push("");
-  l.push(`**Empezaste** el ${fechaHumanaConAno(d.creadaAt)}`);
+  l.push(interpolar(t.empezaste, { fecha: fechaHumanaConAno(d.creadaAt) }));
   l.push("");
   l.push(
     d.realizadaAt
-      ? `**Estado** Proyecto realizado el ${fechaHumanaConAno(d.realizadaAt)}`
-      : "**Estado** En marcha"
+      ? interpolar(t.estadoRealizado, { fecha: fechaHumanaConAno(d.realizadaAt) })
+      : t.estadoEnMarcha
   );
   l.push("");
 
   // Índice: un expediente largo se navega, no se lee de corrido.
-  const secciones: string[] = ["Tu idea, tal como la escribiste"];
-  if (d.organizadorMd) secciones.push("Tu idea, ordenada");
-  const ciclos = titulosDeCiclos(d.ciclos);
+  // El índice lista los mismos títulos de sección, sin su "## ".
+  const sinAlmohadillas = (titulo: string) => titulo.replace(/^#+\s+/, "");
+  const secciones: string[] = [sinAlmohadillas(t.tituloIdeaEscrita)];
+  if (d.organizadorMd) secciones.push(sinAlmohadillas(t.tituloIdeaOrdenada));
+  const ciclos = titulosDeCiclos(d.ciclos, idioma);
   for (const c of ciclos) secciones.push(c.titulo);
   if (d.acciones.length) secciones.push(tituloAcciones);
-  if (d.numerosMd) secciones.push("Tus Números");
+  if (d.numerosMd) secciones.push(sinAlmohadillas(t.tituloNumeros));
   for (const m of d.mundos) if (m.contenidoMd) secciones.push(m.nombre);
   if (d.informeMd) secciones.push(tituloResumen);
 
-  l.push("## Contenido");
+  l.push(t.tituloContenido);
   l.push("");
   for (const s of secciones) l.push(`- ${s}`);
   l.push("");
   l.push("---");
   l.push("");
 
-  l.push("## Tu idea, tal como la escribiste");
+  l.push(t.tituloIdeaEscrita);
   l.push("");
   l.push(d.entradaOriginal.trim());
   l.push("");
 
   if (d.organizadorMd) {
-    l.push("## Tu idea, ordenada");
+    l.push(t.tituloIdeaOrdenada);
     l.push("");
     l.push(rebajarTitulos(d.organizadorMd.trim(), 2));
     l.push("");
@@ -363,11 +374,11 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   if (d.acciones.length) {
     l.push(`## ${tituloAcciones}`);
     l.push("");
-    l.push(...seccionAcciones(d.acciones));
+    l.push(...seccionAcciones(d.acciones, 3, idioma));
   }
 
   if (d.numerosMd) {
-    l.push("## Tus Números");
+    l.push(t.tituloNumeros);
     l.push("");
     l.push(rebajarTitulos(d.numerosMd.trim(), 2));
     l.push("");
@@ -378,7 +389,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
     l.push(`## ${m.nombre}`);
     l.push("");
     if (m.completadoAt) {
-      l.push(`_Lo diste por terminado el ${fechaHumanaConAno(m.completadoAt)}_`);
+      l.push(interpolar(t.mundoTerminado, { fecha: fechaHumanaConAno(m.completadoAt) }));
       l.push("");
     }
     l.push(rebajarTitulos(m.contenidoMd.trim(), 2));
@@ -386,12 +397,12 @@ export function expedienteMarkdown(d: DatosExpediente): string {
     // Fase 3 (tanda 5): el mundo se COMPLETA con su avance y su cómo te fue, no
     // solo su plan. Las etapas van a h4 (### Etapa) bajo el ### de la sección.
     if (m.acciones && m.acciones.length) {
-      l.push(`### ${m.completadoAt ? "Lo que hiciste" : "Tu avance"}`);
+      l.push(`### ${m.completadoAt ? t.loQueHiciste : t.tuAvance}`);
       l.push("");
-      l.push(...seccionAcciones(m.acciones, 4));
+      l.push(...seccionAcciones(m.acciones, 4, idioma));
     }
     if (m.comoTeFueMd && m.comoTeFueMd.trim()) {
-      l.push(`### ${m.completadoAt ? "Cómo te fue" : "Tu progreso hasta aquí"}`);
+      l.push(`### ${m.completadoAt ? t.comoTeFue : t.tuProgreso}`);
       l.push("");
       l.push(m.comoTeFueMd.trim());
       l.push("");
@@ -406,7 +417,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
   }
 
   if (d.cierreMotivo) {
-    l.push("## Por qué la cerraste aquí");
+    l.push(t.tituloPorQueCerraste);
     l.push("");
     l.push(`> ${d.cierreMotivo.replace(/\s+/g, " ").trim()}`);
     l.push("");
@@ -414,7 +425,7 @@ export function expedienteMarkdown(d: DatosExpediente): string {
 
   // Fase 4.8: la secuencia del viaje cierra el expediente (su sección final).
   if (d.bitacoraMd && d.bitacoraMd.trim()) {
-    l.push("## La secuencia de tu viaje");
+    l.push(t.tituloSecuencia);
     l.push("");
     l.push(d.bitacoraMd.trim());
     l.push("");
@@ -444,18 +455,21 @@ export interface DatosReporteMundo {
  * secuencia. Sin las secciones del viaje principal (idea original, Tus Números):
  * un mundo es un frente, no la idea entera.
  */
-export function reporteMundoMarkdown(d: DatosReporteMundo): string {
+export function reporteMundoMarkdown(d: DatosReporteMundo, idioma: Locale = LOCALE_BASE): string {
+  const cat = elegir(EXPEDIENTE, idioma);
+  const t = cat.reporteMundo;
+  const tx = cat.expediente;
   const l: string[] = [];
-  l.push(`# Reporte de ${d.nombreMundo}`);
+  l.push(interpolar(t.titulo, { mundo: d.nombreMundo }));
   l.push("");
-  l.push(`> ${d.nombreIdea} · generado el ${fechaHumanaConAno(d.generadoAt)}`);
+  l.push(interpolar(t.generado, { idea: d.nombreIdea, fecha: fechaHumanaConAno(d.generadoAt) }));
   l.push("");
-  l.push(d.completadoAt ? `**Estado** Terminado el ${fechaHumanaConAno(d.completadoAt)}` : "**Estado** En marcha");
+  l.push(d.completadoAt ? interpolar(t.estadoTerminado, { fecha: fechaHumanaConAno(d.completadoAt) }) : tx.estadoEnMarcha);
   l.push("");
 
   // El plan del mundo + sus seguimientos, con el mismo naming ("Tu Plan",
   // "Seguimiento N") filtrado a su dominio.
-  for (const { ciclo, titulo } of titulosDeCiclos(d.ciclos)) {
+  for (const { ciclo, titulo } of titulosDeCiclos(d.ciclos, idioma)) {
     l.push(`## ${titulo}`);
     l.push("");
     l.push(`_${fechaHumanaConAno(ciclo.createdAt)}_`);
@@ -465,20 +479,20 @@ export function reporteMundoMarkdown(d: DatosReporteMundo): string {
   }
 
   if (d.acciones.length) {
-    l.push(`## ${d.completadoAt ? "Lo que hiciste" : "Tu avance"}`);
+    l.push(`## ${d.completadoAt ? tx.loQueHiciste : tx.tuAvance}`);
     l.push("");
-    l.push(...seccionAcciones(d.acciones, 3));
+    l.push(...seccionAcciones(d.acciones, 3, idioma));
   }
 
   if (d.comoTeFueMd && d.comoTeFueMd.trim()) {
-    l.push(`## ${d.completadoAt ? "Cómo te fue" : "Tu progreso hasta aquí"}`);
+    l.push(`## ${d.completadoAt ? tx.comoTeFue : tx.tuProgreso}`);
     l.push("");
     l.push(d.comoTeFueMd.trim());
     l.push("");
   }
 
   if (d.bitacoraMd && d.bitacoraMd.trim()) {
-    l.push("## La secuencia de este mundo");
+    l.push(t.tituloSecuencia);
     l.push("");
     l.push(d.bitacoraMd.trim());
     l.push("");
@@ -488,15 +502,16 @@ export function reporteMundoMarkdown(d: DatosReporteMundo): string {
 }
 
 /** Nombre de archivo seguro para la descarga (sin extensión). */
-export function nombreArchivo(nombreIdea: string, titulo: string): string {
+export function nombreArchivo(nombreIdea: string, titulo: string, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(EXPEDIENTE, idioma).archivo;
   const limpio = (s: string) =>
     s
       .replace(/[^\p{L}\p{N} _-]/gu, "")
       .trim()
       .replace(/\s+/g, "-")
       .slice(0, 40);
-  const base = limpio(nombreIdea) || "mi-idea";
-  const sufijo = limpio(titulo) || "documento";
+  const base = limpio(nombreIdea) || t.ideaPorOmision;
+  const sufijo = limpio(titulo) || t.documentoPorOmision;
   return `${base}-${sufijo}`.toLowerCase();
 }
 

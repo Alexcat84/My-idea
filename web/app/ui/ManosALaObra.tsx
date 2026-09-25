@@ -64,6 +64,11 @@ import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
 
 export interface ItemChecklistUI {
   id: string;
@@ -360,6 +365,7 @@ function FilaItem({
   /** Fase 4.3.2: tocar el texto abre "Explorar actividad" (el detalle). */
   onAbrirDetalle: () => void;
 }) {
+  const t = elegir(MANOS_A_LA_OBRA, useIdioma());
   const hecho = item.estado === "hecho";
   const retirada = item.estado === "no_aplica";
   // Marcar hecho COMPROMETE el estado en el acto, con la fecha de hoy por
@@ -413,13 +419,13 @@ function FilaItem({
               "block w-full text-left text-[14.5px] hover:underline " +
               (hecho ? "text-dim line-through" : retirada ? "text-[#8A8B92]" : "text-ink")
             }
-            title="Ver el detalle de esta actividad"
+            title={t.fila.verDetalle}
           >
             {item.texto}
           </button>
           {retirada && (
             <span className="mt-0.5 block text-[12.5px] text-[#8A8B92]">
-              no aplica{item.no_aplica_motivo ? ` · ${item.no_aplica_motivo}` : ""}
+              {item.no_aplica_motivo ? interpolar(t.fila.noAplicaConMotivo, { motivo: item.no_aplica_motivo }) : t.fila.noAplica}
             </span>
           )}
           {!hecho && !retirada && item.estado !== "pendiente" && (
@@ -430,16 +436,16 @@ function FilaItem({
             // solo si la fecha vigente cae en la semana actual; en a-mi-ritmo,
             // atada a `destacado`. Borde verde (no fondo lleno), como fija Design.
             <span className="mt-1 inline-block rounded-full border border-done/30 px-2.5 py-0.5 text-[11.5px] font-semibold text-done">
-              esta semana
+              {t.fila.estaSemana}
             </span>
           )}
           {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}
           {!hecho && !retirada && item.fecha_base && modo !== "ritmo" && (
-            <span className="mt-0.5 block text-[12.5px] text-accent">para el {fechaHumanaCorta(item.fecha_base)}</span>
+            <span className="mt-0.5 block text-[12.5px] text-accent">{interpolar(t.fila.paraEl, { fecha: fechaHumanaCorta(item.fecha_base) })}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
             // La fecha es un DATO (verde, informativo).
-            <span className="mt-1 block text-[12.5px] text-done">hecho el {fechaHumanaCorta(item.completed_at)}</span>
+            <span className="mt-1 block text-[12.5px] text-done">{interpolar(t.fila.hechoEl, { fecha: fechaHumanaCorta(item.completed_at) })}</span>
           )}
           {/* "cambiar fecha" ABAJO A LA DERECHA, debajo del texto: no le roba
               espacio a la actividad (el texto es el protagonista). El botón
@@ -447,7 +453,7 @@ function FilaItem({
           {hecho && !editandoFecha && (
             <span className="mt-2 flex justify-end">
               <BotonMini onClick={() => setEditandoFecha(true)} disabled={ocupado} tono="accent">
-                cambiar fecha
+                {t.fila.cambiarFecha}
               </BotonMini>
             </span>
           )}
@@ -460,18 +466,18 @@ function FilaItem({
       {/* editar la fecha de un ítem ya hecho */}
       {hecho && editandoFecha && (
         <div className="mt-3 flex flex-wrap items-center gap-2.5 border-t border-hairline pt-3">
-          <span className="text-[12.5px] text-dim">Cambiar la fecha:</span>
+          <span className="text-[12.5px] text-dim">{t.fila.cambiarLaFecha}</span>
           <input
             type="date"
             max={hoyInput}
             defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
             onChange={(e) => e.target.value && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })}
             disabled={ocupado}
-            aria-label="Cambiar la fecha en que lo hiciste"
+            aria-label={t.fila.ariaCambiarFecha}
             className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
           />
           <button onClick={() => setEditandoFecha(false)} className="text-[12.5px] text-dim hover:text-ink">
-            listo
+            {t.fila.listo}
           </button>
         </div>
       )}
@@ -497,6 +503,7 @@ function GrupoEtapas({
   /** Fase 4.3.2: abrir el detalle de un ítem, con el título de SU etapa. */
   onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
 }) {
+  const t = elegir(MANOS_A_LA_OBRA, useIdioma());
   return (
     <div className="flex flex-col gap-5">
       {grupo.etapas.map(({ etapa, items }) => {
@@ -507,7 +514,7 @@ function GrupoEtapas({
         const encabezado = (
           <span className="flex min-w-0 items-baseline gap-3">
             <span className="shrink-0 text-[13px] font-bold text-accent">{String(etapa).padStart(2, "0")}</span>
-            <span className="text-[15px] font-semibold [text-wrap:pretty]">{titulos[etapa] ?? `Etapa ${etapa}`}</span>
+            <span className="text-[15px] font-semibold [text-wrap:pretty]">{titulos[etapa] ?? interpolar(t.etapaN, { n: etapa })}</span>
           </span>
         );
         const conteoEtapa = (
@@ -526,7 +533,7 @@ function GrupoEtapas({
                   orden del plan intacto. La fecha (el viernes compartido) NO se
                   toca: solo el orden de lectura. */}
               {(modo === "fechas" ? ordenarEnFechas(items) : items).map((item) => (
-                <FilaItem key={item.id} item={item} ocupado={ocupado} modo={modo} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? `Etapa ${etapa}`)} />
+                <FilaItem key={item.id} item={item} ocupado={ocupado} modo={modo} onCambio={(c) => onCambio(item, c)} onAbrirDetalle={() => onAbrirDetalle(item, titulos[etapa] ?? interpolar(t.etapaN, { n: etapa }))} />
               ))}
             </div>
           </Acordeon>
@@ -557,6 +564,7 @@ function RitualContinuar({
   onEnviar: (detalles: string | null, enfoque: string | null) => void;
   onCerrar: () => void;
 }) {
+  const t = elegir(MANOS_A_LA_OBRA, useIdioma()).ritual;
   const [paso, setPaso] = useState<1 | 2 | 3>(1);
   const [detalles, setDetalles] = useState("");
   const [enfoque, setEnfoque] = useState("");
@@ -565,10 +573,10 @@ function RitualContinuar({
     <div className="rounded-panel border border-accent/40 bg-surface p-5 sm:p-6">
       <div className="mb-3 flex items-center justify-between">
         <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-          {mundo ? `Continuar ${mundo}` : "Continuar mi idea"} · {paso} de 3
+          {mundo ? interpolar(t.encabezadoMundo, { mundo, paso }) : interpolar(t.encabezado, { paso })}
         </p>
         <button onClick={onCerrar} className="text-sm text-dim hover:text-ink">
-          Cerrar
+          {t.cerrar}
         </button>
       </div>
 
@@ -578,19 +586,16 @@ function RitualContinuar({
       {paso === 1 && resumen.hechos === 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
-            {mundo
-              ? `¿Aún no arrancas con ${mundo}? Cuéntame qué cambió desde que armamos su plan.`
-              : "¿Aún no arrancas? Cuéntame qué cambió desde que armamos el plan."}
+            {mundo ? interpolar(t.aunNoArrancasMundo, { mundo }) : t.aunNoArrancas}
           </p>
           <p className="mt-2 text-sm text-dim">
-            A veces la realidad se mueve antes que uno: un proveedor que falla, algo que se cayó, una
-            oportunidad nueva. Si ya hiciste algo, márcalo arriba y lo tomo en cuenta.
+            {t.realidadSeMueve}
           </p>
           <button
             onClick={() => setPaso(2)}
             className="mt-4 rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
           >
-            Te cuento
+            {t.teCuento}
           </button>
         </>
       )}
@@ -598,26 +603,27 @@ function RitualContinuar({
       {paso === 1 && resumen.hechos > 0 && (
         <>
           <p className="text-[17px] font-medium leading-relaxed">
-            Tu checklist es tu historia: ¿ya refleja lo que hiciste?
+            {t.checklistEsHistoria}
           </p>
           <p className="mt-2 text-sm text-dim">
-            Llevas {resumen.hechos} de {resumen.total} acciones {mundo ? `de ${mundo} ` : ""}hechas. Ajusta arriba
-            lo que haga falta. De eso compongo el «qué ha pasado», sin que lo redactes dos veces.
+            {mundo
+              ? interpolar(t.llevasHechasMundo, { hechos: resumen.hechos, total: resumen.total, mundo })
+              : interpolar(t.llevasHechas, { hechos: resumen.hechos, total: resumen.total })}
           </p>
           <button
             onClick={() => setPaso(2)}
             className="mt-4 rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
           >
-            Así va, sigamos
+            {t.asiVaSigamos}
           </button>
         </>
       )}
 
       {paso === 2 && (
         <>
-          <p className="text-[17px] font-medium leading-relaxed">¿Algo más que deba saber?</p>
+          <p className="text-[17px] font-medium leading-relaxed">{t.algoMas}</p>
           <p className="mt-2 text-sm text-dim">
-            Lo que pasó fuera del checklist: una sorpresa, un cambio, algo que descubriste. Opcional.
+            {t.fueraDelChecklist}
           </p>
           <div className="mt-3">
             <CampoConVoz
@@ -625,7 +631,7 @@ function RitualContinuar({
               valor={detalles}
               onCambio={setDetalles}
               filas={3}
-              placeholder="Cuéntame en tus palabras, escribe o dicta…"
+              placeholder={t.placeholderDetalles}
             />
           </div>
           <div className="mt-3 flex items-center gap-3">
@@ -633,10 +639,10 @@ function RitualContinuar({
               onClick={() => setPaso(3)}
               className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20"
             >
-              Seguir
+              {t.seguir}
             </button>
             <button onClick={() => setPaso(1)} className="text-sm text-dim hover:text-ink">
-              Atrás
+              {t.atras}
             </button>
           </div>
         </>
@@ -644,9 +650,9 @@ function RitualContinuar({
 
       {paso === 3 && (
         <>
-          <p className="text-[17px] font-medium leading-relaxed">¿Hacia dónde profundizamos?</p>
+          <p className="text-[17px] font-medium leading-relaxed">{t.haciaDonde}</p>
           <p className="mt-2 text-sm text-dim">
-            Si algo te quita el sueño o te urge resolver, dilo aquí. Si no, yo te guío según tu avance.
+            {t.siAlgoTeQuita}
           </p>
           <div className="mt-3">
             <CampoConVoz
@@ -654,7 +660,7 @@ function RitualContinuar({
               valor={enfoque}
               onCambio={setEnfoque}
               filas={2}
-              placeholder="Lo que más me interesa ahora es… (escribe o dicta)"
+              placeholder={t.placeholderEnfoque}
             />
           </div>
           <div className="mt-3 flex flex-wrap items-center gap-3">
@@ -664,26 +670,26 @@ function RitualContinuar({
               className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
             >
               {enviando
-                ? "Pensando…"
+                ? t.pensando
                 : mundo
-                  ? `Continuar este mundo · ${PRECIOS.mundo_seguimiento} créditos`
-                  : `Continuar mi idea · ${PRECIOS.seguimiento} créditos`}
+                  ? interpolar(t.botonMundo, { n: PRECIOS.mundo_seguimiento })
+                  : interpolar(t.botonMiIdea, { n: PRECIOS.seguimiento })}
             </button>
             <button
               onClick={() => onEnviar(detalles.trim() || null, null)}
               disabled={enviando}
               className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium disabled:opacity-50"
             >
-              No estoy seguro
+              {t.noEstoySeguro}
             </button>
             <button onClick={() => setPaso(2)} className="text-sm text-dim hover:text-ink">
-              Atrás
+              {t.atras}
             </button>
           </div>
           {/* La garantia del cobro, en el momento de decidir: los DOS botones de
               arriba entregan (y cobran), asi que la promesa va bajo la fila. */}
           <p className="mt-3 text-xs text-dim opacity-80">
-            Se descuentan al entregarse. Si algo falla, no se cobra nada.
+            {t.garantiaCobro}
           </p>
         </>
       )}
@@ -704,6 +710,7 @@ function TarjetaModo({
   ocupado: boolean;
   onElegir: (modo: ModoCamino) => void;
 }) {
+  const t = elegir(MANOS_A_LA_OBRA, useIdioma()).modo;
   // Íconos del canon 10: reloj (a mi ritmo) y calendario (con fechas), en un
   // badge redondeado arriba-izquierda. Trazo dim; azul piensa el tiempo.
   const iconoReloj = (
@@ -722,23 +729,23 @@ function TarjetaModo({
   const opciones: Array<{ modo: ModoCamino; titulo: string; desc: string; icono: ReactNode }> = [
     {
       modo: "ritmo",
-      titulo: "A mi ritmo",
-      desc: "Marca tu avance cuando suceda. Sin fechas ni presiones.",
+      titulo: t.ritmoTitulo,
+      desc: t.ritmoDesc,
       icono: iconoReloj,
     },
     {
       modo: "fechas",
-      titulo: "Con fechas y recordatorios",
+      titulo: t.fechasTitulo,
       // AUD-09 B03a: sin prometer recordatorios propios (no los hay; los
       // avisos son los del calendario al que te suscribes).
-      desc: "Te sugiero un calendario; tú lo ajustas.",
+      desc: t.fechasDesc,
       icono: iconoCalendario,
     },
   ];
   return (
     <section className="anima-plan-in rounded-panel border border-hairline bg-black p-6 text-center sm:p-8">
       <h3 className="mx-auto max-w-md text-2xl font-bold leading-tight tracking-tight [text-wrap:balance]">
-        ¿Cómo quieres llevar tu camino?
+        {t.pregunta}
       </h3>
       <div className="mt-7 flex flex-col gap-4 text-left sm:flex-row">
         {opciones.map((o) => (
@@ -757,26 +764,21 @@ function TarjetaModo({
               className="mt-5 rounded-[10px] py-2.5 text-center text-[13.5px] font-semibold text-ink"
               style={BORDE_AZUL}
             >
-              Elegir este
+              {t.elegirEste}
             </span>
           </button>
         ))}
       </div>
-      <p className="mt-5 text-xs text-dim">Puedes cambiar de modo cuando quieras.</p>
+      <p className="mt-5 text-xs text-dim">{t.puedesCambiar}</p>
     </section>
   );
 }
 
 /** El interruptor permanente "Fechas y recordatorios: activados / pausados"
  * (canon 10). Alterna 'fechas' ↔ 'ritmo'; pausar nunca borra fechas. */
-/** Los chips de capacidad en palabras de persona (el valor que viaja a la base
- * es el literal de CAPACIDAD_SEMANAL; esto es solo cómo se lee en pantalla). */
-const ETIQUETA_CAPACIDAD: Record<CapacidadSemanal, string> = {
-  "2-5": "2 a 5 horas",
-  "5-10": "5 a 10 horas",
-  "10-20": "10 a 20 horas",
-  "20+": "Más de 20 horas",
-};
+/* Los chips de capacidad en palabras de persona (el valor que viaja a la base
+ * es el literal de CAPACIDAD_SEMANAL; su etiqueta, cómo se lee en pantalla,
+ * vive en el catálogo: MANOS_A_LA_OBRA.capacidad). */
 
 /**
  * Las fechas propuestas del ritual, por tramo (cada dominio cuenta desde su
@@ -894,6 +896,8 @@ function RitualFechas({
   /** Persiste la capacidad elegida. Sin este manejador la pregunta no aparece. */
   onCapacidad?: (c: CapacidadSemanal) => void;
 }) {
+  const tt = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const t = tt.fechas;
   // Con "recalcular", solo lo que sigue vivo. Un mundo recien activado trae
   // todos sus items pendientes: por eso aparece aqui aunque la baseline core
   // ya estuviera confirmada (V3a).
@@ -1030,10 +1034,10 @@ function RitualFechas({
     <section className="anima-plan-in overflow-hidden rounded-panel border border-hairline bg-surface">
       <div className="px-6 pb-4 pt-7 sm:px-8">
         <h3 className="text-2xl font-bold tracking-tight">
-          {soloPendientes ? "Recalcular las fechas pendientes" : "Ponle fechas a tu camino"}
+          {soloPendientes ? t.tituloRecalcular : t.tituloPoner}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-dim">
-          Te propongo estas fechas en lenguaje humano; ajusta la que quieras. La hora es opcional.
+          {t.propongo}
         </p>
       </div>
 
@@ -1041,7 +1045,7 @@ function RitualFechas({
           que va ARRIBA de las fechas y cambiarla las recalcula a la vista. */}
       {preguntarCapacidad && (
         <div className="mx-6 mb-2 rounded-cinta border border-hairline bg-surface-2 px-5 py-4 sm:mx-8">
-          <p className="text-[14px] font-semibold">¿Cuántas horas por semana puedes darle a este espacio?</p>
+          <p className="text-[14px] font-semibold">{t.preguntaCapacidad}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {CAPACIDAD_SEMANAL.map((c) => {
               const activa = c === capacidadLocal;
@@ -1057,14 +1061,13 @@ function RitualFechas({
                     (activa ? "border-accent bg-accent/15 text-accent" : "border-hairline text-ink hover:border-accent/60")
                   }
                 >
-                  {ETIQUETA_CAPACIDAD[c]}
+                  {tt.capacidad[c]}
                 </button>
               );
             })}
           </div>
           <p className="mt-3 text-[12.5px] leading-relaxed text-dim">
-            Reparto las semanas según el trabajo que lleva cada tarea, y planeo con el piso de lo que me des: si te
-            sobra tiempo, vas adelantado. Puedes cambiarlo cuando quieras.
+            {t.reparto}
           </p>
         </div>
       )}
@@ -1081,7 +1084,7 @@ function RitualFechas({
           <div key={etapa}>
             <div className="my-3 flex items-center gap-3">
               <span className="text-[11px] font-bold uppercase tracking-[1.2px] text-accent">
-                Etapa {etapa}
+                {interpolar(tt.etapaN, { n: etapa })}
                 {tramo.titulos[etapa] ? ` · ${tramo.titulos[etapa]}` : ""}
               </span>
               <span className="h-px flex-1 bg-hairline" />
@@ -1090,7 +1093,7 @@ function RitualFechas({
                 disabled={guardando}
                 className="rounded-[8px] border border-white/15 px-2.5 py-1 text-[12px] text-dim hover:text-ink disabled:opacity-50"
               >
-                Mover esta etapa una semana
+                {t.moverEtapa}
               </button>
             </div>
             <div className="flex flex-col gap-2.5">
@@ -1112,8 +1115,7 @@ function RitualFechas({
                           capacidad y por eso mismo no alcanza el ancla. */}
                       {noLlegan[it.id] && (
                         <span className="mt-1 block text-[12.5px] leading-relaxed text-warn [text-wrap:pretty]" data-aviso-ancla>
-                          Esta protección no llega antes de {noLlegan[it.id]}: muévela o acepta el riesgo con los
-                          ojos abiertos.
+                          {interpolar(t.avisoAncla, { protegido: noLlegan[it.id] })}
                         </span>
                       )}
                     </span>
@@ -1124,7 +1126,7 @@ function RitualFechas({
                         value={fecha}
                         onChange={(e) => e.target.value && fijar(it.id, e.target.value)}
                         disabled={guardando}
-                        aria-label={`Fecha para: ${it.texto}`}
+                        aria-label={interpolar(t.ariaFecha, { tarea: it.texto })}
                         className="rounded-[9px] border bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none disabled:opacity-50"
                         style={{ borderColor: "rgba(77,124,254,0.4)" }}
                       />
@@ -1147,13 +1149,13 @@ function RitualFechas({
           disabled={guardando}
           className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
         >
-          {guardando ? "Guardando…" : "Aceptar estas fechas"}
+          {guardando ? t.guardando : t.aceptar}
         </button>
         <div className="flex flex-col">
           <button onClick={onPosponer} disabled={guardando} className="text-left text-[13.5px] text-dim hover:text-ink disabled:opacity-50">
-            Ponerlas después
+            {t.ponerlasDespues}
           </button>
-          <span className="text-xs text-dim opacity-75">Sin fechas no podré recordarte nada.</span>
+          <span className="text-xs text-dim opacity-75">{t.sinFechas}</span>
         </div>
       </div>
     </section>
@@ -1196,9 +1198,10 @@ function IconoCara({ cara }: { cara: Cara }) {
  * vez de pintar una tabla vacía que parezca rota.
  */
 function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; entradas: EntradaRegistro[] }) {
+  const t = elegir(MANOS_A_LA_OBRA, useIdioma()).registro;
   return (
     <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
-      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Registro de {nombreMundo}</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{interpolar(t.titulo, { mundo: nombreMundo })}</p>
       {entradas.length === 0 ? (
         <p className="mt-2.5 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">
           {/* AUD-09 M48: el plan ya llegó; vacío = el enlace falló. */}
@@ -1214,15 +1217,15 @@ function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; en
                 {sev && <p className="mt-1 text-[12.5px] text-warn">{sev}</p>}
                 {e.camino && (
                   <p className="mt-1 text-[12.5px] text-dim">
-                    El camino: <span className="text-ink">{PALABRA_CAMINO[e.camino]}</span>
+                    {rico(t.camino, { v: () => <span className="text-ink">{PALABRA_CAMINO[e.camino!]}</span> })}
                   </p>
                 )}
                 <p className="mt-1.5 text-[12.5px] text-dim [text-wrap:pretty]">
-                  Protege: <span className="text-ink">{textoProtege(e)}</span>
+                  {rico(t.protege, { v: () => <span className="text-ink">{textoProtege(e)}</span> })}
                 </p>
                 {e.deteccion && (
                   <p className="mt-1 text-[12.5px] text-dim [text-wrap:pretty]">
-                    Tu respuesta: <span className="text-ink">{e.respuesta}</span>
+                    {rico(t.tuRespuesta, { v: () => <span className="text-ink">{e.respuesta}</span> })}
                   </p>
                 )}
               </li>
@@ -1246,20 +1249,24 @@ function CapacidadDelEspacio({
   capacidad: CapacidadSemanal;
   onCapacidad: (dominio: string, c: CapacidadSemanal) => void;
 }) {
+  const tt = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const t = tt.capacidadEspacio;
   const [editando, setEditando] = useState(false);
   if (!editando) {
     return (
       <p className="mt-2.5 border-t border-hairline pt-2.5 text-[12.5px] text-dim">
-        Le das <span className="font-semibold text-ink">{ETIQUETA_CAPACIDAD[capacidad].toLowerCase()}</span> por semana.{" "}
+        {rico(interpolar(t.leDas, { horas: tt.capacidad[capacidad].toLowerCase() }), {
+          b: (c) => <span className="font-semibold text-ink">{c}</span>,
+        })}{" "}
         <button onClick={() => setEditando(true)} className="text-accent hover:underline">
-          cambiar
+          {tt.cambiar}
         </button>
       </p>
     );
   }
   return (
     <div className="mt-2.5 border-t border-hairline pt-2.5">
-      <p className="text-[12.5px] text-dim">¿Cuántas horas por semana puedes darle ahora?</p>
+      <p className="text-[12.5px] text-dim">{t.preguntaAhora}</p>
       <div className="mt-2 flex flex-wrap gap-2">
         {CAPACIDAD_SEMANAL.map((c) => (
           <button
@@ -1275,11 +1282,11 @@ function CapacidadDelEspacio({
               (c === capacidad ? "border-accent bg-accent/15 text-accent" : "border-hairline text-ink hover:border-accent/60")
             }
           >
-            {ETIQUETA_CAPACIDAD[c]}
+            {tt.capacidad[c]}
           </button>
         ))}
       </div>
-      <p className="mt-2 text-[12px] text-dim">Las nuevas horas entran cuando toques Recalcular pendientes.</p>
+      <p className="mt-2 text-[12px] text-dim">{t.nuevasHoras}</p>
     </div>
   );
 }
@@ -1345,6 +1352,8 @@ function PanelModoFechas({
   onRecalcular: () => void;
   onDescargarIcs: () => void;
 }) {
+  const tt = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const t = tt.panel;
   return (
     <>
       {/* la elección del modo: primera entrada (modo null) o al tocar "cambiar" */}
@@ -1372,24 +1381,24 @@ function PanelModoFechas({
       {/* fechas ya puestas: pospuesta (reabrir) o activas (recalcular) */}
       {modo === "fechas" && planId && !recalcularPendientes && !hayFechas && pospuesto && (
         <div className="flex items-center justify-between gap-3 rounded-cinta border border-hairline bg-surface px-4 py-3">
-          <p className="text-[13px] text-dim">Sin fechas no podré recordarte nada.</p>
-          <BotonMini onClick={onPonerFechas}>Poner fechas ahora</BotonMini>
+          <p className="text-[13px] text-dim">{tt.fechas.sinFechas}</p>
+          <BotonMini onClick={onPonerFechas}>{t.ponerFechasAhora}</BotonMini>
         </div>
       )}
       {modo === "fechas" && planId && !recalcularPendientes && hayFechas && (
         <div className="rounded-cinta border border-hairline bg-surface px-4 py-3">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[13px] text-dim">
-              <span className="font-semibold text-accent">Fechas activas.</span> Tu camino tiene línea base.
+              {rico(t.fechasActivas, { b: (c) => <span className="font-semibold text-accent">{c}</span> })}
             </p>
             <div className="flex flex-wrap items-center gap-2">
               {/* Calendario Nivel 0: las fechas pendientes de ESTE espacio al .ics */}
               {tieneTareasConFecha && (
                 <BotonMini onClick={onDescargarIcs} tono="accent">
-                  Añadir a mi calendario
+                  {t.anadirCalendario}
                 </BotonMini>
               )}
-              <BotonMini onClick={onRecalcular}>Recalcular pendientes</BotonMini>
+              <BotonMini onClick={onRecalcular}>{t.recalcularPendientes}</BotonMini>
             </div>
           </div>
           {/* Scheduler F2: las horas por semana de este espacio, editables aquí.
@@ -1517,6 +1526,8 @@ export function ManosALaObra({
   organizadorAt,
   realizadaAt,
 }: Props) {
+  const idioma = useIdioma();
+  const t = elegir(MANOS_A_LA_OBRA, idioma);
   // AUD-09 (tanda 5): con la idea realizada, el núcleo no ofrece un seguimiento
   // pagado ni un segundo cierre (el mundo ya lo hacía con !completado).
   const nucleoCerrado = Boolean(realizadaAt);
@@ -1716,17 +1727,20 @@ export function ManosALaObra({
   };
   const coreEnEspacio = mostrarCore && soloDominio === ESPACIO_CORE;
   const opcionesCara: { id: Cara; nombre: string; icono: ReactNode }[] = [
-    { id: "plan", nombre: "Plan", icono: <IconoCara cara="plan" /> },
-    { id: "manos", nombre: "Manos a la obra", icono: <IconoCara cara="manos" /> },
-    { id: "avance", nombre: "Tu avance", icono: <IconoCara cara="avance" /> },
+    { id: "plan", nombre: t.caras.plan, icono: <IconoCara cara="plan" /> },
+    { id: "manos", nombre: t.caras.manos, icono: <IconoCara cara="manos" /> },
+    { id: "avance", nombre: t.caras.avance, icono: <IconoCara cara="avance" /> },
   ];
-  const hitosCore = hitosDeEspacio({
-    espacio: "core",
-    chispaAt: proyectoCreatedAt,
-    claridadAt: organizadorAt,
-    planAt: planCreatedAt,
-    realizadaAt,
-  });
+  const hitosCore = hitosDeEspacio(
+    {
+      espacio: "core",
+      chispaAt: proyectoCreatedAt,
+      claridadAt: organizadorAt,
+      planAt: planCreatedAt,
+      realizadaAt,
+    },
+    idioma
+  );
   // Fase 3.8: la baseline está confirmada si algún ítem core ya tiene fecha.
   // Fase 4.1 (V3a): el ritual cubre el proyecto ENTERO. Cada tramo lleva su
   // propio ancla (el created_at del plan de SU dominio) y sus propios titulos
@@ -1739,11 +1753,12 @@ export function ManosALaObra({
     const out: GrupoRitual[] = [];
     for (const dom of dominiosDelRitual(ESPACIO_CORE)) {
       if (esEspacioCore(dom) && core) {
-        out.push({ dominio: "core", nombre: "Tu viaje principal", planCreatedAt, titulos: titulosCore, items: itemsCore });
+        const nombre = elegir(MANOS_A_LA_OBRA, idioma).nucleo.tuViajePrincipal;
+        out.push({ dominio: "core", nombre, planCreatedAt, titulos: titulosCore, items: itemsCore });
       }
     }
     return out;
-  }, [core, planCreatedAt, titulosCore, itemsCore]);
+  }, [core, planCreatedAt, titulosCore, itemsCore, idioma]);
 
   // Con fechas ya puestas en CUALQUIER dominio no se reabre el ritual inicial;
   // un mundo nuevo entra por "recalcular pendientes" (V3a).
@@ -1801,7 +1816,7 @@ export function ManosALaObra({
       if (dominio === ESPACIO_CORE) onModoCambiado(modo);
       else setModosLocal((prev) => ({ ...prev, [dominio]: modo }));
     } catch {
-      setError("no pudimos guardar tu elección; revisa tu internet e intenta de nuevo");
+      setError(t.errores.guardarEleccion);
     } finally {
       setGuardandoModo(false);
     }
@@ -1821,7 +1836,7 @@ export function ManosALaObra({
       });
       if (!res.ok) setError(ERROR_GENERICO);
     } catch {
-      setError("no pudimos guardar tus horas por semana; revisa tu internet e intenta de nuevo");
+      setError(t.errores.guardarHoras);
     }
   }
 
@@ -1843,7 +1858,7 @@ export function ManosALaObra({
       setRecalcularPendientes(false);
       onRecargarChecklist();
     } catch {
-      setErrorBaseline("no pudimos guardar tus fechas; revisa tu internet e intenta de nuevo");
+      setErrorBaseline(t.errores.guardarFechas);
     } finally {
       setGuardandoBaseline(false);
     }
@@ -1867,7 +1882,7 @@ export function ManosALaObra({
       }
       onRecargarChecklist();
     } catch {
-      setError("no pudimos mover la fecha; revisa tu internet e intenta de nuevo");
+      setError(t.errores.moverFecha);
     }
   }
 
@@ -1887,7 +1902,7 @@ export function ManosALaObra({
       setConfirmandoRealizar(false);
       onRealizada();
     } catch {
-      setError("no pudimos guardar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.guardar);
     } finally {
       setRealizando(false);
     }
@@ -1927,7 +1942,7 @@ export function ManosALaObra({
         banda: data.item?.banda ?? cambio.banda,
       });
     } catch {
-      setError("no pudimos guardar el cambio; revisa tu internet e intenta de nuevo");
+      setError(t.errores.guardarCambio);
     } finally {
       setOcupado(false);
     }
@@ -1986,7 +2001,7 @@ export function ManosALaObra({
       const data = await res.json();
       onSeguimientoIniciado(data, dominio);
     } catch {
-      setErrorRitual("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setErrorRitual(t.errores.conectar);
     } finally {
       setEnviandoFollow(false);
     }
@@ -2014,7 +2029,7 @@ export function ManosALaObra({
       // El chip sale de lo que respondió el servidor, no de lo que pedimos.
       onMundoCerrado(dominio, data.completado_at ?? null);
     } catch {
-      setError("no pudimos guardar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.guardar);
     } finally {
       setGuardandoMundo(false);
     }
@@ -2038,7 +2053,7 @@ export function ManosALaObra({
       }
       onMundoIniciado(data, dominio);
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.conectar);
     } finally {
       setArrancandoMundo(null);
     }
@@ -2055,7 +2070,7 @@ export function ManosALaObra({
         <header className="anima-plan-in">
           <p className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[1.2px] text-done">
             <span className="anima-green-pulse h-2 w-2 rounded-full bg-done" />
-            Tu idea avanza en el mundo real
+            {t.nucleo.avanza}
           </p>
           {tituloPlan && (
             <h2 className="text-2xl font-bold leading-tight tracking-tight sm:text-[28px]">{tituloPlan}</h2>
@@ -2074,10 +2089,12 @@ export function ManosALaObra({
           {modoCamino !== null && !mostrarSelectorModo && (
             <p className="mt-3 flex flex-wrap items-center gap-2 text-[13px] text-dim">
               <span>
-                Modo: <span className="font-semibold text-ink">{modoCamino === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+                {rico(interpolar(t.modo.actual, { modo: modoCamino === "ritmo" ? t.modo.aMiRitmo : t.modo.conFechas }), {
+                  b: (c) => <span className="font-semibold text-ink">{c}</span>,
+                })}
               </span>
               <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="accent">
-                cambiar
+                {t.cambiar}
               </BotonMini>
             </p>
           )}
@@ -2092,7 +2109,7 @@ export function ManosALaObra({
             La cara "manos" (default) es el comportamiento actual (aditivo). */}
         {coreEnEspacio && <SelectorCara valor={cara} onCambio={cambiarCara} opciones={opcionesCara} />}
         {coreEnEspacio && cara === "plan" && planMd && (
-          <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? "Tu plan"} />
+          <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? t.nucleo.tuPlan} />
         )}
         {/* "Todo separado" (T2): "Tu avance" = SOLO la línea de hitos del espacio.
             Las estadísticas y la bitácora salieron de aquí; viven en sus propios
@@ -2127,7 +2144,7 @@ export function ManosALaObra({
           }}
           onPonerFechas={() => setPospuesto(false)}
           onRecalcular={() => setRecalcularPendientes(true)}
-          onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? "Mi idea", mundos.length > 0 ? "Tu viaje" : undefined)}
+          onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? t.nucleo.miIdea, mundos.length > 0 ? t.nucleo.tuViaje : undefined)}
         />
 
         {/* ritual de continuación (3 tarjetas) */}
@@ -2150,8 +2167,8 @@ export function ManosALaObra({
           <div className="lg:hidden">
             <TarjetaAcceso
               icono="ciclo"
-              titulo="Ciclo de profundización"
-              descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
+              titulo={t.tarjetas.cicloTitulo}
+              descripcion={t.tarjetas.cicloDesc}
               onClick={() => void abrirRitual("core")}
             />
             {entrevistaAbierta && (
@@ -2159,7 +2176,7 @@ export function ManosALaObra({
                 onClick={onVolverEntrevista}
                 className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
               >
-                Volver a la entrevista
+                {t.nucleo.volverEntrevista}
               </button>
             )}
           </div>
@@ -2170,7 +2187,9 @@ export function ManosALaObra({
             core-solo de su hub no hay mundos abajo, así que no aparece. */}
         {core && mundosVisibles.length > 0 && (
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Tu viaje core · <span className="text-done">{cCore.hechos}/{cCore.total}</span>
+            {rico(interpolar(t.nucleo.tuViajeCore, { hechos: cCore.hechos, total: cCore.total }), {
+              b: (c) => <span className="text-done">{c}</span>,
+            })}
           </p>
         )}
         {/* Pista de PRIMER USO (se desvanece tras el primer cambio de estado):
@@ -2181,14 +2200,14 @@ export function ManosALaObra({
             <span aria-hidden className="flex h-[18px] w-[18px] shrink-0 overflow-hidden rounded-full border-[1.5px] border-accent">
               <span className="h-full w-1/2 bg-accent/60" />
             </span>
-            Toca el círculo de una tarea para elegir su estado (hecha, en proceso, no aplica…).
+            {t.nucleo.pistaEstado}
           </p>
         )}
         {core ? (
           <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} modo={modoCamino} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
         ) : (
           <p className="text-sm text-dim">
-            Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.
+            {t.nucleo.sinChecklist}
           </p>
         )}
           </>
@@ -2236,39 +2255,40 @@ export function ManosALaObra({
                     <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
                       <path d="M2 6.5l2.5 2.5L10 3.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    Completado
+                    {t.mundo.completado}
                   </span>
                 ) : grupo ? (
                   <span className="inline-flex items-center rounded-full border border-done/45 px-3 py-1 text-[11px] font-bold text-done">
-                    Mundo activo · {c.hechos}/{c.total}
+                    {interpolar(t.mundo.activoConteo, { hechos: c.hechos, total: c.total })}
                   </span>
                 ) : mundo.resumenMd && !mundo.plan ? (
                   /* Fase 4.5: el estado protagonista del preview. */
                   <span className="inline-flex items-center rounded-full border border-accent/50 bg-accent/10 px-3 py-1 text-[11px] font-bold text-accent">
-                    Listo para generar tu plan
+                    {t.mundo.listoParaGenerar}
                   </span>
                 ) : (
                   <span className="inline-flex items-center rounded-full border border-accent/45 px-3 py-1 text-[11px] font-bold text-accent">
-                    {mundo.plan ? "Mundo activo" : "Por explorar"}
+                    {mundo.plan ? t.mundo.activo : t.mundo.porExplorar}
                   </span>
                 )}
               </div>
               <p className="mt-1 text-sm text-dim">{mundo.promesa}</p>
               {completado && (
                 <p className="mt-2 text-[12.5px] text-dim">
-                  Lo diste por terminado {haceCuanto(mundo.completadoAt!)}
-                  {c.total > c.hechos ? ". Lo que quedó pendiente sigue aquí: es parte de tu historia." : "."}
+                  {interpolar(c.total > c.hechos ? t.mundo.terminadoConPendientes : t.mundo.terminado, {
+                    cuando: haceCuanto(mundo.completadoAt!),
+                  })}
                 </p>
               )}
 
               {/* mini viaje del mundo: Exploración → Plan → Manos a la Obra */}
               <div className="mt-3 flex items-center gap-2.5 text-[12px] text-dim">
-                <span className={mundo.plan || mundo.resumenMd ? "text-accent" : ""}>Exploración</span>
+                <span className={mundo.plan || mundo.resumenMd ? "text-accent" : ""}>{t.mundo.exploracion}</span>
                 <span className="w-3 border-t-2 border-dashed border-white/20" />
-                <span className={mundo.plan ? "text-accent" : ""}>Plan</span>
+                <span className={mundo.plan ? "text-accent" : ""}>{t.mundo.plan}</span>
                 <span className="w-3 border-t-2 border-dashed border-white/20" />
                 <span className={grupo ? "font-semibold text-done" : ""}>
-                  Manos a la Obra{grupo ? ` · ${c.hechos}/${c.total}` : ""}
+                  {grupo ? interpolar(t.mundo.manosConteo, { hechos: c.hechos, total: c.total }) : t.mundo.manos}
                 </span>
               </div>
 
@@ -2278,14 +2298,12 @@ export function ManosALaObra({
               {mundo.planBasicoAt && !mundo.planPagadoAt && mundo.plan?.session_id && (
                 <div className="mt-4 rounded-panel border border-hairline bg-surface p-4">
                   <p className="text-sm text-warn">
-                    El plan de {mundo.nombre} es una versión básica: se armó sin la redacción con IA y no se te cobró.
+                    {interpolar(t.mundo.planBasico, { mundo: mundo.nombre })}
                   </p>
                   <p className="mt-2 text-[12.5px] text-dim">
-                    Esto usará{" "}
-                    <span className="font-semibold text-ink">
-                      {montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento")} créditos
-                    </span>{" "}
-                    de tu saldo, solo si la IA lo entrega.
+                    {rico(interpolar(t.mundo.usaraSiEntrega, { n: montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento") }), {
+                      b: (c) => <span className="font-semibold text-ink">{c}</span>,
+                    })}
                   </p>
                   <BotonHeroe
                     onClick={() =>
@@ -2294,7 +2312,7 @@ export function ManosALaObra({
                     }
                     className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
                   >
-                    Generar el plan completo · {montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento")} créditos
+                    {interpolar(t.mundo.generarCompleto, { n: montoDelPlan(mundo.dominio, mundo.plan.etiqueta === "seguimiento") })}
                   </BotonHeroe>
                 </div>
               )}
@@ -2309,7 +2327,7 @@ export function ManosALaObra({
                       <div className="mt-4 flex flex-col gap-4">
                         {mundo.resumenMd && (
                           <div className="rounded-panel border border-accent/30 bg-accent/[0.04] p-5">
-                            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">Tu diagnóstico</p>
+                            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">{t.mundo.tuDiagnostico}</p>
                             <Markdown>{mundo.resumenMd}</Markdown>
                           </div>
                         )}
@@ -2322,13 +2340,16 @@ export function ManosALaObra({
                             de hitos. Estadísticas y bitácora del mundo viven en sus
                             accesos por espacio (Análisis / Mi bitácora), no aquí. */}
                         <LineaAvance
-                          hitos={hitosDeEspacio({
-                            espacio: "mundo",
-                            nombre: mundo.nombre,
-                            diagnosticoAt: mundo.resumenAt,
-                            planAt: mundo.plan?.created_at,
-                            cerradoAt: mundo.completadoAt,
-                          })}
+                          hitos={hitosDeEspacio(
+                            {
+                              espacio: "mundo",
+                              nombre: mundo.nombre,
+                              diagnosticoAt: mundo.resumenAt,
+                              planAt: mundo.plan?.created_at,
+                              cerradoAt: mundo.completadoAt,
+                            },
+                            idioma
+                          )}
                         />
                       </div>
                     )}
@@ -2340,10 +2361,12 @@ export function ManosALaObra({
                         {modoMundo !== null && !mostrarSelectorModo && (
                           <p className="flex flex-wrap items-center gap-2 text-[13px] text-dim">
                             <span>
-                              Modo: <span className="font-semibold text-ink">{modoMundo === "ritmo" ? "a mi ritmo" : "con fechas"}</span>
+                              {rico(interpolar(t.modo.actual, { modo: modoMundo === "ritmo" ? t.modo.aMiRitmo : t.modo.conFechas }), {
+                                b: (c) => <span className="font-semibold text-ink">{c}</span>,
+                              })}
                             </span>
                             <BotonMini onClick={() => setMostrarSelectorModo(true)} tono="accent">
-                              cambiar
+                              {t.cambiar}
                             </BotonMini>
                           </p>
                         )}
@@ -2399,29 +2422,29 @@ export function ManosALaObra({
                             {onVerBitacora && (
                               <TarjetaAcceso
                                 icono="bitacora"
-                                titulo={`Bitácora de ${mundo.nombre}`}
-                                descripcion="La historia de este mundo, paso a paso: cada decisión que has tomado aquí."
+                                titulo={interpolar(t.mundo.bitacoraTitulo, { mundo: mundo.nombre })}
+                                descripcion={t.mundo.bitacoraDesc}
                                 onClick={() => onVerBitacora(mundo.dominio)}
                               />
                             )}
                             {onVerCalendario && modoMundo === "fechas" && hayFechasMundo && (
                               <TarjetaAcceso
                                 icono="calendario"
-                                titulo={`Calendario de ${mundo.nombre}`}
-                                descripcion="Lo que viene en este mundo, día por día. Sus fechas, hacia adelante."
+                                titulo={interpolar(t.mundo.calendarioTitulo, { mundo: mundo.nombre })}
+                                descripcion={t.mundo.calendarioDesc}
                                 onClick={() => onVerCalendario(mundo.dominio)}
                               />
                             )}
                             <TarjetaAcceso
                               icono="analisis"
-                              titulo={`Análisis de ${mundo.nombre}`}
-                              descripcion="El ritmo, las etapas y el cumplimiento de este mundo, calculados de lo que hiciste."
+                              titulo={interpolar(t.mundo.analisisTitulo, { mundo: mundo.nombre })}
+                              descripcion={t.mundo.analisisDesc}
                               onClick={() => onVerAnalisis(mundo.dominio)}
                             />
                             <TarjetaAcceso
                               icono="documentos"
-                              titulo={`Documentos de ${mundo.nombre}`}
-                              descripcion="El reporte de este mundo y lo que deje cada fase de su camino, en .md o PDF."
+                              titulo={interpolar(t.mundo.documentosTitulo, { mundo: mundo.nombre })}
+                              descripcion={t.mundo.documentosDesc}
                               onClick={() => onVerDocumentos(mundo.dominio)}
                             />
                           </div>
@@ -2434,12 +2457,12 @@ export function ManosALaObra({
                      colapsados + checklist. */
                   <div className="mt-4 flex flex-col gap-3">
                     {mundo.resumenMd && (
-                      <Acordeon titulo="Tu diagnóstico">
+                      <Acordeon titulo={t.mundo.tuDiagnostico}>
                         <Markdown>{mundo.resumenMd}</Markdown>
                       </Acordeon>
                     )}
                     {mundo.plan && (
-                      <Acordeon titulo={`El plan de ${mundo.nombre}`}>
+                      <Acordeon titulo={interpolar(t.mundo.elPlanDe, { mundo: mundo.nombre })}>
                         <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
                       </Acordeon>
                     )}
@@ -2453,14 +2476,17 @@ export function ManosALaObra({
                 <div className="mt-4">
                   <div className="rounded-panel border border-accent/30 bg-accent/[0.04] p-5">
                     <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-                      Tu diagnóstico{mundo.resumenAt ? ` · ${fechaSello(mundo.resumenAt)}` : ""}
+                      {t.mundo.tuDiagnostico}
+                      {mundo.resumenAt ? ` · ${fechaSello(mundo.resumenAt)}` : ""}
                     </p>
                     <Markdown>{mundo.resumenMd}</Markdown>
                   </div>
                   {/* Compuerta clara (campaña "Espacios" §1.3): el costo se dice
                       ANTES de generar; el usuario sabe que se descuenta. */}
                   <p className="mt-4 text-[12.5px] text-dim">
-                    Esto usará <span className="font-semibold text-ink">{PRECIOS.mundo_activar} créditos</span> de tu saldo.
+                    {rico(interpolar(t.mundo.usara, { n: PRECIOS.mundo_activar }), {
+                      b: (c) => <span className="font-semibold text-ink">{c}</span>,
+                    })}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-3">
                     <BotonHeroe
@@ -2468,7 +2494,7 @@ export function ManosALaObra({
                       disabled={!mundo.previewSessionId}
                       className="rounded-[10px] px-5 py-2.5 text-sm font-semibold"
                     >
-                      Generar mi plan de {mundo.nombre} · {PRECIOS.mundo_activar} créditos
+                      {interpolar(t.mundo.generarMiPlan, { mundo: mundo.nombre, n: PRECIOS.mundo_activar })}
                     </BotonHeroe>
                   </div>
                 </div>
@@ -2483,7 +2509,7 @@ export function ManosALaObra({
                     disabled={arrancandoMundo !== null}
                     className="rounded-[10px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
-                    {arrancandoMundo === mundo.dominio ? "Preparando tu mundo…" : "Explorar este mundo"}
+                    {arrancandoMundo === mundo.dominio ? t.mundo.preparando : t.mundo.explorar}
                   </button>
                 </div>
               )}
@@ -2517,23 +2543,23 @@ export function ManosALaObra({
                         disabled={guardandoMundo}
                         className="text-[13px] font-semibold text-accent hover:underline disabled:opacity-50"
                       >
-                        {guardandoMundo ? "Reabriendo…" : "Reabrir este mundo"}
+                        {guardandoMundo ? t.mundo.reabriendo : t.mundo.reabrir}
                       </button>
-                      <span className="text-[12.5px] text-dim">Si vuelves a él, tu checklist te espera igual.</span>
+                      <span className="text-[12.5px] text-dim">{t.mundo.siVuelves}</span>
                     </>
                   ) : cerrandoMundo === mundo.dominio ? (
                     <div className="w-full">
                       <p className="text-[14px] font-semibold leading-relaxed">
-                        ¿Diste {mundo.nombre} por terminado? Podrás reabrirlo cuando quieras.
+                        {interpolar(t.mundo.disteTerminado, { mundo: mundo.nombre })}
                       </p>
                       {/* El espejo del momento: sus números reales, sin juicio. */}
                       <p className="mt-2 text-[12.5px] text-dim">
-                        Llevas {c.hechos} de {c.total} acciones de este mundo
-                        {c.total > 0 ? ` (${Math.round((c.hechos / c.total) * 100)}%)` : ""}. Las que queden
-                        pendientes se guardan tal cual. Cerrar este mundo no cierra tu idea.
+                        {c.total > 0
+                          ? interpolar(t.mundo.llevasPct, { hechos: c.hechos, total: c.total, pct: Math.round((c.hechos / c.total) * 100) })
+                          : interpolar(t.mundo.llevas, { hechos: c.hechos, total: c.total })}
                       </p>
                       <label htmlFor={`motivo-${mundo.dominio}`} className="mt-3.5 block text-[12.5px] text-dim">
-                        ¿Por qué lo cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+                        {rico(t.mundo.porQueCierras, { s: (c) => <span className="text-dim/70">{c}</span> })}
                       </label>
                       <div className="mt-1.5">
                         <CampoConVoz
@@ -2541,7 +2567,7 @@ export function ManosALaObra({
                           valor={motivoMundo}
                           onCambio={setMotivoMundo}
                           filas={2}
-                          placeholder="Lo cierro porque…"
+                          placeholder={t.mundo.placeholderMotivo}
                         />
                       </div>
                       <div className="mt-3 flex items-center gap-3">
@@ -2550,14 +2576,14 @@ export function ManosALaObra({
                           disabled={guardandoMundo}
                           className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
                         >
-                          {guardandoMundo ? "Cerrando…" : "Sí, lo doy por terminado"}
+                          {guardandoMundo ? t.cerrando : t.mundo.siTerminado}
                         </button>
                         <button
                           onClick={() => setCerrandoMundo(null)}
                           disabled={guardandoMundo}
                           className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
                         >
-                          Todavía no
+                          {t.todaviaNo}
                         </button>
                       </div>
                     </div>
@@ -2569,14 +2595,14 @@ export function ManosALaObra({
                     <div className="flex w-full flex-col gap-3">
                       <TarjetaAcceso
                         icono="ciclo"
-                        titulo="Ciclo de profundización"
-                        descripcion={`¿La realidad te cambió el plan de ${mundo.nombre}? Cuéntame qué pasó y lo recalculo desde donde estás.`}
+                        titulo={t.tarjetas.cicloTitulo}
+                        descripcion={interpolar(t.mundo.cicloDesc, { mundo: mundo.nombre })}
                         onClick={() => void abrirRitual(mundo.dominio)}
                       />
                       <TarjetaAcceso
                         icono="realizar"
-                        titulo={`¿Diste ${mundo.nombre} por terminado?`}
-                        descripcion="Márcalo como completado cuando lo sientas cerrado. Lo que quede pendiente se guarda; podrás reabrirlo cuando quieras."
+                        titulo={interpolar(t.mundo.cerrarTitulo, { mundo: mundo.nombre })}
+                        descripcion={t.mundo.cerrarDesc}
                         onClick={() => {
                           setCerrandoMundo(mundo.dominio);
                           setMotivoMundo("");
@@ -2589,7 +2615,7 @@ export function ManosALaObra({
               )}
               {mundo.plan && (
                 <div className="mt-4">
-                  <Acordeon titulo={`El plan de ${mundo.nombre}`}>
+                  <Acordeon titulo={interpolar(t.mundo.elPlanDe, { mundo: mundo.nombre })}>
                     <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
                   </Acordeon>
                 </div>
@@ -2601,14 +2627,14 @@ export function ManosALaObra({
         {/* Historia: los planes anteriores del core, releíbles. Vive en la cara
             "manos" (o en el modo apilado histórico, sin caras). */}
         {mostrarCore && (!coreEnEspacio || cara === "manos") && historial.length > 0 && (
-          <Acordeon titulo={`Historia (${historial.length})`}>
+          <Acordeon titulo={interpolar(t.nucleo.historia, { n: historial.length })}>
             <div className="flex flex-col gap-3">
               {historial.map((h, i) => (
                 <Acordeon
                   key={i}
-                  titulo={`Plan ${h.etiqueta} · ${haceCuanto(h.created_at)}`}
+                  titulo={interpolar(t.nucleo.planHistoria, { etiqueta: h.etiqueta, cuando: haceCuanto(h.created_at) })}
                 >
-                  <PlanDocumento md={h.contenido_md} nombreIdea={`Plan ${h.etiqueta}`} />
+                  <PlanDocumento md={h.contenido_md} nombreIdea={interpolar(t.nucleo.planEtiqueta, { etiqueta: h.etiqueta })} />
                 </Acordeon>
               ))}
             </div>
@@ -2627,8 +2653,8 @@ export function ManosALaObra({
         {onVerBitacora && cCore.total > 0 && (
           <TarjetaAcceso
             icono="bitacora"
-            titulo="Mi bitácora"
-            descripcion="La historia de tu viaje, paso a paso: cada decisión que has tomado."
+            titulo={t.tarjetas.bitacoraTitulo}
+            descripcion={t.tarjetas.bitacoraDesc}
             // AUD-09 M14: la bitácora del núcleo, no la global (BANCO §7.1).
             onClick={() => onVerBitacora?.("core")}
           />
@@ -2636,23 +2662,23 @@ export function ManosALaObra({
         {onVerCalendario && modoCamino === "fechas" && hayFechas && (
           <TarjetaAcceso
             icono="calendario"
-            titulo="Tu calendario"
-            descripcion="Lo que viene, día por día. Llévate tus fechas al calendario del teléfono."
+            titulo={t.tarjetas.calendarioTitulo}
+            descripcion={t.tarjetas.calendarioDesc}
             onClick={() => onVerCalendario?.()}
           />
         )}
         {cCore.total > 0 && (
           <TarjetaAcceso
             icono="analisis"
-            titulo="Análisis del proyecto"
-            descripcion="Tu ritmo, tus etapas y tu cumplimiento, calculados de lo que hiciste."
+            titulo={t.tarjetas.analisisTitulo}
+            descripcion={t.tarjetas.analisisDesc}
             onClick={() => onVerAnalisis()}
           />
         )}
         <TarjetaAcceso
           icono="documentos"
-          titulo="Tus documentos"
-          descripcion="Tu plan, cada seguimiento y el expediente completo, en .md o en PDF."
+          titulo={t.tarjetas.documentosTitulo}
+          descripcion={t.tarjetas.documentosDesc}
           onClick={() => onVerDocumentos()}
         />
 
@@ -2664,8 +2690,8 @@ export function ManosALaObra({
           <div className="hidden lg:block">
             <TarjetaAcceso
               icono="ciclo"
-              titulo="Ciclo de profundización"
-              descripcion="¿La realidad te cambió el plan? Cuéntame qué pasó y lo recalculo desde donde estás."
+              titulo={t.tarjetas.cicloTitulo}
+              descripcion={t.tarjetas.cicloDesc}
               onClick={() => void abrirRitual("core")}
             />
             {entrevistaAbierta && (
@@ -2673,14 +2699,14 @@ export function ManosALaObra({
                 onClick={onVolverEntrevista}
                 className="mt-2.5 block w-full rounded-[10px] border border-white/15 py-2.5 text-center text-[13px] text-dim hover:border-accent/60 hover:text-ink"
               >
-                Volver a la entrevista
+                {t.nucleo.volverEntrevista}
               </button>
             )}
           </div>
         )}
         {nucleoCerrado && (
           <p className="text-[12.5px] text-dim">
-            Tu idea está realizada: el ciclo de profundización vuelve si la reabres desde su celebración.
+            {t.cierre.realizada}
           </p>
         )}
         {/* La acción "realizar" como TARJETA HERMANA — la tarjeta ENTERA abre el
@@ -2691,8 +2717,8 @@ export function ManosALaObra({
           (!confirmandoRealizar ? (
             <TarjetaAcceso
               icono="realizar"
-              titulo="¿Tu idea ya es un proyecto?"
-              descripcion="Cuando lo sientas real, ciérrala. No hace falta terminar todo el checklist."
+              titulo={t.tarjetas.realizarTitulo}
+              descripcion={t.tarjetas.realizarDesc}
               onClick={() => setConfirmandoRealizar(true)}
               tono="done"
             />
@@ -2702,15 +2728,15 @@ export function ManosALaObra({
                (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir nada. */
             <div className="rounded-panel border border-done/40 bg-surface p-5">
               <p className="text-[14px] font-semibold leading-relaxed">
-                Esto cierra tu idea y nace tu proyecto. Podrás reabrirla cuando quieras.
+                {t.cierre.cierraTuIdea}
               </p>
               <p className="mt-2 text-[12.5px] text-dim">
-                Llevas {cCore.hechos} de {cCore.total} acciones
-                {cCore.total > 0 ? ` (${Math.round((cCore.hechos / cCore.total) * 100)}%)` : ""}. Las que queden
-                pendientes se guardan tal cual: son parte de tu historia.
+                {cCore.total > 0
+                  ? interpolar(t.cierre.llevasPct, { hechos: cCore.hechos, total: cCore.total, pct: Math.round((cCore.hechos / cCore.total) * 100) })
+                  : interpolar(t.cierre.llevas, { hechos: cCore.hechos, total: cCore.total })}
               </p>
               <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
-                ¿Por qué la cierras aquí? <span className="text-dim/70">(opcional, para tu propia memoria)</span>
+                {rico(t.cierre.porQueCierras, { s: (c) => <span className="text-dim/70">{c}</span> })}
               </label>
               <div className="mt-1.5">
                 <CampoConVoz
@@ -2718,7 +2744,7 @@ export function ManosALaObra({
                   valor={cierreMotivo}
                   onCambio={setCierreMotivo}
                   filas={2}
-                  placeholder="La cierro porque…"
+                  placeholder={t.cierre.placeholderMotivo}
                 />
               </div>
               <div className="mt-3 flex items-center gap-3">
@@ -2727,28 +2753,28 @@ export function ManosALaObra({
                   disabled={realizando}
                   className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
                 >
-                  {realizando ? "Cerrando…" : "Sí, es un proyecto"}
+                  {realizando ? t.cerrando : t.cierre.siProyecto}
                 </button>
                 <button
                   onClick={() => setConfirmandoRealizar(false)}
                   disabled={realizando}
                   className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
                 >
-                  Todavía no
+                  {t.todaviaNo}
                 </button>
               </div>
             </div>
           ))}
         {cCore.total > 0 && (
           <div className="border-t border-hairline pt-5">
-            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Ritmo</p>
+            <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.ritmo.titulo}</p>
             <div className="flex flex-col gap-2">
-              <RitmoFila icono={<IconoReloj />} etiqueta="Última acción" valor={ultimaAccion ? haceCuanto(ultimaAccion) : "aún ninguna"} color="accent" />
-              {desde && <RitmoFila icono={<IconoBandera />} etiqueta="Manos a la Obra desde" valor={haceCuanto(desde)} color="done" />}
-              <RitmoFila icono={<IconoCiclos />} etiqueta="Ciclos de ajuste" valor={String(ciclosAjuste)} color="warn" />
+              <RitmoFila icono={<IconoReloj />} etiqueta={t.ritmo.ultimaAccion} valor={ultimaAccion ? haceCuanto(ultimaAccion) : t.ritmo.aunNinguna} color="accent" />
+              {desde && <RitmoFila icono={<IconoBandera />} etiqueta={t.ritmo.desde} valor={haceCuanto(desde)} color="done" />}
+              <RitmoFila icono={<IconoCiclos />} etiqueta={t.ritmo.ciclosAjuste} valor={String(ciclosAjuste)} color="warn" />
             </div>
             <p className="mt-5 text-[13px] leading-relaxed text-dim">
-              Pausa cuando lo necesites. Cuando vuelvas, el checklist te espera exactamente donde quedaste.
+              {t.ritmo.pausa}
             </p>
           </div>
         )}

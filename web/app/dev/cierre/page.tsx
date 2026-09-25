@@ -8,18 +8,22 @@
  * intérprete). Callbacks no-op: esto solo se mira, no se opera.
  */
 import { CierreHonesto } from "@/app/ui/CierreHonesto";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { DEV_CIERRE } from "@/lib/i18n/mensajes/devCierre";
 
 const noop = () => {};
 
 export default function PreviewCierre() {
+  const t = elegir(DEV_CIERRE, useIdioma());
   return (
     <div className="mx-auto flex max-w-[1060px] flex-col gap-12 px-10 py-12">
       <div data-screen-label="Cierre honesto camino">
         <CierreHonesto
           tipo="camino"
-          titulo="Por aquí no encuentro un plan que valga tu tiempo."
-          cuerpo="Exploré lo que me contaste y, siendo honesto, este ángulo no me da material suficiente para armarte un plan que de verdad te mueva. Prefiero decírtelo a entregarte relleno. No es un no a tu idea: es un no a este camino."
-          porque="Tus respuestas apuntan a un grupo que hoy no puedo verificar que exista con ganas de pagar, y sin una señal real de demanda no tengo de dónde sostener las etapas."
+          titulo={t.camino.titulo}
+          cuerpo={t.camino.cuerpo}
+          porque={t.camino.porque}
           creditosDevueltos={null}
           hayPlan={false}
           onVolverAManos={noop}
@@ -32,9 +36,9 @@ export default function PreviewCierre() {
       <div data-screen-label="Cierre honesto mundo">
         <CierreHonesto
           tipo="mundo"
-          titulo="Calidad y Confianza no es para esta idea, todavía."
-          cuerpo="Activé y exploré este mundo con lo que hay hoy, y no encontré un subproyecto que te sume sin inventarte trabajo. Antes que darte un checklist de relleno, prefiero parar aquí. Este mundo te sigue esperando: puedes volver a entrar cuando tu proyecto crezca."
-          porque="Calidad y Confianza brilla cuando ya tienes clientes que vuelven y quieres que vuelvan más; tu idea todavía está buscando al primero que no sea un conocido."
+          titulo={t.mundo.titulo}
+          cuerpo={t.mundo.cuerpo}
+          porque={t.mundo.porque}
           // AUD-09: el preview de un mundo es gratis y no hay reembolso que
           // afirmar (BANCO §6.1: un claim de dinero solo con respaldo del ledger).
           creditosDevueltos={null}

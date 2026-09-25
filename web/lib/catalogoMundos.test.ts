@@ -110,7 +110,9 @@ describe("el mecanismo de ocultar, para el próximo mundo", () => {
     // Un paseo de prueba que se ve igual que un mundo en venta es la confusión
     // que hay que evitar: la tarjeta lleva su marca cuando el pack está oculto.
     const fuente = leer("app/ui/PotenciaTuIdea.tsx");
-    expect(fuente).toContain("sin publicar");
+    // i18n F2: la marca vive en el catálogo de la fila; la tarjeta la usa por clave.
+    expect(leer("lib/i18n/mensajes/potenciaTuIdea.ts")).toContain('sinPublicar: "sin publicar"');
+    expect(fuente).toContain("{t.sinPublicar}");
     expect(fuente).toContain("p.oculto &&");
     // la puerta llega desde la URL, no está encendida en el código
     expect(leer("app/idea/[id]/IdeaView.tsx")).toContain('searchParams.get("ver") === "ocultos"');

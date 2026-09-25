@@ -5,6 +5,10 @@
  * igual que el CLI (el modo --gratis tambien persiste, no es efimero).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
 import {
@@ -24,15 +28,18 @@ import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).organizador;
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
@@ -46,7 +53,7 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
@@ -56,7 +63,7 @@ export async function POST(request: Request) {
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   const graph = cargarGrafo();
@@ -103,7 +110,7 @@ export async function POST(request: Request) {
     );
     return NextResponse.json(
       // AUD-09 B07a: el detalle del error va al log (arriba), nunca al cliente.
-      { error: "No pude organizar tu idea en este momento. Intenta de nuevo en un rato.", project_id: projectId },
+      { error: t.noPudeOrganizar, project_id: projectId },
       { status: 502 }
     );
   }

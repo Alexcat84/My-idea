@@ -22,30 +22,37 @@
  * respuesta de la misma.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import type { NumerosProyecto } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).reporte;
 
   let body: unknown = {};
   try {
     const texto = await request.text();
     if (texto.trim().length > 0) body = JSON.parse(texto);
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const respuesta = (body as { respuesta?: unknown } | null)?.respuesta;
   if (respuesta !== undefined && (typeof respuesta !== "string" || respuesta.trim().length === 0)) {
-    return NextResponse.json({ error: "'respuesta' debe ser un string no vacio" }, { status: 400 });
+    return NextResponse.json({ error: t.respuestaInvalida }, { status: 400 });
   }
   if (typeof respuesta === "string" && respuesta.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
@@ -59,24 +66,24 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
 
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "proyecto no encontrado" }, { status: 404 });
+    return NextResponse.json({ error: t.proyectoNoEncontrado }, { status: 404 });
   }
   if (!(await obtenerPlanCoreVigente(supabase, projectId))) {
     return NextResponse.json(
-      { error: "Tus Números viene incluido con tu plan. Arma tu plan primero y aquí te espero." },
+      { error: r.tusNumerosConPlan },
       { status: 409 }
     );
   }
@@ -88,7 +95,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (respuesta === undefined) {
     if (proyecto.estado_reporte) {
       return NextResponse.json(
-        { error: "ya hay una entrevista de reporte en curso; envia 'respuesta' para continuarla" },
+        { error: t.entrevistaEnCurso },
         { status: 409 }
       );
     }
@@ -100,13 +107,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     }
     const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
     if (!limite.permitido) {
-      return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+      return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
     }
     resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio());
   } else {
     if (!proyecto.estado_reporte) {
       return NextResponse.json(
-        { error: "no hay una entrevista de reporte en curso; llama sin 'respuesta' para iniciarla" },
+        { error: t.sinEntrevista },
         { status: 409 }
       );
     }

@@ -41,7 +41,7 @@ import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
 import { urlSinParametro } from "@/lib/urlSinParametro";
-import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
+import { avisoPrecioExploracion } from "@/lib/avisoExploracion";
 import { etapaDeIdea } from "@/lib/etapaIdea";
 import { Stepper } from "../../ui/Stepper";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
@@ -49,15 +49,19 @@ import catalogo from "@/lib/assets/packs_catalog.json";
 import type { CapacidadSemanal, ChecklistEstado } from "@/lib/dbContract";
 import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
+import { IDEA_VIEW } from "@/lib/i18n/mensajes/ideaView";
 
-const NOTA_SILENCIOSO = "cubierto por lo que contaste";
-/** Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre. Esto es la red
- * por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así, la
- * pantalla habla. Jamás muda. */
+// i18n F2: la nota de los nodos silenciosos (t.notaSilencioso) y el mensaje de
+// respaldo del cierre (t.cierreRespaldo) viven en el catálogo de la vista.
+// Fase 4.3 §2: el servidor SIEMPRE manda el mensaje del cierre; el respaldo es la
+// red por si una respuesta vieja (o un despliegue a mitad) llega sin él: aun así,
+// la pantalla habla. Jamás muda.
 /** AUD-09 H09: la carga del checklist no espera para siempre. */
 const LIMITE_CHECKLIST_MS = 20_000;
-const MENSAJE_CIERRE_RESPALDO =
-  "Hasta aquí puedo acompañarte por este camino. Tu idea queda guardada tal como está.";
 
 interface DetalleIdea {
   idea: {
@@ -139,13 +143,17 @@ interface QA {
   respuesta: string;
 }
 
-function nodoArbolDesdeRuta(n: { id: string; etiqueta: string; modo: string }, idx: number): NodoArbol {
+function nodoArbolDesdeRuta(
+  n: { id: string; etiqueta: string; modo: string },
+  idx: number,
+  notaSilencioso: string
+): NodoArbol {
   return {
     id: `${idx}-${n.id}`,
     label: n.etiqueta,
     atenuado: n.modo === "silencioso",
     salto: n.modo === "salto",
-    nota: n.modo === "silencioso" ? NOTA_SILENCIOSO : undefined,
+    nota: n.modo === "silencioso" ? notaSilencioso : undefined,
   };
 }
 
@@ -157,6 +165,9 @@ const NOMBRE_MUNDO = Object.fromEntries(
 );
 
 export function IdeaView({ projectId }: { projectId: string }) {
+  const idioma = useIdioma();
+  const t = elegir(IDEA_VIEW, idioma);
+  const tc = elegir(CLARIDAD, idioma);
   const router = useRouter();
   const searchParams = useSearchParams();
   const quiereEntrevista = searchParams.get("entrevista") === "1";
@@ -286,17 +297,17 @@ export function IdeaView({ projectId }: { projectId: string }) {
       if (res.ok) setChecklist((await res.json()) as ChecklistData);
       else setErrorChecklist((await leerRechazo(res)).mensaje);
     } catch {
-      setErrorChecklist("no pudimos cargar tu espacio; revisa tu internet e intenta de nuevo");
+      setErrorChecklist(t.errores.cargarEspacio);
     } finally {
       clearTimeout(limite);
     }
-  }, [projectId]);
+  }, [projectId, t]);
 
   function agregarNodos(nuevos: NodoNuevo[] | undefined) {
     if (!nuevos?.length) return;
     setNodos((prev) => [
       ...prev,
-      ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++)),
+      ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++, t.notaSilencioso)),
     ]);
     const conversado = [...nuevos].reverse().find((n) => n.modo !== "silencioso");
     if (conversado) setCintillo(conversado.etiqueta);
@@ -335,7 +346,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       setCierre({
         tipo: c?.tipo ?? (salio.dominio ? "mundo" : "camino"),
         titulo: c?.titulo ?? null,
-        cuerpo: c?.cuerpo ?? data.mensaje ?? MENSAJE_CIERRE_RESPALDO,
+        cuerpo: c?.cuerpo ?? data.mensaje ?? t.cierreRespaldo,
         porque: c?.porque ?? null,
         creditosDevueltos: data.creditos_devueltos ?? null,
       });
@@ -373,7 +384,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         avisarSaldo();
       }
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.sinConexion);
     } finally {
       setEnviando(false);
     }
@@ -433,7 +444,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       await refrescarDetalle();
       irAManos();
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.sinConexion);
     } finally {
       setEnviando(false);
     }
@@ -479,7 +490,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       nueva = ((await res.json()) as { session_id: string }).session_id;
       avisarSaldo();
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.sinConexion);
       return;
     } finally {
       setEnviando(false);
@@ -596,15 +607,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
               entregadoEnMundo = true;
             }
           } else if (evento === "error") {
-            setError(
-              "no pudimos terminar de escribir tu plan; lo que contaste está guardado, así que no hay que repetir nada"
-            );
+            setError(t.errores.planSinTerminar);
             setPlanFallido({ sid, contexto: contextoExtra });
             planPedidoRef.current = false;
           }
         });
       } catch {
-        setError("la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado");
+        setError(t.errores.planConexionCortada);
         setPlanFallido({ sid, contexto: contextoExtra });
         planPedidoRef.current = false;
       } finally {
@@ -617,7 +626,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     // volverAlMundo se redefine en cada render y solo usa setters y rutas del
     // proyecto: incluirlo solo recrearía generarPlan en cada render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista, dominioEntrevista]
+    [generandoPlan, cargarChecklist, projectId, esSeguimientoEntrevista, dominioEntrevista, t]
   );
 
   // Carga inicial + arranque de entrevista si venimos del organizador.
@@ -634,7 +643,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
             res.status === 404
               ? searchParams.get("adopcion") === "pendiente"
                 ? MENSAJE_ADOPCION_PENDIENTE
-                : "esa idea no existe o no es tuya"
+                : t.errores.ideaNoExiste
               : ERROR_GENERICO
           );
           setCargando(false);
@@ -663,7 +672,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setListoParaPlan(d.entrevista.listo_para_plan);
           setDominioEntrevista(d.entrevista.dominio ?? "core");
           setEsSeguimientoEntrevista(d.entrevista.es_seguimiento === true);
-          setNodos(d.entrevista.ruta.map(nodoArbolDesdeRuta));
+          setNodos(d.entrevista.ruta.map((n, i) => nodoArbolDesdeRuta(n, i, t.notaSilencioso)));
           contadorNodos.current = d.entrevista.ruta.length;
           // El recorrido conversado ya guardado: al reentrar a la idea se
           // repinta en vez de arrancar vacío (antes solo vivía en pantalla).
@@ -696,7 +705,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setEnviando(false);
         }
       } catch {
-        setError("no pudimos cargar tu idea; revisa tu internet e intenta de nuevo");
+        setError(t.errores.cargarIdea);
       } finally {
         setCargando(false);
       }
@@ -725,7 +734,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       procesarTurno((await res.json()) as RespuestaTurno);
       return true;
     } catch {
-      setError("no pudimos enviar tu respuesta; revisa tu internet e intenta de nuevo");
+      setError(t.errores.enviarRespuesta);
       return false;
     } finally {
       setEnviando(false);
@@ -753,7 +762,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       }
       procesarTurno((await res.json()) as RespuestaTurno);
     } catch {
-      setError("no pudimos continuar; revisa tu internet e intenta de nuevo");
+      setError(t.errores.continuar);
       setListoParaPlan(true);
     } finally {
       setEnviando(false);
@@ -901,14 +910,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   if (cargando) {
-    return <p className="px-6 py-12 text-dim">Cargando tu idea…</p>;
+    return <p className="px-6 py-12 text-dim">{t.cargandoIdea}</p>;
   }
   if (!detalle) {
     return (
       <div className="px-6 py-12">
         <p className="text-warn">{error ?? ERROR_GENERICO}</p>
         <Link href="/ideas" className="mt-4 inline-block text-accent">
-          Volver a mis ideas
+          {t.volverAMisIdeas}
         </Link>
       </div>
     );
@@ -949,25 +958,28 @@ export function IdeaView({ projectId }: { projectId: string }) {
   if (generandoPlan) {
     etapaStepper = 4;
     pensandoStepper = true;
-    etiquetaStepper = "Tu Plan · en camino…";
+    etiquetaStepper = t.stepper.planEnCamino;
   } else if (entrevistaActiva) {
     etapaStepper = etapaBase;
     pensandoStepper = Boolean(pregunta) || enviando;
     etiquetaStepper =
       dominioEntrevista !== "core"
-        ? `${NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista} · en curso…`
+        ? interpolar(t.stepper.mundoEnCurso, { mundo: NOMBRE_MUNDO[dominioEntrevista]?.nombre ?? dominioEntrevista })
         : esSeguimientoEntrevista
-          ? "Ciclo de profundización · en curso…"
-          : "La Exploración · en curso…";
+          ? t.stepper.profundizacionEnCurso
+          : t.stepper.exploracionEnCurso;
   } else if (etapaBase === 5) {
     etapaStepper = 5;
-    etiquetaStepper = cuentaCore.total > 0 ? `Manos a la Obra · ${cuentaCore.hechos}/${cuentaCore.total}` : "Manos a la Obra";
+    etiquetaStepper =
+      cuentaCore.total > 0
+        ? interpolar(t.stepper.manosConProgreso, { hechos: cuentaCore.hechos, total: cuentaCore.total })
+        : t.stepper.manos;
   } else if (etapaBase === 4) {
     etapaStepper = 4;
-    etiquetaStepper = "Tu Plan · listo";
+    etiquetaStepper = t.stepper.planListo;
   } else {
     etapaStepper = etapaBase;
-    etiquetaStepper = detalle.organizador ? "Claridad · lista" : undefined;
+    etiquetaStepper = detalle.organizador ? t.stepper.claridadLista : undefined;
   }
 
   const arbol = (
@@ -1031,7 +1043,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       <header className="sticky top-0 z-30 flex h-[58px] items-center gap-5 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
         <div className="flex min-w-0 items-center gap-2.5">
           <Link href="/ideas" className="shrink-0 text-[13px] text-dim hover:text-ink">
-            Mis ideas /
+            {t.misIdeas}
           </Link>
           <span className="truncate text-[14.5px] font-semibold">{detalle.idea.nombre}</span>
           {realizadaAt && (
@@ -1039,7 +1051,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
                 <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
               </svg>
-              Proyecto
+              {t.proyecto}
             </span>
           )}
         </div>
@@ -1047,7 +1059,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         {/* ETAPA 2: el saldo, discreto (canon 07). Solo con cuenta real. */}
         <ChipSaldo version={versionSaldo} />
         <div className="hidden md:block">
-          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} />
+          <Stepper etapa={etapaStepper} pensando={pensandoStepper} etiqueta={etiquetaStepper} realizada={Boolean(realizadaAt)} idioma={idioma} />
         </div>
         <span
           className={
@@ -1070,7 +1082,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 onClick={() => generarPlan(planFallido.sid, planFallido.contexto)}
                 className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10"
               >
-                Intentar de nuevo
+                {t.intentarDeNuevo}
               </button>
             )}
           </div>
@@ -1146,7 +1158,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               />
             ) : (
               <button onClick={volverAlViaje} className="mb-5 text-sm text-dim hover:text-ink">
-                ← Ver el plan
+                {t.verElPlan}
               </button>
             )}
             <ManosALaObra
@@ -1241,11 +1253,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 onClick={() => void cargarChecklist()}
                 className="mt-4 rounded-[10px] border border-hairline px-4 py-2 text-sm text-ink hover:border-white/25"
               >
-                Intentar de nuevo
+                {t.intentarDeNuevo}
               </button>
             </div>
           ) : (
-            <p className="px-1 py-20 text-dim">Cargando tu espacio…</p>
+            <p className="px-1 py-20 text-dim">{t.cargandoEspacio}</p>
           )
         ) : (
           // Fase 4.3.2: el riel pasa de 190px a 260px — a 190 las etiquetas del
@@ -1257,12 +1269,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
               <>
                 <div className="hidden sm:block">
                   <p className="mb-4 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                    Recorrido de la idea
+                    {t.recorridoDeLaIdea}
                   </p>
                   {arbol}
                 </div>
                 <div className="sm:hidden">
-                  <Acordeon titulo="Recorrido de la idea" abierto={generandoPlan}>
+                  <Acordeon titulo={t.recorridoDeLaIdea} abierto={generandoPlan}>
                     {arbol}
                   </Acordeon>
                 </div>
@@ -1303,11 +1315,11 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   pregunta={pregunta}
                   enviando={enviando}
                   onEnviar={responder}
-                  textoBoton="Enviar"
+                  textoBoton={t.enviar}
                 />
               )}
               {!pregunta && enviando && (
-                <p className="text-sm text-dim">Pensando la siguiente pregunta…</p>
+                <p className="text-sm text-dim">{t.pensandoPregunta}</p>
               )}
 
               {/* Phase 3.7.2 — tarjeta intermedia (canon 04): contexto final
@@ -1315,7 +1327,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {tarjetaContextoFinal && !generandoPlan && !planMd && (
                 <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
                   <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
-                    ¿Algo más que quieras que tu plan tome en cuenta?
+                    {t.contextoFinal.pregunta}
                   </p>
                   <div className="mt-5">
                     <CampoConVoz
@@ -1323,7 +1335,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       valor={contextoFinal}
                       onCambio={setContextoFinal}
                       filas={3}
-                      placeholder="Opcional: escríbelo o díctalo…"
+                      placeholder={t.contextoFinal.placeholder}
                     />
                   </div>
                   <BotonHeroe
@@ -1334,7 +1346,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     }}
                     className="mt-5 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                   >
-                    Armar mi plan · {fin.costo} créditos
+                    {interpolar(t.contextoFinal.armarPlan, { n: fin.costo })}
                   </BotonHeroe>
                 </div>
               )}
@@ -1347,16 +1359,14 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 <div className="rounded-panel border border-hairline bg-surface p-6 sm:p-7">
                   <p className="mb-3.5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-                    {temasPendientes === null ? "Suficiente para avanzar" : "Tu recorrido hasta aquí"}
+                    {temasPendientes === null ? t.oferta.suficiente : t.oferta.tuRecorrido}
                   </p>
                   <p className="text-[19px] font-semibold leading-normal [text-wrap:pretty]">
-                    {temasPendientes === null
-                      ? "Con lo que me contaste alcanza: vamos a tu plan."
-                      : "Con lo que me contaste puedo armar tu plan."}
+                    {temasPendientes === null ? t.oferta.alcanza : t.oferta.puedoArmar}
                   </p>
                   {temasPendientes !== null && temasPendientes.length > 0 && (
                     <>
-                      <p className="mt-3.5 text-[13.5px] text-dim">Si quieres, seguimos explorando:</p>
+                      <p className="mt-3.5 text-[13.5px] text-dim">{t.oferta.siQuieres}</p>
                       <div className="mt-2.5 flex flex-wrap gap-2">
                         {temasPendientes.map((tema) => (
                           <span
@@ -1371,7 +1381,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     </>
                   )}
                   {temasPendientes !== null && temasPendientes.length === 0 && (
-                    <p className="mt-3.5 text-[13.5px] text-dim">Cubrimos lo esencial de punta a punta.</p>
+                    <p className="mt-3.5 text-[13.5px] text-dim">{t.oferta.cubrimos}</p>
                   )}
                   {/* Fase 4.5: en un MUNDO, la entrevista completa no vende un
                       plan a ciegas: entrega el DIAGNÓSTICO gratis (el
@@ -1383,10 +1393,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       className="mt-6 w-full rounded-[10px] px-5 py-3 text-sm font-semibold"
                     >
                       {!fin.esDiagnostico
-                        ? `Generar mi plan · ${fin.costo} créditos`
+                        ? interpolar(t.oferta.generarPlan, { n: fin.costo })
                         : enviando
-                          ? "Redactando tu diagnóstico…"
-                          : "Ver mi diagnóstico · gratis"}
+                          ? t.oferta.redactandoDiagnostico
+                          : t.oferta.verDiagnosticoGratis}
                     </BotonHeroe>
                   ) : (
                     <div className="mt-6 flex gap-3">
@@ -1396,7 +1406,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        Seguimos explorando
+                        {t.oferta.seguimosExplorando}
                       </button>
                       <button
                         onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
@@ -1404,7 +1414,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         className="flex-1 rounded-[10px] px-3 py-3 text-sm font-semibold hover:bg-accent/10 disabled:opacity-50"
                         style={{ border: "1px solid rgba(77,124,254,0.5)" }}
                       >
-                        {!fin.esDiagnostico ? `Generar mi plan · ${fin.costo} créditos` : "Ver mi diagnóstico"}
+                        {!fin.esDiagnostico ? interpolar(t.oferta.generarPlan, { n: fin.costo }) : t.oferta.verDiagnostico}
                       </button>
                     </div>
                   )}
@@ -1413,11 +1423,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       // La promesa del cobro, en el momento de decidir (canon de
                       // creditos): se descuenta A LA ENTREGA, y si algo falla no
                       // se cobra. El precio va en el boton; esto es la garantia.
-                      "Se descuentan al entregarse tu plan. Si algo falla, no se cobra nada."
+                      t.oferta.garantia
                     ) : (
-                      <>
-                        El diagnóstico es gratis. Su plan, si lo quieres: {PRECIOS.mundo_activar} créditos.
-                      </>
+                      interpolar(t.oferta.diagnosticoGratis, { n: PRECIOS.mundo_activar })
                     )}
                   </p>
                 </div>
@@ -1428,9 +1436,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   onClick={() => (fin.esDiagnostico ? void verDiagnostico() : setTarjetaContextoFinal(true))}
                   className="self-start text-sm text-dim hover:text-ink"
                 >
-                  {!fin.esDiagnostico
-                    ? "Generar mi plan con lo que ya conté"
-                    : "Ver mi diagnóstico con lo que ya conté"}
+                  {!fin.esDiagnostico ? t.oferta.generarConLoContado : t.oferta.diagnosticoConLoContado}
                 </button>
               )}
 
@@ -1446,20 +1452,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
                         style={{ borderColor: "rgba(77,124,254,0.2)", borderTopColor: "var(--accent)" }}
                       />
                     </span>
-                    Tu Plan · en camino
+                    {t.generando.enCamino}
                   </p>
                   <p className="mt-3 text-[17px] font-medium leading-relaxed">
-                    {etiquetaEtapa ? `Escribiendo: ${etiquetaEtapa}` : "Armando tu plan por etapas."}
+                    {etiquetaEtapa ? interpolar(t.generando.escribiendo, { etapa: etiquetaEtapa }) : t.generando.armando}
                   </p>
                   <p className="mt-1.5 text-sm text-dim">
-                    Cada etapa se enciende en el recorrido cuando queda escrita de verdad.
+                    {t.generando.nota}
                   </p>
                 </div>
               )}
 
               {/* Recorrido releíble (no chat) */}
               {recorrido.length > 0 && (
-                <Acordeon titulo={`Recorrido (${recorrido.length})`}>
+                <Acordeon titulo={interpolar(t.recorridoConteo, { n: recorrido.length })}>
                   <ol className="space-y-4">
                     {recorrido.map((qa, i) => (
                       <li key={i} className="border-b border-hairline pb-3 last:border-0 last:pb-0">
@@ -1481,7 +1487,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                       disabled={enviando || generandoPlan}
                       className="mt-3 rounded-[10px] px-5 py-2.5 text-sm font-semibold"
                     >
-                      {`Regenerar mi plan · ${montoDelPlan(dominioEntrevista, planEsSeguimiento)} créditos`}
+                      {interpolar(t.regenerarPlan, { n: montoDelPlan(dominioEntrevista, planEsSeguimiento) })}
                     </BotonHeroe>
                   )}
                 </div>
@@ -1512,7 +1518,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                     onClick={() => irAManos()}
                     className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 text-sm font-semibold text-accent hover:bg-accent/20"
                   >
-                    Pasar a Manos a la Obra
+                    {t.pasarAManos}
                   </button>
                 </div>
               )}
@@ -1526,15 +1532,15 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   se dice y se ofrece ordenarla, reusando esta misma idea. */}
               {!entrevistaActiva && !planMd && !generandoPlan && !detalle.organizador && (
                 <div className="rounded-panel border border-hairline bg-surface p-6">
-                  <p className="text-[15px] font-semibold">Tu idea quedó guardada, pero no alcancé a ordenarla.</p>
+                  <p className="text-[15px] font-semibold">{t.sinOrdenar.titulo}</p>
                   <p className="mt-2 text-[14px] leading-relaxed text-dim [text-wrap:pretty]">
-                    «{detalle.idea.entrada_original}»
+                    {interpolar(t.sinOrdenar.cita, { texto: detalle.idea.entrada_original })}
                   </p>
                   <Link
                     href={`/nueva?idea=${projectId}`}
                     className="mt-4 inline-flex rounded-[10px] border border-accent/50 px-5 py-2.5 text-[14px] font-semibold text-accent hover:bg-accent/10"
                   >
-                    Ordenarla ahora
+                    {t.sinOrdenar.ordenarAhora}
                   </Link>
                 </div>
               )}
@@ -1565,18 +1571,18 @@ export function IdeaView({ projectId }: { projectId: string }) {
                             avisarSaldo();
                           }
                         } catch {
-                          setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+                          setError(t.errores.sinConexion);
                         } finally {
                           setEnviando(false);
                         }
                       }}
                       className="rounded-[10px] px-5 py-3 font-medium"
                     >
-                      Explorar estas suposiciones
+                      {tc.explorarSuposiciones}
                     </BotonHeroe>
                     {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
                     <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
-                      {AVISO_PRECIO_EXPLORACION}
+                      {avisoPrecioExploracion(idioma)}
                     </p>
                   </div>
                 </>

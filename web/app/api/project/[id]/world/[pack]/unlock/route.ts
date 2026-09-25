@@ -9,24 +9,31 @@
  * creditos_pagados queda en 0 siempre: registro histórico del modelo viejo.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { PRECIOS } from "@/lib/precios";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { murallaSinPlan } from "@/lib/espacios";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
-export async function POST(_request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
+export async function POST(request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
   const { id: projectId, pack } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_MUNDOS, idioma).unlock;
 
   const entrada = (catalogo.packs as Array<{ clave: string; nombre: string }>).find(
     (p) => p.clave === pack
   );
   if (!entrada || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
-    return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
+    return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
   }
 
   const supabase = await createClient();
@@ -34,19 +41,19 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // AUD-09 B12: las mismas puertas que el arranque del mundo (world/start):
   // cuenta real y plan del núcleo. Sin ellas no se abre nada.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
   if (!(await obtenerPlanCoreVigente(supabase, projectId))) {
-    return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
+    return NextResponse.json({ error: murallaSinPlan(entrada.nombre, idioma) }, { status: 409 });
   }
 
   const { error } = await supabase.from("project_unlocks").insert({
@@ -60,7 +67,7 @@ export async function POST(_request: Request, { params }: { params: Promise<{ id
     if (error.code === "23505") {
       return NextResponse.json({ ok: true, dominio: pack, ya_estaba_activo: true });
     }
-    return NextResponse.json({ error: "no pudimos activar el mundo, intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: t.noPudimosActivar }, { status: 500 });
   }
   // El precio sale de precios.ts, no del catalogo: el catalogo lo llevaba y
   // decia 3 cuando se cobraban 5. Abrir el mundo es GRATIS; este numero es lo

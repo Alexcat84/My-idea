@@ -17,16 +17,16 @@
 import { useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
 import type { ChecklistEstado } from "@/lib/dbContract";
+import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
 
 /** Etiqueta de cara de cada estado. 'a_medias' se renombró a "en proceso"
- * (migration 030); "no aplica" es la tarea retirada. */
-export const ETIQUETA_ESTADO: Record<ChecklistEstado, string> = {
-  pendiente: "sin empezar",
-  empezado: "apenas empezada",
-  en_proceso: "en proceso",
-  hecho: "hecha",
-  no_aplica: "no aplica",
-};
+ * (migration 030); "no aplica" es la tarea retirada. El texto vive en el
+ * catálogo (estadosTarea); esta constante es el valor del idioma base para
+ * quien la importa; los componentes eligen por idioma con ESTADOS_TAREA. */
+export const ETIQUETA_ESTADO: Record<ChecklistEstado, string> = elegir(ESTADOS_TAREA, LOCALE_BASE).etiquetas;
 
 /** Orden del DETALLE (la vista completa): progresión natural, de menos a más
  * avance, con la retirada al final. */
@@ -109,6 +109,7 @@ export function SelectorEstado({
   /** motivo actual de no_aplica, para precargar el campo al reeditar */
   etiquetaActual?: string | null;
 }) {
+  const t = elegir(ESTADOS_TAREA, useIdioma());
   const [abierto, setAbierto] = useState(false);
   const [pidiendoMotivo, setPidiendoMotivo] = useState(false);
   const [motivo, setMotivo] = useState(etiquetaActual ?? "");
@@ -118,7 +119,7 @@ export function SelectorEstado({
     setPidiendoMotivo(false);
   }
 
-  function elegir(e: ChecklistEstado) {
+  function elegirEstado(e: ChecklistEstado) {
     if (e === "no_aplica") {
       setMotivo(etiquetaActual ?? "");
       setPidiendoMotivo(true);
@@ -139,8 +140,8 @@ export function SelectorEstado({
         disabled={ocupado}
         aria-haspopup="menu"
         aria-expanded={abierto}
-        title={`Estado: ${ETIQUETA_ESTADO[estado]} · tocar para elegir`}
-        aria-label={`${ETIQUETA_ESTADO[estado]}. Tocar para elegir el estado`}
+        title={interpolar(t.tituloDisparador, { estado: t.etiquetas[estado] })}
+        aria-label={interpolar(t.ariaDisparador, { estado: t.etiquetas[estado] })}
         className="-m-[11px] flex h-11 shrink-0 items-center gap-1 p-[11px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:h-auto sm:p-0"
       >
         <IconoEstado estado={estado} />
@@ -159,7 +160,7 @@ export function SelectorEstado({
         <>
           <button
             type="button"
-            aria-label="Cerrar el menú de estado"
+            aria-label={t.cerrarMenu}
             onClick={cerrar}
             className="fixed inset-0 z-40 cursor-default bg-black/40 sm:bg-transparent"
           />
@@ -175,7 +176,7 @@ export function SelectorEstado({
             {!pidiendoMotivo ? (
               <>
                 <p className="px-3 pb-1 pt-1 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                  ¿Cómo va esta tarea?
+                  {t.comoVa}
                 </p>
                 {ORDEN_MENU.map((e) => {
                   const actual = e === estado;
@@ -188,7 +189,7 @@ export function SelectorEstado({
                       type="button"
                       role="menuitemradio"
                       aria-checked={actual}
-                      onClick={() => elegir(e)}
+                      onClick={() => elegirEstado(e)}
                       disabled={ocupado}
                       className={
                         "flex min-h-[40px] w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-left text-[14px] disabled:opacity-50 " +
@@ -200,7 +201,7 @@ export function SelectorEstado({
                       }
                     >
                       <IconoEstado estado={e} tamano={18} />
-                      <span className="flex-1 capitalize">{ETIQUETA_ESTADO[e]}</span>
+                      <span className="flex-1 capitalize">{t.etiquetas[e]}</span>
                       {/* El check del estado VIGENTE va SIEMPRE en azul (Design):
                           el azul dice "esto es lo elegido"; el verde vive solo
                           dentro del icono de hecha, no en la marca de selección. */}
@@ -215,14 +216,14 @@ export function SelectorEstado({
               </>
             ) : (
               <div className="px-2 py-1.5">
-                <p className="text-[13.5px] font-semibold">¿Por qué no aplica?</p>
-                <p className="mb-2 mt-0.5 text-[12.5px] text-dim">Para tu propia memoria. Puedes dejarlo en blanco.</p>
+                <p className="text-[13.5px] font-semibold">{t.porQueNoAplica}</p>
+                <p className="mb-2 mt-0.5 text-[12.5px] text-dim">{t.paraTuMemoria}</p>
                 <CampoConVoz
                   id="motivo-no-aplica"
                   valor={motivo}
                   onCambio={setMotivo}
                   filas={2}
-                  placeholder="No corre para esta idea porque…"
+                  placeholder={t.placeholderMotivo}
                 />
                 <div className="mt-2.5 flex items-center gap-2">
                   <button
@@ -234,14 +235,14 @@ export function SelectorEstado({
                     disabled={ocupado}
                     className="rounded-[9px] border border-accent/40 bg-accent/10 px-3.5 py-1.5 text-[12.5px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
-                    Retirar tarea
+                    {t.retirarTarea}
                   </button>
                   <button
                     type="button"
                     onClick={() => setPidiendoMotivo(false)}
                     className="text-[12.5px] text-dim hover:text-ink"
                   >
-                    volver
+                    {t.volver}
                   </button>
                 </div>
               </div>

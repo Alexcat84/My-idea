@@ -13,6 +13,12 @@
  */
 import { useState } from "react";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { decimal } from "@/lib/i18n/formato";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 
 const AZUL = "#3B6BE8";
 const VERDE = "#1F8A34";
@@ -50,12 +56,6 @@ export interface AnalisisPapelData {
 type EstadoEtapa = "adelantada" | "aTiempo" | "tarde" | null;
 const COLOR_ETAPA: Record<"adelantada" | "aTiempo" | "tarde", string> = { adelantada: VERDE, aTiempo: AZUL, tarde: AMBAR };
 
-const LABEL_ESTADO: Record<string, string> = {
-  hecho: "hecha",
-  en_proceso: "en proceso",
-  empezado: "apenas empezada",
-  pendiente: "sin empezar",
-};
 const COLOR_ESTADO: Record<string, string> = {
   hecho: VERDE,
   en_proceso: "rgba(31,138,52,0.60)",
@@ -84,11 +84,12 @@ function Chip({ color, texto }: { color: string; texto: string }) {
 
 /** Barra de avance: % + relleno + escala 25/50/75/100. */
 function BarraAvance({ pct }: { pct: number }) {
+  const t = elegir(ANALISIS, useIdioma()).papel;
   return (
     <div>
       <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 8 }}>
         <span style={{ fontSize: 30, fontWeight: 800, letterSpacing: "-1px", color: VERDE, fontVariantNumeric: "tabular-nums" }}>{pct}%</span>
-        <span style={{ fontSize: 12.5, color: TER }}>de tus acciones, cerradas</span>
+        <span style={{ fontSize: 12.5, color: TER }}>{t.deTusAcciones}</span>
       </div>
       <div style={{ position: "relative", height: 12, borderRadius: 999, background: "#EDEFF3", overflow: "hidden" }}>
         <div style={{ width: `${pct}%`, height: "100%", borderRadius: 999, background: `linear-gradient(to right, ${AZUL}, ${VERDE})` }} />
@@ -102,6 +103,7 @@ function BarraAvance({ pct }: { pct: number }) {
 
 /** Curva de avance acumulado (área). */
 function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; hechas: number }>; total: number }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
   if (series.length === 0 || total === 0) return null;
   // Suma acumulada SIN reasignar durante el render (react-hooks/immutability).
   const pts = series.map((s, i) => {
@@ -133,14 +135,20 @@ function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; he
       {pts.map((p, i) => (
         <circle key={i} cx={x(i)} cy={y(p.pct)} r={i === pts.length - 1 ? 4.5 : 2.4} fill={VERDE} />
       ))}
-      <text x={x(0)} y={H - 6} textAnchor="middle" fontSize="10" fill="#9A9DA4">S{pts[0].semana}</text>
-      {pts.length > 1 && <text x={x(pts.length - 1)} y={H - 6} textAnchor="middle" fontSize="10" fill="#9A9DA4">S{pts[pts.length - 1].semana}</text>}
+      <text x={x(0)} y={H - 6} textAnchor="middle" fontSize="10" fill="#9A9DA4">{interpolar(t.semanaCorta, { n: pts[0].semana })}</text>
+      {pts.length > 1 && (
+        <text x={x(pts.length - 1)} y={H - 6} textAnchor="middle" fontSize="10" fill="#9A9DA4">
+          {interpolar(t.semanaCorta, { n: pts[pts.length - 1].semana })}
+        </text>
+      )}
     </svg>
   );
 }
 
 /** Distribución de estados: barra apilada + leyenda. */
 function Distribucion({ dist }: { dist: Array<{ estado: string; n: number }> }) {
+  // La etiqueta de cada estado sale del catálogo (el estado es el dato).
+  const LABEL_ESTADO: Record<string, string> = elegir(ANALISIS, useIdioma()).comun.estados;
   const total = dist.reduce((s, d) => s + d.n, 0);
   if (total === 0) return null;
   return (
@@ -164,6 +172,7 @@ function Distribucion({ dist }: { dist: Array<{ estado: string; n: number }> }) 
 
 /** Barras de una serie (ritmo semanal). */
 function RitmoSemanal({ series }: { series: Array<{ semana: number; hechas: number }> }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
   const max = Math.max(1, ...series.map((s) => s.hechas));
   if (series.length === 0) return null;
   return (
@@ -174,7 +183,7 @@ function RitmoSemanal({ series }: { series: Array<{ semana: number; hechas: numb
           <div style={{ width: "100%", height: 72, display: "flex", alignItems: "flex-end" }}>
             <div style={{ width: "100%", height: `${(s.hechas / max) * 100}%`, minHeight: s.hechas > 0 ? 3 : 0, borderRadius: 3, background: s.hechas > 0 ? VERDE : "#EDEFF3" }} />
           </div>
-          <span style={{ fontSize: 10, color: TER, fontVariantNumeric: "tabular-nums" }}>S{s.semana}</span>
+          <span style={{ fontSize: 10, color: TER, fontVariantNumeric: "tabular-nums" }}>{interpolar(t.semanaCorta, { n: s.semana })}</span>
         </div>
       ))}
     </div>
@@ -183,6 +192,7 @@ function RitmoSemanal({ series }: { series: Array<{ semana: number; hechas: numb
 
 /** Esfuerzo por etapa: barras hechas/total. */
 function Esfuerzo({ series }: { series: Array<{ etapa: number; total: number; hechas: number }> }) {
+  const tx = elegir(ANALISIS, useIdioma());
   const maxTotal = Math.max(1, ...series.map((s) => s.total));
   if (series.length === 0) return null;
   return (
@@ -190,8 +200,12 @@ function Esfuerzo({ series }: { series: Array<{ etapa: number; total: number; he
       {series.map((s) => (
         <div key={s.etapa}>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12.5, marginBottom: 5 }}>
-            <span><b style={{ color: AZUL }}>{s.etapa}</b> <span style={{ color: TINTA }}>Etapa {s.etapa}</span></span>
-            <span style={{ color: TER, fontVariantNumeric: "tabular-nums" }}><b style={{ color: TINTA }}>{s.hechas}</b> de {s.total}</span>
+            <span><b style={{ color: AZUL }}>{s.etapa}</b> <span style={{ color: TINTA }}>{interpolar(tx.comun.etapaN, { n: s.etapa })}</span></span>
+            <span style={{ color: TER, fontVariantNumeric: "tabular-nums" }}>
+              {rico(interpolar(tx.graficos.hechasDeTotal, { hechas: s.hechas, total: s.total }), {
+                b: (c) => <b style={{ color: TINTA }}>{c}</b>,
+              })}
+            </span>
           </div>
           <div style={{ height: 9, borderRadius: 999, background: "#EDEFF3", width: `${(s.total / maxTotal) * 100}%`, minWidth: 40, overflow: "hidden" }}>
             <div style={{ height: "100%", borderRadius: 999, width: `${s.total > 0 ? (s.hechas / s.total) * 100 : 0}%`, background: VERDE }} />
@@ -213,12 +227,13 @@ function CifraTile({ valor, etiqueta, color }: { valor: string; etiqueta: string
 
 /** Reparto de cumplimiento: gráfico CIRCULAR (dona) con los tres estados. */
 function RepartoDonut({ adelantadas, aTiempo, tardias }: { adelantadas: number; aTiempo: number; tardias: number }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
   const total = adelantadas + aTiempo + tardias;
   if (total === 0) return null;
   const seg = [
-    { n: adelantadas, c: VERDE, l: "adelantadas" },
-    { n: aTiempo, c: AZUL, l: "a tiempo" },
-    { n: tardias, c: AMBAR, l: "tardías" },
+    { n: adelantadas, c: VERDE, l: t.adelantadas },
+    { n: aTiempo, c: AZUL, l: t.aTiempo },
+    { n: tardias, c: AMBAR, l: t.tardias },
   ];
   const R = 46;
   const CIRC = 2 * Math.PI * R;
@@ -240,7 +255,7 @@ function RepartoDonut({ adelantadas, aTiempo, tardias }: { adelantadas: number; 
           })}
         </g>
         <text x="64" y="60" textAnchor="middle" fontSize="26" fontWeight="800" fill={TINTA} style={{ fontVariantNumeric: "tabular-nums" }}>{total}</text>
-        <text x="64" y="79" textAnchor="middle" fontSize="10.5" fill={TER}>con fecha</text>
+        <text x="64" y="79" textAnchor="middle" fontSize="10.5" fill={TER}>{t.conFecha}</text>
       </svg>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
         {seg.map((s, i) => (
@@ -267,6 +282,8 @@ function GanttPapel({
   dias: number;
   cerrada: boolean;
 }) {
+  const tx = elegir(ANALISIS, useIdioma());
+  const t = tx.comun;
   const [vista] = useState<"riel" | "escalera" | "cintas">(() => {
     try {
       const v = typeof localStorage !== "undefined" ? localStorage.getItem("mi-idea:gantt-vista") : null;
@@ -295,15 +312,15 @@ function GanttPapel({
   const cReal = (est: EstadoEtapa) => (est ? COLOR_ETAPA[est] : VERDE);
   const esCintas = vista === "cintas";
   return (
-    <Tarjeta titulo="Cómo se movió tu camino" nota="En gris claro, la línea base que sellaste. Encima, los días que ocupaste de verdad.">
+    <Tarjeta titulo={t.comoSeMovio} nota={tx.papel.ganttNota}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px", marginBottom: 14, fontSize: 11.5, color: TER, alignItems: "center" }}>
         <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
           <span style={{ width: 18, height: 11, borderRadius: 5, border: `1px solid ${BASE_BORDE}`, background: BASE_FONDO }} />
-          línea base
+          {t.lineaBase}
         </span>
-        <Chip color={VERDE} texto="adelantada" />
-        <Chip color={AZUL} texto="a tiempo" />
-        <Chip color={AMBAR} texto="tardía" />
+        <Chip color={VERDE} texto={t.adelantada} />
+        <Chip color={AZUL} texto={t.aTiempo} />
+        <Chip color={AMBAR} texto={t.tardia} />
       </div>
       {esCintas ? (
         <div>
@@ -333,16 +350,18 @@ function GanttPapel({
                 {f.real && <div style={{ position: "absolute", top: "50%", transform: "translateY(-50%)", left: `${f.real.l}%`, width: `${f.real.w}%`, height: 6, borderRadius: 3, background: cReal(f.estado) }} />}
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 11.5, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
-                <span style={{ color: TER }}>{f.planDias != null ? `${f.planDias}d` : "—"}</span>
-                <span style={{ color: cReal(f.estado), fontWeight: 600 }}>{f.realDias != null ? `${f.realDias}d` : "en curso"}</span>
+                <span style={{ color: TER }}>{f.planDias != null ? interpolar(t.diasCorto, { n: f.planDias }) : "—"}</span>
+                <span style={{ color: cReal(f.estado), fontWeight: 600 }}>
+                  {f.realDias != null ? interpolar(t.diasCorto, { n: f.realDias }) : t.enCurso}
+                </span>
               </div>
             </div>
           ))}
         </div>
       )}
       <div style={{ display: "flex", justifyContent: "space-between", fontSize: 10.5, color: TER, fontVariantNumeric: "tabular-nums", marginTop: 10, paddingLeft: esCintas ? 0 : 30, paddingRight: esCintas ? 0 : 96 }}>
-        {ticks.map((t, i) => (
-          <span key={i}>{i === 0 ? `día ${t}` : t}</span>
+        {ticks.map((tick, i) => (
+          <span key={i}>{i === 0 ? interpolar(t.diaN, { n: tick }) : tick}</span>
         ))}
       </div>
     </Tarjeta>
@@ -351,57 +370,73 @@ function GanttPapel({
 
 /** El CONTENIDO del análisis (sin andamio). */
 export function ContenidoAnalisis({ nombre, datos }: { nombre: string; datos: AnalisisPapelData }) {
+  const idioma = useIdioma();
+  const tx = elegir(ANALISIS, idioma);
+  const t = tx.papel;
   const { avance, cifras, cumplimiento: c } = datos;
   const pct = avance.total > 0 ? Math.round((avance.hechas / avance.total) * 100) : 0;
   return (
     <div data-cuerpo-papel>
-      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>Análisis del proyecto</div>
+      <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.6px", textTransform: "uppercase", color: AZUL }}>{t.eyebrow}</div>
       <h3 style={{ margin: "18px 0 0", fontFamily: "Georgia, 'Times New Roman', serif", fontSize: 28, fontWeight: 700, letterSpacing: "-0.4px", color: TINTA }}>
-        Análisis de {nombre}
+        {interpolar(tx.comun.analisisDe, { nombre })}
       </h3>
-      <p style={{ margin: "10px 0 0", fontSize: 14, lineHeight: 1.6, color: SEC }}>
-        Tus registros y controles, en gráficos. Todo sale de lo que fuiste marcando; nada inventado.
-      </p>
+      <p style={{ margin: "10px 0 0", fontSize: 14, lineHeight: 1.6, color: SEC }}>{t.intro}</p>
 
-      {avance.total > 0 && <Tarjeta titulo="Tu avance"><BarraAvance pct={pct} /></Tarjeta>}
+      {avance.total > 0 && (
+        <Tarjeta titulo={tx.comun.tuAvance}>
+          <BarraAvance pct={pct} />
+        </Tarjeta>
+      )}
 
       <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
-        <CifraTile valor={String(cifras.dias)} etiqueta="días de camino" color={AZUL} />
-        <CifraTile valor={cifras.ritmo.toFixed(1)} etiqueta="acciones/semana" color={AZUL} />
-        <CifraTile valor={String(cifras.racha)} etiqueta="días de racha" color={AZUL} />
-        <CifraTile valor={`${cifras.ciclos} · ${cifras.mundos}`} etiqueta="ciclos · mundos" color={AZUL} />
+        <CifraTile valor={String(cifras.dias)} etiqueta={t.diasDeCamino} color={AZUL} />
+        <CifraTile valor={decimal(idioma, cifras.ritmo, 1)} etiqueta={t.accionesSemana} color={AZUL} />
+        <CifraTile valor={String(cifras.racha)} etiqueta={t.diasDeRacha} color={AZUL} />
+        <CifraTile valor={`${cifras.ciclos} · ${cifras.mundos}`} etiqueta={tx.comun.ciclosMundos} color={AZUL} />
       </div>
 
       {datos.avancePorSemana.length > 0 && avance.total > 0 && (
-        <Tarjeta titulo="Tu avance acumulado" nota="Cuánto del plan llevas cerrado, semana a semana.">
+        <Tarjeta titulo={tx.comun.tuAvanceAcumulado} nota={t.acumuladoNota}>
           <AvanceAcumulado series={datos.avancePorSemana} total={avance.total} />
         </Tarjeta>
       )}
 
       {datos.proyeccion && (
-        <Tarjeta titulo="Proyección de cierre" nota="A tu ritmo actual, cuándo cerrarías lo que falta. Es una estimación.">
+        <Tarjeta titulo={tx.comun.proyeccionTitulo} nota={t.proyeccionNota}>
           <div style={{ fontSize: 24, fontWeight: 800, color: VERDE, letterSpacing: "-0.5px" }}>~{datos.proyeccion.fechaHumana}</div>
           <div style={{ fontSize: 12.5, color: TER, marginTop: 5 }}>
-            Faltan <b style={{ color: TINTA }}>{datos.proyeccion.restantes}</b> {datos.proyeccion.restantes === 1 ? "acción" : "acciones"} · a{" "}
-            <b style={{ color: TINTA }}>{datos.proyeccion.ritmo}</b>/semana · ~<b style={{ color: TINTA }}>{datos.proyeccion.semanas}</b> {datos.proyeccion.semanas === 1 ? "semana" : "semanas"}
+            {rico(
+              interpolar(tx.comun.faltan, {
+                restantes: datos.proyeccion.restantes,
+                acciones: plural(idioma, datos.proyeccion.restantes, tx.comun.accion),
+                ritmo: datos.proyeccion.ritmo,
+                semanas: datos.proyeccion.semanas,
+                semanasPalabra: plural(idioma, datos.proyeccion.semanas, tx.comun.semana),
+              }),
+              {
+                b: (contenido) => <b style={{ color: TINTA }}>{contenido}</b>,
+                c: (contenido) => <b style={{ color: TINTA }}>{contenido}</b>,
+              }
+            )}
           </div>
         </Tarjeta>
       )}
 
       {datos.distribucionEstados.length > 0 && (
-        <Tarjeta titulo="Cómo van tus acciones" nota="En qué estado está cada acción activa ahora mismo.">
+        <Tarjeta titulo={tx.comun.distribucionTitulo} nota={tx.comun.distribucionNota}>
           <Distribucion dist={datos.distribucionEstados} />
         </Tarjeta>
       )}
 
       {datos.avancePorSemana.some((s) => s.hechas > 0) && (
-        <Tarjeta titulo="Tu ritmo, semana a semana" nota="Acciones que cerraste cada semana.">
+        <Tarjeta titulo={tx.comun.ritmoTitulo} nota={tx.comun.ritmoNota}>
           <RitmoSemanal series={datos.avancePorSemana} />
         </Tarjeta>
       )}
 
       {datos.accionesPorEtapa.length > 0 && (
-        <Tarjeta titulo="Dónde pusiste el esfuerzo" nota="Cuántas acciones tiene cada etapa y cuántas cerraste.">
+        <Tarjeta titulo={tx.comun.esfuerzoTitulo} nota={tx.comun.esfuerzoNota}>
           <Esfuerzo series={datos.accionesPorEtapa} />
         </Tarjeta>
       )}
@@ -409,15 +444,19 @@ export function ContenidoAnalisis({ nombre, datos }: { nombre: string; datos: An
       {c && (
         <div style={{ breakInside: "avoid", marginTop: 22 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: AMBAR, borderTop: `1px solid ${HILO}`, paddingTop: 18 }}>
-            Cómo cumpliste tus fechas
+            {tx.comun.cumplisteFechas}
           </div>
           <div style={{ display: "flex", gap: 8, marginTop: 14 }}>
-            <CifraTile valor={String(c.adelantadas)} etiqueta={`adelantadas · ${c.pctAdelantadas}%`} color={VERDE} />
-            <CifraTile valor={String(c.aTiempo)} etiqueta={`a tiempo · ${c.pctATiempo}%`} color={AZUL} />
-            <CifraTile valor={String(c.tardias)} etiqueta={`tardías · ${c.pctTardias}%`} color={AMBAR} />
-            <CifraTile valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`} etiqueta="desviación media (días)" color={AZUL} />
+            <CifraTile valor={String(c.adelantadas)} etiqueta={interpolar(t.adelantadasPct, { pct: c.pctAdelantadas })} color={VERDE} />
+            <CifraTile valor={String(c.aTiempo)} etiqueta={interpolar(t.aTiempoPct, { pct: c.pctATiempo })} color={AZUL} />
+            <CifraTile valor={String(c.tardias)} etiqueta={interpolar(t.tardiasPct, { pct: c.pctTardias })} color={AMBAR} />
+            <CifraTile
+              valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${decimal(idioma, c.desviacionMediaDias, 1)}`}
+              etiqueta={t.desviacionMediaDias}
+              color={AZUL}
+            />
           </div>
-          <Tarjeta titulo="Reparto de tu cumplimiento" nota="Cómo llegaste a cada fecha que te pusiste.">
+          <Tarjeta titulo={tx.comun.repartoTitulo} nota={tx.comun.repartoNota}>
             <RepartoDonut adelantadas={c.adelantadas} aTiempo={c.aTiempo} tardias={c.tardias} />
           </Tarjeta>
           <GanttPapel porEtapa={c.porEtapa} dias={datos.cifras.dias} cerrada={datos.cerrada} />
@@ -441,8 +480,9 @@ export function AnalisisPapel({
   datos: AnalisisPapelData;
   oculto?: boolean;
 }) {
+  const t = elegir(ANALISIS, useIdioma()).papel;
   return (
-    <HojaImpresion nombreIdea={nombreIdea} pieTitulo="Análisis del proyecto" oculto={oculto}>
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={t.pieTitulo} oculto={oculto}>
       <FilaPapel>
         <ContenidoAnalisis nombre={nombre} datos={datos} />
       </FilaPapel>

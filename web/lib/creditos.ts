@@ -23,6 +23,9 @@
  *   dos sesiones en paralelo no pasan con saldo para una. La carrera rara queda
  *   para lo que la reserva no cubre (una reserva vencida).
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar, plural } from "./i18n/interpolar";
+import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 import { createAdminClient } from "./supabase/admin";
 import type { ConceptoPrecio } from "./precios";
 
@@ -197,11 +200,20 @@ export { conceptoDelPlan, montoDelPlan } from "./precios";
 
 /** El 402 en palabras de persona (la compuerta del canon 07). Si parte del
  * saldo está apartada por un plan en curso (AUD-09 M25), lo dice. */
-export function mensajeSaldoInsuficiente(creditos: number, costo: number, apartados = 0): string {
-  const plural = creditos === 1 ? "crédito" : "créditos";
+export function mensajeSaldoInsuficiente(
+  creditos: number,
+  costo: number,
+  apartados = 0,
+  idioma: Locale = LOCALE_BASE
+): string {
+  const t = elegir(SERVIDOR_COMUN, idioma);
+  const tienes = plural(idioma, creditos, t.creditos);
   if (apartados > 0) {
-    const verbo = apartados === 1 ? "ya está apartado" : "ya están apartados";
-    return `Tienes ${creditos} ${plural} y ${apartados} ${verbo} para un plan que tienes en curso; esto cuesta ${costo}. Tu trabajo queda guardado tal como está.`;
+    return interpolar(t.saldoInsuficienteConApartados, {
+      creditos: tienes,
+      apartados: plural(idioma, apartados, t.apartados),
+      costo,
+    });
   }
-  return `Te quedan ${creditos} ${plural}; esto cuesta ${costo}. Tu trabajo queda guardado tal como está.`;
+  return interpolar(t.saldoInsuficiente, { creditos: tienes, costo });
 }

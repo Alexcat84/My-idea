@@ -16,6 +16,10 @@
  *  - Los ítems pendientes no se tocan: quedan como testigos en la Historia.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { guardarActa, instantaneaDeActa } from "@/lib/acta";
 import { calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
@@ -27,15 +31,18 @@ export const runtime = "nodejs";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).realizar;
 
   let body: { accion?: unknown; motivo?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   if (body.accion !== "realizar" && body.accion !== "reabrir") {
-    return NextResponse.json({ error: "accion inválida; usa 'realizar' o 'reabrir'" }, { status: 400 });
+    return NextResponse.json({ error: t.accionInvalida }, { status: 400 });
   }
   const motivoCrudo = typeof body.motivo === "string" ? body.motivo.trim() : null;
   if (motivoCrudo && motivoCrudo.length > MAX_LARGO_TEXTO_USUARIO) {
@@ -51,11 +58,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   const realizada = body.accion === "realizar";
@@ -94,7 +101,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     });
     if (!guardada) {
       return NextResponse.json(
-        { error: "No pude guardar el acta de tu cierre, así que tu idea sigue abierta. Intenta de nuevo en un momento." },
+        { error: t.noPudeGuardarActa },
         { status: 500 }
       );
     }

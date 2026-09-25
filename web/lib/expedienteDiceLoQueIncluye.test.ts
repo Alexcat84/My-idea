@@ -22,5 +22,8 @@ describe("el Expediente dice lo que incluye (AUD-09 M35)", () => {
   it("/creditos no dice que reúne la idea 'entera'", () => {
     const creditos = readFileSync(path.join(__dirname, "..", "app", "creditos", "page.tsx"), "utf8");
     expect(creditos).not.toMatch(/tu idea entera/);
+    // i18n F2: el copy de /creditos vive en su catálogo.
+    const catalogo = readFileSync(path.join(__dirname, "i18n", "mensajes", "creditos.ts"), "utf8");
+    expect(catalogo).not.toMatch(/tu idea entera/);
   });
 });

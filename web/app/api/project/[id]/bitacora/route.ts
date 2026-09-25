@@ -10,6 +10,11 @@
  * null) viven solo en la global: aquí nunca aparecen.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { bitacoraDeEspacio, bitacoraMarkdown } from "@/lib/bitacoraCliente";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
@@ -23,14 +28,17 @@ export const runtime = "nodejs";
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
   const dominio = new URL(request.url).searchParams.get("dominio");
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).bitacora;
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  if (!user) return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   const proyecto = await obtenerProyecto(supabase, projectId);
-  if (!proyecto) return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+  if (!proyecto) return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
   const todas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
@@ -45,6 +53,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     ? nombre
     : (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.find((p) => p.clave === dominio)?.nombre ??
       dominio;
-  const markdown = bitacoraMarkdown(nombreEspacio, entradas, new Date().toISOString(), `# Bitácora de ${nombreEspacio}`);
+  const markdown = bitacoraMarkdown(nombreEspacio, entradas, new Date().toISOString(), interpolar(t.tituloEspacio, { espacio: nombreEspacio }));
   return NextResponse.json({ nombre: nombreEspacio, entradas, markdown });
 }

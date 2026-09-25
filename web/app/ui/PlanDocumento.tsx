@@ -14,6 +14,10 @@
  */
 import { Markdown } from "./Markdown";
 
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { PLAN_DOCUMENTO } from "@/lib/i18n/mensajes/planDocumento";
 import { parsearPlan, type Seccion } from "@/lib/planParser";
 
 /** Pasos como mini-línea de puntos (canon 04 en pequeño): sutil pero visual. */
@@ -53,13 +57,14 @@ function CajaEstaSemana({
   contenido,
   grande,
   onEmpezar,
-  etiqueta = "Esta semana",
+  etiqueta,
 }: {
   contenido: string;
   grande?: boolean;
   onEmpezar?: () => void;
   etiqueta?: string;
 }) {
+  const t = elegir(PLAN_DOCUMENTO, useIdioma());
   return (
     <div
       className={"rounded-[12px] bg-surface " + (grande ? "px-7 py-[26px]" : "px-4 py-4")}
@@ -67,7 +72,7 @@ function CajaEstaSemana({
     >
       <p className="mb-2 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
         <span className="anima-green-pulse h-[9px] w-[9px] rounded-full bg-done" />
-        {etiqueta}
+        {etiqueta ?? t.estaSemana}
       </p>
       <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : "text-[13.5px] leading-[1.6] [text-wrap:pretty]"}>
         <Markdown>{contenido}</Markdown>
@@ -78,7 +83,7 @@ function CajaEstaSemana({
           data-no-print
           className="mt-[18px] rounded-[10px] bg-done px-[22px] py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90"
         >
-          Empezar con esto
+          {t.empezarConEsto}
         </button>
       )}
     </div>
@@ -88,6 +93,7 @@ function CajaEstaSemana({
 /** Una barra-topic desplegable (acordeón nativo <details>): colapsada por
  * defecto; al abrir muestra la data estructurada y la acción al final. */
 function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
+  const t = elegir(PLAN_DOCUMENTO, useIdioma());
   return (
     <details
       {...(abierta ? { open: true } : {})}
@@ -124,13 +130,13 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
         )}
         {s.bloquesPasos.map((b, bi) => (
           <div key={bi}>
-            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{b.label ?? "Pasos"}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[1px] text-dim">{b.label ?? t.pasos}</p>
             <PasosLista pasos={b.pasos} />
           </div>
         ))}
         {s.entregable && (
           <div data-caja-entregable className="rounded-[10px] border border-hairline px-4 py-3" style={{ background: "#141419" }}>
-            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">Entregable</p>
+            <p className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-accent">{t.entregable}</p>
             <div className="text-[13.5px] leading-[1.55] text-ink [text-wrap:pretty]">
               <Markdown>{s.entregable}</Markdown>
             </div>
@@ -159,7 +165,9 @@ export function PlanDocumento({
   /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
   nodosFuente?: string[];
 }) {
-  const plan = parsearPlan(md);
+  const idioma = useIdioma();
+  const t = elegir(PLAN_DOCUMENTO, idioma);
+  const plan = parsearPlan(md, idioma);
   const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
   // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
   // fuera de los acordeones. Su copia también vive al final de su tramo.
@@ -176,7 +184,7 @@ export function PlanDocumento({
               grafo, conceptos). El usuario solo ve que su plan salió de SU
               recorrido. */}
           <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            Generado de tu recorrido{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
+            {t.generadoDeTuRecorrido}{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
           </span>
         </div>
         {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
@@ -194,14 +202,14 @@ export function PlanDocumento({
       )}
       {etapas.length > 0 && (
         <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
-          {etapas.length} {etapas.length === 1 ? "etapa" : "etapas"} · cada barra muestra su entregable; despliégala para los pasos y la acción
+          {interpolar(t.metaEtapas, { etapas: plural(idioma, etapas.length, t.etapas) })}
         </p>
       )}
 
       {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
       {primeraAccion && (
         <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
-          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta="Tu primera acción" />
+          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta={t.tuPrimeraAccion} />
         </div>
       )}
 
@@ -230,13 +238,13 @@ export function PlanDocumento({
   // recorrido (en ambos layouts).
   const tarjetaBitacora = onVerBitacora ? (
     <div className="mb-6 rounded-panel border border-accent/40 bg-accent/5 p-4" data-no-print>
-      <p className="text-[13.5px] font-semibold text-accent">Mi bitácora</p>
-      <p className="mt-1 text-[12px] leading-relaxed text-dim">La historia de tu viaje, paso a paso.</p>
+      <p className="text-[13.5px] font-semibold text-accent">{t.miBitacora}</p>
+      <p className="mt-1 text-[12px] leading-relaxed text-dim">{t.historiaDeTuViaje}</p>
       <button
         onClick={onVerBitacora}
         className="mt-2.5 w-full rounded-[10px] border border-accent/40 bg-accent/10 py-2 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
       >
-        Ver mi bitácora
+        {t.verMiBitacora}
       </button>
     </div>
   ) : null;
@@ -264,7 +272,7 @@ export function PlanDocumento({
         style={{ animationDelay: "0.5s" }}
       >
         {tarjetaBitacora}
-        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Construido con tu recorrido</p>
+        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.construidoConTuRecorrido}</p>
         <ul className="flex flex-col gap-4">
           {nodosFuente.map((n, i) => (
             <li key={i} className="flex items-start gap-3">
@@ -281,7 +289,7 @@ export function PlanDocumento({
         {/* Canon 05: la nota de recálculo bajo una hairline — el plan no es
             una lápida, se vuelve a la entrevista cuando el mundo cambia. */}
         <p className="mt-6 border-t border-hairline pt-5 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
-          ¿Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.
+          {t.notaRecalculo}
         </p>
       </aside>
     </section>

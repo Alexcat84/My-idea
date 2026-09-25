@@ -12,6 +12,9 @@ import type { NumerosProyecto, ReporteCalculado, TipoOferta } from "../calculado
 import { llamarClaude, MODEL, MODEL_HAIKU, PRESUPUESTO_REPORTE_USD, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_CLASIFICAR_OFERTA, SYSTEM_REPORTE } from "../prompts";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { interpolar } from "../i18n/interpolar";
+import { REPORTE } from "../i18n/mensajes/reporte";
 import {
   CAMPOS_ESENCIALES_POR_TIPO,
   FRASES_NO_APLICA_MOLDE,
@@ -31,37 +34,19 @@ export function detectarNoAplica(texto: string | null | undefined): boolean {
  * del usuario: pieza, cliente, pack, suscripcion...). */
 export function preguntasPorTipo(
   tipoOferta: string | null | undefined,
-  unidadVenta: string | null | undefined
+  unidadVenta: string | null | undefined,
+  idioma: Locale = LOCALE_BASE
 ): Record<string, string> {
-  const u = unidadVenta || "unidad";
-  if (tipoOferta === "servicio") {
-    return {
-      costo_materiales_unidad: `¿Cuánto te cuesta directamente cada ${u} (insumos, materiales que uses, etc.)? Un número aproximado sirve; si no tienes, responde 0.`,
-      horas_por_unidad: `¿Cuántas horas de trabajo te toma cada ${u}?`,
-      valor_hora: "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
-      precio_tentativo: `¿A qué precio cobras (o cobrarías) cada ${u}?`,
-      capacidad_semanal: `¿Cuántas veces de ${u} puedes atender en una semana normal?`,
-      costos_fijos_mensuales: "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
-    };
-  }
-  if (tipoOferta === "digital") {
-    return {
-      costos_fijos_mensuales:
-        "¿Cuánto gastas al mes en costos fijos de infraestructura (hosting, APIs, herramientas, suscripciones)?",
-      costo_materiales_unidad: `¿Tienes algún costo variable por cada ${u} (por ejemplo, costo de API por uso)? Si es prácticamente cero, responde 0.`,
-      precio_tentativo: `¿A qué precio o ingreso promedio vendes (o venderías) cada ${u}?`,
-      unidades_vendidas: `¿Cuántas de ${u} tienes hoy, o cuál sería una meta mensual realista?`,
-    };
-  }
+  const t = elegir(REPORTE, idioma);
+  const u = unidadVenta || t.unidadPorOmision;
   // producto_fisico y default (tipo_oferta null: proyectos pre-v2.2)
-  return {
-    costo_materiales_unidad: `¿Cuánto gastas en materiales por ${u}, más o menos? Un número aproximado sirve.`,
-    horas_por_unidad: `¿Cuántas horas de trabajo te toma cada ${u}, de principio a fin?`,
-    valor_hora: "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
-    precio_tentativo: `¿A qué precio venderías (o vendes) cada ${u}?`,
-    capacidad_semanal: `¿Cuántas de ${u} puedes producir en una semana normal?`,
-    costos_fijos_mensuales: "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
-  };
+  const plantillas: Record<string, string> =
+    tipoOferta === "servicio"
+      ? t.preguntas.servicio
+      : tipoOferta === "digital"
+        ? t.preguntas.digital
+        : t.preguntas.productoFisico;
+  return Object.fromEntries(Object.entries(plantillas).map(([campo, p]) => [campo, interpolar(p, { u })]));
 }
 
 /** Guardian GIGO (a): cada campo capturado en la mini-entrevista guarda
@@ -132,19 +117,18 @@ export function camposEsencialesPorTipo(tipoOferta: string | null | undefined): 
  * ninguna conclusion financiera -- 100% deterministico a proposito, para
  * no arriesgar que el narrador intente "ser creativo" con datos que ya
  * sabemos que estan rotos. */
-export function reporteGigoInconsistente(motivo: string, numeros: NumerosProyecto): string {
+export function reporteGigoInconsistente(motivo: string, numeros: NumerosProyecto, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REPORTE, idioma);
   const partes: string[] = [
-    "## Tus números hoy",
+    t.tusNumerosHoy,
     "",
-    "Antes de calcular nada, encontré algo que no cuadra en estos números:",
+    t.gigo.algoNoCuadra,
     "",
     `> ${motivo}`,
     "",
-    "No voy a calcular margen ni punto de equilibrio con estos datos: el resultado " +
-      "sería una cifra que suena precisa pero está mal, y eso es peor que no tener el " +
-      "cálculo. Prefiero decírtelo con honestidad.",
+    t.gigo.noVoyACalcular,
     "",
-    "## Los números que diste",
+    t.gigo.losNumerosQueDiste,
     "",
   ];
   for (const [campo, entry] of Object.entries(numeros)) {
@@ -152,35 +136,37 @@ export function reporteGigoInconsistente(motivo: string, numeros: NumerosProyect
       partes.push(`- ${campo}: ${JSON.stringify(entry.valor)}`);
     }
   }
-  partes.push(
-    "",
-    "## Los números que te faltan (y cómo conseguirlos)",
-    "",
-    "Revisa si alguno de los números de arriba está en una unidad distinta a la que " +
-      "esperaba el reporte (por ejemplo, un gasto mensual anotado como costo por unidad, " +
-      "o un plazo en meses anotado como horas), corrígelo, y vuelve a generar el reporte " +
-      "con la cifra corregida."
-  );
+  partes.push("", t.gigo.losQueTeFaltanComo, "", t.gigo.revisa);
   return partes.join("\n");
 }
 
 /** Respaldo sin IA (fallo de red/presupuesto): los numeros crudos del
  * modulo, sin narracion. */
-export function reporteOffline(resultados: ReporteCalculado): string {
-  const partes: string[] = ["## Tus números hoy", ""];
+export function reporteOffline(resultados: ReporteCalculado, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REPORTE, idioma);
+  const partes: string[] = [t.tusNumerosHoy, ""];
   const { costo_unitario: costo, margen, punto_equilibrio: equilibrio, capacidad } = resultados;
-  if (costo.valor !== null) partes.push(`- Costo por unidad: ${JSON.stringify(costo.valor)}`);
-  if (margen.valor !== null) partes.push(`- Margen por unidad: ${JSON.stringify(margen.valor)} (${JSON.stringify(margen.porcentaje)}%)`);
-  if (equilibrio.valor !== null) partes.push(`- Punto de equilibrio: ${JSON.stringify(equilibrio.valor)} unidades/mes`);
+  if (costo.valor !== null) partes.push(interpolar(t.offline.costo, { valor: JSON.stringify(costo.valor) }));
+  if (margen.valor !== null) {
+    partes.push(
+      interpolar(t.offline.margen, { valor: JSON.stringify(margen.valor), porcentaje: String(JSON.stringify(margen.porcentaje)) })
+    );
+  }
+  if (equilibrio.valor !== null) partes.push(interpolar(t.offline.equilibrio, { valor: JSON.stringify(equilibrio.valor) }));
   if (capacidad.ingreso !== null) {
-    partes.push(`- Techo de ingreso mensual: ${JSON.stringify(capacidad.ingreso)} (${JSON.stringify(capacidad.unidades_mes)} unidades/mes)`);
+    partes.push(
+      interpolar(t.offline.techo, {
+        ingreso: JSON.stringify(capacidad.ingreso),
+        unidades: String(JSON.stringify(capacidad.unidades_mes)),
+      })
+    );
   }
   const faltantes = new Set<string>();
   for (const r of Object.values(resultados)) {
     for (const f of (r as { insumos_faltantes?: string[] }).insumos_faltantes ?? []) faltantes.add(f);
   }
   if (faltantes.size > 0) {
-    partes.push("", "## Los números que te faltan", "");
+    partes.push("", t.offline.losQueTeFaltan, "");
     for (const f of [...faltantes].sort()) partes.push(`- ${f}`);
   }
   return partes.join("\n");
@@ -202,7 +188,8 @@ export async function narrarReporte(
   resultados: ReporteCalculado,
   numeros: NumerosProyecto,
   tipoOferta: TipoOferta,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  idioma: Locale = LOCALE_BASE
 ): Promise<ResultadoNarracion> {
   const payload = {
     resultados,
@@ -219,6 +206,6 @@ export async function narrarReporte(
   } catch (e) {
     // AUD-09 M20: antes este catch era mudo. Deja rastro y se marca.
     console.error("[reporte] la narracion con IA fallo; queda el ensamblado sin narrar:", e);
-    return { contenido: reporteOffline(resultados) + REPORTE_DISCLAIMER, acumulado, sinIA: true };
+    return { contenido: reporteOffline(resultados, idioma) + REPORTE_DISCLAIMER, acumulado, sinIA: true };
   }
 }

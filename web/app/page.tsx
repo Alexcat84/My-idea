@@ -5,16 +5,20 @@
  * nace cuando el visitante entra a /nueva con el CTA. "Mis ideas" vive
  * ahora en /ideas.
  */
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Landing } from "./ui/Landing";
+import { elegir } from "@/lib/i18n/config";
+import { PORTADA } from "@/lib/i18n/mensajes/portada";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata = {
-  title: "My Idea: Transforma tu creatividad en acción",
-  description:
-    "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, recibe tu plan y ejecútalo.",
-};
+// i18n F2: los metadatos salen del catálogo en el idioma de la cookie.
+export async function generateMetadata(): Promise<Metadata> {
+  const t = elegir(PORTADA, await idiomaDeCookies());
+  return { title: t.meta.titulo, description: t.meta.descripcion };
+}
 
 export default async function PaginaPublica({
   searchParams,

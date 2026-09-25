@@ -16,8 +16,13 @@ import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
 import { leerRechazo } from "@/lib/mensajeServidor";
 import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
-import { AVISO_PRECIO_EXPLORACION } from "@/lib/avisoExploracion";
+import { avisoPrecioExploracion } from "@/lib/avisoExploracion";
 import { CODIGO_CIERRE_SIN_TERMINAL } from "@/lib/streamTerminal";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
+import { NUEVA_IDEA } from "@/lib/i18n/mensajes/nuevaIdea";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -26,6 +31,9 @@ type Fase =
   | { fase: "limite"; mensaje: string };
 
 export default function NuevaIdea() {
+  const idioma = useIdioma();
+  const t = elegir(NUEVA_IDEA, idioma);
+  const tc = elegir(CLARIDAD, idioma);
   const router = useRouter();
   const [texto, setTexto] = useState("");
   const [estado, setEstado] = useState<Fase>({ fase: "captura" });
@@ -95,21 +103,21 @@ export default function NuevaIdea() {
             fase: "captura",
             error:
               d?.codigo === CODIGO_CIERRE_SIN_TERMINAL
-                ? `La conexión se cortó antes de terminar. Tu texto sigue aquí; intenta de nuevo (referencia ${d.id ?? "sin id"}).`
-                : String(d?.error ?? "algo se atoró; intenta de nuevo"),
+                ? interpolar(t.errores.conexionCortadaRef, { id: d.id ?? t.errores.sinId })
+                : String(d?.error ?? t.errores.atorado),
           });
         }
       });
       if (!terminal) {
-        setEstado({ fase: "captura", error: "la conexión se cortó a medio camino; tu texto sigue aquí, intenta de nuevo" });
+        setEstado({ fase: "captura", error: t.errores.cortadaAMedioCamino });
       }
     } catch (e) {
       setEstado({
         fase: "captura",
         error:
           e instanceof EsperaAgotadaError
-            ? "esto está tardando más de lo normal; tu texto sigue aquí, intenta de nuevo"
-            : "no pudimos conectar; revisa tu internet e intenta de nuevo",
+            ? t.errores.tardando
+            : t.errores.sinConexion,
       });
     }
   }
@@ -124,7 +132,7 @@ export default function NuevaIdea() {
           onClick={() => router.push("/ideas")}
           className="mt-8 rounded-cinta border border-hairline bg-surface px-5 py-3 text-dim hover:text-ink"
         >
-          Ir a mis ideas
+          {t.irAMisIdeas}
         </button>
       </main>
     );
@@ -133,7 +141,7 @@ export default function NuevaIdea() {
   if (estado.fase === "generando") {
     return (
       <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-4 py-10 sm:px-6">
-        <h1 className="mb-8 text-xl font-semibold">Organizando tu idea…</h1>
+        <h1 className="mb-8 text-xl font-semibold">{t.organizando}</h1>
         <ArbolPensante nodos={nodos} generando etiquetaGenerando={etiqueta} />
       </main>
     );
@@ -152,7 +160,7 @@ export default function NuevaIdea() {
           <div className="mb-4 flex items-center gap-2">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
             <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Esto entendí de tu idea
+              {tc.estoEntendi}
             </span>
           </div>
           <h1 className="text-[26px] font-bold leading-[1.35] tracking-[-0.02em] [text-wrap:balance] sm:text-[30px]">
@@ -166,7 +174,7 @@ export default function NuevaIdea() {
             style={{ animationDelay: "0.35s" }}
           >
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Lo que ya tienes
+              {tc.loQueYaTienes}
             </p>
             <ul className="flex flex-col gap-4">
               {(d.lo_que_ya_tienes_claro ?? []).map((b, i) => (
@@ -188,7 +196,7 @@ export default function NuevaIdea() {
             style={{ animationDelay: "0.5s", border: "1px solid rgba(77,124,254,0.3)" }}
           >
             <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-              Lo que estás asumiendo
+              {tc.loQueEstasAsumiendo}
             </p>
             <ul className="flex flex-col gap-4">
               {(d.lo_que_estas_asumiendo_sin_saberlo ?? []).map((b, i) => (
@@ -204,8 +212,7 @@ export default function NuevaIdea() {
               ))}
             </ul>
             <p className="mt-5 border-t border-hairline pt-[18px] text-[13px] leading-[1.6] text-dim [text-wrap:pretty]">
-              Estas suposiciones son exactamente lo que La Exploración pone a prueba, pregunta a
-              pregunta.
+              {tc.notaSuposiciones}
             </p>
           </section>
         </div>
@@ -215,10 +222,10 @@ export default function NuevaIdea() {
             onClick={() => router.push(`/idea/${estado.projectId}?entrevista=1`)}
             className="rounded-[10px] px-[26px] py-3 text-sm font-semibold"
           >
-            Explorar estas suposiciones
+            {tc.explorarSuposiciones}
           </BotonHeroe>
           {/* AUD-09 M32: el aviso de precio del canon 03, antes de empezar. */}
-          <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">{AVISO_PRECIO_EXPLORACION}</p>
+          <p className="mt-3 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">{avisoPrecioExploracion(idioma)}</p>
         </div>
       </main>
     );
@@ -228,13 +235,13 @@ export default function NuevaIdea() {
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center px-4 py-10 sm:px-6">
       {/* Canon 02 (La Chispa): el momento sagrado — un campo grande y nada más */}
       <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
-        Nueva idea · La Chispa
+        {t.etiquetaChispa}
       </p>
       <label htmlFor="idea" className="mb-2 block text-2xl font-bold leading-snug tracking-tight">
-        Cuéntame tu idea
+        {t.cuentameTuIdea}
       </label>
       <p className="mb-4 text-[15px] text-dim">
-        Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.
+        {t.subtitulo}
       </p>
       <CampoConVoz
         id="idea"
@@ -242,7 +249,7 @@ export default function NuevaIdea() {
         onCambio={setTexto}
         filas={7}
         autoFocus
-        placeholder="Quiero vender café de especialidad a domicilio en mi barrio…"
+        placeholder={t.placeholder}
       />
       {estado.error && (
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
@@ -253,18 +260,18 @@ export default function NuevaIdea() {
             disabled={!texto.trim()}
             className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10 disabled:opacity-40"
           >
-            Intentar de nuevo
+            {t.intentarDeNuevo}
           </button>
         </div>
       )}
       <div className="mt-5 flex items-center justify-between gap-4">
-        <p className="text-xs text-dim">Sin plantillas ni formularios. Solo tu idea, en tus palabras.</p>
+        <p className="text-xs text-dim">{t.sinPlantillas}</p>
         <button
           onClick={enviar}
           disabled={!texto.trim()}
           className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
         >
-          Continuar
+          {t.continuar}
         </button>
       </div>
     </main>

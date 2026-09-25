@@ -25,6 +25,10 @@
  * el unico punto de divergencia conocido entre las dos implementaciones.
  */
 
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { MOTOR_NUMEROS } from "./i18n/mensajes/motorNumeros";
+
 export type TipoOferta = "producto_fisico" | "servicio" | "digital" | "mixto" | null | undefined;
 
 export type Rango = { min: number; max: number };
@@ -190,7 +194,12 @@ export interface ResultadoEquilibrio {
  * contra el caso real que motivo este cambio: $200 fijos / $13 margen =
  * 15.38 -> se necesitan 16 packs, no 15.4.
  */
-export function puntoEquilibrioUnidadesMes(numeros: NumerosProyecto, tipoOferta?: TipoOferta): ResultadoEquilibrio {
+export function puntoEquilibrioUnidadesMes(
+  numeros: NumerosProyecto,
+  tipoOferta?: TipoOferta,
+  idioma: Locale = LOCALE_BASE
+): ResultadoEquilibrio {
+  const t = elegir(MOTOR_NUMEROS, idioma).calculadora;
   const margen = margenUnitario(numeros, tipoOferta);
   const costosFijos = _valor(numeros, "costos_fijos_mensuales");
   const faltantes = [...margen.insumos_faltantes];
@@ -210,7 +219,7 @@ export function puntoEquilibrioUnidadesMes(numeros: NumerosProyecto, tipoOferta?
         valor: null,
         insumos_usados: [],
         insumos_faltantes: [],
-        nota: "el margen por unidad no es positivo en todo el rango; no hay punto de equilibrio posible asi",
+        nota: t.equilibrioSinMargenRango,
       };
     }
     valor = { min: Math.ceil(cfLo / mHi), max: Math.ceil(cfHi / mLo) };
@@ -221,7 +230,7 @@ export function puntoEquilibrioUnidadesMes(numeros: NumerosProyecto, tipoOferta?
         valor: null,
         insumos_usados: [],
         insumos_faltantes: [],
-        nota: "el margen por unidad no es positivo; no hay punto de equilibrio posible con estos numeros",
+        nota: t.equilibrioSinMargen,
       };
     }
     valor = Math.ceil((costosFijos as number) / margenN);
@@ -466,7 +475,12 @@ export interface ResultadoGigo {
  * 16 packs/mes. Esta funcion existe para que ese calculo NUNCA se narre
  * como si fuera confiable.
  */
-export function detectarInconsistenciaGigo(numeros: NumerosProyecto, tipoOferta?: TipoOferta): ResultadoGigo {
+export function detectarInconsistenciaGigo(
+  numeros: NumerosProyecto,
+  tipoOferta?: TipoOferta,
+  idioma: Locale = LOCALE_BASE
+): ResultadoGigo {
+  const t = elegir(MOTOR_NUMEROS, idioma).calculadora;
   const costo = costoUnitarioTotal(numeros, tipoOferta);
   const precio = _valor(numeros, "precio_tentativo");
   if (costo.valor === null || precio === null) {
@@ -483,19 +497,13 @@ export function detectarInconsistenciaGigo(numeros: NumerosProyecto, tipoOferta?
   if (margenPct < UMBRAL_MARGEN_PCT_INCONSISTENTE) {
     return {
       inconsistente: true,
-      motivo:
-        `con estos numeros el margen por unidad es ${_r(margenPct, 1)}%, muy por debajo ` +
-        "de -100% -- es mas probable que alguna cifra este en la unidad equivocada (por " +
-        "ejemplo, un presupuesto mensual leido como costo por unidad, o un plazo en meses " +
-        "leido como horas) que que cada venta pierda esa cantidad de dinero",
+      motivo: interpolar(t.gigoMargen, { pct: String(_r(margenPct, 1)) }),
     };
   }
   if (precioV < costoV * UMBRAL_PRECIO_MINIMO_FRACCION_COSTO) {
     return {
       inconsistente: true,
-      motivo:
-        "el precio declarado es menos del 5% del costo unitario calculado -- revisa si el " +
-        "precio y el costo estan expresados en la misma unidad (por pieza, por mes, etc.)",
+      motivo: t.gigoPrecio,
     };
   }
   return { inconsistente: false, motivo: null };
@@ -734,11 +742,15 @@ export function unidadesParaGananciaObjetivo(
   };
 }
 
-export function calcularReporte(numerosProyecto: NumerosProyecto, tipoOferta?: TipoOferta): ReporteCalculado {
+export function calcularReporte(
+  numerosProyecto: NumerosProyecto,
+  tipoOferta?: TipoOferta,
+  idioma: Locale = LOCALE_BASE
+): ReporteCalculado {
   const resultado: ReporteCalculado = {
     costo_unitario: costoUnitarioTotal(numerosProyecto, tipoOferta),
     margen: margenUnitario(numerosProyecto, tipoOferta),
-    punto_equilibrio: puntoEquilibrioUnidadesMes(numerosProyecto, tipoOferta),
+    punto_equilibrio: puntoEquilibrioUnidadesMes(numerosProyecto, tipoOferta, idioma),
     ciclo_conversion_efectivo: cicloConversionEfectivo(numerosProyecto),
     capacidad: { unidades_mes: null, ingreso: null, margen_mensual: null, insumos_usados: [], insumos_faltantes: [] },
     escenarios: { pesimista: null, base: null, sobredemanda: null, insumos_usados: [], insumos_faltantes: [] },

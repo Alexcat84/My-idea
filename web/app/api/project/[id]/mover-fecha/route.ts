@@ -16,6 +16,10 @@
  * inicial", desde fecha_base_original).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
@@ -57,25 +61,28 @@ function cambioFecha(prev: ItemFecha, nueva: string): Record<string, unknown> {
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).moverFecha;
 
   let cuerpo: unknown;
   try {
     cuerpo = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   const datos = parsear(cuerpo);
   if (!datos) {
-    return NextResponse.json({ error: "falta item_id o fecha mal formada" }, { status: 400 });
+    return NextResponse.json({ error: t.faltaItemOFecha }, { status: 400 });
   }
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+  if (!user) return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   const proyecto = await obtenerProyecto(supabase, projectId);
-  if (!proyecto) return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+  if (!proyecto) return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
 
   // Todo el checklist del proyecto: el objetivo y sus posibles posteriores.
   const { data: filas } = await supabase
@@ -84,23 +91,23 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     .eq("project_id", projectId);
   const items = (filas ?? []) as ItemFecha[];
   const objetivo = items.find((i) => i.id === datos.item_id);
-  if (!objetivo) return NextResponse.json({ error: "actividad no encontrada" }, { status: 404 });
+  if (!objetivo) return NextResponse.json({ error: t.actividadNoEncontrada }, { status: 404 });
   // AUD-09 M41: lo hecho y lo retirado no se mueven aquí. Mover lo hecho lo
   // reclasificaba "A tiempo"; su fecha real se ajusta en la actividad.
   if (objetivo.estado === "hecho") {
     return NextResponse.json(
-      { error: "Esta actividad ya está hecha. Si la hiciste en otra fecha, cámbiala desde la actividad." },
+      { error: t.yaHecha },
       { status: 409 }
     );
   }
   if (objetivo.estado === "no_aplica") {
     return NextResponse.json(
-      { error: "Esta actividad está retirada. Reactívala primero para darle una fecha." },
+      { error: t.retirada },
       { status: 409 }
     );
   }
   if (!objetivo.fecha_base) {
-    return NextResponse.json({ error: "esta actividad no tiene una fecha que mover" }, { status: 400 });
+    return NextResponse.json({ error: t.sinFecha }, { status: 400 });
   }
 
   const deltaMs = Date.parse(datos.fecha) - Date.parse(objetivo.fecha_base);
@@ -147,7 +154,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   if (fallos > 0) {
-    return NextResponse.json({ error: "No pude guardar todas tus fechas. Intenta de nuevo: lo que quedó guardado se corrige al reintentar.", fallidas: fallos }, { status: 500 });
+    return NextResponse.json({ error: r.noPudeGuardarFechas, fallidas: fallos }, { status: 500 });
   }
 
   await registrarBitacora(supabase, projectId, "fecha_movida", {

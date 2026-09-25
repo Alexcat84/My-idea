@@ -18,6 +18,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import catalogo from "@/lib/assets/packs_catalog.json";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { POTENCIADORES } from "@/lib/i18n/mensajes/potenciadores";
+import { rico } from "@/lib/i18n/rico";
 import { estadoMundo, type EstadoMundo } from "@/lib/engine/previewMundos";
 import { PotenciaTuIdea } from "@/app/ui/PotenciaTuIdea";
 import { grupoVigente, type ChecklistData } from "@/app/ui/ManosALaObra";
@@ -39,9 +43,8 @@ interface DetalleLite {
   mundos?: MundoDetalle[];
 }
 
-const ERROR = "no pudimos cargar tu idea; intenta de nuevo en un momento";
-
 export function ElegirPotenciador({ ideaId }: { ideaId: string }) {
+  const t = elegir(POTENCIADORES, useIdioma()).elegirPotenciador;
   const router = useRouter();
   const [detalle, setDetalle] = useState<DetalleLite | null>(null);
   const [checklist, setChecklist] = useState<ChecklistData | null>(null);
@@ -62,16 +65,16 @@ export function ElegirPotenciador({ ideaId }: { ideaId: string }) {
         setDetalle(d);
         setChecklist(c);
       } catch {
-        if (vivo) setError(ERROR);
+        if (vivo) setError(t.error);
       }
     })();
     return () => {
       vivo = false;
     };
-  }, [ideaId]);
+  }, [ideaId, t]);
 
   if (error) return <p className="text-sm text-warn">{error}</p>;
-  if (!detalle) return <p className="text-sm text-dim">Cargando tu idea…</p>;
+  if (!detalle) return <p className="text-sm text-dim">{t.cargando}</p>;
 
   // Los MISMOS derivadores que usa la idea (fuente única de la máquina de
   // estados y del progreso): nada se recalcula con reglas propias.
@@ -98,12 +101,11 @@ export function ElegirPotenciador({ ideaId }: { ideaId: string }) {
   return (
     <section className="anima-plan-in">
       <Link href="/potenciadores" className="text-[13px] text-dim hover:text-ink">
-        ← Cambiar de idea
+        {t.cambiarIdea}
       </Link>
-      <h1 className="mt-2 text-2xl font-bold tracking-tight">¿Qué potenciador quieres usar?</h1>
+      <h1 className="mt-2 text-2xl font-bold tracking-tight">{t.titulo}</h1>
       <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-dim">
-        Para <span className="font-semibold text-ink">{detalle.idea.nombre}</span>. Al aplicarlo queda agregado a tu
-        idea, y sigues desde ahí.
+        {rico(t.texto, { idea: () => <span className="font-semibold text-ink">{detalle.idea.nombre}</span> })}
       </p>
       <div className="mt-6">
         <PotenciaTuIdea

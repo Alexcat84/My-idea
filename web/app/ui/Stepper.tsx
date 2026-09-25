@@ -15,16 +15,13 @@
  * (Manos a la Obra) Y CELEBRA (Realizado).
  */
 
-export const ETAPAS_CANON = [
-  "La Chispa",
-  "Claridad",
-  "La Exploración",
-  "Tu Plan",
-  "Manos a la Obra",
-  "Realizado",
-] as const;
+import { elegir, LOCALE_BASE, type Locale } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { STEPPER_VIAJE } from "@/lib/i18n/mensajes/stepperViaje";
 
-const N = ETAPAS_CANON.length;
+// i18n F2: los nombres de los seis hitos viven en el catálogo (términos de marca).
+// Sin "use client": /ideas lo pinta en el servidor, así que el idioma llega por prop.
+const N = elegir(STEPPER_VIAJE, LOCALE_BASE).etapas.length;
 
 export interface EstadoStepper {
   /** 1-5: etapa alcanzada según la verdad del motor (Realizado es el 6.º). */
@@ -35,6 +32,8 @@ export interface EstadoStepper {
   etiqueta?: string;
   /** la idea se marcó realizada: solo entonces se enciende "Realizado" (verde). */
   realizada?: boolean;
+  /** el idioma de los nombres de los hitos (i18n F2; por omisión el base). */
+  idioma?: Locale;
 }
 
 type EstadoNodo = "hecha" | "actual" | "pensando" | "hechoVerde" | "futura";
@@ -101,6 +100,7 @@ function Riel({
   tam,
   ancho,
   fondo,
+  etapas,
 }: {
   etapa: number;
   pensando: boolean;
@@ -108,6 +108,7 @@ function Riel({
   tam: number;
   ancho: number;
   fondo: string;
+  etapas: readonly string[];
 }) {
   const alcanzado = realizada ? N : Math.min(Math.max(etapa, 1), N);
   const frac = (alcanzado - 1) / (N - 1);
@@ -125,7 +126,7 @@ function Riel({
       />
       {/* puntos, al ras sobre la línea */}
       <div className="relative flex w-full items-center justify-between">
-        {ETAPAS_CANON.map((titulo, i) => (
+        {etapas.map((titulo, i) => (
           <Punto key={titulo} estado={estadoNodo(i, etapa, pensando, realizada)} tam={tam} fondo={fondo} titulo={titulo} />
         ))}
       </div>
@@ -134,7 +135,8 @@ function Riel({
 }
 
 /** Variante de header (58px): riel + etiqueta del hito actual al lado. */
-export function Stepper({ etapa, pensando, etiqueta, realizada }: EstadoStepper) {
+export function Stepper({ etapa, pensando, etiqueta, realizada, idioma = LOCALE_BASE }: EstadoStepper) {
+  const t = elegir(STEPPER_VIAJE, idioma);
   // La etiqueta sigue el color de su punto (azul mientras se avanza), con la
   // excepción documentada por Design: "Manos a la Obra · N/M" (etapa 5) se
   // mantiene en VERDE porque nombra la ejecución EN CURSO, no el final del
@@ -142,8 +144,8 @@ export function Stepper({ etapa, pensando, etiqueta, realizada }: EstadoStepper)
   // realizar (la celebración).
   const enVerde = Boolean(realizada) || etapa === 5;
   return (
-    <div aria-label={`Etapa ${etapa} de ${N}: ${ETAPAS_CANON[Math.min(etapa, N) - 1]}`} className="flex items-center gap-3">
-      <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={11} ancho={150} fondo="var(--bg)" />
+    <div aria-label={interpolar(t.ariaEtapa, { etapa, total: N, nombre: t.etapas[Math.min(etapa, N) - 1] })} className="flex items-center gap-3">
+      <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={11} ancho={150} fondo="var(--bg)" etapas={t.etapas} />
       {etiqueta && (
         <span className={"whitespace-nowrap text-[12.5px] font-semibold " + (enVerde ? "text-done" : "text-accent")}>
           {etiqueta}
@@ -155,10 +157,11 @@ export function Stepper({ etapa, pensando, etiqueta, realizada }: EstadoStepper)
 
 /** Variante mini para las cintas del home: riel más corto, sin etiqueta. El
  * fondo de los huecos es el de la cinta (surface), no el del lienzo. */
-export function StepperMini({ etapa, pensando, realizada }: EstadoStepper) {
+export function StepperMini({ etapa, pensando, realizada, idioma = LOCALE_BASE }: EstadoStepper) {
+  const t = elegir(STEPPER_VIAJE, idioma);
   return (
-    <div aria-label={`Etapa ${etapa} de ${N}: ${ETAPAS_CANON[Math.min(etapa, N) - 1]}`}>
-      <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={9} ancho={116} fondo="var(--surface)" />
+    <div aria-label={interpolar(t.ariaEtapa, { etapa, total: N, nombre: t.etapas[Math.min(etapa, N) - 1] })}>
+      <Riel etapa={etapa} pensando={Boolean(pensando)} realizada={Boolean(realizada)} tam={9} ancho={116} fondo="var(--surface)" etapas={t.etapas} />
     </div>
   );
 }

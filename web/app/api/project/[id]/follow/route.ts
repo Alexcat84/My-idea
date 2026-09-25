@@ -31,6 +31,11 @@
  * core+unlocks igual que en el plan original del mundo (world/start:122).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -38,8 +43,8 @@ import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { obtenerModosPorEspacio, crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
@@ -67,25 +72,27 @@ export const runtime = "nodejs";
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
   const dominio = new URL(request.url).searchParams.get("dominio") || "core";
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
   const costo = PRECIOS[dominio === "core" ? "seguimiento" : "mundo_seguimiento"];
   const saldo = await verificarSaldo(user.id, costo);
   if (!saldo.alcanza) {
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldo.creditos, costo, saldo.apartados), saldo: saldo.creditos },
+      { error: mensajeSaldoInsuficiente(saldo.creditos, costo, saldo.apartados, idioma), saldo: saldo.creditos },
       { status: 402 }
     );
   }
@@ -94,6 +101,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).follow;
 
   let body: { detalles?: unknown; enfoque?: unknown; dominio?: unknown };
   try {
@@ -119,18 +129,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): el seguimiento es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
   // AUD-09 (tanda 5): con la idea REALIZADA no se paga un seguimiento del
   // núcleo, igual que un mundo completado no se replanifica. Cerrar es
@@ -138,7 +148,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // saldo y de los límites: nadie gasta nada en un rechazo.
   if (dominio === "core" && proyecto.realizada_at) {
     return NextResponse.json(
-      { error: "Diste tu idea por realizada. Reábrela si quieres seguir trabajándola." },
+      { error: t.ideaRealizada },
       { status: 409 }
     );
   }
@@ -152,7 +162,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let nombreMundo = "";
   if (dominio !== "core") {
     if (!entradaCatalogo) {
-      return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
+      return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
     }
     nombreMundo = entradaCatalogo.nombre;
     const { data: unlock } = await supabase
@@ -163,7 +173,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       .limit(1);
     if (!unlock || unlock.length === 0) {
       return NextResponse.json(
-        { error: `El mundo "${nombreMundo}" aún no está activado para esta idea.` },
+        { error: interpolar(r.mundoNoActivado, { mundo: nombreMundo }) },
         { status: 403 }
       );
     }
@@ -171,7 +181,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // reversible de un toque, así que esto no encierra a nadie.
     if ((unlock[0] as { completado_at?: string | null }).completado_at) {
       return NextResponse.json(
-        { error: `Diste "${nombreMundo}" por completado. Reábrelo si quieres seguir trabajándolo.` },
+        { error: interpolar(t.mundoCompletado, { mundo: nombreMundo }) },
         { status: 409 }
       );
     }
@@ -198,7 +208,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const saldoFollow = await verificarSaldo(user.id, montoFollow);
   if (!saldoFollow.alcanza) {
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldoFollow.creditos, montoFollow), saldo: saldoFollow.creditos },
+      { error: mensajeSaldoInsuficiente(saldoFollow.creditos, montoFollow, 0, idioma), saldo: saldoFollow.creditos },
       { status: 402 }
     );
   }
@@ -213,7 +223,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!reserva.reservado) {
     const ahora = await verificarSaldo(user.id, montoFollow, claveReserva);
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(ahora.creditos, montoFollow, ahora.apartados), saldo: ahora.creditos },
+      { error: mensajeSaldoInsuficiente(ahora.creditos, montoFollow, ahora.apartados, idioma), saldo: ahora.creditos },
       { status: 402 }
     );
   }
@@ -229,7 +239,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await soltarReserva();
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con
@@ -258,14 +268,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(COLS_FOLLOW));
   if (errorItems) {
     await soltarReserva();
-    return NextResponse.json({ error: "no pudimos leer tu checklist" }, { status: 500 });
+    return NextResponse.json({ error: r.noPudimosLeerChecklist }, { status: 500 });
   }
   const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio);
   // Un mundo sin checklist propio no tiene nada que seguir: primero se explora.
   if (dominio !== "core" && items.length === 0) {
     await soltarReserva();
     return NextResponse.json(
-      { error: `Primero explora "${nombreMundo}" — su seguimiento nace de su plan.` },
+      { error: interpolar(t.primeroExplora, { mundo: nombreMundo }) },
       { status: 409 }
     );
   }
@@ -341,7 +351,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (hayPuerta.length === 0) {
       await soltarReserva();
       return NextResponse.json(
-        { error: `Ya recorriste todas las puertas de "${nombreMundo}".` },
+        { error: interpolar(t.puertasRecorridas, { mundo: nombreMundo }) },
         { status: 409 }
       );
     }
@@ -403,5 +413,5 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // descuento iba en este punto). El cobro del seguimiento, core o mundo, ocurre
   // a la ENTREGA de su plan, en session/[id]/plan: un follow que muere en el
   // camino no se cobra.
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta]);
+  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [nodoPuerta], [], idioma);
 }

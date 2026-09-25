@@ -12,6 +12,9 @@
  */
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { generarIcs, type TareaIcs } from "@/lib/ics";
 import { nombreDeIdea } from "@/lib/ideas";
 import { itemsQueAvisan, usuarioDeToken, type ItemFeed, type PlanFeed } from "@/lib/feedCalendario";
@@ -24,11 +27,12 @@ const esCore = (dominio: string | null | undefined) => !dominio || dominio === "
 const PACKS = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
 const nombreMundo = (dominio: string) => PACKS.find((p) => p.clave === dominio)?.nombre ?? dominio;
 
-export async function GET(_request: Request, { params }: { params: Promise<{ token: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ token: string }> }) {
   const { token: crudo } = await params;
+  const t = elegir(SERVIDOR_PROYECTO, idiomaDeRequest(request)).calendario;
   const token = crudo.endsWith(".ics") ? crudo.slice(0, -4) : crudo;
   const userId = usuarioDeToken(token);
-  if (!userId) return new Response("Calendario no encontrado.", { status: 404 });
+  if (!userId) return new Response(t.noEncontrado, { status: 404 });
 
   const admin = createAdminClient();
   // AUD-09 H11: solo avisa lo vigente, con fechas y abierto (itemsQueAvisan).
@@ -81,7 +85,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ tok
     // proyecto no tiene mundos (nada que distinguir). Misma vara que etiquetaEspacio.
     const hayMundos = vigentes.some((i) => !esCore(i.dominio));
     const espacioDe = (dominio: string | null): string | undefined =>
-      !hayMundos ? undefined : esCore(dominio) ? "Tu viaje" : nombreMundo(dominio as string);
+      !hayMundos ? undefined : esCore(dominio) ? t.tuViaje : nombreMundo(dominio as string);
     for (const i of vigentes) {
       tareas.push({
         id: i.id,

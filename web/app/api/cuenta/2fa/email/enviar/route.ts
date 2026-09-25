@@ -7,10 +7,15 @@
  * Sirve tanto para ENROLAR el método email como para el desafío del login.
  */
 import { NextResponse } from "next/server";
+import { elegir, type ActiveLocale } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { SERVIDOR_DOS_FACTORES } from "@/lib/i18n/mensajes/servidorDosFactores";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createSixDigitCode, EMAIL_CODE_TTL_MINUTES, hashEmailCode } from "@/lib/dosFactores";
 import { limitarPorClave } from "@/lib/rateLimit";
 import {
-  AVISO_2FA,
+  aviso2FA,
   desafioSuperadoEnSesion,
   estadoSeguridad,
   ipDelRequest,
@@ -23,16 +28,16 @@ async function enviarPorResend(params: {
   from: string;
   to: string;
   codigo: string;
+  idioma: ActiveLocale;
 }): Promise<{ ok: boolean; status: number; message?: string }> {
-  const asunto = `${params.codigo} es tu código de verificación de My Idea`;
-  const texto =
-    `Tu código de verificación es ${params.codigo}. ` +
-    `Vence en ${EMAIL_CODE_TTL_MINUTES} minutos. ` +
-    `Si no fuiste tú, ignora este correo: nadie entra sin este código.`;
+  const t = elegir(SERVIDOR_DOS_FACTORES, params.idioma).correo;
+  const valores = { codigo: params.codigo, minutos: EMAIL_CODE_TTL_MINUTES };
+  const asunto = interpolar(t.asunto, valores);
+  const texto = interpolar(t.texto, valores);
   const html =
-    `<p>Tu código de verificación es:</p>` +
+    `<p>${t.htmlTuCodigo}</p>` +
     `<p style="font-size:28px;font-weight:700;letter-spacing:6px">${params.codigo}</p>` +
-    `<p>Vence en ${EMAIL_CODE_TTL_MINUTES} minutos. Si no fuiste tú, ignora este correo: nadie entra sin este código.</p>`;
+    `<p>${interpolar(t.htmlVence, valores)}</p>`;
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${params.apiKey}`, "Content-Type": "application/json" },
@@ -50,9 +55,12 @@ async function enviarPorResend(params: {
 }
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const c = elegir(SERVIDOR_CUENTA, idioma).comun;
+  const t = elegir(SERVIDOR_DOS_FACTORES, idioma);
   const sesion = await sesionRealDeCookies();
   if (!sesion || !sesion.user.email) {
-    return NextResponse.json({ error: "necesitas tu cuenta para esto" }, { status: 401 });
+    return NextResponse.json({ error: c.necesitasCuenta }, { status: 401 });
   }
   const userId = sesion.user.id;
   const ip = ipDelRequest(request);
@@ -67,20 +75,20 @@ export async function POST(request: Request) {
     previo.metodo !== "email" &&
     !(await desafioSuperadoEnSesion(userId, sesion.sessionId))
   ) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const porUsuario = await limitarPorClave(`2fa_email:user:${userId}`, 600, 5);
   if (!porUsuario.permitido) {
     return NextResponse.json(
-      { error: "Demasiados envíos de código. Espera unos minutos y vuelve a pedirlo." },
+      { error: t.demasiadosEnvios },
       { status: 429 }
     );
   }
   const porIp = await limitarPorClave(`2fa_email:ip:${ip}`, 600, 20);
   if (!porIp.permitido) {
     return NextResponse.json(
-      { error: "Demasiados envíos de código. Espera unos minutos y vuelve a pedirlo." },
+      { error: t.demasiadosEnvios },
       { status: 429 }
     );
   }
@@ -94,7 +102,7 @@ export async function POST(request: Request) {
       sinFrom: !from,
       sinCodeSecret: !codeSecret,
     });
-    return NextResponse.json({ error: "el código por correo no está disponible ahora" }, { status: 503 });
+    return NextResponse.json({ error: t.correoNoDisponible }, { status: 503 });
   }
 
   const codigo = createSixDigitCode();
@@ -107,7 +115,7 @@ export async function POST(request: Request) {
     .is("consumed_at", null);
   if (limpiarError) {
     console.error("[2fa/email/enviar] fallo la limpieza:", limpiarError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
   const { error: insertError } = await admin.from("two_factor_email_codes").insert({
     user_id: userId,
@@ -116,10 +124,10 @@ export async function POST(request: Request) {
   });
   if (insertError) {
     console.error("[2fa/email/enviar] fallo el insert:", insertError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
-  const envio = await enviarPorResend({ apiKey, from, to: sesion.user.email, codigo });
+  const envio = await enviarPorResend({ apiKey, from, to: sesion.user.email, codigo, idioma });
   if (!envio.ok) {
     console.error("[2fa/email/enviar] Resend fallo:", envio.status, envio.message);
     const { error: errEscritura1 } = await admin.from("two_factor_email_codes").delete().eq("user_id", userId).is("consumed_at", null);
@@ -127,7 +135,7 @@ export async function POST(request: Request) {
       console.error("[app/api/cuenta/2fa/email/enviar/route.ts] delete two_factor_email_codes fallo:", errEscritura1);
     }
     return NextResponse.json(
-      { error: "No pudimos enviar el correo. Intenta de nuevo en un momento." },
+      { error: t.noPudimosEnviar },
       { status: 502 }
     );
   }

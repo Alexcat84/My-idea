@@ -7,6 +7,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { informeMarkdown, type Analytics } from "./analytics";
 import type { ActaCierre } from "./acta";
+import { ANALISIS } from "./i18n/mensajes/analisis";
 
 function analyticsCon(hechas: number, total: number): Analytics {
   return {
@@ -55,6 +56,10 @@ describe("el acta de cierre sale de la instantánea, no del estado en vivo", () 
   it("la pantalla del análisis pinta el acta desde la instantánea", () => {
     const f = readFileSync(path.join(__dirname, "..", "app", "ui", "AnalisisProyecto.tsx"), "utf8");
     expect(f).toMatch(/acta\.instantanea\.acciones\.hechas/);
-    expect(f).toContain("Estado actual");
+    // i18n F2: la frase vive en el catálogo; la pantalla la usa por su clave.
+    expect(ANALISIS.es.proyecto.estadoActual).toBe("Estado actual");
+    expect(ANALISIS.es.proyecto.estadoActualLinea).toContain("Estado actual");
+    expect(f).toMatch(/\bt\.estadoActual\b/);
+    expect(f).toMatch(/\bt\.estadoActualLinea\b/);
   });
 });

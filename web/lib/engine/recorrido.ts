@@ -25,6 +25,8 @@ import type { ModoRuta } from "../dbContract";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
@@ -205,7 +207,8 @@ export const SENTINELA_SEGUIR_EXPLORANDO = "__seguimos_explorando__";
 async function temasPendientesDeLaMesa(
   estado: EstadoRecorrido,
   families: Record<string, Familia>,
-  graph: Grafo
+  graph: Grafo,
+  idioma: Locale = LOCALE_BASE
 ): Promise<string[]> {
   const evaluacion = evaluarRuta(estado.ruta, families);
   const faltantesKeys: string[] = [];
@@ -233,7 +236,8 @@ async function temasPendientesDeLaMesa(
       }
     } catch {
       // la brujula caida no bloquea la oferta: cae al nombre humano de la familia
-      const nombre = familia === "accion_clientes" ? "Salir a validar con clientes" : "Tus numeros de verdad";
+      const temas = elegir(MOTOR, idioma).temaFamilia;
+      const nombre = familia === "accion_clientes" ? temas.accionClientes : temas.viabilidadEconomica;
       if (!etiquetas.includes(nombre)) etiquetas.push(nombre);
     }
   }
@@ -297,9 +301,10 @@ export async function preguntaDirigida(
   preguntasCache: PreguntasCache,
   perfilSesion: string | null,
   ultimasPreguntas: string[],
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  idioma: Locale = LOCALE_BASE
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
-  const plano = preguntaDeNodo(nid, graph, preguntasCache);
+  const plano = preguntaDeNodo(nid, graph, preguntasCache, idioma);
   try {
     const ctx = {
       perfil_sesion: perfilSesion,
@@ -331,10 +336,14 @@ export interface AvanzarTurnoParams {
   /** Metadata de codigo (no algo que el modelo deba inventar) para
    * timestampear numeros_detectados_sesion, igual que Python. */
   dbSessionId: string;
+  /** i18n F2: el idioma de los textos que el motor arma sin la IA (la pregunta
+   * genérica de un nodo, los temas de respaldo). Sin él, el base. */
+  idioma?: Locale;
 }
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
   const { client, graph, families, preguntasCache, dbSessionId } = params;
+  const idioma = params.idioma ?? LOCALE_BASE;
   let estado = params.estado;
   let acumulado = params.acumulado;
   let respuestaUsuario = params.respuestaUsuario;
@@ -410,7 +419,8 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       preguntasCache,
       estado.perfilSesion,
       estado.ultimasPreguntas,
-      acumulado
+      acumulado,
+      idioma
     );
     acumulado = a2;
     estado = {
@@ -460,7 +470,8 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       preguntasCache,
       perfilNuevo,
       estado.ultimasPreguntas,
-      acumulado
+      acumulado,
+      idioma
     );
     acumulado = a2;
     estado = {
@@ -501,7 +512,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         descartados: new Set(estado.puertasDescartadas),
       });
       if (reeleccion) {
-        const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache);
+        const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
         estado = {
           ...estado,
           ruta: [...estado.ruta, reeleccion.puertaId],
@@ -552,6 +563,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       acumulado,
       registrarEvento: (e) => eventosNuevos.push(e),
       dominiosDesbloqueados: dominiosDelRecorrido(estado),
+      idioma,
     });
     acumulado = resultadoInterprete.acumulado;
     if (resultadoInterprete.historialMensajes) {
@@ -619,7 +631,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         });
         const motivo = resultado.razonamiento ?? null;
         if (reeleccion) {
-          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache);
+          const pregunta = obtenerPregunta(reeleccion.puertaId, graph[reeleccion.puertaId], preguntasCache, idioma);
           estado = {
             ...estado,
             ruta: [...estado.ruta, reeleccion.puertaId],
@@ -687,7 +699,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       // pendientes por su etiqueta de arbol) y dos CTAs de peso igual.
       // Si no falta nada, lo dice con honestidad inversa (temas = []).
       if (!estado.profundizarOfrecido) {
-        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph);
+        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph, idioma);
         estado = { ...estado, profundizarOfrecido: true, fase: "esperando_profundizar", preguntaPendiente: null };
         return {
           tipo: "listo_para_plan",
@@ -719,7 +731,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const nuevoActualId = camino[camino.length - 1];
 
     if (preguntaNecesaria) {
-      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache);
+      const pregunta = resultado.preguntaAdaptada || preguntaDeNodo(nuevoActualId, graph, preguntasCache, idioma);
       estado = {
         ...estado,
         preguntaPendiente: pregunta,

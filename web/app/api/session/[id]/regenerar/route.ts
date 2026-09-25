@@ -17,6 +17,10 @@
  * toda otra (doble factor, saldo, y fusible y límite diario DESPUÉS del saldo).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { usoVacio } from "@/lib/costmeter";
 import {
   conceptoDelPlan,
@@ -28,36 +32,39 @@ import {
 } from "@/lib/creditos";
 import { crearSesion, guardarEstadoSesion, obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: sessionBasica } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_SESION, idioma).regenerar;
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   const sesion = await obtenerSesion(supabase, sessionBasica);
   if (!sesion) {
-    return NextResponse.json({ error: "No encontré ese plan." }, { status: 404 });
+    return NextResponse.json({ error: t.noEncontrePlan }, { status: 404 });
   }
   const estado = sesion.estado_recorrido as EstadoSesionPersistido | null;
   const decisiones = (sesion as { decisiones?: unknown }).decisiones;
   if (!estado || !avisoDelPlan(decisiones)) {
-    return NextResponse.json({ error: "Este plan ya está completo: no hay nada que regenerar." }, { status: 409 });
+    return NextResponse.json({ error: t.planCompleto }, { status: 409 });
   }
 
   const dominio = ((sesion as { dominio?: string | null }).dominio ?? "core") as string;
@@ -68,7 +75,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const saldo = await verificarSaldo(user.id, costo);
   if (!saldo.alcanza) {
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldo.creditos, costo), saldo: saldo.creditos },
+      { error: mensajeSaldoInsuficiente(saldo.creditos, costo, 0, idioma), saldo: saldo.creditos },
       { status: 402 }
     );
   }
@@ -81,7 +88,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!reserva.reservado) {
     const ahora = await verificarSaldo(user.id, costo, claveReserva);
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(ahora.creditos, costo, ahora.apartados), saldo: ahora.creditos },
+      { error: mensajeSaldoInsuficiente(ahora.creditos, costo, ahora.apartados, idioma), saldo: ahora.creditos },
       { status: 402 }
     );
   }
@@ -93,7 +100,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   const tipo = ((sesion as { tipo?: string }).tipo ?? (esSeguimiento ? "seguimiento" : "inicial")) as Parameters<

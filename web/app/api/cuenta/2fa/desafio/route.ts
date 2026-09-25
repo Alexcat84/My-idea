@@ -7,6 +7,10 @@
  * que las rutas sensibles exigen (adaptación nuestra a sesión por cookies).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { SERVIDOR_DOS_FACTORES } from "@/lib/i18n/mensajes/servidorDosFactores";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import {
   consumeRecoveryCode,
   decryptTotpSecret,
@@ -25,15 +29,18 @@ import {
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const c = elegir(SERVIDOR_CUENTA, idioma).comun;
+  const t = elegir(SERVIDOR_DOS_FACTORES, idioma);
   const sesion = await sesionRealDeCookies();
   if (!sesion) {
-    return NextResponse.json({ error: "necesitas tu cuenta para esto" }, { status: 401 });
+    return NextResponse.json({ error: c.necesitasCuenta }, { status: 401 });
   }
   let body: { token?: unknown; emailCode?: unknown; recoveryCode?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: c.cuerpoInvalido }, { status: 400 });
   }
 
   const userId = sesion.user.id;
@@ -41,7 +48,7 @@ export async function POST(request: Request) {
 
   if (await candado2FAActivo(userId)) {
     return NextResponse.json(
-      { error: "Demasiados intentos. Espera 15 minutos y vuelve a intentar." },
+      { error: t.demasiadosIntentos },
       { status: 423 }
     );
   }
@@ -63,18 +70,18 @@ export async function POST(request: Request) {
     const encryptionKey = process.env.TOTP_ENCRYPTION_KEY;
     if (!encryptionKey || encryptionKey.length < 32) {
       console.error("[2fa/desafio] TOTP_ENCRYPTION_KEY ausente o corta");
-      return NextResponse.json({ error: "la verificación no está disponible ahora" }, { status: 503 });
+      return NextResponse.json({ error: t.verificacionNoDisponible }, { status: 503 });
     }
     let secreto: string;
     try {
       secreto = decryptTotpSecret(estado.totpSecret, encryptionKey);
     } catch {
       console.error("[2fa/desafio] no se pudo descifrar el secreto (¿cambió TOTP_ENCRYPTION_KEY?)");
-      return NextResponse.json({ error: "algo se atoró de nuestro lado; intenta más tarde" }, { status: 500 });
+      return NextResponse.json({ error: t.algoSeAtoroMasTarde }, { status: 500 });
     }
     const r = verifyTotpTokenWithReplayGuard(secreto, token, { lastUsedStep: estado.totpLastUsedStep });
     if (r.replayed) {
-      return NextResponse.json({ error: "Ese código ya se usó. Espera el siguiente y escríbelo." }, { status: 401 });
+      return NextResponse.json({ error: t.codigoYaUsado }, { status: 401 });
     }
     verified = r.verified;
     verifiedTotpStep = r.usedStep;
@@ -99,7 +106,7 @@ export async function POST(request: Request) {
           .eq("code_hash", usado);
         if (errEscritura1) {
           console.error("[app/api/cuenta/2fa/desafio/route.ts] update two_factor_recovery_codes fallo; no se da por superado el desafio:", errEscritura1);
-          return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+          return NextResponse.json({ error: t.noPudeConfirmar }, { status: 503 });
         }
       }
     }
@@ -109,7 +116,7 @@ export async function POST(request: Request) {
     const codeSecret = process.env.TWO_FACTOR_EMAIL_CODE_SECRET?.trim();
     if (!codeSecret) {
       console.error("[2fa/desafio] TWO_FACTOR_EMAIL_CODE_SECRET ausente");
-      return NextResponse.json({ error: "la verificación no está disponible ahora" }, { status: 503 });
+      return NextResponse.json({ error: t.verificacionNoDisponible }, { status: 503 });
     }
     const { data: fila } = await admin
       .from("two_factor_email_codes")
@@ -120,10 +127,10 @@ export async function POST(request: Request) {
       .limit(1)
       .maybeSingle();
     if (!fila) {
-      return NextResponse.json({ error: "Pide un código nuevo: no hay ninguno vigente." }, { status: 400 });
+      return NextResponse.json({ error: t.sinCodigoVigente }, { status: 400 });
     }
     if (new Date(fila.expires_at as string).getTime() < Date.now()) {
-      return NextResponse.json({ error: "Ese código ya venció. Pide uno nuevo." }, { status: 400 });
+      return NextResponse.json({ error: t.codigoVencido }, { status: 400 });
     }
     const esperado = hashEmailCode(emailCode, codeSecret).toLowerCase();
     if (secureEqualHex(esperado, String(fila.code_hash).trim().toLowerCase())) {
@@ -135,14 +142,14 @@ export async function POST(request: Request) {
         .eq("user_id", userId);
       if (errEscritura2) {
         console.error("[app/api/cuenta/2fa/desafio/route.ts] update two_factor_email_codes fallo; no se da por superado el desafio:", errEscritura2);
-        return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+        return NextResponse.json({ error: t.noPudeConfirmar }, { status: 503 });
       }
     }
   }
 
   if (!verified) {
     await registrarIntento2FA(userId, ip, false);
-    return NextResponse.json({ error: "Ese código no coincide. Vuelve a intentarlo." }, { status: 401 });
+    return NextResponse.json({ error: t.noCoincide }, { status: 401 });
   }
   // AUD-09 (tanda 5): el paso de TOTP (anti-repetición) se escribe ANTES de dar
   // el desafío por superado. Si esa escritura falla, el código podría volver a
@@ -158,7 +165,7 @@ export async function POST(request: Request) {
       .eq("user_id", userId);
     if (errEscritura3) {
       console.error("[app/api/cuenta/2fa/desafio/route.ts] update user_seguridad fallo; no se da por superado el desafio:", errEscritura3);
-      return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+      return NextResponse.json({ error: t.noPudeConfirmar }, { status: 503 });
     }
   }
 

@@ -11,6 +11,11 @@
  *      JAMAS bloquea el recalculo determinista, gratis e ilimitado por ley.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import type { NumerosProyecto, TipoOferta } from "@/lib/calculadora";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { costoAcumuladoUsd, usoVacio } from "@/lib/costmeter";
@@ -27,10 +32,10 @@ import {
   registrarBitacora,
   ultimaVersionNumeros,
 } from "@/lib/db";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 // AUD-09 B10: el mismo nombre de la idea que /ideas (no el título crudo).
 import { nombreDeIdea } from "@/lib/ideas";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { narrarReporte } from "@/lib/engine/reporte";
 import { cifrasCambiaron, MENSAJE_TOPE_RENARRACION, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
@@ -63,10 +68,11 @@ function esNumeroValido(n: unknown): n is number {
  * campos de la lista; preserva unidad/texto_original de lo que ya habia. */
 function fundirCifras(
   entrada: unknown,
-  existentes: NumerosProyecto
+  existentes: NumerosProyecto,
+  t: (typeof SERVIDOR_PROYECTO)["es"]["numeros"]
 ): { numeros: NumerosProyecto; error?: string } {
   if (typeof entrada !== "object" || entrada === null) {
-    return { numeros: existentes, error: "'numeros' debe ser un objeto de campo: valor" };
+    return { numeros: existentes, error: t.cifrasNoObjeto };
   }
   const fusion: NumerosProyecto = { ...existentes };
   const ts = new Date().toISOString();
@@ -84,7 +90,7 @@ function fundirCifras(
     ) {
       valor = { min: (bruto as { min: number }).min, max: (bruto as { max: number }).max };
     } else {
-      return { numeros: existentes, error: `el valor de '${campo}' debe ser un numero >= 0 o un rango {min, max}` };
+      return { numeros: existentes, error: interpolar(t.valorInvalido, { campo }) };
     }
     const previo = existentes[campo];
     fusion[campo] = {
@@ -98,14 +104,14 @@ function fundirCifras(
   return { numeros: fusion };
 }
 
-async function cargarContexto(projectId: string) {
+async function cargarContexto(projectId: string, r: (typeof RUTAS)["es"]) {
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!user) return { error: NextResponse.json({ error: "no autenticado" }, { status: 401 }) };
+  if (!user) return { error: NextResponse.json({ error: r.noAutenticado }, { status: 401 }) };
   const proyecto = await obtenerProyecto(supabase, projectId);
-  if (!proyecto) return { error: NextResponse.json({ error: "idea no encontrada" }, { status: 404 }) };
+  if (!proyecto) return { error: NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 }) };
   return { supabase, user, proyecto };
 }
 
@@ -139,7 +145,9 @@ function resumenVersion(
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
-  const ctx = await cargarContexto(projectId);
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).numeros;
+  const ctx = await cargarContexto(projectId, elegir(RUTAS, idioma));
   if ("error" in ctx) return ctx.error;
   const { supabase, proyecto } = ctx;
 
@@ -166,7 +174,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (versionId) {
     const version = await obtenerVersionNumeros(supabase, projectId, versionId);
     if (!version || !version.calculo) {
-      return NextResponse.json({ error: "esa version no existe" }, { status: 404 });
+      return NextResponse.json({ error: t.versionNoExiste }, { status: 404 });
     }
     const calculo = version.calculo as Record<string, unknown> & { veredicto?: unknown };
     return NextResponse.json({
@@ -206,25 +214,28 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).numeros;
 
   let body: { numeros?: unknown; tipo_oferta?: unknown; narrar?: unknown; activar?: unknown } = {};
   try {
     const texto = await request.text();
     if (texto.trim().length > 0) body = JSON.parse(texto);
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
 
-  const ctx = await cargarContexto(projectId);
+  const ctx = await cargarContexto(projectId, r);
   if ("error" in ctx) return ctx.error;
   const { supabase, user, proyecto } = ctx;
 
   // ETAPA 2 (la frontera): Tus Numeros es motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   // AUD-09 M24: Tus Números va INCLUIDO en el plan (PRECIOS.tus_numeros === 0:
@@ -232,7 +243,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // núcleo, igual que /report. El recálculo determinista no: es gratis por ley.
   if ((body.activar === true || body.narrar === true) && !(await obtenerPlanCoreVigente(supabase, projectId))) {
     return NextResponse.json(
-      { error: "Tus Números viene incluido con tu plan. Arma tu plan primero y aquí te espero." },
+      { error: r.tusNumerosConPlan },
       { status: 409 }
     );
   }
@@ -246,7 +257,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const yaActivado = proyecto.tus_numeros_activado_at != null;
   if (!yaActivado && body.activar !== true) {
     return NextResponse.json(
-      { compuerta: true, costo: PRECIOS.tus_numeros, error: "Tus Números se activa una vez por idea." },
+      { compuerta: true, costo: PRECIOS.tus_numeros, error: t.activaUnaVez },
       { status: 409 }
     );
   }
@@ -254,7 +265,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // 1) Corregir cifras (opcional): funde y valida sobre lo vigente.
   let numeros: NumerosProyecto = proyecto.numeros_proyecto ?? {};
   if (body.numeros !== undefined) {
-    const { numeros: fundidas, error } = fundirCifras(body.numeros, numeros);
+    const { numeros: fundidas, error } = fundirCifras(body.numeros, numeros, t);
     if (error) return NextResponse.json({ error }, { status: 400 });
     numeros = fundidas;
   }
@@ -277,7 +288,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const saldoNum = await verificarSaldo(user.id, PRECIOS.tus_numeros);
       if (!saldoNum.alcanza) {
         return NextResponse.json(
-          { error: mensajeSaldoInsuficiente(saldoNum.creditos, PRECIOS.tus_numeros), saldo: saldoNum.creditos },
+          { error: mensajeSaldoInsuficiente(saldoNum.creditos, PRECIOS.tus_numeros, 0, idioma), saldo: saldoNum.creditos },
           { status: 402 }
         );
       }
@@ -318,7 +329,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let mensaje: string | null = null;
   if (body.narrar === true) {
     if (tablero.gigo.inconsistente) {
-      mensaje = "No narro una conclusión con estos datos: revisa el guardián de datos y corrige la cifra que no cuadra.";
+      mensaje = t.noNarroInconsistente;
     } else {
       const hoy = await contarNarracionesHoy(supabase, projectId);
       if (hoy >= TOPE_RENARRACION_DIA) {
@@ -330,8 +341,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         if (r.sinIA) {
           // AUD-09 M20: un texto sin IA no es una narración. No se guarda como
           // tal (así tampoco cuenta contra el tope diario) y se dice.
-          mensaje =
-            "No pude narrar tus números en este momento. Tu tablero y tus cifras están al día; intenta narrar de nuevo en un rato.";
+          mensaje = t.noPudeNarrar;
         } else {
           narracion = r.contenido;
           narracionAt = new Date().toISOString();

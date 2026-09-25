@@ -8,6 +8,9 @@
  */
 import { useEffect, useRef } from "react";
 import { alEditarAMano, componerDictado, estadoDictadoInicial } from "@/lib/dictado";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { VOZ } from "@/lib/i18n/mensajes/voz";
 import { useSpeech } from "@/lib/useSpeech";
 
 interface Props {
@@ -21,6 +24,8 @@ interface Props {
 }
 
 export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus, deshabilitado, id }: Props) {
+  const idioma = useIdioma();
+  const t = elegir(VOZ, idioma);
   // Lo dictado vive DENTRO del valor (AUD-09 B14b: enviar o detener a mitad
   // de frase no lo pierde). Cada sesión del micrófono reemplaza su propio
   // aporte con el texto entero de la sesión, así que por más que el navegador
@@ -48,7 +53,8 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
     () => {
       estadoDictado.current = estadoDictadoInicial();
       ultimoTextoSesion.current = "";
-    }
+    },
+    idioma
   );
 
   // Detener NO descarta lo oído: ya está en el campo.
@@ -81,7 +87,7 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
           type="button"
           onClick={alternarMicrofono}
           disabled={deshabilitado}
-          aria-label={escuchando ? "Detener dictado" : "Dictar por voz"}
+          aria-label={escuchando ? t.detenerDictado : t.dictarPorVoz}
           aria-pressed={escuchando}
           className={
             "absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full " +

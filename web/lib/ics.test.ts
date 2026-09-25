@@ -39,6 +39,12 @@ describe("generarIcs — Nivel 0 del calendario (.ics)", () => {
     expect(ics).toContain("SUMMARY:Habla con cinco personas\\; toma notas");
   });
 
+  it("la descripción visible dice la etapa y la idea (i18n F2: idéntica en español)", () => {
+    // A mano: t1 es la etapa 2 de "Mi idea, con comas" -> "Etapa 2 · Mi idea, con comas",
+    // y al escapar la coma queda "Etapa 2 · Mi idea\, con comas".
+    expect(ics).toContain("DESCRIPTION:Etapa 2 · Mi idea\\, con comas");
+  });
+
   it("DTSTAMP va en UTC con Z", () => {
     expect(ics).toContain("DTSTAMP:20260730T120000Z");
   });

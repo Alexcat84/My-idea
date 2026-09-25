@@ -7,6 +7,8 @@
  * "**Esta semana:** ..." una vez por etapa.
  */
 import type { ChecklistEstado } from "../dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
 
 export interface ItemDerivado {
   etapa: number;
@@ -27,7 +29,7 @@ function resumirPaso(cuerpo: string): string {
   return frase.length > 180 ? frase.slice(0, 177).trimEnd() + "…" : frase;
 }
 
-export function derivarChecklist(markdownPlan: string): ItemDerivado[] {
+export function derivarChecklist(markdownPlan: string, idioma: Locale = LOCALE_BASE): ItemDerivado[] {
   const items: ItemDerivado[] = [];
   let etapaActual = 0;
   let orden = 0;
@@ -71,7 +73,7 @@ export function derivarChecklist(markdownPlan: string): ItemDerivado[] {
       items.push({
         etapa: etapaActual,
         orden,
-        texto: resumirPaso(mSemana[1] || "Esta semana"),
+        texto: resumirPaso(mSemana[1] || elegir(MOTOR, idioma).checklistEstaSemana),
         destacado: true,
       });
       continue;

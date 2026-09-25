@@ -17,6 +17,9 @@
 import { useEffect, useRef, useState } from "react";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import type { HitoEspacio, TipoHito } from "@/lib/hitosEspacio";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 
 const AZUL = "#4D7CFE";
 const MEDIO = "#3F9B8E";
@@ -32,6 +35,7 @@ function colorNodo(tipo: TipoHito): string {
 }
 
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
+  const t = elegir(ANALISIS, useIdioma()).lineaAvance;
   const cierre = hitos.at(-1);
   const arranques = hitos.slice(0, -1);
   const cerrado = cierre?.alcanzado ?? false;
@@ -77,8 +81,8 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
 
   return (
     <div className="anima-plan-in">
-      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu avance</p>
-      <p className="mb-8 mt-1 text-[13px] leading-relaxed text-dim">Del inicio a donde vas, los hitos de este espacio.</p>
+      <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.titulo}</p>
+      <p className="mb-8 mt-1 text-[13px] leading-relaxed text-dim">{t.intro}</p>
 
       <div ref={contRef} className="relative mx-auto max-w-[620px]">
         {/* la línea CONTINUA, del primer hito al último alcanzado (nunca más allá) */}

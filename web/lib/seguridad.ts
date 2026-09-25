@@ -8,6 +8,8 @@
  */
 import { timingSafeEqual } from "node:crypto";
 import type { User } from "@supabase/supabase-js";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 import { esInvitadoInvisible } from "./identidad";
 import { shouldLockTwoFactor } from "./dosFactores";
 import { createAdminClient } from "./supabase/admin";
@@ -131,10 +133,12 @@ export async function desafioSuperadoEnSesion(userId: string, sessionId: string 
 
 /** El 403 de frontera del segundo factor, en palabras de persona. La UI lo
  * detecta por `segundo_factor_requerido` y abre el desafío. */
-export const AVISO_2FA = {
-  segundo_factor_requerido: true,
-  error: "Tu cuenta tiene verificación en dos pasos. Confirma tu segundo factor y seguimos justo donde quedaste.",
-} as const;
+export function aviso2FA(idioma: Locale = LOCALE_BASE) {
+  return { segundo_factor_requerido: true, error: elegir(SERVIDOR_COMUN, idioma).aviso2FA } as const;
+}
+
+/** El aviso en el idioma base (para quien aún no elige por idioma). */
+export const AVISO_2FA = aviso2FA(LOCALE_BASE);
 
 /**
  * El gate de las rutas sensibles (puntos de cobro y borrados): si el usuario

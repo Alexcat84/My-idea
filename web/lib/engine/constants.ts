@@ -3,6 +3,9 @@
  * prototipo_motor.py que no pertenecen a graph.ts (acceso al grafo) ni a
  * compass.ts (brujula semantica).
  */
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
+
 export const MAX_DEPTH = 15;
 export const MAX_SALTOS_SILENCIOSOS_POR_LLAMADA = 3;
 export const MAX_REPREGUNTAS_POR_PUNTO = 1;
@@ -15,11 +18,13 @@ export const SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?";
 // AUD-09 M33: lo que el plan aún no cubre, en español llano y con tildes (sin
 // "MVP"). Fuente única: la usan readiness.ts y el redactor; paridad con
 // engine/plan_readiness.py y engine/prototipo_motor.py.
-export const TEXTO_FAMILIA_FALTANTE: Record<string, string> = {
-  accion_clientes: "validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)",
-  viabilidad_economica: "si tu idea puede sostenerse económicamente (costos, precios, punto de equilibrio)",
-  profundidad: "más profundidad en el recorrido",
-};
+// i18n F2: los textos viven en el catálogo MOTOR; la constante es el valor base.
+export const TEXTO_FAMILIA_FALTANTE: Record<string, string> = textosFamiliaFaltante();
+
+/** Lo que el plan aún no cubre, en un idioma (catálogo MOTOR). */
+export function textosFamiliaFaltante(idioma: Locale = LOCALE_BASE): Record<string, string> {
+  return elegir(MOTOR, idioma).familiaFaltante;
+}
 
 export type CampoNumericoProyecto =
   | "costo_materiales_unidad"
@@ -73,11 +78,11 @@ export const CAMPOS_ESENCIALES_POR_TIPO: Record<string, CampoNumericoProyecto[]>
 
 export const MAX_PREGUNTAS_REPORTE = 6;
 
-export const REPORTE_DISCLAIMER =
-  "\n\n---\n_Estimaciones basadas en las cifras que tú diste; no sustituyen " +
-  "contabilidad formal ni asesoría fiscal, que varían según tu país._";
+// i18n F2: texto en el catálogo MOTOR; la constante es el valor base.
+export const REPORTE_DISCLAIMER = elegir(MOTOR, LOCALE_BASE).reporteDisclaimer;
 
-export const PREGUNTA_TIPO_OFERTA = "¿Qué vendes exactamente y cómo se cobra?";
+// i18n F2: texto en el catálogo MOTOR; la constante es el valor base.
+export const PREGUNTA_TIPO_OFERTA = elegir(MOTOR, LOCALE_BASE).preguntaTipoOferta;
 
 // Guardian GIGO (Motor v2.2): frases deterministicas que indican que la
 // mini-entrevista actual (el "molde" de preguntas del tipo_oferta activo)

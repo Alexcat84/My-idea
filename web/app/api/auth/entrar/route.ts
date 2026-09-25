@@ -8,22 +8,26 @@
  * cuenta tiene 2FA, el login sigue con el desafío.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { bienvenidaTrasLogin, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const t = elegir(SERVIDOR_CUENTA, idiomaDeRequest(request));
   let body: { email?: unknown; password?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: t.comun.cuerpoInvalido }, { status: 400 });
   }
   const email = String(body.email ?? "").trim().toLowerCase();
   const password = String(body.password ?? "");
   if (!email || !email.includes("@") || !password) {
-    return NextResponse.json({ error: "escribe tu correo y tu contraseña" }, { status: 400 });
+    return NextResponse.json({ error: t.entrar.faltanDatos }, { status: 400 });
   }
 
   // La allowlist gatea también el ingreso: cerrar la beta (vaciarla) cierra
@@ -33,7 +37,7 @@ export async function POST(request: Request) {
     invitado = await estaEnAllowlist(email);
   } catch {
     return NextResponse.json(
-      { error: "algo se atoro de nuestro lado; intenta de nuevo en un momento" },
+      { error: t.comun.algoSeAtoroMomento },
       { status: 500 }
     );
   }
@@ -55,13 +59,13 @@ export async function POST(request: Request) {
     const msg = error.message.toLowerCase();
     if (msg.includes("email not confirmed") || msg.includes("not confirmed")) {
       return NextResponse.json(
-        { error: "Aún no confirmaste tu correo. Revisa tu bandeja (y el spam) o pide un enlace nuevo.", sinConfirmar: true },
+        { error: t.entrar.sinConfirmar, sinConfirmar: true },
         { status: 403 }
       );
     }
     // Credenciales malas: mismo mensaje para correo inexistente o contraseña
     // errada (no revelar cuáles correos tienen cuenta).
-    return NextResponse.json({ error: "Correo o contraseña incorrectos." }, { status: 401 });
+    return NextResponse.json({ error: t.entrar.credencialesMalas }, { status: 401 });
   }
 
   const {

@@ -36,6 +36,7 @@ import {
   type ResumenNodo,
 } from "./graph";
 import { tokensCosecha } from "./tokens";
+import { LOCALE_BASE, type Locale } from "../i18n/config";
 
 export interface PrioridadDeclarada {
   texto: string;
@@ -285,6 +286,9 @@ export interface InterpretarMultiSaltoParams {
   /** Fase 3.5: dominios recorribles del proyecto (core + unlocks);
    * undefined = solo core, el comportamiento de siempre. */
   dominiosDesbloqueados?: string[];
+  /** i18n F2: el idioma de la pregunta genérica del respaldo tier-2 (la única
+   * que el intérprete arma sin la IA). Sin él, el base. */
+  idioma?: Locale;
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -313,6 +317,7 @@ export async function interpretarMultiSalto(
     historialMensajes,
     registrarEvento,
     dominiosDesbloqueados,
+    idioma = LOCALE_BASE,
   } = params;
   let acumulado = params.acumulado;
 
@@ -527,7 +532,7 @@ export async function interpretarMultiSalto(
         motivo: segundoError instanceof Error ? segundoError.message : String(segundoError),
       });
     }
-    const preguntaFallback = obtenerPregunta(candidato, graph[candidato], preguntasCache);
+    const preguntaFallback = obtenerPregunta(candidato, graph[candidato], preguntasCache, idioma);
     const resultado: ResultadoInterprete = {
       accion: "avanzar",
       camino: [candidato],

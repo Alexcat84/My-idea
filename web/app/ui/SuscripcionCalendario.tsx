@@ -8,6 +8,9 @@
  * texto en la UI.
  */
 import { useEffect, useState } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { CALENDARIO } from "@/lib/i18n/mensajes/calendario";
 
 type FeedUrl = { disponible: boolean; url: string | null; webcal: string | null };
 
@@ -28,6 +31,7 @@ export function SuscripcionCalendario({
   onDescargarIcs: () => void;
   puedeDescargar: boolean;
 }) {
+  const t = elegir(CALENDARIO, useIdioma()).suscripcion;
   const [feed, setFeed] = useState<FeedUrl | null>(null);
   const [info, setInfo] = useState(false);
 
@@ -45,12 +49,12 @@ export function SuscripcionCalendario({
   return (
     <div>
       <div className="flex items-center gap-2">
-        <p className="text-[14px] font-semibold">Sincronizar con mi calendario</p>
+        <p className="text-[14px] font-semibold">{t.titulo}</p>
         <span className="relative inline-flex">
           <button
             type="button"
             onClick={() => setInfo((v) => !v)}
-            aria-label="Cómo funciona la sincronía"
+            aria-label={t.comoFunciona}
             aria-expanded={info}
             className="text-dim hover:text-ink"
           >
@@ -58,30 +62,26 @@ export function SuscripcionCalendario({
           </button>
           {info && (
             <>
-              <button type="button" aria-label="Cerrar" onClick={() => setInfo(false)} className="fixed inset-0 z-40 cursor-default" />
+              <button type="button" aria-label={t.cerrar} onClick={() => setInfo(false)} className="fixed inset-0 z-40 cursor-default" />
               <div className="absolute left-0 top-full z-50 mt-2 w-[256px] rounded-[12px] border border-white/[0.14] bg-surface-2 p-3 text-[12px] leading-relaxed text-dim shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
-                Te suscribes una sola vez. Después, tus fechas aparecen en el calendario que ya usas (Google, Apple,
-                Outlook…) y se actualizan solas cuando cambias algo aquí. Tu calendario te avisa de cada tarea el mismo día.
-                <span className="mt-2 block text-dim/80">
-                  No aparecen al instante: tu calendario se refresca cada cierto tiempo (a veces minutos, a veces horas).
-                  Si quieres verlas ya mismo, descarga el archivo.
-                </span>
+                {t.info}
+                <span className="mt-2 block text-dim/80">{t.infoRefresco}</span>
               </div>
             </>
           )}
         </span>
       </div>
-      <p className="mt-1.5 text-[12.5px] leading-relaxed text-dim">Ten tus fechas en el calendario que ya usas.</p>
+      <p className="mt-1.5 text-[12.5px] leading-relaxed text-dim">{t.subtitulo}</p>
 
       {feed?.disponible && feed.webcal ? (
         <a
           href={feed.webcal}
           className="mt-3 block w-full rounded-[11px] border border-accent/50 bg-accent/10 py-2.5 text-center text-[13px] font-semibold text-accent hover:bg-accent/20"
         >
-          Suscribir mi calendario
+          {t.suscribir}
         </a>
       ) : (
-        <p className="mt-3 text-[12px] leading-relaxed text-dim/80">Crea tu cuenta para suscribir tu calendario.</p>
+        <p className="mt-3 text-[12px] leading-relaxed text-dim/80">{t.creaCuenta}</p>
       )}
 
       <button
@@ -89,7 +89,7 @@ export function SuscripcionCalendario({
         disabled={!puedeDescargar}
         className="mt-2 w-full rounded-[11px] border border-hairline py-2.5 text-[13px] font-semibold text-dim hover:text-ink disabled:opacity-40"
       >
-        Descargar el archivo (.ics)
+        {t.descargar}
       </button>
     </div>
   );

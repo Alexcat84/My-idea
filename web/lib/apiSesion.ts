@@ -20,6 +20,9 @@ import {
   type TurnoRegistrado,
 } from "./db";
 import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { SERVIDOR_SESION } from "./i18n/mensajes/servidorSesion";
 
 /** FASE B (canon 12): el cierre honesto es una CONFESIÓN CON DIGNIDAD, no una
  * disculpa. Título y cuerpo son marco fijo (tono cuidado, con acentos, sin
@@ -30,13 +33,10 @@ import type { NodoTranscrito, ResultadoTurno } from "./engine/recorrido";
  * Compat (amarre 1): además del `cierre` estructurado, la respuesta sigue
  * llevando `mensaje` plano (= el cuerpo), para que cualquier consumidor que
  * solo lea `mensaje` no se rompa. */
-const CIERRE_CAMINO = {
-  titulo: "Por aquí no encuentro un plan que valga tu tiempo.",
-  cuerpo:
-    "Exploré lo que me contaste y, siendo honesto, este ángulo no me da material suficiente para " +
-    "armarte un plan que de verdad te mueva. Prefiero decírtelo a entregarte relleno. No es un no a " +
-    "tu idea: es un no a este camino.",
-};
+function cierreCaminoTexto(idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
+  return { titulo: t.caminoTitulo, cuerpo: t.caminoCuerpo };
+}
 
 /** El cierre honesto de un mundo que no era para este proyecto (§1).
  *
@@ -46,16 +46,14 @@ const CIERRE_CAMINO = {
  * puede mostrarla, y solo cuando `creditos_devueltos` trae un número respaldado
  * por el ledger. En beta la activación es gratis: no hubo consumo, no hay
  * reembolso que anunciar en el cuerpo. */
-function cierreMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
+function cierreMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
   const nombre =
     (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
-    "Este mundo";
+    t.mundoSinNombre;
   return {
-    titulo: `${nombre} no es para esta idea, todavía.`,
-    cuerpo:
-      "Activé y exploré este mundo con lo que hay hoy, y no encontré un subproyecto que te sume sin " +
-      "inventarte trabajo. Antes que darte un checklist de relleno, prefiero parar aquí. Este mundo te " +
-      "sigue esperando: puedes volver a entrar cuando tu proyecto crezca.",
+    titulo: interpolar(t.mundoTitulo, { nombre }),
+    cuerpo: t.mundoCuerpo,
   };
 }
 
@@ -63,16 +61,14 @@ function cierreMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
  * No dice que el mundo "no es para esta idea" (lo es: el usuario ya tiene su
  * plan) ni manda a volver a entrar: dice el hecho, que este ciclo no encontró
  * una puerta nueva, y que lo que ya tiene sigue intacto. */
-function cierreSeguimientoMundoTexto(dominio: string): { titulo: string; cuerpo: string } {
+function cierreSeguimientoMundoTexto(dominio: string, idioma: Locale): { titulo: string; cuerpo: string } {
+  const t = elegir(SERVIDOR_SESION, idioma).cierre;
   const nombre =
     (catalogo.packs as Array<{ clave: string; nombre: string }>).find((p) => p.clave === dominio)?.nombre ??
-    "este mundo";
+    t.seguimientoSinNombre;
   return {
-    titulo: `En este ciclo no encontré una puerta nueva en ${nombre}.`,
-    cuerpo:
-      "Revisé lo que me contaste y no encontré algo nuevo que valga un plan en este mundo sin " +
-      "inventarte trabajo. Tu plan y tu avance en este mundo siguen intactos: puedes seguir con " +
-      "ellos y volver a contarme cuando haya novedades.",
+    titulo: interpolar(t.seguimientoTitulo, { nombre }),
+    cuerpo: t.seguimientoCuerpo,
   };
 }
 
@@ -92,7 +88,9 @@ export async function responderResultadoTurno(
   /** El recorrido conversado acumulado (parejas pregunta/respuesta), ya con
    * la pareja de ESTE turno si la hubo. Se persiste junto al estado para que
    * el usuario lo vuelva a ver al reentrar y para el análisis de la beta. */
-  turnos: TurnoRegistrado[] = []
+  turnos: TurnoRegistrado[] = [],
+  /** i18n F2: el idioma de la petición, para el cierre honesto. */
+  idioma: Locale = LOCALE_BASE
 ): Promise<NextResponse> {
   await guardarEstadoSesion(supabase, sessionId, {
     recorrido: resultado.estado,
@@ -162,10 +160,10 @@ export async function responderResultadoTurno(
     // Canon 12: el cierre estructurado. El "porque" es el motivo REAL del
     // interprete (glass box), no prosa generica; null si no lo hubo.
     const cierreTexto = !cierre
-      ? CIERRE_CAMINO
+      ? cierreCaminoTexto(idioma)
       : resultado.estado.esSeguimiento
-        ? cierreSeguimientoMundoTexto(cierre.dominio)
-        : cierreMundoTexto(cierre.dominio);
+        ? cierreSeguimientoMundoTexto(cierre.dominio, idioma)
+        : cierreMundoTexto(cierre.dominio, idioma);
     const porque = cierre ? cierre.motivo : resultado.cierreCamino?.motivo ?? null;
 
     return NextResponse.json({

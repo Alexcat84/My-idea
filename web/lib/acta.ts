@@ -9,6 +9,9 @@
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Analytics } from "./analytics";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { ACTA } from "./i18n/mensajes/acta";
 
 export interface InstantaneaActa {
   acciones: { hechas: number; total: number };
@@ -89,19 +92,32 @@ export async function actasVigentes(supabase: SupabaseClient, projectId: string)
 const pct = (h: number, t: number) => (t > 0 ? ` (${Math.round((h / t) * 100)}%)` : "");
 
 /** Las líneas del acta (la foto) para el informe en markdown. */
-export function actaMarkdown(acta: ActaCierre, nombreMundo: (dominio: string) => string): string[] {
+export function actaMarkdown(
+  acta: ActaCierre,
+  nombreMundo: (dominio: string) => string,
+  idioma: Locale = LOCALE_BASE
+): string[] {
+  const t = elegir(ACTA, idioma);
   const i = acta.instantanea;
   const l: string[] = [];
-  l.push("## Acta de cierre");
-  l.push(`- Cerrada el ${acta.cerrada_at.slice(0, 10)}`);
-  l.push(`- Acciones al cerrar: **${i.acciones.hechas} de ${i.acciones.total}**${pct(i.acciones.hechas, i.acciones.total)}`);
+  l.push(t.titulo);
+  l.push(interpolar(t.cerradaEl, { fecha: acta.cerrada_at.slice(0, 10) }));
+  l.push(
+    interpolar(t.accionesAlCerrar, {
+      hechas: i.acciones.hechas,
+      total: i.acciones.total,
+      pct: pct(i.acciones.hechas, i.acciones.total),
+    })
+  );
   for (const m of i.mundos) {
-    const estado = m.completado_at ? `completado el ${m.completado_at.slice(0, 10)}` : "abierto";
-    l.push(`- ${nombreMundo(m.dominio)}: **${m.hechas} de ${m.total}**${pct(m.hechas, m.total)}, ${estado}`);
+    const estado = m.completado_at ? interpolar(t.completadoEl, { fecha: m.completado_at.slice(0, 10) }) : t.abierto;
+    l.push(
+      interpolar(t.mundo, { mundo: nombreMundo(m.dominio), hechas: m.hechas, total: m.total, pct: pct(m.hechas, m.total), estado })
+    );
   }
   if (acta.cierre_motivo) {
     l.push("");
-    l.push("### Por qué la cerraste aquí");
+    l.push(t.tituloPorQue);
     l.push(`> ${acta.cierre_motivo.replace(/\s+/g, " ").trim()}`);
   }
   l.push("");

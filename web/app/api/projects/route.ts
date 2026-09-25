@@ -5,16 +5,20 @@
  * el CLI -- en la web, "seguir" es un boton sobre esta lista.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { listarProyectos } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
-export async function GET() {
+export async function GET(request: Request) {
+  const r = elegir(RUTAS, idiomaDeRequest(request));
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   const proyectos = await listarProyectos(supabase);

@@ -41,10 +41,16 @@ function candidatos(linea: string): string[] {
   // texto de JSX: entre > y <, o una línea que es solo texto
   for (const m of linea.matchAll(/>([^<>{}]+)</g)) fuera.push(m[1]);
   const limpia = linea.trim();
-  if (limpia && !/[{}()=;<>"'`]/.test(limpia) && !/^(\/\/|\*|\/\*)/.test(limpia)) fuera.push(limpia);
+  // (una línea suelta de un ternario o de una condición, "? X" o "&& y", es código)
+  // (ni una propiedad "clave: valor ?? otro," ni una lista de dependencias "[a, b]")
+  const esCodigo = /\?\?|\?\.|^\[|\]$|^[\w.]+:\s/.test(limpia);
+  if (limpia && !esCodigo && !/[{}()=;<>"'`]/.test(limpia) && !/^(\/\/|\*|\/\*|\?|:|&&|\|\|)/.test(limpia)) fuera.push(limpia);
   return fuera
-    .map((t) => normal(t.replace(/\\n/g, " ").replace(/&nbsp;/g, " ")))
+    // sin etiquetas HTML, igual que el catálogo (un `<p>Tu código…</p>` de un correo)
+    .map((t) => normal(t.replace(/\\n/g, " ").replace(/&nbsp;/g, " ").replace(/<\/?\w+\/?>/g, " ")))
     .filter((t) => /[a-záéíóúñü]{2,}/i.test(t))
+    // un "${x}" es la interpolación de una plantilla vieja, no un texto
+    .filter((t) => !t.includes("${"))
     // clases de Tailwind, rutas, claves y nombres técnicos: no son texto visible
     .filter((t) => !/^[\w\-:/.[\]#%@&=?,]+$/.test(t) || /[áéíóúñ¿¡]/i.test(t) || /^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+$/.test(t))
     .filter((t) => !t.split(" ").every((w) => /[-:[\]/]|^\d/.test(w) || /^(flex|grid|block|hidden|inline|relative|absolute|fixed|sticky|text|bg|border|rounded|shadow|font|items|justify|gap|p|m|w|h)$/.test(w)));

@@ -18,6 +18,11 @@
  * integrar_packs.py.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { usoVacio } from "@/lib/costmeter";
@@ -39,8 +44,8 @@ import {
   type FilaChecklistSnapshot,
 } from "@/lib/engine/snapshotProyecto";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
@@ -52,12 +57,15 @@ export const runtime = "nodejs";
 
 export async function POST(request: Request, { params }: { params: Promise<{ id: string; pack: string }> }) {
   const { id: projectId, pack } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_MUNDOS, idioma).start;
 
   const entrada = (catalogo.packs as Array<{ clave: string; nombre: string; promesa: string }>).find(
     (p) => p.clave === pack
   );
   if (!entrada || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
-    return NextResponse.json({ error: "ese mundo no existe" }, { status: 404 });
+    return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
   }
 
   const supabase = await createClient();
@@ -65,18 +73,18 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // Fase 4.5 (PREVIEW_MUNDOS_PLAN §4): el muro de PAGO desapareció. La fila
@@ -100,7 +108,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // evaluar sobre nada, así que se dice en persona y se ofrece el camino, en
     // vez de generar un plan genérico. Copy ÚNICO e interpolado: el mundo se
     // nombra, para que la frase diga de qué se está hablando.
-    return NextResponse.json({ error: murallaSinPlan(entrada.nombre) }, { status: 409 });
+    return NextResponse.json({ error: murallaSinPlan(entrada.nombre, idioma) }, { status: 409 });
   }
   const planCoreMasNuevo = planesCore[0] as { id: string; created_at: string };
   const planCoreMasNuevoAt = planCoreMasNuevo.created_at;
@@ -122,11 +130,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   } | null;
   if (unlock && !unlock.plan_pagado_at && !puedeRePreview(unlock, planCoreMasNuevoAt)) {
     return NextResponse.json(
-      {
-        error:
-          `Tu diagnóstico de "${entrada.nombre}" ya está listo: puedes releerlo y generar su plan cuando quieras. ` +
-          "Cuando tu proyecto avance de ciclo, podrás explorarlo de nuevo gratis.",
-      },
+      { error: interpolar(t.diagnosticoListo, { mundo: entrada.nombre }) },
       { status: 409 }
     );
   }
@@ -144,7 +148,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     cubiertos
   );
   if (!brecha) {
-    return NextResponse.json({ error: "Ya recorriste todas las puertas de este mundo." }, { status: 409 });
+    return NextResponse.json({ error: t.puertasRecorridas }, { status: 409 });
   }
   // OP-C-03: el criterio es RESOLVER, no existir. Este era el unico de los veinte
   // accesos que YA estaba guardado, y su guarda estaba escrita de mas: una semilla
@@ -155,7 +159,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   if (!semillaId) {
     console.warn(`world/start: semilla '${brecha.semillaId}' de '${pack}' no resuelve a ningún nodo de ninguna era (línea de ensamblaje pendiente)`);
     return NextResponse.json(
-      { error: "Este mundo se está preparando. Muy pronto podrás explorarlo." },
+      { error: t.preparando },
       { status: 503 }
     );
   }
@@ -169,7 +173,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   // Fase 4.5: la fila nace (o refresca su preview) GRATIS. Es la presencia del
@@ -183,7 +187,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       .insert({ project_id: projectId, dominio: pack, creditos_pagados: 0, preview_at: ahoraIso });
     // 23505 = carrera con otro arranque: la fila ya está, seguimos.
     if (errInsert && errInsert.code !== "23505") {
-      return NextResponse.json({ error: "no pudimos abrir el mundo, intenta de nuevo" }, { status: 500 });
+      return NextResponse.json({ error: t.noPudimosAbrir }, { status: 500 });
     }
   } else if (!unlock.plan_pagado_at) {
     const { error: errEscritura1 } = await supabase.from("project_unlocks").update({ preview_at: ahoraIso }).eq("id", unlock.id);
@@ -286,5 +290,5 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // P2b: en un mundo de protección la primera pregunta ya se ancla a una
   // actividad real. Si el anclaje falla, sigue la pregunta del grafo tal cual.
   const anclado = await anclarResultadoTurno(createAnthropicClient(), resultado, resultado.acumulado);
-  return responderResultadoTurno(supabase, projectId, sessionId, anclado.resultado, anclado.acumulado, [puerta]);
+  return responderResultadoTurno(supabase, projectId, sessionId, anclado.resultado, anclado.acumulado, [puerta], [], idioma);
 }

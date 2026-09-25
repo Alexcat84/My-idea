@@ -7,6 +7,9 @@
  */
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { elegir } from "@/lib/i18n/config";
+import { CUENTA } from "@/lib/i18n/mensajes/cuenta";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 import { BotonSalir } from "../ui/BotonSalir";
@@ -15,6 +18,7 @@ import { CuentaCliente } from "../ui/CuentaCliente";
 export const dynamic = "force-dynamic";
 
 export default async function Cuenta() {
+  const t = elegir(CUENTA, await idiomaDeCookies());
   const supabase = await createClient();
   const {
     data: { user },
@@ -29,13 +33,13 @@ export default async function Cuenta() {
         </Link>
         <span className="flex-1" />
         <Link href="/ideas" className="text-[13.5px] text-dim hover:text-ink">
-          Mis ideas
+          {t.misIdeas}
         </Link>
         <BotonSalir />
       </header>
 
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10 sm:px-6">
-        <h1 className="text-2xl font-bold tracking-tight">Tu cuenta</h1>
+        <h1 className="text-2xl font-bold tracking-tight">{t.tuCuenta}</h1>
         <CuentaCliente email={user.email ?? ""} />
       </main>
     </div>

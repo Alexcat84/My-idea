@@ -8,9 +8,12 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { TEXTO_FAMILIA_FALTANTE } from "./constants";
+import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 
 const leer = (rel: string) => readFileSync(path.join(__dirname, "..", "..", rel), "utf8");
 const redactor = leer("lib/engine/planRedactor.ts");
+// i18n F2: los textos del redactor viven en su catálogo.
+const catalogoRedactor = leer("lib/i18n/mensajes/motorPlan.ts");
 const readiness = leer("lib/readiness.ts");
 const pyReadiness = leer("../engine/plan_readiness.py");
 const pyMotor = leer("../engine/prototipo_motor.py");
@@ -18,7 +21,9 @@ const pyMotor = leer("../engine/prototipo_motor.py");
 describe("el cierre del plan no invita a una sesión cerrada (AUD-09 M33)", () => {
   it("sin la invitación a continuar en la misma sesión", () => {
     expect(redactor).not.toMatch(/continua la conversacion/);
-    expect(redactor).toMatch(/## Lo que este plan aún no cubre/);
+    expect(catalogoRedactor).not.toMatch(/continua la conversacion/);
+    expect(MOTOR_PLAN.es.noCubre).toBe("## Lo que este plan aún no cubre");
+    expect(redactor).toMatch(/partes\.push\("", t\.noCubre, ""\)/);
   });
 
   it("lo que falta cubrir, en español llano y con tildes", () => {

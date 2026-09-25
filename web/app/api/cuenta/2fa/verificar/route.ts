@@ -7,6 +7,10 @@
  * session_id: la sesión que activa el 2FA ya queda desafiada.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
+import { SERVIDOR_DOS_FACTORES } from "@/lib/i18n/mensajes/servidorDosFactores";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import {
   consumeRecoveryCode,
   decryptTotpSecret,
@@ -15,7 +19,7 @@ import {
   verifyTotpTokenWithReplayGuard,
 } from "@/lib/dosFactores";
 import {
-  AVISO_2FA,
+  aviso2FA,
   candado2FAActivo,
   desafioSuperadoEnSesion,
   estadoSeguridad,
@@ -27,15 +31,18 @@ import {
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const c = elegir(SERVIDOR_CUENTA, idioma).comun;
+  const t = elegir(SERVIDOR_DOS_FACTORES, idioma);
   const sesion = await sesionRealDeCookies();
   if (!sesion) {
-    return NextResponse.json({ error: "necesitas tu cuenta para configurar la seguridad" }, { status: 401 });
+    return NextResponse.json({ error: t.necesitasCuentaSeguridad }, { status: 401 });
   }
   let body: { token?: unknown; recoveryCode?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: c.cuerpoInvalido }, { status: 400 });
   }
 
   const userId = sesion.user.id;
@@ -43,7 +50,7 @@ export async function POST(request: Request) {
 
   if (await candado2FAActivo(userId)) {
     return NextResponse.json(
-      { error: "Demasiados intentos. Espera 15 minutos y vuelve a intentar." },
+      { error: t.demasiadosIntentos },
       { status: 423 }
     );
   }
@@ -52,19 +59,19 @@ export async function POST(request: Request) {
   // Con 2FA ya activo, activar un secreto NUEVO = reemplazar el candado:
   // exige el desafío superado en esta sesión (review de seguridad).
   if (estado.habilitado && !(await desafioSuperadoEnSesion(userId, sesion.sessionId))) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
   // AUD-09 M50: se verifica contra el secreto EN ESPERA si hay un alta en curso
   // (y sin el guard de replay del secreto viejo); si no, contra el vigente.
   const secretoCifrado = estado.totpSecretPendiente ?? estado.totpSecret;
   const esAltaNueva = estado.totpSecretPendiente !== null;
   if (!secretoCifrado) {
-    return NextResponse.json({ error: "primero genera tu código QR (paso anterior)" }, { status: 400 });
+    return NextResponse.json({ error: t.primeroQr }, { status: 400 });
   }
   const encryptionKey = process.env.TOTP_ENCRYPTION_KEY;
   if (!encryptionKey || encryptionKey.length < 32) {
     console.error("[2fa/verificar] TOTP_ENCRYPTION_KEY ausente o corta");
-    return NextResponse.json({ error: "la seguridad en dos pasos no está disponible ahora" }, { status: 503 });
+    return NextResponse.json({ error: t.dosPasosNoDisponible }, { status: 503 });
   }
 
   let verified = false;
@@ -76,11 +83,11 @@ export async function POST(request: Request) {
       secreto = decryptTotpSecret(secretoCifrado, encryptionKey);
     } catch {
       console.error("[2fa/verificar] no se pudo descifrar el secreto (¿cambió TOTP_ENCRYPTION_KEY?)");
-      return NextResponse.json({ error: "algo se atoró de nuestro lado; intenta más tarde" }, { status: 500 });
+      return NextResponse.json({ error: t.algoSeAtoroMasTarde }, { status: 500 });
     }
     const r = verifyTotpTokenWithReplayGuard(secreto, token, { lastUsedStep: esAltaNueva ? null : estado.totpLastUsedStep });
     if (r.replayed) {
-      return NextResponse.json({ error: "Ese código ya se usó. Espera el siguiente y escríbelo." }, { status: 401 });
+      return NextResponse.json({ error: t.codigoYaUsado }, { status: 401 });
     }
     verified = r.verified;
     verifiedTotpStep = r.usedStep;
@@ -109,7 +116,7 @@ export async function POST(request: Request) {
           .eq("code_hash", usado);
         if (errEscritura1) {
           console.error("[app/api/cuenta/2fa/verificar/route.ts] update two_factor_recovery_codes fallo; no se da por superado el desafio:", errEscritura1);
-          return NextResponse.json({ error: "No pude confirmar tu código; intenta de nuevo en un momento." }, { status: 503 });
+          return NextResponse.json({ error: t.noPudeConfirmar }, { status: 503 });
         }
       }
     }
@@ -118,7 +125,7 @@ export async function POST(request: Request) {
   if (!verified) {
     await registrarIntento2FA(userId, ip, false);
     return NextResponse.json(
-      { error: "Ese código no coincide. Revisa tu app de autenticación y vuelve a escribirlo." },
+      { error: t.noCoincideApp },
       { status: 401 }
     );
   }
@@ -140,7 +147,7 @@ export async function POST(request: Request) {
     .eq("user_id", userId);
   if (updError) {
     console.error("[2fa/verificar] fallo la activacion:", updError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
   const recoveryCodes = generateRecoveryCodes(8);
@@ -151,7 +158,7 @@ export async function POST(request: Request) {
   });
   if (rpcError) {
     console.error("[2fa/verificar] fallo la rotacion de codigos de rescate:", rpcError.message);
-    return NextResponse.json({ error: "algo se atoró; intenta de nuevo" }, { status: 500 });
+    return NextResponse.json({ error: c.algoSeAtoro }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true, recoveryCodes });

@@ -13,26 +13,35 @@
  * tu foto de caja; si no, sigues sin ellos.
  */
 import { useEffect, useRef, useState } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CORREGIR_CIFRAS } from "@/lib/i18n/mensajes/corregirCifras";
 
 type Valor = number | { min: number; max: number };
-type Campo = { clave: string; etiqueta: (u: string) => string; porque?: string };
+type TextosCorregir = (typeof CORREGIR_CIFRAS)["es"];
+type ClaveCampo = keyof TextosCorregir["campos"];
+/** La etiqueta y el porqué salen del catálogo por la clave del campo. */
+type Campo = { clave: ClaveCampo; porque?: keyof TextosCorregir["porque"] };
 
 const CAMPOS_CORE: Campo[] = [
-  { clave: "costo_materiales_unidad", etiqueta: (u) => `Costo de materiales por ${u}` },
-  { clave: "horas_por_unidad", etiqueta: (u) => `Horas de trabajo por ${u}` },
-  { clave: "valor_hora", etiqueta: () => "Cuánto vale tu hora" },
-  { clave: "precio_tentativo", etiqueta: (u) => `Precio al que vendes cada ${u}` },
-  { clave: "capacidad_semanal", etiqueta: (u) => `Cuántas ${u}s haces por semana` },
-  { clave: "costos_fijos_mensuales", etiqueta: () => "Tu gasto fijo mensual" },
-  { clave: "unidades_vendidas", etiqueta: (u) => `Cuántas ${u}s vendes al mes (o tu meta)` },
+  { clave: "costo_materiales_unidad" },
+  { clave: "horas_por_unidad" },
+  { clave: "valor_hora" },
+  { clave: "precio_tentativo" },
+  { clave: "capacidad_semanal" },
+  { clave: "costos_fijos_mensuales" },
+  { clave: "unidades_vendidas" },
 ];
 
 // El ciclo de conversión de efectivo: opcional, afina la foto de caja.
 const CAMPOS_CICLO: Campo[] = [
-  { clave: "dias_inventario", etiqueta: () => "Días que tu dinero pasa en inventario", porque: "afecta cuándo vuelve la plata a tu bolsillo" },
-  { clave: "dias_cobro_clientes", etiqueta: () => "Días que tardas en cobrar", porque: "cobrar tarde aprieta tu caja" },
-  { clave: "dias_pago_proveedores", etiqueta: () => "Días que tardas en pagar a proveedores", porque: "pagar más tarde alivia tu caja" },
+  { clave: "dias_inventario", porque: "dias_inventario" },
+  { clave: "dias_cobro_clientes", porque: "dias_cobro_clientes" },
+  { clave: "dias_pago_proveedores", porque: "dias_pago_proveedores" },
 ];
+
+const etiquetaDe = (t: TextosCorregir, clave: ClaveCampo, u: string) => interpolar(t.campos[clave], { u });
 
 const TODOS = [...CAMPOS_CORE, ...CAMPOS_CICLO];
 
@@ -53,9 +62,10 @@ function CampoInput({
   valor: string;
   onCambio: (v: string) => void;
 }) {
+  const t = elegir(CORREGIR_CIFRAS, useIdioma());
   return (
     <label className="flex flex-col gap-1.5 text-[13px]">
-      <span className="text-dim">{campo.etiqueta(u)}</span>
+      <span className="text-dim">{etiquetaDe(t, campo.clave, u)}</span>
       <input
         id={`corregir-${campo.clave}`}
         inputMode="decimal"
@@ -64,7 +74,7 @@ function CampoInput({
         placeholder="—"
         className="rounded-cinta border border-hairline bg-surface-2 px-3 py-2 text-ink outline-none focus:border-accent/60"
       />
-      {campo.porque && <span className="text-[12px] text-dim/80">{campo.porque}</span>}
+      {campo.porque && <span className="text-[12px] text-dim/80">{t.porque[campo.porque]}</span>}
     </label>
   );
 }
@@ -85,7 +95,8 @@ export function CorregirCifras({
   onGuardado: (payload: unknown) => void;
   onCancelar: () => void;
 }) {
-  const u = unidad || "unidad";
+  const t = elegir(CORREGIR_CIFRAS, useIdioma());
+  const u = unidad || t.unidadPorDefecto;
   const [valores, setValores] = useState<Record<string, string>>(() =>
     Object.fromEntries(TODOS.map((c) => [c.clave, aTexto(declaradas[c.clave])]))
   );
@@ -108,11 +119,13 @@ export function CorregirCifras({
     setError(null);
     const numeros: Record<string, number> = {};
     for (const [clave, texto] of Object.entries(valores)) {
-      const t = texto.trim();
-      if (t === "") continue;
-      const n = Number(t.replace(",", "."));
+      const limpio = texto.trim();
+      if (limpio === "") continue;
+      const n = Number(limpio.replace(",", "."));
       if (!Number.isFinite(n) || n < 0) {
-        setError(`Revisa "${TODOS.find((c) => c.clave === clave)?.etiqueta(u)}": debe ser un número de 0 en adelante.`);
+        // `valores` nace de TODOS: cada clave tiene su campo.
+        const campo = TODOS.find((c) => c.clave === clave)!;
+        setError(interpolar(t.errorNumero, { campo: etiquetaDe(t, campo.clave, u) }));
         setGuardando(false);
         return;
       }
@@ -125,24 +138,21 @@ export function CorregirCifras({
         body: JSON.stringify({ numeros }),
       });
       if (!r.ok) {
-        setError(((await r.json()) as { error?: string }).error ?? "no pudimos guardar tus cifras");
+        setError(((await r.json()) as { error?: string }).error ?? t.errorGuardar);
         setGuardando(false);
         return;
       }
       onGuardado(await r.json());
     } catch {
-      setError("no pudimos conectar; revisa tu internet e intenta de nuevo");
+      setError(t.errorConectar);
       setGuardando(false);
     }
   }
 
   return (
     <div ref={contenedor} className="rounded-panel border border-accent/40 bg-surface p-6">
-      <h3 className="text-[15px] font-bold">Corrige tus cifras</h3>
-      <p className="mt-1 text-[13px] leading-relaxed text-dim">
-        Ajusta lo que cambió y vuelve a calcular. El recálculo es gratis e ilimitado; tus versiones anteriores quedan
-        guardadas con su fecha.
-      </p>
+      <h3 className="text-[15px] font-bold">{t.titulo}</h3>
+      <p className="mt-1 text-[13px] leading-relaxed text-dim">{t.intro}</p>
 
       <div className="mt-4 grid gap-3.5 sm:grid-cols-2">
         {CAMPOS_CORE.map((c) => (
@@ -151,10 +161,8 @@ export function CorregirCifras({
       </div>
 
       <div className="mt-6 border-t border-hairline pt-5">
-        <p className="text-[13px] font-semibold">Tu ciclo de caja (opcional)</p>
-        <p className="mt-1 text-[12.5px] leading-relaxed text-dim">
-          Si los tienes, afinan tu foto de caja; si no, sigue sin ellos.
-        </p>
+        <p className="text-[13px] font-semibold">{t.cicloTitulo}</p>
+        <p className="mt-1 text-[12.5px] leading-relaxed text-dim">{t.cicloIntro}</p>
         <div className="mt-3.5 grid gap-3.5 sm:grid-cols-3">
           {CAMPOS_CICLO.map((c) => (
             <CampoInput key={c.clave} campo={c} u={u} valor={valores[c.clave]} onCambio={(v) => setValores((s) => ({ ...s, [c.clave]: v }))} />
@@ -169,10 +177,10 @@ export function CorregirCifras({
           disabled={guardando}
           className="rounded-cinta border border-accent/40 bg-accent/10 px-5 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
         >
-          {guardando ? "Calculando…" : "Volver a calcular"}
+          {guardando ? t.calculando : t.volverACalcular}
         </button>
         <button onClick={onCancelar} disabled={guardando} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-5 py-2.5 text-sm font-medium disabled:opacity-50">
-          Cancelar
+          {t.cancelar}
         </button>
       </div>
     </div>

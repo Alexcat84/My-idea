@@ -20,6 +20,8 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { BANDA, type Banda } from "../dbContract";
 import { llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ESTIMACION_BANDA } from "../prompts";
+import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { MOTOR } from "../i18n/mensajes/motor";
 
 export interface EstimacionItem {
   banda: Banda;
@@ -159,16 +161,17 @@ export async function estimarLoteMayoria(
 
 /** Rango honesto en palabras para una banda (para el detalle de la tarea). Son
  * las MISMAS fronteras del prompt validado; JAMÁS un número de horas inventado. */
-export function rangoDeBanda(banda: Banda | null | undefined): string | null {
+export function rangoDeBanda(banda: Banda | null | undefined, idioma: Locale = LOCALE_BASE): string | null {
+  const t = elegir(MOTOR, idioma).rangoBanda;
   switch (banda) {
     case "S":
-      return "~1 h";
+      return t.S;
     case "M":
-      return "~2-4 h";
+      return t.M;
     case "L":
-      return "una jornada";
+      return t.L;
     case "XL":
-      return "varios días";
+      return t.XL;
     default:
       return null; // plan viejo o estimación fallida: sin rango, cero invención
   }

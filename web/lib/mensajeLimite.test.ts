@@ -26,6 +26,10 @@ describe("el límite dice su número real (AUD-09 B05)", () => {
   it("el botón de la pantalla del límite lleva a las ideas", () => {
     const nueva = readFileSync(path.join(__dirname, "..", "app", "nueva", "page.tsx"), "utf8");
     expect(nueva).not.toMatch(/Ver planes/);
-    expect(nueva).toMatch(/router\.push\("\/ideas"\)[\s\S]{0,200}Ir a mis ideas/);
+    // i18n F2: el texto del botón vive en el catálogo de /nueva; la página lo usa por clave.
+    expect(nueva).toMatch(/router\.push\("\/ideas"\)[\s\S]{0,200}\{t\.irAMisIdeas\}/);
+    const catalogo = readFileSync(path.join(__dirname, "i18n", "mensajes", "nuevaIdea.ts"), "utf8");
+    expect(catalogo).toContain('irAMisIdeas: "Ir a mis ideas"');
+    expect(catalogo).not.toMatch(/Ver planes/);
   });
 });

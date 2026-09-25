@@ -1,0 +1,77 @@
+/** La vista de una idea (app/idea/[id]/IdeaView.tsx): encabezado, entrevista,
+ * oferta del plan, espera del plan, idea sin ordenar y sus errores. */
+import type { PorIdioma } from "../config";
+
+const es = {
+  notaSilencioso: "cubierto por lo que contaste",
+  cierreRespaldo: "Hasta aquí puedo acompañarte por este camino. Tu idea queda guardada tal como está.",
+  errores: {
+    cargarEspacio: "no pudimos cargar tu espacio; revisa tu internet e intenta de nuevo",
+    sinConexion: "no pudimos conectar; revisa tu internet e intenta de nuevo",
+    planSinTerminar:
+      "no pudimos terminar de escribir tu plan; lo que contaste está guardado, así que no hay que repetir nada",
+    planConexionCortada: "la conexión se cortó mientras armábamos tu plan; tu recorrido quedó guardado",
+    ideaNoExiste: "esa idea no existe o no es tuya",
+    cargarIdea: "no pudimos cargar tu idea; revisa tu internet e intenta de nuevo",
+    enviarRespuesta: "no pudimos enviar tu respuesta; revisa tu internet e intenta de nuevo",
+    continuar: "no pudimos continuar; revisa tu internet e intenta de nuevo",
+  },
+  cargandoIdea: "Cargando tu idea…",
+  volverAMisIdeas: "Volver a mis ideas",
+  stepper: {
+    planEnCamino: "Tu Plan · en camino…",
+    mundoEnCurso: "{{mundo}} · en curso…",
+    profundizacionEnCurso: "Ciclo de profundización · en curso…",
+    exploracionEnCurso: "La Exploración · en curso…",
+    manosConProgreso: "Manos a la Obra · {{hechos}}/{{total}}",
+    manos: "Manos a la Obra",
+    planListo: "Tu Plan · listo",
+    claridadLista: "Claridad · lista",
+  },
+  misIdeas: "Mis ideas /",
+  proyecto: "Proyecto",
+  intentarDeNuevo: "Intentar de nuevo",
+  verElPlan: "← Ver el plan",
+  cargandoEspacio: "Cargando tu espacio…",
+  recorridoDeLaIdea: "Recorrido de la idea",
+  enviar: "Enviar",
+  pensandoPregunta: "Pensando la siguiente pregunta…",
+  contextoFinal: {
+    pregunta: "¿Algo más que quieras que tu plan tome en cuenta?",
+    placeholder: "Opcional: escríbelo o díctalo…",
+    armarPlan: "Armar mi plan · {{n}} créditos",
+  },
+  oferta: {
+    suficiente: "Suficiente para avanzar",
+    tuRecorrido: "Tu recorrido hasta aquí",
+    alcanza: "Con lo que me contaste alcanza: vamos a tu plan.",
+    puedoArmar: "Con lo que me contaste puedo armar tu plan.",
+    siQuieres: "Si quieres, seguimos explorando:",
+    cubrimos: "Cubrimos lo esencial de punta a punta.",
+    generarPlan: "Generar mi plan · {{n}} créditos",
+    redactandoDiagnostico: "Redactando tu diagnóstico…",
+    verDiagnosticoGratis: "Ver mi diagnóstico · gratis",
+    seguimosExplorando: "Seguimos explorando",
+    verDiagnostico: "Ver mi diagnóstico",
+    garantia: "Se descuentan al entregarse tu plan. Si algo falla, no se cobra nada.",
+    diagnosticoGratis: "El diagnóstico es gratis. Su plan, si lo quieres: {{n}} créditos.",
+    generarConLoContado: "Generar mi plan con lo que ya conté",
+    diagnosticoConLoContado: "Ver mi diagnóstico con lo que ya conté",
+  },
+  generando: {
+    enCamino: "Tu Plan · en camino",
+    escribiendo: "Escribiendo: {{etapa}}",
+    armando: "Armando tu plan por etapas.",
+    nota: "Cada etapa se enciende en el recorrido cuando queda escrita de verdad.",
+  },
+  recorridoConteo: "Recorrido ({{n}})",
+  regenerarPlan: "Regenerar mi plan · {{n}} créditos",
+  pasarAManos: "Pasar a Manos a la Obra",
+  sinOrdenar: {
+    titulo: "Tu idea quedó guardada, pero no alcancé a ordenarla.",
+    cita: "«{{texto}}»",
+    ordenarAhora: "Ordenarla ahora",
+  },
+};
+
+export const IDEA_VIEW: PorIdioma<typeof es> = { es };

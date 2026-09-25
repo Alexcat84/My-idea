@@ -8,6 +8,9 @@
  * (hitos sin acciones), hitosCelebracion (con acciones), informe_md.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { actasVigentes } from "@/lib/acta";
 import { calcularAnalytics, construirHitos, informeMarkdown } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -18,19 +21,20 @@ import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
 
-export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const r = elegir(RUTAS, idiomaDeRequest(request));
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   const ahora = new Date().toISOString();

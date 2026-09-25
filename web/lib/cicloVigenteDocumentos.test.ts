@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { accionesDelCicloVigente } from "./expediente";
+import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
 
 describe("accionesDelCicloVigente: por espacio, solo el último plan", () => {
   it("quita las tareas de los planes reemplazados, espacio por espacio", () => {
@@ -34,6 +35,12 @@ describe("los documentos cuentan el ciclo vigente", () => {
   });
   it("'Acciones completadas: X de N activas' sale del ciclo vigente en el informe y en el papel", () => {
     expect(leer("lib/analytics.ts")).not.toMatch(/\*\*\$\{u\.accionesHechas\}\*\* de \*\*\$\{u\.accionesVigente\.total\}\*\*/);
+    // i18n F2: la línea vive en el catálogo; el informe la llena con el X de N del ciclo vigente.
+    expect(ANALYTICS_INFORME.es.md.accionesCompletadas).toBe("- Acciones completadas: **{{hechas}}** de **{{total}}** activas");
+    expect(leer("lib/analytics.ts")).toMatch(
+      /interpolar\(t\.accionesCompletadas, \{ hechas: u\.accionesVigente\.hechas, total: u\.accionesVigente\.total \}\)/
+    );
+    expect(leer("lib/analytics.ts")).not.toMatch(/hechas: u\.accionesHechas/);
     expect(leer("app/api/project/[id]/documentos/route.ts")).not.toMatch(/accionesCumplidas: u\.accionesHechas/);
   });
 });

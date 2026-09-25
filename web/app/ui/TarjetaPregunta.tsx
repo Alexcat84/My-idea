@@ -6,6 +6,9 @@
  * campo de respuesta + micrófono debajo, y enviar. Sin burbujas.
  */
 import { useState } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { TARJETA_PREGUNTA } from "@/lib/i18n/mensajes/tarjetaPregunta";
 import { CampoConVoz } from "./CampoConVoz";
 
 interface Props {
@@ -17,7 +20,8 @@ interface Props {
   textoBoton?: string;
 }
 
-export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoBoton = "Responder" }: Props) {
+export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoBoton }: Props) {
+  const t = elegir(TARJETA_PREGUNTA, useIdioma());
   const [respuesta, setRespuesta] = useState("");
 
   return (
@@ -39,7 +43,7 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
           onCambio={setRespuesta}
           filas={4}
           deshabilitado={enviando}
-          placeholder="Cuéntame con tus palabras…"
+          placeholder={t.placeholder}
         />
       </div>
       <button
@@ -51,7 +55,7 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
         disabled={!respuesta.trim() || enviando}
         className="mt-3 rounded-cinta border border-accent/40 bg-accent/10 px-5 py-2.5 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
       >
-        {enviando ? "Pensando…" : textoBoton}
+        {enviando ? t.pensando : (textoBoton ?? t.responder)}
       </button>
     </div>
   );

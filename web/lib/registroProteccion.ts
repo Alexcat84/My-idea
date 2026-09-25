@@ -15,6 +15,9 @@
  * calcula ningún número de riesgo y un test vigila que no empiece a hacerlo.
  */
 import type { Camino, Dolor, Probabilidad } from "./dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { REGISTRO_PROTECCION } from "./i18n/mensajes/registroProteccion";
 
 /** Una respuesta del plan del mundo, tal como sale del checklist. */
 export interface FilaRespuesta {
@@ -97,38 +100,30 @@ export interface EntradaRegistro {
 }
 
 /** La severidad en palabras de persona. Fuente única para pantalla y documento:
- * si vivieran en dos sitios, algún día dirían cosas distintas. */
-export const PALABRA_PROBABILIDAD: Record<Probabilidad, string> = {
-  poco_probable: "poco probable",
-  probable: "probable",
-  muy_probable: "muy probable",
-};
+ * si vivieran en dos sitios, algún día dirían cosas distintas. (i18n F2: los
+ * textos viven en el catálogo; estas constantes son su valor en el idioma base.) */
+export const PALABRA_PROBABILIDAD: Record<Probabilidad, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).probabilidad;
 
-export const PALABRA_DOLOR: Record<Dolor, string> = {
-  poco: "dolería poco",
-  bastante: "dolería bastante",
-  mucho: "dolería mucho",
-};
+export const PALABRA_DOLOR: Record<Dolor, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).dolor;
 
 /** El camino en palabras de persona. Fuente única para pantalla y papel. */
-export const PALABRA_CAMINO: Record<Camino, string> = {
-  evitar: "evitarlo",
-  mitigar: "reducirlo",
-  transferir: "pasárselo a otro",
-  aceptar: "aceptarlo con los ojos abiertos",
-};
+export const PALABRA_CAMINO: Record<Camino, string> = elegir(REGISTRO_PROTECCION, LOCALE_BASE).camino;
 
 /**
  * La severidad de una entrada, en una frase. null cuando no hay nada que decir:
  * se calla en vez de rellenar con un "sin definir" que no aporta.
  */
-export function severidadEnPalabras(e: {
-  probabilidad: Probabilidad | null;
-  dolor: Dolor | null;
-}): string | null {
-  const p = e.probabilidad ? PALABRA_PROBABILIDAD[e.probabilidad] : null;
-  const d = e.dolor ? PALABRA_DOLOR[e.dolor] : null;
-  if (p && d) return `${p} y ${d}`;
+export function severidadEnPalabras(
+  e: {
+    probabilidad: Probabilidad | null;
+    dolor: Dolor | null;
+  },
+  idioma: Locale = LOCALE_BASE
+): string | null {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
+  const p = e.probabilidad ? t.probabilidad[e.probabilidad] : null;
+  const d = e.dolor ? t.dolor[e.dolor] : null;
+  if (p && d) return interpolar(t.severidad, { probabilidad: p, dolor: d });
   return p ?? d ?? null;
 }
 
@@ -172,10 +167,11 @@ export function armarRegistro(
 }
 
 /** Cómo se nombra lo protegido en pantalla y en el documento. */
-export function textoProtege(e: EntradaRegistro): string {
+export function textoProtege(e: EntradaRegistro, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
   if (e.protege) return `#${e.protege.indice} · ${e.protege.titulo}`;
-  if (e.protegidaDesaparecida) return "la actividad que protegía ya no está en tu plan";
-  return "tu negocio entero";
+  if (e.protegidaDesaparecida) return t.protegidaDesaparecida;
+  return t.negocioEntero;
 }
 
 /**
@@ -189,26 +185,27 @@ export function textoProtege(e: EntradaRegistro): string {
  * actividades del núcleo falló; antes decía "se llenará con el plan". Fuente
  * única para pantalla y papel.
  */
-export const REGISTRO_VACIO =
-  "No alcancé a enlazar este plan con tus actividades: sus respuestas están en tu plan, pero este registro quedó vacío.";
+export const REGISTRO_VACIO = elegir(REGISTRO_PROTECCION, LOCALE_BASE).registroVacio;
 
-export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[]): string {
+export function registroMarkdown(nombreMundo: string, entradas: EntradaRegistro[], idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(REGISTRO_PROTECCION, idioma);
+  const td = t.documento;
   const l: string[] = [];
-  l.push(`## Registro de ${nombreMundo}`);
+  l.push(interpolar(td.titulo, { mundo: nombreMundo }));
   l.push("");
   if (entradas.length === 0) {
-    l.push(REGISTRO_VACIO);
+    l.push(t.registroVacio);
     l.push("");
     return l.join("\n");
   }
   for (const e of entradas) {
     l.push(`### ${e.deteccion ?? e.respuesta}`);
     l.push("");
-    const sev = severidadEnPalabras(e);
-    if (sev) l.push(`Qué tan serio: ${sev}.`);
-    if (e.camino) l.push(`El camino: ${PALABRA_CAMINO[e.camino]}.`);
-    l.push(`Qué protege: ${textoProtege(e)}.`);
-    l.push(`Tu respuesta: ${e.respuesta}`);
+    const sev = severidadEnPalabras(e, idioma);
+    if (sev) l.push(interpolar(td.queTanSerio, { severidad: sev }));
+    if (e.camino) l.push(interpolar(td.elCamino, { camino: t.camino[e.camino] }));
+    l.push(interpolar(td.queProtege, { protege: textoProtege(e, idioma) }));
+    l.push(interpolar(td.tuRespuesta, { respuesta: e.respuesta }));
     l.push("");
   }
   return l.join("\n");

@@ -13,6 +13,10 @@
 import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { MIS_IDEAS } from "@/lib/i18n/mensajes/misIdeas";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { createClient } from "@/lib/supabase/server";
 import { BorrarIdeaCinta } from "../ui/BorrarIdeaCinta";
 import { BotonSalir } from "../ui/BotonSalir";
@@ -39,9 +43,11 @@ function Chip({ chip }: { chip: ChipCinta }) {
 export default async function MisIdeas({ searchParams }: { searchParams: Promise<{ adopcion?: string }> }) {
   // AUD-09 H07: la adopción de las ideas del invitado quedó pendiente: se dice.
   const { adopcion } = await searchParams;
+  const idioma = await idiomaDeCookies();
+  const t = elegir(MIS_IDEAS, idioma);
   const supabase = await createClient();
   const [ideas, { data: auth }] = await Promise.all([
-    listarIdeasConEstado(supabase),
+    listarIdeasConEstado(supabase, idioma),
     supabase.auth.getUser(),
   ]);
   // Anónimo de Supabase o invitado bootstrapeado por el proxy: para
@@ -70,8 +76,8 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
         {!esAnonimo && (
           <Link
             href="/cuenta"
-            title="Tu cuenta"
-            aria-label="Tu cuenta"
+            title={t.tuCuenta}
+            aria-label={t.tuCuenta}
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-hairline text-dim hover:border-white/25 hover:text-ink"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -108,14 +114,13 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
               </svg>
             </span>
             <div>
-              <p className="text-lg font-semibold">Tus ideas esperan por ti</p>
+              <p className="text-lg font-semibold">{t.vacioTitulo}</p>
               <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-dim">
-                Aún no has guardado ninguna. Cuéntame la primera, lo que sea y como te salga, y la trabajamos
-                juntos, paso a paso.
+                {t.vacioTexto}
               </p>
             </div>
             <Link href="/nueva" className="rounded-cinta border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20">
-              Iniciar nueva idea
+              {t.iniciarNuevaIdea}
             </Link>
           </div>
         ) : (
@@ -126,7 +131,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
               className="anima-plan-in mt-4 flex items-center gap-3.5 rounded-[14px] border border-accent/30 bg-surface px-5 py-4 hover:border-accent/55"
               style={{ animationDelay: "0.1s" }}
             >
-              <span className="flex-1 text-[15px] text-dim">Cuéntame una idea nueva, o en qué punto estás con ella…</span>
+              <span className="flex-1 text-[15px] text-dim">{t.capturaRapida}</span>
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/55">
                 <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
                   <rect x="6" y="1.5" width="4" height="7.5" rx="2" fill="var(--accent)" />
@@ -140,7 +145,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
           className="anima-plan-in mb-4 mt-10 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim"
           style={{ animationDelay: "0.2s" }}
         >
-          Tus ideas · {activas.length}
+          {interpolar(t.tusIdeas, { n: activas.length })}
         </p>
 
         <ul className="flex flex-col gap-3.5">
@@ -170,7 +175,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                   </svg>
                 </div>
                 <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-                  <StepperMini etapa={idea.etapa} pensando={idea.pensando} />
+                  <StepperMini etapa={idea.etapa} pensando={idea.pensando} idioma={idioma} />
                   <span className="flex flex-1 flex-wrap justify-end gap-1.5">
                     {idea.chips.map((chip) => (
                       <Chip key={chip.texto} chip={chip} />
@@ -188,7 +193,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
         {realizadas.length > 0 && (
           <>
             <p className="mb-4 mt-12 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-              Realizadas · {realizadas.length}
+              {interpolar(t.realizadas, { n: realizadas.length })}
             </p>
             <ul className="flex flex-col gap-3.5">
               {realizadas.map((idea) => (
@@ -203,7 +208,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                         <svg width="9" height="9" viewBox="0 0 12 12" aria-hidden>
                           <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="var(--done)" strokeWidth="2" fill="none" />
                         </svg>
-                        Proyecto
+                        {t.proyecto}
                       </span>
                     </div>
                     {idea.resumenRealizada && <p className="mt-1.5 text-xs text-dim">{idea.resumenRealizada}</p>}
@@ -222,9 +227,9 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
               className="mt-10 flex items-center justify-between gap-3 rounded-panel border border-hairline bg-surface px-5 py-4 hover:border-accent/45 sm:px-6"
             >
               <span>
-                <span className="block text-[15px] font-semibold">Potenciar mis ideas</span>
+                <span className="block text-[15px] font-semibold">{t.potenciarTitulo}</span>
                 <span className="mt-0.5 block text-xs text-dim">
-                  Tus Números y los mundos, para la idea que elijas.
+                  {t.potenciarTexto}
                 </span>
               </span>
               <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">

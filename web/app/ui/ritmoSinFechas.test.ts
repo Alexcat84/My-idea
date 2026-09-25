@@ -18,7 +18,8 @@ describe("a mi ritmo no se habla de plazos (AUD-09 M38)", () => {
   it("el detalle recibe el modo y calla el chip y la fecha a mi ritmo", () => {
     expect(detalle).toMatch(/modo\?: ModoCamino \| null;/);
     expect(detalle).toMatch(/const conFechas = modo !== "ritmo";/);
-    expect(detalle).toMatch(/const chip = conFechas \? chipCumplimiento\(item\) : null;/);
+    // i18n F2: el chip recibe además el idioma de la interfaz (sus textos salen del catálogo).
+    expect(detalle).toMatch(/const chip = conFechas \? chipCumplimiento\(item, idioma\) : null;/);
     expect(detalle).toMatch(/\{conFechas && item\.fecha_base && \(/);
   });
 

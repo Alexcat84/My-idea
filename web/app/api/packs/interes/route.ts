@@ -6,24 +6,31 @@
  * verifica al usuario y escribe con la service role (RLS sin policies).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { PACK_CLICKS_PACK, type PackClave } from "@/lib/dbContract";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).packs;
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalido }, { status: 400 });
   }
   const pack = (body as { pack?: unknown } | null)?.pack;
   const projectId = (body as { project_id?: unknown } | null)?.project_id;
   if (typeof pack !== "string" || !(PACK_CLICKS_PACK as readonly string[]).includes(pack)) {
-    return NextResponse.json({ error: "pack desconocido" }, { status: 400 });
+    return NextResponse.json({ error: t.packDesconocido }, { status: 400 });
   }
   if (projectId !== undefined && typeof projectId !== "string") {
-    return NextResponse.json({ error: "'project_id' debe ser un string" }, { status: 400 });
+    return NextResponse.json({ error: r.projectIdNoString }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -31,7 +38,7 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   const admin = createAdminClient();

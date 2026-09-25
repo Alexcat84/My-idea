@@ -9,7 +9,16 @@
  */
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { CUENTA } from "@/lib/i18n/mensajes/cuenta";
+import { rico } from "@/lib/i18n/rico";
 import { createClient } from "@/lib/supabase/client";
+
+/** La palabra que confirma el borrado: un DATO que /api/cuenta/eliminar
+ * compara tal cual, no un texto del catálogo. */
+const PALABRA_CONFIRMAR = "ELIMINAR";
 
 type Flujo2FA =
   | { paso: "reposo" }
@@ -35,6 +44,7 @@ function Seccion({ titulo, children }: { titulo: string; children: React.ReactNo
 /** Zona de peligro: lo irreversible se ve distinto desde lejos. Ámbar (la
  * casa no usa rojo), borde y encabezado marcados, con su ícono de aviso. */
 function ZonaDePeligro({ children }: { children: React.ReactNode }) {
+  const t = elegir(CUENTA, useIdioma());
   return (
     <section className="mt-10 rounded-panel border border-warn/40 bg-warn/[0.04] px-5 py-5 sm:px-6">
       <h2 className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-warn">
@@ -43,7 +53,7 @@ function ZonaDePeligro({ children }: { children: React.ReactNode }) {
           <path d="M12 9v4" />
           <path d="M12 17h.01" />
         </svg>
-        Zona de peligro
+        {t.peligro.titulo}
       </h2>
       <div className="mt-3">{children}</div>
     </section>
@@ -51,6 +61,7 @@ function ZonaDePeligro({ children }: { children: React.ReactNode }) {
 }
 
 export function CuentaCliente({ email }: { email: string }) {
+  const t = elegir(CUENTA, useIdioma());
   const router = useRouter();
   const [seguridad, setSeguridad] = useState<Seguridad | null>(null);
   const [flujo, setFlujo] = useState<Flujo2FA>({ paso: "reposo" });
@@ -90,7 +101,7 @@ export function CuentaCliente({ email }: { email: string }) {
     try {
       const { ok, data } = await llamar("/api/cuenta/2fa/enroll");
       if (!ok || typeof data.qrDataUrl !== "string") {
-        setAvisoSeguridad(String(data.error ?? "algo se atoró; intenta de nuevo"));
+        setAvisoSeguridad(String(data.error ?? t.errores.atoro));
         return;
       }
       setCodigo2FA("");
@@ -107,7 +118,7 @@ export function CuentaCliente({ email }: { email: string }) {
     try {
       const { ok, data } = await llamar("/api/cuenta/2fa/verificar", { token: codigo2FA });
       if (!ok || !Array.isArray(data.recoveryCodes)) {
-        setFlujo({ ...flujo, error: String(data.error ?? "algo se atoró; intenta de nuevo") });
+        setFlujo({ ...flujo, error: String(data.error ?? t.errores.atoro) });
         return;
       }
       setSeguridad({ habilitado: true, metodo: "totp", desafioSuperado: true });
@@ -126,11 +137,11 @@ export function CuentaCliente({ email }: { email: string }) {
     try {
       const { ok, data } = await llamar("/api/cuenta/2fa/email/enviar");
       if (!ok) {
-        setAvisoSeguridad(String(data.error ?? "no pudimos enviar el código; intenta de nuevo"));
+        setAvisoSeguridad(String(data.error ?? t.errores.enviarCodigo));
         return;
       }
       setCodigo2FA("");
-      setFlujo({ paso: "email_codigo", aviso: `Te enviamos un código a ${email}.` });
+      setFlujo({ paso: "email_codigo", aviso: interpolar(t.codigoEnviadoA, { email }) });
     } finally {
       setOcupado(false);
     }
@@ -143,7 +154,7 @@ export function CuentaCliente({ email }: { email: string }) {
     try {
       const { ok, data } = await llamar("/api/cuenta/2fa/email/verificar", { code: codigo2FA });
       if (!ok || !Array.isArray(data.recoveryCodes)) {
-        setFlujo({ ...flujo, error: String(data.error ?? "algo se atoró; intenta de nuevo") });
+        setFlujo({ ...flujo, error: String(data.error ?? t.errores.atoro) });
         return;
       }
       setSeguridad({ habilitado: true, metodo: "email", desafioSuperado: true });
@@ -162,14 +173,14 @@ export function CuentaCliente({ email }: { email: string }) {
       if (!ok) {
         setAvisoSeguridad(
           data.segundo_factor_requerido
-            ? "Para desactivarla, vuelve a entrar y supera el desafío primero."
-            : String(data.error ?? "algo se atoró; intenta de nuevo")
+            ? t.errores.desactivarSinDesafio
+            : String(data.error ?? t.errores.atoro)
         );
         return;
       }
       setSeguridad({ habilitado: false, metodo: null, desafioSuperado: true });
       setFlujo({ paso: "reposo" });
-      setAvisoSeguridad("Verificación en dos pasos desactivada.");
+      setAvisoSeguridad(t.desactivada);
     } finally {
       setOcupado(false);
     }
@@ -185,7 +196,7 @@ export function CuentaCliente({ email }: { email: string }) {
     try {
       const { ok, data } = await llamar("/api/cuenta/eliminar", { confirmacion: palabraCuenta });
       if (!ok) {
-        setErrorCuenta(String(data.error ?? "algo se atoró; intenta de nuevo"));
+        setErrorCuenta(String(data.error ?? t.errores.atoro));
         return;
       }
       // La cuenta ya no existe: limpiar la sesión local y a la landing.
@@ -213,20 +224,17 @@ export function CuentaCliente({ email }: { email: string }) {
 
   return (
     <>
-      <Seccion titulo="Tu identidad">
+      <Seccion titulo={t.tuIdentidad}>
         <p className="text-[15px] font-semibold">{email}</p>
       </Seccion>
 
-      <Seccion titulo="Seguridad · verificación en dos pasos">
+      <Seccion titulo={t.seguridad.titulo}>
         {seguridad === null ? (
-          <p className="text-sm text-dim">Leyendo el estado de tu seguridad…</p>
+          <p className="text-sm text-dim">{t.seguridad.leyendo}</p>
         ) : flujo.paso === "rescate" ? (
           <div>
-            <p className="text-[15px] font-semibold text-done">Verificación en dos pasos activada.</p>
-            <p className="mt-2 text-sm text-dim">
-              Guarda estos códigos de rescate en un lugar seguro. Cada uno abre tu cuenta UNA vez si pierdes tu
-              método habitual, y no volverán a mostrarse.
-            </p>
+            <p className="text-[15px] font-semibold text-done">{t.seguridad.activadaCompleta}</p>
+            <p className="mt-2 text-sm text-dim">{t.seguridad.guardaRescate}</p>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
               {flujo.codigos.map((c) => (
                 <code key={c} className="rounded-cinta border border-hairline bg-surface-2 px-2 py-1.5 text-center font-mono text-[13px]">
@@ -238,21 +246,22 @@ export function CuentaCliente({ email }: { email: string }) {
               onClick={() => setFlujo({ paso: "reposo" })}
               className="mt-4 rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20"
             >
-              Ya los guardé
+              {t.seguridad.yaGuarde}
             </button>
           </div>
         ) : seguridad.habilitado ? (
           <div>
             <p className="text-[15px]">
-              <span className="font-semibold text-done">Activada</span>
+              <span className="font-semibold text-done">{t.seguridad.activada}</span>
               <span className="text-dim">
                 {" "}
-                · {seguridad.metodo === "email" ? "código por correo" : "app de autenticación"}
+                · {seguridad.metodo === "email" ? t.seguridad.codigoPorCorreo : t.seguridad.appAutenticacion}
               </span>
             </p>
             <p className="mt-1 text-sm text-dim">
-              Al entrar, además de tu acceso normal te pediremos{" "}
-              {seguridad.metodo === "email" ? "un código que llega a tu correo" : "el código de tu app"}.
+              {interpolar(t.seguridad.alEntrar, {
+                que: seguridad.metodo === "email" ? t.seguridad.unCodigoCorreo : t.seguridad.elCodigoApp,
+              })}
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
             <button
@@ -260,18 +269,18 @@ export function CuentaCliente({ email }: { email: string }) {
               disabled={ocupado}
               className="mt-3 text-sm text-dim underline-offset-2 hover:text-ink hover:underline disabled:opacity-50"
             >
-              Desactivar la verificación en dos pasos
+              {t.seguridad.desactivar}
             </button>
           </div>
         ) : flujo.paso === "totp_qr" ? (
           <form onSubmit={verificarTotp}>
             <p className="text-sm text-dim">
-              1. Escanea este código con tu app de autenticación (Google Authenticator, 1Password, Authy…).
+              {t.seguridad.pasoEscanear}
             </p>
             {/* El QR es un data URI generado por el servidor (lib qrcode) */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={flujo.qrDataUrl} alt="Código QR para tu app de autenticación" className="mt-3 h-[210px] w-[210px] rounded-cinta border border-hairline bg-white p-2" />
-            <p className="mt-3 text-sm text-dim">2. Escribe el código de 6 dígitos que te muestra la app.</p>
+            <img src={flujo.qrDataUrl} alt={t.seguridad.altQr} className="mt-3 h-[210px] w-[210px] rounded-cinta border border-hairline bg-white p-2" />
+            <p className="mt-3 text-sm text-dim">{t.seguridad.pasoEscribir}</p>
             <div className="mt-2 flex items-center gap-3">
               {inputCodigo}
               <button
@@ -279,10 +288,10 @@ export function CuentaCliente({ email }: { email: string }) {
                 disabled={ocupado || codigo2FA.length !== 6}
                 className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
               >
-                {ocupado ? "Verificando…" : "Activar"}
+                {ocupado ? t.seguridad.verificando : t.seguridad.activar}
               </button>
               <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium">
-                Cancelar
+                {t.seguridad.cancelar}
               </button>
             </div>
             {flujo.error && <p className="mt-2 text-sm text-warn">{flujo.error}</p>}
@@ -297,10 +306,10 @@ export function CuentaCliente({ email }: { email: string }) {
                 disabled={ocupado || codigo2FA.length !== 6}
                 className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
               >
-                {ocupado ? "Verificando…" : "Activar"}
+                {ocupado ? t.seguridad.verificando : t.seguridad.activar}
               </button>
               <button type="button" onClick={() => setFlujo({ paso: "reposo" })} className="rounded-cinta border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-4 py-2.5 text-sm font-medium">
-                Cancelar
+                {t.seguridad.cancelar}
               </button>
             </div>
             {flujo.error && <p className="mt-2 text-sm text-warn">{flujo.error}</p>}
@@ -308,7 +317,7 @@ export function CuentaCliente({ email }: { email: string }) {
         ) : (
           <div>
             <p className="text-sm text-dim">
-              Te pide un segundo paso antes de usar tus créditos y antes de borrar una idea o tu cuenta. Es opcional y puedes apagarlo cuando quieras.
+              {t.seguridad.queHace}
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
             <div className="mt-3 flex flex-wrap gap-3">
@@ -317,14 +326,14 @@ export function CuentaCliente({ email }: { email: string }) {
                 disabled={ocupado}
                 className="rounded-cinta border border-accent/40 px-4 py-2.5 text-sm font-medium text-accent hover:border-accent/70 disabled:opacity-50"
               >
-                Activar con app de autenticación
+                {t.seguridad.activarApp}
               </button>
               <button
                 onClick={empezarEmail}
                 disabled={ocupado}
                 className="rounded-cinta border border-hairline px-4 py-2.5 text-sm font-medium text-ink hover:border-white/25 disabled:opacity-50"
               >
-                Activar con código por correo
+                {t.seguridad.activarCorreo}
               </button>
             </div>
           </div>
@@ -332,31 +341,32 @@ export function CuentaCliente({ email }: { email: string }) {
       </Seccion>
 
       <ZonaDePeligro>
-        <p className="text-[15px] font-semibold text-ink">Borrar tu cuenta</p>
+        <p className="text-[15px] font-semibold text-ink">{t.peligro.borrarTuCuenta}</p>
         <p className="mt-1.5 text-sm text-dim">
-          Se borra todo: tus ideas, tus planes, tu historial y tus créditos. No hay vuelta atrás. Para confirmar,
-          escribe <span className="font-mono font-semibold text-warn">ELIMINAR</span>.
+          {rico(t.peligro.borrarTexto, {
+            palabra: () => <span className="font-mono font-semibold text-warn">{PALABRA_CONFIRMAR}</span>,
+          })}
         </p>
         {/* Un solo botón accionable: el campo es campo (etiqueta arriba,
             texto a la izquierda) y el botón es el único que se pulsa. */}
         <form onSubmit={borrarCuenta} className="mt-4 flex flex-col items-start gap-2">
           <label htmlFor="confirmar-eliminar" className="text-xs text-dim">
-            Escribe la palabra para confirmar
+            {t.peligro.etiquetaPalabra}
           </label>
           <input
             id="confirmar-eliminar"
             value={palabraCuenta}
             onChange={(e) => setPalabraCuenta(e.target.value.toUpperCase())}
-            placeholder="ELIMINAR"
+            placeholder={PALABRA_CONFIRMAR}
             autoComplete="off"
             className="w-full max-w-[260px] rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-left font-mono text-sm tracking-widest text-ink placeholder:text-dim/40"
           />
           <button
             type="submit"
-            disabled={ocupado || palabraCuenta.trim() !== "ELIMINAR"}
+            disabled={ocupado || palabraCuenta.trim() !== PALABRA_CONFIRMAR}
             className="mt-2 rounded-cinta border border-warn/50 px-4 py-2.5 text-sm font-semibold text-warn hover:border-warn disabled:opacity-40"
           >
-            Borrar mi cuenta para siempre
+            {t.peligro.borrarParaSiempre}
           </button>
         </form>
         {errorCuenta && <p className="mt-2 text-sm text-warn">{errorCuenta}</p>}

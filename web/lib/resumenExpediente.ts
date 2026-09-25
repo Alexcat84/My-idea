@@ -3,6 +3,11 @@
  * siempre "Vas por buen camino" y, sin replanificaciones, "Mantuviste tu ritmo
  * cerca de tu plan", también a mi ritmo (sin fechas) o con todo tardío. Pura.
  */
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { decimal } from "./i18n/formato";
+import { interpolar, plural } from "./i18n/interpolar";
+import { EXPEDIENTE } from "./i18n/mensajes/expediente";
+
 export function resumenCaminoExpediente(d: {
   cerrada: boolean;
   modo: "ritmo" | "fechas" | null;
@@ -14,21 +19,28 @@ export function resumenCaminoExpediente(d: {
     replanificaciones: number;
     desviacionVsInicialDias: number;
   } | null;
-}): { intro: string; loQueMovio: string } {
-  const intro = d.cerrada
-    ? "Empezaste con una idea y llegaste hasta el cierre. Esto es lo que dejó el camino."
-    : "Esto es lo que llevas hasta aquí.";
+}, idioma: Locale = LOCALE_BASE): { intro: string; loQueMovio: string } {
+  const t = elegir(EXPEDIENTE, idioma).resumenCamino;
+  const intro = d.cerrada ? t.introCerrada : t.introEnMarcha;
   const c = d.cumplimiento;
   let loQueMovio: string;
   if (c && c.replanificaciones > 0) {
     const signo = c.desviacionVsInicialDias >= 0 ? "+" : "";
-    loQueMovio = `Frente a tu plan inicial te moviste ${signo}${c.desviacionVsInicialDias.toFixed(1)} días de media a lo largo de ${c.replanificaciones} ${c.replanificaciones === 1 ? "replanificación" : "replanificaciones"}. Ajustar el mapa fue parte del método.`;
+    loQueMovio = interpolar(t.movioReplanificando, {
+      desviacion: `${signo}${decimal(idioma, c.desviacionVsInicialDias, 1)}`,
+      replanificaciones: plural(idioma, c.replanificaciones, t.replanificaciones),
+    });
   } else if (c && c.totalConFecha > 0) {
-    loQueMovio = `De tus ${c.totalConFecha} acciones con fecha, ${c.aTiempo} salieron a tiempo, ${c.adelantadas} antes y ${c.tardias} después de lo planeado.`;
+    loQueMovio = interpolar(t.movioConFechas, {
+      total: c.totalConFecha,
+      aTiempo: c.aTiempo,
+      adelantadas: c.adelantadas,
+      tardias: c.tardias,
+    });
   } else if (d.modo === "ritmo") {
-    loQueMovio = "Avanzaste a tu ritmo, sin fechas contra las cuales medirte.";
+    loQueMovio = t.movioARitmo;
   } else {
-    loQueMovio = "Aún no sellaste tus fechas, así que no hay un plan contra el cual medir tu ritmo.";
+    loQueMovio = t.movioSinFechas;
   }
   return { intro, loQueMovio };
 }

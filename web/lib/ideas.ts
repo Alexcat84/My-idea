@@ -14,6 +14,9 @@ import { estadoEntrevista } from "./entrevistaAbierta";
 import { etapaDeIdea } from "./etapaIdea";
 import { fechaSello } from "./fechas";
 import { esActivo, type ChecklistEstado } from "./dbContract";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { MIS_IDEAS } from "./i18n/mensajes/misIdeas";
 
 export type EstadoIdea = "Organizada" | "En entrevista" | "Con plan" | "En seguimiento";
 
@@ -52,7 +55,8 @@ export function nombreDeIdea(titulo: string | null, entradaOriginal: string): st
 // una copia se separa: bastaba un mundo nuevo para que esta pantalla lo llamara
 // por su clave mientras las demas lo nombraban. Ahora se lee de la fuente.
 
-export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Cinta[]> {
+export async function listarIdeasConEstado(supabase: SupabaseClient, idioma: Locale = LOCALE_BASE): Promise<Cinta[]> {
+  const t = elegir(MIS_IDEAS, idioma).cintas;
   const proyectos = await listarProyectos(supabase);
   if (proyectos.length === 0) return [];
 
@@ -167,17 +171,17 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
 
     const chips: ChipCinta[] = [];
     if (etapa === 5 && core) {
-      chips.push({ texto: `Manos a la Obra · ${core.hechos}/${core.total}`, tono: "verde" });
+      chips.push({ texto: interpolar(t.manosALaObra, { hechos: core.hechos, total: core.total }), tono: "verde" });
       for (const [dominio, r] of porDominio) {
         if (dominio === "core") continue;
-        chips.push({ texto: `${nombreDeMundo(dominio)} · ${r.hechos}/${r.total}`, tono: "verde" });
+        chips.push({ texto: interpolar(t.mundoProgreso, { mundo: nombreDeMundo(dominio), hechos: r.hechos, total: r.total }), tono: "verde" });
       }
     } else if (pensando) {
-      chips.push({ texto: "En exploración", tono: "azul" });
+      chips.push({ texto: t.enExploracion, tono: "azul" });
     } else if (conPlan) {
-      chips.push({ texto: "Con plan", tono: "azul" });
+      chips.push({ texto: t.conPlan, tono: "azul" });
     } else {
-      chips.push({ texto: ordenada ? "Con claridad" : "Sin ordenar", tono: "neutro" });
+      chips.push({ texto: ordenada ? t.conClaridad : t.sinOrdenar, tono: "neutro" });
     }
 
     // Fase 4.3.1: la pista ANCLA la idea en el calendario (fechaSello) en vez
@@ -187,17 +191,21 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
     // ("Una pregunta te espera · última acción ayer 21:26").
     const tareas = ultimaEnTareas.get(p.id);
     const ultimaAccion = tareas && tareas > p.updated_at ? tareas : p.updated_at;
+    const fecha = fechaSello(ultimaAccion, undefined, idioma);
     const pista = pensando
       ? esperaPlan.has(p.id)
-        ? `Tu plan está listo para armarse · última acción ${fechaSello(ultimaAccion)}`
-        : `Una pregunta te espera · última acción ${fechaSello(ultimaAccion)}`
-      : `última acción · ${fechaSello(ultimaAccion)}`;
+        ? interpolar(t.pistaPlanListo, { fecha })
+        : interpolar(t.pistaPregunta, { fecha })
+      : interpolar(t.pistaUltimaAccion, { fecha });
 
     // Fase 3.8: una idea realizada es un Proyecto — se agrupa al final.
     const realizadaAt = (p as { realizada_at?: string | null }).realizada_at ?? null;
     const realizada = Boolean(realizadaAt);
     const resumenRealizada = realizadaAt
-      ? `realizada ${fechaSello(realizadaAt)} · ${Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000))} días de la chispa al proyecto`
+      ? interpolar(t.resumenRealizada, {
+          fecha: fechaSello(realizadaAt, undefined, idioma),
+          dias: Math.max(0, Math.round((new Date(realizadaAt).getTime() - new Date(p.created_at).getTime()) / 86_400_000)),
+        })
       : undefined;
 
     return {
@@ -215,16 +223,17 @@ export async function listarIdeasConEstado(supabase: SupabaseClient): Promise<Ci
   });
 }
 
-/** "hace 2 días", "hace 3 h", "ahora mismo" — español, sin librerías. */
-export function haceCuanto(iso: string): string {
+/** "hace 2 días", "hace 3 h", "ahora mismo" — por idioma, sin librerías. */
+export function haceCuanto(iso: string, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(MIS_IDEAS, idioma).haceCuanto;
   const ms = Date.now() - new Date(iso).getTime();
   const min = Math.floor(ms / 60_000);
-  if (min < 2) return "ahora mismo";
-  if (min < 60) return `hace ${min} min`;
+  if (min < 2) return t.ahoraMismo;
+  if (min < 60) return interpolar(t.haceMin, { n: min });
   const h = Math.floor(min / 60);
-  if (h < 24) return `hace ${h} h`;
+  if (h < 24) return interpolar(t.haceHoras, { n: h });
   const d = Math.floor(h / 24);
-  if (d < 30) return d === 1 ? "ayer" : `hace ${d} días`;
+  if (d < 30) return d === 1 ? t.ayer : interpolar(t.haceDias, { n: d });
   const meses = Math.floor(d / 30);
-  return meses === 1 ? "hace un mes" : `hace ${meses} meses`;
+  return meses === 1 ? t.haceUnMes : interpolar(t.haceMeses, { n: meses });
 }

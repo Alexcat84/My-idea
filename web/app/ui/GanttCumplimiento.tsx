@@ -16,6 +16,10 @@
  */
 import { Fragment, useState, type CSSProperties, type ReactNode } from "react";
 import type { MarcaCarril } from "@/lib/analytics";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 
 export type VistaGantt = "riel" | "escalera" | "cintas";
 
@@ -46,18 +50,15 @@ const COLOR_ESTADO: Record<"adelantada" | "aTiempo" | "tarde", string> = {
 };
 
 // Nombres profesionales de las vistas (el id interno no cambia: la preferencia
-// guardada sigue siendo riel/escalera/cintas).
-const VISTAS: Array<{ id: VistaGantt; nombre: string }> = [
-  { id: "riel", nombre: "Plan y real" },
-  { id: "escalera", nombre: "Escalonado" },
-  { id: "cintas", nombre: "Bandas" },
-];
+// guardada sigue siendo riel/escalera/cintas). El nombre sale del catálogo.
+const VISTAS: VistaGantt[] = ["riel", "escalera", "cintas"];
 
 function Selector({ vista, onCambio }: { vista: VistaGantt; onCambio: (v: VistaGantt) => void }) {
+  const t = elegir(ANALISIS, useIdioma()).gantt;
   return (
     <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10, marginBottom: 18 }}>
       <span style={{ fontSize: 11, fontWeight: 600, letterSpacing: "1.2px", textTransform: "uppercase", color: "#6F7076" }}>
-        vista
+        {t.vista}
       </span>
       <div
         style={{
@@ -70,12 +71,12 @@ function Selector({ vista, onCambio }: { vista: VistaGantt; onCambio: (v: VistaG
           boxShadow: "inset 0 0 0 1px rgba(77,124,254,0.24)",
         }}
       >
-        {VISTAS.map((v) => {
-          const activa = v.id === vista;
+        {VISTAS.map((id) => {
+          const activa = id === vista;
           return (
             <button
-              key={v.id}
-              onClick={() => onCambio(v.id)}
+              key={id}
+              onClick={() => onCambio(id)}
               style={{
                 fontSize: 12,
                 fontWeight: activa ? 700 : 600,
@@ -89,7 +90,7 @@ function Selector({ vista, onCambio }: { vista: VistaGantt; onCambio: (v: VistaG
                 cursor: "pointer",
               }}
             >
-              {v.nombre}
+              {t.vistas[id]}
             </button>
           );
         })}
@@ -119,6 +120,7 @@ function FilaCarril({
   vista: VistaGantt;
   primeraSiguienteReal: number | null; // % del arranque de la etapa siguiente (escalón)
 }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
   const colorReal = color;
   return (
     <div
@@ -180,7 +182,7 @@ function FilaCarril({
         )}
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, fontSize: 12, textAlign: "right", fontVariantNumeric: "tabular-nums" }}>
-        <span style={{ color: "#6F7076" }}>{planDias != null ? `${planDias}d` : "—"}</span>
+        <span style={{ color: "#6F7076" }}>{planDias != null ? interpolar(t.diasCorto, { n: planDias }) : "—"}</span>
         <span style={{ color: colorReal, fontWeight: 600 }}>{realTexto}</span>
       </div>
     </div>
@@ -206,6 +208,8 @@ export function GanttCumplimiento({
   carril?: MarcaCarril[];
   nombreMundo?: (dominio: string) => string;
 }) {
+  const tx = elegir(ANALISIS, useIdioma());
+  const t = tx.gantt;
   // El Análisis es client-only (renderiza tras el fetch), así que leer la vista
   // persistida en el inicializador perezoso es seguro (sin desajuste de
   // hidratación) y evita el setState-en-efecto (react-hooks/set-state-in-effect).
@@ -264,10 +268,8 @@ export function GanttCumplimiento({
         {/* encabezado (la leyenda de colores va JUNTO al gráfico, más abajo) */}
         <div style={{ marginBottom: 6, display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12 }}>
           <div>
-            <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>Cómo se movió tu camino</div>
-            <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>
-              En gris, la línea base que sellaste. Encima, los días que ocupaste de verdad.
-            </div>
+            <div style={{ fontSize: 15, fontWeight: 700, color: "#F5F6F8" }}>{tx.comun.comoSeMovio}</div>
+            <div style={{ fontSize: 13, color: "#6F7076", marginTop: 5 }}>{t.nota}</div>
           </div>
           {carril.length > 0 && (
             <button
@@ -285,7 +287,7 @@ export function GanttCumplimiento({
                 cursor: "pointer",
               }}
             >
-              Ver protección
+              {t.verProteccion}
             </button>
           )}
         </div>
@@ -336,26 +338,26 @@ export function GanttCumplimiento({
         >
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
             <span style={{ width: 18, height: 12, borderRadius: 6, border: `1px solid ${BASE_BORDE}`, background: BASE_FONDO }} />
-            línea base
+            {tx.comun.lineaBase}
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
             <span style={{ width: 18, height: 6, borderRadius: 3, background: VERDE }} />
-            adelantada
+            {tx.comun.adelantada}
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
             <span style={{ width: 18, height: 6, borderRadius: 3, background: AZUL }} />
-            a tiempo
+            {tx.comun.aTiempo}
           </span>
           <span style={{ display: "flex", alignItems: "center", gap: 7 }}>
             <span style={{ width: 18, height: 6, borderRadius: 3, background: AMBAR }} />
-            tardía
+            {tx.comun.tardia}
           </span>
         </div>
 
         {/* diagrama */}
         <div style={{ display: "flex", alignItems: "center", gap: 14, margin: "4px 0 6px" }}>
           <span style={{ flex: "none", fontSize: 11, fontWeight: 600, letterSpacing: "1.3px", textTransform: "uppercase", color: "#6F7076" }}>
-            tu camino en el tiempo
+            {t.tuCaminoEnElTiempo}
           </span>
           <span style={{ flex: 1, height: 1, background: "rgba(255,255,255,0.12)" }} />
         </div>
@@ -381,7 +383,7 @@ export function GanttCumplimiento({
             <div style={{ position: "absolute", left: 34, right: vista === "cintas" ? 0 : 150, top: 0, bottom: 34 }}>
               <div style={{ position: "absolute", left: `${hoyPct}%`, top: 0, bottom: 0, width: 1, background: "repeating-linear-gradient(to bottom, rgba(245,246,248,0.34) 0 4px, transparent 4px 8px)" }} />
               <div style={{ position: "absolute", left: `${hoyPct}%`, top: -4, transform: "translateX(-50%)", fontSize: 10.5, fontWeight: 600, letterSpacing: "0.6px", textTransform: "uppercase", color: "#A6A7AD", background: "#000", padding: "0 6px" }}>
-                hoy
+                {t.hoy}
               </div>
             </div>
           )}
@@ -394,8 +396,8 @@ export function GanttCumplimiento({
                 <span />
                 <span />
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, textAlign: "right", fontSize: 10, fontWeight: 600, letterSpacing: "1.1px", textTransform: "uppercase", color: "#6F7076" }}>
-                  <span>plan</span>
-                  <span>real</span>
+                  <span>{t.plan}</span>
+                  <span>{t.real}</span>
                 </div>
               </div>
               {filas.map((f, i) => (
@@ -406,7 +408,7 @@ export function GanttCumplimiento({
                     real={f.real}
                     color={f.estado ? COLOR_ESTADO[f.estado] : VERDE}
                     planDias={f.planDias}
-                    realTexto={f.realDias != null ? `${f.realDias}d` : "en curso"}
+                    realTexto={f.realDias != null ? interpolar(tx.comun.diasCorto, { n: f.realDias }) : tx.comun.enCurso}
                     vista={vista}
                     primeraSiguienteReal={vista === "escalera" ? filas[i + 1]?.realInicioPct ?? null : null}
                   />
@@ -425,8 +427,8 @@ export function GanttCumplimiento({
           <div style={{ display: "grid", gridTemplateColumns: vista === "cintas" ? "1fr" : "20px 1fr 136px", gap: 14, paddingTop: 12 }}>
             {vista !== "cintas" && <span />}
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#A6A7AD", fontVariantNumeric: "tabular-nums", marginLeft: vista === "cintas" ? 0 : 0 }}>
-              {ticks.map((t, i) => (
-                <span key={i}>{i === 0 ? `día ${t}` : t}</span>
+              {ticks.map((tick, i) => (
+                <span key={i}>{i === 0 ? interpolar(tx.comun.diaN, { n: tick }) : tick}</span>
               ))}
             </div>
             {vista !== "cintas" && <span />}
@@ -449,6 +451,7 @@ function SubfilaProteccion({
   pct: (d: number) => number;
   nombreMundo: (dominio: string) => string;
 }) {
+  const t = elegir(ANALISIS, useIdioma()).gantt;
   if (marcas.length === 0) return null;
   return (
     <div style={{ display: "grid", gridTemplateColumns: "20px 1fr 136px", gap: 14, alignItems: "center" }}>
@@ -457,7 +460,7 @@ function SubfilaProteccion({
         {marcas.map((m, i) => (
           <span
             key={i}
-            title={`${nombreMundo(m.dominio)}: ${m.texto}${m.hecho ? " (hecha)" : ""}`}
+            title={interpolar(m.hecho ? t.marcaHecha : t.marca, { mundo: nombreMundo(m.dominio), texto: m.texto })}
             style={{
               position: "absolute",
               left: `${Math.min(100, pct(m.dia))}%`,
@@ -473,7 +476,7 @@ function SubfilaProteccion({
         ))}
       </div>
       <span style={{ fontSize: 10.5, textAlign: "right", color: "#6F7076", letterSpacing: "0.6px", textTransform: "uppercase" }}>
-        protección
+        {t.proteccion}
       </span>
     </div>
   );

@@ -20,6 +20,9 @@
  * aparece. Nunca se inventa ni se estima una entrada.
  */
 import { fechaHumanaConAno, fechaInputLocal } from "./fechas";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar, plural } from "./i18n/interpolar";
+import { BITACORA } from "./i18n/mensajes/bitacora";
 
 export interface SesionBita {
   created_at: string;
@@ -115,7 +118,8 @@ const EVENTOS_DE_ITEM = new Set(["item_estado", "item_hecho", "item_no_aplica", 
 const EVENTOS_DE_MUNDO = new Set(["mundo_completado", "preview_iniciado", "preview_completado", "preview_a_compra"]);
 
 /** Ensambla las entradas de la bitácora, en orden cronológico ASCENDENTE. */
-export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
+export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE): EntradaBitacora[] {
+  const t = elegir(BITACORA, idioma).historia;
   const E: EntradaBitacora[] = [];
   // `dominio` etiqueta el espacio de la entrada (Fase 3). Por defecto "core":
   // los hitos derivados del viaje principal lo son; los de mundo/ítem lo pasan.
@@ -130,41 +134,41 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
   };
   const textoDe = new Map(d.items.map((i) => [i.id, i.texto]));
   const dominioDe = new Map(d.items.map((i) => [i.id, i.dominio]));
-  const accion = (id: unknown) => corto(textoDe.get(String(id)) ?? "una actividad");
+  const accion = (id: unknown) => corto(textoDe.get(String(id)) ?? t.unaActividad);
   // El espacio del ítem NO va embebido en el texto (Fase 3): viaja como
   // `dominio` de la entrada, y se muestra como ETIQUETA DE ESPACIO estructural
   // (etiquetaEspacio) en la global/expediente, con ruido cero. Así la vista de
   // un mundo no repite "en X" dentro de su propio espacio.
-  const ref = (id: unknown) => `«${accion(id)}»`;
-  const cita = (m: unknown) => (typeof m === "string" && m.trim() ? `: «${m.replace(/\s+/g, " ").trim()}»` : ".");
+  const ref = (id: unknown) => interpolar(t.refCita, { texto: accion(id) });
+  const cita = (m: unknown) => (typeof m === "string" && m.trim() ? interpolar(t.motivoCita, { motivo: m.replace(/\s+/g, " ").trim() }) : t.punto);
 
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
-  push(d.creadaAt, "Encendiste la chispa y escribiste tu idea.", "hito", "La Chispa");
+  push(d.creadaAt, t.chispa, "hito", t.chispaTitulo);
 
   // AUD-09 B10: el MÁS ANTIGUO de cada clase (los datos llegan sin orden): así
   // "Recibiste tu plan" dice la misma fecha que "Tu Plan · ciclo 1" de Tu avance.
   const masAntiguo = <T extends { created_at: string }>(xs: T[]): T | undefined =>
     [...xs].sort((a, b) => a.created_at.localeCompare(b.created_at))[0];
   const coreOrg = masAntiguo(d.planes.filter((p) => esCore(p.dominio) && p.etiqueta === "organizador"));
-  push(coreOrg?.created_at, "Ordenaste tu idea y ganaste claridad.", "hito", "Tu idea ordenada");
+  push(coreOrg?.created_at, t.ordenaste, "hito", t.ordenasteTitulo);
 
   const explora = masAntiguo(d.sesiones.filter((s) => esCore(s.dominio) && s.tipo === "inicial"));
-  push(explora?.created_at, "Empezaste a explorar tu idea, pregunta por pregunta.");
+  push(explora?.created_at, t.explorar);
 
   const corePlan = masAntiguo(d.planes.filter((p) => esCore(p.dominio) && (p.etiqueta === "completo" || p.etiqueta === "inicial")));
-  push(corePlan?.created_at, "Recibiste tu plan.", "hito", "Tu Plan");
+  push(corePlan?.created_at, t.plan, "hito", t.planTitulo);
 
   // Seguimientos (recálculos del plan), numerados por orden cronológico.
   const segs = d.planes
     .filter((p) => esCore(p.dominio) && p.etiqueta === "seguimiento")
     .sort((a, b) => a.created_at.localeCompare(b.created_at));
-  segs.forEach((p, i) => push(p.created_at, `Contaste qué pasó y recalculé tu plan (seguimiento ${i + 1}).`, "hito", `Seguimiento ${i + 1}`));
+  segs.forEach((p, i) => push(p.created_at, interpolar(t.seguimiento, { n: i + 1 }), "hito", interpolar(t.seguimientoTitulo, { n: i + 1 })));
 
   // Línea base sellada: un sello por plan que tenga su marca. El sello pertenece
   // al ESPACIO de su plan (Fase 3), no siempre al core.
   for (const p of d.planes) {
     if (p.baseline_confirmada_at)
-      push(p.baseline_confirmada_at, "Aceptaste tus fechas: tu línea base quedó sellada.", "hito", "Tu línea base", esCore(p.dominio) ? "core" : p.dominio);
+      push(p.baseline_confirmada_at, t.lineaBase, "hito", t.lineaBaseTitulo, esCore(p.dominio) ? "core" : p.dominio);
   }
 
   // Tus Números, versionados por orden. Cada versión pertenece al espacio de su
@@ -173,13 +177,13 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
     .filter((p) => p.etiqueta === "reporte_numeros")
     .sort((a, b) => a.created_at.localeCompare(b.created_at));
   nums.forEach((p, i) =>
-    push(p.created_at, `Calculaste Tus Números${nums.length > 1 ? ` (versión ${i + 1})` : ""}.`, "hito", "Tus Números", esCore(p.dominio) ? "core" : p.dominio),
+    push(p.created_at, nums.length > 1 ? interpolar(t.numerosVersion, { n: i + 1 }) : t.numeros, "hito", t.numerosTitulo, esCore(p.dominio) ? "core" : p.dominio),
   );
 
   // Planes de mundo generados (pertenecen a su mundo).
   for (const p of d.planes) {
     if (!esCore(p.dominio) && (p.etiqueta === "inicial" || p.etiqueta === "completo" || p.etiqueta === "seguimiento")) {
-      push(p.created_at, `Se generó tu plan de ${d.nombreMundo(p.dominio!)}.`, "hito", d.nombreMundo(p.dominio!), p.dominio!);
+      push(p.created_at, interpolar(t.planMundo, { mundo: d.nombreMundo(p.dominio!) }), "hito", d.nombreMundo(p.dominio!), p.dominio!);
     }
   }
 
@@ -191,7 +195,7 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
   const hechosConEvento = new Set(d.eventos.filter((e) => e.tipo === "item_hecho").map((e) => String(e.payload?.item)));
   for (const it of d.items)
     if (it.completed_at && !hechosConEvento.has(it.id))
-      push(it.completed_at, `Marcaste hecha «${corto(it.texto)}».`, "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
+      push(it.completed_at, interpolar(t.marcasteHechaCita, { texto: corto(it.texto) }), "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────
   const huboRealizada = d.eventos.some((e) => e.tipo === "realizada" && (e.payload?.accion ?? "realizar") === "realizar");
@@ -217,65 +221,65 @@ export function construirBitacora(d: DatosBitacora): EntradaBitacora[] {
       push(fecha, texto, peso, titulo, domEvento);
     switch (e.tipo) {
       case "modo_camino": {
-        const a = p.a === "fechas" ? "con fechas y recordatorios" : "a tu ritmo";
-        pushE(e.created_at, p.de ? `Cambiaste tu forma de avanzar: ${a}.` : `Elegiste llevar tu camino ${a}.`);
+        const a = p.a === "fechas" ? t.modoFechas : t.modoRitmo;
+        pushE(e.created_at, interpolar(p.de ? t.cambiasteModo : t.elegisteModo, { modo: a }));
         break;
       }
       case "item_estado": {
-        if (p.a === "empezado") pushE(e.created_at, `Empezaste ${ref(p.item)}.`);
-        else if (p.a === "en_proceso") pushE(e.created_at, `Pusiste ${ref(p.item)} en proceso.`);
-        else if (p.a === "pendiente") pushE(e.created_at, `Devolviste ${ref(p.item)} a pendiente.`);
+        if (p.a === "empezado") pushE(e.created_at, interpolar(t.empezaste, { ref: ref(p.item) }));
+        else if (p.a === "en_proceso") pushE(e.created_at, interpolar(t.enProceso, { ref: ref(p.item) }));
+        else if (p.a === "pendiente") pushE(e.created_at, interpolar(t.aPendiente, { ref: ref(p.item) }));
         break;
       }
       case "item_hecho":
         // Con su fecha de realización (la que el usuario dijo), no la del clic.
-        pushE(typeof p.completed_at === "string" ? p.completed_at : e.created_at, `Marcaste hecha ${ref(p.item)}.`);
+        pushE(typeof p.completed_at === "string" ? p.completed_at : e.created_at, interpolar(t.marcasteHecha, { ref: ref(p.item) }));
         break;
       case "item_no_aplica":
-        pushE(e.created_at, `Retiraste ${ref(p.item)}${cita(p.motivo)}`, "retirada");
+        pushE(e.created_at, interpolar(t.retiraste, { ref: ref(p.item), cita: cita(p.motivo) }), "retirada");
         break;
       case "item_reactivada":
-        pushE(e.created_at, `Reactivaste ${ref(p.item)}.`);
+        pushE(e.created_at, interpolar(t.reactivaste, { ref: ref(p.item) }));
         break;
       case "fecha_hecho_movida":
-        pushE(e.created_at, `Ajustaste la fecha en que hiciste ${ref(p.item)}.`);
+        pushE(e.created_at, interpolar(t.ajustasteFechaHecho, { ref: ref(p.item) }));
         break;
       case "nota_escrita":
-        pushE(e.created_at, `Anotaste algo en ${ref(p.item)}.`);
+        pushE(e.created_at, interpolar(t.anotaste, { ref: ref(p.item) }));
         break;
       case "fecha_movida": {
         const n = typeof p.cascada === "number" ? p.cascada : 0;
         const delta = typeof p.delta_dias === "number" ? p.delta_dias : 0;
-        const rumbo = delta >= 0 ? `${Math.abs(delta)} ${Math.abs(delta) === 1 ? "día" : "días"} después` : `${Math.abs(delta)} ${Math.abs(delta) === 1 ? "día" : "días"} antes`;
-        const cola = n > 0 ? ` y las ${n} siguientes, ${rumbo} cada una.` : ".";
-        pushE(e.created_at, `Moviste la fecha de ${ref(p.item)}${cola}`);
+        const rumbo = plural(idioma, Math.abs(delta), delta >= 0 ? t.diasDespues : t.diasAntes);
+        const cola = n > 0 ? interpolar(t.colaCascada, { n, rumbo }) : t.punto;
+        pushE(e.created_at, interpolar(t.movisteFecha, { ref: ref(p.item), cola }));
         break;
       }
       case "mundo_completado": {
         const nombre = d.nombreMundo(String(p.mundo));
-        if (p.accion === "reabrir") pushE(e.created_at, `Reabriste el mundo ${nombre}.`);
-        else pushE(e.created_at, `Completaste el mundo ${nombre}${cita(p.motivo)}`, "hito", nombre);
+        if (p.accion === "reabrir") pushE(e.created_at, interpolar(t.reabristeMundo, { mundo: nombre }));
+        else pushE(e.created_at, interpolar(t.completasteMundo, { mundo: nombre, cita: cita(p.motivo) }), "hito", nombre);
         break;
       }
       case "preview_iniciado":
-        pushE(e.created_at, `Exploraste gratis el mundo ${d.nombreMundo(String(p.mundo))}.`);
+        pushE(e.created_at, interpolar(t.exploraste, { mundo: d.nombreMundo(String(p.mundo)) }));
         break;
       case "preview_completado":
-        pushE(e.created_at, `Tu diagnóstico de ${d.nombreMundo(String(p.mundo))} quedó listo.`, "hito", d.nombreMundo(String(p.mundo)));
+        pushE(e.created_at, interpolar(t.diagnostico, { mundo: d.nombreMundo(String(p.mundo)) }), "hito", d.nombreMundo(String(p.mundo)));
         break;
       case "preview_a_compra":
-        pushE(e.created_at, `Sumaste el plan completo de ${d.nombreMundo(String(p.mundo))}.`, "hito", d.nombreMundo(String(p.mundo)));
+        pushE(e.created_at, interpolar(t.sumaste, { mundo: d.nombreMundo(String(p.mundo)) }), "hito", d.nombreMundo(String(p.mundo)));
         break;
       case "realizada":
-        if (p.accion === "reabrir") pushE(e.created_at, "Reabriste tu idea para seguir trabajándola.");
-        else pushE(e.created_at, `Marcaste tu idea como realizada${cita(p.motivo)}`, "cierre", "Realizado");
+        if (p.accion === "reabrir") pushE(e.created_at, t.reabristeIdea);
+        else pushE(e.created_at, interpolar(t.realizadaCita, { cita: cita(p.motivo) }), "cierre", t.realizadoTitulo);
         break;
     }
   }
 
   // Honestidad con el pasado: si la idea está realizada pero su cierre es de una
   // era sin bitácora, deriva la entrada del timestamp (no se inventa: existe).
-  if (d.realizadaAt && !huboRealizada) push(d.realizadaAt, "Marcaste tu idea como realizada.", "cierre", "Realizado");
+  if (d.realizadaAt && !huboRealizada) push(d.realizadaAt, t.realizada, "cierre", t.realizadoTitulo);
 
   // Orden cronológico ascendente. El sort es estable: a igual instante, se
   // conserva el orden de inserción (hitos derivados antes que eventos sueltos).
@@ -311,10 +315,15 @@ export function proyectoTieneMundos(entradas: EntradaBitacora[]): boolean {
  * (dominio null) tampoco se etiqueta: jamás se le inventa un espacio.
  * Core → "Tu viaje"; un mundo → su nombre de cara.
  */
-export function etiquetaEspacio(dominio: string | null, hayMundos: boolean, nombreMundo: (d: string) => string): string | null {
+export function etiquetaEspacio(
+  dominio: string | null,
+  hayMundos: boolean,
+  nombreMundo: (d: string) => string,
+  idioma: Locale = LOCALE_BASE,
+): string | null {
   if (!hayMundos) return null;
   if (dominio === null) return null;
-  return esCore(dominio) ? "Tu viaje" : nombreMundo(dominio);
+  return esCore(dominio) ? elegir(BITACORA, idioma).historia.tuViaje : nombreMundo(dominio);
 }
 
 function hora(iso: string): string {
@@ -330,6 +339,7 @@ export function bitacoraCuerpo(
   entradas: EntradaBitacora[],
   nivel = 3,
   etiquetar?: (e: EntradaBitacora) => string | null,
+  idioma: Locale = LOCALE_BASE,
 ): string[] {
   const l: string[] = [];
   const almo = "#".repeat(nivel);
@@ -343,7 +353,7 @@ export function bitacoraCuerpo(
     const dia = fechaInputLocal(new Date(e.fecha));
     if (dia !== diaAnterior) {
       l.push("");
-      l.push(`${almo} ${fechaHumanaConAno(e.fecha)}`);
+      l.push(`${almo} ${fechaHumanaConAno(e.fecha, idioma)}`);
       l.push("");
       diaAnterior = dia;
     }
@@ -365,21 +375,23 @@ export function bitacoraMarkdown(
   generadoAt: string,
   titulo?: string,
   etiquetar?: (e: EntradaBitacora) => string | null,
+  idioma: Locale = LOCALE_BASE,
 ): string {
+  const t = elegir(BITACORA, idioma).documento;
   const l: string[] = [];
   // `titulo` sobreescribe el H1 (Fase 3: la bitácora POR ESPACIO se titula
   // "Bitácora de {espacio}"); sin él, el título de siempre.
-  l.push(titulo ?? `# La historia de ${nombreIdea}`);
+  l.push(titulo ?? interpolar(t.titulo, { nombre: nombreIdea }));
   l.push("");
   if (entradas.length === 0) {
-    l.push(`> Generada el ${fechaHumanaConAno(generadoAt)}`);
+    l.push(interpolar(t.generada, { fecha: fechaHumanaConAno(generadoAt, idioma) }));
     l.push("");
-    l.push("Tu historia apenas empieza. Cada paso que des irá quedando aquí.");
+    l.push(t.vacia);
     l.push("");
     return l.join("\n");
   }
-  l.push(`> Del ${fechaHumanaConAno(entradas[0].fecha)} al ${fechaHumanaConAno(entradas[entradas.length - 1].fecha)}`);
-  l.push(...bitacoraCuerpo(entradas, 3, etiquetar));
+  l.push(interpolar(t.rango, { desde: fechaHumanaConAno(entradas[0].fecha, idioma), hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma) }));
+  l.push(...bitacoraCuerpo(entradas, 3, etiquetar, idioma));
   l.push("");
   return l.join("\n");
 }

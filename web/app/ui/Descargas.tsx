@@ -18,6 +18,10 @@ import { BitacoraPapel, ContenidoBitacora } from "./BitacoraPapel";
 import { AnalisisPapel, type AnalisisPapelData } from "./AnalisisPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { DESCARGAS } from "@/lib/i18n/mensajes/descargas";
 
 /** Datos estructurados que la ruta manda para dibujar el PDF en papel (no
  * markdown): el resumen "Cómo te fue" y la secuencia. Ausente en los ciclos. */
@@ -66,6 +70,7 @@ function BotonFormato({
    * visible; el .md queda como botón neutro. Igual en TODAS las cintas. */
   marcado?: boolean;
 }) {
+  const t = elegir(DESCARGAS, useIdioma());
   return (
     <button
       onClick={onClick}
@@ -77,7 +82,7 @@ function BotonFormato({
           : "border-white/[0.14] px-4 py-[9px] font-semibold text-dim hover:border-accent/60 hover:text-ink")
       }
     >
-      {ocupado ? "Preparando..." : children}
+      {ocupado ? t.preparando : children}
     </button>
   );
 }
@@ -168,8 +173,10 @@ export function Descargas({
   dominio?: string;
   nombreEspacio?: string;
 }) {
+  const t = elegir(DESCARGAS, useIdioma());
   const [documentos, setDocumentos] = useState<DocumentoIndice[] | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  // La clave del error (no el texto): se pinta en el idioma de la pantalla.
+  const [error, setError] = useState<"errorCargar" | "errorPreparar" | null>(null);
   const [ocupado, setOcupado] = useState<string | null>(null);
   const [paraImprimir, setParaImprimir] = useState<{ titulo: string; markdown: string; papel?: PapelDoc } | null>(null);
 
@@ -181,7 +188,7 @@ export function Descargas({
         if (vivo) setDocumentos(d.documentos);
       })
       .catch(() => {
-        if (vivo) setError("No pudimos cargar tus documentos. Vuelve a intentarlo en un momento.");
+        if (vivo) setError("errorCargar");
       });
     return () => {
       vivo = false;
@@ -209,7 +216,7 @@ export function Descargas({
         if (formato === "md") descargarMd(d.markdown, d.archivo);
         else setParaImprimir({ titulo: d.titulo, markdown: d.markdown, papel: d.papel });
       } catch {
-        setError("No pudimos preparar ese documento. Vuelve a intentarlo en un momento.");
+        setError("errorPreparar");
       } finally {
         setOcupado(null);
       }
@@ -225,7 +232,7 @@ export function Descargas({
   // cambia (D5): eso lo arma la ruta, no este panel.
   const docs = documentos ?? [];
   const esScoped = Boolean(dominio);
-  const caraActual = esScoped ? nombreEspacio ?? "este mundo" : "Tu viaje";
+  const caraActual = esScoped ? nombreEspacio ?? t.esteMundo : t.tuViaje;
   const { hayMundos, globales, delEspacio } = particionDocumentos(docs, dominio, nombreEspacio);
 
   const renderDoc = (doc: DocumentoIndice, etiqueta?: string) => {
@@ -270,8 +277,7 @@ export function Descargas({
           <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
           {doc.fecha && (
             <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
-              {esExpediente ? "Cerrado el " : ""}
-              {fechaHumanaConAno(doc.fecha)}
+              {esExpediente ? interpolar(t.cerradoEl, { fecha: fechaHumanaConAno(doc.fecha) }) : fechaHumanaConAno(doc.fecha)}
             </p>
           )}
         </div>
@@ -292,22 +298,20 @@ export function Descargas({
   return (
     <section className="mx-auto w-full max-w-[720px]">
       <button onClick={onVolver} className="mb-5 text-sm text-dim hover:text-ink" data-no-print>
-        ← Volver
+        {t.volver}
       </button>
 
       <div data-no-print>
         <h2 className="text-[24px] font-bold leading-tight tracking-[-0.02em] [text-wrap:balance] sm:text-[28px]">
-          {dominio ? `Documentos de ${nombreEspacio ?? "este mundo"}` : "Tus documentos"}
+          {dominio ? interpolar(t.documentosDe, { espacio: nombreEspacio ?? t.esteMundo }) : t.tusDocumentos}
         </h2>
         <p className="mt-2.5 max-w-[560px] text-[14.5px] leading-[1.65] text-dim [text-wrap:pretty]">
-          {dominio
-            ? "Los documentos de este mundo: su reporte y lo que deje cada fase de su camino, en .md o en PDF."
-            : "Cada fase de tu camino deja su propio documento. Llévatelos en .md para editarlos o en PDF para leerlos e imprimirlos."}
+          {dominio ? t.descripcionMundo : t.descripcion}
         </p>
 
-        {error && <p className="mt-5 text-sm text-warn">{error}</p>}
+        {error && <p className="mt-5 text-sm text-warn">{t[error]}</p>}
 
-        {documentos === null && !error && <p className="mt-6 text-sm text-dim">Cargando...</p>}
+        {documentos === null && !error && <p className="mt-6 text-sm text-dim">{t.cargando}</p>}
 
         {documentos !== null && !error && (
           hayMundos ? (
@@ -315,29 +319,27 @@ export function Descargas({
             // siempre presente); abajo, lo del espacio actual.
             <div className="mt-7 flex flex-col gap-8">
               <section>
-                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Reportes globales</p>
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.reportesGlobales}</p>
                 <div className="flex flex-col gap-3">
                   {globales.length ? (
-                    globales.map((d) => renderDoc(d, "Global"))
+                    globales.map((d) => renderDoc(d, t.global))
                   ) : (
                     <p className="text-[13.5px] leading-relaxed text-dim">
-                      Tu expediente completo aparecerá aquí cuando tengas tu plan.
+                      {t.sinExpediente}
                     </p>
                   )}
                 </div>
               </section>
               <section>
                 <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-                  Reportes de {caraActual}
+                  {interpolar(t.reportesDe, { espacio: caraActual })}
                 </p>
                 <div className="flex flex-col gap-3">
                   {delEspacio.length ? (
                     delEspacio.map((d) => renderDoc(d, caraActual))
                   ) : (
                     <p className="text-[13.5px] leading-relaxed text-dim">
-                      {esScoped
-                        ? "Este mundo todavía no tiene documentos propios. Cuando genere su reporte, aparecerá aquí."
-                        : "Aún no hay documentos de tu viaje principal. Cuando tengas tu plan, aparecerán aquí."}
+                      {esScoped ? t.sinDocumentosMundo : t.sinDocumentosViaje}
                     </p>
                   )}
                 </div>
@@ -350,7 +352,7 @@ export function Descargas({
                 docs.map((d) => renderDoc(d))
               ) : (
                 <p className="mt-6 text-[14px] leading-relaxed text-dim">
-                  Todavía no hay nada que descargar. Cuando tengas tu plan, aparecerá aquí.
+                  {t.sinNada}
                 </p>
               )}
             </div>
@@ -361,8 +363,7 @@ export function Descargas({
             texto, y dónde vive la bitácora en vivo. */}
         {documentos && documentos.length > 0 && (
           <p className="mt-5 text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">
-            El .md y el PDF salen del mismo texto: lo que lees aquí es lo que se imprime. Tu bitácora en vivo se
-            abre desde el plan, desde Manos a la Obra y desde tus mundos.
+            {t.cierreLista}
           </p>
         )}
       </div>
@@ -380,9 +381,9 @@ export function Descargas({
             // hoja. Antes eran tres bloques absolutos que se encimaban y traían
             // tres pies (dos por página). Ahora fluyen como filas.
             return (
-              <HojaImpresion oculto nombreIdea={nombreIdea} pieTitulo="Expediente">
+              <HojaImpresion oculto nombreIdea={nombreIdea} pieTitulo={t.pieExpediente}>
                 <FilaPapel>
-                  <ContenidoDocumento markdown={p.bodyMarkdown} titulo="Expediente completo" />
+                  <ContenidoDocumento markdown={p.bodyMarkdown} titulo={t.expedienteCompleto} />
                 </FilaPapel>
                 {p.resumen && (
                   <FilaPapel pagina>

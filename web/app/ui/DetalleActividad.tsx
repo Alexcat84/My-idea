@@ -15,11 +15,17 @@
  */
 import { useEffect, useMemo, useState } from "react";
 import { CampoConVoz } from "./CampoConVoz";
-import { ETIQUETA_ESTADO, IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
+import { IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { BANDA, type Banda, type ChecklistEstado, type ModoCamino } from "@/lib/dbContract";
 import { rangoDeBanda } from "@/lib/engine/estimacion";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
+import { elegir, type Locale } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { DETALLE_ACTIVIDAD } from "@/lib/i18n/mensajes/detalleActividad";
+import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
 
 /** Días redondeados entre dos fechas (para el chip de cumplimiento). */
 function difDias(desdeIso: string, hastaIso: string): number {
@@ -28,22 +34,23 @@ function difDias(desdeIso: string, hastaIso: string): number {
 
 /** El chip de cumplimiento del ítem, en tono ESPEJO (la tardía en ámbar, nunca
  * rojo). null si no hay fecha planificada contra la cual medir. */
-function chipCumplimiento(item: ItemChecklistUI): { texto: string; clase: string } | null {
+function chipCumplimiento(item: ItemChecklistUI, idioma: Locale): { texto: string; clase: string } | null {
+  const t = elegir(DETALLE_ACTIVIDAD, idioma).chip;
   if (!item.fecha_base) return null;
   if (item.completed_at) {
     const d = difDias(item.fecha_base, item.completed_at); // + = tarde
-    if (Math.abs(d) <= 1) return { texto: "A tiempo", clase: "border-done/50 text-done" };
-    if (d > 0) return { texto: `Tardía · ${d} ${d === 1 ? "día" : "días"}`, clase: "border-warn/50 text-warn" };
-    return { texto: `Adelantada · ${-d} ${-d === 1 ? "día" : "días"}`, clase: "border-accent/50 text-accent" };
+    if (Math.abs(d) <= 1) return { texto: t.aTiempo, clase: "border-done/50 text-done" };
+    if (d > 0) return { texto: plural(idioma, d, t.tardia), clase: "border-warn/50 text-warn" };
+    return { texto: plural(idioma, -d, t.adelantada), clase: "border-accent/50 text-accent" };
   }
   // Pendiente: solo se marca "tardía" si ya pasó su fecha; jamás como regaño.
   const atraso = difDias(item.fecha_base, new Date().toISOString());
-  if (atraso > 0) return { texto: `Tardía · ${atraso} ${atraso === 1 ? "día" : "días"}`, clase: "border-warn/50 text-warn" };
+  if (atraso > 0) return { texto: plural(idioma, atraso, t.tardia), clase: "border-warn/50 text-warn" };
   return null;
 }
 
-// ETIQUETA_ESTADO, ORDEN_ESTADOS e IconoEstado viven en SelectorEstado (fuente
-// única). El detalle es la vista completa: elige cualquiera de los 5 estados
+// ORDEN_ESTADOS e IconoEstado viven en SelectorEstado (fuente única), y las
+// etiquetas de estado en su catálogo (estadosTarea). El detalle es la vista completa: elige cualquiera de los 5 estados
 // directo, y 'no aplica' abre su motivo editable.
 
 export function DetalleActividad({
@@ -79,6 +86,9 @@ export function DetalleActividad({
   protege?: { titulo: string | null; deteccion: string | null; retirada: boolean; sistemica: boolean } | null;
   onCerrar: () => void;
 }) {
+  const idioma = useIdioma();
+  const t = elegir(DETALLE_ACTIVIDAD, idioma);
+  const etiquetaEstado = elegir(ESTADOS_TAREA, idioma).etiquetas;
   const [nota, setNota] = useState(item.nota ?? "");
   const [moviendoFecha, setMoviendoFecha] = useState(false);
   // La nueva fecha elegida, en espera de decidir la cascada (null = sin oferta).
@@ -102,7 +112,7 @@ export function DetalleActividad({
   );
   const hoyInput = fechaInputLocal(new Date());
   const conFechas = modo !== "ritmo";
-  const chip = conFechas ? chipCumplimiento(item) : null;
+  const chip = conFechas ? chipCumplimiento(item, idioma) : null;
   const notaCambiada = (item.nota ?? "") !== nota.trim();
 
   // BORRADOR (jul 2026, pedido del fundador): en el CAJÓN el estado NO se guarda
@@ -152,10 +162,10 @@ export function DetalleActividad({
   }, [onCerrar]);
 
   return (
-    <div className="fixed inset-0 z-50 flex" aria-modal role="dialog" aria-label="Detalle de la actividad">
+    <div className="fixed inset-0 z-50 flex" aria-modal role="dialog" aria-label={t.dialogo}>
       {/* velo: tocar fuera cierra */}
       <button
-        aria-label="Cerrar"
+        aria-label={t.cerrar}
         onClick={onCerrar}
         className="absolute inset-0 bg-black/[0.55] backdrop-blur-[1px]"
       />
@@ -173,10 +183,10 @@ export function DetalleActividad({
         <span className="mx-auto mt-2.5 h-1 w-9 shrink-0 rounded-full bg-white/20 sm:hidden" />
 
         <header className="flex items-center justify-between gap-3 border-b border-hairline px-5 py-4 sm:px-6">
-          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Detalle de la actividad</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.dialogo}</p>
           <button
             onClick={onCerrar}
-            aria-label="Cerrar el detalle"
+            aria-label={t.cerrarDetalle}
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] border border-hairline text-dim hover:text-ink"
           >
             <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden>
@@ -188,7 +198,7 @@ export function DetalleActividad({
         <div className="flex-1 overflow-y-auto px-5 py-5 sm:px-6" style={{ scrollbarWidth: "thin" }}>
           {/* etapa (azul: navegación/estructura) + texto completo del ítem */}
           <p className="text-[12.5px] text-dim">
-            Etapa {item.etapa} · <span className="text-accent">{tituloEtapa}</span>
+            {interpolar(t.etapa, { n: item.etapa })} · <span className="text-accent">{tituloEtapa}</span>
           </p>
           <p className={"mt-1.5 text-[17px] font-semibold leading-relaxed [text-wrap:pretty] " + (hecho ? "text-dim line-through" : "text-ink")}>
             {item.texto}
@@ -206,7 +216,7 @@ export function DetalleActividad({
               {protegidaPor.map((pr, i) => (
                 <p key={i} className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">
                   <span className="mr-1.5 inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.6px] text-accent">
-                    Protegida
+                    {t.protegida}
                   </span>
                   {pr.respuesta} <span className="text-dim/70">· {pr.mundo}</span>
                 </p>
@@ -219,13 +229,13 @@ export function DetalleActividad({
                 <p className="text-[13px] font-semibold [text-wrap:pretty]">{protege.deteccion}</p>
               )}
               <p className={"text-[12.5px] text-dim [text-wrap:pretty]" + (protege.deteccion ? " mt-1" : "")}>
-                Protege:{" "}
+                {t.protege}{" "}
                 <span className="text-ink">
                   {protege.retirada
-                    ? "la actividad que protegía fue retirada"
+                    ? t.protegeRetirada
                     : protege.sistemica
-                      ? "tu negocio entero"
-                      : protege.titulo ?? "una actividad que ya no está en tu plan"}
+                      ? t.protegeSistemica
+                      : protege.titulo ?? t.protegeFueraDelPlan}
                 </span>
               </p>
             </div>
@@ -236,7 +246,7 @@ export function DetalleActividad({
               NO guarda; se compromete con "Guardar". 'no aplica' y 'hecha' abren
               su editor (motivo / fecha) justo abajo, también en borrador. */}
           <div className="mt-6">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Estado</p>
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.estado}</p>
             <div className="relative">
               <button
                 type="button"
@@ -247,13 +257,13 @@ export function DetalleActividad({
                 className="flex w-full items-center gap-3 rounded-[12px] border border-hairline bg-surface-2 px-4 py-3 text-left transition-colors hover:border-white/25 disabled:opacity-50"
               >
                 <IconoEstado estado={bEstado} tamano={20} />
-                <span className="flex-1 text-[14.5px] font-semibold capitalize">{ETIQUETA_ESTADO[bEstado]}</span>
+                <span className="flex-1 text-[14.5px] font-semibold capitalize">{etiquetaEstado[bEstado]}</span>
                 <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden className={"shrink-0 text-dim transition-transform " + (menuAbierto ? "rotate-180" : "")}>
                   <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" />
                 </svg>
               </button>
               {menuAbierto && (
-                <div role="listbox" aria-label="Elegir estado" className="mt-2 overflow-hidden rounded-[12px] border border-white/[0.14] bg-surface-2">
+                <div role="listbox" aria-label={t.elegirEstado} className="mt-2 overflow-hidden rounded-[12px] border border-white/[0.14] bg-surface-2">
                   {ORDEN_ESTADOS.map((e) => {
                     const activo = e === bEstado;
                     return (
@@ -270,7 +280,7 @@ export function DetalleActividad({
                         }
                       >
                         <IconoEstado estado={e} tamano={18} />
-                        <span className="flex-1 capitalize">{ETIQUETA_ESTADO[e]}</span>
+                        <span className="flex-1 capitalize">{etiquetaEstado[e]}</span>
                         {activo && (
                           <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="text-accent">
                             <path d="M2.5 6.5l2.5 2.5 4.5-5.5" stroke="currentColor" strokeWidth="2" fill="none" />
@@ -286,27 +296,27 @@ export function DetalleActividad({
             {/* Motivo de "no aplica" (borrador): opcional, texto o voz. */}
             {retirada && (
               <div className="mt-3 rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
-                <p className="mb-2 text-[12.5px] text-dim">¿Por qué no aplica? Para tu propia memoria (opcional).</p>
+                <p className="mb-2 text-[12.5px] text-dim">{t.porQueNoAplica}</p>
                 <CampoConVoz
                   id={`motivo-${item.id}`}
                   valor={bMotivo}
                   onCambio={setBMotivo}
                   filas={2}
-                  placeholder="No corre para esta idea porque…"
+                  placeholder={t.placeholderMotivo}
                 />
               </div>
             )}
             {/* Fecha de realización (borrador) al marcar hecha. */}
             {hecho && (
               <div className="mt-3 flex flex-wrap items-center gap-2.5">
-                <span className="text-[12.5px] text-dim">¿Cuándo lo hiciste?</span>
+                <span className="text-[12.5px] text-dim">{t.cuandoLoHiciste}</span>
                 <input
                   type="date"
                   max={hoyInput}
                   value={bCompletado ? fechaInputLocal(new Date(bCompletado)) : hoyInput}
                   onChange={(ev) => ev.target.value && setBCompletado(isoDesdeInputLocal(ev.target.value))}
                   disabled={ocupado}
-                  aria-label="Cuándo lo hiciste"
+                  aria-label={t.cuandoLoHicisteAria}
                   className="rounded-[9px] border border-hairline bg-surface px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"
                 />
               </div>
@@ -319,14 +329,14 @@ export function DetalleActividad({
           {bBanda && (
             <div className="mt-6">
               <div className="mb-3 flex items-center justify-between gap-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Esfuerzo</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.esfuerzo}</p>
                 {!corrigiendoBanda && (
                   <button
                     onClick={() => setCorrigiendoBanda(true)}
                     disabled={ocupado}
                     className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
-                    corregir
+                    {t.corregir}
                   </button>
                 )}
               </div>
@@ -334,17 +344,17 @@ export function DetalleActividad({
                 <div className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
                   <p className="text-[14px]">
                     <span className="font-semibold">{rangoDeBanda(bBanda)}</span>
-                    {item.espera_externa ? <span className="text-dim"> · depende de terceros</span> : null}
+                    {item.espera_externa ? <span className="text-dim"> {t.dependeDeTerceros}</span> : null}
                   </p>
                   <p className="mt-1 text-[12px] leading-relaxed text-dim">
                     {item.espera_externa
-                      ? "Es un estimado de tu trabajo. Esta tarea depende de respuestas de otros: empiézala temprano, que tu fecha ya trae el colchón de esa espera y el tiempo que ellos tarden no se te cuenta."
-                      : "Es un estimado para orientarte. Si no calza con tu realidad, corrígelo."}
+                      ? t.estimadoConEspera
+                      : t.estimado}
                   </p>
                 </div>
               ) : (
                 <div className="rounded-cinta border border-accent/40 bg-surface-2 px-4 py-3">
-                  <p className="mb-2.5 text-[12.5px] text-dim">¿Cuánto te toma de verdad?</p>
+                  <p className="mb-2.5 text-[12.5px] text-dim">{t.cuantoTeToma}</p>
                   <div className="flex flex-wrap gap-2">
                     {BANDA.map((b) => {
                       const activa = b === bBanda;
@@ -377,7 +387,7 @@ export function DetalleActividad({
                     }}
                     className="mt-3 text-[12.5px] text-dim hover:text-ink"
                   >
-                    cancelar
+                    {t.cancelarEdicion}
                   </button>
                 </div>
               )}
@@ -391,20 +401,20 @@ export function DetalleActividad({
                   (Design): el rótulo a la izquierda, el disparador arriba-derecha
                   de la sección; debajo, el valor o el editor. */}
               <div className="mb-3 flex items-center justify-between gap-3">
-                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Fecha</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.fecha}</p>
                 {!moviendoFecha && (
                   <button
                     onClick={() => setMoviendoFecha(true)}
                     disabled={ocupado}
                     className="shrink-0 rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-[12px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
                   >
-                    cambiar fecha
+                    {t.cambiarFecha}
                   </button>
                 )}
               </div>
               {!moviendoFecha ? (
                 <div className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3 text-[14px]">
-                  {fechaHumana(item.fecha_base)}
+                  {fechaHumana(item.fecha_base, idioma)}
                 </div>
               ) : ofertaFecha ? (
                 // Oferta de CASCADA: al elegir la nueva fecha, si hay pendientes
@@ -417,7 +427,7 @@ export function DetalleActividad({
                   );
                   const cuantos = posteriores.length;
                   const magnitud = Math.abs(deltaDias);
-                  const rumbo = deltaDias >= 0 ? `${magnitud} ${magnitud === 1 ? "día" : "días"} después` : `${magnitud} ${magnitud === 1 ? "día" : "días"} antes`;
+                  const rumbo = plural(idioma, magnitud, deltaDias >= 0 ? t.diasDespues : t.diasAntes);
                   const mover = (cascada: boolean) => {
                     onMoverFecha?.(ofertaFecha, cascada);
                     setOfertaFecha(null);
@@ -426,24 +436,24 @@ export function DetalleActividad({
                   return (
                     <div className="rounded-[14px] border border-accent/[0.45] bg-accent/[0.06] px-5 py-4">
                       <p className="text-[13.5px] leading-relaxed [text-wrap:pretty]">
-                        Nueva fecha: <span className="font-semibold text-accent">{fechaHumana(ofertaFecha)}</span>.{" "}
-                        Hay <span className="font-semibold">{cuantos}</span> {cuantos === 1 ? "actividad pendiente que sigue" : "actividades pendientes que siguen"}.
+                        {rico(interpolar(t.nuevaFecha, { fecha: fechaHumana(ofertaFecha, idioma) }), { b: (c) => <span className="font-semibold text-accent">{c}</span> })}{" "}
+                        {rico(plural(idioma, cuantos, t.hayPosteriores), { b: (c) => <span className="font-semibold">{c}</span> })}
                       </p>
-                      <p className="mt-1 text-[12.5px] text-dim">¿Las muevo también, {rumbo} cada una?</p>
+                      <p className="mt-1 text-[12.5px] text-dim">{interpolar(t.lasMuevo, { rumbo })}</p>
                       <div className="mt-4 flex flex-wrap gap-2.5">
                         <button
                           onClick={() => mover(true)}
                           disabled={ocupado}
                           className="rounded-[11px] border border-accent/40 bg-accent/10 px-5 py-2.5 text-[14px] font-bold text-accent hover:bg-accent/20 disabled:opacity-50"
                         >
-                          Sí, mover todas
+                          {t.moverTodas}
                         </button>
                         <button
                           onClick={() => mover(false)}
                           disabled={ocupado}
                           className="rounded-[11px] border border-white/[0.18] px-5 py-2.5 text-[14px] font-semibold text-ink hover:border-accent/60 disabled:opacity-50"
                         >
-                          Solo esta
+                          {t.soloEsta}
                         </button>
                       </div>
                     </div>
@@ -470,33 +480,33 @@ export function DetalleActividad({
                       }
                     }}
                     disabled={ocupado}
-                    aria-label="Nueva fecha objetivo"
+                    aria-label={t.nuevaFechaObjetivo}
                     className="rounded-[9px] border border-hairline bg-surface px-2.5 py-1.5 text-[13px] text-ink outline-none focus:border-accent/60 disabled:opacity-50"
                   />
                   <button onClick={() => { setMoviendoFecha(false); setOfertaFecha(null); }} className="text-[12.5px] text-dim hover:text-ink">
-                    cancelar
+                    {t.cancelarEdicion}
                   </button>
                 </div>
               )}
               <p className="mt-2 text-[12px] text-dim">
                 {item.fecha_base_original
-                  ? `Ya la moviste: la original (${fechaHumana(item.fecha_base_original)}) se conserva en tu historia.`
-                  : "Si la mueves, la fecha original se conserva en tu historia. No se reescribe nada."}
+                  ? interpolar(t.yaLaMoviste, { fecha: fechaHumana(item.fecha_base_original, idioma) })
+                  : t.siLaMueves}
               </p>
             </div>
           )}
 
           {/* TU NOTA: libre, escribir o dictar. Registrar avance es gratis. */}
           <div className="mt-6">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu nota</p>
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.tuNota}</p>
             <CampoConVoz
               id={`nota-${item.id}`}
               valor={nota}
               onCambio={setNota}
               filas={3}
-              placeholder="Lo que necesites recordar de esta acción…"
+              placeholder={t.placeholderNota}
             />
-            <p className="mt-1.5 text-[12px] text-dim">Registrar tu nota es gratis, siempre.</p>
+            <p className="mt-1.5 text-[12px] text-dim">{t.notaGratis}</p>
           </div>
         </div>
 
@@ -509,14 +519,14 @@ export function DetalleActividad({
             disabled={ocupado}
             className="flex-1 rounded-[12px] border border-accent/40 bg-accent/10 py-3 text-[14.5px] font-bold text-accent hover:bg-accent/20 disabled:opacity-50"
           >
-            Guardar
+            {t.guardar}
           </button>
           <button
             onClick={onCerrar}
             disabled={ocupado}
             className="rounded-[10px] border border-accent/40 bg-accent/10 text-accent hover:bg-accent/20 px-5 py-2.5 text-[13.5px] font-semibold disabled:opacity-40"
           >
-            Cancelar
+            {t.botonCancelar}
           </button>
         </footer>
       </section>

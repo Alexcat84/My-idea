@@ -13,6 +13,9 @@
  * fase 2 y el flujo del CLI dependen de el).
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
@@ -22,24 +25,26 @@ import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } fr
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
-import { AVISO_LOGIN, esInvitadoInvisible } from "@/lib/identidad";
-import { AVISO_2FA, faltaSegundoFactor } from "@/lib/seguridad";
+import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
   let body: unknown;
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo invalido, se esperaba JSON" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoInvalidoJson }, { status: 400 });
   }
   const texto = (body as { texto?: unknown } | null)?.texto;
   const projectIdSolicitado = (body as { project_id?: unknown } | null)?.project_id;
   if (typeof texto !== "string" || texto.trim().length === 0) {
-    return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
+    return NextResponse.json({ error: r.faltaTexto }, { status: 400 });
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
@@ -48,7 +53,7 @@ export async function POST(request: Request) {
     );
   }
   if (projectIdSolicitado !== undefined && typeof projectIdSolicitado !== "string") {
-    return NextResponse.json({ error: "'project_id' debe ser un string" }, { status: 400 });
+    return NextResponse.json({ error: r.projectIdNoString }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -56,7 +61,7 @@ export async function POST(request: Request) {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   // ETAPA 2 — LA FRONTERA: la web y el organizador son libres; el login nace
@@ -64,12 +69,12 @@ export async function POST(request: Request) {
   // la UI detecta login_requerido y lleva al login (la idea se adopta al
   // autenticarse, nada se pierde).
   if (esInvitadoInvisible(user)) {
-    return NextResponse.json(AVISO_LOGIN, { status: 401 });
+    return NextResponse.json(avisoLogin(idioma), { status: 401 });
   }
   // Centro de cuenta: con 2FA activo, esta sesión debe haber superado el
   // desafío antes de tocar el motor pagado.
   if (await faltaSegundoFactor()) {
-    return NextResponse.json(AVISO_2FA, { status: 403 });
+    return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
 
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
@@ -78,7 +83,7 @@ export async function POST(request: Request) {
   const saldo = await verificarSaldo(user.id, PRECIOS.plan_completo);
   if (!saldo.alcanza) {
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo), saldo: saldo.creditos },
+      { error: mensajeSaldoInsuficiente(saldo.creditos, PRECIOS.plan_completo, 0, idioma), saldo: saldo.creditos },
       { status: 402 }
     );
   }
@@ -94,7 +99,7 @@ export async function POST(request: Request) {
   if (!reserva.reservado) {
     const ahora = await verificarSaldo(user.id, PRECIOS.plan_completo, claveReserva);
     return NextResponse.json(
-      { error: mensajeSaldoInsuficiente(ahora.creditos, PRECIOS.plan_completo, ahora.apartados), saldo: ahora.creditos },
+      { error: mensajeSaldoInsuficiente(ahora.creditos, PRECIOS.plan_completo, ahora.apartados, idioma), saldo: ahora.creditos },
       { status: 402 }
     );
   }
@@ -111,7 +116,7 @@ export async function POST(request: Request) {
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeLimite(limite.limite) }, { status: 429 });
+    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
   }
 
   const graph = cargarGrafo();
@@ -129,7 +134,7 @@ export async function POST(request: Request) {
     const proyecto = await obtenerProyecto(supabase, projectIdSolicitado);
     if (!proyecto) {
       await resolverReserva(claveReserva, "liberada");
-      return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+      return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
     }
     projectId = projectIdSolicitado;
   } else {
@@ -198,5 +203,5 @@ export async function POST(request: Request) {
     modo: "conversado" as const,
   };
 
-  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta]);
+  return responderResultadoTurno(supabase, projectId, sessionId, resultado, resultado.acumulado, [puerta], [], idioma);
 }

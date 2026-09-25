@@ -19,6 +19,9 @@
  * dentro del mismo espacio.
  */
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { ESPACIOS } from "@/lib/i18n/mensajes/espacios";
 
 export type Cara = "plan" | "manos" | "avance";
 
@@ -31,6 +34,7 @@ export function SelectorCara({
   onCambio: (c: Cara) => void;
   opciones: { id: Cara; nombre: string; icono: ReactNode }[];
 }) {
+  const t = elegir(ESPACIOS, useIdioma()).caras;
   const refs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [ind, setInd] = useState<{ left: number; width: number }>({ left: 0, width: 0 });
   // La luz viaja con TRANSFORM, no con left. El CSS (.cambiador-luz) siempre
@@ -63,7 +67,7 @@ export function SelectorCara({
   return (
     <div
       role="tablist"
-      aria-label="Las caras de este espacio"
+      aria-label={t.aria}
       // La ranura y el cristal viven en globals.css: son piezas compartidas
       // con las tarjetas de acceso del riel, que lucen igual estando quietas.
       // El borde de la ranura es casi negro, no azul: brilla la luz, no el marco.

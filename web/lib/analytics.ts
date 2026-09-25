@@ -17,6 +17,9 @@
 import { esMundoProteccion } from "./espacios";
 import { actaMarkdown, type ActaCierre } from "./acta";
 import { resolverProtegido } from "./registroProteccion";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolar } from "./i18n/interpolar";
+import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
 
 const DIA = 86_400_000;
 
@@ -607,7 +610,7 @@ export function capaCumplimientoDe(delPlan: ItemAnalytics[], chispa: string): Om
   };
 }
 
-export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
+export function calcularAnalytics(entrada: EntradaAnalytics, idioma: Locale = LOCALE_BASE): Analytics {
   const ahora = entrada.ahora ?? new Date().toISOString();
   const chispa = entrada.proyectoCreatedAt;
   const fin = entrada.realizadaAt ?? ahora;
@@ -631,7 +634,7 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
     cumplimiento = { ...capaCumplimientoDe(delPlan, chispa), porDominio: cumplimientoPorDominio(entrada.items) };
   }
 
-  const hitos = construirHitos(entrada, ahora);
+  const hitos = construirHitos(entrada, ahora, false, idioma);
 
   // Mundos de protección (P4): el carril. Las respuestas ENLAZADAS de los
   // mundos de protección, ancladas a la etapa de lo que protegen. Solo las que
@@ -684,30 +687,32 @@ export function calcularAnalytics(entrada: EntradaAnalytics): Analytics {
 }
 
 /** El timeline de Hitos (§5/§6), construido SOLO de lo persistido. Con
- * incluirAcciones, cada ítem completado suma su propio hito (Celebración). */
-const SUBTITULO_CUMPLIMIENTO: Record<CumplimientoItem, string> = {
-  a_tiempo: "planificado · a tiempo",
-  adelantada: "planificado · adelantada",
-  tardia: "planificado · tardía",
-};
-
-export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluirAcciones = false): Hito[] {
+ * incluirAcciones, cada ítem completado suma su propio hito (Celebración).
+ * El subtítulo de cumplimiento de cada acción sale del catálogo (hitos.cumplimiento). */
+export function construirHitos(
+  entrada: EntradaAnalytics,
+  ahora: string,
+  incluirAcciones = false,
+  idioma: Locale = LOCALE_BASE
+): Hito[] {
+  const t = elegir(ANALYTICS_INFORME, idioma).hitos;
+  const SUBTITULO_CUMPLIMIENTO: Record<CumplimientoItem, string> = t.cumplimiento;
   const hitos: Hito[] = [
-    { fecha: entrada.proyectoCreatedAt, tipo: "chispa", etiqueta: "La Chispa", subtitulo: "La idea nace" },
+    { fecha: entrada.proyectoCreatedAt, tipo: "chispa", etiqueta: t.laChispa, subtitulo: t.laIdeaNace },
   ];
   if (entrada.organizadorAt) {
-    hitos.push({ fecha: entrada.organizadorAt, tipo: "claridad", etiqueta: "Claridad", subtitulo: "Tu idea, organizada" });
+    hitos.push({ fecha: entrada.organizadorAt, tipo: "claridad", etiqueta: t.claridad, subtitulo: t.tuIdeaOrganizada });
   }
   const ciclos = [...entrada.planesCore].sort((a, b) => a.created_at.localeCompare(b.created_at));
   ciclos.forEach((p, i) => {
-    const subtitulo = i === 0 ? (p.baseline_confirmada_at ? "con línea base" : undefined) : "replanificado con lo aprendido";
-    hitos.push({ fecha: p.created_at, tipo: "plan", etiqueta: `Tu Plan · ciclo ${i + 1}`, subtitulo });
+    const subtitulo = i === 0 ? (p.baseline_confirmada_at ? t.conLineaBase : undefined) : t.replanificado;
+    hitos.push({ fecha: p.created_at, tipo: "plan", etiqueta: interpolar(t.tuPlanCiclo, { n: i + 1 }), subtitulo });
   });
   // AUD-09 M37: el hito es el primer plan del mundo, no el clic que lo abrió.
   const conPlan = mundosConPlan(entrada);
   for (const m of entrada.mundos) {
     const activadoAt = conPlan.get(m.dominio);
-    if (activadoAt) hitos.push({ fecha: activadoAt, tipo: "mundo", etiqueta: "Mundo activado", dominio: m.dominio });
+    if (activadoAt) hitos.push({ fecha: activadoAt, tipo: "mundo", etiqueta: t.mundoActivado, dominio: m.dominio });
     // Fase 4.2: un mundo cerrado deja su hito en el timeline del PROYECTO —
     // con su motivo discreto de subtítulo si el usuario escribió uno. El
     // nombre humano lo pone la pantalla desde el catálogo; aquí solo la clave.
@@ -715,7 +720,7 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
       hitos.push({
         fecha: m.completado_at,
         tipo: "mundo_completado",
-        etiqueta: "Mundo completado",
+        etiqueta: t.mundoCompletado,
         dominio: m.dominio,
         subtitulo: m.cierre_motivo?.replace(/\s+/g, " ").trim() || undefined,
       });
@@ -729,14 +734,14 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
       hitos.push({
         fecha: it.completed_at,
         tipo: "accion",
-        etiqueta: it.texto ?? "Acción completada",
+        etiqueta: it.texto ?? t.accionCompletada,
         subtitulo: cumplimiento ? SUBTITULO_CUMPLIMIENTO[cumplimiento] : undefined,
         cumplimiento,
       });
     }
   }
   if (entrada.realizadaAt) {
-    hitos.push({ fecha: entrada.realizadaAt, tipo: "realizada", etiqueta: "REALIZADA" });
+    hitos.push({ fecha: entrada.realizadaAt, tipo: "realizada", etiqueta: t.realizada });
   }
   void ahora;
   return hitos.sort((a, b) => a.fecha.localeCompare(b.fecha));
@@ -757,17 +762,22 @@ export function construirHitos(entrada: EntradaAnalytics, ahora: string, incluir
  * universal (+ cumplimiento si lo tiene), con la MISMA vara del informe. Lo usan
  * la sección de un mundo en el expediente global y el Reporte de un mundo. Puro.
  */
-export function resumenEspacioMd(u: CapaUniversal, cumplimiento?: CapaCumplimientoEspacio | null): string[] {
+export function resumenEspacioMd(
+  u: CapaUniversal,
+  cumplimiento?: CapaCumplimientoEspacio | null,
+  idioma: Locale = LOCALE_BASE
+): string[] {
+  const t = elegir(ANALYTICS_INFORME, idioma).md;
   const l: string[] = [];
-  l.push(`- Duración: **${u.duracionTotalDias} días**`);
-  l.push(`- Acciones completadas: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}** activas`);
-  l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
-  l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
-  if (u.retiradas.length) l.push(`- Retiradas (no aplican): **${u.retiradas.length}**`);
+  l.push(interpolar(t.duracion, { n: u.duracionTotalDias }));
+  l.push(interpolar(t.accionesActivas, { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total }));
+  l.push(interpolar(t.ritmo, { n: u.ritmoAccionesPorSemana }));
+  l.push(interpolar(t.racha, { n: u.rachaMasLargaDias }));
+  if (u.retiradas.length) l.push(interpolar(t.retiradas, { n: u.retiradas.length }));
   if (cumplimiento && cumplimiento.totalConFecha > 0) {
     const c = cumplimiento;
     l.push(
-      `- Cumplimiento: **${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardías** (de ${c.totalConFecha} con fecha)`
+      interpolar(t.cumplimiento, { aTiempo: c.aTiempo, adelantadas: c.adelantadas, tardias: c.tardias, total: c.totalConFecha })
     );
   }
   return l;
@@ -779,82 +789,82 @@ export function informeMarkdown(
   realizadaAt?: string | null,
   nombreMundo: (dominio: string) => string = (d) => d,
   /** AUD-09 M04: el acta del cierre (la foto). Sin ella no hay acta que pintar. */
-  acta?: ActaCierre | null
+  acta?: ActaCierre | null,
+  idioma: Locale = LOCALE_BASE
 ): string {
+  const t = elegir(ANALYTICS_INFORME, idioma).md;
   const u = a.universal;
   const l: string[] = [];
-  l.push(`# Análisis de ${nombre}`);
+  l.push(interpolar(t.titulo, { nombre }));
   l.push("");
   if (realizadaAt) {
     // AUD-09 M04: el acta sale de la instantánea guardada al cerrar; lo que se
     // calcula hoy es el ESTADO ACTUAL y ya no se presenta como acta.
     if (acta) l.push(...actaMarkdown(acta, nombreMundo));
-    l.push("## Estado actual");
-    l.push(`- Idea realizada el ${realizadaAt.slice(0, 10)}`);
+    l.push(t.estadoActual);
+    l.push(interpolar(t.ideaRealizada, { fecha: realizadaAt.slice(0, 10) }));
     l.push(
-      `- Acciones hoy: **${u.accionesVigente.hechas} de ${u.accionesVigente.total}**` +
+      interpolar(t.accionesHoy, { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total }) +
         (u.accionesVigente.total > 0
-          ? ` (${Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100)}%)`
+          ? interpolar(t.pct, { pct: Math.round((u.accionesVigente.hechas / u.accionesVigente.total) * 100) })
           : "")
     );
     // AUD-09 M37: solo los mundos con su plan (un mundo solo abierto no es "0 de 0").
     for (const m of a.mundos.filter((x) => x.universal.ciclosDePlan > 0)) {
       const v = m.universal.accionesVigente;
-      const pctM = v.total > 0 ? ` (${Math.round((v.hechas / v.total) * 100)}%)` : "";
-      const estado = m.completadoAt ? `completado el ${m.completadoAt.slice(0, 10)}` : "abierto";
-      l.push(`- ${nombreMundo(m.dominio)}: **${v.hechas} de ${v.total}**${pctM}, ${estado}`);
+      const pctM = v.total > 0 ? interpolar(t.pct, { pct: Math.round((v.hechas / v.total) * 100) }) : "";
+      const estado = m.completadoAt ? interpolar(t.mundoCompletadoEl, { fecha: m.completadoAt.slice(0, 10) }) : t.mundoAbierto;
+      l.push(interpolar(t.mundoLinea, { mundo: nombreMundo(m.dominio), hechas: v.hechas, total: v.total, pct: pctM, estado }));
     }
     if (!acta && a.cierreMotivo) {
       l.push("");
-      l.push("### Por qué la cerraste aquí");
+      l.push(t.porQueLaCerraste);
       l.push(`> ${a.cierreMotivo.replace(/\s+/g, " ").trim()}`);
     }
     l.push("");
   }
-  l.push("## Lo que construiste");
-  l.push(`- Duración total: **${u.duracionTotalDias} días**`);
+  l.push(t.loQueConstruiste);
+  l.push(interpolar(t.duracionTotal, { n: u.duracionTotalDias }));
   // AUD-09 M02: X de N del MISMO ciclo (antes mezclaba las hechas de todos los
   // ciclos con el total del vigente: "22 de 25").
-  l.push(`- Acciones completadas: **${u.accionesVigente.hechas}** de **${u.accionesVigente.total}** activas`);
-  l.push(`- Ritmo: **${u.ritmoAccionesPorSemana} acciones por semana**`);
-  l.push(`- Racha más larga: **${u.rachaMasLargaDias} días**`);
-  l.push(`- Ciclos de plan: **${u.ciclosDePlan}** · Mundos: **${u.mundos}**`);
+  l.push(interpolar(t.accionesCompletadas, { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total }));
+  l.push(interpolar(t.ritmo, { n: u.ritmoAccionesPorSemana }));
+  l.push(interpolar(t.racha, { n: u.rachaMasLargaDias }));
+  l.push(interpolar(t.ciclosYMundos, { ciclos: u.ciclosDePlan, mundos: u.mundos }));
   // Gestor de estados: las retiradas se nombran aparte, con su porqué en la voz
   // del usuario. No son fracaso ni pendiente: son una decisión que cuenta.
   if (u.retiradas.length) {
     l.push("");
-    l.push(`### Retiradas (no aplican): ${u.retiradas.length}`);
+    l.push(interpolar(t.retiradasTitulo, { n: u.retiradas.length }));
     for (const r of u.retiradas) {
       l.push(`- ${r.texto}${r.motivo ? ` (${r.motivo.replace(/\s+/g, " ").trim()})` : ""}`);
     }
   }
   if (u.duracionPorEtapa.length) {
     l.push("");
-    l.push("### Duración real por etapa");
-    for (const e of u.duracionPorEtapa) l.push(`- Etapa ${e.etapa}: ${e.dias} días`);
+    l.push(t.duracionPorEtapa);
+    for (const e of u.duracionPorEtapa) l.push(interpolar(t.etapaDias, { etapa: e.etapa, dias: e.dias }));
   }
   if (a.cumplimiento) {
     const c = a.cumplimiento;
     l.push("");
-    l.push("## Cumplimiento (comparado con tus fechas)");
-    l.push(`- A tiempo: **${c.aTiempo}** (${c.pctATiempo}%)`);
-    l.push(`- Adelantadas: **${c.adelantadas}** (${c.pctAdelantadas}%)`);
-    l.push(`- Tardías: **${c.tardias}** (${c.pctTardias}%)`);
+    l.push(t.cumplimientoTitulo);
+    l.push(interpolar(t.aTiempo, { n: c.aTiempo, pct: c.pctATiempo }));
+    l.push(interpolar(t.adelantadas, { n: c.adelantadas, pct: c.pctAdelantadas }));
+    l.push(interpolar(t.tardias, { n: c.tardias, pct: c.pctTardias }));
     const signo = c.desviacionMediaDias > 0 ? "+" : "";
-    l.push(`- Desviación media sobre tu plan vigente: **${signo}${c.desviacionMediaDias} días**`);
+    l.push(interpolar(t.desviacionVigente, { signo, dias: c.desviacionMediaDias }));
     if (c.replanificaciones > 0) {
       // Capa de honestidad: UNA línea contra el plan inicial (informativa, sin
       // castigo). El cumplimiento oficial mide contra el plan vigente.
       const signoIni = c.desviacionVsInicialDias > 0 ? "+" : "";
-      l.push(
-        `- Frente a tu plan inicial: **${signoIni}${c.desviacionVsInicialDias} días** de desviación media · **${c.replanificaciones}** replanificaciones.`
-      );
+      l.push(interpolar(t.frentePlanInicial, { signo: signoIni, dias: c.desviacionVsInicialDias, n: c.replanificaciones }));
       l.push("");
-      l.push("Replanificar es parte del método. Tu plan vigente asume tu ritmo real; ajustar el mapa no es fallar.");
+      l.push(t.replanificarEsMetodo);
     }
   }
   l.push("");
-  l.push("## Hitos");
+  l.push(t.hitos);
   for (const h of a.hitos) l.push(`- ${h.fecha.slice(0, 10)} · ${h.etiqueta}`);
   l.push("");
   return l.join("\n");

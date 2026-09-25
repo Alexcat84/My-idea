@@ -11,6 +11,11 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { DOCUMENTOS_RUTA } from "@/lib/i18n/mensajes/documentosRuta";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { actasVigentes } from "@/lib/acta";
 import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
@@ -106,17 +111,20 @@ const aAccion = (i: FilaAccion): AccionExpediente => ({
 
 async function generarDocumentos(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(DOCUMENTOS_RUTA, idioma);
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   const { data: sesionesRaw, error: errSesiones } = await supabase
@@ -175,7 +183,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const dominio = doc.slice("reporte:".length);
     const ciclosMundo = ciclosDeDominio(dominio);
     if (ciclosMundo.length === 0) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
@@ -193,9 +201,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
 
     const nombreDom = nombreMundo(dominio);
     return NextResponse.json({
-      titulo: `Reporte de ${nombreDom}`,
+      titulo: interpolar(t.tituloReporte, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, `Reporte de ${nombreDom}`),
+      archivo: nombreArchivo(nombre, interpolar(t.tituloReporte, { mundo: nombreDom })),
       markdown: reporteMundoMarkdown({
         nombreIdea: nombre,
         nombreMundo: nombreDom,
@@ -215,7 +223,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // Solo los tres mundos de protección y solo con plan: el índice no lo ofrece
     // en ningún otro caso, así que llegar aquí sin eso es una clave inventada.
     if (!esMundoProteccion(dominio) || ciclosDeDominio(dominio).length === 0) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     const COLS_REGISTRO = "id, plan_id, texto, etapa, orden, estado, protege_item, protege_nodos, deteccion, probabilidad, dolor, camino";
     const leerRegistro = (cols: string) =>
@@ -225,7 +233,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     if (errRegistro) ({ data: filasMundo, error: errRegistro } = await leerRegistro(COLS_REGISTRO.replace(", protege_nodos", "")));
     if (errRegistro) {
       // Fallar ruidoso (BANCO §9): sin registro a medias ni plantilla.
-      return NextResponse.json({ error: "no pudimos leer tu registro; intenta de nuevo en un momento" }, { status: 500 });
+      return NextResponse.json({ error: t.noPudimosLeerRegistro }, { status: 500 });
     }
     // Las actividades del núcleo con su #N, del MISMO armador que usó el
     // enlazador: pantalla, papel y enlace comparten numeración.
@@ -250,11 +258,11 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const nombreDom = nombreMundo(dominio);
     const generado = new Date().toISOString();
     return NextResponse.json({
-      titulo: `Registro de ${nombreDom}`,
+      titulo: interpolar(t.tituloRegistro, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, `Registro de ${nombreDom}`),
+      archivo: nombreArchivo(nombre, interpolar(t.tituloRegistro, { mundo: nombreDom })),
       markdown: [
-        `> ${nombre} · Registro de ${nombreDom} · ${fechaHumanaCorta(generado)}`,
+        interpolar(t.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado) }),
         "",
         registroMarkdown(nombreDom, entradas),
       ].join("\n"),
@@ -268,9 +276,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // (nombre de cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada.
     const hayMundos = proyectoTieneMundos(entradas);
     return NextResponse.json({
-      titulo: "Tu bitácora",
+      titulo: t.tituloBitacora,
       nombre,
-      archivo: nombreArchivo(nombre, "Tu bitacora"),
+      archivo: nombreArchivo(nombre, t.archivoBitacora),
       markdown: bitacoraMarkdown(nombre, entradas, generado, undefined, (e) =>
         etiquetaEspacio(e.dominio, hayMundos, nombreMundo),
       ),
@@ -324,9 +332,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
         : null,
     };
     return NextResponse.json({
-      titulo: "Análisis del proyecto",
+      titulo: t.tituloAnalisis,
       nombre,
-      archivo: nombreArchivo(nombre, "Analisis del proyecto"),
+      archivo: nombreArchivo(nombre, t.archivoAnalisis),
       markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null),
       papel: { analisis },
     });
@@ -335,7 +343,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   if (doc !== CLAVE_EXPEDIENTE) {
     const titulado = titulosDeCiclos(ciclos).find(({ ciclo }) => `ciclo:${ciclo.planId}` === doc);
     if (!titulado) {
-      return NextResponse.json({ error: "documento no encontrado" }, { status: 404 });
+      return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     return NextResponse.json({
       titulo: titulado.titulo,
@@ -439,16 +447,21 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
         accionesCumplidas: u.accionesVigente.hechas,
         hitos: analytics.hitos
           .filter((h) => h.tipo !== "accion")
-          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta })),
+          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? t.hitoRealizado : h.etiqueta })),
         loQueMovio: camino.loQueMovio,
-        loQuePendiente: `Quedan ${Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas)} acciones por delante${u.retiradas.length ? ` y ${u.retiradas.length} que retiraste con su motivo` : ""}. Nada se borró: siguen en tu expediente.`,
+        loQuePendiente: u.retiradas.length
+          ? interpolar(t.loQuePendienteConRetiradas, {
+              n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas),
+              retiradas: u.retiradas.length,
+            })
+          : interpolar(t.loQuePendiente, { n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas) }),
       }
     : null;
 
   return NextResponse.json({
-    titulo: "Expediente completo",
+    titulo: t.tituloExpediente,
     nombre,
-    archivo: nombreArchivo(nombre, "Expediente completo"),
+    archivo: nombreArchivo(nombre, t.tituloExpediente),
     markdown,
     papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });

@@ -17,16 +17,19 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { ElegirPotenciador } from "./ElegirPotenciador";
+import { elegir } from "@/lib/i18n/config";
+import { POTENCIADORES } from "@/lib/i18n/mensajes/potenciadores";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
 
-function Cabecera({ titulo }: { titulo: string }) {
+function Cabecera({ titulo, misIdeas }: { titulo: string; misIdeas: string }) {
   return (
     <header className="sticky top-0 z-30 flex h-[58px] items-center gap-3 border-b border-hairline px-5 sm:px-6" style={{ background: "rgba(0,0,0,0.82)", backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)" }}>
       <Link href="/ideas" className="text-[13px] text-dim hover:text-ink">
-        Mis ideas /
+        {misIdeas}
       </Link>
       <span className="text-[14.5px] font-semibold">{titulo}</span>
     </header>
@@ -39,6 +42,7 @@ export default async function Potenciadores({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sp = await searchParams;
+  const t = elegir(POTENCIADORES, await idiomaDeCookies());
   const ideaId = typeof sp.idea === "string" ? sp.idea : null;
 
   const supabase = await createClient();
@@ -55,7 +59,7 @@ export default async function Potenciadores({
     if (!proyecto) redirect("/potenciadores");
     return (
       <div className="flex min-h-full flex-1 flex-col">
-        <Cabecera titulo="Potenciar" />
+        <Cabecera titulo={t.titulo} misIdeas={t.misIdeas} />
         <main className="mx-auto flex w-full max-w-4xl flex-1 flex-col px-4 py-10 sm:px-6">
           <ElegirPotenciador ideaId={ideaId} />
         </main>
@@ -69,22 +73,22 @@ export default async function Potenciadores({
     .select("id, titulo, entrada_original")
     .order("created_at", { ascending: false });
   const ideas = ((proyectos ?? []) as Array<{ id: string; titulo: string | null; entrada_original: string }>).map(
-    (p) => ({ id: p.id, nombre: (p.titulo ?? p.entrada_original ?? "Idea sin título").slice(0, 90) })
+    (p) => ({ id: p.id, nombre: (p.titulo ?? p.entrada_original ?? t.ideaSinTitulo).slice(0, 90) })
   );
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <Cabecera titulo="Potenciar" />
+      <Cabecera titulo={t.titulo} misIdeas={t.misIdeas} />
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10 sm:px-6">
-        <h1 className="text-2xl font-bold tracking-tight">¿Qué idea quieres potenciar?</h1>
+        <h1 className="text-2xl font-bold tracking-tight">{t.elegirIdea.titulo}</h1>
         {ideas.length === 0 ? (
           <p className="mt-3 text-[15px] text-dim">
-            Los potenciadores se suman a una idea. Cuando tengas la primera, aquí podrás elegirla.
+            {t.elegirIdea.sinIdeas}
           </p>
         ) : (
           <>
             <p className="mt-2 text-[15px] leading-relaxed text-dim">
-              Elige una y te llevo a sus potenciadores.
+              {t.elegirIdea.texto}
             </p>
             {/* Las filas hablan el MISMO idioma visual que la lista normal de
                 /ideas (mismo contenedor, mismo cuerpo, misma pista): este es un
@@ -104,7 +108,7 @@ export default async function Potenciadores({
                         <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
                       </svg>
                     </div>
-                    <p className="mt-2 text-xs text-dim">Añádele un mundo o revisa sus potenciadores.</p>
+                    <p className="mt-2 text-xs text-dim">{t.elegirIdea.pista}</p>
                   </Link>
                 </li>
               ))}

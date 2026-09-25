@@ -11,6 +11,12 @@ import type { ActaCierre } from "@/lib/acta";
 import type { Analytics } from "@/lib/analytics";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { fechaHumanaCorta } from "@/lib/fechas";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { decimal } from "@/lib/i18n/formato";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 import { GanttCumplimiento } from "./GanttCumplimiento";
 import { MapaHitos } from "./MapaHitos";
 import { Acordeon } from "./Acordeon";
@@ -36,8 +42,6 @@ interface Respuesta {
   analytics: Analytics;
   informe_md: string;
 }
-
-const ERROR = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
 
 /** El nombre de cara de un mundo (P4: las marcas del carril se etiquetan así). */
 const nombreDeMundo = (dominio: string): string =>
@@ -79,6 +83,9 @@ export function AnalisisProyecto({
   /** el nombre humano del espacio scopeado (el catálogo lo resuelve el llamador). */
   nombreEspacio?: string;
 }) {
+  const idioma = useIdioma();
+  const tx = elegir(ANALISIS, idioma);
+  const t = tx.proyecto;
   const [datos, setDatos] = useState<Respuesta | null>(null);
   const [error, setError] = useState<string | null>(null);
   const esCore = !dominio || dominio === "core";
@@ -89,18 +96,18 @@ export function AnalisisProyecto({
       try {
         const res = await fetch(`/api/project/${projectId}/analisis`);
         if (!res.ok) {
-          if (vivo) setError(ERROR);
+          if (vivo) setError(t.error);
           return;
         }
         if (vivo) setDatos((await res.json()) as Respuesta);
       } catch {
-        if (vivo) setError("no pudimos cargar tu análisis; revisa tu internet e intenta de nuevo");
+        if (vivo) setError(t.errorConexion);
       }
     })();
     return () => {
       vivo = false;
     };
-  }, [projectId]);
+  }, [projectId, t.error, t.errorConexion]);
 
   // "Todo separado" (T4): la capa que se pinta es la del ESPACIO en foco — el
   // núcleo, o un mundo de analytics.mundos[dominio]. El mundo trae su capa
@@ -116,8 +123,8 @@ export function AnalisisProyecto({
   }, [datos, esCore, mundo]);
 
   if (error) return <p className="text-sm text-warn">{error}</p>;
-  if (!datos) return <p className="text-dim">Calculando tu análisis…</p>;
-  if (!esCore && !mundo) return <p className="text-sm text-warn">No encontramos el análisis de este espacio.</p>;
+  if (!datos) return <p className="text-dim">{t.calculando}</p>;
+  if (!esCore && !mundo) return <p className="text-sm text-warn">{t.sinEspacio}</p>;
 
   const a = datos.analytics;
   // El núcleo pinta su capa; un mundo pinta la suya (universal + cumplimiento del
@@ -134,59 +141,65 @@ export function AnalisisProyecto({
   // muestra el estado actual y se llama así.
   const acta = realizadaAt ? datos.actas?.[esCore ? "core" : (dominio as string)] ?? null : null;
   const hitos = esCore ? a.hitos : [];
-  const nombreEtapa = (n: number) => titulos[n] ?? `Etapa ${n}`;
+  const nombreEtapa = (n: number) => titulos[n] ?? interpolar(tx.comun.etapaN, { n });
 
   return (
     <div className="flex flex-col gap-8">
       <button onClick={onVolver} className="self-start text-sm text-dim hover:text-ink">
-        ← Volver
+        {t.volver}
       </button>
 
       {/* Fase 4.0 §8: el acta de cierre encabeza el análisis de un proyecto
           ya cerrado: estado final y el porqué, en la voz del usuario. */}
       {realizadaAt && acta && (
         <section className="rounded-panel border border-done/40 bg-surface p-5">
-          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Acta de cierre</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">{t.actaDeCierre}</p>
           <p className="mt-2 text-[14px]">
-            Cerrado el {fechaHumanaCorta(acta.cerrada_at)} con{" "}
-            <span className="font-semibold">
-              {acta.instantanea.acciones.hechas} de {acta.instantanea.acciones.total}
-            </span>{" "}
-            acciones. Lo que quedó pendiente sigue en tu historia, tal cual.
+            {rico(
+              interpolar(t.actaCerrado, {
+                fecha: fechaHumanaCorta(acta.cerrada_at),
+                hechas: acta.instantanea.acciones.hechas,
+                total: acta.instantanea.acciones.total,
+              }),
+              { b: (contenido) => <span className="font-semibold">{contenido}</span> }
+            )}
           </p>
           {acta.cierre_motivo && (
             <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
-              «{acta.cierre_motivo}»
+              {interpolar(t.cita, { motivo: acta.cierre_motivo })}
             </blockquote>
           )}
           {(acta.instantanea.acciones.hechas !== u.accionesVigente.hechas ||
             acta.instantanea.acciones.total !== u.accionesVigente.total) && (
             <p className="mt-3 text-[12.5px] text-dim">
-              Estado actual: {u.accionesVigente.hechas} de {u.accionesVigente.total} acciones.
+              {interpolar(t.estadoActualLinea, { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total })}
             </p>
           )}
         </section>
       )}
       {realizadaAt && !acta && (
         <section className="rounded-panel border border-done/40 bg-surface p-5">
-          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">Estado actual</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">{t.estadoActual}</p>
           <p className="mt-2 text-[14px]">
-            Cerrado el {fechaHumanaCorta(realizadaAt)}. Hoy lleva{" "}
-            <span className="font-semibold">
-              {u.accionesVigente.hechas} de {u.accionesVigente.total}
-            </span>{" "}
-            acciones.
+            {rico(
+              interpolar(t.estadoCerrado, {
+                fecha: fechaHumanaCorta(realizadaAt),
+                hechas: u.accionesVigente.hechas,
+                total: u.accionesVigente.total,
+              }),
+              { b: (contenido) => <span className="font-semibold">{contenido}</span> }
+            )}
           </p>
           {cierreMotivo && (
             <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
-              «{cierreMotivo}»
+              {interpolar(t.cita, { motivo: cierreMotivo })}
             </blockquote>
           )}
         </section>
       )}
 
       <header className="flex flex-wrap items-center justify-between gap-4">
-        <h2 className="text-2xl font-bold tracking-tight sm:text-[28px]">Análisis de {nombre}</h2>
+        <h2 className="text-2xl font-bold tracking-tight sm:text-[28px]">{interpolar(tx.comun.analisisDe, { nombre })}</h2>
         {/* La descarga del informe vive en "Tus documentos" (centralizado): aquí
             ya no hay botón propio. */}
       </header>
@@ -201,7 +214,7 @@ export function AnalisisProyecto({
         titulo={
           <span className="flex items-center gap-2.5 text-[15px] font-semibold">
             <span aria-hidden className="h-2 w-2 rounded-full bg-accent" />
-            Tu viaje de un vistazo
+            {t.viajeDeUnVistazo}
           </span>
         }
       >
@@ -223,15 +236,16 @@ export function AnalisisProyecto({
           <div>
             {/* Cifras en color (azul piensa): en blanco no lucían. Medida sin juicio. */}
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <Tile valor={String(u.duracionTotalDias)} etiqueta="días de duración total" color="var(--accent)" />
-              <Tile valor={u.ritmoAccionesPorSemana.toFixed(1)} etiqueta="acciones por semana" color="var(--accent)" />
-              <Tile valor={String(u.rachaMasLargaDias)} etiqueta="días de racha más larga" color="var(--accent)" />
-              <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta="ciclos · mundos" color="var(--accent)" />
+              <Tile valor={String(u.duracionTotalDias)} etiqueta={t.diasDuracionTotal} color="var(--accent)" />
+              <Tile valor={decimal(idioma, u.ritmoAccionesPorSemana, 1)} etiqueta={t.accionesPorSemana} color="var(--accent)" />
+              <Tile valor={String(u.rachaMasLargaDias)} etiqueta={t.diasRacha} color="var(--accent)" />
+              <Tile valor={`${u.ciclosDePlan} · ${u.mundos}`} etiqueta={tx.comun.ciclosMundos} color="var(--accent)" />
             </div>
             {u.retiradas.length > 0 && (
               <p className="mt-3 text-[13px] text-dim">
-                Retiradas (no aplican): <span className="font-semibold text-ink">{u.retiradas.length}</span>. Decidiste que no
-                corren para esta idea; quedan en tu expediente con su motivo.
+                {rico(interpolar(t.retiradas, { n: u.retiradas.length }), {
+                  b: (contenido) => <span className="font-semibold text-ink">{contenido}</span>,
+                })}
               </p>
             )}
           </div>
@@ -241,7 +255,7 @@ export function AnalisisProyecto({
                 cerrada={Boolean(realizadaAt)}
                 hitos={hitos.map((h) => ({
                   fecha: h.fecha,
-                  nombre: h.tipo === "realizada" ? "Realizado" : h.etiqueta,
+                  nombre: h.tipo === "realizada" ? t.realizado : h.etiqueta,
                   cierre: h.tipo === "realizada",
                 }))}
               />
@@ -259,7 +273,7 @@ export function AnalisisProyecto({
           titulo={
             <span className="flex items-center gap-2.5 text-[15px] font-semibold">
               <span aria-hidden className="h-2 w-2 rounded-full bg-done" />
-              Tu ritmo y tu esfuerzo
+              {t.ritmoYEsfuerzo}
             </span>
           }
         >
@@ -279,19 +293,19 @@ export function AnalisisProyecto({
           titulo={
             <span className="flex items-center gap-2.5 text-[15px] font-semibold">
               <span aria-hidden className="h-2 w-2 rounded-full bg-warn" />
-              Cómo cumpliste tus fechas
+              {tx.comun.cumplisteFechas}
             </span>
           }
         >
           <div className="flex flex-col gap-5">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-              <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta="adelantadas" color="var(--done)" />
-              <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta="a tiempo" color="var(--accent)" />
-              <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta="tardías" color="var(--warn)" />
+              <TileCumpl valor={String(c.adelantadas)} sufijo={`${c.pctAdelantadas}%`} etiqueta={tx.comun.adelantadas} color="var(--done)" />
+              <TileCumpl valor={String(c.aTiempo)} sufijo={`${c.pctATiempo}%`} etiqueta={tx.comun.aTiempo} color="var(--accent)" />
+              <TileCumpl valor={String(c.tardias)} sufijo={`${c.pctTardias}%`} etiqueta={tx.comun.tardias} color="var(--warn)" />
               <TileCumpl
-                valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias.toFixed(1)}`}
-                sufijo="días"
-                etiqueta="desviación media"
+                valor={`${c.desviacionMediaDias > 0 ? "+" : ""}${decimal(idioma, c.desviacionMediaDias, 1)}`}
+                sufijo={t.dias}
+                etiqueta={t.desviacionMedia}
                 color="var(--accent)"
               />
             </div>
@@ -309,15 +323,15 @@ export function AnalisisProyecto({
                   </svg>
                 </span>
                 <p className="text-[13px] leading-relaxed text-dim [text-wrap:pretty]">
-                  Frente a tu plan inicial:{" "}
-                  <span className="font-semibold text-ink tabular-nums">
-                    {c.desviacionVsInicialDias > 0 ? "+" : ""}
-                    {c.desviacionVsInicialDias.toFixed(1)} días
-                  </span>{" "}
-                  de desviación media ·{" "}
-                  <span className="font-semibold text-ink tabular-nums">{c.replanificaciones}</span>{" "}
-                  replanificación{c.replanificaciones === 1 ? "" : "es"}. El cumplimiento se mide contra tu
-                  fecha vigente: replanificar es el control de cambios, no una tardanza.
+                  {rico(
+                    interpolar(t.frentePlanInicial, {
+                      signo: c.desviacionVsInicialDias > 0 ? "+" : "",
+                      dias: decimal(idioma, c.desviacionVsInicialDias, 1),
+                      n: c.replanificaciones,
+                      replanificaciones: plural(idioma, c.replanificaciones, t.replanificacion),
+                    }),
+                    { b: (contenido) => <span className="font-semibold text-ink tabular-nums">{contenido}</span> }
+                  )}
                 </p>
               </div>
             )}

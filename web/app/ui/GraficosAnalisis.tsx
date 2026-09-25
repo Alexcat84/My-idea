@@ -7,6 +7,11 @@
  * azul a tiempo, ámbar tardía; gris lo que falta. Espejo, nunca juez.
  */
 import { fechaHumanaCorta } from "@/lib/fechas";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { rico } from "@/lib/i18n/rico";
+import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 
 const VERDE = "#3FB950";
 const AZUL = "#4D7CFE";
@@ -38,12 +43,13 @@ export function Tile({ valor, etiqueta, color }: { valor: string; etiqueta: stri
 /** Reparto del cumplimiento: un gráfico CIRCULAR (dona) con los tres estados.
  * De todo lo que tenía fecha, qué parte fue adelantada / a tiempo / tardía. */
 export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo: number; adelantadas: number; tardias: number }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
   const total = aTiempo + adelantadas + tardias;
   if (total === 0) return null;
   const seg = [
-    { n: adelantadas, color: VERDE, label: "adelantadas" },
-    { n: aTiempo, color: AZUL, label: "a tiempo" },
-    { n: tardias, color: AMBAR, label: "tardías" },
+    { n: adelantadas, color: VERDE, label: t.adelantadas },
+    { n: aTiempo, color: AZUL, label: t.aTiempo },
+    { n: tardias, color: AMBAR, label: t.tardias },
   ];
   const R = 46;
   const CIRC = 2 * Math.PI * R;
@@ -52,7 +58,7 @@ export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo
   let offset = 0;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Cómo llegaste a cada fecha que te pusiste.">Reparto de tu cumplimiento</Titulo>
+      <Titulo nota={t.repartoNota}>{t.repartoTitulo}</Titulo>
       <div className="flex flex-wrap items-center gap-x-8 gap-y-5">
         <svg width="128" height="128" viewBox="0 0 128 128" className="shrink-0">
           <g transform="rotate(-90 64 64)">
@@ -81,7 +87,7 @@ export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo
             {total}
           </text>
           <text x="64" y="79" textAnchor="middle" fontSize="10.5" fill="#6F7076">
-            con fecha
+            {t.conFecha}
           </text>
         </svg>
         <div className="flex flex-col gap-3">
@@ -102,14 +108,16 @@ export function RepartoCumplimiento({ aTiempo, adelantadas, tardias }: { aTiempo
 /** Ritmo semana a semana: barras de acciones completadas por semana. Tus semanas
  * fuertes y las tranquilas, sin juicio. */
 export function RitmoSemanal({ series }: { series: Array<{ semana: number; hechas: number }> }) {
+  const tx = elegir(ANALISIS, useIdioma());
+  const t = tx.comun;
   const max = Math.max(1, ...series.map((s) => s.hechas));
   if (series.length === 0) return null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Acciones que cerraste cada semana.">Tu ritmo, semana a semana</Titulo>
+      <Titulo nota={t.ritmoNota}>{t.ritmoTitulo}</Titulo>
       <div className="flex items-end gap-1.5 overflow-x-auto" style={{ height: 120 }}>
         {series.map((s) => (
-          <div key={s.semana} className="flex min-w-[18px] flex-1 flex-col items-center gap-1.5" title={`Semana ${s.semana}: ${s.hechas}`}>
+          <div key={s.semana} className="flex min-w-[18px] flex-1 flex-col items-center gap-1.5" title={interpolar(tx.graficos.semanaHechas, { n: s.semana, hechas: s.hechas })}>
             <span className="text-[10px] tabular-nums text-dim">{s.hechas > 0 ? s.hechas : ""}</span>
             <div className="flex w-full items-end" style={{ height: 78 }}>
               <div
@@ -117,7 +125,7 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
                 style={{ height: `${(s.hechas / max) * 100}%`, minHeight: s.hechas > 0 ? 3 : 0, background: s.hechas > 0 ? VERDE : "rgba(255,255,255,0.06)" }}
               />
             </div>
-            <span className="text-[10px] tabular-nums text-dim">S{s.semana}</span>
+            <span className="text-[10px] tabular-nums text-dim">{interpolar(t.semanaCorta, { n: s.semana })}</span>
           </div>
         ))}
       </div>
@@ -130,6 +138,7 @@ export function RitmoSemanal({ series }: { series: Array<{ semana: number; hecha
  * completado y a qué ritmo se acerca al 100 %. Un área verde que sube: registro
  * y control de avance, sin una sola palabra de más. */
 export function AvanceAcumulado({ series, total }: { series: Array<{ semana: number; hechas: number }>; total: number }) {
+  const tx = elegir(ANALISIS, useIdioma());
   if (series.length === 0 || total === 0) return null;
   // Suma acumulada SIN reasignar durante el render (regla react-hooks/immutability):
   // cada punto suma lo suyo y lo previo. Series cortas (semanas): el costo no importa.
@@ -153,9 +162,11 @@ export function AvanceAcumulado({ series, total }: { series: Array<{ semana: num
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
       <div className="mb-4 flex items-baseline justify-between gap-3">
-        <p className="text-[13px] font-semibold">Tu avance acumulado</p>
+        <p className="text-[13px] font-semibold">{tx.comun.tuAvanceAcumulado}</p>
         <p className="text-[13px] tabular-nums" style={{ color: VERDE }}>
-          <span className="text-[22px] font-extrabold leading-none">{finalPct}%</span> cerrado
+          {rico(interpolar(tx.graficos.cerrado, { pct: finalPct }), {
+            b: (c) => <span className="text-[22px] font-extrabold leading-none">{c}</span>,
+          })}
         </p>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" className="block" style={{ maxHeight: 220 }}>
@@ -177,15 +188,15 @@ export function AvanceAcumulado({ series, total }: { series: Array<{ semana: num
         <path d={linea} fill="none" stroke={VERDE} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
         {pts.map((p, i) => (
           <circle key={i} cx={x(i)} cy={y(p.pct)} r={i === pts.length - 1 ? 5 : 2.5} fill={VERDE}>
-            <title>{`Semana ${p.semana}: ${Math.round(p.pct)}% cerrado`}</title>
+            <title>{interpolar(tx.graficos.semanaCerrado, { n: p.semana, pct: Math.round(p.pct) })}</title>
           </circle>
         ))}
         <text x={x(0)} y={H - 8} textAnchor="middle" fontSize="11" fill="#6F7076">
-          S{pts[0].semana}
+          {interpolar(tx.comun.semanaCorta, { n: pts[0].semana })}
         </text>
         {pts.length > 1 && (
           <text x={x(pts.length - 1)} y={H - 8} textAnchor="middle" fontSize="11" fill="#6F7076">
-            S{pts[pts.length - 1].semana}
+            {interpolar(tx.comun.semanaCorta, { n: pts[pts.length - 1].semana })}
           </text>
         )}
       </svg>
@@ -202,11 +213,12 @@ export function EsfuerzoPorEtapa({
   series: Array<{ etapa: number; total: number; hechas: number }>;
   nombreEtapa: (n: number) => string;
 }) {
+  const tx = elegir(ANALISIS, useIdioma());
   const maxTotal = Math.max(1, ...series.map((s) => s.total));
   if (series.length === 0) return null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="Cuántas acciones tiene cada etapa y cuántas cerraste.">Dónde pusiste el esfuerzo</Titulo>
+      <Titulo nota={tx.comun.esfuerzoNota}>{tx.comun.esfuerzoTitulo}</Titulo>
       <div className="flex flex-col gap-3.5">
         {series.map((s) => (
           <div key={s.etapa}>
@@ -216,7 +228,9 @@ export function EsfuerzoPorEtapa({
                 {nombreEtapa(s.etapa)}
               </span>
               <span className="shrink-0 text-[12.5px] tabular-nums text-dim">
-                <span className="font-semibold text-ink">{s.hechas}</span> de {s.total}
+                {rico(interpolar(tx.graficos.hechasDeTotal, { hechas: s.hechas, total: s.total }), {
+                  b: (c) => <span className="font-semibold text-ink">{c}</span>,
+                })}
               </span>
             </div>
             <div className="h-[9px] overflow-hidden rounded-full bg-white/[0.08]" style={{ width: `${(s.total / maxTotal) * 100}%`, minWidth: 40 }}>
@@ -247,6 +261,8 @@ export function ProyeccionCierre({
   ritmoPorSemana: number;
   cerrada: boolean;
 }) {
+  const idioma = useIdioma();
+  const tx = elegir(ANALISIS, idioma);
   if (cerrada || total === 0) return null;
   const restantes = total - hechas;
   if (restantes <= 0) return null; // ya está todo cerrado; la barra de avance lo dice
@@ -261,16 +277,26 @@ export function ProyeccionCierre({
   const fechaCierre = puede ? fechaHumanaCorta(new Date(Date.now() + semanasRest * 7 * 86_400_000).toISOString()) : null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="A tu ritmo actual, cuándo cerrarías lo que falta. Es una estimación: si aceleras, se adelanta.">Proyección de cierre</Titulo>
+      <Titulo nota={tx.graficos.proyeccionNota}>{tx.comun.proyeccionTitulo}</Titulo>
       {puede ? (
         <>
           <p className="text-[26px] font-extrabold leading-none tracking-tight" style={{ color: VERDE }}>
             ~{fechaCierre}
           </p>
           <p className="mt-2 text-[13px] text-dim">
-            Faltan <span className="font-semibold text-ink tabular-nums">{restantes}</span> {restantes === 1 ? "acción" : "acciones"} · a{" "}
-            <span className="tabular-nums text-ink">{ritmoPorSemana}</span>/semana · ~
-            <span className="tabular-nums text-ink">{semanasRest}</span> {semanasRest === 1 ? "semana" : "semanas"}
+            {rico(
+              interpolar(tx.comun.faltan, {
+                restantes,
+                acciones: plural(idioma, restantes, tx.comun.accion),
+                ritmo: ritmoPorSemana,
+                semanas: semanasRest,
+                semanasPalabra: plural(idioma, semanasRest, tx.comun.semana),
+              }),
+              {
+                b: (c) => <span className="font-semibold text-ink tabular-nums">{c}</span>,
+                c: (c) => <span className="tabular-nums text-ink">{c}</span>,
+              }
+            )}
           </p>
           <div className="mt-4 flex h-3 w-full overflow-hidden rounded-full bg-white/[0.06]">
             <div style={{ width: `${pctHecho}%`, background: VERDE }} />
@@ -278,18 +304,12 @@ export function ProyeccionCierre({
           </div>
         </>
       ) : (
-        <p className="text-[13.5px] text-dim">Cuando cierres tu primera acción podremos estimar tu fecha de cierre.</p>
+        <p className="text-[13.5px] text-dim">{tx.graficos.sinRitmo}</p>
       )}
     </div>
   );
 }
 
-const LABEL_ESTADO: Record<string, string> = {
-  hecho: "hecha",
-  en_proceso: "en proceso",
-  empezado: "apenas empezada",
-  pendiente: "sin empezar",
-};
 /** Verde pleno = hecha; verdes cada vez más tenues = en proceso / empezada
  * (progresión, como los iconos de estado); gris = sin empezar (lo que falta). */
 const COLOR_ESTADO: Record<string, string> = {
@@ -303,11 +323,14 @@ const COLOR_ESTADO: Record<string, string> = {
  * activa (hecha → en proceso → empezada → sin empezar). El "cómo van" de un
  * vistazo, sin números en prosa. */
 export function DistribucionEstados({ dist }: { dist: Array<{ estado: string; n: number }> }) {
+  const t = elegir(ANALISIS, useIdioma()).comun;
+  // La etiqueta de cada estado sale del catálogo (el estado es el dato).
+  const LABEL_ESTADO: Record<string, string> = t.estados;
   const total = dist.reduce((s, d) => s + d.n, 0);
   if (total === 0) return null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
-      <Titulo nota="En qué estado está cada acción activa ahora mismo.">Cómo van tus acciones</Titulo>
+      <Titulo nota={t.distribucionNota}>{t.distribucionTitulo}</Titulo>
       <div className="flex h-4 w-full gap-[2px] overflow-hidden rounded-full">
         {dist.map((d) => (
           <div

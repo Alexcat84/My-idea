@@ -18,6 +18,11 @@
  * calendario se recalculó distinto.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { CAPACIDAD_SEMANAL, MODO_CAMINO, PACK_CLICKS_PACK, type CapacidadSemanal, type ModoCamino } from "@/lib/dbContract";
 import { ESPACIO_CORE, esEspacioCore } from "@/lib/espacios";
 import {
@@ -34,17 +39,20 @@ export const runtime = "nodejs";
 
 export async function PATCH(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
+  const t = elegir(SERVIDOR_PROYECTO, idioma).modo;
 
   let body: { modo_camino?: unknown; dominio?: unknown; capacidad_semanal?: unknown };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "cuerpo JSON inválido" }, { status: 400 });
+    return NextResponse.json({ error: r.cuerpoJsonInvalido }, { status: 400 });
   }
   if (body.modo_camino !== undefined) {
     if (typeof body.modo_camino !== "string" || !(MODO_CAMINO as readonly string[]).includes(body.modo_camino)) {
       return NextResponse.json(
-        { error: `modo_camino inválido; usa uno de: ${MODO_CAMINO.join(", ")}` },
+        { error: interpolar(t.modoInvalido, { opciones: MODO_CAMINO.join(", ") }) },
         { status: 400 }
       );
     }
@@ -55,13 +63,13 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
       !(CAPACIDAD_SEMANAL as readonly string[]).includes(body.capacidad_semanal)
     ) {
       return NextResponse.json(
-        { error: `capacidad_semanal inválida; usa una de: ${CAPACIDAD_SEMANAL.join(", ")}` },
+        { error: interpolar(t.capacidadInvalida, { opciones: CAPACIDAD_SEMANAL.join(", ") }) },
         { status: 400 }
       );
     }
   }
   if (body.modo_camino === undefined && body.capacidad_semanal === undefined) {
-    return NextResponse.json({ error: "nada que actualizar: manda modo_camino y/o capacidad_semanal" }, { status: 400 });
+    return NextResponse.json({ error: t.nadaQueActualizar }, { status: 400 });
   }
   const nuevo = body.modo_camino as ModoCamino | undefined;
   const nuevaCapacidad = body.capacidad_semanal as CapacidadSemanal | undefined;
@@ -70,7 +78,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   // tiene CHECK a propósito (la lista de mundos crece con cada integración y una
   // migración por mundo sería frágil): la puerta vive aquí.
   if (!esEspacioCore(dominio) && !(PACK_CLICKS_PACK as readonly string[]).includes(dominio)) {
-    return NextResponse.json({ error: "ese espacio no existe" }, { status: 400 });
+    return NextResponse.json({ error: t.espacioNoExiste }, { status: 400 });
   }
 
   const supabase = await createClient();
@@ -78,11 +86,11 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   // Modo actual del espacio (dual-read del core en la transición).

@@ -10,6 +10,8 @@ import { describe, expect, it } from "vitest";
 
 const pagina = readFileSync(path.join(__dirname, "page.tsx"), "utf-8");
 const fila = readFileSync(path.join(__dirname, "..", "ui", "PotenciaTuIdea.tsx"), "utf-8");
+// i18n F2: los textos de la fila viven en su catálogo; la fila los usa por clave.
+const catalogoFila = readFileSync(path.join(__dirname, "..", "..", "lib", "i18n", "mensajes", "potenciaTuIdea.ts"), "utf-8");
 
 describe("contrato: /potenciadores redirige, no duplica", () => {
   it("con idea elegida, la pantalla enfocada renderiza LA MISMA fila (ElegirPotenciador → PotenciaTuIdea)", () => {
@@ -38,6 +40,11 @@ describe("contrato: /potenciadores redirige, no duplica", () => {
     expect(pagina).not.toContain("créditos");
     expect(pagina).not.toContain("diagnóstico");
     expect(pagina).not.toContain("Tus Números");
+    // i18n F2: los textos de la página viven en su catálogo; la parrilla tampoco crece ahí.
+    const catalogo = readFileSync(path.join(__dirname, "..", "..", "lib", "i18n", "mensajes", "potenciadores.ts"), "utf-8");
+    for (const prohibido of ["promesa", "créditos", "diagnóstico", "Tus Números", "Explóralo gratis", "Exploralo gratis", "Se paga por uso"]) {
+      expect(catalogo).not.toContain(prohibido);
+    }
   });
 
   it("el lenguaje muerto no vuelve a NINGUNA de las dos superficies", () => {
@@ -50,7 +57,9 @@ describe("contrato: /potenciadores redirige, no duplica", () => {
 
   it("la fuente única (PotenciaTuIdea) conserva el catálogo vigente", () => {
     expect(fila).toContain("PRECIOS.mundo_activar");
-    expect(fila).toContain("diagnóstico gratis");
-    expect(fila).toContain("Incluido con tu plan");
+    expect(catalogoFila).toContain("diagnóstico gratis");
+    expect(fila).toContain("t.empiezaDiagnostico");
+    expect(catalogoFila).toContain("Incluido con tu plan");
+    expect(fila).toContain("t.tusNumerosNota");
   });
 });

@@ -40,6 +40,8 @@ import {
   type ValorNumerico,
   escenariosCapacidad,
 } from "./calculadora";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { MOTOR_NUMEROS } from "./i18n/mensajes/motorNumeros";
 
 // Politica del fundador (2026-07-17). Constantes con nombre a proposito:
 // se mueven aqui, con datos de la beta, sin tocar la logica.
@@ -127,7 +129,8 @@ function valorCampo(numeros: NumerosProyecto, campo: string): ValorNumerico | nu
 export function construirPalancas(
   numeros: NumerosProyecto,
   tipoOferta?: TipoOferta,
-  opciones?: { pisoMargenSano?: number; testPrecioSano?: number }
+  opciones?: { pisoMargenSano?: number; testPrecioSano?: number },
+  idioma: Locale = LOCALE_BASE
 ): Palancas {
   const piso = opciones?.pisoMargenSano ?? PISO_MARGEN_SANO;
   const test = opciones?.testPrecioSano ?? TEST_PRECIO_SANO;
@@ -214,8 +217,7 @@ export function construirPalancas(
       clave: "volumen",
       modo,
       bloqueada: true,
-      razonBloqueo:
-        "Con el margen en rojo, el volumen agranda la pérdida. Primero arregla el margen; cuando esté en verde, aquí va cuántas unidades al mes necesitas para tu meta.",
+      razonBloqueo: elegir(MOTOR_NUMEROS, idioma).palancas.volumenBloqueado,
       meta: null,
       actual: null,
       recomendada: false,

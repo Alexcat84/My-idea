@@ -8,7 +8,10 @@
  * cuando la razón existe. La regla: el genérico SOLO cuando el servidor no dio
  * razón. Sin imports de servidor: lo usan los componentes del cliente.
  */
-export const ERROR_GENERICO = "algo se atoró de nuestro lado; intenta de nuevo en un momento";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
+
+export const ERROR_GENERICO = elegir(SERVIDOR_COMUN, LOCALE_BASE).errorGenerico;
 
 export type Rechazo =
   | { tipo: "mensaje"; mensaje: string }
@@ -23,7 +26,8 @@ interface CuerpoRechazo {
   limite?: unknown;
 }
 
-export async function leerRechazo(res: Response): Promise<Rechazo> {
+export async function leerRechazo(res: Response, idioma: Locale = LOCALE_BASE): Promise<Rechazo> {
+  const generico = elegir(SERVIDOR_COMUN, idioma).errorGenerico;
   let cuerpo: CuerpoRechazo | null;
   try {
     cuerpo = (await res.json()) as CuerpoRechazo | null;
@@ -32,10 +36,10 @@ export async function leerRechazo(res: Response): Promise<Rechazo> {
   }
   const error = typeof cuerpo?.error === "string" && cuerpo.error.trim() ? cuerpo.error : null;
   if (cuerpo?.segundo_factor_requerido === true) {
-    return { tipo: "segundo_factor", mensaje: error ?? ERROR_GENERICO };
+    return { tipo: "segundo_factor", mensaje: error ?? generico };
   }
   const conRazon = CON_RAZON.has(res.status) || (res.status === 400 && typeof cuerpo?.limite === "number");
-  return { tipo: "mensaje", mensaje: error && conRazon ? error : ERROR_GENERICO };
+  return { tipo: "mensaje", mensaje: error && conRazon ? error : generico };
 }
 
 /** Lleva al desafío del doble factor (la pantalla de login lo atiende) y, al

@@ -6,6 +6,9 @@
  * el árbol). RLS garantiza que solo se ve lo propio.
  */
 import { NextResponse } from "next/server";
+import { elegir } from "@/lib/i18n/config";
+import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
 import { obtenerCapacidadesPorEspacio, obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { ESPACIO_CORE } from "@/lib/espacios";
@@ -16,20 +19,21 @@ import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 import { estadoEntrevista } from "@/lib/entrevistaAbierta";
 
-export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
+  const r = elegir(RUTAS, idiomaDeRequest(request));
 
   const supabase = await createClient();
   const {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) {
-    return NextResponse.json({ error: "no autenticado" }, { status: 401 });
+    return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
 
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
-    return NextResponse.json({ error: "idea no encontrada" }, { status: 404 });
+    return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
 
   const { data: sesiones } = await supabase

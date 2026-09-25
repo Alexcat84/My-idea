@@ -10,6 +10,10 @@
  */
 import { Suspense, useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { LOGIN } from "@/lib/i18n/mensajes/acceso";
+import { rico } from "@/lib/i18n/rico";
 import { destinoPostLogin } from "@/lib/nextSeguro";
 import { validarPassword } from "@/lib/password";
 
@@ -33,6 +37,8 @@ function GlifoGoogle() {
 }
 
 function LoginForm() {
+  const idioma = useIdioma();
+  const t = elegir(LOGIN, idioma);
   const router = useRouter();
   const searchParams = useSearchParams();
   const enlaceVencido = searchParams.get("enlace") === "vencido";
@@ -64,15 +70,15 @@ function LoginForm() {
         setEstado((e) =>
           e.fase === "desafio"
             ? r.ok
-              ? { ...e, aviso: "Te enviamos un código a tu correo." }
-              : { ...e, error: d.error ?? "no pudimos enviar el código; intenta de nuevo" }
+              ? { ...e, aviso: t.avisos.codigoEnviado }
+              : { ...e, error: d.error ?? t.errores.enviarCodigo }
             : e
         );
       })
       .catch(() => {
-        setEstado((e) => (e.fase === "desafio" ? { ...e, error: "no pudimos conectar; intenta de nuevo" } : e));
+        setEstado((e) => (e.fase === "desafio" ? { ...e, error: t.errores.conectar } : e));
       });
-  }, [estado]);
+  }, [estado, t]);
 
   // ── Entrar (correo + contraseña) ─────────────────────────────────────
   async function entrar(e: React.FormEvent) {
@@ -95,7 +101,7 @@ function LoginForm() {
         return;
       }
       if (!res.ok) {
-        setEstado({ fase: "form", modo: "entrar", error: data.error ?? "algo se atoró; intenta de nuevo" });
+        setEstado({ fase: "form", modo: "entrar", error: data.error ?? t.errores.atoro });
         return;
       }
       if (data.requiere2FA) {
@@ -110,7 +116,7 @@ function LoginForm() {
       );
       router.refresh();
     } catch {
-      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+      setEstado({ fase: "form", modo: "entrar", error: t.errores.conectarInternet });
     } finally {
       setEnviando(false);
     }
@@ -120,7 +126,7 @@ function LoginForm() {
   async function crear(e: React.FormEvent) {
     e.preventDefault();
     if (enviando) return;
-    const problema = validarPassword(password);
+    const problema = validarPassword(password, idioma);
     if (problema) {
       setEstado({ fase: "form", modo: "crear", error: problema });
       return;
@@ -140,17 +146,17 @@ function LoginForm() {
         return;
       }
       if (!res.ok) {
-        setEstado({ fase: "form", modo: "crear", error: data.error ?? "algo se atoró; intenta de nuevo" });
+        setEstado({ fase: "form", modo: "crear", error: data.error ?? t.errores.atoro });
         return;
       }
       if (data.yaExistia) {
         setPassword("");
-        setEstado({ fase: "form", modo: "entrar", error: "Ese correo ya tiene cuenta. Inicia sesión." });
+        setEstado({ fase: "form", modo: "entrar", error: t.errores.yaTieneCuenta });
         return;
       }
       setEstado({ fase: "revisa_correo", email });
     } catch {
-      setEstado({ fase: "form", modo: "crear", error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+      setEstado({ fase: "form", modo: "crear", error: t.errores.conectarInternet });
     } finally {
       setEnviando(false);
     }
@@ -160,7 +166,7 @@ function LoginForm() {
   async function olvide() {
     if (enviando) return;
     if (!email || !email.includes("@")) {
-      setEstado({ fase: "form", modo: "entrar", error: "Escribe tu correo arriba y toca de nuevo." });
+      setEstado({ fase: "form", modo: "entrar", error: t.errores.escribeCorreo });
       return;
     }
     setEnviando(true);
@@ -172,7 +178,7 @@ function LoginForm() {
       });
       setEstado({ fase: "reset_enviado", email });
     } catch {
-      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; intenta de nuevo" });
+      setEstado({ fase: "form", modo: "entrar", error: t.errores.conectar });
     } finally {
       setEnviando(false);
     }
@@ -188,9 +194,9 @@ function LoginForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
-      setEstado({ fase: "form", modo: "entrar", aviso: "Te reenviamos el correo de confirmación. Revisa tu bandeja." });
+      setEstado({ fase: "form", modo: "entrar", aviso: t.avisos.confirmacionReenviada });
     } catch {
-      setEstado({ fase: "form", modo: "entrar", error: "no pudimos conectar; intenta de nuevo" });
+      setEstado({ fase: "form", modo: "entrar", error: t.errores.conectar });
     } finally {
       setEnviando(false);
     }
@@ -214,13 +220,13 @@ function LoginForm() {
       });
       const data = await res.json();
       if (!res.ok) {
-        setEstado({ ...estado, error: data.error ?? "algo se atoró; intenta de nuevo" });
+        setEstado({ ...estado, error: data.error ?? t.errores.atoro });
         return;
       }
       router.push(destino);
       router.refresh();
     } catch {
-      setEstado({ ...estado, error: "no pudimos conectar; revisa tu internet e intenta de nuevo" });
+      setEstado({ ...estado, error: t.errores.conectarInternet });
     } finally {
       setEnviando(false);
     }
@@ -234,11 +240,11 @@ function LoginForm() {
       const data = await res.json().catch(() => ({}));
       setEstado(
         res.ok
-          ? { ...estado, aviso: "Código nuevo enviado a tu correo.", error: undefined }
-          : { ...estado, error: data.error ?? "no pudimos enviar el código; intenta de nuevo" }
+          ? { ...estado, aviso: t.avisos.codigoNuevo, error: undefined }
+          : { ...estado, error: data.error ?? t.errores.enviarCodigo }
       );
     } catch {
-      setEstado({ ...estado, error: "no pudimos conectar; intenta de nuevo" });
+      setEstado({ ...estado, error: t.errores.conectar });
     } finally {
       setEnviando(false);
     }
@@ -248,13 +254,12 @@ function LoginForm() {
   if (estado.fase === "revisa_correo") {
     return (
       <div className="text-center">
-        <p className="text-lg">Revisa tu correo</p>
+        <p className="text-lg">{t.revisaCorreo.titulo}</p>
         <p className="mt-3 text-sm text-dim">
-          Te enviamos un enlace a <span className="font-semibold text-ink">{estado.email}</span> para confirmar
-          tu cuenta. Ábrelo y quedas dentro. (Si no lo ves, revisa el spam.)
+          {rico(t.revisaCorreo.texto, { correo: () => <span className="font-semibold text-ink">{estado.email}</span> })}
         </p>
         <button onClick={() => setEstado({ fase: "form", modo: "entrar" })} className="mt-6 text-sm text-accent hover:opacity-80">
-          Volver
+          {t.volver}
         </button>
       </div>
     );
@@ -263,13 +268,12 @@ function LoginForm() {
   if (estado.fase === "reset_enviado") {
     return (
       <div className="text-center">
-        <p className="text-lg">Enlace enviado</p>
+        <p className="text-lg">{t.resetEnviado.titulo}</p>
         <p className="mt-3 text-sm text-dim">
-          Si <span className="font-semibold text-ink">{estado.email}</span> tiene cuenta, le llegó un enlace para
-          elegir una contraseña nueva. Revisa tu bandeja (y el spam).
+          {rico(t.resetEnviado.texto, { correo: () => <span className="font-semibold text-ink">{estado.email}</span> })}
         </p>
         <button onClick={() => setEstado({ fase: "form", modo: "entrar" })} className="mt-6 text-sm text-accent hover:opacity-80">
-          Volver
+          {t.volver}
         </button>
       </div>
     );
@@ -279,12 +283,12 @@ function LoginForm() {
     const listo = estado.rescate ? codigoRescate.trim().length >= 6 : codigo.length === 6;
     return (
       <form onSubmit={resolverDesafio} className="flex w-full flex-col gap-3 text-center">
-        <p className="text-lg">Un paso más: tu verificación en dos pasos</p>
+        <p className="text-lg">{t.desafio.titulo}</p>
         {estado.rescate ? (
           <>
-            <p className="text-sm text-dim">Escribe uno de tus códigos de rescate.</p>
+            <p className="text-sm text-dim">{t.desafio.escribeRescate}</p>
             <label htmlFor="rescate" className="sr-only">
-              Código de rescate
+              {t.desafio.etiquetaRescate}
             </label>
             <input
               id="rescate"
@@ -301,11 +305,11 @@ function LoginForm() {
           <>
             <p className="text-sm text-dim">
               {estado.metodo === "totp"
-                ? "Escribe el código de tu app de autenticación."
-                : (estado.aviso ?? "Te enviamos un código a tu correo.")}
+                ? t.desafio.escribeCodigoApp
+                : (estado.aviso ?? t.avisos.codigoEnviado)}
             </p>
             <label htmlFor="desafio" className="sr-only">
-              Código de 6 dígitos
+              {t.desafio.etiquetaCodigo}
             </label>
             <input
               id="desafio"
@@ -327,11 +331,11 @@ function LoginForm() {
           disabled={enviando || !listo}
           className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
         >
-          {enviando ? "Verificando…" : "Verificar"}
+          {enviando ? t.desafio.verificando : t.desafio.verificar}
         </button>
         {estado.metodo === "email" && !estado.rescate && (
           <button type="button" onClick={reenviarCodigoDesafio} disabled={enviando} className="text-sm text-dim hover:text-ink">
-            Reenviarme el código
+            {t.desafio.reenviarCodigo}
           </button>
         )}
         <button
@@ -343,7 +347,7 @@ function LoginForm() {
           }}
           className="text-sm text-dim hover:text-ink"
         >
-          {estado.rescate ? "Volver al código normal" : "No tengo mi código: usar uno de rescate"}
+          {estado.rescate ? t.desafio.volverNormal : t.desafio.usarRescate}
         </button>
       </form>
     );
@@ -353,17 +357,14 @@ function LoginForm() {
     const correoIntentado = email || searchParams.get("correo") || "";
     return (
       <div className="text-center">
-        <p className="text-lg">My Idea está en beta privada.</p>
+        <p className="text-lg">{t.noInvitado.titulo}</p>
         {correoIntentado && <p className="mt-3 font-semibold">{correoIntentado}</p>}
-        <p className="mt-3 text-sm text-dim">
-          Ese correo aún no está en la lista de invitados, entres con tu contraseña o con Google: la lista
-          es la misma. Si alguien te invitó, pídele que confirme el correo que registró.
-        </p>
+        <p className="mt-3 text-sm text-dim">{t.noInvitado.texto}</p>
         <button
           onClick={() => setEstado({ fase: "form", modo: "entrar" })}
           className="mt-6 text-sm text-accent hover:opacity-80"
         >
-          Probar con otro correo
+          {t.noInvitado.otroCorreo}
         </button>
       </div>
     );
@@ -380,25 +381,25 @@ function LoginForm() {
           onClick={() => cambiarModo("entrar")}
           className={`flex-1 rounded-[10px] py-2 font-medium ${modo === "entrar" ? "bg-surface text-ink" : "text-dim hover:text-ink"}`}
         >
-          Entrar
+          {t.entrar}
         </button>
         <button
           type="button"
           onClick={() => cambiarModo("crear")}
           className={`flex-1 rounded-[10px] py-2 font-medium ${modo === "crear" ? "bg-surface text-ink" : "text-dim hover:text-ink"}`}
         >
-          Crear cuenta
+          {t.crearCuenta}
         </button>
       </div>
 
       {enlaceVencido && (
         <p className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-sm text-warn">
-          Ese enlace ya venció o ya se usó. Pide uno nuevo aquí abajo.
+          {t.enlaceVencido}
         </p>
       )}
       {googleFallo && (
         <p className="rounded-cinta border border-hairline bg-surface px-4 py-3 text-sm text-warn">
-          No pudimos completar el acceso con Google. Intenta de nuevo, o entra con tu contraseña.
+          {t.googleFallo}
         </p>
       )}
       {estado.aviso && (
@@ -406,38 +407,38 @@ function LoginForm() {
       )}
 
       <label htmlFor="email" className="sr-only">
-        Correo electrónico
+        {t.etiquetaCorreo}
       </label>
       <input
         id="email"
         type="email"
         required
         autoComplete="email"
-        placeholder="tu@correo.com"
+        placeholder={t.placeholderCorreo}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
       />
       <label htmlFor="password" className="sr-only">
-        Contraseña
+        {t.etiquetaContrasena}
       </label>
       <input
         id="password"
         type="password"
         required
         autoComplete={modo === "entrar" ? "current-password" : "new-password"}
-        placeholder="Tu contraseña"
+        placeholder={t.placeholderContrasena}
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         className="w-full rounded-cinta border border-hairline bg-surface px-4 py-3 text-ink placeholder:text-dim"
       />
       {modo === "crear" && (
-        <p className="text-xs text-dim">Al menos 8 caracteres, una mayúscula y un número.</p>
+        <p className="text-xs text-dim">{t.reglasContrasena}</p>
       )}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
       {estado.sinConfirmar && (
         <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-left text-sm text-accent hover:opacity-80">
-          Reenviarme el correo de confirmación
+          {t.reenviarConfirmacion}
         </button>
       )}
 
@@ -446,18 +447,18 @@ function LoginForm() {
         disabled={enviando}
         className="rounded-cinta border border-accent/40 bg-accent/10 px-4 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-50"
       >
-        {enviando ? "Un momento…" : modo === "entrar" ? "Entrar" : "Crear mi cuenta"}
+        {enviando ? t.unMomento : modo === "entrar" ? t.entrar : t.crearMiCuenta}
       </button>
 
       {modo === "entrar" && (
         <button type="button" onClick={olvide} disabled={enviando} className="text-sm text-dim hover:text-ink">
-          Olvidé mi contraseña
+          {t.olvide}
         </button>
       )}
 
       <div className="flex items-center gap-3 py-1 text-xs text-dim" aria-hidden>
         <span className="h-px flex-1 bg-hairline" />
-        o
+        {t.separador}
         <span className="h-px flex-1 bg-hairline" />
       </div>
       <a
@@ -465,19 +466,20 @@ function LoginForm() {
         className="flex items-center justify-center gap-2.5 rounded-cinta border border-hairline bg-surface px-4 py-3 font-medium text-ink hover:border-white/25"
       >
         <GlifoGoogle />
-        Continuar con Google
+        {t.continuarGoogle}
       </a>
     </form>
   );
 }
 
 export default function LoginPage() {
+  const t = elegir(LOGIN, useIdioma());
   return (
     <main className="flex flex-1 items-center justify-center px-6">
       <div className="flex w-full max-w-sm flex-col items-center gap-8 py-16">
         <div className="text-center">
           <h1 className="text-3xl font-semibold tracking-tight">My <span className="text-accent">Idea</span></h1>
-          <p className="mt-2 text-dim">El espacio donde tus ideas se trabajan.</p>
+          <p className="mt-2 text-dim">{t.lema}</p>
         </div>
         <Suspense>
           <LoginForm />

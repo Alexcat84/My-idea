@@ -34,6 +34,8 @@ describe("una idea sin Claridad no se presenta con Claridad (AUD-09 M28)", () =>
     expect(leer("app/nueva/page.tsx")).toMatch(/project_id: ideaAReordenar/);
     const org = leer("app/api/organizer/stream/route.ts");
     expect(org).toMatch(/project_id/);
-    expect(org).toMatch(/Esta idea ya está ordenada/);
+    // i18n F2: la frase vive en el catálogo; la ruta la usa por su clave.
+    expect(org).toMatch(/error: t\.yaOrdenada/);
+    expect(leer("lib/i18n/mensajes/servidorSesion.ts")).toMatch(/yaOrdenada: "Esta idea ya está ordenada\."/);
   });
 });

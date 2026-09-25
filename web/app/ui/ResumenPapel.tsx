@@ -10,6 +10,9 @@
  * El verde solo se enciende con el cierre (ley de color). Pie en <tfoot> para
  * que no tape el texto. Se monta oculto y la hoja de impresión lo enciende.
  */
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
 const AZUL = "#3B6BE8";
@@ -18,11 +21,10 @@ const TINTA = "#16171A";
 const SEC = "#4B4E55";
 const TER = "#6B6E75";
 const HILO = "#DFE1E6";
-const MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
 
-function fechaMapa(iso: string): string {
+function fechaMapa(iso: string, meses: readonly string[]): string {
   const d = new Date(iso);
-  return `${d.getUTCDate()} ${MESES[d.getUTCMonth()]}`;
+  return `${d.getUTCDate()} ${meses[d.getUTCMonth()]}`;
 }
 
 export interface HitoResumen {
@@ -54,7 +56,8 @@ export function ContenidoResumen({
   loQueMovio,
   loQuePendiente,
 }: { nombreIdea: string } & DatosResumen) {
-  const titulo = cerrada ? "Cómo te fue" : "Tu progreso hasta aquí";
+  const t = elegir(DOCUMENTOS_PAPEL, useIdioma()).resumen;
+  const titulo = cerrada ? t.comoTeFue : t.tuProgreso;
   const N = hitos.length;
   const inset = N > 1 ? 100 / (2 * N) : 50;
 
@@ -77,15 +80,15 @@ export function ContenidoResumen({
 
                 {/* tres cifras entre dos hilos */}
                 <div style={{ display: "flex", marginTop: 28, borderTop: `1px solid ${HILO}`, borderBottom: `1px solid ${HILO}` }}>
-                  {cifra(dias, "días de camino")}
-                  {cifra(accionesCumplidas, "acciones cumplidas")}
-                  {cifra(N, "hitos alcanzados", cerrada ? VERDE : undefined)}
+                  {cifra(dias, t.diasDeCamino)}
+                  {cifra(accionesCumplidas, t.accionesCumplidas)}
+                  {cifra(N, t.hitosAlcanzados, cerrada ? VERDE : undefined)}
                 </div>
 
                 {/* mapa de hitos del viaje */}
                 {N > 0 && (
                   <div style={{ marginTop: 30 }}>
-                    <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 20 }}>Tu viaje completo</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 20 }}>{t.tuViajeCompleto}</div>
                     <div style={{ position: "relative", height: 14, display: "flex", alignItems: "center" }}>
                       <div
                         style={{
@@ -113,7 +116,7 @@ export function ContenidoResumen({
                         const verde = cerrada && i === N - 1;
                         return (
                           <div key={i} style={{ textAlign: "center" }}>
-                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha)}</div>
+                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha, t.meses)}</div>
                             <div style={{ fontSize: 12.5, fontWeight: verde ? 700 : 600, marginTop: 2, lineHeight: 1.35, color: verde ? VERDE : TINTA }}>{h.nombre}</div>
                           </div>
                         );
@@ -125,14 +128,14 @@ export function ContenidoResumen({
                 {/* caja de cierre: verde si cerró (con el motivo), gris si sigue */}
                 {cerrada ? (
                   <div style={{ marginTop: 28, borderRadius: 8, border: `1px solid #BFE3C6`, background: "#F1F9F3", padding: "18px 22px" }}>
-                    <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: VERDE, marginBottom: 8 }}>Aquí acaba tu idea y nace tu proyecto</div>
+                    <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: VERDE, marginBottom: 8 }}>{t.cierre}</div>
                     {cierreMotivo && (
                       <div style={{ fontSize: 15, lineHeight: 1.6, fontFamily: "Georgia, serif", color: TINTA }}>«{cierreMotivo}»</div>
                     )}
                   </div>
                 ) : (
                   <div style={{ marginTop: 28, borderRadius: 8, border: `1px solid ${HILO}`, background: "#F4F6F9", padding: "18px 22px" }}>
-                    <div style={{ fontSize: 14, lineHeight: 1.6, color: SEC }}>Tu idea sigue en marcha. Cuando la des por realizada, aquí quedará tu cierre con tus propias palabras.</div>
+                    <div style={{ fontSize: 14, lineHeight: 1.6, color: SEC }}>{t.sigueEnMarcha}</div>
                   </div>
                 )}
 
@@ -140,11 +143,11 @@ export function ContenidoResumen({
                 {(loQueMovio || loQuePendiente) && (
                   <div style={{ marginTop: 30, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 26 }}>
                     <div>
-                      <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 10 }}>Lo que más te movió el camino</div>
+                      <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 10 }}>{t.loQueMasTeMovio}</div>
                       <div style={{ fontSize: 14, lineHeight: 1.65, color: TINTA }}>{loQueMovio}</div>
                     </div>
                     <div>
-                      <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 10 }}>Lo que quedó pendiente</div>
+                      <div style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: TER, marginBottom: 10 }}>{t.loQueQuedoPendiente}</div>
                       <div style={{ fontSize: 14, lineHeight: 1.65, color: TINTA }}>{loQuePendiente}</div>
                     </div>
                   </div>
@@ -164,8 +167,9 @@ export function ResumenPapel({
   /** cuando compone dentro del Expediente: empieza en su propia hoja */
   pagina?: boolean;
 } & DatosResumen) {
+  const t = elegir(DOCUMENTOS_PAPEL, useIdioma());
   return (
-    <HojaImpresion nombreIdea={nombreIdea} pieTitulo="Expediente" oculto={oculto}>
+    <HojaImpresion nombreIdea={nombreIdea} pieTitulo={t.pieExpediente} oculto={oculto}>
       <FilaPapel pagina={pagina}>
         <ContenidoResumen nombreIdea={nombreIdea} {...datos} />
       </FilaPapel>
