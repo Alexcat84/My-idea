@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Prototipado Virtual en Mundos Digitales",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Usar mundos virtuales o redes sociales para lanzar prototipos 3D de marcas o servicios antes de invertir en la construcción real. Permite recibir feedback masivo, rápido y de múltiples ubicaciones geográficas con bajo costo, aunque tiene la limitación de que los avatares no siempre representan fielmente a los usuarios reales.",
+  "resumen_teorico": "Usar mundos virtuales o redes sociales para lanzar prototipos 3D de marcas o servicios antes de invertir en la construcción real. Permite recibir feedback masivo, rápido y de múltiples ubicaciones geográficas con iteraciones fáciles, aunque tiene la limitación de que los avatares no siempre representan fielmente a los usuarios reales.",
   "pasos_accionables": [
     "Diseñar una versión 3D o digital simplificada del concepto (producto, espacio o marca).",
     "Publicarla en una plataforma virtual accesible al público objetivo.",
@@ -21,7 +21,42 @@
   ],
   "condiciones_activacion": [
     "Cuando el público objetivo es joven, urbano y tecnológicamente afín a plataformas digitales.",
-    "Cuando se busca feedback rápido y de bajo costo antes de una inversión física grande."
+    "Cuando se busca feedback rápido y de múltiples ubicaciones antes de una inversión física grande."
   ],
-  "etiqueta_arbol": "Prueba tu Marca en Digital"
+  "etiqueta_arbol": "Prueba tu Marca en Digital",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-39",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se busca feedback rápido y de bajo costo antes de una inversión física grande.",
+      "texto_nuevo": "Cuando se busca feedback rápido y de múltiples ubicaciones antes de una inversión física grande.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L658-L660",
+        "frase": "Virtual prototyping allows companies to reach prospective customers quickly and get feedback from people in numerous locations."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R030-041 (CONTRARIO, arbitro): Tenía razón el lector B: es el mismo atributo de bajo costo que contradice el \"expensive virtual prototype\" de L658; ningún pasaje del libro lo apoya para el prototipo virtual. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R030-041"
+    },
+    {
+      "id": "fidelidad-t15-40",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Usar mundos virtuales o redes sociales para lanzar prototipos 3D de marcas o servicios antes de invertir en la construcción real. Permite recibir feedback masivo, rápido y de múltiples ubicaciones geográficas con bajo costo, aunque tiene la limitación de que los avatares no siempre representan fielmente a los usuarios reales.",
+      "texto_nuevo": "Usar mundos virtuales o redes sociales para lanzar prototipos 3D de marcas o servicios antes de invertir en la construcción real. Permite recibir feedback masivo, rápido y de múltiples ubicaciones geográficas con iteraciones fáciles, aunque tiene la limitación de que los avatares no siempre representan fielmente a los usuarios reales.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L658-L660",
+        "frase": "And what do you do with an expensive virtual prototype once real construction begins?"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R030-041 (CONTRARIO, arbitro): Tenía razón el lector B. Busqué en todo el libro (cheap, inexpensive, low cost) apoyo al bajo costo del prototipo virtual: el \"fast, rough, and cheap\" de L616 se refiere a los prototipos tempranos en general con materiales como cartón y espuma, no al prototipo virtual, que el libro califica de caro en L658. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R030-041"
+    }
+  ]
 }

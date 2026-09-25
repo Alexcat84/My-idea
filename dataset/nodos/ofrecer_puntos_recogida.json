@@ -23,7 +23,7 @@
     "decidir_cobro_velocidad_ventana_entrega"
   ],
   "condiciones_activacion": [
-    "Te cansaste de que la mitad de tus entregas fallen porque nadie esta en casa",
+    "Te cansaste de que tus entregas fallen porque nadie esta en casa",
     "Vendes en una zona con calles dificiles de encontrar o mucho trafico",
     "Quieres bajar el costo de la ultima milla sin perder ventas",
     "Tus clientes te piden recoger su pedido cuando les convenga a ellos"
@@ -46,6 +46,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El capitulo habla de la preferencia por recoger, pero no da ninguna frecuencia de revision.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-006"
+    },
+    {
+      "id": "fidelidad-t15-68",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Te cansaste de que la mitad de tus entregas fallen porque nadie esta en casa",
+      "texto_nuevo": "Te cansaste de que tus entregas fallen porque nadie esta en casa",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L234",
+        "frase": "If the customer is not in when the delivery van calls, the customer is 'carded'"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-009 (ANADIDO, lector y verificador de acuerdo): Cifra (50 por ciento de entregas fallidas) que el libro no da; buscado half, 50 per cent, failed deliveries. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-009"
     }
   ]
 }

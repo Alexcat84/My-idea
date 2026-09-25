@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Clasificación y Gestión de Tipos de Activos",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo el único rubro no sujeto a discreción contable significativa.",
+  "resumen_teorico": "Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo uno de los pocos rubros no sujetos a discreción contable significativa.",
   "pasos_accionables": [
     "Clasificar los activos de la empresa en corrientes y de largo plazo",
     "Revisar el saldo de cuentas por cobrar y la reserva para cuentas incobrables",
@@ -26,5 +26,23 @@
     "Si el usuario tiene problemas de liquidez y necesita identificar de dónde libera efectivo",
     "Si el usuario está preparando estados financieros para due diligence"
   ],
-  "etiqueta_arbol": "Clasifica tus Activos Correctamente"
+  "etiqueta_arbol": "Clasifica tus Activos Correctamente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-05",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo el único rubro no sujeto a discreción contable significativa.",
+      "texto_nuevo": "Los activos se dividen en corrientes (convertibles en efectivo en menos de un año: caja, cuentas por cobrar, inventario) y de largo plazo (vida útil mayor a un año: propiedad, planta y equipo, intangibles). Cada categoría involucra distintos niveles de estimación contable y de riesgo de manipulación, siendo el efectivo uno de los pocos rubros no sujetos a discreción contable significativa.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L1200, L3290",
+        "frase": "This is one of the few line items that are not subject to accountants' discretion. [...] Cash is a hard number, not easily subject to manipulation. Receivables and payables are relatively hard as well."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R012-009 (CONTRARIO, arbitro): Tenía razón el lector A. El libro limita el alcance a uno de los pocos rubros, y en L3290 también llama relativamente duras a las cuentas por cobrar y por pagar. Convertirlo en el único rubro cambia lo que dice el libro. Ningún pasaje del libro presenta al efectivo como el único. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R012-009"
+    }
+  ]
 }

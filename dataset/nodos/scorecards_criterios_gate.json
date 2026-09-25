@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Uso de Scorecards y Criterios Visibles en Gates",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los scorecards son herramientas que permiten evaluar proyectos con criterios cualitativos (atractivo de mercado, ventaja competitiva, apalancamiento de competencias) junto con criterios financieros, haciendo la decisión de Go/Kill más objetiva y menos emocional. Los mejores innovadores usan scorecards 85% de las veces, frente a solo 25% en las empresas de peor desempeño.",
+  "resumen_teorico": "Los scorecards son herramientas que permiten evaluar proyectos con criterios cualitativos (atractivo de mercado, ventaja competitiva, apalancamiento de competencias) junto con criterios financieros, haciendo la decisión de Go/Kill más objetiva y menos emocional. El 85% de los mejores innovadores usa criterios de Go/Kill específicos, a menudo en forma de scorecard, frente a solo una cuarta parte de las empresas de peor desempeño.",
   "pasos_accionables": [
     "Diseñar un scorecard con criterios cualitativos y financieros ponderados",
     "Aplicar el scorecard en los gates tempranos (Gates 1, 2 y 3)",
@@ -26,5 +26,23 @@
     "Cuando se requiere objetividad en las decisiones de Go/Kill",
     "Si las decisiones actuales de gate son subjetivas o basadas solo en política interna"
   ],
-  "etiqueta_arbol": "Haz Visibles Tus Criterios"
+  "etiqueta_arbol": "Haz Visibles Tus Criterios",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-47",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los scorecards son herramientas que permiten evaluar proyectos con criterios cualitativos (atractivo de mercado, ventaja competitiva, apalancamiento de competencias) junto con criterios financieros, haciendo la decisión de Go/Kill más objetiva y menos emocional. Los mejores innovadores usan scorecards 85% de las veces, frente a solo 25% en las empresas de peor desempeño.",
+      "texto_nuevo": "Los scorecards son herramientas que permiten evaluar proyectos con criterios cualitativos (atractivo de mercado, ventaja competitiva, apalancamiento de competencias) junto con criterios financieros, haciendo la decisión de Go/Kill más objetiva y menos emocional. El 85% de los mejores innovadores usa criterios de Go/Kill específicos, a menudo en forma de scorecard, frente a solo una cuarta parte de las empresas de peor desempeño.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L6779",
+        "frase": "Almost all best performing innovators (85 percent) employ specific Go/Kill criteria--often in the form of a gate scorecard"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R071-024 (CONTRARIO, lector y verificador de acuerdo): Cambia el significado de la cifra: porcentaje de empresas con criterios definidos, no porcentaje de veces que se usa el scorecard. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R071-024"
+    }
+  ]
 }

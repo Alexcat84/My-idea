@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Consejos de Calidad (Quality Councils)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el último paso del programa de 14 pasos y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
+  "resumen_teorico": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
   "pasos_accionables": [
     "Conformar el consejo con representantes de las distintas áreas de mejora",
     "Establecer una periodicidad de reuniones para compartir avances",
@@ -41,5 +41,23 @@
     "consejos_calidad",
     "consejos_de_calidad_2"
   ],
-  "etiqueta_arbol": "Comparte Experiencias entre Consejos"
+  "etiqueta_arbol": "Comparte Experiencias entre Consejos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-09",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el último paso del programa de 14 pasos y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
+      "texto_nuevo": "Los consejos de calidad son estructuras organizacionales formadas por representantes de la mejora de calidad de distintas áreas, que se reúnen para compartir experiencias, coordinar iniciativas y sostener el impulso del programa de mejora en el largo plazo. Constituyen el paso trece del programa de 14 pasos, y aseguran que la mejora de calidad se convierta en parte permanente de la cultura organizacional ('hazlo de nuevo').",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L1641, L1647, L3375, L3409",
+        "frase": "Step Thirteen: Quality Councils ... Now the last step of the program is 'do it all over again.'"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R050-032 (CONTRARIO, lector y verificador de acuerdo): Cambia la secuencia de los pasos: los consejos son el paso 13, no el último. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R050-032"
+    }
+  ]
 }

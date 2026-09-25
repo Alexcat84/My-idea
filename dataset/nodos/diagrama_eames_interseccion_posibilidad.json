@@ -12,7 +12,7 @@
     "Pregunta qué entidad (empresa, gobierno, organización) comparte esos mismos deseos y podría convertirse en socio o financiador.",
     "Señala qué círculos dejaste fuera: esos son los puntos ciegos y riesgos potenciales de tu diseño."
   ],
-  "entregable_esperado": "Un diagrama de Venn ampliado que mapea los intereses del diseñador, el negocio, la sociedad, la naturaleza y el futuro, con la 'intersección de posibilidad' señalada y una lista de riesgos por omisiones.",
+  "entregable_esperado": "Un diagrama de Venn ampliado que mapea los intereses del diseñador, las tecnologías con que puede crear, la sociedad, la naturaleza y el futuro, con la 'intersección de posibilidad' señalada y una lista de riesgos por omisiones.",
   "nodos_previos": [
     "reconocer_sesgo_de_apofenia"
   ],
@@ -24,5 +24,23 @@
     "Si el usuario está en fase de ideación y no ha considerado el impacto social o ambiental de su idea.",
     "Si el proyecto solo contempla al cliente y al negocio, dejando fuera a la sociedad, la naturaleza o el tiempo."
   ],
-  "etiqueta_arbol": "Cruza Intereses, Cliente y Sociedad"
+  "etiqueta_arbol": "Cruza Intereses, Cliente y Sociedad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-15",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un diagrama de Venn ampliado que mapea los intereses del diseñador, el negocio, la sociedad, la naturaleza y el futuro, con la 'intersección de posibilidad' señalada y una lista de riesgos por omisiones.",
+      "texto_nuevo": "Un diagrama de Venn ampliado que mapea los intereses del diseñador, las tecnologías con que puede crear, la sociedad, la naturaleza y el futuro, con la 'intersección de posibilidad' señalada y una lista de riesgos por omisiones.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L4144-L4164",
+        "frase": "This is where the script is flipped. Instead of giving the client its own shape, we can start in the middle and ask, What business, organization, government, or other entity shares these same desires? Can they be your partner? Funder? Champion?"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R026-040 (CONTRARIO, arbitro): Tenía razón el lector B. El único pasaje que pone al cliente como círculo (L4132) es el diagrama original de Eames, que el libro critica y redibuja; en la versión redibujada (L4146-L4164) el giro central es precisamente quitarle al cliente su forma y buscar al negocio desde el centro. Busqué en todo el libro (client, overlap, intersection of possibility, Eames) y ningún pasaje apoya que el negocio sea un círculo del diagrama ampliado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R026-040"
+    }
+  ]
 }

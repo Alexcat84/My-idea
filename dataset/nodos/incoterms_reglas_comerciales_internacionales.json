@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Incoterms: Términos Comerciales Internacionales (EXW, FCA, FAS, FOB)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los Incoterms 2020 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CFR, CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
+  "resumen_teorico": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
   "pasos_accionables": [
     "Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre o intermodal).",
     "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.",
@@ -56,6 +56,24 @@
       "node_id": "terminos_de_venta_incoterms",
       "titulo": "Términos de Venta / Incoterms",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-25",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los Incoterms 2020 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CFR, CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
+      "texto_nuevo": "Los Incoterms 2010 son reglas estandarizadas que definen responsabilidades, costos y riesgos entre comprador y vendedor en una transacción de exportación. EXW indica la mínima responsabilidad del vendedor, mientras que FCA, FAS y FOB marcan distintos puntos donde el riesgo pasa al comprador, normalmente al entregar la mercancía al transportista o al buque; FAS y FOB aplican solo a transporte marítimo. Cada término determina quién asume el despacho de exportación, la carga y el transporte, por lo que deben conocerse antes de armar una cotización. Si el modo de transporte no es marítimo, conviene revisar también CPT o CIP, que cotizan hasta destino y facilitan que el comprador vea el costo total. El Incoterm elegido debe ser compatible con la documentación que exige el país importador.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L3879, L3917-L3923",
+        "frase": "A complete list of these important terms and their definitions is provided in Incoterms 2010, a booklet issued by the International Chamber of Commerce (ICC). / (The term applies only for ocean shipments.) ... CPT and CIP apply to a named destination. These terms are used in place of CFR and CIF, respectively, for all modes of transportation, including intermodal."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R008-035 (CONTRARIO, lector y verificador de acuerdo): El libro da otra edición para el mismo dato (2010). El texto_fiel incluye también la corrección del otro hallazgo de este campo para que ambos sean coherentes. / R008-035 (CONTRARIO, lector y verificador de acuerdo): Invierte el ámbito de CFR, que el libro reserva al transporte marítimo. El texto_fiel incluye también la corrección de la edición (2010) para que ambos sean coherentes. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R008-035, R008-035"
     }
   ]
 }

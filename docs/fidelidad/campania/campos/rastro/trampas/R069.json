@@ -1,0 +1,74 @@
+[
+ {
+  "titulo": "Visitas al cliente con equipos multifuncionales (Customer Visit Teams)",
+  "etiqueta": "Visita a tus Clientes en Equipo",
+  "resumen": "Un equipo pequeño, de unas tres personas de marketing, ventas y el área técnica, visita a clientes o usuarios y los entrevista a fondo con una guía de conversación bien preparada para descubrir sus problemas, necesidades y deseos. Las mejores preguntas son indirectas (qué te quita el sueño de este producto, qué te molesta al usarlo) y exploran puntos de dolor y beneficios buscados, no solo características. Al terminar la entrevista conviene recorrer el lugar donde el cliente usa el producto para observar cómo lo usa, lo usa mal y lo maltrata. Según el autor es el método de voz del cliente más eficaz, y sirve también en empresas pequeñas y en productos muy técnicos.",
+  "entregable": "Una guía de conversación estructurada y las notas de cada visita, redactadas dentro de las 48 horas siguientes, con los problemas, puntos de dolor y necesidades no expresadas que detectó el equipo",
+  "condiciones": [
+   "Cuando necesitas ideas de producto basadas en problemas reales de tus clientes",
+   "Cuando tu equipo cree que ya conoce las respuestas y no ve necesario hablar con clientes"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "entregable",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "5019",
+  "cita": "When conducting the interviews, a structured and well-crafted conversation guide is essential.",
+  "dato": "redactadas dentro de las 48 horas siguientes",
+  "explicacion": "El libro pide una guía de conversación estructurada que además sirve para registrar las respuestas (lineas 5014 a 5019), pero no fija ningún plazo para redactar las notas de la visita. Grep en todo el libro: no aparecen '48', 'forty-eight', 'two days' ni '24 hours' en ese sentido (el único '48' es la cifra 1,448 de una tabla de I+D en la linea 737). El plazo de 48 horas es un añadido."
+ },
+ {
+  "titulo": "Tasa de eliminación en cada gate (curva de atrición)",
+  "etiqueta": "Mide Cuántos Proyectos Eliminas",
+  "resumen": "Registra qué porcentaje de proyectos eliminas en cada gate. La curva ideal es más empinada al principio: los mayores recortes deben darse en los gates tempranos y, después del Gate 3, las eliminaciones deben tender a cero, como un embudo que desemboca en un túnel. Si en los gates tempranos no eliminas casi nada, tus gates no tienen dientes. La tasa de eliminación debe ser más alta en los proyectos de bajo riesgo, predecibles y de corto plazo que en los proyectos más arriesgados. Cortar temprano cuesta menos que cortar tarde, porque el gasto crece en cada etapa.",
+  "entregable": "Una curva de atrición de tu cartera con el porcentaje de proyectos eliminados en cada gate, comparada con la forma ideal de embudo que desemboca en un túnel",
+  "condiciones": [
+   "Cuando casi ningún proyecto se elimina en tus gates tempranos",
+   "Cuando sospechas que hay demasiados proyectos en desarrollo para los recursos que tienes"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "resumen",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "6739",
+  "cita": "The kill rate should be higher for venturesome projects (a steeper attrition curve) than for lower-risk, predictable, and short-term projects.",
+  "dato": "La tasa de eliminación debe ser más alta en los proyectos de bajo riesgo, predecibles y de corto plazo que en los proyectos más arriesgados.",
+  "explicacion": "El libro dice lo contrario: la tasa de eliminación debe ser más alta en los proyectos arriesgados (curva más empinada) que en los de bajo riesgo, predecibles y de corto plazo. La linea 6731 lo refuerza: los proyectos más predecibles, de menor riesgo y menores tienen una atrición más suave. El resumen invierte el sentido de la comparación."
+ },
+ {
+  "titulo": "Valor Comercial Esperado (ECV) para decidir por etapas",
+  "etiqueta": "Calcula el Valor por Etapas",
+  "resumen": "El ECV es una forma sencilla de acercarse al modelo de opciones de los mercados financieros: usa un árbol de decisión que trata cada gate como una compra incremental de una opción sobre el proyecto. Considera el flujo de ganancias futuras, la probabilidad de éxito técnico y la de éxito comercial, y los costos de desarrollo y de comercialización, y permite salir del proyecto en cualquier punto. Por eso trata de forma más justa y favorable las inversiones arriesgadas y audaces que el VPN clásico ajustado por probabilidad.",
+  "entregable": "Un árbol de decisión del proyecto con la probabilidad de cada fase, la inversión en cada gate y el ECV resultante al inicio y en la decisión de pasar a desarrollo",
+  "condiciones": [
+   "Cuando evalúas proyectos pequeños, de bajo riesgo y predecibles antes de comprometer la inversión",
+   "Cuando un proyecto parece poco atractivo solo porque su probabilidad total de éxito es baja"
+  ],
+  "tipo": "CONTRARIO",
+  "campo": "condiciones",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "6259",
+  "cita": "For riskier, bolder, and larger development projects, use the Expected Commercial Value (ECV) method, which approximates the options-pricing model used in financial markets.",
+  "dato": "Cuando evalúas proyectos pequeños, de bajo riesgo y predecibles antes de comprometer la inversión",
+  "explicacion": "El libro recomienda el ECV justamente para los proyectos más arriesgados, audaces y grandes, porque los trata de forma más favorable que el VPN (linea 6259; el ejemplo de las lineas 6249 a 6253 es un proyecto mayor y arriesgado). La condición activa el nodo en el caso opuesto: proyectos pequeños, de bajo riesgo y predecibles."
+ },
+ {
+  "titulo": "Evita los gates huecos: aprobar es comprometer recursos",
+  "etiqueta": "Aprueba con Recursos Reales",
+  "resumen": "Un gate hueco ocurre cuando la reunión da un Go pero no compromete recursos: el líder y el equipo deben salir de la reunión con los recursos que necesitan para avanzar. Aprobar sin recursos no pone límite a la cantidad de proyectos, llena el pipeline, reparte al equipo entre demasiados proyectos y alarga el tiempo hasta el mercado. Como norma, ninguna persona del equipo debe trabajar en más de tres proyectos a la vez, porque el exceso de multitarea baja la productividad. Que un proyecto pase los criterios no significa que avance si no hay recursos para él.",
+  "entregable": "Un acta de cada gate con la decisión Go y los recursos concretos (personas, tiempo y presupuesto) asignados al equipo",
+  "condiciones": [
+   "Cuando aprobaste proyectos que siguen esperando personas para avanzar",
+   "Cuando tus proyectos tardan cada vez más en llegar al mercado"
+  ],
+  "tipo": "ANADIDO",
+  "campo": "resumen",
+  "libro": "Winning at New Products - Robert G. Cooper",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+  "lineas": "6679",
+  "cita": "Multitasking is a good thing up to a point; but too much multitasking leads to decreased productivity",
+  "dato": "Como norma, ninguna persona del equipo debe trabajar en más de tres proyectos a la vez",
+  "explicacion": "El libro advierte que la multitarea es buena hasta cierto punto y que su exceso baja la productividad (linea 6679), y exige comprometer recursos en el gate (linea 6668), pero no da ningún tope de proyectos por persona. Grep en todo el libro: 'three projects', 'projects per person', 'per person', 'projects at a time', 'projects at once' no aparecen; 'more than three' solo aparece en otros contextos (proceso de más de tres años, 'three to one', On Hold de tres meses). La norma de un máximo de tres proyectos por persona es un añadido."
+ }
+]

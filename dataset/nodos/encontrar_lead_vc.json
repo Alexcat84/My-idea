@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Identificar y Asegurar un VC Líder (Lead Investor)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Al hablar con múltiples inversionistas potenciales, estos se pueden clasificar en cuatro categorías de interés: interesado en liderar, no interesado (pasa), 'tal vez' (interesado pero sin compromiso) y 'no lento' (nunca dice no pero tampoco avanza). El objetivo del emprendedor es identificar rápidamente al VC que dará el term sheet y liderará la ronda, sin perder tiempo con los que están en modo 'tal vez' o 'no lento', tratando a estos últimos como un 'no' definitivo.",
+  "resumen_teorico": "Al hablar con múltiples inversionistas potenciales, estos se pueden clasificar en cuatro categorías de interés: interesado en liderar, no interesado (pasa), 'tal vez' (interesado pero sin compromiso) y 'no lento' (nunca dice no pero tampoco avanza). El objetivo del emprendedor es identificar rápidamente al VC que dará el term sheet y liderará la ronda. A los 'tal vez' conviene mantenerlos cerca con reuniones y comunicación continua, sabiendo que no impulsarán la inversión pero pueden sumarse al sindicato cuando haya un líder; a los 'no lento' hay que tratarlos como un 'no' y dejar de dedicarles tiempo.",
   "pasos_accionables": [
     "Clasificar a cada VC en conversación según su nivel real de interés (líder, pasa, tal vez, no lento)",
     "Enfocar el tiempo y energía en los VCs claramente interesados en liderar",
@@ -29,5 +29,23 @@
     "Cuando el usuario está en conversaciones activas con múltiples VCs",
     "Cuando necesita estructurar una ronda de financiamiento con un líder"
   ],
-  "etiqueta_arbol": "Asegura tu Inversionista Líder"
+  "etiqueta_arbol": "Asegura tu Inversionista Líder",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-20",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Al hablar con múltiples inversionistas potenciales, estos se pueden clasificar en cuatro categorías de interés: interesado en liderar, no interesado (pasa), 'tal vez' (interesado pero sin compromiso) y 'no lento' (nunca dice no pero tampoco avanza). El objetivo del emprendedor es identificar rápidamente al VC que dará el term sheet y liderará la ronda, sin perder tiempo con los que están en modo 'tal vez' o 'no lento', tratando a estos últimos como un 'no' definitivo.",
+      "texto_nuevo": "Al hablar con múltiples inversionistas potenciales, estos se pueden clasificar en cuatro categorías de interés: interesado en liderar, no interesado (pasa), 'tal vez' (interesado pero sin compromiso) y 'no lento' (nunca dice no pero tampoco avanza). El objetivo del emprendedor es identificar rápidamente al VC que dará el term sheet y liderará la ronda. A los 'tal vez' conviene mantenerlos cerca con reuniones y comunicación continua, sabiendo que no impulsarán la inversión pero pueden sumarse al sindicato cuando haya un líder; a los 'no lento' hay que tratarlos como un 'no' y dejar de dedicarles tiempo.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L574-L576",
+        "frase": "Keep this person warm by continually meeting and communicating with him but realize that this VC is not going to catalyze your investment. However, as your deal comes together with a lead, this VC is a great one to bring into the mix if you want to put a syndicate of several firms together."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R022-018 (CONTRARIO, lector y verificador de acuerdo): Desaconseja atender a los 'tal vez', cuando el libro manda mantenerlos cerca. La sesion compone el texto a mano porque el recorte automatico al fragmento dejo la frase mal construida; el contenido es el del texto fiel del verificador o del arbitro.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R022-018"
+    }
+  ]
 }

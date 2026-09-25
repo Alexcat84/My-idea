@@ -11,8 +11,8 @@ Uso:
   python scripts/fidelidad/aplicar_correcciones.py <tanda.json> [--comprobar]
 
 <tanda.json> es una lista de correcciones:
-  {"id", "node_id", "campo" (pasos_accionables | resumen_teorico | entregable_esperado),
-   "indice" (solo pasos, desde 0), "veredicto" (CONTRARIO | ANADIDO), "texto_anterior",
+  {"id", "node_id", "campo" (pasos_accionables | condiciones_activacion | resumen_teorico |
+   entregable_esperado | etiqueta_arbol), "indice" (solo en los campos lista, pasos y condiciones, desde 0), "veredicto" (CONTRARIO | ANADIDO), "texto_anterior",
    "texto_nuevo", "cita": {"libro", "fichero", "lineas", "frase"}, "decision", "auditoria"}
 
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
@@ -25,7 +25,12 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
-CAMPOS = {"pasos_accionables", "resumen_teorico", "entregable_esperado"}
+CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol"}
+# Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
+# activacion entraron el 24 sep 2026: la pasada contra la fuente sobre los campos
+# que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA. La etiqueta
+# de cara (etiqueta_arbol, escalar) entro con fidelidad-t15: es lo que ve la pantalla.
+LISTAS = {"pasos_accionables", "condiciones_activacion"}
 PROHIBIDOS = (chr(0x2014), chr(0x2013))
 
 
@@ -48,13 +53,13 @@ def validar(c, nodo):
         return fallas + ["el nodo no existe"]
     if any(x.get("id") == c.get("id") for x in nodo.get("correcciones", [])):
         fallas.append("la correccion %s ya esta aplicada" % c.get("id"))
-    if c.get("campo") == "pasos_accionables":
-        pasos = nodo.get("pasos_accionables", [])
+    if c.get("campo") in LISTAS:
+        lista = nodo.get(c["campo"], [])
         i = c.get("indice")
-        if not isinstance(i, int) or not 0 <= i < len(pasos):
+        if not isinstance(i, int) or not 0 <= i < len(lista):
             fallas.append("indice fuera de rango: %r" % i)
-        elif pasos[i] != c["texto_anterior"]:
-            fallas.append("el texto anterior no es el vigente del paso %d" % i)
+        elif lista[i] != c["texto_anterior"]:
+            fallas.append("el texto anterior no es el vigente de %s[%d]" % (c["campo"], i))
     elif nodo.get(c.get("campo")) != c.get("texto_anterior"):
         fallas.append("el texto anterior no es el vigente de %s" % c.get("campo"))
     return fallas
@@ -72,12 +77,12 @@ def main(argv):
             fallas.append("%s (%s): %s" % (c.get("id"), c.get("node_id"), f))
         if not fallas and nodos[c.get("node_id")] is not None:
             nodo = nodos[c["node_id"]]
-            if c["campo"] == "pasos_accionables":
-                nodo["pasos_accionables"][c["indice"]] = c["texto_nuevo"]
+            if c["campo"] in LISTAS:
+                nodo[c["campo"]][c["indice"]] = c["texto_nuevo"]
             else:
                 nodo[c["campo"]] = c["texto_nuevo"]
             registro = {k: c[k] for k in ("id", "fecha", "campo", "veredicto", "texto_anterior", "texto_nuevo", "cita", "decision")}
-            if c["campo"] == "pasos_accionables":
+            if c["campo"] in LISTAS:
                 registro["indice"] = c["indice"]
             if c.get("auditoria"):
                 registro["auditoria"] = c["auditoria"]

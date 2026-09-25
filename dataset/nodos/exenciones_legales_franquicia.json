@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Exenciones Legales a la Definición de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Si tu negocio cumple técnicamente los tres elementos de franquicia, existen exenciones donde no tienes que cumplir con las obligaciones legales. Puedes calificar si abres un negocio dentro de otro con al menos 2 años de experiencia previa y menos del 20% de tu volumen total, si vendes petróleo (exención PMPA), si la inversión supera 1 millón de dólares, si el comprador tiene 5 años en el negocio y un patrimonio de 5 millones, si es una venta a un gerente, o si el acuerdo es verbal.",
+  "resumen_teorico": "Si tu negocio cumple técnicamente los tres elementos de franquicia, existen exenciones donde no tienes que cumplir con las obligaciones legales. Puedes calificar si vendes a un empresario que ya tiene al menos 2 años de experiencia en el mismo tipo de negocio y cuyas ventas por la relación no superan el 20% de su volumen total (un negocio dentro de otro), si vendes petróleo (exención PMPA), si la inversión supera 1 millón de dólares, si el comprador tiene 5 años en el negocio y un patrimonio de 5 millones, si es una venta a un gerente, o si el acuerdo es verbal.",
   "pasos_accionables": [
     "Revisar si la relación propuesta califica para alguna exención de la FTC",
     "Documentar el cumplimiento de los requisitos específicos de la exención elegida",
@@ -23,5 +23,23 @@
     "Si la relación de negocio cumple técnicamente los tres elementos de franquicia pero se busca evitar la regulación",
     "Si el comprador potencial es un inversionista sofisticado o de alto patrimonio"
   ],
-  "etiqueta_arbol": "Conoce tus Exenciones Legales"
+  "etiqueta_arbol": "Conoce tus Exenciones Legales",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-21",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si tu negocio cumple técnicamente los tres elementos de franquicia, existen exenciones donde no tienes que cumplir con las obligaciones legales. Puedes calificar si abres un negocio dentro de otro con al menos 2 años de experiencia previa y menos del 20% de tu volumen total, si vendes petróleo (exención PMPA), si la inversión supera 1 millón de dólares, si el comprador tiene 5 años en el negocio y un patrimonio de 5 millones, si es una venta a un gerente, o si el acuerdo es verbal.",
+      "texto_nuevo": "Si tu negocio cumple técnicamente los tres elementos de franquicia, existen exenciones donde no tienes que cumplir con las obligaciones legales. Puedes calificar si vendes a un empresario que ya tiene al menos 2 años de experiencia en el mismo tipo de negocio y cuyas ventas por la relación no superan el 20% de su volumen total (un negocio dentro de otro), si vendes petróleo (exención PMPA), si la inversión supera 1 millón de dólares, si el comprador tiene 5 años en el negocio y un patrimonio de 5 millones, si es una venta a un gerente, o si el acuerdo es verbal.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1240",
+        "frase": "When a prospective “franchise” is sold to an existing business owner who has two years of experience in the same type of business and the sales arising from the relationship itself will not exceed 20 percent of the franchisee’s total dollar volume."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R015-008 (CONTRARIO, arbitro): El lector B tenía razón. La línea L1240 es el único pasaje del libro sobre la exención fraccional (busqué fractional, 20 percent, store within a store y two years of experience) y pone la experiencia y el tope del 20% en el comprador, no en el franquiciante. El campo dice que son de quien lee, y así cambia a quién se aplican los dos umbrales. El resto de las exenciones del resumen y las condiciones coinciden con L1242 a L1250. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R015-008"
+    }
+  ]
 }

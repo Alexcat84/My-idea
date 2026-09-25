@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Incentivos, Reconocimiento y Recompensas por Desempeño Sostenible",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Crear la mezcla correcta de incentivos y reconocimientos es clave para sostener comportamientos sostenibles. Se combinan seis enfoques: reconocimiento público y premios, concursos y competencias internas, transparencia de datos de desempeño ambiental en tiempo real, beneficios ecológicos concretos, vinculación del desempeño ambiental al presupuesto y a la compensación, y comparativas de resultados entre equipos o sedes. Estas tácticas van desde simples agradecimientos públicos hasta sistemas más elaborados de premios y rankings, aprovechando tanto la motivación intrínseca como la presión social positiva. Es útil cuando ya existe una estrategia de sostenibilidad pero falta motivación real para participar, o cuando quieres escalar un compromiso que empezó pequeño hacia el resto de tu operación o colaboradores.",
+  "resumen_teorico": "Crear la mezcla correcta de incentivos y reconocimientos es clave para sostener comportamientos sostenibles. Se combinan seis enfoques: reconocimiento público y premios, concursos y competencias internas, transparencia de datos de desempeño ambiental en tiempo real, beneficios ecológicos concretos, vinculación del desempeño ambiental al presupuesto, y vinculación de la compensación y los bonos al desempeño ambiental. Estas tácticas van desde simples agradecimientos públicos hasta sistemas más elaborados de premios y rankings, aprovechando tanto la motivación intrínseca como la presión social positiva. Es útil cuando ya existe una estrategia de sostenibilidad pero falta motivación real para participar, o cuando quieres escalar un compromiso que empezó pequeño hacia el resto de tu operación o colaboradores.",
   "pasos_accionables": [
     "Establece un sistema de reconocimiento público regular para quienes logren avances en sostenibilidad, por ejemplo premios de reconocimiento anual",
     "Organiza concursos o competencias con premios tangibles ligados a metas ambientales concretas",
@@ -53,6 +53,24 @@
       "node_id": "accountability_incentivos",
       "titulo": "Establecer Accountability con Incentivos Apropiados",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-24",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Crear la mezcla correcta de incentivos y reconocimientos es clave para sostener comportamientos sostenibles. Se combinan seis enfoques: reconocimiento público y premios, concursos y competencias internas, transparencia de datos de desempeño ambiental en tiempo real, beneficios ecológicos concretos, vinculación del desempeño ambiental al presupuesto y a la compensación, y comparativas de resultados entre equipos o sedes. Estas tácticas van desde simples agradecimientos públicos hasta sistemas más elaborados de premios y rankings, aprovechando tanto la motivación intrínseca como la presión social positiva. Es útil cuando ya existe una estrategia de sostenibilidad pero falta motivación real para participar, o cuando quieres escalar un compromiso que empezó pequeño hacia el resto de tu operación o colaboradores.",
+      "texto_nuevo": "Crear la mezcla correcta de incentivos y reconocimientos es clave para sostener comportamientos sostenibles. Se combinan seis enfoques: reconocimiento público y premios, concursos y competencias internas, transparencia de datos de desempeño ambiental en tiempo real, beneficios ecológicos concretos, vinculación del desempeño ambiental al presupuesto, y vinculación de la compensación y los bonos al desempeño ambiental. Estas tácticas van desde simples agradecimientos públicos hasta sistemas más elaborados de premios y rankings, aprovechando tanto la motivación intrínseca como la presión social positiva. Es útil cuando ya existe una estrategia de sostenibilidad pero falta motivación real para participar, o cuando quieres escalar un compromiso que empezó pequeño hacia el resto de tu operación o colaboradores.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L6713-L6715",
+        "frase": "Explore these six common approaches when considering what the right formula is for your particular culture and circumstances: (1) public recognition and awards, (2) contests and competitions, (3) transparency, (4) eco-related employee benefits, (5) linking environmental performance to budgeting, and (6) tying compensation and bonuses to environmental performance."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R056-001 (CONTRARIO, arbitro): Tiene razón el lector B. El libro da una lista cerrada de seis enfoques (L6715) y los desarrolla uno por uno en sus propios apartados (L6717-L6747). El resumen dice reproducir esos seis, pero junta el quinto con el sexto y mete un sexto que el libro no incluye en la lista. Busqué en todo el libro pasajes que lo apoyen: las comparativas entre sedes solo aparecen como ejemplo dentro de la transparencia (L6735, JCPenney) y como uso de las métricas (L7153), nunca como uno de los seis enfoques. Así que cambia la enumeración que da el libro. El lector A no lo vio. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R056-001"
     }
   ]
 }

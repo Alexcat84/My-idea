@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: la posición mas peligrosa, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho.",
+  "resumen_teorico": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: una mala posición, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho.",
   "pasos_accionables": [
     "Ubica cada riesgo que identificaste en uno de los tres niveles.",
     "Si es algo que ni siquiera sabias que existia, invierte tiempo en aprender y en hablar con otros que ya conocen ese terreno.",
@@ -22,5 +22,23 @@
     "Cuando tienes dudas sobre si la información que manejas es suficiente para tomar una decisión de riesgo.",
     "Cuando te das cuenta de que estas confiando demasiado en datos pasados para predecir lo que puede venir."
   ],
-  "etiqueta_arbol": "Clasifica tus Riesgos Desconocidos"
+  "etiqueta_arbol": "Clasifica tus Riesgos Desconocidos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-27",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: la posición mas peligrosa, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho.",
+      "texto_nuevo": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: una mala posición, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L12329-L12347",
+        "frase": "This situation can be as bad as or worse than the others as we have some confidence in our assessment, but the confidence could be unfounded."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R041-035 (CONTRARIO, lector y verificador de acuerdo): Invierte la jerarquía de peligro: el libro no dice que la ignorancia total sea la peor y advierte que la falsa confianza puede ser igual o peor. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R041-035"
+    }
+  ]
 }

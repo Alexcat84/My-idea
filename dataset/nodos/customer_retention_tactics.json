@@ -35,7 +35,7 @@
   ],
   "condiciones_activacion": [
     "Cuando ya tienes una base activa de clientes y necesitas reducir el churn",
-    "Cuando detectas alta tasa de abandono en los primeros 100 dias de relacion",
+    "Cuando detectas alta tasa de abandono entre tus clientes al seguirlos por cohortes",
     "Si tu modelo de negocio depende de suscripciones o repeticion de compra"
   ],
   "etiqueta_arbol": "Aplica Tácticas para Retener Clientes",
@@ -98,6 +98,23 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el plazo de los primeros 100 dias corregido en el paso 4, que el libro no respalda (ANADIDO de plazo: se quita).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t15-60",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando detectas alta tasa de abandono en los primeros 100 dias de relacion",
+      "texto_nuevo": "Cuando detectas alta tasa de abandono entre tus clientes al seguirlos por cohortes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L7296-L7296",
+        "frase": "You’ll organize the metrics around “cohorts,” or common groups of customers (such as “new customers signed in January”). Three-month customers, for example, may behave one way while nine-month customers may be more or less active than their newer brethren."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R062-002 (ANADIDO, lector y verificador de acuerdo): Plazo numerico que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R062-002"
     }
   ]
 }

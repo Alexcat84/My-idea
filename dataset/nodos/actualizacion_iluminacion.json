@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Actualización de Sistemas de Iluminación Eficiente",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales, con hasta 50% de desperdicio por mal diseño o mantenimiento. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+  "resumen_teorico": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
   "pasos_accionables": [
     "Reemplazar iluminación incandescente/fluorescente por LED",
     "Instalar sensores de ocupación para apagado automático",
@@ -21,8 +21,43 @@
     "actualizacion_hvac"
   ],
   "condiciones_activacion": [
-    "Si el edificio tiene más de 10 años sin actualización de iluminación",
+    "Si el edificio tiene mucho tiempo sin actualizar su iluminación",
     "Si se busca ROI rápido en eficiencia energética"
   ],
-  "etiqueta_arbol": "Actualiza tu Iluminación, Ahorra Energía"
+  "etiqueta_arbol": "Actualiza tu Iluminación, Ahorra Energía",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-01",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales, con hasta 50% de desperdicio por mal diseño o mantenimiento. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+      "texto_nuevo": "La iluminación consume cerca del 35% de la electricidad en edificios comerciales de EE.UU., y al menos el 50% de esa energía se desperdicia por mal diseño, mal mantenimiento o uso inadecuado. Actualizar a LED, sensores de ocupación y fotosensores ofrece uno de los retornos de inversión más rápidos en sostenibilidad de edificios.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L2740",
+        "frase": "According to the EPA, we waste at least 50 percent of the energy used in lighting because of inefficient design, poor maintenance, or inappropriate use."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-032 (CONTRARIO, lector y verificador de acuerdo): Convierte un minimo en un maximo. La sesion compone el texto a mano porque el recorte automatico al fragmento dejo la frase mal construida; el contenido es el del texto fiel del verificador o del arbitro.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-032"
+    },
+    {
+      "id": "fidelidad-t15-57",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el edificio tiene más de 10 años sin actualización de iluminación",
+      "texto_nuevo": "Si el edificio tiene mucho tiempo sin actualizar su iluminación",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L2740-L2752",
+        "frase": "A U.S. Department of Energy (DOE) survey found that of the more than 2.7 million office and commercial buildings built before 1980, fewer than 500,000 had undertaken lighting upgrades."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-032 (ANADIDO, lector y verificador de acuerdo): Cifra de antiguedad que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-032"
+    }
+  ]
 }

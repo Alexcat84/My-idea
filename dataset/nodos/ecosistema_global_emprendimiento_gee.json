@@ -14,7 +14,7 @@
     "Armar un directorio de contactos del GEE con nombres, roles y datos de contacto",
     "Consultar a un asesor voluntario con experiencia para evaluar tu potencial exportador"
   ],
-  "entregable_esperado": "Directorio documentado de al menos 5 a 8 organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+  "entregable_esperado": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
   "nodos_previos": [
     "decision_estrategica_exportar",
     "desmitificacion_barreras_exportacion",
@@ -40,6 +40,24 @@
       "node_id": "recursos_apoyo_pymes_sba",
       "titulo": "Recursos de apoyo público para negocios que exportan",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-63",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Directorio documentado de al menos 5 a 8 organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+      "texto_nuevo": "Directorio documentado de las organizaciones o contactos de apoyo (lista de verificacion GEE) que tienes disponibles",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L211-L215, L251",
+        "frase": "A GEE might consist, for example, of your local Chamber of Commerce, your local World Trade Center, a university with an international business department, some Small Business Development Centers, the U.S. Commercial Service, a bank with international experience, and your state's office of international trade. Just to name a few."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R007-004 (ANADIDO, lector y verificador de acuerdo): El rango de 5 a 8 contactos es una cifra que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R007-004"
     }
   ]
 }

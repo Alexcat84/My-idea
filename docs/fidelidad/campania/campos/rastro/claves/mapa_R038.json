@@ -1,0 +1,315 @@
+{
+ "R038-001": {
+  "real": true,
+  "node_id": "diferencia_planeacion_mejora",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-002": {
+  "real": true,
+  "node_id": "dmaic_fase_select",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-003": {
+  "real": true,
+  "node_id": "diagrama_arbol_despliegue",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-004": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Autocontrol y Controlabilidad",
+   "etiqueta": "Da a tu Gente los Medios de Control",
+   "resumen": "Una persona está en autocontrol cuando sabe cuáles son sus metas, conoce su desempeño real y tiene los medios para ajustar el proceso si no cumple. Para que el conocimiento del desempeño sirva, la retroalimentación debe llegar en un plazo máximo de 2 horas. Si falta alguno de estos criterios, las no conformidades son controlables por la dirección y es riesgoso responsabilizar al trabajador; los estudios de Juran situaron la proporción entre no conformidades controlables por la dirección y por el trabajador en torno a 80 a 20.",
+   "entregable": "Lista de verificación de autocontrol por puesto, con metas, medios de retroalimentación y medios de ajuste confirmados",
+   "condiciones": [
+    "Cuando se culpa a los trabajadores de defectos sin haber verificado que tienen los medios para evitarlos",
+    "Antes de delegar decisiones de control del proceso en el personal operativo"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2767; 8090",
+   "cita": "(2) actual performance is known through short or immediate feedback loops",
+   "dato": "la retroalimentación debe llegar en un plazo máximo de 2 horas",
+   "explicacion": "El libro solo pide medios para conocer el desempeño real mediante ciclos de retroalimentación cortos o inmediatos (línea 2767; línea 8090: 'Means of knowing what their actual performance is.'), sin plazo numérico. Grep en todo el libro: 'two hours', '2 hours', 'two-hour' y '2-hour' dan 0 resultados."
+  }
+ },
+ "R038-005": {
+  "real": true,
+  "node_id": "distribucion_poisson",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-006": {
+  "real": true,
+  "node_id": "diseno_experimentos_doe_mejora",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-007": {
+  "real": true,
+  "node_id": "diseno_implementacion_remedio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-008": {
+  "real": true,
+  "node_id": "distribucion_binomial",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-009": {
+  "real": true,
+  "node_id": "diseno_de_metodos_de_recoleccion_de_datos",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-010": {
+  "real": true,
+  "node_id": "dmaic_fase_measure",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-011": {
+  "real": true,
+  "node_id": "dmaic_fase_analyze",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-012": {
+  "real": true,
+  "node_id": "dmadv_fase_diseno",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-013": {
+  "real": true,
+  "node_id": "design_for_six_sigma_dfss",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-014": {
+  "real": true,
+  "node_id": "empoderamiento_empleados",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-015": {
+  "real": true,
+  "node_id": "disponibilidad_producto",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-016": {
+  "real": true,
+  "node_id": "doble_significado_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-017": {
+  "real": true,
+  "node_id": "design_for_environment",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-018": {
+  "real": true,
+  "node_id": "determinacion_tamano_muestra",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-019": {
+  "real": true,
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-020": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Revisión de Diseño (Design Review)",
+   "etiqueta": "Somete tu Diseño a Revisión",
+   "resumen": "Quienes se verán afectados por el producto revisan el diseño en distintas etapas de su desarrollo y aportan alertas tempranas de problemas, datos para encontrar el óptimo y cuestionamiento de teorías y supuestos. Las revisiones son formales, programadas y con agenda, se basan en criterios claros, las realizan especialistas externos al equipo de diseño y la decisión final sobre los cambios sigue en manos del equipo de diseño.",
+   "entregable": "Acta de revisión de diseño con agenda y documentos distribuidos con al menos 15 días de antelación, observaciones de los especialistas externos y decisiones de cambio tomadas por el equipo de diseño",
+   "condiciones": [
+    "Cuando se definen las especificaciones del producto a partir de las necesidades del cliente",
+    "Al seleccionar el diseño óptimo entre varias alternativas"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4251",
+   "cita": "• Adequate advance design review of agenda and documents",
+   "dato": "con al menos 15 días de antelación",
+   "explicacion": "El libro solo pide una revisión previa adecuada de la agenda y los documentos, sin fijar plazo. Grep en todo el libro: '15 days' 0 resultados; '15-day' aparece una sola vez (línea 18453) en un ejemplo ajeno sobre solicitudes de entrevistas, nunca en relación con la revisión de diseño."
+  }
+ },
+ "R038-021": {
+  "real": true,
+  "node_id": "distribucion_weibull",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-022": {
+  "real": true,
+  "node_id": "diseno_de_mejoras_para_clientes",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-023": {
+  "real": true,
+  "node_id": "dmadv_fase_verificacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-024": {
+  "real": true,
+  "node_id": "diferencia_iso9001_iso9004",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-025": {
+  "real": true,
+  "node_id": "diagrama_barreras_ayudas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-026": {
+  "real": true,
+  "node_id": "desarrollo_expertos_capaces",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-027": {
+  "real": true,
+  "node_id": "desperdicio_cronico_vs_esporadico",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-028": {
+  "real": true,
+  "node_id": "descubrir_necesidades_del_cliente",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-029": {
+  "real": true,
+  "node_id": "design_for_manufacture",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-030": {
+  "real": true,
+  "node_id": "disposicion_producto_no_conforme",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-031": {
+  "real": true,
+  "node_id": "distribucion_weibull_confiabilidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-032": {
+  "real": true,
+  "node_id": "desplegar_metas_organizacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-033": {
+  "real": true,
+  "node_id": "diseno_servicio_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-034": {
+  "real": true,
+  "node_id": "diseno_de_procesos_por_caracteristicas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-035": {
+  "real": true,
+  "node_id": "diagrama_afinidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-036": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Distribución del Reporte de Auditoría",
+   "etiqueta": "Decide Quién Recibe tu Auditoría",
+   "resumen": "Tradicionalmente el reporte de auditoría se envía a la alta dirección, lo que genera tensión con los gerentes auditados, que no quieren que sus no conformidades lleguen a sus superiores. Para fomentar una visión constructiva, algunas organizaciones envían el reporte solo al gerente del área auditada y programan una auditoría de seguimiento; si las no conformidades se corrigen a tiempo para ese seguimiento, se remiten ambos reportes a la alta dirección como constancia del cierre. Otra opción es fijar antes de la auditoría un único responsable del área auditada que sea el contacto del auditor líder y reciba y distribuya internamente el reporte.",
+   "entregable": "Política de distribución del reporte de auditoría acordada antes de auditar, con el responsable de recepción definido y la auditoría de seguimiento programada",
+   "condiciones": [
+    "Cuando los gerentes auditados perciben la auditoría como una amenaza porque sus hallazgos llegan a sus superiores",
+    "Antes de iniciar un programa de auditorías internas de calidad"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10263",
+   "cita": "The audit report is sent only to the manager whose activity is audited, and a follow-up audit is scheduled. If the nonconformances are corrected in time for the follow-up audit, the audit file is closed; otherwise, a copy of both audit reports is sent to upper management.",
+   "dato": "si las no conformidades se corrigen a tiempo para ese seguimiento, se remiten ambos reportes a la alta dirección como constancia del cierre",
+   "explicacion": "El libro invierte la consecuencia: si las no conformidades se corrigen a tiempo, el expediente se cierra sin escalar; solo si NO se corrigen se envía copia de ambos reportes a la alta dirección. El nodo dice que se envían precisamente cuando se corrigen."
+  }
+ },
+ "R038-037": {
+  "real": true,
+  "node_id": "ejecucion_auditoria",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-038": {
+  "real": true,
+  "node_id": "distribucion_normal_probabilidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-039": {
+  "real": true,
+  "node_id": "diagnostico_antes_remedio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-040": {
+  "real": true,
+  "node_id": "diagrama_de_flujo_proceso_map",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-041": {
+  "real": true,
+  "node_id": "distribuciones_probabilidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-042": {
+  "real": true,
+  "node_id": "diagrama_causa_efecto",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-043": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Reglas de Cambio de Inspección en ANSI/ASQC Z1.4",
+   "etiqueta": "Ajusta el Rigor de tu Inspección",
+   "resumen": "El sistema de muestreo por atributos ANSI/ASQC Z1.4 incluye reglas para cambiar entre inspección normal, estricta y reducida según el historial del proveedor. Si dos de cinco lotes consecutivos se rechazan en la inspección original, se impone un plan estricto con el mismo tamaño de muestra pero un número de aceptación menor. Cuando el historial del proveedor es bueno se puede pasar a inspección reducida, con una muestra que suele ser el 40 por ciento de la normal.",
+   "entregable": "Esquema de muestreo documentado con plan normal, estricto y reducido y los criterios de cambio entre ellos",
+   "condiciones": [
+    "Cuando un proveedor presenta rechazos de lotes repetidos y se requiere endurecer la inspección",
+    "Cuando los 5 lotes anteriores en inspección normal fueron todos aceptados y se evalúa pasar a inspección reducida"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "condiciones",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "25085",
+   "cita": "ANSI/ASQC Z1.4 also provides for reduced inspection when the supplier’s record has been good. The preceding 10 lots must have had a normal inspection with all lots accepted.",
+   "dato": "Cuando los 5 lotes anteriores en inspección normal fueron todos aceptados y se evalúa pasar a inspección reducida",
+   "explicacion": "El libro exige que los 10 lotes anteriores hayan pasado inspección normal y todos hayan sido aceptados para pasar a inspección reducida; la condición rebaja el umbral a 5 lotes (el 5 del libro corresponde a la regla de endurecimiento, dos de cinco rechazados, línea 25083)."
+  }
+ },
+ "R038-044": {
+  "real": true,
+  "node_id": "dmaic_fase_improve",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-045": {
+  "real": true,
+  "node_id": "dmaic_fase_define",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-046": {
+  "real": true,
+  "node_id": "design_for_assembly",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-047": {
+  "real": true,
+  "node_id": "diseno_controles_proceso_mejorado",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-048": {
+  "real": true,
+  "node_id": "despliegue_metas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R038-049": {
+  "real": true,
+  "node_id": "design_scorecard",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ }
+}

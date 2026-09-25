@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Los Tres Atributos del Liderazgo: Visión, Alineación de Intereses y Competencia",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Un gran líder necesita tres cualidades para lograr que las personas quieran seguirlo: (1) la capacidad de articular una visión convincente incluso en momentos difíciles (atributo Steve Jobs), (2) la ambición correcta, es decir, alinear genuinamente sus intereses con los de los empleados y demostrar que le importan más que su propio beneficio (atributo Bill Campbell), y (3) la competencia real para lograr ejecutar esa visión (atributo Andy Grove). Estos atributos se refuerzan mutuamente: la confianza compensa falta de articulación, y la competencia genera paciencia para el aprendizaje del líder.",
+  "resumen_teorico": "Un gran líder necesita tres cualidades para lograr que las personas quieran seguirlo: (1) la capacidad de articular una visión convincente incluso en momentos difíciles (atributo Steve Jobs), (2) la ambición correcta, es decir, alinear genuinamente sus intereses con los de los empleados y demostrar que le importan más que su propio beneficio (atributo Bill Campbell), y (3) la competencia real para lograr ejecutar esa visión (atributo Andy Grove). Estos atributos se refuerzan mutuamente: la confianza compensa falta de articulación, y la competencia genera confianza, y una visión brillante genera paciencia mientras el líder aprende.",
   "pasos_accionables": [
     "Practicar y refinar la narrativa de visión de la empresa, especialmente para momentos de crisis",
     "Evaluar honestamente si las decisiones de liderazgo priorizan el bienestar del equipo sobre el beneficio personal",
@@ -25,5 +25,23 @@
     "Cuando la empresa atraviesa una crisis y necesita retener talento clave",
     "Cuando se busca escalar la organización y consolidar cultura de liderazgo"
   ],
-  "etiqueta_arbol": "Lidera con Visión y Competencia"
+  "etiqueta_arbol": "Lidera con Visión y Competencia",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-02",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un gran líder necesita tres cualidades para lograr que las personas quieran seguirlo: (1) la capacidad de articular una visión convincente incluso en momentos difíciles (atributo Steve Jobs), (2) la ambición correcta, es decir, alinear genuinamente sus intereses con los de los empleados y demostrar que le importan más que su propio beneficio (atributo Bill Campbell), y (3) la competencia real para lograr ejecutar esa visión (atributo Andy Grove). Estos atributos se refuerzan mutuamente: la confianza compensa falta de articulación, y la competencia genera paciencia para el aprendizaje del líder.",
+      "texto_nuevo": "Un gran líder necesita tres cualidades para lograr que las personas quieran seguirlo: (1) la capacidad de articular una visión convincente incluso en momentos difíciles (atributo Steve Jobs), (2) la ambición correcta, es decir, alinear genuinamente sus intereses con los de los empleados y demostrar que le importan más que su propio beneficio (atributo Bill Campbell), y (3) la competencia real para lograr ejecutar esa visión (atributo Andy Grove). Estos atributos se refuerzan mutuamente: la confianza compensa falta de articulación, y la competencia genera confianza, y una visión brillante genera paciencia mientras el líder aprende.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2798",
+        "frase": "If you are super-competent, they will trust you and listen to you. If you can paint a brilliant vision, people will be patient with you as you learn the CEO skills and give you more leeway with respect to their interests."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R058-027 (CONTRARIO, lector y verificador de acuerdo): Invierte la consecuencia que el libro atribuye a cada atributo; la paciencia viene de la vision, no de la competencia. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R058-027"
+    }
+  ]
 }

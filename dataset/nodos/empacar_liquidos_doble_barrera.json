@@ -12,7 +12,7 @@
     "Empaca todo dentro de una caja de fibra rígida, nunca en bolsa o sobre como único contenedor.",
     "Pregunta a tu courier si tu producto líquido o en polvo requiere trato como mercancía regulada."
   ],
-  "entregable_esperado": "Un paquete de líquido armado con las cuatro capas de protección, listo para revisión antes de sellar.",
+  "entregable_esperado": "Un paquete de líquido armado con las tres capas de protección, listo para revisión antes de sellar.",
   "nodos_previos": [
     "clasificar_tipo_paquete",
     "adaptar_empaque_segun_tipo_de_articulo",
@@ -91,6 +91,22 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (C132-131): el resumen repite el refuerzo del cierre con cinta, que la extraccion de couriers no respalda (solo pide envase a prueba de fugas). En el resumen se quita el dato.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-131"
+    },
+    {
+      "id": "fidelidad-t15-19",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un paquete de líquido armado con las cuatro capas de protección, listo para revisión antes de sellar.",
+      "texto_nuevo": "Un paquete de líquido armado con las tres capas de protección, listo para revisión antes de sellar.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L52-L54",
+        "frase": "Líquidos: envase a prueba de fugas, sellado DENTRO de bolsa plástica, y en caja resistente (DHL: doble pared)."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R051-032 (CONTRARIO, lector y verificador de acuerdo): Cambia la cifra de capas que da la fuente. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R051-032"
     }
   ]
 }

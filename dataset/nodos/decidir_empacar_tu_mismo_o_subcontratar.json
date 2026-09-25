@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir si empacas tú mismo o subcontratas el envío",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con diez pedidos al mes deja de convenir con cien.",
+  "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
   "pasos_accionables": [
     "Calcula cuanto tiempo y espacio te toma empacar cada pedido tu mismo en una semana normal.",
     "Compara ese costo contra las tarifas de un operador logistico local.",
@@ -24,5 +24,23 @@
     "No sabes si te conviene pagar a un tercero o seguir haciendolo con tus manos.",
     "Quieres cuidar tu marca en cada contacto con el cliente pero el tiempo no te alcanza."
   ],
-  "etiqueta_arbol": "Decide quién empaca tus envíos"
+  "etiqueta_arbol": "Decide quién empaca tus envíos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-61",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con diez pedidos al mes deja de convenir con cien.",
+      "texto_nuevo": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L200",
+        "frase": "One of the first e-fulfilment decisions that an e-tailer needs to make is whether to keep the e-fulfilment in-house or to subcontract it"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-043 (ANADIDO, lector y verificador de acuerdo): Cifras de volumen (10 y 100 pedidos al mes) que el libro no da; buscado orders per month, ten, hundred, volume sin resultado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-043"
+    }
+  ]
 }

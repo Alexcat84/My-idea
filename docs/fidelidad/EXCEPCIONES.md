@@ -1,6 +1,6 @@
 # EXCEPCIONES DE LA CAMPANIA DE FIDELIDAD
 
-Lo que la regla del fundador no resolvio limpio, para que lo decida el fundador. Actualizado tras sus decisiones del 27 sep 2026.
+Lo que la regla del fundador no resolvio limpio, para que lo decida el fundador. Actualizado tras sus decisiones recogidas el 24 sep 2026.
 
 ## A. Resueltas
 
@@ -17,7 +17,7 @@ Lo que la regla del fundador no resolvio limpio, para que lo decida el fundador.
 
 Ninguna.
 
-## C. Textos que la sesion ajusto sobre la propuesta del verificador o del arbitro: RATIFICADOS por el fundador el 27 sep 2026
+## C. Textos que la sesion ajusto sobre la propuesta del verificador o del arbitro: RATIFICADOS por el fundador (decision recogida el 24 sep 2026)
 
 - `decision_fpr` paso 2 (fidelidad-t11-01): el texto del arbitro decia que el FPR "facilita la venta"; el libro lo desmiente (L2052, L4695).
 - `documentacion_mantenimiento_linea_base` paso 2 (fidelidad-t10-03): se quito una coletilla que remitia al texto viejo.

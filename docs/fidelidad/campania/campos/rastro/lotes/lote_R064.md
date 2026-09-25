@@ -1,0 +1,487 @@
+# Lote R064: 49 nodos a leer contra su libro (titulo, etiqueta, resumen, entregable, condiciones)
+
+### R064-001
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mapa Organizacional y de Influencia
+- etiqueta: Mapea Quién Influye en la Compra
+- resumen: Ningún cliente decide en aislamiento. Este mapa lista y dibuja a todas las personas que rodean e influyen en la decisión de compra de un cliente -colegas, jefes, familia, amigos, proveedores-, tanto en contextos de consumo como empresariales, para visualizar la complejidad real detrás de cada venta. También representa el impacto del producto en el día a día del cliente y de su entorno, y se actualiza a medida que se descubren nuevos actores relevantes.
+- entregable: Diagrama visual del mapa organizacional y de influencia del segmento de cliente, actualizado conforme se descubren nuevos actores
+- condiciones:
+  - condiciones[0]: Cuando se vende a organizaciones grandes o complejas con múltiples personas involucradas en la decisión
+  - condiciones[1]: Si hay múltiples actores desconocidos en el proceso de compra
+
+### R064-002
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Medir el Comportamiento del Cliente (Purchase, Engagement, Retention, Referral)
+- etiqueta: Mide el Comportamiento del Cliente
+- resumen: Una vez que los clientes interactúan con el MVP, hay que medir cada acción para evaluar entusiasmo real, no solo interés declarado u opiniones cualitativas. Cuatro métricas críticas revelan esto: Compra o disposición a registrarse (sustituto temprano si aún no hay venta), Engagement (frecuencia y profundidad de uso según el tipo de producto), Retención (tasa de cancelación o inactividad) y Referencia (viralidad, porcentaje y calidad de referidos). Estas métricas, comparadas contra criterios pass o fail definidos de antemano, determinan si existe un verdadero product/market fit antes de decidir si avanzas a Customer Validation o si necesitas pivotar de nuevo.
+- entregable: Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP, con conclusión sobre la validez del modelo
+- condiciones:
+  - condiciones[0]: Ya tienes un MVP funcionando y usado por clientes reales invitados
+  - condiciones[1]: Necesitas validar el interés real de los usuarios antes de escalar
+  - condiciones[2]: Debes decidir si avanzas a la fase de Customer Validation o pivotas de nuevo
+
+### R064-003
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Modelo de Customer Development (4 Pasos)
+- etiqueta: Sigue los Pasos del Cliente
+- resumen: Marco metodológico que organiza las actividades relacionadas con el cliente en una startup en cuatro pasos iterativos: Customer Discovery, Customer Validation, Customer Creation y Company-Building. Los dos primeros pasos constituyen la 'búsqueda' del modelo de negocio, mientras que los dos últimos son la 'ejecución' del modelo ya validado. A diferencia de los planes de producto tradicionales lineales, este modelo es cíclico y acepta retrocesos como parte natural del aprendizaje.
+- entregable: Diagrama de flujo del proceso de Customer Development con indicación clara del paso actual y evidencia de aprendizaje acumulado
+- condiciones:
+  - condiciones[0]: Si el emprendedor no tiene un proceso estructurado para testear su modelo de negocio
+  - condiciones[1]: Si la startup está tratando de ejecutar un plan en lugar de buscar un modelo validado
+
+### R064-004
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: El Canal de Ingresos Cuando Tienes Dos Tipos de Usuarios (mercado multi-sided)
+- etiqueta: Encuentra Quién Paga de Verdad
+- resumen: Si tu negocio funciona como Google o las redes sociales, con un lado de usuarios que no pagan y otro que sí, necesitas construir una hipótesis separada para ese segundo lado: normalmente son anunciantes que pagan por llegar a la audiencia que usa tu producto gratis. El valor de esa audiencia depende de su tamaño y de qué tan distinta sea de otras; si es pequeña o se parece a cualquier otra, te va a costar más venderla.
+- entregable: Una hipótesis validada de quién te va a pagar, con una estimación del tamaño y el valor de tu audiencia
+- condiciones:
+  - condiciones[0]: Si tu negocio tiene dos tipos de usuarios: unos que usan el producto gratis y otros que pagan
+  - condiciones[1]: Cuando dependes de la publicidad como fuente de ingresos
+
+### R064-005
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Métricas de Startup vs Métricas de Empresa Establecida
+- etiqueta: No Midas tu Startup Como Grande
+- resumen: Un proyecto en etapa de búsqueda no debe medirse con los estados financieros tradicionales (pérdidas y ganancias, balance, flujo de caja), pensados para negocios que ya ejecutan un modelo conocido. En su lugar, conviene medir el progreso en convertir hipótesis en hechos: ¿se validó el problema del cliente?, ¿el conjunto mínimo de características resuena con los clientes?, ¿quién es realmente el cliente? A esto se suman unas pocas métricas financieras críticas de supervivencia: la tasa de consumo de caja, los meses de caja restante y el tiempo estimado hasta el punto de equilibrio. Este conjunto de métricas reemplaza o complementa el reporte financiero tradicional en las reuniones de dirección tempranas.
+- entregable: Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas
+- condiciones:
+  - condiciones[0]: Al preparar reuniones de dirección o junta directiva
+  - condiciones[1]: Si los inversionistas piden métricas financieras tradicionales de forma prematura
+  - condiciones[2]: Si no hay claridad sobre qué medir para saber si el proyecto avanza
+
+### R064-006
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Priorizar Qué Elementos del Modelo de Negocio Validar
+- etiqueta: Elige Qué Validar Primero
+- resumen: No es posible validar todas las variables del modelo de negocio a la vez. Usando el lienzo de modelo de negocio como guía, la mayoría de los proyectos deben enfocarse en cuatro elementos centrales: propuesta de valor, relación con los clientes, canal y modelo de ingresos. En mercados con múltiples lados (donde hay distintos tipos de actores, como usuarios y quienes pagan), hay que priorizar la validación de cada lado por separado. La clave es identificar las cinco variables -o menos- que realmente determinarán el éxito o el fracaso del negocio, en vez de intentar probarlo todo al mismo tiempo.
+- entregable: Lista priorizada de cinco hipótesis críticas de negocio, o menos, a validar primero
+- condiciones:
+  - condiciones[0]: Cuando el equipo se siente abrumado por la cantidad de variables del modelo de negocio a probar
+  - condiciones[1]: Al iniciar la fase de validación de clientes con múltiples hipótesis pendientes
+
+### R064-007
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Presentación de Solución del Producto
+- etiqueta: Presenta tu Solución al Cliente
+- resumen: Presentación diseñada específicamente para confirmar con clientes que el producto resuelve un problema serio, distinta de las presentaciones de fundraising o reclutamiento. Debe cubrir máximo cinco características clave, mostrar el 'antes y después' del flujo de trabajo del cliente, y terminar con la visión del producto a 18 meses. No debe incluir marketing ni posicionamiento.
+- entregable: Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP y espacios estructurados para feedback del cliente
+- condiciones:
+  - condiciones[0]: Cuando el equipo ya validó el problema y tiene un MVP o prototipo listo para mostrar
+  - condiciones[1]: Antes de iniciar ventas reales, para confirmar 'vendibilidad' sin vender aún
+
+### R064-008
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Presentación de Solución del Producto (Solution Presentation)
+- etiqueta: Muestra tu Solución al Cliente
+- resumen: Es una presentación nueva, distinta de la que usas para levantar dinero o reclutar y distinta de la presentación del problema, que sirve para confirmar con clientes que tu producto encaja con un problema o una necesidad seria. Abre la presentación con la visión del producto a por lo menos 18 meses y después cubre las cinco características clave, no más, y los problemas que resuelve cada una. Dibuja el flujo de trabajo del cliente o el día del consumidor antes y después del producto, deja fuera todo el marketing y el posicionamiento, y deja espacio y pausas para que el cliente opine. No debe durar más de 20 minutos; si no tienes MVP, una demo o un prototipo hace la conversación más efectiva.
+- entregable: Presentación de solución de 20 minutos como máximo, con las cinco características clave, el diagrama del flujo de trabajo del cliente antes y después del producto, la visión del producto a 18 meses, una demo o prototipo si es posible y una hoja para anotar la reacción de cada cliente
+- condiciones:
+  - condiciones[0]: Cuando el equipo de producto y el de desarrollo de clientes ya acordaron las hipótesis revisadas después de validar el problema
+  - condiciones[1]: Antes de empezar a vender, para comprobar si el producto es vendible sin intentar venderlo todavía
+
+### R064-009
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Cambiar de rumbo cuando tus primeras ventas fallan (pivote)
+- etiqueta: Aprende de tus Primeras Ventas
+- resumen: Cuando tus primeras ventas de prueba te dejan con pocas o ninguna orden, es momento de que analices las causas de raíz: quizá no encontraste a los primeros clientes evangelizadores correctos (earlyvangelists), o alguna parte de tu modelo de negocio, el producto, el precio o la propuesta de valor, no resultó convincente. Vuelve a tu mapa de modelo de negocio (business model canvas) para diagnosticar qué hipótesis fallaron y decide qué cambiar y qué volver a probar.
+- entregable: Tu mapa de modelo de negocio actualizado con las hipótesis corregidas y un nuevo plan de prueba
+- condiciones:
+  - condiciones[0]: Si tus ventas de prueba terminan en rechazo mayoritario o casi ninguna orden
+  - condiciones[1]: Cuando las hipótesis de tu modelo de negocio no se confirman en el terreno
+
+### R064-010
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Ritmo de Gasto por Etapa (Burn Rate)
+- etiqueta: Controla tu Gasto Mensual
+- resumen: El burn rate es cuánto efectivo quema la empresa cada mes y cuándo se va a quedar sin caja. No hay una fórmula exacta, pero como es el motivo por el que las juntas despiden con más frecuencia a los fundadores, fundadores e inversores deben acordar cuál debe ser y cuántos pivotes más se puede permitir la startup. Como guía, el inversor Fred Wilson propone para negocios web y móviles con capital de riesgo entre 50.000 y 75.000 dólares al mes en el descubrimiento de clientes, no más de 100.000 en la validación y, idealmente, hasta 250.000 en la creación de clientes, con muchísimas excepciones.
+- entregable: Un presupuesto mensual de gasto por etapa acordado por escrito con tus inversores, con el número de pivotes que la caja todavía permite
+- condiciones:
+  - condiciones[0]: Cuando estás fijando cuánto gastar al mes en cada etapa del desarrollo de clientes
+  - condiciones[1]: Si te quedan menos de 12 meses de caja en el banco y todavía no alcanzaste el ajuste producto/mercado
+
+### R064-011
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mercados Multilaterales (Multi-Sided Markets)
+- etiqueta: Atiende Varios Lados del Mercado
+- resumen: En algunos negocios existen múltiples actores con roles distintos en torno a una misma transacción: quien usa el producto, quien decide comprarlo, quien paga por él y quien lo prescribe o recomienda, y cada uno debe validarse por separado. Un ejemplo clásico es un dispositivo médico, donde el médico lo recomienda, el hospital lo compra, el cirujano lo implanta y la aseguradora lo paga; otro ejemplo son los negocios digitales como las redes sociales, donde los usuarios son 'gratis' pero los anunciantes pagan por alcanzarlos. Ignorar alguno de estos lados del mercado puede ser un error fatal en la estrategia de canal o de ingresos.
+- entregable: Un diagrama de canal multilateral con todos los actores y roles identificados, y un modelo de negocio diferenciado para cada lado del mercado con su propuesta de valor y flujo de ingresos correspondiente
+- condiciones:
+  - condiciones[0]: Si el producto involucra múltiples decisores (por ejemplo, dispositivos médicos o plataformas que conectan a dos tipos de usuarios)
+  - condiciones[1]: Cuando el modelo de negocio involucra usuarios gratuitos y una fuente de ingresos distinta (como publicidad)
+
+### R064-012
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Prueba de la Solución con el Cliente
+- etiqueta: Valida tu Solución con Clientes
+- resumen: Con entrevistas estructuradas puedes medir si quien te compra cree que tu producto resuelve un problema importante. Pregunta por el presupuesto (preguntas de 'muéstrame el dinero'), pregunta por el precio, pregunta por el canal de venta, y pregunta cómo es el proceso de compra, quién lo aprueba y quién lo mantiene y hace crecer (preguntas de 'conseguir, mantener y crecer'). El objetivo no es vender todavía, es construir un mapa aproximado de tu futura cartera de ventas (pipeline).
+- entregable: Una ficha por cada cliente entrevistado con los datos de producto, precio, distribución y referencias, y un mapa preliminar de tu futura cartera de ventas (pipeline)
+- condiciones:
+  - condiciones[0]: Cuando ya tienes una presentación de tu solución validada y necesitas evidencia de que la gente pagaría por ella
+  - condiciones[1]: Cuando vendes a través de un socio o distribuidor y necesitas entender cómo funciona su negocio
+
+### R064-013
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mapa de Canal de Ventas (Sales Channel Food Chain)
+- etiqueta: Mapea tu Cadena de Ventas
+- resumen: Diagrama que describe todas las organizaciones intermedias entre la empresa y el cliente final (mayoristas, distribuidores, minoristas), sus responsabilidades y relaciones financieras. Permite entender cómo fluye el dinero y el producto a través de la cadena, y evitar el error común de asumir que los socios de canal generan demanda por sí mismos.
+- entregable: Un diagrama de canal de ventas con mapa de responsabilidades, descuentos financieros y plan de gestión
+- condiciones:
+  - condiciones[0]: Si el startup vende a través de intermediarios (distribuidores, minoristas)
+  - condiciones[1]: Si se necesita entender la estructura de costos del canal de distribución
+
+### R064-014
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Hipótesis de Recursos Clave
+- etiqueta: Define tus Recursos Clave
+- resumen: Identifica los recursos externos que son críticos para que tu negocio funcione, agrupados en físicos, financieros, humanos y de propiedad intelectual. Para cada uno anota qué necesitas, cuánto cuesta (pregunta el precio en tu mercado) y dónde conseguirlo, y revisa qué dependencias externas escapan a tu control.
+- entregable: Un documento con tu hipótesis de recursos clave: qué necesitas, cuánto cuesta, dónde conseguirlo y cómo asegurarlo, integrado a tu modelo de negocio (Business Model Canvas)
+- condiciones:
+  - condiciones[0]: Cuando estés definiendo tu modelo de negocio y necesites saber qué recursos externos son indispensables para lograrlo
+
+### R064-015
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: El Proceso de Venta B2B (Sales Process)
+- etiqueta: Domina tu Proceso de Venta
+- resumen: Es un conjunto de pasos críticos y repetibles para ejecutar ventas empresa a empresa: investigación previa, primera reunión de descubrimiento, identificación del punto de entrada correcto en la organización, visualización del 'antes y después', personalización de presentaciones, creación de un plan de acción de compra, involucramiento de gerencia senior, y cierre con propuesta firmada.
+- entregable: Propuesta personalizada firmada y plan de acción de compra con fechas definidas
+- condiciones:
+  - condiciones[0]: Cuando se vende un producto enterprise o de alto valor a organizaciones complejas
+
+### R064-016
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Metrics That Matter (Métricas que Importan)
+- etiqueta: Enfócate en las Métricas Clave
+- resumen: Enfoque radical para evaluar la viabilidad financiera de tu startup usando un puñado de métricas clave organizadas según el Business Model Canvas (propuesta de valor, relaciones con clientes, tipo de mercado, estructura de costos, canal y flujos de ingresos), en lugar de hojas de cálculo de cinco años con cientos de líneas. Las dos métricas más importantes son los meses de efectivo que quedan en el banco y la velocidad con que se está quemando ese dinero, el burn rate. Adaptas las métricas al tipo de canal de venta, físico, digital directo o mercado multi-lado, para calcular ingresos netos, costos y cash burn trimestral, proyectando cuánto efectivo quedará antes de agotar los fondos y así decidir si conviene pivotar o seguir adelante.
+- entregable: Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.
+- condiciones:
+  - condiciones[0]: Cuando has completado la validación de clientes y necesitas decidir si avanzar a la etapa de creación de clientes
+  - condiciones[1]: Cuando necesitas evaluar si tu modelo de negocio es financieramente viable antes de escalar
+  - condiciones[2]: Si confundes este análisis con las proyecciones financieras tradicionales de cinco años
+  - condiciones[3]: Cuando necesitas decidir si invertir fuertemente en escalar sin quedarte sin fondos
+
+### R064-017
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Plan de Implementación de Venta
+- etiqueta: Cierra tu Venta con Plan
+- resumen: Documento que detalla todos los pasos pendientes entre el momento en que un decisor dice 'sí' y el momento en que el pago se recibe efectivamente, incluyendo aprobaciones adicionales (CFO, junta directiva), financiamiento del cliente, o instalación de sistemas de terceros. Evita la falsa euforia de celebrar una venta antes de tiempo.
+- entregable: Un checklist de implementación con responsables asignados para cada pendiente post-acuerdo
+- condiciones:
+  - condiciones[0]: Si un cliente ha dado un 'sí' verbal pero el contrato aún no se ha cerrado formalmente
+
+### R064-018
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Optimización de Métricas de Crecimiento (Grow Customers)
+- etiqueta: Mide el Crecimiento de tus Clientes
+- resumen: Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si la tasa de opt-out sube demasiado, suaviza el enfoque de venta y refuerza el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.
+- entregable: Dashboard de métricas de crecimiento con ofertas de upsell y referidos optimizadas y tasa de opt-out controlada.
+- condiciones:
+  - condiciones[0]: Si ya tienes una base de clientes activa y buscas incrementar los ingresos por cliente existente
+  - condiciones[1]: Cuando necesitas generar crecimiento sin depender solo de nueva adquisición
+
+### R064-019
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Plan de Activación de Clientes (Activate Plan)
+- etiqueta: Prueba tus Puntos de Contacto
+- resumen: Conjunto de pruebas A/B sobre la landing page y otros puntos de contacto que buscan convertir 'visitantes' en usuarios, compradores o suscriptores en cuestión de segundos. Incluye definir dos tipos de acciones (en y fuera de la home page), pruebas iterativas y métricas pass/fail claras.
+- entregable: Un plan de activación con pruebas definidas, métricas de éxito y ejemplos de landing page optimizada
+- condiciones:
+  - condiciones[0]: Cuando ya se atrajo tráfico o leads pero la tasa de conversión es baja
+  - condiciones[1]: Si el startup necesita convertir visitantes/usuarios en clientes de forma rápida
+
+### R064-020
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Preparación de Contactos con Clientes Potenciales
+- etiqueta: Prepara tu Lista de Clientes
+- resumen: El primer paso de salir del edificio es que construyas una lista de al menos 50 clientes potenciales, sin importar el cargo que tengan o si encajan perfecto con tu perfil, y que desarrolles una historia de referencia (reference story): una narrativa breve que explica el problema que buscas resolver y pide tiempo de tu cliente sin intentar venderle nada. También arma en paralelo una lista de innovadores de tu industria.
+- entregable: Lista de 50 clientes potenciales, historia de referencia escrita y calendario de reuniones agendadas
+- condiciones:
+  - condiciones[0]: Cuando estás listo para iniciar la fase de Descubrimiento de Clientes (Customer Discovery) y necesitas programar entrevistas reales con clientes
+
+### R064-021
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Optimización del 'Otro Lado' en Mercados Multi-laterales
+- etiqueta: Valida el Otro Lado del Mercado
+- resumen: Los startups con mercados multi-laterales (ej: plataformas con usuarios y anunciantes) deben validar también el lado que genera ingresos (anunciantes/pagadores), que requiere procesos de adquisición completamente distintos al lado de usuarios gratuitos.
+- entregable: Documento de validación del modelo de ingresos del lado pagador con roadmap de ventas
+- condiciones:
+  - condiciones[0]: Si el modelo de negocio es multi-lateral (ej: publicidad, marketplace)
+
+### R064-022
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Proceso Lean LaunchPad para Construir un Startup Web
+- etiqueta: Construye tu Negocio Web
+- resumen: Guía paso a paso de 10 pasos para llevar una idea de startup web desde la hipótesis hasta el cobro de dinero, integrando Business Model Canvas y Customer Development. Cubre desde la logística del equipo, la hipótesis de negocio, la propuesta de valor, la construcción de un sitio de baja fidelidad, la adquisición de tráfico, hasta la construcción de una versión de alta fidelidad y el cobro a clientes.
+- entregable: Sitio web funcional de alta fidelidad con métricas de tráfico, feedback de usuarios y sistema de cobro implementado
+- condiciones:
+  - condiciones[0]: Cuando el usuario está construyendo un startup web/mobile y necesita un proceso concreto y ordenado
+  - condiciones[1]: Si el equipo no sabe cómo estructurar las primeras semanas de desarrollo de producto y validación
+
+### R064-023
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: El momento de decidir: pivotar o seguir adelante (Pivote o Proceder)
+- etiqueta: Revisa tu Modelo y Decide
+- resumen: Es el momento de pausa donde te sientas con quien te acompaña en esto (un socio, alguien que invirtió en ti) a revisar todo lo que aprendiste hablando con clientes y mirando el mercado, y decides si tus hipótesis de negocio necesitan un cambio de rumbo (pivotar) o si sigues adelante como lo planeaste. Comparas cómo trabaja el cliente en la vida real con lo que habías supuesto al inicio.
+- entregable: Una decisión clara y por escrito: pivotar o seguir, con tu modelo de negocio actualizado y tu lista de funciones ordenada y reducida
+- condiciones:
+  - condiciones[0]: Cuando terminaste de poner a prueba el problema con clientes reales y necesitas decidir si sigues con tus hipótesis actuales o las cambias
+  - condiciones[1]: Cuando no tienes claro si tu producto resuelve un problema real
+
+### R064-024
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Plan de Materiales Colaterales (Collateral Plan)
+- etiqueta: Prepara tus Materiales de Venta
+- resumen: Conjunto de materiales de venta y marketing (white papers, ROI documents, folletos, ad slicks) diseñados según el tipo de venta (B2B o B2C). En B2B se requiere profundidad técnica y justificación financiera (ROI); en B2C el foco está en materiales de canal como empaques, cupones y exhibidores. Todo material debe probarse en campo, no solo diseñarse en oficina.
+- entregable: Un plan de colaterales documentado con objetivos, públicos objetivo y calendario de cada pieza de material de venta
+- condiciones:
+  - condiciones[0]: Cuando el startup está por iniciar customer validation y necesita materiales de venta
+  - condiciones[1]: Si el ciclo de venta requiere justificación técnica o financiera ante múltiples stakeholders
+
+### R064-025
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Reempaquetado del Producto (Estrategia de Pivote)
+- etiqueta: Repiensa el Empaque del Producto
+- resumen: Estrategia de pivote en la que el núcleo tecnológico del producto es correcto, pero su configuración de venta -empaquetado, modularidad, modelo de suscripción, versiones- no coincide con las preferencias de compra del cliente. Este problema debe detectarse durante el descubrimiento de clientes. En lugar de una reingeniería completa, se reconfiguran las características, el modelo de entrega o el precio: por ejemplo, dividiendo el producto en módulos, ofreciéndolo por suscripción o creando versiones escalonadas de funcionalidad creciente.
+- entregable: Nueva propuesta de empaquetado o precio del producto, validada con al menos un subconjunto de clientes, sin rediseño del núcleo tecnológico
+- condiciones:
+  - condiciones[0]: Cuando la tecnología central es válida pero el mercado no reacciona bien a cómo se vende el producto
+  - condiciones[1]: Cuando un paquete monolítico resulta muy caro o complejo de vender
+  - condiciones[2]: Si el producto tiene buena tecnología pero baja conversión de compra debido a su forma de venta
+
+### R064-026
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mapa de Acceso al Cliente (Customer Access Map)
+- etiqueta: Encuentra tu Primer Contacto Real
+- resumen: Estrategia para determinar cómo conseguir el primer contacto real con un cliente potencial, evitando puntos de entrada ineficaces como compras/procurement en ventas corporativas. Para consumidores, implica identificar organizaciones o grupos de interés (clubes, asociaciones) que faciliten un acceso más económico y efectivo.
+- entregable: Un mapa de acceso con las rutas de entrada más efectivas hacia el cliente objetivo
+- condiciones:
+  - condiciones[0]: Si no se sabe cómo conseguir la primera reunión con un cliente potencial
+
+### R064-027
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Cuántos llegan y cuántos se quedan usando (adquisición y activación)
+- etiqueta: Mide Cómo Llegan tus Clientes
+- resumen: Si tienes un negocio web o de aplicación, instrumenta el producto para medir cada clic y ver el camino completo que recorre alguien hasta convertirse en cliente (el embudo de conversión). Parte de qué relación quieres tener con tus clientes, que es una de las hipótesis de tu modelo de negocio, y elige menos de una docena de métricas accionables que te ayuden a decidir, organizadas en cuántos llegan, qué tan rápido, cuánto te cuesta y qué tan buenos son esos clientes, y agrupadas en adquisición, activación y referidos. Mide la adquisición con visitas totales, de dónde vienen, cuántas convierten y cuánto te cuesta conseguir cada cliente; mide la activación con cuántos o qué porcentaje se activa según la fuente, cuánto cuesta cada activación y qué tan buena es la calidad de esos usuarios. El resultado se arma o se compra como un tablero en tiempo real que resume el comportamiento clave y las tendencias, y que se monta de forma que pueda crecer luego a métricas de retención y de cohortes sin rehacerlo.
+- entregable: Un tablero en tiempo real con menos de 12 indicadores que te ayuden a decidir, cubriendo adquisición, activación y referidos, alimentado por tu producto ya instrumentado y montado de forma que pueda crecer luego a retención y cohortes
+- condiciones:
+  - condiciones[0]: Cuando necesitas decidir en qué invertir basándote en datos reales de comportamiento
+  - condiciones[1]: Cuando tu producto ya está en la fase de validar clientes y necesitas medir el comportamiento real de tus usuarios
+  - condiciones[2]: Si todavía no tienes forma de medir el camino completo que recorre alguien hasta convertirse en cliente
+  - condiciones[3]: Si tu equipo no tiene claro qué datos son los relevantes para decidir en el negocio
+
+### R064-028
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Posicionamiento según Tipo de Mercado
+- etiqueta: Adapta tu Mensaje al Mercado
+- resumen: El tipo de mercado (existente, nuevo, clon, o re-segmentado) cambia radicalmente el mensaje de posicionamiento. En mercado existente se destaca diferenciación (atributos, canal, servicio). En mercado nuevo se comunica visión y pasión, no características, porque no hay contexto comparativo. En mercado clon se imita el posicionamiento de la empresa equivalente en otro país. En re-segmentación (nicho o bajo costo) se comunica comprensión profunda de necesidades desatendidas.
+- entregable: Posicionamiento de producto ajustado y coherente con el tipo de mercado elegido
+- condiciones:
+  - condiciones[0]: Cuando ya se definió el tipo de mercado en fases anteriores (Chapter 8)
+
+### R064-029
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Pruebas de Adquisición Pequeñas y Controladas
+- etiqueta: Prueba Canales con Poco Dinero
+- resumen: En las fases 2 y 3 del descubrimiento de clientes corres pruebas de adquisición limitadas, con tácticas gratuitas y pagadas, para ver si entendiste el problema del cliente y si el MVP es una solución convincente. No son un lanzamiento: nada de comunicados de prensa, porque traerían demasiados clientes o darían la impresión de que el producto ya está terminado. Usa tácticas controlables, baratas y fáciles de medir, como comprar 500 dólares de AdWords y ver si atraen clientes que representen de cinco a 10 veces esa cantidad en ingresos potenciales y que al menos se registren, probando dos titulares y dos llamados a la acción. Si compras listas de correo con permiso para generar interés, deben cumplir el RGPD y la ley CAN-SPAM, que exigen doble opt-in de cada contacto antes del primer envío.
+- entregable: Un registro de cada prueba de adquisición con la táctica, el gasto, los titulares y llamados a la acción probados, los registros conseguidos y cuáles se descartaron y cuáles se refinaron
+- condiciones:
+  - condiciones[0]: Cuando estás en el descubrimiento de clientes de un negocio web o móvil y necesitas medir la reacción inicial al problema o al MVP
+  - condiciones[1]: Si todavía no sabes qué tácticas gratuitas o pagadas te traen usuarios que se registran
+
+### R064-030
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mapa de Influencia (Influence Map)
+- etiqueta: Identifica a Quién Convencer Primero
+- resumen: Herramienta que identifica a los actores clave dentro de una organización que deben ser convencidos y el orden en que deben ser abordados para cerrar una venta compleja. Se basa en el caso de E.piphany, donde se necesitaba el apoyo de ejecutivos operativos, ejecutivos técnicos (IT), usuarios finales y personal técnico, en ese orden específico.
+- entregable: Un mapa visual de influencia con el orden de contacto y los roles de cada stakeholder
+- condiciones:
+  - condiciones[0]: Si la venta requiere múltiples aprobaciones dentro de una organización compleja
+
+### R064-031
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Preservar Efectivo Mientras se Busca el Modelo de Negocio
+- etiqueta: Cuida tu Efectivo al Buscar
+- resumen: El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para capturar la demanda y llenar tu canal de ventas antes de que otro lo haga.
+- entregable: Plan de gasto condicionado a hitos de validación del modelo de negocio, con un criterio explícito y documentado de qué constituye un modelo repetible y escalable antes de escalar la inversión.
+- condiciones:
+  - condiciones[0]: Si estás gastando en marketing o ventas antes de validar tu modelo de negocio
+  - condiciones[1]: Si confundes ventas puntuales o heroicas con un patrón de venta repetible
+  - condiciones[2]: Si sientes presión externa para escalar el gasto prematuramente
+  - condiciones[3]: Si tienes dudas sobre el momento correcto para pisar el acelerador de gasto
+
+### R064-032
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Prueba del MVP de Baja Fidelidad sobre el Problema
+- etiqueta: Valida el Problema Primero
+- resumen: Consiste en invitar gradualmente a clientes potenciales al MVP publicado usando tácticas de push, pull y pago, y medir cuidadosamente sus reacciones (registros, referidos, encuestas) para determinar si el problema identificado realmente les importa. Se complementa con entrevistas presenciales para validar los datos web, ya que 'no tienes datos reales hasta que ves sus pupilas dilatarse'.
+- entregable: Reporte de métricas de conversión y evidencia cualitativa/cuantitativa de si el problema le importa al mercado
+- condiciones:
+  - condiciones[0]: Cuando ya existe un MVP publicado y se necesita medir la reacción real de clientes potenciales
+
+### R064-033
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Prueba de alta fidelidad de tu producto mínimo (MVP)
+- etiqueta: Prueba tu Producto Mínimo Real
+- resumen: A diferencia de la prueba sencilla anterior, que solo mide si el problema te interesa a la gente, aquí invitas a un número limitado de clientes reales a usar una versión funcional de tu producto (MVP) para ver si de verdad lo compran o lo usan. No es un lanzamiento completo ni abierto; conviene que el acceso sea solo por invitación, para controlar quién lo ve y evitar que la competencia o la prensa se enteren antes de tiempo. Lo que más te interesa medir es la velocidad con la que tus clientes empiezan a usarlo de verdad.
+- entregable: Un reporte de tu prueba con clientes reales, con las métricas de velocidad de uso y los criterios que usaste para decidir si pasa o no pasa
+- condiciones:
+  - condiciones[0]: Cuando ya tienes una versión funcional de tu producto lista para mostrar a clientes reales
+  - condiciones[1]: Antes de lanzarlo públicamente o venderlo a gran escala
+
+### R064-034
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Posicionamiento de la Empresa (Company Positioning)
+- etiqueta: Posiciona tu Empresa, No tu Producto
+- resumen: A diferencia del posicionamiento de producto, que resalta atributos, el posicionamiento de tu empresa responde a preguntas como '¿qué hace esta empresa por mí?' y '¿por qué debería hacer negocios contigo?'. Se centra en la misión y el propósito de tu negocio, no en las características de un producto en particular.
+- entregable: Declaración de posicionamiento de empresa validada y comunicada
+- condiciones:
+  - condiciones[0]: Al terminar la fase de validación de clientes, antes de iniciar la fase de creación de clientes
+
+### R064-035
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Preparar los Contactos con Clientes (Prepare for Customer Contacts)
+- etiqueta: Consigue tus Primeras Citas
+- resumen: Antes de salir del edificio arma una lista de 50 clientes potenciales, empezando por la gente que conoces, los contactos de tus cofundadores y empleados, favores de amigos, inversores y abogados, y listas de asistentes a conferencias. En esta etapa el cargo del contacto no importa: te interesan personas que te den su tiempo y encajen aunque sea de forma suelta con tus hipótesis. Prepara una historia de referencia que explique el problema que quieres resolver y por qué importa, pide solo unos minutos y aclara que no es una llamada de venta. Cada fundador debe tener al menos 10 conversaciones al día y llevar la estadística de aciertos por fuente y por cargo.
+- entregable: Lista de 50 clientes potenciales, historia de referencia y correo de presentación escritos, y un calendario maestro con diez visitas de clientes al día repartidas entre los fundadores
+- condiciones:
+  - condiciones[0]: Cuando estás por empezar las entrevistas del descubrimiento de clientes y todavía no tienes reuniones agendadas
+  - condiciones[1]: Si nadie en el equipo se anima a llamar a desconocidos y las citas no avanzan
+
+### R064-036
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: MVP de Alta Fidelidad
+- etiqueta: Construye un Prototipo Más Pulido
+- resumen: Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.
+- entregable: Un MVP funcional, pulido e instrumentado, listo para atraer y medir el comportamiento de un volumen mayor de usuarios reales
+- condiciones:
+  - condiciones[0]: Cuando se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios
+
+### R064-037
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Optimización del Embudo 'Conseguir Clientes'
+- etiqueta: Prueba, Mide y Ajusta Etapas
+- resumen: Proceso continuo de 'test, medir, ajustar' enfocado en mejorar volumen, costo y conversión en cada etapa del embudo (adquisición, activación, compra). Requiere pruebas controladas tipo A/B, foco en pocas variables a la vez, y mantener siempre en mente el valor de vida del cliente (LTV) comparado con el costo de adquisición (CAQ), asegurando que LTV > CAQ.
+- entregable: Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ
+- condiciones:
+  - condiciones[0]: Cuando ya existen datos reales de comportamiento de usuarios y se busca mejorar la eficiencia del embudo de ventas
+
+### R064-038
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Desarrollar el Sales Roadmap (Hoja de Ruta de Ventas)
+- etiqueta: Documenta el Proceso Repetible
+- resumen: Es el diagrama detallado y repetible del proceso de venta exitoso, documentado como un flowchart que incluye cada paso, presentación, email y precio necesario para conseguir una orden. Sirve como el 'playbook' que se entrega a un VP de ventas profesional para escalar el proceso de manera predecible.
+- entregable: Playbook documentado (flowchart) del proceso de venta repetible y escalable
+- condiciones:
+  - condiciones[0]: Cuando ya se han hecho múltiples ventas de prueba y se busca escalar el proceso comercial
+  - condiciones[1]: Antes de contratar un VP de ventas profesional
+
+### R064-039
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Los 9 Pecados Capitales del Modelo de Introducción de Producto
+- etiqueta: Evita los Pecados del Lanzamiento
+- resumen: Lista de fallos fatales que cometen las startups al copiar el modelo de grandes empresas: 1) Asumir que se conoce al cliente, 2) Asumir que se saben las características a construir, 3) Enfocarse solo en la fecha de lanzamiento, 4) Priorizar ejecución sobre aprendizaje, 5) Planes de negocio sin espacio para el error, 6) Confundir títulos de trabajo tradicionales con necesidades de startup, 7) Ventas/Marketing ejecutando un plan en vez de descubrir, 8) Escalamiento prematuro por presunción de éxito, 9) Gestión por crisis que lleva a una espiral de muerte.
+- entregable: Un checklist de riesgos identificados en el proyecto actual comparado con el caso Webvan.
+- condiciones:
+  - condiciones[0]: Cuando se está redactando un plan de negocio tradicional para inversionistas.
+  - condiciones[1]: Si la empresa ha recaudado capital significativo basado solo en proyecciones sin validar.
+
+### R064-040
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Búsqueda del Problem/Solution Fit
+- etiqueta: Valida tu Ajuste Problema-Solución
+- resumen: El customer discovery busca el ajuste problema/solución: determinar si existe un problema que mucha gente quiere resolver y si la solución propuesta lo resuelve de forma convincente. Es esencialmente equivalente al 'product/market fit', y se logra solo cuando el modelo de ingresos, el precio y los esfuerzos de adquisición de clientes coinciden con las necesidades del cliente.
+- entregable: Evidencia documentada de que el problema y la solución encajan con el segmento objetivo
+- condiciones:
+  - condiciones[0]: Cuando se ha probado el MVP con earlyvangelists y se necesita confirmar el ajuste
+  - condiciones[1]: Antes de pasar a customer validation
+
+### R064-041
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Hipótesis de Socios Clave
+- etiqueta: Define qué Necesitas Externalizar
+- resumen: Identifica los socios esenciales que proveen capacidades, productos o servicios que la startup no puede o no quiere desarrollar internamente. Se organizan en cuatro tipos: alianzas estratégicas, coopetición, desarrollo conjunto de negocio y relaciones con proveedores clave. Con cada uno se define el 'intercambio de valor', qué provee y qué recibe a cambio, anotado en una tabla de tres columnas junto a sus candidatos suplentes. La flexibilidad de cada proveedor se evalúa en tiempos de entrega, tamaños de pedido, crédito y precio, y se distingue con cuidado entre socios y recursos clave, que no son lo mismo. El resultado se lleva al Business Model Canvas y se planea su validación posterior con reuniones reales, porque una tabla de socios sin una reunión detrás sigue siendo una hipótesis. El ejemplo de Apple y el iPod con las discográficas muestra cómo un socio puede potenciar el modelo de negocio entero. Aplica igual cuando el producto es físico y necesita proveedores, alianzas o distribución mediante terceros.
+- entregable: Tabla de socios clave con columnas: nombre del socio, tipo de relación, qué provee, y qué ofrece la empresa a cambio como contraprestación, con los candidatos suplentes identificados y la validación con reuniones reales ya planeada
+- condiciones:
+  - condiciones[0]: Cuando el modelo de negocio requiere capacidades externas críticas (manufactura, contenido, distribución)
+  - condiciones[1]: Cuando el producto es físico y requiere proveedores, alianzas o distribución mediante terceros
+
+### R064-042
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)
+- etiqueta: Evita el Viejo Modelo en Cascada
+- resumen: Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras gastar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.
+- entregable: Un diagnóstico de qué partes del proceso actual de desarrollo de producto siguen el patrón waterfall riesgoso, y un plan para sustituirlas por iteración
+- condiciones:
+  - condiciones[0]: Cuando el equipo está usando un plan de negocio y cronograma de lanzamiento rígido sin haber hablado con clientes
+  - condiciones[1]: Cuando los inversionistas exigen un plan detallado de ejecución sin margen a pivotar
+  - condiciones[2]: Si existe una fecha de lanzamiento fija e inamovible sin importar el feedback.
+
+### R064-043
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Haz pruebas de pasa o no pasa (pass/fail tests)
+- etiqueta: Define Pruebas de Pasa o No
+- resumen: Antes de avanzar, define de antemano qué significa que tu hipótesis de negocio funcionó o no. No te conformes con una respuesta positiva de un par de personas: busca una reacción masiva y contundente de tus primeros clientes entusiastas antes de pasar a la etapa de validación de clientes. El criterio de éxito debe estar ligado a tu modelo de negocio, por ejemplo comparando cuánto te cuesta conseguir un cliente contra lo que cobras por tu producto.
+- entregable: Un documento con tus criterios de pasa o no pasa, los resultados reales comparados, y tu decisión de seguir adelante o pivotar
+- condiciones:
+  - condiciones[0]: Cuando necesitas decidir de forma objetiva, sin opiniones, si sigues adelante o pivotas
+
+### R064-044
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Plan para conseguir clientes (Acquire Plan)
+- etiqueta: Atrae Clientes a Bajo Costo
+- resumen: Es un documento táctico de una página donde detallas los experimentos con los que vas a atraer clientes de forma predecible y a bajo costo hacia tu embudo de ventas, y con los que vas a convertirlos en usuarios activos o compradores. Te apoyas en dos anclas y no en una: las hipótesis de segmentos, relaciones y propuesta de valor que ya trazaste en tu mapa del modelo de negocio, y lo que aprendiste hablando con clientes (customer discovery). Cada prueba lleva su táctica nombrada (SEO, PPC, correo, referidos), su responsable, su presupuesto con tope, su plazo y el número que decide si va a pasar o fracasar, fijado antes de lanzarla. Las pruebas se lanzan de forma escalonada y no todas a la vez, para poder medir cada resultado por separado, y solo se escala con más fuerza y más presupuesto lo que de verdad funcionó. Nada de esto se lanza antes de que esté lista la plomería que activa al cliente: el sistema detrás, los pagos y los correos de confirmación. En esta etapa tu meta es aprender qué canales funcionan, no generar ingresos ni lanzar el producto de forma oficial.
+- entregable: Tu plan de adquisición de una página, con las tácticas nombradas, el presupuesto, quién hace qué, el cronograma y la meta medible de cada prueba, con su número de pasar o fracasar decidido de antemano, más tu sistema de datos ya activo para medir cada acción del cliente
+- condiciones:
+  - condiciones[0]: Cuando entras en la fase de validar clientes (customer validation) y necesitas probar qué canales de adquisición funcionan
+  - condiciones[1]: Si todavía no sabes qué canal te trae clientes al menor costo, sea por internet, por celular o en un local físico
+
+### R064-045
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Verificación del Product/Market Fit
+- etiqueta: Confirma tu Ajuste al Mercado
+- resumen: Evaluación formal de cierre de Customer Discovery que responde tres preguntas críticas: si existe encaje producto/mercado (problema urgente + producto que lo resuelve a un precio aceptable + suficientes clientes), quiénes son los clientes y cómo alcanzarlos costo-efectivamente, y si el negocio puede escalar y ser rentable. Es la puerta de entrada a Customer Validation.
+- entregable: Documento de evaluación de Product/Market Fit con respuestas cuantificadas a las tres preguntas críticas y decisión de avance
+- condiciones:
+  - condiciones[0]: Al finalizar todas las fases de Customer Discovery
+  - condiciones[1]: Antes de aumentar el gasto para entrar en Customer Validation
+
+### R064-046
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Tipo de Mercado y Curvas de Crecimiento de Ingresos
+- etiqueta: Proyecta tu Curva de Ingresos
+- resumen: Cada uno de los cuatro tipos de mercado (nuevo, existente, re-segmentado, clonado) tiene una curva de crecimiento de ventas distinta, determinada por la dificultad de pasar de vender a earlyvangelists a vender a clientes mainstream. Entender el tipo de mercado te ayuda a estimar de forma realista cómo crecerán tus ingresos con el tiempo. En mercados nuevos, el éxito inicial con earlyvangelists no garantiza una escalabilidad rápida de ingresos, y estimar su tamaño requiere usar proxies y mercados adyacentes comparables. En mercados existentes, además de la cuota capturable a incumbentes, conviene considerar contratos a largo plazo y costos hundidos como barreras de cambio (lock-ins) que frenan tu crecimiento.
+- entregable: Proyección de ingresos ajustada según el tipo de mercado, con justificación basada en comparables o cuota de mercado y supuestos documentados
+- condiciones:
+  - condiciones[0]: Cuando estás construyendo proyecciones de ingresos para tu business model
+  - condiciones[1]: Si tus proyecciones de crecimiento parecen desconectadas de la realidad del mercado
+  - condiciones[2]: Cuando no has considerado el tipo de mercado en tus estimaciones de ingresos futuros
+
+### R064-047
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Marketing Push vs Pull
+- etiqueta: Empuja o Atrae Clientes
+- resumen: Distinción entre estrategias de marketing que empujan el producto hacia el cliente (emails, vendedores) versus las que atraen al cliente voluntariamente hacia el producto (muestras, motores de búsqueda, contenido de interés). Una estrategia de marketing fuerte combina ambos enfoques.
+- entregable: Un mix documentado de tácticas push y pull dentro del plan de adquisición
+- condiciones:
+  - condiciones[0]: Cuando se está diseñando la estrategia de captación de clientes y se necesita diversificar canales
+
+### R064-048
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Mapa de Flujo de Trabajo del Cliente
+- etiqueta: Dibuja el Flujo del Cliente
+- resumen: Antes de decidir si cambias de rumbo (pivotar) o sigues adelante, tienes que construir un diagrama que muestre cómo tu cliente típico hace su trabajo hoy, con quién interactúa y cómo gasta su tiempo y su dinero. Este mapa te sirve para comprobar si tus hipótesis iniciales sobre el cliente son ciertas, comparando el flujo de trabajo con y sin el producto que propones.
+- entregable: Un diagrama visual del flujo de trabajo del cliente (antes y después de tu producto) y una lista de los problemas que identificaste con su nivel de dolor (pain level)
+- condiciones:
+  - condiciones[0]: Cuando terminaste la fase de descubrimiento del problema con tus clientes (Customer Discovery) y necesitas validar tus hipótesis antes de construir la solución
+  - condiciones[1]: Cuando tienes datos de conversaciones con clientes pero todavía no los organizaste de forma visual
+
+### R064-049
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\txt\The Startup Owner's Manual_ The - Blank, Steve.txt
+- titulo: Preguntas IPO para Descubrir el Dolor del Cliente
+- etiqueta: Descubre el Dolor del Cliente
+- resumen: Técnica de entrevista para identificar el problema más doloroso del cliente usando dos preguntas clave que revelan la verdadera necesidad no satisfecha, junto con el costo cuantificable de ese problema (tiempo, dinero, frustración).
+- entregable: Lista de dolores priorizados por cliente con estimación de costo asociado a cada problema
+- condiciones:
+  - condiciones[0]: Cuando se está en fase de customer discovery y se necesita validar la importancia real de un problema

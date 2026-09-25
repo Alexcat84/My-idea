@@ -2,7 +2,7 @@
 """Campania de fidelidad: el aplicador de correcciones declara cada cambio en el nodo
 y se niega a aplicar lo que no puede auditar.
 
-Casos positivos: aplica, conserva el texto viejo en `correcciones` con su cita, y
+Casos positivos: aplica (un paso y una condicion de activacion), conserva el texto viejo en `correcciones` con su cita, y
 el nodo resultante pasa el validador de esquema (el campo esta legalizado).
 Casos negativos: rechaza, sin escribir nada, un texto anterior que no es el vigente,
 un texto nuevo con guion largo, una cita sin frase y una correccion repetida.
@@ -30,6 +30,7 @@ NODO = {
     "nodos_previos": [],
     "nodos_siguientes": [],
     "condiciones_activacion": ["Siempre"],
+    "etiqueta_arbol": "Domina el Mundo",
 }
 
 
@@ -90,8 +91,28 @@ def main():
         r2 = correr(repo, [correccion(texto_anterior="Reporta en 8 horas", texto_nuevo="Otra cosa")])
         if r2.returncode == 0:
             fallos.append("aplico dos veces el mismo id de correccion")
+    # POSITIVO: una condicion de activacion se corrige por indice, como un paso
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta = montar(tmp)
+        r = correr(repo, [correccion(id="cond-01", campo="condiciones_activacion", indice=0,
+                                     texto_anterior="Siempre", texto_nuevo="Cuando el libro lo dice")])
+        nodo = json.loads(ruta.read_text(encoding="utf-8"))
+        if r.returncode != 0:
+            fallos.append("no aplico una correccion valida de condiciones_activacion: " + r.stdout)
+        elif nodo["condiciones_activacion"][0] != "Cuando el libro lo dice" or nodo["correcciones"][0].get("indice") != 0:
+            fallos.append("la condicion no cambio o no quedo declarada con su indice")
+    # POSITIVO: la etiqueta de cara, campo escalar
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta = montar(tmp)
+        r = correr(repo, [correccion(id="etq-01", campo="etiqueta_arbol", indice=None,
+                                     texto_anterior="Domina el Mundo", texto_nuevo="Deja la Fuerza Bruta")])
+        nodo = json.loads(ruta.read_text(encoding="utf-8"))
+        if r.returncode != 0 or nodo.get("etiqueta_arbol") != "Deja la Fuerza Bruta":
+            fallos.append("no corrigio la etiqueta de cara: " + r.stdout)
     # NEGATIVOS: cada uno rechazado y sin escribir nada
     for nombre, mala in (
+        ("una condicion con indice fuera de rango",
+         correccion(id="mala-03", campo="condiciones_activacion", indice=5, texto_anterior="Siempre", texto_nuevo="Otra")),
         ("texto anterior que no es el vigente", correccion(texto_anterior="Otra cosa")),
         ("texto nuevo con guion largo", correccion(texto_nuevo="Reporta " + chr(0x2014) + " en 8 horas")),
         ("cita sin frase", correccion(cita={"libro": "Test", "lineas": "L1", "frase": ""})),

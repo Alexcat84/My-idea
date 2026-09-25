@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo organizar el equipo que habla con los clientes (Customer Development)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada una de las cuatro fases de descubrimiento de clientes (Customer Discovery) y deja por escrito los valores centrales de tu proyecto.",
+  "resumen_teorico": "Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada uno de los cuatro pasos del desarrollo de clientes (Customer Development: descubrimiento, validación, creación de clientes y construcción de la empresa) y deja por escrito los valores centrales de tu proyecto.",
   "pasos_accionables": [
     "Decide quién de ustedes lidera la conversación con clientes (Customer Development)",
     "Define cómo vas a salir a hablar con clientes en persona (get out of the building)",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Si le delegas la conversación con clientes a alguien de ventas o marketing en lugar de hacerlo tú mismo"
   ],
-  "etiqueta_arbol": "Forma tu Equipo de Descubrimiento"
+  "etiqueta_arbol": "Forma tu Equipo de Descubrimiento",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-12",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada una de las cuatro fases de descubrimiento de clientes (Customer Discovery) y deja por escrito los valores centrales de tu proyecto.",
+      "texto_nuevo": "Aquí te organizas distinto a como lo haría una empresa tradicional: en las primeras etapas, tú y tus cofundadores salen del edificio a hablar con clientes (get out of the building), en vez de dejarle esa tarea a alguien de ventas o marketing contratado para eso. Define quién hace qué en cada uno de los cuatro pasos del desarrollo de clientes (Customer Development: descubrimiento, validación, creación de clientes y construcción de la empresa) y deja por escrito los valores centrales de tu proyecto.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L4496-L4521",
+        "frase": "Agree on the team roles for each of the four Customer Development Steps"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R062-033 (CONTRARIO, arbitro): Tenía razón el lector B. La lista de control (L4519, repetida en L16865) pide acordar los roles para los cuatro pasos del Customer Development, y el glosario (L24924) deja claro que Customer Discovery es solo el primero de esos cuatro pasos. El libro sí tiene cuatro fases dentro del Discovery, pero ningún pasaje asigna los roles del equipo a esas fases, así que el campo cambia la secuencia a la que se asignan los roles. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R062-033"
+    }
+  ]
 }

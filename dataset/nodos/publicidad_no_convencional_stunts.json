@@ -13,7 +13,7 @@
     "Mide el retorno en menciones, tráfico, seguidores nuevos y clientes conseguidos",
     "Acepta los fracasos como parte del proceso y mantén siempre nuevas ideas en camino"
   ],
-  "entregable_esperado": "Un plan con al menos tres ideas de acciones de impacto evaluadas por costo, potencial de viralidad y qué tan bien encajan con tu marca, con las métricas de éxito definidas antes de ejecutarlas.",
+  "entregable_esperado": "Un plan con varias ideas de acciones de impacto evaluadas por costo, potencial de viralidad y qué tan bien encajan con tu marca, con las métricas de éxito definidas antes de ejecutarlas.",
   "nodos_previos": [
     "value_proposition_startup"
   ],
@@ -24,5 +24,23 @@
     "Cuando tienes poco presupuesto de marketing pero buscas visibilidad rápida",
     "Cuando necesitas diferenciarte de competidores con presupuestos publicitarios mucho más grandes"
   ],
-  "etiqueta_arbol": "Crea un Golpe Mediático"
+  "etiqueta_arbol": "Crea un Golpe Mediático",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-71",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan con al menos tres ideas de acciones de impacto evaluadas por costo, potencial de viralidad y qué tan bien encajan con tu marca, con las métricas de éxito definidas antes de ejecutarlas.",
+      "texto_nuevo": "Un plan con varias ideas de acciones de impacto evaluadas por costo, potencial de viralidad y qué tan bien encajan con tu marca, con las métricas de éxito definidas antes de ejecutarlas.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "I have an idea/books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "L1160-L1164",
+        "frase": "You should have a defined process for brainstorming and selecting ideas, but also understand that not every idea will work."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R066-015 (ANADIDO, lector y verificador de acuerdo): Cifra mínima de ideas que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R066-015"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sustitución Química Sinergética",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Braungart advierte que muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (más de 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+  "resumen_teorico": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Braungart advierte que muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
   "pasos_accionables": [
     "Mapear todos los componentes químicos del producto y su función",
     "Consultar bases de datos de materiales para identificar alternativas menos tóxicas",
@@ -22,5 +22,23 @@
     "Cuando el usuario planea reemplazar un material tóxico sin haber evaluado el reemplazo en su totalidad",
     "Si existe presión regulatoria para eliminar una sustancia específica del producto"
   ],
-  "etiqueta_arbol": "Evalúa tus Nuevos Componentes"
+  "etiqueta_arbol": "Evalúa tus Nuevos Componentes",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-49",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Braungart advierte que muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (más de 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+      "texto_nuevo": "No basta con sustituir un material tóxico por otro; hay que evaluar cómo interactúan sinérgicamente los nuevos componentes entre sí y con el resto del sistema. Braungart advierte que muchas sustituciones regulatorias (como reemplazar asbesto o plomo) generan problemas nuevos e incluso peores, porque no se analiza el conjunto de interacciones químicas ni la disponibilidad real de los materiales sustitutos en la naturaleza. Existen bases de datos de materiales (unas 55 en el mundo) que ayudan a identificar alternativas, pero el análisis debe ir más allá de la sustitución aislada.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L34",
+        "frase": "There are approximately fifty-five databases around the world that can give a company substitutions for the materials it is using"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R032-032 (CONTRARIO, lector y verificador de acuerdo): Altera la cifra: el libro da una aproximación (unas cincuenta y cinco), no un mínimo superado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R032-032"
+    }
+  ]
 }

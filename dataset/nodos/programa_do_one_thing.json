@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Programa 'Haz Una Cosa' (Personal Sustainability Project)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Un primer paso efectivo para involucrar empleados es pedirles que tomen una acción simple en su trabajo o en casa, como el Personal Sustainability Project (PSP) de Walmart, donde 1.3 millones de asociados eligieron una acción personal de sostenibilidad. Estos programas generan beneficios intangibles como mejora de moral y también resultados de negocio concretos.",
+  "resumen_teorico": "Un primer paso efectivo para involucrar empleados es pedirles que tomen una acción simple en su trabajo o en casa, como el Personal Sustainability Project (PSP) de Walmart, que en 2007 pidió a sus 1.3 millones de asociados en Estados Unidos que eligieran una acción personal de sostenibilidad. Estos programas generan beneficios intangibles como mejora de moral y también resultados de negocio concretos.",
   "pasos_accionables": [
     "Invitar a cada empleado a elegir una acción personal de sostenibilidad",
     "Facilitar opciones simples: cambiar bombillas, reciclar, actividades comunitarias",
@@ -21,5 +21,23 @@
   "condiciones_activacion": [
     "Cuando se busca un punto de entrada de bajo riesgo para iniciar el engagement en sostenibilidad"
   ],
-  "etiqueta_arbol": "Haz una Cosa Sostenible"
+  "etiqueta_arbol": "Haz una Cosa Sostenible",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-70",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un primer paso efectivo para involucrar empleados es pedirles que tomen una acción simple en su trabajo o en casa, como el Personal Sustainability Project (PSP) de Walmart, donde 1.3 millones de asociados eligieron una acción personal de sostenibilidad. Estos programas generan beneficios intangibles como mejora de moral y también resultados de negocio concretos.",
+      "texto_nuevo": "Un primer paso efectivo para involucrar empleados es pedirles que tomen una acción simple en su trabajo o en casa, como el Personal Sustainability Project (PSP) de Walmart, que en 2007 pidió a sus 1.3 millones de asociados en Estados Unidos que eligieran una acción personal de sostenibilidad. Estos programas generan beneficios intangibles como mejora de moral y también resultados de negocio concretos.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L6624",
+        "frase": "In 2007, Walmart asked its 1.3 million U.S. associates to choose a \"Personal Sustainability Project (PSP)\"--to advance sustainability in their lives, communities, or workplace."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R057-031 (ANADIDO, arbitro): Ambos lectores ven el mismo error y es real. Tiene razón A en la clase: el libro no da una cifra de participación con otro valor, así que no es CONTRARIO. El campo pone una cifra de participantes que el libro no da, y la saca de la cifra de empleados a los que se les pidió (L6624). Busqué en todo el libro (1.3 million, PSP, Personal Sustainability, associates) y ningún pasaje da cuántos participaron. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R057-031"
+    }
+  ]
 }

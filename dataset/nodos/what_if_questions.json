@@ -11,7 +11,7 @@
     "No descartar preguntas por parecer imposibles; explorar qué modelo de negocio las haría viables",
     "Seleccionar las preguntas más provocadoras para profundizar en talleres de ideación"
   ],
-  "entregable_esperado": "Lista de al menos 5-10 preguntas '¿Qué pasaría si?' que desafíen el modelo de negocio actual",
+  "entregable_esperado": "Lista de preguntas '¿Qué pasaría si?' que desafíen el modelo de negocio actual",
   "nodos_previos": [
     "epicentros_innovacion_modelo_negocio"
   ],
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Cuando el equipo está anclado en el pensamiento convencional de la industria"
   ],
-  "etiqueta_arbol": "Desafía lo Establecido con Preguntas"
+  "etiqueta_arbol": "Desafía lo Establecido con Preguntas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-76",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de al menos 5-10 preguntas '¿Qué pasaría si?' que desafíen el modelo de negocio actual",
+      "texto_nuevo": "Lista de preguntas '¿Qué pasaría si?' que desafíen el modelo de negocio actual",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2101-L2107",
+        "frase": "“What if” questions are merely starting points."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R028-039 (ANADIDO, lector y verificador de acuerdo): Cifra de preguntas no presente en el libro. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R028-039"
+    }
+  ]
 }

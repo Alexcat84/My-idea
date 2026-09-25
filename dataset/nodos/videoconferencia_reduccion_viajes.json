@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Uso de Videoconferencia para Reducir Viajes Corporativos",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los viajes de negocio son una de las mayores fuentes de huella ambiental en negocios de servicios, incluyendo tu huella de carbono indirecta (Scope 3). Sustituir reuniones presenciales por videoconferencia (Cisco TelePresence, WebEx, Skype) puede reducir tus viajes corporativos hasta en un 75%, con retorno de inversión en 15 meses o menos. Esto funciona especialmente bien con contactos o equipos con los que ya tienes relaciones establecidas. Además de ahorrar emisiones, esta sustitución genera ahorros económicos directos en costos de desplazamiento, y se puede reforzar con herramientas de colaboración remota que faciliten seguir trabajando sin necesidad de estar físicamente presente.",
+  "resumen_teorico": "Los viajes de negocio son una de las mayores fuentes de huella ambiental en negocios de servicios, incluyendo tu huella de carbono indirecta (Scope 3). Sustituir reuniones presenciales por videoconferencia (Cisco TelePresence, WebEx, Skype) puede reducir tus costos de viaje hasta en un 75% (las empresas que la usan recortaron sus viajes corporativos un 24%), con retorno de inversión en 15 meses o menos. Esto funciona especialmente bien con contactos o equipos con los que ya tienes relaciones establecidas. Además de ahorrar emisiones, esta sustitución genera ahorros económicos directos en costos de desplazamiento, y se puede reforzar con herramientas de colaboración remota que faciliten seguir trabajando sin necesidad de estar físicamente presente.",
   "pasos_accionables": [
     "Audita la frecuencia y el propósito de tus viajes de negocio actuales",
     "Evalúa e implementa una plataforma de videoconferencia adecuada a tu presupuesto",
@@ -35,6 +35,24 @@
       "node_id": "reduccion_viajes_negocio",
       "titulo": "Reducción de Viajes de Negocio mediante Tecnología Virtual",
       "fuente": "The Green to Gold Business Play - Daniel C. Esty"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-53",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los viajes de negocio son una de las mayores fuentes de huella ambiental en negocios de servicios, incluyendo tu huella de carbono indirecta (Scope 3). Sustituir reuniones presenciales por videoconferencia (Cisco TelePresence, WebEx, Skype) puede reducir tus viajes corporativos hasta en un 75%, con retorno de inversión en 15 meses o menos. Esto funciona especialmente bien con contactos o equipos con los que ya tienes relaciones establecidas. Además de ahorrar emisiones, esta sustitución genera ahorros económicos directos en costos de desplazamiento, y se puede reforzar con herramientas de colaboración remota que faciliten seguir trabajando sin necesidad de estar físicamente presente.",
+      "texto_nuevo": "Los viajes de negocio son una de las mayores fuentes de huella ambiental en negocios de servicios, incluyendo tu huella de carbono indirecta (Scope 3). Sustituir reuniones presenciales por videoconferencia (Cisco TelePresence, WebEx, Skype) puede reducir tus costos de viaje hasta en un 75% (las empresas que la usan recortaron sus viajes corporativos un 24%), con retorno de inversión en 15 meses o menos. Esto funciona especialmente bien con contactos o equipos con los que ya tienes relaciones establecidas. Además de ahorrar emisiones, esta sustitución genera ahorros económicos directos en costos de desplazamiento, y se puede reforzar con herramientas de colaboración remota que faciliten seguir trabajando sin necesidad de estar físicamente presente.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L3328",
+        "frase": "We've seen estimates that effective use of videoconferencing could reduce travel-related costs by up to 75 percent.20 Researchers from the Aberdeen Group found that employers using videoconferencing technology reduced corporate travel by 24 percent."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R058-026 (CONTRARIO, lector y verificador de acuerdo): Cambia a que se aplica la cifra: el 75% es de costos, no de viajes; los viajes bajan un 24% segun el libro. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R058-026"
     }
   ]
 }

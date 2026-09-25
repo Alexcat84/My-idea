@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de la comisión por cancelación (breakup fee) al vender tu empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y confiar en la cláusula de exclusividad (no-shop), salvo en casos puntuales donde sospeches que el comprador solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o donde tú asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
   "pasos_accionables": [
     "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
     "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
@@ -24,5 +24,23 @@
     "Cuando el comprador te pide una comisión por cancelación en la carta de intención",
     "Cuando sospechas que el proceso de venta puede ser solo una exploración sin intención real de comprar"
   ],
-  "etiqueta_arbol": "Evalúa la Penalidad por Cancelar"
+  "etiqueta_arbol": "Evalúa la Penalidad por Cancelar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-03",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y confiar en la cláusula de exclusividad (no-shop), salvo en casos puntuales donde sospeches que el comprador solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o donde tú asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "texto_nuevo": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4329-L4338",
+        "frase": "We generally resist any request of a buyer to institute a breakup fee and tell the potential buyer to rely on the no-shop clause instead. / There are some rare circumstances in which a seller can reasonably ask for a breakup fee. If the buyer is competitive and the seller is concerned that the buyer may be entering the process as a fishing expedition as opposed to a good-faith effort to buy the company, or if the seller incurs a massive amount of customer or employee risk by entering into the deal, a breakup fee may be appropriate."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R022-012 (CONTRARIO, lector y verificador de acuerdo): Invierte quién paga en los casos excepcionales: el libro no dice que ahí se acepte la petición del comprador, sino que el vendedor puede pedir él la comisión. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R022-012"
+    }
+  ]
 }

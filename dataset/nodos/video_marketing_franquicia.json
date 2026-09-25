@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Video como Herramienta Esencial de Marketing de Franquicia",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El video ha evolucionado de lujo a necesidad virtual en el marketing de franquicias, apareciendo en el 70% de las búsquedas de Google. Un video completo de 8-10 minutos sirve para Discovery Days y presentaciones grupales, mientras que versiones cortas sirven para el sitio web y YouTube. El uso de videos gratuitos puede aumentar el clickthrough rate en campañas PPC hasta un 60% y mejorar la tasa de captura hasta un 40%.",
+  "resumen_teorico": "El video ha evolucionado de lujo a necesidad virtual en el marketing de franquicias, apareciendo en el 70% de las búsquedas de Google. Un video completo de 8-10 minutos sirve para Discovery Days y presentaciones grupales, mientras que versiones cortas sirven para el sitio web y YouTube. El uso de videos gratuitos puede aumentar el clickthrough rate en campañas PPC un 60% o más y mejorar la tasa de captura hasta un 40%.",
   "pasos_accionables": [
     "Producir un video profesional de 8-10 minutos que muestre la experiencia de franquicia",
     "Crear versiones cortas del video para el sitio web y YouTube",
@@ -22,5 +22,23 @@
   "condiciones_activacion": [
     "Cuando se busca aumentar tasas de conversión y credibilidad en campañas digitales"
   ],
-  "etiqueta_arbol": "Muestra tu Negocio en Video"
+  "etiqueta_arbol": "Muestra tu Negocio en Video",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-52",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El video ha evolucionado de lujo a necesidad virtual en el marketing de franquicias, apareciendo en el 70% de las búsquedas de Google. Un video completo de 8-10 minutos sirve para Discovery Days y presentaciones grupales, mientras que versiones cortas sirven para el sitio web y YouTube. El uso de videos gratuitos puede aumentar el clickthrough rate en campañas PPC hasta un 60% y mejorar la tasa de captura hasta un 40%.",
+      "texto_nuevo": "El video ha evolucionado de lujo a necesidad virtual en el marketing de franquicias, apareciendo en el 70% de las búsquedas de Google. Un video completo de 8-10 minutos sirve para Discovery Days y presentaciones grupales, mientras que versiones cortas sirven para el sitio web y YouTube. El uso de videos gratuitos puede aumentar el clickthrough rate en campañas PPC un 60% o más y mejorar la tasa de captura hasta un 40%.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L3366",
+        "frase": "the use of free videos (best positioned as educational, not promotional) in PPC ad campaigns can increase clickthrough rates by 60 percent or more"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R017-033 (CONTRARIO, lector y verificador de acuerdo): Convierte un minimo del libro en un maximo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R017-033"
+    }
+  ]
 }

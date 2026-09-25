@@ -14,7 +14,7 @@
     "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación",
     "Preguntar cómo se compara la solución propuesta con las soluciones actuales"
   ],
-  "entregable_esperado": "Presentación del problema validada con comentarios cualitativos de al menos 10 a 15 clientes",
+  "entregable_esperado": "Presentación del problema validada con comentarios cualitativos de al menos 50 clientes potenciales",
   "nodos_previos": [
     "preparar_contacto_clientes",
     "preguntas_ipo_dolor_cliente"
@@ -38,6 +38,24 @@
       "node_id": "presentacion_problema_tres_columnas",
       "titulo": "Presentación del Problema en Tres Columnas",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-13",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Presentación del problema validada con comentarios cualitativos de al menos 10 a 15 clientes",
+      "texto_nuevo": "Presentación del problema validada con comentarios cualitativos de al menos 50 clientes potenciales",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L20043; L20817",
+        "frase": "Earlier, your “problem discovery” visits should have reached at least 50 potential customers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R063-035 (CONTRARIO, arbitro): Tenía razón el lector B. El libro da otro valor para ese mismo dato: las visitas de la fase del problema deben llegar al menos a 50 clientes potenciales (L20817), a partir de una lista de 50 (L20043). El 10 a 15 del campo viene de 'A solid discovery effort will usually involve 10 to 15 customer visits a week' (L20043), que es un ritmo semanal y no un total. Busqué en todo el libro con Grep ('10 to 15', 'ten to fifteen', '15 customers', 'fifty', 'at least 50', 'problem presentation') y ningún pasaje apoya el umbral de 10 a 15 clientes para la presentación del problema. Como el libro da otro valor, esto es CONTRARIO y no ANADIDO, que era lo que marcaba el lector A. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R063-035"
     }
   ]
 }

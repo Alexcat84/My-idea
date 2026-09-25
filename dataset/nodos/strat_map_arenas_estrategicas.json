@@ -13,7 +13,7 @@
     "Grafica las arenas como burbujas en el Strat-Map",
     "Selecciona las arenas del cuadrante superior derecho como best bets, sumando algunas de balance de riesgo, como foco de tu inversión"
   ],
-  "entregable_esperado": "Un Strat-Map con las arenas evaluadas y priorizadas, y una lista de 3 a 5 arenas estratégicas seleccionadas como foco de tu desarrollo de producto.",
+  "entregable_esperado": "Un Strat-Map con las arenas evaluadas y priorizadas, y una lista corta de arenas estratégicas seleccionadas como foco de tu desarrollo de producto.",
   "nodos_previos": [
     "evaluacion_competencias_centrales",
     "metas_objetivos_smart_innovacion",
@@ -40,6 +40,24 @@
       "node_id": "strat_map",
       "titulo": "Strat-Map: Mapa Estratégico de Priorización de Arenas",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-75",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un Strat-Map con las arenas evaluadas y priorizadas, y una lista de 3 a 5 arenas estratégicas seleccionadas como foco de tu desarrollo de producto.",
+      "texto_nuevo": "Un Strat-Map con las arenas evaluadas y priorizadas, y una lista corta de arenas estratégicas seleccionadas como foco de tu desarrollo de producto.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L8331-L8351",
+        "frase": "Based on this exercise, three “best bets” and one “conservative bet” are defined as target arenas for Chempro"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R071-021 (ANADIDO, lector y verificador de acuerdo): Cifra de seleccion que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R071-021"
     }
   ]
 }

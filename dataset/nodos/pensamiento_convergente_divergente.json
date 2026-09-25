@@ -14,7 +14,7 @@
     "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.",
     "Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo."
   ],
-  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final",
+  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
   "nodos_previos": [
     "usuarios_extremos_edge_cases",
     "analisis_y_sintesis",
@@ -49,6 +49,24 @@
       "node_id": "design_attitude_vs_decision_attitude",
       "titulo": "Actitud de Diseño vs. Actitud de Decisión",
       "fuente": "Business Model Generation (Osterwalder)"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-69",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de al menos 3-5 alternativas de solución evaluadas antes de cada decisión final",
+      "texto_nuevo": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L1439",
+        "frase": "If you haven't explored lots of options, you haven't diverged enough."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R029-027 (ANADIDO, lector y verificador de acuerdo): Cifra minima no presente en el libro (buscado three to five, five alternatives, 3-5). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R029-027"
     }
   ]
 }

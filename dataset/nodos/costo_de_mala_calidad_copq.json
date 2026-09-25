@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Costo de la Mala Calidad — COPQ (Costos que Desaparecerían sin Fallos)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa maduro de calidad puede bajar a menos de 2.5% de ventas. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+  "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
   "pasos_accionables": [
     "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
     "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
@@ -187,6 +187,24 @@
       "node_id": "costo_de_la_mala_calidad",
       "titulo": "Costo Oculto de la Mala Calidad y el Retrabajo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-10",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios hasta 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa maduro de calidad puede bajar a menos de 2.5% de ventas. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "texto_nuevo": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa todos los costos que desaparecerían si no existieran fallos: retrabajo, reclamos, garantías, inspección y prevención. Se clasifica en prevención, evaluación, fallas internas y fallas externas, siendo estas últimas casi siempre las más grandes y la prevención la más pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), superando la utilidad anual del negocio; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L1225, L25849",
+        "frase": "For service organizations the average is about 30 percent of operating expenses, varying from 25 to 40 percent depending on service complexity. / the COPQ was in the range of 15 to 20 percent for manufacturing organizations, with many achieving even lower levels as the result of systematic programs to reduce it"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R037-041 (CONTRARIO, lector y verificador de acuerdo): Cambia el 30% de promedio a maximo, en contradiccion con el rango del libro. / R037-041 (ANADIDO, lector y verificador de acuerdo): Cifra de 2.5% de ventas que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R037-041, R037-041"
     }
   ]
 }

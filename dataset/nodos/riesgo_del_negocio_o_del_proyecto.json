@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Clasificar el Riesgo por su Fuente",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ordenar tus riesgos por su origen te ayuda a pensarlos con claridad y a elegir cómo tratarlos. Una primera división útil es entre riesgos de fuerzas que no controlas (el clima, la economía, una ley) y riesgos que nacen de decisiones humanas, incluidas las tuyas, donde sí puedes influir en la probabilidad y en el impacto. Otra división útil separa lo que amenaza tu negocio entero de lo que solo afecta una entrega concreta. Clasificar también te da un lenguaje común para hablar de riesgos y para no mezclar la causa (el evento que dispara) con la consecuencia (el daño que deja). Para el emprendedor, agrupar así evita el caos de una lista larga y revuelta, y muestra dónde de verdad tienes margen de acción.",
+  "resumen_teorico": "Ordenar tus riesgos por su origen te ayuda a pensarlos con claridad y a elegir cómo tratarlos. Una primera división útil es entre riesgos de fuerzas naturales que no controlas (el clima, un terremoto, una plaga) y riesgos que nacen de la actividad humana (la economía, una ley, las decisiones tuyas y de otros), donde sí puedes influir en la probabilidad y en el impacto. Otra división útil separa lo que amenaza tu negocio entero de lo que solo afecta una entrega concreta. Clasificar también te da un lenguaje común para hablar de riesgos y para no mezclar la causa (el evento que dispara) con la consecuencia (el daño que deja). Para el emprendedor, agrupar así evita el caos de una lista larga y revuelta, y muestra dónde de verdad tienes margen de acción.",
   "pasos_accionables": [
     "Separa tus riesgos en dos grupos: los que no controlas y los que nacen de decisiones.",
     "Marca en cuáles de los segundos puedes bajar la probabilidad o el impacto: ahí está tu margen.",
@@ -24,5 +24,23 @@
     "cuando mezclas la causa de un riesgo con el daño que provoca",
     "cuando no distingues lo que amenaza todo tu negocio de lo que solo afecta una tarea"
   ],
-  "etiqueta_arbol": "Riesgo del Negocio o del Proyecto"
+  "etiqueta_arbol": "Riesgo del Negocio o del Proyecto",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-46",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Ordenar tus riesgos por su origen te ayuda a pensarlos con claridad y a elegir cómo tratarlos. Una primera división útil es entre riesgos de fuerzas que no controlas (el clima, la economía, una ley) y riesgos que nacen de decisiones humanas, incluidas las tuyas, donde sí puedes influir en la probabilidad y en el impacto. Otra división útil separa lo que amenaza tu negocio entero de lo que solo afecta una entrega concreta. Clasificar también te da un lenguaje común para hablar de riesgos y para no mezclar la causa (el evento que dispara) con la consecuencia (el daño que deja). Para el emprendedor, agrupar así evita el caos de una lista larga y revuelta, y muestra dónde de verdad tienes margen de acción.",
+      "texto_nuevo": "Ordenar tus riesgos por su origen te ayuda a pensarlos con claridad y a elegir cómo tratarlos. Una primera división útil es entre riesgos de fuerzas naturales que no controlas (el clima, un terremoto, una plaga) y riesgos que nacen de la actividad humana (la economía, una ley, las decisiones tuyas y de otros), donde sí puedes influir en la probabilidad y en el impacto. Otra división útil separa lo que amenaza tu negocio entero de lo que solo afecta una entrega concreta. Clasificar también te da un lenguaje común para hablar de riesgos y para no mezclar la causa (el evento que dispara) con la consecuencia (el daño que deja). Para el emprendedor, agrupar así evita el caos de una lista larga y revuelta, y muestra dónde de verdad tienes margen de acción.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L489-L511, L607",
+        "frase": "Natural systems risks arise from sources beyond human agency. Human risks arise in terms of human involvement in some capacity. [...] These comprise cultural, economic, financial, health, legal, management, political and social systems"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R012-036 (CONTRARIO, arbitro): Tenía razón el lector B. La Tabla 2.2 pone Economic y Legal en la columna de riesgos humanos, junto a Climatological en la natural, y L607 lo confirma. El campo pone la economía y la ley del lado natural, al revés que el libro. Los pasajes sobre volatilidad económica y cambios legales (L409, L415) no los reclasifican como naturales. La sesion compone el texto a mano porque el recorte automatico al fragmento dejo la frase mal construida; el contenido es el del texto fiel del verificador o del arbitro.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R012-036"
+    }
+  ]
 }

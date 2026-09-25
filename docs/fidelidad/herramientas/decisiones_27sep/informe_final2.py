@@ -40,16 +40,21 @@ A('')
 A('## Estado del catalogo, solo con lo probado')
 A('')
 an_sin = COB['anadidos_sin_correccion_en_main']
+CAMPOS = json.load(io.open(C + '/campos/RESUMEN.json', encoding='utf-8'))
+nh = sum(CAMPOS['hallazgos'].values())
 A('> **Los %d pasos accionables vivos del catalogo de My Idea se leyeron a ciegas contra su fuente, cada uno por al menos dos lectores '
   'independientes salvo 3 que quedaron OPERATIVOS con una sola lectura; los %d que la contradecian y los %d que afirmaban algo que la '
   'fuente no respalda tienen su correccion declarada en produccion, con cita literal, y un script lo comprueba contra main (%d y %d sin '
-  'corregir). No esta demostrado que no quede ningun error sin detectar, y los resumenes y entregables no se leyeron enteros: solo se '
-  'corrigieron donde repetian un dato corregido.**' % (N, COB['contrarios_conocidos'], COB['anadidos'], len(sin), len(an_sin)))
+  'corregir). Los demas campos que llegan a la IA o a la pantalla (resumen, entregable, condiciones, titulo y etiqueta) de los %d nodos '
+  'vivos se leyeron tambien a ciegas contra su fuente, buscando solo contrarios y anadidos de cifra, plazo o norma: los %d hallados tienen '
+  'su correccion declarada en produccion (%d sin corregir). No esta demostrado que no quede ningun error sin detectar, y en esos campos no '
+  'se buscaron anadidos practicos.**' % (N, COB['contrarios_conocidos'], COB['anadidos'], len(sin), len(an_sin), CAMPOS['nodos'], nh,
+                                         len(CAMPOS['hallazgos_sin_correccion_en_main'])))
 A('')
 A('Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; '
   'correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t%d. '
   'Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero '
-  'e hizo cada commit. Este informe incluye lo hecho por las decisiones del fundador del 27 sep 2026 (seccion 8).' % len(tandas))
+  'e hizo cada commit. Este informe incluye lo hecho por las decisiones del fundador recogidas el 24 sep 2026 (secciones 8 a 10; fechadas 27 sep por error, vale la fecha del commit: docs/PENDIENTES.md seccion 0).' % len(tandas))
 A('')
 A('## 1. Cobertura, comprobada por script')
 A('')
@@ -133,7 +138,7 @@ A('## 7. EXCEPCIONES')
 A('')
 A('Ver docs/fidelidad/EXCEPCIONES.md. Ninguna es un CONTRARIO sin corregir.')
 A('')
-A('## 8. Decisiones del fundador del 27 sep 2026, una por una')
+A('## 8. Decisiones del fundador recogidas el 24 sep 2026, una por una')
 A('')
 A('1. **Textos derivados.** Se buscaron los textos anteriores de las 120 correcciones de CONTRARIO y las 125 de cifra, plazo o norma en la '
   'cache de preguntas y en todo fichero derivado. Ninguna pregunta contiene un texto viejo; pero el generador lee los 400 primeros caracteres '
@@ -152,7 +157,7 @@ A('6. **Documentacion:** docs/fidelidad/ de esta rama y el informe del muestreo 
 A('7. **Sesion con credencial:** %d nodos a re-embeber (el indice embebe titulo, resumen y condiciones, no los pasos) y %d preguntas a regenerar; '
   'listas exactas en docs/fidelidad/credencial/ de main (LISTAS.md con la razon de cada una).' % (len(reemb), len(retiradas)))
 A('')
-A('## 9. Segundas decisiones del fundador del 27 sep 2026')
+A('## 9. Segundas decisiones del fundador, recogidas el 24 sep 2026')
 A('')
 A('1. **Ratificados** los textos que la sesion ajusto (EXCEPCIONES.md, seccion C).')
 A('2. **Atribuciones:** los nombres de autor dentro del texto de los nodos se quedan; no hay cambio de interfaz pendiente.')
@@ -166,6 +171,25 @@ A('4. **Guias escaneadas:** el fundador reextrajo los PDF linea por linea con co
 A('5. **Sesion con credencial:** pendiente de que el fundador diga "clave cargada"; listas exactas en docs/fidelidad/credencial/ de main '
   '(%d nodos a re-embeber y %d preguntas a regenerar tras fidelidad-t14).' % (len(reemb), len(retiradas)))
 A('6. **Frase de estado:** al principio de este informe.')
+A('')
+A('## 10. La pasada sobre los campos que llegan a la IA o a la pantalla')
+A('')
+A('Decision del fundador (recogida el 24 sep): medir que campos llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md en main) y, '
+  'si alguno aparte de los pasos llega, leerlo contra la fuente con el mismo metodo calibrado, buscando solo CONTRARIOS y ANADIDOS de cifra, '
+  'plazo o norma. Llegan el resumen, el entregable, las condiciones de activacion, el titulo y la etiqueta de cara.')
+A('')
+A('- **Cobertura:** %d nodos vivos, una fila por nodo con sus cinco campos, en %d lotes.' % (CAMPOS['nodos'], len(CAMPOS['lotes'])))
+A('- **Trampas:** %d nodos trampa con un error sembrado; lectores %d, verificadores %d. La trampa de R013 (un plazo de 12 meses anadido en una '
+  'condicion) se escapo a cuatro lecturas: lector, relectura, verificador y un verificador ciego extra, que releyo los nodos limpios no '
+  'muestreados de ese lote sin encontrar nada en los reales.' % (CAMPOS['trampas_lector'][1], CAMPOS['trampas_lector'][0], CAMPOS['trampas_verificador'][0]))
+A('- **Desacuerdos arbitrados:** %d.' % CAMPOS['desacuerdos'])
+A('- **Hallazgos:** %d en %d nodos: %s. Corregidos en fidelidad-t15 (76 correcciones), cada uno con su cita literal; %d sin corregir.' % (
+    nh, CAMPOS['nodos_con_hallazgo'], ', '.join('%d %s' % (v, k) for k, v in sorted(CAMPOS['hallazgos'].items(), key=lambda kv: -kv[1])),
+    len(CAMPOS['hallazgos_sin_correccion_en_main'])))
+A('- **Textos derivados:** 50 preguntas de la cache retiradas (nacieron de un resumen o de las condiciones de un candidato ahora corregidos) y '
+  '2 puertas del mundo entrega restauradas por la guarda AUD-09 H13, sin el dato corregido. Segunda sesion con credencial pendiente: listas '
+  'en docs/fidelidad/credencial/ de main.')
+A('- **Registro:** campania/campos/ (VEREDICTOS_CAMPOS.jsonl, RESUMEN.json, VERIFICADOR_EXTRA_R013.json y el rastro de cada lote).')
 txt = '\n'.join(L) + '\n'
 io.open(RF + '/docs/fidelidad/INFORME_FINAL_CAMPANIA.md', 'w', encoding='utf-8', newline='\n').write(txt.replace(chr(0x2014), '--').replace(chr(0x2013), '-'))
 
@@ -174,7 +198,7 @@ E = []
 e = E.append
 e('# EXCEPCIONES DE LA CAMPANIA DE FIDELIDAD')
 e('')
-e('Lo que la regla del fundador no resolvio limpio, para que lo decida el fundador. Actualizado tras sus decisiones del 27 sep 2026.')
+e('Lo que la regla del fundador no resolvio limpio, para que lo decida el fundador. Actualizado tras sus decisiones recogidas el 24 sep 2026.')
 e('')
 e('## A. Resueltas')
 e('')
@@ -190,7 +214,7 @@ e('## B. Abiertas')
 e('')
 e('Ninguna.')
 e('')
-e('## C. Textos que la sesion ajusto sobre la propuesta del verificador o del arbitro: RATIFICADOS por el fundador el 27 sep 2026')
+e('## C. Textos que la sesion ajusto sobre la propuesta del verificador o del arbitro: RATIFICADOS por el fundador (decision recogida el 24 sep 2026)')
 e('')
 e('- `decision_fpr` paso 2 (fidelidad-t11-01): el texto del arbitro decia que el FPR "facilita la venta"; el libro lo desmiente (L2052, L4695).')
 e('- `documentacion_mantenimiento_linea_base` paso 2 (fidelidad-t10-03): se quito una coletilla que remitia al texto viejo.')

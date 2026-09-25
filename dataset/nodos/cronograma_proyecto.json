@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cronograma del Proyecto (Project Schedule)",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. Ambos formatos incluyen los nombres de los recursos asignados a cada actividad y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+  "resumen_teorico": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
   "pasos_accionables": [
     "Recopilar lista de actividades, diagrama de red y estimaciones de duración",
     "Determinar dependencias entre actividades",
@@ -49,6 +49,24 @@
       "node_id": "project_schedule",
       "titulo": "Project Schedule",
       "fuente": "A Project Manager's Book of Forms"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-11",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. Ambos formatos incluyen los nombres de los recursos asignados a cada actividad y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+      "texto_nuevo": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt, que muestra el detalle completo de cada actividad, o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto y comunicar plazos a quienes lo necesiten conocer.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "I have an idea/txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "L2023-L2039",
+        "frase": "Another method of showing schedule information is to create a Milestone Chart, which shows only the dates of the important events or key deliverables."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R025-044 (CONTRARIO, lector y verificador de acuerdo): Atribuye al grafico de hitos los nombres de recursos, cuando el libro dice que solo muestra fechas de eventos clave. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R025-044"
     }
   ]
 }

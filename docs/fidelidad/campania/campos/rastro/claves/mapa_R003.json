@@ -1,0 +1,315 @@
+{
+ "R003-001": {
+  "real": true,
+  "node_id": "programa_seguridad_salud_ocupacional",
+  "libro": "OSHA3885"
+ },
+ "R003-002": {
+  "real": true,
+  "node_id": "tripod_delta_general_failure_types",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-003": {
+  "real": true,
+  "node_id": "coordinacion_sitios_multiempleador",
+  "libro": "OSHA3886"
+ },
+ "R003-004": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Seguridad en Escaleras Portátiles (Inspección y Retiro de Servicio)",
+   "etiqueta": "Revisa tus Escaleras Portátiles",
+   "resumen": "Mantén las escaleras portátiles en buen estado, con uniones firmes y herrajes bien sujetos, y revísalas de forma rutinaria. Quien sube debe mirar hacia la escalera y conservar tres puntos de contacto, sin cargar objetos que le hagan perder el equilibrio ni usar el último peldaño de una escalera de tijera. Si la escalera da acceso a un techo o plataforma, debe sobresalir al menos 3 pies (0,9 metros). Las escaleras con defectos estructurales se etiquetan como 'Peligro: no usar' al terminar la jornada y se retiran de servicio hasta repararlas o reemplazarlas.",
+   "entregable": "Checklist de inspección de escaleras portátiles completado, con registro de las escaleras etiquetadas y retiradas de servicio",
+   "condiciones": [
+    "Si en tu negocio se usan escaleras portátiles para acceder a alturas",
+    "Cuando se detecta una escalera con peldaños faltantes, largueros rotos u otro defecto"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "SMALL_BUSINESS",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\SMALL_BUSINESS.md",
+   "lineas": "1525",
+   "cita": "Ladders with structural or other defects are immediately tagged \"Dangerous: Do Not Use\" or with similar language and removed from service until repaired or replaced.",
+   "dato": "se etiquetan como 'Peligro: no usar' al terminar la jornada y se retiran de servicio",
+   "explicacion": "El libro exige etiquetar y retirar la escalera defectuosa de inmediato; el resumen cambia el plazo a 'al terminar la jornada', lo que permitiría seguir usándola durante el turno."
+  }
+ },
+ "R003-005": {
+  "real": true,
+  "node_id": "escaleras_portatiles_seguridad",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-006": {
+  "real": true,
+  "node_id": "investigacion_incidentes",
+  "libro": "OSHA3885"
+ },
+ "R003-007": {
+  "real": true,
+  "node_id": "trayectoria_del_accidente",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-008": {
+  "real": true,
+  "node_id": "capacitacion_educacion_seguridad",
+  "libro": "OSHA3886"
+ },
+ "R003-009": {
+  "real": true,
+  "node_id": "escaleras_fijas_seguridad",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-010": {
+  "real": true,
+  "node_id": "comunicacion_de_riesgos_quimicos",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-011": {
+  "real": true,
+  "node_id": "ventana_oportunidad_accidente",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-012": {
+  "real": true,
+  "node_id": "identificacion_peligros_salud",
+  "libro": "OSHA3885"
+ },
+ "R003-013": {
+  "real": true,
+  "node_id": "ergonomia_laboral",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-014": {
+  "real": true,
+  "node_id": "nueve_pasos_iniciar_programa",
+  "libro": "OSHA3886"
+ },
+ "R003-015": {
+  "real": true,
+  "node_id": "evaluacion_mejora_programa",
+  "libro": "OSHA3885"
+ },
+ "R003-016": {
+  "real": true,
+  "node_id": "enfoque_find_and_fix",
+  "libro": "OSHA3886"
+ },
+ "R003-017": {
+  "real": true,
+  "node_id": "participacion_trabajadores",
+  "libro": "OSHA3885"
+ },
+ "R003-018": {
+  "real": true,
+  "node_id": "implementacion_controles",
+  "libro": "OSHA3885"
+ },
+ "R003-019": {
+  "real": true,
+  "node_id": "almacenamiento_liquidos_inflamables",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-020": {
+  "real": true,
+  "node_id": "autoinspeccion_lugar_de_trabajo",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-021": {
+  "real": true,
+  "node_id": "caracterizacion_priorizacion_peligros",
+  "libro": "OSHA3886"
+ },
+ "R003-022": {
+  "real": true,
+  "node_id": "hoist_auxiliary_equipment_safety",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-023": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Tripod-Delta: Medición Proactiva de los Tipos Generales de Fallo",
+   "etiqueta": "Mide tus Fallos Latentes",
+   "resumen": "Tripod-Delta es un instrumento proactivo creado para las operaciones de exploración y producción de Shell que no busca reducir las lesiones con tiempo perdido de forma directa, sino actuar un nivel más arriba, sobre los 11 Tipos Generales de Fallo (GFTs) que las provocan. Los especialistas de cada tarea redactan los indicadores; el software selecciona 20 por cada GFT, arma un checklist de 220 ítems y genera un Perfil de Estado de Fallos que señala los dos o tres GFTs que necesitan atención inmediata. Las sesiones suelen ser trimestrales.",
+   "entregable": "Perfil de Estado de Fallos con un plan de remediación que corrige uno por uno los indicadores marcados en el checklist",
+   "condiciones": [
+    "Cuando la organización solo mide su seguridad con indicadores reactivos como la tasa de lesiones con tiempo perdido",
+    "Cuando se quiere complementar un sistema de gestión de seguridad descendente con una medición ascendente de los factores organizacionales"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "entregable",
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "3209",
+   "cita": "The key to using Tripod-Delta is to manage the profiles rather than individual indicators.",
+   "dato": "un plan de remediación que corrige uno por uno los indicadores marcados en el checklist",
+   "explicacion": "El libro dice que la clave es gestionar los perfiles y no los indicadores individuales, porque los indicadores son solo síntomas y arreglarlos uno a uno rara vez cura la enfermedad subyacente; la gerencia debe planificar acciones sobre los dos o tres peores GFTs. El entregable invierte ese método."
+  }
+ },
+ "R003-024": {
+  "real": true,
+  "node_id": "extintores_portatiles_de_incendio",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-025": {
+  "real": true,
+  "node_id": "senales_alerta_no_atendidas",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-026": {
+  "real": true,
+  "node_id": "derecho_rechazo_trabajo_peligroso",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-027": {
+  "real": true,
+  "node_id": "vulnerabilidad_instalacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-028": {
+  "real": true,
+  "node_id": "clausula_deber_general_osha",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-029": {
+  "real": true,
+  "node_id": "identificacion_evaluacion_peligros",
+  "libro": "OSHA3885"
+ },
+ "R003-030": {
+  "real": true,
+  "node_id": "seguimiento_efectividad_controles",
+  "libro": "OSHA3885"
+ },
+ "R003-031": {
+  "real": true,
+  "node_id": "infection_control_plan",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-032": {
+  "real": true,
+  "node_id": "herramientas_accionadas_por_explosivos",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-033": {
+  "real": true,
+  "node_id": "identificacion_recopilacion_informacion_peligros",
+  "libro": "OSHA3885"
+ },
+ "R003-034": {
+  "real": true,
+  "node_id": "inspeccion_lugar_trabajo_peligros",
+  "libro": "OSHA3885"
+ },
+ "R003-035": {
+  "real": true,
+  "node_id": "self_regulation_deregulation_tradeoffs",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-036": {
+  "real": true,
+  "node_id": "vpc_condiciones_productoras_violacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-037": {
+  "real": true,
+  "node_id": "elevated_surfaces_fall_protection",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-038": {
+  "real": true,
+  "node_id": "peligros_emergencias_no_rutinarias",
+  "libro": "OSHA3885"
+ },
+ "R003-039": {
+  "real": true,
+  "node_id": "controles_no_rutinarias_emergencias",
+  "libro": "OSHA3886"
+ },
+ "R003-040": {
+  "real": true,
+  "node_id": "tripod_beta_analisis_incidentes",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-041": {
+  "real": true,
+  "node_id": "violaciones_procedimentales_por_sobreespecificacion",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_"
+ },
+ "R003-042": {
+  "real": true,
+  "node_id": "plan_control_peligros",
+  "libro": "OSHA3886"
+ },
+ "R003-043": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Selección de Controles con Protección Provisional (Construcción)",
+   "etiqueta": "Protege Mientras Controlas",
+   "resumen": "Elige los controles más factibles, eficaces y permanentes, siguiendo una jerarquía que prioriza las soluciones de ingeniería (incluida la eliminación o sustitución), luego las prácticas de trabajo seguras, los controles administrativos y por último el EPP. Elimina o controla de inmediato los peligros serios y usa controles provisionales mientras desarrollas soluciones a más largo plazo. Evita controles que introduzcan peligros nuevos y combina opciones cuando ninguna protege por sí sola.",
+   "entregable": "Lista de controles seleccionados por peligro, con la medida provisional aplicada y la solución permanente prevista",
+   "condiciones": [
+    "Cuando ya identificaste los peligros de la obra y debes decidir cómo controlarlos",
+    "Cuando un peligro serio no puede controlarse de forma permanente en menos de 15 días"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "condiciones",
+   "libro": "OSHA3886",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\OSHA3886.md",
+   "lineas": "675-677",
+   "cita": "- Use interim controls while you develop and implement longer-term solutions.",
+   "dato": "en menos de 15 días",
+   "explicacion": "El libro pide usar controles provisionales mientras se desarrolla la solución a largo plazo, sin fijar ningún umbral de días; el plazo de 15 días no aparece en OSHA3886 (Grep de '15' y 'fifteen' sin resultados; el libro no menciona plazos en días en esta sección)."
+  }
+ },
+ "R003-044": {
+  "real": true,
+  "node_id": "herramientas_manuales_y_portatiles",
+  "libro": "SMALL_BUSINESS"
+ },
+ "R003-045": {
+  "real": true,
+  "node_id": "capacitacion_identificacion_peligros",
+  "libro": "OSHA3885"
+ },
+ "R003-046": {
+  "real": true,
+  "node_id": "capacitacion_roles_gerencia",
+  "libro": "OSHA3885"
+ },
+ "R003-047": {
+  "real": true,
+  "node_id": "prevencion_control_peligros",
+  "libro": "OSHA3885"
+ },
+ "R003-048": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Eliminación de Barreras a la Participación de los Trabajadores",
+   "etiqueta": "Quita las Barreras al Reporte",
+   "resumen": "La participación se apaga si no se consideran el idioma, la educación o el nivel de habilidad de tu gente, o si temen represalias por hablar, por ejemplo cuando las investigaciones culpan a personas en lugar de a las condiciones, o cuando reportar un incidente puede costarles un premio o bono. Da retroalimentación frecuente sobre lo que haces con sus reportes, asigna tiempo y recursos, celebra las reuniones de seguridad en horario laboral y diseña los incentivos para que no desalienten el reporte de lesiones.",
+   "entregable": "Política de participación sin represalias, con los incentivos revisados y un registro que muestre la respuesta a cada reporte en un plazo máximo de 72 horas",
+   "condiciones": [
+    "Cuando tus trabajadores reportan poco por miedo a represalias o a perder incentivos",
+    "Cuando en tu equipo hay diferencias de idioma, educación o habilidad que limitan la participación"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "OSHA3885",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\OSHA3885.md",
+   "lineas": "429",
+   "cita": "- Provide frequent and regular feedback to show employees that their safety and health concerns are being heard and addressed.",
+   "dato": "en un plazo máximo de 72 horas",
+   "explicacion": "El libro solo pide retroalimentación frecuente y regular y responder a los reportes con prontitud, sin fijar plazo; '72 horas' no aparece en OSHA3885 (el único '72' del libro está en la cita bibliográfica 89:728-772, y los únicos plazos en horas son los de notificación de fatalidades y hospitalizaciones)."
+  }
+ },
+ "R003-049": {
+  "real": true,
+  "node_id": "liderazgo_gerencial_seguridad",
+  "libro": "OSHA3885"
+ }
+}

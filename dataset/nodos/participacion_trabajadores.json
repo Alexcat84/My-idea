@@ -13,7 +13,7 @@
     "Elimina barreras de idioma, habilidad, educación o miedo a represalias",
     "Comunica con claridad las protecciones contra represalias que existen en tu país y revisa que tus incentivos no desalienten el reporte"
   ],
-  "entregable_esperado": "Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en al menos dos fases del programa",
+  "entregable_esperado": "Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en todas las fases del programa",
   "nodos_previos": [
     "liderazgo_gerencial_seguridad",
     "escaleras_portatiles_seguridad",
@@ -48,6 +48,24 @@
       "node_id": "participacion_trabajadores_2",
       "titulo": "Participación Activa de los Trabajadores",
       "fuente": "OSHA3886"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-33",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en al menos dos fases del programa",
+      "texto_nuevo": "Un sistema de reporte funcionando, con evidencia de que tus trabajadores participan activamente en todas las fases del programa",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "L331",
+        "frase": "Have opportunities to participate in all phases of program design and implementation."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R003-017 (CONTRARIO, lector y verificador de acuerdo): Rebaja el umbral que da el libro (todas las fases) a una cifra que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R003-017"
     }
   ]
 }
