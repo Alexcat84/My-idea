@@ -1,4 +1,8 @@
-# i18n F5: la IA en el idioma de la idea (hecha, pendiente del visto)
+# i18n F5: la IA en el idioma de la idea (HECHA, con visto del fundador, en producción)
+
+**Visto del fundador (25 sep 2026):** probada en producción (la vista previa redirige el acceso a
+producción, así que F5 subió a `main` para probarla): una idea en ruso responde en ruso; el plan no
+se generó en esa prueba. Migración 046 aplicada. En `main` con `9cdf30ed`, etiqueta `web-v2.9.0`.
 
 Rama `i18n`. Diseño: `DISENO.md §3.3, §5` y las decisiones D2 y D3. Añadidos del fundador del
 25 sep 2026: los **idiomas fuera de los once** y el **conteo anónimo**. Commits `ccd91a19` (1) a

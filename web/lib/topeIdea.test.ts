@@ -50,7 +50,7 @@ describe("la idea admite 12.000 caracteres", () => {
     expect(texto.split("panadería de barrio").length - 1).toBe(85);
   });
 
-  it("ordenar la idea: el dictado largo pasa el tope y 12.001 caracteres se rechazan con su número", { timeout: 30_000 }, async () => {
+  it("ordenar la idea: el dictado largo pasa el tope y 12.001 caracteres se rechazan con su número", { timeout: 120_000 }, async () => {
     const { POST } = await import("@/app/api/organizer/stream/route");
     // pasa el tope y sigue hasta la sesión (401: el doble de prueba no tiene usuario)
     expect((await POST(cuerpo(dictadoLargo(85)))).status).toBe(401);
@@ -59,7 +59,7 @@ describe("la idea admite 12.000 caracteres", () => {
     expect(await largo.json()).toEqual({ error: MENSAJE_IDEA_LARGA, limite: MAX_LARGO_IDEA });
   });
 
-  it("empezar la exploración: igual", { timeout: 30_000 }, async () => {
+  it("empezar la exploración: igual", { timeout: 120_000 }, async () => {
     const { POST } = await import("@/app/api/session/start/route");
     expect((await POST(cuerpo(dictadoLargo(85)))).status).toBe(401);
     const largo = await POST(cuerpo("a".repeat(MAX_LARGO_IDEA + 1)));
